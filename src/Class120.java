@@ -62,7 +62,7 @@ public class Class120 {
 	public static String aString1462;
 	public static Class487 aClass487_1463;
 
-	public int method1305(int i, int i_0_) {
+	public int getFileId(int i, int i_0_) {
 		try {
 			return i & (1 << ((Class120) this).anInt1461 * -82175751) - 1;
 		} catch (RuntimeException runtimeexception) {
@@ -83,7 +83,7 @@ public class Class120 {
 		}
 	}
 
-	public int method1307(int i, int i_2_) {
+	public int getArchiveId(int i, int i_2_) {
 		try {
 			return i >>> -82175751 * ((Class120) this).anInt1461;
 		} catch (RuntimeException runtimeexception) {

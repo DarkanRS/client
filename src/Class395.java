@@ -75,7 +75,7 @@ public class Class395 {
 				return class391;
 			byte[] is;
 			synchronized (((Class395) this).aClass243_5189) {
-				is = (((Class395) this).aClass243_5189.method2315(Class120.aClass120_1409.method1307(i, 180156567), Class120.aClass120_1409.method1305(i, -1217474734), (byte) -6));
+				is = (((Class395) this).aClass243_5189.getFile(Class120.aClass120_1409.getArchiveId(i, 180156567), Class120.aClass120_1409.getFileId(i, -1217474734), (byte) -6));
 			}
 			class391 = new Class391();
 			class391.anInt4171 = i * -523719415;

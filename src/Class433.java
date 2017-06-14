@@ -143,7 +143,7 @@ public class Class433 {
 				return class432;
 			byte[] is;
 			synchronized (((Class433) this).aClass243_5446) {
-				is = (((Class433) this).aClass243_5446.method2315(Class120.aClass120_1443.method1307(objectId, -1875026798), Class120.aClass120_1443.method1305(objectId, -1955117131), (byte) -69));
+				is = (((Class433) this).aClass243_5446.getFile(Class120.aClass120_1443.getArchiveId(objectId, -1875026798), Class120.aClass120_1443.getFileId(objectId, -1955117131), (byte) -69));
 			}
 			class432 = new ObjectDefinitions();
 			class432.anInt5365 = objectId * -950871973;

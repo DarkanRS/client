@@ -50,7 +50,7 @@ public class Class517 {
 				return class520;
 			byte[] is;
 			synchronized (((Class517) this).aClass243_6269) {
-				is = (((Class517) this).aClass243_6269.method2315(Class120.aClass120_1452.anInt1460 * -1006924897, i, (byte) -91));
+				is = (((Class517) this).aClass243_6269.getFile(Class120.aClass120_1452.anInt1460 * -1006924897, i, (byte) -91));
 			}
 			class520 = new Class520();
 			if (is != null)

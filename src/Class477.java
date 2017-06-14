@@ -6,7 +6,7 @@ public class Class477 {
 	public int itemDefinitionsLength;
 	String[] aStringArray5988;
 	Class504 aClass504_5989;
-	Class243 aClass243_5990;
+	Class243 cacheIndex;
 	int anInt5991;
 	Class243 aClass243_5992;
 	Class348 aClass348_5993 = new Class348(64);
@@ -20,42 +20,14 @@ public class Class477 {
 	public static Class500 aClass500_6001;
 
 	public ItemDefinitions getItemDefinitions(int itemId) {
-		return getItemDefinitions(itemId, false);
-	}
-
-	public static boolean OLD_ITEMS;
-
-	public static void switchItems(boolean old) {
-		if (old == OLD_ITEMS)
-			return;
-		OLD_ITEMS = old;
-		Class223.method2082(false, -1663847334);
-	}
-
-	public ItemDefinitions getItemDefinitions(int itemId, boolean forceNew) {
 		try {
 			ItemDefinitions itemdefinition;
 
-			if (!forceNew) {
-				synchronized (((Class477) this).aClass348_5993) {
-					itemdefinition = (ItemDefinitions) ((Class477) this).aClass348_5993.method4184((long) itemId);
-				}
-				if (itemdefinition != null)
-					return itemdefinition;
-			}
-
-			boolean oldItem = false;
-
 			byte[] is = null;
 
-			if (!forceNew && OLD_ITEMS) {
-				is = (((Class477) this).aClass243_5990.method2315(Class120.aClass120_1429.method1307(itemId + (Class298_Sub32_Sub14.aClass477_9400.itemDefinitionsLength * -888767613), -100335020), Class120.aClass120_1429.method1305(itemId + (Class298_Sub32_Sub14.aClass477_9400.itemDefinitionsLength * -888767613), -1698958016), (byte) -74));
-				oldItem = true;
-			}
 			if (is == null) {
-				synchronized (((Class477) this).aClass243_5990) {
-					is = (((Class477) this).aClass243_5990.method2315(Class120.aClass120_1429.method1307(itemId, -100335020), Class120.aClass120_1429.method1305(itemId, -1698958016), (byte) -74));
-					oldItem = false;
+				synchronized (((Class477) this).cacheIndex) {
+					is = (((Class477) this).cacheIndex.getFile(Class120.aClass120_1429.getArchiveId(itemId, -100335020), Class120.aClass120_1429.getFileId(itemId, -1698958016), (byte) -74));
 				}
 			}
 			itemdefinition = new ItemDefinitions();
@@ -64,14 +36,14 @@ public class Class477 {
 			itemdefinition.aStringArray5723 = (String[]) ((Class477) this).aStringArray5988.clone();
 			itemdefinition.aStringArray5732 = (String[]) ((Class477) this).aStringArray6000.clone();
 			if (null != is)
-				itemdefinition.decode(new RsByteBuffer(is), oldItem);
+				itemdefinition.decode(new RsByteBuffer(is));
 			itemdefinition.method6025(16711935);
 			if (-1 != itemdefinition.anInt5755 * -1673957995)
-				itemdefinition.method6027(getItemDefinitions((itemdefinition.anInt5755 * -1673957995), forceNew), getItemDefinitions(809765849 * itemdefinition.anInt5709, forceNew), 219692629);
+				itemdefinition.method6027(getItemDefinitions((itemdefinition.anInt5755 * -1673957995)), getItemDefinitions(809765849 * itemdefinition.anInt5709), 219692629);
 			if (itemdefinition.anInt5719 * 465190555 != -1)
-				itemdefinition.method6039(getItemDefinitions(itemdefinition.anInt5719 * 465190555, forceNew), getItemDefinitions((-783380935 * (((ItemDefinitions) itemdefinition).anInt5756)), forceNew), -1676050822);
+				itemdefinition.method6039(getItemDefinitions(itemdefinition.anInt5719 * 465190555), getItemDefinitions((-783380935 * (((ItemDefinitions) itemdefinition).anInt5756))), -1676050822);
 			if (-1 != 2083650097 * itemdefinition.anInt5770)
-				itemdefinition.method6036(getItemDefinitions(itemdefinition.anInt5770 * 2083650097, forceNew), getItemDefinitions((1981372535 * (((ItemDefinitions) itemdefinition).anInt5769)), forceNew), -1733915014);
+				itemdefinition.method6036(getItemDefinitions(itemdefinition.anInt5770 * 2083650097), getItemDefinitions((1981372535 * (((ItemDefinitions) itemdefinition).anInt5769))), -1733915014);
 			if (!((Class477) this).aBoolean5999 && itemdefinition.aBoolean5731) {
 				itemdefinition.anInt5700 = 0;
 				itemdefinition.aStringArray5723 = ((Class477) this).aStringArray5988;
@@ -199,14 +171,14 @@ public class Class477 {
 		((Class477) this).aClass429_5997 = class429;
 		((Class477) this).aBoolean5999 = bool;
 		((Class477) this).aClass504_5989 = class504;
-		((Class477) this).aClass243_5990 = class243;
+		((Class477) this).cacheIndex = class243;
 		((Class477) this).aClass243_5992 = class243_16_;
-		if (null != ((Class477) this).aClass243_5990) {
-			int i = ((Class477) this).aClass243_5990.method2296(1070333047) - 1;
+		if (null != ((Class477) this).cacheIndex) {
+			int i = ((Class477) this).cacheIndex.method2296(1070333047) - 1;
 			if (true)
 				itemDefinitionsLength = 30000 * -1797723349;
 			else
-				itemDefinitionsLength = (i * Class120.aClass120_1429.method1306((short) 15063) + ((Class477) this).aClass243_5990.method2316(i, -1996628421)) * -1797723349;
+				itemDefinitionsLength = (i * Class120.aClass120_1429.method1306((short) 15063) + ((Class477) this).cacheIndex.method2316(i, -1996628421)) * -1797723349;
 		} else
 			itemDefinitionsLength = 0;
 		if (((Class477) this).aClass411_5998 == Class411.aClass411_5320)

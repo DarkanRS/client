@@ -339,7 +339,7 @@ public class Class298_Sub13 extends Linkable {
 	}
 
 	static Class298_Sub13 method2905(Class243 class243, int i, int i_83_) {
-		byte[] is = class243.method2315(i, i_83_, (byte) -117);
+		byte[] is = class243.getFile(i, i_83_, (byte) -117);
 		if (is == null)
 			return null;
 		return new Class298_Sub13(new RsByteBuffer(is));

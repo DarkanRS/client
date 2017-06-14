@@ -18,7 +18,7 @@ public class Class308_Sub1 extends Class308 {
 			if (((Class308_Sub1) this).anIntArray7672 == null) {
 				if (!((Class308_Sub1) this).aClass243_7670.method2290(((Class308_Sub1) this).anInt7668 * -247750727, 0, -925167069))
 					return 0;
-				byte[] is_0_ = (((Class308_Sub1) this).aClass243_7670.method2315(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) -2));
+				byte[] is_0_ = (((Class308_Sub1) this).aClass243_7670.getFile(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) -2));
 				if (null == is_0_)
 					throw new IllegalStateException("");
 				((Class308_Sub1) this).aClass298_Sub53_7675.buffer = is_0_;
@@ -74,7 +74,7 @@ public class Class308_Sub1 extends Class308 {
 			if (null != ((Class308_Sub1) this).anIntArray7672) {
 				for (int i_6_ = 0; (i_6_ < 10 && (i_6_ + 352672983 * ((Class308_Sub1) this).anInt7673 < ((Class308_Sub1) this).anIntArray7672.length)); i_6_++) {
 					if ((((Class308_Sub1) this).aByteArrayArray7671[i_6_] == null) && (((Class308_Sub1) this).aClass243_7670.method2290((((Class308_Sub1) this).anIntArray7672[i_6_ + (352672983 * ((Class308_Sub1) this).anInt7673)]), 0, -951445461)))
-						((Class308_Sub1) this).aByteArrayArray7671[i_6_] = (((Class308_Sub1) this).aClass243_7670.method2315((((Class308_Sub1) this).anIntArray7672[(352672983 * ((Class308_Sub1) this).anInt7673 + i_6_)]), 0, (byte) -31));
+						((Class308_Sub1) this).aByteArrayArray7671[i_6_] = (((Class308_Sub1) this).aClass243_7670.getFile((((Class308_Sub1) this).anIntArray7672[(352672983 * ((Class308_Sub1) this).anInt7673 + i_6_)]), 0, (byte) -31));
 				}
 			}
 		} catch (RuntimeException runtimeexception) {
@@ -86,7 +86,7 @@ public class Class308_Sub1 extends Class308 {
 		if (((Class308_Sub1) this).anIntArray7672 == null) {
 			if (!((Class308_Sub1) this).aClass243_7670.method2290(((Class308_Sub1) this).anInt7668 * -247750727, 0, -1752861403))
 				return 0;
-			byte[] is_7_ = (((Class308_Sub1) this).aClass243_7670.method2315(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) 9));
+			byte[] is_7_ = (((Class308_Sub1) this).aClass243_7670.getFile(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) 9));
 			if (null == is_7_)
 				throw new IllegalStateException("");
 			((Class308_Sub1) this).aClass298_Sub53_7675.buffer = is_7_;
@@ -138,7 +138,7 @@ public class Class308_Sub1 extends Class308 {
 		if (((Class308_Sub1) this).anIntArray7672 == null) {
 			if (!((Class308_Sub1) this).aClass243_7670.method2290(((Class308_Sub1) this).anInt7668 * -247750727, 0, -718226291))
 				return 0;
-			byte[] is_11_ = (((Class308_Sub1) this).aClass243_7670.method2315(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) -126));
+			byte[] is_11_ = (((Class308_Sub1) this).aClass243_7670.getFile(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) -126));
 			if (null == is_11_)
 				throw new IllegalStateException("");
 			((Class308_Sub1) this).aClass298_Sub53_7675.buffer = is_11_;
@@ -190,7 +190,7 @@ public class Class308_Sub1 extends Class308 {
 		if (((Class308_Sub1) this).anIntArray7672 == null) {
 			if (!((Class308_Sub1) this).aClass243_7670.method2290(((Class308_Sub1) this).anInt7668 * -247750727, 0, -1469304085))
 				return 0;
-			byte[] is_15_ = (((Class308_Sub1) this).aClass243_7670.method2315(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) -90));
+			byte[] is_15_ = (((Class308_Sub1) this).aClass243_7670.getFile(-247750727 * ((Class308_Sub1) this).anInt7668, 0, (byte) -90));
 			if (null == is_15_)
 				throw new IllegalStateException("");
 			((Class308_Sub1) this).aClass298_Sub53_7675.buffer = is_15_;

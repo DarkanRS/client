@@ -18,7 +18,7 @@ public class Class347 {
 				return class358;
 			byte[] is;
 			synchronized (((Class347) this).aClass243_3698) {
-				is = (((Class347) this).aClass243_3698.method2315(-1006924897 * Class120.aClass120_1451.anInt1460, i, (byte) -66));
+				is = (((Class347) this).aClass243_3698.getFile(-1006924897 * Class120.aClass120_1451.anInt1460, i, (byte) -66));
 			}
 			class358 = new Class358();
 			((Class358) class358).aClass347_3856 = this;

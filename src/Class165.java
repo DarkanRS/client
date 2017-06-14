@@ -79,7 +79,7 @@ public class Class165 implements Interface5 {
 			int[] is = new int[(Class298_Sub32_Sub14.aClass477_9400.itemDefinitionsLength * -888767613)];
 			int i_9_ = 0;
 			for (int i_10_ = 0; i_10_ < (-888767613 * Class298_Sub32_Sub14.aClass477_9400.itemDefinitionsLength); i_10_++) {
-				ItemDefinitions class468 = Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions(i_10_, true);
+				ItemDefinitions class468 = Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions(i_10_);
 				if (1343198193 * class468.anInt5724 >= 0 || 1585491093 * class468.anInt5747 >= 0)
 					is[i_9_++] = i_10_;
 			}

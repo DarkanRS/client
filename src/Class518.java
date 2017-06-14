@@ -28,7 +28,7 @@ public class Class518 {
 				return class298_sub37_sub10;
 			byte[] is;
 			synchronized (((Class518) this).aClass243_6271) {
-				is = (((Class518) this).aClass243_6271.method2315(-1006924897 * Class120.aClass120_1427.anInt1460, i, (byte) -26));
+				is = (((Class518) this).aClass243_6271.getFile(-1006924897 * Class120.aClass120_1427.anInt1460, i, (byte) -26));
 			}
 			class298_sub37_sub10 = new Class298_Sub37_Sub10();
 			if (null != is)

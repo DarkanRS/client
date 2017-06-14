@@ -16,7 +16,7 @@ public class Class500 {
 			for (int i = 0; i < ((Class500) this).anInt6115 * 589337665; i++) {
 				byte[] is;
 				synchronized (((Class500) this).aClass243_6114) {
-					is = (((Class500) this).aClass243_6114.method2315(-1006924897 * Class120.aClass120_1431.anInt1460, i, (byte) -117));
+					is = (((Class500) this).aClass243_6114.getFile(-1006924897 * Class120.aClass120_1431.anInt1460, i, (byte) -117));
 				}
 				Class298_Sub37_Sub7 class298_sub37_sub7 = new Class298_Sub37_Sub7();
 				if (null != is)

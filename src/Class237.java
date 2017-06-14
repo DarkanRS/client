@@ -59,7 +59,7 @@ public class Class237 implements Interface24 {
 			int i_1_ = 0;
 			int i_2_ = 0;
 			while (i_1_ < class296.anInt3169 * -1407078377) {
-				RsByteBuffer class298_sub53 = new RsByteBuffer(class243.method2315(i_0_, is[i_2_++], (byte) -34));
+				RsByteBuffer class298_sub53 = new RsByteBuffer(class243.getFile(i_0_, is[i_2_++], (byte) -34));
 				int i_3_ = class298_sub53.readInt((byte) 101);
 				int i_4_ = class298_sub53.readUnsignedShort();
 				int i_5_ = class298_sub53.readUnsignedByte();

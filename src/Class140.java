@@ -71,7 +71,7 @@ public class Class140 implements Runnable {
 			Class190 class190 = (Class190) Class190.aClass348_1929.method4184((long) i);
 			if (class190 != null)
 				return class190;
-			byte[] is = Class287.aClass243_3100.method2315(1, i, (byte) -28);
+			byte[] is = Class287.aClass243_3100.getFile(1, i, (byte) -28);
 			class190 = new Class190();
 			class190.anInt1930 = i * -1112552131;
 			if (null != is)

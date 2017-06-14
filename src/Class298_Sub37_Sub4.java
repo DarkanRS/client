@@ -21,7 +21,7 @@ public class Class298_Sub37_Sub4 extends Class298_Sub37 {
 					int[] is = (Class317.aClass243_3321.method2307((((Class298_Sub37_Sub4) this).anInt9580 * 1899473659), -2074944518));
 					((Class298_Sub37_Sub4) this).aByteArrayArray9581 = new byte[is.length][];
 					for (int i_0_ = 0; i_0_ < is.length; i_0_++)
-						((Class298_Sub37_Sub4) this).aByteArrayArray9581[i_0_] = (Class317.aClass243_3321.method2315((1899473659 * ((Class298_Sub37_Sub4) this).anInt9580), is[i_0_], (byte) -7));
+						((Class298_Sub37_Sub4) this).aByteArrayArray9581[i_0_] = (Class317.aClass243_3321.getFile((1899473659 * ((Class298_Sub37_Sub4) this).anInt9580), is[i_0_], (byte) -7));
 				}
 			}
 			boolean bool = true;

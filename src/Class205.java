@@ -18,7 +18,7 @@ public class Class205 {
 				return class207;
 			byte[] is;
 			synchronized (((Class205) this).aClass243_2338) {
-				is = (((Class205) this).aClass243_2338.method2315(-1006924897 * Class120.aClass120_1421.anInt1460, i, (byte) -4));
+				is = (((Class205) this).aClass243_2338.getFile(-1006924897 * Class120.aClass120_1421.anInt1460, i, (byte) -4));
 			}
 			class207 = new Class207();
 			if (null != is)

@@ -1121,7 +1121,7 @@ public class Class283 {
 			((Class283) this).anInt3027 = 0;
 			for (int i_153_ = 0; i_153_ < ((Class283) this).aByteArrayArray3038.length; i_153_++) {
 				if (-1 != ((Class283) this).anIntArray3010[i_153_] && ((Class283) this).aByteArrayArray3038[i_153_] == null) {
-					((Class283) this).aByteArrayArray3038[i_153_] = Class65.aClass243_665.method2315((((Class283) this).anIntArray3010[i_153_]), 0, (byte) -67);
+					((Class283) this).aByteArrayArray3038[i_153_] = Class65.aClass243_665.getFile((((Class283) this).anIntArray3010[i_153_]), 0, (byte) -67);
 					if (null == ((Class283) this).aByteArrayArray3038[i_153_])
 						((Class283) this).anInt3027 += -427342251;
 				}
@@ -1131,12 +1131,12 @@ public class Class283 {
 						((Class283) this).anInt3027 += -427342251;
 				}
 				if (((Class283) this).anIntArray3035[i_153_] != -1 && null == ((Class283) this).aByteArrayArray3041[i_153_]) {
-					((Class283) this).aByteArrayArray3041[i_153_] = Class65.aClass243_665.method2315((((Class283) this).anIntArray3035[i_153_]), 0, (byte) -60);
+					((Class283) this).aByteArrayArray3041[i_153_] = Class65.aClass243_665.getFile((((Class283) this).anIntArray3035[i_153_]), 0, (byte) -60);
 					if (((Class283) this).aByteArrayArray3041[i_153_] == null)
 						((Class283) this).anInt3027 += -427342251;
 				}
 				if (((Class283) this).anIntArray3036[i_153_] != -1 && ((Class283) this).aByteArrayArray3002[i_153_] == null) {
-					((Class283) this).aByteArrayArray3002[i_153_] = Class65.aClass243_665.method2315((((Class283) this).anIntArray3036[i_153_]), 0, (byte) -33);
+					((Class283) this).aByteArrayArray3002[i_153_] = Class65.aClass243_665.getFile((((Class283) this).anIntArray3036[i_153_]), 0, (byte) -33);
 					if (null == ((Class283) this).aByteArrayArray3002[i_153_])
 						((Class283) this).anInt3027 += -427342251;
 				}

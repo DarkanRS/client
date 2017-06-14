@@ -55,7 +55,7 @@ public class Class151 implements Interface5 {
 			Class182 class182 = (Class182) Class182.aClass348_1815.method4184((long) i);
 			if (class182 != null)
 				return class182;
-			byte[] is = Class182.aClass243_1821.method2315(0, i, (byte) -125);
+			byte[] is = Class182.aClass243_1821.getFile(0, i, (byte) -125);
 			class182 = new Class182();
 			if (null != is)
 				class182.method1843(new RsByteBuffer(is), (byte) 20);

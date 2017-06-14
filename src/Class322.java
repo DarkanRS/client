@@ -39,7 +39,7 @@ public class Class322 {
 
 	public static Class505 method3931(Class243 class243, int i, int i_1_, byte i_2_) {
 		try {
-			byte[] is = class243.method2315(i, i_1_, (byte) -42);
+			byte[] is = class243.getFile(i, i_1_, (byte) -42);
 			if (null == is)
 				return null;
 			return new Class505(is);

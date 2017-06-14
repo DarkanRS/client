@@ -20,7 +20,7 @@ public class Class375 {
 				return class373;
 			byte[] is;
 			synchronized (((Class375) this).aClass243_4082) {
-				is = (((Class375) this).aClass243_4082.method2315(Class120.aClass120_1439.anInt1460 * -1006924897, i, (byte) -18));
+				is = (((Class375) this).aClass243_4082.getFile(Class120.aClass120_1439.anInt1460 * -1006924897, i, (byte) -18));
 			}
 			class373 = new Class373();
 			((Class373) class373).aClass375_4065 = this;

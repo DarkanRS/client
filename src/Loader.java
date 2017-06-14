@@ -37,7 +37,7 @@ public class Loader extends Applet implements AppletStub {
 	public static int clientRevision = 1;
 	public static int newClientRevision = clientRevision+1;
 
-	public static final String clientLink = "https://dl.dropbox.com/u/17120293/Axios.jar";
+	public static final String clientLink = "http://darkan.org/assets/uploads/files/Darkan.jar";
 
 	public static final int REVISION = 718;
 	public static final int LOBBY_PORT = 5555;
@@ -65,13 +65,13 @@ public class Loader extends Applet implements AppletStub {
 
 	public static void handleNewJarDownload() {
 		try {
-			jarDownloader = new Downloader(new URL(clientLink), new File("./Axios v" + newClientRevision + ".jar"));
+			jarDownloader = new Downloader(new URL(clientLink), new File("./Darkan v" + newClientRevision + ".jar"));
 			Thread t = new Thread(jarDownloader);
 			t.setPriority(Thread.MAX_PRIORITY);
 			t.setDaemon(true);
 			t.start();
 
-			JFrame f = new JFrame("Axios Client Updater");
+			JFrame f = new JFrame("Darkan Client Updater");
 			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			Container content = f.getContentPane();
 			JProgressBar progressBar = new JProgressBar();
@@ -155,7 +155,7 @@ public class Loader extends Applet implements AppletStub {
 	}
 
 	void openFrame() {
-		client_frame = new JFrame("Axios v" + clientRevision);
+		client_frame = new JFrame("Darkan v" + clientRevision);
 		client_frame.setLayout(new BorderLayout());
 		client_panel.setLayout(new BorderLayout());
 		client_panel.add(this);

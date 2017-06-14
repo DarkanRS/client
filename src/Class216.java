@@ -57,7 +57,7 @@ public class Class216 implements Interface24 {
 			ClientScript class298_sub37_sub17 = ((ClientScript) Class399.aClass354_5218.method4253((long) i));
 			if (class298_sub37_sub17 != null)
 				return class298_sub37_sub17;
-			byte[] is = Class377.aClass243_4092.method2315(i, 0, (byte) 12);
+			byte[] is = Class377.aClass243_4092.getFile(i, 0, (byte) 12);
 			if (is == null || is.length <= 1)
 				return null;
 			try {

@@ -23,7 +23,7 @@ public class Class494 {
 				return class473;
 			byte[] is;
 			synchronized (((Class494) this).aClass243_6091) {
-				is = (((Class494) this).aClass243_6091.method2315(Class120.aClass120_1424.anInt1460 * -1006924897, i, (byte) -73));
+				is = (((Class494) this).aClass243_6091.getFile(Class120.aClass120_1424.anInt1460 * -1006924897, i, (byte) -73));
 			}
 			class473 = new Class473();
 			if (is != null)

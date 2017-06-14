@@ -67,7 +67,7 @@ public class Class314 {
 				return class327;
 			byte[] is;
 			synchronized (((Class314) this).aClass243_3302) {
-				is = (((Class314) this).aClass243_3302.method2315(Class120.aClass120_1406.method1307(i, -1343831720), Class120.aClass120_1406.method1305(i, 39933071), (byte) 14));
+				is = (((Class314) this).aClass243_3302.getFile(Class120.aClass120_1406.getArchiveId(i, -1343831720), Class120.aClass120_1406.getFileId(i, 39933071), (byte) 14));
 			}
 			class327 = new ConfigDefinitions();
 			if (null != is)

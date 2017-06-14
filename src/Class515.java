@@ -35,7 +35,7 @@ public class Class515 {
 
 	public Class509 method6295(int i, byte i_4_) {
 		try {
-			byte[] is = ((Class515) this).aClass243_6229.method2315(i, 0, (byte) -111);
+			byte[] is = ((Class515) this).aClass243_6229.getFile(i, 0, (byte) -111);
 			Class509 class509 = new Class509();
 			class509.method6283(new RsByteBuffer(is), -391228687);
 			return class509;
@@ -46,7 +46,7 @@ public class Class515 {
 
 	public Class515(Class411 class411, Class429 class429, Class243 class243) {
 		((Class515) this).aClass243_6229 = class243;
-		RsByteBuffer class298_sub53 = new RsByteBuffer(((Class515) this).aClass243_6229.method2315(0, 0, (byte) -99));
+		RsByteBuffer class298_sub53 = new RsByteBuffer(((Class515) this).aClass243_6229.getFile(0, 0, (byte) -99));
 		int i = ((null == class298_sub53.buffer || class298_sub53.buffer.length < 1) ? -1 : class298_sub53.readUnsignedByte());
 		if (i < 4) {
 			((Class515) this).aClass521Array6230 = new Class521[0];

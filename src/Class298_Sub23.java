@@ -79,7 +79,7 @@ public class Class298_Sub23 extends Linkable {
 
 	static boolean method3064(Class243 class243) {
 		if (!aBoolean7334) {
-			byte[] is = class243.method2315(0, 0, (byte) -48);
+			byte[] is = class243.getFile(0, 0, (byte) -48);
 			if (is == null)
 				return false;
 			method3069(is);
@@ -92,7 +92,7 @@ public class Class298_Sub23 extends Linkable {
 			class243.method2290(i, i_4_, -875831506);
 			return null;
 		}
-		byte[] is = class243.method2315(i, i_4_, (byte) -123);
+		byte[] is = class243.getFile(i, i_4_, (byte) -123);
 		if (is == null)
 			return null;
 		return new Class298_Sub23(is);

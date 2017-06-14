@@ -88,14 +88,14 @@ public class ItemDefinitions {
 		}
 	}
 
-	void decode(RsByteBuffer class298_sub53, boolean oldItems) {
+	void decode(RsByteBuffer class298_sub53) {
 		try {
 			for (;;) {
 				int i_0_ = class298_sub53.readUnsignedByte();
 				if (i_0_ == 0) {
 					break;
 				}
-				method6038(class298_sub53, i_0_, oldItems);
+				method6038(class298_sub53, i_0_);
 			}
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("th.f(").append(')').toString());
@@ -591,10 +591,10 @@ public class ItemDefinitions {
 		}
 	}
 
-	void method6038(RsByteBuffer stream, int opcode, boolean oldItems) {
+	void method6038(RsByteBuffer stream, int opcode) {
 		try {
 			if (1 == opcode)
-				((ItemDefinitions) this).anInt5738 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * -1019082089;
+				((ItemDefinitions) this).anInt5738 = (stream.readBigSmart(1235052657)) * -1019082089;
 			else if (2 == opcode)
 				aString5707 = stream.readString(1338906243);
 			else if (opcode == 4)
@@ -624,13 +624,13 @@ public class ItemDefinitions {
 			else if (18 == opcode)
 				anInt5720 = stream.readUnsignedShort() * -1741576309;
 			else if (opcode == 23)
-				anInt5724 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * -1612514031;
+				anInt5724 = (stream.readBigSmart(1235052657)) * -1612514031;
 			else if (opcode == 24)
-				((ItemDefinitions) this).femaleModelId1 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * 582597415;
+				((ItemDefinitions) this).femaleModelId1 = (stream.readBigSmart(1235052657)) * 582597415;
 			else if (25 == opcode)
-				anInt5747 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * -1430077763;
+				anInt5747 = (stream.readBigSmart(1235052657)) * -1430077763;
 			else if (26 == opcode)
-				((ItemDefinitions) this).femaleModelId2 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * -336299543;
+				((ItemDefinitions) this).femaleModelId2 = (stream.readBigSmart(1235052657)) * -336299543;
 			else if (opcode == 27)
 				anInt5735 = stream.readUnsignedByte() * -1438605935;
 			else if (opcode >= 30 && opcode < 35)
@@ -664,17 +664,17 @@ public class ItemDefinitions {
 			} else if (65 == opcode)
 				aBoolean5734 = true;
 			else if (78 == opcode)
-				((ItemDefinitions) this).anInt5759 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * 756401161;
+				((ItemDefinitions) this).anInt5759 = (stream.readBigSmart(1235052657)) * 756401161;
 			else if (opcode == 79)
-				((ItemDefinitions) this).anInt5741 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * 2098680761;
+				((ItemDefinitions) this).anInt5741 = (stream.readBigSmart(1235052657)) * 2098680761;
 			else if (opcode == 90)
-				((ItemDefinitions) this).anInt5760 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * 1319962769;
+				((ItemDefinitions) this).anInt5760 = (stream.readBigSmart(1235052657)) * 1319962769;
 			else if (opcode == 91)
-				((ItemDefinitions) this).anInt5750 = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * 1598907469;
+				((ItemDefinitions) this).anInt5750 = (stream.readBigSmart(1235052657)) * 1598907469;
 			else if (opcode == 92)
-				((ItemDefinitions) this).male_head_mdltwo = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * -1935344449;
+				((ItemDefinitions) this).male_head_mdltwo = (stream.readBigSmart(1235052657)) * -1935344449;
 			else if (93 == opcode)
-				((ItemDefinitions) this).fem_head_mdltwo = (oldItems ? stream.readCustomUnsignedShort() : stream.readBigSmart(1235052657)) * -1194369871;
+				((ItemDefinitions) this).fem_head_mdltwo = (stream.readBigSmart(1235052657)) * -1194369871;
 			else if (95 == opcode)
 				anInt5716 = stream.readUnsignedShort() * -883520799;
 			else if (96 == opcode)

@@ -51,11 +51,11 @@ public class Class508 {
 					client.aClass298_Sub29Array8816[(client.anInt8772 += -118843751) * 1962237353 - 1] = class298_sub29;
 					bool_4_ = true;
 				}
-				NPC class365_sub1_sub1_sub2_sub1 = ((NPC) class298_sub29.anObject7366);
+				NPC npc = ((NPC) class298_sub29.anObject7366);
 				client.anIntArray8699[(client.anInt8703 += -409937273) * -1230451913 - 1] = i_3_;
-				class365_sub1_sub1_sub2_sub1.anInt10075 = -3704423 * client.anInt8707;
-				if (null != class365_sub1_sub1_sub2_sub1.aClass503_10190 && class365_sub1_sub1_sub2_sub1.aClass503_10190.method6242((byte) 88))
-					Class244.method2330(class365_sub1_sub1_sub2_sub1, (byte) 40);
+				npc.anInt10075 = -3704423 * client.anInt8707;
+				if (null != npc.aClass503_10190 && npc.aClass503_10190.method6242((byte) 88))
+					Class244.method2330(npc, (byte) 40);
 				int i_5_ = (stream.readBits(3) + 4 << 11 & 0x3fff);
 				int i_6_;
 				if (bool) {
@@ -67,7 +67,7 @@ public class Class508 {
 					if (i_6_ > 15)
 						i_6_ -= 32;
 				}
-				class365_sub1_sub1_sub2_sub1.method4464((Class15.aClass507_224.method6269(stream.readBits(15), 229452067)), 1407104224);
+				npc.method4464((Class15.aClass507_224.method6269(stream.readBits(15), 229452067)), 1407104224);
 				int i_7_;
 				if (bool) {
 					i_7_ = stream.readBits(8);
@@ -83,13 +83,13 @@ public class Class508 {
 				if (i_9_ == 1)
 					client.anIntArray8706[(client.anInt8808 += -386992021) * -976358333 - 1] = i_3_;
 				int i_10_ = stream.readBits(1);
-				class365_sub1_sub1_sub2_sub1.setSizeOffset(-2095128707 * (class365_sub1_sub1_sub2_sub1.aClass503_10190.anInt6187), -1253182390);
-				class365_sub1_sub1_sub2_sub1.anInt10115 = (-1186616623 * (-1927065533 * (class365_sub1_sub1_sub2_sub1.aClass503_10190.anInt6181) << 3));
+				npc.setSizeOffset(-2095128707 * (npc.aClass503_10190.anInt6187), -1253182390);
+				npc.anInt10115 = (-1186616623 * (-1927065533 * (npc.aClass503_10190.anInt6181) << 3));
 				if (bool_4_)
-					class365_sub1_sub1_sub2_sub1.method4415(i_5_, true, -2079607043);
-				class365_sub1_sub1_sub2_sub1.method4456(i_8_, i_7_ + (Class287.myPlayer.scenePositionXQueue[0]), i_6_ + (Class287.myPlayer.scenePositionYQueue[0]), 1 == i_10_, class365_sub1_sub1_sub2_sub1.getSize(), (byte) 58);
-				if (class365_sub1_sub1_sub2_sub1.aClass503_10190.method6242((byte) -9))
-					Class391.method4884(class365_sub1_sub1_sub2_sub1.plane, (class365_sub1_sub1_sub2_sub1.scenePositionXQueue[0]), (class365_sub1_sub1_sub2_sub1.scenePositionYQueue[0]), 0, null, class365_sub1_sub1_sub2_sub1, null, (byte) -66);
+					npc.method4415(i_5_, true, -2079607043);
+				npc.method4456(i_8_, i_7_ + (Class287.myPlayer.scenePositionXQueue[0]), i_6_ + (Class287.myPlayer.scenePositionYQueue[0]), 1 == i_10_, npc.getSize(), (byte) 58);
+				if (npc.aClass503_10190.method6242((byte) -9))
+					Class391.method4884(npc.plane, (npc.scenePositionXQueue[0]), (npc.scenePositionYQueue[0]), 0, null, npc, null, (byte) -66);
 			}
 			stream.finishBitAccess((byte) 38);
 		} catch (RuntimeException runtimeexception) {

@@ -291,7 +291,7 @@ public class Class89 {
 	}
 
 	public static Class89 method987(Class243 class243, int i, int i_81_) {
-		byte[] is = class243.method2315(i, i_81_, (byte) -43);
+		byte[] is = class243.getFile(i, i_81_, (byte) -43);
 		if (is == null)
 			return null;
 		return method982(is)[0];
@@ -469,7 +469,7 @@ public class Class89 {
 	}
 
 	public static Class89[] method993(Class243 class243, int i, int i_128_) {
-		byte[] is = class243.method2315(i, i_128_, (byte) 4);
+		byte[] is = class243.getFile(i, i_128_, (byte) 4);
 		if (is == null)
 			return null;
 		return method982(is);

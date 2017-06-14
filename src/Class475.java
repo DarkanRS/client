@@ -23,7 +23,7 @@ public class Class475 {
 			}
 			if (null != class483)
 				return class483;
-			byte[] is = (((Class475) this).aClass243_5981.method2315(Class120.aClass120_1413.method1307(id, -1240874866), Class120.aClass120_1413.method1305(id, -2003896976), (byte) -65));
+			byte[] is = (((Class475) this).aClass243_5981.getFile(Class120.aClass120_1413.getArchiveId(id, -1240874866), Class120.aClass120_1413.getFileId(id, -2003896976), (byte) -65));
 			class483 = new ClientScriptMap();
 			if (null != is)
 				class483.method6123(new RsByteBuffer(is), 592135620);

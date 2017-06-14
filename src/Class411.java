@@ -7,7 +7,7 @@ public class Class411 {
 	public String aString5317;
 	static Class411 aClass411_5318;
 	static Class411 aClass411_5319;
-	public static Class411 aClass411_5320 = new Class411("axios", "Axios", 0);
+	public static Class411 aClass411_5320 = new Class411("darkan", "Darkan", 0);
 	static Class411 aClass411_5321;
 	public String aString5322;
 	public int gameType;

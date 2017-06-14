@@ -44,99 +44,99 @@ public class Class369 {
 		}
 	}
 
-	void method4559(RsByteBuffer class298_sub53, int i, int i_1_) {
+	void method4559(RsByteBuffer stream, int opcode, int i_1_) {
 		try {
-			if (1 == i)
-				aString4025 = class298_sub53.readJagString(681479919);
-			else if (2 == i)
-				aString4008 = class298_sub53.readJagString(681479919);
-			else if (i == 3) {
-				int i_2_ = class298_sub53.readUnsignedByte();
+			if (1 == opcode)
+				aString4025 = stream.readJagString(681479919);
+			else if (2 == opcode)
+				aString4008 = stream.readJagString(681479919);
+			else if (opcode == 3) {
+				int i_2_ = stream.readUnsignedByte();
 				((Class369) this).anIntArrayArray4010 = new int[i_2_][3];
 				for (int i_3_ = 0; i_3_ < i_2_; i_3_++) {
-					((Class369) this).anIntArrayArray4010[i_3_][0] = class298_sub53.readUnsignedShort();
-					((Class369) this).anIntArrayArray4010[i_3_][1] = class298_sub53.readInt((byte) 34);
-					((Class369) this).anIntArrayArray4010[i_3_][2] = class298_sub53.readInt((byte) 72);
+					((Class369) this).anIntArrayArray4010[i_3_][0] = stream.readUnsignedShort();
+					((Class369) this).anIntArrayArray4010[i_3_][1] = stream.readInt((byte) 34);
+					((Class369) this).anIntArrayArray4010[i_3_][2] = stream.readInt((byte) 72);
 				}
-			} else if (4 == i) {
-				int i_4_ = class298_sub53.readUnsignedByte();
+			} else if (4 == opcode) {
+				int i_4_ = stream.readUnsignedByte();
 				((Class369) this).anIntArrayArray4021 = new int[i_4_][3];
 				for (int i_5_ = 0; i_5_ < i_4_; i_5_++) {
-					((Class369) this).anIntArrayArray4021[i_5_][0] = class298_sub53.readUnsignedShort();
-					((Class369) this).anIntArrayArray4021[i_5_][1] = class298_sub53.readInt((byte) -80);
-					((Class369) this).anIntArrayArray4021[i_5_][2] = class298_sub53.readInt((byte) -11);
+					((Class369) this).anIntArrayArray4021[i_5_][0] = stream.readUnsignedShort();
+					((Class369) this).anIntArrayArray4021[i_5_][1] = stream.readInt((byte) -80);
+					((Class369) this).anIntArrayArray4021[i_5_][2] = stream.readInt((byte) -11);
 				}
-			} else if (i == 5)
-				class298_sub53.readUnsignedShort();
-			else if (6 == i)
-				anInt4011 = class298_sub53.readUnsignedByte() * -1975598225;
-			else if (7 == i)
-				anInt4012 = class298_sub53.readUnsignedByte() * 203571345;
-			else if (8 == i)
+			} else if (opcode == 5)
+				stream.readUnsignedShort();
+			else if (6 == opcode)
+				anInt4011 = stream.readUnsignedByte() * -1975598225;
+			else if (7 == opcode)
+				anInt4012 = stream.readUnsignedByte() * 203571345;
+			else if (8 == opcode)
 				aBoolean4027 = true;
-			else if (9 == i)
-				anInt4014 = class298_sub53.readUnsignedByte() * 1044902997;
-			else if (10 == i) {
-				int i_6_ = class298_sub53.readUnsignedByte();
+			else if (9 == opcode)
+				anInt4014 = stream.readUnsignedByte() * 1044902997;
+			else if (10 == opcode) {
+				int i_6_ = stream.readUnsignedByte();
 				((Class369) this).anIntArray4015 = new int[i_6_];
 				for (int i_7_ = 0; i_7_ < i_6_; i_7_++)
-					((Class369) this).anIntArray4015[i_7_] = class298_sub53.readInt((byte) 87);
-			} else if (12 == i)
-				class298_sub53.readInt((byte) 85);
-			else if (i == 13) {
-				int i_8_ = class298_sub53.readUnsignedByte();
+					((Class369) this).anIntArray4015[i_7_] = stream.readInt((byte) 87);
+			} else if (12 == opcode)
+				stream.readInt((byte) 85);
+			else if (opcode == 13) {
+				int i_8_ = stream.readUnsignedByte();
 				anIntArray4016 = new int[i_8_];
 				for (int i_9_ = 0; i_9_ < i_8_; i_9_++)
-					anIntArray4016[i_9_] = class298_sub53.readUnsignedShort();
-			} else if (i == 14) {
-				int i_10_ = class298_sub53.readUnsignedByte();
+					anIntArray4016[i_9_] = stream.readUnsignedShort();
+			} else if (opcode == 14) {
+				int i_10_ = stream.readUnsignedByte();
 				anIntArrayArray4017 = new int[i_10_][2];
 				for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
-					anIntArrayArray4017[i_11_][0] = class298_sub53.readUnsignedByte();
-					anIntArrayArray4017[i_11_][1] = class298_sub53.readUnsignedByte();
+					anIntArrayArray4017[i_11_][0] = stream.readUnsignedByte();
+					anIntArrayArray4017[i_11_][1] = stream.readUnsignedByte();
 				}
-			} else if (15 == i)
-				anInt4006 = class298_sub53.readUnsignedShort() * 96808193;
-			else if (i == 17)
-				anInt4028 = class298_sub53.readBigSmart(1235052657) * 301919677;
-			else if (i == 18) {
-				int i_12_ = class298_sub53.readUnsignedByte();
+			} else if (15 == opcode)
+				anInt4006 = stream.readUnsignedShort() * 96808193;
+			else if (opcode == 17)
+				anInt4028 = stream.readBigSmart(1235052657) * 301919677;
+			else if (opcode == 18) {
+				int i_12_ = stream.readUnsignedByte();
 				anIntArray4019 = new int[i_12_];
 				((Class369) this).anIntArray4020 = new int[i_12_];
 				((Class369) this).anIntArray4013 = new int[i_12_];
 				aStringArray4022 = new String[i_12_];
 				for (int i_13_ = 0; i_13_ < i_12_; i_13_++) {
-					anIntArray4019[i_13_] = class298_sub53.readInt((byte) 8);
-					((Class369) this).anIntArray4020[i_13_] = class298_sub53.readInt((byte) -38);
-					((Class369) this).anIntArray4013[i_13_] = class298_sub53.readInt((byte) -23);
-					aStringArray4022[i_13_] = class298_sub53.readString(-1449039258);
+					anIntArray4019[i_13_] = stream.readInt((byte) 8);
+					((Class369) this).anIntArray4020[i_13_] = stream.readInt((byte) -38);
+					((Class369) this).anIntArray4013[i_13_] = stream.readInt((byte) -23);
+					aStringArray4022[i_13_] = stream.readString(-1449039258);
 				}
-			} else if (i == 19) {
-				int i_14_ = class298_sub53.readUnsignedByte();
+			} else if (opcode == 19) {
+				int i_14_ = stream.readUnsignedByte();
 				anIntArray4023 = new int[i_14_];
 				((Class369) this).anIntArray4024 = new int[i_14_];
 				((Class369) this).anIntArray4009 = new int[i_14_];
 				aStringArray4026 = new String[i_14_];
 				for (int i_15_ = 0; i_15_ < i_14_; i_15_++) {
-					anIntArray4023[i_15_] = class298_sub53.readInt((byte) 111);
-					((Class369) this).anIntArray4024[i_15_] = class298_sub53.readInt((byte) -1);
-					((Class369) this).anIntArray4009[i_15_] = class298_sub53.readInt((byte) -36);
-					aStringArray4026[i_15_] = class298_sub53.readString(166034178);
+					anIntArray4023[i_15_] = stream.readInt((byte) 111);
+					((Class369) this).anIntArray4024[i_15_] = stream.readInt((byte) -1);
+					((Class369) this).anIntArray4009[i_15_] = stream.readInt((byte) -36);
+					aStringArray4026[i_15_] = stream.readString(166034178);
 				}
-			} else if (i == 249) {
-				int i_16_ = class298_sub53.readUnsignedByte();
+			} else if (opcode == 249) {
+				int i_16_ = stream.readUnsignedByte();
 				if (((Class369) this).aClass437_4018 == null) {
 					int i_17_ = Class416.method5590(i_16_, (byte) 16);
 					((Class369) this).aClass437_4018 = new HashTable(i_17_);
 				}
 				for (int i_18_ = 0; i_18_ < i_16_; i_18_++) {
-					boolean bool = class298_sub53.readUnsignedByte() == 1;
-					int i_19_ = class298_sub53.read24BitUnsignedInteger((byte) -5);
+					boolean bool = stream.readUnsignedByte() == 1;
+					int i_19_ = stream.read24BitUnsignedInteger((byte) -5);
 					Linkable class298;
 					if (bool)
-						class298 = new Class298_Sub29(class298_sub53.readString(-1573991402));
+						class298 = new Class298_Sub29(stream.readString(-1573991402));
 					else
-						class298 = new Class298_Sub35(class298_sub53.readInt((byte) -24));
+						class298 = new Class298_Sub35(stream.readInt((byte) -24));
 					((Class369) this).aClass437_4018.method5817(class298, (long) i_19_);
 				}
 			}

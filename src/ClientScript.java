@@ -84,9 +84,9 @@ public class ClientScript extends Class298_Sub37 {
 					anObjectArray9683 = new String[i_11_];
 				String string = class298_sub53.readString(1264292705);
 				if (string.toLowerCase().contains("runescape")) {
-					string = string.replace("runescape", "Axios");
-					string = string.replace("RuneScape", "Axios");
-					string = string.replace("Runescape", "Axios");
+					string = string.replace("runescape", "Darkan");
+					string = string.replace("RuneScape", "Darkan");
+					string = string.replace("Runescape", "Darkan");
 				}
 				if (string.toLowerCase().contains("response") && string.toLowerCase().contains("unexpected")) {
 					string = "Your forum account was not found, register on the forums!";

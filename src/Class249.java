@@ -42,7 +42,7 @@ public class Class249 implements Interface_ma {
 	public Class249(Class243 class243, Class243 class243_3_, Class243 class243_4_) {
 		((Class249) this).aClass243_6461 = class243_3_;
 		((Class249) this).aClass243_6460 = class243_4_;
-		RsByteBuffer class298_sub53 = new RsByteBuffer(class243.method2315(0, 0, (byte) -117));
+		RsByteBuffer class298_sub53 = new RsByteBuffer(class243.getFile(0, 0, (byte) -117));
 		((Class249) this).anInt6463 = class298_sub53.readUnsignedShort() * 12939135;
 		((Class249) this).aClass53Array6462 = new Class53[((Class249) this).anInt6463 * -1882566529];
 		for (int i = 0; i < -1882566529 * ((Class249) this).anInt6463; i++) {

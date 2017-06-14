@@ -72,7 +72,7 @@ public class Linkable {
 			Class173 class173 = (Class173) Class173.aClass348_1749.method4184((long) i);
 			if (class173 != null)
 				return class173;
-			byte[] is = Class173.aClass243_1756.method2315(0, i, (byte) -64);
+			byte[] is = Class173.aClass243_1756.getFile(0, i, (byte) -64);
 			class173 = new Class173();
 			if (null != is)
 				class173.method1817(new RsByteBuffer(is), i, (byte) -27);

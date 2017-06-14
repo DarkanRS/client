@@ -32,7 +32,7 @@ public class Class491 {
 				return class492;
 			byte[] is;
 			synchronized (((Class491) this).aClass243_6076) {
-				is = (((Class491) this).aClass243_6076.method2315(-1006924897 * Class120.aClass120_1438.anInt1460, i, (byte) -68));
+				is = (((Class491) this).aClass243_6076.getFile(-1006924897 * Class120.aClass120_1438.anInt1460, i, (byte) -68));
 			}
 			class492 = new Class492();
 			((Class492) class492).aClass491_6082 = this;

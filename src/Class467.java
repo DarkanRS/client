@@ -9,9 +9,9 @@ public final class Class467 {
 
 	static final void method6023(int i) {
 		try {
-			RsBitsBuffer class298_sub53_sub2 = ((BufferedConnectionContext) client.gameConnection).stream;
-			class298_sub53_sub2.initBitAccess(1157167964);
-			int i_0_ = class298_sub53_sub2.readBits(8);
+			RsBitsBuffer stream = ((BufferedConnectionContext) client.gameConnection).stream;
+			stream.initBitAccess(1157167964);
+			int i_0_ = stream.readBits(8);
 			if (i_0_ < client.anInt8703 * -1230451913) {
 				for (int i_1_ = i_0_; i_1_ < -1230451913 * client.anInt8703; i_1_++)
 					client.anIntArray8709[(client.anInt8708 += 107511579) * -1508392173 - 1] = client.anIntArray8699[i_1_];
@@ -21,38 +21,38 @@ public final class Class467 {
 			client.anInt8703 = 0;
 			for (int i_2_ = 0; i_2_ < i_0_; i_2_++) {
 				int i_3_ = client.anIntArray8699[i_2_];
-				NPC class365_sub1_sub1_sub2_sub1 = ((NPC) (((Class298_Sub29) client.npcs.get((long) i_3_)).anObject7366));
-				int i_4_ = class298_sub53_sub2.readBits(1);
+				NPC npc = ((NPC) (((Class298_Sub29) client.npcs.get((long) i_3_)).anObject7366));
+				int i_4_ = stream.readBits(1);
 				if (i_4_ == 0) {
 					client.anIntArray8699[(client.anInt8703 += -409937273) * -1230451913 - 1] = i_3_;
-					class365_sub1_sub1_sub2_sub1.anInt10075 = -3704423 * client.anInt8707;
+					npc.anInt10075 = -3704423 * client.anInt8707;
 				} else {
-					int i_5_ = class298_sub53_sub2.readBits(2);
+					int i_5_ = stream.readBits(2);
 					if (0 == i_5_) {
 						client.anIntArray8699[((client.anInt8703 += -409937273) * -1230451913) - 1] = i_3_;
-						class365_sub1_sub1_sub2_sub1.anInt10075 = -3704423 * client.anInt8707;
+						npc.anInt10075 = -3704423 * client.anInt8707;
 						client.anIntArray8706[(client.anInt8808 += -386992021) * -976358333 - 1] = i_3_;
 					} else if (1 == i_5_) {
 						client.anIntArray8699[((client.anInt8703 += -409937273) * -1230451913) - 1] = i_3_;
-						class365_sub1_sub1_sub2_sub1.anInt10075 = client.anInt8707 * -3704423;
-						Class274 class274 = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-2130206915), class298_sub53_sub2.readBits(3), (byte) 2)));
-						class365_sub1_sub1_sub2_sub1.method4455(class274, Class282.aClass282_6540.aByte6542, (short) 32767);
-						int i_6_ = class298_sub53_sub2.readBits(1);
+						npc.anInt10075 = client.anInt8707 * -3704423;
+						Class274 class274 = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-2130206915), stream.readBits(3), (byte) 2)));
+						npc.method4455(class274, Class282.aClass282_6540.aByte6542, (short) 32767);
+						int i_6_ = stream.readBits(1);
 						if (1 == i_6_)
 							client.anIntArray8706[((client.anInt8808 += -386992021) * -976358333 - 1)] = i_3_;
 					} else if (i_5_ == 2) {
 						client.anIntArray8699[((client.anInt8703 += -409937273) * -1230451913) - 1] = i_3_;
-						class365_sub1_sub1_sub2_sub1.anInt10075 = -3704423 * client.anInt8707;
-						if (class298_sub53_sub2.readBits(1) == 1) {
-							Class274 class274 = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-2113999549), class298_sub53_sub2.readBits(3), (byte) 2)));
-							class365_sub1_sub1_sub2_sub1.method4455(class274, Class282.aClass282_6541.aByte6542, (short) 32767);
-							Class274 class274_7_ = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-1890825389), class298_sub53_sub2.readBits(3), (byte) 2)));
-							class365_sub1_sub1_sub2_sub1.method4455(class274_7_, Class282.aClass282_6541.aByte6542, (short) 32767);
+						npc.anInt10075 = -3704423 * client.anInt8707;
+						if (stream.readBits(1) == 1) {
+							Class274 class274 = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-2113999549), stream.readBits(3), (byte) 2)));
+							npc.method4455(class274, Class282.aClass282_6541.aByte6542, (short) 32767);
+							Class274 class274_7_ = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-1890825389), stream.readBits(3), (byte) 2)));
+							npc.method4455(class274_7_, Class282.aClass282_6541.aByte6542, (short) 32767);
 						} else {
-							Class274 class274 = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-2012553016), class298_sub53_sub2.readBits(3), (byte) 2)));
-							class365_sub1_sub1_sub2_sub1.method4455(class274, Class282.aClass282_6545.aByte6542, (short) 32767);
+							Class274 class274 = ((Class274) (Class422_Sub20.method5701(Class299.method3680(-2012553016), stream.readBits(3), (byte) 2)));
+							npc.method4455(class274, Class282.aClass282_6545.aByte6542, (short) 32767);
 						}
-						int i_8_ = class298_sub53_sub2.readBits(1);
+						int i_8_ = stream.readBits(1);
 						if (1 == i_8_)
 							client.anIntArray8706[((client.anInt8808 += -386992021) * -976358333 - 1)] = i_3_;
 					} else if (i_5_ == 3)

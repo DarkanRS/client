@@ -24,7 +24,7 @@ public class Class507 {
 				return class503;
 			byte[] is;
 			synchronized (((Class507) this).aClass243_6207) {
-				is = (((Class507) this).aClass243_6207.method2315(Class120.aClass120_1410.method1307(i, -790155853), Class120.aClass120_1410.method1305(i, -576275965), (byte) -76));
+				is = (((Class507) this).aClass243_6207.getFile(Class120.aClass120_1410.getArchiveId(i, -790155853), Class120.aClass120_1410.getFileId(i, -576275965), (byte) -76));
 			}
 			class503 = new SomethingDefinitions();
 			class503.anInt6126 = -1840892671 * i;

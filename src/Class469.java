@@ -42,9 +42,9 @@ public class Class469 {
 				return class298_sub37_sub14;
 			byte[] is;
 			if (i >= 32768)
-				is = ((Class469) this).aClass243_5776.method2315(1, i & 0x7fff, (byte) -26);
+				is = ((Class469) this).aClass243_5776.getFile(1, i & 0x7fff, (byte) -26);
 			else
-				is = ((Class469) this).aClass243_5778.method2315(1, i, (byte) -31);
+				is = ((Class469) this).aClass243_5778.getFile(1, i, (byte) -31);
 			class298_sub37_sub14 = new Class298_Sub37_Sub14();
 			((Class298_Sub37_Sub14) class298_sub37_sub14).aClass469_9651 = this;
 			if (is != null)
@@ -125,7 +125,7 @@ public class Class469 {
 
 	static Class298_Sub37_Sub13 method6048(Class243 class243, int i, int i_20_, int i_21_) {
 		try {
-			RsByteBuffer class298_sub53 = new RsByteBuffer(class243.method2315(i, i_20_, (byte) 3));
+			RsByteBuffer class298_sub53 = new RsByteBuffer(class243.getFile(i, i_20_, (byte) 3));
 			Class298_Sub37_Sub13 class298_sub37_sub13 = (new Class298_Sub37_Sub13(i_20_, class298_sub53.readString(-1014876746), class298_sub53.readString(-346433981), class298_sub53.readInt((byte) -81), class298_sub53.readInt((byte) 27), class298_sub53.readUnsignedByte() == 1, class298_sub53.readUnsignedByte(), class298_sub53.readUnsignedByte()));
 			int i_22_ = class298_sub53.readUnsignedByte();
 			for (int i_23_ = 0; i_23_ < i_22_; i_23_++)

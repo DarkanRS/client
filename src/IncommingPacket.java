@@ -328,7 +328,7 @@ public class IncommingPacket {
 		aClass202_2306 = new IncommingPacket(156, 3);
 		aClass202_2307 = new IncommingPacket(157, 5);
 		WORLD_TILE_PACKET = new IncommingPacket(158, 3);
-		SWITCH_ITEMS_LOOK_PACKET = new IncommingPacket(159, 1);
+		SWITCH_ITEMS_LOOK_PACKET = new IncommingPacket(159, 5);
 	}
 
 	IncommingPacket(int i, int i_0_) {

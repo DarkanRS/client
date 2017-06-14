@@ -42,7 +42,7 @@ public class Class362 {
 			for (int i = 0; i < ((Class362) this).anInt3916 * 1223397457; i++) {
 				byte[] is;
 				synchronized (((Class362) this).aClass243_3917) {
-					is = (((Class362) this).aClass243_3917.method2315(Class120.aClass120_1440.anInt1460 * -1006924897, i, (byte) -67));
+					is = (((Class362) this).aClass243_3917.getFile(Class120.aClass120_1440.anInt1460 * -1006924897, i, (byte) -67));
 				}
 				Class369 class369 = new Class369();
 				if (is != null)

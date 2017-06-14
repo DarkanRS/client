@@ -1911,7 +1911,7 @@ public class PacketsDecoder {
 				return true;
 			}
 			if (IncommingPacket.SWITCH_ITEMS_LOOK_PACKET == ((BufferedConnectionContext) class25).INCOMMING_PACKET) {
-				Class477.switchItems(stream.readUnsignedByte() == 1);
+				Loader.DEVELOPER_CONSOLE_COLOR = stream.readInt((byte) 0);
 				((BufferedConnectionContext) class25).INCOMMING_PACKET = null;
 				return true;
 			}

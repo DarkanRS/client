@@ -51,7 +51,7 @@ public class Class427 {
 			}
 			if (null != class434)
 				return class434;
-			byte[] is = (((Class427) this).aClass243_5361.method2315(-1006924897 * Class120.aClass120_1430.anInt1460, i, (byte) 14));
+			byte[] is = (((Class427) this).aClass243_5361.getFile(-1006924897 * Class120.aClass120_1430.anInt1460, i, (byte) 14));
 			class434 = new Class434();
 			if (null != is)
 				class434.method5801(new RsByteBuffer(is), 2030266422);

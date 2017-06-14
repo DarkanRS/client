@@ -74,7 +74,7 @@ public class Class278 {
 	}
 
 	public static Class278 method2604(Class243 class243, int i, int i_11_) {
-		byte[] is = class243.method2315(i, i_11_, (byte) -90);
+		byte[] is = class243.getFile(i, i_11_, (byte) -90);
 		if (is == null)
 			return null;
 		return new Class278(new RsByteBuffer(is));

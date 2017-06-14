@@ -17,9 +17,9 @@ public class Class256 {
 				return class298_sub37_sub8;
 			byte[] is;
 			if (i >= 32768)
-				is = ((Class256) this).aClass243_2797.method2315(0, i & 0x7fff, (byte) -102);
+				is = ((Class256) this).aClass243_2797.getFile(0, i & 0x7fff, (byte) -102);
 			else
-				is = ((Class256) this).aClass243_2796.method2315(0, i, (byte) -91);
+				is = ((Class256) this).aClass243_2796.getFile(0, i, (byte) -91);
 			class298_sub37_sub8 = new Class298_Sub37_Sub8();
 			if (is != null)
 				class298_sub37_sub8.method3430(new RsByteBuffer(is), 754160666);

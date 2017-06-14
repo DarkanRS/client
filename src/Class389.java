@@ -35,7 +35,7 @@ public class Class389 {
 				return class398;
 			byte[] is;
 			synchronized (((Class389) this).aClass243_4159) {
-				is = (((Class389) this).aClass243_4159.method2315(Class120.aClass120_1449.method1307(i, -880627246), Class120.aClass120_1449.method1305(i, -2138953670), (byte) -76));
+				is = (((Class389) this).aClass243_4159.getFile(Class120.aClass120_1449.getArchiveId(i, -880627246), Class120.aClass120_1449.getFileId(i, -2138953670), (byte) -76));
 			}
 			class398 = new Class398();
 			((Class398) class398).aClass389_5210 = this;

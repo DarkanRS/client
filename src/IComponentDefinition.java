@@ -308,9 +308,9 @@ public class IComponentDefinition {
 					aBoolean1211 = class298_sub53.readUnsignedByte() == 1;
 				aString1212 = class298_sub53.readString(332948556);
 				if (aString1212.toLowerCase().contains("runescape")) {
-					aString1212 = aString1212.replace("runescape", "Axios");
-					aString1212 = aString1212.replace("RuneScape", "Axios");
-					aString1212 = aString1212.replace("Runescape", "Axios");
+					aString1212 = aString1212.replace("runescape", "Darkan");
+					aString1212 = aString1212.replace("RuneScape", "Darkan");
+					aString1212 = aString1212.replace("Runescape", "Darkan");
 				}
 				anInt1191 = class298_sub53.readUnsignedByte() * 1629063197;
 				anInt1214 = class298_sub53.readUnsignedByte() * -1733811909;
@@ -547,6 +547,8 @@ public class IComponentDefinition {
 						break;
 					}
 				}
+				if (class89.anInt811 + i_34_ >= is.length)
+					return null;
 				is[class89.anInt811 + i_34_] = class89.anInt815 + i_35_;
 				is_33_[i_34_ + class89.anInt811] = i_36_ - i_35_;
 			}

@@ -193,11 +193,11 @@ public final class Class243 {
 			if (!method2284(-1120870395))
 				return null;
 			if ((((Class226) ((Class243) this).aClass226_2713).anIntArray2517).length == 1)
-				return method2315(0, i, (byte) -42);
+				return getFile(0, i, (byte) -42);
 			if (!method2309(i, (byte) 1))
 				return null;
 			if (((Class226) ((Class243) this).aClass226_2713).anIntArray2517[i] == 1)
-				return method2315(i, 0, (byte) -48);
+				return getFile(i, 0, (byte) -48);
 			throw new RuntimeException();
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("ke.y(").append(')').toString());
@@ -305,7 +305,7 @@ public final class Class243 {
 			if (!method2309(i_26_, (byte) 1))
 				return null;
 			int i_27_ = (((Class226) ((Class243) this).aClass226_2713).aClass112Array2528[i_26_].method1239(Class244.method2328(string_25_, -2059879258), 838109915));
-			return method2315(i_26_, i_27_, (byte) -34);
+			return getFile(i_26_, i_27_, (byte) -34);
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("ke.l(").append(')').toString());
 		}
@@ -877,7 +877,7 @@ public final class Class243 {
 		return true;
 	}
 
-	public byte[] method2315(int i, int i_150_, byte i_151_) {
+	public byte[] getFile(int i, int i_150_, byte i_151_) {
 		try {
 			return method2289(i, i_150_, null, -1954204331);
 		} catch (RuntimeException runtimeexception) {

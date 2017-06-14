@@ -733,7 +733,7 @@ public class Model {
 	}
 
 	public static Model method751(Class243 class243, int i, int i_120_) {
-		byte[] is = class243.method2315(i, i_120_, (byte) -97);
+		byte[] is = class243.getFile(i, i_120_, (byte) -97);
 		if (is == null)
 			return null;
 		return new Model(is);
