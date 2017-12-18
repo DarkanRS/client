@@ -1,6 +1,3 @@
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 /* a - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
@@ -15,18 +12,6 @@ public class a implements Interface25 {
 
 	public void ma(boolean bool) {
 		R(((a) this).nativeid, bool);
-	}
-
-	static void method50123(int x) {
-		try {
-			Class var_class = java.lang.ClassLoader.class;
-			Field field = var_class.getDeclaredField("nativeLibraries");
-			Class var_class_124_ = java.lang.reflect.AccessibleObject.class;
-			Method method = var_class_124_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-			method.invoke(field, new Object[] { Boolean.TRUE });
-		} catch (Throwable throwable) {
-			/* empty */
-		}
 	}
 
 	native void i(long l, long l_0_, int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, boolean[][] bools);

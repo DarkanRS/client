@@ -57,17 +57,17 @@ public class Class372 {
 		}
 	}
 
-	public static Class243 method4590(Class111 class111, boolean bool, int i, boolean bool_5_, int i_6_) {
+	public static Class243 method4590(JS5Index index, boolean bool, int i, boolean bool_5_, int i_6_) {
 		try {
 			if (null == Class373.aClass242_Sub1Array4072)
 				Class373.aClass242_Sub1Array4072 = new Class242_Sub1[Class356.method4268(1608416895)];
 			Class329 class329 = null;
-			int i_7_ = class111.method1233(958180062);
+			int indexId = index.getIndexId();
 			if (null != client.aClass484_6476)
-				class329 = new Class329(i_7_, client.aClass484_6476, Class497.aClass484Array6106[i_7_], 1500000);
-			Class373.aClass242_Sub1Array4072[i_7_] = Class203.aClass225_2337.method2095(i_7_, class329, (Class365_Sub1_Sub3_Sub2.aClass329_9933), 311001416);
-			Class373.aClass242_Sub1Array4072[i_7_].method2278((byte) 2);
-			return new Class243(Class373.aClass242_Sub1Array4072[i_7_], bool, i);
+				class329 = new Class329(indexId, client.aClass484_6476, Class497.aClass484Array6106[indexId], 1500000);
+			Class373.aClass242_Sub1Array4072[indexId] = Class203.aClass225_2337.method2095(indexId, class329, (Class365_Sub1_Sub3_Sub2.aClass329_9933), 311001416);
+			Class373.aClass242_Sub1Array4072[indexId].method2278((byte) 2);
+			return new Class243(Class373.aClass242_Sub1Array4072[indexId], bool, i);
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("pl.fz(").append(')').toString());
 		}

@@ -17,7 +17,6 @@ import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
-import java.net.URL;
 
 import jaclib.nanotime.QueryPerformanceCounter;
 

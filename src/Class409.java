@@ -94,7 +94,7 @@ public class Class409 {
 	public static Frame method4976(Class457 class457, int i, int i_5_, int i_6_, int i_7_, int i_8_) {
 		try {
 			if (0 == i_6_) {
-				Class456[] class456s = Class111.method1238(class457, (short) 486);
+				Class456[] class456s = JS5Index.method1238(class457, (short) 486);
 				if (class456s == null)
 					return null;
 				boolean bool = false;

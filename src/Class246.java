@@ -3,7 +3,6 @@
  */
 import jaclib.memory.Source;
 import jaclib.memory.heap.NativeHeapBuffer;
-
 import jaggl.OpenGL;
 
 public abstract class Class246 implements Interface7 {

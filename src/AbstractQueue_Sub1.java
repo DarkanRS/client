@@ -1,8 +1,6 @@
 /* AbstractQueue_Sub1 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.AbstractQueue;
 import java.util.Arrays;
 import java.util.Comparator;
@@ -16,18 +14,6 @@ public class AbstractQueue_Sub1 extends AbstractQueue {
 	int anInt6314;
 	Comparator aComparator6315;
 	int anInt6316 = 0;
-
-	static void method50123(int x) {
-		try {
-			Class var_class = java.lang.ClassLoader.class;
-			Field field = var_class.getDeclaredField("nativeLibraries");
-			Class var_class_124_ = java.lang.reflect.AccessibleObject.class;
-			Method method = var_class_124_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-			method.invoke(field, new Object[] { Boolean.TRUE });
-		} catch (Throwable throwable) {
-			/* empty */
-		}
-	}
 
 	void method6383(int i, int i_0_) {
 		try {

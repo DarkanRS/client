@@ -50,16 +50,16 @@ public class Class356 {
 
 	public static int method4268(int i) {
 		try {
-			if (588194557 * Class111.anInt1367 == -1) {
-				Class111[] class111s = Class125.method1399((byte) -111);
+			if (588194557 * JS5Index.anInt1367 == -1) {
+				JS5Index[] class111s = Class125.method1399((byte) -111);
 				for (int i_1_ = 0; i_1_ < class111s.length; i_1_++) {
-					Class111 class111 = class111s[i_1_];
-					if (((Class111) class111).anInt1366 * -1047699439 > 588194557 * Class111.anInt1367)
-						Class111.anInt1367 = 510332837 * ((Class111) class111).anInt1366;
+					JS5Index class111 = class111s[i_1_];
+					if (((JS5Index) class111).anInt1366 * -1047699439 > 588194557 * JS5Index.anInt1367)
+						JS5Index.anInt1367 = 510332837 * ((JS5Index) class111).anInt1366;
 				}
-				Class111.anInt1367 += -1700689323;
+				JS5Index.anInt1367 += -1700689323;
 			}
-			return 588194557 * Class111.anInt1367;
+			return 588194557 * JS5Index.anInt1367;
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("ow.b(").append(')').toString());
 		}

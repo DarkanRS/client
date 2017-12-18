@@ -323,7 +323,7 @@ public class Class60 {
 		try {
 			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
 			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class111.method1235(class105, class403, (byte) 0);
+			JS5Index.method1235(class105, class403, (byte) 0);
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("ck.qo(").append(')').toString());
 		}

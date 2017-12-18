@@ -412,7 +412,7 @@ public class RsByteBuffer extends Linkable {
 		}
 	}
 
-	public void method3617(int i, int i_57_) {
+	public void writeByteC(int i, int i_57_) {
 		try {
 			buffer[(index += 116413311) * 385051775 - 1] = (byte) (0 - i);
 		} catch (RuntimeException runtimeexception) {

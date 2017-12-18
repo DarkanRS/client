@@ -3,7 +3,6 @@
  */
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeapBuffer;
-
 import jaggl.OpenGL;
 
 public class Class298_Sub5 extends Linkable {

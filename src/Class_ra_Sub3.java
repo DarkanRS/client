@@ -11,7 +11,6 @@ import jaclib.memory.DirectBufferHelper;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
 import jaclib.memory.heap.NativeHeapBuffer;
-
 import sun.misc.Unsafe;
 
 public abstract class Class_ra_Sub3 extends GraphicsToolkit {

@@ -29,19 +29,19 @@ public class Loader extends Applet implements AppletStub {
 	
 	public static int DEVELOPER_CONSOLE_COLOR = 0x00FF00;
 	
-	public static int PORT = 43594;
+	public static int PORT = 5555;
 	public static boolean LOBBY_ENABLED = false;
 	public static boolean DISABLE_XTEA_CRASH = true;
-	public static boolean DISABLE_USELESS_PACKETS = true;
+	public static boolean DISABLE_USELESS_PACKETS = false;
 	public static boolean DISABLE_RSA = false;
-	public static int clientRevision = 1;
+	public static int clientRevision = 3;
 	public static int newClientRevision = clientRevision+1;
 
 	public static final String clientLink = "http://darkan.org/assets/uploads/files/Darkan.jar";
 
 	public static final int REVISION = 718;
 	public static final int LOBBY_PORT = 5555;
-	public static String LOBBY_IP = "127.0.0.1";
+	public static String LOBBY_IP = "axios.trentonkress.com";
 	public static int SUB_REVISION = 2;
 	public static Loader instance;
 	public static int[] outSizes = new int[256];
@@ -86,7 +86,7 @@ public class Loader extends Applet implements AppletStub {
 				progressBar.setValue(jarDownloader.getProgressPercent());
 			}
 			f.dispose();
-			JOptionPane.showMessageDialog(f, "Update successful! Run the newly downloaded: Axios" + newClientRevision + ".jar");
+			JOptionPane.showMessageDialog(f, "Update successful! Run the newly downloaded: Darkan v" + newClientRevision + ".jar");
 			System.exit(0);
 		} catch (MalformedURLException e) {
 			System.out.print("Downloader error.");

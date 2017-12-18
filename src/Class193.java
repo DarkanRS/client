@@ -2,7 +2,6 @@
  * Visit http://jode.sourceforge.net/
  */
 import jaclib.memory.Source;
-
 import jagdx.IDirect3DDevice;
 import jagdx.IDirect3DVertexBuffer;
 import jagdx.IUnknown;

@@ -60,8 +60,8 @@ public class Class288_Sub1 extends Class288 implements Runnable {
 						class298_sub36.aClass298_Sub53_Sub2_7396.writeByte(-1813470547 * Class211.aClass211_2415.anInt2418);
 						class298_sub36.aClass298_Sub53_Sub2_7396.writeShort(0, 16711935);
 						int i_1_ = ((class298_sub36.aClass298_Sub53_Sub2_7396.index) * 385051775);
-						class298_sub36.aClass298_Sub53_Sub2_7396.writeShort(718, 16711935);
-						class298_sub36.aClass298_Sub53_Sub2_7396.writeShort(1, 16711935);
+						class298_sub36.aClass298_Sub53_Sub2_7396.writeShort(Loader.REVISION, 16711935);
+						class298_sub36.aClass298_Sub53_Sub2_7396.writeShort(Loader.SUB_REVISION, 16711935);
 						Class361.anIntArray3913 = Class256.method2446(class298_sub36, -201782073);
 						int i_2_ = ((class298_sub36.aClass298_Sub53_Sub2_7396.index) * 385051775);
 						class298_sub36.aClass298_Sub53_Sub2_7396.writeString(client.aString8655, 2134259589);
@@ -83,6 +83,8 @@ public class Class288_Sub1 extends Class288 implements Runnable {
 						Class525.aClass486_6298 = Class486.aClass486_6061;
 					}
 					if (Class486.aClass486_6061 == Class525.aClass486_6298) {
+						if (client.lobbyConnection.method387(537308016) == null)
+							return;
 						if (client.lobbyConnection.method387(537308016).isAvailable(1, (byte) -109)) {
 							client.lobbyConnection.method387(537308016).read((((BufferedConnectionContext) client.lobbyConnection).stream.buffer), 0, 1, (byte) -97);
 							Class525.aClass412_6299 = ((Class412) (Class422_Sub20.method5701(Class400.method4928((short) 4505), (((BufferedConnectionContext) client.lobbyConnection).stream.buffer[0]) & 0xff, (byte) 2)));

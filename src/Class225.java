@@ -1,10 +1,7 @@
 /* Class225 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.math.BigInteger;
-import java.util.EmptyStackException;
 
 public class Class225 {
 	Class255 aClass255_2505;

@@ -1515,7 +1515,7 @@ public class Class249 implements Interface_ma {
 				Class342.method4154(class403, 1568365221);
 				break;
 			case 421:
-				Class111.method1234(class403, -1413098683);
+				JS5Index.method1234(class403, -1413098683);
 				break;
 			case 189:
 				Class292.method2812(class403, 2111285614);
@@ -2960,7 +2960,7 @@ public class Class249 implements Interface_ma {
 				Class336_Sub6.method4106(class403, (byte) 49);
 				break;
 			case 653:
-				Class111.method1237(class403, -2115838866);
+				JS5Index.method1237(class403, -2115838866);
 				break;
 			case 458:
 				Class104.method1105(class403, 49468000);

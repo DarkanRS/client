@@ -2,7 +2,6 @@
  * Visit http://jode.sourceforge.net/
  */
 import jaclib.memory.Buffer;
-
 import jaggl.OpenGL;
 
 public abstract class Class40 {

@@ -2,93 +2,93 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class111 {
-	public static Class111 aClass111_1329;
-	public static Class111 aClass111_1330;
-	public static Class111 aClass111_1331;
-	public static Class111 aClass111_1332;
-	public static Class111 aClass111_1333;
-	public static Class111 aClass111_1334;
-	public static Class111 aClass111_1335;
-	public static Class111 aClass111_1336;
-	public static Class111 aClass111_1337;
-	public static Class111 aClass111_1338;
-	public static Class111 aClass111_1339 = new Class111(0);
-	public static Class111 aClass111_1340;
-	public static Class111 aClass111_1341 = new Class111(1);
-	public static Class111 aClass111_1342;
-	public static Class111 aClass111_1343;
-	public static Class111 aClass111_1344;
-	public static Class111 aClass111_1345;
-	public static Class111 aClass111_1346;
-	public static Class111 aClass111_1347;
-	public static Class111 aClass111_1348;
-	public static Class111 aClass111_1349;
-	public static Class111 aClass111_1350;
-	public static Class111 aClass111_1351;
-	public static Class111 aClass111_1352;
-	public static Class111 aClass111_1353;
-	public static Class111 aClass111_1354;
-	public static Class111 aClass111_1355;
-	public static Class111 aClass111_1356;
-	public static Class111 aClass111_1357;
-	public static Class111 aClass111_1358;
-	public static Class111 aClass111_1359;
-	public static Class111 aClass111_1360;
-	public static Class111 aClass111_1361;
-	public static Class111 aClass111_1362;
-	public static Class111 aClass111_1363;
-	public static Class111 aClass111_1364;
-	public static Class111 aClass111_1365;
+public class JS5Index {
+	public static JS5Index INDEX_24_QC_MESSAGE;
+	public static JS5Index INDEX_8_SPRITES;
+	public static JS5Index INDEX_2_CONFIG;
+	public static JS5Index INDEX_3_INTERFACES;
+	public static JS5Index INDEX_16_OBJECTS;
+	public static JS5Index INDEX_5_LANDSCAPES;
+	public static JS5Index INDEX_6_MUSIC;
+	public static JS5Index INDEX_10_HUFFMAN;
+	public static JS5Index INDEX_35_THEORA;
+	public static JS5Index INDEX_9_TEXTURES;
+	public static JS5Index INDEX_0_SKELETONS = new JS5Index(0);
+	public static JS5Index INDEX_11_MUSIC2;
+	public static JS5Index INDEX_1_SKINS = new JS5Index(1);
+	public static JS5Index INDEX_13_FONTS;
+	public static JS5Index INDEX_14_SOUNDS2;
+	public static JS5Index INDEX_15_SOUNDS3;
+	public static JS5Index INDEX_29_UNKNOWN;
+	public static JS5Index INDEX_17_CS2_SETTINGS;
+	public static JS5Index INDEX_18_NPCS;
+	public static JS5Index INDEX_20_ANIMATIONS;
+	public static JS5Index INDEX_22_SCRIPT_CONFIG;
+	public static JS5Index INDEX_21_GRAPHICS;
+	public static JS5Index INDEX_12_CS2;
+	public static JS5Index INDEX_31_SHADERS;
+	public static JS5Index INDEX_7_MODELS;
+	public static JS5Index INDEX_25_QC_MENU;
+	public static JS5Index INDEX_26_UNKNOWN;
+	public static JS5Index INDEX_27_UNKNOWN;
+	public static JS5Index INDEX_28_UNKNOWN;
+	public static JS5Index INDEX_30_NATIVES;
+	public static JS5Index INDEX_4_SOUNDS;
+	public static JS5Index INDEX_19_ITEMS;
+	public static JS5Index INDEX_32_P11_FONTS;
+	public static JS5Index INDEX_33_GAME_TIPS;
+	public static JS5Index INDEX_34_P11_FONTS2;
+	public static JS5Index INDEX_23_WORLD_MAP;
+	public static JS5Index INDEX_36_VORBIS;
 	int anInt1366;
 	static int anInt1367;
 
 	static {
-		aClass111_1331 = new Class111(2);
-		aClass111_1332 = new Class111(3);
-		aClass111_1359 = new Class111(4);
-		aClass111_1334 = new Class111(5);
-		aClass111_1335 = new Class111(6);
-		aClass111_1353 = new Class111(7);
-		aClass111_1330 = new Class111(8);
-		aClass111_1338 = new Class111(9);
-		aClass111_1336 = new Class111(10);
-		aClass111_1340 = new Class111(11);
-		aClass111_1351 = new Class111(12);
-		aClass111_1342 = new Class111(13);
-		aClass111_1343 = new Class111(14);
-		aClass111_1344 = new Class111(15);
-		aClass111_1333 = new Class111(16);
-		aClass111_1346 = new Class111(17);
-		aClass111_1347 = new Class111(18);
-		aClass111_1360 = new Class111(19);
-		aClass111_1348 = new Class111(20);
-		aClass111_1350 = new Class111(21);
-		aClass111_1349 = new Class111(22);
-		aClass111_1364 = new Class111(23);
-		aClass111_1329 = new Class111(24);
-		aClass111_1354 = new Class111(25);
-		aClass111_1355 = new Class111(26);
-		aClass111_1356 = new Class111(27);
-		aClass111_1357 = new Class111(28);
-		aClass111_1345 = new Class111(29);
-		aClass111_1358 = new Class111(30);
-		aClass111_1352 = new Class111(31);
-		aClass111_1361 = new Class111(32);
-		aClass111_1362 = new Class111(33);
-		aClass111_1363 = new Class111(34);
-		aClass111_1337 = new Class111(35);
-		aClass111_1365 = new Class111(36);
+		INDEX_2_CONFIG = new JS5Index(2);
+		INDEX_3_INTERFACES = new JS5Index(3);
+		INDEX_4_SOUNDS = new JS5Index(4);
+		INDEX_5_LANDSCAPES = new JS5Index(5);
+		INDEX_6_MUSIC = new JS5Index(6);
+		INDEX_7_MODELS = new JS5Index(7);
+		INDEX_8_SPRITES = new JS5Index(8);
+		INDEX_9_TEXTURES = new JS5Index(9);
+		INDEX_10_HUFFMAN = new JS5Index(10);
+		INDEX_11_MUSIC2 = new JS5Index(11);
+		INDEX_12_CS2 = new JS5Index(12);
+		INDEX_13_FONTS = new JS5Index(13);
+		INDEX_14_SOUNDS2 = new JS5Index(14);
+		INDEX_15_SOUNDS3 = new JS5Index(15);
+		INDEX_16_OBJECTS = new JS5Index(16);
+		INDEX_17_CS2_SETTINGS = new JS5Index(17);
+		INDEX_18_NPCS = new JS5Index(18);
+		INDEX_19_ITEMS = new JS5Index(19);
+		INDEX_20_ANIMATIONS = new JS5Index(20);
+		INDEX_21_GRAPHICS = new JS5Index(21);
+		INDEX_22_SCRIPT_CONFIG = new JS5Index(22);
+		INDEX_23_WORLD_MAP = new JS5Index(23);
+		INDEX_24_QC_MESSAGE = new JS5Index(24);
+		INDEX_25_QC_MENU = new JS5Index(25);
+		INDEX_26_UNKNOWN = new JS5Index(26);
+		INDEX_27_UNKNOWN = new JS5Index(27);
+		INDEX_28_UNKNOWN = new JS5Index(28);
+		INDEX_29_UNKNOWN = new JS5Index(29);
+		INDEX_30_NATIVES = new JS5Index(30);
+		INDEX_31_SHADERS = new JS5Index(31);
+		INDEX_32_P11_FONTS = new JS5Index(32);
+		INDEX_33_GAME_TIPS = new JS5Index(33);
+		INDEX_34_P11_FONTS2 = new JS5Index(34);
+		INDEX_35_THEORA = new JS5Index(35);
+		INDEX_36_VORBIS = new JS5Index(36);
 		anInt1367 = 1700689323;
 	}
 
-	Class111(int i) {
-		((Class111) this).anInt1366 = i * 1424986353;
+	JS5Index(int i) {
+		((JS5Index) this).anInt1366 = i * 1424986353;
 	}
 
-	public int method1233(int i) {
+	public int getIndexId() {
 		try {
-			return ((Class111) this).anInt1366 * -1047699439;
+			return ((JS5Index) this).anInt1366 * -1047699439;
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("en.f(").append(')').toString());
 		}

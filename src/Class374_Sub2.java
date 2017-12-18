@@ -14,7 +14,7 @@ public class Class374_Sub2 extends Class374 {
 				Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.CLICK_UNWALKABLE_AREA_PACKET, client.gameConnection.aClass449_330, (byte) 24);
 				class298_sub36.aClass298_Sub53_Sub2_7396.writeInt((class298_sub50_sub2.method3547((byte) -44) | class298_sub50_sub2.method3560(-1824201705) << 16), 126259689);
 				class298_sub36.aClass298_Sub53_Sub2_7396.writeShortLE128(method4615(class298_sub50_sub2, 65535, (byte) 33));
-				class298_sub36.aClass298_Sub53_Sub2_7396.method3617((class298_sub50_sub2.method3569((byte) 113) << 1 | class298_sub50_sub2.method3568((byte) -17) & 0x1), 2075950579);
+				class298_sub36.aClass298_Sub53_Sub2_7396.writeByteC((class298_sub50_sub2.method3569((byte) 113) << 1 | class298_sub50_sub2.method3568((byte) -17) & 0x1), 2075950579);
 				client.gameConnection.method390(class298_sub36, (byte) -50);
 				class298_sub50_sub2.method3550(29456166);
 			}
@@ -63,7 +63,7 @@ public class Class374_Sub2 extends Class374 {
 			Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.CLICK_UNWALKABLE_AREA_PACKET, client.gameConnection.aClass449_330, (byte) 10);
 			class298_sub36.aClass298_Sub53_Sub2_7396.writeInt((class298_sub50_sub2.method3547((byte) -64) | class298_sub50_sub2.method3560(-1366988076) << 16), -1149175207);
 			class298_sub36.aClass298_Sub53_Sub2_7396.writeShortLE128(method4615(class298_sub50_sub2, 65535, (byte) 100));
-			class298_sub36.aClass298_Sub53_Sub2_7396.method3617((class298_sub50_sub2.method3569((byte) 32) << 1 | class298_sub50_sub2.method3568((byte) -124) & 0x1), 1797403189);
+			class298_sub36.aClass298_Sub53_Sub2_7396.writeByteC((class298_sub50_sub2.method3569((byte) 32) << 1 | class298_sub50_sub2.method3568((byte) -124) & 0x1), 1797403189);
 			client.gameConnection.method390(class298_sub36, (byte) -27);
 			class298_sub50_sub2.method3550(1518067003);
 		}
@@ -87,7 +87,7 @@ public class Class374_Sub2 extends Class374 {
 			Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.CLICK_UNWALKABLE_AREA_PACKET, client.gameConnection.aClass449_330, (byte) 51);
 			class298_sub36.aClass298_Sub53_Sub2_7396.writeInt((class298_sub50_sub2.method3547((byte) -14) | class298_sub50_sub2.method3560(-1950900559) << 16), -582997683);
 			class298_sub36.aClass298_Sub53_Sub2_7396.writeShortLE128(method4615(class298_sub50_sub2, 65535, (byte) 125));
-			class298_sub36.aClass298_Sub53_Sub2_7396.method3617((class298_sub50_sub2.method3569((byte) 37) << 1 | class298_sub50_sub2.method3568((byte) -48) & 0x1), 1887595218);
+			class298_sub36.aClass298_Sub53_Sub2_7396.writeByteC((class298_sub50_sub2.method3569((byte) 37) << 1 | class298_sub50_sub2.method3568((byte) -48) & 0x1), 1887595218);
 			client.gameConnection.method390(class298_sub36, (byte) -104);
 			class298_sub50_sub2.method3550(1749258704);
 		}
@@ -139,7 +139,7 @@ public class Class374_Sub2 extends Class374 {
 			Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.CLICK_UNWALKABLE_AREA_PACKET, client.gameConnection.aClass449_330, (byte) 30);
 			class298_sub36.aClass298_Sub53_Sub2_7396.writeInt((class298_sub50_sub2.method3547((byte) 14) | class298_sub50_sub2.method3560(-1929012233) << 16), -836695878);
 			class298_sub36.aClass298_Sub53_Sub2_7396.writeShortLE128(method4615(class298_sub50_sub2, 65535, (byte) 100));
-			class298_sub36.aClass298_Sub53_Sub2_7396.method3617((class298_sub50_sub2.method3569((byte) 83) << 1 | class298_sub50_sub2.method3568((byte) -60) & 0x1), 1757564259);
+			class298_sub36.aClass298_Sub53_Sub2_7396.writeByteC((class298_sub50_sub2.method3569((byte) 83) << 1 | class298_sub50_sub2.method3568((byte) -60) & 0x1), 1757564259);
 			client.gameConnection.method390(class298_sub36, (byte) -126);
 			class298_sub50_sub2.method3550(-718347820);
 		}

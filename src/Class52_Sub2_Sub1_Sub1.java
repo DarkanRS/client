@@ -10,8 +10,6 @@ import java.awt.image.DataBufferInt;
 import java.awt.image.DirectColorModel;
 import java.awt.image.Raster;
 import java.awt.image.WritableRaster;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.util.Hashtable;
 
 public final class Class52_Sub2_Sub1_Sub1 extends Class52_Sub2_Sub1 {

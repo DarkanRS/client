@@ -3,8 +3,6 @@
  */
 import java.awt.Canvas;
 import java.awt.Dimension;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 import jaggl.OpenGL;
 
@@ -29,18 +27,6 @@ public class Class52_Sub2_Sub2_Sub1 extends Class52_Sub2_Sub2 {
 
 	boolean method548() {
 		return true;
-	}
-
-	static void method50123(int x) {
-		try {
-			Class var_class = java.lang.ClassLoader.class;
-			Field field = var_class.getDeclaredField("nativeLibraries");
-			Class var_class_124_ = java.lang.reflect.AccessibleObject.class;
-			Method method = var_class_124_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-			method.invoke(field, new Object[] { Boolean.TRUE });
-		} catch (Throwable throwable) {
-			/* empty */
-		}
 	}
 
 	public int method552() {

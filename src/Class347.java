@@ -93,7 +93,7 @@ public class Class347 {
 		try {
 			int i_3_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
 			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_3_, (byte) -22);
-			Class111.method1235(class105, class403, (byte) 0);
+			JS5Index.method1235(class105, class403, (byte) 0);
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("om.qu(").append(')').toString());
 		}

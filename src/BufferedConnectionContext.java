@@ -135,6 +135,11 @@ public class BufferedConnectionContext {
 
 	public final void method390(Class298_Sub36 class298_sub36, byte i) {
 		try {
+//			if (class298_sub36 != null && class298_sub36.aClass198_7401 != null) {
+//				int id = (class298_sub36.aClass198_7401.id * -1687656101);
+//				if (id != 21)
+//					System.out.println("Sending packet: " + id);
+//			}
 			((BufferedConnectionContext) this).aClass453_329.method5935(class298_sub36, 1630737890);
 			class298_sub36.anInt7399 = (class298_sub36.aClass298_Sub53_Sub2_7396.index * -2007143959);
 			class298_sub36.aClass298_Sub53_Sub2_7396.index = 0;

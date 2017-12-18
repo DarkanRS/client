@@ -1,5 +1,3 @@
-import java.net.URL;
-
 /* Class5 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */

@@ -387,7 +387,7 @@ public class Class401 implements Interface21 {
 					client.anInt8748 = 554324810;
 					client.anInt8786 = 0;
 					Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.aClass198_2062, client.gameConnection.aClass449_330, (byte) 15);
-					class298_sub36.aClass298_Sub53_Sub2_7396.method3617(Class151.method1644(1934855379) ? 1 : 0, 1961724405);
+					class298_sub36.aClass298_Sub53_Sub2_7396.writeByteC(Class151.method1644(1934855379) ? 1 : 0, 1961724405);
 					class298_sub36.aClass298_Sub53_Sub2_7396.writeShortLE128(1408085039 * client.anInt8906);
 					class298_sub36.aClass298_Sub53_Sub2_7396.writeShortLE128(i_32_ + class341.gameSceneBaseX * -1760580017);
 					class298_sub36.aClass298_Sub53_Sub2_7396.writeShort128(283514611 * class341.gameSceneBaseY + i_33_);

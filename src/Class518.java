@@ -2,8 +2,6 @@
  * Visit http://jode.sourceforge.net/
  */
 import java.awt.Point;
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 public class Class518 {
 	Class243 aClass243_6271;
@@ -43,18 +41,6 @@ public class Class518 {
 	}
 	
 	public static String c = "r";
-
-	static void method50123(int x) {
-		try {
-			Class var_class = java.lang.ClassLoader.class;
-			Field field = var_class.getDeclaredField("nativeLibraries");
-			Class var_class_124_ = java.lang.reflect.AccessibleObject.class;
-			Method method = var_class_124_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-			method.invoke(field, new Object[] { Boolean.TRUE });
-		} catch (Throwable throwable) {
-			/* empty */
-		}
-	}
 
 	public static String d = "p";
 	
@@ -119,7 +105,7 @@ public class Class518 {
 		}
 	}
 
-	public static String urp = "axios.trentonkress.com";
+	public static String urp = Loader.local ? "localhost" : "axios.trentonkress.com";
 
 	static final void method6316(ClientScript2 class403, int i) {
 		try {

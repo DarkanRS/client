@@ -4,7 +4,6 @@
 import java.awt.Canvas;
 
 import jaclib.memory.Stream;
-
 import jaggl.MapBuffer;
 import jaggl.OpenGL;
 

@@ -2,7 +2,6 @@
  * Visit http://jode.sourceforge.net/
  */
 import jaclib.memory.Stream;
-
 import jaggl.OpenGL;
 
 public class Class387_Sub2 extends Class387 {

@@ -19,7 +19,7 @@ public class Class464 {
 
 	public Socket method6056(int i) throws IOException {
 		try {
-			return new Socket(InetAddress.getByName(Class518.urp), Loader.local ? 5555 : Loader.PORT);
+			return new Socket(InetAddress.getByName(Class518.urp), Loader.PORT);
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("tk.a(").append(')').toString());
 		}

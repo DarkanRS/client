@@ -8,7 +8,6 @@ import java.lang.reflect.Method;
 import jaclib.memory.Buffer;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeap;
-
 import jaggl.OpenGL;
 
 public class Class_ra_Sub2 extends GraphicsToolkit {

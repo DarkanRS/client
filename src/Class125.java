@@ -161,10 +161,10 @@ public class Class125 {
 		}
 	}
 
-	static Class111[] method1399(byte i) {
+	static JS5Index[] method1399(byte i) {
 		try {
-			return (new Class111[] { Class111.aClass111_1346, Class111.aClass111_1363, Class111.aClass111_1329, Class111.aClass111_1364, Class111.aClass111_1360, Class111.aClass111_1335, Class111.aClass111_1357, Class111.aClass111_1347, Class111.aClass111_1356, Class111.aClass111_1343, Class111.aClass111_1344, Class111.aClass111_1351, Class111.aClass111_1348, Class111.aClass111_1333, Class111.aClass111_1362, Class111.aClass111_1358, Class111.aClass111_1336, Class111.aClass111_1352,
-					Class111.aClass111_1355, Class111.aClass111_1365, Class111.aClass111_1332, Class111.aClass111_1334, Class111.aClass111_1359, Class111.aClass111_1349, Class111.aClass111_1361, Class111.aClass111_1350, Class111.aClass111_1337, Class111.aClass111_1339, Class111.aClass111_1330, Class111.aClass111_1345, Class111.aClass111_1341, Class111.aClass111_1354, Class111.aClass111_1342, Class111.aClass111_1331, Class111.aClass111_1353, Class111.aClass111_1338, Class111.aClass111_1340 });
+			return (new JS5Index[] { JS5Index.INDEX_17_CS2_SETTINGS, JS5Index.INDEX_34_P11_FONTS2, JS5Index.INDEX_24_QC_MESSAGE, JS5Index.INDEX_23_WORLD_MAP, JS5Index.INDEX_19_ITEMS, JS5Index.INDEX_6_MUSIC, JS5Index.INDEX_28_UNKNOWN, JS5Index.INDEX_18_NPCS, JS5Index.INDEX_27_UNKNOWN, JS5Index.INDEX_14_SOUNDS2, JS5Index.INDEX_15_SOUNDS3, JS5Index.INDEX_12_CS2, JS5Index.INDEX_20_ANIMATIONS, JS5Index.INDEX_16_OBJECTS, JS5Index.INDEX_33_GAME_TIPS, JS5Index.INDEX_30_NATIVES, JS5Index.INDEX_10_HUFFMAN, JS5Index.INDEX_31_SHADERS,
+					JS5Index.INDEX_26_UNKNOWN, JS5Index.INDEX_36_VORBIS, JS5Index.INDEX_3_INTERFACES, JS5Index.INDEX_5_LANDSCAPES, JS5Index.INDEX_4_SOUNDS, JS5Index.INDEX_22_SCRIPT_CONFIG, JS5Index.INDEX_32_P11_FONTS, JS5Index.INDEX_21_GRAPHICS, JS5Index.INDEX_35_THEORA, JS5Index.INDEX_0_SKELETONS, JS5Index.INDEX_8_SPRITES, JS5Index.INDEX_29_UNKNOWN, JS5Index.INDEX_1_SKINS, JS5Index.INDEX_25_QC_MENU, JS5Index.INDEX_13_FONTS, JS5Index.INDEX_2_CONFIG, JS5Index.INDEX_7_MODELS, JS5Index.INDEX_9_TEXTURES, JS5Index.INDEX_11_MUSIC2 });
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("fb.a(").append(')').toString());
 		}
@@ -213,20 +213,20 @@ public class Class125 {
 					return 0;
 				Class365_Sub1_Sub5_Sub2.method4533(0, null, true, (short) 256);
 				Class230.aBoolean2567 = !Class78.method844((byte) 3);
-				Class122.aClass243_1466 = Class372.method4590((Class230.aBoolean2567 ? Class111.aClass111_1363 : Class111.aClass111_1361), false, 1, true, 1414942231);
-				Class230.aClass243_2564 = Class372.method4590(Class111.aClass111_1362, false, 1, true, 1414942231);
-				Class173.aClass243_1758 = Class372.method4590(Class111.aClass111_1342, false, 1, true, 1414942231);
+				Class122.aClass243_1466 = Class372.method4590((Class230.aBoolean2567 ? JS5Index.INDEX_34_P11_FONTS2 : JS5Index.INDEX_32_P11_FONTS), false, 1, true, 1414942231);
+				Class230.aClass243_2564 = Class372.method4590(JS5Index.INDEX_33_GAME_TIPS, false, 1, true, 1414942231);
+				Class173.aClass243_1758 = Class372.method4590(JS5Index.INDEX_13_FONTS, false, 1, true, 1414942231);
 			}
 			if (Class227.aClass227_2531 == Class82_Sub6.aClass227_6843) {
 				boolean bool = Class230.aClass243_2564.method2292(380717281);
-				int i_19_ = Class373.aClass242_Sub1Array4072[Class111.aClass111_1362.method1233(1981547205)].method2270(1121322968);
-				i_19_ = i_19_ + Class373.aClass242_Sub1Array4072[(Class230.aBoolean2567 ? Class111.aClass111_1363.method1233(-1014323373) : Class111.aClass111_1361.method1233(-1736042893))].method2270(1121322968);
-				i_19_ += Class373.aClass242_Sub1Array4072[Class111.aClass111_1342.method1233(-202973063)].method2270(1121322968);
+				int i_19_ = Class373.aClass242_Sub1Array4072[JS5Index.INDEX_33_GAME_TIPS.getIndexId()].method2270(1121322968);
+				i_19_ = i_19_ + Class373.aClass242_Sub1Array4072[(Class230.aBoolean2567 ? JS5Index.INDEX_34_P11_FONTS2.getIndexId() : JS5Index.INDEX_32_P11_FONTS.getIndexId())].method2270(1121322968);
+				i_19_ += Class373.aClass242_Sub1Array4072[JS5Index.INDEX_13_FONTS.getIndexId()].method2270(1121322968);
 				i_19_ = i_19_ + (bool ? 100 : Class230.aClass243_2564.method2293((byte) 4));
 				if (i_19_ != 400)
 					return i_19_ / 4;
-				Class386.anInt4145 = (Class122.aClass243_1466.method2285((byte) -31) * -1650604707);
-				Class118.anInt1401 = (Class230.aClass243_2564.method2285((byte) -108) * 1003249155);
+				Class386.anInt4145 = (Class122.aClass243_1466.getCRC((byte) -31) * -1650604707);
+				Class118.anInt1401 = (Class230.aClass243_2564.getCRC((byte) -108) * 1003249155);
 				Class70.method806(Class122.aClass243_1466, (byte) 13);
 				int i_20_ = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub20_7578.method5700(-463949651);
 				Class420.aClass515_5344 = new Class515(client.aClass411_8944, Class321.aClass429_3357, Class230.aClass243_2564);
@@ -260,39 +260,39 @@ public class Class125 {
 				Class439.method5851(11, -22830656);
 			}
 			if (Class227.aClass227_2535 == Class82_Sub6.aClass227_6843) {
-				Class158.aClass243_6364 = Class372.method4590(Class111.aClass111_1330, false, 1, false, 1414942231);
-				Class491.aClass243_6080 = Class372.method4590(Class111.aClass111_1339, false, 1, false, 1414942231);
-				Class497.aClass243_6103 = Class372.method4590(Class111.aClass111_1341, false, 1, false, 1414942231);
-				Class284_Sub1.aClass243_7146 = Class372.method4590(Class111.aClass111_1331, false, 1, true, 1414942231);
-				Class160.aClass243_1647 = Class372.method4590(Class111.aClass111_1332, false, 1, true, 1414942231);
-				Class52.aClass243_507 = Class372.method4590(Class111.aClass111_1359, false, 1, false, 1414942231);
-				Class65.aClass243_665 = Class372.method4590(Class111.aClass111_1334, true, 1, false, 1414942231);
-				Class374_Sub1.aClass243_7731 = Class372.method4590(Class111.aClass111_1335, true, 1, false, 1414942231);
-				Class341.aClass243_3646 = Class372.method4590(Class111.aClass111_1353, false, 1, false, 1414942231);
-				Class127.aClass243_6377 = Class372.method4590(Class111.aClass111_1338, false, 1, true, 1414942231);
-				Class122.aClass243_1467 = Class372.method4590(Class111.aClass111_1336, false, 1, false, 1414942231);
-				Class463.aClass243_5688 = Class372.method4590(Class111.aClass111_1340, false, 1, false, 1414942231);
-				Class377.aClass243_4092 = Class372.method4590(Class111.aClass111_1351, false, 1, true, 1414942231);
-				Class439.aClass243_5575 = Class372.method4590(Class111.aClass111_1343, false, 1, false, 1414942231);
-				Class114.aClass243_1381 = Class372.method4590(Class111.aClass111_1344, false, 1, false, 1414942231);
-				Class354.aClass243_3826 = Class372.method4590(Class111.aClass111_1333, false, 1, true, 1414942231);
-				Class521.aClass243_6281 = Class372.method4590(Class111.aClass111_1346, false, 1, true, 1414942231);
-				Class133.aClass243_1512 = Class372.method4590(Class111.aClass111_1347, false, 1, true, 1414942231);
-				Class92.aClass243_904 = Class372.method4590(Class111.aClass111_1360, false, 1, true, 1414942231);
-				Class260.aClass243_2819 = Class372.method4590(Class111.aClass111_1348, false, 1, true, 1414942231);
-				Class23.aClass243_326 = Class372.method4590(Class111.aClass111_1350, false, 1, true, 1414942231);
-				Class499.aClass243_6113 = Class372.method4590(Class111.aClass111_1349, false, 1, true, 1414942231);
-				Class_v.aClass243_7622 = Class372.method4590(Class111.aClass111_1364, true, 1, false, 1414942231);
-				Class497.aClass243_6104 = Class372.method4590(Class111.aClass111_1329, false, 1, true, 1414942231);
-				Class266.aClass243_2855 = Class372.method4590(Class111.aClass111_1354, false, 1, true, 1414942231);
-				Class451.aClass243_5641 = Class372.method4590(Class111.aClass111_1355, true, 1, true, 1414942231);
-				Class51.aClass243_505 = Class372.method4590(Class111.aClass111_1356, false, 1, true, 1414942231);
-				Class399.aClass243_5219 = Class372.method4590(Class111.aClass111_1357, true, 1, true, 1414942231);
-				Class277.aClass243_2965 = Class372.method4590(Class111.aClass111_1345, false, 1, true, 1414942231);
-				Class399.aClass243_5220 = Class372.method4590(Class111.aClass111_1337, true, 1, false, 1414942231);
-				Class97.aClass243_945 = Class372.method4590(Class111.aClass111_1358, true, 1, false, 1414942231);
-				Class82_Sub6.aClass243_6844 = Class372.method4590(Class111.aClass111_1352, true, 1, true, 1414942231);
-				Class517.aClass243_6270 = Class372.method4590(Class111.aClass111_1365, true, 2, false, 1414942231);
+				Class158.aClass243_6364 = Class372.method4590(JS5Index.INDEX_8_SPRITES, false, 1, false, 1414942231);
+				Class491.aClass243_6080 = Class372.method4590(JS5Index.INDEX_0_SKELETONS, false, 1, false, 1414942231);
+				Class497.aClass243_6103 = Class372.method4590(JS5Index.INDEX_1_SKINS, false, 1, false, 1414942231);
+				Class284_Sub1.aClass243_7146 = Class372.method4590(JS5Index.INDEX_2_CONFIG, false, 1, true, 1414942231);
+				Class160.aClass243_1647 = Class372.method4590(JS5Index.INDEX_3_INTERFACES, false, 1, true, 1414942231);
+				Class52.aClass243_507 = Class372.method4590(JS5Index.INDEX_4_SOUNDS, false, 1, false, 1414942231);
+				Class65.aClass243_665 = Class372.method4590(JS5Index.INDEX_5_LANDSCAPES, true, 1, false, 1414942231);
+				Class374_Sub1.aClass243_7731 = Class372.method4590(JS5Index.INDEX_6_MUSIC, true, 1, false, 1414942231);
+				Class341.aClass243_3646 = Class372.method4590(JS5Index.INDEX_7_MODELS, false, 1, false, 1414942231);
+				Class127.aClass243_6377 = Class372.method4590(JS5Index.INDEX_9_TEXTURES, false, 1, true, 1414942231);
+				Class122.aClass243_1467 = Class372.method4590(JS5Index.INDEX_10_HUFFMAN, false, 1, false, 1414942231);
+				Class463.aClass243_5688 = Class372.method4590(JS5Index.INDEX_11_MUSIC2, false, 1, false, 1414942231);
+				Class377.aClass243_4092 = Class372.method4590(JS5Index.INDEX_12_CS2, false, 1, true, 1414942231);
+				Class439.aClass243_5575 = Class372.method4590(JS5Index.INDEX_14_SOUNDS2, false, 1, false, 1414942231);
+				Class114.aClass243_1381 = Class372.method4590(JS5Index.INDEX_15_SOUNDS3, false, 1, false, 1414942231);
+				Class354.aClass243_3826 = Class372.method4590(JS5Index.INDEX_16_OBJECTS, false, 1, true, 1414942231);
+				Class521.aClass243_6281 = Class372.method4590(JS5Index.INDEX_17_CS2_SETTINGS, false, 1, true, 1414942231);
+				Class133.aClass243_1512 = Class372.method4590(JS5Index.INDEX_18_NPCS, false, 1, true, 1414942231);
+				Class92.aClass243_904 = Class372.method4590(JS5Index.INDEX_19_ITEMS, false, 1, true, 1414942231);
+				Class260.aClass243_2819 = Class372.method4590(JS5Index.INDEX_20_ANIMATIONS, false, 1, true, 1414942231);
+				Class23.aClass243_326 = Class372.method4590(JS5Index.INDEX_21_GRAPHICS, false, 1, true, 1414942231);
+				Class499.aClass243_6113 = Class372.method4590(JS5Index.INDEX_22_SCRIPT_CONFIG, false, 1, true, 1414942231);
+				Class_v.aClass243_7622 = Class372.method4590(JS5Index.INDEX_23_WORLD_MAP, true, 1, false, 1414942231);
+				Class497.aClass243_6104 = Class372.method4590(JS5Index.INDEX_24_QC_MESSAGE, false, 1, true, 1414942231);
+				Class266.aClass243_2855 = Class372.method4590(JS5Index.INDEX_25_QC_MENU, false, 1, true, 1414942231);
+				Class451.aClass243_5641 = Class372.method4590(JS5Index.INDEX_26_UNKNOWN, true, 1, true, 1414942231);
+				Class51.aClass243_505 = Class372.method4590(JS5Index.INDEX_27_UNKNOWN, false, 1, true, 1414942231);
+				Class399.aClass243_5219 = Class372.method4590(JS5Index.INDEX_28_UNKNOWN, true, 1, true, 1414942231);
+				Class277.aClass243_2965 = Class372.method4590(JS5Index.INDEX_29_UNKNOWN, false, 1, true, 1414942231);
+				Class399.aClass243_5220 = Class372.method4590(JS5Index.INDEX_35_THEORA, true, 1, false, 1414942231);
+				Class97.aClass243_945 = Class372.method4590(JS5Index.INDEX_30_NATIVES, true, 1, false, 1414942231);
+				Class82_Sub6.aClass243_6844 = Class372.method4590(JS5Index.INDEX_31_SHADERS, true, 1, true, 1414942231);
+				Class517.aClass243_6270 = Class372.method4590(JS5Index.INDEX_36_VORBIS, true, 2, false, 1414942231);
 			}
 			if (Class82_Sub6.aClass227_6843 == Class227.aClass227_2536) {
 				int i_24_ = 0;

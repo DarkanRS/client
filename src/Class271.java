@@ -53,7 +53,7 @@ public class Class271 {
 	public static Class456[] method2545(byte i) {
 		try {
 			if (null == Class100.aClass456Array1080) {
-				Class456[] class456s = Class111.method1238(Class389.aClass457_4164, (short) 486);
+				Class456[] class456s = JS5Index.method1238(Class389.aClass457_4164, (short) 486);
 				Class456[] class456s_3_ = new Class456[class456s.length];
 				int i_4_ = 0;
 				int i_5_ = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub8_7566.method5654(-1747444886);

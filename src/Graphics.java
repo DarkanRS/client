@@ -1,6 +1,3 @@
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 /* Graphics - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
@@ -15,18 +12,6 @@ public class Graphics {
 
 	Graphics(Entity class365_sub1_sub1_sub2) {
 		aClass438_569 = new Class438_Sub2(class365_sub1_sub1_sub2, false);
-	}
-
-	static void method50123(int x) {
-		try {
-			Class var_class = java.lang.ClassLoader.class;
-			Field field = var_class.getDeclaredField("nativeLibraries");
-			Class var_class_124_ = java.lang.reflect.AccessibleObject.class;
-			Method method = var_class_124_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-			method.invoke(field, new Object[] { Boolean.TRUE });
-		} catch (Throwable throwable) {
-			/* empty */
-		}
 	}
 
 	static Class128 method608(RsByteBuffer class298_sub53, int i) {

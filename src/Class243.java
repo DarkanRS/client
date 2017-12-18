@@ -33,7 +33,7 @@ public final class Class243 {
 		}
 	}
 
-	public int method2285(byte i) {
+	public int getCRC(byte i) {
 		try {
 			if (!method2284(14382781))
 				throw new IllegalStateException("");
@@ -735,7 +735,7 @@ public final class Class243 {
 		}
 	}
 
-	synchronized boolean method2314(int i, int i_114_, int[] is) {
+	synchronized boolean method2314(int i, int i_114_, int[] xtea) {
 		if (!method2309(i, (byte) 1))
 			return false;
 		if (null == ((Class243) this).anObjectArray2717[i])
@@ -760,17 +760,17 @@ public final class Class243 {
 		if (bool)
 			return true;
 		byte[] is_119_;
-		if (null != is && (0 != is[0] || is[1] != 0 || is[2] != 0 || 0 != is[3])) {
+		if (null != xtea && (0 != xtea[0] || xtea[1] != 0 || xtea[2] != 0 || 0 != xtea[3])) {
 			is_119_ = Class338.method4114(((Class243) this).anObjectArray2717[i], true, 1730830793);
 			RsByteBuffer class298_sub53 = new RsByteBuffer(is_119_);
-			class298_sub53.method3612(is, 5, class298_sub53.buffer.length, -458895567);
+			class298_sub53.method3612(xtea, 5, class298_sub53.buffer.length, -458895567);
 		} else
 			is_119_ = Class338.method4114(((Class243) this).anObjectArray2717[i], false, 235085962);
 		byte[] is_120_;
 		try {
 			is_120_ = Class236.method2188(is_119_, 2053445966);
 		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append(null != is).append(" ").append(i).append(" ").append(is_119_.length).append(" ").append(Class271.method2548(is_119_, is_119_.length, -2054415257)).append(" ").append(Class271.method2548(is_119_, is_119_.length - 2, -1915676199)).append(" ").append(((Class226) ((Class243) this).aClass226_2713).anIntArray2522[i]).append(" ").append(1600327191 * (((Class226) ((Class243) this).aClass226_2713).anInt2513)).toString());
+			throw Class346.method4175(runtimeexception, new StringBuilder().append(null != xtea).append(" ").append(i).append(" ").append(is_119_.length).append(" ").append(Class271.method2548(is_119_, is_119_.length, -2054415257)).append(" ").append(Class271.method2548(is_119_, is_119_.length - 2, -1915676199)).append(" ").append(((Class226) ((Class243) this).aClass226_2713).anIntArray2522[i]).append(" ").append(1600327191 * (((Class226) ((Class243) this).aClass226_2713).anInt2513)).toString());
 		}
 		if (((Class243) this).aBoolean2715)
 			((Class243) this).anObjectArray2717[i] = null;
