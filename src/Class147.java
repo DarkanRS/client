@@ -5,7 +5,7 @@
 public class Class147 {
 	static Class147 aClass147_1577;
 	static Class147 aClass147_1578;
-	static Class147 aClass147_1579 = new Class147(0, 4);
+	static Class147 aClass147_1579 = new Class147(0, 4 + Loader.DRAW_DISTANCE);
 	int anInt1580;
 	public int anInt1581;
 

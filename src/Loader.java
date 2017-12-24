@@ -36,6 +36,8 @@ public class Loader extends Applet implements AppletStub {
 	public static boolean DISABLE_RSA = false;
 	public static int clientRevision = 3;
 	public static int newClientRevision = clientRevision+1;
+	
+	public static int DRAW_DISTANCE = 0;
 
 	public static final String clientLink = "http://darkan.org/assets/uploads/files/Darkan.jar";
 

@@ -268,6 +268,7 @@ public class Class283 {
 			((Class283) this).anInt3016 = ((2073578817 * ((Class283) this).anInt3016 << 2) * -2038218047);
 			if (Class373.aClass_ra4071.method4998())
 				((Class283) this).anInt3016 += 109412864;
+			((Class283) this).anInt3016 += Loader.DRAW_DISTANCE * 109412864;
 		} catch (RuntimeException runtimeexception) {
 			throw Class346.method4175(runtimeexception, new StringBuilder().append("lt.ak(").append(')').toString());
 		}
