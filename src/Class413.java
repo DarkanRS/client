@@ -2,83 +2,97 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class413 implements Interface21 {
-	static Class413 aClass413_6575;
-	public static Class413 aClass413_6576;
-	static Class413 aClass413_6577;
-	static Class413 aClass413_6578;
-	static Class413 aClass413_6579;
-	static Class413 aClass413_6580;
-	static Class413 aClass413_6581;
-	static Class413 aClass413_6582;
-	static Class413 aClass413_6583;
-	public static Class413 aClass413_6584 = new Class413(-2);
-	static Class413 aClass413_6585;
-	static Class413 aClass413_6586;
-	public static Class413 aClass413_6587;
-	static Class413 aClass413_6588;
-	int anInt6589;
-	public static int anInt6590;
+public class Class413 implements Interface43 {
+	static Class413 aClass413_4964;
+	static Class413 aClass413_4965;
+	static Class413 aClass413_4966;
+	static Class413 aClass413_4967;
+	static Class413 aClass413_4968;
+	static Class413 aClass413_4969;
+	static Class413 aClass413_4970;
+	static Class413 aClass413_4971 = new Class413(1, 0, "", "");
+	int anInt4972;
+	int anInt4973;
+	String aString4974;
 
-	Class413(int i) {
-		((Class413) this).anInt6589 = i * -548304903;
+	public String method6936() {
+		return ((Class413) this).aString4974;
 	}
 
-	public int method242(int i) {
-		try {
-			return 1997834825 * ((Class413) this).anInt6589;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rd.f(").append(')').toString());
-		}
+	public String method6937() {
+		return ((Class413) this).aString4974;
+	}
+
+	public int method243(byte i) {
+		return ((Class413) this).anInt4973 * -1048592359;
+	}
+
+	public String toString() {
+		return ((Class413) this).aString4974;
 	}
 
 	static {
-		aClass413_6576 = new Class413(-3);
-		aClass413_6577 = new Class413(2);
-		aClass413_6587 = new Class413(3);
-		aClass413_6579 = new Class413(9);
-		aClass413_6580 = new Class413(10);
-		aClass413_6581 = new Class413(20);
-		aClass413_6578 = new Class413(21);
-		aClass413_6588 = new Class413(30);
-		aClass413_6575 = new Class413(31);
-		aClass413_6585 = new Class413(32);
-		aClass413_6583 = new Class413(33);
-		aClass413_6586 = new Class413(34);
-		aClass413_6582 = new Class413(38);
+		aClass413_4965 = new Class413(6, 1, "", "");
+		aClass413_4968 = new Class413(7, 2, "", "");
+		aClass413_4967 = new Class413(3, 3, "", "");
+		aClass413_4970 = new Class413(4, 4, "", "");
+		aClass413_4969 = new Class413(5, 5, "", "");
+		aClass413_4964 = new Class413(0, 6, "", "");
+		aClass413_4966 = new Class413(2, -1, "", "", true, new Class413[] { aClass413_4971, aClass413_4965, aClass413_4968, aClass413_4970, aClass413_4967 });
 	}
 
-	public int method243() {
-		return 1997834825 * ((Class413) this).anInt6589;
+	Class413(int i, int i_0_, String string, String string_1_) {
+		((Class413) this).anInt4972 = i * 177674421;
+		((Class413) this).anInt4973 = i_0_ * -1733059543;
+		((Class413) this).aString4974 = string_1_;
 	}
 
-	public int method244() {
-		return 1997834825 * ((Class413) this).anInt6589;
+	Class413(int i, int i_2_, String string, String string_3_, boolean bool, Class413[] class413s) {
+		((Class413) this).anInt4972 = i * 177674421;
+		((Class413) this).anInt4973 = i_2_ * -1733059543;
+		((Class413) this).aString4974 = string_3_;
 	}
 
-	static void method5582(ClientScript2 class403, int i) {
-		try {
-			Class369 class369 = Class316.aClass362_3318.method4307((((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), 245040087);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (class369.anIntArray4019 == null ? 0 : class369.anIntArray4019.length);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rd.t(").append(')').toString());
-		}
+	public int method75() {
+		return ((Class413) this).anInt4973 * -1048592359;
 	}
 
-	public static void method5583(int i, short i_0_) {
-		try {
-			Class298_Sub37_Sub12 class298_sub37_sub12 = Class410.method4985(7, (long) i);
-			class298_sub37_sub12.method3445(-1807179158);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rd.q(").append(')').toString());
-		}
+	public int method76() {
+		return ((Class413) this).anInt4973 * -1048592359;
 	}
 
-	public static boolean method5584(int i, int i_1_) {
-		try {
-			return (19 == i || 1 == i || 4 == i || i == 3 || i == 8 || 2 == i || i == 9);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rd.fo(").append(')').toString());
+	static final void method6938(Class527 class527, byte i) {
+		((Class527) class527).anInt7012 -= 425673003;
+		byte[] is = { (byte) ((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537] };
+		byte[] is_4_ = { (byte) ((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012] };
+		int i_5_ = (((Class527) class527).anIntArray6999[2 + 1942118537 * ((Class527) class527).anInt7012]);
+		Class118 class118 = Class117.method1981(i_5_, (byte) 48);
+		Class107.method1838(class118, is, is_4_, class527, 1844755981);
+	}
+
+	static void method6939(byte i) {
+		Class282_Sub30.aClass229_7712.method3859(1403175614);
+	}
+
+	static final void method6940(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 425673003;
+		int i_6_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+		int i_7_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+		int i_8_ = (((Class527) class527).anIntArray6999[2 + ((Class527) class527).anInt7012 * 1942118537]);
+		Class96_Sub10.method14603(6, i_6_ << 16 | i_7_, i_8_, "", (byte) 43);
+	}
+
+	static final void method6941(Class527 class527, int i) {
+		int i_9_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class118 class118 = Class117.method1981(i_9_, (byte) 102);
+		Class282.method5001(class118, class527, -11442386);
+	}
+
+	static final void method6942(Class118 class118, Class527 class527, int i) {
+		if (client.method11633(class118).method12182(1317632638) && client.aClass118_7352 == null) {
+			Class158_Sub2.method14355(class118.anInt1287 * -1952846363, 1924549737 * class118.anInt1288, -946546687);
+			client.aClass118_7352 = Class317.method5694(-1952846363 * class118.anInt1287, 1924549737 * class118.anInt1288, -1963750401);
+			Class109.method1858(client.aClass118_7352, (byte) -38);
 		}
 	}
 }

@@ -2,10 +2,18 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public interface Interface10 {
-	public Object method130(byte[] is, Class505 class505, boolean bool);
+public interface Interface10 extends Interface7 {
+	public int method73();
 
-	public Object method131(byte[] is, Class505 class505, boolean bool, int i);
+	public int method74();
 
-	public Object method132(byte[] is, Class505 class505, boolean bool);
+	public int method1();
+
+	public int method39();
+
+	public int method75();
+
+	public int method76();
+
+	public int method77();
 }

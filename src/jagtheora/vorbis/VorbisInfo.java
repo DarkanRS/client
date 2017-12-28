@@ -12,7 +12,7 @@ public class VorbisInfo extends SimplePeer {
 
 	public VorbisInfo() {
 		init();
-		if (a())
+		if (method6698())
 			throw new IllegalStateException();
 	}
 
@@ -28,7 +28,9 @@ public class VorbisInfo extends SimplePeer {
 		initFields();
 	}
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

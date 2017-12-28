@@ -24,7 +24,7 @@ public class TheoraInfo extends SimplePeer {
 
 	public TheoraInfo() {
 		init();
-		if (a())
+		if (method6698())
 			throw new IllegalStateException();
 	}
 
@@ -38,7 +38,9 @@ public class TheoraInfo extends SimplePeer {
 		initFields();
 	}
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

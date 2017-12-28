@@ -2,96 +2,110 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class274 implements Interface21 {
-	static Class274 aClass274_6529;
-	public static Class274 aClass274_6530;
-	static Class274 aClass274_6531;
-	static Class274 aClass274_6532;
-	public int anInt6533;
-	static Class274 aClass274_6534;
-	static Class274 aClass274_6535;
-	static Class274 aClass274_6536 = new Class274(7, 0);
-	static Class274 aClass274_6537;
-	int anInt6538;
-	static Class57 aClass57_6539;
+public class Class274 {
+	int anInt3333;
+	int anInt3334;
+	int anInt3335;
+	protected static Class470 aClass470_3336;
+	String aString3337;
+	int anInt3338;
 
-	public int method244() {
-		return 1575163887 * ((Class274) this).anInt6538;
+	int method4868(short i) {
+		return -753177329 * ((Class274) this).anInt3333;
 	}
 
-	public Class274 method2567(byte i) {
-		try {
-			switch (anInt6533 * 495490839) {
-			case 3:
-				return aClass274_6534;
-			case 1:
-				return aClass274_6537;
-			case 0:
-				return aClass274_6531;
-			case 7:
-				return aClass274_6530;
-			case 4:
-				return aClass274_6532;
-			case 6:
-				return aClass274_6535;
-			case 5:
-				return aClass274_6529;
-			case 2:
-				return aClass274_6536;
-			default:
-				throw new IllegalStateException();
+	int method4869() {
+		return -753177329 * ((Class274) this).anInt3333;
+	}
+
+	String method4870(int i) {
+		return ((Class274) this).aString3337;
+	}
+
+	int method4871(int i) {
+		return -663184651 * ((Class274) this).anInt3334;
+	}
+
+	int method4872(byte i) {
+		return ((Class274) this).anInt3335 * 30285915;
+	}
+
+	int method4873() {
+		return ((Class274) this).anInt3335 * 30285915;
+	}
+
+	int method4874() {
+		return -663184651 * ((Class274) this).anInt3334;
+	}
+
+	int method4875() {
+		return -753177329 * ((Class274) this).anInt3333;
+	}
+
+	int method4876() {
+		return -753177329 * ((Class274) this).anInt3333;
+	}
+
+	int method4877(byte i) {
+		return ((Class274) this).anInt3338 * -1182703441;
+	}
+
+	int method4878() {
+		return -753177329 * ((Class274) this).anInt3333;
+	}
+
+	public Class274(int i, int i_0_, int i_1_, int i_2_, String string) {
+		((Class274) this).anInt3334 = -1849048739 * i;
+		((Class274) this).anInt3338 = i_0_ * 1363539535;
+		((Class274) this).anInt3333 = i_1_ * -20586001;
+		((Class274) this).anInt3335 = i_2_ * -746450989;
+		((Class274) this).aString3337 = string;
+	}
+
+	int method4879() {
+		return ((Class274) this).anInt3335 * 30285915;
+	}
+
+	int method4880() {
+		return ((Class274) this).anInt3335 * 30285915;
+	}
+
+	static final void method4881(Class527 class527, int i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(858005822);
+	}
+
+	static final void method4882(Class527 class527, int i) {
+		Class492.method8265(0, 0, client.aClass118_7183.anInt1301 * 1506818197, client.aClass118_7183.anInt1429 * -492594917, false, (byte) -37);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 1064588657 * client.anInt7188;
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 292041583 * client.anInt7440;
+	}
+
+	static final void method4883(Class118 class118, int i, int i_3_, Class527 class527, int i_4_) {
+		if (null == class118.anIntArray1267) {
+			if (i_3_ > 0) {
+				class118.aByteArrayArray1366 = new byte[11][];
+				class118.aByteArrayArray1367 = new byte[11][];
+				class118.anIntArray1395 = new int[11];
+				class118.anIntArray1267 = new int[11];
+			} else
+				return;
+		}
+		class118.anIntArray1267[i] = i_3_;
+		if (i_3_ > 0)
+			class118.aBool1424 = true;
+		else {
+			class118.aBool1424 = false;
+			for (int i_5_ = 0; i_5_ < class118.aByteArrayArray1366.length; i_5_++) {
+				if (class118.aByteArrayArray1366[i_5_] != null || class118.anIntArray1267[i_5_] > 0) {
+					class118.aBool1424 = true;
+					break;
+				}
 			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lj.b(").append(')').toString());
 		}
 	}
 
-	static {
-		aClass274_6529 = new Class274(3, 1);
-		aClass274_6537 = new Class274(6, 2);
-		aClass274_6532 = new Class274(0, 3);
-		aClass274_6530 = new Class274(2, 4);
-		aClass274_6534 = new Class274(5, 5);
-		aClass274_6535 = new Class274(1, 6);
-		aClass274_6531 = new Class274(4, 7);
-	}
-
-	public int method242(int i) {
-		try {
-			return 1575163887 * ((Class274) this).anInt6538;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lj.f(").append(')').toString());
-		}
-	}
-
-	public int method243() {
-		return 1575163887 * ((Class274) this).anInt6538;
-	}
-
-	Class274(int i, int i_0_) {
-		anInt6533 = i * 699142311;
-		((Class274) this).anInt6538 = i_0_ * 1812395791;
-	}
-
-	static final void method2568(ClientScript2 class403, int i) {
-		try {
-			int i_1_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_1_, (byte) -68);
-			Class119 class119 = Class389.aClass119Array4165[i_1_ >> 16];
-			Class518.method6315(class105, class119, class403, 783841228);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lj.fg(").append(')').toString());
-		}
-	}
-
-	static final void method2569(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class298_Sub32_Sub5.method3174(class105, class119, class403, -1683091614);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lj.nk(").append(')').toString());
-		}
+	public static void method4884(byte i) {
+		if (-1 != -87869981 * Class448.aClass450_5421.worldId)
+			Class62.method1262(-87869981 * Class448.aClass450_5421.worldId, Class448.aClass450_5421.aString5433, (byte) 0);
 	}
 }

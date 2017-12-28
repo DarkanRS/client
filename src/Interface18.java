@@ -3,15 +3,15 @@
  */
 
 public interface Interface18 {
-	public long method231();
+	public long method130();
 
-	public boolean method232(Interface18 interface18_0_);
+	public boolean method131(Interface18 interface18_0_);
 
-	public long method233();
+	public long method109();
 
-	public long method234();
+	public boolean method132(Interface18 interface18_1_);
 
-	public boolean method235(Interface18 interface18_1_);
+	public boolean method133(Interface18 interface18_2_);
 
-	public boolean method236(Interface18 interface18_2_);
+	public boolean method134(Interface18 interface18_3_);
 }

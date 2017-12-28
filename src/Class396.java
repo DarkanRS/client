@@ -1,60 +1,69 @@
+
 /* Class396 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.io.File;
 
-public final class Class396 {
-	static short aShort5193;
-	volatile String aString5194;
-	public volatile int anInt5195 = -842879005;
-	static boolean aBoolean5196;
+public class Class396 {
+	public static String aString4789;
+	public static String aString4790;
+	public static Class401 aClass401_4791;
 
-	Class396(String string) {
-		((Class396) this).aString5194 = string;
+	static {
+		String string = "Unknown";
+		try {
+			string = System.getProperty("java.vendor").toLowerCase();
+		} catch (Exception exception) {
+			/* empty */
+		}
+		string.toLowerCase();
+		string = "Unknown";
+		try {
+			string = System.getProperty("java.version").toLowerCase();
+		} catch (Exception exception) {
+			/* empty */
+		}
+		string.toLowerCase();
+		string = "Unknown";
+		try {
+			string = System.getProperty("os.name").toLowerCase();
+		} catch (Exception exception) {
+			/* empty */
+		}
+		aString4790 = string.toLowerCase();
+		string = "Unknown";
+		try {
+			string = System.getProperty("os.arch").toLowerCase();
+		} catch (Exception exception) {
+			/* empty */
+		}
+		aString4789 = string.toLowerCase();
+		string = "Unknown";
+		try {
+			string = System.getProperty("os.version").toLowerCase();
+		} catch (Exception exception) {
+			/* empty */
+		}
+		string.toLowerCase();
+		string = "~/";
+		try {
+			string = System.getProperty("user.home").toLowerCase();
+		} catch (Exception exception) {
+			/* empty */
+		}
+		new File(string);
 	}
 
-	static void method4908(String string, int i) {
-		try {
-			client.aString8927 = string;
-			if (Class389.method4865((byte) -104) != Class292.aClass292_3162) {
-				try {
-					String string_0_ = ClientScriptMap.anApplet6044.getParameter(Class209.aClass209_2378.aString2395);
-					String string_1_ = ClientScriptMap.anApplet6044.getParameter(Class209.aClass209_2382.aString2395);
-					String string_2_ = new StringBuilder().append(string_0_).append("settings=").append(string).append("; version=1; path=/; domain=").append(string_1_).toString();
-					if (string.length() == 0)
-						string_2_ = new StringBuilder().append(string_2_).append("; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0").toString();
-					else
-						string_2_ = new StringBuilder().append(string_2_).append("; Expires=").append(Class304.method3742(Class122.method1319((byte) 1) + 94608000000L)).append("; Max-Age=").append(94608000L).toString();
-					Class466.method6020(ClientScriptMap.anApplet6044, new StringBuilder().append("document.cookie=\"").append(string_2_).append("\"").toString(), -1926451476);
-				} catch (Throwable throwable) {
-					/* empty */
-				}
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qk.nf(").append(')').toString());
-		}
+	Class396() throws Throwable {
+		throw new Error();
 	}
 
-	static final void method4909(ClientScript2 class403, int i) {
-		try {
-			if (null != Class508.aClass162_6216) {
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = 1;
-				((ClientScript2) class403).aClass162_5252 = Class508.aClass162_6216;
-			} else
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qk.wk(").append(')').toString());
-		}
+	static final void method6773(Class527 class527, int i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub15_8203.method12739(-118386335);
 	}
 
-	public static final boolean method4910(String string, String string_3_, String string_4_, String string_5_, int i) {
-		try {
-			if (string == null || null == string_4_)
-				return false;
-			if (string.startsWith("#") || string_4_.startsWith("#"))
-				return string.equals(string_4_);
-			return string_3_.equals(string_5_);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qk.a(").append(')').toString());
-		}
+	public static void method6774(int i, byte i_0_) {
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(11, (long) i);
+		class282_sub50_sub12.method14965((byte) 58);
 	}
 }

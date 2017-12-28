@@ -5,29 +5,29 @@ package jaclib.memory.heap;
 
 public final class NativeHeap {
 	long peer;
-	private int a;
-	private boolean f;
+	private int anInt347;
+	private boolean aBool348;
 
 	public NativeHeap(int i) {
-		a = 1264911109 * i;
-		allocateHeap(-368553523 * a);
-		f = true;
+		anInt347 = i * -1278684715;
+		allocateHeap(anInt347 * -217718915);
+		aBool348 = true;
 	}
 
-	synchronized boolean a() {
-		return f;
+	synchronized boolean method758() {
+		return aBool348;
 	}
 
-	public NativeHeapBuffer f(int i, boolean bool) {
-		if (!f)
+	public NativeHeapBuffer method759(int i, boolean bool) {
+		if (!aBool348)
 			throw new IllegalStateException();
 		return new NativeHeapBuffer(this, allocateBuffer(i, bool), i);
 	}
 
-	public synchronized void b() {
-		if (f)
+	public synchronized void method760() {
+		if (aBool348)
 			deallocateHeap();
-		f = false;
+		aBool348 = false;
 	}
 
 	private native void allocateHeap(int i);
@@ -46,8 +46,54 @@ public final class NativeHeap {
 
 	public synchronized native void copy(long l, long l_6_, int i);
 
-	protected void finalize() throws Throwable {
+	protected synchronized void finalize() throws Throwable {
 		super.finalize();
-		b();
+		method760();
+	}
+
+	protected synchronized void method761() throws Throwable {
+		super.finalize();
+		method760();
+	}
+
+	protected synchronized void method762() throws Throwable {
+		super.finalize();
+		method760();
+	}
+
+	synchronized boolean method763() {
+		return aBool348;
+	}
+
+	synchronized boolean method764() {
+		return aBool348;
+	}
+
+	synchronized boolean method765() {
+		return aBool348;
+	}
+
+	public NativeHeapBuffer method766(int i, boolean bool) {
+		if (!aBool348)
+			throw new IllegalStateException();
+		return new NativeHeapBuffer(this, allocateBuffer(i, bool), i);
+	}
+
+	public NativeHeapBuffer method767(int i, boolean bool) {
+		if (!aBool348)
+			throw new IllegalStateException();
+		return new NativeHeapBuffer(this, allocateBuffer(i, bool), i);
+	}
+
+	public synchronized void method768() {
+		if (aBool348)
+			deallocateHeap();
+		aBool348 = false;
+	}
+
+	public synchronized void method769() {
+		if (aBool348)
+			deallocateHeap();
+		aBool348 = false;
 	}
 }

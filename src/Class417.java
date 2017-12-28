@@ -3,49 +3,59 @@
  */
 
 public class Class417 {
-	int anInt5335;
-	int anInt5336;
-	static Class298_Sub13 aClass298_Sub13_5337;
-	boolean aBoolean5338;
+	public short[] aShortArray4990;
+	public short[] aShortArray4991;
+	public int[] anIntArray4992;
+	public long aLong4993;
+	public static int anInt4994;
 
-	Class417(int i, int i_0_, boolean bool) {
-		((Class417) this).anInt5335 = 752250551 * i;
-		((Class417) this).anInt5336 = i_0_ * 1840099775;
-		((Class417) this).aBoolean5338 = bool;
+	public Class417(long l, int[] is, short[] is_0_, short[] is_1_) {
+		aLong4993 = l * 7197667099348947907L;
+		anIntArray4992 = is;
+		aShortArray4990 = is_0_;
+		aShortArray4991 = is_1_;
 	}
 
-	public int method5592(int i) {
-		try {
-			return 839597631 * ((Class417) this).anInt5336;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rh.f(").append(')').toString());
+	public Class417(Class409 class409, boolean bool) {
+		if (bool) {
+			anIntArray4992 = new int[class409.anIntArray4859.length];
+			System.arraycopy(class409.anIntArray4859, 0, anIntArray4992, 0, anIntArray4992.length);
+		} else {
+			anIntArray4992 = new int[class409.anIntArray4860.length];
+			System.arraycopy(class409.anIntArray4860, 0, anIntArray4992, 0, anIntArray4992.length);
+		}
+		if (null != class409.aShortArray4892) {
+			aShortArray4990 = new short[class409.aShortArray4892.length];
+			System.arraycopy(class409.aShortArray4892, 0, aShortArray4990, 0, aShortArray4990.length);
+		}
+		if (null != class409.aShortArray4867) {
+			aShortArray4991 = new short[class409.aShortArray4867.length];
+			System.arraycopy(class409.aShortArray4867, 0, aShortArray4991, 0, aShortArray4991.length);
 		}
 	}
 
-	public boolean method5593(int i) {
-		try {
-			return ((Class417) this).aBoolean5338;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rh.b(").append(')').toString());
-		}
+	public static Class347 method7005(int i, int i_2_) {
+		Class347 class347 = (Class347) Class347.aClass229_4052.method3865((long) i);
+		if (null != class347)
+			return class347;
+		byte[] is = Class347.aClass317_4053.method5607(0, i, -2049012023);
+		class347 = new Class347();
+		if (null != is)
+			class347.method6163(new RsByteBuffer(is), i, (short) 257);
+		Class347.aClass229_4052.method3856(class347, (long) i);
+		return class347;
 	}
 
-	public int method5594(int i) {
-		try {
-			return -1521758457 * ((Class417) this).anInt5335;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rh.a(").append(')').toString());
-		}
-	}
-
-	static final void method5595(ClientScript2 class403, int i) {
-		try {
-			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
-			if (string.startsWith(Class247.method2368(0, -278777595)) || string.startsWith(Class247.method2368(1, -278777595)))
-				string = string.substring(7);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class287.method2722(string, -1704738682) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("rh.wo(").append(')').toString());
+	static final void method7006(Class527 class527, int i) {
+		int i_3_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		if (null == Class468_Sub8.aClass98Array7889[i_3_])
+			((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+		else {
+			String string = (Class468_Sub8.aClass98Array7889[i_3_].aClass118Array998[0].aString1285);
+			if (string == null)
+				((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
+			else
+				((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141) - 1] = string.substring(0, string.indexOf(':'));
 		}
 	}
 }

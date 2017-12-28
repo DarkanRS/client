@@ -3,206 +3,341 @@
  */
 
 public class Class270 {
-	int anInt2888;
-	static int anInt2889 = 7;
-	static int anInt2890 = 6;
-	static int anInt2891 = 14;
-	int anInt2892;
-	int[][] anIntArrayArray2893;
-	static Class243 aClass243_2894;
+	static int anInt3315;
+	static final int anInt3316 = 4;
+	int[][][] anIntArrayArrayArray3317;
+	int[] anIntArray3318 = new int[2];
+	int[] anIntArray3319;
+	static final float aFloat3320 = 100.0F;
+	static int[][] anIntArrayArray3321;
+	static float aFloat3322;
+	static final float aFloat3323 = 32.703197F;
+	static float[][] aFloatArrayArray3324 = new float[2][8];
+	static final float aFloat3325 = 8.0F;
+	int[][][] anIntArrayArrayArray3326;
 
-	byte[] method2532(byte[] is, int i) {
-		try {
-			if (((Class270) this).anIntArrayArray2893 != null) {
-				int i_0_ = (int) ((long) is.length * (long) (((Class270) this).anInt2892 * 278980631) / (long) (((Class270) this).anInt2888 * -931883257)) + 14;
-				int[] is_1_ = new int[i_0_];
-				int i_2_ = 0;
-				int i_3_ = 0;
-				for (int i_4_ = 0; i_4_ < is.length; i_4_++) {
-					int i_5_ = is[i_4_];
-					int[] is_6_ = ((Class270) this).anIntArrayArray2893[i_3_];
-					for (int i_7_ = 0; i_7_ < 14; i_7_++)
-						is_1_[i_2_ + i_7_] += is_6_[i_7_] * i_5_;
-					i_3_ += ((Class270) this).anInt2892 * 278980631;
-					int i_8_ = i_3_ / (-931883257 * ((Class270) this).anInt2888);
-					i_2_ += i_8_;
-					i_3_ -= i_8_ * (-931883257 * ((Class270) this).anInt2888);
-				}
-				is = new byte[i_0_];
-				for (int i_9_ = 0; i_9_ < i_0_; i_9_++) {
-					int i_10_ = is_1_[i_9_] + 32768 >> 16;
-					if (i_10_ < -128)
-						is[i_9_] = (byte) -128;
-					else if (i_10_ > 127)
-						is[i_9_] = (byte) 127;
-					else
-						is[i_9_] = (byte) i_10_;
-				}
-			}
-			return is;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.a(").append(')').toString());
-		}
+	static float method4803(float f) {
+		float f_0_ = 32.703197F * (float) Math.pow(2.0, (double) f);
+		return f_0_ * 3.1415927F / 11025.0F;
 	}
 
-	public short[] method2533(short[] is, byte i) {
-		try {
-			if (null != ((Class270) this).anIntArrayArray2893) {
-				int i_11_ = ((int) ((long) (((Class270) this).anInt2892 * 278980631) * (long) is.length / (long) (((Class270) this).anInt2888 * -931883257)) + 14);
-				int[] is_12_ = new int[i_11_];
-				int i_13_ = 0;
-				int i_14_ = 0;
-				for (int i_15_ = 0; i_15_ < is.length; i_15_++) {
-					int i_16_ = is[i_15_];
-					int[] is_17_ = ((Class270) this).anIntArrayArray2893[i_14_];
-					for (int i_18_ = 0; i_18_ < 14; i_18_++)
-						is_12_[i_18_ + i_13_] += is_17_[i_18_] * i_16_ >> 2;
-					i_14_ += ((Class270) this).anInt2892 * 278980631;
-					int i_19_ = i_14_ / (-931883257 * ((Class270) this).anInt2888);
-					i_13_ += i_19_;
-					i_14_ -= i_19_ * (((Class270) this).anInt2888 * -931883257);
-				}
-				is = new short[i_11_];
-				for (int i_20_ = 0; i_20_ < i_11_; i_20_++) {
-					int i_21_ = 8192 + is_12_[i_20_] >> 14;
-					if (i_21_ < -32768)
-						is[i_20_] = (short) -32768;
-					else if (i_21_ > 32767)
-						is[i_20_] = (short) 32767;
-					else
-						is[i_20_] = (short) i_21_;
+	float method4804(int i, int i_1_, float f) {
+		float f_2_ = ((float) ((Class270) this).anIntArrayArrayArray3326[i][0][i_1_] + f * (float) ((((Class270) this).anIntArrayArrayArray3326[i][1][i_1_]) - (((Class270) this).anIntArrayArrayArray3326[i][0][i_1_])));
+		f_2_ *= 0.0015258789F;
+		return 1.0F - (float) Math.pow(10.0, (double) (-f_2_ / 20.0F));
+	}
+
+	static float method4805(float f) {
+		float f_3_ = 32.703197F * (float) Math.pow(2.0, (double) f);
+		return f_3_ * 3.1415927F / 11025.0F;
+	}
+
+	float method4806(int i, int i_4_, float f) {
+		float f_5_ = ((float) ((Class270) this).anIntArrayArrayArray3317[i][0][i_4_] + f * (float) ((((Class270) this).anIntArrayArrayArray3317[i][1][i_4_]) - (((Class270) this).anIntArrayArrayArray3317[i][0][i_4_])));
+		f_5_ *= 1.2207031E-4F;
+		return method4805(f_5_);
+	}
+
+	Class270() {
+		((Class270) this).anIntArrayArrayArray3317 = new int[2][2][4];
+		((Class270) this).anIntArrayArrayArray3326 = new int[2][2][4];
+		((Class270) this).anIntArray3319 = new int[2];
+	}
+
+	final void method4807(RsByteBuffer class282_sub35, Class342 class342) {
+		int i = class282_sub35.readUnsignedByte();
+		((Class270) this).anIntArray3318[0] = i >> 4;
+		((Class270) this).anIntArray3318[1] = i & 0xf;
+		if (i != 0) {
+			((Class270) this).anIntArray3319[0] = class282_sub35.readUnsignedShort();
+			((Class270) this).anIntArray3319[1] = class282_sub35.readUnsignedShort();
+			int i_6_ = class282_sub35.readUnsignedByte();
+			for (int i_7_ = 0; i_7_ < 2; i_7_++) {
+				for (int i_8_ = 0; i_8_ < ((Class270) this).anIntArray3318[i_7_]; i_8_++) {
+					((Class270) this).anIntArrayArrayArray3317[i_7_][0][i_8_] = class282_sub35.readUnsignedShort();
+					((Class270) this).anIntArrayArrayArray3326[i_7_][0][i_8_] = class282_sub35.readUnsignedShort();
 				}
 			}
-			return is;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.f(").append(')').toString());
-		}
-	}
-
-	int method2534(int i, int i_22_) {
-		try {
-			if (null != ((Class270) this).anIntArrayArray2893)
-				i = (int) ((long) (278980631 * ((Class270) this).anInt2892) * (long) i / (long) (-931883257 * ((Class270) this).anInt2888));
-			return i;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.b(").append(')').toString());
-		}
-	}
-
-	int method2535(int i, int i_23_) {
-		try {
-			if (((Class270) this).anIntArrayArray2893 != null)
-				i = (int) ((long) (278980631 * ((Class270) this).anInt2892) * (long) i / (long) (-931883257 * ((Class270) this).anInt2888)) + 6;
-			return i;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.p(").append(')').toString());
-		}
-	}
-
-	public Class270(int i, int i_24_) {
-		if (i_24_ != i) {
-			int i_25_ = Class285.method2713(i, i_24_, -2115860934);
-			i /= i_25_;
-			i_24_ /= i_25_;
-			((Class270) this).anInt2888 = i * 597370551;
-			((Class270) this).anInt2892 = 1817366439 * i_24_;
-			((Class270) this).anIntArrayArray2893 = new int[i][14];
-			for (int i_26_ = 0; i_26_ < i; i_26_++) {
-				int[] is = ((Class270) this).anIntArrayArray2893[i_26_];
-				double d = 6.0 + (double) i_26_ / (double) i;
-				int i_27_ = (int) Math.floor(d - 7.0 + 1.0);
-				if (i_27_ < 0)
-					i_27_ = 0;
-				int i_28_ = (int) Math.ceil(d + 7.0);
-				if (i_28_ > 14)
-					i_28_ = 14;
-				double d_29_ = (double) i_24_ / (double) i;
-				for (/**/; i_27_ < i_28_; i_27_++) {
-					double d_30_ = ((double) i_27_ - d) * 3.141592653589793;
-					double d_31_ = d_29_;
-					if (d_30_ < -1.0E-4 || d_30_ > 1.0E-4)
-						d_31_ *= Math.sin(d_30_) / d_30_;
-					d_31_ *= 0.54 + 0.46 * Math.cos(((double) i_27_ - d) * 0.2243994752564138);
-					is[i_27_] = (int) Math.floor(65536.0 * d_31_ + 0.5);
+			for (int i_9_ = 0; i_9_ < 2; i_9_++) {
+				for (int i_10_ = 0; i_10_ < ((Class270) this).anIntArray3318[i_9_]; i_10_++) {
+					if ((i_6_ & 1 << i_9_ * 4 << i_10_) != 0) {
+						((Class270) this).anIntArrayArrayArray3317[i_9_][1][i_10_] = class282_sub35.readUnsignedShort();
+						((Class270) this).anIntArrayArrayArray3326[i_9_][1][i_10_] = class282_sub35.readUnsignedShort();
+					} else {
+						((Class270) this).anIntArrayArrayArray3317[i_9_][1][i_10_] = (((Class270) this).anIntArrayArrayArray3317[i_9_][0][i_10_]);
+						((Class270) this).anIntArrayArrayArray3326[i_9_][1][i_10_] = (((Class270) this).anIntArrayArrayArray3326[i_9_][0][i_10_]);
+					}
 				}
 			}
+			if (i_6_ != 0 || (((Class270) this).anIntArray3319[1] != ((Class270) this).anIntArray3319[0]))
+				class342.method6086(class282_sub35);
+		} else {
+			int[] is = ((Class270) this).anIntArray3319;
+			((Class270) this).anIntArray3319[1] = 0;
+			is[0] = 0;
 		}
 	}
 
-	static final void method2536(IComponentDefinition class105, Class119 class119, ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -783761378;
-			class105.anInt1166 = -970389233 * (((ClientScript2) class403).anIntArray5244[681479919 * ((ClientScript2) class403).anInt5239]);
-			if (class105.anInt1166 * 684246511 > (1867913305 * class105.anInt1168 - class105.anInt1156 * -2093041337))
-				class105.anInt1166 = (1227329079 * class105.anInt1168 - class105.anInt1156 * 2072992297);
-			if (684246511 * class105.anInt1166 < 0)
-				class105.anInt1166 = 0;
-			class105.anInt1167 = (-1915192419 * (((ClientScript2) class403).anIntArray5244[1 + 681479919 * ((ClientScript2) class403).anInt5239]));
-			if (-1424956747 * class105.anInt1167 > (class105.anInt1169 * 2053897963 - 457937409 * class105.anInt1162))
-				class105.anInt1167 = (2097037087 * class105.anInt1169 - -900266595 * class105.anInt1162);
-			if (class105.anInt1167 * -1424956747 < 0)
-				class105.anInt1167 = 0;
-			Tradution.method6054(class105, -830371764);
-			if (-1 == class105.anInt1154 * -1309843523 && !class119.aBoolean1403)
-				Class422_Sub14.method5682(class105.anInt1142 * -440872681, -754597349);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.cq(").append(')').toString());
+	static {
+		anIntArrayArray3321 = new int[2][8];
+	}
+
+	float method4808(int i, int i_11_, float f) {
+		float f_12_ = ((float) ((Class270) this).anIntArrayArrayArray3326[i][0][i_11_] + f * (float) ((((Class270) this).anIntArrayArrayArray3326[i][1][i_11_]) - (((Class270) this).anIntArrayArrayArray3326[i][0][i_11_])));
+		f_12_ *= 0.0015258789F;
+		return 1.0F - (float) Math.pow(10.0, (double) (-f_12_ / 20.0F));
+	}
+
+	float method4809(int i, int i_13_, float f) {
+		float f_14_ = ((float) ((Class270) this).anIntArrayArrayArray3326[i][0][i_13_] + f * (float) ((((Class270) this).anIntArrayArrayArray3326[i][1][i_13_]) - (((Class270) this).anIntArrayArrayArray3326[i][0][i_13_])));
+		f_14_ *= 0.0015258789F;
+		return 1.0F - (float) Math.pow(10.0, (double) (-f_14_ / 20.0F));
+	}
+
+	float method4810(int i, int i_15_, float f) {
+		float f_16_ = ((float) ((Class270) this).anIntArrayArrayArray3317[i][0][i_15_] + f * (float) ((((Class270) this).anIntArrayArrayArray3317[i][1][i_15_]) - (((Class270) this).anIntArrayArrayArray3317[i][0][i_15_])));
+		f_16_ *= 1.2207031E-4F;
+		return method4805(f_16_);
+	}
+
+	final void method4811(RsByteBuffer class282_sub35, Class342 class342) {
+		int i = class282_sub35.readUnsignedByte();
+		((Class270) this).anIntArray3318[0] = i >> 4;
+		((Class270) this).anIntArray3318[1] = i & 0xf;
+		if (i != 0) {
+			((Class270) this).anIntArray3319[0] = class282_sub35.readUnsignedShort();
+			((Class270) this).anIntArray3319[1] = class282_sub35.readUnsignedShort();
+			int i_17_ = class282_sub35.readUnsignedByte();
+			for (int i_18_ = 0; i_18_ < 2; i_18_++) {
+				for (int i_19_ = 0; i_19_ < ((Class270) this).anIntArray3318[i_18_]; i_19_++) {
+					((Class270) this).anIntArrayArrayArray3317[i_18_][0][i_19_] = class282_sub35.readUnsignedShort();
+					((Class270) this).anIntArrayArrayArray3326[i_18_][0][i_19_] = class282_sub35.readUnsignedShort();
+				}
+			}
+			for (int i_20_ = 0; i_20_ < 2; i_20_++) {
+				for (int i_21_ = 0; i_21_ < ((Class270) this).anIntArray3318[i_20_]; i_21_++) {
+					if ((i_17_ & 1 << i_20_ * 4 << i_21_) != 0) {
+						((Class270) this).anIntArrayArrayArray3317[i_20_][1][i_21_] = class282_sub35.readUnsignedShort();
+						((Class270) this).anIntArrayArrayArray3326[i_20_][1][i_21_] = class282_sub35.readUnsignedShort();
+					} else {
+						((Class270) this).anIntArrayArrayArray3317[i_20_][1][i_21_] = (((Class270) this).anIntArrayArrayArray3317[i_20_][0][i_21_]);
+						((Class270) this).anIntArrayArrayArray3326[i_20_][1][i_21_] = (((Class270) this).anIntArrayArrayArray3326[i_20_][0][i_21_]);
+					}
+				}
+			}
+			if (i_17_ != 0 || (((Class270) this).anIntArray3319[1] != ((Class270) this).anIntArray3319[0]))
+				class342.method6086(class282_sub35);
+		} else {
+			int[] is = ((Class270) this).anIntArray3319;
+			((Class270) this).anIntArray3319[1] = 0;
+			is[0] = 0;
 		}
 	}
 
-	static final void method2537(ClientScript2 class403, int i) {
-		try {
-			if (client.anInt8932 * -1333485389 >= 5 && -1333485389 * client.anInt8932 <= 9)
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = -1333485389 * client.anInt8932;
-			else
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.uo(").append(')').toString());
+	int method4812(int i, float f) {
+		if (i == 0) {
+			float f_22_ = ((float) ((Class270) this).anIntArray3319[0] + (float) (((Class270) this).anIntArray3319[1] - ((Class270) this).anIntArray3319[0]) * f);
+			f_22_ *= 0.0030517578F;
+			aFloat3322 = (float) Math.pow(0.1, (double) (f_22_ / 20.0F));
+			anInt3315 = (int) (aFloat3322 * 65536.0F);
+		}
+		if (((Class270) this).anIntArray3318[i] == 0)
+			return 0;
+		float f_23_ = method4804(i, 0, f);
+		aFloatArrayArray3324[i][0] = -2.0F * f_23_ * (float) Math.cos((double) method4806(i, 0, f));
+		aFloatArrayArray3324[i][1] = f_23_ * f_23_;
+		for (int i_24_ = 1; i_24_ < ((Class270) this).anIntArray3318[i]; i_24_++) {
+			f_23_ = method4804(i, i_24_, f);
+			float f_25_ = (-2.0F * f_23_ * (float) Math.cos((double) method4806(i, i_24_, f)));
+			float f_26_ = f_23_ * f_23_;
+			aFloatArrayArray3324[i][i_24_ * 2 + 1] = aFloatArrayArray3324[i][i_24_ * 2 - 1] * f_26_;
+			aFloatArrayArray3324[i][i_24_ * 2] = (aFloatArrayArray3324[i][i_24_ * 2 - 1] * f_25_ + aFloatArrayArray3324[i][i_24_ * 2 - 2] * f_26_);
+			for (int i_27_ = i_24_ * 2 - 1; i_27_ >= 2; i_27_--)
+				aFloatArrayArray3324[i][i_27_] += (aFloatArrayArray3324[i][i_27_ - 1] * f_25_ + aFloatArrayArray3324[i][i_27_ - 2] * f_26_);
+			aFloatArrayArray3324[i][1] += aFloatArrayArray3324[i][0] * f_25_ + f_26_;
+			aFloatArrayArray3324[i][0] += f_25_;
+		}
+		if (i == 0) {
+			for (int i_28_ = 0; i_28_ < ((Class270) this).anIntArray3318[0] * 2; i_28_++)
+				aFloatArrayArray3324[0][i_28_] *= aFloat3322;
+		}
+		for (int i_29_ = 0; i_29_ < ((Class270) this).anIntArray3318[i] * 2; i_29_++)
+			anIntArrayArray3321[i][i_29_] = (int) (aFloatArrayArray3324[i][i_29_] * 65536.0F);
+		return ((Class270) this).anIntArray3318[i] * 2;
+	}
+
+	float method4813(int i, int i_30_, float f) {
+		float f_31_ = ((float) ((Class270) this).anIntArrayArrayArray3317[i][0][i_30_] + f * (float) ((((Class270) this).anIntArrayArrayArray3317[i][1][i_30_]) - (((Class270) this).anIntArrayArrayArray3317[i][0][i_30_])));
+		f_31_ *= 1.2207031E-4F;
+		return method4805(f_31_);
+	}
+
+	int method4814(int i, float f) {
+		if (i == 0) {
+			float f_32_ = ((float) ((Class270) this).anIntArray3319[0] + (float) (((Class270) this).anIntArray3319[1] - ((Class270) this).anIntArray3319[0]) * f);
+			f_32_ *= 0.0030517578F;
+			aFloat3322 = (float) Math.pow(0.1, (double) (f_32_ / 20.0F));
+			anInt3315 = (int) (aFloat3322 * 65536.0F);
+		}
+		if (((Class270) this).anIntArray3318[i] == 0)
+			return 0;
+		float f_33_ = method4804(i, 0, f);
+		aFloatArrayArray3324[i][0] = -2.0F * f_33_ * (float) Math.cos((double) method4806(i, 0, f));
+		aFloatArrayArray3324[i][1] = f_33_ * f_33_;
+		for (int i_34_ = 1; i_34_ < ((Class270) this).anIntArray3318[i]; i_34_++) {
+			f_33_ = method4804(i, i_34_, f);
+			float f_35_ = (-2.0F * f_33_ * (float) Math.cos((double) method4806(i, i_34_, f)));
+			float f_36_ = f_33_ * f_33_;
+			aFloatArrayArray3324[i][i_34_ * 2 + 1] = aFloatArrayArray3324[i][i_34_ * 2 - 1] * f_36_;
+			aFloatArrayArray3324[i][i_34_ * 2] = (aFloatArrayArray3324[i][i_34_ * 2 - 1] * f_35_ + aFloatArrayArray3324[i][i_34_ * 2 - 2] * f_36_);
+			for (int i_37_ = i_34_ * 2 - 1; i_37_ >= 2; i_37_--)
+				aFloatArrayArray3324[i][i_37_] += (aFloatArrayArray3324[i][i_37_ - 1] * f_35_ + aFloatArrayArray3324[i][i_37_ - 2] * f_36_);
+			aFloatArrayArray3324[i][1] += aFloatArrayArray3324[i][0] * f_35_ + f_36_;
+			aFloatArrayArray3324[i][0] += f_35_;
+		}
+		if (i == 0) {
+			for (int i_38_ = 0; i_38_ < ((Class270) this).anIntArray3318[0] * 2; i_38_++)
+				aFloatArrayArray3324[0][i_38_] *= aFloat3322;
+		}
+		for (int i_39_ = 0; i_39_ < ((Class270) this).anIntArray3318[i] * 2; i_39_++)
+			anIntArrayArray3321[i][i_39_] = (int) (aFloatArrayArray3324[i][i_39_] * 65536.0F);
+		return ((Class270) this).anIntArray3318[i] * 2;
+	}
+
+	int method4815(int i, float f) {
+		if (i == 0) {
+			float f_40_ = ((float) ((Class270) this).anIntArray3319[0] + (float) (((Class270) this).anIntArray3319[1] - ((Class270) this).anIntArray3319[0]) * f);
+			f_40_ *= 0.0030517578F;
+			aFloat3322 = (float) Math.pow(0.1, (double) (f_40_ / 20.0F));
+			anInt3315 = (int) (aFloat3322 * 65536.0F);
+		}
+		if (((Class270) this).anIntArray3318[i] == 0)
+			return 0;
+		float f_41_ = method4804(i, 0, f);
+		aFloatArrayArray3324[i][0] = -2.0F * f_41_ * (float) Math.cos((double) method4806(i, 0, f));
+		aFloatArrayArray3324[i][1] = f_41_ * f_41_;
+		for (int i_42_ = 1; i_42_ < ((Class270) this).anIntArray3318[i]; i_42_++) {
+			f_41_ = method4804(i, i_42_, f);
+			float f_43_ = (-2.0F * f_41_ * (float) Math.cos((double) method4806(i, i_42_, f)));
+			float f_44_ = f_41_ * f_41_;
+			aFloatArrayArray3324[i][i_42_ * 2 + 1] = aFloatArrayArray3324[i][i_42_ * 2 - 1] * f_44_;
+			aFloatArrayArray3324[i][i_42_ * 2] = (aFloatArrayArray3324[i][i_42_ * 2 - 1] * f_43_ + aFloatArrayArray3324[i][i_42_ * 2 - 2] * f_44_);
+			for (int i_45_ = i_42_ * 2 - 1; i_45_ >= 2; i_45_--)
+				aFloatArrayArray3324[i][i_45_] += (aFloatArrayArray3324[i][i_45_ - 1] * f_43_ + aFloatArrayArray3324[i][i_45_ - 2] * f_44_);
+			aFloatArrayArray3324[i][1] += aFloatArrayArray3324[i][0] * f_43_ + f_44_;
+			aFloatArrayArray3324[i][0] += f_43_;
+		}
+		if (i == 0) {
+			for (int i_46_ = 0; i_46_ < ((Class270) this).anIntArray3318[0] * 2; i_46_++)
+				aFloatArrayArray3324[0][i_46_] *= aFloat3322;
+		}
+		for (int i_47_ = 0; i_47_ < ((Class270) this).anIntArray3318[i] * 2; i_47_++)
+			anIntArrayArray3321[i][i_47_] = (int) (aFloatArrayArray3324[i][i_47_] * 65536.0F);
+		return ((Class270) this).anIntArray3318[i] * 2;
+	}
+
+	int method4816(int i, float f) {
+		if (i == 0) {
+			float f_48_ = ((float) ((Class270) this).anIntArray3319[0] + (float) (((Class270) this).anIntArray3319[1] - ((Class270) this).anIntArray3319[0]) * f);
+			f_48_ *= 0.0030517578F;
+			aFloat3322 = (float) Math.pow(0.1, (double) (f_48_ / 20.0F));
+			anInt3315 = (int) (aFloat3322 * 65536.0F);
+		}
+		if (((Class270) this).anIntArray3318[i] == 0)
+			return 0;
+		float f_49_ = method4804(i, 0, f);
+		aFloatArrayArray3324[i][0] = -2.0F * f_49_ * (float) Math.cos((double) method4806(i, 0, f));
+		aFloatArrayArray3324[i][1] = f_49_ * f_49_;
+		for (int i_50_ = 1; i_50_ < ((Class270) this).anIntArray3318[i]; i_50_++) {
+			f_49_ = method4804(i, i_50_, f);
+			float f_51_ = (-2.0F * f_49_ * (float) Math.cos((double) method4806(i, i_50_, f)));
+			float f_52_ = f_49_ * f_49_;
+			aFloatArrayArray3324[i][i_50_ * 2 + 1] = aFloatArrayArray3324[i][i_50_ * 2 - 1] * f_52_;
+			aFloatArrayArray3324[i][i_50_ * 2] = (aFloatArrayArray3324[i][i_50_ * 2 - 1] * f_51_ + aFloatArrayArray3324[i][i_50_ * 2 - 2] * f_52_);
+			for (int i_53_ = i_50_ * 2 - 1; i_53_ >= 2; i_53_--)
+				aFloatArrayArray3324[i][i_53_] += (aFloatArrayArray3324[i][i_53_ - 1] * f_51_ + aFloatArrayArray3324[i][i_53_ - 2] * f_52_);
+			aFloatArrayArray3324[i][1] += aFloatArrayArray3324[i][0] * f_51_ + f_52_;
+			aFloatArrayArray3324[i][0] += f_51_;
+		}
+		if (i == 0) {
+			for (int i_54_ = 0; i_54_ < ((Class270) this).anIntArray3318[0] * 2; i_54_++)
+				aFloatArrayArray3324[0][i_54_] *= aFloat3322;
+		}
+		for (int i_55_ = 0; i_55_ < ((Class270) this).anIntArray3318[i] * 2; i_55_++)
+			anIntArrayArray3321[i][i_55_] = (int) (aFloatArrayArray3324[i][i_55_] * 65536.0F);
+		return ((Class270) this).anIntArray3318[i] * 2;
+	}
+
+	final void method4817(RsByteBuffer class282_sub35, Class342 class342) {
+		int i = class282_sub35.readUnsignedByte();
+		((Class270) this).anIntArray3318[0] = i >> 4;
+		((Class270) this).anIntArray3318[1] = i & 0xf;
+		if (i != 0) {
+			((Class270) this).anIntArray3319[0] = class282_sub35.readUnsignedShort();
+			((Class270) this).anIntArray3319[1] = class282_sub35.readUnsignedShort();
+			int i_56_ = class282_sub35.readUnsignedByte();
+			for (int i_57_ = 0; i_57_ < 2; i_57_++) {
+				for (int i_58_ = 0; i_58_ < ((Class270) this).anIntArray3318[i_57_]; i_58_++) {
+					((Class270) this).anIntArrayArrayArray3317[i_57_][0][i_58_] = class282_sub35.readUnsignedShort();
+					((Class270) this).anIntArrayArrayArray3326[i_57_][0][i_58_] = class282_sub35.readUnsignedShort();
+				}
+			}
+			for (int i_59_ = 0; i_59_ < 2; i_59_++) {
+				for (int i_60_ = 0; i_60_ < ((Class270) this).anIntArray3318[i_59_]; i_60_++) {
+					if ((i_56_ & 1 << i_59_ * 4 << i_60_) != 0) {
+						((Class270) this).anIntArrayArrayArray3317[i_59_][1][i_60_] = class282_sub35.readUnsignedShort();
+						((Class270) this).anIntArrayArrayArray3326[i_59_][1][i_60_] = class282_sub35.readUnsignedShort();
+					} else {
+						((Class270) this).anIntArrayArrayArray3317[i_59_][1][i_60_] = (((Class270) this).anIntArrayArrayArray3317[i_59_][0][i_60_]);
+						((Class270) this).anIntArrayArrayArray3326[i_59_][1][i_60_] = (((Class270) this).anIntArrayArrayArray3326[i_59_][0][i_60_]);
+					}
+				}
+			}
+			if (i_56_ != 0 || (((Class270) this).anIntArray3319[1] != ((Class270) this).anIntArray3319[0]))
+				class342.method6086(class282_sub35);
+		} else {
+			int[] is = ((Class270) this).anIntArray3319;
+			((Class270) this).anIntArray3319[1] = 0;
+			is[0] = 0;
 		}
 	}
 
-	static final void method2538(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -783761378;
-			int i_32_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]);
-			int i_33_ = (((ClientScript2) class403).anIntArray5244[681479919 * ((ClientScript2) class403).anInt5239 + 1]);
-			int i_34_ = i_33_ >> 14 & 0x3fff;
-			int i_35_ = i_33_ & 0x3fff;
-			int i_36_ = Class264_Sub4.method2514(i_32_, i_34_, i_35_, (short) -30782);
-			if (i_36_ < 0)
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = -1;
-			else
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = i_36_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.aev(").append(')').toString());
-		}
+	static float method4818(float f) {
+		float f_61_ = 32.703197F * (float) Math.pow(2.0, (double) f);
+		return f_61_ * 3.1415927F / 11025.0F;
 	}
 
-	public static final void method2539(int i, int i_37_, int i_38_, int i_39_, int i_40_, int i_41_) {
-		try {
-			if (i >= Class372_Sub3.anInt4051 * -1424479739 && i_37_ <= 1135094847 * Class372_Sub3.anInt4048 && i_38_ >= Class372_Sub3.anInt4049 * 1155384281 && i_39_ <= -1062447355 * Class372_Sub3.anInt4050)
-				Class390.method4873(i, i_37_, i_38_, i_39_, i_40_, -1435817713);
-			else
-				Class298_Sub20.method3052(i, i_37_, i_38_, i_39_, i_40_, 1926849708);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.x(").append(')').toString());
-		}
-	}
-
-	static final void method2540(ClientScript2 class403, int i) {
-		try {
-			int i_42_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub8_7566.method5612(i_42_, 1352882135);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.aox(").append(')').toString());
-		}
-	}
-
-	static final void method2541(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub4_7563.method5638((byte) 78) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("lf.ann(").append(')').toString());
+	final void method4819(RsByteBuffer class282_sub35, Class342 class342) {
+		int i = class282_sub35.readUnsignedByte();
+		((Class270) this).anIntArray3318[0] = i >> 4;
+		((Class270) this).anIntArray3318[1] = i & 0xf;
+		if (i != 0) {
+			((Class270) this).anIntArray3319[0] = class282_sub35.readUnsignedShort();
+			((Class270) this).anIntArray3319[1] = class282_sub35.readUnsignedShort();
+			int i_62_ = class282_sub35.readUnsignedByte();
+			for (int i_63_ = 0; i_63_ < 2; i_63_++) {
+				for (int i_64_ = 0; i_64_ < ((Class270) this).anIntArray3318[i_63_]; i_64_++) {
+					((Class270) this).anIntArrayArrayArray3317[i_63_][0][i_64_] = class282_sub35.readUnsignedShort();
+					((Class270) this).anIntArrayArrayArray3326[i_63_][0][i_64_] = class282_sub35.readUnsignedShort();
+				}
+			}
+			for (int i_65_ = 0; i_65_ < 2; i_65_++) {
+				for (int i_66_ = 0; i_66_ < ((Class270) this).anIntArray3318[i_65_]; i_66_++) {
+					if ((i_62_ & 1 << i_65_ * 4 << i_66_) != 0) {
+						((Class270) this).anIntArrayArrayArray3317[i_65_][1][i_66_] = class282_sub35.readUnsignedShort();
+						((Class270) this).anIntArrayArrayArray3326[i_65_][1][i_66_] = class282_sub35.readUnsignedShort();
+					} else {
+						((Class270) this).anIntArrayArrayArray3317[i_65_][1][i_66_] = (((Class270) this).anIntArrayArrayArray3317[i_65_][0][i_66_]);
+						((Class270) this).anIntArrayArrayArray3326[i_65_][1][i_66_] = (((Class270) this).anIntArrayArrayArray3326[i_65_][0][i_66_]);
+					}
+				}
+			}
+			if (i_62_ != 0 || (((Class270) this).anIntArray3319[1] != ((Class270) this).anIntArray3319[0]))
+				class342.method6086(class282_sub35);
+		} else {
+			int[] is = ((Class270) this).anIntArray3319;
+			((Class270) this).anIntArray3319[1] = 0;
+			is[0] = 0;
 		}
 	}
 }

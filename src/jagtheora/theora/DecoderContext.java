@@ -9,7 +9,7 @@ import jagtheora.ogg.OggPacket;
 public class DecoderContext extends SimplePeer {
 	public DecoderContext(TheoraInfo theorainfo, SetupInfo setupinfo) {
 		init(theorainfo, setupinfo);
-		if (a())
+		if (method6698())
 			throw new IllegalArgumentException("");
 	}
 
@@ -31,7 +31,9 @@ public class DecoderContext extends SimplePeer {
 
 	protected native void clear();
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

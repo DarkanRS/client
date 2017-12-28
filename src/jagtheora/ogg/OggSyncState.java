@@ -8,7 +8,7 @@ import jagtheora.misc.SimplePeer;
 public class OggSyncState extends SimplePeer {
 	public OggSyncState() {
 		init();
-		if (a())
+		if (method6698())
 			throw new IllegalStateException();
 	}
 
@@ -24,7 +24,9 @@ public class OggSyncState extends SimplePeer {
 
 	protected native void clear();
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

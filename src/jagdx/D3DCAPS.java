@@ -4,20 +4,20 @@
 package jagdx;
 
 public class D3DCAPS {
-	public static int a = 1048576;
-	public static int f = 16777216;
-	public static int b = 2;
-	public static int p = 16;
-	public static int i = 32;
-	public static int k = 2;
-	public static int d = 8192;
-	public static int u = 16384;
-	public static int x = 65536;
-	public static int r = 2;
-	public static int q = 8;
-	public static int n = 64;
-	public static int s = 512;
-	public static int z = 33554432;
+	public static final int anInt769 = 1048576;
+	public static final int anInt770 = 16777216;
+	public static final int anInt771 = 2;
+	public static final int anInt772 = 16;
+	public static final int anInt773 = 32;
+	public static final int anInt774 = 2;
+	public static final int anInt775 = 8192;
+	public static final int anInt776 = 16384;
+	public static final int anInt777 = 65536;
+	public static final int anInt778 = 2;
+	public static final int anInt779 = 8;
+	public static final int anInt780 = 64;
+	public static final int anInt781 = 512;
+	public static final int anInt782 = 33554432;
 	public int DeviceType;
 	public int AdapterOrdinal;
 	public int Caps;

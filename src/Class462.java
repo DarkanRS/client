@@ -3,59 +3,238 @@
  */
 
 public class Class462 {
-	static Class348 aClass348_5682 = new Class348(32);
-	public static int anInt5683;
+	int anInt5542;
+	int anInt5543;
+	boolean aBool5544 = false;
+	Class282_Sub50_Sub13 aClass282_Sub50_Sub13_5545;
+	Class282_Sub50_Sub13 aClass282_Sub50_Sub13_5546;
+	int anInt5547;
+	public static String[] aStringArray5548;
 
-	Class462() throws Throwable {
-		throw new Error();
+	final void method7706() {
+		((Class462) this).aBool5544 = false;
+		((Class462) this).anInt5543 = 0;
+		((Class462) this).aClass282_Sub50_Sub13_5546 = null;
+		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
 	}
 
-	static String method5990(String string, int i) {
-		try {
-			if (Class495.aString6094.startsWith("win"))
-				return new StringBuilder().append(string).append(".dll").toString();
-			if (Class495.aString6094.startsWith("linux"))
-				return new StringBuilder().append("lib").append(string).append(".so").toString();
-			if (Class495.aString6094.startsWith("mac"))
-				return new StringBuilder().append("lib").append(string).append(".dylib").toString();
-			return null;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("t.a(").append(')').toString());
+	final boolean method7707(Class523 class523, Class518 class518, int i, int i_0_, int[] is, int i_1_) {
+		if (!((Class462) this).aBool5544) {
+			if (i >= is.length)
+				return false;
+			((Class462) this).anInt5542 = is[i] * -1816701217;
+			((Class462) this).aClass282_Sub50_Sub13_5545 = class523.method11207((((Class462) this).anInt5542 * -104209121) >> 16, -1536383536);
+			((Class462) this).anInt5542 = ((((Class462) this).anInt5542 * -104209121 & 0xffff) * -1816701217);
+			if (((Class462) this).aClass282_Sub50_Sub13_5545 != null) {
+				if (class518.aBool5924 && -1 != i_0_ && i_0_ < is.length) {
+					((Class462) this).anInt5547 = is[i_0_] * -362437113;
+					((Class462) this).aClass282_Sub50_Sub13_5546 = class523.method11207((((Class462) this).anInt5547 * -775231561) >> 16, -1536383536);
+					((Class462) this).anInt5547 = (-362437113 * (-775231561 * ((Class462) this).anInt5547 & 0xffff));
+				}
+				if (class518.aBool5923)
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x200));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15080(((Class462) this).anInt5542 * -104209121, -1144516636))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x80) * -547501175);
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15079(((Class462) this).anInt5542 * -104209121, 61802721))
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x100));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15081(-104209121 * ((Class462) this).anInt5542, -752356381))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x400) * -547501175);
+				if (null != ((Class462) this).aClass282_Sub50_Sub13_5546) {
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15080(((Class462) this).anInt5547 * -775231561, -2104215933))
+						((Class462) this).anInt5543 = (-547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x80));
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15079(((Class462) this).anInt5547 * -775231561, 61802721))
+						((Class462) this).anInt5543 = (((Class462) this).anInt5543 * -1154737479 | 0x100) * -547501175;
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15081(-775231561 * ((Class462) this).anInt5547, -752356381))
+						((Class462) this).anInt5543 = (-1154737479 * ((Class462) this).anInt5543 | 0x400) * -547501175;
+				}
+				((Class462) this).anInt5543 = -547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x20);
+				((Class462) this).aBool5544 = true;
+				return true;
+			}
+			return false;
 		}
+		return true;
 	}
 
-	static final void method5991(ClientScript2 class403, int i) {
-		try {
-			int i_0_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_0_, (byte) -48);
-			Class119 class119 = Class389.aClass119Array4165[i_0_ >> 16];
-			Class409.method4973(class105, class119, class403, (byte) 106);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("t.ce(").append(')').toString());
-		}
+	final void method7708(int i) {
+		((Class462) this).aBool5544 = false;
+		((Class462) this).anInt5543 = 0;
+		((Class462) this).aClass282_Sub50_Sub13_5546 = null;
+		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
 	}
 
-	static final void method5992(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class360.anInt3894 * 235445649;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 508782749 * Class360.anInt3888;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 1800450029 * Class360.anInt3906;
-			Class360.anInt3894 = -1908115170;
-			Class360.anInt3888 = 599892555;
-			Class360.anInt3906 = 930150939;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("t.ahz(").append(')').toString());
+	final boolean method7709(Class523 class523, Class518 class518, int i, int i_2_, int[] is) {
+		if (!((Class462) this).aBool5544) {
+			if (i >= is.length)
+				return false;
+			((Class462) this).anInt5542 = is[i] * -1816701217;
+			((Class462) this).aClass282_Sub50_Sub13_5545 = class523.method11207((((Class462) this).anInt5542 * -104209121) >> 16, -1536383536);
+			((Class462) this).anInt5542 = ((((Class462) this).anInt5542 * -104209121 & 0xffff) * -1816701217);
+			if (((Class462) this).aClass282_Sub50_Sub13_5545 != null) {
+				if (class518.aBool5924 && -1 != i_2_ && i_2_ < is.length) {
+					((Class462) this).anInt5547 = is[i_2_] * -362437113;
+					((Class462) this).aClass282_Sub50_Sub13_5546 = class523.method11207((((Class462) this).anInt5547 * -775231561) >> 16, -1536383536);
+					((Class462) this).anInt5547 = (-362437113 * (-775231561 * ((Class462) this).anInt5547 & 0xffff));
+				}
+				if (class518.aBool5923)
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x200));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15080(((Class462) this).anInt5542 * -104209121, -1717074724))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x80) * -547501175);
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15079(((Class462) this).anInt5542 * -104209121, 61802721))
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x100));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15081(-104209121 * ((Class462) this).anInt5542, -752356381))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x400) * -547501175);
+				if (null != ((Class462) this).aClass282_Sub50_Sub13_5546) {
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15080(((Class462) this).anInt5547 * -775231561, -1375634942))
+						((Class462) this).anInt5543 = (-547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x80));
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15079(((Class462) this).anInt5547 * -775231561, 61802721))
+						((Class462) this).anInt5543 = (((Class462) this).anInt5543 * -1154737479 | 0x100) * -547501175;
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15081(-775231561 * ((Class462) this).anInt5547, -752356381))
+						((Class462) this).anInt5543 = (-1154737479 * ((Class462) this).anInt5543 | 0x400) * -547501175;
+				}
+				((Class462) this).anInt5543 = -547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x20);
+				((Class462) this).aBool5544 = true;
+				return true;
+			}
+			return false;
 		}
+		return true;
 	}
 
-	static final void method5993(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -783761378;
-			int i_1_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]);
-			int i_2_ = (((ClientScript2) class403).anIntArray5244[1 + 681479919 * ((ClientScript2) class403).anInt5239]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 0 != (i_1_ & 1 << i_2_) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("t.zh(").append(')').toString());
+	final void method7710() {
+		((Class462) this).aBool5544 = false;
+		((Class462) this).anInt5543 = 0;
+		((Class462) this).aClass282_Sub50_Sub13_5546 = null;
+		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
+	}
+
+	final boolean method7711(Class523 class523, Class518 class518, int i, int i_3_, int[] is) {
+		if (!((Class462) this).aBool5544) {
+			if (i >= is.length)
+				return false;
+			((Class462) this).anInt5542 = is[i] * -1816701217;
+			((Class462) this).aClass282_Sub50_Sub13_5545 = class523.method11207((((Class462) this).anInt5542 * -104209121) >> 16, -1536383536);
+			((Class462) this).anInt5542 = ((((Class462) this).anInt5542 * -104209121 & 0xffff) * -1816701217);
+			if (((Class462) this).aClass282_Sub50_Sub13_5545 != null) {
+				if (class518.aBool5924 && -1 != i_3_ && i_3_ < is.length) {
+					((Class462) this).anInt5547 = is[i_3_] * -362437113;
+					((Class462) this).aClass282_Sub50_Sub13_5546 = class523.method11207((((Class462) this).anInt5547 * -775231561) >> 16, -1536383536);
+					((Class462) this).anInt5547 = (-362437113 * (-775231561 * ((Class462) this).anInt5547 & 0xffff));
+				}
+				if (class518.aBool5923)
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x200));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15080(((Class462) this).anInt5542 * -104209121, -718528893))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x80) * -547501175);
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15079(((Class462) this).anInt5542 * -104209121, 61802721))
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x100));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15081(-104209121 * ((Class462) this).anInt5542, -752356381))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x400) * -547501175);
+				if (null != ((Class462) this).aClass282_Sub50_Sub13_5546) {
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15080(((Class462) this).anInt5547 * -775231561, -635702540))
+						((Class462) this).anInt5543 = (-547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x80));
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15079(((Class462) this).anInt5547 * -775231561, 61802721))
+						((Class462) this).anInt5543 = (((Class462) this).anInt5543 * -1154737479 | 0x100) * -547501175;
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15081(-775231561 * ((Class462) this).anInt5547, -752356381))
+						((Class462) this).anInt5543 = (-1154737479 * ((Class462) this).anInt5543 | 0x400) * -547501175;
+				}
+				((Class462) this).anInt5543 = -547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x20);
+				((Class462) this).aBool5544 = true;
+				return true;
+			}
+			return false;
 		}
+		return true;
+	}
+
+	final boolean method7712(Class523 class523, Class518 class518, int i, int i_4_, int[] is) {
+		if (!((Class462) this).aBool5544) {
+			if (i >= is.length)
+				return false;
+			((Class462) this).anInt5542 = is[i] * -1816701217;
+			((Class462) this).aClass282_Sub50_Sub13_5545 = class523.method11207((((Class462) this).anInt5542 * -104209121) >> 16, -1536383536);
+			((Class462) this).anInt5542 = ((((Class462) this).anInt5542 * -104209121 & 0xffff) * -1816701217);
+			if (((Class462) this).aClass282_Sub50_Sub13_5545 != null) {
+				if (class518.aBool5924 && -1 != i_4_ && i_4_ < is.length) {
+					((Class462) this).anInt5547 = is[i_4_] * -362437113;
+					((Class462) this).aClass282_Sub50_Sub13_5546 = class523.method11207((((Class462) this).anInt5547 * -775231561) >> 16, -1536383536);
+					((Class462) this).anInt5547 = (-362437113 * (-775231561 * ((Class462) this).anInt5547 & 0xffff));
+				}
+				if (class518.aBool5923)
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x200));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15080(((Class462) this).anInt5542 * -104209121, -446067374))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x80) * -547501175);
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15079(((Class462) this).anInt5542 * -104209121, 61802721))
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x100));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15081(-104209121 * ((Class462) this).anInt5542, -752356381))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x400) * -547501175);
+				if (null != ((Class462) this).aClass282_Sub50_Sub13_5546) {
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15080(((Class462) this).anInt5547 * -775231561, -311293003))
+						((Class462) this).anInt5543 = (-547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x80));
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15079(((Class462) this).anInt5547 * -775231561, 61802721))
+						((Class462) this).anInt5543 = (((Class462) this).anInt5543 * -1154737479 | 0x100) * -547501175;
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15081(-775231561 * ((Class462) this).anInt5547, -752356381))
+						((Class462) this).anInt5543 = (-1154737479 * ((Class462) this).anInt5543 | 0x400) * -547501175;
+				}
+				((Class462) this).anInt5543 = -547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x20);
+				((Class462) this).aBool5544 = true;
+				return true;
+			}
+			return false;
+		}
+		return true;
+	}
+
+	final boolean method7713(Class523 class523, Class518 class518, int i, int i_5_, int[] is) {
+		if (!((Class462) this).aBool5544) {
+			if (i >= is.length)
+				return false;
+			((Class462) this).anInt5542 = is[i] * -1816701217;
+			((Class462) this).aClass282_Sub50_Sub13_5545 = class523.method11207((((Class462) this).anInt5542 * -104209121) >> 16, -1536383536);
+			((Class462) this).anInt5542 = ((((Class462) this).anInt5542 * -104209121 & 0xffff) * -1816701217);
+			if (((Class462) this).aClass282_Sub50_Sub13_5545 != null) {
+				if (class518.aBool5924 && -1 != i_5_ && i_5_ < is.length) {
+					((Class462) this).anInt5547 = is[i_5_] * -362437113;
+					((Class462) this).aClass282_Sub50_Sub13_5546 = class523.method11207((((Class462) this).anInt5547 * -775231561) >> 16, -1536383536);
+					((Class462) this).anInt5547 = (-362437113 * (-775231561 * ((Class462) this).anInt5547 & 0xffff));
+				}
+				if (class518.aBool5923)
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x200));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15080(((Class462) this).anInt5542 * -104209121, -869647360))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x80) * -547501175);
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15079(((Class462) this).anInt5542 * -104209121, 61802721))
+					((Class462) this).anInt5543 = (-547501175 * (((Class462) this).anInt5543 * -1154737479 | 0x100));
+				if (((Class462) this).aClass282_Sub50_Sub13_5545.method15081(-104209121 * ((Class462) this).anInt5542, -752356381))
+					((Class462) this).anInt5543 = ((((Class462) this).anInt5543 * -1154737479 | 0x400) * -547501175);
+				if (null != ((Class462) this).aClass282_Sub50_Sub13_5546) {
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15080(((Class462) this).anInt5547 * -775231561, -1141644232))
+						((Class462) this).anInt5543 = (-547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x80));
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15079(((Class462) this).anInt5547 * -775231561, 61802721))
+						((Class462) this).anInt5543 = (((Class462) this).anInt5543 * -1154737479 | 0x100) * -547501175;
+					if (((Class462) this).aClass282_Sub50_Sub13_5546.method15081(-775231561 * ((Class462) this).anInt5547, -752356381))
+						((Class462) this).anInt5543 = (-1154737479 * ((Class462) this).anInt5543 | 0x400) * -547501175;
+				}
+				((Class462) this).anInt5543 = -547501175 * (-1154737479 * ((Class462) this).anInt5543 | 0x20);
+				((Class462) this).aBool5544 = true;
+				return true;
+			}
+			return false;
+		}
+		return true;
+	}
+
+	Class462() {
+		/* empty */
+	}
+
+	final void method7714() {
+		((Class462) this).aBool5544 = false;
+		((Class462) this).anInt5543 = 0;
+		((Class462) this).aClass282_Sub50_Sub13_5546 = null;
+		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
+	}
+
+	static final void method7715(Class527 class527, int i) {
+		int i_6_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 192651981 * client.aClass330Array7428[i_6_].anInt3862;
 	}
 }

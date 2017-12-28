@@ -1,87 +1,112 @@
+
 /* Class128 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import jaggl.OpenGL;
 
-public class Class128 implements Interface5 {
-	public Class139 aClass139_6322;
-	public Class133 aClass133_6323;
-	public int anInt6324;
-	public int anInt6325;
-	public int anInt6326;
-	public int anInt6327;
-	public int anInt6328;
-	public int anInt6329;
-	public int anInt6330;
-	public static Class148 aClass148_6331;
+public class Class128 {
+	Class505_Sub1 aClass505_Sub1_1581;
+	static int[] anIntArray1582 = new int[2];
+	int anInt1583;
 
-	public Class146 method50() {
-		return null;
-	}
-
-	public Class146 method49(int i) {
-		try {
-			return null;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("fe.f(").append(')').toString());
+	static Class128 method2174(Class505_Sub1 class505_sub1, Class140[] class140s) {
+		for (int i = 0; i < class140s.length; i++) {
+			if (class140s[i] == null || ((Class140) class140s[i]).anInt1663 <= 0)
+				return null;
 		}
-	}
-
-	Class128(Class139 class139, Class133 class133, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
-		aClass139_6322 = class139;
-		aClass133_6323 = class133;
-		anInt6327 = 807843511 * i;
-		anInt6325 = -649554901 * i_0_;
-		anInt6326 = i_1_ * 1273501485;
-		anInt6330 = 407497983 * i_2_;
-		anInt6328 = 427732857 * i_3_;
-		anInt6329 = 685031529 * i_4_;
-		anInt6324 = 172512313 * i_5_;
-	}
-
-	public Class146 method51() {
-		return null;
-	}
-
-	static final void method1435(boolean bool, ClientScript2 class403, int i) {
-		try {
-			int i_6_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_6_, (byte) 53);
-			Class119 class119 = Class389.aClass119Array4165[i_6_ >> 16];
-			if (bool)
-				Class131.method1470(class119, class105, -1270501871);
-			else
-				Class53.method599(class119, class105, (byte) -21);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("fe.cm(").append(')').toString());
+		int i = OpenGL.glCreateProgram();
+		for (int i_0_ = 0; i_0_ < class140s.length; i_0_++)
+			OpenGL.glAttachShader(i, ((Class140) class140s[i_0_]).anInt1663);
+		OpenGL.glLinkProgram(i);
+		OpenGL.glGetProgramiv(i, 35714, anIntArray1582, 0);
+		if (anIntArray1582[0] == 0) {
+			OpenGL.glGetProgramiv(i, 35716, anIntArray1582, 1);
+			if (anIntArray1582[1] > 1) {
+				byte[] is = new byte[anIntArray1582[1]];
+				OpenGL.glGetProgramInfoLog(i, anIntArray1582[1], anIntArray1582, 0, is, 0);
+				System.out.println(new String(is));
+			}
+			if (anIntArray1582[0] == 0) {
+				for (int i_1_ = 0; i_1_ < class140s.length; i_1_++)
+					OpenGL.glDetachShader(i, (((Class140) class140s[i_1_]).anInt1663));
+				OpenGL.glDeleteProgram(i);
+				return null;
+			}
 		}
+		return new Class128(class505_sub1, i, class140s);
 	}
 
-	static final void method1436(IComponentDefinition class105, Class119 class119, ClientScript2 class403, int i) {
-		try {
-			class105.aBoolean1183 = (((ClientScript2) class403).anIntArray5244[(((ClientScript2) class403).anInt5239 -= -391880689) * 681479919]) == 1;
-			Tradution.method6054(class105, 100999784);
-			if (-1 == class105.anInt1154 * -1309843523 && !class119.aBoolean1403)
-				Class298_Sub52.method3582(class105.anInt1142 * -440872681, -285766228);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("fe.hi(").append(')').toString());
-		}
+	void method2175() throws Throwable {
+		((Class128) this).aClass505_Sub1_1581.method13627((long) ((Class128) this).anInt1583);
+		super.finalize();
 	}
 
-	public static boolean method1437(int i, int i_7_) {
-		try {
-			return 0 == i || 1 == i || i == 2;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("fe.k(").append(')').toString());
-		}
+	public void finalize() throws Throwable {
+		((Class128) this).aClass505_Sub1_1581.method13627((long) ((Class128) this).anInt1583);
+		super.finalize();
 	}
 
-	static final void method1438(ClientScript2 class403, int i) {
-		try {
-			int i_8_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			int i_9_ = client.aClass251Array8920[i_8_].method2400(-574288948);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = i_9_ == 2 ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("fe.yy(").append(')').toString());
+	static Class128 method2176(Class505_Sub1 class505_sub1, Class140[] class140s) {
+		for (int i = 0; i < class140s.length; i++) {
+			if (class140s[i] == null || ((Class140) class140s[i]).anInt1663 <= 0)
+				return null;
 		}
+		int i = OpenGL.glCreateProgram();
+		for (int i_2_ = 0; i_2_ < class140s.length; i_2_++)
+			OpenGL.glAttachShader(i, ((Class140) class140s[i_2_]).anInt1663);
+		OpenGL.glLinkProgram(i);
+		OpenGL.glGetProgramiv(i, 35714, anIntArray1582, 0);
+		if (anIntArray1582[0] == 0) {
+			OpenGL.glGetProgramiv(i, 35716, anIntArray1582, 1);
+			if (anIntArray1582[1] > 1) {
+				byte[] is = new byte[anIntArray1582[1]];
+				OpenGL.glGetProgramInfoLog(i, anIntArray1582[1], anIntArray1582, 0, is, 0);
+				System.out.println(new String(is));
+			}
+			if (anIntArray1582[0] == 0) {
+				for (int i_3_ = 0; i_3_ < class140s.length; i_3_++)
+					OpenGL.glDetachShader(i, (((Class140) class140s[i_3_]).anInt1663));
+				OpenGL.glDeleteProgram(i);
+				return null;
+			}
+		}
+		return new Class128(class505_sub1, i, class140s);
+	}
+
+	static Class128 method2177(Class505_Sub1 class505_sub1, Class140[] class140s) {
+		for (int i = 0; i < class140s.length; i++) {
+			if (class140s[i] == null || ((Class140) class140s[i]).anInt1663 <= 0)
+				return null;
+		}
+		int i = OpenGL.glCreateProgram();
+		for (int i_4_ = 0; i_4_ < class140s.length; i_4_++)
+			OpenGL.glAttachShader(i, ((Class140) class140s[i_4_]).anInt1663);
+		OpenGL.glLinkProgram(i);
+		OpenGL.glGetProgramiv(i, 35714, anIntArray1582, 0);
+		if (anIntArray1582[0] == 0) {
+			OpenGL.glGetProgramiv(i, 35716, anIntArray1582, 1);
+			if (anIntArray1582[1] > 1) {
+				byte[] is = new byte[anIntArray1582[1]];
+				OpenGL.glGetProgramInfoLog(i, anIntArray1582[1], anIntArray1582, 0, is, 0);
+				System.out.println(new String(is));
+			}
+			if (anIntArray1582[0] == 0) {
+				for (int i_5_ = 0; i_5_ < class140s.length; i_5_++)
+					OpenGL.glDetachShader(i, (((Class140) class140s[i_5_]).anInt1663));
+				OpenGL.glDeleteProgram(i);
+				return null;
+			}
+		}
+		return new Class128(class505_sub1, i, class140s);
+	}
+
+	void method2178() throws Throwable {
+		((Class128) this).aClass505_Sub1_1581.method13627((long) ((Class128) this).anInt1583);
+		super.finalize();
+	}
+
+	Class128(Class505_Sub1 class505_sub1, int i, Class140[] class140s) {
+		((Class128) this).aClass505_Sub1_1581 = class505_sub1;
+		((Class128) this).anInt1583 = i;
 	}
 }

@@ -1,107 +1,439 @@
+
 /* Class286 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.io.EOFException;
+import java.io.IOException;
+import java.io.InputStream;
 
-public class Class286 {
-	int[][][] anIntArrayArrayArray3084;
-	static int anInt3085 = 4;
-	int[] anIntArray3086;
-	static int anInt3087;
-	int[] anIntArray3088 = new int[2];
-	static float[][] aFloatArrayArray3089 = new float[2][8];
-	static int[][] anIntArrayArray3090 = new int[2][8];
-	int[][][] anIntArrayArrayArray3091;
-	static float aFloat3092;
-	static float aFloat3093 = 100.0F;
-	static float aFloat3094 = 8.0F;
-	static float aFloat3095 = 32.703197F;
+public class Class286 implements Runnable {
+	int anInt3395 = 0;
+	InputStream anInputStream3396;
+	int anInt3397;
+	Thread aThread3398;
+	byte[] aByteArray3399;
+	int anInt3400 = 0;
+	IOException anIOException3401;
+	public static Class290 aClass290_3402;
 
-	final void method2715(RsByteBuffer class298_sub53, Class279 class279) {
-		int i = class298_sub53.readUnsignedByte();
-		((Class286) this).anIntArray3088[0] = i >> 4;
-		((Class286) this).anIntArray3088[1] = i & 0xf;
-		if (i != 0) {
-			((Class286) this).anIntArray3086[0] = class298_sub53.readUnsignedShort();
-			((Class286) this).anIntArray3086[1] = class298_sub53.readUnsignedShort();
-			int i_0_ = class298_sub53.readUnsignedByte();
-			for (int i_1_ = 0; i_1_ < 2; i_1_++) {
-				for (int i_2_ = 0; i_2_ < ((Class286) this).anIntArray3088[i_1_]; i_2_++) {
-					((Class286) this).anIntArrayArrayArray3084[i_1_][0][i_2_] = class298_sub53.readUnsignedShort();
-					((Class286) this).anIntArrayArrayArray3091[i_1_][0][i_2_] = class298_sub53.readUnsignedShort();
-				}
+	boolean method5030(int i, int i_0_) throws IOException {
+		if (i <= 0 || i >= ((Class286) this).anInt3397 * -1529176971)
+			throw new IOException();
+		synchronized (this) {
+			int i_1_;
+			if (((Class286) this).anInt3395 * 900353451 <= ((Class286) this).anInt3400 * 1971856091)
+				i_1_ = (1971856091 * ((Class286) this).anInt3400 - ((Class286) this).anInt3395 * 900353451);
+			else
+				i_1_ = (((Class286) this).anInt3397 * -1529176971 - ((Class286) this).anInt3395 * 900353451 + 1971856091 * ((Class286) this).anInt3400);
+			if (i_1_ < i) {
+				if (null != ((Class286) this).anIOException3401)
+					throw new IOException(((Class286) this).anIOException3401.toString());
+				this.notifyAll();
+				boolean bool = false;
+				return bool;
 			}
-			for (int i_3_ = 0; i_3_ < 2; i_3_++) {
-				for (int i_4_ = 0; i_4_ < ((Class286) this).anIntArray3088[i_3_]; i_4_++) {
-					if ((i_0_ & 1 << i_3_ * 4 << i_4_) != 0) {
-						((Class286) this).anIntArrayArrayArray3084[i_3_][1][i_4_] = class298_sub53.readUnsignedShort();
-						((Class286) this).anIntArrayArrayArray3091[i_3_][1][i_4_] = class298_sub53.readUnsignedShort();
-					} else {
-						((Class286) this).anIntArrayArrayArray3084[i_3_][1][i_4_] = (((Class286) this).anIntArrayArrayArray3084[i_3_][0][i_4_]);
-						((Class286) this).anIntArrayArrayArray3091[i_3_][1][i_4_] = (((Class286) this).anIntArrayArrayArray3091[i_3_][0][i_4_]);
+			boolean bool = true;
+			return bool;
+		}
+	}
+
+	public void run() {
+		for (;;) {
+			int i;
+			synchronized (this) {
+				for (;;) {
+					if (null != ((Class286) this).anIOException3401)
+						return;
+					if (((Class286) this).anInt3395 * 900353451 == 0)
+						i = (-1529176971 * ((Class286) this).anInt3397 - ((Class286) this).anInt3400 * 1971856091 - 1);
+					else if (900353451 * ((Class286) this).anInt3395 <= ((Class286) this).anInt3400 * 1971856091)
+						i = (((Class286) this).anInt3397 * -1529176971 - 1971856091 * ((Class286) this).anInt3400);
+					else
+						i = (((Class286) this).anInt3395 * 900353451 - ((Class286) this).anInt3400 * 1971856091 - 1);
+					if (i > 0)
+						break;
+					try {
+						this.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
 					}
 				}
 			}
-			if (i_0_ != 0 || (((Class286) this).anIntArray3086[1] != ((Class286) this).anIntArray3086[0]))
-				class279.method2607(class298_sub53);
-		} else {
-			int[] is = ((Class286) this).anIntArray3086;
-			((Class286) this).anIntArray3086[1] = 0;
-			is[0] = 0;
+			int i_2_;
+			try {
+				i_2_ = (((Class286) this).anInputStream3396.read(((Class286) this).aByteArray3399, ((Class286) this).anInt3400 * 1971856091, i));
+				if (-1 == i_2_)
+					throw new EOFException();
+			} catch (IOException ioexception) {
+				synchronized (this) {
+					((Class286) this).anIOException3401 = ioexception;
+					break;
+				}
+			}
+			synchronized (this) {
+				((Class286) this).anInt3400 = ((((Class286) this).anInt3400 * 1971856091 + i_2_) % (-1529176971 * ((Class286) this).anInt3397) * -1327953581);
+			}
 		}
 	}
 
-	int method2716(int i, float f) {
+	void method5031(int i) {
+		((Class286) this).anInputStream3396 = new InputStream_Sub1();
+	}
+
+	boolean method5032(int i) throws IOException {
+		if (i <= 0 || i >= ((Class286) this).anInt3397 * -1529176971)
+			throw new IOException();
+		synchronized (this) {
+			int i_3_;
+			if (((Class286) this).anInt3395 * 900353451 <= ((Class286) this).anInt3400 * 1971856091)
+				i_3_ = (1971856091 * ((Class286) this).anInt3400 - ((Class286) this).anInt3395 * 900353451);
+			else
+				i_3_ = (((Class286) this).anInt3397 * -1529176971 - ((Class286) this).anInt3395 * 900353451 + 1971856091 * ((Class286) this).anInt3400);
+			if (i_3_ < i) {
+				if (null != ((Class286) this).anIOException3401)
+					throw new IOException(((Class286) this).anIOException3401.toString());
+				this.notifyAll();
+				boolean bool = false;
+				return bool;
+			}
+			boolean bool = true;
+			return bool;
+		}
+	}
+
+	void method5033() {
+		synchronized (this) {
+			if (null == ((Class286) this).anIOException3401)
+				((Class286) this).anIOException3401 = new IOException("");
+			this.notifyAll();
+		}
+		try {
+			((Class286) this).aThread3398.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+	}
+
+	int method5034(int i) throws IOException {
+		synchronized (this) {
+			int i_4_;
+			if (900353451 * ((Class286) this).anInt3395 <= ((Class286) this).anInt3400 * 1971856091)
+				i_4_ = (1971856091 * ((Class286) this).anInt3400 - 900353451 * ((Class286) this).anInt3395);
+			else
+				i_4_ = (-1529176971 * ((Class286) this).anInt3397 - 900353451 * ((Class286) this).anInt3395 + 1971856091 * ((Class286) this).anInt3400);
+			if (((Class286) this).anIOException3401 != null)
+				throw new IOException(((Class286) this).anIOException3401.toString());
+			this.notifyAll();
+			int i_5_ = i_4_;
+			return i_5_;
+		}
+	}
+
+	int method5035(byte[] is, int i, int i_6_) throws IOException {
+		if (i_6_ < 0 || i < 0 || i + i_6_ > is.length)
+			throw new IOException();
+		synchronized (this) {
+			int i_7_;
+			if (((Class286) this).anInt3395 * 900353451 <= 1971856091 * ((Class286) this).anInt3400)
+				i_7_ = (((Class286) this).anInt3400 * 1971856091 - 900353451 * ((Class286) this).anInt3395);
+			else
+				i_7_ = (1971856091 * ((Class286) this).anInt3400 + (-1529176971 * ((Class286) this).anInt3397 - 900353451 * ((Class286) this).anInt3395));
+			if (i_6_ > i_7_)
+				i_6_ = i_7_;
+			if (i_6_ == 0 && ((Class286) this).anIOException3401 != null)
+				throw new IOException(((Class286) this).anIOException3401.toString());
+			if (900353451 * ((Class286) this).anInt3395 + i_6_ <= ((Class286) this).anInt3397 * -1529176971)
+				System.arraycopy(((Class286) this).aByteArray3399, ((Class286) this).anInt3395 * 900353451, is, i, i_6_);
+			else {
+				int i_8_ = (-1529176971 * ((Class286) this).anInt3397 - ((Class286) this).anInt3395 * 900353451);
+				System.arraycopy(((Class286) this).aByteArray3399, 900353451 * ((Class286) this).anInt3395, is, i, i_8_);
+				System.arraycopy(((Class286) this).aByteArray3399, 0, is, i + i_8_, i_6_ - i_8_);
+			}
+			((Class286) this).anInt3395 = 1110852867 * ((i_6_ + 900353451 * ((Class286) this).anInt3395) % (-1529176971 * ((Class286) this).anInt3397));
+			this.notifyAll();
+			int i_9_ = i_6_;
+			return i_9_;
+		}
+	}
+
+	public void method5036() {
+		for (;;) {
+			int i;
+			synchronized (this) {
+				for (;;) {
+					if (null != ((Class286) this).anIOException3401)
+						return;
+					if (((Class286) this).anInt3395 * 900353451 == 0)
+						i = (-1529176971 * ((Class286) this).anInt3397 - ((Class286) this).anInt3400 * 1971856091 - 1);
+					else if (900353451 * ((Class286) this).anInt3395 <= ((Class286) this).anInt3400 * 1971856091)
+						i = (((Class286) this).anInt3397 * -1529176971 - 1971856091 * ((Class286) this).anInt3400);
+					else
+						i = (((Class286) this).anInt3395 * 900353451 - ((Class286) this).anInt3400 * 1971856091 - 1);
+					if (i > 0)
+						break;
+					try {
+						this.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+				}
+			}
+			int i_10_;
+			try {
+				i_10_ = (((Class286) this).anInputStream3396.read(((Class286) this).aByteArray3399, ((Class286) this).anInt3400 * 1971856091, i));
+				if (-1 == i_10_)
+					throw new EOFException();
+			} catch (IOException ioexception) {
+				synchronized (this) {
+					((Class286) this).anIOException3401 = ioexception;
+					break;
+				}
+			}
+			synchronized (this) {
+				((Class286) this).anInt3400 = ((((Class286) this).anInt3400 * 1971856091 + i_10_) % (-1529176971 * ((Class286) this).anInt3397) * -1327953581);
+			}
+		}
+	}
+
+	public void method5037() {
+		for (;;) {
+			int i;
+			synchronized (this) {
+				for (;;) {
+					if (null != ((Class286) this).anIOException3401)
+						return;
+					if (((Class286) this).anInt3395 * 900353451 == 0)
+						i = (-1529176971 * ((Class286) this).anInt3397 - ((Class286) this).anInt3400 * 1971856091 - 1);
+					else if (900353451 * ((Class286) this).anInt3395 <= ((Class286) this).anInt3400 * 1971856091)
+						i = (((Class286) this).anInt3397 * -1529176971 - 1971856091 * ((Class286) this).anInt3400);
+					else
+						i = (((Class286) this).anInt3395 * 900353451 - ((Class286) this).anInt3400 * 1971856091 - 1);
+					if (i > 0)
+						break;
+					try {
+						this.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+				}
+			}
+			int i_11_;
+			try {
+				i_11_ = (((Class286) this).anInputStream3396.read(((Class286) this).aByteArray3399, ((Class286) this).anInt3400 * 1971856091, i));
+				if (-1 == i_11_)
+					throw new EOFException();
+			} catch (IOException ioexception) {
+				synchronized (this) {
+					((Class286) this).anIOException3401 = ioexception;
+					break;
+				}
+			}
+			synchronized (this) {
+				((Class286) this).anInt3400 = ((((Class286) this).anInt3400 * 1971856091 + i_11_) % (-1529176971 * ((Class286) this).anInt3397) * -1327953581);
+			}
+		}
+	}
+
+	boolean method5038(int i) throws IOException {
+		if (i <= 0 || i >= ((Class286) this).anInt3397 * -1529176971)
+			throw new IOException();
+		synchronized (this) {
+			int i_12_;
+			if (((Class286) this).anInt3395 * 900353451 <= ((Class286) this).anInt3400 * 1971856091)
+				i_12_ = (1971856091 * ((Class286) this).anInt3400 - ((Class286) this).anInt3395 * 900353451);
+			else
+				i_12_ = (((Class286) this).anInt3397 * -1529176971 - ((Class286) this).anInt3395 * 900353451 + 1971856091 * ((Class286) this).anInt3400);
+			if (i_12_ < i) {
+				if (null != ((Class286) this).anIOException3401)
+					throw new IOException(((Class286) this).anIOException3401.toString());
+				this.notifyAll();
+				boolean bool = false;
+				return bool;
+			}
+			boolean bool = true;
+			return bool;
+		}
+	}
+
+	Class286(InputStream inputstream, int i) {
+		((Class286) this).anInputStream3396 = inputstream;
+		((Class286) this).anInt3397 = 112808925 * (i + 1);
+		((Class286) this).aByteArray3399 = new byte[((Class286) this).anInt3397 * -1529176971];
+		((Class286) this).aThread3398 = new Thread(this);
+		((Class286) this).aThread3398.setDaemon(true);
+		((Class286) this).aThread3398.start();
+	}
+
+	boolean method5039(int i) throws IOException {
+		if (i <= 0 || i >= ((Class286) this).anInt3397 * -1529176971)
+			throw new IOException();
+		synchronized (this) {
+			int i_13_;
+			if (((Class286) this).anInt3395 * 900353451 <= ((Class286) this).anInt3400 * 1971856091)
+				i_13_ = (1971856091 * ((Class286) this).anInt3400 - ((Class286) this).anInt3395 * 900353451);
+			else
+				i_13_ = (((Class286) this).anInt3397 * -1529176971 - ((Class286) this).anInt3395 * 900353451 + 1971856091 * ((Class286) this).anInt3400);
+			if (i_13_ < i) {
+				if (null != ((Class286) this).anIOException3401)
+					throw new IOException(((Class286) this).anIOException3401.toString());
+				this.notifyAll();
+				boolean bool = false;
+				return bool;
+			}
+			boolean bool = true;
+			return bool;
+		}
+	}
+
+	int method5040() throws IOException {
+		synchronized (this) {
+			int i;
+			if (900353451 * ((Class286) this).anInt3395 <= ((Class286) this).anInt3400 * 1971856091)
+				i = (1971856091 * ((Class286) this).anInt3400 - 900353451 * ((Class286) this).anInt3395);
+			else
+				i = (-1529176971 * ((Class286) this).anInt3397 - 900353451 * ((Class286) this).anInt3395 + 1971856091 * ((Class286) this).anInt3400);
+			if (((Class286) this).anIOException3401 != null)
+				throw new IOException(((Class286) this).anIOException3401.toString());
+			this.notifyAll();
+			int i_14_ = i;
+			return i_14_;
+		}
+	}
+
+	int method5041() throws IOException {
+		synchronized (this) {
+			int i;
+			if (900353451 * ((Class286) this).anInt3395 <= ((Class286) this).anInt3400 * 1971856091)
+				i = (1971856091 * ((Class286) this).anInt3400 - 900353451 * ((Class286) this).anInt3395);
+			else
+				i = (-1529176971 * ((Class286) this).anInt3397 - 900353451 * ((Class286) this).anInt3395 + 1971856091 * ((Class286) this).anInt3400);
+			if (((Class286) this).anIOException3401 != null)
+				throw new IOException(((Class286) this).anIOException3401.toString());
+			this.notifyAll();
+			int i_15_ = i;
+			return i_15_;
+		}
+	}
+
+	void method5042(int i) {
+		synchronized (this) {
+			if (null == ((Class286) this).anIOException3401)
+				((Class286) this).anIOException3401 = new IOException("");
+			this.notifyAll();
+		}
+		try {
+			((Class286) this).aThread3398.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+	}
+
+	int method5043(byte[] is, int i, int i_16_, int i_17_) throws IOException {
+		if (i_16_ < 0 || i < 0 || i + i_16_ > is.length)
+			throw new IOException();
+		synchronized (this) {
+			int i_18_;
+			if (((Class286) this).anInt3395 * 900353451 <= 1971856091 * ((Class286) this).anInt3400)
+				i_18_ = (((Class286) this).anInt3400 * 1971856091 - 900353451 * ((Class286) this).anInt3395);
+			else
+				i_18_ = (1971856091 * ((Class286) this).anInt3400 + (-1529176971 * ((Class286) this).anInt3397 - 900353451 * ((Class286) this).anInt3395));
+			if (i_16_ > i_18_)
+				i_16_ = i_18_;
+			if (i_16_ == 0 && ((Class286) this).anIOException3401 != null)
+				throw new IOException(((Class286) this).anIOException3401.toString());
+			if (900353451 * ((Class286) this).anInt3395 + i_16_ <= ((Class286) this).anInt3397 * -1529176971)
+				System.arraycopy(((Class286) this).aByteArray3399, ((Class286) this).anInt3395 * 900353451, is, i, i_16_);
+			else {
+				int i_19_ = (-1529176971 * ((Class286) this).anInt3397 - ((Class286) this).anInt3395 * 900353451);
+				System.arraycopy(((Class286) this).aByteArray3399, 900353451 * ((Class286) this).anInt3395, is, i, i_19_);
+				System.arraycopy(((Class286) this).aByteArray3399, 0, is, i + i_19_, i_16_ - i_19_);
+			}
+			((Class286) this).anInt3395 = 1110852867 * ((i_16_ + 900353451 * ((Class286) this).anInt3395) % (-1529176971 * ((Class286) this).anInt3397));
+			this.notifyAll();
+			int i_20_ = i_16_;
+			return i_20_;
+		}
+	}
+
+	void method5044() {
+		synchronized (this) {
+			if (null == ((Class286) this).anIOException3401)
+				((Class286) this).anIOException3401 = new IOException("");
+			this.notifyAll();
+		}
+		try {
+			((Class286) this).aThread3398.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+	}
+
+	static final void method5045(Class527 class527, int i) {
+		int i_21_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class118 class118 = Class117.method1981(i_21_, (byte) 61);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
+	}
+
+	static final void method5046(Class527 class527, byte i) {
+		if (null == Class149_Sub2.aClass461_9316)
+			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+		else
+			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1977256787 * Class149_Sub2.aClass461_9316.anInt5541;
+	}
+
+	static final void method5047(Class527 class527, int i) {
+		int i_22_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub21_8222), i_22_, -1752837734);
+		client.aClass257_7353.method4547((byte) -44);
+		Class190.method3148((byte) 84);
+		client.aBool7175 = false;
+	}
+
+	static Class194 method5048(int i, byte i_23_) {
 		if (i == 0) {
-			float f_5_ = ((float) ((Class286) this).anIntArray3086[0] + (float) (((Class286) this).anIntArray3086[1] - ((Class286) this).anIntArray3086[0]) * f);
-			f_5_ *= 0.0030517578F;
-			aFloat3092 = (float) Math.pow(0.1, (double) (f_5_ / 20.0F));
-			anInt3087 = (int) (aFloat3092 * 65536.0F);
+			if (3.0 == (double) Class291_Sub1.aFloat3468)
+				return Class494.aClass194_5794;
+			if ((double) Class291_Sub1.aFloat3468 == 4.0)
+				return Class291_Sub1.aClass194_8017;
+			if (6.0 == (double) Class291_Sub1.aFloat3468)
+				return Class291_Sub1.aClass194_8023;
+			if ((double) Class291_Sub1.aFloat3468 >= 8.0)
+				return Class446.aClass194_5416;
+		} else if (1 == i) {
+			if (3.0 == (double) Class291_Sub1.aFloat3468)
+				return Class291_Sub1.aClass194_8023;
+			if (4.0 == (double) Class291_Sub1.aFloat3468)
+				return Class446.aClass194_5416;
+			if (6.0 == (double) Class291_Sub1.aFloat3468)
+				return Class114.aClass194_1243;
+			if ((double) Class291_Sub1.aFloat3468 >= 8.0)
+				return Class524.aClass194_6967;
+		} else if (i == 2) {
+			if ((double) Class291_Sub1.aFloat3468 == 3.0)
+				return Class114.aClass194_1243;
+			if ((double) Class291_Sub1.aFloat3468 == 4.0)
+				return Class524.aClass194_6967;
+			if (6.0 == (double) Class291_Sub1.aFloat3468)
+				return Class251.aClass194_3103;
+			if ((double) Class291_Sub1.aFloat3468 >= 8.0)
+				return Class521_Sub1_Sub5_Sub1.aClass194_10527;
 		}
-		if (((Class286) this).anIntArray3088[i] == 0)
-			return 0;
-		float f_6_ = method2719(i, 0, f);
-		aFloatArrayArray3089[i][0] = -2.0F * f_6_ * (float) Math.cos((double) method2717(i, 0, f));
-		aFloatArrayArray3089[i][1] = f_6_ * f_6_;
-		for (int i_7_ = 1; i_7_ < ((Class286) this).anIntArray3088[i]; i_7_++) {
-			f_6_ = method2719(i, i_7_, f);
-			float f_8_ = (-2.0F * f_6_ * (float) Math.cos((double) method2717(i, i_7_, f)));
-			float f_9_ = f_6_ * f_6_;
-			aFloatArrayArray3089[i][i_7_ * 2 + 1] = aFloatArrayArray3089[i][i_7_ * 2 - 1] * f_9_;
-			aFloatArrayArray3089[i][i_7_ * 2] = (aFloatArrayArray3089[i][i_7_ * 2 - 1] * f_8_ + aFloatArrayArray3089[i][i_7_ * 2 - 2] * f_9_);
-			for (int i_10_ = i_7_ * 2 - 1; i_10_ >= 2; i_10_--)
-				aFloatArrayArray3089[i][i_10_] += (aFloatArrayArray3089[i][i_10_ - 1] * f_8_ + aFloatArrayArray3089[i][i_10_ - 2] * f_9_);
-			aFloatArrayArray3089[i][1] += aFloatArrayArray3089[i][0] * f_8_ + f_9_;
-			aFloatArrayArray3089[i][0] += f_8_;
+		return null;
+	}
+
+	static Class282_Sub50_Sub5 method5049(int i, int i_24_) {
+		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) Class506.aClass223_5857.method3758((long) i));
+		if (class282_sub50_sub5 != null)
+			return class282_sub50_sub5;
+		byte[] is = Class378.aClass317_4526.method5607(i, 0, -1501459483);
+		if (is == null || is.length <= 1)
+			return null;
+		try {
+			class282_sub50_sub5 = Class505.method8699(is, -1364063494);
+		} catch (Exception exception) {
+			throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i).toString());
 		}
-		if (i == 0) {
-			for (int i_11_ = 0; i_11_ < ((Class286) this).anIntArray3088[0] * 2; i_11_++)
-				aFloatArrayArray3089[0][i_11_] *= aFloat3092;
-		}
-		for (int i_12_ = 0; i_12_ < ((Class286) this).anIntArray3088[i] * 2; i_12_++)
-			anIntArrayArray3090[i][i_12_] = (int) (aFloatArrayArray3089[i][i_12_] * 65536.0F);
-		return ((Class286) this).anIntArray3088[i] * 2;
-	}
-
-	float method2717(int i, int i_13_, float f) {
-		float f_14_ = ((float) ((Class286) this).anIntArrayArrayArray3084[i][0][i_13_] + f * (float) ((((Class286) this).anIntArrayArrayArray3084[i][1][i_13_]) - (((Class286) this).anIntArrayArrayArray3084[i][0][i_13_])));
-		f_14_ *= 1.2207031E-4F;
-		return method2718(f_14_);
-	}
-
-	static float method2718(float f) {
-		float f_15_ = 32.703197F * (float) Math.pow(2.0, (double) f);
-		return f_15_ * 3.1415927F / 11025.0F;
-	}
-
-	Class286() {
-		((Class286) this).anIntArrayArrayArray3084 = new int[2][2][4];
-		((Class286) this).anIntArrayArrayArray3091 = new int[2][2][4];
-		((Class286) this).anIntArray3086 = new int[2];
-	}
-
-	float method2719(int i, int i_16_, float f) {
-		float f_17_ = ((float) ((Class286) this).anIntArrayArrayArray3091[i][0][i_16_] + f * (float) ((((Class286) this).anIntArrayArrayArray3091[i][1][i_16_]) - (((Class286) this).anIntArrayArrayArray3091[i][0][i_16_])));
-		f_17_ *= 0.0015258789F;
-		return 1.0F - (float) Math.pow(10.0, (double) (-f_17_ / 20.0F));
+		Class506.aClass223_5857.method3759(class282_sub50_sub5, (long) i);
+		return class282_sub50_sub5;
 	}
 }

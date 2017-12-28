@@ -1,130 +1,220 @@
 /* Class457 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.awt.DisplayMode;
-import java.awt.Frame;
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-import java.lang.reflect.Field;
 
 public class Class457 {
-	GraphicsDevice aGraphicsDevice5666;
-	DisplayMode aDisplayMode5667;
+	Class275 aClass275_5468 = new Class275();
+	Class275 aClass275_5469;
 
-	public void method5960() {
-		try {
-			if (((Class457) this).aDisplayMode5667 != null) {
-				((Class457) this).aGraphicsDevice5666.setDisplayMode(((Class457) this).aDisplayMode5667);
-				if (!((Class457) this).aGraphicsDevice5666.getDisplayMode().equals(((Class457) this).aDisplayMode5667))
-					throw new RuntimeException("");
-				((Class457) this).aDisplayMode5667 = null;
-			}
-			method5963(null, -2144003881);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("sv.exit(").append(')').toString());
+	public Class457() {
+		((Class457) this).aClass275_5468.aClass275_3339 = ((Class457) this).aClass275_5468;
+		((Class457) this).aClass275_5468.aClass275_3340 = ((Class457) this).aClass275_5468;
+	}
+
+	public boolean method7645() {
+		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
+	}
+
+	public void method7646(Class275 class275) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -99);
+		class275.aClass275_3340 = ((Class457) this).aClass275_5468.aClass275_3340;
+		class275.aClass275_3339 = ((Class457) this).aClass275_5468;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public void method7647(Class275 class275, int i) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -87);
+		class275.aClass275_3340 = ((Class457) this).aClass275_5468;
+		class275.aClass275_3339 = ((Class457) this).aClass275_5468.aClass275_3339;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public Class275 method7648(int i) {
+		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+		if (((Class457) this).aClass275_5468 == class275)
+			return null;
+		class275.method4887((byte) -116);
+		return class275;
+	}
+
+	public void method7649(Class275 class275, int i) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -24);
+		class275.aClass275_3340 = ((Class457) this).aClass275_5468.aClass275_3340;
+		class275.aClass275_3339 = ((Class457) this).aClass275_5468;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public Class275 method7650(byte i) {
+		Class275 class275 = ((Class457) this).aClass275_5469;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public void method7651(byte i) {
+		for (;;) {
+			Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+			if (class275 == ((Class457) this).aClass275_5468)
+				break;
+			class275.method4887((byte) -18);
+		}
+		((Class457) this).aClass275_5469 = null;
+	}
+
+	public void method7652() {
+		for (;;) {
+			Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+			if (class275 == ((Class457) this).aClass275_5468)
+				break;
+			class275.method4887((byte) -71);
+		}
+		((Class457) this).aClass275_5469 = null;
+	}
+
+	public Class275 method7653() {
+		Class275 class275 = ((Class457) this).aClass275_5469;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public void method7654(Class275 class275) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -82);
+		class275.aClass275_3340 = ((Class457) this).aClass275_5468;
+		class275.aClass275_3339 = ((Class457) this).aClass275_5468.aClass275_3339;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public static void method7655(Class275 class275, Class275 class275_0_) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -32);
+		class275.aClass275_3340 = class275_0_;
+		class275.aClass275_3339 = class275_0_.aClass275_3339;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public static void method7656(Class275 class275, Class275 class275_1_) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -51);
+		class275.aClass275_3340 = class275_1_;
+		class275.aClass275_3339 = class275_1_.aClass275_3339;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public static void method7657(Class275 class275, Class275 class275_2_) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -108);
+		class275.aClass275_3340 = class275_2_;
+		class275.aClass275_3339 = class275_2_.aClass275_3339;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public static void method7658(Class275 class275, Class275 class275_3_) {
+		if (class275.aClass275_3340 != null)
+			class275.method4887((byte) -90);
+		class275.aClass275_3340 = class275_3_;
+		class275.aClass275_3339 = class275_3_.aClass275_3339;
+		class275.aClass275_3340.aClass275_3339 = class275;
+		class275.aClass275_3339.aClass275_3340 = class275;
+	}
+
+	public Class275 method7659(int i) {
+		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public Class275 method7660() {
+		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public Class275 method7661() {
+		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public Class275 method7662() {
+		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+		if (((Class457) this).aClass275_5468 == class275)
+			return null;
+		class275.method4887((byte) -87);
+		return class275;
+	}
+
+	public Class275 method7663() {
+		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public Class275 method7664() {
+		Class275 class275 = ((Class457) this).aClass275_5469;
+		if (((Class457) this).aClass275_5468 == class275) {
+			((Class457) this).aClass275_5469 = null;
+			return null;
+		}
+		((Class457) this).aClass275_5469 = class275.aClass275_3339;
+		return class275;
+	}
+
+	public boolean method7665() {
+		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
+	}
+
+	public boolean method7666(int i) {
+		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
+	}
+
+	static final void method7667(Class118 class118, Class98 class98, Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 425673003;
+		int i_4_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+		short i_5_ = (short) (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
+		short i_6_ = (short) (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 2]);
+		if (i_4_ >= 0 && i_4_ < 5) {
+			class118.method2007(i_4_, i_5_, i_6_, -1261332787);
+			Class109.method1858(class118, (byte) -93);
+			if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
+				Class311.method5513(class118.anInt1287 * -1952846363, i_4_, (byte) -1);
 		}
 	}
 
-	public int[] method5961() {
-		try {
-			DisplayMode[] displaymodes = ((Class457) this).aGraphicsDevice5666.getDisplayModes();
-			int[] is = new int[displaymodes.length << 2];
-			for (int i = 0; i < displaymodes.length; i++) {
-				is[i << 2] = displaymodes[i].getWidth();
-				is[(i << 2) + 1] = displaymodes[i].getHeight();
-				is[2 + (i << 2)] = displaymodes[i].getBitDepth();
-				is[3 + (i << 2)] = displaymodes[i].getRefreshRate();
-			}
-			return is;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("sv.listmodes(").append(')').toString());
-		}
-	}
-
-	public void method5962(Frame frame, int i, int i_0_, int i_1_, int i_2_) {
-		try {
-			((Class457) this).aDisplayMode5667 = ((Class457) this).aGraphicsDevice5666.getDisplayMode();
-			if (null == ((Class457) this).aDisplayMode5667)
-				throw new NullPointerException();
-			frame.setUndecorated(true);
-			frame.enableInputMethods(false);
-			method5963(frame, -2144003881);
-			if (0 == i_2_) {
-				int i_3_ = ((Class457) this).aDisplayMode5667.getRefreshRate();
-				DisplayMode[] displaymodes = ((Class457) this).aGraphicsDevice5666.getDisplayModes();
-				boolean bool = false;
-				for (int i_4_ = 0; i_4_ < displaymodes.length; i_4_++) {
-					if (displaymodes[i_4_].getWidth() == i && displaymodes[i_4_].getHeight() == i_0_ && displaymodes[i_4_].getBitDepth() == i_1_) {
-						int i_5_ = displaymodes[i_4_].getRefreshRate();
-						if (!bool || Math.abs(i_5_ - i_3_) < Math.abs(i_2_ - i_3_)) {
-							i_2_ = i_5_;
-							bool = true;
-						}
-					}
-				}
-				if (!bool)
-					i_2_ = i_3_;
-			}
-			((Class457) this).aGraphicsDevice5666.setDisplayMode(new DisplayMode(i, i_0_, i_1_, i_2_));
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("sv.enter(").append(')').toString());
-		}
-	}
-
-	void method5963(Frame frame, int i) {
-		try {
-			boolean bool = false;
-			try {
-				Field field = sun.awt.Win32GraphicsDevice.class.getDeclaredField("valid");
-				field.setAccessible(true);
-				boolean bool_6_ = ((Boolean) field.get(((Class457) this).aGraphicsDevice5666)).booleanValue();
-				if (bool_6_) {
-					field.set(((Class457) this).aGraphicsDevice5666, Boolean.FALSE);
-					bool = true;
-				}
-			} catch (Throwable throwable) {
-				/* empty */
-			}
-			try {
-				((Class457) this).aGraphicsDevice5666.setFullScreenWindow(frame);
-			} catch (RuntimeException object) {
-				if (bool) {
-					try {
-						Field field = sun.awt.Win32GraphicsDevice.class.getDeclaredField("valid");
-						field.set(((Class457) this).aGraphicsDevice5666, Boolean.TRUE);
-					} catch (Throwable throwable) {
-						/* empty */
-					}
-				}
-				throw object;
-			}
-			if (bool) {
-				try {
-					Field field = sun.awt.Win32GraphicsDevice.class.getDeclaredField("valid");
-					field.set(((Class457) this).aGraphicsDevice5666, Boolean.TRUE);
-				} catch (Throwable throwable) {
-					/* empty */
-				}
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("sv.a(").append(')').toString());
-		}
-	}
-
-	public Class457() throws Exception {
-		GraphicsEnvironment graphicsenvironment = GraphicsEnvironment.getLocalGraphicsEnvironment();
-		((Class457) this).aGraphicsDevice5666 = graphicsenvironment.getDefaultScreenDevice();
-		if (!((Class457) this).aGraphicsDevice5666.isFullScreenSupported()) {
-			GraphicsDevice[] graphicsdevices = graphicsenvironment.getScreenDevices();
-			GraphicsDevice[] graphicsdevices_7_ = graphicsdevices;
-			for (int i = 0; i < graphicsdevices_7_.length; i++) {
-				GraphicsDevice graphicsdevice = graphicsdevices_7_[i];
-				if (null != graphicsdevice && graphicsdevice.isFullScreenSupported()) {
-					((Class457) this).aGraphicsDevice5666 = graphicsdevice;
-					return;
-				}
-			}
-			throw new Exception();
-		}
+	static final void method7668(Class527 class527, int i) {
+		Class515.method8862((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
 	}
 }

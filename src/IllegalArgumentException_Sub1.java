@@ -3,7 +3,7 @@
  */
 
 public class IllegalArgumentException_Sub1 extends IllegalArgumentException {
-	public IllegalArgumentException_Sub1(Class298_Sub31_Sub1 class298_sub31_sub1, String string) {
+	public IllegalArgumentException_Sub1(Class282_Sub21_Sub1 class282_sub21_sub1, String string) {
 		super("");
 	}
 }

@@ -1,138 +1,238 @@
+
 /* Class300 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.util.Date;
+import jaclib.memory.Source;
 
-public class Class300 {
-	static int anInt3200 = 50;
-	static int anInt3201 = 8192;
-	static Class303 aClass303_3202;
-	static int anInt3203 = 8192;
-	static int anInt3204 = 0;
-	static int anInt3205 = 4096;
-	static int anInt3206 = 4096;
-	public static int anInt3207 = 184109511;
-	public static boolean aBoolean3208 = false;
-	public static int anInt3209 = 2;
-	public static int anInt3210 = -154813479;
-	static int anInt3211 = 16384;
-	public static Class284 aClass284_3212;
-	static int anInt3213 = 0;
-	static Class297[] aClass297Array3214 = new Class297[50];
-	static Class303 aClass303_3215;
-	static int anInt3216 = 16384;
-	public static Class518 aClass518_3217;
+import jagdx.IDirect3DDevice;
+import jagdx.IDirect3DVertexBuffer;
+import jagdx.IUnknown;
 
-	static {
-		aClass303_3202 = null;
-		aClass303_3215 = null;
+public class Class300 implements Interface4 {
+	byte aByte3547;
+	int anInt3548;
+	long aLong3549 = 0L;
+	int anInt3550;
+	Class505_Sub2_Sub2 aClass505_Sub2_Sub2_3551;
+	boolean aBool3552;
+
+	public boolean method27(int i, int i_0_, Source source) {
+		if (method31(i, i_0_))
+			return Class25.method751(IDirect3DVertexBuffer.Upload(((Class300) this).aLong3549, 0, ((Class300) this).anInt3550, ((Class300) this).aBool3552 ? 8192 : 0, source.method2()));
+		return false;
 	}
 
-	Class300() throws Throwable {
-		throw new Error();
+	public boolean method29(int i, int i_1_) {
+		((Class300) this).anInt3550 = i;
+		((Class300) this).aByte3547 = (byte) i_1_;
+		if (((Class300) this).anInt3550 > ((Class300) this).anInt3548) {
+			int i_2_ = 8;
+			int i_3_;
+			if (((Class300) this).aBool3552) {
+				i_3_ = 0;
+				i_2_ |= 0x200;
+			} else
+				i_3_ = 1;
+			if (((Class300) this).aLong3549 != 0L)
+				IUnknown.Release(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = (IDirect3DDevice.CreateVertexBuffer(((Class505_Sub2_Sub2) ((Class300) this).aClass505_Sub2_Sub2_3551).aLong10252, ((Class300) this).anInt3550, i_2_, 0, i_3_));
+			((Class300) this).anInt3548 = ((Class300) this).anInt3550;
+		}
+		return ((Class300) this).aLong3549 != 0L;
 	}
 
-	static final void method3683(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class317.method3850(class105, class119, class403, -883658200);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mm.io(").append(')').toString());
+	int method5317() {
+		return ((Class300) this).aByte3547;
+	}
+
+	public boolean method31(int i, int i_4_) {
+		((Class300) this).anInt3550 = i;
+		((Class300) this).aByte3547 = (byte) i_4_;
+		if (((Class300) this).anInt3550 > ((Class300) this).anInt3548) {
+			int i_5_ = 8;
+			int i_6_;
+			if (((Class300) this).aBool3552) {
+				i_6_ = 0;
+				i_5_ |= 0x200;
+			} else
+				i_6_ = 1;
+			if (((Class300) this).aLong3549 != 0L)
+				IUnknown.Release(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = (IDirect3DDevice.CreateVertexBuffer(((Class505_Sub2_Sub2) ((Class300) this).aClass505_Sub2_Sub2_3551).aLong10252, ((Class300) this).anInt3550, i_5_, 0, i_6_));
+			((Class300) this).anInt3548 = ((Class300) this).anInt3550;
+		}
+		return ((Class300) this).aLong3549 != 0L;
+	}
+
+	int method5318() {
+		return ((Class300) this).aByte3547;
+	}
+
+	public long method40(int i, int i_7_) {
+		return IDirect3DVertexBuffer.Lock(((Class300) this).aLong3549, i, i_7_, (((Class300) this).aBool3552 ? 8192 : 0));
+	}
+
+	public void method38() {
+		IDirect3DVertexBuffer.Unlock(((Class300) this).aLong3549);
+	}
+
+	public boolean method42(int i, int i_8_, long l) {
+		return Class25.method751(IDirect3DVertexBuffer.Upload(((Class300) this).aLong3549, i, i_8_, ((Class300) this).aBool3552 ? 8192 : 0, l));
+	}
+
+	public void method26() {
+		if (((Class300) this).aLong3549 != 0L) {
+			IUnknown.Release(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = 0L;
+		}
+		((Class300) this).anInt3548 = 0;
+		((Class300) this).anInt3550 = 0;
+		((Class300) this).aClass505_Sub2_Sub2_3551.method13885(this);
+	}
+
+	void method5319() {
+		if (((Class300) this).aLong3549 != 0L) {
+			((Class300) this).aClass505_Sub2_Sub2_3551.method15650(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = 0L;
+			((Class300) this).anInt3548 = 0;
+			((Class300) this).anInt3550 = 0;
 		}
 	}
 
-	static final void method3684(ClientScript2 class403, byte i) {
-		try {
-			int i_0_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_0_, (byte) -33);
-			Class119 class119 = Class389.aClass119Array4165[i_0_ >> 16];
-			Class422_Sub10.method5664(class105, class119, class403, -617787103);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mm.nr(").append(')').toString());
+	public void method32() {
+		if (((Class300) this).aLong3549 != 0L) {
+			IUnknown.Release(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = 0L;
+		}
+		((Class300) this).anInt3548 = 0;
+		((Class300) this).anInt3550 = 0;
+		((Class300) this).aClass505_Sub2_Sub2_3551.method13885(this);
+	}
+
+	public void finalize() {
+		method5319();
+	}
+
+	public boolean method28(int i, int i_9_) {
+		((Class300) this).anInt3550 = i;
+		((Class300) this).aByte3547 = (byte) i_9_;
+		if (((Class300) this).anInt3550 > ((Class300) this).anInt3548) {
+			int i_10_ = 8;
+			int i_11_;
+			if (((Class300) this).aBool3552) {
+				i_11_ = 0;
+				i_10_ |= 0x200;
+			} else
+				i_11_ = 1;
+			if (((Class300) this).aLong3549 != 0L)
+				IUnknown.Release(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = (IDirect3DDevice.CreateVertexBuffer(((Class505_Sub2_Sub2) ((Class300) this).aClass505_Sub2_Sub2_3551).aLong10252, ((Class300) this).anInt3550, i_10_, 0, i_11_));
+			((Class300) this).anInt3548 = ((Class300) this).anInt3550;
+		}
+		return ((Class300) this).aLong3549 != 0L;
+	}
+
+	void method5320() {
+		method5319();
+	}
+
+	public boolean method30(int i, int i_12_) {
+		((Class300) this).anInt3550 = i;
+		((Class300) this).aByte3547 = (byte) i_12_;
+		if (((Class300) this).anInt3550 > ((Class300) this).anInt3548) {
+			int i_13_ = 8;
+			int i_14_;
+			if (((Class300) this).aBool3552) {
+				i_14_ = 0;
+				i_13_ |= 0x200;
+			} else
+				i_14_ = 1;
+			if (((Class300) this).aLong3549 != 0L)
+				IUnknown.Release(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = (IDirect3DDevice.CreateVertexBuffer(((Class505_Sub2_Sub2) ((Class300) this).aClass505_Sub2_Sub2_3551).aLong10252, ((Class300) this).anInt3550, i_13_, 0, i_14_));
+			((Class300) this).anInt3548 = ((Class300) this).anInt3550;
+		}
+		return ((Class300) this).aLong3549 != 0L;
+	}
+
+	Class300(Class505_Sub2_Sub2 class505_sub2_sub2, boolean bool) {
+		((Class300) this).aClass505_Sub2_Sub2_3551 = class505_sub2_sub2;
+		((Class300) this).aBool3552 = bool;
+		((Class300) this).aClass505_Sub2_Sub2_3551.method13901(this);
+	}
+
+	void method5321() {
+		method5319();
+	}
+
+	public boolean method33(int i, int i_15_, Source source) {
+		if (method31(i, i_15_))
+			return Class25.method751(IDirect3DVertexBuffer.Upload(((Class300) this).aLong3549, 0, ((Class300) this).anInt3550, ((Class300) this).aBool3552 ? 8192 : 0, source.method2()));
+		return false;
+	}
+
+	public boolean method34(int i, int i_16_, Source source) {
+		if (method31(i, i_16_))
+			return Class25.method751(IDirect3DVertexBuffer.Upload(((Class300) this).aLong3549, 0, ((Class300) this).anInt3550, ((Class300) this).aBool3552 ? 8192 : 0, source.method2()));
+		return false;
+	}
+
+	public int method36() {
+		return ((Class300) this).anInt3550;
+	}
+
+	public int method39() {
+		return ((Class300) this).anInt3550;
+	}
+
+	public long method41(int i, int i_17_) {
+		return IDirect3DVertexBuffer.Lock(((Class300) this).aLong3549, i, i_17_, (((Class300) this).aBool3552 ? 8192 : 0));
+	}
+
+	public long method37(int i, int i_18_) {
+		return IDirect3DVertexBuffer.Lock(((Class300) this).aLong3549, i, i_18_, (((Class300) this).aBool3552 ? 8192 : 0));
+	}
+
+	public void method43() {
+		IDirect3DVertexBuffer.Unlock(((Class300) this).aLong3549);
+	}
+
+	public void method44() {
+		IDirect3DVertexBuffer.Unlock(((Class300) this).aLong3549);
+	}
+
+	public boolean method35(int i, int i_19_, long l) {
+		return Class25.method751(IDirect3DVertexBuffer.Upload(((Class300) this).aLong3549, i, i_19_, ((Class300) this).aBool3552 ? 8192 : 0, l));
+	}
+
+	int method5322() {
+		return ((Class300) this).aByte3547;
+	}
+
+	void method5323() {
+		if (((Class300) this).aLong3549 != 0L) {
+			((Class300) this).aClass505_Sub2_Sub2_3551.method15650(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = 0L;
+			((Class300) this).anInt3548 = 0;
+			((Class300) this).anInt3550 = 0;
 		}
 	}
 
-	public static String method3685(long l, int i, boolean bool, Class429 class429, short i_1_) {
-		try {
-			char c = ',';
-			char c_2_ = '.';
-			if (class429 == Class429.aClass429_6624) {
-				c = '.';
-				c_2_ = ',';
-			}
-			if (class429 == Class429.aClass429_6626)
-				c_2_ = '\u00a0';
-			boolean bool_3_ = false;
-			if (l < 0L) {
-				bool_3_ = true;
-				l = -l;
-			}
-			StringBuilder stringbuilder = new StringBuilder(26);
-			if (i > 0) {
-				for (int i_4_ = 0; i_4_ < i; i_4_++) {
-					int i_5_ = (int) l;
-					l /= 10L;
-					stringbuilder.append((char) (i_5_ + 48 - 10 * (int) l));
-				}
-				stringbuilder.append(c);
-			}
-			int i_6_ = 0;
-			for (;;) {
-				int i_7_ = (int) l;
-				l /= 10L;
-				stringbuilder.append((char) (48 + i_7_ - (int) l * 10));
-				if (l == 0L) {
-					if (i_1_ == 255) {
-						/* empty */
-					}
-					break;
-				}
-				if (bool) {
-					i_6_++;
-					if (0 == i_6_ % 3)
-						stringbuilder.append(c_2_);
-				}
-			}
-			if (bool_3_)
-				stringbuilder.append('-');
-			return stringbuilder.reverse().toString();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mm.i(").append(')').toString());
+	void method5324() {
+		if (((Class300) this).aLong3549 != 0L) {
+			((Class300) this).aClass505_Sub2_Sub2_3551.method15650(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = 0L;
+			((Class300) this).anInt3548 = 0;
+			((Class300) this).anInt3550 = 0;
 		}
 	}
 
-	static void method3686(long l) {
-		try {
-			Class490.aCalendar6075.setTime(new Date(l));
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mm.k(").append(')').toString());
-		}
-	}
-
-	public static void method3687(int i, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, String string, int i_13_) {
-		try {
-			Class302_Sub4 class302_sub4 = new Class302_Sub4();
-			((Class302_Sub4) class302_sub4).anInt7653 = i * 1025727709;
-			((Class302_Sub4) class302_sub4).anInt7652 = 862924059 * i_8_;
-			((Class302_Sub4) class302_sub4).anInt7656 = i_9_ * -1389157181;
-			((Class302_Sub4) class302_sub4).anInt7655 = (i_11_ + client.anInt8884 * 443738891) * -1019659005;
-			((Class302_Sub4) class302_sub4).anInt7654 = i_10_ * 274200991;
-			((Class302_Sub4) class302_sub4).aString7657 = string;
-			((Class302_Sub4) class302_sub4).anInt7651 = i_12_ * 334332979;
-			client.aClass442_8650.method5870(class302_sub4, 1639821588);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mm.nv(").append(')').toString());
-		}
-	}
-
-	static final void method3688(ClientScript2 class403, byte i) {
-		try {
-			int i_14_ = (((ClientScript2) class403).anIntArray5257[((ClientScript2) class403).anInt5259 * 1883543357]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class128.aClass148_6331.anIntArray6654[i_14_];
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mm.c(").append(')').toString());
+	void method5325() {
+		if (((Class300) this).aLong3549 != 0L) {
+			((Class300) this).aClass505_Sub2_Sub2_3551.method15650(((Class300) this).aLong3549);
+			((Class300) this).aLong3549 = 0L;
+			((Class300) this).anInt3548 = 0;
+			((Class300) this).anInt3550 = 0;
 		}
 	}
 }

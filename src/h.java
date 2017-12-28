@@ -2,713 +2,651 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class h extends Class387 implements Interface25 {
+public class h extends Class528 implements Interface40 {
+	Class87[] aClass87Array7139;
+	ja aja7140;
+	ba aba7141;
+	Class172[] aClass172Array7142;
 	long nativeid;
-	ja aJa6674;
-	ba aBa6675;
-	Class68[] aClass68Array6676;
-	Class85[] aClass85Array6677;
 
-	public native int dp();
-
-	h(ja var_ja) {
-		((h) this).aJa6674 = var_ja;
-		((h) this).aBa6675 = null;
-		ba(var_ja);
+	public void method11299(Class528 class528, int i, int i_0_, int i_1_, boolean bool) {
+		((h) this).aja7140.nx().method313(this, class528, i, i_0_, i_1_, bool);
 	}
 
-	void method4757() {
-		if (((ja) ((h) this).aJa6674).anInt6692 > 1) {
+	public native void aq(int i);
+
+	native void U(ja var_ja, ba var_ba, int i, int i_2_, int[] is, int[] is_3_, int[] is_4_, int[] is_5_, short[] is_6_, int i_7_, short[] is_8_, short[] is_9_, short[] is_10_, byte[] is_11_, byte[] is_12_, byte[] is_13_, byte[] is_14_, short[] is_15_, short[] is_16_, int[] is_17_, byte i_18_, short[] is_19_, int i_20_, byte[] is_21_, short[] is_22_, short[] is_23_, short[] is_24_, int[] is_25_, int[] is_26_, int[] is_27_, byte[] is_28_, byte[] is_29_, int[] is_30_, int[] is_31_, int[] is_32_,
+			int[] is_33_, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_, int[] is_40_);
+
+	native void ba(ja var_ja);
+
+	public void finalize() {
+		if (((h) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 111);
+	}
+
+	public native void ma(boolean bool);
+
+	public void method11273(Class294 class294) {
+		method11604(ja.aa, class294);
+		int i = 0;
+		if (((h) this).aClass87Array7139 != null) {
+			for (int i_41_ = 0; i_41_ < ((h) this).aClass87Array7139.length; i_41_++) {
+				Class87 class87 = ((h) this).aClass87Array7139[i_41_];
+				class87.anInt844 = ja.aa[i++] * -1929058355;
+				class87.anInt841 = ja.aa[i++] * 996785411;
+				class87.anInt847 = ja.aa[i++] * 976806429;
+				class87.anInt834 = ja.aa[i++] * -458323579;
+				class87.anInt843 = ja.aa[i++] * 543149547;
+				class87.anInt845 = ja.aa[i++] * 1054448197;
+				class87.anInt846 = ja.aa[i++] * 1348028043;
+				class87.anInt840 = ja.aa[i++] * -1652520905;
+				class87.anInt848 = ja.aa[i++] * 1757672349;
+			}
+		}
+		if (((h) this).aClass172Array7142 != null) {
+			for (int i_42_ = 0; i_42_ < ((h) this).aClass172Array7142.length; i_42_++) {
+				Class172 class172 = ((h) this).aClass172Array7142[i_42_];
+				Class172 class172_43_ = class172;
+				if (class172.aClass172_2114 != null)
+					class172_43_ = class172.aClass172_2114;
+				if (class172.aClass384_2116 == null)
+					class172.aClass384_2116 = new Class384();
+				class172.aClass384_2116.method6522(class294);
+				class172_43_.anInt2113 = ja.aa[i++] * 959663283;
+				class172_43_.anInt2117 = ja.aa[i++] * -1084180847;
+				class172_43_.anInt2118 = ja.aa[i++] * -1221574613;
+			}
+		}
+	}
+
+	native void bo(int i, int i_44_, int i_45_, int i_46_);
+
+	final void method11275(int i, int[] is, int i_47_, int i_48_, int i_49_, int i_50_, boolean bool) {
+		J(((h) this).nativeid, i, is, i_47_, i_48_, i_49_, i_50_, bool);
+	}
+
+	native void BA(h var_h_51_, h var_h_52_, int i, boolean bool, boolean bool_53_);
+
+	public native void KA(int i);
+
+	public native int m();
+
+	public void method11259() {
+		/* empty */
+	}
+
+	public native int n();
+
+	public native void bj(int i);
+
+	public native Class282_Sub50_Sub17 da(Class282_Sub50_Sub17 class282_sub50_sub17);
+
+	public native void EA(int i);
+
+	public native void ia(int i, int i_54_, int i_55_);
+
+	public native void wa();
+
+	public native void oa(int i, int i_56_, int i_57_);
+
+	public Class528 method11279(byte i, int i_58_, boolean bool) {
+		return ((h) this).aja7140.nx().method325(this, i, i_58_, bool);
+	}
+
+	void method11260() {
+		if (((ja) ((h) this).aja7140).as > 1) {
 			synchronized (this) {
-				while (aBoolean4148) {
+				while (aBool7023) {
 					try {
 						this.wait();
 					} catch (InterruptedException interruptedexception) {
 						/* empty */
 					}
 				}
-				aBoolean4148 = true;
+				aBool7023 = true;
 			}
 		}
 	}
 
-	native void ba(ja var_ja);
-
-	public native void ma(boolean bool);
-
-	public void method4786(Matrix3f class222) {
-		method4852(ja.anIntArray6681, class222);
-		int i = 0;
-		if (((h) this).aClass85Array6677 != null) {
-			for (int i_0_ = 0; i_0_ < ((h) this).aClass85Array6677.length; i_0_++) {
-				Class85 class85 = ((h) this).aClass85Array6677[i_0_];
-				class85.anInt777 = ja.anIntArray6681[i++] * -1879868075;
-				class85.anInt783 = ja.anIntArray6681[i++] * -2041556771;
-				class85.anInt779 = ja.anIntArray6681[i++] * -1434499227;
-				class85.anInt772 = ja.anIntArray6681[i++] * 1070341177;
-				class85.anInt781 = ja.anIntArray6681[i++] * 1802851857;
-				class85.anInt782 = ja.anIntArray6681[i++] * 103846281;
-				class85.anInt771 = ja.anIntArray6681[i++] * -2103324039;
-				class85.anInt784 = ja.anIntArray6681[i++] * -526039059;
-				class85.anInt785 = ja.anIntArray6681[i++] * 491030489;
-			}
-		}
-		if (((h) this).aClass68Array6676 != null) {
-			for (int i_1_ = 0; i_1_ < ((h) this).aClass68Array6676.length; i_1_++) {
-				Class68 class68 = ((h) this).aClass68Array6676[i_1_];
-				Class68 class68_2_ = class68;
-				if (class68.aClass68_672 != null)
-					class68_2_ = class68.aClass68_672;
-				if (class68.aClass233_677 == null)
-					class68.aClass233_677 = new Matrix4f();
-				class68.aClass233_677.method2145(class222);
-				class68_2_.anInt671 = ja.anIntArray6681[i++] * -1436341053;
-				class68_2_.anInt675 = ja.anIntArray6681[i++] * 449866009;
-				class68_2_.anInt676 = ja.anIntArray6681[i++] * 1336328763;
-			}
-		}
-	}
-
-	void method4852(int[] is, Matrix3f class222) {
-		((h) this).aJa6674.method5571().method280(this, is, class222);
-	}
-
-	public Class387 method4755(byte i, int i_3_, boolean bool) {
-		return ((h) this).aJa6674.method5571().method276(this, i, i_3_, bool);
-	}
-
-	native void BA(h var_h_4_, h var_h_5_, int i, boolean bool, boolean bool_6_);
-
-	public void method4784() {
-		/* empty */
-	}
-
-	public native int m();
-
-	public void method4745(Class387 class387, int i, int i_7_, int i_8_, boolean bool) {
-		((h) this).aJa6674.method5571().method285(this, class387, i, i_7_, i_8_, bool);
-	}
-
-	public native void f(int i);
-
-	public native void S(int i);
-
-	public native void t(int i);
-
-	public native void EA(int i);
-
-	public native void ia(int i, int i_9_, int i_10_);
-
-	public native void wa();
-
-	public native void by(int i);
-
-	public native void pa(int i, int i_11_, Class_xa class_xa, Class_xa class_xa_12_, int i_13_, int i_14_, int i_15_);
-
-	public native int ya();
-
-	public native int o();
+	public native int ha();
 
 	native boolean ea();
 
-	final void method4738(int i, int[] is, int i_16_, int i_17_, int i_18_, int i_19_, boolean bool) {
-		J(((h) this).nativeid, i, is, i_16_, i_17_, i_18_, i_19_, bool);
+	h(ja var_ja, ba var_ba, Class157 class157, int i, int i_59_, int i_60_, int i_61_) {
+		((h) this).aja7140 = var_ja;
+		((h) this).aba7141 = var_ba;
+		((h) this).aClass87Array7139 = class157.aClass87Array2007;
+		((h) this).aClass172Array7142 = class157.aClass172Array2008;
+		int i_62_ = (class157.aClass87Array2007 == null ? 0 : class157.aClass87Array2007.length);
+		int i_63_ = (class157.aClass172Array2008 == null ? 0 : class157.aClass172Array2008.length);
+		int i_64_ = 0;
+		int[] is = new int[i_62_ * 3 + i_63_];
+		for (int i_65_ = 0; i_65_ < i_62_; i_65_++) {
+			is[i_64_++] = ((h) this).aClass87Array7139[i_65_].anInt836 * -1572033967;
+			is[i_64_++] = ((h) this).aClass87Array7139[i_65_].anInt837 * -1955014451;
+			is[i_64_++] = ((h) this).aClass87Array7139[i_65_].anInt838 * -2135413869;
+		}
+		for (int i_66_ = 0; i_66_ < i_63_; i_66_++)
+			is[i_64_++] = ((h) this).aClass172Array7142[i_66_].anInt2119 * -1382123871;
+		int i_67_ = (class157.aClass84Array2009 == null ? 0 : class157.aClass84Array2009.length);
+		int[] is_68_ = new int[i_67_ * 8];
+		int i_69_ = 0;
+		for (int i_70_ = 0; i_70_ < i_67_; i_70_++) {
+			Class84 class84 = class157.aClass84Array2009[i_70_];
+			Class347 class347 = Class417.method7005(class84.anInt812 * -221586257, -1672643937);
+			is_68_[i_69_++] = class84.anInt809 * 2110152423;
+			is_68_[i_69_++] = class347.anInt4054 * -1720863327;
+			is_68_[i_69_++] = class347.anInt4050 * -743047207;
+			is_68_[i_69_++] = class347.anInt4055 * 117872423;
+			is_68_[i_69_++] = class347.anInt4057 * 1007428267;
+			is_68_[i_69_++] = class347.anInt4051 * -920295177;
+			is_68_[i_69_++] = class347.aBool4059 ? -1 : 0;
+		}
+		for (int i_71_ = 0; i_71_ < i_67_; i_71_++) {
+			Class84 class84 = class157.aClass84Array2009[i_71_];
+			is_68_[i_69_++] = class84.anInt811 * 1852505231;
+		}
+		U(((h) this).aja7140, ((h) this).aba7141, class157.anInt1974, class157.anInt1999, class157.anIntArray1976, class157.anIntArray2003, class157.anIntArray1978, class157.anIntArray2002, class157.aShortArray1980, class157.anInt1973, class157.aShortArray1982, class157.aShortArray1983, class157.aShortArray1984, class157.aByteArray1985, class157.aByteArray1977, class157.aByteArray1975, class157.aByteArray1988, class157.aShortArray2006, class157.aShortArray1993, class157.anIntArray1991,
+				class157.aByte1994, class157.aShortArray1981, class157.anInt1979, class157.aByteArray1995, class157.aShortArray1996, class157.aShortArray1987, class157.aShortArray1998, class157.anIntArray1989, class157.anIntArray2000, class157.anIntArray2001, class157.aByteArray2005, class157.aByteArray1990, class157.anIntArray1992, class157.anIntArray1997, class157.anIntArray2004, is, i_62_, i_63_, i, i_59_, i_60_, i_61_, is_68_);
 	}
 
-	public native void bc(int i);
+	native void J(long l, int i, int[] is, int i_72_, int i_73_, int i_74_, int i_75_, boolean bool);
 
-	native void e(int i, int[] is, int i_20_, int i_21_, int i_22_, boolean bool, int i_23_, int[] is_24_);
+	native void e(int i, int[] is, int i_76_, int i_77_, int i_78_, boolean bool, int i_79_, int[] is_80_);
 
-	public native void bs(int i, int i_25_, Class_xa class_xa, Class_xa class_xa_26_, int i_27_, int i_28_, int i_29_);
+	public native void be();
 
-	public native void bl(int i, int i_30_, int i_31_);
+	native void ka();
 
-	public void method4741(Matrix3f class222, int i, boolean bool) {
-		Matrix4f class233 = ((a) ((h) this).aJa6674.method5571()).aClass233_6673;
-		class233.method2145(class222);
-		aa(class233.aFloatArray2594, i, bool);
+	public void method11263(Class294 class294, int i, boolean bool) {
+		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+		class384.method6522(class294);
+		aa(class384.aFloatArray4667, i, bool);
 	}
 
 	native void aa(float[] fs, int i, boolean bool);
 
-	native void fq(long l, int i, int[] is, int i_32_, int i_33_, int i_34_, int i_35_, boolean bool);
+	public native int co();
 
-	public boolean method4787(int i, int i_36_, Matrix3f class222, boolean bool, int i_37_) {
-		return ((h) this).aJa6674.method5571().method284(this, i, i_36_, class222, bool);
+	public boolean method11270(int i, int i_81_, Class294 class294, boolean bool, int i_82_) {
+		return ((h) this).aja7140.nx().method335(this, i, i_81_, class294, bool);
 	}
 
-	public void method4779(Class387 class387, int i, int i_38_, int i_39_, boolean bool) {
-		((h) this).aJa6674.method5571().method285(this, class387, i, i_38_, i_39_, bool);
+	public native void PA(int i, int i_83_, int i_84_, int i_85_);
+
+	native void ft(ja var_ja);
+
+	void method11603() {
+		if (((h) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 7);
 	}
 
-	public native int N();
+	public native int cm();
 
-	public native int n();
-
-	public native void dc(int i);
-
-	public native int cu();
+	public native int ya();
 
 	public native int YA();
 
-	public native Class_na ct(Class_na class_na);
+	public native int o();
 
-	native void cw(int i, int i_40_, int i_41_, int i_42_);
+	public native int AA();
 
-	public native int ha();
-
-	public native void p(int i);
-
-	public native void Q(int i);
-
-	public native int c();
-
-	native void ka();
-
-	public native byte[] ah();
-
-	public native void X(short i, short i_43_);
-
-	native void fp(h var_h_44_, h var_h_45_, int i, boolean bool, boolean bool_46_);
+	public Class172[] method11331() {
+		return ((h) this).aClass172Array7142;
+	}
 
 	native void IA(byte i, byte[] is);
 
-	public Class68[] method4774() {
-		return ((h) this).aClass68Array6676;
-	}
+	public native void Q(int i);
 
-	public native void PA(int i, int i_47_, int i_48_, int i_49_);
-
-	public boolean method4743() {
-		return true;
-	}
-
-	public native void dz(short i, short i_50_);
-
-	void method4734() {
-		if (((ja) ((h) this).aJa6674).anInt6692 > 1) {
+	void method11261() {
+		if (((ja) ((h) this).aja7140).as > 1) {
 			synchronized (this) {
-				aBoolean4148 = false;
+				aBool7023 = false;
 				this.notifyAll();
 			}
 		}
 	}
 
-	public Class85[] method4781() {
-		return ((h) this).aClass85Array6677;
+	public void method11307(byte i, byte[] is) {
+		IA(i, is);
 	}
 
-	public Class68[] method4728() {
-		return ((h) this).aClass68Array6676;
+	public native byte[] aw();
+
+	public native void X(short i, short i_86_);
+
+	public void method11312(byte i, byte[] is) {
+		IA(i, is);
 	}
 
-	public native void ey(short i, short i_51_);
+	public native byte[] cz();
 
-	public Class85[] method4772() {
-		return ((h) this).aClass85Array6677;
+	public native void W(short i, short i_87_);
+
+	public void method11298(Class294 class294, int i, boolean bool) {
+		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+		class384.method6522(class294);
+		aa(class384.aFloatArray4667, i, bool);
 	}
 
-	native void U(ja var_ja, ba var_ba, int i, int i_52_, int[] is, int[] is_53_, int[] is_54_, int[] is_55_, short[] is_56_, int i_57_, short[] is_58_, short[] is_59_, short[] is_60_, byte[] is_61_, byte[] is_62_, byte[] is_63_, byte[] is_64_, short[] is_65_, short[] is_66_, int[] is_67_, byte i_68_, short[] is_69_, int i_70_, byte[] is_71_, short[] is_72_, short[] is_73_, short[] is_74_, int[] is_75_, int[] is_76_, int[] is_77_, byte[] is_78_, byte[] is_79_, int[] is_80_, int[] is_81_,
-			int[] is_82_, int[] is_83_, int i_84_, int i_85_, int i_86_, int i_87_, int i_88_, int i_89_, int[] is_90_);
-
-	public Class387 method4748(byte i, int i_91_, boolean bool) {
-		return ((h) this).aJa6674.method5571().method276(this, i, i_91_, bool);
-	}
-
-	public Class387 method4770(byte i, int i_92_, boolean bool) {
-		return ((h) this).aJa6674.method5571().method276(this, i, i_92_, bool);
-	}
-
-	public Class387 method4749(byte i, int i_93_, boolean bool) {
-		return ((h) this).aJa6674.method5571().method276(this, i, i_93_, bool);
-	}
+	public native int du();
 
 	public native boolean i();
 
-	public native int an();
+	public native boolean u();
 
-	public native void au(int i);
+	public Class87[] method11253() {
+		return ((h) this).aClass87Array7139;
+	}
 
-	public native void ar(int i);
+	public Class172[] method11274() {
+		return ((h) this).aClass172Array7142;
+	}
 
-	public native void ac(int i);
+	native boolean bv();
 
-	public void method4752() {
+	public Class172[] method11302() {
+		return ((h) this).aClass172Array7142;
+	}
+
+	public Class528 method11276(byte i, int i_88_, boolean bool) {
+		return ((h) this).aja7140.nx().method325(this, i, i_88_, bool);
+	}
+
+	public Class528 method11277(byte i, int i_89_, boolean bool) {
+		return ((h) this).aja7140.nx().method325(this, i, i_89_, bool);
+	}
+
+	public Class528 method11278(byte i, int i_90_, boolean bool) {
+		return ((h) this).aja7140.nx().method325(this, i, i_90_, bool);
+	}
+
+	public native int cb();
+
+	public Class528 method11296(byte i, int i_91_, boolean bool) {
+		return ((h) this).aja7140.nx().method325(this, i, i_91_, bool);
+	}
+
+	public native int ar();
+
+	public native int ae();
+
+	public void method11282(Class294 class294, Class275_Sub5 class275_sub5, int i) {
+		if (class275_sub5 == null)
+			((h) this).aja7140.nx().method314(this, class294, null, i);
+		else {
+			ja.ae[5] = 0;
+			((h) this).aja7140.nx().method314(this, class294, ja.ae, i);
+			class275_sub5.anInt7847 = ja.ae[0];
+			class275_sub5.anInt7848 = ja.ae[1];
+			class275_sub5.anInt7850 = ja.ae[2];
+			class275_sub5.anInt7846 = ja.ae[3];
+			class275_sub5.anInt7851 = ja.ae[4];
+			class275_sub5.aBool7849 = ja.ae[5] != 0;
+		}
+	}
+
+	public void method11295() {
 		/* empty */
 	}
 
-	public void method4764() {
-		/* empty */
+	public native void bi(int i);
+
+	public native void bw(int i);
+
+	public native void bx(int i);
+
+	public native void bz(int i);
+
+	public native void p(int i);
+
+	public native void bm(int i);
+
+	public native void bs(int i);
+
+	public native void bk(int i);
+
+	native void bp();
+
+	public native void bn(int i);
+
+	public native int c();
+
+	public native int cp();
+
+	public native void bq();
+
+	public native void y(boolean bool);
+
+	void method11288() {
+		if (((ja) ((h) this).aja7140).as > 1) {
+			synchronized (this) {
+				aBool7023 = false;
+				this.notifyAll();
+			}
+		}
+	}
+
+	void method11604(int[] is, Class294 class294) {
+		((h) this).aja7140.nx().method331(this, is, class294);
+	}
+
+	public native Class282_Sub50_Sub17 ga(Class282_Sub50_Sub17 class282_sub50_sub17);
+
+	native boolean bh();
+
+	final void method11268(int i, int[] is, int i_92_, int i_93_, int i_94_, int i_95_, boolean bool) {
+		J(((h) this).nativeid, i, is, i_92_, i_93_, i_94_, i_95_, bool);
+	}
+
+	public native void t(int i);
+
+	native void bl(int i, int[] is, int i_96_, int i_97_, int i_98_, boolean bool, int i_99_, int[] is_100_);
+
+	native void bb(int i, int i_101_, int i_102_, int i_103_);
+
+	public native void by();
+
+	public native void S(int i);
+
+	public void method11290(Class294 class294, int i, boolean bool) {
+		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+		class384.method6522(class294);
+		aa(class384.aFloatArray4667, i, bool);
+	}
+
+	public void method11291(Class294 class294, int i, boolean bool) {
+		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+		class384.method6522(class294);
+		aa(class384.aFloatArray4667, i, bool);
+	}
+
+	h(ja var_ja) {
+		((h) this).aja7140 = var_ja;
+		((h) this).aba7141 = null;
+		ba(var_ja);
+	}
+
+	public void method11293(Class294 class294, Class275_Sub5 class275_sub5, int i) {
+		if (class275_sub5 == null)
+			((h) this).aja7140.nx().method314(this, class294, null, i);
+		else {
+			ja.ae[5] = 0;
+			((h) this).aja7140.nx().method314(this, class294, ja.ae, i);
+			class275_sub5.anInt7847 = ja.ae[0];
+			class275_sub5.anInt7848 = ja.ae[1];
+			class275_sub5.anInt7850 = ja.ae[2];
+			class275_sub5.anInt7846 = ja.ae[3];
+			class275_sub5.anInt7851 = ja.ae[4];
+			class275_sub5.aBool7849 = ja.ae[5] != 0;
+		}
+	}
+
+	public void method11315(Class294 class294) {
+		method11604(ja.aa, class294);
+		int i = 0;
+		if (((h) this).aClass87Array7139 != null) {
+			for (int i_104_ = 0; i_104_ < ((h) this).aClass87Array7139.length; i_104_++) {
+				Class87 class87 = ((h) this).aClass87Array7139[i_104_];
+				class87.anInt844 = ja.aa[i++] * -1929058355;
+				class87.anInt841 = ja.aa[i++] * 996785411;
+				class87.anInt847 = ja.aa[i++] * 976806429;
+				class87.anInt834 = ja.aa[i++] * -458323579;
+				class87.anInt843 = ja.aa[i++] * 543149547;
+				class87.anInt845 = ja.aa[i++] * 1054448197;
+				class87.anInt846 = ja.aa[i++] * 1348028043;
+				class87.anInt840 = ja.aa[i++] * -1652520905;
+				class87.anInt848 = ja.aa[i++] * 1757672349;
+			}
+		}
+		if (((h) this).aClass172Array7142 != null) {
+			for (int i_105_ = 0; i_105_ < ((h) this).aClass172Array7142.length; i_105_++) {
+				Class172 class172 = ((h) this).aClass172Array7142[i_105_];
+				Class172 class172_106_ = class172;
+				if (class172.aClass172_2114 != null)
+					class172_106_ = class172.aClass172_2114;
+				if (class172.aClass384_2116 == null)
+					class172.aClass384_2116 = new Class384();
+				class172.aClass384_2116.method6522(class294);
+				class172_106_.anInt2113 = ja.aa[i++] * 959663283;
+				class172_106_.anInt2117 = ja.aa[i++] * -1084180847;
+				class172_106_.anInt2118 = ja.aa[i++] * -1221574613;
+			}
+		}
+	}
+
+	public native int RA();
+
+	public native int cv();
+
+	native void w(int i, int i_107_, int i_108_, int i_109_);
+
+	public native int cc();
+
+	public native int ci();
+
+	public native int ct();
+
+	public native int cu();
+
+	void method11308() {
+		if (((ja) ((h) this).aja7140).as > 1) {
+			synchronized (this) {
+				while (aBool7023) {
+					try {
+						this.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+				}
+				aBool7023 = true;
+			}
+		}
+	}
+
+	public native int cw();
+
+	public boolean method11272() {
+		return true;
+	}
+
+	public native int ca();
+
+	public Class528 method11289(byte i, int i_110_, boolean bool) {
+		return ((h) this).aja7140.nx().method325(this, i, i_110_, bool);
+	}
+
+	public boolean method11286(int i, int i_111_, Class294 class294, boolean bool, int i_112_) {
+		return ((h) this).aja7140.nx().method335(this, i, i_111_, class294, bool);
+	}
+
+	public native int cd();
+
+	public native void f(int i);
+
+	public native void cr(int i);
+
+	public native void bc(int i, int i_113_, Class390 class390, Class390 class390_114_, int i_115_, int i_116_, int i_117_);
+
+	public native int ch();
+
+	public native void cq(short i, short i_118_);
+
+	public void method11269(Class528 class528, int i, int i_119_, int i_120_, boolean bool) {
+		((h) this).aja7140.nx().method313(this, class528, i, i_119_, i_120_, bool);
+	}
+
+	public native void cy(int i, int i_121_, int i_122_, int i_123_);
+
+	public Class87[] method11300() {
+		return ((h) this).aClass87Array7139;
 	}
 
 	public native void bf(int i);
 
-	public native void be(int i);
-
-	native void cl(int i, int[] is, int i_94_, int i_95_, int i_96_, boolean bool, int i_97_, int[] is_98_);
-
-	public native void bm(int i);
-
-	public native void W(short i, short i_99_);
-
-	public native void bx(int i);
-
-	public native void bo(int i);
-
-	public native void df(short i, short i_100_);
-
-	public void method4740(Matrix3f class222, Class302_Sub1 class302_sub1, int i) {
-		if (class302_sub1 == null)
-			((h) this).aJa6674.method5571().method279(this, class222, null, i);
-		else {
-			ja.anIntArray6704[5] = 0;
-			((h) this).aJa6674.method5571().method279(this, class222, ja.anIntArray6704, i);
-			class302_sub1.anInt7641 = ja.anIntArray6704[0];
-			class302_sub1.anInt7642 = ja.anIntArray6704[1];
-			class302_sub1.anInt7643 = ja.anIntArray6704[2];
-			class302_sub1.anInt7640 = ja.anIntArray6704[3];
-			class302_sub1.anInt7645 = ja.anIntArray6704[4];
-			class302_sub1.aBoolean7644 = ja.anIntArray6704[5] != 0;
-		}
+	public Class172[] method11283() {
+		return ((h) this).aClass172Array7142;
 	}
 
-	public native void bw(int i, int i_101_, int i_102_);
+	public boolean method11303() {
+		return true;
+	}
 
-	public native void bk(int i, int i_103_, int i_104_);
+	public native void dl(int i);
 
-	public native void bq(int i, int i_105_, int i_106_);
+	public native boolean dh();
 
-	public native void bg(int i, int i_107_, Class_xa class_xa, Class_xa class_xa_108_, int i_109_, int i_110_, int i_111_);
+	void method11605() {
+		if (((h) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 103);
+	}
 
-	public native int RA();
+	public native int ck();
 
-	public native void bp(int i, int i_112_, Class_xa class_xa, Class_xa class_xa_113_, int i_114_, int i_115_, int i_116_);
+	public native int N();
 
-	void method4754() {
-		if (((ja) ((h) this).aJa6674).anInt6692 > 1) {
+	public native void dk(int i, int i_124_, int i_125_);
+
+	public native int dy();
+
+	public native int dm();
+
+	public native int dp();
+
+	public native void ep(int i, int i_126_, int i_127_);
+
+	public native int dg();
+
+	public native int dd();
+
+	public native void di(short i, short i_128_);
+
+	public native void df(short i, short i_129_);
+
+	public native boolean dv();
+
+	public native int Z();
+
+	void method11301() {
+		if (((ja) ((h) this).aja7140).as > 1) {
 			synchronized (this) {
-				while (aBoolean4148) {
+				while (aBool7023) {
 					try {
 						this.wait();
 					} catch (InterruptedException interruptedexception) {
 						/* empty */
 					}
 				}
-				aBoolean4148 = true;
+				aBool7023 = true;
 			}
 		}
 	}
 
-	public void method4747(Class387 class387, int i, int i_117_, int i_118_, boolean bool) {
-		((h) this).aJa6674.method5571().method285(this, class387, i, i_117_, i_118_, bool);
+	public boolean method11309(int i, int i_130_, Class294 class294, boolean bool, int i_131_) {
+		return ((h) this).aja7140.nx().method335(this, i, i_130_, class294, bool);
 	}
 
-	public void method4739(Matrix3f class222, Class302_Sub1 class302_sub1, int i) {
-		if (class302_sub1 == null)
-			((h) this).aJa6674.method5571().method279(this, class222, null, i);
-		else {
-			ja.anIntArray6704[5] = 0;
-			((h) this).aJa6674.method5571().method279(this, class222, ja.anIntArray6704, i);
-			class302_sub1.anInt7641 = ja.anIntArray6704[0];
-			class302_sub1.anInt7642 = ja.anIntArray6704[1];
-			class302_sub1.anInt7643 = ja.anIntArray6704[2];
-			class302_sub1.anInt7640 = ja.anIntArray6704[3];
-			class302_sub1.anInt7645 = ja.anIntArray6704[4];
-			class302_sub1.aBoolean7644 = ja.anIntArray6704[5] != 0;
-		}
-	}
-
-	void method4758() {
-		if (((ja) ((h) this).aJa6674).anInt6692 > 1) {
+	void method11285() {
+		if (((ja) ((h) this).aja7140).as > 1) {
 			synchronized (this) {
-				aBoolean4148 = false;
+				aBool7023 = false;
 				this.notifyAll();
 			}
 		}
 	}
 
-	native boolean bt();
+	public native Class282_Sub50_Sub17 dn(Class282_Sub50_Sub17 class282_sub50_sub17);
 
-	native boolean bj();
+	public native void pa(int i, int i_132_, Class390 class390, Class390 class390_133_, int i_134_, int i_135_, int i_136_);
 
-	native void br();
+	public native Class282_Sub50_Sub17 dw(Class282_Sub50_Sub17 class282_sub50_sub17);
 
-	native void bz();
+	public native Class282_Sub50_Sub17 dr(Class282_Sub50_Sub17 class282_sub50_sub17);
 
-	native void cm();
+	public native void ce(int i);
 
-	native void cd();
+	public native void x(boolean bool);
 
-	final void method4760(int i, int[] is, int i_119_, int i_120_, int i_121_, int i_122_, boolean bool) {
-		J(((h) this).nativeid, i, is, i_119_, i_120_, i_121_, i_122_, bool);
-	}
+	native void fe(ja var_ja, ba var_ba, int i, int i_137_, int[] is, int[] is_138_, int[] is_139_, int[] is_140_, short[] is_141_, int i_142_, short[] is_143_, short[] is_144_, short[] is_145_, byte[] is_146_, byte[] is_147_, byte[] is_148_, byte[] is_149_, short[] is_150_, short[] is_151_, int[] is_152_, byte i_153_, short[] is_154_, int i_155_, byte[] is_156_, short[] is_157_, short[] is_158_, short[] is_159_, int[] is_160_, int[] is_161_, int[] is_162_, byte[] is_163_, byte[] is_164_,
+			int[] is_165_, int[] is_166_, int[] is_167_, int[] is_168_, int i_169_, int i_170_, int i_171_, int i_172_, int i_173_, int i_174_, int[] is_175_);
 
-	native void fe(ja var_ja);
+	native void fk(ja var_ja, ba var_ba, int i, int i_176_, int[] is, int[] is_177_, int[] is_178_, int[] is_179_, short[] is_180_, int i_181_, short[] is_182_, short[] is_183_, short[] is_184_, byte[] is_185_, byte[] is_186_, byte[] is_187_, byte[] is_188_, short[] is_189_, short[] is_190_, int[] is_191_, byte i_192_, short[] is_193_, int i_194_, byte[] is_195_, short[] is_196_, short[] is_197_, short[] is_198_, int[] is_199_, int[] is_200_, int[] is_201_, byte[] is_202_, byte[] is_203_,
+			int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, int i_208_, int i_209_, int i_210_, int i_211_, int i_212_, int i_213_, int[] is_214_);
 
-	void method4756() {
-		if (((ja) ((h) this).aJa6674).anInt6692 > 1) {
-			synchronized (this) {
-				while (aBoolean4148) {
-					try {
-						this.wait();
-					} catch (InterruptedException interruptedexception) {
-						/* empty */
-					}
-				}
-				aBoolean4148 = true;
+	native void fh(ja var_ja);
+
+	public void method11294(Class294 class294) {
+		method11604(ja.aa, class294);
+		int i = 0;
+		if (((h) this).aClass87Array7139 != null) {
+			for (int i_215_ = 0; i_215_ < ((h) this).aClass87Array7139.length; i_215_++) {
+				Class87 class87 = ((h) this).aClass87Array7139[i_215_];
+				class87.anInt844 = ja.aa[i++] * -1929058355;
+				class87.anInt841 = ja.aa[i++] * 996785411;
+				class87.anInt847 = ja.aa[i++] * 976806429;
+				class87.anInt834 = ja.aa[i++] * -458323579;
+				class87.anInt843 = ja.aa[i++] * 543149547;
+				class87.anInt845 = ja.aa[i++] * 1054448197;
+				class87.anInt846 = ja.aa[i++] * 1348028043;
+				class87.anInt840 = ja.aa[i++] * -1652520905;
+				class87.anInt848 = ja.aa[i++] * 1757672349;
+			}
+		}
+		if (((h) this).aClass172Array7142 != null) {
+			for (int i_216_ = 0; i_216_ < ((h) this).aClass172Array7142.length; i_216_++) {
+				Class172 class172 = ((h) this).aClass172Array7142[i_216_];
+				Class172 class172_217_ = class172;
+				if (class172.aClass172_2114 != null)
+					class172_217_ = class172.aClass172_2114;
+				if (class172.aClass384_2116 == null)
+					class172.aClass384_2116 = new Class384();
+				class172.aClass384_2116.method6522(class294);
+				class172_217_.anInt2113 = ja.aa[i++] * 959663283;
+				class172_217_.anInt2117 = ja.aa[i++] * -1084180847;
+				class172_217_.anInt2118 = ja.aa[i++] * -1221574613;
 			}
 		}
 	}
 
-	native void gc(float[] fs, int i, boolean bool);
-
-	native void co(int i, int[] is, int i_123_, int i_124_, int i_125_, boolean bool, int i_126_, int[] is_127_);
-
-	native void J(long l, int i, int[] is, int i_128_, int i_129_, int i_130_, int i_131_, boolean bool);
-
-	native void cv(int i, int i_132_, int i_133_, int i_134_);
-
-	public void method4776(Matrix3f class222, int i, boolean bool) {
-		Matrix4f class233 = ((a) ((h) this).aJa6674.method5571()).aClass233_6673;
-		class233.method2145(class222);
-		aa(class233.aFloatArray2594, i, bool);
+	void method11606(int[] is, Class294 class294) {
+		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	public void method4762(Matrix3f class222, int i, boolean bool) {
-		Matrix4f class233 = ((a) ((h) this).aJa6674.method5571()).aClass233_6673;
-		class233.method2145(class222);
-		aa(class233.aFloatArray2594, i, bool);
+	void method11607(int[] is, Class294 class294) {
+		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	public void method4759(Matrix3f class222, Class302_Sub1 class302_sub1, int i) {
-		if (class302_sub1 == null)
-			((h) this).aJa6674.method5571().method279(this, class222, null, i);
-		else {
-			ja.anIntArray6704[5] = 0;
-			((h) this).aJa6674.method5571().method279(this, class222, ja.anIntArray6704, i);
-			class302_sub1.anInt7641 = ja.anIntArray6704[0];
-			class302_sub1.anInt7642 = ja.anIntArray6704[1];
-			class302_sub1.anInt7643 = ja.anIntArray6704[2];
-			class302_sub1.anInt7640 = ja.anIntArray6704[3];
-			class302_sub1.anInt7645 = ja.anIntArray6704[4];
-			class302_sub1.aBoolean7644 = ja.anIntArray6704[5] != 0;
-		}
+	void method11608(int[] is, Class294 class294) {
+		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	native void gn(byte i, byte[] is);
-
-	h(ja var_ja, ba var_ba, Model model, int i, int i_135_, int i_136_, int i_137_) {
-		((h) this).aJa6674 = var_ja;
-		((h) this).aBa6675 = var_ba;
-		((h) this).aClass85Array6677 = model.aClass85Array647;
-		((h) this).aClass68Array6676 = model.aClass68Array613;
-		int i_138_ = (model.aClass85Array647 == null ? 0 : model.aClass85Array647.length);
-		int i_139_ = (model.aClass68Array613 == null ? 0 : model.aClass68Array613.length);
-		int i_140_ = 0;
-		int[] is = new int[i_138_ * 3 + i_139_];
-		for (int i_141_ = 0; i_141_ < i_138_; i_141_++) {
-			is[i_140_++] = ((h) this).aClass85Array6677[i_141_].anInt773 * -710317103;
-			is[i_140_++] = ((h) this).aClass85Array6677[i_141_].anInt774 * 1705862021;
-			is[i_140_++] = ((h) this).aClass85Array6677[i_141_].anInt775 * 1636170731;
-		}
-		for (int i_142_ = 0; i_142_ < i_139_; i_142_++)
-			is[i_140_++] = ((h) this).aClass68Array6676[i_142_].anInt674 * -180596249;
-		int i_143_ = (model.aClass84Array649 == null ? 0 : model.aClass84Array649.length);
-		int[] is_144_ = new int[i_143_ * 8];
-		int i_145_ = 0;
-		for (int i_146_ = 0; i_146_ < i_143_; i_146_++) {
-			Class84 class84 = model.aClass84Array649[i_146_];
-			Class173 class173 = Linkable.method2844(class84.anInt768 * 1834782277, -67897652);
-			is_144_[i_145_++] = class84.anInt767 * 1512514121;
-			is_144_[i_145_++] = class173.anInt1755 * 1951943953;
-			is_144_[i_145_++] = class173.anInt1753 * 893949695;
-			is_144_[i_145_++] = class173.anInt1751 * 39181267;
-			is_144_[i_145_++] = class173.anInt1752 * -310074719;
-			is_144_[i_145_++] = class173.anInt1754 * 1092922159;
-			is_144_[i_145_++] = class173.aBoolean1757 ? -1 : 0;
-		}
-		for (int i_147_ = 0; i_147_ < i_143_; i_147_++) {
-			Class84 class84 = model.aClass84Array649[i_147_];
-			is_144_[i_145_++] = class84.anInt766 * -1606786303;
-		}
-		U(((h) this).aJa6674, ((h) this).aBa6675, model.vertices, model.anInt626, model.anIntArray616, model.anIntArray642, model.anIntArray618, model.vertexSkinTypes, model.aShortArray620, model.triangles, model.aShortArray644, model.aShortArray646, model.aShortArray624, model.face_fill_attributes, model.priorities, model.aByteArray627, model.aByteArray635, model.aShortArray629, model.aShortArray617, model.alpha_channel, model.priority, model.aShortArray615,
-				model.texturedTriangles, model.tex_fill_attr, model.tex_point_mapx, model.tex_point_mapy, model.tex_point_mapz, model.particles_zlifepsan, model.particles_zdir, model.particles_xdir, model.particles_xlifespan, model.aByteArray628, model.anIntArray637, model.tex_primary_clr, model.tex_secondary_clr, is, i_138_, i_139_, i, i_135_, i_136_, i_137_, is_144_);
+	void method11609(int[] is, Class294 class294) {
+		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	public boolean method4746(int i, int i_148_, Matrix3f class222, boolean bool, int i_149_) {
-		return ((h) this).aJa6674.method5571().method284(this, i, i_148_, class222, bool);
-	}
+	native void fg(h var_h_218_, h var_h_219_, int i, boolean bool, boolean bool_220_);
 
-	public boolean method4778() {
-		return true;
-	}
+	native void fz(long l, int i, int[] is, int i_221_, int i_222_, int i_223_, int i_224_, boolean bool);
 
-	public native void KA(int i);
+	native void fp(long l, int i, int[] is, int i_225_, int i_226_, int i_227_, int i_228_, boolean bool);
 
-	public native int ca();
+	native void fb(long l, int i, int[] is, int i_229_, int i_230_, int i_231_, int i_232_, boolean bool);
 
-	public native int ci();
-
-	public native int ce();
-
-	public native int cq();
-
-	public native int cr();
-
-	native void w(int i, int i_150_, int i_151_, int i_152_);
-
-	public native int cp();
-
-	public native void bb(int i);
-
-	public native int cf();
-
-	public native int dh();
-
-	final void method4761(int i, int[] is, int i_153_, int i_154_, int i_155_, int i_156_, boolean bool) {
-		J(((h) this).nativeid, i, is, i_153_, i_154_, i_155_, i_156_, bool);
-	}
-
-	native void fk(ja var_ja);
-
-	public Class85[] method4771() {
-		return ((h) this).aClass85Array6677;
-	}
-
-	public native int ds();
-
-	public native Class_na cc(Class_na class_na);
-
-	public native void dd(int i);
-
-	public native void dx(int i);
-
-	native void fx(long l, int i, int[] is, int i_157_, int i_158_, int i_159_, int i_160_, boolean bool);
-
-	public native int dk();
-
-	public native int db();
-
-	public native int dn();
-
-	public native void oa(int i, int i_161_, int i_162_);
-
-	public void method4768(byte i, byte[] is) {
-		IA(i, is);
-	}
-
-	public void method4769(byte i, byte[] is) {
-		IA(i, is);
-	}
-
-	public native void du(short i, short i_163_);
-
-	public boolean method4788() {
-		return true;
-	}
-
-	public native void di(short i, short i_164_);
-
-	public void method4742(byte i, byte[] is) {
-		IA(i, is);
-	}
-
-	public Class68[] method4753() {
-		return ((h) this).aClass68Array6676;
-	}
-
-	public native void dt(int i, int i_165_, int i_166_, int i_167_);
-
-	public native Class_na ga(Class_na class_na);
-
-	void method4733() {
-		if (((ja) ((h) this).aJa6674).anInt6692 > 1) {
-			synchronized (this) {
-				while (aBoolean4148) {
-					try {
-						this.wait();
-					} catch (InterruptedException interruptedexception) {
-						/* empty */
-					}
-				}
-				aBoolean4148 = true;
-			}
-		}
-	}
-
-	public native void dv(short i, short i_168_);
-
-	public native int AA();
-
-	public Class68[] method4773() {
-		return ((h) this).aClass68Array6676;
-	}
-
-	public native byte[] method_do();
-
-	public native void dj(int i, int i_169_, int i_170_, int i_171_);
-
-	public native int dl();
-
-	public native void bu(int i, int i_172_, int i_173_);
-
-	public boolean method4777() {
-		return true;
-	}
-
-	public Class68[] method4775() {
-		return ((h) this).aClass68Array6676;
-	}
-
-	public native boolean ev();
-
-	public native boolean eg();
-
-	public native boolean ex();
-
-	public native boolean ek();
-
-	public native int cb();
-
-	public native void em();
-
-	public native int ec();
-
-	public native void eb(short i, short i_174_);
+	native void fv(long l, int i, int[] is, int i_233_, int i_234_, int i_235_, int i_236_, boolean bool);
 
 	public native int dq();
 
-	public void method4751(Matrix3f class222) {
-		method4852(ja.anIntArray6681, class222);
-		int i = 0;
-		if (((h) this).aClass85Array6677 != null) {
-			for (int i_175_ = 0; i_175_ < ((h) this).aClass85Array6677.length; i_175_++) {
-				Class85 class85 = ((h) this).aClass85Array6677[i_175_];
-				class85.anInt777 = ja.anIntArray6681[i++] * -1879868075;
-				class85.anInt783 = ja.anIntArray6681[i++] * -2041556771;
-				class85.anInt779 = ja.anIntArray6681[i++] * -1434499227;
-				class85.anInt772 = ja.anIntArray6681[i++] * 1070341177;
-				class85.anInt781 = ja.anIntArray6681[i++] * 1802851857;
-				class85.anInt782 = ja.anIntArray6681[i++] * 103846281;
-				class85.anInt771 = ja.anIntArray6681[i++] * -2103324039;
-				class85.anInt784 = ja.anIntArray6681[i++] * -526039059;
-				class85.anInt785 = ja.anIntArray6681[i++] * 491030489;
-			}
-		}
-		if (((h) this).aClass68Array6676 != null) {
-			for (int i_176_ = 0; i_176_ < ((h) this).aClass68Array6676.length; i_176_++) {
-				Class68 class68 = ((h) this).aClass68Array6676[i_176_];
-				Class68 class68_177_ = class68;
-				if (class68.aClass68_672 != null)
-					class68_177_ = class68.aClass68_672;
-				if (class68.aClass233_677 == null)
-					class68.aClass233_677 = new Matrix4f();
-				class68.aClass233_677.method2145(class222);
-				class68_177_.anInt671 = ja.anIntArray6681[i++] * -1436341053;
-				class68_177_.anInt675 = ja.anIntArray6681[i++] * 449866009;
-				class68_177_.anInt676 = ja.anIntArray6681[i++] * 1336328763;
-			}
-		}
+	native void ff(byte i, byte[] is);
+
+	native void fr(byte i, byte[] is);
+
+	native void fw(byte i, byte[] is);
+
+	public void method11292(Class294 class294, int i, boolean bool) {
+		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+		class384.method6522(class294);
+		aa(class384.aFloatArray4667, i, bool);
 	}
-
-	public void method4782(Matrix3f class222) {
-		method4852(ja.anIntArray6681, class222);
-		int i = 0;
-		if (((h) this).aClass85Array6677 != null) {
-			for (int i_178_ = 0; i_178_ < ((h) this).aClass85Array6677.length; i_178_++) {
-				Class85 class85 = ((h) this).aClass85Array6677[i_178_];
-				class85.anInt777 = ja.anIntArray6681[i++] * -1879868075;
-				class85.anInt783 = ja.anIntArray6681[i++] * -2041556771;
-				class85.anInt779 = ja.anIntArray6681[i++] * -1434499227;
-				class85.anInt772 = ja.anIntArray6681[i++] * 1070341177;
-				class85.anInt781 = ja.anIntArray6681[i++] * 1802851857;
-				class85.anInt782 = ja.anIntArray6681[i++] * 103846281;
-				class85.anInt771 = ja.anIntArray6681[i++] * -2103324039;
-				class85.anInt784 = ja.anIntArray6681[i++] * -526039059;
-				class85.anInt785 = ja.anIntArray6681[i++] * 491030489;
-			}
-		}
-		if (((h) this).aClass68Array6676 != null) {
-			for (int i_179_ = 0; i_179_ < ((h) this).aClass68Array6676.length; i_179_++) {
-				Class68 class68 = ((h) this).aClass68Array6676[i_179_];
-				Class68 class68_180_ = class68;
-				if (class68.aClass68_672 != null)
-					class68_180_ = class68.aClass68_672;
-				if (class68.aClass233_677 == null)
-					class68.aClass233_677 = new Matrix4f();
-				class68.aClass233_677.method2145(class222);
-				class68_180_.anInt671 = ja.anIntArray6681[i++] * -1436341053;
-				class68_180_.anInt675 = ja.anIntArray6681[i++] * 449866009;
-				class68_180_.anInt676 = ja.anIntArray6681[i++] * 1336328763;
-			}
-		}
-	}
-
-	public void method4783(Matrix3f class222) {
-		method4852(ja.anIntArray6681, class222);
-		int i = 0;
-		if (((h) this).aClass85Array6677 != null) {
-			for (int i_181_ = 0; i_181_ < ((h) this).aClass85Array6677.length; i_181_++) {
-				Class85 class85 = ((h) this).aClass85Array6677[i_181_];
-				class85.anInt777 = ja.anIntArray6681[i++] * -1879868075;
-				class85.anInt783 = ja.anIntArray6681[i++] * -2041556771;
-				class85.anInt779 = ja.anIntArray6681[i++] * -1434499227;
-				class85.anInt772 = ja.anIntArray6681[i++] * 1070341177;
-				class85.anInt781 = ja.anIntArray6681[i++] * 1802851857;
-				class85.anInt782 = ja.anIntArray6681[i++] * 103846281;
-				class85.anInt771 = ja.anIntArray6681[i++] * -2103324039;
-				class85.anInt784 = ja.anIntArray6681[i++] * -526039059;
-				class85.anInt785 = ja.anIntArray6681[i++] * 491030489;
-			}
-		}
-		if (((h) this).aClass68Array6676 != null) {
-			for (int i_182_ = 0; i_182_ < ((h) this).aClass68Array6676.length; i_182_++) {
-				Class68 class68 = ((h) this).aClass68Array6676[i_182_];
-				Class68 class68_183_ = class68;
-				if (class68.aClass68_672 != null)
-					class68_183_ = class68.aClass68_672;
-				if (class68.aClass233_677 == null)
-					class68.aClass233_677 = new Matrix4f();
-				class68.aClass233_677.method2145(class222);
-				class68_183_.anInt671 = ja.anIntArray6681[i++] * -1436341053;
-				class68_183_.anInt675 = ja.anIntArray6681[i++] * 449866009;
-				class68_183_.anInt676 = ja.anIntArray6681[i++] * 1336328763;
-			}
-		}
-	}
-
-	native void cj(int i, int[] is, int i_184_, int i_185_, int i_186_, boolean bool, int i_187_, int[] is_188_);
-
-	native void fc(ja var_ja, ba var_ba, int i, int i_189_, int[] is, int[] is_190_, int[] is_191_, int[] is_192_, short[] is_193_, int i_194_, short[] is_195_, short[] is_196_, short[] is_197_, byte[] is_198_, byte[] is_199_, byte[] is_200_, byte[] is_201_, short[] is_202_, short[] is_203_, int[] is_204_, byte i_205_, short[] is_206_, int i_207_, byte[] is_208_, short[] is_209_, short[] is_210_, short[] is_211_, int[] is_212_, int[] is_213_, int[] is_214_, byte[] is_215_, byte[] is_216_,
-			int[] is_217_, int[] is_218_, int[] is_219_, int[] is_220_, int i_221_, int i_222_, int i_223_, int i_224_, int i_225_, int i_226_, int[] is_227_);
-
-	native void fw(ja var_ja);
-
-	public native void z(boolean bool);
-
-	public native boolean u();
-
-	public native void dr(int i, int i_228_, int i_229_, int i_230_);
-
-	public native int Z();
-
-	public boolean method4763(int i, int i_231_, Matrix3f class222, boolean bool, int i_232_) {
-		return ((h) this).aJa6674.method5571().method284(this, i, i_231_, class222, bool);
-	}
-
-	native void gt(float[] fs, int i, boolean bool);
-
-	public native int dg();
-
-	native void gl(float[] fs, int i, boolean bool);
-
-	native void gq(float[] fs, int i, boolean bool);
-
-	native void gp(byte i, byte[] is);
-
-	public Class387 method4750(byte i, int i_233_, boolean bool) {
-		return ((h) this).aJa6674.method5571().method276(this, i, i_233_, bool);
-	}
-
-	native void ge(byte i, byte[] is);
 }

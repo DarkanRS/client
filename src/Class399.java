@@ -3,23 +3,27 @@
  */
 
 public class Class399 {
-	static Class354 aClass354_5218 = new Class354(128);
-	public static Class243 aClass243_5219;
-	public static Class243 aClass243_5220;
+	public int anInt4814;
+	public int anInt4815;
+	public int anInt4816;
 
-	Class399() throws Throwable {
-		throw new Error();
+	Class399(int i, int i_0_, int i_1_) {
+		anInt4814 = 2016254431 * i;
+		anInt4815 = 1143743709 * i_0_;
+		anInt4816 = -1834811437 * i_1_;
 	}
 
-	public static void method4926(int i, int i_0_) {
-		try {
-			if (8 == client.anInt8752 * -1233866115) {
-				Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.aClass198_2021, client.lobbyConnection.aClass449_330, (byte) 103);
-				class298_sub36.aClass298_Sub53_Sub2_7396.writeByte(i);
-				client.lobbyConnection.method390(class298_sub36, (byte) -112);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qo.k(").append(')').toString());
-		}
+	static int decodeSkip(RsBitsBuffer buffer, int i) {
+		int needsRemove = buffer.readBits(2, (byte) 28);
+		int i_3_;
+		if (needsRemove == 0)
+			i_3_ = 0;
+		else if (1 == needsRemove)
+			i_3_ = buffer.readBits(5, (byte) 14);
+		else if (needsRemove == 2)
+			i_3_ = buffer.readBits(8, (byte) 13);
+		else
+			i_3_ = buffer.readBits(11, (byte) 34);
+		return i_3_;
 	}
 }

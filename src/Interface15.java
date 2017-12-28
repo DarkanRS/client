@@ -3,11 +3,25 @@
  */
 
 public interface Interface15 {
-	public Object method212(int[] is, int i, int i_0_, int i_1_, int i_2_, boolean bool);
+	public long method2();
 
-	public Object method213(int[] is, int i, int i_3_, int i_4_, int i_5_, boolean bool);
+	public void method110(int i, byte[] is, int i_0_);
 
-	public Object method214(int[] is, int i, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_);
+	public void method111(int i, byte[] is, int i_1_);
 
-	public Object method215(int[] is, int i, int i_10_, int i_11_, int i_12_, boolean bool);
+	public int method74();
+
+	public int method1();
+
+	public long method112();
+
+	public long method113();
+
+	public void method114(int i, byte[] is, int i_2_);
+
+	public void method107(int i, byte[] is, int i_3_);
+
+	public void method108(int i, byte[] is, int i_4_);
+
+	public void method115(int i, byte[] is, int i_5_);
 }

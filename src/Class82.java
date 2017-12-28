@@ -2,117 +2,100 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class82 {
-	public int anInt761;
+final class Class82 implements Interface11 {
+	public static Class75[] aClass75Array804;
 
-	public abstract void method866(int i);
-
-	void method867(int i) {
-		try {
-			/* empty */
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.b(").append(')').toString());
-		}
+	public long method78(String string) {
+		return Class254.method4379(string, 1048776146);
 	}
 
-	Class82(RsByteBuffer class298_sub53) {
-		anInt761 = class298_sub53.readUnsignedShort() * 349693613;
+	public long method79(String string, int i) {
+		return Class254.method4379(string, 1048776146);
 	}
 
-	public abstract void method868();
-
-	public abstract void method869();
-
-	boolean method870(int i) {
-		try {
-			return true;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.p(").append(')').toString());
-		}
+	public long method81(String string) {
+		return Class254.method4379(string, 1048776146);
 	}
 
-	static void method871(GraphicsToolkit class_ra, ObjectDefinitions class432, int i, int i_0_, int i_1_, byte i_2_) {
-		try {
-			Class496 class496 = Class120.aClass487_1463.method6159((class432.anInt5400 * -1204256389), -2141345299);
-			if (1690480405 * class496.anInt6097 != -1) {
-				if (class432.aBoolean5401) {
-					i += -1382013163 * class432.anInt5402;
-					i &= 0x3;
-				} else
-					i = 0;
-				Class57 class57 = class496.method6198(class_ra, i, class432.aBoolean5440, (byte) -63);
-				if (class57 != null) {
-					int i_3_ = -1125834887 * class432.sizeX;
-					int i_4_ = -565161399 * class432.sizeY;
-					if ((i & 0x1) == 1) {
-						i_3_ = -565161399 * class432.sizeY;
-						i_4_ = class432.sizeX * -1125834887;
+	public long method80(String string) {
+		return Class254.method4379(string, 1048776146);
+	}
+
+	public long method82(String string) {
+		return Class254.method4379(string, 1048776146);
+	}
+
+	static final void method1454(Class118 class118, Class98 class98, Class527 class527, byte i) {
+		((Class527) class527).anInt7012 -= 283782002;
+		int i_0_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+		int i_1_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
+		Class437 class437 = Class125.aClass424_1573.method7069(i_0_, (byte) 0);
+		if (i_1_ != -1741480635 * class437.anInt5337)
+			class118.method1999(i_0_, i_1_, 146446242);
+		else
+			class118.method1995(i_0_, -1265527536);
+	}
+
+	static final void method1455(Class118 class118, Class98 class98, Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 567564004;
+		class118.anInt1330 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) * -636815827;
+		class118.anInt1339 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]) * 207030057;
+		if ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 2]) == 1)
+			class118.anInt1329 = 1012783397;
+		else
+			class118.anInt1329 = 423033320;
+		if ((((Class527) class527).anIntArray6999[3 + ((Class527) class527).anInt7012 * 1942118537]) == 1)
+			class118.aBool1388 = true;
+		else
+			class118.aBool1388 = false;
+		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
+			Class92.method1565(-1952846363 * class118.anInt1287, -940537484);
+	}
+
+	static final void method1456(Class527 class527, int i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7146 >> 3;
+	}
+
+	static void method1457(int i, int i_2_, Class118 class118, Class455 class455, int i_3_, int i_4_, int i_5_) {
+		int i_6_ = -963499271 * Class197.NUM_PLAYER_INDICES;
+		int[] is = Class197.PLAYER_INDICES;
+		for (int i_7_ = 0; i_7_ < i_6_; i_7_++) {
+			Player class521_sub1_sub1_sub2_sub1 = client.players[is[i_7_]];
+			if (null != class521_sub1_sub1_sub2_sub1 && class521_sub1_sub1_sub2_sub1.method16126((byte) 69) && !class521_sub1_sub1_sub2_sub1.hidden && (Class84.myPlayer != class521_sub1_sub1_sub2_sub1) && (class521_sub1_sub1_sub2_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
+				Class385 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+				int i_8_ = (int) class385.aFloat4671 / 128 - i / 128;
+				int i_9_ = (int) class385.aFloat4673 / 128 - i_2_ / 128;
+				boolean bool = false;
+				for (int i_10_ = 0; i_10_ < client.anInt7449 * 493536965; i_10_++) {
+					Class6 class6 = client.aClass6Array7452[i_10_];
+					if (class521_sub1_sub1_sub2_sub1.displayName.equals(class6.aString37) && 0 != 1017482937 * class6.anInt39) {
+						bool = true;
+						break;
 					}
-					int i_5_ = class57.method271();
-					int i_6_ = class57.method626();
-					if (class496.aBoolean6098) {
-						i_5_ = i_3_ * 4;
-						i_6_ = 4 * i_4_;
-					}
-					if (0 != class496.anInt6096 * -2012904123)
-						class57.method634(i_0_, i_1_ - (i_4_ - 1) * 4, i_5_, i_6_, 0, (~0xffffff | class496.anInt6096 * -2012904123), 1);
-					else
-						class57.method633(i_0_, i_1_ - 4 * (i_4_ - 1), i_5_, i_6_);
 				}
+				boolean bool_11_ = false;
+				for (int i_12_ = 0; i_12_ < -1772444859 * Class459.anInt5534; i_12_++) {
+					if (class521_sub1_sub1_sub2_sub1.displayName.equals(Class467.aClass173Array5575[i_12_].aString2127)) {
+						bool_11_ = true;
+						break;
+					}
+				}
+				boolean bool_13_ = false;
+				if (0 != (Class84.myPlayer.anInt10559 * -1623446397) && 0 != (-1623446397 * class521_sub1_sub1_sub2_sub1.anInt10559) && (class521_sub1_sub1_sub2_sub1.anInt10559 * -1623446397 == (Class84.myPlayer.anInt10559) * -1623446397))
+					bool_13_ = true;
+				if (class521_sub1_sub1_sub2_sub1.aBool10571)
+					Class190.method3149(class118, class455, i_3_, i_4_, i_8_, i_9_, Class250.aClass160Array3092[6], -632004672);
+				else if (bool_13_)
+					Class190.method3149(class118, class455, i_3_, i_4_, i_8_, i_9_, Class250.aClass160Array3092[4], -274315333);
+				else if (class521_sub1_sub1_sub2_sub1.aBool10550)
+					Class190.method3149(class118, class455, i_3_, i_4_, i_8_, i_9_, Class250.aClass160Array3092[7], 1669680426);
+				else if (bool)
+					Class190.method3149(class118, class455, i_3_, i_4_, i_8_, i_9_, Class250.aClass160Array3092[3], -815789205);
+				else if (bool_11_)
+					Class190.method3149(class118, class455, i_3_, i_4_, i_8_, i_9_, Class250.aClass160Array3092[5], 1069521943);
+				else
+					Class190.method3149(class118, class455, i_3_, i_4_, i_8_, i_9_, Class250.aClass160Array3092[2], -336642754);
 			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.x(").append(')').toString());
-		}
-	}
-
-	public static void method872(int i, byte i_7_) {
-		try {
-			Class299.anInt3197 = i * 1684929947;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.i(").append(')').toString());
-		}
-	}
-
-	static final void method873(ClientScript2 class403, int i) {
-		try {
-			int i_8_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_8_, (byte) -100);
-			Class119 class119 = Class389.aClass119Array4165[i_8_ >> 16];
-			Class298_Sub39.method3507(class105, class119, class403, -2106555824);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.md(").append(')').toString());
-		}
-	}
-
-	static final void method874(ClientScript2 class403, int i) {
-		try {
-			long l = (((ClientScript2) class403).aLongArray5251[((((ClientScript2) class403).anInt5245 -= -682569305) * 1685767703)]);
-			((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393 - 1)] = l == -1L ? "" : Long.toString(l, 36).toUpperCase();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.aab(").append(')').toString());
-		}
-	}
-
-	static final void method875(ClientScript2 class403, byte i) {
-		try {
-			Class422_Sub25.aClass298_Sub48_8425.method3540(Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub13_7550, (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]), -283253928);
-			Class370.method4578(Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub14_7571.method5677(-1637975360), false, 622850291);
-			Class3.method300(656179282);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.aia(").append(')').toString());
-		}
-	}
-
-	static final void method876(ClientScript2 class403, int i) {
-		try {
-			int i_9_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			Class102 class102 = Class298_Sub40_Sub13.method3517(i_9_, 601023665);
-			int i_10_ = 0;
-			if (class102 != null)
-				i_10_ = class102.anInt1092 * 1016049299;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = i_10_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("di.acf(").append(')').toString());
 		}
 	}
 }

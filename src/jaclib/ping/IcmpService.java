@@ -12,21 +12,22 @@ public abstract class IcmpService implements Runnable {
 
 	protected abstract void notify(int i, int i_0_, int i_1_);
 
+	@Override
 	public native void run();
 
 	public native void quit();
 
 	public static native boolean available();
 
-	public native void q();
+	public native void m();
 
-	public native void n();
+	public native void h();
 
-	protected abstract void a(int i);
+	protected abstract void method11597(int i);
 
-	protected abstract void f(int i);
+	protected abstract void method11598(int i);
 
-	protected abstract void b(int i, int i_2_, int i_3_);
+	protected abstract void method11599(int i, int i_2_, int i_3_);
 
-	protected abstract void p(int i, int i_4_, int i_5_);
+	protected abstract void method11600(int i, int i_4_, int i_5_);
 }

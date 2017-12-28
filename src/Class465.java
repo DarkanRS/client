@@ -1,206 +1,359 @@
+
 /* Class465 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.util.Calendar;
+import java.util.Iterator;
 
-public class Class465 implements Interface18 {
-	boolean aBoolean6513;
-	int anInt6514;
-	int anInt6515;
-	int anInt6516;
-	int anInt6517;
-	int anInt6518;
-	int anInt6519;
-	static Class243 aClass243_6520;
+public final class Class465 implements Iterable {
+	long aLong5557;
+	Class282[] aClass282Array5558;
+	Class282 aClass282_5559;
+	int anInt5560;
+	Class282 aClass282_5561;
+	int anInt5562 = 0;
 
-	public boolean method235(Interface18 interface18) {
-		if (!(interface18 instanceof Class465))
-			return false;
-		Class465 class465_0_ = (Class465) interface18;
-		if (696186641 * ((Class465) class465_0_).anInt6519 != 696186641 * ((Class465) this).anInt6519)
-			return false;
-		if (((Class465) this).anInt6514 * 1776279405 != 1776279405 * ((Class465) class465_0_).anInt6514)
-			return false;
-		if (((Class465) this).anInt6515 * 793126543 != 793126543 * ((Class465) class465_0_).anInt6515)
-			return false;
-		if (-2052168577 * ((Class465) this).anInt6516 != ((Class465) class465_0_).anInt6516 * -2052168577)
-			return false;
-		if (-2128765879 * ((Class465) class465_0_).anInt6518 != ((Class465) this).anInt6518 * -2128765879)
-			return false;
-		if (-1527694577 * ((Class465) this).anInt6517 != ((Class465) class465_0_).anInt6517 * -1527694577)
-			return false;
-		if (((Class465) this).aBoolean6513 != ((Class465) class465_0_).aBoolean6513)
-			return false;
-		return true;
-	}
-
-	public boolean method232(Interface18 interface18) {
-		try {
-			if (!(interface18 instanceof Class465))
-				return false;
-			Class465 class465_1_ = (Class465) interface18;
-			if (696186641 * ((Class465) class465_1_).anInt6519 != 696186641 * ((Class465) this).anInt6519)
-				return false;
-			if (((Class465) this).anInt6514 * 1776279405 != 1776279405 * ((Class465) class465_1_).anInt6514)
-				return false;
-			if (((Class465) this).anInt6515 * 793126543 != 793126543 * ((Class465) class465_1_).anInt6515)
-				return false;
-			if (-2052168577 * ((Class465) this).anInt6516 != ((Class465) class465_1_).anInt6516 * -2052168577)
-				return false;
-			if (-2128765879 * ((Class465) class465_1_).anInt6518 != ((Class465) this).anInt6518 * -2128765879)
-				return false;
-			if (-1527694577 * ((Class465) this).anInt6517 != ((Class465) class465_1_).anInt6517 * -1527694577)
-				return false;
-			if (((Class465) this).aBoolean6513 != ((Class465) class465_1_).aBoolean6513)
-				return false;
-			return true;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("te.f(").append(')').toString());
-		}
-	}
-
-	public long method231() {
-		try {
-			long[] ls = RsByteBuffer.aLongArray7619;
-			long l = -1L;
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (696186641 * ((Class465) this).anInt6519)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) ((1776279405 * ((Class465) this).anInt6514) >> 8)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6514 * 1776279405)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * (((Class465) this).anInt6515) >> 24)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * (((Class465) this).anInt6515) >> 16)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * (((Class465) this).anInt6515) >> 8)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (-2052168577 * ((Class465) this).anInt6516)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) ((-2128765879 * ((Class465) this).anInt6518) >> 24)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) ((((Class465) this).anInt6518 * -2128765879) >> 16)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) ((-2128765879 * ((Class465) this).anInt6518) >> 8)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6518 * -2128765879)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1527694577 * ((Class465) this).anInt6517)) & 0xffL)];
-			l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).aBoolean6513 ? 1 : 0)) & 0xffL)];
-			return l;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("te.a(").append(')').toString());
-		}
-	}
-
-	public long method233() {
-		long[] ls = RsByteBuffer.aLongArray7619;
-		long l = -1L;
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (696186641 * ((Class465) this).anInt6519)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (1776279405 * ((Class465) this).anInt6514 >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6514 * 1776279405)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515 >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515 >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515 >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-2052168577 * ((Class465) this).anInt6516)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (-2128765879 * ((Class465) this).anInt6518 >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6518 * -2128765879 >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (-2128765879 * ((Class465) this).anInt6518 >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6518 * -2128765879)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1527694577 * ((Class465) this).anInt6517)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).aBoolean6513 ? 1 : 0)) & 0xffL)];
-		return l;
-	}
-
-	public long method234() {
-		long[] ls = RsByteBuffer.aLongArray7619;
-		long l = -1L;
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (696186641 * ((Class465) this).anInt6519)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (1776279405 * ((Class465) this).anInt6514 >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6514 * 1776279405)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515 >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515 >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515 >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (793126543 * ((Class465) this).anInt6515)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-2052168577 * ((Class465) this).anInt6516)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (-2128765879 * ((Class465) this).anInt6518 >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6518 * -2128765879 >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (-2128765879 * ((Class465) this).anInt6518 >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).anInt6518 * -2128765879)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1527694577 * ((Class465) this).anInt6517)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((Class465) this).aBoolean6513 ? 1 : 0)) & 0xffL)];
-		return l;
-	}
-
-	Class465() {
-		/* empty */
-	}
-
-	public boolean method236(Interface18 interface18) {
-		if (!(interface18 instanceof Class465))
-			return false;
-		Class465 class465_2_ = (Class465) interface18;
-		if (696186641 * ((Class465) class465_2_).anInt6519 != 696186641 * ((Class465) this).anInt6519)
-			return false;
-		if (((Class465) this).anInt6514 * 1776279405 != 1776279405 * ((Class465) class465_2_).anInt6514)
-			return false;
-		if (((Class465) this).anInt6515 * 793126543 != 793126543 * ((Class465) class465_2_).anInt6515)
-			return false;
-		if (-2052168577 * ((Class465) this).anInt6516 != ((Class465) class465_2_).anInt6516 * -2052168577)
-			return false;
-		if (-2128765879 * ((Class465) class465_2_).anInt6518 != ((Class465) this).anInt6518 * -2128765879)
-			return false;
-		if (-1527694577 * ((Class465) this).anInt6517 != ((Class465) class465_2_).anInt6517 * -1527694577)
-			return false;
-		if (((Class465) this).aBoolean6513 != ((Class465) class465_2_).aBoolean6513)
-			return false;
-		return true;
-	}
-
-	public static String method6017(long l, int i, boolean bool, int i_3_) {
-		try {
-			Calendar calendar;
-			if (bool) {
-				Class300.method3686(l);
-				calendar = Class490.aCalendar6075;
-			} else {
-				Class422_Sub9.method5658(l);
-				calendar = Class490.aCalendar6073;
+	public Class282 method7745() {
+		if (null == ((Class465) this).aClass282_5561)
+			return null;
+		for (Class282 class282 = (((Class465) this).aClass282Array5558[(int) (4504069746288158699L * ((Class465) this).aLong5557 & (long) (((Class465) this).anInt5560 * 25900449 - 1))]); class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
+			if ((((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((Class465) this).aLong5557 * 4504069746288158699L) {
+				Class282 class282_0_ = ((Class465) this).aClass282_5561;
+				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+				return class282_0_;
 			}
-			int i_4_ = calendar.get(5);
-			int i_5_ = calendar.get(2);
-			int i_6_ = calendar.get(1);
-			int i_7_ = calendar.get(11);
-			int i_8_ = calendar.get(12);
-			if (i == 3)
-				return Class422_Sub2.method5631(l, i, bool, (byte) 1);
-			return new StringBuilder().append(Integer.toString(i_4_ / 10)).append(i_4_ % 10).append("-").append(Class490.aStringArrayArray6074[i][i_5_]).append("-").append(i_6_).append(" ").append(i_7_ / 10).append(i_7_ % 10).append(":").append(i_8_ / 10).append(i_8_ % 10).toString();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("te.f(").append(')').toString());
+		}
+		((Class465) this).aClass282_5561 = null;
+		return null;
+	}
+
+	public void method7746() {
+		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+			for (;;) {
+				Class282 class282_1_ = class282.aClass282_3378;
+				if (class282 == class282_1_)
+					break;
+				class282_1_.method4991(-371378792);
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		((Class465) this).aClass282_5559 = null;
+	}
+
+	public Class282 method7747(int i) {
+		if (null == ((Class465) this).aClass282_5561)
+			return null;
+		for (Class282 class282 = (((Class465) this).aClass282Array5558[(int) (4504069746288158699L * ((Class465) this).aLong5557 & (long) (((Class465) this).anInt5560 * 25900449 - 1))]); class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
+			if ((((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((Class465) this).aLong5557 * 4504069746288158699L) {
+				Class282 class282_2_ = ((Class465) this).aClass282_5561;
+				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+				return class282_2_;
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		return null;
+	}
+
+	public int method7748(short i) {
+		int i_3_ = 0;
+		for (int i_4_ = 0; i_4_ < 25900449 * ((Class465) this).anInt5560; i_4_++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i_4_];
+			for (Class282 class282_5_ = class282.aClass282_3378; class282 != class282_5_; class282_5_ = class282_5_.aClass282_3378)
+				i_3_++;
+		}
+		return i_3_;
+	}
+
+	public Iterator iterator() {
+		return new Class451(this);
+	}
+
+	public void method7749(int i) {
+		for (int i_6_ = 0; i_6_ < ((Class465) this).anInt5560 * 25900449; i_6_++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i_6_];
+			for (;;) {
+				Class282 class282_7_ = class282.aClass282_3378;
+				if (class282 == class282_7_)
+					break;
+				class282_7_.method4991(-371378792);
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		((Class465) this).aClass282_5559 = null;
+	}
+
+	public Class282 method7750(int i) {
+		((Class465) this).anInt5562 = 0;
+		return method7751((byte) 63);
+	}
+
+	public Class282 method7751(byte i) {
+		if (((Class465) this).anInt5562 * 620631441 > 0 && ((((Class465) this).aClass282Array5558[((Class465) this).anInt5562 * 620631441 - 1]) != ((Class465) this).aClass282_5559)) {
+			Class282 class282 = ((Class465) this).aClass282_5559;
+			((Class465) this).aClass282_5559 = class282.aClass282_3378;
+			return class282;
+		}
+		while (((Class465) this).anInt5562 * 620631441 < 25900449 * ((Class465) this).anInt5560) {
+			Class282 class282 = (((Class465) this).aClass282Array5558[((((Class465) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
+			if ((((Class465) this).aClass282Array5558[620631441 * ((Class465) this).anInt5562 - 1]) != class282) {
+				((Class465) this).aClass282_5559 = class282.aClass282_3378;
+				return class282;
+			}
+		}
+		return null;
+	}
+
+	public Class282 method7752(long l) {
+		((Class465) this).aLong5557 = l * 7471503269310367939L;
+		Class282 class282 = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		for (((Class465) this).aClass282_5561 = class282.aClass282_3378; class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
+			if (l == (((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L)) {
+				Class282 class282_8_ = ((Class465) this).aClass282_5561;
+				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+				return class282_8_;
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		return null;
+	}
+
+	public Class282 method7753() {
+		if (((Class465) this).anInt5562 * 620631441 > 0 && ((((Class465) this).aClass282Array5558[((Class465) this).anInt5562 * 620631441 - 1]) != ((Class465) this).aClass282_5559)) {
+			Class282 class282 = ((Class465) this).aClass282_5559;
+			((Class465) this).aClass282_5559 = class282.aClass282_3378;
+			return class282;
+		}
+		while (((Class465) this).anInt5562 * 620631441 < 25900449 * ((Class465) this).anInt5560) {
+			Class282 class282 = (((Class465) this).aClass282Array5558[((((Class465) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
+			if ((((Class465) this).aClass282Array5558[620631441 * ((Class465) this).anInt5562 - 1]) != class282) {
+				((Class465) this).aClass282_5559 = class282.aClass282_3378;
+				return class282;
+			}
+		}
+		return null;
+	}
+
+	public Class282 method7754(long l) {
+		((Class465) this).aLong5557 = l * 7471503269310367939L;
+		Class282 class282 = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		for (((Class465) this).aClass282_5561 = class282.aClass282_3378; class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
+			if (l == (((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L)) {
+				Class282 class282_9_ = ((Class465) this).aClass282_5561;
+				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+				return class282_9_;
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		return null;
+	}
+
+	public void method7755() {
+		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+			for (;;) {
+				Class282 class282_10_ = class282.aClass282_3378;
+				if (class282 == class282_10_)
+					break;
+				class282_10_.method4991(-371378792);
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		((Class465) this).aClass282_5559 = null;
+	}
+
+	public void method7756() {
+		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+			for (;;) {
+				Class282 class282_11_ = class282.aClass282_3378;
+				if (class282 == class282_11_)
+					break;
+				class282_11_.method4991(-371378792);
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		((Class465) this).aClass282_5559 = null;
+	}
+
+	public Class282 method7757() {
+		if (null == ((Class465) this).aClass282_5561)
+			return null;
+		for (Class282 class282 = (((Class465) this).aClass282Array5558[(int) (4504069746288158699L * ((Class465) this).aLong5557 & (long) (((Class465) this).anInt5560 * 25900449 - 1))]); class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
+			if ((((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((Class465) this).aLong5557 * 4504069746288158699L) {
+				Class282 class282_12_ = ((Class465) this).aClass282_5561;
+				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+				return class282_12_;
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		return null;
+	}
+
+	public int method7758() {
+		int i = 0;
+		for (int i_13_ = 0; i_13_ < 25900449 * ((Class465) this).anInt5560; i_13_++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i_13_];
+			for (Class282 class282_14_ = class282.aClass282_3378; class282 != class282_14_; class282_14_ = class282_14_.aClass282_3378)
+				i++;
+		}
+		return i;
+	}
+
+	public void method7759(Class282 class282, long l) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		Class282 class282_15_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		class282.aClass282_3380 = class282_15_.aClass282_3380;
+		class282.aClass282_3378 = class282_15_;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.aLong3379 = -1253863389874800229L * l;
+	}
+
+	public void method7760(Class282 class282, long l) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		Class282 class282_16_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		class282.aClass282_3380 = class282_16_.aClass282_3380;
+		class282.aClass282_3378 = class282_16_;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.aLong3379 = -1253863389874800229L * l;
+	}
+
+	public void method7761(Class282 class282, long l) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		Class282 class282_17_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		class282.aClass282_3380 = class282_17_.aClass282_3380;
+		class282.aClass282_3378 = class282_17_;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.aLong3379 = -1253863389874800229L * l;
+	}
+
+	public Iterator method7762() {
+		return new Class451(this);
+	}
+
+	public Iterator method7763() {
+		return new Class451(this);
+	}
+
+	public void method7764() {
+		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+			for (;;) {
+				Class282 class282_18_ = class282.aClass282_3378;
+				if (class282 == class282_18_)
+					break;
+				class282_18_.method4991(-371378792);
+			}
+		}
+		((Class465) this).aClass282_5561 = null;
+		((Class465) this).aClass282_5559 = null;
+	}
+
+	public void method7765(Class282 class282, long l) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		Class282 class282_19_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		class282.aClass282_3380 = class282_19_.aClass282_3380;
+		class282.aClass282_3378 = class282_19_;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.aLong3379 = -1253863389874800229L * l;
+	}
+
+	public Class282 method7766() {
+		((Class465) this).anInt5562 = 0;
+		return method7751((byte) 101);
+	}
+
+	public Class282 method7767() {
+		((Class465) this).anInt5562 = 0;
+		return method7751((byte) 6);
+	}
+
+	public Class282 method7768() {
+		((Class465) this).anInt5562 = 0;
+		return method7751((byte) 110);
+	}
+
+	public Class282 method7769() {
+		((Class465) this).anInt5562 = 0;
+		return method7751((byte) 14);
+	}
+
+	public Class465(int i) {
+		((Class465) this).anInt5560 = i * 1246096993;
+		((Class465) this).aClass282Array5558 = new Class282[i];
+		for (int i_20_ = 0; i_20_ < i; i_20_++) {
+			Class282 class282 = ((Class465) this).aClass282Array5558[i_20_] = new Class282();
+			class282.aClass282_3378 = class282;
+			class282.aClass282_3380 = class282;
 		}
 	}
 
-	static final void method6018(IComponentDefinition class105, Class119 class119, ClientScript2 class403, int i) {
-		try {
-			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
-			if (Class298_Sub6.method2863(string, class403, -637719265) != null)
-				string = string.substring(0, string.length() - 1);
-			class105.anObjectArray1263 = Class128_Sub2.method1441(string, class403, -2046058202);
-			class105.aBoolean1238 = true;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("te.ld(").append(')').toString());
+	public Class282 method7770() {
+		if (((Class465) this).anInt5562 * 620631441 > 0 && ((((Class465) this).aClass282Array5558[((Class465) this).anInt5562 * 620631441 - 1]) != ((Class465) this).aClass282_5559)) {
+			Class282 class282 = ((Class465) this).aClass282_5559;
+			((Class465) this).aClass282_5559 = class282.aClass282_3378;
+			return class282;
+		}
+		while (((Class465) this).anInt5562 * 620631441 < 25900449 * ((Class465) this).anInt5560) {
+			Class282 class282 = (((Class465) this).aClass282Array5558[((((Class465) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
+			if ((((Class465) this).aClass282Array5558[620631441 * ((Class465) this).anInt5562 - 1]) != class282) {
+				((Class465) this).aClass282_5559 = class282.aClass282_3378;
+				return class282;
+			}
+		}
+		return null;
+	}
+
+	static final void method7771(Class527 class527, int i) {
+		String string;
+		if (null != Class84.myPlayer && null != Class84.myPlayer.username)
+			string = Class84.myPlayer.method16128(false, 1912893547);
+		else
+			string = "";
+		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+	}
+
+	static final void method7772(Class282_Sub31 class282_sub31, boolean bool, int i) {
+		if (((Class282_Sub31) class282_sub31).aBool7774) {
+			if (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 < 0 || (Class492.method8264(client.aClass257_7353.method4436(-1617066319), ((Class282_Sub31) class282_sub31).anInt7765 * -1369039751, -1307943861 * ((Class282_Sub31) class282_sub31).anInt7770, 1942118537))) {
+				if (!bool)
+					Class174.method2956((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1133711870);
+				else
+					Class243.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 30);
+				class282_sub31.method4991(-371378792);
+			}
+		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= client.aClass257_7353.method4424(800318016) - 2) && (-322610393 * class282_sub31.anInt7763 <= client.aClass257_7353.method4451(-349859539) - 2)
+				&& ((-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769) < 0 || (Class492.method8264(client.aClass257_7353.method4436(-1528257548), (-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769), (((Class282_Sub31) class282_sub31).anInt7771 * 965123467), 1942118537)))) {
+			if (!bool)
+				Class174.method2956(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -1118636715);
+			else
+				Class243.method4179(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, class282_sub31.anInt7762 * 37618455, -322610393 * class282_sub31.anInt7763, ((Class282_Sub31) class282_sub31).aClass476_7768, (byte) 127);
+			((Class282_Sub31) class282_sub31).aBool7773 = false;
+			if (!bool && (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 == (((Class282_Sub31) class282_sub31).anInt7769 * -1809279077)) && (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 == -1))
+				class282_sub31.method4991(-371378792);
+			else if (!bool && ((-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765) == (((Class282_Sub31) class282_sub31).anInt7769 * -1809279077)) && ((1421843241 * ((Class282_Sub31) class282_sub31).anInt7767) == (-818262241 * ((Class282_Sub31) class282_sub31).anInt7772)) && ((((Class282_Sub31) class282_sub31).anInt7771 * 965123467) == (((Class282_Sub31) class282_sub31).anInt7770 * -1307943861)))
+				class282_sub31.method4991(-371378792);
 		}
 	}
 
-	static final void method6019(ClientScript2 class403, short i) {
-		try {
-			int i_9_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			Class350 class350 = Class94.aClass349_913.method4202(i_9_, (byte) 24);
-			if (null != class350.anIntArray3712 && class350.anIntArray3712.length > 0) {
-				int i_10_ = 0;
-				int i_11_ = class350.anIntArray3713[0];
-				for (int i_12_ = 1; i_12_ < class350.anIntArray3712.length; i_12_++) {
-					if (class350.anIntArray3713[i_12_] > i_11_) {
-						i_10_ = i_12_;
-						i_11_ = class350.anIntArray3713[i_12_];
-					}
-				}
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = class350.anIntArray3712[i_10_];
-			} else
-				((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919) - 1] = -809747019 * class350.anInt3711;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("te.abx(").append(')').toString());
-		}
+	static final void method7773(Class527 class527, int i) {
+		Class282_Sub40.method13300(-1273704391);
+		client.aClass257_7353.method4547((byte) -42);
+		Class190.method3148((byte) 53);
+		client.aBool7175 = false;
+	}
+
+	static final void method7774(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 283782002;
+		int i_21_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+		int i_22_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+		Class515.method8862(i_21_, i_22_ >> 14 & 0x3fff, i_22_ & 0x3fff, true, -1732540658);
 	}
 }

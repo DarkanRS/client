@@ -92,11 +92,11 @@ public final class IDirect3DDevice extends IUnknown {
 
 	public static native int SetViewport(long l, int i, int i_85_, int i_86_, int i_87_, float f, float f_88_);
 
-	public static int a(long l, int i, float f) {
+	public static int method14470(long l, int i, float f) {
 		return SetRenderStatef(l, i, f);
 	}
 
-	public static int f(long l, int i, boolean bool) {
+	public static int method14471(long l, int i, boolean bool) {
 		return SetRenderStateb(l, i, bool);
 	}
 
@@ -113,4 +113,16 @@ public final class IDirect3DDevice extends IUnknown {
 	public static native int Reset(long l, D3DPRESENT_PARAMETERS d3dpresent_parameters);
 
 	public static native int TestCooperativeLevel(long l);
+
+	public static int method14472(long l, int i, float f) {
+		return SetRenderStatef(l, i, f);
+	}
+
+	public static int method14473(long l, int i, float f) {
+		return SetRenderStatef(l, i, f);
+	}
+
+	public static int method14474(long l, int i, boolean bool) {
+		return SetRenderStateb(l, i, bool);
+	}
 }

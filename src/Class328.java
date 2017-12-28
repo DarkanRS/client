@@ -1,150 +1,161 @@
+
 /* Class328 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 
-public class Class328 {
-	public static int anInt3473 = 1;
-	short[] aShortArray3474;
-	public static int anInt3475 = 4;
-	public static int anInt3476 = 8;
-	public static int anInt3477 = 16;
-	public static int anInt3478 = 2;
-	byte aByte3479;
-	short aShort3480;
-	short aShort3481;
-	byte aByte3482;
-	short aShort3483;
-	int[] anIntArray3484;
-	int[] anIntArray3485;
-	int[] anIntArray3486;
-	short aShort3487;
-	short[] aShortArray3488;
-	short[] aShortArray3489;
+public final class Class328 implements Comparable {
+	long aLong3767;
+	Object anObject3768;
+	long aLong3769;
+	Object anObject3770;
+	public static Class306 aClass306_3771;
+	static Class118[] aClass118Array3772;
 
-	Class328(Class331 class331, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
-		((Class328) this).aByte3482 = (byte) i;
-		((Class328) this).aByte3479 = (byte) i_0_;
-		((Class328) this).anIntArray3484 = new int[4];
-		((Class328) this).anIntArray3485 = new int[4];
-		((Class328) this).anIntArray3486 = new int[4];
-		((Class328) this).anIntArray3484[0] = i_1_;
-		((Class328) this).anIntArray3484[1] = i_2_;
-		((Class328) this).anIntArray3484[2] = i_3_;
-		((Class328) this).anIntArray3484[3] = i_4_;
-		((Class328) this).anIntArray3485[0] = i_5_;
-		((Class328) this).anIntArray3485[1] = i_6_;
-		((Class328) this).anIntArray3485[2] = i_7_;
-		((Class328) this).anIntArray3485[3] = i_8_;
-		((Class328) this).anIntArray3486[0] = i_9_;
-		((Class328) this).anIntArray3486[1] = i_10_;
-		((Class328) this).anIntArray3486[2] = i_11_;
-		((Class328) this).anIntArray3486[3] = i_12_;
-		((Class328) this).aShort3487 = (short) (i_1_ >> -1688804109 * class331.anInt3504);
-		((Class328) this).aShort3481 = (short) (i_3_ >> -1688804109 * class331.anInt3504);
-		((Class328) this).aShort3480 = (short) (i_9_ >> -1688804109 * class331.anInt3504);
-		((Class328) this).aShort3483 = (short) (i_11_ >> class331.anInt3504 * -1688804109);
-		((Class328) this).aShortArray3474 = new short[4];
-		((Class328) this).aShortArray3488 = new short[4];
-		((Class328) this).aShortArray3489 = new short[4];
+	public int method5817(Object object) {
+		return method5822((Class328) object, (byte) 98);
 	}
 
-	static final void method3985(ClientScript2 class403, byte i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class441.method5865(class105, class119, class403, 1592585834);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("nr.kz(").append(')').toString());
-		}
+	int method5818(Class328 class328_0_) {
+		if (-6781388050759103145L * ((Class328) this).aLong3769 < -6781388050759103145L * ((Class328) class328_0_).aLong3769)
+			return -1;
+		if (-6781388050759103145L * ((Class328) this).aLong3769 > ((Class328) class328_0_).aLong3769 * -6781388050759103145L)
+			return 1;
+		return 0;
 	}
 
-	static final void method3986(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = client.playerIndex * -442628795;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("nr.vd(").append(')').toString());
-		}
+	public boolean equals(Object object) {
+		if (object instanceof Class328)
+			return ((Class328) this).anObject3770.equals(((Class328) (Class328) object).anObject3770);
+		throw new IllegalArgumentException();
 	}
 
-	static final void method3987(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anInt5241 -= 1938723502;
-			String string = (String) (((ClientScript2) class403).anObjectArray5240[((ClientScript2) class403).anInt5241 * -203050393]);
-			String string_13_ = ((String) (((ClientScript2) class403).anObjectArray5240[-203050393 * ((ClientScript2) class403).anInt5241 + 1]));
-			Class63.method741(string, string_13_, 2101690439);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("nr.agx(").append(')').toString());
-		}
+	public int compareTo(Object object) {
+		return method5822((Class328) object, (byte) 39);
 	}
 
-	static final void method3988(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub14_7570.method5681(-1938875884) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("nr.aot(").append(')').toString());
-		}
+	public boolean method5819(Object object) {
+		if (object instanceof Class328)
+			return ((Class328) this).anObject3770.equals(((Class328) (Class328) object).anObject3770);
+		throw new IllegalArgumentException();
 	}
 
-	public static String method3989(String string, int i) {
+	public boolean method5820(Object object) {
+		if (object instanceof Class328)
+			return ((Class328) this).anObject3770.equals(((Class328) (Class328) object).anObject3770);
+		throw new IllegalArgumentException();
+	}
+
+	public boolean method5821(Object object) {
+		if (object instanceof Class328)
+			return ((Class328) this).anObject3770.equals(((Class328) (Class328) object).anObject3770);
+		throw new IllegalArgumentException();
+	}
+
+	int method5822(Class328 class328_1_, byte i) {
+		if (-6781388050759103145L * ((Class328) this).aLong3769 < -6781388050759103145L * ((Class328) class328_1_).aLong3769)
+			return -1;
+		if (-6781388050759103145L * ((Class328) this).aLong3769 > ((Class328) class328_1_).aLong3769 * -6781388050759103145L)
+			return 1;
+		return 0;
+	}
+
+	Class328(Object object, Object object_2_) {
+		((Class328) this).anObject3768 = object;
+		((Class328) this).anObject3770 = object_2_;
+	}
+
+	public int method5823(Object object) {
+		return method5822((Class328) object, (byte) 28);
+	}
+
+	public int method5824(Object object) {
+		return method5822((Class328) object, (byte) 127);
+	}
+
+	public int method5825(Object object) {
+		return method5822((Class328) object, (byte) 31);
+	}
+
+	public int method5826(Object object) {
+		return method5822((Class328) object, (byte) 57);
+	}
+
+	static void method5827(short i) {
 		try {
-			StringBuilder stringbuilder = new StringBuilder();
-			int i_14_ = string.length();
-			for (int i_15_ = 0; i_15_ < i_14_; i_15_++) {
-				char c = string.charAt(i_15_);
-				if (37 == c && i_14_ > i_15_ + 2) {
-					c = string.charAt(i_15_ + 1);
-					boolean bool = false;
-					int i_16_;
-					if (c >= 48 && c <= 57)
-						i_16_ = c - 48;
-					else if (c >= 97 && c <= 102)
-						i_16_ = 10 + c - 97;
-					else if (c >= 65 && c <= 70)
-						i_16_ = c + 10 - 65;
-					else {
-						stringbuilder.append('%');
-						continue;
+			File file = new File(Class110.aString1103, "random.dat");
+			if (file.exists())
+				Class263.aClass440_3269 = new Class440(new Class442(file, "rw", 25L), 24, 0);
+			else {
+				while_218_: for (int i_3_ = 0; i_3_ < Class106.aStringArray1077.length; i_3_++) {
+					for (int i_4_ = 0; i_4_ < Class246.aStringArray3028.length; i_4_++) {
+						File file_5_ = new File(new StringBuilder().append(Class246.aStringArray3028[i_4_]).append(Class106.aStringArray1077[i_3_]).append(File.separatorChar).append("random.dat").toString());
+						if (file_5_.exists()) {
+							Class263.aClass440_3269 = new Class440(new Class442(file_5_, "rw", 25L), 24, 0);
+							break while_218_;
+						}
 					}
-					i_16_ *= 16;
-					int i_17_ = string.charAt(i_15_ + 2);
-					if (i_17_ >= 48 && i_17_ <= 57)
-						i_16_ += i_17_ - 48;
-					else if (i_17_ >= 97 && i_17_ <= 102)
-						i_16_ += i_17_ + 10 - 97;
-					else if (i_17_ >= 65 && i_17_ <= 70)
-						i_16_ += i_17_ + 10 - 65;
-					else {
-						stringbuilder.append('%');
-						continue;
-					}
-					if (0 != i_16_ && Class422_Sub29.method5729((byte) i_16_, (short) 18002))
-						stringbuilder.append(Class493.method6190((byte) i_16_, 2122534616));
-					i_15_ += 2;
-				} else if (c == 43)
-					stringbuilder.append(' ');
-				else
-					stringbuilder.append(c);
+				}
 			}
-			return stringbuilder.toString();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("nr.a(").append(')').toString());
+			if (null == Class263.aClass440_3269) {
+				RandomAccessFile randomaccessfile = new RandomAccessFile(file, "rw");
+				int i_6_ = randomaccessfile.read();
+				randomaccessfile.seek(0L);
+				randomaccessfile.write(i_6_);
+				randomaccessfile.seek(0L);
+				randomaccessfile.close();
+				Class263.aClass440_3269 = new Class440(new Class442(file, "rw", 25L), 24, 0);
+			}
+		} catch (IOException ioexception) {
+			/* empty */
 		}
 	}
 
-	static final void method3990(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			if (-1309843523 * ((Class390) class390).aClass105_4168.anInt1154 == -1) {
-				if (((ClientScript2) class403).aBoolean5261)
-					throw new RuntimeException("");
-				throw new RuntimeException("");
-			}
-			IComponentDefinition class105 = class390.method4868(-2049654672);
-			class105.aClass105Array1292[-1309843523 * ((Class390) class390).aClass105_4168.anInt1154] = null;
-			Tradution.method6054(class105, 575626440);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("nr.bt(").append(')').toString());
-		}
+	static final void method5828(Class527 class527, int i) {
+		((Class527) class527).anInt7000 -= 1476624725;
+		((Class527) class527).anInt7012 -= 425673003;
+		String string = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]);
+		boolean bool = ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) == 1);
+		boolean bool_7_ = ((((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]) == 1);
+		boolean bool_8_ = ((((Class527) class527).anIntArray6999[2 + 1942118537 * ((Class527) class527).anInt7012]) == 1);
+		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4619, client.aClass184_7218.aClass432_2283, -685598433);
+		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(Class108.method1846(string, 108230630) + 1, 1417031095);
+		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+		int i_9_ = 0;
+		if (bool)
+			i_9_ |= 0x1;
+		if (bool_7_)
+			i_9_ |= 0x2;
+		if (bool_8_)
+			i_9_ |= 0x4;
+		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_9_);
+		client.aClass184_7218.method3049(class282_sub23, 1599721330);
+	}
+
+	static final void method5829(Class527 class527, int i) {
+		int i_10_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class120.method2094(i_10_, (byte) 1);
+	}
+
+	public static int method5830(CharSequence charsequence, int i) {
+		return Class356.method6225(charsequence, 10, true, 2038427942);
+	}
+
+	static final void method5831(Class527 class527, int i) {
+		int i_11_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) (i_11_ + 1));
+	}
+
+	static final void method5832(Class527 class527, int i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7224 && !client.aBool7244 ? 1 : 0;
+	}
+
+	static final void method5833(Class527 class527, byte i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class282_Sub52.method13468(class118, class98, class527, 769396750);
 	}
 }

@@ -3,9 +3,7 @@
  */
 
 public class RuntimeException_Sub1 extends RuntimeException {
-	static int anInt6303;
-
-	public RuntimeException_Sub1() {
-		super("");
+	private RuntimeException_Sub1() throws Throwable {
+		throw new Error();
 	}
 }

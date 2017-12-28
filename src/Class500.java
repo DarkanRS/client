@@ -2,211 +2,180 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class500 {
-	Class243 aClass243_6114;
-	int anInt6115;
-	Class298_Sub37_Sub7[] aClass298_Sub37_Sub7Array6116;
-	public static Class347 aClass347_6117;
+public final class Class500 {
+	static char[] aCharArray5825 = { '_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+	static long[] aLongArray5826 = new long[12];
+	static int[] anIntArray5827;
 
-	public Class500(Class411 class411, Class429 class429, Class243 class243, boolean bool) {
-		((Class500) this).aClass243_6114 = class243;
-		((Class500) this).anInt6115 = (((Class500) this).aClass243_6114.method2316((-1006924897 * (Class120.aClass120_1431.anInt1460)), -1837337583) * 1005943745);
-		if (bool) {
-			((Class500) this).aClass298_Sub37_Sub7Array6116 = (new Class298_Sub37_Sub7[((Class500) this).anInt6115 * 589337665]);
-			for (int i = 0; i < ((Class500) this).anInt6115 * 589337665; i++) {
-				byte[] is;
-				synchronized (((Class500) this).aClass243_6114) {
-					is = (((Class500) this).aClass243_6114.getFile(-1006924897 * Class120.aClass120_1431.anInt1460, i, (byte) -117));
-				}
-				Class298_Sub37_Sub7 class298_sub37_sub7 = new Class298_Sub37_Sub7();
-				if (null != is)
-					class298_sub37_sub7.method3424(new RsByteBuffer(is), -2124220647);
-				((Class500) this).aClass298_Sub37_Sub7Array6116[i] = class298_sub37_sub7;
+	public static String method8335(long l) {
+		if (l <= 0L || l >= 6582952005840035281L)
+			return null;
+		if (0L == l % 37L)
+			return null;
+		int i = 0;
+		for (long l_0_ = l; l_0_ != 0L; l_0_ /= 37L)
+			i++;
+		StringBuilder stringbuilder = new StringBuilder(i);
+		while (l != 0L) {
+			long l_1_ = l;
+			l /= 37L;
+			char c = aCharArray5825[(int) (l_1_ - 37L * l)];
+			if ('_' == c) {
+				int i_2_ = stringbuilder.length() - 1;
+				stringbuilder.setCharAt(i_2_, Character.toUpperCase(stringbuilder.charAt(i_2_)));
+				c = '\u00a0';
 			}
+			stringbuilder.append(c);
 		}
+		stringbuilder.reverse();
+		stringbuilder.setCharAt(0, Character.toUpperCase(stringbuilder.charAt(0)));
+		return stringbuilder.toString();
 	}
 
-	public Class298_Sub37_Sub7 method6219(int i, int i_0_) {
-		try {
-			if (i < 0)
-				return new Class298_Sub37_Sub7();
-			return ((Class500) this).aClass298_Sub37_Sub7Array6116[i];
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ur.a(").append(')').toString());
-		}
+	Class500() throws Throwable {
+		throw new Error();
 	}
 
-	static Class298_Sub36 method6220(byte i) {
-		try {
-			if (0 == Class298_Sub36.anInt7400 * -848307417)
-				return new Class298_Sub36();
-			return (Class298_Sub36.aClass298_Sub36Array7402[(Class298_Sub36.anInt7400 -= 265413783) * -848307417]);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ur.a(").append(')').toString());
+	static long method8336(CharSequence charsequence) {
+		long l = 0L;
+		int i = charsequence.length();
+		for (int i_3_ = 0; i_3_ < i; i_3_++) {
+			l *= 37L;
+			char c = charsequence.charAt(i_3_);
+			if (c >= 'A' && c <= 'Z')
+				l += (long) ('\001' + c - 'A');
+			else if (c >= 'a' && c <= 'z')
+				l += (long) (c + '\001' - 'a');
+			else if (c >= '0' && c <= '9')
+				l += (long) ('\033' + c - '0');
+			if (l >= 177917621779460413L)
+				break;
 		}
+		for (/**/; l % 37L == 0L && 0L != l; l /= 37L) {
+			/* empty */
+		}
+		return l;
 	}
 
-	static void method6221(RsBitsBuffer class298_sub53_sub2, int i, int i_1_) {
-		try {
-			Class341 class341 = client.aClass283_8716.method2628(681479919);
-			boolean bool = class298_sub53_sub2.readBits(1) == 1;
-			if (bool)
-				Class10.anIntArray140[(Class10.anInt139 += 867608709) * -1281683379 - 1] = i;
-			int i_2_ = class298_sub53_sub2.readBits(2);
-			Player class365_sub1_sub1_sub2_sub2 = client.aClass365_Sub1_Sub1_Sub2_Sub2Array8805[i];
-			if (0 == i_2_) {
-				if (bool)
-					class365_sub1_sub1_sub2_sub2.aBoolean10217 = false;
-				else {
-					if (-442628795 * client.playerIndex == i)
-						throw new RuntimeException();
-					Class410 class410 = Class10.aClass410Array138[i] = new Class410();
-					((Class410) class410).anInt5288 = (1896571807 * (((class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0] + class341.gameSceneBaseY * 283514611) >> 6) + ((class365_sub1_sub1_sub2_sub2.plane << 28) + ((-1760580017 * class341.gameSceneBaseX + (class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0])) >> 6 << 14))));
-					if (-1 != (class365_sub1_sub1_sub2_sub2.anInt10221 * 1208589843))
-						((Class410) class410).anInt5286 = (class365_sub1_sub1_sub2_sub2.anInt10221 * 1714576017);
-					else
-						((Class410) class410).anInt5286 = class365_sub1_sub1_sub2_sub2.aClass386_10084.method4719((byte) 0) * 481306955;
-					((Class410) class410).anInt5285 = class365_sub1_sub1_sub2_sub2.anInt10090 * 1969382475;
-					((Class410) class410).aBoolean5287 = class365_sub1_sub1_sub2_sub2.aBoolean10203;
-					((Class410) class410).aBoolean5289 = class365_sub1_sub1_sub2_sub2.aBoolean10222;
-					if (class365_sub1_sub1_sub2_sub2.anInt10214 * 780357347 > 0)
-						Class_v.method3670(class365_sub1_sub1_sub2_sub2, (byte) -66);
-					client.aClass365_Sub1_Sub1_Sub2_Sub2Array8805[i] = null;
-					if (class298_sub53_sub2.readBits(1) != 0)
-						Class501.method6229(class298_sub53_sub2, i, 2107350837);
-				}
-			} else if (i_2_ == 1) {
-				int i_3_ = class298_sub53_sub2.readBits(3);
-				int i_4_ = class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0];
-				int i_5_ = class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0];
-				if (i_3_ == 0) {
-					i_4_--;
-					i_5_--;
-				} else if (i_3_ == 1)
-					i_5_--;
-				else if (2 == i_3_) {
-					i_4_++;
-					i_5_--;
-				} else if (i_3_ == 3)
-					i_4_--;
-				else if (4 == i_3_)
-					i_4_++;
-				else if (5 == i_3_) {
-					i_4_--;
-					i_5_++;
-				} else if (6 == i_3_)
-					i_5_++;
-				else if (7 == i_3_) {
-					i_4_++;
-					i_5_++;
-				}
-				if (bool) {
-					class365_sub1_sub1_sub2_sub2.anInt10218 = i_4_ * -586951847;
-					class365_sub1_sub1_sub2_sub2.anInt10219 = i_5_ * -682750645;
-					class365_sub1_sub1_sub2_sub2.aBoolean10217 = true;
-				} else
-					class365_sub1_sub1_sub2_sub2.method4471(i_4_, i_5_, (Class10.playersMovementTypes[i]), -2105155066);
-			} else if (2 == i_2_) {
-				int i_6_ = class298_sub53_sub2.readBits(4);
-				int i_7_ = class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0];
-				int i_8_ = class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0];
-				if (0 == i_6_) {
-					i_7_ -= 2;
-					i_8_ -= 2;
-				} else if (1 == i_6_) {
-					i_7_--;
-					i_8_ -= 2;
-				} else if (2 == i_6_)
-					i_8_ -= 2;
-				else if (3 == i_6_) {
-					i_7_++;
-					i_8_ -= 2;
-				} else if (i_6_ == 4) {
-					i_7_ += 2;
-					i_8_ -= 2;
-				} else if (5 == i_6_) {
-					i_7_ -= 2;
-					i_8_--;
-				} else if (6 == i_6_) {
-					i_7_ += 2;
-					i_8_--;
-				} else if (i_6_ == 7)
-					i_7_ -= 2;
-				else if (8 == i_6_)
-					i_7_ += 2;
-				else if (i_6_ == 9) {
-					i_7_ -= 2;
-					i_8_++;
-				} else if (i_6_ == 10) {
-					i_7_ += 2;
-					i_8_++;
-				} else if (11 == i_6_) {
-					i_7_ -= 2;
-					i_8_ += 2;
-				} else if (12 == i_6_) {
-					i_7_--;
-					i_8_ += 2;
-				} else if (i_6_ == 13)
-					i_8_ += 2;
-				else if (14 == i_6_) {
-					i_7_++;
-					i_8_ += 2;
-				} else if (i_6_ == 15) {
-					i_7_ += 2;
-					i_8_ += 2;
-				}
-				if (bool) {
-					class365_sub1_sub1_sub2_sub2.anInt10218 = i_7_ * -586951847;
-					class365_sub1_sub1_sub2_sub2.anInt10219 = i_8_ * -682750645;
-					class365_sub1_sub1_sub2_sub2.aBoolean10217 = true;
-				} else
-					class365_sub1_sub1_sub2_sub2.method4471(i_7_, i_8_, (Class10.playersMovementTypes[i]), -2092850777);
-			} else {
-				int i_9_ = class298_sub53_sub2.readBits(1);
-				if (0 == i_9_) {
-					int i_10_ = class298_sub53_sub2.readBits(12);
-					int i_11_ = i_10_ >> 10;
-					int i_12_ = i_10_ >> 5 & 0x1f;
-					if (i_12_ > 15)
-						i_12_ -= 32;
-					int i_13_ = i_10_ & 0x1f;
-					if (i_13_ > 15)
-						i_13_ -= 32;
-					int i_14_ = (class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0] + i_12_);
-					int i_15_ = (class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0] + i_13_);
-					if (bool) {
-						class365_sub1_sub1_sub2_sub2.anInt10218 = -586951847 * i_14_;
-						class365_sub1_sub1_sub2_sub2.anInt10219 = i_15_ * -682750645;
-						class365_sub1_sub1_sub2_sub2.aBoolean10217 = true;
-					} else
-						class365_sub1_sub1_sub2_sub2.method4471(i_14_, i_15_, (Class10.playersMovementTypes[i]), -2123912900);
-					class365_sub1_sub1_sub2_sub2.plane = class365_sub1_sub1_sub2_sub2.aByte7724 = (byte) ((class365_sub1_sub1_sub2_sub2.plane + i_11_) & 0x3);
-					if (client.aClass283_8716.method2654(-232228879).method2320(i_14_, i_15_, 1039567132))
-						class365_sub1_sub1_sub2_sub2.aByte7724++;
-					if (-442628795 * client.playerIndex == i && (Class99.anInt952 * 1855729883 != class365_sub1_sub1_sub2_sub2.plane))
-						Class99.anInt952 = (-85701805 * class365_sub1_sub1_sub2_sub2.plane);
-				} else {
-					int i_16_ = class298_sub53_sub2.readBits(30);
-					int i_17_ = i_16_ >> 28;
-					int i_18_ = i_16_ >> 14 & 0x3fff;
-					int i_19_ = i_16_ & 0x3fff;
-					int i_20_ = ((i_18_ + (-1760580017 * class341.gameSceneBaseX + (class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0])) & 0x3fff) - class341.gameSceneBaseX * -1760580017);
-					int i_21_ = ((i_19_ + (class341.gameSceneBaseY * 283514611 + (class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0])) & 0x3fff) - class341.gameSceneBaseY * 283514611);
-					if (bool) {
-						class365_sub1_sub1_sub2_sub2.anInt10218 = -586951847 * i_20_;
-						class365_sub1_sub1_sub2_sub2.anInt10219 = -682750645 * i_21_;
-						class365_sub1_sub1_sub2_sub2.aBoolean10217 = true;
-					} else
-						class365_sub1_sub1_sub2_sub2.method4471(i_20_, i_21_, (Class10.playersMovementTypes[i]), -2073670245);
-					class365_sub1_sub1_sub2_sub2.plane = class365_sub1_sub1_sub2_sub2.aByte7724 = (byte) ((i_17_ + class365_sub1_sub1_sub2_sub2.plane) & 0x3);
-					if (client.aClass283_8716.method2654(934483887).method2320(i_20_, i_21_, 624472586))
-						class365_sub1_sub1_sub2_sub2.aByte7724++;
-					if (i == client.playerIndex * -442628795)
-						Class99.anInt952 = (-85701805 * class365_sub1_sub1_sub2_sub2.plane);
-				}
+	public static String method8337(long l) {
+		if (l <= 0L || l >= 6582952005840035281L)
+			return null;
+		if (l % 37L == 0L)
+			return null;
+		int i = 0;
+		for (long l_4_ = l; 0L != l_4_; l_4_ /= 37L)
+			i++;
+		StringBuilder stringbuilder = new StringBuilder(i);
+		while (0L != l) {
+			long l_5_ = l;
+			l /= 37L;
+			stringbuilder.append(aCharArray5825[(int) (l_5_ - 37L * l)]);
+		}
+		return stringbuilder.reverse().toString();
+	}
+
+	public static String method8338(long l) {
+		if (l <= 0L || l >= 6582952005840035281L)
+			return null;
+		if (0L == l % 37L)
+			return null;
+		int i = 0;
+		for (long l_6_ = l; l_6_ != 0L; l_6_ /= 37L)
+			i++;
+		StringBuilder stringbuilder = new StringBuilder(i);
+		while (l != 0L) {
+			long l_7_ = l;
+			l /= 37L;
+			char c = aCharArray5825[(int) (l_7_ - 37L * l)];
+			if ('_' == c) {
+				int i_8_ = stringbuilder.length() - 1;
+				stringbuilder.setCharAt(i_8_, Character.toUpperCase(stringbuilder.charAt(i_8_)));
+				c = '\u00a0';
 			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ur.i(").append(')').toString());
+			stringbuilder.append(c);
 		}
+		stringbuilder.reverse();
+		stringbuilder.setCharAt(0, Character.toUpperCase(stringbuilder.charAt(0)));
+		return stringbuilder.toString();
+	}
+
+	static {
+		for (int i = 0; i < aLongArray5826.length; i++)
+			aLongArray5826[i] = (long) Math.pow(37.0, (double) i);
+	}
+
+	public static String method8339(long l) {
+		if (l <= 0L || l >= 6582952005840035281L)
+			return null;
+		if (0L == l % 37L)
+			return null;
+		int i = 0;
+		for (long l_9_ = l; l_9_ != 0L; l_9_ /= 37L)
+			i++;
+		StringBuilder stringbuilder = new StringBuilder(i);
+		while (l != 0L) {
+			long l_10_ = l;
+			l /= 37L;
+			char c = aCharArray5825[(int) (l_10_ - 37L * l)];
+			if ('_' == c) {
+				int i_11_ = stringbuilder.length() - 1;
+				stringbuilder.setCharAt(i_11_, Character.toUpperCase(stringbuilder.charAt(i_11_)));
+				c = '\u00a0';
+			}
+			stringbuilder.append(c);
+		}
+		stringbuilder.reverse();
+		stringbuilder.setCharAt(0, Character.toUpperCase(stringbuilder.charAt(0)));
+		return stringbuilder.toString();
+	}
+
+	public static String method8340(long l) {
+		if (l <= 0L || l >= 6582952005840035281L)
+			return null;
+		if (0L == l % 37L)
+			return null;
+		int i = 0;
+		for (long l_12_ = l; l_12_ != 0L; l_12_ /= 37L)
+			i++;
+		StringBuilder stringbuilder = new StringBuilder(i);
+		while (l != 0L) {
+			long l_13_ = l;
+			l /= 37L;
+			char c = aCharArray5825[(int) (l_13_ - 37L * l)];
+			if ('_' == c) {
+				int i_14_ = stringbuilder.length() - 1;
+				stringbuilder.setCharAt(i_14_, Character.toUpperCase(stringbuilder.charAt(i_14_)));
+				c = '\u00a0';
+			}
+			stringbuilder.append(c);
+		}
+		stringbuilder.reverse();
+		stringbuilder.setCharAt(0, Character.toUpperCase(stringbuilder.charAt(0)));
+		return stringbuilder.toString();
+	}
+
+	public static String method8341(CharSequence charsequence) {
+		String string = Class179.method3018(Class366.method6302(charsequence, (byte) -83));
+		if (string == null)
+			string = "";
+		return string;
+	}
+
+	public static String method8342(CharSequence charsequence) {
+		String string = Class179.method3018(Class366.method6302(charsequence, (byte) -64));
+		if (string == null)
+			string = "";
+		return string;
+	}
+
+	static final void method8343(Class527 class527, byte i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method12646(930194106) && Class316.aClass505_3680.method8405()) ? 1 : 0;
+	}
+
+	static final void method8344(Class527 class527, byte i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class349.method6186(class118, class98, class527, -94301647);
 	}
 }

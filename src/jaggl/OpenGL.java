@@ -8,251 +8,251 @@ import java.util.Hashtable;
 
 public class OpenGL {
 	long peer;
-	private Hashtable a;
-	private Thread f;
-	private static Hashtable b = new Hashtable();
-	public static int p = 5120;
-	public static int i = 5121;
-	public static int k = 5122;
-	public static int d = 5123;
-	public static int u = 5124;
-	public static int x = 5125;
-	public static int r = 5126;
-	public static int q = 0;
-	public static int n = 1;
-	public static int s = 2;
-	public static int z = 3;
-	public static int y = 4;
-	public static int t = 5;
-	public static int h = 6;
-	public static int v = 7;
-	public static int g = 5888;
-	public static int e = 5889;
-	public static int c = 5890;
-	public static int m = 2832;
-	public static int w = 2834;
-	public static int j = 6913;
-	public static int o = 6914;
-	public static int l = 1028;
-	public static int ax = 1029;
-	public static int aa = 2884;
-	public static int ak = 4864;
-	public static int ae = 515;
-	public static int ao = 516;
-	public static int ad = 2929;
-	public static int av = 6402;
-	public static int at = 2896;
-	public static int ah = 16384;
-	public static int ai = 16385;
-	public static int al = 16386;
-	public static int az = 4615;
-	public static int as = 4616;
-	public static int ap = 4617;
-	public static int af = 4608;
-	public static int aw = 4609;
-	public static int ab = 4611;
-	public static int aj = 5634;
-	public static int ay = 2899;
-	public static int aq = 1032;
-	public static int ag = 7425;
-	public static int an = 2903;
-	public static int au = 260;
-	public static int ar = 3008;
-	public static int ac = 3042;
-	public static int am = 0;
-	public static int bd = 1;
-	public static int bf = 768;
-	public static int be = 769;
-	public static int by = 770;
-	public static int bm = 771;
-	public static int bc = 774;
-	public static int bx = 2912;
-	public static int bo = 2917;
-	public static int bb = 2914;
-	public static int bl = 2918;
-	public static int bu = 2915;
-	public static int bw = 2916;
-	public static int bk = 9729;
-	public static int bq = 7681;
-	public static int bg = 6406;
-	public static int bs = 6409;
-	public static int bp = 6410;
-	public static int bv = 6144;
-	public static int bh = 6407;
-	public static int bn = 6408;
-	public static int bi = 2982;
-	public static int ba = 3156;
-	public static int bt = 4353;
-	public static int bj = 3089;
-	public static int br = 3348;
-	public static int bz = 3349;
-	public static int cm = 3352;
-	public static int cd = 3353;
-	public static int cs = 3354;
-	public static int cx = 3355;
-	public static int cl = 3317;
-	public static int cj = 3314;
-	public static int co = 8960;
-	public static int cw = 8704;
-	public static int cv = 3552;
-	public static int cy = 3553;
-	public static int cz = 10242;
-	public static int cg = 10243;
-	public static int ck = 10240;
-	public static int cn = 10241;
-	public static int ch = 8705;
-	public static int ct = 3168;
-	public static int cc = 3169;
-	public static int ca = 9472;
-	public static int ci = 9984;
-	public static int ce = 9987;
-	public static int cb = 9217;
-	public static int cr = 9473;
-	public static int cu = 9216;
-	public static int cp = 9474;
-	public static int cq = 8448;
-	public static int cf = 9728;
-	public static int dh = 10497;
-	public static int dg = 8192;
-	public static int dl = 8193;
-	public static int dq = 8194;
-	public static int ds = 8195;
-	public static int dp = 3170;
-	public static int dd = 3171;
-	public static int dx = 7936;
-	public static int dc = 7937;
-	public static int dk = 7938;
-	private static int db = 7939;
-	public static int dn = 256;
-	public static int do1 = 1024;
-	public static int da = 2048;
-	public static int dm = 16384;
-	public static int du = 32830;
-	public static int dv = 32834;
-	public static int di = 32852;
-	public static int df = 32859;
-	public static int dz = 32884;
-	public static int dt = 32885;
-	public static int dj = 32886;
-	public static int dr = 32888;
-	public static int de = 32879;
-	public static int dy = 33639;
-	public static int dw = 32993;
-	public static int ee = 33071;
-	public static int ef = 33984;
-	public static int eu = 33985;
-	public static int ew = 34018;
-	public static int en = 32925;
-	public static int et = 34065;
-	public static int ev = 34066;
-	public static int eg = 34067;
-	public static int ex = 34069;
-	public static int ek = 34070;
-	public static int em = 34071;
-	public static int ec = 34072;
-	public static int eb = 34073;
-	public static int ey = 34074;
-	public static int ez = 34160;
-	public static int el = 34161;
-	public static int eq = 34162;
-	public static int ep = 34176;
-	public static int ei = 34178;
-	public static int ej = 34184;
-	public static int ed = 34186;
-	public static int ea = 34192;
-	public static int eh = 34200;
-	public static int es = 34163;
-	public static int eo = 34165;
-	public static int er = 34023;
-	public static int fy = 34166;
-	public static int fb = 34167;
-	public static int fh = 34168;
-	public static int fn = 34479;
-	public static int fg = 33189;
-	public static int fa = 33190;
-	public static int fo = 35001;
-	public static int fi = 34929;
-	public static int fv = 34930;
-	public static int fm = 35632;
-	public static int ff = 35633;
-	public static int fd = 34336;
-	public static int ft = 34379;
-	public static int fu = 34933;
-	public static int fl = 34820;
-	public static int fs = 34962;
-	public static int fr = 34963;
-	public static int fz = 35040;
-	public static int fc = 35044;
-	public static int fw = 35713;
-	public static int fk = 35714;
-	public static int fe = 35716;
-	public static int fj = 35633;
-	public static int fp = 35632;
-	public static int fq = 34037;
-	public static int fx = 5131;
-	public static int gt = 34836;
-	public static int gc = 34837;
-	public static int gl = 34838;
-	public static int gq = 34840;
-	public static int gp = 34841;
-	public static int gn = 34842;
-	public static int ge = 34843;
-	public static int gm = 34844;
-	public static int go = 34846;
-	public static int gg = 34847;
-	public static int gv = 33777;
-	public static int gw = 33779;
-	public static int gj = 36053;
-	public static int gs = 36064;
-	public static int gi = 36096;
-	public static int gf = 36160;
-	public static int gb = 36161;
-	public static int gx = 36008;
-	public static int gk = 36219;
+	private Hashtable aHashtable1747;
+	private Thread aThread1748;
+	private static Hashtable aHashtable1749 = new Hashtable();
+	public static final int anInt1750 = 5120;
+	public static final int anInt1751 = 5121;
+	public static final int anInt1752 = 5122;
+	public static final int anInt1753 = 5123;
+	public static final int anInt1754 = 5124;
+	public static final int anInt1755 = 5125;
+	public static final int anInt1756 = 5126;
+	public static final int anInt1757 = 0;
+	public static final int anInt1758 = 1;
+	public static final int anInt1759 = 2;
+	public static final int anInt1760 = 3;
+	public static final int anInt1761 = 4;
+	public static final int anInt1762 = 5;
+	public static final int anInt1763 = 6;
+	public static final int anInt1764 = 7;
+	public static final int anInt1765 = 5888;
+	public static final int anInt1766 = 5889;
+	public static final int anInt1767 = 5890;
+	public static final int anInt1768 = 2832;
+	public static final int anInt1769 = 2834;
+	public static final int anInt1770 = 6913;
+	public static final int anInt1771 = 6914;
+	public static final int anInt1772 = 1028;
+	public static final int anInt1773 = 1029;
+	public static final int anInt1774 = 2884;
+	public static final int anInt1775 = 4864;
+	public static final int anInt1776 = 515;
+	public static final int anInt1777 = 516;
+	public static final int anInt1778 = 2929;
+	public static final int anInt1779 = 6402;
+	public static final int anInt1780 = 2896;
+	public static final int anInt1781 = 16384;
+	public static final int anInt1782 = 16385;
+	public static final int anInt1783 = 16386;
+	public static final int anInt1784 = 4615;
+	public static final int anInt1785 = 4616;
+	public static final int anInt1786 = 4617;
+	public static final int anInt1787 = 4608;
+	public static final int anInt1788 = 4609;
+	public static final int anInt1789 = 4611;
+	public static final int anInt1790 = 5634;
+	public static final int anInt1791 = 2899;
+	public static final int anInt1792 = 1032;
+	public static final int anInt1793 = 7425;
+	public static final int anInt1794 = 2903;
+	public static final int anInt1795 = 260;
+	public static final int anInt1796 = 3008;
+	public static final int anInt1797 = 3042;
+	public static final int anInt1798 = 0;
+	public static final int anInt1799 = 1;
+	public static final int anInt1800 = 768;
+	public static final int anInt1801 = 769;
+	public static final int anInt1802 = 770;
+	public static final int anInt1803 = 771;
+	public static final int anInt1804 = 774;
+	public static final int anInt1805 = 2912;
+	public static final int anInt1806 = 2917;
+	public static final int anInt1807 = 2914;
+	public static final int anInt1808 = 2918;
+	public static final int anInt1809 = 2915;
+	public static final int anInt1810 = 2916;
+	public static final int anInt1811 = 9729;
+	public static final int anInt1812 = 7681;
+	public static final int anInt1813 = 6406;
+	public static final int anInt1814 = 6409;
+	public static final int anInt1815 = 6410;
+	public static final int anInt1816 = 6144;
+	public static final int anInt1817 = 6407;
+	public static final int anInt1818 = 6408;
+	public static final int anInt1819 = 2982;
+	public static final int anInt1820 = 3156;
+	public static final int anInt1821 = 4353;
+	public static final int anInt1822 = 3089;
+	public static final int anInt1823 = 3348;
+	public static final int anInt1824 = 3349;
+	public static final int anInt1825 = 3352;
+	public static final int anInt1826 = 3353;
+	public static final int anInt1827 = 3354;
+	public static final int anInt1828 = 3355;
+	public static final int anInt1829 = 3317;
+	public static final int anInt1830 = 3314;
+	public static final int anInt1831 = 8960;
+	public static final int anInt1832 = 8704;
+	public static final int anInt1833 = 3552;
+	public static final int anInt1834 = 3553;
+	public static final int anInt1835 = 10242;
+	public static final int anInt1836 = 10243;
+	public static final int anInt1837 = 10240;
+	public static final int anInt1838 = 10241;
+	public static final int anInt1839 = 8705;
+	public static final int anInt1840 = 3168;
+	public static final int anInt1841 = 3169;
+	public static final int anInt1842 = 9472;
+	public static final int anInt1843 = 9984;
+	public static final int anInt1844 = 9987;
+	public static final int anInt1845 = 9217;
+	public static final int anInt1846 = 9473;
+	public static final int anInt1847 = 9216;
+	public static final int anInt1848 = 9474;
+	public static final int anInt1849 = 8448;
+	public static final int anInt1850 = 9728;
+	public static final int anInt1851 = 10497;
+	public static final int anInt1852 = 8192;
+	public static final int anInt1853 = 8193;
+	public static final int anInt1854 = 8194;
+	public static final int anInt1855 = 8195;
+	public static final int anInt1856 = 3170;
+	public static final int anInt1857 = 3171;
+	public static final int anInt1858 = 7936;
+	public static final int anInt1859 = 7937;
+	public static final int anInt1860 = 7938;
+	private static final int anInt1861 = 7939;
+	public static final int anInt1862 = 256;
+	public static final int anInt1863 = 1024;
+	public static final int anInt1864 = 2048;
+	public static final int anInt1865 = 16384;
+	public static final int anInt1866 = 32830;
+	public static final int anInt1867 = 32834;
+	public static final int anInt1868 = 32852;
+	public static final int anInt1869 = 32859;
+	public static final int anInt1870 = 32884;
+	public static final int anInt1871 = 32885;
+	public static final int anInt1872 = 32886;
+	public static final int anInt1873 = 32888;
+	public static final int anInt1874 = 32879;
+	public static final int anInt1875 = 33639;
+	public static final int anInt1876 = 32993;
+	public static final int anInt1877 = 33071;
+	public static final int anInt1878 = 33984;
+	public static final int anInt1879 = 33985;
+	public static final int anInt1880 = 34018;
+	public static final int anInt1881 = 32925;
+	public static final int anInt1882 = 34065;
+	public static final int anInt1883 = 34066;
+	public static final int anInt1884 = 34067;
+	public static final int anInt1885 = 34069;
+	public static final int anInt1886 = 34070;
+	public static final int anInt1887 = 34071;
+	public static final int anInt1888 = 34072;
+	public static final int anInt1889 = 34073;
+	public static final int anInt1890 = 34074;
+	public static final int anInt1891 = 34160;
+	public static final int anInt1892 = 34161;
+	public static final int anInt1893 = 34162;
+	public static final int anInt1894 = 34176;
+	public static final int anInt1895 = 34178;
+	public static final int anInt1896 = 34184;
+	public static final int anInt1897 = 34186;
+	public static final int anInt1898 = 34192;
+	public static final int anInt1899 = 34200;
+	public static final int anInt1900 = 34163;
+	public static final int anInt1901 = 34165;
+	public static final int anInt1902 = 34023;
+	public static final int anInt1903 = 34166;
+	public static final int anInt1904 = 34167;
+	public static final int anInt1905 = 34168;
+	public static final int anInt1906 = 34479;
+	public static final int anInt1907 = 33189;
+	public static final int anInt1908 = 33190;
+	public static final int anInt1909 = 35001;
+	public static final int anInt1910 = 34929;
+	public static final int anInt1911 = 34930;
+	public static final int anInt1912 = 35632;
+	public static final int anInt1913 = 35633;
+	public static final int anInt1914 = 34336;
+	public static final int anInt1915 = 34379;
+	public static final int anInt1916 = 34933;
+	public static final int anInt1917 = 34820;
+	public static final int anInt1918 = 34962;
+	public static final int anInt1919 = 34963;
+	public static final int anInt1920 = 35040;
+	public static final int anInt1921 = 35044;
+	public static final int anInt1922 = 35713;
+	public static final int anInt1923 = 35714;
+	public static final int anInt1924 = 35716;
+	public static final int anInt1925 = 35633;
+	public static final int anInt1926 = 35632;
+	public static final int anInt1927 = 34037;
+	public static final int anInt1928 = 5131;
+	public static final int anInt1929 = 34836;
+	public static final int anInt1930 = 34837;
+	public static final int anInt1931 = 34838;
+	public static final int anInt1932 = 34840;
+	public static final int anInt1933 = 34841;
+	public static final int anInt1934 = 34842;
+	public static final int anInt1935 = 34843;
+	public static final int anInt1936 = 34844;
+	public static final int anInt1937 = 34846;
+	public static final int anInt1938 = 34847;
+	public static final int anInt1939 = 33777;
+	public static final int anInt1940 = 33779;
+	public static final int anInt1941 = 36053;
+	public static final int anInt1942 = 36064;
+	public static final int anInt1943 = 36096;
+	public static final int anInt1944 = 36160;
+	public static final int anInt1945 = 36161;
+	public static final int anInt1946 = 36008;
+	public static final int anInt1947 = 36219;
 
 	public native long init(Canvas canvas, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_);
 
 	public native boolean arePbuffersAvailable();
 
-	public boolean a(String string) {
-		if (null == a) {
-			a = new Hashtable();
+	public boolean method2569(String string) {
+		if (aHashtable1747 == null) {
+			aHashtable1747 = new Hashtable();
 			String string_5_ = glGetString(7939);
 			int i = 0;
 			for (;;) {
 				int i_6_ = string_5_.indexOf(' ', i);
-				if (-1 == i_6_)
+				if (i_6_ == -1)
 					break;
 				String string_7_ = string_5_.substring(i, i_6_).trim();
 				if (string_7_.length() != 0)
-					a.put(string_7_, string_7_);
-				i = i_6_ + 1;
+					aHashtable1747.put(string_7_, string_7_);
+				i = 1 + i_6_;
 			}
 			String string_8_ = string_5_.substring(i).trim();
 			if (string_8_.length() != 0)
-				a.put(string_8_, string_8_);
+				aHashtable1747.put(string_8_, string_8_);
 		}
-		return a.containsKey(string);
+		return aHashtable1747.containsKey(string);
 	}
 
-	public synchronized boolean f() {
+	public synchronized boolean method2570() {
 		Thread thread = Thread.currentThread();
 		if (attachPeer()) {
-			OpenGL opengl_9_ = (OpenGL) b.put(thread, this);
-			if (opengl_9_ != null)
-				opengl_9_.f = null;
-			f = thread;
+			OpenGL opengl_9_ = (OpenGL) aHashtable1749.put(thread, this);
+			if (null != opengl_9_)
+				opengl_9_.aThread1748 = null;
+			aThread1748 = thread;
 			return true;
 		}
 		return false;
 	}
 
-	public synchronized boolean b() {
-		if (f != Thread.currentThread())
+	public synchronized boolean method2571() {
+		if (aThread1748 != Thread.currentThread())
 			return false;
 		detachPeer();
-		b.remove(f);
-		f = null;
+		aHashtable1749.remove(aThread1748);
+		aThread1748 = null;
 		return true;
 	}
 
@@ -647,4 +647,142 @@ public class OpenGL {
 	public static native void glStencilFunc(int i, int i_351_, int i_352_);
 
 	public static native void glStencilOp(int i, int i_353_, int i_354_);
+
+	public boolean method2572(String string) {
+		if (aHashtable1747 == null) {
+			aHashtable1747 = new Hashtable();
+			String string_355_ = glGetString(7939);
+			int i = 0;
+			for (;;) {
+				int i_356_ = string_355_.indexOf(' ', i);
+				if (i_356_ == -1)
+					break;
+				String string_357_ = string_355_.substring(i, i_356_).trim();
+				if (string_357_.length() != 0)
+					aHashtable1747.put(string_357_, string_357_);
+				i = 1 + i_356_;
+			}
+			String string_358_ = string_355_.substring(i).trim();
+			if (string_358_.length() != 0)
+				aHashtable1747.put(string_358_, string_358_);
+		}
+		return aHashtable1747.containsKey(string);
+	}
+
+	public boolean method2573(String string) {
+		if (aHashtable1747 == null) {
+			aHashtable1747 = new Hashtable();
+			String string_359_ = glGetString(7939);
+			int i = 0;
+			for (;;) {
+				int i_360_ = string_359_.indexOf(' ', i);
+				if (i_360_ == -1)
+					break;
+				String string_361_ = string_359_.substring(i, i_360_).trim();
+				if (string_361_.length() != 0)
+					aHashtable1747.put(string_361_, string_361_);
+				i = 1 + i_360_;
+			}
+			String string_362_ = string_359_.substring(i).trim();
+			if (string_362_.length() != 0)
+				aHashtable1747.put(string_362_, string_362_);
+		}
+		return aHashtable1747.containsKey(string);
+	}
+
+	public boolean method2574(String string) {
+		if (aHashtable1747 == null) {
+			aHashtable1747 = new Hashtable();
+			String string_363_ = glGetString(7939);
+			int i = 0;
+			for (;;) {
+				int i_364_ = string_363_.indexOf(' ', i);
+				if (i_364_ == -1)
+					break;
+				String string_365_ = string_363_.substring(i, i_364_).trim();
+				if (string_365_.length() != 0)
+					aHashtable1747.put(string_365_, string_365_);
+				i = 1 + i_364_;
+			}
+			String string_366_ = string_363_.substring(i).trim();
+			if (string_366_.length() != 0)
+				aHashtable1747.put(string_366_, string_366_);
+		}
+		return aHashtable1747.containsKey(string);
+	}
+
+	public boolean method2575(String string) {
+		if (aHashtable1747 == null) {
+			aHashtable1747 = new Hashtable();
+			String string_367_ = glGetString(7939);
+			int i = 0;
+			for (;;) {
+				int i_368_ = string_367_.indexOf(' ', i);
+				if (i_368_ == -1)
+					break;
+				String string_369_ = string_367_.substring(i, i_368_).trim();
+				if (string_369_.length() != 0)
+					aHashtable1747.put(string_369_, string_369_);
+				i = 1 + i_368_;
+			}
+			String string_370_ = string_367_.substring(i).trim();
+			if (string_370_.length() != 0)
+				aHashtable1747.put(string_370_, string_370_);
+		}
+		return aHashtable1747.containsKey(string);
+	}
+
+	public boolean method2576(String string) {
+		if (aHashtable1747 == null) {
+			aHashtable1747 = new Hashtable();
+			String string_371_ = glGetString(7939);
+			int i = 0;
+			for (;;) {
+				int i_372_ = string_371_.indexOf(' ', i);
+				if (i_372_ == -1)
+					break;
+				String string_373_ = string_371_.substring(i, i_372_).trim();
+				if (string_373_.length() != 0)
+					aHashtable1747.put(string_373_, string_373_);
+				i = 1 + i_372_;
+			}
+			String string_374_ = string_371_.substring(i).trim();
+			if (string_374_.length() != 0)
+				aHashtable1747.put(string_374_, string_374_);
+		}
+		return aHashtable1747.containsKey(string);
+	}
+
+	public synchronized boolean method2577() {
+		Thread thread = Thread.currentThread();
+		if (attachPeer()) {
+			OpenGL opengl_375_ = (OpenGL) aHashtable1749.put(thread, this);
+			if (null != opengl_375_)
+				opengl_375_.aThread1748 = null;
+			aThread1748 = thread;
+			return true;
+		}
+		return false;
+	}
+
+	public synchronized boolean method2578() {
+		Thread thread = Thread.currentThread();
+		if (attachPeer()) {
+			OpenGL opengl_376_ = (OpenGL) aHashtable1749.put(thread, this);
+			if (null != opengl_376_)
+				opengl_376_.aThread1748 = null;
+			aThread1748 = thread;
+			return true;
+		}
+		return false;
+	}
+
+	public synchronized boolean method2579() {
+		if (aThread1748 != Thread.currentThread())
+			return false;
+		detachPeer();
+		aHashtable1749.remove(aThread1748);
+		aThread1748 = null;
+		return true;
+	}
 }

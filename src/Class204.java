@@ -1,61 +1,78 @@
 /* Class204 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.awt.Canvas;
 
-public class Class204 {
-	public static GraphicsToolkit method1911(Canvas canvas, Interface_ma interface_ma, Class243 class243, int i) {
-		GraphicsToolkit class_ra;
-		try {
-			boolean bool = Class_ra_Sub3.method5421();
-			if (!bool)
-				throw new RuntimeException("");
-			if (!Class85.method955(-739351876).method265("jagdx", 65483240))
-				throw new RuntimeException("");
-			class_ra = Class_ra_Sub3_Sub2.method5545(canvas, interface_ma, class243, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
-			throw new RuntimeException("");
-		}
-		return class_ra;
+public class Class204 implements Interface43 {
+	public static Class204 aClass204_2578;
+	static Class204 aClass204_2579 = new Class204(0);
+	int anInt2580;
+
+	Class204(int i) {
+		((Class204) this).anInt2580 = i * 849199925;
 	}
 
-	public static GraphicsToolkit method1912(Canvas canvas, Interface_ma interface_ma, Class243 class243, int i) {
-		GraphicsToolkit class_ra;
-		try {
-			boolean bool = Class_ra_Sub3.method5421();
-			if (!bool)
-				throw new RuntimeException("");
-			if (!Class85.method955(-765516167).method265("jagdx", -1570923611))
-				throw new RuntimeException("");
-			class_ra = Class_ra_Sub3_Sub2.method5545(canvas, interface_ma, class243, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
-			throw new RuntimeException("");
-		}
-		return class_ra;
+	public int method243(byte i) {
+		return 1946072861 * ((Class204) this).anInt2580;
 	}
 
-	Class204() throws Throwable {
-		throw new Error();
+	public int method75() {
+		return 1946072861 * ((Class204) this).anInt2580;
 	}
 
-	public static GraphicsToolkit method1913(Canvas canvas, Interface_ma interface_ma, Class243 class243, int i) {
-		GraphicsToolkit class_ra;
-		try {
-			boolean bool = Class_ra_Sub3.method5421();
-			if (!bool)
-				throw new RuntimeException("");
-			if (!Class85.method955(1227056345).method265("jagdx", 1326863059))
-				throw new RuntimeException("");
-			class_ra = Class_ra_Sub3_Sub2.method5545(canvas, interface_ma, class243, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
-			throw new RuntimeException("");
-		}
-		return class_ra;
+	static Class204[] method3362() {
+		return new Class204[] { aClass204_2578, aClass204_2579 };
+	}
+
+	public int method76() {
+		return 1946072861 * ((Class204) this).anInt2580;
+	}
+
+	static {
+		aClass204_2578 = new Class204(1);
+	}
+
+	public static final int method3363(int i) {
+		return (int) (1000000000L / (-2258443257437157839L * Class263.aLong3242));
+	}
+
+	static final void method3364(Class527 class527, int i) {
+		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((Class527) class527).anObjectArray7017[(((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709])]);
+	}
+
+	static final void method3365(Class118 class118, Class98 class98, Class527 class527, int i) {
+		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+		if (Class96_Sub14.method14642(string, class527, 1659229843) != null)
+			string = string.substring(0, string.length() - 1);
+		class118.anObjectArray1302 = Class351.method6193(string, class527, -80213268);
+		class118.aBool1384 = true;
+	}
+
+	static final void method3366(Class118 class118, Class98 class98, Class527 class527, byte i) {
+		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+		if (Class96_Sub14.method14642(string, class527, 570698140) != null)
+			string = string.substring(0, string.length() - 1);
+		class118.anObjectArray1416 = Class351.method6193(string, class527, -422636898);
+		class118.aBool1384 = true;
+	}
+
+	static void method3367(int i) {
+		Class291_Sub1.aClass465_8025.method7749(-916385240);
+		Class291_Sub1.aClass465_8029.method7749(894891319);
+	}
+
+	static final void method3368(Class527 class527, int i) {
+		if (!Class203.method3360((byte) -8))
+			Class312.method5558(-500941691);
+	}
+
+	static final void method3369(Class118 class118, Class98 class98, Class527 class527, byte i) {
+		class118.aString1338 = (String) (((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 -= 1476624725) * 1806726141)]);
+	}
+
+	static final void method3370(Class527 class527, byte i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class15.method542(class118, class98, class527, -2005893492);
 	}
 }

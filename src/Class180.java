@@ -1,64 +1,117 @@
 /* Class180 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.io.File;
 
-public class Class180 implements Interface20 {
-	static File aFile6528;
+public class Class180 {
+	public int anInt2235;
+	public int anInt2236;
+	public int anInt2237;
+	public int anInt2238;
+	int anInt2239;
+	int anInt2240;
+	int anInt2241;
+	public int anInt2242 = 669014749;
+	public int anInt2243;
+	int anInt2244;
+	static Class229 aClass229_2245 = new Class229(4);
+	static int anInt2246;
 
-	public String method241(Class367 class367, int[] is, long l) {
-		try {
-			if (class367 == Class367.aClass367_3987) {
-				ClientScriptMap class483 = Class51.aClass475_506.getClientScriptMap(is[0], 1528209569);
-				return class483.method6122((int) l, (byte) -8);
+	static void method3022(int i) {
+		anInt2246 = -1709646095 * i;
+		aClass229_2245.method3859(-791032658);
+	}
+
+	static void method3023(int i) {
+		aClass229_2245.method3858(i, (byte) 91);
+	}
+
+	static void method3024(int i) {
+		anInt2246 = -1709646095 * i;
+		aClass229_2245.method3859(-1564178152);
+	}
+
+	static void method3025(int i) {
+		anInt2246 = -1709646095 * i;
+		aClass229_2245.method3859(-522517905);
+	}
+
+	static void method3026(int i) {
+		anInt2246 = -1709646095 * i;
+		aClass229_2245.method3859(947665900);
+	}
+
+	static void method3027() {
+		aClass229_2245.method3859(-1317027746);
+	}
+
+	Class180() {
+		/* empty */
+	}
+
+	public static Class528 method3028(Class505 class505, int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+		long l = (long) i_3_;
+		Class528 class528 = (Class528) aClass229_2245.method3865(l);
+		int i_4_ = 2055;
+		if (null == class528) {
+			Class157 class157 = Class157.method2689(Class110.aClass317_1106, i_3_, 0);
+			if (null == class157)
+				return null;
+			if (class157.anInt1986 < 13)
+				class157.method2679(2);
+			class528 = class505.method8451(class157, i_4_, 2079347217 * anInt2246, 64, 768);
+			aClass229_2245.method3856(class528, l);
+		}
+		class528 = class528.method11289((byte) 6, i_4_, true);
+		if (i != 0)
+			class528.f(i);
+		if (i_0_ != 0)
+			class528.t(i_0_);
+		if (0 != i_1_)
+			class528.EA(i_1_);
+		if (0 != i_2_)
+			class528.ia(0, i_2_, 0);
+		return class528;
+	}
+
+	static void method3029() {
+		aClass229_2245.method3863(1912999243);
+	}
+
+	static final void method3030(Class527 class527, int i) {
+		int i_5_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_5_, 504897377);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class425.aBool5101 ? 1 : 0;
+	}
+
+	static final void method3031(Class527 class527, int i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class82.method1454(class118, class98, class527, (byte) 111);
+	}
+
+	public static Class108 method3032(int i, byte i_6_) {
+		do {
+			if (i >= 0) {
+				if (i_6_ != -1) {
+					for (;;) {
+						/* empty */
+					}
+				}
+				if (i < 100)
+					break;
+				if (i_6_ != -1)
+					throw new IllegalStateException();
 			}
-			if (class367 == Class367.aClass367_3999 || Class367.aClass367_3997 == class367) {
-				ItemDefinitions class468 = Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions((int) l);
-				return class468.aString5707;
-			}
-			if (class367 == Class367.aClass367_3982 || Class367.aClass367_3983 == class367 || class367 == Class367.aClass367_3991)
-				return Class51.aClass475_506.getClientScriptMap(is[0], 1528209569).method6122((int) l, (byte) -101);
 			return null;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("hn.a(").append(')').toString());
-		}
+		} while (false);
+		return Class81.aClass108Array798[i];
 	}
 
-	public String method240(Class367 class367, int[] is, long l) {
-		if (class367 == Class367.aClass367_3987) {
-			ClientScriptMap class483 = Class51.aClass475_506.getClientScriptMap(is[0], 1528209569);
-			return class483.method6122((int) l, (byte) -13);
-		}
-		if (class367 == Class367.aClass367_3999 || Class367.aClass367_3997 == class367) {
-			ItemDefinitions class468 = Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions((int) l);
-			return class468.aString5707;
-		}
-		if (class367 == Class367.aClass367_3982 || Class367.aClass367_3983 == class367 || class367 == Class367.aClass367_3991)
-			return Class51.aClass475_506.getClientScriptMap(is[0], 1528209569).method6122((int) l, (byte) 79);
-		return null;
-	}
-
-	static final void method1836(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = client.aBoolean8647 ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("hn.akv(").append(')').toString());
-		}
-	}
-
-	static final void method1837(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class165.recorder.getMouseX((byte) 69);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("hn.un(").append(')').toString());
-		}
-	}
-
-	static final void method1838(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class352.method4245(Class122.method1319((byte) 1));
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("hn.akx(").append(')').toString());
-		}
+	static final void method3033(Class527 class527, byte i) {
+		if (-1353302673 * client.anInt7319 >= 5 && -1353302673 * client.anInt7319 <= 9)
+			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = client.anInt7319 * -1353302673;
+		else
+			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 }

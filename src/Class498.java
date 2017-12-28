@@ -3,64 +3,94 @@
  */
 
 public class Class498 {
-	public short[] aShortArray6107;
-	public int[] anIntArray6108;
-	public short[] aShortArray6109;
-	public long aLong6110;
+	Class317 aClass317_5823;
+	Class229 aClass229_5824 = new Class229(64);
 
-	public Class498(SomethingDefinitions class503, boolean bool) {
-		if (bool) {
-			anIntArray6108 = new int[class503.anIntArray6129.length];
-			System.arraycopy(class503.anIntArray6129, 0, anIntArray6108, 0, anIntArray6108.length);
-		} else {
-			anIntArray6108 = new int[class503.anIntArray6130.length];
-			System.arraycopy(class503.anIntArray6130, 0, anIntArray6108, 0, anIntArray6108.length);
-		}
-		if (null != class503.aShortArray6134) {
-			aShortArray6109 = new short[class503.aShortArray6134.length];
-			System.arraycopy(class503.aShortArray6134, 0, aShortArray6109, 0, aShortArray6109.length);
-		}
-		if (null != class503.aShortArray6154) {
-			aShortArray6107 = new short[class503.aShortArray6154.length];
-			System.arraycopy(class503.aShortArray6154, 0, aShortArray6107, 0, aShortArray6107.length);
+	public void method8317() {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3859(1176678168);
 		}
 	}
 
-	public Class498(long l, int[] is, short[] is_0_, short[] is_1_) {
-		aLong6110 = 3177550440302969639L * l;
-		anIntArray6108 = is;
-		aShortArray6109 = is_0_;
-		aShortArray6107 = is_1_;
-	}
-
-	public static Class177 method6209(RsByteBuffer class298_sub53, byte i) {
-		try {
-			Class177 class177 = new Class177();
-			class177.anInt1787 = class298_sub53.readUnsignedShort() * -1496580327;
-			class177.aClass298_Sub37_Sub14_1788 = Class447.aClass469_5618.method6045((class177.anInt1787 * -2034569943), (short) -12386);
-			return class177;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("up.a(").append(')').toString());
+	public void method8318() {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3863(1023969715);
 		}
 	}
 
-	static final void method6210(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub29_7587.method5726(-2147059683);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("up.akq(").append(')').toString());
+	public void method8319(int i) {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3859(-1742228693);
 		}
 	}
 
-	static final void method6211(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5241 -= 1938723502;
-			String string = (String) (((ClientScript2) class403).anObjectArray5240[-203050393 * ((ClientScript2) class403).anInt5241]);
-			String string_2_ = ((String) (((ClientScript2) class403).anObjectArray5240[-203050393 * ((ClientScript2) class403).anInt5241 + 1]));
-			int i_3_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = string.indexOf(string_2_, i_3_);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("up.aay(").append(')').toString());
+	public void method8320(int i, int i_0_) {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3858(i, (byte) -28);
 		}
+	}
+
+	public void method8321(int i) {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3863(1716297142);
+		}
+	}
+
+	public Class498(Class486 class486, Class495 class495, Class317 class317) {
+		((Class498) this).aClass317_5823 = class317;
+		if (((Class498) this).aClass317_5823 != null)
+			((Class498) this).aClass317_5823.method5624(-71319279 * Class120.aClass120_1479.anInt1521, 2039893772);
+	}
+
+	public Class489 method8322(int i, short i_1_) {
+		Class489 class489;
+		synchronized (((Class498) this).aClass229_5824) {
+			class489 = ((Class489) ((Class498) this).aClass229_5824.method3865((long) i));
+		}
+		if (null != class489)
+			return class489;
+		byte[] is = ((Class498) this).aClass317_5823.method5607(((Class120.aClass120_1479.anInt1521) * -71319279), i, -1530672331);
+		class489 = new Class489();
+		if (is != null)
+			class489.method8213(new RsByteBuffer(is), (byte) 0);
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3856(class489, (long) i);
+		}
+		return class489;
+	}
+
+	public void method8323() {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3859(1315984117);
+		}
+	}
+
+	public void method8324() {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3863(755755769);
+		}
+	}
+
+	public void method8325() {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3859(237779425);
+		}
+	}
+
+	public void method8326() {
+		synchronized (((Class498) this).aClass229_5824) {
+			((Class498) this).aClass229_5824.method3863(1653166989);
+		}
+	}
+
+	static final void method8327(Class527 class527, int i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class455.method7555(class118, class98, class527, (byte) -121);
+	}
+
+	static final void method8328(Class527 class527, int i) {
+		((Class527) class527).aLongArray6996[(((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020])] = (((Class527) class527).aLongArray7003[((((Class527) class527).anInt7001 -= -1188480575) * 1820448321)]);
 	}
 }

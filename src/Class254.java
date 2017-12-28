@@ -2,80 +2,61 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class254 {
-	static Class254 aClass254_2786;
-	public static Class254 aClass254_2787 = new Class254(0);
-	int anInt2788;
-	static Class277 aClass277_2789;
-	public static boolean[] aBooleanArray2790;
+public abstract class Class254 implements Runnable {
+	volatile Class253[] aClass253Array3142 = new Class253[2];
+	volatile boolean aBool3143 = false;
+	volatile boolean aBool3144 = false;
+	public static int anInt3145;
 
-	Class254(int i) {
-		((Class254) this).anInt2788 = i * -2064479007;
+	Class254() {
+		/* empty */
 	}
 
-	static {
-		aClass254_2786 = new Class254(1);
+	public static long method4379(CharSequence charsequence, int i) {
+		int i_0_ = charsequence.length();
+		long l = 0L;
+		for (int i_1_ = 0; i_1_ < i_0_; i_1_++)
+			l = (l << 5) - l + (long) charsequence.charAt(i_1_);
+		return l;
 	}
 
-	static final void method2423(ClientScript2 class403, short i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -1175642067;
-			int i_0_ = (((ClientScript2) class403).anIntArray5244[681479919 * ((ClientScript2) class403).anInt5239]);
-			int i_1_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 1]);
-			int i_2_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 2]);
-			if (i_1_ == -1)
-				throw new RuntimeException();
-			ClientScriptMap class483 = Class51.aClass475_506.getClientScriptMap(i_1_, 1528209569);
-			if (class483.aChar6037 != i_0_)
-				throw new RuntimeException();
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (class483.method6127(Integer.valueOf(i_2_), (byte) 94) ? 1 : 0);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("kq.vo(").append(')').toString());
+	static int method4380(byte[][] is, byte[][] is_2_, int[] is_3_, byte[] is_4_, int[] is_5_, int i, int i_6_, int i_7_) {
+		int i_8_ = is_3_[i];
+		int i_9_ = is_5_[i] + i_8_;
+		int i_10_ = is_3_[i_6_];
+		int i_11_ = is_5_[i_6_] + i_10_;
+		int i_12_ = i_8_;
+		if (i_10_ > i_8_)
+			i_12_ = i_10_;
+		int i_13_ = i_9_;
+		if (i_11_ < i_9_)
+			i_13_ = i_11_;
+		int i_14_ = is_4_[i] & 0xff;
+		if ((is_4_[i_6_] & 0xff) < i_14_)
+			i_14_ = is_4_[i_6_] & 0xff;
+		byte[] is_15_ = is_2_[i];
+		byte[] is_16_ = is[i_6_];
+		int i_17_ = i_12_ - i_8_;
+		int i_18_ = i_12_ - i_10_;
+		for (int i_19_ = i_12_; i_19_ < i_13_; i_19_++) {
+			int i_20_ = is_15_[i_17_++] + is_16_[i_18_++];
+			if (i_20_ < i_14_)
+				i_14_ = i_20_;
 		}
+		return -i_14_;
 	}
 
-	static final void method2424(ClientScript2 class403, short i) {
-		try {
-			int i_3_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class364.method4334((char) i_3_, -401787251) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("kq.aaz(").append(')').toString());
-		}
-	}
-
-	static final void method2425(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5241 -= -1386882043;
-			Class23.method377((String) (((ClientScript2) class403).anObjectArray5240[((ClientScript2) class403).anInt5241 * -203050393]), (String) (((ClientScript2) class403).anObjectArray5240[1 + -203050393 * ((ClientScript2) class403).anInt5241]), (String) (((ClientScript2) class403).anObjectArray5240[-203050393 * ((ClientScript2) class403).anInt5241 + 2]), (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1, true, (byte) -43);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("kq.afy(").append(')').toString());
-		}
-	}
-
-	static final void method2426(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class459.method5977((byte) 79).method242(694163818);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("kq.ahl(").append(')').toString());
-		}
-	}
-
-	static boolean method2427(String string, int i, byte i_4_) {
-		try {
-			return Class65.method762(string, i, "openjs", -2106380529);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("kq.b(").append(')').toString());
-		}
-	}
-
-	static final void method2428(ClientScript2 class403, int i) {
-		try {
-			Class320.method3910(-174138334);
-			client.aClass283_8716.method2667(1331773815);
-			Class3.method300(656179282);
-			client.aBoolean8666 = false;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("kq.anq(").append(')').toString());
-		}
+	static final void method4381(Class527 class527, byte i) {
+		Class513 class513;
+		if (((Class527) class527).aBool7022) {
+			if (i >= 8)
+				return;
+			class513 = ((Class527) class527).aClass513_6994;
+		} else
+			class513 = ((Class527) class527).aClass513_7007;
+		Class513 class513_21_ = class513;
+		Class118 class118 = ((Class513) class513_21_).aClass118_5886;
+		Class98 class98 = ((Class513) class513_21_).aClass98_5885;
+		Class282_Sub25.method12401(class118, class98, class527, 1213503004);
 	}
 }

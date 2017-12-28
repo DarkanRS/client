@@ -2,59 +2,70 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class ia extends Class264 implements Interface25 {
+public class ia extends Class8 implements Interface40 {
 	long nativeid;
 
-	native void am(ja var_ja, ba var_ba, byte[][] is, int[] is_0_, int[] is_1_, int[] is_2_, int[] is_3_, int[] is_4_);
-
-	native void e(char c, int i, int i_5_, int i_6_, boolean bool);
-
-	void method2489(char c, int i, int i_7_, int i_8_, boolean bool, Class_ta class_ta, int i_9_, int i_10_) {
-		GA(c, i, i_7_, i_8_, bool, class_ta, i_9_, i_10_);
+	ia(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, Class160[] class160s) {
+		super(var_ja, class414);
+		byte[][] is = new byte[class91s.length][];
+		int[] is_0_ = new int[class91s.length];
+		int[] is_1_ = new int[class91s.length];
+		int[] is_2_ = new int[class91s.length];
+		int[] is_3_ = new int[class91s.length];
+		for (int i = 0; i < class91s.length; i++) {
+			is[i] = class91s[i].aByteArray960;
+			is_0_[i] = class91s[i].anInt957;
+			is_1_[i] = class91s[i].anInt954;
+			is_2_[i] = class91s[i].anInt956;
+			is_3_[i] = class91s[i].anInt959;
+		}
+		EA(var_ja, var_ba, is, class91s[0].anIntArray955, is_0_, is_1_, is_2_, is_3_);
 	}
+
+	native void EA(ja var_ja, ba var_ba, byte[][] is, int[] is_4_, int[] is_5_, int[] is_6_, int[] is_7_, int[] is_8_);
+
+	public void finalize() {
+		if (((ia) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 126);
+	}
+
+	native void c(char c, int i, int i_9_, int i_10_, boolean bool);
 
 	native void UA(char c, int i, int i_11_, int i_12_, boolean bool);
 
-	void method2486(char c, int i, int i_13_, int i_14_, boolean bool, Class_ta class_ta, int i_15_, int i_16_) {
-		GA(c, i, i_13_, i_14_, bool, class_ta, i_15_, i_16_);
+	native void GA(char c, int i, int i_13_, int i_14_, boolean bool, Class455 class455, int i_15_, int i_16_);
+
+	native void n(ja var_ja, ba var_ba, byte[][] is, int[] is_17_, int[] is_18_, int[] is_19_, int[] is_20_, int[] is_21_);
+
+	void method362(char c, int i, int i_22_, int i_23_, boolean bool, Class455 class455, int i_24_, int i_25_) {
+		GA(c, i, i_22_, i_23_, bool, class455, i_24_, i_25_);
 	}
-
-	native void GA(char c, int i, int i_17_, int i_18_, boolean bool, Class_ta class_ta, int i_19_, int i_20_);
-
-	native void g(char c, int i, int i_21_, int i_22_, boolean bool);
-
-	ia(ja var_ja, ba var_ba, Class505 class505, Class89[] class89s, Class57[] class57s) {
-		super(var_ja, class505);
-		byte[][] is = new byte[class89s.length][];
-		int[] is_23_ = new int[class89s.length];
-		int[] is_24_ = new int[class89s.length];
-		int[] is_25_ = new int[class89s.length];
-		int[] is_26_ = new int[class89s.length];
-		for (int i = 0; i < class89s.length; i++) {
-			is[i] = class89s[i].aByteArray818;
-			is_23_[i] = class89s[i].anInt812;
-			is_24_[i] = class89s[i].anInt816;
-			is_25_[i] = class89s[i].anInt815;
-			is_26_[i] = class89s[i].anInt811;
-		}
-		EA(var_ja, var_ba, is, class89s[0].anIntArray817, is_23_, is_24_, is_25_, is_26_);
-	}
-
-	native void bm(char c, int i, int i_27_, int i_28_, boolean bool, Class_ta class_ta, int i_29_, int i_30_);
-
-	public native void z(boolean bool);
-
-	native void n(ja var_ja, ba var_ba, byte[][] is, int[] is_31_, int[] is_32_, int[] is_33_, int[] is_34_, int[] is_35_);
 
 	public native void ma(boolean bool);
 
-	native void bd(ja var_ja, ba var_ba, byte[][] is, int[] is_36_, int[] is_37_, int[] is_38_, int[] is_39_, int[] is_40_);
+	native void t(char c, int i, int i_26_, int i_27_, boolean bool);
 
-	native void bf(char c, int i, int i_41_, int i_42_, boolean bool, Class_ta class_ta, int i_43_, int i_44_);
+	public native void y(boolean bool);
 
-	native void EA(ja var_ja, ba var_ba, byte[][] is, int[] is_45_, int[] is_46_, int[] is_47_, int[] is_48_, int[] is_49_);
+	void method12939() {
+		if (((ia) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 99);
+	}
 
-	native void by(char c, int i, int i_50_, int i_51_, boolean bool, Class_ta class_ta, int i_52_, int i_53_);
+	void method374(char c, int i, int i_28_, int i_29_, boolean bool, Class455 class455, int i_30_, int i_31_) {
+		GA(c, i, i_28_, i_29_, bool, class455, i_30_, i_31_);
+	}
 
-	native void be(char c, int i, int i_54_, int i_55_, boolean bool, Class_ta class_ta, int i_56_, int i_57_);
+	public native void x(boolean bool);
+
+	native void ae(ja var_ja, ba var_ba, byte[][] is, int[] is_32_, int[] is_33_, int[] is_34_, int[] is_35_, int[] is_36_);
+
+	void method12940() {
+		if (((ia) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 11);
+	}
+
+	native void aq(char c, int i, int i_37_, int i_38_, boolean bool, Class455 class455, int i_39_, int i_40_);
+
+	native void av(char c, int i, int i_41_, int i_42_, boolean bool, Class455 class455, int i_43_, int i_44_);
 }

@@ -3,35 +3,43 @@
  */
 
 public interface Interface16 {
-	public static int anInt2 = 0;
-	public static int anInt3 = 4;
-	public static int anInt4 = 2;
-	public static int anInt5 = 3;
-	public static int anInt6 = 1;
-	public static int anInt7 = 2;
-	public static int anInt8 = 1;
+	public static final int anInt1 = 3;
+	public static final int anInt2 = 2;
+	public static final int anInt3 = 0;
+	public static final int anInt4 = 1;
+	public static final int anInt5 = 1;
+	public static final int anInt6 = 2;
+	public static final int anInt7 = 4;
 
-	public long method216(int i);
+	public int method75();
 
-	public char method217(byte i);
+	public char method118(int i);
 
-	public int method218(byte i);
+	public int method4();
 
-	public char method219();
+	public int method84(int i);
 
-	public int method220(byte i);
+	public int method92(int i);
 
-	public int method221();
+	public long method119(int i);
 
-	public int method222();
+	public int method70();
 
-	public char method223();
+	public int method76();
 
-	public int method224();
+	public char method120();
 
-	public int method225();
+	public char method121();
 
-	public long method226();
+	public long method122();
 
-	public int method227(int i);
+	public int method77();
+
+	public long method123();
+
+	public long method124();
+
+	public int method57();
+
+	public int method125(int i);
 }

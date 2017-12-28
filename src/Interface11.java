@@ -3,19 +3,13 @@
  */
 
 public interface Interface11 {
-	public void method133();
+	public long method78(String string);
 
-	public boolean method134();
+	public long method79(String string, int i);
 
-	public void method135();
+	public long method80(String string);
 
-	public boolean method136();
+	public long method81(String string);
 
-	public void method137();
-
-	public void method138();
-
-	public void method139();
-
-	public void method140();
+	public long method82(String string);
 }

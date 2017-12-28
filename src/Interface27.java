@@ -3,21 +3,43 @@
  */
 
 public interface Interface27 {
-	public boolean method262();
+	public void method186();
 
-	public boolean method263(String string, int i);
+	public void method161(int i);
 
-	public boolean method264(int i);
+	public void method187(boolean bool, int i);
 
-	public boolean method265(String string, int i);
+	public void method188(byte i);
 
-	public boolean method266(String string);
+	public boolean method189(long l);
 
-	public boolean method267(String string);
+	public int method190(int i);
 
-	public boolean method268();
+	public void x(boolean bool);
 
-	public boolean method269();
+	public int method191(int i);
 
-	public boolean method270(String string);
+	public void method192(boolean bool);
+
+	public boolean method193(long l);
+
+	public void method194(boolean bool);
+
+	public int method71();
+
+	public void method159();
+
+	public void method195();
+
+	public int method196();
+
+	public void method158();
+
+	public int method197();
+
+	public int method198();
+
+	public void method157();
+
+	public int method72();
 }

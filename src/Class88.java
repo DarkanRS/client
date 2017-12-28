@@ -1,91 +1,151 @@
+
 /* Class88 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.awt.Canvas;
 
 public class Class88 {
-	static int anInt806;
-	static Class88 aClass88_807;
-	static Class88 aClass88_808 = new Class88();
-	static Class88 aClass88_809 = new Class88();
-	static int anInt810;
+	public static final int anInt849 = 7;
+	public static final int anInt850 = 2;
+	public static final int anInt851 = 4;
+	public static final int anInt852 = 16;
+	public static final int anInt853 = 32;
+	public static final int anInt854 = 4;
+	public static final int anInt855 = 1;
+	public static final int anInt856 = 2;
+	public static final int anInt857 = 2;
+	public static final int anInt858 = 1;
+	public static final int anInt859 = 2;
+	public static final int anInt860 = 16;
+	public static final int anInt861 = 32;
+	public static final int anInt862 = 128;
+	public static final int anInt863 = 8;
+	public static final int anInt864 = 2;
+	public static final int anInt865 = 1024;
+	public static final int anInt866 = 0;
+	public static final int anInt867 = 4096;
+	public static final int anInt868 = 8192;
+	public static final int anInt869 = 5;
+	public static final int anInt870 = 32768;
+	public static final int anInt871 = 65536;
+	public static final int anInt872 = 131072;
+	public static final int anInt873 = 2;
+	public static final int anInt874 = 524288;
+	public static final int anInt875 = 1048576;
+	public static final int anInt876 = 1;
+	public static final int anInt877 = 3;
+	public static final int anInt878 = 1;
+	public static final int anInt879 = 64;
+	public static final int anInt880 = 1;
+	public static final int anInt881 = 2;
+	public static final float aFloat882 = 1.0F;
+	public static final int anInt883 = 16384;
+	public static final int anInt884 = 16;
+	public static final int anInt885 = 262144;
+	public static final int anInt886 = 1;
+	public static final int anInt887 = 2;
+	public static final int anInt888 = 2;
+	public static final int anInt889 = 1;
+	public static final int anInt890 = 2;
+	public static final int anInt891 = 3;
+	public static final int anInt892 = 4;
+	public static final int anInt893 = 1;
+	public static final int anInt894 = 1;
+	public static final int anInt895 = 2;
+	public static final int anInt896 = 0;
+	public static final int anInt897 = 1;
+	public static final int anInt898 = 2;
+	public static final int anInt899 = 4;
+	public static final int anInt900 = 0;
+	public static final int anInt901 = 8;
+	public static final int anInt902 = 3;
+	public static final int anInt903 = 0;
+	public static final int anInt904 = 1;
+	public static final float aFloat905 = 1.0F;
+	public static final int anInt906 = 256;
+	public static final int anInt907 = 4;
+	public static final int anInt908 = 5;
+	public static final int anInt909 = 0;
+	public static final int anInt910 = 1;
+	public static final int anInt911 = 32;
+	public static final int anInt912 = 3;
+	public static final int anInt913 = 4;
+	public static final int anInt914 = 0;
+	public static final float aFloat915 = 1.0F;
+	public static final float aFloat916 = 0.25F;
+	public static final int anInt917 = 15;
+	static final float aFloat918 = 0.0F;
+	static final float aFloat919 = 1.0F;
+	public static final int anInt920 = 512;
+	public static final int anInt921 = 1;
+	public static final int anInt922 = 2;
+	public static final int anInt923 = 4;
+	public static final int anInt924 = 1;
+	public static final int anInt925 = 4;
+	public static final int anInt926 = 4;
+	public static final int anInt927 = 8;
+	public static final int anInt928 = 2048;
+	public static final int anInt929 = 7;
 
-	static {
-		aClass88_807 = new Class88();
+	Class88() throws Throwable {
+		throw new Error();
 	}
 
-	Class88() {
-		/* empty */
+	static synchronized Class505 method1493(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_0_, int i_1_, int i_2_, byte i_3_) {
+		if (0 == i)
+			return Class109_Sub1.method14652(canvas, interface22, i_1_, i_2_, (byte) -124);
+		if (i == 2)
+			return Class8.method404(canvas, interface22, i_1_, i_2_, 596227505);
+		if (i == 1)
+			return Class171.method2909(canvas, interface22, i_0_);
+		if (5 == i)
+			return Class315.method5582(canvas, interface22, class317, i_0_);
+		if (i == 3)
+			return Class374.method6367(canvas, interface22, class317, i_0_);
+		throw new IllegalArgumentException("");
 	}
 
-	static final void method972(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -783761378;
-			int i_0_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]);
-			int i_1_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919 + 1]);
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			Class523.method6330(((Class390) class390).aClass105_4168, i_0_, i_1_, 1973544714);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.sv(").append(')').toString());
-		}
+	static final void method1494(Class118 class118, Class527 class527, byte i) {
+		int i_4_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_5_ = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
+		if (class118.anInt1329 * 2131324949 != 2)
+			throw new RuntimeException("");
+		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(class118.anInt1330 * -402732635, (byte) -49);
+		if (null == class118.aClass417_1308)
+			class118.aClass417_1308 = new Class417(class409, false);
+		class118.aClass417_1308.aLong4993 = Class86.method1480(1471250768) * 7197667099348947907L;
+		if (i_5_ < 0 || i_5_ >= class409.anIntArray4860.length)
+			throw new RuntimeException("");
+		class118.aClass417_1308.anIntArray4992[i_5_] = i_4_;
+		Class109.method1858(class118, (byte) 54);
 	}
 
-	static final void method973(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (Class12.aClass298_Sub44_9946.cpuClockSpeed * 399637415 < 512 || client.aBoolean8646 || client.aBoolean8662) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.akp(").append(')').toString());
-		}
-	}
-
-	static final void method974(ClientScript2 class403, int i) {
-		try {
-			int i_2_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			if (-1 != i_2_)
-				Class285.method2710(i_2_, (byte) 48);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.anl(").append(')').toString());
-		}
-	}
-
-	static final void method975(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class389.method4862(class105, class119, class403, -2146430395);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.cp(").append(')').toString());
-		}
-	}
-
-	static boolean method976(int i, int i_3_) {
-		try {
-			return i == 12 || i == 11 || 7 == i;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.fh(").append(')').toString());
-		}
-	}
-
-	static String method977(IComponentDefinition class105, int i) {
-		try {
-			if (client.method2801(class105).method3497((byte) -122) == 0)
-				return null;
-			if (null == class105.aString1237 || class105.aString1237.trim().length() == 0) {
-				if (client.aBoolean8846)
-					return "Hidden-use";
-				return null;
+	static void method1495(String[] strings, short[] is, int i, int i_6_, int i_7_) {
+		if (i < i_6_) {
+			int i_8_ = (i + i_6_) / 2;
+			int i_9_ = i;
+			String string = strings[i_8_];
+			strings[i_8_] = strings[i_6_];
+			strings[i_6_] = string;
+			short i_10_ = is[i_8_];
+			is[i_8_] = is[i_6_];
+			is[i_6_] = i_10_;
+			for (int i_11_ = i; i_11_ < i_6_; i_11_++) {
+				if (string == null || (null != strings[i_11_] && strings[i_11_].compareTo(string) < (i_11_ & 0x1))) {
+					String string_12_ = strings[i_11_];
+					strings[i_11_] = strings[i_9_];
+					strings[i_9_] = string_12_;
+					short i_13_ = is[i_11_];
+					is[i_11_] = is[i_9_];
+					is[i_9_++] = i_13_;
+				}
 			}
-			return class105.aString1237;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.mn(").append(')').toString());
-		}
-	}
-
-	static final void method978(ClientScript2 class403, int i) {
-		try {
-			Class212.aClass212_2427.method1952(-1654583963);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("do.afk(").append(')').toString());
+			strings[i_6_] = strings[i_9_];
+			strings[i_9_] = string;
+			is[i_6_] = is[i_9_];
+			is[i_9_] = i_10_;
+			method1495(strings, is, i, i_9_ - 1, -109372868);
+			method1495(strings, is, 1 + i_9_, i_6_, -805435373);
 		}
 	}
 }

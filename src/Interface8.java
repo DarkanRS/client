@@ -2,12 +2,8 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public interface Interface8 {
-	public void x();
+public interface Interface8 extends Interface10 {
+	public void method26();
 
-	public void u();
-
-	public void b();
-
-	public void d();
+	public void method32();
 }

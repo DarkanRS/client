@@ -1,168 +1,111 @@
+
 /* Class507 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.awt.Container;
+import java.awt.Insets;
 
 public class Class507 {
-	Class348 aClass348_6204;
-	Class411 aClass411_6205;
-	Class348 aClass348_6206 = new Class348(64);
-	Class243 aClass243_6207;
-	Class243 aClass243_6208;
-	boolean aBoolean6209;
-	int anInt6210;
-	Class348 aClass348_6211;
-	Class429 aClass429_6212;
-	String[] aStringArray6213;
+	public static final int anInt5859 = 6;
+	static Class208 aClass208_5860;
 
-	public SomethingDefinitions method6269(int i, int i_0_) {
-		try {
-			SomethingDefinitions class503;
-			synchronized (((Class507) this).aClass348_6206) {
-				class503 = (SomethingDefinitions) ((Class507) this).aClass348_6206.method4184((long) i);
-			}
-			if (null != class503)
-				return class503;
-			byte[] is;
-			synchronized (((Class507) this).aClass243_6207) {
-				is = (((Class507) this).aClass243_6207.getFile(Class120.aClass120_1410.getArchiveId(i, -790155853), Class120.aClass120_1410.getFileId(i, -576275965), (byte) -76));
-			}
-			class503 = new SomethingDefinitions();
-			class503.anInt6126 = -1840892671 * i;
-			((SomethingDefinitions) class503).aClass507_6125 = this;
-			class503.aStringArray6142 = (String[]) ((Class507) this).aStringArray6213.clone();
-			if (is != null)
-				class503.method6235(new RsByteBuffer(is), -975728899);
-			class503.method6243(1323410423);
-			synchronized (((Class507) this).aClass348_6206) {
-				((Class507) this).aClass348_6206.method4194(class503, (long) i);
-			}
-			return class503;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.a(").append(')').toString());
-		}
+	Class507() throws Throwable {
+		throw new Error();
 	}
 
-	public void method6270(boolean bool, byte i) {
-		try {
-			if (((Class507) this).aBoolean6209 != bool) {
-				((Class507) this).aBoolean6209 = bool;
-				method6272(-1071306617);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.f(").append(')').toString());
-		}
+	static final void method8723(Class527 class527, int i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class202.method3338(class118, class98, class527, (byte) 40);
 	}
 
-	public void method6271(int i, int i_1_) {
-		try {
-			((Class507) this).anInt6210 = i * -1576689997;
-			synchronized (((Class507) this).aClass348_6204) {
-				((Class507) this).aClass348_6204.method4187();
-			}
-			synchronized (((Class507) this).aClass348_6211) {
-				((Class507) this).aClass348_6211.method4187();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.b(").append(')').toString());
-		}
-	}
-
-	public void method6272(int i) {
-		try {
-			synchronized (((Class507) this).aClass348_6206) {
-				((Class507) this).aClass348_6206.method4187();
-			}
-			synchronized (((Class507) this).aClass348_6204) {
-				((Class507) this).aClass348_6204.method4187();
-			}
-			synchronized (((Class507) this).aClass348_6211) {
-				((Class507) this).aClass348_6211.method4187();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.p(").append(')').toString());
-		}
-	}
-
-	public void method6273(byte i) {
-		try {
-			synchronized (((Class507) this).aClass348_6204) {
-				((Class507) this).aClass348_6204.method4187();
-			}
-			synchronized (((Class507) this).aClass348_6211) {
-				((Class507) this).aClass348_6211.method4187();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.i(").append(')').toString());
-		}
-	}
-
-	public void method6274(int i) {
-		try {
-			synchronized (((Class507) this).aClass348_6206) {
-				((Class507) this).aClass348_6206.method4189();
-			}
-			synchronized (((Class507) this).aClass348_6204) {
-				((Class507) this).aClass348_6204.method4189();
-			}
-			synchronized (((Class507) this).aClass348_6211) {
-				((Class507) this).aClass348_6211.method4189();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.d(").append(')').toString());
-		}
-	}
-
-	public void method6275(int i, int i_2_) {
-		try {
-			synchronized (((Class507) this).aClass348_6206) {
-				((Class507) this).aClass348_6206.method4186(i, 612752798);
-			}
-			synchronized (((Class507) this).aClass348_6204) {
-				((Class507) this).aClass348_6204.method4186(i, -709168280);
-			}
-			synchronized (((Class507) this).aClass348_6211) {
-				((Class507) this).aClass348_6211.method4186(i, -1808092959);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.k(").append(')').toString());
-		}
-	}
-
-	public Class507(Class411 class411, Class429 class429, boolean bool, Class243 class243, Class243 class243_3_) {
-		((Class507) this).aClass348_6204 = new Class348(50);
-		((Class507) this).aClass348_6211 = new Class348(5);
-		((Class507) this).aClass411_6205 = class411;
-		((Class507) this).aClass429_6212 = class429;
-		((Class507) this).aBoolean6209 = bool;
-		((Class507) this).aClass243_6207 = class243;
-		((Class507) this).aClass243_6208 = class243_3_;
-		if (((Class507) this).aClass243_6207 != null) {
-			int i = ((Class507) this).aClass243_6207.method2296(2037724352) - 1;
-			Class120.aClass120_1410.method1306((short) 12429);
-			((Class507) this).aClass243_6207.method2316(i, 678420951);
-		}
-		if (Class411.aClass411_5320 == ((Class507) this).aClass411_6205)
-			((Class507) this).aStringArray6213 = (new String[] { null, null, null, null, null, Tradution.aClass470_5905.method6049((((Class507) this).aClass429_6212), -875414210) });
+	static final void method8724(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 283782002;
+		int i_0_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+		int i_1_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
+		if (Class468_Sub8.aClass98Array7889[i_0_] == null)
+			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((Class507) this).aStringArray6213 = new String[] { null, null, null, null, null, null };
+			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1726519169 * (Class468_Sub8.aClass98Array7889[i_0_].aClass118Array998[i_1_].anInt1414);
 	}
 
-	static void method6276(int i) {
-		try {
-			Class229.aClass348_6452.method4187();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.a(").append(')').toString());
+	static void method8725(int i, int i_2_, int i_3_, int i_4_, boolean bool, int i_5_) {
+		if (Class475.aBool5623 && client.aFrame3260 != null && (i_2_ != 3 || Class363.anInt4203 * -2123019059 != i_3_ || i_4_ != 977902937 * client.anInt3249)) {
+			Class329.method5903(Class274.aClass470_3336, client.aFrame3260, -1600993985);
+			client.aFrame3260 = null;
+		}
+		if (Class475.aBool5623 && i_2_ == 3 && client.aFrame3260 == null) {
+			client.aFrame3260 = Class472.method7852(Class274.aClass470_3336, i_3_, i_4_, 0, 0, (byte) -27);
+			if (client.aFrame3260 != null) {
+				Class363.anInt4203 = -1685356539 * i_3_;
+				client.anInt3249 = i_4_ * -1328358679;
+				Class190.method3148((byte) 115);
+			}
+		}
+		if (i_2_ == 3 && (!Class475.aBool5623 || null == client.aFrame3260))
+			method8725(i, Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-1519705843), -1, -1, true, -1040786933);
+		else {
+			Container container = Class371.method6354((byte) 1);
+			if (null != client.aFrame3260) {
+				Class45.anInt434 = 1031248161 * i_3_;
+				Class107.anInt1082 = i_4_ * 685317511;
+			} else if (client.aFrame3261 != null) {
+				Insets insets = client.aFrame3261.getInsets();
+				Class45.anInt434 = (client.aFrame3261.getSize().width - (insets.left + insets.right)) * 1031248161;
+				Class107.anInt1082 = (client.aFrame3261.getSize().height - (insets.bottom + insets.top)) * 685317511;
+			} else {
+				Class45.anInt434 = container.getSize().width * 1031248161;
+				Class107.anInt1082 = container.getSize().height * 685317511;
+			}
+			if (-1016911135 * Class45.anInt434 <= 0)
+				Class45.anInt434 = 1031248161;
+			if (Class107.anInt1082 * -499509193 <= 0)
+				Class107.anInt1082 = 685317511;
+			if (i_2_ != 1)
+				Class46.method935((byte) -63);
+			else {
+				Class349.anInt4083 = 262617915 * client.anInt7439;
+				client.anInt3250 = (-1016911135 * Class45.anInt434 - client.anInt7439 * 150480619) / 2 * -1347577581;
+				client.anInt3243 = 1984724499 * client.anInt7312;
+				client.anInt3251 = 0;
+			}
+			if (Class90.aClass496_952 != Class496.aClass496_5813 && Class349.anInt4083 * -418109423 < 1024 && client.anInt3243 * -969250379 >= 768) {
+				/* empty */
+			}
+			if (!bool) {
+				Class351.aCanvas4096.setSize(-418109423 * Class349.anInt4083, client.anInt3243 * -969250379);
+				Class316.aClass505_3680.method8414(Class351.aCanvas4096, -418109423 * Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
+				if (container == client.aFrame3261) {
+					Insets insets = client.aFrame3261.getInsets();
+					Class351.aCanvas4096.setLocation(insets.left + -1911940837 * client.anInt3250, insets.top + client.anInt3251 * 698621615);
+				} else
+					Class351.aCanvas4096.setLocation((-1911940837 * client.anInt3250), (client.anInt3251 * 698621615));
+			} else
+				Class350_Sub2.method12571(-551950888);
+			if (i_2_ >= 2)
+				client.aBool7301 = true;
+			else
+				client.aBool7301 = false;
+			Class400.method6795(2030703690);
+			if (-1699899559 * client.anInt7349 != -1)
+				Class516.method8867(true, -905479502);
+			if (client.aClass184_7475.method3053((byte) -102) != null && Class169.method2875(client.anInt7166 * -1741204137, -2070106492))
+				Class388.method6692(529242177);
+			for (int i_6_ = 0; i_6_ < 107; i_6_++)
+				client.aBoolArray7443[i_6_] = true;
+			client.aBool3274 = true;
 		}
 	}
 
-	static final void method6277(ClientScript2 class403, int i) {
-		try {
-			int i_4_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_4_, (byte) -51);
-			Class119 class119 = Class389.aClass119Array4165[i_4_ >> 16];
-			Class79.method849(class105, class119, class403, 1226850164);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uy.jp(").append(')').toString());
-		}
+	static final void method8726(Class527 class527, short i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class30.method797(class118, class98, class527, 2104717291);
+	}
+
+	public static Class282_Sub50_Sub7 method8727(int i) {
+		return Class20.aClass282_Sub50_Sub7_168;
 	}
 }

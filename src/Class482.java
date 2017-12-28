@@ -1,154 +1,710 @@
+
 /* Class482 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.io.File;
-import java.io.RandomAccessFile;
+import java.util.Collection;
+import java.util.Iterator;
 
-public class Class482 {
-	Class482() throws Throwable {
-		throw new Error();
+public class Class482 implements Iterable, Collection {
+	Class282 aClass282_5727;
+	public Class282 aClass282_5728 = new Class282();
+
+	public Class282 method8057() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (class282 == aClass282_5728) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		return class282;
 	}
 
-	static void method6116(RsByteBuffer class298_sub53, byte i) {
-		try {
-			if ((class298_sub53.buffer.length - class298_sub53.index * 385051775) >= 1) {
-				int i_0_ = class298_sub53.readUnsignedByte();
-				if (i_0_ >= 0 && i_0_ <= 1 && (class298_sub53.buffer.length - class298_sub53.index * 385051775) >= 2) {
-					int i_1_ = class298_sub53.readUnsignedShort();
-					if ((class298_sub53.buffer.length - class298_sub53.index * 385051775) >= i_1_ * 6) {
-						for (int i_2_ = 0; i_2_ < i_1_; i_2_++) {
-							int i_3_ = class298_sub53.readUnsignedShort();
-							int i_4_ = class298_sub53.readInt((byte) 13);
-							if (i_3_ < Class374.anIntArray4078.length) {
-								if (!Class254.aBooleanArray2790[i_3_]) {
-									if (i != 3) {
-										/* empty */
-									}
-								} else {
-									if ((Class320.aClass494_6550.method6191(i_3_, (byte) 10).aChar5968) == '1') {
-										if (i_4_ < -1)
-											continue;
-										if (i_4_ > 1) {
-											if (i != 3) {
-												/* empty */
-											}
-											continue;
-										}
-									}
-									Class374.anIntArray4078[i_3_] = i_4_;
-								}
-							}
-						}
-					}
-				}
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tw.q(").append(')').toString());
+	public boolean method8058(Object object) {
+		throw new RuntimeException();
+	}
+
+	public void method8059(Class282 class282, int i) {
+		if (null != class282.aClass282_3380)
+			class282.method4991(-371378792);
+		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
+		class282.aClass282_3378 = aClass282_5728;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+	}
+
+	public boolean method8060(Object object) {
+		return method8072((Class282) object, -4100975);
+	}
+
+	public Class282 method8061(byte i) {
+		Class282 class282 = aClass282_5728.aClass282_3378;
+		if (aClass282_5728 == class282)
+			return null;
+		class282.method4991(-371378792);
+		return class282;
+	}
+
+	void method8062(Class482 class482_0_, Class282 class282, int i) {
+		Class282 class282_1_ = aClass282_5728.aClass282_3380;
+		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
+		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
+		if (class282 != aClass282_5728) {
+			class282.aClass282_3380 = class482_0_.aClass282_5728.aClass282_3380;
+			class282.aClass282_3380.aClass282_3378 = class282;
+			class282_1_.aClass282_3378 = class482_0_.aClass282_5728;
+			class482_0_.aClass282_5728.aClass282_3380 = class282_1_;
 		}
 	}
 
-	static final void method6117(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class116.method1271(class105, class119, class403, (byte) -55);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tw.cg(").append(')').toString());
+	public void method8063(Class482 class482_2_, int i) {
+		if (aClass282_5728.aClass282_3378 != aClass282_5728)
+			method8062(class482_2_, aClass282_5728.aClass282_3378, -1691020971);
+	}
+
+	public Iterator iterator() {
+		return new Class460(this);
+	}
+
+	Class282 method8064(Class282 class282) {
+		Class282 class282_3_;
+		if (class282 == null)
+			class282_3_ = aClass282_5728.aClass282_3380;
+		else
+			class282_3_ = class282;
+		if (aClass282_5728 == class282_3_) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282_3_.aClass282_3380;
+		return class282_3_;
+	}
+
+	public Class282 method8065(int i) {
+		return method8066(null, (byte) -32);
+	}
+
+	Class282 method8066(Class282 class282, byte i) {
+		Class282 class282_4_;
+		if (class282 == null)
+			class282_4_ = aClass282_5728.aClass282_3380;
+		else
+			class282_4_ = class282;
+		if (aClass282_5728 == class282_4_) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282_4_.aClass282_3380;
+		return class282_4_;
+	}
+
+	public Class282 method8067(int i) {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (class282 == aClass282_5728) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		return class282;
+	}
+
+	public Class282 method8068(byte i) {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (aClass282_5728 == class282) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		return class282;
+	}
+
+	public int method8069(int i) {
+		int i_5_ = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+			i_5_++;
+		return i_5_;
+	}
+
+	public boolean add(Object object) {
+		return method8072((Class282) object, -4100975);
+	}
+
+	Class282[] method8070(int i) {
+		Class282[] class282s = new Class282[method8069(-1374254477)];
+		int i_6_ = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			class282s[i_6_++] = class282;
+		return class282s;
+	}
+
+	Class282[] method8071() {
+		Class282[] class282s = new Class282[method8069(-1374254477)];
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			class282s[i++] = class282;
+		return class282s;
+	}
+
+	public void clear() {
+		method8118(913774407);
+	}
+
+	public boolean isEmpty() {
+		return method8096(2128482398);
+	}
+
+	public boolean contains(Object object) {
+		throw new RuntimeException();
+	}
+
+	public Object[] toArray() {
+		return method8070(2108497561);
+	}
+
+	public Object[] toArray(Object[] objects) {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			objects[i++] = class282;
+		return objects;
+	}
+
+	boolean method8072(Class282 class282, int i) {
+		method8059(class282, 1651650132);
+		return true;
+	}
+
+	public Class282 method8073() {
+		return method8066(null, (byte) -57);
+	}
+
+	public boolean containsAll(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean addAll(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean removeAll(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean retainAll(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public int method8074() {
+		return method8069(-1374254477);
+	}
+
+	public void method8075(Class282 class282) {
+		if (null != class282.aClass282_3380)
+			class282.method4991(-371378792);
+		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
+		class282.aClass282_3378 = aClass282_5728;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+	}
+
+	public boolean equals(Object object) {
+		return super.equals(object);
+	}
+
+	public int hashCode() {
+		return super.hashCode();
+	}
+
+	Class282 method8076(Class282 class282, int i) {
+		Class282 class282_7_;
+		if (null == class282)
+			class282_7_ = aClass282_5728.aClass282_3378;
+		else
+			class282_7_ = class282;
+		if (aClass282_5728 == class282_7_) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282_7_.aClass282_3378;
+		return class282_7_;
+	}
+
+	public Class282 method8077() {
+		return method8076(null, -1471072918);
+	}
+
+	public int method8078() {
+		return method8069(-1374254477);
+	}
+
+	Class282[] method8079() {
+		Class282[] class282s = new Class282[method8069(-1374254477)];
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			class282s[i++] = class282;
+		return class282s;
+	}
+
+	public int method8080() {
+		return method8069(-1374254477);
+	}
+
+	public boolean method8081(Object object) {
+		throw new RuntimeException();
+	}
+
+	public Object[] method8082() {
+		return method8070(790472093);
+	}
+
+	public Object[] method8083() {
+		return method8070(-75915236);
+	}
+
+	public Object[] method8084() {
+		return method8070(-300034995);
+	}
+
+	public boolean method8085(Object object) {
+		throw new RuntimeException();
+	}
+
+	public Iterator method8086() {
+		return new Class460(this);
+	}
+
+	public Iterator method8087() {
+		return new Class460(this);
+	}
+
+	public void method8088(Class282 class282) {
+		if (null != class282.aClass282_3380)
+			class282.method4991(-371378792);
+		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
+		class282.aClass282_3378 = aClass282_5728;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+	}
+
+	public boolean method8089(Object object) {
+		return super.equals(object);
+	}
+
+	Class282 method8090(Class282 class282) {
+		Class282 class282_8_;
+		if (null == class282)
+			class282_8_ = aClass282_5728.aClass282_3378;
+		else
+			class282_8_ = class282;
+		if (aClass282_5728 == class282_8_) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282_8_.aClass282_3378;
+		return class282_8_;
+	}
+
+	public boolean method8091(Object object) {
+		return super.equals(object);
+	}
+
+	boolean method8092(Class282 class282) {
+		method8059(class282, 1448456597);
+		return true;
+	}
+
+	public void method8093() {
+		while (aClass282_5728.aClass282_3378 != aClass282_5728)
+			aClass282_5728.aClass282_3378.method4991(-371378792);
+	}
+
+	public void method8094() {
+		while (aClass282_5728.aClass282_3378 != aClass282_5728)
+			aClass282_5728.aClass282_3378.method4991(-371378792);
+	}
+
+	public void method8095() {
+		while (aClass282_5728.aClass282_3378 != aClass282_5728)
+			aClass282_5728.aClass282_3378.method4991(-371378792);
+	}
+
+	public boolean method8096(int i) {
+		return aClass282_5728.aClass282_3378 == aClass282_5728;
+	}
+
+	public Class282 method8097(byte i) {
+		return method8076(null, -1858764882);
+	}
+
+	public void method8098(Class282 class282, byte i) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		class282.aClass282_3380 = aClass282_5728;
+		class282.aClass282_3378 = aClass282_5728.aClass282_3378;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+	}
+
+	public static void method8099(Class282 class282, Class282 class282_9_) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		class282.aClass282_3380 = class282_9_.aClass282_3380;
+		class282.aClass282_3378 = class282_9_;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+	}
+
+	public Class282 method8100() {
+		Class282 class282 = aClass282_5728.aClass282_3378;
+		if (aClass282_5728 == class282)
+			return null;
+		class282.method4991(-371378792);
+		return class282;
+	}
+
+	public Class282 method8101() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (aClass282_5728 == class282) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		return class282;
+	}
+
+	void method8102(Class482 class482_10_, Class282 class282) {
+		Class282 class282_11_ = aClass282_5728.aClass282_3380;
+		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
+		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
+		if (class282 != aClass282_5728) {
+			class282.aClass282_3380 = class482_10_.aClass282_5728.aClass282_3380;
+			class282.aClass282_3380.aClass282_3378 = class282;
+			class282_11_.aClass282_3378 = class482_10_.aClass282_5728;
+			class482_10_.aClass282_5728.aClass282_3380 = class282_11_;
 		}
 	}
 
-	static File method6118(String string, byte i) {
-		try {
-			if (!Class304.aBoolean3266)
-				throw new RuntimeException("");
-			File file = (File) Class304.aHashtable3267.get(string);
-			if (null != file)
-				return file;
-			File file_5_ = new File(Class304.aFile3265, string);
-			RandomAccessFile randomaccessfile = null;
-			File file_6_;
-			try {
-				File file_7_ = new File(file_5_.getParent());
-				if (!file_7_.exists())
-					throw new RuntimeException("");
-				randomaccessfile = new RandomAccessFile(file_5_, "rw");
-				int i_8_ = randomaccessfile.read();
-				randomaccessfile.seek(0L);
-				randomaccessfile.write(i_8_);
-				randomaccessfile.seek(0L);
-				randomaccessfile.close();
-				Class304.aHashtable3267.put(string, file_5_);
-				file_6_ = file_5_;
-			} catch (Exception exception) {
-				try {
-					if (null != randomaccessfile) {
-						randomaccessfile.close();
-						Object object = null;
-					}
-				} catch (Exception exception_9_) {
-					/* empty */
-				}
-				throw new RuntimeException();
-			}
-			return file_6_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tw.f(").append(')').toString());
+	void method8103(Class482 class482_12_, Class282 class282) {
+		Class282 class282_13_ = aClass282_5728.aClass282_3380;
+		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
+		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
+		if (class282 != aClass282_5728) {
+			class282.aClass282_3380 = class482_12_.aClass282_5728.aClass282_3380;
+			class282.aClass282_3380.aClass282_3378 = class282;
+			class282_13_.aClass282_3378 = class482_12_.aClass282_5728;
+			class482_12_.aClass282_5728.aClass282_3380 = class282_13_;
 		}
 	}
 
-	static void method6119(int i) {
-		try {
-			synchronized (Class462.aClass348_5682) {
-				Class462.aClass348_5682.method4187();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tw.b(").append(')').toString());
+	void method8104(Class482 class482_14_, Class282 class282) {
+		Class282 class282_15_ = aClass282_5728.aClass282_3380;
+		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
+		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
+		if (class282 != aClass282_5728) {
+			class282.aClass282_3380 = class482_14_.aClass282_5728.aClass282_3380;
+			class282.aClass282_3380.aClass282_3378 = class282;
+			class282_15_.aClass282_3378 = class482_14_.aClass282_5728;
+			class482_14_.aClass282_5728.aClass282_3380 = class282_15_;
 		}
 	}
 
-	static short[][] method6120(float[][] fs, short[][] is, byte i) {
-		try {
-			for (int i_10_ = 0; i_10_ < fs.length; i_10_++) {
-				for (int i_11_ = 0; i_11_ < is[i_10_].length; i_11_++)
-					is[i_10_][i_11_] = (short) (int) (16383.0F * fs[i_10_][i_11_]);
-			}
-			return is;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tw.q(").append(')').toString());
+	public Class282 method8105() {
+		Class282 class282 = aClass282_5728.aClass282_3378;
+		if (aClass282_5728 == class282)
+			return null;
+		class282.method4991(-371378792);
+		return class282;
+	}
+
+	void method8106(Class482 class482_16_, Class282 class282) {
+		Class282 class282_17_ = aClass282_5728.aClass282_3380;
+		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
+		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
+		if (class282 != aClass282_5728) {
+			class282.aClass282_3380 = class482_16_.aClass282_5728.aClass282_3380;
+			class282.aClass282_3380.aClass282_3378 = class282;
+			class282_17_.aClass282_3378 = class482_16_.aClass282_5728;
+			class482_16_.aClass282_5728.aClass282_3380 = class282_17_;
 		}
 	}
 
-	static final void method6121(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_) {
-		try {
-			int i_19_ = i_17_ - 334;
-			if (i_19_ < 0)
-				i_19_ = 0;
-			else if (i_19_ > 100)
-				i_19_ = 100;
-			int i_20_ = (client.aShort8923 + i_19_ * (client.aShort8931 - client.aShort8923) / 100);
-			i_16_ = i_20_ * i_16_ >> 8;
-			int i_21_ = 16384 - i_14_ & 0x3fff;
-			int i_22_ = 16384 - i_15_ & 0x3fff;
-			int i_23_ = 0;
-			int i_24_ = 0;
-			int i_25_ = i_16_;
-			if (i_21_ != 0) {
-				i_24_ = -i_25_ * Class220.anIntArray2483[i_21_] >> 14;
-				i_25_ = Class220.anIntArray2474[i_21_] * i_25_ >> 14;
-			}
-			if (0 != i_22_) {
-				i_23_ = Class220.anIntArray2483[i_22_] * i_25_ >> 14;
-				i_25_ = Class220.anIntArray2474[i_22_] * i_25_ >> 14;
-			}
-			Class367.anInt4000 = (i - i_23_) * 547882953;
-			Class110.anInt6403 = 1078403147 * (i_12_ - i_24_);
-			Class146.anInt1575 = (i_13_ - i_25_) * 309839105;
-			client.anInt8756 = -648269561 * i_14_;
-			Class135.anInt6384 = -1587695039 * i_15_;
-			Class229.anInt6458 = 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tw.je(").append(')').toString());
+	public void method8107(Class482 class482_18_) {
+		if (aClass282_5728.aClass282_3378 != aClass282_5728)
+			method8062(class482_18_, aClass282_5728.aClass282_3378, -859952897);
+	}
+
+	public void method8108(Class482 class482_19_) {
+		if (aClass282_5728.aClass282_3378 != aClass282_5728)
+			method8062(class482_19_, aClass282_5728.aClass282_3378, -586173771);
+	}
+
+	public Class282 method8109() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (aClass282_5728 == class282) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
 		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		return class282;
+	}
+
+	public Class282 method8110() {
+		return method8076(null, -1547975264);
+	}
+
+	public void method8111(Class282 class282) {
+		if (class282.aClass282_3380 != null)
+			class282.method4991(-371378792);
+		class282.aClass282_3380 = aClass282_5728;
+		class282.aClass282_3378 = aClass282_5728.aClass282_3378;
+		class282.aClass282_3380.aClass282_3378 = class282;
+		class282.aClass282_3378.aClass282_3380 = class282;
+	}
+
+	public Class282 method8112() {
+		return method8066(null, (byte) 22);
+	}
+
+	public boolean method8113(Object object) {
+		return super.equals(object);
+	}
+
+	public Class482() {
+		aClass282_5728.aClass282_3378 = aClass282_5728;
+		aClass282_5728.aClass282_3380 = aClass282_5728;
+	}
+
+	public Class282 method8114() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (class282 == aClass282_5728) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		return class282;
+	}
+
+	public Class282 method8115() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (class282 == aClass282_5728) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		return class282;
+	}
+
+	public void method8116() {
+		while (aClass282_5728.aClass282_3378 != aClass282_5728)
+			aClass282_5728.aClass282_3378.method4991(-371378792);
+	}
+
+	public int method8117() {
+		return super.hashCode();
+	}
+
+	public void method8118(int i) {
+		while (aClass282_5728.aClass282_3378 != aClass282_5728)
+			aClass282_5728.aClass282_3378.method4991(-371378792);
+	}
+
+	public Class282 method8119() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (class282 == aClass282_5728) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		return class282;
+	}
+
+	public Class282 method8120() {
+		Class282 class282 = ((Class482) this).aClass282_5727;
+		if (aClass282_5728 == class282) {
+			((Class482) this).aClass282_5727 = null;
+			return null;
+		}
+		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		return class282;
+	}
+
+	public int method8121() {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+			i++;
+		return i;
+	}
+
+	public int size() {
+		return method8069(-1374254477);
+	}
+
+	public int method8122() {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+			i++;
+		return i;
+	}
+
+	public int method8123() {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+			i++;
+		return i;
+	}
+
+	public boolean method8124(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	Class282[] method8125() {
+		Class282[] class282s = new Class282[method8069(-1374254477)];
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			class282s[i++] = class282;
+		return class282s;
+	}
+
+	public Object[] method8126() {
+		return method8070(193432226);
+	}
+
+	public boolean method8127() {
+		return method8096(1937667878);
+	}
+
+	public boolean method8128() {
+		return method8096(1567518009);
+	}
+
+	public boolean method8129() {
+		return method8096(2145417971);
+	}
+
+	public boolean method8130() {
+		return method8096(1372227102);
+	}
+
+	public Object[] method8131(Object[] objects) {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			objects[i++] = class282;
+		return objects;
+	}
+
+	public Object[] method8132(Object[] objects) {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			objects[i++] = class282;
+		return objects;
+	}
+
+	public Object[] method8133(Object[] objects) {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+			objects[i++] = class282;
+		return objects;
+	}
+
+	public boolean remove(Object object) {
+		throw new RuntimeException();
+	}
+
+	boolean method8134(Class282 class282) {
+		method8059(class282, 863000642);
+		return true;
+	}
+
+	public boolean method8135(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public int method8136() {
+		int i = 0;
+		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+			i++;
+		return i;
+	}
+
+	public boolean method8137(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean method8138(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean method8139(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean method8140(Collection collection) {
+		throw new RuntimeException();
+	}
+
+	public boolean method8141(Object object) {
+		return method8072((Class282) object, -4100975);
+	}
+
+	void method8142(Class482 class482_20_, Class282 class282) {
+		Class282 class282_21_ = aClass282_5728.aClass282_3380;
+		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
+		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
+		if (class282 != aClass282_5728) {
+			class282.aClass282_3380 = class482_20_.aClass282_5728.aClass282_3380;
+			class282.aClass282_3380.aClass282_3378 = class282;
+			class282_21_.aClass282_3378 = class482_20_.aClass282_5728;
+			class482_20_.aClass282_5728.aClass282_3380 = class282_21_;
+		}
+	}
+
+	public boolean method8143(Object object) {
+		return method8072((Class282) object, -4100975);
+	}
+
+	public static void method8144(boolean bool, int i) {
+		if (Class328.aClass306_3771 == null)
+			Class165.method2852(-1959846530);
+		if (bool)
+			Class328.aClass306_3771.method5419((byte) 44);
+	}
+
+	static boolean method8145(int i) {
+		boolean bool;
+		try {
+			Class395 class395 = new Class395();
+			byte[] is = class395.method6764(Class299.aByteArray3543, (byte) -76);
+			Class103_Sub1.method14490(is, (byte) -104);
+			bool = true;
+		} catch (Exception exception) {
+			return false;
+		}
+		return bool;
+	}
+
+	public static final void method8146(int i) {
+		if (!client.aBool7269) {
+			client.aFloat7266 += (-24.0F - client.aFloat7266) / 2.0F;
+			client.aBool7371 = true;
+			client.aBool7269 = true;
+		}
+	}
+
+	static final void method8147(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 1560801011;
+		Class356[] class356s = Class350_Sub3_Sub1.method15558(418447133);
+		Class353[] class353s = Class483.method8155(152314627);
+		Class282_Sub15_Sub3.method15239(class356s[(((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537])], class353s[(((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1])], (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 2]), (((Class527) class527).anIntArray6999[3 + ((Class527) class527).anInt7012 * 1942118537]),
+				(((Class527) class527).anIntArray6999[4 + ((Class527) class527).anInt7012 * 1942118537]), (((Class527) class527).anIntArray6999[5 + ((Class527) class527).anInt7012 * 1942118537]), (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 6]), (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 7]), (((Class527) class527).anIntArray6999[8 + 1942118537 * ((Class527) class527).anInt7012]),
+				(((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 9]), (((Class527) class527).anIntArray6999[10 + ((Class527) class527).anInt7012 * 1942118537]), (byte) -64);
+	}
+
+	public static void method8148(byte i) {
+		Class253.method4330(22050, Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(722134232) == 1, 2);
+		Class320.aClass253_3723 = Class253.method4331(Class351.aCanvas4096, 0, 22050);
+		Class42_Sub1.method14563(true, Class282_Sub20_Sub10.method15262(null, 191335579), (short) 27702);
+		Class100.aClass253_1008 = Class253.method4331(Class351.aCanvas4096, 1, 2048);
+		Class79.aClass282_Sub15_Sub4_783 = new Class282_Sub15_Sub4();
+		Class100.aClass253_1008.method4329(Class79.aClass282_Sub15_Sub4_783);
+		Class119.aClass344_1460 = new Class344(22050, Class253.anInt3129);
+		Class468_Sub6.method12658(552328415);
 	}
 }

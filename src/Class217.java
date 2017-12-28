@@ -2,144 +2,100 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class217 {
-	public float aFloat2451;
-	static int anInt2452;
-	static int anInt2453;
-	public float aFloat2454;
-	public float aFloat2455;
-	static Class217[] aClass217Array2456;
+public abstract class Class217 {
+	int anInt2696;
+	static final int anInt2697 = 2;
+	static final int anInt2698 = 4;
+	static final int anInt2699 = 8;
+	public int anInt2700;
+	public int anInt2701;
+	static final int anInt2702 = 1;
 
-	static {
-		new Class217(0.0F, 0.0F, 0.0F);
-		aClass217Array2456 = new Class217[0];
+	public boolean method3679() {
+		return 0 != (1203083985 * anInt2700 & 0x2);
 	}
 
-	public static Class217 method2004(float f, float f_0_, float f_1_) {
-		synchronized (aClass217Array2456) {
-			if (anInt2453 == 0) {
-				Class217 class217 = new Class217(f, f_0_, f_1_);
-				return class217;
-			}
-			aClass217Array2456[--anInt2453].method2007(f, f_0_, f_1_);
-			Class217 class217 = aClass217Array2456[anInt2453];
-			return class217;
-		}
+	public boolean method3680(byte i) {
+		return (1203083985 * anInt2700 & 0x1) != 0;
 	}
 
-	public static Class217 method2005(Class217 class217) {
-		synchronized (aClass217Array2456) {
-			if (anInt2453 == 0) {
-				Class217 class217_2_ = new Class217(class217);
-				return class217_2_;
-			}
-			aClass217Array2456[--anInt2453].method2013(class217);
-			Class217 class217_3_ = aClass217Array2456[anInt2453];
-			return class217_3_;
-		}
+	public boolean method3681(int i) {
+		return 0 != (1203083985 * anInt2700 & 0x2);
 	}
 
-	public void method2006() {
-		synchronized (aClass217Array2456) {
-			if (anInt2453 < anInt2452 - 1)
-				aClass217Array2456[anInt2453++] = this;
-		}
+	public boolean method3682(short i) {
+		return 0 != (1203083985 * anInt2700 & 0x4);
 	}
 
-	public Class217(float f, float f_4_, float f_5_) {
-		aFloat2451 = f;
-		aFloat2455 = f_4_;
-		aFloat2454 = f_5_;
+	public boolean method3683(int i) {
+		return 0 != (anInt2700 * 1203083985 & 0x8);
 	}
 
-	public void method2007(float f, float f_6_, float f_7_) {
-		aFloat2451 = f;
-		aFloat2455 = f_6_;
-		aFloat2454 = f_7_;
+	public boolean method3684() {
+		return 0 != (1203083985 * anInt2700 & 0x4);
 	}
 
-	final void method2008() {
-		aFloat2451 = -aFloat2451;
-		aFloat2455 = -aFloat2455;
-		aFloat2454 = -aFloat2454;
+	public boolean method3685() {
+		return (1203083985 * anInt2700 & 0x1) != 0;
 	}
 
-	final void method2009(Class217 class217_8_) {
-		aFloat2451 += class217_8_.aFloat2451;
-		aFloat2455 += class217_8_.aFloat2455;
-		aFloat2454 += class217_8_.aFloat2454;
+	public boolean method3686() {
+		return 0 != (anInt2700 * 1203083985 & 0x8);
 	}
 
-	public final void method2010(float f, float f_9_, float f_10_) {
-		aFloat2451 -= f;
-		aFloat2455 -= f_9_;
-		aFloat2454 -= f_10_;
+	public boolean method3687() {
+		return 0 != (1203083985 * anInt2700 & 0x4);
 	}
 
-	public static final Class217 method2011(Class217 class217, Class217 class217_11_) {
-		Class217 class217_12_ = method2005(class217);
-		class217_12_.method2015(class217_11_);
-		return class217_12_;
-	}
-
-	public final float method2012() {
-		return (float) Math.sqrt((double) (aFloat2451 * aFloat2451 + aFloat2455 * aFloat2455 + aFloat2454 * aFloat2454));
-	}
-
-	public Class217() {
+	Class217() {
 		/* empty */
 	}
 
-	Class217(Class217 class217_13_) {
-		aFloat2451 = class217_13_.aFloat2451;
-		aFloat2455 = class217_13_.aFloat2455;
-		aFloat2454 = class217_13_.aFloat2454;
+	public boolean method3688() {
+		return (1203083985 * anInt2700 & 0x1) != 0;
 	}
 
-	public void method2013(Class217 class217_14_) {
-		method2007(class217_14_.aFloat2451, class217_14_.aFloat2455, class217_14_.aFloat2454);
+	public boolean method3689() {
+		return 0 != (anInt2700 * 1203083985 & 0x8);
 	}
 
-	public String toString() {
-		return new StringBuilder().append(aFloat2451).append(", ").append(aFloat2455).append(", ").append(aFloat2454).toString();
+	public static void method3690(Class317 class317, int i, int i_0_, int i_1_, boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2, int i_2_) {
+		Class282_Sub43.method13400(class317, i, i_0_, i_1_, bool, (byte) -86);
+		Class282_Sub33.aClass282_Sub15_Sub2_7836 = class282_sub15_sub2;
 	}
 
-	final void method2014(Class218 class218) {
-		Class218 class218_15_ = Class218.method2020(aFloat2451, aFloat2455, aFloat2454, 0.0F);
-		Class218 class218_16_ = Class218.method2025(class218);
-		Class218 class218_17_ = Class218.method2028(class218_16_, class218_15_);
-		class218_17_.method2026(class218);
-		method2007(((Class218) class218_17_).aFloat2461, ((Class218) class218_17_).aFloat2458, ((Class218) class218_17_).aFloat2462);
-		class218_15_.method2029();
-		class218_16_.method2029();
-		class218_17_.method2029();
+	static final void method3691(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 283782002;
+		int i_3_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
+		int i_4_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_3_ | i_4_;
 	}
 
-	final void method2015(Class217 class217_18_) {
-		aFloat2451 -= class217_18_.aFloat2451;
-		aFloat2455 -= class217_18_.aFloat2455;
-		aFloat2454 -= class217_18_.aFloat2454;
+	static final void method3692(Class527 class527, int i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1998684386);
 	}
 
-	public final void method2016(Matrix3f class222) {
-		float f = aFloat2451;
-		float f_19_ = aFloat2455;
-		aFloat2451 = (((Matrix3f) class222).aFloat2494 * f + ((Matrix3f) class222).aFloat2496 * f_19_ + ((Matrix3f) class222).aFloat2499 * aFloat2454 + ((Matrix3f) class222).aFloat2492);
-		aFloat2455 = (((Matrix3f) class222).aFloat2502 * f + ((Matrix3f) class222).aFloat2497 * f_19_ + ((Matrix3f) class222).aFloat2500 * aFloat2454 + ((Matrix3f) class222).aFloat2503);
-		aFloat2454 = (((Matrix3f) class222).aFloat2495 * f + ((Matrix3f) class222).aFloat2498 * f_19_ + ((Matrix3f) class222).aFloat2501 * aFloat2454 + ((Matrix3f) class222).aFloat2493);
+	static final void method3693(Class527 class527, short i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub24_8216, ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 2 : 0, 447619076);
+		client.aClass257_7353.method4547((byte) -59);
+		Class190.method3148((byte) 121);
+		client.aBool7175 = false;
 	}
 
-	public static void method2017(int i) {
-		anInt2452 = i;
-		aClass217Array2456 = new Class217[i];
-		anInt2453 = 0;
-	}
-
-	public final void method2018(Matrix3f class222) {
-		float f = aFloat2451;
-		float f_20_ = aFloat2455;
-		aFloat2451 = (((Matrix3f) class222).aFloat2494 * f + ((Matrix3f) class222).aFloat2496 * f_20_ + ((Matrix3f) class222).aFloat2499 * aFloat2454);
-		aFloat2455 = (((Matrix3f) class222).aFloat2502 * f + ((Matrix3f) class222).aFloat2497 * f_20_ + ((Matrix3f) class222).aFloat2500 * aFloat2454);
-		aFloat2454 = (((Matrix3f) class222).aFloat2495 * f + ((Matrix3f) class222).aFloat2498 * f_20_ + ((Matrix3f) class222).aFloat2501 * aFloat2454);
+	public static Class282_Sub53_Sub1 method3694(int i, int i_5_, int i_6_, int i_7_, int i_8_) {
+		synchronized (Class282_Sub53_Sub1.aClass282_Sub53_Sub1Array9497) {
+			Class282_Sub53_Sub1 class282_sub53_sub1;
+			if (0 == 1803498861 * Class81.anInt803)
+				class282_sub53_sub1 = new Class282_Sub53_Sub1();
+			else
+				class282_sub53_sub1 = (Class282_Sub53_Sub1.aClass282_Sub53_Sub1Array9497[(Class81.anInt803 -= 1574444133) * 1803498861]);
+			((Class282_Sub53_Sub1) class282_sub53_sub1).anInt9516 = 1063236601 * i;
+			((Class282_Sub53_Sub1) class282_sub53_sub1).anInt9517 = i_5_ * -986906997;
+			((Class282_Sub53_Sub1) class282_sub53_sub1).anInt9513 = 1264119499 * i_6_;
+			((Class282_Sub53_Sub1) class282_sub53_sub1).anInt9514 = -840123133 * i_7_;
+			((Class282_Sub53_Sub1) class282_sub53_sub1).aLong9515 = Class169.method2869(1816092863) * -4703652849465796993L;
+			Class282_Sub53_Sub1 class282_sub53_sub1_9_ = class282_sub53_sub1;
+			return class282_sub53_sub1_9_;
+		}
 	}
 }

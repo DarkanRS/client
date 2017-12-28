@@ -3,9 +3,9 @@
  */
 
 public interface Interface19 {
-	public boolean method237(Class298_Sub50 class298_sub50, Interface16[] interface16s, int i, Class323 class323);
+	public String method135(Class243 class243, int[] is, long l);
 
-	public boolean method238(Class298_Sub50 class298_sub50, Interface16[] interface16s, int i, Class323 class323);
+	public String method136(Class243 class243, int[] is, long l);
 
-	public boolean method239(Class298_Sub50 class298_sub50, Interface16[] interface16s, int i, Class323 class323, int i_0_);
+	public String method137(Class243 class243, int[] is, long l);
 }

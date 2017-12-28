@@ -6,14 +6,14 @@ package jagtheora.theora;
 import jagtheora.misc.SimplePeer;
 
 public class Frame extends SimplePeer {
-	public int a;
-	public int f;
+	public int anInt9119;
+	public int anInt9120;
 	public int[] pixels;
 
 	public Frame(int i, int i_0_) {
-		a = i * -1504155185;
-		f = -156270913 * i_0_;
-		pixels = new int[1264450863 * a * (-1459424961 * f)];
+		anInt9119 = i * -317525331;
+		anInt9120 = -326049555 * i_0_;
+		pixels = new int[anInt9119 * 416891173 * (12877029 * anInt9120)];
 	}
 
 	private static native void init();
@@ -24,7 +24,9 @@ public class Frame extends SimplePeer {
 		init();
 	}
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

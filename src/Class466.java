@@ -1,38 +1,74 @@
 /* Class466 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.applet.Applet;
 
-import netscape.javascript.JSObject;
+public class Class466 implements Interface43 {
+	public static Class466 aClass466_5563;
+	public static Class466 aClass466_5564;
+	static Class466 aClass466_5565;
+	int anInt5566;
+	static Class466 aClass466_5567;
+	static Class466 aClass466_5568;
+	public static Class466 aClass466_5569 = new Class466(-2);
+	public static Class444 aClass444_5570;
 
-public class Class466 {
-	public static int anInt50922 = 5555;
-	
-	public static void method6020(Applet applet, String string, int i) throws Throwable {
-		try {
-			JSObject.getWindow(applet).eval(string);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tf.a(").append(')').toString());
-		}
+	public static Class466[] method7775() {
+		return (new Class466[] { aClass466_5564, aClass466_5567, aClass466_5568, aClass466_5563, aClass466_5569, aClass466_5565 });
 	}
 
-	public static Object method6021(Applet applet, String string, short i) throws Throwable {
-		try {
-			return JSObject.getWindow(applet).call(string, null);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tf.f(").append(')').toString());
-		}
+	public int method243(byte i) {
+		return 1856682733 * ((Class466) this).anInt5566;
 	}
 
-	public static Object method6022(Applet applet, String string, Object[] objects, byte i) throws Throwable {
-		try {
-			return JSObject.getWindow(applet).call(string, objects);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tf.b(").append(')').toString());
-		}
+	public int method75() {
+		return 1856682733 * ((Class466) this).anInt5566;
 	}
 
-	Class466() throws Throwable {
-		throw new Error();
+	Class466(int i) {
+		((Class466) this).anInt5566 = i * -1731808539;
+	}
+
+	public int method76() {
+		return 1856682733 * ((Class466) this).anInt5566;
+	}
+
+	static {
+		aClass466_5564 = new Class466(-3);
+		aClass466_5565 = new Class466(2);
+		aClass466_5563 = new Class466(3);
+		aClass466_5567 = new Class466(21);
+		aClass466_5568 = new Class466(20);
+	}
+
+	static void method7776(int i) {
+		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4582, client.aClass184_7475.aClass432_2283, -384952781);
+		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(client.anInt7221 * 588706901);
+		client.aClass184_7475.method3049(class282_sub23, -226174867);
+	}
+
+	public static void method7777(int i) {
+		if (-1741204137 * client.anInt7166 == 0 && (!Class203.method3360((byte) -101) && !Class85.method1466(-873027647)))
+			Class365.method6298(7, 1294847901);
+	}
+
+	static char method7778(char c, int i) {
+		if (c == '\u00c6')
+			return 'E';
+		if ('\u00e6' == c)
+			return 'e';
+		if (c == '\u00df')
+			return 's';
+		if (c == '\u0152')
+			return 'E';
+		if (c == '\u0153')
+			return 'e';
+		return '\0';
+	}
+
+	static final void method7779(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 283782002;
+		int i_0_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+		int i_1_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_0_ < i_1_ ? i_0_ : i_1_;
 	}
 }

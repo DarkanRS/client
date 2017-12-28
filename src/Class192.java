@@ -1,122 +1,58 @@
 /* Class192 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import jagdx.IDirect3DTexture;
-import jagdx.IUnknown;
 
-public class Class192 implements Interface8_Impl1_Impl1_Impl1, Interface8_Impl1_Impl2_Impl1 {
-	long aLong10166;
-	Class200_Sub3_Sub1 aClass200_Sub3_Sub1_10167;
-	int anInt10168;
+public class Class192 implements Interface9 {
+	int anInt2388;
+	int anInt2389;
+	int[] anIntArray2390;
+	static Class1 aClass1_2391;
+	public static Class317 worldMap;
 
-	public void method143() {
-		if (((Class192) this).aLong10166 != 0L) {
-			((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5552(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
+	public int method77() {
+		return ((Class192) this).anInt2389 * 248625969;
 	}
 
-	public int a() {
-		return ((Class192) this).aClass200_Sub3_Sub1_10167.method92();
+	public int method1() {
+		return 240028587 * ((Class192) this).anInt2388;
 	}
 
-	public int f() {
-		return ((Class192) this).aClass200_Sub3_Sub1_10167.method76();
+	public int method74() {
+		return ((Class192) this).anInt2389 * 248625969;
 	}
 
-	public long method144() {
-		if (((Class192) this).aLong10166 == 0L)
-			((Class192) this).aLong10166 = (IDirect3DTexture.GetSurfaceLevel(((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aLong6407, ((Class192) this).anInt10168));
-		return ((Class192) this).aLong10166;
+	public void method26() {
+		/* empty */
 	}
 
-	public void b() {
-		if (((Class192) this).aLong10166 != 0L) {
-			IUnknown.Release(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
-		((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5293(this);
+	public int method39() {
+		return ((Class192) this).anInt2389 * 248625969;
 	}
 
-	public void method141() {
-		if (((Class192) this).aLong10166 != 0L) {
-			((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5552(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
+	Class192(int i, int i_0_, int[] is) {
+		((Class192) this).anInt2388 = i * -1952966909;
+		((Class192) this).anInt2389 = i_0_ * 1040432593;
+		((Class192) this).anIntArray2390 = is;
 	}
 
-	public int k() {
-		return ((Class192) this).aClass200_Sub3_Sub1_10167.method76();
+	public int method75() {
+		return 240028587 * ((Class192) this).anInt2388;
 	}
 
-	public long method145() {
-		if (((Class192) this).aLong10166 == 0L)
-			((Class192) this).aLong10166 = (IDirect3DTexture.GetSurfaceLevel(((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aLong6407, ((Class192) this).anInt10168));
-		return ((Class192) this).aLong10166;
+	public int method73() {
+		return ((Class192) this).anInt2389 * 248625969;
 	}
 
-	public void u() {
-		if (((Class192) this).aLong10166 != 0L) {
-			IUnknown.Release(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
-		((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5293(this);
+	public int method76() {
+		return 240028587 * ((Class192) this).anInt2388;
 	}
 
-	public void x() {
-		if (((Class192) this).aLong10166 != 0L) {
-			IUnknown.Release(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
-		((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5293(this);
+	public void method32() {
+		/* empty */
 	}
 
-	public int p() {
-		return ((Class192) this).aClass200_Sub3_Sub1_10167.method92();
-	}
-
-	public int i() {
-		return ((Class192) this).aClass200_Sub3_Sub1_10167.method92();
-	}
-
-	public long method147() {
-		if (((Class192) this).aLong10166 == 0L)
-			((Class192) this).aLong10166 = (IDirect3DTexture.GetSurfaceLevel(((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aLong6407, ((Class192) this).anInt10168));
-		return ((Class192) this).aLong10166;
-	}
-
-	Class192(Class200_Sub3_Sub1 class200_sub3_sub1, int i) {
-		((Class192) this).anInt10168 = i;
-		((Class192) this).aClass200_Sub3_Sub1_10167 = class200_sub3_sub1;
-		((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5323(this);
-	}
-
-	public void method146() {
-		if (((Class192) this).aLong10166 != 0L) {
-			((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5552(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
-	}
-
-	public void d() {
-		if (((Class192) this).aLong10166 != 0L) {
-			IUnknown.Release(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
-		((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5293(this);
-	}
-
-	public void method142() {
-		if (((Class192) this).aLong10166 != 0L) {
-			((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5552(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
-	}
-
-	public void method148() {
-		if (((Class192) this).aLong10166 != 0L) {
-			((Class200_Sub3_Sub1) ((Class192) this).aClass200_Sub3_Sub1_10167).aClass_ra_Sub3_Sub2_6410.method5552(((Class192) this).aLong10166);
-			((Class192) this).aLong10166 = 0L;
-		}
+	static final void method3169(Class527 class527, int i) {
+		int i_1_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((Class527) class527).aClass282_Sub4_7011.aClass57Array7499[i_1_].anInt526) * -1097296133;
 	}
 }

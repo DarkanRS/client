@@ -1,196 +1,469 @@
 /* Class129 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.awt.Container;
-import java.awt.Insets;
 
-public class Class129 implements Interface6 {
-	Class134 aClass134_6378;
-	Class140 aClass140_6379;
-	static int anInt6380;
-
-	Class129(Class140 class140, Class134 class134) {
-		((Class129) this).aClass134_6378 = class134;
-		((Class129) this).aClass140_6379 = class140;
+public class Class129 {
+	static final boolean method2179(int i, int i_0_) {
+		if ((i & 0x10000) != 0 | method2195(i, i_0_) || method2261(i, i_0_))
+			return true;
+		return (i_0_ & 0x37) == 0 && method2199(i, i_0_);
 	}
 
-	public boolean method52(int i) {
-		try {
-			return ((Class129) this).aClass140_6379.method1553(2031023614);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.b(").append(')').toString());
-		}
+	static final boolean method2180(int i, int i_1_) {
+		return (i & 0x21) != 0;
 	}
 
-	public void method58(boolean bool, byte i) {
-		try {
-			Class142 class142 = (((Class129) this).aClass140_6379.method1552(((Class129) this).aClass134_6378.anInt6341 * 1310361017, -257545820));
-			if (class142 != null) {
-				int i_0_ = ((((Class129) this).aClass134_6378.aClass139_6336.method1545((-1635817177 * ((Class129) this).aClass134_6378.anInt6339), client.anInt8794 * 775068819, -2108328767)) + (-740662509 * ((Class129) this).aClass134_6378.anInt6333));
-				int i_1_ = ((((Class129) this).aClass134_6378.aClass133_6337.method1482((-1725730589 * ((Class129) this).aClass134_6378.anInt6340), client.anInt8803 * -791746413, -1943367798)) + (((Class129) this).aClass134_6378.anInt6335 * -1129431703));
-				if (((Class129) this).aClass134_6378.aBoolean6342)
-					Class373.aClass_ra4071.method5019(i_0_, i_1_, (-1635817177 * ((Class129) this).aClass134_6378.anInt6339), (((Class129) this).aClass134_6378.anInt6340 * -1725730589), 80994107 * ((Class129) this).aClass134_6378.anInt6338, 0);
-				i_1_ += method1443(Class101.aClass264_1084, ((Class142) class142).aString1553, i_0_, i_1_, 5, 1663137711) * 12;
-				i_1_ += 8;
-				if (((Class129) this).aClass134_6378.aBoolean6342)
-					Class373.aClass_ra4071.method5091(i_0_, i_1_, (((Class129) this).aClass134_6378.anInt6339 * -1635817177) + i_0_ - 1, i_1_, 80994107 * ((Class129) this).aClass134_6378.anInt6338, 0);
-				i_1_ = ++i_1_ + method1443(Class101.aClass264_1084, ((Class142) class142).aString1554, i_0_, i_1_, 5, 1663137711) * 12;
-				i_1_ += 5;
-				i_1_ += method1443(Class101.aClass264_1084, ((Class142) class142).aString1552, i_0_, i_1_, 5, 1663137711) * 12;
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.f(").append(')').toString());
-		}
+	static final boolean method2181(int i, int i_2_) {
+		return (i & 0x22) != 0;
 	}
 
-	int method1443(Class264 class264, String string, int i, int i_2_, int i_3_, int i_4_) {
-		try {
-			return (class264.method2475(string, i + i_3_, i_2_ + i_3_, (((Class129) this).aClass134_6378.anInt6339 * -1635817177 - 2 * i_3_), (-1725730589 * ((Class129) this).aClass134_6378.anInt6340 - i_3_ * 2), ((Class129) this).aClass134_6378.anInt6332 * 1824777445, ((Class129) this).aClass134_6378.anInt6334 * 1690804891, 0, 0, 0, null, null, null, 0, 0, -45995166));
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.x(").append(')').toString());
-		}
+	static final boolean method2182(int i, int i_3_) {
+		return (i & 0x800) != 0;
 	}
 
-	public void method55() {
-		/* empty */
+	static final boolean method2183(int i, int i_4_) {
+		return (i & 0x37) != 0;
 	}
 
-	public void method56(boolean bool) {
-		Class142 class142 = ((Class129) this).aClass140_6379.method1552(((((Class129) this).aClass134_6378.anInt6341) * 1310361017), 869274917);
-		if (class142 != null) {
-			int i = ((((Class129) this).aClass134_6378.aClass139_6336.method1545(-1635817177 * ((Class129) this).aClass134_6378.anInt6339, client.anInt8794 * 775068819, -1777840883)) + -740662509 * ((Class129) this).aClass134_6378.anInt6333);
-			int i_5_ = ((((Class129) this).aClass134_6378.aClass133_6337.method1482(-1725730589 * ((Class129) this).aClass134_6378.anInt6340, client.anInt8803 * -791746413, -1715547706)) + ((Class129) this).aClass134_6378.anInt6335 * -1129431703);
-			if (((Class129) this).aClass134_6378.aBoolean6342)
-				Class373.aClass_ra4071.method5019(i, i_5_, -1635817177 * ((Class129) this).aClass134_6378.anInt6339, ((Class129) this).aClass134_6378.anInt6340 * -1725730589, 80994107 * ((Class129) this).aClass134_6378.anInt6338, 0);
-			i_5_ += method1443(Class101.aClass264_1084, ((Class142) class142).aString1553, i, i_5_, 5, 1663137711) * 12;
-			i_5_ += 8;
-			if (((Class129) this).aClass134_6378.aBoolean6342)
-				Class373.aClass_ra4071.method5091(i, i_5_, (((Class129) this).aClass134_6378.anInt6339 * -1635817177 + i - 1), i_5_, 80994107 * ((Class129) this).aClass134_6378.anInt6338, 0);
-			i_5_ = ++i_5_ + method1443(Class101.aClass264_1084, ((Class142) class142).aString1554, i, i_5_, 5, 1663137711) * 12;
-			i_5_ += 5;
-			i_5_ += method1443(Class101.aClass264_1084, ((Class142) class142).aString1552, i, i_5_, 5, 1663137711) * 12;
-		}
+	static final boolean method2184(int i, int i_5_) {
+		return (i & 0x34) != 0;
 	}
 
-	public boolean method57() {
-		return ((Class129) this).aClass140_6379.method1553(2130772218);
+	static final boolean method2185(int i, int i_6_) {
+		return (i & 0x84080) != 0;
 	}
 
-	public boolean method54() {
-		return ((Class129) this).aClass140_6379.method1553(1856893340);
+	static final boolean method2186(int i, int i_7_) {
+		return (i & 0x100100) != 0;
 	}
 
-	public boolean method59() {
-		return ((Class129) this).aClass140_6379.method1553(1503133948);
+	static final boolean method2187(int i, int i_8_) {
+		return (i & 0x100100) != 0;
 	}
 
-	public void method53(int i) {
-		try {
-			/* empty */
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.a(").append(')').toString());
-		}
+	static final boolean method2188(int i, int i_9_) {
+		return (i & 0x10) != 0;
 	}
 
-	static final void method1444(ClientScript2 class403, byte i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class443.method5887(class105, class119, class403, -352941486);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.kr(").append(')').toString());
-		}
+	static final boolean method2189(int i, int i_10_) {
+		return (i & 0x8000) != 0;
 	}
 
-	static final void method1445(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = client.isMemberWorld ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.th(").append(')').toString());
-		}
+	static final boolean method2190(int i, int i_11_) {
+		return (i & 0xc580) != 0;
 	}
 
-	static void method1446(int i, int i_6_, int i_7_, int i_8_, boolean bool, byte i_9_) {
-		try {
-			if (Class452.aBoolean5642 && Class231.aFrame2589 != null && (3 != i_6_ || -1012194159 * Class431.anInt6502 != i_7_ || 1953279233 * Class249.anInt6465 != i_8_)) {
-				Class93.method1010(Class389.aClass457_4164, Class231.aFrame2589, 1593156326);
-				Class231.aFrame2589 = null;
-			}
-			if (Class452.aBoolean5642 && 3 == i_6_ && null == Class231.aFrame2589) {
-				Class231.aFrame2589 = Class409.method4976(Class389.aClass457_4164, i_7_, i_8_, 0, 0, -1107425870);
-				if (null != Class231.aFrame2589) {
-					Class431.anInt6502 = i_7_ * -660267919;
-					Class249.anInt6465 = -2089004287 * i_8_;
-					Class3.method300(656179282);
-				}
-			}
-			if (i_6_ == 3 && (!Class452.aBoolean5642 || Class231.aFrame2589 == null))
-				method1446(i, Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub12_7543.method5669((byte) 118), -1, -1, true, (byte) 24);
-			else {
-				Container container = Class318.method3874((byte) 31);
-				if (Class231.aFrame2589 != null) {
-					Class78.anInt733 = i_7_ * 1325868603;
-					client.anInt6472 = -2115832951 * i_8_;
-				} else if (null != Class298_Sub36.aFrame7403) {
-					Insets insets = Class298_Sub36.aFrame7403.getInsets();
-					Class78.anInt733 = (Class298_Sub36.aFrame7403.getSize().width - (insets.left + insets.right)) * 1325868603;
-					client.anInt6472 = (Class298_Sub36.aFrame7403.getSize().height - (insets.top + insets.bottom)) * -2115832951;
-				} else {
-					Class78.anInt733 = container.getSize().width * 1325868603;
-					client.anInt6472 = container.getSize().height * -2115832951;
-				}
-				if (Class78.anInt733 * -639974669 <= 0)
-					Class78.anInt733 = 1325868603;
-				if (1282634425 * client.anInt6472 <= 0)
-					client.anInt6472 = -2115832951;
-				if (1 != i_6_)
-					Class242_Sub1.method2283((byte) 3);
-				else {
-					Class462.anInt5683 = client.anInt8794 * -1494558011;
-					client.anInt6473 = (Class78.anInt733 * -639974669 - 775068819 * client.anInt8794) / 2 * -753018213;
-					Class298_Sub40_Sub9.anInt9716 = -909258791 * client.anInt8803;
-					client.anInt6474 = 0;
-				}
-				if (Class242.aClass401_2708 != Class401.aClass401_6557 && -2110394505 * Class462.anInt5683 < 1024 && Class298_Sub40_Sub9.anInt9716 * -1111710645 >= 768) {
-					/* empty */
-				}
-				if (!bool) {
-					Class52_Sub2_Sub1.aCanvas9079.setSize(Class462.anInt5683 * -2110394505, -1111710645 * Class298_Sub40_Sub9.anInt9716);
-					Class373.aClass_ra4071.method5173(Class52_Sub2_Sub1.aCanvas9079, -2110394505 * Class462.anInt5683, Class298_Sub40_Sub9.anInt9716 * -1111710645, (byte) 20);
-					if (Class298_Sub36.aFrame7403 == container) {
-						Insets insets = Class298_Sub36.aFrame7403.getInsets();
-						Class52_Sub2_Sub1.aCanvas9079.setLocation(1898544019 * client.anInt6473 + insets.left, insets.top + client.anInt6474 * 540368727);
-					} else
-						Class52_Sub2_Sub1.aCanvas9079.setLocation(1898544019 * client.anInt6473, client.anInt6474 * 540368727);
-				} else
-					Class335.method4086(1305054317);
-				if (i_6_ >= 2)
-					client.aBoolean8799 = true;
-				else
-					client.aBoolean8799 = false;
-				Class502.method6232(-375091038);
-				if (-1 != -257444687 * client.WINDOW_PANE_ID)
-					Class257.method2453(true, (byte) 8);
-				if (client.gameConnection.method387(537308016) != null && Class435.method5804(client.anInt8752 * -1233866115, (byte) 76))
-					Class326.method3974(-2137735375);
-				for (int i_10_ = 0; i_10_ < 113; i_10_++)
-					client.aBooleanArray8900[i_10_] = true;
-				client.aBoolean6471 = true;
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.gq(").append(')').toString());
-		}
+	static final boolean method2191(int i, int i_12_) {
+		return (i & 0x10000) != 0;
 	}
 
-	static final int method1447(int i, int i_11_, int i_12_) {
-		try {
-			int i_13_ = i + i_11_ * 57;
-			i_13_ = i_13_ << 13 ^ i_13_;
-			int i_14_ = (1376312589 + i_13_ * (789221 + 15731 * (i_13_ * i_13_)) & 0x7fffffff);
-			return i_14_ >> 19 & 0xff;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ff.l(").append(')').toString());
-		}
+	static final boolean method2192(int i, int i_13_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2193(int i, int i_14_) {
+		return (i & 0x800) != 0 && (i_14_ & 0x37) != 0;
+	}
+
+	static final boolean method2194(int i, int i_15_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2195(int i, int i_16_) {
+		return (i & 0x220) == 544 | (i & 0x18) != 0;
+	}
+
+	static final boolean method2196(int i, int i_17_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2197(int i, int i_18_) {
+		return ((method2180(i, i_18_) | method2181(i, i_18_) | method2184(i, i_18_)) & method2192(i, i_18_));
+	}
+
+	static final boolean method2198(int i, int i_19_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2199(int i, int i_20_) {
+		if (!method2194(i, i_20_))
+			return false;
+		if ((i & 0xb000) != 0 | method2185(i, i_20_) | method2186(i, i_20_))
+			return true;
+		return ((i_20_ & 0x37) == 0 & (method2195(i, i_20_) | method2191(i, i_20_)));
+	}
+
+	static final boolean method2200(int i, int i_21_) {
+		return method2242(i, i_21_) & method2201(i, i_21_);
+	}
+
+	static final boolean method2201(int i, int i_22_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2202(int i, int i_23_) {
+		return ((i & 0x70000) != 0 | method2180(i, i_23_) || method2197(i, i_23_));
+	}
+
+	Class129() throws Throwable {
+		throw new Error();
+	}
+
+	static final boolean method2203(int i, int i_24_) {
+		return (i & 0x220) == 544 | (i & 0x18) != 0;
+	}
+
+	static final boolean method2204(int i, int i_25_) {
+		if ((i & 0x10000) != 0 | method2195(i, i_25_) || method2261(i, i_25_))
+			return true;
+		return (i_25_ & 0x37) == 0 && method2199(i, i_25_);
+	}
+
+	static final boolean method2205(int i, int i_26_) {
+		return method2185(i, i_26_) || method2199(i, i_26_);
+	}
+
+	static final boolean method2206(int i, int i_27_) {
+		return ((i & 0x40000) != 0 | method2186(i, i_27_) || method2199(i, i_27_));
+	}
+
+	static final boolean method2207(int i, int i_28_) {
+		return (i & 0x100100) != 0;
+	}
+
+	static final boolean method2208(int i, int i_29_) {
+		return (i & 0x180) != 0;
+	}
+
+	static final boolean method2209(int i, int i_30_) {
+		if ((i & 0x10000) != 0 | method2195(i, i_30_) || method2261(i, i_30_))
+			return true;
+		return (i_30_ & 0x37) == 0 && method2199(i, i_30_);
+	}
+
+	static final boolean method2210(int i, int i_31_) {
+		return ((i & 0x70000) != 0 | method2184(i, i_31_) || method2197(i, i_31_));
+	}
+
+	static final boolean method2211(int i, int i_32_) {
+		return ((i & 0x60000) != 0 | method2188(i, i_32_) || method2199(i, i_32_) || method2283(i, i_32_));
+	}
+
+	static final boolean method2212(int i, int i_33_) {
+		return (i & 0x800) != 0 | method2189(i, i_33_) || method2199(i, i_33_);
+	}
+
+	static final boolean method2213(int i, int i_34_) {
+		return (i & 0x21) != 0;
+	}
+
+	static final boolean method2214(int i, int i_35_) {
+		return (i & 0x21) != 0;
+	}
+
+	static final boolean method2215(int i, int i_36_) {
+		return (i & 0x22) != 0;
+	}
+
+	static final boolean method2216(int i, int i_37_) {
+		return (i & 0x22) != 0;
+	}
+
+	static final boolean method2217(int i, int i_38_) {
+		return (i & 0x22) != 0;
+	}
+
+	static final boolean method2218(int i, int i_39_) {
+		return (i & 0x22) != 0;
+	}
+
+	static final boolean method2219(int i, int i_40_) {
+		return (i & 0x22) != 0;
+	}
+
+	static final boolean method2220(int i, int i_41_) {
+		return (i & 0x34) != 0;
+	}
+
+	static final boolean method2221(int i, int i_42_) {
+		return (i & 0x34) != 0;
+	}
+
+	static final boolean method2222(int i, int i_43_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2223(int i, int i_44_) {
+		return (i & 0x34) != 0;
+	}
+
+	static final boolean method2224(int i, int i_45_) {
+		return (i & 0x220) == 544 | (i & 0x18) != 0;
+	}
+
+	static final boolean method2225(int i, int i_46_) {
+		return (i & 0xc580) != 0;
+	}
+
+	static final boolean method2226(int i, int i_47_) {
+		return (i & 0x20) != 0;
+	}
+
+	static final boolean method2227(int i, int i_48_) {
+		return false;
+	}
+
+	static final boolean method2228(int i, int i_49_) {
+		return (i & 0x100100) != 0;
+	}
+
+	static final boolean method2229(int i, int i_50_) {
+		return ((i & 0x70000) != 0 | method2181(i, i_50_) || method2197(i, i_50_));
+	}
+
+	static final boolean method2230(int i, int i_51_) {
+		return (i & 0x220) == 544 | (i & 0x18) != 0;
+	}
+
+	static final boolean method2231(int i, int i_52_) {
+		return false;
+	}
+
+	static final boolean method2232(int i, int i_53_) {
+		return ((i & 0x60000) != 0 | method2188(i, i_53_) || method2199(i, i_53_) || method2283(i, i_53_));
+	}
+
+	static final boolean method2233(int i, int i_54_) {
+		return false;
+	}
+
+	static final boolean method2234(int i, int i_55_) {
+		return (i & 0x10) != 0;
+	}
+
+	static final boolean method2235(int i, int i_56_) {
+		return (i & 0x8000) != 0;
+	}
+
+	static final boolean method2236(int i, int i_57_) {
+		return (i & 0xc580) != 0;
+	}
+
+	static final boolean method2237(int i, int i_58_) {
+		return (i & 0x100100) != 0;
+	}
+
+	static final boolean method2238(int i, int i_59_) {
+		return (i & 0x10000) != 0;
+	}
+
+	static final boolean method2239(int i, int i_60_) {
+		return (i & 0x400) != 0;
+	}
+
+	static final boolean method2240(int i, int i_61_) {
+		return (((i & 0x2000) != 0 | method2195(i, i_61_) | method2191(i, i_61_)) & method2193(i, i_61_));
+	}
+
+	static final boolean method2241(int i, int i_62_) {
+		return method2242(i, i_62_) || method2200(i, i_62_);
+	}
+
+	static final boolean method2242(int i, int i_63_) {
+		return false;
+	}
+
+	static final boolean method2243(int i, int i_64_) {
+		return (i & 0x34) != 0;
+	}
+
+	static final boolean method2244(int i, int i_65_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2245(int i, int i_66_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2246(int i, int i_67_) {
+		return method2185(i, i_67_) || method2199(i, i_67_);
+	}
+
+	static final boolean method2247(int i, int i_68_) {
+		return ((i & 0x70000) != 0 | method2180(i, i_68_) || method2197(i, i_68_));
+	}
+
+	static final boolean method2248(int i, int i_69_) {
+		return ((method2180(i, i_69_) | method2181(i, i_69_) | method2184(i, i_69_)) & method2192(i, i_69_));
+	}
+
+	static final boolean method2249(int i, int i_70_) {
+		return ((method2180(i, i_70_) | method2181(i, i_70_) | method2184(i, i_70_)) & method2192(i, i_70_));
+	}
+
+	static final boolean method2250(int i, int i_71_) {
+		return ((method2180(i, i_71_) | method2181(i, i_71_) | method2184(i, i_71_)) & method2192(i, i_71_));
+	}
+
+	static final boolean method2251(int i, int i_72_) {
+		return (((i & 0x2000) != 0 | method2195(i, i_72_) | method2191(i, i_72_)) & method2193(i, i_72_));
+	}
+
+	static final boolean method2252(int i, int i_73_) {
+		return ((i & 0x70000) != 0 | method2184(i, i_73_) || method2197(i, i_73_));
+	}
+
+	static final boolean method2253(int i, int i_74_) {
+		if (!method2194(i, i_74_))
+			return false;
+		if ((i & 0xb000) != 0 | method2185(i, i_74_) | method2186(i, i_74_))
+			return true;
+		return ((i_74_ & 0x37) == 0 & (method2195(i, i_74_) | method2191(i, i_74_)));
+	}
+
+	static final boolean method2254(int i, int i_75_) {
+		if (!method2194(i, i_75_))
+			return false;
+		if ((i & 0xb000) != 0 | method2185(i, i_75_) | method2186(i, i_75_))
+			return true;
+		return ((i_75_ & 0x37) == 0 & (method2195(i, i_75_) | method2191(i, i_75_)));
+	}
+
+	static final boolean method2255(int i, int i_76_) {
+		return method2242(i, i_76_) & method2201(i, i_76_);
+	}
+
+	static final boolean method2256(int i, int i_77_) {
+		return (i & 0x180) != 0;
+	}
+
+	static final boolean method2257(int i, int i_78_) {
+		return method2188(i, i_78_) & method2196(i, i_78_);
+	}
+
+	static final boolean method2258(int i, int i_79_) {
+		return method2188(i, i_79_) & method2196(i, i_79_);
+	}
+
+	static final boolean method2259(int i, int i_80_) {
+		return ((i & 0x70000) != 0 | method2180(i, i_80_) || method2197(i, i_80_));
+	}
+
+	static final boolean method2260(int i, int i_81_) {
+		return (i & 0x400) != 0;
+	}
+
+	static final boolean method2261(int i, int i_82_) {
+		return (((i & 0x2000) != 0 | method2195(i, i_82_) | method2191(i, i_82_)) & method2193(i, i_82_));
+	}
+
+	static final boolean method2262(int i, int i_83_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2263(int i, int i_84_) {
+		return ((i & 0x70000) != 0 | method2181(i, i_84_) || method2197(i, i_84_));
+	}
+
+	static final boolean method2264(int i, int i_85_) {
+		return (i & 0x400) != 0;
+	}
+
+	static final boolean method2265(int i, int i_86_) {
+		return method2185(i, i_86_) || method2199(i, i_86_);
+	}
+
+	static final boolean method2266(int i, int i_87_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2267(int i, int i_88_) {
+		if ((i & 0x10000) != 0 | method2195(i, i_88_) || method2261(i, i_88_))
+			return true;
+		return (i_88_ & 0x37) == 0 && method2199(i, i_88_);
+	}
+
+	static final boolean method2268(int i, int i_89_) {
+		if ((i & 0x10000) != 0 | method2195(i, i_89_) || method2261(i, i_89_))
+			return true;
+		return (i_89_ & 0x37) == 0 && method2199(i, i_89_);
+	}
+
+	static final boolean method2269(int i, int i_90_) {
+		if ((i & 0x10000) != 0 | method2195(i, i_90_) || method2261(i, i_90_))
+			return true;
+		return (i_90_ & 0x37) == 0 && method2199(i, i_90_);
+	}
+
+	static final boolean method2270(int i, int i_91_) {
+		return method2185(i, i_91_) || method2199(i, i_91_);
+	}
+
+	static final boolean method2271(int i, int i_92_) {
+		return (i & 0x800) != 0;
+	}
+
+	static final boolean method2272(int i, int i_93_) {
+		return ((i & 0x70000) != 0 | method2180(i, i_93_) || method2197(i, i_93_));
+	}
+
+	static final boolean method2273(int i, int i_94_) {
+		return ((i & 0x40000) != 0 | method2186(i, i_94_) || method2199(i, i_94_));
+	}
+
+	static final boolean method2274(int i, int i_95_) {
+		return ((i & 0x40000) != 0 | method2186(i, i_95_) || method2199(i, i_95_));
+	}
+
+	static final boolean method2275(int i, int i_96_) {
+		return method2242(i, i_96_) || method2200(i, i_96_);
+	}
+
+	static final boolean method2276(int i, int i_97_) {
+		return (i & 0x800) != 0 && (i_97_ & 0x37) != 0;
+	}
+
+	static final boolean method2277(int i, int i_98_) {
+		return (i & 0x180) != 0;
+	}
+
+	static final boolean method2278(int i, int i_99_) {
+		return (i & 0x180) != 0;
+	}
+
+	static final boolean method2279(int i, int i_100_) {
+		return method2242(i, i_100_) || method2200(i, i_100_);
+	}
+
+	static final boolean method2280(int i, int i_101_) {
+		return (i & 0x20) != 0;
+	}
+
+	static final boolean method2281(int i, int i_102_) {
+		return ((i & 0x70000) != 0 | method2181(i, i_102_) || method2197(i, i_102_));
+	}
+
+	static final boolean method2282(int i, int i_103_) {
+		return (i & 0x400) != 0;
+	}
+
+	static final boolean method2283(int i, int i_104_) {
+		return method2188(i, i_104_) & method2196(i, i_104_);
+	}
+
+	static final boolean method2284(int i, int i_105_) {
+		return method2242(i, i_105_) & method2201(i, i_105_);
+	}
+
+	static final boolean method2285(int i, int i_106_) {
+		return ((i & 0x60000) != 0 | method2188(i, i_106_) || method2199(i, i_106_) || method2283(i, i_106_));
+	}
+
+	static final boolean method2286(int i, int i_107_) {
+		return ((i & 0x60000) != 0 | method2188(i, i_107_) || method2199(i, i_107_) || method2283(i, i_107_));
+	}
+
+	static final boolean method2287(int i, int i_108_) {
+		return ((i & 0x60000) != 0 | method2188(i, i_108_) || method2199(i, i_108_) || method2283(i, i_108_));
 	}
 }

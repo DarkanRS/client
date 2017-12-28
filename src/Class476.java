@@ -1,112 +1,59 @@
+
 /* Class476 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.io.EOFException;
-import java.io.File;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.util.Random;
 
-public final class Class476 {
-	long aLong5983;
-	RandomAccessFile aRandomAccessFile5984;
-	long aLong5985;
-	static Class453 aClass453_5986;
+public class Class476 {
+	short[] aShortArray5625;
+	int[] anIntArray5626;
+	long aLong5627;
+	short[] aShortArray5628;
 
-	final void method6077(long l) throws IOException {
-		try {
-			((Class476) this).aRandomAccessFile5984.seek(l);
-			((Class476) this).aLong5985 = 5892097441890682535L * l;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.a(").append(')').toString());
-		}
+	public Class476(long l, int[] is, short[] is_0_, short[] is_1_) {
+		((Class476) this).aLong5627 = 4871301677747952249L * l;
+		((Class476) this).anIntArray5626 = is;
+		((Class476) this).aShortArray5628 = is_0_;
+		((Class476) this).aShortArray5625 = is_1_;
 	}
 
-	public final void method6078(byte[] is, int i, int i_0_, int i_1_) throws IOException {
-		try {
-			if ((-1855833292870549225L * ((Class476) this).aLong5985 + (long) i_0_) > ((Class476) this).aLong5983 * -1095537870969537929L) {
-				((Class476) this).aRandomAccessFile5984.seek(-1095537870969537929L * ((Class476) this).aLong5983);
-				((Class476) this).aRandomAccessFile5984.write(1);
-				throw new EOFException();
-			}
-			((Class476) this).aRandomAccessFile5984.write(is, i, i_0_);
-			((Class476) this).aLong5985 += 5892097441890682535L * (long) i_0_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.f(").append(')').toString());
-		}
+	static final void method7929(Class527 class527, int i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class13.method506(class118, class98, class527, -1252434200);
 	}
 
-	public final void method6079(int i) throws IOException {
-		try {
-			if (null != ((Class476) this).aRandomAccessFile5984) {
-				((Class476) this).aRandomAccessFile5984.close();
-				((Class476) this).aRandomAccessFile5984 = null;
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.b(").append(')').toString());
-		}
+	static final void method7930(Class527 class527, byte i) {
+		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class118 class118 = Class117.method1981(i_2_, (byte) 18);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 1506818197 * class118.anInt1301;
 	}
 
-	public final long method6080(int i) throws IOException {
-		try {
-			return ((Class476) this).aRandomAccessFile5984.length();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.p(").append(')').toString());
-		}
+	public static int method7931(Random random, int i, int i_3_) {
+		if (i <= 0)
+			throw new IllegalArgumentException();
+		if (Class96_Sub9.method14585(i, 1942118537))
+			return (int) (((long) random.nextInt() & 0xffffffffL) * (long) i >> 32);
+		int i_4_ = -2147483648 - (int) (4294967296L % (long) i);
+		int i_5_;
+		do
+			i_5_ = random.nextInt();
+		while (i_5_ >= i_4_);
+		return Class302.method5360(i_5_, i, -120645567);
 	}
 
-	public final int method6081(byte[] is, int i, int i_2_, short i_3_) throws IOException {
-		try {
-			int i_4_ = ((Class476) this).aRandomAccessFile5984.read(is, i, i_2_);
-			if (i_4_ > 0)
-				((Class476) this).aLong5985 += (long) i_4_ * 5892097441890682535L;
-			return i_4_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.i(").append(')').toString());
-		}
+	static final void method7932(Class527 class527, byte i) {
+		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+		if (string.startsWith(Class76.method1358(0, (byte) 0)) || string.startsWith(Class76.method1358(1, (byte) 0)))
+			string = string.substring(7);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class249.method4282(string, (byte) 0) ? 1 : 0;
 	}
 
-	protected void finalize() throws Throwable {
-		try {
-			if (null != ((Class476) this).aRandomAccessFile5984) {
-				System.out.println("");
-				method6079(601212046);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.finalize(").append(')').toString());
-		}
-	}
-
-	public Class476(File file, String string, long l) throws IOException {
-		if (l == -1L)
-			l = 9223372036854775807L;
-		if (file.length() > l)
-			file.delete();
-		((Class476) this).aRandomAccessFile5984 = new RandomAccessFile(file, string);
-		((Class476) this).aLong5983 = l * 1728399846774964039L;
-		((Class476) this).aLong5985 = 0L;
-		int i = ((Class476) this).aRandomAccessFile5984.read();
-		if (-1 != i && !string.equals("r")) {
-			((Class476) this).aRandomAccessFile5984.seek(0L);
-			((Class476) this).aRandomAccessFile5984.write(i);
-		}
-		((Class476) this).aRandomAccessFile5984.seek(0L);
-	}
-
-	static final void method6082(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = 707299179 * Class360.anInt3892;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.ahm(").append(')').toString());
-		}
-	}
-
-	static final void teleport(int i, int i_5_, int i_6_, int i_7_) {
-		try {
-			String string = new StringBuilder().append("tele ").append(i).append(Class26.aString353).append(i_5_ >> 6).append(Class26.aString353).append(i_6_ >> 6).append(Class26.aString353).append(i_5_ & 0x3f).append(Class26.aString353).append(i_6_ & 0x3f).toString();
-			System.out.println(string);
-			Class419.method5605(string, true, false, 1405738364);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("tp.gd(").append(')').toString());
-		}
+	static final void method7933(Class527 class527, byte i) {
+		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
+		Class118 class118 = ((Class513) class513).aClass118_5886;
+		Class98 class98 = ((Class513) class513).aClass98_5885;
+		Class159.method2741(class118, class98, class527, (byte) 5);
 	}
 }

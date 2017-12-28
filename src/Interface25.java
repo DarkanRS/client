@@ -3,7 +3,7 @@
  */
 
 public interface Interface25 {
-	public void ma(boolean bool);
+	public boolean method182(Class521_Sub1_Sub1 class521_sub1_sub1);
 
-	public void z(boolean bool);
+	public boolean method183(Class521_Sub1_Sub1 class521_sub1_sub1, int i);
 }

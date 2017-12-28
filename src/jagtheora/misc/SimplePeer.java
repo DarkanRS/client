@@ -12,7 +12,7 @@ public abstract class SimplePeer {
 
 	private static native void init();
 
-	public final boolean a() {
+	public final boolean method6698() {
 		return peer == 0L;
 	}
 
@@ -20,16 +20,16 @@ public abstract class SimplePeer {
 		peer = l;
 	}
 
-	public final void f() {
-		if (!a())
+	public final void method6699() {
+		if (!method6698())
 			clear();
 	}
 
 	protected abstract void clear();
 
 	protected void finalize() throws Throwable {
-		if (!a())
-			f();
+		if (!method6698())
+			method6699();
 		super.finalize();
 	}
 
@@ -37,7 +37,39 @@ public abstract class SimplePeer {
 		init();
 	}
 
-	protected abstract void k();
+	protected void method6700() throws Throwable {
+		if (!method6698())
+			method6699();
+		super.finalize();
+	}
 
-	protected abstract void d();
+	protected void method6701() throws Throwable {
+		if (!method6698())
+			method6699();
+		super.finalize();
+	}
+
+	public final boolean method6702() {
+		return peer == 0L;
+	}
+
+	public final boolean method6703() {
+		return peer == 0L;
+	}
+
+	public final void method6704() {
+		if (!method6698())
+			clear();
+	}
+
+	public final void method6705() {
+		if (!method6698())
+			clear();
+	}
+
+	protected abstract void q();
+
+	protected abstract void f();
+
+	protected abstract void m();
 }

@@ -8,7 +8,7 @@ import jagtheora.misc.SimplePeer;
 public class VorbisComment extends SimplePeer {
 	public VorbisComment() {
 		init();
-		if (a())
+		if (method6698())
 			throw new IllegalStateException();
 	}
 
@@ -16,7 +16,9 @@ public class VorbisComment extends SimplePeer {
 
 	protected native void clear();
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

@@ -9,7 +9,7 @@ import jagtheora.ogg.OggPacket;
 public class VorbisBlock extends SimplePeer {
 	public VorbisBlock(DSPState dspstate) {
 		init(dspstate);
-		if (a())
+		if (method6698())
 			throw new IllegalStateException();
 	}
 
@@ -19,7 +19,9 @@ public class VorbisBlock extends SimplePeer {
 
 	protected native void clear();
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

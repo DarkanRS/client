@@ -3,25 +3,21 @@
  */
 
 public class Class269 {
-	int anInt2884;
-	int anInt2885;
-	int[] anIntArray2886;
-	int[] anIntArray2887;
+	byte aByte3308;
+	byte aByte3309;
+	int anInt3310;
+	byte aByte3311;
+	byte aByte3312;
+	int[] anIntArray3313;
+	byte[] aByteArray3314;
 
-	Class269() {
-		Class298_Sub23.method3070(16);
-		((Class269) this).anInt2885 = (Class298_Sub23.method3063() != 0 ? Class298_Sub23.method3070(4) + 1 : 1);
-		if (Class298_Sub23.method3063() != 0)
-			Class298_Sub23.method3070(8);
-		Class298_Sub23.method3070(2);
-		if (((Class269) this).anInt2885 > 1)
-			((Class269) this).anInt2884 = Class298_Sub23.method3070(4);
-		((Class269) this).anIntArray2886 = new int[((Class269) this).anInt2885];
-		((Class269) this).anIntArray2887 = new int[((Class269) this).anInt2885];
-		for (int i = 0; i < ((Class269) this).anInt2885; i++) {
-			Class298_Sub23.method3070(8);
-			((Class269) this).anIntArray2886[i] = Class298_Sub23.method3070(8);
-			((Class269) this).anIntArray2887[i] = Class298_Sub23.method3070(8);
-		}
+	Class269(int i, int i_0_, int i_1_, int i_2_, int i_3_, int[] is, byte[] is_4_) {
+		((Class269) this).aByte3311 = (byte) i;
+		((Class269) this).aByte3309 = (byte) i_0_;
+		((Class269) this).anInt3310 = i_1_;
+		((Class269) this).aByte3308 = (byte) i_2_;
+		((Class269) this).aByte3312 = (byte) i_3_;
+		((Class269) this).anIntArray3313 = is;
+		((Class269) this).aByteArray3314 = is_4_;
 	}
 }

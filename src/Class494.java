@@ -2,64 +2,60 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class494 {
-	Class348 aClass348_6089 = new Class348(64);
-	public int anInt6090;
-	Class243 aClass243_6091;
-	static int anInt6092;
+public class Class494 implements Interface43 {
+	static Class494 aClass494_5779;
+	static Class494 aClass494_5780;
+	static Class494 aClass494_5781;
+	public static Class494 aClass494_5782;
+	static Class494 aClass494_5783;
+	static Class494 aClass494_5784;
+	static Class494 aClass494_5785;
+	public static Class494 aClass494_5786 = new Class494(-2);
+	static Class494 aClass494_5787;
+	static Class494 aClass494_5788;
+	static Class494 aClass494_5789;
+	public static Class494 aClass494_5790 = new Class494(-3);
+	static Class494 aClass494_5791;
+	static Class494 aClass494_5792;
+	int anInt5793;
+	static Class194 aClass194_5794;
 
-	public Class494(Class411 class411, Class429 class429, Class243 class243) {
-		((Class494) this).aClass243_6091 = class243;
-		anInt6090 = (((Class494) this).aClass243_6091.method2316((-1006924897 * (Class120.aClass120_1424.anInt1460)), -1214131434) * 1832969825);
+	public static Class494[] method8274() {
+		return new Class494[] { aClass494_5784, aClass494_5792, aClass494_5787, aClass494_5789, aClass494_5786, aClass494_5782, aClass494_5788, aClass494_5779, aClass494_5790, aClass494_5783, aClass494_5791, aClass494_5781, aClass494_5785, aClass494_5780 };
 	}
 
-	public Class473 method6191(int i, byte i_0_) {
-		try {
-			Class473 class473;
-			synchronized (((Class494) this).aClass348_6089) {
-				class473 = (Class473) ((Class494) this).aClass348_6089.method4184((long) i);
-			}
-			if (class473 != null)
-				return class473;
-			byte[] is;
-			synchronized (((Class494) this).aClass243_6091) {
-				is = (((Class494) this).aClass243_6091.getFile(Class120.aClass120_1424.anInt1460 * -1006924897, i, (byte) -73));
-			}
-			class473 = new Class473();
-			if (is != null)
-				class473.method6067(new RsByteBuffer(is), 1327711716);
-			synchronized (((Class494) this).aClass348_6089) {
-				((Class494) this).aClass348_6089.method4194(class473, (long) i);
-			}
-			return class473;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uj.a(").append(')').toString());
-		}
+	public int method243(byte i) {
+		return ((Class494) this).anInt5793 * 751932207;
 	}
 
-	public static boolean method6192(String string, int i) {
-		try {
-			if (string == null)
-				return false;
-			for (int i_1_ = 0; i_1_ < client.anInt8941 * -1054937867; i_1_++) {
-				if (string.equalsIgnoreCase(client.aStringArray8704[i_1_]))
-					return true;
-			}
-			if (string.equalsIgnoreCase(Class287.myPlayer.username))
-				return true;
-			return false;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uj.md(").append(')').toString());
-		}
+	static {
+		aClass494_5781 = new Class494(2);
+		aClass494_5782 = new Class494(3);
+		aClass494_5783 = new Class494(9);
+		aClass494_5784 = new Class494(10);
+		aClass494_5785 = new Class494(20);
+		aClass494_5792 = new Class494(21);
+		aClass494_5787 = new Class494(30);
+		aClass494_5788 = new Class494(31);
+		aClass494_5789 = new Class494(32);
+		aClass494_5780 = new Class494(33);
+		aClass494_5779 = new Class494(34);
+		aClass494_5791 = new Class494(38);
 	}
 
-	static void method6193(int i, int i_2_, int i_3_) {
-		try {
-			Class298_Sub37_Sub12 class298_sub37_sub12 = Class410.method4985(16, (long) i);
-			class298_sub37_sub12.method3449((byte) 109);
-			((Class298_Sub37_Sub12) class298_sub37_sub12).anInt9610 = 1274450087 * i_2_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("uj.an(").append(')').toString());
-		}
+	public int method75() {
+		return ((Class494) this).anInt5793 * 751932207;
+	}
+
+	public static Class494[] method8275() {
+		return new Class494[] { aClass494_5784, aClass494_5792, aClass494_5787, aClass494_5789, aClass494_5786, aClass494_5782, aClass494_5788, aClass494_5779, aClass494_5790, aClass494_5783, aClass494_5791, aClass494_5781, aClass494_5785, aClass494_5780 };
+	}
+
+	Class494(int i) {
+		((Class494) this).anInt5793 = i * -69561393;
+	}
+
+	public int method76() {
+		return ((Class494) this).anInt5793 * 751932207;
 	}
 }

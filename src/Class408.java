@@ -3,63 +3,53 @@
  */
 
 public class Class408 {
-	public static int anInt5277 = 1;
-	public static int anInt5278 = 3;
-	public static int anInt5279 = 2;
-	public static int anInt5280 = 4;
+	Class229 aClass229_4850 = new Class229(64);
+	public int anInt4851;
+	Class317 aClass317_4852;
+	static Class317 aClass317_4853;
 
-	Class408() throws Throwable {
-		throw new Error();
+	public Class415 method6872(int i) {
+		Class415 class415;
+		synchronized (((Class408) this).aClass229_4850) {
+			class415 = ((Class415) ((Class408) this).aClass229_4850.method3865((long) i));
+		}
+		if (null != class415)
+			return class415;
+		byte[] is;
+		synchronized (((Class408) this).aClass317_4852) {
+			is = (((Class408) this).aClass317_4852.method5607(-71319279 * Class120.aClass120_1482.anInt1521, i, -1848554770));
+		}
+		class415 = new Class415();
+		if (null != is)
+			class415.method6990(new RsByteBuffer(is), -2089573678);
+		synchronized (((Class408) this).aClass229_4850) {
+			((Class408) this).aClass229_4850.method3856(class415, (long) i);
+		}
+		return class415;
 	}
 
-	static Class444[] method4965(byte i) {
-		try {
-			return (new Class444[] { Class444.aClass444_5605, Class444.aClass444_5604, Class444.aClass444_5602, Class444.aClass444_5606, Class444.aClass444_5603 });
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qy.a(").append(')').toString());
+	public Class415 method6873(int i, byte i_0_) {
+		Class415 class415;
+		synchronized (((Class408) this).aClass229_4850) {
+			class415 = ((Class415) ((Class408) this).aClass229_4850.method3865((long) i));
 		}
+		if (null != class415)
+			return class415;
+		byte[] is;
+		synchronized (((Class408) this).aClass317_4852) {
+			is = (((Class408) this).aClass317_4852.method5607(-71319279 * Class120.aClass120_1482.anInt1521, i, -2097990028));
+		}
+		class415 = new Class415();
+		if (null != is)
+			class415.method6990(new RsByteBuffer(is), -2121705498);
+		synchronized (((Class408) this).aClass229_4850) {
+			((Class408) this).aClass229_4850.method3856(class415, (long) i);
+		}
+		return class415;
 	}
 
-	public static int method4966(long l) {
-		try {
-			return (int) (l / 86400000L) - 11745;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qy.i(").append(')').toString());
-		}
-	}
-
-	static Class147[] method4967(byte i) {
-		try {
-			return (new Class147[] { Class147.aClass147_1579, Class147.aClass147_1578, Class147.aClass147_1577 });
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qy.a(").append(')').toString());
-		}
-	}
-
-	static final void method4968(ClientScript2 class403, int i) {
-		try {
-			int i_0_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			IComponentDefinition class105 = Class50.getIComponentDefinitions(i_0_, (byte) 79);
-			Class119 class119 = Class389.aClass119Array4165[i_0_ >> 16];
-			Class82_Sub19.method925(class105, class119, class403, -535116520);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qy.fi(").append(')').toString());
-		}
-	}
-
-	static final void method4969(ClientScript2 class403, int i) {
-		try {
-			BufferedConnectionContext class25 = Class429.method5760((short) 512);
-			Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.FRIEND_CHAT_QUICK_CHAT_MESSAGE, class25.aClass449_330, (byte) 51);
-			class298_sub36.aClass298_Sub53_Sub2_7396.writeByte(0);
-			int i_1_ = (class298_sub36.aClass298_Sub53_Sub2_7396.index * 385051775);
-			class298_sub36.aClass298_Sub53_Sub2_7396.writeByte(0);
-			class298_sub36.aClass298_Sub53_Sub2_7396.writeShort(((ClientScript2) class403).aClass177_5243.anInt1787 * -2034569943, 16711935);
-			((ClientScript2) class403).aClass177_5243.aClass298_Sub37_Sub14_1788.method3464(class298_sub36.aClass298_Sub53_Sub2_7396, ((ClientScript2) class403).aClass177_5243.anIntArray1789, 1127792065);
-			class298_sub36.aClass298_Sub53_Sub2_7396.method3649((385051775 * class298_sub36.aClass298_Sub53_Sub2_7396.index) - i_1_, (byte) -111);
-			class25.method390(class298_sub36, (byte) -47);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qy.acg(").append(')').toString());
-		}
+	public Class408(Class486 class486, Class495 class495, Class317 class317) {
+		((Class408) this).aClass317_4852 = class317;
+		anInt4851 = (((Class408) this).aClass317_4852.method5624(((Class120.aClass120_1482.anInt1521) * -71319279), 2023918393) * 2109871343);
 	}
 }

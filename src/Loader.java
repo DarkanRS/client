@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.io.File;
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
@@ -17,52 +16,32 @@ import javax.swing.JProgressBar;
 import javax.swing.border.Border;
 
 public class Loader extends Applet implements AppletStub {
-	private static final long serialVersionUID = 7639088664641445302L;
-	public static Properties client_parameters = new Properties();
-	public JFrame client_frame;
-	public JPanel client_panel = new JPanel();
 
-	public static boolean usingRS = false;
-	public static boolean useIsaac = false;
+	private static final long serialVersionUID = 1L;
 
-	public static boolean local = true;
+	public static final int CLIENT_REVISON = 727;
+	public static final int SUB_REVISION = 1;
+
+	public static final String IP_ADDRESS = "127.0.0.1";
+	public static final int LOBBY_PORT = 5555;
+
+	public static final boolean USING_ISAAC = false;
+	public static final boolean LOBBY_ENABLED = true;
+	public static final boolean DISABLE_XTEA_CRASH = true;
 	
-	public static int DEVELOPER_CONSOLE_COLOR = 0x00FF00;
-	
-	public static int PORT = 5555;
-	public static boolean LOBBY_ENABLED = false;
-	public static boolean DISABLE_XTEA_CRASH = true;
-	public static boolean DISABLE_USELESS_PACKETS = false;
-	public static boolean DISABLE_RSA = false;
-	public static int clientRevision = 3;
+	public static int clientRevision = 4;
 	public static int newClientRevision = clientRevision+1;
 	
-	public static int DRAW_DISTANCE = 0;
-
 	public static final String clientLink = "http://darkan.org/assets/uploads/files/Darkan.jar";
 
-	public static final int REVISION = 718;
-	public static final int LOBBY_PORT = 5555;
-	public static String LOBBY_IP = "axios.trentonkress.com";
-	public static int SUB_REVISION = 2;
-	public static Loader instance;
-	public static int[] outSizes = new int[256];
-	public static boolean localHost;
+	public static Properties clientParams = new Properties();
 
-	public static void main(String[] args) {
-		if (args.length > 0) {
-			LOBBY_ENABLED = Boolean.parseBoolean(args[1]);
-			SUB_REVISION = Integer.parseInt(args[2]);
-		}
-		Loader loader = instance = new Loader();
-		loader.doFrame();
+	public JFrame clientFrame = null;
+
+	public static void main(String[] arg0) {
+		new Loader().doFrame();
 	}
-
-	public void init() {
-		instance = this;
-		doApplet();
-	}
-
+	
 	public static Downloader jarDownloader;
 
 	public static void handleNewJarDownload() {
@@ -95,114 +74,116 @@ public class Loader extends Applet implements AppletStub {
 			return;
 		}
 	}
-	
+
 	@Override
-	public void appletResize(int dimensionX, int dimensionY) {
-		super.resize(new Dimension(dimensionX, dimensionY));
+	public void init() {
+		doApplet();
 	}
 
-	void doApplet() {
-		setParams();
+	private void doApplet() {
 		startClient();
 	}
 
-	public void doFrame() {
-		setParams();
+	private void doFrame() {
 		openFrame();
 		startClient();
+		clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	void setParams() {
-		client_parameters.put("separate_jvm", "true");
-		client_parameters.put("boxbgcolor", "black");
-		client_parameters.put("image", "http://www.runescape.com/img/game/splash2.gif");
-		client_parameters.put("centerimage", "true");
-		client_parameters.put("boxborder", "false");
-		client_parameters.put("java_arguments", "-Xmx256m -Xss2m -Dsun.java2d.noddraw=true -XX:CompileThreshold=1500 -Xincgc -XX:+UseConcMarkSweepGC -XX:+UseParNewGC");
-		client_parameters.put("27", "0");
-		client_parameters.put("1", "0");
-		client_parameters.put("16", "false");
-		client_parameters.put("17", "false");
-		client_parameters.put("21", usingRS ? "11" : "1"); // WORLD ID
-		client_parameters.put("30", "false");
-		client_parameters.put("20", usingRS ? "lobby17.runescape.com" : LOBBY_IP);
-		client_parameters.put("29", "");
-		client_parameters.put("11", "true");
-		client_parameters.put("25", "1378752098");
-		client_parameters.put("28", "0");
-		client_parameters.put("8", ".runescape.com");
-		client_parameters.put("23", "false");
-		client_parameters.put("32", "0");
-		client_parameters.put("15", "wwGlrZHF5gKN6D3mDdihco3oPeYN2KFybL9hUUFqOvk");
-		client_parameters.put("0", "IjGJjn4L3q5lRpOR9ClzZQ");
-		client_parameters.put("2", "");
-		client_parameters.put("4", "" + (LOBBY_PORT - 40000));// usingRS ?
-																// "1116" :
-																// "3594");
-																// //LOBBY ID
-		client_parameters.put("14", "");
-		client_parameters.put("5", "8194");
-		client_parameters.put("-1", "QlwePyRU5GcnAn1lr035ag");
-		client_parameters.put("6", "0");
-		client_parameters.put("24", "true,false,0,43,200,18,0,21,354,-15,Verdana,11,0xF4ECE9,candy_bar_middle.gif,candy_bar_back.gif,candy_bar_outline_left.gif,candy_bar_outline_right.gif,candy_bar_outline_top.gif,candy_bar_outline_bottom.gif,loadbar_body_left.gif,loadbar_body_right.gif,loadbar_body_fill.gif,6");
-		client_parameters.put("3", "hAJWGrsaETglRjuwxMwnlA/d5W6Eg");
-		client_parameters.put("12", "false");
-		client_parameters.put("13", "0");
-		client_parameters.put("26", "0");
-		client_parameters.put("9", "77");
-		client_parameters.put("22", "false");
-		client_parameters.put("18", "false");
-		client_parameters.put("33", "");
-		client_parameters.put("haveie6", "false");
+	static {
+		clientParams.put("boxborder", "false");
+		clientParams.put("boxbgcolor", "black");
+		clientParams.put("separate_jvm", "true");
+		clientParams.put("centerimage", "true");
+		clientParams.put("java_arguments", "-Xmx256m -Xss2m -Dsun.java2d.noddraw=true -XX:CompileThreshold=1500 -Xincgc -XX:+UseConcMarkSweepGC -XX:+UseParNewGC");
+		clientParams.put("image", "http://www.runescape.com/img/game/splash2.gif");
+		clientParams.put("-1", "-Vt*kwflxoHi*o7XkGw79w");
+		clientParams.put("11", "false");
+		clientParams.put("1", "");
+		clientParams.put("21", IP_ADDRESS);
+		clientParams.put("9", "true");
+		clientParams.put("14", "1115");
+		clientParams.put("22", "false");
+		clientParams.put("7", "");
+		clientParams.put("12", "");
+		clientParams.put("31", "0");
+		clientParams.put("6", "0");
+		clientParams.put("33", "wwGlrZHF5gKN6D3mDdihco3oPeYN2KFybL9hUUFqOvk");
+		clientParams.put("28", "false");
+		clientParams.put("10", "false");
+		clientParams.put("27", "1451434218");
+		clientParams.put("26", "637809750146160229");
+		clientParams.put("20", "true,false,0,43,200,18,0,21,354,-15,Verdana,11,0xF4ECE9,candy_bar_middle.gif,candy_bar_back.gif,candy_bar_outline_left.gif,candy_bar_outline_right.gif,candy_bar_outline_top.gif,candy_bar_outline_bottom.gif,loadbar_body_left.gif,loadbar_body_right.gif,loadbar_body_fill.gif,6");
+		clientParams.put("0", "-bQCRYmC-hBwK2NKrdF7iQ");
+		clientParams.put("30", "38888");
+		clientParams.put("25", "true");
+		clientParams.put("16", "177");
+		clientParams.put("32", "");
+		clientParams.put("24", "0");
+		clientParams.put("5", IP_ADDRESS);
+		clientParams.put("15", "0");
+		clientParams.put("18", "false");
+		clientParams.put("23", "0");
+		clientParams.put("35", "0");
+		clientParams.put("4", "");
+		clientParams.put("13", "29EDD9FDC775629058FBBF106C5B0E0A3A8028FE0037D1737B8EC3EA2F4E8B8FD6F54EF2F4E65862");
+		clientParams.put("17", "ev9+VAp5/tMKeNR/7MOuH6lKWS+rGkHK");
+		clientParams.put("8", "0");
+		clientParams.put("29", "false");
 	}
 
-	void openFrame() {
-		client_frame = new JFrame("Darkan v" + clientRevision);
-		client_frame.setLayout(new BorderLayout());
+	private void openFrame() {
+		clientFrame = new JFrame("Darkan v" + clientRevision);
+		clientFrame.setLayout(new BorderLayout());
+		final JPanel client_panel = new JPanel();
 		client_panel.setLayout(new BorderLayout());
 		client_panel.add(this);
-		client_panel.setPreferredSize(new Dimension(765, 503));
-		client_frame.getContentPane().add(client_panel, "Center");
-		client_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		client_frame.pack();
-		client_frame.setVisible(true);
-
+		client_panel.setPreferredSize(new Dimension(765, 553));
+		clientFrame.getContentPane().add(client_panel, "Center");
+		clientFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		clientFrame.pack();
+		clientFrame.setVisible(true);
 	}
 
-	void startClient() {
+	private void startClient() {
 		try {
 			client clnt = new client();
 			clnt.supplyApplet(this);
 			clnt.init();
 			clnt.start();
-		} catch (Exception exception) {
-			exception.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
-	public String getParameter(String string) {
-		return (String) client_parameters.get(string);
+	@Override
+	public String getParameter(String arg0) {
+		return (String) clientParams.get(arg0);
 	}
 
+	@Override
+	public void appletResize(int arg0, int arg1) {
+
+	}
+
+	@Override
 	public URL getDocumentBase() {
-		return getCodeBase();
+		try {
+			return new URL("http://" + IP_ADDRESS);
+		} catch (MalformedURLException e) {
+			System.out.println("Invalid ip address");
+		}
+		return null;
 	}
 
+	@Override
 	public URL getCodeBase() {
 		try {
-			return new URL(Class5.anInt2932);
-		} catch (Exception exception) {
-			exception.printStackTrace();
-			return null;
+			return new URL("http://" + IP_ADDRESS);
+		} catch (MalformedURLException e) {
+			System.out.println("Invalid ip address");
 		}
+		return null;
 	}
 
-	void printOut() throws IOException {
-		String s = "";
-		for (int i : outSizes) {
-			s += i + ", ";
-		}
-		System.out.println("in = new int[] {" + s + "};");
-	}
 }

@@ -3,23 +3,33 @@
  */
 
 public interface Interface2 {
-	public void method18(int i, byte[] is, int i_0_);
+	public boolean method9();
 
-	public void method19(int i, byte[] is, int i_1_);
+	public boolean method10(int i);
 
-	public long method20();
+	public void method11(boolean bool);
 
-	public int method21();
+	public void method12(boolean bool);
 
-	public int method22();
+	public boolean method13();
 
-	public long method23();
+	public void method14(boolean bool);
 
-	public long method24();
+	public void method15();
 
-	public void method25(int i, byte[] is, int i_2_);
+	public void method16();
 
-	public int method26();
+	public boolean method17();
 
-	public void method27(int i, byte[] is, int i_3_);
+	public void method18();
+
+	public void method19();
+
+	public void method20(boolean bool, int i);
+
+	public boolean method21();
+
+	public void method22(int i);
+
+	public void method23();
 }

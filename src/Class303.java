@@ -3,88 +3,219 @@
  */
 
 public class Class303 {
-	int anInt3260;
-	int anInt3261;
-	int anInt3262;
-	int anInt3263;
-	int anInt3264;
+	public float aFloat3565;
+	public float aFloat3566;
+	public float aFloat3567;
+	public float aFloat3568;
 
-	Class303(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
-		((Class303) this).anInt3264 = -727927571 * i_0_;
-		((Class303) this).anInt3261 = 1245468715 * i_1_;
-		((Class303) this).anInt3262 = i_2_ * -75483929;
-		((Class303) this).anInt3263 = i_3_ * -821826869;
-		((Class303) this).anInt3260 = (-1374344735 * ((Class303) this).anInt3263 - ((Class303) this).anInt3262 * -193549091);
+	public final void method5365(float f) {
+		aFloat3568 *= f;
+		aFloat3566 *= f;
+		aFloat3565 *= f;
+		aFloat3567 *= f;
 	}
 
-	static final void method3732(ClientScript2 class403, byte i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			int i_4_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			i_4_--;
-			if (class105.aStringArray1195 == null || i_4_ >= class105.aStringArray1195.length || class105.aStringArray1195[i_4_] == null)
-				((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393) - 1] = "";
-			else
-				((ClientScript2) class403).anObjectArray5240[((((ClientScript2) class403).anInt5241 += 969361751) * -203050393) - 1] = class105.aStringArray1195[i_4_];
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mp.pu(").append(')').toString());
-		}
+	public Class303(float f, float f_0_, float f_1_, float f_2_) {
+		method5366(f, f_0_, f_1_, f_2_);
 	}
 
-	static final void method3733(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -1567522756;
-			Class239.method2210((((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]), (((ClientScript2) class403).anIntArray5244[681479919 * ((ClientScript2) class403).anInt5239 + 1]), (((ClientScript2) class403).anIntArray5244[681479919 * ((ClientScript2) class403).anInt5239 + 2]), (((ClientScript2) class403).anIntArray5244[3 + 681479919 * ((ClientScript2) class403).anInt5239]), 256, 1676570424);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mp.tz(").append(')').toString());
-		}
+	public void method5366(float f, float f_3_, float f_4_, float f_5_) {
+		aFloat3568 = f;
+		aFloat3566 = f_3_;
+		aFloat3565 = f_4_;
+		aFloat3567 = f_5_;
 	}
 
-	static final void method3734(ClientScript2 class403, int i) {
-		try {
-			int i_5_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = client.aClass251Array8920[i_5_].anInt2771 * 5713347;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mp.yu(").append(')').toString());
-		}
+	public void method5367(Class303 class303_6_) {
+		method5366(class303_6_.aFloat3568, class303_6_.aFloat3566, class303_6_.aFloat3565, class303_6_.aFloat3567);
 	}
 
-	static final void method3735(ClientScript2 class403, byte i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -783761378;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mp.afs(").append(')').toString());
-		}
+	public void method5368(int i) {
+		method5366((float) (i >> 16 & 0xff) * 0.003921569F, (float) (i >> 8 & 0xff) * 0.003921569F, (float) (i >> 0 & 0xff) * 0.003921569F, (float) (i >> 24 & 0xff) * 0.003921569F);
 	}
 
-	static final void method3736(ClientScript2 class403, byte i) {
-		try {
-			int i_6_ = (((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]);
-			Class390 class390;
-			if (((ClientScript2) class403).aBoolean5261)
-				class390 = ((ClientScript2) class403).aClass390_5247;
-			else
-				class390 = ((ClientScript2) class403).aClass390_5246;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = class390.method4866((((ClientScript2) class403).aClass365_Sub1_Sub1_Sub2_5242.aClass119_10131), i_6_, -1, 867608709) ? 1 : 0;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mp.aob(").append(')').toString());
-		}
+	public final void method5369(Class384 class384) {
+		float f = aFloat3568;
+		float f_7_ = aFloat3566;
+		float f_8_ = aFloat3565;
+		float f_9_ = aFloat3567;
+		aFloat3568 = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_7_ + class384.aFloatArray4667[8] * f_8_ + class384.aFloatArray4667[12] * f_9_);
+		aFloat3566 = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_7_ + class384.aFloatArray4667[9] * f_8_ + class384.aFloatArray4667[13] * f_9_);
+		aFloat3565 = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_7_ + class384.aFloatArray4667[10] * f_8_ + class384.aFloatArray4667[14] * f_9_);
+		aFloat3567 = (class384.aFloatArray4667[3] * f + class384.aFloatArray4667[7] * f_7_ + class384.aFloatArray4667[11] * f_8_ + class384.aFloatArray4667[15] * f_9_);
 	}
 
-	public static final void method3737(Player class365_sub1_sub1_sub2_sub2, int i, int i_7_, byte i_8_, byte i_9_) {
-		try {
-			int i_10_ = class365_sub1_sub1_sub2_sub2.scenePositionXQueue[0];
-			int i_11_ = class365_sub1_sub1_sub2_sub2.scenePositionYQueue[0];
-			if (i_10_ >= 0 && i_10_ < client.aClass283_8716.method2629(-2022633621) && i_11_ >= 0 && i_11_ < client.aClass283_8716.method2630(211521322) && (i >= 0 && i < client.aClass283_8716.method2629(-2074801405) && i_7_ >= 0 && i_7_ < client.aClass283_8716.method2630(1180671988))) {
-				int i_12_ = (Class298_Sub37.calculateRoute(i_10_, i_11_, class365_sub1_sub1_sub2_sub2.getSize(), Class350.method4214(i, i_7_, (short) 808), (client.aClass283_8716.getSceneClipDataPlane(class365_sub1_sub1_sub2_sub2.plane)), true, client.calculatedScenePositionXs, client.calculatedScenePositionYs));
-				if (i_12_ >= 1 && i_12_ <= 3) {
-					for (int i_13_ = 0; i_13_ < i_12_ - 1; i_13_++)
-						class365_sub1_sub1_sub2_sub2.method4473(client.calculatedScenePositionXs[i_13_], client.calculatedScenePositionYs[i_13_], i_8_, (byte) 55);
-				}
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("mp.jl(").append(')').toString());
-		}
+	public final void method5370() {
+		aFloat3568 = -aFloat3568;
+		aFloat3566 = -aFloat3566;
+		aFloat3565 = -aFloat3565;
+		aFloat3567 = -aFloat3567;
+	}
+
+	public Class303() {
+		method5371();
+	}
+
+	final void method5371() {
+		aFloat3567 = 0.0F;
+		aFloat3565 = 0.0F;
+		aFloat3566 = 0.0F;
+		aFloat3568 = 0.0F;
+	}
+
+	public String toString() {
+		return new StringBuilder().append(aFloat3568).append(",").append(aFloat3566).append(",").append(aFloat3565).append(",").append(aFloat3567).toString();
+	}
+
+	public String method5372() {
+		return new StringBuilder().append(aFloat3568).append(",").append(aFloat3566).append(",").append(aFloat3565).append(",").append(aFloat3567).toString();
+	}
+
+	public final void method5373() {
+		aFloat3568 = -aFloat3568;
+		aFloat3566 = -aFloat3566;
+		aFloat3565 = -aFloat3565;
+		aFloat3567 = -aFloat3567;
+	}
+
+	public void method5374(float f, float f_10_, float f_11_, float f_12_) {
+		aFloat3568 = f;
+		aFloat3566 = f_10_;
+		aFloat3565 = f_11_;
+		aFloat3567 = f_12_;
+	}
+
+	public void method5375(float f, float f_13_, float f_14_, float f_15_) {
+		aFloat3568 = f;
+		aFloat3566 = f_13_;
+		aFloat3565 = f_14_;
+		aFloat3567 = f_15_;
+	}
+
+	public void method5376(float f, float f_16_, float f_17_, float f_18_) {
+		aFloat3568 = f;
+		aFloat3566 = f_16_;
+		aFloat3565 = f_17_;
+		aFloat3567 = f_18_;
+	}
+
+	public final void method5377(Class384 class384) {
+		float f = aFloat3568;
+		float f_19_ = aFloat3566;
+		float f_20_ = aFloat3565;
+		float f_21_ = aFloat3567;
+		aFloat3568 = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_19_ + class384.aFloatArray4667[8] * f_20_ + class384.aFloatArray4667[12] * f_21_);
+		aFloat3566 = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_19_ + class384.aFloatArray4667[9] * f_20_ + class384.aFloatArray4667[13] * f_21_);
+		aFloat3565 = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_19_ + class384.aFloatArray4667[10] * f_20_ + class384.aFloatArray4667[14] * f_21_);
+		aFloat3567 = (class384.aFloatArray4667[3] * f + class384.aFloatArray4667[7] * f_19_ + class384.aFloatArray4667[11] * f_20_ + class384.aFloatArray4667[15] * f_21_);
+	}
+
+	public void method5378(Class303 class303_22_) {
+		method5366(class303_22_.aFloat3568, class303_22_.aFloat3566, class303_22_.aFloat3565, class303_22_.aFloat3567);
+	}
+
+	final void method5379() {
+		aFloat3567 = 0.0F;
+		aFloat3565 = 0.0F;
+		aFloat3566 = 0.0F;
+		aFloat3568 = 0.0F;
+	}
+
+	public void method5380(int i) {
+		method5366((float) (i >> 16 & 0xff) * 0.003921569F, (float) (i >> 8 & 0xff) * 0.003921569F, (float) (i >> 0 & 0xff) * 0.003921569F, (float) (i >> 24 & 0xff) * 0.003921569F);
+	}
+
+	public void method5381(int i) {
+		method5366((float) (i >> 16 & 0xff) * 0.003921569F, (float) (i >> 8 & 0xff) * 0.003921569F, (float) (i >> 0 & 0xff) * 0.003921569F, (float) (i >> 24 & 0xff) * 0.003921569F);
+	}
+
+	public void method5382(float f, float f_23_, float f_24_, float f_25_) {
+		aFloat3568 = f;
+		aFloat3566 = f_23_;
+		aFloat3565 = f_24_;
+		aFloat3567 = f_25_;
+	}
+
+	public void method5383(Class303 class303_26_) {
+		method5366(class303_26_.aFloat3568, class303_26_.aFloat3566, class303_26_.aFloat3565, class303_26_.aFloat3567);
+	}
+
+	final void method5384() {
+		aFloat3567 = 0.0F;
+		aFloat3565 = 0.0F;
+		aFloat3566 = 0.0F;
+		aFloat3568 = 0.0F;
+	}
+
+	final void method5385() {
+		aFloat3567 = 0.0F;
+		aFloat3565 = 0.0F;
+		aFloat3566 = 0.0F;
+		aFloat3568 = 0.0F;
+	}
+
+	public String method5386() {
+		return new StringBuilder().append(aFloat3568).append(",").append(aFloat3566).append(",").append(aFloat3565).append(",").append(aFloat3567).toString();
+	}
+
+	public final void method5387(float f) {
+		aFloat3568 *= f;
+		aFloat3566 *= f;
+		aFloat3565 *= f;
+		aFloat3567 *= f;
+	}
+
+	public final void method5388() {
+		aFloat3568 = -aFloat3568;
+		aFloat3566 = -aFloat3566;
+		aFloat3565 = -aFloat3565;
+		aFloat3567 = -aFloat3567;
+	}
+
+	public final void method5389(float f) {
+		aFloat3568 *= f;
+		aFloat3566 *= f;
+		aFloat3565 *= f;
+		aFloat3567 *= f;
+	}
+
+	public void method5390(int i) {
+		method5366((float) (i >> 16 & 0xff) * 0.003921569F, (float) (i >> 8 & 0xff) * 0.003921569F, (float) (i >> 0 & 0xff) * 0.003921569F, (float) (i >> 24 & 0xff) * 0.003921569F);
+	}
+
+	public final void method5391(float f) {
+		aFloat3568 *= f;
+		aFloat3566 *= f;
+		aFloat3565 *= f;
+		aFloat3567 *= f;
+	}
+
+	final void method5392() {
+		aFloat3567 = 0.0F;
+		aFloat3565 = 0.0F;
+		aFloat3566 = 0.0F;
+		aFloat3568 = 0.0F;
+	}
+
+	public final void method5393(Class384 class384) {
+		float f = aFloat3568;
+		float f_27_ = aFloat3566;
+		float f_28_ = aFloat3565;
+		float f_29_ = aFloat3567;
+		aFloat3568 = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_27_ + class384.aFloatArray4667[8] * f_28_ + class384.aFloatArray4667[12] * f_29_);
+		aFloat3566 = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_27_ + class384.aFloatArray4667[9] * f_28_ + class384.aFloatArray4667[13] * f_29_);
+		aFloat3565 = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_27_ + class384.aFloatArray4667[10] * f_28_ + class384.aFloatArray4667[14] * f_29_);
+		aFloat3567 = (class384.aFloatArray4667[3] * f + class384.aFloatArray4667[7] * f_27_ + class384.aFloatArray4667[11] * f_28_ + class384.aFloatArray4667[15] * f_29_);
+	}
+
+	public final void method5394(Class384 class384) {
+		float f = aFloat3568;
+		float f_30_ = aFloat3566;
+		float f_31_ = aFloat3565;
+		float f_32_ = aFloat3567;
+		aFloat3568 = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_30_ + class384.aFloatArray4667[8] * f_31_ + class384.aFloatArray4667[12] * f_32_);
+		aFloat3566 = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_30_ + class384.aFloatArray4667[9] * f_31_ + class384.aFloatArray4667[13] * f_32_);
+		aFloat3565 = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_30_ + class384.aFloatArray4667[10] * f_31_ + class384.aFloatArray4667[14] * f_32_);
+		aFloat3567 = (class384.aFloatArray4667[3] * f + class384.aFloatArray4667[7] * f_30_ + class384.aFloatArray4667[11] * f_31_ + class384.aFloatArray4667[15] * f_32_);
 	}
 }

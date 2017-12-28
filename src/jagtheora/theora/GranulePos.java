@@ -16,7 +16,9 @@ public class GranulePos extends SimplePeer {
 		init();
 	}
 
-	protected native void k();
+	protected native void q();
 
-	protected native void d();
+	protected native void f();
+
+	protected native void m();
 }

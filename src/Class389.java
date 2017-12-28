@@ -3,142 +3,69 @@
  */
 
 public class Class389 {
-	Class243 aClass243_4159;
-	Class243 aClass243_4160;
-	Class348 aClass348_4161 = new Class348(64);
-	Class348 aClass348_4162 = new Class348(60);
-	int anInt4163;
-	protected static Class457 aClass457_4164;
-	public static Class119[] aClass119Array4165;
-	static int anInt4166;
+	public static final int anInt4724 = 32768;
+	public static final int anInt4725 = 4;
+	public static final int anInt4726 = 65536;
+	public static final int anInt4727 = 128;
+	public static final int anInt4728 = 524288;
+	public static final int anInt4729 = 64;
+	public static final int anInt4730 = 128;
+	public static final int anInt4731 = 8;
+	public static final int anInt4732 = 2048;
+	public static final int anInt4733 = 32768;
+	public static final int anInt4734 = 16384;
+	public static final int anInt4735 = 1;
+	public static final int anInt4736 = 2;
+	public static final int anInt4737 = 512;
+	public static final int anInt4738 = 256;
+	public static final int anInt4739 = 16;
+	public static final int anInt4740 = 2048;
+	public static final int anInt4741 = 1048576;
+	public static final int anInt4742 = 16777216;
+	public static final int anInt4743 = 2097152;
+	public static final int anInt4744 = 4194304;
+	public static final int anInt4745 = 33554432;
+	public static final int anInt4746 = 2097152;
+	public static final int anInt4747 = 4;
+	public static final int anInt4748 = 16;
+	public static final int anInt4749 = 8192;
+	public static final int anInt4750 = 8388608;
+	public static final int anInt4751 = 2;
+	public static final int anInt4752 = 8;
+	public static final int anInt4753 = 32;
+	public static final int anInt4754 = 64;
+	public static final int anInt4755 = 1;
+	public static final int anInt4756 = 4096;
+	public static final int anInt4757 = 4096;
+	public static final int anInt4758 = 1024;
+	public static final int anInt4759 = 256;
+	public static final int anInt4760 = 16384;
+	public static final int anInt4761 = 8192;
+	public static final int anInt4762 = 262144;
+	public static final int anInt4763 = 8388608;
+	public static final int anInt4764 = 65536;
+	public static final int anInt4765 = 32;
+	public static final int anInt4766 = 4194304;
+	public static final int anInt4767 = 524288;
+	public static final int anInt4768 = 131072;
+	public static final int anInt4769 = 1048576;
+	public static final int anInt4770 = 131072;
+	public static final int anInt4771 = 262144;
 
-	public void method4856(int i) {
-		try {
-			synchronized (((Class389) this).aClass348_4161) {
-				((Class389) this).aClass348_4161.method4189();
-			}
-			synchronized (((Class389) this).aClass348_4162) {
-				((Class389) this).aClass348_4162.method4189();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.i(").append(')').toString());
-		}
+	Class389() throws Throwable {
+		throw new Error();
 	}
 
-	public Class398 method4857(int i, int i_0_) {
-		try {
-			Class398 class398;
-			synchronized (((Class389) this).aClass348_4161) {
-				class398 = (Class398) ((Class389) this).aClass348_4161.method4184((long) i);
-			}
-			if (class398 != null)
-				return class398;
-			byte[] is;
-			synchronized (((Class389) this).aClass243_4159) {
-				is = (((Class389) this).aClass243_4159.getFile(Class120.aClass120_1449.getArchiveId(i, -880627246), Class120.aClass120_1449.getFileId(i, -2138953670), (byte) -76));
-			}
-			class398 = new Class398();
-			((Class398) class398).aClass389_5210 = this;
-			((Class398) class398).anInt5202 = i * 1757755963;
-			if (is != null)
-				class398.method4915(new RsByteBuffer(is), (byte) -38);
-			synchronized (((Class389) this).aClass348_4161) {
-				((Class389) this).aClass348_4161.method4194(class398, (long) i);
-			}
-			return class398;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.a(").append(')').toString());
-		}
+	static final void method6696(Class527 class527, int i) {
+		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class118 class118 = Class117.method1981(i_0_, (byte) 20);
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1334 * 539377845;
 	}
 
-	public void method4858(int i) {
-		try {
-			synchronized (((Class389) this).aClass348_4161) {
-				((Class389) this).aClass348_4161.method4187();
-			}
-			synchronized (((Class389) this).aClass348_4162) {
-				((Class389) this).aClass348_4162.method4187();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.b(").append(')').toString());
-		}
-	}
-
-	public void method4859(int i, int i_1_) {
-		try {
-			synchronized (((Class389) this).aClass348_4161) {
-				((Class389) this).aClass348_4161.method4186(i, -465863614);
-			}
-			synchronized (((Class389) this).aClass348_4162) {
-				((Class389) this).aClass348_4162.method4186(i, -1017728103);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.p(").append(')').toString());
-		}
-	}
-
-	public void method4860(int i, int i_2_) {
-		try {
-			((Class389) this).anInt4163 = i * -1451688935;
-			synchronized (((Class389) this).aClass348_4162) {
-				((Class389) this).aClass348_4162.method4187();
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.f(").append(')').toString());
-		}
-	}
-
-	public Class389(Class411 class411, Class429 class429, Class243 class243, Class243 class243_3_) {
-		((Class389) this).aClass243_4159 = class243;
-		((Class389) this).aClass243_4160 = class243_3_;
-		int i = ((Class389) this).aClass243_4159.method2296(1921321046) - 1;
-		Class120.aClass120_1449.method1306((short) 3745);
-		((Class389) this).aClass243_4159.method2316(i, -1103317672);
-	}
-
-	static final void method4861(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class119 class119 = ((Class390) class390).aClass119_4167;
-			Class158.method1699(class105, class119, class403, (byte) -85);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.ly(").append(')').toString());
-		}
-	}
-
-	static final void method4862(IComponentDefinition class105, Class119 class119, ClientScript2 class403, int i) {
-		try {
-			class105.aBoolean1165 = (((ClientScript2) class403).anIntArray5244[(((ClientScript2) class403).anInt5239 -= -391880689) * 681479919]) == 1;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.cr(").append(')').toString());
-		}
-	}
-
-	static final void method4863(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub11_7558.method5667(-369768513);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.ajk(").append(')').toString());
-		}
-	}
-
-	static final void method4864(ClientScript2 class403, int i) {
-		try {
-			((ClientScript2) class403).anInt5239 -= -783761378;
-			int i_4_ = (((ClientScript2) class403).anIntArray5244[((ClientScript2) class403).anInt5239 * 681479919]);
-			int i_5_ = (((ClientScript2) class403).anIntArray5244[1 + 681479919 * ((ClientScript2) class403).anInt5239]);
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = (GraphicsToolkit.aClass256_5315.method2441(i_4_, 2021332528).aCharArray9597[i_5_]);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.acp(").append(')').toString());
-		}
-	}
-
-	public static Class292 method4865(byte i) {
-		try {
-			return Class291.aClass292_6466;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("qc.as(").append(')').toString());
-		}
+	static final void method6697(Class118 class118, Class98 class98, Class527 class527, int i) {
+		class118.aBool1356 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+		Class109.method1858(class118, (byte) 17);
+		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
+			Class96_Sub17.method14656(class118.anInt1287 * -1952846363, -768470784);
 	}
 }

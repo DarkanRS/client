@@ -1,75 +1,203 @@
 /* Class49 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import jaggl.OpenGL;
 
 public class Class49 {
-	Class_ra_Sub2 aClass_ra_Sub2_497;
-	Class29 aClass29_498;
-	static String aString499 = "uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n";
+	static final int anInt471 = 128;
+	static final int anInt472 = 128;
+	public static final int anInt473 = 16;
+	public boolean aBool474;
+	Interface1 anInterface1_475;
+	Interface6[] anInterface6Array476 = null;
+	static Object anObject477;
+	public Interface6[] anInterface6Array478;
+	public Interface1 anInterface1_479;
+	public Interface1 anInterface1_480;
+	Class505_Sub2 aClass505_Sub2_481;
+	static Object anObject482;
+	static Object anObject483;
 
-	boolean method527(Class30_Sub4 class30_sub4, Class30_Sub4 class30_sub4_0_, float f) {
-		if (!method528())
+	static void method968() {
+		if (anObject482 == null) {
+			Class370_Sub1_Sub1 class370_sub1_sub1 = new Class370_Sub1_Sub1();
+			byte[] is = class370_sub1_sub1.method15431(128, 128, 16);
+			anObject482 = Class309.method5493(is, false, (byte) 97);
+		}
+		if (anObject477 == null) {
+			Class370_Sub2_Sub1 class370_sub2_sub1 = new Class370_Sub2_Sub1();
+			byte[] is = class370_sub2_sub1.method15442(128, 128, 16);
+			anObject477 = Class309.method5493(is, false, (byte) 80);
+		}
+	}
+
+	public boolean method969() {
+		if (!((Class49) this).aClass505_Sub2_481.aBool8827)
 			return false;
-		Class52_Sub1_Sub2 class52_sub1_sub2 = (((Class_ra_Sub2) ((Class49) this).aClass_ra_Sub2_497).aClass52_Sub1_Sub2_8148);
-		Class298_Sub37_Sub18 class298_sub37_sub18 = new Class298_Sub37_Sub18(((Class49) this).aClass_ra_Sub2_497, Class55.aClass55_557, Class77.aClass77_717, ((Class30_Sub4) class30_sub4).anInt6750, (((Class30_Sub4) class30_sub4).anInt6751));
-		boolean bool = false;
-		((Class49) this).aClass_ra_Sub2_497.method5143(class52_sub1_sub2, (byte) 27);
-		class52_sub1_sub2.method563(0, class298_sub37_sub18);
-		if (class52_sub1_sub2.method560()) {
-			OpenGL.glPushMatrix();
-			OpenGL.glLoadIdentity();
-			OpenGL.glMatrixMode(5889);
-			OpenGL.glPushMatrix();
-			OpenGL.glLoadIdentity();
-			OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
-			OpenGL.glPushAttrib(2048);
-			OpenGL.glViewport(0, 0, ((Class30_Sub4) class30_sub4).anInt6750, ((Class30_Sub4) class30_sub4).anInt6751);
-			OpenGL.glUseProgram(((Class29) ((Class49) this).aClass29_498).anInt365);
-			OpenGL.glUniform1i(OpenGL.glGetUniformLocation((((Class29) (((Class49) this).aClass29_498)).anInt365), "heightMap"), 0);
-			OpenGL.glUniform1f(OpenGL.glGetUniformLocation((((Class29) (((Class49) this).aClass29_498)).anInt365), "rcpRelief"), 1.0F / f);
-			OpenGL.glUniform2f(OpenGL.glGetUniformLocation((((Class29) ((Class49) this).aClass29_498).anInt365), "sampleSize"), 1.0F / (float) ((Class30_Sub4) class30_sub4_0_).anInt6750, 1.0F / (float) ((Class30_Sub4) class30_sub4_0_).anInt6751);
-			for (int i = 0; i < ((Class30_Sub4) class30_sub4).anInt6749; i++) {
-				float f_1_ = ((float) i / (float) ((Class30_Sub4) class30_sub4).anInt6749);
-				((Class49) this).aClass_ra_Sub2_497.method5256(class30_sub4_0_);
-				OpenGL.glBegin(7);
-				OpenGL.glTexCoord3f(0.0F, 0.0F, f_1_);
-				OpenGL.glVertex2f(0.0F, 0.0F);
-				OpenGL.glTexCoord3f(1.0F, 0.0F, f_1_);
-				OpenGL.glVertex2f(1.0F, 0.0F);
-				OpenGL.glTexCoord3f(1.0F, 1.0F, f_1_);
-				OpenGL.glVertex2f(1.0F, 1.0F);
-				OpenGL.glTexCoord3f(0.0F, 1.0F, f_1_);
-				OpenGL.glVertex2f(0.0F, 1.0F);
-				OpenGL.glEnd();
-				class30_sub4.method431(0, 0, i, ((Class30_Sub4) class30_sub4).anInt6750, ((Class30_Sub4) class30_sub4).anInt6751, 0, 0);
+		if (anInterface1_480 == null) {
+			if (anObject483 == null) {
+				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
+				anObject483 = Class309.method5493(is, false, (byte) 40);
 			}
-			OpenGL.glUseProgram(0);
-			OpenGL.glPopAttrib();
-			OpenGL.glPopMatrix();
-			OpenGL.glMatrixMode(5888);
-			OpenGL.glPopMatrix();
-			bool = true;
+			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
+			byte[] is_0_ = new byte[is.length * 4];
+			int i = 0;
+			for (int i_1_ = 0; i_1_ < 16; i_1_++) {
+				int i_2_ = i_1_ * 16384;
+				int i_3_ = i_2_;
+				for (int i_4_ = 0; i_4_ < 128; i_4_++) {
+					int i_5_ = i_3_ + i_4_ * 128;
+					int i_6_ = i_3_ + (i_4_ - 1 & 0x7f) * 128;
+					int i_7_ = i_3_ + (i_4_ + 1 & 0x7f) * 128;
+					for (int i_8_ = 0; i_8_ < 128; i_8_++) {
+						float f = (float) ((is[i_6_ + i_8_] & 0xff) - (is[i_7_ + i_8_] & 0xff));
+						float f_9_ = (float) ((is[i_5_ + (i_8_ - 1 & 0x7f)] & 0xff) - (is[i_5_ + (i_8_ + 1 & 0x7f)] & 0xff));
+						float f_10_ = (float) (128.0 / Math.sqrt((double) (f_9_ * f_9_ + 16384.0F + f * f)));
+						is_0_[i++] = (byte) (int) (f_9_ * f_10_ + 127.0F);
+						is_0_[i++] = (byte) (int) (128.0F * f_10_ + 127.0F);
+						is_0_[i++] = (byte) (int) (f * f_10_ + 127.0F);
+						is_0_[i++] = is[i_2_++];
+					}
+				}
+			}
+			anInterface1_480 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1949, 128, 128, 16, true, is_0_));
 		}
-		class52_sub1_sub2.method563(0, null);
-		((Class49) this).aClass_ra_Sub2_497.method5005(class52_sub1_sub2, (byte) 7);
-		return bool;
+		return anInterface1_480 != null;
 	}
 
-	boolean method528() {
-		if (((Class_ra_Sub2) ((Class49) this).aClass_ra_Sub2_497).aBoolean8170 && (((Class_ra_Sub2) ((Class49) this).aClass_ra_Sub2_497).aBoolean8093) && ((Class49) this).aClass29_498 == null) {
-			Class48 class48 = (Class48
-					.method526(
-							((Class49) this).aClass_ra_Sub2_497,
-							35632,
-							"uniform float rcpRelief;\nuniform vec2 sampleSize;\nuniform sampler3D heightMap;\nvoid main() {\nfloat dx = texture3D(heightMap, vec3(-sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(sampleSize.x, 0.0, 0.0)+gl_TexCoord[0].xyz).r;\nfloat dy = texture3D(heightMap, vec3(0.0, -sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r - texture3D(heightMap, vec3(0.0, sampleSize.y, 0.0)+gl_TexCoord[0].xyz).r;\ngl_FragColor = vec4(0.5+normalize(vec3(dx, dy, rcpRelief))*0.5, texture3D(heightMap, gl_TexCoord[0].xyz).r);\n}\n"));
-			if (class48 != null)
-				((Class49) this).aClass29_498 = Class29.method406(((Class49) this).aClass_ra_Sub2_497, new Class48[] { class48 });
+	Class49(Class505_Sub2 class505_sub2) {
+		((Class49) this).anInterface1_475 = null;
+		anInterface6Array478 = null;
+		anInterface1_479 = null;
+		anInterface1_480 = null;
+		((Class49) this).aClass505_Sub2_481 = class505_sub2;
+		aBool474 = ((Class49) this).aClass505_Sub2_481.aBool8827;
+		if (aBool474 && !(((Class49) this).aClass505_Sub2_481.method13955(Class150.aClass150_1952, Class76.aClass76_751)))
+			aBool474 = false;
+		if (aBool474 || (((Class49) this).aClass505_Sub2_481.method13954(Class150.aClass150_1952, Class76.aClass76_751))) {
+			method968();
+			if (!aBool474) {
+				((Class49) this).anInterface6Array476 = new Interface6[16];
+				for (int i = 0; i < 16; i++) {
+					byte[] is = Class282_Sub17_Sub5.method15410(anObject482, i * 32768, 32768, -232784177);
+					((Class49) this).anInterface6Array476[i] = (((Class49) this).aClass505_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, is));
+				}
+				anInterface6Array478 = new Interface6[16];
+				for (int i = 0; i < 16; i++) {
+					byte[] is = Class282_Sub17_Sub5.method15410(anObject477, i * 32768, 32768, -560964822);
+					anInterface6Array478[i] = (((Class49) this).aClass505_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, is));
+				}
+			} else {
+				byte[] is = Class346.method6154(anObject482, false, (byte) 1);
+				((Class49) this).anInterface1_475 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1952, 128, 128, 16, true, is));
+				is = Class346.method6154(anObject477, false, (byte) 1);
+				anInterface1_479 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1952, 128, 128, 16, true, is));
+			}
 		}
-		return ((Class49) this).aClass29_498 != null;
 	}
 
-	Class49(Class_ra_Sub2 class_ra_sub2) {
-		((Class49) this).aClass_ra_Sub2_497 = class_ra_sub2;
+	static void method970() {
+		if (anObject482 == null) {
+			Class370_Sub1_Sub1 class370_sub1_sub1 = new Class370_Sub1_Sub1();
+			byte[] is = class370_sub1_sub1.method15431(128, 128, 16);
+			anObject482 = Class309.method5493(is, false, (byte) 113);
+		}
+		if (anObject477 == null) {
+			Class370_Sub2_Sub1 class370_sub2_sub1 = new Class370_Sub2_Sub1();
+			byte[] is = class370_sub2_sub1.method15442(128, 128, 16);
+			anObject477 = Class309.method5493(is, false, (byte) 37);
+		}
+	}
+
+	public boolean method971() {
+		if (!((Class49) this).aClass505_Sub2_481.aBool8827)
+			return false;
+		if (anInterface1_480 == null) {
+			if (anObject483 == null) {
+				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
+				anObject483 = Class309.method5493(is, false, (byte) 118);
+			}
+			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
+			byte[] is_11_ = new byte[is.length * 4];
+			int i = 0;
+			for (int i_12_ = 0; i_12_ < 16; i_12_++) {
+				int i_13_ = i_12_ * 16384;
+				int i_14_ = i_13_;
+				for (int i_15_ = 0; i_15_ < 128; i_15_++) {
+					int i_16_ = i_14_ + i_15_ * 128;
+					int i_17_ = i_14_ + (i_15_ - 1 & 0x7f) * 128;
+					int i_18_ = i_14_ + (i_15_ + 1 & 0x7f) * 128;
+					for (int i_19_ = 0; i_19_ < 128; i_19_++) {
+						float f = (float) ((is[i_17_ + i_19_] & 0xff) - (is[i_18_ + i_19_] & 0xff));
+						float f_20_ = (float) ((is[i_16_ + (i_19_ - 1 & 0x7f)] & 0xff) - (is[i_16_ + (i_19_ + 1 & 0x7f)] & 0xff));
+						float f_21_ = (float) (128.0 / Math.sqrt((double) (f_20_ * f_20_ + 16384.0F + f * f)));
+						is_11_[i++] = (byte) (int) (f_20_ * f_21_ + 127.0F);
+						is_11_[i++] = (byte) (int) (128.0F * f_21_ + 127.0F);
+						is_11_[i++] = (byte) (int) (f * f_21_ + 127.0F);
+						is_11_[i++] = is[i_13_++];
+					}
+				}
+			}
+			anInterface1_480 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1949, 128, 128, 16, true, is_11_));
+		}
+		return anInterface1_480 != null;
+	}
+
+	static void method972() {
+		if (anObject482 == null) {
+			Class370_Sub1_Sub1 class370_sub1_sub1 = new Class370_Sub1_Sub1();
+			byte[] is = class370_sub1_sub1.method15431(128, 128, 16);
+			anObject482 = Class309.method5493(is, false, (byte) 80);
+		}
+		if (anObject477 == null) {
+			Class370_Sub2_Sub1 class370_sub2_sub1 = new Class370_Sub2_Sub1();
+			byte[] is = class370_sub2_sub1.method15442(128, 128, 16);
+			anObject477 = Class309.method5493(is, false, (byte) 28);
+		}
+	}
+
+	public boolean method973() {
+		return (aBool474 ? ((Class49) this).anInterface1_475 != null : ((Class49) this).anInterface6Array476 != null);
+	}
+
+	public boolean method974() {
+		return (aBool474 ? ((Class49) this).anInterface1_475 != null : ((Class49) this).anInterface6Array476 != null);
+	}
+
+	public boolean method975() {
+		return (aBool474 ? ((Class49) this).anInterface1_475 != null : ((Class49) this).anInterface6Array476 != null);
+	}
+
+	public boolean method976() {
+		if (!((Class49) this).aClass505_Sub2_481.aBool8827)
+			return false;
+		if (anInterface1_480 == null) {
+			if (anObject483 == null) {
+				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
+				anObject483 = Class309.method5493(is, false, (byte) 81);
+			}
+			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
+			byte[] is_22_ = new byte[is.length * 4];
+			int i = 0;
+			for (int i_23_ = 0; i_23_ < 16; i_23_++) {
+				int i_24_ = i_23_ * 16384;
+				int i_25_ = i_24_;
+				for (int i_26_ = 0; i_26_ < 128; i_26_++) {
+					int i_27_ = i_25_ + i_26_ * 128;
+					int i_28_ = i_25_ + (i_26_ - 1 & 0x7f) * 128;
+					int i_29_ = i_25_ + (i_26_ + 1 & 0x7f) * 128;
+					for (int i_30_ = 0; i_30_ < 128; i_30_++) {
+						float f = (float) ((is[i_28_ + i_30_] & 0xff) - (is[i_29_ + i_30_] & 0xff));
+						float f_31_ = (float) ((is[i_27_ + (i_30_ - 1 & 0x7f)] & 0xff) - (is[i_27_ + (i_30_ + 1 & 0x7f)] & 0xff));
+						float f_32_ = (float) (128.0 / Math.sqrt((double) (f_31_ * f_31_ + 16384.0F + f * f)));
+						is_22_[i++] = (byte) (int) (f_31_ * f_32_ + 127.0F);
+						is_22_[i++] = (byte) (int) (128.0F * f_32_ + 127.0F);
+						is_22_[i++] = (byte) (int) (f * f_32_ + 127.0F);
+						is_22_[i++] = is[i_24_++];
+					}
+				}
+			}
+			anInterface1_480 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1949, 128, 128, 16, true, is_22_));
+		}
+		return anInterface1_480 != null;
 	}
 }

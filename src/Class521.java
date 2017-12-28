@@ -3,34 +3,440 @@
  */
 
 public class Class521 {
-	boolean aBoolean6279;
-	Class510[] aClass510Array6280;
-	public static Class243 aClass243_6281;
-	static int anInt6282;
+	Class305 aClass305_5936 = new Class305();
+	Class305 aClass305_5937 = new Class305();
+	boolean aBool5938 = true;
+	Class305 aClass305_5939 = new Class305();
+	Class521 aClass521_5940;
+	Class294 aClass294_5941;
+	boolean aBool5942;
+	Class521 aClass521_5943;
+	Class521 aClass521_5944;
+	boolean aBool5945 = true;
 
-	Class521(boolean bool, Class510[] class510s) {
-		((Class521) this).aBoolean6279 = bool;
-		((Class521) this).aClass510Array6280 = class510s;
+	public final void method11164() {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class521 class521_0_ = ((Class521) ((Class521) this).aClass521_5943).aClass521_5944;
+			if (class521_0_ == this)
+				((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5940;
+			else {
+				for (/**/; ((Class521) class521_0_).aClass521_5940 != this; class521_0_ = ((Class521) class521_0_).aClass521_5940) {
+					/* empty */
+				}
+				((Class521) class521_0_).aClass521_5940 = ((Class521) this).aClass521_5940;
+			}
+		}
+		method11174();
+		if (((Class521) this).aClass521_5944 != null) {
+			((Class521) this).aClass521_5944.method11188();
+			Class521 class521_1_ = ((Class521) this).aClass521_5944;
+			for (;;) {
+				((Class521) class521_1_).aClass305_5936.method5414(((Class521) this).aClass305_5936);
+				((Class521) class521_1_).aClass521_5943 = ((Class521) this).aClass521_5943;
+				if (((Class521) class521_1_).aClass521_5940 == null) {
+					((Class521) class521_1_).aClass521_5940 = (((Class521) ((Class521) this).aClass521_5943).aClass521_5944);
+					break;
+				}
+				class521_1_ = ((Class521) class521_1_).aClass521_5940;
+			}
+			((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5944;
+		}
+		((Class521) this).aClass521_5943 = null;
+		((Class521) this).aClass521_5940 = null;
+		((Class521) this).aClass521_5944 = null;
 	}
 
-	static final void method6322(ClientScript2 class403, byte i) {
-		try {
-			boolean bool = ((((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 -= -391880689) * 681479919)]) == 1);
-			Class422_Sub25.aClass298_Sub48_8425.method3540(Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub17_7564, bool ? 2 : 1, 437258176);
-			Class422_Sub25.aClass298_Sub48_8425.method3540(Class422_Sub25.aClass298_Sub48_8425.aClass422_Sub17_7565, bool ? 2 : 1, -618485822);
-			Class475.method6075((short) -10564);
-			Class3.method300(656179282);
-			client.aBoolean8666 = false;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("vz.ahh(").append(')').toString());
-		}
+	public final Class305 method11165() {
+		return ((Class521) this).aClass305_5936;
 	}
 
-	public static Class146[] method6323(int i) {
-		try {
-			return (new Class146[] { Class146.aClass146_1569, Class146.aClass146_1565, Class146.aClass146_1566, Class146.aClass146_1567, Class146.aClass146_1568, Class146.aClass146_1572, Class146.aClass146_1573, Class146.aClass146_1564, Class146.aClass146_1570, Class146.aClass146_1571 });
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("vz.a(").append(')').toString());
+	public final Class305 method11166() {
+		if (((Class521) this).aBool5938) {
+			((Class521) this).aBool5938 = false;
+			if (((Class521) this).aClass521_5943 != null) {
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+				((Class521) this).aClass305_5937.method5414(((Class521) this).aClass521_5943.method11166());
+			} else
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
 		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final Class305 method11167() {
+		if (((Class521) this).aBool5945) {
+			((Class521) this).aBool5945 = false;
+			((Class521) this).aClass305_5939.method5411(method11166());
+			((Class521) this).aClass305_5939.method5413();
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final Class294 method11168() {
+		if (((Class521) this).aBool5942) {
+			((Class521) this).aBool5942 = false;
+			((Class521) this).aClass294_5941.method5279(method11166());
+		}
+		return ((Class521) this).aClass294_5941;
+	}
+
+	final void method11169(Class305 class305) {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class305 class305_2_ = new Class305(class305);
+			class305_2_.method5414(((Class521) this).aClass521_5943.method11167());
+			method11175(class305_2_);
+		} else
+			method11175(class305);
+	}
+
+	public final void method11170(float f, float f_3_, float f_4_) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6626(f, f_3_, f_4_);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final void method11171(Class385 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final void method11172(float f, float f_5_, float f_6_) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6626(f, f_5_, f_6_);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final Class305 method11173() {
+		if (((Class521) this).aBool5938) {
+			((Class521) this).aBool5938 = false;
+			if (((Class521) this).aClass521_5943 != null) {
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+				((Class521) this).aClass305_5937.method5414(((Class521) this).aClass521_5943.method11166());
+			} else
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final void method11174() {
+		((Class521) this).aBool5938 = true;
+		((Class521) this).aBool5945 = true;
+		((Class521) this).aBool5942 = true;
+	}
+
+	final void method11175(Class305 class305) {
+		((Class521) this).aClass305_5936.method5411(class305);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final void method11176() {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class521 class521_7_ = ((Class521) ((Class521) this).aClass521_5943).aClass521_5944;
+			if (class521_7_ == this)
+				((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5940;
+			else {
+				for (/**/; ((Class521) class521_7_).aClass521_5940 != this; class521_7_ = ((Class521) class521_7_).aClass521_5940) {
+					/* empty */
+				}
+				((Class521) class521_7_).aClass521_5940 = ((Class521) this).aClass521_5940;
+			}
+		}
+		method11174();
+		if (((Class521) this).aClass521_5944 != null) {
+			((Class521) this).aClass521_5944.method11188();
+			Class521 class521_8_ = ((Class521) this).aClass521_5944;
+			for (;;) {
+				((Class521) class521_8_).aClass305_5936.method5414(((Class521) this).aClass305_5936);
+				((Class521) class521_8_).aClass521_5943 = ((Class521) this).aClass521_5943;
+				if (((Class521) class521_8_).aClass521_5940 == null) {
+					((Class521) class521_8_).aClass521_5940 = (((Class521) ((Class521) this).aClass521_5943).aClass521_5944);
+					break;
+				}
+				class521_8_ = ((Class521) class521_8_).aClass521_5940;
+			}
+			((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5944;
+		}
+		((Class521) this).aClass521_5943 = null;
+		((Class521) this).aClass521_5940 = null;
+		((Class521) this).aClass521_5944 = null;
+	}
+
+	public final Class305 method11177() {
+		return ((Class521) this).aClass305_5936;
+	}
+
+	public final Class305 method11178() {
+		return ((Class521) this).aClass305_5936;
+	}
+
+	public final void method11179(Class385 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final Class305 method11180() {
+		if (((Class521) this).aBool5938) {
+			((Class521) this).aBool5938 = false;
+			if (((Class521) this).aClass521_5943 != null) {
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+				((Class521) this).aClass305_5937.method5414(((Class521) this).aClass521_5943.method11166());
+			} else
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	public final Class305 method11181() {
+		if (((Class521) this).aBool5938) {
+			((Class521) this).aBool5938 = false;
+			if (((Class521) this).aClass521_5943 != null) {
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+				((Class521) this).aClass305_5937.method5414(((Class521) this).aClass521_5943.method11166());
+			} else
+				((Class521) this).aClass305_5937.method5411(((Class521) this).aClass305_5936);
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final Class305 method11182() {
+		if (((Class521) this).aBool5945) {
+			((Class521) this).aBool5945 = false;
+			((Class521) this).aClass305_5939.method5411(method11166());
+			((Class521) this).aClass305_5939.method5413();
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final Class305 method11183() {
+		if (((Class521) this).aBool5945) {
+			((Class521) this).aBool5945 = false;
+			((Class521) this).aClass305_5939.method5411(method11166());
+			((Class521) this).aClass305_5939.method5413();
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final Class305 method11184() {
+		if (((Class521) this).aBool5945) {
+			((Class521) this).aBool5945 = false;
+			((Class521) this).aClass305_5939.method5411(method11166());
+			((Class521) this).aClass305_5939.method5413();
+		}
+		return ((Class521) this).aClass305_5937;
+	}
+
+	final void method11185(Class305 class305) {
+		((Class521) this).aClass305_5936.method5411(class305);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final void method11186() {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class521 class521_9_ = ((Class521) ((Class521) this).aClass521_5943).aClass521_5944;
+			if (class521_9_ == this)
+				((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5940;
+			else {
+				for (/**/; ((Class521) class521_9_).aClass521_5940 != this; class521_9_ = ((Class521) class521_9_).aClass521_5940) {
+					/* empty */
+				}
+				((Class521) class521_9_).aClass521_5940 = ((Class521) this).aClass521_5940;
+			}
+		}
+		method11174();
+		if (((Class521) this).aClass521_5944 != null) {
+			((Class521) this).aClass521_5944.method11188();
+			Class521 class521_10_ = ((Class521) this).aClass521_5944;
+			for (;;) {
+				((Class521) class521_10_).aClass305_5936.method5414(((Class521) this).aClass305_5936);
+				((Class521) class521_10_).aClass521_5943 = ((Class521) this).aClass521_5943;
+				if (((Class521) class521_10_).aClass521_5940 == null) {
+					((Class521) class521_10_).aClass521_5940 = (((Class521) ((Class521) this).aClass521_5943).aClass521_5944);
+					break;
+				}
+				class521_10_ = ((Class521) class521_10_).aClass521_5940;
+			}
+			((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5944;
+		}
+		((Class521) this).aClass521_5943 = null;
+		((Class521) this).aClass521_5940 = null;
+		((Class521) this).aClass521_5944 = null;
+	}
+
+	public final void method11187(Class381 class381) {
+		((Class521) this).aClass305_5936.aClass381_3594.method6490(class381);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	final void method11188() {
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+		if (((Class521) this).aClass521_5940 != null)
+			((Class521) this).aClass521_5940.method11188();
+	}
+
+	public final void method11189(Class385 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	Class521() {
+		new Class384();
+		new Class384();
+		((Class521) this).aClass294_5941 = new Class294();
+		((Class521) this).aBool5942 = true;
+		((Class521) this).aClass521_5943 = null;
+		((Class521) this).aClass521_5944 = null;
+		((Class521) this).aClass521_5940 = null;
+	}
+
+	public final void method11190(Class385 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	final void method11191(Class305 class305) {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class305 class305_11_ = new Class305(class305);
+			class305_11_.method5414(((Class521) this).aClass521_5943.method11167());
+			method11175(class305_11_);
+		} else
+			method11175(class305);
+	}
+
+	public final void method11192(Class385 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	final void method11193(Class305 class305) {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class305 class305_12_ = new Class305(class305);
+			class305_12_.method5414(((Class521) this).aClass521_5943.method11167());
+			method11175(class305_12_);
+		} else
+			method11175(class305);
+	}
+
+	public final void method11194(Class385 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	final void method11195() {
+		((Class521) this).aBool5938 = true;
+		((Class521) this).aBool5945 = true;
+		((Class521) this).aBool5942 = true;
+	}
+
+	final void method11196() {
+		((Class521) this).aBool5938 = true;
+		((Class521) this).aBool5945 = true;
+		((Class521) this).aBool5942 = true;
+	}
+
+	final void method11197() {
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+		if (((Class521) this).aClass521_5940 != null)
+			((Class521) this).aClass521_5940.method11188();
+	}
+
+	public final void method11198(Class381 class381) {
+		((Class521) this).aClass305_5936.aClass381_3594.method6490(class381);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	final void method11199(Class305 class305) {
+		((Class521) this).aClass305_5936.method5411(class305);
+		method11174();
+		if (((Class521) this).aClass521_5944 != null)
+			((Class521) this).aClass521_5944.method11188();
+	}
+
+	public final void method11200() {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class521 class521_13_ = ((Class521) ((Class521) this).aClass521_5943).aClass521_5944;
+			if (class521_13_ == this)
+				((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5940;
+			else {
+				for (/**/; ((Class521) class521_13_).aClass521_5940 != this; class521_13_ = ((Class521) class521_13_).aClass521_5940) {
+					/* empty */
+				}
+				((Class521) class521_13_).aClass521_5940 = ((Class521) this).aClass521_5940;
+			}
+		}
+		method11174();
+		if (((Class521) this).aClass521_5944 != null) {
+			((Class521) this).aClass521_5944.method11188();
+			Class521 class521_14_ = ((Class521) this).aClass521_5944;
+			for (;;) {
+				((Class521) class521_14_).aClass305_5936.method5414(((Class521) this).aClass305_5936);
+				((Class521) class521_14_).aClass521_5943 = ((Class521) this).aClass521_5943;
+				if (((Class521) class521_14_).aClass521_5940 == null) {
+					((Class521) class521_14_).aClass521_5940 = (((Class521) ((Class521) this).aClass521_5943).aClass521_5944);
+					break;
+				}
+				class521_14_ = ((Class521) class521_14_).aClass521_5940;
+			}
+			((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5944;
+		}
+		((Class521) this).aClass521_5943 = null;
+		((Class521) this).aClass521_5940 = null;
+		((Class521) this).aClass521_5944 = null;
+	}
+
+	public final void method11201() {
+		if (((Class521) this).aClass521_5943 != null) {
+			Class521 class521_15_ = ((Class521) ((Class521) this).aClass521_5943).aClass521_5944;
+			if (class521_15_ == this)
+				((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5940;
+			else {
+				for (/**/; ((Class521) class521_15_).aClass521_5940 != this; class521_15_ = ((Class521) class521_15_).aClass521_5940) {
+					/* empty */
+				}
+				((Class521) class521_15_).aClass521_5940 = ((Class521) this).aClass521_5940;
+			}
+		}
+		method11174();
+		if (((Class521) this).aClass521_5944 != null) {
+			((Class521) this).aClass521_5944.method11188();
+			Class521 class521_16_ = ((Class521) this).aClass521_5944;
+			for (;;) {
+				((Class521) class521_16_).aClass305_5936.method5414(((Class521) this).aClass305_5936);
+				((Class521) class521_16_).aClass521_5943 = ((Class521) this).aClass521_5943;
+				if (((Class521) class521_16_).aClass521_5940 == null) {
+					((Class521) class521_16_).aClass521_5940 = (((Class521) ((Class521) this).aClass521_5943).aClass521_5944);
+					break;
+				}
+				class521_16_ = ((Class521) class521_16_).aClass521_5940;
+			}
+			((Class521) ((Class521) this).aClass521_5943).aClass521_5944 = ((Class521) this).aClass521_5944;
+		}
+		((Class521) this).aClass521_5943 = null;
+		((Class521) this).aClass521_5940 = null;
+		((Class521) this).aClass521_5944 = null;
 	}
 }

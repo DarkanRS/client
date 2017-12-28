@@ -1,66 +1,82 @@
 /* Class72 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import jaggl.OpenGL;
 
-public class Class72 implements Interface8_Impl1_Impl1_Impl2 {
-	int anInt10164;
-	Class30_Sub2 aClass30_Sub2_10165;
+public class Class72 {
+	int anInt723;
+	long aLong724;
 
-	public void u() {
-		/* empty */
+	public final int method1295() {
+		return ((Class72) this).anInt723;
 	}
 
-	public int a() {
-		return ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt6746;
+	Class72(Class69[] class69s) {
+		for (int i = 0; i < class69s.length; i++)
+			method1303(class69s[i]);
 	}
 
-	public int f() {
-		return ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt6747;
+	public final int method1296() {
+		return ((Class72) this).anInt723;
 	}
 
-	public void method3(int i) {
-		OpenGL.glFramebufferTexture2DEXT(36160, i, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt372, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt376, ((Class72) this).anInt10164);
+	public final Class69 method1297(int i) {
+		return Class69.method1285(method1299(i));
 	}
 
-	public void b() {
-		/* empty */
+	Class72(Class69 class69) {
+		((Class72) this).aLong724 = (long) ((Class69) class69).anInt703;
+		((Class72) this).anInt723 = 1;
 	}
 
-	public int p() {
-		return ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt6746;
+	public final int method1298() {
+		return ((Class72) this).anInt723;
 	}
 
-	public int i() {
-		return ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt6746;
+	final int method1299(int i) {
+		return (int) (((Class72) this).aLong724 >> Class69.anInt702 * i) & 0xf;
 	}
 
-	public int k() {
-		return ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt6747;
+	public final int method1300() {
+		return ((Class72) this).anInt723;
 	}
 
-	public void d() {
-		/* empty */
+	public final int method1301() {
+		return ((Class72) this).anInt723;
 	}
 
-	public void x() {
-		/* empty */
+	public final Class69 method1302(int i) {
+		return Class69.method1285(method1299(i));
 	}
 
-	public void method2(int i) {
-		OpenGL.glFramebufferTexture2DEXT(36160, i, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt372, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt376, ((Class72) this).anInt10164);
+	final void method1303(Class69 class69) {
+		((Class72) this).aLong724 |= (long) (((Class69) class69).anInt703 << Class69.anInt702 * ((Class72) this).anInt723++);
 	}
 
-	public void method1(int i) {
-		OpenGL.glFramebufferTexture2DEXT(36160, i, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt372, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt376, ((Class72) this).anInt10164);
+	public final Class69 method1304(int i) {
+		return Class69.method1285(method1299(i));
 	}
 
-	Class72(Class30_Sub2 class30_sub2, int i) {
-		((Class72) this).anInt10164 = i;
-		((Class72) this).aClass30_Sub2_10165 = class30_sub2;
+	public final Class69 method1305(int i) {
+		return Class69.method1285(method1299(i));
 	}
 
-	public void method4(int i) {
-		OpenGL.glFramebufferTexture2DEXT(36160, i, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt372, ((Class30_Sub2) ((Class72) this).aClass30_Sub2_10165).anInt376, ((Class72) this).anInt10164);
+	public final Class69 method1306(int i) {
+		return Class69.method1285(method1299(i));
+	}
+
+	final int method1307(int i) {
+		return (int) (((Class72) this).aLong724 >> Class69.anInt702 * i) & 0xf;
+	}
+
+	final int method1308(int i) {
+		return (int) (((Class72) this).aLong724 >> Class69.anInt702 * i) & 0xf;
+	}
+
+	final void method1309(Class69 class69) {
+		((Class72) this).aLong724 |= (long) (((Class69) class69).anInt703 << Class69.anInt702 * ((Class72) this).anInt723++);
+	}
+
+	final void method1310(Class69 class69) {
+		((Class72) this).aLong724 |= (long) (((Class69) class69).anInt703 << Class69.anInt702 * ((Class72) this).anInt723++);
 	}
 }

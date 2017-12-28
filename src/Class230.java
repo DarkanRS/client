@@ -2,57 +2,157 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class230 {
-	static long aLong2560;
-	static Class227[] aClass227Array2561;
-	static Interface12[] anInterface12Array2562;
-	static int anInt2563;
-	static Class243 aClass243_2564;
-	static int anInt2565;
-	static int anInt2566;
-	static boolean aBoolean2567;
-	static int[] anIntArray2568 = { 4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 };
+public class Class230 implements Interface20 {
+	Class229 aClass229_2856 = new Class229(64);
+	public static final int anInt2857 = 64;
+	Class317 aClass317_2858;
 
-	static {
-		anInt2563 = -64708895;
-		anInt2565 = -1430761433;
-	}
-
-	Class230() throws Throwable {
-		throw new Error();
-	}
-
-	static void method2125(GraphicsToolkit class_ra, IComponentDefinition class105, int i) {
-		try {
-			boolean bool = ((Class298_Sub32_Sub14.aClass477_9400.method6085(class_ra, class105.anInt1280 * -1232467723, -66163287 * class105.anInt1281, 547522005 * class105.anInt1178, ~0xffffff | class105.anInt1251 * -2065110161, 2097772641 * class105.anInt1201, (class105.aBoolean1213 ? (Class287.myPlayer.aClass366_10209) : null), 467134725)) == null);
-			if (bool) {
-				Class522.aClass453_6283.method5935(new Class298_Sub14(-1232467723 * class105.anInt1280, class105.anInt1281 * -66163287, class105.anInt1178 * 547522005, (~0xffffff | class105.anInt1251 * -2065110161), 2097772641 * class105.anInt1201, class105.aBoolean1213), 829085914);
-				Tradution.method6054(class105, 1662949261);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("js.a(").append(')').toString());
+	public void method3896(int i) {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3859(-1688169863);
+			((Class230) this).aClass229_2856 = new Class229(i);
 		}
 	}
 
-	static final void method2126(ClientScript2 class403, int i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			((ClientScript2) class403).anIntArray5244[((((ClientScript2) class403).anInt5239 += -391880689) * 681479919 - 1)] = class105.anInt1168 * 1867913305;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("js.pm(").append(')').toString());
+	public Class226 method3897(int i, byte i_0_) {
+		Class226 class226;
+		synchronized (((Class230) this).aClass229_2856) {
+			class226 = ((Class226) ((Class230) this).aClass229_2856.method3865((long) i));
+		}
+		if (null != class226)
+			return class226;
+		byte[] is;
+		synchronized (((Class230) this).aClass317_2858) {
+			is = (((Class230) this).aClass317_2858.method5607(Class120.aClass120_1477.method2079(i, 87190961), Class120.aClass120_1477.method2080(i, -2017027234), -1643082761));
+		}
+		class226 = new Class226();
+		if (null != is)
+			class226.method3795(new RsByteBuffer(is), 631437425);
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3856(class226, (long) i);
+		}
+		return class226;
+	}
+
+	public Class230(Class486 class486, Class495 class495, Class317 class317) {
+		((Class230) this).aClass317_2858 = class317;
+		if (((Class230) this).aClass317_2858 != null) {
+			int i = ((Class230) this).aClass317_2858.method5618(-1585425152) - 1;
+			Class120.aClass120_1477.method2078(-689743414);
+			((Class230) this).aClass317_2858.method5624(i, -1063022229);
 		}
 	}
 
-	static final void method2127(ClientScript2 class403, int i) {
-		try {
-			String string = (String) (((ClientScript2) class403).anObjectArray5240[(((ClientScript2) class403).anInt5241 -= 969361751) * -203050393]);
-			Class298_Sub36 class298_sub36 = Class18.method359(OutcommingPacket.aClass198_2034, client.lobbyConnection.aClass449_330, (byte) 126);
-			class298_sub36.aClass298_Sub53_Sub2_7396.writeByte(Class58.method693(string, -19370609));
-			class298_sub36.aClass298_Sub53_Sub2_7396.writeString(string, 2104083010);
-			client.lobbyConnection.method390(class298_sub36, (byte) -70);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("js.vn(").append(')').toString());
+	public void method3898(int i, int i_1_) {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3858(i, (byte) -17);
+		}
+	}
+
+	public void method3899(short i) {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3863(1268003404);
+		}
+	}
+
+	public void method3900() {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3863(1110189881);
+		}
+	}
+
+	public Class226 method3901(int i) {
+		Class226 class226;
+		synchronized (((Class230) this).aClass229_2856) {
+			class226 = ((Class226) ((Class230) this).aClass229_2856.method3865((long) i));
+		}
+		if (null != class226)
+			return class226;
+		byte[] is;
+		synchronized (((Class230) this).aClass317_2858) {
+			is = (((Class230) this).aClass317_2858.method5607(Class120.aClass120_1477.method2079(i, -1228358151), Class120.aClass120_1477.method2080(i, -1768503924), -1630119547));
+		}
+		class226 = new Class226();
+		if (null != is)
+			class226.method3795(new RsByteBuffer(is), 684621272);
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3856(class226, (long) i);
+		}
+		return class226;
+	}
+
+	public void method3902() {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3859(1593564954);
+		}
+	}
+
+	public void method3903(byte i) {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3859(891629452);
+		}
+	}
+
+	public void method3904(int i) {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3858(i, (byte) -40);
+		}
+	}
+
+	public void method3905() {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3863(2032200660);
+		}
+	}
+
+	public void method3906(int i, short i_2_) {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3859(1117502683);
+			((Class230) this).aClass229_2856 = new Class229(i);
+		}
+	}
+
+	public void method3907() {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3863(1716771940);
+		}
+	}
+
+	public void method3908() {
+		synchronized (((Class230) this).aClass229_2856) {
+			((Class230) this).aClass229_2856.method3859(-944165676);
+		}
+	}
+
+	static final void method3909(Class527 class527, byte i) {
+		Class118 class118 = Class117.method1981((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]), (byte) 38);
+		class118.aClass118Array1438 = null;
+		class118.aClass118Array1439 = null;
+		Class109.method1858(class118, (byte) -71);
+	}
+
+	public static final int method3910(String string, int i) {
+		if (string == null)
+			return -1;
+		for (int i_3_ = 0; i_3_ < 493536965 * client.anInt7449; i_3_++) {
+			if (string.equalsIgnoreCase(client.aClass6Array7452[i_3_].aString37))
+				return i_3_;
+		}
+		return -1;
+	}
+
+	static final void method3911(Class527 class527, int i) {
+		((Class527) class527).anInt7012 -= 425673003;
+		int i_4_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
+		int i_5_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+		int i_6_ = (((Class527) class527).anIntArray6999[2 + ((Class527) class527).anInt7012 * 1942118537]);
+		Class96_Sub10.method14603(10, i_4_ << 16 | i_5_, i_6_, "", (byte) 121);
+	}
+
+	static void method3912(byte i) {
+		if (null != Class260.aClass277_3221) {
+			Class260.aClass277_3221 = null;
+			Class187.method3121(256, (short) -575);
 		}
 	}
 }

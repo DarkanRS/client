@@ -3,17 +3,9 @@
  */
 
 public interface Interface23 {
-	public int method249(int i);
+	public Object method162(int[] is, int i, int i_0_, int i_1_, int i_2_, boolean bool, int i_3_);
 
-	public int method250(int i, byte i_0_);
+	public Object method163(int[] is, int i, int i_4_, int i_5_, int i_6_, boolean bool);
 
-	public int method251(int i);
-
-	public int method252(int i, byte i_1_);
-
-	public int method253(int i);
-
-	public int method254(int i);
-
-	public int method255(int i);
+	public Object method164(int[] is, int i, int i_7_, int i_8_, int i_9_, boolean bool);
 }

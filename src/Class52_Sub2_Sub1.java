@@ -1,119 +1,31 @@
 /* Class52_Sub2_Sub1 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.awt.Canvas;
 
-public abstract class Class52_Sub2_Sub1 extends Class52_Sub2 {
-	Canvas aCanvas9072;
-	Class_ra_Sub1 aClass_ra_Sub1_9073;
-	int anInt9074;
-	int anInt9075;
-	int[] anIntArray9076;
-	float[] aFloatArray9077;
-	boolean aBoolean9078;
-	public static Canvas aCanvas9079;
-
-	final boolean method546() {
-		try {
-			((Class52_Sub2_Sub1) this).aBoolean9078 = false;
-			return true;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("afi.i(").append(')').toString());
-		}
+public class Class52_Sub2_Sub1 extends Class52_Sub2 {
+	void method14499(int i, int i_0_, int i_1_, int i_2_) {
+		int i_3_ = ((Class52_Sub2_Sub1) this).aClass160_9162.method228();
+		int i_4_ = (((Class350_Sub3_Sub1) ((Class52_Sub2_Sub1) this).aClass350_489).anInt10160 * 1624571065 * Class509.method8740(713672434) / 10 % i_3_);
+		((Class52_Sub2_Sub1) this).aClass160_9162.method2756(i - i_3_ + i_4_, i_0_, i_1_ + i_3_ - i_4_, i_2_);
 	}
 
-	void method591(int i) {
-		try {
-			((Class52_Sub2_Sub1) this).anIntArray9076 = new int[(2061776189 * ((Class52_Sub2_Sub1) this).anInt9075 * (1038713159 * ((Class52_Sub2_Sub1) this).anInt9074))];
-			((Class52_Sub2_Sub1) this).aFloatArray9077 = new float[(2061776189 * ((Class52_Sub2_Sub1) this).anInt9075 * (1038713159 * ((Class52_Sub2_Sub1) this).anInt9074))];
-			if (((Class52_Sub2_Sub1) this).aBoolean9078)
-				((Class52_Sub2_Sub1) this).aClass_ra_Sub1_9073.method5207(1038713159 * ((Class52_Sub2_Sub1) this).anInt9074, 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075, ((Class52_Sub2_Sub1) this).anIntArray9076, ((Class52_Sub2_Sub1) this).aFloatArray9077);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("afi.z(").append(')').toString());
-		}
+	Class52_Sub2_Sub1(Class317 class317, Class317 class317_5_, Class350_Sub3_Sub1 class350_sub3_sub1) {
+		super(class317, class317_5_, (Class350_Sub3) class350_sub3_sub1);
 	}
 
-	Class52_Sub2_Sub1(Class_ra_Sub1 class_ra_sub1, Canvas canvas, int i, int i_0_) {
-		((Class52_Sub2_Sub1) this).aCanvas9072 = canvas;
-		((Class52_Sub2_Sub1) this).aClass_ra_Sub1_9073 = class_ra_sub1;
-		((Class52_Sub2_Sub1) this).anInt9074 = -1172842377 * i;
-		((Class52_Sub2_Sub1) this).anInt9075 = -374060523 * i_0_;
+	void method14498(int i, int i_6_, int i_7_, int i_8_, int i_9_) {
+		int i_10_ = ((Class52_Sub2_Sub1) this).aClass160_9162.method228();
+		int i_11_ = ((((Class350_Sub3_Sub1) ((Class52_Sub2_Sub1) this).aClass350_489).anInt10160) * 1624571065 * Class509.method8740(316816051) / 10 % i_10_);
+		((Class52_Sub2_Sub1) this).aClass160_9162.method2756(i - i_10_ + i_11_, i_6_, i_7_ + i_10_ - i_11_, i_8_);
 	}
 
-	public int method547() {
-		return ((Class52_Sub2_Sub1) this).anInt9074 * 1038713159;
+	void method14500(int i, int i_12_, int i_13_, int i_14_) {
+		int i_15_ = ((Class52_Sub2_Sub1) this).aClass160_9162.method228();
+		int i_16_ = ((((Class350_Sub3_Sub1) ((Class52_Sub2_Sub1) this).aClass350_489).anInt10160) * 1624571065 * Class509.method8740(-1234462313) / 10 % i_15_);
+		((Class52_Sub2_Sub1) this).aClass160_9162.method2756(i - i_15_ + i_16_, i_12_, (i_13_ + i_15_ - i_16_), i_14_);
 	}
 
-	final boolean method136() {
-		try {
-			((Class52_Sub2_Sub1) this).aClass_ra_Sub1_9073.method5207(1038713159 * ((Class52_Sub2_Sub1) this).anInt9074, 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075, ((Class52_Sub2_Sub1) this).anIntArray9076, ((Class52_Sub2_Sub1) this).aFloatArray9077);
-			((Class52_Sub2_Sub1) this).aBoolean9078 = true;
-			return true;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("afi.p(").append(')').toString());
-		}
-	}
-
-	public int method552() {
-		try {
-			return 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("afi.f(").append(')').toString());
-		}
-	}
-
-	public int method544() {
-		return 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075;
-	}
-
-	final boolean method134() {
-		((Class52_Sub2_Sub1) this).aClass_ra_Sub1_9073.method5207(1038713159 * ((Class52_Sub2_Sub1) this).anInt9074, 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075, ((Class52_Sub2_Sub1) this).anIntArray9076, ((Class52_Sub2_Sub1) this).aFloatArray9077);
-		((Class52_Sub2_Sub1) this).aBoolean9078 = true;
-		return true;
-	}
-
-	final boolean method548() {
-		((Class52_Sub2_Sub1) this).aBoolean9078 = false;
-		return true;
-	}
-
-	final void method582(int i, int i_1_) {
-		try {
-			if (i != 1038713159 * ((Class52_Sub2_Sub1) this).anInt9074 || 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075 != i_1_) {
-				((Class52_Sub2_Sub1) this).anInt9074 = -1172842377 * i;
-				((Class52_Sub2_Sub1) this).anInt9075 = -374060523 * i_1_;
-				method591(251162115);
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("afi.e(").append(')').toString());
-		}
-	}
-
-	final void method583(int i, int i_2_) {
-		if (i != 1038713159 * ((Class52_Sub2_Sub1) this).anInt9074 || 2061776189 * ((Class52_Sub2_Sub1) this).anInt9075 != i_2_) {
-			((Class52_Sub2_Sub1) this).anInt9074 = -1172842377 * i;
-			((Class52_Sub2_Sub1) this).anInt9075 = -374060523 * i_2_;
-			method591(251162115);
-		}
-	}
-
-	public int method549() {
-		return ((Class52_Sub2_Sub1) this).anInt9074 * 1038713159;
-	}
-
-	public int method545() {
-		try {
-			return ((Class52_Sub2_Sub1) this).anInt9074 * 1038713159;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("afi.a(").append(')').toString());
-		}
-	}
-
-	public int method551() {
-		return ((Class52_Sub2_Sub1) this).anInt9074 * 1038713159;
-	}
-
-	public int method550() {
-		return ((Class52_Sub2_Sub1) this).anInt9074 * 1038713159;
+	static Class104[] method15631(int i) {
+		return (new Class104[] { Class104.aClass104_1062, Class104.aClass104_1061, Class104.aClass104_1060 });
 	}
 }

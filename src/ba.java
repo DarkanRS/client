@@ -1,35 +1,19 @@
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
 /* ba - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
 
-public class ba extends Class_v implements Interface25 {
+public class ba extends Class282_Sub1 implements Interface40 {
 	long nativeid;
-
-	ba(ja var_ja, int i) {
-		sa(var_ja, i);
-	}
 
 	native void sa(ja var_ja, int i);
 
-	protected void finalize() {
-		try {
-			if (((ba) this).nativeid != 0L)
-				Class71.method809(this, (short) -1633);
-			try {
-				Class var_class = java.lang.ClassLoader.class;
-				Field field = var_class.getDeclaredField("nativeLibraries");
-				Class var_class_124_ = java.lang.reflect.AccessibleObject.class;
-				Method method = var_class_124_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-				method.invoke(field, new Object[] { Boolean.TRUE });
-			} catch (Throwable throwable) {
-				/* empty */
-			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("ba.finalize(").append(')').toString());
-		}
+	void method15477() {
+		if (((ba) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 19);
+	}
+
+	ba(ja var_ja, int i) {
+		sa(var_ja, i);
 	}
 
 	public native void ma(boolean bool);
@@ -38,15 +22,25 @@ public class ba extends Class_v implements Interface25 {
 
 	native void u();
 
-	public native void z(boolean bool);
+	native void v();
 
-	native void a(ja var_ja, int i);
+	void method15478() {
+		if (((ba) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 20);
+	}
 
-	native void f();
+	public native void y(boolean bool);
 
-	native void b();
+	native void j();
 
-	native void i();
+	native void n(ja var_ja, int i);
 
-	native void p();
+	native void g(ja var_ja, int i);
+
+	public native void x(boolean bool);
+
+	public void finalize() {
+		if (((ba) this).nativeid != 0L)
+			Class156.method2642(this, (byte) 120);
+	}
 }

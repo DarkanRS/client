@@ -1,64 +1,85 @@
+
 /* Class519 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
-import java.util.zip.Inflater;
+import java.util.Stack;
 
 public class Class519 {
-	Inflater anInflater6273;
-	public static int[] anIntArray6274;
+	public Interface17 anInterface17_5931;
+	static int anInt5932;
 
-	public byte[] method6317(byte[] is, short i) {
-		try {
-			RsByteBuffer class298_sub53 = new RsByteBuffer(is);
-			class298_sub53.index = (is.length - 4) * 116413311;
-			int i_0_ = class298_sub53.method3600(-471458915);
-			byte[] is_1_ = new byte[i_0_];
-			class298_sub53.index = 0;
-			method6318(class298_sub53, is_1_, -1056793705);
-			return is_1_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("vv.a(").append(')').toString());
+	public Class519(Class317 class317) {
+		byte[] is = class317.method5615((Class524.aClass524_6965.anInt6966 * -1719912253), -1967379724);
+		method11149(new RsByteBuffer(is), 1856651955);
+	}
+
+	void method11149(RsByteBuffer class282_sub35, int i) {
+		for (;;) {
+			int i_0_ = class282_sub35.readUnsignedByte();
+			if (0 == i_0_)
+				break;
+			if (1 == i_0_)
+				anInterface17_5931 = Class197.method3202(class282_sub35, 470106489);
 		}
 	}
 
-	public void method6318(RsByteBuffer class298_sub53, byte[] is, int i) {
-		try {
-			if (31 != (class298_sub53.buffer[class298_sub53.index * 385051775]) || -117 != (class298_sub53.buffer[class298_sub53.index * 385051775 + 1]))
-				throw new RuntimeException("");
-			if (((Class519) this).anInflater6273 == null)
-				((Class519) this).anInflater6273 = new Inflater(true);
-			try {
-				((Class519) this).anInflater6273.setInput(class298_sub53.buffer, 10 + 385051775 * class298_sub53.index, (class298_sub53.buffer.length - (8 + (385051775 * class298_sub53.index + 10))));
-				((Class519) this).anInflater6273.inflate(is);
-			} catch (Exception exception) {
-				((Class519) this).anInflater6273.reset();
-				throw new RuntimeException("");
-			}
-			((Class519) this).anInflater6273.reset();
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("vv.f(").append(')').toString());
+	void method11150(RsByteBuffer class282_sub35) {
+		for (;;) {
+			int i = class282_sub35.readUnsignedByte();
+			if (0 == i)
+				break;
+			if (1 == i)
+				anInterface17_5931 = Class197.method3202(class282_sub35, 470106489);
 		}
 	}
 
-	public Class519() {
-		this(-1, 1000000, 1000000);
+	void method11151(RsByteBuffer class282_sub35) {
+		for (;;) {
+			int i = class282_sub35.readUnsignedByte();
+			if (0 == i)
+				break;
+			if (1 == i)
+				anInterface17_5931 = Class197.method3202(class282_sub35, 470106489);
+		}
 	}
 
-	Class519(int i, int i_2_, int i_3_) {
-		/* empty */
+	void method11152(RsByteBuffer class282_sub35) {
+		for (;;) {
+			int i = class282_sub35.readUnsignedByte();
+			if (0 == i)
+				break;
+			if (1 == i)
+				anInterface17_5931 = Class197.method3202(class282_sub35, 470106489);
+		}
 	}
 
-	static final String[] method6319(String[] strings, int i) {
-		try {
-			String[] strings_4_ = new String[5];
-			for (int i_5_ = 0; i_5_ < 5; i_5_++) {
-				strings_4_[i_5_] = new StringBuilder().append(i_5_).append(" ").toString();
-				if (null != strings && strings[i_5_] != null)
-					strings_4_[i_5_] = new StringBuilder().append(strings_4_[i_5_]).append(strings[i_5_]).toString();
-			}
-			return strings_4_;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("vv.ly(").append(')').toString());
+	void method11153(RsByteBuffer class282_sub35) {
+		for (;;) {
+			int i = class282_sub35.readUnsignedByte();
+			if (0 == i)
+				break;
+			if (1 == i)
+				anInterface17_5931 = Class197.method3202(class282_sub35, 470106489);
+		}
+	}
+
+	static final void method11154(Class527 class527, int i) {
+		((Class527) class527).aClass346_7009 = new Class346();
+		((Class527) class527).aClass346_7009.anInt4048 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * -1506067503);
+		((Class527) class527).aClass346_7009.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(((((Class527) class527).aClass346_7009.anInt4048) * -624100047), -1711115203);
+		((Class527) class527).aClass346_7009.anIntArray4046 = new int[((Class527) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
+	}
+
+	static void method11155(int i, int i_1_, int i_2_) {
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(15, 0L);
+		class282_sub50_sub12.method14995(1022143569);
+		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i;
+		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = i_1_ * 717659479;
+	}
+
+	public static void method11156(int i) {
+		synchronized (Class285.aStack3390) {
+			Class285.aStack3390 = new Stack();
 		}
 	}
 }

@@ -3,95 +3,170 @@
  */
 
 public class Class159 {
-	static int anInt1617 = 128;
-	Class_ra_Sub3 aClass_ra_Sub3_1618;
-	static int anInt1619 = 128;
-	Interface9_Impl2[] anInterface9_Impl2Array1620 = null;
-	public boolean aBoolean1621;
-	static Object anObject1622;
-	Interface9_Impl3 anInterface9_Impl3_1623 = null;
-	public Interface9_Impl2[] anInterface9_Impl2Array1624 = null;
-	public Interface9_Impl3 anInterface9_Impl3_1625 = null;
-	public Interface9_Impl3 anInterface9_Impl3_1626 = null;
-	public static int anInt1627 = 16;
-	static Object anObject1628;
-	static Object anObject1629;
+	public static Class450 aClass450_2010;
 
-	Class159(Class_ra_Sub3 class_ra_sub3) {
-		((Class159) this).aClass_ra_Sub3_1618 = class_ra_sub3;
-		aBoolean1621 = ((Class159) this).aClass_ra_Sub3_1618.aBoolean8365;
-		if (aBoolean1621 && !((Class159) this).aClass_ra_Sub3_1618.method5349(Class55.aClass55_565, Class77.aClass77_717))
-			aBoolean1621 = false;
-		if (aBoolean1621 || ((Class159) this).aClass_ra_Sub3_1618.method5348(Class55.aClass55_565, Class77.aClass77_717)) {
-			method1706();
-			if (!aBoolean1621) {
-				((Class159) this).anInterface9_Impl2Array1620 = new Interface9_Impl2[16];
-				for (int i = 0; i < 16; i++) {
-					byte[] is = Class415.method5586(anObject1622, i * 32768, 32768, (byte) 1);
-					((Class159) this).anInterface9_Impl2Array1620[i] = (((Class159) this).aClass_ra_Sub3_1618.method5351(Class55.aClass55_565, 128, 128, true, is));
-				}
-				anInterface9_Impl2Array1624 = new Interface9_Impl2[16];
-				for (int i = 0; i < 16; i++) {
-					byte[] is = Class415.method5586(anObject1628, i * 32768, 32768, (byte) 1);
-					anInterface9_Impl2Array1624[i] = (((Class159) this).aClass_ra_Sub3_1618.method5351(Class55.aClass55_565, 128, 128, true, is));
-				}
-			} else {
-				byte[] is = Class338.method4114(anObject1622, false, 1565550558);
-				((Class159) this).anInterface9_Impl3_1623 = (((Class159) this).aClass_ra_Sub3_1618.method5416(Class55.aClass55_565, 128, 128, 16, true, is));
-				is = Class338.method4114(anObject1628, false, -1292209598);
-				anInterface9_Impl3_1625 = (((Class159) this).aClass_ra_Sub3_1618.method5416(Class55.aClass55_565, 128, 128, 16, true, is));
-			}
+	public static String method2733(String string) {
+		int i = string.length();
+		int i_0_ = 0;
+		for (int i_1_ = 0; i_1_ < i; i_1_++) {
+			char c = string.charAt(i_1_);
+			if ('<' == c || c == '>')
+				i_0_ += 3;
 		}
+		StringBuilder stringbuilder = new StringBuilder(i_0_ + i);
+		for (int i_2_ = 0; i_2_ < i; i_2_++) {
+			char c = string.charAt(i_2_);
+			if (c == '<')
+				stringbuilder.append("<lt>");
+			else if ('>' == c)
+				stringbuilder.append("<gt>");
+			else
+				stringbuilder.append(c);
+		}
+		return stringbuilder.toString();
 	}
 
-	public boolean method1704() {
-		return (aBoolean1621 ? ((Class159) this).anInterface9_Impl3_1623 != null : ((Class159) this).anInterface9_Impl2Array1620 != null);
+	Class159() throws Throwable {
+		throw new Error();
 	}
 
-	public boolean method1705() {
-		if (!((Class159) this).aClass_ra_Sub3_1618.aBoolean8365)
+	public static final boolean method2734(String string, String string_3_, String string_4_, String string_5_, byte i) {
+		do {
+			if (string != null) {
+				if (i >= -1) {
+					/* empty */
+				}
+				if (string_4_ != null)
+					break;
+				if (i >= -1)
+					throw new IllegalStateException();
+			}
 			return false;
-		if (anInterface9_Impl3_1626 == null) {
-			if (anObject1629 == null) {
-				byte[] is = Class306.method3756(128, 128, 16, 8, new Class307_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
-				anObject1629 = Class158.method1702(is, false, (short) 13525);
-			}
-			byte[] is = Class338.method4114(anObject1629, false, 466014049);
-			byte[] is_0_ = new byte[is.length * 4];
-			int i = 0;
-			for (int i_1_ = 0; i_1_ < 16; i_1_++) {
-				int i_2_ = i_1_ * 16384;
-				int i_3_ = i_2_;
-				for (int i_4_ = 0; i_4_ < 128; i_4_++) {
-					int i_5_ = i_3_ + i_4_ * 128;
-					int i_6_ = i_3_ + (i_4_ - 1 & 0x7f) * 128;
-					int i_7_ = i_3_ + (i_4_ + 1 & 0x7f) * 128;
-					for (int i_8_ = 0; i_8_ < 128; i_8_++) {
-						float f = (float) ((is[i_6_ + i_8_] & 0xff) - (is[i_7_ + i_8_] & 0xff));
-						float f_9_ = (float) ((is[i_5_ + (i_8_ - 1 & 0x7f)] & 0xff) - (is[i_5_ + (i_8_ + 1 & 0x7f)] & 0xff));
-						float f_10_ = (float) (128.0 / Math.sqrt((double) (f_9_ * f_9_ + 16384.0F + f * f)));
-						is_0_[i++] = (byte) (int) (f_9_ * f_10_ + 127.0F);
-						is_0_[i++] = (byte) (int) (128.0F * f_10_ + 127.0F);
-						is_0_[i++] = (byte) (int) (f * f_10_ + 127.0F);
-						is_0_[i++] = is[i_2_++];
-					}
+		} while (false);
+		while_184_: do {
+			do {
+				if (!string.startsWith("#")) {
+					if (i >= -1)
+						throw new IllegalStateException();
+					if (!string_4_.startsWith("#"))
+						break while_184_;
+					if (i < -1)
+						break;
 				}
-			}
-			anInterface9_Impl3_1626 = (((Class159) this).aClass_ra_Sub3_1618.method5416(Class55.aClass55_557, 128, 128, 16, true, is_0_));
-		}
-		return anInterface9_Impl3_1626 != null;
+			} while (false);
+			return string.equals(string_4_);
+		} while (false);
+		return string_3_.equals(string_5_);
 	}
 
-	static void method1706() {
-		if (anObject1622 == null) {
-			Class213_Sub2_Sub1 class213_sub2_sub1 = new Class213_Sub2_Sub1();
-			byte[] is = class213_sub2_sub1.method1977(128, 128, 16);
-			anObject1622 = Class158.method1702(is, false, (short) 5197);
+	static final int method2735(int i, int i_6_, int i_7_, int i_8_) {
+		int i_9_ = i / i_7_;
+		int i_10_ = i & i_7_ - 1;
+		int i_11_ = i_6_ / i_7_;
+		int i_12_ = i_6_ & i_7_ - 1;
+		int i_13_ = Class241.method4151(i_9_, i_11_, 1156456439);
+		int i_14_ = Class241.method4151(i_9_ + 1, i_11_, 1156456439);
+		int i_15_ = Class241.method4151(i_9_, i_11_ + 1, 1156456439);
+		int i_16_ = Class241.method4151(1 + i_9_, 1 + i_11_, 1156456439);
+		int i_17_ = Class430.method7220(i_13_, i_14_, i_10_, i_7_, -1918782622);
+		int i_18_ = Class430.method7220(i_15_, i_16_, i_10_, i_7_, -1190208643);
+		return Class430.method7220(i_17_, i_18_, i_12_, i_7_, -1754820522);
+	}
+
+	public static void method2736(long[] ls, int[] is, byte i) {
+		Class497.method8316(ls, is, 0, ls.length - 1, -1763921861);
+	}
+
+	static final void method2737(Class527 class527, int i) {
+		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 100 == -8084891 * Class291_Sub1.anInt8015 ? 1 : 0;
+	}
+
+	static void method2738(Class98 class98, int i, int i_19_, int i_20_, boolean bool, Class527 class527, int i_21_) {
+		if (0 == i_19_)
+			throw new RuntimeException();
+		Class118 class118 = class98.aClass118Array998[i];
+		if (class118.aClass118Array1438 == null) {
+			class118.aClass118Array1438 = new Class118[1 + i_20_];
+			class118.aClass118Array1439 = class118.aClass118Array1438;
 		}
-		if (anObject1628 == null) {
-			Class213_Sub1_Sub1 class213_sub1_sub1 = new Class213_Sub1_Sub1();
-			byte[] is = class213_sub1_sub1.method1972(128, 128, 16);
-			anObject1628 = Class158.method1702(is, false, (short) 9144);
+		if (class118.aClass118Array1438.length <= i_20_) {
+			if (class118.aClass118Array1438 == class118.aClass118Array1439) {
+				Class118[] class118s = new Class118[i_20_ + 1];
+				for (int i_22_ = 0; i_22_ < class118.aClass118Array1438.length; i_22_++)
+					class118s[i_22_] = class118.aClass118Array1438[i_22_];
+				class118.aClass118Array1438 = class118.aClass118Array1439 = class118s;
+			} else {
+				Class118[] class118s = new Class118[i_20_ + 1];
+				Class118[] class118s_23_ = new Class118[i_20_ + 1];
+				for (int i_24_ = 0; i_24_ < class118.aClass118Array1438.length; i_24_++) {
+					class118s[i_24_] = class118.aClass118Array1438[i_24_];
+					class118s_23_[i_24_] = class118.aClass118Array1439[i_24_];
+				}
+				class118.aClass118Array1438 = class118s;
+				class118.aClass118Array1439 = class118s_23_;
+			}
 		}
+		if (i_20_ > 0 && class118.aClass118Array1438[i_20_ - 1] == null)
+			throw new RuntimeException(new StringBuilder().append("").append(i_20_ - 1).toString());
+		Class118 class118_25_ = new Class118();
+		class118_25_.anInt1268 = i_19_ * 720825663;
+		class118_25_.anInt1305 = (class118_25_.anInt1287 = 1 * class118.anInt1287) * 1571006651;
+		class118_25_.anInt1288 = -646708263 * i_20_;
+		class118.aClass118Array1438[i_20_] = class118_25_;
+		if (class118.aClass118Array1438 != class118.aClass118Array1439)
+			class118.aClass118Array1439[i_20_] = class118_25_;
+		Class513 class513;
+		if (bool)
+			class513 = ((Class527) class527).aClass513_6994;
+		else
+			class513 = ((Class527) class527).aClass513_7007;
+		((Class513) class513).aClass98_5885 = class98;
+		((Class513) class513).aClass118_5886 = class118_25_;
+		Class109.method1858(class118, (byte) -95);
+	}
+
+	public static int method2739(int i, int i_26_) {
+		int i_27_ = 0;
+		if (i < 0 || i >= 65536) {
+			i >>>= 16;
+			i_27_ += 16;
+		}
+		if (i >= 256) {
+			i >>>= 8;
+			i_27_ += 8;
+		}
+		if (i >= 16) {
+			i >>>= 4;
+			i_27_ += 4;
+		}
+		if (i >= 4) {
+			i >>>= 2;
+			i_27_ += 2;
+		}
+		if (i >= 1) {
+			i >>>= 1;
+			i_27_++;
+		}
+		return i_27_ + i;
+	}
+
+	public static void method2740(Interface36 interface36, int i) {
+		if (Class404.anInterface36_4830 != null)
+			throw new IllegalStateException("");
+		Class404.anInterface36_4830 = interface36;
+	}
+
+	static final void method2741(Class118 class118, Class98 class98, Class527 class527, byte i) {
+		Class118 class118_28_ = class118;
+		boolean bool;
+		if ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1) {
+			if (i == -1) {
+				/* empty */
+			}
+			bool = true;
+		} else
+			bool = false;
+		class118_28_.aBool1327 = bool;
+		Class109.method1858(class118, (byte) 1);
 	}
 }

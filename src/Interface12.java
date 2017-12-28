@@ -3,33 +3,45 @@
  */
 
 public interface Interface12 {
-	public void method149(short i);
+	public void method38();
 
-	public void method150(int i);
+	public void method83(Class505 class505);
 
-	public int method151(int i);
+	public int method84(int i);
 
-	public boolean method152(long l);
+	public void method85(byte i);
 
-	public boolean method153(long l);
+	public boolean method86(int i);
 
-	public int method154();
+	public void method87(Class505 class505, int i);
 
-	public void method155(boolean bool);
+	public void method88(Class505 class505, int i);
 
-	public void method156(boolean bool);
+	public int method76();
 
-	public void method157();
+	public int method89(int i);
 
-	public int method158();
+	public void method90();
 
-	public int method159(byte i);
+	public int method77();
 
-	public void method160(boolean bool, int i);
+	public int method91();
 
-	public int method161();
+	public int method92(int i);
 
-	public int method162();
+	public int method39();
 
-	public void method163();
+	public void method93(Class505 class505);
+
+	public boolean method94();
+
+	public boolean method95();
+
+	public int method73();
+
+	public void method96();
+
+	public void method97(Class505 class505);
+
+	public void method98(Class505 class505);
 }

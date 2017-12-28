@@ -2,71 +2,339 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class313 {
-	static int anInt3295 = 63;
-	static int anInt3296 = 7;
-	public static int anInt3297;
-	public static Object[] anObjectArray3298;
-	public static Class57 aClass57_3299;
-	static Class97 aClass97_3300;
+public class Class313 implements Runnable {
+	boolean aBool3661;
+	int anInt3662;
+	Thread aThread3663;
+	Class477 aClass477_3664 = new Class477();
+	public static Class317 aClass317_3665;
 
-	Class313() throws Throwable {
-		throw new Error();
-	}
-
-	public static void method3820(int i, int i_0_, boolean bool, int i_1_) {
-		try {
-			if (Class423.aClass437_5354.get((long) i) == null) {
-				if (!client.aBoolean8806)
-					Class125.method1395(i, bool, 1982223094);
+	public void method5561() {
+		while (!((Class313) this).aBool3661) {
+			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2;
+			synchronized (((Class313) this).aClass477_3664) {
+				class282_sub50_sub11_sub2 = (Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7937(2083604428);
+				if (null != class282_sub50_sub11_sub2)
+					((Class313) this).anInt3662 -= 985427143;
 				else {
-					Class298_Sub49 class298_sub49 = (new Class298_Sub49(i, new Class308_Sub1(4096, Class517.aClass243_6270, i), i_0_, bool));
-					((Class298_Sub49) class298_sub49).aClass308_Sub1_7591.method3764(Class321.aClass429_3357.method5753(1748854882), (byte) 104);
-					Class423.aClass437_5354.method5817(class298_sub49, (long) i);
+					try {
+						((Class313) this).aClass477_3664.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+					continue;
 				}
 			}
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("n.a(").append(')').toString());
+			try {
+				if (2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467) * 1459013903)
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464.method3348((int) (class282_sub50_sub11_sub2.aLong8120 * -7883876913471066125L), ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469, ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469.length, -180281887);
+				else if (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 * 1459013903 == 3)
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464.method3350((int) (-7883876913471066125L * class282_sub50_sub11_sub2.aLong8120), (byte) 23));
+			} catch (Exception exception) {
+				Class151.method2594(null, exception, (byte) -1);
+			}
+			((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
 		}
 	}
 
-	static int[] method3821(Class298_Sub37_Sub15 class298_sub37_sub15, byte i) {
+	public void method5562() {
+		((Class313) this).aBool3661 = true;
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.notifyAll();
+		}
 		try {
-			int[] is = null;
-			if (Class398.method4920(946432351 * (((Class298_Sub37_Sub15) class298_sub37_sub15).anInt9662), (short) 300))
-				is = (Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions((int) ((((Class298_Sub37_Sub15) class298_sub37_sub15).aLong9661) * 2236412381003659263L)).anIntArray5767);
-			else if (-1 != (((Class298_Sub37_Sub15) class298_sub37_sub15).anInt9660) * -149710173)
-				is = (Class298_Sub32_Sub14.aClass477_9400.getItemDefinitions((((Class298_Sub37_Sub15) class298_sub37_sub15).anInt9660 * -149710173)).anIntArray5767);
-			else if (Class302.method3716(946432351 * (((Class298_Sub37_Sub15) class298_sub37_sub15).anInt9662), -838004269)) {
-				Class298_Sub29 class298_sub29 = ((Class298_Sub29) (client.npcs.get((long) (int) (2236412381003659263L * ((Class298_Sub37_Sub15) class298_sub37_sub15).aLong9661))));
-				if (class298_sub29 != null) {
-					NPC class365_sub1_sub1_sub2_sub1 = ((NPC) class298_sub29.anObject7366);
-					SomethingDefinitions class503 = class365_sub1_sub1_sub2_sub1.aClass503_10190;
-					if (null != class503.anIntArray6188)
-						class503 = class503.method6240(Class128.aClass148_6331, 2033982126);
-					if (class503 != null)
-						is = class503.anIntArray6131;
-				}
-			} else if (Class395.method4907((((Class298_Sub37_Sub15) class298_sub37_sub15).anInt9662 * 946432351), (byte) -114)) {
-				ObjectDefinitions class432 = (client.aClass283_8716.method2641(150013546).getObjectDefinitions((int) (2236412381003659263L * (((Class298_Sub37_Sub15) class298_sub37_sub15).aLong9661) >>> 32 & 0x7fffffffL)));
-				if (class432.anIntArray5366 != null)
-					class432 = class432.method5777(Class128.aClass148_6331, 1956265286);
-				if (null != class432)
-					is = class432.anIntArray5370;
-			}
-			return is;
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("n.ag(").append(')').toString());
+			((Class313) this).aThread3663.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+		((Class313) this).aThread3663 = null;
+	}
+
+	void method5563(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2) {
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.method7936(class282_sub50_sub11_sub2, -1738910950);
+			((Class313) this).anInt3662 += 985427143;
+			((Class313) this).aClass477_3664.notifyAll();
 		}
 	}
 
-	static final void method3822(ClientScript2 class403, byte i) {
-		try {
-			Class390 class390 = (((ClientScript2) class403).aBoolean5261 ? ((ClientScript2) class403).aClass390_5247 : ((ClientScript2) class403).aClass390_5246);
-			IComponentDefinition class105 = ((Class390) class390).aClass105_4168;
-			Class523.method6329(class105, class403, -2024770880);
-		} catch (RuntimeException runtimeexception) {
-			throw Class346.method4175(runtimeexception, new StringBuilder().append("n.qm(").append(')').toString());
+	Class282_Sub50_Sub11_Sub2 method5564(int i, byte[] is, Class203 class203, int i_0_) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = 1795558366;
+		class282_sub50_sub11_sub2.aLong8120 = (long) i * 5418180015864004923L;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = is;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464 = class203;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = false;
+		method5569(class282_sub50_sub11_sub2, 1039174565);
+		return class282_sub50_sub11_sub2;
+	}
+
+	public Class313() {
+		((Class313) this).anInt3662 = 0;
+		((Class313) this).aBool3661 = false;
+		((Class313) this).aThread3663 = new Thread(this);
+		((Class313) this).aThread3663.setDaemon(true);
+		((Class313) this).aThread3663.start();
+		((Class313) this).aThread3663.setPriority(1);
+	}
+
+	public void run() {
+		while (!((Class313) this).aBool3661) {
+			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2;
+			synchronized (((Class313) this).aClass477_3664) {
+				class282_sub50_sub11_sub2 = (Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7937(1974175895);
+				if (null != class282_sub50_sub11_sub2)
+					((Class313) this).anInt3662 -= 985427143;
+				else {
+					try {
+						((Class313) this).aClass477_3664.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+					continue;
+				}
+			}
+			try {
+				if (2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467) * 1459013903)
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464.method3348((int) (class282_sub50_sub11_sub2.aLong8120 * -7883876913471066125L), ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469, ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469.length, -2009158934);
+				else if (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 * 1459013903 == 3)
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464.method3350((int) (-7883876913471066125L * class282_sub50_sub11_sub2.aLong8120), (byte) 25));
+			} catch (Exception exception) {
+				Class151.method2594(null, exception, (byte) -118);
+			}
+			((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
 		}
+	}
+
+	public void method5565(byte i) {
+		((Class313) this).aBool3661 = true;
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+		try {
+			((Class313) this).aThread3663.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+		((Class313) this).aThread3663 = null;
+	}
+
+	public void method5566() {
+		while (!((Class313) this).aBool3661) {
+			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2;
+			synchronized (((Class313) this).aClass477_3664) {
+				class282_sub50_sub11_sub2 = (Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7937(-199336628);
+				if (null != class282_sub50_sub11_sub2)
+					((Class313) this).anInt3662 -= 985427143;
+				else {
+					try {
+						((Class313) this).aClass477_3664.wait();
+					} catch (InterruptedException interruptedexception) {
+						/* empty */
+					}
+					continue;
+				}
+			}
+			try {
+				if (2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467) * 1459013903)
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464.method3348((int) (class282_sub50_sub11_sub2.aLong8120 * -7883876913471066125L), ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469, ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469.length, 123722418);
+				else if (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 * 1459013903 == 3)
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464.method3350((int) (-7883876913471066125L * class282_sub50_sub11_sub2.aLong8120), (byte) 117));
+			} catch (Exception exception) {
+				Class151.method2594(null, exception, (byte) -95);
+			}
+			((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+		}
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5567(int i, Class203 class203, int i_1_) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = -1601629747;
+		class282_sub50_sub11_sub2.aLong8120 = 5418180015864004923L * (long) i;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464 = class203;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = false;
+		method5569(class282_sub50_sub11_sub2, 400126913);
+		return class282_sub50_sub11_sub2;
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5568(int i, Class203 class203) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = 897779183;
+		synchronized (((Class313) this).aClass477_3664) {
+			for (Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_2_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7941((byte) 4)); null != class282_sub50_sub11_sub2_2_; class282_sub50_sub11_sub2_2_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7955(1024225838))) {
+				if ((long) i == (-7883876913471066125L * class282_sub50_sub11_sub2_2_.aLong8120) && (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_2_).aClass203_10464 == class203) && 2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_2_).anInt10467 * 1459013903)) {
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_2_).aByteArray10469;
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+					Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_3_ = class282_sub50_sub11_sub2;
+					return class282_sub50_sub11_sub2_3_;
+				}
+			}
+		}
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = class203.method3350(i, (byte) 50);
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = true;
+		return class282_sub50_sub11_sub2;
+	}
+
+	void method5569(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2, int i) {
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.method7936(class282_sub50_sub11_sub2, -1738910950);
+			((Class313) this).anInt3662 += 985427143;
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5570(int i, Class203 class203) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = 897779183;
+		synchronized (((Class313) this).aClass477_3664) {
+			for (Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_4_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7941((byte) 4)); null != class282_sub50_sub11_sub2_4_; class282_sub50_sub11_sub2_4_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7955(-838839358))) {
+				if ((long) i == (-7883876913471066125L * class282_sub50_sub11_sub2_4_.aLong8120) && (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_4_).aClass203_10464 == class203) && 2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_4_).anInt10467 * 1459013903)) {
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_4_).aByteArray10469;
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+					Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_5_ = class282_sub50_sub11_sub2;
+					return class282_sub50_sub11_sub2_5_;
+				}
+			}
+		}
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = class203.method3350(i, (byte) 51);
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = true;
+		return class282_sub50_sub11_sub2;
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5571(int i, Class203 class203) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = 897779183;
+		synchronized (((Class313) this).aClass477_3664) {
+			for (Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_6_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7941((byte) 4)); null != class282_sub50_sub11_sub2_6_; class282_sub50_sub11_sub2_6_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7955(930531401))) {
+				if ((long) i == (-7883876913471066125L * class282_sub50_sub11_sub2_6_.aLong8120) && (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_6_).aClass203_10464 == class203) && 2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_6_).anInt10467 * 1459013903)) {
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_6_).aByteArray10469;
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+					Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_7_ = class282_sub50_sub11_sub2;
+					return class282_sub50_sub11_sub2_7_;
+				}
+			}
+		}
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = class203.method3350(i, (byte) 51);
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = true;
+		return class282_sub50_sub11_sub2;
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5572(int i, Class203 class203) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = -1601629747;
+		class282_sub50_sub11_sub2.aLong8120 = 5418180015864004923L * (long) i;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aClass203_10464 = class203;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = false;
+		method5569(class282_sub50_sub11_sub2, -339241790);
+		return class282_sub50_sub11_sub2;
+	}
+
+	void method5573(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2) {
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.method7936(class282_sub50_sub11_sub2, -1738910950);
+			((Class313) this).anInt3662 += 985427143;
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+	}
+
+	void method5574(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2) {
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.method7936(class282_sub50_sub11_sub2, -1738910950);
+			((Class313) this).anInt3662 += 985427143;
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5575(int i, Class203 class203) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = 897779183;
+		synchronized (((Class313) this).aClass477_3664) {
+			for (Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_8_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7941((byte) 4)); null != class282_sub50_sub11_sub2_8_; class282_sub50_sub11_sub2_8_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7955(917922845))) {
+				if ((long) i == (-7883876913471066125L * class282_sub50_sub11_sub2_8_.aLong8120) && (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_8_).aClass203_10464 == class203) && 2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_8_).anInt10467 * 1459013903)) {
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_8_).aByteArray10469;
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+					Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_9_ = class282_sub50_sub11_sub2;
+					return class282_sub50_sub11_sub2_9_;
+				}
+			}
+		}
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = class203.method3350(i, (byte) 26);
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = true;
+		return class282_sub50_sub11_sub2;
+	}
+
+	void method5576(Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2) {
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.method7936(class282_sub50_sub11_sub2, -1738910950);
+			((Class313) this).anInt3662 += 985427143;
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+	}
+
+	public void method5577() {
+		((Class313) this).aBool3661 = true;
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+		try {
+			((Class313) this).aThread3663.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+		((Class313) this).aThread3663 = null;
+	}
+
+	Class282_Sub50_Sub11_Sub2 method5578(int i, Class203 class203, int i_10_) {
+		Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2 = new Class282_Sub50_Sub11_Sub2();
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).anInt10467 = 897779183;
+		synchronized (((Class313) this).aClass477_3664) {
+			for (Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_11_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7941((byte) 4)); null != class282_sub50_sub11_sub2_11_; class282_sub50_sub11_sub2_11_ = ((Class282_Sub50_Sub11_Sub2) ((Class313) this).aClass477_3664.method7955(-1570817833))) {
+				if ((long) i == (-7883876913471066125L * class282_sub50_sub11_sub2_11_.aLong8120) && (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_11_).aClass203_10464 == class203) && 2 == (((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_11_).anInt10467 * 1459013903)) {
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = ((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2_11_).aByteArray10469;
+					((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+					Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2_12_ = class282_sub50_sub11_sub2;
+					return class282_sub50_sub11_sub2_12_;
+				}
+			}
+		}
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aByteArray10469 = class203.method3350(i, (byte) 6);
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9639 = false;
+		((Class282_Sub50_Sub11_Sub2) class282_sub50_sub11_sub2).aBool9637 = true;
+		return class282_sub50_sub11_sub2;
+	}
+
+	public void method5579() {
+		((Class313) this).aBool3661 = true;
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+		try {
+			((Class313) this).aThread3663.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+		((Class313) this).aThread3663 = null;
+	}
+
+	public void method5580() {
+		((Class313) this).aBool3661 = true;
+		synchronized (((Class313) this).aClass477_3664) {
+			((Class313) this).aClass477_3664.notifyAll();
+		}
+		try {
+			((Class313) this).aThread3663.join();
+		} catch (InterruptedException interruptedexception) {
+			/* empty */
+		}
+		((Class313) this).aThread3663 = null;
+	}
+
+	public static void method5581(int i, byte i_13_) {
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(17, (long) i);
+		class282_sub50_sub12.method14965((byte) 13);
 	}
 }

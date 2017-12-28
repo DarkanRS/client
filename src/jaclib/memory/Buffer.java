@@ -4,27 +4,23 @@
 package jaclib.memory;
 
 public interface Buffer {
-	public int a();
+	public int method1();
 
-	public long f();
+	public long method2();
 
-	public void b(byte[] is, int i, int i_0_, int i_1_);
+	public void method116(byte[] is, int i, int i_0_, int i_1_);
 
-	public void p(byte[] is, int i, int i_2_, int i_3_);
+	public void method117(byte[] is, int i, int i_2_, int i_3_);
 
-	public void i(byte[] is, int i, int i_4_, int i_5_);
+	public int method3();
 
-	public void k(byte[] is, int i, int i_6_, int i_7_);
+	public int method4();
 
-	public long d();
+	public long method5();
 
-	public long u();
+	public long method6();
 
-	public int x();
+	public long method7();
 
-	public int r();
-
-	public int q();
-
-	public int n();
+	public long method8();
 }
