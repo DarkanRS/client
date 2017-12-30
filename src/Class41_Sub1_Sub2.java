@@ -150,8 +150,8 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 			((Class41_Sub1_Sub2) this).aFloat10149 = (float) ((double) aClass505_Sub2_413.anInt8820 * (double) f_6_ % 1.0);
 	}
 
-	static final void method15551(Class527 class527, int i) {
-		int i_9_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method7785(i_9_, -1918950659);
+	static final void method15551(CS2Executor class527, int i) {
+		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method7785(i_9_, -1918950659);
 	}
 }

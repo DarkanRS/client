@@ -19,12 +19,12 @@ public class Class445 {
 		aClass445_5383 = new Class445();
 	}
 
-	static final void method7428(Class527 class527, byte i) {
-		int i_0_ = (((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Player) ((Class527) class527).aClass521_Sub1_Sub1_Sub2_7006).aClass155_10561.method2626(i_0_, (byte) 56);
+	static final void method7428(CS2Executor class527, byte i) {
+		int i_0_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Player) ((CS2Executor) class527).animable).aClass155_10561.method2626(i_0_, (byte) 56);
 	}
 
-	static final void method7429(Class118 class118, int i, byte[] is, byte[] is_1_, Class527 class527, int i_2_) {
+	static final void method7429(Class118 class118, int i, byte[] is, byte[] is_1_, CS2Executor class527, int i_2_) {
 		if (class118.aByteArrayArray1366 == null) {
 			if (null != is) {
 				class118.aByteArrayArray1366 = new byte[11][];

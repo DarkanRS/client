@@ -17,7 +17,7 @@ public class Class408 {
 			return class415;
 		byte[] is;
 		synchronized (((Class408) this).aClass317_4852) {
-			is = (((Class408) this).aClass317_4852.method5607(-71319279 * Class120.aClass120_1482.anInt1521, i, -1848554770));
+			is = (((Class408) this).aClass317_4852.getFile(-71319279 * Class120.aClass120_1482.anInt1521, i, -1848554770));
 		}
 		class415 = new Class415();
 		if (null != is)
@@ -37,7 +37,7 @@ public class Class408 {
 			return class415;
 		byte[] is;
 		synchronized (((Class408) this).aClass317_4852) {
-			is = (((Class408) this).aClass317_4852.method5607(-71319279 * Class120.aClass120_1482.anInt1521, i, -2097990028));
+			is = (((Class408) this).aClass317_4852.getFile(-71319279 * Class120.aClass120_1482.anInt1521, i, -2097990028));
 		}
 		class415 = new Class415();
 		if (null != is)

@@ -1256,8 +1256,8 @@ public class Class187 {
 		return class418.method7015(65280);
 	}
 
-	static final void method3117(Class527 class527, byte i) {
-		int i_336_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3117(CS2Executor class527, byte i) {
+		int i_336_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_336_, (byte) 83);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_336_ >> 16];
 		Class282_Sub25.method12401(class118, class98, class527, 2018146774);
@@ -1267,16 +1267,16 @@ public class Class187 {
 		return Class404.anInterface36_4830 != null;
 	}
 
-	static final void method3119(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt107 * -1951489731;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -79406355 * Class9.anInt109;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -532543837 * Class9.anInt108;
+	static final void method3119(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt107 * -1951489731;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -79406355 * Class9.anInt109;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -532543837 * Class9.anInt108;
 		Class9.anInt107 = 264209366;
 		Class9.anInt109 = -915280613;
 		Class9.anInt108 = 691675893;
 	}
 
-	static final void method3120(Class527 class527, byte i) {
+	static final void method3120(CS2Executor class527, byte i) {
 		Class86.method1478(-2031012113);
 	}
 

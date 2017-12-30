@@ -42,26 +42,26 @@ public class Class486 {
 		Class281.anInt3376 = -719788339 * i;
 	}
 
-	static final void method8205(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7271 * -871685551 - client.anInt7270 * -240868135;
+	static final void method8205(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7271 * -871685551 - client.anInt7270 * -240868135;
 	}
 
-	static final void method8206(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 1702692012;
+	static final void method8206(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 1702692012;
 		Class316.method5594(-559600711);
 		Class96.method1607((byte) 35);
-		Class282_Sub20_Sub9.anInt9792 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) * -2112332643;
-		Class301.anInt3556 = -40093315 * (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
-		Class20.anInt188 = 50073545 * (((Class527) class527).anIntArray6999[2 + ((Class527) class527).anInt7012 * 1942118537]);
-		Class182.anInt2262 = (2139103415 * (((Class527) class527).anIntArray6999[3 + 1942118537 * ((Class527) class527).anInt7012]));
-		Class450.anInt5438 = (1254300539 * (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 4]));
-		Class373.anInt4350 = ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 5]) * -923361129);
-		Class254.anInt3145 = (1497808011 * (((Class527) class527).anIntArray6999[6 + ((Class527) class527).anInt7012 * 1942118537]));
-		Class446.anInt5396 = (-1722209539 * (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 7]));
-		Class17.anInt148 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 8]) * 254147049;
-		Class388.anInt4722 = (-581610323 * (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 9]));
-		Class99.anInt1005 = ((((Class527) class527).anIntArray6999[10 + ((Class527) class527).anInt7012 * 1942118537]) * 286693969);
-		Class242.anInt2982 = (-918117939 * (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 11]));
+		Class282_Sub20_Sub9.anInt9792 = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) * -2112332643;
+		Class301.anInt3556 = -40093315 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		Class20.anInt188 = 50073545 * (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		Class182.anInt2262 = (2139103415 * (((CS2Executor) class527).intStack[3 + 1942118537 * ((CS2Executor) class527).anInt7012]));
+		Class450.anInt5438 = (1254300539 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 4]));
+		Class373.anInt4350 = ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 5]) * -923361129);
+		Class254.anInt3145 = (1497808011 * (((CS2Executor) class527).intStack[6 + ((CS2Executor) class527).anInt7012 * 1942118537]));
+		Class446.anInt5396 = (-1722209539 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 7]));
+		Class17.anInt148 = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 8]) * 254147049;
+		Class388.anInt4722 = (-581610323 * (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 9]));
+		Class99.anInt1005 = ((((CS2Executor) class527).intStack[10 + ((CS2Executor) class527).anInt7012 * 1942118537]) * 286693969);
+		Class242.anInt2982 = (-918117939 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 11]));
 		Class211.aClass317_2673.method5661(947424179 * Class450.anInt5438, 1020606537);
 		Class211.aClass317_2673.method5661(-1626939609 * Class373.anInt4350, -2132853844);
 		Class211.aClass317_2673.method5661(464964387 * Class254.anInt3145, 849271104);

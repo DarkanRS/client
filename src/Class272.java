@@ -1387,16 +1387,16 @@ public class Class272 {
 		return is;
 	}
 
-	static final void method4838(Class527 class527, short i) {
-		int i_299_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method4838(CS2Executor class527, short i) {
+		int i_299_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_299_, (byte) 10);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_299_ >> 16];
 		Class220.method3738(class118, class98, class527, (byte) -2);
 	}
 
-	static final void method4839(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 141891001;
-		int i_300_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+	static final void method4839(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 141891001;
+		int i_300_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		Class282_Sub44 class282_sub44 = (Class282_Sub44) client.aClass465_7442.method7754((long) i_300_);
 		if (null != class282_sub44 && -1517697923 * class282_sub44.anInt8062 == 3)
 			Class351.method6196(class282_sub44, true, true, -1932930202);

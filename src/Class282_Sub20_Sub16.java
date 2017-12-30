@@ -328,9 +328,9 @@ public class Class282_Sub20_Sub16 extends Class282_Sub20 {
 		return is;
 	}
 
-	static final void method15307(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		if ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) > (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]))
-			((Class527) class527).anInt7020 += ((((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020]) * -1051529003);
+	static final void method15307(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		if ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) > (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]))
+			((CS2Executor) class527).anInt7020 += ((((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]) * -1051529003);
 	}
 }

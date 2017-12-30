@@ -287,15 +287,15 @@ public class Class3 implements Interface42 {
 		return i;
 	}
 
-	static final void method283(Class527 class527, int i) {
-		int i_51_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method283(CS2Executor class527, int i) {
+		int i_51_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_51_, (byte) 27);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_51_ >> 16];
 		Class359.method6244(class118, class98, class527, 606535438);
 	}
 
-	static final void method284(Class527 class527, int i) {
-		boolean bool = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+	static final void method284(CS2Executor class527, int i) {
+		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub27_8208), bool ? 2 : 1, 681995550);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub27_8209), bool ? 2 : 1, -1225765043);
 		Class405.method6823(-734889653);
@@ -321,7 +321,7 @@ public class Class3 implements Interface42 {
 		return new Class275_Sub2();
 	}
 
-	static final void method287(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Class169.method2869(1779387759) / 86400000L) - 11745;
+	static final void method287(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Class169.method2869(1779387759) / 86400000L) - 11745;
 	}
 }

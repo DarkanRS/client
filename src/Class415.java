@@ -103,7 +103,7 @@ public class Class415 {
 		}
 	}
 
-	static final void method6998(Class527 class527, byte i) {
+	static final void method6998(CS2Executor class527, byte i) {
 		if (Class233.anInt2880 * -638562019 == 2)
 			Class188.aBool2378 = true;
 		else if (-638562019 * Class233.anInt2880 == 1)

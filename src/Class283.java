@@ -17,7 +17,7 @@ public class Class283 {
 		int i_0_ = 0;
 		int i_1_ = 0;
 		while (i_0_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.method5607(i, is[i_1_++], -1862037821));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_1_++], -1862037821));
 			int i_2_ = class282_sub35.readInt();
 			int i_3_ = class282_sub35.readUnsignedShort();
 			int i_4_ = class282_sub35.readUnsignedByte();
@@ -40,7 +40,7 @@ public class Class283 {
 		int i_5_ = 0;
 		int i_6_ = 0;
 		while (i_5_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.method5607(i, is[i_6_++], -1511396395));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_6_++], -1511396395));
 			int i_7_ = class282_sub35.readInt();
 			int i_8_ = class282_sub35.readUnsignedShort();
 			int i_9_ = class282_sub35.readUnsignedByte();
@@ -69,7 +69,7 @@ public class Class283 {
 		int i_10_ = 0;
 		int i_11_ = 0;
 		while (i_10_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.method5607(i, is[i_11_++], -2095255905));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_11_++], -2095255905));
 			int i_12_ = class282_sub35.readInt();
 			int i_13_ = class282_sub35.readUnsignedShort();
 			int i_14_ = class282_sub35.readUnsignedByte();
@@ -83,27 +83,27 @@ public class Class283 {
 		return class283;
 	}
 
-	static final void method5008(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method5008(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class524.method11223(class118, class98, class527, 4317906);
 	}
 
-	static final void method5009(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method5009(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1962956605) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1413 = Class351.method6193(string, class527, 1097556379);
 		class118.aBool1384 = true;
 	}
 
-	static final void method5010(Class527 class527, int i) {
-		int i_15_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method5010(CS2Executor class527, int i) {
+		int i_15_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (client.anInt7166 * -1741204137 != 0 || Class203.method3360((byte) 17))
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class62.method1262(i_15_, string, (byte) 55) ? 1 : 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class62.method1262(i_15_, string, (byte) 55) ? 1 : 0;
 	}
 }

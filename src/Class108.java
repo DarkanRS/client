@@ -107,8 +107,8 @@ public class Class108 {
 		aString1083 = string_42_;
 	}
 
-	static final void method1845(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (class527.anObjectArray7019[(class527.anInt7000 -= 1476624725) * 1806726141]);
+	static final void method1845(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 122183599) != null) {
 			string = string.substring(0, string.length() - 1);
 		}

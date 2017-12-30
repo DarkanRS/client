@@ -208,21 +208,21 @@ public class Class418 {
 		return ((Class427) ((Class418) this).aClass427_4998).aClass317_5118.method5661(-1053123675 * anInt4995, -1243706238);
 	}
 
-	static final void method7021(Class527 class527, int i) {
+	static final void method7021(CS2Executor class527, int i) {
 		boolean bool = false;
 		String string = "";
-		if (null != ((Class527) class527).aClass191_7008 && ((Class527) class527).aClass191_7008.method3154((byte) -45)) {
-			File file = ((Class527) class527).aClass191_7008.method3161(-2069377284);
+		if (null != ((CS2Executor) class527).aClass191_7008 && ((CS2Executor) class527).aClass191_7008.method3154((byte) -45)) {
+			File file = ((CS2Executor) class527).aClass191_7008.method3161(-2069377284);
 			if (file != null) {
 				string = file.getPath();
 				if (null == string)
 					string = "";
 			}
 			bool = true;
-			((Class527) class527).aClass191_7008 = null;
+			((CS2Executor) class527).aClass191_7008 = null;
 		}
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	static void method7022(byte i) {

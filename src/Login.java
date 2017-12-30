@@ -120,13 +120,13 @@ public class Login {
 		}
 	}
 
-	static void method5016(Class527 class527, int i) {
-		Class240 class240 = Class409.aClass242_4922.method4156((class527.anIntArray6999[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
+	static void method5016(CS2Executor class527, int i) {
+		Class240 class240 = Class409.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
 	}
 
-	static final void method5017(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (class527.anObjectArray7019[(class527.anInt7000 -= 1476624725) * 1806726141]);
+	static final void method5017(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -305873852) != null) {
 			string = string.substring(0, string.length() - 1);
 		}

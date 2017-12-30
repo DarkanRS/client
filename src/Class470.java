@@ -485,10 +485,10 @@ public class Class470 {
 		return true;
 	}
 
-	static final void method7826(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_40_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_41_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_40_, 1106724870).aCharArray9748[i_41_]);
+	static final void method7826(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_40_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_41_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_40_, 1106724870).aCharArray9748[i_41_]);
 	}
 }

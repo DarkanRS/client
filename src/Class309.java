@@ -276,41 +276,41 @@ public class Class309 {
 		return class327_sub1;
 	}
 
-	static final void method5487(Class527 class527, int i) {
-		Class513 class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
+	static final void method5487(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = class513.aClass118_5886;
 		Class98 class98 = class513.aClass98_5885;
 		Class306.method5453(class118, class98, class527, -218121128);
 	}
 
-	static final void method5488(Class527 class527, int i) {
-		int i_36_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method5488(CS2Executor class527, int i) {
+		int i_36_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_36_, (byte) 80);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_36_ >> 16];
 		Class282_Sub20_Sub9.method15256(class118, class98, class527, -1115547958);
 	}
 
-	static final void method5489(Class527 class527, int i) {
-		int i_37_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method5489(CS2Executor class527, int i) {
+		int i_37_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (0 != 1609086245 * client.anInt7434 && i_37_ < client.anInt7373 * -1754449153) {
 			Class10 class10 = client.aClass10Array7456[i_37_];
-			class527.anObjectArray7019[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class10.aString115;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class10.aString115;
 			if (class10.aString116 != null) {
-				class527.anObjectArray7019[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = class10.aString116;
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = class10.aString116;
 			} else {
-				class527.anObjectArray7019[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
 			}
 		} else {
-			class527.anObjectArray7019[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			class527.anObjectArray7019[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		}
 	}
 
-	static final void method5490(Class527 class527, byte i) {
+	static final void method5490(CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
-		int i_38_ = (class527.anIntArray6999[class527.anInt7012 * 1942118537]);
-		int i_39_ = (class527.anIntArray6999[1942118537 * class527.anInt7012 + 1]);
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class117.method1980(i_38_, i_39_, true, 1580023895);
+		int i_38_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_39_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class117.method1980(i_38_, i_39_, true, 1580023895);
 	}
 
 	static final boolean method5491(char c, int i) {

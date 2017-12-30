@@ -586,9 +586,9 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 		return is;
 	}
 
-	static final void method15207(Class118 class118, Class527 class527, int i) {
-		int i_158_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		int i_159_ = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
+	static final void method15207(Class118 class118, CS2Executor class527, int i) {
+		int i_158_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_159_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 6 && 2 != class118.anInt1329 * 2131324949)
 			throw new RuntimeException("");
 		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(-402732635 * class118.anInt1330, (byte) 86);

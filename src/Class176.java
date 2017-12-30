@@ -114,8 +114,8 @@ public class Class176 {
 		Class96_Sub5.method14243((short) 31899);
 	}
 
-	static final void method2978(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method12641(-255008598);
+	static final void method2978(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method12641(-255008598);
 	}
 
 	static long method2979(int i) {

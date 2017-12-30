@@ -107,22 +107,22 @@ public class Class468_Sub20 extends Class468 {
 		Class15.method540(anInt5578 * -859024475, (byte) 39);
 	}
 
-	static final void method12802(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method12802(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class262.method4651(class118, class98, class527, (byte) 56);
 	}
 
-	static final void method12803(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -204242656);
+	static final void method12803(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -204242656);
 		client.aClass257_7353.method4547((byte) -96);
 		Class190.method3148((byte) 37);
 		client.aBool7175 = false;
 	}
 
-	static final void method12804(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709]);
+	static final void method12804(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
 	}
 
 	static short[][] method12805(float[][] fs, short[][] is, int i) {

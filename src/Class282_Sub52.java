@@ -78,8 +78,8 @@ public final class Class282_Sub52 extends Class282 implements Interface16 {
 		return 656472737 * ((Class282_Sub52) this).anInt8174;
 	}
 
-	static final void method13468(Class118 class118, Class98 class98, Class527 class527, int i) {
-		class118.aBool1328 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+	static final void method13468(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		class118.aBool1328 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 6);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
 			Class433.method7278(-1952846363 * class118.anInt1287, -157670118);

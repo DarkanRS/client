@@ -229,7 +229,7 @@ public class Class423 {
 		Class345 class345 = (Class345) Class345.aClass229_4031.method3865((long) i);
 		if (class345 != null)
 			return class345;
-		byte[] is = Class345.aClass317_4021.method5607(1, i, -2003556977);
+		byte[] is = Class345.aClass317_4021.getFile(1, i, -2003556977);
 		class345 = new Class345();
 		class345.anInt4032 = i * -113116309;
 		if (is != null)

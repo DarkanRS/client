@@ -19,17 +19,17 @@ public abstract class Class282_Sub11 extends Class282 {
 
 	abstract void method12208(RsByteBuffer class282_sub35);
 
-	static final void method12209(Class118 class118, Class98 class98, Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
+	static final void method12209(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = 10;
-		byte[] is = { (byte) ((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537] };
-		byte[] is_1_ = { (byte) ((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1] };
+		byte[] is = { (byte) ((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537] };
+		byte[] is_1_ = { (byte) ((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1] };
 		Class445.method7429(class118, i_0_, is, is_1_, class527, -2033836462);
 	}
 
-	static final void method12210(Class527 class527, byte i) {
-		((Class527) class527).anInt7000 -= 134906879;
-		Class533.method11404((String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]), (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141 + 1]), (String) (((Class527) class527).anObjectArray7019[2 + 1806726141 * ((Class527) class527).anInt7000]), ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1), true, -94301647);
+	static final void method12210(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7000 -= 134906879;
+		Class533.method11404((String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]), (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141 + 1]), (String) (((CS2Executor) class527).objectStack[2 + 1806726141 * ((CS2Executor) class527).anInt7000]), ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1), true, -94301647);
 	}
 
 	public static void method12211(int i) {

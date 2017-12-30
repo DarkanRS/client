@@ -840,20 +840,20 @@ public class Class540 {
 		return (((i_190_ & 0xff) >> 2 << 10) + (i_191_ >> 5 << 7) + (i_192_ >> 1));
 	}
 
-	static void method11592(Class527 class527, byte i) {
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class409.aClass242_4922.method4156((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 - 2]), -1396181317).aStringArray2975[(((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 - 1])]);
-		((Class527) class527).anInt7012 -= 283782002;
+	static void method11592(CS2Executor class527, byte i) {
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).aStringArray2975[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])]);
+		((CS2Executor) class527).anInt7012 -= 283782002;
 	}
 
-	static final void method11593(Class527 class527, int i) {
-		int i_193_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method11593(CS2Executor class527, int i) {
+		int i_193_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_193_, (byte) 27);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_193_ >> 16];
 		Class263.method4772(class118, class98, class527, (byte) 88);
 	}
 
-	static final void method11594(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method11594(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4579, client.aClass184_7218.aClass432_2283, 1692651039);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class108.method1846(string, -1869083992));
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);

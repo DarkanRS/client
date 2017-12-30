@@ -1108,13 +1108,13 @@ public class Class61 {
 		return true;
 	}
 
-	static final void method1254(Class527 class527, int i) {
-		((Class527) class527).anInt7020 += (((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709]) * -1051529003;
+	static final void method1254(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7020 += (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]) * -1051529003;
 	}
 
-	static final void method1255(Class527 class527, int i) {
-		int i_97_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1255(CS2Executor class527, int i) {
+		int i_97_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class220 class220 = Class397.aClass218_4813.method3700(i_97_, 676193293);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
 	}
 }

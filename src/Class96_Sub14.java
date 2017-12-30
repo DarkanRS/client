@@ -113,14 +113,14 @@ public class Class96_Sub14 extends Class96 {
 		return Class8_Sub1.method13782(1, i_6_, -2005172435);
 	}
 
-	static final int[] method14642(String string, Class527 class527, int i) {
+	static final int[] method14642(String string, CS2Executor class527, int i) {
 		int[] is = null;
 		if (string.length() > 0 && string.charAt(string.length() - 1) == 'Y') {
-			int i_8_ = (((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]);
+			int i_8_ = (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]);
 			if (i_8_ > 0) {
 				is = new int[i_8_];
 				while (i_8_-- > 0)
-					is[i_8_] = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+					is[i_8_] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 			}
 		}
 		return is;
@@ -137,7 +137,7 @@ public class Class96_Sub14 extends Class96 {
 		return false;
 	}
 
-	static final void method14644(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class527) class527).aClass282_Sub4_7011.aByte7497;
+	static final void method14644(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass282_Sub4_7011.aByte7497;
 	}
 }

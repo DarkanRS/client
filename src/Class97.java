@@ -32,16 +32,16 @@ public final class Class97 {
 		return (i == 5 || 11 == i || i == 14 || i == 19 || 3 == i || i == 8 || 9 == i);
 	}
 
-	static final void method1613(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 567564004;
-		int i_1_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_2_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
-		int i_3_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 2]);
-		int i_4_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 3]);
+	static final void method1613(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 567564004;
+		int i_1_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_2_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
+		int i_3_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
+		int i_4_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 3]);
 		i_1_ += i_2_ << 14;
 		i_1_ += i_3_ << 28;
 		i_1_ += i_4_;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
 	}
 
 	static Class222 method1614(RsByteBuffer class282_sub35, int i) {

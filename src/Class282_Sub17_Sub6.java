@@ -104,19 +104,19 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 		class61.aByte628 = this.aByte10018;
 	}
 
-	static final void method15437(Class527 class527, short i) {
+	static final void method15437(CS2Executor class527, short i) {
 		if (0 != -1741204137 * client.anInt7166 || Class203.method3360((byte) 56)) {
-			class527.anIntArray6999[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		} else if (Class448.aBool5422) {
-			class527.anIntArray6999[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		} else if (8133049586794585531L * Class448.aLong5425 > Class169.method2869(1849274283) - 1000L) {
-			class527.anIntArray6999[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		} else {
 			Class448.aBool5422 = true;
 			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4613, client.aClass184_7218.aClass432_2283, 1318116976);
 			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(Class418.anInt4999 * 4249963);
 			client.aClass184_7218.method3049(class282_sub23, -587637854);
-			class527.anIntArray6999[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		}
 	}
 

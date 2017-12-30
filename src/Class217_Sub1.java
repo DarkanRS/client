@@ -24,8 +24,8 @@ public class Class217_Sub1 extends Class217 {
 		Class334.method5940();
 	}
 
-	static final void method13057(Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_0_ >> 14 & 0x3fff;
+	static final void method13057(CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_0_ >> 14 & 0x3fff;
 	}
 }

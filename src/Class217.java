@@ -64,19 +64,19 @@ public abstract class Class217 {
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = class282_sub15_sub2;
 	}
 
-	static final void method3691(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_3_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_4_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_3_ | i_4_;
+	static final void method3691(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_3_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_4_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_3_ | i_4_;
 	}
 
-	static final void method3692(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1998684386);
+	static final void method3692(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1998684386);
 	}
 
-	static final void method3693(Class527 class527, short i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub24_8216, ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 2 : 0, 447619076);
+	static final void method3693(CS2Executor class527, short i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub24_8216, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 2 : 0, 447619076);
 		client.aClass257_7353.method4547((byte) -59);
 		Class190.method3148((byte) 121);
 		client.aBool7175 = false;

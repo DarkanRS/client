@@ -5931,7 +5931,7 @@ public final class client extends Class263 {
 	static final void method11707() {
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * cycles));
 		if (anInt7349 * -1699899559 != -1)
-			Class513.method8777(anInt7349 * -1699899559, (byte) -103);
+			UnderlayDefinition.method8777(anInt7349 * -1699899559, (byte) -103);
 		for (int i = 0; i < anInt7407 * 1858642375; i++) {
 			aBoolArray7410[i] = aBoolArray7443[i];
 			aBoolArray7443[i] = false;
@@ -6039,7 +6039,7 @@ public final class client extends Class263 {
 	static final void method11712() {
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * cycles));
 		if (anInt7349 * -1699899559 != -1)
-			Class513.method8777(anInt7349 * -1699899559, (byte) -101);
+			UnderlayDefinition.method8777(anInt7349 * -1699899559, (byte) -101);
 		for (int i = 0; i < anInt7407 * 1858642375; i++) {
 			aBoolArray7410[i] = aBoolArray7443[i];
 			aBoolArray7443[i] = false;
@@ -7820,7 +7820,7 @@ public final class client extends Class263 {
 		}
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * cycles));
 		if (-1 != anInt7349 * -1699899559)
-			Class513.method8777(-1699899559 * anInt7349, (byte) -56);
+			UnderlayDefinition.method8777(-1699899559 * anInt7349, (byte) -56);
 		for (int i = 0; i < 1858642375 * anInt7407; i++) {
 			aBoolArray7410[i] = aBoolArray7443[i];
 			aBoolArray7443[i] = false;
@@ -9990,7 +9990,7 @@ public final class client extends Class263 {
 	static final void method11808() {
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * cycles));
 		if (anInt7349 * -1699899559 != -1)
-			Class513.method8777(anInt7349 * -1699899559, (byte) -86);
+			UnderlayDefinition.method8777(anInt7349 * -1699899559, (byte) -86);
 		for (int i = 0; i < anInt7407 * 1858642375; i++) {
 			aBoolArray7410[i] = aBoolArray7443[i];
 			aBoolArray7443[i] = false;
@@ -10014,7 +10014,7 @@ public final class client extends Class263 {
 	static final void method11809() {
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * cycles));
 		if (anInt7349 * -1699899559 != -1)
-			Class513.method8777(anInt7349 * -1699899559, (byte) -80);
+			UnderlayDefinition.method8777(anInt7349 * -1699899559, (byte) -80);
 		for (int i = 0; i < anInt7407 * 1858642375; i++) {
 			aBoolArray7410[i] = aBoolArray7443[i];
 			aBoolArray7443[i] = false;
@@ -10048,7 +10048,7 @@ public final class client extends Class263 {
 		}
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * cycles));
 		if (-1 != anInt7349 * -1699899559)
-			Class513.method8777(-1699899559 * anInt7349, (byte) -104);
+			UnderlayDefinition.method8777(-1699899559 * anInt7349, (byte) -104);
 		for (int i = 0; i < 1858642375 * anInt7407; i++) {
 			aBoolArray7410[i] = aBoolArray7443[i];
 			aBoolArray7443[i] = false;
@@ -18643,7 +18643,7 @@ public final class client extends Class263 {
 						Class464.method7743(class118.aClass118Array1439, class118.anInt1287 * -1952846363, (byte) 10);
 					Class282_Sub44 class282_sub44 = ((Class282_Sub44) aClass465_7442.method7754((long) (-1952846363 * (class118.anInt1287))));
 					if (class282_sub44 != null)
-						Class513.method8777((587626901 * class282_sub44.anInt8063), (byte) -90);
+						UnderlayDefinition.method8777((587626901 * class282_sub44.anInt8063), (byte) -90);
 				}
 				if (-2131393857 * class118.anInt1268 == 6 && 1241177935 * class118.anInt1321 != -1) {
 					if (class118.aClass456_1437 == null) {
@@ -18667,7 +18667,7 @@ public final class client extends Class263 {
 						Class464.method7743(class118.aClass118Array1439, class118.anInt1287 * -1952846363, (byte) 10);
 					Class282_Sub44 class282_sub44 = ((Class282_Sub44) aClass465_7442.method7754((long) (-1952846363 * (class118.anInt1287))));
 					if (class282_sub44 != null)
-						Class513.method8777((587626901 * class282_sub44.anInt8063), (byte) -62);
+						UnderlayDefinition.method8777((587626901 * class282_sub44.anInt8063), (byte) -62);
 				}
 				if (-2131393857 * class118.anInt1268 == 6 && 1241177935 * class118.anInt1321 != -1) {
 					if (class118.aClass456_1437 == null) {

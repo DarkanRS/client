@@ -33,7 +33,7 @@ public class Class426 implements Interface20 {
 			return class425;
 		byte[] is;
 		synchronized (((Class426) this).aClass317_5106) {
-			is = (((Class426) this).aClass317_5106.method5607(Class120.aClass120_1493.method2079(i, 548952968), Class120.aClass120_1493.method2080(i, -1930948292), -1500146511));
+			is = (((Class426) this).aClass317_5106.getFile(Class120.aClass120_1493.method2079(i, 548952968), Class120.aClass120_1493.method2080(i, -1930948292), -1500146511));
 		}
 		class425 = new ItemDefinitions();
 		((ItemDefinitions) class425).aClass426_5034 = this;
@@ -83,7 +83,7 @@ public class Class426 implements Interface20 {
 			return class425;
 		byte[] is;
 		synchronized (((Class426) this).aClass317_5106) {
-			is = (((Class426) this).aClass317_5106.method5607(Class120.aClass120_1493.method2079(i, -1102857534), Class120.aClass120_1493.method2080(i, -1990546535), -1273057531));
+			is = (((Class426) this).aClass317_5106.getFile(Class120.aClass120_1493.method2079(i, -1102857534), Class120.aClass120_1493.method2080(i, -1990546535), -1273057531));
 		}
 		class425 = new ItemDefinitions();
 		((ItemDefinitions) class425).aClass426_5034 = this;
@@ -220,7 +220,7 @@ public class Class426 implements Interface20 {
 			return class425;
 		byte[] is;
 		synchronized (((Class426) this).aClass317_5106) {
-			is = (((Class426) this).aClass317_5106.method5607(Class120.aClass120_1493.method2079(i, -1135251178), Class120.aClass120_1493.method2080(i, -2073774449), -1396225442));
+			is = (((Class426) this).aClass317_5106.getFile(Class120.aClass120_1493.method2079(i, -1135251178), Class120.aClass120_1493.method2080(i, -2073774449), -1396225442));
 		}
 		class425 = new ItemDefinitions();
 		((ItemDefinitions) class425).aClass426_5034 = this;
@@ -288,7 +288,7 @@ public class Class426 implements Interface20 {
 			return class425;
 		byte[] is;
 		synchronized (((Class426) this).aClass317_5106) {
-			is = (((Class426) this).aClass317_5106.method5607(Class120.aClass120_1493.method2079(i, -301653827), Class120.aClass120_1493.method2080(i, -2123977413), -1682751769));
+			is = (((Class426) this).aClass317_5106.getFile(Class120.aClass120_1493.method2079(i, -301653827), Class120.aClass120_1493.method2080(i, -2123977413), -1682751769));
 		}
 		class425 = new ItemDefinitions();
 		((ItemDefinitions) class425).aClass426_5034 = this;

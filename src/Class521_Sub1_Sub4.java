@@ -117,8 +117,8 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(815041790)));
 	}
 
-	static final void method14892(Class118 class118, Class98 class98, Class527 class527, byte i) {
-		class118.anInt1377 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * -1802729151);
+	static final void method14892(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+		class118.anInt1377 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1802729151);
 		Class109.method1858(class118, (byte) -21);
 	}
 }

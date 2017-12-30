@@ -109,20 +109,20 @@ public class ItemEffects {
 		}
 	}
 
-	static final void method7043(Class527 class527, int i) {
+	static final void method7043(CS2Executor class527, int i) {
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(1468656099);
 		if (null != class282_sub50_sub6) {
 			boolean bool = (class282_sub50_sub6.method14775(Class291.anInt3472 + Class427.anInt5123 * -861975801, Class291.anInt3473 + Class475.anInt5624 * 483850921, Class517.anIntArray5900, -1687346032));
 			if (bool) {
-				((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[1];
-				((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[2];
+				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[1];
+				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[2];
 			} else {
-				((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
-				((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
 			}
 		} else {
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		}
 	}
 }

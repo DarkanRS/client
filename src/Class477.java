@@ -237,14 +237,14 @@ public class Class477 implements Iterable {
 		Class395.anInt4788 = class317.method5610("b12_full", 776026920) * 2033224767;
 	}
 
-	static final void method7961(Class527 class527, int i) {
-		int i_8_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method7961(CS2Executor class527, int i) {
+		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_8_, (byte) 26);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class204.method3366(class118, class98, class527, (byte) -87);
 	}
 
-	static final void method7962(Class527 class527, byte i) {
+	static final void method7962(CS2Executor class527, byte i) {
 		if (client.aBool7310) {
 			if (i != -1) {
 				for (;;) {

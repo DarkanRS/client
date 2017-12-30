@@ -625,9 +625,9 @@ public class Class117 {
 		}
 	}
 
-	static final void method1979(Class527 class527, int i) {
-		int i_97_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.anObjectArray7019[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (class527.aClass282_Sub4_7011.aClass57Array7499[i_97_].aString524);
+	static final void method1979(CS2Executor class527, int i) {
+		int i_97_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (class527.aClass282_Sub4_7011.aClass57Array7499[i_97_].aString524);
 	}
 
 	public static int method1980(int i, int i_98_, boolean bool, int i_99_) {

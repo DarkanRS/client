@@ -130,16 +130,16 @@ public class Class191 implements Runnable {
 		return ((Class191) this).aBool2386;
 	}
 
-	static final void method3163(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method3163(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class8.method403(class118, class98, class527, 1299404618);
 	}
 
-	static final void method3164(Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aClass10Array7456[i_0_].aBool117 ? 1 : 0;
+	static final void method3164(CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aClass10Array7456[i_0_].aBool117 ? 1 : 0;
 	}
 
 	public static Class522[] method3165(int i) {
@@ -206,11 +206,11 @@ public class Class191 implements Runnable {
 		Class340.method6070(i, i_1_, string, string_2_, string_3_, string_4_, null, -1, 30927485);
 	}
 
-	static final void method3168(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method3168(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class118 class118_6_ = Class96_Sub23.method14682(class98, class118, -838454718);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.anInt1287 * -1952846363;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.anInt1287 * -1952846363;
 	}
 }

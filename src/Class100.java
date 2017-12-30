@@ -94,26 +94,26 @@ public class Class100 {
 		return null;
 	}
 
-	static final void method1641(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
-		int i_8_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1641(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class404.method6809(string, i_8_, 1250092294);
 	}
 
-	static final void method1642(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method1642(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1421907667) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1400 = Class351.method6193(string, class527, 1475160400);
 		class118.aBool1384 = true;
 	}
 
-	static final void method1643(Class527 class527, short i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		client.aShort7436 = (short) (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+	static final void method1643(CS2Executor class527, short i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		client.aShort7436 = (short) (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		if (client.aShort7436 <= 0)
 			client.aShort7436 = (short) 256;
-		client.aShort7437 = (short) (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
+		client.aShort7437 = (short) (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
 		if (client.aShort7437 <= 0)
 			client.aShort7437 = (short) 205;
 	}

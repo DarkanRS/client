@@ -368,21 +368,21 @@ public class Class286 implements Runnable {
 		}
 	}
 
-	static final void method5045(Class527 class527, int i) {
-		int i_21_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method5045(CS2Executor class527, int i) {
+		int i_21_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_21_, (byte) 61);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
 	}
 
-	static final void method5046(Class527 class527, byte i) {
+	static final void method5046(CS2Executor class527, byte i) {
 		if (null == Class149_Sub2.aClass461_9316)
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1977256787 * Class149_Sub2.aClass461_9316.anInt5541;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1977256787 * Class149_Sub2.aClass461_9316.anInt5541;
 	}
 
-	static final void method5047(Class527 class527, int i) {
-		int i_22_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method5047(CS2Executor class527, int i) {
+		int i_22_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub21_8222), i_22_, -1752837734);
 		client.aClass257_7353.method4547((byte) -44);
 		Class190.method3148((byte) 84);
@@ -421,11 +421,11 @@ public class Class286 implements Runnable {
 		return null;
 	}
 
-	static Class282_Sub50_Sub5 method5049(int i, int i_24_) {
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) Class506.aClass223_5857.method3758((long) i));
+	static CS2Script method5049(int i, int i_24_) {
+		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i));
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.method5607(i, 0, -1501459483);
+		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1501459483);
 		if (is == null || is.length <= 1)
 			return null;
 		try {

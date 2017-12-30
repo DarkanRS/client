@@ -568,8 +568,8 @@ public class Class518 {
 		return new Class317(Class492.aClass327_Sub1Array5777[i_93_], bool, i);
 	}
 
-	static final void method11147(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12609(-1561738474) ? 1 : 0;
+	static final void method11147(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12609(-1561738474) ? 1 : 0;
 	}
 
 	public static final void method11148(Class521_Sub1 class521_sub1, int i, int i_94_) {

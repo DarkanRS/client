@@ -97,8 +97,8 @@ public class Class81 {
 		anInt800 = 0;
 	}
 
-	static final void method1452(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method1452(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		Class16.method567(string, false, (byte) -20);
 	}
 

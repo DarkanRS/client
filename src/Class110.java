@@ -21,8 +21,8 @@ public class Class110 {
 		/* empty */
 	}
 
-	static final void method1860(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method1860(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (0 != -644057819 * client.rights || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
 			String string_0_ = string.toLowerCase();
 			int i_1_ = 0;
@@ -148,16 +148,16 @@ public class Class110 {
 		}
 	}
 
-	static final void method1861(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		Class455.aShortArray5452[(((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 * 1942118537)])] = (short) Class5.method294((((Class527) class527).anIntArray6999[(1 + 1942118537 * (((Class527) class527).anInt7012))]), (byte) -4);
+	static final void method1861(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		Class455.aShortArray5452[(((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 * 1942118537)])] = (short) Class5.method294((((CS2Executor) class527).intStack[(1 + 1942118537 * (((CS2Executor) class527).anInt7012))]), (byte) -4);
 		Class119.aClass426_1463.method7152(-2142762956);
 		Class119.aClass426_1463.method7151((byte) -24);
 		Class350_Sub1.aClass406_7757.method6831(-1083280039);
 		IncomingPacket.method6378(-1538407760);
 	}
 
-	static final void method1862(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12899(-386531740) ? 1 : 0;
+	static final void method1862(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12899(-386531740) ? 1 : 0;
 	}
 }

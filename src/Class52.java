@@ -193,26 +193,26 @@ public abstract class Class52 implements Interface2 {
 		return i_19_;
 	}
 
-	static final void method1083(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method1083(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1248172600) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1451 = Class351.method6193(string, class527, 537651905);
 		class118.aBool1384 = true;
 	}
 
-	static final void method1084(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method1084(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class346.method6158(class118, class98, class527, -1064421);
 	}
 
-	static final void method1085(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_23_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_24_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
-		((Class527) class527).aClass346_7009.anIntArray4046[i_23_] = i_24_;
+	static final void method1085(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_23_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_24_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		((CS2Executor) class527).aClass346_7009.anIntArray4046[i_23_] = i_24_;
 	}
 
 	static void method1086(int i, int i_25_, int i_26_, boolean bool, int i_27_, boolean bool_28_, byte i_29_) {
@@ -237,7 +237,7 @@ public abstract class Class52 implements Interface2 {
 	}
 
 	static Class282_Sub50_Sub6 method1087(Class317 class317, int i, int i_34_, int i_35_) {
-		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.method5607(i, i_34_, -1701555254));
+		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_34_, -1701555254));
 		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_34_, class282_sub35.readString(-392505636), class282_sub35.readString(846172936), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_36_ = class282_sub35.readUnsignedByte();
 		for (int i_37_ = 0; i_37_ < i_36_; i_37_++)

@@ -50,10 +50,10 @@ public class Class96_Sub18 extends Class96 {
 		return class518.method11132(1964744017);
 	}
 
-	static final void method14664(Class118 class118, Class98 class98, boolean bool, int i, Class527 class527, byte i_0_) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_1_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_2_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+	static final void method14664(Class118 class118, Class98 class98, boolean bool, int i, CS2Executor class527, byte i_0_) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_1_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_2_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999) {
 			Class411.method6914(class118.anInt1287 * -1952846363, (short) 887);
 			Class106.method1818(class118.anInt1287 * -1952846363, 209948825);

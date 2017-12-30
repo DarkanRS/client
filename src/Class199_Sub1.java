@@ -457,12 +457,12 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		return i_18_;
 	}
 
-	static final void method13399(Class527 class527, int i) {
-		int i_19_ = (((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709]);
+	static final void method13399(CS2Executor class527, int i) {
+		int i_19_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
 		Class537 class537 = Class497.aClass233_5822.method3933(i_19_, 1715918723);
 		if (null == class537)
 			throw new RuntimeException();
-		Integer integer = (((Class527) class527).aClass61_7010.method1199(client.aClass486_7450.anInt5746 * 1648080491 << 16 | i_19_, 1287514720));
+		Integer integer = (((CS2Executor) class527).aClass61_7010.method1199(client.aClass486_7450.anInt5746 * 1648080491 << 16 | i_19_, 1287514720));
 		int i_20_;
 		if (integer == null) {
 			if (class537.aChar7096 == 'i' || class537.aChar7096 == '1')
@@ -471,6 +471,6 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 				i_20_ = -1;
 		} else
 			i_20_ = integer.intValue();
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_20_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_20_;
 	}
 }

@@ -76,8 +76,8 @@ final class Class79 implements Interface42 {
 		}
 	}
 
-	static final void method1391(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -861975801 * Class427.anInt5123 + Class291.anInt3472;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 483850921 * Class475.anInt5624 + Class291.anInt3473;
+	static final void method1391(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -861975801 * Class427.anInt5123 + Class291.anInt3472;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 483850921 * Class475.anInt5624 + Class291.anInt3473;
 	}
 }

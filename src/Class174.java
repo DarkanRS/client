@@ -261,9 +261,9 @@ public class Class174 {
 		}
 	}
 
-	static void method2953(Class527 class527, byte i) {
-		Class240 class240 = Class409.aClass242_4922.method4156((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
+	static void method2953(CS2Executor class527, byte i) {
+		Class240 class240 = Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
 	}
 
 	static boolean method2954(int i) {
@@ -301,8 +301,8 @@ public class Class174 {
 		return bool;
 	}
 
-	static final void method2955(Class118 class118, Class98 class98, Class527 class527, byte i) {
-		class118.anInt1309 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * -511891533);
+	static final void method2955(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+		class118.anInt1309 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -511891533);
 	}
 
 	static final void method2956(int i, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, int i_51_) {
@@ -322,7 +322,7 @@ public class Class174 {
 		}
 	}
 
-	static final void method2957(Class522 class522, Class527 class527, int i) {
+	static final void method2957(Class522 class522, CS2Executor class527, int i) {
 		switch (-2026890351 * class522.anInt6952) {
 		case 634:
 			Class6.method300(class527, (byte) -25);
@@ -2481,7 +2481,7 @@ public class Class174 {
 			Class530.method11350(class527, -1280205893);
 			break;
 		case 368:
-			Class527.method11252(class527, 608961500);
+			CS2Executor.method11252(class527, 608961500);
 			break;
 		case 410:
 			Class223.method3768(class527, 36575498);

@@ -73,8 +73,8 @@ public class Class468_Sub25 extends Class468 {
 		return -859024475 * anInt5578;
 	}
 
-	static final void method12933(Class527 class527, short i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method12933(CS2Executor class527, short i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_2_ >= 1 && i_2_ <= 2)
 			Class440.method7373(i_2_, -1, -1, false, (byte) 57);
 	}

@@ -224,15 +224,15 @@ public class OutgoingPacket {
 		aClass379_4610 = new OutgoingPacket(103, 3);
 	}
 
-	static final void method6439(Class527 class527, int i) {
+	static final void method6439(CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
-		int i_1_ = (class527.anIntArray6999[1942118537 * class527.anInt7012]);
-		int i_2_ = (class527.anIntArray6999[1 + 1942118537 * class527.anInt7012]);
+		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_2_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		int i_3_ = (Class368.aClass429_4265.method7214(i_1_, -1579462583).method14918(i_2_, -1799645652).anInt2997 * -1869685303);
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_3_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_3_;
 	}
 
-	static final void method6440(Class527 class527, int i) {
+	static final void method6440(CS2Executor class527, int i) {
 		String string = "";
 		if (Class182.aClipboard2263 != null) {
 			Transferable transferable = Class182.aClipboard2263.getContents(null);
@@ -247,6 +247,6 @@ public class OutgoingPacket {
 				}
 			}
 		}
-		class527.anObjectArray7019[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 }

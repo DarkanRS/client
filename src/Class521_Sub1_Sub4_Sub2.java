@@ -411,10 +411,10 @@ public class Class521_Sub1_Sub4_Sub2 extends Class521_Sub1_Sub4 implements Inter
 		}
 	}
 
-	static final void method16089(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		Class282_Sub50_Sub18 class282_sub50_sub18 = Class96_Sub10.aClass392_9298.method6735((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012) * 1942118537)]), (short) 24055);
-		int i_38_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
+	static final void method16089(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		Class282_Sub50_Sub18 class282_sub50_sub18 = Class96_Sub10.aClass392_9298.method6735((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012) * 1942118537)]), (short) 24055);
+		int i_38_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_39_ = -1;
 		for (int i_40_ = 0; i_40_ < -1471207409 * class282_sub50_sub18.anInt10276; i_40_++) {
 			if (i_38_ == class282_sub50_sub18.anIntArray10274[i_40_]) {
@@ -422,6 +422,6 @@ public class Class521_Sub1_Sub4_Sub2 extends Class521_Sub1_Sub4 implements Inter
 				break;
 			}
 		}
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_39_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_39_;
 	}
 }

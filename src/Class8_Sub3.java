@@ -895,17 +895,17 @@ public class Class8_Sub3 extends Class8 {
 		return (new Class249[] { Class249.aClass249_3082, Class249.aClass249_3084, Class249.aClass249_3086, Class249.aClass249_3083 });
 	}
 
-	static final void method14340(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method14340(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i <= 0)
 				return;
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_342_ = class513;
-		Class118 class118 = ((Class513) class513_342_).aClass118_5886;
-		Class98 class98 = ((Class513) class513_342_).aClass98_5885;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_342_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_342_).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513_342_).aClass98_5885;
 		Class96_Sub17.method14653(class118, class98, class527, -1985356850);
 	}
 
@@ -915,8 +915,8 @@ public class Class8_Sub3 extends Class8 {
 		Class282_Sub50_Sub12.aClass477_9666.method7935((byte) -9);
 	}
 
-	static final void method14342(Class527 class527, byte i) {
-		int i_343_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method14342(CS2Executor class527, byte i) {
+		int i_343_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_343_, (byte) 90);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_343_ >> 16];
 		Class29.method789(class118, class98, class527, -19478635);

@@ -91,14 +91,14 @@ public class Class149_Sub4 extends Class149 {
 		return new Class149_Sub4(class282_sub35.readShort(1764154776), class282_sub35.readShort(1648192049), class282_sub35.readShort(1698991931), class282_sub35.readShort(2085932950), class282_sub35.read24BitUnsignedInteger((short) 9314), class282_sub35.read24BitUnsignedInteger((short) 3899), class282_sub35.readUnsignedByte());
 	}
 
-	static final void method14659(Class527 class527, byte i) {
-		int i_49_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method14659(CS2Executor class527, byte i) {
+		int i_49_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_49_, (byte) 45);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -37350919 * class118.anInt1314;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -37350919 * class118.anInt1314;
 	}
 
-	static final void method14660(Class527 class527, int i) {
-		int i_50_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method14660(CS2Executor class527, int i) {
+		int i_50_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_50_, (byte) 122);
 		Class88.method1494(class118, class527, (byte) -43);
 	}

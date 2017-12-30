@@ -23,15 +23,15 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 		((Class96_Sub10_Sub1) this).anInt10156 = class282_sub35.readUnsignedShort() * 1239800151;
 	}
 
-	static final void method15552(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method15552(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, false, 1, class527, (byte) 24);
 	}
 
-	static final void method15553(boolean bool, Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method15553(boolean bool, CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_0_, (byte) 11);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		if (bool)
@@ -45,9 +45,9 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 		Class282_Sub50_Sub13.aClass317_9685 = class317_1_;
 	}
 
-	static final void method15555(Class527 class527, byte i) {
-		int[] is = ((Class527) class527).anIntArray6999;
-		int i_3_ = (((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1;
+	static final void method15555(CS2Executor class527, byte i) {
+		int[] is = ((CS2Executor) class527).intStack;
+		int i_3_ = (((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1;
 		int i_4_;
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 38) == 1) {
 			if (i == 1)

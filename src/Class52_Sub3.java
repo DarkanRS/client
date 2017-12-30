@@ -62,15 +62,15 @@ public class Class52_Sub3 extends Class52 {
 		}
 	}
 
-	static final void method14520(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 567564004;
-		Class153.method2618((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]), (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]), (((Class527) class527).anIntArray6999[2 + ((Class527) class527).anInt7012 * 1942118537]), (((Class527) class527).anIntArray6999[3 + 1942118537 * ((Class527) class527).anInt7012]), 256, 1476817598);
+	static final void method14520(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 567564004;
+		Class153.method2618((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]), (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[3 + 1942118537 * ((CS2Executor) class527).anInt7012]), 256, 1476817598);
 	}
 
-	static final void method14521(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method14521(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class240.method4136(class118, class98, class527, (byte) 55);
 	}
 

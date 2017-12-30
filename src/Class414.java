@@ -909,7 +909,7 @@ public class Class414 {
 	}
 
 	public static Class414 method6963(Class317 class317, int i, int i_138_) {
-		byte[] is = class317.method5607(i, i_138_, -2022363698);
+		byte[] is = class317.getFile(i, i_138_, -2022363698);
 		if (is == null)
 			return null;
 		return new Class414(is);

@@ -1115,14 +1115,14 @@ public class Class197 {
 		}
 	}
 
-	static final void method3200(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8227, (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]), 62408516);
+	static final void method3200(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8227, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), 62408516);
 		Class190.method3148((byte) 24);
 		client.aBool7175 = false;
 	}
 
-	static final void method3201(Class527 class527, int i) {
-		int i_203_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method3201(CS2Executor class527, int i) {
+		int i_203_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_203_, (byte) 71);
 		Class282_Sub20_Sub4.method15207(class118, class527, 1765364986);
 	}

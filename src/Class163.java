@@ -67,9 +67,9 @@ public class Class163 {
 		return class414.method6947(string, Class115.aClass160Array1248, 1478525027);
 	}
 
-	static void method2841(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 - 2] = (Class409.aClass242_4922.method4156((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 - 1])][1]);
-		((Class527) class527).anInt7012 -= 141891001;
+	static void method2841(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])][1]);
+		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 
 	public static TilestreamPacket[] method2842(int i) {

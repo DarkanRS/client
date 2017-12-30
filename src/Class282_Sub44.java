@@ -27,7 +27,7 @@ public class Class282_Sub44 extends Class282 {
 		return true;
 	}
 
-	static final void method13404(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(-1211117361);
+	static final void method13404(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(-1211117361);
 	}
 }

@@ -27,7 +27,7 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.method5607(-71319279 * Class120.aClass120_1509.anInt1521, i, -1498386951));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * Class120.aClass120_1509.anInt1521, i, -1498386951));
 		}
 		class228 = new Class228();
 		((Class228) class228).aClass210_2850 = this;
@@ -75,7 +75,7 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.method5607(-71319279 * Class120.aClass120_1509.anInt1521, i, -1498305941));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * Class120.aClass120_1509.anInt1521, i, -1498305941));
 		}
 		class228 = new Class228();
 		((Class228) class228).aClass210_2850 = this;
@@ -120,8 +120,8 @@ public class Class210 {
 		}
 	}
 
-	static final void method3611(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]), -163458202);
+	static final void method3611(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), -163458202);
 		client.aClass257_7353.method4547((byte) -4);
 		Class190.method3148((byte) 43);
 		client.aBool7175 = false;
@@ -148,13 +148,13 @@ public class Class210 {
 		}
 	}
 
-	static final void method3613(Class527 class527, int i) {
+	static final void method3613(CS2Executor class527, int i) {
 		if (Class475.aBool5623 && Class263.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(551500203), -1, -1, false, (byte) 52);
 	}
 
 	public static void method3614(Class397 class397, int i, int i_9_, byte i_10_) {
-		Class527 class527 = Class125.method2167(-547790370);
+		CS2Executor class527 = Class125.method2167(-547790370);
 		Class107.method1834(class397, i, i_9_, class527, (byte) 7);
 	}
 }

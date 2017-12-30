@@ -7,7 +7,7 @@ public class Class282_Sub7 extends Class282 {
 	byte[] aByteArray7522;
 
 	static Class282_Sub7 method12164(Class317 class317, int i, int i_0_) {
-		byte[] is = class317.method5607(i, i_0_, -1604623759);
+		byte[] is = class317.getFile(i, i_0_, -1604623759);
 		if (is == null)
 			return null;
 		return new Class282_Sub7(new RsByteBuffer(is));
@@ -346,7 +346,7 @@ public class Class282_Sub7 extends Class282 {
 	}
 
 	static Class282_Sub7 method12166(Class317 class317, int i, int i_84_) {
-		byte[] is = class317.method5607(i, i_84_, -1341469097);
+		byte[] is = class317.getFile(i, i_84_, -1341469097);
 		if (is == null)
 			return null;
 		return new Class282_Sub7(new RsByteBuffer(is));
@@ -557,7 +557,7 @@ public class Class282_Sub7 extends Class282 {
 	}
 
 	static Class282_Sub7 method12173(Class317 class317, int i, int i_133_) {
-		byte[] is = class317.method5607(i, i_133_, -1972665688);
+		byte[] is = class317.getFile(i, i_133_, -1972665688);
 		if (is == null)
 			return null;
 		return new Class282_Sub7(new RsByteBuffer(is));

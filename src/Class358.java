@@ -101,26 +101,26 @@ public class Class358 {
 		}
 	}
 
-	static final void method6236(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 682349813 * class118.anInt1336;
+	static final void method6236(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 682349813 * class118.anInt1336;
 	}
 
-	static final void method6237(Class527 class527, int i) {
-		int i_3_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6237(CS2Executor class527, int i) {
+		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class108 class108 = Class180.method3032(i_3_, (byte) -1);
 		String string = "";
 		if (class108 != null && null != class108.aString1087)
 			string = class108.aString1087;
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
-	static final void method6238(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7465 ? 1 : 0;
+	static final void method6238(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7465 ? 1 : 0;
 	}
 
-	static final void method6239(Class527 class527, int i) {
+	static final void method6239(CS2Executor class527, int i) {
 		Class282_Sub20_Sub25.method15393(true, 1862489719);
 		client.aClass257_7353.method4547((byte) -87);
 		Class190.method3148((byte) 74);

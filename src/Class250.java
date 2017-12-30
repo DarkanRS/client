@@ -172,8 +172,8 @@ public class Class250 {
 		throw new RuntimeException();
 	}
 
-	static final void method4295(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1900875655 * ((Class527) class527).aClass61_7010.anInt636;
+	static final void method4295(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1900875655 * ((CS2Executor) class527).aClass61_7010.anInt636;
 	}
 
 	public static void method4296(int i) {
@@ -766,9 +766,9 @@ public class Class250 {
 		}
 	}
 
-	static final void method4299(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		if ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) == (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]))
-			((Class527) class527).anInt7020 += (-1051529003 * (((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709]));
+	static final void method4299(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		if ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) == (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]))
+			((CS2Executor) class527).anInt7020 += (-1051529003 * (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]));
 	}
 }

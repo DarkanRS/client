@@ -122,8 +122,8 @@ public class Class30 implements Runnable {
 		Class51.method1074(is, objects, 0, is.length - 1, -990491051);
 	}
 
-	static final void method797(Class118 class118, Class98 class98, Class527 class527, int i) {
-		int i_4_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method797(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_4_ != class118.anInt1321 * 1241177935) {
 			if (i_4_ != -1) {
 				if (null == class118.aClass456_1437)
@@ -138,7 +138,7 @@ public class Class30 implements Runnable {
 			Class149_Sub1.method14582(-1952846363 * class118.anInt1287, -370064085);
 	}
 
-	static final void method798(Class527 class527, int i) {
-		Class337.method6018((((Class527) class527).aClass521_Sub1_Sub2_Sub1_7014), class527, 1907071092);
+	static final void method798(CS2Executor class527, int i) {
+		Class337.method6018((((CS2Executor) class527).aClass521_Sub1_Sub2_Sub1_7014), class527, 1907071092);
 	}
 }

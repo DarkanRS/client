@@ -60,8 +60,8 @@ public class Class285 {
 		}
 	}
 
-	static final void method5024(Class527 class527, int i) {
-		int i_4_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method5024(CS2Executor class527, int i) {
+		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_4_, (byte) 82);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class96_Sub18.method14664(class118, class98, false, 2, class527, (byte) 56);
@@ -78,18 +78,18 @@ public class Class285 {
 		return Class356.method6225(charsequence, i, true, 2038427942);
 	}
 
-	static final void method5027(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		Class117.method1978((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]), (((Class527) class527).anIntArray6999[1 + (1942118537 * ((Class527) class527).anInt7012)]), 255, (byte) 1);
+	static final void method5027(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		Class117.method1978((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[1 + (1942118537 * ((CS2Executor) class527).anInt7012)]), 255, (byte) 1);
 	}
 
 	public static int method5028(byte[] is, int i, short i_6_) {
 		return Class455.method7559(is, 0, i, -788702725);
 	}
 
-	static final void method5029(Class527 class527, short i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
+	static final void method5029(CS2Executor class527, short i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class282_Sub20_Sub4.method15207(class118, class527, -304097122);
 	}
 }

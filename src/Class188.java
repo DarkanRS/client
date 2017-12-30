@@ -511,8 +511,8 @@ public class Class188 {
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub5_8221), 2, -2133012932);
 	}
 
-	static final void method3138(Class527 class527, int i) {
-		((Class527) class527).anIntArray6995[(((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020])] = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3138(CS2Executor class527, int i) {
+		((CS2Executor) class527).anIntArray6995[(((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020])] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 	}
 
 	public static void method3139(Class505 class505, Class317 class317, int i) {

@@ -137,19 +137,19 @@ public class Class43 implements Interface2 {
 		return ((Class43) this).aClass317_419.method5661(((((Class43) this).aClass351_418.anInt4095) * -985960003), 85333751);
 	}
 
-	static final void method893(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method893(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		RsByteBuffer.method13292(class118, class98, class527, (byte) 60);
 	}
 
-	static final void method894(Class527 class527, int i) {
-		int i_29_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method894(CS2Executor class527, int i) {
+		int i_29_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class108 class108 = Class180.method3032(i_29_, (byte) -1);
 		int i_30_ = -1;
 		if (null != class108)
 			i_30_ = -2005145885 * class108.anInt1084;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_30_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_30_;
 	}
 }

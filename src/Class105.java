@@ -14,12 +14,12 @@ public class Class105 {
 		((Class105) this).aString1068 = string_1_;
 	}
 
-	static final void method1802(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class527) class527).aClass61_7010.anInt632 * 1869493667;
+	static final void method1802(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass61_7010.anInt632 * 1869493667;
 	}
 
-	static final void method1803(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) != 0) ? 1 : 0, -564300666);
+	static final void method1803(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) != 0) ? 1 : 0, -564300666);
 		Class190.method3148((byte) 98);
 		client.aClass257_7353.method4547((byte) -119);
 	}

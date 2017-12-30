@@ -617,11 +617,11 @@ public abstract class Class101 {
 			Class9.loginStage = -1229304549;
 	}
 
-	static final void method1775(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method1775(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (string.startsWith(Class76.method1358(0, (byte) 0)) || string.startsWith(Class76.method1358(1, (byte) 0)))
 			string = string.substring(7);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class230.method3910(string, -555098945);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class230.method3910(string, -555098945);
 	}
 
 	public static int method1776(int i, boolean bool, int i_79_) {
@@ -639,8 +639,8 @@ public abstract class Class101 {
 		return i_80_;
 	}
 
-	static final void method1777(Class527 class527, int i) {
-		int i_82_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1777(CS2Executor class527, int i) {
+		int i_82_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_82_, (byte) 29);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_82_ >> 16];
 		Class282_Sub17_Sub4.method15409(class118, class98, class527, -1219012115);

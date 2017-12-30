@@ -1041,8 +1041,8 @@ public class Class282_Sub48 extends Class282 {
 		}
 	}
 
-	static final void method13446(Class527 class527, int i) {
-		int i_65_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_65_ ^ 0xffffffff;
+	static final void method13446(CS2Executor class527, int i) {
+		int i_65_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_65_ ^ 0xffffffff;
 	}
 }

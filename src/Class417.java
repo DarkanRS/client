@@ -38,7 +38,7 @@ public class Class417 {
 		Class347 class347 = (Class347) Class347.aClass229_4052.method3865((long) i);
 		if (null != class347)
 			return class347;
-		byte[] is = Class347.aClass317_4053.method5607(0, i, -2049012023);
+		byte[] is = Class347.aClass317_4053.getFile(0, i, -2049012023);
 		class347 = new Class347();
 		if (null != is)
 			class347.method6163(new RsByteBuffer(is), i, (short) 257);
@@ -46,16 +46,16 @@ public class Class417 {
 		return class347;
 	}
 
-	static final void method7006(Class527 class527, int i) {
-		int i_3_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method7006(CS2Executor class527, int i) {
+		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (null == Class468_Sub8.aClass98Array7889[i_3_])
-			((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else {
 			String string = (Class468_Sub8.aClass98Array7889[i_3_].aClass118Array998[0].aString1285);
 			if (string == null)
-				((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
+				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
 			else
-				((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141) - 1] = string.substring(0, string.indexOf(':'));
+				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = string.substring(0, string.indexOf(':'));
 		}
 	}
 }

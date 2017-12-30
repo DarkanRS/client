@@ -91,12 +91,12 @@ public class Class256 {
 		}
 	}
 
-	static final void method4413(Class527 class527, int i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method4413(CS2Executor class527, int i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (!Class316.aClass505_3680.method8403())
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 3;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 3;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method7785(i_2_, -550763763);
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method7785(i_2_, -550763763);
 	}
 
 	public static Class268 method4414(int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, int i_7_, byte i_8_) {
@@ -131,7 +131,7 @@ public class Class256 {
 		Class187.anInt2359 = 818291313;
 	}
 
-	static final void method4417(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt103 * 327149175;
+	static final void method4417(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt103 * 327149175;
 	}
 }

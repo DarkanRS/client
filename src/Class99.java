@@ -57,17 +57,17 @@ public class Class99 {
 		class8.method386(string, 3 + i_8_, i_12_, i_13_, 0, client.aRandom7260, -242333475 * PacketsDecoder.anInt9079, Class115.aClass160Array1248, Class20.anIntArray177, 701039409);
 	}
 
-	static final void method1631(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method1631(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i != 1)
 				return;
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_16_ = class513;
-		Class118 class118 = ((Class513) class513_16_).aClass118_5886;
-		Class98 class98 = ((Class513) class513_16_).aClass98_5885;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_16_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_16_).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513_16_).aClass98_5885;
 		Class96_Sub9.method14586(class118, class98, class527, 909686877);
 	}
 }

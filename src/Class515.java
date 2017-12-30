@@ -30,7 +30,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.method5607(Class120.aClass120_1476.method2079(i, 1680181373), Class120.aClass120_1476.method2080(i, -1956342306), -2016707377));
+			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 1680181373), Class120.aClass120_1476.method2080(i, -1956342306), -2016707377));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -86,7 +86,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.method5607(Class120.aClass120_1476.method2079(i, 1920394682), Class120.aClass120_1476.method2080(i, -1985592077), -1473089875));
+			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 1920394682), Class120.aClass120_1476.method2080(i, -1985592077), -1473089875));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -108,7 +108,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.method5607(Class120.aClass120_1476.method2079(i, 812185949), Class120.aClass120_1476.method2080(i, -1835326623), -1380117977));
+			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 812185949), Class120.aClass120_1476.method2080(i, -1835326623), -1380117977));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -130,7 +130,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.method5607(Class120.aClass120_1476.method2079(i, 261335376), Class120.aClass120_1476.method2080(i, -2058400457), -1305945625));
+			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 261335376), Class120.aClass120_1476.method2080(i, -2058400457), -1305945625));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -195,16 +195,16 @@ public class Class515 {
 		return null;
 	}
 
-	static final void method8859(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method8859(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i == 1)
 				return;
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_5_ = class513;
-		Class118 class118 = ((Class513) class513_5_).aClass118_5886;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_5_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_5_).aClass118_5886;
 		Class235.method3965(class118, class527, -757819357);
 	}
 
@@ -283,9 +283,9 @@ public class Class515 {
 		Class291_Sub1.method5128(i);
 	}
 
-	static final void method8863(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1299 * 597157617;
+	static final void method8863(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1299 * 597157617;
 	}
 }

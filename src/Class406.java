@@ -44,7 +44,7 @@ public class Class406 {
 			return class409;
 		byte[] is;
 		synchronized (((Class406) this).aClass317_4839) {
-			is = (((Class406) this).aClass317_4839.method5607(Class120.aClass120_1467.method2079(i, -391005566), Class120.aClass120_1467.method2080(i, -2083039735), -1310077438));
+			is = (((Class406) this).aClass317_4839.getFile(Class120.aClass120_1467.method2079(i, -391005566), Class120.aClass120_1467.method2080(i, -2083039735), -1310077438));
 		}
 		class409 = new Class409();
 		class409.anInt4856 = i * -1165155817;
@@ -118,7 +118,7 @@ public class Class406 {
 			return class409;
 		byte[] is;
 		synchronized (((Class406) this).aClass317_4839) {
-			is = (((Class406) this).aClass317_4839.method5607(Class120.aClass120_1467.method2079(i, 123668197), Class120.aClass120_1467.method2080(i, -1898923068), -1845264085));
+			is = (((Class406) this).aClass317_4839.getFile(Class120.aClass120_1467.method2079(i, 123668197), Class120.aClass120_1467.method2080(i, -1898923068), -1845264085));
 		}
 		class409 = new Class409();
 		class409.anInt4856 = i * -1165155817;
@@ -142,7 +142,7 @@ public class Class406 {
 			return class409;
 		byte[] is;
 		synchronized (((Class406) this).aClass317_4839) {
-			is = (((Class406) this).aClass317_4839.method5607(Class120.aClass120_1467.method2079(i, 1099243946), Class120.aClass120_1467.method2080(i, -1970709943), -1827585715));
+			is = (((Class406) this).aClass317_4839.getFile(Class120.aClass120_1467.method2079(i, 1099243946), Class120.aClass120_1467.method2080(i, -1970709943), -1827585715));
 		}
 		class409 = new Class409();
 		class409.anInt4856 = i * -1165155817;
@@ -321,8 +321,8 @@ public class Class406 {
 		}
 	}
 
-	static final void method6851(Class527 class527, int i) {
-		int i_4_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6851(CS2Executor class527, int i) {
+		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_4_, (byte) 27);
 		Class96_Sub10.method14605(class118, class527, (byte) -34);
 	}

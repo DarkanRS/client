@@ -15,14 +15,14 @@ public class Class275_Sub6 extends Class275 {
 		/* empty */
 	}
 
-	static final void method12596(Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method7785(i_0_, -2053641335);
+	static final void method12596(CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method7785(i_0_, -2053641335);
 	}
 
-	static final void method12597(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (client.aLong7153 * -8972807970865466165L >> 32);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (-8972807970865466165L * client.aLong7153 & 0xffffffffffffffffL);
+	static final void method12597(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (client.aLong7153 * -8972807970865466165L >> 32);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (-8972807970865466165L * client.aLong7153 & 0xffffffffffffffffL);
 	}
 
 	static Class472[] method12598(int i) {

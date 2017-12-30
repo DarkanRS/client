@@ -127,23 +127,23 @@ public class Class102 {
 		return anInt1039 * 1222314215;
 	}
 
-	static final void method1783(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_0_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_1_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
+	static final void method1783(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		if (i_1_ == -1)
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class296.aClass331_3535.method5918(i_0_, -559215225).method15212((char) i_1_, (byte) 13);
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class296.aClass331_3535.method5918(i_0_, -559215225).method15212((char) i_1_, (byte) 13);
 	}
 
-	static final void method1784(Class527 class527, byte i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class513 class513;
-		if (((Class527) class527).aBool7022)
-			class513 = ((Class527) class527).aClass513_6994;
+	static final void method1784(CS2Executor class527, byte i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022)
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		else
-			class513 = ((Class527) class527).aClass513_7007;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((((Class527) class527).aClass521_Sub1_Sub1_Sub2_7006.aClass98_10324), i_2_, -1, (byte) 1) ? 1 : 0;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((((CS2Executor) class527).animable.aClass98_10324), i_2_, -1, (byte) 1) ? 1 : 0;
 	}
 }

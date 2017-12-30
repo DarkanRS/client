@@ -455,8 +455,8 @@ public class Class533 {
 		}
 	}
 
-	static final void method11403(Class527 class527, short i) {
-		int i_107_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method11403(CS2Executor class527, short i) {
+		int i_107_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_107_, (byte) 25);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_107_ >> 16];
 		Class237.method3987(class118, class98, class527, -599656695);
@@ -480,14 +480,14 @@ public class Class533 {
 		}
 	}
 
-	static final void method11405(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		client.anInt7340 = 96844955 * (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		client.anInt7342 = ((((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]) * 1244871605);
+	static final void method11405(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		client.anInt7340 = 96844955 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		client.anInt7342 = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) * 1244871605);
 	}
 
-	static final void method11406(Class527 class527, int i) {
-		int i_112_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_112_, 1937289773).anInt5049 * 318481945) == 1 ? 1 : 0;
+	static final void method11406(CS2Executor class527, int i) {
+		int i_112_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_112_, 1937289773).anInt5049 * 318481945) == 1 ? 1 : 0;
 	}
 }

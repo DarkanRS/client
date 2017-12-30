@@ -1990,15 +1990,15 @@ public class Class118 {
 		}
 	}
 
-	static final void method2071(Class527 class527, int i) {
-		int i_147_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method2071(CS2Executor class527, int i) {
+		int i_147_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_147_, (byte) 54);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_147_ >> 16];
 		Class52.method1083(class118, class98, class527, -1250124563);
 	}
 
-	static final void method2072(Class527 class527, int i) {
-		int i_148_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method2072(CS2Executor class527, int i) {
+		int i_148_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4566, client.aClass184_7475.aClass432_2283, 1473230180);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i_148_, 1417031095);
 		client.aClass184_7475.method3049(class282_sub23, 1273734217);

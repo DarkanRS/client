@@ -207,14 +207,14 @@ public class Class340 implements Runnable {
 		client.anInt7391 = -1529209901 * client.anInt7347;
 	}
 
-	static final void method6071(Class527 class527, byte i) {
-		Class513 class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
+	static final void method6071(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = class513.aClass118_5886;
 		Class98 class98 = class513.aClass98_5885;
 		Class504.method8390(class118, class98, class527, 1964593641);
 	}
 
-	static final void method6072(Class527 class527, int i) {
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method12707(1260810349) && Class316.aClass505_3680.method8403()) ? 1 : 0;
+	static final void method6072(CS2Executor class527, int i) {
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method12707(1260810349) && Class316.aClass505_3680.method8403()) ? 1 : 0;
 	}
 }

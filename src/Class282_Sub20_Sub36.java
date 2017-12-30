@@ -140,8 +140,8 @@ public class Class282_Sub20_Sub36 extends Class282_Sub20 {
 		return is;
 	}
 
-	static final void method15417(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class6.method304(-1443843795);
+	static final void method15417(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class6.method304(-1443843795);
 	}
 
 	public static void method15418(int i) {

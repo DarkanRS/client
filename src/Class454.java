@@ -22,11 +22,11 @@ public class Class454 {
 		return System.nanoTime();
 	}
 
-	static final void method7551(Class527 class527, short i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Class169.method2869(2021999966) / 60000L);
+	static final void method7551(CS2Executor class527, short i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Class169.method2869(2021999966) / 60000L);
 	}
 
-	static final void method7552(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method12665(1126307117) ? 1 : 0;
+	static final void method7552(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub7_8210.method12665(1126307117) ? 1 : 0;
 	}
 }

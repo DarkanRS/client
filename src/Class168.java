@@ -22,14 +22,14 @@ public class Class168 {
 		aLong2049 = l * 4282835978211496069L;
 	}
 
-	static final void method2865(Class527 class527, int i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method2865(CS2Executor class527, int i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 45);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class529.method11337(class118, class98, class527, -1404316012);
 	}
 
-	static final void method2866(Class527 class527, byte i) {
+	static final void method2866(CS2Executor class527, byte i) {
 		if (Class475.aBool5623 && Class263.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-580037051), -1, -1, false, (byte) 116);
 		if (Class40.method867(-391014767) == Class279.aClass279_3368) {
@@ -39,14 +39,14 @@ public class Class168 {
 			Class480.method8043(-25732624);
 	}
 
-	static final void method2867(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class527) class527).aClass521_Sub1_Sub1_Sub2_7006.method12997(-218366287);
+	static final void method2867(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).animable.method12997(-218366287);
 	}
 
-	static final void method2868(Class527 class527, byte i) {
+	static final void method2868(CS2Executor class527, byte i) {
 		if (null == Class308.aShortArray3621 || (Class283.anInt3384 * 1750691703 >= 560339485 * Class415.anInt4985))
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = ((Class308.aShortArray3621[(Class283.anInt3384 += 220207687) * 1750691703 - 1]) & 0xffff);
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = ((Class308.aShortArray3621[(Class283.anInt3384 += 220207687) * 1750691703 - 1]) & 0xffff);
 	}
 }

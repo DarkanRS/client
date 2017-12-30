@@ -14,9 +14,9 @@ public class Class282_Sub45 extends Class282 {
 		return Class407.aCalendar4848.get(1);
 	}
 
-	static final void method13406(Class527 class527, int i) {
-		((Class527) class527).anInt7001 -= 1918006146;
-		if ((((Class527) class527).aLongArray7003[((Class527) class527).anInt7001 * 1820448321]) <= (((Class527) class527).aLongArray7003[1 + 1820448321 * ((Class527) class527).anInt7001]))
-			((Class527) class527).anInt7020 += (-1051529003 * (((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020]));
+	static final void method13406(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7001 -= 1918006146;
+		if ((((CS2Executor) class527).aLongArray7003[((CS2Executor) class527).anInt7001 * 1820448321]) <= (((CS2Executor) class527).aLongArray7003[1 + 1820448321 * ((CS2Executor) class527).anInt7001]))
+			((CS2Executor) class527).anInt7020 += (-1051529003 * (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]));
 	}
 }

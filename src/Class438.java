@@ -28,7 +28,7 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.method5607(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1235181846);
+			is = ((Class438) this).aClass317_5343.getFile(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1235181846);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
@@ -74,7 +74,7 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.method5607(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1766506937);
+			is = ((Class438) this).aClass317_5343.getFile(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1766506937);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
@@ -95,7 +95,7 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.method5607(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1914067254);
+			is = ((Class438) this).aClass317_5343.getFile(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1914067254);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
@@ -125,8 +125,8 @@ public class Class438 {
 		}
 	}
 
-	static final void method7332(Class527 class527, byte i) {
-		Class337.method6018(((Class521_Sub1) ((Class527) class527).anInterface12_7013), class527, 1876481461);
+	static final void method7332(CS2Executor class527, byte i) {
+		Class337.method6018(((Class521_Sub1) ((CS2Executor) class527).anInterface12_7013), class527, 1876481461);
 	}
 
 	public static final void method7333(boolean bool, int i) {
@@ -165,8 +165,8 @@ public class Class438 {
 		}
 	}
 
-	static final void method7334(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
+	static final void method7334(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
 	}
 
 	static void method7335(int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, boolean bool, int i_17_) {

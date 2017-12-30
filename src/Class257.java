@@ -889,7 +889,7 @@ public class Class257 {
 		this.anInt3189 = 0;
 		for (int i_124_ = 0; i_124_ < this.aByteArrayArray3200.length; i_124_++) {
 			if (-1 != this.mapDataArchiveIds[i_124_] && null == this.aByteArrayArray3200[i_124_]) {
-				this.aByteArrayArray3200[i_124_] = Class149.aClass317_1745.method5607((this.mapDataArchiveIds[i_124_]), 0, -1737111035);
+				this.aByteArrayArray3200[i_124_] = Class149.aClass317_1745.getFile((this.mapDataArchiveIds[i_124_]), 0, -1737111035);
 				if (null == this.aByteArrayArray3200[i_124_]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -901,13 +901,13 @@ public class Class257 {
 				}
 			}
 			if (this.anIntArray3197[i_124_] != -1 && this.aByteArrayArray3178[i_124_] == null) {
-				this.aByteArrayArray3178[i_124_] = Class149.aClass317_1745.method5607((this.anIntArray3197[i_124_]), 0, -1629073645);
+				this.aByteArrayArray3178[i_124_] = Class149.aClass317_1745.getFile((this.anIntArray3197[i_124_]), 0, -1629073645);
 				if (null == this.aByteArrayArray3178[i_124_]) {
 					this.anInt3189 += -1145558933;
 				}
 			}
 			if (-1 != this.anIntArray3198[i_124_] && this.aByteArrayArray3193[i_124_] == null) {
-				this.aByteArrayArray3193[i_124_] = Class149.aClass317_1745.method5607((this.anIntArray3198[i_124_]), 0, -1660643984);
+				this.aByteArrayArray3193[i_124_] = Class149.aClass317_1745.getFile((this.anIntArray3198[i_124_]), 0, -1660643984);
 				if (null == this.aByteArrayArray3193[i_124_]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -1680,7 +1680,7 @@ public class Class257 {
 		this.anInt3189 = 0;
 		for (int i = 0; i < this.aByteArrayArray3200.length; i++) {
 			if (-1 != this.mapDataArchiveIds[i] && null == this.aByteArrayArray3200[i]) {
-				this.aByteArrayArray3200[i] = Class149.aClass317_1745.method5607((this.mapDataArchiveIds[i]), 0, -1921523326);
+				this.aByteArrayArray3200[i] = Class149.aClass317_1745.getFile((this.mapDataArchiveIds[i]), 0, -1921523326);
 				if (null == this.aByteArrayArray3200[i]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -1692,13 +1692,13 @@ public class Class257 {
 				}
 			}
 			if (this.anIntArray3197[i] != -1 && this.aByteArrayArray3178[i] == null) {
-				this.aByteArrayArray3178[i] = Class149.aClass317_1745.method5607((this.anIntArray3197[i]), 0, -1406584223);
+				this.aByteArrayArray3178[i] = Class149.aClass317_1745.getFile((this.anIntArray3197[i]), 0, -1406584223);
 				if (null == this.aByteArrayArray3178[i]) {
 					this.anInt3189 += -1145558933;
 				}
 			}
 			if (-1 != this.anIntArray3198[i] && this.aByteArrayArray3193[i] == null) {
-				this.aByteArrayArray3193[i] = Class149.aClass317_1745.method5607((this.anIntArray3198[i]), 0, -1648303609);
+				this.aByteArrayArray3193[i] = Class149.aClass317_1745.getFile((this.anIntArray3198[i]), 0, -1648303609);
 				if (null == this.aByteArrayArray3193[i]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -3199,7 +3199,7 @@ public class Class257 {
 		this.anInt3189 = 0;
 		for (int i = 0; i < this.aByteArrayArray3200.length; i++) {
 			if (-1 != this.mapDataArchiveIds[i] && null == this.aByteArrayArray3200[i]) {
-				this.aByteArrayArray3200[i] = Class149.aClass317_1745.method5607((this.mapDataArchiveIds[i]), 0, -1804869799);
+				this.aByteArrayArray3200[i] = Class149.aClass317_1745.getFile((this.mapDataArchiveIds[i]), 0, -1804869799);
 				if (null == this.aByteArrayArray3200[i]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -3211,13 +3211,13 @@ public class Class257 {
 				}
 			}
 			if (this.anIntArray3197[i] != -1 && this.aByteArrayArray3178[i] == null) {
-				this.aByteArrayArray3178[i] = Class149.aClass317_1745.method5607((this.anIntArray3197[i]), 0, -2083571680);
+				this.aByteArrayArray3178[i] = Class149.aClass317_1745.getFile((this.anIntArray3197[i]), 0, -2083571680);
 				if (null == this.aByteArrayArray3178[i]) {
 					this.anInt3189 += -1145558933;
 				}
 			}
 			if (-1 != this.anIntArray3198[i] && this.aByteArrayArray3193[i] == null) {
-				this.aByteArrayArray3193[i] = Class149.aClass317_1745.method5607((this.anIntArray3198[i]), 0, -1573971712);
+				this.aByteArrayArray3193[i] = Class149.aClass317_1745.getFile((this.anIntArray3198[i]), 0, -1573971712);
 				if (null == this.aByteArrayArray3193[i]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -3536,7 +3536,7 @@ public class Class257 {
 		this.anInt3189 = 0;
 		for (int i = 0; i < this.aByteArrayArray3200.length; i++) {
 			if (-1 != this.mapDataArchiveIds[i] && null == this.aByteArrayArray3200[i]) {
-				this.aByteArrayArray3200[i] = Class149.aClass317_1745.method5607((this.mapDataArchiveIds[i]), 0, -1347393421);
+				this.aByteArrayArray3200[i] = Class149.aClass317_1745.getFile((this.mapDataArchiveIds[i]), 0, -1347393421);
 				if (null == this.aByteArrayArray3200[i]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -3548,13 +3548,13 @@ public class Class257 {
 				}
 			}
 			if (this.anIntArray3197[i] != -1 && this.aByteArrayArray3178[i] == null) {
-				this.aByteArrayArray3178[i] = Class149.aClass317_1745.method5607((this.anIntArray3197[i]), 0, -1962414723);
+				this.aByteArrayArray3178[i] = Class149.aClass317_1745.getFile((this.anIntArray3197[i]), 0, -1962414723);
 				if (null == this.aByteArrayArray3178[i]) {
 					this.anInt3189 += -1145558933;
 				}
 			}
 			if (-1 != this.anIntArray3198[i] && this.aByteArrayArray3193[i] == null) {
-				this.aByteArrayArray3193[i] = Class149.aClass317_1745.method5607((this.anIntArray3198[i]), 0, -1212323272);
+				this.aByteArrayArray3193[i] = Class149.aClass317_1745.getFile((this.anIntArray3198[i]), 0, -1212323272);
 				if (null == this.aByteArrayArray3193[i]) {
 					this.anInt3189 += -1145558933;
 				}
@@ -4072,17 +4072,17 @@ public class Class257 {
 		}
 	}
 
-	static void method4556(Class527 class527, byte i) {
-		class527.anIntArray6999[class527.anInt7012 * 1942118537 - 1] = (Class409.aClass242_4922.method4156((class527.anIntArray6999[1942118537 * class527.anInt7012 - 1]), -1396181317).method4093(Class158_Sub1.aClass3_8507, client.anIntArray7337, 1568436027)) ? 1 : 0;
+	static void method4556(CS2Executor class527, byte i) {
+		class527.intStack[class527.anInt7012 * 1942118537 - 1] = (Class409.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 1]), -1396181317).method4093(Class158_Sub1.aClass3_8507, client.anIntArray7337, 1568436027)) ? 1 : 0;
 	}
 
-	static final void method4557(Class527 class527, byte i) {
+	static final void method4557(CS2Executor class527, byte i) {
 		class527.anInt7012 -= 425673003;
-		Class42.method890((class527.anIntArray6999[1942118537 * class527.anInt7012]), (class527.anIntArray6999[1 + class527.anInt7012 * 1942118537]), (class527.anIntArray6999[class527.anInt7012 * 1942118537 + 2]), (byte) -2);
+		Class42.method890((class527.intStack[1942118537 * class527.anInt7012]), (class527.intStack[1 + class527.anInt7012 * 1942118537]), (class527.intStack[class527.anInt7012 * 1942118537 + 2]), (byte) -2);
 	}
 
-	static final void method4558(Class527 class527, int i) {
-		Class513 class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
+	static final void method4558(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = class513.aClass118_5886;
 		Class98 class98 = class513.aClass98_5885;
 		Class13.method505(class118, class98, class527, (byte) 1);
@@ -4108,9 +4108,9 @@ public class Class257 {
 		return true;
 	}
 
-	static final void method4560(Class527 class527, byte i) {
+	static final void method4560(CS2Executor class527, byte i) {
 		class527.anInt7000 -= -1341717846;
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class455.method7557((String) (class527.anObjectArray7019[class527.anInt7000 * 1806726141]), (String) (class527.anObjectArray7019[class527.anInt7000 * 1806726141 + 1]), Class223.aClass495_2772, 1341608337));
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class455.method7557((String) (class527.objectStack[class527.anInt7000 * 1806726141]), (String) (class527.objectStack[class527.anInt7000 * 1806726141 + 1]), Class223.aClass495_2772, 1341608337));
 	}
 
 	static void method4561(int i, int i_451_, int i_452_, int i_453_, int i_454_, int i_455_, int i_456_) {
@@ -4137,9 +4137,9 @@ public class Class257 {
 		class282_sub50_sub12.aString9640 = string;
 	}
 
-	static final void method4563(Class527 class527, short i) {
-		int i_465_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.anObjectArray7019[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = Integer.toString(i_465_);
+	static final void method4563(CS2Executor class527, short i) {
+		int i_465_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = Integer.toString(i_465_);
 	}
 
 	public static Class350 method4564(RsByteBuffer class282_sub35, int i) {

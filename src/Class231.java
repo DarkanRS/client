@@ -49,9 +49,9 @@ public class Class231 {
 		((Class231) this).aShortArray2875 = new short[4];
 	}
 
-	static final void method3913(Class527 class527, int i) {
-		int i_13_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7336[i_13_];
+	static final void method3913(CS2Executor class527, int i) {
+		int i_13_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7336[i_13_];
 	}
 
 	static void method3914(int i, String string, boolean bool, byte i_14_) {

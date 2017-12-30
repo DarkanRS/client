@@ -43,7 +43,7 @@ public class Class96_Sub5 extends Class96 {
 		}
 	}
 
-	static final void method14244(Class527 class527, int i) {
+	static final void method14244(CS2Executor class527, int i) {
 		int i_0_ = -2123019059 * Class363.anInt4203;
 		int i_1_ = 977902937 * Class263.anInt3249;
 		int i_2_ = -1;
@@ -57,6 +57,6 @@ public class Class96_Sub5 extends Class96 {
 				}
 			}
 		}
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_2_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_2_;
 	}
 }

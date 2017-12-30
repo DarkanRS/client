@@ -22,7 +22,7 @@ public class Class394 {
 			return class405;
 		byte[] is;
 		synchronized (((Class394) this).aClass317_4784) {
-			is = (((Class394) this).aClass317_4784.method5607(-71319279 * Class120.aClass120_1510.anInt1521, i, -1270537898));
+			is = (((Class394) this).aClass317_4784.getFile(-71319279 * Class120.aClass120_1510.anInt1521, i, -1270537898));
 		}
 		class405 = new Class405();
 		if (null != is)
@@ -89,8 +89,8 @@ public class Class394 {
 		}
 	}
 
-	static final void method6762(Class527 class527, int i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6762(CS2Executor class527, int i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 41);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class202.method3338(class118, class98, class527, (byte) 82);

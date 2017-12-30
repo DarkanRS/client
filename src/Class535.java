@@ -420,9 +420,9 @@ public class Class535 {
 		((Class535) this).aClass247_7091 = class239.method4050(i_31_, i_32_, i_33_, i_34_, (byte) 15);
 	}
 
-	static final void method11473(Class527 class527, int i) {
-		int i_36_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method11473(CS2Executor class527, int i) {
+		int i_36_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_36_, (byte) 123);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1312 * 682782159;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1312 * 682782159;
 	}
 }

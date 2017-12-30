@@ -200,7 +200,7 @@ public class Class282_Sub20_Sub15 extends Class282_Sub20 {
 		super(3, false);
 	}
 
-	static final void method15306(Class527 class527, int i) {
+	static final void method15306(CS2Executor class527, int i) {
 		Class119.method2077(2005204447);
 		client.aClass257_7353.method4547((byte) -23);
 		Class190.method3148((byte) 113);

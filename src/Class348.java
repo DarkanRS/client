@@ -78,10 +78,10 @@ public class Class348 {
 		method6171(class282_sub35, (byte) 46);
 	}
 
-	static final void method6174(Class527 class527, int i) {
-		int i_1_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6174(CS2Executor class527, int i) {
+		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 116);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1337 * -1009302201;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1337 * -1009302201;
 	}
 
 	public static void method6175(boolean bool, int i) {

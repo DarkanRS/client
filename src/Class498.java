@@ -49,7 +49,7 @@ public class Class498 {
 		}
 		if (null != class489)
 			return class489;
-		byte[] is = ((Class498) this).aClass317_5823.method5607(((Class120.aClass120_1479.anInt1521) * -71319279), i, -1530672331);
+		byte[] is = ((Class498) this).aClass317_5823.getFile(((Class120.aClass120_1479.anInt1521) * -71319279), i, -1530672331);
 		class489 = new Class489();
 		if (is != null)
 			class489.method8213(new RsByteBuffer(is), (byte) 0);
@@ -83,14 +83,14 @@ public class Class498 {
 		}
 	}
 
-	static final void method8327(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method8327(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class455.method7555(class118, class98, class527, (byte) -121);
 	}
 
-	static final void method8328(Class527 class527, int i) {
-		((Class527) class527).aLongArray6996[(((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020])] = (((Class527) class527).aLongArray7003[((((Class527) class527).anInt7001 -= -1188480575) * 1820448321)]);
+	static final void method8328(CS2Executor class527, int i) {
+		((CS2Executor) class527).aLongArray6996[(((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020])] = (((CS2Executor) class527).aLongArray7003[((((CS2Executor) class527).anInt7001 -= -1188480575) * 1820448321)]);
 	}
 }

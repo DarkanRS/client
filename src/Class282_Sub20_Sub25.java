@@ -185,9 +185,9 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		}
 	}
 
-	static final void method15392(Class527 class527, int i) {
-		Class118 class118 = Class117.method1981((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]), (byte) 16);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
+	static final void method15392(CS2Executor class527, int i) {
+		Class118 class118 = Class117.method1981((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), (byte) 16);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
 	}
 
 	public static void method15393(boolean bool, int i) {

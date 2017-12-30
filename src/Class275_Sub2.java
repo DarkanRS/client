@@ -53,8 +53,8 @@ public class Class275_Sub2 extends Class275 {
 		return new Class275_Sub2();
 	}
 
-	static final void method12504(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((Class527) class527).anIntArray6995[(((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709])]);
+	static final void method12504(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).anIntArray6995[(((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709])]);
 	}
 
 	static Class200 method12505(int i, int i_0_, int i_1_, Class528 class528, byte i_2_) {
@@ -64,10 +64,10 @@ public class Class275_Sub2 extends Class275 {
 		return class200;
 	}
 
-	static final void method12506(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_3_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		boolean bool = ((((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]) == 1);
+	static final void method12506(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		boolean bool = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) == 1);
 		if (Class291_Sub1.aClass465_8029 != null) {
 			Class282 class282 = Class291_Sub1.aClass465_8029.method7754((long) i_3_);
 			if (null != class282 && !bool)

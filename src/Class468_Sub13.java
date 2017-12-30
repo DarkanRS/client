@@ -75,23 +75,23 @@ public class Class468_Sub13 extends Class468 {
 		anInt5578 = -754033619 * i;
 	}
 
-	static final void method12718(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8193, (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]), -1898562251);
+	static final void method12718(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8193, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), -1898562251);
 		Class190.method3148((byte) 49);
 		client.aBool7175 = false;
 	}
 
-	static final void method12719(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method12719(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i == 1)
 				return;
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_2_ = class513;
-		Class118 class118 = ((Class513) class513_2_).aClass118_5886;
-		Class98 class98 = ((Class513) class513_2_).aClass98_5885;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_2_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, false, 0, class527, (byte) -113);
 	}
 }

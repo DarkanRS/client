@@ -57,8 +57,8 @@ public class Class87 {
 		return Class96_Sub9.aClass483_9278;
 	}
 
-	static final void method1490(Class527 class527, byte i) {
-		int i_13_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1490(CS2Executor class527, byte i) {
+		int i_13_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_13_, (byte) 28);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_13_ >> 16];
 		TilestreamPacket.method6289(class118, class98, class527, (byte) -46);
@@ -72,8 +72,8 @@ public class Class87 {
 			Class148.aClass282_Sub15_Sub2_1735.method15144(i, 814872907);
 	}
 
-	static final void method1492(Class527 class527, int i) {
-		int i_15_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1492(CS2Executor class527, int i) {
+		int i_15_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_15_, (byte) 54);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_15_ >> 16];
 		Class28.method774(class118, class98, class527, -1296322680);

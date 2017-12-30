@@ -361,7 +361,7 @@ public class Class412 {
 		Class20.anInt184 = i_30_ * -21606295;
 	}
 
-	static final void method6935(Class527 class527, int i) {
-		((Class527) class527).anInt7000 -= 1476624725;
+	static final void method6935(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7000 -= 1476624725;
 	}
 }

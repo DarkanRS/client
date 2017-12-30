@@ -34,8 +34,8 @@ public class Class282_Sub41_Sub1 extends Class282_Sub41 {
 		/* empty */
 	}
 
-	static final void method14700(Class118 class118, Class98 class98, Class527 class527, int i) {
-		class118.anInt1277 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * 204895771);
+	static final void method14700(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		class118.anInt1277 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * 204895771);
 		Class109.method1858(class118, (byte) 21);
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
 			Class486.method8207(-1952846363 * class118.anInt1287, -218557122);

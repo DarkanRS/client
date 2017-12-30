@@ -2041,16 +2041,16 @@ public class Class336 {
 		return true;
 	}
 
-	static final void method6005(Class527 class527, byte i) {
-		int i_196_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6005(CS2Executor class527, byte i) {
+		int i_196_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class184 class184 = Class468_Sub20.method12807(-1949417532);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4557, class184.aClass432_2283, 502225021);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_196_);
 		class184.method3049(class282_sub23, -616684350);
 	}
 
-	static final void method6006(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method6006(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		Class493.method8273(string, (byte) -74);
 	}
 
@@ -2103,11 +2103,11 @@ public class Class336 {
 		return new Class232(is);
 	}
 
-	static final void method6010(Class118 class118, Class98 class98, Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 425673003;
-		int i_201_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		short i_202_ = (short) (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
-		short i_203_ = (short) (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 2]);
+	static final void method6010(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 425673003;
+		int i_201_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		short i_202_ = (short) (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		short i_203_ = (short) (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 2]);
 		if (i_201_ >= 0 && i_201_ < 5) {
 			class118.method2013(i_201_, i_202_, i_203_, (byte) 11);
 			Class109.method1858(class118, (byte) -78);

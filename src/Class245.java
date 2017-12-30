@@ -27,8 +27,8 @@ public class Class245 {
 		throw new Error();
 	}
 
-	static final void method4197(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method4197(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4614, client.aClass184_7475.aClass432_2283, 1498065982);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string.length() + 1);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);

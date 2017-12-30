@@ -71,8 +71,8 @@ public class Class468_Sub9 extends Class468 {
 		return -859024475 * anInt5578;
 	}
 
-	static final void method12689(Class527 class527, int i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class296.aClass331_3535.method5918(i_2_, -2116649195).aString9744);
+	static final void method12689(CS2Executor class527, int i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class296.aClass331_3535.method5918(i_2_, -2116649195).aString9744);
 	}
 }

@@ -809,7 +809,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 		class282_sub50_sub12.method14965((byte) 35);
 	}
 
-	static final void method15075(Class527 class527, int i) {
-		Class404.method6811((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]), -967098159);
+	static final void method15075(CS2Executor class527, int i) {
+		Class404.method6811((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -967098159);
 	}
 }

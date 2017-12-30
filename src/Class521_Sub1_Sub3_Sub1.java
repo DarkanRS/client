@@ -448,9 +448,9 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Inter
 		}
 	}
 
-	static final void method16079(Class527 class527, short i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		Class12.method486((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]), (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]), 0, 596260679);
+	static final void method16079(CS2Executor class527, short i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		Class12.method486((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]), 0, 596260679);
 	}
 
 	static Class282_Sub53_Sub2 method16080(int i, int i_22_, int i_23_, long l, int i_24_, int i_25_) {

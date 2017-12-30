@@ -176,12 +176,12 @@ public class Class308 {
 		return ((i >= 1109376893 * Class458.aClass458_5470.anInt5481 && i <= 1109376893 * Class458.aClass458_5473.anInt5481) || i == 1109376893 * Class458.aClass458_5474.anInt5481);
 	}
 
-	static final void method5474(Class527 class527, int i) {
-		int i_8_ = (((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020]);
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_9_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		if (i_9_ < 0 || i_9_ >= ((Class527) class527).anIntArray6997[i_8_])
+	static final void method5474(CS2Executor class527, int i) {
+		int i_8_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_9_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		if (i_9_ < 0 || i_9_ >= ((CS2Executor) class527).anIntArray6997[i_8_])
 			throw new RuntimeException();
-		((Class527) class527).anIntArrayArray6998[i_8_][i_9_] = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
+		((CS2Executor) class527).globalArrays[i_8_][i_9_] = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 	}
 }

@@ -53,7 +53,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.method5607(-71319279 * Class120.aClass120_1469.anInt1521, i, -1168931806));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1168931806));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -73,7 +73,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.method5607(-71319279 * Class120.aClass120_1469.anInt1521, i, -1884209588));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1884209588));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -93,7 +93,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.method5607(-71319279 * Class120.aClass120_1469.anInt1521, i, -1684955859));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1684955859));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -113,7 +113,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.method5607(-71319279 * Class120.aClass120_1469.anInt1521, i, -1465415322));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1465415322));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -133,7 +133,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.method5607(-71319279 * Class120.aClass120_1469.anInt1521, i, -1597785812));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1597785812));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -181,12 +181,12 @@ public class Class288 {
 		}
 	}
 
-	static final void method5082(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_7_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_8_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class282_Sub14.method12221(((Class513) class513).aClass118_5886, i_7_, i_8_, 1550850781);
+	static final void method5082(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_7_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_8_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class282_Sub14.method12221(((UnderlayDefinition) class513).aClass118_5886, i_7_, i_8_, 1550850781);
 	}
 
 	static void method5083(long l) {

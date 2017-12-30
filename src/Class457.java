@@ -201,11 +201,11 @@ public class Class457 {
 		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
 	}
 
-	static final void method7667(Class118 class118, Class98 class98, Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 425673003;
-		int i_4_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		short i_5_ = (short) (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
-		short i_6_ = (short) (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 2]);
+	static final void method7667(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 425673003;
+		int i_4_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		short i_5_ = (short) (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		short i_6_ = (short) (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
 		if (i_4_ >= 0 && i_4_ < 5) {
 			class118.method2007(i_4_, i_5_, i_6_, -1261332787);
 			Class109.method1858(class118, (byte) -93);
@@ -214,7 +214,7 @@ public class Class457 {
 		}
 	}
 
-	static final void method7668(Class527 class527, int i) {
-		Class515.method8862((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
+	static final void method7668(CS2Executor class527, int i) {
+		Class515.method8862((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
 	}
 }

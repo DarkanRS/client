@@ -57,9 +57,9 @@ public class Class429 {
 			return class282_sub50_sub9;
 		byte[] is;
 		if (i >= 32768)
-			is = ((Class429) this).aClass317_5128.method5607(1, i & 0x7fff, -2004185096);
+			is = ((Class429) this).aClass317_5128.getFile(1, i & 0x7fff, -2004185096);
 		else
-			is = ((Class429) this).aClass317_5129.method5607(1, i, -1853926128);
+			is = ((Class429) this).aClass317_5129.getFile(1, i, -1853926128);
 		class282_sub50_sub9 = new Class282_Sub50_Sub9();
 		((Class282_Sub50_Sub9) class282_sub50_sub9).aClass429_9623 = this;
 		if (null != is)

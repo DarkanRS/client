@@ -281,9 +281,9 @@ public final class Class47_Sub1 extends Class47 {
 		return true;
 	}
 
-	static final void method14482(Class118 class118, Class98 class98, Class527 class527, int i) {
-		int i_32_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		int i_33_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method14482(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		int i_32_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_33_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_33_ >= 1 && i_33_ <= 10)
 			class118.method2039(i_33_ - 1, i_32_, 1711719581);
 	}

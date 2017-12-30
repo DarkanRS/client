@@ -268,7 +268,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 		}
 	}
 
-	static final void method15376(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -242416735 * client.anInt7354;
+	static final void method15376(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -242416735 * client.anInt7354;
 	}
 }

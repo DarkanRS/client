@@ -10,11 +10,11 @@ public class Class506 {
 		aClass223_5857.method3760(41736995);
 	}
 
-	static Class282_Sub50_Sub5 method8703(int i) {
-		Class282_Sub50_Sub5 class282_sub50_sub5 = (Class282_Sub50_Sub5) aClass223_5857.method3758((long) i);
+	static CS2Script method8703(int i) {
+		CS2Script class282_sub50_sub5 = (CS2Script) aClass223_5857.method3758((long) i);
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.method5607(i, 0, -1786940883);
+		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1786940883);
 		if (is == null || is.length <= 1)
 			return null;
 		try {
@@ -34,11 +34,11 @@ public class Class506 {
 		aClass223_5857.method3760(-979078977);
 	}
 
-	static Class282_Sub50_Sub5 method8706(int i) {
-		Class282_Sub50_Sub5 class282_sub50_sub5 = (Class282_Sub50_Sub5) aClass223_5857.method3758((long) i);
+	static CS2Script method8706(int i) {
+		CS2Script class282_sub50_sub5 = (CS2Script) aClass223_5857.method3758((long) i);
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.method5607(i, 0, -1560691688);
+		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1560691688);
 		if (is == null || is.length <= 1)
 			return null;
 		try {
@@ -50,11 +50,11 @@ public class Class506 {
 		return class282_sub50_sub5;
 	}
 
-	static Class282_Sub50_Sub5 method8707(int i) {
-		Class282_Sub50_Sub5 class282_sub50_sub5 = (Class282_Sub50_Sub5) aClass223_5857.method3758((long) i);
+	static CS2Script method8707(int i) {
+		CS2Script class282_sub50_sub5 = (CS2Script) aClass223_5857.method3758((long) i);
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.method5607(i, 0, -1325482050);
+		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1325482050);
 		if (is == null || is.length <= 1)
 			return null;
 		try {
@@ -70,9 +70,9 @@ public class Class506 {
 		throw new Error();
 	}
 
-	static Class282_Sub50_Sub5 method8708(Class397 class397, int i, int i_0_) {
+	static CS2Script method8708(Class397 class397, int i, int i_0_) {
 		int i_1_ = 1700138339 * class397.anInt4802 | i << 10;
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_1_ << 16));
+		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_1_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_1_, (byte) 4), -1599704714));
@@ -89,7 +89,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_1_ = 1700138339 * class397.anInt4802 | 65536 + i_0_ << 10;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_1_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_1_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_1_, (byte) 4), -1152787959));
@@ -106,7 +106,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_1_ = 1700138339 * class397.anInt4802 | 0x3fffc00;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_1_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_1_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_1_, (byte) 4), -984252166));
@@ -125,9 +125,9 @@ public class Class506 {
 		return null;
 	}
 
-	static Class282_Sub50_Sub5 method8709(Class397 class397, int i, int i_2_) {
+	static CS2Script method8709(Class397 class397, int i, int i_2_) {
 		int i_3_ = 1700138339 * class397.anInt4802 | i << 10;
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_3_ << 16));
+		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_3_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_3_, (byte) 4), -1384363687));
@@ -144,7 +144,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_3_ = 1700138339 * class397.anInt4802 | 65536 + i_2_ << 10;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_3_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_3_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_3_, (byte) 4), -1517399106));
@@ -161,7 +161,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_3_ = 1700138339 * class397.anInt4802 | 0x3fffc00;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_3_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_3_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_3_, (byte) 4), -9478845));
@@ -180,9 +180,9 @@ public class Class506 {
 		return null;
 	}
 
-	static Class282_Sub50_Sub5 method8710(Class397 class397, int i, int i_4_) {
+	static CS2Script method8710(Class397 class397, int i, int i_4_) {
 		int i_5_ = 1700138339 * class397.anInt4802 | i << 10;
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_5_ << 16));
+		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_5_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_5_, (byte) 4), -449923077));
@@ -199,7 +199,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_5_ = 1700138339 * class397.anInt4802 | 65536 + i_4_ << 10;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_5_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_5_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_5_, (byte) 4), -310302992));
@@ -216,7 +216,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_5_ = 1700138339 * class397.anInt4802 | 0x3fffc00;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_5_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_5_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_5_, (byte) 4), -1410493998));
@@ -235,9 +235,9 @@ public class Class506 {
 		return null;
 	}
 
-	static Class282_Sub50_Sub5 method8711(Class397 class397, int i, int i_6_) {
+	static CS2Script method8711(Class397 class397, int i, int i_6_) {
 		int i_7_ = 1700138339 * class397.anInt4802 | i << 10;
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_7_ << 16));
+		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_7_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_7_, (byte) 4), -1830893994));
@@ -254,7 +254,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_7_ = 1700138339 * class397.anInt4802 | 65536 + i_6_ << 10;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_7_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_7_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_7_, (byte) 4), -1902261602));
@@ -271,7 +271,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_7_ = 1700138339 * class397.anInt4802 | 0x3fffc00;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_7_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_7_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_7_, (byte) 4), -807707546));
@@ -290,9 +290,9 @@ public class Class506 {
 		return null;
 	}
 
-	static Class282_Sub50_Sub5 method8712(Class397 class397, int i, int i_8_) {
+	static CS2Script method8712(Class397 class397, int i, int i_8_) {
 		int i_9_ = 1700138339 * class397.anInt4802 | i << 10;
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_9_ << 16));
+		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_9_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_9_, (byte) 4), -1961061452));
@@ -309,7 +309,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_9_ = 1700138339 * class397.anInt4802 | 65536 + i_8_ << 10;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_9_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_9_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_9_, (byte) 4), -1713111490));
@@ -326,7 +326,7 @@ public class Class506 {
 			return class282_sub50_sub5;
 		}
 		i_9_ = 1700138339 * class397.anInt4802 | 0x3fffc00;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) aClass223_5857.method3758((long) i_9_ << 16));
+		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_9_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_9_, (byte) 4), -1662449312));
@@ -345,57 +345,57 @@ public class Class506 {
 		return null;
 	}
 
-	static Class282_Sub50_Sub5 method8713(byte[] is) {
-		return new Class282_Sub50_Sub5(new RsByteBuffer(is));
+	static CS2Script method8713(byte[] is) {
+		return new CS2Script(new RsByteBuffer(is));
 	}
 
-	static final void method8714(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method8714(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class175.method2960(class118, class98, class527, 1306300088);
 	}
 
-	static final void method8715(Class527 class527, int i) {
-		int i_10_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method8715(CS2Executor class527, int i) {
+		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_10_, (byte) 60);
 		Class199.method3251(class118, class527, 1146866687);
 	}
 
-	static final void method8716(Class527 class527, byte i) {
-		int i_11_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method8716(CS2Executor class527, byte i) {
+		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		int i_12_ = client.aClass330Array7428[i_11_].method5908(-12393301);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2 == i_12_ ? 1 : 0;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2 == i_12_ ? 1 : 0;
 	}
 
-	static final void method8717(Class527 class527, int i) {
+	static final void method8717(CS2Executor class527, int i) {
 		String string;
 		if (null != Class84.myPlayer && null != Class84.myPlayer.username)
 			string = Class84.myPlayer.method16127(true, 2008342545);
 		else
 			string = "";
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
-	static final void method8718(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
-		((Class527) class527).aClass191_7008 = new Class191(string, true);
+	static final void method8718(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		((CS2Executor) class527).aClass191_7008 = new Class191(string, true);
 	}
 
-	static final void method8719(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 425673003;
-		long l = (long) (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		long l_13_ = (long) (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
-		long l_14_ = (long) (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 2]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (l_14_ * l / l_13_);
+	static final void method8719(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 425673003;
+		long l = (long) (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		long l_13_ = (long) (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		long l_14_ = (long) (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (l_14_ * l / l_13_);
 	}
 
-	static final void method8720(Class527 class527, int i) {
-		int i_15_ = (((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020]);
-		int i_16_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		if (i_16_ < 0 || i_16_ >= ((Class527) class527).anIntArray6997[i_15_])
+	static final void method8720(CS2Executor class527, int i) {
+		int i_15_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_16_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		if (i_16_ < 0 || i_16_ >= ((CS2Executor) class527).anIntArray6997[i_15_])
 			throw new RuntimeException();
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class527) class527).anIntArrayArray6998[i_15_][i_16_];
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).globalArrays[i_15_][i_16_];
 	}
 
 	public static ItemEffects decodeItemEffects(ItemDefinitions class425, RsByteBuffer stream, int i) {

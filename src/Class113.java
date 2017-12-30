@@ -70,11 +70,11 @@ public class Class113 {
 		return class282_sub35.index * -1990677291 - i;
 	}
 
-	static final void method1882(Class527 class527, short i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_4_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_5_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_4_ & -1 - (1 << i_5_);
+	static final void method1882(CS2Executor class527, short i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_4_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_5_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_4_ & -1 - (1 << i_5_);
 	}
 
 	static final void method1883(int i) {

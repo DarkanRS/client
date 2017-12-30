@@ -76,31 +76,31 @@ public class Class468_Sub6 extends Class468 {
 		Class150.method2580(-1, 255, (byte) 34);
 	}
 
-	static final void method12659(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method12659(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i == 2)
 				return;
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_2_ = class513;
-		Class118 class118 = ((Class513) class513_2_).aClass118_5886;
-		Class98 class98 = ((Class513) class513_2_).aClass98_5885;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_2_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;
 		ItemDefinitions.method7142(class118, class98, class527, -1755364676);
 	}
 
-	static final void method12660(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_3_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_4_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
+	static final void method12660(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_4_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_5_ = i_4_ >> 14 & 0x3fff;
 		int i_6_ = i_4_ & 0x3fff;
 		int i_7_ = Class468_Sub11.method12702(i_3_, i_5_, i_6_, -1885188952);
 		if (i_7_ < 0)
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = i_7_;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = i_7_;
 	}
 
 	static boolean method12661(String string, int i, byte i_8_) {

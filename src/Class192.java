@@ -51,8 +51,8 @@ public class Class192 implements Interface9 {
 		/* empty */
 	}
 
-	static final void method3169(Class527 class527, int i) {
-		int i_1_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((Class527) class527).aClass282_Sub4_7011.aClass57Array7499[i_1_].anInt526) * -1097296133;
+	static final void method3169(CS2Executor class527, int i) {
+		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).aClass282_Sub4_7011.aClass57Array7499[i_1_].anInt526) * -1097296133;
 	}
 }

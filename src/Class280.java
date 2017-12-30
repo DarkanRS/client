@@ -17,9 +17,9 @@ public class Class280 implements Interface25 {
 		((Class280) this).aClass521_Sub1_Sub1_Sub1_3371 = class521_sub1_sub1_sub1;
 	}
 
-	static final void method4973(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7394;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7324;
+	static final void method4973(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7394;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7324;
 	}
 
 	static final void method4974(long l) {

@@ -129,14 +129,14 @@ public final class Class153 {
 				Class358.aClass358_4147, Class358.aClass358_4146, Class358.aClass358_4138, Class358.aClass358_4139, Class358.aClass358_4158, Class358.aClass358_4149, Class358.aClass358_4145, Class358.aClass358_4132, Class358.aClass358_4134, Class358.aClass358_4144, Class358.aClass358_4142, Class358.aClass358_4154, Class358.aClass358_4130, Class358.aClass358_4125, Class358.aClass358_4143, Class358.aClass358_4150 });
 	}
 
-	static final void method2620(Class527 class527, int i) {
-		int i_18_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class513 class513;
-		if (((Class527) class527).aBool7022)
-			class513 = ((Class527) class527).aClass513_6994;
+	static final void method2620(CS2Executor class527, int i) {
+		int i_18_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022)
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		else
-			class513 = ((Class527) class527).aClass513_7007;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class513.method8764(i_18_, -1, -1290054035) ? 1 : 0;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class513.method8764(i_18_, -1, -1290054035) ? 1 : 0;
 	}
 
 	public static byte[] method2621(File file, int i) {

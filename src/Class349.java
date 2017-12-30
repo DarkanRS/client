@@ -149,7 +149,7 @@ public class Class349 {
 		}
 	}
 
-	static final void method6186(Class118 class118, Class98 class98, Class527 class527, int i) {
+	static final void method6186(Class118 class118, Class98 class98, CS2Executor class527, int i) {
 		if (4 == -2131393857 * class118.anInt1268)
 			Class306.method5459(class118, class98, class527, -2108209213);
 	}

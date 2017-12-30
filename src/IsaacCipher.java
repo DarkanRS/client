@@ -769,8 +769,8 @@ public final class IsaacCipher {
 		return Class474.method7916((-87869981 * Class159.aClass450_2010.worldId), 1371284314);
 	}
 
-	static final void method7267(Class118 class118, Class98 class98, Class527 class527, int i) {
-		class118.aBool1344 = ((class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+	static final void method7267(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		class118.aBool1344 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 89);
 	}
 

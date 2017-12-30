@@ -98,8 +98,8 @@ public abstract class Class504 {
 		throw new IllegalArgumentException();
 	}
 
-	static final void method8387(Class118 class118, Class98 class98, Class527 class527, int i) {
-		class118.anInt1380 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * -1380100089);
+	static final void method8387(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		class118.anInt1380 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1380100089);
 	}
 
 	static boolean method8388(int i, byte i_2_) {
@@ -119,8 +119,8 @@ public abstract class Class504 {
 		return client.aClass257_7353.method4430(-1489528047).aClass390Array2591[i_8_].method6709(i, i_3_, 1879647652);
 	}
 
-	static final void method8390(Class118 class118, Class98 class98, Class527 class527, int i) {
-		int i_9_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method8390(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (class118.anInt1320 * 985215637 != i_9_) {
 			class118.anInt1320 = i_9_ * -1179842371;
 			Class109.method1858(class118, (byte) 22);

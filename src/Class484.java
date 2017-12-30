@@ -686,8 +686,8 @@ public final class Class484 {
 		return l;
 	}
 
-	static final void method8199(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class158.method2730((short) -26831);
+	static final void method8199(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class158.method2730((short) -26831);
 	}
 
 	static void method8200(Class118 class118, int i, int i_118_, boolean bool, int i_119_) {

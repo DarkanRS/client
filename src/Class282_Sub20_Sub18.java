@@ -35,7 +35,7 @@ public class Class282_Sub20_Sub18 extends Class282_Sub20 {
 		super(0, true);
 	}
 
-	static final void method15371(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12964((byte) 127) ? 1 : 0;
+	static final void method15371(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12964((byte) 127) ? 1 : 0;
 	}
 }

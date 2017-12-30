@@ -385,7 +385,7 @@ public class Class282_Sub18 extends Class282 {
 
 	static boolean method12268(Class317 class317) {
 		if (!aBool7611) {
-			byte[] is = class317.method5607(0, 0, -1801910444);
+			byte[] is = class317.getFile(0, 0, -1801910444);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -440,7 +440,7 @@ public class Class282_Sub18 extends Class282 {
 			class317.method5688(i, i_107_, 16711935);
 			return null;
 		}
-		byte[] is = class317.method5607(i, i_107_, -1847317701);
+		byte[] is = class317.getFile(i, i_107_, -1847317701);
 		if (is == null)
 			return null;
 		Class282_Sub18 class282_sub18 = null;
@@ -542,7 +542,7 @@ public class Class282_Sub18 extends Class282 {
 
 	static boolean method12282(Class317 class317) {
 		if (!aBool7611) {
-			byte[] is = class317.method5607(0, 0, -1215752135);
+			byte[] is = class317.getFile(0, 0, -1215752135);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -891,7 +891,7 @@ public class Class282_Sub18 extends Class282 {
 
 	static boolean method12289(Class317 class317) {
 		if (!aBool7611) {
-			byte[] is = class317.method5607(0, 0, -1791895913);
+			byte[] is = class317.getFile(0, 0, -1791895913);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -901,7 +901,7 @@ public class Class282_Sub18 extends Class282 {
 
 	static boolean method12290(Class317 class317) {
 		if (!aBool7611) {
-			byte[] is = class317.method5607(0, 0, -1650152767);
+			byte[] is = class317.getFile(0, 0, -1650152767);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -911,7 +911,7 @@ public class Class282_Sub18 extends Class282 {
 
 	static boolean method12291(Class317 class317) {
 		if (!aBool7611) {
-			byte[] is = class317.method5607(0, 0, -1271862093);
+			byte[] is = class317.getFile(0, 0, -1271862093);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -946,7 +946,7 @@ public class Class282_Sub18 extends Class282 {
 
 	static boolean method12293(Class317 class317) {
 		if (!aBool7611) {
-			byte[] is = class317.method5607(0, 0, -1454828949);
+			byte[] is = class317.getFile(0, 0, -1454828949);
 			if (is == null)
 				return false;
 			method12261(is);

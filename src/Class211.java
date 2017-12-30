@@ -25,7 +25,7 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.method5607(((Class120.aClass120_1511.anInt1521) * -71319279), i, -1690915964);
+			is = ((Class211) this).aClass317_2671.getFile(((Class120.aClass120_1511.anInt1521) * -71319279), i, -1690915964);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
@@ -64,7 +64,7 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.method5607(((Class120.aClass120_1511.anInt1521) * -71319279), i, -2114490634);
+			is = ((Class211) this).aClass317_2671.getFile(((Class120.aClass120_1511.anInt1521) * -71319279), i, -2114490634);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
@@ -85,7 +85,7 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.method5607(((Class120.aClass120_1511.anInt1521) * -71319279), i, -2082817514);
+			is = ((Class211) this).aClass317_2671.getFile(((Class120.aClass120_1511.anInt1521) * -71319279), i, -2082817514);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
@@ -139,13 +139,13 @@ public class Class211 {
 		}
 	}
 
-	static final void method3628(Class527 class527, int i) {
-		((Class527) class527).anInt7000 -= -1341717846;
-		String string = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]);
-		String string_2_ = (String) (((Class527) class527).anObjectArray7019[1806726141 * ((Class527) class527).anInt7000 + 1]);
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_3_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_4_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
+	static final void method3628(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7000 -= -1341717846;
+		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
+		String string_2_ = (String) (((CS2Executor) class527).objectStack[1806726141 * ((CS2Executor) class527).anInt7000 + 1]);
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_4_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		if (null == string_2_)
 			string_2_ = "";
 		if (string_2_.length() > 80)

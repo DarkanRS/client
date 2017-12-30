@@ -57,8 +57,8 @@ public class Class282_Sub46 extends Class282 {
 		}
 	}
 
-	static final void method13408(Class527 class527, byte i) {
-		int i_15_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method13408(CS2Executor class527, byte i) {
+		int i_15_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_15_, (byte) 113);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_15_ >> 16];
 		Class100.method1642(class118, class98, class527, -441010369);

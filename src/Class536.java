@@ -17,7 +17,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.method5607(-71319279 * Class120.aClass120_1514.anInt1521, i, -1972523322));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * Class120.aClass120_1514.anInt1521, i, -1972523322));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -40,7 +40,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.method5607(-71319279 * Class120.aClass120_1514.anInt1521, i, -1901150108));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * Class120.aClass120_1514.anInt1521, i, -1901150108));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -81,7 +81,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.method5607(-71319279 * Class120.aClass120_1514.anInt1521, i, -1679639365));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * Class120.aClass120_1514.anInt1521, i, -1679639365));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -110,7 +110,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.method5607(-71319279 * Class120.aClass120_1514.anInt1521, i, -1865732659));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * Class120.aClass120_1514.anInt1521, i, -1865732659));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -153,8 +153,8 @@ public class Class536 {
 		anInt7094 = (((Class536) this).aClass317_7095.method5624((-71319279 * (Class120.aClass120_1514.anInt1521)), -2042690113) * -919202315);
 	}
 
-	static final void method11486(Class527 class527, byte i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7337[i_2_];
+	static final void method11486(CS2Executor class527, byte i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7337[i_2_];
 	}
 }

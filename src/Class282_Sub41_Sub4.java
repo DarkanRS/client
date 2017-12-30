@@ -227,8 +227,8 @@ public class Class282_Sub41_Sub4 extends Class282_Sub41 {
 		return (null == ((Class282_Sub41_Sub4) this).aClass282_Sub15_Sub1_9603 ? 0 : ((Class282_Sub41_Sub4) this).aClass282_Sub15_Sub1_9603.method14811(-138243867));
 	}
 
-	static final void method14857(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub28_8212, ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, 1214573976);
+	static final void method14857(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub28_8212, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, 1214573976);
 		Class190.method3148((byte) 106);
 		client.aBool7175 = false;
 	}

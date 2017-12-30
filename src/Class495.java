@@ -39,8 +39,8 @@ public class Class495 implements Interface43 {
 		return ((Class495) this).aString5803;
 	}
 
-	static final void method8277(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method8277(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1293603558) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1278 = Class351.method6193(string, class527, -34782350);
@@ -105,10 +105,10 @@ public class Class495 implements Interface43 {
 		return ((Class495) this).aString5803;
 	}
 
-	static final void method8285(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method8285(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		TilestreamPacket.method6289(class118, class98, class527, (byte) 30);
 	}
 
@@ -150,47 +150,47 @@ public class Class495 implements Interface43 {
 		return (new Class495[] { aClass495_5795, aClass495_5801, aClass495_5800, aClass495_5797, aClass495_5802, aClass495_5799 });
 	}
 
-	static final void method8295(Class527 class527, int i) {
-		int i_5_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method8295(CS2Executor class527, int i) {
+		int i_5_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_5_, (byte) 65);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 0, class527, (byte) -3);
 	}
 
-	static final void method8296(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method8296(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		Class184 class184 = Class468_Sub20.method12807(-625511967);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4541, class184.aClass432_2283, 103463045);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
 		int i_6_ = -1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(((Class527) class527).aClass346_7009.anInt4048 * -624100047, 1417031095);
-		((Class527) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, ((Class527) class527).aClass346_7009.anIntArray4046, -1485943767);
+		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(((CS2Executor) class527).aClass346_7009.anInt4048 * -624100047, 1417031095);
+		((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, ((CS2Executor) class527).aClass346_7009.anIntArray4046, -1485943767);
 		class282_sub23.aClass282_Sub35_Sub2_7682.method13061((class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291 - i_6_), 460016164);
 		class184.method3049(class282_sub23, 1428748072);
 	}
 
-	static final void method8297(Class527 class527, byte i) {
+	static final void method8297(CS2Executor class527, byte i) {
 		if (Class96_Sub21.aClass199_9438.method3236(81, -2091776550))
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
-	static final void method8298(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method8298(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i != -1) {
 				for (;;) {
 					/* empty */
 				}
 			}
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_7_ = class513;
-		Class118 class118 = ((Class513) class513_7_).aClass118_5886;
-		Class98 class98 = ((Class513) class513_7_).aClass98_5885;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_7_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_7_).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513_7_).aClass98_5885;
 		Class282_Sub21_Sub1.method15474(class118, class98, class527, (byte) 66);
 	}
 }

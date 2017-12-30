@@ -71,7 +71,7 @@ public class Class282_Sub20_Sub17 extends Class282_Sub20 {
 		}
 	}
 
-	static final void method15370(Class527 class527, int i) {
-		((Class527) class527).aLongArray7003[(((Class527) class527).anInt7001 += -1188480575) * 1820448321 - 1] = (((Class527) class527).aLongArray6996[(((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709])]);
+	static final void method15370(CS2Executor class527, int i) {
+		((CS2Executor) class527).aLongArray7003[(((CS2Executor) class527).anInt7001 += -1188480575) * 1820448321 - 1] = (((CS2Executor) class527).aLongArray6996[(((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709])]);
 	}
 }

@@ -580,7 +580,7 @@ public abstract class Class282_Sub20 extends Class282 {
 		return class282_sub20;
 	}
 
-	static final void method12352(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class464.aBool5556 ? 1 : 0;
+	static final void method12352(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class464.aBool5556 ? 1 : 0;
 	}
 }

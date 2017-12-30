@@ -91,13 +91,13 @@ public class Class96_Sub22 extends Class96 {
 		}
 	}
 
-	static final void method14679(Class527 class527, int i) {
+	static final void method14679(CS2Executor class527, int i) {
 		Class93.method1573(class527, (byte) 93);
 	}
 
-	static final void method14680(Class118 class118, Class527 class527, int i) {
-		int i_8_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		int i_9_ = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
+	static final void method14680(Class118 class118, CS2Executor class527, int i) {
+		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (6 != 2131324949 * class118.anInt1329)
 			throw new RuntimeException("");
 		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(class118.anInt1330 * -402732635, (byte) 52);

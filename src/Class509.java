@@ -7,15 +7,15 @@ public class Class509 {
 	int anInt5866 = 382561263;
 	int[] anIntArray5867;
 	long[] aLongArray5868;
-	Class282_Sub50_Sub5 aClass282_Sub50_Sub5_5869;
+	CS2Script aClass282_Sub50_Sub5_5869;
 	public static boolean aBool5870;
 
 	Class509() {
 		/* empty */
 	}
 
-	static final void method8738(Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method8738(CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_0_ >= 1 && i_0_ <= 2) {
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub9_8226), i_0_, -296279259);
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub9_8218), i_0_, -2128693924);

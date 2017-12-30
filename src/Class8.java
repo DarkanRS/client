@@ -1034,9 +1034,9 @@ public abstract class Class8 {
 		return new Class209_Sub1(component, bool);
 	}
 
-	static final void method401(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
+	static final void method401(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class199.method3251(class118, class527, 1310130121);
 	}
 
@@ -1049,8 +1049,8 @@ public abstract class Class8 {
 		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -1940277002), -1694092142);
 	}
 
-	static final void method403(Class118 class118, Class98 class98, Class527 class527, int i) {
-		class118.aBool1291 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+	static final void method403(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		class118.aBool1291 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
 	}
 
 	public static Class505 method404(Canvas canvas, Interface22 interface22, int i, int i_332_, int i_333_) {

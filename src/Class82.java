@@ -25,10 +25,10 @@ final class Class82 implements Interface11 {
 		return Class254.method4379(string, 1048776146);
 	}
 
-	static final void method1454(Class118 class118, Class98 class98, Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_0_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_1_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
+	static final void method1454(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_0_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		Class437 class437 = Class125.aClass424_1573.method7069(i_0_, (byte) 0);
 		if (i_1_ != -1741480635 * class437.anInt5337)
 			class118.method1999(i_0_, i_1_, 146446242);
@@ -36,15 +36,15 @@ final class Class82 implements Interface11 {
 			class118.method1995(i_0_, -1265527536);
 	}
 
-	static final void method1455(Class118 class118, Class98 class98, Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 567564004;
-		class118.anInt1330 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) * -636815827;
-		class118.anInt1339 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]) * 207030057;
-		if ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 2]) == 1)
+	static final void method1455(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 567564004;
+		class118.anInt1330 = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) * -636815827;
+		class118.anInt1339 = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]) * 207030057;
+		if ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 2]) == 1)
 			class118.anInt1329 = 1012783397;
 		else
 			class118.anInt1329 = 423033320;
-		if ((((Class527) class527).anIntArray6999[3 + ((Class527) class527).anInt7012 * 1942118537]) == 1)
+		if ((((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]) == 1)
 			class118.aBool1388 = true;
 		else
 			class118.aBool1388 = false;
@@ -52,8 +52,8 @@ final class Class82 implements Interface11 {
 			Class92.method1565(-1952846363 * class118.anInt1287, -940537484);
 	}
 
-	static final void method1456(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7146 >> 3;
+	static final void method1456(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7146 >> 3;
 	}
 
 	static void method1457(int i, int i_2_, Class118 class118, Class455 class455, int i_3_, int i_4_, int i_5_) {

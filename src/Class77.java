@@ -126,24 +126,24 @@ public class Class77 {
 		}
 	}
 
-	static final void method1366(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 851346006;
-		int i_21_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
+	static final void method1366(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 851346006;
+		int i_21_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		if (i_21_ >= 2)
 			throw new RuntimeException();
 		client.anInt7277 = -158788875 * i_21_;
-		int i_22_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
+		int i_22_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		if (1 + i_22_ >= (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123]).length >> 1)
 			throw new RuntimeException();
 		client.anInt7279 = i_22_ * -658404745;
 		client.anInt7256 = 0;
-		client.anInt7327 = 1423548691 * (((Class527) class527).anIntArray6999[2 + (((Class527) class527).anInt7012 * 1942118537)]);
-		client.anInt7182 = 784091025 * (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 3]);
-		int i_23_ = (((Class527) class527).anIntArray6999[4 + 1942118537 * ((Class527) class527).anInt7012]);
+		client.anInt7327 = 1423548691 * (((CS2Executor) class527).intStack[2 + (((CS2Executor) class527).anInt7012 * 1942118537)]);
+		client.anInt7182 = 784091025 * (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 3]);
+		int i_23_ = (((CS2Executor) class527).intStack[4 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		if (i_23_ >= 2)
 			throw new RuntimeException();
 		client.anInt7448 = i_23_ * 1044733407;
-		int i_24_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 5]);
+		int i_24_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 5]);
 		if (i_24_ + 1 >= (client.anIntArrayArrayArray7302[-74015201 * client.anInt7448]).length >> 1)
 			throw new RuntimeException();
 		client.anInt7280 = 1872958459 * i_24_;
@@ -152,8 +152,8 @@ public class Class77 {
 		Class508.anInt5864 = 987778595;
 	}
 
-	static final void method1367(Class527 class527, short i) {
-		int i_25_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1367(CS2Executor class527, short i) {
+		int i_25_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_25_ < 0)
 			i_25_ = 0;
 		client.anInt7271 = 1364289201 * (-240868135 * client.anInt7270 + i_25_);
@@ -169,7 +169,7 @@ public class Class77 {
 		Class40.aClass523_411 = class523;
 	}
 
-	static final void method1370(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7365 >> 3;
+	static final void method1370(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7365 >> 3;
 	}
 }

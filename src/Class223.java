@@ -125,13 +125,13 @@ public final class Class223 {
 		return class282_sub50;
 	}
 
-	static final void method3768(Class527 class527, int i) {
-		int i_4_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3768(CS2Executor class527, int i) {
+		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class8_Sub2.method14263(i_4_ >> 14 & 0x3fff, i_4_ & 0x3fff, (byte) 0);
 	}
 
-	static final void method3769(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class527) class527).aClass521_Sub1_Sub2_Sub1_7014.method12997(-218366287);
+	static final void method3769(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass521_Sub1_Sub2_Sub1_7014.method12997(-218366287);
 	}
 
 	public static void method3770(byte i) {

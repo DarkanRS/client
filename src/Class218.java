@@ -61,7 +61,7 @@ public class Class218 {
 			return class220;
 		byte[] is;
 		synchronized (((Class218) this).aClass317_2705) {
-			is = ((Class218) this).aClass317_2705.method5607(((Class120.aClass120_1483.anInt1521) * -71319279), i, -1668017415);
+			is = ((Class218) this).aClass317_2705.getFile(((Class120.aClass120_1483.anInt1521) * -71319279), i, -1668017415);
 		}
 		class220 = new Class220();
 		class220.anInt2753 = 443844459 * i;
@@ -84,7 +84,7 @@ public class Class218 {
 			return class220;
 		byte[] is;
 		synchronized (((Class218) this).aClass317_2705) {
-			is = ((Class218) this).aClass317_2705.method5607(((Class120.aClass120_1483.anInt1521) * -71319279), i, -1362506596);
+			is = ((Class218) this).aClass317_2705.getFile(((Class120.aClass120_1483.anInt1521) * -71319279), i, -1362506596);
 		}
 		class220 = new Class220();
 		class220.anInt2753 = 443844459 * i;

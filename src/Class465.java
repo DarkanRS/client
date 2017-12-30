@@ -311,13 +311,13 @@ public final class Class465 implements Iterable {
 		return null;
 	}
 
-	static final void method7771(Class527 class527, int i) {
+	static final void method7771(CS2Executor class527, int i) {
 		String string;
 		if (null != Class84.myPlayer && null != Class84.myPlayer.username)
 			string = Class84.myPlayer.method16128(false, 1912893547);
 		else
 			string = "";
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	static final void method7772(Class282_Sub31 class282_sub31, boolean bool, int i) {
@@ -343,17 +343,17 @@ public final class Class465 implements Iterable {
 		}
 	}
 
-	static final void method7773(Class527 class527, int i) {
+	static final void method7773(CS2Executor class527, int i) {
 		Class282_Sub40.method13300(-1273704391);
 		client.aClass257_7353.method4547((byte) -42);
 		Class190.method3148((byte) 53);
 		client.aBool7175 = false;
 	}
 
-	static final void method7774(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_21_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_22_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+	static final void method7774(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_21_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_22_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
 		Class515.method8862(i_21_, i_22_ >> 14 & 0x3fff, i_22_ & 0x3fff, true, -1732540658);
 	}
 }

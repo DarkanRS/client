@@ -13,8 +13,8 @@ public class Class318 {
 		throw new Error();
 	}
 
-	static final void method5697(Class527 class527, short i) {
-		int i_0_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = Class368.aClass429_4265.method7214(i_0_, -2062673980).method14898(1863942043);
+	static final void method5697(CS2Executor class527, short i) {
+		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = Class368.aClass429_4265.method7214(i_0_, -2062673980).method14898(1863942043);
 	}
 }

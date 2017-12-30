@@ -14,7 +14,7 @@ public class Class444 {
 		}
 		if (class431 != null)
 			return class431;
-		byte[] is = (((Class444) this).aClass317_5378.method5607(Class120.aClass120_1471.method2079(i, 374972545), Class120.aClass120_1471.method2080(i, -2000339976), -1809807646));
+		byte[] is = (((Class444) this).aClass317_5378.getFile(Class120.aClass120_1471.method2079(i, 374972545), Class120.aClass120_1471.method2080(i, -2000339976), -1809807646));
 		class431 = new Class431();
 		if (null != is)
 			class431.method7227(new RsByteBuffer(is), (byte) 35);
@@ -31,7 +31,7 @@ public class Class444 {
 		}
 		if (class431 != null)
 			return class431;
-		byte[] is = (((Class444) this).aClass317_5378.method5607(Class120.aClass120_1471.method2079(i, 1042477341), Class120.aClass120_1471.method2080(i, -1854324369), -2133256826));
+		byte[] is = (((Class444) this).aClass317_5378.getFile(Class120.aClass120_1471.method2079(i, 1042477341), Class120.aClass120_1471.method2080(i, -1854324369), -2133256826));
 		class431 = new Class431();
 		if (null != is)
 			class431.method7227(new RsByteBuffer(is), (byte) 104);
@@ -57,7 +57,7 @@ public class Class444 {
 		}
 		if (class431 != null)
 			return class431;
-		byte[] is = (((Class444) this).aClass317_5378.method5607(Class120.aClass120_1471.method2079(i, 1267824598), Class120.aClass120_1471.method2080(i, -2031984543), -1609304948));
+		byte[] is = (((Class444) this).aClass317_5378.getFile(Class120.aClass120_1471.method2079(i, 1267824598), Class120.aClass120_1471.method2080(i, -2031984543), -1609304948));
 		class431 = new Class431();
 		if (null != is)
 			class431.method7227(new RsByteBuffer(is), (byte) 77);
@@ -75,8 +75,8 @@ public class Class444 {
 		return false;
 	}
 
-	static final void method7427(Class527 class527, int i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_2_ >> 28;
+	static final void method7427(CS2Executor class527, int i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_2_ >> 28;
 	}
 }

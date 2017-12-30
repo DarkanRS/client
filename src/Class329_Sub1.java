@@ -2782,8 +2782,8 @@ public class Class329_Sub1 extends Class329 {
 		Class20.animate(class521_sub1_sub1_sub2_sub1, is, i_555_, false, (byte) -11);
 	}
 
-	static final void method12492(Class527 class527, byte i) {
-		int i_557_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method12492(CS2Executor class527, byte i) {
+		int i_557_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_557_, (byte) 117);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_557_ >> 16];
 		Class463.method7729(class118, class98, class527, 1544396395);

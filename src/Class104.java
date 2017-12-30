@@ -68,15 +68,15 @@ public class Class104 {
 		return null;
 	}
 
-	static void method1799(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 - 1] = (Class409.aClass242_4922.method4156((((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 - 1]), -1396181317).anInt2963) * 554241429;
+	static void method1799(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).anInt2963) * 554241429;
 	}
 
-	static final void method1800(Class527 class527, int i) {
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((Class527) class527).aClass282_Sub50_Sub5_7021.anObjectArray9519[((Class527) class527).anInt7020 * 301123709]);
+	static final void method1800(CS2Executor class527, int i) {
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).current.anObjectArray9519[((CS2Executor) class527).anInt7020 * 301123709]);
 	}
 
-	static final void method1801(Class527 class527, int i) {
+	static final void method1801(CS2Executor class527, int i) {
 		Class520.method11160(Class505.method8697(1614050633), class527, 1060557669);
 	}
 }

@@ -252,24 +252,24 @@ public class Class320 {
 		return Class88.method1493(i, canvas, interface22, class317, i_17_, i_19_, i_20_, (byte) 73);
 	}
 
-	static final void method5733(Class527 class527, short i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.membersWorld ? 1 : 0;
+	static final void method5733(CS2Executor class527, short i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.membersWorld ? 1 : 0;
 	}
 
-	static final void method5734(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(1068541972);
+	static final void method5734(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(1068541972);
 	}
 
-	static final void method5735(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_21_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_22_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+	static final void method5735(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_21_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_22_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
 		Class414 class414 = Class94.method1588(Class410.aClass317_4924, i_22_, 0, 1444002710);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class414.method6951(string, i_21_, Class182.aClass160Array2261, (byte) 76);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class414.method6951(string, i_21_, Class182.aClass160Array2261, (byte) 76);
 	}
 
-	static void method5736(Class527 class527, int i) {
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class409.aClass242_4922.method4156((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317).aString2957);
+	static void method5736(CS2Executor class527, int i) {
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317).aString2957);
 	}
 }

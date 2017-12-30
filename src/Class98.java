@@ -175,26 +175,26 @@ public class Class98 {
 		}
 	}
 
-	static final void method1624(Class527 class527, int i) {
-		int i_16_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1624(CS2Executor class527, int i) {
+		int i_16_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_16_, (byte) 24);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_16_ >> 16];
 		Class17.method569(class118, class98, class527, -575655435);
 	}
 
-	static final void method1625(Class527 class527, int i) {
-		int i_17_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method1625(CS2Executor class527, int i) {
+		int i_17_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (2 == 1609086245 * client.anInt7434 && i_17_ >= 0 && i_17_ < client.anInt7449 * 493536965)
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -315765031 * client.aClass6Array7452[i_17_].anInt42;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -315765031 * client.aClass6Array7452[i_17_].anInt42;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static Class483[] method1626(int i) {
 		return (new Class483[] { Class483.aClass483_5729, Class483.aClass483_5738, Class483.aClass483_5734, Class483.aClass483_5733, Class483.aClass483_5730, Class483.aClass483_5735, Class483.aClass483_5732, Class483.aClass483_5736, Class483.aClass483_5737, Class483.aClass483_5731 });
 	}
 
-	static final void method1627(Class527 class527, int i) {
+	static final void method1627(CS2Executor class527, int i) {
 		Class521_Sub1_Sub5_Sub2.method16114(1752936805);
 	}
 }

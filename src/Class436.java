@@ -15,7 +15,7 @@ public class Class436 {
 			return class416;
 		byte[] is;
 		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.method5607(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1863810018);
+			is = ((Class436) this).aClass317_5333.getFile(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1863810018);
 		}
 		class416 = new Class416();
 		if (null != is)
@@ -59,7 +59,7 @@ public class Class436 {
 			return class416;
 		byte[] is;
 		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.method5607(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1505357380);
+			is = ((Class436) this).aClass317_5333.getFile(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1505357380);
 		}
 		class416 = new Class416();
 		if (null != is)
@@ -79,7 +79,7 @@ public class Class436 {
 			return class416;
 		byte[] is;
 		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.method5607(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1657302050);
+			is = ((Class436) this).aClass317_5333.getFile(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1657302050);
 		}
 		class416 = new Class416();
 		if (null != is)

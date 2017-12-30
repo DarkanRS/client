@@ -20,7 +20,7 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.method5607(((Class120.aClass120_1497.anInt1521) * -71319279), i, -1171405866);
+			is = ((Class427) this).aClass317_5120.getFile(((Class120.aClass120_1497.anInt1521) * -71319279), i, -1171405866);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;
@@ -139,7 +139,7 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.method5607(((Class120.aClass120_1497.anInt1521) * -71319279), i, -1952476258);
+			is = ((Class427) this).aClass317_5120.getFile(((Class120.aClass120_1497.anInt1521) * -71319279), i, -1952476258);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;
@@ -151,11 +151,11 @@ public class Class427 {
 		return class418;
 	}
 
-	static final void method7186(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7315 * 1595512269;
+	static final void method7186(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7315 * 1595512269;
 	}
 
-	static final void method7187(Class527 class527, int i) {
+	static final void method7187(CS2Executor class527, int i) {
 		/* empty */
 	}
 

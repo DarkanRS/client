@@ -557,8 +557,8 @@ public class Class148 {
 		return aClass282_Sub15_Sub2_1735;
 	}
 
-	static final void method2549(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class383.method6513(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(742990495), 200, 804853307);
+	static final void method2549(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class383.method6513(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(742990495), 200, 804853307);
 	}
 
 	public static String method2550(int i, int i_33_) {
@@ -584,8 +584,8 @@ public class Class148 {
 		return Class224.aClass225_Sub5_2775;
 	}
 
-	static final void method2552(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7190 * -1474737961;
+	static final void method2552(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7190 * -1474737961;
 	}
 
 	static Class method2553(String string, short i) throws ClassNotFoundException {
@@ -610,8 +610,8 @@ public class Class148 {
 		return Class.forName(string);
 	}
 
-	static final void method2554(Class527 class527, byte i) {
-		int i_39_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method2554(CS2Executor class527, byte i) {
+		int i_39_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		int i_40_ = Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1677203613);
 		if (i_39_ != i_40_) {
 			if (Class169.method2875(-1741204137 * client.anInt7166, -2096796884)) {

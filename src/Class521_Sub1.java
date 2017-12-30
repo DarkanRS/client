@@ -193,14 +193,14 @@ public abstract class Class521_Sub1 extends Class521 {
 			aClass275_Sub5Array7965[i_32_] = new Class275_Sub5();
 	}
 
-	static final void method13040(Class527 class527, byte i) {
-		int i_33_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_33_].anInt3866 * -1611209891;
+	static final void method13040(CS2Executor class527, byte i) {
+		int i_33_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_33_].anInt3866 * -1611209891;
 	}
 
-	static final void method13041(Class527 class527, int i) {
-		int i_34_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method13041(CS2Executor class527, int i) {
+		int i_34_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_34_, (byte) 107);
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
 	}
 }

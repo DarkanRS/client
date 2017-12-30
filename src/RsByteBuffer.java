@@ -616,10 +616,10 @@ public class RsByteBuffer extends Class282 {
 		buffer[-1990677291 * index - i - 1] = (byte) i;
 	}
 
-	static final void method13292(Class118 class118, Class98 class98, Class527 class527, byte i) {
+	static final void method13292(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
-		class118.anInt1441 = 304814545 * (class527.anIntArray6999[class527.anInt7012 * 1942118537]);
-		class118.anInt1263 = ((class527.anIntArray6999[1942118537 * class527.anInt7012 + 1]) * -1208146817);
+		class118.anInt1441 = 304814545 * (class527.intStack[class527.anInt7012 * 1942118537]);
+		class118.anInt1263 = ((class527.intStack[1942118537 * class527.anInt7012 + 1]) * -1208146817);
 		Class109.method1858(class118, (byte) -27);
 	}
 }

@@ -233,8 +233,8 @@ public class Class462 {
 		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
 	}
 
-	static final void method7715(Class527 class527, int i) {
-		int i_6_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 192651981 * client.aClass330Array7428[i_6_].anInt3862;
+	static final void method7715(CS2Executor class527, int i) {
+		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 192651981 * client.aClass330Array7428[i_6_].anInt3862;
 	}
 }

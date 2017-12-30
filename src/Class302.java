@@ -715,12 +715,12 @@ public class Class302 {
 		}
 	}
 
-	static final void method5362(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 425673003;
-		int i_25_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_26_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
-		int i_27_ = (((Class527) class527).anIntArray6999[2 + 1942118537 * ((Class527) class527).anInt7012]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class527) class527).aClass61_7010.method1198(i_25_, i_26_, i_27_, 1532957096);
+	static final void method5362(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 425673003;
+		int i_25_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_26_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
+		int i_27_ = (((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass61_7010.method1198(i_25_, i_26_, i_27_, 1532957096);
 	}
 
 	public static long method5363(int i, int i_28_) {

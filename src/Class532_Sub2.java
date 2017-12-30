@@ -51,7 +51,7 @@ public class Class532_Sub2 extends Class532 {
 			if (i_19_ != 0)
 				Class468_Sub15.method12746(i, i_14_, i_16_, i_17_, 783440477);
 		} else if (i_19_ == 0)
-			Class527.method11250(i, i_15_, i_14_, i_17_, -1213677167);
+			CS2Executor.method11250(i, i_15_, i_14_, i_17_, -1213677167);
 		else {
 			int i_20_ = (i_19_ << 12) / i_18_;
 			int i_21_ = i_14_ - (i * i_20_ >> 12);
@@ -119,7 +119,7 @@ public class Class532_Sub2 extends Class532 {
 			if (i_37_ != 0)
 				Class468_Sub15.method12746(i, i_32_, i_34_, i_35_, 105122965);
 		} else if (i_37_ == 0)
-			Class527.method11250(i, i_33_, i_32_, i_35_, -17096497);
+			CS2Executor.method11250(i, i_33_, i_32_, i_35_, -17096497);
 		else {
 			int i_38_ = (i_37_ << 12) / i_36_;
 			int i_39_ = i_32_ - (i * i_38_ >> 12);
@@ -238,7 +238,7 @@ public class Class532_Sub2 extends Class532 {
 		}
 	}
 
-	static final void method12859(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 412083381 * Class468_Sub28.anInt7961;
+	static final void method12859(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 412083381 * Class468_Sub28.anInt7961;
 	}
 }

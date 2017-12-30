@@ -720,13 +720,13 @@ public class Class304 implements Interface27 {
 		return new StringBuilder().append("<col=00ff80>").append(i / 1000000).append(Class433.aClass433_5304.method7273(class495, -1313761048)).append("</col>").toString();
 	}
 
-	static final void method5408(Class527 class527, int i) {
+	static final void method5408(CS2Executor class527, int i) {
 		int i_152_ = Class84.myPlayer.aByte7967;
 		Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 		Class219 class219 = client.aClass257_7353.method4519(165047864);
 		int i_153_ = (1948093437 * class219.anInt2711 + ((int) class385.aFloat4671 >> 9));
 		int i_154_ = (((int) class385.aFloat4673 >> 9) + class219.anInt2712 * -1002240017);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
 	}
 
 	public static void method5409(Class118 class118, int i, int i_155_, byte i_156_) {

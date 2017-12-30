@@ -155,21 +155,21 @@ public class Class460 implements Iterator {
 		return (Class282) next();
 	}
 
-	static final void method7699(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7151 ? 1 : 0;
+	static final void method7699(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7151 ? 1 : 0;
 	}
 
-	static final void method7700(Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709]);
+	static final void method7700(CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
 		Class537 class537 = Class497.aClass233_5822.method3933(i_0_, 1537794608);
 		if (null == class537)
 			throw new RuntimeException();
-		Integer integer = (((Class527) class527).aClass61_7010.method1225((1648080491 * client.aClass486_7450.anInt5746 << 16 | -1659474903 * class537.anInt7097), class537.anInt7098 * 1866356493, -47997093 * class537.anInt7099, (byte) 116));
+		Integer integer = (((CS2Executor) class527).aClass61_7010.method1225((1648080491 * client.aClass486_7450.anInt5746 << 16 | -1659474903 * class537.anInt7097), class537.anInt7098 * 1866356493, -47997093 * class537.anInt7099, (byte) 116));
 		int i_1_;
 		if (null == integer)
 			i_1_ = 0;
 		else
 			i_1_ = integer.intValue();
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
 	}
 }

@@ -93,15 +93,15 @@ public class Class450 {
 		return new StringBuilder().append(Integer.toString(i_4_ / 10)).append(i_4_ % 10).append("/").append(i_5_ / 10).append(i_5_ % 10).append("/").append(i_6_ % 100 / 10).append(i_6_ % 10).append(" ").append(i_7_ / 10).append(i_7_ % 10).append(":").append(i_8_ / 10).append(i_8_ % 10).toString();
 	}
 
-	static final void method7500(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]), -1848816059);
+	static final void method7500(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -1848816059);
 		Class190.method3148((byte) 103);
 		client.aBool7175 = false;
 	}
 
-	static final void method7501(Class527 class527, int i) {
-		String string = (String) (class527.anObjectArray7019[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		String string_9_ = (String) (class527.anObjectArray7019[(class527.anInt7000 -= 1476624725) * 1806726141]);
+	static final void method7501(CS2Executor class527, int i) {
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		String string_9_ = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4558, client.aClass184_7218.aClass432_2283, -375525383);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort((Class108.method1846(string, 204305012) + Class108.method1846(string_9_, -1829354202)), 1417031095);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
@@ -109,8 +109,8 @@ public class Class450 {
 		client.aClass184_7218.method3049(class282_sub23, -283007581);
 	}
 
-	static final void method7502(Class527 class527, byte i) {
-		Class513 class513;
+	static final void method7502(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
 		if (class527.aBool7022) {
 			if (i >= 14) {
 				return;
@@ -119,8 +119,8 @@ public class Class450 {
 		} else {
 			class513 = class527.aClass513_7007;
 		}
-		Class513 class513_10_ = class513;
+		UnderlayDefinition class513_10_ = class513;
 		Class118 class118 = class513_10_.aClass118_5886;
-		class527.anObjectArray7019[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
 	}
 }

@@ -22,7 +22,7 @@ public class Class421 {
 			for (int i = 0; i < ((Class421) this).anInt5013 * -1814796697; i++) {
 				byte[] is;
 				synchronized (((Class421) this).aClass317_5014) {
-					is = (((Class421) this).aClass317_5014.method5607(Class120.aClass120_1473.anInt1521 * -71319279, i, -1758012491));
+					is = (((Class421) this).aClass317_5014.getFile(Class120.aClass120_1473.anInt1521 * -71319279, i, -1758012491));
 				}
 				Class282_Sub50_Sub4 class282_sub50_sub4 = new Class282_Sub50_Sub4();
 				if (is != null)

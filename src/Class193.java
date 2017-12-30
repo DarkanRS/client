@@ -23,27 +23,27 @@ public class Class193 {
 		((Class193) this).anInt2400 = i_8_ * 33256725;
 	}
 
-	static final void method3170(Class527 class527, int i) {
+	static final void method3170(CS2Executor class527, int i) {
 		boolean bool = false;
 		if (client.aBool7310) {
 			try {
-				Object object = (Class361.aClass361_4178.method6254((new Object[] { Integer.valueOf(Class504.anInt5832 * 318997953), (Boolean.valueOf(1 == (Class84.myPlayer.male))), Integer.valueOf(((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) }), (byte) 69));
+				Object object = (Class361.aClass361_4178.method6254((new Object[] { Integer.valueOf(Class504.anInt5832 * 318997953), (Boolean.valueOf(1 == (Class84.myPlayer.male))), Integer.valueOf(((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) }), (byte) 69));
 				if (null != object)
 					bool = ((Boolean) object).booleanValue();
 			} catch (Throwable throwable) {
 				/* empty */
 			}
 		}
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
-	static final void method3171(Class527 class527, byte i) {
-		int i_9_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3171(CS2Executor class527, byte i) {
+		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_9_, (byte) 105);
 		Class209.method3601(class118, class527, -1995583516);
 	}
 
-	static final void method3172(Class527 class527, int i) {
+	static final void method3172(CS2Executor class527, int i) {
 		Class282_Sub29.method12426(1174367137);
 	}
 }

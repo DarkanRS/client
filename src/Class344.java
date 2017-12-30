@@ -301,26 +301,26 @@ public class Class344 {
 		return Class224.aClass225_Sub3_2773;
 	}
 
-	static final void method6116(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method6116(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i <= -1)
 				throw new IllegalStateException();
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_87_ = class513;
-		Class118 class118 = ((Class513) class513_87_).aClass118_5886;
-		Class98 class98 = ((Class513) class513_87_).aClass98_5885;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_87_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_87_).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513_87_).aClass98_5885;
 		Class282_Sub17.method12260(class118, class98, class527, 603809090);
 	}
 
-	static final void method6117(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
-		int i_88_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6117(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		int i_88_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_88_ == -1)
 			throw new RuntimeException("");
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append((char) i_88_).toString();
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append((char) i_88_).toString();
 	}
 
 	public static String method6118(byte[] is, int i, int i_89_, byte i_90_) {
@@ -351,19 +351,19 @@ public class Class344 {
 		}
 	}
 
-	static final void method6120(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method6120(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class52.method1083(class118, class98, class527, -1250124563);
 	}
 
-	static final void method6121(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2144330291 * Class20.anInt169;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class20.anInt170 * 292682521;
+	static final void method6121(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2144330291 * Class20.anInt169;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class20.anInt170 * 292682521;
 	}
 
-	static final void method6122(Class118 class118, Class98 class98, Class527 class527, int i) {
-		class118.aString1369 = (String) (((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 -= 1476624725) * 1806726141)]);
+	static final void method6122(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		class118.aString1369 = (String) (((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141)]);
 	}
 }

@@ -43,7 +43,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.method5607(Class120.aClass120_1488.method2079(i, -1163305846), Class120.aClass120_1488.method2080(i, -2086943964), -1721086771));
+			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, -1163305846), Class120.aClass120_1488.method2080(i, -2086943964), -1721086771));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -159,7 +159,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.method5607(Class120.aClass120_1488.method2079(i, 394538842), Class120.aClass120_1488.method2080(i, -2080510646), -1806868307));
+			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 394538842), Class120.aClass120_1488.method2080(i, -2080510646), -1806868307));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -214,7 +214,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.method5607(Class120.aClass120_1488.method2079(i, 1917016711), Class120.aClass120_1488.method2080(i, -2101953341), -2018257047));
+			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 1917016711), Class120.aClass120_1488.method2080(i, -2101953341), -2018257047));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -246,7 +246,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.method5607(Class120.aClass120_1488.method2079(i, 1801672212), Class120.aClass120_1488.method2080(i, -1894166586), -1996097305));
+			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 1801672212), Class120.aClass120_1488.method2080(i, -1894166586), -1996097305));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -322,7 +322,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.method5607(Class120.aClass120_1488.method2079(i, 1584456493), Class120.aClass120_1488.method2080(i, -1954703096), -1972004805));
+			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 1584456493), Class120.aClass120_1488.method2080(i, -1954703096), -1972004805));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -411,8 +411,8 @@ public class Class474 {
 		return (int) (l / 86400000L) - 11745;
 	}
 
-	static final void method7915(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class417.anInt4994 * -385885769;
+	static final void method7915(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class417.anInt4994 * -385885769;
 	}
 
 	public static Class217_Sub1 method7916(int i, int i_5_) {

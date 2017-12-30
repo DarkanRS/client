@@ -21,7 +21,7 @@ public class Class282_Sub50_Sub13 extends Class282_Sub50 {
 				int[] is = aClass317_9686.method5616((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -1321914973);
 				((Class282_Sub50_Sub13) this).aByteArrayArray9688 = new byte[is.length][];
 				for (int i = 0; i < is.length; i++)
-					((Class282_Sub50_Sub13) this).aByteArrayArray9688[i] = aClass317_9686.method5607((((Class282_Sub50_Sub13) this).anInt9687 * 2091314053), is[i], -1325143145);
+					((Class282_Sub50_Sub13) this).aByteArrayArray9688[i] = aClass317_9686.getFile((((Class282_Sub50_Sub13) this).anInt9687 * 2091314053), is[i], -1325143145);
 			}
 		}
 		boolean bool = true;
@@ -115,7 +115,7 @@ public class Class282_Sub50_Sub13 extends Class282_Sub50 {
 				int[] is = aClass317_9686.method5616((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -751611807);
 				((Class282_Sub50_Sub13) this).aByteArrayArray9688 = new byte[is.length][];
 				for (int i_7_ = 0; i_7_ < is.length; i_7_++)
-					((Class282_Sub50_Sub13) this).aByteArrayArray9688[i_7_] = aClass317_9686.method5607((((Class282_Sub50_Sub13) this).anInt9687 * 2091314053), is[i_7_], -1677831078);
+					((Class282_Sub50_Sub13) this).aByteArrayArray9688[i_7_] = aClass317_9686.getFile((((Class282_Sub50_Sub13) this).anInt9687 * 2091314053), is[i_7_], -1677831078);
 			}
 		}
 		boolean bool = true;

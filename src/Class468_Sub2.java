@@ -98,7 +98,7 @@ public class Class468_Sub2 extends Class468 {
 		return Class77.method1368(46486061);
 	}
 
-	static final void method12630(Class118 class118, Class98 class98, Class527 class527, int i) {
+	static final void method12630(Class118 class118, Class98 class98, CS2Executor class527, int i) {
 		class118.method1987(-231818102);
 	}
 }

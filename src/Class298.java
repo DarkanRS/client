@@ -41,21 +41,21 @@ public class Class298 implements Interface41 {
 		((Class298) this).aClass317_3538 = class317;
 	}
 
-	static final void method5300(Class527 class527, int i) {
-		int i_0_ = (((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709]);
-		Class462.aStringArray5548[i_0_] = (String) (((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 -= 1476624725) * 1806726141)]);
+	static final void method5300(CS2Executor class527, int i) {
+		int i_0_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		Class462.aStringArray5548[i_0_] = (String) (((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141)]);
 		Class282_Sub20_Sub10.method15263(i_0_, (byte) 42);
 	}
 
-	static final void method5301(Class527 class527, int i) {
-		int i_1_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method5301(CS2Executor class527, int i) {
+		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 84);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class29.method786(class118, class98, class527, -1279446637);
 	}
 
-	static final void method5302(Class527 class527, byte i) {
-		int i_2_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method5302(CS2Executor class527, byte i) {
+		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 23);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class109.method1852(class118, class98, class527, 1050548242);

@@ -25,7 +25,7 @@ public class Class31 implements Interface20 {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.method5607((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1429017309);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1429017309);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -70,7 +70,7 @@ public class Class31 implements Interface20 {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.method5607((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1720300705);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1720300705);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -103,7 +103,7 @@ public class Class31 implements Interface20 {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.method5607((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1398702478);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1398702478);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -139,12 +139,12 @@ public class Class31 implements Interface20 {
 		class282_sub35.writeBytes(is, 0, 24);
 	}
 
-	static final void method810(Class527 class527, int i) {
-		Class10.method458((((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]), 1942118537);
+	static final void method810(CS2Executor class527, int i) {
+		Class10.method458((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), 1942118537);
 	}
 
-	static final void method811(Class527 class527, int i) {
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = ((Class527) class527).aClass282_Sub4_7011.aString7501;
+	static final void method811(CS2Executor class527, int i) {
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = ((CS2Executor) class527).aClass282_Sub4_7011.aString7501;
 	}
 
 	public static final Class282_Sub44 method812(int i, Class282_Sub44 class282_sub44, int[] is, boolean bool, byte i_5_) {
@@ -199,18 +199,18 @@ public class Class31 implements Interface20 {
 		}
 	}
 
-	static final void method814(Class527 class527, int i) {
-		int i_21_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method814(CS2Executor class527, int i) {
+		int i_21_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub14 class282_sub50_sub14 = Class296.aClass331_3535.method5918(i_21_, 1213236683);
 		if (null == class282_sub50_sub14.anIntArray9747)
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub14.anIntArray9747.length;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub14.anIntArray9747.length;
 	}
 
-	static final void method815(Class527 class527, short i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
+	static final void method815(CS2Executor class527, short i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class413.method6942(class118, class527, 312854602);
 	}
 }

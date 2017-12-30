@@ -48,11 +48,11 @@ public final class Class112 {
 		return 7 - i_9_;
 	}
 
-	static final void method1872(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_12_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_13_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class252.method4327(i_12_, i_13_, true, false, (byte) 32);
+	static final void method1872(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_12_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_13_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class252.method4327(i_12_, i_13_, true, false, (byte) 32);
 	}
 
 	public static int method1873(int i, int i_14_, int i_15_, Class225 class225, Class336 class336, boolean bool, int[] is, int[] is_16_, int i_17_) {
@@ -145,10 +145,10 @@ public final class Class112 {
 		return i_42_;
 	}
 
-	static final void method1874(Class527 class527, int i) {
-		String string = (Class462.aStringArray5548[(((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709])]);
+	static final void method1874(CS2Executor class527, int i) {
+		String string = (Class462.aStringArray5548[(((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709])]);
 		if (null == string)
 			string = "";
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 }

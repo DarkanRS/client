@@ -47,7 +47,7 @@ public class Class233 {
 			return class537;
 		byte[] is;
 		synchronized (((Class233) this).aClass317_2882) {
-			is = (((Class233) this).aClass317_2882.method5607(-71319279 * Class120.aClass120_1464.anInt1521, i, -1218686172));
+			is = (((Class233) this).aClass317_2882.getFile(-71319279 * Class120.aClass120_1464.anInt1521, i, -1218686172));
 		}
 		class537 = new Class537();
 		if (is != null)
@@ -97,7 +97,7 @@ public class Class233 {
 			return class537;
 		byte[] is;
 		synchronized (((Class233) this).aClass317_2882) {
-			is = (((Class233) this).aClass317_2882.method5607(-71319279 * Class120.aClass120_1464.anInt1521, i, -1461146634));
+			is = (((Class233) this).aClass317_2882.getFile(-71319279 * Class120.aClass120_1464.anInt1521, i, -1461146634));
 		}
 		class537 = new Class537();
 		if (is != null)
@@ -124,8 +124,8 @@ public class Class233 {
 		Class532.anIntArrayArray7072 = is;
 	}
 
-	static final void method3937(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method3937(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		StringBuilder stringbuilder = new StringBuilder(string.length());
 		boolean bool = false;
 		for (int i_2_ = 0; i_2_ < string.length(); i_2_++) {
@@ -137,33 +137,33 @@ public class Class233 {
 			else if (!bool)
 				stringbuilder.append(c);
 		}
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = stringbuilder.toString();
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = stringbuilder.toString();
 	}
 
-	static final void method3938(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
+	static final void method3938(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
 	}
 
-	static final void method3939(Class527 class527, int i) {
+	static final void method3939(CS2Executor class527, int i) {
 		Class473.method7886(true, 1516035825);
 	}
 
-	static final void method3940(Class527 class527, int i) {
-		int i_3_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3940(CS2Executor class527, int i) {
+		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_3_, (byte) 105);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		Class388.method6689(class118, class98, class527, -1054634282);
 	}
 
-	static final void method3941(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method3941(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class220.method3738(class118, class98, class527, (byte) -2);
 	}
 
-	static final void method3942(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -989964873);
+	static final void method3942(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -989964873);
 		Class282_Sub20_Sub36.method15418(668850119);
 		Class190.method3148((byte) 44);
 		client.aBool7175 = false;

@@ -48,8 +48,8 @@ public class Class222 implements Interface17 {
 		return false;
 	}
 
-	static void method3753(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 - 1] = (Class409.aClass242_4922.method4156((((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 - 1]), -1396181317).anInt2973) * -985547275;
+	static void method3753(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).anInt2973) * -985547275;
 	}
 
 	static String method3754(CharSequence charsequence, Class413 class413, int i) {
@@ -80,10 +80,10 @@ public class Class222 implements Interface17 {
 		return stringbuilder.toString();
 	}
 
-	static final void method3755(Class527 class527, byte i) {
-		int i_11_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3755(CS2Executor class527, byte i) {
+		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class220 class220 = Class397.aClass218_4813.method3700(i_11_, 262031096);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class220.anInt2722 * 1172439539;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class220.anInt2722 * 1172439539;
 	}
 
 	public static int method3756(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, byte i_17_) {

@@ -3548,18 +3548,18 @@ public class Class206 {
 		return new Class215(i_702_, i_703_, is);
 	}
 
-	static final void method3546(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method3546(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Login.method5017(class118, class98, class527, -974856399);
 	}
 
-	static final void method3547(Class527 class527, int i) {
-		((Class527) class527).anInt7000 -= -1341717846;
-		String string = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]);
-		String string_706_ = (String) (((Class527) class527).anObjectArray7019[1806726141 * ((Class527) class527).anInt7000 + 1]);
-		int i_707_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = string.indexOf(string_706_, i_707_);
+	static final void method3547(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7000 -= -1341717846;
+		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
+		String string_706_ = (String) (((CS2Executor) class527).objectStack[1806726141 * ((CS2Executor) class527).anInt7000 + 1]);
+		int i_707_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = string.indexOf(string_706_, i_707_);
 	}
 }

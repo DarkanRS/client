@@ -95,10 +95,10 @@ public class Class458 implements Interface43 {
 		return (i >= aClass458_5471.anInt5481 * 1109376893 && i <= aClass458_5489.anInt5481 * 1109376893);
 	}
 
-	static final void method7675(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_1_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_2_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class515.method8861(i_1_, i_2_, false, 946854305);
+	static final void method7675(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_1_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_2_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class515.method8861(i_1_, i_2_, false, 946854305);
 	}
 }

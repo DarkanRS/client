@@ -84,8 +84,8 @@ public abstract class Class202 {
 		}
 	}
 
-	static final void method3338(Class118 class118, Class98 class98, Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method3338(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, 510066471);
 		if (is != null)
 			string = string.substring(0, string.length() - 1);
@@ -94,27 +94,27 @@ public abstract class Class202 {
 		class118.aBool1384 = true;
 	}
 
-	static final void method3339(Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method3339(CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		Class2.method258(string, 779827732);
 	}
 
-	static final void method3340(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class84.myPlayer.aClass19_10359.method578((byte) 2) >> 3;
+	static final void method3340(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class84.myPlayer.aClass19_10359.method578((byte) 2) >> 3;
 	}
 
-	static final void method3341(Class527 class527, byte i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_9_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_10_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+	static final void method3341(CS2Executor class527, byte i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_9_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_10_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
 		if (Class468_Sub8.aClass98Array7889[i_9_] == null)
-			((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else {
 			String string = (Class468_Sub8.aClass98Array7889[i_9_].aClass118Array998[i_10_].aString1285);
 			if (null == string)
-				((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
+				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
 			else
-				((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141) - 1] = string;
+				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = string;
 		}
 	}
 
@@ -160,8 +160,8 @@ public abstract class Class202 {
 		return (new Class461[] { Class461.aClass461_5539, Class461.aClass461_5538, Class461.aClass461_5540 });
 	}
 
-	static final void method3344(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (client.anInt7162 * 2080273591 == ((Class527) class527).aClass521_Sub1_Sub1_Sub2_7006.method15794(-592862572)) ? 1 : 0;
+	static final void method3344(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (client.anInt7162 * 2080273591 == ((CS2Executor) class527).animable.method15794(-592862572)) ? 1 : 0;
 	}
 
 	public static final void method3345(String string, int i) {
@@ -174,12 +174,12 @@ public abstract class Class202 {
 		}
 	}
 
-	static final void method3346(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_18_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_19_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
+	static final void method3346(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_18_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_19_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		Class414 class414 = Class94.method1588(Class410.aClass317_4924, i_19_, 0, 1119085558);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class414.method6949(string, i_18_, Class182.aClass160Array2261, 437013959);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class414.method6949(string, i_18_, Class182.aClass160Array2261, 437013959);
 	}
 }

@@ -23,7 +23,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.method5607(-71319279 * Class120.aClass120_1504.anInt1521, i, -1999870087));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * Class120.aClass120_1504.anInt1521, i, -1999870087));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -60,7 +60,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.method5607(-71319279 * Class120.aClass120_1504.anInt1521, i, -1393062609));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * Class120.aClass120_1504.anInt1521, i, -1393062609));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -80,7 +80,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.method5607(-71319279 * Class120.aClass120_1504.anInt1521, i, -1675981481));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * Class120.aClass120_1504.anInt1521, i, -1675981481));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -130,7 +130,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.method5607(-71319279 * Class120.aClass120_1504.anInt1521, i, -1932524788));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * Class120.aClass120_1504.anInt1521, i, -1932524788));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -161,9 +161,9 @@ public class Class479 {
 		}
 	}
 
-	static final void method8037(Class527 class527, int i) {
-		int i_3_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = ((Class527) class527).aClass61_7010.aStringArray639[i_3_];
+	static final void method8037(CS2Executor class527, int i) {
+		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = ((CS2Executor) class527).aClass61_7010.aStringArray639[i_3_];
 	}
 
 	public static Class494[] method8038(byte i) {

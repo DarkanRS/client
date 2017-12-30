@@ -75,7 +75,7 @@ public class Class347 {
 		Class347 class347 = (Class347) aClass229_4052.method3865((long) i);
 		if (null != class347)
 			return class347;
-		byte[] is = aClass317_4053.method5607(0, i, -1744491945);
+		byte[] is = aClass317_4053.getFile(0, i, -1744491945);
 		class347 = new Class347();
 		if (null != is)
 			class347.method6163(new RsByteBuffer(is), i, (short) 257);
@@ -101,8 +101,8 @@ public class Class347 {
 		aBool4059 = false;
 	}
 
-	static final void method6169(Class527 class527, byte i) {
-		int i_6_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method6169(CS2Executor class527, byte i) {
+		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub1.method11614(i_6_, 143389073);
 	}
 

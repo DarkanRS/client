@@ -23,9 +23,9 @@ public class Class18 {
 		Class180.aClass229_2245.method3863(1106684848);
 	}
 
-	static final void method572(Class527 class527, int i) {
+	static final void method572(CS2Executor class527, int i) {
 		boolean bool = true;
-		String string = (String) (class527.anObjectArray7019[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (client.aBool7310) {
 			try {
 				Object object = Class361.aClass361_4181.method6254(new Object[] { string }, (byte) -31);
@@ -36,7 +36,7 @@ public class Class18 {
 				/* empty */
 			}
 		}
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static void method573(Class505 class505, Class482 class482, int i, int i_0_, byte i_1_) {

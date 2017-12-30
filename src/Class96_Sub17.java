@@ -26,8 +26,8 @@ public class Class96_Sub17 extends Class96 {
 		Class59.method1161(Class4.anInt35 * 675588453, 31133705 * ((Class96_Sub17) this).anInt9385, ((Class96_Sub17) this).anInt9386 * -2086575783, (Class504.method8389(31133705 * ((Class96_Sub17) this).anInt9385, -2086575783 * ((Class96_Sub17) this).anInt9386, 675588453 * Class4.anInt35, (byte) 93)), ((Class96_Sub17) this).anInt9389 * -469908233, ((Class96_Sub17) this).anInt9388 * 882611039, ((Class96_Sub17) this).aString9387, (short) 20309);
 	}
 
-	static final void method14653(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method14653(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -271288407) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1353 = Class351.method6193(string, class527, 1245386660);
@@ -124,8 +124,8 @@ public class Class96_Sub17 extends Class96 {
 		return false;
 	}
 
-	static final void method14655(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class115.anInt1247 * 842593263;
+	static final void method14655(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class115.anInt1247 * 842593263;
 	}
 
 	public static void method14656(int i, int i_13_) {

@@ -853,7 +853,7 @@ public class Class157 {
 	}
 
 	public static Class157 method2670(Class317 class317, int i, int i_196_) {
-		byte[] is = class317.method5607(i, i_196_, -1300672958);
+		byte[] is = class317.getFile(i, i_196_, -1300672958);
 		if (is == null)
 			return null;
 		return new Class157(is);
@@ -902,7 +902,7 @@ public class Class157 {
 	}
 
 	public static Class157 method2673(Class317 class317, int i, int i_214_) {
-		byte[] is = class317.method5607(i, i_214_, -1283529200);
+		byte[] is = class317.getFile(i, i_214_, -1283529200);
 		if (is == null)
 			return null;
 		return new Class157(is);
@@ -2643,7 +2643,7 @@ public class Class157 {
 	}
 
 	public static Class157 method2689(Class317 class317, int i, int i_600_) {
-		byte[] is = class317.method5607(i, i_600_, -1774438474);
+		byte[] is = class317.getFile(i, i_600_, -1774438474);
 		if (is == null)
 			return null;
 		return new Class157(is);

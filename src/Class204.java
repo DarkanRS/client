@@ -35,20 +35,20 @@ public class Class204 implements Interface43 {
 		return (int) (1000000000L / (-2258443257437157839L * Class263.aLong3242));
 	}
 
-	static final void method3364(Class527 class527, int i) {
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((Class527) class527).anObjectArray7017[(((Class527) class527).anIntArray7018[((Class527) class527).anInt7020 * 301123709])]);
+	static final void method3364(CS2Executor class527, int i) {
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).anObjectArray7017[(((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709])]);
 	}
 
-	static final void method3365(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method3365(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1659229843) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1302 = Class351.method6193(string, class527, -80213268);
 		class118.aBool1384 = true;
 	}
 
-	static final void method3366(Class118 class118, Class98 class98, Class527 class527, byte i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method3366(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 570698140) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1416 = Class351.method6193(string, class527, -422636898);
@@ -60,19 +60,19 @@ public class Class204 implements Interface43 {
 		Class291_Sub1.aClass465_8029.method7749(894891319);
 	}
 
-	static final void method3368(Class527 class527, int i) {
+	static final void method3368(CS2Executor class527, int i) {
 		if (!Class203.method3360((byte) -8))
 			Class312.method5558(-500941691);
 	}
 
-	static final void method3369(Class118 class118, Class98 class98, Class527 class527, byte i) {
-		class118.aString1338 = (String) (((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 -= 1476624725) * 1806726141)]);
+	static final void method3369(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+		class118.aString1338 = (String) (((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141)]);
 	}
 
-	static final void method3370(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method3370(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class15.method542(class118, class98, class527, -2005893492);
 	}
 }

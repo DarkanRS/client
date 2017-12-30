@@ -832,22 +832,22 @@ public abstract class Class278 {
 		return ((Class278) this).aClass282_Sub41_Sub4_3366;
 	}
 
-	static final void method4960(Class527 class527, short i) {
-		int i_8_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method4960(CS2Executor class527, short i) {
+		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_8_, (byte) 120);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class172.method2915(class118, class98, class527, (byte) 0);
 	}
 
-	static final void method4961(Class527 class527, int i) {
-		int i_9_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method4961(CS2Executor class527, int i) {
+		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_9_, (byte) 17);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_9_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 2, class527, (byte) 71);
 	}
 
-	static final void method4962(Class527 class527, int i) {
-		int i_10_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method4962(CS2Executor class527, int i) {
+		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_10_, (byte) 10);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
 		Class96_Sub18.method14664(class118, class98, false, 1, class527, (byte) 28);

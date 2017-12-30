@@ -308,16 +308,16 @@ public class Class44 implements Interface46 {
 		}
 	}
 
-	static final void method910(Class118 class118, Class98 class98, Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method910(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 513538858) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1410 = Class351.method6193(string, class527, 240682174);
 		class118.aBool1384 = true;
 	}
 
-	static final void method911(Class527 class527, int i) {
-		int i_33_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method911(CS2Executor class527, int i) {
+		int i_33_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_33_, 1594974983);
 		int i_34_;
 		if (class425.aBool5101)
@@ -326,7 +326,7 @@ public class Class44 implements Interface46 {
 			i_34_ = Class149_Sub2.aClass511_9314.anInt5880 * -1519092215;
 		else
 			i_34_ = Class149_Sub2.aClass511_9314.anInt5881 * 725268415;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_34_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_34_;
 	}
 
 	static int method912(int i, int i_35_) {

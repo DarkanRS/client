@@ -75,10 +75,10 @@ public class Class5 {
 		return null;
 	}
 
-	static final void method296(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_13_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_14_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 1]);
+	static final void method296(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_13_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_14_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
 		if (i_13_ >= 0 && i_13_ < 2)
 			client.anIntArrayArrayArray7302[i_13_] = new int[i_14_ << 1][4];
 	}

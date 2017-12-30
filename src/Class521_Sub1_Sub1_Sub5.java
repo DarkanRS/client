@@ -355,14 +355,14 @@ public class Class521_Sub1_Sub1_Sub5 extends Class521_Sub1_Sub1 implements Inter
 		}
 	}
 
-	static final void method16100(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_24_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_25_ = (((Class527) class527).anIntArray6999[1 + 1942118537 * ((Class527) class527).anInt7012]);
+	static final void method16100(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_24_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_25_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		Class437 class437 = Class125.aClass424_1573.method7069(i_25_, (byte) 0);
 		if (class437.method7319(1555289189))
-			((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class350_Sub1.aClass406_7757.method6828(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class350_Sub1.aClass406_7757.method6828(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (Class350_Sub1.aClass406_7757.method6828(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (Class350_Sub1.aClass406_7757.method6828(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
 	}
 }

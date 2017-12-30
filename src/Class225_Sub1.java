@@ -54,9 +54,9 @@ public class Class225_Sub1 extends Class225 {
 		return class282_sub54;
 	}
 
-	static Class282_Sub50_Sub5 method12792(Class397 class397, int i, int i_13_, int i_14_) {
+	static CS2Script method12792(Class397 class397, int i, int i_13_, int i_14_) {
 		int i_15_ = 1700138339 * class397.anInt4802 | i << 10;
-		Class282_Sub50_Sub5 class282_sub50_sub5 = ((Class282_Sub50_Sub5) Class506.aClass223_5857.method3758((long) i_15_ << 16));
+		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_15_, (byte) 4), -1763175184));
@@ -73,7 +73,7 @@ public class Class225_Sub1 extends Class225 {
 			return class282_sub50_sub5;
 		}
 		i_15_ = 1700138339 * class397.anInt4802 | 65536 + i_13_ << 10;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) Class506.aClass223_5857.method3758((long) i_15_ << 16));
+		class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_15_, (byte) 4), -1500320283));
@@ -90,7 +90,7 @@ public class Class225_Sub1 extends Class225 {
 			return class282_sub50_sub5;
 		}
 		i_15_ = 1700138339 * class397.anInt4802 | 0x3fffc00;
-		class282_sub50_sub5 = ((Class282_Sub50_Sub5) Class506.aClass223_5857.method3758((long) i_15_ << 16));
+		class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
 		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_15_, (byte) 4), -962480706));

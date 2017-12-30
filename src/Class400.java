@@ -39,7 +39,7 @@ public class Class400 {
 	}
 
 	public Class393 method6785(int i, int i_5_) {
-		byte[] is = ((Class400) this).aClass317_4817.method5607(i, 0, -1978812291);
+		byte[] is = ((Class400) this).aClass317_4817.getFile(i, 0, -1978812291);
 		Class393 class393 = new Class393();
 		class393.method6743(new RsByteBuffer(is), -1754311806);
 		return class393;
@@ -123,7 +123,7 @@ public class Class400 {
 
 	public Class400(Class486 class486, Class495 class495, Class317 class317) {
 		((Class400) this).aClass317_4817 = class317;
-		RsByteBuffer class282_sub35 = new RsByteBuffer(((Class400) this).aClass317_4817.method5607(0, 0, -1323254674));
+		RsByteBuffer class282_sub35 = new RsByteBuffer(((Class400) this).aClass317_4817.getFile(0, 0, -1323254674));
 		int i = ((class282_sub35.buffer == null || class282_sub35.buffer.length < 1) ? -1 : class282_sub35.readUnsignedByte());
 		if (i < 4) {
 			((Class400) this).aClass402Array4818 = new Class402[0];
@@ -219,14 +219,14 @@ public class Class400 {
 	static void method6794(Class282_Sub43 class282_sub43, int i, byte i_42_) {
 		Object[] objects = class282_sub43.anObjectArray8054;
 		int i_43_ = ((Integer) objects[0]).intValue();
-		Class282_Sub50_Sub5 class282_sub50_sub5 = Class286.method5049(i_43_, -905040063);
+		CS2Script class282_sub50_sub5 = Class286.method5049(i_43_, -905040063);
 		if (null != class282_sub50_sub5) {
-			Class527 class527 = Class125.method2167(-444057050);
-			((Class527) class527).anIntArray6995 = new int[class282_sub50_sub5.anInt9525 * 693687803];
+			CS2Executor class527 = Class125.method2167(-444057050);
+			((CS2Executor) class527).anIntArray6995 = new int[class282_sub50_sub5.nIntLocals * 693687803];
 			int i_44_ = 0;
-			((Class527) class527).anObjectArray7017 = new String[class282_sub50_sub5.anInt9526 * 1886892247];
+			((CS2Executor) class527).anObjectArray7017 = new String[class282_sub50_sub5.nObjectLocals * 1886892247];
 			int i_45_ = 0;
-			((Class527) class527).aLongArray6996 = new long[class282_sub50_sub5.anInt9530 * -684160137];
+			((CS2Executor) class527).aLongArray6996 = new long[class282_sub50_sub5.nLongLocals * -684160137];
 			int i_46_ = 0;
 			for (int i_47_ = 1; i_47_ < objects.length; i_47_++) {
 				if (objects[i_47_] instanceof Integer) {
@@ -249,18 +249,18 @@ public class Class400 {
 						i_48_ = class282_sub43.anInt8058 * 101519687;
 					if (-2147483639 == i_48_)
 						i_48_ = 505716237 * class282_sub43.anInt8056;
-					((Class527) class527).anIntArray6995[i_44_++] = i_48_;
+					((CS2Executor) class527).anIntArray6995[i_44_++] = i_48_;
 				} else if (objects[i_47_] instanceof String) {
 					String string = (String) objects[i_47_];
 					if (string.equals("event_opbase"))
 						string = class282_sub43.aString8060;
-					((Class527) class527).anObjectArray7017[i_45_++] = string;
+					((CS2Executor) class527).anObjectArray7017[i_45_++] = string;
 				} else if (objects[i_47_] instanceof Long) {
 					long l = ((Long) objects[i_47_]).longValue();
-					((Class527) class527).aLongArray6996[i_46_++] = l;
+					((CS2Executor) class527).aLongArray6996[i_46_++] = l;
 				}
 			}
-			((Class527) class527).anInt7015 = -1709878683 * ((Class282_Sub43) class282_sub43).anInt8061;
+			((CS2Executor) class527).anInt7015 = -1709878683 * ((Class282_Sub43) class282_sub43).anInt8061;
 			Class51.method1068(class282_sub50_sub5, i, class527, 564283341);
 		}
 	}

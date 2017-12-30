@@ -23,7 +23,7 @@ public class Class282_Sub25 extends Class282 {
 			Exception_Sub1.aClass160_10075.method2752(5 + i_2_ + class414.method6946(string, -1967833701), i_6_ - class414.anInt4978 * 397683159);
 	}
 
-	static final void method12401(Class118 class118, Class98 class98, Class527 class527, int i) {
+	static final void method12401(Class118 class118, Class98 class98, CS2Executor class527, int i) {
 		class118.anInt1329 = -1346216911;
 		class118.anInt1330 = -1183558903 * client.anInt7315;
 		class118.anInt1339 = 0;

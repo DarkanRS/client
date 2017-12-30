@@ -79,18 +79,18 @@ public class Class353 {
 		return 0;
 	}
 
-	static final void method6205(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 - 1] = (((Class527) class527).aClass61_7010.method1215((byte) 69)[(((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 - 1])]);
+	static final void method6205(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (((CS2Executor) class527).aClass61_7010.method1215((byte) 69)[(((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1])]);
 	}
 
-	static final void method6206(Class527 class527, int i) {
-		int i_9_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_9_].anInt3867 * 1545587551;
+	static final void method6206(CS2Executor class527, int i) {
+		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_9_].anInt3867 * 1545587551;
 	}
 
-	static final void method6207(Class527 class527, byte i) {
-		int i_10_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) i_10_);
+	static final void method6207(CS2Executor class527, byte i) {
+		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) i_10_);
 	}
 
 	static void method6208(File file, byte[] is, int i, int i_11_) throws IOException {
@@ -129,17 +129,17 @@ public class Class353 {
 		}
 	}
 
-	static final void method6210(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method6210(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class29.method789(class118, class98, class527, -19478635);
 	}
 
-	static final void method6211(Class527 class527, int i) {
-		((Class527) class527).anInt7000 -= -1341717846;
-		String string = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]);
-		String string_18_ = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141 + 1]);
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append(string_18_).toString();
+	static final void method6211(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7000 -= -1341717846;
+		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
+		String string_18_ = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141 + 1]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append(string_18_).toString();
 	}
 }

@@ -77,7 +77,7 @@ public class Class437 {
 		return ((Class437) this).aChar5336 == 's';
 	}
 
-	static final void method7322(Class527 class527, int i) {
+	static final void method7322(CS2Executor class527, int i) {
 		Class520.method11160(Class507.method8727(-1377363314), class527, 1060557669);
 	}
 

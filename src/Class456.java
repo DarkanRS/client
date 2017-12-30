@@ -814,8 +814,8 @@ public class Class456 {
 			((Class456) this).aClass462_5467.method7708(13720241);
 	}
 
-	static final void method7643(Class527 class527, byte i) {
-		int i_56_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method7643(CS2Executor class527, byte i) {
+		int i_56_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_56_, (byte) 98);
 		int i_57_ = -1;
 		int i_58_ = -1;
@@ -826,8 +826,8 @@ public class Class456 {
 			i_57_ = -1125753931 * class119.anInt1458;
 			i_58_ = class119.anInt1454 * 2069222845;
 		}
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_57_;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_58_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_57_;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_58_;
 	}
 
 	static Class149_Sub1 method7644(RsByteBuffer class282_sub35, int i) {

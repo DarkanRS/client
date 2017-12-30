@@ -166,7 +166,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		Class316.aClass505_3680.GA(0.0F, 1.0F);
 	}
 
-	static final void method15403(Class527 class527, int i) {
+	static final void method15403(CS2Executor class527, int i) {
 		Class424.method7081((byte) -41);
 	}
 }

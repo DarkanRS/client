@@ -113,13 +113,13 @@ public final class Class328 implements Comparable {
 		}
 	}
 
-	static final void method5828(Class527 class527, int i) {
-		((Class527) class527).anInt7000 -= 1476624725;
-		((Class527) class527).anInt7012 -= 425673003;
-		String string = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]);
-		boolean bool = ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) == 1);
-		boolean bool_7_ = ((((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]) == 1);
-		boolean bool_8_ = ((((Class527) class527).anIntArray6999[2 + 1942118537 * ((Class527) class527).anInt7012]) == 1);
+	static final void method5828(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7000 -= 1476624725;
+		((CS2Executor) class527).anInt7012 -= 425673003;
+		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
+		boolean bool = ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) == 1);
+		boolean bool_7_ = ((((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]) == 1);
+		boolean bool_8_ = ((((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]) == 1);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4619, client.aClass184_7218.aClass432_2283, -685598433);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(Class108.method1846(string, 108230630) + 1, 1417031095);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
@@ -134,8 +134,8 @@ public final class Class328 implements Comparable {
 		client.aClass184_7218.method3049(class282_sub23, 1599721330);
 	}
 
-	static final void method5829(Class527 class527, int i) {
-		int i_10_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method5829(CS2Executor class527, int i) {
+		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class120.method2094(i_10_, (byte) 1);
 	}
 
@@ -143,19 +143,19 @@ public final class Class328 implements Comparable {
 		return Class356.method6225(charsequence, 10, true, 2038427942);
 	}
 
-	static final void method5831(Class527 class527, int i) {
-		int i_11_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) (i_11_ + 1));
+	static final void method5831(CS2Executor class527, int i) {
+		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) (i_11_ + 1));
 	}
 
-	static final void method5832(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7224 && !client.aBool7244 ? 1 : 0;
+	static final void method5832(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7224 && !client.aBool7244 ? 1 : 0;
 	}
 
-	static final void method5833(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method5833(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class282_Sub52.method13468(class118, class98, class527, 769396750);
 	}
 }

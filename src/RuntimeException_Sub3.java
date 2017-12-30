@@ -133,7 +133,7 @@ public class RuntimeException_Sub3 extends RuntimeException {
 					string_16_ = new StringBuilder().append(string_16_).append(" | ").toString();
 				string_16_ = new StringBuilder().append(string_16_).append(string).toString();
 			}
-			Class527.method11251(string_16_, 127181205);
+			CS2Executor.method11251(string_16_, 127181205);
 			string_16_ = Class475.method7926(string_16_, -1338327602);
 			if (null != anApplet10460) {
 				String string_17_ = "Unknown";
@@ -171,7 +171,7 @@ public class RuntimeException_Sub3 extends RuntimeException {
 					string_21_ = new StringBuilder().append(string_21_).append(" | ").toString();
 				string_21_ = new StringBuilder().append(string_21_).append(string).toString();
 			}
-			Class527.method11251(string_21_, -1037935916);
+			CS2Executor.method11251(string_21_, -1037935916);
 			string_21_ = Class475.method7926(string_21_, -1854907362);
 			if (null != anApplet10460) {
 				String string_22_ = "Unknown";

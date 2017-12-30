@@ -568,7 +568,7 @@ public class Class538 {
 	static final void method11501(int i) {
 		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * client.cycles));
 		if (client.anInt7349 * -1699899559 != -1)
-			Class513.method8777(client.anInt7349 * -1699899559, (byte) -116);
+			UnderlayDefinition.method8777(client.anInt7349 * -1699899559, (byte) -116);
 		for (int i_113_ = 0; i_113_ < client.anInt7407 * 1858642375; i_113_++) {
 			client.aBoolArray7410[i_113_] = client.aBoolArray7443[i_113_];
 			client.aBoolArray7443[i_113_] = false;

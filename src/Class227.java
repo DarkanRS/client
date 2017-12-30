@@ -980,11 +980,11 @@ public class Class227 {
 		return is;
 	}
 
-	static final void method3829(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class412.aByte4963;
+	static final void method3829(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class412.aByte4963;
 	}
 
-	static final void method3830(Class527 class527, byte i) {
-		((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(Class468.method7788((long) (((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 -= 141891001) * 1942118537)]) * 60000L, Class223.aClass495_2772.method243((byte) 1), true, 1560112549)).append(" UTC").toString();
+	static final void method3830(CS2Executor class527, byte i) {
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(Class468.method7788((long) (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]) * 60000L, Class223.aClass495_2772.method243((byte) 1), true, 1560112549)).append(" UTC").toString();
 	}
 }

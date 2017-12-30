@@ -2460,8 +2460,8 @@ public class PacketsDecoder extends Class455 {
 		return true;
 	}
 
-	static final void method14434(Class527 class527, int i) {
+	static final void method14434(CS2Executor class527, int i) {
 		class527.anInt7000 -= -1341717846;
-		Class533.method11404((String) (class527.anObjectArray7019[(1806726141 * class527.anInt7000)]), (String) (class527.anObjectArray7019[1 + (class527.anInt7000 * 1806726141)]), "", (class527.anIntArray6999[((class527.anInt7012 -= 141891001) * 1942118537)]) == 1, false, -94301647);
+		Class533.method11404((String) (class527.objectStack[(1806726141 * class527.anInt7000)]), (String) (class527.objectStack[1 + (class527.anInt7000 * 1806726141)]), "", (class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]) == 1, false, -94301647);
 	}
 }

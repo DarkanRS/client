@@ -59,7 +59,7 @@ public class Class282_Sub20_Sub30 extends Class282_Sub20 {
 		return is;
 	}
 
-	static final void method15399(Class527 class527, int i) {
-		Class242.method4167((String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]), 1836583632);
+	static final void method15399(CS2Executor class527, int i) {
+		Class242.method4167((String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]), 1836583632);
 	}
 }

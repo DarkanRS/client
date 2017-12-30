@@ -56,20 +56,20 @@ public class Class234 {
 		/* empty */
 	}
 
-	static final void method3949(Class527 class527, int i) {
-		int i_6_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method3949(CS2Executor class527, int i) {
+		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_6_, (byte) 82);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		Class389.method6697(class118, class98, class527, 1042468011);
 	}
 
-	static final void method3950(Class527 class527, int i) {
+	static final void method3950(CS2Executor class527, int i) {
 		Class283.anInt3384 = 0;
 	}
 
-	static final void method3951(Class527 class527, int i) {
-		int i_7_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Character.toLowerCase((char) i_7_);
+	static final void method3951(CS2Executor class527, int i) {
+		int i_7_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Character.toLowerCase((char) i_7_);
 	}
 
 	public static int method3952(String string, int i) {

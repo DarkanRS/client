@@ -367,11 +367,11 @@ public class Class378 {
 		return is;
 	}
 
-	static final void method6437(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		long l = (long) (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		long l_28_ = (long) (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (l + l * l_28_ / 100L);
+	static final void method6437(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		long l = (long) (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		long l_28_ = (long) (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (l + l * l_28_ / 100L);
 	}
 
 	static final void method6438(byte i) {

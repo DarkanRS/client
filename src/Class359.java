@@ -23,13 +23,13 @@ public class Class359 {
 		}
 	}
 
-	static final void method6242(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 709455005;
-		int i_3_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012]);
-		int i_4_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
-		int i_5_ = (((Class527) class527).anIntArray6999[2 + ((Class527) class527).anInt7012 * 1942118537]);
-		int i_6_ = (((Class527) class527).anIntArray6999[3 + ((Class527) class527).anInt7012 * 1942118537]);
-		int i_7_ = (((Class527) class527).anIntArray6999[1942118537 * ((Class527) class527).anInt7012 + 4]);
+	static final void method6242(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 709455005;
+		int i_3_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
+		int i_4_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_5_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_6_ = (((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_7_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 4]);
 		if (i_5_ == -1)
 			throw new RuntimeException();
 		Class431 class431 = Class466.aClass444_5570.method7424(i_5_, (byte) 8);
@@ -40,23 +40,23 @@ public class Class359 {
 		int[] is = class431.method7251(Integer.valueOf(i_6_), 2099453599);
 		if (i_7_ < 0 || null == is || is.length <= i_7_)
 			throw new RuntimeException();
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = is[i_7_];
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = is[i_7_];
 	}
 
-	static final void method6243(Class527 class527, int i) {
-		((Class527) class527).anInt7000 -= -1341717846;
-		String string = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141]);
-		String string_8_ = (String) (((Class527) class527).anObjectArray7019[((Class527) class527).anInt7000 * 1806726141 + 1]);
+	static final void method6243(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7000 -= -1341717846;
+		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
+		String string_8_ = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141 + 1]);
 		if (null != Class84.myPlayer.aClass238_10558 && (Class84.myPlayer.aClass238_10558.aBool2929))
-			((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string_8_;
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string_8_;
 		else
-			((Class527) class527).anObjectArray7019[((((Class527) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string;
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string;
 	}
 
-	static final void method6244(Class118 class118, Class98 class98, Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		class118.anInt1289 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) * 1000406043;
-		class118.anInt1375 = 657648623 * (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]);
+	static final void method6244(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		class118.anInt1289 = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) * 1000406043;
+		class118.anInt1375 = 657648623 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
 		Class109.method1858(class118, (byte) 14);
 		Class44.method913(class98, class118, (byte) 1);
 		if (0 == -2131393857 * class118.anInt1268)

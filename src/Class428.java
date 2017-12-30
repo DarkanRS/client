@@ -377,20 +377,20 @@ public final class Class428 {
 		return arraylist;
 	}
 
-	static final void method7208(Class527 class527, int i) {
-		int i_28_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
+	static final void method7208(CS2Executor class527, int i) {
+		int i_28_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_28_, (byte) 45);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_28_ >> 16];
 		Class282_Sub50_Sub17.method15511(class118, class98, class527, (byte) 126);
 	}
 
-	static final void method7209(Class527 class527, int i) {
-		Class20.anInt198 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * 1670293651);
+	static final void method7209(CS2Executor class527, int i) {
+		Class20.anInt198 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * 1670293651);
 	}
 
-	static final void method7210(Class527 class527, int i) {
-		((Class527) class527).anInt7001 -= 1918006146;
-		if ((((Class527) class527).aLongArray7003[1820448321 * ((Class527) class527).anInt7001 + 1]) == (((Class527) class527).aLongArray7003[1820448321 * ((Class527) class527).anInt7001]))
-			((Class527) class527).anInt7020 += (-1051529003 * (((Class527) class527).anIntArray7018[301123709 * ((Class527) class527).anInt7020]));
+	static final void method7210(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7001 -= 1918006146;
+		if ((((CS2Executor) class527).aLongArray7003[1820448321 * ((CS2Executor) class527).anInt7001 + 1]) == (((CS2Executor) class527).aLongArray7003[1820448321 * ((CS2Executor) class527).anInt7001]))
+			((CS2Executor) class527).anInt7020 += (-1051529003 * (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]));
 	}
 }

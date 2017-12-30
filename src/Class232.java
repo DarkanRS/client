@@ -75,15 +75,15 @@ public class Class232 implements Interface17 {
 		return new Class232(is);
 	}
 
-	static final void method3918(Class527 class527, byte i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
-		Class98 class98 = ((Class513) class513).aClass98_5885;
+	static final void method3918(CS2Executor class527, byte i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class511.method8754(class118, class98, class527, 1449946769);
 	}
 
-	static final void method3919(Class527 class527, int i) {
-		Class291_Sub1.aBool8027 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+	static final void method3919(CS2Executor class527, int i) {
+		Class291_Sub1.aBool8027 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
 	}
 
 	static final void method3920(int i, int i_12_) {
@@ -116,14 +116,14 @@ public class Class232 implements Interface17 {
 		}
 	}
 
-	static final void method3921(Class527 class527, int i) {
+	static final void method3921(CS2Executor class527, int i) {
 		Class184 class184 = Class468_Sub20.method12807(-1070075874);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4591, class184.aClass432_2283, 1590511706);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
 		int i_17_ = -1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(1);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(((Class527) class527).aClass346_7009.anInt4048 * -624100047, 1417031095);
-		((Class527) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, ((Class527) class527).aClass346_7009.anIntArray4046, -245952501);
+		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(((CS2Executor) class527).aClass346_7009.anInt4048 * -624100047, 1417031095);
+		((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, ((CS2Executor) class527).aClass346_7009.anIntArray4046, -245952501);
 		class282_sub23.aClass282_Sub35_Sub2_7682.method13061((class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291 - i_17_), 1096626300);
 		class184.method3049(class282_sub23, 363864337);
 	}

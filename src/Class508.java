@@ -154,17 +154,17 @@ public class Class508 implements Runnable {
 		}
 	}
 
-	static final void method8735(Class527 class527, byte i) {
-		Class513 class513;
-		if (((Class527) class527).aBool7022) {
+	static final void method8735(CS2Executor class527, byte i) {
+		UnderlayDefinition class513;
+		if (((CS2Executor) class527).aBool7022) {
 			if (i <= 1)
 				return;
-			class513 = ((Class527) class527).aClass513_6994;
+			class513 = ((CS2Executor) class527).aClass513_6994;
 		} else
-			class513 = ((Class527) class527).aClass513_7007;
-		Class513 class513_0_ = class513;
-		Class118 class118 = ((Class513) class513_0_).aClass118_5886;
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1453 * 1762983005;
+			class513 = ((CS2Executor) class527).aClass513_7007;
+		UnderlayDefinition class513_0_ = class513;
+		Class118 class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1453 * 1762983005;
 	}
 
 	public static void method8736(String string, boolean bool, boolean bool_1_, String string_2_, boolean bool_3_, boolean bool_4_, byte i) {

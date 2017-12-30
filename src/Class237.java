@@ -57,7 +57,7 @@ final class Class237 implements Interface45 {
 		/* empty */
 	}
 
-	static final void method3987(Class118 class118, Class98 class98, Class527 class527, int i) {
+	static final void method3987(Class118 class118, Class98 class98, CS2Executor class527, int i) {
 		class118.anInt1329 = 1769250231;
 		class118.anInt1330 = -1183558903 * client.anInt7315;
 		class118.anInt1339 = 0;
@@ -65,11 +65,11 @@ final class Class237 implements Interface45 {
 			Class92.method1565(class118.anInt1287 * -1952846363, -1355203883);
 	}
 
-	static final void method3988(Class527 class527, byte i) {
+	static final void method3988(CS2Executor class527, byte i) {
 		if (Class96_Sub21.aClass199_9438.method3236(86, -1402541861))
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static boolean method3989(int i, byte i_21_) {

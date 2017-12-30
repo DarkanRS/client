@@ -131,7 +131,7 @@ public final class Class464 {
 						method7743(class118.aClass118Array1439, class118.anInt1287 * -1952846363, (byte) 10);
 					Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.anInt1287))));
 					if (class282_sub44 != null)
-						Class513.method8777((587626901 * class282_sub44.anInt8063), (byte) -57);
+						UnderlayDefinition.method8777((587626901 * class282_sub44.anInt8063), (byte) -57);
 				}
 				if (-2131393857 * class118.anInt1268 == 6 && 1241177935 * class118.anInt1321 != -1) {
 					if (class118.aClass456_1437 == null) {
@@ -145,7 +145,7 @@ public final class Class464 {
 		}
 	}
 
-	static final void method7744(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = -704900783 * Class9.anInt94;
+	static final void method7744(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -704900783 * Class9.anInt94;
 	}
 }

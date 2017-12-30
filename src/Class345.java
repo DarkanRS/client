@@ -152,7 +152,7 @@ public class Class345 {
 		if (class345 != null) {
 			return class345;
 		}
-		byte[] is = aClass317_4021.method5607(1, i, -1783914740);
+		byte[] is = aClass317_4021.getFile(1, i, -1783914740);
 		class345 = new Class345();
 		class345.anInt4032 = i * -113116309;
 		if (is != null) {
@@ -297,32 +297,32 @@ public class Class345 {
 		return class442;
 	}
 
-	static final void method6138(Class527 class527, int i) {
-		Class513 class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
+	static final void method6138(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = class513.aClass118_5886;
 		Class282.method5001(class118, class527, -1847769999);
 	}
 
-	static final void method6139(Class527 class527, int i) {
+	static final void method6139(CS2Executor class527, int i) {
 		long l = (class527.aLongArray7003[((class527.anInt7001 -= -1188480575) * 1820448321)]);
-		class527.anObjectArray7019[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = -1L == l ? "" : Long.toString(l, 36).toUpperCase();
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = -1L == l ? "" : Long.toString(l, 36).toUpperCase();
 	}
 
 	public static boolean method6140(int i) {
 		return 0 != Class148.anInt1730 * -1423242349;
 	}
 
-	static final void method6141(Class527 class527, int i) {
-		int i_12_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method6141(CS2Executor class527, int i) {
+		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_12_, (byte) 94);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_12_ >> 16];
 		Class453.method7547(class118, class98, class527, 1462639259);
 	}
 
-	static final void method6142(Class527 class527, int i) {
-		int i_13_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method6142(CS2Executor class527, int i) {
+		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_13_, (byte) 30);
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 442725395 * class118.anInt1277;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 442725395 * class118.anInt1277;
 	}
 
 	static void method6143(int i, int i_14_) {

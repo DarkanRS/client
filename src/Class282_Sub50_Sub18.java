@@ -76,7 +76,7 @@ public class Class282_Sub50_Sub18 extends Class282_Sub50 implements Interface46 
 		}
 	}
 
-	static final void method15696(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class84.myPlayer.aClass238_10558 != null) && (Class84.myPlayer.aClass238_10558.aBool2929)) ? 1 : 0;
+	static final void method15696(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Class84.myPlayer.aClass238_10558 != null) && (Class84.myPlayer.aClass238_10558.aBool2929)) ? 1 : 0;
 	}
 }

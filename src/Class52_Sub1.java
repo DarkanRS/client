@@ -117,15 +117,15 @@ public class Class52_Sub1 extends Class52 {
 		Class316.aClass505_3680.method8430(i - 1, 1 + i_12_, 2 + 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093, 0, 0);
 	}
 
-	static final void method14491(Class527 class527, byte i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class48_Sub2.aByte9263;
+	static final void method14491(CS2Executor class527, byte i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class48_Sub2.aByte9263;
 	}
 
-	static final void method14492(Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 283782002;
-		int i_13_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]);
-		int i_14_ = (((Class527) class527).anIntArray6999[1 + ((Class527) class527).anInt7012 * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_13_, -1207119465).anIntArray9747[i_14_]);
+	static final void method14492(CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 283782002;
+		int i_13_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
+		int i_14_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_13_, -1207119465).anIntArray9747[i_14_]);
 	}
 
 	static Class158_Sub2_Sub3 method14493(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_15_, int i_16_) {

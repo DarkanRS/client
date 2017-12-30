@@ -71,14 +71,14 @@ public class Class366 implements Interface3 {
 		return new Class365(i_9_, class356, class353, i_10_, i_11_, i_12_, i_13_, i_14_, i_15_, i_16_, bool);
 	}
 
-	static final void method6304(Class527 class527, int i) {
-		int i_17_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class368.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
+	static final void method6304(CS2Executor class527, int i) {
+		int i_17_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class368.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
 	}
 
-	static final void method6305(Class527 class527, int i) {
-		Class513 class513 = (((Class527) class527).aBool7022 ? ((Class527) class527).aClass513_6994 : ((Class527) class527).aClass513_7007);
-		Class118 class118 = ((Class513) class513).aClass118_5886;
+	static final void method6305(CS2Executor class527, int i) {
+		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class475.method7927(class118, class527, (byte) -27);
 	}
 }

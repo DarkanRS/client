@@ -318,8 +318,8 @@ public class Class461 {
 		}
 	}
 
-	static final void method7704(Class527 class527, int i) {
-		Class521_Sub1_Sub4_Sub2.method16088((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]), (byte) 1);
+	static final void method7704(CS2Executor class527, int i) {
+		Class521_Sub1_Sub4_Sub2.method16088((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), (byte) 1);
 	}
 
 	static byte method7705(int i, int i_39_, byte i_40_) {

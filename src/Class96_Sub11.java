@@ -50,7 +50,7 @@ public class Class96_Sub11 extends Class96 {
 		client.aBool7321 = true;
 	}
 
-	static final void method14606(Class527 class527, int i) {
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (null == client.aClass118_7183 ? -1 : -1952846363 * client.aClass118_7183.anInt1287);
+	static final void method14606(CS2Executor class527, int i) {
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (null == client.aClass118_7183 ? -1 : -1952846363 * client.aClass118_7183.anInt1287);
 	}
 }

@@ -160,8 +160,8 @@ public class Class398 {
 		throw new Error();
 	}
 
-	static final void method6781(Class527 class527, int i) {
-		int i_12_ = (((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]);
-		((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_12_, 1029312854).anInt5065 * 1247220121);
+	static final void method6781(CS2Executor class527, int i) {
+		int i_12_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_12_, 1029312854).anInt5065 * 1247220121);
 	}
 }

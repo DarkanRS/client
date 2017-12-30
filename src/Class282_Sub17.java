@@ -31,18 +31,18 @@ public abstract class Class282_Sub17 extends Class282 {
 		return 0 == i || i == 2 || i == 7 || 6 == i;
 	}
 
-	static final void method12260(Class118 class118, Class98 class98, Class527 class527, int i) {
-		((Class527) class527).anInt7012 -= 567564004;
-		class118.anInt1297 = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537]) * -81350191;
-		class118.anInt1298 = ((((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 1]) * 2017388241);
+	static final void method12260(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+		((CS2Executor) class527).anInt7012 -= 567564004;
+		class118.anInt1297 = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) * -81350191;
+		class118.anInt1298 = ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]) * 2017388241);
 		class118.anInt1417 = 0;
 		class118.anInt1326 = 0;
-		int i_1_ = (((Class527) class527).anIntArray6999[((Class527) class527).anInt7012 * 1942118537 + 2]);
+		int i_1_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 2]);
 		if (i_1_ < 0)
 			i_1_ = 0;
 		else if (i_1_ > 4)
 			i_1_ = 4;
-		int i_2_ = (((Class527) class527).anIntArray6999[3 + ((Class527) class527).anInt7012 * 1942118537]);
+		int i_2_ = (((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		if (i_2_ < 0)
 			i_2_ = 0;
 		else if (i_2_ > 4)

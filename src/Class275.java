@@ -47,8 +47,8 @@ public class Class275 {
 		}
 	}
 
-	static final void method4889(Class527 class527, int i) {
-		String string = (String) (((Class527) class527).anObjectArray7019[(((Class527) class527).anInt7000 -= 1476624725) * 1806726141]);
+	static final void method4889(CS2Executor class527, int i) {
+		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		int i_0_ = 0;
 		if (Class115.method1950(string, -1586612370))
 			i_0_ = Class328.method5830(string, 1827486792);

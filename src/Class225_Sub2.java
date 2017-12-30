@@ -29,12 +29,12 @@ public class Class225_Sub2 extends Class225 {
 		/* empty */
 	}
 
-	static final void method12881(Class527 class527, int i) {
+	static final void method12881(CS2Executor class527, int i) {
 		if (null != Class58.aClass61_528) {
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
-			((Class527) class527).aClass61_7010 = Class58.aClass61_528;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			((CS2Executor) class527).aClass61_7010 = Class58.aClass61_528;
 		} else
-			((Class527) class527).anIntArray6999[((((Class527) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static void method12882(int i, int i_11_, int i_12_) {

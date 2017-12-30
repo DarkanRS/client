@@ -1678,16 +1678,16 @@ public class Class9 {
 		return Class15.method547(is, 1877842979);
 	}
 
-	static final void method451(Class527 class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub19_8204, ((class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -349576977);
+	static final void method451(CS2Executor class527, int i) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub19_8204, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -349576977);
 		Class94.method1589((short) 255);
 		client.aClass257_7353.method4435((byte) 1).method4048(-407830274);
 		Class190.method3148((byte) 90);
 		client.aBool7175 = false;
 	}
 
-	static final void method452(Class527 class527, byte i) {
-		int i_43_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method452(CS2Executor class527, byte i) {
+		int i_43_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_43_ != Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644)) {
 			if (i != 13) {
 				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub14_8211, i_43_, 1770678701);
@@ -1697,14 +1697,14 @@ public class Class9 {
 		}
 	}
 
-	static final void method453(Class527 class527, int i) {
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7189 ? 1 : 0;
+	static final void method453(CS2Executor class527, int i) {
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7189 ? 1 : 0;
 	}
 
-	static final void method454(Class527 class527, short i) {
-		int i_44_ = (class527.anIntArray6999[(class527.anInt7012 -= 141891001) * 1942118537]);
+	static final void method454(CS2Executor class527, short i) {
+		int i_44_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_44_, (byte) 4);
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
 	}
 
 	public static void method455(int i, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, byte i_51_) {

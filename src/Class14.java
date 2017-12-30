@@ -403,12 +403,12 @@ public class Class14 {
 		}
 	}
 
-	static final void method536(Class527 class527, byte i) {
+	static final void method536(CS2Executor class527, byte i) {
 		class527.anInt7012 -= 425673003;
-		int i_8_ = (class527.anIntArray6999[1942118537 * class527.anInt7012]);
-		int i_9_ = (class527.anIntArray6999[1 + 1942118537 * class527.anInt7012]);
-		int i_10_ = (class527.anIntArray6999[2 + 1942118537 * class527.anInt7012]);
-		String string = (String) (class527.anObjectArray7019[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		int i_8_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_9_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		int i_10_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (-1 == i_9_) {
 			throw new RuntimeException();
 		}
@@ -423,7 +423,7 @@ public class Class14 {
 		if (i_10_ < 0 || null == is || is.length <= i_10_) {
 			throw new RuntimeException();
 		}
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = is[i_10_];
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = is[i_10_];
 	}
 
 	static void method537(int i) {

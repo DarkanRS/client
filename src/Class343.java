@@ -105,14 +105,14 @@ public class Class343 {
 	}
 
 	public static Class343 method6093(Class317 class317, int i, int i_19_) {
-		byte[] is = class317.method5607(i, i_19_, -1279720965);
+		byte[] is = class317.getFile(i, i_19_, -1279720965);
 		if (is == null)
 			return null;
 		return new Class343(new RsByteBuffer(is));
 	}
 
 	public static Class343 method6094(Class317 class317, int i, int i_20_) {
-		byte[] is = class317.method5607(i, i_20_, -1576539296);
+		byte[] is = class317.getFile(i, i_20_, -1576539296);
 		if (is == null)
 			return null;
 		return new Class343(new RsByteBuffer(is));
@@ -140,14 +140,14 @@ public class Class343 {
 	}
 
 	public static Class343 method6096(Class317 class317, int i, int i_23_) {
-		byte[] is = class317.method5607(i, i_23_, -1706681173);
+		byte[] is = class317.getFile(i, i_23_, -1706681173);
 		if (is == null)
 			return null;
 		return new Class343(new RsByteBuffer(is));
 	}
 
 	public static Class343 method6097(Class317 class317, int i, int i_24_) {
-		byte[] is = class317.method5607(i, i_24_, -1673020566);
+		byte[] is = class317.getFile(i, i_24_, -1673020566);
 		if (is == null)
 			return null;
 		return new Class343(new RsByteBuffer(is));

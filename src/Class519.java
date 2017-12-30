@@ -63,11 +63,11 @@ public class Class519 {
 		}
 	}
 
-	static final void method11154(Class527 class527, int i) {
-		((Class527) class527).aClass346_7009 = new Class346();
-		((Class527) class527).aClass346_7009.anInt4048 = ((((Class527) class527).anIntArray6999[(((Class527) class527).anInt7012 -= 141891001) * 1942118537]) * -1506067503);
-		((Class527) class527).aClass346_7009.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(((((Class527) class527).aClass346_7009.anInt4048) * -624100047), -1711115203);
-		((Class527) class527).aClass346_7009.anIntArray4046 = new int[((Class527) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
+	static final void method11154(CS2Executor class527, int i) {
+		((CS2Executor) class527).aClass346_7009 = new Class346();
+		((CS2Executor) class527).aClass346_7009.anInt4048 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1506067503);
+		((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(((((CS2Executor) class527).aClass346_7009.anInt4048) * -624100047), -1711115203);
+		((CS2Executor) class527).aClass346_7009.anIntArray4046 = new int[((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
 	}
 
 	static void method11155(int i, int i_1_, int i_2_) {

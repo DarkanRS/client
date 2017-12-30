@@ -37,8 +37,8 @@ public class Class76 {
 		return (int) (Math.pow(2.0, d_4_) + 0.5);
 	}
 
-	static final void method1357(Class527 class527, byte i) {
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class96_Sub1.anInt8307 * -993852069;
+	static final void method1357(CS2Executor class527, byte i) {
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class96_Sub1.anInt8307 * -993852069;
 	}
 
 	public static String method1358(int i, byte i_5_) {
@@ -371,10 +371,10 @@ public class Class76 {
 		Class115.aClass160Array1248 = null;
 	}
 
-	static final void method1362(Class527 class527, int i) {
+	static final void method1362(CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
-		int i_26_ = (class527.anIntArray6999[1942118537 * class527.anInt7012]);
-		int i_27_ = (class527.anIntArray6999[1 + 1942118537 * class527.anInt7012]);
-		class527.anIntArray6999[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class368.aClass429_4265.method7214(i_26_, -2012754494).anIntArray9624[i_27_]);
+		int i_26_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_27_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class368.aClass429_4265.method7214(i_26_, -2012754494).anIntArray9624[i_27_]);
 	}
 }
