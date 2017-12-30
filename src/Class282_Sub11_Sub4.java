@@ -34,7 +34,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			class282_sub35.index -= -1115476867;
 			class282_sub35.readLong(1727926612);
 		}
-		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.method13090(422828400);
+		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.readNullString(422828400);
 		((Class282_Sub11_Sub4) this).anInt10216 = class282_sub35.readUnsignedShort() * 1097857565;
 		((Class282_Sub11_Sub4) this).aByte10217 = class282_sub35.readByte((short) -18284);
 		class282_sub35.readLong(2047516343);
@@ -45,7 +45,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			class282_sub35.index -= -1115476867;
 			class282_sub35.readLong(2073241783);
 		}
-		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.method13090(-145183646);
+		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.readNullString(-145183646);
 		((Class282_Sub11_Sub4) this).anInt10216 = class282_sub35.readUnsignedShort() * 1097857565;
 		((Class282_Sub11_Sub4) this).aByte10217 = class282_sub35.readByte((short) -29620);
 		class282_sub35.readLong(732799323);
@@ -56,7 +56,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			class282_sub35.index -= -1115476867;
 			class282_sub35.readLong(1508093198);
 		}
-		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.method13090(1154304204);
+		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.readNullString(1154304204);
 		((Class282_Sub11_Sub4) this).anInt10216 = class282_sub35.readUnsignedShort() * 1097857565;
 		((Class282_Sub11_Sub4) this).aByte10217 = class282_sub35.readByte((short) -6736);
 		class282_sub35.readLong(573713222);
@@ -67,7 +67,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			class282_sub35.index -= -1115476867;
 			class282_sub35.readLong(-130957944);
 		}
-		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.method13090(2004842633);
+		((Class282_Sub11_Sub4) this).aString10218 = class282_sub35.readNullString(2004842633);
 		((Class282_Sub11_Sub4) this).anInt10216 = class282_sub35.readUnsignedShort() * 1097857565;
 		((Class282_Sub11_Sub4) this).aByte10217 = class282_sub35.readByte((short) -13222);
 		class282_sub35.readLong(511730374);

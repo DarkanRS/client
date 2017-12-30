@@ -211,7 +211,7 @@ public class Class120 {
 	}
 
 	static final void method2093(CS2Executor class527, byte i) {
-		int i_9_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_9_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((NPC) ((CS2Executor) class527).animable).aClass153_10579.method2610(i_9_, (short) 25901);
 	}
 

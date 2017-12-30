@@ -36,7 +36,7 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3364(CS2Executor class527, int i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).anObjectArray7017[(((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709])]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).objectLocals[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
 	}
 
 	static final void method3365(Class118 class118, Class98 class98, CS2Executor class527, int i) {

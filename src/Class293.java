@@ -23,7 +23,7 @@ public class Class293 {
 	}
 
 	static final void method5202(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_0_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.method241(i_0_, 161109114);
 	}
 
@@ -37,7 +37,7 @@ public class Class293 {
 	static final void method5204(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		if ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) <= (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]))
-			((CS2Executor) class527).anInt7020 += ((((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]) * -1051529003);
+			((CS2Executor) class527).instrPtr += ((((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]) * -1051529003);
 	}
 
 	static final void method5205(CS2Executor class527, int i) {

@@ -169,7 +169,7 @@ public class Class281 {
 	}
 
 	static final void method4986(CS2Executor class527, int i) {
-		int i_18_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_18_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Player) ((CS2Executor) class527).animable).aClass155_10561.method2627(i_18_, -1165969492);
 	}
 

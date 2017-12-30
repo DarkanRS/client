@@ -21,7 +21,7 @@ public class Class6 {
 	static final void method298(CS2Executor class527, byte i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		if ((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]) >= (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]))
-			((CS2Executor) class527).anInt7020 += ((((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]) * -1051529003);
+			((CS2Executor) class527).instrPtr += ((((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]) * -1051529003);
 	}
 
 	static final void method299(CS2Executor class527, int i) {

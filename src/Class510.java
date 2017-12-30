@@ -25,11 +25,11 @@ public final class Class510 {
 		if (-1837903909 * ((CS2Executor) class527).anInt7002 != 0) {
 			Class509 class509 = (((CS2Executor) class527).aClass509Array7016[(((CS2Executor) class527).anInt7002 -= -72641453) * -1837903909]);
 			((CS2Executor) class527).current = ((Class509) class509).aClass282_Sub50_Sub5_5869;
-			((CS2Executor) class527).aClass522Array7005 = (((CS2Executor) class527).current.aClass522Array9521);
-			((CS2Executor) class527).anIntArray7018 = (((CS2Executor) class527).current.anIntArray9522);
-			((CS2Executor) class527).anInt7020 = ((Class509) class509).anInt5866 * -390085499;
-			((CS2Executor) class527).anIntArray6995 = ((Class509) class509).anIntArray5867;
-			((CS2Executor) class527).anObjectArray7017 = ((Class509) class509).anObjectArray5865;
+			((CS2Executor) class527).aClass522Array7005 = (((CS2Executor) class527).current.operations);
+			((CS2Executor) class527).unknown = (((CS2Executor) class527).current.intOpValues);
+			((CS2Executor) class527).instrPtr = ((Class509) class509).anInt5866 * -390085499;
+			((CS2Executor) class527).intLocals = ((Class509) class509).anIntArray5867;
+			((CS2Executor) class527).objectLocals = ((Class509) class509).anObjectArray5865;
 			((CS2Executor) class527).aLongArray6996 = ((Class509) class509).aLongArray5868;
 		}
 	}

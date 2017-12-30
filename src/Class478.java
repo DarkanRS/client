@@ -318,7 +318,7 @@ public class Class478 {
 		else if (249 == i) {
 			int i_26_ = class282_sub35.readUnsignedByte();
 			if (((Class478) this).aClass465_5668 == null) {
-				int i_27_ = Class323.method5778(i_26_, -1920576994);
+				int i_27_ = Class323.nextPowerOfTwo(i_26_, -1920576994);
 				((Class478) this).aClass465_5668 = new Class465(i_27_);
 			}
 			for (int i_28_ = 0; i_28_ < i_26_; i_28_++) {
@@ -1000,7 +1000,7 @@ public class Class478 {
 		else if (249 == i) {
 			int i_96_ = class282_sub35.readUnsignedByte();
 			if (((Class478) this).aClass465_5668 == null) {
-				int i_97_ = Class323.method5778(i_96_, 104760474);
+				int i_97_ = Class323.nextPowerOfTwo(i_96_, 104760474);
 				((Class478) this).aClass465_5668 = new Class465(i_97_);
 			}
 			for (int i_98_ = 0; i_98_ < i_96_; i_98_++) {

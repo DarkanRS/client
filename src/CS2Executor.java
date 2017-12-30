@@ -4,9 +4,9 @@
 
 public class CS2Executor {
 	UnderlayDefinition aClass513_6994;
-	int[] anIntArray6995;
+	int[] intLocals;
 	long[] aLongArray6996;
-	int[] anIntArray6997 = new int[5];
+	int[] globalArrayLengths = new int[5];
 	int[][] globalArrays = new int[5][5000];
 	int[] intStack = new int[1000];
 	int anInt7000;
@@ -14,7 +14,7 @@ public class CS2Executor {
 	int anInt7002;
 	long[] aLongArray7003;
 	int anInt7004;
-	Class522[] aClass522Array7005;
+	CS2Operation[] aClass522Array7005;
 	Animable animable;
 	UnderlayDefinition aClass513_7007;
 	Class191 aClass191_7008;
@@ -26,10 +26,10 @@ public class CS2Executor {
 	Class521_Sub1_Sub2_Sub1 aClass521_Sub1_Sub2_Sub1_7014;
 	int anInt7015;
 	Class509[] aClass509Array7016;
-	Object[] anObjectArray7017;
-	int[] anIntArray7018;
+	Object[] objectLocals;
+	int[] unknown;
 	Object[] objectStack = new Object[1000];
-	int anInt7020;
+	int instrPtr;
 	CS2Script current;
 	boolean aBool7022;
 
@@ -42,7 +42,7 @@ public class CS2Executor {
 		((CS2Executor) this).aClass513_7007 = new UnderlayDefinition();
 		((CS2Executor) this).aClass513_6994 = new UnderlayDefinition();
 		((CS2Executor) this).anInt7015 = 0;
-		((CS2Executor) this).anInt7020 = 1051529003;
+		((CS2Executor) this).instrPtr = 1051529003;
 	}
 
 	static final void method11250(int i, int i_0_, int i_1_, int i_2_, int i_3_) {

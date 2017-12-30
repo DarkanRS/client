@@ -20,7 +20,7 @@ public class Class445 {
 	}
 
 	static final void method7428(CS2Executor class527, byte i) {
-		int i_0_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_0_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((Player) ((CS2Executor) class527).animable).aClass155_10561.method2626(i_0_, (byte) 56);
 	}
 

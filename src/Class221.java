@@ -37,7 +37,7 @@ public class Class221 {
 	}
 
 	static final void method3747(CS2Executor class527, int i) {
-		int i_1_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_1_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		Long var_long = (Long) Class46.anObjectArray437[i_1_];
 		if (var_long == null)
 			((CS2Executor) class527).aLongArray7003[((((CS2Executor) class527).anInt7001 += -1188480575) * 1820448321 - 1)] = -1L;

@@ -1280,9 +1280,9 @@ public abstract class Class505 {
 		int i_632_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]);
 		int i_633_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]);
 		((CS2Executor) class527).anInt7012 -= 425673003;
-		if (i_631_ > ((CS2Executor) class527).anIntArray6997[i_632_])
+		if (i_631_ > ((CS2Executor) class527).globalArrayLengths[i_632_])
 			throw new RuntimeException();
-		if (i_631_ > ((CS2Executor) class527).anIntArray6997[i_633_])
+		if (i_631_ > ((CS2Executor) class527).globalArrayLengths[i_633_])
 			throw new RuntimeException();
 		if (i_632_ == i_633_)
 			throw new RuntimeException();

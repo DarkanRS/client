@@ -71,7 +71,7 @@ public class Class334 {
 			((Class334) this).aClass160_3910 = null;
 			return false;
 		}
-		int i_8_ = Class323.method5778(((Class334) this).anInt3899, -191000314);
+		int i_8_ = Class323.nextPowerOfTwo(((Class334) this).anInt3899, -191000314);
 		if (i_8_ > i_3_)
 			i_8_ = Class51.method1072(i_3_, 1488609644);
 		if (i_8_ > 512)
@@ -466,7 +466,7 @@ public class Class334 {
 			((Class334) this).aClass160_3910 = null;
 			return false;
 		}
-		int i_111_ = Class323.method5778(((Class334) this).anInt3899, -865930132);
+		int i_111_ = Class323.nextPowerOfTwo(((Class334) this).anInt3899, -865930132);
 		if (i_111_ > i_106_)
 			i_111_ = Class51.method1072(i_106_, 1618321466);
 		if (i_111_ > 512)
@@ -511,7 +511,7 @@ public class Class334 {
 			((Class334) this).aClass160_3910 = null;
 			return false;
 		}
-		int i_119_ = Class323.method5778(((Class334) this).anInt3899, -230673920);
+		int i_119_ = Class323.nextPowerOfTwo(((Class334) this).anInt3899, -230673920);
 		if (i_119_ > i_114_)
 			i_119_ = Class51.method1072(i_114_, 684073149);
 		if (i_119_ > 512)

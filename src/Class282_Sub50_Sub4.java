@@ -9,7 +9,7 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 		if (249 == i) {
 			int i_1_ = class282_sub35.readUnsignedByte();
 			if (((Class282_Sub50_Sub4) this).aClass465_9518 == null) {
-				int i_2_ = Class323.method5778(i_1_, -1925062571);
+				int i_2_ = Class323.nextPowerOfTwo(i_1_, -1925062571);
 				((Class282_Sub50_Sub4) this).aClass465_9518 = new Class465(i_2_);
 			}
 			for (int i_3_ = 0; i_3_ < i_1_; i_3_++) {
@@ -86,7 +86,7 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 		if (249 == i) {
 			int i_9_ = class282_sub35.readUnsignedByte();
 			if (((Class282_Sub50_Sub4) this).aClass465_9518 == null) {
-				int i_10_ = Class323.method5778(i_9_, 781797865);
+				int i_10_ = Class323.nextPowerOfTwo(i_9_, 781797865);
 				((Class282_Sub50_Sub4) this).aClass465_9518 = new Class465(i_10_);
 			}
 			for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
@@ -110,7 +110,7 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 		if (249 == i) {
 			int i_13_ = class282_sub35.readUnsignedByte();
 			if (((Class282_Sub50_Sub4) this).aClass465_9518 == null) {
-				int i_14_ = Class323.method5778(i_13_, -280894682);
+				int i_14_ = Class323.nextPowerOfTwo(i_13_, -280894682);
 				((Class282_Sub50_Sub4) this).aClass465_9518 = new Class465(i_14_);
 			}
 			for (int i_15_ = 0; i_15_ < i_13_; i_15_++) {
@@ -157,7 +157,7 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 		if (249 == i) {
 			int i_19_ = class282_sub35.readUnsignedByte();
 			if (((Class282_Sub50_Sub4) this).aClass465_9518 == null) {
-				int i_20_ = Class323.method5778(i_19_, -1810445264);
+				int i_20_ = Class323.nextPowerOfTwo(i_19_, -1810445264);
 				((Class282_Sub50_Sub4) this).aClass465_9518 = new Class465(i_20_);
 			}
 			for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {

@@ -343,7 +343,7 @@ public final class Class203 {
 	}
 
 	static final void method3355(CS2Executor class527, int i) {
-		int i_68_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_68_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		String string = (String) Class46.anObjectArray437[i_68_];
 		if (null == string)
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";

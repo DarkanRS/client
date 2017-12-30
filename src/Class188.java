@@ -512,7 +512,7 @@ public class Class188 {
 	}
 
 	static final void method3138(CS2Executor class527, int i) {
-		((CS2Executor) class527).anIntArray6995[(((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020])] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		((CS2Executor) class527).intLocals[(((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr])] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 	}
 
 	public static void method3139(Class505 class505, Class317 class317, int i) {

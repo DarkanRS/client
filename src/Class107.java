@@ -236,8 +236,8 @@ public class Class107 {
 		if (null == class282_sub50_sub5)
 			Class282_Sub50_Sub17.method15509(282059094);
 		else {
-			((CS2Executor) class527).anIntArray6995 = new int[class282_sub50_sub5.nIntLocals * 693687803];
-			((CS2Executor) class527).anObjectArray7017 = new Object[1886892247 * class282_sub50_sub5.nObjectLocals];
+			((CS2Executor) class527).intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
+			((CS2Executor) class527).objectLocals = new Object[1886892247 * class282_sub50_sub5.stringLocalsCount];
 			if (Class397.aClass397_4797 == class282_sub50_sub5.aClass397_9527 || (Class397.aClass397_4805 == class282_sub50_sub5.aClass397_9527) || (Class397.aClass397_4798 == class282_sub50_sub5.aClass397_9527)) {
 				int i_31_ = 0;
 				int i_32_ = 0;
@@ -245,10 +245,10 @@ public class Class107 {
 					i_31_ = (597157617 * Class282_Sub20_Sub24.aClass118_9884.anInt1299);
 					i_32_ = (198275475 * Class282_Sub20_Sub24.aClass118_9884.anInt1428);
 				}
-				((CS2Executor) class527).anIntArray6995[0] = Class163.aClass209_2031.method3569(2102959757) - i_31_;
-				((CS2Executor) class527).anIntArray6995[1] = Class163.aClass209_2031.method3570(756095591) - i_32_;
+				((CS2Executor) class527).intLocals[0] = Class163.aClass209_2031.method3569(2102959757) - i_31_;
+				((CS2Executor) class527).intLocals[1] = Class163.aClass209_2031.method3570(756095591) - i_32_;
 			} else if (Class397.aClass397_4806 == class282_sub50_sub5.aClass397_9527)
-				((CS2Executor) class527).anIntArray6995[0] = ((CS2Executor) class527).anInt7004 * -945484741;
+				((CS2Executor) class527).intLocals[0] = ((CS2Executor) class527).anInt7004 * -945484741;
 			Class51.method1068(class282_sub50_sub5, 200000, class527, 223631814);
 		}
 	}

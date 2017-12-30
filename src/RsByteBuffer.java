@@ -206,7 +206,7 @@ public class RsByteBuffer extends Class282 {
 		return l;
 	}
 
-	public String method13090(int i) {
+	public String readNullString(int i) {
 		if (buffer[-1990677291 * index] == 0) {
 			index += -1115476867;
 			return null;

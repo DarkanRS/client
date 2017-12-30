@@ -186,7 +186,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, i, i_8_, bool, fs, i_9_, i_10_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, i, i_8_, fs, i_9_, i_10_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_758, Class323.method5778(i, 258691248), Class323.method5778(i_8_, 787226616));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_758, Class323.nextPowerOfTwo(i, 258691248), Class323.nextPowerOfTwo(i_8_, 787226616));
 		class319_sub2.method14494(0, 0, i, i_8_, fs, class150, i_9_, i_10_);
 		return class319_sub2;
 	}
@@ -576,7 +576,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, i, i_35_, bool, fs, i_36_, i_37_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, i, i_35_, fs, i_36_, i_37_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_758, Class323.method5778(i, 1029457431), Class323.method5778(i_35_, 411015837));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_758, Class323.nextPowerOfTwo(i, 1029457431), Class323.nextPowerOfTwo(i_35_, 411015837));
 		class319_sub2.method14494(0, 0, i, i_35_, fs, class150, i_36_, i_37_);
 		return class319_sub2;
 	}
@@ -586,7 +586,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, class76, i, i_38_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, class76, i, i_38_);
-		return new Class319_Sub2(this, class150, class76, Class323.method5778(i, -509744092), Class323.method5778(i_38_, 139344255));
+		return new Class319_Sub2(this, class150, class76, Class323.nextPowerOfTwo(i, -509744092), Class323.nextPowerOfTwo(i_38_, 139344255));
 	}
 
 	Interface31 method14034(int i, boolean bool, int[][] is) {
@@ -1880,7 +1880,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, i, i_131_, bool, is, i_132_, i_133_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, i, i_131_, is, i_132_, i_133_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_751, Class323.method5778(i, -1427498963), Class323.method5778(i_131_, -1153726914));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_751, Class323.nextPowerOfTwo(i, -1427498963), Class323.nextPowerOfTwo(i_131_, -1153726914));
 		class319_sub2.method52(0, 0, i, i_131_, is, class150, i_132_, i_133_);
 		return class319_sub2;
 	}
@@ -1890,7 +1890,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, i, i_134_, bool, fs, i_135_, i_136_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, i, i_134_, fs, i_135_, i_136_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_758, Class323.method5778(i, 86710193), Class323.method5778(i_134_, -962187680));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_758, Class323.nextPowerOfTwo(i, 86710193), Class323.nextPowerOfTwo(i_134_, -962187680));
 		class319_sub2.method14494(0, 0, i, i_134_, fs, class150, i_135_, i_136_);
 		return class319_sub2;
 	}
@@ -1909,7 +1909,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, i, i_137_, bool, is, i_138_, i_139_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, i, i_137_, is, i_138_, i_139_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Class323.method5778(i, -1060363007), Class323.method5778(i_137_, -1282480778));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Class323.nextPowerOfTwo(i, -1060363007), Class323.nextPowerOfTwo(i_137_, -1282480778));
 		class319_sub2.method48(0, 0, i, i_137_, is, i_138_, i_139_);
 		return class319_sub2;
 	}
@@ -1919,7 +1919,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, i, i_140_, bool, is, i_141_, i_142_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, i, i_140_, is, i_141_, i_142_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Class323.method5778(i, 1023785634), Class323.method5778(i_140_, -747639178));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Class323.nextPowerOfTwo(i, 1023785634), Class323.nextPowerOfTwo(i_140_, -747639178));
 		class319_sub2.method48(0, 0, i, i_140_, is, i_141_, i_142_);
 		return class319_sub2;
 	}
@@ -1959,7 +1959,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, class76, i, i_150_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, class76, i, i_150_);
-		return new Class319_Sub2(this, class150, class76, Class323.method5778(i, 2046359812), Class323.method5778(i_150_, -1483303534));
+		return new Class319_Sub2(this, class150, class76, Class323.nextPowerOfTwo(i, 2046359812), Class323.nextPowerOfTwo(i_150_, -1483303534));
 	}
 
 	Interface29 method14148(Class150 class150, Class76 class76, int i, int i_151_) {
@@ -1967,7 +1967,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, class76, i, i_151_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, class76, i, i_151_);
-		return new Class319_Sub2(this, class150, class76, Class323.method5778(i, 622988125), Class323.method5778(i_151_, -1774275791));
+		return new Class319_Sub2(this, class150, class76, Class323.nextPowerOfTwo(i, 622988125), Class323.nextPowerOfTwo(i_151_, -1774275791));
 	}
 
 	Interface29 method14149(Class150 class150, Class76 class76, int i, int i_152_) {
@@ -1975,7 +1975,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, class76, i, i_152_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, class76, i, i_152_);
-		return new Class319_Sub2(this, class150, class76, Class323.method5778(i, -196167688), Class323.method5778(i_152_, -1962177193));
+		return new Class319_Sub2(this, class150, class76, Class323.nextPowerOfTwo(i, -196167688), Class323.nextPowerOfTwo(i_152_, -1962177193));
 	}
 
 	public void method14153() {
@@ -2080,7 +2080,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, class150, i, i_160_, bool, is, i_161_, i_162_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, class150, i, i_160_, is, i_161_, i_162_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_751, Class323.method5778(i, -1588026691), Class323.method5778(i_160_, 191823312));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, class150, Class76.aClass76_751, Class323.nextPowerOfTwo(i, -1588026691), Class323.nextPowerOfTwo(i_160_, 191823312));
 		class319_sub2.method52(0, 0, i, i_160_, is, class150, i_161_, i_162_);
 		return class319_sub2;
 	}
@@ -2607,7 +2607,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			return new Class319_Sub2(this, i, i_200_, bool, is, i_201_, i_202_);
 		if (((Class505_Sub2_Sub1) this).aBool10194)
 			return new Class319_Sub3(this, i, i_200_, is, i_201_, i_202_);
-		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Class323.method5778(i, -874037324), Class323.method5778(i_200_, -2104244422));
+		Class319_Sub2 class319_sub2 = new Class319_Sub2(this, Class150.aClass150_1949, Class76.aClass76_751, Class323.nextPowerOfTwo(i, -874037324), Class323.nextPowerOfTwo(i_200_, -2104244422));
 		class319_sub2.method48(0, 0, i, i_200_, is, i_201_, i_202_);
 		return class319_sub2;
 	}

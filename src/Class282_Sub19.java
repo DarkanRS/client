@@ -191,7 +191,7 @@ public class Class282_Sub19 extends Class282 {
 		if (((Class282_Sub19) this).anInt7640 > 0) {
 			((Class282_Sub19) this).aClass282_Sub35_7655 = new RsByteBuffer(((Class282_Sub19) this).anInt7640 * 2);
 			((Class282_Sub19) this).aClass282_Sub35_Sub1_7651 = new Class282_Sub35_Sub1(((Class282_Sub19) this).anInt7640 * 16);
-			((Class282_Sub19) this).aClass453_7657 = new Class453(Class323.method5778((((Class282_Sub19) this).anInt7640), 1055590190));
+			((Class282_Sub19) this).aClass453_7657 = new Class453(Class323.nextPowerOfTwo((((Class282_Sub19) this).anInt7640), 1055590190));
 			int i_46_ = 0;
 			i_40_ = 0;
 			for (int i_47_ = ((Class282_Sub19) this).anInt7644; i_47_ <= ((Class282_Sub19) this).anInt7656; i_47_++) {

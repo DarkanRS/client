@@ -53,7 +53,7 @@ final class Class512 implements Runnable {
 	}
 
 	static final void method8763(CS2Executor class527, int i) {
-		int i_8_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_8_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		Class158_Sub1.aClass3_8507.method280(i_8_, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), -1160393570);
 	}
 }

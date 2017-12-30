@@ -141,7 +141,7 @@ public class Class220 {
 		} else if (i == 249) {
 			int i_9_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
-				int i_10_ = Class323.method5778(i_9_, -417308135);
+				int i_10_ = Class323.nextPowerOfTwo(i_9_, -417308135);
 				((Class220) this).aClass465_2737 = new Class465(i_10_);
 			}
 			for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
@@ -271,7 +271,7 @@ public class Class220 {
 		} else if (i == 249) {
 			int i_22_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
-				int i_23_ = Class323.method5778(i_22_, 252941044);
+				int i_23_ = Class323.nextPowerOfTwo(i_22_, 252941044);
 				((Class220) this).aClass465_2737 = new Class465(i_23_);
 			}
 			for (int i_24_ = 0; i_24_ < i_22_; i_24_++) {
@@ -403,7 +403,7 @@ public class Class220 {
 		} else if (i == 249) {
 			int i_35_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
-				int i_36_ = Class323.method5778(i_35_, -755057342);
+				int i_36_ = Class323.nextPowerOfTwo(i_35_, -755057342);
 				((Class220) this).aClass465_2737 = new Class465(i_36_);
 			}
 			for (int i_37_ = 0; i_37_ < i_35_; i_37_++) {
@@ -518,7 +518,7 @@ public class Class220 {
 		} else if (i == 249) {
 			int i_45_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
-				int i_46_ = Class323.method5778(i_45_, 1981350800);
+				int i_46_ = Class323.nextPowerOfTwo(i_45_, 1981350800);
 				((Class220) this).aClass465_2737 = new Class465(i_46_);
 			}
 			for (int i_47_ = 0; i_47_ < i_45_; i_47_++) {
@@ -610,7 +610,7 @@ public class Class220 {
 		} else if (i == 249) {
 			int i_55_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
-				int i_56_ = Class323.method5778(i_55_, -1519463774);
+				int i_56_ = Class323.nextPowerOfTwo(i_55_, -1519463774);
 				((Class220) this).aClass465_2737 = new Class465(i_56_);
 			}
 			for (int i_57_ = 0; i_57_ < i_55_; i_57_++) {
@@ -851,7 +851,7 @@ public class Class220 {
 	static final void method3737(CS2Executor class527, short i) {
 		if ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 0) {
 			if (i < 2048)
-				((CS2Executor) class527).anInt7020 += (-1051529003 * (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]));
+				((CS2Executor) class527).instrPtr += (-1051529003 * (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]));
 		}
 	}
 

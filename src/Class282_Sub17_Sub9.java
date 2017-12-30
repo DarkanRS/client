@@ -20,7 +20,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub9) this).aLong10046 = (class282_sub35.readLong(190708592) * -3261396651546806203L);
 		}
-		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.method13090(1081683034);
+		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.readNullString(1081683034);
 		((Class282_Sub17_Sub9) this).anInt10044 = class282_sub35.readUnsignedShort() * -643750647;
 	}
 
@@ -33,7 +33,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub9) this).aLong10046 = (class282_sub35.readLong(1103302515) * -3261396651546806203L);
 		}
-		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.method13090(-140462004);
+		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.readNullString(-140462004);
 		((Class282_Sub17_Sub9) this).anInt10044 = class282_sub35.readUnsignedShort() * -643750647;
 	}
 
@@ -42,7 +42,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub9) this).aLong10046 = (class282_sub35.readLong(1812970180) * -3261396651546806203L);
 		}
-		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.method13090(2086307282);
+		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.readNullString(2086307282);
 		((Class282_Sub17_Sub9) this).anInt10044 = class282_sub35.readUnsignedShort() * -643750647;
 	}
 
@@ -71,7 +71,7 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub9) this).aLong10046 = (class282_sub35.readLong(1495645552) * -3261396651546806203L);
 		}
-		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.method13090(288410826);
+		((Class282_Sub17_Sub9) this).aString10045 = class282_sub35.readNullString(288410826);
 		((Class282_Sub17_Sub9) this).anInt10044 = class282_sub35.readUnsignedShort() * -643750647;
 	}
 

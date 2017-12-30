@@ -122,7 +122,7 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	static final void method12804(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 	}
 
 	static short[][] method12805(float[][] fs, short[][] is, int i) {

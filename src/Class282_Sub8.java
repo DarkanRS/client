@@ -173,7 +173,7 @@ public class Class282_Sub8 extends Class282 {
 				i_41_ += (((Class282_Sub8) this).anInt7527 - ((Class282_Sub8) this).anInt7531);
 		}
 		if (((Class282_Sub8) this).anInt7532 > 0) {
-			((Class282_Sub8) this).aClass453_7537 = new Class453(Class323.method5778((((Class282_Sub8) this).anInt7532), 1669854752));
+			((Class282_Sub8) this).aClass453_7537 = new Class453(Class323.nextPowerOfTwo((((Class282_Sub8) this).anInt7532), 1669854752));
 			ByteBuffer bytebuffer = ((Class282_Sub8) this).aClass505_Sub2_7533.aByteBuffer8838;
 			bytebuffer.clear();
 			bytebuffer.position(2097152);

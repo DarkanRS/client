@@ -159,7 +159,7 @@ public class Class511 {
 	static final void method8749(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		if ((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]) < (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]))
-			((CS2Executor) class527).anInt7020 += ((((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]) * -1051529003);
+			((CS2Executor) class527).instrPtr += ((((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]) * -1051529003);
 	}
 
 	static final void method8750(CS2Executor class527, int i) {

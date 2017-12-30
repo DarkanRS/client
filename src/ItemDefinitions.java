@@ -379,7 +379,7 @@ public class ItemDefinitions implements Interface46 {
 		else if (249 == i) {
 			int i_29_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
-				int i_30_ = Class323.method5778(i_29_, -1837166011);
+				int i_30_ = Class323.nextPowerOfTwo(i_29_, -1837166011);
 				((ItemDefinitions) this).aClass465_5040 = new Class465(i_30_);
 			}
 			for (int i_31_ = 0; i_31_ < i_29_; i_31_++) {
@@ -1028,7 +1028,7 @@ public class ItemDefinitions implements Interface46 {
 		else if (249 == i) {
 			int i_92_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
-				int i_93_ = Class323.method5778(i_92_, 514687479);
+				int i_93_ = Class323.nextPowerOfTwo(i_92_, 514687479);
 				((ItemDefinitions) this).aClass465_5040 = new Class465(i_93_);
 			}
 			for (int i_94_ = 0; i_94_ < i_92_; i_94_++) {
@@ -1192,7 +1192,7 @@ public class ItemDefinitions implements Interface46 {
 		else if (249 == i) {
 			int i_104_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
-				int i_105_ = Class323.method5778(i_104_, -726832861);
+				int i_105_ = Class323.nextPowerOfTwo(i_104_, -726832861);
 				((ItemDefinitions) this).aClass465_5040 = new Class465(i_105_);
 			}
 			for (int i_106_ = 0; i_106_ < i_104_; i_106_++) {
@@ -1840,7 +1840,7 @@ public class ItemDefinitions implements Interface46 {
 		else if (249 == i) {
 			int i_185_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
-				int i_186_ = Class323.method5778(i_185_, -1794749228);
+				int i_186_ = Class323.nextPowerOfTwo(i_185_, -1794749228);
 				((ItemDefinitions) this).aClass465_5040 = new Class465(i_186_);
 			}
 			for (int i_187_ = 0; i_187_ < i_185_; i_187_++) {

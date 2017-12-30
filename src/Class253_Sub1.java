@@ -61,7 +61,7 @@ public class Class253_Sub1 extends Class253 {
 			((Class253_Sub1) this).anInt7823 = i;
 		} catch (LineUnavailableException lineunavailableexception) {
 			if (Class179.method3019(i, (short) 20963) != 1)
-				method4361(Class323.method5778(i, -434850036));
+				method4361(Class323.nextPowerOfTwo(i, -434850036));
 			else {
 				((Class253_Sub1) this).aSourceDataLine7822 = null;
 				throw lineunavailableexception;
@@ -115,7 +115,7 @@ public class Class253_Sub1 extends Class253 {
 			((Class253_Sub1) this).anInt7823 = i;
 		} catch (LineUnavailableException lineunavailableexception) {
 			if (Class179.method3019(i, (short) 25372) != 1)
-				method4361(Class323.method5778(i, 857284767));
+				method4361(Class323.nextPowerOfTwo(i, 857284767));
 			else {
 				((Class253_Sub1) this).aSourceDataLine7822 = null;
 				throw lineunavailableexception;
@@ -166,7 +166,7 @@ public class Class253_Sub1 extends Class253 {
 			((Class253_Sub1) this).anInt7823 = i;
 		} catch (LineUnavailableException lineunavailableexception) {
 			if (Class179.method3019(i, (short) 564) != 1)
-				method4361(Class323.method5778(i, 1147493644));
+				method4361(Class323.nextPowerOfTwo(i, 1147493644));
 			else {
 				((Class253_Sub1) this).aSourceDataLine7822 = null;
 				throw lineunavailableexception;

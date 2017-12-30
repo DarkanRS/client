@@ -458,7 +458,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 	}
 
 	static final void method13399(CS2Executor class527, int i) {
-		int i_19_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_19_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		Class537 class537 = Class497.aClass233_5822.method3933(i_19_, 1715918723);
 		if (null == class537)
 			throw new RuntimeException();

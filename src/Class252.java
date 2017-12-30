@@ -123,7 +123,7 @@ public class Class252 implements Interface43 {
 	}
 
 	static final void method4323(CS2Executor class527, byte i) {
-		int i_1_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_1_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		Integer integer = (Integer) Class46.anObjectArray437[i_1_];
 		if (integer == null) {
 			Class405 class405 = Class502.aClass394_5831.method6753(i_1_, 908110130);

@@ -160,7 +160,7 @@ public class Class460 implements Iterator {
 	}
 
 	static final void method7700(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_0_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		Class537 class537 = Class497.aClass233_5822.method3933(i_0_, 1537794608);
 		if (null == class537)
 			throw new RuntimeException();

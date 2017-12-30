@@ -24,7 +24,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub10) this).aLong10047 = class282_sub35.readLong(458416353) * 4560744686503677239L;
 		}
-		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.method13090(1816318177);
+		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.readNullString(1816318177);
 	}
 
 	void method12257(RsByteBuffer class282_sub35) {
@@ -32,7 +32,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub10) this).aLong10047 = (class282_sub35.readLong(1035607167) * 4560744686503677239L);
 		}
-		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.method13090(685128027);
+		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.readNullString(685128027);
 	}
 
 	void method12253(RsByteBuffer class282_sub35) {
@@ -40,7 +40,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub10) this).aLong10047 = (class282_sub35.readLong(1888880253) * 4560744686503677239L);
 		}
-		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.method13090(166224488);
+		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.readNullString(166224488);
 	}
 
 	void method12254(Class61 class61) {
@@ -66,6 +66,6 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub10) this).aLong10047 = (class282_sub35.readLong(1163222855) * 4560744686503677239L);
 		}
-		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.method13090(1037096667);
+		((Class282_Sub17_Sub10) this).aString10048 = class282_sub35.readNullString(1037096667);
 	}
 }

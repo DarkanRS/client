@@ -38,7 +38,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, i, i_7_, bool, is, i_8_, i_9_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, i, i_7_, bool, is, i_8_, i_9_);
-		return new Class137_Sub1_Sub1(class505_sub1, i, i_7_, Class323.method5778(i, 253386604), Class323.method5778(i_7_, 1037655353), is);
+		return new Class137_Sub1_Sub1(class505_sub1, i, i_7_, Class323.nextPowerOfTwo(i, 253386604), Class323.nextPowerOfTwo(i_7_, 1037655353), is);
 	}
 
 	static Class137_Sub1_Sub1 method15538(Class505_Sub1 class505_sub1, int i, int i_10_, int i_11_, int i_12_) {
@@ -46,7 +46,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, i, i_10_, i_11_, i_12_, true);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, i, i_10_, i_11_, i_12_, true);
-		return new Class137_Sub1_Sub1(class505_sub1, i, i_10_, i_11_, i_12_, Class323.method5778(i_11_, -1948475331), Class323.method5778(i_12_, -366919304), true);
+		return new Class137_Sub1_Sub1(class505_sub1, i, i_10_, i_11_, i_12_, Class323.nextPowerOfTwo(i_11_, -1948475331), Class323.nextPowerOfTwo(i_12_, -366919304), true);
 	}
 
 	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1, int i, Class150 class150, Class76 class76, int i_13_, int i_14_) {
@@ -70,7 +70,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_15_, bool, is, class150_16_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_15_, bool, is, class150_16_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_15_, Class323.method5778(i, -413856404), Class323.method5778(i_15_, 750480667), is, class150_16_);
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_15_, Class323.nextPowerOfTwo(i, -413856404), Class323.nextPowerOfTwo(i_15_, 750480667), is, class150_16_);
 	}
 
 	void method2373(boolean bool) {
@@ -98,7 +98,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_21_, bool, is, class150_22_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_21_, bool, is, class150_22_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_21_, Class323.method5778(i, 527754772), Class323.method5778(i_21_, 1788397404), is, class150_22_);
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_21_, Class323.nextPowerOfTwo(i, 527754772), Class323.nextPowerOfTwo(i_21_, 1788397404), is, class150_22_);
 	}
 
 	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1, int i, int i_23_, int i_24_, int i_25_, int[] is) {
@@ -149,7 +149,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_35_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_35_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_35_, Class323.method5778(i, -657819570), Class323.method5778(i_35_, 957405648));
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_35_, Class323.nextPowerOfTwo(i, -657819570), Class323.nextPowerOfTwo(i_35_, 957405648));
 	}
 
 	static Class137_Sub1_Sub1 method15542(Class505_Sub1 class505_sub1, Class150 class150, Class76 class76, int i, int i_36_) {
@@ -157,7 +157,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_36_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_36_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_36_, Class323.method5778(i, 196016285), Class323.method5778(i_36_, -1514812377));
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_36_, Class323.nextPowerOfTwo(i, 196016285), Class323.nextPowerOfTwo(i_36_, -1514812377));
 	}
 
 	static Class137_Sub1_Sub1 method15543(Class505_Sub1 class505_sub1, int i, int i_37_, boolean bool, int[] is, int i_38_, int i_39_) {
@@ -165,7 +165,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, i, i_37_, bool, is, i_38_, i_39_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, i, i_37_, bool, is, i_38_, i_39_);
-		return new Class137_Sub1_Sub1(class505_sub1, i, i_37_, Class323.method5778(i, -1821240), Class323.method5778(i_37_, -1200702324), is);
+		return new Class137_Sub1_Sub1(class505_sub1, i, i_37_, Class323.nextPowerOfTwo(i, -1821240), Class323.nextPowerOfTwo(i_37_, -1200702324), is);
 	}
 
 	static Class137_Sub1_Sub1 method15544(Class505_Sub1 class505_sub1, Class150 class150, Class76 class76, int i, int i_40_, boolean bool, byte[] is, Class150 class150_41_) {
@@ -173,7 +173,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_40_, bool, is, class150_41_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_40_, bool, is, class150_41_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_40_, Class323.method5778(i, 1181879814), Class323.method5778(i_40_, -1549676757), is, class150_41_);
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_40_, Class323.nextPowerOfTwo(i, 1181879814), Class323.nextPowerOfTwo(i_40_, -1549676757), is, class150_41_);
 	}
 
 	Class137_Sub1_Sub1(Class505_Sub1 class505_sub1, int i, Class150 class150, Class76 class76, int i_42_, int i_43_, boolean bool, byte[] is, Class150 class150_44_) {
@@ -197,7 +197,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_45_, bool, is, class150_46_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_45_, bool, is, class150_46_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_45_, Class323.method5778(i, -206747831), Class323.method5778(i_45_, 870483507), is, class150_46_);
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_45_, Class323.nextPowerOfTwo(i, -206747831), Class323.nextPowerOfTwo(i_45_, 870483507), is, class150_46_);
 	}
 
 	static Class137_Sub1_Sub1 method15546(Class505_Sub1 class505_sub1, int i, int i_47_, int i_48_, int i_49_) {
@@ -205,7 +205,7 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, i, i_47_, i_48_, i_49_, true);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, i, i_47_, i_48_, i_49_, true);
-		return new Class137_Sub1_Sub1(class505_sub1, i, i_47_, i_48_, i_49_, Class323.method5778(i_48_, 658469999), Class323.method5778(i_49_, -1692590121), true);
+		return new Class137_Sub1_Sub1(class505_sub1, i, i_47_, i_48_, i_49_, Class323.nextPowerOfTwo(i_48_, 658469999), Class323.nextPowerOfTwo(i_49_, -1692590121), true);
 	}
 
 	static Class137_Sub1_Sub1 method15547(Class505_Sub1 class505_sub1, Class150 class150, Class76 class76, int i, int i_50_) {
@@ -213,6 +213,6 @@ public class Class137_Sub1_Sub1 extends Class137_Sub1 {
 			return new Class137_Sub1_Sub1(class505_sub1, 3553, class150, class76, i, i_50_);
 		if (((Class505_Sub1) class505_sub1).aBool8401)
 			return new Class137_Sub1_Sub1(class505_sub1, 34037, class150, class76, i, i_50_);
-		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_50_, Class323.method5778(i, -572466042), Class323.method5778(i_50_, -2128087947));
+		return new Class137_Sub1_Sub1(class505_sub1, class150, class76, i, i_50_, Class323.nextPowerOfTwo(i, -572466042), Class323.nextPowerOfTwo(i_50_, -2128087947));
 	}
 }

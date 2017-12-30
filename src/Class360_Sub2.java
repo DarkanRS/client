@@ -42,8 +42,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2, Class150 class150, int i, int i_10_, boolean bool, byte[] is, int i_11_, int i_12_) {
 		super(class505_sub2_sub2, class150, Class76.aClass76_751, bool && ((Class505_Sub2_Sub2) class505_sub2_sub2).aBool10263, i * i_10_);
 		if (!((Class505_Sub2_Sub2) ((Class360_Sub2) this).aClass505_Sub2_Sub2_4165).aBool10265) {
-			((Class360_Sub2) this).anInt9154 = Class323.method5778(i, -401816318);
-			((Class360_Sub2) this).anInt9157 = Class323.method5778(i_10_, -1632403262);
+			((Class360_Sub2) this).anInt9154 = Class323.nextPowerOfTwo(i, -401816318);
+			((Class360_Sub2) this).anInt9157 = Class323.nextPowerOfTwo(i_10_, -1632403262);
 		} else {
 			((Class360_Sub2) this).anInt9154 = i;
 			((Class360_Sub2) this).anInt9157 = i_10_;
@@ -85,8 +85,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2, Class150 class150, Class76 class76, int i, int i_15_, int i_16_, int i_17_) {
 		super(class505_sub2_sub2, class150, class76, false, i * i_15_);
 		if (!((Class505_Sub2_Sub2) ((Class360_Sub2) this).aClass505_Sub2_Sub2_4165).aBool10265) {
-			((Class360_Sub2) this).anInt9154 = Class323.method5778(i, 72788545);
-			((Class360_Sub2) this).anInt9157 = Class323.method5778(i_15_, -1380222378);
+			((Class360_Sub2) this).anInt9154 = Class323.nextPowerOfTwo(i, 72788545);
+			((Class360_Sub2) this).anInt9157 = Class323.nextPowerOfTwo(i_15_, -1380222378);
 		} else {
 			((Class360_Sub2) this).anInt9154 = i;
 			((Class360_Sub2) this).anInt9157 = i_15_;
@@ -109,8 +109,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2, Class150 class150, int i, int i_18_, boolean bool, float[] fs, int i_19_, int i_20_) {
 		super(class505_sub2_sub2, class150, Class76.aClass76_751, bool && ((Class505_Sub2_Sub2) class505_sub2_sub2).aBool10263, i * i_18_);
 		if (!((Class505_Sub2_Sub2) ((Class360_Sub2) this).aClass505_Sub2_Sub2_4165).aBool10265) {
-			((Class360_Sub2) this).anInt9154 = Class323.method5778(i, 98224599);
-			((Class360_Sub2) this).anInt9157 = Class323.method5778(i_18_, -1607346569);
+			((Class360_Sub2) this).anInt9154 = Class323.nextPowerOfTwo(i, 98224599);
+			((Class360_Sub2) this).anInt9157 = Class323.nextPowerOfTwo(i_18_, -1607346569);
 		} else {
 			((Class360_Sub2) this).anInt9154 = i;
 			((Class360_Sub2) this).anInt9157 = i_18_;
@@ -179,8 +179,8 @@ public class Class360_Sub2 extends Class360 implements Interface6 {
 	Class360_Sub2(Class505_Sub2_Sub2 class505_sub2_sub2, int i, int i_32_, boolean bool, int[] is, int i_33_, int i_34_) {
 		super(class505_sub2_sub2, Class150.aClass150_1949, Class76.aClass76_751, bool && ((Class505_Sub2_Sub2) class505_sub2_sub2).aBool10263, i * i_32_);
 		if (!((Class505_Sub2_Sub2) ((Class360_Sub2) this).aClass505_Sub2_Sub2_4165).aBool10265) {
-			((Class360_Sub2) this).anInt9154 = Class323.method5778(i, 1990331952);
-			((Class360_Sub2) this).anInt9157 = Class323.method5778(i_32_, -173988631);
+			((Class360_Sub2) this).anInt9154 = Class323.nextPowerOfTwo(i, 1990331952);
+			((Class360_Sub2) this).anInt9157 = Class323.nextPowerOfTwo(i_32_, -173988631);
 		} else {
 			((Class360_Sub2) this).anInt9154 = i;
 			((Class360_Sub2) this).anInt9157 = i_32_;

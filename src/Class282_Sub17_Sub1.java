@@ -12,7 +12,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub1) this).aLong9930 = (class282_sub35.readLong(1688907962) * -7156069632047741567L);
 		}
-		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.method13090(-56317092);
+		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.readNullString(-56317092);
 	}
 
 	void method12250(RsByteBuffer class282_sub35, int i) {
@@ -20,7 +20,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub1) this).aLong9930 = (class282_sub35.readLong(1312780753) * -7156069632047741567L);
 		}
-		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.method13090(-141336185);
+		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.readNullString(-141336185);
 	}
 
 	void method12251(Class61 class61, int i) {
@@ -32,7 +32,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub1) this).aLong9930 = (class282_sub35.readLong(2019975858) * -7156069632047741567L);
 		}
-		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.method13090(938582751);
+		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.readNullString(938582751);
 	}
 
 	void method12258(Class61 class61) {
@@ -44,7 +44,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			class282_sub35.index -= -1115476867;
 			((Class282_Sub17_Sub1) this).aLong9930 = (class282_sub35.readLong(1143481691) * -7156069632047741567L);
 		}
-		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.method13090(415831589);
+		((Class282_Sub17_Sub1) this).aString9931 = class282_sub35.readNullString(415831589);
 	}
 
 	void method12254(Class61 class61) {

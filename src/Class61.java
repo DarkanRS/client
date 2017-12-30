@@ -693,7 +693,7 @@ public class Class61 {
 				if (((Class61) this).aBool618)
 					((Class61) this).aLongArray630[i_65_] = class282_sub35.readLong(1657847296);
 				if (((Class61) this).aBool620)
-					aStringArray639[i_65_] = class282_sub35.method13090(2060010006);
+					aStringArray639[i_65_] = class282_sub35.readNullString(2060010006);
 				aByteArray640[i_65_] = class282_sub35.readByte((short) -23950);
 				if (i_63_ >= 2)
 					((Class61) this).anIntArray633[i_65_] = class282_sub35.readInt();
@@ -713,13 +713,13 @@ public class Class61 {
 				if (((Class61) this).aBool618)
 					((Class61) this).aLongArray638[i_66_] = class282_sub35.readLong(612955628);
 				if (((Class61) this).aBool620)
-					aStringArray617[i_66_] = class282_sub35.method13090(1621296132);
+					aStringArray617[i_66_] = class282_sub35.readNullString(1621296132);
 			}
 		}
 		if (i_63_ >= 3) {
 			int i_67_ = class282_sub35.readUnsignedShort();
 			if (i_67_ > 0) {
-				((Class61) this).aClass465_629 = new Class465(i_67_ < 16 ? Class323.method5778(i_67_, 1744507894) : 16);
+				((Class61) this).aClass465_629 = new Class465(i_67_ < 16 ? Class323.nextPowerOfTwo(i_67_, 1744507894) : 16);
 				while (i_67_-- > 0) {
 					int i_68_ = class282_sub35.readInt();
 					int i_69_ = i_68_ & 0x3fffffff;
@@ -1109,7 +1109,7 @@ public class Class61 {
 	}
 
 	static final void method1254(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7020 += (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]) * -1051529003;
+		((CS2Executor) class527).instrPtr += (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]) * -1051529003;
 	}
 
 	static final void method1255(CS2Executor class527, int i) {

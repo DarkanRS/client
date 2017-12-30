@@ -33,7 +33,7 @@ public class Class373 {
 	}
 
 	static final void method6363(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_0_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.anIntArray26[i_0_];
 	}
 

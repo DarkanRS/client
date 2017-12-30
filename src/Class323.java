@@ -297,7 +297,7 @@ public class Class323 implements Interface22 {
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub5_8221), 2, -2037005846);
 	}
 
-	public static int method5778(int i, int i_37_) {
+	public static int nextPowerOfTwo(int i, int i_37_) {
 		i = --i | i >>> 1;
 		i |= i >>> 2;
 		i |= i >>> 4;

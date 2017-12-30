@@ -529,7 +529,7 @@ public class Class289 implements Runnable {
 	}
 
 	static final void method5098(CS2Executor class527, int i) {
-		int i_67_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_67_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		Class320.anIntArray3724[i_67_] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub20_Sub11.method15264(i_67_, (short) -20101);
 		client.aBool7400 |= Class282_Sub17_Sub2.aBoolArray9934[i_67_];

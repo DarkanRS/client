@@ -73,7 +73,7 @@ public class Class104 {
 	}
 
 	static final void method1800(CS2Executor class527, int i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).current.anObjectArray9519[((CS2Executor) class527).anInt7020 * 301123709]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).current.stringOpValues[((CS2Executor) class527).instrPtr * 301123709]);
 	}
 
 	static final void method1801(CS2Executor class527, int i) {

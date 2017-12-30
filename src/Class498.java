@@ -91,6 +91,6 @@ public class Class498 {
 	}
 
 	static final void method8328(CS2Executor class527, int i) {
-		((CS2Executor) class527).aLongArray6996[(((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020])] = (((CS2Executor) class527).aLongArray7003[((((CS2Executor) class527).anInt7001 -= -1188480575) * 1820448321)]);
+		((CS2Executor) class527).aLongArray6996[(((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr])] = (((CS2Executor) class527).aLongArray7003[((((CS2Executor) class527).anInt7001 -= -1188480575) * 1820448321)]);
 	}
 }

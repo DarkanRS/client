@@ -45,7 +45,7 @@ public class Class330 {
 	}
 
 	static final void method5912(CS2Executor class527, byte i) {
-		((CS2Executor) class527).aLongArray7003[(((CS2Executor) class527).anInt7001 += -1188480575) * 1820448321 - 1] = (((CS2Executor) class527).current.aLongArray9523[301123709 * ((CS2Executor) class527).anInt7020]);
+		((CS2Executor) class527).aLongArray7003[(((CS2Executor) class527).anInt7001 += -1188480575) * 1820448321 - 1] = (((CS2Executor) class527).current.longOpValues[301123709 * ((CS2Executor) class527).instrPtr]);
 	}
 
 	public static void method5913(int i) {

@@ -337,6 +337,6 @@ public final class Class282_Sub31 extends Class282 {
 	}
 
 	static final void method12535(CS2Executor class527, int i) {
-		((CS2Executor) class527).anObjectArray7017[(((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020])] = (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		((CS2Executor) class527).objectLocals[(((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr])] = (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 	}
 }

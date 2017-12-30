@@ -63,12 +63,12 @@ public class Class175 {
 	}
 
 	static final void method2959(CS2Executor class527, int i) {
-		int i_0_ = ((((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]) >> 16);
-		int i_1_ = ((((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]) & 0xffff);
+		int i_0_ = ((((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]) >> 16);
+		int i_1_ = ((((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]) & 0xffff);
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (i_2_ < 0 || i_2_ > 5000)
 			throw new RuntimeException();
-		((CS2Executor) class527).anIntArray6997[i_0_] = i_2_;
+		((CS2Executor) class527).globalArrayLengths[i_0_] = i_2_;
 		int i_3_ = -1;
 		if (i_1_ == 105)
 			i_3_ = 0;

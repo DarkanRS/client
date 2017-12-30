@@ -769,6 +769,6 @@ public class Class250 {
 	static final void method4299(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		if ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) == (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]))
-			((CS2Executor) class527).anInt7020 += (-1051529003 * (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]));
+			((CS2Executor) class527).instrPtr += (-1051529003 * (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]));
 	}
 }

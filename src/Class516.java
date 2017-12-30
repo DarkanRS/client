@@ -22,7 +22,7 @@ public class Class516 {
 	}
 
 	static final void method8864(CS2Executor class527, byte i) {
-		int i_3_ = (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]);
+		int i_3_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
 		String string = (((CS2Executor) class527).aClass61_7010.method1202(client.aClass486_7450.anInt5746 * 1648080491 << 16 | i_3_, -735824266));
 		String string_4_;
 		if (null == string) {

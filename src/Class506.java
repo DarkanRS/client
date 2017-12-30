@@ -391,9 +391,9 @@ public class Class506 {
 	}
 
 	static final void method8720(CS2Executor class527, int i) {
-		int i_15_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_15_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		int i_16_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		if (i_16_ < 0 || i_16_ >= ((CS2Executor) class527).anIntArray6997[i_15_])
+		if (i_16_ < 0 || i_16_ >= ((CS2Executor) class527).globalArrayLengths[i_15_])
 			throw new RuntimeException();
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).globalArrays[i_15_][i_16_];
 	}

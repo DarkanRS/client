@@ -47,6 +47,6 @@ public class Class121 {
 	}
 
 	static final void method2104(CS2Executor class527, short i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class320.anIntArray3724[(((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020])]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class320.anIntArray3724[(((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr])]);
 	}
 }

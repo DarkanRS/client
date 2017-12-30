@@ -14,10 +14,10 @@ public class Class213 {
 		CS2Script class282_sub50_sub5 = Class225_Sub1.method12792(Class397.aClass397_4792, i, -1, 856735933);
 		if (null != class282_sub50_sub5) {
 			CS2Executor class527 = Class125.method2167(2125481004);
-			((CS2Executor) class527).anIntArray6995 = new int[class282_sub50_sub5.nIntLocals * 693687803];
-			((CS2Executor) class527).anObjectArray7017 = new String[1886892247 * class282_sub50_sub5.nObjectLocals];
-			((CS2Executor) class527).anObjectArray7017[0] = string;
-			((CS2Executor) class527).anIntArray6995[0] = i_0_;
+			((CS2Executor) class527).intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
+			((CS2Executor) class527).objectLocals = new String[1886892247 * class282_sub50_sub5.stringLocalsCount];
+			((CS2Executor) class527).objectLocals[0] = string;
+			((CS2Executor) class527).intLocals[0] = i_0_;
 			Class51.method1068(class282_sub50_sub5, 200000, class527, -625116466);
 		}
 	}

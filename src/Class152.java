@@ -144,7 +144,7 @@ public abstract class Class152 {
 	}
 
 	static final void method2602(CS2Executor class527, int i) {
-		int i_4_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_4_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		Class405 class405 = Class502.aClass394_5831.method6753(i_4_, -292141252);
 		if (class405.aChar4832 != '\001')
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
@@ -216,7 +216,7 @@ public abstract class Class152 {
 	}
 
 	static final void method2605(CS2Executor class527, int i) {
-		int i_14_ = (((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]);
+		int i_14_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
 		Long var_long = (((CS2Executor) class527).aClass61_7010.method1201(client.aClass486_7450.anInt5746 * 1648080491 << 16 | i_14_, 1958434699));
 		long l;
 		if (null == var_long)

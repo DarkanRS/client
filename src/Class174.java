@@ -322,7 +322,7 @@ public class Class174 {
 		}
 	}
 
-	static final void method2957(Class522 class522, CS2Executor class527, int i) {
+	static final void method2957(CS2Operation class522, CS2Executor class527, int i) {
 		switch (-2026890351 * class522.anInt6952) {
 		case 634:
 			Class6.method300(class527, (byte) -25);

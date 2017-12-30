@@ -41,7 +41,7 @@ public class Class165 {
 	static final void method2854(CS2Executor class527, byte i) {
 		((CS2Executor) class527).anInt7001 -= 1918006146;
 		if ((((CS2Executor) class527).aLongArray7003[1820448321 * ((CS2Executor) class527).anInt7001]) != (((CS2Executor) class527).aLongArray7003[1 + ((CS2Executor) class527).anInt7001 * 1820448321]))
-			((CS2Executor) class527).anInt7020 += (-1051529003 * (((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709]));
+			((CS2Executor) class527).instrPtr += (-1051529003 * (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]));
 	}
 
 	static final void method2855(CS2Executor class527, byte i) {

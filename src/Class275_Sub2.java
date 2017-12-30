@@ -54,7 +54,7 @@ public class Class275_Sub2 extends Class275 {
 	}
 
 	static final void method12504(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).anIntArray6995[(((CS2Executor) class527).anIntArray7018[((CS2Executor) class527).anInt7020 * 301123709])]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).intLocals[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
 	}
 
 	static Class200 method12505(int i, int i_0_, int i_1_, Class528 class528, byte i_2_) {

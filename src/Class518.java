@@ -126,7 +126,7 @@ public class Class518 {
 			} else if (249 == i) {
 				int i_19_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
-					int i_20_ = Class323.method5778(i_19_, 1720003752);
+					int i_20_ = Class323.nextPowerOfTwo(i_19_, 1720003752);
 					((Class518) this).aClass465_5910 = new Class465(i_20_);
 				}
 				for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {
@@ -263,7 +263,7 @@ public class Class518 {
 			} else if (249 == i) {
 				int i_44_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
-					int i_45_ = Class323.method5778(i_44_, 1506813605);
+					int i_45_ = Class323.nextPowerOfTwo(i_44_, 1506813605);
 					((Class518) this).aClass465_5910 = new Class465(i_45_);
 				}
 				for (int i_46_ = 0; i_46_ < i_44_; i_46_++) {
@@ -369,7 +369,7 @@ public class Class518 {
 			} else if (249 == i) {
 				int i_64_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
-					int i_65_ = Class323.method5778(i_64_, -2037518015);
+					int i_65_ = Class323.nextPowerOfTwo(i_64_, -2037518015);
 					((Class518) this).aClass465_5910 = new Class465(i_65_);
 				}
 				for (int i_66_ = 0; i_66_ < i_64_; i_66_++) {
@@ -475,7 +475,7 @@ public class Class518 {
 			} else if (249 == i) {
 				int i_84_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
-					int i_85_ = Class323.method5778(i_84_, -1610926434);
+					int i_85_ = Class323.nextPowerOfTwo(i_84_, -1610926434);
 					((Class518) this).aClass465_5910 = new Class465(i_85_);
 				}
 				for (int i_86_ = 0; i_86_ < i_84_; i_86_++) {

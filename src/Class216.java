@@ -54,6 +54,6 @@ public class Class216 {
 	static final void method3678(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7001 -= 1918006146;
 		if ((((CS2Executor) class527).aLongArray7003[1820448321 * ((CS2Executor) class527).anInt7001]) > (((CS2Executor) class527).aLongArray7003[1 + ((CS2Executor) class527).anInt7001 * 1820448321]))
-			((CS2Executor) class527).anInt7020 += ((((CS2Executor) class527).anIntArray7018[301123709 * ((CS2Executor) class527).anInt7020]) * -1051529003);
+			((CS2Executor) class527).instrPtr += ((((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]) * -1051529003);
 	}
 }
