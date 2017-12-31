@@ -25,7 +25,7 @@ public class Class220 {
 	int anInt2734;
 	int anInt2735;
 	int anInt2736;
-	Class465 aClass465_2737;
+	SwitchMap aClass465_2737;
 	public int[] anIntArray2738;
 	int anInt2739;
 	public String[] aStringArray2740;
@@ -142,7 +142,7 @@ public class Class220 {
 			int i_9_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
 				int i_10_ = Class323.nextPowerOfTwo(i_9_, -417308135);
-				((Class220) this).aClass465_2737 = new Class465(i_10_);
+				((Class220) this).aClass465_2737 = new SwitchMap(i_10_);
 			}
 			for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -272,7 +272,7 @@ public class Class220 {
 			int i_22_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
 				int i_23_ = Class323.nextPowerOfTwo(i_22_, 252941044);
-				((Class220) this).aClass465_2737 = new Class465(i_23_);
+				((Class220) this).aClass465_2737 = new SwitchMap(i_23_);
 			}
 			for (int i_24_ = 0; i_24_ < i_22_; i_24_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -404,7 +404,7 @@ public class Class220 {
 			int i_35_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
 				int i_36_ = Class323.nextPowerOfTwo(i_35_, -755057342);
-				((Class220) this).aClass465_2737 = new Class465(i_36_);
+				((Class220) this).aClass465_2737 = new SwitchMap(i_36_);
 			}
 			for (int i_37_ = 0; i_37_ < i_35_; i_37_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -519,7 +519,7 @@ public class Class220 {
 			int i_45_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
 				int i_46_ = Class323.nextPowerOfTwo(i_45_, 1981350800);
-				((Class220) this).aClass465_2737 = new Class465(i_46_);
+				((Class220) this).aClass465_2737 = new SwitchMap(i_46_);
 			}
 			for (int i_47_ = 0; i_47_ < i_45_; i_47_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -611,7 +611,7 @@ public class Class220 {
 			int i_55_ = class282_sub35.readUnsignedByte();
 			if (((Class220) this).aClass465_2737 == null) {
 				int i_56_ = Class323.nextPowerOfTwo(i_55_, -1519463774);
-				((Class220) this).aClass465_2737 = new Class465(i_56_);
+				((Class220) this).aClass465_2737 = new SwitchMap(i_56_);
 			}
 			for (int i_57_ = 0; i_57_ < i_55_; i_57_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;

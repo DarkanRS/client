@@ -45,7 +45,7 @@ public class Class409 {
 	public boolean aBool4893;
 	public boolean aBool4894;
 	int[][] anIntArrayArray4895;
-	Class465 aClass465_4896;
+	SwitchMap aClass465_4896;
 	public short aShort4897;
 	public int anInt4898 = 318852007;
 	public byte aByte4899;
@@ -646,7 +646,7 @@ public class Class409 {
 			int i_78_ = class282_sub35.readUnsignedByte();
 			if (null == ((Class409) this).aClass465_4896) {
 				int i_79_ = Class323.nextPowerOfTwo(i_78_, 1161720703);
-				((Class409) this).aClass465_4896 = new Class465(i_79_);
+				((Class409) this).aClass465_4896 = new SwitchMap(i_79_);
 			}
 			for (int i_80_ = 0; i_80_ < i_78_; i_80_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -912,7 +912,7 @@ public class Class409 {
 			int i_103_ = class282_sub35.readUnsignedByte();
 			if (null == ((Class409) this).aClass465_4896) {
 				int i_104_ = Class323.nextPowerOfTwo(i_103_, -671087577);
-				((Class409) this).aClass465_4896 = new Class465(i_104_);
+				((Class409) this).aClass465_4896 = new SwitchMap(i_104_);
 			}
 			for (int i_105_ = 0; i_105_ < i_103_; i_105_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -1576,7 +1576,7 @@ public class Class409 {
 			int i_198_ = class282_sub35.readUnsignedByte();
 			if (null == ((Class409) this).aClass465_4896) {
 				int i_199_ = Class323.nextPowerOfTwo(i_198_, -597233692);
-				((Class409) this).aClass465_4896 = new Class465(i_199_);
+				((Class409) this).aClass465_4896 = new SwitchMap(i_199_);
 			}
 			for (int i_200_ = 0; i_200_ < i_198_; i_200_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;

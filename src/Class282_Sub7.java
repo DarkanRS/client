@@ -3,7 +3,7 @@
  */
 
 public class Class282_Sub7 extends Class282 {
-	Class465 aClass465_7521;
+	SwitchMap aClass465_7521;
 	byte[] aByteArray7522;
 
 	static Class282_Sub7 method12164(Class317 class317, int i, int i_0_) {
@@ -283,7 +283,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12165() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new Class465(16);
+			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
 			int[] is = new int[16];
 			int[] is_68_ = new int[16];
 			int[] is_69_ = is;
@@ -362,7 +362,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12169() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new Class465(16);
+			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
 			int[] is = new int[16];
 			int[] is_85_ = new int[16];
 			int[] is_86_ = is;
@@ -426,7 +426,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12170() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new Class465(16);
+			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
 			int[] is = new int[16];
 			int[] is_101_ = new int[16];
 			int[] is_102_ = is;
@@ -490,7 +490,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12171() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new Class465(16);
+			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
 			int[] is = new int[16];
 			int[] is_117_ = new int[16];
 			int[] is_118_ = is;

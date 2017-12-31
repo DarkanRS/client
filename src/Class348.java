@@ -97,7 +97,7 @@ public class Class348 {
 				Class351.method6196(class282_sub44, true, false, -2131194694);
 			}
 			client.anInt7349 = -153305321;
-			client.aClass465_7442 = new Class465(8);
+			client.aClass465_7442 = new SwitchMap(8);
 			ItemEffects.method7041((byte) -6);
 			client.anInt7349 = -1189891005 * Class58.aClass529_527.anInt7036;
 			Class516.method8867(false, -905479502);

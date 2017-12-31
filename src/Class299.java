@@ -313,7 +313,7 @@ public class Class299 implements Interface27 {
 	}
 
 	static final void method5312(CS2Executor class527, int i) {
-		Class465 class465 = (((CS2Executor) class527).current.switchMap[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
+		SwitchMap class465 = (((CS2Executor) class527).current.switchMaps[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) class465.method7754((long) ((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]));
 		if (null != class282_sub38)
 			((CS2Executor) class527).instrPtr += class282_sub38.anInt8002 * 750266701;

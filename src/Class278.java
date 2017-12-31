@@ -16,7 +16,7 @@ public abstract class Class278 {
 	OggSyncState anOggSyncState3355;
 	OggPacket anOggPacket3356;
 	static final int anInt3357 = 10;
-	Class465 aClass465_3358;
+	SwitchMap aClass465_3358;
 	boolean aBool3359;
 	boolean aBool3360;
 	boolean aBool3361;
@@ -658,7 +658,7 @@ public abstract class Class278 {
 		((Class278) this).anOggSyncState3355 = new OggSyncState();
 		((Class278) this).anOggPage3352 = new OggPage();
 		((Class278) this).anOggPacket3356 = new OggPacket();
-		((Class278) this).aClass465_3358 = new Class465(8);
+		((Class278) this).aClass465_3358 = new SwitchMap(8);
 	}
 
 	public Class282_Sub41_Sub4 method4946() {

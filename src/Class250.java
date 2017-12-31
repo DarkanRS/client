@@ -5,10 +5,10 @@
 import java.awt.Color;
 
 public class Class250 {
-	Class465 aClass465_3087 = new Class465(256);
+	SwitchMap aClass465_3087 = new SwitchMap(256);
 	Class317 aClass317_3088;
-	Class465 aClass465_3089;
-	Class465 aClass465_3090 = new Class465(256);
+	SwitchMap aClass465_3089;
+	SwitchMap aClass465_3090 = new SwitchMap(256);
 	Class317 aClass317_3091;
 	static Class160[] aClass160Array3092;
 	public static Class317 aClass317_3093;
@@ -65,7 +65,7 @@ public class Class250 {
 	}
 
 	public Class250(Class317 class317, Class317 class317_6_) {
-		((Class250) this).aClass465_3089 = new Class465(256);
+		((Class250) this).aClass465_3089 = new SwitchMap(256);
 		((Class250) this).aClass317_3091 = class317;
 		((Class250) this).aClass317_3088 = class317_6_;
 	}

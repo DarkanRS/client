@@ -13,7 +13,7 @@ public class ItemDefinitions implements Interface46 {
 	byte[] aByteArray5037;
 	short[] aShortArray5038;
 	short[] aShortArray5039;
-	Class465 aClass465_5040;
+	SwitchMap aClass465_5040;
 	short[] aShortArray5041;
 	public int anInt5042;
 	public String aString5043 = "null";
@@ -380,7 +380,7 @@ public class ItemDefinitions implements Interface46 {
 			int i_29_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_30_ = Class323.nextPowerOfTwo(i_29_, -1837166011);
-				((ItemDefinitions) this).aClass465_5040 = new Class465(i_30_);
+				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_30_);
 			}
 			for (int i_31_ = 0; i_31_ < i_29_; i_31_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -1029,7 +1029,7 @@ public class ItemDefinitions implements Interface46 {
 			int i_92_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_93_ = Class323.nextPowerOfTwo(i_92_, 514687479);
-				((ItemDefinitions) this).aClass465_5040 = new Class465(i_93_);
+				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_93_);
 			}
 			for (int i_94_ = 0; i_94_ < i_92_; i_94_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -1193,7 +1193,7 @@ public class ItemDefinitions implements Interface46 {
 			int i_104_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_105_ = Class323.nextPowerOfTwo(i_104_, -726832861);
-				((ItemDefinitions) this).aClass465_5040 = new Class465(i_105_);
+				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_105_);
 			}
 			for (int i_106_ = 0; i_106_ < i_104_; i_106_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -1841,7 +1841,7 @@ public class ItemDefinitions implements Interface46 {
 			int i_185_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_186_ = Class323.nextPowerOfTwo(i_185_, -1794749228);
-				((ItemDefinitions) this).aClass465_5040 = new Class465(i_186_);
+				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_186_);
 			}
 			for (int i_187_ = 0; i_187_ < i_185_; i_187_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;

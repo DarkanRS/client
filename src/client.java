@@ -88,7 +88,7 @@ public final class client extends Class263 {
 	static int anInt7205;
 	public static Interface35 anInterface35_7206;
 	public static Class408 aClass408_7207;
-	public static Class465 aClass465_7208;
+	public static SwitchMap aClass465_7208;
 	public static Class282_Sub47[] aClass282_Sub47Array7209;
 	public static int anInt7210;
 	public static int anInt7211;
@@ -214,7 +214,7 @@ public final class client extends Class263 {
 	static boolean aBool7331;
 	static int anInt7332;
 	public static Class482 aClass482_7333;
-	public static Class465 aClass465_7334;
+	public static SwitchMap aClass465_7334;
 	public static Class457 aClass457_7335;
 	public static int[] anIntArray7336;
 	public static int[] anIntArray7337;
@@ -285,7 +285,7 @@ public final class client extends Class263 {
 	public static Class482 aClass482_7402;
 	static boolean aBool7403;
 	static Class482 aClass482_7404;
-	static Class465 aClass465_7405;
+	static SwitchMap aClass465_7405;
 	public static final int anInt7406 = 107;
 	static int anInt7407;
 	static int anInt7408;
@@ -294,7 +294,7 @@ public final class client extends Class263 {
 	static Rectangle[] aRectangleArray7411;
 	static int anInt7412;
 	public static int anInt7413;
-	public static Class465 aClass465_7414;
+	public static SwitchMap aClass465_7414;
 	static int anInt7415;
 	public static int anInt7416;
 	static int[] anIntArray7417;
@@ -322,7 +322,7 @@ public final class client extends Class263 {
 	public static int anInt7439;
 	public static int anInt7440;
 	public static short aShort7441;
-	public static Class465 aClass465_7442;
+	public static SwitchMap aClass465_7442;
 	public static boolean[] aBoolArray7443;
 	static int anInt7444;
 	static int anInt7445;
@@ -1546,7 +1546,7 @@ public final class client extends Class263 {
 		aClass229_7204 = new Class229(8);
 		aString7463 = null;
 		anInterface35_7206 = new Class15();
-		aClass465_7208 = new Class465(64);
+		aClass465_7208 = new SwitchMap(64);
 		aClass282_Sub47Array7209 = new Class282_Sub47[1024];
 		anInt7210 = 0;
 		anInt7211 = 0;
@@ -1662,9 +1662,9 @@ public final class client extends Class263 {
 		aStringArray7329 = new String[8];
 		aBoolArray7330 = new boolean[8];
 		anInt7311 = 1263465007;
-		aClass465_7414 = new Class465(64);
+		aClass465_7414 = new SwitchMap(64);
 		aClass482_7333 = new Class482();
-		aClass465_7334 = new Class465(16);
+		aClass465_7334 = new SwitchMap(16);
 		aClass457_7335 = new Class457();
 		anIntArray7336 = new int[25];
 		anIntArray7337 = new int[25];
@@ -1680,7 +1680,7 @@ public final class client extends Class263 {
 		aString7275 = null;
 		aString7356 = null;
 		anInt7349 = -153305321;
-		aClass465_7442 = new Class465(8);
+		aClass465_7442 = new SwitchMap(8);
 		anInt7351 = 0;
 		aClass118_7352 = null;
 		anInt7300 = 0;
@@ -1732,7 +1732,7 @@ public final class client extends Class263 {
 		aClass482_7402 = new Class482();
 		aClass482_7233 = new Class482();
 		aClass482_7404 = new Class482();
-		aClass465_7405 = new Class465(512);
+		aClass465_7405 = new SwitchMap(512);
 		anInt7407 = 0;
 		anInt7408 = -2019371470;
 		aBoolArray7443 = new boolean[107];
@@ -2726,7 +2726,7 @@ public final class client extends Class263 {
 				Class351.method6196(class282_sub44, true, false, -2032801709);
 			}
 			anInt7349 = -153305321;
-			aClass465_7442 = new Class465(8);
+			aClass465_7442 = new SwitchMap(8);
 			ItemEffects.method7041((byte) -43);
 			anInt7349 = -1189891005 * Class58.aClass529_527.anInt7036;
 			Class516.method8867(false, -905479502);
@@ -2775,7 +2775,7 @@ public final class client extends Class263 {
 				Class351.method6196(class282_sub44, true, false, -1405456724);
 			}
 			anInt7349 = -153305321;
-			aClass465_7442 = new Class465(8);
+			aClass465_7442 = new SwitchMap(8);
 			ItemEffects.method7041((byte) -54);
 			anInt7349 = -1189891005 * Class58.aClass529_527.anInt7036;
 			Class516.method8867(false, -905479502);
@@ -7426,7 +7426,7 @@ public final class client extends Class263 {
 				Class351.method6196(class282_sub44, true, false, -1223935975);
 			}
 			anInt7349 = -153305321;
-			aClass465_7442 = new Class465(8);
+			aClass465_7442 = new SwitchMap(8);
 			ItemEffects.method7041((byte) -112);
 			anInt7349 = -1189891005 * Class58.aClass529_527.anInt7036;
 			Class516.method8867(false, -905479502);
@@ -10610,7 +10610,7 @@ public final class client extends Class263 {
 				Class351.method6196(class282_sub44, true, false, -1952250538);
 			}
 			anInt7349 = -153305321;
-			aClass465_7442 = new Class465(8);
+			aClass465_7442 = new SwitchMap(8);
 			ItemEffects.method7041((byte) -23);
 			anInt7349 = -1189891005 * Class58.aClass529_527.anInt7036;
 			Class516.method8867(false, -905479502);
@@ -13877,7 +13877,7 @@ public final class client extends Class263 {
 				Class351.method6196(class282_sub44, true, false, -1928558642);
 			}
 			anInt7349 = -153305321;
-			aClass465_7442 = new Class465(8);
+			aClass465_7442 = new SwitchMap(8);
 			ItemEffects.method7041((byte) -27);
 			anInt7349 = 1398349149 * Class58.aClass529_527.anInt7027;
 			Class516.method8867(false, -905479502);

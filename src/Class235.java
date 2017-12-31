@@ -15,7 +15,7 @@ public class Class235 {
 	static int anInt2901;
 	static int anInt2902 = 0;
 	static int anInt2903;
-	static Class465 aClass465_2904;
+	static SwitchMap aClass465_2904;
 	static int anInt2905 = 0;
 	static int anInt2906;
 	public static Class317 aClass317_2907;
@@ -26,7 +26,7 @@ public class Class235 {
 		anInt2901 = 0;
 		anInt2900 = 0;
 		anInt2903 = 0;
-		aClass465_2904 = new Class465(8);
+		aClass465_2904 = new SwitchMap(8);
 		anInt2898 = 0;
 		anInt2906 = -1724422502;
 	}
@@ -110,7 +110,7 @@ public class Class235 {
 	}
 
 	public static void method3960() {
-		aClass465_2904 = new Class465(8);
+		aClass465_2904 = new SwitchMap(8);
 		anInt2898 = 0;
 		Iterator iterator = aList2896.iterator();
 		while (iterator.hasNext()) {

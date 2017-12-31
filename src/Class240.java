@@ -20,7 +20,7 @@ public class Class240 {
 	int[] anIntArray2969;
 	int[] anIntArray2970;
 	public String[] aStringArray2971;
-	Class465 aClass465_2972;
+	SwitchMap aClass465_2972;
 	public int anInt2973;
 	int[] anIntArray2974;
 	public String[] aStringArray2975;
@@ -150,7 +150,7 @@ public class Class240 {
 			int i_22_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_23_ = Class323.nextPowerOfTwo(i_22_, -265127005);
-				((Class240) this).aClass465_2972 = new Class465(i_23_);
+				((Class240) this).aClass465_2972 = new SwitchMap(i_23_);
 			}
 			for (int i_24_ = 0; i_24_ < i_22_; i_24_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -325,7 +325,7 @@ public class Class240 {
 			int i_46_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_47_ = Class323.nextPowerOfTwo(i_46_, -1340245685);
-				((Class240) this).aClass465_2972 = new Class465(i_47_);
+				((Class240) this).aClass465_2972 = new SwitchMap(i_47_);
 			}
 			for (int i_48_ = 0; i_48_ < i_46_; i_48_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -477,7 +477,7 @@ public class Class240 {
 			int i_69_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_70_ = Class323.nextPowerOfTwo(i_69_, 1436487749);
-				((Class240) this).aClass465_2972 = new Class465(i_70_);
+				((Class240) this).aClass465_2972 = new SwitchMap(i_70_);
 			}
 			for (int i_71_ = 0; i_71_ < i_69_; i_71_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -600,7 +600,7 @@ public class Class240 {
 			int i_90_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_91_ = Class323.nextPowerOfTwo(i_90_, 1161727098);
-				((Class240) this).aClass465_2972 = new Class465(i_91_);
+				((Class240) this).aClass465_2972 = new SwitchMap(i_91_);
 			}
 			for (int i_92_ = 0; i_92_ < i_90_; i_92_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;

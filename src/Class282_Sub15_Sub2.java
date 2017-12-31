@@ -7,7 +7,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 	int[] anIntArray9691;
 	int anInt9692 = 183543552;
 	long aLong9693;
-	Class465 aClass465_9694;
+	SwitchMap aClass465_9694;
 	int anInt9695;
 	int anInt9696;
 	int[] anIntArray9697;
@@ -585,7 +585,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 		((Class282_Sub15_Sub2) this).aClass282_Sub13ArrayArray9714 = new Class282_Sub13[16][128];
 		((Class282_Sub15_Sub2) this).aClass80_9715 = new Class80();
 		((Class282_Sub15_Sub2) this).aClass282_Sub15_Sub3_9721 = new Class282_Sub15_Sub3(this);
-		((Class282_Sub15_Sub2) this).aClass465_9694 = new Class465(128);
+		((Class282_Sub15_Sub2) this).aClass465_9694 = new SwitchMap(128);
 		method15095(-1, 256, 1096565083);
 		method15116(true, -869042088);
 	}

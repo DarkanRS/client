@@ -17,7 +17,7 @@ public class Class345 {
 	static final int anInt4026 = 1;
 	public int anInt4027;
 	static int anInt4028 = 0;
-	public static Class465 aClass465_4029 = new Class465(16);
+	public static SwitchMap aClass465_4029 = new SwitchMap(16);
 	public static final int anInt4030 = 1;
 	static Class229 aClass229_4031 = new Class229(64);
 	public int anInt4032;

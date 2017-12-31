@@ -6,7 +6,7 @@ public class Class518 {
 	public int anInt5907;
 	Class523 aClass523_5908;
 	public int anInt5909;
-	Class465 aClass465_5910;
+	SwitchMap aClass465_5910;
 	public int[] anIntArray5911;
 	public int[] anIntArray5912;
 	public int[][] anIntArrayArray5913;
@@ -127,7 +127,7 @@ public class Class518 {
 				int i_19_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
 					int i_20_ = Class323.nextPowerOfTwo(i_19_, 1720003752);
-					((Class518) this).aClass465_5910 = new Class465(i_20_);
+					((Class518) this).aClass465_5910 = new SwitchMap(i_20_);
 				}
 				for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -264,7 +264,7 @@ public class Class518 {
 				int i_44_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
 					int i_45_ = Class323.nextPowerOfTwo(i_44_, 1506813605);
-					((Class518) this).aClass465_5910 = new Class465(i_45_);
+					((Class518) this).aClass465_5910 = new SwitchMap(i_45_);
 				}
 				for (int i_46_ = 0; i_46_ < i_44_; i_46_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -370,7 +370,7 @@ public class Class518 {
 				int i_64_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
 					int i_65_ = Class323.nextPowerOfTwo(i_64_, -2037518015);
-					((Class518) this).aClass465_5910 = new Class465(i_65_);
+					((Class518) this).aClass465_5910 = new SwitchMap(i_65_);
 				}
 				for (int i_66_ = 0; i_66_ < i_64_; i_66_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -476,7 +476,7 @@ public class Class518 {
 				int i_84_ = class282_sub35.readUnsignedByte();
 				if (((Class518) this).aClass465_5910 == null) {
 					int i_85_ = Class323.nextPowerOfTwo(i_84_, -1610926434);
-					((Class518) this).aClass465_5910 = new Class465(i_85_);
+					((Class518) this).aClass465_5910 = new SwitchMap(i_85_);
 				}
 				for (int i_86_ = 0; i_86_ < i_84_; i_86_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;

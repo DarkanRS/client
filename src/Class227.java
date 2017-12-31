@@ -515,7 +515,7 @@ public class Class227 {
 		}
 	}
 
-	static final void method3815(int i, Class465 class465) {
+	static final void method3815(int i, SwitchMap class465) {
 		if (i != -1 && class465.method7754((long) i) == null)
 			class465.method7765(new Class282(), (long) i);
 	}
@@ -781,7 +781,7 @@ public class Class227 {
 	}
 
 	public int[] method3824() {
-		Class465 class465 = new Class465(16);
+		SwitchMap class465 = new SwitchMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, 1898656425);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -821,7 +821,7 @@ public class Class227 {
 	}
 
 	public int[] method3825() {
-		Class465 class465 = new Class465(16);
+		SwitchMap class465 = new SwitchMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, -266659410);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -861,7 +861,7 @@ public class Class227 {
 	}
 
 	public int[] method3826() {
-		Class465 class465 = new Class465(16);
+		SwitchMap class465 = new SwitchMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, -2092613109);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -901,7 +901,7 @@ public class Class227 {
 	}
 
 	public int[] method3827() {
-		Class465 class465 = new Class465(16);
+		SwitchMap class465 = new SwitchMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, -754570121);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -941,7 +941,7 @@ public class Class227 {
 	}
 
 	public int[] method3828(int i) {
-		Class465 class465 = new Class465(16);
+		SwitchMap class465 = new SwitchMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, 1339333196);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;

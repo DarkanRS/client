@@ -7,7 +7,7 @@ public final class Class223 {
 	int anInt2768;
 	int anInt2769;
 	Class282_Sub50 aClass282_Sub50_2770 = new Class282_Sub50();
-	Class465 aClass465_2771;
+	SwitchMap aClass465_2771;
 	public static Class495 aClass495_2772;
 
 	public void method3757() {
@@ -48,7 +48,7 @@ public final class Class223 {
 		for (i_1_ = 1; i_1_ + i_1_ < i; i_1_ += i_1_) {
 			/* empty */
 		}
-		((Class223) this).aClass465_2771 = new Class465(i_1_);
+		((Class223) this).aClass465_2771 = new SwitchMap(i_1_);
 	}
 
 	public void method3760(int i) {

@@ -41,7 +41,7 @@ public class Class478 {
 	public int anInt5665;
 	public int anInt5666;
 	public int anInt5667;
-	Class465 aClass465_5668;
+	SwitchMap aClass465_5668;
 	public int anInt5669;
 	public int anInt5670;
 	public boolean aBool5671;
@@ -319,7 +319,7 @@ public class Class478 {
 			int i_26_ = class282_sub35.readUnsignedByte();
 			if (((Class478) this).aClass465_5668 == null) {
 				int i_27_ = Class323.nextPowerOfTwo(i_26_, -1920576994);
-				((Class478) this).aClass465_5668 = new Class465(i_27_);
+				((Class478) this).aClass465_5668 = new SwitchMap(i_27_);
 			}
 			for (int i_28_ = 0; i_28_ < i_26_; i_28_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
@@ -1001,7 +1001,7 @@ public class Class478 {
 			int i_96_ = class282_sub35.readUnsignedByte();
 			if (((Class478) this).aClass465_5668 == null) {
 				int i_97_ = Class323.nextPowerOfTwo(i_96_, 104760474);
-				((Class478) this).aClass465_5668 = new Class465(i_97_);
+				((Class478) this).aClass465_5668 = new SwitchMap(i_97_);
 			}
 			for (int i_98_ = 0; i_98_ < i_96_; i_98_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;

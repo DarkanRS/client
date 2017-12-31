@@ -4,7 +4,7 @@
  */
 import java.util.Iterator;
 
-public final class Class465 implements Iterable {
+public final class SwitchMap implements Iterable {
 	long aLong5557;
 	Class282[] aClass282Array5558;
 	Class282 aClass282_5559;
@@ -13,22 +13,22 @@ public final class Class465 implements Iterable {
 	int anInt5562 = 0;
 
 	public Class282 method7745() {
-		if (null == ((Class465) this).aClass282_5561)
+		if (null == ((SwitchMap) this).aClass282_5561)
 			return null;
-		for (Class282 class282 = (((Class465) this).aClass282Array5558[(int) (4504069746288158699L * ((Class465) this).aLong5557 & (long) (((Class465) this).anInt5560 * 25900449 - 1))]); class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
-			if ((((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((Class465) this).aLong5557 * 4504069746288158699L) {
-				Class282 class282_0_ = ((Class465) this).aClass282_5561;
-				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+		for (Class282 class282 = (((SwitchMap) this).aClass282Array5558[(int) (4504069746288158699L * ((SwitchMap) this).aLong5557 & (long) (((SwitchMap) this).anInt5560 * 25900449 - 1))]); class282 != ((SwitchMap) this).aClass282_5561; ((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378) {
+			if ((((SwitchMap) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((SwitchMap) this).aLong5557 * 4504069746288158699L) {
+				Class282 class282_0_ = ((SwitchMap) this).aClass282_5561;
+				((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378;
 				return class282_0_;
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5561 = null;
 		return null;
 	}
 
 	public void method7746() {
-		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+		for (int i = 0; i < ((SwitchMap) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i];
 			for (;;) {
 				Class282 class282_1_ = class282.aClass282_3378;
 				if (class282 == class282_1_)
@@ -36,28 +36,28 @@ public final class Class465 implements Iterable {
 				class282_1_.method4991(-371378792);
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
-		((Class465) this).aClass282_5559 = null;
+		((SwitchMap) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5559 = null;
 	}
 
 	public Class282 method7747(int i) {
-		if (null == ((Class465) this).aClass282_5561)
+		if (null == ((SwitchMap) this).aClass282_5561)
 			return null;
-		for (Class282 class282 = (((Class465) this).aClass282Array5558[(int) (4504069746288158699L * ((Class465) this).aLong5557 & (long) (((Class465) this).anInt5560 * 25900449 - 1))]); class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
-			if ((((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((Class465) this).aLong5557 * 4504069746288158699L) {
-				Class282 class282_2_ = ((Class465) this).aClass282_5561;
-				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+		for (Class282 class282 = (((SwitchMap) this).aClass282Array5558[(int) (4504069746288158699L * ((SwitchMap) this).aLong5557 & (long) (((SwitchMap) this).anInt5560 * 25900449 - 1))]); class282 != ((SwitchMap) this).aClass282_5561; ((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378) {
+			if ((((SwitchMap) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((SwitchMap) this).aLong5557 * 4504069746288158699L) {
+				Class282 class282_2_ = ((SwitchMap) this).aClass282_5561;
+				((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378;
 				return class282_2_;
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5561 = null;
 		return null;
 	}
 
 	public int method7748(short i) {
 		int i_3_ = 0;
-		for (int i_4_ = 0; i_4_ < 25900449 * ((Class465) this).anInt5560; i_4_++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i_4_];
+		for (int i_4_ = 0; i_4_ < 25900449 * ((SwitchMap) this).anInt5560; i_4_++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i_4_];
 			for (Class282 class282_5_ = class282.aClass282_3378; class282 != class282_5_; class282_5_ = class282_5_.aClass282_3378)
 				i_3_++;
 		}
@@ -69,8 +69,8 @@ public final class Class465 implements Iterable {
 	}
 
 	public void method7749(int i) {
-		for (int i_6_ = 0; i_6_ < ((Class465) this).anInt5560 * 25900449; i_6_++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i_6_];
+		for (int i_6_ = 0; i_6_ < ((SwitchMap) this).anInt5560 * 25900449; i_6_++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i_6_];
 			for (;;) {
 				Class282 class282_7_ = class282.aClass282_3378;
 				if (class282 == class282_7_)
@@ -78,25 +78,25 @@ public final class Class465 implements Iterable {
 				class282_7_.method4991(-371378792);
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
-		((Class465) this).aClass282_5559 = null;
+		((SwitchMap) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5559 = null;
 	}
 
 	public Class282 method7750(int i) {
-		((Class465) this).anInt5562 = 0;
+		((SwitchMap) this).anInt5562 = 0;
 		return method7751((byte) 63);
 	}
 
 	public Class282 method7751(byte i) {
-		if (((Class465) this).anInt5562 * 620631441 > 0 && ((((Class465) this).aClass282Array5558[((Class465) this).anInt5562 * 620631441 - 1]) != ((Class465) this).aClass282_5559)) {
-			Class282 class282 = ((Class465) this).aClass282_5559;
-			((Class465) this).aClass282_5559 = class282.aClass282_3378;
+		if (((SwitchMap) this).anInt5562 * 620631441 > 0 && ((((SwitchMap) this).aClass282Array5558[((SwitchMap) this).anInt5562 * 620631441 - 1]) != ((SwitchMap) this).aClass282_5559)) {
+			Class282 class282 = ((SwitchMap) this).aClass282_5559;
+			((SwitchMap) this).aClass282_5559 = class282.aClass282_3378;
 			return class282;
 		}
-		while (((Class465) this).anInt5562 * 620631441 < 25900449 * ((Class465) this).anInt5560) {
-			Class282 class282 = (((Class465) this).aClass282Array5558[((((Class465) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
-			if ((((Class465) this).aClass282Array5558[620631441 * ((Class465) this).anInt5562 - 1]) != class282) {
-				((Class465) this).aClass282_5559 = class282.aClass282_3378;
+		while (((SwitchMap) this).anInt5562 * 620631441 < 25900449 * ((SwitchMap) this).anInt5560) {
+			Class282 class282 = (((SwitchMap) this).aClass282Array5558[((((SwitchMap) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
+			if ((((SwitchMap) this).aClass282Array5558[620631441 * ((SwitchMap) this).anInt5562 - 1]) != class282) {
+				((SwitchMap) this).aClass282_5559 = class282.aClass282_3378;
 				return class282;
 			}
 		}
@@ -104,29 +104,29 @@ public final class Class465 implements Iterable {
 	}
 
 	public Class282 method7752(long l) {
-		((Class465) this).aLong5557 = l * 7471503269310367939L;
-		Class282 class282 = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
-		for (((Class465) this).aClass282_5561 = class282.aClass282_3378; class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
-			if (l == (((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L)) {
-				Class282 class282_8_ = ((Class465) this).aClass282_5561;
-				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+		((SwitchMap) this).aLong5557 = l * 7471503269310367939L;
+		Class282 class282 = (((SwitchMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((SwitchMap) this).anInt5560 - 1))]);
+		for (((SwitchMap) this).aClass282_5561 = class282.aClass282_3378; class282 != ((SwitchMap) this).aClass282_5561; ((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378) {
+			if (l == (((SwitchMap) this).aClass282_5561.aLong3379 * -3442165056282524525L)) {
+				Class282 class282_8_ = ((SwitchMap) this).aClass282_5561;
+				((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378;
 				return class282_8_;
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5561 = null;
 		return null;
 	}
 
 	public Class282 method7753() {
-		if (((Class465) this).anInt5562 * 620631441 > 0 && ((((Class465) this).aClass282Array5558[((Class465) this).anInt5562 * 620631441 - 1]) != ((Class465) this).aClass282_5559)) {
-			Class282 class282 = ((Class465) this).aClass282_5559;
-			((Class465) this).aClass282_5559 = class282.aClass282_3378;
+		if (((SwitchMap) this).anInt5562 * 620631441 > 0 && ((((SwitchMap) this).aClass282Array5558[((SwitchMap) this).anInt5562 * 620631441 - 1]) != ((SwitchMap) this).aClass282_5559)) {
+			Class282 class282 = ((SwitchMap) this).aClass282_5559;
+			((SwitchMap) this).aClass282_5559 = class282.aClass282_3378;
 			return class282;
 		}
-		while (((Class465) this).anInt5562 * 620631441 < 25900449 * ((Class465) this).anInt5560) {
-			Class282 class282 = (((Class465) this).aClass282Array5558[((((Class465) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
-			if ((((Class465) this).aClass282Array5558[620631441 * ((Class465) this).anInt5562 - 1]) != class282) {
-				((Class465) this).aClass282_5559 = class282.aClass282_3378;
+		while (((SwitchMap) this).anInt5562 * 620631441 < 25900449 * ((SwitchMap) this).anInt5560) {
+			Class282 class282 = (((SwitchMap) this).aClass282Array5558[((((SwitchMap) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
+			if ((((SwitchMap) this).aClass282Array5558[620631441 * ((SwitchMap) this).anInt5562 - 1]) != class282) {
+				((SwitchMap) this).aClass282_5559 = class282.aClass282_3378;
 				return class282;
 			}
 		}
@@ -134,22 +134,22 @@ public final class Class465 implements Iterable {
 	}
 
 	public Class282 method7754(long l) {
-		((Class465) this).aLong5557 = l * 7471503269310367939L;
-		Class282 class282 = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
-		for (((Class465) this).aClass282_5561 = class282.aClass282_3378; class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
-			if (l == (((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L)) {
-				Class282 class282_9_ = ((Class465) this).aClass282_5561;
-				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+		((SwitchMap) this).aLong5557 = l * 7471503269310367939L;
+		Class282 class282 = (((SwitchMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((SwitchMap) this).anInt5560 - 1))]);
+		for (((SwitchMap) this).aClass282_5561 = class282.aClass282_3378; class282 != ((SwitchMap) this).aClass282_5561; ((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378) {
+			if (l == (((SwitchMap) this).aClass282_5561.aLong3379 * -3442165056282524525L)) {
+				Class282 class282_9_ = ((SwitchMap) this).aClass282_5561;
+				((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378;
 				return class282_9_;
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5561 = null;
 		return null;
 	}
 
 	public void method7755() {
-		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+		for (int i = 0; i < ((SwitchMap) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i];
 			for (;;) {
 				Class282 class282_10_ = class282.aClass282_3378;
 				if (class282 == class282_10_)
@@ -157,13 +157,13 @@ public final class Class465 implements Iterable {
 				class282_10_.method4991(-371378792);
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
-		((Class465) this).aClass282_5559 = null;
+		((SwitchMap) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5559 = null;
 	}
 
 	public void method7756() {
-		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+		for (int i = 0; i < ((SwitchMap) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i];
 			for (;;) {
 				Class282 class282_11_ = class282.aClass282_3378;
 				if (class282 == class282_11_)
@@ -171,28 +171,28 @@ public final class Class465 implements Iterable {
 				class282_11_.method4991(-371378792);
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
-		((Class465) this).aClass282_5559 = null;
+		((SwitchMap) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5559 = null;
 	}
 
 	public Class282 method7757() {
-		if (null == ((Class465) this).aClass282_5561)
+		if (null == ((SwitchMap) this).aClass282_5561)
 			return null;
-		for (Class282 class282 = (((Class465) this).aClass282Array5558[(int) (4504069746288158699L * ((Class465) this).aLong5557 & (long) (((Class465) this).anInt5560 * 25900449 - 1))]); class282 != ((Class465) this).aClass282_5561; ((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378) {
-			if ((((Class465) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((Class465) this).aLong5557 * 4504069746288158699L) {
-				Class282 class282_12_ = ((Class465) this).aClass282_5561;
-				((Class465) this).aClass282_5561 = ((Class465) this).aClass282_5561.aClass282_3378;
+		for (Class282 class282 = (((SwitchMap) this).aClass282Array5558[(int) (4504069746288158699L * ((SwitchMap) this).aLong5557 & (long) (((SwitchMap) this).anInt5560 * 25900449 - 1))]); class282 != ((SwitchMap) this).aClass282_5561; ((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378) {
+			if ((((SwitchMap) this).aClass282_5561.aLong3379 * -3442165056282524525L) == ((SwitchMap) this).aLong5557 * 4504069746288158699L) {
+				Class282 class282_12_ = ((SwitchMap) this).aClass282_5561;
+				((SwitchMap) this).aClass282_5561 = ((SwitchMap) this).aClass282_5561.aClass282_3378;
 				return class282_12_;
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5561 = null;
 		return null;
 	}
 
 	public int method7758() {
 		int i = 0;
-		for (int i_13_ = 0; i_13_ < 25900449 * ((Class465) this).anInt5560; i_13_++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i_13_];
+		for (int i_13_ = 0; i_13_ < 25900449 * ((SwitchMap) this).anInt5560; i_13_++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i_13_];
 			for (Class282 class282_14_ = class282.aClass282_3378; class282 != class282_14_; class282_14_ = class282_14_.aClass282_3378)
 				i++;
 		}
@@ -202,7 +202,7 @@ public final class Class465 implements Iterable {
 	public void method7759(Class282 class282, long l) {
 		if (class282.aClass282_3380 != null)
 			class282.method4991(-371378792);
-		Class282 class282_15_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		Class282 class282_15_ = (((SwitchMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((SwitchMap) this).anInt5560 - 1))]);
 		class282.aClass282_3380 = class282_15_.aClass282_3380;
 		class282.aClass282_3378 = class282_15_;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -213,7 +213,7 @@ public final class Class465 implements Iterable {
 	public void method7760(Class282 class282, long l) {
 		if (class282.aClass282_3380 != null)
 			class282.method4991(-371378792);
-		Class282 class282_16_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		Class282 class282_16_ = (((SwitchMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((SwitchMap) this).anInt5560 - 1))]);
 		class282.aClass282_3380 = class282_16_.aClass282_3380;
 		class282.aClass282_3378 = class282_16_;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -224,7 +224,7 @@ public final class Class465 implements Iterable {
 	public void method7761(Class282 class282, long l) {
 		if (class282.aClass282_3380 != null)
 			class282.method4991(-371378792);
-		Class282 class282_17_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		Class282 class282_17_ = (((SwitchMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((SwitchMap) this).anInt5560 - 1))]);
 		class282.aClass282_3380 = class282_17_.aClass282_3380;
 		class282.aClass282_3378 = class282_17_;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -241,8 +241,8 @@ public final class Class465 implements Iterable {
 	}
 
 	public void method7764() {
-		for (int i = 0; i < ((Class465) this).anInt5560 * 25900449; i++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i];
+		for (int i = 0; i < ((SwitchMap) this).anInt5560 * 25900449; i++) {
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i];
 			for (;;) {
 				Class282 class282_18_ = class282.aClass282_3378;
 				if (class282 == class282_18_)
@@ -250,14 +250,14 @@ public final class Class465 implements Iterable {
 				class282_18_.method4991(-371378792);
 			}
 		}
-		((Class465) this).aClass282_5561 = null;
-		((Class465) this).aClass282_5559 = null;
+		((SwitchMap) this).aClass282_5561 = null;
+		((SwitchMap) this).aClass282_5559 = null;
 	}
 
 	public void method7765(Class282 class282, long l) {
 		if (class282.aClass282_3380 != null)
 			class282.method4991(-371378792);
-		Class282 class282_19_ = (((Class465) this).aClass282Array5558[(int) (l & (long) (25900449 * ((Class465) this).anInt5560 - 1))]);
+		Class282 class282_19_ = (((SwitchMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((SwitchMap) this).anInt5560 - 1))]);
 		class282.aClass282_3380 = class282_19_.aClass282_3380;
 		class282.aClass282_3378 = class282_19_;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -266,45 +266,45 @@ public final class Class465 implements Iterable {
 	}
 
 	public Class282 method7766() {
-		((Class465) this).anInt5562 = 0;
+		((SwitchMap) this).anInt5562 = 0;
 		return method7751((byte) 101);
 	}
 
 	public Class282 method7767() {
-		((Class465) this).anInt5562 = 0;
+		((SwitchMap) this).anInt5562 = 0;
 		return method7751((byte) 6);
 	}
 
 	public Class282 method7768() {
-		((Class465) this).anInt5562 = 0;
+		((SwitchMap) this).anInt5562 = 0;
 		return method7751((byte) 110);
 	}
 
 	public Class282 method7769() {
-		((Class465) this).anInt5562 = 0;
+		((SwitchMap) this).anInt5562 = 0;
 		return method7751((byte) 14);
 	}
 
-	public Class465(int i) {
-		((Class465) this).anInt5560 = i * 1246096993;
-		((Class465) this).aClass282Array5558 = new Class282[i];
+	public SwitchMap(int i) {
+		((SwitchMap) this).anInt5560 = i * 1246096993;
+		((SwitchMap) this).aClass282Array5558 = new Class282[i];
 		for (int i_20_ = 0; i_20_ < i; i_20_++) {
-			Class282 class282 = ((Class465) this).aClass282Array5558[i_20_] = new Class282();
+			Class282 class282 = ((SwitchMap) this).aClass282Array5558[i_20_] = new Class282();
 			class282.aClass282_3378 = class282;
 			class282.aClass282_3380 = class282;
 		}
 	}
 
 	public Class282 method7770() {
-		if (((Class465) this).anInt5562 * 620631441 > 0 && ((((Class465) this).aClass282Array5558[((Class465) this).anInt5562 * 620631441 - 1]) != ((Class465) this).aClass282_5559)) {
-			Class282 class282 = ((Class465) this).aClass282_5559;
-			((Class465) this).aClass282_5559 = class282.aClass282_3378;
+		if (((SwitchMap) this).anInt5562 * 620631441 > 0 && ((((SwitchMap) this).aClass282Array5558[((SwitchMap) this).anInt5562 * 620631441 - 1]) != ((SwitchMap) this).aClass282_5559)) {
+			Class282 class282 = ((SwitchMap) this).aClass282_5559;
+			((SwitchMap) this).aClass282_5559 = class282.aClass282_3378;
 			return class282;
 		}
-		while (((Class465) this).anInt5562 * 620631441 < 25900449 * ((Class465) this).anInt5560) {
-			Class282 class282 = (((Class465) this).aClass282Array5558[((((Class465) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
-			if ((((Class465) this).aClass282Array5558[620631441 * ((Class465) this).anInt5562 - 1]) != class282) {
-				((Class465) this).aClass282_5559 = class282.aClass282_3378;
+		while (((SwitchMap) this).anInt5562 * 620631441 < 25900449 * ((SwitchMap) this).anInt5560) {
+			Class282 class282 = (((SwitchMap) this).aClass282Array5558[((((SwitchMap) this).anInt5562 += -745059471) * 620631441 - 1)].aClass282_3378);
+			if ((((SwitchMap) this).aClass282Array5558[620631441 * ((SwitchMap) this).anInt5562 - 1]) != class282) {
+				((SwitchMap) this).aClass282_5559 = class282.aClass282_3378;
 				return class282;
 			}
 		}

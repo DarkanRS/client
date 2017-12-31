@@ -322,8 +322,8 @@ public class Class174 {
 		}
 	}
 
-	static final void method2957(CS2Operation class522, CS2Executor class527, int i) {
-		switch (-2026890351 * class522.anInt6952) {
+	static final void method2957(CS2OpInfo class522, CS2Executor class527, int i) {
+		switch (-2026890351 * class522.opcode) {
 		case 634:
 			Class6.method300(class527, (byte) -25);
 			break;
@@ -999,10 +999,10 @@ public class Class174 {
 			Class38.method856(class527, (byte) 8);
 			break;
 		case 641:
-			Class465.method7774(class527, -1275891056);
+			SwitchMap.method7774(class527, -1275891056);
 			break;
 		case 309:
-			Class465.method7771(class527, 1936925515);
+			SwitchMap.method7771(class527, 1936925515);
 			break;
 		case 706:
 			Class105.method1802(class527, (byte) -19);
@@ -3033,7 +3033,7 @@ public class Class174 {
 			Class221.method3748(class527, -613537380);
 			break;
 		case 837:
-			Class465.method7773(class527, 666143203);
+			SwitchMap.method7773(class527, 666143203);
 			break;
 		case 943:
 			Class530.method11355(class527, (short) -3286);

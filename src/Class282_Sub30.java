@@ -5,7 +5,7 @@
 public class Class282_Sub30 extends Class282 {
 	int[] anIntArray7709;
 	int[] anIntArray7710 = { -1 };
-	static Class465 aClass465_7711 = new Class465(32);
+	static SwitchMap aClass465_7711 = new SwitchMap(32);
 	static Class229 aClass229_7712 = new Class229(11);
 
 	static void method12427() {

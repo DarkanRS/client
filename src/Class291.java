@@ -14,7 +14,7 @@ public class Class291 {
 	protected static Interface42 anInterface42_3458;
 	protected static Class482 aClass482_3459;
 	protected static Class317 aClass317_3460;
-	static Class465 aClass465_3461 = new Class465(16);
+	static SwitchMap aClass465_3461 = new SwitchMap(16);
 	public static float aFloat3462;
 	protected static int anInt3463;
 	protected static byte[][][] aByteArrayArrayArray3464;

@@ -15,7 +15,7 @@ public class Class61 {
 	public byte aByte626;
 	public byte aByte627;
 	public byte aByte628;
-	Class465 aClass465_629;
+	SwitchMap aClass465_629;
 	long[] aLongArray630;
 	long aLong631;
 	public int anInt632;
@@ -130,7 +130,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_6_), (long) i);
 		return true;
 	}
@@ -317,7 +317,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_31_), (long) i);
 		return true;
 	}
@@ -336,7 +336,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub45(l), (long) i);
 		return true;
 	}
@@ -486,7 +486,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_45_), (long) i);
 		return true;
 	}
@@ -522,7 +522,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i);
 		return true;
 	}
@@ -719,7 +719,7 @@ public class Class61 {
 		if (i_63_ >= 3) {
 			int i_67_ = class282_sub35.readUnsignedShort();
 			if (i_67_ > 0) {
-				((Class61) this).aClass465_629 = new Class465(i_67_ < 16 ? Class323.nextPowerOfTwo(i_67_, 1744507894) : 16);
+				((Class61) this).aClass465_629 = new SwitchMap(i_67_ < 16 ? Class323.nextPowerOfTwo(i_67_, 1744507894) : 16);
 				while (i_67_-- > 0) {
 					int i_68_ = class282_sub35.readInt();
 					int i_69_ = i_68_ & 0x3fffffff;
@@ -1033,7 +1033,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_89_), (long) i);
 		return true;
 	}
@@ -1076,7 +1076,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i);
 		return true;
 	}
@@ -1103,7 +1103,7 @@ public class Class61 {
 				class282.method4991(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new Class465(4);
+			((Class61) this).aClass465_629 = new SwitchMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i);
 		return true;
 	}

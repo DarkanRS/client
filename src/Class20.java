@@ -23,7 +23,7 @@ public class Class20 {
 	public static int anInt169;
 	public static int anInt170;
 	static Class482 aClass482_171;
-	static Class465 aClass465_172;
+	static SwitchMap aClass465_172;
 	static final int anInt173 = 3;
 	static Class482 aClass482_174;
 	static Class482 aClass482_175;
@@ -86,7 +86,7 @@ public class Class20 {
 		anInt169 = 0;
 		anInt170 = 0;
 		aClass482_171 = new Class482();
-		aClass465_172 = new Class465(16);
+		aClass465_172 = new SwitchMap(16);
 		aClass477_182 = new Class477();
 		aClass482_174 = new Class482();
 		aClass482_175 = new Class482();

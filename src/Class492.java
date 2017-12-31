@@ -3,7 +3,7 @@
  */
 
 public class Class492 {
-	static Class465 aClass465_5774 = new Class465(4);
+	static SwitchMap aClass465_5774 = new SwitchMap(4);
 	static final int anInt5775 = 4096;
 	static Class502 aClass502_5776 = new Class502();
 	public static Class327_Sub1[] aClass327_Sub1Array5777;

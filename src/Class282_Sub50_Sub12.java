@@ -30,7 +30,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	static final int anInt9664 = 18;
 	static final int anInt9665 = 8;
 	static Class477 aClass477_9666 = new Class477();
-	static Class465 aClass465_9667;
+	static SwitchMap aClass465_9667;
 	int anInt9668;
 	static final long aLong9669 = 9223372036854775807L;
 	static final int anInt9670 = 10;
@@ -69,7 +69,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 
 	static {
 		aClass477_9655 = new Class477();
-		aClass465_9667 = new Class465(16);
+		aClass465_9667 = new SwitchMap(16);
 	}
 
 	static Class282_Sub50_Sub12 method14956(int i, long l) {

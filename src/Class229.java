@@ -5,7 +5,7 @@
 public final class Class229 {
 	int anInt2852;
 	int anInt2853;
-	Class465 aClass465_2854;
+	SwitchMap aClass465_2854;
 	Class477 aClass477_2855 = new Class477();
 
 	public Object method3852() {
@@ -31,7 +31,7 @@ public final class Class229 {
 		for (i_2_ = 1; i_2_ + i_2_ < i && i_2_ < i_1_; i_2_ += i_2_) {
 			/* empty */
 		}
-		((Class229) this).aClass465_2854 = new Class465(i_2_);
+		((Class229) this).aClass465_2854 = new SwitchMap(i_2_);
 	}
 
 	public Object method3853(long l) {

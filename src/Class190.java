@@ -232,7 +232,7 @@ public class Class190 {
 			Class351.method6196(class282_sub44, true, false, -1492337711);
 		}
 		client.anInt7349 = -153305321;
-		client.aClass465_7442 = new Class465(8);
+		client.aClass465_7442 = new SwitchMap(8);
 		ItemEffects.method7041((byte) -126);
 		client.aClass118_7352 = null;
 		for (int i_33_ = 0; i_33_ < 8; i_33_++) {

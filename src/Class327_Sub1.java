@@ -22,7 +22,7 @@ public class Class327_Sub1 extends Class327 {
 	int anInt7793 = 0;
 	int anInt7794;
 	boolean aBool7795;
-	Class465 aClass465_7796 = new Class465(16);
+	SwitchMap aClass465_7796 = new SwitchMap(16);
 	int anInt7797 = 0;
 	Class482 aClass482_7798;
 	static final int anInt7799 = 2;

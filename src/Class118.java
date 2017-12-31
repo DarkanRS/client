@@ -105,7 +105,7 @@ public class Class118 {
 	public int anInt1362;
 	public boolean aBool1363;
 	public Class282_Sub10 aClass282_Sub10_1364;
-	Class465 aClass465_1365;
+	SwitchMap aClass465_1365;
 	public byte[][] aByteArrayArray1366;
 	public byte[][] aByteArrayArray1367;
 	public byte aByte1368 = 0;
@@ -423,7 +423,7 @@ public class Class118 {
 
 	public void method1985(int i, String string) {
 		if (null == ((Class118) this).aClass465_1365) {
-			((Class118) this).aClass465_1365 = new Class465(16);
+			((Class118) this).aClass465_1365 = new SwitchMap(16);
 			((Class118) this).aClass465_1365.method7765(new Class282_Sub47(string), (long) i);
 		} else {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class118) this).aClass465_1365.method7754((long) i));
@@ -585,7 +585,7 @@ public class Class118 {
 
 	public void method1999(int i, int i_40_, int i_41_) {
 		if (((Class118) this).aClass465_1365 == null) {
-			((Class118) this).aClass465_1365 = new Class465(16);
+			((Class118) this).aClass465_1365 = new SwitchMap(16);
 			((Class118) this).aClass465_1365.method7765(new Class282_Sub38(i_40_), (long) i);
 		} else {
 			Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class118) this).aClass465_1365.method7754((long) i));
@@ -598,7 +598,7 @@ public class Class118 {
 
 	public void method2000(int i, String string, int i_42_) {
 		if (null == ((Class118) this).aClass465_1365) {
-			((Class118) this).aClass465_1365 = new Class465(16);
+			((Class118) this).aClass465_1365 = new SwitchMap(16);
 			((Class118) this).aClass465_1365.method7765(new Class282_Sub47(string), (long) i);
 		} else {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class118) this).aClass465_1365.method7754((long) i));
@@ -792,7 +792,7 @@ public class Class118 {
 
 	public void method2004(int i, String string) {
 		if (null == ((Class118) this).aClass465_1365) {
-			((Class118) this).aClass465_1365 = new Class465(16);
+			((Class118) this).aClass465_1365 = new SwitchMap(16);
 			((Class118) this).aClass465_1365.method7765(new Class282_Sub47(string), (long) i);
 		} else {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class118) this).aClass465_1365.method7754((long) i));
@@ -1853,7 +1853,7 @@ public class Class118 {
 
 	public void method2061(int i, String string) {
 		if (null == ((Class118) this).aClass465_1365) {
-			((Class118) this).aClass465_1365 = new Class465(16);
+			((Class118) this).aClass465_1365 = new SwitchMap(16);
 			((Class118) this).aClass465_1365.method7765(new Class282_Sub47(string), (long) i);
 		} else {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class118) this).aClass465_1365.method7754((long) i));
@@ -1875,7 +1875,7 @@ public class Class118 {
 
 	public void method2063(int i, String string) {
 		if (null == ((Class118) this).aClass465_1365) {
-			((Class118) this).aClass465_1365 = new Class465(16);
+			((Class118) this).aClass465_1365 = new SwitchMap(16);
 			((Class118) this).aClass465_1365.method7765(new Class282_Sub47(string), (long) i);
 		} else {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class118) this).aClass465_1365.method7754((long) i));

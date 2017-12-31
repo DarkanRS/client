@@ -5,7 +5,7 @@
 import java.io.File;
 
 public final class Class153 {
-	Class465 aClass465_1963;
+	SwitchMap aClass465_1963;
 	int anInt1964;
 	static int anInt1965;
 
@@ -56,7 +56,7 @@ public final class Class153 {
 
 	public void method2612(int i, int i_8_) {
 		if (null == ((Class153) this).aClass465_1963)
-			((Class153) this).aClass465_1963 = new Class465(((Class153) this).anInt1964 * 535130369);
+			((Class153) this).aClass465_1963 = new SwitchMap(((Class153) this).anInt1964 * 535130369);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class153) this).aClass465_1963.method7754((long) i));
 		if (null != class282_sub38)
 			class282_sub38.anInt8002 = 1270866345 * i_8_;
@@ -80,7 +80,7 @@ public final class Class153 {
 		if (null == ((Class153) this).aClass465_1963) {
 			if (i_10_ != 768)
 				return;
-			((Class153) this).aClass465_1963 = new Class465(((Class153) this).anInt1964 * 535130369);
+			((Class153) this).aClass465_1963 = new SwitchMap(((Class153) this).anInt1964 * 535130369);
 		}
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class153) this).aClass465_1963.method7754((long) i));
 		if (null != class282_sub38) {

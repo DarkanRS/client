@@ -5,7 +5,7 @@
 public class CS2Script extends Class282_Sub50 {
 	public Object[] stringOpValues;
 	public String scriptName;
-	public CS2Operation[] operations;
+	public CS2OpInfo[] operations;
 	public int[] intOpValues;
 	public long[] longOpValues;
 	public int longArgsCount;
@@ -15,24 +15,27 @@ public class CS2Script extends Class282_Sub50 {
 	public int intArgsCount;
 	public int stringArgsCount;
 	public int longLocalsCount;
-	public Class465[] switchMap;
+	public SwitchMap[] switchMaps;
 
 	public CS2Script(RsByteBuffer buffer) {
 		int instructionLength = decodeHeader(buffer);
 		int opCount = 0;
-		CS2Operation[] operations = Class191.getCS2Operations();
+		CS2OpInfo[] operations = Class191.getCS2Operations();
 		while (-1990677291 * buffer.index < instructionLength) {
-			CS2Operation op = getOpcode(buffer, operations);
+			CS2OpInfo op = getOpcode(buffer, operations);
 			decodeInstruction(buffer, opCount, op);
 			opCount++;
 		}
 	}
 
-	CS2Operation getOpcode(RsByteBuffer buffer, CS2Operation[] operations) {
+	CS2OpInfo getOpcode(RsByteBuffer buffer, CS2OpInfo[] operations) {
 		int opcode = buffer.readUnsignedShort();
 		if (opcode < 0 || opcode >= operations.length)
 			throw new RuntimeException("");
-		CS2Operation op = operations[opcode];
+		CS2OpInfo op = operations[opcode];
+		if (op == CS2OpInfo.PUSH_LONG) {
+			System.out.println("Opcode: " + opcode);
+		}
 		return op;
 	}
 
@@ -50,11 +53,11 @@ public class CS2Script extends Class282_Sub50 {
 		longArgsCount = buffer.readUnsignedShort() * -1593316803;
 		int switchesCount = buffer.readUnsignedByte();
 		if (switchesCount > 0) {
-			switchMap = new Class465[switchesCount];
+			switchMaps = new SwitchMap[switchesCount];
 			for (int idx = 0; idx < switchesCount; idx++) {
 				int numCases = buffer.readUnsignedShort();
-				Class465 class465 = new Class465(Class323.nextPowerOfTwo(numCases, -234379644));
-				switchMap[idx] = class465;
+				SwitchMap class465 = new SwitchMap(Class323.nextPowerOfTwo(numCases, -234379644));
+				switchMaps[idx] = class465;
 				while (numCases-- > 0) {
 					int key = buffer.readInt();
 					int value = buffer.readInt();
@@ -64,24 +67,24 @@ public class CS2Script extends Class282_Sub50 {
 		}
 		buffer.index = 0;
 		scriptName = buffer.readNullString(198990051);
-		operations = new CS2Operation[codeSize];
+		operations = new CS2OpInfo[codeSize];
 		return instructionLength;
 	}
 
-	void decodeInstruction(RsByteBuffer buffer, int opIndex, CS2Operation operation) {
-		int i_11_ = operations.length;
-		if (operation == CS2Operation.aClass522_5949) {
+	void decodeInstruction(RsByteBuffer buffer, int opIndex, CS2OpInfo operation) {
+		int opLength = operations.length;
+		if (operation == CS2OpInfo.PUSH_STRING) {
 			if (stringOpValues == null)
-				stringOpValues = new String[i_11_];
+				stringOpValues = new String[opLength];
 			stringOpValues[opIndex] = buffer.readString(835506752).intern();
-		} else if (CS2Operation.aClass522_5980 == operation) {
+		} else if (CS2OpInfo.PUSH_LONG == operation) {
 			if (null == longOpValues)
-				longOpValues = new long[i_11_];
+				longOpValues = new long[opLength];
 			longOpValues[opIndex] = buffer.readLong(1461379326);
 		} else {
 			if (null == intOpValues)
-				intOpValues = new int[i_11_];
-			if (operation.aBool6953)
+				intOpValues = new int[opLength];
+			if (operation.hasIntConstant)
 				intOpValues[opIndex] = buffer.readInt();
 			else
 				intOpValues[opIndex] = buffer.readUnsignedByte();

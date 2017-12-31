@@ -437,7 +437,7 @@ public final class Class517 {
 		((CS2Executor) class527).current = class282_sub50_sub5;
 		((CS2Executor) class527).aClass522Array7005 = (((CS2Executor) class527).current.operations);
 		((CS2Executor) class527).unknown = ((CS2Executor) class527).current.intOpValues;
-		CS2Operation class522 = null;
+		CS2OpInfo class522 = null;
 		((CS2Executor) class527).anInt7002 = 0;
 		try {
 			try {
@@ -453,7 +453,7 @@ public final class Class517 {
 						((CS2Executor) class527).aBool7022 = true;
 					else
 						((CS2Executor) class527).aBool7022 = false;
-					if (CS2Operation.aClass522_5959 == class522 && 0 == (((CS2Executor) class527).anInt7002 * -1837903909)) {
+					if (CS2OpInfo.aClass522_5959 == class522 && 0 == (((CS2Executor) class527).anInt7002 * -1837903909)) {
 						Class282_Sub50_Sub17.method15509(791279819);
 						break;
 					}
@@ -464,7 +464,7 @@ public final class Class517 {
 				stringbuilder.append("").append(-3442165056282524525L * (((CS2Executor) class527).current.aLong3379)).append(" ");
 				for (int i_39_ = ((CS2Executor) class527).anInt7002 * -1837903909 - 1; i_39_ >= 0; i_39_--)
 					stringbuilder.append("").append(-3442165056282524525L * (((Class509) ((CS2Executor) class527).aClass509Array7016[i_39_]).aClass282_Sub50_Sub5_5869.aLong3379)).append(" ");
-				stringbuilder.append("").append(Integer.valueOf(-2026890351 * class522.anInt6952));
+				stringbuilder.append("").append(Integer.valueOf(-2026890351 * class522.opcode));
 				Class151.method2594(stringbuilder.toString(), exception, (byte) -14);
 				Class282_Sub50_Sub17.method15509(1650861128);
 			}
@@ -1293,7 +1293,7 @@ public final class Class517 {
 	}
 
 	static final void method8983(CS2Executor class527) {
-		Class465 class465 = (((CS2Executor) class527).current.switchMap[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
+		SwitchMap class465 = (((CS2Executor) class527).current.switchMaps[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) class465.method7754((long) ((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]));
 		if (null != class282_sub38)
 			((CS2Executor) class527).instrPtr += class282_sub38.anInt8002 * 750266701;
@@ -15850,7 +15850,7 @@ public final class Class517 {
 		((CS2Executor) class527).current = class282_sub50_sub5;
 		((CS2Executor) class527).aClass522Array7005 = (((CS2Executor) class527).current.operations);
 		((CS2Executor) class527).unknown = ((CS2Executor) class527).current.intOpValues;
-		CS2Operation class522 = null;
+		CS2OpInfo class522 = null;
 		((CS2Executor) class527).anInt7002 = 0;
 		try {
 			try {
@@ -15866,7 +15866,7 @@ public final class Class517 {
 						((CS2Executor) class527).aBool7022 = true;
 					else
 						((CS2Executor) class527).aBool7022 = false;
-					if (CS2Operation.aClass522_5959 == class522 && 0 == (((CS2Executor) class527).anInt7002 * -1837903909)) {
+					if (CS2OpInfo.aClass522_5959 == class522 && 0 == (((CS2Executor) class527).anInt7002 * -1837903909)) {
 						Class282_Sub50_Sub17.method15509(125704179);
 						break;
 					}
@@ -15877,7 +15877,7 @@ public final class Class517 {
 				stringbuilder.append("").append(-3442165056282524525L * (((CS2Executor) class527).current.aLong3379)).append(" ");
 				for (int i_551_ = ((CS2Executor) class527).anInt7002 * -1837903909 - 1; i_551_ >= 0; i_551_--)
 					stringbuilder.append("").append(-3442165056282524525L * (((Class509) ((CS2Executor) class527).aClass509Array7016[i_551_]).aClass282_Sub50_Sub5_5869.aLong3379)).append(" ");
-				stringbuilder.append("").append(Integer.valueOf(-2026890351 * class522.anInt6952));
+				stringbuilder.append("").append(Integer.valueOf(-2026890351 * class522.opcode));
 				Class151.method2594(stringbuilder.toString(), exception, (byte) -27);
 				Class282_Sub50_Sub17.method15509(1533757322);
 			}

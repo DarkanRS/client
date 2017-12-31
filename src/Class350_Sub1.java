@@ -63,8 +63,8 @@ public class Class350_Sub1 extends Class350 {
 
 	static final void method12516(int i) {
 		for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7775.method8097((byte) 85)); class282_sub31 != null; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7775.method8067(486596704))
-			Class465.method7772(class282_sub31, false, 1535779425);
+			SwitchMap.method7772(class282_sub31, false, 1535779425);
 		for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.method8097((byte) 127)); class282_sub31 != null; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7776.method8067(2087235894))
-			Class465.method7772(class282_sub31, true, 1535779425);
+			SwitchMap.method7772(class282_sub31, true, 1535779425);
 	}
 }

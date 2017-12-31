@@ -16,11 +16,11 @@ public class Class291_Sub1 extends Class291 {
 	static boolean aBool8022;
 	static Class194 aClass194_8023;
 	static String[] aStringArray8024;
-	public static Class465 aClass465_8025;
+	public static SwitchMap aClass465_8025;
 	static int anInt8026;
 	public static boolean aBool8027;
 	static boolean aBool8028;
-	public static Class465 aClass465_8029;
+	public static SwitchMap aClass465_8029;
 	static Class460 aClass460_8030;
 
 	static void method13302(int i, int i_0_, int i_1_, int i_2_) {
@@ -922,8 +922,8 @@ public class Class291_Sub1 extends Class291 {
 		anInt8018 = 428705471;
 		anInt8026 = -194319891;
 		aBool8027 = false;
-		aClass465_8025 = new Class465(8);
-		aClass465_8029 = new Class465(8);
+		aClass465_8025 = new SwitchMap(8);
+		aClass465_8029 = new SwitchMap(8);
 		aClass460_8030 = new Class460(new Class482());
 	}
 

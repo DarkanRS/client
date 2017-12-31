@@ -8,7 +8,7 @@ public class Class86 {
 	static Class92[] aClass92Array820;
 	static Class93[] aClass93Array821;
 	public static Class96[] aClass96Array822;
-	public static Class465 aClass465_823;
+	public static SwitchMap aClass465_823;
 	static int anInt824;
 	static int anInt825;
 	static boolean aBool826;
@@ -41,7 +41,7 @@ public class Class86 {
 	}
 
 	static {
-		aClass465_823 = new Class465(32);
+		aClass465_823 = new SwitchMap(32);
 		anInt819 = 523556513;
 		anInt825 = 0;
 		anInt824 = 0;

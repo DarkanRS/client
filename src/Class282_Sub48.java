@@ -6,7 +6,7 @@ public class Class282_Sub48 extends Class282 {
 	int anInt8072;
 	static Class482 aClass482_8073 = new Class482();
 	static Class482 aClass482_8074 = new Class482();
-	static Class465 aClass465_8075 = new Class465(16);
+	static SwitchMap aClass465_8075 = new SwitchMap(16);
 	int anInt8076;
 	int anInt8077;
 	int anInt8078;
