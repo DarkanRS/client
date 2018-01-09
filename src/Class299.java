@@ -11,14 +11,14 @@ public class Class299 implements Interface27 {
 	Interface2[] anInterface2Array3539;
 	int anInt3540;
 	Class393 aClass393_3541;
-	Class505 aClass505_3542;
+	GraphicalRenderer aClass505_3542;
 	static byte[] aByteArray3543 = { 31, -117, 8, 0, 0, 0, 0, 0, 0, 0, -5, 127, -29, -1, 109, 6, 103, 6, 14, 54, 54, 118, 54, 86, 14, 118, 118, 118, 78, 78, 14, 46, 30, 17, 94, 30, 110, 110, 30, 73, 33, 97, 126, 17, 89, 41, 121, 57, 89, 41, 25, 25, 5, 21, 61, 117, 5, 37, 29, 101, 25, 25, 13, 115, 77, 29, 3, 67, 19, 19, 19, 121, 117, 75, 91, 11, 35, 27, 61, 99, 19, 35, -112, 33, -116, -100, -100, -100, 60, -36, 60, 18, -68, -68, 18, 70, -118, 50, -118, 70, 36, -125, -1, 7, 24, 68, 56, 24, 24, 25,
 			24, 89, 24, -107, 24, -104, 4, 25, -103, 5, 25, 89, -108, 24, -2, 31, 97, -112, 103, 96, 96, 100, 101, 4, 3, 6, 40, 96, 100, 98, 102, 97, 101, 99, -25, -32, -28, -30, 6, 42, -40, 42, -64, -64, -60, -56, -52, -52, -60, -62, -52, -54, -54, -62, 2, -108, -83, 5, -54, 51, -80, 8, -78, 10, 41, 26, 58, -78, 9, 7, 38, -78, 43, 21, -118, 24, 53, 78, 92, -56, -95, -20, -76, -15, -96, 104, -48, -59, 15, 42, -58, 73, 69, 77, -100, 92, 98, -30, 18, -110, 82, -86, 106, -22, 26, -102, 90, 38, -90,
 			102, -26, 22, -106, 86, -50, 46, -82, 110, -18, 30, -98, 94, -63, 33, -95, 97, -31, 17, -111, 81, -55, 41, -87, 105, -23, 25, -103, 89, -59, 37, -91, 101, -27, 21, -107, 85, -51, 45, -83, 109, -19, 29, -99, 93, -109, 38, 79, -103, 58, 109, -6, -116, -103, -77, 22, 45, 94, -78, 116, -39, -14, 21, 43, 87, 109, -38, -68, 101, -21, -74, -19, 59, 118, -18, 58, 116, -8, -56, -47, 99, -57, 79, -100, 60, 117, -23, -14, -107, -85, -41, -82, -33, -72, 121, -21, -31, -93, -57, 79, -98, 62, 123,
 			-2, -30, -27, -85, -113, -97, 62, 127, -7, -6, -19, -5, -113, -97, -65, 64, -2, 98, 100, 96, 102, -124, 1, -84, -2, 18, 4, -6, -117, -119, -123, -123, -103, -123, 29, -28, 47, 70, -90, 114, -112, 2, 65, 22, 86, 69, 67, 54, 33, -57, 64, -10, -60, 66, 97, 37, -93, 70, 14, 17, -89, -119, 11, 55, 30, -28, 84, 54, 14, -6, 32, -102, 84, 116, -111, 75, 76, -59, -28, -95, -22, 71, -112, -41, -64, 62, 35, -50, 99, 77, 100, -7, 12, -18, 49, -124, -65, 110, 49, -16, -79, 48, 2, -29, 15, -24,
 			78, 6, 6, 123, -122, -97, -1, -70, 52, 22, -16, -49, 127, -79, -88, -21, -1, 77, 0, 38, 27, -28, 10, 110, 2, 0, 0 };
 	int anInt3544;
-	static Class229 aClass229_3545 = new Class229(128, 4);
+	static SoftCache aClass229_3545 = new SoftCache(128, 4);
 	boolean aBool3546;
 
 	Class299(Class393 class393, int i, int i_0_, Class29 class29) {
@@ -221,34 +221,34 @@ public class Class299 implements Interface27 {
 		return bool;
 	}
 
-	public static Class160 method5308(Class317 class317, int i) {
-		Class160 class160 = (Class160) aClass229_3545.method3865((long) i);
+	public static NativeSprite method5308(Index class317, int i) {
+		NativeSprite class160 = (NativeSprite) aClass229_3545.get((long) i);
 		if (class160 == null) {
 			if (Class339.aBool3987)
 				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -1425472520), (byte) -78));
-			aClass229_3545.method3856(class160, (long) i);
+			aClass229_3545.put(class160, (long) i);
 		}
 		return class160;
 	}
 
-	public static Class160 method5309(Class317 class317, int i) {
-		Class160 class160 = (Class160) aClass229_3545.method3865((long) i);
+	public static NativeSprite method5309(Index class317, int i) {
+		NativeSprite class160 = (NativeSprite) aClass229_3545.get((long) i);
 		if (class160 == null) {
 			if (Class339.aBool3987)
 				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -2080551630), (byte) -127));
-			aClass229_3545.method3856(class160, (long) i);
+			aClass229_3545.put(class160, (long) i);
 		}
 		return class160;
 	}
 
-	static Class160 method5310(byte[] is) {
+	static NativeSprite method5310(byte[] is) {
 		if (is == null)
 			throw new RuntimeException("");
-		Class160 class160;
+		NativeSprite class160;
 		for (;;) {
 			try {
 				Image image = Toolkit.getDefaultToolkit().createImage(is);
@@ -262,7 +262,7 @@ public class Class299 implements Interface27 {
 				int[] is_10_ = new int[i * i_9_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_9_, is_10_, 0, i);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.method8549(is_10_, 0, i, i, i_9_, 877342890);
+				class160 = Class316.aClass505_3680.createNativeSprite(is_10_, 0, i, i, i_9_, 877342890);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */
@@ -275,10 +275,10 @@ public class Class299 implements Interface27 {
 		return -1024317477 * ((Class299) this).anInt3544;
 	}
 
-	static Class160 method5311(byte[] is) {
+	static NativeSprite method5311(byte[] is) {
 		if (is == null)
 			throw new RuntimeException("");
-		Class160 class160;
+		NativeSprite class160;
 		for (;;) {
 			try {
 				Image image = Toolkit.getDefaultToolkit().createImage(is);
@@ -292,7 +292,7 @@ public class Class299 implements Interface27 {
 				int[] is_12_ = new int[i * i_11_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_11_, is_12_, 0, i);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.method8549(is_12_, 0, i, i, i_11_, 2138062190);
+				class160 = Class316.aClass505_3680.createNativeSprite(is_12_, 0, i, i, i_11_, 2138062190);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */
@@ -313,7 +313,7 @@ public class Class299 implements Interface27 {
 	}
 
 	static final void method5312(CS2Executor class527, int i) {
-		SwitchMap class465 = (((CS2Executor) class527).current.switchMaps[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
+		IterableNodeMap class465 = (((CS2Executor) class527).current.switchMaps[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) class465.method7754((long) ((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]));
 		if (null != class282_sub38)
 			((CS2Executor) class527).instrPtr += class282_sub38.anInt8002 * 750266701;
@@ -321,7 +321,7 @@ public class Class299 implements Interface27 {
 
 	public static void method5313(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_) {
 		Class282_Sub31 class282_sub31 = null;
-		for (Class282_Sub31 class282_sub31_20_ = ((Class282_Sub31) Class282_Sub31.aClass482_7775.method8097((byte) 122)); null != class282_sub31_20_; class282_sub31_20_ = ((Class282_Sub31) Class282_Sub31.aClass482_7775.method8067(-848062278))) {
+		for (Class282_Sub31 class282_sub31_20_ = ((Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 122)); null != class282_sub31_20_; class282_sub31_20_ = ((Class282_Sub31) Class282_Sub31.aClass482_7775.next(-848062278))) {
 			if ((1291499461 * ((Class282_Sub31) class282_sub31_20_).anInt7764 == i) && class282_sub31_20_.anInt7762 * 37618455 == i_13_ && i_14_ == -322610393 * class282_sub31_20_.anInt7763 && i_15_ == -497894501 * (((Class282_Sub31) class282_sub31_20_).anInt7766)) {
 				class282_sub31 = class282_sub31_20_;
 				break;

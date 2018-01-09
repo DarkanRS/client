@@ -128,7 +128,7 @@ public class Class271 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -274659233 * Class9.anInt112;
 	}
 
-	static void method4827(Class317 class317, int i, int i_13_, int i_14_, boolean bool, long l) {
+	static void method4827(Index class317, int i, int i_13_, int i_14_, boolean bool, long l) {
 		Class109.method1859(class317, i, i_13_, i_14_, bool, l, 0, 2065437582);
 	}
 

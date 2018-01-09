@@ -3,12 +3,12 @@
  */
 
 public class Class290 {
-	Class229 aClass229_3447;
-	Class317 aClass317_3448;
-	Class229 aClass229_3449 = new Class229(64);
-	Class317 aClass317_3450;
+	SoftCache aClass229_3447;
+	Index aClass317_3448;
+	SoftCache aClass229_3449 = new SoftCache(64);
+	Index aClass317_3450;
 	static int anInt3451;
-	public static Class160 aClass160_3452;
+	public static NativeSprite aClass160_3452;
 
 	public void method5101(int i) {
 		synchronized (((Class290) this).aClass229_3449) {
@@ -22,20 +22,20 @@ public class Class290 {
 	public Class198 method5102(int i, int i_0_) {
 		Class198 class198;
 		synchronized (((Class290) this).aClass229_3449) {
-			class198 = ((Class198) ((Class290) this).aClass229_3449.method3865((long) i));
+			class198 = ((Class198) ((Class290) this).aClass229_3449.get((long) i));
 		}
 		if (class198 != null)
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((Class120.aClass120_1512.anInt1521) * -71319279), i, -1577143133);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.anInt1521) * -71319279), i, -1577143133);
 		}
 		class198 = new Class198();
 		((Class198) class198).aClass290_2437 = this;
 		if (null != is)
 			class198.method3210(new RsByteBuffer(is), 1208743415);
 		synchronized (((Class290) this).aClass229_3449) {
-			((Class290) this).aClass229_3449.method3856(class198, (long) i);
+			((Class290) this).aClass229_3449.put(class198, (long) i);
 		}
 		return class198;
 	}
@@ -49,11 +49,11 @@ public class Class290 {
 		}
 	}
 
-	public Class290(Class486 class486, Class495 class495, Class317 class317, Class317 class317_1_) {
-		((Class290) this).aClass229_3447 = new Class229(20);
+	public Class290(Game class486, Language class495, Index class317, Index class317_1_) {
+		((Class290) this).aClass229_3447 = new SoftCache(20);
 		((Class290) this).aClass317_3448 = class317_1_;
 		((Class290) this).aClass317_3450 = class317;
-		((Class290) this).aClass317_3450.method5624((-71319279 * (Class120.aClass120_1512.anInt1521)), -732818997);
+		((Class290) this).aClass317_3450.filesCount((-71319279 * (SharedConfigsType.aClass120_1512.anInt1521)), -732818997);
 	}
 
 	public void method5104() {
@@ -77,20 +77,20 @@ public class Class290 {
 	public Class198 method5106(int i) {
 		Class198 class198;
 		synchronized (((Class290) this).aClass229_3449) {
-			class198 = ((Class198) ((Class290) this).aClass229_3449.method3865((long) i));
+			class198 = ((Class198) ((Class290) this).aClass229_3449.get((long) i));
 		}
 		if (class198 != null)
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((Class120.aClass120_1512.anInt1521) * -71319279), i, -1579560172);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.anInt1521) * -71319279), i, -1579560172);
 		}
 		class198 = new Class198();
 		((Class198) class198).aClass290_2437 = this;
 		if (null != is)
 			class198.method3210(new RsByteBuffer(is), -1151222098);
 		synchronized (((Class290) this).aClass229_3449) {
-			((Class290) this).aClass229_3449.method3856(class198, (long) i);
+			((Class290) this).aClass229_3449.put(class198, (long) i);
 		}
 		return class198;
 	}
@@ -134,20 +134,20 @@ public class Class290 {
 	public Class198 method5111(int i) {
 		Class198 class198;
 		synchronized (((Class290) this).aClass229_3449) {
-			class198 = ((Class198) ((Class290) this).aClass229_3449.method3865((long) i));
+			class198 = ((Class198) ((Class290) this).aClass229_3449.get((long) i));
 		}
 		if (class198 != null)
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((Class120.aClass120_1512.anInt1521) * -71319279), i, -1811756886);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.anInt1521) * -71319279), i, -1811756886);
 		}
 		class198 = new Class198();
 		((Class198) class198).aClass290_2437 = this;
 		if (null != is)
 			class198.method3210(new RsByteBuffer(is), 848432304);
 		synchronized (((Class290) this).aClass229_3449) {
-			((Class290) this).aClass229_3449.method3856(class198, (long) i);
+			((Class290) this).aClass229_3449.put(class198, (long) i);
 		}
 		return class198;
 	}

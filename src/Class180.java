@@ -13,7 +13,7 @@ public class Class180 {
 	public int anInt2242 = 669014749;
 	public int anInt2243;
 	int anInt2244;
-	static Class229 aClass229_2245 = new Class229(4);
+	static SoftCache aClass229_2245 = new SoftCache(4);
 	static int anInt2246;
 
 	static void method3022(int i) {
@@ -48,18 +48,18 @@ public class Class180 {
 		/* empty */
 	}
 
-	public static Class528 method3028(Class505 class505, int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+	public static MeshRasterizer method3028(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_) {
 		long l = (long) i_3_;
-		Class528 class528 = (Class528) aClass229_2245.method3865(l);
+		MeshRasterizer class528 = (MeshRasterizer) aClass229_2245.get(l);
 		int i_4_ = 2055;
 		if (null == class528) {
-			Class157 class157 = Class157.method2689(Class110.aClass317_1106, i_3_, 0);
+			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, i_3_, 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
-			class528 = class505.method8451(class157, i_4_, 2079347217 * anInt2246, 64, 768);
-			aClass229_2245.method3856(class528, l);
+			if (class157.zoom < 13)
+				class157.upscale(2);
+			class528 = class505.createMeshRasterizer(class157, i_4_, 2079347217 * anInt2246, 64, 768);
+			aClass229_2245.put(class528, l);
 		}
 		class528 = class528.method11289((byte) 6, i_4_, true);
 		if (i != 0)

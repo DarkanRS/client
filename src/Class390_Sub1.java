@@ -29,7 +29,7 @@ public class Class390_Sub1 extends Class390 {
 	float aFloat8544 = -3.4028235E38F;
 	Class74 aClass74_8545;
 	Class473 aClass473_8546 = new Class473();
-	Class282[] aClass282Array8547;
+	Node[] aClass282Array8547;
 	Interface4 anInterface4_8548;
 	float[][] aFloatArrayArray8549;
 	Class70 aClass70_8550;
@@ -138,7 +138,7 @@ public class Class390_Sub1 extends Class390 {
 				i_27_ = -1;
 			}
 			long l = ((long) (class90.anInt947 * -732614481) << 48 | (long) (class90.anInt945 * 973144081) << 42 | (long) (class90.anInt946 * 1152775735) << 28 | (long) (i_28_ << 14) | (long) i_27_);
-			Class282 class282;
+			Node class282;
 			for (class282 = ((Class390_Sub1) this).aClass453_8537.method7530(l); class282 != null; class282 = ((Class390_Sub1) this).aClass453_8537.method7544(1200593705)) {
 				Class282_Sub6 class282_sub6 = (Class282_Sub6) class282;
 				if (((Class282_Sub6) class282_sub6).anInt7510 == i_27_ && (((Class282_Sub6) class282_sub6).aFloat7511 == (float) i_28_) && ((Class282_Sub6) class282_sub6).aClass90_7512.method1506(class90, -120742780))
@@ -583,7 +583,7 @@ public class Class390_Sub1 extends Class390 {
 				i_144_ = -1;
 			}
 			long l = ((long) (class90.anInt947 * -732614481) << 48 | (long) (class90.anInt945 * 973144081) << 42 | (long) (class90.anInt946 * 1152775735) << 28 | (long) (i_145_ << 14) | (long) i_144_);
-			Class282 class282;
+			Node class282;
 			for (class282 = ((Class390_Sub1) this).aClass453_8537.method7530(l); class282 != null; class282 = ((Class390_Sub1) this).aClass453_8537.method7544(2090773608)) {
 				Class282_Sub6 class282_sub6 = (Class282_Sub6) class282;
 				if (((Class282_Sub6) class282_sub6).anInt7510 == i_144_ && (((Class282_Sub6) class282_sub6).aFloat7511 == (float) i_145_) && ((Class282_Sub6) class282_sub6).aClass90_7512.method1506(class90, 224170917))
@@ -609,7 +609,7 @@ public class Class390_Sub1 extends Class390 {
 				for (int i_146_ = 1; i_146_ < anInt4773 * 1826078169; i_146_++)
 					is[i][i_146_] = (byte) (((((Class390_Sub1) this).aByteArrayArray8553[i - 1][i_146_]) >> 2) + ((((Class390_Sub1) this).aByteArrayArray8553[i + 1][i_146_]) >> 3) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_146_ - 1]) >> 2) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_146_ + 1]) >> 3) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_146_]) >> 1));
 			}
-			Class282[] class282s = new Class282[((Class390_Sub1) this).aClass453_8537.method7540(-975751825)];
+			Node[] class282s = new Node[((Class390_Sub1) this).aClass453_8537.method7540(-975751825)];
 			((Class390_Sub1) this).aClass453_8537.method7532(class282s, (byte) 122);
 			for (int i = 0; i < class282s.length; i++)
 				((Class282_Sub6) class282s[i]).method12150(((Class390_Sub1) this).anInt8542);
@@ -731,7 +731,7 @@ public class Class390_Sub1 extends Class390 {
 									f_191_ = ((((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8769) + (f_191_ * (f_191_ > 0.0F ? (((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8770) : (((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8826))));
 								}
 							}
-							Class282 class282 = null;
+							Node class282 = null;
 							if ((i_180_ & ((Class390_Sub1) this).anInt8529 - 1) == 0 && ((i_181_ & ((Class390_Sub1) this).anInt8529 - 1) == 0))
 								class282 = class453.method7530(l);
 							int i_206_;
@@ -808,7 +808,7 @@ public class Class390_Sub1 extends Class390 {
 							} else {
 								is_178_[i_179_] = ((Class282_Sub46) class282).aShort8067;
 								i_206_ = is_178_[i_179_] & 0xffff;
-								if (i_184_ != -1 && ((class282_sub6s_153_[i_179_].aLong3379 * -3442165056282524525L) < (class282_sub6s[i_206_].aLong3379 * -3442165056282524525L)))
+								if (i_184_ != -1 && ((class282_sub6s_153_[i_179_].uid * -3442165056282524525L) < (class282_sub6s[i_206_].uid * -3442165056282524525L)))
 									class282_sub6s[i_206_] = class282_sub6s_153_[i_179_];
 							}
 							for (int i_213_ = 0; i_213_ < i_175_; i_213_++)
@@ -843,12 +843,12 @@ public class Class390_Sub1 extends Class390 {
 							}
 							if (class282_sub6_223_ != null) {
 								class282_sub6_223_.method12152(i_215_, i_216_, i_218_);
-								if (class282_sub6_225_ == null || ((class282_sub6_223_.aLong3379 * -3442165056282524525L) < (class282_sub6_225_.aLong3379 * -3442165056282524525L)))
+								if (class282_sub6_225_ == null || ((class282_sub6_223_.uid * -3442165056282524525L) < (class282_sub6_225_.uid * -3442165056282524525L)))
 									class282_sub6_225_ = class282_sub6_223_;
 							}
 							if (class282_sub6_224_ != null) {
 								class282_sub6_224_.method12152(i_215_, i_216_, i_218_);
-								if (class282_sub6_225_ == null || ((class282_sub6_224_.aLong3379 * -3442165056282524525L) < (class282_sub6_225_.aLong3379 * -3442165056282524525L)))
+								if (class282_sub6_225_ == null || ((class282_sub6_224_.uid * -3442165056282524525L) < (class282_sub6_225_.uid * -3442165056282524525L)))
 									class282_sub6_225_ = class282_sub6_224_;
 							}
 							if (class282_sub6_225_ != null) {
@@ -886,11 +886,11 @@ public class Class390_Sub1 extends Class390 {
 				if (((Class282_Sub6) class282_sub6).anInt7508 > 0)
 					class282s[i_226_++] = class282_sub6;
 			}
-			((Class390_Sub1) this).aClass282Array8547 = new Class282[i_226_];
+			((Class390_Sub1) this).aClass282Array8547 = new Node[i_226_];
 			long[] ls = new long[i_226_];
 			for (int i_228_ = 0; i_228_ < i_226_; i_228_++) {
 				Class282_Sub6 class282_sub6 = (Class282_Sub6) class282s[i_228_];
-				ls[i_228_] = class282_sub6.aLong3379 * -3442165056282524525L;
+				ls[i_228_] = class282_sub6.uid * -3442165056282524525L;
 				((Class390_Sub1) this).aClass282Array8547[i_228_] = class282_sub6;
 				class282_sub6.method12146(((Class390_Sub1) this).anInt8525);
 			}
@@ -922,7 +922,7 @@ public class Class390_Sub1 extends Class390 {
 				for (int i_229_ = 1; i_229_ < anInt4773 * 1826078169; i_229_++)
 					is[i][i_229_] = (byte) (((((Class390_Sub1) this).aByteArrayArray8553[i - 1][i_229_]) >> 2) + ((((Class390_Sub1) this).aByteArrayArray8553[i + 1][i_229_]) >> 3) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_229_ - 1]) >> 2) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_229_ + 1]) >> 3) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_229_]) >> 1));
 			}
-			Class282[] class282s = new Class282[((Class390_Sub1) this).aClass453_8537.method7540(-975751825)];
+			Node[] class282s = new Node[((Class390_Sub1) this).aClass453_8537.method7540(-975751825)];
 			((Class390_Sub1) this).aClass453_8537.method7532(class282s, (byte) 32);
 			for (int i = 0; i < class282s.length; i++)
 				((Class282_Sub6) class282s[i]).method12150(((Class390_Sub1) this).anInt8542);
@@ -1044,7 +1044,7 @@ public class Class390_Sub1 extends Class390 {
 									f_274_ = ((((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8769) + (f_274_ * (f_274_ > 0.0F ? (((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8770) : (((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8826))));
 								}
 							}
-							Class282 class282 = null;
+							Node class282 = null;
 							if ((i_263_ & ((Class390_Sub1) this).anInt8529 - 1) == 0 && ((i_264_ & ((Class390_Sub1) this).anInt8529 - 1) == 0))
 								class282 = class453.method7530(l);
 							int i_289_;
@@ -1121,7 +1121,7 @@ public class Class390_Sub1 extends Class390 {
 							} else {
 								is_261_[i_262_] = ((Class282_Sub46) class282).aShort8067;
 								i_289_ = is_261_[i_262_] & 0xffff;
-								if (i_267_ != -1 && ((class282_sub6s_236_[i_262_].aLong3379 * -3442165056282524525L) < (class282_sub6s[i_289_].aLong3379 * -3442165056282524525L)))
+								if (i_267_ != -1 && ((class282_sub6s_236_[i_262_].uid * -3442165056282524525L) < (class282_sub6s[i_289_].uid * -3442165056282524525L)))
 									class282_sub6s[i_289_] = class282_sub6s_236_[i_262_];
 							}
 							for (int i_296_ = 0; i_296_ < i_258_; i_296_++)
@@ -1156,12 +1156,12 @@ public class Class390_Sub1 extends Class390 {
 							}
 							if (class282_sub6_306_ != null) {
 								class282_sub6_306_.method12152(i_298_, i_299_, i_301_);
-								if (class282_sub6_308_ == null || ((class282_sub6_306_.aLong3379 * -3442165056282524525L) < (class282_sub6_308_.aLong3379 * -3442165056282524525L)))
+								if (class282_sub6_308_ == null || ((class282_sub6_306_.uid * -3442165056282524525L) < (class282_sub6_308_.uid * -3442165056282524525L)))
 									class282_sub6_308_ = class282_sub6_306_;
 							}
 							if (class282_sub6_307_ != null) {
 								class282_sub6_307_.method12152(i_298_, i_299_, i_301_);
-								if (class282_sub6_308_ == null || ((class282_sub6_307_.aLong3379 * -3442165056282524525L) < (class282_sub6_308_.aLong3379 * -3442165056282524525L)))
+								if (class282_sub6_308_ == null || ((class282_sub6_307_.uid * -3442165056282524525L) < (class282_sub6_308_.uid * -3442165056282524525L)))
 									class282_sub6_308_ = class282_sub6_307_;
 							}
 							if (class282_sub6_308_ != null) {
@@ -1199,11 +1199,11 @@ public class Class390_Sub1 extends Class390 {
 				if (((Class282_Sub6) class282_sub6).anInt7508 > 0)
 					class282s[i_309_++] = class282_sub6;
 			}
-			((Class390_Sub1) this).aClass282Array8547 = new Class282[i_309_];
+			((Class390_Sub1) this).aClass282Array8547 = new Node[i_309_];
 			long[] ls = new long[i_309_];
 			for (int i_311_ = 0; i_311_ < i_309_; i_311_++) {
 				Class282_Sub6 class282_sub6 = (Class282_Sub6) class282s[i_311_];
-				ls[i_311_] = class282_sub6.aLong3379 * -3442165056282524525L;
+				ls[i_311_] = class282_sub6.uid * -3442165056282524525L;
 				((Class390_Sub1) this).aClass282Array8547[i_311_] = class282_sub6;
 				class282_sub6.method12146(((Class390_Sub1) this).anInt8525);
 			}
@@ -1235,7 +1235,7 @@ public class Class390_Sub1 extends Class390 {
 				for (int i_312_ = 1; i_312_ < anInt4773 * 1826078169; i_312_++)
 					is[i][i_312_] = (byte) (((((Class390_Sub1) this).aByteArrayArray8553[i - 1][i_312_]) >> 2) + ((((Class390_Sub1) this).aByteArrayArray8553[i + 1][i_312_]) >> 3) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_312_ - 1]) >> 2) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_312_ + 1]) >> 3) + ((((Class390_Sub1) this).aByteArrayArray8553[i][i_312_]) >> 1));
 			}
-			Class282[] class282s = new Class282[((Class390_Sub1) this).aClass453_8537.method7540(-975751825)];
+			Node[] class282s = new Node[((Class390_Sub1) this).aClass453_8537.method7540(-975751825)];
 			((Class390_Sub1) this).aClass453_8537.method7532(class282s, (byte) 55);
 			for (int i = 0; i < class282s.length; i++)
 				((Class282_Sub6) class282s[i]).method12150(((Class390_Sub1) this).anInt8542);
@@ -1357,7 +1357,7 @@ public class Class390_Sub1 extends Class390 {
 									f_357_ = ((((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8769) + (f_357_ * (f_357_ > 0.0F ? (((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8770) : (((Class390_Sub1) this).aClass505_Sub2_8528.aFloat8826))));
 								}
 							}
-							Class282 class282 = null;
+							Node class282 = null;
 							if ((i_346_ & ((Class390_Sub1) this).anInt8529 - 1) == 0 && ((i_347_ & ((Class390_Sub1) this).anInt8529 - 1) == 0))
 								class282 = class453.method7530(l);
 							int i_372_;
@@ -1434,7 +1434,7 @@ public class Class390_Sub1 extends Class390 {
 							} else {
 								is_344_[i_345_] = ((Class282_Sub46) class282).aShort8067;
 								i_372_ = is_344_[i_345_] & 0xffff;
-								if (i_350_ != -1 && ((class282_sub6s_319_[i_345_].aLong3379 * -3442165056282524525L) < (class282_sub6s[i_372_].aLong3379 * -3442165056282524525L)))
+								if (i_350_ != -1 && ((class282_sub6s_319_[i_345_].uid * -3442165056282524525L) < (class282_sub6s[i_372_].uid * -3442165056282524525L)))
 									class282_sub6s[i_372_] = class282_sub6s_319_[i_345_];
 							}
 							for (int i_379_ = 0; i_379_ < i_341_; i_379_++)
@@ -1469,12 +1469,12 @@ public class Class390_Sub1 extends Class390 {
 							}
 							if (class282_sub6_389_ != null) {
 								class282_sub6_389_.method12152(i_381_, i_382_, i_384_);
-								if (class282_sub6_391_ == null || ((class282_sub6_389_.aLong3379 * -3442165056282524525L) < (class282_sub6_391_.aLong3379 * -3442165056282524525L)))
+								if (class282_sub6_391_ == null || ((class282_sub6_389_.uid * -3442165056282524525L) < (class282_sub6_391_.uid * -3442165056282524525L)))
 									class282_sub6_391_ = class282_sub6_389_;
 							}
 							if (class282_sub6_390_ != null) {
 								class282_sub6_390_.method12152(i_381_, i_382_, i_384_);
-								if (class282_sub6_391_ == null || ((class282_sub6_390_.aLong3379 * -3442165056282524525L) < (class282_sub6_391_.aLong3379 * -3442165056282524525L)))
+								if (class282_sub6_391_ == null || ((class282_sub6_390_.uid * -3442165056282524525L) < (class282_sub6_391_.uid * -3442165056282524525L)))
 									class282_sub6_391_ = class282_sub6_390_;
 							}
 							if (class282_sub6_391_ != null) {
@@ -1512,11 +1512,11 @@ public class Class390_Sub1 extends Class390 {
 				if (((Class282_Sub6) class282_sub6).anInt7508 > 0)
 					class282s[i_392_++] = class282_sub6;
 			}
-			((Class390_Sub1) this).aClass282Array8547 = new Class282[i_392_];
+			((Class390_Sub1) this).aClass282Array8547 = new Node[i_392_];
 			long[] ls = new long[i_392_];
 			for (int i_394_ = 0; i_394_ < i_392_; i_394_++) {
 				Class282_Sub6 class282_sub6 = (Class282_Sub6) class282s[i_394_];
-				ls[i_394_] = class282_sub6.aLong3379 * -3442165056282524525L;
+				ls[i_394_] = class282_sub6.uid * -3442165056282524525L;
 				((Class390_Sub1) this).aClass282Array8547[i_394_] = class282_sub6;
 				class282_sub6.method12146(((Class390_Sub1) this).anInt8525);
 			}

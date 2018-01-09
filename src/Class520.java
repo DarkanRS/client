@@ -5,7 +5,7 @@
 public class Class520 {
 	int anInt5933;
 	Class219 aClass219_5934;
-	public static Class317 aClass317_5935;
+	public static Index aClass317_5935;
 
 	public Class521_Sub1_Sub2_Sub1 method11157() {
 		Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) ((((Class520) this).aClass219_5934.anInt2713 * 298538453) << 28 | (-1002240017 * ((Class520) this).aClass219_5934.anInt2712) << 14 | (((Class520) this).aClass219_5934.anInt2711 * 1948093437)))));
@@ -15,7 +15,7 @@ public class Class520 {
 		int i = (1948093437 * ((Class520) this).aClass219_5934.anInt2711 - 1948093437 * class219.anInt2711);
 		int i_0_ = (((Class520) this).aClass219_5934.anInt2712 * -1002240017 - -1002240017 * class219.anInt2712);
 		if (i >= 0 && i_0_ >= 0 && i < client.aClass257_7353.method4424(-1357118145) && i_0_ < client.aClass257_7353.method4451(-690689447)) {
-			for (Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 52)); class282_sub34 != null; class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8067(749881590))) {
+			for (Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 52)); class282_sub34 != null; class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.next(749881590))) {
 				if (class282_sub34.anInt7853 * 1964309863 == ((Class520) this).anInt5933 * -889004183)
 					return ((Class521_Sub1_Sub2_Sub1) (client.aClass257_7353.method4430(-2120601007).method3437((((Class520) this).aClass219_5934.anInt2713 * 298538453), i, i_0_, (short) 3084)));
 			}
@@ -31,7 +31,7 @@ public class Class520 {
 		int i_1_ = (1948093437 * ((Class520) this).aClass219_5934.anInt2711 - 1948093437 * class219.anInt2711);
 		int i_2_ = (((Class520) this).aClass219_5934.anInt2712 * -1002240017 - -1002240017 * class219.anInt2712);
 		if (i_1_ >= 0 && i_2_ >= 0 && i_1_ < client.aClass257_7353.method4424(453899598) && i_2_ < client.aClass257_7353.method4451(-1973666054)) {
-			for (Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 54)); class282_sub34 != null; class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8067(184260692))) {
+			for (Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 54)); class282_sub34 != null; class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.next(184260692))) {
 				if (class282_sub34.anInt7853 * 1964309863 == ((Class520) this).anInt5933 * -889004183)
 					return ((Class521_Sub1_Sub2_Sub1) (client.aClass257_7353.method4430(-1373135935).method3437((((Class520) this).aClass219_5934.anInt2713 * 298538453), i_1_, i_2_, (short) 3084)));
 			}
@@ -47,7 +47,7 @@ public class Class520 {
 		int i = (1948093437 * ((Class520) this).aClass219_5934.anInt2711 - 1948093437 * class219.anInt2711);
 		int i_3_ = (((Class520) this).aClass219_5934.anInt2712 * -1002240017 - -1002240017 * class219.anInt2712);
 		if (i >= 0 && i_3_ >= 0 && i < client.aClass257_7353.method4424(-2146820693) && i_3_ < client.aClass257_7353.method4451(-1941785069)) {
-			for (Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 94)); class282_sub34 != null; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.method8067(-707257907)) {
+			for (Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 94)); class282_sub34 != null; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.next(-707257907)) {
 				if (class282_sub34.anInt7853 * 1964309863 == ((Class520) this).anInt5933 * -889004183)
 					return ((Class521_Sub1_Sub2_Sub1) (client.aClass257_7353.method4430(-1327946829).method3437((((Class520) this).aClass219_5934.anInt2713 * 298538453), i, i_3_, (short) 3084)));
 			}

@@ -32,7 +32,7 @@ public class Class168 {
 	static final void method2866(CS2Executor class527, byte i) {
 		if (Class475.aBool5623 && Class263.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-580037051), -1, -1, false, (byte) 116);
-		if (Class40.method867(-391014767) == Class279.aClass279_3368) {
+		if (NamedFileReference.method867(-391014767) == Class279.aClass279_3368) {
 			Class282_Sub11.method12211(-541554902);
 			System.exit(0);
 		} else

@@ -190,7 +190,7 @@ public class Class9 {
 	}
 
 	public static void method419() {
-		if (-1741204137 * client.anInt7166 == 0 && (!Class203.method3360((byte) 59) && !Class85.method1466(908661087))) {
+		if (-1741204137 * client.anInt7166 == 0 && (!Js5CacheFile.method3360((byte) 59) && !Class85.method1466(908661087))) {
 			Class365.method6298(7, 1790327246);
 		}
 	}
@@ -1543,24 +1543,24 @@ public class Class9 {
 		class282_sub35_sub2.writeInt(Class512.aClass317_5884.method5602(1987992719));
 		class282_sub35_sub2.writeInt(Class110.aClass317_1106.method5602(2034763958));
 		class282_sub35_sub2.writeInt(Class211.aClass317_2673.method5602(1987841900));
-		class282_sub35_sub2.writeInt(Class437.aClass317_5340.method5602(2003492885));
+		class282_sub35_sub2.writeInt(AttributeDefault.aClass317_5340.method5602(2003492885));
 		class282_sub35_sub2.writeInt(Class250.aClass317_3093.method5602(2075341409));
 		class282_sub35_sub2.writeInt(Class525.aClass317_6984.method5602(2068554115));
 		class282_sub35_sub2.writeInt(Class378.aClass317_4526.method5602(2060673586));
 		class282_sub35_sub2.writeInt(Class410.aClass317_4924.method5602(2015128184));
-		class282_sub35_sub2.writeInt(Class313.aClass317_3665.method5602(2000437751));
+		class282_sub35_sub2.writeInt(Js5LocalRequester.aClass317_3665.method5602(2000437751));
 		class282_sub35_sub2.writeInt(Class211.aClass317_2674.method5602(2039308195));
 		class282_sub35_sub2.writeInt(Class273.aClass317_3332.method5602(2108412051));
 		class282_sub35_sub2.writeInt(Class236.aClass317_2915.method5602(2020401688));
 		class282_sub35_sub2.writeInt(Class107.aClass317_1081.method5602(2089383022));
 		class282_sub35_sub2.writeInt(Class383.aClass317_4665.method5602(2135152031));
 		class282_sub35_sub2.writeInt(Class235.aClass317_2908.method5602(2024614555));
-		class282_sub35_sub2.writeInt(Class322.aClass317_3749.method5602(2073051727));
+		class282_sub35_sub2.writeInt(ReferenceTable.aClass317_3749.method5602(2073051727));
 		class282_sub35_sub2.writeInt(Class222.aClass317_2766.method5602(2005945076));
 		class282_sub35_sub2.writeInt(Class192.worldMap.method5602(2013588122));
 		class282_sub35_sub2.writeInt(Class371.aClass317_4326.method5602(2004439539));
 		class282_sub35_sub2.writeInt(Class329.aClass317_3861.method5602(2017701601));
-		class282_sub35_sub2.writeInt(Class40.aClass317_412.method5602(2136998106));
+		class282_sub35_sub2.writeInt(NamedFileReference.aClass317_412.method5602(2136998106));
 		class282_sub35_sub2.writeInt(Class468_Sub7.aClass317_7886.method5602(2125123653));
 		class282_sub35_sub2.writeInt(Class520.aClass317_5935.method5602(1983050453));
 		class282_sub35_sub2.writeInt(Class215.aClass317_2686.method5602(2139728183));
@@ -1576,7 +1576,7 @@ public class Class9 {
 		if (-1741204137 * client.anInt7166 != 5) {
 			return false;
 		}
-		if (Class203.method3360((byte) 14) || Class85.method1466(1581546373)) {
+		if (Js5CacheFile.method3360((byte) 14) || Class85.method1466(1581546373)) {
 			return false;
 		}
 		return true;
@@ -1651,7 +1651,7 @@ public class Class9 {
 		if (-1741204137 * client.anInt7166 != 5) {
 			return false;
 		}
-		if (Class203.method3360((byte) -120) || Class85.method1466(393704267)) {
+		if (Js5CacheFile.method3360((byte) -120) || Class85.method1466(393704267)) {
 			return false;
 		}
 		return true;
@@ -1661,7 +1661,7 @@ public class Class9 {
 		if (-1741204137 * client.anInt7166 != 5) {
 			return false;
 		}
-		if (Class203.method3360((byte) 87) || Class85.method1466(-2145831465)) {
+		if (Js5CacheFile.method3360((byte) 87) || Class85.method1466(-2145831465)) {
 			return false;
 		}
 		return true;

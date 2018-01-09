@@ -2,14 +2,14 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class h extends Class528 implements Interface40 {
+public class h extends MeshRasterizer implements Interface40 {
 	Class87[] aClass87Array7139;
 	ja aja7140;
 	ba aba7141;
 	Class172[] aClass172Array7142;
 	long nativeid;
 
-	public void method11299(Class528 class528, int i, int i_0_, int i_1_, boolean bool) {
+	public void method11299(MeshRasterizer class528, int i, int i_0_, int i_1_, boolean bool) {
 		((h) this).aja7140.nx().method313(this, class528, i, i_0_, i_1_, bool);
 	}
 
@@ -90,7 +90,7 @@ public class h extends Class528 implements Interface40 {
 
 	public native void oa(int i, int i_56_, int i_57_);
 
-	public Class528 method11279(byte i, int i_58_, boolean bool) {
+	public MeshRasterizer method11279(byte i, int i_58_, boolean bool) {
 		return ((h) this).aja7140.nx().method325(this, i, i_58_, bool);
 	}
 
@@ -113,7 +113,7 @@ public class h extends Class528 implements Interface40 {
 
 	native boolean ea();
 
-	h(ja var_ja, ba var_ba, Class157 class157, int i, int i_59_, int i_60_, int i_61_) {
+	h(ja var_ja, ba var_ba, RSMesh class157, int i, int i_59_, int i_60_, int i_61_) {
 		((h) this).aja7140 = var_ja;
 		((h) this).aba7141 = var_ba;
 		((h) this).aClass87Array7139 = class157.aClass87Array2007;
@@ -251,21 +251,21 @@ public class h extends Class528 implements Interface40 {
 		return ((h) this).aClass172Array7142;
 	}
 
-	public Class528 method11276(byte i, int i_88_, boolean bool) {
+	public MeshRasterizer method11276(byte i, int i_88_, boolean bool) {
 		return ((h) this).aja7140.nx().method325(this, i, i_88_, bool);
 	}
 
-	public Class528 method11277(byte i, int i_89_, boolean bool) {
+	public MeshRasterizer method11277(byte i, int i_89_, boolean bool) {
 		return ((h) this).aja7140.nx().method325(this, i, i_89_, bool);
 	}
 
-	public Class528 method11278(byte i, int i_90_, boolean bool) {
+	public MeshRasterizer method11278(byte i, int i_90_, boolean bool) {
 		return ((h) this).aja7140.nx().method325(this, i, i_90_, bool);
 	}
 
 	public native int cb();
 
-	public Class528 method11296(byte i, int i_91_, boolean bool) {
+	public MeshRasterizer method11296(byte i, int i_91_, boolean bool) {
 		return ((h) this).aja7140.nx().method325(this, i, i_91_, bool);
 	}
 
@@ -448,13 +448,13 @@ public class h extends Class528 implements Interface40 {
 
 	public native int cw();
 
-	public boolean method11272() {
+	public boolean successful() {
 		return true;
 	}
 
 	public native int ca();
 
-	public Class528 method11289(byte i, int i_110_, boolean bool) {
+	public MeshRasterizer method11289(byte i, int i_110_, boolean bool) {
 		return ((h) this).aja7140.nx().method325(this, i, i_110_, bool);
 	}
 
@@ -474,7 +474,7 @@ public class h extends Class528 implements Interface40 {
 
 	public native void cq(short i, short i_118_);
 
-	public void method11269(Class528 class528, int i, int i_119_, int i_120_, boolean bool) {
+	public void method11269(MeshRasterizer class528, int i, int i_119_, int i_120_, boolean bool) {
 		((h) this).aja7140.nx().method313(this, class528, i, i_119_, i_120_, bool);
 	}
 

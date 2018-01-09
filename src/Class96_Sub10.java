@@ -46,7 +46,7 @@ public abstract class Class96_Sub10 extends Class96 {
 	}
 
 	public static void method14603(int i, int i_1_, int i_2_, String string, byte i_3_) {
-		Class118 class118 = Class317.method5694(i_1_, i_2_, -1959607972);
+		Class118 class118 = Index.method5694(i_1_, i_2_, -1959607972);
 		if (null != class118) {
 			if (class118.anObjectArray1410 != null) {
 				Class282_Sub43 class282_sub43 = new Class282_Sub43();

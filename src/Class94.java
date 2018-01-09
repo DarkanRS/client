@@ -95,7 +95,7 @@ public class Class94 {
 		return class282_sub35;
 	}
 
-	public static Class414 method1588(Class317 class317, int i, int i_1_, int i_2_) {
+	public static Class414 method1588(Index class317, int i, int i_1_, int i_2_) {
 		byte[] is = class317.getFile(i, i_1_, -1787886103);
 		if (is == null)
 			return null;
@@ -120,7 +120,7 @@ public class Class94 {
 		Class350_Sub1.aClass406_7757.method6829(i_3_, 989063479);
 		Class96_Sub20.aClass515_9416.method8846(i_3_, (byte) -61);
 		Class38.method851(i_3_, 1008680186);
-		Class486.method8204(i_3_, -2137670841);
+		Game.method8204(i_3_, -2137670841);
 		Class117.method1982(i_3_, -1202059650);
 		Class275_Sub1.method12424(i_3_, -23443857);
 		Class345.method6143(i_3_, -440467985);

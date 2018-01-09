@@ -4,7 +4,7 @@
  */
 import java.nio.ByteBuffer;
 
-public class Class8_Sub4 extends Class8 {
+public class Class8_Sub4 extends FontRenderer {
 	Interface4 anInterface4_9320;
 	Class505_Sub2 aClass505_Sub2_9321;
 	Interface6 anInterface6_9322;

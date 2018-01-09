@@ -16,7 +16,7 @@ public class Class239 {
 	static final int anInt2941 = -60;
 	static int anInt2942;
 	Class535[][] aClass535ArrayArray2943;
-	Class505 aClass505_2944;
+	GraphicalRenderer aClass505_2944;
 	int anInt2945;
 	int anInt2946 = 0;
 	boolean aBool2947;
@@ -25,8 +25,8 @@ public class Class239 {
 	static final float aFloat2950 = 1.2F;
 	Class535 aClass535_2951;
 	Class385 aClass385_2952;
-	Class229 aClass229_2953;
-	Class229 aClass229_2954;
+	SoftCache aClass229_2953;
+	SoftCache aClass229_2954;
 
 	void method4036() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + client.aClass257_7353.method4428(-1217777158)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
@@ -91,10 +91,10 @@ public class Class239 {
 
 	Class247 method4042(int i, int i_3_, int i_4_, int i_5_) {
 		long l = (((long) i_3_ & 0xffffL) << 48 | ((long) i_4_ & 0xffffL) << 32 | ((long) i_5_ & 0xffffL) << 16 | (long) i & 0xffffL);
-		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
+		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.get(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_3_, i_4_, i_5_, Class488.aClass45_5759, 1560540952);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}
@@ -142,10 +142,10 @@ public class Class239 {
 
 	Class247 method4050(int i, int i_12_, int i_13_, int i_14_, byte i_15_) {
 		long l = (((long) i_12_ & 0xffffL) << 48 | ((long) i_13_ & 0xffffL) << 32 | ((long) i_14_ & 0xffffL) << 16 | (long) i & 0xffffL);
-		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
+		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.get(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_12_, i_13_, i_14_, Class488.aClass45_5759, 1868752196);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}
@@ -269,21 +269,21 @@ public class Class239 {
 
 	Class152 method4063(int i, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_) {
 		long l = (67481L * (long) i ^ 97549L * (long) i_23_ ^ 475427L * (long) i_24_ ^ 986053L * (long) i_25_ ^ (long) i_26_ * 32147369L ^ 76724863L * (long) i_27_);
-		Class152 class152 = (Class152) ((Class239) this).aClass229_2953.method3865(l);
+		Class152 class152 = (Class152) ((Class239) this).aClass229_2953.get(l);
 		if (null != class152)
 			return class152;
 		class152 = ((Class239) this).aClass505_2944.method8466(i, i_23_, i_24_, i_25_, i_26_, i_27_);
-		((Class239) this).aClass229_2953.method3856(class152, l);
+		((Class239) this).aClass229_2953.put(class152, l);
 		return class152;
 	}
 
 	Class152 method4064(int i, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_, int i_33_) {
 		long l = (67481L * (long) i ^ 97549L * (long) i_28_ ^ 475427L * (long) i_29_ ^ 986053L * (long) i_30_ ^ (long) i_31_ * 32147369L ^ 76724863L * (long) i_32_);
-		Class152 class152 = (Class152) ((Class239) this).aClass229_2953.method3865(l);
+		Class152 class152 = (Class152) ((Class239) this).aClass229_2953.get(l);
 		if (null != class152)
 			return class152;
 		class152 = ((Class239) this).aClass505_2944.method8466(i, i_28_, i_29_, i_30_, i_31_, i_32_);
-		((Class239) this).aClass229_2953.method3856(class152, l);
+		((Class239) this).aClass229_2953.put(class152, l);
 		return class152;
 	}
 
@@ -305,10 +305,10 @@ public class Class239 {
 
 	Class247 method4066(int i, int i_34_, int i_35_, int i_36_) {
 		long l = (((long) i_34_ & 0xffffL) << 48 | ((long) i_35_ & 0xffffL) << 32 | ((long) i_36_ & 0xffffL) << 16 | (long) i & 0xffffL);
-		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
+		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.get(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_34_, i_35_, i_36_, Class488.aClass45_5759, 1824037577);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}
@@ -453,13 +453,13 @@ public class Class239 {
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
-	public Class239(Class505 class505, int i, int i_50_) {
+	public Class239(GraphicalRenderer class505, int i, int i_50_) {
 		((Class239) this).anInt2945 = -824774497;
 		((Class239) this).aLong2936 = 0L;
 		((Class239) this).aBool2947 = false;
 		((Class239) this).aClass385_2952 = new Class385(-50.0F, -60.0F, -50.0F);
-		((Class239) this).aClass229_2953 = new Class229(9);
-		((Class239) this).aClass229_2954 = new Class229(9);
+		((Class239) this).aClass229_2953 = new SoftCache(9);
+		((Class239) this).aClass229_2954 = new SoftCache(9);
 		((Class239) this).aClass505_2944 = class505;
 		((Class239) this).aClass535ArrayArray2943 = new Class535[i][i_50_];
 		if (null != Class210.anIntArray2668)
@@ -474,10 +474,10 @@ public class Class239 {
 
 	Class247 method4079(int i, int i_51_, int i_52_, int i_53_) {
 		long l = (((long) i_51_ & 0xffffL) << 48 | ((long) i_52_ & 0xffffL) << 32 | ((long) i_53_ & 0xffffL) << 16 | (long) i & 0xffffL);
-		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
+		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.get(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_51_, i_52_, i_53_, Class488.aClass45_5759, 2026640567);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}

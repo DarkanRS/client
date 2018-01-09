@@ -9,7 +9,7 @@ public class Class346 {
 	public int[] anIntArray4046;
 	public Class282_Sub50_Sub9 aClass282_Sub50_Sub9_4047;
 	public int anInt4048;
-	static Class482 aClass482_4049;
+	static NodeCollection aClass482_4049;
 
 	public static Class346 method6146(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
@@ -65,17 +65,17 @@ public class Class346 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13050(519629067);
 	}
 
-	public static byte[] method6154(Object object, boolean bool, byte i) {
-		if (null == object)
+	public static byte[] toByteArray(Object buf, boolean copy, byte i) {
+		if (null == buf)
 			return null;
-		if (object instanceof byte[]) {
-			byte[] is = (byte[]) object;
-			if (bool)
+		if (buf instanceof byte[]) {
+			byte[] is = (byte[]) buf;
+			if (copy)
 				return Arrays.copyOf(is, is.length);
 			return is;
 		}
-		if (object instanceof ByteBuffer) {
-			ByteBuffer bytebuffer = (ByteBuffer) object;
+		if (buf instanceof ByteBuffer) {
+			ByteBuffer bytebuffer = (ByteBuffer) buf;
 			byte[] is = new byte[bytebuffer.capacity()];
 			bytebuffer.position(0);
 			bytebuffer.get(is);
@@ -284,8 +284,8 @@ public class Class346 {
 				Class351.method6196(class282_sub44, true, false, -1457682699);
 			}
 			client.anInt7349 = -153305321;
-			client.aClass465_7442 = new SwitchMap(8);
-			ItemEffects.method7041((byte) -97);
+			client.aClass465_7442 = new IterableNodeMap(8);
+			MeshModifier.method7041((byte) -97);
 			client.anInt7349 = 1398349149 * Class58.aClass529_527.anInt7027;
 			Class516.method8867(false, -905479502);
 			IncomingPacket.method6378(-1538407760);

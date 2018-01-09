@@ -38,7 +38,7 @@ public class Class49 {
 				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
 				anObject483 = Class309.method5493(is, false, (byte) 40);
 			}
-			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
+			byte[] is = Class346.toByteArray(anObject483, false, (byte) 1);
 			byte[] is_0_ = new byte[is.length * 4];
 			int i = 0;
 			for (int i_1_ = 0; i_1_ < 16; i_1_++) {
@@ -87,9 +87,9 @@ public class Class49 {
 					anInterface6Array478[i] = (((Class49) this).aClass505_Sub2_481.method13957(Class150.aClass150_1952, 128, 128, true, is));
 				}
 			} else {
-				byte[] is = Class346.method6154(anObject482, false, (byte) 1);
+				byte[] is = Class346.toByteArray(anObject482, false, (byte) 1);
 				((Class49) this).anInterface1_475 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1952, 128, 128, 16, true, is));
-				is = Class346.method6154(anObject477, false, (byte) 1);
+				is = Class346.toByteArray(anObject477, false, (byte) 1);
 				anInterface1_479 = (((Class49) this).aClass505_Sub2_481.method13962(Class150.aClass150_1952, 128, 128, 16, true, is));
 			}
 		}
@@ -116,7 +116,7 @@ public class Class49 {
 				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
 				anObject483 = Class309.method5493(is, false, (byte) 118);
 			}
-			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
+			byte[] is = Class346.toByteArray(anObject483, false, (byte) 1);
 			byte[] is_11_ = new byte[is.length * 4];
 			int i = 0;
 			for (int i_12_ = 0; i_12_ < 16; i_12_++) {
@@ -175,7 +175,7 @@ public class Class49 {
 				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
 				anObject483 = Class309.method5493(is, false, (byte) 81);
 			}
-			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
+			byte[] is = Class346.toByteArray(anObject483, false, (byte) 1);
 			byte[] is_22_ = new byte[is.length * 4];
 			int i = 0;
 			for (int i_23_ = 0; i_23_ < 16; i_23_++) {

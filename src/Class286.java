@@ -429,7 +429,7 @@ public class Class286 implements Runnable {
 		if (is == null || is.length <= 1)
 			return null;
 		try {
-			class282_sub50_sub5 = Class505.method8699(is, -1364063494);
+			class282_sub50_sub5 = GraphicalRenderer.method8699(is, -1364063494);
 		} catch (Exception exception) {
 			throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i).toString());
 		}

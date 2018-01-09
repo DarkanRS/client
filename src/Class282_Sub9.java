@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub9 extends Class282 {
+public class Class282_Sub9 extends Node {
 	Interface33 anInterface33_7538;
 
 	Class282_Sub9(Interface33 interface33) {

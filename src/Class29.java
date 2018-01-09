@@ -3,8 +3,8 @@
  */
 
 public class Class29 {
-	Class317 aClass317_352;
-	Class317 aClass317_353;
+	Index aClass317_352;
+	Index aClass317_353;
 	Class30 aClass30_354;
 
 	Class30 method780() {
@@ -46,7 +46,7 @@ public class Class29 {
 		return ((Class29) this).aClass30_354;
 	}
 
-	public Class29(Class317 class317, Class317 class317_0_) {
+	public Class29(Index class317, Index class317_0_) {
 		((Class29) this).aClass317_352 = class317;
 		((Class29) this).aClass317_353 = class317_0_;
 	}
@@ -159,7 +159,7 @@ public class Class29 {
 	static void method788(int i, boolean bool, int i_2_) {
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 1384603359);
 		if (class282_sub30 != null)
-			class282_sub30.method4991(-371378792);
+			class282_sub30.unlink(-371378792);
 	}
 
 	static final void method789(Class118 class118, Class98 class98, CS2Executor class527, int i) {

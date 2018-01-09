@@ -2,8 +2,8 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub29 extends Class282 {
-	public Class482 aClass482_7708 = new Class482();
+public class Class282_Sub29 extends Node {
+	public NodeCollection aClass482_7708 = new NodeCollection();
 
 	Class282_Sub29() {
 		/* empty */
@@ -17,7 +17,7 @@ public class Class282_Sub29 extends Class282 {
 	}
 
 	public static void method12426(int i) {
-		if (client.anInt7166 * -1741204137 == 5 && (!Class203.method3360((byte) -32) && !Class85.method1466(1509823443)))
+		if (client.anInt7166 * -1741204137 == 5 && (!Js5CacheFile.method3360((byte) -32) && !Class85.method1466(1509823443)))
 			Class365.method6298(8, 2077518946);
 	}
 }

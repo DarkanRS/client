@@ -7,7 +7,7 @@ public abstract class Class149 {
 	int anInt1742;
 	int anInt1743;
 	static int anInt1744;
-	public static Class317 aClass317_1745;
+	public static Index aClass317_1745;
 	public static Class288 aClass288_1746;
 
 	abstract void method2555(int i, int i_0_);
@@ -58,7 +58,7 @@ public abstract class Class149 {
 
 	static final void method2566(CS2Executor class527, int i) {
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		if (0 != -1741204137 * client.anInt7166 || Class203.method3360((byte) 72))
+		if (0 != -1741204137 * client.anInt7166 || Js5CacheFile.method3360((byte) 72))
 			client.aByte7458 = (byte) -5;
 		else if (string.length() > 20)
 			client.aByte7458 = (byte) -4;

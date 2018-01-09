@@ -46,7 +46,7 @@ public class Class320 {
 						Class282_Sub25 class282_sub25_2_ = (Class282_Sub25) ((Class320) this).aClass473_3721.method7869(-417377867);
 						class282_sub25 = new Class282_Sub25(i, (((Class282_Sub25) class282_sub25_2_).anInt7689) * -501478123);
 						((Class320) this).aClass282_Sub25Array3720[(((Class282_Sub25) class282_sub25_2_).anInt7688 * -968280871)] = null;
-						class282_sub25_2_.method4991(-371378792);
+						class282_sub25_2_.unlink(-371378792);
 					} else {
 						class282_sub25 = new Class282_Sub25(i, (((Class320) this).anInt3714 * -485828277));
 						((Class320) this).anInt3714 += 510060643;
@@ -100,7 +100,7 @@ public class Class320 {
 						Class282_Sub25 class282_sub25_6_ = (Class282_Sub25) ((Class320) this).aClass473_3721.method7869(-417377867);
 						class282_sub25 = new Class282_Sub25(i, (((Class282_Sub25) class282_sub25_6_).anInt7689) * -501478123);
 						((Class320) this).aClass282_Sub25Array3720[(((Class282_Sub25) class282_sub25_6_).anInt7688 * -968280871)] = null;
-						class282_sub25_6_.method4991(-371378792);
+						class282_sub25_6_.unlink(-371378792);
 					} else {
 						class282_sub25 = new Class282_Sub25(i, (((Class320) this).anInt3714 * -485828277));
 						((Class320) this).anInt3714 += 510060643;
@@ -148,7 +148,7 @@ public class Class320 {
 						Class282_Sub25 class282_sub25_7_ = (Class282_Sub25) ((Class320) this).aClass473_3721.method7869(-417377867);
 						class282_sub25 = new Class282_Sub25(i, (((Class282_Sub25) class282_sub25_7_).anInt7689) * -501478123);
 						((Class320) this).aClass282_Sub25Array3720[(((Class282_Sub25) class282_sub25_7_).anInt7688 * -968280871)] = null;
-						class282_sub25_7_.method4991(-371378792);
+						class282_sub25_7_.unlink(-371378792);
 					} else {
 						class282_sub25 = new Class282_Sub25(i, (((Class320) this).anInt3714 * -485828277));
 						((Class320) this).anInt3714 += 510060643;
@@ -178,7 +178,7 @@ public class Class320 {
 						Class282_Sub25 class282_sub25_8_ = (Class282_Sub25) ((Class320) this).aClass473_3721.method7869(-417377867);
 						class282_sub25 = new Class282_Sub25(i, (((Class282_Sub25) class282_sub25_8_).anInt7689) * -501478123);
 						((Class320) this).aClass282_Sub25Array3720[(((Class282_Sub25) class282_sub25_8_).anInt7688 * -968280871)] = null;
-						class282_sub25_8_.method4991(-371378792);
+						class282_sub25_8_.unlink(-371378792);
 					} else {
 						class282_sub25 = new Class282_Sub25(i, (((Class320) this).anInt3714 * -485828277));
 						((Class320) this).anInt3714 += 510060643;
@@ -208,7 +208,7 @@ public class Class320 {
 						Class282_Sub25 class282_sub25_9_ = (Class282_Sub25) ((Class320) this).aClass473_3721.method7869(-417377867);
 						class282_sub25 = new Class282_Sub25(i, (((Class282_Sub25) class282_sub25_9_).anInt7689) * -501478123);
 						((Class320) this).aClass282_Sub25Array3720[(((Class282_Sub25) class282_sub25_9_).anInt7688 * -968280871)] = null;
-						class282_sub25_9_.method4991(-371378792);
+						class282_sub25_9_.unlink(-371378792);
 					} else {
 						class282_sub25 = new Class282_Sub25(i, (((Class320) this).anInt3714 * -485828277));
 						((Class320) this).anInt3714 += 510060643;
@@ -241,7 +241,7 @@ public class Class320 {
 		Class260.aClass277_3234 = new Class277(i, i_10_ << 9, i_11_ << 9, i_12_ << 8, 8 * i_13_);
 	}
 
-	public static Class505 method5732(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_17_, int i_18_) {
+	public static GraphicalRenderer method5732(int i, Canvas canvas, Interface22 interface22, Index class317, int i_17_, int i_18_) {
 		int i_19_ = 0;
 		int i_20_ = 0;
 		if (canvas != null) {

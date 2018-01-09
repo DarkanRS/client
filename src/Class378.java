@@ -7,11 +7,11 @@ import java.util.Map;
 
 public class Class378 {
 	int[] anIntArray4521;
-	Class317 aClass317_4522;
-	Class317 aClass317_4523;
-	Class229 aClass229_4524 = new Class229(20);
+	Index aClass317_4522;
+	Index aClass317_4523;
+	SoftCache aClass229_4524 = new SoftCache(20);
 	Map aMap4525 = null;
-	public static Class317 aClass317_4526;
+	public static Index aClass317_4526;
 
 	public int method6402() {
 		if (((Class378) this).anIntArray4521 == null)
@@ -30,7 +30,7 @@ public class Class378 {
 		}
 	}
 
-	public Class378(Class317 class317, Class317 class317_2_, int[] is) {
+	public Class378(Index class317, Index class317_2_, int[] is) {
 		((Class378) this).aClass317_4522 = class317;
 		((Class378) this).aClass317_4523 = class317_2_;
 		if (null != is)
@@ -68,7 +68,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_7_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_6_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_6_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 102);
@@ -88,7 +88,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_6_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_6_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_6_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_6_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -113,7 +113,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_10_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_8_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_8_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 119);
@@ -133,7 +133,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_8_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_8_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_8_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_8_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -231,7 +231,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_20_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_19_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_19_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 89);
@@ -251,7 +251,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_19_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_19_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_19_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_19_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -294,7 +294,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_24_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_23_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_23_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 69);
@@ -314,7 +314,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_23_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_23_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_23_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_23_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -403,7 +403,7 @@ public class Class378 {
 		Class439.method7343(50, 827005880);
 		Class487.aClass378_5752.method6411(50, -1105244547);
 		Class332.method5927(5, (byte) 0);
-		Class322.method5768(5, (byte) -42);
+		ReferenceTable.method5768(5, (byte) -42);
 		client.aClass229_7204.method3858(5, (byte) 17);
 		Class20.aClass229_191.method3858(5, (byte) 15);
 		Class517.aClass229_5901.method3858(5, (byte) -83);

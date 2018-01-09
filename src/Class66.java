@@ -3,7 +3,7 @@
  */
 
 public class Class66 {
-	Class229 aClass229_674 = new Class229(256);
+	SoftCache aClass229_674 = new SoftCache(256);
 	Interface22 anInterface22_675;
 	Class505_Sub2 aClass505_Sub2_676;
 
@@ -14,7 +14,7 @@ public class Class66 {
 
 	Interface6 method1276(int i, int i_0_) {
 		long l = (long) (i_0_ << 16 | i);
-		Object object = ((Class66) this).aClass229_674.method3865(l);
+		Object object = ((Class66) this).aClass229_674.get(l);
 		if (object != null)
 			return (Interface6) object;
 		if (!((Class66) this).anInterface22_675.method139(i, -186930877))
@@ -35,13 +35,13 @@ public class Class66 {
 			interface6 = (((Class66) this).aClass505_Sub2_676.method13958(Class150.aClass150_1949, i_0_, i_0_, true, fs));
 		}
 		interface6.method50(class169.aBool2086, class169.aBool2059);
-		((Class66) this).aClass229_674.method3856(interface6, l);
+		((Class66) this).aClass229_674.put(interface6, l);
 		return interface6;
 	}
 
 	Interface6 method1277(int i, int i_1_) {
 		long l = (long) (i_1_ << 16 | i);
-		Object object = ((Class66) this).aClass229_674.method3865(l);
+		Object object = ((Class66) this).aClass229_674.get(l);
 		if (object != null)
 			return (Interface6) object;
 		if (!((Class66) this).anInterface22_675.method139(i, -1820036483))
@@ -62,7 +62,7 @@ public class Class66 {
 			interface6 = (((Class66) this).aClass505_Sub2_676.method13958(Class150.aClass150_1949, i_1_, i_1_, true, fs));
 		}
 		interface6.method50(class169.aBool2086, class169.aBool2059);
-		((Class66) this).aClass229_674.method3856(interface6, l);
+		((Class66) this).aClass229_674.put(interface6, l);
 		return interface6;
 	}
 

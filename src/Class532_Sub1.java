@@ -21,14 +21,14 @@ public class Class532_Sub1 extends Class532 {
 		if (i >= anInt7071 * -612590951 && i_9_ <= anInt7069 * -1345107225 && i_10_ >= 324226563 * anInt7070 && i_11_ <= -348932735 * anInt7068)
 			Class198.method3230(i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, (byte) 30);
 		else
-			Class238.method4034(i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, (byte) -81);
+			PlayerAppearance.method4034(i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, (byte) -81);
 	}
 
 	public static final void method12819(int i, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_) {
 		if (i >= anInt7071 * -612590951 && i_15_ <= anInt7069 * -1345107225 && i_16_ >= 324226563 * anInt7070 && i_17_ <= -348932735 * anInt7068)
 			Class198.method3230(i, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, (byte) 116);
 		else
-			Class238.method4034(i, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, (byte) -2);
+			PlayerAppearance.method4034(i, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, (byte) -2);
 	}
 
 	static void method12820(int i, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_) {
@@ -52,7 +52,7 @@ public class Class532_Sub1 extends Class532 {
 		if (i >= anInt7071 * -612590951 && i_34_ <= anInt7069 * -1345107225 && i_35_ >= 324226563 * anInt7070 && i_36_ <= -348932735 * anInt7068)
 			Class198.method3230(i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, (byte) 52);
 		else
-			Class238.method4034(i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, (byte) -49);
+			PlayerAppearance.method4034(i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, (byte) -49);
 	}
 
 	public static final void method12822(int i, int i_40_, int i_41_, int i_42_, int i_43_) {

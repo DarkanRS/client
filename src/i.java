@@ -3,7 +3,7 @@
  */
 
 public class i extends Class390 implements Interface40 {
-	Class482 aClass482_7143 = new Class482();
+	NodeCollection aClass482_7143 = new NodeCollection();
 	long nativeid;
 	ja aja7144;
 
@@ -165,7 +165,7 @@ public class i extends Class390 implements Interface40 {
 	public void method6717(int i, int i_82_, int i_83_, boolean[][] bools, boolean bool, int i_84_) {
 		int i_85_ = 0;
 		float[] fs = new float[((i) this).aClass482_7143.method8069(-1374254477)];
-		for (Class282_Sub24 class282_sub24 = ((Class282_Sub24) ((i) this).aClass482_7143.method8097((byte) 78)); class282_sub24 != null; class282_sub24 = ((Class282_Sub24) ((i) this).aClass482_7143.method8067(89434836)))
+		for (Class282_Sub24 class282_sub24 = ((Class282_Sub24) ((i) this).aClass482_7143.head((byte) 78)); class282_sub24 != null; class282_sub24 = ((Class282_Sub24) ((i) this).aClass482_7143.next(89434836)))
 			fs[i_85_++] = class282_sub24.method12395(-730968094);
 		t(fs);
 		for (int i_86_ = 0; i_86_ < i_83_ + i_83_; i_86_++) {
@@ -221,7 +221,7 @@ public class i extends Class390 implements Interface40 {
 	public void method6716(int i, int i_124_, int i_125_, boolean[][] bools, boolean bool, int i_126_) {
 		int i_127_ = 0;
 		float[] fs = new float[((i) this).aClass482_7143.method8069(-1374254477)];
-		for (Class282_Sub24 class282_sub24 = ((Class282_Sub24) ((i) this).aClass482_7143.method8097((byte) 81)); class282_sub24 != null; class282_sub24 = (Class282_Sub24) ((i) this).aClass482_7143.method8067(-1062392884))
+		for (Class282_Sub24 class282_sub24 = ((Class282_Sub24) ((i) this).aClass482_7143.head((byte) 81)); class282_sub24 != null; class282_sub24 = (Class282_Sub24) ((i) this).aClass482_7143.next(-1062392884))
 			fs[i_127_++] = class282_sub24.method12395(1226134811);
 		t(fs);
 		for (int i_128_ = 0; i_128_ < i_125_ + i_125_; i_128_++) {

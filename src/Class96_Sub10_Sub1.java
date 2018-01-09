@@ -40,7 +40,7 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 			Class218.method3710(class98, class118, 983481657);
 	}
 
-	public static void method15554(Class317 class317, Class317 class317_1_, int i, int i_2_) {
+	public static void method15554(Index class317, Index class317_1_, int i, int i_2_) {
 		Class282_Sub50_Sub13.aClass317_9686 = class317;
 		Class282_Sub50_Sub13.aClass317_9685 = class317_1_;
 	}

@@ -8,7 +8,7 @@ public class Class468_Sub15 extends Class468 {
 	static final int anInt7908 = 2;
 
 	public void method12737() {
-		if (aClass282_Sub54_5581.method13514((byte) 26) == Class486.aClass486_5750)
+		if (aClass282_Sub54_5581.method13514((byte) 26) == Game.aClass486_5750)
 			anInt5578 = -1508067238;
 		if (anInt5578 * -859024475 < 0 || -859024475 * anInt5578 > 2)
 			anInt5578 = method7781(1867813691) * -754033619;
@@ -43,7 +43,7 @@ public class Class468_Sub15 extends Class468 {
 	}
 
 	public void method12740() {
-		if (aClass282_Sub54_5581.method13514((byte) 78) == Class486.aClass486_5750)
+		if (aClass282_Sub54_5581.method13514((byte) 78) == Game.aClass486_5750)
 			anInt5578 = -1508067238;
 		if (anInt5578 * -859024475 < 0 || -859024475 * anInt5578 > 2)
 			anInt5578 = method7781(1741153162) * -754033619;
@@ -54,14 +54,14 @@ public class Class468_Sub15 extends Class468 {
 	}
 
 	public void method12741(int i) {
-		if (aClass282_Sub54_5581.method13514((byte) 95) == Class486.aClass486_5750)
+		if (aClass282_Sub54_5581.method13514((byte) 95) == Game.aClass486_5750)
 			anInt5578 = -1508067238;
 		if (anInt5578 * -859024475 < 0 || -859024475 * anInt5578 > 2)
 			anInt5578 = method7781(2078065686) * -754033619;
 	}
 
 	public void method12742() {
-		if (aClass282_Sub54_5581.method13514((byte) 59) == Class486.aClass486_5750)
+		if (aClass282_Sub54_5581.method13514((byte) 59) == Game.aClass486_5750)
 			anInt5578 = -1508067238;
 		if (anInt5578 * -859024475 < 0 || -859024475 * anInt5578 > 2)
 			anInt5578 = method7781(2115002233) * -754033619;
@@ -76,7 +76,7 @@ public class Class468_Sub15 extends Class468 {
 	}
 
 	public void method12743() {
-		if (aClass282_Sub54_5581.method13514((byte) 90) == Class486.aClass486_5750)
+		if (aClass282_Sub54_5581.method13514((byte) 90) == Game.aClass486_5750)
 			anInt5578 = -1508067238;
 		if (anInt5578 * -859024475 < 0 || -859024475 * anInt5578 > 2)
 			anInt5578 = method7781(1845380570) * -754033619;

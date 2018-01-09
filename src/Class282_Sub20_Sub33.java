@@ -177,7 +177,7 @@ public class Class282_Sub20_Sub33 extends Class282_Sub20 {
 		super(3, false);
 	}
 
-	static void method15411(Class505 class505, byte i) {
+	static void method15411(GraphicalRenderer class505, byte i) {
 		if (Class20.aBool161)
 			Class354.method6216(class505, 399148987);
 		else

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub14 extends Class282 {
+public class Class282_Sub14 extends Node {
 	Class282_Sub26_Sub1[] aClass282_Sub26_Sub1Array7589 = new Class282_Sub26_Sub1[128];
 	short[] aShortArray7590 = new short[128];
 	byte[] aByteArray7591;

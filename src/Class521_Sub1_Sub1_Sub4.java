@@ -10,8 +10,8 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 	int anInt10408 = 0;
 	Class539 aClass539_10409;
 
-	Class285 method12989(Class505 class505) {
-		Class528 class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) 27510);
+	Class285 method12989(GraphicalRenderer class505) {
+		MeshRasterizer class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) 27510);
 		if (null == class528)
 			return null;
 		if (0 != ((Class521_Sub1_Sub1_Sub4) this).anInt10408 * 868957945)
@@ -42,7 +42,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return ((Class521_Sub1_Sub1_Sub4) this).anInt10407 * -1656643271;
 	}
 
-	public Class200 method12992(Class505 class505, byte i) {
+	public Class200 method12992(GraphicalRenderer class505, byte i) {
 		return null;
 	}
 
@@ -65,7 +65,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return (((Class521_Sub1_Sub1_Sub4) this).aClass456_10404 == null || ((Class521_Sub1_Sub1_Sub4) this).aClass456_10404.method7580(283387313));
 	}
 
-	Class528 method15929(Class505 class505, int i, int i_1_, short i_2_) {
+	MeshRasterizer method15929(GraphicalRenderer class505, int i, int i_1_, short i_2_) {
 		Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_1_, (byte) -22);
 		Class390 class390 = aClass206_7970.aClass390Array2607[aByte7967];
 		Class390 class390_3_ = (aByte7968 < 3 ? aClass206_7970.aClass390Array2607[aByte7968 + 1] : null);
@@ -74,8 +74,8 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 				: class525.method11238(class505, i, true, class390, class390_3_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, null, (byte) 2, -379915283));
 	}
 
-	Class285 method13009(Class505 class505) {
-		Class528 class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) -6159);
+	Class285 method13009(GraphicalRenderer class505) {
+		MeshRasterizer class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) -6159);
 		if (null == class528)
 			return null;
 		if (0 != ((Class521_Sub1_Sub1_Sub4) this).anInt10408 * 868957945)
@@ -112,7 +112,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		method13008(1, (byte) -42);
 	}
 
-	void method15930(Class505 class505, Class528 class528, Class294 class294, byte i) {
+	void method15930(GraphicalRenderer class505, MeshRasterizer class528, Class294 class294, byte i) {
 		class528.method11273(class294);
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();
@@ -129,7 +129,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11527();
 	}
 
-	boolean method12983(Class505 class505, int i, int i_17_, int i_18_) {
+	boolean method12983(GraphicalRenderer class505, int i, int i_17_, int i_18_) {
 		return false;
 	}
 
@@ -137,7 +137,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	final void method13013(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_19_, int i_20_, boolean bool, int i_21_) {
+	final void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_19_, int i_20_, boolean bool, int i_21_) {
 		throw new IllegalStateException();
 	}
 
@@ -162,7 +162,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return ((Class521_Sub1_Sub1_Sub4) this).anInt10407 * -1656643271;
 	}
 
-	public Class200 method13019(Class505 class505) {
+	public Class200 method13019(GraphicalRenderer class505) {
 		return null;
 	}
 
@@ -174,7 +174,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		throw new IllegalStateException();
 	}
 
-	void method15933(Class505 class505, Class528 class528, Class294 class294) {
+	void method15933(GraphicalRenderer class505, MeshRasterizer class528, Class294 class294) {
 		class528.method11273(class294);
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();
@@ -190,8 +190,8 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return ((Class521_Sub1_Sub1_Sub4) this).aBool10405;
 	}
 
-	Class285 method13010(Class505 class505) {
-		Class528 class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) 25265);
+	Class285 method13010(GraphicalRenderer class505) {
+		MeshRasterizer class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) 25265);
 		if (null == class528)
 			return null;
 		if (0 != ((Class521_Sub1_Sub1_Sub4) this).anInt10408 * 868957945)
@@ -210,8 +210,8 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return class285;
 	}
 
-	Class285 method12990(Class505 class505, int i) {
-		Class528 class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) -28146);
+	Class285 method12990(GraphicalRenderer class505, int i) {
+		MeshRasterizer class528 = method15929(class505, 0x800 | (868957945 * ((Class521_Sub1_Sub1_Sub4) this).anInt10408 != 0 ? 5 : 0), (((Class521_Sub1_Sub1_Sub4) this).anInt10406 * 346760837), (short) -28146);
 		if (null == class528)
 			return null;
 		if (0 != ((Class521_Sub1_Sub1_Sub4) this).anInt10408 * 868957945)
@@ -230,14 +230,14 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return class285;
 	}
 
-	void method13012(Class505 class505) {
-		Class528 class528 = method15929(class505, 0, (346760837 * ((Class521_Sub1_Sub1_Sub4) this).anInt10406), (short) -3054);
+	void method13012(GraphicalRenderer class505) {
+		MeshRasterizer class528 = method15929(class505, 0, (346760837 * ((Class521_Sub1_Sub1_Sub4) this).anInt10406), (short) -3054);
 		if (class528 != null)
 			method15930(class505, class528, method11168(), (byte) 100);
 	}
 
-	void method12991(Class505 class505, int i) {
-		Class528 class528 = method15929(class505, 0, (346760837 * ((Class521_Sub1_Sub1_Sub4) this).anInt10406), (short) 4697);
+	void method12991(GraphicalRenderer class505, int i) {
+		MeshRasterizer class528 = method15929(class505, 0, (346760837 * ((Class521_Sub1_Sub1_Sub4) this).anInt10406), (short) 4697);
 		if (class528 != null)
 			method15930(class505, class528, method11168(), (byte) 25);
 	}
@@ -250,7 +250,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		throw new IllegalStateException();
 	}
 
-	final void method13016(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_22_, int i_23_, boolean bool) {
+	final void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_22_, int i_23_, boolean bool) {
 		throw new IllegalStateException();
 	}
 
@@ -258,11 +258,11 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return ((Class521_Sub1_Sub1_Sub4) this).anInt10407 * -1656643271;
 	}
 
-	public Class200 method13018(Class505 class505) {
+	public Class200 method13018(GraphicalRenderer class505) {
 		return null;
 	}
 
-	public Class200 method12993(Class505 class505) {
+	public Class200 method12993(GraphicalRenderer class505) {
 		return null;
 	}
 
@@ -274,7 +274,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return ((Class521_Sub1_Sub1_Sub4) this).aBool10405;
 	}
 
-	boolean method13020(Class505 class505, int i, int i_24_) {
+	boolean method13020(GraphicalRenderer class505, int i, int i_24_) {
 		return false;
 	}
 
@@ -307,8 +307,8 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return (((Class521_Sub1_Sub1_Sub4) this).aClass456_10404 != null && !((Class521_Sub1_Sub1_Sub4) this).aClass456_10404.method7573(930180782));
 	}
 
-	void method13023(Class505 class505) {
-		Class528 class528 = method15929(class505, 0, (346760837 * ((Class521_Sub1_Sub1_Sub4) this).anInt10406), (short) 19834);
+	void method13023(GraphicalRenderer class505) {
+		MeshRasterizer class528 = method15929(class505, 0, (346760837 * ((Class521_Sub1_Sub1_Sub4) this).anInt10406), (short) 19834);
 		if (class528 != null)
 			method15930(class505, class528, method11168(), (byte) 68);
 	}
@@ -321,7 +321,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return (((Class521_Sub1_Sub1_Sub4) this).aClass456_10404 == null || ((Class521_Sub1_Sub1_Sub4) this).aClass456_10404.method7580(476304409));
 	}
 
-	Class528 method15942(Class505 class505, int i, int i_25_) {
+	MeshRasterizer method15942(GraphicalRenderer class505, int i, int i_25_) {
 		Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_25_, (byte) 25);
 		Class390 class390 = aClass206_7970.aClass390Array2607[aByte7967];
 		Class390 class390_26_ = (aByte7968 < 3 ? aClass206_7970.aClass390Array2607[aByte7968 + 1] : null);
@@ -330,7 +330,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 				: class525.method11238(class505, i, true, class390, class390_26_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, null, (byte) 2, -1957882134));
 	}
 
-	void method15943(Class505 class505, Class528 class528, Class294 class294) {
+	void method15943(GraphicalRenderer class505, MeshRasterizer class528, Class294 class294) {
 		class528.method11273(class294);
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();
@@ -342,7 +342,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	void method15944(Class505 class505, Class528 class528, Class294 class294) {
+	void method15944(GraphicalRenderer class505, MeshRasterizer class528, Class294 class294) {
 		class528.method11273(class294);
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();

@@ -39,7 +39,7 @@ public class Class371 {
 	public static final int anInt4323 = 30;
 	public static final int anInt4324 = 13;
 	public static final int anInt4325 = 7;
-	public static Class317 aClass317_4326;
+	public static Index aClass317_4326;
 
 	Class371() throws Throwable {
 		throw new Error();

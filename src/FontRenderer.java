@@ -6,11 +6,11 @@ import java.awt.Canvas;
 import java.awt.Component;
 import java.util.Random;
 
-public abstract class Class8 {
+public abstract class FontRenderer {
 	static int anInt57;
 	Class414 aClass414_58;
 	public static final int anInt59 = 0;
-	Class505 aClass505_60;
+	GraphicalRenderer aClass505_60;
 	static int anInt61 = 1633983007;
 	static int anInt62 = 1566690511;
 	static int anInt63 = 0;
@@ -28,11 +28,11 @@ public abstract class Class8 {
 			int[] is = new int[i_4_];
 			for (int i_5_ = 0; i_5_ < i_4_; i_5_++)
 				is[i_5_] = (int) (Math.sin((double) i_3_ / 5.0 + (double) i_5_ / 2.0) * 5.0);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_0_, null, null, null, is, 2027431528);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_0_, null, null, null, is, 2027431528);
 		}
 	}
 
-	public void method358(String string, int i, int i_6_, int i_7_, int i_8_, int i_9_) {
+	public void renderText(String string, int i, int i_6_, int i_7_, int i_8_, int i_9_) {
 		if (string != null) {
 			method365(i_7_, i_8_, -52680990);
 			method371(string, i, i_6_, null, null, null, 0, 0, (byte) 3);
@@ -42,61 +42,61 @@ public abstract class Class8 {
 	public void method359(String string, int i, int i_10_, int i_11_, int i_12_, int i_13_) {
 		if (null != string) {
 			method365(i_11_, i_12_, 248909725);
-			method371(string, i - ((Class8) this).aClass414_58.method6946(string, -1967833701), i_10_, null, null, null, 0, 0, (byte) 3);
+			method371(string, i - ((FontRenderer) this).aClass414_58.method6946(string, -1967833701), i_10_, null, null, null, 0, 0, (byte) 3);
 		}
 	}
 
 	public void method360(String string, int i, int i_14_, int i_15_, int i_16_, int i_17_) {
 		if (string != null) {
 			method365(i_15_, i_16_, 289850430);
-			method371(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_14_, null, null, null, 0, 0, (byte) 3);
+			method371(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_14_, null, null, null, 0, 0, (byte) 3);
 		}
 	}
 
-	public int method361(String string, int i, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, Class160[] class160s, int[] is, Class455 class455, int i_27_, int i_28_) {
+	public int method361(String string, int i, int i_18_, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, int i_25_, int i_26_, NativeSprite[] class160s, int[] is, Class455 class455, int i_27_, int i_28_) {
 		if (string == null)
 			return 0;
 		method365(i_21_, i_22_, -814538615);
 		if (0 == i_25_)
-			i_25_ = ((Class8) this).aClass414_58.anInt4975 * 1200654985;
+			i_25_ = ((FontRenderer) this).aClass414_58.anInt4975 * 1200654985;
 		int[] is_29_;
-		if (i_20_ < (((Class8) this).aClass414_58.anInt4979 * -1518951631 + 397683159 * ((Class8) this).aClass414_58.anInt4978 + i_25_) && i_20_ < i_25_ + i_25_)
+		if (i_20_ < (((FontRenderer) this).aClass414_58.anInt4979 * -1518951631 + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 + i_25_) && i_20_ < i_25_ + i_25_)
 			is_29_ = null;
 		else
 			is_29_ = new int[] { i_19_ };
-		int i_30_ = ((Class8) this).aClass414_58.method6987(string, is_29_, aStringArray69, class160s, (byte) 0);
+		int i_30_ = ((FontRenderer) this).aClass414_58.method6987(string, is_29_, aStringArray69, class160s, (byte) 0);
 		if (i_26_ == -1) {
 			i_26_ = i_20_ / i_25_;
 			if (i_26_ <= 0)
 				i_26_ = 1;
 		}
 		if (i_26_ > 0 && i_30_ >= i_26_) {
-			aStringArray69[i_26_ - 1] = ((Class8) this).aClass414_58.method6959((aStringArray69[i_26_ - 1]), i_19_, class160s, 1056067472);
+			aStringArray69[i_26_ - 1] = ((FontRenderer) this).aClass414_58.method6959((aStringArray69[i_26_ - 1]), i_19_, class160s, 1056067472);
 			i_30_ = i_26_;
 		}
 		if (3 == i_24_ && 1 == i_30_)
 			i_24_ = 1;
 		int i_31_;
 		if (0 == i_24_)
-			i_31_ = ((Class8) this).aClass414_58.anInt4978 * 397683159 + i_18_;
+			i_31_ = ((FontRenderer) this).aClass414_58.anInt4978 * 397683159 + i_18_;
 		else if (1 == i_24_)
-			i_31_ = ((i_20_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631 - i_25_ * (i_30_ - 1)) / 2 + (i_18_ + 397683159 * ((Class8) this).aClass414_58.anInt4978));
+			i_31_ = ((i_20_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631 - i_25_ * (i_30_ - 1)) / 2 + (i_18_ + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978));
 		else if (2 == i_24_)
-			i_31_ = (i_20_ + i_18_ - -1518951631 * ((Class8) this).aClass414_58.anInt4979 - (i_30_ - 1) * i_25_);
+			i_31_ = (i_20_ + i_18_ - -1518951631 * ((FontRenderer) this).aClass414_58.anInt4979 - (i_30_ - 1) * i_25_);
 		else {
-			int i_32_ = ((i_20_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631 - i_25_ * (i_30_ - 1)) / (1 + i_30_));
+			int i_32_ = ((i_20_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631 - i_25_ * (i_30_ - 1)) / (1 + i_30_));
 			if (i_32_ < 0)
 				i_32_ = 0;
-			i_31_ = (397683159 * ((Class8) this).aClass414_58.anInt4978 + i_18_ + i_32_);
+			i_31_ = (397683159 * ((FontRenderer) this).aClass414_58.anInt4978 + i_18_ + i_32_);
 			i_25_ += i_32_;
 		}
 		for (int i_33_ = 0; i_33_ < i_30_; i_33_++) {
 			if (i_23_ == 0)
 				method371(aStringArray69[i_33_], i, i_31_, class160s, is, class455, i_27_, i_28_, (byte) 3);
 			else if (1 == i_23_)
-				method371(aStringArray69[i_33_], i + (i_19_ - (((Class8) this).aClass414_58.method6946(aStringArray69[i_33_], -1967833701))) / 2, i_31_, class160s, is, class455, i_27_, i_28_, (byte) 3);
+				method371(aStringArray69[i_33_], i + (i_19_ - (((FontRenderer) this).aClass414_58.method6946(aStringArray69[i_33_], -1967833701))) / 2, i_31_, class160s, is, class455, i_27_, i_28_, (byte) 3);
 			else if (2 == i_23_)
-				method371(aStringArray69[i_33_], i + i_19_ - (((Class8) this).aClass414_58.method6946(aStringArray69[i_33_], -1967833701)), i_31_, class160s, is, class455, i_27_, i_28_, (byte) 3);
+				method371(aStringArray69[i_33_], i + i_19_ - (((FontRenderer) this).aClass414_58.method6946(aStringArray69[i_33_], -1967833701)), i_31_, class160s, is, class455, i_27_, i_28_, (byte) 3);
 			else if (i_33_ == i_30_ - 1)
 				method371(aStringArray69[i_33_], i, i_31_, class160s, is, class455, i_27_, i_28_, (byte) 3);
 			else {
@@ -122,7 +122,7 @@ public abstract class Class8 {
 		anInt57 = (anInt65 = i_38_ * -335287863) * 1432053993;
 	}
 
-	public int method364(String string, int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, Random random, int i_46_, int[] is, Class160[] class160s, int[] is_47_) {
+	public int method364(String string, int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, Random random, int i_46_, int[] is, NativeSprite[] class160s, int[] is_47_) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_46_);
@@ -137,27 +137,27 @@ public abstract class Class8 {
 				i_51_++;
 		}
 		int i_53_ = i;
-		int i_54_ = ((Class8) this).aClass414_58.anInt4978 * 397683159 + i_39_;
+		int i_54_ = ((FontRenderer) this).aClass414_58.anInt4978 * 397683159 + i_39_;
 		int i_55_ = -1;
 		if (i_45_ == 1)
-			i_54_ += ((i_41_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631) / 2);
+			i_54_ += ((i_41_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631) / 2);
 		else if (2 == i_45_)
-			i_54_ = (i_41_ + i_39_ - -1518951631 * ((Class8) this).aClass414_58.anInt4979);
+			i_54_ = (i_41_ + i_39_ - -1518951631 * ((FontRenderer) this).aClass414_58.anInt4979);
 		if (i_44_ == 1) {
-			i_55_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_51_);
+			i_55_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_51_);
 			i_53_ += (i_40_ - i_55_) / 2;
 		} else if (2 == i_44_) {
-			i_55_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_51_);
+			i_55_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_51_);
 			i_53_ += i_40_ - i_55_;
 		}
 		method372(string, i_53_, i_54_, class160s, is_47_, is_50_, null, 2031158478);
 		if (is != null) {
 			if (-1 == i_55_)
-				i_55_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_51_);
+				i_55_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_51_);
 			is[0] = i_53_;
-			is[1] = i_54_ - ((Class8) this).aClass414_58.anInt4978 * 397683159;
+			is[1] = i_54_ - ((FontRenderer) this).aClass414_58.anInt4978 * 397683159;
 			is[2] = i_55_;
-			is[3] = (-1518951631 * ((Class8) this).aClass414_58.anInt4979 + 397683159 * ((Class8) this).aClass414_58.anInt4978);
+			is[3] = (-1518951631 * ((FontRenderer) this).aClass414_58.anInt4979 + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978);
 		}
 		return i_51_;
 	}
@@ -184,7 +184,7 @@ public abstract class Class8 {
 		anInt57 = (anInt65 = i_58_ * -335287863) * 1432053993;
 	}
 
-	public int method367(String string, int i, int i_59_, int i_60_, int i_61_, int i_62_, int i_63_, int i_64_, int i_65_, Random random, int i_66_, int[] is, Class160[] class160s, int[] is_67_, int i_68_) {
+	public int method367(String string, int i, int i_59_, int i_60_, int i_61_, int i_62_, int i_63_, int i_64_, int i_65_, Random random, int i_66_, int[] is, NativeSprite[] class160s, int[] is_67_, int i_68_) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_66_);
@@ -199,27 +199,27 @@ public abstract class Class8 {
 				i_72_++;
 		}
 		int i_74_ = i;
-		int i_75_ = ((Class8) this).aClass414_58.anInt4978 * 397683159 + i_59_;
+		int i_75_ = ((FontRenderer) this).aClass414_58.anInt4978 * 397683159 + i_59_;
 		int i_76_ = -1;
 		if (i_65_ == 1)
-			i_75_ += ((i_61_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631) / 2);
+			i_75_ += ((i_61_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631) / 2);
 		else if (2 == i_65_)
-			i_75_ = (i_61_ + i_59_ - -1518951631 * ((Class8) this).aClass414_58.anInt4979);
+			i_75_ = (i_61_ + i_59_ - -1518951631 * ((FontRenderer) this).aClass414_58.anInt4979);
 		if (i_64_ == 1) {
-			i_76_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_72_);
+			i_76_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_72_);
 			i_74_ += (i_60_ - i_76_) / 2;
 		} else if (2 == i_64_) {
-			i_76_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_72_);
+			i_76_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_72_);
 			i_74_ += i_60_ - i_76_;
 		}
 		method372(string, i_74_, i_75_, class160s, is_67_, is_71_, null, 1660900204);
 		if (is != null) {
 			if (-1 == i_76_)
-				i_76_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_72_);
+				i_76_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_72_);
 			is[0] = i_74_;
-			is[1] = i_75_ - ((Class8) this).aClass414_58.anInt4978 * 397683159;
+			is[1] = i_75_ - ((FontRenderer) this).aClass414_58.anInt4978 * 397683159;
 			is[2] = i_76_;
-			is[3] = (-1518951631 * ((Class8) this).aClass414_58.anInt4979 + 397683159 * ((Class8) this).aClass414_58.anInt4978);
+			is[3] = (-1518951631 * ((FontRenderer) this).aClass414_58.anInt4979 + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978);
 		}
 		return i_72_;
 	}
@@ -234,7 +234,7 @@ public abstract class Class8 {
 				is[i_84_] = (int) (Math.sin((double) i_80_ / 5.0 + (double) i_84_ / 5.0) * 5.0);
 				is_83_[i_84_] = (int) (Math.sin((double) i_80_ / 5.0 + (double) i_84_ / 3.0) * 5.0);
 			}
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_77_, null, null, is, is_83_, 1888974579);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_77_, null, null, is, is_83_, 1888974579);
 		}
 	}
 
@@ -288,11 +288,11 @@ public abstract class Class8 {
 				i_86_++;
 		}
 		if (i_86_ > 0)
-			anInt67 = (i - ((Class8) this).aClass414_58.method6946(string, -1967833701) << 8) / i_86_ * 1038679493;
+			anInt67 = (i - ((FontRenderer) this).aClass414_58.method6946(string, -1967833701) << 8) / i_86_ * 1038679493;
 	}
 
-	void method371(String string, int i, int i_88_, Class160[] class160s, int[] is, Class455 class455, int i_89_, int i_90_, byte i_91_) {
-		i_88_ -= 1200654985 * ((Class8) this).aClass414_58.anInt4975;
+	void method371(String string, int i, int i_88_, NativeSprite[] class160s, int[] is, Class455 class455, int i_89_, int i_90_, byte i_91_) {
+		i_88_ -= 1200654985 * ((FontRenderer) this).aClass414_58.anInt4975;
 		int i_92_ = -1;
 		int i_93_ = -1;
 		int i_94_ = string.length();
@@ -324,12 +324,12 @@ public abstract class Class8 {
 						if (string_96_.startsWith("img=")) {
 							try {
 								int i_97_ = Class328.method5830(string_96_.substring(4), -1416049939);
-								Class160 class160 = class160s[i_97_];
+								NativeSprite class160 = class160s[i_97_];
 								int i_98_ = (is != null ? is[i_97_] : class160.method2748());
 								if ((256259551 * anInt64 & ~0xffffff) == -16777216)
-									class160.method2742(i, (((((Class8) this).aClass414_58.anInt4975) * 1200654985) + i_88_ - i_98_), 1, 0, 1);
+									class160.method2742(i, (((((FontRenderer) this).aClass414_58.anInt4975) * 1200654985) + i_88_ - i_98_), 1, 0, 1);
 								else
-									class160.method2742(i, (i_88_ + (1200654985 * (((Class8) this).aClass414_58.anInt4975)) - i_98_), 0, ((anInt64 * 256259551 & ~0xffffff) | 0xffffff), 1);
+									class160.method2742(i, (i_88_ + (1200654985 * (((FontRenderer) this).aClass414_58.anInt4975)) - i_98_), 0, ((anInt64 * 256259551 & ~0xffffff) | 0xffffff), 1);
 								i += class160s[i_97_].method228();
 								i_93_ = -1;
 							} catch (Exception exception) {
@@ -342,7 +342,7 @@ public abstract class Class8 {
 				}
 				if (-1 == i_92_) {
 					if (i_93_ != -1)
-						i += ((Class8) this).aClass414_58.method6944(i_93_, c, 202656295);
+						i += ((FontRenderer) this).aClass414_58.method6944(i_93_, c, 202656295);
 					if (c != 32) {
 						if (null == class455) {
 							if ((-1288265455 * anInt57 & ~0xffffff) != 0)
@@ -358,11 +358,11 @@ public abstract class Class8 {
 						i += anInt68 * -1223339517 >> 8;
 						anInt68 = -1938069333 * (-1223339517 * anInt68 & 0xff);
 					}
-					int i_99_ = ((Class8) this).aClass414_58.method6945(c, (byte) -117);
+					int i_99_ = ((FontRenderer) this).aClass414_58.method6945(c, (byte) -117);
 					if (2046271009 * anInt61 != -1)
-						((Class8) this).aClass505_60.method8659(i, i_88_ + (int) (0.7 * (double) ((((Class8) this).aClass414_58.anInt4975) * 1200654985)), i_99_, anInt61 * 2046271009, -1221933071);
+						((FontRenderer) this).aClass505_60.method8659(i, i_88_ + (int) (0.7 * (double) ((((FontRenderer) this).aClass414_58.anInt4975) * 1200654985)), i_99_, anInt61 * 2046271009, -1221933071);
 					if (-1 != anInt62 * 785139153)
-						((Class8) this).aClass505_60.method8659(i, 1 + (i_88_ + (((Class8) this).aClass414_58.anInt4975 * 1200654985)), i_99_, 785139153 * anInt62, 435318936);
+						((FontRenderer) this).aClass505_60.method8659(i, 1 + (i_88_ + (((FontRenderer) this).aClass414_58.anInt4975 * 1200654985)), i_99_, 785139153 * anInt62, 435318936);
 					i += i_99_;
 					i_93_ = c;
 				}
@@ -370,8 +370,8 @@ public abstract class Class8 {
 		}
 	}
 
-	void method372(String string, int i, int i_100_, Class160[] class160s, int[] is, int[] is_101_, int[] is_102_, int i_103_) {
-		i_100_ -= ((Class8) this).aClass414_58.anInt4975 * 1200654985;
+	void method372(String string, int i, int i_100_, NativeSprite[] class160s, int[] is, int[] is_101_, int[] is_102_, int i_103_) {
+		i_100_ -= ((FontRenderer) this).aClass414_58.anInt4975 * 1200654985;
 		int i_104_ = -1;
 		int i_105_ = -1;
 		int i_106_ = 0;
@@ -415,9 +415,9 @@ public abstract class Class8 {
 									i_111_ = 0;
 								i_106_++;
 								int i_112_ = Class328.method5830(string_109_.substring(4), 1488511496);
-								Class160 class160 = class160s[i_112_];
+								NativeSprite class160 = class160s[i_112_];
 								int i_113_ = (null != is ? is[i_112_] : class160.method2748());
-								class160.method2742(i_110_ + i, (((((Class8) this).aClass414_58.anInt4975) * 1200654985) + i_100_ - i_113_ + i_111_), 1, 0, 1);
+								class160.method2742(i_110_ + i, (((((FontRenderer) this).aClass414_58.anInt4975) * 1200654985) + i_100_ - i_113_ + i_111_), 1, 0, 1);
 								i += class160s[i_112_].method228();
 								i_105_ = -1;
 							} catch (Exception exception) {
@@ -430,7 +430,7 @@ public abstract class Class8 {
 				}
 				if (-1 == i_104_) {
 					if (i_105_ != -1)
-						i += ((Class8) this).aClass414_58.method6944(i_105_, c, -646964881);
+						i += ((FontRenderer) this).aClass414_58.method6944(i_105_, c, -646964881);
 					int i_114_;
 					if (null != is_101_)
 						i_114_ = is_101_[i_106_];
@@ -451,11 +451,11 @@ public abstract class Class8 {
 						i += -1223339517 * anInt68 >> 8;
 						anInt68 = -1938069333 * (-1223339517 * anInt68 & 0xff);
 					}
-					int i_116_ = ((Class8) this).aClass414_58.method6945(c, (byte) -20);
+					int i_116_ = ((FontRenderer) this).aClass414_58.method6945(c, (byte) -20);
 					if (2046271009 * anInt61 != -1)
-						((Class8) this).aClass505_60.method8659(i, (int) ((double) (1200654985 * (((Class8) this).aClass414_58.anInt4975)) * 0.7) + i_100_, i_116_, anInt61 * 2046271009, -645910355);
+						((FontRenderer) this).aClass505_60.method8659(i, (int) ((double) (1200654985 * (((FontRenderer) this).aClass414_58.anInt4975)) * 0.7) + i_100_, i_116_, anInt61 * 2046271009, -645910355);
 					if (-1 != anInt62 * 785139153)
-						((Class8) this).aClass505_60.method8659(i, i_100_ + (((Class8) this).aClass414_58.anInt4975 * 1200654985), i_116_, 785139153 * anInt62, -510924109);
+						((FontRenderer) this).aClass505_60.method8659(i, i_100_ + (((FontRenderer) this).aClass414_58.anInt4975 * 1200654985), i_116_, 785139153 * anInt62, -510924109);
 					i += i_116_;
 					i_105_ = c;
 				}
@@ -465,50 +465,50 @@ public abstract class Class8 {
 
 	abstract void UA(char c, int i, int i_117_, int i_118_, boolean bool);
 
-	public int method373(String string, int i, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, Class160[] class160s, int[] is, Class455 class455, int i_128_, int i_129_, byte i_130_) {
+	public int method373(String string, int i, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, NativeSprite[] class160s, int[] is, Class455 class455, int i_128_, int i_129_, byte i_130_) {
 		if (string == null)
 			return 0;
 		method365(i_122_, i_123_, 745766148);
 		if (0 == i_126_)
-			i_126_ = ((Class8) this).aClass414_58.anInt4975 * 1200654985;
+			i_126_ = ((FontRenderer) this).aClass414_58.anInt4975 * 1200654985;
 		int[] is_131_;
-		if (i_121_ < (((Class8) this).aClass414_58.anInt4979 * -1518951631 + 397683159 * ((Class8) this).aClass414_58.anInt4978 + i_126_) && i_121_ < i_126_ + i_126_)
+		if (i_121_ < (((FontRenderer) this).aClass414_58.anInt4979 * -1518951631 + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 + i_126_) && i_121_ < i_126_ + i_126_)
 			is_131_ = null;
 		else
 			is_131_ = new int[] { i_120_ };
-		int i_132_ = ((Class8) this).aClass414_58.method6987(string, is_131_, aStringArray69, class160s, (byte) 0);
+		int i_132_ = ((FontRenderer) this).aClass414_58.method6987(string, is_131_, aStringArray69, class160s, (byte) 0);
 		if (i_127_ == -1) {
 			i_127_ = i_121_ / i_126_;
 			if (i_127_ <= 0)
 				i_127_ = 1;
 		}
 		if (i_127_ > 0 && i_132_ >= i_127_) {
-			aStringArray69[i_127_ - 1] = ((Class8) this).aClass414_58.method6959((aStringArray69[i_127_ - 1]), i_120_, class160s, 1987203414);
+			aStringArray69[i_127_ - 1] = ((FontRenderer) this).aClass414_58.method6959((aStringArray69[i_127_ - 1]), i_120_, class160s, 1987203414);
 			i_132_ = i_127_;
 		}
 		if (3 == i_125_ && 1 == i_132_)
 			i_125_ = 1;
 		int i_133_;
 		if (0 == i_125_)
-			i_133_ = ((Class8) this).aClass414_58.anInt4978 * 397683159 + i_119_;
+			i_133_ = ((FontRenderer) this).aClass414_58.anInt4978 * 397683159 + i_119_;
 		else if (1 == i_125_)
-			i_133_ = ((i_121_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631 - i_126_ * (i_132_ - 1)) / 2 + (i_119_ + 397683159 * ((Class8) this).aClass414_58.anInt4978));
+			i_133_ = ((i_121_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631 - i_126_ * (i_132_ - 1)) / 2 + (i_119_ + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978));
 		else if (2 == i_125_)
-			i_133_ = (i_121_ + i_119_ - -1518951631 * ((Class8) this).aClass414_58.anInt4979 - (i_132_ - 1) * i_126_);
+			i_133_ = (i_121_ + i_119_ - -1518951631 * ((FontRenderer) this).aClass414_58.anInt4979 - (i_132_ - 1) * i_126_);
 		else {
-			int i_134_ = ((i_121_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631 - i_126_ * (i_132_ - 1)) / (1 + i_132_));
+			int i_134_ = ((i_121_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631 - i_126_ * (i_132_ - 1)) / (1 + i_132_));
 			if (i_134_ < 0)
 				i_134_ = 0;
-			i_133_ = (397683159 * ((Class8) this).aClass414_58.anInt4978 + i_119_ + i_134_);
+			i_133_ = (397683159 * ((FontRenderer) this).aClass414_58.anInt4978 + i_119_ + i_134_);
 			i_126_ += i_134_;
 		}
 		for (int i_135_ = 0; i_135_ < i_132_; i_135_++) {
 			if (i_124_ == 0)
 				method371(aStringArray69[i_135_], i, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
 			else if (1 == i_124_)
-				method371(aStringArray69[i_135_], i + (i_120_ - (((Class8) this).aClass414_58.method6946(aStringArray69[i_135_], -1967833701))) / 2, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
+				method371(aStringArray69[i_135_], i + (i_120_ - (((FontRenderer) this).aClass414_58.method6946(aStringArray69[i_135_], -1967833701))) / 2, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
 			else if (2 == i_124_)
-				method371(aStringArray69[i_135_], i + i_120_ - (((Class8) this).aClass414_58.method6946(aStringArray69[i_135_], -1967833701)), i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
+				method371(aStringArray69[i_135_], i + i_120_ - (((FontRenderer) this).aClass414_58.method6946(aStringArray69[i_135_], -1967833701)), i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
 			else if (i_135_ == i_132_ - 1)
 				method371(aStringArray69[i_135_], i, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
 			else {
@@ -537,33 +537,33 @@ public abstract class Class8 {
 	public void method375(String string, int i, int i_144_, int i_145_, int i_146_) {
 		if (null != string) {
 			method365(i_145_, i_146_, -1201971740);
-			method371(string, i - ((Class8) this).aClass414_58.method6946(string, -1967833701), i_144_, null, null, null, 0, 0, (byte) 3);
+			method371(string, i - ((FontRenderer) this).aClass414_58.method6946(string, -1967833701), i_144_, null, null, null, 0, 0, (byte) 3);
 		}
 	}
 
 	public void method376(String string, int i, int i_147_, int i_148_, int i_149_) {
 		if (null != string) {
 			method365(i_148_, i_149_, 864131960);
-			method371(string, i - ((Class8) this).aClass414_58.method6946(string, -1967833701), i_147_, null, null, null, 0, 0, (byte) 3);
+			method371(string, i - ((FontRenderer) this).aClass414_58.method6946(string, -1967833701), i_147_, null, null, null, 0, 0, (byte) 3);
 		}
 	}
 
 	public void method377(String string, int i, int i_150_, int i_151_, int i_152_) {
 		if (null != string) {
 			method365(i_151_, i_152_, 1103707153);
-			method371(string, i - ((Class8) this).aClass414_58.method6946(string, -1967833701), i_150_, null, null, null, 0, 0, (byte) 3);
+			method371(string, i - ((FontRenderer) this).aClass414_58.method6946(string, -1967833701), i_150_, null, null, null, 0, 0, (byte) 3);
 		}
 	}
 
-	public int method378(String string, int i, int i_153_, int i_154_, int i_155_, int i_156_, int i_157_, int i_158_, int i_159_, int i_160_, Class160[] class160s, int[] is, Class455 class455, int i_161_, int i_162_, byte i_163_) {
+	public int method378(String string, int i, int i_153_, int i_154_, int i_155_, int i_156_, int i_157_, int i_158_, int i_159_, int i_160_, NativeSprite[] class160s, int[] is, Class455 class455, int i_161_, int i_162_, byte i_163_) {
 		return method373(string, i, i_153_, i_154_, i_155_, i_156_, i_157_, i_158_, i_159_, i_160_, 0, class160s, is, class455, i_161_, i_162_, (byte) 0);
 	}
 
-	public int method379(String string, int i, int i_164_, int i_165_, int i_166_, int i_167_, int i_168_, int i_169_, int i_170_, int i_171_, Class160[] class160s, int[] is, Class455 class455, int i_172_, int i_173_) {
+	public int method379(String string, int i, int i_164_, int i_165_, int i_166_, int i_167_, int i_168_, int i_169_, int i_170_, int i_171_, NativeSprite[] class160s, int[] is, Class455 class455, int i_172_, int i_173_) {
 		return method373(string, i, i_164_, i_165_, i_166_, i_167_, i_168_, i_169_, i_170_, i_171_, 0, class160s, is, class455, i_172_, i_173_, (byte) 0);
 	}
 
-	public int method380(String string, int i, int i_174_, int i_175_, int i_176_, int i_177_, int i_178_, int i_179_, int i_180_, int i_181_, Class160[] class160s, int[] is, Class455 class455, int i_182_, int i_183_) {
+	public int method380(String string, int i, int i_174_, int i_175_, int i_176_, int i_177_, int i_178_, int i_179_, int i_180_, int i_181_, NativeSprite[] class160s, int[] is, Class455 class455, int i_182_, int i_183_) {
 		return method373(string, i, i_174_, i_175_, i_176_, i_177_, i_178_, i_179_, i_180_, i_181_, 0, class160s, is, class455, i_182_, i_183_, (byte) 0);
 	}
 
@@ -577,7 +577,7 @@ public abstract class Class8 {
 			int[] is = new int[i_190_];
 			for (int i_191_ = 0; i_191_ < i_190_; i_191_++)
 				is[i_191_] = (int) (Math.sin((double) i_187_ / 1.0 + (double) i_191_ / 1.5) * d);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_184_, null, null, null, is, 1742290741);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_184_, null, null, null, is, 1742290741);
 		}
 	}
 
@@ -588,7 +588,7 @@ public abstract class Class8 {
 			int[] is = new int[i_196_];
 			for (int i_197_ = 0; i_197_ < i_196_; i_197_++)
 				is[i_197_] = (int) (Math.sin((double) i_195_ / 5.0 + (double) i_197_ / 2.0) * 5.0);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_192_, null, null, null, is, 1630322069);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_192_, null, null, null, is, 1630322069);
 		}
 	}
 
@@ -599,7 +599,7 @@ public abstract class Class8 {
 			int[] is = new int[i_202_];
 			for (int i_203_ = 0; i_203_ < i_202_; i_203_++)
 				is[i_203_] = (int) (Math.sin((double) i_201_ / 5.0 + (double) i_203_ / 2.0) * 5.0);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_198_, null, null, null, is, 1643587028);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_198_, null, null, null, is, 1643587028);
 		}
 	}
 
@@ -610,7 +610,7 @@ public abstract class Class8 {
 			int[] is = new int[i_208_];
 			for (int i_209_ = 0; i_209_ < i_208_; i_209_++)
 				is[i_209_] = (int) (Math.sin((double) i_207_ / 5.0 + (double) i_209_ / 2.0) * 5.0);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_204_, null, null, null, is, 2056699215);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_204_, null, null, null, is, 2056699215);
 		}
 	}
 
@@ -651,7 +651,7 @@ public abstract class Class8 {
 		}
 	}
 
-	public int method386(String string, int i, int i_210_, int i_211_, int i_212_, Random random, int i_213_, Class160[] class160s, int[] is, int i_214_) {
+	public int method386(String string, int i, int i_210_, int i_211_, int i_212_, Random random, int i_213_, NativeSprite[] class160s, int[] is, int i_214_) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_213_);
@@ -676,7 +676,7 @@ public abstract class Class8 {
 			int[] is = new int[i_225_];
 			for (int i_226_ = 0; i_226_ < i_225_; i_226_++)
 				is[i_226_] = (int) (Math.sin((double) i_223_ / 5.0 + (double) i_226_ / 2.0) * 5.0);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_220_, null, null, null, is, 1737737512);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_220_, null, null, null, is, 1737737512);
 		}
 	}
 
@@ -690,7 +690,7 @@ public abstract class Class8 {
 			int[] is = new int[i_232_];
 			for (int i_233_ = 0; i_233_ < i_232_; i_233_++)
 				is[i_233_] = (int) (Math.sin((double) i_230_ / 1.0 + (double) i_233_ / 1.5) * d);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_227_, null, null, null, is, 1894134703);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_227_, null, null, null, is, 1894134703);
 		}
 	}
 
@@ -704,18 +704,18 @@ public abstract class Class8 {
 			int[] is = new int[i_239_];
 			for (int i_240_ = 0; i_240_ < i_239_; i_240_++)
 				is[i_240_] = (int) (Math.sin((double) i_237_ / 1.0 + (double) i_240_ / 1.5) * d);
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_234_, null, null, null, is, 1970106624);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_234_, null, null, null, is, 1970106624);
 		}
 	}
 
 	public void method390(String string, int i, int i_241_, int i_242_, int i_243_) {
 		if (string != null) {
 			method365(i_242_, i_243_, -441931346);
-			method371(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_241_, null, null, null, 0, 0, (byte) 3);
+			method371(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_241_, null, null, null, 0, 0, (byte) 3);
 		}
 	}
 
-	public int method391(String string, int i, int i_244_, int i_245_, int i_246_, Random random, int i_247_, Class160[] class160s, int[] is) {
+	public int method391(String string, int i, int i_244_, int i_245_, int i_246_, Random random, int i_247_, NativeSprite[] class160s, int[] is) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_247_);
@@ -733,7 +733,7 @@ public abstract class Class8 {
 		return i_251_;
 	}
 
-	public int method392(String string, int i, int i_253_, int i_254_, int i_255_, Random random, int i_256_, Class160[] class160s, int[] is) {
+	public int method392(String string, int i, int i_253_, int i_254_, int i_255_, Random random, int i_256_, NativeSprite[] class160s, int[] is) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_256_);
@@ -751,7 +751,7 @@ public abstract class Class8 {
 		return i_260_;
 	}
 
-	public int method393(String string, int i, int i_262_, int i_263_, int i_264_, int i_265_, int i_266_, int i_267_, int i_268_, Random random, int i_269_, int[] is, Class160[] class160s, int[] is_270_) {
+	public int method393(String string, int i, int i_262_, int i_263_, int i_264_, int i_265_, int i_266_, int i_267_, int i_268_, Random random, int i_269_, int[] is, NativeSprite[] class160s, int[] is_270_) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_269_);
@@ -766,32 +766,32 @@ public abstract class Class8 {
 				i_274_++;
 		}
 		int i_276_ = i;
-		int i_277_ = ((Class8) this).aClass414_58.anInt4978 * 397683159 + i_262_;
+		int i_277_ = ((FontRenderer) this).aClass414_58.anInt4978 * 397683159 + i_262_;
 		int i_278_ = -1;
 		if (i_268_ == 1)
-			i_277_ += ((i_264_ - 397683159 * ((Class8) this).aClass414_58.anInt4978 - ((Class8) this).aClass414_58.anInt4979 * -1518951631) / 2);
+			i_277_ += ((i_264_ - 397683159 * ((FontRenderer) this).aClass414_58.anInt4978 - ((FontRenderer) this).aClass414_58.anInt4979 * -1518951631) / 2);
 		else if (2 == i_268_)
-			i_277_ = (i_264_ + i_262_ - -1518951631 * ((Class8) this).aClass414_58.anInt4979);
+			i_277_ = (i_264_ + i_262_ - -1518951631 * ((FontRenderer) this).aClass414_58.anInt4979);
 		if (i_267_ == 1) {
-			i_278_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_274_);
+			i_278_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_274_);
 			i_276_ += (i_263_ - i_278_) / 2;
 		} else if (2 == i_267_) {
-			i_278_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_274_);
+			i_278_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_274_);
 			i_276_ += i_263_ - i_278_;
 		}
 		method372(string, i_276_, i_277_, class160s, is_270_, is_273_, null, 1930932786);
 		if (is != null) {
 			if (-1 == i_278_)
-				i_278_ = (((Class8) this).aClass414_58.method6946(string, -1967833701) + i_274_);
+				i_278_ = (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) + i_274_);
 			is[0] = i_276_;
-			is[1] = i_277_ - ((Class8) this).aClass414_58.anInt4978 * 397683159;
+			is[1] = i_277_ - ((FontRenderer) this).aClass414_58.anInt4978 * 397683159;
 			is[2] = i_278_;
-			is[3] = (-1518951631 * ((Class8) this).aClass414_58.anInt4979 + 397683159 * ((Class8) this).aClass414_58.anInt4978);
+			is[3] = (-1518951631 * ((FontRenderer) this).aClass414_58.anInt4979 + 397683159 * ((FontRenderer) this).aClass414_58.anInt4978);
 		}
 		return i_274_;
 	}
 
-	public int method394(String string, int i, int i_279_, int i_280_, int i_281_, Random random, int i_282_, Class160[] class160s, int[] is) {
+	public int method394(String string, int i, int i_279_, int i_280_, int i_281_, Random random, int i_282_, NativeSprite[] class160s, int[] is) {
 		if (string == null)
 			return 0;
 		random.setSeed((long) i_282_);
@@ -819,7 +819,7 @@ public abstract class Class8 {
 				is[i_294_] = (int) (Math.sin((double) i_291_ / 5.0 + (double) i_294_ / 5.0) * 5.0);
 				is_293_[i_294_] = (int) (Math.sin((double) i_291_ / 5.0 + (double) i_294_ / 3.0) * 5.0);
 			}
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_288_, null, null, is, is_293_, 1801018004);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_288_, null, null, is, is_293_, 1801018004);
 		}
 	}
 
@@ -833,13 +833,13 @@ public abstract class Class8 {
 				is[i_301_] = (int) (Math.sin((double) i_298_ / 5.0 + (double) i_301_ / 5.0) * 5.0);
 				is_300_[i_301_] = (int) (Math.sin((double) i_298_ / 5.0 + (double) i_301_ / 3.0) * 5.0);
 			}
-			method372(string, i - (((Class8) this).aClass414_58.method6946(string, -1967833701) / 2), i_295_, null, null, is, is_300_, 1765016187);
+			method372(string, i - (((FontRenderer) this).aClass414_58.method6946(string, -1967833701) / 2), i_295_, null, null, is, is_300_, 1765016187);
 		}
 	}
 
-	Class8(Class505 class505, Class414 class414) {
-		((Class8) this).aClass505_60 = class505;
-		((Class8) this).aClass414_58 = class414;
+	FontRenderer(GraphicalRenderer class505, Class414 class414) {
+		((FontRenderer) this).aClass505_60 = class505;
+		((FontRenderer) this).aClass414_58 = class414;
 	}
 
 	void method397(String string, int i) {
@@ -855,11 +855,11 @@ public abstract class Class8 {
 				i_302_++;
 		}
 		if (i_302_ > 0)
-			anInt67 = (i - ((Class8) this).aClass414_58.method6946(string, -1967833701) << 8) / i_302_ * 1038679493;
+			anInt67 = (i - ((FontRenderer) this).aClass414_58.method6946(string, -1967833701) << 8) / i_302_ * 1038679493;
 	}
 
-	void method398(String string, int i, int i_304_, Class160[] class160s, int[] is, Class455 class455, int i_305_, int i_306_) {
-		i_304_ -= 1200654985 * ((Class8) this).aClass414_58.anInt4975;
+	void method398(String string, int i, int i_304_, NativeSprite[] class160s, int[] is, Class455 class455, int i_305_, int i_306_) {
+		i_304_ -= 1200654985 * ((FontRenderer) this).aClass414_58.anInt4975;
 		int i_307_ = -1;
 		int i_308_ = -1;
 		int i_309_ = string.length();
@@ -891,12 +891,12 @@ public abstract class Class8 {
 						if (string_311_.startsWith("img=")) {
 							try {
 								int i_312_ = Class328.method5830(string_311_.substring(4), -394927585);
-								Class160 class160 = class160s[i_312_];
+								NativeSprite class160 = class160s[i_312_];
 								int i_313_ = (is != null ? is[i_312_] : class160.method2748());
 								if ((256259551 * anInt64 & ~0xffffff) == -16777216)
-									class160.method2742(i, (((((Class8) this).aClass414_58.anInt4975) * 1200654985) + i_304_ - i_313_), 1, 0, 1);
+									class160.method2742(i, (((((FontRenderer) this).aClass414_58.anInt4975) * 1200654985) + i_304_ - i_313_), 1, 0, 1);
 								else
-									class160.method2742(i, (i_304_ + (1200654985 * (((Class8) this).aClass414_58.anInt4975)) - i_313_), 0, ((anInt64 * 256259551 & ~0xffffff) | 0xffffff), 1);
+									class160.method2742(i, (i_304_ + (1200654985 * (((FontRenderer) this).aClass414_58.anInt4975)) - i_313_), 0, ((anInt64 * 256259551 & ~0xffffff) | 0xffffff), 1);
 								i += class160s[i_312_].method228();
 								i_308_ = -1;
 							} catch (Exception exception) {
@@ -909,7 +909,7 @@ public abstract class Class8 {
 				}
 				if (-1 == i_307_) {
 					if (i_308_ != -1)
-						i += ((Class8) this).aClass414_58.method6944(i_308_, c, -430527218);
+						i += ((FontRenderer) this).aClass414_58.method6944(i_308_, c, -430527218);
 					if (c != 32) {
 						if (null == class455) {
 							if ((-1288265455 * anInt57 & ~0xffffff) != 0)
@@ -925,11 +925,11 @@ public abstract class Class8 {
 						i += anInt68 * -1223339517 >> 8;
 						anInt68 = -1938069333 * (-1223339517 * anInt68 & 0xff);
 					}
-					int i_314_ = ((Class8) this).aClass414_58.method6945(c, (byte) -73);
+					int i_314_ = ((FontRenderer) this).aClass414_58.method6945(c, (byte) -73);
 					if (2046271009 * anInt61 != -1)
-						((Class8) this).aClass505_60.method8659(i, i_304_ + (int) (0.7 * (double) ((((Class8) this).aClass414_58.anInt4975) * 1200654985)), i_314_, anInt61 * 2046271009, -1435207763);
+						((FontRenderer) this).aClass505_60.method8659(i, i_304_ + (int) (0.7 * (double) ((((FontRenderer) this).aClass414_58.anInt4975) * 1200654985)), i_314_, anInt61 * 2046271009, -1435207763);
 					if (-1 != anInt62 * 785139153)
-						((Class8) this).aClass505_60.method8659(i, 1 + (i_304_ + (((Class8) this).aClass414_58.anInt4975 * 1200654985)), i_314_, 785139153 * anInt62, -425023661);
+						((FontRenderer) this).aClass505_60.method8659(i, 1 + (i_304_ + (((FontRenderer) this).aClass414_58.anInt4975 * 1200654985)), i_314_, 785139153 * anInt62, -425023661);
 					i += i_314_;
 					i_308_ = c;
 				}
@@ -937,8 +937,8 @@ public abstract class Class8 {
 		}
 	}
 
-	void method399(String string, int i, int i_315_, Class160[] class160s, int[] is, int[] is_316_, int[] is_317_) {
-		i_315_ -= ((Class8) this).aClass414_58.anInt4975 * 1200654985;
+	void method399(String string, int i, int i_315_, NativeSprite[] class160s, int[] is, int[] is_316_, int[] is_317_) {
+		i_315_ -= ((FontRenderer) this).aClass414_58.anInt4975 * 1200654985;
 		int i_318_ = -1;
 		int i_319_ = -1;
 		int i_320_ = 0;
@@ -982,9 +982,9 @@ public abstract class Class8 {
 									i_325_ = 0;
 								i_320_++;
 								int i_326_ = Class328.method5830(string_323_.substring(4), 241080585);
-								Class160 class160 = class160s[i_326_];
+								NativeSprite class160 = class160s[i_326_];
 								int i_327_ = (null != is ? is[i_326_] : class160.method2748());
-								class160.method2742(i_324_ + i, (((((Class8) this).aClass414_58.anInt4975) * 1200654985) + i_315_ - i_327_ + i_325_), 1, 0, 1);
+								class160.method2742(i_324_ + i, (((((FontRenderer) this).aClass414_58.anInt4975) * 1200654985) + i_315_ - i_327_ + i_325_), 1, 0, 1);
 								i += class160s[i_326_].method228();
 								i_319_ = -1;
 							} catch (Exception exception) {
@@ -997,7 +997,7 @@ public abstract class Class8 {
 				}
 				if (-1 == i_318_) {
 					if (i_319_ != -1)
-						i += ((Class8) this).aClass414_58.method6944(i_319_, c, -146048364);
+						i += ((FontRenderer) this).aClass414_58.method6944(i_319_, c, -146048364);
 					int i_328_;
 					if (null != is_316_)
 						i_328_ = is_316_[i_320_];
@@ -1018,11 +1018,11 @@ public abstract class Class8 {
 						i += -1223339517 * anInt68 >> 8;
 						anInt68 = -1938069333 * (-1223339517 * anInt68 & 0xff);
 					}
-					int i_330_ = ((Class8) this).aClass414_58.method6945(c, (byte) -60);
+					int i_330_ = ((FontRenderer) this).aClass414_58.method6945(c, (byte) -60);
 					if (2046271009 * anInt61 != -1)
-						((Class8) this).aClass505_60.method8659(i, (int) ((double) (1200654985 * (((Class8) this).aClass414_58.anInt4975)) * 0.7) + i_315_, i_330_, anInt61 * 2046271009, 159818004);
+						((FontRenderer) this).aClass505_60.method8659(i, (int) ((double) (1200654985 * (((FontRenderer) this).aClass414_58.anInt4975)) * 0.7) + i_315_, i_330_, anInt61 * 2046271009, 159818004);
 					if (-1 != anInt62 * 785139153)
-						((Class8) this).aClass505_60.method8659(i, i_315_ + (((Class8) this).aClass414_58.anInt4975 * 1200654985), i_330_, 785139153 * anInt62, 1007066485);
+						((FontRenderer) this).aClass505_60.method8659(i, i_315_ + (((FontRenderer) this).aClass414_58.anInt4975 * 1200654985), i_330_, 785139153 * anInt62, 1007066485);
 					i += i_330_;
 					i_319_ = c;
 				}
@@ -1046,14 +1046,14 @@ public abstract class Class8 {
 		Class13.aStringArray129 = new String[500];
 		for (int i_331_ = 0; i_331_ < Class13.aStringArray129.length; i_331_++)
 			Class13.aStringArray129[i_331_] = "";
-		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -1940277002), -1694092142);
+		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -1940277002), -1694092142);
 	}
 
 	static final void method403(Class118 class118, Class98 class98, CS2Executor class527, int i) {
 		class118.aBool1291 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
 	}
 
-	public static Class505 method404(Canvas canvas, Interface22 interface22, int i, int i_332_, int i_333_) {
+	public static GraphicalRenderer method404(Canvas canvas, Interface22 interface22, int i, int i_332_, int i_333_) {
 		return new ja(canvas, interface22, i, i_332_);
 	}
 }

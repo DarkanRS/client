@@ -5,7 +5,7 @@
 import java.awt.Canvas;
 
 public class Class52_Sub1 extends Class52 {
-	Class160 aClass160_9150;
+	NativeSprite aClass160_9150;
 
 	public void method23() {
 		super.method22(1273546148);
@@ -37,7 +37,7 @@ public class Class52_Sub1 extends Class52 {
 		((Class52_Sub1) this).aClass160_9150 = Class152.method2600(((Class52_Sub1) this).aClass317_493, -2099828279 * ((Class350_Sub1) (((Class52_Sub1) this).aClass350_489)).anInt7756, -1723466442);
 	}
 
-	Class52_Sub1(Class317 class317, Class317 class317_5_, Class350_Sub1 class350_sub1) {
+	Class52_Sub1(Index class317, Index class317_5_, Class350_Sub1 class350_sub1) {
 		super(class317, class317_5_, (Class350) class350_sub1);
 	}
 

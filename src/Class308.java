@@ -38,7 +38,7 @@ public class Class308 {
 						Class282_Sub16 class282_sub16_2_ = (Class282_Sub16) ((Class308) this).aClass473_3612.method7869(-417377867);
 						class282_sub16 = new Class282_Sub16(i, (((Class282_Sub16) class282_sub16_2_).anInt7602) * 1598441707);
 						((Class308) this).aClass282_Sub16Array3615[(((Class282_Sub16) class282_sub16_2_).anInt7603 * 1516507657)] = null;
-						class282_sub16_2_.method4991(-371378792);
+						class282_sub16_2_.unlink(-371378792);
 					} else {
 						class282_sub16 = new Class282_Sub16(i, (((Class308) this).anInt3617 * -719606331));
 						((Class308) this).anInt3617 += -661698291;
@@ -107,7 +107,7 @@ public class Class308 {
 						Class282_Sub16 class282_sub16_6_ = (Class282_Sub16) ((Class308) this).aClass473_3612.method7869(-417377867);
 						class282_sub16 = new Class282_Sub16(i, (((Class282_Sub16) class282_sub16_6_).anInt7602) * 1598441707);
 						((Class308) this).aClass282_Sub16Array3615[(((Class282_Sub16) class282_sub16_6_).anInt7603 * 1516507657)] = null;
-						class282_sub16_6_.method4991(-371378792);
+						class282_sub16_6_.unlink(-371378792);
 					} else {
 						class282_sub16 = new Class282_Sub16(i, (((Class308) this).anInt3617 * -719606331));
 						((Class308) this).anInt3617 += -661698291;

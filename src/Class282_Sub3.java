@@ -7,7 +7,7 @@ import jaclib.memory.heap.NativeHeapBuffer;
 
 import jaggl.OpenGL;
 
-public class Class282_Sub3 extends Class282 {
+public class Class282_Sub3 extends Node {
 	Class90 aClass90_7487;
 	Class390_Sub2 aClass390_Sub2_7488;
 	Stream aStream7489;

@@ -35,14 +35,14 @@ public class Class417 {
 	}
 
 	public static Class347 method7005(int i, int i_2_) {
-		Class347 class347 = (Class347) Class347.aClass229_4052.method3865((long) i);
+		Class347 class347 = (Class347) Class347.aClass229_4052.get((long) i);
 		if (null != class347)
 			return class347;
 		byte[] is = Class347.aClass317_4053.getFile(0, i, -2049012023);
 		class347 = new Class347();
 		if (null != is)
 			class347.method6163(new RsByteBuffer(is), i, (short) 257);
-		Class347.aClass229_4052.method3856(class347, (long) i);
+		Class347.aClass229_4052.put(class347, (long) i);
 		return class347;
 	}
 

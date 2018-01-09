@@ -62,11 +62,11 @@ public class Class93 {
 	}
 
 	public static void method1568(int i) {
-		synchronized (Class238.aClass229_2920) {
-			Class238.aClass229_2920.method3863(1281693706);
+		synchronized (PlayerAppearance.aClass229_2920) {
+			PlayerAppearance.aClass229_2920.method3863(1281693706);
 		}
-		synchronized (Class238.aClass229_2930) {
-			Class238.aClass229_2930.method3863(1087742173);
+		synchronized (PlayerAppearance.aClass229_2930) {
+			PlayerAppearance.aClass229_2930.method3863(1087742173);
 		}
 	}
 

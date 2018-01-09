@@ -10,8 +10,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 	public Class123 aClass123_10532;
 	static int[] anIntArray10533 = { 16, 32, 64, 128 };
 
-	Class285 method12990(Class505 class505, int i) {
-		Class528 class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
+	Class285 method12990(GraphicalRenderer class505, int i) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
 		Class294 class294 = method11168();
@@ -41,12 +41,12 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return ((Class521_Sub1_Sub5_Sub2) this).aBool10528;
 	}
 
-	public Class200 method12992(Class505 class505, byte i) {
+	public Class200 method12992(GraphicalRenderer class505, byte i) {
 		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
 	}
 
-	void method13023(Class505 class505) {
-		Class528 class528 = aClass123_10532.method2132(class505, 262144, true, true, -1384937123);
+	void method13023(GraphicalRenderer class505) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null) {
 			Class294 class294 = method11168();
 			Class305 class305 = method11166();
@@ -64,8 +64,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		aClass123_10532.method2116(class476, 424577870);
 	}
 
-	void method12991(Class505 class505, int i) {
-		Class528 class528 = aClass123_10532.method2132(class505, 262144, true, true, -1384937123);
+	void method12991(GraphicalRenderer class505, int i) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null) {
 			Class294 class294 = method11168();
 			Class305 class305 = method11166();
@@ -115,7 +115,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		aClass123_10532.method2116(class476, -1673723332);
 	}
 
-	public void method88(Class505 class505, int i) {
+	public void method88(GraphicalRenderer class505, int i) {
 		aClass123_10532.method2118(class505, 1838435469);
 	}
 
@@ -127,7 +127,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return aClass123_10532.method2121((byte) 1);
 	}
 
-	public void method87(Class505 class505, int i) {
+	public void method87(GraphicalRenderer class505, int i) {
 		aClass123_10532.method2136(class505, (byte) -126);
 	}
 
@@ -151,8 +151,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return ((Class521_Sub1_Sub5_Sub2) this).aBool10528;
 	}
 
-	Class285 method13010(Class505 class505) {
-		Class528 class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
+	Class285 method13010(GraphicalRenderer class505) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
 		Class294 class294 = method11168();
@@ -178,26 +178,26 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return ((Class123) aClass123_10532).anInt1555 * 845010167;
 	}
 
-	public Class521_Sub1_Sub5_Sub2(Class206 class206, Class505 class505, Class474 class474, Class478 class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
+	public Class521_Sub1_Sub5_Sub2(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
 		super(class206, i_7_, i_8_, i_9_, i, i_6_, Class263.method4777(i_10_, i_11_, (byte) -17));
 		aClass123_10532 = new Class123(class505, class474, class478, i_10_, i_11_, aByte7967, i_6_, this, bool, i_12_);
 		((Class521_Sub1_Sub5_Sub2) this).aBool10529 = 0 != class478.anInt5652 * -348507379 && !bool;
 		method13008(1, (byte) -77);
 	}
 
-	public void method93(Class505 class505) {
+	public void method93(GraphicalRenderer class505) {
 		aClass123_10532.method2136(class505, (byte) -44);
 	}
 
-	public void method83(Class505 class505) {
+	public void method83(GraphicalRenderer class505) {
 		aClass123_10532.method2136(class505, (byte) -59);
 	}
 
-	public void method97(Class505 class505) {
+	public void method97(GraphicalRenderer class505) {
 		aClass123_10532.method2118(class505, 2032514144);
 	}
 
-	public void method98(Class505 class505) {
+	public void method98(GraphicalRenderer class505) {
 		aClass123_10532.method2118(class505, 2115861985);
 	}
 
@@ -241,7 +241,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return aClass123_10532.method2121((byte) 1);
 	}
 
-	final void method13016(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_13_, int i_14_, boolean bool) {
+	final void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_13_, int i_14_, boolean bool) {
 		throw new IllegalStateException();
 	}
 
@@ -249,8 +249,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return aClass123_10532.method2115(1807526638);
 	}
 
-	Class285 method12989(Class505 class505) {
-		Class528 class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
+	Class285 method12989(GraphicalRenderer class505) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
 		Class294 class294 = method11168();
@@ -272,8 +272,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return class285;
 	}
 
-	void method13012(Class505 class505) {
-		Class528 class528 = aClass123_10532.method2132(class505, 262144, true, true, -1384937123);
+	void method13012(GraphicalRenderer class505) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null) {
 			Class294 class294 = method11168();
 			Class305 class305 = method11166();
@@ -283,8 +283,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		}
 	}
 
-	boolean method12983(Class505 class505, int i, int i_17_, int i_18_) {
-		Class528 class528 = aClass123_10532.method2132(class505, 131072, false, false, -1384937123);
+	boolean method12983(GraphicalRenderer class505, int i, int i_17_, int i_18_) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 131072, false, false, -1384937123);
 		if (null == class528)
 			return false;
 		return class528.method11270(i, i_17_, method11168(), false, 0);
@@ -298,8 +298,8 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return false;
 	}
 
-	Class285 method13009(Class505 class505) {
-		Class528 class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
+	Class285 method13009(GraphicalRenderer class505) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
 		Class294 class294 = method11168();
@@ -321,20 +321,20 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return class285;
 	}
 
-	public Class200 method13019(Class505 class505) {
+	public Class200 method13019(GraphicalRenderer class505) {
 		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
 	}
 
-	public Class200 method13018(Class505 class505) {
+	public Class200 method13018(GraphicalRenderer class505) {
 		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
 	}
 
-	public Class200 method12993(Class505 class505) {
+	public Class200 method12993(GraphicalRenderer class505) {
 		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
 	}
 
-	boolean method13020(Class505 class505, int i, int i_20_) {
-		Class528 class528 = aClass123_10532.method2132(class505, 131072, false, false, -1384937123);
+	boolean method13020(GraphicalRenderer class505, int i, int i_20_) {
+		MeshRasterizer class528 = aClass123_10532.method2132(class505, 131072, false, false, -1384937123);
 		if (null == class528)
 			return false;
 		return class528.method11270(i, i_20_, method11168(), false, 0);
@@ -344,7 +344,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		throw new IllegalStateException();
 	}
 
-	final void method13013(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_21_, int i_22_, boolean bool, int i_23_) {
+	final void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_21_, int i_22_, boolean bool, int i_23_) {
 		throw new IllegalStateException();
 	}
 

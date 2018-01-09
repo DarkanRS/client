@@ -515,43 +515,43 @@ public class Class188 {
 		((CS2Executor) class527).intLocals[(((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr])] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 	}
 
-	public static void method3139(Class505 class505, Class317 class317, int i) {
+	public static void method3139(GraphicalRenderer class505, Index class317, int i) {
 		Class91[] class91s = Class91.method1514(class317, Class165.anInt2035 * -1633200555, 0);
-		Class282_Sub21.aClass160Array7673 = new Class160[class91s.length];
+		Class282_Sub21.aClass160Array7673 = new NativeSprite[class91s.length];
 		for (int i_11_ = 0; i_11_ < class91s.length; i_11_++)
 			Class282_Sub21.aClass160Array7673[i_11_] = class505.method8444(class91s[i_11_], true);
 		class91s = Class91.method1514(class317, -1931867075 * Class475.anInt5622, 0);
-		Class16.aClass160Array138 = new Class160[class91s.length];
+		Class16.aClass160Array138 = new NativeSprite[class91s.length];
 		for (int i_12_ = 0; i_12_ < class91s.length; i_12_++)
 			Class16.aClass160Array138[i_12_] = class505.method8444(class91s[i_12_], true);
 		class91s = Class91.method1514(class317, Class16.anInt135 * -1739866999, 0);
-		Class391.aClass160Array4778 = new Class160[class91s.length];
+		Class391.aClass160Array4778 = new NativeSprite[class91s.length];
 		for (int i_13_ = 0; i_13_ < class91s.length; i_13_++)
 			Class391.aClass160Array4778[i_13_] = class505.method8444(class91s[i_13_], true);
 		class91s = Class91.method1514(class317, Class16.anInt142 * 460049705, 0);
-		Class282_Sub20_Sub15.aClass160Array9838 = new Class160[class91s.length];
+		Class282_Sub20_Sub15.aClass160Array9838 = new NativeSprite[class91s.length];
 		for (int i_14_ = 0; i_14_ < class91s.length; i_14_++)
 			Class282_Sub20_Sub15.aClass160Array9838[i_14_] = class505.method8444(class91s[i_14_], true);
 		class91s = Class91.method1514(class317, Class16.anInt137 * 566522625, 0);
-		Class16.aClass160Array145 = new Class160[class91s.length];
+		Class16.aClass160Array145 = new NativeSprite[class91s.length];
 		int i_15_ = 25;
 		for (int i_16_ = 0; i_16_ < class91s.length; i_16_++) {
 			class91s[i_16_].method1529(-i_15_ + (int) (Math.random() * (double) i_15_ * 2.0), -i_15_ + (int) (Math.random() * (double) i_15_ * 2.0), -i_15_ + (int) (Math.random() * (double) i_15_ * 2.0));
 			Class16.aClass160Array145[i_16_] = class505.method8444(class91s[i_16_], true);
 		}
 		class91s = Class91.method1514(class317, 1306936623 * Class468_Sub12.anInt7899, 0);
-		Class282_Sub36.aClass160Array7994 = new Class160[class91s.length];
+		Class282_Sub36.aClass160Array7994 = new NativeSprite[class91s.length];
 		for (int i_17_ = 0; i_17_ < class91s.length; i_17_++)
 			Class282_Sub36.aClass160Array7994[i_17_] = class505.method8444(class91s[i_17_], true);
 		class91s = Class91.method1514(class317, -862638837 * Class13.anInt130, 0);
-		Class250.aClass160Array3092 = new Class160[class91s.length];
+		Class250.aClass160Array3092 = new NativeSprite[class91s.length];
 		i_15_ = 12;
 		for (int i_18_ = 0; i_18_ < class91s.length; i_18_++) {
 			class91s[i_18_].method1529(-i_15_ + (int) (Math.random() * (double) i_15_ * 2.0), -i_15_ + (int) (Math.random() * (double) i_15_ * 2.0), -i_15_ + (int) (Math.random() * (double) i_15_ * 2.0));
 			Class250.aClass160Array3092[i_18_] = class505.method8444(class91s[i_18_], true);
 		}
 		class91s = Class91.method1514(class317, Class16.anInt143 * 1595523019, 0);
-		Class182.aClass160Array2261 = new Class160[class91s.length];
+		Class182.aClass160Array2261 = new NativeSprite[class91s.length];
 		i_15_ = 12;
 		for (int i_19_ = 0; i_19_ < class91s.length; i_19_++) {
 			class91s[i_19_].method1529(-i_15_ + (int) (Math.random() * (double) i_15_ * 2.0), -i_15_ + (int) (Math.random() * (double) i_15_ * 2.0), -i_15_ + (int) (Math.random() * (double) i_15_ * 2.0));
@@ -560,7 +560,7 @@ public class Class188 {
 		Class16.aClass160_146 = class505.method8444(Class91.method1522(class317, (-1636343593 * Class16.anInt141), 0), true);
 		Exception_Sub1.aClass160_10075 = class505.method8444(Class91.method1522(class317, (-615473415 * Class165.anInt2037), 0), true);
 		class91s = Class91.method1514(class317, 341095981 * Class271.anInt3330, 0);
-		Class245.aClass160Array3027 = new Class160[class91s.length];
+		Class245.aClass160Array3027 = new NativeSprite[class91s.length];
 		for (int i_20_ = 0; i_20_ < class91s.length; i_20_++)
 			Class245.aClass160Array3027[i_20_] = class505.method8444(class91s[i_20_], true);
 	}
@@ -586,9 +586,9 @@ public class Class188 {
 			if (client.aClass465_7414 != null) {
 				Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) (-1258088735 * Class272.anInt3331 << 28 | i_23_ << 14 | i_25_))));
 				if (null != class282_sub29) {
-					for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 55); null != class282_sub34; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.method8067(1296718058)) {
+					for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 55); null != class282_sub34; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.next(1296718058)) {
 						if (((i_26_ & 0x7fff) == 1964309863 * class282_sub34.anInt7853) && i_27_ == (((Class282_Sub34) class282_sub34).anInt7852) * -1727049729) {
-							class282_sub34.method4991(-371378792);
+							class282_sub34.unlink(-371378792);
 							((Class282_Sub34) class282_sub34).anInt7852 = -302993409 * i_28_;
 							Class353.method6209((-1258088735 * Class272.anInt3331), i_25_, i_23_, class282_sub34, 1242216050);
 							break;
@@ -618,7 +618,7 @@ public class Class188 {
 						Class282_Sub50_Sub10 class282_sub50_sub10 = ((Class282_Sub50_Sub10) client.aClass465_7334.method7754((long) (i_32_ << 16 | i_33_)));
 						if (null != class282_sub50_sub10) {
 							((Class282_Sub50_Sub10) class282_sub50_sub10).aClass521_Sub1_Sub1_Sub4_9636.method15931(-2141216299);
-							class282_sub50_sub10.method4991(-371378792);
+							class282_sub50_sub10.unlink(-371378792);
 						}
 					} else {
 						int i_38_ = 512 * i_32_ + 256;
@@ -720,14 +720,14 @@ public class Class188 {
 			int i_85_ = class282_sub35_sub2.readShortLE128(602501853);
 			Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) (Class272.anInt3331 * -1258088735 << 28 | i_82_ << 14 | i_84_))));
 			if (null != class282_sub29) {
-				for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 19); class282_sub34 != null; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.method8067(715558625)) {
+				for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 19); class282_sub34 != null; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.next(715558625)) {
 					if ((i_85_ & 0x7fff) == 1964309863 * class282_sub34.anInt7853) {
-						class282_sub34.method4991(-371378792);
+						class282_sub34.unlink(-371378792);
 						break;
 					}
 				}
 				if (class282_sub29.aClass482_7708.method8096(2087735245))
-					class282_sub29.method4991(-371378792);
+					class282_sub29.unlink(-371378792);
 				if (i_83_ >= 0 && i_81_ >= 0 && i_83_ < client.aClass257_7353.method4424(793956639) && i_81_ < client.aClass257_7353.method4451(-539075068))
 					Class434_Sub1.method12760(-1258088735 * Class272.anInt3331, i_83_, i_81_, -1380263584);
 			}
@@ -897,7 +897,7 @@ public class Class188 {
 	}
 
 	public static void method3142(int i) {
-		if (Class40.method867(1523656747) != Class279.aClass279_3368) {
+		if (NamedFileReference.method867(1523656747) != Class279.aClass279_3368) {
 			try {
 				String string = Class282_Sub44.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);
 				int i_161_ = ((int) (Class169.method2869(2038445900) / 86400000L) - 11745);

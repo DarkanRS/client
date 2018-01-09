@@ -6,7 +6,7 @@ public class Class215 implements Interface17 {
 	int anInt2683;
 	int anInt2684;
 	int[] anIntArray2685;
-	public static Class317 aClass317_2686;
+	public static Index aClass317_2686;
 
 	Class215(int i, int i_0_, int[] is) {
 		((Class215) this).anInt2683 = i * 985045531;
@@ -124,7 +124,7 @@ public class Class215 implements Interface17 {
 		int i_20_ = -1;
 		String string_21_ = null;
 		if (-1 != i) {
-			Class437 class437 = Class125.aClass424_1573.method7069(i, (byte) 0);
+			AttributeDefault class437 = Class125.aClass424_1573.get(i, (byte) 0);
 			if (class437 == null || class437.method7319(1591846177) != bool_18_)
 				return;
 			if (class437.method7319(1882298499))
@@ -133,9 +133,9 @@ public class Class215 implements Interface17 {
 				i_20_ = class437.anInt5337 * -1741480635;
 		}
 		int i_22_ = 0;
-		for (int i_23_ = 0; i_23_ < Class119.aClass426_1463.anInt5108 * -1662523091; i_23_++) {
+		for (int i_23_ = 0; i_23_ < Class119.aClass426_1463.maxItemsCount * -1662523091; i_23_++) {
 			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_23_, 1398783345);
-			if ((!bool || class425.aBool5085) && -1 == class425.anInt5078 * -722914683 && -1203090775 * class425.anInt5068 == -1 && -1 == class425.anInt5046 * 370155889 && 0 == class425.anInt5095 * -2136347513 && class425.aString5043.toLowerCase().indexOf(string) != -1) {
+			if ((!bool || class425.grandExchange) && -1 == class425.certTemplateId * -722914683 && -1203090775 * class425.lendTemplateId == -1 && -1 == class425.bindTemplateId * 370155889 && 0 == class425.anInt5095 * -2136347513 && class425.aString5043.toLowerCase().indexOf(string) != -1) {
 				if (i != -1) {
 					if (bool_18_) {
 						if (!string_17_.equals(class425.method7101(i, string_21_, -1780783562)))

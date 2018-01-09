@@ -47,7 +47,7 @@ public class Class489 {
 
 	static void method8217(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, Class476 class476, byte i_8_) {
 		Class282_Sub31 class282_sub31 = null;
-		for (Class282_Sub31 class282_sub31_9_ = ((Class282_Sub31) Class282_Sub31.aClass482_7776.method8097((byte) 22)); null != class282_sub31_9_; class282_sub31_9_ = (Class282_Sub31) Class282_Sub31.aClass482_7776.method8067(375031762)) {
+		for (Class282_Sub31 class282_sub31_9_ = ((Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 22)); null != class282_sub31_9_; class282_sub31_9_ = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(375031762)) {
 			if (i == (((Class282_Sub31) class282_sub31_9_).anInt7764 * 1291499461) && i_3_ == 37618455 * class282_sub31_9_.anInt7762 && i_4_ == -322610393 * class282_sub31_9_.anInt7763 && (((Class282_Sub31) class282_sub31_9_).anInt7766 * -497894501 == i_5_)) {
 				class282_sub31 = class282_sub31_9_;
 				break;

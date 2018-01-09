@@ -10,7 +10,7 @@ public final class Class75 {
 	static final int anInt743 = 25;
 	Player aClass521_Sub1_Sub1_Sub2_Sub1_744;
 	int[] anIntArray745;
-	static Class317 aClass317_746;
+	static Index aClass317_746;
 	static int anInt747;
 
 	void method1335() {

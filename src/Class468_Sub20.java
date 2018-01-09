@@ -133,7 +133,7 @@ public class Class468_Sub20 extends Class468 {
 		return is;
 	}
 
-	public static void method12806(Class317 class317, byte i) {
+	public static void method12806(Index class317, byte i) {
 		Class165.anInt2035 = class317.method5610("headicons_pk", 1525500729) * -821889283;
 		Class475.anInt5622 = class317.method5610("headicons_prayer", -270805148) * -2055869675;
 		Class16.anInt135 = class317.method5610("hint_headicons", 1408398760) * -1041729095;
@@ -165,7 +165,7 @@ public class Class468_Sub20 extends Class468 {
 		Class387 class387 = Class474.aClass387_5621;
 		int i_4_ = Class76.method1359((byte) 82);
 		if (Class474.aClass387_5621 == class387) {
-			Class380.aString4636 = ((Class387) Class474.aClass387_5621).aClass433_4711.method7273(Class223.aClass495_2772, -1559474593);
+			Class380.aString4636 = ((Class387) Class474.aClass387_5621).aClass433_4711.translate(Class223.aClass495_2772, -1559474593);
 			if (((Class387) Class474.aClass387_5621).aBool4718)
 				Class302.anInt3563 = (-1332863859 * (((586831783 * ((Class387) Class474.aClass387_5621).anInt4703) - (((Class387) Class474.aClass387_5621).anInt4715 * 2033966327)) * i_4_ / 100 + 2033966327 * (((Class387) Class474.aClass387_5621).anInt4715)));
 			if (((Class387) Class474.aClass387_5621).aBool4694)
@@ -174,7 +174,7 @@ public class Class468_Sub20 extends Class468 {
 			Class328.aClass306_3771 = null;
 			Class365.method6298(5, 2138325476);
 		} else {
-			Class380.aString4636 = ((Class387) class387).aClass433_4714.method7273(Class223.aClass495_2772, -2022596623);
+			Class380.aString4636 = ((Class387) class387).aClass433_4714.translate(Class223.aClass495_2772, -2022596623);
 			if (((Class387) Class474.aClass387_5621).aBool4694)
 				Class380.aString4636 = new StringBuilder().append(Class380.aString4636).append(((Class387) class387).anInt4703 * 586831783).append("%").toString();
 			Class302.anInt3563 = ((Class387) class387).anInt4703 * 337283835;

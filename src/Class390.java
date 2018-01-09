@@ -137,7 +137,7 @@ public abstract class Class390 {
 			}
 			int i_129_ = i_123_ * i_127_ + i_128_ * i_122_ >> 14;
 			int i_130_ = i_123_ * i_128_ - i_127_ * i_122_ >> 14;
-			Class160 class160 = Class282_Sub20_Sub15.aClass160Array9838[i_124_];
+			NativeSprite class160 = Class282_Sub20_Sub15.aClass160Array9838[i_124_];
 			int i_131_ = class160.method2747();
 			int i_132_ = class160.method2793();
 			int i_133_ = class118.anInt1301 * 1506818197 / 2 + i_129_ - i_131_ / 2;
@@ -175,7 +175,7 @@ public abstract class Class390 {
 		if (i >= Class532_Sub1.anInt7071 * -612590951 && i_141_ <= Class532_Sub1.anInt7069 * -1345107225 && i_142_ >= 324226563 * Class532_Sub1.anInt7070 && i_143_ <= -348932735 * Class532_Sub1.anInt7068)
 			Class198.method3230(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) 89);
 		else
-			Class238.method4034(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) -84);
+			PlayerAppearance.method4034(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) -84);
 	}
 
 	static final void method6732(CS2Executor class527, byte i) {

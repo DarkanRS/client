@@ -5,17 +5,17 @@
 import java.util.Iterator;
 
 public class Class460 implements Iterator {
-	Class482 aClass482_5535;
-	Class282 aClass282_5536;
-	Class282 aClass282_5537 = null;
+	NodeCollection aClass482_5535;
+	Node aClass282_5536;
+	Node aClass282_5537 = null;
 
-	public Class282 method7680() {
+	public Node method7680() {
 		method7697((short) -18109);
-		return (Class282) next();
+		return (Node) next();
 	}
 
 	public Object method7681() {
-		Class282 class282 = ((Class460) this).aClass282_5536;
+		Node class282 = ((Class460) this).aClass282_5536;
 		if (class282 == ((Class460) this).aClass482_5535.aClass282_5728) {
 			class282 = null;
 			((Class460) this).aClass282_5536 = null;
@@ -25,18 +25,18 @@ public class Class460 implements Iterator {
 		return class282;
 	}
 
-	public Class282 method7682() {
+	public Node method7682() {
 		method7697((short) -10835);
-		return (Class282) next();
+		return (Node) next();
 	}
 
-	public Class282 method7683(int i) {
+	public Node method7683(int i) {
 		method7697((short) -14367);
-		return (Class282) next();
+		return (Node) next();
 	}
 
 	public Object next() {
-		Class282 class282 = ((Class460) this).aClass282_5536;
+		Node class282 = ((Class460) this).aClass282_5536;
 		if (class282 == ((Class460) this).aClass482_5535.aClass282_5728) {
 			class282 = null;
 			((Class460) this).aClass282_5536 = null;
@@ -50,7 +50,7 @@ public class Class460 implements Iterator {
 		return (((Class460) this).aClass482_5535.aClass282_5728 != ((Class460) this).aClass282_5536);
 	}
 
-	public void method7684(Class482 class482, byte i) {
+	public void method7684(NodeCollection class482, byte i) {
 		((Class460) this).aClass482_5535 = class482;
 		((Class460) this).aClass282_5536 = ((Class460) this).aClass482_5535.aClass282_5728.aClass282_3378;
 		((Class460) this).aClass282_5537 = null;
@@ -68,14 +68,14 @@ public class Class460 implements Iterator {
 		return (((Class460) this).aClass482_5535.aClass282_5728 != ((Class460) this).aClass282_5536);
 	}
 
-	public Class460(Class482 class482) {
+	public Class460(NodeCollection class482) {
 		((Class460) this).aClass482_5535 = class482;
 		((Class460) this).aClass282_5536 = ((Class460) this).aClass482_5535.aClass282_5728.aClass282_3378;
 		((Class460) this).aClass282_5537 = null;
 	}
 
 	public Object method7688() {
-		Class282 class282 = ((Class460) this).aClass282_5536;
+		Node class282 = ((Class460) this).aClass282_5536;
 		if (class282 == ((Class460) this).aClass482_5535.aClass282_5728) {
 			class282 = null;
 			((Class460) this).aClass282_5536 = null;
@@ -86,7 +86,7 @@ public class Class460 implements Iterator {
 	}
 
 	public Object method7689() {
-		Class282 class282 = ((Class460) this).aClass282_5536;
+		Node class282 = ((Class460) this).aClass282_5536;
 		if (class282 == ((Class460) this).aClass482_5535.aClass282_5728) {
 			class282 = null;
 			((Class460) this).aClass282_5536 = null;
@@ -99,24 +99,24 @@ public class Class460 implements Iterator {
 	public void remove() {
 		if (((Class460) this).aClass282_5537 == null)
 			throw new IllegalStateException();
-		((Class460) this).aClass282_5537.method4991(-371378792);
+		((Class460) this).aClass282_5537.unlink(-371378792);
 		((Class460) this).aClass282_5537 = null;
 	}
 
 	public void method7690() {
 		if (((Class460) this).aClass282_5537 == null)
 			throw new IllegalStateException();
-		((Class460) this).aClass282_5537.method4991(-371378792);
+		((Class460) this).aClass282_5537.unlink(-371378792);
 		((Class460) this).aClass282_5537 = null;
 	}
 
-	public void method7691(Class482 class482) {
+	public void method7691(NodeCollection class482) {
 		((Class460) this).aClass482_5535 = class482;
 		((Class460) this).aClass282_5536 = ((Class460) this).aClass482_5535.aClass282_5728.aClass282_3378;
 		((Class460) this).aClass282_5537 = null;
 	}
 
-	public void method7692(Class482 class482) {
+	public void method7692(NodeCollection class482) {
 		((Class460) this).aClass482_5535 = class482;
 		((Class460) this).aClass282_5536 = ((Class460) this).aClass482_5535.aClass282_5728.aClass282_3378;
 		((Class460) this).aClass282_5537 = null;
@@ -130,7 +130,7 @@ public class Class460 implements Iterator {
 	public void method7694() {
 		if (((Class460) this).aClass282_5537 == null)
 			throw new IllegalStateException();
-		((Class460) this).aClass282_5537.method4991(-371378792);
+		((Class460) this).aClass282_5537.unlink(-371378792);
 		((Class460) this).aClass282_5537 = null;
 	}
 
@@ -139,7 +139,7 @@ public class Class460 implements Iterator {
 		((Class460) this).aClass282_5537 = null;
 	}
 
-	public void method7696(Class482 class482) {
+	public void method7696(NodeCollection class482) {
 		((Class460) this).aClass482_5535 = class482;
 		((Class460) this).aClass282_5536 = ((Class460) this).aClass482_5535.aClass282_5728.aClass282_3378;
 		((Class460) this).aClass282_5537 = null;
@@ -150,9 +150,9 @@ public class Class460 implements Iterator {
 		((Class460) this).aClass282_5537 = null;
 	}
 
-	public Class282 method7698() {
+	public Node method7698() {
 		method7697((short) -19395);
-		return (Class282) next();
+		return (Node) next();
 	}
 
 	static final void method7699(CS2Executor class527, int i) {

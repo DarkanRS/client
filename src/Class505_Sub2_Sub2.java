@@ -55,7 +55,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return ((((Class505_Sub2_Sub2) this).aD3DCAPS10267.PixelShaderVersion & 0xffff) >= 257);
 	}
 
-	static Class505 method15638(Canvas canvas, Interface22 interface22, Class317 class317, Integer integer) {
+	static GraphicalRenderer method15638(Canvas canvas, Interface22 interface22, Index class317, Integer integer) {
 		Class505_Sub2_Sub2 class505_sub2_sub2 = null;
 		Class505_Sub2_Sub2 class505_sub2_sub2_0_;
 		try {
@@ -122,7 +122,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return class505_sub2_sub2_0_;
 	}
 
-	Class505_Sub2_Sub2(int i, int i_4_, long l, long l_5_, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, Interface22 interface22, Class317 class317, int i_6_) {
+	Class505_Sub2_Sub2(int i, int i_4_, long l, long l_5_, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, Interface22 interface22, Index class317, int i_6_) {
 		super(interface22, class317, i_6_, 0);
 		((Class505_Sub2_Sub2) this).aClass473_10249 = new Class473();
 		((Class505_Sub2_Sub2) this).anInt10262 = 0;
@@ -176,7 +176,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method13900() {
-		for (Class282 class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(425316532); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -37)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(425316532); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -37)) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method212();
@@ -313,7 +313,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	Class282_Sub9 method15641(Interface33 interface33) {
-		for (Class282 class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(978719918); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -58)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(978719918); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -58)) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			if (((Class282_Sub9) class282_sub9).anInterface33_7538 == interface33)
 				return class282_sub9;
@@ -329,7 +329,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	void method15643(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.method4991(-371378792);
+			class282_sub9.unlink(-371378792);
 	}
 
 	void method13951() {
@@ -1301,7 +1301,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method14089() {
-		for (Class282 class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1708563028); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -65)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1708563028); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -65)) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method212();
@@ -1445,7 +1445,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	void method15665(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.method4991(-371378792);
+			class282_sub9.unlink(-371378792);
 	}
 
 	void method13913() {
@@ -1558,7 +1558,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method13899() {
-		for (Class282 class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1831958057); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -3)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1831958057); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -3)) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method210();
@@ -1972,7 +1972,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method14069() {
-		for (Class282 class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1428199779); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -53)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1428199779); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -53)) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method210();
@@ -2069,13 +2069,13 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	void method15673(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.method4991(-371378792);
+			class282_sub9.unlink(-371378792);
 	}
 
 	void method15674(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.method4991(-371378792);
+			class282_sub9.unlink(-371378792);
 	}
 
 	final void method15675(long l) {

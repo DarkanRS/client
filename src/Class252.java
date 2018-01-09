@@ -204,7 +204,7 @@ public class Class252 implements Interface43 {
 			}
 			int i_23_ = i_21_ * 100 / i_19_;
 			int i_24_ = 10000 * i_20_ / i_19_;
-			String string_25_ = new StringBuilder().append("Cache:").append(Class202.method3342((long) i_24_, 2, true, Class495.aClass495_5795, (byte) 28)).append("% (").append(i_23_).append("%)").toString();
+			String string_25_ = new StringBuilder().append("Cache:").append(Class202.method3342((long) i_24_, 2, true, Language.aClass495_5795, (byte) 28)).append("% (").append(i_23_).append("%)").toString();
 			Class540.aClass8_7138.method359(string_25_, i_10_, i_11_, -256, -1, 1878721557);
 			i_11_ += 12;
 		}
@@ -216,9 +216,9 @@ public class Class252 implements Interface43 {
 			return 0;
 		int i_29_ = 0;
 		for (int i_30_ = 0; i_30_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length; i_30_++) {
-			if (((Class282_Sub30) class282_sub30).anIntArray7710[i_30_] >= 0 && (((Class282_Sub30) class282_sub30).anIntArray7710[i_30_] < -1662523091 * Class119.aClass426_1463.anInt5108)) {
+			if (((Class282_Sub30) class282_sub30).anIntArray7710[i_30_] >= 0 && (((Class282_Sub30) class282_sub30).anIntArray7710[i_30_] < -1662523091 * Class119.aClass426_1463.maxItemsCount)) {
 				ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions((((Class282_Sub30) class282_sub30).anIntArray7710[i_30_]), 1670357313);
-				int i_31_ = class425.method7099(i_26_, ((Class125.aClass424_1573.method7069(i_26_, (byte) 0).anInt5337) * -1741480635), -304171855);
+				int i_31_ = class425.method7099(i_26_, ((Class125.aClass424_1573.get(i_26_, (byte) 0).anInt5337) * -1741480635), -304171855);
 				if (bool)
 					i_29_ += i_31_ * (((Class282_Sub30) class282_sub30).anIntArray7709[i_30_]);
 				else

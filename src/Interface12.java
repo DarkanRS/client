@@ -5,7 +5,7 @@
 public interface Interface12 {
 	public void method38();
 
-	public void method83(Class505 class505);
+	public void method83(GraphicalRenderer class505);
 
 	public int method84(int i);
 
@@ -13,9 +13,9 @@ public interface Interface12 {
 
 	public boolean method86(int i);
 
-	public void method87(Class505 class505, int i);
+	public void method87(GraphicalRenderer class505, int i);
 
-	public void method88(Class505 class505, int i);
+	public void method88(GraphicalRenderer class505, int i);
 
 	public int method76();
 
@@ -31,7 +31,7 @@ public interface Interface12 {
 
 	public int method39();
 
-	public void method93(Class505 class505);
+	public void method93(GraphicalRenderer class505);
 
 	public boolean method94();
 
@@ -41,7 +41,7 @@ public interface Interface12 {
 
 	public void method96();
 
-	public void method97(Class505 class505);
+	public void method97(GraphicalRenderer class505);
 
-	public void method98(Class505 class505);
+	public void method98(GraphicalRenderer class505);
 }

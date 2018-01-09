@@ -120,6 +120,6 @@ public class Class275_Sub7 extends Class275 {
 		Class521_Sub1_Sub2.anInt9461 = Class109_Sub1.anInt9384 * -1358126739;
 		Class282_Sub15_Sub1.anInt9575 = 1724048189 * Class246.anInt3029;
 		Class336.anInt3968 = Class293.anInt3512 * 39010087;
-		Class424.anInt5029 = -427311385 * Class518.anInt5930;
+		AttributesDefaultsLoader.anInt5029 = -427311385 * Class518.anInt5930;
 	}
 }

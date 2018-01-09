@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
 import jaclib.memory.Stream;
 import jaclib.memory.heap.NativeHeapBuffer;
 
-public class Class282_Sub6 extends Class282 {
+public class Class282_Sub6 extends Node {
 	int anInt7508 = 0;
 	Class390_Sub1 aClass390_Sub1_7509;
 	int anInt7510;

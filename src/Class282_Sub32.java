@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub32 extends Class282 {
+public class Class282_Sub32 extends Node {
 	int anInt7816;
 	int anInt7817;
 	int anInt7818;
@@ -19,7 +19,7 @@ public class Class282_Sub32 extends Class282 {
 		((Class282_Sub32) this).aBool7821 = bool;
 	}
 
-	static void method12574(Class505 class505, Class118 class118, int i, int i_4_, int i_5_) {
+	static void method12574(GraphicalRenderer class505, Class118 class118, int i, int i_4_, int i_5_) {
 		Class119 class119 = class118.method2046(class505, 1273435241);
 		if (class119 != null) {
 			Class455 class455 = class119.aClass455_1456;
@@ -48,7 +48,7 @@ public class Class282_Sub32 extends Class282 {
 				int i_11_ = (48 + client.aClass257_7353.method4451(-1005893088) * 4 - i_7_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_4_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_10_, (float) i_11_, i_9_, i_8_ << 2, class455, i, i_4_);
 				Class283 class283 = client.aClass257_7353.method4528((byte) 38);
-				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.method8097((byte) 120)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.method8067(1158642483))) {
+				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.head((byte) 120)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.next(1158642483))) {
 					int i_12_ = class282_sub38.anInt8002 * -570797415;
 					int i_13_ = ((class283.anIntArray3381[i_12_] >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 					int i_14_ = ((class283.anIntArray3381[i_12_] & 0x3fff) - class219.anInt2712 * -1002240017);
@@ -68,10 +68,10 @@ public class Class282_Sub32 extends Class282 {
 					Class158.method2731(class505, class455, class118, i, i_4_, i_18_, i_19_, -1796959211 * class478.anInt5669, 2923328);
 				}
 				for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-456921914)); class282_sub29 != null; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 97))) {
-					int i_20_ = (int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 28 & 0x3L);
+					int i_20_ = (int) ((class282_sub29.uid * -3442165056282524525L) >> 28 & 0x3L);
 					if (335283739 * Class187.anInt2351 == i_20_) {
-						int i_21_ = ((int) ((-3442165056282524525L * class282_sub29.aLong3379) & 0x3fffL) - class219.anInt2711 * 1948093437);
-						int i_22_ = ((int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
+						int i_21_ = ((int) ((-3442165056282524525L * class282_sub29.uid) & 0x3fffL) - class219.anInt2711 * 1948093437);
+						int i_22_ = ((int) ((class282_sub29.uid * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
 						int i_23_ = 4 * i_21_ + 2 - i_6_ / 128;
 						int i_24_ = 2 + 4 * i_22_ - i_7_ / 128;
 						Class190.method3149(class118, class455, i, i_4_, i_23_, i_24_, Class250.aClass160Array3092[0], 1358567832);

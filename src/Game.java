@@ -2,36 +2,36 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class486 {
-	static Class486 aClass486_5743;
-	public static Class486 aClass486_5744 = new Class486("runescape", "RuneScape", 0);
-	static Class486 aClass486_5745;
+public class Game {
+	static Game aClass486_5743;
+	public static Game rs = new Game("runescape", "RuneScape", 0);
+	static Game aClass486_5745;
 	public int anInt5746;
-	static Class486 aClass486_5747;
+	static Game aClass486_5747;
 	public String aString5748;
 	public String aString5749;
-	public static Class486 aClass486_5750 = new Class486("stellardawn", "Stellar Dawn", 1);
+	public static Game aClass486_5750 = new Game("stellardawn", "Stellar Dawn", 1);
 
-	Class486(String string, String string_0_, int i) {
+	Game(String string, String string_0_, int i) {
 		aString5748 = string;
 		aString5749 = string_0_;
 		anInt5746 = i * -151370173;
 	}
 
 	static {
-		aClass486_5745 = new Class486("game3", "Game 3", 2);
-		aClass486_5743 = new Class486("game4", "Game 4", 3);
-		aClass486_5747 = new Class486("game5", "Game 5", 4);
+		aClass486_5745 = new Game("game3", "Game 3", 2);
+		aClass486_5743 = new Game("game4", "Game 4", 3);
+		aClass486_5747 = new Game("game5", "Game 5", 4);
 	}
 
-	static Class486[] method8202() {
-		return new Class486[] { aClass486_5745, aClass486_5743, aClass486_5750, aClass486_5747, aClass486_5744 };
+	static Game[] method8202() {
+		return new Game[] { aClass486_5745, aClass486_5743, aClass486_5750, aClass486_5747, rs };
 	}
 
-	public static Class486 method8203(int i) {
-		Class486[] class486s = Class282_Sub15_Sub1.method14817(777386057);
+	public static Game method8203(int i) {
+		Game[] class486s = Class282_Sub15_Sub1.method14817(777386057);
 		for (int i_1_ = 0; i_1_ < class486s.length; i_1_++) {
-			Class486 class486 = class486s[i_1_];
+			Game class486 = class486s[i_1_];
 			if (class486.anInt5746 * 1648080491 == i)
 				return class486;
 		}
@@ -76,7 +76,7 @@ public class Class486 {
 		Class61.aClass160_647 = null;
 		Class467.aClass160_5576 = null;
 		Class290.aClass160_3452 = null;
-		Class437.aClass160_5339 = null;
+		AttributeDefault.aClass160_5339 = null;
 		Class20.aBool187 = true;
 	}
 

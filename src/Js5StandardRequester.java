@@ -5,7 +5,7 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public abstract class Class312 {
+public abstract class Js5StandardRequester {
 	Class477 aClass477_3645;
 	static final int anInt3646 = 50;
 	RsByteBuffer aClass282_Sub35_3647;
@@ -25,7 +25,7 @@ public abstract class Class312 {
 
 	public abstract void method5514();
 
-	Class282_Sub50_Sub11_Sub1 method5515(int i, int i_0_, byte i_1_, boolean bool, byte i_2_) {
+	Class282_Sub50_Sub11_Sub1 request(int i, int i_0_, byte i_1_, boolean bool, byte i_2_) {
 		long l = ((long) i << 32) + (long) i_0_;
 		Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = new Class282_Sub50_Sub11_Sub1();
 		class282_sub50_sub11_sub1.aLong8120 = 5418180015864004923L * l;
@@ -34,11 +34,11 @@ public abstract class Class312 {
 		if (bool) {
 			if (method5553((short) 22331) >= 50)
 				throw new RuntimeException();
-			((Class312) this).aClass477_3652.method7936(class282_sub50_sub11_sub1, -1738910950);
+			((Js5StandardRequester) this).aClass477_3652.method7936(class282_sub50_sub11_sub1, -1738910950);
 		} else {
 			if (method5518(-1983883069) >= 20)
 				throw new RuntimeException();
-			((Class312) this).aClass477_3651.method7936(class282_sub50_sub11_sub1, -1738910950);
+			((Js5StandardRequester) this).aClass477_3651.method7936(class282_sub50_sub11_sub1, -1738910950);
 		}
 		return class282_sub50_sub11_sub1;
 	}
@@ -47,12 +47,12 @@ public abstract class Class312 {
 		return method5518(-1727956644) >= 20;
 	}
 
-	boolean method5517(int i) {
+	boolean priorityRequestsFull(int i) {
 		return method5553((short) 24755) >= 50;
 	}
 
 	int method5518(int i) {
-		return (((Class312) this).aClass477_3651.method7939(-1975244786) + ((Class312) this).aClass477_3654.method7939(431574855));
+		return (((Js5StandardRequester) this).aClass477_3651.method7939(-1975244786) + ((Js5StandardRequester) this).aClass477_3654.method7939(431574855));
 	}
 
 	boolean method5519() {
@@ -90,19 +90,19 @@ public abstract class Class312 {
 	public abstract void method5532();
 
 	int method5533() {
-		return (((Class312) this).aClass477_3651.method7939(-1833157623) + ((Class312) this).aClass477_3654.method7939(1052580148));
+		return (((Js5StandardRequester) this).aClass477_3651.method7939(-1833157623) + ((Js5StandardRequester) this).aClass477_3654.method7939(1052580148));
 	}
 
 	int method5534() {
-		return (((Class312) this).aClass477_3651.method7939(-736499075) + ((Class312) this).aClass477_3654.method7939(778707133));
+		return (((Js5StandardRequester) this).aClass477_3651.method7939(-736499075) + ((Js5StandardRequester) this).aClass477_3654.method7939(778707133));
 	}
 
 	public int method5535() {
-		return (((Class312) this).aClass477_3652.method7939(-2132459517) + ((Class312) this).aClass477_3645.method7939(-1042231454));
+		return (((Js5StandardRequester) this).aClass477_3652.method7939(-2132459517) + ((Js5StandardRequester) this).aClass477_3645.method7939(-1042231454));
 	}
 
 	public int method5536() {
-		return (((Class312) this).aClass477_3652.method7939(-87712776) + ((Class312) this).aClass477_3645.method7939(-4797720));
+		return (((Js5StandardRequester) this).aClass477_3652.method7939(-87712776) + ((Js5StandardRequester) this).aClass477_3645.method7939(-4797720));
 	}
 
 	public abstract void method5537();
@@ -114,7 +114,7 @@ public abstract class Class312 {
 	abstract void method5540();
 
 	public int method5541() {
-		return (((Class312) this).aClass477_3652.method7939(-2034520370) + ((Class312) this).aClass477_3645.method7939(-1464928681));
+		return (((Js5StandardRequester) this).aClass477_3652.method7939(-2034520370) + ((Js5StandardRequester) this).aClass477_3645.method7939(-1464928681));
 	}
 
 	public abstract boolean method5542();
@@ -133,15 +133,15 @@ public abstract class Class312 {
 
 	public abstract void method5549();
 
-	Class312() {
-		((Class312) this).aClass477_3645 = new Class477();
-		((Class312) this).aClass477_3651 = new Class477();
-		((Class312) this).aClass477_3654 = new Class477();
-		((Class312) this).aClass282_Sub35_3655 = new RsByteBuffer(6);
-		((Class312) this).aByte3656 = (byte) 0;
+	Js5StandardRequester() {
+		((Js5StandardRequester) this).aClass477_3645 = new Class477();
+		((Js5StandardRequester) this).aClass477_3651 = new Class477();
+		((Js5StandardRequester) this).aClass477_3654 = new Class477();
+		((Js5StandardRequester) this).aClass282_Sub35_3655 = new RsByteBuffer(6);
+		((Js5StandardRequester) this).aByte3656 = (byte) 0;
 		anInt3657 = 0;
 		anInt3650 = 0;
-		((Class312) this).aClass282_Sub35_3647 = new RsByteBuffer(10);
+		((Js5StandardRequester) this).aClass282_Sub35_3647 = new RsByteBuffer(10);
 	}
 
 	public abstract void method5550();
@@ -153,7 +153,7 @@ public abstract class Class312 {
 	public abstract void method5552();
 
 	public int method5553(short i) {
-		return (((Class312) this).aClass477_3652.method7939(946484951) + ((Class312) this).aClass477_3645.method7939(1256746547));
+		return (((Js5StandardRequester) this).aClass477_3652.method7939(946484951) + ((Js5StandardRequester) this).aClass477_3645.method7939(1256746547));
 	}
 
 	public abstract void method5554();
@@ -167,11 +167,11 @@ public abstract class Class312 {
 		if (bool) {
 			if (method5553((short) 12213) >= 50)
 				throw new RuntimeException();
-			((Class312) this).aClass477_3652.method7936(class282_sub50_sub11_sub1, -1738910950);
+			((Js5StandardRequester) this).aClass477_3652.method7936(class282_sub50_sub11_sub1, -1738910950);
 		} else {
 			if (method5518(-1770923873) >= 20)
 				throw new RuntimeException();
-			((Class312) this).aClass477_3651.method7936(class282_sub50_sub11_sub1, -1738910950);
+			((Js5StandardRequester) this).aClass477_3651.method7936(class282_sub50_sub11_sub1, -1738910950);
 		}
 		return class282_sub50_sub11_sub1;
 	}
@@ -188,7 +188,7 @@ public abstract class Class312 {
 		Class9.anInt72 = 1604822550;
 	}
 
-	public static void method5559(Class317 class317, int i) {
+	public static void method5559(Index class317, int i) {
 		Class347.aClass317_4053 = class317;
 	}
 

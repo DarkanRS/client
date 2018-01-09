@@ -7,7 +7,7 @@ public class UnderlayDefinition {
 	Class118 aClass118_5886;
 
 	boolean method8764(int i, int i_0_, int i_1_) {
-		Class118 class118 = Class317.method5694(i, i_0_, -1661012661);
+		Class118 class118 = Index.method5694(i, i_0_, -1661012661);
 		if (null != class118) {
 			((UnderlayDefinition) this).aClass98_5885 = Class468_Sub8.aClass98Array7889[i >> 16];
 			((UnderlayDefinition) this).aClass118_5886 = class118;
@@ -45,7 +45,7 @@ public class UnderlayDefinition {
 	}
 
 	boolean method8769(int i, int i_4_) {
-		Class118 class118 = Class317.method5694(i, i_4_, -2096788619);
+		Class118 class118 = Index.method5694(i, i_4_, -2096788619);
 		if (null != class118) {
 			((UnderlayDefinition) this).aClass98_5885 = Class468_Sub8.aClass98Array7889[i >> 16];
 			((UnderlayDefinition) this).aClass118_5886 = class118;
@@ -56,7 +56,7 @@ public class UnderlayDefinition {
 	}
 
 	boolean method8770(int i, int i_5_) {
-		Class118 class118 = Class317.method5694(i, i_5_, 34459327);
+		Class118 class118 = Index.method5694(i, i_5_, 34459327);
 		if (null != class118) {
 			((UnderlayDefinition) this).aClass98_5885 = Class468_Sub8.aClass98Array7889[i >> 16];
 			((UnderlayDefinition) this).aClass118_5886 = class118;
@@ -67,7 +67,7 @@ public class UnderlayDefinition {
 	}
 
 	boolean method8771(int i, int i_6_) {
-		Class118 class118 = Class317.method5694(i, i_6_, -1507662436);
+		Class118 class118 = Index.method5694(i, i_6_, -1507662436);
 		if (null != class118) {
 			((UnderlayDefinition) this).aClass98_5885 = Class468_Sub8.aClass98Array7889[i >> 16];
 			((UnderlayDefinition) this).aClass118_5886 = class118;

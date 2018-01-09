@@ -12,7 +12,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract int method12982(Class282_Sub24[] class282_sub24s);
 
-	abstract boolean method12983(Class505 class505, int i, int i_0_, int i_1_);
+	abstract boolean method12983(GraphicalRenderer class505, int i, int i_0_, int i_1_);
 
 	abstract void method12984(int i);
 
@@ -22,23 +22,23 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract boolean method12987(int i);
 
-	abstract boolean method12988(Class505 class505);
+	abstract boolean method12988(GraphicalRenderer class505);
 
-	abstract Class285 method12989(Class505 class505);
+	abstract Class285 method12989(GraphicalRenderer class505);
 
-	abstract Class285 method12990(Class505 class505, int i);
+	abstract Class285 method12990(GraphicalRenderer class505, int i);
 
-	abstract void method12991(Class505 class505, int i);
+	abstract void method12991(GraphicalRenderer class505, int i);
 
-	public abstract Class200 method12992(Class505 class505, byte i);
+	public abstract Class200 method12992(GraphicalRenderer class505, byte i);
 
-	public abstract Class200 method12993(Class505 class505);
+	public abstract Class200 method12993(GraphicalRenderer class505);
 
 	Class521_Sub1(Class206 class206) {
 		aClass206_7970 = class206;
 	}
 
-	static void method12994(Class200 class200, int i, int i_2_, int i_3_, Class528 class528) {
+	static void method12994(Class200 class200, int i, int i_2_, int i_3_, MeshRasterizer class528) {
 		if (null != class528)
 			class200.method3253(i, i_2_, i_3_, class528.N(), class528.RA(), class528.ya(), class528.YA(), class528.o(), class528.AA(), class528.ha());
 	}
@@ -53,7 +53,7 @@ public abstract class Class521_Sub1 extends Class521 {
 		return -method12995(-812710006);
 	}
 
-	abstract boolean method12998(Class505 class505);
+	abstract boolean method12998(GraphicalRenderer class505);
 
 	abstract boolean method12999();
 
@@ -94,15 +94,15 @@ public abstract class Class521_Sub1 extends Class521 {
 			aClass275_Sub5Array7965[i_11_] = new Class275_Sub5();
 	}
 
-	abstract Class285 method13009(Class505 class505);
+	abstract Class285 method13009(GraphicalRenderer class505);
 
-	abstract Class285 method13010(Class505 class505);
+	abstract Class285 method13010(GraphicalRenderer class505);
 
 	abstract boolean method13011();
 
-	abstract void method13012(Class505 class505);
+	abstract void method13012(GraphicalRenderer class505);
 
-	abstract void method13013(Class505 class505, Class521_Sub1 class521_sub1_12_, int i, int i_13_, int i_14_, boolean bool, int i_15_);
+	abstract void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1_12_, int i, int i_13_, int i_14_, boolean bool, int i_15_);
 
 	int method13014(int i, int i_16_, Class282_Sub24[] class282_sub24s) {
 		long l = (((Class206) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_16_]);
@@ -121,21 +121,21 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract void method13015();
 
-	abstract void method13016(Class505 class505, Class521_Sub1 class521_sub1_21_, int i, int i_22_, int i_23_, boolean bool);
+	abstract void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1_21_, int i, int i_22_, int i_23_, boolean bool);
 
 	public abstract int method13017();
 
-	public abstract Class200 method13018(Class505 class505);
+	public abstract Class200 method13018(GraphicalRenderer class505);
 
-	public abstract Class200 method13019(Class505 class505);
+	public abstract Class200 method13019(GraphicalRenderer class505);
 
-	abstract boolean method13020(Class505 class505, int i, int i_24_);
+	abstract boolean method13020(GraphicalRenderer class505, int i, int i_24_);
 
 	abstract void method13021();
 
-	abstract boolean method13022(Class505 class505);
+	abstract boolean method13022(GraphicalRenderer class505);
 
-	abstract void method13023(Class505 class505);
+	abstract void method13023(GraphicalRenderer class505);
 
 	abstract int method13024(Class282_Sub24[] class282_sub24s);
 
@@ -153,7 +153,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract boolean method13029(byte i);
 
-	abstract boolean method13030(Class505 class505);
+	abstract boolean method13030(GraphicalRenderer class505);
 
 	abstract int method13031(Class282_Sub24[] class282_sub24s);
 
@@ -180,9 +180,9 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	abstract int method13036(Class282_Sub24[] class282_sub24s, int i);
 
-	abstract boolean method13037(Class505 class505, int i);
+	abstract boolean method13037(GraphicalRenderer class505, int i);
 
-	static void method13038(Class200 class200, int i, int i_30_, int i_31_, Class528 class528) {
+	static void method13038(Class200 class200, int i, int i_30_, int i_31_, MeshRasterizer class528) {
 		if (null != class528)
 			class200.method3253(i, i_30_, i_31_, class528.N(), class528.RA(), class528.ya(), class528.YA(), class528.o(), class528.AA(), class528.ha());
 	}

@@ -7,7 +7,7 @@ public class Class419 {
 	Class438 aClass438_5001;
 	public int anInt5002;
 	int anInt5003;
-	static Class160 aClass160_5004;
+	static NativeSprite aClass160_5004;
 
 	void method7023(RsByteBuffer class282_sub35, int i) {
 		if (1 == i)
@@ -37,12 +37,12 @@ public class Class419 {
 	}
 
 	public synchronized Class91 method7026(int i) {
-		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3865((long) (((Class419) this).anInt5003 * 337838525)));
+		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.get((long) (((Class419) this).anInt5003 * 337838525)));
 		if (class91 != null)
 			return class91;
 		class91 = Class91.method1522((((Class438) ((Class419) this).aClass438_5001).aClass317_5341), ((Class419) this).anInt5003 * 337838525, 0);
 		if (null != class91)
-			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3856(class91, (long) (((Class419) this).anInt5003 * 337838525));
+			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.put(class91, (long) (((Class419) this).anInt5003 * 337838525));
 		return class91;
 	}
 
@@ -69,32 +69,32 @@ public class Class419 {
 	}
 
 	public synchronized Class91 method7029() {
-		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3865((long) (((Class419) this).anInt5003 * 337838525)));
+		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.get((long) (((Class419) this).anInt5003 * 337838525)));
 		if (class91 != null)
 			return class91;
 		class91 = Class91.method1522((((Class438) ((Class419) this).aClass438_5001).aClass317_5341), ((Class419) this).anInt5003 * 337838525, 0);
 		if (null != class91)
-			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3856(class91, (long) (((Class419) this).anInt5003 * 337838525));
+			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.put(class91, (long) (((Class419) this).anInt5003 * 337838525));
 		return class91;
 	}
 
 	public synchronized Class91 method7030() {
-		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3865((long) (((Class419) this).anInt5003 * 337838525)));
+		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.get((long) (((Class419) this).anInt5003 * 337838525)));
 		if (class91 != null)
 			return class91;
 		class91 = Class91.method1522((((Class438) ((Class419) this).aClass438_5001).aClass317_5341), ((Class419) this).anInt5003 * 337838525, 0);
 		if (null != class91)
-			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3856(class91, (long) (((Class419) this).anInt5003 * 337838525));
+			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.put(class91, (long) (((Class419) this).anInt5003 * 337838525));
 		return class91;
 	}
 
 	public synchronized Class91 method7031() {
-		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3865((long) (((Class419) this).anInt5003 * 337838525)));
+		Class91 class91 = (Class91) (((Class438) ((Class419) this).aClass438_5001).aClass229_5342.get((long) (((Class419) this).anInt5003 * 337838525)));
 		if (class91 != null)
 			return class91;
 		class91 = Class91.method1522((((Class438) ((Class419) this).aClass438_5001).aClass317_5341), ((Class419) this).anInt5003 * 337838525, 0);
 		if (null != class91)
-			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.method3856(class91, (long) (((Class419) this).anInt5003 * 337838525));
+			((Class438) ((Class419) this).aClass438_5001).aClass229_5342.put(class91, (long) (((Class419) this).anInt5003 * 337838525));
 		return class91;
 	}
 }

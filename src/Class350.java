@@ -63,7 +63,7 @@ public class Class350 implements Interface3 {
 		for (Class282_Sub50_Sub15 class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4)); class282_sub50_sub15 != null; class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-433309836))) {
 			if ((((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769 * 2026887253) > 1) {
 				((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769 = 0;
-				Class20.aClass229_164.method3856(class282_sub50_sub15, (820033947929891191L * (((Class282_Sub50_Sub7) (Class282_Sub50_Sub7) (((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119)).aLong9580)));
+				Class20.aClass229_164.put(class282_sub50_sub15, (820033947929891191L * (((Class282_Sub50_Sub7) (Class282_Sub50_Sub7) (((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119)).aLong9580)));
 				((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7935((byte) 116);
 			}
 		}

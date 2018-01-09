@@ -5,7 +5,7 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class Class282_Sub42 extends Class282 {
+public class Class282_Sub42 extends Node {
 	int anInt8033;
 	Method[] aMethodArray8034;
 	int[] anIntArray8035;

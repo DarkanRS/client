@@ -6,7 +6,7 @@ public class Class116 {
 	static final int anInt1250 = 1;
 	static final int anInt1251 = 0;
 	int anInt1252;
-	Class317 aClass317_1253;
+	Index aClass317_1253;
 	public int anInt1254;
 	Class282_Sub7 aClass282_Sub7_1255;
 	Class282_Sub15_Sub2 aClass282_Sub15_Sub2_1256;
@@ -39,7 +39,7 @@ public class Class116 {
 		return ((Class116) this).aClass282_Sub7_1255;
 	}
 
-	public Class116(Class317 class317, int i) {
+	public Class116(Index class317, int i) {
 		((Class116) this).anInt1252 = 0;
 		((Class116) this).aClass317_1253 = class317;
 		anInt1254 = i * -1294101847;
@@ -117,7 +117,7 @@ public class Class116 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method7785(i_0_, -225955104);
 	}
 
-	public static Class528 method1969(Class505 class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, Class528 class528, int i_5_, int i_6_, int i_7_, int i_8_, Class456 class456, int i_9_) {
+	public static MeshRasterizer method1969(GraphicalRenderer class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, MeshRasterizer class528, int i_5_, int i_6_, int i_7_, int i_8_, Class456 class456, int i_9_) {
 		if (null == class528)
 			return null;
 		int i_10_ = 2055;
@@ -126,9 +126,9 @@ public class Class116 {
 			i_10_ &= ~0x200;
 		}
 		long l = (((long) i_6_ << 48) + (((long) i_5_ << 32) + (long) (i_4_ + (i_7_ << 16) + (i_8_ << 24))));
-		Class528 class528_11_;
+		MeshRasterizer class528_11_;
 		synchronized (Class13.aClass229_127) {
-			class528_11_ = (Class528) Class13.aClass229_127.method3865(l);
+			class528_11_ = (MeshRasterizer) Class13.aClass229_127.get(l);
 		}
 		if (class528_11_ == null || class505.method8452(class528_11_.m(), i_10_) != 0) {
 			if (null != class528_11_)
@@ -146,7 +146,7 @@ public class Class116 {
 				i_12_ = 21;
 			int i_13_ = 3;
 			int[] is = { 64, 96, 128 };
-			Class157 class157 = new Class157(i_13_ * i_12_ + 1, 2 * (i_12_ * i_13_) - i_12_, 0);
+			RSMesh class157 = new RSMesh(i_13_ * i_12_ + 1, 2 * (i_12_ * i_13_) - i_12_, 0);
 			int i_14_ = class157.method2662(0, 0, 0);
 			int[][] is_15_ = new int[i_13_][i_12_];
 			for (int i_16_ = 0; i_16_ < i_13_; i_16_++) {
@@ -173,9 +173,9 @@ public class Class116 {
 					}
 				}
 			}
-			class528_11_ = class505.method8451(class157, i_10_, 1257126031 * Class13.anInt128, 64, 768);
+			class528_11_ = class505.createMeshRasterizer(class157, i_10_, 1257126031 * Class13.anInt128, 64, 768);
 			synchronized (Class13.aClass229_127) {
-				Class13.aClass229_127.method3856(class528_11_, l);
+				Class13.aClass229_127.put(class528_11_, l);
 			}
 		}
 		int i_29_ = class528.RA();

@@ -23,9 +23,9 @@ final class Class109_Sub1 extends Class109 {
 	}
 
 	static void method14650(int i, int i_0_) {
-		for (Class282 class282 = client.aClass465_7405.method7750(1412707931); class282 != null; class282 = client.aClass465_7405.method7751((byte) 92)) {
-			if ((long) i == (-3442165056282524525L * class282.aLong3379 >> 48 & 0xffffL))
-				class282.method4991(-371378792);
+		for (Node class282 = client.aClass465_7405.method7750(1412707931); class282 != null; class282 = client.aClass465_7405.method7751((byte) 92)) {
+			if ((long) i == (-3442165056282524525L * class282.uid >> 48 & 0xffffL))
+				class282.unlink(-371378792);
 		}
 	}
 
@@ -33,7 +33,7 @@ final class Class109_Sub1 extends Class109 {
 		return 12;
 	}
 
-	public static Class505 method14652(Canvas canvas, Interface22 interface22, int i, int i_1_, byte i_2_) {
+	public static GraphicalRenderer method14652(Canvas canvas, Interface22 interface22, int i, int i_1_, byte i_2_) {
 		return new Class505_Sub3(canvas, interface22, i, i_1_);
 	}
 }

@@ -23,7 +23,7 @@ public class Class538 {
 	int anInt7117;
 	boolean aBool7118;
 
-	void method11493(Class505 class505, long l, int i, boolean bool, int i_0_) {
+	void method11493(GraphicalRenderer class505, long l, int i, boolean bool, int i_0_) {
 		if (((Class538) this).aBool7107)
 			bool = false;
 		else if (-391332475 * Class235.anInt2906 < ((Class538) this).aClass59_7101.anInt571 * 1928824825)
@@ -200,7 +200,7 @@ public class Class538 {
 		}
 	}
 
-	void method11495(Class505 class505, long l, int i, boolean bool) {
+	void method11495(GraphicalRenderer class505, long l, int i, boolean bool) {
 		if (((Class538) this).aBool7107)
 			bool = false;
 		else if (-391332475 * Class235.anInt2906 < ((Class538) this).aClass59_7101.anInt571 * 1928824825)
@@ -350,7 +350,7 @@ public class Class538 {
 		Class235.anInt2900 += ((Class538) this).anInt7104 * 1527961209;
 	}
 
-	void method11496(Class206 class206, Class505 class505, long l) {
+	void method11496(Class206 class206, GraphicalRenderer class505, long l) {
 		for (Class275_Sub1_Sub1_Sub1 class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7659(301908602)); class275_sub1_sub1_sub1 != null; class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7650((byte) 108)))
 			class275_sub1_sub1_sub1.method15965(class206, class505, l);
 	}
@@ -382,7 +382,7 @@ public class Class538 {
 		}
 	}
 
-	void method11498(Class505 class505, long l, int i, boolean bool) {
+	void method11498(GraphicalRenderer class505, long l, int i, boolean bool) {
 		if (((Class538) this).aBool7107)
 			bool = false;
 		else if (-391332475 * Class235.anInt2906 < ((Class538) this).aClass59_7101.anInt571 * 1928824825)
@@ -532,7 +532,7 @@ public class Class538 {
 		Class235.anInt2900 += ((Class538) this).anInt7104 * 1527961209;
 	}
 
-	Class538(Class505 class505, Class87 class87, Class539 class539, long l) {
+	Class538(GraphicalRenderer class505, Class87 class87, Class539 class539, long l) {
 		((Class538) this).aClass234_7109 = new Class234();
 		((Class538) this).aBool7105 = false;
 		((Class538) this).aBool7118 = false;
@@ -556,13 +556,13 @@ public class Class538 {
 		((Class234) ((Class538) this).aClass234_7109).anInt2884 = 1 * ((Class234) ((Class538) this).aClass234_7115).anInt2884;
 	}
 
-	void method11499(Class206 class206, Class505 class505, long l) {
+	void method11499(Class206 class206, GraphicalRenderer class505, long l) {
 		for (Class275_Sub1_Sub1_Sub1 class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7659(301908602)); class275_sub1_sub1_sub1 != null; class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7650((byte) 108)))
 			class275_sub1_sub1_sub1.method15965(class206, class505, l);
 	}
 
 	public static void method11500(int i, boolean bool, byte i_112_) {
-		Class231.method3914(i, Class433.aClass433_5251.method7273(Class223.aClass495_2772, -929025713), bool, (byte) 104);
+		Class231.method3914(i, Message.aClass433_5251.translate(Class223.aClass495_2772, -929025713), bool, (byte) 104);
 	}
 
 	static final void method11501(int i) {

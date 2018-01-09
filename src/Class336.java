@@ -2066,7 +2066,7 @@ public class Class336 {
 	}
 
 	public static void method6008(boolean bool, byte i) {
-		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.method8097((byte) 38)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.method8067(-128319020)) {
+		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 38)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-128319020)) {
 			if (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 != null) {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
@@ -2075,22 +2075,22 @@ public class Class336 {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 			}
-			class282_sub48.method4991(-371378792);
+			class282_sub48.unlink(-371378792);
 		}
 		if (bool) {
-			for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.method8097((byte) 121)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.method8067(-938773769)) {
+			for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 121)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(-938773769)) {
 				if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099)) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.method4991(-371378792);
+				class282_sub48.unlink(-371378792);
 			}
 			for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass465_8075.method7750(856415350)); class282_sub48 != null; class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass465_8075.method7751((byte) 62))) {
 				if (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 != null) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.method4991(-371378792);
+				class282_sub48.unlink(-371378792);
 			}
 		}
 	}

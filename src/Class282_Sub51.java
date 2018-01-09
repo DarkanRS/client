@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import jaclib.hardware_info.HardwareInfo;
 
-public class Class282_Sub51 extends Class282 {
+public class Class282_Sub51 extends Node {
 	int anInt8121;
 	static final int anInt8122 = 1;
 	static final int anInt8123 = 2;

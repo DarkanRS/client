@@ -80,7 +80,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 			Class107.anInt1082 = ((anInt3243 = class274.method4877((byte) 14) * -1929118563) * 154419059);
 			anInt3250 = 0;
 			anInt3251 = 0;
-			if (Class40.method867(-1097326159) == Class279.aClass279_3367) {
+			if (NamedFileReference.method867(-1097326159) == Class279.aClass279_3367) {
 				Class45.anInt434 += 2062496322 * class274.method4868((short) 128);
 				Class107.anInt1082 += 1370635022 * class274.method4872((byte) -78);
 				method4661(class274.method4870(1701502832), (short) 2048);
@@ -176,7 +176,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		} catch (Exception exception) {
 			Class475.aBool5623 = false;
 		}
-		ItemEffects.aClass267_5026 = new Class267();
+		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
 		for (ThreadGroup threadgroup_14_ = threadgroup.getParent(); null != threadgroup_14_; threadgroup_14_ = threadgroup.getParent())
 			threadgroup = threadgroup_14_;
@@ -614,7 +614,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		} catch (Exception exception) {
 			Class475.aBool5623 = false;
 		}
-		ItemEffects.aClass267_5026 = new Class267();
+		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
 		for (ThreadGroup threadgroup_57_ = threadgroup.getParent(); null != threadgroup_57_; threadgroup_57_ = threadgroup.getParent())
 			threadgroup = threadgroup_57_;
@@ -1065,7 +1065,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		} catch (Exception exception) {
 			Class475.aBool5623 = false;
 		}
-		ItemEffects.aClass267_5026 = new Class267();
+		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
 		for (ThreadGroup threadgroup_84_ = threadgroup.getParent(); null != threadgroup_84_; threadgroup_84_ = threadgroup.getParent())
 			threadgroup = threadgroup_84_;
@@ -1185,7 +1185,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		} catch (Exception exception) {
 			Class475.aBool5623 = false;
 		}
-		ItemEffects.aClass267_5026 = new Class267();
+		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
 		for (ThreadGroup threadgroup_94_ = threadgroup.getParent(); null != threadgroup_94_; threadgroup_94_ = threadgroup.getParent())
 			threadgroup = threadgroup_94_;
@@ -1284,7 +1284,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		} catch (Exception exception) {
 			Class475.aBool5623 = false;
 		}
-		ItemEffects.aClass267_5026 = new Class267();
+		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
 		for (ThreadGroup threadgroup_104_ = threadgroup.getParent(); null != threadgroup_104_; threadgroup_104_ = threadgroup.getParent())
 			threadgroup = threadgroup_104_;
@@ -1549,7 +1549,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		} catch (Exception exception) {
 			Class475.aBool5623 = false;
 		}
-		ItemEffects.aClass267_5026 = new Class267();
+		MeshModifier.aClass267_5026 = new Class267();
 		ThreadGroup threadgroup = Thread.currentThread().getThreadGroup();
 		for (ThreadGroup threadgroup_130_ = threadgroup.getParent(); null != threadgroup_130_; threadgroup_130_ = threadgroup.getParent())
 			threadgroup = threadgroup_130_;
@@ -2593,7 +2593,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class282_Sub50_Sub12 class282_sub50_sub12 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.method7754((long) i << 56 | l);
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);
-			Class282_Sub50_Sub12.aClass465_9667.method7765(class282_sub50_sub12, class282_sub50_sub12.aLong3379 * -3442165056282524525L);
+			Class282_Sub50_Sub12.aClass465_9667.method7765(class282_sub50_sub12, class282_sub50_sub12.uid * -3442165056282524525L);
 		}
 		return class282_sub50_sub12;
 	}

@@ -21,9 +21,9 @@ public class Class456 {
 
 	final boolean method7562(int i) {
 		if (((Class456) this).aClass518_5453 != null) {
-			boolean bool = (((Class456) this).aClass462_5464.method7707(Class40.aClass523_411, ((Class456) this).aClass518_5453, ((Class456) this).anInt5460 * 643220577, 1844755981 * ((Class456) this).anInt5466, ((Class456) this).aClass518_5453.anIntArray5922, -514647052));
+			boolean bool = (((Class456) this).aClass462_5464.method7707(NamedFileReference.aClass523_411, ((Class456) this).aClass518_5453, ((Class456) this).anInt5460 * 643220577, 1844755981 * ((Class456) this).anInt5466, ((Class456) this).aClass518_5453.anIntArray5922, -514647052));
 			if (bool && ((Class456) this).aBool5463 && ((Class456) this).aClass518_5453.anIntArray5911 != null)
-				((Class456) this).aClass462_5467.method7707(Class40.aClass523_411, ((Class456) this).aClass518_5453, 643220577 * ((Class456) this).anInt5460, ((Class456) this).anInt5466 * 1844755981, ((Class456) this).aClass518_5453.anIntArray5911, -1635915089);
+				((Class456) this).aClass462_5467.method7707(NamedFileReference.aClass523_411, ((Class456) this).aClass518_5453, 643220577 * ((Class456) this).anInt5460, ((Class456) this).anInt5466 * 1844755981, ((Class456) this).aClass518_5453.anIntArray5911, -1635915089);
 			return bool;
 		}
 		return false;
@@ -80,7 +80,7 @@ public class Class456 {
 					if (0 == (((Class456) this).aClass518_5453.anInt5907 * 554947543))
 						return;
 				} else
-					((Class456) this).aClass518_5453 = Class40.aClass523_411.method11205(i, (byte) 11);
+					((Class456) this).aClass518_5453 = NamedFileReference.aClass523_411.method11205(i, (byte) 11);
 				((Class456) this).anInt5459 = 0;
 				((Class456) this).anInt5458 = i_8_ * 333323387;
 				((Class456) this).anInt5461 = -1783646677 * i_9_;
@@ -116,7 +116,7 @@ public class Class456 {
 		((Class456) this).anInt5458 = 333323387 * i;
 	}
 
-	public static final void method7576(Class528 class528, Class456 class456, Class456 class456_13_) {
+	public static final void method7576(MeshRasterizer class528, Class456 class456, Class456 class456_13_) {
 		if (class456.method7562(1278048524) && class456_13_.method7562(1436301107)) {
 			Class518 class518 = ((Class456) class456).aClass518_5453;
 			Class518 class518_14_ = ((Class456) class456_13_).aClass518_5453;
@@ -126,7 +126,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7577(Class528 class528, int i, int i_15_) {
+	public final void method7577(MeshRasterizer class528, int i, int i_15_) {
 		if (null != ((Class456) this).aClass518_5453) {
 			if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(2049608469)) {
 				class528.method11262((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542 * -104209121), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Class456) this).aClass462_5464).anInt5547 * -775231561), -706748429 * ((Class456) this).anInt5457, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i,
@@ -138,7 +138,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7578(Class528 class528, int i, int i_16_, int i_17_) {
+	public final void method7578(MeshRasterizer class528, int i, int i_16_, int i_17_) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1399567490)) {
 			class528.method11258((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (-104209121 * ((Class462) ((Class456) this).aClass462_5464).anInt5542), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (-775231561 * ((Class462) ((Class456) this).aClass462_5464).anInt5547), ((Class456) this).anInt5457 * -706748429, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i, i_16_,
 					((Class456) this).aClass518_5453.aBool5923, null);
@@ -148,7 +148,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7579(Class528 class528, int i) {
+	public final void method7579(MeshRasterizer class528, int i) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1730078988)) {
 			class528.method11284((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542) * -104209121);
 			if (((Class456) this).aBool5463 && null != ((Class456) this).aClass518_5453.anIntArray5911 && ((Class462) ((Class456) this).aClass462_5467).aBool5544)
@@ -162,9 +162,9 @@ public class Class456 {
 
 	final boolean method7581() {
 		if (((Class456) this).aClass518_5453 != null) {
-			boolean bool = (((Class456) this).aClass462_5464.method7707(Class40.aClass523_411, ((Class456) this).aClass518_5453, ((Class456) this).anInt5460 * 643220577, 1844755981 * ((Class456) this).anInt5466, ((Class456) this).aClass518_5453.anIntArray5922, -193306578));
+			boolean bool = (((Class456) this).aClass462_5464.method7707(NamedFileReference.aClass523_411, ((Class456) this).aClass518_5453, ((Class456) this).anInt5460 * 643220577, 1844755981 * ((Class456) this).anInt5466, ((Class456) this).aClass518_5453.anIntArray5922, -193306578));
 			if (bool && ((Class456) this).aBool5463 && ((Class456) this).aClass518_5453.anIntArray5911 != null)
-				((Class456) this).aClass462_5467.method7707(Class40.aClass523_411, ((Class456) this).aClass518_5453, 643220577 * ((Class456) this).anInt5460, ((Class456) this).anInt5466 * 1844755981, ((Class456) this).aClass518_5453.anIntArray5911, -1697429264);
+				((Class456) this).aClass462_5467.method7707(NamedFileReference.aClass523_411, ((Class456) this).aClass518_5453, 643220577 * ((Class456) this).anInt5460, ((Class456) this).anInt5466 * 1844755981, ((Class456) this).aClass518_5453.anIntArray5911, -1697429264);
 			return bool;
 		}
 		return false;
@@ -211,7 +211,7 @@ public class Class456 {
 			((Class456) this).aClass462_5467.method7708(13720241);
 	}
 
-	public final void method7589(Class528 class528, int i) {
+	public final void method7589(MeshRasterizer class528, int i) {
 		if (null != ((Class456) this).aClass518_5453) {
 			if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1450710719)) {
 				class528.method11262((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542 * -104209121), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Class456) this).aClass462_5464).anInt5547 * -775231561), -706748429 * ((Class456) this).anInt5457, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i,
@@ -242,7 +242,7 @@ public class Class456 {
 					if (0 == (((Class456) this).aClass518_5453.anInt5907 * 554947543))
 						return;
 				} else
-					((Class456) this).aClass518_5453 = Class40.aClass523_411.method11205(i, (byte) -22);
+					((Class456) this).aClass518_5453 = NamedFileReference.aClass523_411.method11205(i, (byte) -22);
 				((Class456) this).anInt5459 = 0;
 				((Class456) this).anInt5458 = i_21_ * 333323387;
 				((Class456) this).anInt5461 = -1783646677 * i_22_;
@@ -326,7 +326,7 @@ public class Class456 {
 		method7571(i, 0, 0, false, 1590546828);
 	}
 
-	public static final void method7605(Class528 class528, Class456 class456, Class456 class456_28_) {
+	public static final void method7605(MeshRasterizer class528, Class456 class456, Class456 class456_28_) {
 		if (class456.method7562(1960893510) && class456_28_.method7562(1278290543)) {
 			Class518 class518 = ((Class456) class456).aClass518_5453;
 			Class518 class518_29_ = ((Class456) class456_28_).aClass518_5453;
@@ -388,7 +388,7 @@ public class Class456 {
 					if (0 == (((Class456) this).aClass518_5453.anInt5907 * 554947543))
 						return;
 				} else
-					((Class456) this).aClass518_5453 = Class40.aClass523_411.method11205(i, (byte) -97);
+					((Class456) this).aClass518_5453 = NamedFileReference.aClass523_411.method11205(i, (byte) -97);
 				((Class456) this).anInt5459 = 0;
 				((Class456) this).anInt5458 = i_37_ * 333323387;
 				((Class456) this).anInt5461 = -1783646677 * i_38_;
@@ -432,7 +432,7 @@ public class Class456 {
 		return ((Class456) this).anInt5458 * 1072784051;
 	}
 
-	public final void method7618(Class528 class528, int i) {
+	public final void method7618(MeshRasterizer class528, int i) {
 		if (null != ((Class456) this).aClass518_5453) {
 			if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1958824690)) {
 				class528.method11262((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542 * -104209121), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Class456) this).aClass462_5464).anInt5547 * -775231561), -706748429 * ((Class456) this).anInt5457, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i,
@@ -448,7 +448,7 @@ public class Class456 {
 		method7571(i, 0, 0, bool, -512925645);
 	}
 
-	public final void method7620(Class528 class528, int i) {
+	public final void method7620(MeshRasterizer class528, int i) {
 		if (null != ((Class456) this).aClass518_5453) {
 			if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1731645273)) {
 				class528.method11262((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542 * -104209121), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Class456) this).aClass462_5464).anInt5547 * -775231561), -706748429 * ((Class456) this).anInt5457, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i,
@@ -460,7 +460,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7621(Class528 class528, int i, int i_42_) {
+	public final void method7621(MeshRasterizer class528, int i, int i_42_) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1700559618)) {
 			class528.method11258((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (-104209121 * ((Class462) ((Class456) this).aClass462_5464).anInt5542), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (-775231561 * ((Class462) ((Class456) this).aClass462_5464).anInt5547), ((Class456) this).anInt5457 * -706748429, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i, i_42_,
 					((Class456) this).aClass518_5453.aBool5923, null);
@@ -470,7 +470,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7622(Class528 class528, int i, int i_43_) {
+	public final void method7622(MeshRasterizer class528, int i, int i_43_) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1469252242)) {
 			class528.method11258((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (-104209121 * ((Class462) ((Class456) this).aClass462_5464).anInt5542), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (-775231561 * ((Class462) ((Class456) this).aClass462_5464).anInt5547), ((Class456) this).anInt5457 * -706748429, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i, i_43_,
 					((Class456) this).aClass518_5453.aBool5923, null);
@@ -480,7 +480,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7623(Class528 class528, int i, int i_44_) {
+	public final void method7623(MeshRasterizer class528, int i, int i_44_) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1636305638)) {
 			class528.method11258((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (-104209121 * ((Class462) ((Class456) this).aClass462_5464).anInt5542), (((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5546), (-775231561 * ((Class462) ((Class456) this).aClass462_5464).anInt5547), ((Class456) this).anInt5457 * -706748429, (((Class456) this).aClass518_5453.anIntArray5912[((Class456) this).anInt5460 * 643220577]), i, i_44_,
 					((Class456) this).aClass518_5453.aBool5923, null);
@@ -490,7 +490,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7624(Class528 class528) {
+	public final void method7624(MeshRasterizer class528) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(2104150474)) {
 			class528.method11284((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542) * -104209121);
 			if (((Class456) this).aBool5463 && null != ((Class456) this).aClass518_5453.anIntArray5911 && ((Class462) ((Class456) this).aClass462_5467).aBool5544)
@@ -498,7 +498,7 @@ public class Class456 {
 		}
 	}
 
-	public final void method7625(Class528 class528) {
+	public final void method7625(MeshRasterizer class528) {
 		if (null != ((Class456) this).aClass518_5453.anIntArray5922 && method7562(1582887445)) {
 			class528.method11284((((Class462) ((Class456) this).aClass462_5464).aClass282_Sub50_Sub13_5545), (((Class462) ((Class456) this).aClass462_5464).anInt5542) * -104209121);
 			if (((Class456) this).aBool5463 && null != ((Class456) this).aClass518_5453.anIntArray5911 && ((Class462) ((Class456) this).aClass462_5467).aBool5544)
@@ -770,7 +770,7 @@ public class Class456 {
 	}
 
 	public static void method7637(Class523 class523) {
-		Class40.aClass523_411 = class523;
+		NamedFileReference.aClass523_411 = class523;
 	}
 
 	public final boolean method7638(int i) {
@@ -800,9 +800,9 @@ public class Class456 {
 
 	final boolean method7641() {
 		if (((Class456) this).aClass518_5453 != null) {
-			boolean bool = (((Class456) this).aClass462_5464.method7707(Class40.aClass523_411, ((Class456) this).aClass518_5453, ((Class456) this).anInt5460 * 643220577, 1844755981 * ((Class456) this).anInt5466, ((Class456) this).aClass518_5453.anIntArray5922, 126016061));
+			boolean bool = (((Class456) this).aClass462_5464.method7707(NamedFileReference.aClass523_411, ((Class456) this).aClass518_5453, ((Class456) this).anInt5460 * 643220577, 1844755981 * ((Class456) this).anInt5466, ((Class456) this).aClass518_5453.anIntArray5922, 126016061));
 			if (bool && ((Class456) this).aBool5463 && ((Class456) this).aClass518_5453.anIntArray5911 != null)
-				((Class456) this).aClass462_5467.method7707(Class40.aClass523_411, ((Class456) this).aClass518_5453, 643220577 * ((Class456) this).anInt5460, ((Class456) this).anInt5466 * 1844755981, ((Class456) this).aClass518_5453.anIntArray5911, -1726308342);
+				((Class456) this).aClass462_5467.method7707(NamedFileReference.aClass523_411, ((Class456) this).aClass518_5453, 643220577 * ((Class456) this).anInt5460, ((Class456) this).anInt5466 * 1844755981, ((Class456) this).aClass518_5453.anIntArray5911, -1726308342);
 			return bool;
 		}
 		return false;

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub25 extends Class282 {
+public class Class282_Sub25 extends Node {
 	int anInt7688;
 	int anInt7689;
 
@@ -11,7 +11,7 @@ public class Class282_Sub25 extends Class282 {
 		((Class282_Sub25) this).anInt7689 = i_0_ * -1464214979;
 	}
 
-	static void method12400(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, Class282_Sub50_Sub7 class282_sub50_sub7, Class8 class8, Class414 class414, int i_7_, int i_8_, int i_9_) {
+	static void method12400(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, Class282_Sub50_Sub7 class282_sub50_sub7, FontRenderer class8, Class414 class414, int i_7_, int i_8_, int i_9_) {
 		if (i > i_2_ && i < i_2_ + i_4_ && i_1_ > i_6_ - 397683159 * class414.anInt4978 - 1 && i_1_ < class414.anInt4979 * -1518951631 + i_6_ && ((Class282_Sub50_Sub7) class282_sub50_sub7).aBool9583)
 			i_7_ = i_8_;
 		int[] is = Class534_Sub1.method12815(class282_sub50_sub7, -1726186381);

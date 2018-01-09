@@ -4,7 +4,7 @@
  */
 import java.io.IOException;
 
-public class Class8_Sub3 extends Class8 {
+public class Class8_Sub3 extends FontRenderer {
 	byte[][] aByteArrayArray8967;
 	Class505_Sub3 aClass505_Sub3_8968;
 	int[] anIntArray8969;

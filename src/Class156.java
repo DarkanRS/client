@@ -4,7 +4,7 @@
 
 public class Class156 {
 	static boolean aBool1970;
-	static Class482 aClass482_1971;
+	static NodeCollection aClass482_1971;
 	static int anInt1972 = 0;
 
 	static synchronized void method2641() {
@@ -29,7 +29,7 @@ public class Class156 {
 
 	static {
 		aBool1970 = false;
-		aClass482_1971 = new Class482();
+		aClass482_1971 = new NodeCollection();
 	}
 
 	static synchronized void method2643(byte i) {
@@ -78,7 +78,7 @@ public class Class156 {
 			if (null == class282_sub47)
 				break;
 			((Interface40) class282_sub47.anObject8068).ma(true);
-			class282_sub47.method4991(-371378792);
+			class282_sub47.unlink(-371378792);
 		}
 	}
 
@@ -98,7 +98,7 @@ public class Class156 {
 			if (null == class282_sub47)
 				break;
 			((Interface40) class282_sub47.anObject8068).ma(true);
-			class282_sub47.method4991(-371378792);
+			class282_sub47.unlink(-371378792);
 		}
 	}
 

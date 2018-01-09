@@ -25,7 +25,7 @@ public class Class216 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.get(i_1_, (byte) 0);
 		if (class437.method7319(1764887280))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class330.aClass523_3868.method11205(i_0_, (byte) -22).method11129(i_1_, class437.aString5335, 803635154);
 		else

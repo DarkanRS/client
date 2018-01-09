@@ -4,10 +4,10 @@
  */
 import java.awt.Point;
 
-public class Class282 {
-	public Class282 aClass282_3378;
-	public long aLong3379;
-	public Class282 aClass282_3380;
+public class Node {
+	public Node aClass282_3378;
+	public long uid;
+	public Node aClass282_3380;
 
 	public void method4990() {
 		if (null != aClass282_3380) {
@@ -18,7 +18,7 @@ public class Class282 {
 		}
 	}
 
-	public void method4991(int i) {
+	public void unlink(int i) {
 		if (null != aClass282_3380) {
 			aClass282_3380.aClass282_3378 = aClass282_3378;
 			aClass282_3378.aClass282_3380 = aClass282_3380;

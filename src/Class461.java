@@ -49,18 +49,18 @@ public class Class461 {
 			Class446.aClass446_5415.method7435(new Class301("hw3d"), (byte) 11);
 			Class446.aClass446_5385.method7435(new Class301("jagtheora"), (byte) -30);
 			Class446.aClass446_5392.method7435(new Class298(Class488.aClass317_5758), (byte) 101);
-			Class446.aClass446_5390.method7435(new Class298(Class40.aClass317_412), (byte) 65);
+			Class446.aClass446_5390.method7435(new Class298(NamedFileReference.aClass317_412), (byte) 65);
 			Class446.aClass446_5394.method7435(new Class298(Class282_Sub39.aClass317_8005), (byte) -20);
 			Class446.aClass446_5395.method7435(new Class298(Class273.aClass317_3332), (byte) 17);
 			Class446.aClass446_5397.method7435(new Class298(Class236.aClass317_2915), (byte) -64);
 			Class446.aClass446_5393.method7435(new Class298(Class107.aClass317_1081), (byte) 7);
 			Class446.aClass446_5413.method7435(new Class298(Class383.aClass317_4665), (byte) 16);
 			Class446.aClass446_5399.method7435(new Class298(Class235.aClass317_2908), (byte) 16);
-			Class446.aClass446_5400.method7435(new Class298(Class322.aClass317_3749), (byte) 4);
+			Class446.aClass446_5400.method7435(new Class298(ReferenceTable.aClass317_3749), (byte) 4);
 			Class446.aClass446_5401.method7435(new Class298(Class222.aClass317_2766), (byte) -28);
 			Class446.aClass446_5402.method7435(new Class298(Class371.aClass317_4326), (byte) 9);
 			Class446.aClass446_5403.method7435(new Class298(Class329.aClass317_3861), (byte) -25);
-			Class446.aClass446_5404.method7435(new Class298(Class437.aClass317_5340), (byte) 75);
+			Class446.aClass446_5404.method7435(new Class298(AttributeDefault.aClass317_5340), (byte) 75);
 			Class446.aClass446_5405.method7435(new Class298(Class468_Sub7.aClass317_7886), (byte) 60);
 			Class446.aClass446_5410.method7435(new Class298(Class215.aClass317_2686), (byte) -44);
 			Class446.aClass446_5407.method7435(new Class383((Class250.aClass317_3093), "huffman"), (byte) -27);
@@ -118,10 +118,10 @@ public class Class461 {
 				Class20.aBool162 = ((Class20.anInt198 * 215004571 != -1 && (Class20.anInt169 * 2144330291 >= Class20.anInt198 * 215004571)) || (((Class20.aBool187 ? 26 : 22) + (997766473 * Class20.anInt178 * (2144330291 * Class20.anInt169))) > -969250379 * Class263.anInt3243));
 			Class20.aClass482_174.method8118(1351673894);
 			Class20.aClass482_175.method8118(-1093691233);
-			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8097((byte) 53)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8067(1807139429))) {
+			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 53)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1807139429))) {
 				int i_12_ = (-1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587));
 				if (i_12_ < 1000) {
-					class282_sub50_sub7.method4991(-371378792);
+					class282_sub50_sub7.unlink(-371378792);
 					if (59 == i_12_ || 2 == i_12_ || 8 == i_12_ || 17 == i_12_ || 15 == i_12_ || i_12_ == 16 || i_12_ == 58)
 						Class20.aClass482_175.method8059(class282_sub50_sub7, 1626236688);
 					else
@@ -145,7 +145,7 @@ public class Class461 {
 				Class1.aClass282_Sub50_Sub7_12 = null;
 				Class20.aClass282_Sub50_Sub7_168 = null;
 			}
-			Class282_Sub53 class282_sub53 = (Class282_Sub53) client.aClass482_7267.method8097((byte) 32);
+			Class282_Sub53 class282_sub53 = (Class282_Sub53) client.aClass482_7267.head((byte) 32);
 			int i_13_;
 			int i_14_;
 			if (null != class282_sub53) {
@@ -289,7 +289,7 @@ public class Class461 {
 				boolean bool = Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5878), class282_sub53, 2080768595);
 				boolean bool_36_ = Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5874), class282_sub53, 369566995);
 				boolean bool_37_ = Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5875), class282_sub53, 1851162471);
-				if ((bool || bool_36_) && ((-1718417173 * client.anInt7339 == 1 && 2144330291 * Class20.anInt169 > 2) || Class327_Sub1.method12562(-269769835)))
+				if ((bool || bool_36_) && ((-1718417173 * client.anInt7339 == 1 && 2144330291 * Class20.anInt169 > 2) || Js5GrabWorker.method12562(-269769835)))
 					bool_37_ = true;
 				if (bool_37_ && Class20.anInt169 * 2144330291 > 0) {
 					if (null == client.aClass118_7257 && 0 == client.anInt7184 * 676534483)

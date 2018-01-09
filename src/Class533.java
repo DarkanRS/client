@@ -3,7 +3,7 @@
  */
 
 public class Class533 {
-	static Class203 aClass203_7073;
+	static Js5CacheFile aClass203_7073;
 
 	static void method11381(long[] ls, int[] is, int i, int i_0_) {
 		if (i < i_0_) {

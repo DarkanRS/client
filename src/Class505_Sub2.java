@@ -15,7 +15,7 @@ import jaclib.memory.heap.NativeHeapBuffer;
 
 import sun.misc.Unsafe;
 
-public abstract class Class505_Sub2 extends Class505 {
+public abstract class Class505_Sub2 extends GraphicalRenderer {
 	protected int anInt8680;
 	boolean aBool8681;
 	Interface4 anInterface4_8682;
@@ -125,7 +125,7 @@ public abstract class Class505_Sub2 extends Class505 {
 	Class70 aClass70_8786;
 	Class66 aClass66_8787;
 	public Interface6 anInterface6_8788;
-	Class317 aClass317_8789;
+	Index aClass317_8789;
 	Class160_Sub3 aClass160_Sub3_8790;
 	Class160_Sub3 aClass160_Sub3_8791;
 	static final int anInt8792 = 2;
@@ -234,7 +234,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		return Class362.method6278(616047582).method222("jaclib", 879905383);
 	}
 
-	Class505_Sub2(Interface22 interface22, Class317 class317, int i, int i_2_) {
+	Class505_Sub2(Interface22 interface22, Index class317, int i, int i_2_) {
 		super(interface22);
 		((Class505_Sub2) this).anInt8696 = 4194304;
 		((Class505_Sub2) this).aClass473_8700 = new Class473();
@@ -444,7 +444,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		((Class505_Sub2) this).anInterface32_8834.method26();
 	}
 
-	public final Class160 method8668(int i, int i_10_, int i_11_, int i_12_, boolean bool) {
+	public final NativeSprite method8668(int i, int i_10_, int i_11_, int i_12_, boolean bool) {
 		Class160_Sub3 class160_sub3 = new Class160_Sub3(this, i_11_, i_12_, bool, false);
 		class160_sub3.method2750(0, 0, i_11_, i_12_, i, i_10_);
 		return class160_sub3;
@@ -483,7 +483,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Class282 class282 = ((Class505_Sub2) this).aClass473_8700.method7859(1582659351); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -126))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(1582659351); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -126))
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, 254704194);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -698,12 +698,12 @@ public abstract class Class505_Sub2 extends Class505 {
 		return anInt8702 + anInt8701 + anInt8761;
 	}
 
-	public final Class8 method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public final FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub4(this, class414, class91s, bool);
 	}
 
-	public final Class160 method8444(Class91 class91, boolean bool) {
-		Class160 class160;
+	public final NativeSprite method8444(Class91 class91, boolean bool) {
+		NativeSprite class160;
 		if (class91.anInt957 != 0 && class91.anInt954 != 0) {
 			int[] is = new int[class91.anInt957 * class91.anInt954];
 			int i = 0;
@@ -723,14 +723,14 @@ public abstract class Class505_Sub2 extends Class505 {
 					}
 				}
 			}
-			class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 228280722);
+			class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 228280722);
 		} else
-			class160 = method8549(new int[] { 0 }, 0, 1, 1, 1, -51231437);
+			class160 = createNativeSprite(new int[] { 0 }, 0, 1, 1, 1, -51231437);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
 
-	public final Class160 method8442(int[] is, int i, int i_40_, int i_41_, int i_42_, boolean bool) {
+	public final NativeSprite method8442(int[] is, int i, int i_40_, int i_41_, int i_42_, boolean bool) {
 		return new Class160_Sub3(this, i_41_, i_42_, is, i, i_40_);
 	}
 
@@ -746,7 +746,7 @@ public abstract class Class505_Sub2 extends Class505 {
 
 	abstract void method13914();
 
-	public final Class528 method8451(Class157 class157, int i, int i_45_, int i_46_, int i_47_) {
+	public final MeshRasterizer createMeshRasterizer(RSMesh class157, int i, int i_45_, int i_46_, int i_47_) {
 		return new Class528_Sub3(this, class157, i, i_46_, i_47_, i_45_);
 	}
 
@@ -895,7 +895,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Class282 class282 = ((Class505_Sub2) this).aClass473_8700.method7859(484146027); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -21))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(484146027); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -21))
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, 1160906359);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -1847,7 +1847,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Class282 class282 = ((Class505_Sub2) this).aClass473_8700.method7859(648505294); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -94))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(648505294); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -94))
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, -1983988311);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -1880,7 +1880,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Class282 class282 = ((Class505_Sub2) this).aClass473_8700.method7859(1197266143); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -117))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(1197266143); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -117))
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, 116257248);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -2310,7 +2310,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		class41.method885();
 	}
 
-	public final Class160 method8548(int[] is, int i, int i_333_, int i_334_, int i_335_, boolean bool) {
+	public final NativeSprite method8548(int[] is, int i, int i_333_, int i_334_, int i_335_, boolean bool) {
 		return new Class160_Sub3(this, i_334_, i_335_, is, i, i_333_);
 	}
 
@@ -2608,14 +2608,14 @@ public abstract class Class505_Sub2 extends Class505 {
 		}
 	}
 
-	public final Class160 method8543(int[] is, int i, int i_459_, int i_460_, int i_461_, boolean bool) {
+	public final NativeSprite method8543(int[] is, int i, int i_459_, int i_460_, int i_461_, boolean bool) {
 		return new Class160_Sub3(this, i_460_, i_461_, is, i, i_459_);
 	}
 
 	abstract void method14026();
 
-	public final Class160 method8612(Class91 class91, boolean bool) {
-		Class160 class160;
+	public final NativeSprite method8612(Class91 class91, boolean bool) {
+		NativeSprite class160;
 		if (class91.anInt957 != 0 && class91.anInt954 != 0) {
 			int[] is = new int[class91.anInt957 * class91.anInt954];
 			int i = 0;
@@ -2635,15 +2635,15 @@ public abstract class Class505_Sub2 extends Class505 {
 					}
 				}
 			}
-			class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 243468915);
+			class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 243468915);
 		} else
-			class160 = method8549(new int[] { 0 }, 0, 1, 1, 1, -1837569571);
+			class160 = createNativeSprite(new int[] { 0 }, 0, 1, 1, 1, -1837569571);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
 
-	public final Class160 method8518(Class91 class91, boolean bool) {
-		Class160 class160;
+	public final NativeSprite method8518(Class91 class91, boolean bool) {
+		NativeSprite class160;
 		if (class91.anInt957 != 0 && class91.anInt954 != 0) {
 			int[] is = new int[class91.anInt957 * class91.anInt954];
 			int i = 0;
@@ -2663,20 +2663,20 @@ public abstract class Class505_Sub2 extends Class505 {
 					}
 				}
 			}
-			class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 216802714);
+			class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 216802714);
 		} else
-			class160 = method8549(new int[] { 0 }, 0, 1, 1, 1, 1578248610);
+			class160 = createNativeSprite(new int[] { 0 }, 0, 1, 1, 1, 1578248610);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
 
-	public final Class160 method8604(int i, int i_474_, int i_475_, int i_476_, boolean bool) {
+	public final NativeSprite method8604(int i, int i_474_, int i_475_, int i_476_, boolean bool) {
 		Class160_Sub3 class160_sub3 = new Class160_Sub3(this, i_475_, i_476_, bool, false);
 		class160_sub3.method2750(0, 0, i_475_, i_476_, i, i_474_);
 		return class160_sub3;
 	}
 
-	public final Class160 method8552(int i, int i_477_, int i_478_, int i_479_, boolean bool) {
+	public final NativeSprite method8552(int i, int i_477_, int i_478_, int i_479_, boolean bool) {
 		Class160_Sub3 class160_sub3 = new Class160_Sub3(this, i_478_, i_479_, bool, false);
 		class160_sub3.method2750(0, 0, i_478_, i_479_, i, i_477_);
 		return class160_sub3;
@@ -2734,7 +2734,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		/* empty */
 	}
 
-	public final Class528 method8561(Class157 class157, int i, int i_490_, int i_491_, int i_492_) {
+	public final MeshRasterizer method8561(RSMesh class157, int i, int i_490_, int i_491_, int i_492_) {
 		return new Class528_Sub3(this, class157, i, i_491_, i_492_, i_490_);
 	}
 
@@ -2748,11 +2748,11 @@ public abstract class Class505_Sub2 extends Class505 {
 		method13918();
 	}
 
-	public final Class528 method8505(Class157 class157, int i, int i_494_, int i_495_, int i_496_) {
+	public final MeshRasterizer method8505(RSMesh class157, int i, int i_494_, int i_495_, int i_496_) {
 		return new Class528_Sub3(this, class157, i, i_495_, i_496_, i_494_);
 	}
 
-	public final Class528 method8564(Class157 class157, int i, int i_497_, int i_498_, int i_499_) {
+	public final MeshRasterizer method8564(RSMesh class157, int i, int i_497_, int i_498_, int i_499_) {
 		return new Class528_Sub3(this, class157, i, i_498_, i_499_, i_497_);
 	}
 
@@ -2807,7 +2807,7 @@ public abstract class Class505_Sub2 extends Class505 {
 			method13903();
 	}
 
-	public final Class160 method8461(int i, int i_520_, boolean bool, boolean bool_521_) {
+	public final NativeSprite method8461(int i, int i_520_, boolean bool, boolean bool_521_) {
 		return new Class160_Sub3(this, i, i_520_, bool, bool_521_);
 	}
 
@@ -2950,7 +2950,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		((Class505_Sub2) this).anInt8775 = 1 << ((Class505_Sub2) this).anInt8806;
 	}
 
-	public final Class8 method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public final FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub4(this, class414, class91s, bool);
 	}
 
@@ -2964,7 +2964,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		}
 	}
 
-	public final Class528 method8623(Class157 class157, int i, int i_535_, int i_536_, int i_537_) {
+	public final MeshRasterizer method8623(RSMesh class157, int i, int i_535_, int i_536_, int i_537_) {
 		return new Class528_Sub3(this, class157, i, i_536_, i_537_, i_535_);
 	}
 
@@ -3237,7 +3237,7 @@ public abstract class Class505_Sub2 extends Class505 {
 		}
 	}
 
-	public final Class8 method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public final FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub4(this, class414, class91s, bool);
 	}
 
@@ -4179,13 +4179,13 @@ public abstract class Class505_Sub2 extends Class505 {
 
 	abstract Interface6 method14145(Class150 class150, int i, int i_691_, boolean bool, float[] fs, int i_692_, int i_693_);
 
-	public final Class160 method8654(int i, int i_694_, boolean bool, boolean bool_695_) {
+	public final NativeSprite method8654(int i, int i_694_, boolean bool, boolean bool_695_) {
 		return new Class160_Sub3(this, i, i_694_, bool, bool_695_);
 	}
 
 	public abstract boolean method14146();
 
-	public final Class160 method8577(int i, int i_696_, boolean bool, boolean bool_697_) {
+	public final NativeSprite method8577(int i, int i_696_, boolean bool, boolean bool_697_) {
 		return new Class160_Sub3(this, i, i_696_, bool, bool_697_);
 	}
 

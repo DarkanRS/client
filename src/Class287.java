@@ -37,7 +37,7 @@ public class Class287 {
 	static final int anInt3434 = 13;
 	int anInt3435;
 
-	public Class287(Class505 class505, int i, RsByteBuffer class282_sub35, int i_0_) {
+	public Class287(GraphicalRenderer class505, int i, RsByteBuffer class282_sub35, int i_0_) {
 		if (null == Class468_Sub20.anIntArray7920)
 			Class8_Sub1.method13783(-1231486985);
 		anInt3419 = class282_sub35.readUnsignedByte() * -337736817;
@@ -70,7 +70,7 @@ public class Class287 {
 		method5050(class505, i_1_, i_3_, i_2_, i_4_, i_10_, 1680062514);
 	}
 
-	void method5050(Class505 class505, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_) {
+	void method5050(GraphicalRenderer class505, int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_) {
 		aClass282_Sub24_3425 = class505.method8593(i, i_12_, i_13_, i_14_, i_15_, 1.0F);
 	}
 

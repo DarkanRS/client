@@ -85,7 +85,7 @@ public class Class98 {
 						((Class268) class268).anInt3297 += ((Class268) class268).aClass343_3303.method6090() * 1909850437;
 					} else if (class268.method4793((byte) -41) && ((((Class268) class268).aClass282_Sub18_3294 == null) || ((((Class268) class268).aClass282_Sub26_Sub1_Sub1_3296) == null))) {
 						if (((Class268) class268).aClass282_Sub18_3294 == null)
-							((Class268) class268).aClass282_Sub18_3294 = Class282_Sub18.method12270((Class313.aClass317_3665), (1932438803 * (((Class268) class268).anInt3291)));
+							((Class268) class268).aClass282_Sub18_3294 = Class282_Sub18.method12270((Js5LocalRequester.aClass317_3665), (1932438803 * (((Class268) class268).anInt3291)));
 						if (((Class268) class268).aClass282_Sub18_3294 == null)
 							continue;
 						if ((((Class268) class268).aClass282_Sub26_Sub1_Sub1_3296) == null) {

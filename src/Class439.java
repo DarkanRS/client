@@ -97,9 +97,9 @@ public final class Class439 {
 			if (i_5_ == 0) {
 				/* empty */
 			}
-			class225 = Class203.method3354(i, i_3_, i_7_, i_8_, Class458.aClass458_5470, 0, 1608795477);
+			class225 = Js5CacheFile.method3354(i, i_3_, i_7_, i_8_, Class458.aClass458_5470, 0, 1608795477);
 		} else if (Class308.method5473(1109376893 * class458.anInt5481, 1861080465))
-			class225 = Class203.method3354(i, i_3_, 0, 0, class458, i_5_, 1608795477);
+			class225 = Js5CacheFile.method3354(i, i_3_, 0, 0, class458, i_5_, 1608795477);
 		else
 			class225 = Class148.method2551(i, i_3_, 0, 0, class458, i_5_, 960380494);
 		Class257.method4559(i, i_3_, true, class225, 2130368133);

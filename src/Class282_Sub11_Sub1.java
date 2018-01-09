@@ -84,7 +84,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	}
 
 	public static Class59 method15434(int i, byte i_2_) {
-		Class59 class59 = (Class59) Class59.aClass229_533.method3865((long) i);
+		Class59 class59 = (Class59) Class59.aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
 		byte[] is = Class219.aClass317_2710.getFile(0, i, -1383197542);
@@ -92,7 +92,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1621727040);
 		class59.method1146((byte) 1);
-		Class59.aClass229_533.method3856(class59, (long) i);
+		Class59.aClass229_533.put(class59, (long) i);
 		return class59;
 	}
 

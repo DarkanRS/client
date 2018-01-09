@@ -10,7 +10,7 @@ public class a implements Interface40 {
 	ja aja50;
 	Class384 aClass384_51;
 
-	void method306(Class528 class528, Class528 class528_0_, int i, int i_1_, int i_2_, boolean bool) {
+	void method306(MeshRasterizer class528, MeshRasterizer class528_0_, int i, int i_1_, int i_2_, boolean bool) {
 		P(((a) this).nativeid, ((h) (h) class528).nativeid, ((h) (h) class528_0_).nativeid, i, i_1_, i_2_, bool);
 	}
 
@@ -19,14 +19,14 @@ public class a implements Interface40 {
 		method310();
 	}
 
-	native void ha(long l, Class505 class505, int i, int i_3_);
+	native void ha(long l, GraphicalRenderer class505, int i, int i_3_);
 
 	public void finalize() {
 		if (((a) this).nativeid != 0L)
 			Class156.method2642(this, (byte) 27);
 	}
 
-	boolean method308(Class528 class528, int i, int i_4_, Class294 class294, boolean bool) {
+	boolean method308(MeshRasterizer class528, int i, int i_4_, Class294 class294, boolean bool) {
 		((a) this).aClass384_51.method6522(class294);
 		return ya(((a) this).nativeid, ((h) (h) class528).nativeid, i, i_4_, ((a) this).aClass384_51.aFloatArray4667, bool);
 	}
@@ -37,11 +37,11 @@ public class a implements Interface40 {
 
 	native void R(long l, boolean bool);
 
-	native void b(long l, Class505 class505, int[] is, int[] is_5_, int[] is_6_, short[] is_7_, int i);
+	native void b(long l, GraphicalRenderer class505, int[] is, int[] is_5_, int[] is_6_, short[] is_7_, int i);
 
-	native void ac(long l, Class505 class505, int[] is, int[] is_8_, int[] is_9_, short[] is_10_, int i);
+	native void ac(long l, GraphicalRenderer class505, int[] is, int[] is_8_, int[] is_9_, short[] is_10_, int i);
 
-	void method309(Class505 class505, int[] is, int[] is_11_, int[] is_12_, short[] is_13_, int i) {
+	void method309(GraphicalRenderer class505, int[] is, int[] is_11_, int[] is_12_, short[] is_13_, int i) {
 		b(((a) this).nativeid, class505, is, is_11_, is_12_, is_13_, i);
 	}
 
@@ -49,29 +49,29 @@ public class a implements Interface40 {
 		JA(((a) this).nativeid);
 	}
 
-	void method311(Class505 class505, int i, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_) {
+	void method311(GraphicalRenderer class505, int i, int i_14_, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_) {
 		K(((a) this).nativeid, class505, i, i_14_, i_15_, i_16_, i_17_, i_18_, i_19_);
 	}
 
-	boolean method312(Class528 class528, int i, int i_20_, Class294 class294, boolean bool) {
+	boolean method312(MeshRasterizer class528, int i, int i_20_, Class294 class294, boolean bool) {
 		((a) this).aClass384_51.method6522(class294);
 		return ya(((a) this).nativeid, ((h) (h) class528).nativeid, i, i_20_, ((a) this).aClass384_51.aFloatArray4667, bool);
 	}
 
-	void method313(Class528 class528, Class528 class528_21_, int i, int i_22_, int i_23_, boolean bool) {
+	void method313(MeshRasterizer class528, MeshRasterizer class528_21_, int i, int i_22_, int i_23_, boolean bool) {
 		P(((a) this).nativeid, ((h) (h) class528).nativeid, ((h) (h) class528_21_).nativeid, i, i_22_, i_23_, bool);
 	}
 
 	native void aq(long l, long l_24_, int[] is, float[] fs);
 
-	void method314(Class528 class528, Class294 class294, int[] is, int i) {
+	void method314(MeshRasterizer class528, Class294 class294, int[] is, int i) {
 		((a) this).aClass384_51.method6522(class294);
 		wa(((a) this).nativeid, ((h) (h) class528).nativeid, ((a) this).aClass384_51.aFloatArray4667, is, i);
 	}
 
 	native void wa(long l, long l_25_, float[] fs, int[] is, int i);
 
-	boolean method315(Class528 class528, int i, int i_26_, Class294 class294, boolean bool) {
+	boolean method315(MeshRasterizer class528, int i, int i_26_, Class294 class294, boolean bool) {
 		((a) this).aClass384_51.method6522(class294);
 		return ya(((a) this).nativeid, ((h) (h) class528).nativeid, i, i_26_, ((a) this).aClass384_51.aFloatArray4667, bool);
 	}
@@ -112,7 +112,7 @@ public class a implements Interface40 {
 		R(((a) this).nativeid, bool);
 	}
 
-	void method321(Class528 class528, int[] is, Class294 class294) {
+	void method321(MeshRasterizer class528, int[] is, Class294 class294) {
 		((a) this).aClass384_51.method6522(class294);
 		J(((a) this).nativeid, ((h) (h) class528).nativeid, is, ((a) this).aClass384_51.aFloatArray4667);
 	}
@@ -122,7 +122,7 @@ public class a implements Interface40 {
 		method310();
 	}
 
-	native void s(long l, Class505 class505, int i, int i_47_);
+	native void s(long l, GraphicalRenderer class505, int i, int i_47_);
 
 	native void i(long l, long l_48_, int i, int i_49_, int i_50_, int i_51_, int i_52_, int i_53_, int i_54_, boolean[][] bools);
 
@@ -138,7 +138,7 @@ public class a implements Interface40 {
 
 	native void d(long l);
 
-	Class528 method325(h var_h, byte i, int i_57_, boolean bool) {
+	MeshRasterizer method325(h var_h, byte i, int i_57_, boolean bool) {
 		boolean bool_58_ = false;
 		h var_h_59_;
 		h var_h_60_;
@@ -154,33 +154,33 @@ public class a implements Interface40 {
 		return var_h_59_;
 	}
 
-	void method326(Class505 class505, int[] is, int[] is_61_, int[] is_62_, short[] is_63_, int i) {
+	void method326(GraphicalRenderer class505, int[] is, int[] is_61_, int[] is_62_, short[] is_63_, int i) {
 		b(((a) this).nativeid, class505, is, is_61_, is_62_, is_63_, i);
 	}
 
-	native void au(long l, Class505 class505, int[] is, int[] is_64_, int[] is_65_, short[] is_66_, int i);
+	native void au(long l, GraphicalRenderer class505, int[] is, int[] is_64_, int[] is_65_, short[] is_66_, int i);
 
-	native void ay(long l, Class505 class505, int i, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_, int i_72_);
+	native void ay(long l, GraphicalRenderer class505, int i, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_, int i_72_);
 
-	native void at(long l, Class505 class505, int[] is, int[] is_73_, int[] is_74_, short[] is_75_, int i);
+	native void at(long l, GraphicalRenderer class505, int[] is, int[] is_73_, int[] is_74_, short[] is_75_, int i);
 
-	void method327(Class505 class505, int i, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
+	void method327(GraphicalRenderer class505, int i, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
 		K(((a) this).nativeid, class505, i, i_76_, i_77_, i_78_, i_79_, i_80_, i_81_);
 	}
 
-	boolean method328(Class528 class528, int i, int i_82_, Class294 class294, boolean bool) {
+	boolean method328(MeshRasterizer class528, int i, int i_82_, Class294 class294, boolean bool) {
 		((a) this).aClass384_51.method6522(class294);
 		return ya(((a) this).nativeid, ((h) (h) class528).nativeid, i, i_82_, ((a) this).aClass384_51.aFloatArray4667, bool);
 	}
 
-	native void K(long l, Class505 class505, int i, int i_83_, int i_84_, int i_85_, int i_86_, int i_87_, int i_88_);
+	native void K(long l, GraphicalRenderer class505, int i, int i_83_, int i_84_, int i_85_, int i_86_, int i_87_, int i_88_);
 
 	void method329() {
 		((a) this).aRunnable48 = Thread.currentThread();
 		method310();
 	}
 
-	void method330(Class528 class528, Class528 class528_89_, int i, int i_90_, int i_91_, boolean bool) {
+	void method330(MeshRasterizer class528, MeshRasterizer class528_89_, int i, int i_90_, int i_91_, boolean bool) {
 		P(((a) this).nativeid, ((h) (h) class528).nativeid, ((h) (h) class528_89_).nativeid, i, i_90_, i_91_, bool);
 	}
 
@@ -188,27 +188,27 @@ public class a implements Interface40 {
 
 	native void az(long l, long l_96_, long l_97_, int i, int i_98_, int i_99_, boolean bool);
 
-	void method331(Class528 class528, int[] is, Class294 class294) {
+	void method331(MeshRasterizer class528, int[] is, Class294 class294) {
 		((a) this).aClass384_51.method6522(class294);
 		J(((a) this).nativeid, ((h) (h) class528).nativeid, is, ((a) this).aClass384_51.aFloatArray4667);
 	}
 
-	void method332(Class528 class528, Class294 class294, int[] is, int i) {
+	void method332(MeshRasterizer class528, Class294 class294, int[] is, int i) {
 		((a) this).aClass384_51.method6522(class294);
 		wa(((a) this).nativeid, ((h) (h) class528).nativeid, ((a) this).aClass384_51.aFloatArray4667, is, i);
 	}
 
-	void method333(Class528 class528, Class294 class294, int[] is, int i) {
+	void method333(MeshRasterizer class528, Class294 class294, int[] is, int i) {
 		((a) this).aClass384_51.method6522(class294);
 		wa(((a) this).nativeid, ((h) (h) class528).nativeid, ((a) this).aClass384_51.aFloatArray4667, is, i);
 	}
 
-	void method334(Class528 class528, Class294 class294, int[] is, int i) {
+	void method334(MeshRasterizer class528, Class294 class294, int[] is, int i) {
 		((a) this).aClass384_51.method6522(class294);
 		wa(((a) this).nativeid, ((h) (h) class528).nativeid, ((a) this).aClass384_51.aFloatArray4667, is, i);
 	}
 
-	boolean method335(Class528 class528, int i, int i_100_, Class294 class294, boolean bool) {
+	boolean method335(MeshRasterizer class528, int i, int i_100_, Class294 class294, boolean bool) {
 		((a) this).aClass384_51.method6522(class294);
 		return ya(((a) this).nativeid, ((h) (h) class528).nativeid, i, i_100_, ((a) this).aClass384_51.aFloatArray4667, bool);
 	}
@@ -219,20 +219,20 @@ public class a implements Interface40 {
 
 	native void P(long l, long l_103_, long l_104_, int i, int i_105_, int i_106_, boolean bool);
 
-	void method336(Class505 class505, int i, int i_107_, int i_108_, int i_109_, int i_110_, int i_111_, int i_112_) {
+	void method336(GraphicalRenderer class505, int i, int i_107_, int i_108_, int i_109_, int i_110_, int i_111_, int i_112_) {
 		K(((a) this).nativeid, class505, i, i_107_, i_108_, i_109_, i_110_, i_111_, i_112_);
 	}
 
-	native void k(long l, Class505 class505, int i, int i_113_);
+	native void k(long l, GraphicalRenderer class505, int i, int i_113_);
 
 	native void JA(long l);
 
-	void method337(Class528 class528, int[] is, Class294 class294) {
+	void method337(MeshRasterizer class528, int[] is, Class294 class294) {
 		((a) this).aClass384_51.method6522(class294);
 		J(((a) this).nativeid, ((h) (h) class528).nativeid, is, ((a) this).aClass384_51.aFloatArray4667);
 	}
 
-	void method338(Class528 class528, int[] is, Class294 class294) {
+	void method338(MeshRasterizer class528, int[] is, Class294 class294) {
 		((a) this).aClass384_51.method6522(class294);
 		J(((a) this).nativeid, ((h) (h) class528).nativeid, is, ((a) this).aClass384_51.aFloatArray4667);
 	}
@@ -268,7 +268,7 @@ public class a implements Interface40 {
 		v(((a) this).nativeid, ((i) (i) class390).nativeid, i, i_119_);
 	}
 
-	void method343(Class528 class528, Class294 class294, int[] is, int i) {
+	void method343(MeshRasterizer class528, Class294 class294, int[] is, int i) {
 		((a) this).aClass384_51.method6522(class294);
 		wa(((a) this).nativeid, ((h) (h) class528).nativeid, ((a) this).aClass384_51.aFloatArray4667, is, i);
 	}
@@ -279,5 +279,5 @@ public class a implements Interface40 {
 
 	native void bm(long l, long l_126_, int i, int i_127_, int i_128_, int i_129_, int i_130_, int i_131_, int i_132_, boolean[][] bools);
 
-	native void u(long l, Class505 class505, int i, int i_133_);
+	native void u(long l, GraphicalRenderer class505, int i, int i_133_);
 }

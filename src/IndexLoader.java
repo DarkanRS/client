@@ -2,5 +2,5 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public interface Interface20 {
+public interface IndexLoader {
 }

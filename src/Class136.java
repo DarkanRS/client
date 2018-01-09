@@ -50,13 +50,13 @@ public class Class136 {
 				((Class136) this).aClass137_Sub1Array1634[i] = new Class137_Sub1(class505_sub1, 3553, Class150.aClass150_1952, Class76.aClass76_751, 128, 128, true, is, Class150.aClass150_1952, false);
 			}
 		} else {
-			byte[] is = Class346.method6154(anObject1637, false, (byte) 1);
+			byte[] is = Class346.toByteArray(anObject1637, false, (byte) 1);
 			((Class136) this).aClass137_Sub4_1633 = new Class137_Sub4(class505_sub1, Class150.aClass150_1952, Class76.aClass76_751, 128, 128, 16, is, Class150.aClass150_1952);
-			is = Class346.method6154(anObject1627, false, (byte) 1);
+			is = Class346.toByteArray(anObject1627, false, (byte) 1);
 			((Class136) this).aClass137_Sub4_1636 = new Class137_Sub4(class505_sub1, Class150.aClass150_1952, Class76.aClass76_751, 128, 128, 16, is, Class150.aClass150_1952);
 			Class164 class164 = ((Class505_Sub1) class505_sub1).aClass164_8363;
 			if (class164.method2847()) {
-				is = Class346.method6154(anObject1628, false, (byte) 1);
+				is = Class346.toByteArray(anObject1628, false, (byte) 1);
 				((Class136) this).aClass137_Sub4_1638 = new Class137_Sub4(class505_sub1, Class150.aClass150_1949, Class76.aClass76_751, 128, 128, 16);
 				Class137_Sub4 class137_sub4 = new Class137_Sub4(class505_sub1, Class150.aClass150_1948, Class76.aClass76_751, 128, 128, 16, is, Class150.aClass150_1948);
 				if (!class164.method2848(((Class136) this).aClass137_Sub4_1638, class137_sub4, 2.0F)) {

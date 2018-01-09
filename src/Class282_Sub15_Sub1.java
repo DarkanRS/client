@@ -6,7 +6,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	int anInt9565;
 	static final int anInt9566 = 100;
 	int anInt9567;
-	Class482 aClass482_9568 = new Class482();
+	NodeCollection aClass482_9568 = new NodeCollection();
 	int anInt9569 = 0;
 	int anInt9570;
 	boolean aBool9571;
@@ -20,14 +20,14 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	synchronized Class282_Sub39 method14809() {
-		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 53);
+		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 53);
 	}
 
 	synchronized void method12230(int[] is, int i, int i_0_) {
 		if (!((Class282_Sub15_Sub1) this).aBool9574) {
 			if (method14812(1416311209) == null) {
 				if (((Class282_Sub15_Sub1) this).aBool9571) {
-					method4991(-371378792);
+					unlink(-371378792);
 					aClass321_9573.method5744((byte) 56);
 				}
 			} else {
@@ -73,13 +73,13 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	synchronized Class282_Sub39 method14812(int i) {
-		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 60);
+		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 60);
 	}
 
 	synchronized void method14813(int i) {
 		Class282_Sub39 class282_sub39 = method14812(1416311209);
 		if (null != class282_sub39) {
-			class282_sub39.method4991(-371378792);
+			class282_sub39.unlink(-371378792);
 			((Class282_Sub15_Sub1) this).anInt9570 = 0;
 			((Class282_Sub15_Sub1) this).anInt9569 -= -458434707;
 			aClass321_9573.method5740(Long.valueOf(class282_sub39.method13294(108092461)), class282_sub39, -1742340748);
@@ -128,7 +128,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 				Class282_Sub39 class282_sub39 = method14812(1416311209);
 				if (class282_sub39 == null) {
 					if (((Class282_Sub15_Sub1) this).aBool9571) {
-						method4991(-371378792);
+						unlink(-371378792);
 						aClass321_9573.method5744((byte) 21);
 					}
 					break;
@@ -147,7 +147,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		if (!((Class282_Sub15_Sub1) this).aBool9574) {
 			if (method14812(1416311209) == null) {
 				if (((Class282_Sub15_Sub1) this).aBool9571) {
-					method4991(-371378792);
+					unlink(-371378792);
 					aClass321_9573.method5744((byte) 102);
 				}
 			} else {
@@ -197,8 +197,8 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		return null;
 	}
 
-	static Class486[] method14817(int i) {
-		return (new Class486[] { Class486.aClass486_5745, Class486.aClass486_5743, Class486.aClass486_5750, Class486.aClass486_5747, Class486.aClass486_5744 });
+	static Game[] method14817(int i) {
+		return (new Game[] { Game.aClass486_5745, Game.aClass486_5743, Game.aClass486_5750, Game.aClass486_5747, Game.rs });
 	}
 
 	int method12224() {
@@ -217,7 +217,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		if (!((Class282_Sub15_Sub1) this).aBool9574) {
 			if (method14812(1416311209) == null) {
 				if (((Class282_Sub15_Sub1) this).aBool9571) {
-					method4991(-371378792);
+					unlink(-371378792);
 					aClass321_9573.method5744((byte) 18);
 				}
 			} else {
@@ -251,7 +251,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		if (!((Class282_Sub15_Sub1) this).aBool9574) {
 			if (method14812(1416311209) == null) {
 				if (((Class282_Sub15_Sub1) this).aBool9571) {
-					method4991(-371378792);
+					unlink(-371378792);
 					aClass321_9573.method5744((byte) 11);
 				}
 			} else {
@@ -284,7 +284,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized double method14819(int i) {
 		if (((Class282_Sub15_Sub1) this).anInt9569 * -1438659995 < 1)
 			return -1.0;
-		Class282_Sub39 class282_sub39 = (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 95);
+		Class282_Sub39 class282_sub39 = (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 95);
 		if (null == class282_sub39)
 			return -1.0;
 		return (((Class282_Sub39) class282_sub39).aDouble8004 - (double) ((float) (((Class282_Sub39) class282_sub39).aShortArrayArray8003[0]).length / (float) Class253.anInt3129));
@@ -301,7 +301,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 				Class282_Sub39 class282_sub39 = method14812(1416311209);
 				if (class282_sub39 == null) {
 					if (((Class282_Sub15_Sub1) this).aBool9571) {
-						method4991(-371378792);
+						unlink(-371378792);
 						aClass321_9573.method5744((byte) 96);
 					}
 					break;
@@ -330,7 +330,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	synchronized Class282_Sub39 method14823() {
-		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 40);
+		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 40);
 	}
 
 	Class282_Sub15 method12239() {
@@ -338,11 +338,11 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	synchronized Class282_Sub39 method14824() {
-		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 49);
+		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 49);
 	}
 
 	synchronized Class282_Sub39 method14825() {
-		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 36);
+		return (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 36);
 	}
 
 	synchronized void method12243(int i) {
@@ -351,7 +351,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 				Class282_Sub39 class282_sub39 = method14812(1416311209);
 				if (class282_sub39 == null) {
 					if (((Class282_Sub15_Sub1) this).aBool9571) {
-						method4991(-371378792);
+						unlink(-371378792);
 						aClass321_9573.method5744((byte) 53);
 					}
 					break;
@@ -433,11 +433,11 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 		int i_22_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		boolean bool = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) == 1);
 		if (null != Class291_Sub1.aClass465_8025) {
-			Class282 class282 = Class291_Sub1.aClass465_8025.method7754((long) i_22_);
+			Node class282 = Class291_Sub1.aClass465_8025.method7754((long) i_22_);
 			if (class282 != null && !bool)
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			else if (class282 == null && bool) {
-				class282 = new Class282();
+				class282 = new Node();
 				Class291_Sub1.aClass465_8025.method7765(class282, (long) i_22_);
 			}
 		}
@@ -446,7 +446,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized double method14837() {
 		if (((Class282_Sub15_Sub1) this).anInt9569 * -1438659995 < 1)
 			return -1.0;
-		Class282_Sub39 class282_sub39 = (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.method8097((byte) 82);
+		Class282_Sub39 class282_sub39 = (Class282_Sub39) ((Class282_Sub15_Sub1) this).aClass482_9568.head((byte) 82);
 		if (null == class282_sub39)
 			return -1.0;
 		return (((Class282_Sub39) class282_sub39).aDouble8004 - (double) ((float) (((Class282_Sub39) class282_sub39).aShortArrayArray8003[0]).length / (float) Class253.anInt3129));

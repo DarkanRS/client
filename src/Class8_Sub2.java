@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public class Class8_Sub2 extends Class8 {
+public class Class8_Sub2 extends FontRenderer {
 	int[] anIntArray8886;
 	byte[][] aByteArrayArray8887;
 	int[] anIntArray8888;
@@ -461,7 +461,7 @@ public class Class8_Sub2 extends Class8 {
 	}
 
 	public static void method14264(RsBitsBuffer class282_sub35_sub2, int i) {
-		Class282_Sub42 class282_sub42 = (Class282_Sub42) Class435.aClass482_5332.method8097((byte) 121);
+		Class282_Sub42 class282_sub42 = (Class282_Sub42) Class435.aClass482_5332.head((byte) 121);
 		if (class282_sub42 != null) {
 			int i_178_ = class282_sub35_sub2.index * -1990677291;
 			class282_sub35_sub2.writeInt(1935007287 * (((Class282_Sub42) class282_sub42).anInt8038));
@@ -539,7 +539,7 @@ public class Class8_Sub2 extends Class8 {
 				}
 			}
 			class282_sub35_sub2.method13104(i_178_, -419087977);
-			class282_sub42.method4991(-371378792);
+			class282_sub42.unlink(-371378792);
 		}
 	}
 }

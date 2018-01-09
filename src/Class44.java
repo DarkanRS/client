@@ -15,27 +15,27 @@ public class Class44 implements Interface46 {
 	static int anInt430;
 	static int anInt431;
 
-	public Class157 method895(int i) {
-		Class157[] class157s = new Class157[5];
+	public RSMesh method895(int i) {
+		RSMesh[] class157s = new RSMesh[5];
 		int i_0_ = 0;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_1_ = 0; i_1_ < 5; i_1_++) {
 				if (((Class44) this).anIntArray421[i_1_] != -1)
-					class157s[i_0_++] = Class157.method2689((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_1_]), 0);
+					class157s[i_0_++] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_1_]), 0);
 			}
 		}
 		for (int i_2_ = 0; i_2_ < 5; i_2_++) {
-			if (null != class157s[i_2_] && class157s[i_2_].anInt1986 < 13)
-				class157s[i_2_].method2679(2);
+			if (null != class157s[i_2_] && class157s[i_2_].zoom < 13)
+				class157s[i_2_].upscale(2);
 		}
-		Class157 class157 = new Class157(class157s, i_0_);
+		RSMesh class157 = new RSMesh(class157s, i_0_);
 		if (((Class44) this).aShortArray423 != null) {
 			for (int i_3_ = 0; i_3_ < ((Class44) this).aShortArray423.length; i_3_++)
-				class157.method2668(((Class44) this).aShortArray423[i_3_], ((Class44) this).aShortArray424[i_3_]);
+				class157.recolor(((Class44) this).aShortArray423[i_3_], ((Class44) this).aShortArray424[i_3_]);
 		}
 		if (((Class44) this).aShortArray425 != null) {
 			for (int i_4_ = 0; i_4_ < ((Class44) this).aShortArray425.length; i_4_++)
-				class157.method2669(((Class44) this).aShortArray425[i_4_], ((Class44) this).aShortArray426[i_4_]);
+				class157.retexture(((Class44) this).aShortArray425[i_4_], ((Class44) this).aShortArray426[i_4_]);
 		}
 		return class157;
 	}
@@ -44,7 +44,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < 5; i++) {
-				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray421[i], 0, 16711935)))
+				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i], 0, 16711935)))
 					bool = false;
 			}
 		}
@@ -87,39 +87,39 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_12_ = 0; i_12_ < ((Class44) this).anIntArray427.length; i_12_++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray427[i_12_], 0, 16711935))
+				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i_12_], 0, 16711935))
 					bool = false;
 			}
 		}
 		return bool;
 	}
 
-	public Class157 method899(int i) {
+	public RSMesh method899(int i) {
 		if (null == ((Class44) this).anIntArray427)
 			return null;
-		Class157[] class157s = new Class157[((Class44) this).anIntArray427.length];
+		RSMesh[] class157s = new RSMesh[((Class44) this).anIntArray427.length];
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_13_ = 0; i_13_ < ((Class44) this).anIntArray427.length; i_13_++)
-				class157s[i_13_] = Class157.method2689((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray427[i_13_]), 0);
+				class157s[i_13_] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray427[i_13_]), 0);
 		}
 		for (int i_14_ = 0; i_14_ < ((Class44) this).anIntArray427.length; i_14_++) {
-			if (class157s[i_14_].anInt1986 < 13)
-				class157s[i_14_].method2679(2);
+			if (class157s[i_14_].zoom < 13)
+				class157s[i_14_].upscale(2);
 		}
-		Class157 class157;
+		RSMesh class157;
 		if (class157s.length == 1)
 			class157 = class157s[0];
 		else
-			class157 = new Class157(class157s, class157s.length);
+			class157 = new RSMesh(class157s, class157s.length);
 		if (null == class157)
 			return null;
 		if (null != ((Class44) this).aShortArray423) {
 			for (int i_15_ = 0; i_15_ < ((Class44) this).aShortArray423.length; i_15_++)
-				class157.method2668(((Class44) this).aShortArray423[i_15_], ((Class44) this).aShortArray424[i_15_]);
+				class157.recolor(((Class44) this).aShortArray423[i_15_], ((Class44) this).aShortArray424[i_15_]);
 		}
 		if (((Class44) this).aShortArray425 != null) {
 			for (int i_16_ = 0; i_16_ < ((Class44) this).aShortArray425.length; i_16_++)
-				class157.method2669(((Class44) this).aShortArray425[i_16_], ((Class44) this).aShortArray426[i_16_]);
+				class157.retexture(((Class44) this).aShortArray425[i_16_], ((Class44) this).aShortArray426[i_16_]);
 		}
 		return class157;
 	}
@@ -128,34 +128,34 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_17_ = 0; i_17_ < 5; i_17_++) {
-				if (((Class44) this).anIntArray421[i_17_] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray421[i_17_], 0, 16711935)))
+				if (((Class44) this).anIntArray421[i_17_] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i_17_], 0, 16711935)))
 					bool = false;
 			}
 		}
 		return bool;
 	}
 
-	public Class157 method901() {
-		Class157[] class157s = new Class157[5];
+	public RSMesh method901() {
+		RSMesh[] class157s = new RSMesh[5];
 		int i = 0;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_18_ = 0; i_18_ < 5; i_18_++) {
 				if (((Class44) this).anIntArray421[i_18_] != -1)
-					class157s[i++] = Class157.method2689((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_18_]), 0);
+					class157s[i++] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_18_]), 0);
 			}
 		}
 		for (int i_19_ = 0; i_19_ < 5; i_19_++) {
-			if (null != class157s[i_19_] && class157s[i_19_].anInt1986 < 13)
-				class157s[i_19_].method2679(2);
+			if (null != class157s[i_19_] && class157s[i_19_].zoom < 13)
+				class157s[i_19_].upscale(2);
 		}
-		Class157 class157 = new Class157(class157s, i);
+		RSMesh class157 = new RSMesh(class157s, i);
 		if (((Class44) this).aShortArray423 != null) {
 			for (int i_20_ = 0; i_20_ < ((Class44) this).aShortArray423.length; i_20_++)
-				class157.method2668(((Class44) this).aShortArray423[i_20_], ((Class44) this).aShortArray424[i_20_]);
+				class157.recolor(((Class44) this).aShortArray423[i_20_], ((Class44) this).aShortArray424[i_20_]);
 		}
 		if (((Class44) this).aShortArray425 != null) {
 			for (int i_21_ = 0; i_21_ < ((Class44) this).aShortArray425.length; i_21_++)
-				class157.method2669(((Class44) this).aShortArray425[i_21_], ((Class44) this).aShortArray426[i_21_]);
+				class157.retexture(((Class44) this).aShortArray425[i_21_], ((Class44) this).aShortArray426[i_21_]);
 		}
 		return class157;
 	}
@@ -173,27 +173,27 @@ public class Class44 implements Interface46 {
 		}
 	}
 
-	public Class157 method903() {
-		Class157[] class157s = new Class157[5];
+	public RSMesh method903() {
+		RSMesh[] class157s = new RSMesh[5];
 		int i = 0;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_22_ = 0; i_22_ < 5; i_22_++) {
 				if (((Class44) this).anIntArray421[i_22_] != -1)
-					class157s[i++] = Class157.method2689((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_22_]), 0);
+					class157s[i++] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_22_]), 0);
 			}
 		}
 		for (int i_23_ = 0; i_23_ < 5; i_23_++) {
-			if (null != class157s[i_23_] && class157s[i_23_].anInt1986 < 13)
-				class157s[i_23_].method2679(2);
+			if (null != class157s[i_23_] && class157s[i_23_].zoom < 13)
+				class157s[i_23_].upscale(2);
 		}
-		Class157 class157 = new Class157(class157s, i);
+		RSMesh class157 = new RSMesh(class157s, i);
 		if (((Class44) this).aShortArray423 != null) {
 			for (int i_24_ = 0; i_24_ < ((Class44) this).aShortArray423.length; i_24_++)
-				class157.method2668(((Class44) this).aShortArray423[i_24_], ((Class44) this).aShortArray424[i_24_]);
+				class157.recolor(((Class44) this).aShortArray423[i_24_], ((Class44) this).aShortArray424[i_24_]);
 		}
 		if (((Class44) this).aShortArray425 != null) {
 			for (int i_25_ = 0; i_25_ < ((Class44) this).aShortArray425.length; i_25_++)
-				class157.method2669(((Class44) this).aShortArray425[i_25_], ((Class44) this).aShortArray426[i_25_]);
+				class157.retexture(((Class44) this).aShortArray425[i_25_], ((Class44) this).aShortArray426[i_25_]);
 		}
 		return class157;
 	}
@@ -204,7 +204,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < ((Class44) this).anIntArray427.length; i++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray427[i], 0, 16711935))
+				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i], 0, 16711935))
 					bool = false;
 			}
 		}
@@ -241,32 +241,32 @@ public class Class44 implements Interface46 {
 		}
 	}
 
-	public Class157 method906() {
+	public RSMesh method906() {
 		if (null == ((Class44) this).anIntArray427)
 			return null;
-		Class157[] class157s = new Class157[((Class44) this).anIntArray427.length];
+		RSMesh[] class157s = new RSMesh[((Class44) this).anIntArray427.length];
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < ((Class44) this).anIntArray427.length; i++)
-				class157s[i] = Class157.method2689((((Class31) ((Class44) this).aClass31_429).aClass317_359), ((Class44) this).anIntArray427[i], 0);
+				class157s[i] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), ((Class44) this).anIntArray427[i], 0);
 		}
 		for (int i = 0; i < ((Class44) this).anIntArray427.length; i++) {
-			if (class157s[i].anInt1986 < 13)
-				class157s[i].method2679(2);
+			if (class157s[i].zoom < 13)
+				class157s[i].upscale(2);
 		}
-		Class157 class157;
+		RSMesh class157;
 		if (class157s.length == 1)
 			class157 = class157s[0];
 		else
-			class157 = new Class157(class157s, class157s.length);
+			class157 = new RSMesh(class157s, class157s.length);
 		if (null == class157)
 			return null;
 		if (null != ((Class44) this).aShortArray423) {
 			for (int i = 0; i < ((Class44) this).aShortArray423.length; i++)
-				class157.method2668(((Class44) this).aShortArray423[i], ((Class44) this).aShortArray424[i]);
+				class157.recolor(((Class44) this).aShortArray423[i], ((Class44) this).aShortArray424[i]);
 		}
 		if (((Class44) this).aShortArray425 != null) {
 			for (int i = 0; i < ((Class44) this).aShortArray425.length; i++)
-				class157.method2669(((Class44) this).aShortArray425[i], ((Class44) this).aShortArray426[i]);
+				class157.retexture(((Class44) this).aShortArray425[i], ((Class44) this).aShortArray426[i]);
 		}
 		return class157;
 	}
@@ -275,7 +275,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < 5; i++) {
-				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray421[i], 0, 16711935)))
+				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i], 0, 16711935)))
 					bool = false;
 			}
 		}
@@ -288,7 +288,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < ((Class44) this).anIntArray427.length; i++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray427[i], 0, 16711935))
+				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i], 0, 16711935))
 					bool = false;
 			}
 		}
@@ -322,7 +322,7 @@ public class Class44 implements Interface46 {
 		int i_34_;
 		if (class425.aBool5101)
 			i_34_ = class425.anInt5102 * 712312847;
-		else if (class425.aBool5052)
+		else if (class425.members)
 			i_34_ = Class149_Sub2.aClass511_9314.anInt5880 * -1519092215;
 		else
 			i_34_ = Class149_Sub2.aClass511_9314.anInt5881 * 725268415;

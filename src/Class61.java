@@ -15,7 +15,7 @@ public class Class61 {
 	public byte aByte626;
 	public byte aByte627;
 	public byte aByte628;
-	SwitchMap aClass465_629;
+	IterableNodeMap aClass465_629;
 	long[] aLongArray630;
 	long aLong631;
 	public int anInt632;
@@ -33,12 +33,12 @@ public class Class61 {
 	static final byte aByte644 = 125;
 	static final byte aByte645 = 0;
 	public static final byte aByte646 = -1;
-	public static Class160 aClass160_647;
+	public static NativeSprite aClass160_647;
 
 	public String method1194(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (class282 == null || !(class282 instanceof Class282_Sub47))
 			return null;
 		return (String) ((Class282_Sub47) class282).anObject8068;
@@ -102,7 +102,7 @@ public class Class61 {
 	public Integer method1199(int i, int i_5_) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		return new Integer(((Class282_Sub38) class282).anInt8002 * -570797415);
@@ -115,7 +115,7 @@ public class Class61 {
 		i_6_ <<= i_7_;
 		i_6_ &= i_11_;
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (class282 != null) {
 				if (class282 instanceof Class282_Sub38) {
 					Class282_Sub38 class282_sub38 = (Class282_Sub38) class282;
@@ -127,10 +127,10 @@ public class Class61 {
 					(class282_sub38_13_ = class282_sub38).anInt8002 = ((-570797415 * class282_sub38_13_.anInt8002 | i_6_) * 1270866345);
 					return true;
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_6_), (long) i);
 		return true;
 	}
@@ -138,7 +138,7 @@ public class Class61 {
 	public Long method1201(int i, int i_14_) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (class282 == null || !(class282 instanceof Class282_Sub45))
 			return null;
 		return new Long(3367138086658270151L * ((Class282_Sub45) class282).aLong8066);
@@ -147,7 +147,7 @@ public class Class61 {
 	public String method1202(int i, int i_15_) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (class282 == null || !(class282 instanceof Class282_Sub47))
 			return null;
 		return (String) ((Class282_Sub47) class282).anObject8068;
@@ -195,7 +195,7 @@ public class Class61 {
 	public Integer method1205(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		return new Integer(((Class282_Sub38) class282).anInt8002 * -570797415);
@@ -302,7 +302,7 @@ public class Class61 {
 		i_31_ <<= i_32_;
 		i_31_ &= i_37_;
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (class282 != null) {
 				if (class282 instanceof Class282_Sub38) {
 					Class282_Sub38 class282_sub38 = (Class282_Sub38) class282;
@@ -314,17 +314,17 @@ public class Class61 {
 					(class282_sub38_39_ = class282_sub38).anInt8002 = ((-570797415 * class282_sub38_39_.anInt8002 | i_31_) * 1270866345);
 					return true;
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_31_), (long) i);
 		return true;
 	}
 
 	boolean method1213(int i, long l) {
 		if (((Class61) this).aClass465_629 != null) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (class282 != null) {
 				if (class282 instanceof Class282_Sub45) {
 					Class282_Sub45 class282_sub45 = (Class282_Sub45) class282;
@@ -333,10 +333,10 @@ public class Class61 {
 					class282_sub45.aLong8066 = 1350258240038399479L * l;
 					return true;
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub45(l), (long) i);
 		return true;
 	}
@@ -344,7 +344,7 @@ public class Class61 {
 	public Integer method1214(int i, int i_40_, int i_41_) {
 		if (((Class61) this).aClass465_629 == null)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		int i_42_ = i_41_ == 31 ? -1 : (1 << 1 + i_41_) - 1;
@@ -466,7 +466,7 @@ public class Class61 {
 	public Integer method1221(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		return new Integer(((Class282_Sub38) class282).anInt8002 * -570797415);
@@ -474,7 +474,7 @@ public class Class61 {
 
 	boolean method1222(int i, int i_45_, int i_46_) {
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (class282 != null) {
 				if (class282 instanceof Class282_Sub38) {
 					Class282_Sub38 class282_sub38 = (Class282_Sub38) class282;
@@ -483,10 +483,10 @@ public class Class61 {
 					class282_sub38.anInt8002 = i_45_ * 1270866345;
 					return true;
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_45_), (long) i);
 		return true;
 	}
@@ -494,7 +494,7 @@ public class Class61 {
 	public Integer method1223(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		return new Integer(((Class282_Sub38) class282).anInt8002 * -570797415);
@@ -506,23 +506,23 @@ public class Class61 {
 		else if (string.length() > 80)
 			string = string.substring(0, 80);
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (null != class282) {
 				if (class282 instanceof Class282_Sub47) {
 					Class282_Sub47 class282_sub47 = (Class282_Sub47) class282;
 					if (class282_sub47.anObject8068 instanceof String) {
 						if (string.equals(class282_sub47.anObject8068))
 							return false;
-						class282_sub47.method4991(-371378792);
-						class282_sub47.method4991(-371378792);
-						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.aLong3379 * -3442165056282524525L);
+						class282_sub47.unlink(-371378792);
+						class282_sub47.unlink(-371378792);
+						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.uid * -3442165056282524525L);
 						return true;
 					}
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i);
 		return true;
 	}
@@ -530,7 +530,7 @@ public class Class61 {
 	public Integer method1225(int i, int i_48_, int i_49_, byte i_50_) {
 		if (((Class61) this).aClass465_629 == null)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		int i_51_ = i_49_ == 31 ? -1 : (1 << 1 + i_49_) - 1;
@@ -540,7 +540,7 @@ public class Class61 {
 	public Integer method1226(int i, int i_52_, int i_53_) {
 		if (((Class61) this).aClass465_629 == null)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		int i_54_ = i_53_ == 31 ? -1 : (1 << 1 + i_53_) - 1;
@@ -550,7 +550,7 @@ public class Class61 {
 	public Integer method1227(int i, int i_55_, int i_56_) {
 		if (((Class61) this).aClass465_629 == null)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		int i_57_ = i_56_ == 31 ? -1 : (1 << 1 + i_56_) - 1;
@@ -560,7 +560,7 @@ public class Class61 {
 	public Integer method1228(int i, int i_58_, int i_59_) {
 		if (((Class61) this).aClass465_629 == null)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		int i_60_ = i_59_ == 31 ? -1 : (1 << 1 + i_59_) - 1;
@@ -570,7 +570,7 @@ public class Class61 {
 	public Long method1229(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (class282 == null || !(class282 instanceof Class282_Sub45))
 			return null;
 		return new Long(3367138086658270151L * ((Class282_Sub45) class282).aLong8066);
@@ -579,7 +579,7 @@ public class Class61 {
 	public String method1230(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (class282 == null || !(class282 instanceof Class282_Sub47))
 			return null;
 		return (String) ((Class282_Sub47) class282).anObject8068;
@@ -588,7 +588,7 @@ public class Class61 {
 	public String method1231(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (class282 == null || !(class282 instanceof Class282_Sub47))
 			return null;
 		return (String) ((Class282_Sub47) class282).anObject8068;
@@ -719,7 +719,7 @@ public class Class61 {
 		if (i_63_ >= 3) {
 			int i_67_ = class282_sub35.readUnsignedShort();
 			if (i_67_ > 0) {
-				((Class61) this).aClass465_629 = new SwitchMap(i_67_ < 16 ? Class323.nextPowerOfTwo(i_67_, 1744507894) : 16);
+				((Class61) this).aClass465_629 = new IterableNodeMap(i_67_ < 16 ? Class323.nextPowerOfTwo(i_67_, 1744507894) : 16);
 				while (i_67_-- > 0) {
 					int i_68_ = class282_sub35.readInt();
 					int i_69_ = i_68_ & 0x3fffffff;
@@ -792,7 +792,7 @@ public class Class61 {
 	public Integer method1237(int i) {
 		if (null == ((Class61) this).aClass465_629)
 			return null;
-		Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+		Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 		if (null == class282 || !(class282 instanceof Class282_Sub38))
 			return null;
 		return new Integer(((Class282_Sub38) class282).anInt8002 * -570797415);
@@ -1018,7 +1018,7 @@ public class Class61 {
 		i_89_ <<= i_90_;
 		i_89_ &= i_94_;
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (class282 != null) {
 				if (class282 instanceof Class282_Sub38) {
 					Class282_Sub38 class282_sub38 = (Class282_Sub38) class282;
@@ -1030,10 +1030,10 @@ public class Class61 {
 					(class282_sub38_96_ = class282_sub38).anInt8002 = ((-570797415 * class282_sub38_96_.anInt8002 | i_89_) * 1270866345);
 					return true;
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub38(i_89_), (long) i);
 		return true;
 	}
@@ -1060,23 +1060,23 @@ public class Class61 {
 		else if (string.length() > 80)
 			string = string.substring(0, 80);
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (null != class282) {
 				if (class282 instanceof Class282_Sub47) {
 					Class282_Sub47 class282_sub47 = (Class282_Sub47) class282;
 					if (class282_sub47.anObject8068 instanceof String) {
 						if (string.equals(class282_sub47.anObject8068))
 							return false;
-						class282_sub47.method4991(-371378792);
-						class282_sub47.method4991(-371378792);
-						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.aLong3379 * -3442165056282524525L);
+						class282_sub47.unlink(-371378792);
+						class282_sub47.unlink(-371378792);
+						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.uid * -3442165056282524525L);
 						return true;
 					}
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i);
 		return true;
 	}
@@ -1087,23 +1087,23 @@ public class Class61 {
 		else if (string.length() > 80)
 			string = string.substring(0, 80);
 		if (null != ((Class61) this).aClass465_629) {
-			Class282 class282 = ((Class61) this).aClass465_629.method7754((long) i);
+			Node class282 = ((Class61) this).aClass465_629.method7754((long) i);
 			if (null != class282) {
 				if (class282 instanceof Class282_Sub47) {
 					Class282_Sub47 class282_sub47 = (Class282_Sub47) class282;
 					if (class282_sub47.anObject8068 instanceof String) {
 						if (string.equals(class282_sub47.anObject8068))
 							return false;
-						class282_sub47.method4991(-371378792);
-						class282_sub47.method4991(-371378792);
-						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.aLong3379 * -3442165056282524525L);
+						class282_sub47.unlink(-371378792);
+						class282_sub47.unlink(-371378792);
+						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.uid * -3442165056282524525L);
 						return true;
 					}
 				}
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			}
 		} else
-			((Class61) this).aClass465_629 = new SwitchMap(4);
+			((Class61) this).aClass465_629 = new IterableNodeMap(4);
 		((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i);
 		return true;
 	}

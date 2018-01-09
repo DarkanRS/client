@@ -184,7 +184,7 @@ public class Class529 {
 		}
 	}
 
-	public Class529(Class317 class317) {
+	public Class529(Index class317) {
 		anIntArray7029 = null;
 		anInt7030 = 1811459372;
 		anInt7032 = 1482997956;

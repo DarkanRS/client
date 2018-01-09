@@ -2,16 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class377 implements Interface20 {
-	Class229 aClass229_4517 = new Class229(64);
-	Class317 aClass317_4518;
+public class Class377 implements IndexLoader {
+	SoftCache aClass229_4517 = new SoftCache(64);
+	Index aClass317_4518;
 	public int anInt4519;
 	static Thread aThread4520;
 
-	public Class377(Class486 class486, Class495 class495, Class317 class317) {
+	public Class377(Game class486, Language class495, Index class317) {
 		((Class377) this).aClass317_4518 = class317;
 		if (((Class377) this).aClass317_4518 != null)
-			anInt4519 = (((Class377) this).aClass317_4518.method5624(Class120.aClass120_1487.anInt1521 * -71319279, -1550492065)) * -517376561;
+			anInt4519 = (((Class377) this).aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.anInt1521 * -71319279, -1550492065)) * -517376561;
 		else
 			anInt4519 = 0;
 	}
@@ -19,19 +19,19 @@ public class Class377 implements Interface20 {
 	public Class372 method6384(int i, int i_0_) {
 		Class372 class372;
 		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.method3865((long) i));
+			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
 		}
 		if (class372 != null)
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((Class120.aClass120_1487.anInt1521) * -71319279), i, -1881668825);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.anInt1521) * -71319279), i, -1881668825);
 		}
 		class372 = new Class372();
 		if (is != null)
 			class372.method6356(new RsByteBuffer(is), 1810955787);
 		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3856(class372, (long) i);
+			((Class377) this).aClass229_4517.put(class372, (long) i);
 		}
 		return class372;
 	}
@@ -39,19 +39,19 @@ public class Class377 implements Interface20 {
 	public Class372 method6385(int i) {
 		Class372 class372;
 		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.method3865((long) i));
+			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
 		}
 		if (class372 != null)
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((Class120.aClass120_1487.anInt1521) * -71319279), i, -1550617517);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.anInt1521) * -71319279), i, -1550617517);
 		}
 		class372 = new Class372();
 		if (is != null)
 			class372.method6356(new RsByteBuffer(is), 471213324);
 		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3856(class372, (long) i);
+			((Class377) this).aClass229_4517.put(class372, (long) i);
 		}
 		return class372;
 	}
@@ -77,19 +77,19 @@ public class Class377 implements Interface20 {
 	public Class372 method6389(int i) {
 		Class372 class372;
 		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.method3865((long) i));
+			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
 		}
 		if (class372 != null)
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((Class120.aClass120_1487.anInt1521) * -71319279), i, -1766902086);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.anInt1521) * -71319279), i, -1766902086);
 		}
 		class372 = new Class372();
 		if (is != null)
 			class372.method6356(new RsByteBuffer(is), 1597587859);
 		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3856(class372, (long) i);
+			((Class377) this).aClass229_4517.put(class372, (long) i);
 		}
 		return class372;
 	}
@@ -118,7 +118,7 @@ public class Class377 implements Interface20 {
 		}
 	}
 
-	static void method6394(Class505 class505, int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+	static void method6394(GraphicalRenderer class505, int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		class505.method8425(i, i_2_, i_3_, i_4_, i_5_, (byte) -74);
 		class505.method8425(1 + i, 1 + i_2_, i_3_ - 2, 16, i_6_, (byte) -67);
 		class505.method8562(i + 1, i_2_ + 18, i_3_ - 2, i_4_ - 19, i_6_, (byte) 4);

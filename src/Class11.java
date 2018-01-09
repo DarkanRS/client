@@ -10,7 +10,7 @@ public class Class11 {
 	static int anInt123;
 	public static Class282_Sub51 aClass282_Sub51_124;
 
-	static void method461(Class505 class505, int i, int i_0_, Class118 class118) {
+	static void method461(GraphicalRenderer class505, int i, int i_0_, Class118 class118) {
 		int i_1_ = 63;
 		int i_2_ = 7;
 		for (int i_3_ = 63; i_3_ >= 0; i_3_--) {
@@ -22,7 +22,7 @@ public class Class11 {
 		}
 	}
 
-	static void method462(Class505 class505, int i, int i_6_, Class118 class118, int i_7_) {
+	static void method462(GraphicalRenderer class505, int i, int i_6_, Class118 class118, int i_7_) {
 		for (int i_8_ = 7; i_8_ >= 0; i_8_--) {
 			for (int i_9_ = 127; i_9_ >= 0; i_9_--) {
 				int i_10_ = (i_7_ & 0x3f) << 10 | (i_8_ & 0x7) << 7 | i_9_ & 0x7f;
@@ -34,7 +34,7 @@ public class Class11 {
 		}
 	}
 
-	static void method463(Class505 class505, int i, int i_12_, Class118 class118) {
+	static void method463(GraphicalRenderer class505, int i, int i_12_, Class118 class118) {
 		int i_13_ = 63;
 		int i_14_ = 7;
 		for (int i_15_ = 63; i_15_ >= 0; i_15_--) {
@@ -46,7 +46,7 @@ public class Class11 {
 		}
 	}
 
-	static void method464(Class505 class505, int i, int i_18_, Class118 class118, int i_19_) {
+	static void method464(GraphicalRenderer class505, int i, int i_18_, Class118 class118, int i_19_) {
 		for (int i_20_ = 7; i_20_ >= 0; i_20_--) {
 			for (int i_21_ = 127; i_21_ >= 0; i_21_--) {
 				int i_22_ = (i_19_ & 0x3f) << 10 | (i_20_ & 0x7) << 7 | i_21_ & 0x7f;
@@ -58,7 +58,7 @@ public class Class11 {
 		}
 	}
 
-	static void method465(Class505 class505, int i, int i_24_, Class118 class118, int i_25_) {
+	static void method465(GraphicalRenderer class505, int i, int i_24_, Class118 class118, int i_25_) {
 		for (int i_26_ = 7; i_26_ >= 0; i_26_--) {
 			for (int i_27_ = 127; i_27_ >= 0; i_27_--) {
 				int i_28_ = (i_25_ & 0x3f) << 10 | (i_26_ & 0x7) << 7 | i_27_ & 0x7f;

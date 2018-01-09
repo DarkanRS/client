@@ -211,7 +211,7 @@ public final class Class241 {
 	public static int method4150(int i) {
 		Canvas canvas = new Canvas();
 		canvas.setSize(100, 100);
-		Class505 class505 = Class320.method5732(0, canvas, null, null, 0, -2017555063);
+		GraphicalRenderer class505 = Class320.method5732(0, canvas, null, null, 0, -2017555063);
 		long l = Class169.method2869(1572721272);
 		for (int i_30_ = 0; i_30_ < 10000; i_30_++)
 			class505.method8658(5, 10, 100.0F, 75, 50, 100.0F, 15, 90, 100.0F, -65536, -65536, -65536, 1);
@@ -228,7 +228,7 @@ public final class Class241 {
 		return i_36_ / 4 + (i_35_ / 8 + i_34_ / 16);
 	}
 
-	static void method4152(Class118 class118, Class455 class455, int i, int i_37_, int i_38_, int i_39_, int i_40_, String string, Class8 class8, Class414 class414, int i_41_, int i_42_) {
+	static void method4152(Class118 class118, Class455 class455, int i, int i_37_, int i_38_, int i_39_, int i_40_, String string, FontRenderer class8, Class414 class414, int i_41_, int i_42_) {
 		int i_43_;
 		if (4 == -672443707 * Class262.anInt3240)
 			i_43_ = (int) client.aFloat7365 & 0x3fff;

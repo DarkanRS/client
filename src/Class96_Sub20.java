@@ -27,6 +27,6 @@ public class Class96_Sub20 extends Class96 {
 	}
 
 	static final void method14669(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class203.method3360((byte) -103) ? 1 : 0;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Js5CacheFile.method3360((byte) -103) ? 1 : 0;
 	}
 }

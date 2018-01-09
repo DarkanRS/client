@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub23 extends Class282 {
+public class Class282_Sub23 extends Node {
 	static Class282_Sub23[] aClass282_Sub23Array7677 = new Class282_Sub23[300];
 	int anInt7678;
 	static int anInt7679 = 0;

@@ -7,7 +7,7 @@ public class Class497 {
 	public static final int anInt5818 = 2;
 	public static final int anInt5819 = 3;
 	public static final int anInt5820 = 4;
-	public static Class317 aClass317_5821;
+	public static Index aClass317_5821;
 	public static Class233 aClass233_5822;
 
 	Class497() throws Throwable {

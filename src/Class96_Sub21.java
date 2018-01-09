@@ -22,9 +22,9 @@ public class Class96_Sub21 extends Class96 {
 	}
 
 	public static void method14675(int i, int i_0_, int i_1_, int i_2_, int i_3_) {
-		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.method8097((byte) 76)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.method8067(1744342009))
+		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 76)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(1744342009))
 			Class175.method2964(class282_sub48, i, i_0_, i_1_, i_2_, -1230088474);
-		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.method8097((byte) 64)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.method8067(1161440846)) {
+		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 64)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1161440846)) {
 			int i_4_ = 1;
 			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15855((byte) -17);
 			int i_5_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597(-1141371259);
@@ -121,7 +121,7 @@ public class Class96_Sub21 extends Class96 {
 		}
 	}
 
-	static Class282_Sub14 method14676(Class317 class317, int i, int i_10_) {
+	static Class282_Sub14 method14676(Index class317, int i, int i_10_) {
 		byte[] is = class317.method5615(i, -2092539323);
 		if (is == null)
 			return null;

@@ -69,7 +69,7 @@ public class Class92 {
 		if (null != class282_sub37) {
 			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 44);
 			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, 1656056599);
-			class282_sub37.method4991(-371378792);
+			class282_sub37.unlink(-371378792);
 		}
 	}
 

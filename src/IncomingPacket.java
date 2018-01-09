@@ -411,10 +411,10 @@ public class IncomingPacket {
 		return i - i_4_;
 	}
 
-	public static Class486 method6376(int i, int i_11_) {
-		Class486[] class486s = Class282_Sub15_Sub1.method14817(1926642479);
+	public static Game method6376(int i, int i_11_) {
+		Game[] class486s = Class282_Sub15_Sub1.method14817(1926642479);
 		for (int i_12_ = 0; i_12_ < class486s.length; i_12_++) {
-			Class486 class486 = class486s[i_12_];
+			Game class486 = class486s[i_12_];
 			if (class486.anInt5746 * 1648080491 == i) {
 				return class486;
 			}
@@ -444,14 +444,14 @@ public class IncomingPacket {
 	static String method6380(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
 		if (null == class282_sub50_sub7.aString9585 || class282_sub50_sub7.aString9585.length() == 0) {
 			if (class282_sub50_sub7.aString9588 != null && class282_sub50_sub7.aString9588.length() > 0) {
-				return new StringBuilder().append(class282_sub50_sub7.aString9576).append(Class433.aClass433_5315.method7273(Class223.aClass495_2772, -1844703581)).append(class282_sub50_sub7.aString9588).toString();
+				return new StringBuilder().append(class282_sub50_sub7.aString9576).append(Message.aClass433_5315.translate(Class223.aClass495_2772, -1844703581)).append(class282_sub50_sub7.aString9588).toString();
 			}
 			return class282_sub50_sub7.aString9576;
 		}
 		if (class282_sub50_sub7.aString9588 != null && class282_sub50_sub7.aString9588.length() > 0) {
-			return new StringBuilder().append(class282_sub50_sub7.aString9576).append(Class433.aClass433_5315.method7273(Class223.aClass495_2772, -1322354341)).append(class282_sub50_sub7.aString9588).append(Class433.aClass433_5315.method7273(Class223.aClass495_2772, -1270840835)).append(class282_sub50_sub7.aString9585).toString();
+			return new StringBuilder().append(class282_sub50_sub7.aString9576).append(Message.aClass433_5315.translate(Class223.aClass495_2772, -1322354341)).append(class282_sub50_sub7.aString9588).append(Message.aClass433_5315.translate(Class223.aClass495_2772, -1270840835)).append(class282_sub50_sub7.aString9585).toString();
 		}
-		return new StringBuilder().append(class282_sub50_sub7.aString9576).append(Class433.aClass433_5315.method7273(Class223.aClass495_2772, -394104656)).append(class282_sub50_sub7.aString9585).toString();
+		return new StringBuilder().append(class282_sub50_sub7.aString9576).append(Message.aClass433_5315.translate(Class223.aClass495_2772, -394104656)).append(class282_sub50_sub7.aString9585).toString();
 	}
 
 	static final void method6381(CS2Executor class527, byte i) {

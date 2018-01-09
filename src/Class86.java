@@ -8,11 +8,11 @@ public class Class86 {
 	static Class92[] aClass92Array820;
 	static Class93[] aClass93Array821;
 	public static Class96[] aClass96Array822;
-	public static SwitchMap aClass465_823;
+	public static IterableNodeMap aClass465_823;
 	static int anInt824;
 	static int anInt825;
 	static boolean aBool826;
-	public static Class482 aClass482_827 = new Class482();
+	public static NodeCollection aClass482_827 = new NodeCollection();
 	static short aShort828;
 	static short aShort829;
 	static short aShort830;
@@ -41,7 +41,7 @@ public class Class86 {
 	}
 
 	static {
-		aClass465_823 = new SwitchMap(32);
+		aClass465_823 = new IterableNodeMap(32);
 		anInt819 = 523556513;
 		anInt825 = 0;
 		anInt824 = 0;
@@ -258,7 +258,7 @@ public class Class86 {
 	public static final void method1478(int i) {
 		if (Class9.loginStage * 1923286921 != 2) {
 			Class9.aClass184_73.method3051((byte) -81);
-			Class312.method5558(-500941691);
+			Js5StandardRequester.method5558(-500941691);
 			Class361.method6270((byte) 39);
 		}
 	}

@@ -3,13 +3,13 @@
  */
 
 public class Class473 {
-	Class282 aClass282_5603;
-	public Class282 aClass282_5604 = new Class282();
+	Node aClass282_5603;
+	public Node aClass282_5604 = new Node();
 	public static Class526 aClass526_5605;
 	static int anInt5606;
 
-	public Class282 method7854() {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7854() {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -20,26 +20,26 @@ public class Class473 {
 
 	public void method7855(byte i) {
 		for (;;) {
-			Class282 class282 = aClass282_5604.aClass282_3378;
+			Node class282 = aClass282_5604.aClass282_3378;
 			if (class282 == aClass282_5604)
 				break;
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		}
 		((Class473) this).aClass282_5603 = null;
 	}
 
 	public void method7856() {
 		for (;;) {
-			Class282 class282 = aClass282_5604.aClass282_3378;
+			Node class282 = aClass282_5604.aClass282_3378;
 			if (class282 == aClass282_5604)
 				break;
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		}
 		((Class473) this).aClass282_5603 = null;
 	}
 
-	public Class282 method7857(byte i) {
-		Class282 class282 = ((Class473) this).aClass282_5603;
+	public Node method7857(byte i) {
+		Node class282 = ((Class473) this).aClass282_5603;
 		if (class282 == aClass282_5604) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -48,16 +48,16 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7858(byte i) {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7858(byte i) {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (class282 == aClass282_5604)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	public Class282 method7859(int i) {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7859(int i) {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -66,8 +66,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7860() {
-		Class282 class282 = ((Class473) this).aClass282_5603;
+	public Node method7860() {
+		Node class282 = ((Class473) this).aClass282_5603;
 		if (class282 == aClass282_5604) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -85,9 +85,9 @@ public class Class473 {
 		return aClass282_5604 == aClass282_5604.aClass282_3378;
 	}
 
-	public void method7862(Class282 class282) {
+	public void method7862(Node class282) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5604;
 		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -96,16 +96,16 @@ public class Class473 {
 
 	public void method7863() {
 		for (;;) {
-			Class282 class282 = aClass282_5604.aClass282_3378;
+			Node class282 = aClass282_5604.aClass282_3378;
 			if (class282 == aClass282_5604)
 				break;
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		}
 		((Class473) this).aClass282_5603 = null;
 	}
 
-	public Class282 method7864() {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7864() {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -114,41 +114,41 @@ public class Class473 {
 		return class282;
 	}
 
-	public void method7865(Class282 class282) {
+	public void method7865(Node class282) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5604;
 		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public Class282 method7866() {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7866() {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (class282 == aClass282_5604)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	public Class282 method7867() {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7867() {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (class282 == aClass282_5604)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	public Class282 method7868() {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7868() {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (class282 == aClass282_5604)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	public Class282 method7869(int i) {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7869(int i) {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -157,8 +157,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7870() {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7870() {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -167,8 +167,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7871() {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7871() {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -177,8 +177,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7872() {
-		Class282 class282 = aClass282_5604.aClass282_3378;
+	public Node method7872() {
+		Node class282 = aClass282_5604.aClass282_3378;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -187,17 +187,17 @@ public class Class473 {
 		return class282;
 	}
 
-	public void method7873(Class282 class282, byte i) {
+	public void method7873(Node class282, byte i) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5604;
 		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public Class282 method7874() {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7874() {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -206,17 +206,17 @@ public class Class473 {
 		return class282;
 	}
 
-	public void method7875(Class282 class282) {
+	public void method7875(Node class282) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5604;
 		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public Class282 method7876() {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7876() {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -225,17 +225,17 @@ public class Class473 {
 		return class282;
 	}
 
-	public void method7877(Class282 class282, int i) {
+	public void method7877(Node class282, int i) {
 		if (null != class282.aClass282_3380)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5604.aClass282_3380;
 		class282.aClass282_3378 = aClass282_5604;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public Class282 method7878() {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7878() {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -244,8 +244,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7879() {
-		Class282 class282 = ((Class473) this).aClass282_5603;
+	public Node method7879() {
+		Node class282 = ((Class473) this).aClass282_5603;
 		if (class282 == aClass282_5604) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -254,8 +254,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7880() {
-		Class282 class282 = ((Class473) this).aClass282_5603;
+	public Node method7880() {
+		Node class282 = ((Class473) this).aClass282_5603;
 		if (class282 == aClass282_5604) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -264,8 +264,8 @@ public class Class473 {
 		return class282;
 	}
 
-	public Class282 method7881() {
-		Class282 class282 = aClass282_5604.aClass282_3380;
+	public Node method7881() {
+		Node class282 = aClass282_5604.aClass282_3380;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
@@ -372,11 +372,11 @@ public class Class473 {
 	}
 
 	public static void method7887(int i) {
-		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.method8097((byte) 94)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.method8067(-1229768145)) {
+		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 94)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-1229768145)) {
 			if (((Class282_Sub48) class282_sub48).aBool8092)
 				class282_sub48.method13426((byte) 1);
 		}
-		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.method8097((byte) 66)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.method8067(893135123)) {
+		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 66)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(893135123)) {
 			if (((Class282_Sub48) class282_sub48).aBool8092)
 				class282_sub48.method13426((byte) 1);
 		}

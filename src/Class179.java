@@ -78,7 +78,7 @@ public class Class179 {
 	static void method2984() {
 		if (Class298.method5303((byte) -50)) {
 			if (Class13.aStringArray129 == null)
-				Class8.method402(1211602372);
+				FontRenderer.method402(1211602372);
 			aBool2229 = true;
 			anInt2221 = 0;
 		}
@@ -112,10 +112,10 @@ public class Class179 {
 		Class13.aStringArray129 = new String[500];
 		for (int i = 0; i < Class13.aStringArray129.length; i++)
 			Class13.aStringArray129[i] = "";
-		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -623888526), -1301842653);
+		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -623888526), -1301842653);
 	}
 
-	static void method2988(Class505 class505) {
+	static void method2988(GraphicalRenderer class505) {
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.B(0, 0, -418109423 * Class349.anInt4083, 350, anInt2221 * 1790640201 << 24 | 0x332277, 1);
 		int i = 350 / (-2030522063 * anInt2222);
@@ -132,14 +132,14 @@ public class Class179 {
 				for (int i_6_ = 0; i_6_ < strings.length; i_6_++) {
 					int i_7_ = 8 + i_6_ * i_5_;
 					class505.r(i_7_, 0, i_5_ + i_7_ - 8, 350);
-					Class16.aClass8_144.method358(Class400.method6793(strings[i_6_], (byte) 1), i_7_, (350 - anInt2230 * 1922934793 - 2 - Class16.aClass414_139.anInt4979 * -1518951631 - ((i_4_ - -2132918525 * anInt2223) * (anInt2222 * -2030522063))), -1, -16777216, -418109423);
+					Class16.aClass8_144.renderText(Class400.method6793(strings[i_6_], (byte) 1), i_7_, (350 - anInt2230 * 1922934793 - 2 - Class16.aClass414_139.anInt4979 * -1518951631 - ((i_4_ - -2132918525 * anInt2223) * (anInt2222 * -2030522063))), -1, -16777216, -418109423);
 				}
 			}
 		}
 		Class540.aClass8_7138.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.method8659(0, 350 - 1922934793 * anInt2230, -418109423 * Class349.anInt4083, -1, -1880781903);
-		Class285.aClass8_3394.method358(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);
+		Class285.aClass8_3394.renderText(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);
 		if (Class530.aBool7050) {
 			int i_8_ = -1;
 			if (client.cycles * -1809259861 % 30 > 15)
@@ -236,7 +236,7 @@ public class Class179 {
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -515552037)), -1127364284);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -515552037)), -1127364284);
 			}
 			return;
 		} while (false);
@@ -436,12 +436,12 @@ public class Class179 {
 					client.aClass184_7475.method3049(class282_sub23, 881777984);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1488316549)), -146676373);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1488316549)), -146676373);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Class433.aClass433_5160.method7273(Class223.aClass495_2772, -666903111)).append(string).toString(), -1454199893);
+			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -666903111)).append(string).toString(), -1454199893);
 	}
 
 	static boolean method2993() {
@@ -454,7 +454,7 @@ public class Class179 {
 		Class13.aStringArray129 = new String[500];
 		for (int i = 0; i < Class13.aStringArray129.length; i++)
 			Class13.aStringArray129[i] = "";
-		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -1882291735), -941312141);
+		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -1882291735), -941312141);
 	}
 
 	static void method2995() {
@@ -697,7 +697,7 @@ public class Class179 {
 
 	public static void method3002(String string) {
 		if (Class13.aStringArray129 == null)
-			Class8.method402(2044756849);
+			FontRenderer.method402(2044756849);
 		client.aCalendar7278.setTime(new Date(Class169.method2869(1760274968)));
 		int i = client.aCalendar7278.get(11);
 		int i_29_ = client.aCalendar7278.get(12);
@@ -725,7 +725,7 @@ public class Class179 {
 
 	public static void method3003(String string) {
 		if (Class13.aStringArray129 == null)
-			Class8.method402(477681610);
+			FontRenderer.method402(477681610);
 		client.aCalendar7278.setTime(new Date(Class169.method2869(2050452450)));
 		int i = client.aCalendar7278.get(11);
 		int i_34_ = client.aCalendar7278.get(12);
@@ -753,7 +753,7 @@ public class Class179 {
 
 	public static void method3004(String string) {
 		if (Class13.aStringArray129 == null)
-			Class8.method402(1458657713);
+			FontRenderer.method402(1458657713);
 		client.aCalendar7278.setTime(new Date(Class169.method2869(1675447905)));
 		int i = client.aCalendar7278.get(11);
 		int i_39_ = client.aCalendar7278.get(12);
@@ -779,7 +779,7 @@ public class Class179 {
 		}
 	}
 
-	static void method3005(Class505 class505) {
+	static void method3005(GraphicalRenderer class505) {
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.B(0, 0, -418109423 * Class349.anInt4083, 350, anInt2221 * 1790640201 << 24 | 0x332277, 1);
 		int i = 350 / (-2030522063 * anInt2222);
@@ -796,14 +796,14 @@ public class Class179 {
 				for (int i_49_ = 0; i_49_ < strings.length; i_49_++) {
 					int i_50_ = 8 + i_49_ * i_48_;
 					class505.r(i_50_, 0, i_48_ + i_50_ - 8, 350);
-					Class16.aClass8_144.method358(Class400.method6793(strings[i_49_], (byte) 1), i_50_, (350 - anInt2230 * 1922934793 - 2 - Class16.aClass414_139.anInt4979 * -1518951631 - ((i_47_ - -2132918525 * anInt2223) * (anInt2222 * -2030522063))), -1, -16777216, -418109423);
+					Class16.aClass8_144.renderText(Class400.method6793(strings[i_49_], (byte) 1), i_50_, (350 - anInt2230 * 1922934793 - 2 - Class16.aClass414_139.anInt4979 * -1518951631 - ((i_47_ - -2132918525 * anInt2223) * (anInt2222 * -2030522063))), -1, -16777216, -418109423);
 				}
 			}
 		}
 		Class540.aClass8_7138.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.method8659(0, 350 - 1922934793 * anInt2230, -418109423 * Class349.anInt4083, -1, -1171281345);
-		Class285.aClass8_3394.method358(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);
+		Class285.aClass8_3394.renderText(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);
 		if (Class530.aBool7050) {
 			int i_51_ = -1;
 			if (client.cycles * -1809259861 % 30 > 15)
@@ -889,7 +889,7 @@ public class Class179 {
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1590942601)), -291693412);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1590942601)), -291693412);
 			}
 			return;
 		} while (false);
@@ -1089,12 +1089,12 @@ public class Class179 {
 					client.aClass184_7475.method3049(class282_sub23, 1616485384);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1600472953)), -1470495365);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1600472953)), -1470495365);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Class433.aClass433_5160.method7273(Class223.aClass495_2772, -1962372403)).append(string).toString(), -1059605262);
+			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -1962372403)).append(string).toString(), -1059605262);
 	}
 
 	static void method3009() {
@@ -1121,7 +1121,7 @@ public class Class179 {
 	static void method3014() {
 		if (Class298.method5303((byte) -12)) {
 			if (Class13.aStringArray129 == null)
-				Class8.method402(875830550);
+				FontRenderer.method402(875830550);
 			aBool2229 = true;
 			anInt2221 = 0;
 		}

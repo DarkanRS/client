@@ -5,7 +5,7 @@
 public class Class493 {
 	public static Class479 aClass479_5778;
 
-	public static int method8267(CharSequence charsequence, CharSequence charsequence_0_, Class495 class495) {
+	public static int method8267(CharSequence charsequence, CharSequence charsequence_0_, Language class495) {
 		int i = charsequence.length();
 		int i_1_ = charsequence_0_.length();
 		int i_2_ = 0;
@@ -42,7 +42,7 @@ public class Class493 {
 		}
 		int i_7_ = Math.min(i, i_1_);
 		for (int i_8_ = 0; i_8_ < i_7_; i_8_++) {
-			if (class495 == Class495.aClass495_5801) {
+			if (class495 == Language.aClass495_5801) {
 				i_2_ = i - 1 - i_8_;
 				i_3_ = i_1_ - 1 - i_8_;
 			} else
@@ -68,14 +68,14 @@ public class Class493 {
 		return 0;
 	}
 
-	public static String method8268(long l, int i, boolean bool, Class495 class495) {
+	public static String method8268(long l, int i, boolean bool, Language class495) {
 		char c = ',';
 		char c_15_ = '.';
-		if (Class495.aClass495_5795 == class495) {
+		if (Language.aClass495_5795 == class495) {
 			c = '.';
 			c_15_ = ',';
 		}
-		if (class495 == Class495.aClass495_5801)
+		if (class495 == Language.aClass495_5801)
 			c_15_ = '\u00a0';
 		boolean bool_16_ = false;
 		if (l < 0L) {
@@ -106,7 +106,7 @@ public class Class493 {
 		return stringbuilder.reverse().toString();
 	}
 
-	static char method8269(char c, Class495 class495) {
+	static char method8269(char c, Language class495) {
 		if (c >= '\u00c0' && c <= '\u00ff') {
 			if (c >= '\u00c0' && c <= '\u00c6')
 				return 'A';
@@ -116,7 +116,7 @@ public class Class493 {
 				return 'E';
 			if (c >= '\u00cc' && c <= '\u00cf')
 				return 'I';
-			if ('\u00d1' == c && Class495.aClass495_5800 != class495)
+			if ('\u00d1' == c && Language.aClass495_5800 != class495)
 				return 'N';
 			if (c >= '\u00d2' && c <= '\u00d6')
 				return 'O';
@@ -134,7 +134,7 @@ public class Class493 {
 				return 'e';
 			if (c >= '\u00ec' && c <= '\u00ef')
 				return 'i';
-			if ('\u00f1' == c && Class495.aClass495_5800 != class495)
+			if ('\u00f1' == c && Language.aClass495_5800 != class495)
 				return 'n';
 			if (c >= '\u00f2' && c <= '\u00f6')
 				return 'o';
@@ -152,7 +152,7 @@ public class Class493 {
 		return c;
 	}
 
-	static char method8270(char c, Class495 class495) {
+	static char method8270(char c, Language class495) {
 		if (c >= '\u00c0' && c <= '\u00ff') {
 			if (c >= '\u00c0' && c <= '\u00c6')
 				return 'A';
@@ -162,7 +162,7 @@ public class Class493 {
 				return 'E';
 			if (c >= '\u00cc' && c <= '\u00cf')
 				return 'I';
-			if ('\u00d1' == c && Class495.aClass495_5800 != class495)
+			if ('\u00d1' == c && Language.aClass495_5800 != class495)
 				return 'N';
 			if (c >= '\u00d2' && c <= '\u00d6')
 				return 'O';
@@ -180,7 +180,7 @@ public class Class493 {
 				return 'e';
 			if (c >= '\u00ec' && c <= '\u00ef')
 				return 'i';
-			if ('\u00f1' == c && Class495.aClass495_5800 != class495)
+			if ('\u00f1' == c && Language.aClass495_5800 != class495)
 				return 'n';
 			if (c >= '\u00f2' && c <= '\u00f6')
 				return 'o';

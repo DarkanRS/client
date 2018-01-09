@@ -15,7 +15,7 @@ public class Class194 {
 	static int anInt2402 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\u00a3$%^&*()-_=+[{]};:'@#~,<.>/?\\| \u00c4\u00cb\u00cf\u00d6\u00dc\u00e4\u00eb\u00ef\u00f6\u00fc\u00ff\u00df\u00c1\u00c0\u00c9\u00c8\u00cd\u00cc\u00d3\u00d2\u00da\u00d9\u00e1\u00e0\u00e9\u00e8\u00ed\u00ec\u00f3\u00f2\u00fa\u00f9\u00c2\u00ca\u00ce\u00d4\u00db\u00e2\u00ea\u00ee\u00f4\u00fb\u00c6\u00e6\u00e3\u00c3\u00f5\u00d5\u00e7\u00c7".length();
 	int[] anIntArray2403;
 	boolean aBool2404 = false;
-	Class160[] aClass160Array2405;
+	NativeSprite[] aClass160Array2405;
 	static int[] anIntArray2406 = new int[256];
 	int anInt2407;
 	int anInt2408;
@@ -29,7 +29,7 @@ public class Class194 {
 		return ((Class194) this).anInt2407;
 	}
 
-	void method3175(Class505 class505, String string, int[] is, int i, int i_0_, int i_1_, boolean bool) {
+	void method3175(GraphicalRenderer class505, String string, int[] is, int i, int i_0_, int i_1_, boolean bool) {
 		if (i_1_ == 0)
 			bool = false;
 		i_1_ |= ~0xffffff;
@@ -42,7 +42,7 @@ public class Class194 {
 		}
 	}
 
-	void method3176(Class505 class505, String string, int i, int i_4_, int i_5_, boolean bool) {
+	void method3176(GraphicalRenderer class505, String string, int i, int i_4_, int i_5_, boolean bool) {
 		int i_6_ = method3177(string) / 2;
 		class505.qa(((Class194) this).anIntArray2409);
 		if (i - i_6_ <= ((Class194) this).anIntArray2409[2] && i + i_6_ >= ((Class194) this).anIntArray2409[0] && (i_4_ - ((Class194) this).anInt2407 <= ((Class194) this).anIntArray2409[3]) && (i_4_ + ((Class194) this).anInt2408 >= ((Class194) this).anIntArray2409[1]))
@@ -58,14 +58,14 @@ public class Class194 {
 		return i;
 	}
 
-	void method3178(Class505 class505, String string, int i, int i_9_, int i_10_, boolean bool) {
+	void method3178(GraphicalRenderer class505, String string, int i, int i_9_, int i_10_, boolean bool) {
 		int i_11_ = method3177(string) / 2;
 		class505.qa(((Class194) this).anIntArray2409);
 		if (i - i_11_ <= ((Class194) this).anIntArray2409[2] && i + i_11_ >= ((Class194) this).anIntArray2409[0] && (i_9_ - ((Class194) this).anInt2407 <= ((Class194) this).anIntArray2409[3]) && (i_9_ + ((Class194) this).anInt2408 >= ((Class194) this).anIntArray2409[1]))
 			method3175(class505, string, ((Class194) this).anIntArray2409, i - i_11_, i_9_, i_10_, bool);
 	}
 
-	void method3179(Class505 class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
+	void method3179(GraphicalRenderer class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
 		int i_12_ = fontmetrics.charWidth(c);
 		int i_13_ = i_12_;
 		if (bool) {
@@ -116,7 +116,7 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_14_ - i_17_;
 		((Class194) this).anInt2408 = i_16_;
 		((Class194) this).anIntArray2403[i] = i_13_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_12_, i_12_, i_15_, -829104519);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_12_, i_12_, i_15_, -829104519);
 	}
 
 	static {
@@ -128,7 +128,7 @@ public class Class194 {
 		}
 	}
 
-	void method3180(Class505 class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
+	void method3180(GraphicalRenderer class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
 		int i_23_ = fontmetrics.charWidth(c);
 		int i_24_ = i_23_;
 		if (bool) {
@@ -179,10 +179,10 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_25_ - i_28_;
 		((Class194) this).anInt2408 = i_27_;
 		((Class194) this).anIntArray2403[i] = i_24_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_23_, i_23_, i_26_, 1394779103);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_23_, i_23_, i_26_, 1394779103);
 	}
 
-	void method3181(Class505 class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
+	void method3181(GraphicalRenderer class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
 		int i_33_ = fontmetrics.charWidth(c);
 		int i_34_ = i_33_;
 		if (bool) {
@@ -233,10 +233,10 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_35_ - i_38_;
 		((Class194) this).anInt2408 = i_37_;
 		((Class194) this).anIntArray2403[i] = i_34_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_33_, i_33_, i_36_, -918979358);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_33_, i_33_, i_36_, -918979358);
 	}
 
-	void method3182(Class505 class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
+	void method3182(GraphicalRenderer class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
 		int i_43_ = fontmetrics.charWidth(c);
 		int i_44_ = i_43_;
 		if (bool) {
@@ -287,12 +287,12 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_45_ - i_48_;
 		((Class194) this).anInt2408 = i_47_;
 		((Class194) this).anIntArray2403[i] = i_44_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_43_, i_43_, i_46_, -535318270);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_43_, i_43_, i_46_, -535318270);
 	}
 
-	Class194(Class505 class505, int i, boolean bool, Component component) {
+	Class194(GraphicalRenderer class505, int i, boolean bool, Component component) {
 		((Class194) this).aBool2404 = false;
-		((Class194) this).aClass160Array2405 = new Class160[256];
+		((Class194) this).aClass160Array2405 = new NativeSprite[256];
 		((Class194) this).anIntArray2403 = new int[256];
 		Font font = new Font("Helvetica", bool ? 1 : 0, i);
 		FontMetrics fontmetrics = component.getFontMetrics(font);
@@ -330,7 +330,7 @@ public class Class194 {
 		return i;
 	}
 
-	void method3185(Class505 class505, String string, int i, int i_60_, int i_61_, boolean bool) {
+	void method3185(GraphicalRenderer class505, String string, int i, int i_60_, int i_61_, boolean bool) {
 		int i_62_ = method3177(string) / 2;
 		class505.qa(((Class194) this).anIntArray2409);
 		if (i - i_62_ <= ((Class194) this).anIntArray2409[2] && i + i_62_ >= ((Class194) this).anIntArray2409[0] && (i_60_ - ((Class194) this).anInt2407 <= ((Class194) this).anIntArray2409[3]) && (i_60_ + ((Class194) this).anInt2408 >= ((Class194) this).anIntArray2409[1]))
@@ -341,7 +341,7 @@ public class Class194 {
 		return ((Class194) this).anInt2407;
 	}
 
-	void method3187(Class505 class505, String string, int[] is, int i, int i_63_, int i_64_, boolean bool) {
+	void method3187(GraphicalRenderer class505, String string, int[] is, int i, int i_63_, int i_64_, boolean bool) {
 		if (i_64_ == 0)
 			bool = false;
 		i_64_ |= ~0xffffff;

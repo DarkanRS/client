@@ -105,7 +105,7 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 	}
 
 	static final void method15437(CS2Executor class527, short i) {
-		if (0 != -1741204137 * client.anInt7166 || Class203.method3360((byte) 56)) {
+		if (0 != -1741204137 * client.anInt7166 || Js5CacheFile.method3360((byte) 56)) {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		} else if (Class448.aBool5422) {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
@@ -125,7 +125,7 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 			RsByteBuffer class282_sub35 = new RsByteBuffer(is);
 			int i_0_ = class282_sub35.readUnsignedByte();
 			int i_1_ = class282_sub35.readInt();
-			if (i_1_ < 0 || (1020558379 * Class317.anInt3689 != 0 && i_1_ > 1020558379 * Class317.anInt3689)) {
+			if (i_1_ < 0 || (1020558379 * Index.anInt3689 != 0 && i_1_ > 1020558379 * Index.anInt3689)) {
 				throw new RuntimeException();
 			}
 			if (0 == i_0_) {
@@ -134,15 +134,15 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 				return is_2_;
 			}
 			int i_3_ = class282_sub35.readInt();
-			if (i_3_ < 0 || (0 != Class317.anInt3689 * 1020558379 && i_3_ > 1020558379 * Class317.anInt3689)) {
+			if (i_3_ < 0 || (0 != Index.anInt3689 * 1020558379 && i_3_ > 1020558379 * Index.anInt3689)) {
 				throw new RuntimeException();
 			}
 			byte[] is_4_ = new byte[i_3_];
 			if (i_0_ == 1) {
 				Class471.method7828(is_4_, i_3_, is, i_1_, 9);
 			} else {
-				synchronized (Class317.aClass395_3684) {
-					Class317.aClass395_3684.method6767(class282_sub35, is_4_, -1958864927);
+				synchronized (Index.aClass395_3684) {
+					Index.aClass395_3684.method6767(class282_sub35, is_4_, -1958864927);
 				}
 			}
 			return is_4_;

@@ -4,39 +4,39 @@
  */
 import java.util.Locale;
 
-public class Class495 implements Interface43 {
-	public static Class495 aClass495_5795 = new Class495("EN", "en", "English", Class496.aClass496_5813, 0, "GB");
-	static Class495[] aClass495Array5796;
-	public static Class495 aClass495_5797;
+public class Language implements Interface43 {
+	public static Language aClass495_5795 = new Language("EN", "en", "English", Class496.aClass496_5813, 0, "GB");
+	static Language[] aClass495Array5796;
+	public static Language aClass495_5797;
 	public static final int anInt5798 = 6;
-	static Class495 aClass495_5799;
-	public static Class495 aClass495_5800;
-	public static Class495 aClass495_5801;
-	public static Class495 aClass495_5802 = new Class495("DE", "de", "German", Class496.aClass496_5813, 1, "DE");
+	static Language aClass495_5799;
+	public static Language aClass495_5800;
+	public static Language aClass495_5801;
+	public static Language aClass495_5802 = new Language("DE", "de", "German", Class496.aClass496_5813, 1, "DE");
 	String aString5803;
 	int anInt5804;
 	Locale aLocale5805;
 	String aString5806;
 
 	public int method75() {
-		return -1324357023 * ((Class495) this).anInt5804;
+		return -1324357023 * ((Language) this).anInt5804;
 	}
 
-	Class495(String string, String string_0_, String string_1_, Class496 class496, int i, String string_2_) {
-		((Class495) this).aString5806 = string;
-		((Class495) this).aString5803 = string_0_;
-		((Class495) this).anInt5804 = 411974049 * i;
+	Language(String string, String string_0_, String string_1_, Class496 class496, int i, String string_2_) {
+		((Language) this).aString5806 = string;
+		((Language) this).aString5803 = string_0_;
+		((Language) this).anInt5804 = 411974049 * i;
 		Locale locale = null;
 		if (string_2_ != null)
 			locale = new Locale(method8276(1011487553), string_2_);
 		if (locale != null)
-			((Class495) this).aLocale5805 = locale;
+			((Language) this).aLocale5805 = locale;
 		else
-			((Class495) this).aLocale5805 = new Locale(method8276(1390953905));
+			((Language) this).aLocale5805 = new Locale(method8276(1390953905));
 	}
 
 	public String method8276(int i) {
-		return ((Class495) this).aString5803;
+		return ((Language) this).aString5803;
 	}
 
 	static final void method8277(Class118 class118, Class98 class98, CS2Executor class527, int i) {
@@ -48,10 +48,10 @@ public class Class495 implements Interface43 {
 	}
 
 	public int method243(byte i) {
-		return -1324357023 * ((Class495) this).anInt5804;
+		return -1324357023 * ((Language) this).anInt5804;
 	}
 
-	public static Class495 method8278(int i, int i_3_) {
+	public static Language method8278(int i, int i_3_) {
 		if (i < 0 || i >= aClass495Array5796.length)
 			return null;
 		return aClass495Array5796[i];
@@ -62,47 +62,23 @@ public class Class495 implements Interface43 {
 	}
 
 	static {
-		aClass495_5801 = new Class495("FR", "fr", "French", Class496.aClass496_5813, 2, "FR");
-		aClass495_5797 = new Class495("PT", "pt", "Portuguese", Class496.aClass496_5813, 3, "BR");
-		aClass495_5799 = new Class495("NL", "nl", "Dutch", Class496.aClass496_5807, 4, "NL");
-		aClass495_5800 = new Class495("ES", "es", "Spanish", Class496.aClass496_5807, 5, "ES");
-		Class495[] class495s = method8294(135762264);
-		aClass495Array5796 = new Class495[class495s.length];
-		Class495[] class495s_4_ = class495s;
+		aClass495_5801 = new Language("FR", "fr", "French", Class496.aClass496_5813, 2, "FR");
+		aClass495_5797 = new Language("PT", "pt", "Portuguese", Class496.aClass496_5813, 3, "BR");
+		aClass495_5799 = new Language("NL", "nl", "Dutch", Class496.aClass496_5807, 4, "NL");
+		aClass495_5800 = new Language("ES", "es", "Spanish", Class496.aClass496_5807, 5, "ES");
+		Language[] class495s = method8294(135762264);
+		aClass495Array5796 = new Language[class495s.length];
+		Language[] class495s_4_ = class495s;
 		for (int i = 0; i < class495s_4_.length; i++) {
-			Class495 class495 = class495s_4_[i];
-			if ((aClass495Array5796[-1324357023 * ((Class495) class495).anInt5804]) != null)
+			Language class495 = class495s_4_[i];
+			if ((aClass495Array5796[-1324357023 * ((Language) class495).anInt5804]) != null)
 				throw new IllegalStateException();
-			aClass495Array5796[-1324357023 * ((Class495) class495).anInt5804] = class495;
+			aClass495Array5796[-1324357023 * ((Language) class495).anInt5804] = class495;
 		}
 	}
 
-	public String method8279() {
-		return method8276(1871363869).toLowerCase(Locale.ENGLISH);
-	}
-
-	public String method8280() {
-		return method8276(1083381343).toLowerCase(Locale.ENGLISH);
-	}
-
-	public String method8281() {
-		return ((Class495) this).aString5803;
-	}
-
 	public int method76() {
-		return -1324357023 * ((Class495) this).anInt5804;
-	}
-
-	public static Class495[] method8282() {
-		return (new Class495[] { aClass495_5795, aClass495_5801, aClass495_5800, aClass495_5797, aClass495_5802, aClass495_5799 });
-	}
-
-	public static Class495[] method8283() {
-		return (new Class495[] { aClass495_5795, aClass495_5801, aClass495_5800, aClass495_5797, aClass495_5802, aClass495_5799 });
-	}
-
-	public String method8284() {
-		return ((Class495) this).aString5803;
+		return -1324357023 * ((Language) this).anInt5804;
 	}
 
 	static final void method8285(CS2Executor class527, int i) {
@@ -112,42 +88,12 @@ public class Class495 implements Interface43 {
 		TilestreamPacket.method6289(class118, class98, class527, (byte) 30);
 	}
 
-	public String method8286() {
-		return ((Class495) this).aString5803;
-	}
-
-	public String method8287() {
-		return ((Class495) this).aString5803;
-	}
-
-	public static Class495[] method8288() {
-		return (new Class495[] { aClass495_5795, aClass495_5801, aClass495_5800, aClass495_5797, aClass495_5802, aClass495_5799 });
-	}
-
-	public Locale method8289() {
-		return ((Class495) this).aLocale5805;
-	}
-
-	public Locale method8290() {
-		return ((Class495) this).aLocale5805;
-	}
-
-	public Locale method8291() {
-		return ((Class495) this).aLocale5805;
-	}
-
-	public static Class495 method8292(int i) {
-		if (i < 0 || i >= aClass495Array5796.length)
-			return null;
-		return aClass495Array5796[i];
-	}
-
 	public Locale method8293(int i) {
-		return ((Class495) this).aLocale5805;
+		return ((Language) this).aLocale5805;
 	}
 
-	public static Class495[] method8294(int i) {
-		return (new Class495[] { aClass495_5795, aClass495_5801, aClass495_5800, aClass495_5797, aClass495_5802, aClass495_5799 });
+	public static Language[] method8294(int i) {
+		return (new Language[] { aClass495_5795, aClass495_5801, aClass495_5800, aClass495_5797, aClass495_5802, aClass495_5799 });
 	}
 
 	static final void method8295(CS2Executor class527, int i) {

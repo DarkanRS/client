@@ -40,7 +40,7 @@ public class Class524 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.get(i_1_, (byte) 0);
 		if (class437.method7319(1753438100))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = client.aClass257_7353.method4436(-2071995524).method7891(i_0_, 65280).method7973(i_1_, class437.aString5335, (byte) 97);
 		else

@@ -20,7 +20,7 @@ public class Class240 {
 	int[] anIntArray2969;
 	int[] anIntArray2970;
 	public String[] aStringArray2971;
-	SwitchMap aClass465_2972;
+	IterableNodeMap aClass465_2972;
 	public int anInt2973;
 	int[] anIntArray2974;
 	public String[] aStringArray2975;
@@ -150,12 +150,12 @@ public class Class240 {
 			int i_22_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_23_ = Class323.nextPowerOfTwo(i_22_, -265127005);
-				((Class240) this).aClass465_2972 = new SwitchMap(i_23_);
+				((Class240) this).aClass465_2972 = new IterableNodeMap(i_23_);
 			}
 			for (int i_24_ = 0; i_24_ < i_22_; i_24_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_25_ = class282_sub35.read24BitUnsignedInteger((short) 29962);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(-375319548));
 				else
@@ -325,12 +325,12 @@ public class Class240 {
 			int i_46_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_47_ = Class323.nextPowerOfTwo(i_46_, -1340245685);
-				((Class240) this).aClass465_2972 = new SwitchMap(i_47_);
+				((Class240) this).aClass465_2972 = new IterableNodeMap(i_47_);
 			}
 			for (int i_48_ = 0; i_48_ < i_46_; i_48_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_49_ = class282_sub35.read24BitUnsignedInteger((short) 4505);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(1090369711));
 				else
@@ -477,12 +477,12 @@ public class Class240 {
 			int i_69_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_70_ = Class323.nextPowerOfTwo(i_69_, 1436487749);
-				((Class240) this).aClass465_2972 = new SwitchMap(i_70_);
+				((Class240) this).aClass465_2972 = new IterableNodeMap(i_70_);
 			}
 			for (int i_71_ = 0; i_71_ < i_69_; i_71_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_72_ = class282_sub35.read24BitUnsignedInteger((short) 20301);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(-297164470));
 				else
@@ -600,12 +600,12 @@ public class Class240 {
 			int i_90_ = class282_sub35.readUnsignedByte();
 			if (((Class240) this).aClass465_2972 == null) {
 				int i_91_ = Class323.nextPowerOfTwo(i_90_, 1161727098);
-				((Class240) this).aClass465_2972 = new SwitchMap(i_91_);
+				((Class240) this).aClass465_2972 = new IterableNodeMap(i_91_);
 			}
 			for (int i_92_ = 0; i_92_ < i_90_; i_92_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_93_ = class282_sub35.read24BitUnsignedInteger((short) 4404);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(242580108));
 				else
@@ -890,24 +890,24 @@ public class Class240 {
 		class282_sub35_sub2.writeInt(Class512.aClass317_5884.method5602(2033220703));
 		class282_sub35_sub2.writeInt(Class110.aClass317_1106.method5602(1996794176));
 		class282_sub35_sub2.writeInt(Class211.aClass317_2673.method5602(2097071200));
-		class282_sub35_sub2.writeInt(Class437.aClass317_5340.method5602(2061749967));
+		class282_sub35_sub2.writeInt(AttributeDefault.aClass317_5340.method5602(2061749967));
 		class282_sub35_sub2.writeInt(Class250.aClass317_3093.method5602(2018943730));
 		class282_sub35_sub2.writeInt(Class525.aClass317_6984.method5602(2147215250));
 		class282_sub35_sub2.writeInt(Class378.aClass317_4526.method5602(2146754659));
 		class282_sub35_sub2.writeInt(Class410.aClass317_4924.method5602(2068022010));
-		class282_sub35_sub2.writeInt(Class313.aClass317_3665.method5602(2028022241));
+		class282_sub35_sub2.writeInt(Js5LocalRequester.aClass317_3665.method5602(2028022241));
 		class282_sub35_sub2.writeInt(Class211.aClass317_2674.method5602(2086806955));
 		class282_sub35_sub2.writeInt(Class273.aClass317_3332.method5602(2005863325));
 		class282_sub35_sub2.writeInt(Class236.aClass317_2915.method5602(2143751638));
 		class282_sub35_sub2.writeInt(Class107.aClass317_1081.method5602(2030471978));
 		class282_sub35_sub2.writeInt(Class383.aClass317_4665.method5602(2137011935));
 		class282_sub35_sub2.writeInt(Class235.aClass317_2908.method5602(2104587732));
-		class282_sub35_sub2.writeInt(Class322.aClass317_3749.method5602(2069288346));
+		class282_sub35_sub2.writeInt(ReferenceTable.aClass317_3749.method5602(2069288346));
 		class282_sub35_sub2.writeInt(Class222.aClass317_2766.method5602(2038006906));
 		class282_sub35_sub2.writeInt(Class192.worldMap.method5602(2130821470));
 		class282_sub35_sub2.writeInt(Class371.aClass317_4326.method5602(2007599721));
 		class282_sub35_sub2.writeInt(Class329.aClass317_3861.method5602(2002938651));
-		class282_sub35_sub2.writeInt(Class40.aClass317_412.method5602(2068991796));
+		class282_sub35_sub2.writeInt(NamedFileReference.aClass317_412.method5602(2068991796));
 		class282_sub35_sub2.writeInt(Class468_Sub7.aClass317_7886.method5602(2104820430));
 		class282_sub35_sub2.writeInt(Class520.aClass317_5935.method5602(2122359694));
 		class282_sub35_sub2.writeInt(Class215.aClass317_2686.method5602(2028882723));

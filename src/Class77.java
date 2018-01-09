@@ -166,7 +166,7 @@ public class Class77 {
 	}
 
 	public static void method1369(Class523 class523, int i) {
-		Class40.aClass523_411 = class523;
+		NamedFileReference.aClass523_411 = class523;
 	}
 
 	static final void method1370(CS2Executor class527, int i) {

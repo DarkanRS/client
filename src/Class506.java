@@ -18,7 +18,7 @@ public class Class506 {
 		if (is == null || is.length <= 1)
 			return null;
 		try {
-			class282_sub50_sub5 = Class505.method8699(is, -1488494907);
+			class282_sub50_sub5 = GraphicalRenderer.method8699(is, -1488494907);
 		} catch (Exception exception) {
 			throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i).toString());
 		}
@@ -42,7 +42,7 @@ public class Class506 {
 		if (is == null || is.length <= 1)
 			return null;
 		try {
-			class282_sub50_sub5 = Class505.method8699(is, -2147252114);
+			class282_sub50_sub5 = GraphicalRenderer.method8699(is, -2147252114);
 		} catch (Exception exception) {
 			throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i).toString());
 		}
@@ -58,7 +58,7 @@ public class Class506 {
 		if (is == null || is.length <= 1)
 			return null;
 		try {
-			class282_sub50_sub5 = Class505.method8699(is, 1054962374);
+			class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1054962374);
 		} catch (Exception exception) {
 			throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i).toString());
 		}
@@ -80,7 +80,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 2103535988);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 2103535988);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_1_).toString());
 			}
@@ -97,7 +97,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, -150029478);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, -150029478);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_1_).toString());
 			}
@@ -114,7 +114,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 226413161);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 226413161);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_1_).toString());
 			}
@@ -135,7 +135,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1677019033);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1677019033);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_3_).toString());
 			}
@@ -152,7 +152,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1167995945);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1167995945);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_3_).toString());
 			}
@@ -169,7 +169,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 772753336);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 772753336);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_3_).toString());
 			}
@@ -190,7 +190,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1468515664);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1468515664);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_5_).toString());
 			}
@@ -207,7 +207,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1075927691);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1075927691);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_5_).toString());
 			}
@@ -224,7 +224,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, -1178408736);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, -1178408736);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_5_).toString());
 			}
@@ -245,7 +245,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, -633182637);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, -633182637);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_7_).toString());
 			}
@@ -262,7 +262,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, -2059364468);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, -2059364468);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_7_).toString());
 			}
@@ -279,7 +279,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1631421068);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1631421068);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_7_).toString());
 			}
@@ -300,7 +300,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1168530960);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1168530960);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_9_).toString());
 			}
@@ -317,7 +317,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 1503047364);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 1503047364);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_9_).toString());
 			}
@@ -334,7 +334,7 @@ public class Class506 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, -345933703);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, -345933703);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_9_).toString());
 			}
@@ -398,31 +398,31 @@ public class Class506 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).globalArrays[i_15_][i_16_];
 	}
 
-	public static ItemEffects decodeItemEffects(ItemDefinitions class425, RsByteBuffer stream, int i) {
-		ItemEffects class422 = new ItemEffects(class425);
+	public static MeshModifier decodeItemEffects(ItemDefinitions class425, RsByteBuffer stream, int i) {
+		MeshModifier class422 = new MeshModifier(class425);
 		int flags = stream.readUnsignedByte();
 		boolean modifyModel = (flags & 0x1) != 0;
 		boolean bool_18_ = 0 != (flags & 0x2);
 		boolean modifyModelColors = 0 != (flags & 0x4);
 		boolean bool_20_ = (flags & 0x8) != 0;
 		if (modifyModel) {
-			class422.anIntArray5025[0] = stream.readBigSmart(1983228552);
-			class422.anIntArray5021[0] = stream.readBigSmart(1966660718);
-			if (-1 != ((ItemDefinitions) class425).anInt5100 * -931922913 || -1259031521 * ((ItemDefinitions) class425).anInt5069 != -1) {
-				class422.anIntArray5025[1] = stream.readBigSmart(1966117219);
-				class422.anIntArray5021[1] = stream.readBigSmart(1968077484);
+			class422.maleBody[0] = stream.readBigSmart(1983228552);
+			class422.femaleBody[0] = stream.readBigSmart(1966660718);
+			if (-1 != ((ItemDefinitions) class425).maleBody2 * -931922913 || -1259031521 * ((ItemDefinitions) class425).femaleBody2 != -1) {
+				class422.maleBody[1] = stream.readBigSmart(1966117219);
+				class422.femaleBody[1] = stream.readBigSmart(1968077484);
 			}
-			if (-1 != -562041407 * ((ItemDefinitions) class425).anInt5070 || -1 != -1802576377 * ((ItemDefinitions) class425).anInt5071) {
-				class422.anIntArray5025[2] = stream.readBigSmart(2019468783);
-				class422.anIntArray5021[2] = stream.readBigSmart(1953029845);
+			if (-1 != -562041407 * ((ItemDefinitions) class425).maleBody3 || -1 != -1802576377 * ((ItemDefinitions) class425).femaleBody3) {
+				class422.maleBody[2] = stream.readBigSmart(2019468783);
+				class422.femaleBody[2] = stream.readBigSmart(1953029845);
 			}
 		}
 		if (bool_18_) {
-			class422.anIntArray5022[0] = stream.readBigSmart(2017468211);
-			class422.anIntArray5023[0] = stream.readBigSmart(2066820244);
-			if (-1 != -613723223 * ((ItemDefinitions) class425).anInt5079 || -1 != -1871546585 * ((ItemDefinitions) class425).anInt5081) {
-				class422.anIntArray5022[1] = stream.readBigSmart(2051081301);
-				class422.anIntArray5023[1] = stream.readBigSmart(1969156030);
+			class422.maleHeads[0] = stream.readBigSmart(2017468211);
+			class422.femaleHeads[0] = stream.readBigSmart(2066820244);
+			if (-1 != -613723223 * ((ItemDefinitions) class425).maleHead2 || -1 != -1871546585 * ((ItemDefinitions) class425).femaleHead2) {
+				class422.maleHeads[1] = stream.readBigSmart(2051081301);
+				class422.femaleHeads[1] = stream.readBigSmart(1969156030);
 			}
 		}
 		if (modifyModelColors) {
@@ -434,7 +434,7 @@ public class Class506 {
 			slots[3] = flag >> 12 & 0xf;
 			for (int slotId = 0; slotId < 4; slotId++) {
 				if (slots[slotId] != 15) {
-					class422.aShortArray5020[slots[slotId]] = (short) stream.readUnsignedShort();
+					class422.modifiedColors[slots[slotId]] = (short) stream.readUnsignedShort();
 				}
 			}
 		}
@@ -445,7 +445,7 @@ public class Class506 {
 			is[1] = i_23_ >> 4 & 0xf;
 			for (int i_24_ = 0; i_24_ < 2; i_24_++) {
 				if (15 != is[i_24_])
-					class422.aShortArray5019[is[i_24_]] = (short) stream.readUnsignedShort();
+					class422.modifiedTextures[is[i_24_]] = (short) stream.readUnsignedShort();
 			}
 		}
 		return class422;

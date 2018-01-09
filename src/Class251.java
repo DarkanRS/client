@@ -1178,7 +1178,7 @@ public final class Class251 {
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 2)) - 654473753 * Class121.anInt1527).toString(), -2049086171);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -927245115)), -314816204);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -927245115)), -314816204);
 			}
 			return;
 		} while (false);
@@ -1378,12 +1378,12 @@ public final class Class251 {
 					client.aClass184_7475.method3049(class282_sub23, -273447008);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1449846660)), -1151783606);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1449846660)), -1151783606);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Class433.aClass433_5160.method7273(Class223.aClass495_2772, -1344246012)).append(string).toString(), -1444759652);
+			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -1344246012)).append(string).toString(), -1444759652);
 	}
 
 	static void method4314(CS2Executor class527, int i) {

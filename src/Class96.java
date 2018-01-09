@@ -354,7 +354,7 @@ public abstract class Class96 {
 		Class61.aClass160_647 = null;
 		Class60.aClass160_612 = null;
 		Class467.aClass160_5576 = null;
-		Class437.aClass160_5339 = null;
+		AttributeDefault.aClass160_5339 = null;
 		Class290.aClass160_3452 = null;
 		Class354.aClass160_4110 = null;
 		Class125.aClass160_1571 = null;

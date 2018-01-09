@@ -5,8 +5,8 @@
 public class Class107 {
 	Interface11 anInterface11_1078;
 	Class282_Sub21[] aClass282_Sub21Array1079;
-	SwitchMap aClass465_1080;
-	public static Class317 aClass317_1081;
+	IterableNodeMap aClass465_1080;
+	public static Index aClass317_1081;
 	protected static int anInt1082;
 
 	public Class107(int i, Interface11 interface11) {
@@ -14,7 +14,7 @@ public class Class107 {
 		for (i_0_ = 1; i_0_ < i; i_0_ += i_0_) {
 			/* empty */
 		}
-		((Class107) this).aClass465_1080 = new SwitchMap(i_0_);
+		((Class107) this).aClass465_1080 = new IterableNodeMap(i_0_);
 		((Class107) this).aClass282_Sub21Array1079 = new Class282_Sub21[i_0_];
 		((Class107) this).anInterface11_1078 = interface11;
 	}
@@ -40,7 +40,7 @@ public class Class107 {
 	void method1821(int i, short i_1_) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1887501575);
 		if (null != class282_sub21) {
-			class282_sub21.method4991(-371378792);
+			class282_sub21.unlink(-371378792);
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -55,11 +55,11 @@ public class Class107 {
 			for (i_4_ = ((Class107) this).aClass282_Sub21Array1079.length; i >= i_4_; i_4_ += i_4_) {
 				/* empty */
 			}
-			((Class107) this).aClass465_1080 = new SwitchMap(i_4_);
+			((Class107) this).aClass465_1080 = new IterableNodeMap(i_4_);
 			for (int i_5_ = 0; i_5_ < ((Class107) this).aClass282_Sub21Array1079.length; i_5_++) {
 				Class282_Sub21 class282_sub21_6_ = ((Class107) this).aClass282_Sub21Array1079[i_5_];
 				if (null != class282_sub21_6_)
-					((Class107) this).aClass465_1080.method7765(class282_sub21_6_, class282_sub21_6_.aLong3379 * -3442165056282524525L);
+					((Class107) this).aClass465_1080.method7765(class282_sub21_6_, class282_sub21_6_.uid * -3442165056282524525L);
 			}
 			Class282_Sub21[] class282_sub21s = new Class282_Sub21[i_4_];
 			for (int i_7_ = 0; i_7_ < ((Class107) this).aClass282_Sub21Array1079.length; i_7_++)
@@ -96,7 +96,7 @@ public class Class107 {
 	void method1826(int i) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1913214087);
 		if (null != class282_sub21) {
-			class282_sub21.method4991(-371378792);
+			class282_sub21.unlink(-371378792);
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -110,7 +110,7 @@ public class Class107 {
 	void method1828(int i) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1989060357);
 		if (null != class282_sub21) {
-			class282_sub21.method4991(-371378792);
+			class282_sub21.unlink(-371378792);
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -118,7 +118,7 @@ public class Class107 {
 	void method1829(int i) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1705037884);
 		if (null != class282_sub21) {
-			class282_sub21.method4991(-371378792);
+			class282_sub21.unlink(-371378792);
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -133,11 +133,11 @@ public class Class107 {
 			for (i_10_ = ((Class107) this).aClass282_Sub21Array1079.length; i >= i_10_; i_10_ += i_10_) {
 				/* empty */
 			}
-			((Class107) this).aClass465_1080 = new SwitchMap(i_10_);
+			((Class107) this).aClass465_1080 = new IterableNodeMap(i_10_);
 			for (int i_11_ = 0; i_11_ < ((Class107) this).aClass282_Sub21Array1079.length; i_11_++) {
 				Class282_Sub21 class282_sub21_12_ = ((Class107) this).aClass282_Sub21Array1079[i_11_];
 				if (null != class282_sub21_12_)
-					((Class107) this).aClass465_1080.method7765(class282_sub21_12_, class282_sub21_12_.aLong3379 * -3442165056282524525L);
+					((Class107) this).aClass465_1080.method7765(class282_sub21_12_, class282_sub21_12_.uid * -3442165056282524525L);
 			}
 			Class282_Sub21[] class282_sub21s = new Class282_Sub21[i_10_];
 			for (int i_13_ = 0; i_13_ < ((Class107) this).aClass282_Sub21Array1079.length; i_13_++)
@@ -160,11 +160,11 @@ public class Class107 {
 			for (i_15_ = ((Class107) this).aClass282_Sub21Array1079.length; i >= i_15_; i_15_ += i_15_) {
 				/* empty */
 			}
-			((Class107) this).aClass465_1080 = new SwitchMap(i_15_);
+			((Class107) this).aClass465_1080 = new IterableNodeMap(i_15_);
 			for (int i_16_ = 0; i_16_ < ((Class107) this).aClass282_Sub21Array1079.length; i_16_++) {
 				Class282_Sub21 class282_sub21_17_ = ((Class107) this).aClass282_Sub21Array1079[i_16_];
 				if (null != class282_sub21_17_)
-					((Class107) this).aClass465_1080.method7765(class282_sub21_17_, class282_sub21_17_.aLong3379 * -3442165056282524525L);
+					((Class107) this).aClass465_1080.method7765(class282_sub21_17_, class282_sub21_17_.uid * -3442165056282524525L);
 			}
 			Class282_Sub21[] class282_sub21s = new Class282_Sub21[i_15_];
 			for (int i_18_ = 0; i_18_ < ((Class107) this).aClass282_Sub21Array1079.length; i_18_++)
@@ -187,11 +187,11 @@ public class Class107 {
 			for (i_20_ = ((Class107) this).aClass282_Sub21Array1079.length; i >= i_20_; i_20_ += i_20_) {
 				/* empty */
 			}
-			((Class107) this).aClass465_1080 = new SwitchMap(i_20_);
+			((Class107) this).aClass465_1080 = new IterableNodeMap(i_20_);
 			for (int i_21_ = 0; i_21_ < ((Class107) this).aClass282_Sub21Array1079.length; i_21_++) {
 				Class282_Sub21 class282_sub21_22_ = ((Class107) this).aClass282_Sub21Array1079[i_21_];
 				if (null != class282_sub21_22_)
-					((Class107) this).aClass465_1080.method7765(class282_sub21_22_, class282_sub21_22_.aLong3379 * -3442165056282524525L);
+					((Class107) this).aClass465_1080.method7765(class282_sub21_22_, class282_sub21_22_.uid * -3442165056282524525L);
 			}
 			Class282_Sub21[] class282_sub21s = new Class282_Sub21[i_20_];
 			for (int i_23_ = 0; i_23_ < ((Class107) this).aClass282_Sub21Array1079.length; i_23_++)
@@ -214,11 +214,11 @@ public class Class107 {
 			for (i_25_ = ((Class107) this).aClass282_Sub21Array1079.length; i >= i_25_; i_25_ += i_25_) {
 				/* empty */
 			}
-			((Class107) this).aClass465_1080 = new SwitchMap(i_25_);
+			((Class107) this).aClass465_1080 = new IterableNodeMap(i_25_);
 			for (int i_26_ = 0; i_26_ < ((Class107) this).aClass282_Sub21Array1079.length; i_26_++) {
 				Class282_Sub21 class282_sub21_27_ = ((Class107) this).aClass282_Sub21Array1079[i_26_];
 				if (null != class282_sub21_27_)
-					((Class107) this).aClass465_1080.method7765(class282_sub21_27_, class282_sub21_27_.aLong3379 * -3442165056282524525L);
+					((Class107) this).aClass465_1080.method7765(class282_sub21_27_, class282_sub21_27_.uid * -3442165056282524525L);
 			}
 			Class282_Sub21[] class282_sub21s = new Class282_Sub21[i_25_];
 			for (int i_28_ = 0; i_28_ < ((Class107) this).aClass282_Sub21Array1079.length; i_28_++)

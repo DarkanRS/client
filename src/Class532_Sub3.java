@@ -23,7 +23,7 @@ public class Class532_Sub3 extends Class532 {
 	}
 
 	static final void method12886(int i, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
-		Class426.method7170(i_7_, 377314002);
+		ItemIndexLoader.method7170(i_7_, 377314002);
 		int i_11_ = 0;
 		int i_12_ = i_7_ - i_10_;
 		if (i_12_ < 0)
@@ -99,7 +99,7 @@ public class Class532_Sub3 extends Class532 {
 	}
 
 	static final void method12887(int i, int i_39_, int i_40_, int i_41_, int i_42_, int i_43_) {
-		Class426.method7170(i_40_, 377314002);
+		ItemIndexLoader.method7170(i_40_, 377314002);
 		int i_44_ = 0;
 		int i_45_ = i_40_ - i_43_;
 		if (i_45_ < 0)
@@ -175,7 +175,7 @@ public class Class532_Sub3 extends Class532 {
 	}
 
 	static final void method12888(int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_) {
-		Class426.method7170(i_73_, 377314002);
+		ItemIndexLoader.method7170(i_73_, 377314002);
 		int i_77_ = 0;
 		int i_78_ = i_73_ - i_76_;
 		if (i_78_ < 0)
@@ -281,7 +281,7 @@ public class Class532_Sub3 extends Class532 {
 	}
 
 	static final void method12889(int i, int i_105_, int i_106_, int i_107_, int i_108_, int i_109_) {
-		Class426.method7170(i_106_, 377314002);
+		ItemIndexLoader.method7170(i_106_, 377314002);
 		int i_110_ = 0;
 		int i_111_ = i_106_ - i_109_;
 		if (i_111_ < 0)
@@ -383,7 +383,7 @@ public class Class532_Sub3 extends Class532 {
 	}
 
 	static final void method12890(int i, int i_138_, int i_139_, int i_140_, int i_141_, int i_142_) {
-		Class426.method7170(i_139_, 377314002);
+		ItemIndexLoader.method7170(i_139_, 377314002);
 		int i_143_ = 0;
 		int i_144_ = i_139_ - i_142_;
 		if (i_144_ < 0)
@@ -548,7 +548,7 @@ public class Class532_Sub3 extends Class532 {
 	}
 
 	static final void method12894(int i, int i_197_, int i_198_, int i_199_, int i_200_, int i_201_) {
-		Class426.method7170(i_198_, 377314002);
+		ItemIndexLoader.method7170(i_198_, 377314002);
 		int i_202_ = 0;
 		int i_203_ = i_198_ - i_201_;
 		if (i_203_ < 0)

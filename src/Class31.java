@@ -4,10 +4,10 @@
  */
 import java.io.IOException;
 
-public class Class31 implements Interface20 {
-	Class317 aClass317_358;
-	Class317 aClass317_359;
-	Class229 aClass229_360 = new Class229(64);
+public class Class31 implements IndexLoader {
+	Index aClass317_358;
+	Index aClass317_359;
+	SoftCache aClass229_360 = new SoftCache(64);
 	public static int anInt361;
 
 	public void method799() {
@@ -19,20 +19,20 @@ public class Class31 implements Interface20 {
 	public Class44 method800(int i, int i_0_) {
 		Class44 class44;
 		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.method3865((long) i));
+			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
 		}
 		if (class44 != null)
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1429017309);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.anInt1521)), i, -1429017309);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
 		if (null != is)
 			class44.method909(new RsByteBuffer(is), -1148034067);
 		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3856(class44, (long) i);
+			((Class31) this).aClass229_360.put(class44, (long) i);
 		}
 		return class44;
 	}
@@ -64,28 +64,28 @@ public class Class31 implements Interface20 {
 	public Class44 method805(int i) {
 		Class44 class44;
 		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.method3865((long) i));
+			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
 		}
 		if (class44 != null)
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1720300705);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.anInt1521)), i, -1720300705);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
 		if (null != is)
 			class44.method909(new RsByteBuffer(is), -1148034067);
 		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3856(class44, (long) i);
+			((Class31) this).aClass229_360.put(class44, (long) i);
 		}
 		return class44;
 	}
 
-	public Class31(Class486 class486, Class495 class495, Class317 class317, Class317 class317_2_) {
+	public Class31(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class31) this).aClass317_358 = class317;
 		((Class31) this).aClass317_359 = class317_2_;
-		((Class31) this).aClass317_358.method5624(-71319279 * (Class120.aClass120_1466.anInt1521), 409432994);
+		((Class31) this).aClass317_358.filesCount(-71319279 * (SharedConfigsType.aClass120_1466.anInt1521), 409432994);
 	}
 
 	public void method806() {
@@ -97,20 +97,20 @@ public class Class31 implements Interface20 {
 	public Class44 method807(int i) {
 		Class44 class44;
 		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.method3865((long) i));
+			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
 		}
 		if (class44 != null)
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (Class120.aClass120_1466.anInt1521)), i, -1398702478);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.anInt1521)), i, -1398702478);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
 		if (null != is)
 			class44.method909(new RsByteBuffer(is), -1148034067);
 		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3856(class44, (long) i);
+			((Class31) this).aClass229_360.put(class44, (long) i);
 		}
 		return class44;
 	}

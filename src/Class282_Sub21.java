@@ -2,8 +2,8 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub21 extends Class282 {
-	static Class160[] aClass160Array7673;
+public class Class282_Sub21 extends Node {
+	static NativeSprite[] aClass160Array7673;
 	String aString7674;
 	int anInt7675;
 

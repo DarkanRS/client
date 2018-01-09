@@ -12,9 +12,9 @@ public class Class291 {
 	protected static Class218 aClass218_3456;
 	protected static Class427 aClass427_3457;
 	protected static Interface42 anInterface42_3458;
-	protected static Class482 aClass482_3459;
-	protected static Class317 aClass317_3460;
-	static SwitchMap aClass465_3461 = new SwitchMap(16);
+	protected static NodeCollection aClass482_3459;
+	protected static Index aClass317_3460;
+	static IterableNodeMap aClass465_3461 = new IterableNodeMap(16);
 	public static float aFloat3462;
 	protected static int anInt3463;
 	protected static byte[][][] aByteArrayArrayArray3464;
@@ -47,13 +47,13 @@ public class Class291 {
 	public static Class282_Sub50_Sub6 aClass282_Sub50_Sub6_3491;
 	protected static int anInt3492;
 
-	static Class482 method5124(Class505 class505, int i, int i_0_, int i_1_, int i_2_) {
-		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.method8097((byte) 11); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.method8067(314951603))
+	static NodeCollection method5124(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_) {
+		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.head((byte) 11); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.next(314951603))
 			method5146(class505, class282_sub36, i, i_0_, i_1_, i_2_);
 		return aClass482_3459;
 	}
 
-	public static void method5125(Class317 class317, Class536 class536, Class479 class479, Class474 class474, Class218 class218, Class427 class427, Interface42 interface42) {
+	public static void method5125(Index class317, Class536 class536, Class479 class479, Class474 class474, Class218 class218, Class427 class427, Interface42 interface42) {
 		aClass317_3460 = class317;
 		aClass536_3482 = class536;
 		aClass479_3471 = class479;
@@ -108,7 +108,7 @@ public class Class291 {
 		return (Class282_Sub50_Sub6) aClass465_3461.method7754((long) i);
 	}
 
-	static void method5131(Class505 class505, int i, int i_6_, int i_7_, int i_8_) {
+	static void method5131(GraphicalRenderer class505, int i, int i_6_, int i_7_, int i_8_) {
 		int i_9_ = anInt3480 - anInt3485;
 		int i_10_ = anInt3486 - anInt3465;
 		if (anInt3480 < anInt3474)
@@ -278,7 +278,7 @@ public class Class291 {
 			anIntArray3481[i_65_ + 1] = method5164(interface22, i_65_, i, i_64_);
 	}
 
-	public static void method5133(Class317 class317, Class536 class536, Class479 class479, Class474 class474, Class218 class218, Class427 class427, Interface42 interface42) {
+	public static void method5133(Index class317, Class536 class536, Class479 class479, Class474 class474, Class218 class218, Class427 class427, Interface42 interface42) {
 		aClass317_3460 = class317;
 		aClass536_3482 = class536;
 		aClass479_3471 = class479;
@@ -298,12 +298,12 @@ public class Class291 {
 		Class38.method854(true, false, -1469100449);
 	}
 
-	static void method5134(Class505 class505, Class282_Sub36 class282_sub36, int i, int i_67_, int i_68_, int i_69_) {
+	static void method5134(GraphicalRenderer class505, Class282_Sub36 class282_sub36, int i, int i_67_, int i_68_, int i_69_) {
 		class282_sub36.anInt7990 = (anInt3489 + (i_68_ + i * (class282_sub36.anInt7987 * -1306535747 - anInt3485) >> 16)) * -1316454393;
 		class282_sub36.anInt7992 = (anInt3492 - (i_69_ + i_67_ * (class282_sub36.anInt7993 * 1012301095 - anInt3465) >> 16)) * -1541159585;
 	}
 
-	static Class482 method5135(Class505 class505) {
+	static NodeCollection method5135(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_70_ = anInt3486 - anInt3465;
 		int i_71_ = (anInt3476 - anInt3489 << 16) / i;
@@ -398,7 +398,7 @@ public class Class291 {
 		anIntArray3481 = null;
 	}
 
-	static void method5138(Class505 class505) {
+	static void method5138(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_81_ = anInt3486 - anInt3465;
 		int i_82_ = (anInt3476 - anInt3489 << 16) / i;
@@ -422,7 +422,7 @@ public class Class291 {
 			anIntArray3481[i_92_ + 1] = method5164(interface22, i_92_, i, i_91_);
 	}
 
-	static void method5141(Class505 class505) {
+	static void method5141(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_93_ = anInt3486 - anInt3465;
 		int i_94_ = (anInt3476 - anInt3489 << 16) / i;
@@ -430,7 +430,7 @@ public class Class291 {
 		method5131(class505, i_94_, i_95_, 0, 0);
 	}
 
-	static void method5142(Class505 class505, int i, int i_96_, int i_97_, int i_98_, int i_99_, int i_100_, int i_101_, int[] is, byte[] is_102_, boolean bool) {
+	static void method5142(GraphicalRenderer class505, int i, int i_96_, int i_97_, int i_98_, int i_99_, int i_100_, int i_101_, int[] is, byte[] is_102_, boolean bool) {
 		if (bool || i_99_ != 0 || i_100_ > 0) {
 			if (i_100_ == 0)
 				class505.B(i, i_96_, i_97_, i_98_, i_99_, 0);
@@ -526,7 +526,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5144(Class505 class505, RsByteBuffer class282_sub35, int i, int i_114_, int i_115_, int i_116_, int[] is, int[] is_117_) {
+	static void method5144(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_114_, int i_115_, int i_116_, int[] is, int[] is_117_) {
 		int i_118_ = class282_sub35.readUnsignedByte();
 		if ((i_118_ & 0x1) == 0) {
 			boolean bool = (i_118_ & 0x2) == 0;
@@ -611,12 +611,12 @@ public class Class291 {
 		}
 	}
 
-	static void method5146(Class505 class505, Class282_Sub36 class282_sub36, int i, int i_133_, int i_134_, int i_135_) {
+	static void method5146(GraphicalRenderer class505, Class282_Sub36 class282_sub36, int i, int i_133_, int i_134_, int i_135_) {
 		class282_sub36.anInt7990 = (anInt3489 + (i_134_ + i * (class282_sub36.anInt7987 * -1306535747 - anInt3485) >> 16)) * -1316454393;
 		class282_sub36.anInt7992 = (anInt3492 - (i_135_ + i_133_ * (class282_sub36.anInt7993 * 1012301095 - anInt3465) >> 16)) * -1541159585;
 	}
 
-	static void method5147(Class505 class505, Class282_Sub36 class282_sub36, Class220 class220) {
+	static void method5147(GraphicalRenderer class505, Class282_Sub36 class282_sub36, Class220 class220) {
 		if (class220.anIntArray2717 != null) {
 			int[] is = new int[class220.anIntArray2717.length];
 			for (int i = 0; i < is.length / 2; i++) {
@@ -676,7 +676,7 @@ public class Class291 {
 		anInt3463 = (int) (Math.random() * 17.0) - 8;
 		anIntArray3466 = new int[1];
 		aByteArray3467 = new byte[1];
-		aClass482_3459 = new Class482();
+		aClass482_3459 = new NodeCollection();
 	}
 
 	Class291() throws Throwable {
@@ -737,7 +737,7 @@ public class Class291 {
 		return null;
 	}
 
-	static void method5153(Class505 class505, Class282_Sub36 class282_sub36, int i, int i_152_, int i_153_, int i_154_) {
+	static void method5153(GraphicalRenderer class505, Class282_Sub36 class282_sub36, int i, int i_152_, int i_153_, int i_154_) {
 		class282_sub36.anInt7990 = (anInt3489 + (i_153_ + i * (class282_sub36.anInt7987 * -1306535747 - anInt3485) >> 16)) * -1316454393;
 		class282_sub36.anInt7992 = (anInt3492 - (i_154_ + i_152_ * (class282_sub36.anInt7993 * 1012301095 - anInt3465) >> 16)) * -1541159585;
 	}
@@ -775,7 +775,7 @@ public class Class291 {
 			anIntArray3481[i_166_ + 1] = method5164(interface22, i_166_, i, i_165_);
 	}
 
-	static void method5159(Class505 class505, RsByteBuffer class282_sub35, int i, int i_167_, int i_168_, int i_169_, int[] is, int[] is_170_) {
+	static void method5159(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_167_, int i_168_, int i_169_, int[] is, int[] is_170_) {
 		int i_171_ = class282_sub35.readUnsignedByte();
 		if ((i_171_ & 0x1) == 0) {
 			boolean bool = (i_171_ & 0x2) == 0;
@@ -915,7 +915,7 @@ public class Class291 {
 		return i_199_;
 	}
 
-	static void method5162(Class505 class505, RsByteBuffer class282_sub35, int i, int i_206_, int i_207_, int i_208_, int[] is, int[] is_209_) {
+	static void method5162(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_206_, int i_207_, int i_208_, int[] is, int[] is_209_) {
 		int i_210_ = class282_sub35.readUnsignedByte();
 		if ((i_210_ & 0x1) == 0) {
 			boolean bool = (i_210_ & 0x2) == 0;
@@ -987,7 +987,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5163(Class505 class505, int i, int i_225_) {
+	static void method5163(GraphicalRenderer class505, int i, int i_225_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(aClass317_3460.method5626(aClass282_Sub50_Sub6_3491.aString9533, "area", (byte) 1));
 		int i_226_ = class282_sub35.readUnsignedByte();
 		int[] is = new int[i_226_];
@@ -1095,14 +1095,14 @@ public class Class291 {
 		return i_255_;
 	}
 
-	static void method5165(Class505 class505, int i, int i_262_, int i_263_, int i_264_, int[] is, byte[] is_265_) {
+	static void method5165(GraphicalRenderer class505, int i, int i_262_, int i_263_, int i_264_, int[] is, byte[] is_265_) {
 		if (is != null) {
 			for (int i_266_ = 0; i_266_ < is.length; i_266_++) {
 				Class478 class478 = aClass474_3455.method7891(is[i_266_], 65280);
 				int i_267_ = class478.anInt5689 * -272332433;
 				if (i_267_ != -1) {
 					Class418 class418 = aClass427_3457.method7172(i_267_, -1014703371);
-					Class160 class160 = class418.method7010(class505, (class478.aBool5671 ? is_265_[i_266_] >> 6 & 0x3 : 0), (class478.aBool5673 ? class478.aBool5674 : false), (byte) 70);
+					NativeSprite class160 = class418.method7010(class505, (class478.aBool5671 ? is_265_[i_266_] >> 6 & 0x3 : 0), (class478.aBool5673 ? class478.aBool5674 : false), (byte) 70);
 					if (class160 != null) {
 						int i_268_ = i_263_ * class160.method228() >> 2;
 						int i_269_ = i_264_ * class160.method2748() >> 2;
@@ -1429,7 +1429,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5170(Class505 class505, Class282_Sub36 class282_sub36, int i, int i_305_, int i_306_, int i_307_) {
+	static void method5170(GraphicalRenderer class505, Class282_Sub36 class282_sub36, int i, int i_305_, int i_306_, int i_307_) {
 		class282_sub36.anInt7990 = (anInt3489 + (i_306_ + i * (class282_sub36.anInt7987 * -1306535747 - anInt3485) >> 16)) * -1316454393;
 		class282_sub36.anInt7992 = (anInt3492 - (i_307_ + i_305_ * (class282_sub36.anInt7993 * 1012301095 - anInt3465) >> 16)) * -1541159585;
 	}
@@ -1460,7 +1460,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5173(Class505 class505, int i, int i_308_, int i_309_, int i_310_) {
+	static void method5173(GraphicalRenderer class505, int i, int i_308_, int i_309_, int i_310_) {
 		int i_311_ = anInt3480 - anInt3485;
 		int i_312_ = anInt3486 - anInt3465;
 		if (anInt3480 < anInt3474)
@@ -1737,7 +1737,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5178(Class505 class505) {
+	static void method5178(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_402_ = anInt3486 - anInt3465;
 		int i_403_ = (anInt3476 - anInt3489 << 16) / i;
@@ -1745,13 +1745,13 @@ public class Class291 {
 		method5131(class505, i_403_, i_404_, 0, 0);
 	}
 
-	static Class482 method5179(Class505 class505, int i, int i_405_, int i_406_, int i_407_) {
-		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.method8097((byte) 82); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.method8067(-413792246))
+	static NodeCollection method5179(GraphicalRenderer class505, int i, int i_405_, int i_406_, int i_407_) {
+		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.head((byte) 82); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.next(-413792246))
 			method5146(class505, class282_sub36, i, i_405_, i_406_, i_407_);
 		return aClass482_3459;
 	}
 
-	static void method5180(Class505 class505) {
+	static void method5180(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_408_ = anInt3486 - anInt3465;
 		int i_409_ = (anInt3476 - anInt3489 << 16) / i;
@@ -1759,7 +1759,7 @@ public class Class291 {
 		method5131(class505, i_409_, i_410_, 0, 0);
 	}
 
-	static void method5181(Class505 class505, int i, int i_411_, int i_412_, int i_413_) {
+	static void method5181(GraphicalRenderer class505, int i, int i_411_, int i_412_, int i_413_) {
 		int i_414_ = anInt3480 - anInt3485;
 		int i_415_ = anInt3486 - anInt3465;
 		if (anInt3480 < anInt3474)
@@ -1924,7 +1924,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5182(Class505 class505, int i, int i_469_, int i_470_, int i_471_) {
+	static void method5182(GraphicalRenderer class505, int i, int i_469_, int i_470_, int i_471_) {
 		int i_472_ = anInt3480 - anInt3485;
 		int i_473_ = anInt3486 - anInt3465;
 		if (anInt3480 < anInt3474)
@@ -2089,7 +2089,7 @@ public class Class291 {
 		}
 	}
 
-	static void method5183(Class505 class505, int i, int i_527_) {
+	static void method5183(GraphicalRenderer class505, int i, int i_527_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(aClass317_3460.method5626(aClass282_Sub50_Sub6_3491.aString9533, "area", (byte) 1));
 		int i_528_ = class282_sub35.readUnsignedByte();
 		int[] is = new int[i_528_];
@@ -2163,7 +2163,7 @@ public class Class291 {
 		method5136();
 	}
 
-	static void method5184(Class505 class505, int i, int i_554_, int i_555_, int i_556_) {
+	static void method5184(GraphicalRenderer class505, int i, int i_554_, int i_555_, int i_556_) {
 		int i_557_ = anInt3480 - anInt3485;
 		int i_558_ = anInt3486 - anInt3465;
 		if (anInt3480 < anInt3474)
@@ -2328,14 +2328,14 @@ public class Class291 {
 		}
 	}
 
-	static void method5185(Class505 class505, int i, int i_612_, int i_613_, int i_614_, int[] is, byte[] is_615_) {
+	static void method5185(GraphicalRenderer class505, int i, int i_612_, int i_613_, int i_614_, int[] is, byte[] is_615_) {
 		if (is != null) {
 			for (int i_616_ = 0; i_616_ < is.length; i_616_++) {
 				Class478 class478 = aClass474_3455.method7891(is[i_616_], 65280);
 				int i_617_ = class478.anInt5689 * -272332433;
 				if (i_617_ != -1) {
 					Class418 class418 = aClass427_3457.method7172(i_617_, -1014703371);
-					Class160 class160 = class418.method7010(class505, (class478.aBool5671 ? is_615_[i_616_] >> 6 & 0x3 : 0), (class478.aBool5673 ? class478.aBool5674 : false), (byte) 29);
+					NativeSprite class160 = class418.method7010(class505, (class478.aBool5671 ? is_615_[i_616_] >> 6 & 0x3 : 0), (class478.aBool5673 ? class478.aBool5674 : false), (byte) 29);
 					if (class160 != null) {
 						int i_618_ = i_613_ * class160.method228() >> 2;
 						int i_619_ = i_614_ * class160.method2748() >> 2;
@@ -2362,14 +2362,14 @@ public class Class291 {
 		}
 	}
 
-	static void method5186(Class505 class505, int i, int i_623_, int i_624_, int i_625_, int[] is, byte[] is_626_) {
+	static void method5186(GraphicalRenderer class505, int i, int i_623_, int i_624_, int i_625_, int[] is, byte[] is_626_) {
 		if (is != null) {
 			for (int i_627_ = 0; i_627_ < is.length; i_627_++) {
 				Class478 class478 = aClass474_3455.method7891(is[i_627_], 65280);
 				int i_628_ = class478.anInt5689 * -272332433;
 				if (i_628_ != -1) {
 					Class418 class418 = aClass427_3457.method7172(i_628_, -1014703371);
-					Class160 class160 = class418.method7010(class505, (class478.aBool5671 ? is_626_[i_627_] >> 6 & 0x3 : 0), (class478.aBool5673 ? class478.aBool5674 : false), (byte) 87);
+					NativeSprite class160 = class418.method7010(class505, (class478.aBool5671 ? is_626_[i_627_] >> 6 & 0x3 : 0), (class478.aBool5673 ? class478.aBool5674 : false), (byte) 87);
 					if (class160 != null) {
 						int i_629_ = i_624_ * class160.method228() >> 2;
 						int i_630_ = i_625_ * class160.method2748() >> 2;
@@ -2396,7 +2396,7 @@ public class Class291 {
 		}
 	}
 
-	static Class482 method5187(Class505 class505) {
+	static NodeCollection method5187(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_634_ = anInt3486 - anInt3465;
 		int i_635_ = (anInt3476 - anInt3489 << 16) / i;
@@ -2404,7 +2404,7 @@ public class Class291 {
 		return method5179(class505, i_635_, i_636_, 0, 0);
 	}
 
-	static Class482 method5188(Class505 class505) {
+	static NodeCollection method5188(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_637_ = anInt3486 - anInt3465;
 		int i_638_ = (anInt3476 - anInt3489 << 16) / i;
@@ -2421,19 +2421,19 @@ public class Class291 {
 		return class477;
 	}
 
-	static Class482 method5190(Class505 class505, int i, int i_641_, int i_642_, int i_643_) {
-		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.method8097((byte) 93); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.method8067(2011735598))
+	static NodeCollection method5190(GraphicalRenderer class505, int i, int i_641_, int i_642_, int i_643_) {
+		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.head((byte) 93); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.next(2011735598))
 			method5146(class505, class282_sub36, i, i_641_, i_642_, i_643_);
 		return aClass482_3459;
 	}
 
-	static Class482 method5191(Class505 class505, int i, int i_644_, int i_645_, int i_646_) {
-		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.method8097((byte) 117); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.method8067(656471956))
+	static NodeCollection method5191(GraphicalRenderer class505, int i, int i_644_, int i_645_, int i_646_) {
+		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) aClass482_3459.head((byte) 117); class282_sub36 != null; class282_sub36 = (Class282_Sub36) aClass482_3459.next(656471956))
 			method5146(class505, class282_sub36, i, i_644_, i_645_, i_646_);
 		return aClass482_3459;
 	}
 
-	static void method5192(Class505 class505, int i, int i_647_) {
+	static void method5192(GraphicalRenderer class505, int i, int i_647_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(aClass317_3460.method5626(aClass282_Sub50_Sub6_3491.aString9533, "area", (byte) 1));
 		int i_648_ = class282_sub35.readUnsignedByte();
 		int[] is = new int[i_648_];
@@ -2507,7 +2507,7 @@ public class Class291 {
 		method5136();
 	}
 
-	static void method5193(Class505 class505) {
+	static void method5193(GraphicalRenderer class505) {
 		int i = anInt3480 - anInt3485;
 		int i_674_ = anInt3486 - anInt3465;
 		int i_675_ = (anInt3476 - anInt3489 << 16) / i;
@@ -2595,12 +2595,12 @@ public class Class291 {
 		}
 	}
 
-	static void method5195(Class505 class505, Class282_Sub36 class282_sub36, int i, int i_705_, int i_706_, int i_707_) {
+	static void method5195(GraphicalRenderer class505, Class282_Sub36 class282_sub36, int i, int i_705_, int i_706_, int i_707_) {
 		class282_sub36.anInt7990 = (anInt3489 + (i_706_ + i * (class282_sub36.anInt7987 * -1306535747 - anInt3485) >> 16)) * -1316454393;
 		class282_sub36.anInt7992 = (anInt3492 - (i_707_ + i_705_ * (class282_sub36.anInt7993 * 1012301095 - anInt3465) >> 16)) * -1541159585;
 	}
 
-	static void method5196(Class505 class505, Class282_Sub36 class282_sub36, Class220 class220) {
+	static void method5196(GraphicalRenderer class505, Class282_Sub36 class282_sub36, Class220 class220) {
 		if (class220.anIntArray2717 != null) {
 			int[] is = new int[class220.anIntArray2717.length];
 			for (int i = 0; i < is.length / 2; i++) {

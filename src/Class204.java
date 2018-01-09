@@ -61,8 +61,8 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3368(CS2Executor class527, int i) {
-		if (!Class203.method3360((byte) -8))
-			Class312.method5558(-500941691);
+		if (!Js5CacheFile.method3360((byte) -8))
+			Js5StandardRequester.method5558(-500941691);
 	}
 
 	static final void method3369(Class118 class118, Class98 class98, CS2Executor class527, byte i) {

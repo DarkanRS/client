@@ -28,7 +28,7 @@ public class Class201 {
 	int anInt2563;
 	int anInt2564;
 	int[] anIntArray2565;
-	static Class505 aClass505_2566;
+	static GraphicalRenderer aClass505_2566;
 	int anInt2567;
 	int[] anIntArray2568;
 	int[] anIntArray2569;
@@ -120,7 +120,7 @@ public class Class201 {
 		method3309();
 	}
 
-	void method3265(Class505 class505, int i) {
+	void method3265(GraphicalRenderer class505, int i) {
 		aClass505_2566 = class505;
 		if (!aBool2552 || !((Class201) this).aBool2542)
 			((Class201) this).anInt2564 = 0;
@@ -604,7 +604,7 @@ public class Class201 {
 		}
 	}
 
-	void method3281(Class505 class505, Class231 class231, int i) {
+	void method3281(GraphicalRenderer class505, Class231 class231, int i) {
 		aClass505_2566 = class505;
 		if (((Class201) this).anIntArray2569 != null && ((Class231) class231).aByte2865 >= i) {
 			for (int i_150_ = 0; i_150_ < ((Class201) this).anIntArray2569.length; i_150_++) {
@@ -787,7 +787,7 @@ public class Class201 {
 		method3309();
 	}
 
-	void method3285(Class505 class505, int i) {
+	void method3285(GraphicalRenderer class505, int i) {
 		aClass505_2566 = class505;
 		if (!aBool2552 || !((Class201) this).aBool2542)
 			((Class201) this).anInt2564 = 0;

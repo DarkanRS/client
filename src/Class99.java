@@ -50,7 +50,7 @@ public class Class99 {
 		}
 	}
 
-	static void method1630(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, Class282_Sub50_Sub15 class282_sub50_sub15, Class8 class8, Class414 class414, int i_13_, int i_14_, int i_15_) {
+	static void method1630(int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, Class282_Sub50_Sub15 class282_sub50_sub15, FontRenderer class8, Class414 class414, int i_13_, int i_14_, int i_15_) {
 		if (i > i_8_ && i < i_10_ + i_8_ && i_7_ > i_12_ - 397683159 * class414.anInt4978 - 1 && i_7_ < i_12_ + class414.anInt4979 * -1518951631)
 			i_13_ = i_14_;
 		String string = Class75.method1354(class282_sub50_sub15, -938758900);

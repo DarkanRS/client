@@ -9,9 +9,9 @@ public class Class285 {
 	public Class521_Sub1 aClass521_Sub1_3391;
 	boolean aBool3392;
 	Login aClass284_3393;
-	public static Class8 aClass8_3394;
+	public static FontRenderer aClass8_3394;
 
-	public boolean method5019(Class505 class505, int i, int i_0_, int i_1_) {
+	public boolean method5019(GraphicalRenderer class505, int i, int i_0_, int i_1_) {
 		int i_2_ = aClass521_Sub1_3391.method12996(712320257);
 		if (aClass521_Sub1_3391.aClass275_Sub5Array7965 != null) {
 			for (int i_3_ = 0; i_3_ < aClass521_Sub1_3391.aClass275_Sub5Array7965.length; i_3_++) {

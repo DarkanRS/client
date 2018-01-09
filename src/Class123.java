@@ -11,7 +11,7 @@ public class Class123 {
 	Class476 aClass476_1541;
 	int anInt1542;
 	boolean aBool1543 = false;
-	Class528 aClass528_1544;
+	MeshRasterizer aClass528_1544;
 	Class456 aClass456_1545;
 	boolean aBool1546;
 	int anInt1547 = 709399509;
@@ -46,7 +46,7 @@ public class Class123 {
 		return ((Class123) this).aBool1550;
 	}
 
-	void method2118(Class505 class505, int i) {
+	void method2118(GraphicalRenderer class505, int i) {
 		if (((Class123) this).aClass282_Sub50_Sub17_1551 != null) {
 			Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
 			client.aClass257_7353.method4430(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -43);
@@ -55,7 +55,7 @@ public class Class123 {
 		}
 	}
 
-	void method2119(Class505 class505, Class528 class528, Class294 class294, int i, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_) {
+	void method2119(GraphicalRenderer class505, MeshRasterizer class528, Class294 class294, int i, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_) {
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();
 		if ((null == ((Class123) this).aClass539_1538 || ((Class123) this).aClass539_1538.aBool7132) && (null != class87s || class172s != null)) {
@@ -148,7 +148,7 @@ public class Class123 {
 		}
 	}
 
-	void method2125(Class505 class505) {
+	void method2125(GraphicalRenderer class505) {
 		method2132(class505, 262144, true, true, -1384937123);
 	}
 
@@ -166,7 +166,7 @@ public class Class123 {
 		return ((Class123) this).anInt1554 * 601889229;
 	}
 
-	void method2129(Class505 class505) {
+	void method2129(GraphicalRenderer class505) {
 		method2132(class505, 262144, true, true, -1384937123);
 	}
 
@@ -174,7 +174,7 @@ public class Class123 {
 		return ((Class123) this).anInt1554 * 601889229;
 	}
 
-	Class123(Class505 class505, Class474 class474, Class478 class478, int i, int i_10_, int i_11_, int i_12_, Class521_Sub1 class521_sub1, boolean bool, int i_13_) {
+	Class123(GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_10_, int i_11_, int i_12_, Class521_Sub1 class521_sub1, boolean bool, int i_13_) {
 		((Class123) this).aBool1546 = false;
 		((Class123) this).aBool1552 = false;
 		((Class123) this).aClass474_1536 = class474;
@@ -196,7 +196,7 @@ public class Class123 {
 		((Class123) this).aClass528_1544 = null;
 	}
 
-	final Class528 method2132(Class505 class505, int i, boolean bool, boolean bool_14_, int i_15_) {
+	final MeshRasterizer method2132(GraphicalRenderer class505, int i, boolean bool, boolean bool_14_, int i_15_) {
 		Class478 class478 = ((Class123) this).aClass474_1536.method7891(((Class123) this).anInt1540 * 1535779425, 65280);
 		if (class478.anIntArray5650 != null)
 			class478 = class478.method8013((4 == client.anInt7341 * -891719545 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) 31);
@@ -229,7 +229,7 @@ public class Class123 {
 			class390_16_ = class206.aClass390Array2607[0];
 		else
 			class390_16_ = (((Class123) this).aByte1549 < 3 ? (class206.aClass390Array2591[1 + ((Class123) this).aByte1549]) : null);
-		Class528 class528 = null;
+		MeshRasterizer class528 = null;
 		if (((Class123) this).aClass456_1545.method7564(204760796)) {
 			if (bool_14_)
 				i |= 0x40000;
@@ -257,7 +257,7 @@ public class Class123 {
 			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -2029689654), (int) class385.aFloat4673, bool_14_,
 					((Class123) this).aClass476_1541, 1886483873));
 			if (class452 != null) {
-				((Class123) this).aClass528_1544 = class528 = (Class528) class452.anObject5443;
+				((Class123) this).aClass528_1544 = class528 = (MeshRasterizer) class452.anObject5443;
 				if (bool_14_) {
 					((Class123) this).aClass282_Sub50_Sub17_1551 = (Class282_Sub50_Sub17) class452.anObject5444;
 					((Class123) this).aBoolArray1553 = null;
@@ -294,7 +294,7 @@ public class Class123 {
 		((Class123) this).anInt1548 = -1012076251 * client.cycles;
 	}
 
-	final Class528 method2134(Class505 class505, int i, boolean bool, boolean bool_17_) {
+	final MeshRasterizer method2134(GraphicalRenderer class505, int i, boolean bool, boolean bool_17_) {
 		Class478 class478 = ((Class123) this).aClass474_1536.method7891(((Class123) this).anInt1540 * 1535779425, 65280);
 		if (class478.anIntArray5650 != null)
 			class478 = class478.method8013((4 == client.anInt7341 * -891719545 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) 101);
@@ -327,7 +327,7 @@ public class Class123 {
 			class390_18_ = class206.aClass390Array2607[0];
 		else
 			class390_18_ = (((Class123) this).aByte1549 < 3 ? (class206.aClass390Array2591[1 + ((Class123) this).aByte1549]) : null);
-		Class528 class528 = null;
+		MeshRasterizer class528 = null;
 		if (((Class123) this).aClass456_1545.method7564(311181349)) {
 			if (bool_17_)
 				i |= 0x40000;
@@ -355,7 +355,7 @@ public class Class123 {
 			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, 714009934), (int) class385.aFloat4673, bool_17_,
 					((Class123) this).aClass476_1541, -1512660371));
 			if (class452 != null) {
-				((Class123) this).aClass528_1544 = class528 = (Class528) class452.anObject5443;
+				((Class123) this).aClass528_1544 = class528 = (MeshRasterizer) class452.anObject5443;
 				if (bool_17_) {
 					((Class123) this).aClass282_Sub50_Sub17_1551 = (Class282_Sub50_Sub17) class452.anObject5444;
 					((Class123) this).aBoolArray1553 = null;
@@ -380,7 +380,7 @@ public class Class123 {
 		return ((Class123) this).aBool1550;
 	}
 
-	void method2136(Class505 class505, byte i) {
+	void method2136(GraphicalRenderer class505, byte i) {
 		method2132(class505, 262144, true, true, -1384937123);
 	}
 
@@ -396,15 +396,15 @@ public class Class123 {
 		return ((Class123) this).anInt1554 * 601889229;
 	}
 
-	void method2140(Class505 class505) {
+	void method2140(GraphicalRenderer class505) {
 		method2132(class505, 262144, true, true, -1384937123);
 	}
 
-	void method2141(Class505 class505) {
+	void method2141(GraphicalRenderer class505) {
 		method2132(class505, 262144, true, true, -1384937123);
 	}
 
-	void method2142(Class505 class505) {
+	void method2142(GraphicalRenderer class505) {
 		method2132(class505, 262144, true, true, -1384937123);
 	}
 
@@ -554,14 +554,14 @@ public class Class123 {
 		int i_28_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_28_, (byte) 53);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_28_ >> 16];
-		Class40.method869(class118, class98, class527, -1209481120);
+		NamedFileReference.method869(class118, class98, class527, -1209481120);
 	}
 
 	static final void method2151(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_29_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_30_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_30_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.get(i_30_, (byte) 0);
 		if (class437.method7319(1555061388))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class207.aClass421_2658.method7036(i_29_, -1979038944).method14751(i_30_, class437.aString5335, 1092559999);
 		else

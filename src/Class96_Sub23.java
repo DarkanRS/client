@@ -85,7 +85,7 @@ public class Class96_Sub23 extends Class96 {
 			Class451 class451 = new Class451(client.aClass465_7442);
 			for (Class282_Sub44 class282_sub44 = (Class282_Sub44) class451.method7503(1677593260); null != class282_sub44; class282_sub44 = (Class282_Sub44) class451.next()) {
 				if (class282_sub44.anInt8063 * 587626901 == i_5_)
-					return Class117.method1981((int) (-3442165056282524525L * (class282_sub44.aLong3379)), (byte) 125);
+					return Class117.method1981((int) (-3442165056282524525L * (class282_sub44.uid)), (byte) 125);
 			}
 		}
 		return null;

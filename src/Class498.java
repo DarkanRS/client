@@ -3,8 +3,8 @@
  */
 
 public class Class498 {
-	Class317 aClass317_5823;
-	Class229 aClass229_5824 = new Class229(64);
+	Index aClass317_5823;
+	SoftCache aClass229_5824 = new SoftCache(64);
 
 	public void method8317() {
 		synchronized (((Class498) this).aClass229_5824) {
@@ -36,25 +36,25 @@ public class Class498 {
 		}
 	}
 
-	public Class498(Class486 class486, Class495 class495, Class317 class317) {
+	public Class498(Game class486, Language class495, Index class317) {
 		((Class498) this).aClass317_5823 = class317;
 		if (((Class498) this).aClass317_5823 != null)
-			((Class498) this).aClass317_5823.method5624(-71319279 * Class120.aClass120_1479.anInt1521, 2039893772);
+			((Class498) this).aClass317_5823.filesCount(-71319279 * SharedConfigsType.aClass120_1479.anInt1521, 2039893772);
 	}
 
 	public Class489 method8322(int i, short i_1_) {
 		Class489 class489;
 		synchronized (((Class498) this).aClass229_5824) {
-			class489 = ((Class489) ((Class498) this).aClass229_5824.method3865((long) i));
+			class489 = ((Class489) ((Class498) this).aClass229_5824.get((long) i));
 		}
 		if (null != class489)
 			return class489;
-		byte[] is = ((Class498) this).aClass317_5823.getFile(((Class120.aClass120_1479.anInt1521) * -71319279), i, -1530672331);
+		byte[] is = ((Class498) this).aClass317_5823.getFile(((SharedConfigsType.aClass120_1479.anInt1521) * -71319279), i, -1530672331);
 		class489 = new Class489();
 		if (is != null)
 			class489.method8213(new RsByteBuffer(is), (byte) 0);
 		synchronized (((Class498) this).aClass229_5824) {
-			((Class498) this).aClass229_5824.method3856(class489, (long) i);
+			((Class498) this).aClass229_5824.put(class489, (long) i);
 		}
 		return class489;
 	}

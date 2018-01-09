@@ -3,7 +3,7 @@
  */
 
 final class Class512 implements Runnable {
-	public static Class317 aClass317_5884;
+	public static Index aClass317_5884;
 
 	public void method8759() {
 		try {
