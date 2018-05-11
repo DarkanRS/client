@@ -162,7 +162,7 @@ public class Loader extends Applet implements AppletStub {
 	}
 
 	@Override
-	public void appletResize(int arg0, int arg1) {
+	public void appletResize(int arg, int arg1) {
 
 	}
 
