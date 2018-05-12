@@ -4133,10 +4133,10 @@ public final class client extends Class263 {
 			((Class184) class184).aClass375_2286 = null;
 			return true;
 		}
-		if (IncomingPacket.aClass375_4424 == ((Class184) class184).aClass375_2286) {
-			int i = class282_sub35_sub2.method13122(1649585267);
+		if (IncomingPacket.MOVE_ICOMPONENT == ((Class184) class184).aClass375_2286) {
+			int i = class282_sub35_sub2.readUnsignedShort128(1649585267);
 			int i_282_ = class282_sub35_sub2.readIntV2(-301764621);
-			int i_283_ = class282_sub35_sub2.method13123(-1358044133);
+			int i_283_ = class282_sub35_sub2.readUnsignedShortLE128(-1358044133);
 			Class470.method7825(1388955301);
 			Class96_Sub16.method14648(i_282_, i_283_, i, (byte) 8);
 			((Class184) class184).aClass375_2286 = null;
@@ -4744,7 +4744,7 @@ public final class client extends Class263 {
 		}
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.aClass375_4429) {
 			int i = class282_sub35_sub2.readUnsignedByte128(-1574786755) * 4;
-			int i_345_ = class282_sub35_sub2.method13123(-1358044133);
+			int i_345_ = class282_sub35_sub2.readUnsignedShortLE128(-1358044133);
 			int i_346_ = class282_sub35_sub2.readShortLE((byte) -7);
 			int i_347_ = class282_sub35_sub2.readShort(2011652046);
 			int i_348_ = class282_sub35_sub2.readUnsignedByte128(-744835932);

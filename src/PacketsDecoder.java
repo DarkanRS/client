@@ -649,10 +649,10 @@ public class PacketsDecoder extends Class455 {
 			class184.aClass375_2286 = null;
 			return true;
 		}
-		if (IncomingPacket.aClass375_4424 == class184.aClass375_2286) {
-			int i_109_ = stream.method13122(877005762);
+		if (IncomingPacket.MOVE_ICOMPONENT == class184.aClass375_2286) {
+			int i_109_ = stream.readUnsignedShort128(877005762);
 			int i_110_ = stream.readIntV2(-1005542632);
-			int i_111_ = stream.method13123(-1358044133);
+			int i_111_ = stream.readUnsignedShortLE128(-1358044133);
 			Class470.method7825(457880484);
 			Class96_Sub16.method14648(i_110_, i_111_, i_109_, (byte) 8);
 			class184.aClass375_2286 = null;
@@ -1293,7 +1293,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4429) {
 			int i_199_ = stream.readUnsignedByte128(-1139286912) * 4;
-			int i_200_ = stream.method13123(-1358044133);
+			int i_200_ = stream.readUnsignedShortLE128(-1358044133);
 			int i_201_ = stream.readShortLE((byte) -25);
 			int i_202_ = stream.readShort(1661284878);
 			int i_203_ = stream.readUnsignedByte128(-850673914);
@@ -1650,7 +1650,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4495) {
 			int i_267_ = stream.readIntV2(-544566311);
-			int i_268_ = stream.readShortLE((byte) -57);
+			int i_268_ = stream.readShortLE((byte) -57); //TODO possibly
 			int i_269_ = stream.readShortLE((byte) -93);
 			int i_270_ = stream.readUnsignedByte();
 			Class470.method7825(-126108182);
@@ -2425,7 +2425,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4418) {
 			int i_415_ = stream.readUnsignedShort128();
-			int i_416_ = stream.readIntV2(-875618994);
+			int i_416_ = stream.readIntV2(-875618994); //TODO possible
 			int i_417_ = stream.readShortLE((byte) -6);
 			Class470.method7825(-1216270588);
 			Class225_Sub2.method12882(i_416_, (i_417_ << 16) + i_415_, 1247559712);

@@ -77,7 +77,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4421;
 	public static IncomingPacket aClass375_4422;
 	public static IncomingPacket aClass375_4423;
-	public static IncomingPacket aClass375_4424;
+	public static IncomingPacket MOVE_ICOMPONENT;
 	public static IncomingPacket aClass375_4425;
 	public static IncomingPacket aClass375_4426;
 	public static IncomingPacket aClass375_4427;
@@ -216,7 +216,7 @@ public class IncomingPacket {
 		aClass375_4440 = new IncomingPacket(45, 0);
 		aClass375_4502 = new IncomingPacket(46, -2);
 		NPC_UPDATE_LARGE = new IncomingPacket(47, -2);
-		aClass375_4424 = new IncomingPacket(48, 8);
+		MOVE_ICOMPONENT = new IncomingPacket(48, 8);
 		aClass375_4400 = new IncomingPacket(49, -2);
 		aClass375_4401 = new IncomingPacket(50, -1);
 		DYNAMIC_MAP_REGION = new IncomingPacket(51, -2);
@@ -333,7 +333,7 @@ public class IncomingPacket {
 
 	public static IncomingPacket[] method6370() {
 		return new IncomingPacket[] { PLAYER_ON_ICOMPONENT, aClass375_4352, aClass375_4504, aClass375_4354, aClass375_4450, aClass375_4356, NPC_UPDATE, CONFIG_2, aClass375_4381, aClass375_4360, aClass375_4361, aClass375_4362, GLOBAL_CONFIG_1, aClass375_4365, aClass375_4473, aClass375_4392, aClass375_4367, aClass375_4368, aClass375_4433, aClass375_4370, aClass375_4402, aClass375_4372, aClass375_4510, aClass375_4374, aClass375_4391, aClass375_4376, aClass375_4377, CREATE_GROUND_ITEM, aClass375_4480, PING,
-				aClass375_4427, aClass375_4382, aClass375_4394, aClass375_4384, aClass375_4385, aClass375_4386, aClass375_4397, WINDOW_PANE_PACKET, INTERFACE, aClass375_4371, aClass375_4399, WORLD_TILE, aClass375_4393, PLAYER_UPDATE, aClass375_4395, aClass375_4440, aClass375_4502, NPC_UPDATE_LARGE, aClass375_4424, aClass375_4400, aClass375_4401, DYNAMIC_MAP_REGION, aClass375_4499, aClass375_4478, aClass375_4511, aClass375_4406, aClass375_4429, aClass375_4408, aClass375_4409, aClass375_4410,
+				aClass375_4427, aClass375_4382, aClass375_4394, aClass375_4384, aClass375_4385, aClass375_4386, aClass375_4397, WINDOW_PANE_PACKET, INTERFACE, aClass375_4371, aClass375_4399, WORLD_TILE, aClass375_4393, PLAYER_UPDATE, aClass375_4395, aClass375_4440, aClass375_4502, NPC_UPDATE_LARGE, MOVE_ICOMPONENT, aClass375_4400, aClass375_4401, DYNAMIC_MAP_REGION, aClass375_4499, aClass375_4478, aClass375_4511, aClass375_4406, aClass375_4429, aClass375_4408, aClass375_4409, aClass375_4410,
 				aClass375_4411, aClass375_4412, aClass375_4413, aClass375_4414, RUN_ENERGY, aClass375_4416, aClass375_4390, aClass375_4373, VARPBIT_1, DESTROY_OBJECT, aClass375_4421, aClass375_4422, aClass375_4423, aClass375_4396, aClass375_4425, aClass375_4426, aClass375_4492, aClass375_4428, aClass375_4407, aClass375_4430, OBJECT_ANIMATION, aClass375_4432, aClass375_4417, aClass375_4434, aClass375_4435, REGION, aClass375_4437, aClass375_4438, aClass375_4439, aClass375_4387,
 				aClass375_4441, aClass375_4442, aClass375_4443, aClass375_4359, aClass375_4445, aClass375_4446, aClass375_4418, aClass375_4448, aClass375_4449, RUN_CS2_SCRIPT, aClass375_4451, aClass375_4452, aClass375_4491, aClass375_4358, aClass375_4455, aClass375_4456, aClass375_4457, aClass375_4458, VARPBIT_2, NPC_ON_ICOMPONENT, aClass375_4461, aClass375_4462, aClass375_4463, aClass375_4464, aClass375_4465, CONFIG_1, GLOBAL_CONFIG_2, CREATE_OBJECT, aClass375_4469, aClass375_4470,
 				aClass375_4404, ICOMPONENT_SETTINGS, aClass375_4509, aClass375_4474, aClass375_4475, REMOVE_GROUND_ITEM, aClass375_4477, aClass375_4500, aClass375_4479, aClass375_4364, aClass375_4481, aClass375_4353, aClass375_4483, aClass375_4355, aClass375_4453, aClass375_4486, aClass375_4487, aClass375_4488, aClass375_4489, aClass375_4351, aClass375_4490, aClass375_4484, aClass375_4493, PROJECTILE, aClass375_4495, aClass375_4496, aClass375_4497, aClass375_4498, aClass375_4383, aClass375_4375,
@@ -347,7 +347,7 @@ public class IncomingPacket {
 
 	public static IncomingPacket[] method6371() {
 		return new IncomingPacket[] { PLAYER_ON_ICOMPONENT, aClass375_4352, aClass375_4504, aClass375_4354, aClass375_4450, aClass375_4356, NPC_UPDATE, CONFIG_2, aClass375_4381, aClass375_4360, aClass375_4361, aClass375_4362, GLOBAL_CONFIG_1, aClass375_4365, aClass375_4473, aClass375_4392, aClass375_4367, aClass375_4368, aClass375_4433, aClass375_4370, aClass375_4402, aClass375_4372, aClass375_4510, aClass375_4374, aClass375_4391, aClass375_4376, aClass375_4377, CREATE_GROUND_ITEM, aClass375_4480, PING,
-				aClass375_4427, aClass375_4382, aClass375_4394, aClass375_4384, aClass375_4385, aClass375_4386, aClass375_4397, WINDOW_PANE_PACKET, INTERFACE, aClass375_4371, aClass375_4399, WORLD_TILE, aClass375_4393, PLAYER_UPDATE, aClass375_4395, aClass375_4440, aClass375_4502, NPC_UPDATE_LARGE, aClass375_4424, aClass375_4400, aClass375_4401, DYNAMIC_MAP_REGION, aClass375_4499, aClass375_4478, aClass375_4511, aClass375_4406, aClass375_4429, aClass375_4408, aClass375_4409, aClass375_4410,
+				aClass375_4427, aClass375_4382, aClass375_4394, aClass375_4384, aClass375_4385, aClass375_4386, aClass375_4397, WINDOW_PANE_PACKET, INTERFACE, aClass375_4371, aClass375_4399, WORLD_TILE, aClass375_4393, PLAYER_UPDATE, aClass375_4395, aClass375_4440, aClass375_4502, NPC_UPDATE_LARGE, MOVE_ICOMPONENT, aClass375_4400, aClass375_4401, DYNAMIC_MAP_REGION, aClass375_4499, aClass375_4478, aClass375_4511, aClass375_4406, aClass375_4429, aClass375_4408, aClass375_4409, aClass375_4410,
 				aClass375_4411, aClass375_4412, aClass375_4413, aClass375_4414, RUN_ENERGY, aClass375_4416, aClass375_4390, aClass375_4373, VARPBIT_1, DESTROY_OBJECT, aClass375_4421, aClass375_4422, aClass375_4423, aClass375_4396, aClass375_4425, aClass375_4426, aClass375_4492, aClass375_4428, aClass375_4407, aClass375_4430, OBJECT_ANIMATION, aClass375_4432, aClass375_4417, aClass375_4434, aClass375_4435, REGION, aClass375_4437, aClass375_4438, aClass375_4439, aClass375_4387,
 				aClass375_4441, aClass375_4442, aClass375_4443, aClass375_4359, aClass375_4445, aClass375_4446, aClass375_4418, aClass375_4448, aClass375_4449, RUN_CS2_SCRIPT, aClass375_4451, aClass375_4452, aClass375_4491, aClass375_4358, aClass375_4455, aClass375_4456, aClass375_4457, aClass375_4458, VARPBIT_2, NPC_ON_ICOMPONENT, aClass375_4461, aClass375_4462, aClass375_4463, aClass375_4464, aClass375_4465, CONFIG_1, GLOBAL_CONFIG_2, CREATE_OBJECT, aClass375_4469, aClass375_4470,
 				aClass375_4404, ICOMPONENT_SETTINGS, aClass375_4509, aClass375_4474, aClass375_4475, REMOVE_GROUND_ITEM, aClass375_4477, aClass375_4500, aClass375_4479, aClass375_4364, aClass375_4481, aClass375_4353, aClass375_4483, aClass375_4355, aClass375_4453, aClass375_4486, aClass375_4487, aClass375_4488, aClass375_4489, aClass375_4351, aClass375_4490, aClass375_4484, aClass375_4493, PROJECTILE, aClass375_4495, aClass375_4496, aClass375_4497, aClass375_4498, aClass375_4383, aClass375_4375,

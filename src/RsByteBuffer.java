@@ -390,7 +390,7 @@ public class RsByteBuffer extends Class282 {
 		return i_77_;
 	}
 
-	public int method13122(int i) {
+	public int readUnsignedShort128(int i) {
 		index += 2064013562;
 		int i_78_ = ((buffer[-1990677291 * index - 1] - 128 & 0xff) + ((buffer[index * -1990677291 - 2] & 0xff) << 8));
 		if (i_78_ > 32767) {
@@ -399,7 +399,7 @@ public class RsByteBuffer extends Class282 {
 		return i_78_;
 	}
 
-	public int method13123(int i) {
+	public int readUnsignedShortLE128(int i) {
 		index += 2064013562;
 		int i_79_ = ((buffer[-1990677291 * index - 2] - 128 & 0xff) + ((buffer[index * -1990677291 - 1] & 0xff) << 8));
 		if (i_79_ > 32767) {
