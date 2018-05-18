@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub1 extends Class282 {
+public abstract class Class282_Sub1 extends Node {
 	Class282_Sub1() {
 		/* empty */
 	}
@@ -36,7 +36,7 @@ public abstract class Class282_Sub1 extends Class282 {
 		}
 	}
 
-	public static void method11615(int i, Class317 class317, int i_2_, int i_3_, int i_4_, boolean bool, Class109 class109, int i_5_) {
+	public static void method11615(int i, Index class317, int i_2_, int i_3_, int i_4_, boolean bool, Class109 class109, int i_5_) {
 		if (i > 0) {
 			Class148.anInt1730 = 800770715;
 			Class75.aClass317_746 = class317;

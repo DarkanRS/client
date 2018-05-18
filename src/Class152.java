@@ -97,8 +97,8 @@ public abstract class Class152 {
 		return c;
 	}
 
-	public static Class160 method2600(Class317 class317, int i, int i_2_) {
-		Class160 class160 = (Class160) Class299.aClass229_3545.method3865((long) i);
+	public static NativeSprite method2600(Index class317, int i, int i_2_) {
+		NativeSprite class160 = (NativeSprite) Class299.aClass229_3545.method3865((long) i);
 		if (class160 == null) {
 			if (Class339.aBool3987)
 				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);

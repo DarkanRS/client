@@ -3,7 +3,7 @@
  */
 
 public class Class498 {
-	Class317 aClass317_5823;
+	Index aClass317_5823;
 	Class229 aClass229_5824 = new Class229(64);
 
 	public void method8317() {
@@ -36,10 +36,10 @@ public class Class498 {
 		}
 	}
 
-	public Class498(Class486 class486, Class495 class495, Class317 class317) {
+	public Class498(Game class486, Class495 class495, Index class317) {
 		((Class498) this).aClass317_5823 = class317;
 		if (((Class498) this).aClass317_5823 != null)
-			((Class498) this).aClass317_5823.method5624(-71319279 * Class120.aClass120_1479.anInt1521, 2039893772);
+			((Class498) this).aClass317_5823.filesCount(-71319279 * Class120.aClass120_1479.anInt1521, 2039893772);
 	}
 
 	public Class489 method8322(int i, short i_1_) {

@@ -15,7 +15,7 @@ public class Class110 {
 	static String aString1103;
 	static int anInt1104;
 	static int anInt1105;
-	public static Class317 aClass317_1106;
+	public static Index aClass317_1106;
 
 	Class110() {
 		/* empty */

@@ -713,7 +713,7 @@ public class Class414 {
 		return i_101_;
 	}
 
-	public static Class414 method6957(Class317 class317, int i) {
+	public static Class414 method6957(Index class317, int i) {
 		byte[] is = class317.method5615(i, -1802173950);
 		if (is == null)
 			return null;
@@ -908,7 +908,7 @@ public class Class414 {
 		return i_133_;
 	}
 
-	public static Class414 method6963(Class317 class317, int i, int i_138_) {
+	public static Class414 method6963(Index class317, int i, int i_138_) {
 		byte[] is = class317.getFile(i, i_138_, -2022363698);
 		if (is == null)
 			return null;

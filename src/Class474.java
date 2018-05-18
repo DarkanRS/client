@@ -6,13 +6,13 @@ public class Class474 {
 	Class229 aClass229_5607 = new Class229(256);
 	Class495 aClass495_5608;
 	boolean aBool5609;
-	Class317 aClass317_5610;
-	Class317 aClass317_5611;
+	Index aClass317_5610;
+	Index aClass317_5611;
 	public static final int anInt5612 = 256;
-	Class486 aClass486_5613;
+	Game aClass486_5613;
 	Class229 aClass229_5614 = new Class229(500);
 	Class229 aClass229_5615 = new Class229(30);
-	Class157[] aClass157Array5616;
+	RSMesh[] aClass157Array5616;
 	int anInt5617;
 	String[] aStringArray5618;
 	Class229 aClass229_5619 = new Class229(50);
@@ -99,7 +99,7 @@ public class Class474 {
 		synchronized (((Class474) this).aClass229_5619) {
 			((Class474) this).aClass229_5619.method3859(47774622);
 		}
-		((Class474) this).aClass157Array5616 = new Class157[4];
+		((Class474) this).aClass157Array5616 = new RSMesh[4];
 		((Class474) this).aClass452_5620 = new Class452(null, null);
 	}
 
@@ -116,7 +116,7 @@ public class Class474 {
 		synchronized (((Class474) this).aClass229_5619) {
 			((Class474) this).aClass229_5619.method3859(722371520);
 		}
-		((Class474) this).aClass157Array5616 = new Class157[4];
+		((Class474) this).aClass157Array5616 = new RSMesh[4];
 		((Class474) this).aClass452_5620 = new Class452(null, null);
 	}
 
@@ -182,8 +182,8 @@ public class Class474 {
 		return class478;
 	}
 
-	public Class474(Class486 class486, Class495 class495, boolean bool, Class317 class317, Class317 class317_3_) {
-		((Class474) this).aClass157Array5616 = new Class157[4];
+	public Class474(Game class486, Class495 class495, boolean bool, Index class317, Index class317_3_) {
+		((Class474) this).aClass157Array5616 = new RSMesh[4];
 		((Class474) this).aClass452_5620 = new Class452(null, null);
 		((Class474) this).aClass486_5613 = class486;
 		((Class474) this).aClass495_5608 = class495;
@@ -191,11 +191,11 @@ public class Class474 {
 		((Class474) this).aClass317_5610 = class317;
 		((Class474) this).aClass317_5611 = class317_3_;
 		if (null != ((Class474) this).aClass317_5610) {
-			int i = ((Class474) this).aClass317_5610.method5618(-1925709864) - 1;
+			int i = ((Class474) this).aClass317_5610.containersCount(-1925709864) - 1;
 			Class120.aClass120_1488.method2078(-1090472574);
-			((Class474) this).aClass317_5610.method5624(i, -1510124116);
+			((Class474) this).aClass317_5610.filesCount(i, -1510124116);
 		}
-		if (((Class474) this).aClass486_5613 == Class486.aClass486_5744)
+		if (((Class474) this).aClass486_5613 == Game.runescape)
 			((Class474) this).aStringArray5618 = (new String[] { null, null, null, null, null, Class433.aClass433_5282.method7273((((Class474) this).aClass495_5608), -952366759) });
 		else
 			((Class474) this).aStringArray5618 = new String[] { null, null, null, null, null, null };
@@ -377,7 +377,7 @@ public class Class474 {
 		synchronized (((Class474) this).aClass229_5619) {
 			((Class474) this).aClass229_5619.method3859(525958053);
 		}
-		((Class474) this).aClass157Array5616 = new Class157[4];
+		((Class474) this).aClass157Array5616 = new RSMesh[4];
 		((Class474) this).aClass452_5620 = new Class452(null, null);
 	}
 

@@ -5,7 +5,7 @@
 import java.awt.Point;
 
 public class Class479 {
-	Class317 aClass317_5713;
+	Index aClass317_5713;
 	Class229 aClass229_5714 = new Class229(128);
 
 	public void method8024(int i) {
@@ -40,9 +40,9 @@ public class Class479 {
 		}
 	}
 
-	public Class479(Class486 class486, Class495 class495, Class317 class317) {
+	public Class479(Game class486, Class495 class495, Index class317) {
 		((Class479) this).aClass317_5713 = class317;
-		((Class479) this).aClass317_5713.method5624((Class120.aClass120_1504.anInt1521) * -71319279, 345702944);
+		((Class479) this).aClass317_5713.filesCount((Class120.aClass120_1504.anInt1521) * -71319279, 345702944);
 	}
 
 	public void method8027() {
@@ -149,13 +149,13 @@ public class Class479 {
 				Class419 class419 = Class468_Sub23.aClass438_7932.method7325(i, -962986657);
 				Class91 class91 = class419.method7026(-890527904);
 				if (null != class91) {
-					ItemEffects.aClass267_5026.setcustomcursor(Class351.aCanvas4096, class91.method1528(), class91.method1519(), class91.method1520(), new Point(class419.anInt5002 * 1805382875, class419.anInt5000 * -683952919));
+					MeshModifier.aClass267_5026.setcustomcursor(Class351.aCanvas4096, class91.method1528(), class91.method1519(), class91.method1520(), new Point(class419.anInt5002 * 1805382875, class419.anInt5000 * -683952919));
 					client.anInt7190 = i * -618386713;
 				} else
 					i = -1;
 			}
 			if (-1 == i && -1 != client.anInt7190 * -1474737961) {
-				ItemEffects.aClass267_5026.setcustomcursor(Class351.aCanvas4096, null, -1, -1, new Point());
+				MeshModifier.aClass267_5026.setcustomcursor(Class351.aCanvas4096, null, -1, -1, new Point());
 				client.anInt7190 = 618386713;
 			}
 		}

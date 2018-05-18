@@ -4,7 +4,7 @@
 
 public class Class242 {
 	int anInt2978;
-	Class317 aClass317_2979;
+	Index aClass317_2979;
 	Class240[] aClass240Array2980;
 	static Class91 aClass91_2981;
 	public static int anInt2982;
@@ -27,10 +27,10 @@ public class Class242 {
 		return ((Class242) this).aClass240Array2980[i];
 	}
 
-	public Class242(Class486 class486, Class495 class495, Class317 class317, boolean bool) {
+	public Class242(Game class486, Class495 class495, Index class317, boolean bool) {
 		((Class242) this).aClass317_2979 = class317;
 		if (((Class242) this).aClass317_2979 != null)
-			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.method5624(-71319279 * Class120.aClass120_1498.anInt1521, -1883638938)) * 1089704477;
+			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.filesCount(-71319279 * Class120.aClass120_1498.anInt1521, -1883638938)) * 1089704477;
 		else
 			((Class242) this).anInt2978 = 0;
 		if (bool) {

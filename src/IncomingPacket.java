@@ -411,10 +411,10 @@ public class IncomingPacket {
 		return i - i_4_;
 	}
 
-	public static Class486 method6376(int i, int i_11_) {
-		Class486[] class486s = Class282_Sub15_Sub1.method14817(1926642479);
+	public static Game method6376(int i, int i_11_) {
+		Game[] class486s = Class282_Sub15_Sub1.method14817(1926642479);
 		for (int i_12_ = 0; i_12_ < class486s.length; i_12_++) {
-			Class486 class486 = class486s[i_12_];
+			Game class486 = class486s[i_12_];
 			if (class486.anInt5746 * 1648080491 == i) {
 				return class486;
 			}

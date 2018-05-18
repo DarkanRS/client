@@ -7,11 +7,11 @@ import java.util.Map;
 
 public class Class378 {
 	int[] anIntArray4521;
-	Class317 aClass317_4522;
-	Class317 aClass317_4523;
+	Index aClass317_4522;
+	Index aClass317_4523;
 	Class229 aClass229_4524 = new Class229(20);
 	Map aMap4525 = null;
-	public static Class317 aClass317_4526;
+	public static Index aClass317_4526;
 
 	public int method6402() {
 		if (((Class378) this).anIntArray4521 == null)
@@ -30,7 +30,7 @@ public class Class378 {
 		}
 	}
 
-	public Class378(Class317 class317, Class317 class317_2_, int[] is) {
+	public Class378(Index class317, Index class317_2_, int[] is) {
 		((Class378) this).aClass317_4522 = class317;
 		((Class378) this).aClass317_4523 = class317_2_;
 		if (null != is)
@@ -403,7 +403,7 @@ public class Class378 {
 		Class439.method7343(50, 827005880);
 		Class487.aClass378_5752.method6411(50, -1105244547);
 		Class332.method5927(5, (byte) 0);
-		Class322.method5768(5, (byte) -42);
+		ReferenceTable.method5768(5, (byte) -42);
 		client.aClass229_7204.method3858(5, (byte) 17);
 		Class20.aClass229_191.method3858(5, (byte) 15);
 		Class517.aClass229_5901.method3858(5, (byte) -83);

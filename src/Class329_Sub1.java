@@ -20,7 +20,7 @@ public class Class329_Sub1 extends Class329 {
 	Class474 aClass474_7725;
 	public static int anInt7726;
 
-	public final void method12458(Class505 class505, byte[] is, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, Class336[] class336s) {
+	public final void method12458(GraphicalRenderer class505, byte[] is, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, Class336[] class336s) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
 		int i_6_ = -1;
 		for (;;) {
@@ -60,7 +60,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	final void method12459(Class505 class505, int i, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, Class336 class336, int i_25_, int i_26_) {
+	final void method12459(GraphicalRenderer class505, int i, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, Class336 class336, int i_25_, int i_26_) {
 		if (i_19_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_19_;
 		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_22_, 65280);
@@ -163,7 +163,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12460(Class505 class505, RsByteBuffer class282_sub35, int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, int i_47_) {
+	public final void method12460(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, int i_47_) {
 		if (!aBool3786) {
 			boolean bool = false;
 			Class535 class535 = null;
@@ -283,7 +283,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12461(Class505 class505, byte[] is, int i, int i_74_, Class336[] class336s, int i_75_) {
+	public final void method12461(GraphicalRenderer class505, byte[] is, int i, int i_74_, Class336[] class336s, int i_75_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
 		int i_76_ = -1;
 		for (;;) {
@@ -320,7 +320,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12462(Class505 class505, byte[] is, int i, int i_89_, int i_90_, int i_91_, int i_92_, int i_93_, int i_94_, Class336[] class336s, int i_95_) {
+	public final void method12462(GraphicalRenderer class505, byte[] is, int i, int i_89_, int i_90_, int i_91_, int i_92_, int i_93_, int i_94_, Class336[] class336s, int i_95_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
 		int i_96_ = -1;
 		for (;;) {
@@ -360,7 +360,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12463(Class505 class505, boolean bool, int i) {
+	public final void method12463(GraphicalRenderer class505, boolean bool, int i) {
 		aClass206_3776.method3400();
 		if (!bool) {
 			if (1599084401 * anInt3845 > 1) {
@@ -414,7 +414,7 @@ public class Class329_Sub1 extends Class329 {
 		aByteArrayArrayArray3794 = null;
 	}
 
-	boolean method12464(Class505 class505, int i, int i_123_, boolean bool, Class478 class478, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_, int i_131_, boolean bool_132_, Class390 class390, Class336 class336, int i_133_, int i_134_, int i_135_) {
+	boolean method12464(GraphicalRenderer class505, int i, int i_123_, boolean bool, Class478 class478, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_, int i_131_, boolean bool_132_, Class390 class390, Class336 class336, int i_133_, int i_134_, int i_135_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_136_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -577,7 +577,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12465(Class505 class505, int i, int i_141_, boolean bool, Class478 class478, int i_142_, int i_143_, int i_144_, int i_145_, int i_146_, int i_147_, int i_148_, int i_149_, int i_150_) {
+	boolean method12465(GraphicalRenderer class505, int i, int i_141_, boolean bool, Class478 class478, int i_142_, int i_143_, int i_144_, int i_145_, int i_146_, int i_147_, int i_148_, int i_149_, int i_150_) {
 		if (1109376893 * Class458.aClass458_5475.anInt5481 == i) {
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
@@ -664,7 +664,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12466(Class505 class505, int i, int i_159_, boolean bool, Class478 class478, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_, int i_165_, int i_166_, int i_167_, boolean bool_168_, Class390 class390, Class336 class336, int i_169_, int i_170_) {
+	boolean method12466(GraphicalRenderer class505, int i, int i_159_, boolean bool, Class478 class478, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_, int i_165_, int i_166_, int i_167_, boolean bool_168_, Class390 class390, Class336 class336, int i_169_, int i_170_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_171_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -840,7 +840,7 @@ public class Class329_Sub1 extends Class329 {
 		return interface12;
 	}
 
-	public final void method12468(Class505 class505, RsByteBuffer class282_sub35, int i, int i_180_) {
+	public final void method12468(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_180_) {
 		if (!aBool3786) {
 			boolean bool = false;
 			Class535 class535 = null;
@@ -995,7 +995,7 @@ public class Class329_Sub1 extends Class329 {
 		anIntArray7713 = new int[] { -1, -1, 1, 1 };
 	}
 
-	void method12469(Class505 class505, int i, int i_212_, int i_213_, int i_214_, Class336 class336) {
+	void method12469(GraphicalRenderer class505, int i, int i_212_, int i_213_, int i_214_, Class336 class336) {
 		Interface12 interface12 = method12467(i, i_212_, i_213_, i_214_, 1070777471);
 		if (interface12 != null) {
 			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-1456391368), 65280);
@@ -1041,7 +1041,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	final void method12470(Class505 class505, int i, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_, int i_222_, Class336 class336, int i_223_) {
+	final void method12470(GraphicalRenderer class505, int i, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_, int i_222_, Class336 class336, int i_223_) {
 		if (i_217_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_217_;
 		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_220_, 65280);
@@ -1144,7 +1144,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12471(Class505 class505, RsByteBuffer class282_sub35, int i, int i_238_, int i_239_) {
+	public final void method12471(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_238_, int i_239_) {
 		if (!aBool3786) {
 			boolean bool = false;
 			Class535 class535 = null;
@@ -1309,7 +1309,7 @@ public class Class329_Sub1 extends Class329 {
 		return class478.method7987(i_272_, 1130932863);
 	}
 
-	public final void method12474(Class505 class505, byte[] is, int i, int i_273_, Class336[] class336s) {
+	public final void method12474(GraphicalRenderer class505, byte[] is, int i, int i_273_, Class336[] class336s) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
 		int i_274_ = -1;
 		for (;;) {
@@ -1346,7 +1346,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	void method12475(Class505 class505, int i, int i_287_, int i_288_, int i_289_, Class336 class336, int i_290_) {
+	void method12475(GraphicalRenderer class505, int i, int i_287_, int i_288_, int i_289_, Class336 class336, int i_290_) {
 		Interface12 interface12 = method12467(i, i_287_, i_288_, i_289_, 1923565825);
 		if (interface12 != null) {
 			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-289246828), 65280);
@@ -1392,7 +1392,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12476(Class505 class505, byte[] is, int i, int i_293_, int i_294_, int i_295_, int i_296_, int i_297_, int i_298_, Class336[] class336s) {
+	public final void method12476(GraphicalRenderer class505, byte[] is, int i, int i_293_, int i_294_, int i_295_, int i_296_, int i_297_, int i_298_, Class336[] class336s) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
 		int i_299_ = -1;
 		for (;;) {
@@ -1432,7 +1432,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	final void method12477(Class505 class505, int i, int i_312_, int i_313_, int i_314_, int i_315_, int i_316_, int i_317_, Class336 class336, int i_318_) {
+	final void method12477(GraphicalRenderer class505, int i, int i_312_, int i_313_, int i_314_, int i_315_, int i_316_, int i_317_, Class336 class336, int i_318_) {
 		if (i_312_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_312_;
 		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_315_, 65280);
@@ -1535,7 +1535,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	final void method12478(Class505 class505, int i, int i_333_, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_, Class336 class336, int i_339_) {
+	final void method12478(GraphicalRenderer class505, int i, int i_333_, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_, Class336 class336, int i_339_) {
 		if (i_333_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_333_;
 		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_336_, 65280);
@@ -1638,7 +1638,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12479(Class505 class505, RsByteBuffer class282_sub35, int i, int i_354_) {
+	public final void method12479(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_354_) {
 		if (!aBool3786) {
 			boolean bool = false;
 			Class535 class535 = null;
@@ -1785,7 +1785,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	final void method12480(Class505 class505, int i, int i_386_, int i_387_, int i_388_, int i_389_, int i_390_, int i_391_, Class336 class336, int i_392_) {
+	final void method12480(GraphicalRenderer class505, int i, int i_386_, int i_387_, int i_388_, int i_389_, int i_390_, int i_391_, Class336 class336, int i_392_) {
 		if (i_386_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_386_;
 		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_389_, 65280);
@@ -1888,7 +1888,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	final void method12481(Class505 class505, int i, int i_407_, int i_408_, int i_409_, int i_410_, int i_411_, int i_412_, Class336 class336, int i_413_) {
+	final void method12481(GraphicalRenderer class505, int i, int i_407_, int i_408_, int i_409_, int i_410_, int i_411_, int i_412_, Class336 class336, int i_413_) {
 		if (i_407_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_407_;
 		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_410_, 65280);
@@ -1991,7 +1991,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	boolean method12482(Class505 class505, int i, int i_428_, boolean bool, Class478 class478, int i_429_, int i_430_, int i_431_, int i_432_, int i_433_, int i_434_, int i_435_, int i_436_) {
+	boolean method12482(GraphicalRenderer class505, int i, int i_428_, boolean bool, Class478 class478, int i_429_, int i_430_, int i_431_, int i_432_, int i_433_, int i_434_, int i_435_, int i_436_) {
 		if (1109376893 * Class458.aClass458_5475.anInt5481 == i) {
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
@@ -2078,7 +2078,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12483(Class505 class505, int i, int i_445_, boolean bool, Class478 class478, int i_446_, int i_447_, int i_448_, int i_449_, int i_450_, int i_451_, int i_452_, int i_453_, boolean bool_454_, Class390 class390, Class336 class336, int i_455_, int i_456_) {
+	boolean method12483(GraphicalRenderer class505, int i, int i_445_, boolean bool, Class478 class478, int i_446_, int i_447_, int i_448_, int i_449_, int i_450_, int i_451_, int i_452_, int i_453_, boolean bool_454_, Class390 class390, Class336 class336, int i_455_, int i_456_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_457_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -2241,7 +2241,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12484(Class505 class505, int i, int i_462_, boolean bool, Class478 class478, int i_463_, int i_464_, int i_465_, int i_466_, int i_467_, int i_468_, int i_469_, int i_470_, boolean bool_471_, Class390 class390, Class336 class336, int i_472_, int i_473_) {
+	boolean method12484(GraphicalRenderer class505, int i, int i_462_, boolean bool, Class478 class478, int i_463_, int i_464_, int i_465_, int i_466_, int i_467_, int i_468_, int i_469_, int i_470_, boolean bool_471_, Class390 class390, Class336 class336, int i_472_, int i_473_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_474_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -2410,7 +2410,7 @@ public class Class329_Sub1 extends Class329 {
 		((Class329_Sub1) this).aClass239_7719 = class239;
 	}
 
-	boolean method12485(Class505 class505, int i, int i_481_, boolean bool, Class478 class478, int i_482_, int i_483_, int i_484_, int i_485_, int i_486_, int i_487_, int i_488_, int i_489_) {
+	boolean method12485(GraphicalRenderer class505, int i, int i_481_, boolean bool, Class478 class478, int i_482_, int i_483_, int i_484_, int i_485_, int i_486_, int i_487_, int i_488_, int i_489_) {
 		if (1109376893 * Class458.aClass458_5475.anInt5481 == i) {
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
@@ -2497,7 +2497,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	void method12486(Class505 class505, int i, int i_498_, int i_499_, int i_500_, Class336 class336) {
+	void method12486(GraphicalRenderer class505, int i, int i_498_, int i_499_, int i_500_, Class336 class336) {
 		Interface12 interface12 = method12467(i, i_498_, i_499_, i_500_, 1742443241);
 		if (interface12 != null) {
 			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-1786399385), 65280);
@@ -2543,7 +2543,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	void method12487(Class505 class505, int i, int i_503_, int i_504_, int i_505_, Class336 class336) {
+	void method12487(GraphicalRenderer class505, int i, int i_503_, int i_504_, int i_505_, Class336 class336) {
 		Interface12 interface12 = method12467(i, i_503_, i_504_, i_505_, 1980964506);
 		if (interface12 != null) {
 			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(1225766237), 65280);
@@ -2589,7 +2589,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	public final void method12488(Class505 class505, RsByteBuffer class282_sub35, int i, int i_508_, int i_509_, int i_510_, int i_511_, int i_512_, int i_513_) {
+	public final void method12488(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i, int i_508_, int i_509_, int i_510_, int i_511_, int i_512_, int i_513_) {
 		if (!aBool3786) {
 			boolean bool = false;
 			Class535 class535 = null;
@@ -2722,7 +2722,7 @@ public class Class329_Sub1 extends Class329 {
 		return interface12;
 	}
 
-	public final void method12490(Class505 class505, boolean bool) {
+	public final void method12490(GraphicalRenderer class505, boolean bool) {
 		aClass206_3776.method3400();
 		if (!bool) {
 			if (1599084401 * anInt3845 > 1) {

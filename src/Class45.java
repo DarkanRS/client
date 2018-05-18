@@ -4,7 +4,7 @@
 
 public class Class45 {
 	Class229 aClass229_432 = new Class229(16);
-	Class317 aClass317_433;
+	Index aClass317_433;
 	protected static int anInt434;
 	public static Class447 aClass447_435;
 
@@ -110,9 +110,9 @@ public class Class45 {
 		}
 	}
 
-	public Class45(Class486 class486, Class495 class495, Class317 class317) {
+	public Class45(Game class486, Class495 class495, Index class317) {
 		((Class45) this).aClass317_433 = class317;
-		((Class45) this).aClass317_433.method5624((Class120.aClass120_1489.anInt1521) * -71319279, -422485706);
+		((Class45) this).aClass317_433.filesCount((Class120.aClass120_1489.anInt1521) * -71319279, -422485706);
 	}
 
 	public void method924() {

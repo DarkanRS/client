@@ -188,7 +188,7 @@ public class Class387 {
 		Class191.method3167(i, 0, "", "", "", string, 146573843);
 	}
 
-	static final void method6682(Class505 class505, int i, int i_25_, int i_26_, int i_27_, short i_28_) {
+	static final void method6682(GraphicalRenderer class505, int i, int i_25_, int i_26_, int i_27_, short i_28_) {
 		class505.r(i, i_25_, i_26_ + i, i_25_ + i_27_);
 		class505.method8425(i, i_25_, i_26_, i_27_, -16777216, (byte) -58);
 		if (-8084891 * Class291_Sub1.anInt8015 >= 100) {
@@ -212,7 +212,7 @@ public class Class387 {
 			int i_33_ = i + (i_29_ * (Class340.anInt3991 * -517876187) / Class291_Sub1.anInt3474);
 			int i_34_ = i_30_ + i_25_ - (i_30_ * (Class489.anInt5765 * -1586888337) / Class291_Sub1.anInt3483) - i_32_;
 			int i_35_ = -1996554240;
-			if (Class486.aClass486_5750 == client.aClass486_7450)
+			if (Game.stellarDawn == client.aClass486_7450)
 				i_35_ = -1996488705;
 			class505.B(i_33_, i_34_, i_31_, i_32_, i_35_, 1);
 			class505.method8430(i_33_, i_34_, i_31_, i_32_, i_35_, 0);
@@ -222,7 +222,7 @@ public class Class387 {
 					i_36_ = 500 - Class96_Sub9.anInt9282 * 187146859;
 				else
 					i_36_ = 187146859 * Class96_Sub9.anInt9282;
-				for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.method8097((byte) 9)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.method8067(-387502259)) {
+				for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 9)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
 					Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(class282_sub36.anInt7991 * -1798678621, 1043671083));
 					if (Class282_Sub16.method12248(class220, -2066566460)) {
 						if (-1798678621 * class282_sub36.anInt7991 == 2089227969 * Class291_Sub1.anInt8018) {
@@ -265,7 +265,7 @@ public class Class387 {
 		Class109_Sub1.anInt9384 = -126779709 * (i_41_ - i_53_);
 		Class246.anInt3029 = 1442943697 * (i_42_ - i_54_);
 		Class293.anInt3512 = -647467135 * i_43_;
-		Class518.anInt5930 = i_44_ * 1898253385;
+		AnimationDefinitions.anInt5930 = i_44_ * 1898253385;
 		Class121.anInt1525 = 0;
 	}
 
@@ -340,7 +340,7 @@ public class Class387 {
 		Class13.method502(class118, class98, class527, 577432492);
 	}
 
-	static void method6686(Class505 class505, byte[][][] is, int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
+	static void method6686(GraphicalRenderer class505, byte[][][] is, int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
 		if (i_78_ != 0 && i != 0) {
 			if (9 == i_78_) {
 				i_78_ = 1;

@@ -3,12 +3,12 @@
  */
 
 public class Class52_Sub2 extends Class52 {
-	Class160 aClass160_9160;
-	Class160 aClass160_9161;
-	Class160 aClass160_9162;
-	Class160 aClass160_9163;
-	Class160 aClass160_9164;
-	Class160 aClass160_9165;
+	NativeSprite aClass160_9160;
+	NativeSprite aClass160_9161;
+	NativeSprite aClass160_9162;
+	NativeSprite aClass160_9163;
+	NativeSprite aClass160_9164;
+	NativeSprite aClass160_9165;
 
 	public boolean method21() {
 		if (!super.method10(1448956464))
@@ -81,7 +81,7 @@ public class Class52_Sub2 extends Class52 {
 		((Class52_Sub2) this).aClass160_9162.method2756(i, i_16_, i_17_, i_18_);
 	}
 
-	Class52_Sub2(Class317 class317, Class317 class317_20_, Class350_Sub3 class350_sub3) {
+	Class52_Sub2(Index class317, Index class317_20_, Class350_Sub3 class350_sub3) {
 		super(class317, class317_20_, (Class350) class350_sub3);
 	}
 

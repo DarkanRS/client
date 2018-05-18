@@ -5,8 +5,8 @@
 import java.awt.Canvas;
 
 public class Class374 {
-	public static Class505 method6366(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
-		Class505 class505;
+	public static GraphicalRenderer method6366(Canvas canvas, Interface22 interface22, Index class317, int i) {
+		GraphicalRenderer class505;
 		try {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
@@ -22,8 +22,8 @@ public class Class374 {
 		return class505;
 	}
 
-	public static Class505 method6367(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
-		Class505 class505;
+	public static GraphicalRenderer method6367(Canvas canvas, Interface22 interface22, Index class317, int i) {
+		GraphicalRenderer class505;
 		try {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
@@ -39,8 +39,8 @@ public class Class374 {
 		return class505;
 	}
 
-	public static Class505 method6368(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
-		Class505 class505;
+	public static GraphicalRenderer method6368(Canvas canvas, Interface22 interface22, Index class317, int i) {
+		GraphicalRenderer class505;
 		try {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
@@ -60,8 +60,8 @@ public class Class374 {
 		throw new Error();
 	}
 
-	public static Class505 method6369(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
-		Class505 class505;
+	public static GraphicalRenderer method6369(Canvas canvas, Interface22 interface22, Index class317, int i) {
+		GraphicalRenderer class505;
 		try {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)

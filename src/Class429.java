@@ -4,8 +4,8 @@
 
 public class Class429 {
 	static final int anInt5127 = 32768;
-	Class317 aClass317_5128;
-	Class317 aClass317_5129;
+	Index aClass317_5128;
+	Index aClass317_5129;
 	public int anInt5130 = 0;
 	Class229 aClass229_5131;
 	static final int anInt5132 = 1;
@@ -21,16 +21,16 @@ public class Class429 {
 		return Long.toString(l);
 	}
 
-	public Class429(Class495 class495, Class317 class317, Class317 class317_0_, Interface19 interface19) {
+	public Class429(Class495 class495, Index class317, Index class317_0_, Interface19 interface19) {
 		((Class429) this).aClass229_5131 = new Class229(64);
 		((Class429) this).anInterface19_5134 = null;
 		((Class429) this).aClass317_5129 = class317;
 		((Class429) this).aClass317_5128 = class317_0_;
 		((Class429) this).anInterface19_5134 = interface19;
 		if (((Class429) this).aClass317_5129 != null)
-			anInt5130 = (((Class429) this).aClass317_5129.method5624(1, -1204926435) * 867652259);
+			anInt5130 = (((Class429) this).aClass317_5129.filesCount(1, -1204926435) * 867652259);
 		if (((Class429) this).aClass317_5128 != null)
-			anInt5133 = (((Class429) this).aClass317_5128.method5624(1, 1956053164) * 767103791);
+			anInt5133 = (((Class429) this).aClass317_5128.filesCount(1, 1956053164) * 767103791);
 	}
 
 	String method7212(Class243 class243, int[] is, long l) {

@@ -2,10 +2,10 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class327 {
-	abstract Class322 method5803(int i);
+public abstract class JS5FileWorker {
+	abstract ReferenceTable getReferenceTable(int i);
 
-	Class327() {
+	JS5FileWorker() {
 		/* empty */
 	}
 
@@ -15,7 +15,7 @@ public abstract class Class327 {
 
 	abstract int method5806(int i, byte i_2_);
 
-	abstract Class322 method5807();
+	abstract ReferenceTable method5807();
 
 	abstract void method5808(int i);
 

@@ -63,7 +63,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	Class539 aClass539_10369;
 	boolean aBool10370;
 	public byte aByte10371;
-	public Class528[] aClass528Array10372;
+	public MeshRasterizer[] aClass528Array10372;
 	public int faceEntity;
 	public int anInt10374;
 	public int anInt10375 = -1305000051;
@@ -210,7 +210,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	void method15799(Class505 class505, Class528[] class528s, Class294 class294, boolean bool, byte i) {
+	void method15799(GraphicalRenderer class505, MeshRasterizer[] class528s, Class294 class294, boolean bool, byte i) {
 		if (!bool) {
 			int i_21_ = 0;
 			int i_22_ = 0;
@@ -284,7 +284,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			if (i == i_40_) {
 				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) -32);
 				if (class525.aBool6968 && -1 != class525.anInt6977 * -364555849) {
-					Class518 class518 = Class330.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) 21);
+					AnimationDefinitions class518 = Class330.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) 21);
 					int i_41_ = 554947543 * class518.anInt5907;
 					if (0 == i_41_)
 						return;
@@ -297,8 +297,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) 36);
 				Class525 class525_42_ = Class96_Sub20.aClass515_9416.method8845(i_40_, (byte) -6);
 				if (-1 != class525.anInt6977 * -364555849 && class525_42_.anInt6977 * -364555849 != -1) {
-					Class518 class518 = Class330.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) -33);
-					Class518 class518_43_ = Class330.aClass523_3868.method11205(((class525_42_.anInt6977) * -364555849), (byte) 13);
+					AnimationDefinitions class518 = Class330.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) -33);
+					AnimationDefinitions class518_43_ = Class330.aClass523_3868.method11205(((class525_42_.anInt6977) * -364555849), (byte) 13);
 					if (-1834317435 * class518.anInt5916 < -1834317435 * class518_43_.anInt5916)
 						return;
 				}
@@ -542,7 +542,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			Class521_Sub1_Sub3_Sub2.method16094(aClass98_10324.method1616(2115136308), -1, i_84_, i_85_, i_86_, i_87_, i_88_, i_89_, i, false, (byte) 6);
 	}
 
-	void method15819(Class528 class528, int i) {
+	void method15819(MeshRasterizer class528, int i) {
 		int i_92_ = 1040633965 * aClass19_10360.anInt153;
 		int i_93_ = 1040633965 * aClass19_10330.anInt153;
 		if (i_92_ != 0 || i_93_ != 0) {
@@ -554,7 +554,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	void method15820(Class505 class505, Class227 class227, int i, int i_95_, int i_96_, int i_97_) {
+	void method15820(GraphicalRenderer class505, Class227 class227, int i, int i_95_, int i_96_, int i_97_) {
 		for (int i_98_ = 0; i_98_ < aClass161Array10339.length; i_98_++) {
 			byte i_99_ = 0;
 			if (0 == i_98_)
@@ -580,7 +580,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					if (-660316243 * class161.anInt2011 >= 0)
 						i_100_ |= 0x7;
 				}
-				Class528 class528 = (aClass528Array10372[i_98_ + 1] = class525.method11228(class505, i_100_, class161.aClass456_2014, i_99_, (byte) -5));
+				MeshRasterizer class528 = (aClass528Array10372[i_98_ + 1] = class525.method11228(class505, i_100_, class161.aClass456_2014, i_99_, (byte) -5));
 				if (class528 != null) {
 					if (class161.anInt2011 * -660316243 >= 0 && class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[-660316243 * class161.anInt2011])) {
 						int i_101_ = 0;
@@ -1078,7 +1078,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		((Animable) this).anInt10315 = -2140159477 * i;
 	}
 
-	void method15837(Class505 class505, Class227 class227, int i, int i_157_, int i_158_, int i_159_, byte i_160_) {
+	void method15837(GraphicalRenderer class505, Class227 class227, int i, int i_157_, int i_158_, int i_159_, byte i_160_) {
 		for (int i_161_ = 0; i_161_ < aClass161Array10339.length; i_161_++) {
 			byte i_162_ = 0;
 			if (0 == i_161_)
@@ -1104,7 +1104,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					if (-660316243 * class161.anInt2011 >= 0)
 						i_163_ |= 0x7;
 				}
-				Class528 class528 = (aClass528Array10372[i_161_ + 1] = class525.method11228(class505, i_163_, class161.aClass456_2014, i_162_, (byte) 53));
+				MeshRasterizer class528 = (aClass528Array10372[i_161_ + 1] = class525.method11228(class505, i_163_, class161.aClass456_2014, i_162_, (byte) 53));
 				if (class528 != null) {
 					if (class161.anInt2011 * -660316243 >= 0 && class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[-660316243 * class161.anInt2011])) {
 						int i_164_ = 0;
@@ -1156,7 +1156,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		((Animable) this).anInt10315 = -2140159477 * i;
 	}
 
-	void method15839(Class505 class505, Class528[] class528s, Class294 class294, boolean bool) {
+	void method15839(GraphicalRenderer class505, MeshRasterizer[] class528s, Class294 class294, boolean bool) {
 		if (!bool) {
 			int i = 0;
 			int i_172_ = 0;
@@ -1223,7 +1223,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			((Animable) this).aClass539_10369.method11515(aByte7967, aShort9458, aShort9455, aShort9456, aShort9457);
 	}
 
-	void method15840(Class505 class505, Class528[] class528s, Class294 class294, boolean bool) {
+	void method15840(GraphicalRenderer class505, MeshRasterizer[] class528s, Class294 class294, boolean bool) {
 		if (!bool) {
 			int i = 0;
 			int i_185_ = 0;
@@ -1297,7 +1297,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			if (i == i_202_) {
 				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) -63);
 				if (class525.aBool6968 && -1 != class525.anInt6977 * -364555849) {
-					Class518 class518 = Class330.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) -19);
+					AnimationDefinitions class518 = Class330.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) -19);
 					int i_203_ = 554947543 * class518.anInt5907;
 					if (0 == i_203_)
 						return;
@@ -1310,8 +1310,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) 26);
 				Class525 class525_204_ = Class96_Sub20.aClass515_9416.method8845(i_202_, (byte) 69);
 				if (-1 != class525.anInt6977 * -364555849 && class525_204_.anInt6977 * -364555849 != -1) {
-					Class518 class518 = Class330.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) 42);
-					Class518 class518_205_ = Class330.aClass523_3868.method11205(((class525_204_.anInt6977) * -364555849), (byte) 16);
+					AnimationDefinitions class518 = Class330.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) 42);
+					AnimationDefinitions class518_205_ = Class330.aClass523_3868.method11205(((class525_204_.anInt6977) * -364555849), (byte) 16);
 					if (-1834317435 * class518.anInt5916 < -1834317435 * class518_205_.anInt5916)
 						return;
 				}
@@ -1709,7 +1709,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return Class96_Sub16.aClass211_9383.method3616(i_275_, (byte) -2);
 	}
 
-	void method15856(Class505 class505, Class227 class227, int i, int i_276_, int i_277_, int i_278_) {
+	void method15856(GraphicalRenderer class505, Class227 class227, int i, int i_276_, int i_277_, int i_278_) {
 		for (int i_279_ = 0; i_279_ < aClass161Array10339.length; i_279_++) {
 			byte i_280_ = 0;
 			if (0 == i_279_)
@@ -1735,7 +1735,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					if (-660316243 * class161.anInt2011 >= 0)
 						i_281_ |= 0x7;
 				}
-				Class528 class528 = (aClass528Array10372[i_279_ + 1] = class525.method11228(class505, i_281_, class161.aClass456_2014, i_280_, (byte) 31));
+				MeshRasterizer class528 = (aClass528Array10372[i_279_ + 1] = class525.method11228(class505, i_281_, class161.aClass456_2014, i_280_, (byte) 31));
 				if (class528 != null) {
 					if (class161.anInt2011 * -660316243 >= 0 && class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[-660316243 * class161.anInt2011])) {
 						int i_282_ = 0;
@@ -1793,7 +1793,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	void method15858(Class528 class528) {
+	void method15858(MeshRasterizer class528) {
 		int i = 1040633965 * aClass19_10360.anInt153;
 		int i_291_ = 1040633965 * aClass19_10330.anInt153;
 		if (i != 0 || i_291_ != 0) {
@@ -1805,7 +1805,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	void method15859(Class505 class505, Class227 class227, int i, int i_293_, int i_294_, int i_295_) {
+	void method15859(GraphicalRenderer class505, Class227 class227, int i, int i_293_, int i_294_, int i_295_) {
 		for (int i_296_ = 0; i_296_ < aClass161Array10339.length; i_296_++) {
 			byte i_297_ = 0;
 			if (0 == i_296_)
@@ -1831,7 +1831,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					if (-660316243 * class161.anInt2011 >= 0)
 						i_298_ |= 0x7;
 				}
-				Class528 class528 = (aClass528Array10372[i_296_ + 1] = class525.method11228(class505, i_298_, class161.aClass456_2014, i_297_, (byte) 32));
+				MeshRasterizer class528 = (aClass528Array10372[i_296_ + 1] = class525.method11228(class505, i_298_, class161.aClass456_2014, i_297_, (byte) 32));
 				if (class528 != null) {
 					if (class161.anInt2011 * -660316243 >= 0 && class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[-660316243 * class161.anInt2011])) {
 						int i_299_ = 0;
@@ -2024,7 +2024,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		regionBaseX = new int[i];
 		regionBaseY = new int[i];
 		aByteArray10365 = new byte[i];
-		aClass528Array10372 = new Class528[5];
+		aClass528Array10372 = new MeshRasterizer[5];
 		aClass161Array10339 = new Class161[4];
 		for (int i_343_ = 0; i_343_ < 4; i_343_++)
 			aClass161Array10339[i_343_] = new Class161(this);
@@ -2116,7 +2116,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		((Animable) this).anInt10344 = -321130975 * i;
 	}
 
-	void method15883(Class505 class505, Class227 class227, int i, int i_368_, int i_369_, int i_370_) {
+	void method15883(GraphicalRenderer class505, Class227 class227, int i, int i_368_, int i_369_, int i_370_) {
 		for (int i_371_ = 0; i_371_ < aClass161Array10339.length; i_371_++) {
 			byte i_372_ = 0;
 			if (0 == i_371_)
@@ -2142,7 +2142,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					if (-660316243 * class161.anInt2011 >= 0)
 						i_373_ |= 0x7;
 				}
-				Class528 class528 = (aClass528Array10372[i_371_ + 1] = class525.method11228(class505, i_373_, class161.aClass456_2014, i_372_, (byte) -110));
+				MeshRasterizer class528 = (aClass528Array10372[i_371_ + 1] = class525.method11228(class505, i_373_, class161.aClass456_2014, i_372_, (byte) -110));
 				if (class528 != null) {
 					if (class161.anInt2011 * -660316243 >= 0 && class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[-660316243 * class161.anInt2011])) {
 						int i_374_ = 0;
@@ -2196,7 +2196,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		return method15815((((Animable) this).anInt10344 * 1959466465), -1081352448);
 	}
 
-	void method15885(Class505 class505, Class227 class227, int i, int i_382_, int i_383_, int i_384_) {
+	void method15885(GraphicalRenderer class505, Class227 class227, int i, int i_382_, int i_383_, int i_384_) {
 		for (int i_385_ = 0; i_385_ < aClass161Array10339.length; i_385_++) {
 			byte i_386_ = 0;
 			if (0 == i_385_)
@@ -2222,7 +2222,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					if (-660316243 * class161.anInt2011 >= 0)
 						i_387_ |= 0x7;
 				}
-				Class528 class528 = (aClass528Array10372[i_385_ + 1] = class525.method11228(class505, i_387_, class161.aClass456_2014, i_386_, (byte) -31));
+				MeshRasterizer class528 = (aClass528Array10372[i_385_ + 1] = class525.method11228(class505, i_387_, class161.aClass456_2014, i_386_, (byte) -31));
 				if (class528 != null) {
 					if (class161.anInt2011 * -660316243 >= 0 && class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[-660316243 * class161.anInt2011])) {
 						int i_388_ = 0;

@@ -13,7 +13,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class Class435 {
-	static Class482 aClass482_5332 = new Class482();
+	static NodeCollection aClass482_5332 = new NodeCollection();
 
 	static Class method7293(String string) throws ClassNotFoundException {
 		if (string.equals("B"))
@@ -38,7 +38,7 @@ public class Class435 {
 	}
 
 	public static void method7294(RsBitsBuffer class282_sub35_sub2) {
-		Class282_Sub42 class282_sub42 = (Class282_Sub42) aClass482_5332.method8097((byte) 27);
+		Class282_Sub42 class282_sub42 = (Class282_Sub42) aClass482_5332.head((byte) 27);
 		if (class282_sub42 != null) {
 			int i = class282_sub35_sub2.index * -1990677291;
 			class282_sub35_sub2.writeInt(1935007287 * (((Class282_Sub42) class282_sub42).anInt8038));
@@ -116,16 +116,16 @@ public class Class435 {
 				}
 			}
 			class282_sub35_sub2.method13104(i, 1491760652);
-			class282_sub42.method4991(-371378792);
+			class282_sub42.unlink(-371378792);
 		}
 	}
 
 	public static void method7295() {
-		aClass482_5332 = new Class482();
+		aClass482_5332 = new NodeCollection();
 	}
 
 	public static void method7296() {
-		aClass482_5332 = new Class482();
+		aClass482_5332 = new NodeCollection();
 	}
 
 	Class435() throws Throwable {
@@ -299,7 +299,7 @@ public class Class435 {
 	}
 
 	public static void method7299(RsBitsBuffer class282_sub35_sub2) {
-		Class282_Sub42 class282_sub42 = (Class282_Sub42) aClass482_5332.method8097((byte) 86);
+		Class282_Sub42 class282_sub42 = (Class282_Sub42) aClass482_5332.head((byte) 86);
 		if (class282_sub42 != null) {
 			int i = class282_sub35_sub2.index * -1990677291;
 			class282_sub35_sub2.writeInt(1935007287 * (((Class282_Sub42) class282_sub42).anInt8038));
@@ -377,7 +377,7 @@ public class Class435 {
 				}
 			}
 			class282_sub35_sub2.method13104(i, -1139639151);
-			class282_sub42.method4991(-371378792);
+			class282_sub42.unlink(-371378792);
 		}
 	}
 
@@ -418,7 +418,7 @@ public class Class435 {
 		}
 	}
 
-	static final void method7302(Class505 class505, Interface22 interface22, byte i) {
+	static final void method7302(GraphicalRenderer class505, Interface22 interface22, byte i) {
 		if (null != Class291_Sub1.aClass282_Sub50_Sub6_3491) {
 			Class169.method2869(1719554572);
 			Class169.method2869(1888552596);
@@ -486,7 +486,7 @@ public class Class435 {
 				Class291_Sub1.aByteArrayArrayArray3464 = Class491.method8246(Class291_Sub1.anInt3469, (short) 8192);
 				Class89.method1502(-931909822);
 				Class291_Sub1.method5126();
-				Class346.aClass482_4049 = new Class482();
+				Class346.aClass482_4049 = new NodeCollection();
 				Class291_Sub1.anInt3454 += (int) (Math.random() * 5.0) - 2;
 				if (Class291_Sub1.anInt3454 < -8)
 					Class291_Sub1.anInt3454 = -8;

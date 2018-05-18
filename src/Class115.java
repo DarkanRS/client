@@ -7,7 +7,7 @@ public abstract class Class115 implements Interface7 {
 	protected String aString1245 = null;
 	protected String aString1246;
 	public static int anInt1247;
-	static Class160[] aClass160Array1248;
+	static NativeSprite[] aClass160Array1248;
 	static int anInt1249;
 
 	abstract void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);

@@ -11,7 +11,7 @@ public class Class221 {
 	static Class118 aClass118_2763;
 
 	static Class221 method3744(int i) {
-		Class221[] class221s = Class327.method5815(288844894);
+		Class221[] class221s = JS5FileWorker.method5815(288844894);
 		for (int i_0_ = 0; i_0_ < class221s.length; i_0_++) {
 			Class221 class221 = class221s[i_0_];
 			if (i == ((Class221) class221).anInt2758 * 692352953)

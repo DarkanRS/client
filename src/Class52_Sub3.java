@@ -9,7 +9,7 @@ public class Class52_Sub3 extends Class52 {
 		Class316.aClass505_3680.B(i + i_1_, i_0_ + 2, ((Class52_Sub3) this).aClass350_489.anInt4093 * 329542577 - i_1_, ((Class52_Sub3) this).aClass350_489.anInt4088 * 323608093 - 2, 0, 0);
 	}
 
-	Class52_Sub3(Class317 class317, Class317 class317_2_, Class350_Sub2 class350_sub2) {
+	Class52_Sub3(Index class317, Index class317_2_, Class350_Sub2 class350_sub2) {
 		super(class317, class317_2_, (Class350) class350_sub2);
 	}
 
@@ -43,7 +43,7 @@ public class Class52_Sub3 extends Class52 {
 
 	static final void method14519(short i) {
 		for (Class275_Sub2 class275_sub2 = ((Class275_Sub2) client.aClass457_7290.method7648(1998226533)); class275_sub2 != null; class275_sub2 = ((Class275_Sub2) client.aClass457_7290.method7648(1129303155)))
-			Class505.method8695(class275_sub2, 131934272);
+			GraphicalRenderer.method8695(class275_sub2, 131934272);
 		int i_13_ = 0;
 		int i_14_ = 3;
 		if (4 == client.anInt7341 * -891719545) {

@@ -21,7 +21,7 @@ public class Class245 {
 	public static final int anInt3024 = 15;
 	public static final int anInt3025 = 21;
 	public static final int anInt3026 = 48;
-	static Class160[] aClass160Array3027;
+	static NativeSprite[] aClass160Array3027;
 
 	Class245() throws Throwable {
 		throw new Error();

@@ -27,11 +27,11 @@ public class Class403 {
 		Class237.method3987(class118, class98, class527, -669419549);
 	}
 
-	public static void method6803(Class317 class317, Class317 class317_2_, Class317 class317_3_, Class317 class317_4_, int i) {
+	public static void method6803(Index class317, Index class317_2_, Index class317_3_, Index class317_4_, int i) {
 		Class388.aClass317_4721 = class317;
 		Class488.aClass317_5761 = class317_2_;
 		Class463.aClass317_5549 = class317_3_;
-		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.method5618(-1686951777)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.method5618(-1593209723)];
+		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1686951777)];
+		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1593209723)];
 	}
 }

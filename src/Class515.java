@@ -5,20 +5,20 @@
 import java.awt.Font;
 
 public class Class515 {
-	Class317 aClass317_5888;
-	Class317 aClass317_5889;
+	Index aClass317_5888;
+	Index aClass317_5889;
 	Class229 aClass229_5890;
 	Class229 aClass229_5891 = new Class229(64);
 	int anInt5892;
 	static Font aFont5893;
 
-	public Class515(Class486 class486, Class495 class495, Class317 class317, Class317 class317_0_) {
+	public Class515(Game class486, Class495 class495, Index class317, Index class317_0_) {
 		((Class515) this).aClass229_5890 = new Class229(60);
 		((Class515) this).aClass317_5888 = class317;
 		((Class515) this).aClass317_5889 = class317_0_;
-		int i = ((Class515) this).aClass317_5888.method5618(-1503644160) - 1;
+		int i = ((Class515) this).aClass317_5888.containersCount(-1503644160) - 1;
 		Class120.aClass120_1476.method2078(-397238873);
-		((Class515) this).aClass317_5888.method5624(i, -1544265999);
+		((Class515) this).aClass317_5888.filesCount(i, -1544265999);
 	}
 
 	public Class525 method8845(int i, byte i_1_) {
@@ -182,14 +182,14 @@ public class Class515 {
 		}
 	}
 
-	public static Class160 method8858(Class505 class505, int i, int i_4_) {
+	public static NativeSprite method8858(GraphicalRenderer class505, int i, int i_4_) {
 		Class282_Sub37 class282_sub37 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i);
 		if (null != class282_sub37) {
 			Class282_Sub41_Sub3 class282_sub41_sub3 = ((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4918(1179079332);
 			((Class282_Sub37) class282_sub37).aBool7996 = true;
 			if (null != class282_sub41_sub3) {
 				((Class502) Class492.aClass502_5776).aClass505_5829 = class505;
-				return ((Class160) class282_sub41_sub3.method14795((Class492.aClass502_5776), -1234291023));
+				return ((NativeSprite) class282_sub41_sub3.method14795((Class492.aClass502_5776), -1234291023));
 			}
 		}
 		return null;
@@ -257,7 +257,7 @@ public class Class515 {
 			float f_28_ = fs_16_[2] - fs[2];
 			double d = Math.sqrt((double) (f_28_ * f_28_ + f_26_ * f_26_));
 			Class293.anInt3512 = ((int) (Math.atan2((double) f_27_, d) * 2607.5945876176133) & 0x3fff) * -647467135;
-			Class518.anInt5930 = ((int) (-Math.atan2((double) f_26_, (double) f_28_) * 2607.5945876176133) & 0x3fff) * 1898253385;
+			AnimationDefinitions.anInt5930 = ((int) (-Math.atan2((double) f_26_, (double) f_28_) * 2607.5945876176133) & 0x3fff) * 1898253385;
 			Class121.anInt1525 = (((-1409864719 * client.anInt7256 * ((client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_ + 2][3]) - (client.anIntArrayArrayArray7302[-1384937123 * client.anInt7277][i_7_][3]))) >> 16) + (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_][3])) * -833027875;
 		}
 	}

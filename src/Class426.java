@@ -2,16 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class426 implements Interface20 {
-	Class486 aClass486_5103;
+public class Class426 implements IndexLoader {
+	Game aClass486_5103;
 	Class495 aClass495_5104;
 	boolean aBool5105;
-	Class317 aClass317_5106;
+	Index aClass317_5106;
 	String[] aStringArray5107;
 	public int anInt5108;
 	Class229 aClass229_5109 = new Class229(64);
 	String[] aStringArray5110;
-	Class317 aClass317_5111;
+	Index aClass317_5111;
 	Class420 aClass420_5112;
 	Class424 aClass424_5113;
 	public Class212 aClass212_5114;
@@ -57,10 +57,10 @@ public class Class426 implements Interface20 {
 			class425.anIntArray5097 = null;
 			if (((ItemDefinitions) class425).aClass465_5040 != null) {
 				boolean bool = false;
-				for (Class282 class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(-778830741); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 57)) {
-					Class437 class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
+				for (Node class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(-778830741); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 57)) {
+					AttributeDefault class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
 					if (class437.aBool5338)
-						class282.method4991(-371378792);
+						class282.unlink(-371378792);
 					else
 						bool = true;
 				}
@@ -107,10 +107,10 @@ public class Class426 implements Interface20 {
 			class425.anIntArray5097 = null;
 			if (((ItemDefinitions) class425).aClass465_5040 != null) {
 				boolean bool = false;
-				for (Class282 class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(1058675589); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 111)) {
-					Class437 class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
+				for (Node class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(1058675589); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 111)) {
+					AttributeDefault class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
 					if (class437.aBool5338)
-						class282.method4991(-371378792);
+						class282.unlink(-371378792);
 					else
 						bool = true;
 				}
@@ -124,9 +124,9 @@ public class Class426 implements Interface20 {
 		return class425;
 	}
 
-	public Class160 method7147(Class505 class505, Class505 class505_1_, int i, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_, int i_6_, Class8 class8, Class238 class238, byte i_7_) {
+	public NativeSprite method7147(GraphicalRenderer class505, GraphicalRenderer class505_1_, int i, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_, int i_6_, FontRenderer class8, Class238 class238, byte i_7_) {
 		if (!bool_5_) {
-			Class160 class160 = method7162(class505_1_, i, i_2_, i_3_, i_4_, i_6_, class238, 206421629);
+			NativeSprite class160 = method7162(class505_1_, i, i_2_, i_3_, i_4_, i_6_, class238, 206421629);
 			if (null != class160)
 				return class160;
 		}
@@ -143,14 +143,14 @@ public class Class426 implements Interface20 {
 		int[] is = class425.method7093(class505, class505_1_, i_2_, i_3_, i_4_, bool, i_6_, class8, class238, (short) 255);
 		if (is == null)
 			return null;
-		Class160 class160;
+		NativeSprite class160;
 		if (bool_5_)
 			class160 = class505.method8549(is, 0, 36, 36, 32, -1903449230);
 		else
 			class160 = class505_1_.method8549(is, 0, 36, 36, 32, -923043708);
 		if (!bool_5_) {
 			Class420 class420 = new Class420();
-			((Class420) class420).anInt5008 = class505_1_.anInt5840 * -557951377;
+			((Class420) class420).anInt5008 = class505_1_.rendererId * -557951377;
 			((Class420) class420).anInt5007 = i * 412172861;
 			((Class420) class420).anInt5006 = -1802585529 * i_2_;
 			((Class420) class420).anInt5005 = i_3_ * -1113099245;
@@ -169,15 +169,15 @@ public class Class426 implements Interface20 {
 		}
 	}
 
-	public Class160 method7149(Class505 class505, int i, int i_10_, int i_11_, int i_12_, int i_13_, Class238 class238) {
-		((Class420) ((Class426) this).aClass420_5112).anInt5008 = -557951377 * class505.anInt5840;
+	public NativeSprite method7149(GraphicalRenderer class505, int i, int i_10_, int i_11_, int i_12_, int i_13_, Class238 class238) {
+		((Class420) ((Class426) this).aClass420_5112).anInt5008 = -557951377 * class505.rendererId;
 		((Class420) ((Class426) this).aClass420_5112).anInt5007 = 412172861 * i;
 		((Class420) ((Class426) this).aClass420_5112).anInt5006 = -1802585529 * i_10_;
 		((Class420) ((Class426) this).aClass420_5112).anInt5005 = i_11_ * -1113099245;
 		((Class420) ((Class426) this).aClass420_5112).anInt5009 = i_12_ * -621770313;
 		((Class420) ((Class426) this).aClass420_5112).anInt5010 = i_13_ * -190647633;
 		((Class420) ((Class426) this).aClass420_5112).aBool5011 = class238 != null;
-		return ((Class160) aClass212_5114.method3654(((Class426) this).aClass420_5112));
+		return ((NativeSprite) aClass212_5114.method3654(((Class426) this).aClass420_5112));
 	}
 
 	public void method7150(int i) {
@@ -244,10 +244,10 @@ public class Class426 implements Interface20 {
 			class425.anIntArray5097 = null;
 			if (((ItemDefinitions) class425).aClass465_5040 != null) {
 				boolean bool = false;
-				for (Class282 class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(-1669241343); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 97)) {
-					Class437 class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
+				for (Node class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(-1669241343); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 97)) {
+					AttributeDefault class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
 					if (class437.aBool5338)
-						class282.method4991(-371378792);
+						class282.unlink(-371378792);
 					else
 						bool = true;
 				}
@@ -312,10 +312,10 @@ public class Class426 implements Interface20 {
 			class425.anIntArray5097 = null;
 			if (((ItemDefinitions) class425).aClass465_5040 != null) {
 				boolean bool = false;
-				for (Class282 class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(-1890404666); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 83)) {
-					Class437 class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
+				for (Node class282 = ((ItemDefinitions) class425).aClass465_5040.method7750(-1890404666); class282 != null; class282 = ((ItemDefinitions) class425).aClass465_5040.method7751((byte) 83)) {
+					AttributeDefault class437 = (((Class426) this).aClass424_5113.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
 					if (class437.aBool5338)
-						class282.method4991(-371378792);
+						class282.unlink(-371378792);
 					else
 						bool = true;
 				}
@@ -336,7 +336,7 @@ public class Class426 implements Interface20 {
 		}
 	}
 
-	public Class426(Class486 class486, Class495 class495, boolean bool, Class424 class424, Class317 class317, Class317 class317_16_) {
+	public Class426(Game class486, Class495 class495, boolean bool, Class424 class424, Index class317, Index class317_16_) {
 		aClass212_5114 = new Class212(250);
 		((Class426) this).aClass420_5112 = new Class420();
 		((Class426) this).aClass486_5103 = class486;
@@ -346,20 +346,20 @@ public class Class426 implements Interface20 {
 		((Class426) this).aClass317_5106 = class317;
 		((Class426) this).aClass317_5111 = class317_16_;
 		if (((Class426) this).aClass317_5106 != null) {
-			int i = ((Class426) this).aClass317_5106.method5618(-1865229040) - 1;
-			anInt5108 = (i * Class120.aClass120_1493.method2078(-1077198554) + ((Class426) this).aClass317_5106.method5624(i, -1891673686)) * -230207835;
+			int i = ((Class426) this).aClass317_5106.containersCount(-1865229040) - 1;
+			anInt5108 = (i * Class120.aClass120_1493.method2078(-1077198554) + ((Class426) this).aClass317_5106.filesCount(i, -1891673686)) * -230207835;
 		} else
 			anInt5108 = 0;
-		if (Class486.aClass486_5744 == ((Class426) this).aClass486_5103)
+		if (Game.runescape == ((Class426) this).aClass486_5103)
 			((Class426) this).aStringArray5110 = (new String[] { null, null, Class433.aClass433_5243.method7273((((Class426) this).aClass495_5104), -1215966862), null, null, Class433.aClass433_5282.method7273((((Class426) this).aClass495_5104), -380297277) });
 		else
 			((Class426) this).aStringArray5110 = (new String[] { null, null, Class433.aClass433_5243.method7273((((Class426) this).aClass495_5104), -791276439), null, null, null });
 		((Class426) this).aStringArray5107 = (new String[] { null, null, null, null, Class433.aClass433_5168.method7273((((Class426) this).aClass495_5104), -1623734133) });
 	}
 
-	public Class160 method7159(Class505 class505, Class505 class505_17_, int i, int i_18_, int i_19_, int i_20_, boolean bool, boolean bool_21_, int i_22_, Class8 class8, Class238 class238) {
+	public NativeSprite method7159(GraphicalRenderer class505, GraphicalRenderer class505_17_, int i, int i_18_, int i_19_, int i_20_, boolean bool, boolean bool_21_, int i_22_, FontRenderer class8, Class238 class238) {
 		if (!bool_21_) {
-			Class160 class160 = method7162(class505_17_, i, i_18_, i_19_, i_20_, i_22_, class238, 206421629);
+			NativeSprite class160 = method7162(class505_17_, i, i_18_, i_19_, i_20_, i_22_, class238, 206421629);
 			if (null != class160)
 				return class160;
 		}
@@ -376,14 +376,14 @@ public class Class426 implements Interface20 {
 		int[] is = class425.method7093(class505, class505_17_, i_18_, i_19_, i_20_, bool, i_22_, class8, class238, (short) 255);
 		if (is == null)
 			return null;
-		Class160 class160;
+		NativeSprite class160;
 		if (bool_21_)
 			class160 = class505.method8549(is, 0, 36, 36, 32, 1464089111);
 		else
 			class160 = class505_17_.method8549(is, 0, 36, 36, 32, -66647770);
 		if (!bool_21_) {
 			Class420 class420 = new Class420();
-			((Class420) class420).anInt5008 = class505_17_.anInt5840 * -557951377;
+			((Class420) class420).anInt5008 = class505_17_.rendererId * -557951377;
 			((Class420) class420).anInt5007 = i * 412172861;
 			((Class420) class420).anInt5006 = -1802585529 * i_18_;
 			((Class420) class420).anInt5005 = i_19_ * -1113099245;
@@ -409,15 +409,15 @@ public class Class426 implements Interface20 {
 		}
 	}
 
-	public Class160 method7162(Class505 class505, int i, int i_25_, int i_26_, int i_27_, int i_28_, Class238 class238, int i_29_) {
-		((Class420) ((Class426) this).aClass420_5112).anInt5008 = -557951377 * class505.anInt5840;
+	public NativeSprite method7162(GraphicalRenderer class505, int i, int i_25_, int i_26_, int i_27_, int i_28_, Class238 class238, int i_29_) {
+		((Class420) ((Class426) this).aClass420_5112).anInt5008 = -557951377 * class505.rendererId;
 		((Class420) ((Class426) this).aClass420_5112).anInt5007 = 412172861 * i;
 		((Class420) ((Class426) this).aClass420_5112).anInt5006 = -1802585529 * i_25_;
 		((Class420) ((Class426) this).aClass420_5112).anInt5005 = i_26_ * -1113099245;
 		((Class420) ((Class426) this).aClass420_5112).anInt5009 = i_27_ * -621770313;
 		((Class420) ((Class426) this).aClass420_5112).anInt5010 = i_28_ * -190647633;
 		((Class420) ((Class426) this).aClass420_5112).aBool5011 = class238 != null;
-		return ((Class160) aClass212_5114.method3654(((Class426) this).aClass420_5112));
+		return ((NativeSprite) aClass212_5114.method3654(((Class426) this).aClass420_5112));
 	}
 
 	public void method7163() {
@@ -444,15 +444,15 @@ public class Class426 implements Interface20 {
 		}
 	}
 
-	public Class160 method7165(Class505 class505, int i, int i_30_, int i_31_, int i_32_, int i_33_, Class238 class238) {
-		((Class420) ((Class426) this).aClass420_5112).anInt5008 = -557951377 * class505.anInt5840;
+	public NativeSprite method7165(GraphicalRenderer class505, int i, int i_30_, int i_31_, int i_32_, int i_33_, Class238 class238) {
+		((Class420) ((Class426) this).aClass420_5112).anInt5008 = -557951377 * class505.rendererId;
 		((Class420) ((Class426) this).aClass420_5112).anInt5007 = 412172861 * i;
 		((Class420) ((Class426) this).aClass420_5112).anInt5006 = -1802585529 * i_30_;
 		((Class420) ((Class426) this).aClass420_5112).anInt5005 = i_31_ * -1113099245;
 		((Class420) ((Class426) this).aClass420_5112).anInt5009 = i_32_ * -621770313;
 		((Class420) ((Class426) this).aClass420_5112).anInt5010 = i_33_ * -190647633;
 		((Class420) ((Class426) this).aClass420_5112).aBool5011 = class238 != null;
-		return ((Class160) aClass212_5114.method3654(((Class426) this).aClass420_5112));
+		return ((NativeSprite) aClass212_5114.method3654(((Class426) this).aClass420_5112));
 	}
 
 	public void method7166(int i) {

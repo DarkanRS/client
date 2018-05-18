@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub37 extends Class282 {
+public class Class282_Sub37 extends Node {
 	boolean aBool7995;
 	boolean aBool7996;
 	int anInt7997;

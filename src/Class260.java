@@ -101,7 +101,7 @@ public class Class260 {
 	static void method4578(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, Class313.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	static void method4579() {
@@ -174,7 +174,7 @@ public class Class260 {
 		anInt3219 = 0;
 	}
 
-	public static void method4587(Class518 class518, int i, Class521_Sub1 class521_sub1) {
+	public static void method4587(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1) {
 		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
 			int i_8_ = class518.anIntArrayArray5913[i][0];
 			int i_9_ = i_8_ >> 8;
@@ -211,7 +211,7 @@ public class Class260 {
 		}
 	}
 
-	public static void method4588(Class518 class518, int i, Class521_Sub1 class521_sub1) {
+	public static void method4588(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1) {
 		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
 			int i_18_ = class518.anIntArrayArray5913[i][0];
 			int i_19_ = i_18_ >> 8;
@@ -279,7 +279,7 @@ public class Class260 {
 		}
 	}
 
-	public static void method4591(Class518 class518, int i) {
+	public static void method4591(AnimationDefinitions class518, int i) {
 		if (-458827259 * anInt3219 < 50 && (class518 != null && null != class518.anIntArrayArray5913 && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i])) {
 			int i_33_ = class518.anIntArrayArray5913[i][0];
 			int i_34_ = i_33_ >> 8;
@@ -300,7 +300,7 @@ public class Class260 {
 		}
 	}
 
-	public static void method4592(Class518 class518, int i) {
+	public static void method4592(AnimationDefinitions class518, int i) {
 		if (-458827259 * anInt3219 < 50 && (class518 != null && null != class518.anIntArrayArray5913 && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i])) {
 			int i_39_ = class518.anIntArrayArray5913[i][0];
 			int i_40_ = i_39_ >> 8;
@@ -450,7 +450,7 @@ public class Class260 {
 	}
 
 	public static void method4607() {
-		ItemEffects.method7042((byte) 2);
+		MeshModifier.method7042((byte) 2);
 		Class282_Sub20_Sub36.method15420((byte) -49);
 		Class282_Sub20_Sub24.method15391(1980856650);
 		Class335.method5961(-1537238407);
@@ -459,7 +459,7 @@ public class Class260 {
 	static void method4608(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, Class313.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	public static void method4609(int i, int i_101_, int i_102_) {
@@ -555,10 +555,10 @@ public class Class260 {
 	static void method4616(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, Class313.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
-	public static void method4617(Class518 class518, int i) {
+	public static void method4617(AnimationDefinitions class518, int i) {
 		if (-458827259 * anInt3219 < 50 && (class518 != null && null != class518.anIntArrayArray5913 && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i])) {
 			int i_113_ = class518.anIntArrayArray5913[i][0];
 			int i_114_ = i_113_ >> 8;
@@ -621,7 +621,7 @@ public class Class260 {
 			Class100.aClass253_1008.method4333();
 	}
 
-	public static void method4624(Class518 class518, int i, Class521_Sub1 class521_sub1) {
+	public static void method4624(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1) {
 		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
 			int i_125_ = class518.anIntArrayArray5913[i][0];
 			int i_126_ = i_125_ >> 8;

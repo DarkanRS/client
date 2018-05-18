@@ -360,7 +360,7 @@ public class PacketsDecoder extends Class455 {
 						Class282_Sub50_Sub10 class282_sub50_sub10 = ((Class282_Sub50_Sub10) client.aClass465_7334.method7754(i_60_ << 16 | i_61_));
 						if (class282_sub50_sub10 != null) {
 							class282_sub50_sub10.aClass521_Sub1_Sub1_Sub4_9636.method15931(-2031553804);
-							class282_sub50_sub10.method4991(-371378792);
+							class282_sub50_sub10.unlink(-371378792);
 						}
 					} else {
 						int i_62_ = i_60_ * 512 + 256;
@@ -388,7 +388,7 @@ public class PacketsDecoder extends Class455 {
 						if (i_52_ == i_67_) {
 							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) -4);
 							if (class525.aBool6968 && -364555849 * class525.anInt6977 != -1) {
-								Class518 class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -4));
+								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -4));
 								int i_68_ = class518.anInt5907 * 554947543;
 								if (0 == i_68_ || i_68_ == 2) {
 									bool_66_ = false;
@@ -400,8 +400,8 @@ public class PacketsDecoder extends Class455 {
 							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) 50);
 							Class525 class525_69_ = Class96_Sub20.aClass515_9416.method8845(i_67_, (byte) 100);
 							if (-1 != class525.anInt6977 * -364555849 && -364555849 * class525_69_.anInt6977 != -1) {
-								Class518 class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 15));
-								Class518 class518_70_ = (Class330.aClass523_3868.method11205(-364555849 * class525_69_.anInt6977, (byte) 19));
+								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 15));
+								AnimationDefinitions class518_70_ = (Class330.aClass523_3868.method11205(-364555849 * class525_69_.anInt6977, (byte) 19));
 								if (class518.anInt5916 * -1834317435 < -1834317435 * class518_70_.anInt5916) {
 									bool_66_ = false;
 								}
@@ -443,7 +443,7 @@ public class PacketsDecoder extends Class455 {
 						if (i_74_ == i_52_) {
 							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) 39);
 							if (class525.aBool6968 && -1 != -364555849 * class525.anInt6977) {
-								Class518 class518 = (Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 36));
+								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 36));
 								int i_75_ = 554947543 * class518.anInt5907;
 								if (i_75_ == 0 || i_75_ == 2) {
 									bool_73_ = false;
@@ -455,8 +455,8 @@ public class PacketsDecoder extends Class455 {
 							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) -86);
 							Class525 class525_76_ = Class96_Sub20.aClass515_9416.method8845(i_74_, (byte) -10);
 							if (-364555849 * class525.anInt6977 != -1 && class525_76_.anInt6977 * -364555849 != -1) {
-								Class518 class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -12));
-								Class518 class518_77_ = (Class330.aClass523_3868.method11205(-364555849 * class525_76_.anInt6977, (byte) 15));
+								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -12));
+								AnimationDefinitions class518_77_ = (Class330.aClass523_3868.method11205(-364555849 * class525_76_.anInt6977, (byte) 15));
 								if (class518.anInt5916 * -1834317435 < class518_77_.anInt5916 * -1834317435) {
 									bool_73_ = false;
 								}
@@ -1098,7 +1098,7 @@ public class PacketsDecoder extends Class455 {
 					}
 				} else {
 					class282_sub10_177_ = new Class282_Sub10(i_175_, (1831058647 * class282_sub10.anInt7541));
-					class282_sub10.method4991(-371378792);
+					class282_sub10.unlink(-371378792);
 				}
 				client.aClass465_7405.method7765(class282_sub10_177_, l);
 			}
@@ -1192,18 +1192,18 @@ public class PacketsDecoder extends Class455 {
 				int i_189_ = (int) ((class282_sub29.aLong3379 * -3442165056282524525L >> 14) & 0x3fffL);
 				int i_190_ = i_189_ - -1002240017 * class219.anInt2712;
 				if (i_186_ == Class272.anInt3331 * -1258088735 && i_188_ >= -2109540951 * Class458.anInt5495 && i_188_ < 8 + Class458.anInt5495 * -2109540951 && i_190_ >= 71472045 * Class158_Sub1_Sub2.anInt10131 && i_190_ < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) {
-					class282_sub29.method4991(-371378792);
+					class282_sub29.unlink(-371378792);
 					if (i_188_ >= 0 && i_190_ >= 0 && (i_188_ < client.aClass257_7353.method4424(-359634463)) && (i_190_ < client.aClass257_7353.method4451(-542957162))) {
 						Class434_Sub1.method12760((Class272.anInt3331 * -1258088735), i_188_, i_190_, -1380263584);
 					}
 				}
 			}
-			for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7775.method8097((byte) 94)); null != class282_sub31; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7775.method8067(-766641666)) {
+			for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 94)); null != class282_sub31; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-766641666)) {
 				if ((37618455 * class282_sub31.anInt7762 >= -2109540951 * Class458.anInt5495) && (37618455 * class282_sub31.anInt7762 < 8 + -2109540951 * Class458.anInt5495) && (class282_sub31.anInt7763 * -322610393 >= Class158_Sub1_Sub2.anInt10131 * 71472045) && (-322610393 * class282_sub31.anInt7763 < 71472045 * Class158_Sub1_Sub2.anInt10131 + 8) && (-1258088735 * Class272.anInt3331 == (class282_sub31.anInt7764 * 1291499461))) {
 					class282_sub31.aBool7774 = true;
 				}
 			}
-			for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.method8097((byte) 125)); null != class282_sub31; class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.method8067(804942724))) {
+			for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 125)); null != class282_sub31; class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.next(804942724))) {
 				if ((class282_sub31.anInt7762 * 37618455 >= -2109540951 * Class458.anInt5495) && (class282_sub31.anInt7762 * 37618455 < 8 + Class458.anInt5495 * -2109540951) && (class282_sub31.anInt7763 * -322610393 >= 71472045 * Class158_Sub1_Sub2.anInt10131) && (class282_sub31.anInt7763 * -322610393 < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) && (Class272.anInt3331 * -1258088735 == (1291499461 * class282_sub31.anInt7764))) {
 					class282_sub31.aBool7774 = true;
 				}
@@ -1538,7 +1538,7 @@ public class PacketsDecoder extends Class455 {
 					}
 				} else {
 					class282_sub10_251_ = new Class282_Sub10((class282_sub10.anInt7547 * 488242129), i_247_);
-					class282_sub10.method4991(-371378792);
+					class282_sub10.unlink(-371378792);
 				}
 				client.aClass465_7405.method7765(class282_sub10_251_, l);
 			}
@@ -1672,7 +1672,7 @@ public class PacketsDecoder extends Class455 {
 			if (class466 == null) {
 				class466 = Class466.aClass466_5563;
 			}
-			Class282_Sub50_Sub11.method14949(class466, 1453204131);
+			JS5CacheRequest.method14949(class466, 1453204131);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -1868,7 +1868,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4449) {
-			Class312.method5560(stream, 715663393 * class184.anInt2287, -822486096);
+			JS5StandardRequester.method5560(stream, 715663393 * class184.anInt2287, -822486096);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -2177,7 +2177,7 @@ public class PacketsDecoder extends Class455 {
 				Class351.method6196(class282_sub44_358_, (class282_sub44 == null || (class282_sub44.anInt8063 * 587626901 != 587626901 * (class282_sub44_358_.anInt8063))), false, -1298031252);
 			}
 			if (class282_sub44 != null) {
-				class282_sub44.method4991(-371378792);
+				class282_sub44.unlink(-371378792);
 				client.aClass465_7442.method7765(class282_sub44, i_356_);
 			}
 			Class118 class118 = Class117.method1981(i_357_, (byte) 29);

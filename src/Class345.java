@@ -9,7 +9,7 @@ public class Class345 {
 	public static final int anInt4018 = 0;
 	static final int anInt4019 = 2;
 	static final int anInt4020 = 1;
-	static Class317 aClass317_4021;
+	static Index aClass317_4021;
 	public static final int anInt4022 = 2;
 	public static final int anInt4023 = 0;
 	public int anInt4024;
@@ -17,7 +17,7 @@ public class Class345 {
 	static final int anInt4026 = 1;
 	public int anInt4027;
 	static int anInt4028 = 0;
-	public static SwitchMap aClass465_4029 = new SwitchMap(16);
+	public static IterableNodeMap aClass465_4029 = new IterableNodeMap(16);
 	public static final int anInt4030 = 1;
 	static Class229 aClass229_4031 = new Class229(64);
 	public int anInt4032;
@@ -109,7 +109,7 @@ public class Class345 {
 		}
 	}
 
-	public static void method6127(Class317 class317) {
+	public static void method6127(Index class317) {
 		aClass317_4021 = class317;
 	}
 
@@ -135,15 +135,15 @@ public class Class345 {
 		}
 	}
 
-	public static void method6129(Class317 class317) {
+	public static void method6129(Index class317) {
 		aClass317_4021 = class317;
 	}
 
-	public static void method6130(Class317 class317) {
+	public static void method6130(Index class317) {
 		aClass317_4021 = class317;
 	}
 
-	public static void method6131(Class317 class317) {
+	public static void method6131(Index class317) {
 		aClass317_4021 = class317;
 	}
 
@@ -300,7 +300,7 @@ public class Class345 {
 	static final void method6138(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = class513.aClass118_5886;
-		Class282.method5001(class118, class527, -1847769999);
+		Node.method5001(class118, class527, -1847769999);
 	}
 
 	static final void method6139(CS2Executor class527, int i) {

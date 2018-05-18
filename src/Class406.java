@@ -6,12 +6,12 @@ public class Class406 {
 	Class229 aClass229_4836;
 	Class495 aClass495_4837;
 	boolean aBool4838;
-	Class317 aClass317_4839;
+	Index aClass317_4839;
 	String[] aStringArray4840;
 	Class229 aClass229_4841 = new Class229(64);
-	Class317 aClass317_4842;
+	Index aClass317_4842;
 	Class229 aClass229_4843;
-	Class486 aClass486_4844;
+	Game aClass486_4844;
 	int anInt4845;
 
 	public void method6826() {
@@ -207,7 +207,7 @@ public class Class406 {
 		}
 	}
 
-	public Class406(Class486 class486, Class495 class495, boolean bool, Class317 class317, Class317 class317_3_) {
+	public Class406(Game class486, Class495 class495, boolean bool, Index class317, Index class317_3_) {
 		((Class406) this).aClass229_4836 = new Class229(50);
 		((Class406) this).aClass229_4843 = new Class229(5);
 		((Class406) this).aClass486_4844 = class486;
@@ -216,11 +216,11 @@ public class Class406 {
 		((Class406) this).aClass317_4839 = class317;
 		((Class406) this).aClass317_4842 = class317_3_;
 		if (null != ((Class406) this).aClass317_4839) {
-			int i = ((Class406) this).aClass317_4839.method5618(-941048817) - 1;
+			int i = ((Class406) this).aClass317_4839.containersCount(-941048817) - 1;
 			Class120.aClass120_1467.method2078(-443341258);
-			((Class406) this).aClass317_4839.method5624(i, 1971095578);
+			((Class406) this).aClass317_4839.filesCount(i, 1971095578);
 		}
-		if (((Class406) this).aClass486_4844 == Class486.aClass486_5744)
+		if (((Class406) this).aClass486_4844 == Game.runescape)
 			((Class406) this).aStringArray4840 = (new String[] { null, null, null, null, null, Class433.aClass433_5282.method7273((((Class406) this).aClass495_4837), -1623078066) });
 		else
 			((Class406) this).aStringArray4840 = new String[] { null, null, null, null, null, null };

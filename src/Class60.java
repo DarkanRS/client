@@ -14,7 +14,7 @@ public class Class60 {
 	public static Class60 aClass60_609 = new Class60(1);
 	public static Class60 aClass60_610;
 	public int anInt611;
-	public static Class160 aClass160_612;
+	public static NativeSprite aClass160_612;
 
 	Class60(int i) {
 		anInt611 = i * -103195257;
@@ -48,7 +48,7 @@ public class Class60 {
 		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 23);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
-		Class8.method403(class118, class98, class527, 2136495218);
+		FontRenderer.method403(class118, class98, class527, 2136495218);
 	}
 
 	public static IncomingPacket[] getIncommingPacket() {
@@ -71,7 +71,7 @@ public class Class60 {
 
 	public static void method1170(int i) {
 		if (client.aBool7344) {
-			Class118 class118 = Class317.method5694(728544879 * Class7.anInt56, client.anInt7345 * -1673073865, 1160609713);
+			Class118 class118 = Index.method5694(728544879 * Class7.anInt56, client.anInt7345 * -1673073865, 1160609713);
 			if (class118 != null && class118.anObjectArray1396 != null) {
 				Class282_Sub43 class282_sub43 = new Class282_Sub43();
 				class282_sub43.aClass118_8053 = class118;

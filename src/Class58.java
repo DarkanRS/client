@@ -64,7 +64,7 @@ public class Class58 implements Interface19 {
 		int i_1_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_2_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_3_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
-		Class118 class118 = Class317.method5694(i_1_ << 16 | i_2_, i_3_, -1458346299);
+		Class118 class118 = Index.method5694(i_1_ << 16 | i_2_, i_3_, -1458346299);
 		Class60.method1170(-609337146);
 		Class282_Sub10 class282_sub10 = client.method11633(class118);
 		Class304.method5409(class118, class282_sub10.method12179(-995475092), 1831058647 * class282_sub10.anInt7541, (byte) -101);

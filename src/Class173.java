@@ -14,7 +14,7 @@ public class Class173 {
 		/* empty */
 	}
 
-	public static void method2943(Class317 class317, Interface22 interface22, int i) {
+	public static void method2943(Index class317, Interface22 interface22, int i) {
 		Class282_Sub50_Sub11_Sub1.aClass317_10379 = class317;
 		Class247.anInterface22_3046 = interface22;
 	}

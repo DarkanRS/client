@@ -5,10 +5,10 @@
 public class Class211 {
 	public static Class227 aClass227_2669 = new Class227();
 	Class229 aClass229_2670 = new Class229(64);
-	Class317 aClass317_2671;
+	Index aClass317_2671;
 	Class526 aClass526_2672;
-	public static Class317 aClass317_2673;
-	public static Class317 aClass317_2674;
+	public static Index aClass317_2673;
+	public static Index aClass317_2674;
 
 	public void method3615(int i, int i_0_) {
 		synchronized (((Class211) this).aClass229_2670) {
@@ -103,9 +103,9 @@ public class Class211 {
 		}
 	}
 
-	public Class211(Class486 class486, Class495 class495, Class317 class317, Class526 class526) {
+	public Class211(Game class486, Class495 class495, Index class317, Class526 class526) {
 		((Class211) this).aClass317_2671 = class317;
-		((Class211) this).aClass317_2671.method5624((-71319279 * (Class120.aClass120_1511.anInt1521)), 357148056);
+		((Class211) this).aClass317_2671.filesCount((-71319279 * (Class120.aClass120_1511.anInt1521)), 357148056);
 		((Class211) this).aClass526_2672 = class526;
 	}
 

@@ -7,7 +7,7 @@ public class Class419 {
 	Class438 aClass438_5001;
 	public int anInt5002;
 	int anInt5003;
-	static Class160 aClass160_5004;
+	static NativeSprite aClass160_5004;
 
 	void method7023(RsByteBuffer class282_sub35, int i) {
 		if (1 == i)

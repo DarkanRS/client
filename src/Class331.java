@@ -4,9 +4,9 @@
 
 public class Class331 {
 	static final int anInt3869 = 0;
-	Class317 aClass317_3870;
+	Index aClass317_3870;
 	Class229 aClass229_3871 = new Class229(64);
-	Class317 aClass317_3872;
+	Index aClass317_3872;
 	static final int anInt3873 = 32768;
 
 	public Class282_Sub50_Sub14 method5917(int i) {
@@ -81,13 +81,13 @@ public class Class331 {
 		return class282_sub50_sub14;
 	}
 
-	public Class331(Class495 class495, Class317 class317, Class317 class317_1_) {
+	public Class331(Class495 class495, Index class317, Index class317_1_) {
 		((Class331) this).aClass317_3872 = class317;
 		((Class331) this).aClass317_3870 = class317_1_;
 		if (null != ((Class331) this).aClass317_3872)
-			((Class331) this).aClass317_3872.method5624(0, -998395379);
+			((Class331) this).aClass317_3872.filesCount(0, -998395379);
 		if (((Class331) this).aClass317_3870 != null)
-			((Class331) this).aClass317_3870.method5624(0, -1184061863);
+			((Class331) this).aClass317_3870.filesCount(0, -1184061863);
 	}
 
 	static void method5921(byte i) {
@@ -115,7 +115,7 @@ public class Class331 {
 					if (i_5_ == -1)
 						class521_sub1_sub1_sub2.aClass456_Sub2_Sub1Array10354[i_8_] = null;
 					else {
-						Class518 class518 = Class330.aClass523_3868.method11205(i_5_, (byte) 24);
+						AnimationDefinitions class518 = Class330.aClass523_3868.method11205(i_5_, (byte) 24);
 						int i_9_ = class518.anInt5907 * 554947543;
 						Class456_Sub2_Sub1 class456_sub2_sub1 = (class521_sub1_sub1_sub2.aClass456_Sub2_Sub1Array10354[i_8_]);
 						if (null != class456_sub2_sub1 && class456_sub2_sub1.method7564(646988470)) {

@@ -2,16 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub50_Sub11 extends Class282_Sub50 {
+public abstract class JS5CacheRequest extends Class282_Sub50 {
 	boolean aBool9637;
 	boolean aBool9638;
-	volatile boolean aBool9639 = true;
+	volatile boolean incomplete = true;
 
 	abstract byte[] method14941();
 
-	abstract byte[] method14942(int i);
+	abstract byte[] getData(int i);
 
-	abstract int method14943(int i);
+	abstract int getCompletion(int i);
 
 	abstract byte[] method14944();
 
@@ -21,7 +21,7 @@ public abstract class Class282_Sub50_Sub11 extends Class282_Sub50 {
 
 	abstract int method14947();
 
-	Class282_Sub50_Sub11() {
+	JS5CacheRequest() {
 		/* empty */
 	}
 

@@ -12,7 +12,7 @@ public class Class278_Sub1 extends Class278 {
 	int[] anIntArray8114;
 	int anInt8115;
 	RsByteBuffer aClass282_Sub35_8116 = new RsByteBuffer(null);
-	Class317 aClass317_8117;
+	Index aClass317_8117;
 
 	int method4925(byte[] is) throws IOException {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
@@ -64,7 +64,7 @@ public class Class278_Sub1 extends Class278 {
 		return is.length;
 	}
 
-	public Class278_Sub1(int i, Class317 class317, int i_4_) {
+	public Class278_Sub1(int i, Index class317, int i_4_) {
 		super(i);
 		((Class278_Sub1) this).aClass317_8117 = class317;
 		((Class278_Sub1) this).anInt8113 = 963936361 * i_4_;

@@ -15,7 +15,7 @@ public class CS2Script extends Class282_Sub50 {
 	public int intArgsCount;
 	public int stringArgsCount;
 	public int longLocalsCount;
-	public SwitchMap[] switchMaps;
+	public IterableNodeMap[] switchMaps;
 
 	public CS2Script(RsByteBuffer buffer) {
 		int instructionLength = decodeHeader(buffer);
@@ -53,10 +53,10 @@ public class CS2Script extends Class282_Sub50 {
 		longArgsCount = buffer.readUnsignedShort() * -1593316803;
 		int switchesCount = buffer.readUnsignedByte();
 		if (switchesCount > 0) {
-			switchMaps = new SwitchMap[switchesCount];
+			switchMaps = new IterableNodeMap[switchesCount];
 			for (int idx = 0; idx < switchesCount; idx++) {
 				int numCases = buffer.readUnsignedShort();
-				SwitchMap class465 = new SwitchMap(Class323.nextPowerOfTwo(numCases, -234379644));
+				IterableNodeMap class465 = new IterableNodeMap(Class323.nextPowerOfTwo(numCases, -234379644));
 				switchMaps[idx] = class465;
 				while (numCases-- > 0) {
 					int key = buffer.readInt();

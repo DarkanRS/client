@@ -6,7 +6,7 @@ public class Class347 {
 	public int anInt4050;
 	public int anInt4051;
 	static Class229 aClass229_4052 = new Class229(64);
-	static Class317 aClass317_4053;
+	static Index aClass317_4053;
 	public int anInt4054;
 	public int anInt4055 = -2109958295;
 	static final int anInt4056 = 0;
@@ -63,11 +63,11 @@ public class Class347 {
 			aBool4059 = true;
 	}
 
-	public static void method6165(Class317 class317) {
+	public static void method6165(Index class317) {
 		aClass317_4053 = class317;
 	}
 
-	public static void method6166(Class317 class317) {
+	public static void method6166(Index class317) {
 		aClass317_4053 = class317;
 	}
 
@@ -148,7 +148,7 @@ public class Class347 {
 			Class291_Sub1.anInt8026 = -194319891;
 		}
 		if (Class291_Sub1.aBool8022 && null != Class346.aClass482_4049) {
-			for (Class282_Sub33 class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.method8097((byte) 117)); class282_sub33 != null; class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.method8067(-731653338))) {
+			for (Class282_Sub33 class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.head((byte) 117)); class282_sub33 != null; class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.next(-731653338))) {
 				Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991), 1327385371));
 				if (class282_sub33.method12577(i, i_7_, -1474454985)) {
 					if (null != class220.aStringArray2740) {

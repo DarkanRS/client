@@ -30,7 +30,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	static final int anInt9664 = 18;
 	static final int anInt9665 = 8;
 	static Class477 aClass477_9666 = new Class477();
-	static SwitchMap aClass465_9667;
+	static IterableNodeMap aClass465_9667;
 	int anInt9668;
 	static final long aLong9669 = 9223372036854775807L;
 	static final int anInt9670 = 10;
@@ -69,7 +69,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 
 	static {
 		aClass477_9655 = new Class477();
-		aClass465_9667 = new SwitchMap(16);
+		aClass465_9667 = new IterableNodeMap(16);
 	}
 
 	static Class282_Sub50_Sub12 method14956(int i, long l) {
@@ -119,7 +119,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	static Class282_Sub50_Sub12 method14963() {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = (Class282_Sub50_Sub12) aClass477_9666.method7941((byte) 4);
 		if (null != class282_sub50_sub12) {
-			class282_sub50_sub12.method4991(-371378792);
+			class282_sub50_sub12.unlink(-371378792);
 			class282_sub50_sub12.method13452((byte) -5);
 			return class282_sub50_sub12;
 		}
@@ -129,7 +129,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 				return null;
 			if (class282_sub50_sub12.method14955(-1012620390) > Class169.method2869(1744066149))
 				return null;
-			class282_sub50_sub12.method4991(-371378792);
+			class282_sub50_sub12.unlink(-371378792);
 			class282_sub50_sub12.method13452((byte) -5);
 			if ((class282_sub50_sub12.aLong8120 * -7883876913471066125L & ~0x7fffffffffffffffL) != 0L)
 				return class282_sub50_sub12;
@@ -139,7 +139,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	static Class282_Sub50_Sub12 method14964() {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = (Class282_Sub50_Sub12) aClass477_9666.method7941((byte) 4);
 		if (null != class282_sub50_sub12) {
-			class282_sub50_sub12.method4991(-371378792);
+			class282_sub50_sub12.unlink(-371378792);
 			class282_sub50_sub12.method13452((byte) -5);
 			return class282_sub50_sub12;
 		}
@@ -149,7 +149,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 				return null;
 			if (class282_sub50_sub12.method14955(-1129507240) > Class169.method2869(1903202524))
 				return null;
-			class282_sub50_sub12.method4991(-371378792);
+			class282_sub50_sub12.unlink(-371378792);
 			class282_sub50_sub12.method13452((byte) -5);
 			if ((class282_sub50_sub12.aLong8120 * -7883876913471066125L & ~0x7fffffffffffffffL) != 0L)
 				return class282_sub50_sub12;
@@ -669,7 +669,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	static Class282_Sub50_Sub12 method15052() {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = (Class282_Sub50_Sub12) aClass477_9666.method7941((byte) 4);
 		if (null != class282_sub50_sub12) {
-			class282_sub50_sub12.method4991(-371378792);
+			class282_sub50_sub12.unlink(-371378792);
 			class282_sub50_sub12.method13452((byte) -5);
 			return class282_sub50_sub12;
 		}
@@ -679,7 +679,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 				return null;
 			if (class282_sub50_sub12.method14955(-255636947) > Class169.method2869(1624259814))
 				return null;
-			class282_sub50_sub12.method4991(-371378792);
+			class282_sub50_sub12.unlink(-371378792);
 			class282_sub50_sub12.method13452((byte) -5);
 			if ((class282_sub50_sub12.aLong8120 * -7883876913471066125L & ~0x7fffffffffffffffL) != 0L)
 				return class282_sub50_sub12;

@@ -55,7 +55,7 @@ public class Class535 {
 		((Class535) this).aClass247_7091 = ((Class535) class535_1_).aClass247_7091;
 	}
 
-	void method11445(Class505 class505, Class535 class535_2_, Class535 class535_3_, float f, byte i) {
+	void method11445(GraphicalRenderer class505, Class535 class535_2_, Class535 class535_3_, float f, byte i) {
 		((Class535) this).anInt7083 = Class302.method5364((783185137 * ((Class535) class535_2_).anInt7083), (((Class535) class535_3_).anInt7083 * 783185137), 255.0F * f, 833509259) * -1407321071;
 		((Class535) this).aFloat7082 = (((Class535) class535_2_).aFloat7082 + (((Class535) class535_3_).aFloat7082 - ((Class535) class535_2_).aFloat7082) * f);
 		((Class535) this).aFloat7090 = (((Class535) class535_2_).aFloat7090 + f * (((Class535) class535_3_).aFloat7090 - ((Class535) class535_2_).aFloat7090));
@@ -84,7 +84,7 @@ public class Class535 {
 		return ((Class535) this).aClass247_7091;
 	}
 
-	void method11447(Class505 class505, Class535 class535_4_, Class535 class535_5_, float f) {
+	void method11447(GraphicalRenderer class505, Class535 class535_4_, Class535 class535_5_, float f) {
 		((Class535) this).anInt7083 = Class302.method5364((783185137 * ((Class535) class535_4_).anInt7083), (((Class535) class535_5_).anInt7083 * 783185137), 255.0F * f, 833509259) * -1407321071;
 		((Class535) this).aFloat7082 = (((Class535) class535_4_).aFloat7082 + (((Class535) class535_5_).aFloat7082 - ((Class535) class535_4_).aFloat7082) * f);
 		((Class535) this).aFloat7090 = (((Class535) class535_4_).aFloat7090 + f * (((Class535) class535_5_).aFloat7090 - ((Class535) class535_4_).aFloat7090));
@@ -196,7 +196,7 @@ public class Class535 {
 		((Class535) this).aClass247_7091 = ((Class535) class535_12_).aClass247_7091;
 	}
 
-	void method11456(Class505 class505, Class535 class535_13_, Class535 class535_14_, float f) {
+	void method11456(GraphicalRenderer class505, Class535 class535_13_, Class535 class535_14_, float f) {
 		((Class535) this).anInt7083 = Class302.method5364((783185137 * ((Class535) class535_13_).anInt7083), (((Class535) class535_14_).anInt7083 * 783185137), 255.0F * f, 833509259) * -1407321071;
 		((Class535) this).aFloat7082 = (((Class535) class535_13_).aFloat7082 + (((Class535) class535_14_).aFloat7082 - ((Class535) class535_13_).aFloat7082) * f);
 		((Class535) this).aFloat7090 = (((Class535) class535_13_).aFloat7090 + f * (((Class535) class535_14_).aFloat7090 - ((Class535) class535_13_).aFloat7090));

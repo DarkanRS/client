@@ -367,7 +367,7 @@ public class Class59 {
 			aBool541 = false;
 	}
 
-	public static void method1148(Class317 class317) {
+	public static void method1148(Index class317) {
 		Class219.aClass317_2710 = class317;
 	}
 
@@ -656,7 +656,7 @@ public class Class59 {
 		aClass229_533.method3859(1607534583);
 	}
 
-	public static int method1159(Class317 class317, int i) {
+	public static int method1159(Index class317, int i) {
 		int i_38_ = 0;
 		if (class317.method5661(-1633200555 * Class165.anInt2035, 1772789270))
 			i_38_++;

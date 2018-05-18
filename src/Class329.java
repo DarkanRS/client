@@ -93,9 +93,9 @@ public class Class329 {
 	int[] anIntArray3858;
 	int[] anIntArray3859;
 	static int[][] anIntArrayArray3860;
-	public static Class317 aClass317_3861;
+	public static Index aClass317_3861;
 
-	final void method5834(Class505 class505, Class531 class531, Class481 class481, int i, int i_0_, int i_1_, int i_2_, byte[][] is, byte[][] is_3_, byte[][] is_4_, boolean[] bools) {
+	final void method5834(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_0_, int i_1_, int i_2_, byte[][] is, byte[][] is_3_, byte[][] is_4_, boolean[] bools) {
 		boolean[] bools_5_ = (null != class531 && class531.aBool7061 ? aBoolArrayArray3793[-595948995 * ((Class329) this).anInt3844] : (aBoolArrayArray3816[((Class329) this).anInt3844 * -595948995]));
 		if (i_0_ > 0) {
 			if (i > 0) {
@@ -397,7 +397,7 @@ public class Class329 {
 		return ((Class329) this).anInt3781 * 1070348131;
 	}
 
-	public final void method5837(Class505 class505, Class390 class390, Class390 class390_71_, int i) {
+	public final void method5837(GraphicalRenderer class505, Class390 class390, Class390 class390_71_, int i) {
 		int[][] is = new int[anInt3784 * -1230013231][anInt3785 * 2024737111];
 		if (null == ((Class329) this).anIntArray3795 || (((Class329) this).anIntArray3795.length != 2024737111 * anInt3785)) {
 			((Class329) this).anIntArray3795 = new int[2024737111 * anInt3785];
@@ -663,7 +663,7 @@ public class Class329 {
 			method5838(i_154_, i, i_151_, i_152_, i_153_, -1337783095);
 	}
 
-	public void method5843(Class505 class505, int[][][] is, Class336[] class336s, byte i) {
+	public void method5843(GraphicalRenderer class505, int[][][] is, Class336[] class336s, byte i) {
 		if (!aBool3786) {
 			for (int i_155_ = 0; i_155_ < 4; i_155_++) {
 				for (int i_156_ = 0; i_156_ < anInt3784 * -1230013231; i_156_++) {
@@ -701,7 +701,7 @@ public class Class329 {
 		}
 	}
 
-	void method5844(Class505 class505, Class390 class390, int i, int[][] is, Class390 class390_163_, Class390 class390_164_) {
+	void method5844(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_163_, Class390 class390_164_) {
 		for (int i_165_ = 0; i_165_ < -1230013231 * anInt3784; i_165_++) {
 			for (int i_166_ = 0; i_166_ < 2024737111 * anInt3785; i_166_++) {
 				byte i_167_ = (((Class329) this).aByteArrayArrayArray3790[i][i_165_][i_166_]);
@@ -835,7 +835,7 @@ public class Class329 {
 		}
 	}
 
-	void method5845(Class505 class505, Class390 class390, int i, int[][] is, Class390 class390_205_, Class390 class390_206_, byte i_207_) {
+	void method5845(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_205_, Class390 class390_206_, byte i_207_) {
 		for (int i_208_ = 0; i_208_ < -1230013231 * anInt3784; i_208_++) {
 			for (int i_209_ = 0; i_209_ < 2024737111 * anInt3785; i_209_++) {
 				byte i_210_ = (((Class329) this).aByteArrayArrayArray3790[i][i_208_][i_209_]);
@@ -969,7 +969,7 @@ public class Class329 {
 		}
 	}
 
-	void method5846(Class505 class505, Class390 class390, int i, int[][] is, Class390 class390_248_, Class390 class390_249_, byte i_250_) {
+	void method5846(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_248_, Class390 class390_249_, byte i_250_) {
 		byte[][] is_251_ = ((Class329) this).aByteArrayArrayArray3790[i];
 		byte[][] is_252_ = ((Class329) this).aByteArrayArrayArray3791[i];
 		byte[][] is_253_ = ((Class329) this).aByteArrayArrayArray3808[i];
@@ -1123,7 +1123,7 @@ public class Class329 {
 		}
 	}
 
-	final void method5848(Class505 class505, Class531 class531, Class481 class481, int i, int i_289_, int i_290_, int i_291_, byte[][] is, byte[][] is_292_, byte[][] is_293_, boolean[] bools, int i_294_) {
+	final void method5848(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_289_, int i_290_, int i_291_, byte[][] is, byte[][] is_292_, byte[][] is_293_, boolean[] bools, int i_294_) {
 		boolean[] bools_295_ = (null != class531 && class531.aBool7061 ? aBoolArrayArray3793[-595948995 * ((Class329) this).anInt3844] : (aBoolArrayArray3816[((Class329) this).anInt3844 * -595948995]));
 		if (i_289_ > 0) {
 			if (i > 0) {
@@ -1388,7 +1388,7 @@ public class Class329 {
 		}
 	}
 
-	void method5850(Class505 class505, int i, int i_351_, int i_352_, Class531 class531, boolean[] bools, int[] is, int[] is_353_, int[] is_354_, int[] is_355_, int[] is_356_, int[] is_357_, int[] is_358_, int[] is_359_, Class390 class390, Class390 class390_360_, Class390 class390_361_, int i_362_) {
+	void method5850(GraphicalRenderer class505, int i, int i_351_, int i_352_, Class531 class531, boolean[] bools, int[] is, int[] is_353_, int[] is_354_, int[] is_355_, int[] is_356_, int[] is_357_, int[] is_358_, int[] is_359_, Class390 class390, Class390 class390_360_, Class390 class390_361_, int i_362_) {
 		((Class329) this).anInt3850 = 1866422575;
 		((Class329) this).anInt3848 = 1668530227;
 		((Class329) this).anInt3849 = -566299392;
@@ -1505,7 +1505,7 @@ public class Class329 {
 			((Class329) this).anInt3846 += -193737745 * (anIntArray3826[-595948995 * ((Class329) this).anInt3844]);
 	}
 
-	void method5851(Class505 class505, int i, int i_379_, int i_380_, int i_381_, int i_382_, Class481 class481, int i_383_, int i_384_, int i_385_, int i_386_, boolean[] bools, int[] is, int[] is_387_, int[] is_388_, int[] is_389_, int[] is_390_, int[] is_391_, int[] is_392_, int[] is_393_, int[][] is_394_, Class390 class390, Class390 class390_395_, Class390 class390_396_, byte i_397_) {
+	void method5851(GraphicalRenderer class505, int i, int i_379_, int i_380_, int i_381_, int i_382_, Class481 class481, int i_383_, int i_384_, int i_385_, int i_386_, boolean[] bools, int[] is, int[] is_387_, int[] is_388_, int[] is_389_, int[] is_390_, int[] is_391_, int[] is_392_, int[] is_393_, int[][] is_394_, Class390 class390, Class390 class390_395_, Class390 class390_396_, byte i_397_) {
 		if (null != class481) {
 			if (i_384_ == 0)
 				i_384_ = i_383_;
@@ -1906,7 +1906,7 @@ public class Class329 {
 		}
 	}
 
-	void method5859(Class505 class505, Class531 class531, Class481 class481, int i, int i_489_, byte[][] is, byte[][] is_490_, byte[][] is_491_, boolean[] bools, short i_492_) {
+	void method5859(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_489_, byte[][] is, byte[][] is_490_, byte[][] is_491_, boolean[] bools, short i_492_) {
 		boolean[] bools_493_ = (class531 != null && class531.aBool7061 ? aBoolArrayArray3793[((Class329) this).anInt3844 * -595948995] : (aBoolArrayArray3816[-595948995 * ((Class329) this).anInt3844]));
 		method5848(class505, class531, class481, i, i_489_, anInt3784 * -1230013231, anInt3785 * 2024737111, is_491_, is, is_490_, bools, -1828708428);
 		((Class329) this).aBool3854 = null != class531 && (class531.anInt7054 * 1419498143 != -848345857 * class531.anInt7058);
@@ -2107,7 +2107,7 @@ public class Class329 {
 		}
 	}
 
-	public void method5864(Class505 class505, int[][][] is, Class336[] class336s) {
+	public void method5864(GraphicalRenderer class505, int[][][] is, Class336[] class336s) {
 		if (!aBool3786) {
 			for (int i = 0; i < 4; i++) {
 				for (int i_530_ = 0; i_530_ < anInt3784 * -1230013231; i_530_++) {
@@ -2145,7 +2145,7 @@ public class Class329 {
 		}
 	}
 
-	public void method5865(Class505 class505, int[][][] is, Class336[] class336s) {
+	public void method5865(GraphicalRenderer class505, int[][][] is, Class336[] class336s) {
 		if (!aBool3786) {
 			for (int i = 0; i < 4; i++) {
 				for (int i_536_ = 0; i_536_ < anInt3784 * -1230013231; i_536_++) {
@@ -2193,7 +2193,7 @@ public class Class329 {
 		return i_547_ & 0xfc00 | i_546_ & 0x380 | i_545_ & 0x7f;
 	}
 
-	void method5867(Class505 class505, Class390 class390, int i, int[][] is, Class390 class390_548_, Class390 class390_549_) {
+	void method5867(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_548_, Class390 class390_549_) {
 		for (int i_550_ = 0; i_550_ < -1230013231 * anInt3784; i_550_++) {
 			for (int i_551_ = 0; i_551_ < 2024737111 * anInt3785; i_551_++) {
 				byte i_552_ = (((Class329) this).aByteArrayArrayArray3790[i][i_550_][i_551_]);
@@ -2327,7 +2327,7 @@ public class Class329 {
 		}
 	}
 
-	void method5868(Class505 class505, Class390 class390, int i, int[][] is, Class390 class390_590_, Class390 class390_591_) {
+	void method5868(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_590_, Class390 class390_591_) {
 		byte[][] is_592_ = ((Class329) this).aByteArrayArrayArray3790[i];
 		byte[][] is_593_ = ((Class329) this).aByteArrayArrayArray3791[i];
 		byte[][] is_594_ = ((Class329) this).aByteArrayArrayArray3808[i];
@@ -2417,7 +2417,7 @@ public class Class329 {
 		}
 	}
 
-	void method5869(Class505 class505, int i, int i_620_, int i_621_, int i_622_, int i_623_, Class481 class481, int i_624_, int i_625_, int i_626_, int i_627_, boolean[] bools, int[] is, int[] is_628_, int[] is_629_, int[] is_630_, int[] is_631_, int[] is_632_, int[] is_633_, int[] is_634_, int[][] is_635_, Class390 class390, Class390 class390_636_, Class390 class390_637_) {
+	void method5869(GraphicalRenderer class505, int i, int i_620_, int i_621_, int i_622_, int i_623_, Class481 class481, int i_624_, int i_625_, int i_626_, int i_627_, boolean[] bools, int[] is, int[] is_628_, int[] is_629_, int[] is_630_, int[] is_631_, int[] is_632_, int[] is_633_, int[] is_634_, int[][] is_635_, Class390 class390, Class390 class390_636_, Class390 class390_637_) {
 		if (null != class481) {
 			if (i_625_ == 0)
 				i_625_ = i_624_;
@@ -2745,7 +2745,7 @@ public class Class329 {
 		return ((Class329) this).anInt3781 * 1070348131;
 	}
 
-	void method5873(Class505 class505, Class531 class531, Class481 class481, int i, int i_691_, byte[][] is, byte[][] is_692_, byte[][] is_693_, boolean[] bools) {
+	void method5873(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_691_, byte[][] is, byte[][] is_692_, byte[][] is_693_, boolean[] bools) {
 		boolean[] bools_694_ = (class531 != null && class531.aBool7061 ? aBoolArrayArray3793[((Class329) this).anInt3844 * -595948995] : (aBoolArrayArray3816[-595948995 * ((Class329) this).anInt3844]));
 		method5848(class505, class531, class481, i, i_691_, anInt3784 * -1230013231, anInt3785 * 2024737111, is_693_, is, is_692_, bools, -1476870410);
 		((Class329) this).aBool3854 = null != class531 && (class531.anInt7054 * 1419498143 != -848345857 * class531.anInt7058);
@@ -2806,7 +2806,7 @@ public class Class329 {
 		}
 	}
 
-	void method5874(Class505 class505, Class531 class531, Class481 class481, int i, int i_708_, byte[][] is, byte[][] is_709_, byte[][] is_710_, boolean[] bools) {
+	void method5874(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_708_, byte[][] is, byte[][] is_709_, byte[][] is_710_, boolean[] bools) {
 		boolean[] bools_711_ = (class531 != null && class531.aBool7061 ? aBoolArrayArray3793[((Class329) this).anInt3844 * -595948995] : (aBoolArrayArray3816[-595948995 * ((Class329) this).anInt3844]));
 		method5848(class505, class531, class481, i, i_708_, anInt3784 * -1230013231, anInt3785 * 2024737111, is_710_, is, is_709_, bools, -1670617987);
 		((Class329) this).aBool3854 = null != class531 && (class531.anInt7054 * 1419498143 != -848345857 * class531.anInt7058);
@@ -2867,7 +2867,7 @@ public class Class329 {
 		}
 	}
 
-	void method5875(Class505 class505, Class531 class531, Class481 class481, int i, int i_725_, byte[][] is, byte[][] is_726_, byte[][] is_727_, boolean[] bools) {
+	void method5875(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_725_, byte[][] is, byte[][] is_726_, byte[][] is_727_, boolean[] bools) {
 		boolean[] bools_728_ = (class531 != null && class531.aBool7061 ? aBoolArrayArray3793[((Class329) this).anInt3844 * -595948995] : (aBoolArrayArray3816[-595948995 * ((Class329) this).anInt3844]));
 		method5848(class505, class531, class481, i, i_725_, anInt3784 * -1230013231, anInt3785 * 2024737111, is_727_, is, is_726_, bools, -1803929010);
 		((Class329) this).aBool3854 = null != class531 && (class531.anInt7054 * 1419498143 != -848345857 * class531.anInt7058);
@@ -2952,7 +2952,7 @@ public class Class329 {
 		}
 	}
 
-	void method5877(Class505 class505, int i, int i_742_, int i_743_, Class531 class531, boolean[] bools, int[] is, int[] is_744_, int[] is_745_, int[] is_746_, int[] is_747_, int[] is_748_, int[] is_749_, int[] is_750_, Class390 class390, Class390 class390_751_, Class390 class390_752_) {
+	void method5877(GraphicalRenderer class505, int i, int i_742_, int i_743_, Class531 class531, boolean[] bools, int[] is, int[] is_744_, int[] is_745_, int[] is_746_, int[] is_747_, int[] is_748_, int[] is_749_, int[] is_750_, Class390 class390, Class390 class390_751_, Class390 class390_752_) {
 		((Class329) this).anInt3850 = 1866422575;
 		((Class329) this).anInt3848 = 1668530227;
 		((Class329) this).anInt3849 = -566299392;
@@ -3069,7 +3069,7 @@ public class Class329 {
 			((Class329) this).anInt3846 += -193737745 * (anIntArray3826[-595948995 * ((Class329) this).anInt3844]);
 	}
 
-	void method5878(Class505 class505, int i, int i_769_, int i_770_, Class531 class531, boolean[] bools, int[] is, int[] is_771_, int[] is_772_, int[] is_773_, int[] is_774_, int[] is_775_, int[] is_776_, int[] is_777_, Class390 class390, Class390 class390_778_, Class390 class390_779_) {
+	void method5878(GraphicalRenderer class505, int i, int i_769_, int i_770_, Class531 class531, boolean[] bools, int[] is, int[] is_771_, int[] is_772_, int[] is_773_, int[] is_774_, int[] is_775_, int[] is_776_, int[] is_777_, Class390 class390, Class390 class390_778_, Class390 class390_779_) {
 		((Class329) this).anInt3850 = 1866422575;
 		((Class329) this).anInt3848 = 1668530227;
 		((Class329) this).anInt3849 = -566299392;
@@ -3186,7 +3186,7 @@ public class Class329 {
 			((Class329) this).anInt3846 += -193737745 * (anIntArray3826[-595948995 * ((Class329) this).anInt3844]);
 	}
 
-	void method5879(Class505 class505, int i, int i_796_, int i_797_, Class531 class531, boolean[] bools, int[] is, int[] is_798_, int[] is_799_, int[] is_800_, int[] is_801_, int[] is_802_, int[] is_803_, int[] is_804_, Class390 class390, Class390 class390_805_, Class390 class390_806_) {
+	void method5879(GraphicalRenderer class505, int i, int i_796_, int i_797_, Class531 class531, boolean[] bools, int[] is, int[] is_798_, int[] is_799_, int[] is_800_, int[] is_801_, int[] is_802_, int[] is_803_, int[] is_804_, Class390 class390, Class390 class390_805_, Class390 class390_806_) {
 		((Class329) this).anInt3850 = 1866422575;
 		((Class329) this).anInt3848 = 1668530227;
 		((Class329) this).anInt3849 = -566299392;
@@ -3453,7 +3453,7 @@ public class Class329 {
 		return i_890_ & 0xfc00 | i_889_ & 0x380 | i_888_ & 0x7f;
 	}
 
-	final void method5888(Class505 class505, Class531 class531, Class481 class481, int i, int i_891_, int i_892_, int i_893_, byte[][] is, byte[][] is_894_, byte[][] is_895_, boolean[] bools) {
+	final void method5888(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_891_, int i_892_, int i_893_, byte[][] is, byte[][] is_894_, byte[][] is_895_, boolean[] bools) {
 		boolean[] bools_896_ = (null != class531 && class531.aBool7061 ? aBoolArrayArray3793[-595948995 * ((Class329) this).anInt3844] : (aBoolArrayArray3816[((Class329) this).anInt3844 * -595948995]));
 		if (i_891_ > 0) {
 			if (i > 0) {
@@ -3799,7 +3799,7 @@ public class Class329 {
 		return (i_985_ * i_988_ >> 16) + (i * (65536 - i_988_) >> 16);
 	}
 
-	final void method5896(Class505 class505, Class531 class531, Class481 class481, int i, int i_989_, int i_990_, int i_991_, byte[][] is, byte[][] is_992_, byte[][] is_993_, boolean[] bools) {
+	final void method5896(GraphicalRenderer class505, Class531 class531, Class481 class481, int i, int i_989_, int i_990_, int i_991_, byte[][] is, byte[][] is_992_, byte[][] is_993_, boolean[] bools) {
 		boolean[] bools_994_ = (null != class531 && class531.aBool7061 ? aBoolArrayArray3793[-595948995 * ((Class329) this).anInt3844] : (aBoolArrayArray3816[((Class329) this).anInt3844 * -595948995]));
 		if (i_989_ > 0) {
 			if (i > 0) {

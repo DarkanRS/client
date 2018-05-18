@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub17 extends Class282 {
+public abstract class Class282_Sub17 extends Node {
 	abstract void method12249(RsByteBuffer class282_sub35);
 
 	abstract void method12250(RsByteBuffer class282_sub35, int i);

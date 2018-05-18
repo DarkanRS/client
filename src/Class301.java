@@ -76,7 +76,7 @@ public class Class301 implements Interface41 {
 		((Class301) this).aString3553 = string;
 	}
 
-	public static Class283 method5331(Class317 class317, String string, boolean bool, int i) {
+	public static Class283 method5331(Index class317, String string, boolean bool, int i) {
 		int i_1_ = class317.method5610(string, -1729894285);
 		if (-1 == i_1_)
 			return new Class283(0);

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub13 extends Class282 {
+public class Class282_Sub13 extends Node {
 	Class282_Sub26_Sub1 aClass282_Sub26_Sub1_7565;
 	Class282_Sub14 aClass282_Sub14_7566;
 	int anInt7567;

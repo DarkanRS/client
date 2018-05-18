@@ -63,9 +63,9 @@ public class Class122 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method7785(i_7_, 198119632);
 	}
 
-	public static void method2109(Class160[] class160s, byte i) {
+	public static void method2109(NativeSprite[] class160s, byte i) {
 		Class20.anInt186 = class160s.length * 1884228835;
-		Class115.aClass160Array1248 = new Class160[Class20.anInt186 * 1104058571 + 10];
+		Class115.aClass160Array1248 = new NativeSprite[Class20.anInt186 * 1104058571 + 10];
 		Class20.anIntArray177 = new int[1104058571 * Class20.anInt186 + 10];
 		System.arraycopy(class160s, 0, Class115.aClass160Array1248, 0, Class20.anInt186 * 1104058571);
 		for (int i_8_ = 0; i_8_ < Class20.anInt186 * 1104058571; i_8_++)

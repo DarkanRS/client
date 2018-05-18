@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class160_Sub1 extends Class160 {
+public abstract class Class160_Sub1 extends NativeSprite {
 	static int anInt8850;
 	int anInt8851;
 	static int anInt8852;

@@ -22,7 +22,7 @@ public class Class213 {
 		}
 	}
 
-	public static void method3662(Class518 class518, int i, Class521_Sub1 class521_sub1, short i_2_) {
+	public static void method3662(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1, short i_2_) {
 		if (Class260.anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
 			int i_3_ = class518.anIntArrayArray5913[i][0];
 			int i_4_ = i_3_ >> 8;

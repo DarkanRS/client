@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub5 extends Class282 {
+public abstract class Class282_Sub5 extends Node {
 	boolean aBool7506;
 	Class505_Sub1 aClass505_Sub1_7507;
 

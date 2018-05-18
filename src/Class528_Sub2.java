@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class528_Sub2 extends Class528 {
+public class Class528_Sub2 extends MeshRasterizer {
 	static int anInt8562;
 	boolean aBool8563 = false;
 	Class185 aClass185_8564;
@@ -403,7 +403,7 @@ public class Class528_Sub2 extends Class528 {
 		return i_54_;
 	}
 
-	public Class528 method11289(byte i, int i_63_, boolean bool) {
+	public MeshRasterizer method11289(byte i, int i_63_, boolean bool) {
 		method13796(Thread.currentThread());
 		boolean bool_64_ = false;
 		Class528_Sub2 class528_sub2_65_;
@@ -471,7 +471,7 @@ public class Class528_Sub2 extends Class528 {
 		return null;
 	}
 
-	Class528 method13804(Class528_Sub2 class528_sub2_73_, Class528_Sub2 class528_sub2_74_, int i, boolean bool, boolean bool_75_) {
+	MeshRasterizer method13804(Class528_Sub2 class528_sub2_73_, Class528_Sub2 class528_sub2_74_, int i, boolean bool, boolean bool_75_) {
 		((Class528_Sub2) class528_sub2_73_).aBool8621 = ((Class528_Sub2) this).aBool8621;
 		if (((Class528_Sub2) this).aBool8621) {
 			((Class528_Sub2) class528_sub2_73_).aShort8627 = ((Class528_Sub2) this).aShort8627;
@@ -2166,7 +2166,7 @@ public class Class528_Sub2 extends Class528 {
 		return true;
 	}
 
-	public void method11269(Class528 class528, int i, int i_478_, int i_479_, boolean bool) {
+	public void method11269(MeshRasterizer class528, int i, int i_478_, int i_479_, boolean bool) {
 		Class528_Sub2 class528_sub2_480_ = (Class528_Sub2) class528;
 		if ((((Class528_Sub2) this).anInt8575 & 0x10000) != 65536)
 			throw new IllegalStateException("");
@@ -2622,7 +2622,7 @@ public class Class528_Sub2 extends Class528 {
 		((Class528_Sub2) this).anInt8598 = 0;
 	}
 
-	public Class528 method11276(byte i, int i_581_, boolean bool) {
+	public MeshRasterizer method11276(byte i, int i_581_, boolean bool) {
 		method13796(Thread.currentThread());
 		boolean bool_582_ = false;
 		Class528_Sub2 class528_sub2_583_;
@@ -3771,7 +3771,7 @@ public class Class528_Sub2 extends Class528 {
 		((Class528_Sub2) this).anInt8598 = 0;
 	}
 
-	public void method11299(Class528 class528, int i, int i_858_, int i_859_, boolean bool) {
+	public void method11299(MeshRasterizer class528, int i, int i_858_, int i_859_, boolean bool) {
 		Class528_Sub2 class528_sub2_860_ = (Class528_Sub2) class528;
 		if ((((Class528_Sub2) this).anInt8575 & 0x10000) != 65536)
 			throw new IllegalStateException("");
@@ -3850,7 +3850,7 @@ public class Class528_Sub2 extends Class528 {
 		return ((Class528_Sub2) this).aShort8574;
 	}
 
-	public Class528 method11277(byte i, int i_873_, boolean bool) {
+	public MeshRasterizer method11277(byte i, int i_873_, boolean bool) {
 		method13796(Thread.currentThread());
 		boolean bool_874_ = false;
 		Class528_Sub2 class528_sub2_875_;
@@ -3864,7 +3864,7 @@ public class Class528_Sub2 extends Class528 {
 		return method13804(class528_sub2_875_, class528_sub2_876_, i_873_, bool_874_, bool);
 	}
 
-	public Class528 method11278(byte i, int i_877_, boolean bool) {
+	public MeshRasterizer method11278(byte i, int i_877_, boolean bool) {
 		method13796(Thread.currentThread());
 		boolean bool_878_ = false;
 		Class528_Sub2 class528_sub2_879_;
@@ -3878,7 +3878,7 @@ public class Class528_Sub2 extends Class528 {
 		return method13804(class528_sub2_879_, class528_sub2_880_, i_877_, bool_878_, bool);
 	}
 
-	public Class528 method11279(byte i, int i_881_, boolean bool) {
+	public MeshRasterizer method11279(byte i, int i_881_, boolean bool) {
 		method13796(Thread.currentThread());
 		boolean bool_882_ = false;
 		Class528_Sub2 class528_sub2_883_;
@@ -3892,7 +3892,7 @@ public class Class528_Sub2 extends Class528 {
 		return method13804(class528_sub2_883_, class528_sub2_884_, i_881_, bool_882_, bool);
 	}
 
-	public Class528 method11296(byte i, int i_885_, boolean bool) {
+	public MeshRasterizer method11296(byte i, int i_885_, boolean bool) {
 		method13796(Thread.currentThread());
 		boolean bool_886_ = false;
 		Class528_Sub2 class528_sub2_887_;
@@ -6876,7 +6876,7 @@ public class Class528_Sub2 extends Class528 {
 		}
 	}
 
-	Class528_Sub2(Class505_Sub3 class505_sub3, Class157 class157, int i, int i_1563_, int i_1564_, int i_1565_) {
+	Class528_Sub2(Class505_Sub3 class505_sub3, RSMesh class157, int i, int i_1563_, int i_1564_, int i_1565_) {
 		((Class528_Sub2) this).aBool8589 = false;
 		((Class528_Sub2) this).aBool8614 = false;
 		((Class528_Sub2) this).aBool8621 = false;

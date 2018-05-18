@@ -109,7 +109,7 @@ public class Class30 implements Runnable {
 	}
 
 	public static void method795(byte i) {
-		Class235.aClass465_2904 = new SwitchMap(8);
+		Class235.aClass465_2904 = new IterableNodeMap(8);
 		Class235.anInt2898 = 0;
 		Iterator iterator = Class235.aList2896.iterator();
 		while (iterator.hasNext()) {

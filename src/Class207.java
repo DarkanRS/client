@@ -112,7 +112,7 @@ public class Class207 {
 	static final void method3557(CS2Executor class527, byte i) {
 		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		if (null != Class291_Sub1.aClass465_8025) {
-			Class282 class282 = Class291_Sub1.aClass465_8025.method7754((long) i_8_);
+			Node class282 = Class291_Sub1.aClass465_8025.method7754((long) i_8_);
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class282 != null ? 1 : 0;
 		} else
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;

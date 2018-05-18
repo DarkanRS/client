@@ -30,7 +30,7 @@ public class Class225_Sub5 extends Class225 {
 		return class336.method5986(i_9_, i_10_, i, -1440558477 * anInt2779, 1732585867 * anInt2780, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -29453);
 	}
 
-	static void method13042(Class505 class505, int i, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {
+	static void method13042(GraphicalRenderer class505, int i, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {
 		Class206 class206 = client.aClass257_7353.method4430(-1053106228);
 		Interface12 interface12 = (Interface12) class206.method3381(i, i_11_, i_12_, (byte) -80);
 		if (null != interface12) {

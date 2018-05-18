@@ -2,12 +2,12 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class m extends Class8 implements Interface40 {
+public class m extends FontRenderer implements Interface40 {
 	long nativeid;
 
 	native void aq(ja var_ja, ba var_ba, byte[][] is, int[] is_0_, int[] is_1_, int[] is_2_, int[] is_3_);
 
-	m(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, Class160[] class160s) {
+	m(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, NativeSprite[] class160s) {
 		super(var_ja, class414);
 		byte[][] is = new byte[class91s.length][];
 		int[] is_4_ = new int[class91s.length];

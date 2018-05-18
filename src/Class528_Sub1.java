@@ -6,7 +6,7 @@ import jaclib.memory.Stream;
 
 import jaggl.OpenGL;
 
-public class Class528_Sub1 extends Class528 {
+public class Class528_Sub1 extends MeshRasterizer {
 	static int anInt8232;
 	static boolean aBool8233;
 	static final int anInt8234 = 1;
@@ -96,7 +96,7 @@ public class Class528_Sub1 extends Class528 {
 		((Class528_Sub1) this).aBool8254 = false;
 	}
 
-	Class528_Sub1(Class505_Sub1 class505_sub1, Class157 class157, int i, int i_4_, int i_5_, int i_6_) {
+	Class528_Sub1(Class505_Sub1 class505_sub1, RSMesh class157, int i, int i_4_, int i_5_, int i_6_) {
 		((Class528_Sub1) this).anInt8248 = 0;
 		((Class528_Sub1) this).anInt8300 = 0;
 		((Class528_Sub1) this).anInt8262 = 0;
@@ -693,7 +693,7 @@ public class Class528_Sub1 extends Class528 {
 		anIntArray8268 = new int[8];
 	}
 
-	public Class528 method11289(byte i, int i_156_, boolean bool) {
+	public MeshRasterizer method11289(byte i, int i_156_, boolean bool) {
 		boolean bool_157_ = false;
 		Class528_Sub1 class528_sub1_158_;
 		Class528_Sub1 class528_sub1_159_;
@@ -706,7 +706,7 @@ public class Class528_Sub1 extends Class528 {
 		return method13524(class528_sub1_158_, class528_sub1_159_, i_156_, bool_157_, bool);
 	}
 
-	Class528 method13524(Class528_Sub1 class528_sub1_160_, Class528_Sub1 class528_sub1_161_, int i, boolean bool, boolean bool_162_) {
+	MeshRasterizer method13524(Class528_Sub1 class528_sub1_160_, Class528_Sub1 class528_sub1_161_, int i, boolean bool, boolean bool_162_) {
 		((Class528_Sub1) class528_sub1_160_).aByte8242 = (byte) 0;
 		((Class528_Sub1) class528_sub1_160_).anInt8240 = i;
 		((Class528_Sub1) class528_sub1_160_).anInt8241 = ((Class528_Sub1) this).anInt8241;
@@ -1123,7 +1123,7 @@ public class Class528_Sub1 extends Class528 {
 		return is_199_;
 	}
 
-	short method13527(Class157 class157, int i, long l, int i_200_, int i_201_, int i_202_, int i_203_, float f, float f_204_) {
+	short method13527(RSMesh class157, int i, long l, int i_200_, int i_201_, int i_202_, int i_203_, float f, float f_204_) {
 		int i_205_ = ((Class528_Sub1) this).anIntArray8290[i];
 		int i_206_ = ((Class528_Sub1) this).anIntArray8290[i + 1];
 		int i_207_ = 0;
@@ -1364,7 +1364,7 @@ public class Class528_Sub1 extends Class528 {
 		return is_254_;
 	}
 
-	public void method11269(Class528 class528, int i, int i_255_, int i_256_, boolean bool) {
+	public void method11269(MeshRasterizer class528, int i, int i_255_, int i_256_, boolean bool) {
 		Class528_Sub1 class528_sub1_257_ = (Class528_Sub1) class528;
 		if (((Class528_Sub1) this).anInt8262 != 0 && ((Class528_Sub1) class528_sub1_257_).anInt8262 != 0) {
 			int i_258_ = ((Class528_Sub1) class528_sub1_257_).anInt8248;
@@ -3614,7 +3614,7 @@ public class Class528_Sub1 extends Class528 {
 		}
 	}
 
-	public Class528 method11276(byte i, int i_884_, boolean bool) {
+	public MeshRasterizer method11276(byte i, int i_884_, boolean bool) {
 		boolean bool_885_ = false;
 		Class528_Sub1 class528_sub1_886_;
 		Class528_Sub1 class528_sub1_887_;
@@ -3627,7 +3627,7 @@ public class Class528_Sub1 extends Class528 {
 		return method13524(class528_sub1_886_, class528_sub1_887_, i_884_, bool_885_, bool);
 	}
 
-	public void method11299(Class528 class528, int i, int i_888_, int i_889_, boolean bool) {
+	public void method11299(MeshRasterizer class528, int i, int i_888_, int i_889_, boolean bool) {
 		Class528_Sub1 class528_sub1_890_ = (Class528_Sub1) class528;
 		if (((Class528_Sub1) this).anInt8262 != 0 && ((Class528_Sub1) class528_sub1_890_).anInt8262 != 0) {
 			int i_891_ = ((Class528_Sub1) class528_sub1_890_).anInt8248;
@@ -3772,7 +3772,7 @@ public class Class528_Sub1 extends Class528 {
 		}
 	}
 
-	public Class528 method11277(byte i, int i_933_, boolean bool) {
+	public MeshRasterizer method11277(byte i, int i_933_, boolean bool) {
 		boolean bool_934_ = false;
 		Class528_Sub1 class528_sub1_935_;
 		Class528_Sub1 class528_sub1_936_;
@@ -3798,7 +3798,7 @@ public class Class528_Sub1 extends Class528 {
 		((Class528_Sub1) this).aBool8254 = false;
 	}
 
-	public Class528 method11296(byte i, int i_941_, boolean bool) {
+	public MeshRasterizer method11296(byte i, int i_941_, boolean bool) {
 		boolean bool_942_ = false;
 		Class528_Sub1 class528_sub1_943_;
 		Class528_Sub1 class528_sub1_944_;
@@ -3811,7 +3811,7 @@ public class Class528_Sub1 extends Class528 {
 		return method13524(class528_sub1_943_, class528_sub1_944_, i_941_, bool_942_, bool);
 	}
 
-	public Class528 method11279(byte i, int i_945_, boolean bool) {
+	public MeshRasterizer method11279(byte i, int i_945_, boolean bool) {
 		boolean bool_946_ = false;
 		Class528_Sub1 class528_sub1_947_;
 		Class528_Sub1 class528_sub1_948_;
@@ -4434,7 +4434,7 @@ public class Class528_Sub1 extends Class528 {
 		/* empty */
 	}
 
-	short method13542(Class157 class157, int i, long l, int i_1045_, int i_1046_, int i_1047_, int i_1048_, float f, float f_1049_) {
+	short method13542(RSMesh class157, int i, long l, int i_1045_, int i_1046_, int i_1047_, int i_1048_, float f, float f_1049_) {
 		int i_1050_ = ((Class528_Sub1) this).anIntArray8290[i];
 		int i_1051_ = ((Class528_Sub1) this).anIntArray8290[i + 1];
 		int i_1052_ = 0;
@@ -5718,7 +5718,7 @@ public class Class528_Sub1 extends Class528 {
 		((Class528_Sub1) this).aBool8254 = false;
 	}
 
-	short method13547(Class157 class157, int i, long l, int i_1392_, int i_1393_, int i_1394_, int i_1395_, float f, float f_1396_) {
+	short method13547(RSMesh class157, int i, long l, int i_1392_, int i_1393_, int i_1394_, int i_1395_, float f, float f_1396_) {
 		int i_1397_ = ((Class528_Sub1) this).anIntArray8290[i];
 		int i_1398_ = ((Class528_Sub1) this).anIntArray8290[i + 1];
 		int i_1399_ = 0;
@@ -5742,7 +5742,7 @@ public class Class528_Sub1 extends Class528 {
 		return (short) ((Class528_Sub1) this).anInt8300++;
 	}
 
-	short method13548(Class157 class157, int i, long l, int i_1402_, int i_1403_, int i_1404_, int i_1405_, float f, float f_1406_) {
+	short method13548(RSMesh class157, int i, long l, int i_1402_, int i_1403_, int i_1404_, int i_1405_, float f, float f_1406_) {
 		int i_1407_ = ((Class528_Sub1) this).anIntArray8290[i];
 		int i_1408_ = ((Class528_Sub1) this).anIntArray8290[i + 1];
 		int i_1409_ = 0;
@@ -5956,7 +5956,7 @@ public class Class528_Sub1 extends Class528 {
 		((Class528_Sub1) this).aBool8254 = false;
 	}
 
-	public Class528 method11278(byte i, int i_1423_, boolean bool) {
+	public MeshRasterizer method11278(byte i, int i_1423_, boolean bool) {
 		boolean bool_1424_ = false;
 		Class528_Sub1 class528_sub1_1425_;
 		Class528_Sub1 class528_sub1_1426_;

@@ -447,7 +447,7 @@ public class Class434_Sub1 extends Class434 {
 			if (class282_sub29 == null)
 				client.aClass257_7353.method4430(-1670103274).method3405(i, i_57_, i_58_, -259717537);
 			else {
-				Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 115));
+				Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 115));
 				if (null == class282_sub34)
 					client.aClass257_7353.method4430(-1731204045).method3405(i, i_57_, i_58_, -237481476);
 				else {
@@ -465,14 +465,14 @@ public class Class434_Sub1 extends Class434 {
 					while_0_: do {
 						Class282_Sub34 class282_sub34_63_;
 						do {
-							class282_sub34_63_ = (Class282_Sub34) class282_sub29.aClass482_7708.method8067(1363381477);
+							class282_sub34_63_ = (Class282_Sub34) class282_sub29.aClass482_7708.next(1363381477);
 							if (null == class282_sub34_63_)
 								break while_0_;
 						} while (class282_sub34_63_.anInt7853 * 1964309863 == (class521_sub1_sub2_sub1.anInt10423 * -876219087));
 						class521_sub1_sub2_sub1.anInt10411 = -1363239959 * class282_sub34_63_.anInt7853;
 						class521_sub1_sub2_sub1.anInt10414 = (((Class282_Sub34) class282_sub34_63_).anInt7852 * 1341145025);
 						for (;;) {
-							Class282_Sub34 class282_sub34_64_ = ((Class282_Sub34) class282_sub29.aClass482_7708.method8067(-761697054));
+							Class282_Sub34 class282_sub34_64_ = ((Class282_Sub34) class282_sub29.aClass482_7708.next(-761697054));
 							if (null == class282_sub34_64_)
 								break;
 							if ((1964309863 * class282_sub34_64_.anInt7853 != (class521_sub1_sub2_sub1.anInt10423 * -876219087)) && ((313920719 * class521_sub1_sub2_sub1.anInt10411) != (class282_sub34_64_.anInt7853 * 1964309863))) {

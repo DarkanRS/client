@@ -4,11 +4,11 @@
 
 public class Class290 {
 	Class229 aClass229_3447;
-	Class317 aClass317_3448;
+	Index aClass317_3448;
 	Class229 aClass229_3449 = new Class229(64);
-	Class317 aClass317_3450;
+	Index aClass317_3450;
 	static int anInt3451;
-	public static Class160 aClass160_3452;
+	public static NativeSprite aClass160_3452;
 
 	public void method5101(int i) {
 		synchronized (((Class290) this).aClass229_3449) {
@@ -49,11 +49,11 @@ public class Class290 {
 		}
 	}
 
-	public Class290(Class486 class486, Class495 class495, Class317 class317, Class317 class317_1_) {
+	public Class290(Game class486, Class495 class495, Index class317, Index class317_1_) {
 		((Class290) this).aClass229_3447 = new Class229(20);
 		((Class290) this).aClass317_3448 = class317_1_;
 		((Class290) this).aClass317_3450 = class317;
-		((Class290) this).aClass317_3450.method5624((-71319279 * (Class120.aClass120_1512.anInt1521)), -732818997);
+		((Class290) this).aClass317_3450.filesCount((-71319279 * (Class120.aClass120_1512.anInt1521)), -732818997);
 	}
 
 	public void method5104() {

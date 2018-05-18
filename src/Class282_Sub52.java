@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public final class Class282_Sub52 extends Class282 implements Interface16 {
+public final class Class282_Sub52 extends Node implements Interface16 {
 	long aLong8169;
 	static final int anInt8170 = -1;
 	char aChar8171;

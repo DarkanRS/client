@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub19 extends Class282 {
+public class Class282_Sub19 extends Node {
 	Interface15 anInterface15_7639;
 	int anInt7640;
 	Class282_Sub24 aClass282_Sub24_7641;
@@ -44,7 +44,7 @@ public class Class282_Sub19 extends Class282 {
 		int i_7_ = ((Class282_Sub19) this).aClass390_Sub2_7654.method6709(i_5_, i_6_, 1957271969);
 		if ((i_3_ & 0x7f) == 0 || (i_4_ & 0x7f) == 0) {
 			l = ((long) i_6_ & 0xffffL) << 16 | (long) i_5_ & 0xffffL;
-			Class282 class282 = ((Class282_Sub19) this).aClass453_7657.method7530(l);
+			Node class282 = ((Class282_Sub19) this).aClass453_7657.method7530(l);
 			if (class282 != null) {
 				method12305(((Class282_Sub46) class282).aShort8067);
 				return;
@@ -282,7 +282,7 @@ public class Class282_Sub19 extends Class282 {
 		int i_62_ = ((Class282_Sub19) this).aClass390_Sub2_7654.method6709(i_60_, i_61_, 371202509);
 		if ((i_58_ & 0x7f) == 0 || (i_59_ & 0x7f) == 0) {
 			l = ((long) i_61_ & 0xffffL) << 16 | (long) i_60_ & 0xffffL;
-			Class282 class282 = ((Class282_Sub19) this).aClass453_7657.method7530(l);
+			Node class282 = ((Class282_Sub19) this).aClass453_7657.method7530(l);
 			if (class282 != null) {
 				method12305(((Class282_Sub46) class282).aShort8067);
 				return;
@@ -380,7 +380,7 @@ public class Class282_Sub19 extends Class282 {
 		int i_94_ = ((Class282_Sub19) this).aClass390_Sub2_7654.method6709(i_92_, i_93_, -1176275430);
 		if ((i_90_ & 0x7f) == 0 || (i_91_ & 0x7f) == 0) {
 			l = ((long) i_93_ & 0xffffL) << 16 | (long) i_92_ & 0xffffL;
-			Class282 class282 = ((Class282_Sub19) this).aClass453_7657.method7530(l);
+			Node class282 = ((Class282_Sub19) this).aClass453_7657.method7530(l);
 			if (class282 != null) {
 				method12305(((Class282_Sub46) class282).aShort8067);
 				return;

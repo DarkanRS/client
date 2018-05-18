@@ -96,7 +96,7 @@ public class Class120 {
 		return 1 << 854326337 * ((Class120) this).anInt1495;
 	}
 
-	public static boolean method2084(Class317 class317, Class317 class317_3_, Class317 class317_4_, Class282_Sub15_Sub2 class282_sub15_sub2, Class253 class253, int i) {
+	public static boolean method2084(Index class317, Index class317_3_, Index class317_4_, Class282_Sub15_Sub2 class282_sub15_sub2, Class253 class253, int i) {
 		Class148.aClass317_1737 = class317;
 		Class148.aClass317_1731 = class317_3_;
 		Class148.aClass317_1732 = class317_4_;
@@ -224,7 +224,7 @@ public class Class120 {
 
 	static void method2095(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
 		if (!Class20.aBool161) {
-			class282_sub50_sub7.method4991(-371378792);
+			class282_sub50_sub7.unlink(-371378792);
 			Class20.anInt169 -= 1410722043;
 			if (!((Class282_Sub50_Sub7) class282_sub50_sub7).aBool9586) {
 				long l = (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580 * 820033947929891191L);

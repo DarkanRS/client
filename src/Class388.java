@@ -4,8 +4,8 @@
 
 public class Class388 implements Interface41 {
 	String aString4719;
-	Class317 aClass317_4720;
-	static Class317 aClass317_4721;
+	Index aClass317_4720;
+	static Index aClass317_4721;
 	public static int anInt4722;
 	public static int anInt4723;
 
@@ -17,7 +17,7 @@ public class Class388 implements Interface41 {
 		return Class445.aClass445_5382;
 	}
 
-	Class388(Class317 class317, String string) {
+	Class388(Index class317, String string) {
 		((Class388) this).aClass317_4720 = class317;
 		((Class388) this).aString4719 = string;
 	}
@@ -103,12 +103,12 @@ public class Class388 implements Interface41 {
 	static boolean method6693(int i) {
 		if (-1741204137 * client.anInt7166 != 5)
 			return false;
-		if (Class203.method3360((byte) 103) || Class85.method1466(-611019435))
+		if (JS5CacheFile.method3360((byte) 103) || Class85.method1466(-611019435))
 			return false;
 		return true;
 	}
 
-	static void method6694(Class200 class200, int i, int i_2_, int i_3_, Class528 class528, int i_4_) {
+	static void method6694(Class200 class200, int i, int i_2_, int i_3_, MeshRasterizer class528, int i_4_) {
 		if (null != class528)
 			class200.method3253(i, i_2_, i_3_, class528.N(), class528.RA(), class528.ya(), class528.YA(), class528.o(), class528.AA(), class528.ha());
 	}

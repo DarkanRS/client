@@ -110,7 +110,7 @@ public class Class62 implements Interface3 {
 			Class210.method3614(Class397.aClass397_4800, i, -1, (byte) 69);
 	}
 
-	public static void method1261(Class317 class317, byte i) {
+	public static void method1261(Index class317, byte i) {
 		Class235.anInt2902 = 0;
 		Class235.anInt2905 = 0;
 		Class235.aList2896 = new LinkedList();

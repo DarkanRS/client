@@ -11,7 +11,7 @@ public abstract class Class455 {
 
 	static void method7553(Class118 class118, int i, int i_0_, int i_1_) {
 		if (client.aBool7344) {
-			Class437 class437 = (Class96_Sub12.anInt9319 * -1605351655 != -1 ? Class125.aClass424_1573.method7069((-1605351655 * (Class96_Sub12.anInt9319)), (byte) 0) : null);
+			AttributeDefault class437 = (Class96_Sub12.anInt9319 * -1605351655 != -1 ? Class125.aClass424_1573.method7069((-1605351655 * (Class96_Sub12.anInt9319)), (byte) 0) : null);
 			if (client.method11633(class118).method12181(2135995178) && (Class506.anInt5858 * 1310510077 & 0x20) != 0 && (class437 == null || (class118.method1997((Class96_Sub12.anInt9319 * -1605351655), -1741480635 * class437.anInt5337, 1315662275) != class437.anInt5337 * -1741480635)))
 				Class238.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(class118.aString1369).toString(), -239192305 * Class519.anInt5932, 58, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1704442537);
 		}

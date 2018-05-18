@@ -13,7 +13,7 @@ public class Class511 {
 	public int anInt5880;
 	public int anInt5881;
 	public Interface17 anInterface17_5882;
-	static Class160 aClass160_5883;
+	static NativeSprite aClass160_5883;
 
 	void method8745(RsByteBuffer class282_sub35) {
 		for (;;) {
@@ -49,7 +49,7 @@ public class Class511 {
 		}
 	}
 
-	public Class511(Class317 class317) {
+	public Class511(Index class317) {
 		byte[] is = class317.method5615((-1719912253 * Class524.aClass524_6964.anInt6966), -1307124908);
 		method8746(new RsByteBuffer(is), -525270939);
 	}
@@ -178,17 +178,17 @@ public class Class511 {
 		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
 	}
 
-	public static Class528 method8752(Class505 class505, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+	public static MeshRasterizer method8752(GraphicalRenderer class505, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		long l = (long) i_6_;
-		Class528 class528 = (Class528) Class180.aClass229_2245.method3865(l);
+		MeshRasterizer class528 = (MeshRasterizer) Class180.aClass229_2245.method3865(l);
 		int i_8_ = 2055;
 		if (null == class528) {
-			Class157 class157 = Class157.method2689(Class110.aClass317_1106, i_6_, 0);
+			RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, i_6_, 0);
 			if (null == class157)
 				return null;
 			if (class157.anInt1986 < 13)
 				class157.method2679(2);
-			class528 = class505.method8451(class157, i_8_, 2079347217 * Class180.anInt2246, 64, 768);
+			class528 = class505.createMeshRasterizer(class157, i_8_, 2079347217 * Class180.anInt2246, 64, 768);
 			Class180.aClass229_2245.method3856(class528, l);
 		}
 		class528 = class528.method11289((byte) 6, i_8_, true);
@@ -209,7 +209,7 @@ public class Class511 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_9_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_10_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_9_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_9_, (byte) 0);
 		if (i_10_ != -1741480635 * class437.anInt5337)
 			class118.method1999(i_9_, i_10_, -76076232);
 		else
@@ -252,7 +252,7 @@ public class Class511 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_14_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_15_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_15_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_15_, (byte) 0);
 		if (class437.method7319(2036753920))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class397.aClass218_4813.method3700(i_14_, 882562729).method3722(i_15_, class437.aString5335, -379285425);
 		else

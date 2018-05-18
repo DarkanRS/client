@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Date;
 
 public abstract class Class209 {
-	public static Class317 aClass317_2663;
+	public static Index aClass317_2663;
 
 	public boolean method3563() {
 		return (method3565((byte) -32) || method3566(-2143623365) || method3567((byte) 10));
@@ -114,7 +114,7 @@ public abstract class Class209 {
 
 	public static void method3598(String string, int i) {
 		if (Class13.aStringArray129 == null)
-			Class8.method402(1696819544);
+			FontRenderer.method402(1696819544);
 		client.aCalendar7278.setTime(new Date(Class169.method2869(1677357681)));
 		int i_2_ = client.aCalendar7278.get(11);
 		int i_3_ = client.aCalendar7278.get(12);

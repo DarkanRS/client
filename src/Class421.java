@@ -5,7 +5,7 @@
 public class Class421 {
 	Class282_Sub50_Sub4[] aClass282_Sub50_Sub4Array5012;
 	int anInt5013;
-	Class317 aClass317_5014;
+	Index aClass317_5014;
 	static int anInt5015;
 
 	public Class282_Sub50_Sub4 method7036(int i, int i_0_) {
@@ -14,9 +14,9 @@ public class Class421 {
 		return ((Class421) this).aClass282_Sub50_Sub4Array5012[i];
 	}
 
-	public Class421(Class486 class486, Class495 class495, Class317 class317, boolean bool) {
+	public Class421(Game class486, Class495 class495, Index class317, boolean bool) {
 		((Class421) this).aClass317_5014 = class317;
-		((Class421) this).anInt5013 = (((Class421) this).aClass317_5014.method5624(((Class120.aClass120_1473.anInt1521) * -71319279), 1779903880) * 268916055);
+		((Class421) this).anInt5013 = (((Class421) this).aClass317_5014.filesCount(((Class120.aClass120_1473.anInt1521) * -71319279), 1779903880) * 268916055);
 		if (bool) {
 			((Class421) this).aClass282_Sub50_Sub4Array5012 = (new Class282_Sub50_Sub4[-1814796697 * ((Class421) this).anInt5013]);
 			for (int i = 0; i < ((Class421) this).anInt5013 * -1814796697; i++) {

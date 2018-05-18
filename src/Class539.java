@@ -56,7 +56,7 @@ public class Class539 {
 		while (iterator.hasNext()) {
 			Class282_Sub40 class282_sub40 = (Class282_Sub40) iterator.next();
 			if ((((Class282_Sub40) class282_sub40).aClass345_8007.anInt4041 * -39568147) == 1)
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 		}
 		for (int i = 0; i < ((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120.length; i++) {
 			if (((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120[i] != null) {
@@ -71,7 +71,7 @@ public class Class539 {
 		((Class539) this).anInt7121 = 0;
 	}
 
-	public void method11507(Class505 class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
+	public void method11507(GraphicalRenderer class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
 		if (!aBool7132) {
 			method11541(class505, class87s, bool);
 			method11513(class172s, bool);
@@ -83,7 +83,7 @@ public class Class539 {
 		((Class539) this).aBool7128 = false;
 	}
 
-	boolean method11509(Class505 class505, long l) {
+	boolean method11509(GraphicalRenderer class505, long l) {
 		if (((Class539) this).aLong7124 != ((Class539) this).aLong7123)
 			method11527();
 		else
@@ -115,7 +115,7 @@ public class Class539 {
 		return ((Class539) this).aClass151_7131;
 	}
 
-	public void method11511(Class505 class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
+	public void method11511(GraphicalRenderer class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
 		if (!aBool7132) {
 			method11541(class505, class87s, bool);
 			method11513(class172s, bool);
@@ -143,10 +143,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(1211562351)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -178,7 +178,7 @@ public class Class539 {
 		((Class539) this).anInt7122 = i;
 	}
 
-	void method11516(Class206 class206, Class505 class505) {
+	void method11516(Class206 class206, GraphicalRenderer class505) {
 		((Class539) this).aClass151_7131.aClass464_1961.method7740(493536965);
 		Iterator iterator = ((Class539) this).aList7129.iterator();
 		while (iterator.hasNext()) {
@@ -285,10 +285,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(235210991)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -312,7 +312,7 @@ public class Class539 {
 		}
 	}
 
-	boolean method11529(Class505 class505, long l) {
+	boolean method11529(GraphicalRenderer class505, long l) {
 		if (((Class539) this).aLong7124 != ((Class539) this).aLong7123)
 			method11527();
 		else
@@ -350,7 +350,7 @@ public class Class539 {
 		while (iterator.hasNext()) {
 			Class282_Sub40 class282_sub40 = (Class282_Sub40) iterator.next();
 			if ((((Class282_Sub40) class282_sub40).aClass345_8007.anInt4041 * -39568147) == 1)
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 		}
 		for (int i = 0; i < ((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120.length; i++) {
 			if (((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120[i] != null) {
@@ -371,7 +371,7 @@ public class Class539 {
 		while (iterator.hasNext()) {
 			Class282_Sub40 class282_sub40 = (Class282_Sub40) iterator.next();
 			if ((((Class282_Sub40) class282_sub40).aClass345_8007.anInt4041 * -39568147) == 1)
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 		}
 		for (int i = 0; i < ((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120.length; i++) {
 			if (((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120[i] != null) {
@@ -425,7 +425,7 @@ public class Class539 {
 		((Class539) this).aBool7128 = false;
 	}
 
-	boolean method11538(Class505 class505, long l) {
+	boolean method11538(GraphicalRenderer class505, long l) {
 		if (((Class539) this).aLong7124 != ((Class539) this).aLong7123)
 			method11527();
 		else
@@ -469,10 +469,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(-1500004365)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -500,7 +500,7 @@ public class Class539 {
 		((Class539) this).aLong7124 = l;
 	}
 
-	void method11541(Class505 class505, Class87[] class87s, boolean bool) {
+	void method11541(GraphicalRenderer class505, Class87[] class87s, boolean bool) {
 		for (int i = 0; i < 32; i++)
 			aBoolArray7133[i] = false;
 		Iterator iterator = ((Class539) this).aList7129.iterator();
@@ -546,7 +546,7 @@ public class Class539 {
 		while (iterator.hasNext()) {
 			Class282_Sub40 class282_sub40 = (Class282_Sub40) iterator.next();
 			if ((((Class282_Sub40) class282_sub40).aClass345_8007.anInt4041 * -39568147) == 1)
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 		}
 		for (int i = 0; i < ((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120.length; i++) {
 			if (((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120[i] != null) {
@@ -561,7 +561,7 @@ public class Class539 {
 		((Class539) this).anInt7121 = 0;
 	}
 
-	public void method11544(Class505 class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
+	public void method11544(GraphicalRenderer class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
 		if (!aBool7132) {
 			method11541(class505, class87s, bool);
 			method11513(class172s, bool);
@@ -569,7 +569,7 @@ public class Class539 {
 		}
 	}
 
-	public void method11545(Class505 class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
+	public void method11545(GraphicalRenderer class505, long l, Class87[] class87s, Class172[] class172s, boolean bool) {
 		if (!aBool7132) {
 			method11541(class505, class87s, bool);
 			method11513(class172s, bool);
@@ -593,10 +593,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(2033988889)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -626,7 +626,7 @@ public class Class539 {
 		while (iterator.hasNext()) {
 			Class282_Sub40 class282_sub40 = (Class282_Sub40) iterator.next();
 			if ((((Class282_Sub40) class282_sub40).aClass345_8007.anInt4041 * -39568147) == 1)
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 		}
 		for (int i = 0; i < ((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120.length; i++) {
 			if (((Class539) this).aClass275_Sub1_Sub1_Sub1Array7120[i] != null) {
@@ -657,10 +657,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(-1924991475)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -700,10 +700,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(512479777)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -747,10 +747,10 @@ public class Class539 {
 				}
 			}
 			if (!bool) {
-				class282_sub40.method4991(-371378792);
+				class282_sub40.unlink(-371378792);
 				((Class539) this).anInt7121--;
 				if (class282_sub40.method4994(-955146742)) {
-					class282_sub40.method4991(-371378792);
+					class282_sub40.unlink(-371378792);
 					Class235.anInt2898 -= -50571805;
 				}
 			}
@@ -805,7 +805,7 @@ public class Class539 {
 		((Class539) this).aBool7119 = true;
 	}
 
-	void method11556(Class206 class206, Class505 class505) {
+	void method11556(Class206 class206, GraphicalRenderer class505) {
 		((Class539) this).aClass151_7131.aClass464_1961.method7740(493536965);
 		Iterator iterator = ((Class539) this).aList7129.iterator();
 		while (iterator.hasNext()) {

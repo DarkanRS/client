@@ -5,8 +5,8 @@
 public class Class523 {
 	Class229 aClass229_6954;
 	Class229 aClass229_6955 = new Class229(64);
-	Class317 aClass317_6956;
-	public static Class317 aClass317_6957;
+	Index aClass317_6956;
+	public static Index aClass317_6957;
 
 	public void method11204(int i) {
 		synchronized (((Class523) this).aClass229_6955) {
@@ -17,10 +17,10 @@ public class Class523 {
 		}
 	}
 
-	public Class518 method11205(int i, byte i_0_) {
-		Class518 class518;
+	public AnimationDefinitions method11205(int i, byte i_0_) {
+		AnimationDefinitions class518;
 		synchronized (((Class523) this).aClass229_6955) {
-			class518 = ((Class518) ((Class523) this).aClass229_6955.method3865((long) i));
+			class518 = ((AnimationDefinitions) ((Class523) this).aClass229_6955.method3865((long) i));
 		}
 		if (null != class518)
 			return class518;
@@ -28,9 +28,9 @@ public class Class523 {
 		synchronized (((Class523) this).aClass317_6956) {
 			is = (((Class523) this).aClass317_6956.getFile(Class120.aClass120_1475.method2079(i, -724424749), Class120.aClass120_1475.method2080(i, -2052729107), -1610742451));
 		}
-		class518 = new Class518();
+		class518 = new AnimationDefinitions();
 		class518.anInt5909 = i * 919942973;
-		((Class518) class518).aClass523_5908 = this;
+		((AnimationDefinitions) class518).aClass523_5908 = this;
 		if (null != is)
 			class518.method11130(new RsByteBuffer(is), -2068474756);
 		class518.method11143((byte) -115);
@@ -40,21 +40,21 @@ public class Class523 {
 		return class518;
 	}
 
-	public Class523(Class486 class486, Class495 class495, Class317 class317, Class317 class317_1_, Class317 class317_2_) {
+	public Class523(Game class486, Class495 class495, Index class317, Index class317_1_, Index class317_2_) {
 		((Class523) this).aClass229_6954 = new Class229(100);
 		((Class523) this).aClass317_6956 = class317;
 		if (null != ((Class523) this).aClass317_6956) {
-			int i = ((Class523) this).aClass317_6956.method5618(-738745647) - 1;
+			int i = ((Class523) this).aClass317_6956.containersCount(-738745647) - 1;
 			Class120.aClass120_1475.method2078(-1584727313);
-			((Class523) this).aClass317_6956.method5624(i, -812236501);
+			((Class523) this).aClass317_6956.filesCount(i, -812236501);
 		}
 		Class96_Sub10_Sub1.method15554(class317_1_, class317_2_, 2, -1736051925);
 	}
 
-	public Class518 method11206(int i) {
-		Class518 class518;
+	public AnimationDefinitions method11206(int i) {
+		AnimationDefinitions class518;
 		synchronized (((Class523) this).aClass229_6955) {
-			class518 = ((Class518) ((Class523) this).aClass229_6955.method3865((long) i));
+			class518 = ((AnimationDefinitions) ((Class523) this).aClass229_6955.method3865((long) i));
 		}
 		if (null != class518)
 			return class518;
@@ -62,9 +62,9 @@ public class Class523 {
 		synchronized (((Class523) this).aClass317_6956) {
 			is = (((Class523) this).aClass317_6956.getFile(Class120.aClass120_1475.method2079(i, 1295408569), Class120.aClass120_1475.method2080(i, -2139558643), -1900901959));
 		}
-		class518 = new Class518();
+		class518 = new AnimationDefinitions();
 		class518.anInt5909 = i * 919942973;
-		((Class518) class518).aClass523_5908 = this;
+		((AnimationDefinitions) class518).aClass523_5908 = this;
 		if (null != is)
 			class518.method11130(new RsByteBuffer(is), -528606767);
 		class518.method11143((byte) -109);

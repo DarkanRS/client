@@ -7,7 +7,7 @@ import java.awt.Dimension;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
-public abstract class Class505 {
+public abstract class GraphicalRenderer {
 	Class158_Sub1[] aClass158_Sub1Array5833;
 	public Interface22 anInterface22_5834;
 	public static final int anInt5835 = 2;
@@ -15,7 +15,7 @@ public abstract class Class505 {
 	public static final int anInt5837 = 5;
 	static final int anInt5838 = 8;
 	static boolean[] aBoolArray5839 = new boolean[8];
-	public int anInt5840;
+	public int rendererId;
 	protected Class158_Sub2 aClass158_Sub2_5841;
 	public static final int anInt5842 = 0;
 	public static final int anInt5843 = 1;
@@ -33,7 +33,7 @@ public abstract class Class505 {
 	protected Hashtable aHashtable5855 = new Hashtable();
 	public static final int anInt5856 = 0;
 
-	public static Class505 method8391(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_0_) {
+	public static GraphicalRenderer method8391(int i, Canvas canvas, Interface22 interface22, Index class317, int i_0_) {
 		int i_1_ = 0;
 		int i_2_ = 0;
 		if (canvas != null) {
@@ -55,7 +55,7 @@ public abstract class Class505 {
 	public abstract void method8395();
 
 	public void method8396(int i) {
-		aBoolArray5839[anInt5840 * -413843045] = false;
+		aBoolArray5839[rendererId * -413843045] = false;
 		Enumeration enumeration = aHashtable5855.keys();
 		while (enumeration.hasMoreElements()) {
 			Canvas canvas = (Canvas) enumeration.nextElement();
@@ -110,7 +110,7 @@ public abstract class Class505 {
 
 	public abstract void iw(int i, float f, float f_14_, float f_15_, float f_16_, float f_17_);
 
-	public static Class505 method8409(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_18_) {
+	public static GraphicalRenderer method8409(int i, Canvas canvas, Interface22 interface22, Index class317, int i_18_) {
 		int i_19_ = 0;
 		int i_20_ = 0;
 		if (canvas != null) {
@@ -139,11 +139,11 @@ public abstract class Class505 {
 		Class158_Sub2 class158_sub2 = (Class158_Sub2) aHashtable5855.get(canvas);
 		if (null == class158_sub2)
 			throw new RuntimeException();
-		if (-1417941265 * ((Class505) this).anInt5854 > 0 || aClass158_Sub2_5841 != aClass158_5853)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 > 0 || aClass158_Sub2_5841 != aClass158_5853)
 			throw new RuntimeException();
 		if (null != aClass158_5853)
 			aClass158_5853.method2718();
-		if (-1417941265 * ((Class505) this).anInt5854 < 0)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 < 0)
 			aClass158_5853 = class158_sub2;
 		aClass158_Sub2_5841 = class158_sub2;
 		class158_sub2.method213();
@@ -163,13 +163,13 @@ public abstract class Class505 {
 	public abstract void method8415(int i, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_);
 
 	public final void method8416(Class158_Sub1 class158_sub1, byte i) {
-		if (((Class505) this).anInt5854 * -1417941265 < 0 || (((Class505) this).aClass158_Sub1Array5833[-1417941265 * ((Class505) this).anInt5854]) != class158_sub1)
+		if (((GraphicalRenderer) this).anInt5854 * -1417941265 < 0 || (((GraphicalRenderer) this).aClass158_Sub1Array5833[-1417941265 * ((GraphicalRenderer) this).anInt5854]) != class158_sub1)
 			throw new RuntimeException();
-		((Class505) this).aClass158_Sub1Array5833[(((Class505) this).anInt5854 -= 1209204751) * -1417941265 + 1] = null;
+		((GraphicalRenderer) this).aClass158_Sub1Array5833[(((GraphicalRenderer) this).anInt5854 -= 1209204751) * -1417941265 + 1] = null;
 		class158_sub1.method2718();
-		if (((Class505) this).anInt5854 * -1417941265 >= 0) {
-			aClass158_5853 = (((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265]);
-			((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265].method213();
+		if (((GraphicalRenderer) this).anInt5854 * -1417941265 >= 0) {
+			aClass158_5853 = (((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265]);
+			((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265].method213();
 		} else {
 			aClass158_5853 = aClass158_Sub2_5841;
 			aClass158_Sub2_5841.method213();
@@ -233,8 +233,8 @@ public abstract class Class505 {
 		B(i, i_60_, i_61_, i_62_, i_63_, 1);
 	}
 
-	Class505(Interface22 interface22) {
-		((Class505) this).aClass158_Sub1Array5833 = new Class158_Sub1[4];
+	GraphicalRenderer(Interface22 interface22) {
+		((GraphicalRenderer) this).aClass158_Sub1Array5833 = new Class158_Sub1[4];
 		anInterface22_5834 = interface22;
 		int i = -1;
 		for (int i_64_ = 0; i_64_ < 8; i_64_++) {
@@ -246,7 +246,7 @@ public abstract class Class505 {
 		}
 		if (-1 == i)
 			throw new IllegalStateException("");
-		anInt5840 = -533644141 * i;
+		rendererId = -533644141 * i;
 	}
 
 	abstract void CA(int i, int i_65_, int i_66_, int i_67_, int i_68_);
@@ -280,15 +280,15 @@ public abstract class Class505 {
 
 	public abstract void method8439(Class282_Sub1 class282_sub1);
 
-	public Class160 method8440(int i, int i_100_, boolean bool, int i_101_) {
+	public NativeSprite method8440(int i, int i_100_, boolean bool, int i_101_) {
 		return method8654(i, i_100_, bool, false);
 	}
 
-	static synchronized Class505 method8441(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_102_, int i_103_, int i_104_) {
+	static synchronized GraphicalRenderer method8441(int i, Canvas canvas, Interface22 interface22, Index class317, int i_102_, int i_103_, int i_104_) {
 		if (0 == i)
 			return Class109_Sub1.method14652(canvas, interface22, i_103_, i_104_, (byte) -119);
 		if (i == 2)
-			return Class8.method404(canvas, interface22, i_103_, i_104_, 1161793225);
+			return FontRenderer.method404(canvas, interface22, i_103_, i_104_, 1161793225);
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_102_);
 		if (5 == i)
@@ -298,11 +298,11 @@ public abstract class Class505 {
 		throw new IllegalArgumentException("");
 	}
 
-	public abstract Class160 method8442(int[] is, int i, int i_105_, int i_106_, int i_107_, boolean bool);
+	public abstract NativeSprite method8442(int[] is, int i, int i_105_, int i_106_, int i_107_, boolean bool);
 
 	public abstract int method8443(int i, int i_108_);
 
-	public abstract Class160 method8444(Class91 class91, boolean bool);
+	public abstract NativeSprite method8444(Class91 class91, boolean bool);
 
 	public abstract void method8445();
 
@@ -312,7 +312,7 @@ public abstract class Class505 {
 		CA(i, i_109_, i_110_, i_111_, 1);
 	}
 
-	public abstract Class8 method8448(Class414 class414, Class91[] class91s, boolean bool);
+	public abstract FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool);
 
 	public abstract Class384 method8449();
 
@@ -320,7 +320,7 @@ public abstract class Class505 {
 
 	public abstract void ez();
 
-	public abstract Class528 method8451(Class157 class157, int i, int i_112_, int i_113_, int i_114_);
+	public abstract MeshRasterizer createMeshRasterizer(RSMesh class157, int i, int i_112_, int i_113_, int i_114_);
 
 	public abstract int method8452(int i, int i_115_);
 
@@ -352,7 +352,7 @@ public abstract class Class505 {
 
 	public abstract void J(int i);
 
-	public abstract Class160 method8461(int i, int i_120_, boolean bool, boolean bool_121_);
+	public abstract NativeSprite method8461(int i, int i_120_, boolean bool, boolean bool_121_);
 
 	public abstract boolean method8462();
 
@@ -489,7 +489,7 @@ public abstract class Class505 {
 
 	public abstract boolean method8504();
 
-	public abstract Class528 method8505(Class157 class157, int i, int i_181_, int i_182_, int i_183_);
+	public abstract MeshRasterizer method8505(RSMesh class157, int i, int i_181_, int i_182_, int i_183_);
 
 	final void method8506(Canvas canvas, Class158_Sub2 class158_sub2) {
 		if (null == class158_sub2)
@@ -559,7 +559,7 @@ public abstract class Class505 {
 
 	public abstract void fd(int i, int i_228_);
 
-	public abstract Class160 method8518(Class91 class91, boolean bool);
+	public abstract NativeSprite method8518(Class91 class91, boolean bool);
 
 	public abstract void fi(int i, int i_229_);
 
@@ -579,11 +579,11 @@ public abstract class Class505 {
 		Class158_Sub2 class158_sub2 = (Class158_Sub2) aHashtable5855.get(canvas);
 		if (null == class158_sub2)
 			throw new RuntimeException();
-		if (-1417941265 * ((Class505) this).anInt5854 > 0 || aClass158_Sub2_5841 != aClass158_5853)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 > 0 || aClass158_Sub2_5841 != aClass158_5853)
 			throw new RuntimeException();
 		if (null != aClass158_5853)
 			aClass158_5853.method2718();
-		if (-1417941265 * ((Class505) this).anInt5854 < 0)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 < 0)
 			aClass158_5853 = class158_sub2;
 		aClass158_Sub2_5841 = class158_sub2;
 		class158_sub2.method213();
@@ -651,11 +651,11 @@ public abstract class Class505 {
 
 	public abstract void method8542(Class282_Sub1 class282_sub1);
 
-	public abstract Class160 method8543(int[] is, int i, int i_347_, int i_348_, int i_349_, boolean bool);
+	public abstract NativeSprite method8543(int[] is, int i, int i_347_, int i_348_, int i_349_, boolean bool);
 
 	public abstract void method8544(Class282_Sub1 class282_sub1);
 
-	public static Class505 method8545(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_350_) {
+	public static GraphicalRenderer method8545(int i, Canvas canvas, Interface22 interface22, Index class317, int i_350_) {
 		int i_351_ = 0;
 		int i_352_ = 0;
 		if (canvas != null) {
@@ -670,9 +670,9 @@ public abstract class Class505 {
 
 	public abstract void method8547(int i, Class282_Sub24[] class282_sub24s);
 
-	public abstract Class160 method8548(int[] is, int i, int i_354_, int i_355_, int i_356_, boolean bool);
+	public abstract NativeSprite method8548(int[] is, int i, int i_354_, int i_355_, int i_356_, boolean bool);
 
-	public Class160 method8549(int[] is, int i, int i_357_, int i_358_, int i_359_, int i_360_) {
+	public NativeSprite method8549(int[] is, int i, int i_357_, int i_358_, int i_359_, int i_360_) {
 		return method8442(is, i, i_357_, i_358_, i_359_, true);
 	}
 
@@ -681,17 +681,17 @@ public abstract class Class505 {
 	}
 
 	public final void method8551(Class158_Sub1 class158_sub1) {
-		if (-1417941265 * ((Class505) this).anInt5854 >= 3)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 3)
 			throw new RuntimeException();
-		if (-1417941265 * ((Class505) this).anInt5854 >= 0)
-			((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265].method2718();
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 0)
+			((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265].method2718();
 		else
 			aClass158_Sub2_5841.method2718();
-		aClass158_5853 = ((Class505) this).aClass158_Sub1Array5833[(((Class505) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
+		aClass158_5853 = ((GraphicalRenderer) this).aClass158_Sub1Array5833[(((GraphicalRenderer) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
 		class158_sub1.method213();
 	}
 
-	public abstract Class160 method8552(int i, int i_361_, int i_362_, int i_363_, boolean bool);
+	public abstract NativeSprite method8552(int i, int i_361_, int i_362_, int i_363_, boolean bool);
 
 	public abstract Class455 method8553(int i, int i_364_, int[] is, int[] is_365_);
 
@@ -715,7 +715,7 @@ public abstract class Class505 {
 
 	public abstract void method8560(int i);
 
-	public abstract Class528 method8561(Class157 class157, int i, int i_379_, int i_380_, int i_381_);
+	public abstract MeshRasterizer method8561(RSMesh class157, int i, int i_379_, int i_380_, int i_381_);
 
 	public final void method8562(int i, int i_382_, int i_383_, int i_384_, int i_385_, byte i_386_) {
 		method8430(i, i_382_, i_383_, i_384_, i_385_, 1);
@@ -723,7 +723,7 @@ public abstract class Class505 {
 
 	public abstract void method8563(int i, int i_387_, int i_388_, int i_389_, int i_390_, int i_391_, Class455 class455, int i_392_, int i_393_, int i_394_, int i_395_, int i_396_);
 
-	public abstract Class528 method8564(Class157 class157, int i, int i_397_, int i_398_, int i_399_);
+	public abstract MeshRasterizer method8564(RSMesh class157, int i, int i_397_, int i_398_, int i_399_);
 
 	public abstract int method8565(int i, int i_400_);
 
@@ -749,7 +749,7 @@ public abstract class Class505 {
 
 	public abstract void method8576(int i, int i_417_, int i_418_, int i_419_, int i_420_, int i_421_, Class455 class455, int i_422_, int i_423_);
 
-	public abstract Class160 method8577(int i, int i_424_, boolean bool, boolean bool_425_);
+	public abstract NativeSprite method8577(int i, int i_424_, boolean bool, boolean bool_425_);
 
 	public abstract boolean method8578();
 
@@ -828,7 +828,7 @@ public abstract class Class505 {
 
 	public abstract void method8603(int i, int i_455_, int i_456_, int i_457_);
 
-	public abstract Class160 method8604(int i, int i_458_, int i_459_, int i_460_, boolean bool);
+	public abstract NativeSprite method8604(int i, int i_458_, int i_459_, int i_460_, boolean bool);
 
 	public abstract boolean method8605();
 
@@ -849,7 +849,7 @@ public abstract class Class505 {
 
 	public abstract void method8611();
 
-	public abstract Class160 method8612(Class91 class91, boolean bool);
+	public abstract NativeSprite method8612(Class91 class91, boolean bool);
 
 	public abstract void method8613();
 
@@ -875,13 +875,13 @@ public abstract class Class505 {
 		method8396(1129057800);
 	}
 
-	public abstract Class528 method8623(Class157 class157, int i, int i_473_, int i_474_, int i_475_);
+	public abstract MeshRasterizer method8623(RSMesh class157, int i, int i_473_, int i_474_, int i_475_);
 
 	public abstract Class455 method8624(int i, int i_476_, int[] is, int[] is_477_);
 
 	public abstract int[] kh(int i, int i_478_, int i_479_, int i_480_);
 
-	public abstract Class8 method8625(Class414 class414, Class91[] class91s, boolean bool);
+	public abstract FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool);
 
 	public abstract Class294 method8626();
 
@@ -894,13 +894,13 @@ public abstract class Class505 {
 	public abstract int method8630(int i, int i_503_);
 
 	public final void method8631(Class158_Sub1 class158_sub1) {
-		if (((Class505) this).anInt5854 * -1417941265 < 0 || (((Class505) this).aClass158_Sub1Array5833[-1417941265 * ((Class505) this).anInt5854]) != class158_sub1)
+		if (((GraphicalRenderer) this).anInt5854 * -1417941265 < 0 || (((GraphicalRenderer) this).aClass158_Sub1Array5833[-1417941265 * ((GraphicalRenderer) this).anInt5854]) != class158_sub1)
 			throw new RuntimeException();
-		((Class505) this).aClass158_Sub1Array5833[(((Class505) this).anInt5854 -= 1209204751) * -1417941265 + 1] = null;
+		((GraphicalRenderer) this).aClass158_Sub1Array5833[(((GraphicalRenderer) this).anInt5854 -= 1209204751) * -1417941265 + 1] = null;
 		class158_sub1.method2718();
-		if (((Class505) this).anInt5854 * -1417941265 >= 0) {
-			aClass158_5853 = (((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265]);
-			((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265].method213();
+		if (((GraphicalRenderer) this).anInt5854 * -1417941265 >= 0) {
+			aClass158_5853 = (((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265]);
+			((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265].method213();
 		} else {
 			aClass158_5853 = aClass158_Sub2_5841;
 			aClass158_Sub2_5841.method213();
@@ -918,17 +918,17 @@ public abstract class Class505 {
 	public abstract Class152 method8636(int i, int i_505_, int i_506_, int i_507_, int i_508_, int i_509_);
 
 	public final void method8637(Class158_Sub1 class158_sub1, int i) {
-		if (-1417941265 * ((Class505) this).anInt5854 >= 3)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 3)
 			throw new RuntimeException();
-		if (-1417941265 * ((Class505) this).anInt5854 >= 0)
-			((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265].method2718();
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 0)
+			((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265].method2718();
 		else
 			aClass158_Sub2_5841.method2718();
-		aClass158_5853 = ((Class505) this).aClass158_Sub1Array5833[(((Class505) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
+		aClass158_5853 = ((GraphicalRenderer) this).aClass158_Sub1Array5833[(((GraphicalRenderer) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
 		class158_sub1.method213();
 	}
 
-	public static Class505 method8638(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_510_) {
+	public static GraphicalRenderer method8638(int i, Canvas canvas, Interface22 interface22, Index class317, int i_510_) {
 		int i_511_ = 0;
 		int i_512_ = 0;
 		if (canvas != null) {
@@ -941,7 +941,7 @@ public abstract class Class505 {
 
 	public abstract void iz(float f);
 
-	public Class160 method8639(int[] is, int i, int i_513_, int i_514_, int i_515_) {
+	public NativeSprite method8639(int[] is, int i, int i_513_, int i_514_, int i_515_) {
 		return method8442(is, i, i_513_, i_514_, i_515_, true);
 	}
 
@@ -949,7 +949,7 @@ public abstract class Class505 {
 		return aClass158_5853;
 	}
 
-	public static Class505 method8641(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_516_) {
+	public static GraphicalRenderer method8641(int i, Canvas canvas, Interface22 interface22, Index class317, int i_516_) {
 		int i_517_ = 0;
 		int i_518_ = 0;
 		if (canvas != null) {
@@ -960,11 +960,11 @@ public abstract class Class505 {
 		return Class88.method1493(i, canvas, interface22, class317, i_516_, i_517_, i_518_, (byte) 73);
 	}
 
-	static synchronized Class505 method8642(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_519_, int i_520_, int i_521_) {
+	static synchronized GraphicalRenderer method8642(int i, Canvas canvas, Interface22 interface22, Index class317, int i_519_, int i_520_, int i_521_) {
 		if (0 == i)
 			return Class109_Sub1.method14652(canvas, interface22, i_520_, i_521_, (byte) -75);
 		if (i == 2)
-			return Class8.method404(canvas, interface22, i_520_, i_521_, -88129201);
+			return FontRenderer.method404(canvas, interface22, i_520_, i_521_, -88129201);
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_519_);
 		if (5 == i)
@@ -974,11 +974,11 @@ public abstract class Class505 {
 		throw new IllegalArgumentException("");
 	}
 
-	static synchronized Class505 method8643(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_522_, int i_523_, int i_524_) {
+	static synchronized GraphicalRenderer method8643(int i, Canvas canvas, Interface22 interface22, Index class317, int i_522_, int i_523_, int i_524_) {
 		if (0 == i)
 			return Class109_Sub1.method14652(canvas, interface22, i_523_, i_524_, (byte) -53);
 		if (i == 2)
-			return Class8.method404(canvas, interface22, i_523_, i_524_, 405118406);
+			return FontRenderer.method404(canvas, interface22, i_523_, i_524_, 405118406);
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_522_);
 		if (5 == i)
@@ -1011,7 +1011,7 @@ public abstract class Class505 {
 	public abstract void method8650(float f, float f_525_, float f_526_, float[] fs);
 
 	public void method8651() {
-		aBoolArray5839[anInt5840 * -413843045] = false;
+		aBoolArray5839[rendererId * -413843045] = false;
 		Enumeration enumeration = aHashtable5855.keys();
 		while (enumeration.hasMoreElements()) {
 			Canvas canvas = (Canvas) enumeration.nextElement();
@@ -1022,7 +1022,7 @@ public abstract class Class505 {
 	}
 
 	public void method8652() {
-		aBoolArray5839[anInt5840 * -413843045] = false;
+		aBoolArray5839[rendererId * -413843045] = false;
 		Enumeration enumeration = aHashtable5855.keys();
 		while (enumeration.hasMoreElements()) {
 			Canvas canvas = (Canvas) enumeration.nextElement();
@@ -1036,7 +1036,7 @@ public abstract class Class505 {
 		return aClass158_5853;
 	}
 
-	public abstract Class160 method8654(int i, int i_527_, boolean bool, boolean bool_528_);
+	public abstract NativeSprite method8654(int i, int i_527_, boolean bool, boolean bool_528_);
 
 	public final Class158 method8655() {
 		return aClass158_5853;
@@ -1062,7 +1062,7 @@ public abstract class Class505 {
 
 	abstract void fw(int i, int i_544_, int i_545_, int i_546_, int i_547_);
 
-	public abstract Class8 method8660(Class414 class414, Class91[] class91s, boolean bool);
+	public abstract FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool);
 
 	public void method8661(int[] is) {
 		if (null != aClass158_Sub2_5841) {
@@ -1115,7 +1115,7 @@ public abstract class Class505 {
 		}
 	}
 
-	public abstract Class160 method8668(int i, int i_556_, int i_557_, int i_558_, boolean bool);
+	public abstract NativeSprite method8668(int i, int i_556_, int i_557_, int i_558_, boolean bool);
 
 	public abstract int[] kf(int i, int i_559_, int i_560_, int i_561_);
 
@@ -1138,13 +1138,13 @@ public abstract class Class505 {
 	}
 
 	public final void method8672(Class158_Sub1 class158_sub1) {
-		if (-1417941265 * ((Class505) this).anInt5854 >= 3)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 3)
 			throw new RuntimeException();
-		if (-1417941265 * ((Class505) this).anInt5854 >= 0)
-			((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265].method2718();
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 0)
+			((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265].method2718();
 		else
 			aClass158_Sub2_5841.method2718();
-		aClass158_5853 = ((Class505) this).aClass158_Sub1Array5833[(((Class505) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
+		aClass158_5853 = ((GraphicalRenderer) this).aClass158_Sub1Array5833[(((GraphicalRenderer) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
 		class158_sub1.method213();
 	}
 
@@ -1155,13 +1155,13 @@ public abstract class Class505 {
 	abstract void fr(int i, int i_581_, int i_582_, int i_583_, int i_584_);
 
 	public final void method8675(Class158_Sub1 class158_sub1) {
-		if (-1417941265 * ((Class505) this).anInt5854 >= 3)
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 3)
 			throw new RuntimeException();
-		if (-1417941265 * ((Class505) this).anInt5854 >= 0)
-			((Class505) this).aClass158_Sub1Array5833[((Class505) this).anInt5854 * -1417941265].method2718();
+		if (-1417941265 * ((GraphicalRenderer) this).anInt5854 >= 0)
+			((GraphicalRenderer) this).aClass158_Sub1Array5833[((GraphicalRenderer) this).anInt5854 * -1417941265].method2718();
 		else
 			aClass158_Sub2_5841.method2718();
-		aClass158_5853 = ((Class505) this).aClass158_Sub1Array5833[(((Class505) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
+		aClass158_5853 = ((GraphicalRenderer) this).aClass158_Sub1Array5833[(((GraphicalRenderer) this).anInt5854 += 1209204751) * -1417941265] = class158_sub1;
 		class158_sub1.method213();
 	}
 
@@ -1214,15 +1214,15 @@ public abstract class Class505 {
 		method8433(i, i_618_, i_619_, i_620_, i_621_, 1);
 	}
 
-	public Class160 method8688(int i, int i_622_, boolean bool) {
+	public NativeSprite method8688(int i, int i_622_, boolean bool) {
 		return method8654(i, i_622_, bool, false);
 	}
 
-	public Class160 method8689(int i, int i_623_, boolean bool) {
+	public NativeSprite method8689(int i, int i_623_, boolean bool) {
 		return method8654(i, i_623_, bool, false);
 	}
 
-	public Class160 method8690(int i, int i_624_, boolean bool) {
+	public NativeSprite method8690(int i, int i_624_, boolean bool) {
 		return method8654(i, i_624_, bool, false);
 	}
 

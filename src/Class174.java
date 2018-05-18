@@ -37,7 +37,7 @@ public class Class174 {
 		throw new Error();
 	}
 
-	public static void method2947(String string, boolean bool, Class505 class505, Class8 class8, Class414 class414) {
+	public static void method2947(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, Class414 class414) {
 		boolean bool_8_ = !aBool2135 || method2954(1412758933);
 		if (bool_8_) {
 			if (aBool2135 && bool_8_) {
@@ -203,7 +203,7 @@ public class Class174 {
 		aBool2135 = true;
 	}
 
-	public static void method2952(String string, boolean bool, Class505 class505, Class8 class8, Class414 class414) {
+	public static void method2952(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, Class414 class414) {
 		boolean bool_34_ = !aBool2135 || method2954(762227546);
 		if (bool_34_) {
 			if (aBool2135 && bool_34_) {
@@ -403,7 +403,7 @@ public class Class174 {
 			Class391.method6733(class527, -1968584575);
 			break;
 		case 800:
-			Class317.method5691(class527, (byte) 61);
+			Index.method5691(class527, (byte) 61);
 			break;
 		case 827:
 			Class281.method4986(class527, -1873864599);
@@ -547,22 +547,22 @@ public class Class174 {
 			Class454.method7552(class527, 1655788745);
 			break;
 		case 221:
-			Class518.method11147(class527, -730384213);
+			AnimationDefinitions.method11147(class527, -730384213);
 			break;
 		case 756:
-			Class322.method5765(class527, -1146292184);
+			ReferenceTable.method5765(class527, -1146292184);
 			break;
 		case 978:
 			Class149_Sub4.method14659(class527, (byte) -119);
 			break;
 		case 698:
-			Class40.method868(class527, (byte) 2);
+			NamedFileReference.method868(class527, (byte) 2);
 			break;
 		case 67:
 			Class282_Sub20_Sub34.method15416(class527, (byte) -72);
 			break;
 		case 2:
-			Class317.method5696(class527, -1293199501);
+			Index.method5696(class527, -1293199501);
 			break;
 		case 241:
 			Class474.method7915(class527, (byte) 98);
@@ -706,7 +706,7 @@ public class Class174 {
 			Class397.method6776(class527, 468691792);
 			break;
 		case 931:
-			Class486.method8205(class527, (byte) 0);
+			Game.method8205(class527, (byte) 0);
 			break;
 		case 836:
 			Class220.method3737(class527, (short) -22190);
@@ -924,7 +924,7 @@ public class Class174 {
 			Class353.method6207(class527, (byte) 11);
 			break;
 		case 658:
-			Class327.method5816(class527, 2144210152);
+			JS5FileWorker.method5816(class527, 2144210152);
 			break;
 		case 488:
 			Class251.method4311(class527, -1761461567);
@@ -933,7 +933,7 @@ public class Class174 {
 			Class447.method7462(class527, -1027798859);
 			break;
 		case 557:
-			Class203.method3361(class527, (byte) -122);
+			JS5CacheFile.method3361(class527, (byte) -122);
 			break;
 		case 682:
 			Class475.method7928(class527, (byte) 34);
@@ -972,7 +972,7 @@ public class Class174 {
 			Class10.method460(class527, -2132201205);
 			break;
 		case 740:
-			Class327.method5814(class527, 1360977559);
+			JS5FileWorker.method5814(class527, 1360977559);
 			break;
 		case 68:
 			Class233.method3941(class527, 2039402379);
@@ -999,10 +999,10 @@ public class Class174 {
 			Class38.method856(class527, (byte) 8);
 			break;
 		case 641:
-			SwitchMap.method7774(class527, -1275891056);
+			IterableNodeMap.method7774(class527, -1275891056);
 			break;
 		case 309:
-			SwitchMap.method7771(class527, 1936925515);
+			IterableNodeMap.method7771(class527, 1936925515);
 			break;
 		case 706:
 			Class105.method1802(class527, (byte) -19);
@@ -1029,7 +1029,7 @@ public class Class174 {
 			Class114.method1888(class527, (byte) -1);
 			break;
 		case 366:
-			Class437.method7322(class527, 603410124);
+			AttributeDefault.method7322(class527, 603410124);
 			break;
 		case 891:
 			Class19.method585(class527, -600527643);
@@ -1218,7 +1218,7 @@ public class Class174 {
 			Class172.method2914(class527, (byte) 18);
 			break;
 		case 279:
-			Class40.method871(class527, 768852277);
+			NamedFileReference.method871(class527, 768852277);
 			break;
 		case 679:
 			Class76.method1357(class527, (byte) 24);
@@ -1245,7 +1245,7 @@ public class Class174 {
 			Class165.method2856(class527, -1402584137);
 			break;
 		case 803:
-			Class322.method5767(class527, -956710167);
+			ReferenceTable.method5767(class527, -956710167);
 			break;
 		case 156:
 			Class107.method1835(class527, (short) -1089);
@@ -1344,7 +1344,7 @@ public class Class174 {
 			Class473.method7888(class527, -355473345);
 			break;
 		case 18:
-			Class40.method870(class527, 1718249177);
+			NamedFileReference.method870(class527, 1718249177);
 			break;
 		case 381:
 			Class428.method7210(class527, -1645120486);
@@ -1443,7 +1443,7 @@ public class Class174 {
 			Class191.method3164(class527, -1986400390);
 			break;
 		case 833:
-			Class505.method8698(class527, -755706942);
+			GraphicalRenderer.method8698(class527, -755706942);
 			break;
 		case 255:
 			Class282_Sub11_Sub3.method15475(class527, -1674898010);
@@ -1710,7 +1710,7 @@ public class Class174 {
 			Class193.method3170(class527, -1825853988);
 			break;
 		case 376:
-			Class322.method5766(class527, 2075151438);
+			ReferenceTable.method5766(class527, 2075151438);
 			break;
 		case 746:
 			Class224.method3779(class527, -1207503470);
@@ -1758,7 +1758,7 @@ public class Class174 {
 			Class225_Sub2.method12881(class527, -1317003956);
 			break;
 		case 823:
-			ItemEffects.method7043(class527, 1878547484);
+			MeshModifier.method7043(class527, 1878547484);
 			break;
 		case 510:
 			Class289.method5098(class527, 1396509563);
@@ -1788,7 +1788,7 @@ public class Class174 {
 			Class15.method545(class527, (byte) -113);
 			break;
 		case 448:
-			Class282.method5002(class527, 1340326579);
+			Node.method5002(class527, 1340326579);
 			break;
 		case 329:
 			Class369.method6315(class527, (byte) -7);
@@ -1812,7 +1812,7 @@ public class Class174 {
 			Class243.method4173(class527, -83055370);
 			break;
 		case 947:
-			Class505.method8694(class527, -1324558334);
+			GraphicalRenderer.method8694(class527, -1324558334);
 			break;
 		case 341:
 			Class363.method6282(class527, 1916443315);
@@ -1848,7 +1848,7 @@ public class Class174 {
 			Class110.method1861(class527, 1806726141);
 			break;
 		case 843:
-			Class505.method8701(class527, (byte) 24);
+			GraphicalRenderer.method8701(class527, (byte) 24);
 			break;
 		case 389:
 			Class304.method5408(class527, -2025663839);
@@ -1983,7 +1983,7 @@ public class Class174 {
 			Class172.method2916(class527, -92439065);
 			break;
 		case 490:
-			Class282.method5004(class527, -177030687);
+			Node.method5004(class527, -177030687);
 			break;
 		case 476:
 			Class534_Sub2.method12846(class527, -921380561);
@@ -2238,7 +2238,7 @@ public class Class174 {
 			Class20.method741(class527, (short) 5705);
 			break;
 		case 542:
-			Class203.method3356(class527, (byte) -8);
+			JS5CacheFile.method3356(class527, (byte) -8);
 			break;
 		case 131:
 			Class278.method4960(class527, (short) 10243);
@@ -2250,7 +2250,7 @@ public class Class174 {
 			Class286.method5046(class527, (byte) -91);
 			break;
 		case 585:
-			Class327_Sub1.method12560(class527, (short) 722);
+			JS5GrabWorker.method12560(class527, (short) 722);
 			break;
 		case 230:
 			Class511.method8758(class527, 1578634410);
@@ -2475,7 +2475,7 @@ public class Class174 {
 			Class30.method798(class527, 787475908);
 			break;
 		case 51:
-			Class317.method5695(class527, (byte) 105);
+			Index.method5695(class527, (byte) 105);
 			break;
 		case 97:
 			Class530.method11350(class527, -1280205893);
@@ -2562,10 +2562,10 @@ public class Class174 {
 			Class278.method4961(class527, -1936963236);
 			break;
 		case 87:
-			Class505.method8700(class527, (byte) -25);
+			GraphicalRenderer.method8700(class527, (byte) -25);
 			break;
 		case 536:
-			Class282.method5003(class527, (byte) 0);
+			Node.method5003(class527, (byte) 0);
 			break;
 		case 948:
 			Class149_Sub4.method14660(class527, -1269801212);
@@ -2625,7 +2625,7 @@ public class Class174 {
 			Class89.method1498(class527, -1945170999);
 			break;
 		case 211:
-			Class482.method8147(class527, 875978174);
+			NodeCollection.method8147(class527, 875978174);
 			break;
 		case 527:
 			Class428.method7208(class527, 1696005112);
@@ -2655,7 +2655,7 @@ public class Class174 {
 			Class390.method6732(class527, (byte) 51);
 			break;
 		case 596:
-			Class322.method5769(class527, (byte) 9);
+			ReferenceTable.method5769(class527, (byte) 9);
 			break;
 		case 342:
 			Class282_Sub1.method11613(class527, 723102941);
@@ -2946,7 +2946,7 @@ public class Class174 {
 			Class433.method7276(class527, (byte) 0);
 			break;
 		case 56:
-			Class322.method5764(class527, (short) -4973);
+			ReferenceTable.method5764(class527, (short) -4973);
 			break;
 		case 228:
 			Class150.method2584(class527, 1465832902);
@@ -2967,7 +2967,7 @@ public class Class174 {
 			Class241.method4146(class527, -703340086);
 			break;
 		case 683:
-			Class282.method5000(class527, -1719578928);
+			Node.method5000(class527, -1719578928);
 			break;
 		case 631:
 			Class61.method1255(class527, -1876797077);
@@ -2985,7 +2985,7 @@ public class Class174 {
 			Class179.method3020(class527, -1540023306);
 			break;
 		case 995:
-			Class203.method3355(class527, 1124965062);
+			JS5CacheFile.method3355(class527, 1124965062);
 			break;
 		case 364:
 			Class540.method11594(class527, 1803338491);
@@ -2994,7 +2994,7 @@ public class Class174 {
 			Class350_Sub3_Sub1.method15559(class527, -1120734203);
 			break;
 		case 617:
-			Class203.method3358(class527, (byte) 2);
+			JS5CacheFile.method3358(class527, (byte) 2);
 			break;
 		case 53:
 			Class273.method4867(class527, 1156940422);
@@ -3009,7 +3009,7 @@ public class Class174 {
 			Class90.method1508(class527, 384852083);
 			break;
 		case 6:
-			Class486.method8206(class527, 1713430236);
+			Game.method8206(class527, 1713430236);
 			break;
 		case 371:
 			Class512.method8763(class527, -1688047816);
@@ -3033,7 +3033,7 @@ public class Class174 {
 			Class221.method3748(class527, -613537380);
 			break;
 		case 837:
-			SwitchMap.method7773(class527, 666143203);
+			IterableNodeMap.method7773(class527, 666143203);
 			break;
 		case 943:
 			Class530.method11355(class527, (short) -3286);
@@ -3096,7 +3096,7 @@ public class Class174 {
 			Class89.method1499(class527, 1219321887);
 			break;
 		case 770:
-			Class203.method3357(class527, (byte) 64);
+			JS5CacheFile.method3357(class527, (byte) 64);
 			break;
 		case 409:
 			Class282_Sub17_Sub4.method15407(class527, -1573433365);
@@ -3135,7 +3135,7 @@ public class Class174 {
 			Class226.method3804(class527, 205569752);
 			break;
 		case 694:
-			Class8.method401(class527, -820388650);
+			FontRenderer.method401(class527, -820388650);
 			break;
 		case 58:
 			Class530.method11351(class527, 1943263783);
@@ -3177,7 +3177,7 @@ public class Class174 {
 			Class117.method1979(class527, -921004907);
 			break;
 		case 439:
-			Class317.method5692(class527, -10665240);
+			Index.method5692(class527, -10665240);
 			break;
 		case 432:
 			Class98.method1624(class527, 1894794212);
@@ -3186,7 +3186,7 @@ public class Class174 {
 			Class328.method5828(class527, -2101571012);
 			break;
 		case 88:
-			Class327_Sub1.method12561(class527, 1144052841);
+			JS5GrabWorker.method12561(class527, 1144052841);
 			break;
 		case 337:
 			Class371.method6350(class527, (byte) 100);

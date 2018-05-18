@@ -24,9 +24,9 @@ public class Class1 {
 		((CS2Executor) class527).anInt7004 = -2000547059;
 	}
 
-	static final void method253(int i, SwitchMap class465, int i_3_) {
+	static final void method253(int i, IterableNodeMap class465, int i_3_) {
 		if (i != -1 && class465.method7754((long) i) == null)
-			class465.method7765(new Class282(), (long) i);
+			class465.method7765(new Node(), (long) i);
 	}
 
 	static final void method254(CS2Executor class527, byte i) {

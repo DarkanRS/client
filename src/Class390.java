@@ -137,7 +137,7 @@ public abstract class Class390 {
 			}
 			int i_129_ = i_123_ * i_127_ + i_128_ * i_122_ >> 14;
 			int i_130_ = i_123_ * i_128_ - i_127_ * i_122_ >> 14;
-			Class160 class160 = Class282_Sub20_Sub15.aClass160Array9838[i_124_];
+			NativeSprite class160 = Class282_Sub20_Sub15.aClass160Array9838[i_124_];
 			int i_131_ = class160.method2747();
 			int i_132_ = class160.method2793();
 			int i_133_ = class118.anInt1301 * 1506818197 / 2 + i_129_ - i_131_ / 2;

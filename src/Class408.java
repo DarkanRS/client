@@ -5,8 +5,8 @@
 public class Class408 {
 	Class229 aClass229_4850 = new Class229(64);
 	public int anInt4851;
-	Class317 aClass317_4852;
-	static Class317 aClass317_4853;
+	Index aClass317_4852;
+	static Index aClass317_4853;
 
 	public Class415 method6872(int i) {
 		Class415 class415;
@@ -48,8 +48,8 @@ public class Class408 {
 		return class415;
 	}
 
-	public Class408(Class486 class486, Class495 class495, Class317 class317) {
+	public Class408(Game class486, Class495 class495, Index class317) {
 		((Class408) this).aClass317_4852 = class317;
-		anInt4851 = (((Class408) this).aClass317_4852.method5624(((Class120.aClass120_1482.anInt1521) * -71319279), 2023918393) * 2109871343);
+		anInt4851 = (((Class408) this).aClass317_4852.filesCount(((Class120.aClass120_1482.anInt1521) * -71319279), 2023918393) * 2109871343);
 	}
 }

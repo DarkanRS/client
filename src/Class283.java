@@ -8,7 +8,7 @@ public class Class283 {
 	public int[] anIntArray3383;
 	public static int anInt3384;
 
-	public static Class283 method5005(Class317 class317, String string, boolean bool) {
+	public static Class283 method5005(Index class317, String string, boolean bool) {
 		int i = class317.method5610(string, 1601632799);
 		if (-1 == i)
 			return new Class283(0);
@@ -31,7 +31,7 @@ public class Class283 {
 		return class283;
 	}
 
-	public static Class283 method5006(Class317 class317, String string, boolean bool) {
+	public static Class283 method5006(Index class317, String string, boolean bool) {
 		int i = class317.method5610(string, -1721859945);
 		if (-1 == i)
 			return new Class283(0);
@@ -60,7 +60,7 @@ public class Class283 {
 		anIntArray3383 = new int[-361490119 * anInt3382];
 	}
 
-	public static Class283 method5007(Class317 class317, String string, boolean bool) {
+	public static Class283 method5007(Index class317, String string, boolean bool) {
 		int i = class317.method5610(string, 1416579061);
 		if (-1 == i)
 			return new Class283(0);
@@ -101,7 +101,7 @@ public class Class283 {
 	static final void method5010(CS2Executor class527, int i) {
 		int i_15_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		if (client.anInt7166 * -1741204137 != 0 || Class203.method3360((byte) 17))
+		if (client.anInt7166 * -1741204137 != 0 || JS5CacheFile.method3360((byte) 17))
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class62.method1262(i_15_, string, (byte) 55) ? 1 : 0;

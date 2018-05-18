@@ -4,18 +4,18 @@
 
 public class Class148 {
 	static int anInt1730 = 0;
-	static Class317 aClass317_1731;
-	static Class317 aClass317_1732;
+	static Index aClass317_1731;
+	static Index aClass317_1732;
 	static final int anInt1733 = 1;
 	static final int anInt1734 = 0;
 	static Class282_Sub15_Sub2 aClass282_Sub15_Sub2_1735;
 	static final int anInt1736 = 2;
-	static Class317 aClass317_1737;
+	static Index aClass317_1737;
 	static int anInt1738;
 	static final int anInt1739 = 3;
 	static long aLong1740;
 
-	static void method2510(Class317 class317, int i, int i_0_, int i_1_, boolean bool, long l) {
+	static void method2510(Index class317, int i, int i_0_, int i_1_, boolean bool, long l) {
 		Class109.method1859(class317, i, i_0_, i_1_, bool, l, 0, 1673929006);
 	}
 
@@ -88,11 +88,11 @@ public class Class148 {
 		}
 	}
 
-	static void method2515(Class317 class317, int i, int i_2_, int i_3_, boolean bool, long l) {
+	static void method2515(Index class317, int i, int i_2_, int i_3_, boolean bool, long l) {
 		Class109.method1859(class317, i, i_2_, i_3_, bool, l, 0, 1766696722);
 	}
 
-	static void method2516(Class317 class317, int i, int i_4_, int i_5_, boolean bool, long l, int i_6_) {
+	static void method2516(Index class317, int i, int i_4_, int i_5_, boolean bool, long l, int i_6_) {
 		anInt1730 = 800770715;
 		Class75.aClass317_746 = class317;
 		Class6.anInt46 = -26560111 * i;
@@ -105,7 +105,7 @@ public class Class148 {
 		Class383.anInt4664 = 482849385 * i_6_;
 	}
 
-	static void method2517(Class317 class317, int i, int i_7_, int i_8_, boolean bool, long l) {
+	static void method2517(Index class317, int i, int i_7_, int i_8_, boolean bool, long l) {
 		Class109.method1859(class317, i, i_7_, i_8_, bool, l, 0, 1766745956);
 	}
 
@@ -172,7 +172,7 @@ public class Class148 {
 		return false;
 	}
 
-	static void method2519(Class317 class317, int i, int i_9_, int i_10_, boolean bool, long l, int i_11_) {
+	static void method2519(Index class317, int i, int i_9_, int i_10_, boolean bool, long l, int i_11_) {
 		anInt1730 = 800770715;
 		Class75.aClass317_746 = class317;
 		Class6.anInt46 = -26560111 * i;
@@ -257,7 +257,7 @@ public class Class148 {
 		}
 	}
 
-	public static void method2527(int i, Class317 class317, int i_18_, int i_19_, int i_20_, boolean bool) {
+	public static void method2527(int i, Index class317, int i_18_, int i_19_, int i_20_, boolean bool) {
 		anInt1730 = 800770715;
 		Class75.aClass317_746 = class317;
 		Class6.anInt46 = -26560111 * i_18_;
@@ -269,7 +269,7 @@ public class Class148 {
 		Class11.aClass109_121 = null;
 	}
 
-	public static void method2528(int i, Class317 class317, int i_21_, int i_22_, int i_23_, boolean bool) {
+	public static void method2528(int i, Index class317, int i_21_, int i_22_, int i_23_, boolean bool) {
 		anInt1730 = 800770715;
 		Class75.aClass317_746 = class317;
 		Class6.anInt46 = -26560111 * i_21_;
@@ -320,7 +320,7 @@ public class Class148 {
 		}
 	}
 
-	public static void method2530(int i, Class317 class317, int i_24_, int i_25_, int i_26_, boolean bool, Class109 class109) {
+	public static void method2530(int i, Index class317, int i_24_, int i_25_, int i_26_, boolean bool, Class109 class109) {
 		if (i > 0) {
 			anInt1730 = 800770715;
 			Class75.aClass317_746 = class317;
@@ -418,7 +418,7 @@ public class Class148 {
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 	}
 
-	public static void method2538(Class317 class317, int i, int i_27_, int i_28_, boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
+	public static void method2538(Index class317, int i, int i_27_, int i_28_, boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class282_Sub43.method13400(class317, i, i_27_, i_28_, bool, (byte) -96);
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = class282_sub15_sub2;
 	}
@@ -521,7 +521,7 @@ public class Class148 {
 			aClass282_Sub15_Sub2_1735.method15144(i, -164437163);
 	}
 
-	public static boolean method2543(Class317 class317, Class317 class317_29_, Class317 class317_30_, Class282_Sub15_Sub2 class282_sub15_sub2, Class253 class253) {
+	public static boolean method2543(Index class317, Index class317_29_, Index class317_30_, Class282_Sub15_Sub2 class282_sub15_sub2, Class253 class253) {
 		aClass317_1737 = class317;
 		aClass317_1731 = class317_29_;
 		aClass317_1732 = class317_30_;
@@ -533,7 +533,7 @@ public class Class148 {
 		return true;
 	}
 
-	public static void method2544(Class317 class317, int i, int i_31_, int i_32_, boolean bool) {
+	public static void method2544(Index class317, int i, int i_31_, int i_32_, boolean bool) {
 		Class271.method4827(class317, i, i_31_, i_32_, bool, 0L);
 	}
 

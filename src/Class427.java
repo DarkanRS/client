@@ -4,9 +4,9 @@
 
 public class Class427 {
 	Class229 aClass229_5117 = new Class229(64);
-	Class317 aClass317_5118;
+	Index aClass317_5118;
 	public static final int anInt5119 = 64;
-	Class317 aClass317_5120;
+	Index aClass317_5120;
 	public static final int anInt5121 = 64;
 	Class229 aClass229_5122 = new Class229(64);
 	public static int anInt5123;
@@ -41,10 +41,10 @@ public class Class427 {
 		}
 	}
 
-	public Class427(Class486 class486, Class495 class495, Class317 class317, Class317 class317_2_) {
+	public Class427(Game class486, Class495 class495, Index class317, Index class317_2_) {
 		((Class427) this).aClass317_5120 = class317;
 		((Class427) this).aClass317_5118 = class317_2_;
-		((Class427) this).aClass317_5120.method5624((Class120.aClass120_1497.anInt1521) * -71319279, 1541409828);
+		((Class427) this).aClass317_5120.filesCount((Class120.aClass120_1497.anInt1521) * -71319279, 1541409828);
 		Math.random();
 		Math.random();
 		Math.random();

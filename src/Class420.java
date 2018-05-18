@@ -149,7 +149,7 @@ public class Class420 implements Interface18 {
 		return new Class149_Sub4(class282_sub35.readShort(1848939200), class282_sub35.readShort(1780715141), class282_sub35.readShort(1644491611), class282_sub35.readShort(1586203891), class282_sub35.read24BitUnsignedInteger((short) 4319), class282_sub35.read24BitUnsignedInteger((short) 18735), class282_sub35.readUnsignedByte());
 	}
 
-	public static void method7034(Class518 class518, int i, int i_4_) {
+	public static void method7034(AnimationDefinitions class518, int i, int i_4_) {
 		if (-458827259 * Class260.anInt3219 < 50 && (class518 != null && null != class518.anIntArrayArray5913 && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i])) {
 			int i_5_ = class518.anIntArrayArray5913[i][0];
 			int i_6_ = i_5_ >> 8;

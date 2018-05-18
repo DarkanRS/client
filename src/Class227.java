@@ -515,9 +515,9 @@ public class Class227 {
 		}
 	}
 
-	static final void method3815(int i, SwitchMap class465) {
+	static final void method3815(int i, IterableNodeMap class465) {
 		if (i != -1 && class465.method7754((long) i) == null)
-			class465.method7765(new Class282(), (long) i);
+			class465.method7765(new Node(), (long) i);
 	}
 
 	void method3816(RsByteBuffer class282_sub35) {
@@ -781,7 +781,7 @@ public class Class227 {
 	}
 
 	public int[] method3824() {
-		SwitchMap class465 = new SwitchMap(16);
+		IterableNodeMap class465 = new IterableNodeMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, 1898656425);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -814,14 +814,14 @@ public class Class227 {
 		int i = 0;
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
-			Class282 class282 = (Class282) iterator.next();
+			Node class282 = (Node) iterator.next();
 			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
 		}
 		return is;
 	}
 
 	public int[] method3825() {
-		SwitchMap class465 = new SwitchMap(16);
+		IterableNodeMap class465 = new IterableNodeMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, -266659410);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -854,14 +854,14 @@ public class Class227 {
 		int i = 0;
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
-			Class282 class282 = (Class282) iterator.next();
+			Node class282 = (Node) iterator.next();
 			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
 		}
 		return is;
 	}
 
 	public int[] method3826() {
-		SwitchMap class465 = new SwitchMap(16);
+		IterableNodeMap class465 = new IterableNodeMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, -2092613109);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -894,14 +894,14 @@ public class Class227 {
 		int i = 0;
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
-			Class282 class282 = (Class282) iterator.next();
+			Node class282 = (Node) iterator.next();
 			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
 		}
 		return is;
 	}
 
 	public int[] method3827() {
-		SwitchMap class465 = new SwitchMap(16);
+		IterableNodeMap class465 = new IterableNodeMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, -754570121);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -934,14 +934,14 @@ public class Class227 {
 		int i = 0;
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
-			Class282 class282 = (Class282) iterator.next();
+			Node class282 = (Node) iterator.next();
 			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
 		}
 		return is;
 	}
 
 	public int[] method3828(int i) {
-		SwitchMap class465 = new SwitchMap(16);
+		IterableNodeMap class465 = new IterableNodeMap(16);
 		Class1.method253(-243982531 * anInt2819, class465, 1339333196);
 		if (anIntArray2814 != null) {
 			int[] is = anIntArray2814;
@@ -974,7 +974,7 @@ public class Class227 {
 		int i_78_ = 0;
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
-			Class282 class282 = (Class282) iterator.next();
+			Node class282 = (Node) iterator.next();
 			is[i_78_++] = (int) (class282.aLong3379 * -3442165056282524525L);
 		}
 		return is;

@@ -6,7 +6,7 @@ public class Class536 {
 	Class229 aClass229_7092 = new Class229(64);
 	public int anInt7093 = 0;
 	public int anInt7094;
-	Class317 aClass317_7095;
+	Index aClass317_7095;
 
 	public Class531 method11474(int i) {
 		Class531 class531;
@@ -148,9 +148,9 @@ public class Class536 {
 		}
 	}
 
-	public Class536(Class486 class486, Class495 class495, Class317 class317) {
+	public Class536(Game class486, Class495 class495, Index class317) {
 		((Class536) this).aClass317_7095 = class317;
-		anInt7094 = (((Class536) this).aClass317_7095.method5624((-71319279 * (Class120.aClass120_1514.anInt1521)), -2042690113) * -919202315);
+		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (Class120.aClass120_1514.anInt1521)), -2042690113) * -919202315);
 	}
 
 	static final void method11486(CS2Executor class527, byte i) {

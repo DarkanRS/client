@@ -44,7 +44,7 @@ public class Class96_Sub22 extends Class96 {
 						if (i_2_ > i_1_)
 							bool_0_ = false;
 					}
-					String string_3_ = (client.aClass486_7450 == Class486.aClass486_5750 ? (Class433.aClass433_5290.method7273(Class223.aClass495_2772, -1209944287)) : (Class433.aClass433_5281.method7273(Class223.aClass495_2772, -1303103497)));
+					String string_3_ = (client.aClass486_7450 == Game.stellarDawn ? (Class433.aClass433_5290.method7273(Class223.aClass495_2772, -1209944287)) : (Class433.aClass433_5281.method7273(Class223.aClass495_2772, -1303103497)));
 					if (class521_sub1_sub1_sub2_sub1.anInt10565 * -1880473919 >= class521_sub1_sub1_sub2_sub1.anInt10554 * 410641457)
 						string = new StringBuilder().append(class521_sub1_sub1_sub2_sub1.method16127(true, 2054627302)).append(bool_0_ ? (Class426.method7169((-1880473919 * (class521_sub1_sub1_sub2_sub1.anInt10565)), (-1880473919 * (Class84.myPlayer.anInt10565)), -1737457030)) : Class59.method1163(16777215, 619010179)).append(Class2.aString15).append(string_3_).append(class521_sub1_sub1_sub2_sub1.anInt10565 * -1880473919).append(Class2.aString18).toString();
 					else
@@ -60,7 +60,7 @@ public class Class96_Sub22 extends Class96 {
 					for (int i_4_ = 7; i_4_ >= 0; i_4_--) {
 						if (client.aStringArray7329[i_4_] != null) {
 							short i_5_ = 0;
-							if ((Class486.aClass486_5744 == client.aClass486_7450) && (client.aStringArray7329[i_4_].equalsIgnoreCase(Class433.aClass433_5295.method7273(Class223.aClass495_2772, -440996695)))) {
+							if ((Game.runescape == client.aClass486_7450) && (client.aStringArray7329[i_4_].equalsIgnoreCase(Class433.aClass433_5295.method7273(Class223.aClass495_2772, -440996695)))) {
 								if (client.aBool7454 && ((class521_sub1_sub1_sub2_sub1.anInt10565) * -1880473919 > (-1880473919 * (Class84.myPlayer.anInt10565))))
 									i_5_ = (short) 2000;
 								if ((-1623446397 * (Class84.myPlayer.anInt10559)) != 0 && 0 != (class521_sub1_sub1_sub2_sub1.anInt10559) * -1623446397) {
@@ -80,7 +80,7 @@ public class Class96_Sub22 extends Class96 {
 				} else
 					Class238.method4032(new StringBuilder().append(Class59.method1163(13421772, 619010179)).append(string).toString(), "", -1, -1, 0, 0L, 0, 0, false, true, (long) (-1691508299 * (class521_sub1_sub1_sub2_sub1.anInt10314)), false, -1005059728);
 				if (!bool) {
-					for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8097((byte) 114)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8067(1246744595))) {
+					for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 114)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1246744595))) {
 						if (23 == -1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587) {
 							((Class282_Sub50_Sub7) class282_sub50_sub7).aString9585 = new StringBuilder().append(Class59.method1163(16777215, 619010179)).append(string).toString();
 							break;

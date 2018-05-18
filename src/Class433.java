@@ -384,7 +384,7 @@ public class Class433 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass61_7010.aByte627;
 	}
 
-	static void method7275(Class505 class505, int i) {
+	static void method7275(GraphicalRenderer class505, int i) {
 		if ((335283739 * Class187.anInt2351 != Class84.myPlayer.aByte7967) && client.aClass257_7353.method4430(-1864995825) != null) {
 			Class169.method2869(1767772693);
 			if (Class289.method5097(class505, (Class84.myPlayer.aByte7967), 17547042))

@@ -63,10 +63,10 @@ public class Class76 {
 				return 0;
 			}
 			Class282_Sub17_Sub1.method15402(0, null, true, 1056006027);
-			Class339.aBool3987 = !Class482.method8145(-1882809257);
-			Class408.aClass317_4853 = Class518.method11146((Class339.aBool3987 ? Class102.aClass102_1051 : Class102.aClass102_1049), false, 1, true, -60148418);
-			Class186.aClass317_2347 = Class518.method11146(Class102.aClass102_1050, false, 1, true, 702387195);
-			Class410.aClass317_4924 = Class518.method11146(Class102.aClass102_1034, false, 1, true, -1748846681);
+			Class339.aBool3987 = !NodeCollection.method8145(-1882809257);
+			Class408.aClass317_4853 = AnimationDefinitions.method11146((Class339.aBool3987 ? Class102.aClass102_1051 : Class102.aClass102_1049), false, 1, true, -60148418);
+			Class186.aClass317_2347 = AnimationDefinitions.method11146(Class102.aClass102_1050, false, 1, true, 702387195);
+			Class410.aClass317_4924 = AnimationDefinitions.method11146(Class102.aClass102_1034, false, 1, true, -1748846681);
 		}
 		if (Class387.aClass387_4695 == Class474.aClass387_5621) {
 			boolean bool = Class186.aClass317_2347.method5612((byte) 25);
@@ -118,39 +118,39 @@ public class Class76 {
 			Class365.method6298(15, 1025544676);
 		}
 		if (Class474.aClass387_5621 == Class387.aClass387_4699) {
-			Class211.aClass317_2673 = Class518.method11146(Class102.aClass102_1025, false, 1, false, -131566770);
-			Class282_Sub20.aClass317_7672 = Class518.method11146(Class102.aClass102_1019, false, 1, false, -1119187214);
-			Class235.aClass317_2907 = Class518.method11146(Class102.aClass102_1018, false, 1, false, -344663268);
-			Class282_Sub39.aClass317_8005 = Class518.method11146(Class102.aClass102_1046, false, 1, true, -811989560);
-			Class523.aClass317_6957 = Class518.method11146(Class102.aClass102_1020, false, 1, true, 414319297);
-			Class219.aClass317_2714 = Class518.method11146(Class102.aClass102_1021, false, 1, false, 473331343);
-			Class149.aClass317_1745 = Class518.method11146(Class102.aClass102_1022, true, 1, false, -41420769);
-			Class512.aClass317_5884 = Class518.method11146(Class102.aClass102_1023, true, 1, false, 313944634);
-			Class110.aClass317_1106 = Class518.method11146(Class102.aClass102_1024, false, 1, false, 1432117999);
-			Class437.aClass317_5340 = Class518.method11146(Class102.aClass102_1026, false, 1, true, 1364644888);
-			Class250.aClass317_3093 = Class518.method11146(Class102.aClass102_1017, false, 1, false, -992072436);
-			Class525.aClass317_6984 = Class518.method11146(Class102.aClass102_1055, false, 1, false, -740935001);
-			Class378.aClass317_4526 = Class518.method11146(Class102.aClass102_1042, false, 1, true, 797007816);
-			Class313.aClass317_3665 = Class518.method11146(Class102.aClass102_1031, false, 1, false, 401055071);
-			Class211.aClass317_2674 = Class518.method11146(Class102.aClass102_1032, false, 1, false, -1785100744);
-			Class273.aClass317_3332 = Class518.method11146(Class102.aClass102_1028, false, 1, true, 1541138314);
-			Class236.aClass317_2915 = Class518.method11146(Class102.aClass102_1030, false, 1, true, -1269439350);
-			Class107.aClass317_1081 = Class518.method11146(Class102.aClass102_1035, false, 1, true, 356368392);
-			Class383.aClass317_4665 = Class518.method11146(Class102.aClass102_1036, false, 1, true, -272116660);
-			Class235.aClass317_2908 = Class518.method11146(Class102.aClass102_1037, false, 1, true, 185108014);
-			Class322.aClass317_3749 = Class518.method11146(Class102.aClass102_1027, false, 1, true, 1196463554);
-			Class222.aClass317_2766 = Class518.method11146(Class102.aClass102_1048, false, 1, true, -1629467771);
-			Class192.worldMap = Class518.method11146(Class102.aClass102_1040, true, 1, false, 2069423675);
-			Class371.aClass317_4326 = Class518.method11146(Class102.aClass102_1041, false, 1, true, 255695532);
-			Class329.aClass317_3861 = Class518.method11146(Class102.aClass102_1033, false, 1, true, -1257657517);
-			Class40.aClass317_412 = Class518.method11146(Class102.aClass102_1043, true, 1, true, -153298152);
-			Class468_Sub7.aClass317_7886 = Class518.method11146(Class102.aClass102_1044, false, 1, true, -756939954);
-			Class520.aClass317_5935 = Class518.method11146(Class102.aClass102_1045, true, 1, true, -252829200);
-			Class215.aClass317_2686 = Class518.method11146(Class102.aClass102_1038, false, 1, true, 746326631);
-			Class89.aClass317_944 = Class518.method11146(Class102.aClass102_1052, true, 1, false, -763412524);
-			Class497.aClass317_5821 = Class518.method11146(Class102.aClass102_1047, true, 1, false, -1315527397);
-			Class488.aClass317_5758 = Class518.method11146(Class102.aClass102_1029, true, 1, true, -446243916);
-			Class209.aClass317_2663 = Class518.method11146(Class102.aClass102_1053, true, 2, false, -1852858499);
+			Class211.aClass317_2673 = AnimationDefinitions.method11146(Class102.aClass102_1025, false, 1, false, -131566770);
+			Class282_Sub20.aClass317_7672 = AnimationDefinitions.method11146(Class102.aClass102_1019, false, 1, false, -1119187214);
+			Class235.aClass317_2907 = AnimationDefinitions.method11146(Class102.aClass102_1018, false, 1, false, -344663268);
+			Class282_Sub39.aClass317_8005 = AnimationDefinitions.method11146(Class102.aClass102_1046, false, 1, true, -811989560);
+			Class523.aClass317_6957 = AnimationDefinitions.method11146(Class102.aClass102_1020, false, 1, true, 414319297);
+			Class219.aClass317_2714 = AnimationDefinitions.method11146(Class102.aClass102_1021, false, 1, false, 473331343);
+			Class149.aClass317_1745 = AnimationDefinitions.method11146(Class102.aClass102_1022, true, 1, false, -41420769);
+			Class512.aClass317_5884 = AnimationDefinitions.method11146(Class102.aClass102_1023, true, 1, false, 313944634);
+			Class110.aClass317_1106 = AnimationDefinitions.method11146(Class102.aClass102_1024, false, 1, false, 1432117999);
+			AttributeDefault.aClass317_5340 = AnimationDefinitions.method11146(Class102.aClass102_1026, false, 1, true, 1364644888);
+			Class250.aClass317_3093 = AnimationDefinitions.method11146(Class102.aClass102_1017, false, 1, false, -992072436);
+			Class525.aClass317_6984 = AnimationDefinitions.method11146(Class102.aClass102_1055, false, 1, false, -740935001);
+			Class378.aClass317_4526 = AnimationDefinitions.method11146(Class102.aClass102_1042, false, 1, true, 797007816);
+			JS5LocalRequester.aClass317_3665 = AnimationDefinitions.method11146(Class102.aClass102_1031, false, 1, false, 401055071);
+			Class211.aClass317_2674 = AnimationDefinitions.method11146(Class102.aClass102_1032, false, 1, false, -1785100744);
+			Class273.aClass317_3332 = AnimationDefinitions.method11146(Class102.aClass102_1028, false, 1, true, 1541138314);
+			Class236.aClass317_2915 = AnimationDefinitions.method11146(Class102.aClass102_1030, false, 1, true, -1269439350);
+			Class107.aClass317_1081 = AnimationDefinitions.method11146(Class102.aClass102_1035, false, 1, true, 356368392);
+			Class383.aClass317_4665 = AnimationDefinitions.method11146(Class102.aClass102_1036, false, 1, true, -272116660);
+			Class235.aClass317_2908 = AnimationDefinitions.method11146(Class102.aClass102_1037, false, 1, true, 185108014);
+			ReferenceTable.aClass317_3749 = AnimationDefinitions.method11146(Class102.aClass102_1027, false, 1, true, 1196463554);
+			Class222.aClass317_2766 = AnimationDefinitions.method11146(Class102.aClass102_1048, false, 1, true, -1629467771);
+			Class192.worldMap = AnimationDefinitions.method11146(Class102.aClass102_1040, true, 1, false, 2069423675);
+			Class371.aClass317_4326 = AnimationDefinitions.method11146(Class102.aClass102_1041, false, 1, true, 255695532);
+			Class329.aClass317_3861 = AnimationDefinitions.method11146(Class102.aClass102_1033, false, 1, true, -1257657517);
+			NamedFileReference.aClass317_412 = AnimationDefinitions.method11146(Class102.aClass102_1043, true, 1, true, -153298152);
+			Class468_Sub7.aClass317_7886 = AnimationDefinitions.method11146(Class102.aClass102_1044, false, 1, true, -756939954);
+			Class520.aClass317_5935 = AnimationDefinitions.method11146(Class102.aClass102_1045, true, 1, true, -252829200);
+			Class215.aClass317_2686 = AnimationDefinitions.method11146(Class102.aClass102_1038, false, 1, true, 746326631);
+			Class89.aClass317_944 = AnimationDefinitions.method11146(Class102.aClass102_1052, true, 1, false, -763412524);
+			Class497.aClass317_5821 = AnimationDefinitions.method11146(Class102.aClass102_1047, true, 1, false, -1315527397);
+			Class488.aClass317_5758 = AnimationDefinitions.method11146(Class102.aClass102_1029, true, 1, true, -446243916);
+			Class209.aClass317_2663 = AnimationDefinitions.method11146(Class102.aClass102_1053, true, 2, false, -1852858499);
 		}
 		if (Class474.aClass387_5621 == Class387.aClass387_4700) {
 			int i_12_ = 0;
@@ -174,7 +174,7 @@ public class Class76 {
 				return 0;
 			}
 			Class89.method1496(is, -164492309);
-			Class482.method8148((byte) 4);
+			NodeCollection.method8148((byte) 4);
 			Class365.method6298(1, 1855105859);
 		}
 		if (Class387.aClass387_4709 == Class474.aClass387_5621) {
@@ -202,7 +202,7 @@ public class Class76 {
 			if (-1878247413 * Class58.aClass529_527.anInt7034 != -1 && !Class110.aClass317_1106.method5688((-1878247413 * (Class58.aClass529_527.anInt7034)), 0, 16711935)) {
 				return 99;
 			}
-			Class321.anInterface22_3731 = new Class323(Class40.aClass317_412, Class437.aClass317_5340, Class211.aClass317_2673);
+			Class321.anInterface22_3731 = new Class323(NamedFileReference.aClass317_412, AttributeDefault.aClass317_5340, Class211.aClass317_2673);
 			Class125.aClass424_1573 = new Class424(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
 			Class96_Sub16.aClass211_9383 = new Class211(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class473.aClass526_5605);
 			Class468_Sub23.aClass438_7932 = new Class438(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class211.aClass317_2673);
@@ -225,7 +225,7 @@ public class Class76 {
 			Class330.aClass523_3868 = new Class523(client.aClass486_7450, Class223.aClass495_2772, Class235.aClass317_2908, Class282_Sub20.aClass317_7672, Class235.aClass317_2907);
 			Class149.aClass288_1746 = new Class288(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
 			Class488.aClass45_5759 = new Class45(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
-			Class96_Sub20.aClass515_9416 = new Class515(client.aClass486_7450, Class223.aClass495_2772, Class322.aClass317_3749, Class110.aClass317_1106);
+			Class96_Sub20.aClass515_9416 = new Class515(client.aClass486_7450, Class223.aClass495_2772, ReferenceTable.aClass317_3749, Class110.aClass317_1106);
 			Class207.aClass421_2658 = new Class421(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, true);
 			Class396.aClass401_4791 = new Class401(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
 			client.aClass408_7207 = new Class408(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
@@ -236,7 +236,7 @@ public class Class76 {
 			Class502.aClass394_5831 = new Class394(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
 			Class497.aClass233_5822 = new Class233(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
 			Class403.method6803(Class523.aClass317_6957, Class110.aClass317_1106, Class211.aClass317_2673, Class410.aClass317_4924, 78858918);
-			Class312.method5559(Class215.aClass317_2686, -1845335453);
+			JS5StandardRequester.method5559(Class215.aClass317_2686, -1845335453);
 			Class296.aClass331_3535 = new Class331(Class223.aClass495_2772, Class371.aClass317_4326, Class329.aClass317_3861);
 			Class368.aClass429_4265 = new Class429(Class223.aClass495_2772, Class371.aClass317_4326, Class329.aClass317_3861, new Class58());
 			Class158_Sub1.aClass3_8507 = new Class3();

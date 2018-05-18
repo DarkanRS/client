@@ -33,7 +33,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_1_ || ((Class170) this).anInt2099 != i_2_) {
 			((Class170) this).anInt2098 = i_1_;
 			((Class170) this).anInt2099 = i_2_;
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(1727282478); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1727282478); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -224,7 +224,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_8_ || ((Class170) this).anInt2099 != i_9_) {
 			((Class170) this).anInt2098 = i_8_;
 			((Class170) this).anInt2099 = i_9_;
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(982266916); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(982266916); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -312,7 +312,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_15_ || ((Class170) this).anInt2099 != i_16_) {
 			((Class170) this).anInt2098 = i_15_;
 			((Class170) this).anInt2099 = i_16_;
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(708316685); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(708316685); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -334,7 +334,7 @@ public class Class170 {
 	void method2885(Class282_Sub5 class282_sub5) {
 		((Class282_Sub5) class282_sub5).aBool7506 = false;
 		class282_sub5.method12120();
-		class282_sub5.method4991(-371378792);
+		class282_sub5.unlink(-371378792);
 		method2886();
 	}
 
@@ -375,7 +375,7 @@ public class Class170 {
 		((Class170) this).aClass137_Sub1Array2106 = null;
 		((Class170) this).aClass282_Sub50_Sub19_2107 = null;
 		if (!((Class170) this).aClass473_2108.method7861(141891001)) {
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(1825691275); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1825691275); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12120();
 		}
 		((Class170) this).anInt2099 = 1;
@@ -391,7 +391,7 @@ public class Class170 {
 		((Class170) this).aClass137_Sub1Array2106 = null;
 		((Class170) this).aClass282_Sub50_Sub19_2107 = null;
 		if (!((Class170) this).aClass473_2108.method7861(141891001)) {
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(934182416); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(934182416); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12120();
 		}
 		((Class170) this).anInt2099 = 1;
@@ -812,7 +812,7 @@ public class Class170 {
 		((Class170) this).aClass137_Sub1Array2106 = null;
 		((Class170) this).aClass282_Sub50_Sub19_2107 = null;
 		if (!((Class170) this).aClass473_2108.method7861(141891001)) {
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(659744196); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(659744196); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12120();
 		}
 		((Class170) this).anInt2099 = 1;
@@ -825,7 +825,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_24_ || ((Class170) this).anInt2099 != i_25_) {
 			((Class170) this).anInt2098 = i_24_;
 			((Class170) this).anInt2099 = i_25_;
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(1133601034); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1133601034); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -1027,7 +1027,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_35_ || ((Class170) this).anInt2099 != i_36_) {
 			((Class170) this).anInt2098 = i_35_;
 			((Class170) this).anInt2099 = i_36_;
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(1057147905); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1057147905); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -1066,7 +1066,7 @@ public class Class170 {
 	void method2907(Class282_Sub5 class282_sub5) {
 		((Class282_Sub5) class282_sub5).aBool7506 = false;
 		class282_sub5.method12120();
-		class282_sub5.method4991(-371378792);
+		class282_sub5.unlink(-371378792);
 		method2886();
 	}
 
@@ -1076,7 +1076,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_38_ || ((Class170) this).anInt2099 != i_39_) {
 			((Class170) this).anInt2098 = i_38_;
 			((Class170) this).anInt2099 = i_39_;
-			for (Class282 class282 = ((Class170) this).aClass473_2108.method7859(1396380065); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
+			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1396380065); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.aClass282_3378)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;

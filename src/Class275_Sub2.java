@@ -57,7 +57,7 @@ public class Class275_Sub2 extends Class275 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).intLocals[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
 	}
 
-	static Class200 method12505(int i, int i_0_, int i_1_, Class528 class528, byte i_2_) {
+	static Class200 method12505(int i, int i_0_, int i_1_, MeshRasterizer class528, byte i_2_) {
 		if (null == class528)
 			return null;
 		Class200 class200 = new Class200(i, i_0_, i_1_, class528.N(), class528.RA(), class528.ya(), class528.YA(), class528.o(), class528.AA(), class528.ha());
@@ -69,11 +69,11 @@ public class Class275_Sub2 extends Class275 {
 		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		boolean bool = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) == 1);
 		if (Class291_Sub1.aClass465_8029 != null) {
-			Class282 class282 = Class291_Sub1.aClass465_8029.method7754((long) i_3_);
+			Node class282 = Class291_Sub1.aClass465_8029.method7754((long) i_3_);
 			if (null != class282 && !bool)
-				class282.method4991(-371378792);
+				class282.unlink(-371378792);
 			else if (null == class282 && bool) {
-				class282 = new Class282();
+				class282 = new Node();
 				Class291_Sub1.aClass465_8029.method7765(class282, (long) i_3_);
 			}
 		}

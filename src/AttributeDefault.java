@@ -2,16 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class437 {
+public class AttributeDefault {
 	public String aString5335;
 	char aChar5336;
 	public int anInt5337;
 	public boolean aBool5338 = true;
-	public static Class160 aClass160_5339;
-	public static Class317 aClass317_5340;
+	public static NativeSprite aClass160_5339;
+	public static Index aClass317_5340;
 
 	public boolean method7314() {
-		return ((Class437) this).aChar5336 == 's';
+		return ((AttributeDefault) this).aChar5336 == 's';
 	}
 
 	void method7315(RsByteBuffer class282_sub35, int i) {
@@ -25,7 +25,7 @@ public class Class437 {
 
 	void method7316(RsByteBuffer class282_sub35, int i, byte i_1_) {
 		if (i == 1)
-			((Class437) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -15275), 1486768413);
+			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -15275), 1486768413);
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
@@ -36,7 +36,7 @@ public class Class437 {
 
 	void method7317(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			((Class437) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -9046), 1244571207);
+			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -9046), 1244571207);
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
@@ -55,16 +55,16 @@ public class Class437 {
 	}
 
 	public boolean method7319(int i) {
-		return ((Class437) this).aChar5336 == 's';
+		return ((AttributeDefault) this).aChar5336 == 's';
 	}
 
-	Class437() {
+	AttributeDefault() {
 		/* empty */
 	}
 
 	void method7320(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			((Class437) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -6827), -1180390377);
+			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -6827), -1180390377);
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
@@ -74,7 +74,7 @@ public class Class437 {
 	}
 
 	public boolean method7321() {
-		return ((Class437) this).aChar5336 == 's';
+		return ((AttributeDefault) this).aChar5336 == 's';
 	}
 
 	static final void method7322(CS2Executor class527, int i) {

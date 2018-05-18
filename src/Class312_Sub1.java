@@ -4,7 +4,7 @@
  */
 import java.io.IOException;
 
-public class Class312_Sub1 extends Class312 {
+public class Class312_Sub1 extends JS5StandardRequester {
 	Class202 aClass202_7778;
 
 	public void method5522(Object object, boolean bool, int i) {
@@ -309,7 +309,7 @@ public class Class312_Sub1 extends Class312 {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_12_ * -442668975;
 					if (i_11_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
-						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aBool9639 = false;
+						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 = 0;
@@ -447,7 +447,7 @@ public class Class312_Sub1 extends Class312 {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_26_ * -442668975;
 					if (i_25_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
-						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aBool9639 = false;
+						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 = 0;
@@ -702,7 +702,7 @@ public class Class312_Sub1 extends Class312 {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_42_ * -442668975;
 					if (i_41_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
-						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aBool9639 = false;
+						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 = 0;
@@ -845,7 +845,7 @@ public class Class312_Sub1 extends Class312 {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_56_ * -442668975;
 					if (i_55_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
-						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aBool9639 = false;
+						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 = 0;

@@ -23,7 +23,7 @@ public class Class366 implements Interface3 {
 		return Class60.aClass60_609;
 	}
 
-	static void method6301(Class505 class505, int i, int i_0_, Class118 class118, int i_1_, int i_2_) {
+	static void method6301(GraphicalRenderer class505, int i, int i_0_, Class118 class118, int i_1_, int i_2_) {
 		for (int i_3_ = 7; i_3_ >= 0; i_3_--) {
 			for (int i_4_ = 127; i_4_ >= 0; i_4_--) {
 				int i_5_ = (i_1_ & 0x3f) << 10 | (i_3_ & 0x7) << 7 | i_4_ & 0x7f;

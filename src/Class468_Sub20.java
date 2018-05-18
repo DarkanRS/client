@@ -133,7 +133,7 @@ public class Class468_Sub20 extends Class468 {
 		return is;
 	}
 
-	public static void method12806(Class317 class317, byte i) {
+	public static void method12806(Index class317, byte i) {
 		Class165.anInt2035 = class317.method5610("headicons_pk", 1525500729) * -821889283;
 		Class475.anInt5622 = class317.method5610("headicons_prayer", -270805148) * -2055869675;
 		Class16.anInt135 = class317.method5610("hint_headicons", 1408398760) * -1041729095;

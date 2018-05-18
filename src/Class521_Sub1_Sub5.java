@@ -14,7 +14,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 	public static final int anInt9621 = 4;
 	public static final int anInt9622 = 32;
 
-	boolean method12988(Class505 class505) {
+	boolean method12988(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3275(this, aByte7968, ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293)));
 	}
@@ -54,7 +54,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		throw new RuntimeException("");
 	}
 
-	boolean method13037(Class505 class505, int i) {
+	boolean method13037(GraphicalRenderer class505, int i) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3275(this, aByte7968, ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293)));
 	}
@@ -112,12 +112,12 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		method11171(new Class385((float) i, (float) i_7_, (float) i_8_));
 	}
 
-	boolean method12998(Class505 class505) {
+	boolean method12998(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3275(this, aByte7968, ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293)));
 	}
 
-	boolean method13022(Class505 class505) {
+	boolean method13022(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3275(this, aByte7968, ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293)));
 	}
@@ -157,7 +157,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		throw new RuntimeException("");
 	}
 
-	boolean method13030(Class505 class505) {
+	boolean method13030(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3275(this, aByte7968, ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293)));
 	}

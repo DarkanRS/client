@@ -45,7 +45,7 @@ public class Class96_Sub12 extends Class96 {
 			if (null != class180 && -379447335 * class180.anInt2236 == 2) {
 				Class407.method6871((((Class180) class180).anInt2239 * -833881757), class180.anInt2243 * -51612493, class180.anInt2235 * -1074026889, (((Class180) class180).anInt2241 * 1606941506), -1913137620);
 				if (client.aFloatArray7292[0] > -1.0F && -1809259861 * client.cycles % 20 < 10) {
-					Class160 class160 = (Class391.aClass160Array4778[-1923151643 * ((Class180) class180).anInt2240]);
+					NativeSprite class160 = (Class391.aClass160Array4778[-1923151643 * ((Class180) class180).anInt2240]);
 					int i_9_ = (int) (client.aFloatArray7292[0] + (float) i - 12.0F);
 					int i_10_ = (int) (client.aFloatArray7292[1] + (float) i_2_ - 28.0F);
 					class160.method2752(i_9_, i_10_);
@@ -75,7 +75,7 @@ public class Class96_Sub12 extends Class96 {
 		return 5;
 	}
 
-	public static void method14614(Class505 class505, long l) {
+	public static void method14614(GraphicalRenderer class505, long l) {
 		Class235.anInt2903 = 417412323 * Class235.anInt2900;
 		Class235.anInt2900 = 0;
 		Class169.method2869(1533515778);

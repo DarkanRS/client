@@ -68,7 +68,7 @@ final class Class15 implements Interface35 {
 		for (int i_6_ = 0; i_6_ < is.length; i_6_++) {
 			Class240 class240 = Class409.aClass242_4922.method4156(is[i_6_], -1396181317);
 			if (-1230505599 * class240.anInt2977 != -1) {
-				Class160 class160 = (Class160) (Class20.aClass229_191.method3865((long) (-1230505599 * class240.anInt2977)));
+				NativeSprite class160 = (NativeSprite) (Class20.aClass229_191.method3865((long) (-1230505599 * class240.anInt2977)));
 				if (null == class160) {
 					Class91 class91 = Class91.method1522(Class211.aClass317_2673, class240.anInt2977 * -1230505599, 0);
 					if (class91 != null) {

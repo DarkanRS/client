@@ -91,16 +91,16 @@ public class Class163 {
 		int i_10_ = -1551929685 * client.anInt7293;
 		int i_11_ = client.anInt7294 * -1129472773;
 		if (1 == client.anInt7296 * 346714605) {
-			Class160 class160 = (Class282_Sub36.aClass160Array7994[client.anInt7295 * 83311811 / 100]);
+			NativeSprite class160 = (Class282_Sub36.aClass160Array7994[client.anInt7295 * 83311811 / 100]);
 			class160.method2752(i_10_ - 8, i_11_ - 8);
 		}
 		if (client.anInt7296 * 346714605 == 2) {
-			Class160 class160 = (Class282_Sub36.aClass160Array7994[4 + client.anInt7295 * 83311811 / 100]);
+			NativeSprite class160 = (Class282_Sub36.aClass160Array7994[4 + client.anInt7295 * 83311811 / 100]);
 			class160.method2752(i_10_ - 8, i_11_ - 8);
 		}
 	}
 
-	public static Class414 method2845(Class317 class317, int i, byte i_12_) {
+	public static Class414 method2845(Index class317, int i, byte i_12_) {
 		byte[] is = class317.method5615(i, -48187812);
 		if (is == null)
 			return null;

@@ -91,11 +91,11 @@ public class Class88 {
 		throw new Error();
 	}
 
-	static synchronized Class505 method1493(int i, Canvas canvas, Interface22 interface22, Class317 class317, int i_0_, int i_1_, int i_2_, byte i_3_) {
+	static synchronized GraphicalRenderer method1493(int i, Canvas canvas, Interface22 interface22, Index class317, int i_0_, int i_1_, int i_2_, byte i_3_) {
 		if (0 == i)
 			return Class109_Sub1.method14652(canvas, interface22, i_1_, i_2_, (byte) -124);
 		if (i == 2)
-			return Class8.method404(canvas, interface22, i_1_, i_2_, 596227505);
+			return FontRenderer.method404(canvas, interface22, i_1_, i_2_, 596227505);
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_0_);
 		if (5 == i)

@@ -75,17 +75,17 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			if (string != null) {
 				Class316.aClass505_3680.ba(1, 0);
 				Class414 class414 = Class94.method1588(Class410.aClass317_4924, Class16.anInt136 * 436671641, 0, 1150997063);
-				Class8 class8 = (Class316.aClass505_3680.method8448(class414, Class91.method1514(Class211.aClass317_2673, Class16.anInt136 * 436671641, 0), true));
+				FontRenderer class8 = (Class316.aClass505_3680.method8448(class414, Class91.method1514(Class211.aClass317_2673, Class16.anInt136 * 436671641, 0), true));
 				Class275.method4891((byte) -128);
 				Class446.method7447(string, true, Class316.aClass505_3680, class8, class414, (byte) -87);
 			}
 		} else {
-			Class505 class505 = null;
+			GraphicalRenderer class505 = null;
 			if (string != null) {
 				class505 = Class320.method5732(0, Class351.aCanvas4096, Class321.anInterface22_3731, Class488.aClass317_5758, 0, -603391790);
 				class505.ba(1, 0);
 				Class414 class414 = Class94.method1588(Class410.aClass317_4924, Class16.anInt136 * 436671641, 0, 1961117540);
-				Class8 class8 = (class505.method8448(class414, Class91.method1514(Class211.aClass317_2673, 436671641 * Class16.anInt136, 0), true));
+				FontRenderer class8 = (class505.method8448(class414, Class91.method1514(Class211.aClass317_2673, 436671641 * Class16.anInt136, 0), true));
 				Class275.method4891((byte) -74);
 				Class446.method7447(string, true, class505, class8, class414, (byte) -82);
 			}
@@ -95,7 +95,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 					if (string != null) {
 						class505.ba(1, 0);
 						Class414 class414 = Class94.method1588(Class410.aClass317_4924, 436671641 * Class16.anInt136, 0, 1716473063);
-						Class8 class8 = (class505.method8448(class414, Class91.method1514(Class211.aClass317_2673, (436671641 * Class16.anInt136), 0), true));
+						FontRenderer class8 = (class505.method8448(class414, Class91.method1514(Class211.aClass317_2673, (436671641 * Class16.anInt136), 0), true));
 						Class275.method4891((byte) -30);
 						Class446.method7447(string, true, class505, class8, class414, (byte) -16);
 					}

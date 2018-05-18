@@ -132,7 +132,7 @@ public class Class469 implements Iterator {
 		return class282_sub50;
 	}
 
-	static void method7805(Class505 class505, int i, int i_0_, Class118 class118, Class455 class455, int i_1_, int i_2_, int i_3_) {
+	static void method7805(GraphicalRenderer class505, int i, int i_0_, Class118 class118, Class455 class455, int i_1_, int i_2_, int i_3_) {
 		for (int i_4_ = 0; i_4_ < -685729279 * client.anInt7211; i_4_++) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_4_]));
 			if (class282_sub47 != null) {

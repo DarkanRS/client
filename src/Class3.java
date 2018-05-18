@@ -10,7 +10,7 @@ public class Class3 implements Interface42 {
 	int[] anIntArray25;
 	public int[] anIntArray26;
 	static int[] anIntArray27 = new int[32];
-	SwitchMap aClass465_28 = new SwitchMap(128);
+	IterableNodeMap aClass465_28 = new IterableNodeMap(128);
 
 	public int method242(int i) {
 		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 13);
@@ -28,10 +28,10 @@ public class Class3 implements Interface42 {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
 					int i_4_ = (int) (-3442165056282524525L * class282_sub45.aLong3379);
 					anIntArray26[i_4_] = ((Class3) this).anIntArray25[i_4_];
-					class282_sub45.method4991(-371378792);
+					class282_sub45.unlink(-371378792);
 					return i_4_;
 				}
-				class282_sub45.method4991(-371378792);
+				class282_sub45.unlink(-371378792);
 			}
 		}
 		return -1;
@@ -42,7 +42,7 @@ public class Class3 implements Interface42 {
 			((Class3) this).anIntArray25[i_5_] = 0;
 			anIntArray26[i_5_] = 0;
 		}
-		((Class3) this).aClass465_28 = new SwitchMap(128);
+		((Class3) this).aClass465_28 = new IterableNodeMap(128);
 	}
 
 	public void method266(int i, int i_6_, int i_7_) {
@@ -111,10 +111,10 @@ public class Class3 implements Interface42 {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
 					int i = (int) (-3442165056282524525L * class282_sub45.aLong3379);
 					anIntArray26[i] = ((Class3) this).anIntArray25[i];
-					class282_sub45.method4991(-371378792);
+					class282_sub45.unlink(-371378792);
 					return i;
 				}
-				class282_sub45.method4991(-371378792);
+				class282_sub45.unlink(-371378792);
 			}
 		}
 		return -1;
@@ -127,10 +127,10 @@ public class Class3 implements Interface42 {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
 					int i = (int) (-3442165056282524525L * class282_sub45.aLong3379);
 					anIntArray26[i] = ((Class3) this).anIntArray25[i];
-					class282_sub45.method4991(-371378792);
+					class282_sub45.unlink(-371378792);
 					return i;
 				}
-				class282_sub45.method4991(-371378792);
+				class282_sub45.unlink(-371378792);
 			}
 		}
 		return -1;
@@ -149,7 +149,7 @@ public class Class3 implements Interface42 {
 			((Class3) this).anIntArray25[i] = 0;
 			anIntArray26[i] = 0;
 		}
-		((Class3) this).aClass465_28 = new SwitchMap(128);
+		((Class3) this).aClass465_28 = new IterableNodeMap(128);
 	}
 
 	void method273() {
@@ -157,7 +157,7 @@ public class Class3 implements Interface42 {
 			((Class3) this).anIntArray25[i] = 0;
 			anIntArray26[i] = 0;
 		}
-		((Class3) this).aClass465_28 = new SwitchMap(128);
+		((Class3) this).aClass465_28 = new IterableNodeMap(128);
 	}
 
 	void method274() {
@@ -165,7 +165,7 @@ public class Class3 implements Interface42 {
 			((Class3) this).anIntArray25[i] = 0;
 			anIntArray26[i] = 0;
 		}
-		((Class3) this).aClass465_28 = new SwitchMap(128);
+		((Class3) this).aClass465_28 = new IterableNodeMap(128);
 	}
 
 	public Class3() {

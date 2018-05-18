@@ -16,7 +16,7 @@ public class Class239 {
 	static final int anInt2941 = -60;
 	static int anInt2942;
 	Class535[][] aClass535ArrayArray2943;
-	Class505 aClass505_2944;
+	GraphicalRenderer aClass505_2944;
 	int anInt2945;
 	int anInt2946 = 0;
 	boolean aBool2947;
@@ -453,7 +453,7 @@ public class Class239 {
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
-	public Class239(Class505 class505, int i, int i_50_) {
+	public Class239(GraphicalRenderer class505, int i, int i_50_) {
 		((Class239) this).anInt2945 = -824774497;
 		((Class239) this).aLong2936 = 0L;
 		((Class239) this).aBool2947 = false;

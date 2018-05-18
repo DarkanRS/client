@@ -174,7 +174,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 		return i_14_;
 	}
 
-	boolean method13037(Class505 class505, int i) {
+	boolean method13037(GraphicalRenderer class505, int i) {
 		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -128)));
 	}
 
@@ -280,7 +280,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 		return i;
 	}
 
-	boolean method13022(Class505 class505) {
+	boolean method13022(GraphicalRenderer class505) {
 		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -106)));
 	}
 
@@ -378,11 +378,11 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 		return i;
 	}
 
-	boolean method13030(Class505 class505) {
+	boolean method13030(GraphicalRenderer class505) {
 		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -58)));
 	}
 
-	boolean method12988(Class505 class505) {
+	boolean method12988(GraphicalRenderer class505) {
 		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -101)));
 	}
 
@@ -466,7 +466,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 		return i;
 	}
 
-	boolean method12998(Class505 class505) {
+	boolean method12998(GraphicalRenderer class505) {
 		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -56)));
 	}
 

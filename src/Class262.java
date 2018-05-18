@@ -12,7 +12,7 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 public class Class262 implements Interface36 {
-	Class317 aClass317_3235;
+	Index aClass317_3235;
 	String aString3236;
 	Hashtable aHashtable3237 = new Hashtable();
 	Hashtable aHashtable3238 = new Hashtable();
@@ -260,7 +260,7 @@ public class Class262 implements Interface36 {
 		return ((Class262) this).aHashtable3238.containsKey(string);
 	}
 
-	public Class262(Class317 class317) {
+	public Class262(Index class317) {
 		((Class262) this).aClass317_3235 = class317;
 		String string = "";
 		if (Class396.aString4790.startsWith("win") || Class396.aString4790.startsWith("windows 7"))
@@ -446,7 +446,7 @@ public class Class262 implements Interface36 {
 			int i_33_ = (class414.method6946(Class433.aClass433_5255.method7273(Class223.aClass495_2772, -2018972202), -1967833701));
 			int i_34_;
 			if (!Class20.aBool162) {
-				for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8097((byte) 95)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8067(1149283361))) {
+				for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361))) {
 					int i_35_ = Class282_Sub50_Sub17.method15507(class282_sub50_sub7, class414, 943671530);
 					if (i_35_ > i_33_)
 						i_33_ = i_35_;

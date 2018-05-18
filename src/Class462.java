@@ -18,7 +18,7 @@ public class Class462 {
 		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
 	}
 
-	final boolean method7707(Class523 class523, Class518 class518, int i, int i_0_, int[] is, int i_1_) {
+	final boolean method7707(Class523 class523, AnimationDefinitions class518, int i, int i_0_, int[] is, int i_1_) {
 		if (!((Class462) this).aBool5544) {
 			if (i >= is.length)
 				return false;
@@ -63,7 +63,7 @@ public class Class462 {
 		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
 	}
 
-	final boolean method7709(Class523 class523, Class518 class518, int i, int i_2_, int[] is) {
+	final boolean method7709(Class523 class523, AnimationDefinitions class518, int i, int i_2_, int[] is) {
 		if (!((Class462) this).aBool5544) {
 			if (i >= is.length)
 				return false;
@@ -108,7 +108,7 @@ public class Class462 {
 		((Class462) this).aClass282_Sub50_Sub13_5545 = null;
 	}
 
-	final boolean method7711(Class523 class523, Class518 class518, int i, int i_3_, int[] is) {
+	final boolean method7711(Class523 class523, AnimationDefinitions class518, int i, int i_3_, int[] is) {
 		if (!((Class462) this).aBool5544) {
 			if (i >= is.length)
 				return false;
@@ -146,7 +146,7 @@ public class Class462 {
 		return true;
 	}
 
-	final boolean method7712(Class523 class523, Class518 class518, int i, int i_4_, int[] is) {
+	final boolean method7712(Class523 class523, AnimationDefinitions class518, int i, int i_4_, int[] is) {
 		if (!((Class462) this).aBool5544) {
 			if (i >= is.length)
 				return false;
@@ -184,7 +184,7 @@ public class Class462 {
 		return true;
 	}
 
-	final boolean method7713(Class523 class523, Class518 class518, int i, int i_5_, int[] is) {
+	final boolean method7713(Class523 class523, AnimationDefinitions class518, int i, int i_5_, int[] is) {
 		if (!((Class462) this).aBool5544) {
 			if (i >= is.length)
 				return false;

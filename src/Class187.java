@@ -3,7 +3,7 @@
  */
 
 public class Class187 {
-	static Class482 aClass482_2350;
+	static NodeCollection aClass482_2350;
 	static int anInt2351;
 	static boolean aBool2352;
 	static int anInt2353;
@@ -35,7 +35,7 @@ public class Class187 {
 		anIntArray2354 = new int[1014];
 		anIntArray2355 = new int[1001];
 		anIntArray2357 = new int[1010];
-		aClass482_2350 = new Class482();
+		aClass482_2350 = new NodeCollection();
 		anInt2361 = 134656021;
 		anInt2359 = 818291313;
 		aBool2360 = true;
@@ -43,7 +43,7 @@ public class Class187 {
 		anInt2363 = 0;
 	}
 
-	static void method3087(Class505 class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
+	static void method3087(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
 		Class206 class206 = client.aClass257_7353.method4430(-1948087701);
 		Interface12 interface12 = (Interface12) class206.method3381(i, i_0_, i_1_, (byte) -75);
 		if (null != interface12) {
@@ -114,7 +114,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3088(Class118 class118, Class455 class455, int i, int i_13_, int i_14_, int i_15_, int i_16_, String string, Class8 class8, Class414 class414, int i_17_) {
+	static void method3088(Class118 class118, Class455 class455, int i, int i_13_, int i_14_, int i_15_, int i_16_, String string, FontRenderer class8, Class414 class414, int i_17_) {
 		int i_18_;
 		if (4 == -672443707 * Class262.anInt3240)
 			i_18_ = (int) client.aFloat7365 & 0x3fff;
@@ -146,7 +146,7 @@ public class Class187 {
 		anInt2359 = 818291313;
 	}
 
-	static void method3090(Class505 class505) {
+	static void method3090(GraphicalRenderer class505) {
 		if ((335283739 * anInt2351 != Class84.myPlayer.aByte7967) && client.aClass257_7353.method4430(-983685168) != null) {
 			Class169.method2869(1978389713);
 			if (Class289.method5097(class505, (Class84.myPlayer.aByte7967), -544839726))
@@ -170,7 +170,7 @@ public class Class187 {
 		anInt2351 = -1481335827;
 	}
 
-	static void method3094(Class505 class505, int i, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
+	static void method3094(GraphicalRenderer class505, int i, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
 		Class206 class206 = client.aClass257_7353.method4430(-1600984556);
 		Interface12 interface12 = (Interface12) class206.method3381(i, i_27_, i_28_, (byte) -10);
 		if (null != interface12) {
@@ -241,7 +241,7 @@ public class Class187 {
 		}
 	}
 
-	static boolean method3095(Class505 class505, int i) {
+	static boolean method3095(GraphicalRenderer class505, int i) {
 		Class169.method2869(2069163243);
 		if (!class505.method8455(-430422880))
 			return false;
@@ -527,7 +527,7 @@ public class Class187 {
 			}
 			int i_108_ = i_102_ * i_106_ + i_107_ * i_101_ >> 14;
 			int i_109_ = i_102_ * i_107_ - i_106_ * i_101_ >> 14;
-			Class160 class160 = Class282_Sub20_Sub15.aClass160Array9838[i_103_];
+			NativeSprite class160 = Class282_Sub20_Sub15.aClass160Array9838[i_103_];
 			int i_110_ = class160.method2747();
 			int i_111_ = class160.method2793();
 			int i_112_ = class118.anInt1301 * 1506818197 / 2 + i_108_ - i_110_ / 2;
@@ -562,7 +562,7 @@ public class Class187 {
 			}
 			int i_127_ = i_121_ * i_125_ + i_126_ * i_120_ >> 14;
 			int i_128_ = i_121_ * i_126_ - i_125_ * i_120_ >> 14;
-			Class160 class160 = Class282_Sub20_Sub15.aClass160Array9838[i_122_];
+			NativeSprite class160 = Class282_Sub20_Sub15.aClass160Array9838[i_122_];
 			int i_129_ = class160.method2747();
 			int i_130_ = class160.method2793();
 			int i_131_ = class118.anInt1301 * 1506818197 / 2 + i_127_ - i_129_ / 2;
@@ -598,7 +598,7 @@ public class Class187 {
 		anInt2359 = 818291313;
 	}
 
-	static void method3102(Class505 class505, Class455 class455, Class118 class118, int i, int i_138_, int i_139_, int i_140_, int i_141_) {
+	static void method3102(GraphicalRenderer class505, Class455 class455, Class118 class118, int i, int i_138_, int i_139_, int i_140_, int i_141_) {
 		Class220 class220 = Class397.aClass218_4813.method3700(i_141_, 1313237634);
 		if (class220 != null && class220.aBool2729 && class220.method3719(Class158_Sub1.aClass3_8507, 1584685808)) {
 			if (null != class220.anIntArray2717) {
@@ -664,7 +664,7 @@ public class Class187 {
 					class505.method8669(is[is.length - 2], is[is.length - 1], is[0], is[1], (class220.anIntArray2738[(class220.aByteArray2754[(class220.aByteArray2754.length - 1)]) & 0xff]), 1, class455, i, i_138_);
 				}
 			}
-			Class160 class160 = null;
+			NativeSprite class160 = null;
 			if (-1 != class220.anInt2719 * -1248709255) {
 				class160 = class220.method3735(class505, false, (byte) 8);
 				if (class160 != null)
@@ -674,7 +674,7 @@ public class Class187 {
 				int i_162_ = 0;
 				if (class160 != null)
 					i_162_ = class160.method2793();
-				Class8 class8 = Class540.aClass8_7138;
+				FontRenderer class8 = Class540.aClass8_7138;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					class8 = Class16.aClass8_144;
@@ -696,7 +696,7 @@ public class Class187 {
 		anInt2359 = 818291313;
 	}
 
-	static void method3104(Class505 class505, Class118 class118, int i, int i_163_) {
+	static void method3104(GraphicalRenderer class505, Class118 class118, int i, int i_163_) {
 		Class119 class119 = class118.method2046(class505, 1134133395);
 		if (class119 != null) {
 			Class455 class455 = class119.aClass455_1456;
@@ -725,7 +725,7 @@ public class Class187 {
 				int i_169_ = (48 + client.aClass257_7353.method4451(-1318065497) * 4 - i_165_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_163_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_168_, (float) i_169_, i_167_, i_166_ << 2, class455, i, i_163_);
 				Class283 class283 = client.aClass257_7353.method4528((byte) 63);
-				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) aClass482_2350.method8097((byte) 84)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) aClass482_2350.method8067(-1076678458))) {
+				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) aClass482_2350.head((byte) 84)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) aClass482_2350.next(-1076678458))) {
 					int i_170_ = class282_sub38.anInt8002 * -570797415;
 					int i_171_ = ((class283.anIntArray3381[i_170_] >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 					int i_172_ = ((class283.anIntArray3381[i_170_] & 0x3fff) - class219.anInt2712 * -1002240017);
@@ -771,7 +771,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3105(Class505 class505, Class118 class118, int i, int i_185_) {
+	static void method3105(GraphicalRenderer class505, Class118 class118, int i, int i_185_) {
 		Class119 class119 = class118.method2046(class505, -708316004);
 		if (class119 != null) {
 			Class455 class455 = class119.aClass455_1456;
@@ -800,7 +800,7 @@ public class Class187 {
 				int i_191_ = (48 + client.aClass257_7353.method4451(-793700854) * 4 - i_187_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_185_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_190_, (float) i_191_, i_189_, i_188_ << 2, class455, i, i_185_);
 				Class283 class283 = client.aClass257_7353.method4528((byte) 20);
-				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) aClass482_2350.method8097((byte) 73)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) aClass482_2350.method8067(1404797203))) {
+				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) aClass482_2350.head((byte) 73)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) aClass482_2350.next(1404797203))) {
 					int i_192_ = class282_sub38.anInt8002 * -570797415;
 					int i_193_ = ((class283.anIntArray3381[i_192_] >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 					int i_194_ = ((class283.anIntArray3381[i_192_] & 0x3fff) - class219.anInt2712 * -1002240017);
@@ -851,7 +851,7 @@ public class Class187 {
 		anInt2351 = -1481335827;
 	}
 
-	static void method3107(Class505 class505, int i, int i_207_, Class118 class118, Class455 class455, int i_208_, int i_209_) {
+	static void method3107(GraphicalRenderer class505, int i, int i_207_, Class118 class118, Class455 class455, int i_208_, int i_209_) {
 		for (int i_210_ = 0; i_210_ < -685729279 * client.anInt7211; i_210_++) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_210_]));
 			if (class282_sub47 != null) {
@@ -874,7 +874,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3108(Class505 class505, int i, int i_213_, Class118 class118, Class455 class455, int i_214_, int i_215_) {
+	static void method3108(GraphicalRenderer class505, int i, int i_213_, Class118 class118, Class455 class455, int i_214_, int i_215_) {
 		for (int i_216_ = 0; i_216_ < -685729279 * client.anInt7211; i_216_++) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_216_]));
 			if (class282_sub47 != null) {
@@ -897,7 +897,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3109(Class505 class505, Class455 class455, Class118 class118, int i, int i_219_, int i_220_, int i_221_, int i_222_) {
+	static void method3109(GraphicalRenderer class505, Class455 class455, Class118 class118, int i, int i_219_, int i_220_, int i_221_, int i_222_) {
 		Class220 class220 = Class397.aClass218_4813.method3700(i_222_, -573403);
 		if (class220 != null && class220.aBool2729 && class220.method3719(Class158_Sub1.aClass3_8507, 984524935)) {
 			if (null != class220.anIntArray2717) {
@@ -963,7 +963,7 @@ public class Class187 {
 					class505.method8669(is[is.length - 2], is[is.length - 1], is[0], is[1], (class220.anIntArray2738[(class220.aByteArray2754[(class220.aByteArray2754.length - 1)]) & 0xff]), 1, class455, i, i_219_);
 				}
 			}
-			Class160 class160 = null;
+			NativeSprite class160 = null;
 			if (-1 != class220.anInt2719 * -1248709255) {
 				class160 = class220.method3735(class505, false, (byte) 8);
 				if (class160 != null)
@@ -973,7 +973,7 @@ public class Class187 {
 				int i_243_ = 0;
 				if (class160 != null)
 					i_243_ = class160.method2793();
-				Class8 class8 = Class540.aClass8_7138;
+				FontRenderer class8 = Class540.aClass8_7138;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					class8 = Class16.aClass8_144;
@@ -992,7 +992,7 @@ public class Class187 {
 		throw new Error();
 	}
 
-	static void method3110(Class505 class505, Class118 class118, int i, int i_244_) {
+	static void method3110(GraphicalRenderer class505, Class118 class118, int i, int i_244_) {
 		Class119 class119 = class118.method2046(class505, 522701617);
 		if (class119 != null) {
 			Class455 class455 = class119.aClass455_1456;
@@ -1021,7 +1021,7 @@ public class Class187 {
 				int i_250_ = (48 + client.aClass257_7353.method4451(-1780488761) * 4 - i_246_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_244_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_249_, (float) i_250_, i_248_, i_247_ << 2, class455, i, i_244_);
 				Class283 class283 = client.aClass257_7353.method4528((byte) 4);
-				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) aClass482_2350.method8097((byte) 92)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) aClass482_2350.method8067(490916566))) {
+				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) aClass482_2350.head((byte) 92)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) aClass482_2350.next(490916566))) {
 					int i_251_ = class282_sub38.anInt8002 * -570797415;
 					int i_252_ = ((class283.anIntArray3381[i_251_] >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 					int i_253_ = ((class283.anIntArray3381[i_251_] & 0x3fff) - class219.anInt2712 * -1002240017);
@@ -1083,7 +1083,7 @@ public class Class187 {
 			}
 			int i_274_ = i_268_ * i_272_ + i_273_ * i_267_ >> 14;
 			int i_275_ = i_268_ * i_273_ - i_272_ * i_267_ >> 14;
-			Class160 class160 = Class282_Sub20_Sub15.aClass160Array9838[i_269_];
+			NativeSprite class160 = Class282_Sub20_Sub15.aClass160Array9838[i_269_];
 			int i_276_ = class160.method2747();
 			int i_277_ = class160.method2793();
 			int i_278_ = class118.anInt1301 * 1506818197 / 2 + i_274_ - i_276_ / 2;
@@ -1102,7 +1102,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3112(Class505 class505, int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, int i_290_) {
+	static void method3112(GraphicalRenderer class505, int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, int i_290_) {
 		Class206 class206 = client.aClass257_7353.method4430(-1379295368);
 		Interface12 interface12 = ((Interface12) class206.method3381(i, i_285_, i_286_, (byte) -101));
 		if (null != interface12) {
@@ -1173,7 +1173,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3113(Class118 class118, Class455 class455, int i, int i_298_, int i_299_, int i_300_, Class160 class160) {
+	static void method3113(Class118 class118, Class455 class455, int i, int i_298_, int i_299_, int i_300_, NativeSprite class160) {
 		if (null != class160) {
 			int i_301_;
 			if (4 == Class262.anInt3240 * -672443707)
@@ -1196,7 +1196,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3114(Class118 class118, Class455 class455, int i, int i_308_, int i_309_, int i_310_, int i_311_, String string, Class8 class8, Class414 class414, int i_312_) {
+	static void method3114(Class118 class118, Class455 class455, int i, int i_308_, int i_309_, int i_310_, int i_311_, String string, FontRenderer class8, Class414 class414, int i_312_) {
 		int i_313_;
 		if (4 == -672443707 * Class262.anInt3240)
 			i_313_ = (int) client.aFloat7365 & 0x3fff;
@@ -1221,7 +1221,7 @@ public class Class187 {
 		}
 	}
 
-	static void method3115(Class118 class118, Class455 class455, int i, int i_322_, int i_323_, int i_324_, int i_325_, String string, Class8 class8, Class414 class414, int i_326_) {
+	static void method3115(Class118 class118, Class455 class455, int i, int i_322_, int i_323_, int i_324_, int i_325_, String string, FontRenderer class8, Class414 class414, int i_326_) {
 		int i_327_;
 		if (4 == -672443707 * Class262.anInt3240)
 			i_327_ = (int) client.aFloat7365 & 0x3fff;

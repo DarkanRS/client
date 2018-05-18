@@ -2,16 +2,16 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class377 implements Interface20 {
+public class Class377 implements IndexLoader {
 	Class229 aClass229_4517 = new Class229(64);
-	Class317 aClass317_4518;
+	Index aClass317_4518;
 	public int anInt4519;
 	static Thread aThread4520;
 
-	public Class377(Class486 class486, Class495 class495, Class317 class317) {
+	public Class377(Game class486, Class495 class495, Index class317) {
 		((Class377) this).aClass317_4518 = class317;
 		if (((Class377) this).aClass317_4518 != null)
-			anInt4519 = (((Class377) this).aClass317_4518.method5624(Class120.aClass120_1487.anInt1521 * -71319279, -1550492065)) * -517376561;
+			anInt4519 = (((Class377) this).aClass317_4518.filesCount(Class120.aClass120_1487.anInt1521 * -71319279, -1550492065)) * -517376561;
 		else
 			anInt4519 = 0;
 	}
@@ -118,7 +118,7 @@ public class Class377 implements Interface20 {
 		}
 	}
 
-	static void method6394(Class505 class505, int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+	static void method6394(GraphicalRenderer class505, int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		class505.method8425(i, i_2_, i_3_, i_4_, i_5_, (byte) -74);
 		class505.method8425(1 + i, 1 + i_2_, i_3_ - 2, 16, i_6_, (byte) -67);
 		class505.method8562(i + 1, i_2_ + 18, i_3_ - 2, i_4_ - 19, i_6_, (byte) 4);

@@ -12,7 +12,7 @@ public class Class147 {
 	static int[] anIntArray1728;
 	static int anInt1729;
 
-	public static void method2471(Class505 class505, int[] is, int i) {
+	public static void method2471(GraphicalRenderer class505, int[] is, int i) {
 		method2474(class505, is, 0, is.length, i, null, null);
 	}
 
@@ -69,7 +69,7 @@ public class Class147 {
 		}
 	}
 
-	static void method2474(Class505 class505, int[] is, int i, int i_12_, int i_13_, int[] is_14_, int[] is_15_) {
+	static void method2474(GraphicalRenderer class505, int[] is, int i, int i_12_, int i_13_, int[] is_14_, int[] is_15_) {
 		int[] is_16_ = new int[4];
 		class505.qa(is_16_);
 		if (is_14_ != null && is_16_[3] - is_16_[1] != is_14_.length)
@@ -253,23 +253,23 @@ public class Class147 {
 		}
 	}
 
-	public static void method2481(Class505 class505, int[] is, int i) {
+	public static void method2481(GraphicalRenderer class505, int[] is, int i) {
 		method2474(class505, is, 0, is.length, i, null, null);
 	}
 
-	public static void method2482(Class505 class505, int[] is, int i) {
+	public static void method2482(GraphicalRenderer class505, int[] is, int i) {
 		method2474(class505, is, 0, is.length, i, null, null);
 	}
 
-	public static void method2483(Class505 class505, int[] is, int i, int[] is_58_, int[] is_59_) {
+	public static void method2483(GraphicalRenderer class505, int[] is, int i, int[] is_58_, int[] is_59_) {
 		method2474(class505, is, 0, is.length, i, is_58_, is_59_);
 	}
 
-	public static void method2484(Class505 class505, int[] is, int i, int[] is_60_, int[] is_61_) {
+	public static void method2484(GraphicalRenderer class505, int[] is, int i, int[] is_60_, int[] is_61_) {
 		method2474(class505, is, 0, is.length, i, is_60_, is_61_);
 	}
 
-	public static void method2485(Class505 class505, int[] is, int i, int[] is_62_, int[] is_63_) {
+	public static void method2485(GraphicalRenderer class505, int[] is, int i, int[] is_62_, int[] is_63_) {
 		method2474(class505, is, 0, is.length, i, is_62_, is_63_);
 	}
 
@@ -277,11 +277,11 @@ public class Class147 {
 		throw new Error();
 	}
 
-	public static void method2486(Class505 class505, int[] is, int i, int[] is_64_, int[] is_65_) {
+	public static void method2486(GraphicalRenderer class505, int[] is, int i, int[] is_64_, int[] is_65_) {
 		method2474(class505, is, 0, is.length, i, is_64_, is_65_);
 	}
 
-	static void method2487(Class505 class505, int[] is, int i, int i_66_, int i_67_, int[] is_68_, int[] is_69_) {
+	static void method2487(GraphicalRenderer class505, int[] is, int i, int i_66_, int i_67_, int[] is_68_, int[] is_69_) {
 		int[] is_70_ = new int[4];
 		class505.qa(is_70_);
 		if (is_68_ != null && is_70_[3] - is_70_[1] != is_68_.length)
@@ -306,7 +306,7 @@ public class Class147 {
 		}
 	}
 
-	static void method2488(Class505 class505, int[] is, int i, int i_75_, int i_76_, int[] is_77_, int[] is_78_) {
+	static void method2488(GraphicalRenderer class505, int[] is, int i, int i_75_, int i_76_, int[] is_77_, int[] is_78_) {
 		int[] is_79_ = new int[4];
 		class505.qa(is_79_);
 		if (is_77_ != null && is_79_[3] - is_79_[1] != is_77_.length)
@@ -331,7 +331,7 @@ public class Class147 {
 		}
 	}
 
-	static void method2489(Class505 class505, int[] is, int i, int i_84_, int i_85_, int[] is_86_, int[] is_87_) {
+	static void method2489(GraphicalRenderer class505, int[] is, int i, int i_84_, int i_85_, int[] is_86_, int[] is_87_) {
 		int[] is_88_ = new int[4];
 		class505.qa(is_88_);
 		if (is_86_ != null && is_88_[3] - is_88_[1] != is_86_.length)
@@ -752,11 +752,11 @@ public class Class147 {
 		}
 	}
 
-	public static void method2504(Class505 class505, int[] is, int i, int[] is_192_, int[] is_193_) {
+	public static void method2504(GraphicalRenderer class505, int[] is, int i, int[] is_192_, int[] is_193_) {
 		method2474(class505, is, 0, is.length, i, is_192_, is_193_);
 	}
 
-	public static void method2505(Class505 class505, int[] is, int i, int[] is_194_, int[] is_195_) {
+	public static void method2505(GraphicalRenderer class505, int[] is, int i, int[] is_194_, int[] is_195_) {
 		method2474(class505, is, 0, is.length, i, is_194_, is_195_);
 	}
 
@@ -845,7 +845,7 @@ public class Class147 {
 		}
 	}
 
-	static void method2509(Class505 class505, int[] is, int i, int i_217_, int i_218_, int[] is_219_, int[] is_220_) {
+	static void method2509(GraphicalRenderer class505, int[] is, int i, int i_217_, int i_218_, int[] is_219_, int[] is_220_) {
 		int[] is_221_ = new int[4];
 		class505.qa(is_221_);
 		if (is_219_ != null && is_221_[3] - is_221_[1] != is_219_.length)

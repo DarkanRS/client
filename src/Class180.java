@@ -48,17 +48,17 @@ public class Class180 {
 		/* empty */
 	}
 
-	public static Class528 method3028(Class505 class505, int i, int i_0_, int i_1_, int i_2_, int i_3_) {
+	public static MeshRasterizer method3028(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_) {
 		long l = (long) i_3_;
-		Class528 class528 = (Class528) aClass229_2245.method3865(l);
+		MeshRasterizer class528 = (MeshRasterizer) aClass229_2245.method3865(l);
 		int i_4_ = 2055;
 		if (null == class528) {
-			Class157 class157 = Class157.method2689(Class110.aClass317_1106, i_3_, 0);
+			RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, i_3_, 0);
 			if (null == class157)
 				return null;
 			if (class157.anInt1986 < 13)
 				class157.method2679(2);
-			class528 = class505.method8451(class157, i_4_, 2079347217 * anInt2246, 64, 768);
+			class528 = class505.createMeshRasterizer(class157, i_4_, 2079347217 * anInt2246, 64, 768);
 			aClass229_2245.method3856(class528, l);
 		}
 		class528 = class528.method11289((byte) 6, i_4_, true);

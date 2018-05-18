@@ -8,7 +8,7 @@ public class Class519 {
 	public Interface17 anInterface17_5931;
 	static int anInt5932;
 
-	public Class519(Class317 class317) {
+	public Class519(Index class317) {
 		byte[] is = class317.method5615((Class524.aClass524_6965.anInt6966 * -1719912253), -1967379724);
 		method11149(new RsByteBuffer(is), 1856651955);
 	}

@@ -16,11 +16,11 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	int anInt7938;
 	int anInt7939;
 	int anInt7940;
-	Class482 aClass482_7941 = new Class482();
+	NodeCollection aClass482_7941 = new NodeCollection();
 	int anInt7942;
 	int anInt7943;
 	int anInt7944;
-	Class482 aClass482_7945 = new Class482();
+	NodeCollection aClass482_7945 = new NodeCollection();
 	boolean aBool7946;
 	static final int anInt7947 = 1;
 
@@ -53,7 +53,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		((Class209_Sub1) this).anInt7938 = ((Class209_Sub1) this).anInt7942 * 1630671813;
 		((Class209_Sub1) this).anInt7939 = ((Class209_Sub1) this).anInt7943 * 1370759671;
 		((Class209_Sub1) this).anInt7940 = ((Class209_Sub1) this).anInt7944 * -714190199;
-		Class482 class482 = ((Class209_Sub1) this).aClass482_7941;
+		NodeCollection class482 = ((Class209_Sub1) this).aClass482_7941;
 		((Class209_Sub1) this).aClass482_7941 = ((Class209_Sub1) this).aClass482_7945;
 		((Class209_Sub1) this).aClass482_7945 = class482;
 		((Class209_Sub1) this).aClass482_7945.method8118(-2108421155);
@@ -162,7 +162,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		((Class209_Sub1) this).anInt7938 = ((Class209_Sub1) this).anInt7942 * 1630671813;
 		((Class209_Sub1) this).anInt7939 = ((Class209_Sub1) this).anInt7943 * 1370759671;
 		((Class209_Sub1) this).anInt7940 = ((Class209_Sub1) this).anInt7944 * -714190199;
-		Class482 class482 = ((Class209_Sub1) this).aClass482_7941;
+		NodeCollection class482 = ((Class209_Sub1) this).aClass482_7941;
 		((Class209_Sub1) this).aClass482_7941 = ((Class209_Sub1) this).aClass482_7945;
 		((Class209_Sub1) this).aClass482_7945 = class482;
 		((Class209_Sub1) this).aClass482_7945.method8118(237232495);
@@ -184,7 +184,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		((Class209_Sub1) this).anInt7938 = ((Class209_Sub1) this).anInt7942 * 1630671813;
 		((Class209_Sub1) this).anInt7939 = ((Class209_Sub1) this).anInt7943 * 1370759671;
 		((Class209_Sub1) this).anInt7940 = ((Class209_Sub1) this).anInt7944 * -714190199;
-		Class482 class482 = ((Class209_Sub1) this).aClass482_7941;
+		NodeCollection class482 = ((Class209_Sub1) this).aClass482_7941;
 		((Class209_Sub1) this).aClass482_7941 = ((Class209_Sub1) this).aClass482_7945;
 		((Class209_Sub1) this).aClass482_7945 = class482;
 		((Class209_Sub1) this).aClass482_7945.method8118(-461780594);

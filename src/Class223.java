@@ -7,7 +7,7 @@ public final class Class223 {
 	int anInt2768;
 	int anInt2769;
 	Class282_Sub50 aClass282_Sub50_2770 = new Class282_Sub50();
-	SwitchMap aClass465_2771;
+	IterableNodeMap aClass465_2771;
 	public static Class495 aClass495_2772;
 
 	public void method3757() {
@@ -27,11 +27,11 @@ public final class Class223 {
 	public void method3759(Class282_Sub50 class282_sub50, long l) {
 		if (0 == ((Class223) this).anInt2769 * -367780537) {
 			Class282_Sub50 class282_sub50_0_ = ((Class223) this).aClass477_2767.method7937(600411374);
-			class282_sub50_0_.method4991(-371378792);
+			class282_sub50_0_.unlink(-371378792);
 			class282_sub50_0_.method13452((byte) -5);
 			if (((Class223) this).aClass282_Sub50_2770 == class282_sub50_0_) {
 				class282_sub50_0_ = ((Class223) this).aClass477_2767.method7937(1037693707);
-				class282_sub50_0_.method4991(-371378792);
+				class282_sub50_0_.unlink(-371378792);
 				class282_sub50_0_.method13452((byte) -5);
 			}
 		} else
@@ -48,7 +48,7 @@ public final class Class223 {
 		for (i_1_ = 1; i_1_ + i_1_ < i; i_1_ += i_1_) {
 			/* empty */
 		}
-		((Class223) this).aClass465_2771 = new SwitchMap(i_1_);
+		((Class223) this).aClass465_2771 = new IterableNodeMap(i_1_);
 	}
 
 	public void method3760(int i) {
@@ -75,11 +75,11 @@ public final class Class223 {
 	public void method3763(Class282_Sub50 class282_sub50, long l) {
 		if (0 == ((Class223) this).anInt2769 * -367780537) {
 			Class282_Sub50 class282_sub50_2_ = ((Class223) this).aClass477_2767.method7937(-150780366);
-			class282_sub50_2_.method4991(-371378792);
+			class282_sub50_2_.unlink(-371378792);
 			class282_sub50_2_.method13452((byte) -5);
 			if (((Class223) this).aClass282_Sub50_2770 == class282_sub50_2_) {
 				class282_sub50_2_ = ((Class223) this).aClass477_2767.method7937(1353399879);
-				class282_sub50_2_.method4991(-371378792);
+				class282_sub50_2_.unlink(-371378792);
 				class282_sub50_2_.method13452((byte) -5);
 			}
 		} else
@@ -105,11 +105,11 @@ public final class Class223 {
 	public void method3766(Class282_Sub50 class282_sub50, long l) {
 		if (0 == ((Class223) this).anInt2769 * -367780537) {
 			Class282_Sub50 class282_sub50_3_ = ((Class223) this).aClass477_2767.method7937(1704845716);
-			class282_sub50_3_.method4991(-371378792);
+			class282_sub50_3_.unlink(-371378792);
 			class282_sub50_3_.method13452((byte) -5);
 			if (((Class223) this).aClass282_Sub50_2770 == class282_sub50_3_) {
 				class282_sub50_3_ = ((Class223) this).aClass477_2767.method7937(-1222944703);
-				class282_sub50_3_.method4991(-371378792);
+				class282_sub50_3_.unlink(-371378792);
 				class282_sub50_3_.method13452((byte) -5);
 			}
 		} else

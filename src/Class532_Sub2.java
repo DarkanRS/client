@@ -5,7 +5,7 @@
 public class Class532_Sub2 extends Class532 {
 	static final int anInt7923 = 12;
 	static final int anInt7924 = 4096;
-	public static Class317 aClass317_7925;
+	public static Index aClass317_7925;
 
 	static final void method12848(int i, int i_0_, int i_1_, int i_2_) {
 		if (i > i_0_)

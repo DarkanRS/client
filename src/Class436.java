@@ -3,7 +3,7 @@
  */
 
 public class Class436 {
-	Class317 aClass317_5333;
+	Index aClass317_5333;
 	Class229 aClass229_5334 = new Class229(64);
 
 	public Class416 method7304(int i, byte i_0_) {
@@ -90,9 +90,9 @@ public class Class436 {
 		return class416;
 	}
 
-	public Class436(Class486 class486, Class495 class495, Class317 class317) {
+	public Class436(Game class486, Class495 class495, Index class317) {
 		((Class436) this).aClass317_5333 = class317;
-		((Class436) this).aClass317_5333.method5624((Class120.aClass120_1494.anInt1521) * -71319279, 974737476);
+		((Class436) this).aClass317_5333.filesCount((Class120.aClass120_1494.anInt1521) * -71319279, 974737476);
 	}
 
 	public void method7311() {

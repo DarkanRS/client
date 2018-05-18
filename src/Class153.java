@@ -5,7 +5,7 @@
 import java.io.File;
 
 public final class Class153 {
-	SwitchMap aClass465_1963;
+	IterableNodeMap aClass465_1963;
 	int anInt1964;
 	static int anInt1965;
 
@@ -56,7 +56,7 @@ public final class Class153 {
 
 	public void method2612(int i, int i_8_) {
 		if (null == ((Class153) this).aClass465_1963)
-			((Class153) this).aClass465_1963 = new SwitchMap(((Class153) this).anInt1964 * 535130369);
+			((Class153) this).aClass465_1963 = new IterableNodeMap(((Class153) this).anInt1964 * 535130369);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class153) this).aClass465_1963.method7754((long) i));
 		if (null != class282_sub38)
 			class282_sub38.anInt8002 = 1270866345 * i_8_;
@@ -80,7 +80,7 @@ public final class Class153 {
 		if (null == ((Class153) this).aClass465_1963) {
 			if (i_10_ != 768)
 				return;
-			((Class153) this).aClass465_1963 = new SwitchMap(((Class153) this).anInt1964 * 535130369);
+			((Class153) this).aClass465_1963 = new IterableNodeMap(((Class153) this).anInt1964 * 535130369);
 		}
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class153) this).aClass465_1963.method7754((long) i));
 		if (null != class282_sub38) {
@@ -104,7 +104,7 @@ public final class Class153 {
 			((Class153) this).aClass465_1963.method7749(-1479031717);
 	}
 
-	static final int method2617(Class505 class505, Class531 class531, byte i) {
+	static final int method2617(GraphicalRenderer class505, Class531 class531, byte i) {
 		if (-848345857 * class531.anInt7058 != -1)
 			return -848345857 * class531.anInt7058;
 		if (-1 != class531.anInt7066 * 1717409107) {

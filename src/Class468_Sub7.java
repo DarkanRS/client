@@ -6,7 +6,7 @@ public class Class468_Sub7 extends Class468 {
 	public static final int anInt7883 = 2;
 	public static final int anInt7884 = 1;
 	public static final int anInt7885 = 0;
-	public static Class317 aClass317_7886;
+	public static Index aClass317_7886;
 
 	public boolean method12662() {
 		return true;

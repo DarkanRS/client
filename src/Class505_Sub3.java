@@ -4,7 +4,7 @@
  */
 import java.awt.Canvas;
 
-public class Class505_Sub3 extends Class505 {
+public class Class505_Sub3 extends GraphicalRenderer {
 	float aFloat8976;
 	int anInt8977;
 	float aFloat8978;
@@ -16,7 +16,7 @@ public class Class505_Sub3 extends Class505 {
 	Class185[] aClass185Array8984;
 	float aFloat8985;
 	int anInt8986;
-	Class160 aClass160_8987;
+	NativeSprite aClass160_8987;
 	int anInt8988;
 	float[][] aFloatArrayArray8989;
 	int anInt8990;
@@ -359,7 +359,7 @@ public class Class505_Sub3 extends Class505 {
 		}
 	}
 
-	public Class160 method8442(int[] is, int i, int i_75_, int i_76_, int i_77_, boolean bool) {
+	public NativeSprite method8442(int[] is, int i, int i_75_, int i_76_, int i_77_, boolean bool) {
 		boolean bool_78_ = false;
 		int i_79_ = i;
 		while_227_: for (int i_80_ = 0; i_80_ < i_77_; i_80_++) {
@@ -376,7 +376,7 @@ public class Class505_Sub3 extends Class505 {
 		return new Class160_Sub1_Sub1(this, is, i, i_75_, i_76_, i_77_, bool);
 	}
 
-	public Class8 method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_83_ = new int[class91s.length];
 		boolean bool_84_ = false;
@@ -420,7 +420,7 @@ public class Class505_Sub3 extends Class505 {
 		((Class505_Sub3) this).aBool9014 = true;
 	}
 
-	public Class160 method8548(int[] is, int i, int i_88_, int i_89_, int i_90_, boolean bool) {
+	public NativeSprite method8548(int[] is, int i, int i_88_, int i_89_, int i_90_, boolean bool) {
 		boolean bool_91_ = false;
 		int i_92_ = i;
 		while_228_: for (int i_93_ = 0; i_93_ < i_90_; i_93_++) {
@@ -1452,7 +1452,7 @@ public class Class505_Sub3 extends Class505 {
 		/* empty */
 	}
 
-	public Class160 method8654(int i, int i_436_, boolean bool, boolean bool_437_) {
+	public NativeSprite method8654(int i, int i_436_, boolean bool, boolean bool_437_) {
 		if (bool)
 			return new Class160_Sub1_Sub3(this, i, i_436_);
 		return new Class160_Sub1_Sub1(this, i, i_436_);
@@ -1476,7 +1476,7 @@ public class Class505_Sub3 extends Class505 {
 		return null;
 	}
 
-	public Class160 method8668(int i, int i_444_, int i_445_, int i_446_, boolean bool) {
+	public NativeSprite method8668(int i, int i_444_, int i_445_, int i_446_, boolean bool) {
 		if (null == ((Class505_Sub3) this).anIntArray8979)
 			throw new IllegalStateException("");
 		int[] is = new int[i_445_ * i_446_];
@@ -1524,7 +1524,7 @@ public class Class505_Sub3 extends Class505 {
 		}
 	}
 
-	public Class528 method8451(Class157 class157, int i, int i_456_, int i_457_, int i_458_) {
+	public MeshRasterizer createMeshRasterizer(RSMesh class157, int i, int i_456_, int i_457_, int i_458_) {
 		return new Class528_Sub2(this, class157, i, i_457_, i_458_, i_456_);
 	}
 
@@ -1538,7 +1538,7 @@ public class Class505_Sub3 extends Class505 {
 				Class169 class169 = anInterface22_5834.method144(i_465_, -1995871102);
 				if (!class169.aBool2056) {
 					if (i_465_ != -1787613477 * ((Class505_Sub3) this).anInt9015) {
-						Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_465_);
+						NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_465_);
 						if (null == class160) {
 							int[] is = method14359(i_465_);
 							if (null == is)
@@ -1772,7 +1772,7 @@ public class Class505_Sub3 extends Class505 {
 			method14373(bool_532_, i, i_534_, f, i_537_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_536_ != ((Class505_Sub3) this).anInt9015 * -1787613477) {
-				Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_536_);
+				NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_536_);
 				if (null == class160) {
 					int[] is = method14359(i_536_);
 					if (is != null) {
@@ -1796,7 +1796,7 @@ public class Class505_Sub3 extends Class505 {
 				Class169 class169 = anInterface22_5834.method144(i_544_, -1758221080);
 				if (!class169.aBool2056) {
 					if (i_544_ != -1787613477 * ((Class505_Sub3) this).anInt9015) {
-						Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_544_);
+						NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_544_);
 						if (null == class160) {
 							int[] is = method14359(i_544_);
 							if (null == is)
@@ -2479,7 +2479,7 @@ public class Class505_Sub3 extends Class505 {
 		return ((Class505_Sub3) this).aBool9014;
 	}
 
-	public Class8 method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_717_ = new int[class91s.length];
 		boolean bool_718_ = false;
@@ -2964,7 +2964,7 @@ public class Class505_Sub3 extends Class505 {
 		return false;
 	}
 
-	public Class160 method8518(Class91 class91, boolean bool) {
+	public NativeSprite method8518(Class91 class91, boolean bool) {
 		int[] is = class91.anIntArray955;
 		byte[] is_802_ = class91.aByteArray960;
 		int i = class91.anInt957;
@@ -3076,7 +3076,7 @@ public class Class505_Sub3 extends Class505 {
 		method14364();
 	}
 
-	public Class160 method8444(Class91 class91, boolean bool) {
+	public NativeSprite method8444(Class91 class91, boolean bool) {
 		int[] is = class91.anIntArray955;
 		byte[] is_831_ = class91.aByteArray960;
 		int i = class91.anInt957;
@@ -3146,7 +3146,7 @@ public class Class505_Sub3 extends Class505 {
 		method14364();
 	}
 
-	public Class528 method8564(Class157 class157, int i, int i_854_, int i_855_, int i_856_) {
+	public MeshRasterizer method8564(RSMesh class157, int i, int i_854_, int i_855_, int i_856_) {
 		return new Class528_Sub2(this, class157, i, i_855_, i_856_, i_854_);
 	}
 
@@ -3210,7 +3210,7 @@ public class Class505_Sub3 extends Class505 {
 		}
 	}
 
-	public Class528 method8561(Class157 class157, int i, int i_883_, int i_884_, int i_885_) {
+	public MeshRasterizer method8561(RSMesh class157, int i, int i_883_, int i_884_, int i_885_) {
 		return new Class528_Sub2(this, class157, i, i_884_, i_885_, i_883_);
 	}
 
@@ -5377,19 +5377,19 @@ public class Class505_Sub3 extends Class505 {
 		/* empty */
 	}
 
-	public Class160 method8461(int i, int i_1584_, boolean bool, boolean bool_1585_) {
+	public NativeSprite method8461(int i, int i_1584_, boolean bool, boolean bool_1585_) {
 		if (bool)
 			return new Class160_Sub1_Sub3(this, i, i_1584_);
 		return new Class160_Sub1_Sub1(this, i, i_1584_);
 	}
 
-	public Class160 method8577(int i, int i_1586_, boolean bool, boolean bool_1587_) {
+	public NativeSprite method8577(int i, int i_1586_, boolean bool, boolean bool_1587_) {
 		if (bool)
 			return new Class160_Sub1_Sub3(this, i, i_1586_);
 		return new Class160_Sub1_Sub1(this, i, i_1586_);
 	}
 
-	public Class160 method8543(int[] is, int i, int i_1588_, int i_1589_, int i_1590_, boolean bool) {
+	public NativeSprite method8543(int[] is, int i, int i_1588_, int i_1589_, int i_1590_, boolean bool) {
 		boolean bool_1591_ = false;
 		int i_1592_ = i;
 		while_229_: for (int i_1593_ = 0; i_1593_ < i_1590_; i_1593_++) {
@@ -5410,7 +5410,7 @@ public class Class505_Sub3 extends Class505 {
 		/* empty */
 	}
 
-	public Class160 method8612(Class91 class91, boolean bool) {
+	public NativeSprite method8612(Class91 class91, boolean bool) {
 		int[] is = class91.anIntArray955;
 		byte[] is_1599_ = class91.aByteArray960;
 		int i = class91.anInt957;
@@ -5460,7 +5460,7 @@ public class Class505_Sub3 extends Class505 {
 		return false;
 	}
 
-	public Class160 method8552(int i, int i_1616_, int i_1617_, int i_1618_, boolean bool) {
+	public NativeSprite method8552(int i, int i_1616_, int i_1617_, int i_1618_, boolean bool) {
 		if (null == ((Class505_Sub3) this).anIntArray8979)
 			throw new IllegalStateException("");
 		int[] is = new int[i_1617_ * i_1618_];
@@ -5637,7 +5637,7 @@ public class Class505_Sub3 extends Class505 {
 		/* empty */
 	}
 
-	public Class8 method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_1675_ = new int[class91s.length];
 		boolean bool_1676_ = false;
@@ -5676,11 +5676,11 @@ public class Class505_Sub3 extends Class505 {
 		is[3] = 1383960921 * ((Class505_Sub3) this).anInt8986;
 	}
 
-	public Class528 method8623(Class157 class157, int i, int i_1678_, int i_1679_, int i_1680_) {
+	public MeshRasterizer method8623(RSMesh class157, int i, int i_1678_, int i_1679_, int i_1680_) {
 		return new Class528_Sub2(this, class157, i, i_1679_, i_1680_, i_1678_);
 	}
 
-	public Class528 method8505(Class157 class157, int i, int i_1681_, int i_1682_, int i_1683_) {
+	public MeshRasterizer method8505(RSMesh class157, int i, int i_1681_, int i_1682_, int i_1683_) {
 		return new Class528_Sub2(this, class157, i, i_1682_, i_1683_, i_1681_);
 	}
 
@@ -5885,7 +5885,7 @@ public class Class505_Sub3 extends Class505 {
 			method14373(bool_1748_, i, i_1750_, f, i_1753_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_1752_ != ((Class505_Sub3) this).anInt9015 * -1787613477) {
-				Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1752_);
+				NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1752_);
 				if (null == class160) {
 					int[] is = method14359(i_1752_);
 					if (is != null) {
@@ -5911,7 +5911,7 @@ public class Class505_Sub3 extends Class505 {
 			method14373(bool_1755_, i, i_1757_, f, i_1760_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_1759_ != ((Class505_Sub3) this).anInt9015 * -1787613477) {
-				Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1759_);
+				NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1759_);
 				if (null == class160) {
 					int[] is = method14359(i_1759_);
 					if (is != null) {
@@ -5937,7 +5937,7 @@ public class Class505_Sub3 extends Class505 {
 			method14373(bool_1762_, i, i_1764_, f, i_1767_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_1766_ != ((Class505_Sub3) this).anInt9015 * -1787613477) {
-				Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1766_);
+				NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1766_);
 				if (null == class160) {
 					int[] is = method14359(i_1766_);
 					if (is != null) {
@@ -5965,7 +5965,7 @@ public class Class505_Sub3 extends Class505 {
 				Class169 class169 = anInterface22_5834.method144(i_1774_, -1931241045);
 				if (!class169.aBool2056) {
 					if (i_1774_ != -1787613477 * ((Class505_Sub3) this).anInt9015) {
-						Class160 class160 = (Class160) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1774_);
+						NativeSprite class160 = (NativeSprite) ((Class505_Sub3) this).aClass229_9013.method3865((long) i_1774_);
 						if (null == class160) {
 							int[] is = method14359(i_1774_);
 							if (null == is)
@@ -6455,7 +6455,7 @@ public class Class505_Sub3 extends Class505 {
 		return new PacketsDecoder(i, i_1887_, is, is_1888_);
 	}
 
-	public Class160 method8604(int i, int i_1889_, int i_1890_, int i_1891_, boolean bool) {
+	public NativeSprite method8604(int i, int i_1889_, int i_1890_, int i_1891_, boolean bool) {
 		if (null == ((Class505_Sub3) this).anIntArray8979)
 			throw new IllegalStateException("");
 		int[] is = new int[i_1890_ * i_1891_];

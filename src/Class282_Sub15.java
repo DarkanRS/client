@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub15 extends Class282 {
+public abstract class Class282_Sub15 extends Node {
 	Class282_Sub15 aClass282_Sub15_7598;
 	int anInt7599;
 	volatile boolean aBool7600 = true;

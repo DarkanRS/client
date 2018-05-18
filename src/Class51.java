@@ -3,10 +3,10 @@
  */
 
 public class Class51 implements Interface2 {
-	Class8 aClass8_484;
+	FontRenderer aClass8_484;
 	Class62 aClass62_485;
-	Class317 aClass317_486;
-	Class317 aClass317_487;
+	Index aClass317_486;
+	Index aClass317_487;
 	static int anInt488;
 
 	public void method11(boolean bool) {
@@ -18,7 +18,7 @@ public class Class51 implements Interface2 {
 		}
 	}
 
-	Class51(Class317 class317, Class317 class317_1_, Class62 class62) {
+	Class51(Index class317, Index class317_1_, Class62 class62) {
 		((Class51) this).aClass62_485 = class62;
 		((Class51) this).aClass317_487 = class317;
 		((Class51) this).aClass317_486 = class317_1_;

@@ -10,7 +10,7 @@ import jaclib.memory.heap.NativeHeap;
 
 import jaggl.OpenGL;
 
-public class Class505_Sub1 extends Class505 {
+public class Class505_Sub1 extends GraphicalRenderer {
 	boolean aBool8309;
 	static final float aFloat8310 = 0.35F;
 	static final int anInt8311 = 0;
@@ -357,7 +357,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	void method8397() {
-		for (Class282 class282 = ((Class505_Sub1) this).aClass473_8369.method7859(525152513); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -115))
+		for (Node class282 = ((Class505_Sub1) this).aClass473_8369.method7859(525152513); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -115))
 			((Class282_Sub1_Sub1) class282).method15450();
 		if (((Class505_Sub1) this).aClass170_8357 != null)
 			((Class505_Sub1) this).aClass170_8357.method2898();
@@ -410,7 +410,7 @@ public class Class505_Sub1 extends Class505 {
 		OpenGL.glEnd();
 	}
 
-	public Class160 method8604(int i, int i_14_, int i_15_, int i_16_, boolean bool) {
+	public NativeSprite method8604(int i, int i_14_, int i_15_, int i_16_, boolean bool) {
 		return new Class160_Sub2(this, i, i_14_, i_15_, i_16_);
 	}
 
@@ -596,7 +596,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	void method8531() {
-		for (Class282 class282 = ((Class505_Sub1) this).aClass473_8369.method7859(1244123639); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -114))
+		for (Node class282 = ((Class505_Sub1) this).aClass473_8369.method7859(1244123639); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -114))
 			((Class282_Sub1_Sub1) class282).method15450();
 		if (((Class505_Sub1) this).aClass170_8357 != null)
 			((Class505_Sub1) this).aClass170_8357.method2898();
@@ -1038,11 +1038,11 @@ public class Class505_Sub1 extends Class505 {
 		}
 	}
 
-	public Class160 method8654(int i, int i_152_, boolean bool, boolean bool_153_) {
+	public NativeSprite method8654(int i, int i_152_, boolean bool, boolean bool_153_) {
 		return new Class160_Sub2(this, i, i_152_, bool);
 	}
 
-	public Class160 method8444(Class91 class91, boolean bool) {
+	public NativeSprite method8444(Class91 class91, boolean bool) {
 		int[] is = new int[class91.anInt957 * class91.anInt954];
 		int i = 0;
 		int i_154_ = 0;
@@ -1061,16 +1061,16 @@ public class Class505_Sub1 extends Class505 {
 				}
 			}
 		}
-		Class160 class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, -1670906477);
+		NativeSprite class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, -1670906477);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
 
-	public Class160 method8442(int[] is, int i, int i_160_, int i_161_, int i_162_, boolean bool) {
+	public NativeSprite method8442(int[] is, int i, int i_160_, int i_161_, int i_162_, boolean bool) {
 		return new Class160_Sub2(this, i_161_, i_162_, is, i, i_160_);
 	}
 
-	public Class160 method8668(int i, int i_163_, int i_164_, int i_165_, boolean bool) {
+	public NativeSprite method8668(int i, int i_163_, int i_164_, int i_165_, boolean bool) {
 		return new Class160_Sub2(this, i, i_163_, i_164_, i_165_);
 	}
 
@@ -1119,7 +1119,7 @@ public class Class505_Sub1 extends Class505 {
 		/* empty */
 	}
 
-	public Class528 method8451(Class157 class157, int i, int i_171_, int i_172_, int i_173_) {
+	public MeshRasterizer createMeshRasterizer(RSMesh class157, int i, int i_171_, int i_172_, int i_173_) {
 		return new Class528_Sub1(this, class157, i, i_172_, i_173_, i_171_);
 	}
 
@@ -1353,11 +1353,11 @@ public class Class505_Sub1 extends Class505 {
 			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		while (!((Class505_Sub1) this).aClass473_8461.method7861(141891001)) {
-			Class282 class282 = ((Class505_Sub1) this).aClass473_8461.method7858((byte) -59);
+			Node class282 = ((Class505_Sub1) this).aClass473_8461.method7858((byte) -59);
 			OpenGL.glDeleteProgramARB((int) (class282.aLong3379 * -3442165056282524525L));
 		}
 		while (!((Class505_Sub1) this).aClass473_8379.method7861(141891001)) {
-			Class282 class282 = ((Class505_Sub1) this).aClass473_8379.method7858((byte) -53);
+			Node class282 = ((Class505_Sub1) this).aClass473_8379.method7858((byte) -53);
 			OpenGL.glDeleteShader((int) (class282.aLong3379 * -3442165056282524525L));
 		}
 		while (!((Class505_Sub1) this).aClass473_8373.method7861(141891001)) {
@@ -1373,7 +1373,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	void method8486() {
-		for (Class282 class282 = ((Class505_Sub1) this).aClass473_8369.method7859(1074880830); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -91))
+		for (Node class282 = ((Class505_Sub1) this).aClass473_8369.method7859(1074880830); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -91))
 			((Class282_Sub1_Sub1) class282).method15450();
 		if (((Class505_Sub1) this).aClass170_8357 != null)
 			((Class505_Sub1) this).aClass170_8357.method2898();
@@ -1598,7 +1598,7 @@ public class Class505_Sub1 extends Class505 {
 		return i_226_;
 	}
 
-	public Class8 method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub5(this, class414, class91s, bool);
 	}
 
@@ -1837,7 +1837,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13604(int i) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = (long) i * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8461.method7877(class282, 2139046755);
 	}
@@ -2120,11 +2120,11 @@ public class Class505_Sub1 extends Class505 {
 			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		while (!((Class505_Sub1) this).aClass473_8461.method7861(141891001)) {
-			Class282 class282 = ((Class505_Sub1) this).aClass473_8461.method7858((byte) -49);
+			Node class282 = ((Class505_Sub1) this).aClass473_8461.method7858((byte) -49);
 			OpenGL.glDeleteProgramARB((int) (class282.aLong3379 * -3442165056282524525L));
 		}
 		while (!((Class505_Sub1) this).aClass473_8379.method7861(141891001)) {
-			Class282 class282 = ((Class505_Sub1) this).aClass473_8379.method7858((byte) -79);
+			Node class282 = ((Class505_Sub1) this).aClass473_8379.method7858((byte) -79);
 			OpenGL.glDeleteShader((int) (class282.aLong3379 * -3442165056282524525L));
 		}
 		while (!((Class505_Sub1) this).aClass473_8373.method7861(141891001)) {
@@ -2315,7 +2315,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	void method8485() {
-		for (Class282 class282 = ((Class505_Sub1) this).aClass473_8369.method7859(557753103); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -57))
+		for (Node class282 = ((Class505_Sub1) this).aClass473_8369.method7859(557753103); class282 != null; class282 = ((Class505_Sub1) this).aClass473_8369.method7857((byte) -57))
 			((Class282_Sub1_Sub1) class282).method15450();
 		if (((Class505_Sub1) this).aClass170_8357 != null)
 			((Class505_Sub1) this).aClass170_8357.method2898();
@@ -2337,13 +2337,13 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13627(long l) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = l * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8379.method7877(class282, 326472863);
 	}
 
 	final synchronized void method13628(int i) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = (long) i * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8461.method7877(class282, 1496395811);
 	}
@@ -2586,7 +2586,7 @@ public class Class505_Sub1 extends Class505 {
 		return true;
 	}
 
-	public Class8 method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub5(this, class414, class91s, bool);
 	}
 
@@ -2604,7 +2604,7 @@ public class Class505_Sub1 extends Class505 {
 		((Class505_Sub1) this).aClass473_8375.method7877(class282_sub38, -373446162);
 	}
 
-	public Class160 method8552(int i, int i_306_, int i_307_, int i_308_, boolean bool) {
+	public NativeSprite method8552(int i, int i_306_, int i_307_, int i_308_, boolean bool) {
 		return new Class160_Sub2(this, i, i_306_, i_307_, i_308_);
 	}
 
@@ -2998,11 +2998,11 @@ public class Class505_Sub1 extends Class505 {
 			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		while (!((Class505_Sub1) this).aClass473_8461.method7861(141891001)) {
-			Class282 class282 = ((Class505_Sub1) this).aClass473_8461.method7858((byte) -13);
+			Node class282 = ((Class505_Sub1) this).aClass473_8461.method7858((byte) -13);
 			OpenGL.glDeleteProgramARB((int) (class282.aLong3379 * -3442165056282524525L));
 		}
 		while (!((Class505_Sub1) this).aClass473_8379.method7861(141891001)) {
-			Class282 class282 = ((Class505_Sub1) this).aClass473_8379.method7858((byte) -70);
+			Node class282 = ((Class505_Sub1) this).aClass473_8379.method7858((byte) -70);
 			OpenGL.glDeleteShader((int) (class282.aLong3379 * -3442165056282524525L));
 		}
 		while (!((Class505_Sub1) this).aClass473_8373.method7861(141891001)) {
@@ -3394,7 +3394,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13646(long l) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = l * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8379.method7877(class282, -245143235);
 	}
@@ -3896,19 +3896,19 @@ public class Class505_Sub1 extends Class505 {
 		OpenGL.glEnd();
 	}
 
-	public Class8 method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub5(this, class414, class91s, bool);
 	}
 
-	public Class160 method8543(int[] is, int i, int i_620_, int i_621_, int i_622_, boolean bool) {
+	public NativeSprite method8543(int[] is, int i, int i_620_, int i_621_, int i_622_, boolean bool) {
 		return new Class160_Sub2(this, i_621_, i_622_, is, i, i_620_);
 	}
 
-	public Class160 method8548(int[] is, int i, int i_623_, int i_624_, int i_625_, boolean bool) {
+	public NativeSprite method8548(int[] is, int i, int i_623_, int i_624_, int i_625_, boolean bool) {
 		return new Class160_Sub2(this, i_624_, i_625_, is, i, i_623_);
 	}
 
-	public Class160 method8612(Class91 class91, boolean bool) {
+	public NativeSprite method8612(Class91 class91, boolean bool) {
 		int[] is = new int[class91.anInt957 * class91.anInt954];
 		int i = 0;
 		int i_626_ = 0;
@@ -3927,12 +3927,12 @@ public class Class505_Sub1 extends Class505 {
 				}
 			}
 		}
-		Class160 class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 340274012);
+		NativeSprite class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 340274012);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
 
-	public Class160 method8518(Class91 class91, boolean bool) {
+	public NativeSprite method8518(Class91 class91, boolean bool) {
 		int[] is = new int[class91.anInt957 * class91.anInt954];
 		int i = 0;
 		int i_632_ = 0;
@@ -3951,7 +3951,7 @@ public class Class505_Sub1 extends Class505 {
 				}
 			}
 		}
-		Class160 class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 639428153);
+		NativeSprite class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 639428153);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
@@ -3969,7 +3969,7 @@ public class Class505_Sub1 extends Class505 {
 		return Class455_Sub2.method14343(this, i, i_639_, is, is_640_);
 	}
 
-	public Class160 method8577(int i, int i_641_, boolean bool, boolean bool_642_) {
+	public NativeSprite method8577(int i, int i_641_, boolean bool, boolean bool_642_) {
 		return new Class160_Sub2(this, i, i_641_, bool);
 	}
 
@@ -4064,19 +4064,19 @@ public class Class505_Sub1 extends Class505 {
 		/* empty */
 	}
 
-	public Class528 method8561(Class157 class157, int i, int i_660_, int i_661_, int i_662_) {
+	public MeshRasterizer method8561(RSMesh class157, int i, int i_660_, int i_661_, int i_662_) {
 		return new Class528_Sub1(this, class157, i, i_661_, i_662_, i_660_);
 	}
 
-	public Class528 method8623(Class157 class157, int i, int i_663_, int i_664_, int i_665_) {
+	public MeshRasterizer method8623(RSMesh class157, int i, int i_663_, int i_664_, int i_665_) {
 		return new Class528_Sub1(this, class157, i, i_664_, i_665_, i_663_);
 	}
 
-	public Class528 method8505(Class157 class157, int i, int i_666_, int i_667_, int i_668_) {
+	public MeshRasterizer method8505(RSMesh class157, int i, int i_666_, int i_667_, int i_668_) {
 		return new Class528_Sub1(this, class157, i, i_667_, i_668_, i_666_);
 	}
 
-	public Class528 method8564(Class157 class157, int i, int i_669_, int i_670_, int i_671_) {
+	public MeshRasterizer method8564(RSMesh class157, int i, int i_669_, int i_670_, int i_671_) {
 		return new Class528_Sub1(this, class157, i, i_670_, i_671_, i_669_);
 	}
 
@@ -4092,7 +4092,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13651(long l) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = l * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8379.method7877(class282, 315594439);
 	}
@@ -4462,7 +4462,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13662(long l) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = l * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8379.method7877(class282, 785288693);
 	}
@@ -4534,7 +4534,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13664(int i) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = (long) i * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8461.method7877(class282, 598291940);
 	}
@@ -4976,7 +4976,7 @@ public class Class505_Sub1 extends Class505 {
 		}
 	}
 
-	public Class160 method8461(int i, int i_773_, boolean bool, boolean bool_774_) {
+	public NativeSprite method8461(int i, int i_773_, boolean bool, boolean bool_774_) {
 		return new Class160_Sub2(this, i, i_773_, bool);
 	}
 
@@ -5970,7 +5970,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13750(int i) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = (long) i * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8461.method7877(class282, -46921954);
 	}
@@ -5984,7 +5984,7 @@ public class Class505_Sub1 extends Class505 {
 	}
 
 	final synchronized void method13751(int i) {
-		Class282 class282 = new Class282();
+		Node class282 = new Node();
 		class282.aLong3379 = (long) i * -1253863389874800229L;
 		((Class505_Sub1) this).aClass473_8461.method7877(class282, -393844601);
 	}

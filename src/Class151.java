@@ -45,7 +45,7 @@ public class Class151 {
 	static void method2590(Class118 class118, byte i) {
 		if (client.aBool7344) {
 			if (class118.anObjectArray1393 != null) {
-				Class118 class118_2_ = Class317.method5694(Class7.anInt56 * 728544879, client.anInt7345 * -1673073865, -1264111799);
+				Class118 class118_2_ = Index.method5694(Class7.anInt56 * 728544879, client.anInt7345 * -1673073865, -1264111799);
 				if (class118_2_ != null) {
 					Class282_Sub43 class282_sub43 = new Class282_Sub43();
 					class282_sub43.aClass118_8053 = class118;

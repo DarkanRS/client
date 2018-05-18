@@ -6,7 +6,7 @@ public class Class125 implements Interface8 {
 	int anInt1568;
 	int anInt1569;
 	float[] aFloatArray1570;
-	public static Class160 aClass160_1571;
+	public static NativeSprite aClass160_1571;
 	static int anInt1572;
 	public static Class424 aClass424_1573;
 
@@ -72,7 +72,7 @@ public class Class125 implements Interface8 {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class40.method869(class118, class98, class527, 1852179585);
+		NamedFileReference.method869(class118, class98, class527, 1852179585);
 	}
 
 	static final void method2170(Class118 class118, Class98 class98, CS2Executor class527, int i) {

@@ -86,7 +86,7 @@ public class Class161 {
 					}
 					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null)
 						Class119.method2076(client.aClass118_7257, client.aClass118_7370, 1527549411);
-				} else if ((1 == -1718417173 * client.anInt7339 || Class327_Sub1.method12562(-285174833)) && 2144330291 * Class20.anInt169 > 2)
+				} else if ((1 == -1718417173 * client.anInt7339 || JS5GrabWorker.method12562(-285174833)) && 2144330291 * Class20.anInt169 > 2)
 					Class242.method4164((client.anInt7361 * 290868651 + client.anInt7252 * -1609719385), (-833040991 * client.anInt7215 + -554256717 * client.anInt7362), -85284222);
 				else if (Class216.method3677(575398960))
 					Class242.method4164((client.anInt7252 * -1609719385 + client.anInt7361 * 290868651), (client.anInt7215 * -833040991 + client.anInt7362 * -554256717), 405616760);

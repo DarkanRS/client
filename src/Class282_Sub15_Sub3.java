@@ -4,12 +4,12 @@
 
 public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	Class282_Sub15_Sub2 aClass282_Sub15_Sub2_9753;
-	Class482 aClass482_9754 = new Class482();
+	NodeCollection aClass482_9754 = new NodeCollection();
 	Class282_Sub15_Sub4 aClass282_Sub15_Sub4_9755 = new Class282_Sub15_Sub4();
 
 	void method12242(int[] is, int i, int i_0_) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12230(is, i, i_0_);
-		while_194_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 9); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(170364017)) {
+		while_194_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 9); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(170364017)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 2059938362)) {
 				int i_1_ = i;
 				int i_2_ = i_0_;
@@ -30,7 +30,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12226() {
-		Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 120);
+		Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 120);
 		if (class282_sub13 == null)
 			return null;
 		if (((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568 != null)
@@ -65,7 +65,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	void method12230(int[] is, int i, int i_5_) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12230(is, i, i_5_);
-		while_197_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 60); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(-503729338)) {
+		while_197_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 60); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(-503729338)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 2021322787)) {
 				int i_6_ = i;
 				int i_7_ = i_5_;
@@ -121,7 +121,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12233() {
-		Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 41);
+		Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 41);
 		if (class282_sub13 == null)
 			return null;
 		if (((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568 != null)
@@ -151,7 +151,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 	}
 
 	Class282_Sub15 method12232() {
-		Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 77);
+		Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 77);
 		if (class282_sub13 == null)
 			return null;
 		if (((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568 != null)
@@ -196,7 +196,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	Class282_Sub15 method12229() {
 		for (;;) {
-			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(-340710606);
+			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(-340710606);
 			if (null == class282_sub13)
 				return null;
 			if (null != ((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568)
@@ -206,7 +206,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	Class282_Sub15 method12235() {
 		for (;;) {
-			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(132765120);
+			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(132765120);
 			if (null == class282_sub13)
 				return null;
 			if (null != ((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568)
@@ -216,7 +216,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	Class282_Sub15 method12236() {
 		for (;;) {
-			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(2134723021);
+			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(2134723021);
 			if (null == class282_sub13)
 				return null;
 			if (null != ((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568)
@@ -263,7 +263,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	void method12241(int[] is, int i, int i_26_) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12230(is, i, i_26_);
-		while_200_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 61); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(1821407871)) {
+		while_200_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 61); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(1821407871)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 1864764119)) {
 				int i_27_ = i;
 				int i_28_ = i_26_;
@@ -285,7 +285,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	Class282_Sub15 method12239() {
 		for (;;) {
-			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(2047491972);
+			Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(2047491972);
 			if (null == class282_sub13)
 				return null;
 			if (null != ((Class282_Sub13) class282_sub13).aClass282_Sub15_Sub5_7568)
@@ -295,7 +295,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	void method12243(int i) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12231(i);
-		while_203_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 48); class282_sub13 != null; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(-370103133)) {
+		while_203_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 48); class282_sub13 != null; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(-370103133)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 2054111295)) {
 				int i_29_ = i;
 				while_201_: do {
@@ -315,7 +315,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	void method12234(int i) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12231(i);
-		while_206_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 61); class282_sub13 != null; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(1963194555)) {
+		while_206_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 61); class282_sub13 != null; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(1963194555)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 1966927188)) {
 				int i_30_ = i;
 				while_204_: do {
@@ -444,7 +444,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	void method12231(int i) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12231(i);
-		while_209_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 104); class282_sub13 != null; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(1065777410)) {
+		while_209_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 104); class282_sub13 != null; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(1065777410)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 2094163441)) {
 				int i_49_ = i;
 				while_207_: do {
@@ -464,7 +464,7 @@ public class Class282_Sub15_Sub3 extends Class282_Sub15 {
 
 	void method12240(int[] is, int i, int i_50_) {
 		((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub4_9755.method12230(is, i, i_50_);
-		while_212_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8097((byte) 70); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.method8067(2023134706)) {
+		while_212_: for (Class282_Sub13 class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.head((byte) 70); null != class282_sub13; class282_sub13 = (Class282_Sub13) ((Class282_Sub15_Sub3) this).aClass482_9754.next(2023134706)) {
 			if (!((Class282_Sub15_Sub3) this).aClass282_Sub15_Sub2_9753.method15115(class282_sub13, 1817142568)) {
 				int i_51_ = i;
 				int i_52_ = i_50_;

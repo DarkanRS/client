@@ -13,7 +13,7 @@ public class Class165 {
 		throw new Error();
 	}
 
-	public static Class505 method2851(Canvas canvas, Interface22 interface22, int i, int i_0_) {
+	public static GraphicalRenderer method2851(Canvas canvas, Interface22 interface22, int i, int i_0_) {
 		return new ja(canvas, interface22, i, i_0_);
 	}
 

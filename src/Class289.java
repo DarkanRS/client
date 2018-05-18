@@ -288,7 +288,7 @@ public class Class289 implements Runnable {
 		((Class289) this).aThread3445.start();
 	}
 
-	static boolean method5097(Class505 class505, int i, int i_10_) {
+	static boolean method5097(GraphicalRenderer class505, int i, int i_10_) {
 		Class169.method2869(1783349516);
 		if (!class505.method8455(1890093661))
 			return false;

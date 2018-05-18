@@ -4,7 +4,7 @@
 
 public class Class444 {
 	Class229 aClass229_5377 = new Class229(128);
-	Class317 aClass317_5378;
+	Index aClass317_5378;
 	public static int[] anIntArray5379;
 
 	public Class431 method7423(int i) {
@@ -41,12 +41,12 @@ public class Class444 {
 		return class431;
 	}
 
-	public Class444(Class486 class486, Class495 class495, Class317 class317) {
+	public Class444(Game class486, Class495 class495, Index class317) {
 		((Class444) this).aClass317_5378 = class317;
 		if (null != ((Class444) this).aClass317_5378) {
-			int i = ((Class444) this).aClass317_5378.method5618(-1259843972) - 1;
+			int i = ((Class444) this).aClass317_5378.containersCount(-1259843972) - 1;
 			Class120.aClass120_1471.method2078(-613744571);
-			((Class444) this).aClass317_5378.method5624(i, -826629788);
+			((Class444) this).aClass317_5378.filesCount(i, -826629788);
 		}
 	}
 
@@ -68,7 +68,7 @@ public class Class444 {
 	}
 
 	public static boolean method7426(int i, byte i_1_) {
-		for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8097((byte) 75)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.method8067(1043628930))) {
+		for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 75)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1043628930))) {
 			if (Class237.method3989((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), (byte) 0) && (long) i == (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)))
 				return true;
 		}

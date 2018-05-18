@@ -125,10 +125,10 @@ public class Class103_Sub1 extends Class103 {
 		method14483(1614437421);
 	}
 
-	static Class160 method14490(byte[] is, byte i) {
+	static NativeSprite method14490(byte[] is, byte i) {
 		if (is == null)
 			throw new RuntimeException("");
-		Class160 class160;
+		NativeSprite class160;
 		for (;;) {
 			try {
 				Image image = Toolkit.getDefaultToolkit().createImage(is);

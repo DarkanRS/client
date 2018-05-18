@@ -8,10 +8,10 @@ public class Class488 {
 	public static final int anInt5755 = -4;
 	public static final int anInt5756 = 20;
 	public static final int anInt5757 = -1;
-	public static Class317 aClass317_5758;
+	public static Index aClass317_5758;
 	public static Class45 aClass45_5759;
 	public static int anInt5760;
-	static Class317 aClass317_5761;
+	static Index aClass317_5761;
 
 	Class488() throws Throwable {
 		throw new Error();

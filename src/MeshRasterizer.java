@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class528 {
+public abstract class MeshRasterizer {
 	protected boolean aBool7023 = false;
 	static final float aFloat7024 = 3.1415927F;
 
@@ -75,7 +75,7 @@ public abstract class Class528 {
 		fs_19_[1] = f_24_;
 	}
 
-	Class83 method11256(Class157 class157, int[] is, int i) {
+	Class83 method11256(RSMesh class157, int[] is, int i) {
 		int[] is_27_ = null;
 		int[] is_28_ = null;
 		int[] is_29_ = null;
@@ -548,7 +548,7 @@ public abstract class Class528 {
 
 	public abstract void Q(int i);
 
-	public abstract void method11269(Class528 class528_163_, int i, int i_164_, int i_165_, boolean bool);
+	public abstract void method11269(MeshRasterizer class528_163_, int i, int i_164_, int i_165_, boolean bool);
 
 	abstract void ka();
 
@@ -578,7 +578,7 @@ public abstract class Class528 {
 
 	public abstract void KA(int i);
 
-	Class528() {
+	MeshRasterizer() {
 		/* empty */
 	}
 
@@ -636,13 +636,13 @@ public abstract class Class528 {
 
 	public abstract void bj(int i);
 
-	public abstract Class528 method11276(byte i, int i_199_, boolean bool);
+	public abstract MeshRasterizer method11276(byte i, int i_199_, boolean bool);
 
-	public abstract Class528 method11277(byte i, int i_200_, boolean bool);
+	public abstract MeshRasterizer method11277(byte i, int i_200_, boolean bool);
 
-	public abstract Class528 method11278(byte i, int i_201_, boolean bool);
+	public abstract MeshRasterizer method11278(byte i, int i_201_, boolean bool);
 
-	public abstract Class528 method11279(byte i, int i_202_, boolean bool);
+	public abstract MeshRasterizer method11279(byte i, int i_202_, boolean bool);
 
 	void method11280(int i, int i_203_, int i_204_, int i_205_, int i_206_, int i_207_, float[] fs, float f, int i_208_, float f_209_, float[] fs_210_) {
 		i -= i_205_;
@@ -839,7 +839,7 @@ public abstract class Class528 {
 
 	abstract void bb(int i, int i_272_, int i_273_, int i_274_);
 
-	public abstract Class528 method11289(byte i, int i_275_, boolean bool);
+	public abstract MeshRasterizer method11289(byte i, int i_275_, boolean bool);
 
 	public abstract int cc();
 
@@ -869,7 +869,7 @@ public abstract class Class528 {
 
 	public abstract int cb();
 
-	public abstract Class528 method11296(byte i, int i_276_, boolean bool);
+	public abstract MeshRasterizer method11296(byte i, int i_276_, boolean bool);
 
 	public abstract int cm();
 
@@ -933,7 +933,7 @@ public abstract class Class528 {
 
 	public abstract void cq(short i, short i_289_);
 
-	public abstract void method11299(Class528 class528_290_, int i, int i_291_, int i_292_, boolean bool);
+	public abstract void method11299(MeshRasterizer class528_290_, int i, int i_291_, int i_292_, boolean bool);
 
 	public abstract void cy(int i, int i_293_, int i_294_, int i_295_);
 
@@ -1246,7 +1246,7 @@ public abstract class Class528 {
 		fs_404_[1] = f_409_;
 	}
 
-	Class83 method11317(Class157 class157, int[] is, int i) {
+	Class83 method11317(RSMesh class157, int[] is, int i) {
 		int[] is_412_ = null;
 		int[] is_413_ = null;
 		int[] is_414_ = null;
@@ -1339,7 +1339,7 @@ public abstract class Class528 {
 		return new Class83(this, is_412_, is_413_, is_414_, fs);
 	}
 
-	Class83 method11318(Class157 class157, int[] is, int i) {
+	Class83 method11318(RSMesh class157, int[] is, int i) {
 		int[] is_436_ = null;
 		int[] is_437_ = null;
 		int[] is_438_ = null;
@@ -1432,7 +1432,7 @@ public abstract class Class528 {
 		return new Class83(this, is_436_, is_437_, is_438_, fs);
 	}
 
-	Class83 method11319(Class157 class157, int[] is, int i) {
+	Class83 method11319(RSMesh class157, int[] is, int i) {
 		int[] is_460_ = null;
 		int[] is_461_ = null;
 		int[] is_462_ = null;

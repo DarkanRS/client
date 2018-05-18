@@ -151,7 +151,7 @@ public class Class496 implements Interface43 {
 		if (client.anInt7349 * -1699899559 != -1) {
 			int i_6_ = Class163.aClass209_2031.method3569(2131144344);
 			int i_7_ = Class163.aClass209_2031.method3570(756095591);
-			Class282_Sub53 class282_sub53 = (Class282_Sub53) client.aClass482_7267.method8097((byte) 28);
+			Class282_Sub53 class282_sub53 = (Class282_Sub53) client.aClass482_7267.head((byte) 28);
 			if (null != class282_sub53) {
 				i_6_ = class282_sub53.method13481(1154972064);
 				i_7_ = class282_sub53.method13469(1835497951);

@@ -259,7 +259,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 				} else if (Class169.method2869(1898123142) >= 3740457902241092779L * Class28.aLong351)
 					Class496.aClass510_5816 = client.aClass508_7223.method8729((Class159.aClass450_2010.aString5433), (short) 5418);
 				Class434.method7292((byte) -22);
-				Class282_Sub53 class282_sub53 = ((Class282_Sub53) client.aClass482_7267.method8097((byte) 106));
+				Class282_Sub53 class282_sub53 = ((Class282_Sub53) client.aClass482_7267.head((byte) 106));
 				if (client.aClass257_7353.method4430(-1135712280) != null) {
 					if (5 == Class262.anInt3240 * -672443707)
 						Class521_Sub1_Sub5_Sub2.method16113(70521151);
@@ -484,7 +484,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 		Class96_Sub10.method14603(4, i_44_ << 16 | i_45_, i_46_, "", (byte) 73);
 	}
 
-	public static void method15388(Class317 class317, byte i) {
+	public static void method15388(Index class317, byte i) {
 		Class219.aClass317_2710 = class317;
 	}
 }

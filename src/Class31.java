@@ -4,9 +4,9 @@
  */
 import java.io.IOException;
 
-public class Class31 implements Interface20 {
-	Class317 aClass317_358;
-	Class317 aClass317_359;
+public class Class31 implements IndexLoader {
+	Index aClass317_358;
+	Index aClass317_359;
 	Class229 aClass229_360 = new Class229(64);
 	public static int anInt361;
 
@@ -82,10 +82,10 @@ public class Class31 implements Interface20 {
 		return class44;
 	}
 
-	public Class31(Class486 class486, Class495 class495, Class317 class317, Class317 class317_2_) {
+	public Class31(Game class486, Class495 class495, Index class317, Index class317_2_) {
 		((Class31) this).aClass317_358 = class317;
 		((Class31) this).aClass317_359 = class317_2_;
-		((Class31) this).aClass317_358.method5624(-71319279 * (Class120.aClass120_1466.anInt1521), 409432994);
+		((Class31) this).aClass317_358.filesCount(-71319279 * (Class120.aClass120_1466.anInt1521), 409432994);
 	}
 
 	public void method806() {

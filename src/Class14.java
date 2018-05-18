@@ -38,7 +38,7 @@ public class Class14 {
 	}
 
 	public static void method511() {
-		if (client.anInt7166 * -1741204137 == 5 && (!Class203.method3360((byte) -83) && !Class85.method1466(202936196))) {
+		if (client.anInt7166 * -1741204137 == 5 && (!JS5CacheFile.method3360((byte) -83) && !Class85.method1466(202936196))) {
 			Class365.method6298(8, 788883621);
 		}
 	}
@@ -370,7 +370,7 @@ public class Class14 {
 	}
 
 	public static void method533() {
-		if (client.anInt7166 * -1741204137 == 5 && (!Class203.method3360((byte) 15) && !Class85.method1466(1248559152))) {
+		if (client.anInt7166 * -1741204137 == 5 && (!JS5CacheFile.method3360((byte) 15) && !Class85.method1466(1248559152))) {
 			Class365.method6298(8, 1165660023);
 		}
 	}

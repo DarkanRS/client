@@ -2,12 +2,12 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub54 extends Class282 {
+public class Class282_Sub54 extends Node {
 	public Class468_Sub4 aClass468_Sub4_8187;
 	static final int anInt8188 = 23;
 	public static final int anInt8189 = 245;
 	public static final int anInt8190 = 500;
-	Class486 aClass486_8191;
+	Game aClass486_8191;
 	public Class468_Sub6 aClass468_Sub6_8192;
 	public Class468_Sub13 aClass468_Sub13_8193;
 	public Class468_Sub30 aClass468_Sub30_8194;
@@ -115,7 +115,7 @@ public class Class282_Sub54 extends Class282 {
 		method13502(-1736305082);
 	}
 
-	public Class282_Sub54(RsByteBuffer class282_sub35, Class486 class486, int i) {
+	public Class282_Sub54(RsByteBuffer class282_sub35, Game class486, int i) {
 		((Class282_Sub54) this).aClass486_8191 = class486;
 		((Class282_Sub54) this).aClass463_8196 = new Class463(-1346844585 * Class263.anInt3273, Class263.anInt3277 * -1290103735, Class402.aString4828.indexOf("arm") != -1);
 		aClass468_Sub18_8230 = new Class468_Sub18(i, this);
@@ -526,7 +526,7 @@ public class Class282_Sub54 extends Class282 {
 		method13502(-1736305082);
 	}
 
-	public Class282_Sub54(Class486 class486, int i) {
+	public Class282_Sub54(Game class486, int i) {
 		((Class282_Sub54) this).aClass486_8191 = class486;
 		((Class282_Sub54) this).aClass463_8196 = new Class463(Class263.anInt3273 * -1346844585, -1290103735 * Class263.anInt3277, (Class402.aString4828.toLowerCase().indexOf("arm") != -1));
 		aClass468_Sub18_8230 = new Class468_Sub18(i, this);
@@ -612,7 +612,7 @@ public class Class282_Sub54 extends Class282 {
 			aClass468_Sub10_8215 = new Class468_Sub10(this);
 	}
 
-	public Class486 method13507() {
+	public Game method13507() {
 		return ((Class282_Sub54) this).aClass486_8191;
 	}
 
@@ -754,7 +754,7 @@ public class Class282_Sub54 extends Class282 {
 		aClass468_Sub10_8215.method12692(2102384761);
 	}
 
-	public Class486 method13514(byte i) {
+	public Game method13514(byte i) {
 		return ((Class282_Sub54) this).aClass486_8191;
 	}
 

@@ -91,7 +91,7 @@ public class Class306 implements Runnable {
 							i_3_ = i_3_ << 24 | 0xffffff;
 							Class275.method4891((byte) -26);
 							Class316.aClass505_3680.ba(1, 0);
-							Class160 class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -367647925));
+							NativeSprite class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -367647925));
 							Class158_Sub1 class158_sub1 = Class316.aClass505_3680.method8418();
 							class158_sub1.method13759(0, class160.method2808());
 							Class316.aClass505_3680.method8637(class158_sub1, 2132781090);
@@ -155,7 +155,7 @@ public class Class306 implements Runnable {
 							i_6_ = i_6_ << 24 | 0xffffff;
 							Class275.method4891((byte) -118);
 							Class316.aClass505_3680.ba(1, 0);
-							Class160 class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -166884611));
+							NativeSprite class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -166884611));
 							Class158_Sub1 class158_sub1 = Class316.aClass505_3680.method8418();
 							class158_sub1.method13759(0, class160.method2808());
 							Class316.aClass505_3680.method8637(class158_sub1, -570536248);
@@ -219,7 +219,7 @@ public class Class306 implements Runnable {
 							i_9_ = i_9_ << 24 | 0xffffff;
 							Class275.method4891((byte) -46);
 							Class316.aClass505_3680.ba(1, 0);
-							Class160 class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, 662915370));
+							NativeSprite class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, 662915370));
 							Class158_Sub1 class158_sub1 = Class316.aClass505_3680.method8418();
 							class158_sub1.method13759(0, class160.method2808());
 							Class316.aClass505_3680.method8637(class158_sub1, -802865212);
@@ -435,6 +435,6 @@ public class Class306 implements Runnable {
 			Class109.method1858(class118, (byte) 77);
 		}
 		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			Class313.method5581(-1952846363 * class118.anInt1287, (byte) 2);
+			JS5LocalRequester.method5581(-1952846363 * class118.anInt1287, (byte) 2);
 	}
 }

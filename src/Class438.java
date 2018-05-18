@@ -5,9 +5,9 @@
 import java.io.IOException;
 
 public class Class438 {
-	Class317 aClass317_5341;
+	Index aClass317_5341;
 	Class229 aClass229_5342;
-	Class317 aClass317_5343;
+	Index aClass317_5343;
 	Class229 aClass229_5344 = new Class229(64);
 
 	public void method7324(int i) {
@@ -58,11 +58,11 @@ public class Class438 {
 		}
 	}
 
-	public Class438(Class486 class486, Class495 class495, Class317 class317, Class317 class317_2_) {
+	public Class438(Game class486, Class495 class495, Index class317, Index class317_2_) {
 		((Class438) this).aClass229_5342 = new Class229(2);
 		((Class438) this).aClass317_5343 = class317;
 		((Class438) this).aClass317_5341 = class317_2_;
-		((Class438) this).aClass317_5343.method5624((Class120.aClass120_1496.anInt1521) * -71319279, 46053667);
+		((Class438) this).aClass317_5343.filesCount((Class120.aClass120_1496.anInt1521) * -71319279, 46053667);
 	}
 
 	public Class419 method7328(int i) {
@@ -140,7 +140,7 @@ public class Class438 {
 			}
 			class184.method3051((byte) -59);
 		}
-		Class312.method5558(-500941691);
+		JS5StandardRequester.method5558(-500941691);
 		Class356.method6227(false, (byte) -48);
 		client.aClass257_7353.method4444(1869336559);
 		client.aClass257_7353.method4485(-756888037);

@@ -101,7 +101,7 @@ public class Class190 {
 		}
 	}
 
-	static void method3149(Class118 class118, Class455 class455, int i, int i_3_, int i_4_, int i_5_, Class160 class160, int i_6_) {
+	static void method3149(Class118 class118, Class455 class455, int i, int i_3_, int i_4_, int i_5_, NativeSprite class160, int i_6_) {
 		if (null != class160) {
 			int i_7_;
 			if (4 == Class262.anInt3240 * -672443707) {
@@ -200,8 +200,8 @@ public class Class190 {
 		client.aClass465_7334.method7749(1935752602);
 		client.aClass457_7335.method7651((byte) 5);
 		client.aClass465_7414.method7749(828403909);
-		Class282_Sub31.aClass482_7775 = new Class482();
-		Class282_Sub31.aClass482_7776 = new Class482();
+		Class282_Sub31.aClass482_7775 = new NodeCollection();
+		Class282_Sub31.aClass482_7776 = new NodeCollection();
 		Class158_Sub1.aClass3_8507.method265(-1043684196);
 		Class8_Sub3.method14341(1480679080);
 		Class296.anInt3534 = 0;
@@ -232,8 +232,8 @@ public class Class190 {
 			Class351.method6196(class282_sub44, true, false, -1492337711);
 		}
 		client.anInt7349 = -153305321;
-		client.aClass465_7442 = new SwitchMap(8);
-		ItemEffects.method7041((byte) -126);
+		client.aClass465_7442 = new IterableNodeMap(8);
+		MeshModifier.method7041((byte) -126);
 		client.aClass118_7352 = null;
 		for (int i_33_ = 0; i_33_ < 8; i_33_++) {
 			client.aStringArray7329[i_33_] = null;

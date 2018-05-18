@@ -2,10 +2,10 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub30 extends Class282 {
+public class Class282_Sub30 extends Node {
 	int[] anIntArray7709;
 	int[] anIntArray7710 = { -1 };
-	static SwitchMap aClass465_7711 = new SwitchMap(32);
+	static IterableNodeMap aClass465_7711 = new IterableNodeMap(32);
 	static Class229 aClass229_7712 = new Class229(11);
 
 	static void method12427() {
@@ -30,8 +30,8 @@ public class Class282_Sub30 extends Class282 {
 		return i_2_;
 	}
 
-	final Class528 method12429(Class505 class505, int i, Class456 class456, int i_5_, boolean bool, Class238 class238, int i_6_) {
-		Class528 class528 = null;
+	final MeshRasterizer method12429(GraphicalRenderer class505, int i, Class456 class456, int i_5_, boolean bool, Class238 class238, int i_6_) {
+		MeshRasterizer class528 = null;
 		int i_7_ = i;
 		Class227 class227 = null;
 		if (-1 != i_5_)
@@ -51,7 +51,7 @@ public class Class282_Sub30 extends Class282 {
 			i_7_ |= class456.method7640(-1290274733);
 		long l = method12444(is, i_5_, class238 != null ? class238.anIntArray2923 : null, bool, 583894637);
 		if (aClass229_7712 != null)
-			class528 = (Class528) aClass229_7712.method3865(l);
+			class528 = (MeshRasterizer) aClass229_7712.method3865(l);
 		if (null == class528 || class505.method8452(class528.m(), i_7_) != 0) {
 			if (class528 != null)
 				i_7_ = class505.method8546(i_7_, class528.m());
@@ -63,7 +63,7 @@ public class Class282_Sub30 extends Class282 {
 			}
 			if (bool_11_)
 				return null;
-			Class157[] class157s = new Class157[is.length];
+			RSMesh[] class157s = new RSMesh[is.length];
 			for (int i_13_ = 0; i_13_ < is.length; i_13_++) {
 				if (is[i_13_] != -1)
 					class157s[i_13_] = Class119.aClass426_1463.getItemDefinitions(is[i_13_], 584500075).method7097(bool, null, 2085001887);
@@ -84,10 +84,10 @@ public class Class282_Sub30 extends Class282 {
 					}
 				}
 			}
-			Class157 class157 = new Class157(class157s, class157s.length);
+			RSMesh class157 = new RSMesh(class157s, class157s.length);
 			if (class238 != null)
 				i_10_ |= 0x4000;
-			class528 = class505.method8451(class157, i_10_, -939931493 * Class105.anInt1069, 65, 857);
+			class528 = class505.createMeshRasterizer(class157, i_10_, -939931493 * Class105.anInt1069, 65, 857);
 			if (class238 != null) {
 				for (int i_21_ = 0; i_21_ < 10; i_21_++) {
 					for (int i_22_ = 0; i_22_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_21_]).length; i_22_++) {
@@ -103,7 +103,7 @@ public class Class282_Sub30 extends Class282 {
 		}
 		if (class456 == null)
 			return class528;
-		Class528 class528_23_ = class528.method11289((byte) 1, i_7_, true);
+		MeshRasterizer class528_23_ = class528.method11289((byte) 1, i_7_, true);
 		class456.method7577(class528_23_, 0, 16711935);
 		return class528_23_;
 	}
@@ -111,13 +111,13 @@ public class Class282_Sub30 extends Class282 {
 	static void method12430(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 355510515);
 		if (class282_sub30 != null)
-			class282_sub30.method4991(-371378792);
+			class282_sub30.unlink(-371378792);
 	}
 
 	static void method12431(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, -1064510317);
 		if (class282_sub30 != null)
-			class282_sub30.method4991(-371378792);
+			class282_sub30.unlink(-371378792);
 	}
 
 	public static int method12432(int i, int i_24_, boolean bool) {
@@ -188,13 +188,13 @@ public class Class282_Sub30 extends Class282 {
 	static void method12438(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 638529549);
 		if (class282_sub30 != null)
-			class282_sub30.method4991(-371378792);
+			class282_sub30.unlink(-371378792);
 	}
 
 	static void method12439(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, -1515589512);
 		if (class282_sub30 != null)
-			class282_sub30.method4991(-371378792);
+			class282_sub30.unlink(-371378792);
 	}
 
 	public static int method12440(int i, int i_34_, boolean bool) {
@@ -389,8 +389,8 @@ public class Class282_Sub30 extends Class282 {
 		return ((Class282_Sub30) class282_sub30).anIntArray7710[i_64_];
 	}
 
-	final Class528 method12454(Class505 class505, int i, Class456 class456, int i_65_, boolean bool, Class238 class238) {
-		Class528 class528 = null;
+	final MeshRasterizer method12454(GraphicalRenderer class505, int i, Class456 class456, int i_65_, boolean bool, Class238 class238) {
+		MeshRasterizer class528 = null;
 		int i_66_ = i;
 		Class227 class227 = null;
 		if (-1 != i_65_)
@@ -410,7 +410,7 @@ public class Class282_Sub30 extends Class282 {
 			i_66_ |= class456.method7640(-1923028148);
 		long l = method12444(is, i_65_, class238 != null ? class238.anIntArray2923 : null, bool, 583894637);
 		if (aClass229_7712 != null)
-			class528 = (Class528) aClass229_7712.method3865(l);
+			class528 = (MeshRasterizer) aClass229_7712.method3865(l);
 		if (null == class528 || class505.method8452(class528.m(), i_66_) != 0) {
 			if (class528 != null)
 				i_66_ = class505.method8546(i_66_, class528.m());
@@ -422,7 +422,7 @@ public class Class282_Sub30 extends Class282 {
 			}
 			if (bool_70_)
 				return null;
-			Class157[] class157s = new Class157[is.length];
+			RSMesh[] class157s = new RSMesh[is.length];
 			for (int i_72_ = 0; i_72_ < is.length; i_72_++) {
 				if (is[i_72_] != -1)
 					class157s[i_72_] = Class119.aClass426_1463.getItemDefinitions(is[i_72_], 1368194180).method7097(bool, null, 1891500048);
@@ -443,10 +443,10 @@ public class Class282_Sub30 extends Class282 {
 					}
 				}
 			}
-			Class157 class157 = new Class157(class157s, class157s.length);
+			RSMesh class157 = new RSMesh(class157s, class157s.length);
 			if (class238 != null)
 				i_69_ |= 0x4000;
-			class528 = class505.method8451(class157, i_69_, -939931493 * Class105.anInt1069, 65, 857);
+			class528 = class505.createMeshRasterizer(class157, i_69_, -939931493 * Class105.anInt1069, 65, 857);
 			if (class238 != null) {
 				for (int i_80_ = 0; i_80_ < 10; i_80_++) {
 					for (int i_81_ = 0; i_81_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_80_]).length; i_81_++) {
@@ -462,7 +462,7 @@ public class Class282_Sub30 extends Class282 {
 		}
 		if (class456 == null)
 			return class528;
-		Class528 class528_82_ = class528.method11289((byte) 1, i_66_, true);
+		MeshRasterizer class528_82_ = class528.method11289((byte) 1, i_66_, true);
 		class456.method7577(class528_82_, 0, 16711935);
 		return class528_82_;
 	}

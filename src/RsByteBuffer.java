@@ -4,7 +4,7 @@
  */
 import java.math.BigInteger;
 
-public class RsByteBuffer extends Class282 {
+public class RsByteBuffer extends Node {
 	public static long[] aLongArray7979;
 	public int index;
 	public byte[] buffer;
@@ -74,7 +74,7 @@ public class RsByteBuffer extends Class282 {
 			throw new IllegalArgumentException("");
 		}
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) 0;
-		index += (Class317.method5693(string, 0, string.length(), buffer, -1990677291 * index, -74015201) * -1115476867);
+		index += (Index.method5693(string, 0, string.length(), buffer, -1990677291 * index, -74015201) * -1115476867);
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) 0;
 	}
 
@@ -253,7 +253,7 @@ public class RsByteBuffer extends Class282 {
 		return i_40_;
 	}
 
-	public int method13097(byte i) {
+	public int readBigSmart(byte i) {
 		if (buffer[index * -1990677291] < 0) {
 			return readInt() & 0x7fffffff;
 		}
@@ -484,7 +484,7 @@ public class RsByteBuffer extends Class282 {
 		if (i_92_ >= 0) {
 			throw new IllegalArgumentException("");
 		}
-		index += (Class317.method5693(string, 0, string.length(), buffer, -1990677291 * index, -74015201) * -1115476867);
+		index += (Index.method5693(string, 0, string.length(), buffer, -1990677291 * index, -74015201) * -1115476867);
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) 0;
 	}
 

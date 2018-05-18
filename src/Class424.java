@@ -3,7 +3,7 @@
  */
 
 public class Class424 {
-	Class317 aClass317_5027;
+	Index aClass317_5027;
 	Class229 aClass229_5028 = new Class229(64);
 	static int anInt5029;
 
@@ -19,16 +19,16 @@ public class Class424 {
 		}
 	}
 
-	public Class424(Class486 class486, Class495 class495, Class317 class317) {
+	public Class424(Game class486, Class495 class495, Index class317) {
 		((Class424) this).aClass317_5027 = class317;
 		if (((Class424) this).aClass317_5027 != null)
-			((Class424) this).aClass317_5027.method5624(Class120.aClass120_1474.anInt1521 * -71319279, -1867131018);
+			((Class424) this).aClass317_5027.filesCount(Class120.aClass120_1474.anInt1521 * -71319279, -1867131018);
 	}
 
-	public Class437 method7069(int i, byte i_1_) {
-		Class437 class437;
+	public AttributeDefault method7069(int i, byte i_1_) {
+		AttributeDefault class437;
 		synchronized (((Class424) this).aClass229_5028) {
-			class437 = ((Class437) ((Class424) this).aClass229_5028.method3865((long) i));
+			class437 = ((AttributeDefault) ((Class424) this).aClass229_5028.method3865((long) i));
 		}
 		if (null != class437)
 			return class437;
@@ -36,7 +36,7 @@ public class Class424 {
 		synchronized (((Class424) this).aClass317_5027) {
 			is = (((Class424) this).aClass317_5027.getFile(-71319279 * Class120.aClass120_1474.anInt1521, i, -1430082721));
 		}
-		class437 = new Class437();
+		class437 = new AttributeDefault();
 		if (null != is)
 			class437.method7315(new RsByteBuffer(is), 864887749);
 		synchronized (((Class424) this).aClass229_5028) {

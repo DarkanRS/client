@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class8_Sub1 extends Class8 {
+public class Class8_Sub1 extends FontRenderer {
 	byte[][] aByteArrayArray8509;
 	int[] anIntArray8510;
 	int[] anIntArray8511;

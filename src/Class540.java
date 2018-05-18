@@ -8,7 +8,7 @@ public class Class540 {
 	static int anInt7135;
 	public static int[] anIntArray7136;
 	static int anInt7137 = 0;
-	public static Class8 aClass8_7138;
+	public static FontRenderer aClass8_7138;
 
 	public static void method11559(boolean bool, boolean bool_0_) {
 		if (bool) {
@@ -889,7 +889,7 @@ public class Class540 {
 				if (class521_sub1_sub1_sub2_sub2.aClass409_10580.method6886(-1089073917))
 					Class169.method2876(class521_sub1_sub1_sub2_sub2, 1280406765);
 				class521_sub1_sub1_sub2_sub2.method16166(null, -12061587);
-				class282_sub47.method4991(-371378792);
+				class282_sub47.unlink(-371378792);
 				bool_194_ = true;
 			}
 		}

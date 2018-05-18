@@ -3,7 +3,7 @@
  */
 
 public class Class394 {
-	Class317 aClass317_4784;
+	Index aClass317_4784;
 	public int anInt4785;
 	Class229 aClass229_4786 = new Class229(64);
 
@@ -51,10 +51,10 @@ public class Class394 {
 		}
 	}
 
-	public Class394(Class486 class486, Class495 class495, Class317 class317) {
+	public Class394(Game class486, Class495 class495, Index class317) {
 		((Class394) this).aClass317_4784 = class317;
 		if (null != ((Class394) this).aClass317_4784)
-			anInt4785 = (((Class394) this).aClass317_4784.method5624(-71319279 * Class120.aClass120_1510.anInt1521, -774524494)) * -476997773;
+			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * Class120.aClass120_1510.anInt1521, -774524494)) * -476997773;
 		else
 			anInt4785 = 0;
 	}

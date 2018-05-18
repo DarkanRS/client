@@ -4,7 +4,7 @@
 
 public class Class447 {
 	Class229 aClass229_5417 = new Class229(64);
-	Class317 aClass317_5418;
+	Index aClass317_5418;
 
 	public void method7449() {
 		synchronized (((Class447) this).aClass229_5417) {
@@ -65,10 +65,10 @@ public class Class447 {
 		}
 	}
 
-	public Class447(Class486 class486, Class495 class495, Class317 class317) {
+	public Class447(Game class486, Class495 class495, Index class317) {
 		((Class447) this).aClass317_5418 = class317;
 		if (((Class447) this).aClass317_5418 != null)
-			((Class447) this).aClass317_5418.method5624(-71319279 * Class120.aClass120_1522.anInt1521, 1239350984);
+			((Class447) this).aClass317_5418.filesCount(-71319279 * Class120.aClass120_1522.anInt1521, 1239350984);
 	}
 
 	public void method7457(int i) {

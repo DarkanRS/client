@@ -13,7 +13,7 @@ public class ItemDefinitions implements Interface46 {
 	byte[] aByteArray5037;
 	short[] aShortArray5038;
 	short[] aShortArray5039;
-	SwitchMap aClass465_5040;
+	IterableNodeMap aClass465_5040;
 	short[] aShortArray5041;
 	public int anInt5042;
 	public String aString5043 = "null";
@@ -77,7 +77,7 @@ public class ItemDefinitions implements Interface46 {
 	public boolean aBool5101;
 	public int anInt5102;
 
-	public final Class528 method7084(Class505 class505, int i, int i_0_, Class238 class238, Class456 class456, int i_1_, int i_2_, int i_3_, int i_4_, byte i_5_) {
+	public final MeshRasterizer method7084(GraphicalRenderer class505, int i, int i_0_, Class238 class238, Class456 class456, int i_1_, int i_2_, int i_3_, int i_4_, byte i_5_) {
 		if (((ItemDefinitions) this).anIntArray5082 != null && i_0_ > 1) {
 			int i_6_ = -1;
 			for (int i_7_ = 0; i_7_ < 10; i_7_++) {
@@ -90,9 +90,9 @@ public class ItemDefinitions implements Interface46 {
 		int i_8_ = i;
 		if (class456 != null)
 			i_8_ |= class456.method7640(-1206237088);
-		Class528 class528;
+		MeshRasterizer class528;
 		synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-			class528 = ((Class528) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.anInt5840 * -413843045 << 29))));
+			class528 = ((MeshRasterizer) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.rendererId * -413843045 << 29))));
 		}
 		if (null == class528 || class505.method8452(class528.m(), i_8_) != 0) {
 			if (null != class528)
@@ -108,12 +108,12 @@ public class ItemDefinitions implements Interface46 {
 				i_9_ |= 0x2;
 			if (((ItemDefinitions) this).anInt5088 * -1149583549 != 128)
 				i_9_ |= 0x4;
-			Class157 class157 = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
+			RSMesh class157 = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
 			if (class157 == null)
 				return null;
 			if (class157.anInt1986 < 13)
 				class157.method2679(2);
-			class528 = (class505.method8451(class157, i_9_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
+			class528 = (class505.createMeshRasterizer(class157, i_9_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
 			if (128 != -1149583549 * ((ItemDefinitions) this).anInt5088 || 128 != ((ItemDefinitions) this).anInt5032 * -1507136321 || 128 != ((ItemDefinitions) this).anInt5090 * 256268633)
 				class528.oa(((ItemDefinitions) this).anInt5088 * -1149583549, ((ItemDefinitions) this).anInt5032 * -1507136321, ((ItemDefinitions) this).anInt5090 * 256268633);
 			if (null != ((ItemDefinitions) this).aShortArray5038) {
@@ -138,7 +138,7 @@ public class ItemDefinitions implements Interface46 {
 			}
 			class528.KA(i_8_);
 			synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.anInt5840 * -413843045 << 29));
+				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.rendererId * -413843045 << 29));
 			}
 		}
 		if (null != class456 || 0 != i_4_) {
@@ -380,12 +380,12 @@ public class ItemDefinitions implements Interface46 {
 			int i_29_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_30_ = Class323.nextPowerOfTwo(i_29_, -1837166011);
-				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_30_);
+				((ItemDefinitions) this).aClass465_5040 = new IterableNodeMap(i_30_);
 			}
 			for (int i_31_ = 0; i_31_ < i_29_; i_31_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_32_ = class282_sub35.read24BitUnsignedInteger((short) 19822);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(1641742655));
 				else
@@ -408,20 +408,20 @@ public class ItemDefinitions implements Interface46 {
 		return this;
 	}
 
-	public final boolean method7091(boolean bool, ItemEffects class422) {
+	public final boolean method7091(boolean bool, MeshModifier class422) {
 		int i;
 		int i_36_;
 		if (bool) {
-			if (class422 != null && null != class422.anIntArray5023) {
-				i = class422.anIntArray5023[0];
-				i_36_ = class422.anIntArray5023[1];
+			if (class422 != null && null != class422.femaleHeads) {
+				i = class422.femaleHeads[0];
+				i_36_ = class422.femaleHeads[1];
 			} else {
 				i = -1705416443 * ((ItemDefinitions) this).anInt5080;
 				i_36_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.anIntArray5022) {
-			i = class422.anIntArray5022[0];
-			i_36_ = class422.anIntArray5022[1];
+		} else if (null != class422 && null != class422.maleHeads) {
+			i = class422.maleHeads[0];
+			i_36_ = class422.maleHeads[1];
 		} else {
 			i = ((ItemDefinitions) this).anInt5096 * -603336817;
 			i_36_ = ((ItemDefinitions) this).anInt5079 * -613723223;
@@ -436,24 +436,24 @@ public class ItemDefinitions implements Interface46 {
 		return bool_37_;
 	}
 
-	public final Class157 method7092(boolean bool, ItemEffects class422) {
+	public final RSMesh method7092(boolean bool, MeshModifier class422) {
 		int i;
 		int i_38_;
 		int i_39_;
 		if (bool) {
-			if (class422 != null && class422.anIntArray5021 != null) {
-				i = class422.anIntArray5021[0];
-				i_38_ = class422.anIntArray5021[1];
-				i_39_ = class422.anIntArray5021[2];
+			if (class422 != null && class422.femaleBody != null) {
+				i = class422.femaleBody[0];
+				i_38_ = class422.femaleBody[1];
+				i_39_ = class422.femaleBody[2];
 			} else {
 				i = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_38_ = ((ItemDefinitions) this).anInt5069 * -1259031521;
 				i_39_ = ((ItemDefinitions) this).anInt5071 * -1802576377;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i = class422.anIntArray5025[0];
-			i_38_ = class422.anIntArray5025[1];
-			i_39_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i = class422.maleBody[0];
+			i_38_ = class422.maleBody[1];
+			i_39_ = class422.maleBody[2];
 		} else {
 			i = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_38_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -461,24 +461,24 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (-1 == i)
 			return null;
-		Class157 class157 = Class157.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
+		RSMesh class157 = RSMesh.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
 		if (class157 == null)
 			return null;
 		if (class157.anInt1986 < 13)
 			class157.method2679(2);
 		if (i_38_ != -1) {
-			Class157 class157_40_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_38_, 0);
+			RSMesh class157_40_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_38_, 0);
 			if (class157_40_.anInt1986 < 13)
 				class157_40_.method2679(2);
 			if (i_39_ != -1) {
-				Class157 class157_41_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_39_, 0);
+				RSMesh class157_41_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_39_, 0);
 				if (class157_41_.anInt1986 < 13)
 					class157_41_.method2679(2);
-				Class157[] class157s = { class157, class157_40_, class157_41_ };
-				class157 = new Class157(class157s, 3);
+				RSMesh[] class157s = { class157, class157_40_, class157_41_ };
+				class157 = new RSMesh(class157s, 3);
 			} else {
-				Class157[] class157s = { class157, class157_40_ };
-				class157 = new Class157(class157s, 2);
+				RSMesh[] class157s = { class157, class157_40_ };
+				class157 = new RSMesh(class157s, 2);
 			}
 		}
 		if (!bool && (0 != -1021444445 * ((ItemDefinitions) this).anInt5089 || -988581745 * ((ItemDefinitions) this).anInt5094 != 0 || ((ItemDefinitions) this).anInt5076 * 1784001845 != 0))
@@ -487,8 +487,8 @@ public class ItemDefinitions implements Interface46 {
 			class157.method2712(((ItemDefinitions) this).anInt5073 * -958170687, -710311605 * ((ItemDefinitions) this).anInt5091, ((ItemDefinitions) this).anInt5077 * 362438811);
 		if (((ItemDefinitions) this).aShortArray5038 != null) {
 			short[] is;
-			if (null != class422 && class422.aShortArray5020 != null)
-				is = class422.aShortArray5020;
+			if (null != class422 && class422.modifiedColors != null)
+				is = class422.modifiedColors;
 			else
 				is = ((ItemDefinitions) this).aShortArray5039;
 			for (int i_42_ = 0; i_42_ < ((ItemDefinitions) this).aShortArray5038.length; i_42_++)
@@ -496,8 +496,8 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (((ItemDefinitions) this).aShortArray5041 != null) {
 			short[] is;
-			if (null != class422 && null != class422.aShortArray5019)
-				is = class422.aShortArray5019;
+			if (null != class422 && null != class422.modifiedTextures)
+				is = class422.modifiedTextures;
 			else
 				is = ((ItemDefinitions) this).aShortArray5083;
 			for (int i_43_ = 0; i_43_ < ((ItemDefinitions) this).aShortArray5041.length; i_43_++)
@@ -506,8 +506,8 @@ public class ItemDefinitions implements Interface46 {
 		return class157;
 	}
 
-	int[] method7093(Class505 class505, Class505 class505_44_, int i, int i_45_, int i_46_, boolean bool, int i_47_, Class8 class8, Class238 class238, short i_48_) {
-		Class157 class157 = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), -1002877901 * ((ItemDefinitions) this).anInt5036, 0);
+	int[] method7093(GraphicalRenderer class505, GraphicalRenderer class505_44_, int i, int i_45_, int i_46_, boolean bool, int i_47_, FontRenderer class8, Class238 class238, short i_48_) {
+		RSMesh class157 = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), -1002877901 * ((ItemDefinitions) this).anInt5036, 0);
 		if (class157 == null)
 			return null;
 		if (class157.anInt1986 < 13)
@@ -538,12 +538,12 @@ public class ItemDefinitions implements Interface46 {
 			bool_54_ = true;
 			i_53_ |= 0x7;
 		}
-		Class528 class528 = class505.method8451(class157, i_53_, 64, (((ItemDefinitions) this).anInt5067 * -235550995 + 64), (((ItemDefinitions) this).anInt5092 * 1381934903 + 768));
+		MeshRasterizer class528 = class505.createMeshRasterizer(class157, i_53_, 64, (((ItemDefinitions) this).anInt5067 * -235550995 + 64), (((ItemDefinitions) this).anInt5092 * 1381934903 + 768));
 		if (!class528.method11272())
 			return null;
 		if (bool_54_)
 			class528.oa(-1149583549 * ((ItemDefinitions) this).anInt5088, ((ItemDefinitions) this).anInt5032 * -1507136321, 256268633 * ((ItemDefinitions) this).anInt5090);
-		Class160 class160 = null;
+		NativeSprite class160 = null;
 		if (-1 != anInt5078 * -722914683) {
 			class160 = (((ItemDefinitions) this).aClass426_5034.method7147(class505, class505_44_, anInt5084 * 1416589415, 10, 1, 0, true, true, 0, class8, class238, (byte) -12));
 			if (class160 == null)
@@ -600,7 +600,7 @@ public class ItemDefinitions implements Interface46 {
 		if (anInt5078 * -722914683 != -1)
 			class160.method2752(0, 0);
 		if (1 == i_47_ || 2 == i_47_ && (1 == anInt5049 * 318481945 || 1 != i) && i != -1)
-			class8.method358(Class304.method5407(i, (((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass495_5104), (byte) 47), 0, 9, -256, -16777215, -418109423);
+			class8.renderText(Class304.method5407(i, (((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass495_5104), (byte) 47), 0, 9, -256, -16777215, -418109423);
 		is = class505.ab(0, 0, 36, 32);
 		for (int i_58_ = 0; i_58_ < is.length; i_58_++) {
 			if ((is[i_58_] & 0xffffff) == 0)
@@ -611,40 +611,40 @@ public class ItemDefinitions implements Interface46 {
 		return is;
 	}
 
-	public final Class157 method7094(boolean bool, ItemEffects class422) {
+	public final RSMesh method7094(boolean bool, MeshModifier class422) {
 		int i;
 		int i_59_;
 		if (bool) {
-			if (null != class422 && class422.anIntArray5023 != null) {
-				i = class422.anIntArray5023[0];
-				i_59_ = class422.anIntArray5023[1];
+			if (null != class422 && class422.femaleHeads != null) {
+				i = class422.femaleHeads[0];
+				i_59_ = class422.femaleHeads[1];
 			} else {
 				i = ((ItemDefinitions) this).anInt5080 * -1705416443;
 				i_59_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (class422 != null && null != class422.anIntArray5022) {
-			i = class422.anIntArray5022[0];
-			i_59_ = class422.anIntArray5022[1];
+		} else if (class422 != null && null != class422.maleHeads) {
+			i = class422.maleHeads[0];
+			i_59_ = class422.maleHeads[1];
 		} else {
 			i = -603336817 * ((ItemDefinitions) this).anInt5096;
 			i_59_ = ((ItemDefinitions) this).anInt5079 * -613723223;
 		}
 		if (i == -1)
 			return null;
-		Class157 class157 = Class157.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
+		RSMesh class157 = RSMesh.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
 		if (class157.anInt1986 < 13)
 			class157.method2679(2);
 		if (-1 != i_59_) {
-			Class157 class157_60_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_59_, 0);
+			RSMesh class157_60_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_59_, 0);
 			if (class157_60_.anInt1986 < 13)
 				class157_60_.method2679(2);
-			Class157[] class157s = { class157, class157_60_ };
-			class157 = new Class157(class157s, 2);
+			RSMesh[] class157s = { class157, class157_60_ };
+			class157 = new RSMesh(class157s, 2);
 		}
 		if (null != ((ItemDefinitions) this).aShortArray5038) {
 			short[] is;
-			if (null != class422 && class422.aShortArray5020 != null)
-				is = class422.aShortArray5020;
+			if (null != class422 && class422.modifiedColors != null)
+				is = class422.modifiedColors;
 			else
 				is = ((ItemDefinitions) this).aShortArray5039;
 			for (int i_61_ = 0; i_61_ < ((ItemDefinitions) this).aShortArray5038.length; i_61_++)
@@ -652,8 +652,8 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (((ItemDefinitions) this).aShortArray5041 != null) {
 			short[] is;
-			if (class422 != null && null != class422.aShortArray5019)
-				is = class422.aShortArray5019;
+			if (class422 != null && null != class422.modifiedTextures)
+				is = class422.modifiedTextures;
 			else
 				is = ((ItemDefinitions) this).aShortArray5083;
 			for (int i_62_ = 0; i_62_ < ((ItemDefinitions) this).aShortArray5041.length; i_62_++)
@@ -672,24 +672,24 @@ public class ItemDefinitions implements Interface46 {
 		}
 	}
 
-	public final boolean method7096(boolean bool, ItemEffects class422, int i) {
+	public final boolean method7096(boolean bool, MeshModifier class422, int i) {
 		int i_67_;
 		int i_68_;
 		int i_69_;
 		if (bool) {
-			if (null != class422 && null != class422.anIntArray5021) {
-				i_67_ = class422.anIntArray5021[0];
-				i_68_ = class422.anIntArray5021[1];
-				i_69_ = class422.anIntArray5021[2];
+			if (null != class422 && null != class422.femaleBody) {
+				i_67_ = class422.femaleBody[0];
+				i_68_ = class422.femaleBody[1];
+				i_69_ = class422.femaleBody[2];
 			} else {
 				i_67_ = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_68_ = -1259031521 * ((ItemDefinitions) this).anInt5069;
 				i_69_ = -1802576377 * ((ItemDefinitions) this).anInt5071;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i_67_ = class422.anIntArray5025[0];
-			i_68_ = class422.anIntArray5025[1];
-			i_69_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i_67_ = class422.maleBody[0];
+			i_68_ = class422.maleBody[1];
+			i_69_ = class422.maleBody[2];
 		} else {
 			i_67_ = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_68_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -707,24 +707,24 @@ public class ItemDefinitions implements Interface46 {
 		return bool_70_;
 	}
 
-	public final Class157 method7097(boolean bool, ItemEffects class422, int i) {
+	public final RSMesh method7097(boolean bool, MeshModifier class422, int i) {
 		int i_71_;
 		int i_72_;
 		int i_73_;
 		if (bool) {
-			if (class422 != null && class422.anIntArray5021 != null) {
-				i_71_ = class422.anIntArray5021[0];
-				i_72_ = class422.anIntArray5021[1];
-				i_73_ = class422.anIntArray5021[2];
+			if (class422 != null && class422.femaleBody != null) {
+				i_71_ = class422.femaleBody[0];
+				i_72_ = class422.femaleBody[1];
+				i_73_ = class422.femaleBody[2];
 			} else {
 				i_71_ = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_72_ = ((ItemDefinitions) this).anInt5069 * -1259031521;
 				i_73_ = ((ItemDefinitions) this).anInt5071 * -1802576377;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i_71_ = class422.anIntArray5025[0];
-			i_72_ = class422.anIntArray5025[1];
-			i_73_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i_71_ = class422.maleBody[0];
+			i_72_ = class422.maleBody[1];
+			i_73_ = class422.maleBody[2];
 		} else {
 			i_71_ = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_72_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -732,24 +732,24 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (-1 == i_71_)
 			return null;
-		Class157 class157 = Class157.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i_71_, 0);
+		RSMesh class157 = RSMesh.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i_71_, 0);
 		if (class157 == null)
 			return null;
 		if (class157.anInt1986 < 13)
 			class157.method2679(2);
 		if (i_72_ != -1) {
-			Class157 class157_74_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_72_, 0);
+			RSMesh class157_74_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_72_, 0);
 			if (class157_74_.anInt1986 < 13)
 				class157_74_.method2679(2);
 			if (i_73_ != -1) {
-				Class157 class157_75_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_73_, 0);
+				RSMesh class157_75_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_73_, 0);
 				if (class157_75_.anInt1986 < 13)
 					class157_75_.method2679(2);
-				Class157[] class157s = { class157, class157_74_, class157_75_ };
-				class157 = new Class157(class157s, 3);
+				RSMesh[] class157s = { class157, class157_74_, class157_75_ };
+				class157 = new RSMesh(class157s, 3);
 			} else {
-				Class157[] class157s = { class157, class157_74_ };
-				class157 = new Class157(class157s, 2);
+				RSMesh[] class157s = { class157, class157_74_ };
+				class157 = new RSMesh(class157s, 2);
 			}
 		}
 		if (!bool && (0 != -1021444445 * ((ItemDefinitions) this).anInt5089 || -988581745 * ((ItemDefinitions) this).anInt5094 != 0 || ((ItemDefinitions) this).anInt5076 * 1784001845 != 0))
@@ -758,8 +758,8 @@ public class ItemDefinitions implements Interface46 {
 			class157.method2712(((ItemDefinitions) this).anInt5073 * -958170687, -710311605 * ((ItemDefinitions) this).anInt5091, ((ItemDefinitions) this).anInt5077 * 362438811);
 		if (((ItemDefinitions) this).aShortArray5038 != null) {
 			short[] is;
-			if (null != class422 && class422.aShortArray5020 != null)
-				is = class422.aShortArray5020;
+			if (null != class422 && class422.modifiedColors != null)
+				is = class422.modifiedColors;
 			else
 				is = ((ItemDefinitions) this).aShortArray5039;
 			for (int i_76_ = 0; i_76_ < ((ItemDefinitions) this).aShortArray5038.length; i_76_++)
@@ -767,8 +767,8 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (((ItemDefinitions) this).aShortArray5041 != null) {
 			short[] is;
-			if (null != class422 && null != class422.aShortArray5019)
-				is = class422.aShortArray5019;
+			if (null != class422 && null != class422.modifiedTextures)
+				is = class422.modifiedTextures;
 			else
 				is = ((ItemDefinitions) this).aShortArray5083;
 			for (int i_77_ = 0; i_77_ < ((ItemDefinitions) this).aShortArray5041.length; i_77_++)
@@ -777,20 +777,20 @@ public class ItemDefinitions implements Interface46 {
 		return class157;
 	}
 
-	public final boolean method7098(boolean bool, ItemEffects class422, int i) {
+	public final boolean method7098(boolean bool, MeshModifier class422, int i) {
 		int i_78_;
 		int i_79_;
 		if (bool) {
-			if (class422 != null && null != class422.anIntArray5023) {
-				i_78_ = class422.anIntArray5023[0];
-				i_79_ = class422.anIntArray5023[1];
+			if (class422 != null && null != class422.femaleHeads) {
+				i_78_ = class422.femaleHeads[0];
+				i_79_ = class422.femaleHeads[1];
 			} else {
 				i_78_ = -1705416443 * ((ItemDefinitions) this).anInt5080;
 				i_79_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.anIntArray5022) {
-			i_78_ = class422.anIntArray5022[0];
-			i_79_ = class422.anIntArray5022[1];
+		} else if (null != class422 && null != class422.maleHeads) {
+			i_78_ = class422.maleHeads[0];
+			i_79_ = class422.maleHeads[1];
 		} else {
 			i_78_ = ((ItemDefinitions) this).anInt5096 * -603336817;
 			i_79_ = ((ItemDefinitions) this).anInt5079 * -613723223;
@@ -1029,12 +1029,12 @@ public class ItemDefinitions implements Interface46 {
 			int i_92_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_93_ = Class323.nextPowerOfTwo(i_92_, 514687479);
-				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_93_);
+				((ItemDefinitions) this).aClass465_5040 = new IterableNodeMap(i_93_);
 			}
 			for (int i_94_ = 0; i_94_ < i_92_; i_94_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_95_ = class282_sub35.read24BitUnsignedInteger((short) 29728);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(674137210));
 				else
@@ -1193,12 +1193,12 @@ public class ItemDefinitions implements Interface46 {
 			int i_104_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_105_ = Class323.nextPowerOfTwo(i_104_, -726832861);
-				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_105_);
+				((ItemDefinitions) this).aClass465_5040 = new IterableNodeMap(i_105_);
 			}
 			for (int i_106_ = 0; i_106_ < i_104_; i_106_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_107_ = class282_sub35.read24BitUnsignedInteger((short) 13322);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(741077931));
 				else
@@ -1362,7 +1362,7 @@ public class ItemDefinitions implements Interface46 {
 		aStringArray5054[4] = Class433.aClass433_5166.method7273((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass495_5104), -1489332883);
 	}
 
-	public final Class528 method7116(Class505 class505, int i, int i_121_, Class238 class238, Class456 class456, int i_122_, int i_123_, int i_124_, int i_125_) {
+	public final MeshRasterizer method7116(GraphicalRenderer class505, int i, int i_121_, Class238 class238, Class456 class456, int i_122_, int i_123_, int i_124_, int i_125_) {
 		if (((ItemDefinitions) this).anIntArray5082 != null && i_121_ > 1) {
 			int i_126_ = -1;
 			for (int i_127_ = 0; i_127_ < 10; i_127_++) {
@@ -1375,9 +1375,9 @@ public class ItemDefinitions implements Interface46 {
 		int i_128_ = i;
 		if (class456 != null)
 			i_128_ |= class456.method7640(-1709277062);
-		Class528 class528;
+		MeshRasterizer class528;
 		synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-			class528 = ((Class528) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.anInt5840 * -413843045 << 29))));
+			class528 = ((MeshRasterizer) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.rendererId * -413843045 << 29))));
 		}
 		if (null == class528 || class505.method8452(class528.m(), i_128_) != 0) {
 			if (null != class528)
@@ -1393,12 +1393,12 @@ public class ItemDefinitions implements Interface46 {
 				i_129_ |= 0x2;
 			if (((ItemDefinitions) this).anInt5088 * -1149583549 != 128)
 				i_129_ |= 0x4;
-			Class157 class157 = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
+			RSMesh class157 = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
 			if (class157 == null)
 				return null;
 			if (class157.anInt1986 < 13)
 				class157.method2679(2);
-			class528 = (class505.method8451(class157, i_129_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
+			class528 = (class505.createMeshRasterizer(class157, i_129_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
 			if (128 != -1149583549 * ((ItemDefinitions) this).anInt5088 || 128 != ((ItemDefinitions) this).anInt5032 * -1507136321 || 128 != ((ItemDefinitions) this).anInt5090 * 256268633)
 				class528.oa(((ItemDefinitions) this).anInt5088 * -1149583549, ((ItemDefinitions) this).anInt5032 * -1507136321, ((ItemDefinitions) this).anInt5090 * 256268633);
 			if (null != ((ItemDefinitions) this).aShortArray5038) {
@@ -1423,7 +1423,7 @@ public class ItemDefinitions implements Interface46 {
 			}
 			class528.KA(i_128_);
 			synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.anInt5840 * -413843045 << 29));
+				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.rendererId * -413843045 << 29));
 			}
 		}
 		if (null != class456 || 0 != i_125_) {
@@ -1437,7 +1437,7 @@ public class ItemDefinitions implements Interface46 {
 		return class528;
 	}
 
-	public final Class528 method7117(Class505 class505, int i, int i_134_, Class238 class238, Class456 class456, int i_135_, int i_136_, int i_137_, int i_138_) {
+	public final MeshRasterizer method7117(GraphicalRenderer class505, int i, int i_134_, Class238 class238, Class456 class456, int i_135_, int i_136_, int i_137_, int i_138_) {
 		if (((ItemDefinitions) this).anIntArray5082 != null && i_134_ > 1) {
 			int i_139_ = -1;
 			for (int i_140_ = 0; i_140_ < 10; i_140_++) {
@@ -1450,9 +1450,9 @@ public class ItemDefinitions implements Interface46 {
 		int i_141_ = i;
 		if (class456 != null)
 			i_141_ |= class456.method7640(-1014418059);
-		Class528 class528;
+		MeshRasterizer class528;
 		synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-			class528 = ((Class528) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.anInt5840 * -413843045 << 29))));
+			class528 = ((MeshRasterizer) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.rendererId * -413843045 << 29))));
 		}
 		if (null == class528 || class505.method8452(class528.m(), i_141_) != 0) {
 			if (null != class528)
@@ -1468,12 +1468,12 @@ public class ItemDefinitions implements Interface46 {
 				i_142_ |= 0x2;
 			if (((ItemDefinitions) this).anInt5088 * -1149583549 != 128)
 				i_142_ |= 0x4;
-			Class157 class157 = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
+			RSMesh class157 = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
 			if (class157 == null)
 				return null;
 			if (class157.anInt1986 < 13)
 				class157.method2679(2);
-			class528 = (class505.method8451(class157, i_142_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
+			class528 = (class505.createMeshRasterizer(class157, i_142_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
 			if (128 != -1149583549 * ((ItemDefinitions) this).anInt5088 || 128 != ((ItemDefinitions) this).anInt5032 * -1507136321 || 128 != ((ItemDefinitions) this).anInt5090 * 256268633)
 				class528.oa(((ItemDefinitions) this).anInt5088 * -1149583549, ((ItemDefinitions) this).anInt5032 * -1507136321, ((ItemDefinitions) this).anInt5090 * 256268633);
 			if (null != ((ItemDefinitions) this).aShortArray5038) {
@@ -1498,7 +1498,7 @@ public class ItemDefinitions implements Interface46 {
 			}
 			class528.KA(i_141_);
 			synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.anInt5840 * -413843045 << 29));
+				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.rendererId * -413843045 << 29));
 			}
 		}
 		if (null != class456 || 0 != i_138_) {
@@ -1512,7 +1512,7 @@ public class ItemDefinitions implements Interface46 {
 		return class528;
 	}
 
-	public final Class528 method7118(Class505 class505, int i, int i_147_, Class238 class238, Class456 class456, int i_148_, int i_149_, int i_150_, int i_151_) {
+	public final MeshRasterizer method7118(GraphicalRenderer class505, int i, int i_147_, Class238 class238, Class456 class456, int i_148_, int i_149_, int i_150_, int i_151_) {
 		if (((ItemDefinitions) this).anIntArray5082 != null && i_147_ > 1) {
 			int i_152_ = -1;
 			for (int i_153_ = 0; i_153_ < 10; i_153_++) {
@@ -1525,9 +1525,9 @@ public class ItemDefinitions implements Interface46 {
 		int i_154_ = i;
 		if (class456 != null)
 			i_154_ |= class456.method7640(-1822843129);
-		Class528 class528;
+		MeshRasterizer class528;
 		synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-			class528 = ((Class528) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.anInt5840 * -413843045 << 29))));
+			class528 = ((MeshRasterizer) (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3865((long) (1116898509 * ((ItemDefinitions) this).anInt5035 | class505.rendererId * -413843045 << 29))));
 		}
 		if (null == class528 || class505.method8452(class528.m(), i_154_) != 0) {
 			if (null != class528)
@@ -1543,12 +1543,12 @@ public class ItemDefinitions implements Interface46 {
 				i_155_ |= 0x2;
 			if (((ItemDefinitions) this).anInt5088 * -1149583549 != 128)
 				i_155_ |= 0x4;
-			Class157 class157 = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
+			RSMesh class157 = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), (-1002877901 * ((ItemDefinitions) this).anInt5036), 0);
 			if (class157 == null)
 				return null;
 			if (class157.anInt1986 < 13)
 				class157.method2679(2);
-			class528 = (class505.method8451(class157, i_155_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
+			class528 = (class505.createMeshRasterizer(class157, i_155_, 924631903 * (((Class426) ((ItemDefinitions) this).aClass426_5034).anInt5116), 64 + ((ItemDefinitions) this).anInt5067 * -235550995, 850 + 1381934903 * ((ItemDefinitions) this).anInt5092));
 			if (128 != -1149583549 * ((ItemDefinitions) this).anInt5088 || 128 != ((ItemDefinitions) this).anInt5032 * -1507136321 || 128 != ((ItemDefinitions) this).anInt5090 * 256268633)
 				class528.oa(((ItemDefinitions) this).anInt5088 * -1149583549, ((ItemDefinitions) this).anInt5032 * -1507136321, ((ItemDefinitions) this).anInt5090 * 256268633);
 			if (null != ((ItemDefinitions) this).aShortArray5038) {
@@ -1573,7 +1573,7 @@ public class ItemDefinitions implements Interface46 {
 			}
 			class528.KA(i_154_);
 			synchronized (((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115) {
-				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.anInt5840 * -413843045 << 29));
+				((Class426) ((ItemDefinitions) this).aClass426_5034).aClass229_5115.method3856(class528, (long) (((ItemDefinitions) this).anInt5035 * 1116898509 | class505.rendererId * -413843045 << 29));
 			}
 		}
 		if (null != class456 || 0 != i_151_) {
@@ -1587,24 +1587,24 @@ public class ItemDefinitions implements Interface46 {
 		return class528;
 	}
 
-	public final boolean method7119(boolean bool, ItemEffects class422) {
+	public final boolean method7119(boolean bool, MeshModifier class422) {
 		int i;
 		int i_160_;
 		int i_161_;
 		if (bool) {
-			if (null != class422 && null != class422.anIntArray5021) {
-				i = class422.anIntArray5021[0];
-				i_160_ = class422.anIntArray5021[1];
-				i_161_ = class422.anIntArray5021[2];
+			if (null != class422 && null != class422.femaleBody) {
+				i = class422.femaleBody[0];
+				i_160_ = class422.femaleBody[1];
+				i_161_ = class422.femaleBody[2];
 			} else {
 				i = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_160_ = -1259031521 * ((ItemDefinitions) this).anInt5069;
 				i_161_ = -1802576377 * ((ItemDefinitions) this).anInt5071;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i = class422.anIntArray5025[0];
-			i_160_ = class422.anIntArray5025[1];
-			i_161_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i = class422.maleBody[0];
+			i_160_ = class422.maleBody[1];
+			i_161_ = class422.maleBody[2];
 		} else {
 			i = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_160_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -1644,20 +1644,20 @@ public class ItemDefinitions implements Interface46 {
 		return is_164_;
 	}
 
-	public final boolean method7121(boolean bool, ItemEffects class422) {
+	public final boolean method7121(boolean bool, MeshModifier class422) {
 		int i;
 		int i_169_;
 		if (bool) {
-			if (class422 != null && null != class422.anIntArray5023) {
-				i = class422.anIntArray5023[0];
-				i_169_ = class422.anIntArray5023[1];
+			if (class422 != null && null != class422.femaleHeads) {
+				i = class422.femaleHeads[0];
+				i_169_ = class422.femaleHeads[1];
 			} else {
 				i = -1705416443 * ((ItemDefinitions) this).anInt5080;
 				i_169_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.anIntArray5022) {
-			i = class422.anIntArray5022[0];
-			i_169_ = class422.anIntArray5022[1];
+		} else if (null != class422 && null != class422.maleHeads) {
+			i = class422.maleHeads[0];
+			i_169_ = class422.maleHeads[1];
 		} else {
 			i = ((ItemDefinitions) this).anInt5096 * -603336817;
 			i_169_ = ((ItemDefinitions) this).anInt5079 * -613723223;
@@ -1841,12 +1841,12 @@ public class ItemDefinitions implements Interface46 {
 			int i_185_ = class282_sub35.readUnsignedByte();
 			if (null == ((ItemDefinitions) this).aClass465_5040) {
 				int i_186_ = Class323.nextPowerOfTwo(i_185_, -1794749228);
-				((ItemDefinitions) this).aClass465_5040 = new SwitchMap(i_186_);
+				((ItemDefinitions) this).aClass465_5040 = new IterableNodeMap(i_186_);
 			}
 			for (int i_187_ = 0; i_187_ < i_185_; i_187_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
 				int i_188_ = class282_sub35.read24BitUnsignedInteger((short) 8916);
-				Class282 class282;
+				Node class282;
 				if (bool)
 					class282 = new Class282_Sub47(class282_sub35.readString(887239802));
 				else
@@ -1886,24 +1886,24 @@ public class ItemDefinitions implements Interface46 {
 		return new StringBuilder().append("<col=00ff80>").append(i / 1000000).append(Class433.aClass433_5304.method7273(class495, -1565915342)).append("</col>").toString();
 	}
 
-	public final boolean method7127(boolean bool, ItemEffects class422) {
+	public final boolean method7127(boolean bool, MeshModifier class422) {
 		int i;
 		int i_194_;
 		int i_195_;
 		if (bool) {
-			if (null != class422 && null != class422.anIntArray5021) {
-				i = class422.anIntArray5021[0];
-				i_194_ = class422.anIntArray5021[1];
-				i_195_ = class422.anIntArray5021[2];
+			if (null != class422 && null != class422.femaleBody) {
+				i = class422.femaleBody[0];
+				i_194_ = class422.femaleBody[1];
+				i_195_ = class422.femaleBody[2];
 			} else {
 				i = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_194_ = -1259031521 * ((ItemDefinitions) this).anInt5069;
 				i_195_ = -1802576377 * ((ItemDefinitions) this).anInt5071;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i = class422.anIntArray5025[0];
-			i_194_ = class422.anIntArray5025[1];
-			i_195_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i = class422.maleBody[0];
+			i_194_ = class422.maleBody[1];
+			i_195_ = class422.maleBody[2];
 		} else {
 			i = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_194_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -1977,24 +1977,24 @@ public class ItemDefinitions implements Interface46 {
 		aBool5101 = false;
 	}
 
-	public final boolean method7128(boolean bool, ItemEffects class422) {
+	public final boolean method7128(boolean bool, MeshModifier class422) {
 		int i;
 		int i_197_;
 		int i_198_;
 		if (bool) {
-			if (null != class422 && null != class422.anIntArray5021) {
-				i = class422.anIntArray5021[0];
-				i_197_ = class422.anIntArray5021[1];
-				i_198_ = class422.anIntArray5021[2];
+			if (null != class422 && null != class422.femaleBody) {
+				i = class422.femaleBody[0];
+				i_197_ = class422.femaleBody[1];
+				i_198_ = class422.femaleBody[2];
 			} else {
 				i = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_197_ = -1259031521 * ((ItemDefinitions) this).anInt5069;
 				i_198_ = -1802576377 * ((ItemDefinitions) this).anInt5071;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i = class422.anIntArray5025[0];
-			i_197_ = class422.anIntArray5025[1];
-			i_198_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i = class422.maleBody[0];
+			i_197_ = class422.maleBody[1];
+			i_198_ = class422.maleBody[2];
 		} else {
 			i = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_197_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -2012,24 +2012,24 @@ public class ItemDefinitions implements Interface46 {
 		return bool_199_;
 	}
 
-	public final Class157 method7129(boolean bool, ItemEffects class422) {
+	public final RSMesh method7129(boolean bool, MeshModifier class422) {
 		int i;
 		int i_200_;
 		int i_201_;
 		if (bool) {
-			if (class422 != null && class422.anIntArray5021 != null) {
-				i = class422.anIntArray5021[0];
-				i_200_ = class422.anIntArray5021[1];
-				i_201_ = class422.anIntArray5021[2];
+			if (class422 != null && class422.femaleBody != null) {
+				i = class422.femaleBody[0];
+				i_200_ = class422.femaleBody[1];
+				i_201_ = class422.femaleBody[2];
 			} else {
 				i = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_200_ = ((ItemDefinitions) this).anInt5069 * -1259031521;
 				i_201_ = ((ItemDefinitions) this).anInt5071 * -1802576377;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i = class422.anIntArray5025[0];
-			i_200_ = class422.anIntArray5025[1];
-			i_201_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i = class422.maleBody[0];
+			i_200_ = class422.maleBody[1];
+			i_201_ = class422.maleBody[2];
 		} else {
 			i = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_200_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -2037,24 +2037,24 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (-1 == i)
 			return null;
-		Class157 class157 = Class157.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
+		RSMesh class157 = RSMesh.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
 		if (class157 == null)
 			return null;
 		if (class157.anInt1986 < 13)
 			class157.method2679(2);
 		if (i_200_ != -1) {
-			Class157 class157_202_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_200_, 0);
+			RSMesh class157_202_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_200_, 0);
 			if (class157_202_.anInt1986 < 13)
 				class157_202_.method2679(2);
 			if (i_201_ != -1) {
-				Class157 class157_203_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_201_, 0);
+				RSMesh class157_203_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_201_, 0);
 				if (class157_203_.anInt1986 < 13)
 					class157_203_.method2679(2);
-				Class157[] class157s = { class157, class157_202_, class157_203_ };
-				class157 = new Class157(class157s, 3);
+				RSMesh[] class157s = { class157, class157_202_, class157_203_ };
+				class157 = new RSMesh(class157s, 3);
 			} else {
-				Class157[] class157s = { class157, class157_202_ };
-				class157 = new Class157(class157s, 2);
+				RSMesh[] class157s = { class157, class157_202_ };
+				class157 = new RSMesh(class157s, 2);
 			}
 		}
 		if (!bool && (0 != -1021444445 * ((ItemDefinitions) this).anInt5089 || -988581745 * ((ItemDefinitions) this).anInt5094 != 0 || ((ItemDefinitions) this).anInt5076 * 1784001845 != 0))
@@ -2063,8 +2063,8 @@ public class ItemDefinitions implements Interface46 {
 			class157.method2712(((ItemDefinitions) this).anInt5073 * -958170687, -710311605 * ((ItemDefinitions) this).anInt5091, ((ItemDefinitions) this).anInt5077 * 362438811);
 		if (((ItemDefinitions) this).aShortArray5038 != null) {
 			short[] is;
-			if (null != class422 && class422.aShortArray5020 != null)
-				is = class422.aShortArray5020;
+			if (null != class422 && class422.modifiedColors != null)
+				is = class422.modifiedColors;
 			else
 				is = ((ItemDefinitions) this).aShortArray5039;
 			for (int i_204_ = 0; i_204_ < ((ItemDefinitions) this).aShortArray5038.length; i_204_++)
@@ -2072,8 +2072,8 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (((ItemDefinitions) this).aShortArray5041 != null) {
 			short[] is;
-			if (null != class422 && null != class422.aShortArray5019)
-				is = class422.aShortArray5019;
+			if (null != class422 && null != class422.modifiedTextures)
+				is = class422.modifiedTextures;
 			else
 				is = ((ItemDefinitions) this).aShortArray5083;
 			for (int i_205_ = 0; i_205_ < ((ItemDefinitions) this).aShortArray5041.length; i_205_++)
@@ -2082,40 +2082,40 @@ public class ItemDefinitions implements Interface46 {
 		return class157;
 	}
 
-	public final Class157 method7130(boolean bool, ItemEffects class422, int i) {
+	public final RSMesh method7130(boolean bool, MeshModifier class422, int i) {
 		int i_206_;
 		int i_207_;
 		if (bool) {
-			if (null != class422 && class422.anIntArray5023 != null) {
-				i_206_ = class422.anIntArray5023[0];
-				i_207_ = class422.anIntArray5023[1];
+			if (null != class422 && class422.femaleHeads != null) {
+				i_206_ = class422.femaleHeads[0];
+				i_207_ = class422.femaleHeads[1];
 			} else {
 				i_206_ = ((ItemDefinitions) this).anInt5080 * -1705416443;
 				i_207_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (class422 != null && null != class422.anIntArray5022) {
-			i_206_ = class422.anIntArray5022[0];
-			i_207_ = class422.anIntArray5022[1];
+		} else if (class422 != null && null != class422.maleHeads) {
+			i_206_ = class422.maleHeads[0];
+			i_207_ = class422.maleHeads[1];
 		} else {
 			i_206_ = -603336817 * ((ItemDefinitions) this).anInt5096;
 			i_207_ = ((ItemDefinitions) this).anInt5079 * -613723223;
 		}
 		if (i_206_ == -1)
 			return null;
-		Class157 class157 = Class157.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i_206_, 0);
+		RSMesh class157 = RSMesh.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i_206_, 0);
 		if (class157.anInt1986 < 13)
 			class157.method2679(2);
 		if (-1 != i_207_) {
-			Class157 class157_208_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_207_, 0);
+			RSMesh class157_208_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_207_, 0);
 			if (class157_208_.anInt1986 < 13)
 				class157_208_.method2679(2);
-			Class157[] class157s = { class157, class157_208_ };
-			class157 = new Class157(class157s, 2);
+			RSMesh[] class157s = { class157, class157_208_ };
+			class157 = new RSMesh(class157s, 2);
 		}
 		if (null != ((ItemDefinitions) this).aShortArray5038) {
 			short[] is;
-			if (null != class422 && class422.aShortArray5020 != null)
-				is = class422.aShortArray5020;
+			if (null != class422 && class422.modifiedColors != null)
+				is = class422.modifiedColors;
 			else
 				is = ((ItemDefinitions) this).aShortArray5039;
 			for (int i_209_ = 0; i_209_ < ((ItemDefinitions) this).aShortArray5038.length; i_209_++)
@@ -2123,8 +2123,8 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (((ItemDefinitions) this).aShortArray5041 != null) {
 			short[] is;
-			if (class422 != null && null != class422.aShortArray5019)
-				is = class422.aShortArray5019;
+			if (class422 != null && null != class422.modifiedTextures)
+				is = class422.modifiedTextures;
 			else
 				is = ((ItemDefinitions) this).aShortArray5083;
 			for (int i_210_ = 0; i_210_ < ((ItemDefinitions) this).aShortArray5041.length; i_210_++)
@@ -2152,20 +2152,20 @@ public class ItemDefinitions implements Interface46 {
 		anInt5049 = -1948887511;
 	}
 
-	public final boolean method7132(boolean bool, ItemEffects class422) {
+	public final boolean method7132(boolean bool, MeshModifier class422) {
 		int i;
 		int i_213_;
 		if (bool) {
-			if (class422 != null && null != class422.anIntArray5023) {
-				i = class422.anIntArray5023[0];
-				i_213_ = class422.anIntArray5023[1];
+			if (class422 != null && null != class422.femaleHeads) {
+				i = class422.femaleHeads[0];
+				i_213_ = class422.femaleHeads[1];
 			} else {
 				i = -1705416443 * ((ItemDefinitions) this).anInt5080;
 				i_213_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.anIntArray5022) {
-			i = class422.anIntArray5022[0];
-			i_213_ = class422.anIntArray5022[1];
+		} else if (null != class422 && null != class422.maleHeads) {
+			i = class422.maleHeads[0];
+			i_213_ = class422.maleHeads[1];
 		} else {
 			i = ((ItemDefinitions) this).anInt5096 * -603336817;
 			i_213_ = ((ItemDefinitions) this).anInt5079 * -613723223;
@@ -2180,20 +2180,20 @@ public class ItemDefinitions implements Interface46 {
 		return bool_214_;
 	}
 
-	public final boolean method7133(boolean bool, ItemEffects class422) {
+	public final boolean method7133(boolean bool, MeshModifier class422) {
 		int i;
 		int i_215_;
 		if (bool) {
-			if (class422 != null && null != class422.anIntArray5023) {
-				i = class422.anIntArray5023[0];
-				i_215_ = class422.anIntArray5023[1];
+			if (class422 != null && null != class422.femaleHeads) {
+				i = class422.femaleHeads[0];
+				i_215_ = class422.femaleHeads[1];
 			} else {
 				i = -1705416443 * ((ItemDefinitions) this).anInt5080;
 				i_215_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.anIntArray5022) {
-			i = class422.anIntArray5022[0];
-			i_215_ = class422.anIntArray5022[1];
+		} else if (null != class422 && null != class422.maleHeads) {
+			i = class422.maleHeads[0];
+			i_215_ = class422.maleHeads[1];
 		} else {
 			i = ((ItemDefinitions) this).anInt5096 * -603336817;
 			i_215_ = ((ItemDefinitions) this).anInt5079 * -613723223;
@@ -2254,20 +2254,20 @@ public class ItemDefinitions implements Interface46 {
 		aStringArray5054[4] = Class433.aClass433_5165.method7273((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass495_5104), -898798531);
 	}
 
-	public final boolean method7135(boolean bool, ItemEffects class422) {
+	public final boolean method7135(boolean bool, MeshModifier class422) {
 		int i;
 		int i_220_;
 		if (bool) {
-			if (class422 != null && null != class422.anIntArray5023) {
-				i = class422.anIntArray5023[0];
-				i_220_ = class422.anIntArray5023[1];
+			if (class422 != null && null != class422.femaleHeads) {
+				i = class422.femaleHeads[0];
+				i_220_ = class422.femaleHeads[1];
 			} else {
 				i = -1705416443 * ((ItemDefinitions) this).anInt5080;
 				i_220_ = ((ItemDefinitions) this).anInt5081 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.anIntArray5022) {
-			i = class422.anIntArray5022[0];
-			i_220_ = class422.anIntArray5022[1];
+		} else if (null != class422 && null != class422.maleHeads) {
+			i = class422.maleHeads[0];
+			i_220_ = class422.maleHeads[1];
 		} else {
 			i = ((ItemDefinitions) this).anInt5096 * -603336817;
 			i_220_ = ((ItemDefinitions) this).anInt5079 * -613723223;
@@ -2282,24 +2282,24 @@ public class ItemDefinitions implements Interface46 {
 		return bool_221_;
 	}
 
-	public final Class157 method7136(boolean bool, ItemEffects class422) {
+	public final RSMesh method7136(boolean bool, MeshModifier class422) {
 		int i;
 		int i_222_;
 		int i_223_;
 		if (bool) {
-			if (class422 != null && class422.anIntArray5021 != null) {
-				i = class422.anIntArray5021[0];
-				i_222_ = class422.anIntArray5021[1];
-				i_223_ = class422.anIntArray5021[2];
+			if (class422 != null && class422.femaleBody != null) {
+				i = class422.femaleBody[0];
+				i_222_ = class422.femaleBody[1];
+				i_223_ = class422.femaleBody[2];
 			} else {
 				i = ((ItemDefinitions) this).anInt5075 * -2090968851;
 				i_222_ = ((ItemDefinitions) this).anInt5069 * -1259031521;
 				i_223_ = ((ItemDefinitions) this).anInt5071 * -1802576377;
 			}
-		} else if (class422 != null && null != class422.anIntArray5025) {
-			i = class422.anIntArray5025[0];
-			i_222_ = class422.anIntArray5025[1];
-			i_223_ = class422.anIntArray5025[2];
+		} else if (class422 != null && null != class422.maleBody) {
+			i = class422.maleBody[0];
+			i_222_ = class422.maleBody[1];
+			i_223_ = class422.maleBody[2];
 		} else {
 			i = -525270939 * ((ItemDefinitions) this).anInt5066;
 			i_222_ = -931922913 * ((ItemDefinitions) this).anInt5100;
@@ -2307,24 +2307,24 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (-1 == i)
 			return null;
-		Class157 class157 = Class157.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
+		RSMesh class157 = RSMesh.method2689((((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass317_5111), i, 0);
 		if (class157 == null)
 			return null;
 		if (class157.anInt1986 < 13)
 			class157.method2679(2);
 		if (i_222_ != -1) {
-			Class157 class157_224_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_222_, 0);
+			RSMesh class157_224_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_222_, 0);
 			if (class157_224_.anInt1986 < 13)
 				class157_224_.method2679(2);
 			if (i_223_ != -1) {
-				Class157 class157_225_ = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_223_, 0);
+				RSMesh class157_225_ = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), i_223_, 0);
 				if (class157_225_.anInt1986 < 13)
 					class157_225_.method2679(2);
-				Class157[] class157s = { class157, class157_224_, class157_225_ };
-				class157 = new Class157(class157s, 3);
+				RSMesh[] class157s = { class157, class157_224_, class157_225_ };
+				class157 = new RSMesh(class157s, 3);
 			} else {
-				Class157[] class157s = { class157, class157_224_ };
-				class157 = new Class157(class157s, 2);
+				RSMesh[] class157s = { class157, class157_224_ };
+				class157 = new RSMesh(class157s, 2);
 			}
 		}
 		if (!bool && (0 != -1021444445 * ((ItemDefinitions) this).anInt5089 || -988581745 * ((ItemDefinitions) this).anInt5094 != 0 || ((ItemDefinitions) this).anInt5076 * 1784001845 != 0))
@@ -2333,8 +2333,8 @@ public class ItemDefinitions implements Interface46 {
 			class157.method2712(((ItemDefinitions) this).anInt5073 * -958170687, -710311605 * ((ItemDefinitions) this).anInt5091, ((ItemDefinitions) this).anInt5077 * 362438811);
 		if (((ItemDefinitions) this).aShortArray5038 != null) {
 			short[] is;
-			if (null != class422 && class422.aShortArray5020 != null)
-				is = class422.aShortArray5020;
+			if (null != class422 && class422.modifiedColors != null)
+				is = class422.modifiedColors;
 			else
 				is = ((ItemDefinitions) this).aShortArray5039;
 			for (int i_226_ = 0; i_226_ < ((ItemDefinitions) this).aShortArray5038.length; i_226_++)
@@ -2342,8 +2342,8 @@ public class ItemDefinitions implements Interface46 {
 		}
 		if (((ItemDefinitions) this).aShortArray5041 != null) {
 			short[] is;
-			if (null != class422 && null != class422.aShortArray5019)
-				is = class422.aShortArray5019;
+			if (null != class422 && null != class422.modifiedTextures)
+				is = class422.modifiedTextures;
 			else
 				is = ((ItemDefinitions) this).aShortArray5083;
 			for (int i_227_ = 0; i_227_ < ((ItemDefinitions) this).aShortArray5041.length; i_227_++)
@@ -2352,8 +2352,8 @@ public class ItemDefinitions implements Interface46 {
 		return class157;
 	}
 
-	int[] method7137(Class505 class505, Class505 class505_228_, int i, int i_229_, int i_230_, boolean bool, int i_231_, Class8 class8, Class238 class238) {
-		Class157 class157 = Class157.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), -1002877901 * ((ItemDefinitions) this).anInt5036, 0);
+	int[] method7137(GraphicalRenderer class505, GraphicalRenderer class505_228_, int i, int i_229_, int i_230_, boolean bool, int i_231_, FontRenderer class8, Class238 class238) {
+		RSMesh class157 = RSMesh.method2689((((Class426) ((ItemDefinitions) this).aClass426_5034).aClass317_5111), -1002877901 * ((ItemDefinitions) this).anInt5036, 0);
 		if (class157 == null)
 			return null;
 		if (class157.anInt1986 < 13)
@@ -2384,12 +2384,12 @@ public class ItemDefinitions implements Interface46 {
 			bool_237_ = true;
 			i_236_ |= 0x7;
 		}
-		Class528 class528 = class505.method8451(class157, i_236_, 64, (((ItemDefinitions) this).anInt5067 * -235550995 + 64), (((ItemDefinitions) this).anInt5092 * 1381934903 + 768));
+		MeshRasterizer class528 = class505.createMeshRasterizer(class157, i_236_, 64, (((ItemDefinitions) this).anInt5067 * -235550995 + 64), (((ItemDefinitions) this).anInt5092 * 1381934903 + 768));
 		if (!class528.method11272())
 			return null;
 		if (bool_237_)
 			class528.oa(-1149583549 * ((ItemDefinitions) this).anInt5088, ((ItemDefinitions) this).anInt5032 * -1507136321, 256268633 * ((ItemDefinitions) this).anInt5090);
-		Class160 class160 = null;
+		NativeSprite class160 = null;
 		if (-1 != anInt5078 * -722914683) {
 			class160 = (((ItemDefinitions) this).aClass426_5034.method7147(class505, class505_228_, anInt5084 * 1416589415, 10, 1, 0, true, true, 0, class8, class238, (byte) 82));
 			if (class160 == null)
@@ -2446,7 +2446,7 @@ public class ItemDefinitions implements Interface46 {
 		if (anInt5078 * -722914683 != -1)
 			class160.method2752(0, 0);
 		if (1 == i_231_ || 2 == i_231_ && (1 == anInt5049 * 318481945 || 1 != i) && i != -1)
-			class8.method358(Class304.method5407(i, (((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass495_5104), (byte) 44), 0, 9, -256, -16777215, -418109423);
+			class8.renderText(Class304.method5407(i, (((Class426) (((ItemDefinitions) this).aClass426_5034)).aClass495_5104), (byte) 44), 0, 9, -256, -16777215, -418109423);
 		is = class505.ab(0, 0, 36, 32);
 		for (int i_241_ = 0; i_241_ < is.length; i_241_++) {
 			if ((is[i_241_] & 0xffffff) == 0)
@@ -2479,7 +2479,7 @@ public class ItemDefinitions implements Interface46 {
 		int i_251_ = class521_sub1_sub1_sub2_243_.method15899(-525246876);
 		if (-1 != i_251_) {
 			Object object = null;
-			Class160 class160 = (Class160) client.aClass229_7204.method3865((long) i_251_);
+			NativeSprite class160 = (NativeSprite) client.aClass229_7204.method3865((long) i_251_);
 			if (class160 == null) {
 				Class91[] class91s = Class91.method1514(Class211.aClass317_2673, i_251_, 0);
 				if (null == class91s)

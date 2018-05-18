@@ -56,7 +56,7 @@ public class Class339 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1003441631 * Class232.anInt2879;
 	}
 
-	public static void method6047(int i, Class317 class317, int i_2_, int i_3_, int i_4_, boolean bool, int i_5_) {
+	public static void method6047(int i, Index class317, int i_2_, int i_3_, int i_4_, boolean bool, int i_5_) {
 		Class148.anInt1730 = 800770715;
 		Class75.aClass317_746 = class317;
 		Class6.anInt46 = -26560111 * i_2_;

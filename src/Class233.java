@@ -5,7 +5,7 @@
 public class Class233 {
 	public static int anInt2880;
 	Class229 aClass229_2881 = new Class229(64);
-	Class317 aClass317_2882;
+	Index aClass317_2882;
 	static Class202 aClass202_2883;
 
 	public void method3923(int i, int i_0_) {
@@ -14,10 +14,10 @@ public class Class233 {
 		}
 	}
 
-	public Class233(Class486 class486, Class495 class495, Class317 class317) {
+	public Class233(Game class486, Class495 class495, Index class317) {
 		((Class233) this).aClass317_2882 = class317;
 		if (null != ((Class233) this).aClass317_2882)
-			((Class233) this).aClass317_2882.method5624(-71319279 * Class120.aClass120_1464.anInt1521, -494038872);
+			((Class233) this).aClass317_2882.filesCount(-71319279 * Class120.aClass120_1464.anInt1521, -494038872);
 	}
 
 	public void method3924(int i) {

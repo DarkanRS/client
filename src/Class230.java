@@ -2,10 +2,10 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class230 implements Interface20 {
+public class Class230 implements IndexLoader {
 	Class229 aClass229_2856 = new Class229(64);
 	public static final int anInt2857 = 64;
-	Class317 aClass317_2858;
+	Index aClass317_2858;
 
 	public void method3896(int i) {
 		synchronized (((Class230) this).aClass229_2856) {
@@ -34,12 +34,12 @@ public class Class230 implements Interface20 {
 		return class226;
 	}
 
-	public Class230(Class486 class486, Class495 class495, Class317 class317) {
+	public Class230(Game class486, Class495 class495, Index class317) {
 		((Class230) this).aClass317_2858 = class317;
 		if (((Class230) this).aClass317_2858 != null) {
-			int i = ((Class230) this).aClass317_2858.method5618(-1585425152) - 1;
+			int i = ((Class230) this).aClass317_2858.containersCount(-1585425152) - 1;
 			Class120.aClass120_1477.method2078(-689743414);
-			((Class230) this).aClass317_2858.method5624(i, -1063022229);
+			((Class230) this).aClass317_2858.filesCount(i, -1063022229);
 		}
 	}
 

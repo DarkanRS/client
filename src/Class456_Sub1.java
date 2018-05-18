@@ -3,27 +3,27 @@
  */
 
 public class Class456_Sub1 extends Class456 {
-	void method7626(Class518 class518, int i) {
+	void method7626(AnimationDefinitions class518, int i) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 
-	void method7586(Class518 class518, int i, int i_0_) {
+	void method7586(AnimationDefinitions class518, int i, int i_0_) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 
-	void method7590(Class518 class518, int i) {
+	void method7590(AnimationDefinitions class518, int i) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 
-	void method7616(Class518 class518, int i) {
+	void method7616(AnimationDefinitions class518, int i) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 
-	void method7591(Class518 class518, int i) {
+	void method7591(AnimationDefinitions class518, int i) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 
-	void method7592(Class518 class518, int i) {
+	void method7592(AnimationDefinitions class518, int i) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 
@@ -31,7 +31,7 @@ public class Class456_Sub1 extends Class456 {
 		super(true);
 	}
 
-	void method7594(Class518 class518, int i) {
+	void method7594(AnimationDefinitions class518, int i) {
 		Class420.method7034(class518, i, 1424261632);
 	}
 }

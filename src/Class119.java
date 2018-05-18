@@ -11,7 +11,7 @@ public class Class119 {
 	int anInt1459;
 	static Class344 aClass344_1460;
 	public static Class12 aClass12_1461;
-	public static Class312 aClass312_1462;
+	public static JS5StandardRequester aClass312_1462;
 	public static Class426 aClass426_1463;
 
 	public boolean method2073(int i, int i_0_, int i_1_) {

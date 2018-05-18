@@ -76,7 +76,7 @@ public class Class350 implements Interface3 {
 	}
 
 	static final void method6190(CS2Executor class527, byte i) {
-		Class518.method11148((((CS2Executor) class527).animable), (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), 1271800838);
+		AnimationDefinitions.method11148((((CS2Executor) class527).animable), (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), 1271800838);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];

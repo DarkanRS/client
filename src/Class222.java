@@ -5,7 +5,7 @@
 public class Class222 implements Interface17 {
 	int anInt2764;
 	int anInt2765;
-	public static Class317 aClass317_2766;
+	public static Index aClass317_2766;
 
 	public boolean method129(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199) {
 		for (int i_0_ = 0; i_0_ < i && i_0_ < interface16s.length; i_0_++) {

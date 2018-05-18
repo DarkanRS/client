@@ -3,7 +3,7 @@
  */
 
 public class Class298 implements Interface41 {
-	Class317 aClass317_3538;
+	Index aClass317_3538;
 
 	public Class445 method232(byte i) {
 		return Class445.aClass445_5381;
@@ -37,7 +37,7 @@ public class Class298 implements Interface41 {
 		return Class445.aClass445_5381;
 	}
 
-	Class298(Class317 class317) {
+	Class298(Index class317) {
 		((Class298) this).aClass317_3538 = class317;
 	}
 

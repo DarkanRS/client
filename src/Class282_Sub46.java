@@ -2,14 +2,14 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub46 extends Class282 {
+public class Class282_Sub46 extends Node {
 	public short aShort8067;
 
 	public Class282_Sub46(short i) {
 		aShort8067 = i;
 	}
 
-	static void method13407(Class505 class505, Interface22 interface22, int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
+	static void method13407(GraphicalRenderer class505, Interface22 interface22, int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
 		if (-8084891 * Class291_Sub1.anInt8015 < 100)
 			Class435.method7302(class505, interface22, (byte) 37);
 		class505.r(i, i_0_, i_1_ + i, i_2_ + i_0_);
@@ -32,7 +32,7 @@ public class Class282_Sub46 extends Class282 {
 			Class351.anInt4097 = ((int) ((float) (2 * i_2_) / Class291_Sub1.aFloat3468) * 429290245);
 			Class291_Sub1.method5139(i_7_ + Class291_Sub1.anInt3472, Class291_Sub1.anInt3473 + i_8_, Class291_Sub1.anInt3472 + i_9_, Class291_Sub1.anInt3473 + i_10_, i, i_0_, i + i_1_, 1 + (i_0_ + i_2_));
 			Class291_Sub1.method5180(class505);
-			Class482 class482 = Class291_Sub1.method5135(class505);
+			NodeCollection class482 = Class291_Sub1.method5135(class505);
 			Class18.method573(class505, class482, 0, 0, (byte) 2);
 			if (Class361.anInt4185 * 750747217 > 0) {
 				Class96_Sub9.anInt9282 -= 759227215;

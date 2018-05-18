@@ -2,65 +2,65 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class40 {
+public class NamedFileReference {
 	int[] anIntArray410;
 	static Class523 aClass523_411;
-	public static Class317 aClass317_412;
+	public static Index aClass317_412;
 
 	public int method864(int i) {
-		int i_0_ = (((Class40) this).anIntArray410.length >> 1) - 1;
+		int i_0_ = (((NamedFileReference) this).anIntArray410.length >> 1) - 1;
 		int i_1_ = i & i_0_;
 		for (;;) {
-			int i_2_ = ((Class40) this).anIntArray410[1 + (i_1_ + i_1_)];
+			int i_2_ = ((NamedFileReference) this).anIntArray410[1 + (i_1_ + i_1_)];
 			if (i_2_ == -1)
 				return -1;
-			if (i == ((Class40) this).anIntArray410[i_1_ + i_1_])
+			if (i == ((NamedFileReference) this).anIntArray410[i_1_ + i_1_])
 				return i_2_;
 			i_1_ = 1 + i_1_ & i_0_;
 		}
 	}
 
 	public int method865(int i, int i_3_) {
-		int i_4_ = (((Class40) this).anIntArray410.length >> 1) - 1;
+		int i_4_ = (((NamedFileReference) this).anIntArray410.length >> 1) - 1;
 		int i_5_ = i & i_4_;
 		for (;;) {
-			int i_6_ = ((Class40) this).anIntArray410[1 + (i_5_ + i_5_)];
+			int i_6_ = ((NamedFileReference) this).anIntArray410[1 + (i_5_ + i_5_)];
 			if (i_6_ == -1)
 				return -1;
-			if (i == ((Class40) this).anIntArray410[i_5_ + i_5_])
+			if (i == ((NamedFileReference) this).anIntArray410[i_5_ + i_5_])
 				return i_6_;
 			i_5_ = 1 + i_5_ & i_4_;
 		}
 	}
 
 	public int method866(int i) {
-		int i_7_ = (((Class40) this).anIntArray410.length >> 1) - 1;
+		int i_7_ = (((NamedFileReference) this).anIntArray410.length >> 1) - 1;
 		int i_8_ = i & i_7_;
 		for (;;) {
-			int i_9_ = ((Class40) this).anIntArray410[1 + (i_8_ + i_8_)];
+			int i_9_ = ((NamedFileReference) this).anIntArray410[1 + (i_8_ + i_8_)];
 			if (i_9_ == -1)
 				return -1;
-			if (i == ((Class40) this).anIntArray410[i_8_ + i_8_])
+			if (i == ((NamedFileReference) this).anIntArray410[i_8_ + i_8_])
 				return i_9_;
 			i_8_ = 1 + i_8_ & i_7_;
 		}
 	}
 
-	public Class40(int[] is) {
+	public NamedFileReference(int[] is) {
 		int i;
 		for (i = 1; i <= (is.length >> 1) + is.length; i <<= 1) {
 			/* empty */
 		}
-		((Class40) this).anIntArray410 = new int[i + i];
+		((NamedFileReference) this).anIntArray410 = new int[i + i];
 		for (int i_10_ = 0; i_10_ < i + i; i_10_++)
-			((Class40) this).anIntArray410[i_10_] = -1;
+			((NamedFileReference) this).anIntArray410[i_10_] = -1;
 		for (int i_11_ = 0; i_11_ < is.length; i_11_++) {
 			int i_12_;
-			for (i_12_ = is[i_11_] & i - 1; -1 != ((Class40) this).anIntArray410[1 + (i_12_ + i_12_)]; i_12_ = i_12_ + 1 & i - 1) {
+			for (i_12_ = is[i_11_] & i - 1; -1 != ((NamedFileReference) this).anIntArray410[1 + (i_12_ + i_12_)]; i_12_ = i_12_ + 1 & i - 1) {
 				/* empty */
 			}
-			((Class40) this).anIntArray410[i_12_ + i_12_] = is[i_11_];
-			((Class40) this).anIntArray410[1 + (i_12_ + i_12_)] = i_11_;
+			((NamedFileReference) this).anIntArray410[i_12_ + i_12_] = is[i_11_];
+			((NamedFileReference) this).anIntArray410[1 + (i_12_ + i_12_)] = i_11_;
 		}
 	}
 

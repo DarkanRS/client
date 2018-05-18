@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class157 {
+public class RSMesh {
 	public int anInt1973;
 	public int anInt1974;
 	public byte[] aByteArray1975;
@@ -57,7 +57,7 @@ public class Class157 {
 		}
 	}
 
-	Class157(byte[] is) {
+	RSMesh(byte[] is) {
 		anInt1974 = 0;
 		anInt1999 = 0;
 		anInt1973 = 0;
@@ -97,7 +97,7 @@ public class Class157 {
 		return anInt1973++;
 	}
 
-	final int method2657(Class157 class157_17_, int i, short i_18_) {
+	final int method2657(RSMesh class157_17_, int i, short i_18_) {
 		int i_19_ = class157_17_.anIntArray1976[i];
 		int i_20_ = class157_17_.anIntArray2003[i];
 		int i_21_ = class157_17_.anIntArray1978[i];
@@ -852,11 +852,11 @@ public class Class157 {
 		}
 	}
 
-	public static Class157 method2670(Class317 class317, int i, int i_196_) {
+	public static RSMesh method2670(Index class317, int i, int i_196_) {
 		byte[] is = class317.getFile(i, i_196_, -1300672958);
 		if (is == null)
 			return null;
-		return new Class157(is);
+		return new RSMesh(is);
 	}
 
 	public void method2671(int i, int i_197_, int i_198_) {
@@ -901,11 +901,11 @@ public class Class157 {
 		return anInt1974++;
 	}
 
-	public static Class157 method2673(Class317 class317, int i, int i_214_) {
+	public static RSMesh method2673(Index class317, int i, int i_214_) {
 		byte[] is = class317.getFile(i, i_214_, -1283529200);
 		if (is == null)
 			return null;
-		return new Class157(is);
+		return new RSMesh(is);
 	}
 
 	void method2674(byte[] is) {
@@ -1136,7 +1136,7 @@ public class Class157 {
 			aByteArray1985 = null;
 	}
 
-	final int method2675(Class157 class157_263_, int i, short i_264_) {
+	final int method2675(RSMesh class157_263_, int i, short i_264_) {
 		int i_265_ = class157_263_.anIntArray1976[i];
 		int i_266_ = class157_263_.anIntArray2003[i];
 		int i_267_ = class157_263_.anIntArray1978[i];
@@ -1154,7 +1154,7 @@ public class Class157 {
 		return anInt1974++;
 	}
 
-	final int method2676(Class157 class157_269_, int i, short i_270_) {
+	final int method2676(RSMesh class157_269_, int i, short i_270_) {
 		int i_271_ = class157_269_.anIntArray1976[i];
 		int i_272_ = class157_269_.anIntArray2003[i];
 		int i_273_ = class157_269_.anIntArray1978[i];
@@ -2642,14 +2642,14 @@ public class Class157 {
 		anInt1999++;
 	}
 
-	public static Class157 method2689(Class317 class317, int i, int i_600_) {
+	public static RSMesh method2689(Index class317, int i, int i_600_) {
 		byte[] is = class317.getFile(i, i_600_, -1774438474);
 		if (is == null)
 			return null;
-		return new Class157(is);
+		return new RSMesh(is);
 	}
 
-	public Class157(Class157[] class157s, int i) {
+	public RSMesh(RSMesh[] class157s, int i) {
 		anInt1974 = 0;
 		anInt1999 = 0;
 		anInt1973 = 0;
@@ -2669,7 +2669,7 @@ public class Class157 {
 		boolean bool_608_ = false;
 		aByte1994 = (byte) -1;
 		for (int i_609_ = 0; i_609_ < i; i_609_++) {
-			Class157 class157_610_ = class157s[i_609_];
+			RSMesh class157_610_ = class157s[i_609_];
 			if (class157_610_ != null) {
 				anInt1974 += class157_610_.anInt1974;
 				anInt1973 += class157_610_.anInt1973;
@@ -2745,7 +2745,7 @@ public class Class157 {
 		i_603_ = 0;
 		for (int i_611_ = 0; i_611_ < i; i_611_++) {
 			short i_612_ = (short) (1 << i_611_);
-			Class157 class157_613_ = class157s[i_611_];
+			RSMesh class157_613_ = class157s[i_611_];
 			if (class157_613_ != null) {
 				if (class157_613_.aClass84Array2009 != null) {
 					for (int i_614_ = 0; i_614_ < class157_613_.aClass84Array2009.length; i_614_++) {
@@ -2805,7 +2805,7 @@ public class Class157 {
 		anInt1999 = anInt1974;
 		for (int i_623_ = 0; i_623_ < i; i_623_++) {
 			short i_624_ = (short) (1 << i_623_);
-			Class157 class157_625_ = class157s[i_623_];
+			RSMesh class157_625_ = class157s[i_623_];
 			if (class157_625_ != null) {
 				for (int i_626_ = 0; i_626_ < class157_625_.anInt1973; i_626_++) {
 					if (bool_606_)
@@ -2905,7 +2905,7 @@ public class Class157 {
 		return anInt1973++;
 	}
 
-	public Class157(int i, int i_660_, int i_661_) {
+	public RSMesh(int i, int i_660_, int i_661_) {
 		anInt1974 = 0;
 		anInt1999 = 0;
 		anInt1973 = 0;

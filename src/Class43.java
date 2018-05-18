@@ -3,16 +3,16 @@
  */
 
 public class Class43 implements Interface2 {
-	Class160 aClass160_417;
+	NativeSprite aClass160_417;
 	Class351 aClass351_418;
-	Class317 aClass317_419;
+	Index aClass317_419;
 	public static long aLong420;
 
 	public boolean method21() {
 		return ((Class43) this).aClass317_419.method5661(((((Class43) this).aClass351_418.anInt4095) * -985960003), -1331132552);
 	}
 
-	Class43(Class317 class317, Class351 class351) {
+	Class43(Index class317, Class351 class351) {
 		((Class43) this).aClass317_419 = class317;
 		((Class43) this).aClass351_418 = class351;
 	}
