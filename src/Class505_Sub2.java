@@ -723,9 +723,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 					}
 				}
 			}
-			class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 228280722);
+			class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 228280722);
 		} else
-			class160 = method8549(new int[] { 0 }, 0, 1, 1, 1, -51231437);
+			class160 = createNativeSprite(new int[] { 0 }, 0, 1, 1, 1, -51231437);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
@@ -2635,9 +2635,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 					}
 				}
 			}
-			class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 243468915);
+			class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 243468915);
 		} else
-			class160 = method8549(new int[] { 0 }, 0, 1, 1, 1, -1837569571);
+			class160 = createNativeSprite(new int[] { 0 }, 0, 1, 1, 1, -1837569571);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
@@ -2663,9 +2663,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 					}
 				}
 			}
-			class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 216802714);
+			class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 216802714);
 		} else
-			class160 = method8549(new int[] { 0 }, 0, 1, 1, 1, 1578248610);
+			class160 = createNativeSprite(new int[] { 0 }, 0, 1, 1, 1, 1578248610);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}

@@ -620,7 +620,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void PA(int i, int i_192_, int i_193_, int i_194_);
 
-	public abstract boolean method11272();
+	public abstract boolean successful();
 
 	public abstract boolean i();
 

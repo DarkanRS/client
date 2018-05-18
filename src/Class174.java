@@ -364,7 +364,7 @@ public class Class174 {
 			Class461.method7704(class527, 1470241483);
 			break;
 		case 349:
-			Class120.method2091(class527, (byte) -128);
+			SharedConfigsType.method2091(class527, (byte) -128);
 			break;
 		case 398:
 			Class198.method3233(class527, 1606647230);
@@ -990,7 +990,7 @@ public class Class174 {
 			Class96.method1603(class527, 543673057);
 			break;
 		case 431:
-			Class433.method7277(class527, (byte) 23);
+			Message.method7277(class527, (byte) 23);
 			break;
 		case 441:
 			Class207.method3556(class527, -86803725);
@@ -1089,7 +1089,7 @@ public class Class174 {
 			Class291_Sub1.method13359(class527, -606792870);
 			break;
 		case 11:
-			Class424.method7083(class527, 1766104988);
+			AttributesDefaultsLoader.method7083(class527, 1766104988);
 			break;
 		case 606:
 			Class511.method8753(class527, (byte) -22);
@@ -1140,7 +1140,7 @@ public class Class174 {
 			Class350_Sub2.method12573(class527, (short) 255);
 			break;
 		case 611:
-			Class495.method8298(class527, (byte) -1);
+			Language.method8298(class527, (byte) -1);
 			break;
 		case 124:
 			Class388.method6687(class527, 841786428);
@@ -1323,7 +1323,7 @@ public class Class174 {
 			Class353.method6205(class527, (byte) 3);
 			break;
 		case 158:
-			Class229.method3892(class527, 461356591);
+			SoftCache.method3892(class527, 461356591);
 			break;
 		case 691:
 			Class96_Sub5.method14244(class527, 2027041853);
@@ -1461,7 +1461,7 @@ public class Class174 {
 			Class511.method8749(class527, 34336);
 			break;
 		case 526:
-			Class120.method2093(class527, (byte) -50);
+			SharedConfigsType.method2093(class527, (byte) -50);
 			break;
 		case 560:
 			Class79.method1391(class527, -1800964332);
@@ -1473,7 +1473,7 @@ public class Class174 {
 			Class28.method779(class527, (byte) 53);
 			break;
 		case 630:
-			Class238.method4033(class527, (byte) -57);
+			PlayerAppearance.method4033(class527, (byte) -57);
 			break;
 		case 280:
 			Class388.method6691(class527, 614904861);
@@ -1608,7 +1608,7 @@ public class Class174 {
 			Class4.method292(class527, 1216542126);
 			break;
 		case 582:
-			Class229.method3893(class527, -1634634570);
+			SoftCache.method3893(class527, -1634634570);
 			break;
 		case 813:
 			Class96.method1606(class527, -1612733757);
@@ -1656,7 +1656,7 @@ public class Class174 {
 			Class198.method3229(class527, -289314013);
 			break;
 		case 568:
-			Class238.method4035(class527, -187921647);
+			PlayerAppearance.method4035(class527, -187921647);
 			break;
 		case 581:
 			Class169.method2873(class527, -1640835133);
@@ -1752,7 +1752,7 @@ public class Class174 {
 			Class110.method1862(class527, -119267827);
 			break;
 		case 453:
-			Class238.method4031(class527, (short) 28947);
+			PlayerAppearance.method4031(class527, (short) 28947);
 			break;
 		case 452:
 			Class225_Sub2.method12881(class527, -1317003956);
@@ -1833,7 +1833,7 @@ public class Class174 {
 			Class282_Sub48.method13446(class527, 814107150);
 			break;
 		case 1:
-			Class495.method8285(class527, -1206071745);
+			Language.method8285(class527, -1206071745);
 			break;
 		case 984:
 			Class115.method1951(class527, (byte) 41);
@@ -1908,7 +1908,7 @@ public class Class174 {
 			Class116.method1968(class527, (byte) -11);
 			break;
 		case 54:
-			Class229.method3894(class527, -1300899221);
+			SoftCache.method3894(class527, -1300899221);
 			break;
 		case 574:
 			Class233.method3939(class527, -1748085723);
@@ -1974,7 +1974,7 @@ public class Class174 {
 			Class285.method5029(class527, (short) 658);
 			break;
 		case 909:
-			Class495.method8296(class527, (byte) 25);
+			Language.method8296(class527, (byte) 25);
 			break;
 		case 464:
 			Class105.method1803(class527, -1693230634);
@@ -2415,7 +2415,7 @@ public class Class174 {
 			Class4.method289(class527, (byte) -51);
 			break;
 		case 614:
-			Class120.method2092(class527, (byte) 0);
+			SharedConfigsType.method2092(class527, (byte) 0);
 			break;
 		case 101:
 			Class169.method2870(class527, -1579310255);
@@ -2517,7 +2517,7 @@ public class Class174 {
 			Class519.method11154(class527, -530312338);
 			break;
 		case 549:
-			Class433.method7274(class527, -457875811);
+			Message.method7274(class527, -457875811);
 			break;
 		case 327:
 			Class226.method3803(class527, (short) -8258);
@@ -2751,7 +2751,7 @@ public class Class174 {
 			Class470.method7826(class527, (byte) 1);
 			break;
 		case 252:
-			Class120.method2096(class527, (byte) 1);
+			SharedConfigsType.method2096(class527, (byte) 1);
 			break;
 		case 350:
 			Class279.method4968(class527, 2029357327);
@@ -2943,7 +2943,7 @@ public class Class174 {
 			Class509.method8738(class527, 42229655);
 			break;
 		case 405:
-			Class433.method7276(class527, (byte) 0);
+			Message.method7276(class527, (byte) 0);
 			break;
 		case 56:
 			ReferenceTable.method5764(class527, (short) -4973);
@@ -3003,7 +3003,7 @@ public class Class174 {
 			Class44.method911(class527, 1598874470);
 			break;
 		case 334:
-			Class495.method8297(class527, (byte) 13);
+			Language.method8297(class527, (byte) 13);
 			break;
 		case 564:
 			Class90.method1508(class527, 384852083);
@@ -3024,7 +3024,7 @@ public class Class174 {
 			Class292.method5200(true, class527, (byte) 127);
 			break;
 		case 26:
-			Class424.method7082(class527, 334319155);
+			AttributesDefaultsLoader.method7082(class527, 334319155);
 			break;
 		case 247:
 			Class109.method1856(class527, -347767228);
@@ -3078,7 +3078,7 @@ public class Class174 {
 			Class182.method3041(class527, 361960939);
 			break;
 		case 374:
-			Class238.method4030(class527, 688699952);
+			PlayerAppearance.method4030(class527, 688699952);
 			break;
 		case 232:
 			Class217.method3693(class527, (short) -20677);
@@ -3216,13 +3216,13 @@ public class Class174 {
 			Class52.method1084(class527, 2084394473);
 			break;
 		case 315:
-			Class433.method7270(class527, -104209121);
+			Message.method7270(class527, -104209121);
 			break;
 		case 749:
 			Class311.method5512(class527, -837844602);
 			break;
 		case 352:
-			Class495.method8295(class527, 313566380);
+			Language.method8295(class527, 313566380);
 			break;
 		case 126:
 			Class10.method459(class527, 1762286892);

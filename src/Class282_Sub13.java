@@ -49,8 +49,8 @@ public class Class282_Sub13 extends Node {
 	static final void method12215(CS2Executor class527, int i) {
 		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_0_, 207092406);
-		if (-1 == class425.anInt5078 * -722914683 && class425.anInt5084 * 1416589415 >= 0)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class425.anInt5084 * 1416589415;
+		if (-1 == class425.certTemplateId * -722914683 && class425.certId * 1416589415 >= 0)
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class425.certId * 1416589415;
 		else
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = i_0_;
 	}

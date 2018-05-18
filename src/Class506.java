@@ -408,11 +408,11 @@ public class Class506 {
 		if (modifyModel) {
 			class422.maleBody[0] = stream.readBigSmart(1983228552);
 			class422.femaleBody[0] = stream.readBigSmart(1966660718);
-			if (-1 != ((ItemDefinitions) class425).anInt5100 * -931922913 || -1259031521 * ((ItemDefinitions) class425).anInt5069 != -1) {
+			if (-1 != ((ItemDefinitions) class425).maleBody2 * -931922913 || -1259031521 * ((ItemDefinitions) class425).femaleBody2 != -1) {
 				class422.maleBody[1] = stream.readBigSmart(1966117219);
 				class422.femaleBody[1] = stream.readBigSmart(1968077484);
 			}
-			if (-1 != -562041407 * ((ItemDefinitions) class425).anInt5070 || -1 != -1802576377 * ((ItemDefinitions) class425).anInt5071) {
+			if (-1 != -562041407 * ((ItemDefinitions) class425).maleBody3 || -1 != -1802576377 * ((ItemDefinitions) class425).femaleBody3) {
 				class422.maleBody[2] = stream.readBigSmart(2019468783);
 				class422.femaleBody[2] = stream.readBigSmart(1953029845);
 			}
@@ -420,7 +420,7 @@ public class Class506 {
 		if (bool_18_) {
 			class422.maleHeads[0] = stream.readBigSmart(2017468211);
 			class422.femaleHeads[0] = stream.readBigSmart(2066820244);
-			if (-1 != -613723223 * ((ItemDefinitions) class425).anInt5079 || -1 != -1871546585 * ((ItemDefinitions) class425).anInt5081) {
+			if (-1 != -613723223 * ((ItemDefinitions) class425).maleHead2 || -1 != -1871546585 * ((ItemDefinitions) class425).femaleHead2) {
 				class422.maleHeads[1] = stream.readBigSmart(2051081301);
 				class422.femaleHeads[1] = stream.readBigSmart(1969156030);
 			}

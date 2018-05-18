@@ -8,7 +8,7 @@ public class Class125 implements Interface8 {
 	float[] aFloatArray1570;
 	public static NativeSprite aClass160_1571;
 	static int anInt1572;
-	public static Class424 aClass424_1573;
+	public static AttributesDefaultsLoader aClass424_1573;
 
 	public void method32() {
 		/* empty */

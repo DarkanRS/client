@@ -672,7 +672,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract NativeSprite method8548(int[] is, int i, int i_354_, int i_355_, int i_356_, boolean bool);
 
-	public NativeSprite method8549(int[] is, int i, int i_357_, int i_358_, int i_359_, int i_360_) {
+	public NativeSprite createNativeSprite(int[] is, int i, int i_357_, int i_358_, int i_359_, int i_360_) {
 		return method8442(is, i, i_357_, i_358_, i_359_, true);
 	}
 

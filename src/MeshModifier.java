@@ -21,23 +21,23 @@ public class MeshModifier {
 		femaleBody = new int[3];
 		maleHeads = new int[2];
 		femaleHeads = new int[2];
-		maleBody[0] = -525270939 * ((ItemDefinitions) class425).anInt5066;
-		maleBody[1] = ((ItemDefinitions) class425).anInt5100 * -931922913;
-		maleBody[2] = ((ItemDefinitions) class425).anInt5070 * -562041407;
-		femaleBody[0] = -2090968851 * ((ItemDefinitions) class425).anInt5075;
-		femaleBody[1] = ((ItemDefinitions) class425).anInt5069 * -1259031521;
-		femaleBody[2] = ((ItemDefinitions) class425).anInt5071 * -1802576377;
-		maleHeads[0] = -603336817 * ((ItemDefinitions) class425).anInt5096;
-		maleHeads[1] = ((ItemDefinitions) class425).anInt5079 * -613723223;
-		femaleHeads[0] = ((ItemDefinitions) class425).anInt5080 * -1705416443;
-		femaleHeads[1] = ((ItemDefinitions) class425).anInt5081 * -1871546585;
-		if (null != ((ItemDefinitions) class425).aShortArray5039) {
-			modifiedColors = new short[((ItemDefinitions) class425).aShortArray5039.length];
-			System.arraycopy(((ItemDefinitions) class425).aShortArray5039, 0, modifiedColors, 0, modifiedColors.length);
+		maleBody[0] = -525270939 * ((ItemDefinitions) class425).maleBody1;
+		maleBody[1] = ((ItemDefinitions) class425).maleBody2 * -931922913;
+		maleBody[2] = ((ItemDefinitions) class425).maleBody3 * -562041407;
+		femaleBody[0] = -2090968851 * ((ItemDefinitions) class425).femaleBody1;
+		femaleBody[1] = ((ItemDefinitions) class425).femaleBody2 * -1259031521;
+		femaleBody[2] = ((ItemDefinitions) class425).femaleBody3 * -1802576377;
+		maleHeads[0] = -603336817 * ((ItemDefinitions) class425).maleHead1;
+		maleHeads[1] = ((ItemDefinitions) class425).maleHead2 * -613723223;
+		femaleHeads[0] = ((ItemDefinitions) class425).femaleHead1 * -1705416443;
+		femaleHeads[1] = ((ItemDefinitions) class425).femaleHead2 * -1871546585;
+		if (null != ((ItemDefinitions) class425).modifiedColors) {
+			modifiedColors = new short[((ItemDefinitions) class425).modifiedColors.length];
+			System.arraycopy(((ItemDefinitions) class425).modifiedColors, 0, modifiedColors, 0, modifiedColors.length);
 		}
-		if (((ItemDefinitions) class425).aShortArray5083 != null) {
-			modifiedTextures = new short[((ItemDefinitions) class425).aShortArray5083.length];
-			System.arraycopy(((ItemDefinitions) class425).aShortArray5083, 0, modifiedTextures, 0, modifiedTextures.length);
+		if (((ItemDefinitions) class425).modifiedTextures != null) {
+			modifiedTextures = new short[((ItemDefinitions) class425).modifiedTextures.length];
+			System.arraycopy(((ItemDefinitions) class425).modifiedTextures, 0, modifiedTextures, 0, modifiedTextures.length);
 		}
 	}
 
@@ -51,11 +51,11 @@ public class MeshModifier {
 		if (modifyWearModel) {
 			class422.maleBody[0] = class282_sub35.readBigSmart(2139141811);
 			class422.femaleBody[0] = class282_sub35.readBigSmart(2068675466);
-			if (-1 != ((ItemDefinitions) class425).anInt5100 * -931922913 || -1259031521 * ((ItemDefinitions) class425).anInt5069 != -1) {
+			if (-1 != ((ItemDefinitions) class425).maleBody2 * -931922913 || -1259031521 * ((ItemDefinitions) class425).femaleBody2 != -1) {
 				class422.maleBody[1] = class282_sub35.readBigSmart(2111055855);
 				class422.femaleBody[1] = class282_sub35.readBigSmart(2041853750);
 			}
-			if (-1 != -562041407 * ((ItemDefinitions) class425).anInt5070 || -1 != -1802576377 * ((ItemDefinitions) class425).anInt5071) {
+			if (-1 != -562041407 * ((ItemDefinitions) class425).maleBody3 || -1 != -1802576377 * ((ItemDefinitions) class425).femaleBody3) {
 				class422.maleBody[2] = class282_sub35.readBigSmart(2141016611);
 				class422.femaleBody[2] = class282_sub35.readBigSmart(1979530734);
 			}
@@ -63,7 +63,7 @@ public class MeshModifier {
 		if (modifyHeadModel) {
 			class422.maleHeads[0] = class282_sub35.readBigSmart(2115897274);
 			class422.femaleHeads[0] = class282_sub35.readBigSmart(1991679721);
-			if (-1 != -613723223 * ((ItemDefinitions) class425).anInt5079 || -1 != -1871546585 * ((ItemDefinitions) class425).anInt5081) {
+			if (-1 != -613723223 * ((ItemDefinitions) class425).maleHead2 || -1 != -1871546585 * ((ItemDefinitions) class425).femaleHead2) {
 				class422.maleHeads[1] = class282_sub35.readBigSmart(2078521218);
 				class422.femaleHeads[1] = class282_sub35.readBigSmart(2072485027);
 			}

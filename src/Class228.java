@@ -156,19 +156,19 @@ public class Class228 {
 		Index class317 = ((Class210) ((Class228) this).aClass210_2850).aClass317_2666;
 		if (-1860512279 * ((Class228) this).anInt2842 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (((Class228) this).anInt2842 * -1860512279))) == null && class317.method5661(-1860512279 * ((Class228) this).anInt2842, -1191844183)) {
 			Class91 class91 = Class91.method1515(class317, -1860512279 * (((Class228) this).anInt2842));
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (-1860512279 * ((Class228) this).anInt2842));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (-1860512279 * ((Class228) this).anInt2842));
 		}
 		if (1560346643 * ((Class228) this).anInt2843 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (1560346643 * ((Class228) this).anInt2843))) == null && class317.method5661(1560346643 * ((Class228) this).anInt2843, -794594441)) {
 			Class91 class91 = Class91.method1515(class317, ((Class228) this).anInt2843 * 1560346643);
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (1560346643 * ((Class228) this).anInt2843));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (1560346643 * ((Class228) this).anInt2843));
 		}
 		if (((Class228) this).anInt2851 * 1879760921 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (((Class228) this).anInt2851 * 1879760921))) == null && class317.method5661(((Class228) this).anInt2851 * 1879760921, 1719697328)) {
 			Class91 class91 = Class91.method1515(class317, 1879760921 * ((Class228) this).anInt2851);
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (1879760921 * ((Class228) this).anInt2851));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (1879760921 * ((Class228) this).anInt2851));
 		}
 		if (((Class228) this).anInt2845 * 1454442289 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (((Class228) this).anInt2845 * 1454442289))) == null && class317.method5661(((Class228) this).anInt2845 * 1454442289, 1508436716)) {
 			Class91 class91 = Class91.method1515(class317, ((Class228) this).anInt2845 * 1454442289);
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (((Class228) this).anInt2845 * 1454442289));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (((Class228) this).anInt2845 * 1454442289));
 		}
 	}
 
@@ -275,19 +275,19 @@ public class Class228 {
 		Index class317 = ((Class210) ((Class228) this).aClass210_2850).aClass317_2666;
 		if (-1860512279 * ((Class228) this).anInt2842 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (((Class228) this).anInt2842 * -1860512279))) == null && class317.method5661(-1860512279 * ((Class228) this).anInt2842, 719597086)) {
 			Class91 class91 = Class91.method1515(class317, -1860512279 * (((Class228) this).anInt2842));
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (-1860512279 * ((Class228) this).anInt2842));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (-1860512279 * ((Class228) this).anInt2842));
 		}
 		if (1560346643 * ((Class228) this).anInt2843 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (1560346643 * ((Class228) this).anInt2843))) == null && class317.method5661(1560346643 * ((Class228) this).anInt2843, 856102236)) {
 			Class91 class91 = Class91.method1515(class317, ((Class228) this).anInt2843 * 1560346643);
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (1560346643 * ((Class228) this).anInt2843));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (1560346643 * ((Class228) this).anInt2843));
 		}
 		if (((Class228) this).anInt2851 * 1879760921 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (((Class228) this).anInt2851 * 1879760921))) == null && class317.method5661(((Class228) this).anInt2851 * 1879760921, 1106964928)) {
 			Class91 class91 = Class91.method1515(class317, 1879760921 * ((Class228) this).anInt2851);
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (1879760921 * ((Class228) this).anInt2851));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (1879760921 * ((Class228) this).anInt2851));
 		}
 		if (((Class228) this).anInt2845 * 1454442289 >= 0 && (((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3865((long) (((Class228) this).anInt2845 * 1454442289))) == null && class317.method5661(((Class228) this).anInt2845 * 1454442289, -1491872897)) {
 			Class91 class91 = Class91.method1515(class317, ((Class228) this).anInt2845 * 1454442289);
-			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.method3856(class505.method8444(class91, true), (long) (((Class228) this).anInt2845 * 1454442289));
+			((Class210) ((Class228) this).aClass210_2850).aClass229_2664.put(class505.method8444(class91, true), (long) (((Class228) this).anInt2845 * 1454442289));
 		}
 	}
 
@@ -305,7 +305,7 @@ public class Class228 {
 		for (Class282_Sub50_Sub15 class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4)); class282_sub50_sub15 != null; class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-395453439))) {
 			if ((((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769 * 2026887253) > 1) {
 				((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769 = 0;
-				Class20.aClass229_164.method3856(class282_sub50_sub15, ((((Class282_Sub50_Sub7) (Class282_Sub50_Sub7) (((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119)).aLong9580) * 820033947929891191L));
+				Class20.aClass229_164.put(class282_sub50_sub15, ((((Class282_Sub50_Sub7) (Class282_Sub50_Sub7) (((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119)).aLong9580) * 820033947929891191L));
 				((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7935((byte) 44);
 			}
 		}

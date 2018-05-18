@@ -116,7 +116,7 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_14_ - i_17_;
 		((Class194) this).anInt2408 = i_16_;
 		((Class194) this).anIntArray2403[i] = i_13_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_12_, i_12_, i_15_, -829104519);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_12_, i_12_, i_15_, -829104519);
 	}
 
 	static {
@@ -179,7 +179,7 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_25_ - i_28_;
 		((Class194) this).anInt2408 = i_27_;
 		((Class194) this).anIntArray2403[i] = i_24_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_23_, i_23_, i_26_, 1394779103);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_23_, i_23_, i_26_, 1394779103);
 	}
 
 	void method3181(GraphicalRenderer class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
@@ -233,7 +233,7 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_35_ - i_38_;
 		((Class194) this).anInt2408 = i_37_;
 		((Class194) this).anIntArray2403[i] = i_34_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_33_, i_33_, i_36_, -918979358);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_33_, i_33_, i_36_, -918979358);
 	}
 
 	void method3182(GraphicalRenderer class505, Font font, FontMetrics fontmetrics, char c, int i, boolean bool) {
@@ -287,7 +287,7 @@ public class Class194 {
 		((Class194) this).anInt2407 = i_45_ - i_48_;
 		((Class194) this).anInt2408 = i_47_;
 		((Class194) this).anIntArray2403[i] = i_44_;
-		((Class194) this).aClass160Array2405[i] = class505.method8549(is, 0, i_43_, i_43_, i_46_, -535318270);
+		((Class194) this).aClass160Array2405[i] = class505.createNativeSprite(is, 0, i_43_, i_43_, i_46_, -535318270);
 	}
 
 	Class194(GraphicalRenderer class505, int i, boolean bool, Component component) {

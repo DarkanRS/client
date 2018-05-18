@@ -35,11 +35,11 @@ public class Class275_Sub1 extends Class275 {
 
 	public static void method12424(int i, int i_0_) {
 		Class149.anInt1744 = i * 186910109;
-		synchronized (Class238.aClass229_2930) {
-			Class238.aClass229_2930.method3859(329835081);
+		synchronized (PlayerAppearance.aClass229_2930) {
+			PlayerAppearance.aClass229_2930.method3859(329835081);
 		}
-		synchronized (Class238.aClass229_2920) {
-			Class238.aClass229_2920.method3859(-1157514698);
+		synchronized (PlayerAppearance.aClass229_2920) {
+			PlayerAppearance.aClass229_2920.method3859(-1157514698);
 		}
 	}
 }

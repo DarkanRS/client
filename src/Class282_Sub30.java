@@ -6,7 +6,7 @@ public class Class282_Sub30 extends Node {
 	int[] anIntArray7709;
 	int[] anIntArray7710 = { -1 };
 	static IterableNodeMap aClass465_7711 = new IterableNodeMap(32);
-	static Class229 aClass229_7712 = new Class229(11);
+	static SoftCache aClass229_7712 = new SoftCache(11);
 
 	static void method12427() {
 		aClass465_7711.method7749(-1248616800);
@@ -18,7 +18,7 @@ public class Class282_Sub30 extends Node {
 			return 0;
 		int i_2_ = 0;
 		for (int i_3_ = 0; i_3_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length; i_3_++) {
-			if (((Class282_Sub30) class282_sub30).anIntArray7710[i_3_] >= 0 && (((Class282_Sub30) class282_sub30).anIntArray7710[i_3_] < -1662523091 * Class119.aClass426_1463.anInt5108)) {
+			if (((Class282_Sub30) class282_sub30).anIntArray7710[i_3_] >= 0 && (((Class282_Sub30) class282_sub30).anIntArray7710[i_3_] < -1662523091 * Class119.aClass426_1463.maxItemsCount)) {
 				ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions((((Class282_Sub30) class282_sub30).anIntArray7710[i_3_]), 1939490794);
 				int i_4_ = class425.method7099(i_0_, ((Class125.aClass424_1573.method7069(i_0_, (byte) 0).anInt5337) * -1741480635), -655698445);
 				if (bool)
@@ -30,7 +30,7 @@ public class Class282_Sub30 extends Node {
 		return i_2_;
 	}
 
-	final MeshRasterizer method12429(GraphicalRenderer class505, int i, Class456 class456, int i_5_, boolean bool, Class238 class238, int i_6_) {
+	final MeshRasterizer method12429(GraphicalRenderer class505, int i, Class456 class456, int i_5_, boolean bool, PlayerAppearance class238, int i_6_) {
 		MeshRasterizer class528 = null;
 		int i_7_ = i;
 		Class227 class227 = null;
@@ -49,7 +49,7 @@ public class Class282_Sub30 extends Node {
 		}
 		if (null != class456)
 			i_7_ |= class456.method7640(-1290274733);
-		long l = method12444(is, i_5_, class238 != null ? class238.anIntArray2923 : null, bool, 583894637);
+		long l = method12444(is, i_5_, class238 != null ? class238.colors : null, bool, 583894637);
 		if (aClass229_7712 != null)
 			class528 = (MeshRasterizer) aClass229_7712.method3865(l);
 		if (null == class528 || class505.method8452(class528.m(), i_7_) != 0) {
@@ -90,15 +90,15 @@ public class Class282_Sub30 extends Node {
 			class528 = class505.createMeshRasterizer(class157, i_10_, -939931493 * Class105.anInt1069, 65, 857);
 			if (class238 != null) {
 				for (int i_21_ = 0; i_21_ < 10; i_21_++) {
-					for (int i_22_ = 0; i_22_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_21_]).length; i_22_++) {
-						if (class238.anIntArray2923[i_21_] < (Class366.aShortArrayArrayArray4232[i_21_][i_22_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_21_][i_22_]), (Class366.aShortArrayArrayArray4232[i_21_][i_22_][class238.anIntArray2923[i_21_]]));
+					for (int i_22_ = 0; i_22_ < (AbstractQueue_Sub1.SKIN_COLORS[i_21_]).length; i_22_++) {
+						if (class238.colors[i_21_] < (Class366.SKIN_COLORS[i_21_][i_22_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_21_][i_22_]), (Class366.SKIN_COLORS[i_21_][i_22_][class238.colors[i_21_]]));
 					}
 				}
 			}
 			if (null != aClass229_7712) {
 				class528.KA(i_7_);
-				aClass229_7712.method3856(class528, l);
+				aClass229_7712.put(class528, l);
 			}
 		}
 		if (class456 == null)
@@ -389,7 +389,7 @@ public class Class282_Sub30 extends Node {
 		return ((Class282_Sub30) class282_sub30).anIntArray7710[i_64_];
 	}
 
-	final MeshRasterizer method12454(GraphicalRenderer class505, int i, Class456 class456, int i_65_, boolean bool, Class238 class238) {
+	final MeshRasterizer method12454(GraphicalRenderer class505, int i, Class456 class456, int i_65_, boolean bool, PlayerAppearance class238) {
 		MeshRasterizer class528 = null;
 		int i_66_ = i;
 		Class227 class227 = null;
@@ -408,7 +408,7 @@ public class Class282_Sub30 extends Node {
 		}
 		if (null != class456)
 			i_66_ |= class456.method7640(-1923028148);
-		long l = method12444(is, i_65_, class238 != null ? class238.anIntArray2923 : null, bool, 583894637);
+		long l = method12444(is, i_65_, class238 != null ? class238.colors : null, bool, 583894637);
 		if (aClass229_7712 != null)
 			class528 = (MeshRasterizer) aClass229_7712.method3865(l);
 		if (null == class528 || class505.method8452(class528.m(), i_66_) != 0) {
@@ -449,15 +449,15 @@ public class Class282_Sub30 extends Node {
 			class528 = class505.createMeshRasterizer(class157, i_69_, -939931493 * Class105.anInt1069, 65, 857);
 			if (class238 != null) {
 				for (int i_80_ = 0; i_80_ < 10; i_80_++) {
-					for (int i_81_ = 0; i_81_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_80_]).length; i_81_++) {
-						if (class238.anIntArray2923[i_80_] < (Class366.aShortArrayArrayArray4232[i_80_][i_81_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_80_][i_81_]), (Class366.aShortArrayArrayArray4232[i_80_][i_81_][class238.anIntArray2923[i_80_]]));
+					for (int i_81_ = 0; i_81_ < (AbstractQueue_Sub1.SKIN_COLORS[i_80_]).length; i_81_++) {
+						if (class238.colors[i_80_] < (Class366.SKIN_COLORS[i_80_][i_81_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_80_][i_81_]), (Class366.SKIN_COLORS[i_80_][i_81_][class238.colors[i_80_]]));
 					}
 				}
 			}
 			if (null != aClass229_7712) {
 				class528.KA(i_66_);
-				aClass229_7712.method3856(class528, l);
+				aClass229_7712.put(class528, l);
 			}
 		}
 		if (class456 == null)

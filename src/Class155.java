@@ -138,7 +138,7 @@ public final class Class155 {
 	}
 
 	static final void method2637(int i, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_, byte i_22_) {
-		Class426.method7170(i_18_, 377314002);
+		ItemIndexLoader.method7170(i_18_, 377314002);
 		int i_23_ = 0;
 		int i_24_ = i_18_ - i_21_;
 		if (i_24_ < 0)

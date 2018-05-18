@@ -82,6 +82,6 @@ public final class Class282_Sub52 extends Node implements Interface16 {
 		class118.aBool1328 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 6);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
-			Class433.method7278(-1952846363 * class118.anInt1287, -157670118);
+			Message.method7278(-1952846363 * class118.anInt1287, -157670118);
 	}
 }

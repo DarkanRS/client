@@ -19,7 +19,7 @@ public class Class345 {
 	static int anInt4028 = 0;
 	public static IterableNodeMap aClass465_4029 = new IterableNodeMap(16);
 	public static final int anInt4030 = 1;
-	static Class229 aClass229_4031 = new Class229(64);
+	static SoftCache aClass229_4031 = new SoftCache(64);
 	public int anInt4032;
 	public int anInt4033;
 	int anInt4034;
@@ -163,7 +163,7 @@ public class Class345 {
 			aClass465_4029.method7765(new Class282_Sub38(anInt4028 * 1723673999), i);
 			aClass345Array4025[(anInt4028 += 1694585199) * 1723673999 - 1] = class345;
 		}
-		aClass229_4031.method3856(class345, i);
+		aClass229_4031.put(class345, i);
 		return class345;
 	}
 

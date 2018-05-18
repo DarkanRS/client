@@ -7,7 +7,7 @@ public class Class429 {
 	Index aClass317_5128;
 	Index aClass317_5129;
 	public int anInt5130 = 0;
-	Class229 aClass229_5131;
+	SoftCache aClass229_5131;
 	static final int anInt5132 = 1;
 	public int anInt5133 = 0;
 	Interface19 anInterface19_5134;
@@ -21,8 +21,8 @@ public class Class429 {
 		return Long.toString(l);
 	}
 
-	public Class429(Class495 class495, Index class317, Index class317_0_, Interface19 interface19) {
-		((Class429) this).aClass229_5131 = new Class229(64);
+	public Class429(Language class495, Index class317, Index class317_0_, Interface19 interface19) {
+		((Class429) this).aClass229_5131 = new SoftCache(64);
 		((Class429) this).anInterface19_5134 = null;
 		((Class429) this).aClass317_5129 = class317;
 		((Class429) this).aClass317_5128 = class317_0_;
@@ -66,7 +66,7 @@ public class Class429 {
 			class282_sub50_sub9.method14913(new RsByteBuffer(is), -421624337);
 		if (i >= 32768)
 			class282_sub50_sub9.method14912(923886463);
-		((Class429) this).aClass229_5131.method3856(class282_sub50_sub9, (long) i);
+		((Class429) this).aClass229_5131.put(class282_sub50_sub9, (long) i);
 		return class282_sub50_sub9;
 	}
 

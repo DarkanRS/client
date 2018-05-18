@@ -18,7 +18,7 @@ public class Class299 implements Interface27 {
 			-2, -30, -27, -85, -113, -97, 62, 127, -7, -6, -19, -5, -113, -97, -65, 64, -2, 98, 100, 96, 102, -124, 1, -84, -2, 18, 4, -6, -117, -119, -123, -123, -103, -123, 29, -28, 47, 70, -90, 114, -112, 2, 65, 22, 86, 69, 67, 54, 33, -57, 64, -10, -60, 66, 97, 37, -93, 70, 14, 17, -89, -119, 11, 55, 30, -28, 84, 54, 14, -6, 32, -102, 84, 116, -111, 75, 76, -59, -28, -95, -22, 71, -112, -41, -64, 62, 35, -50, 99, 77, 100, -7, 12, -18, 49, -124, -65, 110, 49, -16, -79, 48, 2, -29, 15, -24,
 			78, 6, 6, 123, -122, -97, -1, -70, 52, 22, -16, -49, 127, -79, -88, -21, -1, 77, 0, 38, 27, -28, 10, 110, 2, 0, 0 };
 	int anInt3544;
-	static Class229 aClass229_3545 = new Class229(128, 4);
+	static SoftCache aClass229_3545 = new SoftCache(128, 4);
 	boolean aBool3546;
 
 	Class299(Class393 class393, int i, int i_0_, Class29 class29) {
@@ -228,7 +228,7 @@ public class Class299 implements Interface27 {
 				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -1425472520), (byte) -78));
-			aClass229_3545.method3856(class160, (long) i);
+			aClass229_3545.put(class160, (long) i);
 		}
 		return class160;
 	}
@@ -240,7 +240,7 @@ public class Class299 implements Interface27 {
 				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -2080551630), (byte) -127));
-			aClass229_3545.method3856(class160, (long) i);
+			aClass229_3545.put(class160, (long) i);
 		}
 		return class160;
 	}
@@ -262,7 +262,7 @@ public class Class299 implements Interface27 {
 				int[] is_10_ = new int[i * i_9_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_9_, is_10_, 0, i);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.method8549(is_10_, 0, i, i, i_9_, 877342890);
+				class160 = Class316.aClass505_3680.createNativeSprite(is_10_, 0, i, i, i_9_, 877342890);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */
@@ -292,7 +292,7 @@ public class Class299 implements Interface27 {
 				int[] is_12_ = new int[i * i_11_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_11_, is_12_, 0, i);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.method8549(is_12_, 0, i, i, i_11_, 2138062190);
+				class160 = Class316.aClass505_3680.createNativeSprite(is_12_, 0, i, i, i_11_, 2138062190);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */

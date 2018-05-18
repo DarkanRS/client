@@ -4,7 +4,7 @@
 
 public class Class366 implements Interface3 {
 	public int anInt4231;
-	public static short[][][] aShortArrayArrayArray4232;
+	public static short[][][] SKIN_COLORS;
 
 	public Class60 method24(int i) {
 		return Class60.aClass60_609;

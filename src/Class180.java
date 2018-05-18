@@ -13,7 +13,7 @@ public class Class180 {
 	public int anInt2242 = 669014749;
 	public int anInt2243;
 	int anInt2244;
-	static Class229 aClass229_2245 = new Class229(4);
+	static SoftCache aClass229_2245 = new SoftCache(4);
 	static int anInt2246;
 
 	static void method3022(int i) {
@@ -53,13 +53,13 @@ public class Class180 {
 		MeshRasterizer class528 = (MeshRasterizer) aClass229_2245.method3865(l);
 		int i_4_ = 2055;
 		if (null == class528) {
-			RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, i_3_, 0);
+			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, i_3_, 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = class505.createMeshRasterizer(class157, i_4_, 2079347217 * anInt2246, 64, 768);
-			aClass229_2245.method3856(class528, l);
+			aClass229_2245.put(class528, l);
 		}
 		class528 = class528.method11289((byte) 6, i_4_, true);
 		if (i != 0)

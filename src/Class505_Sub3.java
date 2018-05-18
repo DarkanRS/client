@@ -35,14 +35,14 @@ public class Class505_Sub3 extends GraphicalRenderer {
 	float aFloat9003;
 	float aFloat9004;
 	int anInt9005;
-	Class229 aClass229_9006;
+	SoftCache aClass229_9006;
 	int anInt9007;
 	int anInt9008;
 	int anInt9009;
 	float[] aFloatArray9010;
 	int anInt9011;
 	boolean aBool9012;
-	Class229 aClass229_9013;
+	SoftCache aClass229_9013;
 	boolean aBool9014 = false;
 	int anInt9015;
 
@@ -154,7 +154,7 @@ public class Class505_Sub3 extends GraphicalRenderer {
 				Class169 class169 = anInterface22_5834.method144(i, -1891491096);
 				int i_29_ = (class169.aBool2065 || ((Class505_Sub3) this).aBool8997 ? 64 : ((Class505_Sub3) this).anInt9005 * -1392111239);
 				class282_sub27 = (new Class282_Sub27(i, i_29_, anInterface22_5834.method141(i, 0.7F, i_29_, i_29_, true, 1334254083), 1 != 1960017665 * class169.anInt2074));
-				((Class505_Sub3) this).aClass229_9006.method3856(class282_sub27, (long) i | ~0x7fffffffffffffffL);
+				((Class505_Sub3) this).aClass229_9006.put(class282_sub27, (long) i | ~0x7fffffffffffffffL);
 			}
 		}
 		((Class282_Sub27) class282_sub27).aBool7693 = true;
@@ -1544,8 +1544,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 							if (null == is)
 								return;
 							int i_469_ = (method14377(i_465_) ? 64 : (((Class505_Sub3) this).anInt9005 * -1392111239));
-							class160 = method8549(is, 0, i_469_, i_469_, i_469_, -1812944098);
-							((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_465_);
+							class160 = createNativeSprite(is, 0, i_469_, i_469_, i_469_, -1812944098);
+							((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_465_);
 						}
 						((Class505_Sub3) this).anInt9015 = i_465_ * 1591418195;
 						((Class505_Sub3) this).aClass160_8987 = class160;
@@ -1777,8 +1777,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 					int[] is = method14359(i_536_);
 					if (is != null) {
 						int i_538_ = (method14377(i_536_) ? 64 : (-1392111239 * ((Class505_Sub3) this).anInt9005));
-						class160 = method8549(is, 0, i_538_, i_538_, i_538_, 1598794306);
-						((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_536_);
+						class160 = createNativeSprite(is, 0, i_538_, i_538_, i_538_, 1598794306);
+						((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_536_);
 					} else
 						return;
 				}
@@ -1802,8 +1802,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 							if (null == is)
 								return;
 							int i_548_ = (method14377(i_544_) ? 64 : (((Class505_Sub3) this).anInt9005 * -1392111239));
-							class160 = method8549(is, 0, i_548_, i_548_, i_548_, -1270335849);
-							((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_544_);
+							class160 = createNativeSprite(is, 0, i_548_, i_548_, i_548_, -1270335849);
+							((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_544_);
 						}
 						((Class505_Sub3) this).anInt9015 = i_544_ * 1591418195;
 						((Class505_Sub3) this).aClass160_8987 = class160;
@@ -2022,10 +2022,10 @@ public class Class505_Sub3 extends GraphicalRenderer {
 		((Class505_Sub3) this).aFloat8985 = 0.0F;
 		((Class505_Sub3) this).anInt9005 = -901487488;
 		((Class505_Sub3) this).aBool8997 = false;
-		((Class505_Sub3) this).aClass229_9013 = new Class229(16);
+		((Class505_Sub3) this).aClass229_9013 = new SoftCache(16);
 		((Class505_Sub3) this).anInt9015 = -1591418195;
 		try {
-			((Class505_Sub3) this).aClass229_9006 = new Class229(256);
+			((Class505_Sub3) this).aClass229_9006 = new SoftCache(256);
 			((Class505_Sub3) this).aClass294_8993 = new Class294();
 			((Class505_Sub3) this).aClass384_8994 = new Class384();
 			((Class505_Sub3) this).aClass384_8995 = new Class384();
@@ -3252,7 +3252,7 @@ public class Class505_Sub3 extends GraphicalRenderer {
 				Class169 class169 = anInterface22_5834.method144(i, -2078345009);
 				int i_895_ = (class169.aBool2065 || ((Class505_Sub3) this).aBool8997 ? 64 : ((Class505_Sub3) this).anInt9005 * -1392111239);
 				class282_sub27 = (new Class282_Sub27(i, i_895_, anInterface22_5834.method141(i, 0.7F, i_895_, i_895_, true, -203677061), 1 != 1960017665 * class169.anInt2074));
-				((Class505_Sub3) this).aClass229_9006.method3856(class282_sub27, (long) i | ~0x7fffffffffffffffL);
+				((Class505_Sub3) this).aClass229_9006.put(class282_sub27, (long) i | ~0x7fffffffffffffffL);
 			}
 		}
 		((Class282_Sub27) class282_sub27).aBool7693 = true;
@@ -5890,8 +5890,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 					int[] is = method14359(i_1752_);
 					if (is != null) {
 						int i_1754_ = (method14377(i_1752_) ? 64 : (-1392111239 * ((Class505_Sub3) this).anInt9005));
-						class160 = method8549(is, 0, i_1754_, i_1754_, i_1754_, 1057976864);
-						((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_1752_);
+						class160 = createNativeSprite(is, 0, i_1754_, i_1754_, i_1754_, 1057976864);
+						((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_1752_);
 					} else
 						return;
 				}
@@ -5916,8 +5916,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 					int[] is = method14359(i_1759_);
 					if (is != null) {
 						int i_1761_ = (method14377(i_1759_) ? 64 : (-1392111239 * ((Class505_Sub3) this).anInt9005));
-						class160 = method8549(is, 0, i_1761_, i_1761_, i_1761_, 908080167);
-						((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_1759_);
+						class160 = createNativeSprite(is, 0, i_1761_, i_1761_, i_1761_, 908080167);
+						((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_1759_);
 					} else
 						return;
 				}
@@ -5942,8 +5942,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 					int[] is = method14359(i_1766_);
 					if (is != null) {
 						int i_1768_ = (method14377(i_1766_) ? 64 : (-1392111239 * ((Class505_Sub3) this).anInt9005));
-						class160 = method8549(is, 0, i_1768_, i_1768_, i_1768_, 226270289);
-						((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_1766_);
+						class160 = createNativeSprite(is, 0, i_1768_, i_1768_, i_1768_, 226270289);
+						((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_1766_);
 					} else
 						return;
 				}
@@ -5971,8 +5971,8 @@ public class Class505_Sub3 extends GraphicalRenderer {
 							if (null == is)
 								return;
 							int i_1778_ = (method14377(i_1774_) ? 64 : (((Class505_Sub3) this).anInt9005 * -1392111239));
-							class160 = method8549(is, 0, i_1778_, i_1778_, i_1778_, -2027128261);
-							((Class505_Sub3) this).aClass229_9013.method3856(class160, (long) i_1774_);
+							class160 = createNativeSprite(is, 0, i_1778_, i_1778_, i_1778_, -2027128261);
+							((Class505_Sub3) this).aClass229_9013.put(class160, (long) i_1774_);
 						}
 						((Class505_Sub3) this).anInt9015 = i_1774_ * 1591418195;
 						((Class505_Sub3) this).aClass160_8987 = class160;

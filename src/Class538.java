@@ -562,7 +562,7 @@ public class Class538 {
 	}
 
 	public static void method11500(int i, boolean bool, byte i_112_) {
-		Class231.method3914(i, Class433.aClass433_5251.method7273(Class223.aClass495_2772, -929025713), bool, (byte) 104);
+		Class231.method3914(i, Message.aClass433_5251.translate(Class223.aClass495_2772, -929025713), bool, (byte) 104);
 	}
 
 	static final void method11501(int i) {

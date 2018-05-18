@@ -174,11 +174,11 @@ public class Class409 {
 			for (int i_21_ = 0; i_21_ < is_18_.length; i_21_++) {
 				if (is_18_[i_21_] != -1) {
 					synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
-						class157s[i_21_] = RSMesh.method2689((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is_18_[i_21_], 0);
+						class157s[i_21_] = RSMesh.decodeMesh((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is_18_[i_21_], 0);
 					}
 					if (null != class157s[i_21_]) {
-						if (class157s[i_21_].anInt1986 < 13)
-							class157s[i_21_].method2679(2);
+						if (class157s[i_21_].zoom < 13)
+							class157s[i_21_].upscale(2);
 						if (((Class409) this).anIntArrayArray4895 != null && null != (((Class409) this).anIntArrayArray4895[i_21_]))
 							class157s[i_21_].method2712((((Class409) this).anIntArrayArray4895[i_21_][0]), (((Class409) this).anIntArrayArray4895[i_21_][1]), (((Class409) this).anIntArrayArray4895[i_21_][2]));
 					}
@@ -240,7 +240,7 @@ public class Class409 {
 				class528.PA(((Class409) this).aByte4868, ((Class409) this).aByte4869, ((Class409) this).aByte4905, ((Class409) this).aByte4871 & 0xff);
 			class528.KA(i_13_);
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass229_4836) {
-				((Class406) ((Class409) this).aClass406_4855).aClass229_4836.method3856(class528, l);
+				((Class406) ((Class409) this).aClass406_4855).aClass229_4836.put(class528, l);
 			}
 		}
 		MeshRasterizer class528_33_ = class528.method11289((byte) 4, i_13_, true);
@@ -341,11 +341,11 @@ public class Class409 {
 			RSMesh[] class157s = new RSMesh[is.length];
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_44_ = 0; i_44_ < is.length; i_44_++)
-					class157s[i_44_] = RSMesh.method2689((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is[i_44_], 0);
+					class157s[i_44_] = RSMesh.decodeMesh((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is[i_44_], 0);
 			}
 			for (int i_45_ = 0; i_45_ < is.length; i_45_++) {
-				if (null != class157s[i_45_] && class157s[i_45_].anInt1986 < 13)
-					class157s[i_45_].method2679(2);
+				if (null != class157s[i_45_] && class157s[i_45_].zoom < 13)
+					class157s[i_45_].upscale(2);
 			}
 			RSMesh class157;
 			if (1 == class157s.length)
@@ -379,7 +379,7 @@ public class Class409 {
 				class528.PA(((Class409) this).aByte4868, ((Class409) this).aByte4869, ((Class409) this).aByte4905, ((Class409) this).aByte4871 & 0xff);
 			class528.KA(i_41_);
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass229_4843) {
-				((Class406) ((Class409) this).aClass406_4855).aClass229_4843.method3856(class528, l);
+				((Class406) ((Class409) this).aClass406_4855).aClass229_4843.put(class528, l);
 			}
 		}
 		if (null != class456) {
@@ -995,11 +995,11 @@ public class Class409 {
 			for (int i_121_ = 0; i_121_ < is_118_.length; i_121_++) {
 				if (is_118_[i_121_] != -1) {
 					synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
-						class157s[i_121_] = RSMesh.method2689((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is_118_[i_121_], 0);
+						class157s[i_121_] = RSMesh.decodeMesh((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is_118_[i_121_], 0);
 					}
 					if (null != class157s[i_121_]) {
-						if (class157s[i_121_].anInt1986 < 13)
-							class157s[i_121_].method2679(2);
+						if (class157s[i_121_].zoom < 13)
+							class157s[i_121_].upscale(2);
 						if (((Class409) this).anIntArrayArray4895 != null && null != (((Class409) this).anIntArrayArray4895[i_121_]))
 							class157s[i_121_].method2712((((Class409) this).anIntArrayArray4895[i_121_][0]), (((Class409) this).anIntArrayArray4895[i_121_][1]), (((Class409) this).anIntArrayArray4895[i_121_][2]));
 					}
@@ -1061,7 +1061,7 @@ public class Class409 {
 				class528.PA(((Class409) this).aByte4868, ((Class409) this).aByte4869, ((Class409) this).aByte4905, ((Class409) this).aByte4871 & 0xff);
 			class528.KA(i_113_);
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass229_4836) {
-				((Class406) ((Class409) this).aClass406_4855).aClass229_4836.method3856(class528, l);
+				((Class406) ((Class409) this).aClass406_4855).aClass229_4836.put(class528, l);
 			}
 		}
 		MeshRasterizer class528_133_ = class528.method11289((byte) 4, i_113_, true);
@@ -1184,11 +1184,11 @@ public class Class409 {
 			for (int i_151_ = 0; i_151_ < is_148_.length; i_151_++) {
 				if (is_148_[i_151_] != -1) {
 					synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
-						class157s[i_151_] = RSMesh.method2689((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is_148_[i_151_], 0);
+						class157s[i_151_] = RSMesh.decodeMesh((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is_148_[i_151_], 0);
 					}
 					if (null != class157s[i_151_]) {
-						if (class157s[i_151_].anInt1986 < 13)
-							class157s[i_151_].method2679(2);
+						if (class157s[i_151_].zoom < 13)
+							class157s[i_151_].upscale(2);
 						if (((Class409) this).anIntArrayArray4895 != null && null != (((Class409) this).anIntArrayArray4895[i_151_]))
 							class157s[i_151_].method2712((((Class409) this).anIntArrayArray4895[i_151_][0]), (((Class409) this).anIntArrayArray4895[i_151_][1]), (((Class409) this).anIntArrayArray4895[i_151_][2]));
 					}
@@ -1250,7 +1250,7 @@ public class Class409 {
 				class528.PA(((Class409) this).aByte4868, ((Class409) this).aByte4869, ((Class409) this).aByte4905, ((Class409) this).aByte4871 & 0xff);
 			class528.KA(i_143_);
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass229_4836) {
-				((Class406) ((Class409) this).aClass406_4855).aClass229_4836.method3856(class528, l);
+				((Class406) ((Class409) this).aClass406_4855).aClass229_4836.put(class528, l);
 			}
 		}
 		MeshRasterizer class528_163_ = class528.method11289((byte) 4, i_143_, true);
@@ -1351,11 +1351,11 @@ public class Class409 {
 			RSMesh[] class157s = new RSMesh[is.length];
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_173_ = 0; i_173_ < is.length; i_173_++)
-					class157s[i_173_] = RSMesh.method2689((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is[i_173_], 0);
+					class157s[i_173_] = RSMesh.decodeMesh((((Class406) (((Class409) this).aClass406_4855)).aClass317_4842), is[i_173_], 0);
 			}
 			for (int i_174_ = 0; i_174_ < is.length; i_174_++) {
-				if (null != class157s[i_174_] && class157s[i_174_].anInt1986 < 13)
-					class157s[i_174_].method2679(2);
+				if (null != class157s[i_174_] && class157s[i_174_].zoom < 13)
+					class157s[i_174_].upscale(2);
 			}
 			RSMesh class157;
 			if (1 == class157s.length)
@@ -1389,7 +1389,7 @@ public class Class409 {
 				class528.PA(((Class409) this).aByte4868, ((Class409) this).aByte4869, ((Class409) this).aByte4905, ((Class409) this).aByte4871 & 0xff);
 			class528.KA(i_170_);
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass229_4843) {
-				((Class406) ((Class409) this).aClass406_4855).aClass229_4843.method3856(class528, l);
+				((Class406) ((Class409) this).aClass406_4855).aClass229_4843.put(class528, l);
 			}
 		}
 		if (null != class456) {

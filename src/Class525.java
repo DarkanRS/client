@@ -116,11 +116,11 @@ public class Class525 {
 				i_15_ |= 0x4000;
 			if (((Class525) this).aShortArray6974 != null)
 				i_15_ |= 0x8000;
-			RSMesh class157 = RSMesh.method2689((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
+			RSMesh class157 = RSMesh.decodeMesh((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = (class505.createMeshRasterizer(class157, i_15_, 497536981 * (((Class515) ((Class525) this).aClass515_6973).anInt5892), 64 + ((Class525) this).anInt6979 * -90063179, 850 + ((Class525) this).anInt6981 * 1106286827));
 			if (((Class525) this).aShortArray6972 != null) {
 				for (int i_16_ = 0; i_16_ < ((Class525) this).aShortArray6972.length; i_16_++)
@@ -132,7 +132,7 @@ public class Class525 {
 			}
 			class528.KA(i_14_);
 			synchronized (((Class515) ((Class525) this).aClass515_6973).aClass229_5890) {
-				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.method3856(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
+				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.put(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
 			}
 		}
 		MeshRasterizer class528_18_ = class528.method11289(i_13_, i_14_, true);
@@ -203,11 +203,11 @@ public class Class525 {
 				i_25_ |= 0x4000;
 			if (((Class525) this).aShortArray6974 != null)
 				i_25_ |= 0x8000;
-			RSMesh class157 = RSMesh.method2689((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
+			RSMesh class157 = RSMesh.decodeMesh((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = (class505.createMeshRasterizer(class157, i_25_, 497536981 * (((Class515) ((Class525) this).aClass515_6973).anInt5892), 64 + ((Class525) this).anInt6979 * -90063179, 850 + ((Class525) this).anInt6981 * 1106286827));
 			if (((Class525) this).aShortArray6972 != null) {
 				for (int i_26_ = 0; i_26_ < ((Class525) this).aShortArray6972.length; i_26_++)
@@ -219,7 +219,7 @@ public class Class525 {
 			}
 			class528.KA(i_24_);
 			synchronized (((Class515) ((Class525) this).aClass515_6973).aClass229_5890) {
-				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.method3856(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
+				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.put(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
 			}
 		}
 		MeshRasterizer class528_28_ = class528.method11289(i_23_, i_24_, true);
@@ -439,11 +439,11 @@ public class Class525 {
 				i_49_ |= 0x4000;
 			if (((Class525) this).aShortArray6974 != null)
 				i_49_ |= 0x8000;
-			RSMesh class157 = RSMesh.method2689((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
+			RSMesh class157 = RSMesh.decodeMesh((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = (class505.createMeshRasterizer(class157, i_49_, 497536981 * (((Class515) ((Class525) this).aClass515_6973).anInt5892), 64 + ((Class525) this).anInt6979 * -90063179, 850 + ((Class525) this).anInt6981 * 1106286827));
 			if (((Class525) this).aShortArray6972 != null) {
 				for (int i_50_ = 0; i_50_ < ((Class525) this).aShortArray6972.length; i_50_++)
@@ -455,7 +455,7 @@ public class Class525 {
 			}
 			class528.KA(i_48_);
 			synchronized (((Class515) ((Class525) this).aClass515_6973).aClass229_5890) {
-				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.method3856(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
+				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.put(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
 			}
 		}
 		MeshRasterizer class528_52_ = class528.method11289(i_46_, i_48_, true);
@@ -504,11 +504,11 @@ public class Class525 {
 				i_60_ |= 0x4000;
 			if (((Class525) this).aShortArray6974 != null)
 				i_60_ |= 0x8000;
-			RSMesh class157 = RSMesh.method2689((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
+			RSMesh class157 = RSMesh.decodeMesh((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = (class505.createMeshRasterizer(class157, i_60_, 497536981 * (((Class515) ((Class525) this).aClass515_6973).anInt5892), 64 + ((Class525) this).anInt6979 * -90063179, 850 + ((Class525) this).anInt6981 * 1106286827));
 			if (((Class525) this).aShortArray6972 != null) {
 				for (int i_61_ = 0; i_61_ < ((Class525) this).aShortArray6972.length; i_61_++)
@@ -520,7 +520,7 @@ public class Class525 {
 			}
 			class528.KA(i_59_);
 			synchronized (((Class515) ((Class525) this).aClass515_6973).aClass229_5890) {
-				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.method3856(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
+				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.put(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
 			}
 		}
 		MeshRasterizer class528_63_ = class528.method11289(i_58_, i_59_, true);
@@ -565,11 +565,11 @@ public class Class525 {
 				i_70_ |= 0x4000;
 			if (((Class525) this).aShortArray6974 != null)
 				i_70_ |= 0x8000;
-			RSMesh class157 = RSMesh.method2689((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
+			RSMesh class157 = RSMesh.decodeMesh((((Class515) ((Class525) this).aClass515_6973).aClass317_5889), (-2110999235 * ((Class525) this).anInt6970), 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = (class505.createMeshRasterizer(class157, i_70_, 497536981 * (((Class515) ((Class525) this).aClass515_6973).anInt5892), 64 + ((Class525) this).anInt6979 * -90063179, 850 + ((Class525) this).anInt6981 * 1106286827));
 			if (((Class525) this).aShortArray6972 != null) {
 				for (int i_71_ = 0; i_71_ < ((Class525) this).aShortArray6972.length; i_71_++)
@@ -581,7 +581,7 @@ public class Class525 {
 			}
 			class528.KA(i_69_);
 			synchronized (((Class515) ((Class525) this).aClass515_6973).aClass229_5890) {
-				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.method3856(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
+				((Class515) ((Class525) this).aClass515_6973).aClass229_5890.put(class528, (long) ((((Class525) this).anInt6969 = (-195085151 * (-1254250655 * ((Class525) this).anInt6969 | -413843045 * class505.rendererId << 29))) * -1254250655));
 			}
 		}
 		MeshRasterizer class528_73_ = class528.method11289(i_68_, i_69_, true);

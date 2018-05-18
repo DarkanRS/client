@@ -1061,7 +1061,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 				}
 			}
 		}
-		NativeSprite class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, -1670906477);
+		NativeSprite class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, -1670906477);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
@@ -3927,7 +3927,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 				}
 			}
 		}
-		NativeSprite class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 340274012);
+		NativeSprite class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 340274012);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}
@@ -3951,7 +3951,7 @@ public class Class505_Sub1 extends GraphicalRenderer {
 				}
 			}
 		}
-		NativeSprite class160 = method8549(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 639428153);
+		NativeSprite class160 = createNativeSprite(is, 0, class91.anInt957, class91.anInt957, class91.anInt954, 639428153);
 		class160.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return class160;
 	}

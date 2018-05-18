@@ -89,15 +89,15 @@ public class Class383 implements Interface41 {
 		if (-1 == Class58.aClass529_527.anInt7034 * -1878247413)
 			return 1;
 		if (i != Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-408744518)) {
-			Class231.method3914(i, Class433.aClass433_5252.method7273(Class223.aClass495_2772, -1872391356), true, (byte) 110);
+			Class231.method3914(i, Message.aClass433_5252.translate(Class223.aClass495_2772, -1872391356), true, (byte) 110);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-455278899) != i)
 				return -1;
 		}
 		int i_15_;
 		try {
 			Dimension dimension = Class351.aCanvas4096.getSize();
-			Class446.method7447(Class433.aClass433_5252.method7273(Class223.aClass495_2772, -1923061831), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
-			RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, (Class58.aClass529_527.anInt7034 * -1878247413), 0);
+			Class446.method7447(Message.aClass433_5252.translate(Class223.aClass495_2772, -1923061831), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
+			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, (Class58.aClass529_527.anInt7034 * -1878247413), 0);
 			long l = Class169.method2869(2130587013);
 			Class316.aClass505_3680.L();
 			client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);

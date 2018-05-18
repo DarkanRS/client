@@ -183,13 +183,13 @@ public class Class511 {
 		MeshRasterizer class528 = (MeshRasterizer) Class180.aClass229_2245.method3865(l);
 		int i_8_ = 2055;
 		if (null == class528) {
-			RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, i_6_, 0);
+			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, i_6_, 0);
 			if (null == class157)
 				return null;
-			if (class157.anInt1986 < 13)
-				class157.method2679(2);
+			if (class157.zoom < 13)
+				class157.upscale(2);
 			class528 = class505.createMeshRasterizer(class157, i_8_, 2079347217 * Class180.anInt2246, 64, 768);
-			Class180.aClass229_2245.method3856(class528, l);
+			Class180.aClass229_2245.put(class528, l);
 		}
 		class528 = class528.method11289((byte) 6, i_8_, true);
 		if (i != 0)

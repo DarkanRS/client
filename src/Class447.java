@@ -3,7 +3,7 @@
  */
 
 public class Class447 {
-	Class229 aClass229_5417 = new Class229(64);
+	SoftCache aClass229_5417 = new SoftCache(64);
 	Index aClass317_5418;
 
 	public void method7449() {
@@ -19,12 +19,12 @@ public class Class447 {
 		}
 		if (class449 != null)
 			return class449;
-		byte[] is = ((Class447) this).aClass317_5418.getFile(((Class120.aClass120_1522.anInt1521) * -71319279), i, -1401240120);
+		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.anInt1521) * -71319279), i, -1401240120);
 		class449 = new Class449();
 		if (null != is)
 			class449.method7487(new RsByteBuffer(is), -267873948);
 		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3856(class449, (long) i);
+			((Class447) this).aClass229_5417.put(class449, (long) i);
 		}
 		return class449;
 	}
@@ -65,10 +65,10 @@ public class Class447 {
 		}
 	}
 
-	public Class447(Game class486, Class495 class495, Index class317) {
+	public Class447(Game class486, Language class495, Index class317) {
 		((Class447) this).aClass317_5418 = class317;
 		if (((Class447) this).aClass317_5418 != null)
-			((Class447) this).aClass317_5418.filesCount(-71319279 * Class120.aClass120_1522.anInt1521, 1239350984);
+			((Class447) this).aClass317_5418.filesCount(-71319279 * SharedConfigsType.aClass120_1522.anInt1521, 1239350984);
 	}
 
 	public void method7457(int i) {
@@ -90,12 +90,12 @@ public class Class447 {
 		}
 		if (class449 != null)
 			return class449;
-		byte[] is = ((Class447) this).aClass317_5418.getFile(((Class120.aClass120_1522.anInt1521) * -71319279), i, -1764756902);
+		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.anInt1521) * -71319279), i, -1764756902);
 		class449 = new Class449();
 		if (null != is)
 			class449.method7487(new RsByteBuffer(is), -267873948);
 		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3856(class449, (long) i);
+			((Class447) this).aClass229_5417.put(class449, (long) i);
 		}
 		return class449;
 	}

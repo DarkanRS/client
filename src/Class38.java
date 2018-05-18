@@ -229,7 +229,7 @@ public class Class38 {
 		else
 			class8 = Class186.aClass8_2348;
 		Class414 class414 = Class114.method1887(-864314974);
-		Class456_Sub2.method12680(class505, 1742345613 * Class301.anInt3555, Class184.anInt2300 * 815250613, Class158_Sub2.anInt8975 * -13788709, -1488439617 * Class110.anInt1104, i_13_, class8, class414, Class433.aClass433_5255.method7273(Class223.aClass495_2772, -827597083), -1519032164);
+		Class456_Sub2.method12680(class505, 1742345613 * Class301.anInt3555, Class184.anInt2300 * 815250613, Class158_Sub2.anInt8975 * -13788709, -1488439617 * Class110.anInt1104, i_13_, class8, class414, Message.aClass433_5255.translate(Class223.aClass495_2772, -827597083), -1519032164);
 		int i_15_ = (255 - Class182.anInt2262 * 1734917383 - Class20.anInt156 * -1454754391);
 		if (i_15_ < 0)
 			i_15_ = 0;

@@ -73,7 +73,7 @@ public class Class96_Sub18 extends Class96 {
 			class118.anInt1337 = -174540793 * class425.anInt5074;
 			class118.anInt1293 = class425.anInt5063 * -1057479355;
 			class118.anInt1334 = class425.anInt5044 * -1474252971;
-			class118.anInt1343 = class425.anInt5042 * 394720705;
+			class118.anInt1343 = class425.modelZoom * 394720705;
 			class118.anInt1335 = i * 582441359;
 			if (class118.anInt1417 * -1326245411 > 0)
 				class118.anInt1343 = (class118.anInt1343 * 1787365152 / (-1326245411 * class118.anInt1417) * -807852535);

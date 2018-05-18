@@ -541,7 +541,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 											string = "";
 									}
 									if (class118 == client.aClass118_7352) {
-										string = (Class433.aClass433_5291.method7273(Class223.aClass495_2772, -1013521006));
+										string = (Message.aClass433_5291.translate(Class223.aClass495_2772, -1013521006));
 										i_48_ = -795991475 * class118.anInt1264;
 									}
 									if (client.aBool7358)
@@ -559,7 +559,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 								else {
 									NativeSprite class160;
 									if (-56249735 * class118.anInt1426 != -1) {
-										Class238 class238 = (class118.aBool1388 ? (Class84.myPlayer.aClass238_10558) : null);
+										PlayerAppearance class238 = (class118.aBool1388 ? (Class84.myPlayer.aClass238_10558) : null);
 										class160 = (Class119.aClass426_1463.method7162(Class316.aClass505_3680, class118.anInt1426 * -56249735, class118.anInt1427 * 6040081, (class118.anInt1323 * -346307573), (~0xffffff | (1279397863 * class118.anInt1324)), 71935343 * class118.anInt1335, class238, 206421629));
 									} else if (-1 != (602613369 * class118.anInt1435))
 										class160 = (Class515.method8858(Class316.aClass505_3680, class118.anInt1435 * 602613369, 1570194813));

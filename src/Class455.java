@@ -13,26 +13,26 @@ public abstract class Class455 {
 		if (client.aBool7344) {
 			AttributeDefault class437 = (Class96_Sub12.anInt9319 * -1605351655 != -1 ? Class125.aClass424_1573.method7069((-1605351655 * (Class96_Sub12.anInt9319)), (byte) 0) : null);
 			if (client.method11633(class118).method12181(2135995178) && (Class506.anInt5858 * 1310510077 & 0x20) != 0 && (class437 == null || (class118.method1997((Class96_Sub12.anInt9319 * -1605351655), -1741480635 * class437.anInt5337, 1315662275) != class437.anInt5337 * -1741480635)))
-				Class238.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(class118.aString1369).toString(), -239192305 * Class519.anInt5932, 58, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1704442537);
+				PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(class118.aString1369).toString(), -239192305 * Class519.anInt5932, 58, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1704442537);
 		}
 		for (int i_2_ = 9; i_2_ >= 5; i_2_--) {
-			String string = Class426.method7171(class118, i_2_, (byte) -85);
+			String string = ItemIndexLoader.method7171(class118, i_2_, (byte) -85);
 			if (null != string)
-				Class238.method4032(string, class118.aString1369, Class520.method11163(class118, i_2_, 556653013), 1007, -56249735 * class118.anInt1426, (long) (i_2_ + 1), class118.anInt1288 * 1924549737, -1952846363 * class118.anInt1287, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.anInt1287 * -1952846363), false, -976206052);
+				PlayerAppearance.method4032(string, class118.aString1369, Class520.method11163(class118, i_2_, 556653013), 1007, -56249735 * class118.anInt1426, (long) (i_2_ + 1), class118.anInt1288 * 1924549737, -1952846363 * class118.anInt1287, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.anInt1287 * -1952846363), false, -976206052);
 		}
 		String string = Class346.method6157(class118, -948753255);
 		if (string != null)
-			Class238.method4032(string, class118.aString1369, class118.anInt1378 * 1289545277, 25, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.anInt1287, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.anInt1287 * -1952846363), false, -1589662667);
+			PlayerAppearance.method4032(string, class118.aString1369, class118.anInt1378 * 1289545277, 25, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.anInt1287, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.anInt1287 * -1952846363), false, -1589662667);
 		for (int i_3_ = 4; i_3_ >= 0; i_3_--) {
-			String string_4_ = Class426.method7171(class118, i_3_, (byte) 19);
+			String string_4_ = ItemIndexLoader.method7171(class118, i_3_, (byte) 19);
 			if (null != string_4_)
-				Class238.method4032(string_4_, class118.aString1369, Class520.method11163(class118, i_3_, 1809769976), 57, class118.anInt1426 * -56249735, (long) (i_3_ + 1), 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (class118.anInt1288 * 1924549737 << 32 | -1952846363 * class118.anInt1287), false, -1644118104);
+				PlayerAppearance.method4032(string_4_, class118.aString1369, Class520.method11163(class118, i_3_, 1809769976), 57, class118.anInt1426 * -56249735, (long) (i_3_ + 1), 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (class118.anInt1288 * 1924549737 << 32 | -1952846363 * class118.anInt1287), false, -1644118104);
 		}
 		if (client.method11633(class118).method12182(-1173401009)) {
 			if (class118.aString1348 != null)
-				Class238.method4032(class118.aString1348, "", -1, 30, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.anInt1287, true, false, (long) ((1924549737 * class118.anInt1288 << 32) | (class118.anInt1287 * -1952846363)), false, -1336342241);
+				PlayerAppearance.method4032(class118.aString1348, "", -1, 30, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.anInt1287, true, false, (long) ((1924549737 * class118.anInt1288 << 32) | (class118.anInt1287 * -1952846363)), false, -1336342241);
 			else
-				Class238.method4032(Class433.aClass433_5188.method7273(Class223.aClass495_2772, -1421679788), "", -1, 30, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1542959326);
+				PlayerAppearance.method4032(Message.aClass433_5188.translate(Class223.aClass495_2772, -1421679788), "", -1, 30, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1542959326);
 		}
 	}
 
@@ -90,7 +90,7 @@ public abstract class Class455 {
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string_8_;
 	}
 
-	public static int method7557(CharSequence charsequence, CharSequence charsequence_9_, Class495 class495, int i) {
+	public static int method7557(CharSequence charsequence, CharSequence charsequence_9_, Language class495, int i) {
 		int i_10_ = charsequence.length();
 		int i_11_ = charsequence_9_.length();
 		int i_12_ = 0;
@@ -127,7 +127,7 @@ public abstract class Class455 {
 		}
 		int i_17_ = Math.min(i_10_, i_11_);
 		for (int i_18_ = 0; i_18_ < i_17_; i_18_++) {
-			if (class495 == Class495.aClass495_5801) {
+			if (class495 == Language.aClass495_5801) {
 				i_12_ = i_10_ - 1 - i_18_;
 				i_13_ = i_11_ - 1 - i_18_;
 			} else

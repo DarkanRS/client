@@ -3,12 +3,12 @@
  */
 
 public class Class427 {
-	Class229 aClass229_5117 = new Class229(64);
+	SoftCache aClass229_5117 = new SoftCache(64);
 	Index aClass317_5118;
 	public static final int anInt5119 = 64;
 	Index aClass317_5120;
 	public static final int anInt5121 = 64;
-	Class229 aClass229_5122 = new Class229(64);
+	SoftCache aClass229_5122 = new SoftCache(64);
 	public static int anInt5123;
 
 	public Class418 method7172(int i, int i_0_) {
@@ -20,14 +20,14 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((Class120.aClass120_1497.anInt1521) * -71319279), i, -1171405866);
+			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.anInt1521) * -71319279), i, -1171405866);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;
 		if (is != null)
 			class418.method7008(new RsByteBuffer(is), 1761998604);
 		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3856(class418, (long) i);
+			((Class427) this).aClass229_5117.put(class418, (long) i);
 		}
 		return class418;
 	}
@@ -41,10 +41,10 @@ public class Class427 {
 		}
 	}
 
-	public Class427(Game class486, Class495 class495, Index class317, Index class317_2_) {
+	public Class427(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class427) this).aClass317_5120 = class317;
 		((Class427) this).aClass317_5118 = class317_2_;
-		((Class427) this).aClass317_5120.filesCount((Class120.aClass120_1497.anInt1521) * -71319279, 1541409828);
+		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.anInt1521) * -71319279, 1541409828);
 		Math.random();
 		Math.random();
 		Math.random();
@@ -61,8 +61,8 @@ public class Class427 {
 	}
 
 	public void method7175(int i, int i_3_, int i_4_) {
-		((Class427) this).aClass229_5117 = new Class229(i);
-		((Class427) this).aClass229_5122 = new Class229(i_3_);
+		((Class427) this).aClass229_5117 = new SoftCache(i);
+		((Class427) this).aClass229_5122 = new SoftCache(i_3_);
 	}
 
 	public void method7176() {
@@ -84,23 +84,23 @@ public class Class427 {
 	}
 
 	public void method7178(int i, int i_5_) {
-		((Class427) this).aClass229_5117 = new Class229(i);
-		((Class427) this).aClass229_5122 = new Class229(i_5_);
+		((Class427) this).aClass229_5117 = new SoftCache(i);
+		((Class427) this).aClass229_5122 = new SoftCache(i_5_);
 	}
 
 	public void method7179(int i, int i_6_) {
-		((Class427) this).aClass229_5117 = new Class229(i);
-		((Class427) this).aClass229_5122 = new Class229(i_6_);
+		((Class427) this).aClass229_5117 = new SoftCache(i);
+		((Class427) this).aClass229_5122 = new SoftCache(i_6_);
 	}
 
 	public void method7180(int i, int i_7_) {
-		((Class427) this).aClass229_5117 = new Class229(i);
-		((Class427) this).aClass229_5122 = new Class229(i_7_);
+		((Class427) this).aClass229_5117 = new SoftCache(i);
+		((Class427) this).aClass229_5122 = new SoftCache(i_7_);
 	}
 
 	public void method7181(int i, int i_8_) {
-		((Class427) this).aClass229_5117 = new Class229(i);
-		((Class427) this).aClass229_5122 = new Class229(i_8_);
+		((Class427) this).aClass229_5117 = new SoftCache(i);
+		((Class427) this).aClass229_5122 = new SoftCache(i_8_);
 	}
 
 	public void method7182() {
@@ -139,14 +139,14 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((Class120.aClass120_1497.anInt1521) * -71319279), i, -1952476258);
+			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.anInt1521) * -71319279), i, -1952476258);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;
 		if (is != null)
 			class418.method7008(new RsByteBuffer(is), 1405817786);
 		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3856(class418, (long) i);
+			((Class427) this).aClass229_5117.put(class418, (long) i);
 		}
 		return class418;
 	}

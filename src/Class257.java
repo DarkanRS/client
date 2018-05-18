@@ -693,7 +693,7 @@ public class Class257 {
 			this.anInt3207 = 1969692543 * i_101_;
 			if (!this.aBool3171) {
 				Class365.method6298(i_102_, 1265357038);
-				Class446.method7447(Class433.aClass433_5251.method7273(Class223.aClass495_2772, -532223437), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -29);
+				Class446.method7447(Message.aClass433_5251.translate(Class223.aClass495_2772, -532223437), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -29);
 			}
 			if (this.aClass219_3168 != null) {
 				this.aClass219_3169 = this.aClass219_3168;
@@ -974,7 +974,7 @@ public class Class257 {
 			return false;
 		}
 		if (!this.aBool3171 && Class339.aClass339_3984 != this.aClass339_3188) {
-			Class446.method7447(new StringBuilder().append(Class433.aClass433_5251.method7273(Class223.aClass495_2772, -414285039)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -26);
+			Class446.method7447(new StringBuilder().append(Message.aClass433_5251.translate(Class223.aClass495_2772, -414285039)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -26);
 		}
 		this.aClass339_3188 = Class339.aClass339_3982;
 		if (!this.aBool3171) {
@@ -1765,7 +1765,7 @@ public class Class257 {
 			return false;
 		}
 		if (!this.aBool3171 && Class339.aClass339_3984 != this.aClass339_3188) {
-			Class446.method7447(new StringBuilder().append(Class433.aClass433_5251.method7273(Class223.aClass495_2772, -1127640948)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -11);
+			Class446.method7447(new StringBuilder().append(Message.aClass433_5251.translate(Class223.aClass495_2772, -1127640948)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -11);
 		}
 		this.aClass339_3188 = Class339.aClass339_3982;
 		if (!this.aBool3171) {
@@ -2818,7 +2818,7 @@ public class Class257 {
 			this.anInt3207 = 1969692543 * i_332_;
 			if (!this.aBool3171) {
 				Class365.method6298(i_333_, 2086287673);
-				Class446.method7447(Class433.aClass433_5251.method7273(Class223.aClass495_2772, -1305729127), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -63);
+				Class446.method7447(Message.aClass433_5251.translate(Class223.aClass495_2772, -1305729127), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -63);
 			}
 			if (this.aClass219_3168 != null) {
 				this.aClass219_3169 = this.aClass219_3168;
@@ -3284,7 +3284,7 @@ public class Class257 {
 			return false;
 		}
 		if (!this.aBool3171 && Class339.aClass339_3984 != this.aClass339_3188) {
-			Class446.method7447(new StringBuilder().append(Class433.aClass433_5251.method7273(Class223.aClass495_2772, -1224843213)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -119);
+			Class446.method7447(new StringBuilder().append(Message.aClass433_5251.translate(Class223.aClass495_2772, -1224843213)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -119);
 		}
 		this.aClass339_3188 = Class339.aClass339_3982;
 		if (!this.aBool3171) {
@@ -3621,7 +3621,7 @@ public class Class257 {
 			return false;
 		}
 		if (!this.aBool3171 && Class339.aClass339_3984 != this.aClass339_3188) {
-			Class446.method7447(new StringBuilder().append(Class433.aClass433_5251.method7273(Class223.aClass495_2772, -890587300)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -72);
+			Class446.method7447(new StringBuilder().append(Message.aClass433_5251.translate(Class223.aClass495_2772, -890587300)).append(Class2.aString16).append("(100%)").toString(), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -72);
 		}
 		this.aClass339_3188 = Class339.aClass339_3982;
 		if (!this.aBool3171) {

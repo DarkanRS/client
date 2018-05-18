@@ -25,8 +25,8 @@ public class Class239 {
 	static final float aFloat2950 = 1.2F;
 	Class535 aClass535_2951;
 	Class385 aClass385_2952;
-	Class229 aClass229_2953;
-	Class229 aClass229_2954;
+	SoftCache aClass229_2953;
+	SoftCache aClass229_2954;
 
 	void method4036() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + client.aClass257_7353.method4428(-1217777158)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
@@ -94,7 +94,7 @@ public class Class239 {
 		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_3_, i_4_, i_5_, Class488.aClass45_5759, 1560540952);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}
@@ -145,7 +145,7 @@ public class Class239 {
 		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_12_, i_13_, i_14_, Class488.aClass45_5759, 1868752196);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}
@@ -273,7 +273,7 @@ public class Class239 {
 		if (null != class152)
 			return class152;
 		class152 = ((Class239) this).aClass505_2944.method8466(i, i_23_, i_24_, i_25_, i_26_, i_27_);
-		((Class239) this).aClass229_2953.method3856(class152, l);
+		((Class239) this).aClass229_2953.put(class152, l);
 		return class152;
 	}
 
@@ -283,7 +283,7 @@ public class Class239 {
 		if (null != class152)
 			return class152;
 		class152 = ((Class239) this).aClass505_2944.method8466(i, i_28_, i_29_, i_30_, i_31_, i_32_);
-		((Class239) this).aClass229_2953.method3856(class152, l);
+		((Class239) this).aClass229_2953.put(class152, l);
 		return class152;
 	}
 
@@ -308,7 +308,7 @@ public class Class239 {
 		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_34_, i_35_, i_36_, Class488.aClass45_5759, 1824037577);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}
@@ -458,8 +458,8 @@ public class Class239 {
 		((Class239) this).aLong2936 = 0L;
 		((Class239) this).aBool2947 = false;
 		((Class239) this).aClass385_2952 = new Class385(-50.0F, -60.0F, -50.0F);
-		((Class239) this).aClass229_2953 = new Class229(9);
-		((Class239) this).aClass229_2954 = new Class229(9);
+		((Class239) this).aClass229_2953 = new SoftCache(9);
+		((Class239) this).aClass229_2954 = new SoftCache(9);
 		((Class239) this).aClass505_2944 = class505;
 		((Class239) this).aClass535ArrayArray2943 = new Class535[i][i_50_];
 		if (null != Class210.anIntArray2668)
@@ -477,7 +477,7 @@ public class Class239 {
 		Class247 class247 = (Class247) ((Class239) this).aClass229_2954.method3865(l);
 		if (null == class247) {
 			class247 = Class149.aClass288_1746.method5077(i, i_51_, i_52_, i_53_, Class488.aClass45_5759, 2026640567);
-			((Class239) this).aClass229_2954.method3856(class247, l);
+			((Class239) this).aClass229_2954.put(class247, l);
 		}
 		return class247;
 	}

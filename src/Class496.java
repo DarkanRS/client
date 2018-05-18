@@ -101,7 +101,7 @@ public class Class496 implements Interface43 {
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 77);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
-		Class495.method8277(class118, class98, class527, 1396779389);
+		Language.method8277(class118, class98, class527, 1396779389);
 	}
 
 	public static Class496[] method8312() {

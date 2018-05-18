@@ -44,7 +44,7 @@ public class Class412 {
 		for (int i_2_ = i; i_2_ < i_0_; i_2_++) {
 			char c = charsequence.charAt(i_2_);
 			if (Class309.method5491(c, 742258231)) {
-				char c_3_ = Class424.method7080(c, -216093106);
+				char c_3_ = AttributesDefaultsLoader.method7080(c, -216093106);
 				if (c_3_ != 0)
 					stringbuilder.append(c_3_);
 			}
@@ -104,7 +104,7 @@ public class Class412 {
 		for (int i_8_ = i; i_8_ < i_6_; i_8_++) {
 			char c = charsequence.charAt(i_8_);
 			if (Class309.method5491(c, 1611236639)) {
-				char c_9_ = Class424.method7080(c, -1254019072);
+				char c_9_ = AttributesDefaultsLoader.method7080(c, -1254019072);
 				if (c_9_ != 0)
 					stringbuilder.append(c_9_);
 			}
@@ -151,7 +151,7 @@ public class Class412 {
 		for (int i_12_ = i; i_12_ < i_10_; i_12_++) {
 			char c = charsequence.charAt(i_12_);
 			if (Class309.method5491(c, 342258659)) {
-				char c_13_ = Class424.method7080(c, 2136545818);
+				char c_13_ = AttributesDefaultsLoader.method7080(c, 2136545818);
 				if (c_13_ != 0)
 					stringbuilder.append(c_13_);
 			}
@@ -179,7 +179,7 @@ public class Class412 {
 		for (int i_16_ = i; i_16_ < i_14_; i_16_++) {
 			char c = charsequence.charAt(i_16_);
 			if (Class309.method5491(c, 74437332)) {
-				char c_17_ = Class424.method7080(c, -1874850177);
+				char c_17_ = AttributesDefaultsLoader.method7080(c, -1874850177);
 				if (c_17_ != 0)
 					stringbuilder.append(c_17_);
 			}
@@ -207,7 +207,7 @@ public class Class412 {
 		for (int i_20_ = i; i_20_ < i_18_; i_20_++) {
 			char c = charsequence.charAt(i_20_);
 			if (Class309.method5491(c, 482809555)) {
-				char c_21_ = Class424.method7080(c, 549339472);
+				char c_21_ = AttributesDefaultsLoader.method7080(c, 549339472);
 				if (c_21_ != 0)
 					stringbuilder.append(c_21_);
 			}
@@ -239,7 +239,7 @@ public class Class412 {
 		for (int i_24_ = i; i_24_ < i_22_; i_24_++) {
 			char c = charsequence.charAt(i_24_);
 			if (Class309.method5491(c, 2016397959)) {
-				char c_25_ = Class424.method7080(c, 103062302);
+				char c_25_ = AttributesDefaultsLoader.method7080(c, 103062302);
 				if (c_25_ != 0)
 					stringbuilder.append(c_25_);
 			}
@@ -267,7 +267,7 @@ public class Class412 {
 		for (int i_28_ = i; i_28_ < i_26_; i_28_++) {
 			char c = charsequence.charAt(i_28_);
 			if (Class309.method5491(c, 996408883)) {
-				char c_29_ = Class424.method7080(c, 533389253);
+				char c_29_ = AttributesDefaultsLoader.method7080(c, 533389253);
 				if (c_29_ != 0)
 					stringbuilder.append(c_29_);
 			}

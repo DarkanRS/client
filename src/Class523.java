@@ -3,8 +3,8 @@
  */
 
 public class Class523 {
-	Class229 aClass229_6954;
-	Class229 aClass229_6955 = new Class229(64);
+	SoftCache aClass229_6954;
+	SoftCache aClass229_6955 = new SoftCache(64);
 	Index aClass317_6956;
 	public static Index aClass317_6957;
 
@@ -26,7 +26,7 @@ public class Class523 {
 			return class518;
 		byte[] is;
 		synchronized (((Class523) this).aClass317_6956) {
-			is = (((Class523) this).aClass317_6956.getFile(Class120.aClass120_1475.method2079(i, -724424749), Class120.aClass120_1475.method2080(i, -2052729107), -1610742451));
+			is = (((Class523) this).aClass317_6956.getFile(SharedConfigsType.aClass120_1475.containerId(i, -724424749), SharedConfigsType.aClass120_1475.fileId(i, -2052729107), -1610742451));
 		}
 		class518 = new AnimationDefinitions();
 		class518.anInt5909 = i * 919942973;
@@ -35,17 +35,17 @@ public class Class523 {
 			class518.method11130(new RsByteBuffer(is), -2068474756);
 		class518.method11143((byte) -115);
 		synchronized (((Class523) this).aClass229_6955) {
-			((Class523) this).aClass229_6955.method3856(class518, (long) i);
+			((Class523) this).aClass229_6955.put(class518, (long) i);
 		}
 		return class518;
 	}
 
-	public Class523(Game class486, Class495 class495, Index class317, Index class317_1_, Index class317_2_) {
-		((Class523) this).aClass229_6954 = new Class229(100);
+	public Class523(Game class486, Language class495, Index class317, Index class317_1_, Index class317_2_) {
+		((Class523) this).aClass229_6954 = new SoftCache(100);
 		((Class523) this).aClass317_6956 = class317;
 		if (null != ((Class523) this).aClass317_6956) {
 			int i = ((Class523) this).aClass317_6956.containersCount(-738745647) - 1;
-			Class120.aClass120_1475.method2078(-1584727313);
+			SharedConfigsType.aClass120_1475.method2078(-1584727313);
 			((Class523) this).aClass317_6956.filesCount(i, -812236501);
 		}
 		Class96_Sub10_Sub1.method15554(class317_1_, class317_2_, 2, -1736051925);
@@ -60,7 +60,7 @@ public class Class523 {
 			return class518;
 		byte[] is;
 		synchronized (((Class523) this).aClass317_6956) {
-			is = (((Class523) this).aClass317_6956.getFile(Class120.aClass120_1475.method2079(i, 1295408569), Class120.aClass120_1475.method2080(i, -2139558643), -1900901959));
+			is = (((Class523) this).aClass317_6956.getFile(SharedConfigsType.aClass120_1475.containerId(i, 1295408569), SharedConfigsType.aClass120_1475.fileId(i, -2139558643), -1900901959));
 		}
 		class518 = new AnimationDefinitions();
 		class518.anInt5909 = i * 919942973;
@@ -69,7 +69,7 @@ public class Class523 {
 			class518.method11130(new RsByteBuffer(is), -528606767);
 		class518.method11143((byte) -109);
 		synchronized (((Class523) this).aClass229_6955) {
-			((Class523) this).aClass229_6955.method3856(class518, (long) i);
+			((Class523) this).aClass229_6955.put(class518, (long) i);
 		}
 		return class518;
 	}
@@ -80,7 +80,7 @@ public class Class523 {
 			class282_sub50_sub13 = ((Class282_Sub50_Sub13) ((Class523) this).aClass229_6954.method3865((long) i));
 			if (class282_sub50_sub13 == null) {
 				class282_sub50_sub13 = new Class282_Sub50_Sub13(i);
-				((Class523) this).aClass229_6954.method3856(class282_sub50_sub13, (long) i);
+				((Class523) this).aClass229_6954.put(class282_sub50_sub13, (long) i);
 			}
 			if (!class282_sub50_sub13.method15086((byte) 5)) {
 				Class282_Sub50_Sub13 class282_sub50_sub13_4_ = null;
@@ -123,7 +123,7 @@ public class Class523 {
 			class282_sub50_sub13 = ((Class282_Sub50_Sub13) ((Class523) this).aClass229_6954.method3865((long) i));
 			if (class282_sub50_sub13 == null) {
 				class282_sub50_sub13 = new Class282_Sub50_Sub13(i);
-				((Class523) this).aClass229_6954.method3856(class282_sub50_sub13, (long) i);
+				((Class523) this).aClass229_6954.put(class282_sub50_sub13, (long) i);
 			}
 			if (!class282_sub50_sub13.method15086((byte) 109)) {
 				Class282_Sub50_Sub13 class282_sub50_sub13_6_ = null;
@@ -184,7 +184,7 @@ public class Class523 {
 			class282_sub50_sub13 = ((Class282_Sub50_Sub13) ((Class523) this).aClass229_6954.method3865((long) i));
 			if (class282_sub50_sub13 == null) {
 				class282_sub50_sub13 = new Class282_Sub50_Sub13(i);
-				((Class523) this).aClass229_6954.method3856(class282_sub50_sub13, (long) i);
+				((Class523) this).aClass229_6954.put(class282_sub50_sub13, (long) i);
 			}
 			if (!class282_sub50_sub13.method15086((byte) -60)) {
 				Class282_Sub50_Sub13 class282_sub50_sub13_7_ = null;

@@ -175,7 +175,7 @@ public class Class116 {
 			}
 			class528_11_ = class505.createMeshRasterizer(class157, i_10_, 1257126031 * Class13.anInt128, 64, 768);
 			synchronized (Class13.aClass229_127) {
-				Class13.aClass229_127.method3856(class528_11_, l);
+				Class13.aClass229_127.put(class528_11_, l);
 			}
 		}
 		int i_29_ = class528.RA();

@@ -45,11 +45,11 @@ public class Class281 {
 	}
 
 	MeshRasterizer method4977(GraphicalRenderer class505, int i) {
-		RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
+		RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
 		if (null == class157)
 			return null;
-		if (class157.anInt1986 < 13)
-			class157.method2679(2);
+		if (class157.zoom < 13)
+			class157.upscale(2);
 		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
 	}
 
@@ -96,11 +96,11 @@ public class Class281 {
 	}
 
 	MeshRasterizer method4981(GraphicalRenderer class505) {
-		RSMesh class157 = RSMesh.method2689(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
+		RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
 		if (null == class157)
 			return null;
-		if (class157.anInt1986 < 13)
-			class157.method2679(2);
+		if (class157.zoom < 13)
+			class157.upscale(2);
 		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
 	}
 

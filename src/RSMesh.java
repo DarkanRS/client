@@ -16,7 +16,7 @@ public class RSMesh {
 	public short[] aShortArray1983;
 	public short[] aShortArray1984;
 	public byte[] aByteArray1985;
-	public int anInt1986 = 12;
+	public int zoom = 12;
 	public short[] aShortArray1987;
 	public byte[] aByteArray1988;
 	public int[] anIntArray1989;
@@ -134,7 +134,7 @@ public class RSMesh {
 		boolean bool_31_ = (i & 0x8) == 8;
 		if (bool_31_) {
 			class282_sub35.index -= 781596523;
-			anInt1986 = class282_sub35.readUnsignedByte();
+			zoom = class282_sub35.readUnsignedByte();
 			class282_sub35.index += 1897073390;
 		}
 		int i_32_ = class282_sub35.readUnsignedByte();
@@ -203,9 +203,9 @@ public class RSMesh {
 		int i_63_ = i_47_;
 		i_47_ += i_43_ * 6;
 		int i_64_ = 6;
-		if (anInt1986 == 14)
+		if (zoom == 14)
 			i_64_ = 7;
-		else if (anInt1986 >= 15)
+		else if (zoom >= 15)
 			i_64_ = 9;
 		int i_65_ = i_47_;
 		i_47_ += i_43_ * i_64_;
@@ -434,9 +434,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_101_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_101_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_101_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_102_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_102_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_102_.read24BitUnsignedInteger((short) 31283);
@@ -454,9 +454,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_101_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_101_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_101_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_102_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_102_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_102_.read24BitUnsignedInteger((short) 6138);
@@ -476,9 +476,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_101_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_101_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_101_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_102_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_102_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_102_.read24BitUnsignedInteger((short) 30844);
@@ -836,14 +836,14 @@ public class RSMesh {
 		return is_188_;
 	}
 
-	public void method2668(short i, short i_192_) {
+	public void recolor(short i, short i_192_) {
 		for (int i_193_ = 0; i_193_ < anInt1973; i_193_++) {
 			if (aShortArray2006[i_193_] == i)
 				aShortArray2006[i_193_] = i_192_;
 		}
 	}
 
-	public void method2669(short i, short i_194_) {
+	public void retexture(short i, short i_194_) {
 		if (aShortArray1993 != null) {
 			for (int i_195_ = 0; i_195_ < anInt1973; i_195_++) {
 				if (aShortArray1993[i_195_] == i)
@@ -1191,7 +1191,7 @@ public class RSMesh {
 		boolean bool_283_ = (i & 0x8) == 8;
 		if (bool_283_) {
 			class282_sub35.index -= 781596523;
-			anInt1986 = class282_sub35.readUnsignedByte();
+			zoom = class282_sub35.readUnsignedByte();
 			class282_sub35.index += 1897073390;
 		}
 		int i_284_ = class282_sub35.readUnsignedByte();
@@ -1260,9 +1260,9 @@ public class RSMesh {
 		int i_315_ = i_299_;
 		i_299_ += i_295_ * 6;
 		int i_316_ = 6;
-		if (anInt1986 == 14)
+		if (zoom == 14)
 			i_316_ = 7;
-		else if (anInt1986 >= 15)
+		else if (zoom >= 15)
 			i_316_ = 9;
 		int i_317_ = i_299_;
 		i_299_ += i_295_ * i_316_;
@@ -1438,7 +1438,7 @@ public class RSMesh {
 		boolean bool_354_ = (i & 0x8) == 8;
 		if (bool_354_) {
 			class282_sub35.index -= 781596523;
-			anInt1986 = class282_sub35.readUnsignedByte();
+			zoom = class282_sub35.readUnsignedByte();
 			class282_sub35.index += 1897073390;
 		}
 		int i_355_ = class282_sub35.readUnsignedByte();
@@ -1507,9 +1507,9 @@ public class RSMesh {
 		int i_386_ = i_370_;
 		i_370_ += i_366_ * 6;
 		int i_387_ = 6;
-		if (anInt1986 == 14)
+		if (zoom == 14)
 			i_387_ = 7;
-		else if (anInt1986 >= 15)
+		else if (zoom >= 15)
 			i_387_ = 9;
 		int i_388_ = i_370_;
 		i_370_ += i_366_ * i_387_;
@@ -1666,7 +1666,7 @@ public class RSMesh {
 		}
 	}
 
-	public void method2679(int i) {
+	public void upscale(int i) {
 		for (int i_417_ = 0; i_417_ < anInt1974; i_417_++) {
 			anIntArray1976[i_417_] <<= i;
 			anIntArray2003[i_417_] <<= i;
@@ -2058,9 +2058,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_489_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_489_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_489_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_490_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_490_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_490_.read24BitUnsignedInteger((short) 27714);
@@ -2078,9 +2078,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_489_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_489_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_489_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_490_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_490_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_490_.read24BitUnsignedInteger((short) 28452);
@@ -2100,9 +2100,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_489_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_489_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_489_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_490_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_490_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_490_.read24BitUnsignedInteger((short) 5122);
@@ -2642,7 +2642,7 @@ public class RSMesh {
 		anInt1999++;
 	}
 
-	public static RSMesh method2689(Index class317, int i, int i_600_) {
+	public static RSMesh decodeMesh(Index class317, int i, int i_600_) {
 		byte[] is = class317.getFile(i, i_600_, -1774438474);
 		if (is == null)
 			return null;
@@ -3119,9 +3119,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_722_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_722_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_722_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_723_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_723_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_723_.read24BitUnsignedInteger((short) 5414);
@@ -3139,9 +3139,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_722_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_722_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_722_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_723_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_723_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_723_.read24BitUnsignedInteger((short) 21538);
@@ -3161,9 +3161,9 @@ public class RSMesh {
 				aShortArray1996[i] = (short) class282_sub35_722_.readUnsignedShort();
 				aShortArray1987[i] = (short) class282_sub35_722_.readUnsignedShort();
 				aShortArray1998[i] = (short) class282_sub35_722_.readUnsignedShort();
-				if (anInt1986 < 15) {
+				if (zoom < 15) {
 					anIntArray1989[i] = class282_sub35_723_.readUnsignedShort();
-					if (anInt1986 < 14)
+					if (zoom < 14)
 						anIntArray2000[i] = class282_sub35_723_.readUnsignedShort();
 					else
 						anIntArray2000[i] = class282_sub35_723_.read24BitUnsignedInteger((short) 10145);

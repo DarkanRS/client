@@ -2,106 +2,106 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class424 {
+public class AttributesDefaultsLoader {
 	Index aClass317_5027;
-	Class229 aClass229_5028 = new Class229(64);
+	SoftCache aClass229_5028 = new SoftCache(64);
 	static int anInt5029;
 
 	public void method7067(int i) {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3863(1684780970);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3863(1684780970);
 		}
 	}
 
 	public void method7068(int i, int i_0_) {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3858(i, (byte) -89);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3858(i, (byte) -89);
 		}
 	}
 
-	public Class424(Game class486, Class495 class495, Index class317) {
-		((Class424) this).aClass317_5027 = class317;
-		if (((Class424) this).aClass317_5027 != null)
-			((Class424) this).aClass317_5027.filesCount(Class120.aClass120_1474.anInt1521 * -71319279, -1867131018);
+	public AttributesDefaultsLoader(Game class486, Language class495, Index class317) {
+		((AttributesDefaultsLoader) this).aClass317_5027 = class317;
+		if (((AttributesDefaultsLoader) this).aClass317_5027 != null)
+			((AttributesDefaultsLoader) this).aClass317_5027.filesCount(SharedConfigsType.aClass120_1474.anInt1521 * -71319279, -1867131018);
 	}
 
 	public AttributeDefault method7069(int i, byte i_1_) {
 		AttributeDefault class437;
-		synchronized (((Class424) this).aClass229_5028) {
-			class437 = ((AttributeDefault) ((Class424) this).aClass229_5028.method3865((long) i));
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			class437 = ((AttributeDefault) ((AttributesDefaultsLoader) this).aClass229_5028.method3865((long) i));
 		}
 		if (null != class437)
 			return class437;
 		byte[] is;
-		synchronized (((Class424) this).aClass317_5027) {
-			is = (((Class424) this).aClass317_5027.getFile(-71319279 * Class120.aClass120_1474.anInt1521, i, -1430082721));
+		synchronized (((AttributesDefaultsLoader) this).aClass317_5027) {
+			is = (((AttributesDefaultsLoader) this).aClass317_5027.getFile(-71319279 * SharedConfigsType.aClass120_1474.anInt1521, i, -1430082721));
 		}
 		class437 = new AttributeDefault();
 		if (null != is)
 			class437.method7315(new RsByteBuffer(is), 864887749);
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3856(class437, (long) i);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.put(class437, (long) i);
 		}
 		return class437;
 	}
 
 	public void method7070(int i) {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3859(-299334668);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3859(-299334668);
 		}
 	}
 
 	public void method7071() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3863(1001807600);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3863(1001807600);
 		}
 	}
 
 	public void method7072() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3859(-826915308);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3859(-826915308);
 		}
 	}
 
 	public void method7073() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3859(1356982144);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3859(1356982144);
 		}
 	}
 
 	public void method7074() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3859(605689747);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3859(605689747);
 		}
 	}
 
 	public void method7075(int i) {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3858(i, (byte) 60);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3858(i, (byte) 60);
 		}
 	}
 
 	public void method7076() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3859(2040712126);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3859(2040712126);
 		}
 	}
 
 	public void method7077() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3863(1462549727);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3863(1462549727);
 		}
 	}
 
 	public void method7078() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3863(1794669600);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3863(1794669600);
 		}
 	}
 
 	public void method7079() {
-		synchronized (((Class424) this).aClass229_5028) {
-			((Class424) this).aClass229_5028.method3863(1515403340);
+		synchronized (((AttributesDefaultsLoader) this).aClass229_5028) {
+			((AttributesDefaultsLoader) this).aClass229_5028.method3863(1515403340);
 		}
 	}
 

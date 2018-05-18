@@ -9,7 +9,7 @@ public class Class378 {
 	int[] anIntArray4521;
 	Index aClass317_4522;
 	Index aClass317_4523;
-	Class229 aClass229_4524 = new Class229(20);
+	SoftCache aClass229_4524 = new SoftCache(20);
 	Map aMap4525 = null;
 	public static Index aClass317_4526;
 
@@ -88,7 +88,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_6_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_6_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_6_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_6_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -133,7 +133,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_8_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_8_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_8_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_8_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -251,7 +251,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_19_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_19_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_19_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_19_ ? 1 : 0)));
 		return class452;
 	}
 
@@ -314,7 +314,7 @@ public class Class378 {
 			class452 = new Class452(interface35.method216(is, class414, bool_23_, 1942118537), class414);
 		else
 			class452 = new Class452(interface35.method216(is, class414, bool_23_, 1942118537), null);
-		((Class378) this).aClass229_4524.method3856(class452, (long) (i << 1 | (bool_23_ ? 1 : 0)));
+		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_23_ ? 1 : 0)));
 		return class452;
 	}
 

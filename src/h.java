@@ -448,7 +448,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native int cw();
 
-	public boolean method11272() {
+	public boolean successful() {
 		return true;
 	}
 

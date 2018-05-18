@@ -685,7 +685,7 @@ public class Class443 {
 				client.aClass257_7353.method4547((byte) -47);
 			}
 		} catch (Exception exception) {
-			Class209.method3598(Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1843715069), -915823010);
+			Class209.method3598(Message.aClass433_5159.translate(Class223.aClass495_2772, -1843715069), -915823010);
 		}
 	}
 

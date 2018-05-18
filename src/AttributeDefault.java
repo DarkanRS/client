@@ -6,7 +6,7 @@ public class AttributeDefault {
 	public String aString5335;
 	char aChar5336;
 	public int anInt5337;
-	public boolean aBool5338 = true;
+	public boolean autoDisable = true;
 	public static NativeSprite aClass160_5339;
 	public static Index aClass317_5340;
 
@@ -29,7 +29,7 @@ public class AttributeDefault {
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
-			aBool5338 = false;
+			autoDisable = false;
 		else if (i == 5)
 			aString5335 = class282_sub35.readString(912160510);
 	}
@@ -40,7 +40,7 @@ public class AttributeDefault {
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
-			aBool5338 = false;
+			autoDisable = false;
 		else if (i == 5)
 			aString5335 = class282_sub35.readString(51672565);
 	}
@@ -68,7 +68,7 @@ public class AttributeDefault {
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
-			aBool5338 = false;
+			autoDisable = false;
 		else if (i == 5)
 			aString5335 = class282_sub35.readString(-347682615);
 	}

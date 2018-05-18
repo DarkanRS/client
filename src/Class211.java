@@ -4,7 +4,7 @@
 
 public class Class211 {
 	public static Class227 aClass227_2669 = new Class227();
-	Class229 aClass229_2670 = new Class229(64);
+	SoftCache aClass229_2670 = new SoftCache(64);
 	Index aClass317_2671;
 	Class526 aClass526_2672;
 	public static Index aClass317_2673;
@@ -25,14 +25,14 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.getFile(((Class120.aClass120_1511.anInt1521) * -71319279), i, -1690915964);
+			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.anInt1521) * -71319279), i, -1690915964);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
 		if (null != is)
 			class227.method3821(new RsByteBuffer(is), -1552501501);
 		synchronized (((Class211) this).aClass229_2670) {
-			((Class211) this).aClass229_2670.method3856(class227, (long) i);
+			((Class211) this).aClass229_2670.put(class227, (long) i);
 		}
 		return class227;
 	}
@@ -64,14 +64,14 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.getFile(((Class120.aClass120_1511.anInt1521) * -71319279), i, -2114490634);
+			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.anInt1521) * -71319279), i, -2114490634);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
 		if (null != is)
 			class227.method3821(new RsByteBuffer(is), -260429185);
 		synchronized (((Class211) this).aClass229_2670) {
-			((Class211) this).aClass229_2670.method3856(class227, (long) i);
+			((Class211) this).aClass229_2670.put(class227, (long) i);
 		}
 		return class227;
 	}
@@ -85,14 +85,14 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.getFile(((Class120.aClass120_1511.anInt1521) * -71319279), i, -2082817514);
+			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.anInt1521) * -71319279), i, -2082817514);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
 		if (null != is)
 			class227.method3821(new RsByteBuffer(is), -882227492);
 		synchronized (((Class211) this).aClass229_2670) {
-			((Class211) this).aClass229_2670.method3856(class227, (long) i);
+			((Class211) this).aClass229_2670.put(class227, (long) i);
 		}
 		return class227;
 	}
@@ -103,9 +103,9 @@ public class Class211 {
 		}
 	}
 
-	public Class211(Game class486, Class495 class495, Index class317, Class526 class526) {
+	public Class211(Game class486, Language class495, Index class317, Class526 class526) {
 		((Class211) this).aClass317_2671 = class317;
-		((Class211) this).aClass317_2671.filesCount((-71319279 * (Class120.aClass120_1511.anInt1521)), 357148056);
+		((Class211) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.aClass120_1511.anInt1521)), 357148056);
 		((Class211) this).aClass526_2672 = class526;
 	}
 

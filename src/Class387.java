@@ -6,7 +6,7 @@ public class Class387 {
 	boolean aBool4694;
 	static Class387 aClass387_4695;
 	static Class387 aClass387_4696;
-	static Class387 aClass387_4697 = new Class387(0, Class433.aClass433_5174, 2);
+	static Class387 aClass387_4697 = new Class387(0, Message.aClass433_5174, 2);
 	static Class387 aClass387_4698;
 	static Class387 aClass387_4699;
 	static Class387 aClass387_4700;
@@ -20,16 +20,16 @@ public class Class387 {
 	static Class387 aClass387_4708;
 	static Class387 aClass387_4709;
 	static Class387 aClass387_4710;
-	Class433 aClass433_4711;
+	Message aClass433_4711;
 	public int anInt4712;
 	static Class387 aClass387_4713;
-	Class433 aClass433_4714;
+	Message aClass433_4714;
 	int anInt4715;
 	static Class387 aClass387_4716;
 	static Class387 aClass387_4717;
 	boolean aBool4718;
 
-	Class387(int i, Class433 class433, Class433 class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
+	Class387(int i, Message class433, Message class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
 		anInt4712 = 2061403819 * i;
 		((Class387) this).aClass433_4711 = class433;
 		((Class387) this).aClass433_4714 = class433_0_;
@@ -39,32 +39,32 @@ public class Class387 {
 		((Class387) this).aBool4718 = bool_3_;
 	}
 
-	Class387(int i, Class433 class433, int i_4_) {
+	Class387(int i, Message class433, int i_4_) {
 		this(i, class433, class433, i_4_, i_4_, true, false);
 	}
 
-	Class387(int i, Class433 class433, Class433 class433_5_, int i_6_, int i_7_) {
+	Class387(int i, Message class433, Message class433_5_, int i_6_, int i_7_) {
 		this(i, class433, class433_5_, i_6_, i_7_, true, false);
 	}
 
 	static {
-		aClass387_4695 = new Class387(1, Class433.aClass433_5174, Class433.aClass433_5174, 2, 3);
-		aClass387_4696 = new Class387(2, Class433.aClass433_5174, 3);
-		aClass387_4702 = new Class387(3, Class433.aClass433_5174, Class433.aClass433_5174, 3, 4);
-		aClass387_4708 = new Class387(4, Class433.aClass433_5174, 4);
-		aClass387_4699 = new Class387(5, Class433.aClass433_5174, Class433.aClass433_5174, 4, 5);
-		aClass387_4700 = new Class387(6, Class433.aClass433_5174, Class433.aClass433_5174, 5, 98, true, true);
-		aClass387_4717 = new Class387(7, Class433.aClass433_5174, 99);
-		aClass387_4709 = new Class387(8, Class433.aClass433_5174, 100);
-		aClass387_4716 = new Class387(9, Class433.aClass433_5158, Class433.aClass433_5158, 0, 92, true, true);
-		aClass387_4704 = new Class387(10, Class433.aClass433_5158, Class433.aClass433_5158, 92, 93);
-		aClass387_4705 = new Class387(11, Class433.aClass433_5158, Class433.aClass433_5158, 94, 95);
-		aClass387_4706 = new Class387(12, Class433.aClass433_5158, Class433.aClass433_5158, 96, 97);
-		aClass387_4707 = new Class387(13, Class433.aClass433_5158, 97);
-		aClass387_4713 = new Class387(14, Class433.aClass433_5158, 97);
-		aClass387_4698 = new Class387(15, Class433.aClass433_5158, 100);
-		aClass387_4710 = new Class387(16, Class433.aClass433_5158, 100);
-		aClass387_4701 = new Class387(17, Class433.aClass433_5158, 100);
+		aClass387_4695 = new Class387(1, Message.aClass433_5174, Message.aClass433_5174, 2, 3);
+		aClass387_4696 = new Class387(2, Message.aClass433_5174, 3);
+		aClass387_4702 = new Class387(3, Message.aClass433_5174, Message.aClass433_5174, 3, 4);
+		aClass387_4708 = new Class387(4, Message.aClass433_5174, 4);
+		aClass387_4699 = new Class387(5, Message.aClass433_5174, Message.aClass433_5174, 4, 5);
+		aClass387_4700 = new Class387(6, Message.aClass433_5174, Message.aClass433_5174, 5, 98, true, true);
+		aClass387_4717 = new Class387(7, Message.aClass433_5174, 99);
+		aClass387_4709 = new Class387(8, Message.aClass433_5174, 100);
+		aClass387_4716 = new Class387(9, Message.aClass433_5158, Message.aClass433_5158, 0, 92, true, true);
+		aClass387_4704 = new Class387(10, Message.aClass433_5158, Message.aClass433_5158, 92, 93);
+		aClass387_4705 = new Class387(11, Message.aClass433_5158, Message.aClass433_5158, 94, 95);
+		aClass387_4706 = new Class387(12, Message.aClass433_5158, Message.aClass433_5158, 96, 97);
+		aClass387_4707 = new Class387(13, Message.aClass433_5158, 97);
+		aClass387_4713 = new Class387(14, Message.aClass433_5158, 97);
+		aClass387_4698 = new Class387(15, Message.aClass433_5158, 100);
+		aClass387_4710 = new Class387(16, Message.aClass433_5158, 100);
+		aClass387_4701 = new Class387(17, Message.aClass433_5158, 100);
 	}
 
 	static Class387[] method6676(int i) {

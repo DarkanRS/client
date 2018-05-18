@@ -250,8 +250,8 @@ public class Class190 {
 		}
 		client.aClass257_7353.method4435((byte) 1).method4048(117803918);
 		client.aBool7371 = true;
-		Class455.aShortArray5452 = Class478.aShortArray5691 = Class409.aShortArray4862 = ItemDefinitions.aShortArray5086 = new short[256];
-		Class85.aString817 = Class433.aClass433_5286.method7273(Class223.aClass495_2772, -1420130584);
+		Class455.aShortArray5452 = Class478.aShortArray5691 = Class409.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
+		Class85.aString817 = Message.aClass433_5286.translate(Class223.aClass495_2772, -1420130584);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub27_8209), Class393.aClass282_Sub54_4783.aClass468_Sub27_8208.method12952((byte) 104), 999317322);
 		client.anInt7221 = 0;
 		Class350.method6189((byte) 111);

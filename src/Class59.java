@@ -6,7 +6,7 @@ public class Class59 {
 	public short aShort530;
 	public static final int anInt531 = 1;
 	public static final int anInt532 = 2;
-	static Class229 aClass229_533 = new Class229(64);
+	static SoftCache aClass229_533 = new SoftCache(64);
 	public boolean aBool534;
 	public int anInt535;
 	public short aShort536;
@@ -380,7 +380,7 @@ public class Class59 {
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -613926670);
 		class59.method1146((byte) 1);
-		aClass229_533.method3856(class59, (long) i);
+		aClass229_533.put(class59, (long) i);
 		return class59;
 	}
 
@@ -639,7 +639,7 @@ public class Class59 {
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1658973926);
 		class59.method1146((byte) 1);
-		aClass229_533.method3856(class59, (long) i);
+		aClass229_533.put(class59, (long) i);
 		return class59;
 	}
 

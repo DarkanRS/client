@@ -58,7 +58,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_6_ = 0; (i_6_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_6_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_6_].method12315(i, i_3_, (byte) 60);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_3_, 1422267205);
 		int[] is = new int[i_3_ * i];
 		int i_7_;
@@ -128,7 +128,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_25_ = 0; (i_25_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_25_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_25_].method12315(i, i_23_, (byte) 116);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_23_, 1384434405);
 		int[] is = new int[i * i_23_];
 		int i_26_ = 0;
@@ -354,7 +354,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_65_ = 0; (i_65_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_65_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_65_].method12315(i, i_64_, (byte) 80);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_64_, 1816824554);
 		int[] is = new int[i * i_64_];
 		int i_66_ = 0;
@@ -423,7 +423,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_81_ = 0; (i_81_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_81_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_81_].method12315(i, i_80_, (byte) 41);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_80_, 706850973);
 		int[] is = new int[i * i_80_];
 		int i_82_ = 0;

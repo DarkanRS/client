@@ -100,7 +100,7 @@ public class Class60 {
 	}
 
 	static final void method1174(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
-		Class426.method7170(i_3_, 377314002);
+		ItemIndexLoader.method7170(i_3_, 377314002);
 		int i_8_ = 0;
 		int i_9_ = i_3_ - i_6_;
 		if (i_9_ < 0)

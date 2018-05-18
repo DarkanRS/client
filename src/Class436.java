@@ -4,7 +4,7 @@
 
 public class Class436 {
 	Index aClass317_5333;
-	Class229 aClass229_5334 = new Class229(64);
+	SoftCache aClass229_5334 = new SoftCache(64);
 
 	public Class416 method7304(int i, byte i_0_) {
 		Class416 class416;
@@ -15,13 +15,13 @@ public class Class436 {
 			return class416;
 		byte[] is;
 		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.getFile(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1863810018);
+			is = ((Class436) this).aClass317_5333.getFile(((SharedConfigsType.aClass120_1494.anInt1521) * -71319279), i, -1863810018);
 		}
 		class416 = new Class416();
 		if (null != is)
 			class416.method6999(new RsByteBuffer(is), -1640531527);
 		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3856(class416, (long) i);
+			((Class436) this).aClass229_5334.put(class416, (long) i);
 		}
 		return class416;
 	}
@@ -59,13 +59,13 @@ public class Class436 {
 			return class416;
 		byte[] is;
 		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.getFile(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1505357380);
+			is = ((Class436) this).aClass317_5333.getFile(((SharedConfigsType.aClass120_1494.anInt1521) * -71319279), i, -1505357380);
 		}
 		class416 = new Class416();
 		if (null != is)
 			class416.method6999(new RsByteBuffer(is), -1640531527);
 		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3856(class416, (long) i);
+			((Class436) this).aClass229_5334.put(class416, (long) i);
 		}
 		return class416;
 	}
@@ -79,20 +79,20 @@ public class Class436 {
 			return class416;
 		byte[] is;
 		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.getFile(((Class120.aClass120_1494.anInt1521) * -71319279), i, -1657302050);
+			is = ((Class436) this).aClass317_5333.getFile(((SharedConfigsType.aClass120_1494.anInt1521) * -71319279), i, -1657302050);
 		}
 		class416 = new Class416();
 		if (null != is)
 			class416.method6999(new RsByteBuffer(is), -1640531527);
 		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3856(class416, (long) i);
+			((Class436) this).aClass229_5334.put(class416, (long) i);
 		}
 		return class416;
 	}
 
-	public Class436(Game class486, Class495 class495, Index class317) {
+	public Class436(Game class486, Language class495, Index class317) {
 		((Class436) this).aClass317_5333 = class317;
-		((Class436) this).aClass317_5333.filesCount((Class120.aClass120_1494.anInt1521) * -71319279, 974737476);
+		((Class436) this).aClass317_5333.filesCount((SharedConfigsType.aClass120_1494.anInt1521) * -71319279, 974737476);
 	}
 
 	public void method7311() {

@@ -34,7 +34,7 @@ public class Class418 {
 		}
 		class160 = class505.method8444(class91, true);
 		if (null != class160)
-			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.method3856(class160, l);
+			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.put(class160, l);
 		return class160;
 	}
 
@@ -81,7 +81,7 @@ public class Class418 {
 		}
 		class160 = class505.method8444(class91, true);
 		if (null != class160)
-			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.method3856(class160, l);
+			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.put(class160, l);
 		return class160;
 	}
 
@@ -108,7 +108,7 @@ public class Class418 {
 		}
 		class160 = class505.method8444(class91, true);
 		if (null != class160)
-			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.method3856(class160, l);
+			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.put(class160, l);
 		return class160;
 	}
 
@@ -153,7 +153,7 @@ public class Class418 {
 		}
 		class160 = class505.method8444(class91, true);
 		if (null != class160)
-			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.method3856(class160, l);
+			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.put(class160, l);
 		return class160;
 	}
 
@@ -188,7 +188,7 @@ public class Class418 {
 		}
 		class160 = class505.method8444(class91, true);
 		if (null != class160)
-			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.method3856(class160, l);
+			((Class427) ((Class418) this).aClass427_4998).aClass229_5122.put(class160, l);
 		return class160;
 	}
 

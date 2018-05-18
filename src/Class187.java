@@ -287,7 +287,7 @@ public class Class187 {
 			i_52_ = 48;
 			class505.ba(1, 0);
 		} else
-			Class419.aClass160_5004 = class505.method8549(is, 0, i_49_, i_49_, i_49_, 265003650);
+			Class419.aClass160_5004 = class505.createNativeSprite(is, 0, i_49_, i_49_, i_49_, 265003650);
 		client.aClass257_7353.method4435((byte) 1).method4052((byte) 1);
 		int i_53_ = ~0xffffff | ((238 + (int) (Math.random() * 20.0) - 10 << 16) + (238 + (int) (Math.random() * 20.0) - 10 << 8) + (238 + (int) (Math.random() * 20.0) - 10));
 		int i_54_ = ~0xffffff | 238 + (int) (Math.random() * 20.0) - 10 << 16;

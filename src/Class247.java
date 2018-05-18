@@ -40,7 +40,7 @@ public class Class247 {
 					int[] is = (class169.anInt2074 * 1960017665 == 2 ? (anInterface22_3046.method141(((Class247) this).anInt3031 * -224273715, 0.7F, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, false, -1509054197)) : (anInterface22_3046.method140(-224273715 * ((Class247) this).anInt3031, 0.7F, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, false, (byte) 127)));
 					((Class247) this).anInt3053 = is[0] * 207419167;
 					((Class247) this).anInt3044 = -1059388863 * is[is.length - 1];
-					((Class247) this).aClass160_3030 = (class505.method8549(is, 0, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, 1403346971 * ((Class247) this).anInt3034, 1367570399));
+					((Class247) this).aClass160_3030 = (class505.createNativeSprite(is, 0, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, 1403346971 * ((Class247) this).anInt3034, 1367570399));
 				}
 				int i_12_ = (255 == i_11_ ? class169.anInt2074 * 1960017665 == 2 ? 1 : 0 : 1);
 				if (i_12_ == 1 && bool)
@@ -277,7 +277,7 @@ public class Class247 {
 					int[] is = (class169.anInt2074 * 1960017665 == 2 ? (anInterface22_3046.method141(((Class247) this).anInt3031 * -224273715, 0.7F, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, false, -611075687)) : (anInterface22_3046.method140(-224273715 * ((Class247) this).anInt3031, 0.7F, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, false, (byte) 52)));
 					((Class247) this).anInt3053 = is[0] * 207419167;
 					((Class247) this).anInt3044 = -1059388863 * is[is.length - 1];
-					((Class247) this).aClass160_3030 = (class505.method8549(is, 0, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, 1403346971 * ((Class247) this).anInt3034, 1107451088));
+					((Class247) this).aClass160_3030 = (class505.createNativeSprite(is, 0, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, 1403346971 * ((Class247) this).anInt3034, 1107451088));
 				}
 				int i_69_ = (255 == i_68_ ? class169.anInt2074 * 1960017665 == 2 ? 1 : 0 : 1);
 				if (i_69_ == 1 && bool)
@@ -405,7 +405,7 @@ public class Class247 {
 			boolean bool = (Class282_Sub50_Sub11_Sub1.aClass317_10379.method5647(565265759 * ((Class247) this).anInt3047, -2119577317));
 			if (bool) {
 				class505.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-				RSMesh class157 = RSMesh.method2689((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);
+				RSMesh class157 = RSMesh.decodeMesh((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);
 				((Class247) this).aClass528_3048 = class505.createMeshRasterizer(class157, 1099776, 0, 255, 1);
 				byte[] is = ((Class247) this).aClass528_3048.aw();
 				if (is == null)
@@ -452,7 +452,7 @@ public class Class247 {
 			boolean bool = (Class282_Sub50_Sub11_Sub1.aClass317_10379.method5647(565265759 * ((Class247) this).anInt3047, -2119577317));
 			if (bool) {
 				class505.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-				RSMesh class157 = RSMesh.method2689((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);
+				RSMesh class157 = RSMesh.decodeMesh((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);
 				((Class247) this).aClass528_3048 = class505.createMeshRasterizer(class157, 1099776, 0, 255, 1);
 				byte[] is = ((Class247) this).aClass528_3048.aw();
 				if (is == null)
@@ -593,7 +593,7 @@ public class Class247 {
 			boolean bool = (Class282_Sub50_Sub11_Sub1.aClass317_10379.method5647(565265759 * ((Class247) this).anInt3047, -2119577317));
 			if (bool) {
 				class505.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-				RSMesh class157 = RSMesh.method2689((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);
+				RSMesh class157 = RSMesh.decodeMesh((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);
 				((Class247) this).aClass528_3048 = class505.createMeshRasterizer(class157, 1099776, 0, 255, 1);
 				byte[] is = ((Class247) this).aClass528_3048.aw();
 				if (is == null)
@@ -694,7 +694,7 @@ public class Class247 {
 					int[] is = (class169.anInt2074 * 1960017665 == 2 ? (anInterface22_3046.method141(((Class247) this).anInt3031 * -224273715, 0.7F, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, false, -148667756)) : (anInterface22_3046.method140(-224273715 * ((Class247) this).anInt3031, 0.7F, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, false, (byte) 41)));
 					((Class247) this).anInt3053 = is[0] * 207419167;
 					((Class247) this).anInt3044 = -1059388863 * is[is.length - 1];
-					((Class247) this).aClass160_3030 = (class505.method8549(is, 0, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, 1403346971 * ((Class247) this).anInt3034, -283481415));
+					((Class247) this).aClass160_3030 = (class505.createNativeSprite(is, 0, 1403346971 * ((Class247) this).anInt3034, ((Class247) this).anInt3034 * 1403346971, 1403346971 * ((Class247) this).anInt3034, -283481415));
 				}
 				int i_165_ = (255 == i_164_ ? class169.anInt2074 * 1960017665 == 2 ? 1 : 0 : 1);
 				if (i_165_ == 1 && bool)

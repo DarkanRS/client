@@ -8,7 +8,7 @@ public final class Class223 {
 	int anInt2769;
 	Class282_Sub50 aClass282_Sub50_2770 = new Class282_Sub50();
 	IterableNodeMap aClass465_2771;
-	public static Class495 aClass495_2772;
+	public static Language aClass495_2772;
 
 	public void method3757() {
 		((Class223) this).aClass477_2767.method7935((byte) 40);

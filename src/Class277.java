@@ -73,7 +73,7 @@ public class Class277 {
 	static void method4908(GraphicalRenderer class505, int i) {
 		int i_9_ = -10660793;
 		Class377.method6394(class505, Class301.anInt3555 * 1742345613, 815250613 * Class184.anInt2300, -13788709 * Class158_Sub2.anInt8975, Class110.anInt1104 * -1488439617, i_9_, -16777216, -68635316);
-		Class285.aClass8_3394.renderText(Class433.aClass433_5255.method7273(Class223.aClass495_2772, -384363737), 3 + 1742345613 * Class301.anInt3555, 815250613 * Class184.anInt2300 + 14, i_9_, -1, -418109423);
+		Class285.aClass8_3394.renderText(Message.aClass433_5255.translate(Class223.aClass495_2772, -384363737), 3 + 1742345613 * Class301.anInt3555, 815250613 * Class184.anInt2300 + 14, i_9_, -1, -418109423);
 		int i_10_ = Class163.aClass209_2031.method3569(1993106311);
 		int i_11_ = Class163.aClass209_2031.method3570(756095591);
 		if (!Class20.aBool162) {

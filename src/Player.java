@@ -16,7 +16,7 @@ public class Player extends Animable {
 	public int anInt10555;
 	public int anInt10556;
 	public int faceDirection;
-	public Class238 aClass238_10558;
+	public PlayerAppearance aClass238_10558;
 	public int anInt10559;
 	public int anInt10560;
 	public Class155 aClass155_10561;
@@ -772,7 +772,7 @@ public class Player extends Animable {
 						itemId -= 16384;
 						is[equipSlot] = itemId | 0x40000000;
 						itemDefinitions[equipSlot] = Class119.aClass426_1463.getItemDefinitions(itemId, 233758785);
-						int i_87_ = itemDefinitions[equipSlot].anInt5093 * -1412708647;
+						int i_87_ = itemDefinitions[equipSlot].team * -1412708647;
 						if (0 != i_87_)
 							anInt10559 = -2039578069 * i_87_;
 					} else
@@ -794,7 +794,7 @@ public class Player extends Animable {
 		int[] colors = new int[10];
 		for (int colorIndex = 0; colorIndex < 10; colorIndex++) {
 			int color = buffer.readUnsignedByte();
-			if (Class366.aShortArrayArrayArray4232.length < 1 || color < 0 || (color >= Class366.aShortArrayArrayArray4232[colorIndex][0].length))
+			if (Class366.SKIN_COLORS.length < 1 || color < 0 || (color >= Class366.SKIN_COLORS[colorIndex][0].length))
 				color = 0;
 			colors[colorIndex] = color;
 		}
@@ -835,9 +835,9 @@ public class Player extends Animable {
 		} else
 			Class149_Sub2.method14609(this, -1660310904);
 		if (aClass238_10558 == null)
-			aClass238_10558 = new Class238();
+			aClass238_10558 = new PlayerAppearance();
 		int i_100_ = -977770149 * aClass238_10558.anInt2928;
-		int[] is_101_ = aClass238_10558.anIntArray2923;
+		int[] is_101_ = aClass238_10558.colors;
 		aClass238_10558.method3992(method15808(635765286), is, itemEffects, colors, 1 == male, effectData, 1600934567);
 		if (effectData != i_100_) {
 			class385 = Class385.method6623(method11166().aClass385_3595);

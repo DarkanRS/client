@@ -5,7 +5,7 @@
 public class Class331 {
 	static final int anInt3869 = 0;
 	Index aClass317_3870;
-	Class229 aClass229_3871 = new Class229(64);
+	SoftCache aClass229_3871 = new SoftCache(64);
 	Index aClass317_3872;
 	static final int anInt3873 = 32768;
 
@@ -23,7 +23,7 @@ public class Class331 {
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), -514314699);
 		if (i >= 32768)
 			class282_sub50_sub14.method15213(707027607);
-		((Class331) this).aClass229_3871.method3856(class282_sub50_sub14, (long) i);
+		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
 		return class282_sub50_sub14;
 	}
 
@@ -41,7 +41,7 @@ public class Class331 {
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), 625561470);
 		if (i >= 32768)
 			class282_sub50_sub14.method15213(707027607);
-		((Class331) this).aClass229_3871.method3856(class282_sub50_sub14, (long) i);
+		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
 		return class282_sub50_sub14;
 	}
 
@@ -59,7 +59,7 @@ public class Class331 {
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), -326489303);
 		if (i >= 32768)
 			class282_sub50_sub14.method15213(707027607);
-		((Class331) this).aClass229_3871.method3856(class282_sub50_sub14, (long) i);
+		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
 		return class282_sub50_sub14;
 	}
 
@@ -77,11 +77,11 @@ public class Class331 {
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), 434656878);
 		if (i >= 32768)
 			class282_sub50_sub14.method15213(707027607);
-		((Class331) this).aClass229_3871.method3856(class282_sub50_sub14, (long) i);
+		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
 		return class282_sub50_sub14;
 	}
 
-	public Class331(Class495 class495, Index class317, Index class317_1_) {
+	public Class331(Language class495, Index class317, Index class317_1_) {
 		((Class331) this).aClass317_3872 = class317;
 		((Class331) this).aClass317_3870 = class317_1_;
 		if (null != ((Class331) this).aClass317_3872)

@@ -119,7 +119,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (IncomingPacket.aClass375_4482 == class184.aClass375_2286) {
-			Class85.aString817 = (715663393 * class184.anInt2287 > 2 ? stream.readString(1759947530) : Class433.aClass433_5286.method7273(Class223.aClass495_2772, -1187913693));
+			Class85.aString817 = (715663393 * class184.anInt2287 > 2 ? stream.readString(1759947530) : Message.aClass433_5286.translate(Class223.aClass495_2772, -1187913693));
 			client.anInt7311 = (715663393 * class184.anInt2287 > 0 ? stream.readUnsignedShort() : -1) * -1263465007;
 			if (65535 == client.anInt7311 * 460745521) {
 				client.anInt7311 = 1263465007;
@@ -204,7 +204,7 @@ public class PacketsDecoder extends Class455 {
 			int key1 = stream.readInt();
 			Class470.method7825(-400873026);
 			if (type == 2) {
-				Class424.method7081((byte) 18);
+				AttributesDefaultsLoader.method7081((byte) 18);
 			}
 			int[] is = { key1, key2, key3, key4 };
 			client.anInt7349 = 153305321 * id;
@@ -1786,7 +1786,7 @@ public class PacketsDecoder extends Class455 {
 			Class470.method7825(-586263541);
 			Class96_Sub9.method14587(i_297_, i_296_, i_298_, (short) -342);
 			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_296_, 985436598);
-			Class149_Sub1.method14583(i_297_, 1752402275 * class425.anInt5058, 920448529 * class425.anInt5045, class425.anInt5042 * -1468071943, -2105289855);
+			Class149_Sub1.method14583(i_297_, 1752402275 * class425.anInt5058, 920448529 * class425.anInt5045, class425.modelZoom * -1468071943, -2105289855);
 			Class28.method778(i_297_, class425.anInt5063 * 406372201, -1316014311 * class425.anInt5044, class425.anInt5074 * 701885681, (byte) 16);
 			class184.aClass375_2286 = null;
 			return true;

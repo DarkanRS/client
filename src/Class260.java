@@ -101,7 +101,7 @@ public class Class260 {
 	static void method4578(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	static void method4579() {
@@ -459,7 +459,7 @@ public class Class260 {
 	static void method4608(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	public static void method4609(int i, int i_101_, int i_102_) {
@@ -500,7 +500,7 @@ public class Class260 {
 		i_104_ = i_104_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1561729900) >> 8;
 		if (0 != i_104_ && i != -1) {
 			if (!aBool3220 && -1 != 1293234709 * anInt3223 && Class116.method1966(1992461194) && !Class345.method6140(2038275332)) {
-				aClass282_Sub15_Sub2_3231 = Class433.method7272((byte) -39);
+				aClass282_Sub15_Sub2_3231 = Message.method7272((byte) -39);
 				Class230.method3912((byte) 3);
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, -1870974818);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 9841);
@@ -515,7 +515,7 @@ public class Class260 {
 		i_106_ = i_106_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(512582903) >> 8;
 		if (0 != i_106_ && i != -1) {
 			if (!aBool3220 && -1 != 1293234709 * anInt3223 && Class116.method1966(-1462731740) && !Class345.method6140(-1869808)) {
-				aClass282_Sub15_Sub2_3231 = Class433.method7272((byte) 13);
+				aClass282_Sub15_Sub2_3231 = Message.method7272((byte) 13);
 				Class230.method3912((byte) 3);
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, -128022584);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 14000);
@@ -541,7 +541,7 @@ public class Class260 {
 		i_112_ = i_112_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-742879470) >> 8;
 		if (0 != i_112_ && i != -1) {
 			if (!aBool3220 && -1 != 1293234709 * anInt3223 && Class116.method1966(-2060151554) && !Class345.method6140(1088192376)) {
-				aClass282_Sub15_Sub2_3231 = Class433.method7272((byte) -33);
+				aClass282_Sub15_Sub2_3231 = Message.method7272((byte) -33);
 				Class230.method3912((byte) 3);
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, 29215494);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 7925);
@@ -555,7 +555,7 @@ public class Class260 {
 	static void method4616(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	public static void method4617(AnimationDefinitions class518, int i) {

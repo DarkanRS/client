@@ -3,19 +3,19 @@
  */
 
 public class Class474 {
-	Class229 aClass229_5607 = new Class229(256);
-	Class495 aClass495_5608;
+	SoftCache aClass229_5607 = new SoftCache(256);
+	Language aClass495_5608;
 	boolean aBool5609;
 	Index aClass317_5610;
 	Index aClass317_5611;
 	public static final int anInt5612 = 256;
 	Game aClass486_5613;
-	Class229 aClass229_5614 = new Class229(500);
-	Class229 aClass229_5615 = new Class229(30);
+	SoftCache aClass229_5614 = new SoftCache(500);
+	SoftCache aClass229_5615 = new SoftCache(30);
 	RSMesh[] aClass157Array5616;
 	int anInt5617;
 	String[] aStringArray5618;
-	Class229 aClass229_5619 = new Class229(50);
+	SoftCache aClass229_5619 = new SoftCache(50);
 	Class452 aClass452_5620;
 	static Class387 aClass387_5621;
 
@@ -43,7 +43,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, -1163305846), Class120.aClass120_1488.method2080(i, -2086943964), -1721086771));
+			is = (((Class474) this).aClass317_5610.getFile(SharedConfigsType.aClass120_1488.containerId(i, -1163305846), SharedConfigsType.aClass120_1488.fileId(i, -2086943964), -1721086771));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -61,7 +61,7 @@ public class Class474 {
 			class478.anIntArray5707 = null;
 		}
 		synchronized (((Class474) this).aClass229_5607) {
-			((Class474) this).aClass229_5607.method3856(class478, (long) i);
+			((Class474) this).aClass229_5607.put(class478, (long) i);
 		}
 		return class478;
 	}
@@ -159,7 +159,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 394538842), Class120.aClass120_1488.method2080(i, -2080510646), -1806868307));
+			is = (((Class474) this).aClass317_5610.getFile(SharedConfigsType.aClass120_1488.containerId(i, 394538842), SharedConfigsType.aClass120_1488.fileId(i, -2080510646), -1806868307));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -177,12 +177,12 @@ public class Class474 {
 			class478.anIntArray5707 = null;
 		}
 		synchronized (((Class474) this).aClass229_5607) {
-			((Class474) this).aClass229_5607.method3856(class478, (long) i);
+			((Class474) this).aClass229_5607.put(class478, (long) i);
 		}
 		return class478;
 	}
 
-	public Class474(Game class486, Class495 class495, boolean bool, Index class317, Index class317_3_) {
+	public Class474(Game class486, Language class495, boolean bool, Index class317, Index class317_3_) {
 		((Class474) this).aClass157Array5616 = new RSMesh[4];
 		((Class474) this).aClass452_5620 = new Class452(null, null);
 		((Class474) this).aClass486_5613 = class486;
@@ -192,17 +192,17 @@ public class Class474 {
 		((Class474) this).aClass317_5611 = class317_3_;
 		if (null != ((Class474) this).aClass317_5610) {
 			int i = ((Class474) this).aClass317_5610.containersCount(-1925709864) - 1;
-			Class120.aClass120_1488.method2078(-1090472574);
+			SharedConfigsType.aClass120_1488.method2078(-1090472574);
 			((Class474) this).aClass317_5610.filesCount(i, -1510124116);
 		}
 		if (((Class474) this).aClass486_5613 == Game.runescape)
-			((Class474) this).aStringArray5618 = (new String[] { null, null, null, null, null, Class433.aClass433_5282.method7273((((Class474) this).aClass495_5608), -952366759) });
+			((Class474) this).aStringArray5618 = (new String[] { null, null, null, null, null, Message.aClass433_5282.translate((((Class474) this).aClass495_5608), -952366759) });
 		else
 			((Class474) this).aStringArray5618 = new String[] { null, null, null, null, null, null };
 	}
 
 	public void method7899(int i, int i_4_) {
-		((Class474) this).aClass229_5607 = new Class229(i);
+		((Class474) this).aClass229_5607 = new SoftCache(i);
 	}
 
 	public Class478 method7900(int i) {
@@ -214,7 +214,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 1917016711), Class120.aClass120_1488.method2080(i, -2101953341), -2018257047));
+			is = (((Class474) this).aClass317_5610.getFile(SharedConfigsType.aClass120_1488.containerId(i, 1917016711), SharedConfigsType.aClass120_1488.fileId(i, -2101953341), -2018257047));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -232,7 +232,7 @@ public class Class474 {
 			class478.anIntArray5707 = null;
 		}
 		synchronized (((Class474) this).aClass229_5607) {
-			((Class474) this).aClass229_5607.method3856(class478, (long) i);
+			((Class474) this).aClass229_5607.put(class478, (long) i);
 		}
 		return class478;
 	}
@@ -246,7 +246,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 1801672212), Class120.aClass120_1488.method2080(i, -1894166586), -1996097305));
+			is = (((Class474) this).aClass317_5610.getFile(SharedConfigsType.aClass120_1488.containerId(i, 1801672212), SharedConfigsType.aClass120_1488.fileId(i, -1894166586), -1996097305));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -264,7 +264,7 @@ public class Class474 {
 			class478.anIntArray5707 = null;
 		}
 		synchronized (((Class474) this).aClass229_5607) {
-			((Class474) this).aClass229_5607.method3856(class478, (long) i);
+			((Class474) this).aClass229_5607.put(class478, (long) i);
 		}
 		return class478;
 	}
@@ -310,7 +310,7 @@ public class Class474 {
 	}
 
 	public void method7906(int i) {
-		((Class474) this).aClass229_5607 = new Class229(i);
+		((Class474) this).aClass229_5607 = new SoftCache(i);
 	}
 
 	public Class478 method7907(int i) {
@@ -322,7 +322,7 @@ public class Class474 {
 			return class478;
 		byte[] is;
 		synchronized (((Class474) this).aClass317_5610) {
-			is = (((Class474) this).aClass317_5610.getFile(Class120.aClass120_1488.method2079(i, 1584456493), Class120.aClass120_1488.method2080(i, -1954703096), -1972004805));
+			is = (((Class474) this).aClass317_5610.getFile(SharedConfigsType.aClass120_1488.containerId(i, 1584456493), SharedConfigsType.aClass120_1488.fileId(i, -1954703096), -1972004805));
 		}
 		class478 = new Class478();
 		class478.anInt5633 = -199598417 * i;
@@ -340,13 +340,13 @@ public class Class474 {
 			class478.anIntArray5707 = null;
 		}
 		synchronized (((Class474) this).aClass229_5607) {
-			((Class474) this).aClass229_5607.method3856(class478, (long) i);
+			((Class474) this).aClass229_5607.put(class478, (long) i);
 		}
 		return class478;
 	}
 
 	public void method7908(int i) {
-		((Class474) this).aClass229_5607 = new Class229(i);
+		((Class474) this).aClass229_5607 = new SoftCache(i);
 	}
 
 	public void method7909(int i) {
@@ -382,7 +382,7 @@ public class Class474 {
 	}
 
 	public void method7911(int i) {
-		((Class474) this).aClass229_5607 = new Class229(i);
+		((Class474) this).aClass229_5607 = new SoftCache(i);
 	}
 
 	public void method7912(boolean bool, int i) {

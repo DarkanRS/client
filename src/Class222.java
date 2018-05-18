@@ -70,7 +70,7 @@ public class Class222 implements Interface17 {
 		for (int i_9_ = i_6_; i_9_ < i_7_; i_9_++) {
 			char c = charsequence.charAt(i_9_);
 			if (Class309.method5491(c, 1531464997)) {
-				char c_10_ = Class424.method7080(c, -1416509112);
+				char c_10_ = AttributesDefaultsLoader.method7080(c, -1416509112);
 				if (c_10_ != 0)
 					stringbuilder.append(c_10_);
 			}

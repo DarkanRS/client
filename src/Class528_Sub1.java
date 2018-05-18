@@ -4385,7 +4385,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 		((Class528_Sub1) this).aBool8254 = false;
 	}
 
-	public boolean method11272() {
+	public boolean successful() {
 		if (((Class528_Sub1) this).aShortArray8269 == null)
 			return true;
 		for (int i = 0; i < ((Class528_Sub1) this).aShortArray8269.length; i++) {

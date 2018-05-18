@@ -7,8 +7,8 @@ public class Class218 {
 	public static final int anInt2704 = 64;
 	Index aClass317_2705;
 	public static final int anInt2706 = 128;
-	Class229 aClass229_2707 = new Class229(128);
-	Class229 aClass229_2708 = new Class229(64);
+	SoftCache aClass229_2707 = new SoftCache(128);
+	SoftCache aClass229_2708 = new SoftCache(64);
 	static boolean[] aBoolArray2709;
 
 	public void method3695(int i, int i_0_) {
@@ -30,8 +30,8 @@ public class Class218 {
 	}
 
 	public void method3697(int i, int i_1_, int i_2_) {
-		((Class218) this).aClass229_2707 = new Class229(i);
-		((Class218) this).aClass229_2708 = new Class229(i_1_);
+		((Class218) this).aClass229_2707 = new SoftCache(i);
+		((Class218) this).aClass229_2708 = new SoftCache(i_1_);
 	}
 
 	public void method3698(int i) {
@@ -61,7 +61,7 @@ public class Class218 {
 			return class220;
 		byte[] is;
 		synchronized (((Class218) this).aClass317_2705) {
-			is = ((Class218) this).aClass317_2705.getFile(((Class120.aClass120_1483.anInt1521) * -71319279), i, -1668017415);
+			is = ((Class218) this).aClass317_2705.getFile(((SharedConfigsType.aClass120_1483.anInt1521) * -71319279), i, -1668017415);
 		}
 		class220 = new Class220();
 		class220.anInt2753 = 443844459 * i;
@@ -70,7 +70,7 @@ public class Class218 {
 			class220.method3716(new RsByteBuffer(is), -141546823);
 		class220.method3718(-1915876048);
 		synchronized (((Class218) this).aClass229_2707) {
-			((Class218) this).aClass229_2707.method3856(class220, (long) i);
+			((Class218) this).aClass229_2707.put(class220, (long) i);
 		}
 		return class220;
 	}
@@ -84,7 +84,7 @@ public class Class218 {
 			return class220;
 		byte[] is;
 		synchronized (((Class218) this).aClass317_2705) {
-			is = ((Class218) this).aClass317_2705.getFile(((Class120.aClass120_1483.anInt1521) * -71319279), i, -1362506596);
+			is = ((Class218) this).aClass317_2705.getFile(((SharedConfigsType.aClass120_1483.anInt1521) * -71319279), i, -1362506596);
 		}
 		class220 = new Class220();
 		class220.anInt2753 = 443844459 * i;
@@ -93,30 +93,30 @@ public class Class218 {
 			class220.method3716(new RsByteBuffer(is), -141546823);
 		class220.method3718(-275295059);
 		synchronized (((Class218) this).aClass229_2707) {
-			((Class218) this).aClass229_2707.method3856(class220, (long) i);
+			((Class218) this).aClass229_2707.put(class220, (long) i);
 		}
 		return class220;
 	}
 
 	public void method3702(int i, int i_4_) {
-		((Class218) this).aClass229_2707 = new Class229(i);
-		((Class218) this).aClass229_2708 = new Class229(i_4_);
+		((Class218) this).aClass229_2707 = new SoftCache(i);
+		((Class218) this).aClass229_2708 = new SoftCache(i_4_);
 	}
 
-	public Class218(Game class486, Class495 class495, Index class317, Index class317_5_) {
+	public Class218(Game class486, Language class495, Index class317, Index class317_5_) {
 		((Class218) this).aClass317_2705 = class317;
 		((Class218) this).aClass317_2703 = class317_5_;
-		((Class218) this).aClass317_2705.filesCount((-71319279 * (Class120.aClass120_1483.anInt1521)), -945990147);
+		((Class218) this).aClass317_2705.filesCount((-71319279 * (SharedConfigsType.aClass120_1483.anInt1521)), -945990147);
 	}
 
 	public void method3703(int i, int i_6_) {
-		((Class218) this).aClass229_2707 = new Class229(i);
-		((Class218) this).aClass229_2708 = new Class229(i_6_);
+		((Class218) this).aClass229_2707 = new SoftCache(i);
+		((Class218) this).aClass229_2708 = new SoftCache(i_6_);
 	}
 
 	public void method3704(int i, int i_7_) {
-		((Class218) this).aClass229_2707 = new Class229(i);
-		((Class218) this).aClass229_2708 = new Class229(i_7_);
+		((Class218) this).aClass229_2707 = new SoftCache(i);
+		((Class218) this).aClass229_2708 = new SoftCache(i_7_);
 	}
 
 	public void method3705(int i) {
@@ -129,8 +129,8 @@ public class Class218 {
 	}
 
 	public void method3706(int i, int i_8_) {
-		((Class218) this).aClass229_2707 = new Class229(i);
-		((Class218) this).aClass229_2708 = new Class229(i_8_);
+		((Class218) this).aClass229_2707 = new SoftCache(i);
+		((Class218) this).aClass229_2708 = new SoftCache(i_8_);
 	}
 
 	public void method3707() {
@@ -152,11 +152,11 @@ public class Class218 {
 	}
 
 	public static void method3709(int i, short i_9_) {
-		synchronized (Class238.aClass229_2920) {
-			Class238.aClass229_2920.method3858(i, (byte) 86);
+		synchronized (PlayerAppearance.aClass229_2920) {
+			PlayerAppearance.aClass229_2920.method3858(i, (byte) 86);
 		}
-		synchronized (Class238.aClass229_2930) {
-			Class238.aClass229_2930.method3858(i, (byte) 15);
+		synchronized (PlayerAppearance.aClass229_2930) {
+			PlayerAppearance.aClass229_2930.method3858(i, (byte) 15);
 		}
 	}
 

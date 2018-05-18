@@ -293,7 +293,7 @@ public class Class16 {
 	public static final void method567(String string, boolean bool, byte i) {
 		if (string != null) {
 			if (client.anInt7373 * -1754449153 >= 100)
-				Class387.method6681(4, (Class433.aClass433_5289.method7273(Class223.aClass495_2772, -927458536)), (byte) 0);
+				Class387.method6681(4, (Message.aClass433_5289.translate(Class223.aClass495_2772, -927458536)), (byte) 0);
 			else {
 				String string_9_ = Class383.method6515(string, 1942118537);
 				if (null != string_9_) {
@@ -301,13 +301,13 @@ public class Class16 {
 						Class10 class10 = client.aClass10Array7456[i_10_];
 						String string_11_ = Class383.method6515(class10.aString115, 1942118537);
 						if (string_11_ != null && string_11_.equals(string_9_)) {
-							Class387.method6681(4, new StringBuilder().append(string).append(Class433.aClass433_5302.method7273(Class223.aClass495_2772, -794034411)).toString(), (byte) 6);
+							Class387.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate(Class223.aClass495_2772, -794034411)).toString(), (byte) 6);
 							return;
 						}
 						if (class10.aString116 != null) {
 							String string_12_ = Class383.method6515(class10.aString116, 1942118537);
 							if (null != string_12_ && string_12_.equals(string_9_)) {
-								Class387.method6681(4, new StringBuilder().append(string).append(Class433.aClass433_5302.method7273((Class223.aClass495_2772), -1228902826)).toString(), (byte) 24);
+								Class387.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate((Class223.aClass495_2772), -1228902826)).toString(), (byte) 24);
 								return;
 							}
 						}
@@ -316,19 +316,19 @@ public class Class16 {
 						Class6 class6 = client.aClass6Array7452[i_13_];
 						String string_14_ = Class383.method6515(class6.aString37, 1942118537);
 						if (null != string_14_ && string_14_.equals(string_9_)) {
-							Class387.method6681(4, new StringBuilder().append(Class433.aClass433_5308.method7273(Class223.aClass495_2772, -1154046234)).append(string).append(Class433.aClass433_5192.method7273(Class223.aClass495_2772, -627858057)).toString(), (byte) 53);
+							Class387.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.aClass495_2772, -1154046234)).append(string).append(Message.aClass433_5192.translate(Class223.aClass495_2772, -627858057)).toString(), (byte) 53);
 							return;
 						}
 						if (null != class6.aString43) {
 							String string_15_ = Class383.method6515(class6.aString43, 1942118537);
 							if (string_15_ != null && string_15_.equals(string_9_)) {
-								Class387.method6681(4, new StringBuilder().append(Class433.aClass433_5308.method7273(Class223.aClass495_2772, -1770440532)).append(string).append(Class433.aClass433_5192.method7273(Class223.aClass495_2772, -695950851)).toString(), (byte) 47);
+								Class387.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.aClass495_2772, -1770440532)).append(string).append(Message.aClass433_5192.translate(Class223.aClass495_2772, -695950851)).toString(), (byte) 47);
 								return;
 							}
 						}
 					}
 					if (Class383.method6515((Class84.myPlayer.displayName), 1942118537).equals(string_9_))
-						Class387.method6681(4, (Class433.aClass433_5238.method7273(Class223.aClass495_2772, -1399059410)), (byte) -31);
+						Class387.method6681(4, (Message.aClass433_5238.translate(Class223.aClass495_2772, -1399059410)), (byte) -31);
 					else {
 						Class184 class184 = Class468_Sub20.method12807(1039135585);
 						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4578, class184.aClass432_2283, 732263274);

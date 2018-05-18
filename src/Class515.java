@@ -7,17 +7,17 @@ import java.awt.Font;
 public class Class515 {
 	Index aClass317_5888;
 	Index aClass317_5889;
-	Class229 aClass229_5890;
-	Class229 aClass229_5891 = new Class229(64);
+	SoftCache aClass229_5890;
+	SoftCache aClass229_5891 = new SoftCache(64);
 	int anInt5892;
 	static Font aFont5893;
 
-	public Class515(Game class486, Class495 class495, Index class317, Index class317_0_) {
-		((Class515) this).aClass229_5890 = new Class229(60);
+	public Class515(Game class486, Language class495, Index class317, Index class317_0_) {
+		((Class515) this).aClass229_5890 = new SoftCache(60);
 		((Class515) this).aClass317_5888 = class317;
 		((Class515) this).aClass317_5889 = class317_0_;
 		int i = ((Class515) this).aClass317_5888.containersCount(-1503644160) - 1;
-		Class120.aClass120_1476.method2078(-397238873);
+		SharedConfigsType.aClass120_1476.method2078(-397238873);
 		((Class515) this).aClass317_5888.filesCount(i, -1544265999);
 	}
 
@@ -30,7 +30,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 1680181373), Class120.aClass120_1476.method2080(i, -1956342306), -2016707377));
+			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 1680181373), SharedConfigsType.aClass120_1476.fileId(i, -1956342306), -2016707377));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -38,7 +38,7 @@ public class Class515 {
 		if (null != is)
 			class525.method11226(new RsByteBuffer(is), 91916290);
 		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3856(class525, (long) i);
+			((Class515) this).aClass229_5891.put(class525, (long) i);
 		}
 		return class525;
 	}
@@ -86,7 +86,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 1920394682), Class120.aClass120_1476.method2080(i, -1985592077), -1473089875));
+			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 1920394682), SharedConfigsType.aClass120_1476.fileId(i, -1985592077), -1473089875));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -94,7 +94,7 @@ public class Class515 {
 		if (null != is)
 			class525.method11226(new RsByteBuffer(is), 1412893995);
 		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3856(class525, (long) i);
+			((Class515) this).aClass229_5891.put(class525, (long) i);
 		}
 		return class525;
 	}
@@ -108,7 +108,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 812185949), Class120.aClass120_1476.method2080(i, -1835326623), -1380117977));
+			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 812185949), SharedConfigsType.aClass120_1476.fileId(i, -1835326623), -1380117977));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -116,7 +116,7 @@ public class Class515 {
 		if (null != is)
 			class525.method11226(new RsByteBuffer(is), 1709092472);
 		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3856(class525, (long) i);
+			((Class515) this).aClass229_5891.put(class525, (long) i);
 		}
 		return class525;
 	}
@@ -130,7 +130,7 @@ public class Class515 {
 			return class525;
 		byte[] is;
 		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(Class120.aClass120_1476.method2079(i, 261335376), Class120.aClass120_1476.method2080(i, -2058400457), -1305945625));
+			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 261335376), SharedConfigsType.aClass120_1476.fileId(i, -2058400457), -1305945625));
 		}
 		class525 = new Class525();
 		((Class525) class525).aClass515_6973 = this;
@@ -138,7 +138,7 @@ public class Class515 {
 		if (null != is)
 			class525.method11226(new RsByteBuffer(is), 1391740058);
 		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3856(class525, (long) i);
+			((Class515) this).aClass229_5891.put(class525, (long) i);
 		}
 		return class525;
 	}

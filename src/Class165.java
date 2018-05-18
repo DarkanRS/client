@@ -20,7 +20,7 @@ public class Class165 {
 	static void method2852(int i) {
 		if (null != Class474.aClass387_5621) {
 			Class328.aClass306_3771 = new Class306();
-			Class328.aClass306_3771.method5422(5158573110282126937L * Class302.aLong3562, ((Class387) Class474.aClass387_5621).aClass433_4711.method7273(Class223.aClass495_2772, -1960746007), ((Class387) Class474.aClass387_5621).anInt4715 * 2033966327, Class474.aClass387_5621, 2034622208);
+			Class328.aClass306_3771.method5422(5158573110282126937L * Class302.aLong3562, ((Class387) Class474.aClass387_5621).aClass433_4711.translate(Class223.aClass495_2772, -1960746007), ((Class387) Class474.aClass387_5621).anInt4715 * 2033966327, Class474.aClass387_5621, 2034622208);
 			Class377.aThread4520 = new Thread(Class328.aClass306_3771, "");
 			Class377.aThread4520.start();
 		}

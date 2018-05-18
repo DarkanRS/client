@@ -67,6 +67,6 @@ public class Class42_Sub1 extends Class42 {
 	static void method14563(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2, short i) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			Class120.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 }

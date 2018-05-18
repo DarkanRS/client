@@ -99,8 +99,8 @@ public class Class182 {
 		int i_5_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_6_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
 		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_5_, 1029070809);
-		if (i_6_ >= 1 && i_6_ <= 5 && null != class425.aStringArray5053[i_6_ - 1])
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class425.aStringArray5053[i_6_ - 1];
+		if (i_6_ >= 1 && i_6_ <= 5 && null != class425.groundOptions[i_6_ - 1])
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class425.groundOptions[i_6_ - 1];
 		else
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 	}

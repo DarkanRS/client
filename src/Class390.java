@@ -175,7 +175,7 @@ public abstract class Class390 {
 		if (i >= Class532_Sub1.anInt7071 * -612590951 && i_141_ <= Class532_Sub1.anInt7069 * -1345107225 && i_142_ >= 324226563 * Class532_Sub1.anInt7070 && i_143_ <= -348932735 * Class532_Sub1.anInt7068)
 			Class198.method3230(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) 89);
 		else
-			Class238.method4034(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) -84);
+			PlayerAppearance.method4034(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) -84);
 	}
 
 	static final void method6732(CS2Executor class527, byte i) {

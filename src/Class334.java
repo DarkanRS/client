@@ -85,7 +85,7 @@ public class Class334 {
 	}
 
 	void method5939(GraphicalRenderer class505, Class334 class334_9_) {
-		RSMesh class157 = RSMesh.method2689(Class282_Sub50_Sub11_Sub1.aClass317_10379, ((Class334) this).anInt3893, 0);
+		RSMesh class157 = RSMesh.decodeMesh(Class282_Sub50_Sub11_Sub1.aClass317_10379, ((Class334) this).anInt3893, 0);
 		if (class157 != null) {
 			class505.qa(anIntArray3884);
 			class505.r(0, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902);
@@ -159,7 +159,7 @@ public class Class334 {
 			if (((Class334) this).anInt3887 == 0) {
 				if (Class247.anInterface22_3046.method139(((Class334) this).anInt3893, -725088114)) {
 					int[] is = (Class247.anInterface22_3046.method141(((Class334) this).anInt3893, 0.7F, ((Class334) this).anInt3902, ((Class334) this).anInt3902, false, 1606527906));
-					((Class334) this).aClass160_3910 = class505.method8549(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, -1804968029);
+					((Class334) this).aClass160_3910 = class505.createNativeSprite(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, -1804968029);
 				}
 			} else if (((Class334) this).anInt3887 == 2)
 				method5939(class505, class334_27_);
@@ -358,8 +358,8 @@ public class Class334 {
 					is[i_70_ + i_72_] = is[i_70_ + i_74_] = is[i_71_ + i_72_] = is[i_71_ + i_74_] = 127 - i_76_ << 24 | 0xffffff;
 				}
 			}
-			aClass160_3912 = class505.method8549(is_67_, 0, 128, 128, 128, -1206625053);
-			aClass160_3895 = class505.method8549(is, 0, 128, 128, 128, 501003044);
+			aClass160_3912 = class505.createNativeSprite(is_67_, 0, 128, 128, 128, -1206625053);
+			aClass160_3895 = class505.createNativeSprite(is, 0, 128, 128, 128, 501003044);
 		}
 	}
 
@@ -576,7 +576,7 @@ public class Class334 {
 			if (((Class334) this).anInt3887 == 0) {
 				if (Class247.anInterface22_3046.method139(((Class334) this).anInt3893, -1283361248)) {
 					int[] is = (Class247.anInterface22_3046.method141(((Class334) this).anInt3893, 0.7F, ((Class334) this).anInt3902, ((Class334) this).anInt3902, false, -21767002));
-					((Class334) this).aClass160_3910 = class505.method8549(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, 422108219);
+					((Class334) this).aClass160_3910 = class505.createNativeSprite(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, 422108219);
 				}
 			} else if (((Class334) this).anInt3887 == 2)
 				method5939(class505, class334_148_);
@@ -749,8 +749,8 @@ public class Class334 {
 					is[i_187_ + i_189_] = is[i_187_ + i_191_] = is[i_188_ + i_189_] = is[i_188_ + i_191_] = 127 - i_193_ << 24 | 0xffffff;
 				}
 			}
-			aClass160_3912 = class505.method8549(is_184_, 0, 128, 128, 128, -755447497);
-			aClass160_3895 = class505.method8549(is, 0, 128, 128, 128, 1431162182);
+			aClass160_3912 = class505.createNativeSprite(is_184_, 0, 128, 128, 128, -755447497);
+			aClass160_3895 = class505.createNativeSprite(is, 0, 128, 128, 128, 1431162182);
 		}
 	}
 
@@ -779,8 +779,8 @@ public class Class334 {
 					is[i_197_ + i_199_] = is[i_197_ + i_201_] = is[i_198_ + i_199_] = is[i_198_ + i_201_] = 127 - i_203_ << 24 | 0xffffff;
 				}
 			}
-			aClass160_3912 = class505.method8549(is_194_, 0, 128, 128, 128, -2000853646);
-			aClass160_3895 = class505.method8549(is, 0, 128, 128, 128, -1474090863);
+			aClass160_3912 = class505.createNativeSprite(is_194_, 0, 128, 128, 128, -2000853646);
+			aClass160_3895 = class505.createNativeSprite(is, 0, 128, 128, 128, -1474090863);
 		}
 	}
 }

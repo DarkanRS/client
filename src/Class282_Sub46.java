@@ -20,7 +20,7 @@ public class Class282_Sub46 extends Node {
 			class505.B(i, i_0_, i_1_, i_2_, -16777216, 0);
 			class505.method8430(i_5_ - 152, i_6_, 304, 34, client.aColorArray7199[client.anInt7447 * 1920182969].getRGB(), 0);
 			class505.B(i_5_ - 150, 2 + i_6_, -24254673 * Class291_Sub1.anInt8015, 30, client.aColorArray7186[1920182969 * client.anInt7447].getRGB(), 0);
-			Class285.aClass8_3394.method360(Class433.aClass433_5274.method7273(Class223.aClass495_2772, -895351629), i_5_, i_4_ + i_6_, client.aColorArray7200[1920182969 * client.anInt7447].getRGB(), -1, 768492991);
+			Class285.aClass8_3394.method360(Message.aClass433_5274.translate(Class223.aClass495_2772, -895351629), i_5_, i_4_ + i_6_, client.aColorArray7200[1920182969 * client.anInt7447].getRGB(), -1, 768492991);
 		} else {
 			int i_7_ = (-861975801 * Class427.anInt5123 - (int) ((float) i_1_ / Class291_Sub1.aFloat3468));
 			int i_8_ = ((int) ((float) i_2_ / Class291_Sub1.aFloat3468) + Class475.anInt5624 * 483850921);

@@ -2,83 +2,83 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class238 {
+public class PlayerAppearance {
 	static int[] anIntArray2917 = { 8, 11, 4, 6, 9, 7, 10, 0 };
 	public static final int anInt2918 = 1073741824;
 	public static final int anInt2919 = -2147483648;
-	static Class229 aClass229_2920 = new Class229(260);
+	static SoftCache aClass229_2920 = new SoftCache(260);
 	int[] anIntArray2921;
 	MeshModifier[] aClass422Array2922;
-	public int[] anIntArray2923;
+	public int[] colors;
 	static final int anInt2924 = 1073741823;
 	int anInt2925;
 	long aLong2926;
 	long aLong2927;
 	public int anInt2928 = -232890067;
 	public boolean aBool2929;
-	static Class229 aClass229_2930 = new Class229(5);
+	static SoftCache aClass229_2930 = new SoftCache(5);
 
 	void method3991(byte i) {
 		long[] ls = RsByteBuffer.aLongArray7979;
-		((Class238) this).aLong2926 = 9195927454341211745L;
-		((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((Class238) this).aLong2926 * -6800555520516554145L ^ (long) (((Class238) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
-		((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anInt2925 * -1483086815)) & 0xffL)]));
-		for (int i_0_ = 0; i_0_ < ((Class238) this).anIntArray2921.length; i_0_++) {
-			((Class238) this).aLong2926 = (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i_0_] >> 24)) & 0xffL)])) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i_0_] >> 16)) & 0xffL)])) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) ((((Class238) this).anIntArray2921[i_0_]) >> 8)) & 0xffL)]));
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((Class238) this).anIntArray2921[i_0_]) & 0xffL)])) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = 9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815)) & 0xffL)]));
+		for (int i_0_ = 0; i_0_ < ((PlayerAppearance) this).anIntArray2921.length; i_0_++) {
+			((PlayerAppearance) this).aLong2926 = (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i_0_] >> 24)) & 0xffL)])) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i_0_] >> 16)) & 0xffL)])) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) ((((PlayerAppearance) this).anIntArray2921[i_0_]) >> 8)) & 0xffL)]));
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((PlayerAppearance) this).anIntArray2921[i_0_]) & 0xffL)])) * -9195927454341211745L;
 		}
-		if (null != ((Class238) this).aClass422Array2922) {
-			for (int i_1_ = 0; i_1_ < ((Class238) this).aClass422Array2922.length; i_1_++) {
-				if (((Class238) this).aClass422Array2922[i_1_] != null) {
+		if (null != ((PlayerAppearance) this).aClass422Array2922) {
+			for (int i_1_ = 0; i_1_ < ((PlayerAppearance) this).aClass422Array2922.length; i_1_++) {
+				if (((PlayerAppearance) this).aClass422Array2922[i_1_] != null) {
 					int[] is;
 					int[] is_2_;
 					if (aBool2929) {
-						is = (((Class238) this).aClass422Array2922[i_1_].femaleBody);
-						is_2_ = (((Class238) this).aClass422Array2922[i_1_].femaleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i_1_].femaleBody);
+						is_2_ = (((PlayerAppearance) this).aClass422Array2922[i_1_].femaleHeads);
 					} else {
-						is = (((Class238) this).aClass422Array2922[i_1_].maleBody);
-						is_2_ = (((Class238) this).aClass422Array2922[i_1_].maleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i_1_].maleBody);
+						is_2_ = (((PlayerAppearance) this).aClass422Array2922[i_1_].maleHeads);
 					}
 					if (is != null) {
 						for (int i_3_ = 0; i_3_ < is.length; i_3_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_3_] >> 8)) & 0xffL)]));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_3_]) & 0xffL)]) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_3_] >> 8)) & 0xffL)]));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_3_]) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 					if (is_2_ != null) {
 						for (int i_4_ = 0; i_4_ < is_2_.length; i_4_++) {
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (is_2_[i_4_] >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) is_2_[i_4_]) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (is_2_[i_4_] >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) is_2_[i_4_]) & 0xffL)])) * -9195927454341211745L);
 						}
 					}
-					if (null != (((Class238) this).aClass422Array2922[i_1_].modifiedColors)) {
-						for (int i_5_ = 0; i_5_ < (((Class238) this).aClass422Array2922[i_1_].modifiedColors).length; i_5_++) {
-							((Class238) this).aLong2926 = (((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) ((((Class238) this).aClass422Array2922[i_1_].modifiedColors[i_5_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i_1_].modifiedColors[i_5_])) & 0xffL)]) * -9195927454341211745L);
+					if (null != (((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedColors)) {
+						for (int i_5_ = 0; i_5_ < (((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedColors).length; i_5_++) {
+							((PlayerAppearance) this).aLong2926 = (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedColors[i_5_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedColors[i_5_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
-					if ((((Class238) this).aClass422Array2922[i_1_].modifiedTextures) != null) {
-						for (int i_6_ = 0; i_6_ < (((Class238) this).aClass422Array2922[i_1_].modifiedTextures).length; i_6_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((((Class238) this).aClass422Array2922[i_1_].modifiedTextures[i_6_]) >> 8)) & 0xffL)])));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i_1_].modifiedTextures[i_6_])) & 0xffL)]) * -9195927454341211745L);
+					if ((((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedTextures) != null) {
+						for (int i_6_ = 0; i_6_ < (((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedTextures).length; i_6_++) {
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedTextures[i_6_]) >> 8)) & 0xffL)])));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i_1_].modifiedTextures[i_6_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 				}
 			}
 		}
 		for (int i_7_ = 0; i_7_ < 10; i_7_++)
-			((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) anIntArray2923[i_7_]) & 0xffL)]));
-		((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) colors[i_7_]) & 0xffL)]));
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
 	}
 
 	public void method3992(int i, int[] is, MeshModifier[] class422s, int[] is_8_, boolean bool, int i_9_, int i_10_) {
-		if (-1483086815 * ((Class238) this).anInt2925 != i)
-			((Class238) this).anInt2925 = i * 995008481;
-		((Class238) this).anIntArray2921 = is;
-		((Class238) this).aClass422Array2922 = class422s;
-		anIntArray2923 = is_8_;
+		if (-1483086815 * ((PlayerAppearance) this).anInt2925 != i)
+			((PlayerAppearance) this).anInt2925 = i * 995008481;
+		((PlayerAppearance) this).anIntArray2921 = is;
+		((PlayerAppearance) this).aClass422Array2922 = class422s;
+		colors = is_8_;
 		aBool2929 = bool;
 		anInt2928 = 232890067 * i_9_;
 		method3991((byte) 3);
@@ -87,71 +87,71 @@ public class Class238 {
 	public void method3993(int i, int i_11_, Class31 class31, int i_12_) {
 		int i_13_ = anIntArray2917[i];
 		if (class31.method800(i_11_, 1435454406) != null) {
-			((Class238) this).anIntArray2921[i_13_] = i_11_ | ~0x7fffffff;
+			((PlayerAppearance) this).anIntArray2921[i_13_] = i_11_ | ~0x7fffffff;
 			method3991((byte) 3);
 		}
 	}
 
 	void method3994() {
 		long[] ls = RsByteBuffer.aLongArray7979;
-		((Class238) this).aLong2926 = 9195927454341211745L;
-		((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((Class238) this).aLong2926 * -6800555520516554145L ^ (long) (((Class238) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
-		((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anInt2925 * -1483086815)) & 0xffL)]));
-		for (int i = 0; i < ((Class238) this).anIntArray2921.length; i++) {
-			((Class238) this).aLong2926 = (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i] >> 24)) & 0xffL)]) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i] >> 16)) & 0xffL)]) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (((Class238) this).anIntArray2921[i] >> 8)) & 0xffL)])));
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((Class238) this).anIntArray2921[i]) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = 9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815)) & 0xffL)]));
+		for (int i = 0; i < ((PlayerAppearance) this).anIntArray2921.length; i++) {
+			((PlayerAppearance) this).aLong2926 = (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 24)) & 0xffL)]) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 16)) & 0xffL)]) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 8)) & 0xffL)])));
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((PlayerAppearance) this).anIntArray2921[i]) & 0xffL)]) * -9195927454341211745L;
 		}
-		if (null != ((Class238) this).aClass422Array2922) {
-			for (int i = 0; i < ((Class238) this).aClass422Array2922.length; i++) {
-				if (((Class238) this).aClass422Array2922[i] != null) {
+		if (null != ((PlayerAppearance) this).aClass422Array2922) {
+			for (int i = 0; i < ((PlayerAppearance) this).aClass422Array2922.length; i++) {
+				if (((PlayerAppearance) this).aClass422Array2922[i] != null) {
 					int[] is;
 					int[] is_14_;
 					if (aBool2929) {
-						is = (((Class238) this).aClass422Array2922[i].femaleBody);
-						is_14_ = (((Class238) this).aClass422Array2922[i].femaleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i].femaleBody);
+						is_14_ = (((PlayerAppearance) this).aClass422Array2922[i].femaleHeads);
 					} else {
-						is = (((Class238) this).aClass422Array2922[i].maleBody);
-						is_14_ = (((Class238) this).aClass422Array2922[i].maleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i].maleBody);
+						is_14_ = (((PlayerAppearance) this).aClass422Array2922[i].maleHeads);
 					}
 					if (is != null) {
 						for (int i_15_ = 0; i_15_ < is.length; i_15_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_15_] >> 8)) & 0xffL)]));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_15_]) & 0xffL)]) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_15_] >> 8)) & 0xffL)]));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_15_]) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 					if (is_14_ != null) {
 						for (int i_16_ = 0; i_16_ < is_14_.length; i_16_++) {
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (is_14_[i_16_] >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) is_14_[i_16_]) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (is_14_[i_16_] >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) is_14_[i_16_]) & 0xffL)])) * -9195927454341211745L);
 						}
 					}
-					if (null != (((Class238) this).aClass422Array2922[i].modifiedColors)) {
-						for (int i_17_ = 0; i_17_ < (((Class238) this).aClass422Array2922[i].modifiedColors).length; i_17_++) {
-							((Class238) this).aLong2926 = (((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) ((((Class238) this).aClass422Array2922[i].modifiedColors[i_17_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i].modifiedColors[i_17_])) & 0xffL)]) * -9195927454341211745L);
+					if (null != (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors)) {
+						for (int i_17_ = 0; i_17_ < (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors).length; i_17_++) {
+							((PlayerAppearance) this).aLong2926 = (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i].modifiedColors[i_17_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors[i_17_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
-					if (((Class238) this).aClass422Array2922[i].modifiedTextures != null) {
-						for (int i_18_ = 0; i_18_ < (((Class238) this).aClass422Array2922[i].modifiedTextures).length; i_18_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((((Class238) this).aClass422Array2922[i].modifiedTextures[i_18_]) >> 8)) & 0xffL)])));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i].modifiedTextures[i_18_])) & 0xffL)]) * -9195927454341211745L);
+					if (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures != null) {
+						for (int i_18_ = 0; i_18_ < (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures).length; i_18_++) {
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures[i_18_]) >> 8)) & 0xffL)])));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures[i_18_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 				}
 			}
 		}
 		for (int i = 0; i < 10; i++)
-			((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) anIntArray2923[i]) & 0xffL)]));
-		((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) colors[i]) & 0xffL)]));
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
 	}
 
-	public void method3995(int i, int i_19_, Class426 class426, byte i_20_) {
+	public void method3995(int i, int i_19_, ItemIndexLoader class426, byte i_20_) {
 		if (i_19_ == -1)
-			((Class238) this).anIntArray2921[i] = 0;
+			((PlayerAppearance) this).anIntArray2921[i] = 0;
 		else if (class426.getItemDefinitions(i_19_, 115625832) != null) {
-			((Class238) this).anIntArray2921[i] = i_19_ | 0x40000000;
+			((PlayerAppearance) this).anIntArray2921[i] = i_19_ | 0x40000000;
 			method3991((byte) 3);
 		}
 	}
@@ -183,14 +183,14 @@ public class Class238 {
 				i_25_ |= 0x4000;
 				class528 = class505.createMeshRasterizer(class157, i_25_, Class149.anInt1744 * -127031115, 64, 768);
 				for (int i_27_ = 0; i_27_ < 10; i_27_++) {
-					for (int i_28_ = 0; i_28_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_27_]).length; i_28_++) {
-						if (anIntArray2923[i_27_] < (Class366.aShortArrayArrayArray4232[i_27_][i_28_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_27_][i_28_]), (Class366.aShortArrayArrayArray4232[i_27_][i_28_][anIntArray2923[i_27_]]));
+					for (int i_28_ = 0; i_28_ < (AbstractQueue_Sub1.SKIN_COLORS[i_27_]).length; i_28_++) {
+						if (colors[i_27_] < (Class366.SKIN_COLORS[i_27_][i_28_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_27_][i_28_]), (Class366.SKIN_COLORS[i_27_][i_28_][colors[i_27_]]));
 					}
 				}
 				class528.KA(i_24_);
 				synchronized (aClass229_2930) {
-					aClass229_2930.method3856(class528, l);
+					aClass229_2930.put(class528, l);
 				}
 			} else
 				return null;
@@ -202,25 +202,25 @@ public class Class238 {
 		return class528;
 	}
 
-	public MeshRasterizer method3997(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method3997(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) 100).method6880(class505, i, interface42, class456, null, 1737411260));
 		int i_29_ = null != class456 ? i | class456.method7640(-1639744740) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((Class238) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_29_) != 0) {
 			if (class528 != null)
 				i_29_ = class505.method8546(i_29_, class528.m());
 			int i_30_ = i_29_;
 			boolean bool = false;
-			for (int i_31_ = 0; i_31_ < ((Class238) this).anIntArray2921.length; i_31_++) {
-				int i_32_ = ((Class238) this).anIntArray2921[i_31_];
+			for (int i_31_ = 0; i_31_ < ((PlayerAppearance) this).anIntArray2921.length; i_31_++) {
+				int i_32_ = ((PlayerAppearance) this).anIntArray2921[i_31_];
 				MeshModifier class422 = null;
 				if (0 != (i_32_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && null != ((Class238) this).aClass422Array2922[i_31_])
-						class422 = ((Class238) this).aClass422Array2922[i_31_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && null != ((PlayerAppearance) this).aClass422Array2922[i_31_])
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_31_];
 					if (!class426.getItemDefinitions(i_32_ & 0x3fffffff, 1739128278).method7098(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_32_ & ~0x7fffffff) != 0 && !class31.method800(i_32_ & 0x3fffffff, 1687930397).method900(36053))
@@ -228,14 +228,14 @@ public class Class238 {
 			}
 			if (bool)
 				return null;
-			RSMesh[] class157s = new RSMesh[((Class238) this).anIntArray2921.length];
+			RSMesh[] class157s = new RSMesh[((PlayerAppearance) this).anIntArray2921.length];
 			int i_33_ = 0;
-			for (int i_34_ = 0; i_34_ < ((Class238) this).anIntArray2921.length; i_34_++) {
-				int i_35_ = ((Class238) this).anIntArray2921[i_34_];
+			for (int i_34_ = 0; i_34_ < ((PlayerAppearance) this).anIntArray2921.length; i_34_++) {
+				int i_35_ = ((PlayerAppearance) this).anIntArray2921[i_34_];
 				MeshModifier class422 = null;
 				if (0 != (i_35_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && ((Class238) this).aClass422Array2922[i_34_] != null)
-						class422 = ((Class238) this).aClass422Array2922[i_34_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && ((PlayerAppearance) this).aClass422Array2922[i_34_] != null)
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_34_];
 					RSMesh class157 = class426.getItemDefinitions(i_35_ & 0x3fffffff, 1215609914).method7130(aBool2929, class422, -1646472294);
 					if (null != class157)
 						class157s[i_33_++] = class157;
@@ -249,14 +249,14 @@ public class Class238 {
 			i_30_ |= 0x4000;
 			class528 = class505.createMeshRasterizer(class157, i_30_, -127031115 * Class149.anInt1744, 64, 768);
 			for (int i_36_ = 0; i_36_ < 10; i_36_++) {
-				for (int i_37_ = 0; i_37_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_36_]).length; i_37_++) {
-					if (anIntArray2923[i_36_] < (Class366.aShortArrayArrayArray4232[i_36_][i_37_]).length)
-						class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_36_][i_37_]), (Class366.aShortArrayArrayArray4232[i_36_][i_37_][anIntArray2923[i_36_]]));
+				for (int i_37_ = 0; i_37_ < (AbstractQueue_Sub1.SKIN_COLORS[i_36_]).length; i_37_++) {
+					if (colors[i_36_] < (Class366.SKIN_COLORS[i_36_][i_37_]).length)
+						class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_36_][i_37_]), (Class366.SKIN_COLORS[i_36_][i_37_][colors[i_36_]]));
 				}
 			}
 			class528.KA(i_29_);
 			synchronized (aClass229_2930) {
-				aClass229_2930.method3856(class528, (((Class238) this).aLong2926 * -6800555520516554145L));
+				aClass229_2930.put(class528, (((PlayerAppearance) this).aLong2926 * -6800555520516554145L));
 			}
 		}
 		if (class456 == null)
@@ -266,20 +266,20 @@ public class Class238 {
 		return class528_38_;
 	}
 
-	public MeshRasterizer method3998(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_39_, Class456[] class456s, int[] is, int i_40_, boolean bool, Class526 class526, short i_41_) {
+	public MeshRasterizer method3998(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_39_, Class456[] class456s, int[] is, int i_40_, boolean bool, Class526 class526, short i_41_) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) -32).method6875(class505, i, class211, interface42, class456, class456_39_, class456s, is, i_40_, null, 2039422694));
 		int i_42_ = i;
-		long l = -6800555520516554145L * ((Class238) this).aLong2926;
-		int[] is_43_ = ((Class238) this).anIntArray2921;
+		long l = -6800555520516554145L * ((PlayerAppearance) this).aLong2926;
+		int[] is_43_ = ((PlayerAppearance) this).anIntArray2921;
 		boolean bool_44_ = false;
 		boolean bool_45_ = false;
 		if (null != class456) {
 			AnimationDefinitions class518 = class456.method7565(-1632742162);
 			if (class518 != null && (class518.anInt5917 * -516792901 >= 0 || class518.anInt5918 * -1325291837 >= 0)) {
-				is_43_ = new int[((Class238) this).anIntArray2921.length];
+				is_43_ = new int[((PlayerAppearance) this).anIntArray2921.length];
 				for (int i_46_ = 0; i_46_ < is_43_.length; i_46_++)
-					is_43_[i_46_] = ((Class238) this).anIntArray2921[i_46_];
+					is_43_[i_46_] = ((PlayerAppearance) this).anIntArray2921[i_46_];
 				if (-516792901 * class518.anInt5917 >= 0 && -1 != -333243893 * class526.anInt6990) {
 					bool_44_ = true;
 					if (65535 == class518.anInt5917 * -516792901) {
@@ -340,8 +340,8 @@ public class Class238 {
 			class528 = (MeshRasterizer) aClass229_2920.method3865(l);
 		}
 		Class227 class227 = null;
-		if (-1 != -1483086815 * ((Class238) this).anInt2925)
-			class227 = class211.method3616((((Class238) this).anInt2925 * -1483086815), (byte) 62);
+		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
+			class227 = class211.method3616((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) 62);
 		if (null == class528 || class505.method8452(class528.m(), i_42_) != 0) {
 			if (class528 != null)
 				i_42_ = class505.method8546(i_42_, class528.m());
@@ -376,17 +376,17 @@ public class Class238 {
 					}
 				}
 				if ((i_59_ & 0x40000000) != 0) {
-					if (!bool_60_ && ((Class238) this).aClass422Array2922 != null && ((Class238) this).aClass422Array2922[i_58_] != null)
-						class422 = ((Class238) this).aClass422Array2922[i_58_];
+					if (!bool_60_ && ((PlayerAppearance) this).aClass422Array2922 != null && ((PlayerAppearance) this).aClass422Array2922[i_58_] != null)
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_58_];
 					if (!class426.getItemDefinitions(i_59_ & 0x3fffffff, 865631179).method7096(aBool2929, class422, -1830991961))
 						bool_57_ = true;
 				} else if (0 != (i_59_ & ~0x7fffffff) && !class31.method800(i_59_ & 0x3fffffff, 1122652918).method898(-965716691))
 					bool_57_ = true;
 			}
 			if (bool_57_) {
-				if (-2249810898304743821L * ((Class238) this).aLong2927 != -1L) {
+				if (-2249810898304743821L * ((PlayerAppearance) this).aLong2927 != -1L) {
 					synchronized (aClass229_2920) {
-						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((Class238) this).aLong2927)));
+						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
 					}
 				}
 				if (class528 == null || class505.method8452(class528.m(), i_42_) != 0)
@@ -398,8 +398,8 @@ public class Class238 {
 					MeshModifier class422 = null;
 					boolean bool_65_ = 5 == i_63_ && bool_44_ || i_63_ == 3 && bool_45_;
 					if (0 != (i_64_ & 0x40000000)) {
-						if (!bool_65_ && ((Class238) this).aClass422Array2922 != null && null != (((Class238) this).aClass422Array2922[i_63_]))
-							class422 = ((Class238) this).aClass422Array2922[i_63_];
+						if (!bool_65_ && ((PlayerAppearance) this).aClass422Array2922 != null && null != (((PlayerAppearance) this).aClass422Array2922[i_63_]))
+							class422 = ((PlayerAppearance) this).aClass422Array2922[i_63_];
 						RSMesh class157 = class426.getItemDefinitions(i_64_ & 0x3fffffff, 489246789).method7097(aBool2929, class422, 710746900);
 						if (null != class157)
 							class157s[i_63_] = class157;
@@ -437,17 +437,17 @@ public class Class238 {
 				i_56_ |= 0x4000;
 				class528 = class505.createMeshRasterizer(class157, i_56_, Class149.anInt1744 * -127031115, 64, 850);
 				for (int i_73_ = 0; i_73_ < 10; i_73_++) {
-					for (int i_74_ = 0; i_74_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_73_]).length; i_74_++) {
-						if (anIntArray2923[i_73_] < (Class366.aShortArrayArrayArray4232[i_73_][i_74_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_73_][i_74_]), (Class366.aShortArrayArrayArray4232[i_73_][i_74_][anIntArray2923[i_73_]]));
+					for (int i_74_ = 0; i_74_ < (AbstractQueue_Sub1.SKIN_COLORS[i_73_]).length; i_74_++) {
+						if (colors[i_73_] < (Class366.SKIN_COLORS[i_73_][i_74_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_73_][i_74_]), (Class366.SKIN_COLORS[i_73_][i_74_][colors[i_73_]]));
 					}
 				}
 				if (bool) {
 					class528.KA(i_42_);
 					synchronized (aClass229_2920) {
-						aClass229_2920.method3856(class528, l);
+						aClass229_2920.put(class528, l);
 					}
-					((Class238) this).aLong2927 = l * -6835014681310605637L;
+					((PlayerAppearance) this).aLong2927 = l * -6835014681310605637L;
 				}
 			}
 		}
@@ -524,14 +524,14 @@ public class Class238 {
 				i_84_ |= 0x4000;
 				class528 = class505.createMeshRasterizer(class157, i_84_, Class149.anInt1744 * -127031115, 64, 768);
 				for (int i_86_ = 0; i_86_ < 10; i_86_++) {
-					for (int i_87_ = 0; i_87_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_86_]).length; i_87_++) {
-						if (anIntArray2923[i_86_] < (Class366.aShortArrayArrayArray4232[i_86_][i_87_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_86_][i_87_]), (Class366.aShortArrayArrayArray4232[i_86_][i_87_][anIntArray2923[i_86_]]));
+					for (int i_87_ = 0; i_87_ < (AbstractQueue_Sub1.SKIN_COLORS[i_86_]).length; i_87_++) {
+						if (colors[i_86_] < (Class366.SKIN_COLORS[i_86_][i_87_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_86_][i_87_]), (Class366.SKIN_COLORS[i_86_][i_87_][colors[i_86_]]));
 					}
 				}
 				class528.KA(i_83_);
 				synchronized (aClass229_2930) {
-					aClass229_2930.method3856(class528, l);
+					aClass229_2930.put(class528, l);
 				}
 			} else
 				return null;
@@ -544,11 +544,11 @@ public class Class238 {
 	}
 
 	public void method4000(int i, int[] is, MeshModifier[] class422s, int[] is_88_, boolean bool, int i_89_) {
-		if (-1483086815 * ((Class238) this).anInt2925 != i)
-			((Class238) this).anInt2925 = i * 995008481;
-		((Class238) this).anIntArray2921 = is;
-		((Class238) this).aClass422Array2922 = class422s;
-		anIntArray2923 = is_88_;
+		if (-1483086815 * ((PlayerAppearance) this).anInt2925 != i)
+			((PlayerAppearance) this).anInt2925 = i * 995008481;
+		((PlayerAppearance) this).anIntArray2921 = is;
+		((PlayerAppearance) this).aClass422Array2922 = class422s;
+		colors = is_88_;
 		aBool2929 = bool;
 		anInt2928 = 232890067 * i_89_;
 		method3991((byte) 3);
@@ -562,11 +562,11 @@ public class Class238 {
 	}
 
 	public void method4002(int i, int[] is, MeshModifier[] class422s, int[] is_90_, boolean bool, int i_91_) {
-		if (-1483086815 * ((Class238) this).anInt2925 != i)
-			((Class238) this).anInt2925 = i * 995008481;
-		((Class238) this).anIntArray2921 = is;
-		((Class238) this).aClass422Array2922 = class422s;
-		anIntArray2923 = is_90_;
+		if (-1483086815 * ((PlayerAppearance) this).anInt2925 != i)
+			((PlayerAppearance) this).anInt2925 = i * 995008481;
+		((PlayerAppearance) this).anIntArray2921 = is;
+		((PlayerAppearance) this).aClass422Array2922 = class422s;
+		colors = is_90_;
 		aBool2929 = bool;
 		anInt2928 = 232890067 * i_91_;
 		method3991((byte) 3);
@@ -580,7 +580,7 @@ public class Class238 {
 	public void method4004(int i, int i_92_, Class31 class31) {
 		int i_93_ = anIntArray2917[i];
 		if (class31.method800(i_92_, 674551392) != null) {
-			((Class238) this).anIntArray2921[i_93_] = i_92_ | ~0x7fffffff;
+			((PlayerAppearance) this).anIntArray2921[i_93_] = i_92_ | ~0x7fffffff;
 			method3991((byte) 3);
 		}
 	}
@@ -588,40 +588,40 @@ public class Class238 {
 	public void method4005(int i, int i_94_, Class31 class31) {
 		int i_95_ = anIntArray2917[i];
 		if (class31.method800(i_94_, 9964818) != null) {
-			((Class238) this).anIntArray2921[i_95_] = i_94_ | ~0x7fffffff;
+			((PlayerAppearance) this).anIntArray2921[i_95_] = i_94_ | ~0x7fffffff;
 			method3991((byte) 3);
 		}
 	}
 
 	public void method4006(int i, int i_96_) {
-		anIntArray2923[i] = i_96_;
+		colors[i] = i_96_;
 		method3991((byte) 3);
 	}
 
 	public void method4007(int i, int i_97_) {
-		anIntArray2923[i] = i_97_;
+		colors[i] = i_97_;
 		method3991((byte) 3);
 	}
 
-	public MeshRasterizer method4008(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method4008(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) 42).method6880(class505, i, interface42, class456, null, 1842006915));
 		int i_98_ = null != class456 ? i | class456.method7640(-1637762744) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((Class238) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_98_) != 0) {
 			if (class528 != null)
 				i_98_ = class505.method8546(i_98_, class528.m());
 			int i_99_ = i_98_;
 			boolean bool = false;
-			for (int i_100_ = 0; i_100_ < ((Class238) this).anIntArray2921.length; i_100_++) {
-				int i_101_ = ((Class238) this).anIntArray2921[i_100_];
+			for (int i_100_ = 0; i_100_ < ((PlayerAppearance) this).anIntArray2921.length; i_100_++) {
+				int i_101_ = ((PlayerAppearance) this).anIntArray2921[i_100_];
 				MeshModifier class422 = null;
 				if (0 != (i_101_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && (null != ((Class238) this).aClass422Array2922[i_100_]))
-						class422 = ((Class238) this).aClass422Array2922[i_100_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && (null != ((PlayerAppearance) this).aClass422Array2922[i_100_]))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_100_];
 					if (!class426.getItemDefinitions(i_101_ & 0x3fffffff, 1561532574).method7098(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_101_ & ~0x7fffffff) != 0 && !class31.method800(i_101_ & 0x3fffffff, -175439170).method900(36053))
@@ -629,14 +629,14 @@ public class Class238 {
 			}
 			if (bool)
 				return null;
-			RSMesh[] class157s = new RSMesh[((Class238) this).anIntArray2921.length];
+			RSMesh[] class157s = new RSMesh[((PlayerAppearance) this).anIntArray2921.length];
 			int i_102_ = 0;
-			for (int i_103_ = 0; i_103_ < ((Class238) this).anIntArray2921.length; i_103_++) {
-				int i_104_ = ((Class238) this).anIntArray2921[i_103_];
+			for (int i_103_ = 0; i_103_ < ((PlayerAppearance) this).anIntArray2921.length; i_103_++) {
+				int i_104_ = ((PlayerAppearance) this).anIntArray2921[i_103_];
 				MeshModifier class422 = null;
 				if (0 != (i_104_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && (((Class238) this).aClass422Array2922[i_103_] != null))
-						class422 = ((Class238) this).aClass422Array2922[i_103_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && (((PlayerAppearance) this).aClass422Array2922[i_103_] != null))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_103_];
 					RSMesh class157 = class426.getItemDefinitions(i_104_ & 0x3fffffff, 1998841702).method7130(aBool2929, class422, -1198252688);
 					if (null != class157)
 						class157s[i_102_++] = class157;
@@ -650,14 +650,14 @@ public class Class238 {
 			i_99_ |= 0x4000;
 			class528 = class505.createMeshRasterizer(class157, i_99_, -127031115 * Class149.anInt1744, 64, 768);
 			for (int i_105_ = 0; i_105_ < 10; i_105_++) {
-				for (int i_106_ = 0; i_106_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_105_]).length; i_106_++) {
-					if (anIntArray2923[i_105_] < (Class366.aShortArrayArrayArray4232[i_105_][i_106_]).length)
-						class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_105_][i_106_]), (Class366.aShortArrayArrayArray4232[i_105_][i_106_][anIntArray2923[i_105_]]));
+				for (int i_106_ = 0; i_106_ < (AbstractQueue_Sub1.SKIN_COLORS[i_105_]).length; i_106_++) {
+					if (colors[i_105_] < (Class366.SKIN_COLORS[i_105_][i_106_]).length)
+						class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_105_][i_106_]), (Class366.SKIN_COLORS[i_105_][i_106_][colors[i_105_]]));
 				}
 			}
 			class528.KA(i_98_);
 			synchronized (aClass229_2930) {
-				aClass229_2930.method3856(class528, (((Class238) this).aLong2926 * -6800555520516554145L));
+				aClass229_2930.put(class528, (((PlayerAppearance) this).aLong2926 * -6800555520516554145L));
 			}
 		}
 		if (class456 == null)
@@ -677,77 +677,77 @@ public class Class238 {
 		method3991((byte) 3);
 	}
 
-	public void method4011(int i, int i_108_, Class426 class426) {
+	public void method4011(int i, int i_108_, ItemIndexLoader class426) {
 		if (i_108_ == -1)
-			((Class238) this).anIntArray2921[i] = 0;
+			((PlayerAppearance) this).anIntArray2921[i] = 0;
 		else if (class426.getItemDefinitions(i_108_, 77617223) != null) {
-			((Class238) this).anIntArray2921[i] = i_108_ | 0x40000000;
+			((PlayerAppearance) this).anIntArray2921[i] = i_108_ | 0x40000000;
 			method3991((byte) 3);
 		}
 	}
 
-	public void method4012(int i, int i_109_, Class426 class426) {
+	public void method4012(int i, int i_109_, ItemIndexLoader class426) {
 		if (i_109_ == -1)
-			((Class238) this).anIntArray2921[i] = 0;
+			((PlayerAppearance) this).anIntArray2921[i] = 0;
 		else if (class426.getItemDefinitions(i_109_, 690199612) != null) {
-			((Class238) this).anIntArray2921[i] = i_109_ | 0x40000000;
+			((PlayerAppearance) this).anIntArray2921[i] = i_109_ | 0x40000000;
 			method3991((byte) 3);
 		}
 	}
 
 	void method4013() {
 		long[] ls = RsByteBuffer.aLongArray7979;
-		((Class238) this).aLong2926 = 9195927454341211745L;
-		((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((Class238) this).aLong2926 * -6800555520516554145L ^ (long) (((Class238) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
-		((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anInt2925 * -1483086815)) & 0xffL)]));
-		for (int i = 0; i < ((Class238) this).anIntArray2921.length; i++) {
-			((Class238) this).aLong2926 = (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i] >> 24)) & 0xffL)]) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i] >> 16)) & 0xffL)]) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (((Class238) this).anIntArray2921[i] >> 8)) & 0xffL)])));
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((Class238) this).anIntArray2921[i]) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = 9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815)) & 0xffL)]));
+		for (int i = 0; i < ((PlayerAppearance) this).anIntArray2921.length; i++) {
+			((PlayerAppearance) this).aLong2926 = (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 24)) & 0xffL)]) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 16)) & 0xffL)]) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 8)) & 0xffL)])));
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((PlayerAppearance) this).anIntArray2921[i]) & 0xffL)]) * -9195927454341211745L;
 		}
-		if (null != ((Class238) this).aClass422Array2922) {
-			for (int i = 0; i < ((Class238) this).aClass422Array2922.length; i++) {
-				if (((Class238) this).aClass422Array2922[i] != null) {
+		if (null != ((PlayerAppearance) this).aClass422Array2922) {
+			for (int i = 0; i < ((PlayerAppearance) this).aClass422Array2922.length; i++) {
+				if (((PlayerAppearance) this).aClass422Array2922[i] != null) {
 					int[] is;
 					int[] is_110_;
 					if (aBool2929) {
-						is = (((Class238) this).aClass422Array2922[i].femaleBody);
-						is_110_ = (((Class238) this).aClass422Array2922[i].femaleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i].femaleBody);
+						is_110_ = (((PlayerAppearance) this).aClass422Array2922[i].femaleHeads);
 					} else {
-						is = (((Class238) this).aClass422Array2922[i].maleBody);
-						is_110_ = (((Class238) this).aClass422Array2922[i].maleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i].maleBody);
+						is_110_ = (((PlayerAppearance) this).aClass422Array2922[i].maleHeads);
 					}
 					if (is != null) {
 						for (int i_111_ = 0; i_111_ < is.length; i_111_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_111_] >> 8)) & 0xffL)]));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_111_]) & 0xffL)]) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_111_] >> 8)) & 0xffL)]));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_111_]) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 					if (is_110_ != null) {
 						for (int i_112_ = 0; i_112_ < is_110_.length; i_112_++) {
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (is_110_[i_112_] >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) is_110_[i_112_]) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (is_110_[i_112_] >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) is_110_[i_112_]) & 0xffL)])) * -9195927454341211745L);
 						}
 					}
-					if (null != (((Class238) this).aClass422Array2922[i].modifiedColors)) {
-						for (int i_113_ = 0; i_113_ < (((Class238) this).aClass422Array2922[i].modifiedColors).length; i_113_++) {
-							((Class238) this).aLong2926 = (((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) ((((Class238) this).aClass422Array2922[i].modifiedColors[i_113_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i].modifiedColors[i_113_])) & 0xffL)]) * -9195927454341211745L);
+					if (null != (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors)) {
+						for (int i_113_ = 0; i_113_ < (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors).length; i_113_++) {
+							((PlayerAppearance) this).aLong2926 = (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i].modifiedColors[i_113_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors[i_113_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
-					if (((Class238) this).aClass422Array2922[i].modifiedTextures != null) {
-						for (int i_114_ = 0; i_114_ < (((Class238) this).aClass422Array2922[i].modifiedTextures).length; i_114_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((((Class238) this).aClass422Array2922[i].modifiedTextures[i_114_]) >> 8)) & 0xffL)])));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i].modifiedTextures[i_114_])) & 0xffL)]) * -9195927454341211745L);
+					if (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures != null) {
+						for (int i_114_ = 0; i_114_ < (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures).length; i_114_++) {
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures[i_114_]) >> 8)) & 0xffL)])));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures[i_114_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 				}
 			}
 		}
 		for (int i = 0; i < 10; i++)
-			((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) anIntArray2923[i]) & 0xffL)]));
-		((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) colors[i]) & 0xffL)]));
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
 	}
 
 	public static void method4014() {
@@ -761,73 +761,73 @@ public class Class238 {
 
 	void method4015() {
 		long[] ls = RsByteBuffer.aLongArray7979;
-		((Class238) this).aLong2926 = 9195927454341211745L;
-		((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((Class238) this).aLong2926 * -6800555520516554145L ^ (long) (((Class238) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
-		((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anInt2925 * -1483086815)) & 0xffL)]));
-		for (int i = 0; i < ((Class238) this).anIntArray2921.length; i++) {
-			((Class238) this).aLong2926 = (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i] >> 24)) & 0xffL)]) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).anIntArray2921[i] >> 16)) & 0xffL)]) * -9195927454341211745L;
-			((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (((Class238) this).anIntArray2921[i] >> 8)) & 0xffL)])));
-			((Class238) this).aLong2926 = (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((Class238) this).anIntArray2921[i]) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = 9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815 >> 8)) & 0xffL)]) * -9195927454341211745L;
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anInt2925 * -1483086815)) & 0xffL)]));
+		for (int i = 0; i < ((PlayerAppearance) this).anIntArray2921.length; i++) {
+			((PlayerAppearance) this).aLong2926 = (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 24)) & 0xffL)]) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 16)) & 0xffL)]) * -9195927454341211745L;
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (((PlayerAppearance) this).anIntArray2921[i] >> 8)) & 0xffL)])));
+			((PlayerAppearance) this).aLong2926 = (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((PlayerAppearance) this).anIntArray2921[i]) & 0xffL)]) * -9195927454341211745L;
 		}
-		if (null != ((Class238) this).aClass422Array2922) {
-			for (int i = 0; i < ((Class238) this).aClass422Array2922.length; i++) {
-				if (((Class238) this).aClass422Array2922[i] != null) {
+		if (null != ((PlayerAppearance) this).aClass422Array2922) {
+			for (int i = 0; i < ((PlayerAppearance) this).aClass422Array2922.length; i++) {
+				if (((PlayerAppearance) this).aClass422Array2922[i] != null) {
 					int[] is;
 					int[] is_115_;
 					if (aBool2929) {
-						is = (((Class238) this).aClass422Array2922[i].femaleBody);
-						is_115_ = (((Class238) this).aClass422Array2922[i].femaleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i].femaleBody);
+						is_115_ = (((PlayerAppearance) this).aClass422Array2922[i].femaleHeads);
 					} else {
-						is = (((Class238) this).aClass422Array2922[i].maleBody);
-						is_115_ = (((Class238) this).aClass422Array2922[i].maleHeads);
+						is = (((PlayerAppearance) this).aClass422Array2922[i].maleBody);
+						is_115_ = (((PlayerAppearance) this).aClass422Array2922[i].maleHeads);
 					}
 					if (is != null) {
 						for (int i_116_ = 0; i_116_ < is.length; i_116_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_116_] >> 8)) & 0xffL)]));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_116_]) & 0xffL)]) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (is[i_116_] >> 8)) & 0xffL)]));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) is[i_116_]) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 					if (is_115_ != null) {
 						for (int i_117_ = 0; i_117_ < is_115_.length; i_117_++) {
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) (is_115_[i_117_] >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) is_115_[i_117_]) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) (is_115_[i_117_] >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) is_115_[i_117_]) & 0xffL)])) * -9195927454341211745L);
 						}
 					}
-					if (null != (((Class238) this).aClass422Array2922[i].modifiedColors)) {
-						for (int i_118_ = 0; i_118_ < (((Class238) this).aClass422Array2922[i].modifiedColors).length; i_118_++) {
-							((Class238) this).aLong2926 = (((((Class238) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) ((((Class238) this).aClass422Array2922[i].modifiedColors[i_118_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i].modifiedColors[i_118_])) & 0xffL)]) * -9195927454341211745L);
+					if (null != (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors)) {
+						for (int i_118_ = 0; i_118_ < (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors).length; i_118_++) {
+							((PlayerAppearance) this).aLong2926 = (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) >>> 8 ^ (ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i].modifiedColors[i_118_]) >> 8)) & 0xffL)])) * -9195927454341211745L);
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i].modifiedColors[i_118_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
-					if (((Class238) this).aClass422Array2922[i].modifiedTextures != null) {
-						for (int i_119_ = 0; i_119_ < (((Class238) this).aClass422Array2922[i].modifiedTextures).length; i_119_++) {
-							((Class238) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ (ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) ((((Class238) this).aClass422Array2922[i].modifiedTextures[i_119_]) >> 8)) & 0xffL)])));
-							((Class238) this).aLong2926 = (((-6800555520516554145L * ((Class238) this).aLong2926) >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (((Class238) this).aClass422Array2922[i].modifiedTextures[i_119_])) & 0xffL)]) * -9195927454341211745L);
+					if (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures != null) {
+						for (int i_119_ = 0; i_119_ < (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures).length; i_119_++) {
+							((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * ((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ (ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) ((((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures[i_119_]) >> 8)) & 0xffL)])));
+							((PlayerAppearance) this).aLong2926 = (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (((PlayerAppearance) this).aClass422Array2922[i].modifiedTextures[i_119_])) & 0xffL)]) * -9195927454341211745L);
 						}
 					}
 				}
 			}
 		}
 		for (int i = 0; i < 10; i++)
-			((Class238) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((Class238) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((Class238) this).aLong2926) ^ (long) anIntArray2923[i]) & 0xffL)]));
-		((Class238) this).aLong2926 = (-9195927454341211745L * (((Class238) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((Class238) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
+			((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (-6800555520516554145L * ((PlayerAppearance) this).aLong2926 >>> 8 ^ ls[(int) (((-6800555520516554145L * ((PlayerAppearance) this).aLong2926) ^ (long) colors[i]) & 0xffL)]));
+		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
 	}
 
-	public MeshRasterizer method4016(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_120_, Class456[] class456s, int[] is, int i_121_, boolean bool, Class526 class526) {
+	public MeshRasterizer method4016(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_120_, Class456[] class456s, int[] is, int i_121_, boolean bool, Class526 class526) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) 29).method6875(class505, i, class211, interface42, class456, class456_120_, class456s, is, i_121_, null, 1850728903));
 		int i_122_ = i;
-		long l = -6800555520516554145L * ((Class238) this).aLong2926;
-		int[] is_123_ = ((Class238) this).anIntArray2921;
+		long l = -6800555520516554145L * ((PlayerAppearance) this).aLong2926;
+		int[] is_123_ = ((PlayerAppearance) this).anIntArray2921;
 		boolean bool_124_ = false;
 		boolean bool_125_ = false;
 		if (null != class456) {
 			AnimationDefinitions class518 = class456.method7565(-1632742162);
 			if (class518 != null && (class518.anInt5917 * -516792901 >= 0 || class518.anInt5918 * -1325291837 >= 0)) {
-				is_123_ = new int[((Class238) this).anIntArray2921.length];
+				is_123_ = new int[((PlayerAppearance) this).anIntArray2921.length];
 				for (int i_126_ = 0; i_126_ < is_123_.length; i_126_++)
-					is_123_[i_126_] = ((Class238) this).anIntArray2921[i_126_];
+					is_123_[i_126_] = ((PlayerAppearance) this).anIntArray2921[i_126_];
 				if (-516792901 * class518.anInt5917 >= 0 && -1 != -333243893 * class526.anInt6990) {
 					bool_124_ = true;
 					if (65535 == class518.anInt5917 * -516792901) {
@@ -888,8 +888,8 @@ public class Class238 {
 			class528 = (MeshRasterizer) aClass229_2920.method3865(l);
 		}
 		Class227 class227 = null;
-		if (-1 != -1483086815 * ((Class238) this).anInt2925)
-			class227 = class211.method3616((((Class238) this).anInt2925 * -1483086815), (byte) -87);
+		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
+			class227 = class211.method3616((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) -87);
 		if (null == class528 || class505.method8452(class528.m(), i_122_) != 0) {
 			if (class528 != null)
 				i_122_ = class505.method8546(i_122_, class528.m());
@@ -924,17 +924,17 @@ public class Class238 {
 					}
 				}
 				if ((i_139_ & 0x40000000) != 0) {
-					if (!bool_140_ && ((Class238) this).aClass422Array2922 != null && (((Class238) this).aClass422Array2922[i_138_] != null))
-						class422 = ((Class238) this).aClass422Array2922[i_138_];
+					if (!bool_140_ && ((PlayerAppearance) this).aClass422Array2922 != null && (((PlayerAppearance) this).aClass422Array2922[i_138_] != null))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_138_];
 					if (!class426.getItemDefinitions(i_139_ & 0x3fffffff, 566233318).method7096(aBool2929, class422, -1608263178))
 						bool_137_ = true;
 				} else if (0 != (i_139_ & ~0x7fffffff) && !class31.method800(i_139_ & 0x3fffffff, 1541066475).method898(-965716691))
 					bool_137_ = true;
 			}
 			if (bool_137_) {
-				if (-2249810898304743821L * ((Class238) this).aLong2927 != -1L) {
+				if (-2249810898304743821L * ((PlayerAppearance) this).aLong2927 != -1L) {
 					synchronized (aClass229_2920) {
-						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((Class238) this).aLong2927)));
+						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
 					}
 				}
 				if (class528 == null || class505.method8452(class528.m(), i_122_) != 0)
@@ -946,8 +946,8 @@ public class Class238 {
 					MeshModifier class422 = null;
 					boolean bool_145_ = 5 == i_143_ && bool_124_ || i_143_ == 3 && bool_125_;
 					if (0 != (i_144_ & 0x40000000)) {
-						if (!bool_145_ && ((Class238) this).aClass422Array2922 != null && null != (((Class238) this).aClass422Array2922[i_143_]))
-							class422 = ((Class238) this).aClass422Array2922[i_143_];
+						if (!bool_145_ && ((PlayerAppearance) this).aClass422Array2922 != null && null != (((PlayerAppearance) this).aClass422Array2922[i_143_]))
+							class422 = ((PlayerAppearance) this).aClass422Array2922[i_143_];
 						RSMesh class157 = (class426.getItemDefinitions(i_144_ & 0x3fffffff, 1530062981).method7097(aBool2929, class422, -1159162700));
 						if (null != class157)
 							class157s[i_143_] = class157;
@@ -985,17 +985,17 @@ public class Class238 {
 				i_136_ |= 0x4000;
 				class528 = class505.createMeshRasterizer(class157, i_136_, Class149.anInt1744 * -127031115, 64, 850);
 				for (int i_153_ = 0; i_153_ < 10; i_153_++) {
-					for (int i_154_ = 0; i_154_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_153_]).length; i_154_++) {
-						if (anIntArray2923[i_153_] < (Class366.aShortArrayArrayArray4232[i_153_][i_154_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_153_][i_154_]), (Class366.aShortArrayArrayArray4232[i_153_][i_154_][anIntArray2923[i_153_]]));
+					for (int i_154_ = 0; i_154_ < (AbstractQueue_Sub1.SKIN_COLORS[i_153_]).length; i_154_++) {
+						if (colors[i_153_] < (Class366.SKIN_COLORS[i_153_][i_154_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_153_][i_154_]), (Class366.SKIN_COLORS[i_153_][i_154_][colors[i_153_]]));
 					}
 				}
 				if (bool) {
 					class528.KA(i_122_);
 					synchronized (aClass229_2920) {
-						aClass229_2920.method3856(class528, l);
+						aClass229_2920.put(class528, l);
 					}
-					((Class238) this).aLong2927 = l * -6835014681310605637L;
+					((PlayerAppearance) this).aLong2927 = l * -6835014681310605637L;
 				}
 			}
 		}
@@ -1045,20 +1045,20 @@ public class Class238 {
 		return class528_155_;
 	}
 
-	public MeshRasterizer method4017(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_159_, Class456[] class456s, int[] is, int i_160_, boolean bool, Class526 class526) {
+	public MeshRasterizer method4017(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_159_, Class456[] class456s, int[] is, int i_160_, boolean bool, Class526 class526) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) 91).method6875(class505, i, class211, interface42, class456, class456_159_, class456s, is, i_160_, null, 1456552905));
 		int i_161_ = i;
-		long l = -6800555520516554145L * ((Class238) this).aLong2926;
-		int[] is_162_ = ((Class238) this).anIntArray2921;
+		long l = -6800555520516554145L * ((PlayerAppearance) this).aLong2926;
+		int[] is_162_ = ((PlayerAppearance) this).anIntArray2921;
 		boolean bool_163_ = false;
 		boolean bool_164_ = false;
 		if (null != class456) {
 			AnimationDefinitions class518 = class456.method7565(-1632742162);
 			if (class518 != null && (class518.anInt5917 * -516792901 >= 0 || class518.anInt5918 * -1325291837 >= 0)) {
-				is_162_ = new int[((Class238) this).anIntArray2921.length];
+				is_162_ = new int[((PlayerAppearance) this).anIntArray2921.length];
 				for (int i_165_ = 0; i_165_ < is_162_.length; i_165_++)
-					is_162_[i_165_] = ((Class238) this).anIntArray2921[i_165_];
+					is_162_[i_165_] = ((PlayerAppearance) this).anIntArray2921[i_165_];
 				if (-516792901 * class518.anInt5917 >= 0 && -1 != -333243893 * class526.anInt6990) {
 					bool_163_ = true;
 					if (65535 == class518.anInt5917 * -516792901) {
@@ -1119,8 +1119,8 @@ public class Class238 {
 			class528 = (MeshRasterizer) aClass229_2920.method3865(l);
 		}
 		Class227 class227 = null;
-		if (-1 != -1483086815 * ((Class238) this).anInt2925)
-			class227 = class211.method3616((((Class238) this).anInt2925 * -1483086815), (byte) 61);
+		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
+			class227 = class211.method3616((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) 61);
 		if (null == class528 || class505.method8452(class528.m(), i_161_) != 0) {
 			if (class528 != null)
 				i_161_ = class505.method8546(i_161_, class528.m());
@@ -1155,17 +1155,17 @@ public class Class238 {
 					}
 				}
 				if ((i_178_ & 0x40000000) != 0) {
-					if (!bool_179_ && ((Class238) this).aClass422Array2922 != null && (((Class238) this).aClass422Array2922[i_177_] != null))
-						class422 = ((Class238) this).aClass422Array2922[i_177_];
+					if (!bool_179_ && ((PlayerAppearance) this).aClass422Array2922 != null && (((PlayerAppearance) this).aClass422Array2922[i_177_] != null))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_177_];
 					if (!class426.getItemDefinitions(i_178_ & 0x3fffffff, 1464385022).method7096(aBool2929, class422, 1517001593))
 						bool_176_ = true;
 				} else if (0 != (i_178_ & ~0x7fffffff) && !class31.method800(i_178_ & 0x3fffffff, 1409187819).method898(-965716691))
 					bool_176_ = true;
 			}
 			if (bool_176_) {
-				if (-2249810898304743821L * ((Class238) this).aLong2927 != -1L) {
+				if (-2249810898304743821L * ((PlayerAppearance) this).aLong2927 != -1L) {
 					synchronized (aClass229_2920) {
-						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((Class238) this).aLong2927)));
+						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
 					}
 				}
 				if (class528 == null || class505.method8452(class528.m(), i_161_) != 0)
@@ -1177,8 +1177,8 @@ public class Class238 {
 					MeshModifier class422 = null;
 					boolean bool_184_ = 5 == i_182_ && bool_163_ || i_182_ == 3 && bool_164_;
 					if (0 != (i_183_ & 0x40000000)) {
-						if (!bool_184_ && ((Class238) this).aClass422Array2922 != null && null != (((Class238) this).aClass422Array2922[i_182_]))
-							class422 = ((Class238) this).aClass422Array2922[i_182_];
+						if (!bool_184_ && ((PlayerAppearance) this).aClass422Array2922 != null && null != (((PlayerAppearance) this).aClass422Array2922[i_182_]))
+							class422 = ((PlayerAppearance) this).aClass422Array2922[i_182_];
 						RSMesh class157 = (class426.getItemDefinitions(i_183_ & 0x3fffffff, 447022467).method7097(aBool2929, class422, -2055931554));
 						if (null != class157)
 							class157s[i_182_] = class157;
@@ -1216,17 +1216,17 @@ public class Class238 {
 				i_175_ |= 0x4000;
 				class528 = class505.createMeshRasterizer(class157, i_175_, Class149.anInt1744 * -127031115, 64, 850);
 				for (int i_192_ = 0; i_192_ < 10; i_192_++) {
-					for (int i_193_ = 0; i_193_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_192_]).length; i_193_++) {
-						if (anIntArray2923[i_192_] < (Class366.aShortArrayArrayArray4232[i_192_][i_193_]).length)
-							class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_192_][i_193_]), (Class366.aShortArrayArrayArray4232[i_192_][i_193_][anIntArray2923[i_192_]]));
+					for (int i_193_ = 0; i_193_ < (AbstractQueue_Sub1.SKIN_COLORS[i_192_]).length; i_193_++) {
+						if (colors[i_192_] < (Class366.SKIN_COLORS[i_192_][i_193_]).length)
+							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_192_][i_193_]), (Class366.SKIN_COLORS[i_192_][i_193_][colors[i_192_]]));
 					}
 				}
 				if (bool) {
 					class528.KA(i_161_);
 					synchronized (aClass229_2920) {
-						aClass229_2920.method3856(class528, l);
+						aClass229_2920.put(class528, l);
 					}
-					((Class238) this).aLong2927 = l * -6835014681310605637L;
+					((PlayerAppearance) this).aLong2927 = l * -6835014681310605637L;
 				}
 			}
 		}
@@ -1277,40 +1277,40 @@ public class Class238 {
 	}
 
 	public void method4018(int i, int[] is, MeshModifier[] class422s, int[] is_198_, boolean bool, int i_199_) {
-		if (-1483086815 * ((Class238) this).anInt2925 != i)
-			((Class238) this).anInt2925 = i * 995008481;
-		((Class238) this).anIntArray2921 = is;
-		((Class238) this).aClass422Array2922 = class422s;
-		anIntArray2923 = is_198_;
+		if (-1483086815 * ((PlayerAppearance) this).anInt2925 != i)
+			((PlayerAppearance) this).anInt2925 = i * 995008481;
+		((PlayerAppearance) this).anIntArray2921 = is;
+		((PlayerAppearance) this).aClass422Array2922 = class422s;
+		colors = is_198_;
 		aBool2929 = bool;
 		anInt2928 = 232890067 * i_199_;
 		method3991((byte) 3);
 	}
 
 	public void method4019(int i, int i_200_) {
-		anIntArray2923[i] = i_200_;
+		colors[i] = i_200_;
 		method3991((byte) 3);
 	}
 
-	public MeshRasterizer method4020(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method4020(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) -22).method6880(class505, i, interface42, class456, null, 1531880788));
 		int i_201_ = null != class456 ? i | class456.method7640(-921112046) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((Class238) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_201_) != 0) {
 			if (class528 != null)
 				i_201_ = class505.method8546(i_201_, class528.m());
 			int i_202_ = i_201_;
 			boolean bool = false;
-			for (int i_203_ = 0; i_203_ < ((Class238) this).anIntArray2921.length; i_203_++) {
-				int i_204_ = ((Class238) this).anIntArray2921[i_203_];
+			for (int i_203_ = 0; i_203_ < ((PlayerAppearance) this).anIntArray2921.length; i_203_++) {
+				int i_204_ = ((PlayerAppearance) this).anIntArray2921[i_203_];
 				MeshModifier class422 = null;
 				if (0 != (i_204_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && (null != ((Class238) this).aClass422Array2922[i_203_]))
-						class422 = ((Class238) this).aClass422Array2922[i_203_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && (null != ((PlayerAppearance) this).aClass422Array2922[i_203_]))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_203_];
 					if (!class426.getItemDefinitions(i_204_ & 0x3fffffff, 933779783).method7098(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_204_ & ~0x7fffffff) != 0 && !class31.method800(i_204_ & 0x3fffffff, 2089431789).method900(36053))
@@ -1318,14 +1318,14 @@ public class Class238 {
 			}
 			if (bool)
 				return null;
-			RSMesh[] class157s = new RSMesh[((Class238) this).anIntArray2921.length];
+			RSMesh[] class157s = new RSMesh[((PlayerAppearance) this).anIntArray2921.length];
 			int i_205_ = 0;
-			for (int i_206_ = 0; i_206_ < ((Class238) this).anIntArray2921.length; i_206_++) {
-				int i_207_ = ((Class238) this).anIntArray2921[i_206_];
+			for (int i_206_ = 0; i_206_ < ((PlayerAppearance) this).anIntArray2921.length; i_206_++) {
+				int i_207_ = ((PlayerAppearance) this).anIntArray2921[i_206_];
 				MeshModifier class422 = null;
 				if (0 != (i_207_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && (((Class238) this).aClass422Array2922[i_206_] != null))
-						class422 = ((Class238) this).aClass422Array2922[i_206_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && (((PlayerAppearance) this).aClass422Array2922[i_206_] != null))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_206_];
 					RSMesh class157 = class426.getItemDefinitions(i_207_ & 0x3fffffff, 1264260029).method7130(aBool2929, class422, -1890606891);
 					if (null != class157)
 						class157s[i_205_++] = class157;
@@ -1339,14 +1339,14 @@ public class Class238 {
 			i_202_ |= 0x4000;
 			class528 = class505.createMeshRasterizer(class157, i_202_, -127031115 * Class149.anInt1744, 64, 768);
 			for (int i_208_ = 0; i_208_ < 10; i_208_++) {
-				for (int i_209_ = 0; i_209_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_208_]).length; i_209_++) {
-					if (anIntArray2923[i_208_] < (Class366.aShortArrayArrayArray4232[i_208_][i_209_]).length)
-						class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_208_][i_209_]), (Class366.aShortArrayArrayArray4232[i_208_][i_209_][anIntArray2923[i_208_]]));
+				for (int i_209_ = 0; i_209_ < (AbstractQueue_Sub1.SKIN_COLORS[i_208_]).length; i_209_++) {
+					if (colors[i_208_] < (Class366.SKIN_COLORS[i_208_][i_209_]).length)
+						class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_208_][i_209_]), (Class366.SKIN_COLORS[i_208_][i_209_][colors[i_208_]]));
 				}
 			}
 			class528.KA(i_201_);
 			synchronized (aClass229_2930) {
-				aClass229_2930.method3856(class528, (((Class238) this).aLong2926 * -6800555520516554145L));
+				aClass229_2930.put(class528, (((PlayerAppearance) this).aLong2926 * -6800555520516554145L));
 			}
 		}
 		if (class456 == null)
@@ -1356,25 +1356,25 @@ public class Class238 {
 		return class528_210_;
 	}
 
-	public MeshRasterizer method4021(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, Class426 class426, Class523 class523, Interface42 interface42, Class456 class456, int i_211_) {
+	public MeshRasterizer method4021(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, int i_211_) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.method6828(anInt2928 * -977770149, (byte) 14).method6880(class505, i, interface42, class456, null, 1135826867));
 		int i_212_ = null != class456 ? i | class456.method7640(-1790467862) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((Class238) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_212_) != 0) {
 			if (class528 != null)
 				i_212_ = class505.method8546(i_212_, class528.m());
 			int i_213_ = i_212_;
 			boolean bool = false;
-			for (int i_214_ = 0; i_214_ < ((Class238) this).anIntArray2921.length; i_214_++) {
-				int i_215_ = ((Class238) this).anIntArray2921[i_214_];
+			for (int i_214_ = 0; i_214_ < ((PlayerAppearance) this).anIntArray2921.length; i_214_++) {
+				int i_215_ = ((PlayerAppearance) this).anIntArray2921[i_214_];
 				MeshModifier class422 = null;
 				if (0 != (i_215_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && (null != ((Class238) this).aClass422Array2922[i_214_]))
-						class422 = ((Class238) this).aClass422Array2922[i_214_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && (null != ((PlayerAppearance) this).aClass422Array2922[i_214_]))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_214_];
 					if (!class426.getItemDefinitions(i_215_ & 0x3fffffff, 1258535408).method7098(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_215_ & ~0x7fffffff) != 0 && !class31.method800(i_215_ & 0x3fffffff, 745327343).method900(36053))
@@ -1382,14 +1382,14 @@ public class Class238 {
 			}
 			if (bool)
 				return null;
-			RSMesh[] class157s = new RSMesh[((Class238) this).anIntArray2921.length];
+			RSMesh[] class157s = new RSMesh[((PlayerAppearance) this).anIntArray2921.length];
 			int i_216_ = 0;
-			for (int i_217_ = 0; i_217_ < ((Class238) this).anIntArray2921.length; i_217_++) {
-				int i_218_ = ((Class238) this).anIntArray2921[i_217_];
+			for (int i_217_ = 0; i_217_ < ((PlayerAppearance) this).anIntArray2921.length; i_217_++) {
+				int i_218_ = ((PlayerAppearance) this).anIntArray2921[i_217_];
 				MeshModifier class422 = null;
 				if (0 != (i_218_ & 0x40000000)) {
-					if (null != ((Class238) this).aClass422Array2922 && (((Class238) this).aClass422Array2922[i_217_] != null))
-						class422 = ((Class238) this).aClass422Array2922[i_217_];
+					if (null != ((PlayerAppearance) this).aClass422Array2922 && (((PlayerAppearance) this).aClass422Array2922[i_217_] != null))
+						class422 = ((PlayerAppearance) this).aClass422Array2922[i_217_];
 					RSMesh class157 = class426.getItemDefinitions(i_218_ & 0x3fffffff, 393457333).method7130(aBool2929, class422, -1413121212);
 					if (null != class157)
 						class157s[i_216_++] = class157;
@@ -1403,14 +1403,14 @@ public class Class238 {
 			i_213_ |= 0x4000;
 			class528 = class505.createMeshRasterizer(class157, i_213_, -127031115 * Class149.anInt1744, 64, 768);
 			for (int i_219_ = 0; i_219_ < 10; i_219_++) {
-				for (int i_220_ = 0; i_220_ < (AbstractQueue_Sub1.aShortArrayArray10068[i_219_]).length; i_220_++) {
-					if (anIntArray2923[i_219_] < (Class366.aShortArrayArrayArray4232[i_219_][i_220_]).length)
-						class528.X((AbstractQueue_Sub1.aShortArrayArray10068[i_219_][i_220_]), (Class366.aShortArrayArrayArray4232[i_219_][i_220_][anIntArray2923[i_219_]]));
+				for (int i_220_ = 0; i_220_ < (AbstractQueue_Sub1.SKIN_COLORS[i_219_]).length; i_220_++) {
+					if (colors[i_219_] < (Class366.SKIN_COLORS[i_219_][i_220_]).length)
+						class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_219_][i_220_]), (Class366.SKIN_COLORS[i_219_][i_220_][colors[i_219_]]));
 				}
 			}
 			class528.KA(i_212_);
 			synchronized (aClass229_2930) {
-				aClass229_2930.method3856(class528, (((Class238) this).aLong2926 * -6800555520516554145L));
+				aClass229_2930.put(class528, (((PlayerAppearance) this).aLong2926 * -6800555520516554145L));
 			}
 		}
 		if (class456 == null)
@@ -1481,7 +1481,7 @@ public class Class238 {
 	}
 
 	public void method4029(int i, int i_222_, byte i_223_) {
-		anIntArray2923[i] = i_222_;
+		colors[i] = i_222_;
 		method3991((byte) 3);
 	}
 

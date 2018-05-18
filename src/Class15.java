@@ -73,7 +73,7 @@ final class Class15 implements Interface35 {
 					Class91 class91 = Class91.method1522(Class211.aClass317_2673, class240.anInt2977 * -1230505599, 0);
 					if (class91 != null) {
 						class160 = Class316.aClass505_3680.method8444(class91, true);
-						Class20.aClass229_191.method3856(class160, (long) (-1230505599 * class240.anInt2977));
+						Class20.aClass229_191.put(class160, (long) (-1230505599 * class240.anInt2977));
 					}
 				}
 				if (class160 != null) {

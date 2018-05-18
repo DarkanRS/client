@@ -3,7 +3,7 @@
  */
 
 public class Class13 {
-	static Class229 aClass229_127 = new Class229(32);
+	static SoftCache aClass229_127 = new SoftCache(32);
 	static int anInt128;
 	static String[] aStringArray129;
 	static int anInt130;
@@ -76,7 +76,7 @@ public class Class13 {
 			}
 			class528_9_ = class505.createMeshRasterizer(class157, i_8_, 1257126031 * anInt128, 64, 768);
 			synchronized (aClass229_127) {
-				aClass229_127.method3856(class528_9_, l);
+				aClass229_127.put(class528_9_, l);
 			}
 		}
 		int i_27_ = class528.RA();
@@ -160,7 +160,7 @@ public class Class13 {
 			}
 			class528_40_ = class505.createMeshRasterizer(class157, i_39_, 1257126031 * anInt128, 64, 768);
 			synchronized (aClass229_127) {
-				aClass229_127.method3856(class528_40_, l);
+				aClass229_127.put(class528_40_, l);
 			}
 		}
 		int i_58_ = class528.RA();

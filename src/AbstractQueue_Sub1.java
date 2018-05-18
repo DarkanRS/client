@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class AbstractQueue_Sub1 extends AbstractQueue {
-	public static short[][] aShortArrayArray10068;
+	public static short[][] SKIN_COLORS;
 	Map aMap10069;
 	int anInt10070;
 	Comparator aComparator10071;

@@ -1046,7 +1046,7 @@ public abstract class FontRenderer {
 		Class13.aStringArray129 = new String[500];
 		for (int i_331_ = 0; i_331_ < Class13.aStringArray129.length; i_331_++)
 			Class13.aStringArray129[i_331_] = "";
-		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -1940277002), -1694092142);
+		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -1940277002), -1694092142);
 	}
 
 	static final void method403(Class118 class118, Class98 class98, CS2Executor class527, int i) {

@@ -449,14 +449,14 @@ public class Class478 {
 					synchronized (((Class474) ((Class478) this).aClass474_5651).aClass157Array5616) {
 						for (int i_46_ = 0; i_46_ < i_43_; i_46_++) {
 							synchronized (((Class474) ((Class478) this).aClass474_5651).aClass317_5611) {
-								class157 = RSMesh.method2689((((Class474) (((Class478) this).aClass474_5651)).aClass317_5611), is[i_46_], 0);
+								class157 = RSMesh.decodeMesh((((Class474) (((Class478) this).aClass474_5651)).aClass317_5611), is[i_46_], 0);
 							}
 							if (null == class157) {
 								MeshRasterizer class528_47_ = null;
 								return class528_47_;
 							}
-							if (class157.anInt1986 < 13)
-								class157.method2679(2);
+							if (class157.zoom < 13)
+								class157.upscale(2);
 							if (i_43_ > 1)
 								((Class474) ((Class478) this).aClass474_5651).aClass157Array5616[i_46_] = class157;
 						}
@@ -465,7 +465,7 @@ public class Class478 {
 					}
 					class528 = class505.createMeshRasterizer(class157, i_45_, 456299079 * (((Class474) (((Class478) this).aClass474_5651)).anInt5617), i_38_, i_39_);
 					synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5614) {
-						((Class474) ((Class478) this).aClass474_5651).aClass229_5614.method3856(class528, l);
+						((Class474) ((Class478) this).aClass474_5651).aClass229_5614.put(class528, l);
 					}
 				}
 			}
@@ -695,14 +695,14 @@ public class Class478 {
 					synchronized (((Class474) ((Class478) this).aClass474_5651).aClass157Array5616) {
 						for (int i_67_ = 0; i_67_ < i_64_; i_67_++) {
 							synchronized (((Class474) ((Class478) this).aClass474_5651).aClass317_5611) {
-								class157 = RSMesh.method2689((((Class474) (((Class478) this).aClass474_5651)).aClass317_5611), is[i_67_], 0);
+								class157 = RSMesh.decodeMesh((((Class474) (((Class478) this).aClass474_5651)).aClass317_5611), is[i_67_], 0);
 							}
 							if (null == class157) {
 								MeshRasterizer class528_68_ = null;
 								return class528_68_;
 							}
-							if (class157.anInt1986 < 13)
-								class157.method2679(2);
+							if (class157.zoom < 13)
+								class157.upscale(2);
 							if (i_64_ > 1)
 								((Class474) ((Class478) this).aClass474_5651).aClass157Array5616[i_67_] = class157;
 						}
@@ -711,7 +711,7 @@ public class Class478 {
 					}
 					class528 = class505.createMeshRasterizer(class157, i_66_, 456299079 * (((Class474) (((Class478) this).aClass474_5651)).anInt5617), i_59_, i_60_);
 					synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5614) {
-						((Class474) ((Class478) this).aClass474_5651).aClass229_5614.method3856(class528, l);
+						((Class474) ((Class478) this).aClass474_5651).aClass229_5614.put(class528, l);
 					}
 				}
 			}
@@ -1094,7 +1094,7 @@ public class Class478 {
 			class528.KA(i_106_);
 			class452 = new Class452(class528, class282_sub50_sub17);
 			synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5615) {
-				((Class474) ((Class478) this).aClass474_5651).aClass229_5615.method3856(class452, l);
+				((Class474) ((Class478) this).aClass474_5651).aClass229_5615.put(class452, l);
 			}
 		} else {
 			class282_sub50_sub17 = (Class282_Sub50_Sub17) class452.anObject5444;
@@ -1219,7 +1219,7 @@ public class Class478 {
 			if (class528 == null)
 				return null;
 			synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5619) {
-				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.method3856(class528, l);
+				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.put(class528, l);
 			}
 		}
 		boolean bool = false;
@@ -1291,7 +1291,7 @@ public class Class478 {
 			if (class528 == null)
 				return null;
 			synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5619) {
-				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.method3856(class528, l);
+				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.put(class528, l);
 			}
 		}
 		boolean bool = false;
@@ -1382,14 +1382,14 @@ public class Class478 {
 					synchronized (((Class474) ((Class478) this).aClass474_5651).aClass157Array5616) {
 						for (int i_140_ = 0; i_140_ < i_137_; i_140_++) {
 							synchronized (((Class474) ((Class478) this).aClass474_5651).aClass317_5611) {
-								class157 = RSMesh.method2689((((Class474) (((Class478) this).aClass474_5651)).aClass317_5611), is[i_140_], 0);
+								class157 = RSMesh.decodeMesh((((Class474) (((Class478) this).aClass474_5651)).aClass317_5611), is[i_140_], 0);
 							}
 							if (null == class157) {
 								MeshRasterizer class528_141_ = null;
 								return class528_141_;
 							}
-							if (class157.anInt1986 < 13)
-								class157.method2679(2);
+							if (class157.zoom < 13)
+								class157.upscale(2);
 							if (i_137_ > 1)
 								((Class474) ((Class478) this).aClass474_5651).aClass157Array5616[i_140_] = class157;
 						}
@@ -1398,7 +1398,7 @@ public class Class478 {
 					}
 					class528 = class505.createMeshRasterizer(class157, i_139_, 456299079 * (((Class474) (((Class478) this).aClass474_5651)).anInt5617), i_132_, i_133_);
 					synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5614) {
-						((Class474) ((Class478) this).aClass474_5651).aClass229_5614.method3856(class528, l);
+						((Class474) ((Class478) this).aClass474_5651).aClass229_5614.put(class528, l);
 					}
 				}
 			}
@@ -1488,7 +1488,7 @@ public class Class478 {
 			if (class528 == null)
 				return null;
 			synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5619) {
-				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.method3856(class528, l);
+				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.put(class528, l);
 			}
 		}
 		boolean bool = false;
@@ -1732,7 +1732,7 @@ public class Class478 {
 			class528.KA(i_169_);
 			class452 = new Class452(class528, class282_sub50_sub17);
 			synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5615) {
-				((Class474) ((Class478) this).aClass474_5651).aClass229_5615.method3856(class452, l);
+				((Class474) ((Class478) this).aClass474_5651).aClass229_5615.put(class452, l);
 			}
 		} else {
 			class282_sub50_sub17 = (Class282_Sub50_Sub17) class452.anObject5444;
@@ -1792,7 +1792,7 @@ public class Class478 {
 			if (class528 == null)
 				return null;
 			synchronized (((Class474) ((Class478) this).aClass474_5651).aClass229_5619) {
-				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.method3856(class528, l);
+				((Class474) ((Class478) this).aClass474_5651).aClass229_5619.put(class528, l);
 			}
 		}
 		boolean bool = false;

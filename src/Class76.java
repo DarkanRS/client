@@ -188,8 +188,8 @@ public class Class76 {
 			}
 			Class358.method6235((Class520.aClass317_5935.method5615((-1719912253 * Class524.aClass524_6960.anInt6966), -1241129078)), (byte) -81);
 			Class58.aClass529_527 = new Class529(Class520.aClass317_5935);
-			AbstractQueue_Sub1.aShortArrayArray10068 = Class58.aClass529_527.aShortArrayArray7039;
-			Class366.aShortArrayArrayArray4232 = Class58.aClass529_527.aShortArrayArrayArray7040;
+			AbstractQueue_Sub1.SKIN_COLORS = Class58.aClass529_527.aShortArrayArray7039;
+			Class366.SKIN_COLORS = Class58.aClass529_527.aShortArrayArrayArray7040;
 			if (-1 != Class58.aClass529_527.anInt7045 * 1965360767 && -1 != 2007534195 * Class58.aClass529_527.anInt7046) {
 				client.anInt7439 = -406576707 * Class58.aClass529_527.anInt7045;
 				client.anInt7312 = 981526077 * Class58.aClass529_527.anInt7046;
@@ -203,7 +203,7 @@ public class Class76 {
 				return 99;
 			}
 			Class321.anInterface22_3731 = new Class323(NamedFileReference.aClass317_412, AttributeDefault.aClass317_5340, Class211.aClass317_2673);
-			Class125.aClass424_1573 = new Class424(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
+			Class125.aClass424_1573 = new AttributesDefaultsLoader(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
 			Class96_Sub16.aClass211_9383 = new Class211(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class473.aClass526_5605);
 			Class468_Sub23.aClass438_7932 = new Class438(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class211.aClass317_2673);
 			Class466.aClass444_5570 = new Class444(client.aClass486_7450, Class223.aClass495_2772, Class236.aClass317_2915);
@@ -220,7 +220,7 @@ public class Class76 {
 			Class397.aClass218_4813 = new Class218(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class211.aClass317_2673);
 			Class97.aClass427_995 = new Class427(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class211.aClass317_2673);
 			Class350_Sub1.aClass406_7757 = new Class406(client.aClass486_7450, Class223.aClass495_2772, true, Class107.aClass317_1081, Class110.aClass317_1106);
-			Class119.aClass426_1463 = new Class426(client.aClass486_7450, Class223.aClass495_2772, true, Class125.aClass424_1573, Class383.aClass317_4665, Class110.aClass317_1106);
+			Class119.aClass426_1463 = new ItemIndexLoader(client.aClass486_7450, Class223.aClass495_2772, true, Class125.aClass424_1573, Class383.aClass317_4665, Class110.aClass317_1106);
 			Class409.aClass242_4922 = new Class242(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, true);
 			Class330.aClass523_3868 = new Class523(client.aClass486_7450, Class223.aClass495_2772, Class235.aClass317_2908, Class282_Sub20.aClass317_7672, Class235.aClass317_2907);
 			Class149.aClass288_1746 = new Class288(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);

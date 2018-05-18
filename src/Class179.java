@@ -112,7 +112,7 @@ public class Class179 {
 		Class13.aStringArray129 = new String[500];
 		for (int i = 0; i < Class13.aStringArray129.length; i++)
 			Class13.aStringArray129[i] = "";
-		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -623888526), -1301842653);
+		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -623888526), -1301842653);
 	}
 
 	static void method2988(GraphicalRenderer class505) {
@@ -236,7 +236,7 @@ public class Class179 {
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -515552037)), -1127364284);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -515552037)), -1127364284);
 			}
 			return;
 		} while (false);
@@ -436,12 +436,12 @@ public class Class179 {
 					client.aClass184_7475.method3049(class282_sub23, 881777984);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1488316549)), -146676373);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1488316549)), -146676373);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Class433.aClass433_5160.method7273(Class223.aClass495_2772, -666903111)).append(string).toString(), -1454199893);
+			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -666903111)).append(string).toString(), -1454199893);
 	}
 
 	static boolean method2993() {
@@ -454,7 +454,7 @@ public class Class179 {
 		Class13.aStringArray129 = new String[500];
 		for (int i = 0; i < Class13.aStringArray129.length; i++)
 			Class13.aStringArray129[i] = "";
-		Class209.method3598(Class433.aClass433_5232.method7273(Class223.aClass495_2772, -1882291735), -941312141);
+		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -1882291735), -941312141);
 	}
 
 	static void method2995() {
@@ -889,7 +889,7 @@ public class Class179 {
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1590942601)), -291693412);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1590942601)), -291693412);
 			}
 			return;
 		} while (false);
@@ -1089,12 +1089,12 @@ public class Class179 {
 					client.aClass184_7475.method3049(class282_sub23, 1616485384);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1600472953)), -1470495365);
+				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1600472953)), -1470495365);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Class433.aClass433_5160.method7273(Class223.aClass495_2772, -1962372403)).append(string).toString(), -1059605262);
+			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -1962372403)).append(string).toString(), -1059605262);
 	}
 
 	static void method3009() {
