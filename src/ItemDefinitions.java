@@ -520,137 +520,137 @@ public class ItemDefinitions implements Interface46 {
 		}
 	}
 
-	public final boolean method7096(boolean bool, MeshModifier class422, int i) {
-		int i_67_;
-		int i_68_;
-		int i_69_;
-		if (bool) {
-			if (null != class422 && null != class422.femaleBody) {
-				i_67_ = class422.femaleBody[0];
-				i_68_ = class422.femaleBody[1];
-				i_69_ = class422.femaleBody[2];
+	public final boolean bodyMeshesReady(boolean female, MeshModifier modifier, int i) {
+		int body1;
+		int body2;
+		int body3;
+		if (female) {
+			if (null != modifier && null != modifier.femaleBody) {
+				body1 = modifier.femaleBody[0];
+				body2 = modifier.femaleBody[1];
+				body3 = modifier.femaleBody[2];
 			} else {
-				i_67_ = this.femaleBody1 * -2090968851;
-				i_68_ = -1259031521 * this.femaleBody2;
-				i_69_ = -1802576377 * this.femaleBody3;
+				body1 = this.femaleBody1 * -2090968851;
+				body2 = -1259031521 * this.femaleBody2;
+				body3 = -1802576377 * this.femaleBody3;
 			}
-		} else if (class422 != null && null != class422.maleBody) {
-			i_67_ = class422.maleBody[0];
-			i_68_ = class422.maleBody[1];
-			i_69_ = class422.maleBody[2];
+		} else if (modifier != null && null != modifier.maleBody) {
+			body1 = modifier.maleBody[0];
+			body2 = modifier.maleBody[1];
+			body3 = modifier.maleBody[2];
 		} else {
-			i_67_ = -525270939 * this.maleBody1;
-			i_68_ = -931922913 * this.maleBody2;
-			i_69_ = this.maleBody3 * -562041407;
+			body1 = -525270939 * this.maleBody1;
+			body2 = -931922913 * this.maleBody2;
+			body3 = this.maleBody3 * -562041407;
 		}
-		if (i_67_ == -1)
+		if (body1 == -1)
 			return true;
-		boolean bool_70_ = true;
-		if (!((ItemIndexLoader) this.loader).meshIndex.method5688(i_67_, 0, 16711935))
-			bool_70_ = false;
-		if (i_68_ != -1 && !((ItemIndexLoader) this.loader).meshIndex.method5688(i_68_, 0, 16711935))
-			bool_70_ = false;
-		if (i_69_ != -1 && !((ItemIndexLoader) this.loader).meshIndex.method5688(i_69_, 0, 16711935))
-			bool_70_ = false;
-		return bool_70_;
+		boolean hasMesh = true;
+		if (!((ItemIndexLoader) this.loader).meshIndex.load(body1, 0, 16711935))
+			hasMesh = false;
+		if (body2 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body2, 0, 16711935))
+			hasMesh = false;
+		if (body3 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body3, 0, 16711935))
+			hasMesh = false;
+		return hasMesh;
 	}
 
-	public final RSMesh method7097(boolean bool, MeshModifier class422, int i) {
-		int i_71_;
-		int i_72_;
-		int i_73_;
-		if (bool) {
-			if (class422 != null && class422.femaleBody != null) {
-				i_71_ = class422.femaleBody[0];
-				i_72_ = class422.femaleBody[1];
-				i_73_ = class422.femaleBody[2];
+	public final RSMesh getBodyMesh(boolean female, MeshModifier modifier, int i) {
+		int body1;
+		int body2;
+		int body3;
+		if (female) {
+			if (modifier != null && modifier.femaleBody != null) {
+				body1 = modifier.femaleBody[0];
+				body2 = modifier.femaleBody[1];
+				body3 = modifier.femaleBody[2];
 			} else {
-				i_71_ = this.femaleBody1 * -2090968851;
-				i_72_ = this.femaleBody2 * -1259031521;
-				i_73_ = this.femaleBody3 * -1802576377;
+				body1 = this.femaleBody1 * -2090968851;
+				body2 = this.femaleBody2 * -1259031521;
+				body3 = this.femaleBody3 * -1802576377;
 			}
-		} else if (class422 != null && null != class422.maleBody) {
-			i_71_ = class422.maleBody[0];
-			i_72_ = class422.maleBody[1];
-			i_73_ = class422.maleBody[2];
+		} else if (modifier != null && null != modifier.maleBody) {
+			body1 = modifier.maleBody[0];
+			body2 = modifier.maleBody[1];
+			body3 = modifier.maleBody[2];
 		} else {
-			i_71_ = -525270939 * this.maleBody1;
-			i_72_ = -931922913 * this.maleBody2;
-			i_73_ = -562041407 * this.maleBody3;
+			body1 = -525270939 * this.maleBody1;
+			body2 = -931922913 * this.maleBody2;
+			body3 = -562041407 * this.maleBody3;
 		}
-		if (-1 == i_71_)
+		if (-1 == body1)
 			return null;
-		RSMesh class157 = RSMesh.decodeMesh((((ItemIndexLoader) (this.loader)).meshIndex), i_71_, 0);
-		if (class157 == null)
+		RSMesh bodyMesh = RSMesh.decodeMesh((((ItemIndexLoader) (this.loader)).meshIndex), body1, 0);
+		if (bodyMesh == null)
 			return null;
-		if (class157.zoom < 13)
-			class157.upscale(2);
-		if (i_72_ != -1) {
-			RSMesh class157_74_ = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), i_72_, 0);
-			if (class157_74_.zoom < 13)
-				class157_74_.upscale(2);
-			if (i_73_ != -1) {
-				RSMesh class157_75_ = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), i_73_, 0);
-				if (class157_75_.zoom < 13)
-					class157_75_.upscale(2);
-				RSMesh[] class157s = { class157, class157_74_, class157_75_ };
-				class157 = new RSMesh(class157s, 3);
+		if (bodyMesh.zoom < 13)
+			bodyMesh.upscale(2);
+		if (body2 != -1) {
+			RSMesh body2Mesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), body2, 0);
+			if (body2Mesh.zoom < 13)
+				body2Mesh.upscale(2);
+			if (body3 != -1) {
+				RSMesh body3Mesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), body3, 0);
+				if (body3Mesh.zoom < 13)
+					body3Mesh.upscale(2);
+				RSMesh[] meshes = { bodyMesh, body2Mesh, body3Mesh };
+				bodyMesh = new RSMesh(meshes, 3);
 			} else {
-				RSMesh[] class157s = { class157, class157_74_ };
-				class157 = new RSMesh(class157s, 2);
+				RSMesh[] meshes = { bodyMesh, body2Mesh };
+				bodyMesh = new RSMesh(meshes, 2);
 			}
 		}
-		if (!bool && (0 != -1021444445 * this.maleWearXOffset || -988581745 * this.maleWearYOffset != 0 || this.maleWearZOffset * 1784001845 != 0))
-			class157.method2712(this.maleWearXOffset * -1021444445, -988581745 * this.maleWearYOffset, this.maleWearZOffset * 1784001845);
-		if (bool && (0 != -958170687 * this.femaleWearXOffset || this.femaleWearYOffset * -710311605 != 0 || 362438811 * this.femaleWearZOffset != 0))
-			class157.method2712(this.femaleWearXOffset * -958170687, -710311605 * this.femaleWearYOffset, this.femaleWearZOffset * 362438811);
+		if (!female && (0 != -1021444445 * this.maleWearXOffset || -988581745 * this.maleWearYOffset != 0 || this.maleWearZOffset * 1784001845 != 0))
+			bodyMesh.method2712(this.maleWearXOffset * -1021444445, -988581745 * this.maleWearYOffset, this.maleWearZOffset * 1784001845);
+		if (female && (0 != -958170687 * this.femaleWearXOffset || this.femaleWearYOffset * -710311605 != 0 || 362438811 * this.femaleWearZOffset != 0))
+			bodyMesh.method2712(this.femaleWearXOffset * -958170687, -710311605 * this.femaleWearYOffset, this.femaleWearZOffset * 362438811);
 		if (this.originalColors != null) {
-			short[] is;
-			if (null != class422 && class422.modifiedColors != null)
-				is = class422.modifiedColors;
+			short[] colMod;
+			if (null != modifier && modifier.modifiedColors != null)
+				colMod = modifier.modifiedColors;
 			else
-				is = this.modifiedColors;
+				colMod = this.modifiedColors;
 			for (int i_76_ = 0; i_76_ < this.originalColors.length; i_76_++)
-				class157.recolor(this.originalColors[i_76_], is[i_76_]);
+				bodyMesh.recolor(this.originalColors[i_76_], colMod[i_76_]);
 		}
 		if (this.originalTextures != null) {
-			short[] is;
-			if (null != class422 && null != class422.modifiedTextures)
-				is = class422.modifiedTextures;
+			short[] texMod;
+			if (null != modifier && null != modifier.modifiedTextures)
+				texMod = modifier.modifiedTextures;
 			else
-				is = this.modifiedTextures;
+				texMod = this.modifiedTextures;
 			for (int i_77_ = 0; i_77_ < this.originalTextures.length; i_77_++)
-				class157.retexture(this.originalTextures[i_77_], is[i_77_]);
+				bodyMesh.retexture(this.originalTextures[i_77_], texMod[i_77_]);
 		}
-		return class157;
+		return bodyMesh;
 	}
 
-	public final boolean method7098(boolean bool, MeshModifier class422, int i) {
-		int i_78_;
-		int i_79_;
-		if (bool) {
-			if (class422 != null && null != class422.femaleHeads) {
-				i_78_ = class422.femaleHeads[0];
-				i_79_ = class422.femaleHeads[1];
+	public final boolean headMeshesReady(boolean female, MeshModifier modifier, int i) {
+		int head1;
+		int head2;
+		if (female) {
+			if (modifier != null && null != modifier.femaleHeads) {
+				head1 = modifier.femaleHeads[0];
+				head2 = modifier.femaleHeads[1];
 			} else {
-				i_78_ = -1705416443 * this.femaleHead1;
-				i_79_ = this.femaleHead2 * -1871546585;
+				head1 = -1705416443 * this.femaleHead1;
+				head2 = this.femaleHead2 * -1871546585;
 			}
-		} else if (null != class422 && null != class422.maleHeads) {
-			i_78_ = class422.maleHeads[0];
-			i_79_ = class422.maleHeads[1];
+		} else if (null != modifier && null != modifier.maleHeads) {
+			head1 = modifier.maleHeads[0];
+			head2 = modifier.maleHeads[1];
 		} else {
-			i_78_ = this.maleHead1 * -603336817;
-			i_79_ = this.maleHead2 * -613723223;
+			head1 = this.maleHead1 * -603336817;
+			head2 = this.maleHead2 * -613723223;
 		}
-		if (i_78_ == -1)
+		if (head1 == -1)
 			return true;
-		boolean bool_80_ = true;
-		if (!((ItemIndexLoader) this.loader).meshIndex.method5688(i_78_, 0, 16711935))
-			bool_80_ = false;
-		if (-1 != i_79_ && !((ItemIndexLoader) this.loader).meshIndex.method5688(i_79_, 0, 16711935))
-			bool_80_ = false;
-		return bool_80_;
+		boolean hasMesh = true;
+		if (!((ItemIndexLoader) this.loader).meshIndex.load(head1, 0, 16711935))
+			hasMesh = false;
+		if (-1 != head2 && !((ItemIndexLoader) this.loader).meshIndex.load(head2, 0, 16711935))
+			hasMesh = false;
+		return hasMesh;
 	}
 
 	public int method7099(int i, int i_81_, int i_82_) {
@@ -749,55 +749,55 @@ public class ItemDefinitions implements Interface46 {
 		aBool5101 = false;
 	}
 
-	public final RSMesh method7130(boolean bool, MeshModifier class422, int i) {
-		int i_206_;
-		int i_207_;
-		if (bool) {
-			if (null != class422 && class422.femaleHeads != null) {
-				i_206_ = class422.femaleHeads[0];
-				i_207_ = class422.femaleHeads[1];
+	public final RSMesh getHeadMesh(boolean female, MeshModifier modifier, int i) {
+		int head1;
+		int head2;
+		if (female) {
+			if (null != modifier && modifier.femaleHeads != null) {
+				head1 = modifier.femaleHeads[0];
+				head2 = modifier.femaleHeads[1];
 			} else {
-				i_206_ = this.femaleHead1 * -1705416443;
-				i_207_ = this.femaleHead2 * -1871546585;
+				head1 = this.femaleHead1 * -1705416443;
+				head2 = this.femaleHead2 * -1871546585;
 			}
-		} else if (class422 != null && null != class422.maleHeads) {
-			i_206_ = class422.maleHeads[0];
-			i_207_ = class422.maleHeads[1];
+		} else if (modifier != null && null != modifier.maleHeads) {
+			head1 = modifier.maleHeads[0];
+			head2 = modifier.maleHeads[1];
 		} else {
-			i_206_ = -603336817 * this.maleHead1;
-			i_207_ = this.maleHead2 * -613723223;
+			head1 = -603336817 * this.maleHead1;
+			head2 = this.maleHead2 * -613723223;
 		}
-		if (i_206_ == -1)
+		if (head1 == -1)
 			return null;
-		RSMesh class157 = RSMesh.decodeMesh((((ItemIndexLoader) (this.loader)).meshIndex), i_206_, 0);
-		if (class157.zoom < 13)
-			class157.upscale(2);
-		if (-1 != i_207_) {
-			RSMesh class157_208_ = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), i_207_, 0);
-			if (class157_208_.zoom < 13)
-				class157_208_.upscale(2);
-			RSMesh[] class157s = { class157, class157_208_ };
-			class157 = new RSMesh(class157s, 2);
+		RSMesh head1Mesh = RSMesh.decodeMesh((((ItemIndexLoader) (this.loader)).meshIndex), head1, 0);
+		if (head1Mesh.zoom < 13)
+			head1Mesh.upscale(2);
+		if (-1 != head2) {
+			RSMesh head2Mesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), head2, 0);
+			if (head2Mesh.zoom < 13)
+				head2Mesh.upscale(2);
+			RSMesh[] meshes = { head1Mesh, head2Mesh };
+			head1Mesh = new RSMesh(meshes, 2);
 		}
 		if (null != this.originalColors) {
-			short[] is;
-			if (null != class422 && class422.modifiedColors != null)
-				is = class422.modifiedColors;
+			short[] colMod;
+			if (null != modifier && modifier.modifiedColors != null)
+				colMod = modifier.modifiedColors;
 			else
-				is = this.modifiedColors;
+				colMod = this.modifiedColors;
 			for (int i_209_ = 0; i_209_ < this.originalColors.length; i_209_++)
-				class157.recolor(this.originalColors[i_209_], is[i_209_]);
+				head1Mesh.recolor(this.originalColors[i_209_], colMod[i_209_]);
 		}
 		if (this.originalTextures != null) {
-			short[] is;
-			if (class422 != null && null != class422.modifiedTextures)
-				is = class422.modifiedTextures;
+			short[] texMod;
+			if (modifier != null && null != modifier.modifiedTextures)
+				texMod = modifier.modifiedTextures;
 			else
-				is = this.modifiedTextures;
+				texMod = this.modifiedTextures;
 			for (int i_210_ = 0; i_210_ < this.originalTextures.length; i_210_++)
-				class157.retexture(this.originalTextures[i_210_], is[i_210_]);
+				head1Mesh.retexture(this.originalTextures[i_210_], texMod[i_210_]);
 		}
-		return class157;
+		return head1Mesh;
 	}
 
 	void generateLend(ItemDefinitions class425_217_, ItemDefinitions class425_218_, int i) {

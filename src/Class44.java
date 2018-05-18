@@ -44,7 +44,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < 5; i++) {
-				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray421[i], 0, 16711935)))
+				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i], 0, 16711935)))
 					bool = false;
 			}
 		}
@@ -87,7 +87,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_12_ = 0; i_12_ < ((Class44) this).anIntArray427.length; i_12_++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray427[i_12_], 0, 16711935))
+				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i_12_], 0, 16711935))
 					bool = false;
 			}
 		}
@@ -128,7 +128,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i_17_ = 0; i_17_ < 5; i_17_++) {
-				if (((Class44) this).anIntArray421[i_17_] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray421[i_17_], 0, 16711935)))
+				if (((Class44) this).anIntArray421[i_17_] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i_17_], 0, 16711935)))
 					bool = false;
 			}
 		}
@@ -204,7 +204,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < ((Class44) this).anIntArray427.length; i++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray427[i], 0, 16711935))
+				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i], 0, 16711935))
 					bool = false;
 			}
 		}
@@ -275,7 +275,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < 5; i++) {
-				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray421[i], 0, 16711935)))
+				if (((Class44) this).anIntArray421[i] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i], 0, 16711935)))
 					bool = false;
 			}
 		}
@@ -288,7 +288,7 @@ public class Class44 implements Interface46 {
 		boolean bool = true;
 		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
 			for (int i = 0; i < ((Class44) this).anIntArray427.length; i++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.method5688(((Class44) this).anIntArray427[i], 0, 16711935))
+				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i], 0, 16711935))
 					bool = false;
 			}
 		}

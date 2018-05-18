@@ -45,7 +45,7 @@ public class Class523 {
 		((Class523) this).aClass317_6956 = class317;
 		if (null != ((Class523) this).aClass317_6956) {
 			int i = ((Class523) this).aClass317_6956.containersCount(-738745647) - 1;
-			SharedConfigsType.aClass120_1475.method2078(-1584727313);
+			SharedConfigsType.aClass120_1475.filesPerContainer(-1584727313);
 			((Class523) this).aClass317_6956.filesCount(i, -812236501);
 		}
 		Class96_Sub10_Sub1.method15554(class317_1_, class317_2_, 2, -1736051925);

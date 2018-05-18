@@ -168,7 +168,7 @@ public class Class525 {
 	public final boolean method11230(int i) {
 		if (-2110999235 * ((Class525) this).anInt6970 == -1)
 			return true;
-		return (((Class515) ((Class525) this).aClass515_6973).aClass317_5889.method5688(-2110999235 * ((Class525) this).anInt6970, 0, 16711935));
+		return (((Class515) ((Class525) this).aClass515_6973).aClass317_5889.load(-2110999235 * ((Class525) this).anInt6970, 0, 16711935));
 	}
 
 	void method11231(RsByteBuffer class282_sub35) {
@@ -606,7 +606,7 @@ public class Class525 {
 	public final boolean method11242() {
 		if (-2110999235 * ((Class525) this).anInt6970 == -1)
 			return true;
-		return (((Class515) ((Class525) this).aClass515_6973).aClass317_5889.method5688(-2110999235 * ((Class525) this).anInt6970, 0, 16711935));
+		return (((Class515) ((Class525) this).aClass515_6973).aClass317_5889.load(-2110999235 * ((Class525) this).anInt6970, 0, 16711935));
 	}
 
 	static void method11243(int i) {

@@ -27,7 +27,7 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.anInt1521, i, -1498386951));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498386951));
 		}
 		class228 = new Class228();
 		((Class228) class228).aClass210_2850 = this;
@@ -75,7 +75,7 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.anInt1521, i, -1498305941));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498305941));
 		}
 		class228 = new Class228();
 		((Class228) class228).aClass210_2850 = this;
@@ -90,7 +90,7 @@ public class Class210 {
 	public Class210(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class210) this).aClass317_2666 = class317_2_;
 		((Class210) this).aClass317_2665 = class317;
-		((Class210) this).aClass317_2665.filesCount((-71319279 * (SharedConfigsType.aClass120_1509.anInt1521)), -512720264);
+		((Class210) this).aClass317_2665.filesCount((-71319279 * (SharedConfigsType.aClass120_1509.id)), -512720264);
 	}
 
 	public void method3608(int i) {

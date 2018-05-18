@@ -203,7 +203,7 @@ public final class Index {
 		if (!method5603(i_36_, 16711680))
 			return false;
 		int i_37_ = (((ReferenceTable) this.referencetable).namedFiles[i_36_].method865(GraphicalRenderer.method8696(string_35_, -316679725), -1542672707));
-		return method5688(i_36_, i_37_, 16711935);
+		return load(i_36_, i_37_, 16711935);
 	}
 
 	public boolean method5628(String string, int i) {
@@ -440,11 +440,11 @@ public final class Index {
 		if (!method5635((byte) 1))
 			return false;
 		if (1 == (((ReferenceTable) this.referencetable).fileLengths).length)
-			return method5688(0, i, 16711935);
+			return load(0, i, 16711935);
 		if (!method5603(i, 16711680))
 			return false;
 		if (((ReferenceTable) this.referencetable).fileLengths[i] == 1)
-			return method5688(i, 0, 16711935);
+			return load(i, 0, 16711935);
 		throw new RuntimeException();
 	}
 
@@ -469,7 +469,7 @@ public final class Index {
 		}
 	}
 
-	public synchronized boolean method5688(int i, int i_154_, int i_155_) {
+	public synchronized boolean load(int i, int i_154_, int i_155_) {
 		if (!fileExists(i, i_154_, -1834383347))
 			return false;
 		if (this.files[i] != null && this.files[i][i_154_] != null)

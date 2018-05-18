@@ -22,7 +22,7 @@ public class Class394 {
 			return class405;
 		byte[] is;
 		synchronized (((Class394) this).aClass317_4784) {
-			is = (((Class394) this).aClass317_4784.getFile(-71319279 * SharedConfigsType.aClass120_1510.anInt1521, i, -1270537898));
+			is = (((Class394) this).aClass317_4784.getFile(-71319279 * SharedConfigsType.aClass120_1510.id, i, -1270537898));
 		}
 		class405 = new Class405();
 		if (null != is)
@@ -54,7 +54,7 @@ public class Class394 {
 	public Class394(Game class486, Language class495, Index class317) {
 		((Class394) this).aClass317_4784 = class317;
 		if (null != ((Class394) this).aClass317_4784)
-			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.anInt1521, -774524494)) * -476997773;
+			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.id, -774524494)) * -476997773;
 		else
 			anInt4785 = 0;
 	}

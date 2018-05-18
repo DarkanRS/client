@@ -25,7 +25,7 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.anInt1521) * -71319279), i, -1690915964);
+			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.id) * -71319279), i, -1690915964);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
@@ -64,7 +64,7 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.anInt1521) * -71319279), i, -2114490634);
+			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.id) * -71319279), i, -2114490634);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
@@ -85,7 +85,7 @@ public class Class211 {
 			return class227;
 		byte[] is;
 		synchronized (((Class211) this).aClass317_2671) {
-			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.anInt1521) * -71319279), i, -2082817514);
+			is = ((Class211) this).aClass317_2671.getFile(((SharedConfigsType.aClass120_1511.id) * -71319279), i, -2082817514);
 		}
 		class227 = new Class227();
 		((Class227) class227).aClass211_2788 = this;
@@ -105,7 +105,7 @@ public class Class211 {
 
 	public Class211(Game class486, Language class495, Index class317, Class526 class526) {
 		((Class211) this).aClass317_2671 = class317;
-		((Class211) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.aClass120_1511.anInt1521)), 357148056);
+		((Class211) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.aClass120_1511.id)), 357148056);
 		((Class211) this).aClass526_2672 = class526;
 	}
 

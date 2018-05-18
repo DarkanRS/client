@@ -58,7 +58,7 @@ public class Class282_Sub30 extends Node {
 			int i_10_ = i_7_;
 			boolean bool_11_ = false;
 			for (int i_12_ = 0; i_12_ < is.length; i_12_++) {
-				if (is[i_12_] != -1 && !Class119.aClass426_1463.getItemDefinitions(is[i_12_], 1950538416).method7096(bool, null, -763899504))
+				if (is[i_12_] != -1 && !Class119.aClass426_1463.getItemDefinitions(is[i_12_], 1950538416).bodyMeshesReady(bool, null, -763899504))
 					bool_11_ = true;
 			}
 			if (bool_11_)
@@ -66,7 +66,7 @@ public class Class282_Sub30 extends Node {
 			RSMesh[] class157s = new RSMesh[is.length];
 			for (int i_13_ = 0; i_13_ < is.length; i_13_++) {
 				if (is[i_13_] != -1)
-					class157s[i_13_] = Class119.aClass426_1463.getItemDefinitions(is[i_13_], 584500075).method7097(bool, null, 2085001887);
+					class157s[i_13_] = Class119.aClass426_1463.getItemDefinitions(is[i_13_], 584500075).getBodyMesh(bool, null, 2085001887);
 			}
 			if (null != class227 && class227.anIntArrayArray2802 != null) {
 				for (int i_14_ = 0; i_14_ < class227.anIntArrayArray2802.length; i_14_++) {
@@ -417,7 +417,7 @@ public class Class282_Sub30 extends Node {
 			int i_69_ = i_66_;
 			boolean bool_70_ = false;
 			for (int i_71_ = 0; i_71_ < is.length; i_71_++) {
-				if (is[i_71_] != -1 && !Class119.aClass426_1463.getItemDefinitions(is[i_71_], 927290338).method7096(bool, null, 1048076416))
+				if (is[i_71_] != -1 && !Class119.aClass426_1463.getItemDefinitions(is[i_71_], 927290338).bodyMeshesReady(bool, null, 1048076416))
 					bool_70_ = true;
 			}
 			if (bool_70_)
@@ -425,7 +425,7 @@ public class Class282_Sub30 extends Node {
 			RSMesh[] class157s = new RSMesh[is.length];
 			for (int i_72_ = 0; i_72_ < is.length; i_72_++) {
 				if (is[i_72_] != -1)
-					class157s[i_72_] = Class119.aClass426_1463.getItemDefinitions(is[i_72_], 1368194180).method7097(bool, null, 1891500048);
+					class157s[i_72_] = Class119.aClass426_1463.getItemDefinitions(is[i_72_], 1368194180).getBodyMesh(bool, null, 1891500048);
 			}
 			if (null != class227 && class227.anIntArrayArray2802 != null) {
 				for (int i_73_ = 0; i_73_ < class227.anIntArrayArray2802.length; i_73_++) {

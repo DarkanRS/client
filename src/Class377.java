@@ -11,7 +11,7 @@ public class Class377 implements IndexLoader {
 	public Class377(Game class486, Language class495, Index class317) {
 		((Class377) this).aClass317_4518 = class317;
 		if (((Class377) this).aClass317_4518 != null)
-			anInt4519 = (((Class377) this).aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.anInt1521 * -71319279, -1550492065)) * -517376561;
+			anInt4519 = (((Class377) this).aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.id * -71319279, -1550492065)) * -517376561;
 		else
 			anInt4519 = 0;
 	}
@@ -25,7 +25,7 @@ public class Class377 implements IndexLoader {
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.anInt1521) * -71319279), i, -1881668825);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i, -1881668825);
 		}
 		class372 = new Class372();
 		if (is != null)
@@ -45,7 +45,7 @@ public class Class377 implements IndexLoader {
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.anInt1521) * -71319279), i, -1550617517);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i, -1550617517);
 		}
 		class372 = new Class372();
 		if (is != null)
@@ -83,7 +83,7 @@ public class Class377 implements IndexLoader {
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.anInt1521) * -71319279), i, -1766902086);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i, -1766902086);
 		}
 		class372 = new Class372();
 		if (is != null)

@@ -167,7 +167,7 @@ public class ItemIndexLoader implements IndexLoader {
 		((ItemIndexLoader) this).meshIndex = class317_16_;
 		if (((ItemIndexLoader) this).fs19 != null) {
 			int i = ((ItemIndexLoader) this).fs19.containersCount(-1865229040) - 1;
-			maxItemsCount = (i * SharedConfigsType.ITEM_DEFINITIONS.method2078(-1077198554) + ((ItemIndexLoader) this).fs19.filesCount(i, -1891673686)) * -230207835;
+			maxItemsCount = (i * SharedConfigsType.ITEM_DEFINITIONS.filesPerContainer(-1077198554) + ((ItemIndexLoader) this).fs19.filesCount(i, -1891673686)) * -230207835;
 		} else
 			maxItemsCount = 0;
 		if (Game.runescape == ((ItemIndexLoader) this).game)

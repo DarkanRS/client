@@ -363,7 +363,7 @@ public class Class478 {
 		synchronized (((Class474) ((Class478) this).aClass474_5651).aClass317_5611) {
 			for (int i_31_ = 0; i_31_ < anIntArrayArray5637.length; i_31_++) {
 				for (int i_32_ = 0; i_32_ < anIntArrayArray5637[i_31_].length; i_32_++)
-					bool &= (((Class474) ((Class478) this).aClass474_5651).aClass317_5611.method5688(anIntArrayArray5637[i_31_][i_32_], 0, 16711935));
+					bool &= (((Class474) ((Class478) this).aClass474_5651).aClass317_5611.load(anIntArrayArray5637[i_31_][i_32_], 0, 16711935));
 			}
 		}
 		return bool;
@@ -1125,7 +1125,7 @@ public class Class478 {
 			for (int i_110_ = 0; i_110_ < aByteArray5636.length; i_110_++) {
 				if (i == aByteArray5636[i_110_]) {
 					for (int i_111_ = 0; i_111_ < anIntArrayArray5637[i_110_].length; i_111_++) {
-						if (!((Class474) ((Class478) this).aClass474_5651).aClass317_5611.method5688(anIntArrayArray5637[i_110_][i_111_], 0, 16711935))
+						if (!((Class474) ((Class478) this).aClass474_5651).aClass317_5611.load(anIntArrayArray5637[i_110_][i_111_], 0, 16711935))
 							bool = false;
 					}
 				}
@@ -1160,7 +1160,7 @@ public class Class478 {
 			for (int i_113_ = 0; i_113_ < aByteArray5636.length; i_113_++) {
 				if (i == aByteArray5636[i_113_]) {
 					for (int i_114_ = 0; i_114_ < anIntArrayArray5637[i_113_].length; i_114_++) {
-						if (!((Class474) ((Class478) this).aClass474_5651).aClass317_5611.method5688(anIntArrayArray5637[i_113_][i_114_], 0, 16711935))
+						if (!((Class474) ((Class478) this).aClass474_5651).aClass317_5611.load(anIntArrayArray5637[i_113_][i_114_], 0, 16711935))
 							bool = false;
 					}
 				}
@@ -1176,7 +1176,7 @@ public class Class478 {
 		synchronized (((Class474) ((Class478) this).aClass474_5651).aClass317_5611) {
 			for (int i = 0; i < anIntArrayArray5637.length; i++) {
 				for (int i_115_ = 0; i_115_ < anIntArrayArray5637[i].length; i_115_++)
-					bool &= (((Class474) ((Class478) this).aClass474_5651).aClass317_5611.method5688(anIntArrayArray5637[i][i_115_], 0, 16711935));
+					bool &= (((Class474) ((Class478) this).aClass474_5651).aClass317_5611.load(anIntArrayArray5637[i][i_115_], 0, 16711935));
 			}
 		}
 		return bool;
@@ -1650,7 +1650,7 @@ public class Class478 {
 		synchronized (((Class474) ((Class478) this).aClass474_5651).aClass317_5611) {
 			for (int i = 0; i < anIntArrayArray5637.length; i++) {
 				for (int i_159_ = 0; i_159_ < anIntArrayArray5637[i].length; i_159_++)
-					bool &= (((Class474) ((Class478) this).aClass474_5651).aClass317_5611.method5688(anIntArrayArray5637[i][i_159_], 0, 16711935));
+					bool &= (((Class474) ((Class478) this).aClass474_5651).aClass317_5611.load(anIntArrayArray5637[i][i_159_], 0, 16711935));
 			}
 		}
 		return bool;
@@ -1858,7 +1858,7 @@ public class Class478 {
 			for (int i_183_ = 0; i_183_ < aByteArray5636.length; i_183_++) {
 				if (i == aByteArray5636[i_183_]) {
 					for (int i_184_ = 0; i_184_ < anIntArrayArray5637[i_183_].length; i_184_++) {
-						if (!((Class474) ((Class478) this).aClass474_5651).aClass317_5611.method5688(anIntArrayArray5637[i_183_][i_184_], 0, 16711935))
+						if (!((Class474) ((Class478) this).aClass474_5651).aClass317_5611.load(anIntArrayArray5637[i_183_][i_184_], 0, 16711935))
 							bool = false;
 					}
 				}

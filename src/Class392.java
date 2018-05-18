@@ -9,7 +9,7 @@ public class Class392 implements IndexLoader {
 
 	public Class392(Game class486, Language class495, Index class317) {
 		((Class392) this).aClass317_4779 = class317;
-		((Class392) this).aClass317_4779.filesCount((SharedConfigsType.aClass120_1492.anInt1521) * -71319279, -2082829167);
+		((Class392) this).aClass317_4779.filesCount((SharedConfigsType.aClass120_1492.id) * -71319279, -2082829167);
 	}
 
 	public Class282_Sub50_Sub18 method6735(int i, short i_0_) {
@@ -21,7 +21,7 @@ public class Class392 implements IndexLoader {
 			return class282_sub50_sub18;
 		byte[] is;
 		synchronized (((Class392) this).aClass317_4779) {
-			is = (((Class392) this).aClass317_4779.getFile(-71319279 * SharedConfigsType.aClass120_1492.anInt1521, i, -1196710306));
+			is = (((Class392) this).aClass317_4779.getFile(-71319279 * SharedConfigsType.aClass120_1492.id, i, -1196710306));
 		}
 		class282_sub50_sub18 = new Class282_Sub50_Sub18();
 		if (null != is)
@@ -41,7 +41,7 @@ public class Class392 implements IndexLoader {
 			return class282_sub50_sub18;
 		byte[] is;
 		synchronized (((Class392) this).aClass317_4779) {
-			is = (((Class392) this).aClass317_4779.getFile(-71319279 * SharedConfigsType.aClass120_1492.anInt1521, i, -2029707345));
+			is = (((Class392) this).aClass317_4779.getFile(-71319279 * SharedConfigsType.aClass120_1492.id, i, -2029707345));
 		}
 		class282_sub50_sub18 = new Class282_Sub50_Sub18();
 		if (null != is)
@@ -61,7 +61,7 @@ public class Class392 implements IndexLoader {
 			return class282_sub50_sub18;
 		byte[] is;
 		synchronized (((Class392) this).aClass317_4779) {
-			is = (((Class392) this).aClass317_4779.getFile(-71319279 * SharedConfigsType.aClass120_1492.anInt1521, i, -1696807675));
+			is = (((Class392) this).aClass317_4779.getFile(-71319279 * SharedConfigsType.aClass120_1492.id, i, -1696807675));
 		}
 		class282_sub50_sub18 = new Class282_Sub50_Sub18();
 		if (null != is)

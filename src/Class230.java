@@ -38,7 +38,7 @@ public class Class230 implements IndexLoader {
 		((Class230) this).aClass317_2858 = class317;
 		if (((Class230) this).aClass317_2858 != null) {
 			int i = ((Class230) this).aClass317_2858.containersCount(-1585425152) - 1;
-			SharedConfigsType.aClass120_1477.method2078(-689743414);
+			SharedConfigsType.aClass120_1477.filesPerContainer(-689743414);
 			((Class230) this).aClass317_2858.filesCount(i, -1063022229);
 		}
 	}

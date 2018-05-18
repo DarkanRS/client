@@ -22,7 +22,7 @@ public class AttributesDefaultsLoader {
 	public AttributesDefaultsLoader(Game class486, Language class495, Index class317) {
 		((AttributesDefaultsLoader) this).aClass317_5027 = class317;
 		if (((AttributesDefaultsLoader) this).aClass317_5027 != null)
-			((AttributesDefaultsLoader) this).aClass317_5027.filesCount(SharedConfigsType.aClass120_1474.anInt1521 * -71319279, -1867131018);
+			((AttributesDefaultsLoader) this).aClass317_5027.filesCount(SharedConfigsType.aClass120_1474.id * -71319279, -1867131018);
 	}
 
 	public AttributeDefault method7069(int i, byte i_1_) {
@@ -34,7 +34,7 @@ public class AttributesDefaultsLoader {
 			return class437;
 		byte[] is;
 		synchronized (((AttributesDefaultsLoader) this).aClass317_5027) {
-			is = (((AttributesDefaultsLoader) this).aClass317_5027.getFile(-71319279 * SharedConfigsType.aClass120_1474.anInt1521, i, -1430082721));
+			is = (((AttributesDefaultsLoader) this).aClass317_5027.getFile(-71319279 * SharedConfigsType.aClass120_1474.id, i, -1430082721));
 		}
 		class437 = new AttributeDefault();
 		if (null != is)

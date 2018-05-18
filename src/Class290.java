@@ -28,7 +28,7 @@ public class Class290 {
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.anInt1521) * -71319279), i, -1577143133);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.id) * -71319279), i, -1577143133);
 		}
 		class198 = new Class198();
 		((Class198) class198).aClass290_2437 = this;
@@ -53,7 +53,7 @@ public class Class290 {
 		((Class290) this).aClass229_3447 = new SoftCache(20);
 		((Class290) this).aClass317_3448 = class317_1_;
 		((Class290) this).aClass317_3450 = class317;
-		((Class290) this).aClass317_3450.filesCount((-71319279 * (SharedConfigsType.aClass120_1512.anInt1521)), -732818997);
+		((Class290) this).aClass317_3450.filesCount((-71319279 * (SharedConfigsType.aClass120_1512.id)), -732818997);
 	}
 
 	public void method5104() {
@@ -83,7 +83,7 @@ public class Class290 {
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.anInt1521) * -71319279), i, -1579560172);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.id) * -71319279), i, -1579560172);
 		}
 		class198 = new Class198();
 		((Class198) class198).aClass290_2437 = this;
@@ -140,7 +140,7 @@ public class Class290 {
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.anInt1521) * -71319279), i, -1811756886);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.aClass120_1512.id) * -71319279), i, -1811756886);
 		}
 		class198 = new Class198();
 		((Class198) class198).aClass290_2437 = this;

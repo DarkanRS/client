@@ -23,7 +23,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.anInt1521, i, -1999870087));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.id, i, -1999870087));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -42,7 +42,7 @@ public class Class479 {
 
 	public Class479(Game class486, Language class495, Index class317) {
 		((Class479) this).aClass317_5713 = class317;
-		((Class479) this).aClass317_5713.filesCount((SharedConfigsType.aClass120_1504.anInt1521) * -71319279, 345702944);
+		((Class479) this).aClass317_5713.filesCount((SharedConfigsType.aClass120_1504.id) * -71319279, 345702944);
 	}
 
 	public void method8027() {
@@ -60,7 +60,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.anInt1521, i, -1393062609));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.id, i, -1393062609));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -80,7 +80,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.anInt1521, i, -1675981481));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.id, i, -1675981481));
 		}
 		class481 = new Class481();
 		if (null != is)
@@ -130,7 +130,7 @@ public class Class479 {
 			return class481;
 		byte[] is;
 		synchronized (((Class479) this).aClass317_5713) {
-			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.anInt1521, i, -1932524788));
+			is = (((Class479) this).aClass317_5713.getFile(-71319279 * SharedConfigsType.aClass120_1504.id, i, -1932524788));
 		}
 		class481 = new Class481();
 		if (null != is)

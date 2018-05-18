@@ -221,7 +221,7 @@ public class PlayerAppearance {
 				if (0 != (i_32_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && null != ((PlayerAppearance) this).aClass422Array2922[i_31_])
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_31_];
-					if (!class426.getItemDefinitions(i_32_ & 0x3fffffff, 1739128278).method7098(aBool2929, class422, -2079589755))
+					if (!class426.getItemDefinitions(i_32_ & 0x3fffffff, 1739128278).headMeshesReady(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_32_ & ~0x7fffffff) != 0 && !class31.method800(i_32_ & 0x3fffffff, 1687930397).method900(36053))
 					bool = true;
@@ -236,7 +236,7 @@ public class PlayerAppearance {
 				if (0 != (i_35_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && ((PlayerAppearance) this).aClass422Array2922[i_34_] != null)
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_34_];
-					RSMesh class157 = class426.getItemDefinitions(i_35_ & 0x3fffffff, 1215609914).method7130(aBool2929, class422, -1646472294);
+					RSMesh class157 = class426.getItemDefinitions(i_35_ & 0x3fffffff, 1215609914).getHeadMesh(aBool2929, class422, -1646472294);
 					if (null != class157)
 						class157s[i_33_++] = class157;
 				} else if ((i_35_ & ~0x7fffffff) != 0) {
@@ -378,7 +378,7 @@ public class PlayerAppearance {
 				if ((i_59_ & 0x40000000) != 0) {
 					if (!bool_60_ && ((PlayerAppearance) this).aClass422Array2922 != null && ((PlayerAppearance) this).aClass422Array2922[i_58_] != null)
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_58_];
-					if (!class426.getItemDefinitions(i_59_ & 0x3fffffff, 865631179).method7096(aBool2929, class422, -1830991961))
+					if (!class426.getItemDefinitions(i_59_ & 0x3fffffff, 865631179).bodyMeshesReady(aBool2929, class422, -1830991961))
 						bool_57_ = true;
 				} else if (0 != (i_59_ & ~0x7fffffff) && !class31.method800(i_59_ & 0x3fffffff, 1122652918).method898(-965716691))
 					bool_57_ = true;
@@ -400,7 +400,7 @@ public class PlayerAppearance {
 					if (0 != (i_64_ & 0x40000000)) {
 						if (!bool_65_ && ((PlayerAppearance) this).aClass422Array2922 != null && null != (((PlayerAppearance) this).aClass422Array2922[i_63_]))
 							class422 = ((PlayerAppearance) this).aClass422Array2922[i_63_];
-						RSMesh class157 = class426.getItemDefinitions(i_64_ & 0x3fffffff, 489246789).method7097(aBool2929, class422, 710746900);
+						RSMesh class157 = class426.getItemDefinitions(i_64_ & 0x3fffffff, 489246789).getBodyMesh(aBool2929, class422, 710746900);
 						if (null != class157)
 							class157s[i_63_] = class157;
 					} else if (0 != (i_64_ & ~0x7fffffff)) {
@@ -622,7 +622,7 @@ public class PlayerAppearance {
 				if (0 != (i_101_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && (null != ((PlayerAppearance) this).aClass422Array2922[i_100_]))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_100_];
-					if (!class426.getItemDefinitions(i_101_ & 0x3fffffff, 1561532574).method7098(aBool2929, class422, -2079589755))
+					if (!class426.getItemDefinitions(i_101_ & 0x3fffffff, 1561532574).headMeshesReady(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_101_ & ~0x7fffffff) != 0 && !class31.method800(i_101_ & 0x3fffffff, -175439170).method900(36053))
 					bool = true;
@@ -637,7 +637,7 @@ public class PlayerAppearance {
 				if (0 != (i_104_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && (((PlayerAppearance) this).aClass422Array2922[i_103_] != null))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_103_];
-					RSMesh class157 = class426.getItemDefinitions(i_104_ & 0x3fffffff, 1998841702).method7130(aBool2929, class422, -1198252688);
+					RSMesh class157 = class426.getItemDefinitions(i_104_ & 0x3fffffff, 1998841702).getHeadMesh(aBool2929, class422, -1198252688);
 					if (null != class157)
 						class157s[i_102_++] = class157;
 				} else if ((i_104_ & ~0x7fffffff) != 0) {
@@ -926,7 +926,7 @@ public class PlayerAppearance {
 				if ((i_139_ & 0x40000000) != 0) {
 					if (!bool_140_ && ((PlayerAppearance) this).aClass422Array2922 != null && (((PlayerAppearance) this).aClass422Array2922[i_138_] != null))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_138_];
-					if (!class426.getItemDefinitions(i_139_ & 0x3fffffff, 566233318).method7096(aBool2929, class422, -1608263178))
+					if (!class426.getItemDefinitions(i_139_ & 0x3fffffff, 566233318).bodyMeshesReady(aBool2929, class422, -1608263178))
 						bool_137_ = true;
 				} else if (0 != (i_139_ & ~0x7fffffff) && !class31.method800(i_139_ & 0x3fffffff, 1541066475).method898(-965716691))
 					bool_137_ = true;
@@ -948,7 +948,7 @@ public class PlayerAppearance {
 					if (0 != (i_144_ & 0x40000000)) {
 						if (!bool_145_ && ((PlayerAppearance) this).aClass422Array2922 != null && null != (((PlayerAppearance) this).aClass422Array2922[i_143_]))
 							class422 = ((PlayerAppearance) this).aClass422Array2922[i_143_];
-						RSMesh class157 = (class426.getItemDefinitions(i_144_ & 0x3fffffff, 1530062981).method7097(aBool2929, class422, -1159162700));
+						RSMesh class157 = (class426.getItemDefinitions(i_144_ & 0x3fffffff, 1530062981).getBodyMesh(aBool2929, class422, -1159162700));
 						if (null != class157)
 							class157s[i_143_] = class157;
 					} else if (0 != (i_144_ & ~0x7fffffff)) {
@@ -1157,7 +1157,7 @@ public class PlayerAppearance {
 				if ((i_178_ & 0x40000000) != 0) {
 					if (!bool_179_ && ((PlayerAppearance) this).aClass422Array2922 != null && (((PlayerAppearance) this).aClass422Array2922[i_177_] != null))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_177_];
-					if (!class426.getItemDefinitions(i_178_ & 0x3fffffff, 1464385022).method7096(aBool2929, class422, 1517001593))
+					if (!class426.getItemDefinitions(i_178_ & 0x3fffffff, 1464385022).bodyMeshesReady(aBool2929, class422, 1517001593))
 						bool_176_ = true;
 				} else if (0 != (i_178_ & ~0x7fffffff) && !class31.method800(i_178_ & 0x3fffffff, 1409187819).method898(-965716691))
 					bool_176_ = true;
@@ -1179,7 +1179,7 @@ public class PlayerAppearance {
 					if (0 != (i_183_ & 0x40000000)) {
 						if (!bool_184_ && ((PlayerAppearance) this).aClass422Array2922 != null && null != (((PlayerAppearance) this).aClass422Array2922[i_182_]))
 							class422 = ((PlayerAppearance) this).aClass422Array2922[i_182_];
-						RSMesh class157 = (class426.getItemDefinitions(i_183_ & 0x3fffffff, 447022467).method7097(aBool2929, class422, -2055931554));
+						RSMesh class157 = (class426.getItemDefinitions(i_183_ & 0x3fffffff, 447022467).getBodyMesh(aBool2929, class422, -2055931554));
 						if (null != class157)
 							class157s[i_182_] = class157;
 					} else if (0 != (i_183_ & ~0x7fffffff)) {
@@ -1311,7 +1311,7 @@ public class PlayerAppearance {
 				if (0 != (i_204_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && (null != ((PlayerAppearance) this).aClass422Array2922[i_203_]))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_203_];
-					if (!class426.getItemDefinitions(i_204_ & 0x3fffffff, 933779783).method7098(aBool2929, class422, -2079589755))
+					if (!class426.getItemDefinitions(i_204_ & 0x3fffffff, 933779783).headMeshesReady(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_204_ & ~0x7fffffff) != 0 && !class31.method800(i_204_ & 0x3fffffff, 2089431789).method900(36053))
 					bool = true;
@@ -1326,7 +1326,7 @@ public class PlayerAppearance {
 				if (0 != (i_207_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && (((PlayerAppearance) this).aClass422Array2922[i_206_] != null))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_206_];
-					RSMesh class157 = class426.getItemDefinitions(i_207_ & 0x3fffffff, 1264260029).method7130(aBool2929, class422, -1890606891);
+					RSMesh class157 = class426.getItemDefinitions(i_207_ & 0x3fffffff, 1264260029).getHeadMesh(aBool2929, class422, -1890606891);
 					if (null != class157)
 						class157s[i_205_++] = class157;
 				} else if ((i_207_ & ~0x7fffffff) != 0) {
@@ -1375,7 +1375,7 @@ public class PlayerAppearance {
 				if (0 != (i_215_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && (null != ((PlayerAppearance) this).aClass422Array2922[i_214_]))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_214_];
-					if (!class426.getItemDefinitions(i_215_ & 0x3fffffff, 1258535408).method7098(aBool2929, class422, -2079589755))
+					if (!class426.getItemDefinitions(i_215_ & 0x3fffffff, 1258535408).headMeshesReady(aBool2929, class422, -2079589755))
 						bool = true;
 				} else if ((i_215_ & ~0x7fffffff) != 0 && !class31.method800(i_215_ & 0x3fffffff, 745327343).method900(36053))
 					bool = true;
@@ -1390,7 +1390,7 @@ public class PlayerAppearance {
 				if (0 != (i_218_ & 0x40000000)) {
 					if (null != ((PlayerAppearance) this).aClass422Array2922 && (((PlayerAppearance) this).aClass422Array2922[i_217_] != null))
 						class422 = ((PlayerAppearance) this).aClass422Array2922[i_217_];
-					RSMesh class157 = class426.getItemDefinitions(i_218_ & 0x3fffffff, 393457333).method7130(aBool2929, class422, -1413121212);
+					RSMesh class157 = class426.getItemDefinitions(i_218_ & 0x3fffffff, 393457333).getHeadMesh(aBool2929, class422, -1413121212);
 					if (null != class157)
 						class157s[i_216_++] = class157;
 				} else if ((i_218_ & ~0x7fffffff) != 0) {

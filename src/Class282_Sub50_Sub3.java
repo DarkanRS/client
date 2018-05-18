@@ -18,7 +18,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 	boolean method14716(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -37,7 +37,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 	boolean method14717(Index class317, Interface22 interface22, int i) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i_0_ = 0; i_0_ < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i_0_++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i_0_]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i_0_]), 16711935))
 					return false;
 			}
 		} else {
@@ -195,7 +195,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 	boolean method14720(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -259,7 +259,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 	boolean method14721(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -278,7 +278,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 	boolean method14722(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {

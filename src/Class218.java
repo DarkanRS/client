@@ -61,7 +61,7 @@ public class Class218 {
 			return class220;
 		byte[] is;
 		synchronized (((Class218) this).aClass317_2705) {
-			is = ((Class218) this).aClass317_2705.getFile(((SharedConfigsType.aClass120_1483.anInt1521) * -71319279), i, -1668017415);
+			is = ((Class218) this).aClass317_2705.getFile(((SharedConfigsType.aClass120_1483.id) * -71319279), i, -1668017415);
 		}
 		class220 = new Class220();
 		class220.anInt2753 = 443844459 * i;
@@ -84,7 +84,7 @@ public class Class218 {
 			return class220;
 		byte[] is;
 		synchronized (((Class218) this).aClass317_2705) {
-			is = ((Class218) this).aClass317_2705.getFile(((SharedConfigsType.aClass120_1483.anInt1521) * -71319279), i, -1362506596);
+			is = ((Class218) this).aClass317_2705.getFile(((SharedConfigsType.aClass120_1483.id) * -71319279), i, -1362506596);
 		}
 		class220 = new Class220();
 		class220.anInt2753 = 443844459 * i;
@@ -106,7 +106,7 @@ public class Class218 {
 	public Class218(Game class486, Language class495, Index class317, Index class317_5_) {
 		((Class218) this).aClass317_2705 = class317;
 		((Class218) this).aClass317_2703 = class317_5_;
-		((Class218) this).aClass317_2705.filesCount((-71319279 * (SharedConfigsType.aClass120_1483.anInt1521)), -945990147);
+		((Class218) this).aClass317_2705.filesCount((-71319279 * (SharedConfigsType.aClass120_1483.id)), -945990147);
 	}
 
 	public void method3703(int i, int i_6_) {

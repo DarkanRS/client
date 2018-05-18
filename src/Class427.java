@@ -20,7 +20,7 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.anInt1521) * -71319279), i, -1171405866);
+			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i, -1171405866);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;
@@ -44,7 +44,7 @@ public class Class427 {
 	public Class427(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class427) this).aClass317_5120 = class317;
 		((Class427) this).aClass317_5118 = class317_2_;
-		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.anInt1521) * -71319279, 1541409828);
+		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.id) * -71319279, 1541409828);
 		Math.random();
 		Math.random();
 		Math.random();
@@ -139,7 +139,7 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.anInt1521) * -71319279), i, -1952476258);
+			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i, -1952476258);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;

@@ -217,7 +217,7 @@ public class Class406 {
 		((Class406) this).aClass317_4842 = class317_3_;
 		if (null != ((Class406) this).aClass317_4839) {
 			int i = ((Class406) this).aClass317_4839.containersCount(-941048817) - 1;
-			SharedConfigsType.aClass120_1467.method2078(-443341258);
+			SharedConfigsType.aClass120_1467.filesPerContainer(-443341258);
 			((Class406) this).aClass317_4839.filesCount(i, 1971095578);
 		}
 		if (((Class406) this).aClass486_4844 == Game.runescape)

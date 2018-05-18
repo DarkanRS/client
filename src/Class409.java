@@ -164,7 +164,7 @@ public class Class409 {
 			boolean bool_19_ = false;
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_20_ = 0; i_20_ < is_18_.length; i_20_++) {
-					if (-1 != is_18_[i_20_] && !((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(is_18_[i_20_], 0, 16711935))
+					if (-1 != is_18_[i_20_] && !((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(is_18_[i_20_], 0, 16711935))
 						bool_19_ = true;
 				}
 			}
@@ -332,7 +332,7 @@ public class Class409 {
 			boolean bool = false;
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_43_ = 0; i_43_ < is.length; i_43_++) {
-					if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(is[i_43_], 0, 16711935))
+					if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(is[i_43_], 0, 16711935))
 						bool = true;
 				}
 			}
@@ -397,7 +397,7 @@ public class Class409 {
 		int[] is = anIntArray4859;
 		for (int i_50_ = 0; i_50_ < is.length; i_50_++) {
 			int i_51_ = is[i_50_];
-			if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(i_51_, 0, 16711935))
+			if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(i_51_, 0, 16711935))
 				bool = false;
 		}
 		return bool;
@@ -419,7 +419,7 @@ public class Class409 {
 		int[] is = anIntArray4859;
 		for (int i = 0; i < is.length; i++) {
 			int i_53_ = is[i];
-			if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(i_53_, 0, 16711935))
+			if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(i_53_, 0, 16711935))
 				bool = false;
 		}
 		return bool;
@@ -985,7 +985,7 @@ public class Class409 {
 			boolean bool_119_ = false;
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_120_ = 0; i_120_ < is_118_.length; i_120_++) {
-					if (-1 != is_118_[i_120_] && !((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(is_118_[i_120_], 0, 16711935))
+					if (-1 != is_118_[i_120_] && !((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(is_118_[i_120_], 0, 16711935))
 						bool_119_ = true;
 				}
 			}
@@ -1174,7 +1174,7 @@ public class Class409 {
 			boolean bool_149_ = false;
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_150_ = 0; i_150_ < is_148_.length; i_150_++) {
-					if (-1 != is_148_[i_150_] && !((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(is_148_[i_150_], 0, 16711935))
+					if (-1 != is_148_[i_150_] && !((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(is_148_[i_150_], 0, 16711935))
 						bool_149_ = true;
 				}
 			}
@@ -1342,7 +1342,7 @@ public class Class409 {
 			boolean bool = false;
 			synchronized (((Class406) ((Class409) this).aClass406_4855).aClass317_4842) {
 				for (int i_172_ = 0; i_172_ < is.length; i_172_++) {
-					if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(is[i_172_], 0, 16711935))
+					if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(is[i_172_], 0, 16711935))
 						bool = true;
 				}
 			}
@@ -1598,7 +1598,7 @@ public class Class409 {
 		int[] is = anIntArray4859;
 		for (int i = 0; i < is.length; i++) {
 			int i_202_ = is[i];
-			if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.method5688(i_202_, 0, 16711935))
+			if (!((Class406) ((Class409) this).aClass406_4855).aClass317_4842.load(i_202_, 0, 16711935))
 				bool = false;
 		}
 		return bool;

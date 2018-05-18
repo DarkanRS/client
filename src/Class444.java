@@ -45,7 +45,7 @@ public class Class444 {
 		((Class444) this).aClass317_5378 = class317;
 		if (null != ((Class444) this).aClass317_5378) {
 			int i = ((Class444) this).aClass317_5378.containersCount(-1259843972) - 1;
-			SharedConfigsType.aClass120_1471.method2078(-613744571);
+			SharedConfigsType.aClass120_1471.filesPerContainer(-613744571);
 			((Class444) this).aClass317_5378.filesCount(i, -826629788);
 		}
 	}

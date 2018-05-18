@@ -17,7 +17,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.anInt1521, i, -1972523322));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1972523322));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -40,7 +40,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.anInt1521, i, -1901150108));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1901150108));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -81,7 +81,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.anInt1521, i, -1679639365));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1679639365));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -110,7 +110,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.anInt1521, i, -1865732659));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1865732659));
 		}
 		class531 = new Class531();
 		((Class531) class531).aClass536_7062 = this;
@@ -150,7 +150,7 @@ public class Class536 {
 
 	public Class536(Game class486, Language class495, Index class317) {
 		((Class536) this).aClass317_7095 = class317;
-		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (SharedConfigsType.aClass120_1514.anInt1521)), -2042690113) * -919202315);
+		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (SharedConfigsType.aClass120_1514.id)), -2042690113) * -919202315);
 	}
 
 	static final void method11486(CS2Executor class527, byte i) {

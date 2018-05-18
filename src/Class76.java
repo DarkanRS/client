@@ -199,7 +199,7 @@ public class Class76 {
 			Class282_Sub13.aClass519_7588 = new Class519(Class520.aClass317_5935);
 		}
 		if (Class387.aClass387_4704 == Class474.aClass387_5621) {
-			if (-1878247413 * Class58.aClass529_527.anInt7034 != -1 && !Class110.aClass317_1106.method5688((-1878247413 * (Class58.aClass529_527.anInt7034)), 0, 16711935)) {
+			if (-1878247413 * Class58.aClass529_527.anInt7034 != -1 && !Class110.aClass317_1106.load((-1878247413 * (Class58.aClass529_527.anInt7034)), 0, 16711935)) {
 				return 99;
 			}
 			Class321.anInterface22_3731 = new Class323(NamedFileReference.aClass317_412, AttributeDefault.aClass317_5340, Class211.aClass317_2673);
@@ -285,7 +285,7 @@ public class Class76 {
 			boolean bool = true;
 			for (int i_18_ = 0; i_18_ < (Class468_Sub8.aClass98Array7889[Class58.aClass529_527.anInt7036 * 376713291].aClass118Array998).length; i_18_++) {
 				Class118 class118 = (Class468_Sub8.aClass98Array7889[376713291 * Class58.aClass529_527.anInt7036].aClass118Array998[i_18_]);
-				if (-2131393857 * class118.anInt1268 == 5 && 985215637 * class118.anInt1320 != -1 && !Class211.aClass317_2673.method5688((class118.anInt1320 * 985215637), 0, 16711935)) {
+				if (-2131393857 * class118.anInt1268 == 5 && 985215637 * class118.anInt1320 != -1 && !Class211.aClass317_2673.load((class118.anInt1320 * 985215637), 0, 16711935)) {
 					bool = false;
 				}
 			}

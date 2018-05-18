@@ -35,7 +35,7 @@ public class Class288 {
 
 	public Class288(Game class486, Language class495, Index class317) {
 		((Class288) this).aClass317_3436 = class317;
-		((Class288) this).aClass317_3436.filesCount((-71319279 * (SharedConfigsType.aClass120_1469.anInt1521)), -1821241871);
+		((Class288) this).aClass317_3436.filesCount((-71319279 * (SharedConfigsType.aClass120_1469.id)), -1821241871);
 	}
 
 	public void method5071(int i) {
@@ -53,7 +53,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.anInt1521, i, -1168931806));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1168931806));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -73,7 +73,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.anInt1521, i, -1884209588));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1884209588));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -93,7 +93,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.anInt1521, i, -1684955859));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1684955859));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -113,7 +113,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.anInt1521, i, -1465415322));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1465415322));
 		}
 		class207 = new Class207();
 		if (is != null)
@@ -133,7 +133,7 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.anInt1521, i, -1597785812));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1597785812));
 		}
 		class207 = new Class207();
 		if (is != null)

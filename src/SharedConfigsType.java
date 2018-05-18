@@ -34,7 +34,7 @@ public class SharedConfigsType {
 	public static SharedConfigsType aClass120_1492;
 	public static SharedConfigsType ITEM_DEFINITIONS;
 	public static SharedConfigsType aClass120_1494;
-	int anInt1495;
+	int fileIdBitShift;
 	public static SharedConfigsType aClass120_1496;
 	public static SharedConfigsType aClass120_1497;
 	public static SharedConfigsType aClass120_1498;
@@ -60,7 +60,7 @@ public class SharedConfigsType {
 	static SharedConfigsType aClass120_1518;
 	static SharedConfigsType aClass120_1519;
 	static SharedConfigsType aClass120_1520;
-	public int anInt1521;
+	public int id;
 	public static SharedConfigsType aClass120_1522;
 
 	SharedConfigsType(int i) {
@@ -68,32 +68,20 @@ public class SharedConfigsType {
 	}
 
 	SharedConfigsType(int i, int i_0_) {
-		anInt1521 = -982036495 * i;
-		((SharedConfigsType) this).anInt1495 = 1490949057 * i_0_;
+		id = -982036495 * i;
+		((SharedConfigsType) this).fileIdBitShift = 1490949057 * i_0_;
 	}
 
-	public int method2078(int i) {
-		return 1 << 854326337 * ((SharedConfigsType) this).anInt1495;
+	public int filesPerContainer(int i) {
+		return 1 << 854326337 * ((SharedConfigsType) this).fileIdBitShift;
 	}
 
 	public int containerId(int i, int i_1_) {
-		return i >>> 854326337 * ((SharedConfigsType) this).anInt1495;
+		return i >>> 854326337 * ((SharedConfigsType) this).fileIdBitShift;
 	}
 
 	public int fileId(int i, int i_2_) {
-		return i & (1 << ((SharedConfigsType) this).anInt1495 * 854326337) - 1;
-	}
-
-	public int method2081(int i) {
-		return i >>> 854326337 * ((SharedConfigsType) this).anInt1495;
-	}
-
-	public int method2082() {
-		return 1 << 854326337 * ((SharedConfigsType) this).anInt1495;
-	}
-
-	public int method2083() {
-		return 1 << 854326337 * ((SharedConfigsType) this).anInt1495;
+		return i & (1 << ((SharedConfigsType) this).fileIdBitShift * 854326337) - 1;
 	}
 
 	public static boolean method2084(Index class317, Index class317_3_, Index class317_4_, Class282_Sub15_Sub2 class282_sub15_sub2, Class253 class253, int i) {
@@ -106,10 +94,6 @@ public class SharedConfigsType {
 		for (int i_5_ = 0; i_5_ < 16; i_5_++)
 			Class453.anIntArray5449[i_5_] = 255;
 		return true;
-	}
-
-	public int method2085(int i) {
-		return i >>> 854326337 * ((SharedConfigsType) this).anInt1495;
 	}
 
 	static {
@@ -169,26 +153,6 @@ public class SharedConfigsType {
 		aClass120_1512 = new SharedConfigsType(72);
 		aClass120_1519 = new SharedConfigsType(73);
 		aClass120_1520 = new SharedConfigsType(74);
-	}
-
-	public int method2086(int i) {
-		return i & (1 << ((SharedConfigsType) this).anInt1495 * 854326337) - 1;
-	}
-
-	public int method2087(int i) {
-		return i & (1 << ((SharedConfigsType) this).anInt1495 * 854326337) - 1;
-	}
-
-	public int method2088(int i) {
-		return i & (1 << ((SharedConfigsType) this).anInt1495 * 854326337) - 1;
-	}
-
-	public int method2089(int i) {
-		return i & (1 << ((SharedConfigsType) this).anInt1495 * 854326337) - 1;
-	}
-
-	public int method2090(int i) {
-		return i & (1 << ((SharedConfigsType) this).anInt1495 * 854326337) - 1;
 	}
 
 	static final void method2091(CS2Executor class527, byte i) {

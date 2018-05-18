@@ -30,7 +30,7 @@ public class Class242 {
 	public Class242(Game class486, Language class495, Index class317, boolean bool) {
 		((Class242) this).aClass317_2979 = class317;
 		if (((Class242) this).aClass317_2979 != null)
-			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.filesCount(-71319279 * SharedConfigsType.aClass120_1498.anInt1521, -1883638938)) * 1089704477;
+			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.filesCount(-71319279 * SharedConfigsType.aClass120_1498.id, -1883638938)) * 1089704477;
 		else
 			((Class242) this).anInt2978 = 0;
 		if (bool) {
@@ -38,7 +38,7 @@ public class Class242 {
 			for (int i = 0; i < 526499893 * ((Class242) this).anInt2978; i++) {
 				byte[] is;
 				synchronized (((Class242) this).aClass317_2979) {
-					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.anInt1521, i, -1290272928));
+					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.id, i, -1290272928));
 				}
 				Class240 class240 = new Class240();
 				if (null != is)

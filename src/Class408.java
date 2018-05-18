@@ -17,7 +17,7 @@ public class Class408 {
 			return class415;
 		byte[] is;
 		synchronized (((Class408) this).aClass317_4852) {
-			is = (((Class408) this).aClass317_4852.getFile(-71319279 * SharedConfigsType.aClass120_1482.anInt1521, i, -1848554770));
+			is = (((Class408) this).aClass317_4852.getFile(-71319279 * SharedConfigsType.aClass120_1482.id, i, -1848554770));
 		}
 		class415 = new Class415();
 		if (null != is)
@@ -37,7 +37,7 @@ public class Class408 {
 			return class415;
 		byte[] is;
 		synchronized (((Class408) this).aClass317_4852) {
-			is = (((Class408) this).aClass317_4852.getFile(-71319279 * SharedConfigsType.aClass120_1482.anInt1521, i, -2097990028));
+			is = (((Class408) this).aClass317_4852.getFile(-71319279 * SharedConfigsType.aClass120_1482.id, i, -2097990028));
 		}
 		class415 = new Class415();
 		if (null != is)
@@ -50,6 +50,6 @@ public class Class408 {
 
 	public Class408(Game class486, Language class495, Index class317) {
 		((Class408) this).aClass317_4852 = class317;
-		anInt4851 = (((Class408) this).aClass317_4852.filesCount(((SharedConfigsType.aClass120_1482.anInt1521) * -71319279), 2023918393) * 2109871343);
+		anInt4851 = (((Class408) this).aClass317_4852.filesCount(((SharedConfigsType.aClass120_1482.id) * -71319279), 2023918393) * 2109871343);
 	}
 }

@@ -25,7 +25,7 @@ public class Class31 implements IndexLoader {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.anInt1521)), i, -1429017309);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i, -1429017309);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -70,7 +70,7 @@ public class Class31 implements IndexLoader {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.anInt1521)), i, -1720300705);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i, -1720300705);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -85,7 +85,7 @@ public class Class31 implements IndexLoader {
 	public Class31(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class31) this).aClass317_358 = class317;
 		((Class31) this).aClass317_359 = class317_2_;
-		((Class31) this).aClass317_358.filesCount(-71319279 * (SharedConfigsType.aClass120_1466.anInt1521), 409432994);
+		((Class31) this).aClass317_358.filesCount(-71319279 * (SharedConfigsType.aClass120_1466.id), 409432994);
 	}
 
 	public void method806() {
@@ -103,7 +103,7 @@ public class Class31 implements IndexLoader {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.anInt1521)), i, -1398702478);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i, -1398702478);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;

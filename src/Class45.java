@@ -17,7 +17,7 @@ public class Class45 {
 			return class38;
 		byte[] is;
 		synchronized (((Class45) this).aClass317_433) {
-			is = ((Class45) this).aClass317_433.getFile(((SharedConfigsType.aClass120_1489.anInt1521) * -71319279), i, -2121078318);
+			is = ((Class45) this).aClass317_433.getFile(((SharedConfigsType.aClass120_1489.id) * -71319279), i, -2121078318);
 		}
 		class38 = new Class38();
 		if (is != null)
@@ -61,7 +61,7 @@ public class Class45 {
 			return class38;
 		byte[] is;
 		synchronized (((Class45) this).aClass317_433) {
-			is = ((Class45) this).aClass317_433.getFile(((SharedConfigsType.aClass120_1489.anInt1521) * -71319279), i, -1886940547);
+			is = ((Class45) this).aClass317_433.getFile(((SharedConfigsType.aClass120_1489.id) * -71319279), i, -1886940547);
 		}
 		class38 = new Class38();
 		if (is != null)
@@ -81,7 +81,7 @@ public class Class45 {
 			return class38;
 		byte[] is;
 		synchronized (((Class45) this).aClass317_433) {
-			is = ((Class45) this).aClass317_433.getFile(((SharedConfigsType.aClass120_1489.anInt1521) * -71319279), i, -1753855933);
+			is = ((Class45) this).aClass317_433.getFile(((SharedConfigsType.aClass120_1489.id) * -71319279), i, -1753855933);
 		}
 		class38 = new Class38();
 		if (is != null)
@@ -112,7 +112,7 @@ public class Class45 {
 
 	public Class45(Game class486, Language class495, Index class317) {
 		((Class45) this).aClass317_433 = class317;
-		((Class45) this).aClass317_433.filesCount((SharedConfigsType.aClass120_1489.anInt1521) * -71319279, -422485706);
+		((Class45) this).aClass317_433.filesCount((SharedConfigsType.aClass120_1489.id) * -71319279, -422485706);
 	}
 
 	public void method924() {
