@@ -92,7 +92,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1621727040);
 		class59.method1146((byte) 1);
-		Class59.aClass229_533.method3856(class59, (long) i);
+		Class59.aClass229_533.put(class59, (long) i);
 		return class59;
 	}
 

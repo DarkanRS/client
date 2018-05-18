@@ -3,7 +3,7 @@
  */
 
 public class Class13 {
-	static Class229 aClass229_127 = new Class229(32);
+	static SoftCache aClass229_127 = new SoftCache(32);
 	static int anInt128;
 	static String[] aStringArray129;
 	static int anInt130;
@@ -18,7 +18,7 @@ public class Class13 {
 		}
 	}
 
-	public static Class528 method490(Class505 class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, Class528 class528, int i_4_, int i_5_, int i_6_, int i_7_, Class456 class456) {
+	public static MeshRasterizer method490(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, MeshRasterizer class528, int i_4_, int i_5_, int i_6_, int i_7_, Class456 class456) {
 		if (null == class528)
 			return null;
 		int i_8_ = 2055;
@@ -27,9 +27,9 @@ public class Class13 {
 			i_8_ &= ~0x200;
 		}
 		long l = (((long) i_5_ << 48) + (((long) i_4_ << 32) + (long) (i_3_ + (i_6_ << 16) + (i_7_ << 24))));
-		Class528 class528_9_;
+		MeshRasterizer class528_9_;
 		synchronized (aClass229_127) {
-			class528_9_ = (Class528) aClass229_127.method3865(l);
+			class528_9_ = (MeshRasterizer) aClass229_127.method3865(l);
 		}
 		if (class528_9_ == null || class505.method8452(class528_9_.m(), i_8_) != 0) {
 			if (null != class528_9_)
@@ -47,7 +47,7 @@ public class Class13 {
 				i_10_ = 21;
 			int i_11_ = 3;
 			int[] is = { 64, 96, 128 };
-			Class157 class157 = new Class157(i_11_ * i_10_ + 1, 2 * (i_10_ * i_11_) - i_10_, 0);
+			RSMesh class157 = new RSMesh(i_11_ * i_10_ + 1, 2 * (i_10_ * i_11_) - i_10_, 0);
 			int i_12_ = class157.method2662(0, 0, 0);
 			int[][] is_13_ = new int[i_11_][i_10_];
 			for (int i_14_ = 0; i_14_ < i_11_; i_14_++) {
@@ -74,9 +74,9 @@ public class Class13 {
 					}
 				}
 			}
-			class528_9_ = class505.method8451(class157, i_8_, 1257126031 * anInt128, 64, 768);
+			class528_9_ = class505.createMeshRasterizer(class157, i_8_, 1257126031 * anInt128, 64, 768);
 			synchronized (aClass229_127) {
-				aClass229_127.method3856(class528_9_, l);
+				aClass229_127.put(class528_9_, l);
 			}
 		}
 		int i_27_ = class528.RA();
@@ -102,7 +102,7 @@ public class Class13 {
 		return class528_9_;
 	}
 
-	public static Class528 method491(Class505 class505, int i, int i_31_, int i_32_, int i_33_, int i_34_, Class528 class528, int i_35_, int i_36_, int i_37_, int i_38_, Class456 class456) {
+	public static MeshRasterizer method491(GraphicalRenderer class505, int i, int i_31_, int i_32_, int i_33_, int i_34_, MeshRasterizer class528, int i_35_, int i_36_, int i_37_, int i_38_, Class456 class456) {
 		if (null == class528)
 			return null;
 		int i_39_ = 2055;
@@ -111,9 +111,9 @@ public class Class13 {
 			i_39_ &= ~0x200;
 		}
 		long l = (((long) i_36_ << 48) + (((long) i_35_ << 32) + (long) (i_34_ + (i_37_ << 16) + (i_38_ << 24))));
-		Class528 class528_40_;
+		MeshRasterizer class528_40_;
 		synchronized (aClass229_127) {
-			class528_40_ = (Class528) aClass229_127.method3865(l);
+			class528_40_ = (MeshRasterizer) aClass229_127.method3865(l);
 		}
 		if (class528_40_ == null || class505.method8452(class528_40_.m(), i_39_) != 0) {
 			if (null != class528_40_)
@@ -131,7 +131,7 @@ public class Class13 {
 				i_41_ = 21;
 			int i_42_ = 3;
 			int[] is = { 64, 96, 128 };
-			Class157 class157 = new Class157(i_42_ * i_41_ + 1, 2 * (i_41_ * i_42_) - i_41_, 0);
+			RSMesh class157 = new RSMesh(i_42_ * i_41_ + 1, 2 * (i_41_ * i_42_) - i_41_, 0);
 			int i_43_ = class157.method2662(0, 0, 0);
 			int[][] is_44_ = new int[i_42_][i_41_];
 			for (int i_45_ = 0; i_45_ < i_42_; i_45_++) {
@@ -158,9 +158,9 @@ public class Class13 {
 					}
 				}
 			}
-			class528_40_ = class505.method8451(class157, i_39_, 1257126031 * anInt128, 64, 768);
+			class528_40_ = class505.createMeshRasterizer(class157, i_39_, 1257126031 * anInt128, 64, 768);
 			synchronized (aClass229_127) {
-				aClass229_127.method3856(class528_40_, l);
+				aClass229_127.put(class528_40_, l);
 			}
 		}
 		int i_58_ = class528.RA();
@@ -279,7 +279,7 @@ public class Class13 {
 	static final void method505(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
 		int i_63_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_63_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_63_, (byte) 0);
 		if (!class437.aString5335.equals(string))
 			class118.method2000(i_63_, string, 2122573770);
 		else

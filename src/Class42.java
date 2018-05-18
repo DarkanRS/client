@@ -3,8 +3,8 @@
  */
 
 public class Class42 implements Interface2 {
-	Class160 aClass160_414;
-	Class317 aClass317_415;
+	NativeSprite aClass160_414;
+	Index aClass317_415;
 	Class357 aClass357_416;
 
 	public boolean method17() {
@@ -15,7 +15,7 @@ public class Class42 implements Interface2 {
 		((Class42) this).aClass160_414 = Class152.method2600(((Class42) this).aClass317_415, (-1847374165 * ((Class42) this).aClass357_416.anInt4124), -2075798412);
 	}
 
-	Class42(Class317 class317, Class357 class357) {
+	Class42(Index class317, Class357 class357) {
 		((Class42) this).aClass317_415 = class317;
 		((Class42) this).aClass357_416 = class357;
 	}

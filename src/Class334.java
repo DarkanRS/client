@@ -15,7 +15,7 @@ public class Class334 {
 	static final int anInt3892 = 16;
 	int anInt3893;
 	int anInt3894;
-	static Class160 aClass160_3895;
+	static NativeSprite aClass160_3895;
 	int anInt3896;
 	int anInt3897;
 	static final int anInt3898 = 24;
@@ -25,17 +25,17 @@ public class Class334 {
 	int anInt3902;
 	int anInt3903;
 	static final int anInt3904 = 24;
-	static Class528 aClass528_3905;
+	static MeshRasterizer aClass528_3905;
 	static final int anInt3906 = 192;
 	static final int anInt3907 = 128;
 	static final int anInt3908 = 13;
 	static final int anInt3909 = 0;
-	Class160 aClass160_3910;
+	NativeSprite aClass160_3910;
 	int anInt3911;
-	static Class160 aClass160_3912;
+	static NativeSprite aClass160_3912;
 	static final int anInt3913 = 512;
 
-	boolean method5937(Class505 class505, Class334 class334_0_) {
+	boolean method5937(GraphicalRenderer class505, Class334 class334_0_) {
 		return (((Class334) this).aClass160_3910 != null || method5942(class505, class334_0_));
 	}
 
@@ -84,8 +84,8 @@ public class Class334 {
 		return true;
 	}
 
-	void method5939(Class505 class505, Class334 class334_9_) {
-		Class157 class157 = Class157.method2689(Class282_Sub50_Sub11_Sub1.aClass317_10379, ((Class334) this).anInt3893, 0);
+	void method5939(GraphicalRenderer class505, Class334 class334_9_) {
+		RSMesh class157 = RSMesh.decodeMesh(Class282_Sub50_Sub11_Sub1.aClass317_10379, ((Class334) this).anInt3893, 0);
 		if (class157 != null) {
 			class505.qa(anIntArray3884);
 			class505.r(0, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902);
@@ -124,7 +124,7 @@ public class Class334 {
 			class505.IA(1.0F);
 			class505.m(((Class334) this).anInt3894, 1.0F, 1.0F, (float) i, (float) i_10_, (float) i_11_);
 			class157.method2671(((Class334) this).anInt3901 & 0x3fff, ((Class334) this).anInt3883 & 0x3fff, ((Class334) this).anInt3903 & 0x3fff);
-			Class528 class528 = class505.method8451(class157, 2048, 0, 64, 768);
+			MeshRasterizer class528 = class505.createMeshRasterizer(class157, 2048, 0, 64, 768);
 			int i_20_ = class528.ya() - class528.RA();
 			int i_21_ = class528.o() - class528.YA();
 			int i_22_ = i_20_ > i_21_ ? i_20_ : i_21_;
@@ -150,16 +150,16 @@ public class Class334 {
 		aClass160_3912 = null;
 	}
 
-	boolean method5941(Class505 class505, Class334 class334_26_) {
+	boolean method5941(GraphicalRenderer class505, Class334 class334_26_) {
 		return (((Class334) this).aClass160_3910 != null || method5942(class505, class334_26_));
 	}
 
-	boolean method5942(Class505 class505, Class334 class334_27_) {
+	boolean method5942(GraphicalRenderer class505, Class334 class334_27_) {
 		if (((Class334) this).aClass160_3910 == null) {
 			if (((Class334) this).anInt3887 == 0) {
 				if (Class247.anInterface22_3046.method139(((Class334) this).anInt3893, -725088114)) {
 					int[] is = (Class247.anInterface22_3046.method141(((Class334) this).anInt3893, 0.7F, ((Class334) this).anInt3902, ((Class334) this).anInt3902, false, 1606527906));
-					((Class334) this).aClass160_3910 = class505.method8549(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, -1804968029);
+					((Class334) this).aClass160_3910 = class505.createNativeSprite(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, -1804968029);
 				}
 			} else if (((Class334) this).anInt3887 == 2)
 				method5939(class505, class334_27_);
@@ -169,9 +169,9 @@ public class Class334 {
 		return ((Class334) this).aClass160_3910 != null;
 	}
 
-	static void method5943(Class505 class505) {
+	static void method5943(GraphicalRenderer class505) {
 		if (aClass528_3905 == null) {
-			Class157 class157 = new Class157(580, 1104, 1);
+			RSMesh class157 = new RSMesh(580, 1104, 1);
 			class157.method2664((short) 0, (short) 32767, (short) 0, (short) 1024, (short) 1024, (short) 1024, (byte) 0, (byte) 0, (byte) 0);
 			class157.method2662(0, 128, 0);
 			class157.method2662(0, -128, 0);
@@ -205,11 +205,11 @@ public class Class334 {
 			class157.anIntArray1991 = null;
 			class157.anIntArray2002 = null;
 			class157.aByteArray1977 = null;
-			aClass528_3905 = class505.method8451(class157, 51200, 33, 64, 768);
+			aClass528_3905 = class505.createMeshRasterizer(class157, 51200, 33, 64, 768);
 		}
 	}
 
-	void method5944(Class505 class505, Class334 class334_41_) {
+	void method5944(GraphicalRenderer class505, Class334 class334_41_) {
 		method5943(class505);
 		method5946(class505);
 		class505.qa(anIntArray3884);
@@ -244,7 +244,7 @@ public class Class334 {
 			i_43_ = i_43_ * i_48_ - i * i_47_ >> 14;
 			i = i_49_;
 		}
-		Class528 class528 = aClass528_3905.method11289((byte) 0, 51200, true);
+		MeshRasterizer class528 = aClass528_3905.method11289((byte) 0, 51200, true);
 		class528.W((short) 0, (short) ((Class334) this).anInt3893);
 		class505.IA(1.0F);
 		class505.m(16777215, 1.0F, 1.0F, (float) i, (float) i_42_, (float) i_43_);
@@ -271,7 +271,7 @@ public class Class334 {
 		class505.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 	}
 
-	void method5945(Class505 class505, Class334 class334_54_) {
+	void method5945(GraphicalRenderer class505, Class334 class334_54_) {
 		method5943(class505);
 		method5946(class505);
 		class505.qa(anIntArray3884);
@@ -306,7 +306,7 @@ public class Class334 {
 			i_56_ = i_56_ * i_61_ - i * i_60_ >> 14;
 			i = i_62_;
 		}
-		Class528 class528 = aClass528_3905.method11289((byte) 0, 51200, true);
+		MeshRasterizer class528 = aClass528_3905.method11289((byte) 0, 51200, true);
 		class528.W((short) 0, (short) ((Class334) this).anInt3893);
 		class505.IA(1.0F);
 		class505.m(16777215, 1.0F, 1.0F, (float) i, (float) i_55_, (float) i_56_);
@@ -333,7 +333,7 @@ public class Class334 {
 		class505.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 	}
 
-	static void method5946(Class505 class505) {
+	static void method5946(GraphicalRenderer class505) {
 		if (aClass160_3912 == null) {
 			int[] is = new int[16384];
 			int[] is_67_ = new int[16384];
@@ -358,14 +358,14 @@ public class Class334 {
 					is[i_70_ + i_72_] = is[i_70_ + i_74_] = is[i_71_ + i_72_] = is[i_71_ + i_74_] = 127 - i_76_ << 24 | 0xffffff;
 				}
 			}
-			aClass160_3912 = class505.method8549(is_67_, 0, 128, 128, 128, -1206625053);
-			aClass160_3895 = class505.method8549(is, 0, 128, 128, 128, 501003044);
+			aClass160_3912 = class505.createNativeSprite(is_67_, 0, 128, 128, 128, -1206625053);
+			aClass160_3895 = class505.createNativeSprite(is, 0, 128, 128, 128, 501003044);
 		}
 	}
 
-	static void method5947(Class505 class505) {
+	static void method5947(GraphicalRenderer class505) {
 		if (aClass528_3905 == null) {
-			Class157 class157 = new Class157(580, 1104, 1);
+			RSMesh class157 = new RSMesh(580, 1104, 1);
 			class157.method2664((short) 0, (short) 32767, (short) 0, (short) 1024, (short) 1024, (short) 1024, (byte) 0, (byte) 0, (byte) 0);
 			class157.method2662(0, 128, 0);
 			class157.method2662(0, -128, 0);
@@ -399,7 +399,7 @@ public class Class334 {
 			class157.anIntArray1991 = null;
 			class157.anIntArray2002 = null;
 			class157.aByteArray1977 = null;
-			aClass528_3905 = class505.method8451(class157, 51200, 33, 64, 768);
+			aClass528_3905 = class505.createMeshRasterizer(class157, 51200, 33, 64, 768);
 		}
 	}
 
@@ -408,7 +408,7 @@ public class Class334 {
 		aClass160_3912 = null;
 	}
 
-	void method5949(Class505 class505, int i, int i_90_, int i_91_, int i_92_, int i_93_, int i_94_, int i_95_, int i_96_, int i_97_, int i_98_) {
+	void method5949(GraphicalRenderer class505, int i, int i_90_, int i_91_, int i_92_, int i_93_, int i_94_, int i_95_, int i_96_, int i_97_, int i_98_) {
 		if (((Class334) this).aClass160_3910 != null) {
 			float[] fs = new float[3];
 			float f = (float) -(((Class334) this).anInt3889 - i_95_ << 16);
@@ -529,7 +529,7 @@ public class Class334 {
 		aClass160_3912 = null;
 	}
 
-	void method5954(Class505 class505, int i, int i_120_, int i_121_, int i_122_, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_) {
+	void method5954(GraphicalRenderer class505, int i, int i_120_, int i_121_, int i_122_, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_) {
 		if (((Class334) this).aClass160_3910 != null) {
 			float[] fs = new float[3];
 			float f = (float) -(((Class334) this).anInt3889 - i_125_ << 16);
@@ -550,7 +550,7 @@ public class Class334 {
 		}
 	}
 
-	void method5955(Class505 class505, int i, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_, int i_142_) {
+	void method5955(GraphicalRenderer class505, int i, int i_134_, int i_135_, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_, int i_142_) {
 		if (((Class334) this).aClass160_3910 != null) {
 			float[] fs = new float[3];
 			float f = (float) -(((Class334) this).anInt3889 - i_139_ << 16);
@@ -571,12 +571,12 @@ public class Class334 {
 		}
 	}
 
-	boolean method5956(Class505 class505, Class334 class334_148_) {
+	boolean method5956(GraphicalRenderer class505, Class334 class334_148_) {
 		if (((Class334) this).aClass160_3910 == null) {
 			if (((Class334) this).anInt3887 == 0) {
 				if (Class247.anInterface22_3046.method139(((Class334) this).anInt3893, -1283361248)) {
 					int[] is = (Class247.anInterface22_3046.method141(((Class334) this).anInt3893, 0.7F, ((Class334) this).anInt3902, ((Class334) this).anInt3902, false, -21767002));
-					((Class334) this).aClass160_3910 = class505.method8549(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, 422108219);
+					((Class334) this).aClass160_3910 = class505.createNativeSprite(is, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, ((Class334) this).anInt3902, 422108219);
 				}
 			} else if (((Class334) this).anInt3887 == 2)
 				method5939(class505, class334_148_);
@@ -586,7 +586,7 @@ public class Class334 {
 		return ((Class334) this).aClass160_3910 != null;
 	}
 
-	void method5957(Class505 class505, Class334 class334_149_) {
+	void method5957(GraphicalRenderer class505, Class334 class334_149_) {
 		method5943(class505);
 		method5946(class505);
 		class505.qa(anIntArray3884);
@@ -621,7 +621,7 @@ public class Class334 {
 			i_151_ = i_151_ * i_156_ - i * i_155_ >> 14;
 			i = i_157_;
 		}
-		Class528 class528 = aClass528_3905.method11289((byte) 0, 51200, true);
+		MeshRasterizer class528 = aClass528_3905.method11289((byte) 0, 51200, true);
 		class528.W((short) 0, (short) ((Class334) this).anInt3893);
 		class505.IA(1.0F);
 		class505.m(16777215, 1.0F, 1.0F, (float) i, (float) i_150_, (float) i_151_);
@@ -648,7 +648,7 @@ public class Class334 {
 		class505.r(anIntArray3884[0], anIntArray3884[1], anIntArray3884[2], anIntArray3884[3]);
 	}
 
-	void method5958(Class505 class505, Class334 class334_162_) {
+	void method5958(GraphicalRenderer class505, Class334 class334_162_) {
 		method5943(class505);
 		method5946(class505);
 		class505.qa(anIntArray3884);
@@ -683,7 +683,7 @@ public class Class334 {
 			i_164_ = i_164_ * i_169_ - i * i_168_ >> 14;
 			i = i_170_;
 		}
-		Class528 class528 = aClass528_3905.method11289((byte) 0, 51200, true);
+		MeshRasterizer class528 = aClass528_3905.method11289((byte) 0, 51200, true);
 		class528.W((short) 0, (short) ((Class334) this).anInt3893);
 		class505.IA(1.0F);
 		class505.m(16777215, 1.0F, 1.0F, (float) i, (float) i_163_, (float) i_164_);
@@ -724,7 +724,7 @@ public class Class334 {
 		((Class334) this).anInt3903 = i_183_;
 	}
 
-	static void method5959(Class505 class505) {
+	static void method5959(GraphicalRenderer class505) {
 		if (aClass160_3912 == null) {
 			int[] is = new int[16384];
 			int[] is_184_ = new int[16384];
@@ -749,12 +749,12 @@ public class Class334 {
 					is[i_187_ + i_189_] = is[i_187_ + i_191_] = is[i_188_ + i_189_] = is[i_188_ + i_191_] = 127 - i_193_ << 24 | 0xffffff;
 				}
 			}
-			aClass160_3912 = class505.method8549(is_184_, 0, 128, 128, 128, -755447497);
-			aClass160_3895 = class505.method8549(is, 0, 128, 128, 128, 1431162182);
+			aClass160_3912 = class505.createNativeSprite(is_184_, 0, 128, 128, 128, -755447497);
+			aClass160_3895 = class505.createNativeSprite(is, 0, 128, 128, 128, 1431162182);
 		}
 	}
 
-	static void method5960(Class505 class505) {
+	static void method5960(GraphicalRenderer class505) {
 		if (aClass160_3912 == null) {
 			int[] is = new int[16384];
 			int[] is_194_ = new int[16384];
@@ -779,8 +779,8 @@ public class Class334 {
 					is[i_197_ + i_199_] = is[i_197_ + i_201_] = is[i_198_ + i_199_] = is[i_198_ + i_201_] = 127 - i_203_ << 24 | 0xffffff;
 				}
 			}
-			aClass160_3912 = class505.method8549(is_194_, 0, 128, 128, 128, -2000853646);
-			aClass160_3895 = class505.method8549(is, 0, 128, 128, 128, -1474090863);
+			aClass160_3912 = class505.createNativeSprite(is_194_, 0, 128, 128, 128, -2000853646);
+			aClass160_3895 = class505.createNativeSprite(is, 0, 128, 128, 128, -1474090863);
 		}
 	}
 }

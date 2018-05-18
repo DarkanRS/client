@@ -42,7 +42,7 @@ public class Class417 {
 		class347 = new Class347();
 		if (null != is)
 			class347.method6163(new RsByteBuffer(is), i, (short) 257);
-		Class347.aClass229_4052.method3856(class347, (long) i);
+		Class347.aClass229_4052.put(class347, (long) i);
 		return class347;
 	}
 

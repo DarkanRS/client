@@ -3,10 +3,10 @@
  */
 
 public class Class210 {
-	Class229 aClass229_2664 = new Class229(20);
-	Class317 aClass317_2665;
-	Class317 aClass317_2666;
-	Class229 aClass229_2667 = new Class229(64);
+	SoftCache aClass229_2664 = new SoftCache(20);
+	Index aClass317_2665;
+	Index aClass317_2666;
+	SoftCache aClass229_2667 = new SoftCache(64);
 	public static int[] anIntArray2668;
 
 	public void method3602(int i, int i_0_) {
@@ -27,14 +27,14 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.getFile(-71319279 * Class120.aClass120_1509.anInt1521, i, -1498386951));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498386951));
 		}
 		class228 = new Class228();
 		((Class228) class228).aClass210_2850 = this;
 		if (is != null)
 			class228.method3837(new RsByteBuffer(is), 738101655);
 		synchronized (((Class210) this).aClass229_2667) {
-			((Class210) this).aClass229_2667.method3856(class228, (long) i);
+			((Class210) this).aClass229_2667.put(class228, (long) i);
 		}
 		return class228;
 	}
@@ -75,22 +75,22 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.getFile(-71319279 * Class120.aClass120_1509.anInt1521, i, -1498305941));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498305941));
 		}
 		class228 = new Class228();
 		((Class228) class228).aClass210_2850 = this;
 		if (is != null)
 			class228.method3837(new RsByteBuffer(is), 1313817347);
 		synchronized (((Class210) this).aClass229_2667) {
-			((Class210) this).aClass229_2667.method3856(class228, (long) i);
+			((Class210) this).aClass229_2667.put(class228, (long) i);
 		}
 		return class228;
 	}
 
-	public Class210(Class486 class486, Class495 class495, Class317 class317, Class317 class317_2_) {
+	public Class210(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class210) this).aClass317_2666 = class317_2_;
 		((Class210) this).aClass317_2665 = class317;
-		((Class210) this).aClass317_2665.method5624((-71319279 * (Class120.aClass120_1509.anInt1521)), -512720264);
+		((Class210) this).aClass317_2665.filesCount((-71319279 * (SharedConfigsType.aClass120_1509.id)), -512720264);
 	}
 
 	public void method3608(int i) {

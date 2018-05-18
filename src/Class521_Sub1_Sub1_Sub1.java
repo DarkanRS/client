@@ -3,14 +3,14 @@
  */
 
 public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
-	Class528 aClass528_10310;
+	MeshRasterizer aClass528_10310;
 	Class281 aClass281_10311;
 
-	boolean method13020(Class505 class505, int i, int i_0_) {
+	boolean method13020(GraphicalRenderer class505, int i, int i_0_) {
 		return false;
 	}
 
-	boolean method12983(Class505 class505, int i, int i_1_, int i_2_) {
+	boolean method12983(GraphicalRenderer class505, int i, int i_1_, int i_2_) {
 		return false;
 	}
 
@@ -30,7 +30,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	void method13013(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_3_, int i_4_, boolean bool, int i_5_) {
+	void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_3_, int i_4_, boolean bool, int i_5_) {
 		/* empty */
 	}
 
@@ -38,7 +38,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		/* empty */
 	}
 
-	Class285 method12990(Class505 class505, int i) {
+	Class285 method12990(GraphicalRenderer class505, int i) {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
@@ -60,7 +60,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	public Class200 method13019(Class505 class505) {
+	public Class200 method13019(GraphicalRenderer class505) {
 		return null;
 	}
 
@@ -74,11 +74,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return true;
 	}
 
-	void method12991(Class505 class505, int i) {
+	void method12991(GraphicalRenderer class505, int i) {
 		/* empty */
 	}
 
-	void method13023(Class505 class505) {
+	void method13023(GraphicalRenderer class505) {
 		/* empty */
 	}
 
@@ -96,7 +96,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
 	}
 
-	public Class200 method12992(Class505 class505, byte i) {
+	public Class200 method12992(GraphicalRenderer class505, byte i) {
 		return null;
 	}
 
@@ -104,7 +104,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
 	}
 
-	Class285 method13009(Class505 class505) {
+	Class285 method13009(GraphicalRenderer class505) {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
@@ -120,11 +120,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	public Class200 method12993(Class505 class505) {
+	public Class200 method12993(GraphicalRenderer class505) {
 		return null;
 	}
 
-	Class285 method12989(Class505 class505) {
+	Class285 method12989(GraphicalRenderer class505) {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
@@ -140,7 +140,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	void method13016(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_9_, int i_10_, boolean bool) {
+	void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_9_, int i_10_, boolean bool) {
 		/* empty */
 	}
 
@@ -156,7 +156,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	Class285 method13010(Class505 class505) {
+	Class285 method13010(GraphicalRenderer class505) {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
@@ -172,11 +172,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return null;
 	}
 
-	void method13012(Class505 class505) {
+	void method13012(GraphicalRenderer class505) {
 		/* empty */
 	}
 
-	public Class200 method13018(Class505 class505) {
+	public Class200 method13018(GraphicalRenderer class505) {
 		return null;
 	}
 

@@ -58,7 +58,7 @@ public class Class516 {
 
 	static void method8868(String string, byte i) {
 		client.aString7281 = string;
-		if (Class40.method867(-1769935536) != Class279.aClass279_3368) {
+		if (NamedFileReference.method867(-1769935536) != Class279.aClass279_3368) {
 			try {
 				String string_7_ = Class282_Sub44.anApplet8065.getParameter(Class358.aClass358_4158.aString4159);
 				String string_8_ = Class282_Sub44.anApplet8065.getParameter(Class358.aClass358_4144.aString4159);

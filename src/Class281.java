@@ -44,13 +44,13 @@ public class Class281 {
 		}
 	}
 
-	Class528 method4977(Class505 class505, int i) {
-		Class157 class157 = Class157.method2689(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
+	MeshRasterizer method4977(GraphicalRenderer class505, int i) {
+		RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
 		if (null == class157)
 			return null;
-		if (class157.anInt1986 < 13)
-			class157.method2679(2);
-		return class505.method8451(class157, 2048, anInt3376 * 44398085, 64, 768);
+		if (class157.zoom < 13)
+			class157.upscale(2);
+		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
 	}
 
 	public void method4978(Class206 class206, byte i) {
@@ -95,13 +95,13 @@ public class Class281 {
 		}
 	}
 
-	Class528 method4981(Class505 class505) {
-		Class157 class157 = Class157.method2689(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
+	MeshRasterizer method4981(GraphicalRenderer class505) {
+		RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
 		if (null == class157)
 			return null;
-		if (class157.anInt1986 < 13)
-			class157.method2679(2);
-		return class505.method8451(class157, 2048, anInt3376 * 44398085, 64, 768);
+		if (class157.zoom < 13)
+			class157.upscale(2);
+		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
 	}
 
 	public void method4982(Class206 class206) {
@@ -146,7 +146,7 @@ public class Class281 {
 		}
 	}
 
-	public Class281(Class505 class505, RsByteBuffer class282_sub35, int i) {
+	public Class281(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i) {
 		((Class281) this).anInt3372 = i * 1946115623;
 		((Class281) this).anInt3374 = class282_sub35.method13094(1207140670) * 1284995493;
 		((Class281) this).anIntArray3375 = new int[1443022381 * ((Class281) this).anInt3374];

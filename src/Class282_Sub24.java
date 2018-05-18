@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub24 extends Class282 {
+public class Class282_Sub24 extends Node {
 	int anInt7684;
 	int anInt7685;
 	float aFloat7686;

@@ -3,17 +3,17 @@
  */
 
 public class Class492 {
-	static SwitchMap aClass465_5774 = new SwitchMap(4);
+	static IterableNodeMap aClass465_5774 = new IterableNodeMap(4);
 	static final int anInt5775 = 4096;
 	static Class502 aClass502_5776 = new Class502();
-	public static Class327_Sub1[] aClass327_Sub1Array5777;
+	public static JS5GrabWorker[] aClass327_Sub1Array5777;
 
 	public static void method8247(int i) {
 		Class282_Sub37 class282_sub37 = (Class282_Sub37) aClass465_5774.method7754((long) i);
 		if (null != class282_sub37) {
 			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 19);
 			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, -93907801);
-			class282_sub37.method4991(-371378792);
+			class282_sub37.unlink(-371378792);
 		}
 	}
 
@@ -70,7 +70,7 @@ public class Class492 {
 		if (null != class282_sub37) {
 			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 121);
 			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, -402888978);
-			class282_sub37.method4991(-371378792);
+			class282_sub37.unlink(-371378792);
 		}
 	}
 

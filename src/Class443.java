@@ -18,7 +18,7 @@ public class Class443 {
 	long[] aLongArray5373;
 	long[] aLongArray5374;
 	byte[] aByteArray5375 = new byte[32];
-	public static Class313 aClass313_5376;
+	public static JS5LocalRequester aClass313_5376;
 
 	void method7404() {
 		int i = 0;
@@ -634,7 +634,7 @@ public class Class443 {
 				Runtime runtime = Runtime.getRuntime();
 				int i_85_ = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L);
 				Class209.method3598(new StringBuilder().append("").append(i_85_).toString(), -1847953573);
-				Class203.method3359(-1275511493);
+				JS5CacheFile.method3359(-1275511493);
 				Class357_Sub1.method12565(-1890847709);
 				for (int i_86_ = 0; i_86_ < 10; i_86_++)
 					System.gc();
@@ -685,7 +685,7 @@ public class Class443 {
 				client.aClass257_7353.method4547((byte) -47);
 			}
 		} catch (Exception exception) {
-			Class209.method3598(Class433.aClass433_5159.method7273(Class223.aClass495_2772, -1843715069), -915823010);
+			Class209.method3598(Message.aClass433_5159.translate(Class223.aClass495_2772, -1843715069), -915823010);
 		}
 	}
 

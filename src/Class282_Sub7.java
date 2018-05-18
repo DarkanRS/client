@@ -2,11 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub7 extends Class282 {
-	SwitchMap aClass465_7521;
+public class Class282_Sub7 extends Node {
+	IterableNodeMap aClass465_7521;
 	byte[] aByteArray7522;
 
-	static Class282_Sub7 method12164(Class317 class317, int i, int i_0_) {
+	static Class282_Sub7 method12164(Index class317, int i, int i_0_) {
 		byte[] is = class317.getFile(i, i_0_, -1604623759);
 		if (is == null)
 			return null;
@@ -283,7 +283,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12165() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
+			((Class282_Sub7) this).aClass465_7521 = new IterableNodeMap(16);
 			int[] is = new int[16];
 			int[] is_68_ = new int[16];
 			int[] is_69_ = is;
@@ -345,7 +345,7 @@ public class Class282_Sub7 extends Class282 {
 		}
 	}
 
-	static Class282_Sub7 method12166(Class317 class317, int i, int i_84_) {
+	static Class282_Sub7 method12166(Index class317, int i, int i_84_) {
 		byte[] is = class317.getFile(i, i_84_, -1341469097);
 		if (is == null)
 			return null;
@@ -362,7 +362,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12169() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
+			((Class282_Sub7) this).aClass465_7521 = new IterableNodeMap(16);
 			int[] is = new int[16];
 			int[] is_85_ = new int[16];
 			int[] is_86_ = is;
@@ -426,7 +426,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12170() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
+			((Class282_Sub7) this).aClass465_7521 = new IterableNodeMap(16);
 			int[] is = new int[16];
 			int[] is_101_ = new int[16];
 			int[] is_102_ = is;
@@ -490,7 +490,7 @@ public class Class282_Sub7 extends Class282 {
 
 	void method12171() {
 		if (((Class282_Sub7) this).aClass465_7521 == null) {
-			((Class282_Sub7) this).aClass465_7521 = new SwitchMap(16);
+			((Class282_Sub7) this).aClass465_7521 = new IterableNodeMap(16);
 			int[] is = new int[16];
 			int[] is_117_ = new int[16];
 			int[] is_118_ = is;
@@ -556,7 +556,7 @@ public class Class282_Sub7 extends Class282 {
 		((Class282_Sub7) this).aClass465_7521 = null;
 	}
 
-	static Class282_Sub7 method12173(Class317 class317, int i, int i_133_) {
+	static Class282_Sub7 method12173(Index class317, int i, int i_133_) {
 		byte[] is = class317.getFile(i, i_133_, -1972665688);
 		if (is == null)
 			return null;

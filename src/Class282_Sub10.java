@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public final class Class282_Sub10 extends Class282 {
+public final class Class282_Sub10 extends Node {
 	public static final int anInt7539 = 4;
 	public static final int anInt7540 = 2;
 	public int anInt7541;

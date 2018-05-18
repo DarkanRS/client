@@ -2,11 +2,11 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class518 {
+public class AnimationDefinitions {
 	public int anInt5907;
 	Class523 aClass523_5908;
 	public int anInt5909;
-	SwitchMap aClass465_5910;
+	IterableNodeMap aClass465_5910;
 	public int[] anIntArray5911;
 	public int[] anIntArray5912;
 	public int[][] anIntArrayArray5913;
@@ -29,9 +29,9 @@ public class Class518 {
 	public static int anInt5930;
 
 	public String method11129(int i, String string, int i_0_) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return string;
-		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub47)
 			return string;
 		return (String) class282_sub47.anObject8068;
@@ -125,25 +125,25 @@ public class Class518 {
 				anIntArray5919[i_18_] = class282_sub35.readUnsignedShort();
 			} else if (249 == i) {
 				int i_19_ = class282_sub35.readUnsignedByte();
-				if (((Class518) this).aClass465_5910 == null) {
+				if (((AnimationDefinitions) this).aClass465_5910 == null) {
 					int i_20_ = Class323.nextPowerOfTwo(i_19_, 1720003752);
-					((Class518) this).aClass465_5910 = new SwitchMap(i_20_);
+					((AnimationDefinitions) this).aClass465_5910 = new IterableNodeMap(i_20_);
 				}
 				for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
 					int i_22_ = class282_sub35.read24BitUnsignedInteger((short) 24364);
-					Class282 class282;
+					Node class282;
 					if (bool)
 						class282 = new Class282_Sub47(class282_sub35.readString(-487209290));
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
-					((Class518) this).aClass465_5910.method7765(class282, (long) i_22_);
+					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_22_);
 				}
 			}
 		}
 	}
 
-	Class518() {
+	AnimationDefinitions() {
 		anInt5920 = 26888893;
 		anInt5921 = 507546261;
 		anInt5907 = -1691377714;
@@ -159,25 +159,25 @@ public class Class518 {
 		int[] is = anIntArray5922;
 		for (int i_23_ = 0; i_23_ < is.length; i_23_++) {
 			int i_24_ = is[i_23_];
-			if (((Class518) this).aClass523_5908.method11207(i_24_ >>> 16, -1536383536) == null)
+			if (((AnimationDefinitions) this).aClass523_5908.method11207(i_24_ >>> 16, -1536383536) == null)
 				bool = false;
 		}
 		return bool;
 	}
 
 	public int method11133(int i, int i_25_, int i_26_) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return i_25_;
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub38)
 			return i_25_;
 		return class282_sub38.anInt8002 * -570797415;
 	}
 
 	public int method11134(int i, int i_27_) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return i_27_;
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub38)
 			return i_27_;
 		return class282_sub38.anInt8002 * -570797415;
@@ -262,19 +262,19 @@ public class Class518 {
 				anIntArray5919[i_43_] = class282_sub35.readUnsignedShort();
 			} else if (249 == i) {
 				int i_44_ = class282_sub35.readUnsignedByte();
-				if (((Class518) this).aClass465_5910 == null) {
+				if (((AnimationDefinitions) this).aClass465_5910 == null) {
 					int i_45_ = Class323.nextPowerOfTwo(i_44_, 1506813605);
-					((Class518) this).aClass465_5910 = new SwitchMap(i_45_);
+					((AnimationDefinitions) this).aClass465_5910 = new IterableNodeMap(i_45_);
 				}
 				for (int i_46_ = 0; i_46_ < i_44_; i_46_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
 					int i_47_ = class282_sub35.read24BitUnsignedInteger((short) 18162);
-					Class282 class282;
+					Node class282;
 					if (bool)
 						class282 = new Class282_Sub47(class282_sub35.readString(-342371097));
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
-					((Class518) this).aClass465_5910.method7765(class282, (long) i_47_);
+					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_47_);
 				}
 			}
 		}
@@ -368,28 +368,28 @@ public class Class518 {
 				anIntArray5919[i_63_] = class282_sub35.readUnsignedShort();
 			} else if (249 == i) {
 				int i_64_ = class282_sub35.readUnsignedByte();
-				if (((Class518) this).aClass465_5910 == null) {
+				if (((AnimationDefinitions) this).aClass465_5910 == null) {
 					int i_65_ = Class323.nextPowerOfTwo(i_64_, -2037518015);
-					((Class518) this).aClass465_5910 = new SwitchMap(i_65_);
+					((AnimationDefinitions) this).aClass465_5910 = new IterableNodeMap(i_65_);
 				}
 				for (int i_66_ = 0; i_66_ < i_64_; i_66_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
 					int i_67_ = class282_sub35.read24BitUnsignedInteger((short) 13915);
-					Class282 class282;
+					Node class282;
 					if (bool)
 						class282 = new Class282_Sub47(class282_sub35.readString(1708868767));
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
-					((Class518) this).aClass465_5910.method7765(class282, (long) i_67_);
+					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_67_);
 				}
 			}
 		}
 	}
 
 	public String method11138(int i, String string) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return string;
-		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub47)
 			return string;
 		return (String) class282_sub47.anObject8068;
@@ -474,19 +474,19 @@ public class Class518 {
 				anIntArray5919[i_83_] = class282_sub35.readUnsignedShort();
 			} else if (249 == i) {
 				int i_84_ = class282_sub35.readUnsignedByte();
-				if (((Class518) this).aClass465_5910 == null) {
+				if (((AnimationDefinitions) this).aClass465_5910 == null) {
 					int i_85_ = Class323.nextPowerOfTwo(i_84_, -1610926434);
-					((Class518) this).aClass465_5910 = new SwitchMap(i_85_);
+					((AnimationDefinitions) this).aClass465_5910 = new IterableNodeMap(i_85_);
 				}
 				for (int i_86_ = 0; i_86_ < i_84_; i_86_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
 					int i_87_ = class282_sub35.read24BitUnsignedInteger((short) 6865);
-					Class282 class282;
+					Node class282;
 					if (bool)
 						class282 = new Class282_Sub47(class282_sub35.readString(1745796995));
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
-					((Class518) this).aClass465_5910.method7765(class282, (long) i_87_);
+					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_87_);
 				}
 			}
 		}
@@ -499,25 +499,25 @@ public class Class518 {
 		int[] is = anIntArray5922;
 		for (int i = 0; i < is.length; i++) {
 			int i_88_ = is[i];
-			if (((Class518) this).aClass523_5908.method11207(i_88_ >>> 16, -1536383536) == null)
+			if (((AnimationDefinitions) this).aClass523_5908.method11207(i_88_ >>> 16, -1536383536) == null)
 				bool = false;
 		}
 		return bool;
 	}
 
 	public int method11141(int i, int i_89_) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return i_89_;
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub38)
 			return i_89_;
 		return class282_sub38.anInt8002 * -570797415;
 	}
 
 	public int method11142(int i, int i_90_) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return i_90_;
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub38)
 			return i_90_;
 		return class282_sub38.anInt8002 * -570797415;
@@ -539,33 +539,33 @@ public class Class518 {
 	}
 
 	public String method11144(int i, String string) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return string;
-		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub47)
 			return string;
 		return (String) class282_sub47.anObject8068;
 	}
 
 	public String method11145(int i, String string) {
-		if (null == ((Class518) this).aClass465_5910)
+		if (null == ((AnimationDefinitions) this).aClass465_5910)
 			return string;
-		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((Class518) this).aClass465_5910.method7754((long) i));
+		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((AnimationDefinitions) this).aClass465_5910.method7754((long) i));
 		if (null == class282_sub47)
 			return string;
 		return (String) class282_sub47.anObject8068;
 	}
 
-	public static Class317 method11146(Class102 class102, boolean bool, int i, boolean bool_91_, int i_92_) {
+	public static Index method11146(Class102 class102, boolean bool, int i, boolean bool_91_, int i_92_) {
 		if (null == Class492.aClass327_Sub1Array5777)
-			Class492.aClass327_Sub1Array5777 = new Class327_Sub1[Class123.method2149(957345803)];
-		Class203 class203 = null;
+			Class492.aClass327_Sub1Array5777 = new JS5GrabWorker[Class123.method2149(957345803)];
+		JS5CacheFile class203 = null;
 		int i_93_ = class102.method1781(-333623124);
 		if (client.aClass440_3270 != null)
-			class203 = new Class203(i_93_, client.aClass440_3270, Class97.aClass440Array996[i_93_], 1500000);
+			class203 = new JS5CacheFile(i_93_, client.aClass440_3270, Class97.aClass440Array996[i_93_], 1500000);
 		Class492.aClass327_Sub1Array5777[i_93_] = Class468_Sub9.aClass309_7896.method5480(i_93_, class203, Class533.aClass203_7073, (byte) 107);
 		Class492.aClass327_Sub1Array5777[i_93_].method12544((short) -3210);
-		return new Class317(Class492.aClass327_Sub1Array5777[i_93_], bool, i);
+		return new Index(Class492.aClass327_Sub1Array5777[i_93_], bool, i);
 	}
 
 	static final void method11147(CS2Executor class527, int i) {

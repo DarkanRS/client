@@ -15,7 +15,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return method13004(((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592), class282_sub24s, 868144561);
 	}
 
-	boolean method12988(Class505 class505) {
+	boolean method12988(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(-949503051)));
 	}
@@ -30,11 +30,11 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return method13004(((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592), class282_sub24s, 868144561);
 	}
 
-	final void method13013(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_0_, int i_1_, boolean bool, int i_2_) {
+	final void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_0_, int i_1_, boolean bool, int i_2_) {
 		throw new IllegalStateException();
 	}
 
-	boolean method13037(Class505 class505, int i) {
+	boolean method13037(GraphicalRenderer class505, int i) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(-1991070986)));
 	}
@@ -47,7 +47,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return false;
 	}
 
-	final void method13016(Class505 class505, Class521_Sub1 class521_sub1, int i, int i_3_, int i_4_, boolean bool) {
+	final void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_3_, int i_4_, boolean bool) {
 		throw new IllegalStateException();
 	}
 
@@ -79,7 +79,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return method13004(((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592), class282_sub24s, 868144561);
 	}
 
-	boolean method13022(Class505 class505) {
+	boolean method13022(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(-1441304110)));
 	}
@@ -97,7 +97,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		throw new IllegalStateException();
 	}
 
-	boolean method12998(Class505 class505) {
+	boolean method12998(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(-308469814)));
 	}
@@ -112,7 +112,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((Class206) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((Class206) aClass206_7970).anInt2629))]);
 	}
 
-	boolean method13030(Class505 class505) {
+	boolean method13030(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(815041790)));
 	}

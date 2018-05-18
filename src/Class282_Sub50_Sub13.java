@@ -3,8 +3,8 @@
  */
 
 public class Class282_Sub50_Sub13 extends Class282_Sub50 {
-	static Class317 aClass317_9685;
-	static Class317 aClass317_9686;
+	static Index aClass317_9685;
+	static Index aClass317_9686;
 	int anInt9687;
 	byte[][] aByteArrayArray9688;
 	Class95[] aClass95Array9689;
@@ -39,7 +39,7 @@ public class Class282_Sub50_Sub13 extends Class282_Sub50 {
 		Class473 class473 = new Class473();
 		int[] is;
 		synchronized (aClass317_9686) {
-			int i = aClass317_9686.method5624((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -508277238);
+			int i = aClass317_9686.filesCount((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -508277238);
 			((Class282_Sub50_Sub13) this).aClass95Array9689 = new Class95[i];
 			is = aClass317_9686.method5616((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -1703325907);
 		}
@@ -133,7 +133,7 @@ public class Class282_Sub50_Sub13 extends Class282_Sub50 {
 		Class473 class473 = new Class473();
 		int[] is;
 		synchronized (aClass317_9686) {
-			int i_10_ = aClass317_9686.method5624((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -35753208);
+			int i_10_ = aClass317_9686.filesCount((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -35753208);
 			((Class282_Sub50_Sub13) this).aClass95Array9689 = new Class95[i_10_];
 			is = aClass317_9686.method5616((((Class282_Sub50_Sub13) this).anInt9687) * 2091314053, -1900755589);
 		}

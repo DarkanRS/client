@@ -101,7 +101,7 @@ public class Class496 implements Interface43 {
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 77);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
-		Class495.method8277(class118, class98, class527, 1396779389);
+		Language.method8277(class118, class98, class527, 1396779389);
 	}
 
 	public static Class496[] method8312() {
@@ -151,7 +151,7 @@ public class Class496 implements Interface43 {
 		if (client.anInt7349 * -1699899559 != -1) {
 			int i_6_ = Class163.aClass209_2031.method3569(2131144344);
 			int i_7_ = Class163.aClass209_2031.method3570(756095591);
-			Class282_Sub53 class282_sub53 = (Class282_Sub53) client.aClass482_7267.method8097((byte) 28);
+			Class282_Sub53 class282_sub53 = (Class282_Sub53) client.aClass482_7267.head((byte) 28);
 			if (null != class282_sub53) {
 				i_6_ = class282_sub53.method13481(1154972064);
 				i_7_ = class282_sub53.method13469(1835497951);

@@ -97,7 +97,7 @@ public class Class468_Sub30 extends Class468 {
 		anInt5578 = i * -754033619;
 	}
 
-	static int method13422(char c, Class495 class495, int i) {
+	static int method13422(char c, Language class495, int i) {
 		int i_2_ = c << 4;
 		if (Character.isUpperCase(c) || Character.isTitleCase(c)) {
 			int i_3_ = Character.toLowerCase(c);

@@ -5,7 +5,7 @@
 import java.awt.Canvas;
 
 public class Class171 {
-	public static Class505 method2909(Canvas canvas, Interface22 interface22, int i) {
+	public static GraphicalRenderer method2909(Canvas canvas, Interface22 interface22, int i) {
 		return new Class505_Sub1(canvas, interface22, i);
 	}
 

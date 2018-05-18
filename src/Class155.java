@@ -6,11 +6,11 @@ import java.util.Date;
 
 public final class Class155 {
 	int anInt1968;
-	SwitchMap aClass465_1969;
+	IterableNodeMap aClass465_1969;
 
 	public void method2623(int i, int i_0_) {
 		if (((Class155) this).aClass465_1969 == null)
-			((Class155) this).aClass465_1969 = new SwitchMap(152314627 * ((Class155) this).anInt1968);
+			((Class155) this).aClass465_1969 = new IterableNodeMap(152314627 * ((Class155) this).anInt1968);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class155) this).aClass465_1969.method7754((long) i));
 		if (class282_sub38 != null)
 			class282_sub38.anInt8002 = 1270866345 * i_0_;
@@ -27,7 +27,7 @@ public final class Class155 {
 
 	public void method2625(int i, int i_1_, byte i_2_) {
 		if (((Class155) this).aClass465_1969 == null)
-			((Class155) this).aClass465_1969 = new SwitchMap(152314627 * ((Class155) this).anInt1968);
+			((Class155) this).aClass465_1969 = new IterableNodeMap(152314627 * ((Class155) this).anInt1968);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class155) this).aClass465_1969.method7754((long) i));
 		if (class282_sub38 != null)
 			class282_sub38.anInt8002 = 1270866345 * i_1_;
@@ -72,7 +72,7 @@ public final class Class155 {
 
 	public void method2630(int i, int i_9_) {
 		if (((Class155) this).aClass465_1969 == null)
-			((Class155) this).aClass465_1969 = new SwitchMap(152314627 * ((Class155) this).anInt1968);
+			((Class155) this).aClass465_1969 = new IterableNodeMap(152314627 * ((Class155) this).anInt1968);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class155) this).aClass465_1969.method7754((long) i));
 		if (class282_sub38 != null)
 			class282_sub38.anInt8002 = 1270866345 * i_9_;
@@ -84,7 +84,7 @@ public final class Class155 {
 
 	public void method2631(int i, int i_10_) {
 		if (((Class155) this).aClass465_1969 == null)
-			((Class155) this).aClass465_1969 = new SwitchMap(152314627 * ((Class155) this).anInt1968);
+			((Class155) this).aClass465_1969 = new IterableNodeMap(152314627 * ((Class155) this).anInt1968);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class155) this).aClass465_1969.method7754((long) i));
 		if (class282_sub38 != null)
 			class282_sub38.anInt8002 = 1270866345 * i_10_;
@@ -96,7 +96,7 @@ public final class Class155 {
 
 	public void method2632(int i, int i_11_) {
 		if (((Class155) this).aClass465_1969 == null)
-			((Class155) this).aClass465_1969 = new SwitchMap(152314627 * ((Class155) this).anInt1968);
+			((Class155) this).aClass465_1969 = new IterableNodeMap(152314627 * ((Class155) this).anInt1968);
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class155) this).aClass465_1969.method7754((long) i));
 		if (class282_sub38 != null)
 			class282_sub38.anInt8002 = 1270866345 * i_11_;
@@ -138,7 +138,7 @@ public final class Class155 {
 	}
 
 	static final void method2637(int i, int i_17_, int i_18_, int i_19_, int i_20_, int i_21_, byte i_22_) {
-		Class426.method7170(i_18_, 377314002);
+		ItemIndexLoader.method7170(i_18_, 377314002);
 		int i_23_ = 0;
 		int i_24_ = i_18_ - i_21_;
 		if (i_24_ < 0)

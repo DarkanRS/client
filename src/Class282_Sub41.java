@@ -5,7 +5,7 @@
 import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggStreamState;
 
-public abstract class Class282_Sub41 extends Class282 {
+public abstract class Class282_Sub41 extends Node {
 	int anInt8031;
 	OggStreamState anOggStreamState8032;
 

@@ -72,11 +72,11 @@ public class Class268 {
 		return is;
 	}
 
-	static void method4800(Class505 class505, byte i) {
+	static void method4800(GraphicalRenderer class505, byte i) {
 		if ((Class20.anInt169 * 2144330291 >= 2 || client.aBool7344) && client.aClass118_7257 == null) {
 			String string;
 			if (client.aBool7344 && 2144330291 * Class20.anInt169 < 2)
-				string = new StringBuilder().append(client.aString7275).append(Class433.aClass433_5315.method7273(Class223.aClass495_2772, -912912276)).append(client.aString7356).append(" ").append(Class2.aString17).toString();
+				string = new StringBuilder().append(client.aString7275).append(Message.aClass433_5315.translate(Class223.aClass495_2772, -912912276)).append(client.aString7356).append(" ").append(Class2.aString17).toString();
 			else if (Class468_Sub1.method12619(-1903584217) && 2144330291 * Class20.anInt169 > 2)
 				string = IncomingPacket.method6380((Class96_Sub23.aClass282_Sub50_Sub7_9445), 1195583741);
 			else {
@@ -89,9 +89,9 @@ public class Class268 {
 					string = new StringBuilder().append(string).append(Class15.method547(is, 2114598830)).toString();
 			}
 			if (Class20.anInt169 * 2144330291 > 2)
-				string = new StringBuilder().append(string).append(Class59.method1163(16777215, 619010179)).append(" / ").append(2144330291 * Class20.anInt169 - 2).append(Class433.aClass433_5285.method7273(Class223.aClass495_2772, -386320365)).toString();
+				string = new StringBuilder().append(string).append(Class59.method1163(16777215, 619010179)).append(" / ").append(2144330291 * Class20.anInt169 - 2).append(Message.aClass433_5285.translate(Class223.aClass495_2772, -386320365)).toString();
 			if (Class20.aClass118_183 != null) {
-				Class8 class8 = Class20.aClass118_183.method1988(Class487.aClass378_5752, (client.anInterface35_7206), -208417273);
+				FontRenderer class8 = Class20.aClass118_183.method1988(Class487.aClass378_5752, (client.anInterface35_7206), -208417273);
 				if (class8 == null)
 					class8 = Class285.aClass8_3394;
 				class8.method367(string, Class20.anInt195 * 734403649, -1447866103 * Class20.anInt179, Class20.aClass118_183.anInt1301 * 1506818197, Class20.aClass118_183.anInt1429 * -492594917, Class20.aClass118_183.anInt1264 * -795991475, 1279397863 * Class20.aClass118_183.anInt1324, -220189555 * Class20.aClass118_183.anInt1359, Class20.aClass118_183.anInt1360 * 1297350181, client.aRandom7260, -242333475 * PacketsDecoder.anInt9079, client.anIntArray7438, Class115.aClass160Array1248,

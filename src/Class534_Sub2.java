@@ -8,7 +8,7 @@ public class Class534_Sub2 extends Class534 {
 	}
 
 	Class282_Sub53 method12842(int i) {
-		return (Class282_Sub53) client.aClass482_7267.method8097((byte) 61);
+		return (Class282_Sub53) client.aClass482_7267.head((byte) 61);
 	}
 
 	void method11427(RsByteBuffer class282_sub35, Class282_Sub53 class282_sub53) {
@@ -140,15 +140,15 @@ public class Class534_Sub2 extends Class534 {
 	}
 
 	Class282_Sub53 method12843() {
-		return (Class282_Sub53) client.aClass482_7267.method8097((byte) 48);
+		return (Class282_Sub53) client.aClass482_7267.head((byte) 48);
 	}
 
 	Class282_Sub53 method12844() {
-		return (Class282_Sub53) client.aClass482_7267.method8097((byte) 114);
+		return (Class282_Sub53) client.aClass482_7267.head((byte) 114);
 	}
 
 	Class282_Sub53 method12845() {
-		return (Class282_Sub53) client.aClass482_7267.method8097((byte) 122);
+		return (Class282_Sub53) client.aClass482_7267.head((byte) 122);
 	}
 
 	static final void method12846(CS2Executor class527, int i) {

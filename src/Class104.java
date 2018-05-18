@@ -77,6 +77,6 @@ public class Class104 {
 	}
 
 	static final void method1801(CS2Executor class527, int i) {
-		Class520.method11160(Class505.method8697(1614050633), class527, 1060557669);
+		Class520.method11160(GraphicalRenderer.method8697(1614050633), class527, 1060557669);
 	}
 }

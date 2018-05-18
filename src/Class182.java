@@ -5,10 +5,10 @@
 import java.awt.datatransfer.Clipboard;
 
 public class Class182 {
-	static Class505 aClass505_2258;
-	static Class8 aClass8_2259;
-	static Class482 aClass482_2260 = new Class482();
-	public static Class160[] aClass160Array2261;
+	static GraphicalRenderer aClass505_2258;
+	static FontRenderer aClass8_2259;
+	static NodeCollection aClass482_2260 = new NodeCollection();
+	public static NativeSprite[] aClass160Array2261;
 	public static int anInt2262;
 	public static Clipboard aClipboard2263;
 
@@ -16,7 +16,7 @@ public class Class182 {
 		throw new Error();
 	}
 
-	static void method3034(Class505 class505, Class118 class118) {
+	static void method3034(GraphicalRenderer class505, Class118 class118) {
 		boolean bool = ((Class119.aClass426_1463.method7162(class505, class118.anInt1426 * -56249735, 6040081 * class118.anInt1427, class118.anInt1323 * -346307573, ~0xffffff | class118.anInt1324 * 1279397863, 71935343 * class118.anInt1335, (class118.aBool1388 ? Class84.myPlayer.aClass238_10558 : null), 206421629)) == null);
 		if (bool) {
 			aClass482_2260.method8059(new Class282_Sub32(-56249735 * class118.anInt1426, 6040081 * class118.anInt1427, -346307573 * class118.anInt1323, (~0xffffff | 1279397863 * class118.anInt1324), 71935343 * class118.anInt1335, class118.aBool1388), -2006343484);
@@ -24,7 +24,7 @@ public class Class182 {
 		}
 	}
 
-	static void method3035(Class505 class505, Class118 class118) {
+	static void method3035(GraphicalRenderer class505, Class118 class118) {
 		boolean bool = ((Class119.aClass426_1463.method7162(class505, class118.anInt1426 * -56249735, 6040081 * class118.anInt1427, class118.anInt1323 * -346307573, ~0xffffff | class118.anInt1324 * 1279397863, 71935343 * class118.anInt1335, (class118.aBool1388 ? Class84.myPlayer.aClass238_10558 : null), 206421629)) == null);
 		if (bool) {
 			aClass482_2260.method8059(new Class282_Sub32(-56249735 * class118.anInt1426, 6040081 * class118.anInt1427, -346307573 * class118.anInt1323, (~0xffffff | 1279397863 * class118.anInt1324), 71935343 * class118.anInt1335, class118.aBool1388), 949305639);
@@ -99,8 +99,8 @@ public class Class182 {
 		int i_5_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_6_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
 		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_5_, 1029070809);
-		if (i_6_ >= 1 && i_6_ <= 5 && null != class425.aStringArray5053[i_6_ - 1])
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class425.aStringArray5053[i_6_ - 1];
+		if (i_6_ >= 1 && i_6_ <= 5 && null != class425.groundOptions[i_6_ - 1])
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class425.groundOptions[i_6_ - 1];
 		else
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 	}

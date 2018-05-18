@@ -3,7 +3,7 @@
  */
 
 public class Class463 {
-	static Class317 aClass317_5549;
+	static Index aClass317_5549;
 	int anInt5550;
 	int anInt5551;
 	boolean aBool5552;

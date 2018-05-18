@@ -13,7 +13,7 @@ public class Class149_Sub2 extends Class149 {
 	int anInt9312;
 	int anInt9313;
 	public static Class511 aClass511_9314;
-	public static Class160 aClass160_9315;
+	public static NativeSprite aClass160_9315;
 	public static Class461 aClass461_9316;
 
 	void method2560(int i, int i_0_) {
@@ -99,7 +99,7 @@ public class Class149_Sub2 extends Class149 {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.method4991(-371378792);
+			class282_sub48.unlink(-371378792);
 		}
 	}
 

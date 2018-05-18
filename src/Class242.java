@@ -4,7 +4,7 @@
 
 public class Class242 {
 	int anInt2978;
-	Class317 aClass317_2979;
+	Index aClass317_2979;
 	Class240[] aClass240Array2980;
 	static Class91 aClass91_2981;
 	public static int anInt2982;
@@ -27,10 +27,10 @@ public class Class242 {
 		return ((Class242) this).aClass240Array2980[i];
 	}
 
-	public Class242(Class486 class486, Class495 class495, Class317 class317, boolean bool) {
+	public Class242(Game class486, Language class495, Index class317, boolean bool) {
 		((Class242) this).aClass317_2979 = class317;
 		if (((Class242) this).aClass317_2979 != null)
-			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.method5624(-71319279 * Class120.aClass120_1498.anInt1521, -1883638938)) * 1089704477;
+			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.filesCount(-71319279 * SharedConfigsType.aClass120_1498.id, -1883638938)) * 1089704477;
 		else
 			((Class242) this).anInt2978 = 0;
 		if (bool) {
@@ -38,7 +38,7 @@ public class Class242 {
 			for (int i = 0; i < 526499893 * ((Class242) this).anInt2978; i++) {
 				byte[] is;
 				synchronized (((Class242) this).aClass317_2979) {
-					is = (((Class242) this).aClass317_2979.getFile(-71319279 * Class120.aClass120_1498.anInt1521, i, -1290272928));
+					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.id, i, -1290272928));
 				}
 				Class240 class240 = new Class240();
 				if (null != is)
@@ -210,7 +210,7 @@ public class Class242 {
 				}
 			}
 			if (!bool)
-				Class387.method6681(4, new StringBuilder().append(Class433.aClass433_5280.method7273(Class223.aClass495_2772, -1621273158)).append(string).toString(), (byte) -49);
+				Class387.method6681(4, new StringBuilder().append(Message.aClass433_5280.translate(Class223.aClass495_2772, -1621273158)).append(string).toString(), (byte) -49);
 			if (client.aBool7344)
 				Class60.method1170(-609337146);
 		}

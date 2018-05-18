@@ -4,7 +4,7 @@
  */
 import jaggl.OpenGL;
 
-public class Class160_Sub2 extends Class160 {
+public class Class160_Sub2 extends NativeSprite {
 	boolean aBool9028;
 	Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9029;
 	int anInt9030;

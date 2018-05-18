@@ -39,7 +39,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return ((Class521_Sub1_Sub2_Sub1) this).aBool10419;
 	}
 
-	public Class200 method12992(Class505 class505, byte i) {
+	public Class200 method12992(GraphicalRenderer class505, byte i) {
 		return null;
 	}
 
@@ -51,11 +51,11 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return ((Class521_Sub1_Sub2_Sub1) this).aBool10419;
 	}
 
-	void method12991(Class505 class505, int i) {
+	void method12991(GraphicalRenderer class505, int i) {
 		/* empty */
 	}
 
-	public Class200 method13019(Class505 class505) {
+	public Class200 method13019(GraphicalRenderer class505) {
 		return null;
 	}
 
@@ -63,11 +63,11 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return false;
 	}
 
-	boolean method12983(Class505 class505, int i, int i_0_, int i_1_) {
+	boolean method12983(GraphicalRenderer class505, int i, int i_0_, int i_1_) {
 		Class294 class294 = class505.method8450();
 		class294.method5210(method11166());
 		class294.method5219(0.0F, -10.0F, 0.0F);
-		Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10423 * -876219087, 1970157841).method7084(class505, 131072, anInt10416 * 513267953, null, null, 0, 0, 0, 0, (byte) 0));
+		MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10423 * -876219087, 1970157841).method7084(class505, 131072, anInt10416 * 513267953, null, null, 0, 0, 0, 0, (byte) 0));
 		if (null != class528 && class528.method11270(i, i_0_, class294, true, 0))
 			return true;
 		if (anInt10411 * 313920719 != -1) {
@@ -99,7 +99,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return ((Class521_Sub1_Sub2_Sub1) this).aBool10419;
 	}
 
-	Class285 method13009(Class505 class505) {
+	Class285 method13009(GraphicalRenderer class505) {
 		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
 		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) -112);
 		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.method3415(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
@@ -162,7 +162,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
 		if (-503986647 * anInt10415 != -1) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 1566081376).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 1566081376).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[2], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -170,7 +170,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 		if (-1 != anInt10411 * 313920719) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 627296952).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 627296952).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[1], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -178,7 +178,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 					((Class521_Sub1_Sub2_Sub1) this).anInt10418 = class528.n() * -1885839727;
 			}
 		}
-		Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 1397021511).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+		MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 1397021511).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 		if (null != class528) {
 			class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 			((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -228,7 +228,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return ((Class521_Sub1_Sub2_Sub1) this).aBool10419;
 	}
 
-	Class285 method13010(Class505 class505) {
+	Class285 method13010(GraphicalRenderer class505) {
 		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
 		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) 62);
 		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.method3415(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
@@ -291,7 +291,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
 		if (-503986647 * anInt10415 != -1) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 1810214014).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 1810214014).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[2], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -299,7 +299,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 		if (-1 != anInt10411 * 313920719) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 208623712).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 208623712).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[1], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -307,7 +307,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 					((Class521_Sub1_Sub2_Sub1) this).anInt10418 = class528.n() * -1885839727;
 			}
 		}
-		Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 1591407655).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+		MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 1591407655).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 		if (null != class528) {
 			class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 			((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -317,7 +317,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return class285;
 	}
 
-	Class285 method12989(Class505 class505) {
+	Class285 method12989(GraphicalRenderer class505) {
 		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
 		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) 88);
 		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.method3415(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
@@ -380,7 +380,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
 		if (-503986647 * anInt10415 != -1) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 1568687750).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 1568687750).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[2], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -388,7 +388,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 		if (-1 != anInt10411 * 313920719) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 849121032).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 849121032).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[1], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -396,7 +396,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 					((Class521_Sub1_Sub2_Sub1) this).anInt10418 = class528.n() * -1885839727;
 			}
 		}
-		Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 1958359567).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+		MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 1958359567).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 		if (null != class528) {
 			class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 			((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -406,19 +406,19 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return class285;
 	}
 
-	void method13012(Class505 class505) {
+	void method13012(GraphicalRenderer class505) {
 		/* empty */
 	}
 
-	void method13023(Class505 class505) {
+	void method13023(GraphicalRenderer class505) {
 		/* empty */
 	}
 
-	boolean method13020(Class505 class505, int i, int i_81_) {
+	boolean method13020(GraphicalRenderer class505, int i, int i_81_) {
 		Class294 class294 = class505.method8450();
 		class294.method5210(method11166());
 		class294.method5219(0.0F, -10.0F, 0.0F);
-		Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10423 * -876219087, 1772986804).method7084(class505, 131072, anInt10416 * 513267953, null, null, 0, 0, 0, 0, (byte) 0));
+		MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10423 * -876219087, 1772986804).method7084(class505, 131072, anInt10416 * 513267953, null, null, 0, 0, 0, 0, (byte) 0));
 		if (null != class528 && class528.method11270(i, i_81_, class294, true, 0))
 			return true;
 		if (anInt10411 * 313920719 != -1) {
@@ -434,15 +434,15 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		return false;
 	}
 
-	public Class200 method13018(Class505 class505) {
+	public Class200 method13018(GraphicalRenderer class505) {
 		return null;
 	}
 
-	public Class200 method12993(Class505 class505) {
+	public Class200 method12993(GraphicalRenderer class505) {
 		return null;
 	}
 
-	Class285 method12990(Class505 class505, int i) {
+	Class285 method12990(GraphicalRenderer class505, int i) {
 		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
 		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) -92);
 		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.method3415(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
@@ -505,7 +505,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
 		if (-503986647 * anInt10415 != -1) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 2123092777).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-503986647 * anInt10415, 2123092777).method7084(class505, 526336, anInt10412 * -931815553, null, null, ((Class521_Sub1_Sub2_Sub1) this).anInt10420 * 225048469, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[2], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -513,7 +513,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			}
 		}
 		if (-1 != anInt10411 * 313920719) {
-			Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 687184901).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+			MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(anInt10411 * 313920719, 687184901).method7084(class505, 526336, 1089437631 * anInt10414, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, -731570957 * ((Class521_Sub1_Sub2_Sub1) this).anInt10421, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 			if (class528 != null) {
 				class528.method11282(class294, aClass275_Sub5Array7965[1], 0);
 				((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();
@@ -521,7 +521,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 					((Class521_Sub1_Sub2_Sub1) this).anInt10418 = class528.n() * -1885839727;
 			}
 		}
-		Class528 class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 994725585).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
+		MeshRasterizer class528 = (Class119.aClass426_1463.getItemDefinitions(-876219087 * anInt10423, 994725585).method7084(class505, 526336, anInt10416 * 513267953, null, null, 225048469 * ((Class521_Sub1_Sub2_Sub1) this).anInt10420, ((Class521_Sub1_Sub2_Sub1) this).anInt10421 * -731570957, 1264449599 * ((Class521_Sub1_Sub2_Sub1) this).anInt10413, -359736537 * ((Class521_Sub1_Sub2_Sub1) this).anInt10417, (byte) 0));
 		if (null != class528) {
 			class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 			((Class521_Sub1_Sub2_Sub1) this).aBool10419 |= class528.i();

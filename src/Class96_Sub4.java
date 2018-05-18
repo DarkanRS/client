@@ -226,17 +226,17 @@ public class Class96_Sub4 extends Class96 {
 			}
 			if (30 == i_5_ && null == client.aClass118_7352) {
 				Class158_Sub2.method14355(i_4_, i_3_, 382043562);
-				client.aClass118_7352 = Class317.method5694(i_4_, i_3_, -702392131);
+				client.aClass118_7352 = Index.method5694(i_4_, i_3_, -702392131);
 				if (null != client.aClass118_7352)
 					Class109.method1858(client.aClass118_7352, (byte) -7);
 			}
 			if (i_5_ == 58) {
-				Class118 class118 = Class317.method5694(i_4_, i_3_, 1636358419);
+				Class118 class118 = Index.method5694(i_4_, i_3_, 1636358419);
 				if (null != class118)
 					Class151.method2590(class118, (byte) 30);
 			}
 			if (25 == i_5_) {
-				Class118 class118 = Class317.method5694(i_4_, i_3_, 1215515572);
+				Class118 class118 = Index.method5694(i_4_, i_3_, 1215515572);
 				if (class118 != null) {
 					Class60.method1170(-609337146);
 					Class282_Sub10 class282_sub10 = client.method11633(class118);

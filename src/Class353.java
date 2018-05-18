@@ -115,7 +115,7 @@ public class Class353 {
 			int i_15_ = 15210351 * class425.anInt5051;
 			if (318481945 * class425.anInt5049 == 1)
 				i_15_ *= 1 + (((Class282_Sub34) class282_sub34).anInt7852 * -1727049729);
-			for (Class282_Sub34 class282_sub34_16_ = ((Class282_Sub34) class282_sub29.aClass482_7708.method8097((byte) 33)); null != class282_sub34_16_; class282_sub34_16_ = (Class282_Sub34) class282_sub29.aClass482_7708.method8067(1444311005)) {
+			for (Class282_Sub34 class282_sub34_16_ = ((Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 33)); null != class282_sub34_16_; class282_sub34_16_ = (Class282_Sub34) class282_sub29.aClass482_7708.next(1444311005)) {
 				class425 = Class119.aClass426_1463.getItemDefinitions((1964309863 * (class282_sub34_16_.anInt7853)), 1449282948);
 				int i_17_ = class425.anInt5051 * 15210351;
 				if (class425.anInt5049 * 318481945 == 1)

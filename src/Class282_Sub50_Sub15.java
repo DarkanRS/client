@@ -89,10 +89,10 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		class282_sub50_sub7.method13452((byte) -5);
 		((Class282_Sub50_Sub15) this).anInt9769 -= 1874748669;
 		if (0 == 2026887253 * ((Class282_Sub50_Sub15) this).anInt9769) {
-			method4991(-371378792);
+			unlink(-371378792);
 			method13452((byte) -5);
 			Class20.anInt170 -= 1980182825;
-			Class20.aClass229_164.method3856(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
+			Class20.aClass229_164.put(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
 			return false;
 		}
 		return i_3_ != method15244((byte) 109);
@@ -121,10 +121,10 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		class282_sub50_sub7.method13452((byte) -5);
 		((Class282_Sub50_Sub15) this).anInt9769 -= 1874748669;
 		if (0 == 2026887253 * ((Class282_Sub50_Sub15) this).anInt9769) {
-			method4991(-371378792);
+			unlink(-371378792);
 			method13452((byte) -5);
 			Class20.anInt170 -= 1980182825;
-			Class20.aClass229_164.method3856(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
+			Class20.aClass229_164.put(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
 			return false;
 		}
 		return i != method15244((byte) 45);
@@ -135,10 +135,10 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		class282_sub50_sub7.method13452((byte) -5);
 		((Class282_Sub50_Sub15) this).anInt9769 -= 1874748669;
 		if (0 == 2026887253 * ((Class282_Sub50_Sub15) this).anInt9769) {
-			method4991(-371378792);
+			unlink(-371378792);
 			method13452((byte) -5);
 			Class20.anInt170 -= 1980182825;
-			Class20.aClass229_164.method3856(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
+			Class20.aClass229_164.put(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
 			return false;
 		}
 		return i != method15244((byte) 61);

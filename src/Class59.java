@@ -6,7 +6,7 @@ public class Class59 {
 	public short aShort530;
 	public static final int anInt531 = 1;
 	public static final int anInt532 = 2;
-	static Class229 aClass229_533 = new Class229(64);
+	static SoftCache aClass229_533 = new SoftCache(64);
 	public boolean aBool534;
 	public int anInt535;
 	public short aShort536;
@@ -367,7 +367,7 @@ public class Class59 {
 			aBool541 = false;
 	}
 
-	public static void method1148(Class317 class317) {
+	public static void method1148(Index class317) {
 		Class219.aClass317_2710 = class317;
 	}
 
@@ -380,7 +380,7 @@ public class Class59 {
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -613926670);
 		class59.method1146((byte) 1);
-		aClass229_533.method3856(class59, (long) i);
+		aClass229_533.put(class59, (long) i);
 		return class59;
 	}
 
@@ -639,7 +639,7 @@ public class Class59 {
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1658973926);
 		class59.method1146((byte) 1);
-		aClass229_533.method3856(class59, (long) i);
+		aClass229_533.put(class59, (long) i);
 		return class59;
 	}
 
@@ -656,7 +656,7 @@ public class Class59 {
 		aClass229_533.method3859(1607534583);
 	}
 
-	public static int method1159(Class317 class317, int i) {
+	public static int method1159(Index class317, int i) {
 		int i_38_ = 0;
 		if (class317.method5661(-1633200555 * Class165.anInt2035, 1772789270))
 			i_38_++;

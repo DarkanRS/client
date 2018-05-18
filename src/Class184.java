@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Class184 {
 	IncomingPacket aClass375_2278;
 	int anInt2279;
-	Class482 aClass482_2280 = new Class482();
+	NodeCollection aClass482_2280 = new NodeCollection();
 	Class202 aClass202_2281;
 	RsByteBuffer aClass282_Sub35_2282;
 	public IsaacCipher aClass432_2283;
@@ -43,12 +43,12 @@ public class Class184 {
 		if (null != ((Class184) this).aClass202_2281 && ((Class184) this).anInt2279 * -99760051 > 0) {
 			((Class184) this).aClass282_Sub35_2282.index = 0;
 			for (;;) {
-				Class282_Sub23 class282_sub23 = ((Class282_Sub23) ((Class184) this).aClass482_2280.method8097((byte) 41));
+				Class282_Sub23 class282_sub23 = ((Class282_Sub23) ((Class184) this).aClass482_2280.head((byte) 41));
 				if (class282_sub23 == null || (class282_sub23.anInt7680 * -766688357 > ((((Class184) this).aClass282_Sub35_2282.buffer).length - -1990677291 * (((Class184) this).aClass282_Sub35_2282.index))))
 					break;
 				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.aClass282_Sub35_Sub2_7682.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
-				class282_sub23.method4991(-371378792);
+				class282_sub23.unlink(-371378792);
 				class282_sub23.aClass282_Sub35_Sub2_7682.method13059(1420319429);
 				class282_sub23.method12360(-923048057);
 			}
@@ -105,12 +105,12 @@ public class Class184 {
 		if (null != ((Class184) this).aClass202_2281 && ((Class184) this).anInt2279 * -99760051 > 0) {
 			((Class184) this).aClass282_Sub35_2282.index = 0;
 			for (;;) {
-				Class282_Sub23 class282_sub23 = (Class282_Sub23) ((Class184) this).aClass482_2280.method8097((byte) 104);
+				Class282_Sub23 class282_sub23 = (Class282_Sub23) ((Class184) this).aClass482_2280.head((byte) 104);
 				if (class282_sub23 == null || (class282_sub23.anInt7680 * -766688357 > ((((Class184) this).aClass282_Sub35_2282.buffer).length - -1990677291 * (((Class184) this).aClass282_Sub35_2282.index))))
 					break;
 				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.aClass282_Sub35_Sub2_7682.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
-				class282_sub23.method4991(-371378792);
+				class282_sub23.unlink(-371378792);
 				class282_sub23.aClass282_Sub35_Sub2_7682.method13059(1701861837);
 				class282_sub23.method12360(-1158414947);
 			}
@@ -124,12 +124,12 @@ public class Class184 {
 		if (null != ((Class184) this).aClass202_2281 && ((Class184) this).anInt2279 * -99760051 > 0) {
 			((Class184) this).aClass282_Sub35_2282.index = 0;
 			for (;;) {
-				Class282_Sub23 class282_sub23 = (Class282_Sub23) ((Class184) this).aClass482_2280.method8097((byte) 114);
+				Class282_Sub23 class282_sub23 = (Class282_Sub23) ((Class184) this).aClass482_2280.head((byte) 114);
 				if (class282_sub23 == null || (class282_sub23.anInt7680 * -766688357 > ((((Class184) this).aClass282_Sub35_2282.buffer).length - -1990677291 * (((Class184) this).aClass282_Sub35_2282.index))))
 					break;
 				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.aClass282_Sub35_Sub2_7682.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
-				class282_sub23.method4991(-371378792);
+				class282_sub23.unlink(-371378792);
 				class282_sub23.aClass282_Sub35_Sub2_7682.method13059(1721372976);
 				class282_sub23.method12360(-1410304456);
 			}

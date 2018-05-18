@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub26 extends Class282 {
+public abstract class Class282_Sub26 extends Node {
 	int anInt7690;
 
 	Class282_Sub26() {

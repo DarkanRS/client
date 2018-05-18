@@ -66,7 +66,7 @@ public class Class468_Sub11 extends Class468 {
 		int i_6_ = 2147483647;
 		int i_7_ = i_2_ - Class291_Sub1.anInt3472;
 		int i_8_ = i_3_ - Class291_Sub1.anInt3473;
-		for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.method8097((byte) 56)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.method8067(317938751)) {
+		for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 56)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(317938751)) {
 			if (i == class282_sub36.anInt7991 * -1798678621) {
 				int i_9_ = class282_sub36.anInt7987 * -1306535747;
 				int i_10_ = 1012301095 * class282_sub36.anInt7993;

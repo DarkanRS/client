@@ -4,7 +4,7 @@
  */
 import java.util.BitSet;
 
-public class Class282_Sub4 extends Class282 {
+public class Class282_Sub4 extends Node {
 	public byte aByte7497;
 	boolean aBool7498 = true;
 	public Class57[] aClass57Array7499;

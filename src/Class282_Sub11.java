@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub11 extends Class282 {
+public abstract class Class282_Sub11 extends Node {
 	Class282_Sub11() {
 		/* empty */
 	}

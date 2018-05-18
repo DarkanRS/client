@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub49 extends Class282 {
+public class Class282_Sub49 extends Node {
 	byte[] aByteArray8108;
 	int[] anIntArray8109;
 

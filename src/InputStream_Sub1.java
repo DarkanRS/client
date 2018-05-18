@@ -38,8 +38,8 @@ public class InputStream_Sub1 extends InputStream {
 	static final void method12724(CS2Executor class527, int i) {
 		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_0_, 527591750);
-		if (class425.anInt5078 * -722914683 >= 0 && 1416589415 * class425.anInt5084 >= 0)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1416589415 * class425.anInt5084;
+		if (class425.certTemplateId * -722914683 >= 0 && 1416589415 * class425.certId >= 0)
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1416589415 * class425.certId;
 		else
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = i_0_;
 	}

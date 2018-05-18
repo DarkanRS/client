@@ -282,7 +282,7 @@ public class Class111 {
 		Class101.method1773(strings, is, 0, strings.length - 1, 698486595);
 	}
 
-	public static void method1866(Class317 class317, int i) {
+	public static void method1866(Index class317, int i) {
 		Class345.aClass317_4021 = class317;
 	}
 }

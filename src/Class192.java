@@ -7,7 +7,7 @@ public class Class192 implements Interface9 {
 	int anInt2389;
 	int[] anIntArray2390;
 	static Class1 aClass1_2391;
-	public static Class317 worldMap;
+	public static Index worldMap;
 
 	public int method77() {
 		return ((Class192) this).anInt2389 * 248625969;

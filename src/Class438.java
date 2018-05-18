@@ -5,10 +5,10 @@
 import java.io.IOException;
 
 public class Class438 {
-	Class317 aClass317_5341;
-	Class229 aClass229_5342;
-	Class317 aClass317_5343;
-	Class229 aClass229_5344 = new Class229(64);
+	Index aClass317_5341;
+	SoftCache aClass229_5342;
+	Index aClass317_5343;
+	SoftCache aClass229_5344 = new SoftCache(64);
 
 	public void method7324(int i) {
 		synchronized (((Class438) this).aClass229_5344) {
@@ -28,14 +28,14 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.getFile(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1235181846);
+			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i, -1235181846);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
 		if (null != is)
 			class419.method7024(new RsByteBuffer(is), 2098733573);
 		synchronized (((Class438) this).aClass229_5344) {
-			((Class438) this).aClass229_5344.method3856(class419, (long) i);
+			((Class438) this).aClass229_5344.put(class419, (long) i);
 		}
 		return class419;
 	}
@@ -58,11 +58,11 @@ public class Class438 {
 		}
 	}
 
-	public Class438(Class486 class486, Class495 class495, Class317 class317, Class317 class317_2_) {
-		((Class438) this).aClass229_5342 = new Class229(2);
+	public Class438(Game class486, Language class495, Index class317, Index class317_2_) {
+		((Class438) this).aClass229_5342 = new SoftCache(2);
 		((Class438) this).aClass317_5343 = class317;
 		((Class438) this).aClass317_5341 = class317_2_;
-		((Class438) this).aClass317_5343.method5624((Class120.aClass120_1496.anInt1521) * -71319279, 46053667);
+		((Class438) this).aClass317_5343.filesCount((SharedConfigsType.aClass120_1496.id) * -71319279, 46053667);
 	}
 
 	public Class419 method7328(int i) {
@@ -74,14 +74,14 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.getFile(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1766506937);
+			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i, -1766506937);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
 		if (null != is)
 			class419.method7024(new RsByteBuffer(is), 1997893572);
 		synchronized (((Class438) this).aClass229_5344) {
-			((Class438) this).aClass229_5344.method3856(class419, (long) i);
+			((Class438) this).aClass229_5344.put(class419, (long) i);
 		}
 		return class419;
 	}
@@ -95,14 +95,14 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.getFile(((Class120.aClass120_1496.anInt1521) * -71319279), i, -1914067254);
+			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i, -1914067254);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
 		if (null != is)
 			class419.method7024(new RsByteBuffer(is), 2089587924);
 		synchronized (((Class438) this).aClass229_5344) {
-			((Class438) this).aClass229_5344.method3856(class419, (long) i);
+			((Class438) this).aClass229_5344.put(class419, (long) i);
 		}
 		return class419;
 	}
@@ -140,7 +140,7 @@ public class Class438 {
 			}
 			class184.method3051((byte) -59);
 		}
-		Class312.method5558(-500941691);
+		JS5StandardRequester.method5558(-500941691);
 		Class356.method6227(false, (byte) -48);
 		client.aClass257_7353.method4444(1869336559);
 		client.aClass257_7353.method4485(-756888037);

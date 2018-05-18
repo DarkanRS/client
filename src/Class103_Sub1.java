@@ -125,10 +125,10 @@ public class Class103_Sub1 extends Class103 {
 		method14483(1614437421);
 	}
 
-	static Class160 method14490(byte[] is, byte i) {
+	static NativeSprite method14490(byte[] is, byte i) {
 		if (is == null)
 			throw new RuntimeException("");
-		Class160 class160;
+		NativeSprite class160;
 		for (;;) {
 			try {
 				Image image = Toolkit.getDefaultToolkit().createImage(is);
@@ -142,7 +142,7 @@ public class Class103_Sub1 extends Class103 {
 				int[] is_2_ = new int[i_0_ * i_1_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i_0_, i_1_, is_2_, 0, i_0_);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.method8549(is_2_, 0, i_0_, i_0_, i_1_, 194479026);
+				class160 = Class316.aClass505_3680.createNativeSprite(is_2_, 0, i_0_, i_0_, i_1_, 194479026);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */

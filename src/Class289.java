@@ -288,7 +288,7 @@ public class Class289 implements Runnable {
 		((Class289) this).aThread3445.start();
 	}
 
-	static boolean method5097(Class505 class505, int i, int i_10_) {
+	static boolean method5097(GraphicalRenderer class505, int i, int i_10_) {
 		Class169.method2869(1783349516);
 		if (!class505.method8455(1890093661))
 			return false;
@@ -334,7 +334,7 @@ public class Class289 implements Runnable {
 			i_23_ = 48;
 			class505.ba(1, 0);
 		} else
-			Class419.aClass160_5004 = class505.method8549(is, 0, i_20_, i_20_, i_20_, 1063937715);
+			Class419.aClass160_5004 = class505.createNativeSprite(is, 0, i_20_, i_20_, i_20_, 1063937715);
 		client.aClass257_7353.method4435((byte) 1).method4052((byte) 1);
 		int i_24_ = ~0xffffff | ((238 + (int) (Math.random() * 20.0) - 10 << 16) + (238 + (int) (Math.random() * 20.0) - 10 << 8) + (238 + (int) (Math.random() * 20.0) - 10));
 		int i_25_ = ~0xffffff | 238 + (int) (Math.random() * 20.0) - 10 << 16;

@@ -712,12 +712,12 @@ public class Class304 implements Interface27 {
 		return 0;
 	}
 
-	static String method5407(int i, Class495 class495, byte i_151_) {
+	static String method5407(int i, Language class495, byte i_151_) {
 		if (i < 100000)
 			return new StringBuilder().append("<col=ffff00>").append(i).append("</col>").toString();
 		if (i < 10000000)
-			return new StringBuilder().append("<col=ffffff>").append(i / 1000).append(Class433.aClass433_5297.method7273(class495, -664620101)).append("</col>").toString();
-		return new StringBuilder().append("<col=00ff80>").append(i / 1000000).append(Class433.aClass433_5304.method7273(class495, -1313761048)).append("</col>").toString();
+			return new StringBuilder().append("<col=ffffff>").append(i / 1000).append(Message.aClass433_5297.translate(class495, -664620101)).append("</col>").toString();
+		return new StringBuilder().append("<col=00ff80>").append(i / 1000000).append(Message.aClass433_5304.translate(class495, -1313761048)).append("</col>").toString();
 	}
 
 	static final void method5408(CS2Executor class527, int i) {

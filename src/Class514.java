@@ -124,7 +124,7 @@ public final class Class514 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_0_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_0_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_0_, (byte) 0);
 		if (class437.method7319(1959046751)) {
 			String string = class437.aString5335;
 			if (i == -1)

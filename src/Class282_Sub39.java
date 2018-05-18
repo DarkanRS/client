@@ -2,10 +2,10 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub39 extends Class282 {
+public class Class282_Sub39 extends Node {
 	short[][] aShortArrayArray8003;
 	double aDouble8004;
-	public static Class317 aClass317_8005;
+	public static Index aClass317_8005;
 
 	Class282_Sub39(short[][] is, double d) {
 		((Class282_Sub39) this).aShortArrayArray8003 = is;
@@ -24,8 +24,8 @@ public class Class282_Sub39 extends Class282 {
 		Class20.aClass384_185.method6562(class384);
 	}
 
-	static void method13297(Class505 class505, Class282_Sub36 class282_sub36, Class220 class220, int i) {
-		Class160 class160 = class220.method3729(class505, 216702129);
+	static void method13297(GraphicalRenderer class505, Class282_Sub36 class282_sub36, Class220 class220, int i) {
+		NativeSprite class160 = class220.method3729(class505, 216702129);
 		if (class160 != null) {
 			int i_0_ = class160.method2747();
 			if (class160.method2793() > i_0_)

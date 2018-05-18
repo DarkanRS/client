@@ -28,7 +28,7 @@ public class Class390_Sub2 extends Class390 {
 	byte[][] aByteArrayArray8663;
 	Class130 aClass130_8664;
 	int[][][] anIntArrayArrayArray8665;
-	Class282[] aClass282Array8666;
+	Node[] aClass282Array8666;
 	Interface14 anInterface14_8667;
 	Class143 aClass143_8668;
 	Class143 aClass143_8669;
@@ -208,7 +208,7 @@ public class Class390_Sub2 extends Class390 {
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13717(8448, 7681);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13595(0, 34166, 770);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13616(0, 34167, 770);
-				for (Class282 class282 = ((Class390_Sub2) this).aClass473_8673.method7859(1440341177); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -69)) {
+				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.method7859(1440341177); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -69)) {
 					Class282_Sub19 class282_sub19 = (Class282_Sub19) class282;
 					class282_sub19.method12311(i, i_56_, i_57_, bools);
 				}
@@ -234,7 +234,7 @@ public class Class390_Sub2 extends Class390 {
 				for (int i_73_ = 1; i_73_ < anInt4773 * 1826078169; i_73_++)
 					is[i][i_73_] = (byte) (((((Class390_Sub2) this).aByteArrayArray8674[i - 1][i_73_]) >> 2) + ((((Class390_Sub2) this).aByteArrayArray8674[i + 1][i_73_]) >> 3) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_73_ - 1]) >> 2) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_73_ + 1]) >> 3) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_73_]) >> 1));
 			}
-			((Class390_Sub2) this).aClass282Array8666 = new Class282[((Class390_Sub2) this).aClass453_8678.method7540(-975751825)];
+			((Class390_Sub2) this).aClass282Array8666 = new Node[((Class390_Sub2) this).aClass453_8678.method7540(-975751825)];
 			((Class390_Sub2) this).aClass453_8678.method7532(((Class390_Sub2) this).aClass282Array8666, (byte) 45);
 			for (int i = 0; i < ((Class390_Sub2) this).aClass282Array8666.length; i++)
 				((Class282_Sub3) ((Class390_Sub2) this).aClass282Array8666[i]).method12092(((Class390_Sub2) this).anInt8672);
@@ -354,7 +354,7 @@ public class Class390_Sub2 extends Class390 {
 									f_116_ = (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8432 + (f_116_ * (f_116_ > 0.0F ? (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8433) : (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8434))));
 								}
 							}
-							Class282 class282 = null;
+							Node class282 = null;
 							if ((i_105_ & ((Class390_Sub2) this).anInt8650 - 1) == 0 && ((i_106_ & ((Class390_Sub2) this).anInt8650 - 1) == 0))
 								class282 = class453.method7530(l);
 							int i_131_;
@@ -697,7 +697,7 @@ public class Class390_Sub2 extends Class390 {
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13717(8448, 7681);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13595(0, 34166, 770);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13616(0, 34167, 770);
-				for (Class282 class282 = ((Class390_Sub2) this).aClass473_8673.method7859(1571141272); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -33)) {
+				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.method7859(1571141272); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -33)) {
 					Class282_Sub19 class282_sub19 = (Class282_Sub19) class282;
 					class282_sub19.method12311(i, i_178_, i_179_, bools);
 				}
@@ -751,7 +751,7 @@ public class Class390_Sub2 extends Class390 {
 				i_209_ = -1;
 			}
 			long l = ((long) (class90.anInt947 * -732614481) << 48 | (long) (class90.anInt945 * 973144081) << 42 | (long) (class90.anInt946 * 1152775735) << 28 | (long) (i_210_ << 14) | (long) i_209_);
-			Class282 class282;
+			Node class282;
 			for (class282 = ((Class390_Sub2) this).aClass453_8678.method7530(l); class282 != null; class282 = ((Class390_Sub2) this).aClass453_8678.method7544(1982653237)) {
 				Class282_Sub3 class282_sub3 = (Class282_Sub3) class282;
 				if (((Class282_Sub3) class282_sub3).anInt7493 == i_209_ && (((Class282_Sub3) class282_sub3).aFloat7490 == (float) i_210_) && ((Class282_Sub3) class282_sub3).aClass90_7487.method1506(class90, 1457774218))
@@ -853,7 +853,7 @@ public class Class390_Sub2 extends Class390 {
 				i_247_ = -1;
 			}
 			long l = ((long) (class90.anInt947 * -732614481) << 48 | (long) (class90.anInt945 * 973144081) << 42 | (long) (class90.anInt946 * 1152775735) << 28 | (long) (i_248_ << 14) | (long) i_247_);
-			Class282 class282;
+			Node class282;
 			for (class282 = ((Class390_Sub2) this).aClass453_8678.method7530(l); class282 != null; class282 = ((Class390_Sub2) this).aClass453_8678.method7544(1204674199)) {
 				Class282_Sub3 class282_sub3 = (Class282_Sub3) class282;
 				if (((Class282_Sub3) class282_sub3).anInt7493 == i_247_ && (((Class282_Sub3) class282_sub3).aFloat7490 == (float) i_248_) && ((Class282_Sub3) class282_sub3).aClass90_7487.method1506(class90, 1785628838))
@@ -879,7 +879,7 @@ public class Class390_Sub2 extends Class390 {
 				for (int i_249_ = 1; i_249_ < anInt4773 * 1826078169; i_249_++)
 					is[i][i_249_] = (byte) (((((Class390_Sub2) this).aByteArrayArray8674[i - 1][i_249_]) >> 2) + ((((Class390_Sub2) this).aByteArrayArray8674[i + 1][i_249_]) >> 3) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_249_ - 1]) >> 2) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_249_ + 1]) >> 3) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_249_]) >> 1));
 			}
-			((Class390_Sub2) this).aClass282Array8666 = new Class282[((Class390_Sub2) this).aClass453_8678.method7540(-975751825)];
+			((Class390_Sub2) this).aClass282Array8666 = new Node[((Class390_Sub2) this).aClass453_8678.method7540(-975751825)];
 			((Class390_Sub2) this).aClass453_8678.method7532(((Class390_Sub2) this).aClass282Array8666, (byte) 58);
 			for (int i = 0; i < ((Class390_Sub2) this).aClass282Array8666.length; i++)
 				((Class282_Sub3) ((Class390_Sub2) this).aClass282Array8666[i]).method12092(((Class390_Sub2) this).anInt8672);
@@ -999,7 +999,7 @@ public class Class390_Sub2 extends Class390 {
 									f_292_ = (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8432 + (f_292_ * (f_292_ > 0.0F ? (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8433) : (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8434))));
 								}
 							}
-							Class282 class282 = null;
+							Node class282 = null;
 							if ((i_281_ & ((Class390_Sub2) this).anInt8650 - 1) == 0 && ((i_282_ & ((Class390_Sub2) this).anInt8650 - 1) == 0))
 								class282 = class453.method7530(l);
 							int i_307_;
@@ -1187,7 +1187,7 @@ public class Class390_Sub2 extends Class390 {
 				for (int i_329_ = 1; i_329_ < anInt4773 * 1826078169; i_329_++)
 					is[i][i_329_] = (byte) (((((Class390_Sub2) this).aByteArrayArray8674[i - 1][i_329_]) >> 2) + ((((Class390_Sub2) this).aByteArrayArray8674[i + 1][i_329_]) >> 3) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_329_ - 1]) >> 2) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_329_ + 1]) >> 3) + ((((Class390_Sub2) this).aByteArrayArray8674[i][i_329_]) >> 1));
 			}
-			((Class390_Sub2) this).aClass282Array8666 = new Class282[((Class390_Sub2) this).aClass453_8678.method7540(-975751825)];
+			((Class390_Sub2) this).aClass282Array8666 = new Node[((Class390_Sub2) this).aClass453_8678.method7540(-975751825)];
 			((Class390_Sub2) this).aClass453_8678.method7532(((Class390_Sub2) this).aClass282Array8666, (byte) 41);
 			for (int i = 0; i < ((Class390_Sub2) this).aClass282Array8666.length; i++)
 				((Class282_Sub3) ((Class390_Sub2) this).aClass282Array8666[i]).method12092(((Class390_Sub2) this).anInt8672);
@@ -1307,7 +1307,7 @@ public class Class390_Sub2 extends Class390 {
 									f_372_ = (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8432 + (f_372_ * (f_372_ > 0.0F ? (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8433) : (((Class505_Sub1) (((Class390_Sub2) this).aClass505_Sub1_8648)).aFloat8434))));
 								}
 							}
-							Class282 class282 = null;
+							Node class282 = null;
 							if ((i_361_ & ((Class390_Sub2) this).anInt8650 - 1) == 0 && ((i_362_ & ((Class390_Sub2) this).anInt8650 - 1) == 0))
 								class282 = class453.method7530(l);
 							int i_387_;
@@ -1744,7 +1744,7 @@ public class Class390_Sub2 extends Class390 {
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13717(8448, 7681);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13595(0, 34166, 770);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13616(0, 34167, 770);
-				for (Class282 class282 = ((Class390_Sub2) this).aClass473_8673.method7859(896412511); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -43)) {
+				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.method7859(896412511); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -43)) {
 					Class282_Sub19 class282_sub19 = (Class282_Sub19) class282;
 					class282_sub19.method12311(i, i_469_, i_470_, bools);
 				}

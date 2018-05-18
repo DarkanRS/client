@@ -6,7 +6,7 @@ import java.util.HashMap;
 
 import jaclib.hardware_info.HardwareInfo;
 
-public class Class282_Sub51 extends Class282 {
+public class Class282_Sub51 extends Node {
 	int anInt8121;
 	static final int anInt8122 = 1;
 	static final int anInt8123 = 2;
@@ -468,7 +468,7 @@ public class Class282_Sub51 extends Class282 {
 			Class8_Sub1.anInt8515 = 0;
 		} else {
 			if (class521_sub1_sub1_sub2.aClass456_10338.method7564(436554671) && !class521_sub1_sub1_sub2.aClass456_10338.method7573(584514311)) {
-				Class518 class518 = class521_sub1_sub1_sub2.aClass456_10338.method7565(-1632742162);
+				AnimationDefinitions class518 = class521_sub1_sub1_sub2.aClass456_10338.method7565(-1632742162);
 				if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0 && 0 == class518.anInt5920 * -1113882773) {
 					class521_sub1_sub1_sub2.anInt10366 += 1951902055;
 					Class44.anInt430 = 235132365 * Class249.aClass249_3083.aByte3085;
@@ -486,7 +486,7 @@ public class Class282_Sub51 extends Class282 {
 				if (-1 != (class521_sub1_sub1_sub2.aClass161Array10339[i_25_].anInt2012) * 378836105 && class521_sub1_sub1_sub2.aClass161Array10339[i_25_].aClass456_2014.method7573(-606649252)) {
 					Class525 class525 = (Class96_Sub20.aClass515_9416.method8845((class521_sub1_sub1_sub2.aClass161Array10339[i_25_].anInt2012) * 378836105, (byte) 43));
 					if (class525.aBool6968 && -1 != class525.anInt6977 * -364555849) {
-						Class518 class518 = (Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) -10));
+						AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) -10));
 						if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0 && 0 == class518.anInt5920 * -1113882773) {
 							class521_sub1_sub1_sub2.anInt10366 += 1951902055;
 							Class44.anInt430 = (Class249.aClass249_3083.aByte3085 * 235132365);

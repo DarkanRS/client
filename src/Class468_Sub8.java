@@ -72,11 +72,11 @@ public class Class468_Sub8 extends Class468 {
 	}
 
 	public static void method12679(int i) {
-		synchronized (Class238.aClass229_2920) {
-			Class238.aClass229_2920.method3859(1287149735);
+		synchronized (PlayerAppearance.aClass229_2920) {
+			PlayerAppearance.aClass229_2920.method3859(1287149735);
 		}
-		synchronized (Class238.aClass229_2930) {
-			Class238.aClass229_2930.method3859(193180691);
+		synchronized (PlayerAppearance.aClass229_2930) {
+			PlayerAppearance.aClass229_2930.method3859(193180691);
 		}
 	}
 }

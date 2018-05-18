@@ -3,7 +3,7 @@
  */
 
 public class Class502 implements Interface23 {
-	Class505 aClass505_5829;
+	GraphicalRenderer aClass505_5829;
 	static Class253 aClass253_5830;
 	public static Class394 aClass394_5831;
 

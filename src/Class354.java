@@ -5,7 +5,7 @@
 public final class Class354 {
 	int anInt4108;
 	Object anObject4109;
-	public static Class160 aClass160_4110;
+	public static NativeSprite aClass160_4110;
 	static Class213[] aClass213Array4111;
 	public static int anInt4112;
 
@@ -44,7 +44,7 @@ public final class Class354 {
 		}
 	}
 
-	static void method6216(Class505 class505, int i) {
+	static void method6216(GraphicalRenderer class505, int i) {
 		if (!Class20.aBool187)
 			Class277.method4908(class505, 1349821918);
 		else

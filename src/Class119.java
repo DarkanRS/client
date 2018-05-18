@@ -11,8 +11,8 @@ public class Class119 {
 	int anInt1459;
 	static Class344 aClass344_1460;
 	public static Class12 aClass12_1461;
-	public static Class312 aClass312_1462;
-	public static Class426 aClass426_1463;
+	public static JS5StandardRequester aClass312_1462;
+	public static ItemIndexLoader aClass426_1463;
 
 	public boolean method2073(int i, int i_0_, int i_1_) {
 		if (i_0_ >= 0 && i_0_ < anIntArray1457.length) {
@@ -84,7 +84,7 @@ public class Class119 {
 			}
 		}
 		if (!bool)
-			Class387.method6681(4, new StringBuilder().append(Class433.aClass433_5280.method7273(Class223.aClass495_2772, -774222111)).append(string).toString(), (byte) -65);
+			Class387.method6681(4, new StringBuilder().append(Message.aClass433_5280.translate(Class223.aClass495_2772, -774222111)).append(string).toString(), (byte) -65);
 	}
 
 	static void method2076(Class118 class118, Class118 class118_12_, int i) {

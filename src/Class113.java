@@ -78,10 +78,10 @@ public class Class113 {
 	}
 
 	static final void method1883(int i) {
-		for (Class282_Sub50_Sub16 class282_sub50_sub16 = ((Class282_Sub50_Sub16) client.aClass482_7333.method8097((byte) 68)); null != class282_sub50_sub16; class282_sub50_sub16 = ((Class282_Sub50_Sub16) client.aClass482_7333.method8067(380890791))) {
+		for (Class282_Sub50_Sub16 class282_sub50_sub16 = ((Class282_Sub50_Sub16) client.aClass482_7333.head((byte) 68)); null != class282_sub50_sub16; class282_sub50_sub16 = ((Class282_Sub50_Sub16) client.aClass482_7333.next(380890791))) {
 			Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (((Class282_Sub50_Sub16) class282_sub50_sub16).aClass521_Sub1_Sub1_Sub3_9839);
 			if (-1809259861 * client.cycles > class521_sub1_sub1_sub3.anInt10392 * -780553027) {
-				class282_sub50_sub16.method4991(-371378792);
+				class282_sub50_sub16.unlink(-371378792);
 				class521_sub1_sub1_sub3.method15906(220489197);
 			} else if (-1809259861 * client.cycles >= -362500645 * class521_sub1_sub1_sub3.anInt10393) {
 				class521_sub1_sub1_sub3.method15903(2024171399);

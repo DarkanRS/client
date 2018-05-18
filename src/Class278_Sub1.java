@@ -12,11 +12,11 @@ public class Class278_Sub1 extends Class278 {
 	int[] anIntArray8114;
 	int anInt8115;
 	RsByteBuffer aClass282_Sub35_8116 = new RsByteBuffer(null);
-	Class317 aClass317_8117;
+	Index aClass317_8117;
 
 	int method4925(byte[] is) throws IOException {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
-			if (!((Class278_Sub1) this).aClass317_8117.method5688(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
+			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
 				return 0;
 			byte[] is_0_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0, -2056397853));
 			if (null == is_0_)
@@ -64,7 +64,7 @@ public class Class278_Sub1 extends Class278 {
 		return is.length;
 	}
 
-	public Class278_Sub1(int i, Class317 class317, int i_4_) {
+	public Class278_Sub1(int i, Index class317, int i_4_) {
 		super(i);
 		((Class278_Sub1) this).aClass317_8117 = class317;
 		((Class278_Sub1) this).anInt8113 = 963936361 * i_4_;
@@ -72,7 +72,7 @@ public class Class278_Sub1 extends Class278 {
 
 	int method4951(byte[] is, int i) throws IOException {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
-			if (!((Class278_Sub1) this).aClass317_8117.method5688(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
+			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
 				return 0;
 			byte[] is_5_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0, -1220217893));
 			if (null == is_5_)
@@ -123,7 +123,7 @@ public class Class278_Sub1 extends Class278 {
 	public void method13447(int i) {
 		if (null != ((Class278_Sub1) this).anIntArray8114) {
 			for (int i_11_ = 0; (i_11_ < 10 && (i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449 < ((Class278_Sub1) this).anIntArray8114.length)); i_11_++) {
-				if (((Class278_Sub1) this).aByteArrayArray8111[i_11_] == null && (((Class278_Sub1) this).aClass317_8117.method5688((((Class278_Sub1) this).anIntArray8114[(i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449)]), 0, 16711935)))
+				if (((Class278_Sub1) this).aByteArrayArray8111[i_11_] == null && (((Class278_Sub1) this).aClass317_8117.load((((Class278_Sub1) this).anIntArray8114[(i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449)]), 0, 16711935)))
 					((Class278_Sub1) this).aByteArrayArray8111[i_11_] = (((Class278_Sub1) this).aClass317_8117.getFile((((Class278_Sub1) this).anIntArray8114[(-285637449 * ((Class278_Sub1) this).anInt8115 + i_11_)]), 0, -1550945086));
 			}
 		}

@@ -3,7 +3,7 @@
  */
 
 public abstract class Class273 {
-	public static Class317 aClass317_3332;
+	public static Index aClass317_3332;
 
 	Class273() {
 		/* empty */
@@ -94,7 +94,7 @@ public abstract class Class273 {
 		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_3_, (byte) 84);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
-		Class322.method5763(class118, class98, class527, 258036500);
+		ReferenceTable.method5763(class118, class98, class527, 258036500);
 	}
 
 	static final void method4864(CS2Executor class527, int i) {

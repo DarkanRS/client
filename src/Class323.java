@@ -3,8 +3,8 @@
  */
 
 public class Class323 implements Interface22 {
-	Class317 aClass317_3750;
-	Class317 aClass317_3751;
+	Index aClass317_3750;
+	Index aClass317_3751;
 	int anInt3752;
 	Class169[] aClass169Array3753;
 	Class223 aClass223_3754 = new Class223(256);
@@ -37,7 +37,7 @@ public class Class323 implements Interface22 {
 		/* empty */
 	}
 
-	public Class323(Class317 class317, Class317 class317_2_, Class317 class317_3_) {
+	public Class323(Index class317, Index class317_2_, Index class317_3_) {
 		((Class323) this).aClass317_3750 = class317_2_;
 		((Class323) this).aClass317_3751 = class317_3_;
 		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(0, 0, -1917534237));

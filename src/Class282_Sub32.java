@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub32 extends Class282 {
+public class Class282_Sub32 extends Node {
 	int anInt7816;
 	int anInt7817;
 	int anInt7818;
@@ -19,7 +19,7 @@ public class Class282_Sub32 extends Class282 {
 		((Class282_Sub32) this).aBool7821 = bool;
 	}
 
-	static void method12574(Class505 class505, Class118 class118, int i, int i_4_, int i_5_) {
+	static void method12574(GraphicalRenderer class505, Class118 class118, int i, int i_4_, int i_5_) {
 		Class119 class119 = class118.method2046(class505, 1273435241);
 		if (class119 != null) {
 			Class455 class455 = class119.aClass455_1456;
@@ -48,7 +48,7 @@ public class Class282_Sub32 extends Class282 {
 				int i_11_ = (48 + client.aClass257_7353.method4451(-1005893088) * 4 - i_7_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_4_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_10_, (float) i_11_, i_9_, i_8_ << 2, class455, i, i_4_);
 				Class283 class283 = client.aClass257_7353.method4528((byte) 38);
-				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.method8097((byte) 120)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.method8067(1158642483))) {
+				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.head((byte) 120)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.next(1158642483))) {
 					int i_12_ = class282_sub38.anInt8002 * -570797415;
 					int i_13_ = ((class283.anIntArray3381[i_12_] >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 					int i_14_ = ((class283.anIntArray3381[i_12_] & 0x3fff) - class219.anInt2712 * -1002240017);

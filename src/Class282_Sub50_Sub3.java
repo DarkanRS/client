@@ -15,10 +15,10 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 	Class282_Sub20 aClass282_Sub20_9480;
 	static FileOutputStream aFileOutputStream9481;
 
-	boolean method14716(Class317 class317, Interface22 interface22) {
+	boolean method14716(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -34,10 +34,10 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return true;
 	}
 
-	boolean method14717(Class317 class317, Interface22 interface22, int i) {
+	boolean method14717(Index class317, Interface22 interface22, int i) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i_0_ = 0; i_0_ < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i_0_++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i_0_]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i_0_]), 16711935))
 					return false;
 			}
 		} else {
@@ -53,12 +53,12 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return true;
 	}
 
-	int[] method14718(Class317 class317, Interface22 interface22, double d, int i, int i_3_, boolean bool, boolean bool_4_, int i_5_) {
+	int[] method14718(Index class317, Interface22 interface22, double d, int i, int i_3_, boolean bool, boolean bool_4_, int i_5_) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_6_ = 0; (i_6_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_6_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_6_].method12315(i, i_3_, (byte) 60);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_3_, 1422267205);
 		int[] is = new int[i_3_ * i];
 		int i_7_;
@@ -123,12 +123,12 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return is;
 	}
 
-	int[] method14719(Class317 class317, Interface22 interface22, double d, int i, int i_23_, boolean bool, byte i_24_) {
+	int[] method14719(Index class317, Interface22 interface22, double d, int i, int i_23_, boolean bool, byte i_24_) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_25_ = 0; (i_25_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_25_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_25_].method12315(i, i_23_, (byte) 116);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_23_, 1384434405);
 		int[] is = new int[i * i_23_];
 		int i_26_ = 0;
@@ -192,10 +192,10 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return is;
 	}
 
-	boolean method14720(Class317 class317, Interface22 interface22) {
+	boolean method14720(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -256,10 +256,10 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		is = null;
 	}
 
-	boolean method14721(Class317 class317, Interface22 interface22) {
+	boolean method14721(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -275,10 +275,10 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return true;
 	}
 
-	boolean method14722(Class317 class317, Interface22 interface22) {
+	boolean method14722(Index class317, Interface22 interface22) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i = 0; i < ((Class282_Sub50_Sub3) this).anIntArray9475.length; i++) {
-				if (!class317.method5688((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((Class282_Sub50_Sub3) this).anIntArray9475[i]), 16711935))
 					return false;
 			}
 		} else {
@@ -294,7 +294,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return true;
 	}
 
-	float[] method14723(Class317 class317, Interface22 interface22, int i, int i_50_, boolean bool, int i_51_) {
+	float[] method14723(Index class317, Interface22 interface22, int i, int i_50_, boolean bool, int i_51_) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_52_ = 0; (i_52_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_52_++)
@@ -349,12 +349,12 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return fs;
 	}
 
-	int[] method14724(Class317 class317, Interface22 interface22, double d, int i, int i_64_, boolean bool) {
+	int[] method14724(Index class317, Interface22 interface22, double d, int i, int i_64_, boolean bool) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_65_ = 0; (i_65_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_65_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_65_].method12315(i, i_64_, (byte) 80);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_64_, 1816824554);
 		int[] is = new int[i * i_64_];
 		int i_66_ = 0;
@@ -418,12 +418,12 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return is;
 	}
 
-	int[] method14725(Class317 class317, Interface22 interface22, double d, int i, int i_80_, boolean bool) {
+	int[] method14725(Index class317, Interface22 interface22, double d, int i, int i_80_, boolean bool) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_81_ = 0; (i_81_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_81_++)
 			((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478[i_81_].method12315(i, i_80_, (byte) 41);
-		Class229.method3895(d);
+		SoftCache.method3895(d);
 		Class316.method5593(i, i_80_, 706850973);
 		int[] is = new int[i * i_80_];
 		int i_82_ = 0;
@@ -487,7 +487,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return is;
 	}
 
-	float[] method14726(Class317 class317, Interface22 interface22, int i, int i_96_, boolean bool) {
+	float[] method14726(Index class317, Interface22 interface22, int i, int i_96_, boolean bool) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_97_ = 0; (i_97_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_97_++)
@@ -542,7 +542,7 @@ public class Class282_Sub50_Sub3 extends Class282_Sub50 {
 		return fs;
 	}
 
-	float[] method14727(Class317 class317, Interface22 interface22, int i, int i_109_, boolean bool) {
+	float[] method14727(Index class317, Interface22 interface22, int i, int i_109_, boolean bool) {
 		Class532_Sub2.aClass317_7925 = class317;
 		Class532_Sub1.anInterface22_7922 = interface22;
 		for (int i_110_ = 0; (i_110_ < ((Class282_Sub50_Sub3) this).aClass282_Sub20Array9478.length); i_110_++)

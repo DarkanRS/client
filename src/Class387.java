@@ -6,7 +6,7 @@ public class Class387 {
 	boolean aBool4694;
 	static Class387 aClass387_4695;
 	static Class387 aClass387_4696;
-	static Class387 aClass387_4697 = new Class387(0, Class433.aClass433_5174, 2);
+	static Class387 aClass387_4697 = new Class387(0, Message.aClass433_5174, 2);
 	static Class387 aClass387_4698;
 	static Class387 aClass387_4699;
 	static Class387 aClass387_4700;
@@ -20,16 +20,16 @@ public class Class387 {
 	static Class387 aClass387_4708;
 	static Class387 aClass387_4709;
 	static Class387 aClass387_4710;
-	Class433 aClass433_4711;
+	Message aClass433_4711;
 	public int anInt4712;
 	static Class387 aClass387_4713;
-	Class433 aClass433_4714;
+	Message aClass433_4714;
 	int anInt4715;
 	static Class387 aClass387_4716;
 	static Class387 aClass387_4717;
 	boolean aBool4718;
 
-	Class387(int i, Class433 class433, Class433 class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
+	Class387(int i, Message class433, Message class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
 		anInt4712 = 2061403819 * i;
 		((Class387) this).aClass433_4711 = class433;
 		((Class387) this).aClass433_4714 = class433_0_;
@@ -39,32 +39,32 @@ public class Class387 {
 		((Class387) this).aBool4718 = bool_3_;
 	}
 
-	Class387(int i, Class433 class433, int i_4_) {
+	Class387(int i, Message class433, int i_4_) {
 		this(i, class433, class433, i_4_, i_4_, true, false);
 	}
 
-	Class387(int i, Class433 class433, Class433 class433_5_, int i_6_, int i_7_) {
+	Class387(int i, Message class433, Message class433_5_, int i_6_, int i_7_) {
 		this(i, class433, class433_5_, i_6_, i_7_, true, false);
 	}
 
 	static {
-		aClass387_4695 = new Class387(1, Class433.aClass433_5174, Class433.aClass433_5174, 2, 3);
-		aClass387_4696 = new Class387(2, Class433.aClass433_5174, 3);
-		aClass387_4702 = new Class387(3, Class433.aClass433_5174, Class433.aClass433_5174, 3, 4);
-		aClass387_4708 = new Class387(4, Class433.aClass433_5174, 4);
-		aClass387_4699 = new Class387(5, Class433.aClass433_5174, Class433.aClass433_5174, 4, 5);
-		aClass387_4700 = new Class387(6, Class433.aClass433_5174, Class433.aClass433_5174, 5, 98, true, true);
-		aClass387_4717 = new Class387(7, Class433.aClass433_5174, 99);
-		aClass387_4709 = new Class387(8, Class433.aClass433_5174, 100);
-		aClass387_4716 = new Class387(9, Class433.aClass433_5158, Class433.aClass433_5158, 0, 92, true, true);
-		aClass387_4704 = new Class387(10, Class433.aClass433_5158, Class433.aClass433_5158, 92, 93);
-		aClass387_4705 = new Class387(11, Class433.aClass433_5158, Class433.aClass433_5158, 94, 95);
-		aClass387_4706 = new Class387(12, Class433.aClass433_5158, Class433.aClass433_5158, 96, 97);
-		aClass387_4707 = new Class387(13, Class433.aClass433_5158, 97);
-		aClass387_4713 = new Class387(14, Class433.aClass433_5158, 97);
-		aClass387_4698 = new Class387(15, Class433.aClass433_5158, 100);
-		aClass387_4710 = new Class387(16, Class433.aClass433_5158, 100);
-		aClass387_4701 = new Class387(17, Class433.aClass433_5158, 100);
+		aClass387_4695 = new Class387(1, Message.aClass433_5174, Message.aClass433_5174, 2, 3);
+		aClass387_4696 = new Class387(2, Message.aClass433_5174, 3);
+		aClass387_4702 = new Class387(3, Message.aClass433_5174, Message.aClass433_5174, 3, 4);
+		aClass387_4708 = new Class387(4, Message.aClass433_5174, 4);
+		aClass387_4699 = new Class387(5, Message.aClass433_5174, Message.aClass433_5174, 4, 5);
+		aClass387_4700 = new Class387(6, Message.aClass433_5174, Message.aClass433_5174, 5, 98, true, true);
+		aClass387_4717 = new Class387(7, Message.aClass433_5174, 99);
+		aClass387_4709 = new Class387(8, Message.aClass433_5174, 100);
+		aClass387_4716 = new Class387(9, Message.aClass433_5158, Message.aClass433_5158, 0, 92, true, true);
+		aClass387_4704 = new Class387(10, Message.aClass433_5158, Message.aClass433_5158, 92, 93);
+		aClass387_4705 = new Class387(11, Message.aClass433_5158, Message.aClass433_5158, 94, 95);
+		aClass387_4706 = new Class387(12, Message.aClass433_5158, Message.aClass433_5158, 96, 97);
+		aClass387_4707 = new Class387(13, Message.aClass433_5158, 97);
+		aClass387_4713 = new Class387(14, Message.aClass433_5158, 97);
+		aClass387_4698 = new Class387(15, Message.aClass433_5158, 100);
+		aClass387_4710 = new Class387(16, Message.aClass433_5158, 100);
+		aClass387_4701 = new Class387(17, Message.aClass433_5158, 100);
 	}
 
 	static Class387[] method6676(int i) {
@@ -188,7 +188,7 @@ public class Class387 {
 		Class191.method3167(i, 0, "", "", "", string, 146573843);
 	}
 
-	static final void method6682(Class505 class505, int i, int i_25_, int i_26_, int i_27_, short i_28_) {
+	static final void method6682(GraphicalRenderer class505, int i, int i_25_, int i_26_, int i_27_, short i_28_) {
 		class505.r(i, i_25_, i_26_ + i, i_25_ + i_27_);
 		class505.method8425(i, i_25_, i_26_, i_27_, -16777216, (byte) -58);
 		if (-8084891 * Class291_Sub1.anInt8015 >= 100) {
@@ -212,7 +212,7 @@ public class Class387 {
 			int i_33_ = i + (i_29_ * (Class340.anInt3991 * -517876187) / Class291_Sub1.anInt3474);
 			int i_34_ = i_30_ + i_25_ - (i_30_ * (Class489.anInt5765 * -1586888337) / Class291_Sub1.anInt3483) - i_32_;
 			int i_35_ = -1996554240;
-			if (Class486.aClass486_5750 == client.aClass486_7450)
+			if (Game.stellarDawn == client.aClass486_7450)
 				i_35_ = -1996488705;
 			class505.B(i_33_, i_34_, i_31_, i_32_, i_35_, 1);
 			class505.method8430(i_33_, i_34_, i_31_, i_32_, i_35_, 0);
@@ -222,7 +222,7 @@ public class Class387 {
 					i_36_ = 500 - Class96_Sub9.anInt9282 * 187146859;
 				else
 					i_36_ = 187146859 * Class96_Sub9.anInt9282;
-				for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.method8097((byte) 9)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.method8067(-387502259)) {
+				for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 9)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
 					Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(class282_sub36.anInt7991 * -1798678621, 1043671083));
 					if (Class282_Sub16.method12248(class220, -2066566460)) {
 						if (-1798678621 * class282_sub36.anInt7991 == 2089227969 * Class291_Sub1.anInt8018) {
@@ -265,7 +265,7 @@ public class Class387 {
 		Class109_Sub1.anInt9384 = -126779709 * (i_41_ - i_53_);
 		Class246.anInt3029 = 1442943697 * (i_42_ - i_54_);
 		Class293.anInt3512 = -647467135 * i_43_;
-		Class518.anInt5930 = i_44_ * 1898253385;
+		AnimationDefinitions.anInt5930 = i_44_ * 1898253385;
 		Class121.anInt1525 = 0;
 	}
 
@@ -340,7 +340,7 @@ public class Class387 {
 		Class13.method502(class118, class98, class527, 577432492);
 	}
 
-	static void method6686(Class505 class505, byte[][][] is, int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
+	static void method6686(GraphicalRenderer class505, byte[][][] is, int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, int i_79_, int i_80_, int i_81_) {
 		if (i_78_ != 0 && i != 0) {
 			if (9 == i_78_) {
 				i_78_ = 1;

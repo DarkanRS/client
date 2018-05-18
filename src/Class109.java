@@ -76,7 +76,7 @@ public abstract class Class109 {
 			client.aBoolArray7443[-1338917705 * class118.anInt1449] = true;
 	}
 
-	static void method1859(Class317 class317, int i, int i_5_, int i_6_, boolean bool, long l, int i_7_, int i_8_) {
+	static void method1859(Index class317, int i, int i_5_, int i_6_, boolean bool, long l, int i_7_, int i_8_) {
 		Class148.anInt1730 = 800770715;
 		Class75.aClass317_746 = class317;
 		Class6.anInt46 = -26560111 * i;

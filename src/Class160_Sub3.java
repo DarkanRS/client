@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class160_Sub3 extends Class160 {
+public class Class160_Sub3 extends NativeSprite {
 	int anInt9049;
 	Interface6 anInterface6_9050;
 	boolean aBool9051 = false;

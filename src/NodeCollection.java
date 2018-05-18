@@ -5,17 +5,17 @@
 import java.util.Collection;
 import java.util.Iterator;
 
-public class Class482 implements Iterable, Collection {
-	Class282 aClass282_5727;
-	public Class282 aClass282_5728 = new Class282();
+public class NodeCollection implements Iterable, Collection {
+	Node aClass282_5727;
+	public Node aClass282_5728 = new Node();
 
-	public Class282 method8057() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8057() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (class282 == aClass282_5728) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
 		return class282;
 	}
 
@@ -23,9 +23,9 @@ public class Class482 implements Iterable, Collection {
 		throw new RuntimeException();
 	}
 
-	public void method8059(Class282 class282, int i) {
+	public void method8059(Node class282, int i) {
 		if (null != class282.aClass282_3380)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
 		class282.aClass282_3378 = aClass282_5728;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -33,19 +33,19 @@ public class Class482 implements Iterable, Collection {
 	}
 
 	public boolean method8060(Object object) {
-		return method8072((Class282) object, -4100975);
+		return method8072((Node) object, -4100975);
 	}
 
-	public Class282 method8061(byte i) {
-		Class282 class282 = aClass282_5728.aClass282_3378;
+	public Node method8061(byte i) {
+		Node class282 = aClass282_5728.aClass282_3378;
 		if (aClass282_5728 == class282)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	void method8062(Class482 class482_0_, Class282 class282, int i) {
-		Class282 class282_1_ = aClass282_5728.aClass282_3380;
+	void method8062(NodeCollection class482_0_, Node class282, int i) {
+		Node class282_1_ = aClass282_5728.aClass282_3380;
 		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
 		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
 		if (class282 != aClass282_5728) {
@@ -56,7 +56,7 @@ public class Class482 implements Iterable, Collection {
 		}
 	}
 
-	public void method8063(Class482 class482_2_, int i) {
+	public void method8063(NodeCollection class482_2_, int i) {
 		if (aClass282_5728.aClass282_3378 != aClass282_5728)
 			method8062(class482_2_, aClass282_5728.aClass282_3378, -1691020971);
 	}
@@ -65,81 +65,81 @@ public class Class482 implements Iterable, Collection {
 		return new Class460(this);
 	}
 
-	Class282 method8064(Class282 class282) {
-		Class282 class282_3_;
+	Node method8064(Node class282) {
+		Node class282_3_;
 		if (class282 == null)
 			class282_3_ = aClass282_5728.aClass282_3380;
 		else
 			class282_3_ = class282;
 		if (aClass282_5728 == class282_3_) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282_3_.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282_3_.aClass282_3380;
 		return class282_3_;
 	}
 
-	public Class282 method8065(int i) {
+	public Node method8065(int i) {
 		return method8066(null, (byte) -32);
 	}
 
-	Class282 method8066(Class282 class282, byte i) {
-		Class282 class282_4_;
+	Node method8066(Node class282, byte i) {
+		Node class282_4_;
 		if (class282 == null)
 			class282_4_ = aClass282_5728.aClass282_3380;
 		else
 			class282_4_ = class282;
 		if (aClass282_5728 == class282_4_) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282_4_.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282_4_.aClass282_3380;
 		return class282_4_;
 	}
 
-	public Class282 method8067(int i) {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node next(int i) {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (class282 == aClass282_5728) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
 		return class282;
 	}
 
-	public Class282 method8068(byte i) {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8068(byte i) {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (aClass282_5728 == class282) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
 		return class282;
 	}
 
 	public int method8069(int i) {
 		int i_5_ = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
 			i_5_++;
 		return i_5_;
 	}
 
 	public boolean add(Object object) {
-		return method8072((Class282) object, -4100975);
+		return method8072((Node) object, -4100975);
 	}
 
-	Class282[] method8070(int i) {
-		Class282[] class282s = new Class282[method8069(-1374254477)];
+	Node[] method8070(int i) {
+		Node[] class282s = new Node[method8069(-1374254477)];
 		int i_6_ = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			class282s[i_6_++] = class282;
 		return class282s;
 	}
 
-	Class282[] method8071() {
-		Class282[] class282s = new Class282[method8069(-1374254477)];
+	Node[] method8071() {
+		Node[] class282s = new Node[method8069(-1374254477)];
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			class282s[i++] = class282;
 		return class282s;
 	}
@@ -162,17 +162,17 @@ public class Class482 implements Iterable, Collection {
 
 	public Object[] toArray(Object[] objects) {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			objects[i++] = class282;
 		return objects;
 	}
 
-	boolean method8072(Class282 class282, int i) {
+	boolean method8072(Node class282, int i) {
 		method8059(class282, 1651650132);
 		return true;
 	}
 
-	public Class282 method8073() {
+	public Node method8073() {
 		return method8066(null, (byte) -57);
 	}
 
@@ -196,9 +196,9 @@ public class Class482 implements Iterable, Collection {
 		return method8069(-1374254477);
 	}
 
-	public void method8075(Class282 class282) {
+	public void method8075(Node class282) {
 		if (null != class282.aClass282_3380)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
 		class282.aClass282_3378 = aClass282_5728;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -213,21 +213,21 @@ public class Class482 implements Iterable, Collection {
 		return super.hashCode();
 	}
 
-	Class282 method8076(Class282 class282, int i) {
-		Class282 class282_7_;
+	Node method8076(Node class282, int i) {
+		Node class282_7_;
 		if (null == class282)
 			class282_7_ = aClass282_5728.aClass282_3378;
 		else
 			class282_7_ = class282;
 		if (aClass282_5728 == class282_7_) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282_7_.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282_7_.aClass282_3378;
 		return class282_7_;
 	}
 
-	public Class282 method8077() {
+	public Node method8077() {
 		return method8076(null, -1471072918);
 	}
 
@@ -235,10 +235,10 @@ public class Class482 implements Iterable, Collection {
 		return method8069(-1374254477);
 	}
 
-	Class282[] method8079() {
-		Class282[] class282s = new Class282[method8069(-1374254477)];
+	Node[] method8079() {
+		Node[] class282s = new Node[method8069(-1374254477)];
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			class282s[i++] = class282;
 		return class282s;
 	}
@@ -275,9 +275,9 @@ public class Class482 implements Iterable, Collection {
 		return new Class460(this);
 	}
 
-	public void method8088(Class282 class282) {
+	public void method8088(Node class282) {
 		if (null != class282.aClass282_3380)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
 		class282.aClass282_3378 = aClass282_5728;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -288,17 +288,17 @@ public class Class482 implements Iterable, Collection {
 		return super.equals(object);
 	}
 
-	Class282 method8090(Class282 class282) {
-		Class282 class282_8_;
+	Node method8090(Node class282) {
+		Node class282_8_;
 		if (null == class282)
 			class282_8_ = aClass282_5728.aClass282_3378;
 		else
 			class282_8_ = class282;
 		if (aClass282_5728 == class282_8_) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282_8_.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282_8_.aClass282_3378;
 		return class282_8_;
 	}
 
@@ -306,72 +306,72 @@ public class Class482 implements Iterable, Collection {
 		return super.equals(object);
 	}
 
-	boolean method8092(Class282 class282) {
+	boolean method8092(Node class282) {
 		method8059(class282, 1448456597);
 		return true;
 	}
 
 	public void method8093() {
 		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.method4991(-371378792);
+			aClass282_5728.aClass282_3378.unlink(-371378792);
 	}
 
 	public void method8094() {
 		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.method4991(-371378792);
+			aClass282_5728.aClass282_3378.unlink(-371378792);
 	}
 
 	public void method8095() {
 		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.method4991(-371378792);
+			aClass282_5728.aClass282_3378.unlink(-371378792);
 	}
 
 	public boolean method8096(int i) {
 		return aClass282_5728.aClass282_3378 == aClass282_5728;
 	}
 
-	public Class282 method8097(byte i) {
+	public Node head(byte i) {
 		return method8076(null, -1858764882);
 	}
 
-	public void method8098(Class282 class282, byte i) {
+	public void method8098(Node class282, byte i) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5728;
 		class282.aClass282_3378 = aClass282_5728.aClass282_3378;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public static void method8099(Class282 class282, Class282 class282_9_) {
+	public static void method8099(Node class282, Node class282_9_) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = class282_9_.aClass282_3380;
 		class282.aClass282_3378 = class282_9_;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public Class282 method8100() {
-		Class282 class282 = aClass282_5728.aClass282_3378;
+	public Node method8100() {
+		Node class282 = aClass282_5728.aClass282_3378;
 		if (aClass282_5728 == class282)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	public Class282 method8101() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8101() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (aClass282_5728 == class282) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
 		return class282;
 	}
 
-	void method8102(Class482 class482_10_, Class282 class282) {
-		Class282 class282_11_ = aClass282_5728.aClass282_3380;
+	void method8102(NodeCollection class482_10_, Node class282) {
+		Node class282_11_ = aClass282_5728.aClass282_3380;
 		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
 		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
 		if (class282 != aClass282_5728) {
@@ -382,8 +382,8 @@ public class Class482 implements Iterable, Collection {
 		}
 	}
 
-	void method8103(Class482 class482_12_, Class282 class282) {
-		Class282 class282_13_ = aClass282_5728.aClass282_3380;
+	void method8103(NodeCollection class482_12_, Node class282) {
+		Node class282_13_ = aClass282_5728.aClass282_3380;
 		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
 		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
 		if (class282 != aClass282_5728) {
@@ -394,8 +394,8 @@ public class Class482 implements Iterable, Collection {
 		}
 	}
 
-	void method8104(Class482 class482_14_, Class282 class282) {
-		Class282 class282_15_ = aClass282_5728.aClass282_3380;
+	void method8104(NodeCollection class482_14_, Node class282) {
+		Node class282_15_ = aClass282_5728.aClass282_3380;
 		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
 		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
 		if (class282 != aClass282_5728) {
@@ -406,16 +406,16 @@ public class Class482 implements Iterable, Collection {
 		}
 	}
 
-	public Class282 method8105() {
-		Class282 class282 = aClass282_5728.aClass282_3378;
+	public Node method8105() {
+		Node class282 = aClass282_5728.aClass282_3378;
 		if (aClass282_5728 == class282)
 			return null;
-		class282.method4991(-371378792);
+		class282.unlink(-371378792);
 		return class282;
 	}
 
-	void method8106(Class482 class482_16_, Class282 class282) {
-		Class282 class282_17_ = aClass282_5728.aClass282_3380;
+	void method8106(NodeCollection class482_16_, Node class282) {
+		Node class282_17_ = aClass282_5728.aClass282_3380;
 		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
 		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
 		if (class282 != aClass282_5728) {
@@ -426,40 +426,40 @@ public class Class482 implements Iterable, Collection {
 		}
 	}
 
-	public void method8107(Class482 class482_18_) {
+	public void method8107(NodeCollection class482_18_) {
 		if (aClass282_5728.aClass282_3378 != aClass282_5728)
 			method8062(class482_18_, aClass282_5728.aClass282_3378, -859952897);
 	}
 
-	public void method8108(Class482 class482_19_) {
+	public void method8108(NodeCollection class482_19_) {
 		if (aClass282_5728.aClass282_3378 != aClass282_5728)
 			method8062(class482_19_, aClass282_5728.aClass282_3378, -586173771);
 	}
 
-	public Class282 method8109() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8109() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (aClass282_5728 == class282) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
 		return class282;
 	}
 
-	public Class282 method8110() {
+	public Node method8110() {
 		return method8076(null, -1547975264);
 	}
 
-	public void method8111(Class282 class282) {
+	public void method8111(Node class282) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = aClass282_5728;
 		class282.aClass282_3378 = aClass282_5728.aClass282_3378;
 		class282.aClass282_3380.aClass282_3378 = class282;
 		class282.aClass282_3378.aClass282_3380 = class282;
 	}
 
-	public Class282 method8112() {
+	public Node method8112() {
 		return method8066(null, (byte) 22);
 	}
 
@@ -467,34 +467,34 @@ public class Class482 implements Iterable, Collection {
 		return super.equals(object);
 	}
 
-	public Class482() {
+	public NodeCollection() {
 		aClass282_5728.aClass282_3378 = aClass282_5728;
 		aClass282_5728.aClass282_3380 = aClass282_5728;
 	}
 
-	public Class282 method8114() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8114() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (class282 == aClass282_5728) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
 		return class282;
 	}
 
-	public Class282 method8115() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8115() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (class282 == aClass282_5728) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
 		return class282;
 	}
 
 	public void method8116() {
 		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.method4991(-371378792);
+			aClass282_5728.aClass282_3378.unlink(-371378792);
 	}
 
 	public int method8117() {
@@ -503,32 +503,32 @@ public class Class482 implements Iterable, Collection {
 
 	public void method8118(int i) {
 		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.method4991(-371378792);
+			aClass282_5728.aClass282_3378.unlink(-371378792);
 	}
 
-	public Class282 method8119() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8119() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (class282 == aClass282_5728) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
 		return class282;
 	}
 
-	public Class282 method8120() {
-		Class282 class282 = ((Class482) this).aClass282_5727;
+	public Node method8120() {
+		Node class282 = ((NodeCollection) this).aClass282_5727;
 		if (aClass282_5728 == class282) {
-			((Class482) this).aClass282_5727 = null;
+			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((Class482) this).aClass282_5727 = class282.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
 		return class282;
 	}
 
 	public int method8121() {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
 			i++;
 		return i;
 	}
@@ -539,14 +539,14 @@ public class Class482 implements Iterable, Collection {
 
 	public int method8122() {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
 			i++;
 		return i;
 	}
 
 	public int method8123() {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
 			i++;
 		return i;
 	}
@@ -555,10 +555,10 @@ public class Class482 implements Iterable, Collection {
 		throw new RuntimeException();
 	}
 
-	Class282[] method8125() {
-		Class282[] class282s = new Class282[method8069(-1374254477)];
+	Node[] method8125() {
+		Node[] class282s = new Node[method8069(-1374254477)];
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			class282s[i++] = class282;
 		return class282s;
 	}
@@ -585,21 +585,21 @@ public class Class482 implements Iterable, Collection {
 
 	public Object[] method8131(Object[] objects) {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			objects[i++] = class282;
 		return objects;
 	}
 
 	public Object[] method8132(Object[] objects) {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			objects[i++] = class282;
 		return objects;
 	}
 
 	public Object[] method8133(Object[] objects) {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
 			objects[i++] = class282;
 		return objects;
 	}
@@ -608,7 +608,7 @@ public class Class482 implements Iterable, Collection {
 		throw new RuntimeException();
 	}
 
-	boolean method8134(Class282 class282) {
+	boolean method8134(Node class282) {
 		method8059(class282, 863000642);
 		return true;
 	}
@@ -619,7 +619,7 @@ public class Class482 implements Iterable, Collection {
 
 	public int method8136() {
 		int i = 0;
-		for (Class282 class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
+		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
 			i++;
 		return i;
 	}
@@ -641,11 +641,11 @@ public class Class482 implements Iterable, Collection {
 	}
 
 	public boolean method8141(Object object) {
-		return method8072((Class282) object, -4100975);
+		return method8072((Node) object, -4100975);
 	}
 
-	void method8142(Class482 class482_20_, Class282 class282) {
-		Class282 class282_21_ = aClass282_5728.aClass282_3380;
+	void method8142(NodeCollection class482_20_, Node class282) {
+		Node class282_21_ = aClass282_5728.aClass282_3380;
 		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
 		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
 		if (class282 != aClass282_5728) {
@@ -657,7 +657,7 @@ public class Class482 implements Iterable, Collection {
 	}
 
 	public boolean method8143(Object object) {
-		return method8072((Class282) object, -4100975);
+		return method8072((Node) object, -4100975);
 	}
 
 	public static void method8144(boolean bool, int i) {

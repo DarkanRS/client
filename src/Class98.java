@@ -85,7 +85,7 @@ public class Class98 {
 						((Class268) class268).anInt3297 += ((Class268) class268).aClass343_3303.method6090() * 1909850437;
 					} else if (class268.method4793((byte) -41) && ((((Class268) class268).aClass282_Sub18_3294 == null) || ((((Class268) class268).aClass282_Sub26_Sub1_Sub1_3296) == null))) {
 						if (((Class268) class268).aClass282_Sub18_3294 == null)
-							((Class268) class268).aClass282_Sub18_3294 = Class282_Sub18.method12270((Class313.aClass317_3665), (1932438803 * (((Class268) class268).anInt3291)));
+							((Class268) class268).aClass282_Sub18_3294 = Class282_Sub18.method12270((JS5LocalRequester.aClass317_3665), (1932438803 * (((Class268) class268).anInt3291)));
 						if (((Class268) class268).aClass282_Sub18_3294 == null)
 							continue;
 						if ((((Class268) class268).aClass282_Sub26_Sub1_Sub1_3296) == null) {
@@ -120,7 +120,7 @@ public class Class98 {
 									i_10_ = (((Class268) class268).anInt3306 * 1256992047);
 								}
 								if (0 != i_9_ || 0 != i_11_) {
-									int i_13_ = ((-(1236051449 * Class518.anInt5930) - (int) (Math.atan2((double) i_9_, (double) i_11_) * 2607.5945876176133) - 4096) & 0x3fff);
+									int i_13_ = ((-(1236051449 * AnimationDefinitions.anInt5930) - (int) (Math.atan2((double) i_9_, (double) i_11_) * 2607.5945876176133) - 4096) & 0x3fff);
 									if (i_13_ > 8192)
 										i_13_ = 16384 - i_13_;
 									int i_14_;

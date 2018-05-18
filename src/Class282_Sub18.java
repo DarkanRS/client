@@ -4,7 +4,7 @@
  */
 import java.io.IOException;
 
-public class Class282_Sub18 extends Class282 {
+public class Class282_Sub18 extends Node {
 	int anInt7604;
 	int anInt7605;
 	byte[][] aByteArrayArray7606;
@@ -383,7 +383,7 @@ public class Class282_Sub18 extends Class282 {
 		return fs;
 	}
 
-	static boolean method12268(Class317 class317) {
+	static boolean method12268(Index class317) {
 		if (!aBool7611) {
 			byte[] is = class317.getFile(0, 0, -1801910444);
 			if (is == null)
@@ -418,7 +418,7 @@ public class Class282_Sub18 extends Class282 {
 		return i_103_;
 	}
 
-	public static Class282_Sub18 method12270(Class317 class317, int i) {
+	public static Class282_Sub18 method12270(Index class317, int i) {
 		if (!method12268(class317)) {
 			class317.method5661(i, -1193230374);
 			return null;
@@ -435,9 +435,9 @@ public class Class282_Sub18 extends Class282 {
 		return class282_sub18;
 	}
 
-	static Class282_Sub18 method12271(Class317 class317, int i, int i_107_) {
+	static Class282_Sub18 method12271(Index class317, int i, int i_107_) {
 		if (!method12268(class317)) {
-			class317.method5688(i, i_107_, 16711935);
+			class317.load(i, i_107_, 16711935);
 			return null;
 		}
 		byte[] is = class317.getFile(i, i_107_, -1847317701);
@@ -484,7 +484,7 @@ public class Class282_Sub18 extends Class282 {
 		return i_108_;
 	}
 
-	public static Class282_Sub18 method12274(Class317 class317, int i) {
+	public static Class282_Sub18 method12274(Index class317, int i) {
 		if (!method12268(class317)) {
 			class317.method5661(i, 1504778998);
 			return null;
@@ -540,7 +540,7 @@ public class Class282_Sub18 extends Class282 {
 		return i;
 	}
 
-	static boolean method12282(Class317 class317) {
+	static boolean method12282(Index class317) {
 		if (!aBool7611) {
 			byte[] is = class317.getFile(0, 0, -1215752135);
 			if (is == null)
@@ -889,7 +889,7 @@ public class Class282_Sub18 extends Class282 {
 		return ((Class282_Sub18) this).anInt7605;
 	}
 
-	static boolean method12289(Class317 class317) {
+	static boolean method12289(Index class317) {
 		if (!aBool7611) {
 			byte[] is = class317.getFile(0, 0, -1791895913);
 			if (is == null)
@@ -899,7 +899,7 @@ public class Class282_Sub18 extends Class282 {
 		return true;
 	}
 
-	static boolean method12290(Class317 class317) {
+	static boolean method12290(Index class317) {
 		if (!aBool7611) {
 			byte[] is = class317.getFile(0, 0, -1650152767);
 			if (is == null)
@@ -909,7 +909,7 @@ public class Class282_Sub18 extends Class282 {
 		return true;
 	}
 
-	static boolean method12291(Class317 class317) {
+	static boolean method12291(Index class317) {
 		if (!aBool7611) {
 			byte[] is = class317.getFile(0, 0, -1271862093);
 			if (is == null)
@@ -944,7 +944,7 @@ public class Class282_Sub18 extends Class282 {
 		return i_218_;
 	}
 
-	static boolean method12293(Class317 class317) {
+	static boolean method12293(Index class317) {
 		if (!aBool7611) {
 			byte[] is = class317.getFile(0, 0, -1454828949);
 			if (is == null)

@@ -71,7 +71,7 @@ public class Class28 implements Interface2 {
 		}
 	}
 
-	int method770(Class8 class8, String string, int i, int i_4_, int i_5_, int i_6_) {
+	int method770(FontRenderer class8, String string, int i, int i_4_, int i_5_, int i_6_) {
 		return (class8.method378(string, i_5_ + i, i_4_ + i_5_, (((Class28) this).aClass365_349.anInt4227 * -547232823 - i_5_ * 2), (1416311209 * ((Class28) this).aClass365_349.anInt4228 - 2 * i_5_), ((Class28) this).aClass365_349.anInt4224 * 1984706887, 1850405797 * ((Class28) this).aClass365_349.anInt4222, 0, 0, 0, null, null, null, 0, 0, (byte) 76));
 	}
 
@@ -128,7 +128,7 @@ public class Class28 implements Interface2 {
 		/* empty */
 	}
 
-	int method771(Class8 class8, String string, int i, int i_8_, int i_9_) {
+	int method771(FontRenderer class8, String string, int i, int i_8_, int i_9_) {
 		return (class8.method378(string, i_9_ + i, i_8_ + i_9_, (((Class28) this).aClass365_349.anInt4227 * -547232823 - i_9_ * 2), (1416311209 * ((Class28) this).aClass365_349.anInt4228 - 2 * i_9_), ((Class28) this).aClass365_349.anInt4224 * 1984706887, 1850405797 * ((Class28) this).aClass365_349.anInt4222, 0, 0, 0, null, null, null, 0, 0, (byte) 18));
 	}
 

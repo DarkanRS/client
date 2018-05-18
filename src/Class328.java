@@ -136,7 +136,7 @@ public final class Class328 implements Comparable {
 
 	static final void method5829(CS2Executor class527, int i) {
 		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class120.method2094(i_10_, (byte) 1);
+		SharedConfigsType.method2094(i_10_, (byte) 1);
 	}
 
 	public static int method5830(CharSequence charsequence, int i) {

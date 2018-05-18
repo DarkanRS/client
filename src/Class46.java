@@ -308,8 +308,8 @@ public class Class46 implements Interface2 {
 	}
 
 	public static int method932(int i) {
-		synchronized (Class238.aClass229_2920) {
-			int i_35_ = Class238.aClass229_2920.method3862((byte) 2);
+		synchronized (PlayerAppearance.aClass229_2920) {
+			int i_35_ = PlayerAppearance.aClass229_2920.method3862((byte) 2);
 			return i_35_;
 		}
 	}

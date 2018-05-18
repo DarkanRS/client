@@ -3,11 +3,11 @@
  */
 
 public class Class219 {
-	static Class317 aClass317_2710;
+	static Index aClass317_2710;
 	public int anInt2711;
 	public int anInt2712;
 	public int anInt2713;
-	public static Class317 aClass317_2714;
+	public static Index aClass317_2714;
 
 	public String method3711() {
 		return new StringBuilder().append(298538453 * anInt2713).append(",").append(1948093437 * anInt2711 >> 6).append(",").append(-1002240017 * anInt2712 >> 6).append(",").append(1948093437 * anInt2711 & 0x3f).append(",").append(anInt2712 * -1002240017 & 0x3f).toString();

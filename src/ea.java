@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class ea extends Class8 implements Interface40 {
+public class ea extends FontRenderer implements Interface40 {
 	long nativeid;
 
 	native void UA(char c, int i, int i_0_, int i_1_, boolean bool);
@@ -11,7 +11,7 @@ public class ea extends Class8 implements Interface40 {
 
 	native void aq(char c, int i, int i_6_, int i_7_, boolean bool, Class455 class455, int i_8_, int i_9_);
 
-	ea(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, Class160[] class160s) {
+	ea(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, NativeSprite[] class160s) {
 		super(var_ja, class414);
 		byte[][] is = new byte[class91s.length][];
 		int[] is_10_ = new int[class91s.length];

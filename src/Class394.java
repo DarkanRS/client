@@ -3,9 +3,9 @@
  */
 
 public class Class394 {
-	Class317 aClass317_4784;
+	Index aClass317_4784;
 	public int anInt4785;
-	Class229 aClass229_4786 = new Class229(64);
+	SoftCache aClass229_4786 = new SoftCache(64);
 
 	public void method6752(int i) {
 		synchronized (((Class394) this).aClass229_4786) {
@@ -22,13 +22,13 @@ public class Class394 {
 			return class405;
 		byte[] is;
 		synchronized (((Class394) this).aClass317_4784) {
-			is = (((Class394) this).aClass317_4784.getFile(-71319279 * Class120.aClass120_1510.anInt1521, i, -1270537898));
+			is = (((Class394) this).aClass317_4784.getFile(-71319279 * SharedConfigsType.aClass120_1510.id, i, -1270537898));
 		}
 		class405 = new Class405();
 		if (null != is)
 			class405.method6816(new RsByteBuffer(is), 45839007);
 		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3856(class405, (long) i);
+			((Class394) this).aClass229_4786.put(class405, (long) i);
 		}
 		return class405;
 	}
@@ -51,10 +51,10 @@ public class Class394 {
 		}
 	}
 
-	public Class394(Class486 class486, Class495 class495, Class317 class317) {
+	public Class394(Game class486, Language class495, Index class317) {
 		((Class394) this).aClass317_4784 = class317;
 		if (null != ((Class394) this).aClass317_4784)
-			anInt4785 = (((Class394) this).aClass317_4784.method5624(-71319279 * Class120.aClass120_1510.anInt1521, -774524494)) * -476997773;
+			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.id, -774524494)) * -476997773;
 		else
 			anInt4785 = 0;
 	}

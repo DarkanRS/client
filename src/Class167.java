@@ -5,7 +5,7 @@
 public class Class167 {
 	Class505_Sub1 aClass505_Sub1_2042;
 	Interface22 anInterface22_2043;
-	Class229 aClass229_2044 = new Class229(256);
+	SoftCache aClass229_2044 = new SoftCache(256);
 
 	Class137_Sub1 method2857(int i, int i_0_) {
 		Object object = ((Class167) this).aClass229_2044.method3865((long) i);
@@ -29,7 +29,7 @@ public class Class167 {
 			class137_sub1 = new Class137_Sub1(((Class167) this).aClass505_Sub1_2042, 3553, Class150.aClass150_1949, Class76.aClass76_755, i_0_, i_0_, class169.aByte2088 != 0, fs, Class150.aClass150_1949);
 		}
 		class137_sub1.method14445(class169.aBool2086, class169.aBool2059);
-		((Class167) this).aClass229_2044.method3856(class137_sub1, (long) i);
+		((Class167) this).aClass229_2044.put(class137_sub1, (long) i);
 		return class137_sub1;
 	}
 
@@ -59,7 +59,7 @@ public class Class167 {
 			class137_sub1 = new Class137_Sub1(((Class167) this).aClass505_Sub1_2042, 3553, Class150.aClass150_1949, Class76.aClass76_755, i_1_, i_1_, class169.aByte2088 != 0, fs, Class150.aClass150_1949);
 		}
 		class137_sub1.method14445(class169.aBool2086, class169.aBool2059);
-		((Class167) this).aClass229_2044.method3856(class137_sub1, (long) i);
+		((Class167) this).aClass229_2044.put(class137_sub1, (long) i);
 		return class137_sub1;
 	}
 

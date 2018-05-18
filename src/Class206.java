@@ -10,7 +10,7 @@ public class Class206 {
 	int anInt2593;
 	int anInt2594;
 	byte[][] aByteArrayArray2595;
-	Class505 aClass505_2596;
+	GraphicalRenderer aClass505_2596;
 	Class454 aClass454_2597;
 	boolean aBool2598;
 	boolean aBool2599;
@@ -92,7 +92,7 @@ public class Class206 {
 		/* empty */
 	}
 
-	public void method3379(Class8 class8, byte i) {
+	public void method3379(FontRenderer class8, byte i) {
 		/* empty */
 	}
 
@@ -1205,15 +1205,15 @@ public class Class206 {
 		/* empty */
 	}
 
-	public void method3434(Class8 class8) {
+	public void method3434(FontRenderer class8) {
 		/* empty */
 	}
 
-	public void method3435(Class8 class8) {
+	public void method3435(FontRenderer class8) {
 		/* empty */
 	}
 
-	public void method3436(Class8 class8) {
+	public void method3436(FontRenderer class8) {
 		/* empty */
 	}
 
@@ -3022,7 +3022,7 @@ public class Class206 {
 		}
 	}
 
-	public Class206(Class505 class505, int i, int i_576_, int i_577_, int i_578_, int i_579_, boolean bool, boolean bool_580_) {
+	public Class206(GraphicalRenderer class505, int i, int i_576_, int i_577_, int i_578_, int i_579_, boolean bool, boolean bool_580_) {
 		((Class206) this).anInt2616 = 0;
 		((Class206) this).anInt2634 = 10072;
 		((Class206) this).anInt2618 = 5015;

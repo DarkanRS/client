@@ -3,15 +3,15 @@
  */
 
 public class Class406 {
-	Class229 aClass229_4836;
-	Class495 aClass495_4837;
+	SoftCache aClass229_4836;
+	Language aClass495_4837;
 	boolean aBool4838;
-	Class317 aClass317_4839;
+	Index aClass317_4839;
 	String[] aStringArray4840;
-	Class229 aClass229_4841 = new Class229(64);
-	Class317 aClass317_4842;
-	Class229 aClass229_4843;
-	Class486 aClass486_4844;
+	SoftCache aClass229_4841 = new SoftCache(64);
+	Index aClass317_4842;
+	SoftCache aClass229_4843;
+	Game aClass486_4844;
 	int anInt4845;
 
 	public void method6826() {
@@ -44,7 +44,7 @@ public class Class406 {
 			return class409;
 		byte[] is;
 		synchronized (((Class406) this).aClass317_4839) {
-			is = (((Class406) this).aClass317_4839.getFile(Class120.aClass120_1467.method2079(i, -391005566), Class120.aClass120_1467.method2080(i, -2083039735), -1310077438));
+			is = (((Class406) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i, -391005566), SharedConfigsType.aClass120_1467.fileId(i, -2083039735), -1310077438));
 		}
 		class409 = new Class409();
 		class409.anInt4856 = i * -1165155817;
@@ -54,7 +54,7 @@ public class Class406 {
 			class409.method6874(new RsByteBuffer(is), 1737313867);
 		class409.method6877(1494985964);
 		synchronized (((Class406) this).aClass229_4841) {
-			((Class406) this).aClass229_4841.method3856(class409, (long) i);
+			((Class406) this).aClass229_4841.put(class409, (long) i);
 		}
 		return class409;
 	}
@@ -118,7 +118,7 @@ public class Class406 {
 			return class409;
 		byte[] is;
 		synchronized (((Class406) this).aClass317_4839) {
-			is = (((Class406) this).aClass317_4839.getFile(Class120.aClass120_1467.method2079(i, 123668197), Class120.aClass120_1467.method2080(i, -1898923068), -1845264085));
+			is = (((Class406) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i, 123668197), SharedConfigsType.aClass120_1467.fileId(i, -1898923068), -1845264085));
 		}
 		class409 = new Class409();
 		class409.anInt4856 = i * -1165155817;
@@ -128,7 +128,7 @@ public class Class406 {
 			class409.method6874(new RsByteBuffer(is), 1705465056);
 		class409.method6877(-2031468830);
 		synchronized (((Class406) this).aClass229_4841) {
-			((Class406) this).aClass229_4841.method3856(class409, (long) i);
+			((Class406) this).aClass229_4841.put(class409, (long) i);
 		}
 		return class409;
 	}
@@ -142,7 +142,7 @@ public class Class406 {
 			return class409;
 		byte[] is;
 		synchronized (((Class406) this).aClass317_4839) {
-			is = (((Class406) this).aClass317_4839.getFile(Class120.aClass120_1467.method2079(i, 1099243946), Class120.aClass120_1467.method2080(i, -1970709943), -1827585715));
+			is = (((Class406) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i, 1099243946), SharedConfigsType.aClass120_1467.fileId(i, -1970709943), -1827585715));
 		}
 		class409 = new Class409();
 		class409.anInt4856 = i * -1165155817;
@@ -152,7 +152,7 @@ public class Class406 {
 			class409.method6874(new RsByteBuffer(is), 1944835693);
 		class409.method6877(-918646775);
 		synchronized (((Class406) this).aClass229_4841) {
-			((Class406) this).aClass229_4841.method3856(class409, (long) i);
+			((Class406) this).aClass229_4841.put(class409, (long) i);
 		}
 		return class409;
 	}
@@ -207,21 +207,21 @@ public class Class406 {
 		}
 	}
 
-	public Class406(Class486 class486, Class495 class495, boolean bool, Class317 class317, Class317 class317_3_) {
-		((Class406) this).aClass229_4836 = new Class229(50);
-		((Class406) this).aClass229_4843 = new Class229(5);
+	public Class406(Game class486, Language class495, boolean bool, Index class317, Index class317_3_) {
+		((Class406) this).aClass229_4836 = new SoftCache(50);
+		((Class406) this).aClass229_4843 = new SoftCache(5);
 		((Class406) this).aClass486_4844 = class486;
 		((Class406) this).aClass495_4837 = class495;
 		((Class406) this).aBool4838 = bool;
 		((Class406) this).aClass317_4839 = class317;
 		((Class406) this).aClass317_4842 = class317_3_;
 		if (null != ((Class406) this).aClass317_4839) {
-			int i = ((Class406) this).aClass317_4839.method5618(-941048817) - 1;
-			Class120.aClass120_1467.method2078(-443341258);
-			((Class406) this).aClass317_4839.method5624(i, 1971095578);
+			int i = ((Class406) this).aClass317_4839.containersCount(-941048817) - 1;
+			SharedConfigsType.aClass120_1467.filesPerContainer(-443341258);
+			((Class406) this).aClass317_4839.filesCount(i, 1971095578);
 		}
-		if (((Class406) this).aClass486_4844 == Class486.aClass486_5744)
-			((Class406) this).aStringArray4840 = (new String[] { null, null, null, null, null, Class433.aClass433_5282.method7273((((Class406) this).aClass495_4837), -1623078066) });
+		if (((Class406) this).aClass486_4844 == Game.runescape)
+			((Class406) this).aStringArray4840 = (new String[] { null, null, null, null, null, Message.aClass433_5282.translate((((Class406) this).aClass495_4837), -1623078066) });
 		else
 			((Class406) this).aStringArray4840 = new String[] { null, null, null, null, null, null };
 	}

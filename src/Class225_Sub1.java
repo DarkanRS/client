@@ -64,7 +64,7 @@ public class Class225_Sub1 extends Class225 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 887206826);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 887206826);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_15_).toString());
 			}
@@ -81,7 +81,7 @@ public class Class225_Sub1 extends Class225 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, 163170026);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, 163170026);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_15_).toString());
 			}
@@ -98,7 +98,7 @@ public class Class225_Sub1 extends Class225 {
 			if (is.length <= 1)
 				return null;
 			try {
-				class282_sub50_sub5 = Class505.method8699(is, -517791588);
+				class282_sub50_sub5 = GraphicalRenderer.method8699(is, -517791588);
 			} catch (Exception exception) {
 				throw new RuntimeException(new StringBuilder().append(exception.getMessage()).append(" ").append(i_15_).toString());
 			}

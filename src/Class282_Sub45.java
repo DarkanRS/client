@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub45 extends Class282 {
+public class Class282_Sub45 extends Node {
 	public long aLong8066;
 
 	public Class282_Sub45(long l) {

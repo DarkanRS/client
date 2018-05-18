@@ -9,7 +9,7 @@ public class Class52_Sub2_Sub1 extends Class52_Sub2 {
 		((Class52_Sub2_Sub1) this).aClass160_9162.method2756(i - i_3_ + i_4_, i_0_, i_1_ + i_3_ - i_4_, i_2_);
 	}
 
-	Class52_Sub2_Sub1(Class317 class317, Class317 class317_5_, Class350_Sub3_Sub1 class350_sub3_sub1) {
+	Class52_Sub2_Sub1(Index class317, Index class317_5_, Class350_Sub3_Sub1 class350_sub3_sub1) {
 		super(class317, class317_5_, (Class350_Sub3) class350_sub3_sub1);
 	}
 

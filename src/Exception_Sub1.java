@@ -4,7 +4,7 @@
 
 public class Exception_Sub1 extends Exception {
 	Class114 this$0;
-	static Class160 aClass160_10075;
+	static NativeSprite aClass160_10075;
 
 	Exception_Sub1(Class114 class114, int i, int i_0_) {
 		super("");

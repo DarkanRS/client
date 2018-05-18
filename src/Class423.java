@@ -239,7 +239,7 @@ public class Class423 {
 			Class345.aClass465_4029.method7765(new Class282_Sub38(Class345.anInt4028 * 1723673999), (long) i);
 			Class345.aClass345Array4025[(Class345.anInt4028 += 1694585199) * 1723673999 - 1] = class345;
 		}
-		Class345.aClass229_4031.method3856(class345, (long) i);
+		Class345.aClass229_4031.put(class345, (long) i);
 		return class345;
 	}
 

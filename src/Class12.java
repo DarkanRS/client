@@ -103,7 +103,7 @@ public class Class12 implements Runnable {
 		client.aFloat7365 = (float) i_3_;
 		if (5 == -672443707 * Class262.anInt3240) {
 			Class293.anInt3512 = i * -647467135;
-			Class518.anInt5930 = 1898253385 * i_3_;
+			AnimationDefinitions.anInt5930 = 1898253385 * i_3_;
 			Class121.anInt1525 = i_4_ * -833027875;
 		}
 		IsaacCipher.method7268(1504588088);

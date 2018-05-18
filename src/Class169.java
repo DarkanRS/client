@@ -86,13 +86,13 @@ public class Class169 {
 	}
 
 	public static void method2876(NPC class521_sub1_sub1_sub2_sub2, int i) {
-		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.method8097((byte) 123)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.method8067(1114732326)) {
+		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 123)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(1114732326)) {
 			if ((((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085) == class521_sub1_sub1_sub2_sub2) {
 				if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099)) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.method4991(-371378792);
+				class282_sub48.unlink(-371378792);
 				break;
 			}
 		}

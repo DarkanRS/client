@@ -4,7 +4,7 @@
  */
 import java.applet.Applet;
 
-public class Class282_Sub44 extends Class282 {
+public class Class282_Sub44 extends Node {
 	public int anInt8062;
 	public int anInt8063;
 	public static int anInt8064;

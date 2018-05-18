@@ -49,7 +49,7 @@ public abstract class Class158 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class437 class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
+		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
 		if (class437.method7319(2069262708))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class119.aClass426_1463.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
 		else
@@ -67,7 +67,7 @@ public abstract class Class158 {
 		return client.aBool7301 ? 2 : 1;
 	}
 
-	static void method2731(Class505 class505, Class455 class455, Class118 class118, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+	static void method2731(GraphicalRenderer class505, Class455 class455, Class118 class118, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		Class220 class220 = Class397.aClass218_4813.method3700(i_6_, 2092552415);
 		if (class220 != null && class220.aBool2729 && class220.method3719(Class158_Sub1.aClass3_8507, -1138810540)) {
 			if (null != class220.anIntArray2717) {
@@ -133,7 +133,7 @@ public abstract class Class158 {
 					class505.method8669(is[is.length - 2], is[is.length - 1], is[0], is[1], (class220.anIntArray2738[(class220.aByteArray2754[(class220.aByteArray2754.length - 1)]) & 0xff]), 1, class455, i, i_3_);
 				}
 			}
-			Class160 class160 = null;
+			NativeSprite class160 = null;
 			if (-1 != class220.anInt2719 * -1248709255) {
 				class160 = class220.method3735(class505, false, (byte) 8);
 				if (class160 != null)
@@ -143,7 +143,7 @@ public abstract class Class158 {
 				int i_28_ = 0;
 				if (class160 != null)
 					i_28_ = class160.method2793();
-				Class8 class8 = Class540.aClass8_7138;
+				FontRenderer class8 = Class540.aClass8_7138;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					class8 = Class16.aClass8_144;

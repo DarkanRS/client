@@ -36,9 +36,9 @@ public class Class446 {
 	public static Class446 aClass446_5415;
 	static Class194 aClass194_5416;
 
-	public static void method7430(Class282 class282, Class282 class282_0_, int i) {
+	public static void method7430(Node class282, Node class282_0_, int i) {
 		if (class282.aClass282_3380 != null)
-			class282.method4991(-371378792);
+			class282.unlink(-371378792);
 		class282.aClass282_3380 = class282_0_.aClass282_3380;
 		class282.aClass282_3378 = class282_0_;
 		class282.aClass282_3380.aClass282_3378 = class282;
@@ -148,7 +148,7 @@ public class Class446 {
 		((Class446) this).anInt5408 = i * -1530265891;
 	}
 
-	public static void method7447(String string, boolean bool, Class505 class505, Class8 class8, Class414 class414, byte i) {
+	public static void method7447(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, Class414 class414, byte i) {
 		boolean bool_4_ = !Class174.aBool2135 || Class174.method2954(1454743484);
 		if (bool_4_) {
 			if (Class174.aBool2135 && bool_4_) {

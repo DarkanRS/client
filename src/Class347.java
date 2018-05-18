@@ -5,8 +5,8 @@
 public class Class347 {
 	public int anInt4050;
 	public int anInt4051;
-	static Class229 aClass229_4052 = new Class229(64);
-	static Class317 aClass317_4053;
+	static SoftCache aClass229_4052 = new SoftCache(64);
+	static Index aClass317_4053;
 	public int anInt4054;
 	public int anInt4055 = -2109958295;
 	static final int anInt4056 = 0;
@@ -63,11 +63,11 @@ public class Class347 {
 			aBool4059 = true;
 	}
 
-	public static void method6165(Class317 class317) {
+	public static void method6165(Index class317) {
 		aClass317_4053 = class317;
 	}
 
-	public static void method6166(Class317 class317) {
+	public static void method6166(Index class317) {
 		aClass317_4053 = class317;
 	}
 
@@ -79,7 +79,7 @@ public class Class347 {
 		class347 = new Class347();
 		if (null != is)
 			class347.method6163(new RsByteBuffer(is), i, (short) 257);
-		aClass229_4052.method3856(class347, (long) i);
+		aClass229_4052.put(class347, (long) i);
 		return class347;
 	}
 
@@ -148,20 +148,20 @@ public class Class347 {
 			Class291_Sub1.anInt8026 = -194319891;
 		}
 		if (Class291_Sub1.aBool8022 && null != Class346.aClass482_4049) {
-			for (Class282_Sub33 class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.method8097((byte) 117)); class282_sub33 != null; class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.method8067(-731653338))) {
+			for (Class282_Sub33 class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.head((byte) 117)); class282_sub33 != null; class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.next(-731653338))) {
 				Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991), 1327385371));
 				if (class282_sub33.method12577(i, i_7_, -1474454985)) {
 					if (null != class220.aStringArray2740) {
 						if (null != class220.aStringArray2740[4])
-							Class238.method4032(class220.aStringArray2740[4], class220.aString2732, -1, 1012, -1, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), class220.anInt2718 * 781329827, 0, true, false, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), false, -1941866254);
+							PlayerAppearance.method4032(class220.aStringArray2740[4], class220.aString2732, -1, 1012, -1, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), class220.anInt2718 * 781329827, 0, true, false, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), false, -1941866254);
 						if (null != class220.aStringArray2740[3])
-							Class238.method4032(class220.aStringArray2740[3], class220.aString2732, -1, 1011, -1, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), 781329827 * class220.anInt2718, 0, true, false, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), false, -1376328054);
+							PlayerAppearance.method4032(class220.aStringArray2740[3], class220.aString2732, -1, 1011, -1, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), 781329827 * class220.anInt2718, 0, true, false, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), false, -1376328054);
 						if (null != class220.aStringArray2740[2])
-							Class238.method4032(class220.aStringArray2740[2], class220.aString2732, -1, 1010, -1, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), 781329827 * class220.anInt2718, 0, true, false, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), false, -1687598339);
+							PlayerAppearance.method4032(class220.aStringArray2740[2], class220.aString2732, -1, 1010, -1, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), 781329827 * class220.anInt2718, 0, true, false, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), false, -1687598339);
 						if (class220.aStringArray2740[1] != null)
-							Class238.method4032(class220.aStringArray2740[1], class220.aString2732, -1, 1009, -1, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), class220.anInt2718 * 781329827, 0, true, false, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), false, -1447138539);
+							PlayerAppearance.method4032(class220.aStringArray2740[1], class220.aString2732, -1, 1009, -1, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), class220.anInt2718 * 781329827, 0, true, false, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), false, -1447138539);
 						if (class220.aStringArray2740[0] != null)
-							Class238.method4032(class220.aStringArray2740[0], class220.aString2732, -1, 1008, -1, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), 781329827 * class220.anInt2718, 0, true, false, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), false, -1091796707);
+							PlayerAppearance.method4032(class220.aStringArray2740[0], class220.aString2732, -1, 1008, -1, (long) (-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991)), 781329827 * class220.anInt2718, 0, true, false, (long) ((((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991) * -1798678621), false, -1091796707);
 					}
 					if (!((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.aBool7989) {
 						((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.aBool7989 = true;

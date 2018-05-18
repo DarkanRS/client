@@ -12,7 +12,7 @@ public abstract class Class282_Sub50_Sub17 extends Class282_Sub50 {
 		/* empty */
 	}
 
-	static void method15506(Class505 class505, int i, int i_0_, Class118 class118, int i_1_) {
+	static void method15506(GraphicalRenderer class505, int i, int i_0_, Class118 class118, int i_1_) {
 		int i_2_ = 63;
 		int i_3_ = 7;
 		for (int i_4_ = 63; i_4_ >= 0; i_4_--) {

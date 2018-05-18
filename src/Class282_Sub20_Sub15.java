@@ -6,7 +6,7 @@ public class Class282_Sub20_Sub15 extends Class282_Sub20 {
 	static final boolean aBool9835 = false;
 	int anInt9836 = -1744076800;
 	static final int anInt9837 = 32768;
-	static Class160[] aClass160Array9838;
+	static NativeSprite[] aClass160Array9838;
 
 	void method12332(int i, RsByteBuffer class282_sub35) {
 		switch (i) {

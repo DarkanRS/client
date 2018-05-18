@@ -667,7 +667,7 @@ public class Class272 {
 		return is;
 	}
 
-	static void method4833(Class505 class505, byte[][][] is, int i, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_, int i_142_, int i_143_, int i_144_) {
+	static void method4833(GraphicalRenderer class505, byte[][][] is, int i, int i_136_, int i_137_, int i_138_, int i_139_, int i_140_, int i_141_, int i_142_, int i_143_, int i_144_) {
 		if (i_142_ != 0 && i != 0) {
 			if (9 == i_142_) {
 				i_142_ = 1;
@@ -685,7 +685,7 @@ public class Class272 {
 		}
 	}
 
-	static void method4834(Class505 class505, byte[][][] is, int i, int i_145_, int i_146_, int i_147_, int i_148_, int i_149_, int i_150_, int i_151_, int i_152_, int i_153_) {
+	static void method4834(GraphicalRenderer class505, byte[][][] is, int i, int i_145_, int i_146_, int i_147_, int i_148_, int i_149_, int i_150_, int i_151_, int i_152_, int i_153_) {
 		if (i_151_ != 0 && i != 0) {
 			if (9 == i_151_) {
 				i_151_ = 1;
@@ -1038,7 +1038,7 @@ public class Class272 {
 		throw new Error();
 	}
 
-	static void method4836(Class505 class505, byte[][][] is, int i, int i_222_, int i_223_, int i_224_, int i_225_, int i_226_, int i_227_, int i_228_, int i_229_, int i_230_) {
+	static void method4836(GraphicalRenderer class505, byte[][][] is, int i, int i_222_, int i_223_, int i_224_, int i_225_, int i_226_, int i_227_, int i_228_, int i_229_, int i_230_) {
 		if (i_228_ != 0 && i != 0) {
 			if (9 == i_228_) {
 				i_228_ = 1;

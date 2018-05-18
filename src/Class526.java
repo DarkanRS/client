@@ -42,7 +42,7 @@ public class Class526 {
 		}
 	}
 
-	public Class526(Class317 class317) {
+	public Class526(Index class317) {
 		byte[] is = class317.method5615((-1719912253 * Class524.aClass524_6963.anInt6966), -345118787);
 		method11245(new RsByteBuffer(is), -672057910);
 		if (equipmentSlots == null)

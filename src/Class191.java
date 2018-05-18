@@ -134,7 +134,7 @@ public class Class191 implements Runnable {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class8.method403(class118, class98, class527, 1299404618);
+		FontRenderer.method403(class118, class98, class527, 1299404618);
 	}
 
 	static final void method3164(CS2Executor class527, int i) {

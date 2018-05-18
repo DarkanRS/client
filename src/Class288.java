@@ -5,8 +5,8 @@
 import java.util.Date;
 
 public class Class288 {
-	Class317 aClass317_3436;
-	Class229 aClass229_3437 = new Class229(16);
+	Index aClass317_3436;
+	SoftCache aClass229_3437 = new SoftCache(16);
 	static Class414 aClass414_3438;
 
 	public void method5067() {
@@ -33,9 +33,9 @@ public class Class288 {
 		}
 	}
 
-	public Class288(Class486 class486, Class495 class495, Class317 class317) {
+	public Class288(Game class486, Language class495, Index class317) {
 		((Class288) this).aClass317_3436 = class317;
-		((Class288) this).aClass317_3436.method5624((-71319279 * (Class120.aClass120_1469.anInt1521)), -1821241871);
+		((Class288) this).aClass317_3436.filesCount((-71319279 * (SharedConfigsType.aClass120_1469.id)), -1821241871);
 	}
 
 	public void method5071(int i) {
@@ -53,13 +53,13 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1168931806));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1168931806));
 		}
 		class207 = new Class207();
 		if (is != null)
 			class207.method3549(new RsByteBuffer(is), -2145124357);
 		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3856(class207, (long) i);
+			((Class288) this).aClass229_3437.put(class207, (long) i);
 		}
 		return class207;
 	}
@@ -73,13 +73,13 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1884209588));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1884209588));
 		}
 		class207 = new Class207();
 		if (is != null)
 			class207.method3549(new RsByteBuffer(is), -2107395661);
 		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3856(class207, (long) i);
+			((Class288) this).aClass229_3437.put(class207, (long) i);
 		}
 		return class207;
 	}
@@ -93,13 +93,13 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1684955859));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1684955859));
 		}
 		class207 = new Class207();
 		if (is != null)
 			class207.method3549(new RsByteBuffer(is), -2034753155);
 		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3856(class207, (long) i);
+			((Class288) this).aClass229_3437.put(class207, (long) i);
 		}
 		return class207;
 	}
@@ -113,13 +113,13 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1465415322));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1465415322));
 		}
 		class207 = new Class207();
 		if (is != null)
 			class207.method3549(new RsByteBuffer(is), -2089272706);
 		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3856(class207, (long) i);
+			((Class288) this).aClass229_3437.put(class207, (long) i);
 		}
 		return class207;
 	}
@@ -133,13 +133,13 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * Class120.aClass120_1469.anInt1521, i, -1597785812));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1597785812));
 		}
 		class207 = new Class207();
 		if (is != null)
 			class207.method3549(new RsByteBuffer(is), -2117988400);
 		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3856(class207, (long) i);
+			((Class288) this).aClass229_3437.put(class207, (long) i);
 		}
 		return class207;
 	}
@@ -196,7 +196,7 @@ public class Class288 {
 	public static Class98 method5084(int i, int[] is, Class98 class98, boolean bool, byte i_9_) {
 		if (!Class388.aClass317_4721.method5647(i, -2119577317))
 			return null;
-		int i_10_ = Class388.aClass317_4721.method5624(i, 1474003408);
+		int i_10_ = Class388.aClass317_4721.filesCount(i, 1474003408);
 		Class118[] class118s;
 		if (i_10_ == 0)
 			class118s = new Class118[0];
@@ -212,7 +212,7 @@ public class Class288 {
 		}
 		for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
 			if (class98.aClass118Array998[i_11_] == null) {
-				byte[] is_12_ = Class388.aClass317_4721.method5643(i, i_11_, is, -440613598);
+				byte[] is_12_ = Class388.aClass317_4721.getFile(i, i_11_, is, -440613598);
 				if (null != is_12_) {
 					Class118 class118 = class98.aClass118Array998[i_11_] = new Class118();
 					class118.anInt1287 = ((i << 16) + i_11_) * -1255176211;

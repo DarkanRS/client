@@ -13,7 +13,7 @@ public class Class236 {
 	static int anInt2912 = 0;
 	static Class534_Sub1 aClass534_Sub1_2913;
 	static Queue aQueue2914;
-	public static Class317 aClass317_2915;
+	public static Index aClass317_2915;
 
 	public static void method3968(Class282_Sub53 class282_sub53) {
 		if (!Class169.method2875(-1741204137 * client.anInt7166, -2098454084))

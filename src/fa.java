@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class fa extends Class160 implements Interface40, Interface9 {
+public class fa extends NativeSprite implements Interface40, Interface9 {
 	long nativeid;
 	boolean aBool7477 = false;
 

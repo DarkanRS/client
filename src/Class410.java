@@ -4,7 +4,7 @@
 
 public class Class410 {
 	static final int anInt4923 = 3;
-	public static Class317 aClass317_4924;
+	public static Index aClass317_4924;
 
 	Class410() throws Throwable {
 		throw new Error();

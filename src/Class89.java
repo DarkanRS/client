@@ -17,7 +17,7 @@ public class Class89 {
 	public static final int anInt941 = 2;
 	public static final int anInt942 = 0;
 	public static final int anInt943 = 2;
-	public static Class317 aClass317_944;
+	public static Index aClass317_944;
 
 	Class89() throws Throwable {
 		throw new Error();

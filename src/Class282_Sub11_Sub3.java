@@ -67,12 +67,12 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		Class295.method5291(class118, class98, class527, 464841858);
 	}
 
-	public static void method15476(Class505 class505, int i) {
-		Class540.aClass8_7138 = ((Class8) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class16.anInt140 * 1500183805), true, true, -2082744480));
+	public static void method15476(GraphicalRenderer class505, int i) {
+		Class540.aClass8_7138 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class16.anInt140 * 1500183805), true, true, -2082744480));
 		Class282_Sub17_Sub2.aClass414_9933 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 1500183805 * Class16.anInt140, -777262931);
-		Class16.aClass8_144 = ((Class8) Class487.aClass378_5752.method6426(client.anInterface35_7206, 436671641 * Class16.anInt136, true, true, -2070045915));
+		Class16.aClass8_144 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, 436671641 * Class16.anInt136, true, true, -2070045915));
 		Class16.aClass414_139 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 436671641 * Class16.anInt136, -1782944110);
-		Class285.aClass8_3394 = ((Class8) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class395.anInt4788 * -625646657), true, true, -2089957930));
+		Class285.aClass8_3394 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class395.anInt4788 * -625646657), true, true, -2089957930));
 		Class288.aClass414_3438 = Class487.aClass378_5752.method6415(client.anInterface35_7206, (Class395.anInt4788 * -625646657), -989172290);
 	}
 }

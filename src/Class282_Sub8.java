@@ -4,7 +4,7 @@
  */
 import java.nio.ByteBuffer;
 
-public class Class282_Sub8 extends Class282 {
+public class Class282_Sub8 extends Node {
 	Interface32 anInterface32_7523;
 	Class390_Sub1 aClass390_Sub1_7524;
 	Interface4 anInterface4_7525;
@@ -28,7 +28,7 @@ public class Class282_Sub8 extends Class282 {
 		int i_8_ = ((Class282_Sub8) this).aClass390_Sub1_7524.method6709(i_6_, i_7_, -2014795016);
 		if ((i_3_ & 0x7f) == 0 || (i_4_ & 0x7f) == 0) {
 			l = ((long) i_7_ & 0xffffL) << 16 | (long) i_6_ & 0xffffL;
-			Class282 class282 = ((Class282_Sub8) this).aClass453_7537.method7530(l);
+			Node class282 = ((Class282_Sub8) this).aClass453_7537.method7530(l);
 			if (class282 != null) {
 				bytebuffer.putShort(((Class282_Sub46) class282).aShort8067);
 				return;
@@ -254,7 +254,7 @@ public class Class282_Sub8 extends Class282 {
 		int i_65_ = ((Class282_Sub8) this).aClass390_Sub1_7524.method6709(i_63_, i_64_, -106359952);
 		if ((i_60_ & 0x7f) == 0 || (i_61_ & 0x7f) == 0) {
 			l = ((long) i_64_ & 0xffffL) << 16 | (long) i_63_ & 0xffffL;
-			Class282 class282 = ((Class282_Sub8) this).aClass453_7537.method7530(l);
+			Node class282 = ((Class282_Sub8) this).aClass453_7537.method7530(l);
 			if (class282 != null) {
 				bytebuffer.putShort(((Class282_Sub46) class282).aShort8067);
 				return;

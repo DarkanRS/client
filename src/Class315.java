@@ -11,7 +11,7 @@ public class Class315 {
 		throw new Error();
 	}
 
-	public static Class505 method5582(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
+	public static GraphicalRenderer method5582(Canvas canvas, Interface22 interface22, Index class317, int i) {
 		Class505_Sub2_Sub1 class505_sub2_sub1;
 		try {
 			boolean bool = Class505_Sub2.method13893();
@@ -35,7 +35,7 @@ public class Class315 {
 		return class505_sub2_sub1;
 	}
 
-	public static Class505 method5583(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
+	public static GraphicalRenderer method5583(Canvas canvas, Interface22 interface22, Index class317, int i) {
 		Class505_Sub2_Sub1 class505_sub2_sub1;
 		try {
 			boolean bool = Class505_Sub2.method13893();
@@ -59,7 +59,7 @@ public class Class315 {
 		return class505_sub2_sub1;
 	}
 
-	public static Class505 method5584(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
+	public static GraphicalRenderer method5584(Canvas canvas, Interface22 interface22, Index class317, int i) {
 		Class505_Sub2_Sub1 class505_sub2_sub1;
 		try {
 			boolean bool = Class505_Sub2.method13893();
@@ -83,7 +83,7 @@ public class Class315 {
 		return class505_sub2_sub1;
 	}
 
-	public static Class505 method5585(Canvas canvas, Interface22 interface22, Class317 class317, int i) {
+	public static GraphicalRenderer method5585(Canvas canvas, Interface22 interface22, Index class317, int i) {
 		Class505_Sub2_Sub1 class505_sub2_sub1;
 		try {
 			boolean bool = Class505_Sub2.method13893();

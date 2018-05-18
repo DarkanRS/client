@@ -5,23 +5,23 @@
 public class Class456_Sub2 extends Class456 {
 	Class521_Sub1 aClass521_Sub1_7890;
 
-	void method7592(Class518 class518, int i) {
+	void method7592(AnimationDefinitions class518, int i) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	void method7586(Class518 class518, int i, int i_0_) {
+	void method7586(AnimationDefinitions class518, int i, int i_0_) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	void method7626(Class518 class518, int i) {
+	void method7626(AnimationDefinitions class518, int i) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	void method7590(Class518 class518, int i) {
+	void method7590(AnimationDefinitions class518, int i) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	void method7591(Class518 class518, int i) {
+	void method7591(AnimationDefinitions class518, int i) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
@@ -30,15 +30,15 @@ public class Class456_Sub2 extends Class456 {
 		((Class456_Sub2) this).aClass521_Sub1_7890 = class521_sub1;
 	}
 
-	void method7616(Class518 class518, int i) {
+	void method7616(AnimationDefinitions class518, int i) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	void method7594(Class518 class518, int i) {
+	void method7594(AnimationDefinitions class518, int i) {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	static void method12680(Class505 class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, Class8 class8, Class414 class414, String string, int i_5_) {
+	static void method12680(GraphicalRenderer class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, FontRenderer class8, Class414 class414, String string, int i_5_) {
 		int i_6_ = (255 - Class301.anInt3556 * 233097173 - Class20.anInt156 * -1454754391);
 		if (i_6_ < 0)
 			i_6_ = 0;
@@ -59,7 +59,7 @@ public class Class456_Sub2 extends Class456 {
 			Class61.aClass160_647.method2752(i, i_1_);
 			Class60.aClass160_612.method2752(i + i_2_ - Class60.aClass160_612.method2747(), i_1_);
 		}
-		class8.method358(string, i + 3, (i_1_ + 397683159 * class414.anInt4978 + (20 - class414.anInt4978 * 397683159) / 2), 1836789541 * Class388.anInt4722 | ~0xffffff, -1, -418109423);
+		class8.renderText(string, i + 3, (i_1_ + 397683159 * class414.anInt4978 + (20 - class414.anInt4978 * 397683159) / 2), 1836789541 * Class388.anInt4722 | ~0xffffff, -1, -418109423);
 		class505.B(i, i_1_ + i_4_, i_2_, i_3_ - i_4_, i_6_ << 24 | Class282_Sub20_Sub9.anInt9792 * 134810037, 1);
 	}
 }

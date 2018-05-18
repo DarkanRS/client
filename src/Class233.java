@@ -4,8 +4,8 @@
 
 public class Class233 {
 	public static int anInt2880;
-	Class229 aClass229_2881 = new Class229(64);
-	Class317 aClass317_2882;
+	SoftCache aClass229_2881 = new SoftCache(64);
+	Index aClass317_2882;
 	static Class202 aClass202_2883;
 
 	public void method3923(int i, int i_0_) {
@@ -14,10 +14,10 @@ public class Class233 {
 		}
 	}
 
-	public Class233(Class486 class486, Class495 class495, Class317 class317) {
+	public Class233(Game class486, Language class495, Index class317) {
 		((Class233) this).aClass317_2882 = class317;
 		if (null != ((Class233) this).aClass317_2882)
-			((Class233) this).aClass317_2882.method5624(-71319279 * Class120.aClass120_1464.anInt1521, -494038872);
+			((Class233) this).aClass317_2882.filesCount(-71319279 * SharedConfigsType.aClass120_1464.id, -494038872);
 	}
 
 	public void method3924(int i) {
@@ -47,13 +47,13 @@ public class Class233 {
 			return class537;
 		byte[] is;
 		synchronized (((Class233) this).aClass317_2882) {
-			is = (((Class233) this).aClass317_2882.getFile(-71319279 * Class120.aClass120_1464.anInt1521, i, -1218686172));
+			is = (((Class233) this).aClass317_2882.getFile(-71319279 * SharedConfigsType.aClass120_1464.id, i, -1218686172));
 		}
 		class537 = new Class537();
 		if (is != null)
 			class537.method11487(new RsByteBuffer(is), (byte) -121);
 		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3856(class537, (long) i);
+			((Class233) this).aClass229_2881.put(class537, (long) i);
 		}
 		return class537;
 	}
@@ -97,13 +97,13 @@ public class Class233 {
 			return class537;
 		byte[] is;
 		synchronized (((Class233) this).aClass317_2882) {
-			is = (((Class233) this).aClass317_2882.getFile(-71319279 * Class120.aClass120_1464.anInt1521, i, -1461146634));
+			is = (((Class233) this).aClass317_2882.getFile(-71319279 * SharedConfigsType.aClass120_1464.id, i, -1461146634));
 		}
 		class537 = new Class537();
 		if (is != null)
 			class537.method11487(new RsByteBuffer(is), (byte) -105);
 		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3856(class537, (long) i);
+			((Class233) this).aClass229_2881.put(class537, (long) i);
 		}
 		return class537;
 	}

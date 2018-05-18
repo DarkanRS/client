@@ -137,9 +137,9 @@ public class Class534_Sub1 extends Class534 {
 	static int[] method12815(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
 		int[] is = null;
 		if (Class38.method859(-1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587, 219826890))
-			is = (Class119.aClass426_1463.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 327237779).anIntArray5097);
+			is = (Class119.aClass426_1463.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 327237779).quests);
 		else if ((-270249393 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579) != -1)
-			is = (Class119.aClass426_1463.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 616869394).anIntArray5097);
+			is = (Class119.aClass426_1463.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 616869394).quests);
 		else if (Class237.method3989((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), (byte) 0)) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L))));
 			if (class282_sub47 != null) {

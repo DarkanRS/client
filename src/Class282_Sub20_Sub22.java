@@ -259,7 +259,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 				} else if (Class169.method2869(1898123142) >= 3740457902241092779L * Class28.aLong351)
 					Class496.aClass510_5816 = client.aClass508_7223.method8729((Class159.aClass450_2010.aString5433), (short) 5418);
 				Class434.method7292((byte) -22);
-				Class282_Sub53 class282_sub53 = ((Class282_Sub53) client.aClass482_7267.method8097((byte) 106));
+				Class282_Sub53 class282_sub53 = ((Class282_Sub53) client.aClass482_7267.head((byte) 106));
 				if (client.aClass257_7353.method4430(-1135712280) != null) {
 					if (5 == Class262.anInt3240 * -672443707)
 						Class521_Sub1_Sub5_Sub2.method16113(70521151);
@@ -410,9 +410,9 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						for (Class275_Sub4 class275_sub4 = (Class275_Sub4) client.aClass457_7350.method7659(301908602); null != class275_sub4; class275_sub4 = ((Class275_Sub4) client.aClass457_7350.method7650((byte) 20))) {
 							if ((long) (478251145 * (((Class275_Sub4) class275_sub4).anInt7838)) < (Class169.method2869(2097825958) / 1000L - 5L)) {
 								if (((Class275_Sub4) class275_sub4).aShort7839 > 0)
-									Class191.method3167(5, 0, "", "", "", new StringBuilder().append(((Class275_Sub4) class275_sub4).aString7837).append(Class433.aClass433_5278.method7273(Class223.aClass495_2772, -1783066271)).toString(), 442373563);
+									Class191.method3167(5, 0, "", "", "", new StringBuilder().append(((Class275_Sub4) class275_sub4).aString7837).append(Message.aClass433_5278.translate(Class223.aClass495_2772, -1783066271)).toString(), 442373563);
 								if (((Class275_Sub4) class275_sub4).aShort7839 == 0)
-									Class191.method3167(5, 0, "", "", "", new StringBuilder().append(((Class275_Sub4) class275_sub4).aString7837).append(Class433.aClass433_5277.method7273(Class223.aClass495_2772, -805981058)).toString(), 1499607134);
+									Class191.method3167(5, 0, "", "", "", new StringBuilder().append(((Class275_Sub4) class275_sub4).aString7837).append(Message.aClass433_5277.translate(Class223.aClass495_2772, -805981058)).toString(), 1499607134);
 								class275_sub4.method4887((byte) -28);
 							}
 						}
@@ -484,7 +484,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 		Class96_Sub10.method14603(4, i_44_ << 16 | i_45_, i_46_, "", (byte) 73);
 	}
 
-	public static void method15388(Class317 class317, byte i) {
+	public static void method15388(Index class317, byte i) {
 		Class219.aClass317_2710 = class317;
 	}
 }

@@ -5,7 +5,7 @@
 public class Class348 {
 	int anInt4060 = 809353231;
 	static final int anInt4061 = 1;
-	Class482 aClass482_4062 = new Class482();
+	NodeCollection aClass482_4062 = new NodeCollection();
 	static final int anInt4063 = 6;
 	static final int anInt4064 = 2;
 	static final int anInt4065 = 11;
@@ -61,7 +61,7 @@ public class Class348 {
 	public void method6172(Class61 class61) {
 		if ((747801689090652059L * ((Class61) class61).aLong631 != ((Class348) this).aLong4073 * 5062689612773211607L) || (((Class348) this).anInt4060 * 1111937297 != 675380709 * ((Class61) class61).anInt637))
 			throw new RuntimeException("");
-		for (Class282_Sub17 class282_sub17 = ((Class282_Sub17) ((Class348) this).aClass482_4062.method8097((byte) 117)); null != class282_sub17; class282_sub17 = (Class282_Sub17) ((Class348) this).aClass482_4062.method8067(1108248941))
+		for (Class282_Sub17 class282_sub17 = ((Class282_Sub17) ((Class348) this).aClass482_4062.head((byte) 117)); null != class282_sub17; class282_sub17 = (Class282_Sub17) ((Class348) this).aClass482_4062.next(1108248941))
 			class282_sub17.method12251(class61, -429954850);
 		((Class61) class61).anInt637 += 1021671405;
 	}
@@ -69,7 +69,7 @@ public class Class348 {
 	public void method6173(Class61 class61, int i) {
 		if ((747801689090652059L * ((Class61) class61).aLong631 != ((Class348) this).aLong4073 * 5062689612773211607L) || (((Class348) this).anInt4060 * 1111937297 != 675380709 * ((Class61) class61).anInt637))
 			throw new RuntimeException("");
-		for (Class282_Sub17 class282_sub17 = ((Class282_Sub17) ((Class348) this).aClass482_4062.method8097((byte) 23)); null != class282_sub17; class282_sub17 = (Class282_Sub17) ((Class348) this).aClass482_4062.method8067(983749552))
+		for (Class282_Sub17 class282_sub17 = ((Class282_Sub17) ((Class348) this).aClass482_4062.head((byte) 23)); null != class282_sub17; class282_sub17 = (Class282_Sub17) ((Class348) this).aClass482_4062.next(983749552))
 			class282_sub17.method12251(class61, -429954850);
 		((Class61) class61).anInt637 += 1021671405;
 	}
@@ -97,8 +97,8 @@ public class Class348 {
 				Class351.method6196(class282_sub44, true, false, -2131194694);
 			}
 			client.anInt7349 = -153305321;
-			client.aClass465_7442 = new SwitchMap(8);
-			ItemEffects.method7041((byte) -6);
+			client.aClass465_7442 = new IterableNodeMap(8);
+			MeshModifier.method7041((byte) -6);
 			client.anInt7349 = -1189891005 * Class58.aClass529_527.anInt7036;
 			Class516.method8867(false, -905479502);
 			IncomingPacket.method6378(-1538407760);

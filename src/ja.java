@@ -4,11 +4,11 @@
  */
 import java.awt.Canvas;
 
-public class ja extends Class505 implements Interface40 {
+public class ja extends GraphicalRenderer implements Interface40 {
 	static final int ah = 4;
 	long nativeid;
 	static final int ad = 24573;
-	Class482 au;
+	NodeCollection au;
 	int ac;
 	int at;
 	Class384 af;
@@ -95,7 +95,7 @@ public class ja extends Class505 implements Interface40 {
 			((ja) this).ai = null;
 			((ja) this).z = null;
 			((ja) this).af = null;
-			for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 89); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(-58113197))
+			for (ba var_ba = (ba) ((ja) this).au.head((byte) 89); var_ba != null; var_ba = (ba) ((ja) this).au.next(-58113197))
 				var_ba.ha();
 			((ja) this).au.method8118(-971959284);
 			da();
@@ -122,20 +122,20 @@ public class ja extends Class505 implements Interface40 {
 	public void method8488(int i) {
 		Class156.method2652((byte) 46);
 		Y(i);
-		for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 32); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(-980125304))
+		for (ba var_ba = (ba) ((ja) this).au.head((byte) 32); var_ba != null; var_ba = (ba) ((ja) this).au.next(-980125304))
 			var_ba.u();
 	}
 
 	public void method8398(int i) {
 		Class156.method2652((byte) 42);
 		Y(i);
-		for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 99); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(1815060892))
+		for (ba var_ba = (ba) ((ja) this).au.head((byte) 99); var_ba != null; var_ba = (ba) ((ja) this).au.next(1815060892))
 			var_ba.u();
 	}
 
 	public native int za();
 
-	public Class160 method8442(int[] is, int i, int i_13_, int i_14_, int i_15_, boolean bool) {
+	public NativeSprite method8442(int[] is, int i, int i_13_, int i_14_, int i_15_, boolean bool) {
 		return new fa(this, is, i, i_13_, i_14_, i_15_, false);
 	}
 
@@ -352,7 +352,7 @@ public class ja extends Class505 implements Interface40 {
 		n(class282_sub1);
 	}
 
-	public Class160 method8654(int i, int i_136_, boolean bool, boolean bool_137_) {
+	public NativeSprite method8654(int i, int i_136_, boolean bool, boolean bool_137_) {
 		return new fa(this, i, i_136_, bool_137_);
 	}
 
@@ -372,7 +372,7 @@ public class ja extends Class505 implements Interface40 {
 
 	public native void DA(int i, Class455 class455, int i_138_, int i_139_);
 
-	public Class8 method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_140_ = new int[class91s.length];
 		boolean bool_141_ = false;
@@ -400,7 +400,7 @@ public class ja extends Class505 implements Interface40 {
 		ni(0);
 	}
 
-	public Class528 method8451(Class157 class157, int i, int i_142_, int i_143_, int i_144_) {
+	public MeshRasterizer createMeshRasterizer(RSMesh class157, int i, int i_142_, int i_143_, int i_144_) {
 		return new h(this, ((ja) this).z, class157, i, i_142_, i_143_, i_144_);
 	}
 
@@ -605,7 +605,7 @@ public class ja extends Class505 implements Interface40 {
 			((ja) this).ai = null;
 			((ja) this).z = null;
 			((ja) this).af = null;
-			for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 79); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(1077527555))
+			for (ba var_ba = (ba) ((ja) this).au.head((byte) 79); var_ba != null; var_ba = (ba) ((ja) this).au.next(1077527555))
 				var_ba.ha();
 			((ja) this).au.method8118(-239422644);
 			da();
@@ -640,7 +640,7 @@ public class ja extends Class505 implements Interface40 {
 
 	public native void fi(int i, int i_209_);
 
-	public Class160 method8668(int i, int i_210_, int i_211_, int i_212_, boolean bool) {
+	public NativeSprite method8668(int i, int i_210_, int i_211_, int i_212_, boolean bool) {
 		return new fa(this, i, i_210_, i_211_, i_212_, !bool);
 	}
 
@@ -649,7 +649,7 @@ public class ja extends Class505 implements Interface40 {
 	public ja(Canvas canvas, Interface22 interface22, int i, int i_213_) {
 		super(interface22);
 		((ja) this).nativeid = 0L;
-		((ja) this).au = new Class482();
+		((ja) this).au = new NodeCollection();
 		((ja) this).ac = 4096;
 		((ja) this).at = 4096;
 		((ja) this).bm = false;
@@ -718,7 +718,7 @@ public class ja extends Class505 implements Interface40 {
 	public void method8487(int i) {
 		Class156.method2652((byte) 4);
 		Y(i);
-		for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 58); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(951552583))
+		for (ba var_ba = (ba) ((ja) this).au.head((byte) 58); var_ba != null; var_ba = (ba) ((ja) this).au.next(951552583))
 			var_ba.u();
 	}
 
@@ -783,7 +783,7 @@ public class ja extends Class505 implements Interface40 {
 			((ja) this).ai = null;
 			((ja) this).z = null;
 			((ja) this).af = null;
-			for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 16); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(1772121447))
+			for (ba var_ba = (ba) ((ja) this).au.head((byte) 16); var_ba != null; var_ba = (ba) ((ja) this).au.next(1772121447))
 				var_ba.ha();
 			((ja) this).au.method8118(183026123);
 			da();
@@ -879,7 +879,7 @@ public class ja extends Class505 implements Interface40 {
 
 	public native void fv(int i, int i_299_, int i_300_, int i_301_, int i_302_, int i_303_, byte[] is, int i_304_, int i_305_);
 
-	public Class8 method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_306_ = new int[class91s.length];
 		boolean bool_307_ = false;
@@ -1069,35 +1069,35 @@ public class ja extends Class505 implements Interface40 {
 
 	public native void GA(float f, float f_437_);
 
-	public Class160 method8577(int i, int i_438_, boolean bool, boolean bool_439_) {
+	public NativeSprite method8577(int i, int i_438_, boolean bool, boolean bool_439_) {
 		return new fa(this, i, i_438_, bool_439_);
 	}
 
-	public Class160 method8543(int[] is, int i, int i_440_, int i_441_, int i_442_, boolean bool) {
+	public NativeSprite method8543(int[] is, int i, int i_440_, int i_441_, int i_442_, boolean bool) {
 		return new fa(this, is, i, i_440_, i_441_, i_442_, false);
 	}
 
-	public Class160 method8548(int[] is, int i, int i_443_, int i_444_, int i_445_, boolean bool) {
+	public NativeSprite method8548(int[] is, int i, int i_443_, int i_444_, int i_445_, boolean bool) {
 		return new fa(this, is, i, i_443_, i_444_, i_445_, false);
 	}
 
-	public Class160 method8612(Class91 class91, boolean bool) {
+	public NativeSprite method8612(Class91 class91, boolean bool) {
 		fa var_fa = new fa(this, class91.anIntArray955, class91.aByteArray960, class91.aByteArray961, 0, class91.anInt957, class91.anInt957, class91.anInt954);
 		var_fa.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return var_fa;
 	}
 
-	public Class160 method8518(Class91 class91, boolean bool) {
+	public NativeSprite method8518(Class91 class91, boolean bool) {
 		fa var_fa = new fa(this, class91.anIntArray955, class91.aByteArray960, class91.aByteArray961, 0, class91.anInt957, class91.anInt957, class91.anInt954);
 		var_fa.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return var_fa;
 	}
 
-	public Class160 method8604(int i, int i_446_, int i_447_, int i_448_, boolean bool) {
+	public NativeSprite method8604(int i, int i_446_, int i_447_, int i_448_, boolean bool) {
 		return new fa(this, i, i_446_, i_447_, i_448_, !bool);
 	}
 
-	public Class160 method8552(int i, int i_449_, int i_450_, int i_451_, boolean bool) {
+	public NativeSprite method8552(int i, int i_449_, int i_450_, int i_451_, boolean bool) {
 		return new fa(this, i, i_449_, i_450_, i_451_, !bool);
 	}
 
@@ -1138,7 +1138,7 @@ public class ja extends Class505 implements Interface40 {
 		return false;
 	}
 
-	public Class8 method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_469_ = new int[class91s.length];
 		boolean bool_470_ = false;
@@ -1174,19 +1174,19 @@ public class ja extends Class505 implements Interface40 {
 		ni(0);
 	}
 
-	public Class528 method8561(Class157 class157, int i, int i_471_, int i_472_, int i_473_) {
+	public MeshRasterizer method8561(RSMesh class157, int i, int i_471_, int i_472_, int i_473_) {
 		return new h(this, ((ja) this).z, class157, i, i_471_, i_472_, i_473_);
 	}
 
-	public Class528 method8623(Class157 class157, int i, int i_474_, int i_475_, int i_476_) {
+	public MeshRasterizer method8623(RSMesh class157, int i, int i_474_, int i_475_, int i_476_) {
 		return new h(this, ((ja) this).z, class157, i, i_474_, i_475_, i_476_);
 	}
 
-	public Class528 method8505(Class157 class157, int i, int i_477_, int i_478_, int i_479_) {
+	public MeshRasterizer method8505(RSMesh class157, int i, int i_477_, int i_478_, int i_479_) {
 		return new h(this, ((ja) this).z, class157, i, i_477_, i_478_, i_479_);
 	}
 
-	public Class528 method8564(Class157 class157, int i, int i_480_, int i_481_, int i_482_) {
+	public MeshRasterizer method8564(RSMesh class157, int i, int i_480_, int i_481_, int i_482_) {
 		return new h(this, ((ja) this).z, class157, i, i_480_, i_481_, i_482_);
 	}
 
@@ -1354,7 +1354,7 @@ public class ja extends Class505 implements Interface40 {
 
 	public native void ik(int i, int i_523_, int i_524_);
 
-	public Class160 method8461(int i, int i_525_, boolean bool, boolean bool_526_) {
+	public NativeSprite method8461(int i, int i_525_, boolean bool, boolean bool_526_) {
 		return new fa(this, i, i_525_, bool_526_);
 	}
 
@@ -1384,7 +1384,7 @@ public class ja extends Class505 implements Interface40 {
 		return false;
 	}
 
-	public Class160 method8444(Class91 class91, boolean bool) {
+	public NativeSprite method8444(Class91 class91, boolean bool) {
 		fa var_fa = new fa(this, class91.anIntArray955, class91.aByteArray960, class91.aByteArray961, 0, class91.anInt957, class91.anInt957, class91.anInt954);
 		var_fa.method2743(class91.anInt956, class91.anInt959, class91.anInt958, class91.anInt953);
 		return var_fa;
@@ -1585,7 +1585,7 @@ public class ja extends Class505 implements Interface40 {
 			((ja) this).ai = null;
 			((ja) this).z = null;
 			((ja) this).af = null;
-			for (ba var_ba = (ba) ((ja) this).au.method8097((byte) 41); var_ba != null; var_ba = (ba) ((ja) this).au.method8067(476144881))
+			for (ba var_ba = (ba) ((ja) this).au.head((byte) 41); var_ba != null; var_ba = (ba) ((ja) this).au.next(476144881))
 				var_ba.ha();
 			((ja) this).au.method8118(1098204001);
 			da();

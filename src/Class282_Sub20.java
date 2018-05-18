@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub20 extends Class282 {
+public abstract class Class282_Sub20 extends Node {
 	protected static final int anInt7658 = 4096;
 	protected static final int anInt7659 = 12;
 	protected static final int anInt7660 = 8192;
@@ -17,7 +17,7 @@ public abstract class Class282_Sub20 extends Class282 {
 	protected boolean aBool7669;
 	protected Class308 aClass308_7670;
 	Class282_Sub20[] aClass282_Sub20Array7671;
-	public static Class317 aClass317_7672;
+	public static Index aClass317_7672;
 
 	int method12314() {
 		return -1;

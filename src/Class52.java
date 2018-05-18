@@ -4,10 +4,10 @@
 
 public abstract class Class52 implements Interface2 {
 	Class350 aClass350_489;
-	Class317 aClass317_490;
+	Index aClass317_490;
 	long aLong491;
-	Class8 aClass8_492;
-	Class317 aClass317_493;
+	FontRenderer aClass8_492;
+	Index aClass317_493;
 	int anInt494;
 
 	abstract void method1075(boolean bool, int i, int i_0_);
@@ -111,7 +111,7 @@ public abstract class Class52 implements Interface2 {
 		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
-	Class52(Class317 class317, Class317 class317_12_, Class350 class350) {
+	Class52(Index class317, Index class317_12_, Class350 class350) {
 		((Class52) this).aClass317_493 = class317;
 		((Class52) this).aClass317_490 = class317_12_;
 		((Class52) this).aClass350_489 = class350;
@@ -236,7 +236,7 @@ public abstract class Class52 implements Interface2 {
 		}
 	}
 
-	static Class282_Sub50_Sub6 method1087(Class317 class317, int i, int i_34_, int i_35_) {
+	static Class282_Sub50_Sub6 method1087(Index class317, int i, int i_34_, int i_35_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_34_, -1701555254));
 		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_34_, class282_sub35.readString(-392505636), class282_sub35.readString(846172936), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_36_ = class282_sub35.readUnsignedByte();

@@ -4,7 +4,7 @@
  */
 import jaggl.OpenGL;
 
-public class Class8_Sub5 extends Class8 {
+public class Class8_Sub5 extends FontRenderer {
 	Class505_Sub1 aClass505_Sub1_9323;
 	Class138 aClass138_9324;
 	Class137_Sub1_Sub1 aClass137_Sub1_Sub1_9325;

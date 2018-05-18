@@ -5,7 +5,7 @@
 public class Class222 implements Interface17 {
 	int anInt2764;
 	int anInt2765;
-	public static Class317 aClass317_2766;
+	public static Index aClass317_2766;
 
 	public boolean method129(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199) {
 		for (int i_0_ = 0; i_0_ < i && i_0_ < interface16s.length; i_0_++) {
@@ -70,7 +70,7 @@ public class Class222 implements Interface17 {
 		for (int i_9_ = i_6_; i_9_ < i_7_; i_9_++) {
 			char c = charsequence.charAt(i_9_);
 			if (Class309.method5491(c, 1531464997)) {
-				char c_10_ = Class424.method7080(c, -1416509112);
+				char c_10_ = AttributesDefaultsLoader.method7080(c, -1416509112);
 				if (c_10_ != 0)
 					stringbuilder.append(c_10_);
 			}
