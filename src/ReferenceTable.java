@@ -172,7 +172,7 @@ public class ReferenceTable {
 
 	static final void method5765(CS2Executor class527, int i) {
 		int i_133_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_133_, 200987173).anInt5064 * 155439281);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_133_, 200987173).anInt5064 * 155439281);
 	}
 
 	static final void method5766(CS2Executor class527, int i) {

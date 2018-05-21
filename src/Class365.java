@@ -162,7 +162,7 @@ public class Class365 implements Interface3 {
 				}
 			}
 			if (Class464.method7742(i, (byte) 48) || 10 == i || 17 == i) {
-				Class316.aClass505_3680.method8420();
+				Renderers.SOFTWARE_RENDERER.method8420();
 			}
 			client.anInt7166 = i * 111437415;
 		}

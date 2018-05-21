@@ -697,7 +697,7 @@ public class Class260 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_136_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_137_ = ((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]) - 1);
-		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_136_, 1109098301);
+		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_136_, 1109098301);
 		if (-1330791315 * class425.anInt5061 == i_137_)
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class425.anInt5062 * 439280359;
 		else if (i_137_ == -1576872607 * class425.anInt5030)

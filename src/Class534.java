@@ -123,7 +123,7 @@ public abstract class Class534 {
 	}
 
 	void method11410(Class282_Sub53 class282_sub53, byte i) {
-		((Class534) this).aClass482_7077.method8059(class282_sub53, -1396840421);
+		((Class534) this).aClass482_7077.append(class282_sub53, -1396840421);
 	}
 
 	void method11411() {
@@ -548,7 +548,7 @@ public abstract class Class534 {
 	abstract boolean method11434();
 
 	void method11435(Class282_Sub53 class282_sub53) {
-		((Class534) this).aClass482_7077.method8059(class282_sub53, 1748816746);
+		((Class534) this).aClass482_7077.append(class282_sub53, 1748816746);
 	}
 
 	int method11436(Class282_Sub53 class282_sub53, int i) {

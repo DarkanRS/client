@@ -18,8 +18,7 @@ public class Class316 {
 	public static int[] anIntArray3677;
 	public static int anInt3678;
 	static Class223 aClass223_3679 = new Class223(16);
-	public static GraphicalRenderer aClass505_3680;
-
+	
 	public static void method5586(byte i) {
 		if (anIntArray3677 == null || null == anIntArray3675) {
 			anIntArray3677 = new int[256];

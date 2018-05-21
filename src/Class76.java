@@ -114,7 +114,7 @@ public class Class76 {
 				}
 			}
 			Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
-			Class282_Sub11_Sub3.method15476(Class316.aClass505_3680, 425996443);
+			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 425996443);
 			Class365.method6298(15, 1025544676);
 		}
 		if (Class474.aClass387_5621 == Class387.aClass387_4699) {
@@ -220,7 +220,7 @@ public class Class76 {
 			Class397.aClass218_4813 = new Class218(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class211.aClass317_2673);
 			Class97.aClass427_995 = new Class427(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, Class211.aClass317_2673);
 			Class350_Sub1.aClass406_7757 = new Class406(client.aClass486_7450, Class223.aClass495_2772, true, Class107.aClass317_1081, Class110.aClass317_1106);
-			Class119.aClass426_1463 = new ItemIndexLoader(client.aClass486_7450, Class223.aClass495_2772, true, Class125.aClass424_1573, Class383.aClass317_4665, Class110.aClass317_1106);
+			IndexLoaders.ITEM_INDEX_LOADER = new ItemIndexLoader(client.aClass486_7450, Class223.aClass495_2772, true, Class125.aClass424_1573, Class383.aClass317_4665, Class110.aClass317_1106);
 			Class409.aClass242_4922 = new Class242(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005, true);
 			Class330.aClass523_3868 = new Class523(client.aClass486_7450, Class223.aClass495_2772, Class235.aClass317_2908, Class282_Sub20.aClass317_7672, Class235.aClass317_2907);
 			Class149.aClass288_1746 = new Class288(client.aClass486_7450, Class223.aClass495_2772, Class282_Sub39.aClass317_8005);
@@ -325,8 +325,8 @@ public class Class76 {
 			}
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-2050547783), -1, -1, false, (byte) 65);
 			Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
-			Class282_Sub11_Sub3.method15476(Class316.aClass505_3680, -2058774683);
-			Class188.method3139(Class316.aClass505_3680, Class211.aClass317_2673, -814245885);
+			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, -2058774683);
+			Class188.method3139(Renderers.SOFTWARE_RENDERER, Class211.aClass317_2673, -814245885);
 			Class122.method2109(Class182.aClass160Array2261, (byte) -7);
 		}
 		return Class152.method2604((byte) 3);

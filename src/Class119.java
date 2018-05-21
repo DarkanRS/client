@@ -12,8 +12,7 @@ public class Class119 {
 	static Class344 aClass344_1460;
 	public static Class12 aClass12_1461;
 	public static JS5StandardRequester aClass312_1462;
-	public static ItemIndexLoader aClass426_1463;
-
+	
 	public boolean method2073(int i, int i_0_, int i_1_) {
 		if (i_0_ >= 0 && i_0_ < anIntArray1457.length) {
 			int i_2_ = anIntArray1457[i_0_];

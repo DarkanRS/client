@@ -5,78 +5,21 @@
 import java.awt.Point;
 
 public class Node {
-	public Node aClass282_3378;
-	public long aLong3379;
-	public Node aClass282_3380;
-
-	public void method4990() {
-		if (null != aClass282_3380) {
-			aClass282_3380.aClass282_3378 = aClass282_3378;
-			aClass282_3378.aClass282_3380 = aClass282_3380;
-			aClass282_3378 = null;
-			aClass282_3380 = null;
-		}
-	}
+	public Node next;
+	public long data;
+	public Node prev;
 
 	public void unlink(int i) {
-		if (null != aClass282_3380) {
-			aClass282_3380.aClass282_3378 = aClass282_3378;
-			aClass282_3378.aClass282_3380 = aClass282_3380;
-			aClass282_3378 = null;
-			aClass282_3380 = null;
+		if (null != prev) {
+			prev.next = next;
+			next.prev = prev;
+			next = null;
+			prev = null;
 		}
-	}
-
-	public boolean method4992() {
-		if (null == aClass282_3380)
-			return false;
-		return true;
-	}
-
-	public boolean method4993() {
-		if (null == aClass282_3380)
-			return false;
-		return true;
 	}
 
 	public boolean method4994(int i) {
-		if (null == aClass282_3380)
-			return false;
-		return true;
-	}
-
-	public void method4995() {
-		if (null != aClass282_3380) {
-			aClass282_3380.aClass282_3378 = aClass282_3378;
-			aClass282_3378.aClass282_3380 = aClass282_3380;
-			aClass282_3378 = null;
-			aClass282_3380 = null;
-		}
-	}
-
-	public void method4996() {
-		if (null != aClass282_3380) {
-			aClass282_3380.aClass282_3378 = aClass282_3378;
-			aClass282_3378.aClass282_3380 = aClass282_3380;
-			aClass282_3378 = null;
-			aClass282_3380 = null;
-		}
-	}
-
-	public boolean method4997() {
-		if (null == aClass282_3380)
-			return false;
-		return true;
-	}
-
-	public boolean method4998() {
-		if (null == aClass282_3380)
-			return false;
-		return true;
-	}
-
-	public boolean method4999() {
-		if (null == aClass282_3380)
+		if (null == prev)
 			return false;
 		return true;
 	}

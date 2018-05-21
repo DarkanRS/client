@@ -21,7 +21,7 @@ public class Class291_Sub1 extends Class291 {
 	public static boolean aBool8027;
 	static boolean aBool8028;
 	public static IterableNodeMap aClass465_8029;
-	static Class460 aClass460_8030;
+	static NodeIterator aClass460_8030;
 
 	static void method13302(int i, int i_0_, int i_1_, int i_2_) {
 		float f = (float) anInt3483 / (float) anInt3474;
@@ -714,7 +714,7 @@ public class Class291_Sub1 extends Class291 {
 			((Class282_Sub33) class282_sub33).anInt7832 = -705732785 * i_51_;
 			((Class282_Sub33) class282_sub33).anInt7831 = -2064740419 * i_52_;
 			((Class282_Sub33) class282_sub33).anInt7827 = -719287379 * i_53_;
-			Class346.aClass482_4049.method8059(class282_sub33, -1381668856);
+			Class346.aClass482_4049.append(class282_sub33, -1381668856);
 		}
 		return false;
 	}
@@ -924,7 +924,7 @@ public class Class291_Sub1 extends Class291 {
 		aBool8027 = false;
 		aClass465_8025 = new IterableNodeMap(8);
 		aClass465_8029 = new IterableNodeMap(8);
-		aClass460_8030 = new Class460(new NodeCollection());
+		aClass460_8030 = new NodeIterator(new NodeCollection());
 	}
 
 	static void method13324(int i, int i_110_, int i_111_) {
@@ -1209,7 +1209,7 @@ public class Class291_Sub1 extends Class291 {
 			((Class282_Sub33) class282_sub33).anInt7832 = -705732785 * i_135_;
 			((Class282_Sub33) class282_sub33).anInt7831 = -2064740419 * i_136_;
 			((Class282_Sub33) class282_sub33).anInt7827 = -719287379 * i_137_;
-			Class346.aClass482_4049.method8059(class282_sub33, 936128341);
+			Class346.aClass482_4049.append(class282_sub33, 936128341);
 		}
 		return false;
 	}
@@ -1539,7 +1539,7 @@ public class Class291_Sub1 extends Class291 {
 				((Class282_Sub33) class282_sub33).anInt7832 = -705732785 * i_199_;
 				((Class282_Sub33) class282_sub33).anInt7831 = i_198_ * -2064740419;
 				((Class282_Sub33) class282_sub33).anInt7827 = -719287379 * i_200_;
-				Class346.aClass482_4049.method8059(class282_sub33, -278662650);
+				Class346.aClass482_4049.append(class282_sub33, -278662650);
 			}
 		}
 	}

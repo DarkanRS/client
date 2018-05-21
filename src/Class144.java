@@ -15,7 +15,7 @@ public class Class144 {
 	float aFloat1683 = 1.0F;
 	int anInt1684;
 	int[] anIntArray1685 = new int[4096];
-	Class505_Sub3 aClass505_Sub3_1686;
+	HardwareRenderer aClass505_Sub3_1686;
 	Class185 aClass185_1687;
 	int anInt1688 = -1;
 	int[] anIntArray1689;
@@ -2347,7 +2347,7 @@ public class Class144 {
 		}
 	}
 
-	Class144(Class505_Sub3 var1, Class185 var2) {
+	Class144(HardwareRenderer var1, Class185 var2) {
 		this.aClass505_Sub3_1686 = var1;
 		this.aClass185_1687 = var2;
 		this.anInt1705 = this.aClass505_Sub3_1686.anInt8980 * 444800403;

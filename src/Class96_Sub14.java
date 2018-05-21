@@ -80,7 +80,7 @@ public class Class96_Sub14 extends Class96 {
 			try {
 				i_7_ = Class383.method6513(3, 1000, 1356532046);
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(525522056) == 3) {
-					Class168 class168 = Class316.aClass505_3680.method8392();
+					Class168 class168 = Renderers.SOFTWARE_RENDERER.method8392();
 					long l = (class168.aLong2049 * -3062896818026551219L & 0xffffffffffffL);
 					switch (1681700525 * class168.anInt2052) {
 					case 4318:

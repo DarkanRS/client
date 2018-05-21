@@ -194,6 +194,6 @@ public class Class438 {
 		}
 		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(client.aClass257_7353.method4430(-1810939972), i, Class272.anInt3331 * -1258088735, Class272.anInt3331 * -1258088735, i_9_, i_10_, i_7_, i_13_ + -1809259861 * client.cycles, -1809259861 * client.cycles + i_14_, i_15_, i_16_, i_4_, i_5_, i_8_, bool, i_6_));
 		class521_sub1_sub1_sub3.method15904(i_11_, i_12_, (Class504.method8389(i_11_, i_12_, -1258088735 * Class272.anInt3331, (byte) 65) - i_8_), client.cycles * -1809259861 + i_13_, -209443166);
-		client.aClass482_7333.method8059(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -1750493342);
+		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -1750493342);
 	}
 }

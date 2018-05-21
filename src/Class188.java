@@ -192,7 +192,7 @@ public class Class188 {
 			try {
 				i_5_ = Class383.method6513(3, 1000, -980678311);
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1641116831) == 3) {
-					Class168 class168 = Class316.aClass505_3680.method8392();
+					Class168 class168 = Renderers.SOFTWARE_RENDERER.method8392();
 					long l = (class168.aLong2049 * -3062896818026551219L & 0xffffffffffffL);
 					switch (1681700525 * class168.anInt2052) {
 					case 4318:
@@ -312,7 +312,7 @@ public class Class188 {
 			try {
 				i_9_ = Class383.method6513(3, 1000, 1872390085);
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(947927987) == 3) {
-					Class168 class168 = Class316.aClass505_3680.method8392();
+					Class168 class168 = Renderers.SOFTWARE_RENDERER.method8392();
 					long l = (class168.aLong2049 * -3062896818026551219L & 0xffffffffffffL);
 					switch (1681700525 * class168.anInt2052) {
 					case 4318:
@@ -659,7 +659,7 @@ public class Class188 {
 					i_53_ <<= 2;
 					Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(client.aClass257_7353.method4430(-1524809877), i_47_, -1258088735 * Class272.anInt3331, Class272.anInt3331 * -1258088735, i_42_, i_43_, i_48_, -1809259861 * client.cycles + i_50_, i_51_ + -1809259861 * client.cycles, i_52_, i_53_, 0, i_46_, i_49_, bool, -1));
 					class521_sub1_sub1_sub3.method15904(i_44_, i_45_, Class504.method8389(i_44_, i_45_, -1258088735 * Class272.anInt3331, (byte) 20) - i_49_, client.cycles * -1809259861 + i_50_, -209443166);
-					client.aClass482_7333.method8059(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -430462117);
+					client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -430462117);
 				}
 			}
 		} else if (TilestreamPacket.aClass364_4214 == class364) {
@@ -726,7 +726,7 @@ public class Class188 {
 						break;
 					}
 				}
-				if (class282_sub29.aClass482_7708.method8096(2087735245))
+				if (class282_sub29.aClass482_7708.hasNext(2087735245))
 					class282_sub29.unlink(-371378792);
 				if (i_83_ >= 0 && i_81_ >= 0 && i_83_ < client.aClass257_7353.method4424(793956639) && i_81_ < client.aClass257_7353.method4451(-539075068))
 					Class434_Sub1.method12760(-1258088735 * Class272.anInt3331, i_83_, i_81_, -1380263584);

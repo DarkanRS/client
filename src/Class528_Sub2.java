@@ -79,7 +79,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	float[][] aFloatArrayArray8635;
 	float[] aFloatArray8636;
 	float[] aFloatArray8637;
-	Class505_Sub3 aClass505_Sub3_8638;
+	HardwareRenderer aClass505_Sub3_8638;
 	int[] anIntArray8639;
 	boolean aBool8640;
 	static final int anInt8641 = -2;
@@ -242,15 +242,15 @@ public class Class528_Sub2 extends MeshRasterizer {
 				((Class528_Sub2) this).aByteArray8600 = null;
 		} else {
 			method13877();
-			int i = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9011) * 1302966735;
-			int i_24_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8988) * -1947219005;
-			int i_25_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9007) * 1237704411;
-			int i_26_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8992) * -456583957 >> 8;
+			int i = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9011) * 1302966735;
+			int i_24_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8988) * -1947219005;
+			int i_25_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9007) * 1237704411;
+			int i_26_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8992) * -456583957 >> 8;
 			int i_27_ = 0;
 			int i_28_ = 0;
 			if (((Class528_Sub2) this).anInt8577 != 0) {
-				i_27_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8990 * -1085780736 / ((Class528_Sub2) this).anInt8577);
-				i_28_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8991 * -1967065344 / ((Class528_Sub2) this).anInt8577);
+				i_27_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8990 * -1085780736 / ((Class528_Sub2) this).anInt8577);
+				i_28_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8991 * -1967065344 / ((Class528_Sub2) this).anInt8577);
 			}
 			if (((Class528_Sub2) this).anIntArray8592 == null) {
 				((Class528_Sub2) this).anIntArray8592 = new int[((Class528_Sub2) this).anInt8586];
@@ -428,7 +428,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	void method13801() {
 		if (((Class528_Sub2) this).anInt8598 == 0)
 			method13853(false);
-		else if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		else if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				method13802();
 			}
@@ -1047,7 +1047,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method11261() {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				aBool7023 = false;
 				this.notifyAll();
@@ -1941,8 +1941,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 			Class185 class185 = ((Class528_Sub2) this).aClass505_Sub3_8638.method14370(Thread.currentThread());
 			Class384 class384 = ((Class185) class185).aClass384_2317;
 			class384.method6522(class294);
-			Class384 class384_401_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8994);
-			Class384 class384_402_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
+			Class384 class384_401_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8994);
+			Class384 class384_402_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
 			if (!((Class528_Sub2) this).aBool8621)
 				method13876();
 			boolean bool = class384.method6526();
@@ -1956,7 +1956,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			float f_406_ = fs[1];
 			float f_407_ = fs[2];
 			for (int i_408_ = 0; i_408_ < 6; i_408_++) {
-				float[] fs_409_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloatArrayArray8989[i_408_]);
+				float[] fs_409_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloatArrayArray8989[i_408_]);
 				float f_410_ = (fs_409_[0] * f + fs_409_[1] * f_403_ + fs_409_[2] * f_404_ + fs_409_[3] + (float) ((Class528_Sub2) this).aShort8595);
 				float f_411_ = (fs_409_[0] * f_405_ + fs_409_[1] * f_406_ + fs_409_[2] * f_407_ + fs_409_[3] + (float) ((Class528_Sub2) this).aShort8595);
 				if (f_410_ < 0.0F && f_411_ < 0.0F)
@@ -1975,7 +1975,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			float f_415_ = f_412_ + (float) ((Class528_Sub2) this).aShort8625 * f_413_;
 			float f_416_ = (f_414_ > f_415_ ? f_414_ + (float) ((Class528_Sub2) this).aShort8595 : f_415_ + (float) ((Class528_Sub2) this).aShort8595);
 			float f_417_ = (class384_402_.aFloatArray4667[10] * f_416_ + class384_402_.aFloatArray4667[14]);
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					while (((Class528_Sub2) this).aBool8563) {
 						try {
@@ -1990,7 +1990,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			method13795(class185);
 			Class384 class384_418_ = (((Class185) ((Class528_Sub2) this).aClass185_8564).aClass384_2318);
 			class384_418_.method6562(class384);
-			class384_418_.method6523(((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aClass384_8996);
+			class384_418_.method6523(((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aClass384_8996);
 			if ((i & 0x2) != 0)
 				((Class528_Sub2) this).aClass144_8566.method2418(true);
 			else
@@ -2043,18 +2043,18 @@ public class Class528_Sub2 extends MeshRasterizer {
 					if (f_437_ > -f_438_) {
 						f_435_ += ((class384_402_.aFloatArray4667[0] * (float) (((Class176) class176).anInt2192 * -310982679)) + (class384_402_.aFloatArray4667[4] * (float) (((Class176) class176).anInt2189 * 1349697681)));
 						f_436_ += ((class384_402_.aFloatArray4667[1] * (float) (((Class176) class176).anInt2192 * -310982679)) + (class384_402_.aFloatArray4667[5] * (float) (((Class176) class176).anInt2189 * 1349697681)));
-						float f_439_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_435_ / f_438_);
-						float f_440_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_436_ / f_438_);
+						float f_439_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_435_ / f_438_);
+						float f_440_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_436_ / f_438_);
 						float f_441_ = (((Class176) class176).aFloat2190 * (float) ((Class193) class193).aShort2394);
 						float f_442_ = (((Class176) class176).aFloat2191 * (float) ((Class193) class193).aShort2395);
 						float f_443_ = (f_435_ + class384_402_.aFloatArray4667[0] * f_441_ + class384_402_.aFloatArray4667[4] * f_442_);
 						float f_444_ = (f_436_ + class384_402_.aFloatArray4667[1] * f_441_ + class384_402_.aFloatArray4667[5] * f_442_);
 						float f_445_ = (f_438_ + class384_402_.aFloatArray4667[3] * f_441_ + class384_402_.aFloatArray4667[7] * f_442_);
-						float f_446_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_443_ / f_445_);
-						float f_447_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_444_ / f_445_);
+						float f_446_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_443_ / f_445_);
+						float f_447_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_444_ / f_445_);
 						((Class176) class176).anInt2195 = (int) f_439_ * 1832369091;
 						((Class176) class176).anInt2196 = (int) f_440_ * 1544556155;
-						((Class176) class176).aFloat2193 = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8985) + ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8978) * (f_437_ - (class384_402_.aFloatArray4667[10] * (float) ((((Class193) class193).anInt2400) * 219886141))) / f_438_));
+						((Class176) class176).aFloat2193 = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8985) + ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8978) * (f_437_ - (class384_402_.aFloatArray4667[10] * (float) ((((Class193) class193).anInt2400) * 219886141))) / f_438_));
 						((Class176) class176).anInt2197 = (int) (f_446_ < f_439_ ? f_439_ - f_446_ : f_446_ - f_439_) * -710849997;
 						((Class176) class176).anInt2198 = (int) (f_447_ < f_440_ ? f_440_ - f_447_ : f_447_ - f_440_) * 1185210621;
 					} else {
@@ -2077,8 +2077,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				float f_458_ = (class384_418_.aFloatArray4667[2] * (float) i_453_ + class384_418_.aFloatArray4667[6] * (float) i_454_ + class384_418_.aFloatArray4667[10] * (float) i_455_ + class384_418_.aFloatArray4667[14]);
 				float f_459_ = (class384_418_.aFloatArray4667[3] * (float) i_453_ + class384_418_.aFloatArray4667[7] * (float) i_454_ + class384_418_.aFloatArray4667[11] * (float) i_455_ + class384_418_.aFloatArray4667[15]);
 				if (f_458_ >= -f_459_) {
-					class275_sub5.anInt7847 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_456_ / f_459_);
-					class275_sub5.anInt7848 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_457_ / f_459_);
+					class275_sub5.anInt7847 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_456_ / f_459_);
+					class275_sub5.anInt7848 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_457_ / f_459_);
 				} else
 					bool_449_ = true;
 				i_453_ = i_451_;
@@ -2089,8 +2089,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				float f_462_ = (class384_418_.aFloatArray4667[2] * (float) i_453_ + class384_418_.aFloatArray4667[6] * (float) i_454_ + class384_418_.aFloatArray4667[10] * (float) i_455_ + class384_418_.aFloatArray4667[14]);
 				float f_463_ = (class384_418_.aFloatArray4667[3] * (float) i_453_ + class384_418_.aFloatArray4667[7] * (float) i_454_ + class384_418_.aFloatArray4667[11] * (float) i_455_ + class384_418_.aFloatArray4667[15]);
 				if (f_462_ >= -f_463_) {
-					class275_sub5.anInt7850 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_460_ / f_463_);
-					class275_sub5.anInt7846 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_461_ / f_463_);
+					class275_sub5.anInt7850 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_460_ / f_463_);
+					class275_sub5.anInt7846 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_461_ / f_463_);
 				} else
 					bool_449_ = true;
 				if (bool_449_) {
@@ -2101,26 +2101,26 @@ public class Class528_Sub2 extends MeshRasterizer {
 						float f_465_ = f_456_ + f_464_ * (f_460_ - f_456_);
 						float f_466_ = f_457_ + f_464_ * (f_461_ - f_457_);
 						float f_467_ = f_459_ + f_464_ * (f_463_ - f_459_);
-						class275_sub5.anInt7847 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_465_ / f_467_));
-						class275_sub5.anInt7848 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_466_ / f_467_));
+						class275_sub5.anInt7847 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_465_ / f_467_));
+						class275_sub5.anInt7848 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_466_ / f_467_));
 					} else if (f_462_ < -f_463_) {
 						float f_468_ = (f_462_ + f_463_) / (f_458_ + f_459_) - 1.0F;
 						float f_469_ = f_460_ + f_468_ * (f_456_ - f_460_);
 						float f_470_ = f_461_ + f_468_ * (f_457_ - f_461_);
 						float f_471_ = f_463_ + f_468_ * (f_459_ - f_463_);
-						class275_sub5.anInt7850 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_469_ / f_471_));
-						class275_sub5.anInt7846 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_470_ / f_471_));
+						class275_sub5.anInt7850 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_469_ / f_471_));
+						class275_sub5.anInt7846 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_470_ / f_471_));
 					}
 				}
 				if (bool_450_) {
 					if (f_458_ / f_459_ > f_462_ / f_463_) {
 						float f_472_ = (f_456_ + (class384_402_.aFloatArray4667[0] * (float) ((Class528_Sub2) this).aShort8595) + class384_402_.aFloatArray4667[12]);
 						float f_473_ = (f_459_ + (class384_402_.aFloatArray4667[3] * (float) ((Class528_Sub2) this).aShort8595) + class384_402_.aFloatArray4667[15]);
-						class275_sub5.anInt7851 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7847 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_472_ / f_473_));
+						class275_sub5.anInt7851 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7847 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_472_ / f_473_));
 					} else {
 						float f_474_ = (f_460_ + (class384_402_.aFloatArray4667[0] * (float) ((Class528_Sub2) this).aShort8595) + class384_402_.aFloatArray4667[12]);
 						float f_475_ = (f_463_ + (class384_402_.aFloatArray4667[3] * (float) ((Class528_Sub2) this).aShort8595) + class384_402_.aFloatArray4667[15]);
-						class275_sub5.anInt7851 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7850 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_474_ / f_475_));
+						class275_sub5.anInt7851 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7850 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_474_ / f_475_));
 					}
 					class275_sub5.aBool7849 = true;
 				}
@@ -2129,7 +2129,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			((Class144) ((Class528_Sub2) this).aClass144_8566).aBool1675 = (i & 0x1) == 0;
 			((Class144) ((Class528_Sub2) this).aClass144_8566).aBool1672 = false;
 			try {
-				method13817((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anIntArray8979) != null, (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloatArray9010) != null, (i & 0x4) != 0, bool_419_, ((((Class185) ((Class528_Sub2) this).aClass185_8564).aBool2304 && f_417_ > (((Class185) (((Class528_Sub2) this).aClass185_8564)).aFloat2305)) || ((Class185) (((Class528_Sub2) this).aClass185_8564)).aBool2309));
+				method13817((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anIntArray8979) != null, (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloatArray9010) != null, (i & 0x4) != 0, bool_419_, ((((Class185) ((Class528_Sub2) this).aClass185_8564).aBool2304 && f_417_ > (((Class185) (((Class528_Sub2) this).aClass185_8564)).aFloat2305)) || ((Class185) (((Class528_Sub2) this).aClass185_8564)).aBool2309));
 			} catch (Exception exception) {
 				/* empty */
 			}
@@ -2138,7 +2138,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 					((Class528_Sub2) this).anIntArray8643[i_476_] = -1;
 			}
 			((Class528_Sub2) this).aClass144_8566 = null;
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					((Class528_Sub2) this).aBool8563 = false;
 					this.notifyAll();
@@ -2291,7 +2291,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			short i_501_ = ((Class528_Sub2) this).aShortArray8587[i];
 			short i_502_ = ((Class528_Sub2) this).aShortArray8588[i];
 			short i_503_ = ((Class528_Sub2) this).aShortArray8642[i];
-			Class384 class384 = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
+			Class384 class384 = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
 			float f = class384.aFloatArray4667[10];
 			float f_504_ = class384.aFloatArray4667[14];
 			float f_505_ = class384.aFloatArray4667[11];
@@ -2408,7 +2408,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 		class384.method6522(class294);
 		Class384 class384_529_ = (((Class185) ((Class528_Sub2) this).aClass185_8564).aClass384_2318);
 		class384_529_.method6562(class384);
-		class384_529_.method6523(((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8996);
+		class384_529_.method6523(((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8996);
 		boolean bool_530_ = false;
 		int i_531_ = 2147483647;
 		int i_532_ = -2147483648;
@@ -2461,8 +2461,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 			if (f >= -f_551_) {
 				float f_552_ = (class384_529_.aFloatArray4667[0] * (float) i_548_ + class384_529_.aFloatArray4667[4] * (float) i_549_ + class384_529_.aFloatArray4667[8] * (float) i_550_ + class384_529_.aFloatArray4667[12]);
 				float f_553_ = (class384_529_.aFloatArray4667[1] * (float) i_548_ + class384_529_.aFloatArray4667[5] * (float) i_549_ + class384_529_.aFloatArray4667[9] * (float) i_550_ + class384_529_.aFloatArray4667[13]);
-				int i_554_ = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_552_ / f_551_);
-				int i_555_ = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_553_ / f_551_);
+				int i_554_ = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_552_ / f_551_);
+				int i_555_ = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_553_ / f_551_);
 				if (i_554_ < i_531_)
 					i_531_ = i_554_;
 				if (i_554_ > i_532_)
@@ -2486,8 +2486,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				if (f >= -f_560_) {
 					float f_561_ = (class384_529_.aFloatArray4667[0] * (float) i_557_ + class384_529_.aFloatArray4667[4] * (float) i_558_ + class384_529_.aFloatArray4667[8] * (float) i_559_ + class384_529_.aFloatArray4667[12]);
 					float f_562_ = (class384_529_.aFloatArray4667[1] * (float) i_557_ + class384_529_.aFloatArray4667[5] * (float) i_558_ + class384_529_.aFloatArray4667[9] * (float) i_559_ + class384_529_.aFloatArray4667[13]);
-					((Class528_Sub2) this).aFloatArray8590[i_556_] = (float) (int) (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_561_ / f_560_));
-					((Class528_Sub2) this).aFloatArray8605[i_556_] = (float) (int) (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_562_ / f_560_));
+					((Class528_Sub2) this).aFloatArray8590[i_556_] = (float) (int) (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_561_ / f_560_));
+					((Class528_Sub2) this).aFloatArray8605[i_556_] = (float) (int) (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_562_ / f_560_));
 				} else
 					((Class528_Sub2) this).aFloatArray8590[i_556_] = -999999.0F;
 			}
@@ -2518,7 +2518,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method11260() {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				while (aBool7023) {
 					try {
@@ -2666,7 +2666,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	void method13821() {
 		if (((Class528_Sub2) this).anInt8598 == 0)
 			method13853(false);
-		else if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		else if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				method13802();
 			}
@@ -2895,7 +2895,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 
 	void method13827() {
 		if (((Class528_Sub2) this).anInt8598 == 0 && ((Class528_Sub2) this).aClass189Array8584 == null) {
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					method13797();
 				}
@@ -2906,7 +2906,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 
 	void method13828() {
 		if (((Class528_Sub2) this).anInt8598 == 0 && ((Class528_Sub2) this).aClass189Array8584 == null) {
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					method13797();
 				}
@@ -3093,7 +3093,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method13832(boolean bool) {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				method13798(bool);
 			}
@@ -3111,15 +3111,15 @@ public class Class528_Sub2 extends MeshRasterizer {
 				((Class528_Sub2) this).aByteArray8600 = null;
 		} else {
 			method13877();
-			int i = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9011) * 1302966735;
-			int i_659_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8988) * -1947219005;
-			int i_660_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9007) * 1237704411;
-			int i_661_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8992) * -456583957 >> 8;
+			int i = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9011) * 1302966735;
+			int i_659_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8988) * -1947219005;
+			int i_660_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9007) * 1237704411;
+			int i_661_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt8992) * -456583957 >> 8;
 			int i_662_ = 0;
 			int i_663_ = 0;
 			if (((Class528_Sub2) this).anInt8577 != 0) {
-				i_662_ = (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).anInt8990 * -1085780736 / ((Class528_Sub2) this).anInt8577);
-				i_663_ = (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).anInt8991 * -1967065344 / ((Class528_Sub2) this).anInt8577);
+				i_662_ = (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).anInt8990 * -1085780736 / ((Class528_Sub2) this).anInt8577);
+				i_663_ = (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).anInt8991 * -1967065344 / ((Class528_Sub2) this).anInt8577);
 			}
 			if (((Class528_Sub2) this).anIntArray8592 == null) {
 				((Class528_Sub2) this).anIntArray8592 = new int[((Class528_Sub2) this).anInt8586];
@@ -3745,7 +3745,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	void method13838() {
 		if (((Class528_Sub2) this).anInt8598 == 0)
 			method13853(false);
-		else if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		else if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				method13802();
 			}
@@ -3756,7 +3756,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	void method13839() {
 		if (((Class528_Sub2) this).anInt8598 == 0)
 			method13853(false);
-		else if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		else if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				method13802();
 			}
@@ -3917,7 +3917,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	public void aq(int i) {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				if ((((Class528_Sub2) this).anInt8575 & 0x10000) == 65536 && (i & 0x10000) == 0)
 					method13853(true);
@@ -3943,7 +3943,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	public void KA(int i) {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				if ((((Class528_Sub2) this).anInt8575 & 0x10000) == 65536 && (i & 0x10000) == 0)
 					method13853(true);
@@ -4314,7 +4314,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method13853(boolean bool) {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				method13798(bool);
 			}
@@ -4528,7 +4528,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method11288() {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				aBool7023 = false;
 				this.notifyAll();
@@ -4537,7 +4537,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method11285() {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				aBool7023 = false;
 				this.notifyAll();
@@ -5315,8 +5315,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 			Class185 class185 = ((Class528_Sub2) this).aClass505_Sub3_8638.method14370(Thread.currentThread());
 			Class384 class384 = ((Class185) class185).aClass384_2317;
 			class384.method6522(class294);
-			Class384 class384_1178_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8994);
-			Class384 class384_1179_ = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
+			Class384 class384_1178_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8994);
+			Class384 class384_1179_ = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
 			if (!((Class528_Sub2) this).aBool8621)
 				method13876();
 			boolean bool = class384.method6526();
@@ -5330,7 +5330,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			float f_1183_ = fs[1];
 			float f_1184_ = fs[2];
 			for (int i_1185_ = 0; i_1185_ < 6; i_1185_++) {
-				float[] fs_1186_ = (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloatArrayArray8989[i_1185_]);
+				float[] fs_1186_ = (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloatArrayArray8989[i_1185_]);
 				float f_1187_ = (fs_1186_[0] * f + fs_1186_[1] * f_1180_ + fs_1186_[2] * f_1181_ + fs_1186_[3] + (float) ((Class528_Sub2) this).aShort8595);
 				float f_1188_ = (fs_1186_[0] * f_1182_ + fs_1186_[1] * f_1183_ + fs_1186_[2] * f_1184_ + fs_1186_[3] + (float) ((Class528_Sub2) this).aShort8595);
 				if (f_1187_ < 0.0F && f_1188_ < 0.0F)
@@ -5349,7 +5349,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			float f_1192_ = (f_1189_ + (float) ((Class528_Sub2) this).aShort8625 * f_1190_);
 			float f_1193_ = (f_1191_ > f_1192_ ? f_1191_ + (float) ((Class528_Sub2) this).aShort8595 : f_1192_ + (float) ((Class528_Sub2) this).aShort8595);
 			float f_1194_ = (class384_1179_.aFloatArray4667[10] * f_1193_ + class384_1179_.aFloatArray4667[14]);
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					while (((Class528_Sub2) this).aBool8563) {
 						try {
@@ -5364,7 +5364,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			method13795(class185);
 			Class384 class384_1195_ = (((Class185) ((Class528_Sub2) this).aClass185_8564).aClass384_2318);
 			class384_1195_.method6562(class384);
-			class384_1195_.method6523(((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aClass384_8996);
+			class384_1195_.method6523(((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aClass384_8996);
 			if ((i & 0x2) != 0)
 				((Class528_Sub2) this).aClass144_8566.method2418(true);
 			else
@@ -5417,18 +5417,18 @@ public class Class528_Sub2 extends MeshRasterizer {
 					if (f_1214_ > -f_1215_) {
 						f_1212_ += ((class384_1179_.aFloatArray4667[0] * (float) (((Class176) class176).anInt2192 * -310982679)) + (class384_1179_.aFloatArray4667[4] * (float) (((Class176) class176).anInt2189 * 1349697681)));
 						f_1213_ += ((class384_1179_.aFloatArray4667[1] * (float) (((Class176) class176).anInt2192 * -310982679)) + (class384_1179_.aFloatArray4667[5] * (float) (((Class176) class176).anInt2189 * 1349697681)));
-						float f_1216_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1212_ / f_1215_);
-						float f_1217_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1213_ / f_1215_);
+						float f_1216_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1212_ / f_1215_);
+						float f_1217_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1213_ / f_1215_);
 						float f_1218_ = (((Class176) class176).aFloat2190 * (float) ((Class193) class193).aShort2394);
 						float f_1219_ = (((Class176) class176).aFloat2191 * (float) ((Class193) class193).aShort2395);
 						float f_1220_ = (f_1212_ + class384_1179_.aFloatArray4667[0] * f_1218_ + class384_1179_.aFloatArray4667[4] * f_1219_);
 						float f_1221_ = (f_1213_ + class384_1179_.aFloatArray4667[1] * f_1218_ + class384_1179_.aFloatArray4667[5] * f_1219_);
 						float f_1222_ = (f_1215_ + class384_1179_.aFloatArray4667[3] * f_1218_ + class384_1179_.aFloatArray4667[7] * f_1219_);
-						float f_1223_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1220_ / f_1222_);
-						float f_1224_ = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1221_ / f_1222_);
+						float f_1223_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1220_ / f_1222_);
+						float f_1224_ = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1221_ / f_1222_);
 						((Class176) class176).anInt2195 = (int) f_1216_ * 1832369091;
 						((Class176) class176).anInt2196 = (int) f_1217_ * 1544556155;
-						((Class176) class176).aFloat2193 = ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8985) + ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8978) * (f_1214_ - (class384_1179_.aFloatArray4667[10] * (float) ((((Class193) class193).anInt2400) * 219886141))) / f_1215_));
+						((Class176) class176).aFloat2193 = ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8985) + ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8978) * (f_1214_ - (class384_1179_.aFloatArray4667[10] * (float) ((((Class193) class193).anInt2400) * 219886141))) / f_1215_));
 						((Class176) class176).anInt2197 = (int) (f_1223_ < f_1216_ ? f_1216_ - f_1223_ : f_1223_ - f_1216_) * -710849997;
 						((Class176) class176).anInt2198 = (int) (f_1224_ < f_1217_ ? f_1217_ - f_1224_ : f_1224_ - f_1217_) * 1185210621;
 					} else {
@@ -5451,8 +5451,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				float f_1235_ = (class384_1195_.aFloatArray4667[2] * (float) i_1230_ + class384_1195_.aFloatArray4667[6] * (float) i_1231_ + class384_1195_.aFloatArray4667[10] * (float) i_1232_ + class384_1195_.aFloatArray4667[14]);
 				float f_1236_ = (class384_1195_.aFloatArray4667[3] * (float) i_1230_ + class384_1195_.aFloatArray4667[7] * (float) i_1231_ + class384_1195_.aFloatArray4667[11] * (float) i_1232_ + class384_1195_.aFloatArray4667[15]);
 				if (f_1235_ >= -f_1236_) {
-					class275_sub5.anInt7847 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_1233_ / f_1236_);
-					class275_sub5.anInt7848 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_1234_ / f_1236_);
+					class275_sub5.anInt7847 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_1233_ / f_1236_);
+					class275_sub5.anInt7848 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_1234_ / f_1236_);
 				} else
 					bool_1226_ = true;
 				i_1230_ = i_1228_;
@@ -5463,8 +5463,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				float f_1239_ = (class384_1195_.aFloatArray4667[2] * (float) i_1230_ + class384_1195_.aFloatArray4667[6] * (float) i_1231_ + class384_1195_.aFloatArray4667[10] * (float) i_1232_ + class384_1195_.aFloatArray4667[14]);
 				float f_1240_ = (class384_1195_.aFloatArray4667[3] * (float) i_1230_ + class384_1195_.aFloatArray4667[7] * (float) i_1231_ + class384_1195_.aFloatArray4667[11] * (float) i_1232_ + class384_1195_.aFloatArray4667[15]);
 				if (f_1239_ >= -f_1240_) {
-					class275_sub5.anInt7850 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_1237_ / f_1240_);
-					class275_sub5.anInt7846 = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_1238_ / f_1240_);
+					class275_sub5.anInt7850 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976) * f_1237_ / f_1240_);
+					class275_sub5.anInt7846 = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004) * f_1238_ / f_1240_);
 				} else
 					bool_1226_ = true;
 				if (bool_1226_) {
@@ -5475,26 +5475,26 @@ public class Class528_Sub2 extends MeshRasterizer {
 						float f_1242_ = f_1233_ + f_1241_ * (f_1237_ - f_1233_);
 						float f_1243_ = f_1234_ + f_1241_ * (f_1238_ - f_1234_);
 						float f_1244_ = f_1236_ + f_1241_ * (f_1240_ - f_1236_);
-						class275_sub5.anInt7847 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1242_ / f_1244_));
-						class275_sub5.anInt7848 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1243_ / f_1244_));
+						class275_sub5.anInt7847 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1242_ / f_1244_));
+						class275_sub5.anInt7848 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1243_ / f_1244_));
 					} else if (f_1239_ < -f_1240_) {
 						float f_1245_ = (f_1239_ + f_1240_) / (f_1235_ + f_1236_) - 1.0F;
 						float f_1246_ = f_1237_ + f_1245_ * (f_1233_ - f_1237_);
 						float f_1247_ = f_1238_ + f_1245_ * (f_1234_ - f_1238_);
 						float f_1248_ = f_1240_ + f_1245_ * (f_1236_ - f_1240_);
-						class275_sub5.anInt7850 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1246_ / f_1248_));
-						class275_sub5.anInt7846 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1247_ / f_1248_));
+						class275_sub5.anInt7850 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1246_ / f_1248_));
+						class275_sub5.anInt7846 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982) + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1247_ / f_1248_));
 					}
 				}
 				if (bool_1227_) {
 					if (f_1235_ / f_1236_ > f_1239_ / f_1240_) {
 						float f_1249_ = (f_1233_ + (class384_1179_.aFloatArray4667[0] * (float) ((Class528_Sub2) this).aShort8595) + class384_1179_.aFloatArray4667[12]);
 						float f_1250_ = (f_1236_ + (class384_1179_.aFloatArray4667[3] * (float) ((Class528_Sub2) this).aShort8595) + class384_1179_.aFloatArray4667[15]);
-						class275_sub5.anInt7851 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7847 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1249_ / f_1250_));
+						class275_sub5.anInt7851 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7847 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1249_ / f_1250_));
 					} else {
 						float f_1251_ = (f_1237_ + (class384_1179_.aFloatArray4667[0] * (float) ((Class528_Sub2) this).aShort8595) + class384_1179_.aFloatArray4667[12]);
 						float f_1252_ = (f_1240_ + (class384_1179_.aFloatArray4667[3] * (float) ((Class528_Sub2) this).aShort8595) + class384_1179_.aFloatArray4667[15]);
-						class275_sub5.anInt7851 = (int) ((((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7850 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1251_ / f_1252_));
+						class275_sub5.anInt7851 = (int) ((((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003) - (float) class275_sub5.anInt7850 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1251_ / f_1252_));
 					}
 					class275_sub5.aBool7849 = true;
 				}
@@ -5503,7 +5503,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			((Class144) ((Class528_Sub2) this).aClass144_8566).aBool1675 = (i & 0x1) == 0;
 			((Class144) ((Class528_Sub2) this).aClass144_8566).aBool1672 = false;
 			try {
-				method13817((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anIntArray8979) != null, (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloatArray9010) != null, (i & 0x4) != 0, bool_1196_, ((((Class185) ((Class528_Sub2) this).aClass185_8564).aBool2304 && f_1194_ > (((Class185) (((Class528_Sub2) this).aClass185_8564)).aFloat2305)) || ((Class185) (((Class528_Sub2) this).aClass185_8564)).aBool2309));
+				method13817((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anIntArray8979) != null, (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloatArray9010) != null, (i & 0x4) != 0, bool_1196_, ((((Class185) ((Class528_Sub2) this).aClass185_8564).aBool2304 && f_1194_ > (((Class185) (((Class528_Sub2) this).aClass185_8564)).aFloat2305)) || ((Class185) (((Class528_Sub2) this).aClass185_8564)).aBool2309));
 			} catch (Exception exception) {
 				/* empty */
 			}
@@ -5512,7 +5512,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 					((Class528_Sub2) this).anIntArray8643[i_1253_] = -1;
 			}
 			((Class528_Sub2) this).aClass144_8566 = null;
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					((Class528_Sub2) this).aBool8563 = false;
 					this.notifyAll();
@@ -5800,7 +5800,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 			short i_1300_ = ((Class528_Sub2) this).aShortArray8587[i];
 			short i_1301_ = ((Class528_Sub2) this).aShortArray8588[i];
 			short i_1302_ = ((Class528_Sub2) this).aShortArray8642[i];
-			Class384 class384 = (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
+			Class384 class384 = (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8995);
 			float f = class384.aFloatArray4667[10];
 			float f_1303_ = class384.aFloatArray4667[14];
 			float f_1304_ = class384.aFloatArray4667[11];
@@ -6462,7 +6462,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 
 	void method13877() {
 		if (((Class528_Sub2) this).anInt8598 == 0 && ((Class528_Sub2) this).aClass189Array8584 == null) {
-			if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+			if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 				synchronized (this) {
 					method13797();
 				}
@@ -6795,7 +6795,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 		return ((Class528_Sub2) this).aShort8574;
 	}
 
-	Class528_Sub2(Class505_Sub3 class505_sub3) {
+	Class528_Sub2(HardwareRenderer class505_sub3) {
 		((Class528_Sub2) this).aBool8589 = false;
 		((Class528_Sub2) this).aBool8614 = false;
 		((Class528_Sub2) this).aBool8621 = false;
@@ -6847,7 +6847,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method11308() {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				while (aBool7023) {
 					try {
@@ -6862,7 +6862,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 	}
 
 	void method11301() {
-		if ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
+		if ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).anInt9008) * 656550451 > 1) {
 			synchronized (this) {
 				while (aBool7023) {
 					try {
@@ -6876,7 +6876,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 		}
 	}
 
-	Class528_Sub2(Class505_Sub3 class505_sub3, RSMesh class157, int i, int i_1563_, int i_1564_, int i_1565_) {
+	Class528_Sub2(HardwareRenderer class505_sub3, RSMesh class157, int i, int i_1563_, int i_1564_, int i_1565_) {
 		((Class528_Sub2) this).aBool8589 = false;
 		((Class528_Sub2) this).aBool8614 = false;
 		((Class528_Sub2) this).aBool8621 = false;
@@ -7198,7 +7198,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 		class384.method6522(class294);
 		Class384 class384_1653_ = (((Class185) ((Class528_Sub2) this).aClass185_8564).aClass384_2318);
 		class384_1653_.method6562(class384);
-		class384_1653_.method6523(((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8996);
+		class384_1653_.method6523(((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8996);
 		boolean bool_1654_ = false;
 		int i_1655_ = 2147483647;
 		int i_1656_ = -2147483648;
@@ -7251,8 +7251,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 			if (f >= -f_1675_) {
 				float f_1676_ = (class384_1653_.aFloatArray4667[0] * (float) i_1672_ + class384_1653_.aFloatArray4667[4] * (float) i_1673_ + class384_1653_.aFloatArray4667[8] * (float) i_1674_ + class384_1653_.aFloatArray4667[12]);
 				float f_1677_ = (class384_1653_.aFloatArray4667[1] * (float) i_1672_ + class384_1653_.aFloatArray4667[5] * (float) i_1673_ + class384_1653_.aFloatArray4667[9] * (float) i_1674_ + class384_1653_.aFloatArray4667[13]);
-				int i_1678_ = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1676_ / f_1675_);
-				int i_1679_ = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1677_ / f_1675_);
+				int i_1678_ = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1676_ / f_1675_);
+				int i_1679_ = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1677_ / f_1675_);
 				if (i_1678_ < i_1655_)
 					i_1655_ = i_1678_;
 				if (i_1678_ > i_1656_)
@@ -7276,8 +7276,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				if (f >= -f_1684_) {
 					float f_1685_ = (class384_1653_.aFloatArray4667[0] * (float) i_1681_ + (class384_1653_.aFloatArray4667[4] * (float) i_1682_) + (class384_1653_.aFloatArray4667[8] * (float) i_1683_) + class384_1653_.aFloatArray4667[12]);
 					float f_1686_ = (class384_1653_.aFloatArray4667[1] * (float) i_1681_ + (class384_1653_.aFloatArray4667[5] * (float) i_1682_) + (class384_1653_.aFloatArray4667[9] * (float) i_1683_) + class384_1653_.aFloatArray4667[13]);
-					((Class528_Sub2) this).aFloatArray8590[i_1680_] = (float) (int) (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1685_ / f_1684_));
-					((Class528_Sub2) this).aFloatArray8605[i_1680_] = (float) (int) (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1686_ / f_1684_));
+					((Class528_Sub2) this).aFloatArray8590[i_1680_] = (float) (int) (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1685_ / f_1684_));
+					((Class528_Sub2) this).aFloatArray8605[i_1680_] = (float) (int) (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1686_ / f_1684_));
 				} else
 					((Class528_Sub2) this).aFloatArray8590[i_1680_] = -999999.0F;
 			}
@@ -7296,7 +7296,7 @@ public class Class528_Sub2 extends MeshRasterizer {
 		class384.method6522(class294);
 		Class384 class384_1690_ = (((Class185) ((Class528_Sub2) this).aClass185_8564).aClass384_2318);
 		class384_1690_.method6562(class384);
-		class384_1690_.method6523(((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8996);
+		class384_1690_.method6523(((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aClass384_8996);
 		boolean bool_1691_ = false;
 		int i_1692_ = 2147483647;
 		int i_1693_ = -2147483648;
@@ -7349,8 +7349,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 			if (f >= -f_1712_) {
 				float f_1713_ = (class384_1690_.aFloatArray4667[0] * (float) i_1709_ + class384_1690_.aFloatArray4667[4] * (float) i_1710_ + class384_1690_.aFloatArray4667[8] * (float) i_1711_ + class384_1690_.aFloatArray4667[12]);
 				float f_1714_ = (class384_1690_.aFloatArray4667[1] * (float) i_1709_ + class384_1690_.aFloatArray4667[5] * (float) i_1710_ + class384_1690_.aFloatArray4667[9] * (float) i_1711_ + class384_1690_.aFloatArray4667[13]);
-				int i_1715_ = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1713_ / f_1712_);
-				int i_1716_ = (int) ((((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((Class505_Sub3) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1714_ / f_1712_);
+				int i_1715_ = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9003) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8976) * f_1713_ / f_1712_);
+				int i_1716_ = (int) ((((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat8982) + (((HardwareRenderer) ((Class528_Sub2) this).aClass505_Sub3_8638).aFloat9004) * f_1714_ / f_1712_);
 				if (i_1715_ < i_1692_)
 					i_1692_ = i_1715_;
 				if (i_1715_ > i_1693_)
@@ -7374,8 +7374,8 @@ public class Class528_Sub2 extends MeshRasterizer {
 				if (f >= -f_1721_) {
 					float f_1722_ = (class384_1690_.aFloatArray4667[0] * (float) i_1718_ + (class384_1690_.aFloatArray4667[4] * (float) i_1719_) + (class384_1690_.aFloatArray4667[8] * (float) i_1720_) + class384_1690_.aFloatArray4667[12]);
 					float f_1723_ = (class384_1690_.aFloatArray4667[1] * (float) i_1718_ + (class384_1690_.aFloatArray4667[5] * (float) i_1719_) + (class384_1690_.aFloatArray4667[9] * (float) i_1720_) + class384_1690_.aFloatArray4667[13]);
-					((Class528_Sub2) this).aFloatArray8590[i_1717_] = (float) (int) (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1722_ / f_1721_));
-					((Class528_Sub2) this).aFloatArray8605[i_1717_] = (float) (int) (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982 + (((Class505_Sub3) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1723_ / f_1721_));
+					((Class528_Sub2) this).aFloatArray8590[i_1717_] = (float) (int) (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9003 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8976 * f_1722_ / f_1721_));
+					((Class528_Sub2) this).aFloatArray8605[i_1717_] = (float) (int) (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat8982 + (((HardwareRenderer) (((Class528_Sub2) this).aClass505_Sub3_8638)).aFloat9004 * f_1723_ / f_1721_));
 				} else
 					((Class528_Sub2) this).aFloatArray8590[i_1717_] = -999999.0F;
 			}

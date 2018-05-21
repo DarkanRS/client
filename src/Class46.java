@@ -13,12 +13,12 @@ public class Class46 implements Interface2 {
 
 	public void method20(boolean bool, int i) {
 		if (bool)
-			Class316.aClass505_3680.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
+			Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
 	}
 
 	public void method11(boolean bool) {
 		if (bool)
-			Class316.aClass505_3680.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
+			Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
 	}
 
 	public boolean method10(int i) {
@@ -27,7 +27,7 @@ public class Class46 implements Interface2 {
 
 	public void method12(boolean bool) {
 		if (bool)
-			Class316.aClass505_3680.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
+			Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
 	}
 
 	Class46(Class366 class366) {
@@ -36,7 +36,7 @@ public class Class46 implements Interface2 {
 
 	public void method14(boolean bool) {
 		if (bool)
-			Class316.aClass505_3680.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
+			Renderers.SOFTWARE_RENDERER.B(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243, (((Class46) this).aClass366_436.anInt4231 * -2044941049), 0);
 	}
 
 	public void method15() {

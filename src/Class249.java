@@ -79,7 +79,7 @@ public class Class249 implements Interface43 {
 		Class109.method1858(class118, (byte) 60);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999) {
 			Class106.method1818(-1952846363 * class118.anInt1287, -1101705065);
-			Class282_Sub32.method12575(class118.anInt1287 * -1952846363, (byte) 9);
+			Item.method12575(class118.anInt1287 * -1952846363, (byte) 9);
 		}
 	}
 

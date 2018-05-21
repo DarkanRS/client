@@ -116,7 +116,7 @@ public class Class94 {
 		Class468_Sub12.method12710(i_3_, (byte) -85);
 		client.aClass257_7353.method4436(-2047295764).method7893(i_3_, 2082493334);
 		Class6.aClass340_45.method6052((short) -5779).method4436(-1603453217).method7893(i_3_, -79480655);
-		Class119.aClass426_1463.method7153(i_3_, -933999728);
+		IndexLoaders.ITEM_INDEX_LOADER.method7153(i_3_, -933999728);
 		Class350_Sub1.aClass406_7757.method6829(i_3_, 989063479);
 		Class96_Sub20.aClass515_9416.method8846(i_3_, (byte) -61);
 		Class38.method851(i_3_, 1008680186);

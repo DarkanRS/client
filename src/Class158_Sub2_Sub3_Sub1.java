@@ -88,7 +88,7 @@ public final class Class158_Sub2_Sub3_Sub1 extends Class158_Sub2_Sub3 {
 		return 0;
 	}
 
-	Class158_Sub2_Sub3_Sub1(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_4_) {
+	Class158_Sub2_Sub3_Sub1(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_4_) {
 		super(class505_sub3, canvas, i, i_4_);
 		new Rectangle();
 		method15632((byte) -46);

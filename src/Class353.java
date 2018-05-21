@@ -109,23 +109,23 @@ public class Class353 {
 		if (null == class282_sub29) {
 			class282_sub29 = new Class282_Sub29();
 			client.aClass465_7414.method7765(class282_sub29, l);
-			class282_sub29.aClass482_7708.method8059(class282_sub34, 64810777);
+			class282_sub29.aClass482_7708.append(class282_sub34, 64810777);
 		} else {
-			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions((class282_sub34.anInt7853 * 1964309863), 1474868024);
+			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((class282_sub34.anInt7853 * 1964309863), 1474868024);
 			int i_15_ = 15210351 * class425.anInt5051;
-			if (318481945 * class425.anInt5049 == 1)
+			if (318481945 * class425.stackable == 1)
 				i_15_ *= 1 + (((Class282_Sub34) class282_sub34).anInt7852 * -1727049729);
 			for (Class282_Sub34 class282_sub34_16_ = ((Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 33)); null != class282_sub34_16_; class282_sub34_16_ = (Class282_Sub34) class282_sub29.aClass482_7708.next(1444311005)) {
-				class425 = Class119.aClass426_1463.getItemDefinitions((1964309863 * (class282_sub34_16_.anInt7853)), 1449282948);
+				class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((1964309863 * (class282_sub34_16_.anInt7853)), 1449282948);
 				int i_17_ = class425.anInt5051 * 15210351;
-				if (class425.anInt5049 * 318481945 == 1)
+				if (class425.stackable * 318481945 == 1)
 					i_17_ *= -1727049729 * (((Class282_Sub34) class282_sub34_16_).anInt7852) + 1;
 				if (i_15_ > i_17_) {
 					Class446.method7430(class282_sub34, class282_sub34_16_, -1282402285);
 					return;
 				}
 			}
-			class282_sub29.aClass482_7708.method8059(class282_sub34, -1833227399);
+			class282_sub29.aClass482_7708.append(class282_sub34, -1833227399);
 		}
 	}
 

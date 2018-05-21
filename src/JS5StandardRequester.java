@@ -272,6 +272,6 @@ public abstract class JS5StandardRequester {
 				((Class282_Sub42) class282_sub42).anIntArray8036[i_6_] = -5;
 			}
 		}
-		Class435.aClass482_5332.method8059(class282_sub42, 1226152090);
+		Class435.aClass482_5332.append(class282_sub42, 1226152090);
 	}
 }

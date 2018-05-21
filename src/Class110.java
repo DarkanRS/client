@@ -151,8 +151,8 @@ public class Class110 {
 	static final void method1861(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		Class455.aShortArray5452[(((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 * 1942118537)])] = (short) Class5.method294((((CS2Executor) class527).intStack[(1 + 1942118537 * (((CS2Executor) class527).anInt7012))]), (byte) -4);
-		Class119.aClass426_1463.method7152(-2142762956);
-		Class119.aClass426_1463.method7151((byte) -24);
+		IndexLoaders.ITEM_INDEX_LOADER.method7152(-2142762956);
+		IndexLoaders.ITEM_INDEX_LOADER.method7151((byte) -24);
 		Class350_Sub1.aClass406_7757.method6831(-1083280039);
 		IncomingPacket.method6378(-1538407760);
 	}

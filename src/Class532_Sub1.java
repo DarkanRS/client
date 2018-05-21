@@ -376,8 +376,8 @@ public class Class532_Sub1 extends Class532 {
 						/* empty */
 					}
 					Class351.aCanvas4096.setSize((-418109423 * Class349.anInt4083), (client.anInt3243 * -969250379));
-					if (Class316.aClass505_3680 != null)
-						Class316.aClass505_3680.method8414(Class351.aCanvas4096, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379, -2138128111);
+					if (Renderers.SOFTWARE_RENDERER != null)
+						Renderers.SOFTWARE_RENDERER.method8414(Class351.aCanvas4096, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379, -2138128111);
 					if (container == client.aFrame3261) {
 						Insets insets = client.aFrame3261.getInsets();
 						Class351.aCanvas4096.setLocation(insets.left + client.anInt3250 * -1911940837, insets.top + 698621615 * client.anInt3251);

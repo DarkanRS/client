@@ -36,7 +36,7 @@ public class Class357_Sub1 extends Class357 {
 		Class20.aClass31_204.method803((byte) -84);
 		client.aClass257_7353.method4436(-1616362848).method7897(-1635357050);
 		Class350_Sub1.aClass406_7757.method6833(-1071145131);
-		Class119.aClass426_1463.method7166(-1983890359);
+		IndexLoaders.ITEM_INDEX_LOADER.method7166(-1983890359);
 		Class330.aClass523_3868.method11208(225048469);
 		Class96_Sub20.aClass515_9416.method8849((short) -8136);
 		Class16.aClass230_147.method3899((short) -16305);

@@ -28,7 +28,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 	static int anInt8872;
 	static int anInt8873;
 	static int anInt8874;
-	Class505_Sub3 aClass505_Sub3_8875;
+	HardwareRenderer aClass505_Sub3_8875;
 	static int anInt8876;
 	static int anInt8877;
 	static int anInt8878 = 0;
@@ -57,7 +57,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 		if (((Class160_Sub1) this).anIntArray8857 == null)
 			((Class160_Sub1) this).anIntArray8857 = new int[4];
 		((Class160_Sub1) this).aClass505_Sub3_8875.qa(((Class160_Sub1) this).anIntArray8857);
-		((Class160_Sub1) this).aClass505_Sub3_8875.o((((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983) * 72550989, (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009) * 1516535457, i + i_4_, i_3_ + i_5_);
+		((Class160_Sub1) this).aClass505_Sub3_8875.o((((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983) * 72550989, (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009) * 1516535457, i + i_4_, i_3_ + i_5_);
 		int i_9_ = method228();
 		int i_10_ = method2748();
 		int i_11_ = (i_4_ + i_9_ - 1) / i_9_;
@@ -98,7 +98,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 		if (((Class160_Sub1) this).anIntArray8857 == null)
 			((Class160_Sub1) this).anIntArray8857 = new int[4];
 		((Class160_Sub1) this).aClass505_Sub3_8875.qa(((Class160_Sub1) this).anIntArray8857);
-		((Class160_Sub1) this).aClass505_Sub3_8875.o((((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983) * 72550989, (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009) * 1516535457, i + i_36_, i_35_ + i_37_);
+		((Class160_Sub1) this).aClass505_Sub3_8875.o((((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983) * 72550989, (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009) * 1516535457, i + i_36_, i_35_ + i_37_);
 		int i_41_ = method228();
 		int i_42_ = method2748();
 		int i_43_ = (i_36_ + i_41_ - 1) / i_41_;
@@ -170,21 +170,21 @@ public abstract class Class160_Sub1 extends NativeSprite {
 			f_71_ = f_52_;
 		if (f_67_ > f_71_)
 			f_71_ = f_67_;
-		if (f_68_ < (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989))
-			f_68_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
-		if (f_69_ > (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237))
-			f_69_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
-		if (f_70_ < (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457))
-			f_70_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
-		if (f_71_ > (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921))
-			f_71_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
+		if (f_68_ < (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989))
+			f_68_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
+		if (f_69_ > (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237))
+			f_69_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
+		if (f_70_ < (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457))
+			f_70_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
+		if (f_71_ > (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921))
+			f_71_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
 		f_69_ = f_68_ - f_69_;
 		if (f_69_ >= 0.0F)
 			return false;
 		f_71_ = f_70_ - f_71_;
 		if (f_71_ >= 0.0F)
 			return false;
-		anInt8850 = (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
+		anInt8850 = (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
 		anInt8870 = (int) ((float) ((int) f_70_ * anInt8850) + f_68_);
 		float f_72_ = (f_49_ - f) * (f_52_ - f_48_) - (f_50_ - f_48_) * (f_51_ - f);
 		float f_73_ = (f_51_ - f) * (f_50_ - f_48_) - (f_52_ - f_48_) * (f_49_ - f);
@@ -322,21 +322,21 @@ public abstract class Class160_Sub1 extends NativeSprite {
 			f_111_ = f_92_;
 		if (f_107_ > f_111_)
 			f_111_ = f_107_;
-		if (f_108_ < (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983 * 72550989))
-			f_108_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
-		if (f_109_ > (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9002 * -1710988237))
-			f_109_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
-		if (f_110_ < (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009 * 1516535457))
-			f_110_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
-		if (f_111_ > (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8986 * 1383960921))
-			f_111_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
+		if (f_108_ < (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983 * 72550989))
+			f_108_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
+		if (f_109_ > (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9002 * -1710988237))
+			f_109_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
+		if (f_110_ < (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009 * 1516535457))
+			f_110_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
+		if (f_111_ > (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8986 * 1383960921))
+			f_111_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
 		f_109_ = f_108_ - f_109_;
 		if (f_109_ >= 0.0F)
 			return false;
 		f_111_ = f_110_ - f_111_;
 		if (f_111_ >= 0.0F)
 			return false;
-		anInt8850 = (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
+		anInt8850 = (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
 		anInt8870 = (int) ((float) ((int) f_110_ * anInt8850) + f_108_);
 		float f_112_ = (f_89_ - f) * (f_92_ - f_88_) - (f_90_ - f_88_) * (f_91_ - f);
 		float f_113_ = (f_91_ - f) * (f_90_ - f_88_) - (f_92_ - f_88_) * (f_89_ - f);
@@ -472,21 +472,21 @@ public abstract class Class160_Sub1 extends NativeSprite {
 			f_186_ = f_167_;
 		if (f_182_ > f_186_)
 			f_186_ = f_182_;
-		if (f_183_ < (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983 * 72550989))
-			f_183_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
-		if (f_184_ > (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9002 * -1710988237))
-			f_184_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
-		if (f_185_ < (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009 * 1516535457))
-			f_185_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
-		if (f_186_ > (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8986 * 1383960921))
-			f_186_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
+		if (f_183_ < (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983 * 72550989))
+			f_183_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
+		if (f_184_ > (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9002 * -1710988237))
+			f_184_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
+		if (f_185_ < (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009 * 1516535457))
+			f_185_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
+		if (f_186_ > (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8986 * 1383960921))
+			f_186_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
 		f_184_ = f_183_ - f_184_;
 		if (f_184_ >= 0.0F)
 			return false;
 		f_186_ = f_185_ - f_186_;
 		if (f_186_ >= 0.0F)
 			return false;
-		anInt8850 = (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
+		anInt8850 = (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
 		anInt8870 = (int) ((float) ((int) f_185_ * anInt8850) + f_183_);
 		float f_187_ = ((f_164_ - f) * (f_167_ - f_163_) - (f_165_ - f_163_) * (f_166_ - f));
 		float f_188_ = ((f_166_ - f) * (f_165_ - f_163_) - (f_167_ - f_163_) * (f_164_ - f));
@@ -557,7 +557,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 		return (((Class160_Sub1) this).anInt8853 + ((Class160_Sub1) this).anInt8851 + ((Class160_Sub1) this).anInt8855);
 	}
 
-	Class160_Sub1(Class505_Sub3 class505_sub3, int i, int i_192_) {
+	Class160_Sub1(HardwareRenderer class505_sub3, int i, int i_192_) {
 		((Class160_Sub1) this).aClass505_Sub3_8875 = class505_sub3;
 		((Class160_Sub1) this).anInt8851 = i;
 		((Class160_Sub1) this).anInt8867 = i_192_;
@@ -578,7 +578,7 @@ public abstract class Class160_Sub1 extends NativeSprite {
 		if (((Class160_Sub1) this).anIntArray8857 == null)
 			((Class160_Sub1) this).anIntArray8857 = new int[4];
 		((Class160_Sub1) this).aClass505_Sub3_8875.qa(((Class160_Sub1) this).anIntArray8857);
-		((Class160_Sub1) this).aClass505_Sub3_8875.o((((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983) * 72550989, (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009) * 1516535457, i + i_204_, i_203_ + i_205_);
+		((Class160_Sub1) this).aClass505_Sub3_8875.o((((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983) * 72550989, (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009) * 1516535457, i + i_204_, i_203_ + i_205_);
 		int i_209_ = method228();
 		int i_210_ = method2748();
 		int i_211_ = (i_204_ + i_209_ - 1) / i_209_;
@@ -709,21 +709,21 @@ public abstract class Class160_Sub1 extends NativeSprite {
 			f_252_ = f_233_;
 		if (f_248_ > f_252_)
 			f_252_ = f_248_;
-		if (f_249_ < (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983 * 72550989))
-			f_249_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
-		if (f_250_ > (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9002 * -1710988237))
-			f_250_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
-		if (f_251_ < (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009 * 1516535457))
-			f_251_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
-		if (f_252_ > (float) (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8986 * 1383960921))
-			f_252_ = (float) (((Class505_Sub3) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
+		if (f_249_ < (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8983 * 72550989))
+			f_249_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8983 * 72550989);
+		if (f_250_ > (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9002 * -1710988237))
+			f_250_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9002 * -1710988237);
+		if (f_251_ < (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt9009 * 1516535457))
+			f_251_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt9009 * 1516535457);
+		if (f_252_ > (float) (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8986 * 1383960921))
+			f_252_ = (float) (((HardwareRenderer) (((Class160_Sub1) this).aClass505_Sub3_8875)).anInt8986 * 1383960921);
 		f_250_ = f_249_ - f_250_;
 		if (f_250_ >= 0.0F)
 			return false;
 		f_252_ = f_251_ - f_252_;
 		if (f_252_ >= 0.0F)
 			return false;
-		anInt8850 = (((Class505_Sub3) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
+		anInt8850 = (((HardwareRenderer) ((Class160_Sub1) this).aClass505_Sub3_8875).anInt8980) * 444800403;
 		anInt8870 = (int) ((float) ((int) f_251_ * anInt8850) + f_249_);
 		float f_253_ = ((f_230_ - f) * (f_233_ - f_229_) - (f_231_ - f_229_) * (f_232_ - f));
 		float f_254_ = ((f_232_ - f) * (f_231_ - f_229_) - (f_233_ - f_229_) * (f_230_ - f));

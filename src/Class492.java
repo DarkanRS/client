@@ -259,9 +259,9 @@ public class Class492 {
 				int i_14_ = 512 * (i_12_ * i_9_) / (i_13_ * 334);
 				int i_15_ = (i_8_ - i_14_) / 2;
 				if (bool) {
-					Class316.aClass505_3680.L();
-					Class316.aClass505_3680.method8425(i, i_7_, i_15_, i_9_, -16777216, (byte) -9);
-					Class316.aClass505_3680.method8425(i_8_ + i - i_15_, i_7_, i_15_, i_9_, -16777216, (byte) -9);
+					Renderers.SOFTWARE_RENDERER.L();
+					Renderers.SOFTWARE_RENDERER.method8425(i, i_7_, i_15_, i_9_, -16777216, (byte) -9);
+					Renderers.SOFTWARE_RENDERER.method8425(i_8_ + i - i_15_, i_7_, i_15_, i_9_, -16777216, (byte) -9);
 				}
 				i += i_15_;
 				i_8_ -= i_15_ * 2;
@@ -274,9 +274,9 @@ public class Class492 {
 				int i_16_ = i_13_ * i_8_ * 334 / (i_12_ * 512);
 				int i_17_ = (i_9_ - i_16_) / 2;
 				if (bool) {
-					Class316.aClass505_3680.L();
-					Class316.aClass505_3680.method8425(i, i_7_, i_8_, i_17_, -16777216, (byte) -109);
-					Class316.aClass505_3680.method8425(i, i_9_ + i_7_ - i_17_, i_8_, i_17_, -16777216, (byte) -47);
+					Renderers.SOFTWARE_RENDERER.L();
+					Renderers.SOFTWARE_RENDERER.method8425(i, i_7_, i_8_, i_17_, -16777216, (byte) -109);
+					Renderers.SOFTWARE_RENDERER.method8425(i, i_9_ + i_7_ - i_17_, i_8_, i_17_, -16777216, (byte) -47);
 				}
 				i_7_ += i_17_;
 				i_9_ -= 2 * i_17_;

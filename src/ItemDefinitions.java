@@ -1,3 +1,8 @@
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
 /* Class425 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
@@ -21,7 +26,7 @@ public class ItemDefinitions implements Interface46 {
 	public int bindTemplateId;
 	public int anInt5047;
 	int lendId;
-	public int anInt5049;
+	public int stackable;
 	public int anInt5050;
 	public int anInt5051;
 	public boolean members;
@@ -200,7 +205,7 @@ public class ItemDefinitions implements Interface46 {
 		team = class425_16_.team * 1;
 		groundOptions = class425_16_.groundOptions;
 		this.cs2Map = ((ItemDefinitions) class425_16_).cs2Map;
-		anInt5049 = 1 * class425_16_.anInt5049;
+		stackable = 1 * class425_16_.stackable;
 		inventoryOptions = new String[5];
 		if (null != class425_16_.inventoryOptions) {
 			for (int i_17_ = 0; i_17_ < 4; i_17_++)
@@ -225,7 +230,7 @@ public class ItemDefinitions implements Interface46 {
 		aString5043 = class425_19_.aString5043;
 		members = class425_19_.members;
 		anInt5051 = 1 * class425_19_.anInt5051;
-		anInt5049 = -1948887511;
+		stackable = -1948887511;
 	}
 
 	void method7089(RsByteBuffer class282_sub35, int i, int i_20_) {
@@ -248,7 +253,7 @@ public class ItemDefinitions implements Interface46 {
 			if (-1316014311 * anInt5044 > 32767)
 				anInt5044 -= 891879424;
 		} else if (11 == i)
-			anInt5049 = -1948887511;
+			stackable = -1948887511;
 		else if (i == 12)
 			anInt5051 = class282_sub35.readInt() * 222766991;
 		else if (i == 13)
@@ -405,7 +410,7 @@ public class ItemDefinitions implements Interface46 {
 		return this;
 	}
 
-	int[] renderToSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int i_47_, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short i_48_) {
+	int[] renderToSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int renderAmounts, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short i_48_) {
 		RSMesh inventoryMesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), -1002877901 * this.modelId, 0);
 		if (inventoryMesh == null)
 			return null;
@@ -498,14 +503,14 @@ public class ItemDefinitions implements Interface46 {
 		hardwareRenderer.createNativeSprite(pixels, 0, 36, 36, 32, 1982525260).method2752(0, 0);
 		if (certTemplateId * -722914683 != -1)
 			sprite.method2752(0, 0);
-		if (1 == i_47_ || 2 == i_47_ && (1 == anInt5049 * 318481945 || 1 != amount) && amount != -1)
+		if (1 == renderAmounts || 2 == renderAmounts && (1 == stackable * 318481945 || 1 != amount) && amount != -1)
 			fontRenderer.renderText(Class304.method5407(amount, (((ItemIndexLoader) (this.loader)).language), (byte) 47), 0, 9, -256, -16777215, -418109423);
 		pixels = hardwareRenderer.ab(0, 0, 36, 32);
-		for (int i_58_ = 0; i_58_ < pixels.length; i_58_++) {
-			if ((pixels[i_58_] & 0xffffff) == 0)
-				pixels[i_58_] = 0;
+		for (int i = 0; i < pixels.length; i++) {
+			if ((pixels[i] & 0xffffff) == 0)
+				pixels[i] = 0;
 			else
-				pixels[i_58_] |= ~0xffffff;
+				pixels[i] |= ~0xffffff;
 		}
 		return pixels;
 	}
@@ -671,26 +676,26 @@ public class ItemDefinitions implements Interface46 {
 		return (String) class282_sub47.anObject8068;
 	}
 
-	int[] addOutlines(int[] is, int i, byte i_163_) {
-		int[] is_164_ = new int[1152];
-		int i_165_ = 0;
-		for (int i_166_ = 0; i_166_ < 32; i_166_++) {
-			for (int i_167_ = 0; i_167_ < 36; i_167_++) {
-				int i_168_ = is[i_165_];
-				if (0 == i_168_) {
-					if (i_167_ > 0 && is[i_165_ - 1] != 0)
-						i_168_ = i;
-					else if (i_166_ > 0 && 0 != is[i_165_ - 36])
-						i_168_ = i;
-					else if (i_167_ < 35 && is[i_165_ + 1] != 0)
-						i_168_ = i;
-					else if (i_166_ < 31 && is[i_165_ + 36] != 0)
-						i_168_ = i;
+	static int[] addOutlines(int[] pixels, int color, byte i_163_) {
+		int[] outlinedPixels = new int[1152];
+		int index = 0;
+		for (int x = 0; x < 32; x++) {
+			for (int y = 0; y < 36; y++) {
+				int pixel = pixels[index];
+				if (0 == pixel) {
+					if (y > 0 && pixels[index - 1] != 0)
+						pixel = color;
+					else if (x > 0 && 0 != pixels[index - 36])
+						pixel = color;
+					else if (y < 35 && pixels[index + 1] != 0)
+						pixel = color;
+					else if (x < 31 && pixels[index + 36] != 0)
+						pixel = color;
 				}
-				is_164_[i_165_++] = i_168_;
+				outlinedPixels[index++] = pixel;
 			}
 		}
-		return is_164_;
+		return outlinedPixels;
 	}
 
 	ItemDefinitions() {
@@ -700,7 +705,7 @@ public class ItemDefinitions implements Interface46 {
 		anInt5074 = 0;
 		anInt5063 = 0;
 		anInt5044 = 0;
-		anInt5049 = 0;
+		stackable = 0;
 		anInt5050 = 173634739;
 		anInt5051 = 222766991;
 		members = false;
@@ -855,7 +860,7 @@ public class ItemDefinitions implements Interface46 {
 				Class91[] class91s = Class91.method1514(Class211.aClass317_2673, i_251_, 0);
 				if (null == class91s)
 					return;
-				class160 = Class316.aClass505_3680.method8444(class91s[0], true);
+				class160 = Renderers.SOFTWARE_RENDERER.method8444(class91s[0], true);
 				client.aClass229_7204.put(class160, (long) i_251_);
 			}
 			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
@@ -866,7 +871,7 @@ public class ItemDefinitions implements Interface46 {
 			i_253_ += i % 4 * 18;
 			class160.method2752(i_252_, i_253_);
 			if (class521_sub1_sub1_sub2 == class521_sub1_sub1_sub2_243_)
-				Class316.aClass505_3680.method8562(i_252_ - 1, i_253_ - 1, 18, 18, -256, (byte) 4);
+				Renderers.SOFTWARE_RENDERER.method8562(i_252_ - 1, i_253_ - 1, 18, 18, -256, (byte) 4);
 			Class275_Sub2 class275_sub2 = Class3.method286(2086923872);
 			((Class275_Sub2) class275_sub2).aClass521_Sub1_Sub1_Sub2_7739 = class521_sub1_sub1_sub2_243_;
 			((Class275_Sub2) class275_sub2).anInt7742 = -945313559 * i_252_;

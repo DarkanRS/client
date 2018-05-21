@@ -142,7 +142,7 @@ public abstract class Class199 {
 			class282_sub43.aClass118_8053 = class118;
 			class282_sub43.anObjectArray8054 = class118.anObjectArray1271;
 			((Class282_Sub43) class282_sub43).anInt8061 = 268621789 + 859311981 * ((CS2Executor) class527).anInt7015;
-			client.aClass482_7402.method8059(class282_sub43, -2001342586);
+			client.aClass482_7402.append(class282_sub43, -2001342586);
 		}
 	}
 

@@ -2,21 +2,21 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub32 extends Node {
-	int anInt7816;
-	int anInt7817;
-	int anInt7818;
+public class Item extends Node {
+	int amount;
+	int id;
+	int outlineSize;
 	int anInt7819;
-	int anInt7820;
-	boolean aBool7821;
+	int shadowColor;
+	boolean hasPlayerAppearance;
 
-	Class282_Sub32(int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool) {
-		((Class282_Sub32) this).anInt7817 = i * 1372077649;
-		((Class282_Sub32) this).anInt7816 = -446235323 * i_0_;
-		((Class282_Sub32) this).anInt7818 = -813139483 * i_1_;
-		((Class282_Sub32) this).anInt7820 = -547508263 * i_2_;
-		((Class282_Sub32) this).anInt7819 = -545500941 * i_3_;
-		((Class282_Sub32) this).aBool7821 = bool;
+	Item(int i, int i_0_, int i_1_, int i_2_, int i_3_, boolean bool) {
+		((Item) this).id = i * 1372077649;
+		((Item) this).amount = -446235323 * i_0_;
+		((Item) this).outlineSize = -813139483 * i_1_;
+		((Item) this).shadowColor = -547508263 * i_2_;
+		((Item) this).anInt7819 = -545500941 * i_3_;
+		((Item) this).hasPlayerAppearance = bool;
 	}
 
 	static void method12574(GraphicalRenderer class505, Class118 class118, int i, int i_4_, int i_5_) {
@@ -68,10 +68,10 @@ public class Class282_Sub32 extends Node {
 					Class158.method2731(class505, class455, class118, i, i_4_, i_18_, i_19_, -1796959211 * class478.anInt5669, 2923328);
 				}
 				for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-456921914)); class282_sub29 != null; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 97))) {
-					int i_20_ = (int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 28 & 0x3L);
+					int i_20_ = (int) ((class282_sub29.data * -3442165056282524525L) >> 28 & 0x3L);
 					if (335283739 * Class187.anInt2351 == i_20_) {
-						int i_21_ = ((int) ((-3442165056282524525L * class282_sub29.aLong3379) & 0x3fffL) - class219.anInt2711 * 1948093437);
-						int i_22_ = ((int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
+						int i_21_ = ((int) ((-3442165056282524525L * class282_sub29.data) & 0x3fffL) - class219.anInt2711 * 1948093437);
+						int i_22_ = ((int) ((class282_sub29.data * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
 						int i_23_ = 4 * i_21_ + 2 - i_6_ / 128;
 						int i_24_ = 2 + 4 * i_22_ - i_7_ / 128;
 						Class190.method3149(class118, class455, i, i_4_, i_23_, i_24_, Class250.aClass160Array3092[0], 1358567832);

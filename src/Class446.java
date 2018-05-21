@@ -37,12 +37,12 @@ public class Class446 {
 	static Class194 aClass194_5416;
 
 	public static void method7430(Node class282, Node class282_0_, int i) {
-		if (class282.aClass282_3380 != null)
+		if (class282.prev != null)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = class282_0_.aClass282_3380;
-		class282.aClass282_3378 = class282_0_;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.prev = class282_0_.prev;
+		class282.next = class282_0_;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public void method7431(int i) {
@@ -141,7 +141,7 @@ public class Class446 {
 
 	static final void method7445(CS2Executor class527, int i) {
 		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_3_, 1828860210).anInt5047 * 1718037007);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_3_, 1828860210).anInt5047 * 1718037007);
 	}
 
 	public void method7446(int i) {

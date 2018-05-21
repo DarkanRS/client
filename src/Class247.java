@@ -774,7 +774,7 @@ public class Class247 {
 
 	static final void method4247(CS2Executor class527, int i) {
 		int i_185_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_185_, 1589162254).aString5043);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_185_, 1589162254).aString5043);
 	}
 
 	public static boolean method4248(int i, int i_186_, short i_187_) {

@@ -667,12 +667,12 @@ public class Class443 {
 			} else if (23 == i) {
 				Class209.method3598(new StringBuilder().append(Class118.aClass229_1280.method3861((byte) 1)).append(" ").append(Class118.aClass229_1280.method3860((byte) 53)).toString(), -622119201);
 				Class209.method3598(new StringBuilder().append(Class118.aClass229_1341.method3861((byte) 1)).append(" ").append(Class118.aClass229_1341.method3860((byte) 119)).toString(), -632491603);
-				Class209.method3598(new StringBuilder().append(Class119.aClass426_1463.aClass212_5114.method3640()).append(" ").append(Class119.aClass426_1463.aClass212_5114.method3632()).toString(), -1389047879);
+				Class209.method3598(new StringBuilder().append(IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3640()).append(" ").append(IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3632()).toString(), -1389047879);
 			} else if (i == 16)
 				Class356.method6227(false, (byte) 37);
 			else if (15 == i) {
 				client.aBool7177 = !client.aBool7177;
-				Class316.aClass505_3680.method8480(client.aBool7177);
+				Renderers.SOFTWARE_RENDERER.method8480(client.aBool7177);
 				Class282_Sub14.method12222(-1129309560);
 			} else if (10 == i) {
 				client.anInt7240 = 0;

@@ -9,18 +9,18 @@ public class Class473 {
 	static int anInt5606;
 
 	public Node method7854() {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
 	public void method7855(byte i) {
 		for (;;) {
-			Node class282 = aClass282_5604.aClass282_3378;
+			Node class282 = aClass282_5604.next;
 			if (class282 == aClass282_5604)
 				break;
 			class282.unlink(-371378792);
@@ -30,7 +30,7 @@ public class Class473 {
 
 	public void method7856() {
 		for (;;) {
-			Node class282 = aClass282_5604.aClass282_3378;
+			Node class282 = aClass282_5604.next;
 			if (class282 == aClass282_5604)
 				break;
 			class282.unlink(-371378792);
@@ -44,12 +44,12 @@ public class Class473 {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
 	public Node method7858(byte i) {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (class282 == aClass282_5604)
 			return null;
 		class282.unlink(-371378792);
@@ -57,12 +57,12 @@ public class Class473 {
 	}
 
 	public Node method7859(int i) {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
@@ -72,31 +72,31 @@ public class Class473 {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
 	public Class473() {
-		aClass282_5604.aClass282_3378 = aClass282_5604;
-		aClass282_5604.aClass282_3380 = aClass282_5604;
+		aClass282_5604.next = aClass282_5604;
+		aClass282_5604.prev = aClass282_5604;
 	}
 
 	public boolean method7861(int i) {
-		return aClass282_5604 == aClass282_5604.aClass282_3378;
+		return aClass282_5604 == aClass282_5604.next;
 	}
 
 	public void method7862(Node class282) {
-		if (class282.aClass282_3380 != null)
+		if (class282.prev != null)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5604;
-		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.prev = aClass282_5604;
+		class282.next = aClass282_5604.next;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public void method7863() {
 		for (;;) {
-			Node class282 = aClass282_5604.aClass282_3378;
+			Node class282 = aClass282_5604.next;
 			if (class282 == aClass282_5604)
 				break;
 			class282.unlink(-371378792);
@@ -105,26 +105,26 @@ public class Class473 {
 	}
 
 	public Node method7864() {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
 	public void method7865(Node class282) {
-		if (class282.aClass282_3380 != null)
+		if (class282.prev != null)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5604;
-		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.prev = aClass282_5604;
+		class282.next = aClass282_5604.next;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public Node method7866() {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (class282 == aClass282_5604)
 			return null;
 		class282.unlink(-371378792);
@@ -132,7 +132,7 @@ public class Class473 {
 	}
 
 	public Node method7867() {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (class282 == aClass282_5604)
 			return null;
 		class282.unlink(-371378792);
@@ -140,7 +140,7 @@ public class Class473 {
 	}
 
 	public Node method7868() {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (class282 == aClass282_5604)
 			return null;
 		class282.unlink(-371378792);
@@ -148,99 +148,99 @@ public class Class473 {
 	}
 
 	public Node method7869(int i) {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
 	public Node method7870() {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
 	public Node method7871() {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
 	public Node method7872() {
-		Node class282 = aClass282_5604.aClass282_3378;
+		Node class282 = aClass282_5604.next;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
 	public void method7873(Node class282, byte i) {
-		if (class282.aClass282_3380 != null)
+		if (class282.prev != null)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5604;
-		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.prev = aClass282_5604;
+		class282.next = aClass282_5604.next;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public Node method7874() {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
 	public void method7875(Node class282) {
-		if (class282.aClass282_3380 != null)
+		if (class282.prev != null)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5604;
-		class282.aClass282_3378 = aClass282_5604.aClass282_3378;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.prev = aClass282_5604;
+		class282.next = aClass282_5604.next;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public Node method7876() {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
 	public void method7877(Node class282, int i) {
-		if (null != class282.aClass282_3380)
+		if (null != class282.prev)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5604.aClass282_3380;
-		class282.aClass282_3378 = aClass282_5604;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
+		class282.prev = aClass282_5604.prev;
+		class282.next = aClass282_5604;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public Node method7878() {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
@@ -250,7 +250,7 @@ public class Class473 {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
@@ -260,30 +260,30 @@ public class Class473 {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3378;
+		((Class473) this).aClass282_5603 = class282.next;
 		return class282;
 	}
 
 	public Node method7881() {
-		Node class282 = aClass282_5604.aClass282_3380;
+		Node class282 = aClass282_5604.prev;
 		if (aClass282_5604 == class282) {
 			((Class473) this).aClass282_5603 = null;
 			return null;
 		}
-		((Class473) this).aClass282_5603 = class282.aClass282_3380;
+		((Class473) this).aClass282_5603 = class282.prev;
 		return class282;
 	}
 
 	public boolean method7882() {
-		return aClass282_5604 == aClass282_5604.aClass282_3378;
+		return aClass282_5604 == aClass282_5604.next;
 	}
 
 	public boolean method7883() {
-		return aClass282_5604 == aClass282_5604.aClass282_3378;
+		return aClass282_5604 == aClass282_5604.next;
 	}
 
 	public boolean method7884() {
-		return aClass282_5604 == aClass282_5604.aClass282_3378;
+		return aClass282_5604 == aClass282_5604.next;
 	}
 
 	public static byte[] method7885(CharSequence charsequence, byte i) {

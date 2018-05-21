@@ -514,11 +514,11 @@ public class Class289 implements Runnable {
 						int i_65_ = ((i_64_ >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 						int i_66_ = ((i_64_ & 0x3fff) - class219.anInt2712 * -1002240017);
 						if (i_65_ >= 0 && i_65_ < i_11_ && i_66_ >= 0 && i_66_ < i_12_)
-							Class187.aClass482_2350.method8059(new Class282_Sub38(i_63_), -2102160301);
+							Class187.aClass482_2350.append(new Class282_Sub38(i_63_), -2102160301);
 						else {
 							Class220 class220 = (Class397.aClass218_4813.method3700(class283.anIntArray3383[i_63_], 1792768149));
 							if (null != class220.anIntArray2717 && (i_65_ + class220.anInt2731 * -1051190363 >= 0) && (class220.anInt2747 * -195227125 + i_65_ < i_11_) && 1123286327 * class220.anInt2746 + i_66_ >= 0 && (i_66_ + class220.anInt2744 * 1104382109 < i_12_))
-								Class187.aClass482_2350.method8059(new Class282_Sub38(i_63_), -1057083252);
+								Class187.aClass482_2350.append(new Class282_Sub38(i_63_), -1057083252);
 						}
 					}
 				}

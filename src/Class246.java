@@ -69,7 +69,7 @@ public class Class246 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_2_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_3_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_2_, 173872175);
+		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2_, 173872175);
 		if (i_3_ >= 1 && i_3_ <= 5 && class425.inventoryOptions[i_3_ - 1] != null)
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class425.inventoryOptions[i_3_ - 1];
 		else

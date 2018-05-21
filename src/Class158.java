@@ -51,9 +51,9 @@ public abstract class Class158 {
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
 		if (class437.method7319(2069262708))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class119.aClass426_1463.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (Class119.aClass426_1463.getItemDefinitions(i_0_, 221320768).method7099(i_1_, class437.anInt5337 * -1741480635, -1410109564));
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 221320768).method7099(i_1_, class437.anInt5337 * -1741480635, -1410109564));
 	}
 
 	static final void method2729(CS2Executor class527, int i) {
@@ -143,7 +143,7 @@ public abstract class Class158 {
 				int i_28_ = 0;
 				if (class160 != null)
 					i_28_ = class160.method2793();
-				FontRenderer class8 = Class540.aClass8_7138;
+				FontRenderer class8 = Renderers.FONT_RENDERER;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					class8 = Class16.aClass8_144;

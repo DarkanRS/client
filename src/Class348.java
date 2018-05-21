@@ -54,7 +54,7 @@ public class Class348 {
 			else
 				throw new RuntimeException("");
 			class282_sub17.method12250(class282_sub35, -1771896031);
-			((Class348) this).aClass482_4062.method8059(class282_sub17, -575060880);
+			((Class348) this).aClass482_4062.append(class282_sub17, -575060880);
 		}
 	}
 

@@ -61,7 +61,7 @@ public class Class351 implements Interface3 {
 
 	public static final void method6196(Class282_Sub44 class282_sub44, boolean bool, boolean bool_3_, int i) {
 		int i_4_ = 587626901 * class282_sub44.anInt8063;
-		int i_5_ = (int) (-3442165056282524525L * class282_sub44.aLong3379);
+		int i_5_ = (int) (-3442165056282524525L * class282_sub44.data);
 		class282_sub44.unlink(-371378792);
 		if (bool)
 			Class337.method6017(i_4_, -775991491);
@@ -80,7 +80,7 @@ public class Class351 implements Interface3 {
 					break;
 			}
 			if (3 == class282_sub44_6_.anInt8062 * -1517697923) {
-				int i_7_ = (int) (class282_sub44_6_.aLong3379 * -3442165056282524525L);
+				int i_7_ = (int) (class282_sub44_6_.data * -3442165056282524525L);
 				if (i_7_ >>> 16 == i_4_)
 					method6196(class282_sub44_6_, true, bool_3_, -1676599874);
 			}

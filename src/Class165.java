@@ -29,7 +29,7 @@ public class Class165 {
 	static void method2853(boolean bool, int i) {
 		if (Class179.aString2225.length() != 0) {
 			Class209.method3598(new StringBuilder().append("--> ").append(Class179.aString2225).toString(), -1362570363);
-			Class251.method4313(Class179.aString2225, false, bool, -354697449);
+			Class251.handleCommand(Class179.aString2225, false, bool, -354697449);
 			Class179.anInt2226 = 0;
 			if (!bool) {
 				Class179.anInt2220 = 0;

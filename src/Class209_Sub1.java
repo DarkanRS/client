@@ -155,7 +155,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 
 	void method12909(int i, int i_2_, int i_3_, int i_4_, int i_5_) {
 		Class282_Sub53_Sub2 class282_sub53_sub2 = Class521_Sub1_Sub3_Sub1.method16080(i, i_2_, i_3_, Class169.method2869(1557164427), i_4_, 1660805972);
-		((Class209_Sub1) this).aClass482_7945.method8059(class282_sub53_sub2, 335888371);
+		((Class209_Sub1) this).aClass482_7945.append(class282_sub53_sub2, 335888371);
 	}
 
 	public synchronized void method3578() {
@@ -277,12 +277,12 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 
 	void method12912(int i, int i_8_, int i_9_, int i_10_) {
 		Class282_Sub53_Sub2 class282_sub53_sub2 = Class521_Sub1_Sub3_Sub1.method16080(i, i_8_, i_9_, Class169.method2869(2110720470), i_10_, 2004293850);
-		((Class209_Sub1) this).aClass482_7945.method8059(class282_sub53_sub2, 1726247046);
+		((Class209_Sub1) this).aClass482_7945.append(class282_sub53_sub2, 1726247046);
 	}
 
 	void method12913(int i, int i_11_, int i_12_, int i_13_) {
 		Class282_Sub53_Sub2 class282_sub53_sub2 = Class521_Sub1_Sub3_Sub1.method16080(i, i_11_, i_12_, Class169.method2869(1587211340), i_13_, 1414576799);
-		((Class209_Sub1) this).aClass482_7945.method8059(class282_sub53_sub2, 33532215);
+		((Class209_Sub1) this).aClass482_7945.append(class282_sub53_sub2, 33532215);
 	}
 
 	void method12914(int i, int i_14_) {

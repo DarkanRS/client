@@ -584,7 +584,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 							int i_67_ = 0;
 							Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8065(-2081006953));
 							while (class282_sub34 != null) {
-								ItemDefinitions class425 = (Class119.aClass426_1463.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 2117137985));
+								ItemDefinitions class425 = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 2117137985));
 								int i_68_;
 								if (class425.aBool5101)
 									i_68_ = class425.anInt5102 * 712312847;

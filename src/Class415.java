@@ -66,9 +66,9 @@ public class Class415 {
 	}
 
 	static void method6996(GraphicalRenderer class505, Class118 class118, int i) {
-		boolean bool = ((Class119.aClass426_1463.method7162(class505, class118.anInt1426 * -56249735, 6040081 * class118.anInt1427, class118.anInt1323 * -346307573, ~0xffffff | class118.anInt1324 * 1279397863, 71935343 * class118.anInt1335, (class118.aBool1388 ? Class84.myPlayer.aClass238_10558 : null), 206421629)) == null);
+		boolean bool = ((IndexLoaders.ITEM_INDEX_LOADER.softwareRender(class505, class118.anInt1426 * -56249735, 6040081 * class118.anInt1427, class118.anInt1323 * -346307573, ~0xffffff | class118.anInt1324 * 1279397863, 71935343 * class118.anInt1335, (class118.aBool1388 ? Class84.myPlayer.playerAppearance : null), 206421629)) == null);
 		if (bool) {
-			Class182.aClass482_2260.method8059(new Class282_Sub32(-56249735 * class118.anInt1426, 6040081 * class118.anInt1427, -346307573 * class118.anInt1323, (~0xffffff | 1279397863 * class118.anInt1324), 71935343 * class118.anInt1335, class118.aBool1388), 2129824962);
+			Class182.ITEMS.append(new Item(-56249735 * class118.anInt1426, 6040081 * class118.anInt1427, -346307573 * class118.anInt1323, (~0xffffff | 1279397863 * class118.anInt1324), 71935343 * class118.anInt1335, class118.aBool1388), 2129824962);
 			Class109.method1858(class118, (byte) 71);
 		}
 	}

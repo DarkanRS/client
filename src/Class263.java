@@ -2593,7 +2593,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class282_Sub50_Sub12 class282_sub50_sub12 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.method7754((long) i << 56 | l);
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);
-			Class282_Sub50_Sub12.aClass465_9667.method7765(class282_sub50_sub12, class282_sub50_sub12.aLong3379 * -3442165056282524525L);
+			Class282_Sub50_Sub12.aClass465_9667.method7765(class282_sub50_sub12, class282_sub50_sub12.data * -3442165056282524525L);
 		}
 		return class282_sub50_sub12;
 	}

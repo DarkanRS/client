@@ -98,7 +98,7 @@ public class Class282_Sub39 extends Node {
 				((Class282_Sub33) class282_sub33).anInt7832 = -705732785 * i_14_;
 				((Class282_Sub33) class282_sub33).anInt7831 = i_13_ * -2064740419;
 				((Class282_Sub33) class282_sub33).anInt7827 = -719287379 * i_15_;
-				Class346.aClass482_4049.method8059(class282_sub33, 1613511874);
+				Class346.aClass482_4049.append(class282_sub33, 1613511874);
 			}
 		}
 	}

@@ -68,7 +68,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 	}
 
 	public static void method15476(GraphicalRenderer class505, int i) {
-		Class540.aClass8_7138 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class16.anInt140 * 1500183805), true, true, -2082744480));
+		Renderers.FONT_RENDERER = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class16.anInt140 * 1500183805), true, true, -2082744480));
 		Class282_Sub17_Sub2.aClass414_9933 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 1500183805 * Class16.anInt140, -777262931);
 		Class16.aClass8_144 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, 436671641 * Class16.anInt136, true, true, -2070045915));
 		Class16.aClass414_139 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 436671641 * Class16.anInt136, -1782944110);

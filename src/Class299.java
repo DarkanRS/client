@@ -31,8 +31,8 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method161(int i) {
-		if (Class316.aClass505_3680 != ((Class299) this).aClass505_3542) {
-			((Class299) this).aClass505_3542 = Class316.aClass505_3680;
+		if (Renderers.SOFTWARE_RENDERER != ((Class299) this).aClass505_3542) {
+			((Class299) this).aClass505_3542 = Renderers.SOFTWARE_RENDERER;
 			((Class299) this).aBool3546 = true;
 		}
 		((Class299) this).aClass505_3542.ba(3, 0);
@@ -113,8 +113,8 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method158() {
-		if (Class316.aClass505_3680 != ((Class299) this).aClass505_3542) {
-			((Class299) this).aClass505_3542 = Class316.aClass505_3680;
+		if (Renderers.SOFTWARE_RENDERER != ((Class299) this).aClass505_3542) {
+			((Class299) this).aClass505_3542 = Renderers.SOFTWARE_RENDERER;
 			((Class299) this).aBool3546 = true;
 		}
 		((Class299) this).aClass505_3542.ba(3, 0);
@@ -127,8 +127,8 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method159() {
-		if (Class316.aClass505_3680 != ((Class299) this).aClass505_3542) {
-			((Class299) this).aClass505_3542 = Class316.aClass505_3680;
+		if (Renderers.SOFTWARE_RENDERER != ((Class299) this).aClass505_3542) {
+			((Class299) this).aClass505_3542 = Renderers.SOFTWARE_RENDERER;
 			((Class299) this).aBool3546 = true;
 		}
 		((Class299) this).aClass505_3542.ba(3, 0);
@@ -141,8 +141,8 @@ public class Class299 implements Interface27 {
 	}
 
 	public void method195() {
-		if (Class316.aClass505_3680 != ((Class299) this).aClass505_3542) {
-			((Class299) this).aClass505_3542 = Class316.aClass505_3680;
+		if (Renderers.SOFTWARE_RENDERER != ((Class299) this).aClass505_3542) {
+			((Class299) this).aClass505_3542 = Renderers.SOFTWARE_RENDERER;
 			((Class299) this).aBool3546 = true;
 		}
 		((Class299) this).aClass505_3542.ba(3, 0);
@@ -225,7 +225,7 @@ public class Class299 implements Interface27 {
 		NativeSprite class160 = (NativeSprite) aClass229_3545.method3865((long) i);
 		if (class160 == null) {
 			if (Class339.aBool3987)
-				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
+				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -1425472520), (byte) -78));
 			aClass229_3545.put(class160, (long) i);
@@ -237,7 +237,7 @@ public class Class299 implements Interface27 {
 		NativeSprite class160 = (NativeSprite) aClass229_3545.method3865((long) i);
 		if (class160 == null) {
 			if (Class339.aBool3987)
-				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
+				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -2080551630), (byte) -127));
 			aClass229_3545.put(class160, (long) i);
@@ -262,7 +262,7 @@ public class Class299 implements Interface27 {
 				int[] is_10_ = new int[i * i_9_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_9_, is_10_, 0, i);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.createNativeSprite(is_10_, 0, i, i, i_9_, 877342890);
+				class160 = Renderers.SOFTWARE_RENDERER.createNativeSprite(is_10_, 0, i, i, i_9_, 877342890);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */
@@ -292,7 +292,7 @@ public class Class299 implements Interface27 {
 				int[] is_12_ = new int[i * i_11_];
 				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_11_, is_12_, 0, i);
 				pixelgrabber.grabPixels();
-				class160 = Class316.aClass505_3680.createNativeSprite(is_12_, 0, i, i, i_11_, 2138062190);
+				class160 = Renderers.SOFTWARE_RENDERER.createNativeSprite(is_12_, 0, i, i, i_11_, 2138062190);
 				break;
 			} catch (InterruptedException interruptedexception) {
 				/* empty */
@@ -335,7 +335,7 @@ public class Class299 implements Interface27 {
 			class282_sub31.anInt7763 = i_14_ * 765748375;
 			if (i_13_ >= 0 && i_14_ >= 0 && i_13_ < client.aClass257_7353.method4424(-1083484093) && i_14_ < client.aClass257_7353.method4451(-978246056))
 				Class275_Sub4.method12585(class282_sub31, -1988647724);
-			Class282_Sub31.aClass482_7775.method8059(class282_sub31, 1387539500);
+			Class282_Sub31.aClass482_7775.append(class282_sub31, 1387539500);
 		}
 		((Class282_Sub31) class282_sub31).anInt7769 = -567871853 * i_16_;
 		((Class282_Sub31) class282_sub31).anInt7771 = i_17_ * -763092445;

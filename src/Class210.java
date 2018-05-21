@@ -134,15 +134,15 @@ public class Class210 {
 			fs[0] = -1.0F;
 		} else {
 			int i_8_ = Class504.method8389(i_3_, i_4_, i, (byte) 110) - i_6_;
-			client.aClass294_7457.method5209(Class316.aClass505_3680.method8458());
+			client.aClass294_7457.method5209(Renderers.SOFTWARE_RENDERER.method8458());
 			client.aClass294_7457.method5219((float) i_5_, 0.0F, 0.0F);
-			Class316.aClass505_3680.method8457(client.aClass294_7457);
+			Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
 			if (bool)
-				Class316.aClass505_3680.method8479((float) i_3_, (float) i_8_, (float) i_4_, client.aFloatArray7292);
+				Renderers.SOFTWARE_RENDERER.method8479((float) i_3_, (float) i_8_, (float) i_4_, client.aFloatArray7292);
 			else
-				Class316.aClass505_3680.method8515((float) i_3_, (float) i_8_, (float) i_4_, client.aFloatArray7292);
+				Renderers.SOFTWARE_RENDERER.method8515((float) i_3_, (float) i_8_, (float) i_4_, client.aFloatArray7292);
 			client.aClass294_7457.method5219((float) -i_5_, 0.0F, 0.0F);
-			Class316.aClass505_3680.method8457(client.aClass294_7457);
+			Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
 			client.aFloatArray7292[0] -= (float) (client.anInt7444 * -1007294471);
 			client.aFloatArray7292[1] -= (float) (client.anInt7445 * 915815265);
 		}

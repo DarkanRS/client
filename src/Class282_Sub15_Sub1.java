@@ -100,7 +100,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized void method14815(Class282_Sub39 class282_sub39, int i) {
 		for (/**/; -1438659995 * ((Class282_Sub15_Sub1) this).anInt9569 >= 100; ((Class282_Sub15_Sub1) this).anInt9569 -= -458434707)
 			((Class282_Sub15_Sub1) this).aClass482_9568.method8061((byte) -124);
-		((Class282_Sub15_Sub1) this).aClass482_9568.method8059(class282_sub39, 1091702645);
+		((Class282_Sub15_Sub1) this).aClass482_9568.append(class282_sub39, 1091702645);
 		((Class282_Sub15_Sub1) this).anInt9569 += -458434707;
 	}
 
@@ -373,14 +373,14 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	synchronized void method14826(Class282_Sub39 class282_sub39) {
 		for (/**/; -1438659995 * ((Class282_Sub15_Sub1) this).anInt9569 >= 100; ((Class282_Sub15_Sub1) this).anInt9569 -= -458434707)
 			((Class282_Sub15_Sub1) this).aClass482_9568.method8061((byte) -31);
-		((Class282_Sub15_Sub1) this).aClass482_9568.method8059(class282_sub39, 582902953);
+		((Class282_Sub15_Sub1) this).aClass482_9568.append(class282_sub39, 582902953);
 		((Class282_Sub15_Sub1) this).anInt9569 += -458434707;
 	}
 
 	synchronized void method14827(Class282_Sub39 class282_sub39) {
 		for (/**/; -1438659995 * ((Class282_Sub15_Sub1) this).anInt9569 >= 100; ((Class282_Sub15_Sub1) this).anInt9569 -= -458434707)
 			((Class282_Sub15_Sub1) this).aClass482_9568.method8061((byte) -100);
-		((Class282_Sub15_Sub1) this).aClass482_9568.method8059(class282_sub39, 1479246241);
+		((Class282_Sub15_Sub1) this).aClass482_9568.append(class282_sub39, 1479246241);
 		((Class282_Sub15_Sub1) this).anInt9569 += -458434707;
 	}
 

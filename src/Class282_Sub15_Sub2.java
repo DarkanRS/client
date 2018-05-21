@@ -242,7 +242,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 					}
 					((Class282_Sub15_Sub2) this).aClass282_Sub13ArrayArray9714[i][(-2127113783 * ((Class282_Sub13) class282_sub13).anInt7567)] = class282_sub13;
 				}
-				((Class282_Sub15_Sub3) ((Class282_Sub15_Sub2) this).aClass282_Sub15_Sub3_9721).aClass482_9754.method8059(class282_sub13, 95149405);
+				((Class282_Sub15_Sub3) ((Class282_Sub15_Sub2) this).aClass282_Sub15_Sub3_9721).aClass482_9754.append(class282_sub13, 95149405);
 				((Class282_Sub15_Sub2) this).aClass282_Sub13ArrayArray9713[i][i_18_] = class282_sub13;
 			}
 		}
@@ -1028,7 +1028,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 		if (i > 0)
 			is = new int[] { i };
 		for (Class282_Sub47 class282_sub47 = (Class282_Sub47) ((Class282_Sub7) class282_sub7).aClass465_7521.method7750(-672312325); class282_sub47 != null; class282_sub47 = (Class282_Sub47) ((Class282_Sub7) class282_sub7).aClass465_7521.method7751((byte) 100)) {
-			int i_114_ = (int) (-3442165056282524525L * class282_sub47.aLong3379);
+			int i_114_ = (int) (-3442165056282524525L * class282_sub47.data);
 			Class282_Sub14 class282_sub14 = (Class282_Sub14) ((Class282_Sub15_Sub2) this).aClass465_9694.method7754((long) i_114_);
 			if (class282_sub14 == null) {
 				class282_sub14 = Class96_Sub21.method14676(class317, i_114_, 450746801);
@@ -1596,7 +1596,7 @@ public class Class282_Sub15_Sub2 extends Class282_Sub15 {
 		if (i > 0)
 			is = new int[] { i };
 		for (Class282_Sub47 class282_sub47 = (Class282_Sub47) ((Class282_Sub7) class282_sub7).aClass465_7521.method7750(772569462); class282_sub47 != null; class282_sub47 = (Class282_Sub47) ((Class282_Sub7) class282_sub7).aClass465_7521.method7751((byte) 16)) {
-			int i_171_ = (int) (-3442165056282524525L * class282_sub47.aLong3379);
+			int i_171_ = (int) (-3442165056282524525L * class282_sub47.data);
 			Class282_Sub14 class282_sub14 = (Class282_Sub14) ((Class282_Sub15_Sub2) this).aClass465_9694.method7754((long) i_171_);
 			if (class282_sub14 == null) {
 				class282_sub14 = Class96_Sub21.method14676(class317, i_171_, 450746801);

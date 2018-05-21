@@ -313,7 +313,7 @@ public class Class20 {
 							int i_52_ = 0;
 							Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8065(-1956439030));
 							while (class282_sub34 != null) {
-								ItemDefinitions class425 = (Class119.aClass426_1463.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 1579037315));
+								ItemDefinitions class425 = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 1579037315));
 								int i_53_;
 								if (class425.aBool5101)
 									i_53_ = class425.anInt5102 * 712312847;
@@ -590,21 +590,21 @@ public class Class20 {
 				if (i < 1000) {
 					class282_sub50_sub7.unlink(-371378792);
 					if (59 == i || 2 == i || 8 == i || 17 == i || 15 == i || i == 16 || i == 58)
-						aClass482_175.method8059(class282_sub50_sub7, -1834493016);
+						aClass482_175.append(class282_sub50_sub7, -1834493016);
 					else
-						aClass482_174.method8059(class282_sub50_sub7, 592980569);
+						aClass482_174.append(class282_sub50_sub7, 592980569);
 				}
 			}
 			aClass482_174.method8063(aClass482_171, -1553248551);
 			aClass482_175.method8063(aClass482_171, -1553248551);
 			if (anInt169 * 2144330291 > 1) {
 				if (Class468_Sub1.method12619(200242837) && 2144330291 * anInt169 > 2)
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (aClass482_171.aClass282_5728.aClass282_3380.aClass282_3380);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (aClass482_171.head.prev.prev);
 				else
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = ((Class282_Sub50_Sub7) aClass482_171.aClass282_5728.aClass282_3380);
-				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) aClass482_171.aClass282_5728.aClass282_3380);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = ((Class282_Sub50_Sub7) aClass482_171.head.prev);
+				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) aClass482_171.head.prev);
 				if (anInt169 * 2144330291 > 2)
-					aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.aClass282_3380);
+					aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.prev);
 				else
 					aClass282_Sub50_Sub7_168 = null;
 			} else {
@@ -665,7 +665,7 @@ public class Class20 {
 							}
 							if (i_93_ != -1) {
 								int i_97_ = 0;
-								Class460 class460 = new Class460(aClass482_171);
+								NodeIterator class460 = new NodeIterator(aClass482_171);
 								for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(2008517721)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.next())) {
 									if (i_97_ == i_93_) {
 										Class96_Sub4.method13789(class282_sub50_sub7, i, i_87_, 1723474479);
@@ -839,7 +839,7 @@ public class Class20 {
 
 	static void method618(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		if (null != class282_sub50_sub7) {
-			aClass482_171.method8059(class282_sub50_sub7, 151051921);
+			aClass482_171.append(class282_sub50_sub7, 151051921);
 			anInt169 += 1410722043;
 			Object object = null;
 			Class282_Sub50_Sub15 class282_sub50_sub15;
@@ -892,21 +892,21 @@ public class Class20 {
 				if (i < 1000) {
 					class282_sub50_sub7.unlink(-371378792);
 					if (59 == i || 2 == i || 8 == i || 17 == i || 15 == i || i == 16 || i == 58)
-						aClass482_175.method8059(class282_sub50_sub7, 1384537552);
+						aClass482_175.append(class282_sub50_sub7, 1384537552);
 					else
-						aClass482_174.method8059(class282_sub50_sub7, 117965495);
+						aClass482_174.append(class282_sub50_sub7, 117965495);
 				}
 			}
 			aClass482_174.method8063(aClass482_171, -1553248551);
 			aClass482_175.method8063(aClass482_171, -1553248551);
 			if (anInt169 * 2144330291 > 1) {
 				if (Class468_Sub1.method12619(-1163264306) && 2144330291 * anInt169 > 2)
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (aClass482_171.aClass282_5728.aClass282_3380.aClass282_3380);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (aClass482_171.head.prev.prev);
 				else
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = ((Class282_Sub50_Sub7) aClass482_171.aClass282_5728.aClass282_3380);
-				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) aClass482_171.aClass282_5728.aClass282_3380);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = ((Class282_Sub50_Sub7) aClass482_171.head.prev);
+				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) aClass482_171.head.prev);
 				if (anInt169 * 2144330291 > 2)
-					aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.aClass282_3380);
+					aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.prev);
 				else
 					aClass282_Sub50_Sub7_168 = null;
 			} else {
@@ -967,7 +967,7 @@ public class Class20 {
 							}
 							if (i_130_ != -1) {
 								int i_134_ = 0;
-								Class460 class460 = new Class460(aClass482_171);
+								NodeIterator class460 = new NodeIterator(aClass482_171);
 								for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(-968436531)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.next())) {
 									if (i_134_ == i_130_) {
 										Class96_Sub4.method13789(class282_sub50_sub7, i, i_124_, -466703059);
@@ -1294,7 +1294,7 @@ public class Class20 {
 							int i_203_ = 0;
 							Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8065(-1866936026));
 							while (class282_sub34 != null) {
-								ItemDefinitions class425 = (Class119.aClass426_1463.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 1143909760));
+								ItemDefinitions class425 = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 1143909760));
 								int i_204_;
 								if (class425.aBool5101)
 									i_204_ = class425.anInt5102 * 712312847;
@@ -1671,7 +1671,7 @@ public class Class20 {
 	}
 
 	static void method641(Class282_Sub50_Sub7 class282_sub50_sub7, int i, int i_237_) {
-		if (null != class282_sub50_sub7 && aClass482_171.aClass282_5728 != class282_sub50_sub7) {
+		if (null != class282_sub50_sub7 && aClass482_171.head != class282_sub50_sub7) {
 			int i_238_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9581 * 1575008129);
 			int i_239_ = (395156599 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582);
 			int i_240_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225);
@@ -2325,7 +2325,7 @@ public class Class20 {
 							int i_302_ = 0;
 							Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8065(-1766562424));
 							while (class282_sub34 != null) {
-								ItemDefinitions class425 = (Class119.aClass426_1463.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 2005030981));
+								ItemDefinitions class425 = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(1964309863 * class282_sub34.anInt7853, 2005030981));
 								int i_303_;
 								if (class425.aBool5101)
 									i_303_ = class425.anInt5102 * 712312847;
@@ -2506,7 +2506,7 @@ public class Class20 {
 						}
 						if (-1 != i_317_) {
 							int i_321_ = 0;
-							Class460 class460 = new Class460(aClass482_171);
+							NodeIterator class460 = new NodeIterator(aClass482_171);
 							for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(1944512040)); class282_sub50_sub7 != null; class282_sub50_sub7 = (Class282_Sub50_Sub7) class460.next()) {
 								if (i_321_++ == i_317_)
 									return (-1332134173 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9578);
@@ -2589,7 +2589,7 @@ public class Class20 {
 						}
 						if (-1 != i_333_) {
 							int i_337_ = 0;
-							Class460 class460 = new Class460(aClass482_171);
+							NodeIterator class460 = new NodeIterator(aClass482_171);
 							for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(1421721085)); class282_sub50_sub7 != null; class282_sub50_sub7 = (Class282_Sub50_Sub7) class460.next()) {
 								if (i_337_++ == i_333_)
 									return (-1332134173 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9578);
@@ -2699,7 +2699,7 @@ public class Class20 {
 						}
 						if (-1 != i_353_) {
 							int i_357_ = 0;
-							Class460 class460 = new Class460(aClass482_171);
+							NodeIterator class460 = new NodeIterator(aClass482_171);
 							for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(-1937637316)); class282_sub50_sub7 != null; class282_sub50_sub7 = (Class282_Sub50_Sub7) class460.next()) {
 								if (i_357_++ == i_353_)
 									return (-1332134173 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9578);
@@ -2906,7 +2906,7 @@ public class Class20 {
 
 	static void method682(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		if (null != class282_sub50_sub7) {
-			aClass482_171.method8059(class282_sub50_sub7, -591781664);
+			aClass482_171.append(class282_sub50_sub7, -591781664);
 			anInt169 += 1410722043;
 			Object object = null;
 			Class282_Sub50_Sub15 class282_sub50_sub15;
@@ -3049,9 +3049,9 @@ public class Class20 {
 	static int[] method694(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		int[] is = null;
 		if (Class38.method859(-1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587, 201245845))
-			is = (Class119.aClass426_1463.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 736974100).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 736974100).quests);
 		else if ((-270249393 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579) != -1)
-			is = (Class119.aClass426_1463.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 1610477745).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 1610477745).quests);
 		else if (Class237.method3989((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), (byte) 0)) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L))));
 			if (class282_sub47 != null) {
@@ -3075,9 +3075,9 @@ public class Class20 {
 	static int[] method695(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		int[] is = null;
 		if (Class38.method859(-1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587, 70287026))
-			is = (Class119.aClass426_1463.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 482546320).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 482546320).quests);
 		else if ((-270249393 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579) != -1)
-			is = (Class119.aClass426_1463.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 1992586475).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 1992586475).quests);
 		else if (Class237.method3989((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), (byte) 0)) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L))));
 			if (class282_sub47 != null) {
@@ -3101,9 +3101,9 @@ public class Class20 {
 	static int[] method696(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		int[] is = null;
 		if (Class38.method859(-1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587, -814359114))
-			is = (Class119.aClass426_1463.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 603694282).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 603694282).quests);
 		else if ((-270249393 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579) != -1)
-			is = (Class119.aClass426_1463.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 2038774663).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 2038774663).quests);
 		else if (Class237.method3989((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), (byte) 0)) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L))));
 			if (class282_sub47 != null) {
@@ -3127,9 +3127,9 @@ public class Class20 {
 	static int[] method697(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		int[] is = null;
 		if (Class38.method859(-1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587, 1342990450))
-			is = (Class119.aClass426_1463.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 956277456).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584)), 956277456).quests);
 		else if ((-270249393 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579) != -1)
-			is = (Class119.aClass426_1463.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 1509767660).quests);
+			is = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9579 * -270249393), 1509767660).quests);
 		else if (Class237.method3989((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), (byte) 0)) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L))));
 			if (class282_sub47 != null) {
@@ -3949,7 +3949,7 @@ public class Class20 {
 	}
 
 	static void method734(Class282_Sub50_Sub7 class282_sub50_sub7, int i, int i_512_) {
-		if (null != class282_sub50_sub7 && aClass482_171.aClass282_5728 != class282_sub50_sub7) {
+		if (null != class282_sub50_sub7 && aClass482_171.head != class282_sub50_sub7) {
 			int i_513_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9581 * 1575008129);
 			int i_514_ = (395156599 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582);
 			int i_515_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225);

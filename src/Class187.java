@@ -467,11 +467,11 @@ public class Class187 {
 						int i_94_ = ((i_93_ >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
 						int i_95_ = ((i_93_ & 0x3fff) - class219.anInt2712 * -1002240017);
 						if (i_94_ >= 0 && i_94_ < i_40_ && i_95_ >= 0 && i_95_ < i_41_)
-							aClass482_2350.method8059(new Class282_Sub38(i_92_), 183772667);
+							aClass482_2350.append(new Class282_Sub38(i_92_), 183772667);
 						else {
 							Class220 class220 = (Class397.aClass218_4813.method3700(class283.anIntArray3383[i_92_], -198409634));
 							if (null != class220.anIntArray2717 && (i_94_ + class220.anInt2731 * -1051190363 >= 0) && (class220.anInt2747 * -195227125 + i_94_ < i_40_) && 1123286327 * class220.anInt2746 + i_95_ >= 0 && (i_95_ + class220.anInt2744 * 1104382109 < i_41_))
-								aClass482_2350.method8059(new Class282_Sub38(i_92_), -762553260);
+								aClass482_2350.append(new Class282_Sub38(i_92_), -762553260);
 						}
 					}
 				}
@@ -674,7 +674,7 @@ public class Class187 {
 				int i_162_ = 0;
 				if (class160 != null)
 					i_162_ = class160.method2793();
-				FontRenderer class8 = Class540.aClass8_7138;
+				FontRenderer class8 = Renderers.FONT_RENDERER;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					class8 = Class16.aClass8_144;
@@ -745,10 +745,10 @@ public class Class187 {
 					Class158.method2731(class505, class455, class118, i, i_163_, i_176_, i_177_, -1796959211 * class478.anInt5669, -1286828798);
 				}
 				for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(1358409500)); class282_sub29 != null; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 120))) {
-					int i_178_ = (int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 28 & 0x3L);
+					int i_178_ = (int) ((class282_sub29.data * -3442165056282524525L) >> 28 & 0x3L);
 					if (335283739 * anInt2351 == i_178_) {
-						int i_179_ = ((int) ((-3442165056282524525L * class282_sub29.aLong3379) & 0x3fffL) - class219.anInt2711 * 1948093437);
-						int i_180_ = ((int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
+						int i_179_ = ((int) ((-3442165056282524525L * class282_sub29.data) & 0x3fffL) - class219.anInt2711 * 1948093437);
+						int i_180_ = ((int) ((class282_sub29.data * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
 						int i_181_ = 4 * i_179_ + 2 - i_164_ / 128;
 						int i_182_ = 2 + 4 * i_180_ - i_165_ / 128;
 						Class190.method3149(class118, class455, i, i_163_, i_181_, i_182_, Class250.aClass160Array3092[0], 269316589);
@@ -820,10 +820,10 @@ public class Class187 {
 					Class158.method2731(class505, class455, class118, i, i_185_, i_198_, i_199_, -1796959211 * class478.anInt5669, 1111518542);
 				}
 				for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-1890306229)); class282_sub29 != null; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 36))) {
-					int i_200_ = (int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 28 & 0x3L);
+					int i_200_ = (int) ((class282_sub29.data * -3442165056282524525L) >> 28 & 0x3L);
 					if (335283739 * anInt2351 == i_200_) {
-						int i_201_ = ((int) ((-3442165056282524525L * class282_sub29.aLong3379) & 0x3fffL) - class219.anInt2711 * 1948093437);
-						int i_202_ = ((int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
+						int i_201_ = ((int) ((-3442165056282524525L * class282_sub29.data) & 0x3fffL) - class219.anInt2711 * 1948093437);
+						int i_202_ = ((int) ((class282_sub29.data * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
 						int i_203_ = 4 * i_201_ + 2 - i_186_ / 128;
 						int i_204_ = 2 + 4 * i_202_ - i_187_ / 128;
 						Class190.method3149(class118, class455, i, i_185_, i_203_, i_204_, Class250.aClass160Array3092[0], -992627499);
@@ -973,7 +973,7 @@ public class Class187 {
 				int i_243_ = 0;
 				if (class160 != null)
 					i_243_ = class160.method2793();
-				FontRenderer class8 = Class540.aClass8_7138;
+				FontRenderer class8 = Renderers.FONT_RENDERER;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					class8 = Class16.aClass8_144;
@@ -1041,10 +1041,10 @@ public class Class187 {
 					Class158.method2731(class505, class455, class118, i, i_244_, i_257_, i_258_, -1796959211 * class478.anInt5669, -1400770453);
 				}
 				for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-1332887526)); class282_sub29 != null; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 76))) {
-					int i_259_ = (int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 28 & 0x3L);
+					int i_259_ = (int) ((class282_sub29.data * -3442165056282524525L) >> 28 & 0x3L);
 					if (335283739 * anInt2351 == i_259_) {
-						int i_260_ = ((int) ((-3442165056282524525L * class282_sub29.aLong3379) & 0x3fffL) - class219.anInt2711 * 1948093437);
-						int i_261_ = ((int) ((class282_sub29.aLong3379 * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
+						int i_260_ = ((int) ((-3442165056282524525L * class282_sub29.data) & 0x3fffL) - class219.anInt2711 * 1948093437);
+						int i_261_ = ((int) ((class282_sub29.data * -3442165056282524525L) >> 14 & 0x3fffL) - class219.anInt2712 * -1002240017);
 						int i_262_ = 4 * i_260_ + 2 - i_245_ / 128;
 						int i_263_ = 2 + 4 * i_261_ - i_246_ / 128;
 						Class190.method3149(class118, class455, i, i_244_, i_262_, i_263_, Class250.aClass160Array3092[0], -1651658493);

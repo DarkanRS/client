@@ -136,7 +136,7 @@ public class Class361 {
 
 	static void method6269(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
 		if (null != class282_sub50_sub7) {
-			Class20.aClass482_171.method8059(class282_sub50_sub7, 1886689844);
+			Class20.aClass482_171.append(class282_sub50_sub7, 1886689844);
 			Class20.anInt169 += 1410722043;
 			Object object = null;
 			Class282_Sub50_Sub15 class282_sub50_sub15;

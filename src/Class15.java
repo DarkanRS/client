@@ -4,15 +4,15 @@
 
 final class Class15 implements Interface35 {
 	public Object method216(byte[] is, Class414 class414, boolean bool, int i) {
-		return Class316.aClass505_3680.method8448(class414, Class91.method1517(is), bool);
+		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
 	}
 
 	public Object method215(byte[] is, Class414 class414, boolean bool) {
-		return Class316.aClass505_3680.method8448(class414, Class91.method1517(is), bool);
+		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
 	}
 
 	public Object method214(byte[] is, Class414 class414, boolean bool) {
-		return Class316.aClass505_3680.method8448(class414, Class91.method1517(is), bool);
+		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
 	}
 
 	public static void method540(int i, byte i_0_) {
@@ -72,7 +72,7 @@ final class Class15 implements Interface35 {
 				if (null == class160) {
 					Class91 class91 = Class91.method1522(Class211.aClass317_2673, class240.anInt2977 * -1230505599, 0);
 					if (class91 != null) {
-						class160 = Class316.aClass505_3680.method8444(class91, true);
+						class160 = Renderers.SOFTWARE_RENDERER.method8444(class91, true);
 						Class20.aClass229_191.put(class160, (long) (-1230505599 * class240.anInt2977));
 					}
 				}

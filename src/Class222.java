@@ -57,10 +57,10 @@ public class Class222 implements Interface17 {
 			return null;
 		int i_6_ = 0;
 		int i_7_;
-		for (i_7_ = charsequence.length(); (i_6_ < i_7_ && Class420.method7035(charsequence.charAt(i_6_), 1817858874)); i_6_++) {
+		for (i_7_ = charsequence.length(); (i_6_ < i_7_ && SoftwareItemRender.method7035(charsequence.charAt(i_6_), 1817858874)); i_6_++) {
 			/* empty */
 		}
-		for (/**/; i_7_ > i_6_ && Class420.method7035(charsequence.charAt(i_7_ - 1), 1764637813); i_7_--) {
+		for (/**/; i_7_ > i_6_ && SoftwareItemRender.method7035(charsequence.charAt(i_7_ - 1), 1764637813); i_7_--) {
 			/* empty */
 		}
 		int i_8_ = i_7_ - i_6_;

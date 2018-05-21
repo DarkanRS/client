@@ -75,7 +75,7 @@ public class Class507 {
 			}
 			if (!bool) {
 				Class351.aCanvas4096.setSize(-418109423 * Class349.anInt4083, client.anInt3243 * -969250379);
-				Class316.aClass505_3680.method8414(Class351.aCanvas4096, -418109423 * Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
+				Renderers.SOFTWARE_RENDERER.method8414(Class351.aCanvas4096, -418109423 * Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
 				if (container == client.aFrame3261) {
 					Insets insets = client.aFrame3261.getInsets();
 					Class351.aCanvas4096.setLocation(insets.left + -1911940837 * client.anInt3250, insets.top + client.anInt3251 * 698621615);

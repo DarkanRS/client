@@ -819,7 +819,7 @@ public class Class456 {
 		Class118 class118 = Class117.method1981(i_56_, (byte) 98);
 		int i_57_ = -1;
 		int i_58_ = -1;
-		Class119 class119 = class118.method2046(Class316.aClass505_3680, 1740359651);
+		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, 1740359651);
 		if (null != class119) {
 			if (i >= -1)
 				throw new IllegalStateException();

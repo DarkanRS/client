@@ -33,7 +33,7 @@ public class Class96_Sub4 extends Class96 {
 	}
 
 	static void method13789(Class282_Sub50_Sub7 class282_sub50_sub7, int i, int i_1_, int i_2_) {
-		if (null != class282_sub50_sub7 && Class20.aClass482_171.aClass282_5728 != class282_sub50_sub7) {
+		if (null != class282_sub50_sub7 && Class20.aClass482_171.head != class282_sub50_sub7) {
 			int i_3_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9581 * 1575008129);
 			int i_4_ = (395156599 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582);
 			int i_5_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225);

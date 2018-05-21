@@ -515,7 +515,7 @@ public class Class61 {
 							return false;
 						class282_sub47.unlink(-371378792);
 						class282_sub47.unlink(-371378792);
-						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.aLong3379 * -3442165056282524525L);
+						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.data * -3442165056282524525L);
 						return true;
 					}
 				}
@@ -1069,7 +1069,7 @@ public class Class61 {
 							return false;
 						class282_sub47.unlink(-371378792);
 						class282_sub47.unlink(-371378792);
-						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.aLong3379 * -3442165056282524525L);
+						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.data * -3442165056282524525L);
 						return true;
 					}
 				}
@@ -1096,7 +1096,7 @@ public class Class61 {
 							return false;
 						class282_sub47.unlink(-371378792);
 						class282_sub47.unlink(-371378792);
-						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.aLong3379 * -3442165056282524525L);
+						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.data * -3442165056282524525L);
 						return true;
 					}
 				}

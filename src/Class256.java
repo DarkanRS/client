@@ -93,7 +93,7 @@ public class Class256 {
 
 	static final void method4413(CS2Executor class527, int i) {
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		if (!Class316.aClass505_3680.method8403())
+		if (!Renderers.SOFTWARE_RENDERER.method8403())
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 3;
 		else
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method7785(i_2_, -550763763);

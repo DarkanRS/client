@@ -124,7 +124,7 @@ public class Class356 {
 			Class20.aClass31_204.method801(-1911445195);
 			client.aClass257_7353.method4436(-1471749977).method7895((byte) 113);
 			Class350_Sub1.aClass406_7757.method6836((byte) -66);
-			Class119.aClass426_1463.method7150(-1855693683);
+			IndexLoaders.ITEM_INDEX_LOADER.method7150(-1855693683);
 			Class330.aClass523_3868.method11204(-2125784469);
 			Class96_Sub20.aClass515_9416.method8848(-1321298853);
 			Class16.aClass230_147.method3903((byte) -72);

@@ -103,7 +103,7 @@ public class Class447 {
 	static final void method7460(int i, int i_2_, int i_3_, int i_4_) {
 		String string = new StringBuilder().append("tele ").append(i).append(Class2.aString14).append(i_2_ >> 6).append(Class2.aString14).append(i_3_ >> 6).append(Class2.aString14).append(i_2_ & 0x3f).append(Class2.aString14).append(i_3_ & 0x3f).toString();
 		System.out.println(string);
-		Class251.method4313(string, true, false, -354697449);
+		Class251.handleCommand(string, true, false, -354697449);
 	}
 
 	static void method7461(CS2Executor class527, byte i) {

@@ -30,12 +30,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void method5812(int i) {
 		if (this.dataFile != null) {
 			for (Node class282 = this.aClass482_7807.head((byte) 23); null != class282; class282 = this.aClass482_7807.next(290181019)) {
-				if (-3442165056282524525L * class282.aLong3379 == (long) i)
+				if (-3442165056282524525L * class282.data == (long) i)
 					return;
 			}
 			Node class282 = new Node();
-			class282.aLong3379 = (long) i * -1253863389874800229L;
-			this.aClass482_7807.method8059(class282, -1173351233);
+			class282.data = (long) i * -1253863389874800229L;
+			this.aClass482_7807.append(class282, -1173351233);
 		}
 	}
 
@@ -109,7 +109,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void processCheck(byte i) {
 		if (null != this.coll && getReferenceTable(-2030640343) != null) {
 			for (Node node = this.aClass482_7807.head((byte) 69); null != node; node = this.aClass482_7807.next(-235017563)) {
-				int i_13_ = (int) (node.aLong3379 * -3442165056282524525L);
+				int i_13_ = (int) (node.data * -3442165056282524525L);
 				if (i_13_ < 0 || (i_13_ >= (((ReferenceTable) this.table).archiveCount) * 1563136279) || 0 == (((ReferenceTable) this.table).fileCounts[i_13_]))
 					node.unlink(-371378792);
 				else {
@@ -127,12 +127,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void method5805(int i, int i_14_) {
 		if (this.dataFile != null) {
 			for (Node class282 = this.aClass482_7807.head((byte) 115); null != class282; class282 = this.aClass482_7807.next(-1039604534)) {
-				if (-3442165056282524525L * class282.aLong3379 == (long) i)
+				if (-3442165056282524525L * class282.data == (long) i)
 					return;
 			}
 			Node class282 = new Node();
-			class282.aLong3379 = (long) i * -1253863389874800229L;
-			this.aClass482_7807.method8059(class282, 1037130654);
+			class282.data = (long) i * -1253863389874800229L;
+			this.aClass482_7807.append(class282, 1037130654);
 		}
 	}
 
@@ -380,12 +380,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 	void method5808(int i) {
 		if (this.dataFile != null) {
 			for (Node class282 = this.aClass482_7807.head((byte) 28); null != class282; class282 = this.aClass482_7807.next(978707001)) {
-				if (-3442165056282524525L * class282.aLong3379 == (long) i)
+				if (-3442165056282524525L * class282.data == (long) i)
 					return;
 			}
 			Node class282 = new Node();
-			class282.aLong3379 = (long) i * -1253863389874800229L;
-			this.aClass482_7807.method8059(class282, 269471242);
+			class282.data = (long) i * -1253863389874800229L;
+			this.aClass482_7807.append(class282, 269471242);
 		}
 	}
 
@@ -405,7 +405,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			if (this.hasDataFile) {
 				boolean bool = true;
 				for (Node class282 = this.coll.head((byte) 124); null != class282; class282 = this.coll.next(328179980)) {
-					int i_52_ = (int) (-3442165056282524525L * class282.aLong3379);
+					int i_52_ = (int) (-3442165056282524525L * class282.data);
 					if (this.aByteArray7792[i_52_] == 0)
 						method12546(i_52_, 1, -1048339107);
 					if (this.aByteArray7792[i_52_] != 0)
@@ -425,8 +425,8 @@ public class JS5GrabWorker extends JS5FileWorker {
 							method12546((this.anInt7797 * 1482915297), 1, 317844663);
 						if (0 == (this.aByteArray7792[(this.anInt7797 * 1482915297)])) {
 							Node class282 = new Node();
-							class282.aLong3379 = ((long) this.anInt7797 * -3869615546755887045L);
-							this.coll.method8059(class282, -1762683318);
+							class282.data = ((long) this.anInt7797 * -3869615546755887045L);
+							this.coll.append(class282, -1762683318);
 							bool = false;
 						}
 						this.anInt7797 += -1503033823;
@@ -439,7 +439,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			} else if (this.aBool7795) {
 				boolean bool = true;
 				for (Node class282 = this.coll.head((byte) 13); null != class282; class282 = this.coll.next(392865935)) {
-					int i_53_ = (int) (class282.aLong3379 * -3442165056282524525L);
+					int i_53_ = (int) (class282.data * -3442165056282524525L);
 					if (1 != this.aByteArray7792[i_53_])
 						method12546(i_53_, 2, -1651626518);
 					if (1 == this.aByteArray7792[i_53_])
@@ -459,8 +459,8 @@ public class JS5GrabWorker extends JS5FileWorker {
 							method12546((1482915297 * this.anInt7797), 2, 627310789);
 						if (1 != (this.aByteArray7792[(this.anInt7797 * 1482915297)])) {
 							Node class282 = new Node();
-							class282.aLong3379 = (-3869615546755887045L * (long) this.anInt7797);
-							this.coll.method8059(class282, 720444419);
+							class282.data = (-3869615546755887045L * (long) this.anInt7797);
+							this.coll.append(class282, 720444419);
 							bool = false;
 						}
 						this.anInt7797 += -1503033823;
@@ -496,7 +496,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		Node class282 = this.coll.head((byte) 11);
 		if (null == class282)
 			return 0;
-		return (int) (class282.aLong3379 * -3442165056282524525L);
+		return (int) (class282.data * -3442165056282524525L);
 	}
 
 	static final void method12560(CS2Executor class527, short i) {

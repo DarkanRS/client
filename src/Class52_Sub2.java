@@ -43,20 +43,20 @@ public class Class52_Sub2 extends Class52 {
 	void method1081(boolean bool, int i, int i_0_, int i_1_) {
 		if (bool) {
 			int[] is = new int[4];
-			Class316.aClass505_3680.qa(is);
-			Class316.aClass505_3680.r(i, i_0_, i + (((Class52_Sub2) this).aClass350_489.anInt4093) * 329542577, (((Class52_Sub2) this).aClass350_489.anInt4088) * 323608093 + i_0_);
+			Renderers.SOFTWARE_RENDERER.qa(is);
+			Renderers.SOFTWARE_RENDERER.r(i, i_0_, i + (((Class52_Sub2) this).aClass350_489.anInt4093) * 329542577, (((Class52_Sub2) this).aClass350_489.anInt4088) * 323608093 + i_0_);
 			int i_2_ = ((Class52_Sub2) this).aClass160_9160.method228();
 			int i_3_ = ((Class52_Sub2) this).aClass160_9160.method2748();
 			int i_4_ = ((Class52_Sub2) this).aClass160_9163.method228();
 			int i_5_ = ((Class52_Sub2) this).aClass160_9163.method2748();
 			((Class52_Sub2) this).aClass160_9160.method2752(i, (((Class52_Sub2) this).aClass350_489.anInt4088 * 323608093 - i_3_) / 2 + i_0_);
 			((Class52_Sub2) this).aClass160_9163.method2752((((Class52_Sub2) this).aClass350_489.anInt4093 * 329542577 + i - i_4_), (((Class52_Sub2) this).aClass350_489.anInt4088 * 323608093 - i_5_) / 2 + i_0_);
-			Class316.aClass505_3680.r(i, i_0_, i + (((Class52_Sub2) this).aClass350_489.anInt4093) * 329542577, i_0_ + ((Class52_Sub2) this).aClass160_9164.method2748());
+			Renderers.SOFTWARE_RENDERER.r(i, i_0_, i + (((Class52_Sub2) this).aClass350_489.anInt4093) * 329542577, i_0_ + ((Class52_Sub2) this).aClass160_9164.method2748());
 			((Class52_Sub2) this).aClass160_9164.method2756(i + i_2_, i_0_, (((Class52_Sub2) this).aClass350_489.anInt4093 * 329542577 - i_2_ - i_4_), 323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088);
 			int i_6_ = ((Class52_Sub2) this).aClass160_9165.method2748();
-			Class316.aClass505_3680.r(i, i_0_ + 323608093 * (((Class52_Sub2) this).aClass350_489.anInt4088) - i_6_, i + 329542577 * (((Class52_Sub2) this).aClass350_489.anInt4093), i_0_ + 323608093 * (((Class52_Sub2) this).aClass350_489.anInt4088));
+			Renderers.SOFTWARE_RENDERER.r(i, i_0_ + 323608093 * (((Class52_Sub2) this).aClass350_489.anInt4088) - i_6_, i + 329542577 * (((Class52_Sub2) this).aClass350_489.anInt4093), i_0_ + 323608093 * (((Class52_Sub2) this).aClass350_489.anInt4088));
 			((Class52_Sub2) this).aClass160_9165.method2756(i + i_2_, (i_0_ + 323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088 - i_6_), (329542577 * ((Class52_Sub2) this).aClass350_489.anInt4093 - i_2_ - i_4_), ((Class52_Sub2) this).aClass350_489.anInt4088 * 323608093);
-			Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+			Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 		}
 	}
 
@@ -69,12 +69,12 @@ public class Class52_Sub2 extends Class52 {
 		int i_14_ = i_12_ - i_11_;
 		int i_15_ = method1078(-2146755353) * i_13_ / 10000;
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i_9_, i_11_, i_9_ + i_15_, i_12_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i_9_, i_11_, i_9_ + i_15_, i_12_);
 		method14498(i_9_, i_11_, i_13_, i_14_, -1731136820);
-		Class316.aClass505_3680.r(i_9_ + i_15_, i_11_, i_10_, i_12_);
+		Renderers.SOFTWARE_RENDERER.r(i_9_ + i_15_, i_11_, i_10_, i_12_);
 		((Class52_Sub2) this).aClass160_9161.method2756(i_9_, i_11_, i_13_, i_14_);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	void method14498(int i, int i_16_, int i_17_, int i_18_, int i_19_) {
@@ -121,20 +121,20 @@ public class Class52_Sub2 extends Class52 {
 	void method1076(boolean bool, int i, int i_21_) {
 		if (bool) {
 			int[] is = new int[4];
-			Class316.aClass505_3680.qa(is);
-			Class316.aClass505_3680.r(i, i_21_, i + (((Class52_Sub2) this).aClass350_489.anInt4093) * 329542577, (((Class52_Sub2) this).aClass350_489.anInt4088) * 323608093 + i_21_);
+			Renderers.SOFTWARE_RENDERER.qa(is);
+			Renderers.SOFTWARE_RENDERER.r(i, i_21_, i + (((Class52_Sub2) this).aClass350_489.anInt4093) * 329542577, (((Class52_Sub2) this).aClass350_489.anInt4088) * 323608093 + i_21_);
 			int i_22_ = ((Class52_Sub2) this).aClass160_9160.method228();
 			int i_23_ = ((Class52_Sub2) this).aClass160_9160.method2748();
 			int i_24_ = ((Class52_Sub2) this).aClass160_9163.method228();
 			int i_25_ = ((Class52_Sub2) this).aClass160_9163.method2748();
 			((Class52_Sub2) this).aClass160_9160.method2752(i, (((Class52_Sub2) this).aClass350_489.anInt4088 * 323608093 - i_23_) / 2 + i_21_);
 			((Class52_Sub2) this).aClass160_9163.method2752((((Class52_Sub2) this).aClass350_489.anInt4093 * 329542577 + i - i_24_), (((Class52_Sub2) this).aClass350_489.anInt4088 * 323608093 - i_25_) / 2 + i_21_);
-			Class316.aClass505_3680.r(i, i_21_, i + ((Class52_Sub2) this).aClass350_489.anInt4093 * 329542577, i_21_ + ((Class52_Sub2) this).aClass160_9164.method2748());
+			Renderers.SOFTWARE_RENDERER.r(i, i_21_, i + ((Class52_Sub2) this).aClass350_489.anInt4093 * 329542577, i_21_ + ((Class52_Sub2) this).aClass160_9164.method2748());
 			((Class52_Sub2) this).aClass160_9164.method2756(i + i_22_, i_21_, (((Class52_Sub2) this).aClass350_489.anInt4093 * 329542577 - i_22_ - i_24_), 323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088);
 			int i_26_ = ((Class52_Sub2) this).aClass160_9165.method2748();
-			Class316.aClass505_3680.r(i, (i_21_ + 323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088 - i_26_), i + 329542577 * ((Class52_Sub2) this).aClass350_489.anInt4093, i_21_ + (323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088));
+			Renderers.SOFTWARE_RENDERER.r(i, (i_21_ + 323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088 - i_26_), i + 329542577 * ((Class52_Sub2) this).aClass350_489.anInt4093, i_21_ + (323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088));
 			((Class52_Sub2) this).aClass160_9165.method2756(i + i_22_, (i_21_ + 323608093 * ((Class52_Sub2) this).aClass350_489.anInt4088 - i_26_), (329542577 * ((Class52_Sub2) this).aClass350_489.anInt4093 - i_22_ - i_24_), ((Class52_Sub2) this).aClass350_489.anInt4088 * 323608093);
-			Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+			Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 		}
 	}
 
@@ -226,12 +226,12 @@ public class Class52_Sub2 extends Class52 {
 		int i_33_ = i_31_ - i_30_;
 		int i_34_ = method1078(-2059160857) * i_32_ / 10000;
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i_28_, i_30_, i_28_ + i_34_, i_31_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i_28_, i_30_, i_28_ + i_34_, i_31_);
 		method14498(i_28_, i_30_, i_32_, i_33_, -1488513081);
-		Class316.aClass505_3680.r(i_28_ + i_34_, i_30_, i_29_, i_31_);
+		Renderers.SOFTWARE_RENDERER.r(i_28_ + i_34_, i_30_, i_29_, i_31_);
 		((Class52_Sub2) this).aClass160_9161.method2756(i_28_, i_30_, i_32_, i_33_);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	void method1075(boolean bool, int i, int i_35_) {
@@ -243,12 +243,12 @@ public class Class52_Sub2 extends Class52 {
 		int i_41_ = i_39_ - i_38_;
 		int i_42_ = method1078(-1948623655) * i_40_ / 10000;
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i_36_, i_38_, i_36_ + i_42_, i_39_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i_36_, i_38_, i_36_ + i_42_, i_39_);
 		method14498(i_36_, i_38_, i_40_, i_41_, -661504276);
-		Class316.aClass505_3680.r(i_36_ + i_42_, i_38_, i_37_, i_39_);
+		Renderers.SOFTWARE_RENDERER.r(i_36_ + i_42_, i_38_, i_37_, i_39_);
 		((Class52_Sub2) this).aClass160_9161.method2756(i_36_, i_38_, i_40_, i_41_);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	void method1079(boolean bool, int i, int i_43_) {
@@ -260,12 +260,12 @@ public class Class52_Sub2 extends Class52 {
 		int i_49_ = i_47_ - i_46_;
 		int i_50_ = method1078(-2107780880) * i_48_ / 10000;
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i_44_, i_46_, i_44_ + i_50_, i_47_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i_44_, i_46_, i_44_ + i_50_, i_47_);
 		method14498(i_44_, i_46_, i_48_, i_49_, -525462947);
-		Class316.aClass505_3680.r(i_44_ + i_50_, i_46_, i_45_, i_47_);
+		Renderers.SOFTWARE_RENDERER.r(i_44_ + i_50_, i_46_, i_45_, i_47_);
 		((Class52_Sub2) this).aClass160_9161.method2756(i_44_, i_46_, i_48_, i_49_);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	public boolean method17() {

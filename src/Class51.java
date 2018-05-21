@@ -53,7 +53,7 @@ public class Class51 implements Interface2 {
 
 	public void method16() {
 		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 20);
-		((Class51) this).aClass8_484 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public boolean method10(int i) {
@@ -67,27 +67,27 @@ public class Class51 implements Interface2 {
 
 	public void method15() {
 		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 108);
-		((Class51) this).aClass8_484 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method22(int i) {
 		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 81);
-		((Class51) this).aClass8_484 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method23() {
 		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 60);
-		((Class51) this).aClass8_484 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method18() {
 		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 122);
-		((Class51) this).aClass8_484 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method19() {
 		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 65);
-		((Class51) this).aClass8_484 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public boolean method13() {
@@ -162,9 +162,9 @@ public class Class51 implements Interface2 {
 				}
 			} catch (Exception exception) {
 				StringBuilder stringbuilder = new StringBuilder(30);
-				stringbuilder.append("").append(-3442165056282524525L * (((CS2Executor) class527).current.aLong3379)).append(" ");
+				stringbuilder.append("").append(-3442165056282524525L * (((CS2Executor) class527).current.data)).append(" ");
 				for (int i_7_ = ((CS2Executor) class527).anInt7002 * -1837903909 - 1; i_7_ >= 0; i_7_--)
-					stringbuilder.append("").append(-3442165056282524525L * (((Class509) ((CS2Executor) class527).aClass509Array7016[i_7_]).aClass282_Sub50_Sub5_5869.aLong3379)).append(" ");
+					stringbuilder.append("").append(-3442165056282524525L * (((Class509) ((CS2Executor) class527).aClass509Array7016[i_7_]).aClass282_Sub50_Sub5_5869.data)).append(" ");
 				stringbuilder.append("").append(Integer.valueOf(-2026890351 * class522.opcode));
 				Class151.method2594(stringbuilder.toString(), exception, (byte) -32);
 				Class282_Sub50_Sub17.method15509(1831526496);

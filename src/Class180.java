@@ -79,7 +79,7 @@ public class Class180 {
 
 	static final void method3030(CS2Executor class527, int i) {
 		int i_5_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_5_, 504897377);
+		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_5_, 504897377);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class425.aBool5101 ? 1 : 0;
 	}
 

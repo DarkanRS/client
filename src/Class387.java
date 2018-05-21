@@ -283,7 +283,7 @@ public class Class387 {
 			Class176.method2976(class282_sub35, -1081790752);
 			int i_56_ = class282_sub35.readUnsignedByte();
 			for (int i_57_ = 0; i_57_ < i_56_; i_57_++)
-				Class86.aClass482_827.method8059(new Class282_Sub2(class282_sub35), -1970601217);
+				Class86.aClass482_827.append(new Class282_Sub2(class282_sub35), -1970601217);
 			int i_58_ = class282_sub35.readUnsignedSmart(2048992685);
 			Class86.aClass77Array818 = new Class77[i_58_];
 			for (int i_59_ = 0; i_59_ < i_58_; i_59_++)

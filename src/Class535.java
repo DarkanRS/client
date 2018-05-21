@@ -229,7 +229,7 @@ public class Class535 {
 
 	public void method11458(RsByteBuffer class282_sub35, Class239 class239) {
 		int i = class282_sub35.readUnsignedByte();
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 && Class316.aClass505_3680.method8463() > 0) {
+		if (Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
 			if ((i & 0x1) != 0)
 				((Class535) this).anInt7083 = class282_sub35.readInt() * -1407321071;
 			else
@@ -341,7 +341,7 @@ public class Class535 {
 
 	public void method11468(RsByteBuffer class282_sub35, Class239 class239, int i) {
 		int i_24_ = class282_sub35.readUnsignedByte();
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 && Class316.aClass505_3680.method8463() > 0) {
+		if (Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 && Renderers.SOFTWARE_RENDERER.method8463() > 0) {
 			if ((i_24_ & 0x1) != 0)
 				((Class535) this).anInt7083 = class282_sub35.readInt() * -1407321071;
 			else

@@ -12,7 +12,7 @@ public class Class58 implements Interface19 {
 			return class431.method7226((int) l, -64424168);
 		}
 		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
-			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions((int) l, 1575511012);
+			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) l, 1575511012);
 			return class425.aString5043;
 		}
 		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
@@ -26,7 +26,7 @@ public class Class58 implements Interface19 {
 			return class431.method7226((int) l, -451172927);
 		}
 		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
-			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions((int) l, 1001383169);
+			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) l, 1001383169);
 			return class425.aString5043;
 		}
 		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
@@ -40,7 +40,7 @@ public class Class58 implements Interface19 {
 			return class431.method7226((int) l, 1807301402);
 		}
 		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
-			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions((int) l, 980580063);
+			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) l, 980580063);
 			return class425.aString5043;
 		}
 		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
@@ -107,7 +107,7 @@ public class Class58 implements Interface19 {
 						}
 						if (-1 != i_6_) {
 							int i_10_ = 0;
-							Class460 class460 = new Class460(Class20.aClass482_171);
+							NodeIterator class460 = new NodeIterator(Class20.aClass482_171);
 							for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(1195046637)); class282_sub50_sub7 != null; class282_sub50_sub7 = (Class282_Sub50_Sub7) class460.next()) {
 								if (i_10_++ == i_6_)
 									return (-1332134173 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9578);

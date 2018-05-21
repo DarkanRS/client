@@ -22,7 +22,7 @@ public class Class185 {
 	Class384 aClass384_2317;
 	Class384 aClass384_2318;
 	int[] anIntArray2319;
-	Class505_Sub3 aClass505_Sub3_2320;
+	HardwareRenderer aClass505_Sub3_2320;
 	int[] anIntArray2321;
 	float[] aFloatArray2322;
 	float[] aFloatArray2323;
@@ -74,7 +74,7 @@ public class Class185 {
 		((Class185) this).aRunnable2343 = runnable;
 	}
 
-	Class185(Class505_Sub3 class505_sub3) {
+	Class185(HardwareRenderer class505_sub3) {
 		((Class185) this).aFloat2303 = 1.0F - ((Class185) this).aFloat2305;
 		((Class185) this).anInt2307 = 0;
 		((Class185) this).anInt2336 = 0;

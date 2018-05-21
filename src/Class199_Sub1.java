@@ -48,7 +48,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		((Class282_Sub52) class282_sub52).aChar8171 = c;
 		((Class282_Sub52) class282_sub52).anInt8172 = -1618834677 * i_1_;
 		((Class282_Sub52) class282_sub52).aLong8169 = Class169.method2869(1647332594) * 5617785483754464897L;
-		((Class199_Sub1) this).aClass482_8047.method8059(class282_sub52, 1868756852);
+		((Class199_Sub1) this).aClass482_8047.append(class282_sub52, 1868756852);
 	}
 
 	public synchronized void method13376(KeyEvent keyevent) {
@@ -96,14 +96,14 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 					((Class282_Sub52) class282_sub52_4_).anInt8172 = 1 * ((Class282_Sub52) class282_sub52).anInt8172;
 					((Class282_Sub52) class282_sub52_4_).aLong8169 = 1L * ((Class282_Sub52) class282_sub52).aLong8169;
 					((Class282_Sub52) class282_sub52_4_).anInt8174 = 1 * ((Class282_Sub52) class282_sub52).anInt8174;
-					((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52_4_, 1312996857);
+					((Class199_Sub1) this).aClass482_8046.append(class282_sub52_4_, 1312996857);
 					((Class199_Sub1) this).aBoolArray8048[(-581998429 * ((Class282_Sub52) class282_sub52).anInt8172)] = true;
 				}
 				((Class282_Sub52) class282_sub52).anInt8173 = -922637818;
-				((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52, -924649078);
+				((Class199_Sub1) this).aClass482_8046.append(class282_sub52, -924649078);
 			} else if (((Class282_Sub52) class282_sub52).anInt8173 * -921682517 == 1) {
 				if (((Class199_Sub1) this).aBoolArray8048[(-581998429 * ((Class282_Sub52) class282_sub52).anInt8172)]) {
-					((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52, -317129171);
+					((Class199_Sub1) this).aClass482_8046.append(class282_sub52, -317129171);
 					((Class199_Sub1) this).aBoolArray8048[(-581998429 * ((Class282_Sub52) class282_sub52).anInt8172)] = false;
 				}
 			} else if (-1 == (((Class282_Sub52) class282_sub52).anInt8173 * -921682517)) {
@@ -115,12 +115,12 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 						((Class282_Sub52) class282_sub52_6_).anInt8172 = -1618834677 * i_5_;
 						((Class282_Sub52) class282_sub52_6_).aLong8169 = ((Class282_Sub52) class282_sub52).aLong8169 * 1L;
 						((Class282_Sub52) class282_sub52_6_).anInt8174 = 1 * ((Class282_Sub52) class282_sub52).anInt8174;
-						((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52_6_, -1107804482);
+						((Class199_Sub1) this).aClass482_8046.append(class282_sub52_6_, -1107804482);
 						((Class199_Sub1) this).aBoolArray8048[i_5_] = false;
 					}
 				}
 			} else if (-921682517 * ((Class282_Sub52) class282_sub52).anInt8173 == 3)
-				((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52, -1098300070);
+				((Class199_Sub1) this).aClass482_8046.append(class282_sub52, -1098300070);
 		}
 	}
 
@@ -247,7 +247,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		((Class282_Sub52) class282_sub52).aChar8171 = c;
 		((Class282_Sub52) class282_sub52).anInt8172 = -1618834677 * i_10_;
 		((Class282_Sub52) class282_sub52).aLong8169 = Class169.method2869(1627997402) * 5617785483754464897L;
-		((Class199_Sub1) this).aClass482_8047.method8059(class282_sub52, 504248551);
+		((Class199_Sub1) this).aClass482_8047.append(class282_sub52, 504248551);
 	}
 
 	public Interface16 method3239() {
@@ -264,7 +264,7 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 		((Class282_Sub52) class282_sub52).aChar8171 = c;
 		((Class282_Sub52) class282_sub52).anInt8172 = -1618834677 * i_11_;
 		((Class282_Sub52) class282_sub52).aLong8169 = Class169.method2869(1923489988) * 5617785483754464897L;
-		((Class199_Sub1) this).aClass482_8047.method8059(class282_sub52, 888772202);
+		((Class199_Sub1) this).aClass482_8047.append(class282_sub52, 888772202);
 	}
 
 	public void method13390(FocusEvent focusevent) {
@@ -293,14 +293,14 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 					((Class282_Sub52) class282_sub52_12_).anInt8172 = 1 * ((Class282_Sub52) class282_sub52).anInt8172;
 					((Class282_Sub52) class282_sub52_12_).aLong8169 = 1L * ((Class282_Sub52) class282_sub52).aLong8169;
 					((Class282_Sub52) class282_sub52_12_).anInt8174 = 1 * ((Class282_Sub52) class282_sub52).anInt8174;
-					((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52_12_, -807358565);
+					((Class199_Sub1) this).aClass482_8046.append(class282_sub52_12_, -807358565);
 					((Class199_Sub1) this).aBoolArray8048[(-581998429 * ((Class282_Sub52) class282_sub52).anInt8172)] = true;
 				}
 				((Class282_Sub52) class282_sub52).anInt8173 = -922637818;
-				((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52, 269297613);
+				((Class199_Sub1) this).aClass482_8046.append(class282_sub52, 269297613);
 			} else if (((Class282_Sub52) class282_sub52).anInt8173 * -921682517 == 1) {
 				if (((Class199_Sub1) this).aBoolArray8048[(-581998429 * ((Class282_Sub52) class282_sub52).anInt8172)]) {
-					((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52, -790183134);
+					((Class199_Sub1) this).aClass482_8046.append(class282_sub52, -790183134);
 					((Class199_Sub1) this).aBoolArray8048[(-581998429 * ((Class282_Sub52) class282_sub52).anInt8172)] = false;
 				}
 			} else if (-1 == (((Class282_Sub52) class282_sub52).anInt8173 * -921682517)) {
@@ -312,12 +312,12 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 						((Class282_Sub52) class282_sub52_13_).anInt8172 = -1618834677 * i;
 						((Class282_Sub52) class282_sub52_13_).aLong8169 = ((Class282_Sub52) class282_sub52).aLong8169 * 1L;
 						((Class282_Sub52) class282_sub52_13_).anInt8174 = 1 * ((Class282_Sub52) class282_sub52).anInt8174;
-						((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52_13_, 716991282);
+						((Class199_Sub1) this).aClass482_8046.append(class282_sub52_13_, 716991282);
 						((Class199_Sub1) this).aBoolArray8048[i] = false;
 					}
 				}
 			} else if (-921682517 * ((Class282_Sub52) class282_sub52).anInt8173 == 3)
-				((Class199_Sub1) this).aClass482_8046.method8059(class282_sub52, 382193306);
+				((Class199_Sub1) this).aClass482_8046.append(class282_sub52, 382193306);
 		}
 	}
 

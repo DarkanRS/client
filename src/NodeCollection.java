@@ -5,78 +5,47 @@
 import java.util.Collection;
 import java.util.Iterator;
 
+@SuppressWarnings("rawtypes")
 public class NodeCollection implements Iterable, Collection {
 	Node aClass282_5727;
-	public Node aClass282_5728 = new Node();
+	public Node head = new Node();
 
-	public Node method8057() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (class282 == aClass282_5728) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
-		return class282;
-	}
-
-	public boolean method8058(Object object) {
-		throw new RuntimeException();
-	}
-
-	public void method8059(Node class282, int i) {
-		if (null != class282.aClass282_3380)
-			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
-		class282.aClass282_3378 = aClass282_5728;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
-	}
-
-	public boolean method8060(Object object) {
-		return method8072((Node) object, -4100975);
+	public void append(Node node, int i) {
+		if (null != node.prev)
+			node.unlink(-371378792);
+		node.prev = head.prev;
+		node.next = head;
+		node.prev.next = node;
+		node.next.prev = node;
 	}
 
 	public Node method8061(byte i) {
-		Node class282 = aClass282_5728.aClass282_3378;
-		if (aClass282_5728 == class282)
+		Node class282 = head.next;
+		if (head == class282)
 			return null;
 		class282.unlink(-371378792);
 		return class282;
 	}
 
 	void method8062(NodeCollection class482_0_, Node class282, int i) {
-		Node class282_1_ = aClass282_5728.aClass282_3380;
-		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
-		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
-		if (class282 != aClass282_5728) {
-			class282.aClass282_3380 = class482_0_.aClass282_5728.aClass282_3380;
-			class282.aClass282_3380.aClass282_3378 = class282;
-			class282_1_.aClass282_3378 = class482_0_.aClass282_5728;
-			class482_0_.aClass282_5728.aClass282_3380 = class282_1_;
+		Node class282_1_ = head.prev;
+		head.prev = class282.prev;
+		class282.prev.next = head;
+		if (class282 != head) {
+			class282.prev = class482_0_.head.prev;
+			class282.prev.next = class282;
+			class282_1_.next = class482_0_.head;
+			class482_0_.head.prev = class282_1_;
 		}
 	}
 
 	public void method8063(NodeCollection class482_2_, int i) {
-		if (aClass282_5728.aClass282_3378 != aClass282_5728)
-			method8062(class482_2_, aClass282_5728.aClass282_3378, -1691020971);
+		if (head.next != head)
+			method8062(class482_2_, head.next, -1691020971);
 	}
 
 	public Iterator iterator() {
-		return new Class460(this);
-	}
-
-	Node method8064(Node class282) {
-		Node class282_3_;
-		if (class282 == null)
-			class282_3_ = aClass282_5728.aClass282_3380;
-		else
-			class282_3_ = class282;
-		if (aClass282_5728 == class282_3_) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282_3_.aClass282_3380;
-		return class282_3_;
+		return new NodeIterator(this);
 	}
 
 	public Node method8065(int i) {
@@ -86,61 +55,53 @@ public class NodeCollection implements Iterable, Collection {
 	Node method8066(Node class282, byte i) {
 		Node class282_4_;
 		if (class282 == null)
-			class282_4_ = aClass282_5728.aClass282_3380;
+			class282_4_ = head.prev;
 		else
 			class282_4_ = class282;
-		if (aClass282_5728 == class282_4_) {
+		if (head == class282_4_) {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282_4_.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282_4_.prev;
 		return class282_4_;
 	}
 
 	public Node next(int i) {
 		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (class282 == aClass282_5728) {
+		if (class282 == head) {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282.next;
 		return class282;
 	}
 
 	public Node method8068(byte i) {
 		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (aClass282_5728 == class282) {
+		if (head == class282) {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
+		((NodeCollection) this).aClass282_5727 = class282.prev;
 		return class282;
 	}
 
-	public int method8069(int i) {
-		int i_5_ = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
-			i_5_++;
-		return i_5_;
+	public int size(int i) {
+		int amount = 0;
+		for (Node n = head.next; head != n; n = n.next)
+			amount++;
+		return amount;
 	}
 
-	public boolean add(Object object) {
-		return method8072((Node) object, -4100975);
+	public boolean add(Object node) {
+		return add((Node) node, -4100975);
 	}
 
 	Node[] method8070(int i) {
-		Node[] class282s = new Node[method8069(-1374254477)];
+		Node[] class282s = new Node[size(-1374254477)];
 		int i_6_ = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = head.next; class282 != head; class282 = class282.next)
 			class282s[i_6_++] = class282;
-		return class282s;
-	}
-
-	Node[] method8071() {
-		Node[] class282s = new Node[method8069(-1374254477)];
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
-			class282s[i++] = class282;
 		return class282s;
 	}
 
@@ -149,7 +110,7 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public boolean isEmpty() {
-		return method8096(2128482398);
+		return hasNext(2128482398);
 	}
 
 	public boolean contains(Object object) {
@@ -162,18 +123,14 @@ public class NodeCollection implements Iterable, Collection {
 
 	public Object[] toArray(Object[] objects) {
 		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
+		for (Node class282 = head.next; class282 != head; class282 = class282.next)
 			objects[i++] = class282;
 		return objects;
 	}
 
-	boolean method8072(Node class282, int i) {
-		method8059(class282, 1651650132);
+	boolean add(Node node, int i) {
+		append(node, 1651650132);
 		return true;
-	}
-
-	public Node method8073() {
-		return method8066(null, (byte) -57);
 	}
 
 	public boolean containsAll(Collection collection) {
@@ -192,19 +149,6 @@ public class NodeCollection implements Iterable, Collection {
 		throw new RuntimeException();
 	}
 
-	public int method8074() {
-		return method8069(-1374254477);
-	}
-
-	public void method8075(Node class282) {
-		if (null != class282.aClass282_3380)
-			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
-		class282.aClass282_3378 = aClass282_5728;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
-	}
-
 	public boolean equals(Object object) {
 		return super.equals(object);
 	}
@@ -216,118 +160,19 @@ public class NodeCollection implements Iterable, Collection {
 	Node method8076(Node class282, int i) {
 		Node class282_7_;
 		if (null == class282)
-			class282_7_ = aClass282_5728.aClass282_3378;
+			class282_7_ = head.next;
 		else
 			class282_7_ = class282;
-		if (aClass282_5728 == class282_7_) {
+		if (head == class282_7_) {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282_7_.aClass282_3378;
+		((NodeCollection) this).aClass282_5727 = class282_7_.next;
 		return class282_7_;
 	}
 
-	public Node method8077() {
-		return method8076(null, -1471072918);
-	}
-
-	public int method8078() {
-		return method8069(-1374254477);
-	}
-
-	Node[] method8079() {
-		Node[] class282s = new Node[method8069(-1374254477)];
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
-			class282s[i++] = class282;
-		return class282s;
-	}
-
-	public int method8080() {
-		return method8069(-1374254477);
-	}
-
-	public boolean method8081(Object object) {
-		throw new RuntimeException();
-	}
-
-	public Object[] method8082() {
-		return method8070(790472093);
-	}
-
-	public Object[] method8083() {
-		return method8070(-75915236);
-	}
-
-	public Object[] method8084() {
-		return method8070(-300034995);
-	}
-
-	public boolean method8085(Object object) {
-		throw new RuntimeException();
-	}
-
-	public Iterator method8086() {
-		return new Class460(this);
-	}
-
-	public Iterator method8087() {
-		return new Class460(this);
-	}
-
-	public void method8088(Node class282) {
-		if (null != class282.aClass282_3380)
-			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5728.aClass282_3380;
-		class282.aClass282_3378 = aClass282_5728;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
-	}
-
-	public boolean method8089(Object object) {
-		return super.equals(object);
-	}
-
-	Node method8090(Node class282) {
-		Node class282_8_;
-		if (null == class282)
-			class282_8_ = aClass282_5728.aClass282_3378;
-		else
-			class282_8_ = class282;
-		if (aClass282_5728 == class282_8_) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282_8_.aClass282_3378;
-		return class282_8_;
-	}
-
-	public boolean method8091(Object object) {
-		return super.equals(object);
-	}
-
-	boolean method8092(Node class282) {
-		method8059(class282, 1448456597);
-		return true;
-	}
-
-	public void method8093() {
-		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.unlink(-371378792);
-	}
-
-	public void method8094() {
-		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.unlink(-371378792);
-	}
-
-	public void method8095() {
-		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.unlink(-371378792);
-	}
-
-	public boolean method8096(int i) {
-		return aClass282_5728.aClass282_3378 == aClass282_5728;
+	public boolean hasNext(int i) {
+		return head.next == head;
 	}
 
 	public Node head(byte i) {
@@ -335,329 +180,30 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public void method8098(Node class282, byte i) {
-		if (class282.aClass282_3380 != null)
+		if (class282.prev != null)
 			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5728;
-		class282.aClass282_3378 = aClass282_5728.aClass282_3378;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
-	}
-
-	public static void method8099(Node class282, Node class282_9_) {
-		if (class282.aClass282_3380 != null)
-			class282.unlink(-371378792);
-		class282.aClass282_3380 = class282_9_.aClass282_3380;
-		class282.aClass282_3378 = class282_9_;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
-	}
-
-	public Node method8100() {
-		Node class282 = aClass282_5728.aClass282_3378;
-		if (aClass282_5728 == class282)
-			return null;
-		class282.unlink(-371378792);
-		return class282;
-	}
-
-	public Node method8101() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (aClass282_5728 == class282) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
-		return class282;
-	}
-
-	void method8102(NodeCollection class482_10_, Node class282) {
-		Node class282_11_ = aClass282_5728.aClass282_3380;
-		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
-		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
-		if (class282 != aClass282_5728) {
-			class282.aClass282_3380 = class482_10_.aClass282_5728.aClass282_3380;
-			class282.aClass282_3380.aClass282_3378 = class282;
-			class282_11_.aClass282_3378 = class482_10_.aClass282_5728;
-			class482_10_.aClass282_5728.aClass282_3380 = class282_11_;
-		}
-	}
-
-	void method8103(NodeCollection class482_12_, Node class282) {
-		Node class282_13_ = aClass282_5728.aClass282_3380;
-		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
-		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
-		if (class282 != aClass282_5728) {
-			class282.aClass282_3380 = class482_12_.aClass282_5728.aClass282_3380;
-			class282.aClass282_3380.aClass282_3378 = class282;
-			class282_13_.aClass282_3378 = class482_12_.aClass282_5728;
-			class482_12_.aClass282_5728.aClass282_3380 = class282_13_;
-		}
-	}
-
-	void method8104(NodeCollection class482_14_, Node class282) {
-		Node class282_15_ = aClass282_5728.aClass282_3380;
-		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
-		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
-		if (class282 != aClass282_5728) {
-			class282.aClass282_3380 = class482_14_.aClass282_5728.aClass282_3380;
-			class282.aClass282_3380.aClass282_3378 = class282;
-			class282_15_.aClass282_3378 = class482_14_.aClass282_5728;
-			class482_14_.aClass282_5728.aClass282_3380 = class282_15_;
-		}
-	}
-
-	public Node method8105() {
-		Node class282 = aClass282_5728.aClass282_3378;
-		if (aClass282_5728 == class282)
-			return null;
-		class282.unlink(-371378792);
-		return class282;
-	}
-
-	void method8106(NodeCollection class482_16_, Node class282) {
-		Node class282_17_ = aClass282_5728.aClass282_3380;
-		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
-		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
-		if (class282 != aClass282_5728) {
-			class282.aClass282_3380 = class482_16_.aClass282_5728.aClass282_3380;
-			class282.aClass282_3380.aClass282_3378 = class282;
-			class282_17_.aClass282_3378 = class482_16_.aClass282_5728;
-			class482_16_.aClass282_5728.aClass282_3380 = class282_17_;
-		}
-	}
-
-	public void method8107(NodeCollection class482_18_) {
-		if (aClass282_5728.aClass282_3378 != aClass282_5728)
-			method8062(class482_18_, aClass282_5728.aClass282_3378, -859952897);
-	}
-
-	public void method8108(NodeCollection class482_19_) {
-		if (aClass282_5728.aClass282_3378 != aClass282_5728)
-			method8062(class482_19_, aClass282_5728.aClass282_3378, -586173771);
-	}
-
-	public Node method8109() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (aClass282_5728 == class282) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
-		return class282;
-	}
-
-	public Node method8110() {
-		return method8076(null, -1547975264);
-	}
-
-	public void method8111(Node class282) {
-		if (class282.aClass282_3380 != null)
-			class282.unlink(-371378792);
-		class282.aClass282_3380 = aClass282_5728;
-		class282.aClass282_3378 = aClass282_5728.aClass282_3378;
-		class282.aClass282_3380.aClass282_3378 = class282;
-		class282.aClass282_3378.aClass282_3380 = class282;
-	}
-
-	public Node method8112() {
-		return method8066(null, (byte) 22);
-	}
-
-	public boolean method8113(Object object) {
-		return super.equals(object);
+		class282.prev = head;
+		class282.next = head.next;
+		class282.prev.next = class282;
+		class282.next.prev = class282;
 	}
 
 	public NodeCollection() {
-		aClass282_5728.aClass282_3378 = aClass282_5728;
-		aClass282_5728.aClass282_3380 = aClass282_5728;
-	}
-
-	public Node method8114() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (class282 == aClass282_5728) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
-		return class282;
-	}
-
-	public Node method8115() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (class282 == aClass282_5728) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
-		return class282;
-	}
-
-	public void method8116() {
-		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.unlink(-371378792);
-	}
-
-	public int method8117() {
-		return super.hashCode();
+		head.next = head;
+		head.prev = head;
 	}
 
 	public void method8118(int i) {
-		while (aClass282_5728.aClass282_3378 != aClass282_5728)
-			aClass282_5728.aClass282_3378.unlink(-371378792);
-	}
-
-	public Node method8119() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (class282 == aClass282_5728) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3378;
-		return class282;
-	}
-
-	public Node method8120() {
-		Node class282 = ((NodeCollection) this).aClass282_5727;
-		if (aClass282_5728 == class282) {
-			((NodeCollection) this).aClass282_5727 = null;
-			return null;
-		}
-		((NodeCollection) this).aClass282_5727 = class282.aClass282_3380;
-		return class282;
-	}
-
-	public int method8121() {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
-			i++;
-		return i;
+		while (head.next != head)
+			head.next.unlink(-371378792);
 	}
 
 	public int size() {
-		return method8069(-1374254477);
-	}
-
-	public int method8122() {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
-			i++;
-		return i;
-	}
-
-	public int method8123() {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
-			i++;
-		return i;
-	}
-
-	public boolean method8124(Collection collection) {
-		throw new RuntimeException();
-	}
-
-	Node[] method8125() {
-		Node[] class282s = new Node[method8069(-1374254477)];
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
-			class282s[i++] = class282;
-		return class282s;
-	}
-
-	public Object[] method8126() {
-		return method8070(193432226);
-	}
-
-	public boolean method8127() {
-		return method8096(1937667878);
-	}
-
-	public boolean method8128() {
-		return method8096(1567518009);
-	}
-
-	public boolean method8129() {
-		return method8096(2145417971);
-	}
-
-	public boolean method8130() {
-		return method8096(1372227102);
-	}
-
-	public Object[] method8131(Object[] objects) {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
-			objects[i++] = class282;
-		return objects;
-	}
-
-	public Object[] method8132(Object[] objects) {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
-			objects[i++] = class282;
-		return objects;
-	}
-
-	public Object[] method8133(Object[] objects) {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; class282 != aClass282_5728; class282 = class282.aClass282_3378)
-			objects[i++] = class282;
-		return objects;
+		return size(-1374254477);
 	}
 
 	public boolean remove(Object object) {
 		throw new RuntimeException();
-	}
-
-	boolean method8134(Node class282) {
-		method8059(class282, 863000642);
-		return true;
-	}
-
-	public boolean method8135(Collection collection) {
-		throw new RuntimeException();
-	}
-
-	public int method8136() {
-		int i = 0;
-		for (Node class282 = aClass282_5728.aClass282_3378; aClass282_5728 != class282; class282 = class282.aClass282_3378)
-			i++;
-		return i;
-	}
-
-	public boolean method8137(Collection collection) {
-		throw new RuntimeException();
-	}
-
-	public boolean method8138(Collection collection) {
-		throw new RuntimeException();
-	}
-
-	public boolean method8139(Collection collection) {
-		throw new RuntimeException();
-	}
-
-	public boolean method8140(Collection collection) {
-		throw new RuntimeException();
-	}
-
-	public boolean method8141(Object object) {
-		return method8072((Node) object, -4100975);
-	}
-
-	void method8142(NodeCollection class482_20_, Node class282) {
-		Node class282_21_ = aClass282_5728.aClass282_3380;
-		aClass282_5728.aClass282_3380 = class282.aClass282_3380;
-		class282.aClass282_3380.aClass282_3378 = aClass282_5728;
-		if (class282 != aClass282_5728) {
-			class282.aClass282_3380 = class482_20_.aClass282_5728.aClass282_3380;
-			class282.aClass282_3380.aClass282_3378 = class282;
-			class282_21_.aClass282_3378 = class482_20_.aClass282_5728;
-			class482_20_.aClass282_5728.aClass282_3380 = class282_21_;
-		}
-	}
-
-	public boolean method8143(Object object) {
-		return method8072((Node) object, -4100975);
 	}
 
 	public static void method8144(boolean bool, int i) {

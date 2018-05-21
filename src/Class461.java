@@ -123,21 +123,21 @@ public class Class461 {
 				if (i_12_ < 1000) {
 					class282_sub50_sub7.unlink(-371378792);
 					if (59 == i_12_ || 2 == i_12_ || 8 == i_12_ || 17 == i_12_ || 15 == i_12_ || i_12_ == 16 || i_12_ == 58)
-						Class20.aClass482_175.method8059(class282_sub50_sub7, 1626236688);
+						Class20.aClass482_175.append(class282_sub50_sub7, 1626236688);
 					else
-						Class20.aClass482_174.method8059(class282_sub50_sub7, -1768300501);
+						Class20.aClass482_174.append(class282_sub50_sub7, -1768300501);
 				}
 			}
 			Class20.aClass482_174.method8063(Class20.aClass482_171, -1553248551);
 			Class20.aClass482_175.method8063(Class20.aClass482_171, -1553248551);
 			if (Class20.anInt169 * 2144330291 > 1) {
 				if (Class468_Sub1.method12619(694674525) && 2144330291 * Class20.anInt169 > 2)
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.aClass282_5728.aClass282_3380.aClass282_3380);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.head.prev.prev);
 				else
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.aClass282_5728.aClass282_3380);
-				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) Class20.aClass482_171.aClass282_5728.aClass282_3380);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.head.prev);
+				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head.prev);
 				if (Class20.anInt169 * 2144330291 > 2)
-					Class20.aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.aClass282_3380);
+					Class20.aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.prev);
 				else
 					Class20.aClass282_Sub50_Sub7_168 = null;
 			} else {
@@ -198,7 +198,7 @@ public class Class461 {
 							}
 							if (i_20_ != -1) {
 								int i_24_ = 0;
-								Class460 class460 = new Class460(Class20.aClass482_171);
+								NodeIterator class460 = new NodeIterator(Class20.aClass482_171);
 								for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.method7683(-1181797643)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) class460.next())) {
 									if (i_24_ == i_20_) {
 										Class96_Sub4.method13789(class282_sub50_sub7, i_13_, i_14_, 1995969005);

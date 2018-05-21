@@ -47,7 +47,7 @@ public class Class359 {
 		((CS2Executor) class527).anInt7000 -= -1341717846;
 		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
 		String string_8_ = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141 + 1]);
-		if (null != Class84.myPlayer.aClass238_10558 && (Class84.myPlayer.aClass238_10558.aBool2929))
+		if (null != Class84.myPlayer.playerAppearance && (Class84.myPlayer.playerAppearance.aBool2929))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string_8_;
 		else
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = string;

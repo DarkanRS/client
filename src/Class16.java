@@ -18,7 +18,7 @@ public class Class16 {
 	public static Class230 aClass230_147;
 
 	static void method551() {
-		Class540.aClass8_7138 = null;
+		Renderers.FONT_RENDERER = null;
 		aClass8_144 = null;
 		Class285.aClass8_3394 = null;
 		Class282_Sub21.aClass160Array7673 = null;
@@ -93,7 +93,7 @@ public class Class16 {
 	}
 
 	public static void method559(GraphicalRenderer class505) {
-		Class540.aClass8_7138 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, anInt140 * 1500183805, true, true, -2065156362));
+		Renderers.FONT_RENDERER = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, anInt140 * 1500183805, true, true, -2065156362));
 		Class282_Sub17_Sub2.aClass414_9933 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 1500183805 * anInt140, 138214263);
 		aClass8_144 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, 436671641 * anInt136, true, true, -2080739477));
 		aClass414_139 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 436671641 * anInt136, 930529751);
@@ -102,7 +102,7 @@ public class Class16 {
 	}
 
 	static void method560() {
-		Class540.aClass8_7138 = null;
+		Renderers.FONT_RENDERER = null;
 		aClass8_144 = null;
 		Class285.aClass8_3394 = null;
 		Class282_Sub21.aClass160Array7673 = null;

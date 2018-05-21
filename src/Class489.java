@@ -59,7 +59,7 @@ public class Class489 {
 			((Class282_Sub31) class282_sub31).anInt7766 = i_5_ * 1143878291;
 			class282_sub31.anInt7762 = i_3_ * 1690395815;
 			class282_sub31.anInt7763 = 765748375 * i_4_;
-			Class282_Sub31.aClass482_7776.method8059(class282_sub31, -373570573);
+			Class282_Sub31.aClass482_7776.append(class282_sub31, -373570573);
 		}
 		((Class282_Sub31) class282_sub31).anInt7769 = i_6_ * -567871853;
 		((Class282_Sub31) class282_sub31).anInt7771 = -763092445 * i_7_;

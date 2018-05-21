@@ -514,7 +514,7 @@ public class Login {
 								Class311.aString3643 = stream.readString(2109747310);
 								client.aClass257_7353.method4436(-1683757670).method7912(client.membersWorld, 65280);
 								Class6.aClass340_45.method6052((short) 2983).method4436(-1487690474).method7912(client.membersWorld, 65280);
-								Class119.aClass426_1463.method7148(client.membersWorld, -1605655563);
+								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1605655563);
 								Class350_Sub1.aClass406_7757.method6847(client.membersWorld, (byte) 53);
 							} else {
 								if (!Class9.aClass184_73.method3053((byte) -33).method3315(1878721557 * Class153.anInt1965, (byte) 63)) {

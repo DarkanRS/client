@@ -29,7 +29,7 @@ public class Class390_Sub3 extends Class390 {
 	float aFloat9350;
 	float aFloat9351;
 	Class178[][] aClass178ArrayArray9352;
-	Class505_Sub3 aClass505_Sub3_9353;
+	HardwareRenderer aClass505_Sub3_9353;
 	float aFloat9354;
 	byte[][] aByteArrayArray9355;
 	byte[][] aByteArrayArray9356;
@@ -1397,9 +1397,9 @@ public class Class390_Sub3 extends Class390 {
 	}
 
 	public void method6717(int i, int i_316_, int i_317_, boolean[][] bools, boolean bool, int i_318_) {
-		if ((((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).anIntArray8979) == null || (((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).aFloatArray9010) == null)
+		if ((((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anIntArray8979) == null || (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aFloatArray9010) == null)
 			throw new IllegalStateException("");
-		Class384 class384 = (((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
+		Class384 class384 = (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
 		((Class390_Sub3) this).aFloat9338 = class384.aFloatArray4667[0];
 		((Class390_Sub3) this).aFloat9340 = class384.aFloatArray4667[1];
 		((Class390_Sub3) this).aFloat9341 = class384.aFloatArray4667[2];
@@ -1679,9 +1679,9 @@ public class Class390_Sub3 extends Class390 {
 	}
 
 	public void method6716(int i, int i_419_, int i_420_, boolean[][] bools, boolean bool, int i_421_) {
-		if ((((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).anIntArray8979) == null || (((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).aFloatArray9010) == null)
+		if ((((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anIntArray8979) == null || (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aFloatArray9010) == null)
 			throw new IllegalStateException("");
-		Class384 class384 = (((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
+		Class384 class384 = (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
 		((Class390_Sub3) this).aFloat9338 = class384.aFloatArray4667[0];
 		((Class390_Sub3) this).aFloat9340 = class384.aFloatArray4667[1];
 		((Class390_Sub3) this).aFloat9341 = class384.aFloatArray4667[2];
@@ -4291,12 +4291,12 @@ public class Class390_Sub3 extends Class390 {
 			method14622(i, i_1173_, i_1174_, i_1175_, i_1176_, i_1177_, i_1178_, bools, class185, class144, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342);
 	}
 
-	Class390_Sub3(Class505_Sub3 class505_sub3, int i, int i_1179_, int i_1180_, int i_1181_, int[][] is, int[][] is_1182_, int i_1183_) {
+	Class390_Sub3(HardwareRenderer class505_sub3, int i, int i_1179_, int i_1180_, int i_1181_, int[][] is, int[][] is_1182_, int i_1183_) {
 		super(i_1180_, i_1181_, i_1183_, is);
 		((Class390_Sub3) this).aClass505_Sub3_9353 = class505_sub3;
 		((Class390_Sub3) this).anInt9345 = i_1179_;
 		((Class390_Sub3) this).aByteArrayArray9355 = new byte[i_1180_ + 1][i_1181_ + 1];
-		int i_1184_ = ((((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).anInt8992) * -456583957 >> 9);
+		int i_1184_ = ((((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anInt8992) * -456583957 >> 9);
 		for (int i_1185_ = 1; i_1185_ < i_1181_; i_1185_++) {
 			for (int i_1186_ = 1; i_1186_ < i_1180_; i_1186_++) {
 				int i_1187_ = i_1184_;
@@ -4306,7 +4306,7 @@ public class Class390_Sub3 extends Class390 {
 				int i_1191_ = (i_1188_ << 8) / i_1190_;
 				int i_1192_ = -512 * i_1183_ / i_1190_;
 				int i_1193_ = (i_1189_ << 8) / i_1190_;
-				i_1187_ += ((((Class505_Sub3) (((Class390_Sub3) this).aClass505_Sub3_9353)).anInt9011 * 1302966735 * i_1191_) + (((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).anInt8988) * -1947219005 * i_1192_ + (((Class505_Sub3) ((Class390_Sub3) this).aClass505_Sub3_9353).anInt9007) * 1237704411 * i_1193_) >> 17;
+				i_1187_ += ((((HardwareRenderer) (((Class390_Sub3) this).aClass505_Sub3_9353)).anInt9011 * 1302966735 * i_1191_) + (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anInt8988) * -1947219005 * i_1192_ + (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anInt9007) * 1237704411 * i_1193_) >> 17;
 				i_1187_ >>= 1;
 				if (i_1187_ < 2)
 					i_1187_ = 2;

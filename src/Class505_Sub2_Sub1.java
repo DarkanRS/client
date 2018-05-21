@@ -852,7 +852,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		i &= 0x7fffffff;
 		while (!((Class505_Sub2_Sub1) this).aClass473_10174.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10174.method7858((byte) -105);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_62_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_62_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8702 -= class282_sub38.anInt8002 * -570797415;
 			if (i_62_ == 1000) {
 				OpenGL.glDeleteBuffersARB(i_62_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -865,7 +865,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10175.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10175.method7858((byte) -1);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_62_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_62_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8701 -= class282_sub38.anInt8002 * -570797415;
 			if (i_62_ == 1000) {
 				OpenGL.glDeleteTextures(i_62_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -890,7 +890,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10195.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10195.method7858((byte) -119);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_62_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_62_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8761 -= class282_sub38.anInt8002 * -570797415;
 			if (i_62_ == 1000) {
 				OpenGL.glDeleteRenderbuffersEXT(i_62_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -903,19 +903,19 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10173.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10173.method7858((byte) -39);
-			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
+			OpenGL.glDeleteLists((int) (class282_sub38.data * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10178.method7861(141891001)) {
 			Node class282 = ((Class505_Sub2_Sub1) this).aClass473_10178.method7858((byte) -24);
-			OpenGL.glDeleteProgram((int) (class282.aLong3379 * -3442165056282524525L));
+			OpenGL.glDeleteProgram((int) (class282.data * -3442165056282524525L));
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10179.method7861(141891001)) {
 			Node class282 = ((Class505_Sub2_Sub1) this).aClass473_10179.method7858((byte) -83);
-			OpenGL.glDeleteShader((int) (class282.aLong3379 * -3442165056282524525L));
+			OpenGL.glDeleteShader((int) (class282.data * -3442165056282524525L));
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10173.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10173.method7858((byte) -24);
-			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
+			OpenGL.glDeleteLists((int) (class282_sub38.data * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		if (za() > 100663296 && (Class169.method2869(1578958721) > ((Class505_Sub2_Sub1) this).aLong10199 + 60000L)) {
 			System.gc();
@@ -926,13 +926,13 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15569(int i, int i_63_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_63_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10174.method7877(class282_sub38, 204534613);
 	}
 
 	final synchronized void method15570(int i, int i_64_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_64_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10175.method7877(class282_sub38, 1175513464);
 	}
 
@@ -943,7 +943,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15572(int i, int i_65_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_65_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10195.method7877(class282_sub38, 832333379);
 	}
 
@@ -953,7 +953,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15573(int i) {
 		Node class282 = new Node();
-		class282.aLong3379 = (long) i * -1253863389874800229L;
+		class282.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10178.method7877(class282, 8939308);
 	}
 
@@ -1123,7 +1123,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		i &= 0x7fffffff;
 		while (!((Class505_Sub2_Sub1) this).aClass473_10174.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10174.method7858((byte) -71);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_68_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_68_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8702 -= class282_sub38.anInt8002 * -570797415;
 			if (i_68_ == 1000) {
 				OpenGL.glDeleteBuffersARB(i_68_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -1136,7 +1136,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10175.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10175.method7858((byte) -31);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_68_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_68_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8701 -= class282_sub38.anInt8002 * -570797415;
 			if (i_68_ == 1000) {
 				OpenGL.glDeleteTextures(i_68_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -1161,7 +1161,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10195.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10195.method7858((byte) -60);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_68_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_68_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8761 -= class282_sub38.anInt8002 * -570797415;
 			if (i_68_ == 1000) {
 				OpenGL.glDeleteRenderbuffersEXT(i_68_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -1174,19 +1174,19 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10173.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10173.method7858((byte) -13);
-			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
+			OpenGL.glDeleteLists((int) (class282_sub38.data * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10178.method7861(141891001)) {
 			Node class282 = ((Class505_Sub2_Sub1) this).aClass473_10178.method7858((byte) -10);
-			OpenGL.glDeleteProgram((int) (class282.aLong3379 * -3442165056282524525L));
+			OpenGL.glDeleteProgram((int) (class282.data * -3442165056282524525L));
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10179.method7861(141891001)) {
 			Node class282 = ((Class505_Sub2_Sub1) this).aClass473_10179.method7858((byte) -32);
-			OpenGL.glDeleteShader((int) (class282.aLong3379 * -3442165056282524525L));
+			OpenGL.glDeleteShader((int) (class282.data * -3442165056282524525L));
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10173.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10173.method7858((byte) -63);
-			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
+			OpenGL.glDeleteLists((int) (class282_sub38.data * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		if (za() > 100663296 && (Class169.method2869(1746619997) > ((Class505_Sub2_Sub1) this).aLong10199 + 60000L)) {
 			System.gc();
@@ -1318,7 +1318,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15576(int i) {
 		Node class282 = new Node();
-		class282.aLong3379 = (long) i * -1253863389874800229L;
+		class282.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10178.method7877(class282, 1183853013);
 	}
 
@@ -1348,7 +1348,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15578(long l) {
 		Node class282 = new Node();
-		class282.aLong3379 = l * -1253863389874800229L;
+		class282.data = l * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10179.method7877(class282, 1623227813);
 	}
 
@@ -1601,7 +1601,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15580(long l) {
 		Node class282 = new Node();
-		class282.aLong3379 = l * -1253863389874800229L;
+		class282.data = l * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10179.method7877(class282, 87906600);
 	}
 
@@ -2060,7 +2060,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15582(int i) {
 		Node class282 = new Node();
-		class282.aLong3379 = (long) i * -1253863389874800229L;
+		class282.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10178.method7877(class282, -75474566);
 	}
 
@@ -2221,7 +2221,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		i &= 0x7fffffff;
 		while (!((Class505_Sub2_Sub1) this).aClass473_10174.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10174.method7858((byte) -26);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_167_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_167_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8702 -= class282_sub38.anInt8002 * -570797415;
 			if (i_167_ == 1000) {
 				OpenGL.glDeleteBuffersARB(i_167_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -2234,7 +2234,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10175.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10175.method7858((byte) -71);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_167_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_167_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8701 -= class282_sub38.anInt8002 * -570797415;
 			if (i_167_ == 1000) {
 				OpenGL.glDeleteTextures(i_167_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -2259,7 +2259,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10195.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10195.method7858((byte) -56);
-			((Class505_Sub2_Sub1) this).anIntArray10184[i_167_++] = (int) (class282_sub38.aLong3379 * -3442165056282524525L);
+			((Class505_Sub2_Sub1) this).anIntArray10184[i_167_++] = (int) (class282_sub38.data * -3442165056282524525L);
 			anInt8761 -= class282_sub38.anInt8002 * -570797415;
 			if (i_167_ == 1000) {
 				OpenGL.glDeleteRenderbuffersEXT(i_167_, (((Class505_Sub2_Sub1) this).anIntArray10184), 0);
@@ -2272,19 +2272,19 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10173.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10173.method7858((byte) -88);
-			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
+			OpenGL.glDeleteLists((int) (class282_sub38.data * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10178.method7861(141891001)) {
 			Node class282 = ((Class505_Sub2_Sub1) this).aClass473_10178.method7858((byte) -40);
-			OpenGL.glDeleteProgram((int) (class282.aLong3379 * -3442165056282524525L));
+			OpenGL.glDeleteProgram((int) (class282.data * -3442165056282524525L));
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10179.method7861(141891001)) {
 			Node class282 = ((Class505_Sub2_Sub1) this).aClass473_10179.method7858((byte) -38);
-			OpenGL.glDeleteShader((int) (class282.aLong3379 * -3442165056282524525L));
+			OpenGL.glDeleteShader((int) (class282.data * -3442165056282524525L));
 		}
 		while (!((Class505_Sub2_Sub1) this).aClass473_10173.method7861(141891001)) {
 			Class282_Sub38 class282_sub38 = (Class282_Sub38) ((Class505_Sub2_Sub1) this).aClass473_10173.method7858((byte) -91);
-			OpenGL.glDeleteLists((int) (class282_sub38.aLong3379 * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
+			OpenGL.glDeleteLists((int) (class282_sub38.data * -3442165056282524525L), class282_sub38.anInt8002 * -570797415);
 		}
 		if (za() > 100663296 && (Class169.method2869(2017519398) > ((Class505_Sub2_Sub1) this).aLong10199 + 60000L)) {
 			System.gc();
@@ -2598,7 +2598,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15588(int i, int i_199_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_199_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10174.method7877(class282_sub38, 754267766);
 	}
 
@@ -2614,13 +2614,13 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15589(int i, int i_203_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_203_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10175.method7877(class282_sub38, 824347547);
 	}
 
 	final synchronized void method15590(int i, int i_204_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_204_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10175.method7877(class282_sub38, 1571357440);
 	}
 
@@ -2687,25 +2687,25 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15595(long l) {
 		Node class282 = new Node();
-		class282.aLong3379 = l * -1253863389874800229L;
+		class282.data = l * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10179.method7877(class282, 183482405);
 	}
 
 	final synchronized void method15596(int i, int i_214_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_214_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10195.method7877(class282_sub38, 485599978);
 	}
 
 	final synchronized void method15597(int i, int i_215_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_215_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10195.method7877(class282_sub38, 98123723);
 	}
 
 	final synchronized void method15598(long l) {
 		Node class282 = new Node();
-		class282.aLong3379 = l * -1253863389874800229L;
+		class282.data = l * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10179.method7877(class282, 1833532707);
 	}
 
@@ -2731,7 +2731,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15600(int i) {
 		Node class282 = new Node();
-		class282.aLong3379 = (long) i * -1253863389874800229L;
+		class282.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10178.method7877(class282, 1138125884);
 	}
 
@@ -2907,7 +2907,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	final synchronized void method15606(int i, int i_216_) {
 		Class282_Sub38 class282_sub38 = new Class282_Sub38(i_216_);
-		class282_sub38.aLong3379 = (long) i * -1253863389874800229L;
+		class282_sub38.data = (long) i * -1253863389874800229L;
 		((Class505_Sub2_Sub1) this).aClass473_10175.method7877(class282_sub38, 782321858);
 	}
 }

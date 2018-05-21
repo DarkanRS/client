@@ -11,7 +11,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	Class125 aClass125_10127;
 	int anInt10128;
 	int anInt10129 = 0;
-	Class505_Sub3 aClass505_Sub3_10130;
+	HardwareRenderer aClass505_Sub3_10130;
 	static int anInt10131;
 
 	public int method2719() {
@@ -111,7 +111,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 		/* empty */
 	}
 
-	Class158_Sub1_Sub2(Class505_Sub3 class505_sub3) {
+	Class158_Sub1_Sub2(HardwareRenderer class505_sub3) {
 		((Class158_Sub1_Sub2) this).anInt10128 = 0;
 		((Class158_Sub1_Sub2) this).aClass505_Sub3_10130 = class505_sub3;
 	}

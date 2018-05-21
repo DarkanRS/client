@@ -61,8 +61,8 @@ public class Class231 {
 		Class282_Sub17_Sub1.method15402(i, string, bool, 1568129445);
 		Class487.aClass378_5752.method6433(-1648322777);
 		Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
-		Class282_Sub11_Sub3.method15476(Class316.aClass505_3680, 2105795024);
-		Class188.method3139(Class316.aClass505_3680, Class211.aClass317_2673, -814245885);
+		Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 2105795024);
+		Class188.method3139(Renderers.SOFTWARE_RENDERER, Class211.aClass317_2673, -814245885);
 		Class76.method1361((byte) -31);
 		Class122.method2109(Class182.aClass160Array2261, (byte) 8);
 		IncomingPacket.method6378(-1538407760);

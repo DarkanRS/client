@@ -1706,7 +1706,7 @@ public class Class409 {
 		Class356.method6227(true, (byte) -37);
 		Class247.method4250((byte) -91);
 		System.gc();
-		Class316.aClass505_3680.ba(2, 0);
+		Renderers.SOFTWARE_RENDERER.ba(2, 0);
 	}
 
 	static final void method6908(CS2Executor class527, int i) {

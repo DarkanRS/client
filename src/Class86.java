@@ -64,7 +64,7 @@ public class Class86 {
 			Class176.method2976(class282_sub35, -2017548765);
 			int i_0_ = class282_sub35.readUnsignedByte();
 			for (int i_1_ = 0; i_1_ < i_0_; i_1_++)
-				aClass482_827.method8059(new Class282_Sub2(class282_sub35), -231043282);
+				aClass482_827.append(new Class282_Sub2(class282_sub35), -231043282);
 			int i_2_ = class282_sub35.readUnsignedSmart(1809723622);
 			aClass77Array818 = new Class77[i_2_];
 			for (int i_3_ = 0; i_3_ < i_2_; i_3_++)
@@ -289,6 +289,6 @@ public class Class86 {
 
 	static void method1482(Class118 class118, byte i) {
 		if (5 == -2131393857 * class118.anInt1268 && -1 != class118.anInt1426 * -56249735)
-			Class415.method6996(Class316.aClass505_3680, class118, -585931804);
+			Class415.method6996(Renderers.SOFTWARE_RENDERER, class118, -585931804);
 	}
 }

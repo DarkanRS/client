@@ -96,21 +96,21 @@ public class Class383 implements Interface41 {
 		int i_15_;
 		try {
 			Dimension dimension = Class351.aCanvas4096.getSize();
-			Class446.method7447(Message.aClass433_5252.translate(Class223.aClass495_2772, -1923061831), true, Class316.aClass505_3680, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
+			Class446.method7447(Message.aClass433_5252.translate(Class223.aClass495_2772, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
 			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, (Class58.aClass529_527.anInt7034 * -1878247413), 0);
 			long l = Class169.method2869(2130587013);
-			Class316.aClass505_3680.L();
+			Renderers.SOFTWARE_RENDERER.L();
 			client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
-			Class316.aClass505_3680.method8457(client.aClass294_7457);
-			Class384 class384 = Class316.aClass505_3680.method8449();
+			Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
+			Class384 class384 = Renderers.SOFTWARE_RENDERER.method8449();
 			class384.method6531((float) (dimension.width / 2), (float) (dimension.height / 2), 512.0F, 512.0F, (float) client.aClass257_7353.method4544(1468645069), (float) client.aClass257_7353.method4522(-1126120958), (float) dimension.width, (float) dimension.height);
-			Class316.aClass505_3680.method8424(class384);
-			Class316.aClass505_3680.IA(1.0F);
-			Class316.aClass505_3680.m(16777215, 0.5F, 0.5F, 20.0F, -50.0F, 30.0F);
-			MeshRasterizer class528 = Class316.aClass505_3680.createMeshRasterizer(class157, 2048, 64, 64, 768);
+			Renderers.SOFTWARE_RENDERER.method8424(class384);
+			Renderers.SOFTWARE_RENDERER.IA(1.0F);
+			Renderers.SOFTWARE_RENDERER.m(16777215, 0.5F, 0.5F, 20.0F, -50.0F, 30.0F);
+			MeshRasterizer class528 = Renderers.SOFTWARE_RENDERER.createMeshRasterizer(class157, 2048, 64, 64, 768);
 			int i_16_ = 0;
 			while_185_: for (int i_17_ = 0; i_17_ < 500; i_17_++) {
-				Class316.aClass505_3680.ba(3, 0);
+				Renderers.SOFTWARE_RENDERER.ba(3, 0);
 				for (int i_18_ = 15; i_18_ >= 0; i_18_--) {
 					for (int i_19_ = 0; i_19_ <= i_18_; i_19_++) {
 						client.aClass294_7169.method5223((float) (int) (512.0F * ((float) i_19_ - (float) i_18_ / 2.0F)), 0.0F, (float) ((i_18_ + 1) * 512));
@@ -121,9 +121,9 @@ public class Class383 implements Interface41 {
 					}
 				}
 			}
-			Class316.aClass505_3680.method8395();
+			Renderers.SOFTWARE_RENDERER.method8395();
 			long l_20_ = ((long) (1000 * i_16_) / (Class169.method2869(1634298146) - l));
-			Class316.aClass505_3680.ba(3, 0);
+			Renderers.SOFTWARE_RENDERER.ba(3, 0);
 			i_15_ = (int) l_20_;
 		} catch (Throwable throwable) {
 			throwable.printStackTrace();

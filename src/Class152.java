@@ -101,7 +101,7 @@ public abstract class Class152 {
 		NativeSprite class160 = (NativeSprite) Class299.aClass229_3545.method3865((long) i);
 		if (class160 == null) {
 			if (Class339.aBool3987)
-				class160 = Class316.aClass505_3680.method8444(Class91.method1515(class317, i), true);
+				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
 			else
 				class160 = (Class103_Sub1.method14490(class317.method5615(i, -1112597366), (byte) -40));
 			Class299.aClass229_3545.put(class160, (long) i);
@@ -116,7 +116,7 @@ public abstract class Class152 {
 			else if (Class262.anInt3240 * -672443707 == 4)
 				Class280.method4974(l);
 		}
-		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * client.cycles));
+		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) (-1809259861 * client.cycles));
 		if (-1 != client.anInt7349 * -1699899559)
 			UnderlayDefinition.method8777(-1699899559 * client.anInt7349, (byte) -80);
 		for (int i = 0; i < 1858642375 * client.anInt7407; i++) {
@@ -129,8 +129,8 @@ public abstract class Class152 {
 			client.anInt7407 = 0;
 			Class421.method7039((byte) 58);
 		}
-		Class316.aClass505_3680.L();
-		Class282_Sub20_Sub33.method15411(Class316.aClass505_3680, (byte) 23);
+		Renderers.SOFTWARE_RENDERER.L();
+		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 23);
 		int i = Class58.method1141(563483982);
 		if (-1 == i)
 			i = -1211259595 * client.anInt7427;

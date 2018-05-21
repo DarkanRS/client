@@ -59,16 +59,16 @@ public class Class524 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_2_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_3_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		if (null != Class84.myPlayer.aClass238_10558) {
+		if (null != Class84.myPlayer.playerAppearance) {
 			for (int i_4_ = 0; i_4_ < Class44.anIntArray428.length; i_4_++) {
 				if (Class44.anIntArray428[i_4_] == i_2_) {
-					Class84.myPlayer.aClass238_10558.method3993(i_4_, i_3_, Class20.aClass31_204, -1891661545);
+					Class84.myPlayer.playerAppearance.method3993(i_4_, i_3_, Class20.aClass31_204, -1891661545);
 					return;
 				}
 			}
 			for (int i_5_ = 0; i_5_ < Class44.anIntArray422.length; i_5_++) {
 				if (Class44.anIntArray422[i_5_] == i_2_) {
-					Class84.myPlayer.aClass238_10558.method3993(i_5_, i_3_, Class20.aClass31_204, 938562628);
+					Class84.myPlayer.playerAppearance.method3993(i_5_, i_3_, Class20.aClass31_204, 938562628);
 					break;
 				}
 			}

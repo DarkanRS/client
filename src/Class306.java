@@ -84,24 +84,24 @@ public class Class306 implements Runnable {
 						((Class306) this).anInterface27_3598.method187(((Class306) this).aBool3597, 1725591035);
 					else {
 						long l_2_ = Class169.method2869(2127985835);
-						if (null != Class316.aClass505_3680 && null != ((Class306) this).anInterface27_3604 && ((Class306) this).anInterface27_3604.method190(1422459894) != 0 && ((((Class306) this).aLong3601 * -3323946835697055613L) >= l_2_ - (long) ((Class306) this).anInterface27_3604.method190(1006889549))) {
+						if (null != Renderers.SOFTWARE_RENDERER && null != ((Class306) this).anInterface27_3604 && ((Class306) this).anInterface27_3604.method190(1422459894) != 0 && ((((Class306) this).aLong3601 * -3323946835697055613L) >= l_2_ - (long) ((Class306) this).anInterface27_3604.method190(1006889549))) {
 							int i = (int) (255L * (l_2_ - (-3323946835697055613L * ((Class306) this).aLong3601)) / (long) ((Class306) this).anInterface27_3604.method190(908741626));
 							int i_3_ = 255 - i;
 							i = i << 24 | 0xffffff;
 							i_3_ = i_3_ << 24 | 0xffffff;
 							Class275.method4891((byte) -26);
-							Class316.aClass505_3680.ba(1, 0);
-							NativeSprite class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -367647925));
-							Class158_Sub1 class158_sub1 = Class316.aClass505_3680.method8418();
+							Renderers.SOFTWARE_RENDERER.ba(1, 0);
+							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -367647925));
+							Class158_Sub1 class158_sub1 = Renderers.SOFTWARE_RENDERER.method8418();
 							class158_sub1.method13759(0, class160.method2808());
-							Class316.aClass505_3680.method8637(class158_sub1, 2132781090);
+							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, 2132781090);
 							((Class306) this).anInterface27_3604.method187(true, 1725591035);
-							Class316.aClass505_3680.method8416(class158_sub1, (byte) -81);
+							Renderers.SOFTWARE_RENDERER.method8416(class158_sub1, (byte) -81);
 							class160.method2742(0, 0, 0, i_3_, 1);
-							Class316.aClass505_3680.method8637(class158_sub1, 2069802277);
-							Class316.aClass505_3680.ba(1, 0);
+							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, 2069802277);
+							Renderers.SOFTWARE_RENDERER.ba(1, 0);
 							((Class306) this).anInterface27_3598.method187(true, 1725591035);
-							Class316.aClass505_3680.method8416(class158_sub1, (byte) -35);
+							Renderers.SOFTWARE_RENDERER.method8416(class158_sub1, (byte) -35);
 							class160.method2742(0, 0, 0, i, 1);
 						} else {
 							if (((Class306) this).anInterface27_3604 != null) {
@@ -111,21 +111,21 @@ public class Class306 implements Runnable {
 							}
 							if (((Class306) this).aBool3597) {
 								Class275.method4891((byte) -116);
-								if (null != Class316.aClass505_3680)
-									Class316.aClass505_3680.ba(1, 0);
+								if (null != Renderers.SOFTWARE_RENDERER)
+									Renderers.SOFTWARE_RENDERER.ba(1, 0);
 							}
-							((Class306) this).anInterface27_3598.method187((((Class306) this).aBool3597 || (null != Class316.aClass505_3680 && Class316.aClass505_3680.method8465())), 1725591035);
+							((Class306) this).anInterface27_3598.method187((((Class306) this).aBool3597 || (null != Renderers.SOFTWARE_RENDERER && Renderers.SOFTWARE_RENDERER.method8465())), 1725591035);
 						}
 						try {
-							if (Class316.aClass505_3680 != null && !(((Class306) this).anInterface27_3598 instanceof Class304))
-								Class316.aClass505_3680.method8393((short) 10667);
+							if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304))
+								Renderers.SOFTWARE_RENDERER.method8393((short) 10667);
 						} catch (Exception_Sub3 exception_sub3) {
 							Class151.method2594(new StringBuilder().append(exception_sub3.getMessage()).append(Class308.aclient3620.method4669(1137623288)).toString(), exception_sub3, (byte) -20);
 							Class538.method11500(0, true, (byte) 24);
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Class316.aClass505_3680 != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(2100341141);
 				} catch (Exception exception) {
 					continue;
@@ -148,24 +148,24 @@ public class Class306 implements Runnable {
 						((Class306) this).anInterface27_3598.method187(((Class306) this).aBool3597, 1725591035);
 					else {
 						long l_5_ = Class169.method2869(2096237890);
-						if (null != Class316.aClass505_3680 && null != ((Class306) this).anInterface27_3604 && ((Class306) this).anInterface27_3604.method190(1582032827) != 0 && ((((Class306) this).aLong3601 * -3323946835697055613L) >= l_5_ - (long) ((Class306) this).anInterface27_3604.method190(469417614))) {
+						if (null != Renderers.SOFTWARE_RENDERER && null != ((Class306) this).anInterface27_3604 && ((Class306) this).anInterface27_3604.method190(1582032827) != 0 && ((((Class306) this).aLong3601 * -3323946835697055613L) >= l_5_ - (long) ((Class306) this).anInterface27_3604.method190(469417614))) {
 							int i = (int) (255L * (l_5_ - (-3323946835697055613L * ((Class306) this).aLong3601)) / (long) ((Class306) this).anInterface27_3604.method190(1089903421));
 							int i_6_ = 255 - i;
 							i = i << 24 | 0xffffff;
 							i_6_ = i_6_ << 24 | 0xffffff;
 							Class275.method4891((byte) -118);
-							Class316.aClass505_3680.ba(1, 0);
-							NativeSprite class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -166884611));
-							Class158_Sub1 class158_sub1 = Class316.aClass505_3680.method8418();
+							Renderers.SOFTWARE_RENDERER.ba(1, 0);
+							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -166884611));
+							Class158_Sub1 class158_sub1 = Renderers.SOFTWARE_RENDERER.method8418();
 							class158_sub1.method13759(0, class160.method2808());
-							Class316.aClass505_3680.method8637(class158_sub1, -570536248);
+							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, -570536248);
 							((Class306) this).anInterface27_3604.method187(true, 1725591035);
-							Class316.aClass505_3680.method8416(class158_sub1, (byte) -101);
+							Renderers.SOFTWARE_RENDERER.method8416(class158_sub1, (byte) -101);
 							class160.method2742(0, 0, 0, i_6_, 1);
-							Class316.aClass505_3680.method8637(class158_sub1, -1655516585);
-							Class316.aClass505_3680.ba(1, 0);
+							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, -1655516585);
+							Renderers.SOFTWARE_RENDERER.ba(1, 0);
 							((Class306) this).anInterface27_3598.method187(true, 1725591035);
-							Class316.aClass505_3680.method8416(class158_sub1, (byte) -6);
+							Renderers.SOFTWARE_RENDERER.method8416(class158_sub1, (byte) -6);
 							class160.method2742(0, 0, 0, i, 1);
 						} else {
 							if (((Class306) this).anInterface27_3604 != null) {
@@ -175,21 +175,21 @@ public class Class306 implements Runnable {
 							}
 							if (((Class306) this).aBool3597) {
 								Class275.method4891((byte) -75);
-								if (null != Class316.aClass505_3680)
-									Class316.aClass505_3680.ba(1, 0);
+								if (null != Renderers.SOFTWARE_RENDERER)
+									Renderers.SOFTWARE_RENDERER.ba(1, 0);
 							}
-							((Class306) this).anInterface27_3598.method187((((Class306) this).aBool3597 || (null != Class316.aClass505_3680 && Class316.aClass505_3680.method8465())), 1725591035);
+							((Class306) this).anInterface27_3598.method187((((Class306) this).aBool3597 || (null != Renderers.SOFTWARE_RENDERER && Renderers.SOFTWARE_RENDERER.method8465())), 1725591035);
 						}
 						try {
-							if (Class316.aClass505_3680 != null && !(((Class306) this).anInterface27_3598 instanceof Class304))
-								Class316.aClass505_3680.method8393((short) 28821);
+							if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304))
+								Renderers.SOFTWARE_RENDERER.method8393((short) 28821);
 						} catch (Exception_Sub3 exception_sub3) {
 							Class151.method2594(new StringBuilder().append(exception_sub3.getMessage()).append(Class308.aclient3620.method4669(976372382)).toString(), exception_sub3, (byte) -54);
 							Class538.method11500(0, true, (byte) 24);
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Class316.aClass505_3680 != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(2013949561);
 				} catch (Exception exception) {
 					continue;
@@ -212,24 +212,24 @@ public class Class306 implements Runnable {
 						((Class306) this).anInterface27_3598.method187(((Class306) this).aBool3597, 1725591035);
 					else {
 						long l_8_ = Class169.method2869(1857528832);
-						if (null != Class316.aClass505_3680 && null != ((Class306) this).anInterface27_3604 && ((Class306) this).anInterface27_3604.method190(1085795256) != 0 && ((((Class306) this).aLong3601 * -3323946835697055613L) >= l_8_ - (long) ((Class306) this).anInterface27_3604.method190(848643442))) {
+						if (null != Renderers.SOFTWARE_RENDERER && null != ((Class306) this).anInterface27_3604 && ((Class306) this).anInterface27_3604.method190(1085795256) != 0 && ((((Class306) this).aLong3601 * -3323946835697055613L) >= l_8_ - (long) ((Class306) this).anInterface27_3604.method190(848643442))) {
 							int i = (int) (255L * (l_8_ - (-3323946835697055613L * ((Class306) this).aLong3601)) / (long) ((Class306) this).anInterface27_3604.method190(269013393));
 							int i_9_ = 255 - i;
 							i = i << 24 | 0xffffff;
 							i_9_ = i_9_ << 24 | 0xffffff;
 							Class275.method4891((byte) -46);
-							Class316.aClass505_3680.ba(1, 0);
-							NativeSprite class160 = (Class316.aClass505_3680.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, 662915370));
-							Class158_Sub1 class158_sub1 = Class316.aClass505_3680.method8418();
+							Renderers.SOFTWARE_RENDERER.ba(1, 0);
+							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, 662915370));
+							Class158_Sub1 class158_sub1 = Renderers.SOFTWARE_RENDERER.method8418();
 							class158_sub1.method13759(0, class160.method2808());
-							Class316.aClass505_3680.method8637(class158_sub1, -802865212);
+							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, -802865212);
 							((Class306) this).anInterface27_3604.method187(true, 1725591035);
-							Class316.aClass505_3680.method8416(class158_sub1, (byte) -113);
+							Renderers.SOFTWARE_RENDERER.method8416(class158_sub1, (byte) -113);
 							class160.method2742(0, 0, 0, i_9_, 1);
-							Class316.aClass505_3680.method8637(class158_sub1, -3990686);
-							Class316.aClass505_3680.ba(1, 0);
+							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, -3990686);
+							Renderers.SOFTWARE_RENDERER.ba(1, 0);
 							((Class306) this).anInterface27_3598.method187(true, 1725591035);
-							Class316.aClass505_3680.method8416(class158_sub1, (byte) -43);
+							Renderers.SOFTWARE_RENDERER.method8416(class158_sub1, (byte) -43);
 							class160.method2742(0, 0, 0, i, 1);
 						} else {
 							if (((Class306) this).anInterface27_3604 != null) {
@@ -239,21 +239,21 @@ public class Class306 implements Runnable {
 							}
 							if (((Class306) this).aBool3597) {
 								Class275.method4891((byte) -66);
-								if (null != Class316.aClass505_3680)
-									Class316.aClass505_3680.ba(1, 0);
+								if (null != Renderers.SOFTWARE_RENDERER)
+									Renderers.SOFTWARE_RENDERER.ba(1, 0);
 							}
-							((Class306) this).anInterface27_3598.method187((((Class306) this).aBool3597 || (null != Class316.aClass505_3680 && Class316.aClass505_3680.method8465())), 1725591035);
+							((Class306) this).anInterface27_3598.method187((((Class306) this).aBool3597 || (null != Renderers.SOFTWARE_RENDERER && Renderers.SOFTWARE_RENDERER.method8465())), 1725591035);
 						}
 						try {
-							if (Class316.aClass505_3680 != null && !(((Class306) this).anInterface27_3598 instanceof Class304))
-								Class316.aClass505_3680.method8393((short) 13587);
+							if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304))
+								Renderers.SOFTWARE_RENDERER.method8393((short) 13587);
 						} catch (Exception_Sub3 exception_sub3) {
 							Class151.method2594(new StringBuilder().append(exception_sub3.getMessage()).append(Class308.aclient3620.method4669(184564104)).toString(), exception_sub3, (byte) -34);
 							Class538.method11500(0, true, (byte) 24);
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Class316.aClass505_3680 != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(1434548492);
 				} catch (Exception exception) {
 					continue;

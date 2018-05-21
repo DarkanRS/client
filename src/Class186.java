@@ -11,7 +11,7 @@ public class Class186 {
 	static int anInt2349;
 
 	public static GraphicalRenderer method3081(Canvas canvas, Interface22 interface22, int i, int i_0_) {
-		return new Class505_Sub3(canvas, interface22, i, i_0_);
+		return new HardwareRenderer(canvas, interface22, i, i_0_);
 	}
 
 	Class186() throws Throwable {

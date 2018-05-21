@@ -133,8 +133,8 @@ public class Class215 implements Interface17 {
 				i_20_ = class437.anInt5337 * -1741480635;
 		}
 		int i_22_ = 0;
-		for (int i_23_ = 0; i_23_ < Class119.aClass426_1463.maxItemsCount * -1662523091; i_23_++) {
-			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_23_, 1398783345);
+		for (int i_23_ = 0; i_23_ < IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount * -1662523091; i_23_++) {
+			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_23_, 1398783345);
 			if ((!bool || class425.grandExchange) && -1 == class425.certTemplateId * -722914683 && -1203090775 * class425.landTemplateId == -1 && -1 == class425.bindTemplateId * 370155889 && 0 == class425.anInt5095 * -2136347513 && class425.aString5043.toLowerCase().indexOf(string) != -1) {
 				if (i != -1) {
 					if (bool_18_) {
@@ -162,7 +162,7 @@ public class Class215 implements Interface17 {
 		Class415.anInt4985 = i_22_ * 1978366005;
 		String[] strings = new String[Class415.anInt4985 * 560339485];
 		for (int i_26_ = 0; i_26_ < 560339485 * Class415.anInt4985; i_26_++)
-			strings[i_26_] = (Class119.aClass426_1463.getItemDefinitions(is[i_26_], 1650435768).aString5043);
+			strings[i_26_] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(is[i_26_], 1650435768).aString5043);
 		Class100.method1644(strings, Class308.aShortArray3621, (short) 2733);
 	}
 }

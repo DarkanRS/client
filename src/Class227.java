@@ -815,7 +815,7 @@ public class Class227 {
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
 			Node class282 = (Node) iterator.next();
-			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
+			is[i++] = (int) (class282.data * -3442165056282524525L);
 		}
 		return is;
 	}
@@ -855,7 +855,7 @@ public class Class227 {
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
 			Node class282 = (Node) iterator.next();
-			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
+			is[i++] = (int) (class282.data * -3442165056282524525L);
 		}
 		return is;
 	}
@@ -895,7 +895,7 @@ public class Class227 {
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
 			Node class282 = (Node) iterator.next();
-			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
+			is[i++] = (int) (class282.data * -3442165056282524525L);
 		}
 		return is;
 	}
@@ -935,7 +935,7 @@ public class Class227 {
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
 			Node class282 = (Node) iterator.next();
-			is[i++] = (int) (class282.aLong3379 * -3442165056282524525L);
+			is[i++] = (int) (class282.data * -3442165056282524525L);
 		}
 		return is;
 	}
@@ -975,7 +975,7 @@ public class Class227 {
 		Iterator iterator = class465.iterator();
 		while (iterator.hasNext()) {
 			Node class282 = (Node) iterator.next();
-			is[i_78_++] = (int) (class282.aLong3379 * -3442165056282524525L);
+			is[i_78_++] = (int) (class282.data * -3442165056282524525L);
 		}
 		return is;
 	}

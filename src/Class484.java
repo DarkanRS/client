@@ -726,7 +726,7 @@ public final class Class484 {
 			Class282_Sub43 class282_sub43 = new Class282_Sub43();
 			class282_sub43.aClass118_8053 = class118;
 			class282_sub43.anObjectArray8054 = class118.anObjectArray1271;
-			client.aClass482_7402.method8059(class282_sub43, -1019002091);
+			client.aClass482_7402.append(class282_sub43, -1019002091);
 		}
 	}
 }

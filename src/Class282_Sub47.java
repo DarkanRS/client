@@ -30,7 +30,7 @@ public class Class282_Sub47 extends Node {
 				}
 			}
 		}
-		Class540.aClass8_7138.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
+		Renderers.FONT_RENDERER.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.method8659(0, 350 - 1922934793 * Class179.anInt2230, -418109423 * Class349.anInt4083, -1, -51892104);
 		Class285.aClass8_3394.renderText(new StringBuilder().append("--> ").append(Class400.method6793(Class179.aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);

@@ -8,8 +8,7 @@ public class Class540 {
 	static int anInt7135;
 	public static int[] anIntArray7136;
 	static int anInt7137 = 0;
-	public static FontRenderer aClass8_7138;
-
+	
 	public static void method11559(boolean bool, boolean bool_0_) {
 		if (bool) {
 			anInt7137 -= -1089474401;

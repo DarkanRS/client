@@ -6,7 +6,7 @@ import java.awt.Canvas;
 
 public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 	float[] aFloatArray10236;
-	Class505_Sub3 aClass505_Sub3_10237;
+	HardwareRenderer aClass505_Sub3_10237;
 	int anInt10238;
 	int anInt10239;
 	int[] anIntArray10240;
@@ -37,7 +37,7 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 		return ((Class158_Sub2_Sub3) this).anInt10238 * -1977580999;
 	}
 
-	Class158_Sub2_Sub3(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_1_) {
+	Class158_Sub2_Sub3(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_1_) {
 		((Class158_Sub2_Sub3) this).aCanvas10241 = canvas;
 		((Class158_Sub2_Sub3) this).aClass505_Sub3_10237 = class505_sub3;
 		((Class158_Sub2_Sub3) this).anInt10238 = i * -1379480567;
@@ -115,17 +115,17 @@ public abstract class Class158_Sub2_Sub3 extends Class158_Sub2 {
 		return true;
 	}
 
-	static Class158_Sub2_Sub3 method15633(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_3_) {
+	static Class158_Sub2_Sub3 method15633(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_3_) {
 		Class158_Sub2_Sub3_Sub1 class158_sub2_sub3_sub1 = new Class158_Sub2_Sub3_Sub1(class505_sub3, canvas, i, i_3_);
 		return class158_sub2_sub3_sub1;
 	}
 
-	static Class158_Sub2_Sub3 method15634(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_4_) {
+	static Class158_Sub2_Sub3 method15634(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_4_) {
 		Class158_Sub2_Sub3_Sub1 class158_sub2_sub3_sub1 = new Class158_Sub2_Sub3_Sub1(class505_sub3, canvas, i, i_4_);
 		return class158_sub2_sub3_sub1;
 	}
 
-	static Class158_Sub2_Sub3 method15635(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_5_) {
+	static Class158_Sub2_Sub3 method15635(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_5_) {
 		Class158_Sub2_Sub3_Sub1 class158_sub2_sub3_sub1 = new Class158_Sub2_Sub3_Sub1(class505_sub3, canvas, i, i_5_);
 		return class158_sub2_sub3_sub1;
 	}

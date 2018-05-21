@@ -16,7 +16,7 @@ public abstract class Class52 implements Interface2 {
 
 	public void method22(int i) {
 		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 32);
-		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
+		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public boolean method10(int i) {
@@ -88,27 +88,27 @@ public abstract class Class52 implements Interface2 {
 
 	public void method15() {
 		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 91);
-		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
+		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method16() {
 		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 27);
-		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
+		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method23() {
 		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 126);
-		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
+		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method18() {
 		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 51);
-		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
+		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method19() {
 		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 125);
-		((Class52) this).aClass8_492 = (Class316.aClass505_3680.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
+		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	Class52(Index class317, Index class317_12_, Class350 class350) {
@@ -241,7 +241,7 @@ public abstract class Class52 implements Interface2 {
 		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_34_, class282_sub35.readString(-392505636), class282_sub35.readString(846172936), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_36_ = class282_sub35.readUnsignedByte();
 		for (int i_37_ = 0; i_37_ < i_36_; i_37_++)
-			((Class282_Sub50_Sub6) class282_sub50_sub6).aClass482_9537.method8059(new Class282_Sub28(class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort()), 1886479392);
+			((Class282_Sub50_Sub6) class282_sub50_sub6).aClass482_9537.append(new Class282_Sub28(class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort()), 1886479392);
 		class282_sub50_sub6.method14779((byte) 7);
 		return class282_sub50_sub6;
 	}

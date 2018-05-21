@@ -380,7 +380,7 @@ public class Class378 {
 		Class20.aClass31_204.method802(5, -957587210);
 		client.aClass257_7353.method4436(-1981388866).method7896(5, (byte) -88);
 		Class350_Sub1.aClass406_7757.method6832(5, 1789161968);
-		Class119.aClass426_1463.method7156(5, (byte) 44);
+		IndexLoaders.ITEM_INDEX_LOADER.method7156(5, (byte) 44);
 		Class330.aClass523_3868.method11210(5, (byte) -68);
 		Class96_Sub20.aClass515_9416.method8847(5, 1748344729);
 		Class16.aClass230_147.method3898(5, 1935231941);

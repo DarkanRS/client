@@ -212,7 +212,7 @@ public class Class435 {
 				((Class282_Sub42) class282_sub42).anIntArray8036[i_6_] = -5;
 			}
 		}
-		aClass482_5332.method8059(class282_sub42, -1342758977);
+		aClass482_5332.append(class282_sub42, -1342758977);
 	}
 
 	public static void method7298(RsByteBuffer class282_sub35, int i) {
@@ -295,7 +295,7 @@ public class Class435 {
 				((Class282_Sub42) class282_sub42).anIntArray8036[i_21_] = -5;
 			}
 		}
-		aClass482_5332.method8059(class282_sub42, 1807094121);
+		aClass482_5332.append(class282_sub42, 1807094121);
 	}
 
 	public static void method7299(RsBitsBuffer class282_sub35_sub2) {

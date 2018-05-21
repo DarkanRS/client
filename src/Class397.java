@@ -84,7 +84,7 @@ public class Class397 implements Interface38 {
 			}
 			if (null != ((Class282_Sub48) class282_sub48).anIntArray8102)
 				((Class282_Sub48) class282_sub48).anInt8080 = (1317424347 * ((Class282_Sub48) class282_sub48).anInt8072 + (int) (Math.random() * (double) (-1084771983 * (((Class282_Sub48) class282_sub48).anInt8101) - (((Class282_Sub48) class282_sub48).anInt8072 * 1317424347)))) * 401671005;
-			Class282_Sub48.aClass482_8073.method8059(class282_sub48, -427234199);
+			Class282_Sub48.aClass482_8073.append(class282_sub48, -427234199);
 		} else if (class521_sub1_sub1_sub2_sub2 != null) {
 			((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085 = class521_sub1_sub1_sub2_sub2;
 			Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
@@ -103,7 +103,7 @@ public class Class397 implements Interface38 {
 				((Class282_Sub48) class282_sub48).anInt8093 = 779306973 * class409.anInt4911;
 				((Class282_Sub48) class282_sub48).anInt8081 = 1624181085 * (class409.anInt4908 * 1412189553 << 9);
 			}
-			Class282_Sub48.aClass482_8074.method8059(class282_sub48, 1710217984);
+			Class282_Sub48.aClass482_8074.append(class282_sub48, 1710217984);
 		} else if (null != class521_sub1_sub1_sub2_sub1) {
 			((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086 = class521_sub1_sub1_sub2_sub1;
 			((Class282_Sub48) class282_sub48).anInt8079 = (i_0_ + class521_sub1_sub1_sub2_sub1.method15805(828768449) << 9) * 1480845005;

@@ -152,13 +152,13 @@ public abstract class Class115 implements Interface7 {
 	}
 
 	public static boolean method1952(boolean bool, int i) {
-		boolean bool_57_ = Class316.aClass505_3680.method8471();
+		boolean bool_57_ = Renderers.SOFTWARE_RENDERER.method8471();
 		if (bool_57_ != bool) {
 			if (bool) {
-				if (!Class316.aClass505_3680.method8469())
+				if (!Renderers.SOFTWARE_RENDERER.method8469())
 					bool = false;
 			} else
-				Class316.aClass505_3680.method8490();
+				Renderers.SOFTWARE_RENDERER.method8490();
 			if (bool_57_ != bool) {
 				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub12_8195, bool ? 1 : 0, -2016706726);
 				Class190.method3148((byte) 111);

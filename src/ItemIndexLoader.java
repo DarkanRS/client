@@ -12,7 +12,7 @@ public class ItemIndexLoader implements IndexLoader {
 	SoftCache cache = new SoftCache(64);
 	String[] defaultGroundOptions;
 	Index meshIndex;
-	Class420 aClass420_5112;
+	SoftwareItemRender softwareItemRender;
 	AttributesDefaultsLoader attrDefaults;
 	public Class212 aClass212_5114;
 	SoftCache aClass229_5115 = new SoftCache(50);
@@ -52,7 +52,7 @@ public class ItemIndexLoader implements IndexLoader {
 			if (defs.cs2Map != null) {
 				boolean bool = false;
 				for (Node class282 = defs.cs2Map.method7750(-778830741); class282 != null; class282 = defs.cs2Map.method7751((byte) 57)) {
-					AttributeDefault class437 = (((ItemIndexLoader) this).attrDefaults.method7069((int) (class282.aLong3379 * -3442165056282524525L), (byte) 0));
+					AttributeDefault class437 = (((ItemIndexLoader) this).attrDefaults.method7069((int) (class282.data * -3442165056282524525L), (byte) 0));
 					if (class437.autoDisable)
 						class282.unlink(-371378792);
 					else
@@ -68,42 +68,42 @@ public class ItemIndexLoader implements IndexLoader {
 		return defs;
 	}
 
-	public NativeSprite renderItemSprite(GraphicalRenderer class505, GraphicalRenderer class505_1_, int i, int i_2_, int i_3_, int i_4_, boolean bool, boolean bool_5_, int i_6_, FontRenderer class8, PlayerAppearance class238, byte i_7_) {
-		if (!bool_5_) {
-			NativeSprite class160 = method7162(class505_1_, i, i_2_, i_3_, i_4_, i_6_, class238, 206421629);
-			if (null != class160)
-				return class160;
+	public NativeSprite renderItemSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int itemId, int amount, int outlineSize, int shadowColor, boolean zoomedIn, boolean hardwareRendering, int renderStack, FontRenderer fontRenderer, PlayerAppearance playerAppearance, byte i_7_) {
+		if (!hardwareRendering) {
+			NativeSprite sprite = softwareRender(softwareRenderer, itemId, amount, outlineSize, shadowColor, renderStack, playerAppearance, 206421629);
+			if (null != sprite)
+				return sprite;
 		}
-		ItemDefinitions defs = getItemDefinitions(i, 1779200762);
-		if (i_2_ > 1 && defs.stackIds != null) {
-			int i_8_ = -1;
-			for (int i_9_ = 0; i_9_ < 10; i_9_++) {
-				if (i_2_ >= defs.stackAmounts[i_9_] && 0 != defs.stackAmounts[i_9_])
-					i_8_ = defs.stackIds[i_9_];
+		ItemDefinitions defs = getItemDefinitions(itemId, 1779200762);
+		if (amount > 1 && defs.stackIds != null) {
+			int stackItemId = -1;
+			for (int i = 0; i < 10; i++) {
+				if (amount >= defs.stackAmounts[i] && 0 != defs.stackAmounts[i])
+					stackItemId = defs.stackIds[i];
 			}
-			if (i_8_ != -1)
-				defs = getItemDefinitions(i_8_, 486684892);
+			if (stackItemId != -1)
+				defs = getItemDefinitions(stackItemId, 486684892);
 		}
-		int[] is = defs.renderToSprite(class505, class505_1_, i_2_, i_3_, i_4_, bool, i_6_, class8, class238, (short) 255);
-		if (is == null)
+		int[] pixels = defs.renderToSprite(hardwareRenderer, softwareRenderer, amount, outlineSize, shadowColor, zoomedIn, renderStack, fontRenderer, playerAppearance, (short) 255);
+		if (pixels == null)
 			return null;
-		NativeSprite class160;
-		if (bool_5_)
-			class160 = class505.createNativeSprite(is, 0, 36, 36, 32, -1903449230);
+		NativeSprite sprite;
+		if (hardwareRendering)
+			sprite = hardwareRenderer.createNativeSprite(pixels, 0, 36, 36, 32, -1903449230);
 		else
-			class160 = class505_1_.createNativeSprite(is, 0, 36, 36, 32, -923043708);
-		if (!bool_5_) {
-			Class420 class420 = new Class420();
-			((Class420) class420).anInt5008 = class505_1_.rendererId * -557951377;
-			((Class420) class420).anInt5007 = i * 412172861;
-			((Class420) class420).anInt5006 = -1802585529 * i_2_;
-			((Class420) class420).anInt5005 = i_3_ * -1113099245;
-			((Class420) class420).anInt5009 = i_4_ * -621770313;
-			((Class420) class420).anInt5010 = -190647633 * i_6_;
-			((Class420) class420).aBool5011 = class238 != null;
-			aClass212_5114.method3644(class160, class420);
+			sprite = softwareRenderer.createNativeSprite(pixels, 0, 36, 36, 32, -923043708);
+		if (!hardwareRendering) {
+			SoftwareItemRender softwareItemRender = new SoftwareItemRender();
+			((SoftwareItemRender) softwareItemRender).rendererId = softwareRenderer.rendererId * -557951377;
+			((SoftwareItemRender) softwareItemRender).itemId = itemId * 412172861;
+			((SoftwareItemRender) softwareItemRender).itemAmount = -1802585529 * amount;
+			((SoftwareItemRender) softwareItemRender).outlineSize = outlineSize * -1113099245;
+			((SoftwareItemRender) softwareItemRender).shadowColor = shadowColor * -621770313;
+			((SoftwareItemRender) softwareItemRender).renderStack = -190647633 * renderStack;
+			((SoftwareItemRender) softwareItemRender).hasPlayerAppearance = playerAppearance != null;
+			aClass212_5114.method3644(sprite, softwareItemRender);
 		}
-		return class160;
+		return sprite;
 	}
 
 	public void method7148(boolean bool, int i) {
@@ -158,7 +158,7 @@ public class ItemIndexLoader implements IndexLoader {
 
 	public ItemIndexLoader(Game class486, Language class495, boolean bool, AttributesDefaultsLoader class424, Index class317, Index class317_16_) {
 		aClass212_5114 = new Class212(250);
-		((ItemIndexLoader) this).aClass420_5112 = new Class420();
+		((ItemIndexLoader) this).softwareItemRender = new SoftwareItemRender();
 		((ItemIndexLoader) this).game = class486;
 		((ItemIndexLoader) this).language = class495;
 		((ItemIndexLoader) this).membersOnly = bool;
@@ -177,15 +177,15 @@ public class ItemIndexLoader implements IndexLoader {
 		((ItemIndexLoader) this).defaultInventoryOptions = (new String[] { null, null, null, null, Message.aClass433_5168.translate((((ItemIndexLoader) this).language), -1623734133) });
 	}
 
-	public NativeSprite method7162(GraphicalRenderer class505, int i, int i_25_, int i_26_, int i_27_, int i_28_, PlayerAppearance class238, int i_29_) {
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).anInt5008 = -557951377 * class505.rendererId;
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).anInt5007 = 412172861 * i;
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).anInt5006 = -1802585529 * i_25_;
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).anInt5005 = i_26_ * -1113099245;
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).anInt5009 = i_27_ * -621770313;
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).anInt5010 = i_28_ * -190647633;
-		((Class420) ((ItemIndexLoader) this).aClass420_5112).aBool5011 = class238 != null;
-		return ((NativeSprite) aClass212_5114.method3654(((ItemIndexLoader) this).aClass420_5112));
+	public NativeSprite softwareRender(GraphicalRenderer softwareRenderer, int i, int i_25_, int i_26_, int i_27_, int i_28_, PlayerAppearance class238, int i_29_) {
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).rendererId = -557951377 * softwareRenderer.rendererId;
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).itemId = 412172861 * i;
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).itemAmount = -1802585529 * i_25_;
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).outlineSize = i_26_ * -1113099245;
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).shadowColor = i_27_ * -621770313;
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).renderStack = i_28_ * -190647633;
+		((SoftwareItemRender) ((ItemIndexLoader) this).softwareItemRender).hasPlayerAppearance = class238 != null;
+		return ((NativeSprite) aClass212_5114.method3654(((ItemIndexLoader) this).softwareItemRender));
 	}
 
 	public void method7166(int i) {

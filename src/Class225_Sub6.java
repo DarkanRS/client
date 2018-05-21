@@ -47,7 +47,7 @@ public class Class225_Sub6 extends Class225 {
 	}
 
 	static void method13413(int i) {
-		Class540.aClass8_7138 = null;
+		Renderers.FONT_RENDERER = null;
 		Class16.aClass8_144 = null;
 		Class285.aClass8_3394 = null;
 		Class282_Sub21.aClass160Array7673 = null;

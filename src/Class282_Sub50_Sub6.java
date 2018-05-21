@@ -177,7 +177,7 @@ public class Class282_Sub50_Sub6 extends Class282_Sub50 {
 		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_19_, class282_sub35.readString(418112910), class282_sub35.readString(629146262), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_20_ = class282_sub35.readUnsignedByte();
 		for (int i_21_ = 0; i_21_ < i_20_; i_21_++)
-			((Class282_Sub50_Sub6) class282_sub50_sub6).aClass482_9537.method8059(new Class282_Sub28(class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort()), 745692094);
+			((Class282_Sub50_Sub6) class282_sub50_sub6).aClass482_9537.append(new Class282_Sub28(class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort()), 745692094);
 		class282_sub50_sub6.method14779((byte) 64);
 		return class282_sub50_sub6;
 	}

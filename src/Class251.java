@@ -2,9 +2,13 @@
 /* Class251 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.util.Arrays;
+
+import javax.imageio.ImageIO;
 
 public final class Class251 {
 	static final int anInt3094 = 128;
@@ -1121,8 +1125,8 @@ public final class Class251 {
 
 	static final void method4310(CS2Executor class527, int i) {
 		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) != 0);
-		if (Class84.myPlayer.aClass238_10558 != null)
-			Class84.myPlayer.aClass238_10558.method4003(bool, -794449734);
+		if (Class84.myPlayer.playerAppearance != null)
+			Class84.myPlayer.playerAppearance.method4003(bool, -794449734);
 	}
 
 	static final void method4311(CS2Executor class527, int i) {
@@ -1139,7 +1143,7 @@ public final class Class251 {
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
-	public static void method4313(String string, boolean bool, boolean bool_173_, int i) {
+	public static void handleCommand(String string, boolean bool, boolean bool_173_, int i) {
 		do {
 			try {
 				if (string.equalsIgnoreCase("commands") || string.equalsIgnoreCase("help")) {
@@ -1159,7 +1163,7 @@ public final class Class251 {
 					else
 						Class209.method3598("FPS off", -318501716);
 				} else if (string.equals("renderer")) {
-					Class168 class168 = Class316.aClass505_3680.method8392();
+					Class168 class168 = Renderers.SOFTWARE_RENDERER.method8392();
 					Class209.method3598(new StringBuilder().append("Toolkit ID: ").append(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(174476725)).toString(), -199774023);
 					Class209.method3598(new StringBuilder().append("Vendor: ").append(class168.anInt2052 * 1681700525).toString(), -1266717403);
 					Class209.method3598(new StringBuilder().append("Name: ").append(class168.aString2051).toString(), -2120239732);
@@ -1206,6 +1210,26 @@ public final class Class251 {
 						Class209.method3598("Success", -1837857918);
 					else
 						Class209.method3598("Failure", -223811881);
+					return;
+				}
+				if (string.startsWith("dumpitems")) {
+					for (int itemId = 0; itemId < 24806; itemId++) {
+						int[] is = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(itemId, 1).renderToSprite(Class182.HARDWARE_RENDERER, Renderers.SOFTWARE_RENDERER, 1, 1, -13623264, false, 0, Renderers.FONT_RENDERER, Class84.myPlayer.playerAppearance, (short) 1);
+						try {
+							int w = (int) Math.sqrt((int) is.length) - 1;
+							BufferedImage bImg = new BufferedImage(36, 32, BufferedImage.TYPE_INT_ARGB);
+							bImg.setRGB(0, 0, w, w, is, 0, w);
+							for (int by = 0; by < w; by++) {
+								for (int bx = 0; bx < w; bx++) {
+									bImg.setRGB(bx, by, is[(by * 36) + bx]);
+								}
+							}
+							File outFile = new File("./items/"+itemId+".png");
+							ImageIO.write(bImg, "png", outFile);
+						} catch (Exception ee) {
+							ee.printStackTrace();
+						}
+					}
 					return;
 				}
 				if (string.startsWith("setlobby ")) {

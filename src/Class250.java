@@ -256,11 +256,11 @@ public class Class250 {
 							NativeSprite class160;
 							NativeSprite class160_25_;
 							if (null != class521_sub1_sub1_sub2_sub1 && class521_sub1_sub1_sub2_sub1.aBool10571) {
-								class160 = class198.method3224((Class316.aClass505_3680), 1826512281);
-								class160_25_ = class198.method3222((Class316.aClass505_3680), -1448626109);
+								class160 = class198.method3224((Renderers.SOFTWARE_RENDERER), 1826512281);
+								class160_25_ = class198.method3222((Renderers.SOFTWARE_RENDERER), -1448626109);
 							} else {
-								class160 = class198.method3208((Class316.aClass505_3680), 549654584);
-								class160_25_ = class198.method3207((Class316.aClass505_3680), -2032776037);
+								class160 = class198.method3208((Renderers.SOFTWARE_RENDERER), 549654584);
+								class160_25_ = class198.method3207((Renderers.SOFTWARE_RENDERER), -2032776037);
 							}
 							if (null != class160 && null != class160_25_) {
 								int i_26_ = 255;
@@ -286,14 +286,14 @@ public class Class250 {
 									int i_35_ = i_26_ << 24;
 									int i_36_ = i_35_ | 0xffffff;
 									class160.method2742(i_34_, i_24_, 0, i_36_, 1);
-									Class316.aClass505_3680.o(i_34_, i_24_, i_34_ + i_27_, i_24_ + i_33_);
+									Renderers.SOFTWARE_RENDERER.o(i_34_, i_24_, i_34_ + i_27_, i_24_ + i_33_);
 									class160_25_.method2742(i_34_, i_24_, 0, i_36_, 1);
 								} else {
 									class160.method2752(i_34_, i_24_);
-									Class316.aClass505_3680.o(i_34_, i_24_, i_27_ + i_34_, i_24_ + i_33_);
+									Renderers.SOFTWARE_RENDERER.o(i_34_, i_24_, i_27_ + i_34_, i_24_ + i_33_);
 									class160_25_.method2752(i_34_, i_24_);
 								}
-								Class316.aClass505_3680.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
+								Renderers.SOFTWARE_RENDERER.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
 								i_24_ -= 2;
 								bool = true;
 							}
@@ -415,7 +415,7 @@ public class Class250 {
 								int i_70_ = 0;
 								int i_71_ = 0;
 								int i_72_ = 0;
-								NativeSprite class160_73_ = class228.method3835((Class316.aClass505_3680), 1623036719);
+								NativeSprite class160_73_ = class228.method3835((Renderers.SOFTWARE_RENDERER), 1623036719);
 								if (null != class160_73_) {
 									i_53_ = class160_73_.method2747();
 									int i_74_ = class160_73_.method2793();
@@ -424,7 +424,7 @@ public class Class250 {
 									class160_73_.method2744(client.anIntArray7461);
 									i_57_ = client.anIntArray7461[0];
 								}
-								NativeSprite class160_75_ = class228.method3836((Class316.aClass505_3680), -47251071);
+								NativeSprite class160_75_ = class228.method3836((Renderers.SOFTWARE_RENDERER), -47251071);
 								if (class160_75_ != null) {
 									i_54_ = class160_75_.method2747();
 									int i_76_ = class160_75_.method2793();
@@ -433,7 +433,7 @@ public class Class250 {
 									class160_75_.method2744(client.anIntArray7461);
 									i_58_ = client.anIntArray7461[0];
 								}
-								NativeSprite class160_77_ = class228.method3832((Class316.aClass505_3680), 1942118537);
+								NativeSprite class160_77_ = class228.method3832((Renderers.SOFTWARE_RENDERER), 1942118537);
 								if (null != class160_77_) {
 									i_55_ = class160_77_.method2747();
 									int i_78_ = class160_77_.method2793();
@@ -442,7 +442,7 @@ public class Class250 {
 									class160_77_.method2744(client.anIntArray7461);
 									i_59_ = client.anIntArray7461[0];
 								}
-								NativeSprite class160_79_ = class228.method3838((Class316.aClass505_3680), (byte) 13);
+								NativeSprite class160_79_ = class228.method3838((Renderers.SOFTWARE_RENDERER), (byte) 13);
 								if (class160_79_ != null) {
 									i_56_ = class160_79_.method2747();
 									int i_80_ = class160_79_.method2793();
@@ -452,7 +452,7 @@ public class Class250 {
 									i_60_ = client.anIntArray7461[0];
 								}
 								if (class228_48_ != null) {
-									class160 = (class228_48_.method3835(Class316.aClass505_3680, 1623036719));
+									class160 = (class228_48_.method3835(Renderers.SOFTWARE_RENDERER, 1623036719));
 									if (null != class160) {
 										i_64_ = class160.method2747();
 										int i_81_ = class160.method2793();
@@ -461,7 +461,7 @@ public class Class250 {
 										class160.method2744(client.anIntArray7461);
 										i_68_ = client.anIntArray7461[0];
 									}
-									class160_61_ = (class228_48_.method3836(Class316.aClass505_3680, -47251071));
+									class160_61_ = (class228_48_.method3836(Renderers.SOFTWARE_RENDERER, -47251071));
 									if (class160_61_ != null) {
 										i_65_ = class160_61_.method2747();
 										int i_82_ = class160_61_.method2793();
@@ -470,7 +470,7 @@ public class Class250 {
 										class160_61_.method2744(client.anIntArray7461);
 										i_69_ = client.anIntArray7461[0];
 									}
-									class160_62_ = (class228_48_.method3832(Class316.aClass505_3680, 1942118537));
+									class160_62_ = (class228_48_.method3832(Renderers.SOFTWARE_RENDERER, 1942118537));
 									if (class160_62_ != null) {
 										i_66_ = class160_62_.method2747();
 										int i_83_ = class160_62_.method2793();
@@ -479,7 +479,7 @@ public class Class250 {
 										class160_62_.method2744(client.anIntArray7461);
 										i_70_ = client.anIntArray7461[0];
 									}
-									class160_63_ = (class228_48_.method3838(Class316.aClass505_3680, (byte) -1));
+									class160_63_ = (class228_48_.method3838(Renderers.SOFTWARE_RENDERER, (byte) -1));
 									if (null != class160_63_) {
 										i_67_ = class160_63_.method2747();
 										int i_84_ = class160_63_.method2793();
@@ -489,8 +489,8 @@ public class Class250 {
 										i_71_ = client.anIntArray7461[0];
 									}
 								}
-								FontRenderer class8 = Class540.aClass8_7138;
-								FontRenderer class8_85_ = Class540.aClass8_7138;
+								FontRenderer class8 = Renderers.FONT_RENDERER;
+								FontRenderer class8_85_ = Renderers.FONT_RENDERER;
 								Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 								Class414 class414_86_ = Class282_Sub17_Sub2.aClass414_9933;
 								int i_87_ = class228.anInt2849 * -243009855;
@@ -745,9 +745,9 @@ public class Class250 {
 				if (i_148_ == 4) {
 					int i_150_ = 150 - (client.aClass163Array7419[i_137_].method2833(-315932327) * 150 / client.aClass163Array7419[i_137_].method2832(744941042));
 					int i_151_ = i_150_ * (Class288.aClass414_3438.method6946(string, -1967833701) + 100) / 150;
-					Class316.aClass505_3680.o(i + i_138_ - 50, i_15_, 50 + (i + i_138_), i_15_ + i_17_);
+					Renderers.SOFTWARE_RENDERER.o(i + i_138_ - 50, i_15_, 50 + (i + i_138_), i_15_ + i_17_);
 					Class285.aClass8_3394.renderText(string, 50 + (i + i_138_) - i_151_, i_139_ + i_15_, i_147_, -16777216, -418109423);
-					Class316.aClass505_3680.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
+					Renderers.SOFTWARE_RENDERER.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
 				}
 				if (i_148_ == 5) {
 					int i_152_ = 150 - (client.aClass163Array7419[i_137_].method2833(-315932327) * 150 / client.aClass163Array7419[i_137_].method2832(1124068407));
@@ -757,9 +757,9 @@ public class Class250 {
 					else if (i_152_ > 125)
 						i_153_ = i_152_ - 125;
 					int i_154_ = (397683159 * Class288.aClass414_3438.anInt4978 + -1518951631 * Class288.aClass414_3438.anInt4979);
-					Class316.aClass505_3680.o(i, i_15_ + i_139_ - i_154_ - 1, i_16_ + i, i_139_ + i_15_ + 5);
+					Renderers.SOFTWARE_RENDERER.o(i, i_15_ + i_139_ - i_154_ - 1, i_16_ + i, i_139_ + i_15_ + 5);
 					Class285.aClass8_3394.method360(string, i_138_ + i, i_153_ + (i_139_ + i_15_), i_147_, -16777216, 768492991);
-					Class316.aClass505_3680.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
+					Renderers.SOFTWARE_RENDERER.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
 				}
 			} else
 				Class285.aClass8_3394.method360(string, i + i_138_, i_139_ + i_15_, -256, -16777216, 768492991);

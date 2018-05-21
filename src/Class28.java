@@ -26,11 +26,11 @@ public class Class28 implements Interface2 {
 			int i = ((((Class28) this).aClass365_349.aClass356_4225.method6221(((Class28) this).aClass365_349.anInt4227 * -547232823, 150480619 * client.anInt7439, 1460019555)) + ((Class28) this).aClass365_349.anInt4221 * 1878539677);
 			int i_0_ = ((((Class28) this).aClass365_349.aClass353_4226.method6198(1416311209 * ((Class28) this).aClass365_349.anInt4228, 1176039023 * client.anInt7312, 1018239308)) + ((Class28) this).aClass365_349.anInt4223 * -1081607939);
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8430(i, i_0_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
+				Renderers.SOFTWARE_RENDERER.method8430(i, i_0_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
 			i_0_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1067, i, i_0_, 5, -2023522211) * 12;
 			i_0_ += 8;
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8433(i, i_0_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i - 1), i_0_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
+				Renderers.SOFTWARE_RENDERER.method8433(i, i_0_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i - 1), i_0_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
 			i_0_ = ++i_0_ + method770(Class285.aClass8_3394, ((Class105) class105).aString1066, i, i_0_, 5, -2109162483) * 12;
 			i_0_ += 5;
 			i_0_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1068, i, i_0_, 5, 282496799) * 12;
@@ -43,11 +43,11 @@ public class Class28 implements Interface2 {
 			int i_1_ = ((((Class28) this).aClass365_349.aClass356_4225.method6221(((Class28) this).aClass365_349.anInt4227 * -547232823, 150480619 * client.anInt7439, 1591676659)) + ((Class28) this).aClass365_349.anInt4221 * 1878539677);
 			int i_2_ = ((((Class28) this).aClass365_349.aClass353_4226.method6198(1416311209 * ((Class28) this).aClass365_349.anInt4228, 1176039023 * client.anInt7312, 1855171415)) + ((Class28) this).aClass365_349.anInt4223 * -1081607939);
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8430(i_1_, i_2_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
+				Renderers.SOFTWARE_RENDERER.method8430(i_1_, i_2_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
 			i_2_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1067, i_1_, i_2_, 5, -945681217) * 12;
 			i_2_ += 8;
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8433(i_1_, i_2_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i_1_ - 1), i_2_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
+				Renderers.SOFTWARE_RENDERER.method8433(i_1_, i_2_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i_1_ - 1), i_2_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
 			i_2_ = ++i_2_ + method770(Class285.aClass8_3394, ((Class105) class105).aString1066, i_1_, i_2_, 5, -2057271844) * 12;
 			i_2_ += 5;
 			i_2_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1068, i_1_, i_2_, 5, 34451052) * 12;
@@ -60,11 +60,11 @@ public class Class28 implements Interface2 {
 			int i = ((((Class28) this).aClass365_349.aClass356_4225.method6221(((Class28) this).aClass365_349.anInt4227 * -547232823, 150480619 * client.anInt7439, 1607557191)) + ((Class28) this).aClass365_349.anInt4221 * 1878539677);
 			int i_3_ = ((((Class28) this).aClass365_349.aClass353_4226.method6198(1416311209 * ((Class28) this).aClass365_349.anInt4228, 1176039023 * client.anInt7312, 1779448896)) + ((Class28) this).aClass365_349.anInt4223 * -1081607939);
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8430(i, i_3_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
+				Renderers.SOFTWARE_RENDERER.method8430(i, i_3_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
 			i_3_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1067, i, i_3_, 5, -1904326509) * 12;
 			i_3_ += 8;
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8433(i, i_3_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i - 1), i_3_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
+				Renderers.SOFTWARE_RENDERER.method8433(i, i_3_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i - 1), i_3_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
 			i_3_ = ++i_3_ + method770(Class285.aClass8_3394, ((Class105) class105).aString1066, i, i_3_, 5, 141561560) * 12;
 			i_3_ += 5;
 			i_3_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1068, i, i_3_, 5, -279930969) * 12;
@@ -81,11 +81,11 @@ public class Class28 implements Interface2 {
 			int i = ((((Class28) this).aClass365_349.aClass356_4225.method6221(((Class28) this).aClass365_349.anInt4227 * -547232823, 150480619 * client.anInt7439, 1779044306)) + ((Class28) this).aClass365_349.anInt4221 * 1878539677);
 			int i_7_ = ((((Class28) this).aClass365_349.aClass353_4226.method6198(1416311209 * ((Class28) this).aClass365_349.anInt4228, 1176039023 * client.anInt7312, 1414644446)) + ((Class28) this).aClass365_349.anInt4223 * -1081607939);
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8430(i, i_7_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
+				Renderers.SOFTWARE_RENDERER.method8430(i, i_7_, -547232823 * ((Class28) this).aClass365_349.anInt4227, ((Class28) this).aClass365_349.anInt4228 * 1416311209, ((Class28) this).aClass365_349.anInt4220 * -1214034363, 0);
 			i_7_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1067, i, i_7_, 5, 1283831250) * 12;
 			i_7_ += 8;
 			if (((Class28) this).aClass365_349.aBool4230)
-				Class316.aClass505_3680.method8433(i, i_7_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i - 1), i_7_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
+				Renderers.SOFTWARE_RENDERER.method8433(i, i_7_, (((Class28) this).aClass365_349.anInt4227 * -547232823 + i - 1), i_7_, -1214034363 * ((Class28) this).aClass365_349.anInt4220, 0);
 			i_7_ = ++i_7_ + method770(Class285.aClass8_3394, ((Class105) class105).aString1066, i, i_7_, 5, -318852891) * 12;
 			i_7_ += 5;
 			i_7_ += method770(Class285.aClass8_3394, ((Class105) class105).aString1068, i, i_7_, 5, -633571226) * 12;
@@ -158,8 +158,8 @@ public class Class28 implements Interface2 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_10_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_11_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		if (null != Class84.myPlayer.aClass238_10558)
-			Class84.myPlayer.aClass238_10558.method3995(i_10_, i_11_, Class119.aClass426_1463, (byte) 57);
+		if (null != Class84.myPlayer.playerAppearance)
+			Class84.myPlayer.playerAppearance.method3995(i_10_, i_11_, IndexLoaders.ITEM_INDEX_LOADER, (byte) 57);
 	}
 
 	static final void method774(Class118 class118, Class98 class98, CS2Executor class527, int i) {

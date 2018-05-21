@@ -64,7 +64,7 @@ public class Class184 {
 	}
 
 	public final void method3049(Class282_Sub23 class282_sub23, int i) {
-		((Class184) this).aClass482_2280.method8059(class282_sub23, 1467393733);
+		((Class184) this).aClass482_2280.append(class282_sub23, 1467393733);
 		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
 		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
@@ -156,14 +156,14 @@ public class Class184 {
 	}
 
 	public final void method3057(Class282_Sub23 class282_sub23) {
-		((Class184) this).aClass482_2280.method8059(class282_sub23, 543008654);
+		((Class184) this).aClass482_2280.append(class282_sub23, 543008654);
 		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
 		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
 	}
 
 	public final void method3058(Class282_Sub23 class282_sub23) {
-		((Class184) this).aClass482_2280.method8059(class282_sub23, -1756231606);
+		((Class184) this).aClass482_2280.append(class282_sub23, -1756231606);
 		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
 		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
@@ -193,7 +193,7 @@ public class Class184 {
 	}
 
 	public final void method3062(Class282_Sub23 class282_sub23) {
-		((Class184) this).aClass482_2280.method8059(class282_sub23, -1560002099);
+		((Class184) this).aClass482_2280.append(class282_sub23, -1560002099);
 		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
 		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;

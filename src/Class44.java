@@ -318,7 +318,7 @@ public class Class44 implements Interface46 {
 
 	static final void method911(CS2Executor class527, int i) {
 		int i_33_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_33_, 1594974983);
+		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_33_, 1594974983);
 		int i_34_;
 		if (class425.aBool5101)
 			i_34_ = class425.anInt5102 * 712312847;

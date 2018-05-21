@@ -694,7 +694,7 @@ public class Class9 {
 								Class311.aString3643 = class282_sub35_sub2.readString(579244387);
 								client.aClass257_7353.method4436(-1655099132).method7912(client.membersWorld, 65280);
 								Class6.aClass340_45.method6052((short) -22706).method4436(-1590000445).method7912(client.membersWorld, 65280);
-								Class119.aClass426_1463.method7148(client.membersWorld, -1535563485);
+								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1535563485);
 								Class350_Sub1.aClass406_7757.method6847(client.membersWorld, (byte) 70);
 							} else {
 								if (!aClass184_73.method3053((byte) -50).method3315(1878721557 * Class153.anInt1965, (byte) 32)) {
@@ -1356,7 +1356,7 @@ public class Class9 {
 								Class311.aString3643 = class282_sub35_sub2.readString(1855853465);
 								client.aClass257_7353.method4436(-1921247578).method7912(client.membersWorld, 65280);
 								Class6.aClass340_45.method6052((short) -4573).method4436(-1676268946).method7912(client.membersWorld, 65280);
-								Class119.aClass426_1463.method7148(client.membersWorld, -1631401679);
+								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1631401679);
 								Class350_Sub1.aClass406_7757.method6847(client.membersWorld, (byte) 31);
 							} else {
 								if (!aClass184_73.method3053((byte) -85).method3315(1878721557 * Class153.anInt1965, (byte) 103)) {

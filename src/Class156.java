@@ -21,7 +21,7 @@ public class Class156 {
 		} else if (anInt1972 * 1292959653 > 0) {
 			if (i > 1) {
 				Class282_Sub47 class282_sub47 = new Class282_Sub47(interface40);
-				aClass482_1971.method8059(class282_sub47, 1981054368);
+				aClass482_1971.append(class282_sub47, 1981054368);
 			}
 		} else
 			interface40.ma(false);
@@ -56,7 +56,7 @@ public class Class156 {
 		if (!aBool1970) {
 			if (anInt1972 * 1292959653 > 0) {
 				Class282_Sub47 class282_sub47 = new Class282_Sub47(interface40);
-				aClass482_1971.method8059(class282_sub47, -1656324048);
+				aClass482_1971.append(class282_sub47, -1656324048);
 			} else
 				interface40.ma(false);
 		}
@@ -66,7 +66,7 @@ public class Class156 {
 		if (!aBool1970) {
 			if (anInt1972 * 1292959653 > 0) {
 				Class282_Sub47 class282_sub47 = new Class282_Sub47(interface40);
-				aClass482_1971.method8059(class282_sub47, -674594756);
+				aClass482_1971.append(class282_sub47, -674594756);
 			} else
 				interface40.ma(false);
 		}

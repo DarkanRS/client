@@ -73,25 +73,24 @@ public class Class279 {
 		Class44.method910(class118, class98, class527, 2070102575);
 	}
 
-	static void method4972(GraphicalRenderer class505, int i) {
-		if (Class182.aClass482_2260.method8069(-1374254477) != 0) {
+	static void renderItems(GraphicalRenderer softwareRenderer, int i) {
+		if (Class182.ITEMS.size(-1374254477) != 0) {
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1853603888) == 0) {
-				for (Class282_Sub32 class282_sub32 = ((Class282_Sub32) Class182.aClass482_2260.head((byte) 98)); class282_sub32 != null; class282_sub32 = ((Class282_Sub32) Class182.aClass482_2260.next(471077510))) {
-					Class119.aClass426_1463.renderItemSprite(class505, class505, (((Class282_Sub32) class282_sub32).anInt7817 * 1343343281), (((Class282_Sub32) class282_sub32).anInt7816 * -1956508275), (((Class282_Sub32) class282_sub32).anInt7818 * 1172052973), (((Class282_Sub32) class282_sub32).anInt7820 * 1379786857), false, false, (((Class282_Sub32) class282_sub32).anInt7819 * 660031547), Class540.aClass8_7138,
-							(((Class282_Sub32) class282_sub32).aBool7821 ? (Class84.myPlayer.aClass238_10558) : null), (byte) 77);
-					class282_sub32.unlink(-371378792);
+				for (Item item = ((Item) Class182.ITEMS.head((byte) 98)); item != null; item = ((Item) Class182.ITEMS.next(471077510))) {
+					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(softwareRenderer, softwareRenderer, (item.id * 1343343281), (item.amount * -1956508275), (item.outlineSize * 1172052973), (item.shadowColor * 1379786857), false, false, (item.anInt7819 * 660031547), Renderers.FONT_RENDERER, (item.hasPlayerAppearance ? (Class84.myPlayer.playerAppearance) : null), (byte) 77);
+					item.unlink(-371378792);
 				}
 				IncomingPacket.method6378(-1538407760);
 			} else {
-				if (Class182.aClass505_2258 == null) {
+				if (Class182.HARDWARE_RENDERER == null) {
 					Canvas canvas = new Canvas();
 					canvas.setSize(36, 32);
-					Class182.aClass505_2258 = Class320.method5732(0, canvas, Class321.anInterface22_3731, Class488.aClass317_5758, 0, -2102871027);
-					Class182.aClass8_2259 = (Class182.aClass505_2258.method8448(Class94.method1588(Class410.aClass317_4924, 1500183805 * Class16.anInt140, 0, 2062772930), Class91.method1514(Class211.aClass317_2673, 1500183805 * Class16.anInt140, 0), true));
+					Class182.HARDWARE_RENDERER = Class320.method5732(0, canvas, Class321.anInterface22_3731, Class488.aClass317_5758, 0, -2102871027);
+					Class182.aClass8_2259 = (Class182.HARDWARE_RENDERER.method8448(Class94.method1588(Class410.aClass317_4924, 1500183805 * Class16.anInt140, 0, 2062772930), Class91.method1514(Class211.aClass317_2673, 1500183805 * Class16.anInt140, 0), true));
 				}
-				for (Class282_Sub32 class282_sub32 = ((Class282_Sub32) Class182.aClass482_2260.head((byte) 59)); class282_sub32 != null; class282_sub32 = ((Class282_Sub32) Class182.aClass482_2260.next(-468135531))) {
-					Class119.aClass426_1463.renderItemSprite(Class182.aClass505_2258, class505, (((Class282_Sub32) class282_sub32).anInt7817 * 1343343281), (((Class282_Sub32) class282_sub32).anInt7816 * -1956508275), (((Class282_Sub32) class282_sub32).anInt7818 * 1172052973), (1379786857 * ((Class282_Sub32) class282_sub32).anInt7820), false, false, (660031547 * ((Class282_Sub32) class282_sub32).anInt7819), Class182.aClass8_2259,
-							(((Class282_Sub32) class282_sub32).aBool7821 ? (Class84.myPlayer.aClass238_10558) : null), (byte) 0);
+				for (Item class282_sub32 = ((Item) Class182.ITEMS.head((byte) 59)); class282_sub32 != null; class282_sub32 = ((Item) Class182.ITEMS.next(-468135531))) {
+					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(Class182.HARDWARE_RENDERER, softwareRenderer, (((Item) class282_sub32).id * 1343343281), (((Item) class282_sub32).amount * -1956508275), (((Item) class282_sub32).outlineSize * 1172052973), (1379786857 * ((Item) class282_sub32).shadowColor), false, false, (660031547 * ((Item) class282_sub32).anInt7819), Class182.aClass8_2259,
+							(((Item) class282_sub32).hasPlayerAppearance ? (Class84.myPlayer.playerAppearance) : null), (byte) 0);
 					class282_sub32.unlink(-371378792);
 				}
 			}

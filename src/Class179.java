@@ -136,7 +136,7 @@ public class Class179 {
 				}
 			}
 		}
-		Class540.aClass8_7138.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
+		Renderers.FONT_RENDERER.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.method8659(0, 350 - 1922934793 * anInt2230, -418109423 * Class349.anInt4083, -1, -1880781903);
 		Class285.aClass8_3394.renderText(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);
@@ -217,7 +217,7 @@ public class Class179 {
 					else
 						Class209.method3598("FPS off", -1881441255);
 				} else if (string.equals("renderer")) {
-					Class168 class168 = Class316.aClass505_3680.method8392();
+					Class168 class168 = Renderers.SOFTWARE_RENDERER.method8392();
 					Class209.method3598(new StringBuilder().append("Toolkit ID: ").append(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(198120991)).toString(), -1246943399);
 					Class209.method3598(new StringBuilder().append("Vendor: ").append(class168.anInt2052 * 1681700525).toString(), -1516104469);
 					Class209.method3598(new StringBuilder().append("Name: ").append(class168.aString2051).toString(), -118163522);
@@ -674,7 +674,7 @@ public class Class179 {
 	static void method3000(boolean bool) {
 		if (aString2225.length() != 0) {
 			Class209.method3598(new StringBuilder().append("--> ").append(aString2225).toString(), -81151076);
-			Class251.method4313(aString2225, false, bool, -354697449);
+			Class251.handleCommand(aString2225, false, bool, -354697449);
 			anInt2226 = 0;
 			if (!bool) {
 				anInt2220 = 0;
@@ -686,7 +686,7 @@ public class Class179 {
 	static void method3001(boolean bool) {
 		if (aString2225.length() != 0) {
 			Class209.method3598(new StringBuilder().append("--> ").append(aString2225).toString(), -929787912);
-			Class251.method4313(aString2225, false, bool, -354697449);
+			Class251.handleCommand(aString2225, false, bool, -354697449);
 			anInt2226 = 0;
 			if (!bool) {
 				anInt2220 = 0;
@@ -800,7 +800,7 @@ public class Class179 {
 				}
 			}
 		}
-		Class540.aClass8_7138.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
+		Renderers.FONT_RENDERER.method359("727 1", -418109423 * Class349.anInt4083 - 25, 330, -1, -16777216, 1878721557);
 		class505.r(0, 0, Class349.anInt4083 * -418109423, 350);
 		class505.method8659(0, 350 - 1922934793 * anInt2230, -418109423 * Class349.anInt4083, -1, -1171281345);
 		Class285.aClass8_3394.renderText(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1)).toString(), 10, 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 1, -1, -16777216, -418109423);
@@ -870,7 +870,7 @@ public class Class179 {
 					else
 						Class209.method3598("FPS off", -1419627016);
 				} else if (string.equals("renderer")) {
-					Class168 class168 = Class316.aClass505_3680.method8392();
+					Class168 class168 = Renderers.SOFTWARE_RENDERER.method8392();
 					Class209.method3598(new StringBuilder().append("Toolkit ID: ").append(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1794510046)).toString(), -1620087203);
 					Class209.method3598(new StringBuilder().append("Vendor: ").append(class168.anInt2052 * 1681700525).toString(), -817073850);
 					Class209.method3598(new StringBuilder().append("Name: ").append(class168.aString2051).toString(), -127362715);

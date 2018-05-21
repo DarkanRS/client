@@ -1022,7 +1022,7 @@ public class Class220 {
 			((Class282_Sub33) class282_sub33).anInt7832 = -705732785 * i_93_;
 			((Class282_Sub33) class282_sub33).anInt7831 = -2064740419 * i_94_;
 			((Class282_Sub33) class282_sub33).anInt7827 = -719287379 * i_95_;
-			Class346.aClass482_4049.method8059(class282_sub33, -1280264944);
+			Class346.aClass482_4049.append(class282_sub33, -1280264944);
 		}
 		return false;
 	}

@@ -57,7 +57,7 @@ public class Class96_Sub18 extends Class96 {
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999) {
 			Class411.method6914(class118.anInt1287 * -1952846363, (short) 887);
 			Class106.method1818(class118.anInt1287 * -1952846363, 209948825);
-			Class282_Sub32.method12575(-1952846363 * class118.anInt1287, (byte) 59);
+			Item.method12575(-1952846363 * class118.anInt1287, (byte) 59);
 		}
 		if (-1 == i_1_) {
 			class118.anInt1329 = 589750077;
@@ -67,7 +67,7 @@ public class Class96_Sub18 extends Class96 {
 			class118.anInt1426 = i_1_ * -833742903;
 			class118.anInt1427 = i_2_ * 1010829041;
 			class118.aBool1388 = bool;
-			ItemDefinitions class425 = Class119.aClass426_1463.getItemDefinitions(i_1_, 501470763);
+			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_1_, 501470763);
 			class118.anInt1385 = -790145187 * class425.anInt5058;
 			class118.anInt1336 = 427762477 * class425.anInt5045;
 			class118.anInt1337 = -174540793 * class425.anInt5074;

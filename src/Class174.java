@@ -311,11 +311,11 @@ public class Class174 {
 			if (i_52_ < 3 && client.aClass257_7353.method4433(33386298).method5497(i_45_, i_46_, 2056160372))
 				i_52_++;
 			if (client.aClass257_7353.method4430(-1735262041) != null) {
-				client.aClass257_7353.method4441(1508379413).method12475(Class316.aClass505_3680, i, i_44_, i_45_, i_46_, client.aClass257_7353.method4552(i, 1801793645), -1251785888);
+				client.aClass257_7353.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i, i_44_, i_45_, i_46_, client.aClass257_7353.method4552(i, 1801793645), -1251785888);
 				if (i_47_ >= 0) {
 					int i_53_ = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 28);
 					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, 1, -1662895154);
-					client.aClass257_7353.method4441(1508379413).method12459(Class316.aClass505_3680, i_52_, i, i_45_, i_46_, i_47_, i_48_, i_49_, client.aClass257_7353.method4552(i, 1801793645), i_50_, -1045787010);
+					client.aClass257_7353.method4441(1508379413).method12459(Renderers.SOFTWARE_RENDERER, i_52_, i, i_45_, i_46_, i_47_, i_48_, i_49_, client.aClass257_7353.method4552(i, 1801793645), i_50_, -1045787010);
 					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, i_53_, -1533283163);
 				}
 			}
@@ -346,7 +346,7 @@ public class Class174 {
 			Class289.method5099(class527, 1469022729);
 			break;
 		case 545:
-			Class420.method7032(class527, (short) 2048);
+			SoftwareItemRender.method7032(class527, (short) 2048);
 			break;
 		case 548:
 			Class282_Sub15_Sub1.method14818(class527, 2052773395);
@@ -1365,7 +1365,7 @@ public class Class174 {
 			Class330.method5912(class527, (byte) 80);
 			break;
 		case 655:
-			Class460.method7699(class527, 954683755);
+			NodeIterator.method7699(class527, 954683755);
 			break;
 		case 965:
 			Class62.method1259(class527, 1799228526);
@@ -2208,7 +2208,7 @@ public class Class174 {
 			Class457.method7668(class527, 488455804);
 			break;
 		case 147:
-			Class460.method7700(class527, -1958961558);
+			NodeIterator.method7700(class527, -1958961558);
 			break;
 		case 977:
 			Class234.method3951(class527, -217803069);

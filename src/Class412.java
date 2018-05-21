@@ -31,10 +31,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_0_;
-		for (i_0_ = charsequence.length(); (i < i_0_ && Class420.method7035(charsequence.charAt(i), 2125796256)); i++) {
+		for (i_0_ = charsequence.length(); (i < i_0_ && SoftwareItemRender.method7035(charsequence.charAt(i), 2125796256)); i++) {
 			/* empty */
 		}
-		for (/**/; i_0_ > i && Class420.method7035(charsequence.charAt(i_0_ - 1), 1675736109); i_0_--) {
+		for (/**/; i_0_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_0_ - 1), 1675736109); i_0_--) {
 			/* empty */
 		}
 		int i_1_ = i_0_ - i;
@@ -91,10 +91,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_6_;
-		for (i_6_ = charsequence.length(); (i < i_6_ && Class420.method7035(charsequence.charAt(i), 953760799)); i++) {
+		for (i_6_ = charsequence.length(); (i < i_6_ && SoftwareItemRender.method7035(charsequence.charAt(i), 953760799)); i++) {
 			/* empty */
 		}
-		for (/**/; i_6_ > i && Class420.method7035(charsequence.charAt(i_6_ - 1), 1770523574); i_6_--) {
+		for (/**/; i_6_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_6_ - 1), 1770523574); i_6_--) {
 			/* empty */
 		}
 		int i_7_ = i_6_ - i;
@@ -138,10 +138,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_10_;
-		for (i_10_ = charsequence.length(); (i < i_10_ && Class420.method7035(charsequence.charAt(i), 1286322769)); i++) {
+		for (i_10_ = charsequence.length(); (i < i_10_ && SoftwareItemRender.method7035(charsequence.charAt(i), 1286322769)); i++) {
 			/* empty */
 		}
-		for (/**/; i_10_ > i && Class420.method7035(charsequence.charAt(i_10_ - 1), 1115430265); i_10_--) {
+		for (/**/; i_10_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_10_ - 1), 1115430265); i_10_--) {
 			/* empty */
 		}
 		int i_11_ = i_10_ - i;
@@ -166,10 +166,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_14_;
-		for (i_14_ = charsequence.length(); (i < i_14_ && Class420.method7035(charsequence.charAt(i), 832036098)); i++) {
+		for (i_14_ = charsequence.length(); (i < i_14_ && SoftwareItemRender.method7035(charsequence.charAt(i), 832036098)); i++) {
 			/* empty */
 		}
-		for (/**/; i_14_ > i && Class420.method7035(charsequence.charAt(i_14_ - 1), 944981527); i_14_--) {
+		for (/**/; i_14_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_14_ - 1), 944981527); i_14_--) {
 			/* empty */
 		}
 		int i_15_ = i_14_ - i;
@@ -194,10 +194,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_18_;
-		for (i_18_ = charsequence.length(); (i < i_18_ && Class420.method7035(charsequence.charAt(i), 1343164362)); i++) {
+		for (i_18_ = charsequence.length(); (i < i_18_ && SoftwareItemRender.method7035(charsequence.charAt(i), 1343164362)); i++) {
 			/* empty */
 		}
-		for (/**/; i_18_ > i && Class420.method7035(charsequence.charAt(i_18_ - 1), 1701833893); i_18_--) {
+		for (/**/; i_18_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_18_ - 1), 1701833893); i_18_--) {
 			/* empty */
 		}
 		int i_19_ = i_18_ - i;
@@ -226,10 +226,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_22_;
-		for (i_22_ = charsequence.length(); (i < i_22_ && Class420.method7035(charsequence.charAt(i), 1740117663)); i++) {
+		for (i_22_ = charsequence.length(); (i < i_22_ && SoftwareItemRender.method7035(charsequence.charAt(i), 1740117663)); i++) {
 			/* empty */
 		}
-		for (/**/; i_22_ > i && Class420.method7035(charsequence.charAt(i_22_ - 1), 1976262165); i_22_--) {
+		for (/**/; i_22_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_22_ - 1), 1976262165); i_22_--) {
 			/* empty */
 		}
 		int i_23_ = i_22_ - i;
@@ -254,10 +254,10 @@ public class Class412 {
 			return null;
 		int i = 0;
 		int i_26_;
-		for (i_26_ = charsequence.length(); (i < i_26_ && Class420.method7035(charsequence.charAt(i), 1624113127)); i++) {
+		for (i_26_ = charsequence.length(); (i < i_26_ && SoftwareItemRender.method7035(charsequence.charAt(i), 1624113127)); i++) {
 			/* empty */
 		}
-		for (/**/; i_26_ > i && Class420.method7035(charsequence.charAt(i_26_ - 1), 1308452734); i_26_--) {
+		for (/**/; i_26_ > i && SoftwareItemRender.method7035(charsequence.charAt(i_26_ - 1), 1308452734); i_26_--) {
 			/* empty */
 		}
 		int i_27_ = i_26_ - i;

@@ -488,6 +488,6 @@ public class Class533 {
 
 	static final void method11406(CS2Executor class527, int i) {
 		int i_112_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_112_, 1937289773).anInt5049 * 318481945) == 1 ? 1 : 0;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_112_, 1937289773).stackable * 318481945) == 1 ? 1 : 0;
 	}
 }

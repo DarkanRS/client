@@ -25,7 +25,7 @@ public class Class292 {
 
 	static final void method5198(CS2Executor class527, int i) {
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_2_, 1980153420).members ? 1 : 0);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2_, 1980153420).members ? 1 : 0);
 	}
 
 	static final void method5199(CS2Executor class527, byte i) {

@@ -879,7 +879,7 @@ public class Class440 {
 		int i_75_ = Class158.method2730((short) -26855);
 		if (i == 3 || 3 == i_75_)
 			bool = true;
-		if (!Class316.aClass505_3680.method8664())
+		if (!Renderers.SOFTWARE_RENDERER.method8664())
 			bool = true;
 		Class507.method8725(i_75_, i, i_72_, i_73_, bool, -1040786933);
 	}

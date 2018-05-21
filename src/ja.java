@@ -343,7 +343,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public Class282_Sub1 method8438(int i) {
 		ba var_ba = new ba(this, i);
-		((ja) this).au.method8059(var_ba, 753628503);
+		((ja) this).au.append(var_ba, 753628503);
 		return var_ba;
 	}
 
@@ -764,7 +764,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public Class282_Sub1 method8570(int i) {
 		ba var_ba = new ba(this, i);
-		((ja) this).au.method8059(var_ba, 486534140);
+		((ja) this).au.append(var_ba, 486534140);
 		return var_ba;
 	}
 
@@ -1222,7 +1222,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public Class282_Sub1 method8541(int i) {
 		ba var_ba = new ba(this, i);
-		((ja) this).au.method8059(var_ba, -818600578);
+		((ja) this).au.append(var_ba, -818600578);
 		return var_ba;
 	}
 

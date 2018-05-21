@@ -76,7 +76,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_20_] = Class242.method4165(class282_sub35, 623572265);
 					break;
 				case 2:
-					((Class282_Sub20_Sub19) this).aClass149Array9862[i_20_] = Class420.method7033(class282_sub35, 2040554812);
+					((Class282_Sub20_Sub19) this).aClass149Array9862[i_20_] = SoftwareItemRender.method7033(class282_sub35, 2040554812);
 					break;
 				case 3:
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_20_] = Class456.method7644(class282_sub35, 153787879);
@@ -114,7 +114,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_22_] = Class242.method4165(class282_sub35, 626526682);
 					break;
 				case 2:
-					((Class282_Sub20_Sub19) this).aClass149Array9862[i_22_] = Class420.method7033(class282_sub35, 1916258333);
+					((Class282_Sub20_Sub19) this).aClass149Array9862[i_22_] = SoftwareItemRender.method7033(class282_sub35, 1916258333);
 					break;
 				case 3:
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_22_] = Class456.method7644(class282_sub35, 5565827);
@@ -138,7 +138,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_24_] = Class242.method4165(class282_sub35, 1535398504);
 					break;
 				case 2:
-					((Class282_Sub20_Sub19) this).aClass149Array9862[i_24_] = Class420.method7033(class282_sub35, 1872880342);
+					((Class282_Sub20_Sub19) this).aClass149Array9862[i_24_] = SoftwareItemRender.method7033(class282_sub35, 1872880342);
 					break;
 				case 3:
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_24_] = Class456.method7644(class282_sub35, -8610723);
@@ -162,7 +162,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_26_] = Class242.method4165(class282_sub35, 322498136);
 					break;
 				case 2:
-					((Class282_Sub20_Sub19) this).aClass149Array9862[i_26_] = Class420.method7033(class282_sub35, 2061966786);
+					((Class282_Sub20_Sub19) this).aClass149Array9862[i_26_] = SoftwareItemRender.method7033(class282_sub35, 2061966786);
 					break;
 				case 3:
 					((Class282_Sub20_Sub19) this).aClass149Array9862[i_26_] = Class456.method7644(class282_sub35, 715141012);

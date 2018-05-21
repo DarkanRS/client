@@ -101,7 +101,7 @@ public class Class19 {
 	}
 
 	static final void method584(CS2Executor class527, byte i) {
-		Class251.method4313((String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]), false, false, -354697449);
+		Class251.handleCommand((String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]), false, false, -354697449);
 	}
 
 	static final void method585(CS2Executor class527, int i) {

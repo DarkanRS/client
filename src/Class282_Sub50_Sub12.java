@@ -54,7 +54,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	}
 
 	int method14953(int i) {
-		return (int) (-3442165056282524525L * aLong3379 >>> 56 & 0xffL);
+		return (int) (-3442165056282524525L * data >>> 56 & 0xffL);
 	}
 
 	void method14954() {
@@ -76,7 +76,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = ((Class282_Sub50_Sub12) aClass465_9667.method7754((long) i << 56 | l));
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);
-			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.aLong3379 * -3442165056282524525L));
+			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.data * -3442165056282524525L));
 		}
 		return class282_sub50_sub12;
 	}
@@ -167,7 +167,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	}
 
 	long method14967(int i) {
-		return aLong3379 * -3442165056282524525L & 0xffffffffffffffL;
+		return data * -3442165056282524525L & 0xffffffffffffffL;
 	}
 
 	public static void method14968(int i) {
@@ -399,7 +399,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = ((Class282_Sub50_Sub12) aClass465_9667.method7754((long) i << 56 | l));
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);
-			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.aLong3379 * -3442165056282524525L));
+			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.data * -3442165056282524525L));
 		}
 		return class282_sub50_sub12;
 	}
@@ -474,7 +474,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = ((Class282_Sub50_Sub12) aClass465_9667.method7754((long) i << 56 | l));
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);
-			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.aLong3379 * -3442165056282524525L));
+			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.data * -3442165056282524525L));
 		}
 		return class282_sub50_sub12;
 	}
@@ -690,7 +690,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = ((Class282_Sub50_Sub12) aClass465_9667.method7754((long) i << 56 | l));
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);
-			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.aLong3379 * -3442165056282524525L));
+			aClass465_9667.method7765(class282_sub50_sub12, (class282_sub50_sub12.data * -3442165056282524525L));
 		}
 		return class282_sub50_sub12;
 	}
@@ -771,27 +771,27 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	}
 
 	int method15067() {
-		return (int) (-3442165056282524525L * aLong3379 >>> 56 & 0xffL);
+		return (int) (-3442165056282524525L * data >>> 56 & 0xffL);
 	}
 
 	int method15068() {
-		return (int) (-3442165056282524525L * aLong3379 >>> 56 & 0xffL);
+		return (int) (-3442165056282524525L * data >>> 56 & 0xffL);
 	}
 
 	int method15069() {
-		return (int) (-3442165056282524525L * aLong3379 >>> 56 & 0xffL);
+		return (int) (-3442165056282524525L * data >>> 56 & 0xffL);
 	}
 
 	long method15070() {
-		return aLong3379 * -3442165056282524525L & 0xffffffffffffffL;
+		return data * -3442165056282524525L & 0xffffffffffffffL;
 	}
 
 	long method15071() {
-		return aLong3379 * -3442165056282524525L & 0xffffffffffffffL;
+		return data * -3442165056282524525L & 0xffffffffffffffL;
 	}
 
 	long method15072() {
-		return aLong3379 * -3442165056282524525L & 0xffffffffffffffL;
+		return data * -3442165056282524525L & 0xffffffffffffffL;
 	}
 
 	static void method15073() {
@@ -801,7 +801,7 @@ public class Class282_Sub50_Sub12 extends Class282_Sub50 {
 	}
 
 	Class282_Sub50_Sub12(int i, long l) {
-		aLong3379 = -1253863389874800229L * ((long) i << 56 | l);
+		data = -1253863389874800229L * ((long) i << 56 | l);
 	}
 
 	public static void method15074(int i) {

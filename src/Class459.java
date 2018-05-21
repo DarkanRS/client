@@ -75,7 +75,7 @@ public final class Class459 {
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		int i_0_ = -1;
 		int i_1_ = -1;
-		Class119 class119 = class118.method2046(Class316.aClass505_3680, 1887351094);
+		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, 1887351094);
 		if (class119 != null) {
 			i_0_ = class119.anInt1458 * -1125753931;
 			i_1_ = class119.anInt1454 * 2069222845;

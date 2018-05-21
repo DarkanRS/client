@@ -27,7 +27,7 @@ public class Class363 {
 
 	static final void method6284(CS2Executor class527, int i) {
 		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class119.aClass426_1463.getItemDefinitions(i_0_, 1383536878).anInt5051 * 15210351);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 1383536878).anInt5051 * 15210351);
 	}
 
 	static final void method6285(CS2Executor class527, int i) {

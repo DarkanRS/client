@@ -61,10 +61,10 @@ public class Class12 implements Runnable {
 	}
 
 	static void method482(byte i) {
-		if (null != Class182.aClass505_2258) {
+		if (null != Class182.HARDWARE_RENDERER) {
 			if (i > 32) {
-				Class182.aClass505_2258.method8396(-517038);
-				Class182.aClass505_2258 = null;
+				Class182.HARDWARE_RENDERER.method8396(-517038);
+				Class182.HARDWARE_RENDERER = null;
 				Class182.aClass8_2259 = null;
 			}
 		}

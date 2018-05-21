@@ -82,7 +82,7 @@ public class AttributeDefault {
 	}
 
 	static void method7323(byte i) {
-		if (null != Class316.aClass505_3680) {
+		if (null != Renderers.SOFTWARE_RENDERER) {
 			client.aClass257_7353.method4444(1684896059);
 			Class58.method1139(-1956740427);
 			Class76.method1361((byte) -9);
@@ -114,8 +114,8 @@ public class AttributeDefault {
 				}
 			}
 			client.aClass465_7334.method7749(835503641);
-			Class316.aClass505_3680.method8396(-2084829618);
-			Class316.aClass505_3680 = null;
+			Renderers.SOFTWARE_RENDERER.method8396(-2084829618);
+			Renderers.SOFTWARE_RENDERER = null;
 		}
 	}
 }

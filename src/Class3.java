@@ -26,7 +26,7 @@ public class Class3 implements Interface42 {
 		for (Class282_Sub45 class282_sub45 = ((Class282_Sub45) (bool ? ((Class3) this).aClass465_28.method7750(-1019501860) : ((Class3) this).aClass465_28.method7751((byte) 13))); null != class282_sub45; class282_sub45 = (Class282_Sub45) ((Class3) this).aClass465_28.method7751((byte) 105)) {
 			if ((3367138086658270151L * class282_sub45.aLong8066 & 0x3fffffffffffffffL) < l) {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
-					int i_4_ = (int) (-3442165056282524525L * class282_sub45.aLong3379);
+					int i_4_ = (int) (-3442165056282524525L * class282_sub45.data);
 					anIntArray26[i_4_] = ((Class3) this).anIntArray25[i_4_];
 					class282_sub45.unlink(-371378792);
 					return i_4_;
@@ -109,7 +109,7 @@ public class Class3 implements Interface42 {
 		for (Class282_Sub45 class282_sub45 = ((Class282_Sub45) (bool ? ((Class3) this).aClass465_28.method7750(-1213303065) : ((Class3) this).aClass465_28.method7751((byte) 115))); null != class282_sub45; class282_sub45 = (Class282_Sub45) ((Class3) this).aClass465_28.method7751((byte) 4)) {
 			if ((3367138086658270151L * class282_sub45.aLong8066 & 0x3fffffffffffffffL) < l) {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
-					int i = (int) (-3442165056282524525L * class282_sub45.aLong3379);
+					int i = (int) (-3442165056282524525L * class282_sub45.data);
 					anIntArray26[i] = ((Class3) this).anIntArray25[i];
 					class282_sub45.unlink(-371378792);
 					return i;
@@ -125,7 +125,7 @@ public class Class3 implements Interface42 {
 		for (Class282_Sub45 class282_sub45 = ((Class282_Sub45) (bool ? ((Class3) this).aClass465_28.method7750(1511149696) : ((Class3) this).aClass465_28.method7751((byte) 94))); null != class282_sub45; class282_sub45 = (Class282_Sub45) ((Class3) this).aClass465_28.method7751((byte) 66)) {
 			if ((3367138086658270151L * class282_sub45.aLong8066 & 0x3fffffffffffffffL) < l) {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
-					int i = (int) (-3442165056282524525L * class282_sub45.aLong3379);
+					int i = (int) (-3442165056282524525L * class282_sub45.data);
 					anIntArray26[i] = ((Class3) this).anIntArray25[i];
 					class282_sub45.unlink(-371378792);
 					return i;

@@ -13,17 +13,17 @@ public class Class52_Sub1 extends Class52 {
 	}
 
 	void method1081(boolean bool, int i, int i_0_, int i_1_) {
-		Class316.aClass505_3680.method8430(i - 2, i_0_, ((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577 + 4, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093 + 2, 1505550823 * ((Class350_Sub1) ((Class52_Sub1) this).aClass350_489).anInt7755, 0);
-		Class316.aClass505_3680.method8430(i - 1, 1 + i_0_, 2 + 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093, 0, 0);
+		Renderers.SOFTWARE_RENDERER.method8430(i - 2, i_0_, ((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577 + 4, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093 + 2, 1505550823 * ((Class350_Sub1) ((Class52_Sub1) this).aClass350_489).anInt7755, 0);
+		Renderers.SOFTWARE_RENDERER.method8430(i - 1, 1 + i_0_, 2 + 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093, 0, 0);
 	}
 
 	void method1077(boolean bool, int i, int i_2_, int i_3_) {
 		int i_4_ = (method1078(-1898589079) * (((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577) / 10000);
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i, i_2_ + 2, i_4_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_2_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i, i_2_ + 2, i_4_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_2_);
 		((Class52_Sub1) this).aClass160_9150.method2756(i, 2 + i_2_, 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	public boolean method13() {
@@ -88,33 +88,33 @@ public class Class52_Sub1 extends Class52 {
 	void method1080(boolean bool, int i, int i_6_) {
 		int i_7_ = (method1078(-1853655209) * (((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577) / 10000);
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i, i_6_ + 2, i_7_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_6_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i, i_6_ + 2, i_7_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_6_);
 		((Class52_Sub1) this).aClass160_9150.method2756(i, 2 + i_6_, 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	void method1075(boolean bool, int i, int i_8_) {
 		int i_9_ = (method1078(-1956547483) * (((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577) / 10000);
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i, i_8_ + 2, i_9_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_8_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i, i_8_ + 2, i_9_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_8_);
 		((Class52_Sub1) this).aClass160_9150.method2756(i, 2 + i_8_, 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	void method1079(boolean bool, int i, int i_10_) {
 		int i_11_ = (method1078(-2017187063) * (((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577) / 10000);
 		int[] is = new int[4];
-		Class316.aClass505_3680.qa(is);
-		Class316.aClass505_3680.r(i, i_10_ + 2, i_11_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_10_);
+		Renderers.SOFTWARE_RENDERER.qa(is);
+		Renderers.SOFTWARE_RENDERER.r(i, i_10_ + 2, i_11_ + i, (((Class52_Sub1) this).aClass350_489.anInt4088) * 323608093 + i_10_);
 		((Class52_Sub1) this).aClass160_9150.method2756(i, 2 + i_10_, 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093);
-		Class316.aClass505_3680.r(is[0], is[1], is[2], is[3]);
+		Renderers.SOFTWARE_RENDERER.r(is[0], is[1], is[2], is[3]);
 	}
 
 	void method1076(boolean bool, int i, int i_12_) {
-		Class316.aClass505_3680.method8430(i - 2, i_12_, ((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577 + 4, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093 + 2, 1505550823 * ((Class350_Sub1) ((Class52_Sub1) this).aClass350_489).anInt7755, 0);
-		Class316.aClass505_3680.method8430(i - 1, 1 + i_12_, 2 + 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093, 0, 0);
+		Renderers.SOFTWARE_RENDERER.method8430(i - 2, i_12_, ((Class52_Sub1) this).aClass350_489.anInt4093 * 329542577 + 4, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093 + 2, 1505550823 * ((Class350_Sub1) ((Class52_Sub1) this).aClass350_489).anInt7755, 0);
+		Renderers.SOFTWARE_RENDERER.method8430(i - 1, 1 + i_12_, 2 + 329542577 * ((Class52_Sub1) this).aClass350_489.anInt4093, ((Class52_Sub1) this).aClass350_489.anInt4088 * 323608093, 0, 0);
 	}
 
 	static final void method14491(CS2Executor class527, byte i) {
@@ -128,7 +128,7 @@ public class Class52_Sub1 extends Class52 {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_13_, -1207119465).anIntArray9747[i_14_]);
 	}
 
-	static Class158_Sub2_Sub3 method14493(Class505_Sub3 class505_sub3, Canvas canvas, int i, int i_15_, int i_16_) {
+	static Class158_Sub2_Sub3 method14493(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_15_, int i_16_) {
 		Class158_Sub2_Sub3_Sub1 class158_sub2_sub3_sub1 = new Class158_Sub2_Sub3_Sub1(class505_sub3, canvas, i, i_15_);
 		return class158_sub2_sub3_sub1;
 	}

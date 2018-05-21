@@ -130,16 +130,16 @@ public class Class278_Sub1 extends Class278 {
 	}
 
 	static void method13448(Class118 class118, int i, int i_12_, int i_13_) {
-		Class119 class119 = class118.method2046(Class316.aClass505_3680, -1375447309);
+		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, -1375447309);
 		if (class119 != null) {
-			Class316.aClass505_3680.r(i, i_12_, i + 1506818197 * class118.anInt1301, i_12_ + class118.anInt1429 * -492594917);
+			Renderers.SOFTWARE_RENDERER.r(i, i_12_, i + 1506818197 * class118.anInt1301, i_12_ + class118.anInt1429 * -492594917);
 			if (Class187.anInt2363 * -1221526793 < 3) {
 				int i_14_ = (int) -client.aFloat7365;
 				i_14_ = i_14_ + 714818342 * client.anInt7255 & 0x3fff;
 				i_14_ <<= 2;
 				Class16.aClass160_146.method2761(((float) (class118.anInt1301 * 1506818197) / 2.0F + (float) i), ((float) (-492594917 * class118.anInt1429) / 2.0F + (float) i_12_), 4141, i_14_, class119.aClass455_1456, i, i_12_);
 			} else
-				Class316.aClass505_3680.DA(-16777216, class119.aClass455_1456, i, i_12_);
+				Renderers.SOFTWARE_RENDERER.DA(-16777216, class119.aClass455_1456, i, i_12_);
 		}
 	}
 

@@ -566,7 +566,7 @@ public class Class538 {
 	}
 
 	static final void method11501(int i) {
-		Class96_Sub12.method14614(Class316.aClass505_3680, (long) (-1809259861 * client.cycles));
+		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) (-1809259861 * client.cycles));
 		if (client.anInt7349 * -1699899559 != -1)
 			UnderlayDefinition.method8777(client.anInt7349 * -1699899559, (byte) -116);
 		for (int i_113_ = 0; i_113_ < client.anInt7407 * 1858642375; i_113_++) {
@@ -578,8 +578,8 @@ public class Class538 {
 			client.anInt7407 = 0;
 			Class421.method7039((byte) 16);
 		}
-		Class316.aClass505_3680.L();
-		Class282_Sub20_Sub33.method15411(Class316.aClass505_3680, (byte) 123);
+		Renderers.SOFTWARE_RENDERER.L();
+		Class282_Sub20_Sub33.method15411(Renderers.SOFTWARE_RENDERER, (byte) 123);
 		int i_114_ = Class58.method1141(1515135830);
 		if (-1 == i_114_)
 			i_114_ = client.anInt7427 * -1211259595;

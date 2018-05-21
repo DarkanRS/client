@@ -169,7 +169,7 @@ public class Class282_Sub20_Sub7 extends Class282_Sub20 {
 	}
 
 	static final void method15240(byte i) {
-		Message.method7275(Class316.aClass505_3680, 1253949100);
+		Message.method7275(Renderers.SOFTWARE_RENDERER, 1253949100);
 		if (1366222859 * client.anInt7472 != 675588453 * Class4.anInt35)
 			Class405.method6823(-734889653);
 	}

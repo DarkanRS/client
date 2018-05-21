@@ -72,7 +72,7 @@ public class Class282_Sub4 extends Node {
 			((Class282_Sub4) this).aBool7505 = true;
 		if ((i_3_ & 0x2) != 0)
 			((Class282_Sub4) this).aBool7498 = true;
-		aLong3379 = class282_sub35.readLong(181951412) * -1253863389874800229L;
+		data = class282_sub35.readLong(181951412) * -1253863389874800229L;
 		((Class282_Sub4) this).aLong7502 = class282_sub35.readLong(456385505) * 8833176109314392467L;
 		aString7501 = class282_sub35.readString(1235767360);
 		class282_sub35.readUnsignedByte();
@@ -164,7 +164,7 @@ public class Class282_Sub4 extends Node {
 			((Class282_Sub4) this).aBool7505 = true;
 		if ((i & 0x2) != 0)
 			((Class282_Sub4) this).aBool7498 = true;
-		aLong3379 = class282_sub35.readLong(-16638582) * -1253863389874800229L;
+		data = class282_sub35.readLong(-16638582) * -1253863389874800229L;
 		((Class282_Sub4) this).aLong7502 = class282_sub35.readLong(1432158484) * 8833176109314392467L;
 		aString7501 = class282_sub35.readString(882668786);
 		class282_sub35.readUnsignedByte();
@@ -231,7 +231,7 @@ public class Class282_Sub4 extends Node {
 			((Class282_Sub4) this).aBool7505 = true;
 		if ((i & 0x2) != 0)
 			((Class282_Sub4) this).aBool7498 = true;
-		aLong3379 = class282_sub35.readLong(1863348043) * -1253863389874800229L;
+		data = class282_sub35.readLong(1863348043) * -1253863389874800229L;
 		((Class282_Sub4) this).aLong7502 = class282_sub35.readLong(2125197101) * 8833176109314392467L;
 		aString7501 = class282_sub35.readString(-459788587);
 		class282_sub35.readUnsignedByte();
