@@ -12,7 +12,7 @@ public class Class306 implements Runnable {
 	long aLong3602;
 	String aString3603;
 	Interface27 anInterface27_3604 = null;
-	Class387 aClass387_3605;
+	LoadingStage aClass387_3605;
 
 	synchronized boolean method5417() {
 		return (((Class306) this).anInterface27_3598.method189(-3323946835697055613L * ((Class306) this).aLong3601));
@@ -34,7 +34,7 @@ public class Class306 implements Runnable {
 		return 137107041 * ((Class306) this).anInt3600;
 	}
 
-	synchronized void method5422(long l, String string, int i, Class387 class387, int i_0_) {
+	synchronized void method5422(long l, String string, int i, LoadingStage class387, int i_0_) {
 		((Class306) this).aLong3602 = -4939654261418088205L * l;
 		((Class306) this).aString3603 = string;
 		((Class306) this).anInt3596 = -2130001021 * i;
@@ -45,13 +45,13 @@ public class Class306 implements Runnable {
 		if (((Class306) this).aClass387_3605 == null)
 			return 0;
 		int i_1_ = -1763884029 * ((Class306) this).aClass387_3605.anInt4712;
-		if (((Class387) ((Class306) this).aClass387_3605).aBool4718 && (-1935875285 * ((Class306) this).anInt3596 < (((Class387) ((Class306) this).aClass387_3605).anInt4703 * 586831783)))
+		if (((LoadingStage) ((Class306) this).aClass387_3605).aBool4718 && (-1935875285 * ((Class306) this).anInt3596 < (((LoadingStage) ((Class306) this).aClass387_3605).anInt4703 * 586831783)))
 			return 1 + ((Class306) this).anInt3596 * -1935875285;
 		if (i_1_ < 0 || i_1_ >= Class302.aClass387Array3557.length - 1)
 			return 100;
-		if (-1935875285 * ((Class306) this).anInt3596 == (2033966327 * ((Class387) ((Class306) this).aClass387_3605).anInt4715))
-			return (((Class387) ((Class306) this).aClass387_3605).anInt4703 * 586831783);
-		return (((Class387) ((Class306) this).aClass387_3605).anInt4715 * 2033966327);
+		if (-1935875285 * ((Class306) this).anInt3596 == (2033966327 * ((LoadingStage) ((Class306) this).aClass387_3605).anInt4715))
+			return (((LoadingStage) ((Class306) this).aClass387_3605).anInt4703 * 586831783);
+		return (((LoadingStage) ((Class306) this).aClass387_3605).anInt4715 * 2033966327);
 	}
 
 	public int method5424(byte i) {
@@ -66,7 +66,7 @@ public class Class306 implements Runnable {
 		return 137107041 * ((Class306) this).anInt3600;
 	}
 
-	public Class387 method5427(int i) {
+	public LoadingStage method5427(int i) {
 		return ((Class306) this).aClass387_3605;
 	}
 
@@ -125,7 +125,7 @@ public class Class306 implements Runnable {
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < LoadingStage.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(2100341141);
 				} catch (Exception exception) {
 					continue;
@@ -189,7 +189,7 @@ public class Class306 implements Runnable {
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < LoadingStage.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(2013949561);
 				} catch (Exception exception) {
 					continue;
@@ -253,7 +253,7 @@ public class Class306 implements Runnable {
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < Class387.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < LoadingStage.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(1434548492);
 				} catch (Exception exception) {
 					continue;
@@ -324,7 +324,7 @@ public class Class306 implements Runnable {
 		((Class306) this).aLong3601 = Class169.method2869(1876195097) * 1167380479424480811L;
 	}
 
-	synchronized void method5443(long l, String string, int i, Class387 class387) {
+	synchronized void method5443(long l, String string, int i, LoadingStage class387) {
 		((Class306) this).aLong3602 = -4939654261418088205L * l;
 		((Class306) this).aString3603 = string;
 		((Class306) this).anInt3596 = -2130001021 * i;
@@ -349,11 +349,11 @@ public class Class306 implements Runnable {
 		return 5901517445831929915L * ((Class306) this).aLong3602;
 	}
 
-	public Class387 method5448() {
+	public LoadingStage method5448() {
 		return ((Class306) this).aClass387_3605;
 	}
 
-	public Class387 method5449() {
+	public LoadingStage method5449() {
 		return ((Class306) this).aClass387_3605;
 	}
 
@@ -361,11 +361,11 @@ public class Class306 implements Runnable {
 		return (((Class306) this).anInterface27_3598.method189(-3323946835697055613L * ((Class306) this).aLong3601));
 	}
 
-	public Class387 method5451() {
+	public LoadingStage method5451() {
 		return ((Class306) this).aClass387_3605;
 	}
 
-	public Class387 method5452() {
+	public LoadingStage method5452() {
 		return ((Class306) this).aClass387_3605;
 	}
 
@@ -412,7 +412,7 @@ public class Class306 implements Runnable {
 	}
 
 	static void method5458(int i, int i_13_, int i_14_, int i_15_, int i_16_) {
-		float f = ((float) Class291_Sub1.anInt3483 / (float) Class291_Sub1.anInt3474);
+		float f = ((float) Class291_Sub1.yLength / (float) Class291_Sub1.xLength);
 		int i_17_ = i_14_;
 		int i_18_ = i_15_;
 		if (f < 1.0F)
@@ -421,8 +421,8 @@ public class Class306 implements Runnable {
 			i_17_ = (int) ((float) i_15_ / f);
 		i -= (i_14_ - i_17_) / 2;
 		i_13_ -= (i_15_ - i_18_) / 2;
-		Class427.anInt5123 = Class291_Sub1.anInt3474 * i / i_17_ * 1714827959;
-		Class475.anInt5624 = 1710901657 * (Class291_Sub1.anInt3483 - Class291_Sub1.anInt3483 * i_13_ / i_18_);
+		Class427.anInt5123 = Class291_Sub1.xLength * i / i_17_ * 1714827959;
+		Class475.anInt5624 = 1710901657 * (Class291_Sub1.yLength - Class291_Sub1.yLength * i_13_ / i_18_);
 		Class291_Sub1.anInt8014 = -1089992553;
 		Class291_Sub1.anInt8016 = 638834387;
 		Class89.method1502(825346113);

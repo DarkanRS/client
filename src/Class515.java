@@ -24,7 +24,7 @@ public class Class515 {
 	public Class525 method8845(int i, byte i_1_) {
 		Class525 class525;
 		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.method3865((long) i));
+			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
 		}
 		if (null != class525)
 			return class525;
@@ -80,7 +80,7 @@ public class Class515 {
 	public Class525 method8850(int i) {
 		Class525 class525;
 		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.method3865((long) i));
+			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
 		}
 		if (null != class525)
 			return class525;
@@ -102,7 +102,7 @@ public class Class515 {
 	public Class525 method8851(int i) {
 		Class525 class525;
 		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.method3865((long) i));
+			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
 		}
 		if (null != class525)
 			return class525;
@@ -124,7 +124,7 @@ public class Class515 {
 	public Class525 method8852(int i) {
 		Class525 class525;
 		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.method3865((long) i));
+			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
 		}
 		if (null != class525)
 			return class525;
@@ -236,7 +236,7 @@ public class Class515 {
 				int i_15_ = i_10_ + ((client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_ + 2][i_8_]) - i_12_) - i_11_;
 				fs[i_8_] = (float) i_12_ + (((float) i_15_ * f + (float) i_14_) * f + (float) i_13_) * f;
 			}
-			Class219 class219 = client.aClass257_7353.method4519(1394522751);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1394522751);
 			Class31.anInt361 = ((int) fs[0] - 991427072 * class219.anInt2711) * -2043310439;
 			Class109_Sub1.anInt9384 = 126779709 * (int) fs[1];
 			Class246.anInt3029 = (((int) fs[2] - class219.anInt2712 * -2045780480) * 1442943697);

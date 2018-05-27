@@ -3,8 +3,7 @@
  */
 
 public abstract class Class273 {
-	public static Index aClass317_3332;
-
+	
 	Class273() {
 		/* empty */
 	}

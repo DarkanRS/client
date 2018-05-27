@@ -41,14 +41,14 @@ public final class Class155 {
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class155) this).aClass465_1969.method7754((long) i));
 		if (class282_sub38 != null)
 			return class282_sub38.anInt8002 * -570797415;
-		Class372 class372 = Class104.aClass377_1065.method6384(i, 1420964828);
+		Class372 class372 = IndexLoaders.aClass377_1065.method6384(i, 1420964828);
 		if (class372.aChar4328 != 'i')
 			return -1;
 		return 0;
 	}
 
 	public int method2627(int i, int i_4_) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 48);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 48);
 		int i_5_ = -1764754967 * class226.anInt2784;
 		int i_6_ = (31 == -188179155 * class226.anInt2783 ? -1 : (1 << class226.anInt2783 * -188179155 + 1) - 1);
 		return ((method2626(i_5_, (byte) 17) & i_6_) >>> class226.anInt2785 * -1174362995);
@@ -60,7 +60,7 @@ public final class Class155 {
 	}
 
 	public int method2629(int i) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 59);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 59);
 		int i_7_ = -1764754967 * class226.anInt2784;
 		int i_8_ = (31 == -188179155 * class226.anInt2783 ? -1 : (1 << class226.anInt2783 * -188179155 + 1) - 1);
 		return ((method2626(i_7_, (byte) 7) & i_8_) >>> class226.anInt2785 * -1174362995);
@@ -107,7 +107,7 @@ public final class Class155 {
 	}
 
 	public int method2633(int i) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 90);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 90);
 		int i_12_ = -1764754967 * class226.anInt2784;
 		int i_13_ = (31 == -188179155 * class226.anInt2783 ? -1 : (1 << class226.anInt2783 * -188179155 + 1) - 1);
 		return ((method2626(i_12_, (byte) 35) & i_13_) >>> class226.anInt2785 * -1174362995);
@@ -237,7 +237,7 @@ public final class Class155 {
 	}
 
 	static Animable method2640(int i, int i_55_, int i_56_, int i_57_) {
-		Class293 class293 = (client.aClass257_7353.method4430(-913455840).aClass293ArrayArrayArray2604[i][i_55_][i_56_]);
+		Class293 class293 = (IndexLoaders.MAP_REGION_DECODER.method4430(-913455840).aClass293ArrayArrayArray2604[i][i_55_][i_56_]);
 		if (class293 == null)
 			return null;
 		Animable class521_sub1_sub1_sub2 = null;

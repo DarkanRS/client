@@ -30,7 +30,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		Class282_Sub50_Sub7 class282_sub50_sub7_0_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_0_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_0_).anInt9587), 82678317)) {
-				Class511.method8751(class282_sub50_sub7, class282_sub50_sub7_0_, 1144604728);
+				Defaults7Loader.method8751(class282_sub50_sub7, class282_sub50_sub7_0_, 1144604728);
 				((Class282_Sub50_Sub15) this).anInt9769 += 1874748669;
 				return !bool;
 			}
@@ -54,7 +54,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		Class282_Sub50_Sub7 class282_sub50_sub7_1_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_1_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_1_).anInt9587), 2131301227)) {
-				Class511.method8751(class282_sub50_sub7, class282_sub50_sub7_1_, 938579620);
+				Defaults7Loader.method8751(class282_sub50_sub7, class282_sub50_sub7_1_, 938579620);
 				((Class282_Sub50_Sub15) this).anInt9769 += 1874748669;
 				return !bool;
 			}
@@ -72,7 +72,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		Class282_Sub50_Sub7 class282_sub50_sub7_2_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_2_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_2_).anInt9587), 2086789843)) {
-				Class511.method8751(class282_sub50_sub7, class282_sub50_sub7_2_, 1588267123);
+				Defaults7Loader.method8751(class282_sub50_sub7, class282_sub50_sub7_2_, 1588267123);
 				((Class282_Sub50_Sub15) this).anInt9769 += 1874748669;
 				return !bool;
 			}
@@ -104,7 +104,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 		Class282_Sub50_Sub7 class282_sub50_sub7_4_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_4_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_4_).anInt9587), 1207997785)) {
-				Class511.method8751(class282_sub50_sub7, class282_sub50_sub7_4_, 996547164);
+				Defaults7Loader.method8751(class282_sub50_sub7, class282_sub50_sub7_4_, 996547164);
 				((Class282_Sub50_Sub15) this).anInt9769 += 1874748669;
 				return !bool;
 			}

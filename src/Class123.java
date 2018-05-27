@@ -3,7 +3,7 @@
  */
 
 public class Class123 {
-	Class474 aClass474_1536;
+	ObjectIndexLoader aClass474_1536;
 	byte aByte1537;
 	Class539 aClass539_1538;
 	Class521_Sub1 aClass521_Sub1_1539;
@@ -49,7 +49,7 @@ public class Class123 {
 	void method2118(GraphicalRenderer class505, int i) {
 		if (((Class123) this).aClass282_Sub50_Sub17_1551 != null) {
 			Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-			client.aClass257_7353.method4430(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -43);
+			IndexLoaders.MAP_REGION_DECODER.method4430(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -43);
 			((Class123) this).aBoolArray1553 = null;
 			((Class123) this).aClass282_Sub50_Sub17_1551 = null;
 		}
@@ -59,7 +59,7 @@ public class Class123 {
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();
 		if ((null == ((Class123) this).aClass539_1538 || ((Class123) this).aClass539_1538.aBool7132) && (null != class87s || class172s != null)) {
-			Class478 class478 = (((Class123) this).aClass474_1536.method7891(1535779425 * ((Class123) this).anInt1540, 65280));
+			ObjectDefinitions class478 = (((Class123) this).aClass474_1536.getObjectDefinitions(1535779425 * ((Class123) this).anInt1540, 65280));
 			if (class478.anIntArray5650 != null)
 				class478 = class478.method8013((4 == client.anInt7341 * -891719545 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) -36);
 			if (class478 != null)
@@ -108,8 +108,8 @@ public class Class123 {
 		int i_7_ = i;
 		boolean bool_8_ = false;
 		if (-1 == i_7_) {
-			Class478 class478 = (((Class123) this).aClass474_1536.method7891(1535779425 * ((Class123) this).anInt1540, 65280));
-			Class478 class478_9_ = class478;
+			ObjectDefinitions class478 = (((Class123) this).aClass474_1536.getObjectDefinitions(1535779425 * ((Class123) this).anInt1540, 65280));
+			ObjectDefinitions class478_9_ = class478;
 			if (null != class478.anIntArray5650)
 				class478 = class478.method8013((client.anInt7341 * -891719545 == 4 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) 4);
 			if (null == class478)
@@ -119,7 +119,7 @@ public class Class123 {
 			if (class478.method7967((byte) 82)) {
 				if (bool && ((Class123) this).aClass456_1545.method7564(-1739979372) && class478.method7979(((Class123) this).aClass456_1545.method7597(-2131313079), -1433895387))
 					return;
-				if (class478.anInt5633 * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
+				if (class478.id * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
 					bool_8_ = class478.aBool5702;
 				i_7_ = class478.method7977((byte) -48);
 				if (class478.method7976((short) 8704))
@@ -129,7 +129,7 @@ public class Class123 {
 			} else if (null != class478_9_ && class478_9_.method7967((byte) 72)) {
 				if (bool && ((Class123) this).aClass456_1545.method7564(1842147975) && class478_9_.method7979(((Class123) this).aClass456_1545.method7597(-693467586), 512535535))
 					return;
-				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.anInt5633)
+				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.id)
 					bool_8_ = class478_9_.aBool5702;
 				i_7_ = class478_9_.method7977((byte) 33);
 				if (class478_9_.method7976((short) 8704))
@@ -174,11 +174,11 @@ public class Class123 {
 		return ((Class123) this).anInt1554 * 601889229;
 	}
 
-	Class123(GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_10_, int i_11_, int i_12_, Class521_Sub1 class521_sub1, boolean bool, int i_13_) {
+	Class123(GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_10_, int i_11_, int i_12_, Class521_Sub1 class521_sub1, boolean bool, int i_13_) {
 		((Class123) this).aBool1546 = false;
 		((Class123) this).aBool1552 = false;
 		((Class123) this).aClass474_1536 = class474;
-		((Class123) this).anInt1540 = 1515141295 * class478.anInt5633;
+		((Class123) this).anInt1540 = 1515141295 * class478.id;
 		((Class123) this).anInt1555 = 2129865927 * i;
 		((Class123) this).anInt1542 = -2132267033 * i_10_;
 		((Class123) this).aClass521_Sub1_1539 = class521_sub1;
@@ -197,7 +197,7 @@ public class Class123 {
 	}
 
 	final MeshRasterizer method2132(GraphicalRenderer class505, int i, boolean bool, boolean bool_14_, int i_15_) {
-		Class478 class478 = ((Class123) this).aClass474_1536.method7891(((Class123) this).anInt1540 * 1535779425, 65280);
+		ObjectDefinitions class478 = ((Class123) this).aClass474_1536.getObjectDefinitions(((Class123) this).anInt1540 * 1535779425, 65280);
 		if (class478.anIntArray5650 != null)
 			class478 = class478.method8013((4 == client.anInt7341 * -891719545 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) 31);
 		if (null == class478) {
@@ -205,7 +205,7 @@ public class Class123 {
 			((Class123) this).anInt1547 = 709399509;
 			return null;
 		}
-		if (!((Class123) this).aBool1546 && (((Class123) this).anInt1547 * -1003883901 != -2132690865 * class478.anInt5633)) {
+		if (!((Class123) this).aBool1546 && (((Class123) this).anInt1547 * -1003883901 != -2132690865 * class478.id)) {
 			method2124(true, -1, 0, 1157413618);
 			((Class123) this).aBool1552 = false;
 			((Class123) this).aClass528_1544 = null;
@@ -214,11 +214,11 @@ public class Class123 {
 		if (bool_14_)
 			bool_14_ = bool_14_ & (((Class123) this).aBool1550 & !((Class123) this).aBool1552 & Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -25) != 0);
 		if (bool && !bool_14_) {
-			((Class123) this).anInt1547 = class478.anInt5633 * 1529104709;
+			((Class123) this).anInt1547 = class478.id * 1529104709;
 			return null;
 		}
 		Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-		Class206 class206 = client.aClass257_7353.method4430(-2004926636);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-2004926636);
 		if (bool_14_) {
 			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -45);
 			((Class123) this).aBool1552 = false;
@@ -251,7 +251,7 @@ public class Class123 {
 				((Class123) this).anInt1554 = 0;
 			}
 			((Class123) this).aClass528_1544 = null;
-		} else if (((Class123) this).aClass528_1544 == null || (((Class123) this).aClass528_1544.m() & i) != i || (-1003883901 * ((Class123) this).anInt1547 != class478.anInt5633 * -2132690865)) {
+		} else if (((Class123) this).aClass528_1544 == null || (((Class123) this).aClass528_1544.m() & i) != i || (-1003883901 * ((Class123) this).anInt1547 != class478.id * -2132690865)) {
 			if (((Class123) this).aClass528_1544 != null)
 				i |= ((Class123) this).aClass528_1544.m();
 			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -2029689654), (int) class385.aFloat4673, bool_14_,
@@ -274,7 +274,7 @@ public class Class123 {
 			}
 		} else
 			class528 = ((Class123) this).aClass528_1544;
-		((Class123) this).anInt1547 = 1529104709 * class478.anInt5633;
+		((Class123) this).anInt1547 = 1529104709 * class478.id;
 		return class528;
 	}
 
@@ -295,7 +295,7 @@ public class Class123 {
 	}
 
 	final MeshRasterizer method2134(GraphicalRenderer class505, int i, boolean bool, boolean bool_17_) {
-		Class478 class478 = ((Class123) this).aClass474_1536.method7891(((Class123) this).anInt1540 * 1535779425, 65280);
+		ObjectDefinitions class478 = ((Class123) this).aClass474_1536.getObjectDefinitions(((Class123) this).anInt1540 * 1535779425, 65280);
 		if (class478.anIntArray5650 != null)
 			class478 = class478.method8013((4 == client.anInt7341 * -891719545 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) 101);
 		if (null == class478) {
@@ -303,7 +303,7 @@ public class Class123 {
 			((Class123) this).anInt1547 = 709399509;
 			return null;
 		}
-		if (!((Class123) this).aBool1546 && (((Class123) this).anInt1547 * -1003883901 != -2132690865 * class478.anInt5633)) {
+		if (!((Class123) this).aBool1546 && (((Class123) this).anInt1547 * -1003883901 != -2132690865 * class478.id)) {
 			method2124(true, -1, 0, 1157413618);
 			((Class123) this).aBool1552 = false;
 			((Class123) this).aClass528_1544 = null;
@@ -312,11 +312,11 @@ public class Class123 {
 		if (bool_17_)
 			bool_17_ = bool_17_ & (((Class123) this).aBool1550 & !((Class123) this).aBool1552 & Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -97) != 0);
 		if (bool && !bool_17_) {
-			((Class123) this).anInt1547 = class478.anInt5633 * 1529104709;
+			((Class123) this).anInt1547 = class478.id * 1529104709;
 			return null;
 		}
 		Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-		Class206 class206 = client.aClass257_7353.method4430(-1379561670);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1379561670);
 		if (bool_17_) {
 			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -82);
 			((Class123) this).aBool1552 = false;
@@ -349,7 +349,7 @@ public class Class123 {
 				((Class123) this).anInt1554 = 0;
 			}
 			((Class123) this).aClass528_1544 = null;
-		} else if (((Class123) this).aClass528_1544 == null || (((Class123) this).aClass528_1544.m() & i) != i || (-1003883901 * ((Class123) this).anInt1547 != class478.anInt5633 * -2132690865)) {
+		} else if (((Class123) this).aClass528_1544 == null || (((Class123) this).aClass528_1544.m() & i) != i || (-1003883901 * ((Class123) this).anInt1547 != class478.id * -2132690865)) {
 			if (((Class123) this).aClass528_1544 != null)
 				i |= ((Class123) this).aClass528_1544.m();
 			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, 714009934), (int) class385.aFloat4673, bool_17_,
@@ -372,7 +372,7 @@ public class Class123 {
 			}
 		} else
 			class528 = ((Class123) this).aClass528_1544;
-		((Class123) this).anInt1547 = 1529104709 * class478.anInt5633;
+		((Class123) this).anInt1547 = 1529104709 * class478.id;
 		return class528;
 	}
 
@@ -453,8 +453,8 @@ public class Class123 {
 		int i_20_ = i;
 		boolean bool_21_ = false;
 		if (-1 == i_20_) {
-			Class478 class478 = (((Class123) this).aClass474_1536.method7891(1535779425 * ((Class123) this).anInt1540, 65280));
-			Class478 class478_22_ = class478;
+			ObjectDefinitions class478 = (((Class123) this).aClass474_1536.getObjectDefinitions(1535779425 * ((Class123) this).anInt1540, 65280));
+			ObjectDefinitions class478_22_ = class478;
 			if (null != class478.anIntArray5650)
 				class478 = class478.method8013((client.anInt7341 * -891719545 == 4 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) -17);
 			if (null == class478)
@@ -464,7 +464,7 @@ public class Class123 {
 			if (class478.method7967((byte) 31)) {
 				if (bool && ((Class123) this).aClass456_1545.method7564(2012022989) && class478.method7979(((Class123) this).aClass456_1545.method7597(-701221617), 2128002880))
 					return;
-				if (class478.anInt5633 * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
+				if (class478.id * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
 					bool_21_ = class478.aBool5702;
 				i_20_ = class478.method7977((byte) 27);
 				if (class478.method7976((short) 8704))
@@ -474,7 +474,7 @@ public class Class123 {
 			} else if (null != class478_22_ && class478_22_.method7967((byte) 21)) {
 				if (bool && ((Class123) this).aClass456_1545.method7564(1863527525) && class478_22_.method7979(((Class123) this).aClass456_1545.method7597(-2143509474), 1385894342))
 					return;
-				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.anInt5633)
+				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.id)
 					bool_21_ = class478_22_.aBool5702;
 				i_20_ = class478_22_.method7977((byte) 0);
 				if (class478_22_.method7976((short) 8704))
@@ -497,8 +497,8 @@ public class Class123 {
 		int i_24_ = i;
 		boolean bool_25_ = false;
 		if (-1 == i_24_) {
-			Class478 class478 = (((Class123) this).aClass474_1536.method7891(1535779425 * ((Class123) this).anInt1540, 65280));
-			Class478 class478_26_ = class478;
+			ObjectDefinitions class478 = (((Class123) this).aClass474_1536.getObjectDefinitions(1535779425 * ((Class123) this).anInt1540, 65280));
+			ObjectDefinitions class478_26_ = class478;
 			if (null != class478.anIntArray5650)
 				class478 = class478.method8013((client.anInt7341 * -891719545 == 4 ? (Interface42) (Class86.anInterface42_832) : Class158_Sub1.aClass3_8507), (byte) 30);
 			if (null == class478)
@@ -508,7 +508,7 @@ public class Class123 {
 			if (class478.method7967((byte) 28)) {
 				if (bool && ((Class123) this).aClass456_1545.method7564(199577751) && class478.method7979(((Class123) this).aClass456_1545.method7597(-1593904440), -135069339))
 					return;
-				if (class478.anInt5633 * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
+				if (class478.id * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
 					bool_25_ = class478.aBool5702;
 				i_24_ = class478.method7977((byte) 69);
 				if (class478.method7976((short) 8704))
@@ -518,7 +518,7 @@ public class Class123 {
 			} else if (null != class478_26_ && class478_26_.method7967((byte) 86)) {
 				if (bool && ((Class123) this).aClass456_1545.method7564(344604134) && class478_26_.method7979(((Class123) this).aClass456_1545.method7597(-2088814679), 1568056205))
 					return;
-				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.anInt5633)
+				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.id)
 					bool_25_ = class478_26_.aBool5702;
 				i_24_ = class478_26_.method7977((byte) -67);
 				if (class478_26_.method7976((short) 8704))
@@ -538,16 +538,16 @@ public class Class123 {
 	}
 
 	public static int method2149(int i) {
-		if (1222314215 * Class102.anInt1039 == -1) {
-			Class102[] class102s = Class158_Sub1.method13767(-1513831265);
+		if (1222314215 * IndexReference.anInt1039 == -1) {
+			IndexReference[] class102s = Class158_Sub1.method13767(-1513831265);
 			for (int i_27_ = 0; i_27_ < class102s.length; i_27_++) {
-				Class102 class102 = class102s[i_27_];
-				if (((Class102) class102).anInt1054 * -2030850743 > 1222314215 * Class102.anInt1039)
-					Class102.anInt1039 = -1233067441 * ((Class102) class102).anInt1054;
+				IndexReference class102 = class102s[i_27_];
+				if (((IndexReference) class102).indexId * -2030850743 > 1222314215 * IndexReference.anInt1039)
+					IndexReference.anInt1039 = -1233067441 * ((IndexReference) class102).indexId;
 			}
-			Class102.anInt1039 += -437679401;
+			IndexReference.anInt1039 += -437679401;
 		}
-		return Class102.anInt1039 * 1222314215;
+		return IndexReference.anInt1039 * 1222314215;
 	}
 
 	static final void method2150(CS2Executor class527, byte i) {
@@ -561,11 +561,11 @@ public class Class123 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_29_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_30_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_30_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_30_, (byte) 0);
 		if (class437.method7319(1555061388))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class207.aClass421_2658.method7036(i_29_, -1979038944).method14751(i_30_, class437.aString5335, 1092559999);
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.aClass421_2658.method7036(i_29_, -1979038944).method14751(i_30_, class437.aString5335, 1092559999);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (Class207.aClass421_2658.method7036(i_29_, 1053782715).method14750(i_30_, -1741480635 * class437.anInt5337, (byte) 53));
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.aClass421_2658.method7036(i_29_, 1053782715).method14750(i_30_, -1741480635 * class437.anInt5337, (byte) 53));
 	}
 
 	public static void method2152(int i, int i_31_) {

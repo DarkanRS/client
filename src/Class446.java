@@ -58,7 +58,7 @@ public class Class446 {
 	}
 
 	static void method7434(CS2Executor class527, short i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1]), -1396181317).anInt2960) * -1031162511;
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1]), -1396181317).anInt2960) * -1031162511;
 	}
 
 	public void method7435(Interface41 interface41, byte i) {

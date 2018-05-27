@@ -119,7 +119,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (IncomingPacket.aClass375_4482 == class184.aClass375_2286) {
-			Class85.aString817 = (715663393 * class184.anInt2287 > 2 ? stream.readString(1759947530) : Message.aClass433_5286.translate(Class223.aClass495_2772, -1187913693));
+			Class85.aString817 = (715663393 * class184.anInt2287 > 2 ? stream.readString(1759947530) : Message.WALK_HERE.translate(Class223.CURRENT_LANGUAGE, -1187913693));
 			client.anInt7311 = (715663393 * class184.anInt2287 > 0 ? stream.readUnsignedShort() : -1) * -1263465007;
 			if (65535 == client.anInt7311 * 460745521) {
 				client.anInt7311 = 1263465007;
@@ -204,7 +204,7 @@ public class PacketsDecoder extends Class455 {
 			int key1 = stream.readInt();
 			Class470.method7825(-400873026);
 			if (type == 2) {
-				AttributesDefaultsLoader.method7081((byte) 18);
+				ItemDefaultsLoader.method7081((byte) 18);
 			}
 			int[] is = { key1, key2, key3, key4 };
 			client.anInt7349 = 153305321 * id;
@@ -236,7 +236,7 @@ public class PacketsDecoder extends Class455 {
 			String string = stream.readString(-391052683);
 			int i_30_ = stream.readShortLE128(602501853);
 			Class470.method7825(1212962087);
-			Class257.method4562(i_30_, string, -1783534567);
+			MapRegion.method4562(i_30_, string, -1783534567);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -286,13 +286,13 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_38_) {
 				client.aLongArray7424[client.anInt7389 * -1307820429] = l_37_;
 				client.anInt7389 = 1022203579 * ((1 + -1307820429 * client.anInt7389) % 100);
-				String string_40_ = Class368.aClass429_4265.method7214(i_36_, -2078154753).method14897(stream, (byte) 0);
+				String string_40_ = IndexLoaders.aClass429_4265.method7214(i_36_, -2078154753).method14897(stream, (byte) 0);
 				if (i_35_ == 2) {
-					Class340.method6070(18, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_33_).toString(), string, string_40_, null, i_36_, 30927485);
+					MapRegionLoaderTask.method6070(18, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_33_).toString(), string, string_40_, null, i_36_, 30927485);
 				} else if (1 == i_35_) {
-					Class340.method6070(18, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_33_).toString(), string, string_40_, null, i_36_, 30927485);
+					MapRegionLoaderTask.method6070(18, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_33_).toString(), string, string_40_, null, i_36_, 30927485);
 				} else {
-					Class340.method6070(18, 0, string, string_33_, string, string_40_, null, i_36_, 30927485);
+					MapRegionLoaderTask.method6070(18, 0, string, string_33_, string, string_40_, null, i_36_, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -351,11 +351,11 @@ public class PacketsDecoder extends Class455 {
 			}
 			boolean bool = 1 == (i_53_ >> 7 & 0x1);
 			if (i_55_ >> 30 != 0) {
-				Class219 class219 = client.aClass257_7353.method4519(1211596991);
+				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1211596991);
 				int i_59_ = i_55_ >> 28 & 0x3;
 				int i_60_ = (i_55_ >> 14 & 0x3fff) - class219.anInt2711 * 1948093437;
 				int i_61_ = (i_55_ & 0x3fff) - -1002240017 * class219.anInt2712;
-				if (i_60_ >= 0 && i_61_ >= 0 && i_60_ < client.aClass257_7353.method4424(388459650) && i_61_ < client.aClass257_7353.method4451(-1824277921)) {
+				if (i_60_ >= 0 && i_61_ >= 0 && i_60_ < IndexLoaders.MAP_REGION_DECODER.method4424(388459650) && i_61_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1824277921)) {
 					if (i_52_ == -1) {
 						Class282_Sub50_Sub10 class282_sub50_sub10 = ((Class282_Sub50_Sub10) client.aClass465_7334.method7754(i_60_ << 16 | i_61_));
 						if (class282_sub50_sub10 != null) {
@@ -366,10 +366,10 @@ public class PacketsDecoder extends Class455 {
 						int i_62_ = i_60_ * 512 + 256;
 						int i_63_ = i_61_ * 512 + 256;
 						int i_64_ = i_59_;
-						if (i_64_ < 3 && client.aClass257_7353.method4433(33386298).method5497(i_60_, i_61_, 1765906120)) {
+						if (i_64_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_60_, i_61_, 1765906120)) {
 							i_64_++;
 						}
-						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(client.aClass257_7353.method4430(-1893689656), i_52_, i_54_, i_59_, i_64_, i_62_, Class504.method8389(i_62_, i_63_, i_59_, (byte) 74) - i_56_, i_63_, i_60_, i_60_, i_61_, i_61_, i_57_, bool));
+						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.method4430(-1893689656), i_52_, i_54_, i_59_, i_64_, i_62_, Class504.method8389(i_62_, i_63_, i_59_, (byte) 74) - i_56_, i_63_, i_60_, i_60_, i_61_, i_61_, i_57_, bool));
 						client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4), i_60_ << 16 | i_61_);
 					}
 				}
@@ -386,9 +386,9 @@ public class PacketsDecoder extends Class455 {
 					int i_67_ = class161.anInt2012 * 378836105;
 					if (i_52_ != -1 && i_67_ != -1) {
 						if (i_52_ == i_67_) {
-							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) -4);
+							Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_52_, (byte) -4);
 							if (class525.aBool6968 && -364555849 * class525.anInt6977 != -1) {
-								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -4));
+								AnimationDefinitions class518 = (IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -4));
 								int i_68_ = class518.anInt5907 * 554947543;
 								if (0 == i_68_ || i_68_ == 2) {
 									bool_66_ = false;
@@ -397,11 +397,11 @@ public class PacketsDecoder extends Class455 {
 								}
 							}
 						} else {
-							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) 50);
-							Class525 class525_69_ = Class96_Sub20.aClass515_9416.method8845(i_67_, (byte) 100);
+							Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_52_, (byte) 50);
+							Class525 class525_69_ = IndexLoaders.aClass515_9416.method8845(i_67_, (byte) 100);
 							if (-1 != class525.anInt6977 * -364555849 && -364555849 * class525_69_.anInt6977 != -1) {
-								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 15));
-								AnimationDefinitions class518_70_ = (Class330.aClass523_3868.method11205(-364555849 * class525_69_.anInt6977, (byte) 19));
+								AnimationDefinitions class518 = (IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 15));
+								AnimationDefinitions class518_70_ = (IndexLoaders.aClass523_3868.method11205(-364555849 * class525_69_.anInt6977, (byte) 19));
 								if (class518.anInt5916 * -1834317435 < -1834317435 * class518_70_.anInt5916) {
 									bool_66_ = false;
 								}
@@ -413,7 +413,7 @@ public class PacketsDecoder extends Class455 {
 						class161.anInt2013 = 391696483 * i_56_;
 						class161.anInt2011 = -523477979 * i_58_;
 						if (-1 != i_52_) {
-							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) -65);
+							Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_52_, (byte) -65);
 							int i_71_ = class525.aBool6968 ? 0 : 2;
 							if (bool) {
 								i_71_ = 1;
@@ -441,9 +441,9 @@ public class PacketsDecoder extends Class455 {
 					int i_74_ = 378836105 * class161.anInt2012;
 					if (i_52_ != -1 && i_74_ != -1) {
 						if (i_74_ == i_52_) {
-							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) 39);
+							Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_52_, (byte) 39);
 							if (class525.aBool6968 && -1 != -364555849 * class525.anInt6977) {
-								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 36));
+								AnimationDefinitions class518 = (IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 36));
 								int i_75_ = 554947543 * class518.anInt5907;
 								if (i_75_ == 0 || i_75_ == 2) {
 									bool_73_ = false;
@@ -452,11 +452,11 @@ public class PacketsDecoder extends Class455 {
 								}
 							}
 						} else {
-							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) -86);
-							Class525 class525_76_ = Class96_Sub20.aClass515_9416.method8845(i_74_, (byte) -10);
+							Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_52_, (byte) -86);
+							Class525 class525_76_ = IndexLoaders.aClass515_9416.method8845(i_74_, (byte) -10);
 							if (-364555849 * class525.anInt6977 != -1 && class525_76_.anInt6977 * -364555849 != -1) {
-								AnimationDefinitions class518 = (Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -12));
-								AnimationDefinitions class518_77_ = (Class330.aClass523_3868.method11205(-364555849 * class525_76_.anInt6977, (byte) 15));
+								AnimationDefinitions class518 = (IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -12));
+								AnimationDefinitions class518_77_ = (IndexLoaders.aClass523_3868.method11205(-364555849 * class525_76_.anInt6977, (byte) 15));
 								if (class518.anInt5916 * -1834317435 < class518_77_.anInt5916 * -1834317435) {
 									bool_73_ = false;
 								}
@@ -469,7 +469,7 @@ public class PacketsDecoder extends Class455 {
 						class161.anInt2011 = -523477979 * i_58_;
 						class161.anInt2015 = i_57_ * 1859279795;
 						if (-1 != i_52_) {
-							Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i_52_, (byte) -15);
+							Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_52_, (byte) -15);
 							int i_78_ = class525.aBool6968 ? 0 : 2;
 							if (bool) {
 								i_78_ = 1;
@@ -592,13 +592,13 @@ public class PacketsDecoder extends Class455 {
 				}
 			}
 			if (!bool_99_) {
-				String string_100_ = (Class182.method3044(Class511.method8755(stream, (byte) 29), -1519993030));
+				String string_100_ = (Class182.method3044(Defaults7Loader.method8755(stream, (byte) 29), -1519993030));
 				if (i_98_ == 2) {
-					Class340.method6070(24, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_97_).toString(), string, string_100_, null, -1, 30927485);
+					MapRegionLoaderTask.method6070(24, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_97_).toString(), string, string_100_, null, -1, 30927485);
 				} else if (1 == i_98_) {
-					Class340.method6070(24, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_97_).toString(), string, string_100_, null, -1, 30927485);
+					MapRegionLoaderTask.method6070(24, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_97_).toString(), string, string_100_, null, -1, 30927485);
 				} else {
-					Class340.method6070(24, 0, string, string_97_, string, string_100_, null, -1, 30927485);
+					MapRegionLoaderTask.method6070(24, 0, string, string_97_, string, string_100_, null, -1, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -618,13 +618,13 @@ public class PacketsDecoder extends Class455 {
 				bool_104_ = true;
 			}
 			if (!bool_104_) {
-				String string_105_ = Class368.aClass429_4265.method7214(i_103_, -1821075949).method14897(stream, (byte) 0);
+				String string_105_ = IndexLoaders.aClass429_4265.method7214(i_103_, -1821075949).method14897(stream, (byte) 0);
 				if (i_102_ == 2) {
-					Class340.method6070(25, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_101_).toString(), string, string_105_, null, i_103_, 30927485);
+					MapRegionLoaderTask.method6070(25, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_101_).toString(), string, string_105_, null, i_103_, 30927485);
 				} else if (i_102_ == 1) {
-					Class340.method6070(25, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_101_).toString(), string, string_105_, null, i_103_, 30927485);
+					MapRegionLoaderTask.method6070(25, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_101_).toString(), string, string_105_, null, i_103_, 30927485);
 				} else {
-					Class340.method6070(25, 0, string, string_101_, string, string_105_, null, i_103_, 30927485);
+					MapRegionLoaderTask.method6070(25, 0, string, string_101_, string, string_105_, null, i_103_, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -663,9 +663,9 @@ public class PacketsDecoder extends Class455 {
 			System.arraycopy((class184.aClass282_Sub35_Sub2_2284.buffer), -1990677291 * (class184.aClass282_Sub35_Sub2_2284.index), class282_sub35_sub2_112_.buffer, 0, 715663393 * class184.anInt2287);
 			Class414.method6989(1407669515);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(917077703) == 1) {
-				Class6.aClass340_45.method6049(new Class335(Class256.aClass256_3155, class282_sub35_sub2_112_), 301123709);
+				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3155, class282_sub35_sub2_112_), 301123709);
 			} else {
-				client.aClass257_7353.method4499(new Class335(Class256.aClass256_3155, class282_sub35_sub2_112_), 1959185438);
+				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, class282_sub35_sub2_112_), 1959185438);
 			}
 			class184.aClass375_2286 = null;
 			return false;
@@ -719,7 +719,7 @@ public class PacketsDecoder extends Class455 {
 						i_119_ = class346.anInt4048 * -624100047;
 						string = class346.aClass282_Sub50_Sub9_4047.method14897(stream, (byte) 0);
 					} else {
-						string = (Class182.method3044(Class511.method8755(stream, (byte) 71), -1519993030));
+						string = (Class182.method3044(Defaults7Loader.method8755(stream, (byte) 71), -1519993030));
 					}
 					class521_sub1_sub1_sub2_sub1.sendChat(string.trim(), i_116_ >> 8, i_116_ & 0xff, (byte) 33);
 					int i_120_;
@@ -729,11 +729,11 @@ public class PacketsDecoder extends Class455 {
 						i_120_ = bool ? 17 : 2;
 					}
 					if (2 == i_117_) {
-						Class340.method6070(i_120_, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16127(true, 2000914170)).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16128(false, 1912893547)).toString(), class521_sub1_sub1_sub2_sub1.username, string, null, i_119_, 30927485);
+						MapRegionLoaderTask.method6070(i_120_, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16127(true, 2000914170)).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16128(false, 1912893547)).toString(), class521_sub1_sub1_sub2_sub1.username, string, null, i_119_, 30927485);
 					} else if (1 == i_117_) {
-						Class340.method6070(i_120_, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16127(true, 1975174486)).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16128(false, 1912893547)).toString(), class521_sub1_sub1_sub2_sub1.username, string, null, i_119_, 30927485);
+						MapRegionLoaderTask.method6070(i_120_, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16127(true, 1975174486)).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(class521_sub1_sub1_sub2_sub1.method16128(false, 1912893547)).toString(), class521_sub1_sub1_sub2_sub1.username, string, null, i_119_, 30927485);
 					} else {
-						Class340.method6070(i_120_, 0, class521_sub1_sub1_sub2_sub1.method16127(true, 2076242583), class521_sub1_sub1_sub2_sub1.method16128(false, 1912893547), class521_sub1_sub1_sub2_sub1.username, string, null, i_119_, 30927485);
+						MapRegionLoaderTask.method6070(i_120_, 0, class521_sub1_sub1_sub2_sub1.method16127(true, 2076242583), class521_sub1_sub1_sub2_sub1.method16128(false, 1912893547), class521_sub1_sub1_sub2_sub1.username, string, null, i_119_, 30927485);
 					}
 				}
 			}
@@ -853,7 +853,7 @@ public class PacketsDecoder extends Class455 {
 			int i_137_ = stream.readUnsignedShort();
 			String string = stream.readString(-265883573);
 			if (Class46.anObjectArray437 == null) {
-				Class46.anObjectArray437 = (new Object[Class502.aClass394_5831.anInt4785 * 117597627]);
+				Class46.anObjectArray437 = (new Object[IndexLoaders.aClass394_5831.anInt4785 * 117597627]);
 			}
 			Class46.anObjectArray437[i_137_] = string;
 			client.anIntArray7222[(client.anInt7390 += 9095609) * 1033923721 - 1 & 0x1f] = i_137_;
@@ -920,20 +920,20 @@ public class PacketsDecoder extends Class455 {
 				Class508.anInt5864 = 987778595;
 				Class86.anInt833 = -1509271845;
 			} else {
-				Class219 class219 = client.aClass257_7353.method4519(1825501600);
+				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1825501600);
 				int i_146_ = i_145_ >> 14 & 0x3fff;
 				int i_147_ = i_145_ & 0x3fff;
 				i_146_ -= 1948093437 * class219.anInt2711;
 				if (i_146_ < 0) {
 					i_146_ = 0;
-				} else if (i_146_ >= client.aClass257_7353.method4424(2001969663)) {
-					i_146_ = client.aClass257_7353.method4424(1292734123);
+				} else if (i_146_ >= IndexLoaders.MAP_REGION_DECODER.method4424(2001969663)) {
+					i_146_ = IndexLoaders.MAP_REGION_DECODER.method4424(1292734123);
 				}
 				i_147_ -= class219.anInt2712 * -1002240017;
 				if (i_147_ < 0) {
 					i_147_ = 0;
-				} else if (i_147_ >= client.aClass257_7353.method4451(-446292147)) {
-					i_147_ = client.aClass257_7353.method4451(-1249519564);
+				} else if (i_147_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-446292147)) {
+					i_147_ = IndexLoaders.MAP_REGION_DECODER.method4451(-1249519564);
 				}
 				Class508.anInt5864 = -987778595 * (256 + (i_146_ << 9));
 				Class86.anInt833 = 1509271845 * ((i_147_ << 9) + 256);
@@ -984,14 +984,14 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_154_) {
 				client.aLongArray7424[-1307820429 * client.anInt7389] = l_153_;
 				client.anInt7389 = (1 + -1307820429 * client.anInt7389) % 100 * 1022203579;
-				String string_156_ = Class368.aClass429_4265.method7214(i_152_, -1887115838).method14897(stream, (byte) 0);
+				String string_156_ = IndexLoaders.aClass429_4265.method7214(i_152_, -1887115838).method14897(stream, (byte) 0);
 				int i_157_ = bool ? 42 : 45;
 				if (2 == i_151_ || 3 == i_151_) {
-					Class340.method6070(i_157_, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), string, string_156_, class282_sub4.aString7501, i_152_, 30927485);
+					MapRegionLoaderTask.method6070(i_157_, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), string, string_156_, class282_sub4.aString7501, i_152_, 30927485);
 				} else if (1 == i_151_) {
-					Class340.method6070(i_157_, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), string, string_156_, class282_sub4.aString7501, i_152_, 30927485);
+					MapRegionLoaderTask.method6070(i_157_, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), string, string_156_, class282_sub4.aString7501, i_152_, 30927485);
 				} else {
-					Class340.method6070(i_157_, 0, string, string, string, string_156_, class282_sub4.aString7501, i_152_, 30927485);
+					MapRegionLoaderTask.method6070(i_157_, 0, string, string, string, string_156_, class282_sub4.aString7501, i_152_, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -1001,7 +1001,7 @@ public class PacketsDecoder extends Class455 {
 			int i_158_ = stream.readUnsignedShort();
 			long l = stream.readLong(923196069);
 			if (Class46.anObjectArray437 == null) {
-				Class46.anObjectArray437 = (new Object[Class502.aClass394_5831.anInt4785 * 117597627]);
+				Class46.anObjectArray437 = (new Object[IndexLoaders.aClass394_5831.anInt4785 * 117597627]);
 			}
 			Class46.anObjectArray437[i_158_] = new Long(l);
 			client.anIntArray7222[(client.anInt7390 += 9095609) * 1033923721 - 1 & 0x1f] = i_158_;
@@ -1036,13 +1036,13 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_165_) {
 				client.aLongArray7424[-1307820429 * client.anInt7389] = l_164_;
 				client.anInt7389 = (1 + client.anInt7389 * -1307820429) % 100 * 1022203579;
-				String string_167_ = Class368.aClass429_4265.method7214(i_163_, -1839082633).method14897(stream, (byte) 0);
+				String string_167_ = IndexLoaders.aClass429_4265.method7214(i_163_, -1839082633).method14897(stream, (byte) 0);
 				if (i_162_ == 2) {
-					Class340.method6070(20, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_159_).toString(), string, string_167_, Class179.method3018(l), i_163_, 30927485);
+					MapRegionLoaderTask.method6070(20, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_159_).toString(), string, string_167_, Class179.method3018(l), i_163_, 30927485);
 				} else if (1 == i_162_) {
-					Class340.method6070(20, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_159_).toString(), string, string_167_, Class179.method3018(l), i_163_, 30927485);
+					MapRegionLoaderTask.method6070(20, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_159_).toString(), string, string_167_, Class179.method3018(l), i_163_, 30927485);
 				} else {
-					Class340.method6070(20, 0, string, string_159_, string, string_167_, Class179.method3018(l), i_163_, 30927485);
+					MapRegionLoaderTask.method6070(20, 0, string, string_159_, string, string_167_, Class179.method3018(l), i_163_, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -1051,8 +1051,8 @@ public class PacketsDecoder extends Class455 {
 		if (IncomingPacket.aClass375_4510 == class184.aClass375_2286) {
 			String string = stream.readString(1145817674);
 			int i_168_ = stream.readUnsignedShort();
-			String string_169_ = Class368.aClass429_4265.method7214(i_168_, -1726302200).method14897(stream, (byte) 0);
-			Class340.method6070(19, 0, string, string, string, string_169_, null, i_168_, 30927485);
+			String string_169_ = IndexLoaders.aClass429_4265.method7214(i_168_, -1726302200).method14897(stream, (byte) 0);
+			MapRegionLoaderTask.method6070(19, 0, string, string, string, string_169_, null, i_168_, 30927485);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -1060,7 +1060,7 @@ public class PacketsDecoder extends Class455 {
 			int i_170_ = stream.readUnsignedShort();
 			int i_171_ = stream.readInt();
 			if (null == Class46.anObjectArray437) {
-				Class46.anObjectArray437 = (new Object[117597627 * Class502.aClass394_5831.anInt4785]);
+				Class46.anObjectArray437 = (new Object[117597627 * IndexLoaders.aClass394_5831.anInt4785]);
 			}
 			Class46.anObjectArray437[i_170_] = new Integer(i_171_);
 			client.anIntArray7222[(client.anInt7390 += 9095609) * 1033923721 - 1 & 0x1f] = i_170_;
@@ -1107,14 +1107,14 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4375) {
 			int i_178_ = stream.readUnsignedByte();
-			int i_179_ = stream.readBigSmart(2067225931);
+			int i_179_ = stream.readBigSmart();
 			if (client.aClass281Array7180[i_178_] != null) {
-				client.aClass281Array7180[i_178_].method4979(client.aClass257_7353.method4430(-1999339488), -617722573);
+				client.aClass281Array7180[i_178_].method4979(IndexLoaders.MAP_REGION_DECODER.method4430(-1999339488), -617722573);
 				client.aClass281Array7180[i_178_] = null;
 			}
 			if (-1 != i_179_) {
 				client.aClass281Array7180[i_178_] = new Class281(Renderers.SOFTWARE_RENDERER, stream, i_179_);
-				client.aClass281Array7180[i_178_].method4978(client.aClass257_7353.method4430(-1306272287), (byte) -1);
+				client.aClass281Array7180[i_178_].method4978(IndexLoaders.MAP_REGION_DECODER.method4430(-1306272287), (byte) -1);
 			}
 			class184.aClass375_2286 = null;
 			return true;
@@ -1144,7 +1144,7 @@ public class PacketsDecoder extends Class455 {
 			int i_182_ = stream.readUnsignedShort();
 			byte i_183_ = stream.readByte((short) -15680);
 			if (null == Class46.anObjectArray437) {
-				Class46.anObjectArray437 = (new Object[117597627 * Class502.aClass394_5831.anInt4785]);
+				Class46.anObjectArray437 = (new Object[117597627 * IndexLoaders.aClass394_5831.anInt4785]);
 			}
 			Class46.anObjectArray437[i_182_] = new Integer(i_183_);
 			client.anIntArray7222[(client.anInt7390 += 9095609) * 1033923721 - 1 & 0x1f] = i_182_;
@@ -1184,7 +1184,7 @@ public class PacketsDecoder extends Class455 {
 			Class458.anInt5495 = ((stream.read128Byte((short) 15542) << 3) * 801275545);
 			Class158_Sub1_Sub2.anInt10131 = ((stream.readByte((short) -16828) << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte() * 1822731553;
-			Class219 class219 = client.aClass257_7353.method4519(902676925);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(902676925);
 			for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-1866877180)); null != class282_sub29; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 48))) {
 				int i_186_ = (int) ((-3442165056282524525L * class282_sub29.data >> 28) & 0x3L);
 				int i_187_ = (int) (class282_sub29.data * -3442165056282524525L & 0x3fffL);
@@ -1193,7 +1193,7 @@ public class PacketsDecoder extends Class455 {
 				int i_190_ = i_189_ - -1002240017 * class219.anInt2712;
 				if (i_186_ == Class272.anInt3331 * -1258088735 && i_188_ >= -2109540951 * Class458.anInt5495 && i_188_ < 8 + Class458.anInt5495 * -2109540951 && i_190_ >= 71472045 * Class158_Sub1_Sub2.anInt10131 && i_190_ < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) {
 					class282_sub29.unlink(-371378792);
-					if (i_188_ >= 0 && i_190_ >= 0 && (i_188_ < client.aClass257_7353.method4424(-359634463)) && (i_190_ < client.aClass257_7353.method4451(-542957162))) {
+					if (i_188_ >= 0 && i_190_ >= 0 && (i_188_ < IndexLoaders.MAP_REGION_DECODER.method4424(-359634463)) && (i_190_ < IndexLoaders.MAP_REGION_DECODER.method4451(-542957162))) {
 						Class434_Sub1.method12760((Class272.anInt3331 * -1258088735), i_188_, i_190_, -1380263584);
 					}
 				}
@@ -1279,7 +1279,7 @@ public class PacketsDecoder extends Class455 {
 					}
 					class180.anInt2236 = -1720323886;
 					class180.anInt2239 = (stream.readUnsignedByte() * 665145419);
-					Class219 class219 = client.aClass257_7353.method4519(2046392322);
+					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(2046392322);
 					class180.anInt2243 += ((stream.readUnsignedShort() - class219.anInt2711 * 1948093437) << 9) * -1582343557;
 					class180.anInt2235 += ((stream.readUnsignedShort() - -1002240017 * class219.anInt2712) << 9) * -1351216313;
 					class180.anInt2241 = ((stream.readUnsignedByte() << 2) * -912841119);
@@ -1317,12 +1317,12 @@ public class PacketsDecoder extends Class455 {
 			} else {
 				i_212_ *= 4;
 			}
-			Class219 class219 = client.aClass257_7353.method4519(2057571253);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(2057571253);
 			int i_215_ = i_211_ - -398780422 * class219.anInt2711;
 			int i_216_ = i_204_ - -2004480034 * class219.anInt2712;
 			i_209_ += i_215_;
 			i_210_ += i_216_;
-			if (i_215_ >= 0 && i_216_ >= 0 && i_215_ < client.aClass257_7353.method4424(1885615957) * 2 && i_216_ < client.aClass257_7353.method4424(1685736884) * 2 && i_209_ >= 0 && i_210_ >= 0 && i_209_ < client.aClass257_7353.method4451(-1422128606) * 2 && i_210_ < client.aClass257_7353.method4451(-1745798122) * 2 && i_207_ != 65535) {
+			if (i_215_ >= 0 && i_216_ >= 0 && i_215_ < IndexLoaders.MAP_REGION_DECODER.method4424(1885615957) * 2 && i_216_ < IndexLoaders.MAP_REGION_DECODER.method4424(1685736884) * 2 && i_209_ >= 0 && i_210_ >= 0 && i_209_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1422128606) * 2 && i_210_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1745798122) * 2 && i_207_ != 65535) {
 				i_215_ = 256 * i_215_;
 				i_216_ = 256 * i_216_;
 				i_209_ = 256 * i_209_;
@@ -1572,9 +1572,9 @@ public class PacketsDecoder extends Class455 {
 			System.arraycopy((class184.aClass282_Sub35_Sub2_2284.buffer), (class184.aClass282_Sub35_Sub2_2284.index) * -1990677291, class282_sub35_sub2_254_.buffer, 0, 715663393 * class184.anInt2287);
 			Class414.method6989(1407669515);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(621836544) == 1) {
-				Class6.aClass340_45.method6049(new Class335(Class256.aClass256_3158, class282_sub35_sub2_254_), 301123709);
+				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3158, class282_sub35_sub2_254_), 301123709);
 			} else {
-				client.aClass257_7353.method4499(new Class335(Class256.aClass256_3158, class282_sub35_sub2_254_), 1089182926);
+				IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, class282_sub35_sub2_254_), 1089182926);
 			}
 			class184.aClass375_2286 = null;
 			return false;
@@ -1644,7 +1644,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4440) {
-			Class46.anObjectArray437 = new Object[117597627 * Class502.aClass394_5831.anInt4785];
+			Class46.anObjectArray437 = new Object[117597627 * IndexLoaders.aClass394_5831.anInt4785];
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -1717,7 +1717,7 @@ public class PacketsDecoder extends Class455 {
 				i_281_ = -1;
 				i_282_ = -1;
 			}
-			Class519.method11155(i_281_, i_282_, -1859663619);
+			Defaults8Loader.method11155(i_281_, i_282_, -1859663619);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -1749,7 +1749,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4438) {
 			int i_292_ = stream.readUnsignedByte();
-			Class494 class494 = ((Class494) Class386.method6672(Class479.method8038((byte) 99), i_292_, -1560493235));
+			Class494 class494 = ((Class494) Class386.method6672(UnderlayIndexLoader.method8038((byte) 99), i_292_, -1560493235));
 			if (class494 == null) {
 				class494 = Class494.aClass494_5782;
 			}
@@ -1835,7 +1835,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (IncomingPacket.aClass375_4443 == class184.aClass375_2286) {
 			String string = stream.readString(142927157);
-			String string_306_ = Class182.method3044(Class511.method8755(stream, (byte) 116), -1519993030);
+			String string_306_ = Class182.method3044(Defaults7Loader.method8755(stream, (byte) 116), -1519993030);
 			Class191.method3167(6, 0, string, string, string, string_306_, 1342704972);
 			class184.aClass375_2286 = null;
 			return true;
@@ -1909,13 +1909,13 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_315_) {
 				client.aLongArray7424[-1307820429 * client.anInt7389] = l_314_;
 				client.anInt7389 = 1022203579 * ((-1307820429 * client.anInt7389 + 1) % 100);
-				String string_317_ = (Class182.method3044(Class511.method8755(stream, (byte) 81), -1519993030));
+				String string_317_ = (Class182.method3044(Defaults7Loader.method8755(stream, (byte) 81), -1519993030));
 				if (2 == i_313_) {
-					Class340.method6070(7, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_311_).toString(), string, string_317_, null, -1, 30927485);
+					MapRegionLoaderTask.method6070(7, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_311_).toString(), string, string_317_, null, -1, 30927485);
 				} else if (i_313_ == 1) {
-					Class340.method6070(7, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_311_).toString(), string, string_317_, null, -1, 30927485);
+					MapRegionLoaderTask.method6070(7, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_311_).toString(), string, string_317_, null, -1, 30927485);
 				} else {
-					Class340.method6070(3, 0, string, string_311_, string, string_317_, null, -1, 30927485);
+					MapRegionLoaderTask.method6070(3, 0, string, string_311_, string, string_317_, null, -1, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -1941,7 +1941,7 @@ public class PacketsDecoder extends Class455 {
 			int i_322_ = stream.readIntV2(-1649128015);
 			int i_323_ = stream.readIntV2(-1377250026);
 			Class470.method7825(-971334097);
-			Class474.method7917(i_323_, i_322_, (byte) 2);
+			ObjectIndexLoader.method7917(i_323_, i_322_, (byte) 2);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -2014,14 +2014,14 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_337_) {
 				client.aLongArray7424[-1307820429 * client.anInt7389] = l_336_;
 				client.anInt7389 = (1 + client.anInt7389 * -1307820429) % 100 * 1022203579;
-				String string_339_ = (Class182.method3044(Class511.method8755(stream, (byte) 54), -1519993030));
+				String string_339_ = (Class182.method3044(Defaults7Loader.method8755(stream, (byte) 54), -1519993030));
 				int i_340_ = bool ? 41 : 44;
 				if (i_335_ == 2 || 3 == i_335_) {
-					Class340.method6070(i_340_, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), string, string_339_, class282_sub4.aString7501, -1, 30927485);
+					MapRegionLoaderTask.method6070(i_340_, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), string, string_339_, class282_sub4.aString7501, -1, 30927485);
 				} else if (1 == i_335_) {
-					Class340.method6070(i_340_, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), string, string_339_, class282_sub4.aString7501, -1, 30927485);
+					MapRegionLoaderTask.method6070(i_340_, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), string, string_339_, class282_sub4.aString7501, -1, 30927485);
 				} else {
-					Class340.method6070(i_340_, 0, string, string, string, string_339_, class282_sub4.aString7501, -1, 30927485);
+					MapRegionLoaderTask.method6070(i_340_, 0, string, string, string, string_339_, class282_sub4.aString7501, -1, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -2200,7 +2200,7 @@ public class PacketsDecoder extends Class455 {
 			client.anInt7357 = 1562805881;
 			client.anInt7231 = i_359_ * -593633913;
 			client.anInt7341 = -1004732507;
-			Class89.aClass317_944.method5661(-1638311881 * client.anInt7231, -190684974);
+			IndexLoaders.CUTSCENE_INDEX.method5661(-1638311881 * client.anInt7231, -190684974);
 			Class316.method5594(-559600711);
 			Class228.method3851(-402153223);
 			int i_360_ = stream.readUnsignedShort();
@@ -2277,7 +2277,7 @@ public class PacketsDecoder extends Class455 {
 			int i_376_ = stream.readShortLE((byte) -15);
 			String string = stream.readString(650950496);
 			Class470.method7825(-929905527);
-			Class257.method4562(i_376_, string, -1183230823);
+			MapRegion.method4562(i_376_, string, -1183230823);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -2317,13 +2317,13 @@ public class PacketsDecoder extends Class455 {
 			if (!bool_382_) {
 				client.aLongArray7424[-1307820429 * client.anInt7389] = l_381_;
 				client.anInt7389 = (-1307820429 * client.anInt7389 + 1) % 100 * 1022203579;
-				String string_384_ = (Class182.method3044(Class511.method8755(stream, (byte) 107), -1519993030));
+				String string_384_ = (Class182.method3044(Defaults7Loader.method8755(stream, (byte) 107), -1519993030));
 				if (2 == i_380_ || i_380_ == 3) {
-					Class340.method6070(9, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_377_).toString(), string, string_384_, Class179.method3018(l), -1, 30927485);
+					MapRegionLoaderTask.method6070(9, 0, new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(1, (byte) 0)).append(string_377_).toString(), string, string_384_, Class179.method3018(l), -1, 30927485);
 				} else if (1 == i_380_) {
-					Class340.method6070(9, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_377_).toString(), string, string_384_, Class179.method3018(l), -1, 30927485);
+					MapRegionLoaderTask.method6070(9, 0, new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string).toString(), new StringBuilder().append(Class76.method1358(0, (byte) 0)).append(string_377_).toString(), string, string_384_, Class179.method3018(l), -1, 30927485);
 				} else {
-					Class340.method6070(9, 0, string, string_377_, string, string_384_, Class179.method3018(l), -1, 30927485);
+					MapRegionLoaderTask.method6070(9, 0, string, string_377_, string, string_384_, Class179.method3018(l), -1, 30927485);
 				}
 			}
 			class184.aClass375_2286 = null;
@@ -2339,7 +2339,7 @@ public class PacketsDecoder extends Class455 {
 			int i_391_ = i_390_ >> 2;
 			int i_392_ = i_390_ & 0x3;
 			int i_393_ = client.anIntArray7230[i_391_];
-			Class219 class219 = client.aClass257_7353.method4519(1832979532);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1832979532);
 			i_387_ -= class219.anInt2711 * 1948093437;
 			i_388_ -= class219.anInt2712 * -1002240017;
 			Class9.method455(i_386_, i_387_, i_388_, i_393_, i_391_, i_392_, i_389_, (byte) 1);

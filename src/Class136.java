@@ -21,17 +21,17 @@ public class Class136 {
 		if (anObject1637 == null) {
 			Class370_Sub1_Sub2 class370_sub1_sub2 = new Class370_Sub1_Sub2();
 			byte[] is = class370_sub1_sub2.method15614(128, 128, 16);
-			anObject1637 = Class309.method5493(is, false, (byte) 83);
+			anObject1637 = JS5Manager.method5493(is, false, (byte) 83);
 		}
 		if (anObject1627 == null) {
 			Class370_Sub2_Sub2 class370_sub2_sub2 = new Class370_Sub2_Sub2();
 			byte[] is = class370_sub2_sub2.method15617(128, 128, 16);
-			anObject1627 = Class309.method5493(is, false, (byte) 37);
+			anObject1627 = JS5Manager.method5493(is, false, (byte) 37);
 		}
 		Class164 class164 = ((Class505_Sub1) class505_sub1).aClass164_8363;
 		if (class164.method2847() && anObject1628 == null) {
 			byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
-			anObject1628 = Class309.method5493(is, false, (byte) 61);
+			anObject1628 = JS5Manager.method5493(is, false, (byte) 61);
 		}
 	}
 
@@ -73,17 +73,17 @@ public class Class136 {
 		if (anObject1637 == null) {
 			Class370_Sub1_Sub2 class370_sub1_sub2 = new Class370_Sub1_Sub2();
 			byte[] is = class370_sub1_sub2.method15614(128, 128, 16);
-			anObject1637 = Class309.method5493(is, false, (byte) 51);
+			anObject1637 = JS5Manager.method5493(is, false, (byte) 51);
 		}
 		if (anObject1627 == null) {
 			Class370_Sub2_Sub2 class370_sub2_sub2 = new Class370_Sub2_Sub2();
 			byte[] is = class370_sub2_sub2.method15617(128, 128, 16);
-			anObject1627 = Class309.method5493(is, false, (byte) 101);
+			anObject1627 = JS5Manager.method5493(is, false, (byte) 101);
 		}
 		Class164 class164 = ((Class505_Sub1) class505_sub1).aClass164_8363;
 		if (class164.method2847() && anObject1628 == null) {
 			byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
-			anObject1628 = Class309.method5493(is, false, (byte) 82);
+			anObject1628 = JS5Manager.method5493(is, false, (byte) 82);
 		}
 	}
 }

@@ -32,7 +32,7 @@ public class Class151 {
 			Class448.aClass217_Sub1Array5426 = new Class217_Sub1[Class4.anInt34 * -2043473211];
 			int i_0_ = 0;
 			for (int i_1_ = -377428565 * Class485.anInt5740; i_1_ <= Class244.anInt3003 * -860748679; i_1_++) {
-				Class217_Sub1 class217_sub1 = Class474.method7916(i_1_, 241978983);
+				Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(i_1_, 241978983);
 				if (null != class217_sub1)
 					Class448.aClass217_Sub1Array5426[i_0_++] = class217_sub1;
 			}
@@ -136,7 +136,7 @@ public class Class151 {
 				} catch (Exception exception) {
 					/* empty */
 				}
-				URL url = (new URL(RuntimeException_Sub3.anApplet10460.getCodeBase(), new StringBuilder().append("clienterror.ws?c=").append(-1705325745 * RuntimeException_Sub3.anInt10457).append("&cs=").append(-1529960075 * Class392.anInt4781).append("&u=").append(RuntimeException_Sub3.aString10458 != null ? Class475.method7926((RuntimeException_Sub3.aString10458), -790911814) : new StringBuilder().append("").append(7071485906675456853L * RuntimeException_Sub3.aLong10459).toString())
+				URL url = (new URL(RuntimeException_Sub3.anApplet10460.getCodeBase(), new StringBuilder().append("clienterror.ws?c=").append(-1705325745 * RuntimeException_Sub3.anInt10457).append("&cs=").append(-1529960075 * InventoriesIndexLoader.anInt4781).append("&u=").append(RuntimeException_Sub3.aString10458 != null ? Class475.method7926((RuntimeException_Sub3.aString10458), -790911814) : new StringBuilder().append("").append(7071485906675456853L * RuntimeException_Sub3.aLong10459).toString())
 						.append("&v1=").append(Class475.method7926(string_7_, 553035872)).append("&v2=").append(Class475.method7926(string_8_, 72672054)).append("&e=").append(string_6_).toString()));
 				DataInputStream datainputstream = new DataInputStream(url.openStream());
 				datainputstream.read();

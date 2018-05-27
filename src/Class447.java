@@ -15,7 +15,7 @@ public class Class447 {
 	public Class449 method7450(int i, byte i_0_) {
 		Class449 class449;
 		synchronized (((Class447) this).aClass229_5417) {
-			class449 = ((Class449) ((Class447) this).aClass229_5417.method3865((long) i));
+			class449 = ((Class449) ((Class447) this).aClass229_5417.get((long) i));
 		}
 		if (class449 != null)
 			return class449;
@@ -86,7 +86,7 @@ public class Class447 {
 	public Class449 method7459(int i) {
 		Class449 class449;
 		synchronized (((Class447) this).aClass229_5417) {
-			class449 = ((Class449) ((Class447) this).aClass229_5417.method3865((long) i));
+			class449 = ((Class449) ((Class447) this).aClass229_5417.get((long) i));
 		}
 		if (class449 != null)
 			return class449;
@@ -107,7 +107,7 @@ public class Class447 {
 	}
 
 	static void method7461(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1]), -1396181317).aBool2962) ? 1 : 0;
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1]), -1396181317).aBool2962) ? 1 : 0;
 	}
 
 	static final void method7462(CS2Executor class527, int i) {

@@ -4,7 +4,7 @@
 
 public class ReferenceTable {
 	int[][] archiveFiles;
-	int anInt3733;
+	int crc;
 	byte[] aByteArray3734;
 	int revision;
 	int numValidArchives;
@@ -19,8 +19,7 @@ public class ReferenceTable {
 	int[] unknown;
 	int[][] fileNameHashes;
 	int[] fileLengths;
-	public static Index aClass317_3749;
-
+	
 	void decodeHeader(byte[] is, int i) {
 		RsByteBuffer buffer = new RsByteBuffer(Class282_Sub17_Sub6.method15438(is, (byte) 90));
 		int protocol = buffer.readUnsignedByte();
@@ -140,8 +139,8 @@ public class ReferenceTable {
 	}
 
 	ReferenceTable(byte[] is, int i, byte[] is_97_) {
-		anInt3733 = Class285.method5028(is, is.length, (short) 255) * 2079717751;
-		if (i != -2006273977 * anInt3733)
+		crc = Class285.method5028(is, is.length, (short) 255) * 2079717751;
+		if (i != -2006273977 * crc)
 			throw new RuntimeException();
 		if (null != is_97_) {
 			if (is_97_.length != 64)

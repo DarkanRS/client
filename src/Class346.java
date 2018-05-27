@@ -14,21 +14,21 @@ public class Class346 {
 	public static Class346 method6146(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1934243316);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1934243316);
 		return class346;
 	}
 
 	public static Class346 method6147(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1564761464);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1564761464);
 		return class346;
 	}
 
 	public static Class346 method6148(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1849534305);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1849534305);
 		return class346;
 	}
 
@@ -97,7 +97,7 @@ public class Class346 {
 			if (null != client.players[i])
 				throw new RuntimeException();
 			Class4 class4 = Class197.aClass4Array2430[i];
-			Player player = (client.players[i] = (new Player(client.aClass257_7353.method4430(-1638773780))));
+			Player player = (client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-1638773780))));
 			player.anInt10314 = -1498872675 * i;
 			if (Class197.aClass282_Sub35Array2428[i] != null)
 				player.decodeAppearance(Class197.aClass282_Sub35Array2428[i], 1925099603);
@@ -107,14 +107,14 @@ public class Class346 {
 			int i_7_ = i_6_ >> 28;
 			int i_8_ = i_6_ >> 14 & 0xff;
 			int i_9_ = i_6_ & 0xff;
-			Class219 class219 = client.aClass257_7353.method4519(1961926059);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1961926059);
 			int i_10_ = (i_8_ << 6) + i_4_ - class219.anInt2711 * 1948093437;
 			int i_11_ = i_5_ + (i_9_ << 6) - class219.anInt2712 * -1002240017;
 			player.aBool10571 = ((Class4) class4).aBool29;
 			player.aBool10550 = ((Class4) class4).aBool33;
 			player.aByteArray10365[0] = Class197.playerMovementTypes[i];
 			player.aByte7967 = player.aByte7968 = (byte) i_7_;
-			if (client.aClass257_7353.method4433(33386298).method5497(i_10_, i_11_, 1509882915))
+			if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_10_, i_11_, 1509882915))
 				player.aByte7968++;
 			player.method16130(i_10_, i_11_, -2001556911);
 			player.aBool10568 = false;

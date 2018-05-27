@@ -252,7 +252,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15907(GraphicalRenderer class505, int i, int i_30_) {
-		Class525 class525 = (Class96_Sub20.aClass515_9416.method8845(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -54));
+		Class525 class525 = (IndexLoaders.aClass515_9416.method8845(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -54));
 		return class525.method11228(class505, i, (((Class521_Sub1_Sub1_Sub3) this).aClass456_10399), (byte) 2, (byte) 57);
 	}
 
@@ -400,7 +400,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		((Class521_Sub1_Sub1_Sub3) this).aBool10400 = bool;
 		((Class521_Sub1_Sub1_Sub3) this).aBool10398 = false;
 		((Class521_Sub1_Sub1_Sub3) this).anInt10391 = -614065717 * i_51_;
-		int i_52_ = ((Class96_Sub20.aClass515_9416.method8845(867621295 * ((Class521_Sub1_Sub1_Sub3) this).anInt10386, (byte) -8).anInt6977) * -364555849);
+		int i_52_ = ((IndexLoaders.aClass515_9416.method8845(867621295 * ((Class521_Sub1_Sub1_Sub3) this).anInt10386, (byte) -8).anInt6977) * -364555849);
 		((Class521_Sub1_Sub1_Sub3) this).aClass456_10399 = new Class456_Sub2(this, false);
 		((Class521_Sub1_Sub1_Sub3) this).aClass456_10399.method7567(i_52_, (short) 8960);
 		method13008(1, (byte) -89);
@@ -791,7 +791,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15920(GraphicalRenderer class505, int i) {
-		Class525 class525 = (Class96_Sub20.aClass515_9416.method8845(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -21));
+		Class525 class525 = (IndexLoaders.aClass515_9416.method8845(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -21));
 		return class525.method11228(class505, i, (((Class521_Sub1_Sub1_Sub3) this).aClass456_10399), (byte) 2, (byte) 2);
 	}
 

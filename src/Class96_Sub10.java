@@ -6,8 +6,7 @@ public abstract class Class96_Sub10 extends Class96 {
 	int anInt9295;
 	int anInt9296;
 	int anInt9297;
-	public static Class392 aClass392_9298;
-
+	
 	Class96_Sub10(RsByteBuffer class282_sub35) {
 		super(class282_sub35);
 		((Class96_Sub10) this).anInt9296 = class282_sub35.readUnsignedShort() * -1972436045;
@@ -16,25 +15,25 @@ public abstract class Class96_Sub10 extends Class96 {
 	}
 
 	boolean method1599(int i) {
-		Class525 class525 = Class96_Sub20.aClass515_9416.method8845((((Class96_Sub10) this).anInt9296) * 660169595, (byte) 90);
+		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub10) this).anInt9296) * 660169595, (byte) 90);
 		boolean bool = class525.method11230(-1104094093);
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -39);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -39);
 		bool &= class518.method11132(2022289221);
 		return bool;
 	}
 
 	boolean method1596() {
-		Class525 class525 = Class96_Sub20.aClass515_9416.method8845((((Class96_Sub10) this).anInt9296) * 660169595, (byte) -26);
+		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub10) this).anInt9296) * 660169595, (byte) -26);
 		boolean bool = class525.method11230(-621133924);
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 58);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 58);
 		bool &= class518.method11132(1912479809);
 		return bool;
 	}
 
 	boolean method1591() {
-		Class525 class525 = Class96_Sub20.aClass515_9416.method8845((((Class96_Sub10) this).anInt9296) * 660169595, (byte) -2);
+		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub10) this).anInt9296) * 660169595, (byte) -2);
 		boolean bool = class525.method11230(-1374537529);
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -63);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -63);
 		bool &= class518.method11132(1936584652);
 		return bool;
 	}

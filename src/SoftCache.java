@@ -157,7 +157,7 @@ public final class SoftCache {
 		}
 	}
 
-	public Object method3865(long l) {
+	public Object get(long l) {
 		Class282_Sub50_Sub1 class282_sub50_sub1 = ((Class282_Sub50_Sub1) ((SoftCache) this).aClass465_2854.method7754(l));
 		if (class282_sub50_sub1 == null)
 			return null;

@@ -1114,7 +1114,7 @@ public class Class61 {
 
 	static final void method1255(CS2Executor class527, int i) {
 		int i_97_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class220 class220 = Class397.aClass218_4813.method3700(i_97_, 676193293);
+		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_97_, 676193293);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
 	}
 }

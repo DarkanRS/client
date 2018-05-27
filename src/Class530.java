@@ -50,43 +50,43 @@ public class Class530 {
 
 	Interface12 method11348(short i) {
 		int i_2_ = 298538453 * ((Class530) this).aClass219_7048.anInt2713;
-		Class219 class219 = client.aClass257_7353.method4519(1217612419);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1217612419);
 		int i_3_ = (((Class530) this).aClass219_7048.anInt2711 * 1948093437 - 1948093437 * class219.anInt2711);
 		int i_4_ = (-1002240017 * ((Class530) this).aClass219_7048.anInt2712 - class219.anInt2712 * -1002240017);
-		if (i_3_ < 0 || i_4_ < 0 || i_3_ >= client.aClass257_7353.method4424(-444629403) || i_4_ >= client.aClass257_7353.method4451(-343963365))
+		if (i_3_ < 0 || i_4_ < 0 || i_3_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-444629403) || i_4_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-343963365))
 			return null;
 		switch (method11343(-1790322453)) {
 		case 1:
-			return (Interface12) client.aClass257_7353.method4430(-2014086808).method3511(i_2_, i_3_, i_4_, (byte) 45);
+			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-2014086808).method3511(i_2_, i_3_, i_4_, (byte) 45);
 		case 3:
-			return (Interface12) client.aClass257_7353.method4430(-1684834400).method3415(i_2_, i_3_, i_4_, -387297653);
+			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1684834400).method3415(i_2_, i_3_, i_4_, -387297653);
 		case 2:
-			return ((Interface12) (client.aClass257_7353.method4430(-1571764476).method3413(i_2_, i_3_, i_4_, client.anInterface25_7446, -233664382)));
+			return ((Interface12) (IndexLoaders.MAP_REGION_DECODER.method4430(-1571764476).method3413(i_2_, i_3_, i_4_, client.anInterface25_7446, -233664382)));
 		default:
 			return null;
 		case 0:
-			return (Interface12) client.aClass257_7353.method4430(-1288178726).method3381(i_2_, i_3_, i_4_, (byte) -33);
+			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1288178726).method3381(i_2_, i_3_, i_4_, (byte) -33);
 		}
 	}
 
 	Interface12 method11349() {
 		int i = 298538453 * ((Class530) this).aClass219_7048.anInt2713;
-		Class219 class219 = client.aClass257_7353.method4519(1833251508);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1833251508);
 		int i_5_ = (((Class530) this).aClass219_7048.anInt2711 * 1948093437 - 1948093437 * class219.anInt2711);
 		int i_6_ = (-1002240017 * ((Class530) this).aClass219_7048.anInt2712 - class219.anInt2712 * -1002240017);
-		if (i_5_ < 0 || i_6_ < 0 || i_5_ >= client.aClass257_7353.method4424(1337608146) || i_6_ >= client.aClass257_7353.method4451(-2076212393))
+		if (i_5_ < 0 || i_6_ < 0 || i_5_ >= IndexLoaders.MAP_REGION_DECODER.method4424(1337608146) || i_6_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-2076212393))
 			return null;
 		switch (method11343(-1790322453)) {
 		case 1:
-			return (Interface12) client.aClass257_7353.method4430(-817952191).method3511(i, i_5_, i_6_, (byte) -69);
+			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-817952191).method3511(i, i_5_, i_6_, (byte) -69);
 		case 3:
-			return (Interface12) client.aClass257_7353.method4430(-1712945263).method3415(i, i_5_, i_6_, -387297653);
+			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1712945263).method3415(i, i_5_, i_6_, -387297653);
 		case 2:
-			return ((Interface12) (client.aClass257_7353.method4430(-1727152520).method3413(i, i_5_, i_6_, client.anInterface25_7446, -233664382)));
+			return ((Interface12) (IndexLoaders.MAP_REGION_DECODER.method4430(-1727152520).method3413(i, i_5_, i_6_, client.anInterface25_7446, -233664382)));
 		default:
 			return null;
 		case 0:
-			return (Interface12) client.aClass257_7353.method4430(-1378077948).method3381(i, i_5_, i_6_, (byte) -74);
+			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1378077948).method3381(i, i_5_, i_6_, (byte) -74);
 		}
 	}
 

@@ -705,7 +705,7 @@ public class Class8_Sub1 extends FontRenderer {
 	static int method13782(int i, int i_283_, int i_284_) {
 		int i_285_;
 		if (i_283_ > 20077) {
-			Class526.method11248(1158077099);
+			Defaults6Loader.method11248(1158077099);
 			i_285_ = 4;
 		} else if (i_283_ > 10021) {
 			Class282_Sub40.method13300(-686902012);

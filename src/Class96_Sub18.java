@@ -14,7 +14,7 @@ public class Class96_Sub18 extends Class96 {
 		super(class282_sub35);
 		((Class96_Sub18) this).anInt9395 = class282_sub35.readUnsignedShort() * 1548991103;
 		((Class96_Sub18) this).anIntArray9397 = new int[Class8_Sub3.method14339(1886074121).length];
-		((Class96_Sub18) this).anInt9396 = class282_sub35.readBigSmart(2124911011) * 185651677;
+		((Class96_Sub18) this).anInt9396 = class282_sub35.readBigSmart() * 185651677;
 		Arrays.fill(((Class96_Sub18) this).anIntArray9397, 0, ((Class96_Sub18) this).anIntArray9397.length, 1590562421 * ((Class96_Sub18) this).anInt9396);
 		((Class96_Sub18) this).anInt9398 = class282_sub35.readInt() * 933564729;
 	}
@@ -28,7 +28,7 @@ public class Class96_Sub18 extends Class96 {
 	}
 
 	boolean method1599(int i) {
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) -29);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) -29);
 		return class518.method11132(1999507141);
 	}
 
@@ -41,12 +41,12 @@ public class Class96_Sub18 extends Class96 {
 	}
 
 	boolean method1596() {
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 4);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 4);
 		return class518.method11132(2038902723);
 	}
 
 	boolean method1591() {
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 23);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 23);
 		return class518.method11132(1964744017);
 	}
 

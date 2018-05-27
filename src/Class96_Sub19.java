@@ -48,7 +48,7 @@ public class Class96_Sub19 extends Class96 {
 				i_2_ = class521_sub1_sub1_sub2.aByte7967;
 		}
 		int i_5_ = -716833811 * ((Class96_Sub19) this).anInt9399 << 2;
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(client.aClass257_7353.method4430(-1436448746), ((Class96_Sub19) this).anInt9410 * 899631601, i_2_, i_2_, i_0_, i_1_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_5_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
+		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.method4430(-1436448746), ((Class96_Sub19) this).anInt9410 * 899631601, i_2_, i_2_, i_0_, i_1_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_5_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
 				((Class96_Sub19) this).anInt9400 * 1060287315 + 1, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, false, 0));
 		class521_sub1_sub1_sub3.method15904(i_3_, i_4_, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, (-511484631 * ((Class96_Sub19) this).anInt9409 + client.cycles * -1809259861), -209443166);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), 1701018076);
@@ -83,16 +83,16 @@ public class Class96_Sub19 extends Class96 {
 				i_7_ = class521_sub1_sub1_sub2.aByte7967;
 		}
 		int i_10_ = -716833811 * ((Class96_Sub19) this).anInt9399 << 2;
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(client.aClass257_7353.method4430(-2009786094), ((Class96_Sub19) this).anInt9410 * 899631601, i_7_, i_7_, i, i_6_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_10_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
+		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.method4430(-2009786094), ((Class96_Sub19) this).anInt9410 * 899631601, i_7_, i_7_, i, i_6_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_10_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
 				((Class96_Sub19) this).anInt9400 * 1060287315 + 1, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, false, 0));
 		class521_sub1_sub1_sub3.method15904(i_8_, i_9_, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, (-511484631 * ((Class96_Sub19) this).anInt9409 + client.cycles * -1809259861), -209443166);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -1862724150);
 	}
 
 	boolean method1599(int i) {
-		Class525 class525 = Class96_Sub20.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) 46);
+		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) 46);
 		boolean bool = class525.method11230(-583697397);
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 7);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 7);
 		bool &= class518.method11132(1967469985);
 		return bool;
 	}
@@ -132,17 +132,17 @@ public class Class96_Sub19 extends Class96 {
 	}
 
 	boolean method1596() {
-		Class525 class525 = Class96_Sub20.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -24);
+		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -24);
 		boolean bool = class525.method11230(-524786959);
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 12);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 12);
 		bool &= class518.method11132(2022792810);
 		return bool;
 	}
 
 	boolean method1591() {
-		Class525 class525 = Class96_Sub20.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -73);
+		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -73);
 		boolean bool = class525.method11230(74376582);
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 58);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 58);
 		bool &= class518.method11132(2116421018);
 		return bool;
 	}

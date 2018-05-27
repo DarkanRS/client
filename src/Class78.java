@@ -178,7 +178,7 @@ public final class Class78 {
 
 	static final void method1387(CS2Executor class527, byte i) {
 		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class217_Sub1 class217_sub1 = Class474.method7916(i_11_, 1517040496);
+		Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(i_11_, 1517040496);
 		if (null != class217_sub1) {
 			if (i >= -1) {
 				for (;;) {

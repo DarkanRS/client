@@ -63,9 +63,9 @@ public abstract class Class468 {
 
 	static void method7789(int i) {
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(84527156) == 1)
-			Class6.aClass340_45.method6049(new Class335((Class256.aClass256_3152), null), 301123709);
+			IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335((Class256.aClass256_3152), null), 301123709);
 		else {
-			client.aClass257_7353.method4547((byte) -107);
+			IndexLoaders.MAP_REGION_DECODER.method4547((byte) -107);
 			Class58.method1139(-1771275616);
 		}
 	}

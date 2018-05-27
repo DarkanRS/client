@@ -124,7 +124,7 @@ public class Class521_Sub1_Sub1_Sub5 extends Class521_Sub1_Sub1 implements Inter
 		return ((Class521_Sub1_Sub1_Sub5) this).aBool10512;
 	}
 
-	public Class521_Sub1_Sub1_Sub5(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_2_, int i_3_, int i_4_, int i_5_, boolean bool, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
+	public Class521_Sub1_Sub1_Sub5(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_2_, int i_3_, int i_4_, int i_5_, boolean bool, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
 		super(class206, i, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_, -1062790731 * class478.anInt5687 == 1, Class461.method7705(i_10_, i_11_, (byte) -22));
 		aClass123_10509 = new Class123(class505, class474, class478, i_10_, i_11_, aByte7967, i_2_, this, bool, i_12_);
 		((Class521_Sub1_Sub1_Sub5) this).aBool10511 = 0 != class478.anInt5652 * -348507379 && !bool;
@@ -359,10 +359,10 @@ public class Class521_Sub1_Sub1_Sub5 extends Class521_Sub1_Sub1 implements Inter
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_24_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_25_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_25_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_25_, (byte) 0);
 		if (class437.method7319(1555289189))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class350_Sub1.aClass406_7757.method6828(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (Class350_Sub1.aClass406_7757.method6828(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
 	}
 }

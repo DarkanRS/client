@@ -14,7 +14,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = (CS2Script) aClass223_5857.method3758((long) i);
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1786940883);
+		byte[] is = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(i, 0, -1786940883);
 		if (is == null || is.length <= 1)
 			return null;
 		try {
@@ -38,7 +38,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = (CS2Script) aClass223_5857.method3758((long) i);
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1560691688);
+		byte[] is = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(i, 0, -1560691688);
 		if (is == null || is.length <= 1)
 			return null;
 		try {
@@ -54,7 +54,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = (CS2Script) aClass223_5857.method3758((long) i);
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1325482050);
+		byte[] is = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(i, 0, -1325482050);
 		if (is == null || is.length <= 1)
 			return null;
 		try {
@@ -75,7 +75,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_1_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_1_, (byte) 4), -1599704714));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_1_, (byte) 4), -1599704714));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -92,7 +92,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_1_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_1_, (byte) 4), -1152787959));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_1_, (byte) 4), -1152787959));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -109,7 +109,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_1_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_1_, (byte) 4), -984252166));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_1_, (byte) 4), -984252166));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -130,7 +130,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_3_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_3_, (byte) 4), -1384363687));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_3_, (byte) 4), -1384363687));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -147,7 +147,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_3_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_3_, (byte) 4), -1517399106));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_3_, (byte) 4), -1517399106));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -164,7 +164,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_3_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_3_, (byte) 4), -9478845));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_3_, (byte) 4), -9478845));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -185,7 +185,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_5_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_5_, (byte) 4), -449923077));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_5_, (byte) 4), -449923077));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -202,7 +202,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_5_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_5_, (byte) 4), -310302992));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_5_, (byte) 4), -310302992));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -219,7 +219,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_5_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_5_, (byte) 4), -1410493998));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_5_, (byte) 4), -1410493998));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -240,7 +240,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_7_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_7_, (byte) 4), -1830893994));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_7_, (byte) 4), -1830893994));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -257,7 +257,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_7_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_7_, (byte) 4), -1902261602));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_7_, (byte) 4), -1902261602));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -274,7 +274,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_7_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_7_, (byte) 4), -807707546));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_7_, (byte) 4), -807707546));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -295,7 +295,7 @@ public class Class506 {
 		CS2Script class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_9_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_9_, (byte) 4), -1961061452));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_9_, (byte) 4), -1961061452));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -312,7 +312,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_9_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_9_, (byte) 4), -1713111490));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_9_, (byte) 4), -1713111490));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -329,7 +329,7 @@ public class Class506 {
 		class282_sub50_sub5 = ((CS2Script) aClass223_5857.method3758((long) i_9_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_9_, (byte) 4), -1662449312));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_9_, (byte) 4), -1662449312));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -406,23 +406,23 @@ public class Class506 {
 		boolean modifyModelColors = 0 != (flags & 0x4);
 		boolean bool_20_ = (flags & 0x8) != 0;
 		if (modifyModel) {
-			class422.maleBody[0] = stream.readBigSmart(1983228552);
-			class422.femaleBody[0] = stream.readBigSmart(1966660718);
+			class422.maleBody[0] = stream.readBigSmart();
+			class422.femaleBody[0] = stream.readBigSmart();
 			if (-1 != ((ItemDefinitions) class425).maleBody2 * -931922913 || -1259031521 * ((ItemDefinitions) class425).femaleBody2 != -1) {
-				class422.maleBody[1] = stream.readBigSmart(1966117219);
-				class422.femaleBody[1] = stream.readBigSmart(1968077484);
+				class422.maleBody[1] = stream.readBigSmart();
+				class422.femaleBody[1] = stream.readBigSmart();
 			}
 			if (-1 != -562041407 * ((ItemDefinitions) class425).maleBody3 || -1 != -1802576377 * ((ItemDefinitions) class425).femaleBody3) {
-				class422.maleBody[2] = stream.readBigSmart(2019468783);
-				class422.femaleBody[2] = stream.readBigSmart(1953029845);
+				class422.maleBody[2] = stream.readBigSmart();
+				class422.femaleBody[2] = stream.readBigSmart();
 			}
 		}
 		if (bool_18_) {
-			class422.maleHeads[0] = stream.readBigSmart(2017468211);
-			class422.femaleHeads[0] = stream.readBigSmart(2066820244);
+			class422.maleHeads[0] = stream.readBigSmart();
+			class422.femaleHeads[0] = stream.readBigSmart();
 			if (-1 != -613723223 * ((ItemDefinitions) class425).maleHead2 || -1 != -1871546585 * ((ItemDefinitions) class425).femaleHead2) {
-				class422.maleHeads[1] = stream.readBigSmart(2051081301);
-				class422.femaleHeads[1] = stream.readBigSmart(1969156030);
+				class422.maleHeads[1] = stream.readBigSmart();
+				class422.femaleHeads[1] = stream.readBigSmart();
 			}
 		}
 		if (modifyModelColors) {

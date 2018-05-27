@@ -11,7 +11,6 @@ public class Class6 {
 	public int anInt42;
 	public String aString43;
 	public int anInt44;
-	public static Class340 aClass340_45;
 	static int anInt46;
 
 	Class6() {
@@ -31,7 +30,7 @@ public class Class6 {
 	static final void method300(CS2Executor class527, byte i) {
 		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) ((CS2Executor) class527).animable);
 		boolean bool = false;
-		Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (class409.anIntArray4886 != null)
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 		if (class409 != null)

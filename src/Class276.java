@@ -81,7 +81,7 @@ public class Class276 {
 		if (i_16_ != i_15_ && (Class260.anInt3228 * 1712678171 == Class260.anInt3223 * 1293234709)) {
 			if (!Class169.method2875(client.anInt7166 * -1741204137, -2119377821)) {
 				if (0 == i_16_) {
-					Class282_Sub43.method13400(Class512.aClass317_5884, 1293234709 * Class260.anInt3223, 0, i_15_, false, (byte) -58);
+					Class282_Sub43.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, i_15_, false, (byte) -58);
 					Class468_Sub6.method12658(173344706);
 					Class260.aBool3220 = false;
 				} else if (i_15_ == 0) {

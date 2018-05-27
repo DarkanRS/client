@@ -178,7 +178,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return ((Class123) aClass123_10532).anInt1555 * 845010167;
 	}
 
-	public Class521_Sub1_Sub5_Sub2(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
+	public Class521_Sub1_Sub5_Sub2(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
 		super(class206, i_7_, i_8_, i_9_, i, i_6_, Class263.method4777(i_10_, i_11_, (byte) -17));
 		aClass123_10532 = new Class123(class505, class474, class478, i_10_, i_11_, aByte7967, i_6_, this, bool, i_12_);
 		((Class521_Sub1_Sub5_Sub2) this).aBool10529 = 0 != class478.anInt5652 * -348507379 && !bool;

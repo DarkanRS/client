@@ -10,8 +10,7 @@ public class Class466 implements Interface43 {
 	static Class466 aClass466_5567;
 	static Class466 aClass466_5568;
 	public static Class466 aClass466_5569 = new Class466(-2);
-	public static Class444 aClass444_5570;
-
+	
 	public static Class466[] method7775() {
 		return (new Class466[] { aClass466_5564, aClass466_5567, aClass466_5568, aClass466_5563, aClass466_5569, aClass466_5565 });
 	}

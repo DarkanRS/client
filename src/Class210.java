@@ -21,7 +21,7 @@ public class Class210 {
 	public Class228 method3603(int i, int i_1_) {
 		Class228 class228;
 		synchronized (((Class210) this).aClass229_2667) {
-			class228 = ((Class228) ((Class210) this).aClass229_2667.method3865((long) i));
+			class228 = ((Class228) ((Class210) this).aClass229_2667.get((long) i));
 		}
 		if (null != class228)
 			return class228;
@@ -69,7 +69,7 @@ public class Class210 {
 	public Class228 method3607(int i) {
 		Class228 class228;
 		synchronized (((Class210) this).aClass229_2667) {
-			class228 = ((Class228) ((Class210) this).aClass229_2667.method3865((long) i));
+			class228 = ((Class228) ((Class210) this).aClass229_2667.get((long) i));
 		}
 		if (null != class228)
 			return class228;
@@ -122,13 +122,13 @@ public class Class210 {
 
 	static final void method3611(CS2Executor class527, int i) {
 		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), -163458202);
-		client.aClass257_7353.method4547((byte) -4);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -4);
 		Class190.method3148((byte) 43);
 		client.aBool7175 = false;
 	}
 
 	static final void method3612(int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, byte i_7_) {
-		if (!bool && (i_3_ < 512 || i_4_ < 512 || i_3_ > (client.aClass257_7353.method4424(112357923) - 2) * 512 || i_4_ > (client.aClass257_7353.method4451(-200996261) - 2) * 512)) {
+		if (!bool && (i_3_ < 512 || i_4_ < 512 || i_3_ > (IndexLoaders.MAP_REGION_DECODER.method4424(112357923) - 2) * 512 || i_4_ > (IndexLoaders.MAP_REGION_DECODER.method4451(-200996261) - 2) * 512)) {
 			float[] fs = client.aFloatArray7292;
 			client.aFloatArray7292[1] = -1.0F;
 			fs[0] = -1.0F;

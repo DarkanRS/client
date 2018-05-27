@@ -31,9 +31,9 @@ public class Class225_Sub1 extends Class225 {
 
 	static Class282_Sub54 method12791(int i) {
 		Class442 class442 = null;
-		Class282_Sub54 class282_sub54 = new Class282_Sub54(client.aClass486_7450, 0);
+		Class282_Sub54 class282_sub54 = new Class282_Sub54(client.CURRENT_GAME, 0);
 		try {
-			class442 = Class345.method6137("", client.aClass486_7450.aString5748, false, (byte) -1);
+			class442 = Class345.method6137("", client.CURRENT_GAME.aString5748, false, (byte) -1);
 			byte[] is = new byte[(int) class442.method7388(-273347477)];
 			int i_11_;
 			for (int i_12_ = 0; i_12_ < is.length; i_12_ += i_11_) {
@@ -41,7 +41,7 @@ public class Class225_Sub1 extends Class225 {
 				if (-1 == i_11_)
 					throw new IOException();
 			}
-			class282_sub54 = new Class282_Sub54(new RsByteBuffer(is), client.aClass486_7450, 0);
+			class282_sub54 = new Class282_Sub54(new RsByteBuffer(is), client.CURRENT_GAME, 0);
 		} catch (Exception exception) {
 			/* empty */
 		}
@@ -59,7 +59,7 @@ public class Class225_Sub1 extends Class225 {
 		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_15_, (byte) 4), -1763175184));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4), -1763175184));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -76,7 +76,7 @@ public class Class225_Sub1 extends Class225 {
 		class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_15_, (byte) 4), -1500320283));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4), -1500320283));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -93,7 +93,7 @@ public class Class225_Sub1 extends Class225 {
 		class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (Class378.aClass317_4526.method5615(Class378.aClass317_4526.method5623(i_15_, (byte) 4), -962480706));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4), -962480706));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;

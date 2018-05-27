@@ -77,7 +77,7 @@ public class Class301 implements Interface41 {
 	}
 
 	public static Class283 method5331(Index class317, String string, boolean bool, int i) {
-		int i_1_ = class317.method5610(string, -1729894285);
+		int i_1_ = class317.getArchiveId(string, -1729894285);
 		if (-1 == i_1_)
 			return new Class283(0);
 		int[] is = class317.method5616(i_1_, -710345524);

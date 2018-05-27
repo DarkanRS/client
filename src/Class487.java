@@ -18,13 +18,13 @@ public class Class487 {
 	}
 
 	static void method8209(GraphicalRenderer class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, byte i_5_) {
-		if ((null == Class354.aClass160_4110 || null == AttributeDefault.aClass160_5339 || Class125.aClass160_1571 == null) && Class211.aClass317_2673.method5661(Class254.anInt3145 * 464964387, -635610932) && Class211.aClass317_2673.method5661(Class446.anInt5396 * -781860267, -688613423) && Class211.aClass317_2673.method5661(-1965396391 * Class17.anInt148, 1307952066)) {
-			Class91 class91 = Class91.method1522(Class211.aClass317_2673, -781860267 * Class446.anInt5396, 0);
+		if ((null == Class354.aClass160_4110 || null == AttributeDefault.aClass160_5339 || Class125.aClass160_1571 == null) && IndexLoaders.SPRITES_INDEX.method5661(Class254.anInt3145 * 464964387, -635610932) && IndexLoaders.SPRITES_INDEX.method5661(Class446.anInt5396 * -781860267, -688613423) && IndexLoaders.SPRITES_INDEX.method5661(-1965396391 * Class17.anInt148, 1307952066)) {
+			Class91 class91 = Class91.method1522(IndexLoaders.SPRITES_INDEX, -781860267 * Class446.anInt5396, 0);
 			AttributeDefault.aClass160_5339 = class505.method8444(class91, true);
 			class91.method1525();
 			Class290.aClass160_3452 = class505.method8444(class91, true);
-			Class354.aClass160_4110 = (class505.method8444(Class91.method1522(Class211.aClass317_2673, 464964387 * Class254.anInt3145, 0), true));
-			Class91 class91_6_ = Class91.method1522(Class211.aClass317_2673, Class17.anInt148 * -1965396391, 0);
+			Class354.aClass160_4110 = (class505.method8444(Class91.method1522(IndexLoaders.SPRITES_INDEX, 464964387 * Class254.anInt3145, 0), true));
+			Class91 class91_6_ = Class91.method1522(IndexLoaders.SPRITES_INDEX, Class17.anInt148 * -1965396391, 0);
 			Class125.aClass160_1571 = class505.method8444(class91_6_, true);
 			class91_6_.method1525();
 			Class149_Sub2.aClass160_9315 = class505.method8444(class91_6_, true);

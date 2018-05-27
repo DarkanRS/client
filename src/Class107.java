@@ -6,7 +6,6 @@ public class Class107 {
 	Interface11 anInterface11_1078;
 	Class282_Sub21[] aClass282_Sub21Array1079;
 	IterableNodeMap aClass465_1080;
-	public static Index aClass317_1081;
 	protected static int anInt1082;
 
 	public Class107(int i, Interface11 interface11) {

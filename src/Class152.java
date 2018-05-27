@@ -14,7 +14,7 @@ public abstract class Class152 {
 	static void method2596(byte i) {
 		Class442 class442 = null;
 		try {
-			class442 = Class345.method6137("2", client.aClass486_7450.aString5748, false, (byte) -1);
+			class442 = Class345.method6137("2", client.CURRENT_GAME.aString5748, false, (byte) -1);
 			byte[] is = new byte[(int) class442.method7388(-273347477)];
 			int i_0_;
 			for (int i_1_ = 0; i_1_ < is.length; i_1_ += i_0_) {
@@ -98,19 +98,19 @@ public abstract class Class152 {
 	}
 
 	public static NativeSprite method2600(Index class317, int i, int i_2_) {
-		NativeSprite class160 = (NativeSprite) Class299.aClass229_3545.method3865((long) i);
+		NativeSprite class160 = (NativeSprite) Class299.aClass229_3545.get((long) i);
 		if (class160 == null) {
-			if (Class339.aBool3987)
+			if (IndexLoaders.USING_JAGEX_IMAGE_FORMAT)
 				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
 			else
-				class160 = (Class103_Sub1.method14490(class317.method5615(i, -1112597366), (byte) -40));
+				class160 = (Class103_Sub1.method14490(class317.getFile(i, -1112597366), (byte) -40));
 			Class299.aClass229_3545.put(class160, (long) i);
 		}
 		return class160;
 	}
 
 	static final void method2601(long l) {
-		if (client.aClass257_7353.method4430(-1572720493) != null) {
+		if (IndexLoaders.MAP_REGION_DECODER.method4430(-1572720493) != null) {
 			if (-672443707 * Class262.anInt3240 == 2 || -672443707 * Class262.anInt3240 == 1)
 				Class363.method6286(l);
 			else if (Class262.anInt3240 * -672443707 == 4)
@@ -136,7 +136,7 @@ public abstract class Class152 {
 			i = -1211259595 * client.anInt7427;
 		if (i == -1)
 			i = -141702765 * client.anInt7340;
-		Class479.method8036(i, (byte) 4);
+		UnderlayIndexLoader.method8036(i, (byte) 4);
 		int i_3_ = (Class84.myPlayer.method15805(828768449) << 8);
 		Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 		Class96_Sub21.method14675((Class84.myPlayer.aByte7967), (int) class385.aFloat4671 + i_3_, (int) class385.aFloat4673 + i_3_, -383924731 * client.anInt7261, 323581916);
@@ -145,7 +145,7 @@ public abstract class Class152 {
 
 	static final void method2602(CS2Executor class527, int i) {
 		int i_4_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
-		Class405 class405 = Class502.aClass394_5831.method6753(i_4_, -292141252);
+		Class405 class405 = IndexLoaders.aClass394_5831.method6753(i_4_, -292141252);
 		if (class405.aChar4832 != '\001')
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		Integer integer = ((Integer) Class46.anObjectArray437[1135540345 * class405.anInt4833]);
@@ -160,7 +160,7 @@ public abstract class Class152 {
 	public static final void method2603(String string, int i) {
 		if (null != string) {
 			if (493536965 * client.anInt7449 >= 200 && !client.aBool7316 || client.anInt7449 * 493536965 >= 200)
-				Class387.method6681(4, (Message.aClass433_5309.translate(Class223.aClass495_2772, -1836106303)), (byte) 44);
+				LoadingStage.method6681(4, (Message.aClass433_5309.translate(Class223.CURRENT_LANGUAGE, -1836106303)), (byte) 44);
 			else {
 				String string_6_ = Class383.method6515(string, 1942118537);
 				if (null != string_6_) {
@@ -168,13 +168,13 @@ public abstract class Class152 {
 						Class6 class6 = client.aClass6Array7452[i_7_];
 						String string_8_ = Class383.method6515(class6.aString37, 1942118537);
 						if (string_8_ != null && string_8_.equals(string_6_)) {
-							Class387.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5300.translate(Class223.aClass495_2772, -429754713)).toString(), (byte) 25);
+							LoadingStage.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5300.translate(Class223.CURRENT_LANGUAGE, -429754713)).toString(), (byte) 25);
 							return;
 						}
 						if (class6.aString43 != null) {
 							String string_9_ = Class383.method6515(class6.aString43, 1942118537);
 							if (string_9_ != null && string_9_.equals(string_6_)) {
-								Class387.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5300.translate((Class223.aClass495_2772), -1776218961)).toString(), (byte) 15);
+								LoadingStage.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5300.translate((Class223.CURRENT_LANGUAGE), -1776218961)).toString(), (byte) 15);
 								return;
 							}
 						}
@@ -183,19 +183,19 @@ public abstract class Class152 {
 						Class10 class10 = client.aClass10Array7456[i_10_];
 						String string_11_ = Class383.method6515(class10.aString115, 1942118537);
 						if (string_11_ != null && string_11_.equals(string_6_)) {
-							Class387.method6681(4, new StringBuilder().append(Message.aClass433_5214.translate(Class223.aClass495_2772, -2005183517)).append(string).append(Message.aClass433_5198.translate(Class223.aClass495_2772, -2069902145)).toString(), (byte) 0);
+							LoadingStage.method6681(4, new StringBuilder().append(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE, -2005183517)).append(string).append(Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE, -2069902145)).toString(), (byte) 0);
 							return;
 						}
 						if (class10.aString116 != null) {
 							String string_12_ = Class383.method6515(class10.aString116, 1942118537);
 							if (null != string_12_ && string_12_.equals(string_6_)) {
-								Class387.method6681(4, new StringBuilder().append(Message.aClass433_5214.translate(Class223.aClass495_2772, -1810692087)).append(string).append(Message.aClass433_5198.translate(Class223.aClass495_2772, -1486683427)).toString(), (byte) 11);
+								LoadingStage.method6681(4, new StringBuilder().append(Message.aClass433_5214.translate(Class223.CURRENT_LANGUAGE, -1810692087)).append(string).append(Message.aClass433_5198.translate(Class223.CURRENT_LANGUAGE, -1486683427)).toString(), (byte) 11);
 								return;
 							}
 						}
 					}
 					if (Class383.method6515((Class84.myPlayer.displayName), 1942118537).equals(string_6_))
-						Class387.method6681(4, (Message.aClass433_5227.translate(Class223.aClass495_2772, -2084734592)), (byte) 58);
+						LoadingStage.method6681(4, (Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592)), (byte) 58);
 					else {
 						Class184 class184 = Class468_Sub20.method12807(1188178835);
 						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4553, class184.aClass432_2283, 564733792);
@@ -209,15 +209,15 @@ public abstract class Class152 {
 	}
 
 	static int method2604(byte i) {
-		int i_13_ = Class474.aClass387_5621.anInt4712 * -1763884029;
+		int i_13_ = IndexLoaders.LOADING_STAGE.anInt4712 * -1763884029;
 		if (i_13_ < Class302.aClass387Array3557.length - 1)
-			Class474.aClass387_5621 = Class302.aClass387Array3557[1 + i_13_];
+			IndexLoaders.LOADING_STAGE = Class302.aClass387Array3557[1 + i_13_];
 		return 100;
 	}
 
 	static final void method2605(CS2Executor class527, int i) {
 		int i_14_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
-		Long var_long = (((CS2Executor) class527).aClass61_7010.method1201(client.aClass486_7450.anInt5746 * 1648080491 << 16 | i_14_, 1958434699));
+		Long var_long = (((CS2Executor) class527).aClass61_7010.method1201(client.CURRENT_GAME.anInt5746 * 1648080491 << 16 | i_14_, 1958434699));
 		long l;
 		if (null == var_long)
 			l = -1L;

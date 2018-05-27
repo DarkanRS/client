@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class511 {
+public class Defaults7Loader {
 	public Class232 aClass232_5873;
 	public Interface17 anInterface17_5874;
 	public Interface17 anInterface17_5875;
@@ -49,8 +49,8 @@ public class Class511 {
 		}
 	}
 
-	public Class511(Index class317) {
-		byte[] is = class317.method5615((-1719912253 * Class524.aClass524_6964.anInt6966), -1307124908);
+	public Defaults7Loader(Index class317) {
+		byte[] is = class317.getFile((-1719912253 * DefaultsFile.FILE_7.anInt6966), -1307124908);
 		method8746(new RsByteBuffer(is), -525270939);
 	}
 
@@ -180,10 +180,10 @@ public class Class511 {
 
 	public static MeshRasterizer method8752(GraphicalRenderer class505, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		long l = (long) i_6_;
-		MeshRasterizer class528 = (MeshRasterizer) Class180.aClass229_2245.method3865(l);
+		MeshRasterizer class528 = (MeshRasterizer) Class180.aClass229_2245.get(l);
 		int i_8_ = 2055;
 		if (null == class528) {
-			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, i_6_, 0);
+			RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, i_6_, 0);
 			if (null == class157)
 				return null;
 			if (class157.zoom < 13)
@@ -209,7 +209,7 @@ public class Class511 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_9_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_10_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_9_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_9_, (byte) 0);
 		if (i_10_ != -1741480635 * class437.anInt5337)
 			class118.method1999(i_9_, i_10_, -76076232);
 		else
@@ -238,7 +238,7 @@ public class Class511 {
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (i_12_ == -1)
 			throw new RuntimeException();
-		Class431 class431 = Class466.aClass444_5570.method7424(i_12_, (byte) 8);
+		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_12_, (byte) 8);
 		if ('s' != class431.aChar5140)
 			throw new RuntimeException();
 		int[] is = class431.method7251(string, 1883860951);
@@ -252,10 +252,10 @@ public class Class511 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_14_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_15_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_15_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_15_, (byte) 0);
 		if (class437.method7319(2036753920))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class397.aClass218_4813.method3700(i_14_, 882562729).method3722(i_15_, class437.aString5335, -379285425);
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_14_, 882562729).method3722(i_15_, class437.aString5335, -379285425);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (Class397.aClass218_4813.method3700(i_14_, 884887679).method3723(i_15_, -1741480635 * class437.anInt5337, 1942118537));
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_14_, 884887679).method3723(i_15_, -1741480635 * class437.anInt5337, 1942118537));
 	}
 }

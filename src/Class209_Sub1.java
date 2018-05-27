@@ -295,7 +295,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	static final void method12915(CS2Executor class527, int i) {
 		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) ((CS2Executor) class527).animable);
 		String string = class521_sub1_sub1_sub2_sub2.aString10584;
-		Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (null != class409.anIntArray4886) {
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 			if (null == class409)

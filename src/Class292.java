@@ -41,7 +41,7 @@ public class Class292 {
 		if (bool)
 			Class455.method7554(class98, class118, 658695956);
 		else
-			Class218.method3710(class98, class118, 983481657);
+			WorldMapIndexLoader.method3710(class98, class118, 983481657);
 	}
 
 	static final void method5201(int i, int i_4_, int i_5_, int i_6_, byte i_7_) {

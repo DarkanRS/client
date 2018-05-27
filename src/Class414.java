@@ -714,7 +714,7 @@ public class Class414 {
 	}
 
 	public static Class414 method6957(Index class317, int i) {
-		byte[] is = class317.method5615(i, -1802173950);
+		byte[] is = class317.getFile(i, -1802173950);
 		if (is == null)
 			return null;
 		return new Class414(is);

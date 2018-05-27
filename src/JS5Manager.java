@@ -6,274 +6,104 @@ import java.math.BigInteger;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
-public class Class309 {
-	BigInteger aBigInteger3622;
-	JS5LocalRequester aClass313_3623;
-	JS5StandardRequester aClass312_3624;
-	BigInteger aBigInteger3625;
+public class JS5Manager {
+	BigInteger updateServerModulus;
+	JS5LocalRequester localRequester;
+	JS5StandardRequester standardRequester;
+	BigInteger updateServerExponent;
 	Class282_Sub50_Sub11_Sub1 aClass282_Sub50_Sub11_Sub1_3626;
-	RsByteBuffer aClass282_Sub35_3627;
-	JS5GrabWorker[] aClass327_Sub1Array3628;
+	RsByteBuffer buffer;
+	JS5GrabWorker[] grabWorkers;
 
-	public JS5GrabWorker method5475(int i, JS5CacheFile class203, JS5CacheFile class203_0_) {
-		return method5478(i, class203, class203_0_, true, -241166262);
-	}
-
-	public boolean method5476(byte i) {
-		if (null != this.aClass282_Sub35_3627) {
+	public boolean verify255RSA(byte i) {
+		if (null != this.buffer) {
 			return true;
 		}
 		if (null == this.aClass282_Sub50_Sub11_Sub1_3626) {
-			if (this.aClass312_3624.method5517(-1826319794)) {
+			if (this.standardRequester.method5517(-1826319794)) {
 				return false;
 			}
-			this.aClass282_Sub50_Sub11_Sub1_3626 = this.aClass312_3624.method5515(255, 255, (byte) 0, true, (byte) 26);
+			this.aClass282_Sub50_Sub11_Sub1_3626 = this.standardRequester.method5515(255, 255, (byte) 0, true, (byte) 26);
 		}
 		if (this.aClass282_Sub50_Sub11_Sub1_3626.incomplete) {
 			return false;
 		}
-		RsByteBuffer class282_sub35 = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(-1991458699));
-		class282_sub35.index = -1282417039;
-		int i_1_ = class282_sub35.readUnsignedByte();
-		class282_sub35.index += i_1_ * 1290044200;
-		byte[] is = new byte[(class282_sub35.buffer.length - class282_sub35.index * -1990677291)];
-		class282_sub35.readBytes(is, 0, is.length, -24451515);
-		byte[] is_2_;
-		if (null == this.aBigInteger3625 || this.aBigInteger3622 == null) {
-			is_2_ = is;
+		RsByteBuffer stream = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(-1991458699));
+		stream.index = -1282417039;
+		int size = stream.readUnsignedByte();
+		stream.index += size * 1290044200;
+		byte[] localCrcData = new byte[(stream.buffer.length - stream.index * -1990677291)];
+		stream.readBytes(localCrcData, 0, localCrcData.length, -24451515);
+		byte[] crcData;
+		if (null == this.updateServerExponent || this.updateServerModulus == null) {
+			crcData = localCrcData;
 		} else {
-			BigInteger biginteger = new BigInteger(is);
-			BigInteger biginteger_3_ = biginteger.modPow(this.aBigInteger3625, this.aBigInteger3622);
-			is_2_ = biginteger_3_.toByteArray();
+			BigInteger biginteger = new BigInteger(localCrcData);
+			BigInteger biginteger_3_ = biginteger.modPow(this.updateServerExponent, this.updateServerModulus);
+			crcData = biginteger_3_.toByteArray();
 		}
-		if (is_2_.length != 64 && is_2_.length != 65) {
+		if (crcData.length != 64 && crcData.length != 65) {
 			throw new RuntimeException();
 		}
-		byte[] is_4_ = Class361.method6273(class282_sub35.buffer, 5, (-1990677291 * class282_sub35.index - is.length - 5), (byte) 56);
+		byte[] is_4_ = Class361.method6273(stream.buffer, 5, (-1990677291 * stream.index - localCrcData.length - 5), (byte) 56);
 		for (int i_5_ = 0; i_5_ < 64; i_5_++) {
 			/*
 			 * if (is_2_[1 + i_5_] != is_4_[i_5_]) { throw new
 			 * RuntimeException(); }
 			 */
 		}
-		this.aClass327_Sub1Array3628 = new JS5GrabWorker[i_1_];
-		this.aClass282_Sub35_3627 = class282_sub35;
+		this.grabWorkers = new JS5GrabWorker[size];
+		this.buffer = stream;
 		return true;
 	}
 
-	public boolean method5477() {
-		if (null != this.aClass282_Sub35_3627) {
-			return true;
-		}
-		if (null == this.aClass282_Sub50_Sub11_Sub1_3626) {
-			if (this.aClass312_3624.method5517(-546076436)) {
-				return false;
-			}
-			this.aClass282_Sub50_Sub11_Sub1_3626 = this.aClass312_3624.method5515(255, 255, (byte) 0, true, (byte) 80);
-		}
-		if (this.aClass282_Sub50_Sub11_Sub1_3626.incomplete) {
-			return false;
-		}
-		RsByteBuffer class282_sub35 = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(2059938695));
-		class282_sub35.index = -1282417039;
-		int i = class282_sub35.readUnsignedByte();
-		class282_sub35.index += i * 1290044200;
-		byte[] is = new byte[(class282_sub35.buffer.length - class282_sub35.index * -1990677291)];
-		class282_sub35.readBytes(is, 0, is.length, -144625654);
-		byte[] is_6_;
-		if (null == this.aBigInteger3625 || this.aBigInteger3622 == null) {
-			is_6_ = is;
-		} else {
-			BigInteger biginteger = new BigInteger(is);
-			BigInteger biginteger_7_ = biginteger.modPow(this.aBigInteger3625, this.aBigInteger3622);
-			is_6_ = biginteger_7_.toByteArray();
-		}
-		if (is_6_.length != 65) {
-			throw new RuntimeException();
-		}
-		byte[] is_8_ = Class361.method6273(class282_sub35.buffer, 5, (-1990677291 * class282_sub35.index - is.length - 5), (byte) -67);
-		for (int i_9_ = 0; i_9_ < 64; i_9_++) {
-			if (is_6_[1 + i_9_] != is_8_[i_9_]) {
-				throw new RuntimeException();
-			}
-		}
-		this.aClass327_Sub1Array3628 = new JS5GrabWorker[i];
-		this.aClass282_Sub35_3627 = class282_sub35;
-		return true;
-	}
-
-	public Class309(JS5StandardRequester class312, JS5LocalRequester class313, BigInteger biginteger, BigInteger biginteger_10_) {
-		this.aClass312_3624 = class312;
-		this.aClass313_3623 = class313;
-		this.aBigInteger3625 = biginteger;
-		this.aBigInteger3622 = biginteger_10_;
-		if (!this.aClass312_3624.method5517(-630500434)) {
-			this.aClass282_Sub50_Sub11_Sub1_3626 = this.aClass312_3624.method5515(255, 255, (byte) 0, true, (byte) 58);
+	public JS5Manager(JS5StandardRequester standardRequester, JS5LocalRequester localRequester, BigInteger updateServerExponent, BigInteger updateServerModulus) {
+		this.standardRequester = standardRequester;
+		this.localRequester = localRequester;
+		this.updateServerExponent = updateServerExponent;
+		this.updateServerModulus = updateServerModulus;
+		if (!this.standardRequester.method5517(-630500434)) {
+			this.aClass282_Sub50_Sub11_Sub1_3626 = this.standardRequester.method5515(255, 255, (byte) 0, true, (byte) 58);
 		}
 	}
 
 	JS5GrabWorker method5478(int i, JS5CacheFile class203, JS5CacheFile class203_11_, boolean bool, int i_12_) {
-		if (this.aClass282_Sub35_3627 == null) {
+		if (this.buffer == null) {
 			throw new RuntimeException();
 		}
-		if (i < 0 || i >= this.aClass327_Sub1Array3628.length) {
+		if (i < 0 || i >= this.grabWorkers.length) {
 			throw new RuntimeException();
 		}
-		if (null != this.aClass327_Sub1Array3628[i]) {
-			return this.aClass327_Sub1Array3628[i];
+		if (null != this.grabWorkers[i]) {
+			return this.grabWorkers[i];
 		}
-		this.aClass282_Sub35_3627.index = 1897073390 + i * 1290044200;
-		int i_13_ = this.aClass282_Sub35_3627.readInt();
-		int i_14_ = this.aClass282_Sub35_3627.readInt();
+		this.buffer.index = 1897073390 + i * 1290044200;
+		int i_13_ = this.buffer.readInt();
+		int i_14_ = this.buffer.readInt();
 		byte[] is = new byte[64];
-		this.aClass282_Sub35_3627.readBytes(is, 0, 64, 1722880167);
-		JS5GrabWorker class327_sub1 = new JS5GrabWorker(i, class203, class203_11_, this.aClass312_3624, this.aClass313_3623, i_13_, is, i_14_, bool);
-		this.aClass327_Sub1Array3628[i] = class327_sub1;
+		this.buffer.readBytes(is, 0, 64, 1722880167);
+		JS5GrabWorker class327_sub1 = new JS5GrabWorker(i, class203, class203_11_, this.standardRequester, this.localRequester, i_13_, is, i_14_, bool);
+		this.grabWorkers[i] = class327_sub1;
 		return class327_sub1;
-	}
-
-	public boolean method5479() {
-		if (null != this.aClass282_Sub35_3627) {
-			return true;
-		}
-		if (null == this.aClass282_Sub50_Sub11_Sub1_3626) {
-			if (this.aClass312_3624.method5517(-2011599687)) {
-				return false;
-			}
-			this.aClass282_Sub50_Sub11_Sub1_3626 = this.aClass312_3624.method5515(255, 255, (byte) 0, true, (byte) -12);
-		}
-		if (this.aClass282_Sub50_Sub11_Sub1_3626.incomplete) {
-			return false;
-		}
-		RsByteBuffer class282_sub35 = new RsByteBuffer(this.aClass282_Sub50_Sub11_Sub1_3626.getData(382414133));
-		class282_sub35.index = -1282417039;
-		int i = class282_sub35.readUnsignedByte();
-		class282_sub35.index += i * 1290044200;
-		byte[] is = new byte[(class282_sub35.buffer.length - class282_sub35.index * -1990677291)];
-		class282_sub35.readBytes(is, 0, is.length, 2105976326);
-		byte[] is_15_;
-		if (null == this.aBigInteger3625 || this.aBigInteger3622 == null) {
-			is_15_ = is;
-		} else {
-			BigInteger biginteger = new BigInteger(is);
-			BigInteger biginteger_16_ = biginteger.modPow(this.aBigInteger3625, this.aBigInteger3622);
-			is_15_ = biginteger_16_.toByteArray();
-		}
-		if (is_15_.length != 65) {
-			throw new RuntimeException();
-		}
-		byte[] is_17_ = Class361.method6273(class282_sub35.buffer, 5, (-1990677291 * class282_sub35.index - is.length - 5), (byte) 65);
-		for (int i_18_ = 0; i_18_ < 64; i_18_++) {
-			if (is_15_[1 + i_18_] != is_17_[i_18_]) {
-				throw new RuntimeException();
-			}
-		}
-		this.aClass327_Sub1Array3628 = new JS5GrabWorker[i];
-		this.aClass282_Sub35_3627 = class282_sub35;
-		return true;
 	}
 
 	public JS5GrabWorker method5480(int i, JS5CacheFile class203, JS5CacheFile class203_19_, byte i_20_) {
 		return method5478(i, class203, class203_19_, true, -84077622);
 	}
 
-	public JS5GrabWorker method5481(int i, JS5CacheFile class203, JS5CacheFile class203_21_) {
-		return method5478(i, class203, class203_21_, true, -1340379943);
-	}
-
 	public void method5482(int i) {
-		if (null != this.aClass327_Sub1Array3628) {
-			for (int i_22_ = 0; i_22_ < this.aClass327_Sub1Array3628.length; i_22_++) {
-				if (this.aClass327_Sub1Array3628[i_22_] != null) {
-					this.aClass327_Sub1Array3628[i_22_].processCheck((byte) -47);
+		if (null != this.grabWorkers) {
+			for (int i_22_ = 0; i_22_ < this.grabWorkers.length; i_22_++) {
+				if (this.grabWorkers[i_22_] != null) {
+					this.grabWorkers[i_22_].processCheck((byte) -47);
 				}
 			}
-			for (int i_23_ = 0; i_23_ < this.aClass327_Sub1Array3628.length; i_23_++) {
-				if (this.aClass327_Sub1Array3628[i_23_] != null) {
-					this.aClass327_Sub1Array3628[i_23_].method12552(808893293);
+			for (int i_23_ = 0; i_23_ < this.grabWorkers.length; i_23_++) {
+				if (this.grabWorkers[i_23_] != null) {
+					this.grabWorkers[i_23_].method12552(808893293);
 				}
 			}
 		}
-	}
-
-	JS5GrabWorker method5483(int i, JS5CacheFile class203, JS5CacheFile class203_24_, boolean bool) {
-		if (this.aClass282_Sub35_3627 == null) {
-			throw new RuntimeException();
-		}
-		if (i < 0 || i >= this.aClass327_Sub1Array3628.length) {
-			throw new RuntimeException();
-		}
-		if (null != this.aClass327_Sub1Array3628[i]) {
-			return this.aClass327_Sub1Array3628[i];
-		}
-		this.aClass282_Sub35_3627.index = 1897073390 + i * 1290044200;
-		int i_25_ = this.aClass282_Sub35_3627.readInt();
-		int i_26_ = this.aClass282_Sub35_3627.readInt();
-		byte[] is = new byte[64];
-		this.aClass282_Sub35_3627.readBytes(is, 0, 64, -94736033);
-		JS5GrabWorker class327_sub1 = new JS5GrabWorker(i, class203, class203_24_, this.aClass312_3624, this.aClass313_3623, i_25_, is, i_26_, bool);
-		this.aClass327_Sub1Array3628[i] = class327_sub1;
-		return class327_sub1;
-	}
-
-	JS5GrabWorker method5484(int i, JS5CacheFile class203, JS5CacheFile class203_27_, boolean bool) {
-		if (this.aClass282_Sub35_3627 == null) {
-			throw new RuntimeException();
-		}
-		if (i < 0 || i >= this.aClass327_Sub1Array3628.length) {
-			throw new RuntimeException();
-		}
-		if (null != this.aClass327_Sub1Array3628[i]) {
-			return this.aClass327_Sub1Array3628[i];
-		}
-		this.aClass282_Sub35_3627.index = 1897073390 + i * 1290044200;
-		int i_28_ = this.aClass282_Sub35_3627.readInt();
-		int i_29_ = this.aClass282_Sub35_3627.readInt();
-		byte[] is = new byte[64];
-		this.aClass282_Sub35_3627.readBytes(is, 0, 64, 1694292510);
-		JS5GrabWorker class327_sub1 = new JS5GrabWorker(i, class203, class203_27_, this.aClass312_3624, this.aClass313_3623, i_28_, is, i_29_, bool);
-		this.aClass327_Sub1Array3628[i] = class327_sub1;
-		return class327_sub1;
-	}
-
-	JS5GrabWorker method5485(int i, JS5CacheFile class203, JS5CacheFile class203_30_, boolean bool) {
-		if (this.aClass282_Sub35_3627 == null) {
-			throw new RuntimeException();
-		}
-		if (i < 0 || i >= this.aClass327_Sub1Array3628.length) {
-			throw new RuntimeException();
-		}
-		if (null != this.aClass327_Sub1Array3628[i]) {
-			return this.aClass327_Sub1Array3628[i];
-		}
-		this.aClass282_Sub35_3627.index = 1897073390 + i * 1290044200;
-		int i_31_ = this.aClass282_Sub35_3627.readInt();
-		int i_32_ = this.aClass282_Sub35_3627.readInt();
-		byte[] is = new byte[64];
-		this.aClass282_Sub35_3627.readBytes(is, 0, 64, 91942893);
-		JS5GrabWorker class327_sub1 = new JS5GrabWorker(i, class203, class203_30_, this.aClass312_3624, this.aClass313_3623, i_31_, is, i_32_, bool);
-		this.aClass327_Sub1Array3628[i] = class327_sub1;
-		return class327_sub1;
-	}
-
-	JS5GrabWorker method5486(int i, JS5CacheFile class203, JS5CacheFile class203_33_, boolean bool) {
-		if (this.aClass282_Sub35_3627 == null) {
-			throw new RuntimeException();
-		}
-		if (i < 0 || i >= this.aClass327_Sub1Array3628.length) {
-			throw new RuntimeException();
-		}
-		if (null != this.aClass327_Sub1Array3628[i]) {
-			return this.aClass327_Sub1Array3628[i];
-		}
-		this.aClass282_Sub35_3627.index = 1897073390 + i * 1290044200;
-		int i_34_ = this.aClass282_Sub35_3627.readInt();
-		int i_35_ = this.aClass282_Sub35_3627.readInt();
-		byte[] is = new byte[64];
-		this.aClass282_Sub35_3627.readBytes(is, 0, 64, 793428477);
-		JS5GrabWorker class327_sub1 = new JS5GrabWorker(i, class203, class203_33_, this.aClass312_3624, this.aClass313_3623, i_34_, is, i_35_, bool);
-		this.aClass327_Sub1Array3628[i] = class327_sub1;
-		return class327_sub1;
 	}
 
 	static final void method5487(CS2Executor class527, int i) {
@@ -338,12 +168,12 @@ public class Class309 {
 	}
 
 	static final boolean method5492(Class293[][][] class293s, int i, int i_44_, int i_45_, boolean bool, byte i_46_) {
-		byte[][][] is = client.aClass257_7353.method4532(1227540505);
+		byte[][][] is = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
 		byte i_47_ = bool ? (byte) 1 : (byte) (48374445 * client.anInt7286 & 0xff);
 		if (is[Class4.anInt35 * 675588453][i_44_][i_45_] == i_47_) {
 			return false;
 		}
-		Class311 class311 = client.aClass257_7353.method4433(33386298);
+		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 		if (((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_44_][i_45_]) & 0x4) == 0) {
 			return false;
 		}
@@ -425,7 +255,7 @@ public class Class309 {
 				}
 			}
 			if (bool_56_) {
-				int i_66_ = client.aClass257_7353.method4430(-1297702822).aClass390Array2591[Class4.anInt35 * 675588453 + 1].method6722(i_50_, i_53_, 65280);
+				int i_66_ = IndexLoaders.MAP_REGION_DECODER.method4430(-1297702822).aClass390Array2591[Class4.anInt35 * 675588453 + 1].method6722(i_50_, i_53_, 65280);
 				if (client.anIntArray7198[i] < i_66_) {
 					client.anIntArray7198[i] = i_66_;
 				}
@@ -449,7 +279,7 @@ public class Class309 {
 					i_48_ = i_48_ + 1 & 0xfff;
 					is[Class4.anInt35 * 675588453][i_50_ - 1][i_53_] = i_47_;
 				}
-				if (++i_53_ < client.aClass257_7353.method4451(-333277529)) {
+				if (++i_53_ < IndexLoaders.MAP_REGION_DECODER.method4451(-333277529)) {
 					if (i_50_ - 1 >= 0 && (is[Class4.anInt35 * 675588453][i_50_ - 1][i_53_] != i_47_) && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) == 0 && ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_50_ - 1][i_53_ - 1]) & 0x4) == 0) {
 						client.anIntArray7243[i_48_] = i_50_ - 1 | 0x120000 | 0x52000000;
 						client.anIntArray7425[i_48_] = i_53_ | 0x130000;
@@ -462,7 +292,7 @@ public class Class309 {
 						i_48_ = i_48_ + 1 & 0xfff;
 						is[675588453 * Class4.anInt35][i_50_][i_53_] = i_47_;
 					}
-					if ((1 + i_50_ < client.aClass257_7353.method4424(-1412257249)) && (is[Class4.anInt35 * 675588453][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][1 + i_50_][i_53_ - 1]) & 0x4) == 0) {
+					if ((1 + i_50_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1412257249)) && (is[Class4.anInt35 * 675588453][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][1 + i_50_][i_53_ - 1]) & 0x4) == 0) {
 						client.anIntArray7243[i_48_] = 1 + i_50_ | 0x520000 | ~0x6dffffff;
 						client.anIntArray7425[i_48_] = i_53_ | 0x530000;
 						i_48_ = i_48_ + 1 & 0xfff;
@@ -470,7 +300,7 @@ public class Class309 {
 					}
 				}
 				i_53_--;
-				if (i_50_ + 1 < client.aClass257_7353.method4424(-1831553983) && (i_47_ != is[Class4.anInt35 * 675588453][i_50_ + 1][i_53_])) {
+				if (i_50_ + 1 < IndexLoaders.MAP_REGION_DECODER.method4424(-1831553983) && (i_47_ != is[Class4.anInt35 * 675588453][i_50_ + 1][i_53_])) {
 					client.anIntArray7243[i_48_] = 1 + i_50_ | 0x920000 | 0x53000000;
 					client.anIntArray7425[i_48_] = i_53_ | 0x930000;
 					i_48_ = i_48_ + 1 & 0xfff;
@@ -489,7 +319,7 @@ public class Class309 {
 						i_48_ = 1 + i_48_ & 0xfff;
 						is[Class4.anInt35 * 675588453][i_50_][i_53_] = i_47_;
 					}
-					if ((i_50_ + 1 < client.aClass257_7353.method4424(1761187382)) && (is[675588453 * Class4.anInt35][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_50_][i_53_]) & 0x4) && ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][1 + i_50_][1 + i_53_]) & 0x4) == 0) {
+					if ((i_50_ + 1 < IndexLoaders.MAP_REGION_DECODER.method4424(1761187382)) && (is[675588453 * Class4.anInt35][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_50_][i_53_]) & 0x4) && ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][1 + i_50_][1 + i_53_]) & 0x4) == 0) {
 						client.anIntArray7243[i_48_] = i_50_ + 1 | 0x920000 | ~0x2dffffff;
 						client.anIntArray7425[i_48_] = i_53_ | 0x930000;
 						i_48_ = 1 + i_48_ & 0xfff;

@@ -47,7 +47,7 @@ public class Class288 {
 	Class207 method5072(int i, int i_1_) {
 		Class207 class207;
 		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.method3865((long) i));
+			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
 		}
 		if (class207 != null)
 			return class207;
@@ -67,7 +67,7 @@ public class Class288 {
 	Class207 method5073(int i) {
 		Class207 class207;
 		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.method3865((long) i));
+			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
 		}
 		if (class207 != null)
 			return class207;
@@ -87,7 +87,7 @@ public class Class288 {
 	Class207 method5074(int i) {
 		Class207 class207;
 		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.method3865((long) i));
+			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
 		}
 		if (class207 != null)
 			return class207;
@@ -107,7 +107,7 @@ public class Class288 {
 	Class207 method5075(int i) {
 		Class207 class207;
 		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.method3865((long) i));
+			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
 		}
 		if (class207 != null)
 			return class207;
@@ -127,7 +127,7 @@ public class Class288 {
 	Class207 method5076(int i) {
 		Class207 class207;
 		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.method3865((long) i));
+			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
 		}
 		if (class207 != null)
 			return class207;

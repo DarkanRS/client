@@ -15,8 +15,8 @@ public class Class281 {
 
 	void method4976(Class206 class206) {
 		((Class281) this).aLinkedList3377 = new LinkedList();
-		Class311 class311 = client.aClass257_7353.method4433(33386298);
-		Class219 class219 = client.aClass257_7353.method4519(1448463599);
+		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1448463599);
 		Class219 class219_0_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
 		for (int i = 1; i < 1443022381 * ((Class281) this).anInt3374; i++) {
 			Class219 class219_1_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i], ((Class281) this).anIntArray3373[i]);
@@ -45,7 +45,7 @@ public class Class281 {
 	}
 
 	MeshRasterizer method4977(GraphicalRenderer class505, int i) {
-		RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
+		RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, ((Class281) this).anInt3372 * 68563351, 0);
 		if (null == class157)
 			return null;
 		if (class157.zoom < 13)
@@ -96,7 +96,7 @@ public class Class281 {
 	}
 
 	MeshRasterizer method4981(GraphicalRenderer class505) {
-		RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, ((Class281) this).anInt3372 * 68563351, 0);
+		RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, ((Class281) this).anInt3372 * 68563351, 0);
 		if (null == class157)
 			return null;
 		if (class157.zoom < 13)
@@ -117,8 +117,8 @@ public class Class281 {
 
 	void method4983(Class206 class206, int i) {
 		((Class281) this).aLinkedList3377 = new LinkedList();
-		Class311 class311 = client.aClass257_7353.method4433(33386298);
-		Class219 class219 = client.aClass257_7353.method4519(309280433);
+		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(309280433);
 		Class219 class219_7_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
 		for (int i_8_ = 1; i_8_ < 1443022381 * ((Class281) this).anInt3374; i_8_++) {
 			Class219 class219_9_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i_8_], ((Class281) this).anIntArray3373[i_8_]);

@@ -66,11 +66,11 @@ final class Class15 implements Interface35 {
 		StringBuilder stringbuilder = new StringBuilder();
 		int i_5_ = 1104058571 * Class20.anInt186;
 		for (int i_6_ = 0; i_6_ < is.length; i_6_++) {
-			Class240 class240 = Class409.aClass242_4922.method4156(is[i_6_], -1396181317);
+			Class240 class240 = IndexLoaders.aClass242_4922.method4156(is[i_6_], -1396181317);
 			if (-1230505599 * class240.anInt2977 != -1) {
-				NativeSprite class160 = (NativeSprite) (Class20.aClass229_191.method3865((long) (-1230505599 * class240.anInt2977)));
+				NativeSprite class160 = (NativeSprite) (Class20.aClass229_191.get((long) (-1230505599 * class240.anInt2977)));
 				if (null == class160) {
-					Class91 class91 = Class91.method1522(Class211.aClass317_2673, class240.anInt2977 * -1230505599, 0);
+					Class91 class91 = Class91.method1522(IndexLoaders.SPRITES_INDEX, class240.anInt2977 * -1230505599, 0);
 					if (class91 != null) {
 						class160 = Renderers.SOFTWARE_RENDERER.method8444(class91, true);
 						Class20.aClass229_191.put(class160, (long) (-1230505599 * class240.anInt2977));

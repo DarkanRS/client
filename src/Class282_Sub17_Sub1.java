@@ -71,33 +71,33 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 
 	public static void method15402(int i, String string, boolean bool, int i_0_) {
 		if (0 == i) {
-			Renderers.SOFTWARE_RENDERER = Class320.method5732(0, Class351.aCanvas4096, Class321.anInterface22_3731, Class488.aClass317_5758, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1783373613) * 2, -1283280673);
+			Renderers.SOFTWARE_RENDERER = Class320.method5732(0, Class351.LOAD_CANVAS, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1783373613) * 2, -1283280673);
 			if (string != null) {
 				Renderers.SOFTWARE_RENDERER.ba(1, 0);
-				Class414 class414 = Class94.method1588(Class410.aClass317_4924, Class16.anInt136 * 436671641, 0, 1150997063);
-				FontRenderer class8 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1514(Class211.aClass317_2673, Class16.anInt136 * 436671641, 0), true));
+				Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136 * 436671641, 0, 1150997063);
+				FontRenderer class8 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136 * 436671641, 0), true));
 				Class275.method4891((byte) -128);
 				Class446.method7447(string, true, Renderers.SOFTWARE_RENDERER, class8, class414, (byte) -87);
 			}
 		} else {
-			GraphicalRenderer class505 = null;
+			GraphicalRenderer renderer = null;
 			if (string != null) {
-				class505 = Class320.method5732(0, Class351.aCanvas4096, Class321.anInterface22_3731, Class488.aClass317_5758, 0, -603391790);
-				class505.ba(1, 0);
-				Class414 class414 = Class94.method1588(Class410.aClass317_4924, Class16.anInt136 * 436671641, 0, 1961117540);
-				FontRenderer class8 = (class505.method8448(class414, Class91.method1514(Class211.aClass317_2673, 436671641 * Class16.anInt136, 0), true));
+				renderer = Class320.method5732(0, Class351.LOAD_CANVAS, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -603391790);
+				renderer.ba(1, 0);
+				Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136 * 436671641, 0, 1961117540);
+				FontRenderer class8 = (renderer.method8448(class414, Class91.method1514(IndexLoaders.SPRITES_INDEX, 436671641 * Class16.anInt136, 0), true));
 				Class275.method4891((byte) -74);
-				Class446.method7447(string, true, class505, class8, class414, (byte) -82);
+				Class446.method7447(string, true, renderer, class8, class414, (byte) -82);
 			}
 			try {
 				try {
-					Renderers.SOFTWARE_RENDERER = Class320.method5732(i, Class351.aCanvas4096, Class321.anInterface22_3731, Class488.aClass317_5758, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(169664234) * 2, -694595538);
+					Renderers.SOFTWARE_RENDERER = Class320.method5732(i, Class351.LOAD_CANVAS, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(169664234) * 2, -694595538);
 					if (string != null) {
-						class505.ba(1, 0);
-						Class414 class414 = Class94.method1588(Class410.aClass317_4924, 436671641 * Class16.anInt136, 0, 1716473063);
-						FontRenderer class8 = (class505.method8448(class414, Class91.method1514(Class211.aClass317_2673, (436671641 * Class16.anInt136), 0), true));
+						renderer.ba(1, 0);
+						Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, 436671641 * Class16.anInt136, 0, 1716473063);
+						FontRenderer class8 = (renderer.method8448(class414, Class91.method1514(IndexLoaders.SPRITES_INDEX, (436671641 * Class16.anInt136), 0), true));
 						Class275.method4891((byte) -30);
-						Class446.method7447(string, true, class505, class8, class414, (byte) -16);
+						Class446.method7447(string, true, renderer, class8, class414, (byte) -16);
 					}
 					if (Renderers.SOFTWARE_RENDERER.method8399()) {
 						boolean bool_1_ = true;
@@ -119,26 +119,26 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 						client.aBool7171 = true;
 					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230, 0, -1949394777);
 					method15402(i_2_, string, bool, 1368243224);
-					if (null != class505) {
+					if (null != renderer) {
 						try {
-							class505.method8396(978390252);
+							renderer.method8396(978390252);
 						} catch (Throwable throwable_3_) {
 							/* empty */
 						}
 					}
 					return;
 				}
-				if (null != class505) {
+				if (null != renderer) {
 					try {
-						class505.method8396(1088813931);
+						renderer.method8396(1088813931);
 					} catch (Throwable throwable) {
 						/* empty */
 					}
 				}
 			} catch (Exception object) {
-				if (null != class505) {
+				if (null != renderer) {
 					try {
-						class505.method8396(-2045375529);
+						renderer.method8396(-2045375529);
 					} catch (Throwable throwable) {
 						/* empty */
 					}
@@ -154,12 +154,12 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 		Class12.method482((byte) 53);
 		Renderers.SOFTWARE_RENDERER.method8459(10000);
 		Renderers.SOFTWARE_RENDERER.J(32);
-		client.aClass257_7353.method4447(1353866416);
+		IndexLoaders.MAP_REGION_DECODER.method4447(1353866416);
 		Renderers.SOFTWARE_RENDERER.method8568(false);
 		if (Renderers.SOFTWARE_RENDERER.method8403())
 			Class115.method1952(Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method12706((byte) 97) == 1, -1437511825);
-		client.aClass257_7353.method4446((byte) 78);
-		client.aClass257_7353.method4435((byte) 1).method4048(1352749078);
+		IndexLoaders.MAP_REGION_DECODER.method4446((byte) 78);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(1352749078);
 		client.aBool7175 = false;
 		client.aBool7185 = true;
 		Class149_Sub3.aClass467Array9380 = null;
@@ -167,6 +167,6 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 	}
 
 	static final void method15403(CS2Executor class527, int i) {
-		AttributesDefaultsLoader.method7081((byte) -41);
+		ItemDefaultsLoader.method7081((byte) -41);
 	}
 }

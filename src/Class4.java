@@ -23,16 +23,16 @@ public class Class4 {
 		float f_10_ = 0.0F;
 		float f_11_ = 0.0F;
 		float f_12_ = 0.0F;
-		Class206 class206 = client.aClass257_7353.method4430(-956350211);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-956350211);
 		for (/**/; f_6_ < 1.1F; f_6_ += 0.1F) {
 			float f_13_ = f_6_ * f_7_ + f;
 			float f_14_ = f_8_ * f_6_ + f_0_;
 			float f_15_ = f_1_ + f_6_ * f_9_;
 			int i_16_ = (int) f_13_ >> 9;
 			int i_17_ = (int) f_15_ >> 9;
-			if (i_16_ > 0 && i_17_ > 0 && i_16_ < client.aClass257_7353.method4424(-964294290) && i_17_ < client.aClass257_7353.method4451(-1282893956)) {
+			if (i_16_ > 0 && i_17_ > 0 && i_16_ < IndexLoaders.MAP_REGION_DECODER.method4424(-964294290) && i_17_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1282893956)) {
 				int i_18_ = Class84.myPlayer.aByte7967;
-				if (i_18_ < 3 && ((client.aClass257_7353.method4433(33386298).aByteArrayArrayArray3638[1][i_16_][i_17_]) & 0x2) != 0)
+				if (i_18_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).aByteArrayArrayArray3638[1][i_16_][i_17_]) & 0x2) != 0)
 					i_18_++;
 				int i_19_ = class206.aClass390Array2607[i_18_].method6709((int) f_13_, (int) f_15_, 1453959191);
 				if ((float) i_19_ < f_14_) {
@@ -56,7 +56,7 @@ public class Class4 {
 
 	static final void method290(CS2Executor class527, byte i) {
 		int i_21_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class220 class220 = Class397.aClass218_4813.method3700(i_21_, 174714290);
+		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_21_, 174714290);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 781329827 * class220.anInt2718;
 	}
 
@@ -64,7 +64,7 @@ public class Class4 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_22_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_23_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_22_, -1111901377).aCharArray9745[i_23_]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.aClass331_3535.method5918(i_22_, -1111901377).aCharArray9745[i_23_]);
 	}
 
 	static final void method292(CS2Executor class527, int i) {

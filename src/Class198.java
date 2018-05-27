@@ -18,10 +18,10 @@ public class Class198 {
 	public NativeSprite method3204(GraphicalRenderer class505) {
 		if (-940773669 * ((Class198) this).anInt2441 < 0)
 			return method3207(class505, -976132451);
-		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441)));
+		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441)));
 		if (class160 == null) {
 			method3211(class505, (byte) 57);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441)));
 		}
 		return class160;
 	}
@@ -29,10 +29,10 @@ public class Class198 {
 	public NativeSprite method3205(GraphicalRenderer class505) {
 		if (-1811392407 * ((Class198) this).anInt2445 < 0)
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))));
 		if (class160 == null) {
 			method3211(class505, (byte) 46);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1811392407 * ((Class198) this).anInt2445)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((Class198) this).anInt2445)));
 		}
 		return class160;
 	}
@@ -51,13 +51,13 @@ public class Class198 {
 		else if (i == 6)
 			class282_sub35.readUnsignedByte();
 		else if (7 == i)
-			((Class198) this).anInt2444 = class282_sub35.readBigSmart(2069704994) * 558441445;
+			((Class198) this).anInt2444 = class282_sub35.readBigSmart() * 558441445;
 		else if (i == 8)
-			((Class198) this).anInt2445 = class282_sub35.readBigSmart(2110884240) * 413841369;
+			((Class198) this).anInt2445 = class282_sub35.readBigSmart() * 413841369;
 		else if (9 == i)
-			((Class198) this).anInt2441 = class282_sub35.readBigSmart(1977844584) * 134962515;
+			((Class198) this).anInt2441 = class282_sub35.readBigSmart() * 134962515;
 		else if (10 == i)
-			((Class198) this).anInt2447 = class282_sub35.readBigSmart(2120650847) * 1272096869;
+			((Class198) this).anInt2447 = class282_sub35.readBigSmart() * 1272096869;
 		else if (i == 11)
 			anInt2439 = class282_sub35.readUnsignedShort() * -1198621823;
 	}
@@ -65,10 +65,10 @@ public class Class198 {
 	public NativeSprite method3207(GraphicalRenderer class505, int i) {
 		if (((Class198) this).anInt2444 * 1794138605 < 0)
 			return null;
-		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605)));
+		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605)));
 		if (class160 == null) {
 			method3211(class505, (byte) 74);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605)));
 		}
 		return class160;
 	}
@@ -76,10 +76,10 @@ public class Class198 {
 	public NativeSprite method3208(GraphicalRenderer class505, int i) {
 		if (-1811392407 * ((Class198) this).anInt2445 < 0)
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))));
 		if (class160 == null) {
 			method3211(class505, (byte) 2);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1811392407 * ((Class198) this).anInt2445)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((Class198) this).anInt2445)));
 		}
 		return class160;
 	}
@@ -87,10 +87,10 @@ public class Class198 {
 	public NativeSprite method3209(GraphicalRenderer class505) {
 		if (((Class198) this).anInt2447 * -1781806739 < 0)
 			return method3208(class505, 549654584);
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1781806739 * ((Class198) this).anInt2447))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((Class198) this).anInt2447))));
 		if (null == class160) {
 			method3211(class505, (byte) 32);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1781806739 * ((Class198) this).anInt2447)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((Class198) this).anInt2447)));
 		}
 		return class160;
 	}
@@ -106,19 +106,19 @@ public class Class198 {
 
 	void method3211(GraphicalRenderer class505, byte i) {
 		Index class317 = ((Class290) ((Class198) this).aClass290_2437).aClass317_3448;
-		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, -1437687942)) {
+		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, -1437687942)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2444 * 1794138605);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((Class198) this).anInt2444));
 		}
-		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, 2010871682)) {
+		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, 2010871682)) {
 			Class91 class91 = Class91.method1515(class317, -1811392407 * (((Class198) this).anInt2445));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((Class198) this).anInt2445));
 		}
-		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, 121971957)) {
+		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, 121971957)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2441 * -940773669);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((Class198) this).anInt2441 * -940773669));
 		}
-		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, -11371692)) {
+		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, -11371692)) {
 			Class91 class91 = Class91.method1515(class317, (((Class198) this).anInt2447 * -1781806739));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((Class198) this).anInt2447));
 		}
@@ -126,19 +126,19 @@ public class Class198 {
 
 	void method3212(GraphicalRenderer class505) {
 		Index class317 = ((Class290) ((Class198) this).aClass290_2437).aClass317_3448;
-		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, 276215187)) {
+		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, 276215187)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2444 * 1794138605);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((Class198) this).anInt2444));
 		}
-		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, -1081835064)) {
+		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, -1081835064)) {
 			Class91 class91 = Class91.method1515(class317, -1811392407 * (((Class198) this).anInt2445));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((Class198) this).anInt2445));
 		}
-		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, 151049182)) {
+		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, 151049182)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2441 * -940773669);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((Class198) this).anInt2441 * -940773669));
 		}
-		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, 1110755666)) {
+		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, 1110755666)) {
 			Class91 class91 = Class91.method1515(class317, (((Class198) this).anInt2447 * -1781806739));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((Class198) this).anInt2447));
 		}
@@ -178,13 +178,13 @@ public class Class198 {
 		else if (i == 6)
 			class282_sub35.readUnsignedByte();
 		else if (7 == i)
-			((Class198) this).anInt2444 = class282_sub35.readBigSmart(1958736854) * 558441445;
+			((Class198) this).anInt2444 = class282_sub35.readBigSmart() * 558441445;
 		else if (i == 8)
-			((Class198) this).anInt2445 = class282_sub35.readBigSmart(2141977962) * 413841369;
+			((Class198) this).anInt2445 = class282_sub35.readBigSmart() * 413841369;
 		else if (9 == i)
-			((Class198) this).anInt2441 = class282_sub35.readBigSmart(2075646900) * 134962515;
+			((Class198) this).anInt2441 = class282_sub35.readBigSmart() * 134962515;
 		else if (10 == i)
-			((Class198) this).anInt2447 = class282_sub35.readBigSmart(2087051588) * 1272096869;
+			((Class198) this).anInt2447 = class282_sub35.readBigSmart() * 1272096869;
 		else if (i == 11)
 			anInt2439 = class282_sub35.readUnsignedShort() * -1198621823;
 	}
@@ -192,10 +192,10 @@ public class Class198 {
 	public NativeSprite method3215(GraphicalRenderer class505) {
 		if (((Class198) this).anInt2444 * 1794138605 < 0)
 			return null;
-		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605)));
+		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605)));
 		if (class160 == null) {
 			method3211(class505, (byte) 36);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605)));
 		}
 		return class160;
 	}
@@ -214,13 +214,13 @@ public class Class198 {
 		else if (i == 6)
 			class282_sub35.readUnsignedByte();
 		else if (7 == i)
-			((Class198) this).anInt2444 = class282_sub35.readBigSmart(1989884192) * 558441445;
+			((Class198) this).anInt2444 = class282_sub35.readBigSmart() * 558441445;
 		else if (i == 8)
-			((Class198) this).anInt2445 = class282_sub35.readBigSmart(1985032983) * 413841369;
+			((Class198) this).anInt2445 = class282_sub35.readBigSmart() * 413841369;
 		else if (9 == i)
-			((Class198) this).anInt2441 = class282_sub35.readBigSmart(2052175607) * 134962515;
+			((Class198) this).anInt2441 = class282_sub35.readBigSmart() * 134962515;
 		else if (10 == i)
-			((Class198) this).anInt2447 = class282_sub35.readBigSmart(2113835627) * 1272096869;
+			((Class198) this).anInt2447 = class282_sub35.readBigSmart() * 1272096869;
 		else if (i == 11)
 			anInt2439 = class282_sub35.readUnsignedShort() * -1198621823;
 	}
@@ -228,10 +228,10 @@ public class Class198 {
 	public NativeSprite method3217(GraphicalRenderer class505) {
 		if (((Class198) this).anInt2444 * 1794138605 < 0)
 			return null;
-		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605)));
+		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605)));
 		if (class160 == null) {
 			method3211(class505, (byte) -14);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605)));
 		}
 		return class160;
 	}
@@ -239,10 +239,10 @@ public class Class198 {
 	public NativeSprite method3218(GraphicalRenderer class505) {
 		if (-1811392407 * ((Class198) this).anInt2445 < 0)
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))));
 		if (class160 == null) {
 			method3211(class505, (byte) 56);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1811392407 * ((Class198) this).anInt2445)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((Class198) this).anInt2445)));
 		}
 		return class160;
 	}
@@ -250,10 +250,10 @@ public class Class198 {
 	public NativeSprite method3219(GraphicalRenderer class505) {
 		if (-1811392407 * ((Class198) this).anInt2445 < 0)
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))));
 		if (class160 == null) {
 			method3211(class505, (byte) 105);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1811392407 * ((Class198) this).anInt2445)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((Class198) this).anInt2445)));
 		}
 		return class160;
 	}
@@ -261,10 +261,10 @@ public class Class198 {
 	public NativeSprite method3220(GraphicalRenderer class505) {
 		if (-1811392407 * ((Class198) this).anInt2445 < 0)
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))));
 		if (class160 == null) {
 			method3211(class505, (byte) 13);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1811392407 * ((Class198) this).anInt2445)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((Class198) this).anInt2445)));
 		}
 		return class160;
 	}
@@ -272,10 +272,10 @@ public class Class198 {
 	public NativeSprite method3221(GraphicalRenderer class505) {
 		if (-1811392407 * ((Class198) this).anInt2445 < 0)
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))));
 		if (class160 == null) {
 			method3211(class505, (byte) 77);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1811392407 * ((Class198) this).anInt2445)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((Class198) this).anInt2445)));
 		}
 		return class160;
 	}
@@ -283,10 +283,10 @@ public class Class198 {
 	public NativeSprite method3222(GraphicalRenderer class505, int i) {
 		if (-940773669 * ((Class198) this).anInt2441 < 0)
 			return method3207(class505, -1561879417);
-		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441)));
+		NativeSprite class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441)));
 		if (class160 == null) {
 			method3211(class505, (byte) 15);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441)));
 		}
 		return class160;
 	}
@@ -294,10 +294,10 @@ public class Class198 {
 	public NativeSprite method3223(GraphicalRenderer class505) {
 		if (((Class198) this).anInt2447 * -1781806739 < 0)
 			return method3208(class505, 549654584);
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1781806739 * ((Class198) this).anInt2447))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((Class198) this).anInt2447))));
 		if (null == class160) {
 			method3211(class505, (byte) -12);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1781806739 * ((Class198) this).anInt2447)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((Class198) this).anInt2447)));
 		}
 		return class160;
 	}
@@ -305,29 +305,29 @@ public class Class198 {
 	public NativeSprite method3224(GraphicalRenderer class505, int i) {
 		if (((Class198) this).anInt2447 * -1781806739 < 0)
 			return method3208(class505, 549654584);
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1781806739 * ((Class198) this).anInt2447))));
+		NativeSprite class160 = ((NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((Class198) this).anInt2447))));
 		if (null == class160) {
 			method3211(class505, (byte) -2);
-			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-1781806739 * ((Class198) this).anInt2447)));
+			class160 = (NativeSprite) (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((Class198) this).anInt2447)));
 		}
 		return class160;
 	}
 
 	void method3225(GraphicalRenderer class505) {
 		Index class317 = ((Class290) ((Class198) this).aClass290_2437).aClass317_3448;
-		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, -1156578481)) {
+		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, -1156578481)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2444 * 1794138605);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((Class198) this).anInt2444));
 		}
-		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, -815565742)) {
+		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, -815565742)) {
 			Class91 class91 = Class91.method1515(class317, -1811392407 * (((Class198) this).anInt2445));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((Class198) this).anInt2445));
 		}
-		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, -168293336)) {
+		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, -168293336)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2441 * -940773669);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((Class198) this).anInt2441 * -940773669));
 		}
-		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, 1506460876)) {
+		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, 1506460876)) {
 			Class91 class91 = Class91.method1515(class317, (((Class198) this).anInt2447 * -1781806739));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((Class198) this).anInt2447));
 		}
@@ -344,19 +344,19 @@ public class Class198 {
 
 	void method3227(GraphicalRenderer class505) {
 		Index class317 = ((Class290) ((Class198) this).aClass290_2437).aClass317_3448;
-		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, -1187962781)) {
+		if (((Class198) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2444 * 1794138605))) == null && class317.method5661(((Class198) this).anInt2444 * 1794138605, -1187962781)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2444 * 1794138605);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((Class198) this).anInt2444));
 		}
-		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, -1981993531)) {
+		if (((Class198) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2445 * -1811392407))) == null && class317.method5661(((Class198) this).anInt2445 * -1811392407, -1981993531)) {
 			Class91 class91 = Class91.method1515(class317, -1811392407 * (((Class198) this).anInt2445));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((Class198) this).anInt2445));
 		}
-		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, 23223642)) {
+		if (-940773669 * ((Class198) this).anInt2441 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((Class198) this).anInt2441))) == null && class317.method5661(-940773669 * ((Class198) this).anInt2441, 23223642)) {
 			Class91 class91 = Class91.method1515(class317, ((Class198) this).anInt2441 * -940773669);
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((Class198) this).anInt2441 * -940773669));
 		}
-		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.method3865((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, 981173802)) {
+		if (-1781806739 * ((Class198) this).anInt2447 >= 0 && (((Class290) ((Class198) this).aClass290_2437).aClass229_3447.get((long) (((Class198) this).anInt2447 * -1781806739))) == null && class317.method5661(((Class198) this).anInt2447 * -1781806739, 981173802)) {
 			Class91 class91 = Class91.method1515(class317, (((Class198) this).anInt2447 * -1781806739));
 			((Class290) ((Class198) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((Class198) this).anInt2447));
 		}
@@ -392,7 +392,7 @@ public class Class198 {
 	}
 
 	static final void method3231(int i, int i_19_, int i_20_, int i_21_, boolean bool, int i_22_) {
-		if (client.aClass257_7353.method4430(-2133910723) == null)
+		if (IndexLoaders.MAP_REGION_DECODER.method4430(-2133910723) == null)
 			Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -114);
 		else {
 			Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
@@ -400,7 +400,7 @@ public class Class198 {
 			if (1 != -891719545 * client.anInt7341) {
 				if (!client.aBool7321)
 					bool_23_ = true;
-			} else if ((int) class385.aFloat4671 < 0 || ((int) class385.aFloat4671 >= client.aClass257_7353.method4424(56329418) * 512) || (int) class385.aFloat4673 < 0 || ((int) class385.aFloat4673 >= (client.aClass257_7353.method4451(-639715489) * 512)))
+			} else if ((int) class385.aFloat4671 < 0 || ((int) class385.aFloat4671 >= IndexLoaders.MAP_REGION_DECODER.method4424(56329418) * 512) || (int) class385.aFloat4673 < 0 || ((int) class385.aFloat4673 >= (IndexLoaders.MAP_REGION_DECODER.method4451(-639715489) * 512)))
 				bool_23_ = true;
 			if (bool_23_)
 				Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -104);
@@ -428,7 +428,7 @@ public class Class198 {
 					if (client.aBoolArray7431[4] && 128 + client.anIntArray7433[4] > i_24_)
 						i_24_ = 128 + client.anIntArray7433[4];
 					int i_25_ = ((client.anInt7343 * -297983899 + (int) client.aFloat7365) & 0x3fff);
-					Class387.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.aFloat4671, (int) class385.aFloat4673, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, 600 + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
+					LoadingStage.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.aFloat4671, (int) class385.aFloat4673, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, 600 + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
 				} else if (4 == -672443707 * Class262.anInt3240) {
 					int i_26_ = (int) client.aFloat7146;
 					if (client.anInt7273 * 1661251369 >> 8 > i_26_)
@@ -436,7 +436,7 @@ public class Class198 {
 					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_26_)
 						i_26_ = 128 + client.anIntArray7433[4];
 					int i_27_ = (int) client.aFloat7365 & 0x3fff;
-					Class387.method6683(Class11.anInt122 * 1762352089, Class504.method8389(61805441 * client.anInt7262, client.anInt7376 * -1032332761, Class4.anInt35 * 675588453, (byte) 101) - 200, Class266.anInt3289 * 518160421, i_26_, i_27_, 600 + (i_26_ >> 3) * 3 << 2, i_21_, 1318646026);
+					LoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389(61805441 * client.anInt7262, client.anInt7376 * -1032332761, Class4.anInt35 * 675588453, (byte) 101) - 200, Class266.anInt3289 * 518160421, i_26_, i_27_, 600 + (i_26_ >> 3) * 3 << 2, i_21_, 1318646026);
 				} else if (1 == -672443707 * Class262.anInt3240)
 					Class232.method3920(i_21_, -491570614);
 				int i_28_ = Class31.anInt361 * -360258135;
@@ -466,16 +466,16 @@ public class Class198 {
 				}
 				if (Class31.anInt361 * -360258135 < 0)
 					Class31.anInt361 = 0;
-				if (-360258135 * Class31.anInt361 > ((client.aClass257_7353.method4430(-2044226179).anInt2617 * -1912960305) << 9) - 1)
-					Class31.anInt361 = (((client.aClass257_7353.method4430(-1540309436).anInt2617) * -1912960305 << 9) - 1) * -2043310439;
+				if (-360258135 * Class31.anInt361 > ((IndexLoaders.MAP_REGION_DECODER.method4430(-2044226179).anInt2617 * -1912960305) << 9) - 1)
+					Class31.anInt361 = (((IndexLoaders.MAP_REGION_DECODER.method4430(-1540309436).anInt2617) * -1912960305 << 9) - 1) * -2043310439;
 				if (413271601 * Class246.anInt3029 < 0)
 					Class246.anInt3029 = 0;
-				if (413271601 * Class246.anInt3029 > ((client.aClass257_7353.method4430(-1972336821).anInt2603 * -18177099) << 9) - 1)
-					Class246.anInt3029 = (((client.aClass257_7353.method4430(-1780427901).anInt2603) * -18177099 << 9) - 1) * 1442943697;
+				if (413271601 * Class246.anInt3029 > ((IndexLoaders.MAP_REGION_DECODER.method4430(-1972336821).anInt2603 * -18177099) << 9) - 1)
+					Class246.anInt3029 = (((IndexLoaders.MAP_REGION_DECODER.method4430(-1780427901).anInt2603) * -18177099 << 9) - 1) * 1442943697;
 				Class429.method7215((byte) 2);
 				Renderers.SOFTWARE_RENDERER.method8617(i, i_19_, i_20_, i_21_);
 				Renderers.SOFTWARE_RENDERER.r(i, i_19_, i + i_20_, i_21_ + i_19_);
-				Class535 class535 = client.aClass257_7353.method4435((byte) 1).method4038((short) 4699);
+				Class535 class535 = IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4038((short) 4699);
 				int i_35_ = class535.method11450(522743760);
 				client.aClass294_7457.method5223((float) -(-360258135 * Class31.anInt361), (float) -(Class109_Sub1.anInt9384 * 1929945579), (float) -(413271601 * Class246.anInt3029));
 				client.aClass294_7457.method5220(0.0F, -1.0F, 0.0F, Class382.method6508(-(1236051449 * AnimationDefinitions.anInt5930) & 0x3fff));
@@ -491,9 +491,9 @@ public class Class198 {
 				} else
 					Renderers.SOFTWARE_RENDERER.ba(3, i_35_);
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_20_, i_21_, (byte) -77);
-				client.aClass257_7353.method4435((byte) 1).method4037(client.aClass257_7353, (byte) 57);
+				IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
 				byte i_36_ = (Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) (48374445 * client.anInt7286) : (byte) 1);
-				client.aClass257_7353.method4430(-1029746106).method3447(-1809259861 * client.cycles, Class31.anInt361 * -360258135, 1929945579 * Class109_Sub1.anInt9384, Class246.anInt3029 * 413271601, client.aClass257_7353.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.aByte7967 + 1, i_36_, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9,
+				IndexLoaders.MAP_REGION_DECODER.method4430(-1029746106).method3447(-1809259861 * client.cycles, Class31.anInt361 * -360258135, 1929945579 * Class109_Sub1.anInt9384, Class246.anInt3029 * 413271601, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.aByte7967 + 1, i_36_, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9,
 						Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(619789577) == 0, true, 0, true);
 				client.anInt7396 += -752140529;
 				Class282_Sub20_Sub24.method15391(-1221353280);
@@ -503,17 +503,17 @@ public class Class198 {
 					Class96_Sub12.method14612(i, i_19_, i_20_, i_21_, 256, 256, -927883680);
 					Class163.method2844(i, i_19_, i_20_, i_21_, -869018249);
 				}
-				client.aClass257_7353.method4430(-1467332289).method3399((byte) 19);
+				IndexLoaders.MAP_REGION_DECODER.method4430(-1467332289).method3399((byte) 19);
 				Class31.anInt361 = i_28_ * -2043310439;
 				Class109_Sub1.anInt9384 = i_29_ * -126779709;
 				Class246.anInt3029 = 1442943697 * i_30_;
 				Class293.anInt3512 = i_31_ * -647467135;
 				AnimationDefinitions.anInt5930 = i_32_ * 1898253385;
-				if (client.aBool7172 && Class119.aClass312_1462.method5553((short) 26280) == 0)
+				if (client.aBool7172 && Class119.JS5_STANDARD_REQUESTER.method5553((short) 26280) == 0)
 					client.aBool7172 = false;
 				if (client.aBool7172) {
 					Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -43);
-					Class446.method7447(Message.aClass433_5251.translate(Class223.aClass495_2772, -1334063717), false, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -94);
+					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1334063717), false, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -94);
 				}
 				Class228.method3850(client.aClass384_7167, false, (float) (i + i_20_ / 2), (float) (i_21_ / 2 + i_19_), (float) (client.anInt7451 * 1010147487 << 1), (float) (client.anInt7451 * 1010147487 << 1), i_20_, i_21_, (byte) 55);
 				Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);
@@ -530,8 +530,8 @@ public class Class198 {
 	}
 
 	static final void method3233(CS2Executor class527, int i) {
-		Class526.method11248(2004309168);
-		client.aClass257_7353.method4547((byte) -90);
+		Defaults6Loader.method11248(2004309168);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -90);
 		Class190.method3148((byte) 38);
 		client.aBool7175 = false;
 	}

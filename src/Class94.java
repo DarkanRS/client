@@ -114,24 +114,24 @@ public class Class94 {
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(477680375) == 0)
 			i_3_ |= 0x40;
 		Class468_Sub12.method12710(i_3_, (byte) -85);
-		client.aClass257_7353.method4436(-2047295764).method7893(i_3_, 2082493334);
-		Class6.aClass340_45.method6052((short) -5779).method4436(-1603453217).method7893(i_3_, -79480655);
+		IndexLoaders.MAP_REGION_DECODER.method4436(-2047295764).method7893(i_3_, 2082493334);
+		IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -5779).method4436(-1603453217).method7893(i_3_, -79480655);
 		IndexLoaders.ITEM_INDEX_LOADER.method7153(i_3_, -933999728);
-		Class350_Sub1.aClass406_7757.method6829(i_3_, 989063479);
-		Class96_Sub20.aClass515_9416.method8846(i_3_, (byte) -61);
+		IndexLoaders.NPC_INDEX_LOADER.method6829(i_3_, 989063479);
+		IndexLoaders.aClass515_9416.method8846(i_3_, (byte) -61);
 		Class38.method851(i_3_, 1008680186);
 		Game.method8204(i_3_, -2137670841);
 		Class117.method1982(i_3_, -1202059650);
 		Class275_Sub1.method12424(i_3_, -23443857);
 		Class345.method6143(i_3_, -440467985);
-		client.aClass257_7353.method4547((byte) -126);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -126);
 	}
 
 	static final void method1590(CS2Executor class527, int i) {
 		int i_4_ = Class96_Sub14.method14641(399363690);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class233.anInt2880 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1802099431) * -1499268811) * -638562019;
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_4_;
-		client.aClass257_7353.method4547((byte) -112);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -112);
 		Class190.method3148((byte) 117);
 		client.aBool7175 = false;
 	}

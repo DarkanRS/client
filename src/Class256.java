@@ -108,9 +108,9 @@ public class Class256 {
 		return null;
 	}
 
-	public static void method4415(int i, int i_9_, int i_10_, Class478 class478, int i_11_) {
+	public static void method4415(int i, int i_9_, int i_10_, ObjectDefinitions class478, int i_11_) {
 		for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8073.head((byte) 114)); class282_sub48 != null; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8073.next(-1010635900)) {
-			if (i == -23801959 * ((Class282_Sub48) class282_sub48).anInt8076 && i_9_ << 9 == (-2014043967 * ((Class282_Sub48) class282_sub48).anInt8107) && (((Class282_Sub48) class282_sub48).anInt8078 * 1548025077 == i_10_ << 9) && (((Class282_Sub48) class282_sub48).aClass478_8104.anInt5633 * -2132690865) == -2132690865 * class478.anInt5633) {
+			if (i == -23801959 * ((Class282_Sub48) class282_sub48).anInt8076 && i_9_ << 9 == (-2014043967 * ((Class282_Sub48) class282_sub48).anInt8107) && (((Class282_Sub48) class282_sub48).anInt8078 * 1548025077 == i_10_ << 9) && (((Class282_Sub48) class282_sub48).aClass478_8104.id * -2132690865) == -2132690865 * class478.id) {
 				if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099)) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;

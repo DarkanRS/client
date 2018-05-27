@@ -445,7 +445,7 @@ public class Class470 {
 	static int method7823(int i, int i_37_) {
 		int i_38_;
 		if (i > 12097) {
-			Class526.method11248(101206847);
+			Defaults6Loader.method11248(101206847);
 			i_38_ = 4;
 		} else if (i > 5098) {
 			Class282_Sub40.method13300(-804709931);
@@ -489,6 +489,6 @@ public class Class470 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_40_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_41_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class296.aClass331_3535.method5918(i_40_, 1106724870).aCharArray9748[i_41_]);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.aClass331_3535.method5918(i_40_, 1106724870).aCharArray9748[i_41_]);
 	}
 }

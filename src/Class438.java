@@ -22,7 +22,7 @@ public class Class438 {
 	public Class419 method7325(int i, int i_0_) {
 		Class419 class419;
 		synchronized (((Class438) this).aClass229_5344) {
-			class419 = ((Class419) ((Class438) this).aClass229_5344.method3865((long) i));
+			class419 = ((Class419) ((Class438) this).aClass229_5344.get((long) i));
 		}
 		if (class419 != null)
 			return class419;
@@ -68,7 +68,7 @@ public class Class438 {
 	public Class419 method7328(int i) {
 		Class419 class419;
 		synchronized (((Class438) this).aClass229_5344) {
-			class419 = ((Class419) ((Class438) this).aClass229_5344.method3865((long) i));
+			class419 = ((Class419) ((Class438) this).aClass229_5344.get((long) i));
 		}
 		if (class419 != null)
 			return class419;
@@ -89,7 +89,7 @@ public class Class438 {
 	public Class419 method7329(int i) {
 		Class419 class419;
 		synchronized (((Class438) this).aClass229_5344) {
-			class419 = ((Class419) ((Class438) this).aClass229_5344.method3865((long) i));
+			class419 = ((Class419) ((Class438) this).aClass229_5344.get((long) i));
 		}
 		if (class419 != null)
 			return class419;
@@ -142,8 +142,8 @@ public class Class438 {
 		}
 		JS5StandardRequester.method5558(-500941691);
 		Class356.method6227(false, (byte) -48);
-		client.aClass257_7353.method4444(1869336559);
-		client.aClass257_7353.method4485(-756888037);
+		IndexLoaders.MAP_REGION_DECODER.method4444(1869336559);
+		IndexLoaders.MAP_REGION_DECODER.method4485(-756888037);
 		Class122.method2111(false, 662490589);
 		Class358.method6240(2, 1510969650);
 		Class260.anInt3223 = -919080253;
@@ -192,7 +192,7 @@ public class Class438 {
 					i_7_ -= class227.anIntArrayArray2791[i_6_][1];
 			}
 		}
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(client.aClass257_7353.method4430(-1810939972), i, Class272.anInt3331 * -1258088735, Class272.anInt3331 * -1258088735, i_9_, i_10_, i_7_, i_13_ + -1809259861 * client.cycles, -1809259861 * client.cycles + i_14_, i_15_, i_16_, i_4_, i_5_, i_8_, bool, i_6_));
+		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.method4430(-1810939972), i, Class272.anInt3331 * -1258088735, Class272.anInt3331 * -1258088735, i_9_, i_10_, i_7_, i_13_ + -1809259861 * client.cycles, -1809259861 * client.cycles + i_14_, i_15_, i_16_, i_4_, i_5_, i_8_, bool, i_6_));
 		class521_sub1_sub1_sub3.method15904(i_11_, i_12_, (Class504.method8389(i_11_, i_12_, -1258088735 * Class272.anInt3331, (byte) 65) - i_8_), client.cycles * -1809259861 + i_13_, -209443166);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -1750493342);
 	}

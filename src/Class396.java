@@ -7,8 +7,7 @@ import java.io.File;
 public class Class396 {
 	public static String aString4789;
 	public static String aString4790;
-	public static Class401 aClass401_4791;
-
+	
 	static {
 		String string = "Unknown";
 		try {

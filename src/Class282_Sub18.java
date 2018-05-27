@@ -423,7 +423,7 @@ public class Class282_Sub18 extends Node {
 			class317.method5661(i, -1193230374);
 			return null;
 		}
-		byte[] is = class317.method5615(i, -913973555);
+		byte[] is = class317.getFile(i, -913973555);
 		if (is == null)
 			return null;
 		Class282_Sub18 class282_sub18 = null;
@@ -489,7 +489,7 @@ public class Class282_Sub18 extends Node {
 			class317.method5661(i, 1504778998);
 			return null;
 		}
-		byte[] is = class317.method5615(i, -947146036);
+		byte[] is = class317.getFile(i, -947146036);
 		if (is == null)
 			return null;
 		Class282_Sub18 class282_sub18 = null;

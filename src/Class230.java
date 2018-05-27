@@ -17,7 +17,7 @@ public class Class230 implements IndexLoader {
 	public Class226 method3897(int i, byte i_0_) {
 		Class226 class226;
 		synchronized (((Class230) this).aClass229_2856) {
-			class226 = ((Class226) ((Class230) this).aClass229_2856.method3865((long) i));
+			class226 = ((Class226) ((Class230) this).aClass229_2856.get((long) i));
 		}
 		if (null != class226)
 			return class226;
@@ -64,7 +64,7 @@ public class Class230 implements IndexLoader {
 	public Class226 method3901(int i) {
 		Class226 class226;
 		synchronized (((Class230) this).aClass229_2856) {
-			class226 = ((Class226) ((Class230) this).aClass229_2856.method3865((long) i));
+			class226 = ((Class226) ((Class230) this).aClass229_2856.get((long) i));
 		}
 		if (null != class226)
 			return class226;

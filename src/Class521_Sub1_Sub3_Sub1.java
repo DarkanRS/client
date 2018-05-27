@@ -4,7 +4,7 @@
 
 public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Interface12 {
 	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_10491;
-	Class474 aClass474_10492;
+	ObjectIndexLoader aClass474_10492;
 	boolean aBool10493;
 	Class200 aClass200_10494;
 	int anInt10495;
@@ -52,7 +52,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	Class452 method16074(GraphicalRenderer class505, int i, boolean bool, int i_0_) {
-		Class478 class478 = (((Class521_Sub1_Sub3_Sub1) this).aClass474_10492.method7891(((Class521_Sub1_Sub3_Sub1) this).anInt10495 * -1419362635, 65280));
+		ObjectDefinitions class478 = (((Class521_Sub1_Sub3_Sub1) this).aClass474_10492.getObjectDefinitions(((Class521_Sub1_Sub3_Sub1) this).anInt10495 * -1419362635, 65280));
 		Class390 class390;
 		Class390 class390_1_;
 		if (((Class521_Sub1_Sub3_Sub1) this).aBool10493) {
@@ -336,10 +336,10 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Inter
 		/* empty */
 	}
 
-	public Class521_Sub1_Sub3_Sub1(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_10_, int i_11_, int i_12_, int i_13_, boolean bool, int i_14_, boolean bool_15_) {
+	public Class521_Sub1_Sub3_Sub1(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_10_, int i_11_, int i_12_, int i_13_, boolean bool, int i_14_, boolean bool_15_) {
 		super(class206, i_11_, i_12_, i_13_, i, i_10_, class478.anInt5704 * 1338534295);
 		((Class521_Sub1_Sub3_Sub1) this).aClass474_10492 = class474;
-		((Class521_Sub1_Sub3_Sub1) this).anInt10495 = class478.anInt5633 * 386955635;
+		((Class521_Sub1_Sub3_Sub1) this).anInt10495 = class478.id * 386955635;
 		((Class521_Sub1_Sub3_Sub1) this).aBool10493 = bool;
 		((Class521_Sub1_Sub3_Sub1) this).aByte10496 = (byte) i_14_;
 		((Class521_Sub1_Sub3_Sub1) this).aBool10498 = class478.anInt5652 * -348507379 != 0 && !bool;
@@ -357,7 +357,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Inter
 			if (((Class521_Sub1_Sub3_Sub1) this).aBool10497 || class478.aBool5711) {
 				((Class521_Sub1_Sub3_Sub1) this).aClass528_10499 = ((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.method11289((byte) 0, i_16_, false);
 				if (class478.aBool5711) {
-					Class341 class341 = client.aClass257_7353.method4426(1159043919);
+					Class341 class341 = IndexLoaders.MAP_REGION_DECODER.method4426(1159043919);
 					((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.PA(class341.anInt3992 * 1367691291, 1646020803 * class341.anInt3993, class341.anInt3994 * 945117807, 2100466695 * class341.anInt3995);
 				}
 			}

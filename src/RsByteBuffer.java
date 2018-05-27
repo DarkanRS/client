@@ -495,7 +495,7 @@ public class RsByteBuffer extends Node {
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i >> 16);
 	}
 
-	public int readBigSmart(int i) {
+	public int readBigSmart() {
 		if (buffer[-1990677291 * index] < 0) {
 			return readInt() & 0x7fffffff;
 		}

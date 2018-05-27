@@ -144,7 +144,7 @@ public class RuntimeException_Sub3 extends RuntimeException {
 				} catch (Exception exception) {
 					/* empty */
 				}
-				URL url = new URL(anApplet10460.getCodeBase(), new StringBuilder().append("clienterror.ws?c=").append(-1705325745 * anInt10457).append("&cs=").append(-1529960075 * Class392.anInt4781).append("&u=").append(aString10458 != null ? Class475.method7926(aString10458, 473245135) : new StringBuilder().append("").append(7071485906675456853L * aLong10459).toString()).append("&v1=").append(Class475.method7926(string_17_, -153497428)).append("&v2=")
+				URL url = new URL(anApplet10460.getCodeBase(), new StringBuilder().append("clienterror.ws?c=").append(-1705325745 * anInt10457).append("&cs=").append(-1529960075 * InventoriesIndexLoader.anInt4781).append("&u=").append(aString10458 != null ? Class475.method7926(aString10458, 473245135) : new StringBuilder().append("").append(7071485906675456853L * aLong10459).toString()).append("&v1=").append(Class475.method7926(string_17_, -153497428)).append("&v2=")
 						.append(Class475.method7926(string_18_, -1459835465)).append("&e=").append(string_16_).toString());
 				DataInputStream datainputstream = new DataInputStream(url.openStream());
 				datainputstream.read();
@@ -182,7 +182,7 @@ public class RuntimeException_Sub3 extends RuntimeException {
 				} catch (Exception exception) {
 					/* empty */
 				}
-				URL url = new URL(anApplet10460.getCodeBase(), new StringBuilder().append("clienterror.ws?c=").append(-1705325745 * anInt10457).append("&cs=").append(-1529960075 * Class392.anInt4781).append("&u=").append(aString10458 != null ? Class475.method7926(aString10458, 88155643) : new StringBuilder().append("").append(7071485906675456853L * aLong10459).toString()).append("&v1=").append(Class475.method7926(string_22_, -325881984)).append("&v2=")
+				URL url = new URL(anApplet10460.getCodeBase(), new StringBuilder().append("clienterror.ws?c=").append(-1705325745 * anInt10457).append("&cs=").append(-1529960075 * InventoriesIndexLoader.anInt4781).append("&u=").append(aString10458 != null ? Class475.method7926(aString10458, 88155643) : new StringBuilder().append("").append(7071485906675456853L * aLong10459).toString()).append("&v1=").append(Class475.method7926(string_22_, -325881984)).append("&v2=")
 						.append(Class475.method7926(string_23_, 365739852)).append("&e=").append(string_21_).toString());
 				DataInputStream datainputstream = new DataInputStream(url.openStream());
 				datainputstream.read();

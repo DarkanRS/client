@@ -12,12 +12,12 @@ public class Class350_Sub3 extends Class350 {
 
 	public static Class350 method12588(RsByteBuffer class282_sub35) {
 		Class350 class350 = Class383.method6512(class282_sub35, 88062096);
-		int i = class282_sub35.readBigSmart(2055699831);
-		int i_0_ = class282_sub35.readBigSmart(1945622454);
-		int i_1_ = class282_sub35.readBigSmart(2082797568);
-		int i_2_ = class282_sub35.readBigSmart(2104259370);
-		int i_3_ = class282_sub35.readBigSmart(2079453215);
-		int i_4_ = class282_sub35.readBigSmart(2032054516);
+		int i = class282_sub35.readBigSmart();
+		int i_0_ = class282_sub35.readBigSmart();
+		int i_1_ = class282_sub35.readBigSmart();
+		int i_2_ = class282_sub35.readBigSmart();
+		int i_3_ = class282_sub35.readBigSmart();
+		int i_4_ = class282_sub35.readBigSmart();
 		return new Class350_Sub3(class350.aClass356_4094, class350.aClass353_4087, class350.anInt4090 * -1967081549, class350.anInt4089 * -1196256967, class350.anInt4093 * 329542577, class350.anInt4088 * 323608093, class350.anInt4092 * -1921815535, class350.anInt4086 * 985690519, -771513131 * class350.anInt4091, i, i_0_, i_1_, i_2_, i_3_, i_4_);
 	}
 
@@ -41,12 +41,12 @@ public class Class350_Sub3 extends Class350 {
 
 	public static Class350 method12589(RsByteBuffer class282_sub35) {
 		Class350 class350 = Class383.method6512(class282_sub35, 88062096);
-		int i = class282_sub35.readBigSmart(2064985015);
-		int i_17_ = class282_sub35.readBigSmart(1945398088);
-		int i_18_ = class282_sub35.readBigSmart(1945919375);
-		int i_19_ = class282_sub35.readBigSmart(2060364181);
-		int i_20_ = class282_sub35.readBigSmart(1948147479);
-		int i_21_ = class282_sub35.readBigSmart(2088723674);
+		int i = class282_sub35.readBigSmart();
+		int i_17_ = class282_sub35.readBigSmart();
+		int i_18_ = class282_sub35.readBigSmart();
+		int i_19_ = class282_sub35.readBigSmart();
+		int i_20_ = class282_sub35.readBigSmart();
+		int i_21_ = class282_sub35.readBigSmart();
 		return new Class350_Sub3(class350.aClass356_4094, class350.aClass353_4087, class350.anInt4090 * -1967081549, class350.anInt4089 * -1196256967, class350.anInt4093 * 329542577, class350.anInt4088 * 323608093, class350.anInt4092 * -1921815535, class350.anInt4086 * 985690519, -771513131 * class350.anInt4091, i, i_17_, i_18_, i_19_, i_20_, i_21_);
 	}
 

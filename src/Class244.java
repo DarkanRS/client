@@ -145,7 +145,7 @@ public class Class244 {
 	}
 
 	static final void method4193(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class223.aClass495_2772.method243((byte) 1);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class223.CURRENT_LANGUAGE.method243((byte) 1);
 	}
 
 	static final void method4194(CS2Executor class527, int i) {

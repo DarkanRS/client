@@ -29,7 +29,6 @@ public class Class368 {
 	public static final int anInt4262 = 10;
 	public static final int anInt4263 = 17;
 	public static final int anInt4264 = 2;
-	public static Class429 aClass429_4265;
 	static int anInt4266;
 
 	Class368() throws Throwable {

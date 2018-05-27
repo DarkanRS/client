@@ -161,10 +161,10 @@ public class NodeIterator implements Iterator {
 
 	static final void method7700(CS2Executor class527, int i) {
 		int i_0_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
-		Class537 class537 = Class497.aClass233_5822.method3933(i_0_, 1537794608);
+		Class537 class537 = IndexLoaders.aClass233_5822.method3933(i_0_, 1537794608);
 		if (null == class537)
 			throw new RuntimeException();
-		Integer integer = (((CS2Executor) class527).aClass61_7010.method1225((1648080491 * client.aClass486_7450.anInt5746 << 16 | -1659474903 * class537.anInt7097), class537.anInt7098 * 1866356493, -47997093 * class537.anInt7099, (byte) 116));
+		Integer integer = (((CS2Executor) class527).aClass61_7010.method1225((1648080491 * client.CURRENT_GAME.anInt5746 << 16 | -1659474903 * class537.anInt7097), class537.anInt7098 * 1866356493, -47997093 * class537.anInt7099, (byte) 116));
 		int i_1_;
 		if (null == integer)
 			i_1_ = 0;

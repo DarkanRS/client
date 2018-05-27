@@ -1,11 +1,4 @@
 
-/* Class299 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-import java.awt.Image;
-import java.awt.MediaTracker;
-import java.awt.Toolkit;
-import java.awt.image.PixelGrabber;
 
 public class Class299 implements Interface27 {
 	Interface2[] anInterface2Array3539;
@@ -165,10 +158,6 @@ public class Class299 implements Interface27 {
 		return i * 100 / ((Class299) this).anInterface2Array3539.length;
 	}
 
-	static void method5305() {
-		aClass229_3545.method3859(-1088836697);
-	}
-
 	public int method198() {
 		int i = 0;
 		Interface2[] interface2s = ((Class299) this).anInterface2Array3539;
@@ -184,19 +173,6 @@ public class Class299 implements Interface27 {
 		return (Class169.method2869(1596220251) >= l + (long) (((Class299) this).anInt3540 * 2055594931));
 	}
 
-	static boolean method5306() {
-		boolean bool;
-		try {
-			Class395 class395 = new Class395();
-			byte[] is = class395.method6764(aByteArray3543, (byte) -6);
-			Class103_Sub1.method14490(is, (byte) -83);
-			bool = true;
-		} catch (Exception exception) {
-			return false;
-		}
-		return bool;
-	}
-
 	public int method197() {
 		int i = 0;
 		Interface2[] interface2s = ((Class299) this).anInterface2Array3539;
@@ -208,97 +184,8 @@ public class Class299 implements Interface27 {
 		return i * 100 / ((Class299) this).anInterface2Array3539.length;
 	}
 
-	static boolean method5307() {
-		boolean bool;
-		try {
-			Class395 class395 = new Class395();
-			byte[] is = class395.method6764(aByteArray3543, (byte) -54);
-			Class103_Sub1.method14490(is, (byte) -57);
-			bool = true;
-		} catch (Exception exception) {
-			return false;
-		}
-		return bool;
-	}
-
-	public static NativeSprite method5308(Index class317, int i) {
-		NativeSprite class160 = (NativeSprite) aClass229_3545.method3865((long) i);
-		if (class160 == null) {
-			if (Class339.aBool3987)
-				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
-			else
-				class160 = (Class103_Sub1.method14490(class317.method5615(i, -1425472520), (byte) -78));
-			aClass229_3545.put(class160, (long) i);
-		}
-		return class160;
-	}
-
-	public static NativeSprite method5309(Index class317, int i) {
-		NativeSprite class160 = (NativeSprite) aClass229_3545.method3865((long) i);
-		if (class160 == null) {
-			if (Class339.aBool3987)
-				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
-			else
-				class160 = (Class103_Sub1.method14490(class317.method5615(i, -2080551630), (byte) -127));
-			aClass229_3545.put(class160, (long) i);
-		}
-		return class160;
-	}
-
-	static NativeSprite method5310(byte[] is) {
-		if (is == null)
-			throw new RuntimeException("");
-		NativeSprite class160;
-		for (;;) {
-			try {
-				Image image = Toolkit.getDefaultToolkit().createImage(is);
-				MediaTracker mediatracker = new MediaTracker(Class282_Sub44.anApplet8065);
-				mediatracker.addImage(image, 0);
-				mediatracker.waitForAll();
-				int i = image.getWidth(Class282_Sub44.anApplet8065);
-				int i_9_ = image.getHeight(Class282_Sub44.anApplet8065);
-				if (mediatracker.isErrorAny() || i < 0 || i_9_ < 0)
-					throw new RuntimeException("");
-				int[] is_10_ = new int[i * i_9_];
-				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_9_, is_10_, 0, i);
-				pixelgrabber.grabPixels();
-				class160 = Renderers.SOFTWARE_RENDERER.createNativeSprite(is_10_, 0, i, i, i_9_, 877342890);
-				break;
-			} catch (InterruptedException interruptedexception) {
-				/* empty */
-			}
-		}
-		return class160;
-	}
-
 	public int method72() {
 		return -1024317477 * ((Class299) this).anInt3544;
-	}
-
-	static NativeSprite method5311(byte[] is) {
-		if (is == null)
-			throw new RuntimeException("");
-		NativeSprite class160;
-		for (;;) {
-			try {
-				Image image = Toolkit.getDefaultToolkit().createImage(is);
-				MediaTracker mediatracker = new MediaTracker(Class282_Sub44.anApplet8065);
-				mediatracker.addImage(image, 0);
-				mediatracker.waitForAll();
-				int i = image.getWidth(Class282_Sub44.anApplet8065);
-				int i_11_ = image.getHeight(Class282_Sub44.anApplet8065);
-				if (mediatracker.isErrorAny() || i < 0 || i_11_ < 0)
-					throw new RuntimeException("");
-				int[] is_12_ = new int[i * i_11_];
-				PixelGrabber pixelgrabber = new PixelGrabber(image, 0, 0, i, i_11_, is_12_, 0, i);
-				pixelgrabber.grabPixels();
-				class160 = Renderers.SOFTWARE_RENDERER.createNativeSprite(is_12_, 0, i, i, i_11_, 2138062190);
-				break;
-			} catch (InterruptedException interruptedexception) {
-				/* empty */
-			}
-		}
-		return class160;
 	}
 
 	public void method192(boolean bool) {
@@ -333,7 +220,7 @@ public class Class299 implements Interface27 {
 			((Class282_Sub31) class282_sub31).anInt7766 = 1143878291 * i_15_;
 			class282_sub31.anInt7762 = 1690395815 * i_13_;
 			class282_sub31.anInt7763 = i_14_ * 765748375;
-			if (i_13_ >= 0 && i_14_ >= 0 && i_13_ < client.aClass257_7353.method4424(-1083484093) && i_14_ < client.aClass257_7353.method4451(-978246056))
+			if (i_13_ >= 0 && i_14_ >= 0 && i_13_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1083484093) && i_14_ < IndexLoaders.MAP_REGION_DECODER.method4451(-978246056))
 				Class275_Sub4.method12585(class282_sub31, -1988647724);
 			Class282_Sub31.aClass482_7775.append(class282_sub31, 1387539500);
 		}
@@ -385,7 +272,7 @@ public class Class299 implements Interface27 {
 			throw new RuntimeException();
 		((CS2Executor) class527).aClass509Array7016[(((CS2Executor) class527).anInt7002 += -72641453) * -1837903909 - 1] = class509;
 		((CS2Executor) class527).current = class282_sub50_sub5;
-		((CS2Executor) class527).aClass522Array7005 = (((CS2Executor) class527).current.operations);
+		((CS2Executor) class527).operations = (((CS2Executor) class527).current.operations);
 		((CS2Executor) class527).unknown = ((CS2Executor) class527).current.intOpValues;
 		((CS2Executor) class527).instrPtr = 1051529003;
 		((CS2Executor) class527).intLocals = is;

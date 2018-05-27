@@ -8,8 +8,7 @@ public class Class383 implements Interface41 {
 	String aString4662;
 	Index aClass317_4663;
 	static int anInt4664;
-	public static Index aClass317_4665;
-
+	
 	public Class445 method234() {
 		return Class445.aClass445_5380;
 	}
@@ -80,7 +79,7 @@ public class Class383 implements Interface41 {
 		int i_8_ = class282_sub35.readUnsignedShort();
 		int i_9_ = class282_sub35.readUnsignedShort();
 		int i_10_ = class282_sub35.readShort(2095051682);
-		int i_11_ = class282_sub35.readBigSmart(1942978390);
+		int i_11_ = class282_sub35.readBigSmart();
 		int i_12_ = class282_sub35.readInt();
 		return new Class350(class356, class353, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_, i_12_);
 	}
@@ -89,21 +88,21 @@ public class Class383 implements Interface41 {
 		if (-1 == Class58.aClass529_527.anInt7034 * -1878247413)
 			return 1;
 		if (i != Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-408744518)) {
-			Class231.method3914(i, Message.aClass433_5252.translate(Class223.aClass495_2772, -1872391356), true, (byte) 110);
+			Class231.method3914(i, Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1872391356), true, (byte) 110);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-455278899) != i)
 				return -1;
 		}
 		int i_15_;
 		try {
-			Dimension dimension = Class351.aCanvas4096.getSize();
-			Class446.method7447(Message.aClass433_5252.translate(Class223.aClass495_2772, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
-			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, (Class58.aClass529_527.anInt7034 * -1878247413), 0);
+			Dimension dimension = Class351.LOAD_CANVAS.getSize();
+			Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
+			RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, (Class58.aClass529_527.anInt7034 * -1878247413), 0);
 			long l = Class169.method2869(2130587013);
 			Renderers.SOFTWARE_RENDERER.L();
 			client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
 			Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
 			Class384 class384 = Renderers.SOFTWARE_RENDERER.method8449();
-			class384.method6531((float) (dimension.width / 2), (float) (dimension.height / 2), 512.0F, 512.0F, (float) client.aClass257_7353.method4544(1468645069), (float) client.aClass257_7353.method4522(-1126120958), (float) dimension.width, (float) dimension.height);
+			class384.method6531((float) (dimension.width / 2), (float) (dimension.height / 2), 512.0F, 512.0F, (float) IndexLoaders.MAP_REGION_DECODER.method4544(1468645069), (float) IndexLoaders.MAP_REGION_DECODER.method4522(-1126120958), (float) dimension.width, (float) dimension.height);
 			Renderers.SOFTWARE_RENDERER.method8424(class384);
 			Renderers.SOFTWARE_RENDERER.IA(1.0F);
 			Renderers.SOFTWARE_RENDERER.m(16777215, 0.5F, 0.5F, 20.0F, -50.0F, 30.0F);

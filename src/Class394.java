@@ -16,7 +16,7 @@ public class Class394 {
 	public Class405 method6753(int i, int i_0_) {
 		Class405 class405;
 		synchronized (((Class394) this).aClass229_4786) {
-			class405 = ((Class405) ((Class394) this).aClass229_4786.method3865((long) i));
+			class405 = ((Class405) ((Class394) this).aClass229_4786.get((long) i));
 		}
 		if (class405 != null)
 			return class405;

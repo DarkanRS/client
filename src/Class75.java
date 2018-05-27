@@ -23,15 +23,15 @@ public final class Class75 {
 		if (!aBool742) {
 			aBool742 = true;
 			if (anInt739 * 62352723 >= 0) {
-				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741 = (new NPC(client.aClass257_7353.method4430(-1965384058), 25));
+				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741 = (new NPC(IndexLoaders.MAP_REGION_DECODER.method4430(-1965384058), 25));
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10314 = 892633931 * ((Class75) this).anInt740;
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10353 = -537541873 * client.cycles;
-				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16166(Class350_Sub1.aClass406_7757.method6828(anInt739 * 62352723, (byte) 5), 687087501);
+				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) 5), 687087501);
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15836(1203434505 * (((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.aClass409_10580.anInt4858), (byte) -96);
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10340 = -222526911 * ((((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.aClass409_10580.anInt4889) * 1913503455 << 3);
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10321 = (((Class86.anInt819 += 523556513) * 272928097 - 1) * -2027750001);
 			} else {
-				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744 = (new Player(client.aClass257_7353.method4430(-1995345801), 25));
+				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744 = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-1995345801), 25));
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.decodeAppearance(Class276.aClass282_Sub35_3346, 1925099603);
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10314 = ((Class75) this).anInt740 * 892633931;
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10353 = -537541873 * client.cycles;
@@ -65,16 +65,16 @@ public final class Class75 {
 
 	boolean method1339(short i) {
 		if (62352723 * anInt739 >= 0) {
-			Class409 class409 = Class350_Sub1.aClass406_7757.method6828(anInt739 * 62352723, (byte) 53);
+			NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) 53);
 			boolean bool = class409.method6881(-1593262415);
 			if (null == ((Class75) this).anIntArray745) {
-				Class227 class227 = Class96_Sub16.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) -42);
+				Class227 class227 = IndexLoaders.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) -42);
 				((Class75) this).anIntArray745 = class227.method3828(163665015);
 			}
 			int[] is = ((Class75) this).anIntArray745;
 			for (int i_7_ = 0; i_7_ < is.length; i_7_++) {
 				int i_8_ = is[i_7_];
-				bool &= Class330.aClass523_3868.method11205(i_8_, (byte) 91).method11132(2032064128);
+				bool &= IndexLoaders.aClass523_3868.method11205(i_8_, (byte) 91).method11132(2032064128);
 			}
 			return bool;
 		}
@@ -122,16 +122,16 @@ public final class Class75 {
 
 	boolean method1345() {
 		if (62352723 * anInt739 >= 0) {
-			Class409 class409 = Class350_Sub1.aClass406_7757.method6828(anInt739 * 62352723, (byte) 3);
+			NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) 3);
 			boolean bool = class409.method6881(-1593262415);
 			if (null == ((Class75) this).anIntArray745) {
-				Class227 class227 = Class96_Sub16.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) 74);
+				Class227 class227 = IndexLoaders.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) 74);
 				((Class75) this).anIntArray745 = class227.method3828(1387373100);
 			}
 			int[] is = ((Class75) this).anIntArray745;
 			for (int i = 0; i < is.length; i++) {
 				int i_15_ = is[i];
-				bool &= Class330.aClass523_3868.method11205(i_15_, (byte) 36).method11132(2014877096);
+				bool &= IndexLoaders.aClass523_3868.method11205(i_15_, (byte) 36).method11132(2014877096);
 			}
 			return bool;
 		}
@@ -160,7 +160,7 @@ public final class Class75 {
 			anInt739 = -422272731;
 			break;
 		case 0:
-			anInt739 = class282_sub35.readBigSmart(1948571213) * 422272731;
+			anInt739 = class282_sub35.readBigSmart() * 422272731;
 			break;
 		default:
 			anInt739 = -422272731;
@@ -170,16 +170,16 @@ public final class Class75 {
 
 	boolean method1348() {
 		if (62352723 * anInt739 >= 0) {
-			Class409 class409 = Class350_Sub1.aClass406_7757.method6828(anInt739 * 62352723, (byte) -33);
+			NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) -33);
 			boolean bool = class409.method6881(-1593262415);
 			if (null == ((Class75) this).anIntArray745) {
-				Class227 class227 = Class96_Sub16.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) -106);
+				Class227 class227 = IndexLoaders.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) -106);
 				((Class75) this).anIntArray745 = class227.method3828(1137772138);
 			}
 			int[] is = ((Class75) this).anIntArray745;
 			for (int i = 0; i < is.length; i++) {
 				int i_17_ = is[i];
-				bool &= Class330.aClass523_3868.method11205(i_17_, (byte) 39).method11132(1898468081);
+				bool &= IndexLoaders.aClass523_3868.method11205(i_17_, (byte) 39).method11132(1898468081);
 			}
 			return bool;
 		}

@@ -17,7 +17,7 @@ public class Class329_Sub1 extends Class329 {
 	static final int anInt7722 = 2;
 	int anInt7723 = 1485026017;
 	static int[] anIntArray7724;
-	Class474 aClass474_7725;
+	ObjectIndexLoader aClass474_7725;
 	public static int anInt7726;
 
 	public final void method12458(GraphicalRenderer class505, byte[] is, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, Class336[] class336s) {
@@ -41,7 +41,7 @@ public class Class329_Sub1 extends Class329 {
 				int i_14_ = i_13_ >> 2;
 				int i_15_ = i_13_ & 0x3;
 				if (i_2_ == i_12_ && i_11_ >= i_3_ && i_11_ < 8 + i_3_ && i_10_ >= i_4_ && i_10_ < i_4_ + 8) {
-					Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_6_, 65280);
+					ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_6_, 65280);
 					int i_16_ = i_0_ + Class222.method3756(i_11_ & 0x7, i_10_ & 0x7, i_5_, (class478.anInt5648 * -752356381), (class478.anInt5649 * -1610844647), i_15_, (byte) -82);
 					int i_17_ = (i_1_ + Class3.method282(i_11_ & 0x7, i_10_ & 0x7, i_5_, -752356381 * class478.anInt5648, class478.anInt5649 * -1610844647, i_15_, 2019809398));
 					if (i_16_ > 0 && i_17_ > 0 && i_16_ < -1230013231 * anInt3784 - 1 && i_17_ < 2024737111 * anInt3785 - 1) {
@@ -63,7 +63,7 @@ public class Class329_Sub1 extends Class329 {
 	final void method12459(GraphicalRenderer class505, int i, int i_19_, int i_20_, int i_21_, int i_22_, int i_23_, int i_24_, Class336 class336, int i_25_, int i_26_) {
 		if (i_19_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_19_;
-		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_22_, 65280);
+		ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_22_, 65280);
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(590379458) != 0 || !class478.aBool5701) {
 			int i_27_;
 			int i_28_;
@@ -182,7 +182,7 @@ public class Class329_Sub1 extends Class329 {
 						for (int i_52_ = 0; i_52_ < i_51_; i_52_++) {
 							Class287 class287 = new Class287(class505, (-1928575293 * aClass206_3776.anInt2592), class282_sub35, 2);
 							if (1711091569 * class287.anInt3430 == 31) {
-								Class416 class416 = (Class282_Sub23.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) -123));
+								Class416 class416 = (IndexLoaders.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) -123));
 								class287.method5061(class416.anInt4986 * 633357, -1719615659 * class416.anInt4989, 976456007 * class416.anInt4988, class416.anInt4987 * 475908455, (byte) -1);
 							}
 							if (class505.method8463() > 0) {
@@ -341,7 +341,7 @@ public class Class329_Sub1 extends Class329 {
 				int i_104_ = i_103_ >> 2;
 				int i_105_ = i_103_ & 0x3;
 				if (i_91_ == i_102_ && i_101_ >= i_92_ && i_101_ < 8 + i_92_ && i_100_ >= i_93_ && i_100_ < i_93_ + 8) {
-					Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_96_, 65280);
+					ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_96_, 65280);
 					int i_106_ = i_89_ + Class222.method3756(i_101_ & 0x7, i_100_ & 0x7, i_94_, (class478.anInt5648 * -752356381), (class478.anInt5649 * -1610844647), i_105_, (byte) 44);
 					int i_107_ = (i_90_ + Class3.method282(i_101_ & 0x7, i_100_ & 0x7, i_94_, -752356381 * class478.anInt5648, class478.anInt5649 * -1610844647, i_105_, 1441497902));
 					if (i_106_ > 0 && i_107_ > 0 && i_106_ < -1230013231 * anInt3784 - 1 && i_107_ < 2024737111 * anInt3785 - 1) {
@@ -414,7 +414,7 @@ public class Class329_Sub1 extends Class329 {
 		aByteArrayArrayArray3794 = null;
 	}
 
-	boolean method12464(GraphicalRenderer class505, int i, int i_123_, boolean bool, Class478 class478, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_, int i_131_, boolean bool_132_, Class390 class390, Class336 class336, int i_133_, int i_134_, int i_135_) {
+	boolean method12464(GraphicalRenderer class505, int i, int i_123_, boolean bool, ObjectDefinitions class478, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, int i_129_, int i_130_, int i_131_, boolean bool_132_, Class390 class390, Class336 class336, int i_133_, int i_134_, int i_135_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_136_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -577,7 +577,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12465(GraphicalRenderer class505, int i, int i_141_, boolean bool, Class478 class478, int i_142_, int i_143_, int i_144_, int i_145_, int i_146_, int i_147_, int i_148_, int i_149_, int i_150_) {
+	boolean method12465(GraphicalRenderer class505, int i, int i_141_, boolean bool, ObjectDefinitions class478, int i_142_, int i_143_, int i_144_, int i_145_, int i_146_, int i_147_, int i_148_, int i_149_, int i_150_) {
 		if (1109376893 * Class458.aClass458_5475.anInt5481 == i) {
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
@@ -594,7 +594,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_151_ = 65;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_143_, i_148_, i_149_, (byte) -117);
 			if (null != interface12)
-				i_151_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(897339826), 65280).anInt5661) * -1085975425) + 1;
+				i_151_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(897339826), 65280).anInt5661) * -1085975425) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, anIntArray7724[i_141_] * i_151_, anIntArray7720[i_141_] * i_151_, i, i_141_));
@@ -610,7 +610,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_152_ = 33;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_143_, i_148_, i_149_, (byte) -91);
 			if (null != interface12)
-				i_152_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-33334546), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_152_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-33334546), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, i_152_ * anIntArray7724[i_141_], anIntArray7720[i_141_] * i_152_, i, 4 + i_141_));
@@ -640,7 +640,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_155_ = 33;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_143_, i_148_, i_149_, (byte) -3);
 			if (null != interface12)
-				i_155_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-824380403), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_155_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-824380403), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			Class521_Sub1_Sub4 class521_sub1_sub4_156_;
 			if (bool) {
@@ -664,7 +664,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12466(GraphicalRenderer class505, int i, int i_159_, boolean bool, Class478 class478, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_, int i_165_, int i_166_, int i_167_, boolean bool_168_, Class390 class390, Class336 class336, int i_169_, int i_170_) {
+	boolean method12466(GraphicalRenderer class505, int i, int i_159_, boolean bool, ObjectDefinitions class478, int i_160_, int i_161_, int i_162_, int i_163_, int i_164_, int i_165_, int i_166_, int i_167_, boolean bool_168_, Class390 class390, Class336 class336, int i_169_, int i_170_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_171_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -857,7 +857,7 @@ public class Class329_Sub1 extends Class329 {
 						for (int i_183_ = 0; i_183_ < i_182_; i_183_++) {
 							Class287 class287 = new Class287(class505, (aClass206_3776.anInt2592 * -1928575293), class282_sub35, 2);
 							if (class287.anInt3430 * 1711091569 == 31) {
-								Class416 class416 = (Class282_Sub23.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) -89));
+								Class416 class416 = (IndexLoaders.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) -89));
 								class287.method5061(633357 * class416.anInt4986, class416.anInt4989 * -1719615659, 976456007 * class416.anInt4988, 475908455 * class416.anInt4987, (byte) -1);
 							}
 							if (class505.method8463() > 0) {
@@ -998,7 +998,7 @@ public class Class329_Sub1 extends Class329 {
 	void method12469(GraphicalRenderer class505, int i, int i_212_, int i_213_, int i_214_, Class336 class336) {
 		Interface12 interface12 = method12467(i, i_212_, i_213_, i_214_, 1070777471);
 		if (interface12 != null) {
-			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-1456391368), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-1456391368), 65280);
 			int i_215_ = interface12.method89(1195097723);
 			int i_216_ = interface12.method92(-908993374);
 			if (class478.method7974(36059504))
@@ -1044,7 +1044,7 @@ public class Class329_Sub1 extends Class329 {
 	final void method12470(GraphicalRenderer class505, int i, int i_217_, int i_218_, int i_219_, int i_220_, int i_221_, int i_222_, Class336 class336, int i_223_) {
 		if (i_217_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_217_;
-		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_220_, 65280);
+		ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_220_, 65280);
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(1742731311) != 0 || !class478.aBool5701) {
 			int i_224_;
 			int i_225_;
@@ -1161,7 +1161,7 @@ public class Class329_Sub1 extends Class329 {
 						for (int i_242_ = 0; i_242_ < i_241_; i_242_++) {
 							Class287 class287 = new Class287(class505, (aClass206_3776.anInt2592 * -1928575293), class282_sub35, 2);
 							if (class287.anInt3430 * 1711091569 == 31) {
-								Class416 class416 = (Class282_Sub23.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) 56));
+								Class416 class416 = (IndexLoaders.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) 56));
 								class287.method5061(633357 * class416.anInt4986, class416.anInt4989 * -1719615659, 976456007 * class416.anInt4988, 475908455 * class416.anInt4987, (byte) -1);
 							}
 							if (class505.method8463() > 0) {
@@ -1291,8 +1291,8 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	static final boolean method12472(Class474 class474, int i, int i_271_) {
-		Class478 class478 = class474.method7891(i, 65280);
+	static final boolean method12472(ObjectIndexLoader class474, int i, int i_271_) {
+		ObjectDefinitions class478 = class474.getObjectDefinitions(i, 65280);
 		if (i_271_ == 11)
 			i_271_ = 10;
 		if (i_271_ >= 5 && i_271_ <= 8)
@@ -1300,8 +1300,8 @@ public class Class329_Sub1 extends Class329 {
 		return class478.method7987(i_271_, -216007432);
 	}
 
-	static final boolean method12473(Class474 class474, int i, int i_272_) {
-		Class478 class478 = class474.method7891(i, 65280);
+	static final boolean method12473(ObjectIndexLoader class474, int i, int i_272_) {
+		ObjectDefinitions class478 = class474.getObjectDefinitions(i, 65280);
 		if (i_272_ == 11)
 			i_272_ = 10;
 		if (i_272_ >= 5 && i_272_ <= 8)
@@ -1349,7 +1349,7 @@ public class Class329_Sub1 extends Class329 {
 	void method12475(GraphicalRenderer class505, int i, int i_287_, int i_288_, int i_289_, Class336 class336, int i_290_) {
 		Interface12 interface12 = method12467(i, i_287_, i_288_, i_289_, 1923565825);
 		if (interface12 != null) {
-			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-289246828), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-289246828), 65280);
 			int i_291_ = interface12.method89(1128699312);
 			int i_292_ = interface12.method92(-2000294676);
 			if (class478.method7974(1930590252))
@@ -1413,7 +1413,7 @@ public class Class329_Sub1 extends Class329 {
 				int i_307_ = i_306_ >> 2;
 				int i_308_ = i_306_ & 0x3;
 				if (i_295_ == i_305_ && i_304_ >= i_296_ && i_304_ < 8 + i_296_ && i_303_ >= i_297_ && i_303_ < i_297_ + 8) {
-					Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_299_, 65280);
+					ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_299_, 65280);
 					int i_309_ = i_293_ + Class222.method3756(i_304_ & 0x7, i_303_ & 0x7, i_298_, (class478.anInt5648 * -752356381), (class478.anInt5649 * -1610844647), i_308_, (byte) -51);
 					int i_310_ = (i_294_ + Class3.method282(i_304_ & 0x7, i_303_ & 0x7, i_298_, -752356381 * class478.anInt5648, class478.anInt5649 * -1610844647, i_308_, 1256655426));
 					if (i_309_ > 0 && i_310_ > 0 && i_309_ < -1230013231 * anInt3784 - 1 && i_310_ < 2024737111 * anInt3785 - 1) {
@@ -1435,7 +1435,7 @@ public class Class329_Sub1 extends Class329 {
 	final void method12477(GraphicalRenderer class505, int i, int i_312_, int i_313_, int i_314_, int i_315_, int i_316_, int i_317_, Class336 class336, int i_318_) {
 		if (i_312_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_312_;
-		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_315_, 65280);
+		ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_315_, 65280);
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(1693321357) != 0 || !class478.aBool5701) {
 			int i_319_;
 			int i_320_;
@@ -1538,7 +1538,7 @@ public class Class329_Sub1 extends Class329 {
 	final void method12478(GraphicalRenderer class505, int i, int i_333_, int i_334_, int i_335_, int i_336_, int i_337_, int i_338_, Class336 class336, int i_339_) {
 		if (i_333_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_333_;
-		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_336_, 65280);
+		ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_336_, 65280);
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-452486879) != 0 || !class478.aBool5701) {
 			int i_340_;
 			int i_341_;
@@ -1655,7 +1655,7 @@ public class Class329_Sub1 extends Class329 {
 						for (int i_357_ = 0; i_357_ < i_356_; i_357_++) {
 							Class287 class287 = new Class287(class505, (aClass206_3776.anInt2592 * -1928575293), class282_sub35, 2);
 							if (class287.anInt3430 * 1711091569 == 31) {
-								Class416 class416 = (Class282_Sub23.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) 16));
+								Class416 class416 = (IndexLoaders.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) 16));
 								class287.method5061(633357 * class416.anInt4986, class416.anInt4989 * -1719615659, 976456007 * class416.anInt4988, 475908455 * class416.anInt4987, (byte) -1);
 							}
 							if (class505.method8463() > 0) {
@@ -1788,7 +1788,7 @@ public class Class329_Sub1 extends Class329 {
 	final void method12480(GraphicalRenderer class505, int i, int i_386_, int i_387_, int i_388_, int i_389_, int i_390_, int i_391_, Class336 class336, int i_392_) {
 		if (i_386_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_386_;
-		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_389_, 65280);
+		ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_389_, 65280);
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-410083930) != 0 || !class478.aBool5701) {
 			int i_393_;
 			int i_394_;
@@ -1891,7 +1891,7 @@ public class Class329_Sub1 extends Class329 {
 	final void method12481(GraphicalRenderer class505, int i, int i_407_, int i_408_, int i_409_, int i_410_, int i_411_, int i_412_, Class336 class336, int i_413_) {
 		if (i_407_ < -1623875645 * ((Class329_Sub1) this).anInt7723)
 			((Class329_Sub1) this).anInt7723 = 231917803 * i_407_;
-		Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(i_410_, 65280);
+		ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(i_410_, 65280);
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(803501035) != 0 || !class478.aBool5701) {
 			int i_414_;
 			int i_415_;
@@ -1991,7 +1991,7 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	boolean method12482(GraphicalRenderer class505, int i, int i_428_, boolean bool, Class478 class478, int i_429_, int i_430_, int i_431_, int i_432_, int i_433_, int i_434_, int i_435_, int i_436_) {
+	boolean method12482(GraphicalRenderer class505, int i, int i_428_, boolean bool, ObjectDefinitions class478, int i_429_, int i_430_, int i_431_, int i_432_, int i_433_, int i_434_, int i_435_, int i_436_) {
 		if (1109376893 * Class458.aClass458_5475.anInt5481 == i) {
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
@@ -2008,7 +2008,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_437_ = 65;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_430_, i_435_, i_436_, (byte) -44);
 			if (null != interface12)
-				i_437_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-226081178), 65280).anInt5661) * -1085975425) + 1;
+				i_437_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-226081178), 65280).anInt5661) * -1085975425) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, anIntArray7724[i_428_] * i_437_, anIntArray7720[i_428_] * i_437_, i, i_428_));
@@ -2024,7 +2024,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_438_ = 33;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_430_, i_435_, i_436_, (byte) -68);
 			if (null != interface12)
-				i_438_ = (((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-2096581805), 65280).anInt5661) * -1085975425 / 2 + 1;
+				i_438_ = (((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-2096581805), 65280).anInt5661) * -1085975425 / 2 + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, i_438_ * anIntArray7724[i_428_], anIntArray7720[i_428_] * i_438_, i, 4 + i_428_));
@@ -2054,7 +2054,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_441_ = 33;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_430_, i_435_, i_436_, (byte) -87);
 			if (null != interface12)
-				i_441_ = (((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-1126651026), 65280).anInt5661) * -1085975425 / 2 + 1;
+				i_441_ = (((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-1126651026), 65280).anInt5661) * -1085975425 / 2 + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			Class521_Sub1_Sub4 class521_sub1_sub4_442_;
 			if (bool) {
@@ -2078,7 +2078,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12483(GraphicalRenderer class505, int i, int i_445_, boolean bool, Class478 class478, int i_446_, int i_447_, int i_448_, int i_449_, int i_450_, int i_451_, int i_452_, int i_453_, boolean bool_454_, Class390 class390, Class336 class336, int i_455_, int i_456_) {
+	boolean method12483(GraphicalRenderer class505, int i, int i_445_, boolean bool, ObjectDefinitions class478, int i_446_, int i_447_, int i_448_, int i_449_, int i_450_, int i_451_, int i_452_, int i_453_, boolean bool_454_, Class390 class390, Class336 class336, int i_455_, int i_456_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_457_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -2241,7 +2241,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	boolean method12484(GraphicalRenderer class505, int i, int i_462_, boolean bool, Class478 class478, int i_463_, int i_464_, int i_465_, int i_466_, int i_467_, int i_468_, int i_469_, int i_470_, boolean bool_471_, Class390 class390, Class336 class336, int i_472_, int i_473_) {
+	boolean method12484(GraphicalRenderer class505, int i, int i_462_, boolean bool, ObjectDefinitions class478, int i_463_, int i_464_, int i_465_, int i_466_, int i_467_, int i_468_, int i_469_, int i_470_, boolean bool_471_, Class390 class390, Class336 class336, int i_472_, int i_473_) {
 		if (Class458.aClass458_5470.anInt5481 * 1109376893 == i) {
 			int i_474_ = class478.anInt5656 * -1316444551;
 			if (aBool7714 && -1 == class478.anInt5656 * -1316444551)
@@ -2404,13 +2404,13 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	public Class329_Sub1(Class206 class206, Class474 class474, int i, int i_479_, int i_480_, boolean bool, Class311 class311, Class239 class239) {
-		super(class206, i, i_479_, i_480_, bool, Class122.aClass536_1535, Class493.aClass479_5778, class311);
+	public Class329_Sub1(Class206 class206, ObjectIndexLoader class474, int i, int i_479_, int i_480_, boolean bool, Class311 class311, Class239 class239) {
+		super(class206, i, i_479_, i_480_, bool, IndexLoaders.aClass536_1535, IndexLoaders.UNDERLAY_INDEX_LOADER, class311);
 		((Class329_Sub1) this).aClass474_7725 = class474;
 		((Class329_Sub1) this).aClass239_7719 = class239;
 	}
 
-	boolean method12485(GraphicalRenderer class505, int i, int i_481_, boolean bool, Class478 class478, int i_482_, int i_483_, int i_484_, int i_485_, int i_486_, int i_487_, int i_488_, int i_489_) {
+	boolean method12485(GraphicalRenderer class505, int i, int i_481_, boolean bool, ObjectDefinitions class478, int i_482_, int i_483_, int i_484_, int i_485_, int i_486_, int i_487_, int i_488_, int i_489_) {
 		if (1109376893 * Class458.aClass458_5475.anInt5481 == i) {
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
@@ -2427,7 +2427,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_490_ = 65;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_483_, i_488_, i_489_, (byte) -67);
 			if (null != interface12)
-				i_490_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-281977030), 65280).anInt5661) * -1085975425) + 1;
+				i_490_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-281977030), 65280).anInt5661) * -1085975425) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, anIntArray7724[i_481_] * i_490_, anIntArray7720[i_481_] * i_490_, i, i_481_));
@@ -2443,7 +2443,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_491_ = 33;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_483_, i_488_, i_489_, (byte) -85);
 			if (null != interface12)
-				i_491_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-671616235), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_491_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-671616235), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, i_491_ * anIntArray7724[i_481_], anIntArray7720[i_481_] * i_491_, i, 4 + i_481_));
@@ -2473,7 +2473,7 @@ public class Class329_Sub1 extends Class329 {
 			int i_494_ = 33;
 			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_483_, i_488_, i_489_, (byte) -39);
 			if (null != interface12)
-				i_494_ = ((((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-83884064), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_494_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-83884064), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			Class521_Sub1_Sub4 class521_sub1_sub4_495_;
 			if (bool) {
@@ -2500,7 +2500,7 @@ public class Class329_Sub1 extends Class329 {
 	void method12486(GraphicalRenderer class505, int i, int i_498_, int i_499_, int i_500_, Class336 class336) {
 		Interface12 interface12 = method12467(i, i_498_, i_499_, i_500_, 1742443241);
 		if (interface12 != null) {
-			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(-1786399385), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-1786399385), 65280);
 			int i_501_ = interface12.method89(711079008);
 			int i_502_ = interface12.method92(1196494531);
 			if (class478.method7974(-380613495))
@@ -2546,7 +2546,7 @@ public class Class329_Sub1 extends Class329 {
 	void method12487(GraphicalRenderer class505, int i, int i_503_, int i_504_, int i_505_, Class336 class336) {
 		Interface12 interface12 = method12467(i, i_503_, i_504_, i_505_, 1980964506);
 		if (interface12 != null) {
-			Class478 class478 = ((Class329_Sub1) this).aClass474_7725.method7891(interface12.method84(1225766237), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(1225766237), 65280);
 			int i_506_ = interface12.method89(1663361379);
 			int i_507_ = interface12.method92(499153391);
 			if (class478.method7974(1267716582))
@@ -2608,7 +2608,7 @@ public class Class329_Sub1 extends Class329 {
 						for (int i_518_ = 0; i_518_ < i_517_; i_518_++) {
 							Class287 class287 = new Class287(class505, (-1928575293 * aClass206_3776.anInt2592), class282_sub35, 2);
 							if (1711091569 * class287.anInt3430 == 31) {
-								Class416 class416 = (Class282_Sub23.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) 65));
+								Class416 class416 = (IndexLoaders.aClass436_7683.method7304(class282_sub35.readUnsignedShort(), (byte) 65));
 								class287.method5061(class416.anInt4986 * 633357, -1719615659 * class416.anInt4989, 976456007 * class416.anInt4988, class416.anInt4987 * 475908455, (byte) -1);
 							}
 							if (class505.method8463() > 0) {

@@ -43,9 +43,9 @@ public class Class456_Sub2 extends Class456 {
 		if (i_6_ < 0)
 			i_6_ = 0;
 		if (Class467.aClass160_5576 == null || null == Class61.aClass160_647) {
-			if (Class211.aClass317_2673.method5661(Class450.anInt5438 * 947424179, -1304535718) && Class211.aClass317_2673.method5661((-1626939609 * Class373.anInt4350), 1306027790)) {
-				Class467.aClass160_5576 = (class505.method8444(Class91.method1522(Class211.aClass317_2673, Class450.anInt5438 * 947424179, 0), true));
-				Class91 class91 = Class91.method1522(Class211.aClass317_2673, -1626939609 * Class373.anInt4350, 0);
+			if (IndexLoaders.SPRITES_INDEX.method5661(Class450.anInt5438 * 947424179, -1304535718) && IndexLoaders.SPRITES_INDEX.method5661((-1626939609 * Class373.anInt4350), 1306027790)) {
+				Class467.aClass160_5576 = (class505.method8444(Class91.method1522(IndexLoaders.SPRITES_INDEX, Class450.anInt5438 * 947424179, 0), true));
+				Class91 class91 = Class91.method1522(IndexLoaders.SPRITES_INDEX, -1626939609 * Class373.anInt4350, 0);
 				Class61.aClass160_647 = class505.method8444(class91, true);
 				class91.method1525();
 				Class60.aClass160_612 = class505.method8444(class91, true);

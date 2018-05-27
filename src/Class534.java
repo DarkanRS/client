@@ -588,17 +588,17 @@ public abstract class Class534 {
 		int i_43_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		int i_44_ = i_43_ >> 14 & 0x3fff;
 		int i_45_ = i_43_ & 0x3fff;
-		Class219 class219 = client.aClass257_7353.method4519(2060657850);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(2060657850);
 		i_44_ -= class219.anInt2711 * 1948093437;
 		if (i_44_ < 0)
 			i_44_ = 0;
-		else if (i_44_ >= client.aClass257_7353.method4424(1745707366))
-			i_44_ = client.aClass257_7353.method4424(564190904);
+		else if (i_44_ >= IndexLoaders.MAP_REGION_DECODER.method4424(1745707366))
+			i_44_ = IndexLoaders.MAP_REGION_DECODER.method4424(564190904);
 		i_45_ -= class219.anInt2712 * -1002240017;
 		if (i_45_ < 0)
 			i_45_ = 0;
-		else if (i_45_ >= client.aClass257_7353.method4451(-500504359))
-			i_45_ = client.aClass257_7353.method4451(-160695726);
+		else if (i_45_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-500504359))
+			i_45_ = IndexLoaders.MAP_REGION_DECODER.method4451(-160695726);
 		client.anInt7262 = 2146249857 * (256 + (i_44_ << 9));
 		client.anInt7376 = (256 + (i_45_ << 9)) * -1818102377;
 		Class262.anInt3240 = 1540976692;

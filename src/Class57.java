@@ -15,7 +15,7 @@ public class Class57 {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_0_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_0_, (byte) 0);
 		if (class437.method7319(1933175608))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class118.method1998(i_0_, class437.aString5335, 69406966);
 		else

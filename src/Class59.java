@@ -372,7 +372,7 @@ public class Class59 {
 	}
 
 	public static Class59 method1149(int i) {
-		Class59 class59 = (Class59) aClass229_533.method3865((long) i);
+		Class59 class59 = (Class59) aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
 		byte[] is = Class219.aClass317_2710.getFile(0, i, -1194205238);
@@ -631,7 +631,7 @@ public class Class59 {
 	}
 
 	public static Class59 method1156(int i) {
-		Class59 class59 = (Class59) aClass229_533.method3865((long) i);
+		Class59 class59 = (Class59) aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
 		byte[] is = Class219.aClass317_2710.getFile(0, i, -1943902052);
@@ -710,7 +710,7 @@ public class Class59 {
 		int i_46_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
 		int i_47_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
 		int i_48_ = (((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class219 class219 = client.aClass257_7353.method4519(988818864);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(988818864);
 		Class11.method469(((i_45_ >> 14 & 0x3fff) - 1948093437 * class219.anInt2711), (i_45_ & 0x3fff) - class219.anInt2712 * -1002240017, i_46_ << 2, i_47_, i_48_, (byte) -62);
 	}
 

@@ -10,14 +10,13 @@ public class Class122 {
 	String aString1532;
 	Class111 aClass111_1533;
 	public int[] anIntArray1534;
-	public static Class536 aClass536_1535;
-
+	
 	void method2105(Class100 class100, byte i) {
 		int i_0_ = class100.method1632((byte) -72);
-		((Class122) this).aClass111_1529 = Class406.method6852(-1465285148)[i_0_];
+		((Class122) this).aClass111_1529 = NPCIndexLoader.method6852(-1465285148)[i_0_];
 		if (((Class122) this).aClass111_1529 == Class111.aClass111_1109) {
 			int i_1_ = class100.method1632((byte) 0);
-			((Class122) this).aClass111_1533 = Class406.method6852(-2096161358)[i_1_];
+			((Class122) this).aClass111_1533 = NPCIndexLoader.method6852(-2096161358)[i_1_];
 			((Class122) this).anInt1528 = class100.method1632((byte) -88) * -198675871;
 		}
 		((Class122) this).aString1530 = class100.method1633(16711935);
@@ -33,10 +32,10 @@ public class Class122 {
 
 	void method2106(Class100 class100) {
 		int i = class100.method1632((byte) 8);
-		((Class122) this).aClass111_1529 = Class406.method6852(-1845731076)[i];
+		((Class122) this).aClass111_1529 = NPCIndexLoader.method6852(-1845731076)[i];
 		if (((Class122) this).aClass111_1529 == Class111.aClass111_1109) {
 			int i_4_ = class100.method1632((byte) -104);
-			((Class122) this).aClass111_1533 = Class406.method6852(-1460140395)[i_4_];
+			((Class122) this).aClass111_1533 = NPCIndexLoader.method6852(-1460140395)[i_4_];
 			((Class122) this).anInt1528 = class100.method1632((byte) -27) * -198675871;
 		}
 		((Class122) this).aString1530 = class100.method1633(16711935);
@@ -115,7 +114,7 @@ public class Class122 {
 		Class291_Sub1.method5137();
 		Class291_Sub1.aClass482_3459.method8118(-1939522587);
 		Class291_Sub1.aClass283_3470 = null;
-		Class511.aClass160_5883 = null;
+		Defaults7Loader.aClass160_5883 = null;
 		Class291_Sub1.anInt8014 = -1089992553;
 		Class291_Sub1.anInt8016 = 638834387;
 		Class494.aClass194_5794 = null;
@@ -123,7 +122,7 @@ public class Class122 {
 		Class291_Sub1.aClass194_8023 = null;
 		Class446.aClass194_5416 = null;
 		Class114.aClass194_1243 = null;
-		Class524.aClass194_6967 = null;
+		DefaultsFile.aClass194_6967 = null;
 		Class251.aClass194_3103 = null;
 		Class521_Sub1_Sub5_Sub1.aClass194_10527 = null;
 		if (Class291_Sub1.aClass218_3456 != null) {
@@ -134,7 +133,7 @@ public class Class122 {
 			Class291_Sub1.aClass427_3457.method7175(64, 64, 1145501351);
 		if (Class291_Sub1.aClass474_3455 != null)
 			Class291_Sub1.aClass474_3455.method7899(256, -2034610586);
-		Class16.aClass230_147.method3906(64, (short) 727);
+		IndexLoaders.aClass230_147.method3906(64, (short) 727);
 	}
 
 	static final void method2112(CS2Executor class527, int i) {

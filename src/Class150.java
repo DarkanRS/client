@@ -57,7 +57,7 @@ public class Class150 {
 			if (-1 != (class521_sub1_sub1_sub2.aClass161Array10339[i_4_].anInt2012 * 378836105)) {
 				Class456 class456 = (class521_sub1_sub1_sub2.aClass161Array10339[i_4_].aClass456_2014);
 				if (class456.method7573(1176831971)) {
-					Class525 class525 = (Class96_Sub20.aClass515_9416.method8845((class521_sub1_sub1_sub2.aClass161Array10339[i_4_].anInt2012) * 378836105, (byte) 52));
+					Class525 class525 = (IndexLoaders.aClass515_9416.method8845((class521_sub1_sub1_sub2.aClass161Array10339[i_4_].anInt2012) * 378836105, (byte) 52));
 					AnimationDefinitions class518 = class456.method7565(-1632742162);
 					if (class525.aBool6968) {
 						if (3 == -1113882773 * class518.anInt5920) {

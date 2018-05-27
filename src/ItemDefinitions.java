@@ -94,7 +94,7 @@ public class ItemDefinitions implements Interface46 {
 			i_8_ |= class456.method7640(-1206237088);
 		MeshRasterizer class528;
 		synchronized (((ItemIndexLoader) this.loader).aClass229_5115) {
-			class528 = ((MeshRasterizer) (((ItemIndexLoader) this.loader).aClass229_5115.method3865((long) (1116898509 * this.id | class505.rendererId * -413843045 << 29))));
+			class528 = ((MeshRasterizer) (((ItemIndexLoader) this.loader).aClass229_5115.get((long) (1116898509 * this.id | class505.rendererId * -413843045 << 29))));
 		}
 		if (null == class528 || class505.method8452(class528.m(), i_8_) != 0) {
 			if (null != class528)
@@ -211,7 +211,7 @@ public class ItemDefinitions implements Interface46 {
 			for (int i_17_ = 0; i_17_ < 4; i_17_++)
 				inventoryOptions[i_17_] = class425_16_.inventoryOptions[i_17_];
 		}
-		inventoryOptions[4] = Message.aClass433_5166.translate((((ItemIndexLoader) (this.loader)).language), -2102685104);
+		inventoryOptions[4] = Message.DISCARD_2.translate((((ItemIndexLoader) (this.loader)).language), -2102685104);
 	}
 
 	void generateCert(ItemDefinitions class425_18_, ItemDefinitions class425_19_, int i) {
@@ -235,7 +235,7 @@ public class ItemDefinitions implements Interface46 {
 
 	void method7089(RsByteBuffer class282_sub35, int i, int i_20_) {
 		if (1 == i)
-			this.modelId = class282_sub35.readBigSmart(2064304422) * 809144059;
+			this.modelId = class282_sub35.readBigSmart() * 809144059;
 		else if (i == 2)
 			aString5043 = class282_sub35.readString(1760674316);
 		else if (i == 4)
@@ -265,13 +265,13 @@ public class ItemDefinitions implements Interface46 {
 		else if (i == 18)
 			anInt5050 = class282_sub35.readUnsignedShort() * -173634739;
 		else if (23 == i)
-			this.maleBody1 = class282_sub35.readBigSmart(2019249082) * -342249107;
+			this.maleBody1 = class282_sub35.readBigSmart() * -342249107;
 		else if (24 == i)
-			this.maleBody2 = class282_sub35.readBigSmart(2036288175) * 178028511;
+			this.maleBody2 = class282_sub35.readBigSmart() * 178028511;
 		else if (i == 25)
-			this.femaleBody1 = class282_sub35.readBigSmart(2091471186) * -1963342619;
+			this.femaleBody1 = class282_sub35.readBigSmart() * -1963342619;
 		else if (26 == i)
-			this.femaleBody2 = class282_sub35.readBigSmart(2001810199) * -691157025;
+			this.femaleBody2 = class282_sub35.readBigSmart() * -691157025;
 		else if (i == 27)
 			anInt5065 = class282_sub35.readUnsignedByte() * -1540246871;
 		else if (i >= 30 && i < 35)
@@ -305,17 +305,17 @@ public class ItemDefinitions implements Interface46 {
 		} else if (i == 65)
 			grandExchange = true;
 		else if (78 == i)
-			this.maleBody3 = class282_sub35.readBigSmart(2006648786) * -2110709183;
+			this.maleBody3 = class282_sub35.readBigSmart() * -2110709183;
 		else if (79 == i)
-			this.femaleBody3 = class282_sub35.readBigSmart(1954056541) * 1292119991;
+			this.femaleBody3 = class282_sub35.readBigSmart() * 1292119991;
 		else if (90 == i)
-			this.maleHead1 = class282_sub35.readBigSmart(2016946160) * -582979729;
+			this.maleHead1 = class282_sub35.readBigSmart() * -582979729;
 		else if (91 == i)
-			this.femaleHead1 = class282_sub35.readBigSmart(2097200271) * -1176241203;
+			this.femaleHead1 = class282_sub35.readBigSmart() * -1176241203;
 		else if (i == 92)
-			this.maleHead2 = class282_sub35.readBigSmart(2142001802) * -18677607;
+			this.maleHead2 = class282_sub35.readBigSmart() * -18677607;
 		else if (i == 93)
-			this.femaleHead2 = class282_sub35.readBigSmart(2139963180) * 1320781975;
+			this.femaleHead2 = class282_sub35.readBigSmart() * 1320781975;
 		else if (i == 95)
 			anInt5074 = class282_sub35.readUnsignedShort() * -1869642735;
 		else if (96 == i)
@@ -848,16 +848,16 @@ public class ItemDefinitions implements Interface46 {
 			for (int i_219_ = 0; i_219_ < 4; i_219_++)
 				inventoryOptions[i_219_] = class425_218_.inventoryOptions[i_219_];
 		}
-		inventoryOptions[4] = Message.aClass433_5165.translate((((ItemIndexLoader) (this.loader)).language), -898798531);
+		inventoryOptions[4] = Message.DISCARD.translate((((ItemIndexLoader) (this.loader)).language), -898798531);
 	}
 
 	static final void method7140(Animable class521_sub1_sub1_sub2, Animable class521_sub1_sub1_sub2_243_, int i, int i_244_, int i_245_, int i_246_, int i_247_, int i_248_, int i_249_, byte i_250_) {
 		int i_251_ = class521_sub1_sub1_sub2_243_.method15899(-525246876);
 		if (-1 != i_251_) {
 			Object object = null;
-			NativeSprite class160 = (NativeSprite) client.aClass229_7204.method3865((long) i_251_);
+			NativeSprite class160 = (NativeSprite) client.aClass229_7204.get((long) i_251_);
 			if (class160 == null) {
-				Class91[] class91s = Class91.method1514(Class211.aClass317_2673, i_251_, 0);
+				Class91[] class91s = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_251_, 0);
 				if (null == class91s)
 					return;
 				class160 = Renderers.SOFTWARE_RENDERER.method8444(class91s[0], true);

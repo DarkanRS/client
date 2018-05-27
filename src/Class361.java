@@ -146,7 +146,7 @@ public class Class361 {
 					/* empty */
 				}
 				if (class282_sub50_sub15 == null) {
-					class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass229_164.method3865(l));
+					class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass229_164.get(l));
 					if (null != class282_sub50_sub15 && !(((Class282_Sub50_Sub15) class282_sub50_sub15).aString9771.equals(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588)))
 						class282_sub50_sub15 = null;
 					if (null == class282_sub50_sub15)

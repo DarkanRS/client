@@ -102,7 +102,7 @@ public class Class42 implements Interface2 {
 			if (i == -1 && !Class260.aBool3220)
 				Class226.method3805(-1719520107);
 			else if (i != -1 && (1293234709 * Class260.anInt3223 != i || !Class116.method1966(1943151089)) && 0 != i_5_ && !Class260.aBool3220) {
-				Class282_Sub1.method11615(i_6_, Class512.aClass317_5884, i, 0, i_5_, false, new Class109_Sub1(), -752307268);
+				Class282_Sub1.method11615(i_6_, IndexLoaders.MUSIC_INDEX, i, 0, i_5_, false, new Class109_Sub1(), -752307268);
 				Class468_Sub6.method12658(-406997007);
 			}
 			if (i != Class260.anInt3223 * 1293234709)

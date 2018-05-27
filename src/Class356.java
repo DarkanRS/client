@@ -119,30 +119,30 @@ public class Class356 {
 
 	public static final void method6227(boolean bool, byte i) {
 		if (!bool) {
-			Class122.aClass536_1535.method11476((byte) -55);
-			Class493.aClass479_5778.method8026(113468323);
-			Class20.aClass31_204.method801(-1911445195);
-			client.aClass257_7353.method4436(-1471749977).method7895((byte) 113);
-			Class350_Sub1.aClass406_7757.method6836((byte) -66);
+			IndexLoaders.aClass536_1535.method11476((byte) -55);
+			IndexLoaders.UNDERLAY_INDEX_LOADER.method8026(113468323);
+			IndexLoaders.aClass31_204.method801(-1911445195);
+			IndexLoaders.MAP_REGION_DECODER.method4436(-1471749977).method7895((byte) 113);
+			IndexLoaders.NPC_INDEX_LOADER.method6836((byte) -66);
 			IndexLoaders.ITEM_INDEX_LOADER.method7150(-1855693683);
-			Class330.aClass523_3868.method11204(-2125784469);
-			Class96_Sub20.aClass515_9416.method8848(-1321298853);
-			Class16.aClass230_147.method3903((byte) -72);
-			Class104.aClass377_1065.method6388((byte) -38);
-			Class45.aClass447_435.method7458(1914523860);
-			Class243.aClass498_3001.method8319(-835963973);
-			Class502.aClass394_5831.method6754(-1473374430);
-			Class497.aClass233_5822.method3924(-1007220233);
-			Class96_Sub16.aClass211_9383.method3617(-1794100621);
-			Class97.aClass427_995.method7174(-504359816);
-			Class397.aClass218_4813.method3699((byte) 1);
-			Class125.aClass424_1573.method7070(1503444365);
-			Class149.aClass288_1746.method5070(1894841222);
-			Class488.aClass45_5759.method916((byte) 60);
-			Class282_Sub23.aClass436_7683.method7306(362287177);
-			Class468_Sub23.aClass438_7932.method7324(1300086915);
-			Login.aClass210_3389.method3604((short) 256);
-			Class286.aClass290_3402.method5103(-901972718);
+			IndexLoaders.aClass523_3868.method11204(-2125784469);
+			IndexLoaders.aClass515_9416.method8848(-1321298853);
+			IndexLoaders.aClass230_147.method3903((byte) -72);
+			IndexLoaders.aClass377_1065.method6388((byte) -38);
+			IndexLoaders.aClass447_435.method7458(1914523860);
+			IndexLoaders.aClass498_3001.method8319(-835963973);
+			IndexLoaders.aClass394_5831.method6754(-1473374430);
+			IndexLoaders.aClass233_5822.method3924(-1007220233);
+			IndexLoaders.aClass211_9383.method3617(-1794100621);
+			IndexLoaders.aClass427_995.method7174(-504359816);
+			IndexLoaders.WORLD_MAP_INDEX_LOADER.method3699((byte) 1);
+			IndexLoaders.ITEM_DEFAULTS.method7070(1503444365);
+			IndexLoaders.aClass288_1746.method5070(1894841222);
+			IndexLoaders.aClass45_5759.method916((byte) 60);
+			IndexLoaders.aClass436_7683.method7306(362287177);
+			IndexLoaders.aClass438_7932.method7324(1300086915);
+			IndexLoaders.aClass210_3389.method3604((short) 256);
+			IndexLoaders.aClass290_3402.method5103(-901972718);
 			Class468_Sub8.method12679(2008833833);
 			Class520.method11161((byte) 1);
 			Class487.aClass378_5752.method6410((short) 25980);
@@ -152,7 +152,7 @@ public class Class356 {
 					Class339.aByteArrayArray3986[i_18_] = null;
 				client.anInt7173 = 0;
 			}
-			client.aClass257_7353.method4435((byte) 1).method4040(-297960469);
+			IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4040(-297960469);
 			Class468_Sub27.method12958(-449406429);
 			Class188.method3140((byte) -62);
 			Class191.method3166(-96454499);

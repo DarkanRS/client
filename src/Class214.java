@@ -34,7 +34,7 @@ public class Class214 {
 	}
 
 	public static Class351 method3668(RsByteBuffer class282_sub35, byte i) {
-		int i_0_ = class282_sub35.readBigSmart(2094677900);
+		int i_0_ = class282_sub35.readBigSmart();
 		return new Class351(i_0_);
 	}
 

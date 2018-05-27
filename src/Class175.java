@@ -58,7 +58,7 @@ public class Class175 {
 	public static Class346 method2958(RsByteBuffer class282_sub35, int i) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1825001188);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1825001188);
 		return class346;
 	}
 
@@ -171,7 +171,7 @@ public class Class175 {
 						i_20_ = ((256 == (((Class282_Sub48) class282_sub48).anInt8094) * -280457961 && (-937948423 * ((Class282_Sub48) class282_sub48).anInt8093 == 256)) ? 256 : Class76.method1356((-937948423 * (((Class282_Sub48) class282_sub48).anInt8093)), (-280457961 * (((Class282_Sub48) class282_sub48).anInt8094)), -1021175029));
 						if (((Class282_Sub48) class282_sub48).aBool8098) {
 							if ((((Class282_Sub48) class282_sub48).aClass282_Sub18_8097) == null)
-								((Class282_Sub48) class282_sub48).aClass282_Sub18_8097 = (Class282_Sub18.method12270(JS5LocalRequester.aClass317_3665, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095))));
+								((Class282_Sub48) class282_sub48).aClass282_Sub18_8097 = (Class282_Sub18.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095))));
 							if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub18_8097)) {
 								if (null == (((Class282_Sub48) class282_sub48).aClass282_Sub26_Sub1_Sub1_8082))
 									((Class282_Sub48) class282_sub48).aClass282_Sub26_Sub1_Sub1_8082 = ((Class282_Sub48) class282_sub48).aClass282_Sub18_8097.method12272();
@@ -183,7 +183,7 @@ public class Class175 {
 								}
 							}
 						} else {
-							Class343 class343 = Class343.method6094(Class219.aClass317_2714, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095)), 0);
+							Class343 class343 = Class343.method6094(IndexLoaders.SOUND_EFFECT_INDEX, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095)), 0);
 							if (null != class343) {
 								Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2 = (class343.method6089().method16062(Class119.aClass344_1460));
 								Class282_Sub15_Sub5_Sub2 class282_sub15_sub5_sub2 = ((Class282_Sub15_Sub5_Sub2) (class282_sub26_sub1_sub2.method15225(i_20_, i_17_ << 6, i_19_)));
@@ -203,7 +203,7 @@ public class Class175 {
 						if (((Class282_Sub48) class282_sub48).aBool8103) {
 							if (null == (((Class282_Sub48) class282_sub48).aClass282_Sub18_8087)) {
 								i_21_ = (int) (Math.random() * (double) (((Class282_Sub48) class282_sub48).anIntArray8102).length);
-								((Class282_Sub48) class282_sub48).aClass282_Sub18_8087 = (Class282_Sub18.method12270(JS5LocalRequester.aClass317_3665, (((Class282_Sub48) class282_sub48).anIntArray8102[i_21_])));
+								((Class282_Sub48) class282_sub48).aClass282_Sub18_8087 = (Class282_Sub18.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, (((Class282_Sub48) class282_sub48).anIntArray8102[i_21_])));
 							}
 							if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub18_8087)) {
 								if (null == (((Class282_Sub48) class282_sub48).aClass282_Sub26_Sub1_Sub1_8106))
@@ -218,7 +218,7 @@ public class Class175 {
 							}
 						} else {
 							i_21_ = (int) (Math.random() * (double) (((Class282_Sub48) class282_sub48).anIntArray8102).length);
-							Class343 class343 = Class343.method6094(Class219.aClass317_2714, (((Class282_Sub48) class282_sub48).anIntArray8102[i_21_]), 0);
+							Class343 class343 = Class343.method6094(IndexLoaders.SOUND_EFFECT_INDEX, (((Class282_Sub48) class282_sub48).anIntArray8102[i_21_]), 0);
 							if (null != class343) {
 								Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2 = (class343.method6089().method16062(Class119.aClass344_1460));
 								Class282_Sub15_Sub5_Sub2 class282_sub15_sub5_sub2 = ((Class282_Sub15_Sub5_Sub2) (class282_sub26_sub1_sub2.method15225(i_20_, i_17_ << 6, i_19_)));

@@ -8,7 +8,7 @@ public class Class167 {
 	SoftCache aClass229_2044 = new SoftCache(256);
 
 	Class137_Sub1 method2857(int i, int i_0_) {
-		Object object = ((Class167) this).aClass229_2044.method3865((long) i);
+		Object object = ((Class167) this).aClass229_2044.get((long) i);
 		if (object != null)
 			return (Class137_Sub1) object;
 		if (!((Class167) this).anInterface22_2043.method139(i, -1358664924))
@@ -38,7 +38,7 @@ public class Class167 {
 	}
 
 	Class137_Sub1 method2859(int i, int i_1_) {
-		Object object = ((Class167) this).aClass229_2044.method3865((long) i);
+		Object object = ((Class167) this).aClass229_2044.get((long) i);
 		if (object != null)
 			return (Class137_Sub1) object;
 		if (!((Class167) this).anInterface22_2043.method139(i, -1949668054))

@@ -43,7 +43,7 @@ public class Class499 {
 
 	static final void method8333(int i, int i_4_) {
 		Class473.method7887(-1685527133);
-		int i_5_ = (Class104.aClass377_1065.method6384(i, -822529502).anInt4327 * -735486551);
+		int i_5_ = (IndexLoaders.aClass377_1065.method6384(i, -822529502).anInt4327 * -735486551);
 		if (0 != i_5_) {
 			int i_6_ = Class158_Sub1.aClass3_8507.anIntArray26[i];
 			if (i_5_ == 5)

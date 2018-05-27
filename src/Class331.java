@@ -10,7 +10,7 @@ public class Class331 {
 	static final int anInt3873 = 32768;
 
 	public Class282_Sub50_Sub14 method5917(int i) {
-		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.method3865((long) i));
+		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
 		if (null != class282_sub50_sub14)
 			return class282_sub50_sub14;
 		byte[] is;
@@ -28,7 +28,7 @@ public class Class331 {
 	}
 
 	public Class282_Sub50_Sub14 method5918(int i, int i_0_) {
-		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.method3865((long) i));
+		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
 		if (null != class282_sub50_sub14)
 			return class282_sub50_sub14;
 		byte[] is;
@@ -46,7 +46,7 @@ public class Class331 {
 	}
 
 	public Class282_Sub50_Sub14 method5919(int i) {
-		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.method3865((long) i));
+		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
 		if (null != class282_sub50_sub14)
 			return class282_sub50_sub14;
 		byte[] is;
@@ -64,7 +64,7 @@ public class Class331 {
 	}
 
 	public Class282_Sub50_Sub14 method5920(int i) {
-		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.method3865((long) i));
+		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
 		if (null != class282_sub50_sub14)
 			return class282_sub50_sub14;
 		byte[] is;
@@ -115,7 +115,7 @@ public class Class331 {
 					if (i_5_ == -1)
 						class521_sub1_sub1_sub2.aClass456_Sub2_Sub1Array10354[i_8_] = null;
 					else {
-						AnimationDefinitions class518 = Class330.aClass523_3868.method11205(i_5_, (byte) 24);
+						AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(i_5_, (byte) 24);
 						int i_9_ = class518.anInt5907 * 554947543;
 						Class456_Sub2_Sub1 class456_sub2_sub1 = (class521_sub1_sub1_sub2.aClass456_Sub2_Sub1Array10354[i_8_]);
 						if (null != class456_sub2_sub1 && class456_sub2_sub1.method7564(646988470)) {

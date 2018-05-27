@@ -32,7 +32,7 @@ public class Class282_Sub2 extends Node {
 			class282_sub23 = Class271.method4828(OutgoingPacket.WALK, client.aClass184_7475.aClass432_2283, 1058999201);
 		if (i_1_ == 1)
 			class282_sub23 = Class271.method4828(OutgoingPacket.MINI_WALK, client.aClass184_7475.aClass432_2283, -505511344);
-		Class219 class219 = client.aClass257_7353.method4519(1520760306);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1520760306);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class84.method1465(-2046314159) ? 1 : 0);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i + 1948093437 * class219.anInt2711, 1417031095);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(i_0_ + -1002240017 * class219.anInt2712, (short) -23988);

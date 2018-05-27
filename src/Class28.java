@@ -195,7 +195,7 @@ public class Class28 implements Interface2 {
 	}
 
 	static void method777(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).anIntArray2968[(((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1])]);
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).anIntArray2968[(((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1])]);
 		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 

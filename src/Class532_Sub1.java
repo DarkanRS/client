@@ -84,7 +84,7 @@ public class Class532_Sub1 extends Class532 {
 			if (1 == i_61_)
 				Class48_Sub2.method14572(i, i_57_, i_58_, i_59_, i_60_, (short) 16204);
 			else
-				Class257.method4561(i, i_57_, i_58_, i_59_, i_60_, i_61_, -400478927);
+				MapRegion.method4561(i, i_57_, i_58_, i_59_, i_60_, i_61_, -400478927);
 		} else if (i_61_ == 1)
 			Class78.method1388(i, i_57_, i_58_, i_59_, i_60_, (byte) -9);
 		else
@@ -323,7 +323,7 @@ public class Class532_Sub1 extends Class532 {
 			if (1 == i_184_)
 				Class48_Sub2.method14572(i, i_180_, i_181_, i_182_, i_183_, (short) 24120);
 			else
-				Class257.method4561(i, i_180_, i_181_, i_182_, i_183_, i_184_, 1667511856);
+				MapRegion.method4561(i, i_180_, i_181_, i_182_, i_183_, i_184_, 1667511856);
 		} else if (i_184_ == 1)
 			Class78.method1388(i, i_180_, i_181_, i_182_, i_183_, (byte) -65);
 		else
@@ -375,14 +375,14 @@ public class Class532_Sub1 extends Class532 {
 					if (Class496.aClass496_5813 != Class90.aClass496_952 && -418109423 * Class349.anInt4083 < 1024 && client.anInt3243 * -969250379 >= 768) {
 						/* empty */
 					}
-					Class351.aCanvas4096.setSize((-418109423 * Class349.anInt4083), (client.anInt3243 * -969250379));
+					Class351.LOAD_CANVAS.setSize((-418109423 * Class349.anInt4083), (client.anInt3243 * -969250379));
 					if (Renderers.SOFTWARE_RENDERER != null)
-						Renderers.SOFTWARE_RENDERER.method8414(Class351.aCanvas4096, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379, -2138128111);
+						Renderers.SOFTWARE_RENDERER.method8414(Class351.LOAD_CANVAS, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379, -2138128111);
 					if (container == client.aFrame3261) {
 						Insets insets = client.aFrame3261.getInsets();
-						Class351.aCanvas4096.setLocation(insets.left + client.anInt3250 * -1911940837, insets.top + 698621615 * client.anInt3251);
+						Class351.LOAD_CANVAS.setLocation(insets.left + client.anInt3250 * -1911940837, insets.top + 698621615 * client.anInt3251);
 					} else
-						Class351.aCanvas4096.setLocation((client.anInt3250 * -1911940837), (698621615 * client.anInt3251));
+						Class351.LOAD_CANVAS.setLocation((client.anInt3250 * -1911940837), (698621615 * client.anInt3251));
 					Class400.method6795(-366853248);
 					if (client.anInt7349 * -1699899559 != -1)
 						Class516.method8867(true, -905479502);

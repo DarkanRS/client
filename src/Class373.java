@@ -47,15 +47,15 @@ public class Class373 {
 	static void method6365(int i) {
 		synchronized (Class236.aQueue2914) {
 			Point point;
-			if (Class351.aCanvas4096.isShowing())
-				point = Class351.aCanvas4096.getLocationOnScreen();
+			if (Class351.LOAD_CANVAS.isShowing())
+				point = Class351.LOAD_CANVAS.getLocationOnScreen();
 			else
 				point = null;
 			for (;;) {
 				Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) Class236.aQueue2914.poll();
 				if (null == class282_sub53_sub1)
 					break;
-				if (point == null || !Class351.aCanvas4096.isShowing() || !Class530.aBool7050)
+				if (point == null || !Class351.LOAD_CANVAS.isShowing() || !Class530.aBool7050)
 					class282_sub53_sub1.method13475(665742059);
 				else {
 					class282_sub53_sub1.method14732(point, -1545161336);

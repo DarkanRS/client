@@ -75,7 +75,7 @@ public class Class11 {
 	}
 
 	static void method466(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).method4101(Class158_Sub1.aClass3_8507, (byte) -15) ? 1 : 0;
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).method4101(Class158_Sub1.aClass3_8507, (byte) -15) ? 1 : 0;
 	}
 
 	static final void method467(CS2Executor class527, byte i) {

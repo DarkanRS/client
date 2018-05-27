@@ -57,7 +57,7 @@ public class Class337 {
 	}
 
 	public static void method6017(int i, int i_1_) {
-		Class218.aBoolArray2709[i] = false;
+		WorldMapIndexLoader.aBoolArray2709[i] = false;
 		Class12.method480(i, -1495607995);
 	}
 

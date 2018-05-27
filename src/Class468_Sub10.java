@@ -85,7 +85,7 @@ public class Class468_Sub10 extends Class468 {
 					for (int i_5_ = 0; i_5_ < i_4_; i_5_++) {
 						int i_6_ = class282_sub35.readUnsignedShort();
 						int i_7_ = class282_sub35.readInt();
-						if (i_6_ < Class320.anIntArray3724.length && Class282_Sub17_Sub2.aBoolArray9934[i_6_] && ((client.aClass408_7207.method6873(i_6_, (byte) 37).aChar4984) != '1' || i_7_ >= -1 && i_7_ <= 1))
+						if (i_6_ < Class320.anIntArray3724.length && Class282_Sub17_Sub2.aBoolArray9934[i_6_] && ((IndexLoaders.aClass408_7207.method6873(i_6_, (byte) 37).aChar4984) != '1' || i_7_ >= -1 && i_7_ <= 1))
 							Class320.anIntArray3724[i_6_] = i_7_;
 					}
 				}

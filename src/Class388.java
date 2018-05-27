@@ -88,7 +88,7 @@ public class Class388 implements Interface41 {
 	static final void method6691(CS2Executor class527, int i) {
 		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) != 0);
 		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = Class202.method3342((long) i_1_, 0, bool, Class223.aClass495_2772, (byte) -28);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = Class202.method3342((long) i_1_, 0, bool, Class223.CURRENT_LANGUAGE, (byte) -28);
 	}
 
 	static void method6692(int i) {

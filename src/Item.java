@@ -27,7 +27,7 @@ public class Item extends Node {
 			if ((1506818197 * class118.anInt1301 != -1125753931 * class119.anInt1458) || (-492594917 * class118.anInt1429 != 2069222845 * class119.anInt1454))
 				throw new IllegalStateException("");
 			if (2 != -1221526793 * Class187.anInt2363 && Class187.anInt2363 * -1221526793 != 5 && Class419.aClass160_5004 != null) {
-				Class219 class219 = client.aClass257_7353.method4519(1681892219);
+				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1681892219);
 				int i_6_;
 				int i_7_;
 				int i_8_;
@@ -45,9 +45,9 @@ public class Item extends Node {
 					i_9_ = 4096 - 234318736 * client.anInt7203;
 				}
 				int i_10_ = 48 + i_6_ / 128;
-				int i_11_ = (48 + client.aClass257_7353.method4451(-1005893088) * 4 - i_7_ / 128);
+				int i_11_ = (48 + IndexLoaders.MAP_REGION_DECODER.method4451(-1005893088) * 4 - i_7_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_4_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_10_, (float) i_11_, i_9_, i_8_ << 2, class455, i, i_4_);
-				Class283 class283 = client.aClass257_7353.method4528((byte) 38);
+				Class283 class283 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 38);
 				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.head((byte) 120)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.next(1158642483))) {
 					int i_12_ = class282_sub38.anInt8002 * -570797415;
 					int i_13_ = ((class283.anIntArray3381[i_12_] >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
@@ -59,7 +59,7 @@ public class Item extends Node {
 				for (int i_17_ = 0; i_17_ < Class187.anInt2353 * 1036045197; i_17_++) {
 					int i_18_ = 4 * Class187.anIntArray2354[i_17_] + 2 - i_6_ / 128;
 					int i_19_ = Class187.anIntArray2355[i_17_] * 4 + 2 - i_7_ / 128;
-					Class478 class478 = (client.aClass257_7353.method4436(-1953311803).method7891(Class187.anIntArray2357[i_17_], 65280));
+					ObjectDefinitions class478 = (IndexLoaders.MAP_REGION_DECODER.method4436(-1953311803).getObjectDefinitions(Class187.anIntArray2357[i_17_], 65280));
 					if (null != class478.anIntArray5650) {
 						class478 = class478.method8013(Class158_Sub1.aClass3_8507, (byte) -58);
 						if (class478 == null || -1796959211 * class478.anInt5669 == -1)

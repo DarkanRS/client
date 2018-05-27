@@ -32,6 +32,6 @@ public class Class403 {
 		Class488.aClass317_5761 = class317_2_;
 		Class463.aClass317_5549 = class317_3_;
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1686951777)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1593209723)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1593209723)];
 	}
 }

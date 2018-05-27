@@ -201,7 +201,7 @@ public final class Class241 {
 		if (-1 == i_29_)
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class296.aClass331_3535.method5918(i_28_, 230168792).method15211((char) i_29_, 1343010087);
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.aClass331_3535.method5918(i_28_, 230168792).method15211((char) i_29_, 1343010087);
 	}
 
 	static final void method4149(Class118 class118, Class98 class98, CS2Executor class527, int i) {

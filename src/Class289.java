@@ -292,10 +292,10 @@ public class Class289 implements Runnable {
 		Class169.method2869(1783349516);
 		if (!class505.method8455(1890093661))
 			return false;
-		int i_11_ = client.aClass257_7353.method4424(-1338331391);
-		int i_12_ = client.aClass257_7353.method4451(-663161868);
-		Class311 class311 = client.aClass257_7353.method4433(33386298);
-		Class206 class206 = client.aClass257_7353.method4430(-1741761339);
+		int i_11_ = IndexLoaders.MAP_REGION_DECODER.method4424(-1338331391);
+		int i_12_ = IndexLoaders.MAP_REGION_DECODER.method4451(-663161868);
+		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1741761339);
 		int i_13_ = i_11_ / 2;
 		int i_14_ = 0;
 		int i_15_ = 0;
@@ -335,7 +335,7 @@ public class Class289 implements Runnable {
 			class505.ba(1, 0);
 		} else
 			Class419.aClass160_5004 = class505.createNativeSprite(is, 0, i_20_, i_20_, i_20_, 1063937715);
-		client.aClass257_7353.method4435((byte) 1).method4052((byte) 1);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4052((byte) 1);
 		int i_24_ = ~0xffffff | ((238 + (int) (Math.random() * 20.0) - 10 << 16) + (238 + (int) (Math.random() * 20.0) - 10 << 8) + (238 + (int) (Math.random() * 20.0) - 10));
 		int i_25_ = ~0xffffff | 238 + (int) (Math.random() * 20.0) - 10 << 16;
 		int i_26_ = ((int) (Math.random() * 8.0) << 16 | (int) (Math.random() * 8.0) << 8 | (int) (Math.random() * 8.0));
@@ -391,7 +391,7 @@ public class Class289 implements Runnable {
 					}
 				}
 				if (Class187.aBool2356) {
-					Class336 class336 = client.aClass257_7353.method4552(i, 1801793645);
+					Class336 class336 = IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645);
 					for (int i_44_ = 0; i_44_ < i_13_; i_44_++) {
 						for (int i_45_ = 0; i_45_ < i_13_; i_45_++) {
 							int i_46_ = i_27_ + i_44_;
@@ -440,7 +440,7 @@ public class Class289 implements Runnable {
 		class505.L();
 		class505.ba(1, 1);
 		IncomingPacket.method6378(-1538407760);
-		Class474 class474 = client.aClass257_7353.method4436(-1461590672);
+		ObjectIndexLoader class474 = IndexLoaders.MAP_REGION_DECODER.method4436(-1461590672);
 		Class187.anInt2353 = 0;
 		Class187.aClass482_2350.method8118(862321870);
 		if (!Class187.aBool2356) {
@@ -456,13 +456,13 @@ public class Class289 implements Runnable {
 							if (interface12 == null)
 								interface12 = ((Interface12) class206.method3511(i_51_, i_49_, i_50_, (byte) 98));
 							if (interface12 != null) {
-								Class478 class478 = (class474.method7891(interface12.method84(905574000), 65280));
+								ObjectDefinitions class478 = (class474.getObjectDefinitions(interface12.method84(905574000), 65280));
 								if (!class478.aBool5660 || client.membersWorld) {
 									int i_52_ = class478.anInt5669 * -1796959211;
 									if (class478.anIntArray5650 != null) {
 										for (int i_53_ = 0; i_53_ < (class478.anIntArray5650).length; i_53_++) {
 											if (class478.anIntArray5650[i_53_] != -1) {
-												Class478 class478_54_ = (class474.method7891((class478.anIntArray5650[i_53_]), 65280));
+												ObjectDefinitions class478_54_ = (class474.getObjectDefinitions((class478.anIntArray5650[i_53_]), 65280));
 												if ((class478_54_.anInt5669 * -1796959211) >= 0)
 													i_52_ = (-1796959211 * (class478_54_.anInt5669));
 											}
@@ -471,16 +471,16 @@ public class Class289 implements Runnable {
 									if (i_52_ >= 0) {
 										boolean bool_55_ = false;
 										if (i_52_ >= 0) {
-											Class220 class220 = (Class397.aClass218_4813.method3700(i_52_, 537535478));
+											WorldMapAreaDefs class220 = (IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_52_, 537535478));
 											if (class220 != null && class220.aBool2730)
 												bool_55_ = true;
 										}
 										int i_56_ = i_49_;
 										int i_57_ = i_50_;
 										if (bool_55_) {
-											int[][] is_58_ = (client.aClass257_7353.method4552(i_51_, 1801793645).anIntArrayArray3922);
-											int i_59_ = ((client.aClass257_7353.method4552(i_51_, 1801793645).anInt3931) * -1969357273);
-											int i_60_ = ((client.aClass257_7353.method4552(i_51_, 1801793645).anInt3964) * 1503444365);
+											int[][] is_58_ = (IndexLoaders.MAP_REGION_DECODER.method4552(i_51_, 1801793645).anIntArrayArray3922);
+											int i_59_ = ((IndexLoaders.MAP_REGION_DECODER.method4552(i_51_, 1801793645).anInt3931) * -1969357273);
+											int i_60_ = ((IndexLoaders.MAP_REGION_DECODER.method4552(i_51_, 1801793645).anInt3964) * 1503444365);
 											for (int i_61_ = 0; i_61_ < 10; i_61_++) {
 												int i_62_ = (int) (Math.random() * 4.0);
 												if (0 == i_62_ && i_56_ > i_14_ && i_56_ > i_49_ - 3 && 0 == ((is_58_[(i_56_ - 1 - i_59_)][i_57_ - i_60_]) & 0x2c0108))
@@ -493,7 +493,7 @@ public class Class289 implements Runnable {
 													i_57_++;
 											}
 										}
-										Class187.anIntArray2357[Class187.anInt2353 * 1036045197] = class478.anInt5633 * -2132690865;
+										Class187.anIntArray2357[Class187.anInt2353 * 1036045197] = class478.id * -2132690865;
 										Class187.anIntArray2354[1036045197 * Class187.anInt2353] = i_56_;
 										Class187.anIntArray2355[Class187.anInt2353 * 1036045197] = i_57_;
 										Class187.anInt2353 += -928813243;
@@ -504,10 +504,10 @@ public class Class289 implements Runnable {
 					}
 				}
 			}
-			Class283 class283 = client.aClass257_7353.method4528((byte) 79);
+			Class283 class283 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 79);
 			if (class283 != null) {
-				Class397.aClass218_4813.method3697(1024, 64, -2093693613);
-				Class219 class219 = client.aClass257_7353.method4519(825342307);
+				IndexLoaders.WORLD_MAP_INDEX_LOADER.method3697(1024, 64, -2093693613);
+				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(825342307);
 				for (int i_63_ = 0; i_63_ < class283.anInt3382 * -361490119; i_63_++) {
 					int i_64_ = class283.anIntArray3381[i_63_];
 					if (i_64_ >> 28 == (Class84.myPlayer.aByte7967)) {
@@ -516,13 +516,13 @@ public class Class289 implements Runnable {
 						if (i_65_ >= 0 && i_65_ < i_11_ && i_66_ >= 0 && i_66_ < i_12_)
 							Class187.aClass482_2350.append(new Class282_Sub38(i_63_), -2102160301);
 						else {
-							Class220 class220 = (Class397.aClass218_4813.method3700(class283.anIntArray3383[i_63_], 1792768149));
+							WorldMapAreaDefs class220 = (IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(class283.anIntArray3383[i_63_], 1792768149));
 							if (null != class220.anIntArray2717 && (i_65_ + class220.anInt2731 * -1051190363 >= 0) && (class220.anInt2747 * -195227125 + i_65_ < i_11_) && 1123286327 * class220.anInt2746 + i_66_ >= 0 && (i_66_ + class220.anInt2744 * 1104382109 < i_12_))
 								Class187.aClass482_2350.append(new Class282_Sub38(i_63_), -1057083252);
 						}
 					}
 				}
-				Class397.aClass218_4813.method3697(128, 64, -1572860391);
+				IndexLoaders.WORLD_MAP_INDEX_LOADER.method3697(128, 64, -1572860391);
 			}
 		}
 		return true;

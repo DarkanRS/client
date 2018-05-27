@@ -1175,14 +1175,14 @@ public final class Class251 {
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
-					Class219 class219 = client.aClass257_7353.method4519(1275338740);
+					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1275338740);
 					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.anInt2711) >> 6).append(",").append((-1002240017 * class219.anInt2712 + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.anInt2711 * 1948093437) & 0x3f).append(",")
 							.append((class219.anInt2712 * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 22)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -2096324041);
 					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.anInt2711 * 1948093437) >> 6).append(",").append((Class369.anInt4280 * 469662201 + class219.anInt2712 * -1002240017) >> 6).append(",").append((class219.anInt2711 * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 2)) - 654473753 * Class121.anInt1527).toString(), -2049086171);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -927245115)), -314816204);
+				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -927245115)), -314816204);
 			}
 			return;
 		} while (false);
@@ -1326,7 +1326,7 @@ public final class Class251 {
 						if (class184.method3053((byte) -116) != null)
 							class184.method3053((byte) -71).method3320((byte) 52);
 					}
-					Class119.aClass312_1462.method5543((byte) 48);
+					Class119.JS5_STANDARD_REQUESTER.method5543((byte) 48);
 					return;
 				}
 				if (string.startsWith("getclientvarpbit")) {
@@ -1402,16 +1402,16 @@ public final class Class251 {
 					client.aClass184_7475.method3049(class282_sub23, -273447008);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1449846660)), -1151783606);
+				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1449846660)), -1151783606);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -1344246012)).append(string).toString(), -1444759652);
+			Class209.method3598(new StringBuilder().append(Message.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1344246012)).append(string).toString(), -1444759652);
 	}
 
 	static void method4314(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).method4103(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -394016301)) ? 1 : 0;
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).method4103(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -394016301)) ? 1 : 0;
 		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 
@@ -1419,12 +1419,12 @@ public final class Class251 {
 		Class283.anInt3384 = 0;
 	}
 
-	public static final int method4316(Class474 class474, byte[] is, int i, int i_181_, int i_182_, int i_183_, short i_184_) {
+	public static final int decodeLandscapeData(ObjectIndexLoader objectDefs, byte[] data, int regionX, int regionY, int i_182_, int i_183_, short i_184_) {
 		int i_185_ = 0;
-		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
+		RsByteBuffer stream = new RsByteBuffer(data);
 		int i_186_ = -1;
 		for (;;) {
-			int i_187_ = class282_sub35.readSmart2(-1436314957);
+			int i_187_ = stream.readSmart2(-1436314957);
 			if (i_187_ == 0)
 				break;
 			i_186_ += i_187_;
@@ -1432,24 +1432,24 @@ public final class Class251 {
 			boolean bool = false;
 			for (;;) {
 				if (bool) {
-					int i_189_ = class282_sub35.readUnsignedSmart(1964048281);
+					int i_189_ = stream.readUnsignedSmart(1964048281);
 					if (0 == i_189_)
 						break;
-					class282_sub35.readUnsignedByte();
+					stream.readUnsignedByte();
 				} else {
-					int i_190_ = class282_sub35.readUnsignedSmart(1841377249);
+					int i_190_ = stream.readUnsignedSmart(1841377249);
 					if (0 == i_190_)
 						break;
 					i_188_ += i_190_ - 1;
 					int i_191_ = i_188_ & 0x3f;
 					int i_192_ = i_188_ >> 6 & 0x3f;
-					int i_193_ = class282_sub35.readUnsignedByte() >> 2;
-					int i_194_ = i_192_ + i;
-					int i_195_ = i_181_ + i_191_;
+					int i_193_ = stream.readUnsignedByte() >> 2;
+					int i_194_ = i_192_ + regionX;
+					int i_195_ = regionY + i_191_;
 					if (i_194_ > 0 && i_195_ > 0 && i_194_ < i_182_ - 1 && i_195_ < i_183_ - 1) {
-						Class478 class478 = class474.method7891(i_186_, 65280);
-						if ((Class458.aClass458_5480.anInt5481 * 1109376893 != i_193_) || Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 59) != 0 || class478.anInt5652 * -348507379 != 0 || 647396503 * class478.anInt5677 == 1 || class478.aBool5685) {
-							if (!class478.method7968(-2090294731))
+						ObjectDefinitions defs = objectDefs.getObjectDefinitions(i_186_, 65280);
+						if ((Class458.aClass458_5480.anInt5481 * 1109376893 != i_193_) || Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 59) != 0 || defs.anInt5652 * -348507379 != 0 || 647396503 * defs.anInt5677 == 1 || defs.aBool5685) {
+							if (!defs.method7968(-2090294731))
 								i_185_++;
 							bool = true;
 						}

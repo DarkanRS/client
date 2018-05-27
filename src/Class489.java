@@ -42,7 +42,7 @@ public class Class489 {
 	}
 
 	static void method8216(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).method4098(Class158_Sub1.aClass3_8507, (byte) 1) ? 1 : 0;
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).method4098(Class158_Sub1.aClass3_8507, (byte) 1) ? 1 : 0;
 	}
 
 	static void method8217(int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, Class476 class476, byte i_8_) {

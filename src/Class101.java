@@ -629,13 +629,13 @@ public abstract class Class101 {
 			return 0;
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 1085109812);
 		if (class282_sub30 == null)
-			return ((Class96_Sub10.aClass392_9298.method6735(i, (short) 6976).anInt10277) * 875957203);
+			return ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 6976).anInt10277) * 875957203);
 		int i_80_ = 0;
 		for (int i_81_ = 0; i_81_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length; i_81_++) {
 			if (-1 == ((Class282_Sub30) class282_sub30).anIntArray7710[i_81_])
 				i_80_++;
 		}
-		i_80_ += ((Class96_Sub10.aClass392_9298.method6735(i, (short) 24410).anInt10277) * 875957203 - ((Class282_Sub30) class282_sub30).anIntArray7710.length);
+		i_80_ += ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 24410).anInt10277) * 875957203 - ((Class282_Sub30) class282_sub30).anIntArray7710.length);
 		return i_80_;
 	}
 

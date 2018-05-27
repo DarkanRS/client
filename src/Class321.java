@@ -12,8 +12,7 @@ public final class Class321 {
 	Map aMap3728;
 	Class332 aClass332_3729;
 	int anInt3730;
-	public static Interface22 anInterface22_3731;
-
+	
 	public Object method5737(Object object, int i) {
 		synchronized (this) {
 			if (-1L != ((Class321) this).aLong3726 * 7831064100123684311L)

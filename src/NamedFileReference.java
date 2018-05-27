@@ -5,8 +5,7 @@
 public class NamedFileReference {
 	int[] anIntArray410;
 	static Class523 aClass523_411;
-	public static Index aClass317_412;
-
+	
 	public int method864(int i) {
 		int i_0_ = (((NamedFileReference) this).anIntArray410.length >> 1) - 1;
 		int i_1_ = i & i_0_;
@@ -69,7 +68,7 @@ public class NamedFileReference {
 	}
 
 	static void method868(CS2Executor class527, byte i) {
-		Class240 class240 = Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2961 ? 0 : class240.anIntArray2961.length);
 	}
 

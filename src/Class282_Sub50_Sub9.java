@@ -298,7 +298,7 @@ public class Class282_Sub50_Sub9 extends Class282_Sub50 {
 	}
 
 	static boolean method14921(int i, int i_28_, int i_29_, byte i_30_) {
-		Class206 class206 = client.aClass257_7353.method4430(-1536948250);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1536948250);
 		boolean bool = true;
 		Interface12 interface12 = (Interface12) class206.method3381(i, i_28_, i_29_, (byte) -61);
 		if (null != interface12)

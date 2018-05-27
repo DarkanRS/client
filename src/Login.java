@@ -14,8 +14,7 @@ public class Login {
 	boolean aBool3386;
 	int anInt3387;
 	public List aList3388 = new LinkedList();
-	public static Class210 aClass210_3389;
-
+	
 	public void method5011() {
 		Iterator iterator = aList3388.iterator();
 		while (iterator.hasNext()) {
@@ -121,7 +120,7 @@ public class Login {
 	}
 
 	static void method5016(CS2Executor class527, int i) {
-		Class240 class240 = Class409.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
 	}
 
@@ -187,13 +186,13 @@ public class Login {
 							RsByteBuffer class282_sub35 = Class94.method1587((byte) -40);
 							class282_sub35.writeByte((1051306693 * Class9.anInt76));
 							class282_sub35.writeShort((int) (Math.random() * 9.9999999E7), 1417031095);
-							class282_sub35.writeByte(Class223.aClass495_2772.method243((byte) 1));
+							class282_sub35.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
 							class282_sub35.writeInt((client.anInt7149 * -1543197399));
 							for (int i_7_ = 0; i_7_ < 6; i_7_++) {
 								class282_sub35.writeInt((int) (Math.random() * 9.9999999E7));
 							}
 							class282_sub35.writeLong(2357923306087344989L * client.aLong7409);
-							class282_sub35.writeByte(((client.aClass486_7450.anInt5746) * 1648080491));
+							class282_sub35.writeByte(((client.CURRENT_GAME.anInt5746) * 1648080491));
 							class282_sub35.writeByte((int) (Math.random() * 9.9999999E7));
 							class282_sub35.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
 							class282_sub23.aClass282_Sub35_Sub2_7682.writeBytes(class282_sub35.buffer, 0, class282_sub35.index * -1990677291);
@@ -357,8 +356,8 @@ public class Login {
 									out.writeLong(Class9.aLong77 * 8013795473128403269L);
 								}
 							}
-							out.writeByte(((client.aClass486_7450.anInt5746) * 1648080491));
-							out.writeByte(Class223.aClass495_2772.method243((byte) 1));
+							out.writeByte(((client.CURRENT_GAME.anInt5746) * 1648080491));
+							out.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
 							Class31.method809(out, -378154884);
 							out.writeString(client.aString7281);
 							RsByteBuffer class282_sub35 = Class393.aClass282_Sub54_4783.method13499(-1147561842);
@@ -512,10 +511,10 @@ public class Login {
 								Class504.anInt5832 = (stream.read24BitInteger(1818887431) * 1346472513);
 								client.membersWorld = stream.readUnsignedByte() == 1;
 								Class311.aString3643 = stream.readString(2109747310);
-								client.aClass257_7353.method4436(-1683757670).method7912(client.membersWorld, 65280);
-								Class6.aClass340_45.method6052((short) 2983).method4436(-1487690474).method7912(client.membersWorld, 65280);
+								IndexLoaders.MAP_REGION_DECODER.method4436(-1683757670).method7912(client.membersWorld, 65280);
+								IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) 2983).method4436(-1487690474).method7912(client.membersWorld, 65280);
 								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1605655563);
-								Class350_Sub1.aClass406_7757.method6847(client.membersWorld, (byte) 53);
+								IndexLoaders.NPC_INDEX_LOADER.method6847(client.membersWorld, (byte) 53);
 							} else {
 								if (!Class9.aClass184_73.method3053((byte) -33).method3315(1878721557 * Class153.anInt1965, (byte) 63)) {
 									break;
@@ -633,9 +632,9 @@ public class Login {
 								System.arraycopy((Class9.aClass184_73.aClass282_Sub35_Sub2_2284.buffer), ((Class9.aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291), class282_sub35_sub2.buffer, 0, i_21_);
 								Class9.aClass184_73.aClass282_Sub35_Sub2_2284.index += -1115476867 * i_21_;
 								if (IncomingPacket.DYNAMIC_MAP_REGION == (Class9.aClass184_73.aClass375_2286)) {
-									client.aClass257_7353.method4499(new Class335(Class256.aClass256_3155, class282_sub35_sub2), 356381544);
+									IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, class282_sub35_sub2), 356381544);
 								} else {
-									client.aClass257_7353.method4499(new Class335(Class256.aClass256_3158, class282_sub35_sub2), 1199163537);
+									IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, class282_sub35_sub2), 1199163537);
 								}
 								if ((-1990677291 * (Class9.aClass184_73.aClass282_Sub35_Sub2_2284.index)) != i_20_) {
 									throw new RuntimeException(new StringBuilder().append(-1990677291 * (Class9.aClass184_73.aClass282_Sub35_Sub2_2284.index)).append(" ").append(i_20_).toString());

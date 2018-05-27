@@ -88,7 +88,7 @@ public class Class363 {
 			i_7_ = Class8_Sub1.anInt8515 * -1293360775;
 		}
 		Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-		if ((int) class385.aFloat4671 < 512 || (int) class385.aFloat4673 < 512 || ((int) class385.aFloat4671 >= (client.aClass257_7353.method4424(735172073) - 1) * 512) || ((int) class385.aFloat4673 >= ((client.aClass257_7353.method4451(-1048165287) - 1) * 512))) {
+		if ((int) class385.aFloat4671 < 512 || (int) class385.aFloat4673 < 512 || ((int) class385.aFloat4671 >= (IndexLoaders.MAP_REGION_DECODER.method4424(735172073) - 1) * 512) || ((int) class385.aFloat4673 >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-1048165287) - 1) * 512))) {
 			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
 			for (int i_8_ = 0; i_8_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_8_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_8_].anInt2012 = 1025302087;
@@ -102,7 +102,7 @@ public class Class363 {
 			class521_sub1_sub1_sub2.method11172((float) (512 * class521_sub1_sub1_sub2.regionBaseX[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.aFloat4672, (float) (class521_sub1_sub1_sub2.regionBaseY[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
-		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.aFloat4671 < 6144 || (int) class385.aFloat4673 < 6144 || ((int) class385.aFloat4671 >= ((client.aClass257_7353.method4424(723986373) - 12) * 512)) || ((int) class385.aFloat4673 >= ((client.aClass257_7353.method4451(-806842262) - 12) * 512)))) {
+		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.aFloat4671 < 6144 || (int) class385.aFloat4673 < 6144 || ((int) class385.aFloat4671 >= ((IndexLoaders.MAP_REGION_DECODER.method4424(723986373) - 12) * 512)) || ((int) class385.aFloat4673 >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-806842262) - 12) * 512)))) {
 			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
 			for (int i_9_ = 0; i_9_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_9_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_9_].anInt2012 = 1025302087;

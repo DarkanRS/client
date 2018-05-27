@@ -7,8 +7,7 @@ import java.io.IOException;
 import java.util.Date;
 
 public abstract class Class209 {
-	public static Index aClass317_2663;
-
+	
 	public boolean method3563() {
 		return (method3565((byte) -32) || method3566(-2143623365) || method3567((byte) 10));
 	}
@@ -160,7 +159,7 @@ public abstract class Class209 {
 		int i_11_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (6 != class118.anInt1329 * 2131324949 && 2 != 2131324949 * class118.anInt1329)
 			throw new RuntimeException("");
-		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(-402732635 * class118.anInt1330, (byte) 4);
+		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(-402732635 * class118.anInt1330, (byte) 4);
 		if (null == class118.aClass417_1308)
 			class118.aClass417_1308 = new Class417(class409, 2131324949 * class118.anInt1329 == 6);
 		class118.aClass417_1308.aLong4993 = Class86.method1480(1488415195) * 7197667099348947907L;

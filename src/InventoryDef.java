@@ -2,13 +2,13 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub50_Sub18 extends Class282_Sub50 implements Interface46 {
+public class InventoryDef extends Class282_Sub50 implements Interface46 {
 	public int[] anIntArray10274;
 	public int[] anIntArray10275;
 	public int anInt10276 = 0;
 	public int anInt10277 = 0;
 
-	Class282_Sub50_Sub18() {
+	InventoryDef() {
 		/* empty */
 	}
 

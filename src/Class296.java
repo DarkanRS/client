@@ -9,8 +9,7 @@ public class Class296 {
 	static int anInt3532 = 0;
 	static int anInt3533 = 0;
 	public static int anInt3534;
-	public static Class331 aClass331_3535;
-
+	
 	public static int method5293() {
 		if (0 == anInt3532 * 1164388509) {
 			Class446.aClass446_5412.method7435(new Class301("jaclib"), (byte) -56);
@@ -29,32 +28,32 @@ public class Class296 {
 		}
 		if (1 == anInt3532 * 1164388509) {
 			aClass446Array3531 = Class446.method7436((byte) 24);
-			Class446.aClass446_5386.method7435(new Class298(Class520.aClass317_5935), (byte) -17);
+			Class446.aClass446_5386.method7435(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -17);
 			Class446.aClass446_5387.method7435(new Class301("jaggl"), (byte) -50);
 			Class446.aClass446_5388.method7435(new Class301("jagdx"), (byte) -18);
 			Class446.aClass446_5389.method7435(new Class301("sw3d"), (byte) 92);
 			Class446.aClass446_5415.method7435(new Class301("hw3d"), (byte) 5);
 			Class446.aClass446_5385.method7435(new Class301("jagtheora"), (byte) 66);
-			Class446.aClass446_5392.method7435(new Class298(Class488.aClass317_5758), (byte) 10);
-			Class446.aClass446_5390.method7435(new Class298(NamedFileReference.aClass317_412), (byte) -6);
-			Class446.aClass446_5394.method7435(new Class298(Class282_Sub39.aClass317_8005), (byte) 37);
-			Class446.aClass446_5395.method7435(new Class298(Class273.aClass317_3332), (byte) -57);
-			Class446.aClass446_5397.method7435(new Class298(Class236.aClass317_2915), (byte) -45);
-			Class446.aClass446_5393.method7435(new Class298(Class107.aClass317_1081), (byte) 27);
-			Class446.aClass446_5413.method7435(new Class298(Class383.aClass317_4665), (byte) 7);
-			Class446.aClass446_5399.method7435(new Class298(Class235.aClass317_2908), (byte) -57);
-			Class446.aClass446_5400.method7435(new Class298(ReferenceTable.aClass317_3749), (byte) 50);
-			Class446.aClass446_5401.method7435(new Class298(Class222.aClass317_2766), (byte) -31);
-			Class446.aClass446_5402.method7435(new Class298(Class371.aClass317_4326), (byte) -95);
-			Class446.aClass446_5403.method7435(new Class298(Class329.aClass317_3861), (byte) 5);
-			Class446.aClass446_5404.method7435(new Class298(AttributeDefault.aClass317_5340), (byte) -67);
-			Class446.aClass446_5405.method7435(new Class298(Class468_Sub7.aClass317_7886), (byte) 70);
-			Class446.aClass446_5410.method7435(new Class298(Class215.aClass317_2686), (byte) -42);
-			Class446.aClass446_5407.method7435(new Class383((Class250.aClass317_3093), "huffman"), (byte) 46);
-			Class446.aClass446_5391.method7435(new Class298(Class523.aClass317_6957), (byte) 96);
-			Class446.aClass446_5409.method7435(new Class298(Class378.aClass317_4526), (byte) -35);
-			Class446.aClass446_5398.method7435(new Class298(Class410.aClass317_4924), (byte) -24);
-			Class446.aClass446_5411.method7435(new Class388((Class192.worldMap), "details"), (byte) -74);
+			Class446.aClass446_5392.method7435(new Class298(IndexLoaders.SHADER_INDEX), (byte) 10);
+			Class446.aClass446_5390.method7435(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) -6);
+			Class446.aClass446_5394.method7435(new Class298(IndexLoaders.CONFIG_INDEX), (byte) 37);
+			Class446.aClass446_5395.method7435(new Class298(IndexLoaders.OBJECT_INDEX), (byte) -57);
+			Class446.aClass446_5397.method7435(new Class298(IndexLoaders.ENUM_INDEX), (byte) -45);
+			Class446.aClass446_5393.method7435(new Class298(IndexLoaders.NPC_INDEX), (byte) 27);
+			Class446.aClass446_5413.method7435(new Class298(IndexLoaders.ITEM_INDEX), (byte) 7);
+			Class446.aClass446_5399.method7435(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) -57);
+			Class446.aClass446_5400.method7435(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 50);
+			Class446.aClass446_5401.method7435(new Class298(IndexLoaders.VARBIT_INDEX), (byte) -31);
+			Class446.aClass446_5402.method7435(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) -95);
+			Class446.aClass446_5403.method7435(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) 5);
+			Class446.aClass446_5404.method7435(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) -67);
+			Class446.aClass446_5405.method7435(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 70);
+			Class446.aClass446_5410.method7435(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -42);
+			Class446.aClass446_5407.method7435(new Class383((IndexLoaders.HUFFMAN_INDEX), "huffman"), (byte) 46);
+			Class446.aClass446_5391.method7435(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) 96);
+			Class446.aClass446_5409.method7435(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) -35);
+			Class446.aClass446_5398.method7435(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -24);
+			Class446.aClass446_5411.method7435(new Class388((IndexLoaders.WORLD_MAP_INDEX), "details"), (byte) -74);
 			for (int i = 0; i < aClass446Array3531.length; i++) {
 				if (aClass446Array3531[i].method7443(1480288863) == null)
 					throw new RuntimeException();
@@ -116,32 +115,32 @@ public class Class296 {
 		}
 		if (1 == anInt3532 * 1164388509) {
 			aClass446Array3531 = Class446.method7436((byte) 24);
-			Class446.aClass446_5386.method7435(new Class298(Class520.aClass317_5935), (byte) -13);
+			Class446.aClass446_5386.method7435(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -13);
 			Class446.aClass446_5387.method7435(new Class301("jaggl"), (byte) -8);
 			Class446.aClass446_5388.method7435(new Class301("jagdx"), (byte) 47);
 			Class446.aClass446_5389.method7435(new Class301("sw3d"), (byte) 61);
 			Class446.aClass446_5415.method7435(new Class301("hw3d"), (byte) 20);
 			Class446.aClass446_5385.method7435(new Class301("jagtheora"), (byte) -18);
-			Class446.aClass446_5392.method7435(new Class298(Class488.aClass317_5758), (byte) -71);
-			Class446.aClass446_5390.method7435(new Class298(NamedFileReference.aClass317_412), (byte) -24);
-			Class446.aClass446_5394.method7435(new Class298(Class282_Sub39.aClass317_8005), (byte) -59);
-			Class446.aClass446_5395.method7435(new Class298(Class273.aClass317_3332), (byte) 104);
-			Class446.aClass446_5397.method7435(new Class298(Class236.aClass317_2915), (byte) -60);
-			Class446.aClass446_5393.method7435(new Class298(Class107.aClass317_1081), (byte) -51);
-			Class446.aClass446_5413.method7435(new Class298(Class383.aClass317_4665), (byte) 2);
-			Class446.aClass446_5399.method7435(new Class298(Class235.aClass317_2908), (byte) 8);
-			Class446.aClass446_5400.method7435(new Class298(ReferenceTable.aClass317_3749), (byte) 80);
-			Class446.aClass446_5401.method7435(new Class298(Class222.aClass317_2766), (byte) 47);
-			Class446.aClass446_5402.method7435(new Class298(Class371.aClass317_4326), (byte) -68);
-			Class446.aClass446_5403.method7435(new Class298(Class329.aClass317_3861), (byte) 68);
-			Class446.aClass446_5404.method7435(new Class298(AttributeDefault.aClass317_5340), (byte) -3);
-			Class446.aClass446_5405.method7435(new Class298(Class468_Sub7.aClass317_7886), (byte) 78);
-			Class446.aClass446_5410.method7435(new Class298(Class215.aClass317_2686), (byte) -52);
-			Class446.aClass446_5407.method7435(new Class383((Class250.aClass317_3093), "huffman"), (byte) -25);
-			Class446.aClass446_5391.method7435(new Class298(Class523.aClass317_6957), (byte) 17);
-			Class446.aClass446_5409.method7435(new Class298(Class378.aClass317_4526), (byte) 6);
-			Class446.aClass446_5398.method7435(new Class298(Class410.aClass317_4924), (byte) -39);
-			Class446.aClass446_5411.method7435(new Class388((Class192.worldMap), "details"), (byte) -8);
+			Class446.aClass446_5392.method7435(new Class298(IndexLoaders.SHADER_INDEX), (byte) -71);
+			Class446.aClass446_5390.method7435(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) -24);
+			Class446.aClass446_5394.method7435(new Class298(IndexLoaders.CONFIG_INDEX), (byte) -59);
+			Class446.aClass446_5395.method7435(new Class298(IndexLoaders.OBJECT_INDEX), (byte) 104);
+			Class446.aClass446_5397.method7435(new Class298(IndexLoaders.ENUM_INDEX), (byte) -60);
+			Class446.aClass446_5393.method7435(new Class298(IndexLoaders.NPC_INDEX), (byte) -51);
+			Class446.aClass446_5413.method7435(new Class298(IndexLoaders.ITEM_INDEX), (byte) 2);
+			Class446.aClass446_5399.method7435(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) 8);
+			Class446.aClass446_5400.method7435(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 80);
+			Class446.aClass446_5401.method7435(new Class298(IndexLoaders.VARBIT_INDEX), (byte) 47);
+			Class446.aClass446_5402.method7435(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) -68);
+			Class446.aClass446_5403.method7435(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) 68);
+			Class446.aClass446_5404.method7435(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) -3);
+			Class446.aClass446_5405.method7435(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 78);
+			Class446.aClass446_5410.method7435(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -52);
+			Class446.aClass446_5407.method7435(new Class383((IndexLoaders.HUFFMAN_INDEX), "huffman"), (byte) -25);
+			Class446.aClass446_5391.method7435(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) 17);
+			Class446.aClass446_5409.method7435(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) 6);
+			Class446.aClass446_5398.method7435(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -39);
+			Class446.aClass446_5411.method7435(new Class388((IndexLoaders.WORLD_MAP_INDEX), "details"), (byte) -8);
 			for (int i = 0; i < aClass446Array3531.length; i++) {
 				if (aClass446Array3531[i].method7443(1425576153) == null)
 					throw new RuntimeException();
@@ -207,32 +206,32 @@ public class Class296 {
 		}
 		if (1 == anInt3532 * 1164388509) {
 			aClass446Array3531 = Class446.method7436((byte) 24);
-			Class446.aClass446_5386.method7435(new Class298(Class520.aClass317_5935), (byte) -47);
+			Class446.aClass446_5386.method7435(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -47);
 			Class446.aClass446_5387.method7435(new Class301("jaggl"), (byte) -31);
 			Class446.aClass446_5388.method7435(new Class301("jagdx"), (byte) 15);
 			Class446.aClass446_5389.method7435(new Class301("sw3d"), (byte) 74);
 			Class446.aClass446_5415.method7435(new Class301("hw3d"), (byte) 103);
 			Class446.aClass446_5385.method7435(new Class301("jagtheora"), (byte) 50);
-			Class446.aClass446_5392.method7435(new Class298(Class488.aClass317_5758), (byte) -60);
-			Class446.aClass446_5390.method7435(new Class298(NamedFileReference.aClass317_412), (byte) 5);
-			Class446.aClass446_5394.method7435(new Class298(Class282_Sub39.aClass317_8005), (byte) -52);
-			Class446.aClass446_5395.method7435(new Class298(Class273.aClass317_3332), (byte) 93);
-			Class446.aClass446_5397.method7435(new Class298(Class236.aClass317_2915), (byte) 50);
-			Class446.aClass446_5393.method7435(new Class298(Class107.aClass317_1081), (byte) -23);
-			Class446.aClass446_5413.method7435(new Class298(Class383.aClass317_4665), (byte) -9);
-			Class446.aClass446_5399.method7435(new Class298(Class235.aClass317_2908), (byte) 13);
-			Class446.aClass446_5400.method7435(new Class298(ReferenceTable.aClass317_3749), (byte) -26);
-			Class446.aClass446_5401.method7435(new Class298(Class222.aClass317_2766), (byte) 16);
-			Class446.aClass446_5402.method7435(new Class298(Class371.aClass317_4326), (byte) -86);
-			Class446.aClass446_5403.method7435(new Class298(Class329.aClass317_3861), (byte) 40);
-			Class446.aClass446_5404.method7435(new Class298(AttributeDefault.aClass317_5340), (byte) -13);
-			Class446.aClass446_5405.method7435(new Class298(Class468_Sub7.aClass317_7886), (byte) -64);
-			Class446.aClass446_5410.method7435(new Class298(Class215.aClass317_2686), (byte) 73);
-			Class446.aClass446_5407.method7435(new Class383((Class250.aClass317_3093), "huffman"), (byte) 57);
-			Class446.aClass446_5391.method7435(new Class298(Class523.aClass317_6957), (byte) -77);
-			Class446.aClass446_5409.method7435(new Class298(Class378.aClass317_4526), (byte) 37);
-			Class446.aClass446_5398.method7435(new Class298(Class410.aClass317_4924), (byte) 12);
-			Class446.aClass446_5411.method7435(new Class388((Class192.worldMap), "details"), (byte) -29);
+			Class446.aClass446_5392.method7435(new Class298(IndexLoaders.SHADER_INDEX), (byte) -60);
+			Class446.aClass446_5390.method7435(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) 5);
+			Class446.aClass446_5394.method7435(new Class298(IndexLoaders.CONFIG_INDEX), (byte) -52);
+			Class446.aClass446_5395.method7435(new Class298(IndexLoaders.OBJECT_INDEX), (byte) 93);
+			Class446.aClass446_5397.method7435(new Class298(IndexLoaders.ENUM_INDEX), (byte) 50);
+			Class446.aClass446_5393.method7435(new Class298(IndexLoaders.NPC_INDEX), (byte) -23);
+			Class446.aClass446_5413.method7435(new Class298(IndexLoaders.ITEM_INDEX), (byte) -9);
+			Class446.aClass446_5399.method7435(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) 13);
+			Class446.aClass446_5400.method7435(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) -26);
+			Class446.aClass446_5401.method7435(new Class298(IndexLoaders.VARBIT_INDEX), (byte) 16);
+			Class446.aClass446_5402.method7435(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) -86);
+			Class446.aClass446_5403.method7435(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) 40);
+			Class446.aClass446_5404.method7435(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) -13);
+			Class446.aClass446_5405.method7435(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) -64);
+			Class446.aClass446_5410.method7435(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) 73);
+			Class446.aClass446_5407.method7435(new Class383((IndexLoaders.HUFFMAN_INDEX), "huffman"), (byte) 57);
+			Class446.aClass446_5391.method7435(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) -77);
+			Class446.aClass446_5409.method7435(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) 37);
+			Class446.aClass446_5398.method7435(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) 12);
+			Class446.aClass446_5411.method7435(new Class388((IndexLoaders.WORLD_MAP_INDEX), "details"), (byte) -29);
 			for (int i = 0; i < aClass446Array3531.length; i++) {
 				if (aClass446Array3531[i].method7443(-1850556854) == null)
 					throw new RuntimeException();

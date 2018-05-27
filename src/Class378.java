@@ -11,8 +11,7 @@ public class Class378 {
 	Index aClass317_4523;
 	SoftCache aClass229_4524 = new SoftCache(20);
 	Map aMap4525 = null;
-	public static Index aClass317_4526;
-
+	
 	public int method6402() {
 		if (((Class378) this).anIntArray4521 == null)
 			return 0;
@@ -24,7 +23,7 @@ public class Class378 {
 		for (int i_0_ = 0; i_0_ < ((Class378) this).anIntArray4521.length; i_0_++) {
 			int i_1_ = ((Class378) this).anIntArray4521[i_0_];
 			Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i_1_, (byte) 31);
-			byte[] is = ((Class378) this).aClass317_4522.method5615(i_1_, -1652257518);
+			byte[] is = ((Class378) this).aClass317_4522.getFile(i_1_, -1652257518);
 			Object object = interface35.method216(is, class414, true, 1942118537);
 			((Class378) this).aMap4525.put(Integer.valueOf(i_0_), new Class452(object, class414));
 		}
@@ -68,7 +67,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_7_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_6_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_6_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 102);
@@ -78,7 +77,7 @@ public class Class378 {
 			}
 			return class452;
 		}
-		byte[] is = ((Class378) this).aClass317_4522.method5615(i, -751208839);
+		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -751208839);
 		if (is == null)
 			return null;
 		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 94);
@@ -113,7 +112,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_10_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_8_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_8_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 119);
@@ -123,7 +122,7 @@ public class Class378 {
 			}
 			return class452;
 		}
-		byte[] is = ((Class378) this).aClass317_4522.method5615(i, -36884822);
+		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -36884822);
 		if (is == null)
 			return null;
 		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 90);
@@ -154,7 +153,7 @@ public class Class378 {
 		for (int i = 0; i < ((Class378) this).anIntArray4521.length; i++) {
 			int i_12_ = ((Class378) this).anIntArray4521[i];
 			Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i_12_, (byte) 123);
-			byte[] is = ((Class378) this).aClass317_4522.method5615(i_12_, -2122877522);
+			byte[] is = ((Class378) this).aClass317_4522.getFile(i_12_, -2122877522);
 			Object object = interface35.method216(is, class414, true, 1942118537);
 			((Class378) this).aMap4525.put(Integer.valueOf(i), new Class452(object, class414));
 		}
@@ -165,7 +164,7 @@ public class Class378 {
 		for (int i = 0; i < ((Class378) this).anIntArray4521.length; i++) {
 			int i_13_ = ((Class378) this).anIntArray4521[i];
 			Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i_13_, (byte) 90);
-			byte[] is = ((Class378) this).aClass317_4522.method5615(i_13_, -1634640229);
+			byte[] is = ((Class378) this).aClass317_4522.getFile(i_13_, -1634640229);
 			Object object = interface35.method216(is, class414, true, 1942118537);
 			((Class378) this).aMap4525.put(Integer.valueOf(i), new Class452(object, class414));
 		}
@@ -231,7 +230,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_20_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_19_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_19_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 89);
@@ -241,7 +240,7 @@ public class Class378 {
 			}
 			return class452;
 		}
-		byte[] is = ((Class378) this).aClass317_4522.method5615(i, -871336505);
+		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -871336505);
 		if (is == null)
 			return null;
 		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 88);
@@ -294,7 +293,7 @@ public class Class378 {
 					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_24_));
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.method3865((long) (i << 1 | (bool_23_ ? 1 : 0)));
+		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_23_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
 				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 69);
@@ -304,7 +303,7 @@ public class Class378 {
 			}
 			return class452;
 		}
-		byte[] is = ((Class378) this).aClass317_4522.method5615(i, -1372223000);
+		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -1372223000);
 		if (is == null)
 			return null;
 		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 52);
@@ -375,31 +374,31 @@ public class Class378 {
 	}
 
 	static final void method6438(byte i) {
-		Class122.aClass536_1535.method11477(5, (byte) 1);
-		Class493.aClass479_5778.method8030(5, 1440443465);
-		Class20.aClass31_204.method802(5, -957587210);
-		client.aClass257_7353.method4436(-1981388866).method7896(5, (byte) -88);
-		Class350_Sub1.aClass406_7757.method6832(5, 1789161968);
+		IndexLoaders.aClass536_1535.method11477(5, (byte) 1);
+		IndexLoaders.UNDERLAY_INDEX_LOADER.method8030(5, 1440443465);
+		IndexLoaders.aClass31_204.method802(5, -957587210);
+		IndexLoaders.MAP_REGION_DECODER.method4436(-1981388866).method7896(5, (byte) -88);
+		IndexLoaders.NPC_INDEX_LOADER.method6832(5, 1789161968);
 		IndexLoaders.ITEM_INDEX_LOADER.method7156(5, (byte) 44);
-		Class330.aClass523_3868.method11210(5, (byte) -68);
-		Class96_Sub20.aClass515_9416.method8847(5, 1748344729);
-		Class16.aClass230_147.method3898(5, 1935231941);
-		Class104.aClass377_1065.method6386(5, (byte) 31);
-		Class45.aClass447_435.method7452(5, (byte) 17);
-		Class243.aClass498_3001.method8320(5, 1532833912);
-		Class502.aClass394_5831.method6755(5, (byte) -16);
-		Class497.aClass233_5822.method3923(5, -1373028288);
-		Class96_Sub16.aClass211_9383.method3615(5, -1820135458);
-		Class397.aClass218_4813.method3695(5, -103071229);
-		Class97.aClass427_995.method7173(5, 1756821991);
-		Class125.aClass424_1573.method7068(5, -549869828);
-		Class149.aClass288_1746.method5068(5, (byte) -22);
-		Class488.aClass45_5759.method917(5, -1830471227);
-		Class282_Sub23.aClass436_7683.method7307(5, 675653231);
-		Class468_Sub23.aClass438_7932.method7326(5, -934687178);
-		Login.aClass210_3389.method3602(5, -1179101504);
-		Class286.aClass290_3402.method5107(5, (byte) 14);
-		Class218.method3709(5, (short) 4421);
+		IndexLoaders.aClass523_3868.method11210(5, (byte) -68);
+		IndexLoaders.aClass515_9416.method8847(5, 1748344729);
+		IndexLoaders.aClass230_147.method3898(5, 1935231941);
+		IndexLoaders.aClass377_1065.method6386(5, (byte) 31);
+		IndexLoaders.aClass447_435.method7452(5, (byte) 17);
+		IndexLoaders.aClass498_3001.method8320(5, 1532833912);
+		IndexLoaders.aClass394_5831.method6755(5, (byte) -16);
+		IndexLoaders.aClass233_5822.method3923(5, -1373028288);
+		IndexLoaders.aClass211_9383.method3615(5, -1820135458);
+		IndexLoaders.WORLD_MAP_INDEX_LOADER.method3695(5, -103071229);
+		IndexLoaders.aClass427_995.method7173(5, 1756821991);
+		IndexLoaders.ITEM_DEFAULTS.method7068(5, -549869828);
+		IndexLoaders.aClass288_1746.method5068(5, (byte) -22);
+		IndexLoaders.aClass45_5759.method917(5, -1830471227);
+		IndexLoaders.aClass436_7683.method7307(5, 675653231);
+		IndexLoaders.aClass438_7932.method7326(5, -934687178);
+		IndexLoaders.aClass210_3389.method3602(5, -1179101504);
+		IndexLoaders.aClass290_3402.method5107(5, (byte) 14);
+		WorldMapIndexLoader.method3709(5, (short) 4421);
 		Class439.method7343(50, 827005880);
 		Class487.aClass378_5752.method6411(50, -1105244547);
 		Class332.method5927(5, (byte) 0);

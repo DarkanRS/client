@@ -37,7 +37,7 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 		if (bool)
 			Class455.method7554(class98, class118, 1019153265);
 		else
-			Class218.method3710(class98, class118, 983481657);
+			WorldMapIndexLoader.method3710(class98, class118, 983481657);
 	}
 
 	public static void method15554(Index class317, Index class317_1_, int i, int i_2_) {

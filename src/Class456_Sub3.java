@@ -64,12 +64,12 @@ public class Class456_Sub3 extends Class456 {
 	}
 
 	public static boolean method12682(int i, int[] is, int i_6_) {
-		if (Class218.aBoolArray2709[i])
+		if (WorldMapIndexLoader.aBoolArray2709[i])
 			return true;
 		Class468_Sub8.aClass98Array7889[i] = Class288.method5084(i, is, Class468_Sub8.aClass98Array7889[i], false, (byte) -15);
 		if (null == Class468_Sub8.aClass98Array7889[i])
 			return false;
-		Class218.aBoolArray2709[i] = true;
+		WorldMapIndexLoader.aBoolArray2709[i] = true;
 		return true;
 	}
 }

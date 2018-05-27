@@ -58,7 +58,7 @@ public class Class44 implements Interface46 {
 			int i_6_ = class282_sub35.readUnsignedByte();
 			((Class44) this).anIntArray427 = new int[i_6_];
 			for (int i_7_ = 0; i_7_ < i_6_; i_7_++)
-				((Class44) this).anIntArray427[i_7_] = class282_sub35.readBigSmart(2052528000);
+				((Class44) this).anIntArray427[i_7_] = class282_sub35.readBigSmart();
 		} else if (i != 3) {
 			if (i == 40) {
 				int i_8_ = class282_sub35.readUnsignedByte();
@@ -77,7 +77,7 @@ public class Class44 implements Interface46 {
 					((Class44) this).aShortArray426[i_11_] = (short) class282_sub35.readUnsignedShort();
 				}
 			} else if (i >= 60 && i < 70)
-				((Class44) this).anIntArray421[i - 60] = class282_sub35.readBigSmart(2088815727);
+				((Class44) this).anIntArray421[i - 60] = class282_sub35.readBigSmart();
 		}
 	}
 
@@ -218,7 +218,7 @@ public class Class44 implements Interface46 {
 			int i_26_ = class282_sub35.readUnsignedByte();
 			((Class44) this).anIntArray427 = new int[i_26_];
 			for (int i_27_ = 0; i_27_ < i_26_; i_27_++)
-				((Class44) this).anIntArray427[i_27_] = class282_sub35.readBigSmart(2049781954);
+				((Class44) this).anIntArray427[i_27_] = class282_sub35.readBigSmart();
 		} else if (i != 3) {
 			if (i == 40) {
 				int i_28_ = class282_sub35.readUnsignedByte();
@@ -237,7 +237,7 @@ public class Class44 implements Interface46 {
 					((Class44) this).aShortArray426[i_31_] = (short) class282_sub35.readUnsignedShort();
 				}
 			} else if (i >= 60 && i < 70)
-				((Class44) this).anIntArray421[i - 60] = class282_sub35.readBigSmart(2000141711);
+				((Class44) this).anIntArray421[i - 60] = class282_sub35.readBigSmart();
 		}
 	}
 
@@ -323,9 +323,9 @@ public class Class44 implements Interface46 {
 		if (class425.aBool5101)
 			i_34_ = class425.anInt5102 * 712312847;
 		else if (class425.members)
-			i_34_ = Class149_Sub2.aClass511_9314.anInt5880 * -1519092215;
+			i_34_ = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880 * -1519092215;
 		else
-			i_34_ = Class149_Sub2.aClass511_9314.anInt5881 * 725268415;
+			i_34_ = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881 * 725268415;
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_34_;
 	}
 

@@ -5,8 +5,7 @@
 public class Class282_Sub39 extends Node {
 	short[][] aShortArrayArray8003;
 	double aDouble8004;
-	public static Index aClass317_8005;
-
+	
 	Class282_Sub39(short[][] is, double d) {
 		((Class282_Sub39) this).aShortArrayArray8003 = is;
 		((Class282_Sub39) this).aDouble8004 = d;
@@ -24,7 +23,7 @@ public class Class282_Sub39 extends Node {
 		Class20.aClass384_185.method6562(class384);
 	}
 
-	static void method13297(GraphicalRenderer class505, Class282_Sub36 class282_sub36, Class220 class220, int i) {
+	static void method13297(GraphicalRenderer class505, Class282_Sub36 class282_sub36, WorldMapAreaDefs class220, int i) {
 		NativeSprite class160 = class220.method3729(class505, 216702129);
 		if (class160 != null) {
 			int i_0_ = class160.method2747();
@@ -36,8 +35,8 @@ public class Class282_Sub39 extends Node {
 			int i_4_ = 0;
 			int i_5_ = 0;
 			int i_6_ = 0;
-			if (null != class220.aString2751) {
-				i_4_ = (Class282_Sub17_Sub2.aClass414_9933.method6987(class220.aString2751, null, Class291_Sub1.aStringArray8024, null, (byte) 0));
+			if (null != class220.areaName) {
+				i_4_ = (Class282_Sub17_Sub2.aClass414_9933.method6987(class220.areaName, null, Class291_Sub1.aStringArray8024, null, (byte) 0));
 				for (int i_7_ = 0; i_7_ < i_4_; i_7_++) {
 					String string = Class291_Sub1.aStringArray8024[i_7_];
 					if (i_7_ < i_4_ - 1)
@@ -70,7 +69,7 @@ public class Class282_Sub39 extends Node {
 			int i_13_ = -2;
 			int i_14_ = -2;
 			int i_15_ = -2;
-			if (class220.aString2751 != null) {
+			if (class220.areaName != null) {
 				i_12_ = i_9_ - i_5_ / 2 - 5;
 				i_13_ = i_10_;
 				i_14_ = i_12_ + i_5_ + 10;
@@ -87,7 +86,7 @@ public class Class282_Sub39 extends Node {
 					i_10_ += Class291_Sub1.aClass194_8023.method3173();
 				}
 			}
-			if (-1 != -1248709255 * class220.anInt2719 || class220.aString2751 != null) {
+			if (-1 != -1248709255 * class220.anInt2719 || class220.areaName != null) {
 				Class282_Sub33 class282_sub33 = new Class282_Sub33(class282_sub36);
 				i_0_ >>= 1;
 				((Class282_Sub33) class282_sub33).anInt7830 = -925812333 * (i_2_ - i_0_);

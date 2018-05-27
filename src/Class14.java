@@ -211,8 +211,8 @@ public class Class14 {
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1543197399 * client.anInt7149, 1417031095);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeLong(-8972807970865466165L * client.aLong7153);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(Class464.aString5555);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.aClass495_2772.method243((byte) 1));
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.aClass486_7450.anInt5746 * 1648080491);
+					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
 					Class31.method809(class282_sub23.aClass282_Sub35_Sub2_7682, -1203327887);
 					String string = client.aString7156;
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string == null ? 0 : 1);
@@ -290,8 +290,8 @@ public class Class14 {
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1543197399 * client.anInt7149, 1417031095);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeLong(-8972807970865466165L * client.aLong7153);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(Class464.aString5555);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.aClass495_2772.method243((byte) 1));
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.aClass486_7450.anInt5746 * 1648080491);
+					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
 					Class31.method809(class282_sub23.aClass282_Sub35_Sub2_7682, -1909494425);
 					String string = client.aString7156;
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string == null ? 0 : 1);
@@ -412,7 +412,7 @@ public class Class14 {
 		if (-1 == i_9_) {
 			throw new RuntimeException();
 		}
-		Class431 class431 = Class466.aClass444_5570.method7424(i_9_, (byte) 8);
+		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_9_, (byte) 8);
 		if (i_8_ != class431.aChar5146) {
 			throw new RuntimeException();
 		}
@@ -450,7 +450,7 @@ public class Class14 {
 			if (0 != (flags & 0x10)) {
 				int[] is = new int[Class8_Sub3.method14339(195444347).length];
 				for (int i_14_ = 0; i_14_ < Class8_Sub3.method14339(1841907826).length; i_14_++) {
-					is[i_14_] = buffer.readBigSmart(2113293847);
+					is[i_14_] = buffer.readBigSmart();
 				}
 				int i_15_ = buffer.readUnsignedByte();
 				Class20.animate(npc, is, i_15_, true, (byte) 23);
@@ -473,7 +473,7 @@ public class Class14 {
 					if (2 == (i_19_ & 0x2)) {
 						is = new int[i_16_];
 						for (int i_20_ = 0; i_20_ < i_16_; i_20_++) {
-							is[i_20_] = buffer.readBigSmart(2128725449);
+							is[i_20_] = buffer.readBigSmart();
 						}
 					}
 					short[] is_21_ = null;
@@ -550,7 +550,7 @@ public class Class14 {
 				int[] is_35_ = new int[i_34_];
 				int[] is_36_ = new int[i_34_];
 				for (int i_37_ = 0; i_37_ < i_34_; i_37_++) {
-					int i_38_ = buffer.readBigSmart(2100448585);
+					int i_38_ = buffer.readBigSmart();
 					is[i_37_] = i_38_;
 					is_35_[i_37_] = buffer.readUnsignedByte();
 					is_36_[i_37_] = buffer.readShortLE((byte) -27);
@@ -615,7 +615,7 @@ public class Class14 {
 				if (npc.aClass409_10580.method6886(-1543379642)) {
 					Class169.method2876(npc, 1280406765);
 				}
-				npc.method16166((Class350_Sub1.aClass406_7757.method6828(buffer.readBigSmart(2052464678), (byte) 45)), 332217631);
+				npc.method16166((IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBigSmart(), (byte) 45)), 332217631);
 				npc.method15836(1203434505 * (npc.aClass409_10580.anInt4858), (byte) -91);
 				npc.anInt10340 = -222526911 * ((npc.aClass409_10580.anInt4889) * 1913503455 << 3);
 				if (npc.aClass409_10580.method6886(-1928423029)) {
@@ -662,7 +662,7 @@ public class Class14 {
 					if (2 == (i_71_ & 0x2)) {
 						is = new int[i_68_];
 						for (int i_72_ = 0; i_72_ < i_68_; i_72_++) {
-							is[i_72_] = buffer.readBigSmart(2100067192);
+							is[i_72_] = buffer.readBigSmart();
 						}
 					}
 					short[] is_73_ = null;

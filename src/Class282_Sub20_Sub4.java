@@ -591,7 +591,7 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 		int i_159_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 6 && 2 != class118.anInt1329 * 2131324949)
 			throw new RuntimeException("");
-		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(-402732635 * class118.anInt1330, (byte) 86);
+		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(-402732635 * class118.anInt1330, (byte) 86);
 		if (null == class118.aClass417_1308)
 			class118.aClass417_1308 = new Class417(class409, 2131324949 * class118.anInt1329 == 6);
 		class118.aClass417_1308.aLong4993 = Class86.method1480(976304204) * 7197667099348947907L;

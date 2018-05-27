@@ -4,12 +4,12 @@
  */
 import java.util.Stack;
 
-public class Class519 {
+public class Defaults8Loader {
 	public Interface17 anInterface17_5931;
 	static int anInt5932;
 
-	public Class519(Index class317) {
-		byte[] is = class317.method5615((Class524.aClass524_6965.anInt6966 * -1719912253), -1967379724);
+	public Defaults8Loader(Index class317) {
+		byte[] is = class317.getFile((DefaultsFile.FILE_8.anInt6966 * -1719912253), -1967379724);
 		method11149(new RsByteBuffer(is), 1856651955);
 	}
 
@@ -66,7 +66,7 @@ public class Class519 {
 	static final void method11154(CS2Executor class527, int i) {
 		((CS2Executor) class527).aClass346_7009 = new Class346();
 		((CS2Executor) class527).aClass346_7009.anInt4048 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1506067503);
-		((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047 = Class368.aClass429_4265.method7214(((((CS2Executor) class527).aClass346_7009.anInt4048) * -624100047), -1711115203);
+		((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(((((CS2Executor) class527).aClass346_7009.anInt4048) * -624100047), -1711115203);
 		((CS2Executor) class527).aClass346_7009.anIntArray4046 = new int[((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
 	}
 

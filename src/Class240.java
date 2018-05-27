@@ -121,7 +121,7 @@ public class Class240 {
 		} else if (i == 15)
 			anInt2973 = class282_sub35.readUnsignedShort() * 660162141;
 		else if (i == 17)
-			anInt2977 = class282_sub35.readBigSmart(1973178837) * -467515775;
+			anInt2977 = class282_sub35.readBigSmart() * -467515775;
 		else if (i == 18) {
 			int i_18_ = class282_sub35.readUnsignedByte();
 			anIntArray2961 = new int[i_18_];
@@ -296,7 +296,7 @@ public class Class240 {
 		} else if (i == 15)
 			anInt2973 = class282_sub35.readUnsignedShort() * 660162141;
 		else if (i == 17)
-			anInt2977 = class282_sub35.readBigSmart(2070201875) * -467515775;
+			anInt2977 = class282_sub35.readBigSmart() * -467515775;
 		else if (i == 18) {
 			int i_42_ = class282_sub35.readUnsignedByte();
 			anIntArray2961 = new int[i_42_];
@@ -448,7 +448,7 @@ public class Class240 {
 		} else if (i == 15)
 			anInt2973 = class282_sub35.readUnsignedShort() * 660162141;
 		else if (i == 17)
-			anInt2977 = class282_sub35.readBigSmart(2119739860) * -467515775;
+			anInt2977 = class282_sub35.readBigSmart() * -467515775;
 		else if (i == 18) {
 			int i_65_ = class282_sub35.readUnsignedByte();
 			anIntArray2961 = new int[i_65_];
@@ -571,7 +571,7 @@ public class Class240 {
 		} else if (i == 15)
 			anInt2973 = class282_sub35.readUnsignedShort() * 660162141;
 		else if (i == 17)
-			anInt2977 = class282_sub35.readBigSmart(2044793342) * -467515775;
+			anInt2977 = class282_sub35.readBigSmart() * -467515775;
 		else if (i == 18) {
 			int i_86_ = class282_sub35.readUnsignedByte();
 			anIntArray2961 = new int[i_86_];
@@ -880,43 +880,43 @@ public class Class240 {
 		return (i >= Class458.aClass458_5486.anInt5481 * 1109376893 && i <= Class458.aClass458_5485.anInt5481 * 1109376893);
 	}
 
-	static void writeCRCs(RsBitsBuffer class282_sub35_sub2, int i) {
-		class282_sub35_sub2.writeInt(Class282_Sub20.aClass317_7672.method5602(2108891711));
-		class282_sub35_sub2.writeInt(Class235.aClass317_2907.method5602(2089615709));
-		class282_sub35_sub2.writeInt(Class282_Sub39.aClass317_8005.method5602(2049577436));
-		class282_sub35_sub2.writeInt(Class523.aClass317_6957.method5602(2035164998));
-		class282_sub35_sub2.writeInt(Class219.aClass317_2714.method5602(2097762644));
-		class282_sub35_sub2.writeInt(Class149.aClass317_1745.method5602(2064882101));
-		class282_sub35_sub2.writeInt(Class512.aClass317_5884.method5602(2033220703));
-		class282_sub35_sub2.writeInt(Class110.aClass317_1106.method5602(1996794176));
-		class282_sub35_sub2.writeInt(Class211.aClass317_2673.method5602(2097071200));
-		class282_sub35_sub2.writeInt(AttributeDefault.aClass317_5340.method5602(2061749967));
-		class282_sub35_sub2.writeInt(Class250.aClass317_3093.method5602(2018943730));
-		class282_sub35_sub2.writeInt(Class525.aClass317_6984.method5602(2147215250));
-		class282_sub35_sub2.writeInt(Class378.aClass317_4526.method5602(2146754659));
-		class282_sub35_sub2.writeInt(Class410.aClass317_4924.method5602(2068022010));
-		class282_sub35_sub2.writeInt(JS5LocalRequester.aClass317_3665.method5602(2028022241));
-		class282_sub35_sub2.writeInt(Class211.aClass317_2674.method5602(2086806955));
-		class282_sub35_sub2.writeInt(Class273.aClass317_3332.method5602(2005863325));
-		class282_sub35_sub2.writeInt(Class236.aClass317_2915.method5602(2143751638));
-		class282_sub35_sub2.writeInt(Class107.aClass317_1081.method5602(2030471978));
-		class282_sub35_sub2.writeInt(Class383.aClass317_4665.method5602(2137011935));
-		class282_sub35_sub2.writeInt(Class235.aClass317_2908.method5602(2104587732));
-		class282_sub35_sub2.writeInt(ReferenceTable.aClass317_3749.method5602(2069288346));
-		class282_sub35_sub2.writeInt(Class222.aClass317_2766.method5602(2038006906));
-		class282_sub35_sub2.writeInt(Class192.worldMap.method5602(2130821470));
-		class282_sub35_sub2.writeInt(Class371.aClass317_4326.method5602(2007599721));
-		class282_sub35_sub2.writeInt(Class329.aClass317_3861.method5602(2002938651));
-		class282_sub35_sub2.writeInt(NamedFileReference.aClass317_412.method5602(2068991796));
-		class282_sub35_sub2.writeInt(Class468_Sub7.aClass317_7886.method5602(2104820430));
-		class282_sub35_sub2.writeInt(Class520.aClass317_5935.method5602(2122359694));
-		class282_sub35_sub2.writeInt(Class215.aClass317_2686.method5602(2028882723));
-		class282_sub35_sub2.writeInt(Class497.aClass317_5821.method5602(2094215743));
-		class282_sub35_sub2.writeInt(Class488.aClass317_5758.method5602(2111588720));
-		class282_sub35_sub2.writeInt(Class378.method6435(-1443123937));
-		class282_sub35_sub2.writeInt(Class468_Sub7.method12672((byte) 0));
-		class282_sub35_sub2.writeInt(Class89.aClass317_944.method5602(2099773497));
-		class282_sub35_sub2.writeInt(Class209.aClass317_2663.method5602(1991997327));
+	static void writeCRCs(RsBitsBuffer stream, int i) {
+		stream.writeInt(IndexLoaders.ANIMATION_SKELETON_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.ANIMATION_SKIN_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.CONFIG_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.INTERFACE_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.SOUND_EFFECT_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.MAP_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.MUSIC_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.MESH_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.SPRITES_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.TEXTURE_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.HUFFMAN_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.INDEX_11.getCrc());
+		stream.writeInt(IndexLoaders.CS2_SCRIPTS_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.FONT_METRICS_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.MIDI_INSTRUMENT_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.INDEX_15.getCrc());
+		stream.writeInt(IndexLoaders.OBJECT_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.ENUM_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.NPC_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.ITEM_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.SEQUENCES_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.SPOTANIM_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.VARBIT_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.WORLD_MAP_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.QC_MESSAGES_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.QC_MENU_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.TEXTURE_DEFINITION_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.PARTICLE_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.DEFAULTS_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.BILLBOARD_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.NATIVE_LIBRARY_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.SHADER_INDEX.getCrc());
+		stream.writeInt(Class378.method6435(-1443123937));
+		stream.writeInt(Class468_Sub7.method12672((byte) 0));
+		stream.writeInt(IndexLoaders.CUTSCENE_INDEX.getCrc());
+		stream.writeInt(IndexLoaders.aClass317_2663.getCrc());
 	}
 
 	public static void method4140(String string, int i) {

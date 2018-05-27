@@ -36,7 +36,7 @@ public class Class96_Sub21 extends Class96 {
 				i_4_ = 3;
 			if (((Class282_Sub48) class282_sub48).anInt8091 * -1881404979 != i_4_) {
 				int i_6_ = (Class282_Sub11_Sub1.method15433((((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085), 912866554));
-				Class409 class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (null != class409.anIntArray4886)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (class409 == null || i_6_ == -1) {
@@ -122,7 +122,7 @@ public class Class96_Sub21 extends Class96 {
 	}
 
 	static Class282_Sub14 method14676(Index class317, int i, int i_10_) {
-		byte[] is = class317.method5615(i, -2092539323);
+		byte[] is = class317.getFile(i, -2092539323);
 		if (is == null)
 			return null;
 		return new Class282_Sub14(is);

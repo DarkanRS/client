@@ -31,10 +31,10 @@ public class Class225_Sub5 extends Class225 {
 	}
 
 	static void method13042(GraphicalRenderer class505, int i, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {
-		Class206 class206 = client.aClass257_7353.method4430(-1053106228);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1053106228);
 		Interface12 interface12 = (Interface12) class206.method3381(i, i_11_, i_12_, (byte) -80);
 		if (null != interface12) {
-			Class478 class478 = client.aClass257_7353.method4436(-1708238959).method7891(interface12.method84(1992951281), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1708238959).getObjectDefinitions(interface12.method84(1992951281), 65280);
 			int i_18_ = interface12.method92(-401484615) & 0x3;
 			int i_19_ = interface12.method89(2041579125);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -77,7 +77,7 @@ public class Class225_Sub5 extends Class225 {
 		}
 		interface12 = (Interface12) class206.method3413(i, i_11_, i_12_, client.anInterface25_7446, -233664382);
 		if (interface12 != null) {
-			Class478 class478 = client.aClass257_7353.method4436(-1933772768).method7891(interface12.method84(281132177), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1933772768).getObjectDefinitions(interface12.method84(281132177), 65280);
 			int i_21_ = interface12.method92(-763690677) & 0x3;
 			int i_22_ = interface12.method89(1162036783);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -94,7 +94,7 @@ public class Class225_Sub5 extends Class225 {
 		}
 		interface12 = (Interface12) class206.method3415(i, i_11_, i_12_, -387297653);
 		if (interface12 != null) {
-			Class478 class478 = client.aClass257_7353.method4436(-1659848045).method7891(interface12.method84(-1741343457), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1659848045).getObjectDefinitions(interface12.method84(-1741343457), 65280);
 			int i_24_ = interface12.method92(-1014923705) & 0x3;
 			if (class478.anInt5689 * -272332433 != -1)
 				Class415.method6997(class505, class478, i_24_, i_13_, i_14_, 1254236729);

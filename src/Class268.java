@@ -76,7 +76,7 @@ public class Class268 {
 		if ((Class20.anInt169 * 2144330291 >= 2 || client.aBool7344) && client.aClass118_7257 == null) {
 			String string;
 			if (client.aBool7344 && 2144330291 * Class20.anInt169 < 2)
-				string = new StringBuilder().append(client.aString7275).append(Message.aClass433_5315.translate(Class223.aClass495_2772, -912912276)).append(client.aString7356).append(" ").append(Class2.aString17).toString();
+				string = new StringBuilder().append(client.aString7275).append(Message.aClass433_5315.translate(Class223.CURRENT_LANGUAGE, -912912276)).append(client.aString7356).append(" ").append(Class2.aString17).toString();
 			else if (Class468_Sub1.method12619(-1903584217) && 2144330291 * Class20.anInt169 > 2)
 				string = IncomingPacket.method6380((Class96_Sub23.aClass282_Sub50_Sub7_9445), 1195583741);
 			else {
@@ -89,7 +89,7 @@ public class Class268 {
 					string = new StringBuilder().append(string).append(Class15.method547(is, 2114598830)).toString();
 			}
 			if (Class20.anInt169 * 2144330291 > 2)
-				string = new StringBuilder().append(string).append(Class59.method1163(16777215, 619010179)).append(" / ").append(2144330291 * Class20.anInt169 - 2).append(Message.aClass433_5285.translate(Class223.aClass495_2772, -386320365)).toString();
+				string = new StringBuilder().append(string).append(Class59.method1163(16777215, 619010179)).append(" / ").append(2144330291 * Class20.anInt169 - 2).append(Message.MORE_OPTIONS.translate(Class223.CURRENT_LANGUAGE, -386320365)).toString();
 			if (Class20.aClass118_183 != null) {
 				FontRenderer class8 = Class20.aClass118_183.method1988(Class487.aClass378_5752, (client.anInterface35_7206), -208417273);
 				if (class8 == null)

@@ -5,8 +5,7 @@
 public class Class502 implements Interface23 {
 	GraphicalRenderer aClass505_5829;
 	static Class253 aClass253_5830;
-	public static Class394 aClass394_5831;
-
+	
 	public Object method164(int[] is, int i, int i_0_, int i_1_, int i_2_, boolean bool) {
 		return ((Class502) this).aClass505_5829.method8442(is, i, i_0_, i_1_, i_2_, false);
 	}

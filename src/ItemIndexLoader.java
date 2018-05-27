@@ -13,7 +13,7 @@ public class ItemIndexLoader implements IndexLoader {
 	String[] defaultGroundOptions;
 	Index meshIndex;
 	SoftwareItemRender softwareItemRender;
-	AttributesDefaultsLoader attrDefaults;
+	ItemDefaultsLoader attrDefaults;
 	public Class212 aClass212_5114;
 	SoftCache aClass229_5115 = new SoftCache(50);
 	int anInt5116;
@@ -21,7 +21,7 @@ public class ItemIndexLoader implements IndexLoader {
 	public ItemDefinitions getItemDefinitions(int itemId, int i_0_) {
 		ItemDefinitions defs;
 		synchronized (((ItemIndexLoader) this).cache) {
-			defs = ((ItemDefinitions) ((ItemIndexLoader) this).cache.method3865((long) itemId));
+			defs = ((ItemDefinitions) ((ItemIndexLoader) this).cache.get((long) itemId));
 		}
 		if (defs != null)
 			return defs;
@@ -156,25 +156,25 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public ItemIndexLoader(Game class486, Language class495, boolean bool, AttributesDefaultsLoader class424, Index class317, Index class317_16_) {
+	public ItemIndexLoader(Game game, Language language, boolean bool, ItemDefaultsLoader attrDefaults, Index fs19, Index meshIndex) {
 		aClass212_5114 = new Class212(250);
 		((ItemIndexLoader) this).softwareItemRender = new SoftwareItemRender();
-		((ItemIndexLoader) this).game = class486;
-		((ItemIndexLoader) this).language = class495;
+		((ItemIndexLoader) this).game = game;
+		((ItemIndexLoader) this).language = language;
 		((ItemIndexLoader) this).membersOnly = bool;
-		((ItemIndexLoader) this).attrDefaults = class424;
-		((ItemIndexLoader) this).fs19 = class317;
-		((ItemIndexLoader) this).meshIndex = class317_16_;
+		((ItemIndexLoader) this).attrDefaults = attrDefaults;
+		((ItemIndexLoader) this).fs19 = fs19;
+		((ItemIndexLoader) this).meshIndex = meshIndex;
 		if (((ItemIndexLoader) this).fs19 != null) {
 			int i = ((ItemIndexLoader) this).fs19.containersCount(-1865229040) - 1;
 			maxItemsCount = (i * SharedConfigsType.ITEM_DEFINITIONS.filesPerContainer(-1077198554) + ((ItemIndexLoader) this).fs19.filesCount(i, -1891673686)) * -230207835;
 		} else
 			maxItemsCount = 0;
 		if (Game.runescape == ((ItemIndexLoader) this).game)
-			((ItemIndexLoader) this).defaultGroundOptions = (new String[] { null, null, Message.aClass433_5243.translate((((ItemIndexLoader) this).language), -1215966862), null, null, Message.aClass433_5282.translate((((ItemIndexLoader) this).language), -380297277) });
+			((ItemIndexLoader) this).defaultGroundOptions = (new String[] { null, null, Message.TAKE.translate((((ItemIndexLoader) this).language), -1215966862), null, null, Message.EXAMINE.translate((((ItemIndexLoader) this).language), -380297277) });
 		else
-			((ItemIndexLoader) this).defaultGroundOptions = (new String[] { null, null, Message.aClass433_5243.translate((((ItemIndexLoader) this).language), -791276439), null, null, null });
-		((ItemIndexLoader) this).defaultInventoryOptions = (new String[] { null, null, null, null, Message.aClass433_5168.translate((((ItemIndexLoader) this).language), -1623734133) });
+			((ItemIndexLoader) this).defaultGroundOptions = (new String[] { null, null, Message.TAKE.translate((((ItemIndexLoader) this).language), -791276439), null, null, null });
+		((ItemIndexLoader) this).defaultInventoryOptions = (new String[] { null, null, null, null, Message.DROP.translate((((ItemIndexLoader) this).language), -1623734133) });
 	}
 
 	public NativeSprite softwareRender(GraphicalRenderer softwareRenderer, int i, int i_25_, int i_26_, int i_27_, int i_28_, PlayerAppearance class238, int i_29_) {

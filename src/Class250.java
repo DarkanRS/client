@@ -11,8 +11,7 @@ public class Class250 {
 	IterableNodeMap aClass465_3090 = new IterableNodeMap(256);
 	Index aClass317_3091;
 	static NativeSprite[] aClass160Array3092;
-	public static Index aClass317_3093;
-
+	
 	public Class282_Sub26_Sub1_Sub2 method4284(int i, int[] is) {
 		if (((Class250) this).aClass317_3091.containersCount(-1640431967) == 1)
 			return method4285(0, i, is, -24629164);
@@ -184,10 +183,10 @@ public class Class250 {
 		Class96_Sub21.aClass199_9438.method3238(-1428980483);
 		Class163.aClass209_2031.method3584(-2146990157);
 		Class308.aclient3620.method4704(2044329067);
-		Class351.aCanvas4096.setBackground(Color.black);
+		Class351.LOAD_CANVAS.setBackground(Color.black);
 		client.anInt7190 = 618386713;
-		Class96_Sub21.aClass199_9438 = Class325.method5787(Class351.aCanvas4096, 539499635);
-		Class163.aClass209_2031 = FontRenderer.method400(Class351.aCanvas4096, true, (byte) -106);
+		Class96_Sub21.aClass199_9438 = Class325.method5787(Class351.LOAD_CANVAS, 539499635);
+		Class163.aClass209_2031 = FontRenderer.method400(Class351.LOAD_CANVAS, true, (byte) -106);
 	}
 
 	static final void method4298(int i, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_, byte i_20_) {
@@ -200,7 +199,7 @@ public class Class250 {
 		else
 			i_22_ = -685729279 * client.anInt7211 + i_21_;
 		for (int i_23_ = 0; i_23_ < i_22_; i_23_++) {
-			Class409 class409 = null;
+			NPCDefinitions class409 = null;
 			Animable class521_sub1_sub1_sub2;
 			if (-891719545 * client.anInt7341 == 4) {
 				Class75 class75 = Class82.aClass75Array804[i_23_];
@@ -373,14 +372,14 @@ public class Class250 {
 					if (i_45_ >= 0) {
 						if (i_44_ <= -1809259861 * client.cycles)
 							continue;
-						class228 = (Login.aClass210_3389.method3603(class521_sub1_sub1_sub2.anIntArray10316[i_43_], 1856651955));
+						class228 = (IndexLoaders.aClass210_3389.method3603(class521_sub1_sub1_sub2.anIntArray10316[i_43_], 1856651955));
 						i_46_ = class228.anInt2841 * -1006911631;
 					} else if (i_44_ < 0)
 						continue;
 					int i_47_ = class521_sub1_sub1_sub2.anIntArray10331[i_43_];
 					Class228 class228_48_ = null;
 					if (i_47_ >= 0)
-						class228_48_ = Login.aClass210_3389.method3603(i_47_, 1856651955);
+						class228_48_ = IndexLoaders.aClass210_3389.method3603(i_47_, 1856651955);
 					if (i_44_ - i_46_ <= client.cycles * -1809259861) {
 						if (null == class228)
 							class521_sub1_sub1_sub2.anIntArray10351[i_43_] = -1;

@@ -2,30 +2,30 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class524 {
-	static Class524 aClass524_6958;
-	static Class524 aClass524_6959;
-	public static Class524 aClass524_6960 = new Class524(1);
-	static Class524 aClass524_6961;
-	public static Class524 aClass524_6962;
-	static Class524 aClass524_6963;
-	static Class524 aClass524_6964;
-	static Class524 aClass524_6965;
+public class DefaultsFile {
+	static DefaultsFile FILE_5;
+	static DefaultsFile FILE_2;
+	public static DefaultsFile FILE_1 = new DefaultsFile(1);
+	static DefaultsFile FILE_3;
+	public static DefaultsFile FILE_4;
+	static DefaultsFile FILE_6;
+	static DefaultsFile FILE_7;
+	static DefaultsFile FILE_8;
 	public int anInt6966;
 	static Class194 aClass194_6967;
 
-	Class524(int i) {
+	DefaultsFile(int i) {
 		anInt6966 = i * -1916651541;
 	}
 
 	static {
-		aClass524_6959 = new Class524(2);
-		aClass524_6961 = new Class524(3);
-		aClass524_6962 = new Class524(4);
-		aClass524_6958 = new Class524(5);
-		aClass524_6963 = new Class524(6);
-		aClass524_6964 = new Class524(7);
-		aClass524_6965 = new Class524(8);
+		FILE_2 = new DefaultsFile(2);
+		FILE_3 = new DefaultsFile(3);
+		FILE_4 = new DefaultsFile(4);
+		FILE_5 = new DefaultsFile(5);
+		FILE_6 = new DefaultsFile(6);
+		FILE_7 = new DefaultsFile(7);
+		FILE_8 = new DefaultsFile(8);
 	}
 
 	static final void method11221(Class118 class118, Class98 class98, CS2Executor class527, int i) {
@@ -40,11 +40,11 @@ public class Class524 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(1753438100))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = client.aClass257_7353.method4436(-2071995524).method7891(i_0_, 65280).method7973(i_1_, class437.aString5335, (byte) 97);
+			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_0_, 65280).method7973(i_1_, class437.aString5335, (byte) 97);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (client.aClass257_7353.method4436(-1502045991).method7891(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
+			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
 	}
 
 	static final void method11223(Class118 class118, Class98 class98, CS2Executor class527, int i) {
@@ -62,13 +62,13 @@ public class Class524 {
 		if (null != Class84.myPlayer.playerAppearance) {
 			for (int i_4_ = 0; i_4_ < Class44.anIntArray428.length; i_4_++) {
 				if (Class44.anIntArray428[i_4_] == i_2_) {
-					Class84.myPlayer.playerAppearance.method3993(i_4_, i_3_, Class20.aClass31_204, -1891661545);
+					Class84.myPlayer.playerAppearance.method3993(i_4_, i_3_, IndexLoaders.aClass31_204, -1891661545);
 					return;
 				}
 			}
 			for (int i_5_ = 0; i_5_ < Class44.anIntArray422.length; i_5_++) {
 				if (Class44.anIntArray422[i_5_] == i_2_) {
-					Class84.myPlayer.playerAppearance.method3993(i_5_, i_3_, Class20.aClass31_204, 938562628);
+					Class84.myPlayer.playerAppearance.method3993(i_5_, i_3_, IndexLoaders.aClass31_204, 938562628);
 					break;
 				}
 			}

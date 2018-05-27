@@ -53,7 +53,7 @@ public class Class449 {
 			if (Class448.anInt5430 * -135650151 < Class485.anInt5740 * -377428565)
 				Class448.anInt5430 = Class485.anInt5740 * 2011906787;
 			while (-135650151 * Class448.anInt5430 < Class244.anInt3003 * -860748679) {
-				Class217_Sub1 class217_sub1 = Class474.method7916(-135650151 * Class448.anInt5430, 1398054526);
+				Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(-135650151 * Class448.anInt5430, 1398054526);
 				if (null == class217_sub1 || -1 != -129507359 * class217_sub1.anInt7978)
 					Class448.anInt5430 += 658239401;
 				else {

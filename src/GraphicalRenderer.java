@@ -292,9 +292,9 @@ public abstract class GraphicalRenderer {
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_102_);
 		if (5 == i)
-			return Class315.method5582(canvas, interface22, class317, i_102_);
+			return Class315.getOpenGLRenderer(canvas, interface22, class317, i_102_);
 		if (i == 3)
-			return Class374.method6367(canvas, interface22, class317, i_102_);
+			return Class374.getDirectXRenderer(canvas, interface22, class317, i_102_);
 		throw new IllegalArgumentException("");
 	}
 
@@ -968,9 +968,9 @@ public abstract class GraphicalRenderer {
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_519_);
 		if (5 == i)
-			return Class315.method5582(canvas, interface22, class317, i_519_);
+			return Class315.getOpenGLRenderer(canvas, interface22, class317, i_519_);
 		if (i == 3)
-			return Class374.method6367(canvas, interface22, class317, i_519_);
+			return Class374.getDirectXRenderer(canvas, interface22, class317, i_519_);
 		throw new IllegalArgumentException("");
 	}
 
@@ -982,9 +982,9 @@ public abstract class GraphicalRenderer {
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_522_);
 		if (5 == i)
-			return Class315.method5582(canvas, interface22, class317, i_522_);
+			return Class315.getOpenGLRenderer(canvas, interface22, class317, i_522_);
 		if (i == 3)
-			return Class374.method6367(canvas, interface22, class317, i_522_);
+			return Class374.getDirectXRenderer(canvas, interface22, class317, i_522_);
 		throw new IllegalArgumentException("");
 	}
 

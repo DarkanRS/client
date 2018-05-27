@@ -44,7 +44,7 @@ public class Class30 implements Runnable {
 	public void run() {
 		try {
 			int i = (Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId * -87869981 + 7000);
-			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.aClass486_7450.anInt5746 * 1648080491).toString()).openStream()))));
+			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.CURRENT_GAME.anInt5746 * 1648080491).toString()).openStream()))));
 			String string = bufferedreader.readLine();
 			ArrayList arraylist = new ArrayList();
 			for (/**/; string != null; string = bufferedreader.readLine())
@@ -69,7 +69,7 @@ public class Class30 implements Runnable {
 	public void method793() {
 		try {
 			int i = (Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId * -87869981 + 7000);
-			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.aClass486_7450.anInt5746 * 1648080491).toString()).openStream()))));
+			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.CURRENT_GAME.anInt5746 * 1648080491).toString()).openStream()))));
 			String string = bufferedreader.readLine();
 			ArrayList arraylist = new ArrayList();
 			for (/**/; string != null; string = bufferedreader.readLine())
@@ -90,7 +90,7 @@ public class Class30 implements Runnable {
 	public void method794() {
 		try {
 			int i = (Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId * -87869981 + 7000);
-			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.aClass486_7450.anInt5746 * 1648080491).toString()).openStream()))));
+			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.CURRENT_GAME.anInt5746 * 1648080491).toString()).openStream()))));
 			String string = bufferedreader.readLine();
 			ArrayList arraylist = new ArrayList();
 			for (/**/; string != null; string = bufferedreader.readLine())

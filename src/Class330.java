@@ -9,8 +9,7 @@ public class Class330 {
 	public int anInt3865;
 	public int anInt3866;
 	public int anInt3867;
-	public static Class523 aClass523_3868;
-
+	
 	public Class330() {
 		/* empty */
 	}

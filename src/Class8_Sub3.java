@@ -879,7 +879,7 @@ public class Class8_Sub3 extends FontRenderer {
 			Class151.method2592((byte) 31);
 			return true;
 		} catch (Exception exception) {
-			Class219 class219 = client.aClass257_7353.method4519(1387149052);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1387149052);
 			String string = new StringBuilder().append(((Class184) class184).aClass375_2286 != null ? (1694502249 * ((Class184) class184).aClass375_2286.anInt4512) : -1).append(Class2.aString14).append(((Class184) class184).aClass375_2296 != null ? (((Class184) class184).aClass375_2296.anInt4512 * 1694502249) : -1).append(Class2.aString14).append(null != ((Class184) class184).aClass375_2291 ? (1694502249 * ((Class184) class184).aClass375_2291.anInt4512) : -1).append(" ")
 					.append(((Class184) class184).anInt2287 * 715663393).append(Class2.aString14).append(1948093437 * class219.anInt2711 + (Class84.myPlayer.regionBaseX[0])).append(Class2.aString14).append(class219.anInt2712 * -1002240017 + (Class84.myPlayer.regionBaseY[0])).append(" ").toString();
 			for (int i_341_ = 0; (i_341_ < 715663393 * ((Class184) class184).anInt2287 && i_341_ < 50); i_341_++)

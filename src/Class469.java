@@ -138,7 +138,7 @@ public class Class469 implements Iterator {
 			if (class282_sub47 != null) {
 				NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
 				if (class521_sub1_sub1_sub2_sub2.method16160(-438666523) && (class521_sub1_sub1_sub2_sub2.aByte7967 == (Class84.myPlayer.aByte7967))) {
-					Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+					NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 					if (null != class409 && null != class409.anIntArray4886)
 						class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 					if (class409 != null && class409.aBool4864 && class409.aBool4893) {

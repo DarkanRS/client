@@ -12,14 +12,14 @@ public class Class92 {
 
 	boolean method1557(int i) {
 		if (((Class92) this).anInt964 * -1727931981 >= 0) {
-			Class478 class478 = Class96_Sub4.aClass474_8524.method7891(((((Class92) this).anInt964) * -1727931981), 65280);
+			ObjectDefinitions class478 = IndexLoaders.OBJECT_INDEX_LOADER.getObjectDefinitions(((((Class92) this).anInt964) * -1727931981), 65280);
 			boolean bool = class478.method7987((((Class92) this).aClass458_963.anInt5481 * 1109376893), 792891536);
 			int[] is = class478.method8008(-2118355158);
 			if (is != null) {
 				int[] is_0_ = is;
 				for (int i_1_ = 0; i_1_ < is_0_.length; i_1_++) {
 					int i_2_ = is_0_[i_1_];
-					bool &= Class330.aClass523_3868.method11205(i_2_, (byte) 92).method11132(2061456452);
+					bool &= IndexLoaders.aClass523_3868.method11205(i_2_, (byte) 92).method11132(2061456452);
 				}
 			}
 			return bool;
@@ -28,7 +28,7 @@ public class Class92 {
 	}
 
 	Class92(RsByteBuffer class282_sub35) {
-		((Class92) this).anInt964 = class282_sub35.readBigSmart(2095757190) * 267419003;
+		((Class92) this).anInt964 = class282_sub35.readBigSmart() * 267419003;
 		((Class92) this).aClass458_963 = ((Class458) Class386.method6672(Class2.method262((byte) -1), class282_sub35.readUnsignedByte(), -859737548));
 	}
 

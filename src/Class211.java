@@ -6,10 +6,8 @@ public class Class211 {
 	public static Class227 aClass227_2669 = new Class227();
 	SoftCache aClass229_2670 = new SoftCache(64);
 	Index aClass317_2671;
-	Class526 aClass526_2672;
-	public static Index aClass317_2673;
-	public static Index aClass317_2674;
-
+	Defaults6Loader aClass526_2672;
+	
 	public void method3615(int i, int i_0_) {
 		synchronized (((Class211) this).aClass229_2670) {
 			((Class211) this).aClass229_2670.method3858(i, (byte) 19);
@@ -19,7 +17,7 @@ public class Class211 {
 	public Class227 method3616(int i, byte i_1_) {
 		Class227 class227;
 		synchronized (((Class211) this).aClass229_2670) {
-			class227 = ((Class227) ((Class211) this).aClass229_2670.method3865((long) i));
+			class227 = ((Class227) ((Class211) this).aClass229_2670.get((long) i));
 		}
 		if (class227 != null)
 			return class227;
@@ -58,7 +56,7 @@ public class Class211 {
 	public Class227 method3620(int i) {
 		Class227 class227;
 		synchronized (((Class211) this).aClass229_2670) {
-			class227 = ((Class227) ((Class211) this).aClass229_2670.method3865((long) i));
+			class227 = ((Class227) ((Class211) this).aClass229_2670.get((long) i));
 		}
 		if (class227 != null)
 			return class227;
@@ -79,7 +77,7 @@ public class Class211 {
 	public Class227 method3621(int i) {
 		Class227 class227;
 		synchronized (((Class211) this).aClass229_2670) {
-			class227 = ((Class227) ((Class211) this).aClass229_2670.method3865((long) i));
+			class227 = ((Class227) ((Class211) this).aClass229_2670.get((long) i));
 		}
 		if (class227 != null)
 			return class227;
@@ -103,7 +101,7 @@ public class Class211 {
 		}
 	}
 
-	public Class211(Game class486, Language class495, Index class317, Class526 class526) {
+	public Class211(Game class486, Language class495, Index class317, Defaults6Loader class526) {
 		((Class211) this).aClass317_2671 = class317;
 		((Class211) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.aClass120_1511.id)), 357148056);
 		((Class211) this).aClass526_2672 = class526;

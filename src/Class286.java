@@ -14,8 +14,7 @@ public class Class286 implements Runnable {
 	byte[] aByteArray3399;
 	int anInt3400 = 0;
 	IOException anIOException3401;
-	public static Class290 aClass290_3402;
-
+	
 	boolean method5030(int i, int i_0_) throws IOException {
 		if (i <= 0 || i >= ((Class286) this).anInt3397 * -1529176971)
 			throw new IOException();
@@ -384,7 +383,7 @@ public class Class286 implements Runnable {
 	static final void method5047(CS2Executor class527, int i) {
 		int i_22_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub21_8222), i_22_, -1752837734);
-		client.aClass257_7353.method4547((byte) -44);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -44);
 		Class190.method3148((byte) 84);
 		client.aBool7175 = false;
 	}
@@ -407,12 +406,12 @@ public class Class286 implements Runnable {
 			if (6.0 == (double) Class291_Sub1.aFloat3468)
 				return Class114.aClass194_1243;
 			if ((double) Class291_Sub1.aFloat3468 >= 8.0)
-				return Class524.aClass194_6967;
+				return DefaultsFile.aClass194_6967;
 		} else if (i == 2) {
 			if ((double) Class291_Sub1.aFloat3468 == 3.0)
 				return Class114.aClass194_1243;
 			if ((double) Class291_Sub1.aFloat3468 == 4.0)
-				return Class524.aClass194_6967;
+				return DefaultsFile.aClass194_6967;
 			if (6.0 == (double) Class291_Sub1.aFloat3468)
 				return Class251.aClass194_3103;
 			if ((double) Class291_Sub1.aFloat3468 >= 8.0)
@@ -425,7 +424,7 @@ public class Class286 implements Runnable {
 		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i));
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = Class378.aClass317_4526.getFile(i, 0, -1501459483);
+		byte[] is = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(i, 0, -1501459483);
 		if (is == null || is.length <= 1)
 			return null;
 		try {

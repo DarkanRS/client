@@ -73,7 +73,7 @@ public class Class366 implements Interface3 {
 
 	static final void method6304(CS2Executor class527, int i) {
 		int i_17_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class368.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = IndexLoaders.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
 	}
 
 	static final void method6305(CS2Executor class527, int i) {

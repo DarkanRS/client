@@ -17,8 +17,7 @@ public abstract class Class282_Sub20 extends Node {
 	protected boolean aBool7669;
 	protected Class308 aClass308_7670;
 	Class282_Sub20[] aClass282_Sub20Array7671;
-	public static Index aClass317_7672;
-
+	
 	int method12314() {
 		return -1;
 	}

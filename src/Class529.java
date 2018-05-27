@@ -44,7 +44,7 @@ public class Class529 {
 				}
 				bool = true;
 			} else if (i == 2)
-				anInt7034 = class282_sub35.readBigSmart(2027276565) * 274633635;
+				anInt7034 = class282_sub35.readBigSmart() * 274633635;
 			else if (i == 3) {
 				anInt7026 = class282_sub35.readUnsignedByte() * -1110928127;
 				anIntArray7042 = new int[anInt7026 * -1141871871];
@@ -123,7 +123,7 @@ public class Class529 {
 				}
 				bool = true;
 			} else if (i == 2)
-				anInt7034 = class282_sub35.readBigSmart(2029479183) * 274633635;
+				anInt7034 = class282_sub35.readBigSmart() * 274633635;
 			else if (i == 3) {
 				anInt7026 = class282_sub35.readUnsignedByte() * -1110928127;
 				anIntArray7042 = new int[anInt7026 * -1141871871];
@@ -197,7 +197,7 @@ public class Class529 {
 		anInt7043 = -778366891;
 		anInt7045 = 955205249;
 		anInt7046 = -1663314619;
-		byte[] is = class317.method5615((Class524.aClass524_6961.anInt6966 * -1719912253), -1790761104);
+		byte[] is = class317.getFile((DefaultsFile.FILE_3.anInt6966 * -1719912253), -1790761104);
 		method11335(new RsByteBuffer(is), (byte) 63);
 	}
 
@@ -219,7 +219,7 @@ public class Class529 {
 				}
 				bool = true;
 			} else if (i_14_ == 2)
-				anInt7034 = class282_sub35.readBigSmart(2075763820) * 274633635;
+				anInt7034 = class282_sub35.readBigSmart() * 274633635;
 			else if (i_14_ == 3) {
 				anInt7026 = class282_sub35.readUnsignedByte() * -1110928127;
 				anIntArray7042 = new int[anInt7026 * -1141871871];
@@ -298,7 +298,7 @@ public class Class529 {
 				}
 				bool = true;
 			} else if (i == 2)
-				anInt7034 = class282_sub35.readBigSmart(1985228893) * 274633635;
+				anInt7034 = class282_sub35.readBigSmart() * 274633635;
 			else if (i == 3) {
 				anInt7026 = class282_sub35.readUnsignedByte() * -1110928127;
 				anIntArray7042 = new int[anInt7026 * -1141871871];

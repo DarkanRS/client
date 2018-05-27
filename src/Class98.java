@@ -79,13 +79,13 @@ public class Class98 {
 				((Class268) class268).anInt3297 -= 1909850437;
 				if (535587213 * ((Class268) class268).anInt3297 >= (class268.method4793((byte) -64) ? -1500 : -10)) {
 					if (1 == ((Class268) class268).aByte3300 && ((Class268) class268).aClass343_3303 == null) {
-						((Class268) class268).aClass343_3303 = Class343.method6094(Class219.aClass317_2714, (((Class268) class268).anInt3291) * 1932438803, 0);
+						((Class268) class268).aClass343_3303 = Class343.method6094(IndexLoaders.SOUND_EFFECT_INDEX, (((Class268) class268).anInt3291) * 1932438803, 0);
 						if (null == ((Class268) class268).aClass343_3303)
 							continue;
 						((Class268) class268).anInt3297 += ((Class268) class268).aClass343_3303.method6090() * 1909850437;
 					} else if (class268.method4793((byte) -41) && ((((Class268) class268).aClass282_Sub18_3294 == null) || ((((Class268) class268).aClass282_Sub26_Sub1_Sub1_3296) == null))) {
 						if (((Class268) class268).aClass282_Sub18_3294 == null)
-							((Class268) class268).aClass282_Sub18_3294 = Class282_Sub18.method12270((JS5LocalRequester.aClass317_3665), (1932438803 * (((Class268) class268).anInt3291)));
+							((Class268) class268).aClass282_Sub18_3294 = Class282_Sub18.method12270((IndexLoaders.MIDI_INSTRUMENT_INDEX), (1932438803 * (((Class268) class268).anInt3291)));
 						if (((Class268) class268).aClass282_Sub18_3294 == null)
 							continue;
 						if ((((Class268) class268).aClass282_Sub26_Sub1_Sub1_3296) == null) {
@@ -161,9 +161,9 @@ public class Class98 {
 		if (Class260.aBool3220 && !Class116.method1966(1117518618)) {
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1550374075) != 0 && 1293234709 * Class260.anInt3223 != -1) {
 				if (Class260.aClass282_Sub15_Sub2_3231 != null)
-					Class217.method3690(Class512.aClass317_5884, Class260.anInt3223 * 1293234709, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1791834725), false, Class260.aClass282_Sub15_Sub2_3231, 62181845);
+					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223 * 1293234709, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1791834725), false, Class260.aClass282_Sub15_Sub2_3231, 62181845);
 				else
-					Class282_Sub43.method13400(Class512.aClass317_5884, 1293234709 * Class260.anInt3223, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
+					Class282_Sub43.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
 			}
 			Class260.aBool3220 = false;
 			Class260.aClass282_Sub15_Sub2_3231 = null;

@@ -13,7 +13,7 @@ public class Class275_Sub4 extends Class275 {
 	}
 
 	static final void method12585(Class282_Sub31 class282_sub31, int i) {
-		Class206 class206 = client.aClass257_7353.method4430(-1869632062);
+		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1869632062);
 		if (class206 != null) {
 			Interface12 interface12 = null;
 			if (0 == ((Class282_Sub31) class282_sub31).anInt7766 * -497894501)
@@ -45,7 +45,7 @@ public class Class275_Sub4 extends Class275 {
 	}
 
 	static void method12587(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).method4105(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), 93625804)) ? 1 : 0;
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).method4105(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), 93625804)) ? 1 : 0;
 		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 }

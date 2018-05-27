@@ -21,8 +21,7 @@ public class Class243 {
 	public int anInt2998;
 	public int anInt2999;
 	public int anInt3000;
-	public static Class498 aClass498_3001;
-
+	
 	public static Class243 method4169(int i) {
 		Class243[] class243s = Class92.method1561((short) -1058);
 		for (int i_0_ = 0; i_0_ < class243s.length; i_0_++) {
@@ -102,7 +101,7 @@ public class Class243 {
 		int i_10_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_11_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_12_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 3]);
-		Class219 class219 = client.aClass257_7353.method4519(1537474699);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1537474699);
 		Class225.method3794(((i_9_ >> 14 & 0x3fff) - class219.anInt2711 * 1948093437), (i_9_ & 0x3fff) - -1002240017 * class219.anInt2712, i_10_ << 2, i_11_, i_12_, false, (byte) -1);
 	}
 
@@ -112,7 +111,7 @@ public class Class243 {
 		int i_14_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_15_ = (((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		long l = Class42.method891(0, 0, 12, i_13_, i_14_, i_15_, 1796735712);
-		int i_16_ = Class474.method7914(l);
+		int i_16_ = ObjectIndexLoader.method7914(l);
 		if (i_15_ < 1970) {
 			if (i <= 0)
 				return;
@@ -122,9 +121,9 @@ public class Class243 {
 	}
 
 	static final void method4179(int i, int i_17_, int i_18_, int i_19_, Class476 class476, byte i_20_) {
-		if (i_18_ >= 1 && i_19_ >= 1 && i_18_ <= client.aClass257_7353.method4424(1811223828) - 2 && i_19_ <= client.aClass257_7353.method4451(-1564374011) - 2) {
-			if (client.aClass257_7353.method4430(-1940602014) != null) {
-				Interface12 interface12 = client.aClass257_7353.method4441(1508379413).method12467(i, i_17_, i_18_, i_19_, 2009974413);
+		if (i_18_ >= 1 && i_19_ >= 1 && i_18_ <= IndexLoaders.MAP_REGION_DECODER.method4424(1811223828) - 2 && i_19_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1564374011) - 2) {
+			if (IndexLoaders.MAP_REGION_DECODER.method4430(-1940602014) != null) {
+				Interface12 interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_17_, i_18_, i_19_, 2009974413);
 				if (interface12 != null) {
 					if (interface12 instanceof Class521_Sub1_Sub1_Sub5)
 						((Class521_Sub1_Sub1_Sub5) interface12).method16096(class476, -59212941);

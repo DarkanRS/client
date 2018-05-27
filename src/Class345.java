@@ -148,7 +148,7 @@ public class Class345 {
 	}
 
 	public static Class345 method6132(int i) {
-		Class345 class345 = (Class345) aClass229_4031.method3865(i);
+		Class345 class345 = (Class345) aClass229_4031.get(i);
 		if (class345 != null) {
 			return class345;
 		}

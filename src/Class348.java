@@ -108,11 +108,11 @@ public class Class348 {
 		Class9.aBool71 = false;
 		Class509.method8739(900001069);
 		client.anInt7427 = 434551523;
-		Class479.method8036(client.anInt7340 * -141702765, (byte) 4);
+		UnderlayIndexLoader.method8036(client.anInt7340 * -141702765, (byte) 4);
 		Class84.myPlayer = new Player(null);
-		Class84.myPlayer.method11172((float) (client.aClass257_7353.method4424(1639359144) * 512 / 2), 0.0F, (float) (client.aClass257_7353.method4451(-1549308154) * 512 / 2));
-		Class84.myPlayer.regionBaseX[0] = client.aClass257_7353.method4424(-1586336378) / 2;
-		Class84.myPlayer.regionBaseY[0] = client.aClass257_7353.method4451(-1038237242) / 2;
+		Class84.myPlayer.method11172((float) (IndexLoaders.MAP_REGION_DECODER.method4424(1639359144) * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.method4451(-1549308154) * 512 / 2));
+		Class84.myPlayer.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.method4424(-1586336378) / 2;
+		Class84.myPlayer.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.method4451(-1038237242) / 2;
 		Class246.anInt3029 = 0;
 		Class31.anInt361 = 0;
 		if (5 == Class262.anInt3240 * -672443707) {
@@ -120,7 +120,7 @@ public class Class348 {
 			Class246.anInt3029 = (Class282_Sub44.anInt8064 * -2026930995 << 9) * 1442943697;
 		} else
 			Class515.method8860((byte) -92);
-		client.aClass257_7353.method4435((byte) 1).method4048(-367591790);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-367591790);
 	}
 
 	static boolean method6176(int i, int i_2_) {

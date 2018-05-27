@@ -11,7 +11,7 @@ public class Class119 {
 	int anInt1459;
 	static Class344 aClass344_1460;
 	public static Class12 aClass12_1461;
-	public static JS5StandardRequester aClass312_1462;
+	public static JS5StandardRequester JS5_STANDARD_REQUESTER;
 	
 	public boolean method2073(int i, int i_0_, int i_1_) {
 		if (i_0_ >= 0 && i_0_ < anIntArray1457.length) {
@@ -83,7 +83,7 @@ public class Class119 {
 			}
 		}
 		if (!bool)
-			Class387.method6681(4, new StringBuilder().append(Message.aClass433_5280.translate(Class223.aClass495_2772, -774222111)).append(string).toString(), (byte) -65);
+			LoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111)).append(string).toString(), (byte) -65);
 	}
 
 	static void method2076(Class118 class118, Class118 class118_12_, int i) {
@@ -120,7 +120,7 @@ public class Class119 {
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub7_8210), 2, 2126000152);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub6_8192), 2, -761948866);
 		Class94.method1589((short) 255);
-		client.aClass257_7353.method4435((byte) 1).method4048(572282036);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(572282036);
 		client.aBool7185 = true;
 	}
 }

@@ -6,7 +6,6 @@ import java.awt.Canvas;
 import java.net.URL;
 
 public class Class186 {
-	static Index aClass317_2347;
 	static FontRenderer aClass8_2348;
 	static int anInt2349;
 

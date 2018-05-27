@@ -22,7 +22,7 @@ public class Class374 {
 		return class505;
 	}
 
-	public static GraphicalRenderer method6367(Canvas canvas, Interface22 interface22, Index class317, int i) {
+	public static GraphicalRenderer getDirectXRenderer(Canvas canvas, Interface22 interface22, Index class317, int i) {
 		GraphicalRenderer class505;
 		try {
 			boolean bool = Class505_Sub2.method13893();

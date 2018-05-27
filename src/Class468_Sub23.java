@@ -5,8 +5,7 @@
 public class Class468_Sub23 extends Class468 {
 	public static final int anInt7930 = 1;
 	public static final int anInt7931 = 0;
-	public static Class438 aClass438_7932;
-
+	
 	public void method12896() {
 		if (aClass282_Sub54_5581.method13514((byte) 9) != Game.runescape)
 			anInt5578 = -754033619;

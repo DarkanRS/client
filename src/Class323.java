@@ -13,7 +13,7 @@ public class Class323 implements Interface22 {
 		Class282_Sub50 class282_sub50 = ((Class323) this).aClass223_3754.method3758((long) i);
 		if (class282_sub50 != null)
 			return (Class282_Sub50_Sub3) class282_sub50;
-		byte[] is = ((Class323) this).aClass317_3750.method5615(i, -130547352);
+		byte[] is = ((Class323) this).aClass317_3750.getFile(i, -130547352);
 		if (is == null)
 			return null;
 		Class282_Sub50_Sub3 class282_sub50_sub3 = new Class282_Sub50_Sub3(new RsByteBuffer(is));
@@ -198,7 +198,7 @@ public class Class323 implements Interface22 {
 		Class282_Sub50 class282_sub50 = ((Class323) this).aClass223_3754.method3758((long) i);
 		if (class282_sub50 != null)
 			return (Class282_Sub50_Sub3) class282_sub50;
-		byte[] is = ((Class323) this).aClass317_3750.method5615(i, -1645578794);
+		byte[] is = ((Class323) this).aClass317_3750.getFile(i, -1645578794);
 		if (is == null)
 			return null;
 		Class282_Sub50_Sub3 class282_sub50_sub3 = new Class282_Sub50_Sub3(new RsByteBuffer(is));
@@ -250,7 +250,7 @@ public class Class323 implements Interface22 {
 		Class282_Sub50 class282_sub50 = ((Class323) this).aClass223_3754.method3758((long) i);
 		if (class282_sub50 != null)
 			return (Class282_Sub50_Sub3) class282_sub50;
-		byte[] is = ((Class323) this).aClass317_3750.method5615(i, -239185434);
+		byte[] is = ((Class323) this).aClass317_3750.getFile(i, -239185434);
 		if (is == null)
 			return null;
 		Class282_Sub50_Sub3 class282_sub50_sub3 = new Class282_Sub50_Sub3(new RsByteBuffer(is));
@@ -284,7 +284,7 @@ public class Class323 implements Interface22 {
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		if (-1 == i_36_)
 			throw new RuntimeException();
-		Class431 class431 = Class466.aClass444_5570.method7424(i_36_, (byte) 8);
+		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_36_, (byte) 8);
 		if (class431.aChar5140 != 's')
 			throw new RuntimeException();
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class431.method7228(string, (byte) -23) ? 1 : 0;

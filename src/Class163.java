@@ -68,7 +68,7 @@ public class Class163 {
 	}
 
 	static void method2841(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])][1]);
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])][1]);
 		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 
@@ -78,12 +78,12 @@ public class Class163 {
 
 	public static Class350 method2843(RsByteBuffer class282_sub35, int i) {
 		Class350 class350 = Class383.method6512(class282_sub35, 88062096);
-		int i_0_ = class282_sub35.readBigSmart(2092862492);
-		int i_1_ = class282_sub35.readBigSmart(2090506221);
-		int i_2_ = class282_sub35.readBigSmart(1960328265);
-		int i_3_ = class282_sub35.readBigSmart(1975213697);
-		int i_4_ = class282_sub35.readBigSmart(2098286658);
-		int i_5_ = class282_sub35.readBigSmart(1992635064);
+		int i_0_ = class282_sub35.readBigSmart();
+		int i_1_ = class282_sub35.readBigSmart();
+		int i_2_ = class282_sub35.readBigSmart();
+		int i_3_ = class282_sub35.readBigSmart();
+		int i_4_ = class282_sub35.readBigSmart();
+		int i_5_ = class282_sub35.readBigSmart();
 		return new Class350_Sub3(class350.aClass356_4094, class350.aClass353_4087, class350.anInt4090 * -1967081549, class350.anInt4089 * -1196256967, class350.anInt4093 * 329542577, class350.anInt4088 * 323608093, class350.anInt4092 * -1921815535, class350.anInt4086 * 985690519, -771513131 * class350.anInt4091, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_);
 	}
 
@@ -101,7 +101,7 @@ public class Class163 {
 	}
 
 	public static Class414 method2845(Index class317, int i, byte i_12_) {
-		byte[] is = class317.method5615(i, -48187812);
+		byte[] is = class317.getFile(i, -48187812);
 		if (is == null)
 			return null;
 		return new Class414(is);

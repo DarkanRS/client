@@ -18,7 +18,7 @@ public class Class443 {
 	long[] aLongArray5373;
 	long[] aLongArray5374;
 	byte[] aByteArray5375 = new byte[32];
-	public static JS5LocalRequester aClass313_5376;
+	public static JS5LocalRequester JS5_LOCAL_REQUESTER;
 
 	void method7404() {
 		int i = 0;
@@ -612,7 +612,7 @@ public class Class443 {
 			else if (24 == i)
 				Class209.method3598(new StringBuilder().append("").append(457052913 * Class263.anInt3253).toString(), -1823674146);
 			else if (i == 28) {
-				Class201 class201 = (client.aClass257_7353.method4430(-1512240603).aClass201_2600);
+				Class201 class201 = (IndexLoaders.MAP_REGION_DECODER.method4430(-1512240603).aClass201_2600);
 				class201.aBool2552 = !class201.aBool2552;
 			} else if (i == 7)
 				client.aBool7176 = true;
@@ -645,25 +645,25 @@ public class Class443 {
 			else if (20 == i)
 				Class159.aClass450_2010.method7493(-799490388);
 			else if (i == 22)
-				Class119.aClass312_1462.method5525(-115621470);
+				Class119.JS5_STANDARD_REQUESTER.method5525(-115621470);
 			else if (3 == i)
-				Class119.aClass312_1462.method5526(-1851671444);
+				Class119.JS5_STANDARD_REQUESTER.method5526(-1851671444);
 			else if (13 == i)
-				Class351.aCanvas4096.setLocation(50, 50);
+				Class351.LOAD_CANVAS.setLocation(50, 50);
 			else if (1 == i)
-				Class351.aCanvas4096.setLocation((Class263.anInt3250 * -1911940837), (698621615 * Class263.anInt3251));
+				Class351.LOAD_CANVAS.setLocation((Class263.anInt3250 * -1911940837), (698621615 * Class263.anInt3251));
 			else if (i == 27)
 				Class468.method7789(-838440375);
 			else if (i == 6) {
-				client.aClass257_7353.aLong3183 = Class169.method2869(1624509158) * 2884791228845673515L;
-				client.aClass257_7353.aBool3206 = true;
+				IndexLoaders.MAP_REGION_DECODER.aLong3183 = Class169.method2869(1624509158) * 2884791228845673515L;
+				IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
 				Class468.method7789(620089057);
 			} else if (i == 26) {
 				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 				Class209.method3598(new StringBuilder().append((int) class385.aFloat4671 >> 9).append(" ").append((int) class385.aFloat4673 >> 9).toString(), -1980423440);
 			} else if (2 == i) {
 				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class209.method3598(new StringBuilder().append("").append(client.aClass257_7353.method4430(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, 65280)).toString(), -1193762995);
+				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.method4430(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, 65280)).toString(), -1193762995);
 			} else if (23 == i) {
 				Class209.method3598(new StringBuilder().append(Class118.aClass229_1280.method3861((byte) 1)).append(" ").append(Class118.aClass229_1280.method3860((byte) 53)).toString(), -622119201);
 				Class209.method3598(new StringBuilder().append(Class118.aClass229_1341.method3861((byte) 1)).append(" ").append(Class118.aClass229_1341.method3860((byte) 119)).toString(), -632491603);
@@ -676,16 +676,16 @@ public class Class443 {
 				Class282_Sub14.method12222(-1129309560);
 			} else if (10 == i) {
 				client.anInt7240 = 0;
-				client.aClass257_7353.method4547((byte) -123);
+				IndexLoaders.MAP_REGION_DECODER.method4547((byte) -123);
 			} else if (5 == i) {
 				client.anInt7240 = 1094588803;
-				client.aClass257_7353.method4547((byte) -69);
+				IndexLoaders.MAP_REGION_DECODER.method4547((byte) -69);
 			} else if (i == 29) {
 				client.anInt7240 = -2105789690;
-				client.aClass257_7353.method4547((byte) -47);
+				IndexLoaders.MAP_REGION_DECODER.method4547((byte) -47);
 			}
 		} catch (Exception exception) {
-			Class209.method3598(Message.aClass433_5159.translate(Class223.aClass495_2772, -1843715069), -915823010);
+			Class209.method3598(Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1843715069), -915823010);
 		}
 	}
 

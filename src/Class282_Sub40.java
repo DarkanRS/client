@@ -61,7 +61,7 @@ public class Class282_Sub40 extends Node {
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub7_8210), 1, 100643539);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub6_8192), 3, -1425167451);
 		Class94.method1589((short) 255);
-		client.aClass257_7353.method4435((byte) 1).method4048(2045600476);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(2045600476);
 		client.aBool7185 = true;
 	}
 

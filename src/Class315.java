@@ -11,7 +11,7 @@ public class Class315 {
 		throw new Error();
 	}
 
-	public static GraphicalRenderer method5582(Canvas canvas, Interface22 interface22, Index class317, int i) {
+	public static GraphicalRenderer getOpenGLRenderer(Canvas canvas, Interface22 interface22, Index class317, int i) {
 		Class505_Sub2_Sub1 class505_sub2_sub1;
 		try {
 			boolean bool = Class505_Sub2.method13893();

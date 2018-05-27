@@ -121,12 +121,12 @@ public class Class405 {
 	public static final void method6823(int i) {
 		int i_2_ = Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 47);
 		if (0 == i_2_) {
-			client.aClass257_7353.method4440(null, (byte) 2);
+			IndexLoaders.MAP_REGION_DECODER.method4440(null, (byte) 2);
 			Class534_Sub2.method12847(0, (byte) 57);
 		} else if (1 == i_2_) {
 			Class510.method8744((byte) 0, -1832206339);
 			Class534_Sub2.method12847(512, (byte) 105);
-			if (client.aClass257_7353.method4430(-987741607) != null)
+			if (IndexLoaders.MAP_REGION_DECODER.method4430(-987741607) != null)
 				Class17.method570(-1664759987);
 		} else {
 			Class510.method8744((byte) (48374445 * client.anInt7286 - 4 & 0xff), 688949228);

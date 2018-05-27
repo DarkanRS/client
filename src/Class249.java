@@ -137,6 +137,6 @@ public class Class249 implements Interface43 {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class524.method11221(class118, class98, class527, -2007218506);
+		DefaultsFile.method11221(class118, class98, class527, -2007218506);
 	}
 }

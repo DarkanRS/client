@@ -840,7 +840,7 @@ public class Class540 {
 	}
 
 	static void method11592(CS2Executor class527, byte i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).aStringArray2975[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).aStringArray2975[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])]);
 		((CS2Executor) class527).anInt7012 -= 283782002;
 	}
 
@@ -863,7 +863,7 @@ public class Class540 {
 		if (Class291_Sub1.aClass482_3459 == null || null == Class291_Sub1.aClass460_8030)
 			return null;
 		for (Class282_Sub36 class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass460_8030.next(); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass460_8030.next()) {
-			Class220 class220 = Class291_Sub1.aClass218_3456.method3700(((class282_sub36.anInt7991) * -1798678621), 461119623);
+			WorldMapAreaDefs class220 = Class291_Sub1.aClass218_3456.getWorldMapDefs(((class282_sub36.anInt7991) * -1798678621), 461119623);
 			if (null != class220 && class220.aBool2742 && class220.method3719(Class291_Sub1.anInterface42_3458, 1905436135))
 				return class282_sub36;
 		}

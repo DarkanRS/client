@@ -213,7 +213,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub7_8210), 2, -1469341129);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub6_8192), 1, -971375585);
 		Class94.method1589((short) 255);
-		client.aClass257_7353.method4435((byte) 1).method4048(-462453553);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-462453553);
 		client.aBool7185 = true;
 	}
 }

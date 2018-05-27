@@ -8,8 +8,7 @@ public class Class96_Sub4 extends Class96 {
 	int anInt8521;
 	int anInt8522;
 	int anInt8523;
-	public static Class474 aClass474_8524;
-
+	
 	Class96_Sub4(RsByteBuffer class282_sub35) {
 		super(class282_sub35);
 		((Class96_Sub4) this).anInt8520 = class282_sub35.readUnsignedShort() * 2062001331;
@@ -41,7 +40,7 @@ public class Class96_Sub4 extends Class96 {
 			long l = (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584 * -5876141066140255231L);
 			if (i_5_ >= 2000)
 				i_5_ -= 2000;
-			Class219 class219 = client.aClass257_7353.method4519(1872189276);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1872189276);
 			OutgoingPacket class379 = null;
 			if (i_5_ == 44)
 				class379 = OutgoingPacket.aClass379_4539;
@@ -74,7 +73,7 @@ public class Class96_Sub4 extends Class96 {
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i_6_, 1417031095);
 					class282_sub23.aClass282_Sub35_Sub2_7682.write128Byte(Class84.method1465(-1893602887) ? 1 : 0, -1708065557);
 					client.aClass184_7475.method3049(class282_sub23, 67860298);
-					Class257.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], class521_sub1_sub1_sub2_sub1.method15805(828768449), class521_sub1_sub1_sub2_sub1.method15805(828768449), 0, 971339209)), 1593350845);
+					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], class521_sub1_sub1_sub2_sub1.method15805(828768449), class521_sub1_sub1_sub2_sub1.method15805(828768449), 0, 971339209)), 1593350845);
 				}
 			}
 			if (16 == i_5_) {
@@ -106,7 +105,7 @@ public class Class96_Sub4 extends Class96 {
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeIntV2(Class7.anInt56 * 728544879, (byte) 104);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(client.anInt7346 * -1555739329, (short) -2375);
 					client.aClass184_7475.method3049(class282_sub23, -111115308);
-					Class257.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], class521_sub1_sub1_sub2_sub1.method15805(828768449), class521_sub1_sub1_sub2_sub1.method15805(828768449), 0, 971339209)), 1255775546);
+					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], class521_sub1_sub1_sub2_sub1.method15805(828768449), class521_sub1_sub1_sub2_sub1.method15805(828768449), 0, 971339209)), 1255775546);
 				}
 			}
 			if (i_5_ == 2) {
@@ -150,7 +149,7 @@ public class Class96_Sub4 extends Class96 {
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i_6_, 1417031095);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class84.method1465(-1762610857) ? 1 : 0);
 					client.aClass184_7475.method3049(class282_sub23, -688965453);
-					Class257.method4559(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], class521_sub1_sub1_sub2_sub2.method15805(828768449), class521_sub1_sub1_sub2_sub2.method15805(828768449), 0, 971339209)), 907331887);
+					MapRegion.method4559(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], class521_sub1_sub1_sub2_sub2.method15805(828768449), class521_sub1_sub1_sub2_sub2.method15805(828768449), 0, 971339209)), 907331887);
 				}
 			}
 			if (60 == i_5_) {
@@ -191,7 +190,7 @@ public class Class96_Sub4 extends Class96 {
 						client.anInt7295 = 0;
 					}
 					client.aClass184_7475.method3049(class282_sub23, -1144629676);
-					Class257.method4559(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, 1597401587), 1072484880);
+					MapRegion.method4559(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, 1597401587), 1072484880);
 				}
 			}
 			if (17 == i_5_) {
@@ -222,7 +221,7 @@ public class Class96_Sub4 extends Class96 {
 				class282_sub23.aClass282_Sub35_Sub2_7682.writeShort128(-1673073865 * client.anInt7345, -800257688);
 				class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(class219.anInt2711 * 1948093437 + i_3_, (short) -8634);
 				client.aClass184_7475.method3049(class282_sub23, -311032746);
-				Class257.method4559(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, -795317623), 1870869554);
+				MapRegion.method4559(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, -795317623), 1870869554);
 			}
 			if (30 == i_5_ && null == client.aClass118_7352) {
 				Class158_Sub2.method14355(i_4_, i_3_, 382043562);
@@ -288,7 +287,7 @@ public class Class96_Sub4 extends Class96 {
 						class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE128(client.anInt7346 * -1555739329, -1183932171);
 						class282_sub23.aClass282_Sub35_Sub2_7682.writeShort128(client.anInt7345 * -1673073865, -800257688);
 						client.aClass184_7475.method3049(class282_sub23, -86724265);
-						Class257.method4559(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub2.regionBaseX[0]), (class521_sub1_sub1_sub2_sub2.regionBaseY[0]), class521_sub1_sub1_sub2_sub2.method15805(828768449), class521_sub1_sub1_sub2_sub2.method15805(828768449), 0, 971339209), 1130929855);
+						MapRegion.method4559(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub2.regionBaseX[0]), (class521_sub1_sub1_sub2_sub2.regionBaseY[0]), class521_sub1_sub1_sub2_sub2.method15805(828768449), class521_sub1_sub1_sub2_sub2.method15805(828768449), 0, 971339209), 1130929855);
 					}
 				}
 				OutgoingPacket class379_9_ = null;

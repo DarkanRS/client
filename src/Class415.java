@@ -73,8 +73,8 @@ public class Class415 {
 		}
 	}
 
-	static void method6997(GraphicalRenderer class505, Class478 class478, int i, int i_2_, int i_3_, int i_4_) {
-		Class418 class418 = Class97.aClass427_995.method7172(class478.anInt5689 * -272332433, -1014703371);
+	static void method6997(GraphicalRenderer class505, ObjectDefinitions class478, int i, int i_2_, int i_3_, int i_4_) {
+		Class418 class418 = IndexLoaders.aClass427_995.method7172(class478.anInt5689 * -272332433, -1014703371);
 		if (-1 != class418.anInt4995 * -1053123675) {
 			if (class478.aBool5671) {
 				i += -1467651883 * class478.anInt5672;

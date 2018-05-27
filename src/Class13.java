@@ -29,7 +29,7 @@ public class Class13 {
 		long l = (((long) i_5_ << 48) + (((long) i_4_ << 32) + (long) (i_3_ + (i_6_ << 16) + (i_7_ << 24))));
 		MeshRasterizer class528_9_;
 		synchronized (aClass229_127) {
-			class528_9_ = (MeshRasterizer) aClass229_127.method3865(l);
+			class528_9_ = (MeshRasterizer) aClass229_127.get(l);
 		}
 		if (class528_9_ == null || class505.method8452(class528_9_.m(), i_8_) != 0) {
 			if (null != class528_9_)
@@ -113,7 +113,7 @@ public class Class13 {
 		long l = (((long) i_36_ << 48) + (((long) i_35_ << 32) + (long) (i_34_ + (i_37_ << 16) + (i_38_ << 24))));
 		MeshRasterizer class528_40_;
 		synchronized (aClass229_127) {
-			class528_40_ = (MeshRasterizer) aClass229_127.method3865(l);
+			class528_40_ = (MeshRasterizer) aClass229_127.get(l);
 		}
 		if (class528_40_ == null || class505.method8452(class528_40_.m(), i_39_) != 0) {
 			if (null != class528_40_)
@@ -279,7 +279,7 @@ public class Class13 {
 	static final void method505(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
 		int i_63_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_63_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_63_, (byte) 0);
 		if (!class437.aString5335.equals(string))
 			class118.method2000(i_63_, string, 2122573770);
 		else
@@ -296,15 +296,15 @@ public class Class13 {
 	}
 
 	public static final int method507(int i, int i_64_, int i_65_, int i_66_, int i_67_, byte i_68_) {
-		if (client.aClass257_7353.method4430(-888508075) == null)
+		if (IndexLoaders.MAP_REGION_DECODER.method4430(-888508075) == null)
 			return 0;
 		if (i_67_ < 3) {
-			Class311 class311 = client.aClass257_7353.method4433(33386298);
+			Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 			int i_69_ = i >> 9;
 			int i_70_ = i_64_ >> 9;
-			if (i_65_ < 0 || i_66_ < 0 || i_65_ > client.aClass257_7353.method4424(1440924603) - 1 || i_66_ > client.aClass257_7353.method4451(-1516017407) - 1)
+			if (i_65_ < 0 || i_66_ < 0 || i_65_ > IndexLoaders.MAP_REGION_DECODER.method4424(1440924603) - 1 || i_66_ > IndexLoaders.MAP_REGION_DECODER.method4451(-1516017407) - 1)
 				return 0;
-			if (i_69_ < 1 || i_70_ < 1 || i_69_ > client.aClass257_7353.method4424(645551626) - 1 || i_70_ > client.aClass257_7353.method4451(-608520237) - 1)
+			if (i_69_ < 1 || i_70_ < 1 || i_69_ > IndexLoaders.MAP_REGION_DECODER.method4424(645551626) - 1 || i_70_ > IndexLoaders.MAP_REGION_DECODER.method4451(-608520237) - 1)
 				return 0;
 			boolean bool = (0 != (class311.aByteArrayArrayArray3638[1][i >> 9][i_64_ >> 9] & 0x2));
 			if (0 == (i & 0x1ff)) {
@@ -322,7 +322,7 @@ public class Class13 {
 			if (bool)
 				i_67_++;
 		}
-		return client.aClass257_7353.method4430(-1611665057).aClass390Array2591[i_67_].method6709(i, i_64_, -1580541166);
+		return IndexLoaders.MAP_REGION_DECODER.method4430(-1611665057).aClass390Array2591[i_67_].method6709(i, i_64_, -1580541166);
 	}
 
 	public static void method508(boolean bool, boolean bool_75_, int i) {

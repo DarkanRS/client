@@ -8,8 +8,7 @@ public class AttributeDefault {
 	public int anInt5337;
 	public boolean autoDisable = true;
 	public static NativeSprite aClass160_5339;
-	public static Index aClass317_5340;
-
+	
 	public boolean method7314() {
 		return ((AttributeDefault) this).aChar5336 == 's';
 	}
@@ -83,11 +82,11 @@ public class AttributeDefault {
 
 	static void method7323(byte i) {
 		if (null != Renderers.SOFTWARE_RENDERER) {
-			client.aClass257_7353.method4444(1684896059);
+			IndexLoaders.MAP_REGION_DECODER.method4444(1684896059);
 			Class58.method1139(-1956740427);
 			Class76.method1361((byte) -9);
-			Class519.method11156(-1284329582);
-			client.aClass257_7353.method4446((byte) -33);
+			Defaults8Loader.method11156(-1284329582);
+			IndexLoaders.MAP_REGION_DECODER.method4446((byte) -33);
 			Class217_Sub1.method13056(-1395275172);
 			Class356.method6227(false, (byte) -17);
 			Class225_Sub6.method13413(-1756133525);

@@ -244,7 +244,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 
 	public static final void method15535(int i, String string, Color color, Color color_0_, Color color_1_, int i_2_) {
 		try {
-			Graphics graphics = Class351.aCanvas4096.getGraphics();
+			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
 			if (null == Class515.aFont5893)
 				Class515.aFont5893 = new Font("Helvetica", 1, 13);
 			if (color == null)
@@ -255,7 +255,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				color_1_ = new Color(255, 255, 255);
 			try {
 				if (OutputStream_Sub1.anImage7953 == null)
-					OutputStream_Sub1.anImage7953 = (Class351.aCanvas4096.createImage(-418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243));
+					OutputStream_Sub1.anImage7953 = (Class351.LOAD_CANVAS.createImage(-418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243));
 				Graphics graphics_3_ = OutputStream_Sub1.anImage7953.getGraphics();
 				graphics_3_.setColor(Color.black);
 				graphics_3_.fillRect(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243);
@@ -299,7 +299,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				graphics.drawString(string, i_6_ + (304 - string.length() * 6) / 2, 22 + i_7_);
 			}
 		} catch (Exception exception) {
-			Class351.aCanvas4096.repaint();
+			Class351.LOAD_CANVAS.repaint();
 		}
 	}
 

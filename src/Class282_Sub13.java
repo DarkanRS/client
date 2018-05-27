@@ -26,7 +26,7 @@ public class Class282_Sub13 extends Node {
 	static final int anInt7585 = 1048576;
 	Class110 aClass110_7586;
 	public static Class61 aClass61_7587;
-	public static Class519 aClass519_7588;
+	public static Defaults8Loader DEFAULTS_LOADER_8;
 
 	Class282_Sub13() {
 		/* empty */

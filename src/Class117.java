@@ -619,7 +619,7 @@ public class Class117 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = (Class282_Sub20_Sub10.method15262(Class260.aClass282_Sub15_Sub2_3231, 1475290596));
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 569);
 			}
-			Class282_Sub43.method13400(Class525.aClass317_6984, i, 0, i_95_, false, (byte) -50);
+			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_95_, false, (byte) -50);
 			Class150.method2580(-1, 255, (byte) -39);
 			Class260.aBool3220 = true;
 		}

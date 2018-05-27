@@ -13,8 +13,7 @@ public class Class236 {
 	static int anInt2912 = 0;
 	static Class534_Sub1 aClass534_Sub1_2913;
 	static Queue aQueue2914;
-	public static Index aClass317_2915;
-
+	
 	public static void method3968(Class282_Sub53 class282_sub53) {
 		if (!Class169.method2875(-1741204137 * client.anInt7166, -2098454084))
 			class282_sub53.method13475(1491323558);
@@ -79,15 +78,15 @@ public class Class236 {
 	static void method3976() {
 		synchronized (aQueue2914) {
 			Point point;
-			if (Class351.aCanvas4096.isShowing())
-				point = Class351.aCanvas4096.getLocationOnScreen();
+			if (Class351.LOAD_CANVAS.isShowing())
+				point = Class351.LOAD_CANVAS.getLocationOnScreen();
 			else
 				point = null;
 			for (;;) {
 				Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) aQueue2914.poll();
 				if (null == class282_sub53_sub1)
 					break;
-				if (point == null || !Class351.aCanvas4096.isShowing() || !Class530.aBool7050)
+				if (point == null || !Class351.LOAD_CANVAS.isShowing() || !Class530.aBool7050)
 					class282_sub53_sub1.method13475(1967225308);
 				else {
 					class282_sub53_sub1.method14732(point, -1545161336);
@@ -113,15 +112,15 @@ public class Class236 {
 	static void method3978() {
 		synchronized (aQueue2914) {
 			Point point;
-			if (Class351.aCanvas4096.isShowing())
-				point = Class351.aCanvas4096.getLocationOnScreen();
+			if (Class351.LOAD_CANVAS.isShowing())
+				point = Class351.LOAD_CANVAS.getLocationOnScreen();
 			else
 				point = null;
 			for (;;) {
 				Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) aQueue2914.poll();
 				if (null == class282_sub53_sub1)
 					break;
-				if (point == null || !Class351.aCanvas4096.isShowing() || !Class530.aBool7050)
+				if (point == null || !Class351.LOAD_CANVAS.isShowing() || !Class530.aBool7050)
 					class282_sub53_sub1.method13475(940122346);
 				else {
 					class282_sub53_sub1.method14732(point, -1545161336);

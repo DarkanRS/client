@@ -6,12 +6,11 @@ public class Class408 {
 	SoftCache aClass229_4850 = new SoftCache(64);
 	public int anInt4851;
 	Index aClass317_4852;
-	static Index aClass317_4853;
-
+	
 	public Class415 method6872(int i) {
 		Class415 class415;
 		synchronized (((Class408) this).aClass229_4850) {
-			class415 = ((Class415) ((Class408) this).aClass229_4850.method3865((long) i));
+			class415 = ((Class415) ((Class408) this).aClass229_4850.get((long) i));
 		}
 		if (null != class415)
 			return class415;
@@ -31,7 +30,7 @@ public class Class408 {
 	public Class415 method6873(int i, byte i_0_) {
 		Class415 class415;
 		synchronized (((Class408) this).aClass229_4850) {
-			class415 = ((Class415) ((Class408) this).aClass229_4850.method3865((long) i));
+			class415 = ((Class415) ((Class408) this).aClass229_4850.get((long) i));
 		}
 		if (null != class415)
 			return class415;

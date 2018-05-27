@@ -30,7 +30,7 @@ public class Class38 {
 		} else if (4 == i)
 			anInt395 = class282_sub35.readUnsignedByte() * 1741810315;
 		else if (i == 5)
-			anInt402 = class282_sub35.readBigSmart(1992336155) * 1489057977;
+			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
 			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 11913) * 929212777;
 		else if (i == 7) {
@@ -56,7 +56,7 @@ public class Class38 {
 		} else if (4 == i)
 			anInt395 = class282_sub35.readUnsignedByte() * 1741810315;
 		else if (i == 5)
-			anInt402 = class282_sub35.readBigSmart(2092374659) * 1489057977;
+			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
 			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 4167) * 929212777;
 		else if (i == 7) {
@@ -96,7 +96,7 @@ public class Class38 {
 		} else if (4 == i)
 			anInt395 = class282_sub35.readUnsignedByte() * 1741810315;
 		else if (i == 5)
-			anInt402 = class282_sub35.readBigSmart(2125461903) * 1489057977;
+			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
 			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 24474) * 929212777;
 		else if (i == 7) {
@@ -118,7 +118,7 @@ public class Class38 {
 		} else if (4 == i)
 			anInt395 = class282_sub35.readUnsignedByte() * 1741810315;
 		else if (i == 5)
-			anInt402 = class282_sub35.readBigSmart(2147400124) * 1489057977;
+			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
 			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 10644) * 929212777;
 		else if (i == 7) {
@@ -140,7 +140,7 @@ public class Class38 {
 		} else if (4 == i)
 			anInt395 = class282_sub35.readUnsignedByte() * 1741810315;
 		else if (i == 5)
-			anInt402 = class282_sub35.readBigSmart(1983074206) * 1489057977;
+			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
 			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 28766) * 929212777;
 		else if (i == 7) {
@@ -229,7 +229,7 @@ public class Class38 {
 		else
 			class8 = Class186.aClass8_2348;
 		Class414 class414 = Class114.method1887(-864314974);
-		Class456_Sub2.method12680(class505, 1742345613 * Class301.anInt3555, Class184.anInt2300 * 815250613, Class158_Sub2.anInt8975 * -13788709, -1488439617 * Class110.anInt1104, i_13_, class8, class414, Message.aClass433_5255.translate(Class223.aClass495_2772, -827597083), -1519032164);
+		Class456_Sub2.method12680(class505, 1742345613 * Class301.anInt3555, Class184.anInt2300 * 815250613, Class158_Sub2.anInt8975 * -13788709, -1488439617 * Class110.anInt1104, i_13_, class8, class414, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -827597083), -1519032164);
 		int i_15_ = (255 - Class182.anInt2262 * 1734917383 - Class20.anInt156 * -1454754391);
 		if (i_15_ < 0)
 			i_15_ = 0;

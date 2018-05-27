@@ -21,7 +21,7 @@ public class Class105 {
 	static final void method1803(CS2Executor class527, int i) {
 		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) != 0) ? 1 : 0, -564300666);
 		Class190.method3148((byte) 98);
-		client.aClass257_7353.method4547((byte) -119);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -119);
 	}
 
 	static void method1804(int i, String string, String string_2_, byte i_3_) {
@@ -40,7 +40,7 @@ public class Class105 {
 			if (1 == i_8_)
 				Class48_Sub2.method14572(i, i_4_, i_5_, i_6_, i_7_, (short) 26000);
 			else
-				Class257.method4561(i, i_4_, i_5_, i_6_, i_7_, i_8_, -939335267);
+				MapRegion.method4561(i, i_4_, i_5_, i_6_, i_7_, i_8_, -939335267);
 		} else if (i_8_ == 1)
 			Class78.method1388(i, i_4_, i_5_, i_6_, i_7_, (byte) 36);
 		else
@@ -48,7 +48,7 @@ public class Class105 {
 	}
 
 	static void method1806(RsBitsBuffer buffer, int i, int i_10_) {
-		Class219 class219 = client.aClass257_7353.method4519(2087234907);
+		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(2087234907);
 		boolean needsUpdate = buffer.readBits(1, (byte) 56) == 1;
 		if (needsUpdate)
 			Class197.anIntArray2435[(Class197.anInt2434 += 1879181821) * -706143403 - 1] = i;
@@ -181,7 +181,7 @@ public class Class105 {
 				} else
 					player.method16129(i_23_, i_24_, (Class197.playerMovementTypes[i]), -1262996328);
 				player.aByte7967 = player.aByte7968 = (byte) (i_20_ + player.aByte7967 & 0x3);
-				if (client.aClass257_7353.method4433(33386298).method5497(i_23_, i_24_, 1753987250))
+				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_23_, i_24_, 1753987250))
 					player.aByte7968++;
 				if (i == 1595512269 * client.anInt7315 && (player.aByte7967 != Class4.anInt35 * 675588453))
 					Class4.anInt35 = player.aByte7967 * -647602067;
@@ -199,7 +199,7 @@ public class Class105 {
 				} else
 					player.method16129(i_29_, i_30_, (Class197.playerMovementTypes[i]), -106492270);
 				player.aByte7967 = player.aByte7968 = (byte) (i_26_ + player.aByte7967 & 0x3);
-				if (client.aClass257_7353.method4433(33386298).method5497(i_29_, i_30_, 1539369664))
+				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_29_, i_30_, 1539369664))
 					player.aByte7968++;
 				if (i == client.anInt7315 * 1595512269)
 					Class4.anInt35 = player.aByte7967 * -647602067;

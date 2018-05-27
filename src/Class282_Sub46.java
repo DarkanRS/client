@@ -9,31 +9,31 @@ public class Class282_Sub46 extends Node {
 		aShort8067 = i;
 	}
 
-	static void method13407(GraphicalRenderer class505, Interface22 interface22, int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
+	static void method13407(GraphicalRenderer renderer, Interface22 interface22, int i, int i_0_, int i_1_, int i_2_, byte i_3_) {
 		if (-8084891 * Class291_Sub1.anInt8015 < 100)
-			Class435.method7302(class505, interface22, (byte) 37);
-		class505.r(i, i_0_, i_1_ + i, i_2_ + i_0_);
+			Class435.method7302(renderer, interface22, (byte) 37);
+		renderer.r(i, i_0_, i_1_ + i, i_2_ + i_0_);
 		if (-8084891 * Class291_Sub1.anInt8015 < 100) {
 			int i_4_ = 20;
 			int i_5_ = i + i_1_ / 2;
 			int i_6_ = i_0_ + i_2_ / 2 - 18 - i_4_;
-			class505.B(i, i_0_, i_1_, i_2_, -16777216, 0);
-			class505.method8430(i_5_ - 152, i_6_, 304, 34, client.aColorArray7199[client.anInt7447 * 1920182969].getRGB(), 0);
-			class505.B(i_5_ - 150, 2 + i_6_, -24254673 * Class291_Sub1.anInt8015, 30, client.aColorArray7186[1920182969 * client.anInt7447].getRGB(), 0);
-			Class285.aClass8_3394.method360(Message.aClass433_5274.translate(Class223.aClass495_2772, -895351629), i_5_, i_4_ + i_6_, client.aColorArray7200[1920182969 * client.anInt7447].getRGB(), -1, 768492991);
+			renderer.B(i, i_0_, i_1_, i_2_, -16777216, 0);
+			renderer.method8430(i_5_ - 152, i_6_, 304, 34, client.aColorArray7199[client.anInt7447 * 1920182969].getRGB(), 0);
+			renderer.B(i_5_ - 150, 2 + i_6_, -24254673 * Class291_Sub1.anInt8015, 30, client.aColorArray7186[1920182969 * client.anInt7447].getRGB(), 0);
+			Class285.aClass8_3394.method360(Message.LOADING.translate(Class223.CURRENT_LANGUAGE, -895351629), i_5_, i_4_ + i_6_, client.aColorArray7200[1920182969 * client.anInt7447].getRGB(), -1, 768492991);
 		} else {
 			int i_7_ = (-861975801 * Class427.anInt5123 - (int) ((float) i_1_ / Class291_Sub1.aFloat3468));
 			int i_8_ = ((int) ((float) i_2_ / Class291_Sub1.aFloat3468) + Class475.anInt5624 * 483850921);
 			int i_9_ = ((int) ((float) i_1_ / Class291_Sub1.aFloat3468) + Class427.anInt5123 * -861975801);
 			int i_10_ = (Class475.anInt5624 * 483850921 - (int) ((float) i_2_ / Class291_Sub1.aFloat3468));
-			Class340.anInt3991 = -848800339 * (-861975801 * Class427.anInt5123 - (int) ((float) i_1_ / Class291_Sub1.aFloat3468));
+			MapRegionLoaderTask.anInt3991 = -848800339 * (-861975801 * Class427.anInt5123 - (int) ((float) i_1_ / Class291_Sub1.aFloat3468));
 			Class489.anInt5765 = 1732935055 * (483850921 * Class475.anInt5624 - (int) ((float) i_2_ / Class291_Sub1.aFloat3468));
 			Class488.anInt5760 = -791388679 * (int) ((float) (2 * i_1_) / Class291_Sub1.aFloat3468);
 			Class351.anInt4097 = ((int) ((float) (2 * i_2_) / Class291_Sub1.aFloat3468) * 429290245);
 			Class291_Sub1.method5139(i_7_ + Class291_Sub1.anInt3472, Class291_Sub1.anInt3473 + i_8_, Class291_Sub1.anInt3472 + i_9_, Class291_Sub1.anInt3473 + i_10_, i, i_0_, i + i_1_, 1 + (i_0_ + i_2_));
-			Class291_Sub1.method5180(class505);
-			NodeCollection class482 = Class291_Sub1.method5135(class505);
-			Class18.method573(class505, class482, 0, 0, (byte) 2);
+			Class291_Sub1.renderMap(renderer);
+			NodeCollection areas = Class291_Sub1.method5135(renderer);
+			Class18.renderInformation(renderer, areas, 0, 0, (byte) 2);
 			if (Class361.anInt4185 * 750747217 > 0) {
 				Class96_Sub9.anInt9282 -= 759227215;
 				if (Class96_Sub9.anInt9282 * 896422831 == 0) {

@@ -102,7 +102,7 @@ public class Class480 {
 	}
 
 	public static final void method8043(int i) {
-		String string = (null != Class445.aString5384 ? Class445.aString5384 : Class220.method3741((byte) -1));
+		String string = (null != Class445.aString5384 ? Class445.aString5384 : WorldMapAreaDefs.method3741((byte) -1));
 		Class282_Sub50_Sub6.method14788(string, false, Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
 	}
 

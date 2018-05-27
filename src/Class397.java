@@ -24,8 +24,7 @@ public class Class397 implements Interface38 {
 	static Class397 aClass397_4810;
 	static Class397 aClass397_4811;
 	public static Class397 aClass397_4812;
-	public static Class218 aClass218_4813;
-
+	
 	Class397(String string, int i) {
 		anInt4802 = -983311285 * i;
 	}
@@ -52,7 +51,7 @@ public class Class397 implements Interface38 {
 		aClass397_4811 = new Class397("", 76);
 	}
 
-	public static void method6775(int i, int i_0_, int i_1_, int i_2_, Class478 class478, NPC class521_sub1_sub1_sub2_sub2, Player class521_sub1_sub1_sub2_sub1, int i_3_) {
+	public static void method6775(int i, int i_0_, int i_1_, int i_2_, ObjectDefinitions class478, NPC class521_sub1_sub1_sub2_sub2, Player class521_sub1_sub1_sub2_sub1, int i_3_) {
 		Class282_Sub48 class282_sub48 = new Class282_Sub48();
 		((Class282_Sub48) class282_sub48).anInt8076 = 1589843113 * i;
 		((Class282_Sub48) class282_sub48).anInt8107 = (i_0_ << 9) * 80768833;
@@ -87,7 +86,7 @@ public class Class397 implements Interface38 {
 			Class282_Sub48.aClass482_8073.append(class282_sub48, -427234199);
 		} else if (class521_sub1_sub1_sub2_sub2 != null) {
 			((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085 = class521_sub1_sub1_sub2_sub2;
-			Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+			NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 			if (null != class409.anIntArray4886) {
 				((Class282_Sub48) class282_sub48).aBool8092 = true;
 				class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);

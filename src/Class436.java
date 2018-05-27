@@ -9,7 +9,7 @@ public class Class436 {
 	public Class416 method7304(int i, byte i_0_) {
 		Class416 class416;
 		synchronized (((Class436) this).aClass229_5334) {
-			class416 = ((Class416) ((Class436) this).aClass229_5334.method3865((long) i));
+			class416 = ((Class416) ((Class436) this).aClass229_5334.get((long) i));
 		}
 		if (class416 != null)
 			return class416;
@@ -53,7 +53,7 @@ public class Class436 {
 	public Class416 method7309(int i) {
 		Class416 class416;
 		synchronized (((Class436) this).aClass229_5334) {
-			class416 = ((Class416) ((Class436) this).aClass229_5334.method3865((long) i));
+			class416 = ((Class416) ((Class436) this).aClass229_5334.get((long) i));
 		}
 		if (class416 != null)
 			return class416;
@@ -73,7 +73,7 @@ public class Class436 {
 	public Class416 method7310(int i) {
 		Class416 class416;
 		synchronized (((Class436) this).aClass229_5334) {
-			class416 = ((Class416) ((Class436) this).aClass229_5334.method3865((long) i));
+			class416 = ((Class416) ((Class436) this).aClass229_5334.get((long) i));
 		}
 		if (class416 != null)
 			return class416;

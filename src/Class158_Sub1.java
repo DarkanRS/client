@@ -30,9 +30,9 @@ public abstract class Class158_Sub1 extends Class158 {
 
 	public abstract boolean method13766();
 
-	static Class102[] method13767(int i) {
-		return (new Class102[] { Class102.aClass102_1055, Class102.aClass102_1036, Class102.aClass102_1025, Class102.aClass102_1034, Class102.aClass102_1035, Class102.aClass102_1024, Class102.aClass102_1027, Class102.aClass102_1041, Class102.aClass102_1017, Class102.aClass102_1052, Class102.aClass102_1050, Class102.aClass102_1019, Class102.aClass102_1018, Class102.aClass102_1044, Class102.aClass102_1038, Class102.aClass102_1042, Class102.aClass102_1048, Class102.aClass102_1047,
-				Class102.aClass102_1046, Class102.aClass102_1032, Class102.aClass102_1045, Class102.aClass102_1031, Class102.aClass102_1026, Class102.aClass102_1028, Class102.aClass102_1037, Class102.aClass102_1023, Class102.aClass102_1033, Class102.aClass102_1040, Class102.aClass102_1030, Class102.aClass102_1020, Class102.aClass102_1029, Class102.aClass102_1022, Class102.aClass102_1043, Class102.aClass102_1053, Class102.aClass102_1021, Class102.aClass102_1051, Class102.aClass102_1049 });
+	static IndexReference[] method13767(int i) {
+		return (new IndexReference[] { IndexReference.INDEX_11, IndexReference.INDEX_19, IndexReference.INDEX_8, IndexReference.INDEX_13, IndexReference.INDEX_18, IndexReference.INDEX_7, IndexReference.INDEX_21, IndexReference.INDEX_24, IndexReference.INDEX_10, IndexReference.INDEX_35, IndexReference.INDEX_33, IndexReference.INDEX_0, IndexReference.INDEX_1, IndexReference.INDEX_27, IndexReference.INDEX_29, IndexReference.INDEX_12, IndexReference.INDEX_22, IndexReference.INDEX_30,
+				IndexReference.INDEX_2, IndexReference.INDEX_15, IndexReference.INDEX_28, IndexReference.INDEX_14, IndexReference.INDEX_9, IndexReference.INDEX_16, IndexReference.INDEX_20, IndexReference.INDEX_6, IndexReference.INDEX_25, IndexReference.INDEX_23, IndexReference.INDEX_17, IndexReference.INDEX_3, IndexReference.INDEX_31, IndexReference.INDEX_5, IndexReference.INDEX_26, IndexReference.INDEX_36, IndexReference.INDEX_4, IndexReference.INDEX_34, IndexReference.INDEX_32 });
 	}
 
 	public static String method13768(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {

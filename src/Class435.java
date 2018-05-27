@@ -424,27 +424,27 @@ public class Class435 {
 			Class169.method2869(1888552596);
 			if (-8084891 * Class291_Sub1.anInt8015 < 10) {
 				if (!Class291_Sub1.aClass317_3460.method5629(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533, 71472045)) {
-					Class291_Sub1.anInt8015 = (Class192.worldMap.method5631((Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533), (byte) 95)) / 10 * -45072531;
+					Class291_Sub1.anInt8015 = (IndexLoaders.WORLD_MAP_INDEX.method5631((Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533), (byte) 95)) / 10 * -45072531;
 					return;
 				}
-				Class409.method6907(-1568053655);
+				NPCDefinitions.method6907(-1568053655);
 				Class291_Sub1.anInt8015 = -450725310;
 			}
 			if (Class291_Sub1.anInt8015 * -8084891 == 10) {
 				Class291_Sub1.anInt3472 = -742910705 * (Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9539) >> 6 << 6;
 				Class291_Sub1.anInt3473 = (Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9541 * 458255425) >> 6 << 6;
-				Class291_Sub1.anInt3474 = ((235539227 * Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9540) >> 6 << 6) - Class291_Sub1.anInt3472 + 64;
-				Class291_Sub1.anInt3483 = ((1097246003 * Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9535) >> 6 << 6) - Class291_Sub1.anInt3473 + 64;
+				Class291_Sub1.xLength = ((235539227 * Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9540) >> 6 << 6) - Class291_Sub1.anInt3472 + 64;
+				Class291_Sub1.yLength = ((1097246003 * Class291_Sub1.aClass282_Sub50_Sub6_3491.anInt9535) >> 6 << 6) - Class291_Sub1.anInt3473 + 64;
 				int[] is = new int[3];
 				int i_51_ = -1;
 				int i_52_ = -1;
 				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class219 class219 = client.aClass257_7353.method4519(1209620896);
+				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1209620896);
 				if (Class291_Sub1.aClass282_Sub50_Sub6_3491.method14778(Class84.myPlayer.aByte7967, (class219.anInt2711 * 1948093437 + ((int) class385.aFloat4671 >> 9)), (((int) class385.aFloat4673 >> 9) + class219.anInt2712 * -1002240017), is, -1889386276)) {
 					i_51_ = is[1] - Class291_Sub1.anInt3472;
 					i_52_ = is[2] - Class291_Sub1.anInt3473;
 				}
-				if (!Class291_Sub1.aBool8028 && i_51_ >= 0 && i_51_ < Class291_Sub1.anInt3474 && i_52_ >= 0 && i_52_ < Class291_Sub1.anInt3483) {
+				if (!Class291_Sub1.aBool8028 && i_51_ >= 0 && i_51_ < Class291_Sub1.xLength && i_52_ >= 0 && i_52_ < Class291_Sub1.yLength) {
 					i_51_ += (int) (Math.random() * 10.0) - 5;
 					i_52_ += (int) (Math.random() * 10.0) - 5;
 					Class427.anInt5123 = i_51_ * 1714827959;
@@ -501,7 +501,7 @@ public class Class435 {
 				Class291_Sub1.aClass218_3456.method3697(1024, 256, 2137741394);
 				Class291_Sub1.aClass427_3457.method7175(256, 256, 993879963);
 				Class291_Sub1.aClass474_3455.method7899(4096, -2034610586);
-				Class16.aClass230_147.method3906(256, (short) 727);
+				IndexLoaders.aClass230_147.method3906(256, (short) 727);
 				Class291_Sub1.anInt8015 = -901450620;
 			} else if (20 == Class291_Sub1.anInt8015 * -8084891) {
 				Exception_Sub3.method15619(true, -484129587);
@@ -521,42 +521,42 @@ public class Class435 {
 				Exception_Sub3.method15619(true, -147678453);
 				Class282_Sub15_Sub1.method14840((byte) -22);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 70) {
-				Class494.aClass194_5794 = new Class194(class505, 11, true, Class351.aCanvas4096);
+				Class494.aClass194_5794 = new Class194(class505, 11, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 1004672533;
 				Exception_Sub3.method15619(true, -1670495557);
 				Class282_Sub15_Sub1.method14840((byte) 30);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 73) {
-				Class291_Sub1.aClass194_8017 = new Class194(class505, 12, true, Class351.aCanvas4096);
+				Class291_Sub1.aClass194_8017 = new Class194(class505, 12, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 869454940;
 				Exception_Sub3.method15619(true, -1191023445);
 				Class282_Sub15_Sub1.method14840((byte) -90);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 76) {
-				Class291_Sub1.aClass194_8023 = new Class194(class505, 14, true, Class351.aCanvas4096);
+				Class291_Sub1.aClass194_8023 = new Class194(class505, 14, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 734237347;
 				Exception_Sub3.method15619(true, -2098673020);
 				Class282_Sub15_Sub1.method14840((byte) -57);
 			} else if (79 == -8084891 * Class291_Sub1.anInt8015) {
-				Class446.aClass194_5416 = new Class194(class505, 17, true, Class351.aCanvas4096);
+				Class446.aClass194_5416 = new Class194(class505, 17, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 599019754;
 				Exception_Sub3.method15619(true, 784313452);
 				Class282_Sub15_Sub1.method14840((byte) 55);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 82) {
-				Class114.aClass194_1243 = new Class194(class505, 19, true, Class351.aCanvas4096);
+				Class114.aClass194_1243 = new Class194(class505, 19, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 463802161;
 				Exception_Sub3.method15619(true, 299968314);
 				Class282_Sub15_Sub1.method14840((byte) -88);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 85) {
-				Class524.aClass194_6967 = new Class194(class505, 22, true, Class351.aCanvas4096);
+				DefaultsFile.aClass194_6967 = new Class194(class505, 22, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 328584568;
 				Exception_Sub3.method15619(true, 735044045);
 				Class282_Sub15_Sub1.method14840((byte) -35);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 88) {
-				Class251.aClass194_3103 = new Class194(class505, 26, true, Class351.aCanvas4096);
+				Class251.aClass194_3103 = new Class194(class505, 26, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = 193366975;
 				Exception_Sub3.method15619(true, 1741477937);
 				Class282_Sub15_Sub1.method14840((byte) -64);
 			} else {
-				Class521_Sub1_Sub5_Sub1.aClass194_10527 = new Class194(class505, 30, true, Class351.aCanvas4096);
+				Class521_Sub1_Sub5_Sub1.aClass194_10527 = new Class194(class505, 30, true, Class351.LOAD_CANVAS);
 				Class291_Sub1.anInt8015 = -212285804;
 				Exception_Sub3.method15619(true, -95185892);
 				Class282_Sub15_Sub1.method14840((byte) -14);

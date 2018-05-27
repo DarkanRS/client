@@ -2,73 +2,73 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class387 {
+public class LoadingStage {
 	boolean aBool4694;
-	static Class387 aClass387_4695;
-	static Class387 aClass387_4696;
-	static Class387 aClass387_4697 = new Class387(0, Message.aClass433_5174, 2);
-	static Class387 aClass387_4698;
-	static Class387 aClass387_4699;
-	static Class387 aClass387_4700;
-	static Class387 aClass387_4701;
-	static Class387 aClass387_4702;
+	static LoadingStage aClass387_4695;
+	static LoadingStage aClass387_4696;
+	static LoadingStage aClass387_4697 = new LoadingStage(0, Message.CHECKING_FOR_UPDATES, 2);
+	static LoadingStage aClass387_4698;
+	static LoadingStage aClass387_4699;
+	static LoadingStage aClass387_4700;
+	static LoadingStage aClass387_4701;
+	static LoadingStage aClass387_4702;
 	int anInt4703;
-	static Class387 aClass387_4704;
-	static Class387 aClass387_4705;
-	static Class387 aClass387_4706;
-	static Class387 aClass387_4707;
-	static Class387 aClass387_4708;
-	static Class387 aClass387_4709;
-	static Class387 aClass387_4710;
+	static LoadingStage aClass387_4704;
+	static LoadingStage aClass387_4705;
+	static LoadingStage aClass387_4706;
+	static LoadingStage aClass387_4707;
+	static LoadingStage aClass387_4708;
+	static LoadingStage aClass387_4709;
+	static LoadingStage aClass387_4710;
 	Message aClass433_4711;
 	public int anInt4712;
-	static Class387 aClass387_4713;
+	static LoadingStage aClass387_4713;
 	Message aClass433_4714;
 	int anInt4715;
-	static Class387 aClass387_4716;
-	static Class387 aClass387_4717;
+	static LoadingStage aClass387_4716;
+	static LoadingStage aClass387_4717;
 	boolean aBool4718;
 
-	Class387(int i, Message class433, Message class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
+	LoadingStage(int i, Message class433, Message class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
 		anInt4712 = 2061403819 * i;
-		((Class387) this).aClass433_4711 = class433;
-		((Class387) this).aClass433_4714 = class433_0_;
-		((Class387) this).anInt4715 = -786455353 * i_1_;
-		((Class387) this).anInt4703 = -1800347625 * i_2_;
-		((Class387) this).aBool4694 = bool;
-		((Class387) this).aBool4718 = bool_3_;
+		((LoadingStage) this).aClass433_4711 = class433;
+		((LoadingStage) this).aClass433_4714 = class433_0_;
+		((LoadingStage) this).anInt4715 = -786455353 * i_1_;
+		((LoadingStage) this).anInt4703 = -1800347625 * i_2_;
+		((LoadingStage) this).aBool4694 = bool;
+		((LoadingStage) this).aBool4718 = bool_3_;
 	}
 
-	Class387(int i, Message class433, int i_4_) {
+	LoadingStage(int i, Message class433, int i_4_) {
 		this(i, class433, class433, i_4_, i_4_, true, false);
 	}
 
-	Class387(int i, Message class433, Message class433_5_, int i_6_, int i_7_) {
+	LoadingStage(int i, Message class433, Message class433_5_, int i_6_, int i_7_) {
 		this(i, class433, class433_5_, i_6_, i_7_, true, false);
 	}
 
 	static {
-		aClass387_4695 = new Class387(1, Message.aClass433_5174, Message.aClass433_5174, 2, 3);
-		aClass387_4696 = new Class387(2, Message.aClass433_5174, 3);
-		aClass387_4702 = new Class387(3, Message.aClass433_5174, Message.aClass433_5174, 3, 4);
-		aClass387_4708 = new Class387(4, Message.aClass433_5174, 4);
-		aClass387_4699 = new Class387(5, Message.aClass433_5174, Message.aClass433_5174, 4, 5);
-		aClass387_4700 = new Class387(6, Message.aClass433_5174, Message.aClass433_5174, 5, 98, true, true);
-		aClass387_4717 = new Class387(7, Message.aClass433_5174, 99);
-		aClass387_4709 = new Class387(8, Message.aClass433_5174, 100);
-		aClass387_4716 = new Class387(9, Message.aClass433_5158, Message.aClass433_5158, 0, 92, true, true);
-		aClass387_4704 = new Class387(10, Message.aClass433_5158, Message.aClass433_5158, 92, 93);
-		aClass387_4705 = new Class387(11, Message.aClass433_5158, Message.aClass433_5158, 94, 95);
-		aClass387_4706 = new Class387(12, Message.aClass433_5158, Message.aClass433_5158, 96, 97);
-		aClass387_4707 = new Class387(13, Message.aClass433_5158, 97);
-		aClass387_4713 = new Class387(14, Message.aClass433_5158, 97);
-		aClass387_4698 = new Class387(15, Message.aClass433_5158, 100);
-		aClass387_4710 = new Class387(16, Message.aClass433_5158, 100);
-		aClass387_4701 = new Class387(17, Message.aClass433_5158, 100);
+		aClass387_4695 = new LoadingStage(1, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 2, 3);
+		aClass387_4696 = new LoadingStage(2, Message.CHECKING_FOR_UPDATES, 3);
+		aClass387_4702 = new LoadingStage(3, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 3, 4);
+		aClass387_4708 = new LoadingStage(4, Message.CHECKING_FOR_UPDATES, 4);
+		aClass387_4699 = new LoadingStage(5, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 4, 5);
+		aClass387_4700 = new LoadingStage(6, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 5, 98, true, true);
+		aClass387_4717 = new LoadingStage(7, Message.CHECKING_FOR_UPDATES, 99);
+		aClass387_4709 = new LoadingStage(8, Message.CHECKING_FOR_UPDATES, 100);
+		aClass387_4716 = new LoadingStage(9, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 0, 92, true, true);
+		aClass387_4704 = new LoadingStage(10, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 92, 93);
+		aClass387_4705 = new LoadingStage(11, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 94, 95);
+		aClass387_4706 = new LoadingStage(12, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 96, 97);
+		aClass387_4707 = new LoadingStage(13, Message.FETCHING_UPDATES, 97);
+		aClass387_4713 = new LoadingStage(14, Message.FETCHING_UPDATES, 97);
+		aClass387_4698 = new LoadingStage(15, Message.FETCHING_UPDATES, 100);
+		aClass387_4710 = new LoadingStage(16, Message.FETCHING_UPDATES, 100);
+		aClass387_4701 = new LoadingStage(17, Message.FETCHING_UPDATES, 100);
 	}
 
-	static Class387[] method6676(int i) {
-		return (new Class387[] { aClass387_4697, aClass387_4695, aClass387_4696, aClass387_4702, aClass387_4708, aClass387_4699, aClass387_4700, aClass387_4717, aClass387_4709, aClass387_4716, aClass387_4704, aClass387_4705, aClass387_4706, aClass387_4707, aClass387_4713, aClass387_4698, aClass387_4710, aClass387_4701 });
+	static LoadingStage[] method6676(int i) {
+		return (new LoadingStage[] { aClass387_4697, aClass387_4695, aClass387_4696, aClass387_4702, aClass387_4708, aClass387_4699, aClass387_4700, aClass387_4717, aClass387_4709, aClass387_4716, aClass387_4704, aClass387_4705, aClass387_4706, aClass387_4707, aClass387_4713, aClass387_4698, aClass387_4710, aClass387_4701 });
 	}
 
 	static final void method6677(CS2Executor class527, int i) {
@@ -188,11 +188,11 @@ public class Class387 {
 		Class191.method3167(i, 0, "", "", "", string, 146573843);
 	}
 
-	static final void method6682(GraphicalRenderer class505, int i, int i_25_, int i_26_, int i_27_, short i_28_) {
+	static final void renderMiniMiniMap(GraphicalRenderer class505, int i, int i_25_, int i_26_, int i_27_, short i_28_) {
 		class505.r(i, i_25_, i_26_ + i, i_25_ + i_27_);
 		class505.method8425(i, i_25_, i_26_, i_27_, -16777216, (byte) -58);
 		if (-8084891 * Class291_Sub1.anInt8015 >= 100) {
-			float f = ((float) Class291_Sub1.anInt3483 / (float) Class291_Sub1.anInt3474);
+			float f = ((float) Class291_Sub1.yLength / (float) Class291_Sub1.xLength);
 			int i_29_ = i_26_;
 			int i_30_ = i_27_;
 			if (f < 1.0F)
@@ -201,18 +201,18 @@ public class Class387 {
 				i_29_ = (int) ((float) i_27_ / f);
 			i += (i_26_ - i_29_) / 2;
 			i_25_ += (i_27_ - i_30_) / 2;
-			if (null == Class511.aClass160_5883 || Class511.aClass160_5883.method2747() != i_26_ || Class511.aClass160_5883.method2793() != i_27_) {
-				Class291_Sub1.method5139(Class291_Sub1.anInt3472, (Class291_Sub1.anInt3473 + Class291_Sub1.anInt3483), (Class291_Sub1.anInt3474 + Class291_Sub1.anInt3472), Class291_Sub1.anInt3473, i, i_25_, i_29_ + i, i_25_ + i_30_);
-				Class291_Sub1.method5180(class505);
-				Class511.aClass160_5883 = class505.method8668(i, i_25_, i_29_, i_30_, false);
+			if (null == Defaults7Loader.aClass160_5883 || Defaults7Loader.aClass160_5883.method2747() != i_26_ || Defaults7Loader.aClass160_5883.method2793() != i_27_) {
+				Class291_Sub1.method5139(Class291_Sub1.anInt3472, (Class291_Sub1.anInt3473 + Class291_Sub1.yLength), (Class291_Sub1.xLength + Class291_Sub1.anInt3472), Class291_Sub1.anInt3473, i, i_25_, i_29_ + i, i_25_ + i_30_);
+				Class291_Sub1.renderMap(class505);
+				Defaults7Loader.aClass160_5883 = class505.method8668(i, i_25_, i_29_, i_30_, false);
 			}
-			Class511.aClass160_5883.method2752(i, i_25_);
-			int i_31_ = (i_29_ * (Class488.anInt5760 * 1448596553) / Class291_Sub1.anInt3474);
-			int i_32_ = (i_30_ * (Class351.anInt4097 * -1845665331) / Class291_Sub1.anInt3483);
-			int i_33_ = i + (i_29_ * (Class340.anInt3991 * -517876187) / Class291_Sub1.anInt3474);
-			int i_34_ = i_30_ + i_25_ - (i_30_ * (Class489.anInt5765 * -1586888337) / Class291_Sub1.anInt3483) - i_32_;
+			Defaults7Loader.aClass160_5883.method2752(i, i_25_);
+			int i_31_ = (i_29_ * (Class488.anInt5760 * 1448596553) / Class291_Sub1.xLength);
+			int i_32_ = (i_30_ * (Class351.anInt4097 * -1845665331) / Class291_Sub1.yLength);
+			int i_33_ = i + (i_29_ * (MapRegionLoaderTask.anInt3991 * -517876187) / Class291_Sub1.xLength);
+			int i_34_ = i_30_ + i_25_ - (i_30_ * (Class489.anInt5765 * -1586888337) / Class291_Sub1.yLength) - i_32_;
 			int i_35_ = -1996554240;
-			if (Game.stellarDawn == client.aClass486_7450)
+			if (Game.stellarDawn == client.CURRENT_GAME)
 				i_35_ = -1996488705;
 			class505.B(i_33_, i_34_, i_31_, i_32_, i_35_, 1);
 			class505.method8430(i_33_, i_34_, i_31_, i_32_, i_35_, 0);
@@ -223,15 +223,15 @@ public class Class387 {
 				else
 					i_36_ = 187146859 * Class96_Sub9.anInt9282;
 				for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 9)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(-387502259)) {
-					Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(class282_sub36.anInt7991 * -1798678621, 1043671083));
+					WorldMapAreaDefs class220 = (Class291_Sub1.aClass218_3456.getWorldMapDefs(class282_sub36.anInt7991 * -1798678621, 1043671083));
 					if (Class282_Sub16.method12248(class220, -2066566460)) {
 						if (-1798678621 * class282_sub36.anInt7991 == 2089227969 * Class291_Sub1.anInt8018) {
-							int i_37_ = ((i_29_ * (-1306535747 * class282_sub36.anInt7987) / Class291_Sub1.anInt3474) + i);
-							int i_38_ = i_25_ + (i_30_ * (Class291_Sub1.anInt3483 - (1012301095 * class282_sub36.anInt7993)) / Class291_Sub1.anInt3483);
+							int i_37_ = ((i_29_ * (-1306535747 * class282_sub36.anInt7987) / Class291_Sub1.xLength) + i);
+							int i_38_ = i_25_ + (i_30_ * (Class291_Sub1.yLength - (1012301095 * class282_sub36.anInt7993)) / Class291_Sub1.yLength);
 							class505.method8425(i_37_ - 2, i_38_ - 2, 4, 4, i_36_ << 24 | 0xffff00, (byte) -94);
 						} else if (-1 != Class291_Sub1.anInt8026 * 614736923 && (Class291_Sub1.anInt8026 * 614736923 == 781329827 * class220.anInt2718)) {
-							int i_39_ = ((i_29_ * (-1306535747 * class282_sub36.anInt7987) / Class291_Sub1.anInt3474) + i);
-							int i_40_ = (i_25_ + ((Class291_Sub1.anInt3483 - class282_sub36.anInt7993 * 1012301095) * i_30_ / Class291_Sub1.anInt3483));
+							int i_39_ = ((i_29_ * (-1306535747 * class282_sub36.anInt7987) / Class291_Sub1.xLength) + i);
+							int i_40_ = (i_25_ + ((Class291_Sub1.yLength - class282_sub36.anInt7993 * 1012301095) * i_30_ / Class291_Sub1.yLength));
 							class505.method8425(i_39_ - 2, i_40_ - 2, 4, 4, i_36_ << 24 | 0xffff00, (byte) -94);
 						}
 					}
@@ -276,7 +276,7 @@ public class Class387 {
 			Class86.anInt831 = i * 1539001787;
 		}
 		if (Class282_Sub42.aClass85_8039 == Class85.aClass85_815) {
-			byte[] is = Class89.aClass317_944.method5615(i, -130725112);
+			byte[] is = IndexLoaders.CUTSCENE_INDEX.getFile(i, -130725112);
 			if (null == is)
 				return false;
 			RsByteBuffer class282_sub35 = new RsByteBuffer(is);

@@ -38,6 +38,6 @@ public class Class332 {
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, 220366407);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
 		client.aClass184_7475.method3049(class282_sub23, 916919130);
-		Class260.aClass116_3229 = new Class116(Class512.aClass317_5884, i);
+		Class260.aClass116_3229 = new Class116(IndexLoaders.MUSIC_INDEX, i);
 	}
 }

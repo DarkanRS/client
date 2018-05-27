@@ -22,7 +22,7 @@ public class Class290 {
 	public Class198 method5102(int i, int i_0_) {
 		Class198 class198;
 		synchronized (((Class290) this).aClass229_3449) {
-			class198 = ((Class198) ((Class290) this).aClass229_3449.method3865((long) i));
+			class198 = ((Class198) ((Class290) this).aClass229_3449.get((long) i));
 		}
 		if (class198 != null)
 			return class198;
@@ -77,7 +77,7 @@ public class Class290 {
 	public Class198 method5106(int i) {
 		Class198 class198;
 		synchronized (((Class290) this).aClass229_3449) {
-			class198 = ((Class198) ((Class290) this).aClass229_3449.method3865((long) i));
+			class198 = ((Class198) ((Class290) this).aClass229_3449.get((long) i));
 		}
 		if (class198 != null)
 			return class198;
@@ -134,7 +134,7 @@ public class Class290 {
 	public Class198 method5111(int i) {
 		Class198 class198;
 		synchronized (((Class290) this).aClass229_3449) {
-			class198 = ((Class198) ((Class290) this).aClass229_3449.method3865((long) i));
+			class198 = ((Class198) ((Class290) this).aClass229_3449.get((long) i));
 		}
 		if (class198 != null)
 			return class198;

@@ -54,7 +54,7 @@ public class Class62 implements Interface3 {
 		int i_12_ = class282_sub35.readUnsignedByte();
 		int i_13_ = class282_sub35.readUnsignedShort();
 		int i_14_ = class282_sub35.readUnsignedShort();
-		int i_15_ = class282_sub35.readBigSmart(1942206835);
+		int i_15_ = class282_sub35.readBigSmart();
 		int i_16_ = class282_sub35.readInt();
 		int i_17_ = class282_sub35.readInt();
 		return new Class62(string, class356, class353, i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, i_15_, i_16_, i_17_);
@@ -71,7 +71,7 @@ public class Class62 implements Interface3 {
 		int i_21_ = class282_sub35.readUnsignedByte();
 		int i_22_ = class282_sub35.readUnsignedShort();
 		int i_23_ = class282_sub35.readUnsignedShort();
-		int i_24_ = class282_sub35.readBigSmart(2091553119);
+		int i_24_ = class282_sub35.readBigSmart();
 		int i_25_ = class282_sub35.readInt();
 		int i_26_ = class282_sub35.readInt();
 		return new Class62(string, class356, class353, i, i_18_, i_19_, i_20_, i_21_, i_22_, i_23_, i_24_, i_25_, i_26_);
@@ -88,7 +88,7 @@ public class Class62 implements Interface3 {
 		int i_30_ = class282_sub35.readUnsignedByte();
 		int i_31_ = class282_sub35.readUnsignedShort();
 		int i_32_ = class282_sub35.readUnsignedShort();
-		int i_33_ = class282_sub35.readBigSmart(1944050009);
+		int i_33_ = class282_sub35.readBigSmart();
 		int i_34_ = class282_sub35.readInt();
 		int i_35_ = class282_sub35.readInt();
 		return new Class62(string, class356, class353, i, i_27_, i_28_, i_29_, i_30_, i_31_, i_32_, i_33_, i_34_, i_35_);

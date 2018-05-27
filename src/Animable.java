@@ -143,7 +143,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15797(int[] is, int[] is_6_, int i) {
 		if (anIntArray10335 == null && is != null)
-			anIntArray10335 = new int[Class473.aClass526_5605.equipmentSlots.length];
+			anIntArray10335 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
 		else if (is == null) {
 			anIntArray10335 = null;
 			return;
@@ -166,8 +166,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (anIntArray10362 == null) {
 			if (-1 == i_11_)
 				return true;
-			anIntArray10362 = new int[Class473.aClass526_5605.equipmentSlots.length];
-			for (int i_13_ = 0; i_13_ < Class473.aClass526_5605.equipmentSlots.length; i_13_++)
+			anIntArray10362 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
+			for (int i_13_ = 0; i_13_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_13_++)
 				anIntArray10362[i_13_] = -1;
 		}
 		Class227 class227 = method15855((byte) -17);
@@ -182,7 +182,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_17_ = i_15_ - i_16_;
 			if (i_17_ >= -i_14_ && i_17_ <= i_14_) {
 				anIntArray10362[i] = -1;
-				for (int i_18_ = 0; i_18_ < Class473.aClass526_5605.equipmentSlots.length; i_18_++) {
+				for (int i_18_ = 0; i_18_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_18_++) {
 					if (-1 != anIntArray10362[i_18_])
 						return true;
 				}
@@ -282,9 +282,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_40_ = 378836105 * class161.anInt2012;
 		if (-1 != i && -1 != i_40_) {
 			if (i == i_40_) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) -32);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(i, (byte) -32);
 				if (class525.aBool6968 && -1 != class525.anInt6977 * -364555849) {
-					AnimationDefinitions class518 = Class330.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) 21);
+					AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) 21);
 					int i_41_ = 554947543 * class518.anInt5907;
 					if (0 == i_41_)
 						return;
@@ -294,18 +294,18 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 			} else {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) 36);
-				Class525 class525_42_ = Class96_Sub20.aClass515_9416.method8845(i_40_, (byte) -6);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(i, (byte) 36);
+				Class525 class525_42_ = IndexLoaders.aClass515_9416.method8845(i_40_, (byte) -6);
 				if (-1 != class525.anInt6977 * -364555849 && class525_42_.anInt6977 * -364555849 != -1) {
-					AnimationDefinitions class518 = Class330.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) -33);
-					AnimationDefinitions class518_43_ = Class330.aClass523_3868.method11205(((class525_42_.anInt6977) * -364555849), (byte) 13);
+					AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) -33);
+					AnimationDefinitions class518_43_ = IndexLoaders.aClass523_3868.method11205(((class525_42_.anInt6977) * -364555849), (byte) 13);
 					if (-1834317435 * class518.anInt5916 < -1834317435 * class518_43_.anInt5916)
 						return;
 				}
 			}
 		}
 		int i_44_ = 0;
-		if (-1 != i && !(Class96_Sub20.aClass515_9416.method8845(i, (byte) 62).aBool6968))
+		if (-1 != i && !(IndexLoaders.aClass515_9416.method8845(i, (byte) 62).aBool6968))
 			i_44_ = 2;
 		if (i != -1 && bool)
 			i_44_ = 1;
@@ -313,7 +313,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		class161.anInt2011 = -523477979 * i_37_;
 		class161.anInt2013 = (i_35_ >> 16) * 391696483;
 		class161.anInt2015 = i_36_ * 1859279795;
-		class161.aClass456_2014.method7571((-1 != i ? ((Class96_Sub20.aClass515_9416.method8845(i, (byte) -71).anInt6977) * -364555849) : -1), i_35_ & 0xffff, i_44_, false, -1358660139);
+		class161.aClass456_2014.method7571((-1 != i ? ((IndexLoaders.aClass515_9416.method8845(i, (byte) -71).anInt6977) * -364555849) : -1), i_35_ & 0xffff, i_44_, false, -1358660139);
 	}
 
 	public final void method15801(int i) {
@@ -334,7 +334,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_54_ = -1;
 		int i_55_ = 0;
 		if (i >= 0) {
-			Class228 class228 = Login.aClass210_3389.method3603(i, 1856651955);
+			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
 			i_54_ = -1638316243 * class228.anInt2839;
 			i_55_ = class228.anInt2841 * -1006911631;
 		}
@@ -382,7 +382,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public final void method15803(int i, int i_60_, int i_61_, int i_62_, int i_63_, int i_64_, byte i_65_) {
-		Class198 class198 = Class286.aClass290_3402.method5102(i, -133815568);
+		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, -133815568);
 		Class275_Sub7 class275_sub7 = null;
 		Class275_Sub7 class275_sub7_66_ = null;
 		int i_67_ = -1142991979 * class198.anInt2440;
@@ -428,7 +428,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Class305 class305 = method11166();
 		int i_72_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_73_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
-		if (null != aClass206_7970 && i_72_ >= 1 && i_73_ >= 1 && i_72_ <= client.aClass257_7353.method4424(2033491837) - 1 && i_73_ <= client.aClass257_7353.method4451(-2135239532) - 1) {
+		if (null != aClass206_7970 && i_72_ >= 1 && i_73_ >= 1 && i_72_ <= IndexLoaders.MAP_REGION_DECODER.method4424(2033491837) - 1 && i_73_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-2135239532) - 1) {
 			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][i_72_][i_73_]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				return class293.aClass521_Sub1_Sub3_3499.aShort9561 + i_71_;
@@ -567,7 +567,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_99_ = (byte) 7;
 			Class161 class161 = aClass161Array10339[i_98_];
 			if (-1 != 378836105 * class161.anInt2012 && !class161.aClass456_2014.method7573(1386461400)) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 117);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 117);
 				boolean bool = 3 == class525.aByte6982 && (0 != i_95_ || 0 != i_96_);
 				int i_100_ = i;
 				if (bool)
@@ -636,8 +636,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (anIntArray10362 == null) {
 			if (-1 == i_109_)
 				return true;
-			anIntArray10362 = new int[Class473.aClass526_5605.equipmentSlots.length];
-			for (int i_110_ = 0; i_110_ < Class473.aClass526_5605.equipmentSlots.length; i_110_++)
+			anIntArray10362 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
+			for (int i_110_ = 0; i_110_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_110_++)
 				anIntArray10362[i_110_] = -1;
 		}
 		Class227 class227 = method15855((byte) -17);
@@ -652,7 +652,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_114_ = i_112_ - i_113_;
 			if (i_114_ >= -i_111_ && i_114_ <= i_111_) {
 				anIntArray10362[i] = -1;
-				for (int i_115_ = 0; i_115_ < Class473.aClass526_5605.equipmentSlots.length; i_115_++) {
+				for (int i_115_ = 0; i_115_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_115_++) {
 					if (-1 != anIntArray10362[i_115_])
 						return true;
 				}
@@ -688,7 +688,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i = method15808(635765286);
 		if (i == -1)
 			return Class211.aClass227_2669;
-		return Class96_Sub16.aClass211_9383.method3616(i, (byte) 15);
+		return IndexLoaders.aClass211_9383.method3616(i, (byte) 15);
 	}
 
 	public int method13003() {
@@ -727,7 +727,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Class305 class305 = method11166();
 		int i_118_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_119_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
-		if (null != aClass206_7970 && i_118_ >= 1 && i_119_ >= 1 && i_118_ <= client.aClass257_7353.method4424(1358683385) - 1 && i_119_ <= client.aClass257_7353.method4451(-947392385) - 1) {
+		if (null != aClass206_7970 && i_118_ >= 1 && i_119_ >= 1 && i_118_ <= IndexLoaders.MAP_REGION_DECODER.method4424(1358683385) - 1 && i_119_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-947392385) - 1) {
 			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][i_118_][i_119_]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				return class293.aClass521_Sub1_Sub3_3499.aShort9561 + i;
@@ -747,7 +747,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Class305 class305 = method11166();
 		int i_120_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_121_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
-		if (null != aClass206_7970 && i_120_ >= 1 && i_121_ >= 1 && i_120_ <= client.aClass257_7353.method4424(-1295672030) - 1 && i_121_ <= client.aClass257_7353.method4451(-1381064515) - 1) {
+		if (null != aClass206_7970 && i_120_ >= 1 && i_121_ >= 1 && i_120_ <= IndexLoaders.MAP_REGION_DECODER.method4424(-1295672030) - 1 && i_121_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1381064515) - 1) {
 			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][i_120_][i_121_]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				return class293.aClass521_Sub1_Sub3_3499.aShort9561 + i;
@@ -787,8 +787,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (anIntArray10362 == null) {
 			if (-1 == i_123_)
 				return true;
-			anIntArray10362 = new int[Class473.aClass526_5605.equipmentSlots.length];
-			for (int i_124_ = 0; i_124_ < Class473.aClass526_5605.equipmentSlots.length; i_124_++)
+			anIntArray10362 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
+			for (int i_124_ = 0; i_124_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_124_++)
 				anIntArray10362[i_124_] = -1;
 		}
 		Class227 class227 = method15855((byte) -17);
@@ -803,7 +803,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_128_ = i_126_ - i_127_;
 			if (i_128_ >= -i_125_ && i_128_ <= i_125_) {
 				anIntArray10362[i] = -1;
-				for (int i_129_ = 0; i_129_ < Class473.aClass526_5605.equipmentSlots.length; i_129_++) {
+				for (int i_129_ = 0; i_129_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_129_++) {
 					if (-1 != anIntArray10362[i_129_])
 						return true;
 				}
@@ -944,7 +944,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15831(int[] is, int[] is_135_) {
 		if (anIntArray10335 == null && is != null)
-			anIntArray10335 = new int[Class473.aClass526_5605.equipmentSlots.length];
+			anIntArray10335 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
 		else if (is == null) {
 			anIntArray10335 = null;
 			return;
@@ -965,7 +965,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15832(int[] is, int[] is_138_) {
 		if (anIntArray10335 == null && is != null)
-			anIntArray10335 = new int[Class473.aClass526_5605.equipmentSlots.length];
+			anIntArray10335 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
 		else if (is == null) {
 			anIntArray10335 = null;
 			return;
@@ -986,7 +986,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15833(int[] is, int[] is_141_) {
 		if (anIntArray10335 == null && is != null)
-			anIntArray10335 = new int[Class473.aClass526_5605.equipmentSlots.length];
+			anIntArray10335 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
 		else if (is == null) {
 			anIntArray10335 = null;
 			return;
@@ -1007,7 +1007,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15834(int[] is, int[] is_144_) {
 		if (anIntArray10335 == null && is != null)
-			anIntArray10335 = new int[Class473.aClass526_5605.equipmentSlots.length];
+			anIntArray10335 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
 		else if (is == null) {
 			anIntArray10335 = null;
 			return;
@@ -1030,8 +1030,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (anIntArray10362 == null) {
 			if (-1 == i_147_)
 				return true;
-			anIntArray10362 = new int[Class473.aClass526_5605.equipmentSlots.length];
-			for (int i_148_ = 0; i_148_ < Class473.aClass526_5605.equipmentSlots.length; i_148_++)
+			anIntArray10362 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
+			for (int i_148_ = 0; i_148_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_148_++)
 				anIntArray10362[i_148_] = -1;
 		}
 		Class227 class227 = method15855((byte) -17);
@@ -1046,7 +1046,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_152_ = i_150_ - i_151_;
 			if (i_152_ >= -i_149_ && i_152_ <= i_149_) {
 				anIntArray10362[i] = -1;
-				for (int i_153_ = 0; i_153_ < Class473.aClass526_5605.equipmentSlots.length; i_153_++) {
+				for (int i_153_ = 0; i_153_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_153_++) {
 					if (-1 != anIntArray10362[i_153_])
 						return true;
 				}
@@ -1091,7 +1091,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_162_ = (byte) 7;
 			Class161 class161 = aClass161Array10339[i_161_];
 			if (-1 != 378836105 * class161.anInt2012 && !class161.aClass456_2014.method7573(-544447199)) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 62);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 62);
 				boolean bool = 3 == class525.aByte6982 && (0 != i_157_ || 0 != i_158_);
 				int i_163_ = i;
 				if (bool)
@@ -1295,9 +1295,9 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_202_ = 378836105 * class161.anInt2012;
 		if (-1 != i && -1 != i_202_) {
 			if (i == i_202_) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) -63);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(i, (byte) -63);
 				if (class525.aBool6968 && -1 != class525.anInt6977 * -364555849) {
-					AnimationDefinitions class518 = Class330.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) -19);
+					AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(((class525.anInt6977) * -364555849), (byte) -19);
 					int i_203_ = 554947543 * class518.anInt5907;
 					if (0 == i_203_)
 						return;
@@ -1307,18 +1307,18 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 			} else {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(i, (byte) 26);
-				Class525 class525_204_ = Class96_Sub20.aClass515_9416.method8845(i_202_, (byte) 69);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(i, (byte) 26);
+				Class525 class525_204_ = IndexLoaders.aClass515_9416.method8845(i_202_, (byte) 69);
 				if (-1 != class525.anInt6977 * -364555849 && class525_204_.anInt6977 * -364555849 != -1) {
-					AnimationDefinitions class518 = Class330.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) 42);
-					AnimationDefinitions class518_205_ = Class330.aClass523_3868.method11205(((class525_204_.anInt6977) * -364555849), (byte) 16);
+					AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((-364555849 * (class525.anInt6977)), (byte) 42);
+					AnimationDefinitions class518_205_ = IndexLoaders.aClass523_3868.method11205(((class525_204_.anInt6977) * -364555849), (byte) 16);
 					if (-1834317435 * class518.anInt5916 < -1834317435 * class518_205_.anInt5916)
 						return;
 				}
 			}
 		}
 		int i_206_ = 0;
-		if (-1 != i && !(Class96_Sub20.aClass515_9416.method8845(i, (byte) -22).aBool6968))
+		if (-1 != i && !(IndexLoaders.aClass515_9416.method8845(i, (byte) -22).aBool6968))
 			i_206_ = 2;
 		if (i != -1 && bool)
 			i_206_ = 1;
@@ -1326,7 +1326,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		class161.anInt2011 = -523477979 * i_200_;
 		class161.anInt2013 = (i_198_ >> 16) * 391696483;
 		class161.anInt2015 = i_199_ * 1859279795;
-		class161.aClass456_2014.method7571((-1 != i ? ((Class96_Sub20.aClass515_9416.method8845(i, (byte) 24).anInt6977) * -364555849) : -1), i_198_ & 0xffff, i_206_, false, 1530931614);
+		class161.aClass456_2014.method7571((-1 != i ? ((IndexLoaders.aClass515_9416.method8845(i, (byte) 24).anInt6977) * -364555849) : -1), i_198_ & 0xffff, i_206_, false, 1530931614);
 	}
 
 	public void method15842(String string, int i, int i_207_, int i_208_) {
@@ -1361,7 +1361,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_217_ = -1;
 		int i_218_ = 0;
 		if (i >= 0) {
-			Class228 class228 = Login.aClass210_3389.method3603(i, 1856651955);
+			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
 			i_217_ = -1638316243 * class228.anInt2839;
 			i_218_ = class228.anInt2841 * -1006911631;
 		}
@@ -1421,7 +1421,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_231_ = -1;
 		int i_232_ = 0;
 		if (i >= 0) {
-			Class228 class228 = Login.aClass210_3389.method3603(i, 1856651955);
+			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
 			i_231_ = -1638316243 * class228.anInt2839;
 			i_232_ = class228.anInt2841 * -1006911631;
 		}
@@ -1481,7 +1481,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_245_ = -1;
 		int i_246_ = 0;
 		if (i >= 0) {
-			Class228 class228 = Login.aClass210_3389.method3603(i, 1856651955);
+			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
 			i_245_ = -1638316243 * class228.anInt2839;
 			i_246_ = class228.anInt2841 * -1006911631;
 		}
@@ -1541,7 +1541,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_259_ = -1;
 		int i_260_ = 0;
 		if (i >= 0) {
-			Class228 class228 = Login.aClass210_3389.method3603(i, 1856651955);
+			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
 			i_259_ = -1638316243 * class228.anInt2839;
 			i_260_ = class228.anInt2841 * -1006911631;
 		}
@@ -1626,7 +1626,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public final void method15850(int i) {
-		Class198 class198 = Class286.aClass290_3402.method5102(i, 2065623331);
+		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, 2065623331);
 		for (Class275_Sub7 class275_sub7 = (Class275_Sub7) aClass457_10333.method7659(301908602); null != class275_sub7; class275_sub7 = (Class275_Sub7) aClass457_10333.method7650((byte) 87)) {
 			if (class198 == class275_sub7.aClass198_7863) {
 				class275_sub7.method4887((byte) -113);
@@ -1658,8 +1658,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (anIntArray10362 == null) {
 			if (-1 == i_266_)
 				return true;
-			anIntArray10362 = new int[Class473.aClass526_5605.equipmentSlots.length];
-			for (int i_267_ = 0; i_267_ < Class473.aClass526_5605.equipmentSlots.length; i_267_++)
+			anIntArray10362 = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
+			for (int i_267_ = 0; i_267_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_267_++)
 				anIntArray10362[i_267_] = -1;
 		}
 		Class227 class227 = method15855((byte) -17);
@@ -1674,7 +1674,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_271_ = i_269_ - i_270_;
 			if (i_271_ >= -i_268_ && i_271_ <= i_268_) {
 				anIntArray10362[i] = -1;
-				for (int i_272_ = 0; i_272_ < Class473.aClass526_5605.equipmentSlots.length; i_272_++) {
+				for (int i_272_ = 0; i_272_ < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; i_272_++) {
 					if (-1 != anIntArray10362[i_272_])
 						return true;
 				}
@@ -1706,7 +1706,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_275_ = method15808(635765286);
 		if (i_275_ == -1)
 			return Class211.aClass227_2669;
-		return Class96_Sub16.aClass211_9383.method3616(i_275_, (byte) -2);
+		return IndexLoaders.aClass211_9383.method3616(i_275_, (byte) -2);
 	}
 
 	void method15856(GraphicalRenderer class505, Class227 class227, int i, int i_276_, int i_277_, int i_278_) {
@@ -1722,7 +1722,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_280_ = (byte) 7;
 			Class161 class161 = aClass161Array10339[i_279_];
 			if (-1 != 378836105 * class161.anInt2012 && !class161.aClass456_2014.method7573(344781570)) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) -53);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) -53);
 				boolean bool = 3 == class525.aByte6982 && (0 != i_276_ || 0 != i_277_);
 				int i_281_ = i;
 				if (bool)
@@ -1784,7 +1784,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public final void method15857(int i, int i_290_) {
-		Class198 class198 = Class286.aClass290_3402.method5102(i, 757267285);
+		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, 757267285);
 		for (Class275_Sub7 class275_sub7 = (Class275_Sub7) aClass457_10333.method7659(301908602); null != class275_sub7; class275_sub7 = (Class275_Sub7) aClass457_10333.method7650((byte) 67)) {
 			if (class198 == class275_sub7.aClass198_7863) {
 				class275_sub7.method4887((byte) -33);
@@ -1818,7 +1818,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_297_ = (byte) 7;
 			Class161 class161 = aClass161Array10339[i_296_];
 			if (-1 != 378836105 * class161.anInt2012 && !class161.aClass456_2014.method7573(-249536007)) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 12);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 12);
 				boolean bool = 3 == class525.aByte6982 && (0 != i_293_ || 0 != i_294_);
 				int i_298_ = i;
 				if (bool)
@@ -1960,21 +1960,21 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i = method15808(635765286);
 		if (i == -1)
 			return Class211.aClass227_2669;
-		return Class96_Sub16.aClass211_9383.method3616(i, (byte) 41);
+		return IndexLoaders.aClass211_9383.method3616(i, (byte) 41);
 	}
 
 	public Class227 method15865() {
 		int i = method15808(635765286);
 		if (i == -1)
 			return Class211.aClass227_2669;
-		return Class96_Sub16.aClass211_9383.method3616(i, (byte) -19);
+		return IndexLoaders.aClass211_9383.method3616(i, (byte) -19);
 	}
 
 	public Class227 method15866() {
 		int i = method15808(635765286);
 		if (i == -1)
 			return Class211.aClass227_2669;
-		return Class96_Sub16.aClass211_9383.method3616(i, (byte) -34);
+		return IndexLoaders.aClass211_9383.method3616(i, (byte) -34);
 	}
 
 	abstract int method15867();
@@ -2028,7 +2028,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		aClass161Array10339 = new Class161[4];
 		for (int i_343_ = 0; i_343_ < 4; i_343_++)
 			aClass161Array10339[i_343_] = new Class161(this);
-		aClass456_Sub2_Sub1Array10354 = (new Class456_Sub2_Sub1[Class473.aClass526_5605.equipmentSlots.length]);
+		aClass456_Sub2_Sub1Array10354 = (new Class456_Sub2_Sub1[Class473.DEFAULTS_LOADER_6.equipmentSlots.length]);
 	}
 
 	public void method15870() {
@@ -2061,7 +2061,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public abstract Class163 method15877();
 
 	public final void method15878(int i, int i_347_, int i_348_, int i_349_, int i_350_, int i_351_) {
-		Class198 class198 = Class286.aClass290_3402.method5102(i, 955218758);
+		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, 955218758);
 		Class275_Sub7 class275_sub7 = null;
 		Class275_Sub7 class275_sub7_352_ = null;
 		int i_353_ = -1142991979 * class198.anInt2440;
@@ -2129,7 +2129,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_372_ = (byte) 7;
 			Class161 class161 = aClass161Array10339[i_371_];
 			if (-1 != 378836105 * class161.anInt2012 && !class161.aClass456_2014.method7573(10654334)) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 55);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) 55);
 				boolean bool = 3 == class525.aByte6982 && (0 != i_368_ || 0 != i_369_);
 				int i_373_ = i;
 				if (bool)
@@ -2209,7 +2209,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 				i_386_ = (byte) 7;
 			Class161 class161 = aClass161Array10339[i_385_];
 			if (-1 != 378836105 * class161.anInt2012 && !class161.aClass456_2014.method7573(485786249)) {
-				Class525 class525 = Class96_Sub20.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) -52);
+				Class525 class525 = IndexLoaders.aClass515_9416.method8845(((class161.anInt2012) * 378836105), (byte) -52);
 				boolean bool = 3 == class525.aByte6982 && (0 != i_382_ || 0 != i_383_);
 				int i_387_ = i;
 				if (bool)

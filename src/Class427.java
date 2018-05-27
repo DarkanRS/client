@@ -14,7 +14,7 @@ public class Class427 {
 	public Class418 method7172(int i, int i_0_) {
 		Class418 class418;
 		synchronized (((Class427) this).aClass229_5117) {
-			class418 = ((Class418) ((Class427) this).aClass229_5117.method3865((long) i));
+			class418 = ((Class418) ((Class427) this).aClass229_5117.get((long) i));
 		}
 		if (class418 != null)
 			return class418;
@@ -133,7 +133,7 @@ public class Class427 {
 	public Class418 method7185(int i) {
 		Class418 class418;
 		synchronized (((Class427) this).aClass229_5117) {
-			class418 = ((Class418) ((Class427) this).aClass229_5117.method3865((long) i));
+			class418 = ((Class418) ((Class427) this).aClass229_5117.get((long) i));
 		}
 		if (class418 != null)
 			return class418;
@@ -188,7 +188,7 @@ public class Class427 {
 			NPC class521_sub1_sub1_sub2_sub2 = (NPC) class521_sub1_sub1_sub2;
 			if (-1929895711 * class521_sub1_sub1_sub2_sub2.anInt10578 != -1 && (0 == class521_sub1_sub1_sub2_sub2.anInt10355 * 1871221471 || (class521_sub1_sub1_sub2_sub2.anInt10366 * -666607017 > 0))) {
 				Class385 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-				Class219 class219 = client.aClass257_7353.method4519(1777766742);
+				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1777766742);
 				int i_12_ = ((int) class385.aFloat4671 - (class521_sub1_sub1_sub2_sub2.anInt10578 * -132062976 - class219.anInt2711 * 495713536 - class219.anInt2711 * 495713536));
 				int i_13_ = ((int) class385.aFloat4673 - (-473524480 * class521_sub1_sub1_sub2_sub2.anInt10577 - class219.anInt2712 * 1124593408 - class219.anInt2712 * 1124593408));
 				if (i_12_ != 0 || 0 != i_13_)

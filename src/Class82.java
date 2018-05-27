@@ -29,7 +29,7 @@ final class Class82 implements Interface11 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_0_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_0_, (byte) 0);
 		if (i_1_ != -1741480635 * class437.anInt5337)
 			class118.method1999(i_0_, i_1_, 146446242);
 		else

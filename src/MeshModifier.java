@@ -49,23 +49,23 @@ public class MeshModifier {
 		boolean modifyColors = 0 != (i & 0x4);
 		boolean modifyTextures = (i & 0x8) != 0;
 		if (modifyWearModel) {
-			class422.maleBody[0] = class282_sub35.readBigSmart(2139141811);
-			class422.femaleBody[0] = class282_sub35.readBigSmart(2068675466);
+			class422.maleBody[0] = class282_sub35.readBigSmart();
+			class422.femaleBody[0] = class282_sub35.readBigSmart();
 			if (-1 != ((ItemDefinitions) class425).maleBody2 * -931922913 || -1259031521 * ((ItemDefinitions) class425).femaleBody2 != -1) {
-				class422.maleBody[1] = class282_sub35.readBigSmart(2111055855);
-				class422.femaleBody[1] = class282_sub35.readBigSmart(2041853750);
+				class422.maleBody[1] = class282_sub35.readBigSmart();
+				class422.femaleBody[1] = class282_sub35.readBigSmart();
 			}
 			if (-1 != -562041407 * ((ItemDefinitions) class425).maleBody3 || -1 != -1802576377 * ((ItemDefinitions) class425).femaleBody3) {
-				class422.maleBody[2] = class282_sub35.readBigSmart(2141016611);
-				class422.femaleBody[2] = class282_sub35.readBigSmart(1979530734);
+				class422.maleBody[2] = class282_sub35.readBigSmart();
+				class422.femaleBody[2] = class282_sub35.readBigSmart();
 			}
 		}
 		if (modifyHeadModel) {
-			class422.maleHeads[0] = class282_sub35.readBigSmart(2115897274);
-			class422.femaleHeads[0] = class282_sub35.readBigSmart(1991679721);
+			class422.maleHeads[0] = class282_sub35.readBigSmart();
+			class422.femaleHeads[0] = class282_sub35.readBigSmart();
 			if (-1 != -613723223 * ((ItemDefinitions) class425).maleHead2 || -1 != -1871546585 * ((ItemDefinitions) class425).femaleHead2) {
-				class422.maleHeads[1] = class282_sub35.readBigSmart(2078521218);
-				class422.femaleHeads[1] = class282_sub35.readBigSmart(2072485027);
+				class422.maleHeads[1] = class282_sub35.readBigSmart();
+				class422.femaleHeads[1] = class282_sub35.readBigSmart();
 			}
 		}
 		if (modifyColors) {
@@ -95,7 +95,7 @@ public class MeshModifier {
 
 	public static void method7041(byte i) {
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-989265149)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1315651594)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1315651594)];
 	}
 
 	public static void method7042(byte i) {

@@ -112,7 +112,7 @@ public class Class179 {
 		Class13.aStringArray129 = new String[500];
 		for (int i = 0; i < Class13.aStringArray129.length; i++)
 			Class13.aStringArray129[i] = "";
-		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -623888526), -1301842653);
+		Class209.method3598(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE, -623888526), -1301842653);
 	}
 
 	static void method2988(GraphicalRenderer class505) {
@@ -229,14 +229,14 @@ public class Class179 {
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
-					Class219 class219 = client.aClass257_7353.method4519(914377736);
+					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(914377736);
 					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.anInt2711) >> 6).append(",").append((-1002240017 * class219.anInt2712 + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.anInt2711 * 1948093437) & 0x3f).append(",")
 							.append((class219.anInt2712 * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 126)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -1834471946);
 					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.anInt2711 * 1948093437) >> 6).append(",").append((Class369.anInt4280 * 469662201 + class219.anInt2712 * -1002240017) >> 6).append(",").append((class219.anInt2711 * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -515552037)), -1127364284);
+				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -515552037)), -1127364284);
 			}
 			return;
 		} while (false);
@@ -360,7 +360,7 @@ public class Class179 {
 						if (class184.method3053((byte) -39) != null)
 							class184.method3053((byte) -116).method3320((byte) 102);
 					}
-					Class119.aClass312_1462.method5543((byte) -62);
+					Class119.JS5_STANDARD_REQUESTER.method5543((byte) -62);
 					return;
 				}
 				if (string.startsWith("getclientvarpbit")) {
@@ -436,12 +436,12 @@ public class Class179 {
 					client.aClass184_7475.method3049(class282_sub23, 881777984);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1488316549)), -146676373);
+				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1488316549)), -146676373);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -666903111)).append(string).toString(), -1454199893);
+			Class209.method3598(new StringBuilder().append(Message.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE, -666903111)).append(string).toString(), -1454199893);
 	}
 
 	static boolean method2993() {
@@ -454,7 +454,7 @@ public class Class179 {
 		Class13.aStringArray129 = new String[500];
 		for (int i = 0; i < Class13.aStringArray129.length; i++)
 			Class13.aStringArray129[i] = "";
-		Class209.method3598(Message.aClass433_5232.translate(Class223.aClass495_2772, -1882291735), -941312141);
+		Class209.method3598(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE, -1882291735), -941312141);
 	}
 
 	static void method2995() {
@@ -882,14 +882,14 @@ public class Class179 {
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
-					Class219 class219 = client.aClass257_7353.method4519(1419754749);
+					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1419754749);
 					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.anInt2711) >> 6).append(",").append((-1002240017 * class219.anInt2712 + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.anInt2711 * 1948093437) & 0x3f).append(",")
 							.append((class219.anInt2712 * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 51)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -434108193);
 					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.anInt2711 * 1948093437) >> 6).append(",").append((Class369.anInt4280 * 469662201 + class219.anInt2712 * -1002240017) >> 6).append(",").append((class219.anInt2711 * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
 							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1590942601)), -291693412);
+				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1590942601)), -291693412);
 			}
 			return;
 		} while (false);
@@ -1013,7 +1013,7 @@ public class Class179 {
 						if (class184.method3053((byte) -69) != null)
 							class184.method3053((byte) -73).method3320((byte) 127);
 					}
-					Class119.aClass312_1462.method5543((byte) 24);
+					Class119.JS5_STANDARD_REQUESTER.method5543((byte) 24);
 					return;
 				}
 				if (string.startsWith("getclientvarpbit")) {
@@ -1089,12 +1089,12 @@ public class Class179 {
 					client.aClass184_7475.method3049(class282_sub23, 1616485384);
 				}
 			} catch (Exception exception) {
-				Class209.method3598((Message.aClass433_5159.translate(Class223.aClass495_2772, -1600472953)), -1470495365);
+				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1600472953)), -1470495365);
 				return;
 			}
 		}
 		if (client.anInt7166 * -1741204137 != 13)
-			Class209.method3598(new StringBuilder().append(Message.aClass433_5160.translate(Class223.aClass495_2772, -1962372403)).append(string).toString(), -1059605262);
+			Class209.method3598(new StringBuilder().append(Message.UNKNOWN_DEV_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1962372403)).append(string).toString(), -1059605262);
 	}
 
 	static void method3009() {
@@ -1133,9 +1133,9 @@ public class Class179 {
 
 	static void method3016() {
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(1319010794) == 1)
-			Class6.aClass340_45.method6049(new Class335((Class256.aClass256_3152), null), 301123709);
+			IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335((Class256.aClass256_3152), null), 301123709);
 		else {
-			client.aClass257_7353.method4547((byte) -45);
+			IndexLoaders.MAP_REGION_DECODER.method4547((byte) -45);
 			Class58.method1139(-1673014383);
 		}
 	}

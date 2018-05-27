@@ -35,7 +35,7 @@ public class Class279 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class431 class431 = Class466.aClass444_5570.method7424(i_0_, (byte) 8);
+		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_0_, (byte) 8);
 		if ('s' == class431.aChar5140) {
 			/* empty */
 		}
@@ -43,7 +43,7 @@ public class Class279 {
 	}
 
 	static final void method4967(CS2Executor class527, int i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class225_Sub5.method13045(Class302.method5363((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), 126882752), Class223.aClass495_2772.method243((byte) 1), -912746201));
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class225_Sub5.method13045(Class302.method5363((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), 126882752), Class223.CURRENT_LANGUAGE.method243((byte) 1), -912746201));
 	}
 
 	static final void method4968(CS2Executor class527, int i) {
@@ -85,8 +85,8 @@ public class Class279 {
 				if (Class182.HARDWARE_RENDERER == null) {
 					Canvas canvas = new Canvas();
 					canvas.setSize(36, 32);
-					Class182.HARDWARE_RENDERER = Class320.method5732(0, canvas, Class321.anInterface22_3731, Class488.aClass317_5758, 0, -2102871027);
-					Class182.aClass8_2259 = (Class182.HARDWARE_RENDERER.method8448(Class94.method1588(Class410.aClass317_4924, 1500183805 * Class16.anInt140, 0, 2062772930), Class91.method1514(Class211.aClass317_2673, 1500183805 * Class16.anInt140, 0), true));
+					Class182.HARDWARE_RENDERER = Class320.method5732(0, canvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -2102871027);
+					Class182.aClass8_2259 = (Class182.HARDWARE_RENDERER.method8448(Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, 1500183805 * Class16.anInt140, 0, 2062772930), Class91.method1514(IndexLoaders.SPRITES_INDEX, 1500183805 * Class16.anInt140, 0), true));
 				}
 				for (Item class282_sub32 = ((Item) Class182.ITEMS.head((byte) 59)); class282_sub32 != null; class282_sub32 = ((Item) Class182.ITEMS.next(-468135531))) {
 					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(Class182.HARDWARE_RENDERER, softwareRenderer, (((Item) class282_sub32).id * 1343343281), (((Item) class282_sub32).amount * -1956508275), (((Item) class282_sub32).outlineSize * 1172052973), (1379786857 * ((Item) class282_sub32).shadowColor), false, false, (660031547 * ((Item) class282_sub32).anInt7819), Class182.aClass8_2259,

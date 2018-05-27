@@ -259,7 +259,7 @@ public class Class118 {
 		}
 		if (anInt1268 * -2131393857 == 6) {
 			anInt1329 = 589750077;
-			anInt1330 = class282_sub35.readBigSmart(2017943224) * -636815827;
+			anInt1330 = class282_sub35.readBigSmart() * -636815827;
 			int i_6_ = class282_sub35.readUnsignedByte();
 			boolean bool = 1 == (i_6_ & 0x1);
 			aBool1332 = 2 == (i_6_ & 0x2);
@@ -281,14 +281,14 @@ public class Class118 {
 				anInt1337 = class282_sub35.readUnsignedShort() * -906963849;
 				anInt1343 = class282_sub35.readShort(1816488415) * -807852535;
 			}
-			anInt1321 = class282_sub35.readBigSmart(1951790006) * 388683695;
+			anInt1321 = class282_sub35.readBigSmart() * 388683695;
 			if (aByte1368 != 0)
 				anInt1417 = class282_sub35.readUnsignedShort() * 600966773;
 			if (aByte1294 != 0)
 				anInt1326 = class282_sub35.readUnsignedShort() * 1500041571;
 		}
 		if (-2131393857 * anInt1268 == 4) {
-			anInt1277 = class282_sub35.readBigSmart(2072338063) * 204895771;
+			anInt1277 = class282_sub35.readBigSmart() * 204895771;
 			if (i_3_ >= 2)
 				aBool1356 = class282_sub35.readUnsignedByte() == 1;
 			aString1391 = class282_sub35.readString(-518963071);
@@ -618,7 +618,7 @@ public class Class118 {
 		return Class468_Sub8.aClass98Array7889[i_43_].method1618(i, (byte) 12);
 	}
 
-	public MeshRasterizer method2002(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, PlayerAppearance class238, int i_44_) {
+	public MeshRasterizer method2002(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, PlayerAppearance class238, int i_44_) {
 		aBool1399 = false;
 		if (anInt1329 * 2131324949 == 0)
 			return null;
@@ -649,7 +649,7 @@ public class Class118 {
 				i |= 0x8000;
 			}
 			long l_48_ = ((long) (class505.rendererId * -413843045) << 59 | (long) (2131324949 * anInt1329) << 54 | (long) (-402732635 * anInt1330) << 38 | l & 0x3fffffffffL);
-			MeshRasterizer class528 = (MeshRasterizer) aClass229_1341.method3865(l_48_);
+			MeshRasterizer class528 = (MeshRasterizer) aClass229_1341.get(l_48_);
 			if (null == class528 || class505.method8452(class528.m(), i) != 0) {
 				if (null != class528)
 					i = class505.method8546(i, class528.m());
@@ -679,7 +679,7 @@ public class Class118 {
 			return class528;
 		}
 		if (anInt1329 * 2131324949 == 2) {
-			MeshRasterizer class528 = (class406.method6828(-402732635 * anInt1330, (byte) -57).method6880(class505, i, interface42, class456, aClass417_1308, 1874491057));
+			MeshRasterizer class528 = (class406.getNPCDefinitions(-402732635 * anInt1330, (byte) -57).method6880(class505, i, interface42, class456, aClass417_1308, 1874491057));
 			if (null == class528) {
 				aBool1399 = true;
 				return null;
@@ -706,7 +706,7 @@ public class Class118 {
 			return class528;
 		}
 		if (6 == 2131324949 * anInt1329) {
-			MeshRasterizer class528 = (class406.method6828(-402732635 * anInt1330, (byte) -29).method6875(class505, i, class211, interface42, class456, null, null, null, 0, aClass417_1308, -653193588));
+			MeshRasterizer class528 = (class406.getNPCDefinitions(-402732635 * anInt1330, (byte) -29).method6875(class505, i, class211, interface42, class456, null, null, null, 0, aClass417_1308, -653193588));
 			if (class528 == null) {
 				aBool1399 = true;
 				return null;
@@ -818,7 +818,7 @@ public class Class118 {
 		Class488.aClass317_5761 = class317_56_;
 		Class463.aClass317_5549 = class317_57_;
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1889409624)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1579875355)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1579875355)];
 	}
 
 	public Class118() {
@@ -934,7 +934,7 @@ public class Class118 {
 		Class488.aClass317_5761 = class317_63_;
 		Class463.aClass317_5549 = class317_64_;
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1939767100)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-806319043)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-806319043)];
 	}
 
 	public static Class118 method2010(int i) {
@@ -997,38 +997,38 @@ public class Class118 {
 
 	public static void method2016() {
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1109289914)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1898886198)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1898886198)];
 	}
 
 	public static boolean method2017(int i, int[] is) {
-		if (Class218.aBoolArray2709[i])
+		if (WorldMapIndexLoader.aBoolArray2709[i])
 			return true;
 		Class468_Sub8.aClass98Array7889[i] = Class288.method5084(i, is, Class468_Sub8.aClass98Array7889[i], false, (byte) -4);
 		if (null == Class468_Sub8.aClass98Array7889[i])
 			return false;
-		Class218.aBoolArray2709[i] = true;
+		WorldMapIndexLoader.aBoolArray2709[i] = true;
 		return true;
 	}
 
 	public static boolean method2018(int i, int[] is) {
-		if (Class218.aBoolArray2709[i])
+		if (WorldMapIndexLoader.aBoolArray2709[i])
 			return true;
 		Class468_Sub8.aClass98Array7889[i] = Class288.method5084(i, is, Class468_Sub8.aClass98Array7889[i], false, (byte) -10);
 		if (null == Class468_Sub8.aClass98Array7889[i])
 			return false;
-		Class218.aBoolArray2709[i] = true;
+		WorldMapIndexLoader.aBoolArray2709[i] = true;
 		return true;
 	}
 
 	public static void method2019(int i) {
-		if (i != -1 && !Class218.aBoolArray2709[i]) {
+		if (i != -1 && !WorldMapIndexLoader.aBoolArray2709[i]) {
 			Class388.aClass317_4721.method5619(i, 172427967);
 			Class468_Sub8.aClass98Array7889[i] = null;
 		}
 	}
 
 	public static void method2020(int i) {
-		if (i != -1 && !Class218.aBoolArray2709[i]) {
+		if (i != -1 && !WorldMapIndexLoader.aBoolArray2709[i]) {
 			Class388.aClass317_4721.method5619(i, -1894577226);
 			Class468_Sub8.aClass98Array7889[i] = null;
 		}
@@ -1084,7 +1084,7 @@ public class Class118 {
 		}
 		if (anInt1268 * -2131393857 == 6) {
 			anInt1329 = 589750077;
-			anInt1330 = class282_sub35.readBigSmart(1996674445) * -636815827;
+			anInt1330 = class282_sub35.readBigSmart() * -636815827;
 			int i_76_ = class282_sub35.readUnsignedByte();
 			boolean bool = 1 == (i_76_ & 0x1);
 			aBool1332 = 2 == (i_76_ & 0x2);
@@ -1106,14 +1106,14 @@ public class Class118 {
 				anInt1337 = class282_sub35.readUnsignedShort() * -906963849;
 				anInt1343 = class282_sub35.readShort(2122601349) * -807852535;
 			}
-			anInt1321 = class282_sub35.readBigSmart(2083887608) * 388683695;
+			anInt1321 = class282_sub35.readBigSmart() * 388683695;
 			if (aByte1368 != 0)
 				anInt1417 = class282_sub35.readUnsignedShort() * 600966773;
 			if (aByte1294 != 0)
 				anInt1326 = class282_sub35.readUnsignedShort() * 1500041571;
 		}
 		if (-2131393857 * anInt1268 == 4) {
-			anInt1277 = class282_sub35.readBigSmart(2055563292) * 204895771;
+			anInt1277 = class282_sub35.readBigSmart() * 204895771;
 			if (i >= 2)
 				aBool1356 = class282_sub35.readUnsignedByte() == 1;
 			aString1391 = class282_sub35.readString(-685866987);
@@ -1308,7 +1308,7 @@ public class Class118 {
 		if (anInt1404 * -1546094517 == -1)
 			return null;
 		long l = (((long) (anInt1432 * 1333278127) & 0xffffL) << 48 | ((long) (-855683075 * anInt1433) & 0xffffL) << 32 | ((long) (94607923 * anInt1434) & 0xffffL) << 16 | (long) (-1546094517 * anInt1404) & 0xffffL);
-		Class247 class247 = (Class247) aClass229_1282.method3865(l);
+		Class247 class247 = (Class247) aClass229_1282.get(l);
 		if (class247 == null) {
 			class247 = class288.method5077(anInt1404 * -1546094517, anInt1432 * 1333278127, anInt1433 * -855683075, 94607923 * anInt1434, class45, 1112626910);
 			aClass229_1282.put(class247, l);
@@ -1334,7 +1334,7 @@ public class Class118 {
 		return class414;
 	}
 
-	public MeshRasterizer method2031(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, PlayerAppearance class238) {
+	public MeshRasterizer method2031(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, PlayerAppearance class238) {
 		aBool1399 = false;
 		if (anInt1329 * 2131324949 == 0)
 			return null;
@@ -1365,7 +1365,7 @@ public class Class118 {
 				i |= 0x8000;
 			}
 			long l_106_ = ((long) (class505.rendererId * -413843045) << 59 | (long) (2131324949 * anInt1329) << 54 | (long) (-402732635 * anInt1330) << 38 | l & 0x3fffffffffL);
-			MeshRasterizer class528 = (MeshRasterizer) aClass229_1341.method3865(l_106_);
+			MeshRasterizer class528 = (MeshRasterizer) aClass229_1341.get(l_106_);
 			if (null == class528 || class505.method8452(class528.m(), i) != 0) {
 				if (null != class528)
 					i = class505.method8546(i, class528.m());
@@ -1395,7 +1395,7 @@ public class Class118 {
 			return class528;
 		}
 		if (anInt1329 * 2131324949 == 2) {
-			MeshRasterizer class528 = (class406.method6828(-402732635 * anInt1330, (byte) 83).method6880(class505, i, interface42, class456, aClass417_1308, 1173089796));
+			MeshRasterizer class528 = (class406.getNPCDefinitions(-402732635 * anInt1330, (byte) 83).method6880(class505, i, interface42, class456, aClass417_1308, 1173089796));
 			if (null == class528) {
 				aBool1399 = true;
 				return null;
@@ -1422,7 +1422,7 @@ public class Class118 {
 			return class528;
 		}
 		if (6 == 2131324949 * anInt1329) {
-			MeshRasterizer class528 = (class406.method6828(-402732635 * anInt1330, (byte) -39).method6875(class505, i, class211, interface42, class456, null, null, null, 0, aClass417_1308, 248011790));
+			MeshRasterizer class528 = (class406.getNPCDefinitions(-402732635 * anInt1330, (byte) -39).method6875(class505, i, class211, interface42, class456, null, null, null, 0, aClass417_1308, 248011790));
 			if (class528 == null) {
 				aBool1399 = true;
 				return null;
@@ -1470,7 +1470,7 @@ public class Class118 {
 		Class488.aClass317_5761 = class317_112_;
 		Class463.aClass317_5549 = class317_113_;
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1170070163)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-2101167392)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-2101167392)];
 	}
 
 	public static Class98 method2035(int i) {
@@ -1481,7 +1481,7 @@ public class Class118 {
 		if (anInt1404 * -1546094517 == -1)
 			return null;
 		long l = (((long) (anInt1432 * 1333278127) & 0xffffL) << 48 | ((long) (-855683075 * anInt1433) & 0xffffL) << 32 | ((long) (94607923 * anInt1434) & 0xffffL) << 16 | (long) (-1546094517 * anInt1404) & 0xffffL);
-		Class247 class247 = (Class247) aClass229_1282.method3865(l);
+		Class247 class247 = (Class247) aClass229_1282.get(l);
 		if (class247 == null) {
 			class247 = class288.method5077(anInt1404 * -1546094517, anInt1432 * 1333278127, anInt1433 * -855683075, 94607923 * anInt1434, class45, 2094557052);
 			aClass229_1282.put(class247, l);
@@ -1493,7 +1493,7 @@ public class Class118 {
 		if (anInt1404 * -1546094517 == -1)
 			return null;
 		long l = (((long) (anInt1432 * 1333278127) & 0xffffL) << 48 | ((long) (-855683075 * anInt1433) & 0xffffL) << 32 | ((long) (94607923 * anInt1434) & 0xffffL) << 16 | (long) (-1546094517 * anInt1404) & 0xffffL);
-		Class247 class247 = (Class247) aClass229_1282.method3865(l);
+		Class247 class247 = (Class247) aClass229_1282.get(l);
 		if (class247 == null) {
 			class247 = class288.method5077(anInt1404 * -1546094517, anInt1432 * 1333278127, anInt1433 * -855683075, 94607923 * anInt1434, class45, 2074371584);
 			aClass229_1282.put(class247, l);
@@ -1553,17 +1553,17 @@ public class Class118 {
 
 	public static void method2044() {
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-1727277614)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-908046225)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-908046225)];
 	}
 
 	public static void method2045() {
 		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-2139142870)];
-		Class218.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1046380917)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1046380917)];
 	}
 
 	public Class119 method2046(GraphicalRenderer class505, int i) {
 		long l = ((long) (-1952846363 * anInt1287) << 32 | (long) (1924549737 * anInt1288) & 0xffffffffL);
-		Class119 class119 = (Class119) aClass229_1303.method3865(l);
+		Class119 class119 = (Class119) aClass229_1303.get(l);
 		if (class119 != null) {
 			if (188551227 * ((Class119) class119).anInt1459 != 985215637 * anInt1320) {
 				aClass229_1303.method3873(l);
@@ -1648,7 +1648,7 @@ public class Class118 {
 	public NativeSprite method2048(GraphicalRenderer class505, int i) {
 		aBool1399 = false;
 		long l = (((aBool1351 ? 1L : 0L) << 39) + (((aBool1327 ? 1L : 0L) << 35) + (long) (anInt1320 * 985215637) + ((long) (-346307573 * anInt1323) << 36) + ((aBool1325 ? 1L : 0L) << 38)) + ((long) (1279397863 * anInt1324) << 40));
-		NativeSprite class160 = (NativeSprite) aClass229_1280.method3865(l);
+		NativeSprite class160 = (NativeSprite) aClass229_1280.get(l);
 		if (null != class160)
 			return class160;
 		Class91 class91 = Class91.method1522(Class463.aClass317_5549, anInt1320 * 985215637, 0);
@@ -1780,12 +1780,12 @@ public class Class118 {
 	}
 
 	public static boolean method2053(int i, int[] is) {
-		if (Class218.aBoolArray2709[i])
+		if (WorldMapIndexLoader.aBoolArray2709[i])
 			return true;
 		Class468_Sub8.aClass98Array7889[i] = Class288.method5084(i, is, Class468_Sub8.aClass98Array7889[i], false, (byte) -102);
 		if (null == Class468_Sub8.aClass98Array7889[i])
 			return false;
-		Class218.aBoolArray2709[i] = true;
+		WorldMapIndexLoader.aBoolArray2709[i] = true;
 		return true;
 	}
 
@@ -1905,7 +1905,7 @@ public class Class118 {
 		if (anInt1404 * -1546094517 == -1)
 			return null;
 		long l = (((long) (anInt1432 * 1333278127) & 0xffffL) << 48 | ((long) (-855683075 * anInt1433) & 0xffffL) << 32 | ((long) (94607923 * anInt1434) & 0xffffL) << 16 | (long) (-1546094517 * anInt1404) & 0xffffL);
-		Class247 class247 = (Class247) aClass229_1282.method3865(l);
+		Class247 class247 = (Class247) aClass229_1282.get(l);
 		if (class247 == null) {
 			class247 = class288.method5077(anInt1404 * -1546094517, anInt1432 * 1333278127, anInt1433 * -855683075, 94607923 * anInt1434, class45, 2118338473);
 			aClass229_1282.put(class247, l);
@@ -1926,7 +1926,7 @@ public class Class118 {
 
 	public Class119 method2068(GraphicalRenderer class505) {
 		long l = ((long) (-1952846363 * anInt1287) << 32 | (long) (1924549737 * anInt1288) & 0xffffffffL);
-		Class119 class119 = (Class119) aClass229_1303.method3865(l);
+		Class119 class119 = (Class119) aClass229_1303.get(l);
 		if (class119 != null) {
 			if (188551227 * ((Class119) class119).anInt1459 != 985215637 * anInt1320) {
 				aClass229_1303.method3873(l);

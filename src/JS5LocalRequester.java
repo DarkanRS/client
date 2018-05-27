@@ -7,8 +7,7 @@ public class JS5LocalRequester implements Runnable {
 	int anInt3662;
 	Thread aThread3663;
 	Class477 aClass477_3664 = new Class477();
-	public static Index aClass317_3665;
-
+	
 	public void method5561() {
 		while (!((JS5LocalRequester) this).aBool3661) {
 			Class282_Sub50_Sub11_Sub2 class282_sub50_sub11_sub2;

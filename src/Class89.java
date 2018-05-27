@@ -17,8 +17,7 @@ public class Class89 {
 	public static final int anInt941 = 2;
 	public static final int anInt942 = 0;
 	public static final int anInt943 = 2;
-	public static Index aClass317_944;
-
+	
 	Class89() throws Throwable {
 		throw new Error();
 	}
@@ -75,8 +74,8 @@ public class Class89 {
 			Class291_Sub1.anInt8014 = -1089992553;
 			Class291_Sub1.anInt8016 = 638834387;
 		}
-		if (Class427.anInt5123 * -861975801 > Class291_Sub1.anInt3474) {
-			Class427.anInt5123 = 1714827959 * Class291_Sub1.anInt3474;
+		if (Class427.anInt5123 * -861975801 > Class291_Sub1.xLength) {
+			Class427.anInt5123 = 1714827959 * Class291_Sub1.xLength;
 			Class291_Sub1.anInt8014 = -1089992553;
 			Class291_Sub1.anInt8016 = 638834387;
 		}
@@ -85,8 +84,8 @@ public class Class89 {
 			Class291_Sub1.anInt8014 = -1089992553;
 			Class291_Sub1.anInt8016 = 638834387;
 		}
-		if (Class475.anInt5624 * 483850921 > Class291_Sub1.anInt3483) {
-			Class475.anInt5624 = Class291_Sub1.anInt3483 * 1710901657;
+		if (Class475.anInt5624 * 483850921 > Class291_Sub1.yLength) {
+			Class475.anInt5624 = Class291_Sub1.yLength * 1710901657;
 			Class291_Sub1.anInt8014 = -1089992553;
 			Class291_Sub1.anInt8016 = 638834387;
 		}

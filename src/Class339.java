@@ -8,8 +8,7 @@ public class Class339 {
 	static Class339 aClass339_3984 = new Class339();
 	public static Class339 aClass339_3985 = new Class339();
 	public static byte[][] aByteArrayArray3986;
-	static boolean aBool3987;
-
+	
 	Class339() {
 		/* empty */
 	}

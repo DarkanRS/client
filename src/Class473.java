@@ -5,7 +5,7 @@
 public class Class473 {
 	Node aClass282_5603;
 	public Node aClass282_5604 = new Node();
-	public static Class526 aClass526_5605;
+	public static Defaults6Loader DEFAULTS_LOADER_6;
 	static int anInt5606;
 
 	public Node method7854() {

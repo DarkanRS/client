@@ -50,7 +50,7 @@ public class Class463 {
 		if (class521_sub1_sub1_sub2 instanceof NPC) {
 			NPC class521_sub1_sub1_sub2_sub2 = (NPC) class521_sub1_sub1_sub2;
 			if (class521_sub1_sub1_sub2_sub2.aClass409_10580 != null)
-				Class220.method3736(class521_sub1_sub1_sub2_sub2, (class521_sub1_sub1_sub2_sub2.aByte7967 != (Class84.myPlayer.aByte7967)), 2058310476);
+				WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, (class521_sub1_sub1_sub2_sub2.aByte7967 != (Class84.myPlayer.aByte7967)), 2058310476);
 		} else if (class521_sub1_sub1_sub2 instanceof Player) {
 			Player class521_sub1_sub1_sub2_sub1 = (Player) class521_sub1_sub1_sub2;
 			Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, (class521_sub1_sub1_sub2_sub1.aByte7967 != (Class84.myPlayer.aByte7967)), 1557506355);

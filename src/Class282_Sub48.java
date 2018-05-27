@@ -35,7 +35,7 @@ public class Class282_Sub48 extends Node {
 	int anInt8101;
 	int[] anIntArray8102;
 	boolean aBool8103;
-	Class478 aClass478_8104;
+	ObjectDefinitions aClass478_8104;
 	int anInt8105;
 	Class282_Sub26_Sub1_Sub1 aClass282_Sub26_Sub1_Sub1_8106;
 	int anInt8107;
@@ -115,7 +115,7 @@ public class Class282_Sub48 extends Node {
 		int i_0_ = ((Class282_Sub48) this).anInt8095 * 1399704573;
 		boolean bool = ((Class282_Sub48) this).aBool8098;
 		if (((Class282_Sub48) this).aClass478_8104 != null) {
-			Class478 class478 = (((Class282_Sub48) this).aClass478_8104.method8013((-891719545 * client.anInt7341 == 4 ? (Interface42) Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 46));
+			ObjectDefinitions class478 = (((Class282_Sub48) this).aClass478_8104.method8013((-891719545 * client.anInt7341 == 4 ? (Interface42) Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 46));
 			if (null != class478) {
 				((Class282_Sub48) this).anInt8095 = -516170849 * class478.anInt5653;
 				((Class282_Sub48) this).aBool8098 = class478.aBool5696;
@@ -144,7 +144,7 @@ public class Class282_Sub48 extends Node {
 			int i_1_ = (Class282_Sub11_Sub1.method15433(((Class282_Sub48) this).aClass521_Sub1_Sub1_Sub2_Sub2_8085, 912866554));
 			if (i_0_ != i_1_) {
 				((Class282_Sub48) this).anInt8095 = i_1_ * -569710251;
-				Class409 class409 = (((Class282_Sub48) this).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) this).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (class409.anIntArray4886 != null)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (null != class409) {
@@ -181,7 +181,7 @@ public class Class282_Sub48 extends Node {
 	}
 
 	static int method13427(NPC class521_sub1_sub1_sub2_sub2) {
-		Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (class409.anIntArray4886 != null) {
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 			if (class409 == null)
@@ -203,7 +203,7 @@ public class Class282_Sub48 extends Node {
 		int i = ((Class282_Sub48) this).anInt8095 * 1399704573;
 		boolean bool = ((Class282_Sub48) this).aBool8098;
 		if (((Class282_Sub48) this).aClass478_8104 != null) {
-			Class478 class478 = (((Class282_Sub48) this).aClass478_8104.method8013((-891719545 * client.anInt7341 == 4 ? (Interface42) Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 20));
+			ObjectDefinitions class478 = (((Class282_Sub48) this).aClass478_8104.method8013((-891719545 * client.anInt7341 == 4 ? (Interface42) Class86.anInterface42_832 : Class158_Sub1.aClass3_8507), (byte) 20));
 			if (null != class478) {
 				((Class282_Sub48) this).anInt8095 = -516170849 * class478.anInt5653;
 				((Class282_Sub48) this).aBool8098 = class478.aBool5696;
@@ -232,7 +232,7 @@ public class Class282_Sub48 extends Node {
 			int i_3_ = (Class282_Sub11_Sub1.method15433(((Class282_Sub48) this).aClass521_Sub1_Sub1_Sub2_Sub2_8085, 912866554));
 			if (i != i_3_) {
 				((Class282_Sub48) this).anInt8095 = i_3_ * -569710251;
-				Class409 class409 = (((Class282_Sub48) this).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) this).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (class409.anIntArray4886 != null)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (null != class409) {
@@ -268,7 +268,7 @@ public class Class282_Sub48 extends Node {
 		}
 	}
 
-	public static void method13429(int i, int i_4_, int i_5_, int i_6_, Class478 class478, NPC class521_sub1_sub1_sub2_sub2, Player class521_sub1_sub1_sub2_sub1) {
+	public static void method13429(int i, int i_4_, int i_5_, int i_6_, ObjectDefinitions class478, NPC class521_sub1_sub1_sub2_sub2, Player class521_sub1_sub1_sub2_sub1) {
 		Class282_Sub48 class282_sub48 = new Class282_Sub48();
 		((Class282_Sub48) class282_sub48).anInt8076 = 1589843113 * i;
 		((Class282_Sub48) class282_sub48).anInt8107 = (i_4_ << 9) * 80768833;
@@ -303,7 +303,7 @@ public class Class282_Sub48 extends Node {
 			aClass482_8073.append(class282_sub48, -1001316355);
 		} else if (class521_sub1_sub1_sub2_sub2 != null) {
 			((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085 = class521_sub1_sub1_sub2_sub2;
-			Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+			NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 			if (null != class409.anIntArray4886) {
 				((Class282_Sub48) class282_sub48).aBool8092 = true;
 				class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
@@ -335,9 +335,9 @@ public class Class282_Sub48 extends Node {
 		}
 	}
 
-	public static void method13430(int i, int i_9_, int i_10_, Class478 class478) {
+	public static void method13430(int i, int i_9_, int i_10_, ObjectDefinitions class478) {
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8073.head((byte) 46); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass482_8073.next(-81664747)) {
-			if (i == -23801959 * ((Class282_Sub48) class282_sub48).anInt8076 && i_9_ << 9 == (-2014043967 * ((Class282_Sub48) class282_sub48).anInt8107) && (((Class282_Sub48) class282_sub48).anInt8078 * 1548025077 == i_10_ << 9) && (((Class282_Sub48) class282_sub48).aClass478_8104.anInt5633 * -2132690865) == -2132690865 * class478.anInt5633) {
+			if (i == -23801959 * ((Class282_Sub48) class282_sub48).anInt8076 && i_9_ << 9 == (-2014043967 * ((Class282_Sub48) class282_sub48).anInt8107) && (((Class282_Sub48) class282_sub48).anInt8078 * 1548025077 == i_10_ << 9) && (((Class282_Sub48) class282_sub48).aClass478_8104.id * -2132690865) == -2132690865 * class478.id) {
 				if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099)) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
@@ -352,9 +352,9 @@ public class Class282_Sub48 extends Node {
 		}
 	}
 
-	public static void method13431(int i, int i_11_, int i_12_, Class478 class478) {
+	public static void method13431(int i, int i_11_, int i_12_, ObjectDefinitions class478) {
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8073.head((byte) 69); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass482_8073.next(1640557280)) {
-			if (i == -23801959 * ((Class282_Sub48) class282_sub48).anInt8076 && i_11_ << 9 == -2014043967 * ((Class282_Sub48) class282_sub48).anInt8107 && (((Class282_Sub48) class282_sub48).anInt8078 * 1548025077 == i_12_ << 9) && (((Class282_Sub48) class282_sub48).aClass478_8104.anInt5633 * -2132690865) == -2132690865 * class478.anInt5633) {
+			if (i == -23801959 * ((Class282_Sub48) class282_sub48).anInt8076 && i_11_ << 9 == -2014043967 * ((Class282_Sub48) class282_sub48).anInt8107 && (((Class282_Sub48) class282_sub48).anInt8078 * 1548025077 == i_12_ << 9) && (((Class282_Sub48) class282_sub48).aClass478_8104.id * -2132690865) == -2132690865 * class478.id) {
 				if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099)) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
@@ -403,7 +403,7 @@ public class Class282_Sub48 extends Node {
 	}
 
 	static int method13435(NPC class521_sub1_sub1_sub2_sub2) {
-		Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (class409.anIntArray4886 != null) {
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 			if (class409 == null)
@@ -441,7 +441,7 @@ public class Class282_Sub48 extends Node {
 	}
 
 	static int method13438(NPC class521_sub1_sub1_sub2_sub2) {
-		Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (class409.anIntArray4886 != null) {
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 			if (class409 == null)
@@ -494,7 +494,7 @@ public class Class282_Sub48 extends Node {
 	}
 
 	static int method13440(NPC class521_sub1_sub1_sub2_sub2) {
-		Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (class409.anIntArray4886 != null) {
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 			if (class409 == null)
@@ -527,7 +527,7 @@ public class Class282_Sub48 extends Node {
 				i_19_ = 3;
 			if (((Class282_Sub48) class282_sub48).anInt8091 * -1881404979 != i_19_) {
 				int i_21_ = (Class282_Sub11_Sub1.method15433((((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085), 912866554));
-				Class409 class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (null != class409.anIntArray4886)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (class409 == null || i_21_ == -1) {
@@ -627,7 +627,7 @@ public class Class282_Sub48 extends Node {
 				i_28_ = 3;
 			if (((Class282_Sub48) class282_sub48).anInt8091 * -1881404979 != i_28_) {
 				int i_30_ = (Class282_Sub11_Sub1.method15433((((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085), 912866554));
-				Class409 class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (null != class409.anIntArray4886)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (class409 == null || i_30_ == -1) {
@@ -727,7 +727,7 @@ public class Class282_Sub48 extends Node {
 				i_37_ = 3;
 			if (((Class282_Sub48) class282_sub48).anInt8091 * -1881404979 != i_37_) {
 				int i_39_ = (Class282_Sub11_Sub1.method15433((((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085), 912866554));
-				Class409 class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (null != class409.anIntArray4886)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (class409 == null || i_39_ == -1) {
@@ -827,7 +827,7 @@ public class Class282_Sub48 extends Node {
 				i_46_ = 3;
 			if (((Class282_Sub48) class282_sub48).anInt8091 * -1881404979 != i_46_) {
 				int i_48_ = (Class282_Sub11_Sub1.method15433((((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085), 912866554));
-				Class409 class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
+				NPCDefinitions class409 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass409_10580);
 				if (null != class409.anIntArray4886)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (class409 == null || i_48_ == -1) {
@@ -970,7 +970,7 @@ public class Class282_Sub48 extends Node {
 						i_61_ = ((256 == (((Class282_Sub48) class282_sub48).anInt8094) * -280457961 && (-937948423 * ((Class282_Sub48) class282_sub48).anInt8093 == 256)) ? 256 : Class76.method1356((-937948423 * (((Class282_Sub48) class282_sub48).anInt8093)), (-280457961 * (((Class282_Sub48) class282_sub48).anInt8094)), -1021175029));
 						if (((Class282_Sub48) class282_sub48).aBool8098) {
 							if ((((Class282_Sub48) class282_sub48).aClass282_Sub18_8097) == null)
-								((Class282_Sub48) class282_sub48).aClass282_Sub18_8097 = (Class282_Sub18.method12270(JS5LocalRequester.aClass317_3665, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095))));
+								((Class282_Sub48) class282_sub48).aClass282_Sub18_8097 = (Class282_Sub18.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095))));
 							if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub18_8097)) {
 								if (null == (((Class282_Sub48) class282_sub48).aClass282_Sub26_Sub1_Sub1_8082))
 									((Class282_Sub48) class282_sub48).aClass282_Sub26_Sub1_Sub1_8082 = ((Class282_Sub48) class282_sub48).aClass282_Sub18_8097.method12272();
@@ -982,7 +982,7 @@ public class Class282_Sub48 extends Node {
 								}
 							}
 						} else {
-							Class343 class343 = Class343.method6094(Class219.aClass317_2714, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095)), 0);
+							Class343 class343 = Class343.method6094(IndexLoaders.SOUND_EFFECT_INDEX, (1399704573 * (((Class282_Sub48) class282_sub48).anInt8095)), 0);
 							if (null != class343) {
 								Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2 = (class343.method6089().method16062(Class119.aClass344_1460));
 								Class282_Sub15_Sub5_Sub2 class282_sub15_sub5_sub2 = ((Class282_Sub15_Sub5_Sub2) (class282_sub26_sub1_sub2.method15225(i_61_, i_58_ << 6, i_60_)));
@@ -1002,7 +1002,7 @@ public class Class282_Sub48 extends Node {
 						if (((Class282_Sub48) class282_sub48).aBool8103) {
 							if (null == (((Class282_Sub48) class282_sub48).aClass282_Sub18_8087)) {
 								i_62_ = (int) (Math.random() * (double) (((Class282_Sub48) class282_sub48).anIntArray8102).length);
-								((Class282_Sub48) class282_sub48).aClass282_Sub18_8087 = (Class282_Sub18.method12270(JS5LocalRequester.aClass317_3665, (((Class282_Sub48) class282_sub48).anIntArray8102[i_62_])));
+								((Class282_Sub48) class282_sub48).aClass282_Sub18_8087 = (Class282_Sub18.method12270(IndexLoaders.MIDI_INSTRUMENT_INDEX, (((Class282_Sub48) class282_sub48).anIntArray8102[i_62_])));
 							}
 							if (null != (((Class282_Sub48) class282_sub48).aClass282_Sub18_8087)) {
 								if (null == (((Class282_Sub48) class282_sub48).aClass282_Sub26_Sub1_Sub1_8106))
@@ -1017,7 +1017,7 @@ public class Class282_Sub48 extends Node {
 							}
 						} else {
 							i_62_ = (int) (Math.random() * (double) (((Class282_Sub48) class282_sub48).anIntArray8102).length);
-							Class343 class343 = Class343.method6094(Class219.aClass317_2714, (((Class282_Sub48) class282_sub48).anIntArray8102[i_62_]), 0);
+							Class343 class343 = Class343.method6094(IndexLoaders.SOUND_EFFECT_INDEX, (((Class282_Sub48) class282_sub48).anIntArray8102[i_62_]), 0);
 							if (null != class343) {
 								Class282_Sub26_Sub1_Sub2 class282_sub26_sub1_sub2 = (class343.method6089().method16062(Class119.aClass344_1460));
 								Class282_Sub15_Sub5_Sub2 class282_sub15_sub5_sub2 = ((Class282_Sub15_Sub5_Sub2) (class282_sub26_sub1_sub2.method15225(i_61_, i_58_ << 6, i_60_)));

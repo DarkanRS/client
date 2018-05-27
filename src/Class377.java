@@ -19,7 +19,7 @@ public class Class377 implements IndexLoader {
 	public Class372 method6384(int i, int i_0_) {
 		Class372 class372;
 		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.method3865((long) i));
+			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
 		}
 		if (class372 != null)
 			return class372;
@@ -39,7 +39,7 @@ public class Class377 implements IndexLoader {
 	public Class372 method6385(int i) {
 		Class372 class372;
 		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.method3865((long) i));
+			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
 		}
 		if (class372 != null)
 			return class372;
@@ -77,7 +77,7 @@ public class Class377 implements IndexLoader {
 	public Class372 method6389(int i) {
 		Class372 class372;
 		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.method3865((long) i));
+			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
 		}
 		if (class372 != null)
 			return class372;
@@ -204,7 +204,7 @@ public class Class377 implements IndexLoader {
 		int i_24_ = class282_sub35.readUnsignedByte();
 		int i_25_ = class282_sub35.readUnsignedShort();
 		int i_26_ = class282_sub35.readUnsignedShort();
-		int i_27_ = class282_sub35.readBigSmart(2025101178);
+		int i_27_ = class282_sub35.readBigSmart();
 		int i_28_ = class282_sub35.readInt();
 		int i_29_ = class282_sub35.readInt();
 		return new Class62(string, class356, class353, i_20_, i_21_, i_22_, i_23_, i_24_, i_25_, i_26_, i_27_, i_28_, i_29_);

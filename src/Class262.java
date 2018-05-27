@@ -441,9 +441,9 @@ public class Class262 implements Interface36 {
 	}
 
 	static void method4653(int i, int i_31_, int i_32_) {
-		if (Class58.aClass529_527.aBool7044 || (1 != 2144330291 * Class20.anInt169 && (!Class96_Sub6.aBool9173 || 2 != 2144330291 * Class20.anInt169 || !(((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12).aString9576.equals(Message.aClass433_5287.translate(Class223.aClass495_2772, -1649910920)))))) {
+		if (Class58.aClass529_527.aBool7044 || (1 != 2144330291 * Class20.anInt169 && (!Class96_Sub6.aBool9173 || 2 != 2144330291 * Class20.anInt169 || !(((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12).aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1649910920)))))) {
 			Class414 class414 = Class114.method1887(2016134923);
-			int i_33_ = (class414.method6946(Message.aClass433_5255.translate(Class223.aClass495_2772, -2018972202), -1967833701));
+			int i_33_ = (class414.method6946(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -2018972202), -1967833701));
 			int i_34_;
 			if (!Class20.aBool162) {
 				for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361))) {

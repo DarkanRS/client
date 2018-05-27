@@ -21,12 +21,12 @@ public class Class49 {
 		if (anObject482 == null) {
 			Class370_Sub1_Sub1 class370_sub1_sub1 = new Class370_Sub1_Sub1();
 			byte[] is = class370_sub1_sub1.method15431(128, 128, 16);
-			anObject482 = Class309.method5493(is, false, (byte) 97);
+			anObject482 = JS5Manager.method5493(is, false, (byte) 97);
 		}
 		if (anObject477 == null) {
 			Class370_Sub2_Sub1 class370_sub2_sub1 = new Class370_Sub2_Sub1();
 			byte[] is = class370_sub2_sub1.method15442(128, 128, 16);
-			anObject477 = Class309.method5493(is, false, (byte) 80);
+			anObject477 = JS5Manager.method5493(is, false, (byte) 80);
 		}
 	}
 
@@ -36,7 +36,7 @@ public class Class49 {
 		if (anInterface1_480 == null) {
 			if (anObject483 == null) {
 				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
-				anObject483 = Class309.method5493(is, false, (byte) 40);
+				anObject483 = JS5Manager.method5493(is, false, (byte) 40);
 			}
 			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
 			byte[] is_0_ = new byte[is.length * 4];
@@ -99,12 +99,12 @@ public class Class49 {
 		if (anObject482 == null) {
 			Class370_Sub1_Sub1 class370_sub1_sub1 = new Class370_Sub1_Sub1();
 			byte[] is = class370_sub1_sub1.method15431(128, 128, 16);
-			anObject482 = Class309.method5493(is, false, (byte) 113);
+			anObject482 = JS5Manager.method5493(is, false, (byte) 113);
 		}
 		if (anObject477 == null) {
 			Class370_Sub2_Sub1 class370_sub2_sub1 = new Class370_Sub2_Sub1();
 			byte[] is = class370_sub2_sub1.method15442(128, 128, 16);
-			anObject477 = Class309.method5493(is, false, (byte) 37);
+			anObject477 = JS5Manager.method5493(is, false, (byte) 37);
 		}
 	}
 
@@ -114,7 +114,7 @@ public class Class49 {
 		if (anInterface1_480 == null) {
 			if (anObject483 == null) {
 				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
-				anObject483 = Class309.method5493(is, false, (byte) 118);
+				anObject483 = JS5Manager.method5493(is, false, (byte) 118);
 			}
 			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
 			byte[] is_11_ = new byte[is.length * 4];
@@ -146,12 +146,12 @@ public class Class49 {
 		if (anObject482 == null) {
 			Class370_Sub1_Sub1 class370_sub1_sub1 = new Class370_Sub1_Sub1();
 			byte[] is = class370_sub1_sub1.method15431(128, 128, 16);
-			anObject482 = Class309.method5493(is, false, (byte) 80);
+			anObject482 = JS5Manager.method5493(is, false, (byte) 80);
 		}
 		if (anObject477 == null) {
 			Class370_Sub2_Sub1 class370_sub2_sub1 = new Class370_Sub2_Sub1();
 			byte[] is = class370_sub2_sub1.method15442(128, 128, 16);
-			anObject477 = Class309.method5493(is, false, (byte) 28);
+			anObject477 = JS5Manager.method5493(is, false, (byte) 28);
 		}
 	}
 
@@ -173,7 +173,7 @@ public class Class49 {
 		if (anInterface1_480 == null) {
 			if (anObject483 == null) {
 				byte[] is = Class264.method4782(128, 128, 16, 8, new Class261_Sub1(419684), 4.0F, 4.0F, 16.0F, 0.5F, 0.6F);
-				anObject483 = Class309.method5493(is, false, (byte) 81);
+				anObject483 = JS5Manager.method5493(is, false, (byte) 81);
 			}
 			byte[] is = Class346.method6154(anObject483, false, (byte) 1);
 			byte[] is_22_ = new byte[is.length * 4];

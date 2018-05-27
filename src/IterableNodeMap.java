@@ -322,15 +322,15 @@ public final class IterableNodeMap implements Iterable {
 
 	static final void method7772(Class282_Sub31 class282_sub31, boolean bool, int i) {
 		if (((Class282_Sub31) class282_sub31).aBool7774) {
-			if (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 < 0 || (Class492.method8264(client.aClass257_7353.method4436(-1617066319), ((Class282_Sub31) class282_sub31).anInt7765 * -1369039751, -1307943861 * ((Class282_Sub31) class282_sub31).anInt7770, 1942118537))) {
+			if (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1617066319), ((Class282_Sub31) class282_sub31).anInt7765 * -1369039751, -1307943861 * ((Class282_Sub31) class282_sub31).anInt7770, 1942118537))) {
 				if (!bool)
 					Class174.method2956((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1133711870);
 				else
 					Class243.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 30);
 				class282_sub31.unlink(-371378792);
 			}
-		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= client.aClass257_7353.method4424(800318016) - 2) && (-322610393 * class282_sub31.anInt7763 <= client.aClass257_7353.method4451(-349859539) - 2)
-				&& ((-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769) < 0 || (Class492.method8264(client.aClass257_7353.method4436(-1528257548), (-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769), (((Class282_Sub31) class282_sub31).anInt7771 * 965123467), 1942118537)))) {
+		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= IndexLoaders.MAP_REGION_DECODER.method4424(800318016) - 2) && (-322610393 * class282_sub31.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.method4451(-349859539) - 2)
+				&& ((-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769) < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1528257548), (-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769), (((Class282_Sub31) class282_sub31).anInt7771 * 965123467), 1942118537)))) {
 			if (!bool)
 				Class174.method2956(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -1118636715);
 			else
@@ -345,7 +345,7 @@ public final class IterableNodeMap implements Iterable {
 
 	static final void method7773(CS2Executor class527, int i) {
 		Class282_Sub40.method13300(-1273704391);
-		client.aClass257_7353.method4547((byte) -42);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -42);
 		Class190.method3148((byte) 53);
 		client.aBool7175 = false;
 	}

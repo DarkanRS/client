@@ -39,15 +39,15 @@ public class Class18 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
-	static void method573(GraphicalRenderer class505, NodeCollection class482, int i, int i_0_, byte i_1_) {
+	static void renderInformation(GraphicalRenderer renderer, NodeCollection areas, int i, int i_0_, byte i_1_) {
 		Class346.aClass482_4049.method8118(-449430209);
 		if (!Class291_Sub1.aBool8027) {
-			for (Class282_Sub36 class282_sub36 = (Class282_Sub36) class482.head((byte) 59); null != class282_sub36; class282_sub36 = (Class282_Sub36) class482.next(-319423268)) {
-				Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(-1798678621 * class282_sub36.anInt7991, -113762832));
-				if (Class282_Sub16.method12248(class220, -852702638)) {
-					boolean bool = Class220.method3742(class505, class282_sub36, class220, i, i_0_, 238178071);
+			for (Class282_Sub36 class282_sub36 = (Class282_Sub36) areas.head((byte) 59); null != class282_sub36; class282_sub36 = (Class282_Sub36) areas.next(-319423268)) {
+				WorldMapAreaDefs defs = (Class291_Sub1.aClass218_3456.getWorldMapDefs(-1798678621 * class282_sub36.anInt7991, -113762832));
+				if (Class282_Sub16.method12248(defs, -852702638)) {
+					boolean bool = WorldMapAreaDefs.renderIconsAndNames(renderer, class282_sub36, defs, i, i_0_, 238178071);
 					if (bool) {
-						Class282_Sub39.method13297(class505, class282_sub36, class220, -502532321);
+						Class282_Sub39.method13297(renderer, class282_sub36, defs, -502532321);
 					}
 				}
 			}

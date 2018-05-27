@@ -49,7 +49,7 @@ public class Class81 {
 	}
 
 	public static void method1444(int i, int i_0_, String string, String string_1_, String string_2_, String string_3_) {
-		Class340.method6070(i, i_0_, string, string_1_, string_2_, string_3_, null, -1, 30927485);
+		MapRegionLoaderTask.method6070(i, i_0_, string, string_1_, string_2_, string_3_, null, -1, 30927485);
 	}
 
 	public static void method1445(int i, int i_4_, String string, String string_5_, String string_6_, String string_7_, String string_8_, int i_9_) {

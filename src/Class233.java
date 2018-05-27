@@ -41,7 +41,7 @@ public class Class233 {
 	public Class537 method3927(int i) {
 		Class537 class537;
 		synchronized (((Class233) this).aClass229_2881) {
-			class537 = ((Class537) ((Class233) this).aClass229_2881.method3865((long) i));
+			class537 = ((Class537) ((Class233) this).aClass229_2881.get((long) i));
 		}
 		if (null != class537)
 			return class537;
@@ -91,7 +91,7 @@ public class Class233 {
 	public Class537 method3933(int i, int i_1_) {
 		Class537 class537;
 		synchronized (((Class233) this).aClass229_2881) {
-			class537 = ((Class537) ((Class233) this).aClass229_2881.method3865((long) i));
+			class537 = ((Class537) ((Class233) this).aClass229_2881.get((long) i));
 		}
 		if (null != class537)
 			return class537;
@@ -159,7 +159,7 @@ public class Class233 {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class220.method3738(class118, class98, class527, (byte) -2);
+		WorldMapAreaDefs.method3738(class118, class98, class527, (byte) -2);
 	}
 
 	static final void method3942(CS2Executor class527, int i) {

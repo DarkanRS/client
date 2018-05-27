@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class526 {
+public class Defaults6Loader {
 	public static final int anInt6986 = 1;
 	static final int anInt6987 = 2;
 	public static final int anInt6988 = 0;
@@ -42,8 +42,8 @@ public class Class526 {
 		}
 	}
 
-	public Class526(Index class317) {
-		byte[] is = class317.method5615((-1719912253 * Class524.aClass524_6963.anInt6966), -345118787);
+	public Defaults6Loader(Index class317) {
+		byte[] is = class317.getFile((-1719912253 * DefaultsFile.FILE_6.anInt6966), -345118787);
 		method11245(new RsByteBuffer(is), -672057910);
 		if (equipmentSlots == null)
 			throw new RuntimeException("");
@@ -85,7 +85,7 @@ public class Class526 {
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub7_8210), 0, -231227368);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub6_8192), 4, -702190975);
 		Class94.method1589((short) 255);
-		client.aClass257_7353.method4435((byte) 1).method4048(1356336946);
+		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(1356336946);
 		client.aBool7185 = true;
 	}
 

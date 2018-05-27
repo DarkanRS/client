@@ -13,7 +13,7 @@ public class Class3 implements Interface42 {
 	IterableNodeMap aClass465_28 = new IterableNodeMap(128);
 
 	public int method242(int i) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 13);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 13);
 		int i_0_ = -1764754967 * class226.anInt2784;
 		int i_1_ = -1174362995 * class226.anInt2785;
 		int i_2_ = class226.anInt2783 * -188179155;
@@ -38,7 +38,7 @@ public class Class3 implements Interface42 {
 	}
 
 	void method265(int i) {
-		for (int i_5_ = 0; i_5_ < Class104.aClass377_1065.anInt4519 * -1456639697; i_5_++) {
+		for (int i_5_ = 0; i_5_ < IndexLoaders.aClass377_1065.anInt4519 * -1456639697; i_5_++) {
 			((Class3) this).anIntArray25[i_5_] = 0;
 			anIntArray26[i_5_] = 0;
 		}
@@ -73,7 +73,7 @@ public class Class3 implements Interface42 {
 	}
 
 	void method268(int i, int i_9_, int i_10_) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 29);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 29);
 		int i_11_ = -1764754967 * class226.anInt2784;
 		int i_12_ = -1174362995 * class226.anInt2785;
 		int i_13_ = class226.anInt2783 * -188179155;
@@ -96,7 +96,7 @@ public class Class3 implements Interface42 {
 	}
 
 	public int method241(int i, int i_16_) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 125);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 125);
 		int i_17_ = -1764754967 * class226.anInt2784;
 		int i_18_ = -1174362995 * class226.anInt2785;
 		int i_19_ = class226.anInt2783 * -188179155;
@@ -145,7 +145,7 @@ public class Class3 implements Interface42 {
 	}
 
 	void method272() {
-		for (int i = 0; i < Class104.aClass377_1065.anInt4519 * -1456639697; i++) {
+		for (int i = 0; i < IndexLoaders.aClass377_1065.anInt4519 * -1456639697; i++) {
 			((Class3) this).anIntArray25[i] = 0;
 			anIntArray26[i] = 0;
 		}
@@ -153,7 +153,7 @@ public class Class3 implements Interface42 {
 	}
 
 	void method273() {
-		for (int i = 0; i < Class104.aClass377_1065.anInt4519 * -1456639697; i++) {
+		for (int i = 0; i < IndexLoaders.aClass377_1065.anInt4519 * -1456639697; i++) {
 			((Class3) this).anIntArray25[i] = 0;
 			anIntArray26[i] = 0;
 		}
@@ -161,7 +161,7 @@ public class Class3 implements Interface42 {
 	}
 
 	void method274() {
-		for (int i = 0; i < Class104.aClass377_1065.anInt4519 * -1456639697; i++) {
+		for (int i = 0; i < IndexLoaders.aClass377_1065.anInt4519 * -1456639697; i++) {
 			((Class3) this).anIntArray25[i] = 0;
 			anIntArray26[i] = 0;
 		}
@@ -169,12 +169,12 @@ public class Class3 implements Interface42 {
 	}
 
 	public Class3() {
-		((Class3) this).anIntArray25 = new int[-1456639697 * Class104.aClass377_1065.anInt4519];
-		anIntArray26 = new int[-1456639697 * Class104.aClass377_1065.anInt4519];
+		((Class3) this).anIntArray25 = new int[-1456639697 * IndexLoaders.aClass377_1065.anInt4519];
+		anIntArray26 = new int[-1456639697 * IndexLoaders.aClass377_1065.anInt4519];
 	}
 
 	public void method275(int i, int i_22_) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 127);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 127);
 		int i_23_ = -1764754967 * class226.anInt2784;
 		int i_24_ = class226.anInt2785 * -1174362995;
 		int i_25_ = class226.anInt2783 * -188179155;
@@ -224,7 +224,7 @@ public class Class3 implements Interface42 {
 	}
 
 	void method279(int i, int i_30_) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 66);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 66);
 		int i_31_ = -1764754967 * class226.anInt2784;
 		int i_32_ = -1174362995 * class226.anInt2785;
 		int i_33_ = class226.anInt2783 * -188179155;
@@ -236,7 +236,7 @@ public class Class3 implements Interface42 {
 	}
 
 	public void method280(int i, int i_35_, int i_36_) {
-		Class226 class226 = Class16.aClass230_147.method3897(i, (byte) 58);
+		Class226 class226 = IndexLoaders.aClass230_147.method3897(i, (byte) 58);
 		int i_37_ = -1764754967 * class226.anInt2784;
 		int i_38_ = class226.anInt2785 * -1174362995;
 		int i_39_ = class226.anInt2783 * -188179155;

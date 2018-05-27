@@ -179,7 +179,7 @@ public abstract class Class202 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_18_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_19_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class414 class414 = Class94.method1588(Class410.aClass317_4924, i_19_, 0, 1119085558);
+		Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_19_, 0, 1119085558);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class414.method6949(string, i_18_, Class182.aClass160Array2261, 437013959);
 	}
 }

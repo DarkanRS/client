@@ -3,8 +3,7 @@
  */
 
 public class Class493 {
-	public static Class479 aClass479_5778;
-
+	
 	public static int method8267(CharSequence charsequence, CharSequence charsequence_0_, Language class495) {
 		int i = charsequence.length();
 		int i_1_ = charsequence_0_.length();

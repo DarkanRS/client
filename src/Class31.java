@@ -19,7 +19,7 @@ public class Class31 implements IndexLoader {
 	public Class44 method800(int i, int i_0_) {
 		Class44 class44;
 		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.method3865((long) i));
+			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
 		}
 		if (class44 != null)
 			return class44;
@@ -64,7 +64,7 @@ public class Class31 implements IndexLoader {
 	public Class44 method805(int i) {
 		Class44 class44;
 		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.method3865((long) i));
+			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
 		}
 		if (class44 != null)
 			return class44;
@@ -97,7 +97,7 @@ public class Class31 implements IndexLoader {
 	public Class44 method807(int i) {
 		Class44 class44;
 		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.method3865((long) i));
+			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
 		}
 		if (class44 != null)
 			return class44;
@@ -201,7 +201,7 @@ public class Class31 implements IndexLoader {
 
 	static final void method814(CS2Executor class527, int i) {
 		int i_21_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub14 class282_sub50_sub14 = Class296.aClass331_3535.method5918(i_21_, 1213236683);
+		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.aClass331_3535.method5918(i_21_, 1213236683);
 		if (null == class282_sub50_sub14.anIntArray9747)
 			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else

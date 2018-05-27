@@ -1234,7 +1234,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 		if ((flag & 0x10) != 0) {
 			int[] is = new int[Class8_Sub3.method14339(1672148913).length];
 			for (int i_117_ = 0; i_117_ < Class8_Sub3.method14339(1868309585).length; i_117_++)
-				is[i_117_] = buffer.readBigSmart(2101955119);
+				is[i_117_] = buffer.readBigSmart();
 			int i_118_ = buffer.readUnsignedByte();
 			Class20.animate(player, is, i_118_, false, (byte) -32);
 		}
@@ -1252,7 +1252,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			int[] is_121_ = new int[i_120_];
 			int[] is_122_ = new int[i_120_];
 			for (int i_123_ = 0; i_123_ < i_120_; i_123_++) {
-				is[i_123_] = buffer.readBigSmart(2140788143);
+				is[i_123_] = buffer.readBigSmart();
 				is_121_[i_123_] = buffer.readUnsignedByteC(145947443);
 				is_122_[i_123_] = buffer.readShortLE128(602501853);
 			}

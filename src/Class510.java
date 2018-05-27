@@ -25,7 +25,7 @@ public final class Class510 {
 		if (-1837903909 * ((CS2Executor) class527).anInt7002 != 0) {
 			Class509 class509 = (((CS2Executor) class527).aClass509Array7016[(((CS2Executor) class527).anInt7002 -= -72641453) * -1837903909]);
 			((CS2Executor) class527).current = ((Class509) class509).aClass282_Sub50_Sub5_5869;
-			((CS2Executor) class527).aClass522Array7005 = (((CS2Executor) class527).current.operations);
+			((CS2Executor) class527).operations = (((CS2Executor) class527).current.operations);
 			((CS2Executor) class527).unknown = (((CS2Executor) class527).current.intOpValues);
 			((CS2Executor) class527).instrPtr = ((Class509) class509).anInt5866 * -390085499;
 			((CS2Executor) class527).intLocals = ((Class509) class509).anIntArray5867;
@@ -35,14 +35,14 @@ public final class Class510 {
 	}
 
 	static final void method8744(byte i, int i_1_) {
-		byte[][][] is = client.aClass257_7353.method4532(1227540505);
+		byte[][][] is = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
 		if (is == null) {
-			is = (new byte[4][client.aClass257_7353.method4424(1852995764)][client.aClass257_7353.method4451(-533095676)]);
-			client.aClass257_7353.method4440(is, (byte) 2);
+			is = (new byte[4][IndexLoaders.MAP_REGION_DECODER.method4424(1852995764)][IndexLoaders.MAP_REGION_DECODER.method4451(-533095676)]);
+			IndexLoaders.MAP_REGION_DECODER.method4440(is, (byte) 2);
 		}
 		for (int i_2_ = 0; i_2_ < 4; i_2_++) {
-			for (int i_3_ = 0; i_3_ < client.aClass257_7353.method4424(713986087); i_3_++) {
-				for (int i_4_ = 0; i_4_ < client.aClass257_7353.method4451(-748380927); i_4_++)
+			for (int i_3_ = 0; i_3_ < IndexLoaders.MAP_REGION_DECODER.method4424(713986087); i_3_++) {
+				for (int i_4_ = 0; i_4_ < IndexLoaders.MAP_REGION_DECODER.method4451(-748380927); i_4_++)
 					is[i_2_][i_3_][i_4_] = i;
 			}
 		}

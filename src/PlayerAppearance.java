@@ -161,7 +161,7 @@ public class PlayerAppearance {
 		long l = (long) i_23_ << 32 | (long) (i_22_ << 16) | (long) i_21_;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = (MeshRasterizer) aClass229_2930.method3865(l);
+			class528 = (MeshRasterizer) aClass229_2930.get(l);
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_24_) != 0) {
 			if (null != class528)
@@ -202,13 +202,13 @@ public class PlayerAppearance {
 		return class528;
 	}
 
-	public MeshRasterizer method3997(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method3997(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) 100).method6880(class505, i, interface42, class456, null, 1737411260));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 100).method6880(class505, i, interface42, class456, null, 1737411260));
 		int i_29_ = null != class456 ? i | class456.method7640(-1639744740) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.get(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_29_) != 0) {
 			if (class528 != null)
@@ -266,9 +266,9 @@ public class PlayerAppearance {
 		return class528_38_;
 	}
 
-	public MeshRasterizer method3998(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_39_, Class456[] class456s, int[] is, int i_40_, boolean bool, Class526 class526, short i_41_) {
+	public MeshRasterizer method3998(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_39_, Class456[] class456s, int[] is, int i_40_, boolean bool, Defaults6Loader class526, short i_41_) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) -32).method6875(class505, i, class211, interface42, class456, class456_39_, class456s, is, i_40_, null, 2039422694));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) -32).method6875(class505, i, class211, interface42, class456, class456_39_, class456s, is, i_40_, null, 2039422694));
 		int i_42_ = i;
 		long l = -6800555520516554145L * ((PlayerAppearance) this).aLong2926;
 		int[] is_43_ = ((PlayerAppearance) this).anIntArray2921;
@@ -337,7 +337,7 @@ public class PlayerAppearance {
 		}
 		MeshRasterizer class528;
 		synchronized (aClass229_2920) {
-			class528 = (MeshRasterizer) aClass229_2920.method3865(l);
+			class528 = (MeshRasterizer) aClass229_2920.get(l);
 		}
 		Class227 class227 = null;
 		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
@@ -386,7 +386,7 @@ public class PlayerAppearance {
 			if (bool_57_) {
 				if (-2249810898304743821L * ((PlayerAppearance) this).aLong2927 != -1L) {
 					synchronized (aClass229_2920) {
-						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
+						class528 = ((MeshRasterizer) aClass229_2920.get(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
 					}
 				}
 				if (class528 == null || class505.method8452(class528.m(), i_42_) != 0)
@@ -502,7 +502,7 @@ public class PlayerAppearance {
 		long l = (long) i_81_ << 32 | (long) (i_80_ << 16) | (long) i_79_;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = (MeshRasterizer) aClass229_2930.method3865(l);
+			class528 = (MeshRasterizer) aClass229_2930.get(l);
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_83_) != 0) {
 			if (null != class528)
@@ -603,13 +603,13 @@ public class PlayerAppearance {
 		method3991((byte) 3);
 	}
 
-	public MeshRasterizer method4008(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method4008(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) 42).method6880(class505, i, interface42, class456, null, 1842006915));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 42).method6880(class505, i, interface42, class456, null, 1842006915));
 		int i_98_ = null != class456 ? i | class456.method7640(-1637762744) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.get(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_98_) != 0) {
 			if (class528 != null)
@@ -814,9 +814,9 @@ public class PlayerAppearance {
 		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
 	}
 
-	public MeshRasterizer method4016(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_120_, Class456[] class456s, int[] is, int i_121_, boolean bool, Class526 class526) {
+	public MeshRasterizer method4016(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_120_, Class456[] class456s, int[] is, int i_121_, boolean bool, Defaults6Loader class526) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) 29).method6875(class505, i, class211, interface42, class456, class456_120_, class456s, is, i_121_, null, 1850728903));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 29).method6875(class505, i, class211, interface42, class456, class456_120_, class456s, is, i_121_, null, 1850728903));
 		int i_122_ = i;
 		long l = -6800555520516554145L * ((PlayerAppearance) this).aLong2926;
 		int[] is_123_ = ((PlayerAppearance) this).anIntArray2921;
@@ -885,7 +885,7 @@ public class PlayerAppearance {
 		}
 		MeshRasterizer class528;
 		synchronized (aClass229_2920) {
-			class528 = (MeshRasterizer) aClass229_2920.method3865(l);
+			class528 = (MeshRasterizer) aClass229_2920.get(l);
 		}
 		Class227 class227 = null;
 		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
@@ -934,7 +934,7 @@ public class PlayerAppearance {
 			if (bool_137_) {
 				if (-2249810898304743821L * ((PlayerAppearance) this).aLong2927 != -1L) {
 					synchronized (aClass229_2920) {
-						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
+						class528 = ((MeshRasterizer) aClass229_2920.get(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
 					}
 				}
 				if (class528 == null || class505.method8452(class528.m(), i_122_) != 0)
@@ -1045,9 +1045,9 @@ public class PlayerAppearance {
 		return class528_155_;
 	}
 
-	public MeshRasterizer method4017(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_159_, Class456[] class456s, int[] is, int i_160_, boolean bool, Class526 class526) {
+	public MeshRasterizer method4017(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_159_, Class456[] class456s, int[] is, int i_160_, boolean bool, Defaults6Loader class526) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) 91).method6875(class505, i, class211, interface42, class456, class456_159_, class456s, is, i_160_, null, 1456552905));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 91).method6875(class505, i, class211, interface42, class456, class456_159_, class456s, is, i_160_, null, 1456552905));
 		int i_161_ = i;
 		long l = -6800555520516554145L * ((PlayerAppearance) this).aLong2926;
 		int[] is_162_ = ((PlayerAppearance) this).anIntArray2921;
@@ -1116,7 +1116,7 @@ public class PlayerAppearance {
 		}
 		MeshRasterizer class528;
 		synchronized (aClass229_2920) {
-			class528 = (MeshRasterizer) aClass229_2920.method3865(l);
+			class528 = (MeshRasterizer) aClass229_2920.get(l);
 		}
 		Class227 class227 = null;
 		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
@@ -1165,7 +1165,7 @@ public class PlayerAppearance {
 			if (bool_176_) {
 				if (-2249810898304743821L * ((PlayerAppearance) this).aLong2927 != -1L) {
 					synchronized (aClass229_2920) {
-						class528 = ((MeshRasterizer) aClass229_2920.method3865(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
+						class528 = ((MeshRasterizer) aClass229_2920.get(-2249810898304743821L * (((PlayerAppearance) this).aLong2927)));
 					}
 				}
 				if (class528 == null || class505.method8452(class528.m(), i_161_) != 0)
@@ -1292,13 +1292,13 @@ public class PlayerAppearance {
 		method3991((byte) 3);
 	}
 
-	public MeshRasterizer method4020(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method4020(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) -22).method6880(class505, i, interface42, class456, null, 1531880788));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) -22).method6880(class505, i, interface42, class456, null, 1531880788));
 		int i_201_ = null != class456 ? i | class456.method7640(-921112046) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.get(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_201_) != 0) {
 			if (class528 != null)
@@ -1356,13 +1356,13 @@ public class PlayerAppearance {
 		return class528_210_;
 	}
 
-	public MeshRasterizer method4021(GraphicalRenderer class505, int i, Class31 class31, Class406 class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, int i_211_) {
+	public MeshRasterizer method4021(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, int i_211_) {
 		if (-977770149 * anInt2928 != -1)
-			return (class406.method6828(anInt2928 * -977770149, (byte) 14).method6880(class505, i, interface42, class456, null, 1135826867));
+			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 14).method6880(class505, i, interface42, class456, null, 1135826867));
 		int i_212_ = null != class456 ? i | class456.method7640(-1790467862) : i;
 		MeshRasterizer class528;
 		synchronized (aClass229_2930) {
-			class528 = ((MeshRasterizer) aClass229_2930.method3865(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
+			class528 = ((MeshRasterizer) aClass229_2930.get(-6800555520516554145L * ((PlayerAppearance) this).aLong2926));
 		}
 		if (class528 == null || class505.method8452(class528.m(), i_212_) != 0) {
 			if (class528 != null)

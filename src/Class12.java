@@ -50,7 +50,7 @@ public class Class12 implements Runnable {
 	}
 
 	public static void method480(int i, int i_0_) {
-		if (i != -1 && !Class218.aBoolArray2709[i]) {
+		if (i != -1 && !WorldMapIndexLoader.aBoolArray2709[i]) {
 			Class388.aClass317_4721.method5619(i, -566159763);
 			Class468_Sub8.aClass98Array7889[i] = null;
 		}

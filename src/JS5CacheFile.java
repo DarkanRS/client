@@ -371,9 +371,9 @@ public final class JS5CacheFile {
 
 	public static void method3359(int i) {
 		if (!Class190.aBool2383) {
-			Class435.method7301((client.aClass257_7353.method4430(-1518927169).aClass293ArrayArrayArray2610), (byte) 90);
-			if ((client.aClass257_7353.method4430(-2093053436).aClass293ArrayArrayArray2608) != null)
-				Class435.method7301((client.aClass257_7353.method4430(-1407673431).aClass293ArrayArrayArray2608), (byte) 112);
+			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1518927169).aClass293ArrayArrayArray2610), (byte) 90);
+			if ((IndexLoaders.MAP_REGION_DECODER.method4430(-2093053436).aClass293ArrayArrayArray2608) != null)
+				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1407673431).aClass293ArrayArrayArray2608), (byte) 112);
 			Class190.aBool2383 = true;
 		}
 	}

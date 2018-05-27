@@ -22,8 +22,8 @@ public class Class492 {
 			if (!client.aBool7393)
 				Class62.method1260(i, bool, -1854855925);
 			else {
-				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (Class209.aClass317_2663), i), i_0_, bool);
-				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.aClass495_2772.method8276(1458414646), 443995743);
+				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (IndexLoaders.aClass317_2663), i), i_0_, bool);
+				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1458414646), 443995743);
 				aClass465_5774.method7765(class282_sub37, (long) i);
 			}
 		}
@@ -38,8 +38,8 @@ public class Class492 {
 			if (!client.aBool7393)
 				Class62.method1260(i, bool, 953272758);
 			else {
-				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (Class209.aClass317_2663), i), i_1_, bool);
-				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.aClass495_2772.method8276(1771428192), 1317318998);
+				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (IndexLoaders.aClass317_2663), i), i_1_, bool);
+				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1771428192), 1317318998);
 				aClass465_5774.method7765(class282_sub37, (long) i);
 			}
 		}
@@ -50,8 +50,8 @@ public class Class492 {
 			if (!client.aBool7393)
 				Class62.method1260(i, bool, -1400708496);
 			else {
-				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (Class209.aClass317_2663), i), i_2_, bool);
-				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.aClass495_2772.method8276(1799702773), 1441339523);
+				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (IndexLoaders.aClass317_2663), i), i_2_, bool);
+				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1799702773), 1441339523);
 				aClass465_5774.method7765(class282_sub37, (long) i);
 			}
 		}
@@ -79,8 +79,8 @@ public class Class492 {
 			if (!client.aBool7393)
 				Class62.method1260(i, bool, 450332339);
 			else {
-				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (Class209.aClass317_2663), i), i_3_, bool);
-				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.aClass495_2772.method8276(1583994375), 1371307436);
+				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (IndexLoaders.aClass317_2663), i), i_3_, bool);
+				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1583994375), 1371307436);
 				aClass465_5774.method7765(class282_sub37, (long) i);
 			}
 		}
@@ -226,12 +226,12 @@ public class Class492 {
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(577867050), -1, -1, false, (byte) 35);
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
-		String string_4_ = new StringBuilder().append(Class220.method3741((byte) -1)).append(string).toString();
+		String string_4_ = new StringBuilder().append(WorldMapAreaDefs.method3741((byte) -1)).append(string).toString();
 		Class282_Sub50_Sub6.method14788(string_4_, bool, Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1739196165) == 5, client.aBool7158, client.aBool7159, (byte) -52);
 	}
 
-	static final boolean method8264(Class474 class474, int i, int i_5_, int i_6_) {
-		Class478 class478 = class474.method7891(i, 65280);
+	static final boolean method8264(ObjectIndexLoader class474, int i, int i_5_, int i_6_) {
+		ObjectDefinitions class478 = class474.getObjectDefinitions(i, 65280);
 		if (i_5_ == 11)
 			i_5_ = 10;
 		if (i_5_ >= 5 && i_5_ <= 8)

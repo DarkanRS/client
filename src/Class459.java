@@ -93,7 +93,7 @@ public final class Class459 {
 			boolean bool_3_ = false;
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) npcIndex));
 			if (class282_sub47 == null) {
-				NPC npc = (new NPC(client.aClass257_7353.method4430(-1073098599)));
+				NPC npc = (new NPC(IndexLoaders.MAP_REGION_DECODER.method4430(-1073098599)));
 				npc.anInt10314 = npcIndex * -1498872675;
 				class282_sub47 = new Class282_Sub47(npc);
 				client.aClass465_7208.method7765(class282_sub47, (long) npcIndex);
@@ -119,7 +119,7 @@ public final class Class459 {
 					localY -= 32;
 			}
 			int direction = (buffer.readBits(3, (byte) -25) + 4 << 11 & 0x3fff);
-			npc.method16166((Class350_Sub1.aClass406_7757.method6828(buffer.readBits(15, (byte) 78), (byte) -40)), -1917205540);
+			npc.method16166((IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBits(15, (byte) 78), (byte) -40)), -1917205540);
 			int localX;
 			if (largeSceneView) {
 				localX = buffer.readBits(8, (byte) -6);

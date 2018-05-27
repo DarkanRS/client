@@ -5,8 +5,7 @@
 public class Class96_Sub16 extends Class96 {
 	int anInt9381;
 	long aLong9382;
-	public static Class211 aClass211_9383;
-
+	
 	public void method1601() {
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class86.aClass465_823.method7754(-6193626509720689219L * (((Class96_Sub16) this).aLong9382)));
 		if (class282_sub38 != null)

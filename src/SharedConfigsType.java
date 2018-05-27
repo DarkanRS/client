@@ -22,16 +22,16 @@ public class SharedConfigsType {
 	static SharedConfigsType aClass120_1480;
 	static SharedConfigsType aClass120_1481;
 	public static SharedConfigsType aClass120_1482;
-	public static SharedConfigsType aClass120_1483;
+	public static SharedConfigsType WORLD_MAP_DEFS;
 	static SharedConfigsType aClass120_1484;
 	static SharedConfigsType aClass120_1485;
 	static SharedConfigsType aClass120_1486;
 	public static SharedConfigsType aClass120_1487;
-	public static SharedConfigsType aClass120_1488;
+	public static SharedConfigsType OBJECT_DEFINITIONS;
 	public static SharedConfigsType aClass120_1489;
 	static SharedConfigsType aClass120_1490;
 	static SharedConfigsType aClass120_1491;
-	public static SharedConfigsType aClass120_1492;
+	public static SharedConfigsType INVENTORIES;
 	public static SharedConfigsType ITEM_DEFINITIONS;
 	public static SharedConfigsType aClass120_1494;
 	int fileIdBitShift;
@@ -43,7 +43,7 @@ public class SharedConfigsType {
 	static SharedConfigsType aClass120_1501;
 	static SharedConfigsType aClass120_1502;
 	static SharedConfigsType aClass120_1503;
-	public static SharedConfigsType aClass120_1504 = new SharedConfigsType(1);
+	public static SharedConfigsType UNDERLAY = new SharedConfigsType(1);
 	static SharedConfigsType aClass120_1505;
 	static SharedConfigsType aClass120_1506;
 	static SharedConfigsType aClass120_1507;
@@ -100,8 +100,8 @@ public class SharedConfigsType {
 		aClass120_1465 = new SharedConfigsType(2);
 		aClass120_1466 = new SharedConfigsType(3);
 		aClass120_1514 = new SharedConfigsType(4);
-		aClass120_1492 = new SharedConfigsType(5);
-		aClass120_1488 = new SharedConfigsType(6, 8);
+		INVENTORIES = new SharedConfigsType(5);
+		OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
 		aClass120_1470 = new SharedConfigsType(7);
 		aClass120_1471 = new SharedConfigsType(8, 8);
 		aClass120_1467 = new SharedConfigsType(9, 7);
@@ -131,7 +131,7 @@ public class SharedConfigsType {
 		aClass120_1496 = new SharedConfigsType(33);
 		aClass120_1497 = new SharedConfigsType(34);
 		aClass120_1498 = new SharedConfigsType(35);
-		aClass120_1483 = new SharedConfigsType(36);
+		WORLD_MAP_DEFS = new SharedConfigsType(36);
 		aClass120_1500 = new SharedConfigsType(37);
 		aClass120_1501 = new SharedConfigsType(38);
 		aClass120_1502 = new SharedConfigsType(39);
@@ -160,7 +160,7 @@ public class SharedConfigsType {
 		int i_6_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_7_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
 		int i_8_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		Class282_Sub50_Sub9 class282_sub50_sub9 = Class368.aClass429_4265.method7214(i_6_, -1670488027);
+		Class282_Sub50_Sub9 class282_sub50_sub9 = IndexLoaders.aClass429_4265.method7214(i_6_, -1670488027);
 		if ((class282_sub50_sub9.method14918(i_7_, -1596809459).anInt2997 * -1869685303) != 0) {
 			if (i >= 1)
 				return;
@@ -170,7 +170,7 @@ public class SharedConfigsType {
 	}
 
 	static void method2092(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1])][0]);
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1])][0]);
 		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 

@@ -11,7 +11,7 @@ public class Class536 {
 	public Class531 method11474(int i) {
 		Class531 class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.method3865((long) i));
+			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
@@ -34,7 +34,7 @@ public class Class536 {
 	public Class531 method11475(int i, byte i_0_) {
 		Class531 class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.method3865((long) i));
+			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
@@ -75,7 +75,7 @@ public class Class536 {
 	public Class531 method11479(int i) {
 		Class531 class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.method3865((long) i));
+			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
@@ -104,7 +104,7 @@ public class Class536 {
 	public Class531 method11481(int i) {
 		Class531 class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.method3865((long) i));
+			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;

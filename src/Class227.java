@@ -63,24 +63,24 @@ public class Class227 {
 
 	void method3808(RsByteBuffer class282_sub35, int i, int i_0_) {
 		if (1 == i) {
-			anInt2819 = class282_sub35.readBigSmart(2076852527) * -1841483755;
-			anInt2793 = class282_sub35.readBigSmart(1997737967) * -1282270303;
+			anInt2819 = class282_sub35.readBigSmart() * -1841483755;
+			anInt2793 = class282_sub35.readBigSmart() * -1282270303;
 		} else if (2 == i)
-			anInt2801 = class282_sub35.readBigSmart(1955860003) * 1440309881;
+			anInt2801 = class282_sub35.readBigSmart() * 1440309881;
 		else if (i == 3)
-			anInt2828 = class282_sub35.readBigSmart(2118276199) * -9280901;
+			anInt2828 = class282_sub35.readBigSmart() * -9280901;
 		else if (i == 4)
-			anInt2803 = class282_sub35.readBigSmart(2144070605) * -1367558181;
+			anInt2803 = class282_sub35.readBigSmart() * -1367558181;
 		else if (5 == i)
-			anInt2812 = class282_sub35.readBigSmart(2023251639) * -1330842743;
+			anInt2812 = class282_sub35.readBigSmart() * -1330842743;
 		else if (i == 6)
-			anInt2797 = class282_sub35.readBigSmart(2103849781) * 1796346719;
+			anInt2797 = class282_sub35.readBigSmart() * 1796346719;
 		else if (i == 7)
-			anInt2817 = class282_sub35.readBigSmart(2092906054) * 619103101;
+			anInt2817 = class282_sub35.readBigSmart() * 619103101;
 		else if (8 == i)
-			anInt2799 = class282_sub35.readBigSmart(2043479053) * 1275461135;
+			anInt2799 = class282_sub35.readBigSmart() * 1275461135;
 		else if (i == 9)
-			anInt2800 = class282_sub35.readBigSmart(1988964713) * -356781757;
+			anInt2800 = class282_sub35.readBigSmart() * -356781757;
 		else if (26 == i) {
 			anInt2786 = ((short) (class282_sub35.readUnsignedByte() * 4) * 1845638735);
 			anInt2829 = ((short) (class282_sub35.readUnsignedByte() * 4) * -588956041);
@@ -118,15 +118,15 @@ public class Class227 {
 		else if (37 == i)
 			anInt2826 = class282_sub35.readUnsignedByte() * -1731992137;
 		else if (38 == i)
-			anInt2821 = class282_sub35.readBigSmart(1951487804) * -967389061;
+			anInt2821 = class282_sub35.readBigSmart() * -967389061;
 		else if (i == 39)
-			anInt2792 = class282_sub35.readBigSmart(2086766256) * 1725030595;
+			anInt2792 = class282_sub35.readBigSmart() * 1725030595;
 		else if (i == 40)
-			anInt2794 = class282_sub35.readBigSmart(2105446462) * -1544163167;
+			anInt2794 = class282_sub35.readBigSmart() * -1544163167;
 		else if (41 == i)
-			anInt2795 = class282_sub35.readBigSmart(2009459460) * -963929139;
+			anInt2795 = class282_sub35.readBigSmart() * -963929139;
 		else if (42 == i)
-			anInt2796 = class282_sub35.readBigSmart(2053961041) * -1607820639;
+			anInt2796 = class282_sub35.readBigSmart() * -1607820639;
 		else if (i == 43)
 			class282_sub35.readUnsignedShort();
 		else if (i == 44)
@@ -134,23 +134,23 @@ public class Class227 {
 		else if (45 == i)
 			anInt2798 = class282_sub35.readUnsignedShort() * -286307705;
 		else if (46 == i)
-			anInt2830 = class282_sub35.readBigSmart(2114250981) * -1358044133;
+			anInt2830 = class282_sub35.readBigSmart() * -1358044133;
 		else if (i == 47)
-			anInt2806 = class282_sub35.readBigSmart(1991971332) * -602180007;
+			anInt2806 = class282_sub35.readBigSmart() * -602180007;
 		else if (i == 48)
-			anInt2807 = class282_sub35.readBigSmart(2021553025) * -311781873;
+			anInt2807 = class282_sub35.readBigSmart() * -311781873;
 		else if (49 == i)
-			anInt2808 = class282_sub35.readBigSmart(2033475135) * 1032347705;
+			anInt2808 = class282_sub35.readBigSmart() * 1032347705;
 		else if (i == 50)
-			anInt2809 = class282_sub35.readBigSmart(2143114717) * 1310162937;
+			anInt2809 = class282_sub35.readBigSmart() * 1310162937;
 		else if (i == 51)
-			anInt2810 = class282_sub35.readBigSmart(2037722744) * -1871121921;
+			anInt2810 = class282_sub35.readBigSmart() * -1871121921;
 		else if (52 == i) {
 			int i_5_ = class282_sub35.readUnsignedByte();
 			anIntArray2814 = new int[i_5_];
 			anIntArray2789 = new int[i_5_];
 			for (int i_6_ = 0; i_6_ < i_5_; i_6_++) {
-				anIntArray2814[i_6_] = class282_sub35.readBigSmart(1983849040);
+				anIntArray2814[i_6_] = class282_sub35.readBigSmart();
 				int i_7_ = class282_sub35.readUnsignedByte();
 				anIntArray2789[i_6_] = i_7_;
 				((Class227) this).anInt2822 += -685147451 * i_7_;
@@ -280,24 +280,24 @@ public class Class227 {
 
 	void method3812(RsByteBuffer class282_sub35, int i) {
 		if (1 == i) {
-			anInt2819 = class282_sub35.readBigSmart(2053878939) * -1841483755;
-			anInt2793 = class282_sub35.readBigSmart(1957941219) * -1282270303;
+			anInt2819 = class282_sub35.readBigSmart() * -1841483755;
+			anInt2793 = class282_sub35.readBigSmart() * -1282270303;
 		} else if (2 == i)
-			anInt2801 = class282_sub35.readBigSmart(2135357726) * 1440309881;
+			anInt2801 = class282_sub35.readBigSmart() * 1440309881;
 		else if (i == 3)
-			anInt2828 = class282_sub35.readBigSmart(2145673153) * -9280901;
+			anInt2828 = class282_sub35.readBigSmart() * -9280901;
 		else if (i == 4)
-			anInt2803 = class282_sub35.readBigSmart(1979157560) * -1367558181;
+			anInt2803 = class282_sub35.readBigSmart() * -1367558181;
 		else if (5 == i)
-			anInt2812 = class282_sub35.readBigSmart(2074038444) * -1330842743;
+			anInt2812 = class282_sub35.readBigSmart() * -1330842743;
 		else if (i == 6)
-			anInt2797 = class282_sub35.readBigSmart(2049150052) * 1796346719;
+			anInt2797 = class282_sub35.readBigSmart() * 1796346719;
 		else if (i == 7)
-			anInt2817 = class282_sub35.readBigSmart(2093490101) * 619103101;
+			anInt2817 = class282_sub35.readBigSmart() * 619103101;
 		else if (8 == i)
-			anInt2799 = class282_sub35.readBigSmart(2020938195) * 1275461135;
+			anInt2799 = class282_sub35.readBigSmart() * 1275461135;
 		else if (i == 9)
-			anInt2800 = class282_sub35.readBigSmart(2007762279) * -356781757;
+			anInt2800 = class282_sub35.readBigSmart() * -356781757;
 		else if (26 == i) {
 			anInt2786 = ((short) (class282_sub35.readUnsignedByte() * 4) * 1845638735);
 			anInt2829 = ((short) (class282_sub35.readUnsignedByte() * 4) * -588956041);
@@ -335,15 +335,15 @@ public class Class227 {
 		else if (37 == i)
 			anInt2826 = class282_sub35.readUnsignedByte() * -1731992137;
 		else if (38 == i)
-			anInt2821 = class282_sub35.readBigSmart(2012682965) * -967389061;
+			anInt2821 = class282_sub35.readBigSmart() * -967389061;
 		else if (i == 39)
-			anInt2792 = class282_sub35.readBigSmart(2020446379) * 1725030595;
+			anInt2792 = class282_sub35.readBigSmart() * 1725030595;
 		else if (i == 40)
-			anInt2794 = class282_sub35.readBigSmart(2013994531) * -1544163167;
+			anInt2794 = class282_sub35.readBigSmart() * -1544163167;
 		else if (41 == i)
-			anInt2795 = class282_sub35.readBigSmart(2029481589) * -963929139;
+			anInt2795 = class282_sub35.readBigSmart() * -963929139;
 		else if (42 == i)
-			anInt2796 = class282_sub35.readBigSmart(1990546029) * -1607820639;
+			anInt2796 = class282_sub35.readBigSmart() * -1607820639;
 		else if (i == 43)
 			class282_sub35.readUnsignedShort();
 		else if (i == 44)
@@ -351,23 +351,23 @@ public class Class227 {
 		else if (45 == i)
 			anInt2798 = class282_sub35.readUnsignedShort() * -286307705;
 		else if (46 == i)
-			anInt2830 = class282_sub35.readBigSmart(2101386628) * -1358044133;
+			anInt2830 = class282_sub35.readBigSmart() * -1358044133;
 		else if (i == 47)
-			anInt2806 = class282_sub35.readBigSmart(2006618818) * -602180007;
+			anInt2806 = class282_sub35.readBigSmart() * -602180007;
 		else if (i == 48)
-			anInt2807 = class282_sub35.readBigSmart(1952272573) * -311781873;
+			anInt2807 = class282_sub35.readBigSmart() * -311781873;
 		else if (49 == i)
-			anInt2808 = class282_sub35.readBigSmart(2004445877) * 1032347705;
+			anInt2808 = class282_sub35.readBigSmart() * 1032347705;
 		else if (i == 50)
-			anInt2809 = class282_sub35.readBigSmart(2128614225) * 1310162937;
+			anInt2809 = class282_sub35.readBigSmart() * 1310162937;
 		else if (i == 51)
-			anInt2810 = class282_sub35.readBigSmart(2054758691) * -1871121921;
+			anInt2810 = class282_sub35.readBigSmart() * -1871121921;
 		else if (52 == i) {
 			int i_26_ = class282_sub35.readUnsignedByte();
 			anIntArray2814 = new int[i_26_];
 			anIntArray2789 = new int[i_26_];
 			for (int i_27_ = 0; i_27_ < i_26_; i_27_++) {
-				anIntArray2814[i_27_] = class282_sub35.readBigSmart(1948064427);
+				anIntArray2814[i_27_] = class282_sub35.readBigSmart();
 				int i_28_ = class282_sub35.readUnsignedByte();
 				anIntArray2789[i_27_] = i_28_;
 				((Class227) this).anInt2822 += -685147451 * i_28_;
@@ -403,24 +403,24 @@ public class Class227 {
 
 	void method3814(RsByteBuffer class282_sub35, int i) {
 		if (1 == i) {
-			anInt2819 = class282_sub35.readBigSmart(2118678174) * -1841483755;
-			anInt2793 = class282_sub35.readBigSmart(1964473726) * -1282270303;
+			anInt2819 = class282_sub35.readBigSmart() * -1841483755;
+			anInt2793 = class282_sub35.readBigSmart() * -1282270303;
 		} else if (2 == i)
-			anInt2801 = class282_sub35.readBigSmart(2009923064) * 1440309881;
+			anInt2801 = class282_sub35.readBigSmart() * 1440309881;
 		else if (i == 3)
-			anInt2828 = class282_sub35.readBigSmart(1994761131) * -9280901;
+			anInt2828 = class282_sub35.readBigSmart() * -9280901;
 		else if (i == 4)
-			anInt2803 = class282_sub35.readBigSmart(2018359448) * -1367558181;
+			anInt2803 = class282_sub35.readBigSmart() * -1367558181;
 		else if (5 == i)
-			anInt2812 = class282_sub35.readBigSmart(2127724836) * -1330842743;
+			anInt2812 = class282_sub35.readBigSmart() * -1330842743;
 		else if (i == 6)
-			anInt2797 = class282_sub35.readBigSmart(1985984147) * 1796346719;
+			anInt2797 = class282_sub35.readBigSmart() * 1796346719;
 		else if (i == 7)
-			anInt2817 = class282_sub35.readBigSmart(1968848574) * 619103101;
+			anInt2817 = class282_sub35.readBigSmart() * 619103101;
 		else if (8 == i)
-			anInt2799 = class282_sub35.readBigSmart(2108806349) * 1275461135;
+			anInt2799 = class282_sub35.readBigSmart() * 1275461135;
 		else if (i == 9)
-			anInt2800 = class282_sub35.readBigSmart(2017317510) * -356781757;
+			anInt2800 = class282_sub35.readBigSmart() * -356781757;
 		else if (26 == i) {
 			anInt2786 = ((short) (class282_sub35.readUnsignedByte() * 4) * 1845638735);
 			anInt2829 = ((short) (class282_sub35.readUnsignedByte() * 4) * -588956041);
@@ -458,15 +458,15 @@ public class Class227 {
 		else if (37 == i)
 			anInt2826 = class282_sub35.readUnsignedByte() * -1731992137;
 		else if (38 == i)
-			anInt2821 = class282_sub35.readBigSmart(2029945376) * -967389061;
+			anInt2821 = class282_sub35.readBigSmart() * -967389061;
 		else if (i == 39)
-			anInt2792 = class282_sub35.readBigSmart(1967511400) * 1725030595;
+			anInt2792 = class282_sub35.readBigSmart() * 1725030595;
 		else if (i == 40)
-			anInt2794 = class282_sub35.readBigSmart(2064097799) * -1544163167;
+			anInt2794 = class282_sub35.readBigSmart() * -1544163167;
 		else if (41 == i)
-			anInt2795 = class282_sub35.readBigSmart(2093032196) * -963929139;
+			anInt2795 = class282_sub35.readBigSmart() * -963929139;
 		else if (42 == i)
-			anInt2796 = class282_sub35.readBigSmart(2146965328) * -1607820639;
+			anInt2796 = class282_sub35.readBigSmart() * -1607820639;
 		else if (i == 43)
 			class282_sub35.readUnsignedShort();
 		else if (i == 44)
@@ -474,23 +474,23 @@ public class Class227 {
 		else if (45 == i)
 			anInt2798 = class282_sub35.readUnsignedShort() * -286307705;
 		else if (46 == i)
-			anInt2830 = class282_sub35.readBigSmart(1969132982) * -1358044133;
+			anInt2830 = class282_sub35.readBigSmart() * -1358044133;
 		else if (i == 47)
-			anInt2806 = class282_sub35.readBigSmart(2109670317) * -602180007;
+			anInt2806 = class282_sub35.readBigSmart() * -602180007;
 		else if (i == 48)
-			anInt2807 = class282_sub35.readBigSmart(2005489078) * -311781873;
+			anInt2807 = class282_sub35.readBigSmart() * -311781873;
 		else if (49 == i)
-			anInt2808 = class282_sub35.readBigSmart(2099703082) * 1032347705;
+			anInt2808 = class282_sub35.readBigSmart() * 1032347705;
 		else if (i == 50)
-			anInt2809 = class282_sub35.readBigSmart(2000237386) * 1310162937;
+			anInt2809 = class282_sub35.readBigSmart() * 1310162937;
 		else if (i == 51)
-			anInt2810 = class282_sub35.readBigSmart(1985516927) * -1871121921;
+			anInt2810 = class282_sub35.readBigSmart() * -1871121921;
 		else if (52 == i) {
 			int i_36_ = class282_sub35.readUnsignedByte();
 			anIntArray2814 = new int[i_36_];
 			anIntArray2789 = new int[i_36_];
 			for (int i_37_ = 0; i_37_ < i_36_; i_37_++) {
-				anIntArray2814[i_37_] = class282_sub35.readBigSmart(2030902423);
+				anIntArray2814[i_37_] = class282_sub35.readBigSmart();
 				int i_38_ = class282_sub35.readUnsignedByte();
 				anIntArray2789[i_37_] = i_38_;
 				((Class227) this).anInt2822 += -685147451 * i_38_;
@@ -566,24 +566,24 @@ public class Class227 {
 
 	void method3818(RsByteBuffer class282_sub35, int i) {
 		if (1 == i) {
-			anInt2819 = class282_sub35.readBigSmart(2144280986) * -1841483755;
-			anInt2793 = class282_sub35.readBigSmart(2123906449) * -1282270303;
+			anInt2819 = class282_sub35.readBigSmart() * -1841483755;
+			anInt2793 = class282_sub35.readBigSmart() * -1282270303;
 		} else if (2 == i)
-			anInt2801 = class282_sub35.readBigSmart(2101835769) * 1440309881;
+			anInt2801 = class282_sub35.readBigSmart() * 1440309881;
 		else if (i == 3)
-			anInt2828 = class282_sub35.readBigSmart(2076994552) * -9280901;
+			anInt2828 = class282_sub35.readBigSmart() * -9280901;
 		else if (i == 4)
-			anInt2803 = class282_sub35.readBigSmart(1961312933) * -1367558181;
+			anInt2803 = class282_sub35.readBigSmart() * -1367558181;
 		else if (5 == i)
-			anInt2812 = class282_sub35.readBigSmart(2134071282) * -1330842743;
+			anInt2812 = class282_sub35.readBigSmart() * -1330842743;
 		else if (i == 6)
-			anInt2797 = class282_sub35.readBigSmart(2058923605) * 1796346719;
+			anInt2797 = class282_sub35.readBigSmart() * 1796346719;
 		else if (i == 7)
-			anInt2817 = class282_sub35.readBigSmart(1942132793) * 619103101;
+			anInt2817 = class282_sub35.readBigSmart() * 619103101;
 		else if (8 == i)
-			anInt2799 = class282_sub35.readBigSmart(2037689964) * 1275461135;
+			anInt2799 = class282_sub35.readBigSmart() * 1275461135;
 		else if (i == 9)
-			anInt2800 = class282_sub35.readBigSmart(2112893838) * -356781757;
+			anInt2800 = class282_sub35.readBigSmart() * -356781757;
 		else if (26 == i) {
 			anInt2786 = ((short) (class282_sub35.readUnsignedByte() * 4) * 1845638735);
 			anInt2829 = ((short) (class282_sub35.readUnsignedByte() * 4) * -588956041);
@@ -621,15 +621,15 @@ public class Class227 {
 		else if (37 == i)
 			anInt2826 = class282_sub35.readUnsignedByte() * -1731992137;
 		else if (38 == i)
-			anInt2821 = class282_sub35.readBigSmart(2087885749) * -967389061;
+			anInt2821 = class282_sub35.readBigSmart() * -967389061;
 		else if (i == 39)
-			anInt2792 = class282_sub35.readBigSmart(2007162727) * 1725030595;
+			anInt2792 = class282_sub35.readBigSmart() * 1725030595;
 		else if (i == 40)
-			anInt2794 = class282_sub35.readBigSmart(1978513140) * -1544163167;
+			anInt2794 = class282_sub35.readBigSmart() * -1544163167;
 		else if (41 == i)
-			anInt2795 = class282_sub35.readBigSmart(2139158557) * -963929139;
+			anInt2795 = class282_sub35.readBigSmart() * -963929139;
 		else if (42 == i)
-			anInt2796 = class282_sub35.readBigSmart(1976285617) * -1607820639;
+			anInt2796 = class282_sub35.readBigSmart() * -1607820639;
 		else if (i == 43)
 			class282_sub35.readUnsignedShort();
 		else if (i == 44)
@@ -637,23 +637,23 @@ public class Class227 {
 		else if (45 == i)
 			anInt2798 = class282_sub35.readUnsignedShort() * -286307705;
 		else if (46 == i)
-			anInt2830 = class282_sub35.readBigSmart(1944021085) * -1358044133;
+			anInt2830 = class282_sub35.readBigSmart() * -1358044133;
 		else if (i == 47)
-			anInt2806 = class282_sub35.readBigSmart(2099028126) * -602180007;
+			anInt2806 = class282_sub35.readBigSmart() * -602180007;
 		else if (i == 48)
-			anInt2807 = class282_sub35.readBigSmart(2040562333) * -311781873;
+			anInt2807 = class282_sub35.readBigSmart() * -311781873;
 		else if (49 == i)
-			anInt2808 = class282_sub35.readBigSmart(1978396905) * 1032347705;
+			anInt2808 = class282_sub35.readBigSmart() * 1032347705;
 		else if (i == 50)
-			anInt2809 = class282_sub35.readBigSmart(2087244363) * 1310162937;
+			anInt2809 = class282_sub35.readBigSmart() * 1310162937;
 		else if (i == 51)
-			anInt2810 = class282_sub35.readBigSmart(1956496496) * -1871121921;
+			anInt2810 = class282_sub35.readBigSmart() * -1871121921;
 		else if (52 == i) {
 			int i_52_ = class282_sub35.readUnsignedByte();
 			anIntArray2814 = new int[i_52_];
 			anIntArray2789 = new int[i_52_];
 			for (int i_53_ = 0; i_53_ < i_52_; i_53_++) {
-				anIntArray2814[i_53_] = class282_sub35.readBigSmart(1947418569);
+				anIntArray2814[i_53_] = class282_sub35.readBigSmart();
 				int i_54_ = class282_sub35.readUnsignedByte();
 				anIntArray2789[i_53_] = i_54_;
 				((Class227) this).anInt2822 += -685147451 * i_54_;
@@ -985,6 +985,6 @@ public class Class227 {
 	}
 
 	static final void method3830(CS2Executor class527, byte i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(Class468.method7788((long) (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]) * 60000L, Class223.aClass495_2772.method243((byte) 1), true, 1560112549)).append(" UTC").toString();
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(Class468.method7788((long) (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]) * 60000L, Class223.CURRENT_LANGUAGE.method243((byte) 1), true, 1560112549)).append(" UTC").toString();
 	}
 }

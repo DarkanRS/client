@@ -204,13 +204,13 @@ public class Class242 {
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(client.anInt7346 * -1555739329, (short) -16837);
 					client.aClass184_7475.method3049(class282_sub23, 2109181627);
 					int i_11_ = class521_sub1_sub1_sub2_sub1.method15805(828768449);
-					Class257.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), i_11_, i_11_, 0, 971339209), 1352975566);
+					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), i_11_, i_11_, 0, 971339209), 1352975566);
 					bool = true;
 					break;
 				}
 			}
 			if (!bool)
-				Class387.method6681(4, new StringBuilder().append(Message.aClass433_5280.translate(Class223.aClass495_2772, -1621273158)).append(string).toString(), (byte) -49);
+				LoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -1621273158)).append(string).toString(), (byte) -49);
 			if (client.aBool7344)
 				Class60.method1170(-609337146);
 		}

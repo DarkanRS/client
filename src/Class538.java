@@ -562,7 +562,7 @@ public class Class538 {
 	}
 
 	public static void method11500(int i, boolean bool, byte i_112_) {
-		Class231.method3914(i, Message.aClass433_5251.translate(Class223.aClass495_2772, -929025713), bool, (byte) 104);
+		Class231.method3914(i, Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -929025713), bool, (byte) 104);
 	}
 
 	static final void method11501(int i) {
@@ -585,7 +585,7 @@ public class Class538 {
 			i_114_ = client.anInt7427 * -1211259595;
 		if (i_114_ == -1)
 			i_114_ = -141702765 * client.anInt7340;
-		Class479.method8036(i_114_, (byte) 4);
+		UnderlayIndexLoader.method8036(i_114_, (byte) 4);
 		client.anInt7261 = 0;
 	}
 }

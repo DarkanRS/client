@@ -79,7 +79,7 @@ public class Class232 implements Interface17 {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class511.method8754(class118, class98, class527, 1449946769);
+		Defaults7Loader.method8754(class118, class98, class527, 1449946769);
 	}
 
 	static final void method3919(CS2Executor class527, int i) {
@@ -100,18 +100,18 @@ public class Class232 implements Interface17 {
 				i_14_ = 128 + client.anIntArray7433[4];
 			int i_15_ = ((int) client.aFloat7365 + -297983899 * client.anInt7343 & 0x3fff);
 			Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-			Class387.method6683(Class11.anInt122 * 1762352089, Class504.method8389((int) class385.aFloat4671, (int) class385.aFloat4673, Class4.anInt35 * 675588453, (byte) 51) - 200, Class266.anInt3289 * 518160421, i_14_, i_15_, (i_14_ >> 3) * 3 + 600 << 2, i, 1500551332);
+			LoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389((int) class385.aFloat4671, (int) class385.aFloat4673, Class4.anInt35 * 675588453, (byte) 51) - 200, Class266.anInt3289 * 518160421, i_14_, i_15_, (i_14_ >> 3) * 3 + 600 << 2, i, 1500551332);
 			float f = 1.0F - ((float) ((100 - i_13_) * ((100 - i_13_) * (100 - i_13_))) / 1000000.0F);
 			Class31.anInt361 = ((int) ((float) (Class186.anInt2349 * 494445359) + f * (float) (-360258135 * Class31.anInt361 - 494445359 * Class186.anInt2349)) * -2043310439);
 			Class109_Sub1.anInt9384 = (-126779709 * (int) ((float) (1322062263 * Class521_Sub1_Sub2.anInt9461) + f * (float) (1929945579 * Class109_Sub1.anInt9384 - (Class521_Sub1_Sub2.anInt9461 * 1322062263))));
 			Class246.anInt3029 = ((int) ((float) (413271601 * Class246.anInt3029 - (Class282_Sub15_Sub1.anInt9575 * 2036551173)) * f + (float) (2036551173 * Class282_Sub15_Sub1.anInt9575)) * 1442943697);
 			Class293.anInt3512 = (-647467135 * (int) ((float) (Class336.anInt3968 * -721404905) + f * (float) (726126721 * Class293.anInt3512 - (-721404905 * Class336.anInt3968))));
-			int i_16_ = (1236051449 * AnimationDefinitions.anInt5930 - -109692897 * AttributesDefaultsLoader.anInt5029);
+			int i_16_ = (1236051449 * AnimationDefinitions.anInt5930 - -109692897 * ItemDefaultsLoader.anInt5029);
 			if (i_16_ > 8192)
 				i_16_ -= 16384;
 			else if (i_16_ < -8192)
 				i_16_ += 16384;
-			AnimationDefinitions.anInt5930 = (int) ((float) (-109692897 * AttributesDefaultsLoader.anInt5029) + f * (float) i_16_) * 1898253385;
+			AnimationDefinitions.anInt5930 = (int) ((float) (-109692897 * ItemDefaultsLoader.anInt5029) + f * (float) i_16_) * 1898253385;
 			AnimationDefinitions.anInt5930 = 1898253385 * (AnimationDefinitions.anInt5930 * 1236051449 & 0x3fff);
 		}
 	}

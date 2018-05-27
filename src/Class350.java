@@ -21,7 +21,7 @@ public class Class350 implements Interface3 {
 		int i_1_ = class282_sub35.readUnsignedShort();
 		int i_2_ = class282_sub35.readUnsignedShort();
 		int i_3_ = class282_sub35.readShort(2007114319);
-		int i_4_ = class282_sub35.readBigSmart(2101115812);
+		int i_4_ = class282_sub35.readBigSmart();
 		int i_5_ = class282_sub35.readInt();
 		return new Class350(class356, class353, i, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_);
 	}
@@ -42,7 +42,7 @@ public class Class350 implements Interface3 {
 		int i_7_ = class282_sub35.readUnsignedShort();
 		int i_8_ = class282_sub35.readUnsignedShort();
 		int i_9_ = class282_sub35.readShort(1982029468);
-		int i_10_ = class282_sub35.readBigSmart(2075793397);
+		int i_10_ = class282_sub35.readBigSmart();
 		int i_11_ = class282_sub35.readInt();
 		return new Class350(class356, class353, i, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_);
 	}

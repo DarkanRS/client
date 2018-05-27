@@ -992,7 +992,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 		Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass460_8030.method7683(1601520946));
 		if (null == class282_sub36)
 			return null;
-		Class220 class220 = Class291_Sub1.aClass218_3456.method3700((class282_sub36.anInt7991 * -1798678621), 1419676338);
+		WorldMapAreaDefs class220 = Class291_Sub1.aClass218_3456.getWorldMapDefs((class282_sub36.anInt7991 * -1798678621), 1419676338);
 		if (null == class220 || !class220.aBool2742 || !class220.method3719(Class291_Sub1.anInterface42_3458, -305455176))
 			return Class540.method11595(1263609035);
 		return class282_sub36;

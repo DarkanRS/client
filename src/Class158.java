@@ -49,7 +49,7 @@ public abstract class Class158 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_0_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		AttributeDefault class437 = Class125.aClass424_1573.method7069(i_1_, (byte) 0);
+		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(2069262708))
 			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
 		else
@@ -58,7 +58,7 @@ public abstract class Class158 {
 
 	static final void method2729(CS2Executor class527, int i) {
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class96_Sub10.aClass392_9298.method6735(i_2_, (short) 9738).anInt10277) * 875957203;
+		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2_, (short) 9738).anInt10277) * 875957203;
 	}
 
 	public static int method2730(short i) {
@@ -68,7 +68,7 @@ public abstract class Class158 {
 	}
 
 	static void method2731(GraphicalRenderer class505, Class455 class455, Class118 class118, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
-		Class220 class220 = Class397.aClass218_4813.method3700(i_6_, 2092552415);
+		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_6_, 2092552415);
 		if (class220 != null && class220.aBool2729 && class220.method3719(Class158_Sub1.aClass3_8507, -1138810540)) {
 			if (null != class220.anIntArray2717) {
 				int[] is = new int[class220.anIntArray2717.length];
@@ -133,27 +133,27 @@ public abstract class Class158 {
 					class505.method8669(is[is.length - 2], is[is.length - 1], is[0], is[1], (class220.anIntArray2738[(class220.aByteArray2754[(class220.aByteArray2754.length - 1)]) & 0xff]), 1, class455, i, i_3_);
 				}
 			}
-			NativeSprite class160 = null;
+			NativeSprite sprites = null;
 			if (-1 != class220.anInt2719 * -1248709255) {
-				class160 = class220.method3735(class505, false, (byte) 8);
-				if (class160 != null)
-					Class190.method3149(class118, class455, i, i_3_, i_4_, i_5_, class160, -1909602202);
+				sprites = class220.renderIcons(class505, false, (byte) 8);
+				if (sprites != null)
+					Class190.method3149(class118, class455, i, i_3_, i_4_, i_5_, sprites, -1909602202);
 			}
-			if (null != class220.aString2751) {
+			if (null != class220.areaName) {
 				int i_28_ = 0;
-				if (class160 != null)
-					i_28_ = class160.method2793();
-				FontRenderer class8 = Renderers.FONT_RENDERER;
+				if (sprites != null)
+					i_28_ = sprites.method2793();
+				FontRenderer fontRenderer = Renderers.FONT_RENDERER;
 				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
-					class8 = Class16.aClass8_144;
+					fontRenderer = Class16.aClass8_144;
 					class414 = Class16.aClass414_139;
 				}
 				if (class220.anInt2722 * 1172439539 == 2) {
-					class8 = Class285.aClass8_3394;
+					fontRenderer = Class285.aClass8_3394;
 					class414 = Class288.aClass414_3438;
 				}
-				Class241.method4152(class118, class455, i, i_3_, i_4_, i_5_, i_28_, class220.aString2751, class8, class414, class220.anInt2720 * -2116785903, -1590332940);
+				Class241.method4152(class118, class455, i, i_3_, i_4_, i_5_, i_28_, class220.areaName, fontRenderer, class414, class220.anInt2720 * -2116785903, -1590332940);
 			}
 		}
 	}

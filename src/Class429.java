@@ -52,7 +52,7 @@ public class Class429 {
 	}
 
 	public Class282_Sub50_Sub9 method7214(int i, int i_1_) {
-		Class282_Sub50_Sub9 class282_sub50_sub9 = ((Class282_Sub50_Sub9) ((Class429) this).aClass229_5131.method3865((long) i));
+		Class282_Sub50_Sub9 class282_sub50_sub9 = ((Class282_Sub50_Sub9) ((Class429) this).aClass229_5131.get((long) i));
 		if (null != class282_sub50_sub9)
 			return class282_sub50_sub9;
 		byte[] is;
@@ -72,11 +72,11 @@ public class Class429 {
 
 	static final void method7215(byte i) {
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 89) == 2) {
-			byte[][][] is = client.aClass257_7353.method4532(1227540505);
+			byte[][][] is = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
 			byte i_2_ = (byte) (client.anInt7286 * 48374445 - 4 & 0xff);
-			int i_3_ = (client.anInt7286 * 48374445 % client.aClass257_7353.method4424(575613336));
+			int i_3_ = (client.anInt7286 * 48374445 % IndexLoaders.MAP_REGION_DECODER.method4424(575613336));
 			for (int i_4_ = 0; i_4_ < 4; i_4_++) {
-				for (int i_5_ = 0; i_5_ < client.aClass257_7353.method4451(-694905456); i_5_++)
+				for (int i_5_ = 0; i_5_ < IndexLoaders.MAP_REGION_DECODER.method4451(-694905456); i_5_++)
 					is[i_4_][i_3_][i_5_] = i_2_;
 			}
 			if (3 != Class4.anInt35 * 675588453) {
@@ -90,15 +90,15 @@ public class Class429 {
 				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 				int i_7_ = (int) class385.aFloat4671;
 				int i_8_ = (int) class385.aFloat4673;
-				Class311 class311 = client.aClass257_7353.method4433(33386298);
-				Class206 class206 = client.aClass257_7353.method4430(-1591290583);
+				Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+				Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1591290583);
 				if (-672443707 * Class262.anInt3240 == 2 || Class508.anInt5864 * 1927687797 != -1) {
 					if (Class262.anInt3240 * -672443707 != 2) {
 						i_7_ = 1927687797 * Class508.anInt5864;
 						i_8_ = -902280531 * Class86.anInt833;
 					}
 					if (0 != ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_7_ >> 9][i_8_ >> 9]) & 0x4))
-						Class309.method5492((class206.aClass293ArrayArrayArray2604), 0, i_7_ >> 9, i_8_ >> 9, false, (byte) 46);
+						JS5Manager.method5492((class206.aClass293ArrayArrayArray2604), 0, i_7_ >> 9, i_8_ >> 9, false, (byte) 46);
 					else if (Class293.anInt3512 * 726126721 < 2560) {
 						int i_9_ = -360258135 * Class31.anInt361 >> 9;
 						int i_10_ = Class246.anInt3029 * 413271601 >> 9;
@@ -114,8 +114,8 @@ public class Class429 {
 							i_14_ = i_12_ - i_10_;
 						else
 							i_14_ = i_10_ - i_12_;
-						if (0 == i_13_ && 0 == i_14_ || i_13_ <= -client.aClass257_7353.method4424(-1429776362) || i_13_ >= client.aClass257_7353.method4424(-898722517) || i_14_ <= -client.aClass257_7353.method4451(-1279637264) || i_14_ >= client.aClass257_7353.method4451(-1629693049)) {
-							Class219 class219 = client.aClass257_7353.method4519(1940390478);
+						if (0 == i_13_ && 0 == i_14_ || i_13_ <= -IndexLoaders.MAP_REGION_DECODER.method4424(-1429776362) || i_13_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-898722517) || i_14_ <= -IndexLoaders.MAP_REGION_DECODER.method4451(-1279637264) || i_14_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-1629693049)) {
+							Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1940390478);
 							Class151.method2594(new StringBuilder().append(i_9_).append(Class2.aString14).append(i_10_).append(" ").append(i_11_).append(Class2.aString14).append(i_12_).append(" ").append(class219.anInt2711 * 1948093437).append(Class2.aString14).append(class219.anInt2712 * -1002240017).toString(), new RuntimeException(), (byte) -63);
 						} else {
 							while_137_: do {
@@ -131,7 +131,7 @@ public class Class429 {
 											else if (i_9_ > i_11_)
 												i_9_--;
 											if (0 != ((class311.aByteArrayArrayArray3638[(Class4.anInt35 * 675588453)][i_9_][i_10_]) & 0x4)) {
-												Class309.method5492((class206.aClass293ArrayArrayArray2604), 1, i_9_, i_10_, false, (byte) -61);
+												JS5Manager.method5492((class206.aClass293ArrayArrayArray2604), 1, i_9_, i_10_, false, (byte) -61);
 												break while_136_;
 											}
 											i_16_ += i_15_;
@@ -145,7 +145,7 @@ public class Class429 {
 													break;
 											}
 										}
-										Class309.method5492((class206.aClass293ArrayArrayArray2604), 1, i_9_, i_10_, false, (byte) 49);
+										JS5Manager.method5492((class206.aClass293ArrayArrayArray2604), 1, i_9_, i_10_, false, (byte) 49);
 									} while (false);
 								} else {
 									int i_17_ = 65536 * i_13_ / i_14_;
@@ -158,7 +158,7 @@ public class Class429 {
 										else if (i_10_ > i_12_)
 											i_10_--;
 										if (0 != ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_9_][i_10_]) & 0x4)) {
-											Class309.method5492((class206.aClass293ArrayArrayArray2604), 1, i_9_, i_10_, false, (byte) -10);
+											JS5Manager.method5492((class206.aClass293ArrayArrayArray2604), 1, i_9_, i_10_, false, (byte) -10);
 											break while_137_;
 										}
 										i_18_ += i_17_;
@@ -172,7 +172,7 @@ public class Class429 {
 												break;
 										}
 									}
-									Class309.method5492(class206.aClass293ArrayArrayArray2604, 1, i_9_, i_10_, false, (byte) 56);
+									JS5Manager.method5492(class206.aClass293ArrayArrayArray2604, 1, i_9_, i_10_, false, (byte) 56);
 								}
 							} while (false);
 						}
@@ -180,7 +180,7 @@ public class Class429 {
 				} else {
 					int i_19_ = Class504.method8389(Class31.anInt361 * -360258135, Class246.anInt3029 * 413271601, 675588453 * Class4.anInt35, (byte) 111);
 					if (i_19_ - 1929945579 * Class109_Sub1.anInt9384 < 3200 && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][-360258135 * Class31.anInt361 >> 9][Class246.anInt3029 * 413271601 >> 9]) & 0x4) != 0)
-						Class309.method5492((class206.aClass293ArrayArrayArray2604), 1, Class31.anInt361 * -360258135 >> 9, (Class246.anInt3029 * 413271601 >> 9), false, (byte) -37);
+						JS5Manager.method5492((class206.aClass293ArrayArrayArray2604), 1, Class31.anInt361 * -360258135 >> 9, (Class246.anInt3029 * 413271601 >> 9), false, (byte) -37);
 				}
 			}
 		}

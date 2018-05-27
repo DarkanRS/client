@@ -57,7 +57,7 @@ public class Class282_Sub50_Sub13 extends Class282_Sub50 {
 			}
 			if (class282_sub12 == null) {
 				synchronized (aClass317_9685) {
-					class282_sub12 = new Class282_Sub12(i_2_, (aClass317_9685.method5615(i_2_, -1406400793)));
+					class282_sub12 = new Class282_Sub12(i_2_, (aClass317_9685.getFile(i_2_, -1406400793)));
 				}
 				class473.method7877(class282_sub12, 935511421);
 			}
@@ -151,7 +151,7 @@ public class Class282_Sub50_Sub13 extends Class282_Sub50 {
 			}
 			if (class282_sub12 == null) {
 				synchronized (aClass317_9685) {
-					class282_sub12 = new Class282_Sub12(i_13_, (aClass317_9685.method5615(i_13_, -601020019)));
+					class282_sub12 = new Class282_Sub12(i_13_, (aClass317_9685.getFile(i_13_, -601020019)));
 				}
 				class473.method7877(class282_sub12, 501140771);
 			}

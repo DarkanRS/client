@@ -10,7 +10,7 @@ public final class Class153 {
 	static int anInt1965;
 
 	public int method2606(int i) {
-		Class489 class489 = Class243.aClass498_3001.method8322(i, (short) 3220);
+		Class489 class489 = IndexLoaders.aClass498_3001.method8322(i, (short) 3220);
 		int i_0_ = class489.anInt5764 * 507063071;
 		int i_1_ = (31 == -967775471 * class489.anInt5762 ? -1 : (1 << 1 + -967775471 * class489.anInt5762) - 1);
 		return ((method2609(i_0_, (byte) 42) & i_1_) >>> -1410455259 * class489.anInt5763);
@@ -22,7 +22,7 @@ public final class Class153 {
 	}
 
 	public int method2608(int i) {
-		Class489 class489 = Class243.aClass498_3001.method8322(i, (short) 13759);
+		Class489 class489 = IndexLoaders.aClass498_3001.method8322(i, (short) 13759);
 		int i_2_ = class489.anInt5764 * 507063071;
 		int i_3_ = (31 == -967775471 * class489.anInt5762 ? -1 : (1 << 1 + -967775471 * class489.anInt5762) - 1);
 		return ((method2609(i_2_, (byte) 50) & i_3_) >>> -1410455259 * class489.anInt5763);
@@ -32,14 +32,14 @@ public final class Class153 {
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class153) this).aClass465_1963.method7754((long) i));
 		if (class282_sub38 != null)
 			return class282_sub38.anInt8002 * -570797415;
-		Class449 class449 = Class45.aClass447_435.method7450(i, (byte) -118);
+		Class449 class449 = IndexLoaders.aClass447_435.method7450(i, (byte) -118);
 		if (class449.aChar5431 != 'i')
 			return -1;
 		return 0;
 	}
 
 	public int method2610(int i, short i_5_) {
-		Class489 class489 = Class243.aClass498_3001.method8322(i, (short) 4986);
+		Class489 class489 = IndexLoaders.aClass498_3001.method8322(i, (short) 4986);
 		int i_6_ = class489.anInt5764 * 507063071;
 		int i_7_ = (31 == -967775471 * class489.anInt5762 ? -1 : (1 << 1 + -967775471 * class489.anInt5762) - 1);
 		return ((method2609(i_6_, (byte) 117) & i_7_) >>> -1410455259 * class489.anInt5763);
@@ -70,7 +70,7 @@ public final class Class153 {
 		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((Class153) this).aClass465_1963.method7754((long) i));
 		if (class282_sub38 != null)
 			return class282_sub38.anInt8002 * -570797415;
-		Class449 class449 = Class45.aClass447_435.method7450(i, (byte) -28);
+		Class449 class449 = IndexLoaders.aClass447_435.method7450(i, (byte) -28);
 		if (class449.aChar5431 != 'i')
 			return -1;
 		return 0;
@@ -93,7 +93,7 @@ public final class Class153 {
 	}
 
 	public int method2615(int i) {
-		Class489 class489 = Class243.aClass498_3001.method8322(i, (short) 10335);
+		Class489 class489 = IndexLoaders.aClass498_3001.method8322(i, (short) 10335);
 		int i_11_ = class489.anInt5764 * 507063071;
 		int i_12_ = (31 == -967775471 * class489.anInt5762 ? -1 : (1 << 1 + -967775471 * class489.anInt5762) - 1);
 		return ((method2609(i_11_, (byte) 77) & i_12_) >>> -1410455259 * class489.anInt5763);
@@ -140,7 +140,7 @@ public final class Class153 {
 	}
 
 	public static byte[] method2621(File file, int i) {
-		return Class478.method8023(file, (int) file.length(), (byte) 0);
+		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
 	}
 
 	static Class208 method2622(Class521_Sub1_Sub1 class521_sub1_sub1, int i) {

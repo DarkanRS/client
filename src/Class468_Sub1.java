@@ -133,7 +133,7 @@ public class Class468_Sub1 extends Class468 {
 	}
 
 	static boolean method12619(int i) {
-		return Class86.method1481(Class149_Sub2.aClass511_9314.aClass232_5877, (byte) 78);
+		return Class86.method1481(Class149_Sub2.DEFAULTS_LOADER_7.aClass232_5877, (byte) 78);
 	}
 
 	static int method12620(Class217_Sub1 class217_sub1, Class217_Sub1 class217_sub1_6_, int i, boolean bool, int i_7_) {
@@ -149,7 +149,7 @@ public class Class468_Sub1 extends Class468 {
 			return i_8_ - i_9_;
 		}
 		if (2 == i)
-			return Class455.method7557((class217_sub1.method13055((short) -16309).aString2679), (class217_sub1_6_.method13055((short) -9222).aString2679), Class223.aClass495_2772, 1341608337);
+			return Class455.method7557((class217_sub1.method13055((short) -16309).aString2679), (class217_sub1_6_.method13055((short) -9222).aString2679), Class223.CURRENT_LANGUAGE, 1341608337);
 		if (3 == i) {
 			if (class217_sub1.aString7977.equals("-")) {
 				if (class217_sub1_6_.aString7977.equals("-"))
@@ -158,7 +158,7 @@ public class Class468_Sub1 extends Class468 {
 			}
 			if (class217_sub1_6_.aString7977.equals("-"))
 				return bool ? 1 : -1;
-			return Class455.method7557(class217_sub1.aString7977, class217_sub1_6_.aString7977, Class223.aClass495_2772, 1341608337);
+			return Class455.method7557(class217_sub1.aString7977, class217_sub1_6_.aString7977, Class223.CURRENT_LANGUAGE, 1341608337);
 		}
 		if (i == 4)
 			return (class217_sub1.method3683(-1211254734) ? class217_sub1_6_.method3683(-1211254734) ? 0 : 1 : class217_sub1_6_.method3683(-1211254734) ? -1 : 0);

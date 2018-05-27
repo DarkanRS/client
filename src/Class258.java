@@ -50,13 +50,13 @@ public class Class258 {
 		while (iterator.hasNext()) {
 			Class282_Sub50_Sub10 class282_sub50_sub10 = (Class282_Sub50_Sub10) iterator.next();
 			Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (((Class282_Sub50_Sub10) class282_sub50_sub10).aClass521_Sub1_Sub1_Sub4_9636);
-			if (client.aClass257_7353.method4430(-831174311) != null && class521_sub1_sub1_sub4.method15927(-831489293))
-				client.aClass257_7353.method4430(-1442376239).method3397(class521_sub1_sub1_sub4, true, 402306072);
+			if (IndexLoaders.MAP_REGION_DECODER.method4430(-831174311) != null && class521_sub1_sub1_sub4.method15927(-831489293))
+				IndexLoaders.MAP_REGION_DECODER.method4430(-1442376239).method3397(class521_sub1_sub1_sub4, true, 402306072);
 		}
 	}
 
 	public static Class357 method4570(RsByteBuffer class282_sub35, int i) {
-		int i_3_ = class282_sub35.readBigSmart(2126295637);
+		int i_3_ = class282_sub35.readBigSmart();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(251815760)[class282_sub35.readUnsignedByte()]);
 		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_4_ = class282_sub35.readShort(1666577229);

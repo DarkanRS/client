@@ -53,17 +53,17 @@ public class Class182 {
 		if (i_0_ == -1) {
 			int i_1_ = i_0_ >> 14 & 0x3fff;
 			int i_2_ = i_0_ & 0x3fff;
-			Class219 class219 = client.aClass257_7353.method4519(660934001);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(660934001);
 			i_1_ -= class219.anInt2711 * 1948093437;
 			if (i_1_ < 0)
 				i_1_ = 0;
-			else if (i_1_ >= client.aClass257_7353.method4424(-1010474219))
-				i_1_ = client.aClass257_7353.method4424(-751193521);
+			else if (i_1_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-1010474219))
+				i_1_ = IndexLoaders.MAP_REGION_DECODER.method4424(-751193521);
 			i_2_ -= class219.anInt2712 * -1002240017;
 			if (i_2_ < 0)
 				i_2_ = 0;
-			else if (i_2_ >= client.aClass257_7353.method4451(-281530054))
-				i_2_ = client.aClass257_7353.method4451(-206286214);
+			else if (i_2_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-281530054))
+				i_2_ = IndexLoaders.MAP_REGION_DECODER.method4451(-206286214);
 			Class508.anInt5864 = -987778595 * ((i_1_ << 9) + 256);
 			Class86.anInt833 = 1509271845 * (256 + (i_2_ << 9));
 		} else {

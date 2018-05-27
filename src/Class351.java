@@ -6,7 +6,7 @@ import java.awt.Canvas;
 
 public class Class351 implements Interface3 {
 	public int anInt4095;
-	public static Canvas aCanvas4096;
+	public static Canvas LOAD_CANVAS;
 	public static int anInt4097;
 
 	public Class60 method25() {
@@ -18,7 +18,7 @@ public class Class351 implements Interface3 {
 	}
 
 	public static Class351 method6191(RsByteBuffer class282_sub35) {
-		int i = class282_sub35.readBigSmart(2066197333);
+		int i = class282_sub35.readBigSmart();
 		return new Class351(i);
 	}
 
@@ -27,7 +27,7 @@ public class Class351 implements Interface3 {
 	}
 
 	public static Class351 method6192(RsByteBuffer class282_sub35) {
-		int i = class282_sub35.readBigSmart(2120632698);
+		int i = class282_sub35.readBigSmart();
 		return new Class351(i);
 	}
 

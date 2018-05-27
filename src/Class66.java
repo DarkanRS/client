@@ -14,7 +14,7 @@ public class Class66 {
 
 	Interface6 method1276(int i, int i_0_) {
 		long l = (long) (i_0_ << 16 | i);
-		Object object = ((Class66) this).aClass229_674.method3865(l);
+		Object object = ((Class66) this).aClass229_674.get(l);
 		if (object != null)
 			return (Interface6) object;
 		if (!((Class66) this).anInterface22_675.method139(i, -186930877))
@@ -41,7 +41,7 @@ public class Class66 {
 
 	Interface6 method1277(int i, int i_1_) {
 		long l = (long) (i_1_ << 16 | i);
-		Object object = ((Class66) this).aClass229_674.method3865(l);
+		Object object = ((Class66) this).aClass229_674.get(l);
 		if (object != null)
 			return (Interface6) object;
 		if (!((Class66) this).anInterface22_675.method139(i, -1820036483))

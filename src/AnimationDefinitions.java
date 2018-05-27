@@ -556,18 +556,6 @@ public class AnimationDefinitions {
 		return (String) class282_sub47.anObject8068;
 	}
 
-	public static Index method11146(Class102 class102, boolean bool, int i, boolean bool_91_, int i_92_) {
-		if (null == Class492.aClass327_Sub1Array5777)
-			Class492.aClass327_Sub1Array5777 = new JS5GrabWorker[Class123.method2149(957345803)];
-		JS5CacheFile class203 = null;
-		int i_93_ = class102.method1781(-333623124);
-		if (client.aClass440_3270 != null)
-			class203 = new JS5CacheFile(i_93_, client.aClass440_3270, Class97.aClass440Array996[i_93_], 1500000);
-		Class492.aClass327_Sub1Array5777[i_93_] = Class468_Sub9.aClass309_7896.method5480(i_93_, class203, Class533.aClass203_7073, (byte) 107);
-		Class492.aClass327_Sub1Array5777[i_93_].method12544((short) -3210);
-		return new Index(Class492.aClass327_Sub1Array5777[i_93_], bool, i);
-	}
-
 	static final void method11147(CS2Executor class527, int i) {
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12609(-1561738474) ? 1 : 0;
 	}

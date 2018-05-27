@@ -37,7 +37,7 @@ public abstract class Class109 {
 		int i_2_ = (((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]);
 		if (i_1_ == -1)
 			throw new RuntimeException();
-		Class431 class431 = Class466.aClass444_5570.method7424(i_1_, (byte) 8);
+		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_1_, (byte) 8);
 		if (i_0_ != class431.aChar5140)
 			throw new RuntimeException();
 		int[] is = class431.method7251(Integer.valueOf(i_2_), 2106886320);
@@ -50,7 +50,7 @@ public abstract class Class109 {
 	static final void method1854(CS2Executor class527, int i) {
 		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
 		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class414 class414 = Class94.method1588(Class410.aClass317_4924, i_4_, 0, 1361822536);
+		Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_4_, 0, 1361822536);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class414.method6947(string, Class182.aClass160Array2261, -106589048);
 	}
 

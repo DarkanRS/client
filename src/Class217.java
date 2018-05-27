@@ -77,7 +77,7 @@ public abstract class Class217 {
 
 	static final void method3693(CS2Executor class527, short i) {
 		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub24_8216, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 2 : 0, 447619076);
-		client.aClass257_7353.method4547((byte) -59);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -59);
 		Class190.method3148((byte) 121);
 		client.aBool7175 = false;
 	}

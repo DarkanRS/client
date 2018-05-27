@@ -5,7 +5,6 @@
 public final class Class97 {
 	static long aLong993;
 	static long aLong994;
-	public static Class427 aClass427_995;
 	protected static Class440[] aClass440Array996;
 
 	public static final synchronized long method1610() {

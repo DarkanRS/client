@@ -8,8 +8,7 @@ public class Class104 {
 	static Class104 aClass104_1062;
 	int anInt1063;
 	public int anInt1064;
-	public static Class377 aClass377_1065;
-
+	
 	static {
 		aClass104_1060 = new Class104(1, 5);
 		aClass104_1062 = new Class104(2, 6);
@@ -69,7 +68,7 @@ public class Class104 {
 	}
 
 	static void method1799(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).anInt2963) * 554241429;
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).anInt2963) * 554241429;
 	}
 
 	static final void method1800(CS2Executor class527, int i) {

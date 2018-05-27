@@ -13,7 +13,7 @@ public class Class282_Sub34 extends Node {
 
 	static final void decodePlayerUpdate(RsBitsBuffer buffer, int i, byte i_1_) {
 		Class197.anInt2434 = 0;
-		Class387.decodeUpdate(buffer, 1850021542);
+		LoadingStage.decodeUpdate(buffer, 1850021542);
 		Class508.decodeMasks(buffer, 1038274352);
 		if (i != buffer.index * -1990677291)
 			throw new RuntimeException(new StringBuilder().append(-1990677291 * buffer.index).append(" ").append(i).toString());

@@ -7,9 +7,7 @@ public abstract class Class149 {
 	int anInt1742;
 	int anInt1743;
 	static int anInt1744;
-	public static Index aClass317_1745;
-	public static Class288 aClass288_1746;
-
+	
 	abstract void method2555(int i, int i_0_);
 
 	Class149(int i, int i_1_, int i_2_) {

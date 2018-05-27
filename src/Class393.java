@@ -43,7 +43,7 @@ public class Class393 {
 		if (class60 == Class60.aClass60_606)
 			return Class258.method4570(class282_sub35, 2086694291);
 		if (Class60.aClass60_603 == class60)
-			return Class257.method4564(class282_sub35, 1637673154);
+			return MapRegion.method4564(class282_sub35, 1637673154);
 		if (Class60.aClass60_608 == class60)
 			return Class163.method2843(class282_sub35, 1348878542);
 		if (class60 == Class60.aClass60_604)
@@ -74,7 +74,7 @@ public class Class393 {
 		if (class60 == Class60.aClass60_606)
 			return Class258.method4570(class282_sub35, 2126561065);
 		if (Class60.aClass60_603 == class60)
-			return Class257.method4564(class282_sub35, 359735582);
+			return MapRegion.method4564(class282_sub35, 359735582);
 		if (Class60.aClass60_608 == class60)
 			return Class163.method2843(class282_sub35, 165152360);
 		if (class60 == Class60.aClass60_604)
@@ -98,7 +98,7 @@ public class Class393 {
 		if (class60 == Class60.aClass60_606)
 			return Class258.method4570(class282_sub35, 2109594193);
 		if (Class60.aClass60_603 == class60)
-			return Class257.method4564(class282_sub35, 2084412066);
+			return MapRegion.method4564(class282_sub35, 2084412066);
 		if (Class60.aClass60_608 == class60)
 			return Class163.method2843(class282_sub35, 1871368438);
 		if (class60 == Class60.aClass60_604)
@@ -122,7 +122,7 @@ public class Class393 {
 		if (class60 == Class60.aClass60_606)
 			return Class258.method4570(class282_sub35, 1991677679);
 		if (Class60.aClass60_603 == class60)
-			return Class257.method4564(class282_sub35, 1598101013);
+			return MapRegion.method4564(class282_sub35, 1598101013);
 		if (Class60.aClass60_608 == class60)
 			return Class163.method2843(class282_sub35, -418847969);
 		if (class60 == Class60.aClass60_604)

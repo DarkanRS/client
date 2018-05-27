@@ -113,7 +113,7 @@ public class Class496 implements Interface43 {
 		if (Class263.anInt3273 * -1346844585 >= 96) {
 			int i_4_ = Class241.method4150(1219422368);
 			if (i_4_ <= 104) {
-				Class526.method11248(1422604274);
+				Defaults6Loader.method11248(1422604274);
 				i_3_ = 4;
 			} else if (i_4_ <= 504) {
 				Class282_Sub40.method13300(-273043210);

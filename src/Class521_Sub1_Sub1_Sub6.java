@@ -11,7 +11,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 	byte aByte10539;
 	byte aByte10540;
 	boolean aBool10541;
-	Class474 aClass474_10542;
+	ObjectIndexLoader aClass474_10542;
 	boolean aBool10543;
 	boolean aBool10544;
 
@@ -43,7 +43,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 	}
 
 	Class452 method16117(GraphicalRenderer class505, int i, boolean bool, byte i_1_) {
-		Class478 class478 = (((Class521_Sub1_Sub1_Sub6) this).aClass474_10542.method7891(-1638295397 * ((Class521_Sub1_Sub1_Sub6) this).anInt10534, 65280));
+		ObjectDefinitions class478 = (((Class521_Sub1_Sub1_Sub6) this).aClass474_10542.getObjectDefinitions(-1638295397 * ((Class521_Sub1_Sub1_Sub6) this).anInt10534, 65280));
 		Class390 class390;
 		Class390 class390_2_;
 		if (((Class521_Sub1_Sub1_Sub6) this).aBool10536) {
@@ -68,10 +68,10 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 		return ((Class521_Sub1_Sub1_Sub6) this).aClass200_10537;
 	}
 
-	public Class521_Sub1_Sub1_Sub6(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, boolean bool_13_) {
+	public Class521_Sub1_Sub1_Sub6(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, boolean bool_13_) {
 		super(class206, i, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_, i_10_, -1062790731 * class478.anInt5687 == 1, Class472.method7853(i_11_, i_12_, 1133726339));
 		((Class521_Sub1_Sub1_Sub6) this).aClass474_10542 = class474;
-		((Class521_Sub1_Sub1_Sub6) this).anInt10534 = class478.anInt5633 * -1214228387;
+		((Class521_Sub1_Sub1_Sub6) this).anInt10534 = class478.id * -1214228387;
 		aByte7968 = (byte) i_3_;
 		((Class521_Sub1_Sub1_Sub6) this).aBool10536 = bool;
 		((Class521_Sub1_Sub1_Sub6) this).aByte10539 = (byte) i_11_;
@@ -91,7 +91,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 			if (((Class521_Sub1_Sub1_Sub6) this).aBool10543 || class478.aBool5711) {
 				((Class521_Sub1_Sub1_Sub6) this).aClass528_10535 = ((Class521_Sub1_Sub1_Sub6) this).aClass528_10535.method11289((byte) 0, i_14_, false);
 				if (class478.aBool5711) {
-					Class341 class341 = client.aClass257_7353.method4426(1466531789);
+					Class341 class341 = IndexLoaders.MAP_REGION_DECODER.method4426(1466531789);
 					((Class521_Sub1_Sub1_Sub6) this).aClass528_10535.PA(class341.anInt3992 * 1367691291, class341.anInt3993 * 1646020803, 945117807 * class341.anInt3994, class341.anInt3995 * 2100466695);
 				}
 			}
@@ -199,7 +199,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 	}
 
 	Class452 method16118(GraphicalRenderer class505, int i, boolean bool) {
-		Class478 class478 = (((Class521_Sub1_Sub1_Sub6) this).aClass474_10542.method7891(-1638295397 * ((Class521_Sub1_Sub1_Sub6) this).anInt10534, 65280));
+		ObjectDefinitions class478 = (((Class521_Sub1_Sub1_Sub6) this).aClass474_10542.getObjectDefinitions(-1638295397 * ((Class521_Sub1_Sub1_Sub6) this).anInt10534, 65280));
 		Class390 class390;
 		Class390 class390_19_;
 		if (((Class521_Sub1_Sub1_Sub6) this).aBool10536) {

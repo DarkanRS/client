@@ -45,7 +45,7 @@ public class Class498 {
 	public Class489 method8322(int i, short i_1_) {
 		Class489 class489;
 		synchronized (((Class498) this).aClass229_5824) {
-			class489 = ((Class489) ((Class498) this).aClass229_5824.method3865((long) i));
+			class489 = ((Class489) ((Class498) this).aClass229_5824.get((long) i));
 		}
 		if (null != class489)
 			return class489;

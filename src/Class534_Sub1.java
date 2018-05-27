@@ -144,14 +144,14 @@ public class Class534_Sub1 extends Class534 {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L))));
 			if (class282_sub47 != null) {
 				NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-				Class409 class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
+				NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 				if (class409.anIntArray4886 != null)
 					class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 				if (class409 != null)
 					is = class409.anIntArray4915;
 			}
 		} else if (Class431.method7252(-1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587), (byte) 0)) {
-			Class478 class478 = (client.aClass257_7353.method4436(-1943524543).method7891((int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L >>> 32 & 0x7fffffffL), 65280));
+			ObjectDefinitions class478 = (IndexLoaders.MAP_REGION_DECODER.method4436(-1943524543).getObjectDefinitions((int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L >>> 32 & 0x7fffffffL), 65280));
 			if (class478.anIntArray5650 != null)
 				class478 = class478.method8013(Class158_Sub1.aClass3_8507, (byte) 45);
 			if (class478 != null)

@@ -128,7 +128,7 @@ public class Class116 {
 		long l = (((long) i_6_ << 48) + (((long) i_5_ << 32) + (long) (i_4_ + (i_7_ << 16) + (i_8_ << 24))));
 		MeshRasterizer class528_11_;
 		synchronized (Class13.aClass229_127) {
-			class528_11_ = (MeshRasterizer) Class13.aClass229_127.method3865(l);
+			class528_11_ = (MeshRasterizer) Class13.aClass229_127.get(l);
 		}
 		if (class528_11_ == null || class505.method8452(class528_11_.m(), i_10_) != 0) {
 			if (null != class528_11_)

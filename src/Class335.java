@@ -15,7 +15,7 @@ public class Class335 {
 	static void method5961(int i) {
 		if (Class260.aClass277_3221 != null) {
 			Class385 class385 = Class385.method6623(Class84.myPlayer.method11166().aClass385_3595);
-			Class219 class219 = client.aClass257_7353.method4519(898248165);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(898248165);
 			class385.aFloat4671 += (float) (class219.anInt2711 * 1948093437 << 9);
 			class385.aFloat4673 += (float) (class219.anInt2712 * -1002240017 << 9);
 			class385.method6631((float) (((Class277) Class260.aClass277_3221).anInt3349 * -142397055), class385.aFloat4672, (float) (-1830451005 * ((Class277) Class260.aClass277_3221).anInt3348));

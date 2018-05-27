@@ -11,7 +11,7 @@ public class Class96_Sub9 extends Class96 {
 
 	boolean method1591() {
 		if (null == ((Class96_Sub9) this).aClass116_9281)
-			((Class96_Sub9) this).aClass116_9281 = new Class116(Class512.aClass317_5884, -1480555825 * ((Class96_Sub9) this).anInt9280);
+			((Class96_Sub9) this).aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, -1480555825 * ((Class96_Sub9) this).anInt9280);
 		return ((Class96_Sub9) this).aClass116_9281.method1963(1418683997);
 	}
 
@@ -23,7 +23,7 @@ public class Class96_Sub9 extends Class96 {
 
 	boolean method1599(int i) {
 		if (null == ((Class96_Sub9) this).aClass116_9281)
-			((Class96_Sub9) this).aClass116_9281 = new Class116(Class512.aClass317_5884, -1480555825 * ((Class96_Sub9) this).anInt9280);
+			((Class96_Sub9) this).aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, -1480555825 * ((Class96_Sub9) this).anInt9280);
 		return ((Class96_Sub9) this).aClass116_9281.method1963(1418683997);
 	}
 
@@ -33,7 +33,7 @@ public class Class96_Sub9 extends Class96 {
 
 	boolean method1596() {
 		if (null == ((Class96_Sub9) this).aClass116_9281)
-			((Class96_Sub9) this).aClass116_9281 = new Class116(Class512.aClass317_5884, -1480555825 * ((Class96_Sub9) this).anInt9280);
+			((Class96_Sub9) this).aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, -1480555825 * ((Class96_Sub9) this).anInt9280);
 		return ((Class96_Sub9) this).aClass116_9281.method1963(1418683997);
 	}
 

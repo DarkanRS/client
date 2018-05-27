@@ -37,9 +37,9 @@ public class Class260 {
 
 	public static void method4572() {
 		Class253.method4330(22050, Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(119543123) == 1, 2);
-		Class320.aClass253_3723 = Class253.method4331(Class351.aCanvas4096, 0, 22050);
+		Class320.aClass253_3723 = Class253.method4331(Class351.LOAD_CANVAS, 0, 22050);
 		Class42_Sub1.method14563(true, Class282_Sub20_Sub10.method15262(null, -1761346495), (short) 18381);
-		Class100.aClass253_1008 = Class253.method4331(Class351.aCanvas4096, 1, 2048);
+		Class100.aClass253_1008 = Class253.method4331(Class351.LOAD_CANVAS, 1, 2048);
 		Class79.aClass282_Sub15_Sub4_783 = new Class282_Sub15_Sub4();
 		Class100.aClass253_1008.method4329(Class79.aClass282_Sub15_Sub4_783);
 		Class119.aClass344_1460 = new Class344(22050, Class253.anInt3129);
@@ -61,9 +61,9 @@ public class Class260 {
 	public static void method4575() {
 		Class278_Sub1.method13449((byte) -16);
 		Class253.method4330(22050, Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(-73319945) == 1, 2);
-		Class320.aClass253_3723 = Class253.method4331(Class351.aCanvas4096, 0, 22050);
+		Class320.aClass253_3723 = Class253.method4331(Class351.LOAD_CANVAS, 0, 22050);
 		Class42_Sub1.method14563(true, Class282_Sub20_Sub10.method15262(null, -223983280), (short) 31488);
-		Class100.aClass253_1008 = Class253.method4331(Class351.aCanvas4096, 1, 2048);
+		Class100.aClass253_1008 = Class253.method4331(Class351.LOAD_CANVAS, 1, 2048);
 		Class100.aClass253_1008.method4329(Class79.aClass282_Sub15_Sub4_783);
 	}
 
@@ -81,7 +81,7 @@ public class Class260 {
 			if (i == -1 && !aBool3220)
 				Class226.method3805(-1719520107);
 			else if (i != -1 && (1293234709 * anInt3223 != i || !Class116.method1966(1638394767)) && 0 != i_2_ && !aBool3220) {
-				Class282_Sub1.method11615(i_3_, Class512.aClass317_5884, i, 0, i_2_, false, new Class109_Sub1(), 2120891919);
+				Class282_Sub1.method11615(i_3_, IndexLoaders.MUSIC_INDEX, i, 0, i_2_, false, new Class109_Sub1(), 2120891919);
 				Class468_Sub6.method12658(-1664381146);
 			}
 			if (i != anInt3223 * 1293234709)
@@ -101,13 +101,13 @@ public class Class260 {
 	static void method4578(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	static void method4579() {
 		if (aClass277_3221 != null) {
 			Class385 class385 = Class385.method6623(Class84.myPlayer.method11166().aClass385_3595);
-			Class219 class219 = client.aClass257_7353.method4519(1057014816);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1057014816);
 			class385.aFloat4671 += (float) (class219.anInt2711 * 1948093437 << 9);
 			class385.aFloat4673 += (float) (class219.anInt2712 * -1002240017 << 9);
 			class385.method6631((float) (((Class277) aClass277_3221).anInt3349 * -142397055), class385.aFloat4672, (float) (-1830451005 * (((Class277) aClass277_3221).anInt3348)));
@@ -269,7 +269,7 @@ public class Class260 {
 			if (i == -1 && !aBool3220)
 				Class226.method3805(-1719520107);
 			else if (i != -1 && (1293234709 * anInt3223 != i || !Class116.method1966(-470718420)) && 0 != i_31_ && !aBool3220) {
-				Class282_Sub1.method11615(i_32_, Class512.aClass317_5884, i, 0, i_31_, false, new Class109_Sub1(), 1439691684);
+				Class282_Sub1.method11615(i_32_, IndexLoaders.MUSIC_INDEX, i, 0, i_31_, false, new Class109_Sub1(), 1439691684);
 				Class468_Sub6.method12658(761177553);
 			}
 			if (i != anInt3223 * 1293234709)
@@ -417,7 +417,7 @@ public class Class260 {
 	static void method4604() {
 		if (aClass277_3221 != null) {
 			Class385 class385 = Class385.method6623(Class84.myPlayer.method11166().aClass385_3595);
-			Class219 class219 = client.aClass257_7353.method4519(45783610);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(45783610);
 			class385.aFloat4671 += (float) (class219.anInt2711 * 1948093437 << 9);
 			class385.aFloat4673 += (float) (class219.anInt2712 * -1002240017 << 9);
 			class385.method6631((float) (((Class277) aClass277_3221).anInt3349 * -142397055), class385.aFloat4672, (float) (-1830451005 * (((Class277) aClass277_3221).anInt3348)));
@@ -459,7 +459,7 @@ public class Class260 {
 	static void method4608(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	public static void method4609(int i, int i_101_, int i_102_) {
@@ -476,7 +476,7 @@ public class Class260 {
 			if (i == -1 && !aBool3220)
 				Class226.method3805(-1719520107);
 			else if (i != -1 && (1293234709 * anInt3223 != i || !Class116.method1966(-491391986)) && 0 != i_101_ && !aBool3220) {
-				Class282_Sub1.method11615(i_102_, Class512.aClass317_5884, i, 0, i_101_, false, new Class109_Sub1(), 79968203);
+				Class282_Sub1.method11615(i_102_, IndexLoaders.MUSIC_INDEX, i, 0, i_101_, false, new Class109_Sub1(), 79968203);
 				Class468_Sub6.method12658(42661990);
 			}
 			if (i != anInt3223 * 1293234709)
@@ -505,7 +505,7 @@ public class Class260 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, -1870974818);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 9841);
 			}
-			Class282_Sub43.method13400(Class525.aClass317_6984, i, 0, i_104_, false, (byte) -46);
+			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_104_, false, (byte) -46);
 			Class150.method2580(-1, 255, (byte) 48);
 			aBool3220 = true;
 		}
@@ -520,7 +520,7 @@ public class Class260 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, -128022584);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 14000);
 			}
-			Class282_Sub43.method13400(Class525.aClass317_6984, i, 0, i_106_, false, (byte) -27);
+			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_106_, false, (byte) -27);
 			Class150.method2580(-1, 255, (byte) -35);
 			aBool3220 = true;
 		}
@@ -546,7 +546,7 @@ public class Class260 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, 29215494);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 7925);
 			}
-			Class282_Sub43.method13400(Class525.aClass317_6984, i, 0, i_112_, false, (byte) -40);
+			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_112_, false, (byte) -40);
 			Class150.method2580(-1, 255, (byte) 12);
 			aBool3220 = true;
 		}
@@ -555,7 +555,7 @@ public class Class260 {
 	static void method4616(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 
 	public static void method4617(AnimationDefinitions class518, int i) {
@@ -676,14 +676,14 @@ public class Class260 {
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, -376501848);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
 		client.aClass184_7475.method3049(class282_sub23, -340583361);
-		aClass116_3229 = new Class116(Class512.aClass317_5884, i);
+		aClass116_3229 = new Class116(IndexLoaders.MUSIC_INDEX, i);
 	}
 
 	public static void method4628(int i) {
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, -97242203);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
 		client.aClass184_7475.method3049(class282_sub23, -553178131);
-		aClass116_3229 = new Class116(Class512.aClass317_5884, i);
+		aClass116_3229 = new Class116(IndexLoaders.MUSIC_INDEX, i);
 	}
 
 	static final void method4629(CS2Executor class527, int i) {

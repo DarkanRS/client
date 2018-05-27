@@ -115,8 +115,8 @@ public class Class93 {
 			if (!client.aBool7393)
 				Class62.method1260(i, bool, 860609292);
 			else {
-				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (Class209.aClass317_2663), i), i_19_, bool);
-				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.aClass495_2772.method8276(1496562454), 47217972);
+				Class282_Sub37 class282_sub37 = new Class282_Sub37(i, new Class278_Sub1(4096, (IndexLoaders.aClass317_2663), i), i_19_, bool);
+				((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4915(Class223.CURRENT_LANGUAGE.method8276(1496562454), 47217972);
 				Class492.aClass465_5774.method7765(class282_sub37, (long) i);
 			}
 		}
@@ -144,10 +144,10 @@ public class Class93 {
 	}
 
 	static boolean method1577(Interface12 interface12, int i) {
-		Class478 class478 = client.aClass257_7353.method4436(-1771032162).method7891(interface12.method84(-1594739949), 65280);
+		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(interface12.method84(-1594739949), 65280);
 		if (-272332433 * class478.anInt5689 == -1)
 			return true;
-		Class418 class418 = Class97.aClass427_995.method7172(-272332433 * class478.anInt5689, -1014703371);
+		Class418 class418 = IndexLoaders.aClass427_995.method7172(-272332433 * class478.anInt5689, -1014703371);
 		if (-1 == -1053123675 * class418.anInt4995)
 			return true;
 		return class418.method7015(65280);

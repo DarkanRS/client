@@ -226,7 +226,7 @@ public class Class423 {
 	}
 
 	public static Class345 method7065(int i, int i_32_) {
-		Class345 class345 = (Class345) Class345.aClass229_4031.method3865((long) i);
+		Class345 class345 = (Class345) Class345.aClass229_4031.get((long) i);
 		if (class345 != null)
 			return class345;
 		byte[] is = Class345.aClass317_4021.getFile(1, i, -2003556977);

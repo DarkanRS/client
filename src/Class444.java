@@ -10,7 +10,7 @@ public class Class444 {
 	public Class431 method7423(int i) {
 		Class431 class431;
 		synchronized (((Class444) this).aClass229_5377) {
-			class431 = ((Class431) ((Class444) this).aClass229_5377.method3865((long) i));
+			class431 = ((Class431) ((Class444) this).aClass229_5377.get((long) i));
 		}
 		if (class431 != null)
 			return class431;
@@ -27,7 +27,7 @@ public class Class444 {
 	public Class431 method7424(int i, byte i_0_) {
 		Class431 class431;
 		synchronized (((Class444) this).aClass229_5377) {
-			class431 = ((Class431) ((Class444) this).aClass229_5377.method3865((long) i));
+			class431 = ((Class431) ((Class444) this).aClass229_5377.get((long) i));
 		}
 		if (class431 != null)
 			return class431;
@@ -53,7 +53,7 @@ public class Class444 {
 	public Class431 method7425(int i) {
 		Class431 class431;
 		synchronized (((Class444) this).aClass229_5377) {
-			class431 = ((Class431) ((Class444) this).aClass229_5377.method3865((long) i));
+			class431 = ((Class431) ((Class444) this).aClass229_5377.get((long) i));
 		}
 		if (class431 != null)
 			return class431;

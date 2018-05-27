@@ -6,7 +6,7 @@ public class Class468_Sub9 extends Class468 {
 	public static final int anInt7893 = 1;
 	public static final int anInt7894 = 2;
 	public static final int anInt7895 = 3;
-	public static Class309 aClass309_7896;
+	public static JS5Manager JS5_MANAGER;
 
 	public int method12683() {
 		return -859024475 * anInt5578;
@@ -73,6 +73,6 @@ public class Class468_Sub9 extends Class468 {
 
 	static final void method12689(CS2Executor class527, int i) {
 		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class296.aClass331_3535.method5918(i_2_, -2116649195).aString9744);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass331_3535.method5918(i_2_, -2116649195).aString9744);
 	}
 }

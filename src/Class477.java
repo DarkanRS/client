@@ -232,9 +232,9 @@ public class Class477 implements Iterable {
 	}
 
 	public static void method7960(Index class317, byte i) {
-		Class16.anInt140 = class317.method5610("p11_full", -1671336895) * 1669464149;
-		Class16.anInt136 = class317.method5610("p12_full", 568750453) * 1957167017;
-		Class395.anInt4788 = class317.method5610("b12_full", 776026920) * 2033224767;
+		Class16.anInt140 = class317.getArchiveId("p11_full", -1671336895) * 1669464149;
+		Class16.anInt136 = class317.getArchiveId("p12_full", 568750453) * 1957167017;
+		Class395.anInt4788 = class317.getArchiveId("b12_full", 776026920) * 2033224767;
 	}
 
 	static final void method7961(CS2Executor class527, int i) {

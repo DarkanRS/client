@@ -16,7 +16,7 @@ public class Class417 {
 		aShortArray4991 = is_1_;
 	}
 
-	public Class417(Class409 class409, boolean bool) {
+	public Class417(NPCDefinitions class409, boolean bool) {
 		if (bool) {
 			anIntArray4992 = new int[class409.anIntArray4859.length];
 			System.arraycopy(class409.anIntArray4859, 0, anIntArray4992, 0, anIntArray4992.length);
@@ -35,7 +35,7 @@ public class Class417 {
 	}
 
 	public static Class347 method7005(int i, int i_2_) {
-		Class347 class347 = (Class347) Class347.aClass229_4052.method3865((long) i);
+		Class347 class347 = (Class347) Class347.aClass229_4052.get((long) i);
 		if (null != class347)
 			return class347;
 		byte[] is = Class347.aClass317_4053.getFile(0, i, -2049012023);

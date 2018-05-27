@@ -8,7 +8,7 @@ public class Class58 implements Interface19 {
 
 	public String method135(Class243 class243, int[] is, long l) {
 		if (class243 == Class243.aClass243_2993) {
-			Class431 class431 = Class466.aClass444_5570.method7424(is[0], (byte) 8);
+			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, -64424168);
 		}
 		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
@@ -16,13 +16,13 @@ public class Class58 implements Interface19 {
 			return class425.aString5043;
 		}
 		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
-			return Class466.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 2106456977);
+			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 2106456977);
 		return null;
 	}
 
 	public String method136(Class243 class243, int[] is, long l) {
 		if (class243 == Class243.aClass243_2993) {
-			Class431 class431 = Class466.aClass444_5570.method7424(is[0], (byte) 8);
+			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, -451172927);
 		}
 		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
@@ -30,13 +30,13 @@ public class Class58 implements Interface19 {
 			return class425.aString5043;
 		}
 		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
-			return Class466.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 579863966);
+			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 579863966);
 		return null;
 	}
 
 	public String method137(Class243 class243, int[] is, long l) {
 		if (class243 == Class243.aClass243_2993) {
-			Class431 class431 = Class466.aClass444_5570.method7424(is[0], (byte) 8);
+			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, 1807301402);
 		}
 		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
@@ -44,7 +44,7 @@ public class Class58 implements Interface19 {
 			return class425.aString5043;
 		}
 		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
-			return Class466.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 870502499);
+			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 870502499);
 		return null;
 	}
 
@@ -82,7 +82,7 @@ public class Class58 implements Interface19 {
 	static int method1141(int i) {
 		if (null == client.aClass118_7257) {
 			if (!Class20.aBool161) {
-				if (Class149_Sub2.aClass511_9314.aBool5876) {
+				if (Class149_Sub2.DEFAULTS_LOADER_7.aBool5876) {
 					if (Class20.aClass282_Sub50_Sub7_168 != null)
 						return (((Class282_Sub50_Sub7) Class20.aClass282_Sub50_Sub7_168).anInt9578 * -1332134173);
 				} else if (null != Class96_Sub23.aClass282_Sub50_Sub7_9445)

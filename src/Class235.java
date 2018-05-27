@@ -18,9 +18,7 @@ public class Class235 {
 	static IterableNodeMap aClass465_2904;
 	static int anInt2905 = 0;
 	static int anInt2906;
-	public static Index aClass317_2907;
-	public static Index aClass317_2908;
-
+	
 	static {
 		anInt2899 = 0;
 		anInt2901 = 0;

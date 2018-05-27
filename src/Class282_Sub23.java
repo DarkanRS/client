@@ -9,8 +9,7 @@ public class Class282_Sub23 extends Node {
 	public int anInt7680;
 	OutgoingPacket aClass379_7681;
 	public RsBitsBuffer aClass282_Sub35_Sub2_7682;
-	public static Class436 aClass436_7683;
-
+	
 	public void method12359() {
 		if (anInt7679 * -918638833 < aClass282_Sub23Array7677.length)
 			aClass282_Sub23Array7677[((anInt7679 += -331587601) * -918638833 - 1)] = this;

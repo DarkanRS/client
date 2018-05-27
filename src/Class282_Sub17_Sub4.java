@@ -87,7 +87,7 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 
 	static final void method15408(CS2Executor class527, int i) {
 		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class227 class227 = Class96_Sub16.aClass211_9383.method3616(i_1_, (byte) 12);
+		Class227 class227 = IndexLoaders.aClass211_9383.method3616(i_1_, (byte) 12);
 		if (null != class227.anIntArray2814 && class227.anIntArray2814.length > 0) {
 			int i_2_ = 0;
 			int i_3_ = class227.anIntArray2789[0];

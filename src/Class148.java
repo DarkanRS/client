@@ -616,7 +616,7 @@ public class Class148 {
 		if (i_39_ != i_40_) {
 			if (Class169.method2875(-1741204137 * client.anInt7166, -2096796884)) {
 				if (0 == i_40_ && Class260.anInt3223 * 1293234709 != -1) {
-					Class282_Sub43.method13400(Class512.aClass317_5884, 1293234709 * Class260.anInt3223, 0, i_39_, false, (byte) -40);
+					Class282_Sub43.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, i_39_, false, (byte) -40);
 					Class468_Sub6.method12658(1298761444);
 					Class260.aBool3220 = false;
 				} else if (i_39_ == 0) {

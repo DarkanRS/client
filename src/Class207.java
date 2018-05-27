@@ -8,8 +8,7 @@ public class Class207 {
 	int[] anIntArray2655;
 	Class204 aClass204_2656 = Class204.aClass204_2579;
 	int anInt2657 = -580872743;
-	public static Class421 aClass421_2658;
-
+	
 	void method3548(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
 			((Class207) this).anInt2653 = class282_sub35.readUnsignedShort() * -1679369983;
@@ -22,7 +21,7 @@ public class Class207 {
 		else if (i == 4)
 			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-987111968), class282_sub35.readUnsignedByte(), -1655373565));
 		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart(2032060376) * 580872743;
+			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
 	}
 
 	void method3549(RsByteBuffer class282_sub35, int i) {
@@ -46,7 +45,7 @@ public class Class207 {
 		else if (i == 4)
 			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-973471054), class282_sub35.readUnsignedByte(), -2111624137));
 		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart(1982058382) * 580872743;
+			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
 	}
 
 	Class207() {
@@ -65,7 +64,7 @@ public class Class207 {
 		else if (i == 4)
 			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-970645072), class282_sub35.readUnsignedByte(), -888813501));
 		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart(2121397366) * 580872743;
+			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
 	}
 
 	void method3552(RsByteBuffer class282_sub35, int i, byte i_4_) {
@@ -80,11 +79,11 @@ public class Class207 {
 		else if (i == 4)
 			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-430210137), class282_sub35.readUnsignedByte(), -1538541275));
 		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart(2015977415) * 580872743;
+			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
 	}
 
 	static void method3553(CS2Executor class527, byte i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).aStringArray2971[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])]);
+		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).aStringArray2971[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])]);
 		((CS2Executor) class527).anInt7012 -= 283782002;
 	}
 
@@ -92,7 +91,7 @@ public class Class207 {
 		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_6_, (byte) 71);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
-		Class511.method8754(class118, class98, class527, 1449946769);
+		Defaults7Loader.method8754(class118, class98, class527, 1449946769);
 	}
 
 	static final void method3555(CS2Executor class527, int i) {

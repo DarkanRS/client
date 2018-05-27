@@ -14,7 +14,7 @@ public class CS2Executor {
 	int anInt7002;
 	long[] aLongArray7003;
 	int anInt7004;
-	CS2OpInfo[] aClass522Array7005;
+	CS2OpInfo[] operations;
 	Animable animable;
 	UnderlayDefinition aClass513_7007;
 	Class191 aClass191_7008;

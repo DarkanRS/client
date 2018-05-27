@@ -50,10 +50,10 @@ public class Class180 {
 
 	public static MeshRasterizer method3028(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_) {
 		long l = (long) i_3_;
-		MeshRasterizer class528 = (MeshRasterizer) aClass229_2245.method3865(l);
+		MeshRasterizer class528 = (MeshRasterizer) aClass229_2245.get(l);
 		int i_4_ = 2055;
 		if (null == class528) {
-			RSMesh class157 = RSMesh.decodeMesh(Class110.aClass317_1106, i_3_, 0);
+			RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, i_3_, 0);
 			if (null == class157)
 				return null;
 			if (class157.zoom < 13)

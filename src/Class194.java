@@ -81,7 +81,7 @@ public class Class194 {
 		int i_14_ = fontmetrics.getMaxAscent();
 		int i_15_ = fontmetrics.getMaxAscent() + fontmetrics.getMaxDescent();
 		int i_16_ = fontmetrics.getHeight();
-		Image image = Class351.aCanvas4096.createImage(i_12_, i_15_);
+		Image image = Class351.LOAD_CANVAS.createImage(i_12_, i_15_);
 		Graphics graphics = image.getGraphics();
 		graphics.setColor(Color.black);
 		graphics.fillRect(0, 0, i_12_, i_15_);
@@ -144,7 +144,7 @@ public class Class194 {
 		int i_25_ = fontmetrics.getMaxAscent();
 		int i_26_ = fontmetrics.getMaxAscent() + fontmetrics.getMaxDescent();
 		int i_27_ = fontmetrics.getHeight();
-		Image image = Class351.aCanvas4096.createImage(i_23_, i_26_);
+		Image image = Class351.LOAD_CANVAS.createImage(i_23_, i_26_);
 		Graphics graphics = image.getGraphics();
 		graphics.setColor(Color.black);
 		graphics.fillRect(0, 0, i_23_, i_26_);
@@ -198,7 +198,7 @@ public class Class194 {
 		int i_35_ = fontmetrics.getMaxAscent();
 		int i_36_ = fontmetrics.getMaxAscent() + fontmetrics.getMaxDescent();
 		int i_37_ = fontmetrics.getHeight();
-		Image image = Class351.aCanvas4096.createImage(i_33_, i_36_);
+		Image image = Class351.LOAD_CANVAS.createImage(i_33_, i_36_);
 		Graphics graphics = image.getGraphics();
 		graphics.setColor(Color.black);
 		graphics.fillRect(0, 0, i_33_, i_36_);
@@ -252,7 +252,7 @@ public class Class194 {
 		int i_45_ = fontmetrics.getMaxAscent();
 		int i_46_ = fontmetrics.getMaxAscent() + fontmetrics.getMaxDescent();
 		int i_47_ = fontmetrics.getHeight();
-		Image image = Class351.aCanvas4096.createImage(i_43_, i_46_);
+		Image image = Class351.LOAD_CANVAS.createImage(i_43_, i_46_);
 		Graphics graphics = image.getGraphics();
 		graphics.setColor(Color.black);
 		graphics.fillRect(0, 0, i_43_, i_46_);

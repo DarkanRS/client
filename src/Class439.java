@@ -27,7 +27,7 @@ public final class Class439 {
 	}
 
 	public static byte[] method7337(File file) {
-		return Class478.method8023(file, (int) file.length(), (byte) 0);
+		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
 	}
 
 	static void method7338(File file, byte[] is, int i) throws IOException {
@@ -53,7 +53,7 @@ public final class Class439 {
 	}
 
 	public static byte[] method7340(File file) {
-		return Class478.method8023(file, (int) file.length(), (byte) 0);
+		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
 	}
 
 	static void method7341(File file, byte[] is, int i) throws IOException {
@@ -67,7 +67,7 @@ public final class Class439 {
 	}
 
 	public static byte[] method7342(File file) {
-		return Class478.method8023(file, (int) file.length(), (byte) 0);
+		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
 	}
 
 	public static void method7343(int i, int i_2_) {
@@ -84,7 +84,7 @@ public final class Class439 {
 		Class458 class458 = (Class458) Class386.method6672(Class2.method262((byte) -1), i_4_, -917234900);
 		Class225 class225;
 		if (class458 == Class458.aClass458_5490 || Class458.aClass458_5492 == class458 || class458 == Class458.aClass458_5480) {
-			Class478 class478 = client.aClass257_7353.method4436(-1792559044).method7891(i_6_, 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1792559044).getObjectDefinitions(i_6_, 65280);
 			int i_7_;
 			int i_8_;
 			if (i_5_ == 0 || i_5_ == 2) {
@@ -102,6 +102,6 @@ public final class Class439 {
 			class225 = JS5CacheFile.method3354(i, i_3_, 0, 0, class458, i_5_, 1608795477);
 		else
 			class225 = Class148.method2551(i, i_3_, 0, 0, class458, i_5_, 960380494);
-		Class257.method4559(i, i_3_, true, class225, 2130368133);
+		MapRegion.method4559(i, i_3_, true, class225, 2130368133);
 	}
 }

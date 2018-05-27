@@ -14,7 +14,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_10486;
 	byte aByte10487;
 	boolean aBool10488;
-	Class474 aClass474_10489;
+	ObjectIndexLoader aClass474_10489;
 	boolean aBool10490;
 
 	public int method76() {
@@ -47,7 +47,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 	}
 
 	Class452 method16069(GraphicalRenderer class505, int i, boolean bool, int i_1_) {
-		Class478 class478 = (((Class521_Sub1_Sub4_Sub1) this).aClass474_10489.method7891(462020215 * ((Class521_Sub1_Sub4_Sub1) this).anInt10482, 65280));
+		ObjectDefinitions class478 = (((Class521_Sub1_Sub4_Sub1) this).aClass474_10489.getObjectDefinitions(462020215 * ((Class521_Sub1_Sub4_Sub1) this).anInt10482, 65280));
 		Class390 class390;
 		Class390 class390_2_;
 		if (((Class521_Sub1_Sub4_Sub1) this).aBool10488) {
@@ -93,10 +93,10 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 		return false;
 	}
 
-	public Class521_Sub1_Sub4_Sub1(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_, int i_12_) {
+	public Class521_Sub1_Sub4_Sub1(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_, int i_12_) {
 		super(class206, i_6_, i_7_, i_8_, i, i_5_, i_9_, i_10_);
 		((Class521_Sub1_Sub4_Sub1) this).aClass474_10489 = class474;
-		((Class521_Sub1_Sub4_Sub1) this).anInt10482 = class478.anInt5633 * -1301990679;
+		((Class521_Sub1_Sub4_Sub1) this).anInt10482 = class478.id * -1301990679;
 		((Class521_Sub1_Sub4_Sub1) this).aBool10488 = bool;
 		((Class521_Sub1_Sub4_Sub1) this).aByte10487 = (byte) i_12_;
 		((Class521_Sub1_Sub4_Sub1) this).aByte10485 = (byte) i_11_;
@@ -112,7 +112,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 			if (class478.aBool5711) {
 				((Class521_Sub1_Sub4_Sub1) this).aClass528_10483 = ((Class521_Sub1_Sub4_Sub1) this).aClass528_10483.method11289((byte) 0, i_13_, false);
 				if (class478.aBool5711) {
-					Class341 class341 = client.aClass257_7353.method4426(2127518782);
+					Class341 class341 = IndexLoaders.MAP_REGION_DECODER.method4426(2127518782);
 					((Class521_Sub1_Sub4_Sub1) this).aClass528_10483.PA(class341.anInt3992 * 1367691291, 1646020803 * class341.anInt3993, 945117807 * class341.anInt3994, class341.anInt3995 * 2100466695);
 				}
 			}
@@ -402,7 +402,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 	}
 
 	Class452 method16072(GraphicalRenderer class505, int i, boolean bool) {
-		Class478 class478 = (((Class521_Sub1_Sub4_Sub1) this).aClass474_10489.method7891(462020215 * ((Class521_Sub1_Sub4_Sub1) this).anInt10482, 65280));
+		ObjectDefinitions class478 = (((Class521_Sub1_Sub4_Sub1) this).aClass474_10489.getObjectDefinitions(462020215 * ((Class521_Sub1_Sub4_Sub1) this).anInt10482, 65280));
 		Class390 class390;
 		Class390 class390_15_;
 		if (((Class521_Sub1_Sub4_Sub1) this).aBool10488) {
@@ -421,7 +421,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 
 	static void method16073(GraphicalRenderer class505, int i, int i_16_, int i_17_) {
 		if (i >= 0 && i_16_ >= 0 && Class20.aClass384_158 != null) {
-			Class219 class219 = client.aClass257_7353.method4519(1956252326);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1956252326);
 			Class384 class384 = class505.method8449();
 			class505.method8424(Class20.aClass384_158);
 			class505.method8457(Class20.aClass294_155);
@@ -432,7 +432,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 			class384.method6524();
 			int i_18_ = i - -1747787169 * Class20.anInt180;
 			int i_19_ = i_16_ - Class20.anInt181 * 1607392711;
-			if (client.aClass257_7353.method4430(-955165498) != null && (!client.aBool7344 || (1310510077 * Class506.anInt5858 & 0x40) != 0)) {
+			if (IndexLoaders.MAP_REGION_DECODER.method4430(-955165498) != null && (!client.aBool7344 || (1310510077 * Class506.anInt5858 & 0x40) != 0)) {
 				int i_20_ = -1;
 				int i_21_ = -1;
 				float f = (2.0F * (float) i_18_ / (float) (Class20.anInt176 * -2026336709) - 1.0F);
@@ -454,24 +454,24 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 					i_20_ = i_32_ + (Class84.myPlayer.method15805(828768449) - 1 << 8) >> 9;
 					i_21_ = i_33_ + (Class84.myPlayer.method15805(828768449) - 1 << 8) >> 9;
 					int i_34_ = Class84.myPlayer.aByte7967;
-					if (i_34_ < 3 && ((client.aClass257_7353.method4433(33386298).aByteArrayArrayArray3638[1][i_32_ >> 9][i_33_ >> 9]) & 0x2) != 0)
+					if (i_34_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).aByteArrayArrayArray3638[1][i_32_ >> 9][i_33_ >> 9]) & 0x2) != 0)
 						i_34_++;
 				}
 				if (-1 != i_20_ && i_21_ != -1) {
 					if (client.aBool7344 && 0 != (1310510077 * Class506.anInt5858 & 0x40)) {
 						Class118 class118 = Index.method5694(Class7.anInt56 * 728544879, (client.anInt7345 * -1673073865), -649580549);
 						if (class118 != null)
-							PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(" ").append(Class2.aString17).append(" ").toString(), (Class519.anInt5932 * -239192305), 59, -1, 0L, i_20_, i_21_, true, false, (long) (i_20_ << 32 | i_21_), true, -1546030291);
+							PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(" ").append(Class2.aString17).append(" ").toString(), (Defaults8Loader.anInt5932 * -239192305), 59, -1, 0L, i_20_, i_21_, true, false, (long) (i_20_ << 32 | i_21_), true, -1546030291);
 						else
 							Class60.method1170(-609337146);
 					} else {
 						if (Class96_Sub6.aBool9173)
-							PlayerAppearance.method4032((Message.aClass433_5287.translate(Class223.aClass495_2772, -1215623425)), "", -1, 60, -1, 0L, i_20_, i_21_, true, false, (long) (i_20_ << 32 | i_21_), true, -1333249112);
+							PlayerAppearance.method4032((Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1215623425)), "", -1, 60, -1, 0L, i_20_, i_21_, true, false, (long) (i_20_ << 32 | i_21_), true, -1333249112);
 						PlayerAppearance.method4032(Class85.aString817, "", 460745521 * client.anInt7311, 23, -1, 0L, i_20_, i_21_, true, false, (long) (i_20_ << 32 | i_21_), true, -1883599124);
 					}
 				}
 			}
-			Login class284 = client.aClass257_7353.method4430(-1644964406).aClass284_2648;
+			Login class284 = IndexLoaders.MAP_REGION_DECODER.method4430(-1644964406).aClass284_2648;
 			int i_35_ = i;
 			int i_36_ = i_16_;
 			List list = class284.aList3388;
@@ -507,7 +507,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 										int i_45_ = ((int) class385_44_.aFloat4671 - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
 										int i_46_ = ((int) class385_44_.aFloat4673 - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
 										if (i_45_ >= i_41_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_45_ - i_41_ >> 9))) && i_46_ >= i_42_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_46_ - i_42_ >> 9)))) {
-											Class220.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1752430415);
+											WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1752430415);
 											class521_sub1_sub1_sub2_sub2.anInt10375 = (client.cycles * 1977662161);
 										}
 									}
@@ -549,7 +549,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 											int i_58_ = ((int) (class385_57_.aFloat4671) - ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) - 1 << 8));
 											int i_59_ = ((int) (class385_57_.aFloat4673) - (((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505) - 1 << 8));
 											if (i_58_ >= i_53_ && ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_58_ - i_53_ >> 9))) && i_59_ >= i_54_ && ((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505 <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_59_ - i_54_ >> 9)))) {
-												Class220.method3736(class521_sub1_sub1_sub2_sub2_56_, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1644654446);
+												WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2_56_, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1644654446);
 												class521_sub1_sub1_sub2_sub2_56_.anInt10375 = (1977662161 * client.cycles);
 											}
 										}
@@ -572,7 +572,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 							}
 							if ((class521_sub1_sub1_sub2_sub2.anInt10375 * 717008059) == -1809259861 * client.cycles)
 								continue;
-							Class220.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != class285.aClass521_Sub1_3391.aByte7967), 1776503457);
+							WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != class285.aClass521_Sub1_3391.aByte7967), 1776503457);
 							class521_sub1_sub1_sub2_sub2.anInt10375 = client.cycles * 1977662161;
 						}
 					}
@@ -589,13 +589,13 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 								if (class425.aBool5101)
 									i_68_ = class425.anInt5102 * 712312847;
 								else if (class425.members)
-									i_68_ = -1519092215 * (Class149_Sub2.aClass511_9314.anInt5880);
+									i_68_ = -1519092215 * (Class149_Sub2.DEFAULTS_LOADER_7.anInt5880);
 								else
-									i_68_ = 725268415 * (Class149_Sub2.aClass511_9314.anInt5881);
+									i_68_ = 725268415 * (Class149_Sub2.DEFAULTS_LOADER_7.anInt5881);
 								if (client.aBool7344 && ((Class84.myPlayer.aByte7967) == (class285.aClass521_Sub1_3391.aByte7967))) {
-									AttributeDefault class437 = ((Class96_Sub12.anInt9319 * -1605351655) != -1 ? (Class125.aClass424_1573.method7069((-1605351655 * Class96_Sub12.anInt9319), (byte) 0)) : null);
+									AttributeDefault class437 = ((Class96_Sub12.anInt9319 * -1605351655) != -1 ? (IndexLoaders.ITEM_DEFAULTS.method7069((-1605351655 * Class96_Sub12.anInt9319), (byte) 0)) : null);
 									if ((Class506.anInt5858 * 1310510077 & 0x1) != 0 && (null == class437 || ((class425.method7099((Class96_Sub12.anInt9319 * -1605351655), (-1741480635 * class437.anInt5337), -1083542144)) != (class437.anInt5337 * -1741480635))))
-										PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(i_68_, 619010179)).append(class425.aString5043).toString(), Class519.anInt5932 * -239192305, 17, -1, (long) (class282_sub34.anInt7853 * 1964309863), i_38_, i_39_, true, false, (long) i_67_, false, -1634636602);
+										PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(i_68_, 619010179)).append(class425.aString5043).toString(), Defaults8Loader.anInt5932 * -239192305, 17, -1, (long) (class282_sub34.anInt7853 * 1964309863), i_38_, i_39_, true, false, (long) i_67_, false, -1634636602);
 								}
 								if (class285.aClass521_Sub1_3391.aByte7967 == (Class84.myPlayer.aByte7967)) {
 									String[] strings = class425.groundOptions;
@@ -630,17 +630,17 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 					}
 					if (class285.aClass521_Sub1_3391 instanceof Interface12) {
 						Interface12 interface12 = (Interface12) class285.aClass521_Sub1_3391;
-						Class478 class478 = (client.aClass257_7353.method4436(-1539469212).method7891(interface12.method84(2000772127), 65280));
+						ObjectDefinitions class478 = (IndexLoaders.MAP_REGION_DECODER.method4436(-1539469212).getObjectDefinitions(interface12.method84(2000772127), 65280));
 						if (null != class478.anIntArray5650)
 							class478 = class478.method8013((Class158_Sub1.aClass3_8507), (byte) 107);
 						if (null != class478) {
 							if (client.aBool7344 && (class285.aClass521_Sub1_3391.aByte7967 == (Class84.myPlayer.aByte7967))) {
-								AttributeDefault class437 = (-1 != (-1605351655 * Class96_Sub12.anInt9319) ? (Class125.aClass424_1573.method7069((Class96_Sub12.anInt9319 * -1605351655), (byte) 0)) : null);
+								AttributeDefault class437 = (-1 != (-1605351655 * Class96_Sub12.anInt9319) ? (IndexLoaders.ITEM_DEFAULTS.method7069((Class96_Sub12.anInt9319 * -1605351655), (byte) 0)) : null);
 								if (0 != (1310510077 * Class506.anInt5858 & 0x4) && (class437 == null || ((class478.method7963((Class96_Sub12.anInt9319 * -1605351655), -1741480635 * class437.anInt5337, -2052450472)) != (-1741480635 * class437.anInt5337))))
-									PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(65535, 619010179)).append(class478.aString5638).toString(), Class519.anInt5932 * -239192305, 2, -1, Class329.method5905(interface12, i_38_, i_39_, (byte) -79), i_38_, i_39_, true, false, (long) interface12.hashCode(), false, -2015227666);
+									PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(65535, 619010179)).append(class478.aString5638).toString(), Defaults8Loader.anInt5932 * -239192305, 2, -1, Class329.method5905(interface12, i_38_, i_39_, (byte) -79), i_38_, i_39_, true, false, (long) interface12.hashCode(), false, -2015227666);
 							}
 							if (class285.aClass521_Sub1_3391.aByte7967 == (Class84.myPlayer.aByte7967)) {
-								String[] strings = class478.aStringArray5647;
+								String[] strings = class478.options;
 								if (null != strings) {
 									for (int i_72_ = strings.length - 1; i_72_ >= 0; i_72_--) {
 										if (strings[i_72_] != null) {

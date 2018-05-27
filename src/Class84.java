@@ -52,7 +52,7 @@ public class Class84 {
 			Class499.method8333(i_4_, 1768744786);
 			client.anIntArray7379[(client.anInt7453 += 1195975743) * 1129368511 - 1 & 0x1f] = i_4_;
 		}
-		for (Class282_Sub50_Sub12 class282_sub50_sub12 = Class478.method8022(-54255165); class282_sub50_sub12 != null; class282_sub50_sub12 = Class478.method8022(153366181)) {
+		for (Class282_Sub50_Sub12 class282_sub50_sub12 = ObjectDefinitions.method8022(-54255165); class282_sub50_sub12 != null; class282_sub50_sub12 = ObjectDefinitions.method8022(153366181)) {
 			int i_5_ = class282_sub50_sub12.method14953(701484568);
 			long l = class282_sub50_sub12.method14967(1056683905);
 			if (1 == i_5_) {
@@ -197,6 +197,6 @@ public class Class84 {
 	}
 
 	static boolean method1465(int i) {
-		return Class86.method1481(Class149_Sub2.aClass511_9314.aClass232_5873, (byte) -3);
+		return Class86.method1481(Class149_Sub2.DEFAULTS_LOADER_7.aClass232_5873, (byte) -3);
 	}
 }

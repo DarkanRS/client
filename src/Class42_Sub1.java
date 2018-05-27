@@ -39,7 +39,7 @@ public class Class42_Sub1 extends Class42 {
 
 	static final void method14562(int i) {
 		Class414.method6989(1407669515);
-		client.aClass257_7353.method4485(-617728645);
+		IndexLoaders.MAP_REGION_DECODER.method4485(-617728645);
 		for (int i_5_ = 0; i_5_ < client.aClass180Array7348.length; i_5_++)
 			client.aClass180Array7348[i_5_] = null;
 		for (int i_6_ = 0; i_6_ < client.aClass281Array7180.length; i_6_++)
@@ -67,6 +67,6 @@ public class Class42_Sub1 extends Class42 {
 	static void method14563(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2, short i) {
 		Class320.aClass253_3723.method4329(class282_sub15_sub2);
 		if (bool)
-			SharedConfigsType.method2084(Class211.aClass317_2674, JS5LocalRequester.aClass317_3665, Class219.aClass317_2714, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+			SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
 	}
 }

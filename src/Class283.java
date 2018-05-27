@@ -9,7 +9,7 @@ public class Class283 {
 	public static int anInt3384;
 
 	public static Class283 method5005(Index class317, String string, boolean bool) {
-		int i = class317.method5610(string, 1601632799);
+		int i = class317.getArchiveId(string, 1601632799);
 		if (-1 == i)
 			return new Class283(0);
 		int[] is = class317.method5616(i, -1665281400);
@@ -32,7 +32,7 @@ public class Class283 {
 	}
 
 	public static Class283 method5006(Index class317, String string, boolean bool) {
-		int i = class317.method5610(string, -1721859945);
+		int i = class317.getArchiveId(string, -1721859945);
 		if (-1 == i)
 			return new Class283(0);
 		int[] is = class317.method5616(i, -1814676381);
@@ -61,7 +61,7 @@ public class Class283 {
 	}
 
 	public static Class283 method5007(Index class317, String string, boolean bool) {
-		int i = class317.method5610(string, 1416579061);
+		int i = class317.getArchiveId(string, 1416579061);
 		if (-1 == i)
 			return new Class283(0);
 		int[] is = class317.method5616(i, -731838186);
@@ -87,7 +87,7 @@ public class Class283 {
 		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class524.method11223(class118, class98, class527, 4317906);
+		DefaultsFile.method11223(class118, class98, class527, 4317906);
 	}
 
 	static final void method5009(Class118 class118, Class98 class98, CS2Executor class527, int i) {

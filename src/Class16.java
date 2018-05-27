@@ -15,8 +15,7 @@ public class Class16 {
 	public static FontRenderer aClass8_144;
 	static NativeSprite[] aClass160Array145;
 	static NativeSprite aClass160_146;
-	public static Class230 aClass230_147;
-
+	
 	static void method551() {
 		Renderers.FONT_RENDERER = null;
 		aClass8_144 = null;
@@ -35,45 +34,45 @@ public class Class16 {
 	}
 
 	public static void method552(Index class317) {
-		anInt140 = class317.method5610("p11_full", 1424101193) * 1669464149;
-		anInt136 = class317.method5610("p12_full", -1601885459) * 1957167017;
-		Class395.anInt4788 = class317.method5610("b12_full", 977480910) * 2033224767;
+		anInt140 = class317.getArchiveId("p11_full", 1424101193) * 1669464149;
+		anInt136 = class317.getArchiveId("p12_full", -1601885459) * 1957167017;
+		Class395.anInt4788 = class317.getArchiveId("b12_full", 977480910) * 2033224767;
 	}
 
 	public static void method553(Index class317) {
-		anInt140 = class317.method5610("p11_full", -3590070) * 1669464149;
-		anInt136 = class317.method5610("p12_full", -672134768) * 1957167017;
-		Class395.anInt4788 = class317.method5610("b12_full", 1362144243) * 2033224767;
+		anInt140 = class317.getArchiveId("p11_full", -3590070) * 1669464149;
+		anInt136 = class317.getArchiveId("p12_full", -672134768) * 1957167017;
+		Class395.anInt4788 = class317.getArchiveId("b12_full", 1362144243) * 2033224767;
 	}
 
 	public static void method554(Index class317) {
-		Class165.anInt2035 = class317.method5610("headicons_pk", -256479951) * -821889283;
-		Class475.anInt5622 = class317.method5610("headicons_prayer", -4006419) * -2055869675;
-		anInt135 = class317.method5610("hint_headicons", -1105434129) * -1041729095;
-		anInt142 = class317.method5610("hint_mapmarkers", -1281941584) * 850992921;
-		anInt137 = class317.method5610("mapflag", -884587844) * 1055165697;
-		Class468_Sub12.anInt7899 = class317.method5610("cross", 1623210615) * 395125199;
-		Class13.anInt130 = class317.method5610("mapdots", -1181828372) * 453785251;
-		anInt143 = class317.method5610("name_icons", -748362572) * -715854365;
-		Class400.anInt4821 = class317.method5610("floorshadows", 150016034) * 237532063;
-		anInt141 = class317.method5610("compass", -1908315760) * 1354470119;
-		Class165.anInt2037 = class317.method5610("otherlevel", 334034203) * -1341930679;
-		Class271.anInt3330 = class317.method5610("hint_mapedge", -1117715217) * 1834682789;
+		Class165.anInt2035 = class317.getArchiveId("headicons_pk", -256479951) * -821889283;
+		Class475.anInt5622 = class317.getArchiveId("headicons_prayer", -4006419) * -2055869675;
+		anInt135 = class317.getArchiveId("hint_headicons", -1105434129) * -1041729095;
+		anInt142 = class317.getArchiveId("hint_mapmarkers", -1281941584) * 850992921;
+		anInt137 = class317.getArchiveId("mapflag", -884587844) * 1055165697;
+		Class468_Sub12.anInt7899 = class317.getArchiveId("cross", 1623210615) * 395125199;
+		Class13.anInt130 = class317.getArchiveId("mapdots", -1181828372) * 453785251;
+		anInt143 = class317.getArchiveId("name_icons", -748362572) * -715854365;
+		Class400.anInt4821 = class317.getArchiveId("floorshadows", 150016034) * 237532063;
+		anInt141 = class317.getArchiveId("compass", -1908315760) * 1354470119;
+		Class165.anInt2037 = class317.getArchiveId("otherlevel", 334034203) * -1341930679;
+		Class271.anInt3330 = class317.getArchiveId("hint_mapedge", -1117715217) * 1834682789;
 	}
 
 	public static void method555(Index class317) {
-		Class165.anInt2035 = class317.method5610("headicons_pk", -446486826) * -821889283;
-		Class475.anInt5622 = class317.method5610("headicons_prayer", -1005116812) * -2055869675;
-		anInt135 = class317.method5610("hint_headicons", -275215677) * -1041729095;
-		anInt142 = class317.method5610("hint_mapmarkers", -1074565286) * 850992921;
-		anInt137 = class317.method5610("mapflag", 1353344209) * 1055165697;
-		Class468_Sub12.anInt7899 = class317.method5610("cross", 60241021) * 395125199;
-		Class13.anInt130 = class317.method5610("mapdots", 723928588) * 453785251;
-		anInt143 = class317.method5610("name_icons", -2032050644) * -715854365;
-		Class400.anInt4821 = class317.method5610("floorshadows", -1312465905) * 237532063;
-		anInt141 = class317.method5610("compass", -1239782843) * 1354470119;
-		Class165.anInt2037 = class317.method5610("otherlevel", -841677680) * -1341930679;
-		Class271.anInt3330 = class317.method5610("hint_mapedge", 552476645) * 1834682789;
+		Class165.anInt2035 = class317.getArchiveId("headicons_pk", -446486826) * -821889283;
+		Class475.anInt5622 = class317.getArchiveId("headicons_prayer", -1005116812) * -2055869675;
+		anInt135 = class317.getArchiveId("hint_headicons", -275215677) * -1041729095;
+		anInt142 = class317.getArchiveId("hint_mapmarkers", -1074565286) * 850992921;
+		anInt137 = class317.getArchiveId("mapflag", 1353344209) * 1055165697;
+		Class468_Sub12.anInt7899 = class317.getArchiveId("cross", 60241021) * 395125199;
+		Class13.anInt130 = class317.getArchiveId("mapdots", 723928588) * 453785251;
+		anInt143 = class317.getArchiveId("name_icons", -2032050644) * -715854365;
+		Class400.anInt4821 = class317.getArchiveId("floorshadows", -1312465905) * 237532063;
+		anInt141 = class317.getArchiveId("compass", -1239782843) * 1354470119;
+		Class165.anInt2037 = class317.getArchiveId("otherlevel", -841677680) * -1341930679;
+		Class271.anInt3330 = class317.getArchiveId("hint_mapedge", 552476645) * 1834682789;
 	}
 
 	public static int[] method556() {
@@ -293,7 +292,7 @@ public class Class16 {
 	public static final void method567(String string, boolean bool, byte i) {
 		if (string != null) {
 			if (client.anInt7373 * -1754449153 >= 100)
-				Class387.method6681(4, (Message.aClass433_5289.translate(Class223.aClass495_2772, -927458536)), (byte) 0);
+				LoadingStage.method6681(4, (Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE, -927458536)), (byte) 0);
 			else {
 				String string_9_ = Class383.method6515(string, 1942118537);
 				if (null != string_9_) {
@@ -301,13 +300,13 @@ public class Class16 {
 						Class10 class10 = client.aClass10Array7456[i_10_];
 						String string_11_ = Class383.method6515(class10.aString115, 1942118537);
 						if (string_11_ != null && string_11_.equals(string_9_)) {
-							Class387.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate(Class223.aClass495_2772, -794034411)).toString(), (byte) 6);
+							LoadingStage.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -794034411)).toString(), (byte) 6);
 							return;
 						}
 						if (class10.aString116 != null) {
 							String string_12_ = Class383.method6515(class10.aString116, 1942118537);
 							if (null != string_12_ && string_12_.equals(string_9_)) {
-								Class387.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate((Class223.aClass495_2772), -1228902826)).toString(), (byte) 24);
+								LoadingStage.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate((Class223.CURRENT_LANGUAGE), -1228902826)).toString(), (byte) 24);
 								return;
 							}
 						}
@@ -316,19 +315,19 @@ public class Class16 {
 						Class6 class6 = client.aClass6Array7452[i_13_];
 						String string_14_ = Class383.method6515(class6.aString37, 1942118537);
 						if (null != string_14_ && string_14_.equals(string_9_)) {
-							Class387.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.aClass495_2772, -1154046234)).append(string).append(Message.aClass433_5192.translate(Class223.aClass495_2772, -627858057)).toString(), (byte) 53);
+							LoadingStage.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1154046234)).append(string).append(Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -627858057)).toString(), (byte) 53);
 							return;
 						}
 						if (null != class6.aString43) {
 							String string_15_ = Class383.method6515(class6.aString43, 1942118537);
 							if (string_15_ != null && string_15_.equals(string_9_)) {
-								Class387.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.aClass495_2772, -1770440532)).append(string).append(Message.aClass433_5192.translate(Class223.aClass495_2772, -695950851)).toString(), (byte) 47);
+								LoadingStage.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1770440532)).append(string).append(Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -695950851)).toString(), (byte) 47);
 								return;
 							}
 						}
 					}
 					if (Class383.method6515((Class84.myPlayer.displayName), 1942118537).equals(string_9_))
-						Class387.method6681(4, (Message.aClass433_5238.translate(Class223.aClass495_2772, -1399059410)), (byte) -31);
+						LoadingStage.method6681(4, (Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410)), (byte) -31);
 					else {
 						Class184 class184 = Class468_Sub20.method12807(1039135585);
 						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4578, class184.aClass432_2283, 732263274);

@@ -97,7 +97,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class290.anInt3451 = i_6_ * -172911177;
 		Class514.anInt5887 = 1182973571 * i;
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_7_;
-		Class392.anInt4781 = 122429149 * i_8_;
+		InventoriesIndexLoader.anInt4781 = 122429149 * i_8_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		Class108.aString1093 = "1.1";
 		try {
@@ -414,19 +414,19 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	void method4663(Container container, int i) {
 		container.setBackground(Color.black);
 		container.setLayout(null);
-		container.add(Class351.aCanvas4096);
-		Class351.aCanvas4096.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
-		Class351.aCanvas4096.setVisible(true);
+		container.add(Class351.LOAD_CANVAS);
+		Class351.LOAD_CANVAS.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
+		Class351.LOAD_CANVAS.setVisible(true);
 		if (container == aFrame3261) {
 			Insets insets = aFrame3261.getInsets();
-			Class351.aCanvas4096.setLocation((insets.left + anInt3250 * -1911940837), (insets.top + 698621615 * anInt3251));
+			Class351.LOAD_CANVAS.setLocation((insets.left + anInt3250 * -1911940837), (insets.top + 698621615 * anInt3251));
 		} else
-			Class351.aCanvas4096.setLocation(-1911940837 * anInt3250, 698621615 * anInt3251);
-		Class351.aCanvas4096.addFocusListener(this);
-		Class351.aCanvas4096.requestFocus();
+			Class351.LOAD_CANVAS.setLocation(-1911940837 * anInt3250, 698621615 * anInt3251);
+		Class351.LOAD_CANVAS.addFocusListener(this);
+		Class351.LOAD_CANVAS.requestFocus();
 		Class530.aBool7050 = true;
 		aBool3275 = true;
-		Class351.aCanvas4096.setFocusTraversalKeysEnabled(false);
+		Class351.LOAD_CANVAS.setFocusTraversalKeysEnabled(false);
 		aBool3274 = true;
 		aBool3257 = false;
 		aLong3280 = Class169.method2869(2040905349) * 3757206876099985283L;
@@ -511,13 +511,13 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		if ((anInt3256 += -866862289) * 650144719 - 1 > 50) {
 			anInt3256 -= -393441490;
 			aBool3274 = true;
-			Class351.aCanvas4096.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
-			Class351.aCanvas4096.setVisible(true);
+			Class351.LOAD_CANVAS.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
+			Class351.LOAD_CANVAS.setVisible(true);
 			if (aFrame3261 != null && null == aFrame3260) {
 				Insets insets = aFrame3261.getInsets();
-				Class351.aCanvas4096.setLocation((insets.left + anInt3250 * -1911940837), (698621615 * anInt3251 + insets.top));
+				Class351.LOAD_CANVAS.setLocation((insets.left + anInt3250 * -1911940837), (698621615 * anInt3251 + insets.top));
 			} else
-				Class351.aCanvas4096.setLocation(anInt3250 * -1911940837, 698621615 * anInt3251);
+				Class351.LOAD_CANVAS.setLocation(anInt3250 * -1911940837, 698621615 * anInt3251);
 		}
 		method4678(-2093077702);
 	}
@@ -535,7 +535,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class290.anInt3451 = i_50_ * -172911177;
 		Class514.anInt5887 = 1182973571 * i;
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_51_;
-		Class392.anInt4781 = 122429149 * i_52_;
+		InventoriesIndexLoader.anInt4781 = 122429149 * i_52_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		Class108.aString1093 = "1.1";
 		try {
@@ -644,10 +644,10 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	}
 
 	void method4672() {
-		if (Class351.aCanvas4096 != null) {
-			Class351.aCanvas4096.removeFocusListener(this);
-			Class351.aCanvas4096.getParent().setBackground(Color.black);
-			Class351.aCanvas4096.getParent().remove(Class351.aCanvas4096);
+		if (Class351.LOAD_CANVAS != null) {
+			Class351.LOAD_CANVAS.removeFocusListener(this);
+			Class351.LOAD_CANVAS.getParent().setBackground(Color.black);
+			Class351.LOAD_CANVAS.getParent().remove(Class351.LOAD_CANVAS);
 		}
 	}
 
@@ -830,10 +830,10 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class156.method2645(true, 985239898);
 		if (Class187.method3118((byte) 80))
 			Class362.method6278(616047582).method219(1291104911);
-		if (Class351.aCanvas4096 != null) {
+		if (Class351.LOAD_CANVAS != null) {
 			try {
-				Class351.aCanvas4096.removeFocusListener(this);
-				Class351.aCanvas4096.getParent().remove(Class351.aCanvas4096);
+				Class351.LOAD_CANVAS.removeFocusListener(this);
+				Class351.LOAD_CANVAS.getParent().remove(Class351.LOAD_CANVAS);
 			} catch (Exception exception) {
 				/* empty */
 			}
@@ -986,7 +986,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class290.anInt3451 = i_77_ * -172911177;
 		Class514.anInt5887 = 1182973571 * i;
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_78_;
-		Class392.anInt4781 = 122429149 * i_79_;
+		InventoriesIndexLoader.anInt4781 = 122429149 * i_79_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		Class108.aString1093 = "1.1";
 		try {
@@ -1106,7 +1106,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class290.anInt3451 = i_87_ * -172911177;
 		Class514.anInt5887 = 1182973571 * i;
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_88_;
-		Class392.anInt4781 = 122429149 * i_89_;
+		InventoriesIndexLoader.anInt4781 = 122429149 * i_89_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		Class108.aString1093 = "1.1";
 		try {
@@ -1205,7 +1205,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class290.anInt3451 = i_97_ * -172911177;
 		Class514.anInt5887 = 1182973571 * i;
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_98_;
-		Class392.anInt4781 = 122429149 * i_99_;
+		InventoriesIndexLoader.anInt4781 = 122429149 * i_99_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		Class108.aString1093 = "1.1";
 		try {
@@ -1470,7 +1470,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class290.anInt3451 = i_123_ * -172911177;
 		Class514.anInt5887 = 1182973571 * i;
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_124_;
-		Class392.anInt4781 = 122429149 * i_125_;
+		InventoriesIndexLoader.anInt4781 = 122429149 * i_125_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
 		Class108.aString1093 = "1.1";
 		try {
@@ -1568,7 +1568,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	synchronized void method4704(int i) {
 		method4729((byte) 23);
 		Container container = Class371.method6354((byte) 1);
-		Class351.aCanvas4096 = new Canvas_Sub1(container);
+		Class351.LOAD_CANVAS = new Canvas_Sub1(container);
 		method4663(container, 135642590);
 	}
 
@@ -1841,7 +1841,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	synchronized void method4719() {
 		method4729((byte) 23);
 		Container container = Class371.method6354((byte) 1);
-		Class351.aCanvas4096 = new Canvas_Sub1(container);
+		Class351.LOAD_CANVAS = new Canvas_Sub1(container);
 		method4663(container, 884378609);
 	}
 
@@ -1866,7 +1866,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	synchronized void method4721() {
 		method4729((byte) 23);
 		Container container = Class371.method6354((byte) 1);
-		Class351.aCanvas4096 = new Canvas_Sub1(container);
+		Class351.LOAD_CANVAS = new Canvas_Sub1(container);
 		method4663(container, 787556375);
 	}
 
@@ -1889,19 +1889,19 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	void method4724(Container container) {
 		container.setBackground(Color.black);
 		container.setLayout(null);
-		container.add(Class351.aCanvas4096);
-		Class351.aCanvas4096.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
-		Class351.aCanvas4096.setVisible(true);
+		container.add(Class351.LOAD_CANVAS);
+		Class351.LOAD_CANVAS.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
+		Class351.LOAD_CANVAS.setVisible(true);
 		if (container == aFrame3261) {
 			Insets insets = aFrame3261.getInsets();
-			Class351.aCanvas4096.setLocation((insets.left + anInt3250 * -1911940837), (insets.top + 698621615 * anInt3251));
+			Class351.LOAD_CANVAS.setLocation((insets.left + anInt3250 * -1911940837), (insets.top + 698621615 * anInt3251));
 		} else
-			Class351.aCanvas4096.setLocation(-1911940837 * anInt3250, 698621615 * anInt3251);
-		Class351.aCanvas4096.addFocusListener(this);
-		Class351.aCanvas4096.requestFocus();
+			Class351.LOAD_CANVAS.setLocation(-1911940837 * anInt3250, 698621615 * anInt3251);
+		Class351.LOAD_CANVAS.addFocusListener(this);
+		Class351.LOAD_CANVAS.requestFocus();
 		Class530.aBool7050 = true;
 		aBool3275 = true;
-		Class351.aCanvas4096.setFocusTraversalKeysEnabled(false);
+		Class351.LOAD_CANVAS.setFocusTraversalKeysEnabled(false);
 		aBool3274 = true;
 		aBool3257 = false;
 		aLong3280 = Class169.method2869(1961121371) * 3757206876099985283L;
@@ -1948,10 +1948,10 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	}
 
 	void method4726() {
-		if (Class351.aCanvas4096 != null) {
-			Class351.aCanvas4096.removeFocusListener(this);
-			Class351.aCanvas4096.getParent().setBackground(Color.black);
-			Class351.aCanvas4096.getParent().remove(Class351.aCanvas4096);
+		if (Class351.LOAD_CANVAS != null) {
+			Class351.LOAD_CANVAS.removeFocusListener(this);
+			Class351.LOAD_CANVAS.getParent().setBackground(Color.black);
+			Class351.LOAD_CANVAS.getParent().remove(Class351.LOAD_CANVAS);
 		}
 	}
 
@@ -1981,10 +1981,10 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	}
 
 	void method4729(byte i) {
-		if (Class351.aCanvas4096 != null) {
-			Class351.aCanvas4096.removeFocusListener(this);
-			Class351.aCanvas4096.getParent().setBackground(Color.black);
-			Class351.aCanvas4096.getParent().remove(Class351.aCanvas4096);
+		if (Class351.LOAD_CANVAS != null) {
+			Class351.LOAD_CANVAS.removeFocusListener(this);
+			Class351.LOAD_CANVAS.getParent().setBackground(Color.black);
+			Class351.LOAD_CANVAS.getParent().remove(Class351.LOAD_CANVAS);
 		}
 	}
 
@@ -2107,10 +2107,10 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		Class156.method2645(true, 985239898);
 		if (Class187.method3118((byte) 14))
 			Class362.method6278(616047582).method219(1145130372);
-		if (Class351.aCanvas4096 != null) {
+		if (Class351.LOAD_CANVAS != null) {
 			try {
-				Class351.aCanvas4096.removeFocusListener(this);
-				Class351.aCanvas4096.getParent().remove(Class351.aCanvas4096);
+				Class351.LOAD_CANVAS.removeFocusListener(this);
+				Class351.LOAD_CANVAS.getParent().remove(Class351.LOAD_CANVAS);
 			} catch (Exception exception) {
 				/* empty */
 			}
@@ -2143,19 +2143,19 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	void method4743(Container container) {
 		container.setBackground(Color.black);
 		container.setLayout(null);
-		container.add(Class351.aCanvas4096);
-		Class351.aCanvas4096.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
-		Class351.aCanvas4096.setVisible(true);
+		container.add(Class351.LOAD_CANVAS);
+		Class351.LOAD_CANVAS.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
+		Class351.LOAD_CANVAS.setVisible(true);
 		if (container == aFrame3261) {
 			Insets insets = aFrame3261.getInsets();
-			Class351.aCanvas4096.setLocation((insets.left + anInt3250 * -1911940837), (insets.top + 698621615 * anInt3251));
+			Class351.LOAD_CANVAS.setLocation((insets.left + anInt3250 * -1911940837), (insets.top + 698621615 * anInt3251));
 		} else
-			Class351.aCanvas4096.setLocation(-1911940837 * anInt3250, 698621615 * anInt3251);
-		Class351.aCanvas4096.addFocusListener(this);
-		Class351.aCanvas4096.requestFocus();
+			Class351.LOAD_CANVAS.setLocation(-1911940837 * anInt3250, 698621615 * anInt3251);
+		Class351.LOAD_CANVAS.addFocusListener(this);
+		Class351.LOAD_CANVAS.requestFocus();
 		Class530.aBool7050 = true;
 		aBool3275 = true;
-		Class351.aCanvas4096.setFocusTraversalKeysEnabled(false);
+		Class351.LOAD_CANVAS.setFocusTraversalKeysEnabled(false);
 		aBool3274 = true;
 		aBool3257 = false;
 		aLong3280 = Class169.method2869(2045346650) * 3757206876099985283L;
@@ -2243,13 +2243,13 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 		if ((anInt3256 += -866862289) * 650144719 - 1 > 50) {
 			anInt3256 -= -393441490;
 			aBool3274 = true;
-			Class351.aCanvas4096.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
-			Class351.aCanvas4096.setVisible(true);
+			Class351.LOAD_CANVAS.setSize(Class349.anInt4083 * -418109423, -969250379 * anInt3243);
+			Class351.LOAD_CANVAS.setVisible(true);
 			if (aFrame3261 != null && null == aFrame3260) {
 				Insets insets = aFrame3261.getInsets();
-				Class351.aCanvas4096.setLocation((insets.left + anInt3250 * -1911940837), (698621615 * anInt3251 + insets.top));
+				Class351.LOAD_CANVAS.setLocation((insets.left + anInt3250 * -1911940837), (698621615 * anInt3251 + insets.top));
 			} else
-				Class351.aCanvas4096.setLocation(anInt3250 * -1911940837, 698621615 * anInt3251);
+				Class351.LOAD_CANVAS.setLocation(anInt3250 * -1911940837, 698621615 * anInt3251);
 		}
 		method4678(-2093077702);
 	}
@@ -2287,7 +2287,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 			for (int i_158_ = 0; i_158_ < anInt3279 * 865486997; i_158_++)
 				method4667(981410915);
 			method4668(-1781025052);
-			Class282_Sub20_Sub27.method15395(Class351.aCanvas4096, -859332556);
+			Class282_Sub20_Sub27.method15395(Class351.LOAD_CANVAS, -859332556);
 		}
 	}
 
@@ -2308,7 +2308,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	synchronized void method4747() {
 		method4729((byte) 23);
 		Container container = Class371.method6354((byte) 1);
-		Class351.aCanvas4096 = new Canvas_Sub1(container);
+		Class351.LOAD_CANVAS = new Canvas_Sub1(container);
 		method4663(container, 1691604047);
 	}
 
@@ -2332,10 +2332,10 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 	}
 
 	void method4749() {
-		if (Class351.aCanvas4096 != null) {
-			Class351.aCanvas4096.removeFocusListener(this);
-			Class351.aCanvas4096.getParent().setBackground(Color.black);
-			Class351.aCanvas4096.getParent().remove(Class351.aCanvas4096);
+		if (Class351.LOAD_CANVAS != null) {
+			Class351.LOAD_CANVAS.removeFocusListener(this);
+			Class351.LOAD_CANVAS.getParent().setBackground(Color.black);
+			Class351.LOAD_CANVAS.getParent().remove(Class351.LOAD_CANVAS);
 		}
 	}
 
@@ -2420,7 +2420,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 
 	public static final void method4763(int i, String string, Color color, Color color_161_, Color color_162_) {
 		try {
-			Graphics graphics = Class351.aCanvas4096.getGraphics();
+			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
 			if (null == Class515.aFont5893)
 				Class515.aFont5893 = new Font("Helvetica", 1, 13);
 			if (color == null)
@@ -2431,7 +2431,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 				color_162_ = new Color(255, 255, 255);
 			try {
 				if (OutputStream_Sub1.anImage7953 == null)
-					OutputStream_Sub1.anImage7953 = Class351.aCanvas4096.createImage((-418109423 * (Class349.anInt4083)), (-969250379 * anInt3243));
+					OutputStream_Sub1.anImage7953 = Class351.LOAD_CANVAS.createImage((-418109423 * (Class349.anInt4083)), (-969250379 * anInt3243));
 				Graphics graphics_163_ = OutputStream_Sub1.anImage7953.getGraphics();
 				graphics_163_.setColor(Color.black);
 				graphics_163_.fillRect(0, 0, Class349.anInt4083 * -418109423, -969250379 * anInt3243);
@@ -2475,7 +2475,7 @@ public abstract class Class263 implements Interface24, Runnable, FocusListener, 
 				graphics.drawString(string, i_166_ + (304 - string.length() * 6) / 2, 22 + i_167_);
 			}
 		} catch (Exception exception) {
-			Class351.aCanvas4096.repaint();
+			Class351.LOAD_CANVAS.repaint();
 		}
 	}
 

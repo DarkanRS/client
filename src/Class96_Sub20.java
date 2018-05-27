@@ -5,8 +5,7 @@
 public class Class96_Sub20 extends Class96 {
 	int anInt9414;
 	static RsByteBuffer aClass282_Sub35_9415;
-	public static Class515 aClass515_9416;
-
+	
 	public void method1601() {
 		Class82.aClass75Array804[1703207571 * ((Class96_Sub20) this).anInt9414].method1337(1434043760);
 	}

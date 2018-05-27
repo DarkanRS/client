@@ -6,8 +6,7 @@ public class Class215 implements Interface17 {
 	int anInt2683;
 	int anInt2684;
 	int[] anIntArray2685;
-	public static Index aClass317_2686;
-
+	
 	Class215(int i, int i_0_, int[] is) {
 		((Class215) this).anInt2683 = i * 985045531;
 		((Class215) this).anInt2684 = i_0_ * 1924060881;
@@ -124,7 +123,7 @@ public class Class215 implements Interface17 {
 		int i_20_ = -1;
 		String string_21_ = null;
 		if (-1 != i) {
-			AttributeDefault class437 = Class125.aClass424_1573.method7069(i, (byte) 0);
+			AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i, (byte) 0);
 			if (class437 == null || class437.method7319(1591846177) != bool_18_)
 				return;
 			if (class437.method7319(1882298499))

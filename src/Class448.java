@@ -25,7 +25,7 @@ public class Class448 {
 			aClass217_Sub1Array5426 = new Class217_Sub1[Class4.anInt34 * -2043473211];
 			int i = 0;
 			for (int i_0_ = -377428565 * Class485.anInt5740; i_0_ <= Class244.anInt3003 * -860748679; i_0_++) {
-				Class217_Sub1 class217_sub1 = Class474.method7916(i_0_, 2029685957);
+				Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(i_0_, 2029685957);
 				if (null != class217_sub1)
 					aClass217_Sub1Array5426[i++] = class217_sub1;
 			}
@@ -48,7 +48,7 @@ public class Class448 {
 			return i_2_ - i_3_;
 		}
 		if (2 == i)
-			return Class455.method7557((class217_sub1.method13055((short) -10299).aString2679), (class217_sub1_1_.method13055((short) -4460).aString2679), Class223.aClass495_2772, 1341608337);
+			return Class455.method7557((class217_sub1.method13055((short) -10299).aString2679), (class217_sub1_1_.method13055((short) -4460).aString2679), Class223.CURRENT_LANGUAGE, 1341608337);
 		if (3 == i) {
 			if (class217_sub1.aString7977.equals("-")) {
 				if (class217_sub1_1_.aString7977.equals("-"))
@@ -57,7 +57,7 @@ public class Class448 {
 			}
 			if (class217_sub1_1_.aString7977.equals("-"))
 				return bool ? 1 : -1;
-			return Class455.method7557(class217_sub1.aString7977, class217_sub1_1_.aString7977, Class223.aClass495_2772, 1341608337);
+			return Class455.method7557(class217_sub1.aString7977, class217_sub1_1_.aString7977, Class223.CURRENT_LANGUAGE, 1341608337);
 		}
 		if (i == 4)
 			return (class217_sub1.method3683(-1211254734) ? class217_sub1_1_.method3683(-1211254734) ? 0 : 1 : class217_sub1_1_.method3683(-1211254734) ? -1 : 0);
@@ -138,7 +138,7 @@ public class Class448 {
 			aClass217_Sub1Array5426 = new Class217_Sub1[Class4.anInt34 * -2043473211];
 			int i = 0;
 			for (int i_11_ = -377428565 * Class485.anInt5740; i_11_ <= Class244.anInt3003 * -860748679; i_11_++) {
-				Class217_Sub1 class217_sub1 = Class474.method7916(i_11_, 1922989686);
+				Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(i_11_, 1922989686);
 				if (null != class217_sub1)
 					aClass217_Sub1Array5426[i++] = class217_sub1;
 			}
@@ -160,15 +160,15 @@ public class Class448 {
 	}
 
 	public static Class217_Sub1 method7473() {
-		return Class474.method7916((-87869981 * Class159.aClass450_2010.worldId), -753922057);
+		return ObjectIndexLoader.method7916((-87869981 * Class159.aClass450_2010.worldId), -753922057);
 	}
 
 	public static Class217_Sub1 method7474() {
-		return Class474.method7916((-87869981 * Class159.aClass450_2010.worldId), 279031547);
+		return ObjectIndexLoader.method7916((-87869981 * Class159.aClass450_2010.worldId), 279031547);
 	}
 
 	public static Class217_Sub1 method7475() {
-		return Class474.method7916((-87869981 * Class159.aClass450_2010.worldId), 604552783);
+		return ObjectIndexLoader.method7916((-87869981 * Class159.aClass450_2010.worldId), 604552783);
 	}
 
 	public static void method7476(int i, boolean bool, int i_12_, boolean bool_13_) {
@@ -186,7 +186,7 @@ public class Class448 {
 			aClass217_Sub1Array5426 = new Class217_Sub1[Class4.anInt34 * -2043473211];
 			int i = 0;
 			for (int i_14_ = -377428565 * Class485.anInt5740; i_14_ <= Class244.anInt3003 * -860748679; i_14_++) {
-				Class217_Sub1 class217_sub1 = Class474.method7916(i_14_, -1148564437);
+				Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(i_14_, -1148564437);
 				if (null != class217_sub1)
 					aClass217_Sub1Array5426[i++] = class217_sub1;
 			}
@@ -271,7 +271,7 @@ public class Class448 {
 			return i_37_ - i_38_;
 		}
 		if (2 == i)
-			return Class455.method7557((class217_sub1.method13055((short) -27937).aString2679), (class217_sub1_36_.method13055((short) -20577).aString2679), Class223.aClass495_2772, 1341608337);
+			return Class455.method7557((class217_sub1.method13055((short) -27937).aString2679), (class217_sub1_36_.method13055((short) -20577).aString2679), Class223.CURRENT_LANGUAGE, 1341608337);
 		if (3 == i) {
 			if (class217_sub1.aString7977.equals("-")) {
 				if (class217_sub1_36_.aString7977.equals("-"))
@@ -280,7 +280,7 @@ public class Class448 {
 			}
 			if (class217_sub1_36_.aString7977.equals("-"))
 				return bool ? 1 : -1;
-			return Class455.method7557(class217_sub1.aString7977, class217_sub1_36_.aString7977, Class223.aClass495_2772, 1341608337);
+			return Class455.method7557(class217_sub1.aString7977, class217_sub1_36_.aString7977, Class223.CURRENT_LANGUAGE, 1341608337);
 		}
 		if (i == 4)
 			return (class217_sub1.method3683(-1211254734) ? class217_sub1_36_.method3683(-1211254734) ? 0 : 1 : class217_sub1_36_.method3683(-1211254734) ? -1 : 0);
@@ -328,7 +328,7 @@ public class Class448 {
 			return i_44_ - i_45_;
 		}
 		if (2 == i)
-			return Class455.method7557((class217_sub1.method13055((short) -9516).aString2679), (class217_sub1_43_.method13055((short) -13769).aString2679), Class223.aClass495_2772, 1341608337);
+			return Class455.method7557((class217_sub1.method13055((short) -9516).aString2679), (class217_sub1_43_.method13055((short) -13769).aString2679), Class223.CURRENT_LANGUAGE, 1341608337);
 		if (3 == i) {
 			if (class217_sub1.aString7977.equals("-")) {
 				if (class217_sub1_43_.aString7977.equals("-"))
@@ -337,7 +337,7 @@ public class Class448 {
 			}
 			if (class217_sub1_43_.aString7977.equals("-"))
 				return bool ? 1 : -1;
-			return Class455.method7557(class217_sub1.aString7977, class217_sub1_43_.aString7977, Class223.aClass495_2772, 1341608337);
+			return Class455.method7557(class217_sub1.aString7977, class217_sub1_43_.aString7977, Class223.CURRENT_LANGUAGE, 1341608337);
 		}
 		if (i == 4)
 			return (class217_sub1.method3683(-1211254734) ? class217_sub1_43_.method3683(-1211254734) ? 0 : 1 : class217_sub1_43_.method3683(-1211254734) ? -1 : 0);

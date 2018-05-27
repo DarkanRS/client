@@ -72,7 +72,7 @@ public class Class347 {
 	}
 
 	public static Class347 method6167(int i) {
-		Class347 class347 = (Class347) aClass229_4052.method3865((long) i);
+		Class347 class347 = (Class347) aClass229_4052.get((long) i);
 		if (null != class347)
 			return class347;
 		byte[] is = aClass317_4053.getFile(0, i, -1744491945);
@@ -149,7 +149,7 @@ public class Class347 {
 		}
 		if (Class291_Sub1.aBool8022 && null != Class346.aClass482_4049) {
 			for (Class282_Sub33 class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.head((byte) 117)); class282_sub33 != null; class282_sub33 = ((Class282_Sub33) Class346.aClass482_4049.next(-731653338))) {
-				Class220 class220 = (Class291_Sub1.aClass218_3456.method3700(-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991), 1327385371));
+				WorldMapAreaDefs class220 = (Class291_Sub1.aClass218_3456.getWorldMapDefs(-1798678621 * (((Class282_Sub33) class282_sub33).aClass282_Sub36_7835.anInt7991), 1327385371));
 				if (class282_sub33.method12577(i, i_7_, -1474454985)) {
 					if (null != class220.aStringArray2740) {
 						if (null != class220.aStringArray2740[4])

@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Interface12 {
 	MeshRasterizer aClass528_10513;
 	int anInt10514;
-	Class474 aClass474_10515;
+	ObjectIndexLoader aClass474_10515;
 	boolean aBool10516;
 	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_10517;
 	static int[] anIntArray10518;
@@ -47,7 +47,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	Class452 method16101(GraphicalRenderer class505, int i, boolean bool, int i_0_) {
-		Class478 class478 = (this.aClass474_10515.method7891(-585553417 * this.anInt10514, 65280));
+		ObjectDefinitions class478 = (this.aClass474_10515.getObjectDefinitions(-585553417 * this.anInt10514, 65280));
 		Class390 class390;
 		Class390 class390_1_;
 		if (this.aBool10525) {
@@ -329,10 +329,10 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 		}
 	}
 
-	public Class521_Sub1_Sub5_Sub1(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, boolean bool_12_) {
+	public Class521_Sub1_Sub5_Sub1(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, boolean bool_12_) {
 		super(class206, i_7_, i_8_, i_9_, i, i_6_, Class235.method3967(i_10_, i_11_, -1066763061));
 		this.aClass474_10515 = class474;
-		this.anInt10514 = 1742474857 * class478.anInt5633;
+		this.anInt10514 = 1742474857 * class478.id;
 		this.aBool10525 = bool;
 		this.aByte10521 = (byte) i_10_;
 		this.aByte10520 = (byte) i_11_;
@@ -353,7 +353,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 			if (this.aBool10524 || class478.aBool5711) {
 				this.aClass528_10513 = this.aClass528_10513.method11289((byte) 0, i_13_, false);
 				if (class478.aBool5711) {
-					Class341 class341 = client.aClass257_7353.method4426(475600426);
+					Class341 class341 = IndexLoaders.MAP_REGION_DECODER.method4426(475600426);
 					this.aClass528_10513.PA(1367691291 * class341.anInt3992, 1646020803 * class341.anInt3993, class341.anInt3994 * 945117807, 2100466695 * class341.anInt3995);
 				}
 			}
@@ -457,7 +457,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	Class452 method16104(GraphicalRenderer class505, int i, boolean bool) {
-		Class478 class478 = (this.aClass474_10515.method7891(-585553417 * this.anInt10514, 65280));
+		ObjectDefinitions class478 = (this.aClass474_10515.getObjectDefinitions(-585553417 * this.anInt10514, 65280));
 		Class390 class390;
 		Class390 class390_18_;
 		if (this.aBool10525) {
@@ -607,8 +607,8 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1543197399 * client.anInt7149, 1417031095);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeLong(-8972807970865466165L * client.aLong7153);
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(Class464.aString5555);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.aClass495_2772.method243((byte) 1));
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.aClass486_7450.anInt5746 * 1648080491);
+					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
 					Class31.method809(class282_sub23.aClass282_Sub35_Sub2_7682, -1671456029);
 					String string = client.aString7156;
 					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string == null ? 0 : 1);

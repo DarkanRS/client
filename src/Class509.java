@@ -24,7 +24,7 @@ public class Class509 {
 	}
 
 	static void method8739(int i) {
-		Class20.aClass282_Sub50_Sub7_157 = new Class282_Sub50_Sub7((Message.aClass433_5245.translate(Class223.aClass495_2772, -1076901040)), "", client.anInt7427 * -1211259595, 1006, -1, 0L, 0, 0, true, false, 0L, true);
+		Class20.aClass282_Sub50_Sub7_157 = new Class282_Sub50_Sub7((Message.CANCEL.translate(Class223.CURRENT_LANGUAGE, -1076901040)), "", client.anInt7427 * -1211259595, 1006, -1, 0L, 0, 0, true, false, 0L, true);
 	}
 
 	public static int method8740(int i) {

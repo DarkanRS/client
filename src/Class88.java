@@ -99,9 +99,9 @@ public class Class88 {
 		if (i == 1)
 			return Class171.method2909(canvas, interface22, i_0_);
 		if (5 == i)
-			return Class315.method5582(canvas, interface22, class317, i_0_);
+			return Class315.getOpenGLRenderer(canvas, interface22, class317, i_0_);
 		if (i == 3)
-			return Class374.method6367(canvas, interface22, class317, i_0_);
+			return Class374.getDirectXRenderer(canvas, interface22, class317, i_0_);
 		throw new IllegalArgumentException("");
 	}
 
@@ -110,7 +110,7 @@ public class Class88 {
 		int i_5_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 2)
 			throw new RuntimeException("");
-		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(class118.anInt1330 * -402732635, (byte) -49);
+		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(class118.anInt1330 * -402732635, (byte) -49);
 		if (null == class118.aClass417_1308)
 			class118.aClass417_1308 = new Class417(class409, false);
 		class118.aClass417_1308.aLong4993 = Class86.method1480(1471250768) * 7197667099348947907L;

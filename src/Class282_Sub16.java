@@ -11,7 +11,7 @@ public class Class282_Sub16 extends Node {
 		((Class282_Sub16) this).anInt7602 = i_0_ * 1466310595;
 	}
 
-	static boolean method12248(Class220 class220, int i) {
+	static boolean method12248(WorldMapAreaDefs class220, int i) {
 		if (null == class220)
 			return false;
 		if (!class220.aBool2728)

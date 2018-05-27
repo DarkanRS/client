@@ -54,7 +54,7 @@ public class Class96_Sub8 extends Class96 {
 	}
 
 	static boolean method14577(int i) {
-		return Class86.method1481(Class149_Sub2.aClass511_9314.aClass232_5879, (byte) -63);
+		return Class86.method1481(Class149_Sub2.DEFAULTS_LOADER_7.aClass232_5879, (byte) -63);
 	}
 
 	static final void method14578(CS2Executor class527, int i) {

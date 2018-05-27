@@ -471,7 +471,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static void method14841(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).method4111(client.anIntArray7337, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1427910028)) ? 1 : 0;
+		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).method4111(client.anIntArray7337, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1427910028)) ? 1 : 0;
 		((CS2Executor) class527).anInt7012 -= 141891001;
 	}
 }

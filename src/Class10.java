@@ -18,7 +18,7 @@ public class Class10 {
 
 	static final void method457(CS2Executor class527, int i) {
 		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, 2089937040);
-		client.aClass257_7353.method4547((byte) -3);
+		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -3);
 		Class190.method3148((byte) 89);
 		client.aBool7175 = false;
 	}

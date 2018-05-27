@@ -5,8 +5,7 @@
 public class Class222 implements Interface17 {
 	int anInt2764;
 	int anInt2765;
-	public static Index aClass317_2766;
-
+	
 	public boolean method129(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199) {
 		for (int i_0_ = 0; i_0_ < i && i_0_ < interface16s.length; i_0_++) {
 			Interface16 interface16 = interface16s[i_0_];
@@ -49,7 +48,7 @@ public class Class222 implements Interface17 {
 	}
 
 	static void method3753(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (Class409.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).anInt2973) * -985547275;
+		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -1396181317).anInt2973) * -985547275;
 	}
 
 	static String method3754(CharSequence charsequence, Class413 class413, int i) {
@@ -69,8 +68,8 @@ public class Class222 implements Interface17 {
 		StringBuilder stringbuilder = new StringBuilder(i_8_);
 		for (int i_9_ = i_6_; i_9_ < i_7_; i_9_++) {
 			char c = charsequence.charAt(i_9_);
-			if (Class309.method5491(c, 1531464997)) {
-				char c_10_ = AttributesDefaultsLoader.method7080(c, -1416509112);
+			if (JS5Manager.method5491(c, 1531464997)) {
+				char c_10_ = ItemDefaultsLoader.method7080(c, -1416509112);
 				if (c_10_ != 0)
 					stringbuilder.append(c_10_);
 			}
@@ -82,7 +81,7 @@ public class Class222 implements Interface17 {
 
 	static final void method3755(CS2Executor class527, byte i) {
 		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		Class220 class220 = Class397.aClass218_4813.method3700(i_11_, 262031096);
+		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_11_, 262031096);
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class220.anInt2722 * 1172439539;
 	}
 

@@ -157,7 +157,7 @@ public class Class521_Sub1_Sub4_Sub2 extends Class521_Sub1_Sub4 implements Inter
 		return aClass123_10501.method2117(-1109544704);
 	}
 
-	public Class521_Sub1_Sub4_Sub2(Class206 class206, GraphicalRenderer class505, Class474 class474, Class478 class478, int i, int i_8_, int i_9_, int i_10_, int i_11_, boolean bool, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_) {
+	public Class521_Sub1_Sub4_Sub2(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_8_, int i_9_, int i_10_, int i_11_, boolean bool, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_) {
 		super(class206, i_9_, i_10_, i_11_, i, i_8_, i_12_, i_13_);
 		aClass123_10501 = new Class123(class505, class474, class478, i_14_, i_15_, aByte7967, i_8_, this, bool, i_16_);
 		((Class521_Sub1_Sub4_Sub2) this).aBool10502 = -348507379 * class478.anInt5652 != 0 && !bool;
@@ -344,7 +344,7 @@ public class Class521_Sub1_Sub4_Sub2 extends Class521_Sub1_Sub4 implements Inter
 	static final void method16087(Animable class521_sub1_sub1_sub2, int i) {
 		if (class521_sub1_sub1_sub2.anIntArray10335 != null || class521_sub1_sub1_sub2.anIntArray10362 != null) {
 			boolean bool = true;
-			Class219 class219 = client.aClass257_7353.method4519(1583283390);
+			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1583283390);
 			for (int i_25_ = 0; i_25_ < class521_sub1_sub1_sub2.anIntArray10335.length; i_25_++) {
 				int i_26_ = -1;
 				if (null != class521_sub1_sub1_sub2.anIntArray10335)
@@ -413,7 +413,7 @@ public class Class521_Sub1_Sub4_Sub2 extends Class521_Sub1_Sub4 implements Inter
 
 	static final void method16089(CS2Executor class527, int i) {
 		((CS2Executor) class527).anInt7012 -= 283782002;
-		Class282_Sub50_Sub18 class282_sub50_sub18 = Class96_Sub10.aClass392_9298.method6735((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012) * 1942118537)]), (short) 24055);
+		InventoryDef class282_sub50_sub18 = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012) * 1942118537)]), (short) 24055);
 		int i_38_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_39_ = -1;
 		for (int i_40_ = 0; i_40_ < -1471207409 * class282_sub50_sub18.anInt10276; i_40_++) {

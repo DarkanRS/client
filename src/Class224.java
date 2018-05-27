@@ -105,7 +105,7 @@ public final class Class224 {
 		((CS2Executor) class527).anInt7012 -= 283782002;
 		int i_29_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
 		int i_30_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		Class282_Sub50_Sub14 class282_sub50_sub14 = Class296.aClass331_3535.method5918(i_29_, -2049190154);
+		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.aClass331_3535.method5918(i_29_, -2049190154);
 		int i_31_ = class282_sub50_sub14.anIntArray9746[i_30_];
 		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_31_;
 	}

@@ -14,7 +14,7 @@ public class Class96_Sub3 extends Class96 {
 	static int anInt8518;
 
 	boolean method1596() {
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) -33);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) -33);
 		return class518.method11132(1948514804);
 	}
 
@@ -24,7 +24,7 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	boolean method1599(int i) {
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 45);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 45);
 		return class518.method11132(1971931825);
 	}
 
@@ -34,14 +34,14 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	boolean method1591() {
-		AnimationDefinitions class518 = Class330.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 59);
+		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 59);
 		return class518.method11132(2115233018);
 	}
 
 	Class96_Sub3(RsByteBuffer class282_sub35) {
 		super(class282_sub35);
 		((Class96_Sub3) this).anInt8516 = class282_sub35.readUnsignedShort() * 834292573;
-		((Class96_Sub3) this).anInt8517 = class282_sub35.readBigSmart(2105016486) * 450467189;
+		((Class96_Sub3) this).anInt8517 = class282_sub35.readBigSmart() * 450467189;
 	}
 
 	static final void method13785(CS2Executor class527, int i) {

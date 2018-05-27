@@ -31,7 +31,7 @@ public class Class96_Sub22 extends Class96 {
 		if (Class20.anInt169 * 2144330291 < 412) {
 			if (Class84.myPlayer == class521_sub1_sub1_sub2_sub1) {
 				if (client.aBool7344 && (Class506.anInt5858 * 1310510077 & 0x10) != 0)
-					PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(16777215, 619010179)).append(Message.aClass433_5299.translate(Class223.aClass495_2772, -1114882023)).toString(), Class519.anInt5932 * -239192305, 16, -1, 0L, 0, 0, true, false, (long) (class521_sub1_sub1_sub2_sub1.anInt10314 * -1691508299), false, -1931180359);
+					PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(16777215, 619010179)).append(Message.aClass433_5299.translate(Class223.CURRENT_LANGUAGE, -1114882023)).toString(), Defaults8Loader.anInt5932 * -239192305, 16, -1, 0L, 0, 0, true, false, (long) (class521_sub1_sub1_sub2_sub1.anInt10314 * -1691508299), false, -1931180359);
 			} else {
 				String string;
 				if (0 == -1231486985 * class521_sub1_sub1_sub2_sub1.anInt10556) {
@@ -44,7 +44,7 @@ public class Class96_Sub22 extends Class96 {
 						if (i_2_ > i_1_)
 							bool_0_ = false;
 					}
-					String string_3_ = (client.aClass486_7450 == Game.stellarDawn ? (Message.aClass433_5290.translate(Class223.aClass495_2772, -1209944287)) : (Message.aClass433_5281.translate(Class223.aClass495_2772, -1303103497)));
+					String string_3_ = (client.CURRENT_GAME == Game.stellarDawn ? (Message.RATING_.translate(Class223.CURRENT_LANGUAGE, -1209944287)) : (Message.LEVEL_.translate(Class223.CURRENT_LANGUAGE, -1303103497)));
 					if (class521_sub1_sub1_sub2_sub1.anInt10565 * -1880473919 >= class521_sub1_sub1_sub2_sub1.anInt10554 * 410641457)
 						string = new StringBuilder().append(class521_sub1_sub1_sub2_sub1.method16127(true, 2054627302)).append(bool_0_ ? (ItemIndexLoader.method7169((-1880473919 * (class521_sub1_sub1_sub2_sub1.anInt10565)), (-1880473919 * (Class84.myPlayer.anInt10565)), -1737457030)) : Class59.method1163(16777215, 619010179)).append(Class2.aString15).append(string_3_).append(class521_sub1_sub1_sub2_sub1.anInt10565 * -1880473919).append(Class2.aString18).toString();
 					else
@@ -53,14 +53,14 @@ public class Class96_Sub22 extends Class96 {
 				} else if (-1 == (-1231486985 * class521_sub1_sub1_sub2_sub1.anInt10556))
 					string = class521_sub1_sub1_sub2_sub1.method16127(true, 2137901539);
 				else
-					string = new StringBuilder().append(class521_sub1_sub1_sub2_sub1.method16127(true, 1967945336)).append(Class2.aString15).append(Message.aClass433_5171.translate(Class223.aClass495_2772, -871379797)).append(-1231486985 * class521_sub1_sub1_sub2_sub1.anInt10556).append(Class2.aString18).toString();
+					string = new StringBuilder().append(class521_sub1_sub1_sub2_sub1.method16127(true, 1967945336)).append(Class2.aString15).append(Message.SKILL_.translate(Class223.CURRENT_LANGUAGE, -871379797)).append(-1231486985 * class521_sub1_sub1_sub2_sub1.anInt10556).append(Class2.aString18).toString();
 				if (client.aBool7344 && !bool && 0 != (1310510077 * Class506.anInt5858 & 0x8))
-					PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(16777215, 619010179)).append(string).toString(), Class519.anInt5932 * -239192305, 15, -1, (long) (class521_sub1_sub1_sub2_sub1.anInt10314 * -1691508299), 0, 0, true, false, (long) (-1691508299 * class521_sub1_sub1_sub2_sub1.anInt10314), false, -1521566355);
+					PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(16777215, 619010179)).append(string).toString(), Defaults8Loader.anInt5932 * -239192305, 15, -1, (long) (class521_sub1_sub1_sub2_sub1.anInt10314 * -1691508299), 0, 0, true, false, (long) (-1691508299 * class521_sub1_sub1_sub2_sub1.anInt10314), false, -1521566355);
 				if (!bool) {
 					for (int i_4_ = 7; i_4_ >= 0; i_4_--) {
 						if (client.aStringArray7329[i_4_] != null) {
 							short i_5_ = 0;
-							if ((Game.runescape == client.aClass486_7450) && (client.aStringArray7329[i_4_].equalsIgnoreCase(Message.aClass433_5295.translate(Class223.aClass495_2772, -440996695)))) {
+							if ((Game.runescape == client.CURRENT_GAME) && (client.aStringArray7329[i_4_].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -440996695)))) {
 								if (client.aBool7454 && ((class521_sub1_sub1_sub2_sub1.anInt10565) * -1880473919 > (-1880473919 * (Class84.myPlayer.anInt10565))))
 									i_5_ = (short) 2000;
 								if ((-1623446397 * (Class84.myPlayer.anInt10559)) != 0 && 0 != (class521_sub1_sub1_sub2_sub1.anInt10559) * -1623446397) {
@@ -100,7 +100,7 @@ public class Class96_Sub22 extends Class96 {
 		int i_9_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (6 != 2131324949 * class118.anInt1329)
 			throw new RuntimeException("");
-		Class409 class409 = Class350_Sub1.aClass406_7757.method6828(class118.anInt1330 * -402732635, (byte) 52);
+		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(class118.anInt1330 * -402732635, (byte) 52);
 		if (null == class118.aClass417_1308)
 			class118.aClass417_1308 = new Class417(class409, true);
 		class118.aClass417_1308.aLong4993 = Class86.method1480(-610795534) * 7197667099348947907L;

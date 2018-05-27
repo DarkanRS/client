@@ -42,32 +42,32 @@ public class Class461 {
 		}
 		if (1 == Class296.anInt3532 * 1164388509) {
 			Class296.aClass446Array3531 = Class446.method7436((byte) 24);
-			Class446.aClass446_5386.method7435(new Class298(Class520.aClass317_5935), (byte) -56);
+			Class446.aClass446_5386.method7435(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -56);
 			Class446.aClass446_5387.method7435(new Class301("jaggl"), (byte) 11);
 			Class446.aClass446_5388.method7435(new Class301("jagdx"), (byte) -60);
 			Class446.aClass446_5389.method7435(new Class301("sw3d"), (byte) 6);
 			Class446.aClass446_5415.method7435(new Class301("hw3d"), (byte) 11);
 			Class446.aClass446_5385.method7435(new Class301("jagtheora"), (byte) -30);
-			Class446.aClass446_5392.method7435(new Class298(Class488.aClass317_5758), (byte) 101);
-			Class446.aClass446_5390.method7435(new Class298(NamedFileReference.aClass317_412), (byte) 65);
-			Class446.aClass446_5394.method7435(new Class298(Class282_Sub39.aClass317_8005), (byte) -20);
-			Class446.aClass446_5395.method7435(new Class298(Class273.aClass317_3332), (byte) 17);
-			Class446.aClass446_5397.method7435(new Class298(Class236.aClass317_2915), (byte) -64);
-			Class446.aClass446_5393.method7435(new Class298(Class107.aClass317_1081), (byte) 7);
-			Class446.aClass446_5413.method7435(new Class298(Class383.aClass317_4665), (byte) 16);
-			Class446.aClass446_5399.method7435(new Class298(Class235.aClass317_2908), (byte) 16);
-			Class446.aClass446_5400.method7435(new Class298(ReferenceTable.aClass317_3749), (byte) 4);
-			Class446.aClass446_5401.method7435(new Class298(Class222.aClass317_2766), (byte) -28);
-			Class446.aClass446_5402.method7435(new Class298(Class371.aClass317_4326), (byte) 9);
-			Class446.aClass446_5403.method7435(new Class298(Class329.aClass317_3861), (byte) -25);
-			Class446.aClass446_5404.method7435(new Class298(AttributeDefault.aClass317_5340), (byte) 75);
-			Class446.aClass446_5405.method7435(new Class298(Class468_Sub7.aClass317_7886), (byte) 60);
-			Class446.aClass446_5410.method7435(new Class298(Class215.aClass317_2686), (byte) -44);
-			Class446.aClass446_5407.method7435(new Class383((Class250.aClass317_3093), "huffman"), (byte) -27);
-			Class446.aClass446_5391.method7435(new Class298(Class523.aClass317_6957), (byte) -5);
-			Class446.aClass446_5409.method7435(new Class298(Class378.aClass317_4526), (byte) -83);
-			Class446.aClass446_5398.method7435(new Class298(Class410.aClass317_4924), (byte) -104);
-			Class446.aClass446_5411.method7435(new Class388((Class192.worldMap), "details"), (byte) -79);
+			Class446.aClass446_5392.method7435(new Class298(IndexLoaders.SHADER_INDEX), (byte) 101);
+			Class446.aClass446_5390.method7435(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) 65);
+			Class446.aClass446_5394.method7435(new Class298(IndexLoaders.CONFIG_INDEX), (byte) -20);
+			Class446.aClass446_5395.method7435(new Class298(IndexLoaders.OBJECT_INDEX), (byte) 17);
+			Class446.aClass446_5397.method7435(new Class298(IndexLoaders.ENUM_INDEX), (byte) -64);
+			Class446.aClass446_5393.method7435(new Class298(IndexLoaders.NPC_INDEX), (byte) 7);
+			Class446.aClass446_5413.method7435(new Class298(IndexLoaders.ITEM_INDEX), (byte) 16);
+			Class446.aClass446_5399.method7435(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) 16);
+			Class446.aClass446_5400.method7435(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 4);
+			Class446.aClass446_5401.method7435(new Class298(IndexLoaders.VARBIT_INDEX), (byte) -28);
+			Class446.aClass446_5402.method7435(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) 9);
+			Class446.aClass446_5403.method7435(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) -25);
+			Class446.aClass446_5404.method7435(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) 75);
+			Class446.aClass446_5405.method7435(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 60);
+			Class446.aClass446_5410.method7435(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -44);
+			Class446.aClass446_5407.method7435(new Class383((IndexLoaders.HUFFMAN_INDEX), "huffman"), (byte) -27);
+			Class446.aClass446_5391.method7435(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) -5);
+			Class446.aClass446_5409.method7435(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) -83);
+			Class446.aClass446_5398.method7435(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -104);
+			Class446.aClass446_5411.method7435(new Class388((IndexLoaders.WORLD_MAP_INDEX), "details"), (byte) -79);
 			for (int i_1_ = 0; i_1_ < Class296.aClass446Array3531.length; i_1_++) {
 				if (Class296.aClass446Array3531[i_1_].method7443(-1578202194) == null)
 					throw new RuntimeException();
@@ -156,7 +156,7 @@ public class Class461 {
 				i_14_ = Class163.aClass209_2031.method3570(756095591);
 			}
 			if (Class20.aBool161) {
-				if (Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5882), class282_sub53, 1812867232)) {
+				if (Class6.method302((Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5882), class282_sub53, 1812867232)) {
 					if (null != Class20.aClass282_Sub50_Sub15_163 && i_13_ >= Class341.anInt3996 * 143093737 && i_13_ <= (Class341.anInt3996 * 143093737 + Class96_Sub3.anInt8518 * 572079435) && i_14_ >= Class282_Sub50_Sub2.anInt9471 * 2107083711 && i_14_ <= ((-1193351845 * Class521_Sub1_Sub5_Sub1.anInt10526) + (2107083711 * Class282_Sub50_Sub2.anInt9471))) {
 						int i_15_ = -1;
 						for (int i_16_ = 0; i_16_ < (2026887253 * (((Class282_Sub50_Sub15) Class20.aClass282_Sub50_Sub15_163).anInt9769)); i_16_++) {
@@ -286,9 +286,9 @@ public class Class461 {
 					}
 				}
 			} else {
-				boolean bool = Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5878), class282_sub53, 2080768595);
-				boolean bool_36_ = Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5874), class282_sub53, 369566995);
-				boolean bool_37_ = Class6.method302((Class149_Sub2.aClass511_9314.anInterface17_5875), class282_sub53, 1851162471);
+				boolean bool = Class6.method302((Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5878), class282_sub53, 2080768595);
+				boolean bool_36_ = Class6.method302((Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5874), class282_sub53, 369566995);
+				boolean bool_37_ = Class6.method302((Class149_Sub2.DEFAULTS_LOADER_7.anInterface17_5875), class282_sub53, 1851162471);
 				if ((bool || bool_36_) && ((-1718417173 * client.anInt7339 == 1 && 2144330291 * Class20.anInt169 > 2) || JS5GrabWorker.method12562(-269769835)))
 					bool_37_ = true;
 				if (bool_37_ && Class20.anInt169 * 2144330291 > 0) {

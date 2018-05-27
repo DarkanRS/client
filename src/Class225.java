@@ -38,7 +38,7 @@ public abstract class Class225 {
 		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_11_, (byte) 77);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
-		Class524.method11223(class118, class98, class527, 334837898);
+		DefaultsFile.method11223(class118, class98, class527, 334837898);
 	}
 
 	static final void method3792(CS2Executor class527, byte i) {

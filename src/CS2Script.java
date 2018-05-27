@@ -20,7 +20,7 @@ public class CS2Script extends Class282_Sub50 {
 	public CS2Script(RsByteBuffer buffer) {
 		int instructionLength = decodeHeader(buffer);
 		int opCount = 0;
-		CS2OpInfo[] operations = Class191.getCS2Operations();
+		CS2OpInfo[] operations = CS2OpInfo.getCS2Operations();
 		while (-1990677291 * buffer.index < instructionLength) {
 			CS2OpInfo op = getOpcode(buffer, operations);
 			decodeInstruction(buffer, opCount, op);

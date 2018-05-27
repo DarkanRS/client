@@ -20,7 +20,7 @@ public class Class282_Sub30 extends Node {
 		for (int i_3_ = 0; i_3_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length; i_3_++) {
 			if (((Class282_Sub30) class282_sub30).anIntArray7710[i_3_] >= 0 && (((Class282_Sub30) class282_sub30).anIntArray7710[i_3_] < -1662523091 * IndexLoaders.ITEM_INDEX_LOADER.maxItemsCount)) {
 				ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((((Class282_Sub30) class282_sub30).anIntArray7710[i_3_]), 1939490794);
-				int i_4_ = class425.method7099(i_0_, ((Class125.aClass424_1573.method7069(i_0_, (byte) 0).anInt5337) * -1741480635), -655698445);
+				int i_4_ = class425.method7099(i_0_, ((IndexLoaders.ITEM_DEFAULTS.method7069(i_0_, (byte) 0).anInt5337) * -1741480635), -655698445);
 				if (bool)
 					i_2_ += i_4_ * (((Class282_Sub30) class282_sub30).anIntArray7709[i_3_]);
 				else
@@ -35,7 +35,7 @@ public class Class282_Sub30 extends Node {
 		int i_7_ = i;
 		Class227 class227 = null;
 		if (-1 != i_5_)
-			class227 = Class96_Sub16.aClass211_9383.method3616(i_5_, (byte) 66);
+			class227 = IndexLoaders.aClass211_9383.method3616(i_5_, (byte) 66);
 		int[] is = ((Class282_Sub30) this).anIntArray7710;
 		if (null != class227 && class227.anIntArray2811 != null) {
 			is = new int[class227.anIntArray2811.length];
@@ -51,7 +51,7 @@ public class Class282_Sub30 extends Node {
 			i_7_ |= class456.method7640(-1290274733);
 		long l = method12444(is, i_5_, class238 != null ? class238.colors : null, bool, 583894637);
 		if (aClass229_7712 != null)
-			class528 = (MeshRasterizer) aClass229_7712.method3865(l);
+			class528 = (MeshRasterizer) aClass229_7712.get(l);
 		if (null == class528 || class505.method8452(class528.m(), i_7_) != 0) {
 			if (class528 != null)
 				i_7_ = class505.method8546(i_7_, class528.m());
@@ -351,13 +351,13 @@ public class Class282_Sub30 extends Node {
 			return 0;
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, -2137382631);
 		if (class282_sub30 == null)
-			return ((Class96_Sub10.aClass392_9298.method6735(i, (short) 29499).anInt10277) * 875957203);
+			return ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 29499).anInt10277) * 875957203);
 		int i_60_ = 0;
 		for (int i_61_ = 0; i_61_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length; i_61_++) {
 			if (-1 == ((Class282_Sub30) class282_sub30).anIntArray7710[i_61_])
 				i_60_++;
 		}
-		i_60_ += ((Class96_Sub10.aClass392_9298.method6735(i, (short) 13394).anInt10277) * 875957203 - ((Class282_Sub30) class282_sub30).anIntArray7710.length);
+		i_60_ += ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 13394).anInt10277) * 875957203 - ((Class282_Sub30) class282_sub30).anIntArray7710.length);
 		return i_60_;
 	}
 
@@ -370,13 +370,13 @@ public class Class282_Sub30 extends Node {
 			return 0;
 		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, -1568714544);
 		if (class282_sub30 == null)
-			return ((Class96_Sub10.aClass392_9298.method6735(i, (short) 6995).anInt10277) * 875957203);
+			return ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 6995).anInt10277) * 875957203);
 		int i_62_ = 0;
 		for (int i_63_ = 0; i_63_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length; i_63_++) {
 			if (-1 == ((Class282_Sub30) class282_sub30).anIntArray7710[i_63_])
 				i_62_++;
 		}
-		i_62_ += ((Class96_Sub10.aClass392_9298.method6735(i, (short) 15586).anInt10277) * 875957203 - ((Class282_Sub30) class282_sub30).anIntArray7710.length);
+		i_62_ += ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 15586).anInt10277) * 875957203 - ((Class282_Sub30) class282_sub30).anIntArray7710.length);
 		return i_62_;
 	}
 
@@ -394,7 +394,7 @@ public class Class282_Sub30 extends Node {
 		int i_66_ = i;
 		Class227 class227 = null;
 		if (-1 != i_65_)
-			class227 = Class96_Sub16.aClass211_9383.method3616(i_65_, (byte) -18);
+			class227 = IndexLoaders.aClass211_9383.method3616(i_65_, (byte) -18);
 		int[] is = ((Class282_Sub30) this).anIntArray7710;
 		if (null != class227 && class227.anIntArray2811 != null) {
 			is = new int[class227.anIntArray2811.length];
@@ -410,7 +410,7 @@ public class Class282_Sub30 extends Node {
 			i_66_ |= class456.method7640(-1923028148);
 		long l = method12444(is, i_65_, class238 != null ? class238.colors : null, bool, 583894637);
 		if (aClass229_7712 != null)
-			class528 = (MeshRasterizer) aClass229_7712.method3865(l);
+			class528 = (MeshRasterizer) aClass229_7712.get(l);
 		if (null == class528 || class505.method8452(class528.m(), i_66_) != 0) {
 			if (class528 != null)
 				i_66_ = class505.method8546(i_66_, class528.m());

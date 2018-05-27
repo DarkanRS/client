@@ -145,7 +145,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	int[] method14359(int i) {
 		Class282_Sub27 class282_sub27;
 		synchronized (((HardwareRenderer) this).aClass229_9006) {
-			class282_sub27 = ((Class282_Sub27) ((HardwareRenderer) this).aClass229_9006.method3865((long) i | ~0x7fffffffffffffffL));
+			class282_sub27 = ((Class282_Sub27) ((HardwareRenderer) this).aClass229_9006.get((long) i | ~0x7fffffffffffffffL));
 			if (class282_sub27 == null) {
 				if (!anInterface22_5834.method139(i, -99337949)) {
 					int[] is = null;
@@ -1538,7 +1538,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				Class169 class169 = anInterface22_5834.method144(i_465_, -1995871102);
 				if (!class169.aBool2056) {
 					if (i_465_ != -1787613477 * ((HardwareRenderer) this).anInt9015) {
-						NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_465_);
+						NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_465_);
 						if (null == class160) {
 							int[] is = method14359(i_465_);
 							if (null == is)
@@ -1772,7 +1772,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			method14373(bool_532_, i, i_534_, f, i_537_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_536_ != ((HardwareRenderer) this).anInt9015 * -1787613477) {
-				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_536_);
+				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_536_);
 				if (null == class160) {
 					int[] is = method14359(i_536_);
 					if (is != null) {
@@ -1796,7 +1796,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				Class169 class169 = anInterface22_5834.method144(i_544_, -1758221080);
 				if (!class169.aBool2056) {
 					if (i_544_ != -1787613477 * ((HardwareRenderer) this).anInt9015) {
-						NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_544_);
+						NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_544_);
 						if (null == class160) {
 							int[] is = method14359(i_544_);
 							if (null == is)
@@ -3243,7 +3243,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 	int[] method14392(int i) {
 		Class282_Sub27 class282_sub27;
 		synchronized (((HardwareRenderer) this).aClass229_9006) {
-			class282_sub27 = ((Class282_Sub27) ((HardwareRenderer) this).aClass229_9006.method3865((long) i | ~0x7fffffffffffffffL));
+			class282_sub27 = ((Class282_Sub27) ((HardwareRenderer) this).aClass229_9006.get((long) i | ~0x7fffffffffffffffL));
 			if (class282_sub27 == null) {
 				if (!anInterface22_5834.method139(i, -677028064)) {
 					int[] is = null;
@@ -5885,7 +5885,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			method14373(bool_1748_, i, i_1750_, f, i_1753_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_1752_ != ((HardwareRenderer) this).anInt9015 * -1787613477) {
-				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_1752_);
+				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_1752_);
 				if (null == class160) {
 					int[] is = method14359(i_1752_);
 					if (is != null) {
@@ -5911,7 +5911,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			method14373(bool_1755_, i, i_1757_, f, i_1760_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_1759_ != ((HardwareRenderer) this).anInt9015 * -1787613477) {
-				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_1759_);
+				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_1759_);
 				if (null == class160) {
 					int[] is = method14359(i_1759_);
 					if (is != null) {
@@ -5937,7 +5937,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			method14373(bool_1762_, i, i_1764_, f, i_1767_, class275_sub1_sub1.anInt10209, 1);
 		else {
 			if (i_1766_ != ((HardwareRenderer) this).anInt9015 * -1787613477) {
-				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_1766_);
+				NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_1766_);
 				if (null == class160) {
 					int[] is = method14359(i_1766_);
 					if (is != null) {
@@ -5965,7 +5965,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				Class169 class169 = anInterface22_5834.method144(i_1774_, -1931241045);
 				if (!class169.aBool2056) {
 					if (i_1774_ != -1787613477 * ((HardwareRenderer) this).anInt9015) {
-						NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.method3865((long) i_1774_);
+						NativeSprite class160 = (NativeSprite) ((HardwareRenderer) this).aClass229_9013.get((long) i_1774_);
 						if (null == class160) {
 							int[] is = method14359(i_1774_);
 							if (null == is)

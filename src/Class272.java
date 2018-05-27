@@ -1391,7 +1391,7 @@ public class Class272 {
 		int i_299_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_299_, (byte) 10);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_299_ >> 16];
-		Class220.method3738(class118, class98, class527, (byte) -2);
+		WorldMapAreaDefs.method3738(class118, class98, class527, (byte) -2);
 	}
 
 	static final void method4839(CS2Executor class527, byte i) {
