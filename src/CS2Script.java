@@ -33,9 +33,6 @@ public class CS2Script extends Class282_Sub50 {
 		if (opcode < 0 || opcode >= operations.length)
 			throw new RuntimeException("");
 		CS2OpInfo op = operations[opcode];
-		if (op == CS2OpInfo.PUSH_LONG) {
-			System.out.println("Opcode: " + opcode);
-		}
 		return op;
 	}
 
