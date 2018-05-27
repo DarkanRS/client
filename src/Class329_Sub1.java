@@ -2783,7 +2783,7 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	static final void method12492(CS2Executor class527, byte i) {
-		int i_557_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_557_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_557_, (byte) 117);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_557_ >> 16];
 		Class463.method7729(class118, class98, class527, 1544396395);

@@ -1141,7 +1141,7 @@ public class Class179 {
 	}
 
 	static final void method3017(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class241.method4150(-536353301);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class241.method4150(-536353301);
 	}
 
 	public static String method3018(long l) {
@@ -1179,13 +1179,13 @@ public class Class179 {
 	}
 
 	static final void method3020(CS2Executor class527, int i) {
-		int i_60_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_60_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_60_, (byte) 40);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_60_ >> 16];
 		Class249.method4276(class118, class98, class527, -724687188);
 	}
 
 	static final void method3021(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass282_Sub4_7011.aByte7504;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass282_Sub4_7011.aByte7504;
 	}
 }

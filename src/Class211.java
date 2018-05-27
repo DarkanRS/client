@@ -138,12 +138,12 @@ public class Class211 {
 	}
 
 	static final void method3628(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7000 -= -1341717846;
-		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
-		String string_2_ = (String) (((CS2Executor) class527).objectStack[1806726141 * ((CS2Executor) class527).anInt7000 + 1]);
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_4_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7000 -= -1341717846;
+		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
+		String string_2_ = (String) (class527.objectStack[1806726141 * class527.anInt7000 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_4_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (null == string_2_)
 			string_2_ = "";
 		if (string_2_.length() > 80)

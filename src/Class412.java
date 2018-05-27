@@ -362,6 +362,6 @@ public class Class412 {
 	}
 
 	static final void method6935(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7000 -= 1476624725;
+		class527.anInt7000 -= 1476624725;
 	}
 }

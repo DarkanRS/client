@@ -244,12 +244,12 @@ public class Class13 {
 	}
 
 	static final void method501(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		class118.aBool1322 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1322 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) -70);
 	}
 
 	static final void method502(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, 2090816514);
 		if (null != is)
 			string = string.substring(0, string.length() - 1);
@@ -273,12 +273,12 @@ public class Class13 {
 	}
 
 	static final void method504(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1176728971 * Class517.anInt5904;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1176728971 * Class517.anInt5904;
 	}
 
 	static final void method505(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		int i_63_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		int i_63_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_63_, (byte) 0);
 		if (!class437.aString5335.equals(string))
 			class118.method2000(i_63_, string, 2122573770);
@@ -287,9 +287,9 @@ public class Class13 {
 	}
 
 	static final void method506(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		class118.anInt1376 = -280394239 * (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		class118.anInt1314 = (1004789833 * (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]));
+		class527.anInt7012 -= 283782002;
+		class118.anInt1376 = -280394239 * (class527.intStack[1942118537 * class527.anInt7012]);
+		class118.anInt1314 = (1004789833 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]));
 		Class109.method1858(class118, (byte) -10);
 		if (0 == -2131393857 * class118.anInt1268)
 			Class12.method483(class98, class118, false, -1735080264);

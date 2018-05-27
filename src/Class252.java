@@ -123,20 +123,20 @@ public class Class252 implements Interface43 {
 	}
 
 	static final void method4323(CS2Executor class527, byte i) {
-		int i_1_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
+		int i_1_ = (class527.unknown[class527.instrPtr * 301123709]);
 		Integer integer = (Integer) Class46.anObjectArray437[i_1_];
 		if (integer == null) {
 			Class405 class405 = IndexLoaders.aClass394_5831.method6753(i_1_, 908110130);
 			if ('i' == class405.aChar4832 || '1' == class405.aChar4832)
-				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = 0;
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = 0;
 			else
-				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
 		} else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = integer.intValue();
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = integer.intValue();
 	}
 
 	static final void method4324(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -9);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -9);
 	}
 
 	static int method4325(Class217_Sub1 class217_sub1, Class217_Sub1 class217_sub1_2_, int i, boolean bool, int i_3_, boolean bool_4_, int i_5_) {

@@ -4349,23 +4349,23 @@ public class Class20 {
 	}
 
 	static final void method741(CS2Executor class527, short i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class306.method5455(class118, class98, class527, -869216999);
 	}
 
 	static final void method742(CS2Executor class527, int i) {
-		int i_561_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_561_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.aClass331_3535.method5918(i_561_, -572656458);
 		if (class282_sub50_sub14.anIntArray9746 == null)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub14.anIntArray9746.length;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub14.anIntArray9746.length;
 	}
 
 	static final void method743(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
 	}
 
 	static void method744(int i, int i_562_, int i_563_, int i_564_, int i_565_, int i_566_, int i_567_) {
@@ -4389,7 +4389,7 @@ public class Class20 {
 	}
 
 	static final void method745(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7155 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7155 ? 1 : 0;
 	}
 
 	public static void animate(Animable animable, int[] is, int i, boolean bool, byte i_579_) {

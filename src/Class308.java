@@ -177,11 +177,11 @@ public class Class308 {
 	}
 
 	static final void method5474(CS2Executor class527, int i) {
-		int i_8_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_9_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		if (i_9_ < 0 || i_9_ >= ((CS2Executor) class527).globalArrayLengths[i_8_])
+		int i_8_ = (class527.unknown[301123709 * class527.instrPtr]);
+		class527.anInt7012 -= 283782002;
+		int i_9_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		if (i_9_ < 0 || i_9_ >= class527.globalArrayLengths[i_8_])
 			throw new RuntimeException();
-		((CS2Executor) class527).globalArrays[i_8_][i_9_] = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.globalArrays[i_8_][i_9_] = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 	}
 }

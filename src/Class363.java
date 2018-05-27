@@ -12,26 +12,26 @@ public class Class363 {
 	}
 
 	static final void method6282(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class359.method6244(class118, class98, class527, -1411462408);
 	}
 
 	static final void method6283(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class287.method5066(class118, class98, class527, 2045260236);
 	}
 
 	static final void method6284(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 1383536878).anInt5051 * 15210351);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 1383536878).anInt5051 * 15210351);
 	}
 
 	static final void method6285(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 456793949 * Class9.anInt72;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 456793949 * Class9.anInt72;
 	}
 
 	static final void method6286(long l) {
@@ -128,7 +128,7 @@ public class Class363 {
 	}
 
 	static final void method6288(Class118 class118, Class98 class98, CS2Executor class527, short i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, -37726580);
 		if (null != is)
 			string = string.substring(0, string.length() - 1);

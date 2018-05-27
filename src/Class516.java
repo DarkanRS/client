@@ -22,8 +22,8 @@ public class Class516 {
 	}
 
 	static final void method8864(CS2Executor class527, byte i) {
-		int i_3_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
-		String string = (((CS2Executor) class527).aClass61_7010.method1202(client.CURRENT_GAME.anInt5746 * 1648080491 << 16 | i_3_, -735824266));
+		int i_3_ = (class527.unknown[class527.instrPtr * 301123709]);
+		String string = (class527.aClass61_7010.method1202(client.CURRENT_GAME.anInt5746 * 1648080491 << 16 | i_3_, -735824266));
 		String string_4_;
 		if (null == string) {
 			if (i == -1)
@@ -31,16 +31,16 @@ public class Class516 {
 			string_4_ = "";
 		} else
 			string_4_ = string;
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string_4_;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string_4_;
 	}
 
 	static final void method8865(CS2Executor class527, byte i) {
-		int i_5_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub9 class282_sub50_sub9 = IndexLoaders.aClass429_4265.method7214(i_5_, -1707891446);
 		if (null == class282_sub50_sub9.anIntArray9624)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub9.anIntArray9624.length;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub9.anIntArray9624.length;
 	}
 
 	public static void method8866(Class275 class275, Class275 class275_6_, int i) {
@@ -75,14 +75,14 @@ public class Class516 {
 	}
 
 	static final void method8869(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 1775931893 * Class121.anInt1526;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 1775931893 * Class121.anInt1526;
 	}
 
 	static final void method8870(CS2Executor class527, byte i) {
-		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (client.aString7426 != null && i_10_ < Class459.anInt5534 * -1772444859)
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = Class467.aClass173Array5575[i_10_].aString2129;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = Class467.aClass173Array5575[i_10_].aString2129;
 		else
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 	}
 }

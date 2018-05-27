@@ -37,15 +37,15 @@ public class Class275_Sub4 extends Class275 {
 	}
 
 	static final void method12586(CS2Executor class527, short i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_2_ = (((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		Class159.method2738((((CS2Executor) class527).animable.aClass98_10324), i_0_ & 0xffff, i_1_, i_2_, ((CS2Executor) class527).aBool7022, class527, -1306169472);
+		class527.anInt7012 -= 425673003;
+		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		int i_2_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		Class159.method2738((class527.animable.aClass98_10324), i_0_ & 0xffff, i_1_, i_2_, class527.aBool7022, class527, -1306169472);
 	}
 
 	static void method12587(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).method4105(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), 93625804)) ? 1 : 0;
-		((CS2Executor) class527).anInt7012 -= 141891001;
+		class527.intStack[class527.anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 2]), -1396181317).method4105(Class158_Sub1.aClass3_8507, (class527.intStack[1942118537 * class527.anInt7012 - 1]), 93625804)) ? 1 : 0;
+		class527.anInt7012 -= 141891001;
 	}
 }

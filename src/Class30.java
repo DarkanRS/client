@@ -123,7 +123,7 @@ public class Class30 implements Runnable {
 	}
 
 	static final void method797(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_4_ != class118.anInt1321 * 1241177935) {
 			if (i_4_ != -1) {
 				if (null == class118.aClass456_1437)
@@ -139,6 +139,6 @@ public class Class30 implements Runnable {
 	}
 
 	static final void method798(CS2Executor class527, int i) {
-		Class337.method6018((((CS2Executor) class527).aClass521_Sub1_Sub2_Sub1_7014), class527, 1907071092);
+		Class337.method6018((class527.aClass521_Sub1_Sub2_Sub1_7014), class527, 1907071092);
 	}
 }

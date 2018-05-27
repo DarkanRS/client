@@ -368,20 +368,20 @@ public class Class286 implements Runnable {
 	}
 
 	static final void method5045(CS2Executor class527, int i) {
-		int i_21_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_21_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_21_, (byte) 61);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
 	}
 
 	static final void method5046(CS2Executor class527, byte i) {
 		if (null == Class149_Sub2.aClass461_9316)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1977256787 * Class149_Sub2.aClass461_9316.anInt5541;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1977256787 * Class149_Sub2.aClass461_9316.anInt5541;
 	}
 
 	static final void method5047(CS2Executor class527, int i) {
-		int i_22_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_22_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub21_8222), i_22_, -1752837734);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -44);
 		Class190.method3148((byte) 84);

@@ -107,7 +107,7 @@ public class Class447 {
 	}
 
 	static void method7461(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1]), -1396181317).aBool2962) ? 1 : 0;
+		class527.intStack[class527.anInt7012 * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 1]), -1396181317).aBool2962) ? 1 : 0;
 	}
 
 	static final void method7462(CS2Executor class527, int i) {
@@ -116,16 +116,16 @@ public class Class447 {
 			string = Class119.aClass12_1461.method473(1840459942);
 		if (null == string)
 			string = "";
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	static final void method7463(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 709455005;
-		int i_5_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_6_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		int i_7_ = (((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_8_ = (((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_9_ = (((CS2Executor) class527).intStack[4 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_5_ + (i_9_ - i_7_) * (i_6_ - i_5_) / (i_8_ - i_7_);
+		class527.anInt7012 -= 709455005;
+		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_6_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		int i_7_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		int i_8_ = (class527.intStack[3 + class527.anInt7012 * 1942118537]);
+		int i_9_ = (class527.intStack[4 + class527.anInt7012 * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_5_ + (i_9_ - i_7_) * (i_6_ - i_5_) / (i_8_ - i_7_);
 	}
 }

@@ -60,6 +60,6 @@ public class Class282_Sub20_Sub30 extends Class282_Sub20 {
 	}
 
 	static final void method15399(CS2Executor class527, int i) {
-		Class242.method4167((String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]), 1836583632);
+		Class242.method4167((String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]), 1836583632);
 	}
 }

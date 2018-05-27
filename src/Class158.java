@@ -46,19 +46,19 @@ public abstract class Class158 {
 	abstract boolean method54();
 
 	static final void method2728(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_0_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 283782002;
+		int i_0_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(2069262708))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 221320768).method7099(i_1_, class437.anInt5337 * -1741480635, -1410109564));
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 221320768).method7099(i_1_, class437.anInt5337 * -1741480635, -1410109564));
 	}
 
 	static final void method2729(CS2Executor class527, int i) {
-		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2_, (short) 9738).anInt10277) * 875957203;
+		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2_, (short) 9738).anInt10277) * 875957203;
 	}
 
 	public static int method2730(short i) {
@@ -159,7 +159,7 @@ public abstract class Class158 {
 	}
 
 	static final void method2732(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (!string.equals(class118.aString1391)) {
 			class118.aString1391 = string;
 			Class109.method1858(class118, (byte) 79);

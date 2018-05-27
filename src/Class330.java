@@ -44,7 +44,7 @@ public class Class330 {
 	}
 
 	static final void method5912(CS2Executor class527, byte i) {
-		((CS2Executor) class527).aLongArray7003[(((CS2Executor) class527).anInt7001 += -1188480575) * 1820448321 - 1] = (((CS2Executor) class527).current.longOpValues[301123709 * ((CS2Executor) class527).instrPtr]);
+		class527.aLongArray7003[(class527.anInt7001 += -1188480575) * 1820448321 - 1] = (class527.current.longOpValues[301123709 * class527.instrPtr]);
 	}
 
 	public static void method5913(int i) {
@@ -74,11 +74,11 @@ public class Class330 {
 	}
 
 	static final void method5915(CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_5_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_6_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = string.indexOf(i_5_, i_6_);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		class527.anInt7012 -= 283782002;
+		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_6_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = string.indexOf(i_5_, i_6_);
 	}
 
 	static final void method5916(int i) {

@@ -48,12 +48,12 @@ public abstract class Class254 implements Runnable {
 
 	static final void method4381(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i >= 8)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_21_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_21_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_21_).aClass98_5885;

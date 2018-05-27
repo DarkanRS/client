@@ -97,18 +97,18 @@ public abstract class Class209 {
 	public abstract void method3595();
 
 	static final void method3596(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_0_, (byte) 50);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class151.method2593(class118, class98, class527, -1741314875);
 	}
 
 	static final void method3597(CS2Executor class527, byte i) {
-		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (2 == client.anInt7434 * 1609086245 && i_1_ < 493536965 * client.anInt7449)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -2041808379 * client.aClass6Array7452[i_1_].anInt41;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -2041808379 * client.aClass6Array7452[i_1_].anInt41;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static void method3598(String string, int i) {
@@ -140,7 +140,7 @@ public abstract class Class209 {
 	}
 
 	static final void method3599(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8225, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), -334486590);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8225, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -334486590);
 		Class190.method3148((byte) 97);
 		client.aBool7175 = false;
 	}
@@ -155,8 +155,8 @@ public abstract class Class209 {
 	}
 
 	static final void method3601(Class118 class118, CS2Executor class527, int i) {
-		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		int i_11_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
+		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (6 != class118.anInt1329 * 2131324949 && 2 != 2131324949 * class118.anInt1329)
 			throw new RuntimeException("");
 		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(-402732635 * class118.anInt1330, (byte) 4);

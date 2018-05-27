@@ -64,10 +64,10 @@ public class Defaults8Loader {
 	}
 
 	static final void method11154(CS2Executor class527, int i) {
-		((CS2Executor) class527).aClass346_7009 = new Class346();
-		((CS2Executor) class527).aClass346_7009.anInt4048 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1506067503);
-		((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(((((CS2Executor) class527).aClass346_7009.anInt4048) * -624100047), -1711115203);
-		((CS2Executor) class527).aClass346_7009.anIntArray4046 = new int[((CS2Executor) class527).aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
+		class527.aClass346_7009 = new Class346();
+		class527.aClass346_7009.anInt4048 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1506067503);
+		class527.aClass346_7009.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(((class527.aClass346_7009.anInt4048) * -624100047), -1711115203);
+		class527.aClass346_7009.anIntArray4046 = new int[class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14916(388398854)];
 	}
 
 	static void method11155(int i, int i_1_, int i_2_) {

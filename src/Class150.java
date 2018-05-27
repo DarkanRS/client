@@ -119,15 +119,15 @@ public class Class150 {
 
 	public static void method2583(Class397 class397, int i, int i_7_, Class520 class520, Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1, int i_8_) {
 		CS2Executor class527 = Class125.method2167(1132906159);
-		((CS2Executor) class527).aClass521_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1;
+		class527.aClass521_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1;
 		Class107.method1834(class397, i, i_7_, class527, (byte) 35);
-		((CS2Executor) class527).aClass521_Sub1_Sub2_Sub1_7014 = null;
+		class527.aClass521_Sub1_Sub2_Sub1_7014 = null;
 	}
 
 	static final void method2584(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_9_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_10_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_9_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_10_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
 		Class515.method8862(i_9_, i_10_ >> 14 & 0x3fff, i_10_ & 0x3fff, false, -1732540658);
 	}
 

@@ -135,7 +135,7 @@ public abstract class Class115 implements Interface7 {
 	abstract void method1948(int i, int i_54_, Interface30 interface30);
 
 	static final void method1949(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class17.method569(class118, class98, class527, 2101137019);
@@ -146,9 +146,9 @@ public abstract class Class115 implements Interface7 {
 	}
 
 	static final void method1951(CS2Executor class527, byte i) {
-		int i_55_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_55_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_56_ = client.aClass330Array7428[i_55_].method5908(-1286970996);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_56_ == 5 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_56_ == 5 ? 1 : 0;
 	}
 
 	public static boolean method1952(boolean bool, int i) {

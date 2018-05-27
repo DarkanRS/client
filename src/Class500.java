@@ -169,11 +169,11 @@ public final class Class500 {
 	}
 
 	static final void method8343(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method12646(930194106) && Renderers.SOFTWARE_RENDERER.method8405()) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method12646(930194106) && Renderers.SOFTWARE_RENDERER.method8405()) ? 1 : 0;
 	}
 
 	static final void method8344(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class349.method6186(class118, class98, class527, -94301647);

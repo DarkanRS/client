@@ -145,7 +145,7 @@ public class ObjectIndexLoader {
 	}
 
 	static final void method7915(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class417.anInt4994 * -385885769;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class417.anInt4994 * -385885769;
 	}
 
 	public static Class217_Sub1 method7916(int i, int i_5_) {

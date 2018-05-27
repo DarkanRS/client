@@ -490,10 +490,10 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 	}
 
 	static final void method16124(CS2Executor class527, short i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (string.startsWith(Class76.method1358(0, (byte) 0)) || string.startsWith(Class76.method1358(1, (byte) 0)))
 			string = string.substring(7);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class280.method4975(string, (byte) -104) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class280.method4975(string, (byte) -104) ? 1 : 0;
 	}
 
 	public static int method16125(int i, int i_27_, boolean bool, int i_28_) {

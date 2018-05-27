@@ -151,7 +151,7 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 	}
 
 	static final void method15551(CS2Executor class527, int i) {
-		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method7785(i_9_, -1918950659);
+		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method7785(i_9_, -1918950659);
 	}
 }

@@ -90,7 +90,7 @@ public class Class394 {
 	}
 
 	static final void method6762(CS2Executor class527, int i) {
-		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 41);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class202.method3338(class118, class98, class527, (byte) 82);

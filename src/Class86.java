@@ -264,7 +264,7 @@ public class Class86 {
 	}
 
 	static final void method1479(CS2Executor class527, int i) {
-		int i_15_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_15_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		boolean bool = true;
 		if (i_15_ < 0)
 			bool = 0 == (i_15_ + 1) % 4;
@@ -276,7 +276,7 @@ public class Class86 {
 			bool = true;
 		else if (0 != i_15_ % 400)
 			bool = false;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static final long method1480(int i) {

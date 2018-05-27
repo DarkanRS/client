@@ -897,12 +897,12 @@ public class Class8_Sub3 extends FontRenderer {
 
 	static final void method14340(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i <= 0)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_342_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_342_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_342_).aClass98_5885;
@@ -916,7 +916,7 @@ public class Class8_Sub3 extends FontRenderer {
 	}
 
 	static final void method14342(CS2Executor class527, byte i) {
-		int i_343_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_343_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_343_, (byte) 90);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_343_ >> 16];
 		Class29.method789(class118, class98, class527, -19478635);

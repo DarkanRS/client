@@ -16,14 +16,14 @@ public class Class310 {
 	}
 
 	static final void method5494(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_1_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
 		if (i_0_ == 0)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else if (0 == i_1_)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 2147483647;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 2147483647;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (int) Math.pow((double) i_0_, 1.0 / (double) i_1_);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (int) Math.pow((double) i_0_, 1.0 / (double) i_1_);
 	}
 }

@@ -705,11 +705,11 @@ public class Class59 {
 	}
 
 	static final void method1162(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 567564004;
-		int i_45_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_46_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		int i_47_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
-		int i_48_ = (((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 567564004;
+		int i_45_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_46_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		int i_47_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
+		int i_48_ = (class527.intStack[3 + class527.anInt7012 * 1942118537]);
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(988818864);
 		Class11.method469(((i_45_ >> 14 & 0x3fff) - 1948093437 * class219.anInt2711), (i_45_ & 0x3fff) - class219.anInt2712 * -1002240017, i_46_ << 2, i_47_, i_48_, (byte) -62);
 	}

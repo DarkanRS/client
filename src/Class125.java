@@ -60,22 +60,22 @@ public class Class125 implements Interface8 {
 	}
 
 	static final void method2168(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		class118.anInt1359 = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]) * 1576498757;
-		class118.anInt1360 = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) * 361885101;
-		class118.anInt1358 = ((((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]) * -1603580509);
+		class527.anInt7012 -= 425673003;
+		class118.anInt1359 = (class527.intStack[1942118537 * class527.anInt7012]) * 1576498757;
+		class118.anInt1360 = (class527.intStack[1 + 1942118537 * class527.anInt7012]) * 361885101;
+		class118.anInt1358 = ((class527.intStack[2 + 1942118537 * class527.anInt7012]) * -1603580509);
 		Class109.method1858(class118, (byte) -42);
 	}
 
 	static final void method2169(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		NamedFileReference.method869(class118, class98, class527, 1852179585);
 	}
 
 	static final void method2170(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1404763010) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1421 = Class351.method6193(string, class527, 930133882);

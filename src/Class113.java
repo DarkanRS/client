@@ -71,10 +71,10 @@ public class Class113 {
 	}
 
 	static final void method1882(CS2Executor class527, short i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_4_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_5_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_4_ & -1 - (1 << i_5_);
+		class527.anInt7012 -= 283782002;
+		int i_4_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_5_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_4_ & -1 - (1 << i_5_);
 	}
 
 	static final void method1883(int i) {

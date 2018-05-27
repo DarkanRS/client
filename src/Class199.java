@@ -128,20 +128,20 @@ public abstract class Class199 {
 	}
 
 	static final void method3250(CS2Executor class527, int i) {
-		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 33);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class13.method501(class118, class98, class527, (byte) -2);
 	}
 
 	static final void method3251(Class118 class118, CS2Executor class527, int i) {
-		if (-613817135 * ((CS2Executor) class527).anInt7015 >= 10)
+		if (-613817135 * class527.anInt7015 >= 10)
 			throw new RuntimeException();
 		if (class118.anObjectArray1271 != null) {
 			Class282_Sub43 class282_sub43 = new Class282_Sub43();
 			class282_sub43.aClass118_8053 = class118;
 			class282_sub43.anObjectArray8054 = class118.anObjectArray1271;
-			((Class282_Sub43) class282_sub43).anInt8061 = 268621789 + 859311981 * ((CS2Executor) class527).anInt7015;
+			((Class282_Sub43) class282_sub43).anInt8061 = 268621789 + 859311981 * class527.anInt7015;
 			client.aClass482_7402.append(class282_sub43, -2001342586);
 		}
 	}

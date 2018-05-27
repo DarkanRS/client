@@ -887,11 +887,11 @@ public class ItemDefinitions implements Interface46 {
 	}
 
 	static final void method7142(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		class118.aBool1420 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1420 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 53);
 	}
 
 	static final void method7143(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
 	}
 }

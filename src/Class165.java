@@ -39,22 +39,22 @@ public class Class165 {
 	}
 
 	static final void method2854(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7001 -= 1918006146;
-		if ((((CS2Executor) class527).aLongArray7003[1820448321 * ((CS2Executor) class527).anInt7001]) != (((CS2Executor) class527).aLongArray7003[1 + ((CS2Executor) class527).anInt7001 * 1820448321]))
-			((CS2Executor) class527).instrPtr += (-1051529003 * (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]));
+		class527.anInt7001 -= 1918006146;
+		if ((class527.aLongArray7003[1820448321 * class527.anInt7001]) != (class527.aLongArray7003[1 + class527.anInt7001 * 1820448321]))
+			class527.instrPtr += (-1051529003 * (class527.unknown[class527.instrPtr * 301123709]));
 	}
 
 	static final void method2855(CS2Executor class527, byte i) {
-		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 59);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Login.method5017(class118, class98, class527, -974856399);
 	}
 
 	static final void method2856(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_2_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_2_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
 		Class477 class477 = Class291.method5127(i_2_ >> 14 & 0x3fff, i_2_ & 0x3fff);
 		boolean bool = false;
 		for (Class282_Sub50_Sub6 class282_sub50_sub6 = (Class282_Sub50_Sub6) class477.method7941((byte) 4); class282_sub50_sub6 != null; class282_sub50_sub6 = (Class282_Sub50_Sub6) class477.method7955(-1429079098)) {
@@ -64,8 +64,8 @@ public class Class165 {
 			}
 		}
 		if (bool)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 }

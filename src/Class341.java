@@ -27,7 +27,7 @@ public class Class341 {
 	}
 
 	static final void method6073(CS2Executor class527, byte i) {
-		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5130(((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5130(class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		while_191_: do {
 			while_190_: do {
 				do {
@@ -40,10 +40,10 @@ public class Class341 {
 							break;
 					}
 				} while (false);
-				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
 				break while_191_;
 			} while (false);
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class282_sub50_sub6.aString9534;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class282_sub50_sub6.aString9534;
 		} while (false);
 	}
 

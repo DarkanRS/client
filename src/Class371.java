@@ -73,7 +73,7 @@ public class Class371 {
 
 	static final void method6350(CS2Executor class527, byte i) {
 		boolean bool = false;
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (client.aBool7310) {
 			try {
 				Object object = Class361.aClass361_4172.method6254(new Object[] { string }, (byte) -29);
@@ -83,7 +83,7 @@ public class Class371 {
 				/* empty */
 			}
 		}
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static void method6351(int i) {

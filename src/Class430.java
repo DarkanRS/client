@@ -30,17 +30,17 @@ public class Class430 {
 	}
 
 	static final void method7218(CS2Executor class527, int i) {
-		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (!Renderers.SOFTWARE_RENDERER.method8405())
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 3;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 3;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method7785(i_4_, -702184257);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8187.method7785(i_4_, -702184257);
 	}
 
 	static final void method7219(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
 	}
 
 	static final int method7220(int i, int i_5_, int i_6_, int i_7_, int i_8_) {

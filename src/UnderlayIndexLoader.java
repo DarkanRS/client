@@ -162,8 +162,8 @@ public class UnderlayIndexLoader {
 	}
 
 	static final void method8037(CS2Executor class527, int i) {
-		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = ((CS2Executor) class527).aClass61_7010.aStringArray639[i_3_];
+		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class527.aClass61_7010.aStringArray639[i_3_];
 	}
 
 	public static Class494[] method8038(byte i) {

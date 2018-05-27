@@ -57,7 +57,7 @@ public class Class12 implements Runnable {
 	}
 
 	static final void method481(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub6_8192.method12654(-239553097);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub6_8192.method12654(-239553097);
 	}
 
 	static void method482(byte i) {
@@ -75,7 +75,7 @@ public class Class12 implements Runnable {
 	}
 
 	static final void method484(CS2Executor class527, int i) {
-		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 9);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class242.method4160(class118, class98, class527, (short) 8078);
@@ -83,12 +83,12 @@ public class Class12 implements Runnable {
 
 	static final void method485(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i <= 18)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_2_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;

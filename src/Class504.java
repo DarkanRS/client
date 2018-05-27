@@ -99,7 +99,7 @@ public abstract class Class504 {
 	}
 
 	static final void method8387(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		class118.anInt1380 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1380100089);
+		class118.anInt1380 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1380100089);
 	}
 
 	static boolean method8388(int i, byte i_2_) {
@@ -120,7 +120,7 @@ public abstract class Class504 {
 	}
 
 	static final void method8390(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (class118.anInt1320 * 985215637 != i_9_) {
 			class118.anInt1320 = i_9_ * -1179842371;
 			Class109.method1858(class118, (byte) 22);

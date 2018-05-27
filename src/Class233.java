@@ -125,7 +125,7 @@ public class Class233 {
 	}
 
 	static final void method3937(CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		StringBuilder stringbuilder = new StringBuilder(string.length());
 		boolean bool = false;
 		for (int i_2_ = 0; i_2_ < string.length(); i_2_++) {
@@ -137,11 +137,11 @@ public class Class233 {
 			else if (!bool)
 				stringbuilder.append(c);
 		}
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = stringbuilder.toString();
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = stringbuilder.toString();
 	}
 
 	static final void method3938(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
+		class527.anInt7012 -= 283782002;
 	}
 
 	static final void method3939(CS2Executor class527, int i) {
@@ -149,21 +149,21 @@ public class Class233 {
 	}
 
 	static final void method3940(CS2Executor class527, int i) {
-		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_3_, (byte) 105);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		Class388.method6689(class118, class98, class527, -1054634282);
 	}
 
 	static final void method3941(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		WorldMapAreaDefs.method3738(class118, class98, class527, (byte) -2);
 	}
 
 	static final void method3942(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -989964873);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -989964873);
 		Class282_Sub20_Sub36.method15418(668850119);
 		Class190.method3148((byte) 44);
 		client.aBool7175 = false;

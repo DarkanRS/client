@@ -25,7 +25,7 @@ public class Class217_Sub1 extends Class217 {
 	}
 
 	static final void method13057(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_0_ >> 14 & 0x3fff;
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_0_ >> 14 & 0x3fff;
 	}
 }

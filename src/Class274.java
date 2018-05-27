@@ -71,13 +71,13 @@ public class Class274 {
 	}
 
 	static final void method4881(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(858005822);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(858005822);
 	}
 
 	static final void method4882(CS2Executor class527, int i) {
 		Class492.method8265(0, 0, client.aClass118_7183.anInt1301 * 1506818197, client.aClass118_7183.anInt1429 * -492594917, false, (byte) -37);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 1064588657 * client.anInt7188;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 292041583 * client.anInt7440;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 1064588657 * client.anInt7188;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 292041583 * client.anInt7440;
 	}
 
 	static final void method4883(Class118 class118, int i, int i_3_, CS2Executor class527, int i_4_) {

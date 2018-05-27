@@ -159,7 +159,7 @@ public final class Class78 {
 	}
 
 	static final void method1385(CS2Executor class527, int i) {
-		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_10_, (byte) 32);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
 		Class241.method4149(class118, class98, class527, -1861412275);
@@ -177,7 +177,7 @@ public final class Class78 {
 	}
 
 	static final void method1387(CS2Executor class527, byte i) {
-		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class217_Sub1 class217_sub1 = ObjectIndexLoader.method7916(i_11_, 1517040496);
 		if (null != class217_sub1) {
 			if (i >= -1) {
@@ -185,22 +185,22 @@ public final class Class78 {
 					/* empty */
 				}
 			}
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1203083985 * class217_sub1.anInt2700;
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class217_sub1.aString7977;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1203083985 * class217_sub1.anInt2700;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class217_sub1.aString7977;
 			Class213 class213 = class217_sub1.method13055((short) -22599);
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -216896281 * class213.anInt2680;
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class213.aString2679;
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt2701 * 652811625;
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt7978 * -129507359;
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class217_sub1.aString7976;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -216896281 * class213.anInt2680;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class213.aString2679;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt2701 * 652811625;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt7978 * -129507359;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class217_sub1.aString7976;
 		} else {
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		}
 	}
 

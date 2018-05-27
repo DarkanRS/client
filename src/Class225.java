@@ -23,9 +23,9 @@ public abstract class Class225 {
 	public abstract boolean method3789(int i, int i_9_, int i_10_, Class336 class336);
 
 	static final void method3790(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		if (((UnderlayDefinition) class513).aClass118_5886.anInt1288 * 1924549737 == -1) {
-			if (((CS2Executor) class527).aBool7022)
+			if (class527.aBool7022)
 				throw new RuntimeException("");
 			throw new RuntimeException("");
 		}
@@ -35,19 +35,19 @@ public abstract class Class225 {
 	}
 
 	static final void method3791(CS2Executor class527, byte i) {
-		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_11_, (byte) 77);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
 		DefaultsFile.method11223(class118, class98, class527, 334837898);
 	}
 
 	static final void method3792(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class163.aClass209_2031.method3569(2029806925);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class163.aClass209_2031.method3569(2029806925);
 	}
 
 	static final void method3793(CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string.toLowerCase();
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string.toLowerCase();
 	}
 
 	public static final void method3794(int i, int i_12_, int i_13_, int i_14_, int i_15_, boolean bool, byte i_16_) {

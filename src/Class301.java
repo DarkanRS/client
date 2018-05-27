@@ -100,7 +100,7 @@ public class Class301 implements Interface41 {
 	}
 
 	static final void method5332(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class496.method8310(class118, class98, class527, (byte) -121);
@@ -216,7 +216,7 @@ public class Class301 implements Interface41 {
 	}
 
 	static final void method5335(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 709455005;
-		Class435.method7300((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]), (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 2]), (((CS2Executor) class527).intStack[3 + 1942118537 * ((CS2Executor) class527).anInt7012]), false, (((CS2Executor) class527).intStack[4 + ((CS2Executor) class527).anInt7012 * 1942118537]), 1449989045);
+		class527.anInt7012 -= 709455005;
+		Class435.method7300((class527.intStack[class527.anInt7012 * 1942118537]), (class527.intStack[1 + 1942118537 * class527.anInt7012]), (class527.intStack[class527.anInt7012 * 1942118537 + 2]), (class527.intStack[3 + 1942118537 * class527.anInt7012]), false, (class527.intStack[4 + class527.anInt7012 * 1942118537]), 1449989045);
 	}
 }

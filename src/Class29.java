@@ -133,7 +133,7 @@ public class Class29 {
 	}
 
 	static final void method786(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		if (bool != class118.aBool1306) {
 			class118.aBool1306 = bool;
 			Class109.method1858(class118, (byte) -3);
@@ -146,13 +146,13 @@ public class Class29 {
 		Class282_Sub36 class282_sub36 = Class540.method11595(-1576243923);
 		if (class282_sub36 == null) {
 			if (i == 65) {
-				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
-				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
 			}
 		} else {
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1798678621 * class282_sub36.anInt7991;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1798678621 * class282_sub36.anInt7991;
 			int i_1_ = (-1967986419 * class282_sub36.anInt7988 << 28 | (Class291.anInt3472 + class282_sub36.anInt7987 * -1306535747) << 14 | (Class291.anInt3473 + class282_sub36.anInt7993 * 1012301095));
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = i_1_;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = i_1_;
 		}
 	}
 

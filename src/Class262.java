@@ -420,7 +420,7 @@ public class Class262 implements Interface36 {
 	}
 
 	static final void method4651(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1522252372) != null) {
 			if (i <= 0)
 				return;
@@ -431,13 +431,13 @@ public class Class262 implements Interface36 {
 	}
 
 	static final void method4652(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_29_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_30_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 283782002;
+		int i_29_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_30_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		if (0 == i_29_)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (int) Math.pow((double) i_29_, (double) i_30_);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (int) Math.pow((double) i_29_, (double) i_30_);
 	}
 
 	static void method4653(int i, int i_31_, int i_32_) {

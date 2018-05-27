@@ -211,18 +211,18 @@ public class Class418 {
 	static final void method7021(CS2Executor class527, int i) {
 		boolean bool = false;
 		String string = "";
-		if (null != ((CS2Executor) class527).aClass191_7008 && ((CS2Executor) class527).aClass191_7008.method3154((byte) -45)) {
-			File file = ((CS2Executor) class527).aClass191_7008.method3161(-2069377284);
+		if (null != class527.aClass191_7008 && class527.aClass191_7008.method3154((byte) -45)) {
+			File file = class527.aClass191_7008.method3161(-2069377284);
 			if (file != null) {
 				string = file.getPath();
 				if (null == string)
 					string = "";
 			}
 			bool = true;
-			((CS2Executor) class527).aClass191_7008 = null;
+			class527.aClass191_7008 = null;
 		}
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	static void method7022(byte i) {

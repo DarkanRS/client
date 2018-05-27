@@ -234,7 +234,7 @@ public class Class462 {
 	}
 
 	static final void method7715(CS2Executor class527, int i) {
-		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 192651981 * client.aClass330Array7428[i_6_].anInt3862;
+		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 192651981 * client.aClass330Array7428[i_6_].anInt3862;
 	}
 }

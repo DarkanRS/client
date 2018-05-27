@@ -277,12 +277,12 @@ public class Class296 {
 
 	static final void method5296(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i <= 0)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_24_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_24_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_24_).aClass98_5885;
@@ -290,10 +290,10 @@ public class Class296 {
 	}
 
 	static final void method5297(CS2Executor class527, byte i) {
-		int i_25_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_25_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_26_ = client.aClass330Array7428[i_25_].method5908(-1252250172);
-		int[] is = ((CS2Executor) class527).intStack;
-		int i_27_ = (((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1;
+		int[] is = class527.intStack;
+		int i_27_ = (class527.anInt7012 += 141891001) * 1942118537 - 1;
 		int i_28_;
 		if (i_26_ == 1) {
 			if (i <= -123)
@@ -305,15 +305,15 @@ public class Class296 {
 	}
 
 	static final void method5298(CS2Executor class527, int i) {
-		int i_29_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).anInt7000 -= -1341717846;
-		String string = (String) (((CS2Executor) class527).objectStack[((CS2Executor) class527).anInt7000 * 1806726141]);
-		String string_30_ = (String) (((CS2Executor) class527).objectStack[1806726141 * ((CS2Executor) class527).anInt7000 + 1]);
+		int i_29_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.anInt7000 -= -1341717846;
+		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
+		String string_30_ = (String) (class527.objectStack[1806726141 * class527.anInt7000 + 1]);
 		if (string.length() <= 500 && string_30_.length() <= 500)
 			Class105.method1804(i_29_, string, string_30_, (byte) -22);
 	}
 
 	static final void method5299(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class282_Sub45.method13405(Class169.method2869(1994559110));
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class282_Sub45.method13405(Class169.method2869(1994559110));
 	}
 }

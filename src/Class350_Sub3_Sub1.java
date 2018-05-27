@@ -37,9 +37,9 @@ public class Class350_Sub3_Sub1 extends Class350_Sub3 {
 	}
 
 	static final void method15559(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1277 * 442725395;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1277 * 442725395;
 	}
 
 	static final void method15560(long l) {

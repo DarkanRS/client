@@ -2042,7 +2042,7 @@ public class Class336 {
 	}
 
 	static final void method6005(CS2Executor class527, byte i) {
-		int i_196_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_196_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class184 class184 = Class468_Sub20.method12807(-1949417532);
 		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4557, class184.aClass432_2283, 502225021);
 		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_196_);
@@ -2050,7 +2050,7 @@ public class Class336 {
 	}
 
 	static final void method6006(CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		Class493.method8273(string, (byte) -74);
 	}
 
@@ -2104,10 +2104,10 @@ public class Class336 {
 	}
 
 	static final void method6010(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_201_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		short i_202_ = (short) (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		short i_203_ = (short) (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 2]);
+		class527.anInt7012 -= 425673003;
+		int i_201_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		short i_202_ = (short) (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		short i_203_ = (short) (class527.intStack[class527.anInt7012 * 1942118537 + 2]);
 		if (i_201_ >= 0 && i_201_ < 5) {
 			class118.method2013(i_201_, i_202_, i_203_, (byte) 11);
 			Class109.method1858(class118, (byte) -78);

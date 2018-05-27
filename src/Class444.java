@@ -76,7 +76,7 @@ public class Class444 {
 	}
 
 	static final void method7427(CS2Executor class527, int i) {
-		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_2_ >> 28;
+		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_2_ >> 28;
 	}
 }

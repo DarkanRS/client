@@ -113,6 +113,6 @@ public class Class7 implements Runnable {
 	}
 
 	static void method356(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1]), -1396181317).anInt2958) * 792259457;
+		class527.intStack[1942118537 * class527.anInt7012 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 1]), -1396181317).anInt2958) * 792259457;
 	}
 }

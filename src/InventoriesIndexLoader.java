@@ -33,7 +33,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 	}
 	
 	static final void method6738(CS2Executor class527, int i) {
-		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_1_, (byte) 91);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class278_Sub1.method13450(class118, class98, class527, -51249694);
@@ -63,7 +63,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 	}
 
 	static final void method6741(CS2Executor class527, int i) {
-		int i_10_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass61_7010.anIntArray634[i_10_];
+		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.anIntArray634[i_10_];
 	}
 }

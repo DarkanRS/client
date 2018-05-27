@@ -262,26 +262,26 @@ public class Class16 {
 	}
 
 	static final void method563(CS2Executor class527, int i) {
-		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_6_, (byte) 11);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		RsByteBuffer.method13292(class118, class98, class527, (byte) 60);
 	}
 
 	static final void method564(CS2Executor class527, byte i) {
-		int i_7_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_7_, (byte) 53);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class262.method4651(class118, class98, class527, (byte) 59);
 	}
 
 	static final void method565(CS2Executor class527, int i) {
-		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class108 class108 = Class180.method3032(i_8_, (byte) -1);
 		String string = "";
 		if (null != class108 && null != class108.aString1088)
 			string = class108.aString1088;
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	public static void method566(int i) {

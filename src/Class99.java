@@ -59,12 +59,12 @@ public class Class99 {
 
 	static final void method1631(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i != 1)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_16_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_16_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_16_).aClass98_5885;

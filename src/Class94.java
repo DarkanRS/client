@@ -70,7 +70,7 @@ public class Class94 {
 	}
 
 	static final void method1586(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_0_ > 255 || i_0_ < 0)
 			i_0_ = 0;
 		if (i_0_ != Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -18)) {
@@ -129,8 +129,8 @@ public class Class94 {
 
 	static final void method1590(CS2Executor class527, int i) {
 		int i_4_ = Class96_Sub14.method14641(399363690);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (Class233.anInt2880 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1802099431) * -1499268811) * -638562019;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_4_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class233.anInt2880 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1802099431) * -1499268811) * -638562019;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_4_;
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -112);
 		Class190.method3148((byte) 117);
 		client.aBool7175 = false;

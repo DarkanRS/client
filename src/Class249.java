@@ -69,13 +69,13 @@ public class Class249 implements Interface43 {
 	}
 
 	static final void method4276(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 851346006;
-		class118.anInt1293 = -1312401539 * (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		class118.anInt1334 = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) * -2054115939);
-		class118.anInt1385 = ((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]) * 1229969471);
-		class118.anInt1336 = ((((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]) * -140036259);
-		class118.anInt1337 = (-906963849 * (((CS2Executor) class527).intStack[4 + 1942118537 * ((CS2Executor) class527).anInt7012]));
-		class118.anInt1343 = ((((CS2Executor) class527).intStack[5 + ((CS2Executor) class527).anInt7012 * 1942118537]) * -807852535);
+		class527.anInt7012 -= 851346006;
+		class118.anInt1293 = -1312401539 * (class527.intStack[1942118537 * class527.anInt7012]);
+		class118.anInt1334 = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) * -2054115939);
+		class118.anInt1385 = ((class527.intStack[1942118537 * class527.anInt7012 + 2]) * 1229969471);
+		class118.anInt1336 = ((class527.intStack[3 + class527.anInt7012 * 1942118537]) * -140036259);
+		class118.anInt1337 = (-906963849 * (class527.intStack[4 + 1942118537 * class527.anInt7012]));
+		class118.anInt1343 = ((class527.intStack[5 + class527.anInt7012 * 1942118537]) * -807852535);
 		Class109.method1858(class118, (byte) 60);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999) {
 			Class106.method1818(-1952846363 * class118.anInt1287, -1101705065);
@@ -84,24 +84,24 @@ public class Class249 implements Interface43 {
 	}
 
 	static final void method4277(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
 	}
 
 	static final void method4278(CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		Class402.method6798(string, (short) -15782);
 	}
 
 	static final void method4279(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class293.method5206(-2045199626);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class293.method5206(-2045199626);
 	}
 
 	static final void method4280(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
 		Class118 class118_0_ = class118;
 		boolean bool;
-		if ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) {
+		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) {
 			if (i <= 32)
 				return;
 			bool = true;
@@ -134,7 +134,7 @@ public class Class249 implements Interface43 {
 	}
 
 	static final void method4283(CS2Executor class527, short i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		DefaultsFile.method11221(class118, class98, class527, -2007218506);

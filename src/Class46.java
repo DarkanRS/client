@@ -315,11 +315,11 @@ public class Class46 implements Interface2 {
 	}
 
 	static final void method933(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((CS2Executor) class527).aClass61_7010.anInt635 * -1130104385;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.anInt635 * -1130104385;
 	}
 
 	static final void method934(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (-79546877 * Class11.aClass282_Sub51_124.anInt8167 < 512 || client.aBool7465 || client.aBool7171) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (-79546877 * Class11.aClass282_Sub51_124.anInt8167 < 512 || client.aBool7465 || client.aBool7171) ? 1 : 0;
 	}
 
 	static void method935(byte i) {

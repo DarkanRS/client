@@ -78,13 +78,13 @@ public class Class180 {
 	}
 
 	static final void method3030(CS2Executor class527, int i) {
-		int i_5_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_5_, 504897377);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class425.aBool5101 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class425.aBool5101 ? 1 : 0;
 	}
 
 	static final void method3031(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class82.method1454(class118, class98, class527, (byte) 111);
@@ -110,8 +110,8 @@ public class Class180 {
 
 	static final void method3033(CS2Executor class527, byte i) {
 		if (-1353302673 * client.anInt7319 >= 5 && -1353302673 * client.anInt7319 <= 9)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = client.anInt7319 * -1353302673;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = client.anInt7319 * -1353302673;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 }

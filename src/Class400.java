@@ -222,11 +222,11 @@ public class Class400 {
 		CS2Script class282_sub50_sub5 = Class286.method5049(i_43_, -905040063);
 		if (null != class282_sub50_sub5) {
 			CS2Executor class527 = Class125.method2167(-444057050);
-			((CS2Executor) class527).intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
+			class527.intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
 			int i_44_ = 0;
-			((CS2Executor) class527).objectLocals = new String[class282_sub50_sub5.stringLocalsCount * 1886892247];
+			class527.objectLocals = new String[class282_sub50_sub5.stringLocalsCount * 1886892247];
 			int i_45_ = 0;
-			((CS2Executor) class527).aLongArray6996 = new long[class282_sub50_sub5.longLocalsCount * -684160137];
+			class527.aLongArray6996 = new long[class282_sub50_sub5.longLocalsCount * -684160137];
 			int i_46_ = 0;
 			for (int i_47_ = 1; i_47_ < objects.length; i_47_++) {
 				if (objects[i_47_] instanceof Integer) {
@@ -249,18 +249,18 @@ public class Class400 {
 						i_48_ = class282_sub43.anInt8058 * 101519687;
 					if (-2147483639 == i_48_)
 						i_48_ = 505716237 * class282_sub43.anInt8056;
-					((CS2Executor) class527).intLocals[i_44_++] = i_48_;
+					class527.intLocals[i_44_++] = i_48_;
 				} else if (objects[i_47_] instanceof String) {
 					String string = (String) objects[i_47_];
 					if (string.equals("event_opbase"))
 						string = class282_sub43.aString8060;
-					((CS2Executor) class527).objectLocals[i_45_++] = string;
+					class527.objectLocals[i_45_++] = string;
 				} else if (objects[i_47_] instanceof Long) {
 					long l = ((Long) objects[i_47_]).longValue();
-					((CS2Executor) class527).aLongArray6996[i_46_++] = l;
+					class527.aLongArray6996[i_46_++] = l;
 				}
 			}
-			((CS2Executor) class527).anInt7015 = -1709878683 * ((Class282_Sub43) class282_sub43).anInt8061;
+			class527.anInt7015 = -1709878683 * ((Class282_Sub43) class282_sub43).anInt8061;
 			Class51.method1068(class282_sub50_sub5, i, class527, 564283341);
 		}
 	}

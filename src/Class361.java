@@ -176,17 +176,17 @@ public class Class361 {
 	}
 
 	static final void method6271(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class125.method2168(class118, class98, class527, 539000010);
 	}
 
 	static final void method6272(CS2Executor class527, byte i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int[] is = Class268.method4799(i_0_, 72550989);
-		Class503.method8362(is, 0, ((CS2Executor) class527).intStack, ((CS2Executor) class527).anInt7012 * 1942118537, 3);
-		((CS2Executor) class527).anInt7012 += 425673003;
+		Class503.method8362(is, 0, class527.intStack, class527.anInt7012 * 1942118537, 3);
+		class527.anInt7012 += 425673003;
 	}
 
 	public static byte[] method6273(byte[] is, int i, int i_1_, byte i_2_) {
@@ -210,8 +210,8 @@ public class Class361 {
 	}
 
 	static final void method6275(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7344 ? 1 : 0;
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = client.aString7356 == null ? "" : client.aString7356;
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = null == client.aString7275 ? "" : client.aString7275;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7344 ? 1 : 0;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = client.aString7356 == null ? "" : client.aString7356;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = null == client.aString7275 ? "" : client.aString7275;
 	}
 }

@@ -29,7 +29,7 @@ public class DefaultsFile {
 	}
 
 	static final void method11221(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1482833983) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1393 = Class351.method6193(string, class527, -404986216);
@@ -37,18 +37,18 @@ public class DefaultsFile {
 	}
 
 	static final void method11222(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(1753438100))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_0_, 65280).method7973(i_1_, class437.aString5335, (byte) 97);
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_0_, 65280).method7973(i_1_, class437.aString5335, (byte) 97);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
 	}
 
 	static final void method11223(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 382641837) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1392 = Class351.method6193(string, class527, 1828799616);
@@ -56,9 +56,9 @@ public class DefaultsFile {
 	}
 
 	static final void method11224(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_2_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_3_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 283782002;
+		int i_2_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_3_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		if (null != Class84.myPlayer.playerAppearance) {
 			for (int i_4_ = 0; i_4_ < Class44.anIntArray428.length; i_4_++) {
 				if (Class44.anIntArray428[i_4_] == i_2_) {

@@ -102,7 +102,7 @@ public class Class347 {
 	}
 
 	static final void method6169(CS2Executor class527, byte i) {
-		int i_6_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub1.method11614(i_6_, 143389073);
 	}
 

@@ -177,9 +177,9 @@ public class Class282_Sub20_Sub23 extends Class282_Sub20 {
 	}
 
 	static final void method15389(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_29_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_30_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class117.method1980(i_29_, i_30_, false, 1448220048);
+		class527.anInt7012 -= 283782002;
+		int i_29_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_30_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class117.method1980(i_29_, i_30_, false, 1448220048);
 	}
 }

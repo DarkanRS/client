@@ -21,7 +21,7 @@ public class Class110 {
 	}
 
 	static final void method1860(CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (0 != -644057819 * client.rights || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
 			String string_0_ = string.toLowerCase();
 			int i_1_ = 0;
@@ -148,8 +148,8 @@ public class Class110 {
 	}
 
 	static final void method1861(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		Class455.aShortArray5452[(((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 * 1942118537)])] = (short) Class5.method294((((CS2Executor) class527).intStack[(1 + 1942118537 * (((CS2Executor) class527).anInt7012))]), (byte) -4);
+		class527.anInt7012 -= 283782002;
+		Class455.aShortArray5452[(class527.intStack[(class527.anInt7012 * 1942118537)])] = (short) Class5.method294((class527.intStack[(1 + 1942118537 * (class527.anInt7012))]), (byte) -4);
 		IndexLoaders.ITEM_INDEX_LOADER.method7152(-2142762956);
 		IndexLoaders.ITEM_INDEX_LOADER.method7151((byte) -24);
 		IndexLoaders.NPC_INDEX_LOADER.method6831(-1083280039);
@@ -157,6 +157,6 @@ public class Class110 {
 	}
 
 	static final void method1862(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12899(-386531740) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12899(-386531740) ? 1 : 0;
 	}
 }

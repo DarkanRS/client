@@ -133,14 +133,14 @@ public class Class480 {
 	}
 
 	static final void method8045(CS2Executor class527, byte i) {
-		int i_18_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_18_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_18_, (byte) 119);
-		int i_19_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_19_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		i_19_--;
 		if (null == class118.aStringArray1352 || i_19_ >= class118.aStringArray1352.length || null == class118.aStringArray1352[i_19_])
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class118.aStringArray1352[i_19_];
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class118.aStringArray1352[i_19_];
 	}
 
 	public static Class106 method8046(int i, byte i_20_) {

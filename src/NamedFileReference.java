@@ -68,29 +68,29 @@ public class NamedFileReference {
 	}
 
 	static void method868(CS2Executor class527, byte i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2961 ? 0 : class240.anIntArray2961.length);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2961 ? 0 : class240.anIntArray2961.length);
 	}
 
 	static final void method869(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		int i_13_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (-281434611 * Class118.anInt1283 == i_13_ || i_13_ == -85967273 * Class118.anInt1373 || Class118.anInt1265 * -1267941319 == i_13_)
 			class118.anInt1382 = i_13_ * -1316583121;
 	}
 
 	static final void method870(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_14_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_15_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_16_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 425673003;
+		int i_14_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_15_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		int i_16_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
 		Class118 class118 = Class117.method1981(i_16_, (byte) 9);
 		Class282_Sub14.method12221(class118, i_14_, i_15_, 1698123949);
 	}
 
 	static final void method871(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_17_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_18_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_17_ + i_18_;
+		class527.anInt7012 -= 283782002;
+		int i_17_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_18_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_17_ + i_18_;
 	}
 }

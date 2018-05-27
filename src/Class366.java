@@ -72,12 +72,12 @@ public class Class366 implements Interface3 {
 	}
 
 	static final void method6304(CS2Executor class527, int i) {
-		int i_17_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = IndexLoaders.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
+		int i_17_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = IndexLoaders.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
 	}
 
 	static final void method6305(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class475.method7927(class118, class527, (byte) -27);
 	}

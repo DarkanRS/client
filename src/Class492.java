@@ -224,8 +224,8 @@ public class Class492 {
 	static final void method8263(CS2Executor class527, int i) {
 		if (Class475.aBool5623 && null != Class263.aFrame3260)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(577867050), -1, -1, false, (byte) 35);
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		String string_4_ = new StringBuilder().append(WorldMapAreaDefs.method3741((byte) -1)).append(string).toString();
 		Class282_Sub50_Sub6.method14788(string_4_, bool, Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1739196165) == 5, client.aBool7158, client.aBool7159, (byte) -52);
 	}

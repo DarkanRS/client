@@ -580,6 +580,6 @@ public abstract class Class282_Sub20 extends Node {
 	}
 
 	static final void method12352(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class464.aBool5556 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class464.aBool5556 ? 1 : 0;
 	}
 }

@@ -8,15 +8,15 @@ public abstract class Class282_Sub1 extends Node {
 	}
 
 	static final void method11612(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		Class117.method1978((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[1 + (1942118537 * ((CS2Executor) class527).anInt7012)]), (((CS2Executor) class527).intStack[(1942118537 * ((CS2Executor) class527).anInt7012 + 2)]), (byte) 1);
+		class527.anInt7012 -= 425673003;
+		Class117.method1978((class527.intStack[class527.anInt7012 * 1942118537]), (class527.intStack[1 + (1942118537 * class527.anInt7012)]), (class527.intStack[(1942118537 * class527.anInt7012 + 2)]), (byte) 1);
 	}
 
 	static final void method11613(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (-1 != -1699899559 * client.anInt7349) {
 			if (0 == i_0_) {
-				((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537) - 1] = -1699899559 * client.anInt7349;
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1699899559 * client.anInt7349;
 				return;
 			}
 			i_0_--;
@@ -24,7 +24,7 @@ public abstract class Class282_Sub1 extends Node {
 		Class282_Sub44 class282_sub44 = (Class282_Sub44) client.aClass465_7442.method7750(-1846591050);
 		while (i_0_-- > 0)
 			class282_sub44 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 5);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 587626901 * class282_sub44.anInt8063;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 587626901 * class282_sub44.anInt8063;
 	}
 
 	public static void method11614(int i, int i_1_) {

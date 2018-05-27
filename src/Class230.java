@@ -125,7 +125,7 @@ public class Class230 implements IndexLoader {
 	}
 
 	static final void method3909(CS2Executor class527, byte i) {
-		Class118 class118 = Class117.method1981((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), (byte) 38);
+		Class118 class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 38);
 		class118.aClass118Array1438 = null;
 		class118.aClass118Array1439 = null;
 		Class109.method1858(class118, (byte) -71);
@@ -142,10 +142,10 @@ public class Class230 implements IndexLoader {
 	}
 
 	static final void method3911(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_4_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_5_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		int i_6_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 425673003;
+		int i_4_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		int i_6_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
 		Class96_Sub10.method14603(10, i_4_ << 16 | i_5_, i_6_, "", (byte) 121);
 	}
 

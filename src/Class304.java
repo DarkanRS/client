@@ -726,7 +726,7 @@ public class Class304 implements Interface27 {
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(165047864);
 		int i_153_ = (1948093437 * class219.anInt2711 + ((int) class385.aFloat4671 >> 9));
 		int i_154_ = (((int) class385.aFloat4673 >> 9) + class219.anInt2712 * -1002240017);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
 	}
 
 	public static void method5409(Class118 class118, int i, int i_155_, byte i_156_) {

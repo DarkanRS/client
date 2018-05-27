@@ -71,7 +71,7 @@ public final class Class459 {
 	}
 
 	static final void method7676(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		int i_0_ = -1;
 		int i_1_ = -1;
@@ -80,8 +80,8 @@ public final class Class459 {
 			i_0_ = class119.anInt1458 * -1125753931;
 			i_1_ = class119.anInt1454 * 2069222845;
 		}
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_0_;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_0_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
 	}
 
 	static final void decodeUpdate(boolean largeSceneView, int i) {

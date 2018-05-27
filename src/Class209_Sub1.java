@@ -293,7 +293,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 	}
 
 	static final void method12915(CS2Executor class527, int i) {
-		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) ((CS2Executor) class527).animable);
+		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class527.animable);
 		String string = class521_sub1_sub1_sub2_sub2.aString10584;
 		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (null != class409.anIntArray4886) {
@@ -305,7 +305,7 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		}
 		if (null == string)
 			string = "";
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	public static void method12916(byte i) {

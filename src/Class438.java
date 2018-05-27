@@ -126,7 +126,7 @@ public class Class438 {
 	}
 
 	static final void method7332(CS2Executor class527, byte i) {
-		Class337.method6018(((Class521_Sub1) ((CS2Executor) class527).anInterface12_7013), class527, 1876481461);
+		Class337.method6018(((Class521_Sub1) class527.anInterface12_7013), class527, 1876481461);
 	}
 
 	public static final void method7333(boolean bool, int i) {
@@ -166,7 +166,7 @@ public class Class438 {
 	}
 
 	static final void method7334(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 1 ? 1 : 0;
 	}
 
 	static void method7335(int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, boolean bool, int i_17_) {

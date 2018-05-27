@@ -146,6 +146,6 @@ public final class Class464 {
 	}
 
 	static final void method7744(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -704900783 * Class9.anInt94;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -704900783 * Class9.anInt94;
 	}
 }

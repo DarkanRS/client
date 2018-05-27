@@ -96,8 +96,8 @@ public class Class96_Sub22 extends Class96 {
 	}
 
 	static final void method14680(Class118 class118, CS2Executor class527, int i) {
-		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		int i_9_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
+		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (6 != 2131324949 * class118.anInt1329)
 			throw new RuntimeException("");
 		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(class118.anInt1330 * -402732635, (byte) 52);

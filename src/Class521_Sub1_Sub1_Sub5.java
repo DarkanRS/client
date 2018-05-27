@@ -356,13 +356,13 @@ public class Class521_Sub1_Sub1_Sub5 extends Class521_Sub1_Sub1 implements Inter
 	}
 
 	static final void method16100(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_24_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_25_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7012 -= 283782002;
+		int i_24_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_25_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_25_, (byte) 0);
 		if (class437.method7319(1555289189))
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
 	}
 }

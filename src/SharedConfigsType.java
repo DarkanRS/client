@@ -156,27 +156,27 @@ public class SharedConfigsType {
 	}
 
 	static final void method2091(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_6_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_7_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		int i_8_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 425673003;
+		int i_6_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_7_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		int i_8_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
 		Class282_Sub50_Sub9 class282_sub50_sub9 = IndexLoaders.aClass429_4265.method7214(i_6_, -1670488027);
 		if ((class282_sub50_sub9.method14918(i_7_, -1596809459).anInt2997 * -1869685303) != 0) {
 			if (i >= 1)
 				return;
 			throw new RuntimeException("");
 		}
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class282_sub50_sub9.method14901(i_7_, i_8_, 1954102872);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class282_sub50_sub9.method14901(i_7_, i_8_, 1954102872);
 	}
 
 	static void method2092(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1])][0]);
-		((CS2Executor) class527).anInt7012 -= 141891001;
+		class527.intStack[class527.anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(class527.intStack[1942118537 * class527.anInt7012 - 1])][0]);
+		class527.anInt7012 -= 141891001;
 	}
 
 	static final void method2093(CS2Executor class527, byte i) {
-		int i_9_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = ((NPC) ((CS2Executor) class527).animable).aClass153_10579.method2610(i_9_, (short) 25901);
+		int i_9_ = (class527.unknown[class527.instrPtr * 301123709]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = ((NPC) class527.animable).aClass153_10579.method2610(i_9_, (short) 25901);
 	}
 
 	public static void method2094(int i, byte i_10_) {
@@ -219,17 +219,17 @@ public class SharedConfigsType {
 	}
 
 	static final void method2096(CS2Executor class527, byte i) {
-		int i_12_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (2 == client.anInt7434 * 1609086245 && i_12_ < client.anInt7449 * 493536965) {
 			Class6 class6 = client.aClass6Array7452[i_12_];
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = class6.aString37;
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class6.aString37;
 			if (class6.aString43 != null)
-				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = class6.aString43;
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = class6.aString43;
 			else
-				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
 		} else {
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		}
 	}
 }

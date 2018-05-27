@@ -215,12 +215,12 @@ public final class Class155 {
 
 	static final void method2638(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i <= 1)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_51_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_51_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_51_).aClass98_5885;
@@ -228,12 +228,12 @@ public final class Class155 {
 	}
 
 	static final void method2639(CS2Executor class527, short i) {
-		int i_52_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) ((CS2Executor) class527).animable);
+		int i_52_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class527.animable);
 		int i_53_ = class521_sub1_sub1_sub2_sub2.method16163(i_52_, -2060228859);
 		int i_54_ = class521_sub1_sub1_sub2_sub2.method16169(i_52_, (byte) -49);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_53_;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_54_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_53_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_54_;
 	}
 
 	static Animable method2640(int i, int i_55_, int i_56_, int i_57_) {

@@ -47,7 +47,7 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6687(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class521_Sub1_Sub4.method14892(class118, class98, class527, (byte) 121);
@@ -55,12 +55,12 @@ public class Class388 implements Interface41 {
 
 	static final void method6688(CS2Executor class527, byte i) {
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022) {
+		if (class527.aBool7022) {
 			if (i != 63)
 				return;
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		} else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_0_ = class513;
 		Class118 class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
@@ -68,7 +68,7 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6689(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, 1724948075);
 		if (is != null)
 			string = string.substring(0, string.length() - 1);
@@ -78,7 +78,7 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6690(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 41262162) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1361 = Class351.method6193(string, class527, -295691698);
@@ -86,9 +86,9 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6691(CS2Executor class527, int i) {
-		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) != 0);
-		int i_1_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = Class202.method3342((long) i_1_, 0, bool, Class223.CURRENT_LANGUAGE, (byte) -28);
+		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) != 0);
+		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = Class202.method3342((long) i_1_, 0, bool, Class223.CURRENT_LANGUAGE, (byte) -28);
 	}
 
 	static void method6692(int i) {

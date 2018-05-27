@@ -54,7 +54,7 @@ public class Class275_Sub2 extends Class275 {
 	}
 
 	static final void method12504(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).intLocals[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.intLocals[(class527.unknown[class527.instrPtr * 301123709])]);
 	}
 
 	static Class200 method12505(int i, int i_0_, int i_1_, MeshRasterizer class528, byte i_2_) {
@@ -65,9 +65,9 @@ public class Class275_Sub2 extends Class275 {
 	}
 
 	static final void method12506(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		boolean bool = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) == 1);
+		class527.anInt7012 -= 283782002;
+		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		boolean bool = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) == 1);
 		if (Class291_Sub1.aClass465_8029 != null) {
 			Node class282 = Class291_Sub1.aClass465_8029.method7754((long) i_3_);
 			if (null != class282 && !bool)

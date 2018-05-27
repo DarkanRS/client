@@ -317,7 +317,7 @@ public final class IterableNodeMap implements Iterable {
 			string = Class84.myPlayer.method16128(false, 1912893547);
 		else
 			string = "";
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = string;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
 	static final void method7772(Class282_Sub31 class282_sub31, boolean bool, int i) {
@@ -351,9 +351,9 @@ public final class IterableNodeMap implements Iterable {
 	}
 
 	static final void method7774(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_21_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_22_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_21_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_22_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
 		Class515.method8862(i_21_, i_22_ >> 14 & 0x3fff, i_22_ & 0x3fff, true, -1732540658);
 	}
 }

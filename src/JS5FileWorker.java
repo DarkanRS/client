@@ -30,15 +30,15 @@ public abstract class JS5FileWorker {
 	abstract byte[] method5813(int i);
 
 	static final void method5814(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_3_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_4_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7012 -= 283782002;
+		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_4_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022)
-			class513 = ((CS2Executor) class527).aClass513_6994;
+		if (class527.aBool7022)
+			class513 = class527.aClass513_6994;
 		else
-			class513 = ((CS2Executor) class527).aClass513_7007;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((((CS2Executor) class527).animable.aClass98_10324), i_3_, i_4_, (byte) 1) ? 1 : 0;
+			class513 = class527.aClass513_7007;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.aClass98_10324), i_3_, i_4_, (byte) 1) ? 1 : 0;
 	}
 
 	static Class221[] method5815(int i) {

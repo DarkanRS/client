@@ -62,10 +62,10 @@ public class Class413 implements Interface43 {
 	}
 
 	static final void method6938(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		byte[] is = { (byte) ((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537] };
-		byte[] is_4_ = { (byte) ((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012] };
-		int i_5_ = (((CS2Executor) class527).intStack[2 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7012 -= 425673003;
+		byte[] is = { (byte) class527.intStack[class527.anInt7012 * 1942118537] };
+		byte[] is_4_ = { (byte) class527.intStack[1 + 1942118537 * class527.anInt7012] };
+		int i_5_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
 		Class118 class118 = Class117.method1981(i_5_, (byte) 48);
 		Class107.method1838(class118, is, is_4_, class527, 1844755981);
 	}
@@ -75,15 +75,15 @@ public class Class413 implements Interface43 {
 	}
 
 	static final void method6940(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_6_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_7_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
-		int i_8_ = (((CS2Executor) class527).intStack[2 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 425673003;
+		int i_6_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_7_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		int i_8_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
 		Class96_Sub10.method14603(6, i_6_ << 16 | i_7_, i_8_, "", (byte) 43);
 	}
 
 	static final void method6941(CS2Executor class527, int i) {
-		int i_9_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_9_, (byte) 102);
 		Node.method5001(class118, class527, -11442386);
 	}

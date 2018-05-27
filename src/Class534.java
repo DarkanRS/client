@@ -578,14 +578,14 @@ public abstract class Class534 {
 	}
 
 	static final void method11438(CS2Executor class527, byte i) {
-		int i_42_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_42_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_42_, (byte) 76);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_42_ >> 16];
 		Class185.method3078(class118, class98, class527, -1906837964);
 	}
 
 	static final void method11439(CS2Executor class527, int i) {
-		int i_43_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_43_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_44_ = i_43_ >> 14 & 0x3fff;
 		int i_45_ = i_43_ & 0x3fff;
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(2060657850);
@@ -607,10 +607,10 @@ public abstract class Class534 {
 	}
 
 	static final void method11440(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 425673003;
-		int i_46_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_47_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_48_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
+		class527.anInt7012 -= 425673003;
+		int i_46_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_47_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		int i_48_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
 		Class96_Sub10.method14603(1, i_46_ << 16 | i_47_, i_48_, "", (byte) 25);
 	}
 

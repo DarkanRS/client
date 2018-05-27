@@ -322,7 +322,7 @@ public class NPCIndexLoader {
 	}
 
 	static final void method6851(CS2Executor class527, int i) {
-		int i_4_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_4_, (byte) 27);
 		Class96_Sub10.method14605(class118, class527, (byte) -34);
 	}

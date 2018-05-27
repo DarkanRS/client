@@ -235,12 +235,12 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	static final void method8147(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 1560801011;
+		class527.anInt7012 -= 1560801011;
 		Class356[] class356s = Class350_Sub3_Sub1.method15558(418447133);
 		Class353[] class353s = Class483.method8155(152314627);
-		Class282_Sub15_Sub3.method15239(class356s[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537])], class353s[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1])], (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]), (((CS2Executor) class527).intStack[3 + ((CS2Executor) class527).anInt7012 * 1942118537]),
-				(((CS2Executor) class527).intStack[4 + ((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[5 + ((CS2Executor) class527).anInt7012 * 1942118537]), (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 6]), (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 7]), (((CS2Executor) class527).intStack[8 + 1942118537 * ((CS2Executor) class527).anInt7012]),
-				(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 9]), (((CS2Executor) class527).intStack[10 + ((CS2Executor) class527).anInt7012 * 1942118537]), (byte) -64);
+		Class282_Sub15_Sub3.method15239(class356s[(class527.intStack[class527.anInt7012 * 1942118537])], class353s[(class527.intStack[class527.anInt7012 * 1942118537 + 1])], (class527.intStack[1942118537 * class527.anInt7012 + 2]), (class527.intStack[3 + class527.anInt7012 * 1942118537]),
+				(class527.intStack[4 + class527.anInt7012 * 1942118537]), (class527.intStack[5 + class527.anInt7012 * 1942118537]), (class527.intStack[class527.anInt7012 * 1942118537 + 6]), (class527.intStack[class527.anInt7012 * 1942118537 + 7]), (class527.intStack[8 + 1942118537 * class527.anInt7012]),
+				(class527.intStack[class527.anInt7012 * 1942118537 + 9]), (class527.intStack[10 + class527.anInt7012 * 1942118537]), (byte) -64);
 	}
 
 	public static void method8148(byte i) {

@@ -172,7 +172,7 @@ public class Class250 {
 	}
 
 	static final void method4295(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1900875655 * ((CS2Executor) class527).aClass61_7010.anInt636;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1900875655 * class527.aClass61_7010.anInt636;
 	}
 
 	public static void method4296(int i) {
@@ -766,8 +766,8 @@ public class Class250 {
 	}
 
 	static final void method4299(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		if ((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]) == (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]))
-			((CS2Executor) class527).instrPtr += (-1051529003 * (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]));
+		class527.anInt7012 -= 283782002;
+		if ((class527.intStack[class527.anInt7012 * 1942118537]) == (class527.intStack[1 + class527.anInt7012 * 1942118537]))
+			class527.instrPtr += (-1051529003 * (class527.unknown[class527.instrPtr * 301123709]));
 	}
 }

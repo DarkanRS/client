@@ -59,9 +59,9 @@ public class Class92 {
 	}
 
 	static final void method1562(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.method11633(class118).method12179(-394361694);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.method11633(class118).method12179(-394361694);
 	}
 
 	public static void method1563(int i, int i_10_) {

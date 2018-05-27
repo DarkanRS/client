@@ -136,9 +136,9 @@ public final class Class475 {
 	}
 
 	static final void method7927(Class118 class118, CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_8_ = ((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]) - 1);
-		int i_9_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7012 -= 283782002;
+		int i_8_ = ((class527.intStack[1942118537 * class527.anInt7012]) - 1);
+		int i_9_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (i_8_ < 0 || i_8_ > 9)
 			throw new RuntimeException();
 		Class274.method4883(class118, i_8_, i_9_, class527, -838566564);

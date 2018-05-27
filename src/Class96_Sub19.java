@@ -177,6 +177,6 @@ public class Class96_Sub19 extends Class96 {
 	}
 
 	static final void method14667(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7300 * 550395357;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7300 * 550395357;
 	}
 }

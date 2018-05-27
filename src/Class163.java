@@ -68,8 +68,8 @@ public class Class163 {
 	}
 
 	static void method2841(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 1])][1]);
-		((CS2Executor) class527).anInt7012 -= 141891001;
+		class527.intStack[1942118537 * class527.anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(class527.intStack[class527.anInt7012 * 1942118537 - 1])][1]);
+		class527.anInt7012 -= 141891001;
 	}
 
 	public static TilestreamPacket[] method2842(int i) {

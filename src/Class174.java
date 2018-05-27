@@ -262,8 +262,8 @@ public class Class174 {
 	}
 
 	static void method2953(CS2Executor class527, byte i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
 	}
 
 	static boolean method2954(int i) {
@@ -302,7 +302,7 @@ public class Class174 {
 	}
 
 	static final void method2955(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		class118.anInt1309 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -511891533);
+		class118.anInt1309 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -511891533);
 	}
 
 	static final void method2956(int i, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, int i_51_) {

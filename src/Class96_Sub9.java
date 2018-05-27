@@ -46,7 +46,7 @@ public class Class96_Sub9 extends Class96 {
 	}
 
 	static final void method14586(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -159099843) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1396 = Class351.method6193(string, class527, -448612500);

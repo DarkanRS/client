@@ -36,11 +36,11 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3364(CS2Executor class527, int i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = (((CS2Executor) class527).objectLocals[(((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709])]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (class527.objectLocals[(class527.unknown[class527.instrPtr * 301123709])]);
 	}
 
 	static final void method3365(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1659229843) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1302 = Class351.method6193(string, class527, -80213268);
@@ -48,7 +48,7 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3366(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 570698140) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1416 = Class351.method6193(string, class527, -422636898);
@@ -66,11 +66,11 @@ public class Class204 implements Interface43 {
 	}
 
 	static final void method3369(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		class118.aString1338 = (String) (((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141)]);
+		class118.aString1338 = (String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]);
 	}
 
 	static final void method3370(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class15.method542(class118, class98, class527, -2005893492);

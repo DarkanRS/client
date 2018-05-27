@@ -110,7 +110,7 @@ public class Class215 implements Interface17 {
 	}
 
 	static final void method3672(Class118 class118, Class98 class98, CS2Executor class527, short i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 394644224) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1412 = Class351.method6193(string, class527, 1237376111);

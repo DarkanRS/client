@@ -118,7 +118,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 	}
 
 	static final void method14892(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		class118.anInt1377 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * -1802729151);
+		class118.anInt1377 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1802729151);
 		Class109.method1858(class118, (byte) -21);
 	}
 }

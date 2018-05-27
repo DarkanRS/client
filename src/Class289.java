@@ -529,20 +529,20 @@ public class Class289 implements Runnable {
 	}
 
 	static final void method5098(CS2Executor class527, int i) {
-		int i_67_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
-		Class320.anIntArray3724[i_67_] = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_67_ = (class527.unknown[301123709 * class527.instrPtr]);
+		Class320.anIntArray3724[i_67_] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub20_Sub11.method15264(i_67_, (short) -20101);
 		client.aBool7400 |= Class282_Sub17_Sub2.aBoolArray9934[i_67_];
 	}
 
 	static final void method5099(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class242.method4159(class118, class98, class527, -1802550840);
 	}
 
 	static final void method5100(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class41_Sub1_Sub1.method15524((byte) -41);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class41_Sub1_Sub1.method15524((byte) -41);
 	}
 }

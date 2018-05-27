@@ -47,15 +47,15 @@ public class Class417 {
 	}
 
 	static final void method7006(CS2Executor class527, int i) {
-		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (null == Class468_Sub8.aClass98Array7889[i_3_])
-			((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else {
 			String string = (Class468_Sub8.aClass98Array7889[i_3_].aClass118Array998[0].aString1285);
 			if (string == null)
-				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = "";
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
 			else
-				((CS2Executor) class527).objectStack[((((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141) - 1] = string.substring(0, string.indexOf(':'));
+				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = string.substring(0, string.indexOf(':'));
 		}
 	}
 }

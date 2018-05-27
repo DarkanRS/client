@@ -30,7 +30,7 @@ public class Class214 {
 	}
 
 	static final void method3667(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-105598031);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-105598031);
 	}
 
 	public static Class351 method3668(RsByteBuffer class282_sub35, byte i) {

@@ -981,10 +981,10 @@ public class Class227 {
 	}
 
 	static final void method3829(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class412.aByte4963;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class412.aByte4963;
 	}
 
 	static final void method3830(CS2Executor class527, byte i) {
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(Class468.method7788((long) (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]) * 60000L, Class223.CURRENT_LANGUAGE.method243((byte) 1), true, 1560112549)).append(" UTC").toString();
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(Class468.method7788((long) (class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]) * 60000L, Class223.CURRENT_LANGUAGE.method243((byte) 1), true, 1560112549)).append(" UTC").toString();
 	}
 }

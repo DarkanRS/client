@@ -152,7 +152,7 @@ public class Class427 {
 	}
 
 	static final void method7186(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7315 * 1595512269;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7315 * 1595512269;
 	}
 
 	static final void method7187(CS2Executor class527, int i) {

@@ -18,28 +18,28 @@ public class Class6 {
 	}
 
 	static final void method298(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		if ((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]) >= (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]))
-			((CS2Executor) class527).instrPtr += ((((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]) * -1051529003);
+		class527.anInt7012 -= 283782002;
+		if ((class527.intStack[1942118537 * class527.anInt7012]) >= (class527.intStack[1 + 1942118537 * class527.anInt7012]))
+			class527.instrPtr += ((class527.unknown[class527.instrPtr * 301123709]) * -1051529003);
 	}
 
 	static final void method299(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class163.aClass209_2031.method3570(756095591);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class163.aClass209_2031.method3570(756095591);
 	}
 
 	static final void method300(CS2Executor class527, byte i) {
-		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) ((CS2Executor) class527).animable);
+		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class527.animable);
 		boolean bool = false;
 		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (class409.anIntArray4886 != null)
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 		if (class409 != null)
 			bool = class409.aBool4893;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static final void method301(CS2Executor class527, short i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt106 * -1378127363;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt106 * -1378127363;
 	}
 
 	static boolean method302(Interface17 interface17, Class282_Sub53 class282_sub53, int i) {
@@ -72,7 +72,7 @@ public class Class6 {
 	}
 
 	static final void method305(CS2Executor class527, int i) {
-		int i_3_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_3_, (byte) 121);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		Class349.method6186(class118, class98, class527, -94301647);

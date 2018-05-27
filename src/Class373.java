@@ -33,12 +33,12 @@ public class Class373 {
 	}
 
 	static final void method6363(CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).unknown[301123709 * ((CS2Executor) class527).instrPtr]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.anIntArray26[i_0_];
+		int i_0_ = (class527.unknown[301123709 * class527.instrPtr]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.anIntArray26[i_0_];
 	}
 
 	static final void method6364(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class249.method4276(class118, class98, class527, 175430076);

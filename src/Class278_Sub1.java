@@ -151,7 +151,7 @@ public class Class278_Sub1 extends Class278 {
 	}
 
 	static final void method13450(Class118 class118, Class98 class98, CS2Executor class527, int i) {
-		int i_15_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_15_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		class118.aBool1357 = 1 == i_15_;
 		Class109.method1858(class118, (byte) 41);
 	}

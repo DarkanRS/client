@@ -235,8 +235,8 @@ public class Class107 {
 		if (null == class282_sub50_sub5)
 			Class282_Sub50_Sub17.method15509(282059094);
 		else {
-			((CS2Executor) class527).intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
-			((CS2Executor) class527).objectLocals = new Object[1886892247 * class282_sub50_sub5.stringLocalsCount];
+			class527.intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
+			class527.objectLocals = new Object[1886892247 * class282_sub50_sub5.stringLocalsCount];
 			if (Class397.aClass397_4797 == class282_sub50_sub5.aClass397_9527 || (Class397.aClass397_4805 == class282_sub50_sub5.aClass397_9527) || (Class397.aClass397_4798 == class282_sub50_sub5.aClass397_9527)) {
 				int i_31_ = 0;
 				int i_32_ = 0;
@@ -244,25 +244,25 @@ public class Class107 {
 					i_31_ = (597157617 * Class282_Sub20_Sub24.aClass118_9884.anInt1299);
 					i_32_ = (198275475 * Class282_Sub20_Sub24.aClass118_9884.anInt1428);
 				}
-				((CS2Executor) class527).intLocals[0] = Class163.aClass209_2031.method3569(2102959757) - i_31_;
-				((CS2Executor) class527).intLocals[1] = Class163.aClass209_2031.method3570(756095591) - i_32_;
+				class527.intLocals[0] = Class163.aClass209_2031.method3569(2102959757) - i_31_;
+				class527.intLocals[1] = Class163.aClass209_2031.method3570(756095591) - i_32_;
 			} else if (Class397.aClass397_4806 == class282_sub50_sub5.aClass397_9527)
-				((CS2Executor) class527).intLocals[0] = ((CS2Executor) class527).anInt7004 * -945484741;
+				class527.intLocals[0] = class527.anInt7004 * -945484741;
 			Class51.method1068(class282_sub50_sub5, 200000, class527, 223631814);
 		}
 	}
 
 	static final void method1835(CS2Executor class527, short i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_33_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_34_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_33_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_34_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
 		if (null != Class84.myPlayer.playerAppearance)
 			Class84.myPlayer.playerAppearance.method4029(i_33_, i_34_, (byte) -21);
 	}
 
 	static final void method1836(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		Class329_Sub1.method12491(Class84.myPlayer, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 * 1942118537)]), (((CS2Executor) class527).intStack[(1942118537 * ((CS2Executor) class527).anInt7012) + 1]), (byte) -23);
+		class527.anInt7012 -= 283782002;
+		Class329_Sub1.method12491(Class84.myPlayer, (class527.intStack[(class527.anInt7012 * 1942118537)]), (class527.intStack[(1942118537 * class527.anInt7012) + 1]), (byte) -23);
 	}
 
 	static final void method1837(CS2Executor class527, int i) {
@@ -270,7 +270,7 @@ public class Class107 {
 	}
 
 	static final void method1838(Class118 class118, byte[] is, byte[] is_35_, CS2Executor class527, int i) {
-		int i_36_ = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) - 1);
+		int i_36_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (i_36_ < 0 || i_36_ > 9)
 			throw new RuntimeException();
 		Class445.method7429(class118, i_36_, is, is_35_, class527, -1172279897);

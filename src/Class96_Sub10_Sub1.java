@@ -24,14 +24,14 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 	}
 
 	static final void method15552(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, false, 1, class527, (byte) 24);
 	}
 
 	static final void method15553(boolean bool, CS2Executor class527, int i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_0_, (byte) 11);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		if (bool)
@@ -46,8 +46,8 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 	}
 
 	static final void method15555(CS2Executor class527, byte i) {
-		int[] is = ((CS2Executor) class527).intStack;
-		int i_3_ = (((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1;
+		int[] is = class527.intStack;
+		int i_3_ = (class527.anInt7012 += 141891001) * 1942118537 - 1;
 		int i_4_;
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 38) == 1) {
 			if (i == 1)

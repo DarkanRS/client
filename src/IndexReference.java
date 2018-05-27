@@ -128,22 +128,22 @@ public class IndexReference {
 	}
 
 	static final void method1783(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_0_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_1_ = (((CS2Executor) class527).intStack[1 + ((CS2Executor) class527).anInt7012 * 1942118537]);
+		class527.anInt7012 -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		if (i_1_ == -1)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.aClass331_3535.method5918(i_0_, -559215225).method15212((char) i_1_, (byte) 13);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.aClass331_3535.method5918(i_0_, -559215225).method15212((char) i_1_, (byte) 13);
 	}
 
 	static final void method1784(CS2Executor class527, byte i) {
-		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		UnderlayDefinition class513;
-		if (((CS2Executor) class527).aBool7022)
-			class513 = ((CS2Executor) class527).aClass513_6994;
+		if (class527.aBool7022)
+			class513 = class527.aClass513_6994;
 		else
-			class513 = ((CS2Executor) class527).aClass513_7007;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((((CS2Executor) class527).animable.aClass98_10324), i_2_, -1, (byte) 1) ? 1 : 0;
+			class513 = class527.aClass513_7007;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.aClass98_10324), i_2_, -1, (byte) 1) ? 1 : 0;
 	}
 }

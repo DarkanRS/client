@@ -14,20 +14,20 @@ public class Class507 {
 	}
 
 	static final void method8723(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class202.method3338(class118, class98, class527, (byte) 40);
 	}
 
 	static final void method8724(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_0_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_1_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7012 -= 283782002;
+		int i_0_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_1_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (Class468_Sub8.aClass98Array7889[i_0_] == null)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1726519169 * (Class468_Sub8.aClass98Array7889[i_0_].aClass118Array998[i_1_].anInt1414);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1726519169 * (Class468_Sub8.aClass98Array7889[i_0_].aClass118Array998[i_1_].anInt1414);
 	}
 
 	static void method8725(int i, int i_2_, int i_3_, int i_4_, boolean bool, int i_5_) {
@@ -99,7 +99,7 @@ public class Class507 {
 	}
 
 	static final void method8726(CS2Executor class527, short i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class30.method797(class118, class98, class527, 2104717291);

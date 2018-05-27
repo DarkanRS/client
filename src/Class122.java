@@ -58,8 +58,8 @@ public class Class122 {
 	}
 
 	static final void method2108(CS2Executor class527, int i) {
-		int i_7_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method7785(i_7_, 198119632);
+		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method7785(i_7_, 198119632);
 	}
 
 	public static void method2109(NativeSprite[] class160s, byte i) {
@@ -137,14 +137,14 @@ public class Class122 {
 	}
 
 	static final void method2112(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 993237007;
-		int i_18_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_19_ = ((((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]) << 1);
-		int i_20_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 2]);
-		int i_21_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 3]);
-		int i_22_ = (((CS2Executor) class527).intStack[4 + ((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_23_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 + 5]);
-		int i_24_ = (((CS2Executor) class527).intStack[6 + 1942118537 * ((CS2Executor) class527).anInt7012]);
+		class527.anInt7012 -= 993237007;
+		int i_18_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_19_ = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) << 1);
+		int i_20_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
+		int i_21_ = (class527.intStack[1942118537 * class527.anInt7012 + 3]);
+		int i_22_ = (class527.intStack[4 + class527.anInt7012 * 1942118537]);
+		int i_23_ = (class527.intStack[class527.anInt7012 * 1942118537 + 5]);
+		int i_24_ = (class527.intStack[6 + 1942118537 * class527.anInt7012]);
 		if (i_18_ >= 0 && i_18_ < 2 && client.anIntArrayArrayArray7302[i_18_] != null && i_19_ >= 0 && i_19_ < client.anIntArrayArrayArray7302[i_18_].length) {
 			client.anIntArrayArrayArray7302[i_18_][i_19_] = new int[] { (i_20_ >> 14 & 0x3fff) << 9, i_21_ << 2, (i_20_ & 0x3fff) << 9, i_24_ };
 			client.anIntArrayArrayArray7302[i_18_][i_19_ + 1] = new int[] { (i_22_ >> 14 & 0x3fff) << 9, i_23_ << 2, (i_22_ & 0x3fff) << 9 };

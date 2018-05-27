@@ -1124,13 +1124,13 @@ public final class Class251 {
 	}
 
 	static final void method4310(CS2Executor class527, int i) {
-		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) != 0);
+		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) != 0);
 		if (Class84.myPlayer.playerAppearance != null)
 			Class84.myPlayer.playerAppearance.method4003(bool, -794449734);
 	}
 
 	static final void method4311(CS2Executor class527, int i) {
-		int i_172_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_172_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_172_, (byte) 118);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_172_ >> 16];
 		Class455.method7555(class118, class98, class527, (byte) -54);
@@ -1138,9 +1138,9 @@ public final class Class251 {
 
 	static final void method4312(CS2Executor class527, byte i) {
 		if (client.rights * -644057819 >= 2)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -644057819 * client.rights;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -644057819 * client.rights;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static void handleCommand(String string, boolean bool, boolean bool_173_, int i) {
@@ -1411,8 +1411,8 @@ public final class Class251 {
 	}
 
 	static void method4314(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2]), -1396181317).method4103(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), -394016301)) ? 1 : 0;
-		((CS2Executor) class527).anInt7012 -= 141891001;
+		class527.intStack[class527.anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 2]), -1396181317).method4103(Class158_Sub1.aClass3_8507, (class527.intStack[1942118537 * class527.anInt7012 - 1]), -394016301)) ? 1 : 0;
+		class527.anInt7012 -= 141891001;
 	}
 
 	static final void method4315(CS2Executor class527, int i) {

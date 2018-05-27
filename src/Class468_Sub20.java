@@ -108,21 +108,21 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	static final void method12802(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class262.method4651(class118, class98, class527, (byte) 56);
 	}
 
 	static final void method12803(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -204242656);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -204242656);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -96);
 		Class190.method3148((byte) 37);
 		client.aBool7175 = false;
 	}
 
 	static final void method12804(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.unknown[class527.instrPtr * 301123709]);
 	}
 
 	static short[][] method12805(float[][] fs, short[][] is, int i) {

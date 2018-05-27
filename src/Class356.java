@@ -61,7 +61,7 @@ public class Class356 {
 	}
 
 	static final void method6224(CS2Executor class527, int i) {
-		int i_7_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_7_, (byte) 8);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class158.method2732(class118, class98, class527, 2144367938);
@@ -108,13 +108,13 @@ public class Class356 {
 	}
 
 	static final void method6226(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_16_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_17_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
+		class527.anInt7012 -= 283782002;
+		int i_16_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_17_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
 		if (i_16_ > 700 || i_17_ > 700)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 256;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 256;
 		double d = ((Math.random() * (double) (i_17_ + i_16_) - (double) i_16_ + 800.0) / 100.0);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.pow(2.0, d) + 0.5);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.pow(2.0, d) + 0.5);
 	}
 
 	public static final void method6227(boolean bool, byte i) {

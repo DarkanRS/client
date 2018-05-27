@@ -239,6 +239,6 @@ public class Class532_Sub2 extends Class532 {
 	}
 
 	static final void method12859(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 412083381 * Class468_Sub28.anInt7961;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 412083381 * Class468_Sub28.anInt7961;
 	}
 }

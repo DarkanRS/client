@@ -127,8 +127,8 @@ public class Class51 implements Interface2 {
 	}
 
 	static void method1067(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537 - 2]), -1396181317).method4104(Class158_Sub1.aClass3_8507, (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 - 1]), (short) 32683)) ? 1 : 0;
-		((CS2Executor) class527).anInt7012 -= 141891001;
+		class527.intStack[1942118537 * class527.anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 2]), -1396181317).method4104(Class158_Sub1.aClass3_8507, (class527.intStack[1942118537 * class527.anInt7012 - 1]), (short) 32683)) ? 1 : 0;
+		class527.anInt7012 -= 141891001;
 	}
 
 	static void method1068(CS2Script script, int i, CS2Executor executor, int i_6_) {
@@ -176,17 +176,17 @@ public class Class51 implements Interface2 {
 	}
 
 	static final void method1069(CS2Executor class527, int i) {
-		int i_8_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_8_, (byte) 52);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class282_Sub52.method13468(class118, class98, class527, 769396750);
 	}
 
 	static final void method1070(CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		boolean bool = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class76.method1360(string, bool, (byte) 1);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 560339485 * Class415.anInt4985;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 560339485 * Class415.anInt4985;
 	}
 
 	static final void method1071(CS2Executor class527, int i) {
@@ -204,8 +204,8 @@ public class Class51 implements Interface2 {
 	}
 
 	static final void method1073(CS2Executor class527, byte i) {
-		int i_11_ = (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]);
-		Class158_Sub1.aClass3_8507.method266(i_11_, (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]), -1744724277);
+		int i_11_ = (class527.unknown[class527.instrPtr * 301123709]);
+		Class158_Sub1.aClass3_8507.method266(i_11_, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -1744724277);
 	}
 
 	public static void method1074(int[] is, Object[] objects, int i, int i_12_, int i_13_) {

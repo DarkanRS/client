@@ -1109,12 +1109,12 @@ public class Class61 {
 	}
 
 	static final void method1254(CS2Executor class527, int i) {
-		((CS2Executor) class527).instrPtr += (((CS2Executor) class527).unknown[((CS2Executor) class527).instrPtr * 301123709]) * -1051529003;
+		class527.instrPtr += (class527.unknown[class527.instrPtr * 301123709]) * -1051529003;
 	}
 
 	static final void method1255(CS2Executor class527, int i) {
-		int i_97_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_97_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_97_, 676193293);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
 	}
 }

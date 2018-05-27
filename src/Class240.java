@@ -862,7 +862,7 @@ public class Class240 {
 	}
 
 	static final void method4136(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 718441711) != null)
 			string = string.substring(0, string.length() - 1);
 		class118.anObjectArray1409 = Class351.method6193(string, class527, 1509347670);
@@ -870,10 +870,10 @@ public class Class240 {
 	}
 
 	static final void method4137(CS2Executor class527, byte i) {
-		AnimationDefinitions.method11148((((CS2Executor) class527).aClass521_Sub1_Sub2_Sub1_7014), (((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), -1315599355);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];
+		AnimationDefinitions.method11148((class527.aClass521_Sub1_Sub2_Sub1_7014), (class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1315599355);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];
 	}
 
 	public static boolean method4138(int i, int i_105_) {

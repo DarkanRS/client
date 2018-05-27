@@ -138,18 +138,18 @@ public class Class43 implements Interface2 {
 	}
 
 	static final void method893(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		RsByteBuffer.method13292(class118, class98, class527, (byte) 60);
 	}
 
 	static final void method894(CS2Executor class527, int i) {
-		int i_29_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_29_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class108 class108 = Class180.method3032(i_29_, (byte) -1);
 		int i_30_ = -1;
 		if (null != class108)
 			i_30_ = -2005145885 * class108.anInt1084;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_30_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_30_;
 	}
 }

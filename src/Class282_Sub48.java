@@ -1042,7 +1042,7 @@ public class Class282_Sub48 extends Node {
 	}
 
 	static final void method13446(CS2Executor class527, int i) {
-		int i_65_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_65_ ^ 0xffffffff;
+		int i_65_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_65_ ^ 0xffffffff;
 	}
 }

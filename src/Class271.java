@@ -118,14 +118,14 @@ public class Class271 {
 	}
 
 	static final void method4825(CS2Executor class527, int i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_11_ = (((CS2Executor) class527).intStack[((CS2Executor) class527).anInt7012 * 1942118537]);
-		int i_12_ = (((CS2Executor) class527).intStack[1 + 1942118537 * ((CS2Executor) class527).anInt7012]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class515.method8861(i_11_, i_12_, true, 113694446);
+		class527.anInt7012 -= 283782002;
+		int i_11_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		int i_12_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class515.method8861(i_11_, i_12_, true, 113694446);
 	}
 
 	static final void method4826(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -274659233 * Class9.anInt112;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -274659233 * Class9.anInt112;
 	}
 
 	static void method4827(Index class317, int i, int i_13_, int i_14_, boolean bool, long l) {
@@ -154,13 +154,13 @@ public class Class271 {
 
 	static final void method4829(CS2Executor class527, short i) {
 		if (0 == 1609086245 * client.anInt7434)
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = -1754449153 * client.anInt7373;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1754449153 * client.anInt7373;
 	}
 
 	static final void method4830(CS2Executor class527, int i) {
-		Class118 class118 = (((CS2Executor) class527).animable.aClass98_10324.method1618((((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537)]), (byte) 12));
+		Class118 class118 = (class527.animable.aClass98_10324.method1618((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), (byte) 12));
 		class118.aClass118Array1438 = null;
 		class118.aClass118Array1439 = null;
 		Class109.method1858(class118, (byte) -73);

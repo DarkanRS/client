@@ -500,11 +500,11 @@ public class JS5GrabWorker extends JS5FileWorker {
 	}
 
 	static final void method12560(CS2Executor class527, short i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(1554846172) == 1 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(1554846172) == 1 ? 1 : 0;
 	}
 
 	static final void method12561(CS2Executor class527, int i) {
-		int i_54_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_54_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_54_ != -1)
 			Class92.method1563(i_54_, 1917715893);
 	}

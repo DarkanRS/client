@@ -145,12 +145,12 @@ public class Class244 {
 	}
 
 	static final void method4193(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class223.CURRENT_LANGUAGE.method243((byte) 1);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class223.CURRENT_LANGUAGE.method243((byte) 1);
 	}
 
 	static final void method4194(CS2Executor class527, int i) {
-		int i_11_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = (int) (Class302.method5363(i_11_, 292315472) / 60000L);
+		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) (Class302.method5363(i_11_, 292315472) / 60000L);
 	}
 
 	public static final void method4195(int i) {

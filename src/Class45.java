@@ -127,22 +127,22 @@ public class Class45 {
 	}
 
 	static final void method926(CS2Executor class527, int i) {
-		String string = (String) (((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 -= 1476624725) * 1806726141]);
-		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).objectStack[(((CS2Executor) class527).anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append(Class290.method5120(i_2_, true, -948271642)).toString();
+		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append(Class290.method5120(i_2_, true, -948271642)).toString();
 	}
 
 	static final void method927(CS2Executor class527, int i) {
 		int i_3_ = client.aClass465_7442.method7748((short) 622);
 		if (-1 != client.anInt7349 * -1699899559)
 			i_3_++;
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = i_3_;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_3_;
 	}
 
 	static final void method928(CS2Executor class527, int i) {
 		if (Class96_Sub21.aClass199_9438.method3236(82, -2064164643))
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		else
-			((CS2Executor) class527).intStack[((((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 }

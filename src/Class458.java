@@ -96,9 +96,9 @@ public class Class458 implements Interface43 {
 	}
 
 	static final void method7675(CS2Executor class527, byte i) {
-		((CS2Executor) class527).anInt7012 -= 283782002;
-		int i_1_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012]);
-		int i_2_ = (((CS2Executor) class527).intStack[1942118537 * ((CS2Executor) class527).anInt7012 + 1]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class515.method8861(i_1_, i_2_, false, 946854305);
+		class527.anInt7012 -= 283782002;
+		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		int i_2_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class515.method8861(i_1_, i_2_, false, 946854305);
 	}
 }

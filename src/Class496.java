@@ -58,7 +58,7 @@ public class Class496 implements Interface43 {
 	}
 
 	static final void method8303(CS2Executor class527, byte i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1378127363 * Class9.anInt106;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1378127363 * Class9.anInt106;
 	}
 
 	public static Class496[] method8304() {
@@ -93,12 +93,12 @@ public class Class496 implements Interface43 {
 	}
 
 	static final void method8310(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		class118.anInt1423 = ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) * 1700974355);
+		class118.anInt1423 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 1700974355);
 		Class109.method1858(class118, (byte) -17);
 	}
 
 	static final void method8311(CS2Executor class527, int i) {
-		int i_2_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i_2_, (byte) 77);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Language.method8277(class118, class98, class527, 1396779389);

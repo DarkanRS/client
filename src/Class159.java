@@ -78,7 +78,7 @@ public class Class159 {
 	}
 
 	static final void method2737(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = 100 == -8084891 * Class291_Sub1.anInt8015 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 100 == -8084891 * Class291_Sub1.anInt8015 ? 1 : 0;
 	}
 
 	static void method2738(Class98 class98, int i, int i_19_, int i_20_, boolean bool, CS2Executor class527, int i_21_) {
@@ -117,9 +117,9 @@ public class Class159 {
 			class118.aClass118Array1439[i_20_] = class118_25_;
 		UnderlayDefinition class513;
 		if (bool)
-			class513 = ((CS2Executor) class527).aClass513_6994;
+			class513 = class527.aClass513_6994;
 		else
-			class513 = ((CS2Executor) class527).aClass513_7007;
+			class513 = class527.aClass513_7007;
 		((UnderlayDefinition) class513).aClass98_5885 = class98;
 		((UnderlayDefinition) class513).aClass118_5886 = class118_25_;
 		Class109.method1858(class118, (byte) -95);
@@ -159,7 +159,7 @@ public class Class159 {
 	static final void method2741(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
 		Class118 class118_28_ = class118;
 		boolean bool;
-		if ((((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]) == 1) {
+		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) {
 			if (i == -1) {
 				/* empty */
 			}

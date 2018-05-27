@@ -107,14 +107,14 @@ public class Class116 {
 	}
 
 	static final void method1967(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (((CS2Executor) class527).aBool7022 ? ((CS2Executor) class527).aClass513_6994 : ((CS2Executor) class527).aClass513_7007);
+		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class96_Sub22.method14680(class118, class527, -493402778);
 	}
 
 	static final void method1968(CS2Executor class527, byte i) {
-		int i_0_ = (((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 -= 141891001) * 1942118537]);
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method7785(i_0_, -225955104);
+		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method7785(i_0_, -225955104);
 	}
 
 	public static MeshRasterizer method1969(GraphicalRenderer class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, MeshRasterizer class528, int i_5_, int i_6_, int i_7_, int i_8_, Class456 class456, int i_9_) {

@@ -637,6 +637,6 @@ public class Class282_Sub51 extends Node {
 	}
 
 	static final void method13467(CS2Executor class527, int i) {
-		((CS2Executor) class527).intStack[(((CS2Executor) class527).anInt7012 += 141891001) * 1942118537 - 1] = -1174321703 * Class311.anInt3644;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1174321703 * Class311.anInt3644;
 	}
 }
