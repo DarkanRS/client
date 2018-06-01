@@ -137,7 +137,7 @@ public class Class211 {
 		}
 	}
 
-	static final void method3628(CS2Executor class527, int i) {
+	static final void sendReportAbusePacket(CS2Executor class527, int i) {
 		class527.anInt7000 -= -1341717846;
 		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
 		String string_2_ = (String) (class527.objectStack[1806726141 * class527.anInt7000 + 1]);

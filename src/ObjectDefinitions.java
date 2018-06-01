@@ -657,43 +657,43 @@ public class ObjectDefinitions {
 		synchronized (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass229_5615) {
 			class452 = (Class452) ((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass229_5615.get(l);
 		}
-		MeshRasterizer class528 = (MeshRasterizer) (null != class452 ? class452.anObject5443 : null);
+		MeshRasterizer raster = (MeshRasterizer) (null != class452 ? class452.anObject5443 : null);
 		Class282_Sub50_Sub17 class282_sub50_sub17 = null;
-		if (class528 == null || class505.method8452(class528.m(), i_169_) != 0) {
-			if (class528 != null)
-				i_169_ = class505.method8546(i_169_, class528.m());
+		if (raster == null || class505.method8452(raster.m(), i_169_) != 0) {
+			if (raster != null)
+				i_169_ = class505.method8546(i_169_, raster.m());
 			int i_170_ = i_169_;
 			if (i_162_ == 1109376893 * Class458.aClass458_5490.anInt5481 && i_163_ > 3)
 				i_170_ |= 0x5;
-			class528 = method7971(class505, i_170_, i_162_, i_163_, class476, 1453950061);
-			if (null == class528)
+			raster = method7971(class505, i_170_, i_162_, i_163_, class476, 1453950061);
+			if (null == raster)
 				return null;
 			if (i_162_ == Class458.aClass458_5490.anInt5481 * 1109376893 && i_163_ > 3)
-				class528.f(2048);
+				raster.f(2048);
 			if (bool)
-				class282_sub50_sub17 = class528.ga(null);
-			class528.KA(i_169_);
-			class452 = new Class452(class528, class282_sub50_sub17);
+				class282_sub50_sub17 = raster.ga(null);
+			raster.KA(i_169_);
+			class452 = new Class452(raster, class282_sub50_sub17);
 			synchronized (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass229_5615) {
 				((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass229_5615.put(class452, l);
 			}
 		} else {
 			class282_sub50_sub17 = (Class282_Sub50_Sub17) class452.anObject5444;
 			if (bool && class282_sub50_sub17 == null)
-				class282_sub50_sub17 = (Class282_Sub50_Sub17) (class452.anObject5444 = class528.ga(null));
+				class282_sub50_sub17 = (Class282_Sub50_Sub17) (class452.anObject5444 = raster.ga(null));
 		}
 		boolean bool_171_ = (((ObjectDefinitions) this).aByte5697 != 0 && (class390 != null || class390_164_ != null));
 		boolean bool_172_ = (841092183 * ((ObjectDefinitions) this).anInt5682 != 0 || 0 != 1290338989 * ((ObjectDefinitions) this).anInt5683 || 0 != 1789236723 * ((ObjectDefinitions) this).anInt5710);
 		if (bool_171_ || bool_172_) {
-			class528 = class528.method11289((byte) 0, i_169_, true);
-			if (bool_171_)
-				class528.pa(((ObjectDefinitions) this).aByte5697, ((ObjectDefinitions) this).anInt5654 * -1064114405, class390, class390_164_, i_165_, i_166_, i_167_);
+			raster = raster.method11289((byte) 0, i_169_, true);
+//			if (bool_171_) //crashes in software
+//				raster.pa(((ObjectDefinitions) this).aByte5697, ((ObjectDefinitions) this).anInt5654 * -1064114405, class390, class390_164_, i_165_, i_166_, i_167_);
 			if (bool_172_)
-				class528.ia(841092183 * ((ObjectDefinitions) this).anInt5682, 1290338989 * ((ObjectDefinitions) this).anInt5683, ((ObjectDefinitions) this).anInt5710 * 1789236723);
-			class528.KA(i);
+				raster.ia(841092183 * ((ObjectDefinitions) this).anInt5682, 1290338989 * ((ObjectDefinitions) this).anInt5683, ((ObjectDefinitions) this).anInt5710 * 1789236723);
+			raster.KA(i);
 		} else
-			class528 = class528.method11289((byte) 0, i, true);
-		((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass452_5620.anObject5443 = class528;
+			raster = raster.method11289((byte) 0, i, true);
+		((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass452_5620.anObject5443 = raster;
 		((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass452_5620.anObject5444 = class282_sub50_sub17;
 		return ((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass452_5620;
 	}

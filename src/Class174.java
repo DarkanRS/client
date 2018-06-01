@@ -538,7 +538,7 @@ public class Class174 {
 			Class214.method3667(executor, (byte) 125);
 			break;
 		case 257:
-			Class211.method3628(executor, -1952929458);
+			Class211.sendReportAbusePacket(executor, -1952929458);
 			break;
 		case 153:
 			IncomingPacket.method6373(executor, 676845986);
