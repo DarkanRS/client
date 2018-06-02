@@ -610,9 +610,9 @@ public class Class443 {
 			if (i == 8)
 				Class173.method2944(-1950066116);
 			else if (24 == i)
-				Class209.method3598(new StringBuilder().append("").append(457052913 * Class263.anInt3253).toString(), -1823674146);
+				Class209.method3598(new StringBuilder().append("").append(457052913 * Engine.FPS).toString(), -1823674146);
 			else if (i == 28) {
-				Class201 class201 = (IndexLoaders.MAP_REGION_DECODER.method4430(-1512240603).aClass201_2600);
+				Class201 class201 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1512240603).aClass201_2600);
 				class201.aBool2552 = !class201.aBool2552;
 			} else if (i == 7)
 				client.aBool7176 = true;
@@ -649,9 +649,9 @@ public class Class443 {
 			else if (3 == i)
 				Class119.JS5_STANDARD_REQUESTER.method5526(-1851671444);
 			else if (13 == i)
-				Class351.LOAD_CANVAS.setLocation(50, 50);
+				Class351.gameCanvas.setLocation(50, 50);
 			else if (1 == i)
-				Class351.LOAD_CANVAS.setLocation((Class263.anInt3250 * -1911940837), (698621615 * Class263.anInt3251));
+				Class351.gameCanvas.setLocation((Engine.anInt3250 * -1911940837), (698621615 * Engine.anInt3251));
 			else if (i == 27)
 				Class468.method7789(-838440375);
 			else if (i == 6) {
@@ -663,7 +663,7 @@ public class Class443 {
 				Class209.method3598(new StringBuilder().append((int) class385.aFloat4671 >> 9).append(" ").append((int) class385.aFloat4673 >> 9).toString(), -1980423440);
 			} else if (2 == i) {
 				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.method4430(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, 65280)).toString(), -1193762995);
+				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, 65280)).toString(), -1193762995);
 			} else if (23 == i) {
 				Class209.method3598(new StringBuilder().append(Class118.aClass229_1280.method3861((byte) 1)).append(" ").append(Class118.aClass229_1280.method3860((byte) 53)).toString(), -622119201);
 				Class209.method3598(new StringBuilder().append(Class118.aClass229_1341.method3861((byte) 1)).append(" ").append(Class118.aClass229_1341.method3860((byte) 119)).toString(), -632491603);

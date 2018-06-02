@@ -106,7 +106,7 @@ public class Class282_Sub20_Sub11 extends Class282_Sub20 {
 	}
 
 	public static void method15264(int i, short i_14_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(1, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(1, (long) i);
 		class282_sub50_sub12.method14965((byte) 15);
 	}
 }

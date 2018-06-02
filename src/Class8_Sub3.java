@@ -847,7 +847,7 @@ public class Class8_Sub3 extends FontRenderer {
 	static final void method14336(Class521_Sub1 class521_sub1, int i, boolean bool, int i_332_) {
 		int i_333_;
 		int i_334_;
-		if (class521_sub1 instanceof Class521_Sub1_Sub1 && class521_sub1 instanceof Interface12) {
+		if (class521_sub1 instanceof Class521_Sub1_Sub1 && class521_sub1 instanceof SceneObject) {
 			Class521_Sub1_Sub1 class521_sub1_sub1 = (Class521_Sub1_Sub1) class521_sub1;
 			int i_335_ = (1 + (class521_sub1_sub1.aShort9455 - class521_sub1_sub1.aShort9458) << 9);
 			int i_336_ = (1 + (class521_sub1_sub1.aShort9457 - class521_sub1_sub1.aShort9456) << 9);

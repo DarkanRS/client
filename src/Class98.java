@@ -195,6 +195,6 @@ public class Class98 {
 	}
 
 	static final void method1627(CS2Executor class527, int i) {
-		Class521_Sub1_Sub5_Sub2.method16114(1752936805);
+		Wall.method16114(1752936805);
 	}
 }

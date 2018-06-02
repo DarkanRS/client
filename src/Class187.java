@@ -18,8 +18,8 @@ public class Class187 {
 	static final int anInt2362 = 48;
 	static int anInt2363;
 
-	static boolean method3086(Interface12 interface12) {
-		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2118381265).getObjectDefinitions(interface12.method84(-326509168), 65280);
+	static boolean method3086(SceneObject interface12) {
+		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2118381265).getObjectDefinitions(interface12.getId(-326509168), 65280);
 		if (-272332433 * class478.anInt5689 == -1)
 			return true;
 		Class418 class418 = IndexLoaders.aClass427_995.method7172(-272332433 * class478.anInt5689, -1014703371);
@@ -44,10 +44,10 @@ public class Class187 {
 	}
 
 	static void method3087(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1948087701);
-		Interface12 interface12 = (Interface12) class206.method3381(i, i_0_, i_1_, (byte) -75);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1948087701);
+		SceneObject interface12 = (SceneObject) class206.getWall(i, i_0_, i_1_, (byte) -75);
 		if (null != interface12) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2007893886).getObjectDefinitions(interface12.method84(626678104), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2007893886).getObjectDefinitions(interface12.getId(626678104), 65280);
 			int i_6_ = interface12.method92(912502279) & 0x3;
 			int i_7_ = interface12.method89(664192342);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -88,9 +88,9 @@ public class Class187 {
 				}
 			}
 		}
-		interface12 = (Interface12) class206.method3413(i, i_0_, i_1_, client.anInterface25_7446, -233664382);
+		interface12 = (SceneObject) class206.getInteractableObject(i, i_0_, i_1_, client.anInterface25_7446, -233664382);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1549694881).getObjectDefinitions(interface12.method84(2116756521), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1549694881).getObjectDefinitions(interface12.getId(2116756521), 65280);
 			int i_9_ = interface12.method92(-1683670314) & 0x3;
 			int i_10_ = interface12.method89(1283419054);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -105,9 +105,9 @@ public class Class187 {
 					class505.method8429(i_2_, i_3_, i_2_ + 3, 3 + i_3_, i_11_, (byte) 10);
 			}
 		}
-		interface12 = (Interface12) class206.method3415(i, i_0_, i_1_, -387297653);
+		interface12 = (SceneObject) class206.getGroundDecoration(i, i_0_, i_1_, -387297653);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2072849518).getObjectDefinitions(interface12.method84(511365810), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2072849518).getObjectDefinitions(interface12.getId(511365810), 65280);
 			int i_12_ = interface12.method92(-1269197044) & 0x3;
 			if (class478.anInt5689 * -272332433 != -1)
 				Class415.method6997(class505, class478, i_12_, i_2_, i_3_, -530545051);
@@ -147,7 +147,7 @@ public class Class187 {
 	}
 
 	static void method3090(GraphicalRenderer class505) {
-		if ((335283739 * anInt2351 != Class84.myPlayer.aByte7967) && IndexLoaders.MAP_REGION_DECODER.method4430(-983685168) != null) {
+		if ((335283739 * anInt2351 != Class84.myPlayer.aByte7967) && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-983685168) != null) {
 			Class169.method2869(1978389713);
 			if (Class289.method5097(class505, (Class84.myPlayer.aByte7967), -544839726))
 				anInt2351 = (1481335827 * Class84.myPlayer.aByte7967);
@@ -171,10 +171,10 @@ public class Class187 {
 	}
 
 	static void method3094(GraphicalRenderer class505, int i, int i_27_, int i_28_, int i_29_, int i_30_, int i_31_, int i_32_) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1600984556);
-		Interface12 interface12 = (Interface12) class206.method3381(i, i_27_, i_28_, (byte) -10);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1600984556);
+		SceneObject interface12 = (SceneObject) class206.getWall(i, i_27_, i_28_, (byte) -10);
 		if (null != interface12) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1483622872).getObjectDefinitions(interface12.method84(-1419359144), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1483622872).getObjectDefinitions(interface12.getId(-1419359144), 65280);
 			int i_33_ = interface12.method92(-1613278351) & 0x3;
 			int i_34_ = interface12.method89(326355339);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -215,9 +215,9 @@ public class Class187 {
 				}
 			}
 		}
-		interface12 = (Interface12) class206.method3413(i, i_27_, i_28_, client.anInterface25_7446, -233664382);
+		interface12 = (SceneObject) class206.getInteractableObject(i, i_27_, i_28_, client.anInterface25_7446, -233664382);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1380489516).getObjectDefinitions(interface12.method84(-628715439), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1380489516).getObjectDefinitions(interface12.getId(-628715439), 65280);
 			int i_36_ = interface12.method92(525401084) & 0x3;
 			int i_37_ = interface12.method89(1377100294);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -232,9 +232,9 @@ public class Class187 {
 					class505.method8429(i_29_, i_30_, i_29_ + 3, 3 + i_30_, i_38_, (byte) -23);
 			}
 		}
-		interface12 = (Interface12) class206.method3415(i, i_27_, i_28_, -387297653);
+		interface12 = (SceneObject) class206.getGroundDecoration(i, i_27_, i_28_, -387297653);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1903879360).getObjectDefinitions(interface12.method84(-341179320), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1903879360).getObjectDefinitions(interface12.getId(-341179320), 65280);
 			int i_39_ = interface12.method92(790063002) & 0x3;
 			if (class478.anInt5689 * -272332433 != -1)
 				Class415.method6997(class505, class478, i_39_, i_29_, i_30_, -1548145816);
@@ -248,7 +248,7 @@ public class Class187 {
 		int i_40_ = IndexLoaders.MAP_REGION_DECODER.method4424(1802161148);
 		int i_41_ = IndexLoaders.MAP_REGION_DECODER.method4451(-2072443514);
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1462611319);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1462611319);
 		int i_42_ = i_40_ / 2;
 		int i_43_ = 0;
 		int i_44_ = 0;
@@ -401,15 +401,15 @@ public class Class187 {
 				for (int i_79_ = i_44_; i_79_ < i_41_ + i_44_; i_79_++) {
 					for (int i_80_ = i; i_80_ <= i + 1 && i_80_ <= 3; i_80_++) {
 						if (class311.method5498(i, i_80_, i_78_, i_79_, (short) -16360)) {
-							Interface12 interface12 = ((Interface12) class206.method3415(i_80_, i_78_, i_79_, -387297653));
+							SceneObject interface12 = ((SceneObject) class206.getGroundDecoration(i_80_, i_78_, i_79_, -387297653));
 							if (null == interface12)
-								interface12 = ((Interface12) (class206.method3413(i_80_, i_78_, i_79_, client.anInterface25_7446, -233664382)));
+								interface12 = ((SceneObject) (class206.getInteractableObject(i_80_, i_78_, i_79_, client.anInterface25_7446, -233664382)));
 							if (interface12 == null)
-								interface12 = ((Interface12) class206.method3381(i_80_, i_78_, i_79_, (byte) -111));
+								interface12 = ((SceneObject) class206.getWall(i_80_, i_78_, i_79_, (byte) -111));
 							if (interface12 == null)
-								interface12 = ((Interface12) class206.method3511(i_80_, i_78_, i_79_, (byte) -17));
+								interface12 = ((SceneObject) class206.getWallDecoration(i_80_, i_78_, i_79_, (byte) -17));
 							if (interface12 != null) {
-								ObjectDefinitions class478 = (class474.getObjectDefinitions(interface12.method84(-1469910462), 65280));
+								ObjectDefinitions class478 = (class474.getObjectDefinitions(interface12.getId(-1469910462), 65280));
 								if (!class478.aBool5660 || client.membersWorld) {
 									int i_81_ = class478.anInt5669 * -1796959211;
 									if (class478.anIntArray5650 != null) {
@@ -482,30 +482,30 @@ public class Class187 {
 	}
 
 	static boolean method3096(int i, int i_96_, int i_97_) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1915412558);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1915412558);
 		boolean bool = true;
-		Interface12 interface12 = (Interface12) class206.method3381(i, i_96_, i_97_, (byte) -62);
+		SceneObject interface12 = (SceneObject) class206.getWall(i, i_96_, i_97_, (byte) -62);
 		if (null != interface12)
 			bool &= Class93.method1577(interface12, -1693071504);
-		interface12 = (Interface12) class206.method3413(i, i_96_, i_97_, client.anInterface25_7446, -233664382);
+		interface12 = (SceneObject) class206.getInteractableObject(i, i_96_, i_97_, client.anInterface25_7446, -233664382);
 		if (interface12 != null)
 			bool &= Class93.method1577(interface12, -2064079199);
-		interface12 = (Interface12) class206.method3415(i, i_96_, i_97_, -387297653);
+		interface12 = (SceneObject) class206.getGroundDecoration(i, i_96_, i_97_, -387297653);
 		if (interface12 != null)
 			bool &= Class93.method1577(interface12, -2005264057);
 		return bool;
 	}
 
 	static boolean method3097(int i, int i_98_, int i_99_) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1634579275);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1634579275);
 		boolean bool = true;
-		Interface12 interface12 = (Interface12) class206.method3381(i, i_98_, i_99_, (byte) -100);
+		SceneObject interface12 = (SceneObject) class206.getWall(i, i_98_, i_99_, (byte) -100);
 		if (null != interface12)
 			bool &= Class93.method1577(interface12, -1598191053);
-		interface12 = (Interface12) class206.method3413(i, i_98_, i_99_, client.anInterface25_7446, -233664382);
+		interface12 = (SceneObject) class206.getInteractableObject(i, i_98_, i_99_, client.anInterface25_7446, -233664382);
 		if (interface12 != null)
 			bool &= Class93.method1577(interface12, -1846776019);
-		interface12 = (Interface12) class206.method3415(i, i_98_, i_99_, -387297653);
+		interface12 = (SceneObject) class206.getGroundDecoration(i, i_98_, i_99_, -387297653);
 		if (interface12 != null)
 			bool &= Class93.method1577(interface12, -2003442416);
 		return bool;
@@ -581,8 +581,8 @@ public class Class187 {
 		}
 	}
 
-	static boolean method3100(Interface12 interface12) {
-		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2052724610).getObjectDefinitions(interface12.method84(-139834775), 65280);
+	static boolean method3100(SceneObject interface12) {
+		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-2052724610).getObjectDefinitions(interface12.getId(-139834775), 65280);
 		if (-272332433 * class478.anInt5689 == -1)
 			return true;
 		Class418 class418 = IndexLoaders.aClass427_995.method7172(-272332433 * class478.anInt5689, -1014703371);
@@ -1103,10 +1103,10 @@ public class Class187 {
 	}
 
 	static void method3112(GraphicalRenderer class505, int i, int i_285_, int i_286_, int i_287_, int i_288_, int i_289_, int i_290_) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1379295368);
-		Interface12 interface12 = ((Interface12) class206.method3381(i, i_285_, i_286_, (byte) -101));
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1379295368);
+		SceneObject interface12 = ((SceneObject) class206.getWall(i, i_285_, i_286_, (byte) -101));
 		if (null != interface12) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1910755686).getObjectDefinitions(interface12.method84(135973245), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1910755686).getObjectDefinitions(interface12.getId(135973245), 65280);
 			int i_291_ = interface12.method92(1000596537) & 0x3;
 			int i_292_ = interface12.method89(1741104025);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -1147,9 +1147,9 @@ public class Class187 {
 				}
 			}
 		}
-		interface12 = (Interface12) class206.method3413(i, i_285_, i_286_, client.anInterface25_7446, -233664382);
+		interface12 = (SceneObject) class206.getInteractableObject(i, i_285_, i_286_, client.anInterface25_7446, -233664382);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1459660401).getObjectDefinitions(interface12.method84(1944939974), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1459660401).getObjectDefinitions(interface12.getId(1944939974), 65280);
 			int i_294_ = interface12.method92(732185325) & 0x3;
 			int i_295_ = interface12.method89(1320349645);
 			if (-272332433 * class478.anInt5689 != -1)
@@ -1164,9 +1164,9 @@ public class Class187 {
 					class505.method8429(i_287_, i_288_, i_287_ + 3, 3 + i_288_, i_296_, (byte) -59);
 			}
 		}
-		interface12 = (Interface12) class206.method3415(i, i_285_, i_286_, -387297653);
+		interface12 = (SceneObject) class206.getGroundDecoration(i, i_285_, i_286_, -387297653);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1379292929).getObjectDefinitions(interface12.method84(2113103116), 65280);
+			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1379292929).getObjectDefinitions(interface12.getId(2113103116), 65280);
 			int i_297_ = interface12.method92(-1780779575) & 0x3;
 			if (class478.anInt5689 * -272332433 != -1)
 				Class415.method6997(class505, class478, i_297_, i_287_, i_288_, -1939916173);
@@ -1246,8 +1246,8 @@ public class Class187 {
 		}
 	}
 
-	static boolean method3116(Interface12 interface12) {
-		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1628169360).getObjectDefinitions(interface12.method84(669412535), 65280);
+	static boolean method3116(SceneObject interface12) {
+		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1628169360).getObjectDefinitions(interface12.getId(669412535), 65280);
 		if (-272332433 * class478.anInt5689 == -1)
 			return true;
 		Class418 class418 = IndexLoaders.aClass427_995.method7172(-272332433 * class478.anInt5689, -1014703371);

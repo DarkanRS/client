@@ -1216,7 +1216,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 						int barDelay = buffer.readUnsignedSmart(1806128568);
 						int percent = buffer.readUnsigned128Byte();
 						int toPercent = (change > 0 ? buffer.readUnsignedByte128(-1733572994) : percent);
-						player.method15803(barType, -1809259861 * client.cycles, change, barDelay, percent, toPercent, (byte) 0);
+						player.displayHitbar(barType, -1809259861 * client.cycles, change, barDelay, percent, toPercent, (byte) 0);
 					} else {
 						player.method15857(barType, 1885735347);
 					}

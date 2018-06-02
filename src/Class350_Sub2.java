@@ -32,11 +32,11 @@ public class Class350_Sub2 extends Class350 {
 
 	static void method12571(int i) {
 		if (Renderers.SOFTWARE_RENDERER.method8407()) {
-			Renderers.SOFTWARE_RENDERER.method8410(Class351.LOAD_CANVAS, -796091411);
+			Renderers.SOFTWARE_RENDERER.method8410(Class351.gameCanvas, -796091411);
 			Class250.method4297(-1109644708);
-			Dimension dimension = Class351.LOAD_CANVAS.getSize();
-			Renderers.SOFTWARE_RENDERER.method8524(Class351.LOAD_CANVAS, dimension.width, dimension.height, (byte) -5);
-			Renderers.SOFTWARE_RENDERER.method8412(Class351.LOAD_CANVAS, (byte) 8);
+			Dimension dimension = Class351.gameCanvas.getSize();
+			Renderers.SOFTWARE_RENDERER.method8524(Class351.gameCanvas, dimension.width, dimension.height, (byte) -5);
+			Renderers.SOFTWARE_RENDERER.method8412(Class351.gameCanvas, (byte) 8);
 		} else
 			Class538.method11500(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1386089693), false, (byte) 24);
 		IncomingPacket.method6378(-1538407760);

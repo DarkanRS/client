@@ -291,7 +291,7 @@ public class Class323 implements Interface22 {
 	}
 
 	static void method5777(int i) {
-		if (-1290103735 * Class263.anInt3277 > 1)
+		if (-1290103735 * Engine.AVAILABLE_PROCESSORS > 1)
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub5_8221), 4, 482618320);
 		else
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub5_8221), 2, -2037005846);

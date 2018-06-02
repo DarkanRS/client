@@ -146,7 +146,7 @@ public class Class331 {
 	}
 
 	static void method5924(int i, boolean bool, int i_10_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(21, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(21, (long) i);
 		class282_sub50_sub12.method14995(1949020630);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * (bool ? 1 : 0);
 	}

@@ -7,9 +7,9 @@ public class Class190 {
 
 	public static void method3143() {
 		if (!aBool2383) {
-			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1189807769).aClass293ArrayArrayArray2610), (byte) 43);
-			if ((IndexLoaders.MAP_REGION_DECODER.method4430(-1170487294).aClass293ArrayArrayArray2608) != null) {
-				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-997459267).aClass293ArrayArrayArray2608), (byte) 84);
+			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1189807769).aClass293ArrayArrayArray2610), (byte) 43);
+			if ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1170487294).aClass293ArrayArrayArray2608) != null) {
+				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-997459267).aClass293ArrayArrayArray2608), (byte) 84);
 			}
 			aBool2383 = true;
 		}
@@ -17,9 +17,9 @@ public class Class190 {
 
 	public static void method3144() {
 		if (!aBool2383) {
-			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1861368594).aClass293ArrayArrayArray2610), (byte) 104);
-			if ((IndexLoaders.MAP_REGION_DECODER.method4430(-1030142987).aClass293ArrayArrayArray2608) != null) {
-				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1250980403).aClass293ArrayArrayArray2608), (byte) 42);
+			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1861368594).aClass293ArrayArrayArray2610), (byte) 104);
+			if ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1030142987).aClass293ArrayArrayArray2608) != null) {
+				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1250980403).aClass293ArrayArrayArray2608), (byte) 42);
 			}
 			aBool2383 = true;
 		}
@@ -27,9 +27,9 @@ public class Class190 {
 
 	public static void method3145() {
 		if (!aBool2383) {
-			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1668774955).aClass293ArrayArrayArray2610), (byte) 75);
-			if ((IndexLoaders.MAP_REGION_DECODER.method4430(-1081231062).aClass293ArrayArrayArray2608) != null) {
-				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1657805859).aClass293ArrayArrayArray2608), (byte) 86);
+			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1668774955).aClass293ArrayArrayArray2610), (byte) 75);
+			if ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1081231062).aClass293ArrayArrayArray2608) != null) {
+				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1657805859).aClass293ArrayArrayArray2608), (byte) 86);
 			}
 			aBool2383 = true;
 		}
@@ -41,9 +41,9 @@ public class Class190 {
 
 	public static void method3146() {
 		if (!aBool2383) {
-			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-804715718).aClass293ArrayArrayArray2610), (byte) 2);
-			if ((IndexLoaders.MAP_REGION_DECODER.method4430(-1011619217).aClass293ArrayArrayArray2608) != null) {
-				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.method4430(-1716542666).aClass293ArrayArrayArray2608), (byte) 70);
+			Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-804715718).aClass293ArrayArrayArray2610), (byte) 2);
+			if ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1011619217).aClass293ArrayArrayArray2608) != null) {
+				Class435.method7301((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1716542666).aClass293ArrayArrayArray2608), (byte) 70);
 			}
 			aBool2383 = true;
 		}
@@ -56,25 +56,25 @@ public class Class190 {
 				for (int i_2_ = 0; i_2_ < class293s_0_[i_1_].length; i_2_++) {
 					Class293 class293 = class293s_0_[i_1_][i_2_];
 					if (null != class293) {
-						if (class293.aClass521_Sub1_Sub3_3499 instanceof Interface12) {
-							((Interface12) class293.aClass521_Sub1_Sub3_3499).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub3_3499 instanceof SceneObject) {
+							((SceneObject) class293.aClass521_Sub1_Sub3_3499).method85((byte) 1);
 						}
-						if (class293.aClass521_Sub1_Sub4_3503 instanceof Interface12) {
-							((Interface12) class293.aClass521_Sub1_Sub4_3503).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub4_3503 instanceof SceneObject) {
+							((SceneObject) class293.aClass521_Sub1_Sub4_3503).method85((byte) 1);
 						}
-						if (class293.aClass521_Sub1_Sub4_3500 instanceof Interface12) {
-							((Interface12) class293.aClass521_Sub1_Sub4_3500).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub4_3500 instanceof SceneObject) {
+							((SceneObject) class293.aClass521_Sub1_Sub4_3500).method85((byte) 1);
 						}
-						if (class293.aClass521_Sub1_Sub5_3505 instanceof Interface12) {
-							((Interface12) class293.aClass521_Sub1_Sub5_3505).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub5_3505 instanceof SceneObject) {
+							((SceneObject) class293.aClass521_Sub1_Sub5_3505).method85((byte) 1);
 						}
-						if (class293.aClass521_Sub1_Sub5_3502 instanceof Interface12) {
-							((Interface12) class293.aClass521_Sub1_Sub5_3502).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub5_3502 instanceof SceneObject) {
+							((SceneObject) class293.aClass521_Sub1_Sub5_3502).method85((byte) 1);
 						}
 						for (Class208 class208 = class293.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 							Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
-							if (class521_sub1_sub1 instanceof Interface12) {
-								((Interface12) class521_sub1_sub1).method85((byte) 1);
+							if (class521_sub1_sub1 instanceof SceneObject) {
+								((SceneObject) class521_sub1_sub1).method85((byte) 1);
 							}
 						}
 					}

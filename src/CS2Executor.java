@@ -22,7 +22,7 @@ public class CS2Executor {
 	Class61 aClass61_7010;
 	Class282_Sub4 aClass282_Sub4_7011;
 	int anInt7012 = 0;
-	Interface12 anInterface12_7013;
+	SceneObject anInterface12_7013;
 	Class521_Sub1_Sub2_Sub1 aClass521_Sub1_Sub2_Sub1_7014;
 	int anInt7015;
 	Class509[] aClass509Array7016;

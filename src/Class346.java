@@ -97,7 +97,7 @@ public class Class346 {
 			if (null != client.players[i])
 				throw new RuntimeException();
 			Class4 class4 = Class197.aClass4Array2430[i];
-			Player player = (client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-1638773780))));
+			Player player = (client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1638773780))));
 			player.anInt10314 = -1498872675 * i;
 			if (Class197.aClass282_Sub35Array2428[i] != null)
 				player.decodeAppearance(Class197.aClass282_Sub35Array2428[i], 1925099603);

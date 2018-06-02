@@ -18,10 +18,10 @@ public class Class210 {
 		}
 	}
 
-	public Class228 method3603(int i, int i_1_) {
-		Class228 class228;
+	public HitsplatDefinitions getDefinitions(int i, int i_1_) {
+		HitsplatDefinitions class228;
 		synchronized (((Class210) this).aClass229_2667) {
-			class228 = ((Class228) ((Class210) this).aClass229_2667.get((long) i));
+			class228 = ((HitsplatDefinitions) ((Class210) this).aClass229_2667.get((long) i));
 		}
 		if (null != class228)
 			return class228;
@@ -29,8 +29,8 @@ public class Class210 {
 		synchronized (((Class210) this).aClass317_2665) {
 			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498386951));
 		}
-		class228 = new Class228();
-		((Class228) class228).aClass210_2850 = this;
+		class228 = new HitsplatDefinitions();
+		((HitsplatDefinitions) class228).aClass210_2850 = this;
 		if (is != null)
 			class228.method3837(new RsByteBuffer(is), 738101655);
 		synchronized (((Class210) this).aClass229_2667) {
@@ -66,10 +66,10 @@ public class Class210 {
 		}
 	}
 
-	public Class228 method3607(int i) {
-		Class228 class228;
+	public HitsplatDefinitions method3607(int i) {
+		HitsplatDefinitions class228;
 		synchronized (((Class210) this).aClass229_2667) {
-			class228 = ((Class228) ((Class210) this).aClass229_2667.get((long) i));
+			class228 = ((HitsplatDefinitions) ((Class210) this).aClass229_2667.get((long) i));
 		}
 		if (null != class228)
 			return class228;
@@ -77,8 +77,8 @@ public class Class210 {
 		synchronized (((Class210) this).aClass317_2665) {
 			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498305941));
 		}
-		class228 = new Class228();
-		((Class228) class228).aClass210_2850 = this;
+		class228 = new HitsplatDefinitions();
+		((HitsplatDefinitions) class228).aClass210_2850 = this;
 		if (is != null)
 			class228.method3837(new RsByteBuffer(is), 1313817347);
 		synchronized (((Class210) this).aClass229_2667) {
@@ -149,7 +149,7 @@ public class Class210 {
 	}
 
 	static final void method3613(CS2Executor class527, int i) {
-		if (Class475.aBool5623 && Class263.aFrame3260 != null)
+		if (Class475.aBool5623 && Engine.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(551500203), -1, -1, false, (byte) 52);
 	}
 

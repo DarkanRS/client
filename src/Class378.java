@@ -396,8 +396,8 @@ public class Class378 {
 		IndexLoaders.aClass45_5759.method917(5, -1830471227);
 		IndexLoaders.aClass436_7683.method7307(5, 675653231);
 		IndexLoaders.aClass438_7932.method7326(5, -934687178);
-		IndexLoaders.aClass210_3389.method3602(5, -1179101504);
-		IndexLoaders.aClass290_3402.method5107(5, (byte) 14);
+		IndexLoaders.HITSPLAT_INDEX_LOADER.method3602(5, -1179101504);
+		IndexLoaders.HITBAR_INDEX.method5107(5, (byte) 14);
 		WorldMapIndexLoader.method3709(5, (short) 4421);
 		Class439.method7343(50, 827005880);
 		Class487.aClass378_5752.method6411(50, -1105244547);

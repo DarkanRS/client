@@ -197,19 +197,19 @@ public final class Class282_Sub31 extends Node {
 	}
 
 	static final void method12528(Class282_Sub31 class282_sub31) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1107390720);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1107390720);
 		if (class206 != null) {
-			Interface12 interface12 = null;
+			SceneObject interface12 = null;
 			if (0 == ((Class282_Sub31) class282_sub31).anInt7766 * -497894501)
-				interface12 = ((Interface12) class206.method3381(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), (byte) -118));
+				interface12 = ((SceneObject) class206.getWall(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), (byte) -118));
 			if (-497894501 * ((Class282_Sub31) class282_sub31).anInt7766 == 1)
-				interface12 = ((Interface12) class206.method3511(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (class282_sub31.anInt7763 * -322610393), (byte) -40));
+				interface12 = ((SceneObject) class206.getWallDecoration(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (class282_sub31.anInt7763 * -322610393), (byte) -40));
 			if (2 == ((Class282_Sub31) class282_sub31).anInt7766 * -497894501)
-				interface12 = ((Interface12) class206.method3413(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), client.anInterface25_7446, -233664382));
+				interface12 = ((SceneObject) class206.getInteractableObject(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), client.anInterface25_7446, -233664382));
 			if (-497894501 * ((Class282_Sub31) class282_sub31).anInt7766 == 3)
-				interface12 = ((Interface12) class206.method3415((((Class282_Sub31) class282_sub31).anInt7764) * 1291499461, class282_sub31.anInt7762 * 37618455, (class282_sub31.anInt7763 * -322610393), -387297653));
+				interface12 = ((SceneObject) class206.getGroundDecoration((((Class282_Sub31) class282_sub31).anInt7764) * 1291499461, class282_sub31.anInt7762 * 37618455, (class282_sub31.anInt7763 * -322610393), -387297653));
 			if (null != interface12) {
-				((Class282_Sub31) class282_sub31).anInt7765 = interface12.method84(-1963234883) * -233992759;
+				((Class282_Sub31) class282_sub31).anInt7765 = interface12.getId(-1963234883) * -233992759;
 				((Class282_Sub31) class282_sub31).anInt7770 = interface12.method89(1540297611) * 1474006371;
 				((Class282_Sub31) class282_sub31).anInt7767 = interface12.method92(-1237984275) * 566178073;
 			} else {
@@ -224,7 +224,7 @@ public final class Class282_Sub31 extends Node {
 		if (((Class282_Sub31) class282_sub31).aBool7774) {
 			if (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1476027262), ((Class282_Sub31) class282_sub31).anInt7765 * -1369039751, -1307943861 * ((Class282_Sub31) class282_sub31).anInt7770, 1942118537))) {
 				if (!bool)
-					Class174.method2956((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1249577252);
+					Class174.animateObject((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1249577252);
 				else
 					Class243.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 100);
 				class282_sub31.unlink(-371378792);
@@ -232,7 +232,7 @@ public final class Class282_Sub31 extends Node {
 		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= IndexLoaders.MAP_REGION_DECODER.method4424(314344797) - 2) && (-322610393 * class282_sub31.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.method4451(-941267185) - 2)
 				&& ((-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769) < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1593117564), (-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769), (((Class282_Sub31) class282_sub31).anInt7771 * 965123467), 1942118537)))) {
 			if (!bool)
-				Class174.method2956(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -2122588193);
+				Class174.animateObject(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -2122588193);
 			else
 				Class243.method4179(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, class282_sub31.anInt7762 * 37618455, -322610393 * class282_sub31.anInt7763, ((Class282_Sub31) class282_sub31).aClass476_7768, (byte) 103);
 			((Class282_Sub31) class282_sub31).aBool7773 = false;
@@ -247,7 +247,7 @@ public final class Class282_Sub31 extends Node {
 		if (((Class282_Sub31) class282_sub31).aBool7774) {
 			if (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-2118413398), ((Class282_Sub31) class282_sub31).anInt7765 * -1369039751, -1307943861 * ((Class282_Sub31) class282_sub31).anInt7770, 1942118537))) {
 				if (!bool)
-					Class174.method2956((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1753179848);
+					Class174.animateObject((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1753179848);
 				else
 					Class243.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 94);
 				class282_sub31.unlink(-371378792);
@@ -255,7 +255,7 @@ public final class Class282_Sub31 extends Node {
 		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= IndexLoaders.MAP_REGION_DECODER.method4424(-814040013) - 2) && (-322610393 * class282_sub31.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.method4451(-1523005769) - 2)
 				&& ((-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769) < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1685506857), (-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769), (((Class282_Sub31) class282_sub31).anInt7771 * 965123467), 1942118537)))) {
 			if (!bool)
-				Class174.method2956(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -1481187144);
+				Class174.animateObject(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -1481187144);
 			else
 				Class243.method4179(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, class282_sub31.anInt7762 * 37618455, -322610393 * class282_sub31.anInt7763, ((Class282_Sub31) class282_sub31).aClass476_7768, (byte) 62);
 			((Class282_Sub31) class282_sub31).aBool7773 = false;
@@ -271,7 +271,7 @@ public final class Class282_Sub31 extends Node {
 			int i_40_ = i;
 			if (i_40_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_34_, i_35_, 1618412511))
 				i_40_++;
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-1311100659) != null) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1311100659) != null) {
 				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i, i_33_, i_34_, i_35_, IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645), -1304522104);
 				if (i_36_ >= 0) {
 					int i_41_ = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 119);
@@ -288,7 +288,7 @@ public final class Class282_Sub31 extends Node {
 			int i_49_ = i;
 			if (i_49_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_43_, i_44_, 1424305959))
 				i_49_++;
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-891625715) != null) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-891625715) != null) {
 				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i, i_42_, i_43_, i_44_, IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645), -1755317099);
 				if (i_45_ >= 0) {
 					int i_50_ = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 110);
@@ -302,17 +302,17 @@ public final class Class282_Sub31 extends Node {
 
 	static final void method12533(int i, int i_51_, int i_52_, int i_53_, Class476 class476) {
 		if (i_52_ >= 1 && i_53_ >= 1 && i_52_ <= IndexLoaders.MAP_REGION_DECODER.method4424(252007102) - 2 && i_53_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1924152420) - 2) {
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-1548066871) != null) {
-				Interface12 interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_51_, i_52_, i_53_, 1729337904);
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1548066871) != null) {
+				SceneObject interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_51_, i_52_, i_53_, 1729337904);
 				if (interface12 != null) {
-					if (interface12 instanceof Class521_Sub1_Sub1_Sub5)
-						((Class521_Sub1_Sub1_Sub5) interface12).method16096(class476, -994686865);
-					else if (interface12 instanceof Class521_Sub1_Sub3_Sub2)
-						((Class521_Sub1_Sub3_Sub2) interface12).method16091(class476, -737324181);
-					else if (interface12 instanceof Class521_Sub1_Sub5_Sub2)
-						((Class521_Sub1_Sub5_Sub2) interface12).method16108(class476, -1961546751);
-					else if (interface12 instanceof Class521_Sub1_Sub4_Sub2)
-						((Class521_Sub1_Sub4_Sub2) interface12).method16082(class476, -449891505);
+					if (interface12 instanceof InteractableObject)
+						((InteractableObject) interface12).method16096(class476, -994686865);
+					else if (interface12 instanceof GroundDecoration)
+						((GroundDecoration) interface12).method16091(class476, -737324181);
+					else if (interface12 instanceof Wall)
+						((Wall) interface12).method16108(class476, -1961546751);
+					else if (interface12 instanceof WallDecoration)
+						((WallDecoration) interface12).method16082(class476, -449891505);
 				}
 			}
 		}
@@ -320,17 +320,17 @@ public final class Class282_Sub31 extends Node {
 
 	static final void method12534(int i, int i_54_, int i_55_, int i_56_, Class476 class476) {
 		if (i_55_ >= 1 && i_56_ >= 1 && i_55_ <= IndexLoaders.MAP_REGION_DECODER.method4424(-430984955) - 2 && i_56_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1449205692) - 2) {
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-823902762) != null) {
-				Interface12 interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_54_, i_55_, i_56_, 1638366681);
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-823902762) != null) {
+				SceneObject interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_54_, i_55_, i_56_, 1638366681);
 				if (interface12 != null) {
-					if (interface12 instanceof Class521_Sub1_Sub1_Sub5)
-						((Class521_Sub1_Sub1_Sub5) interface12).method16096(class476, -532936846);
-					else if (interface12 instanceof Class521_Sub1_Sub3_Sub2)
-						((Class521_Sub1_Sub3_Sub2) interface12).method16091(class476, -737324181);
-					else if (interface12 instanceof Class521_Sub1_Sub5_Sub2)
-						((Class521_Sub1_Sub5_Sub2) interface12).method16108(class476, -2032145490);
-					else if (interface12 instanceof Class521_Sub1_Sub4_Sub2)
-						((Class521_Sub1_Sub4_Sub2) interface12).method16082(class476, -449891505);
+					if (interface12 instanceof InteractableObject)
+						((InteractableObject) interface12).method16096(class476, -532936846);
+					else if (interface12 instanceof GroundDecoration)
+						((GroundDecoration) interface12).method16091(class476, -737324181);
+					else if (interface12 instanceof Wall)
+						((Wall) interface12).method16108(class476, -2032145490);
+					else if (interface12 instanceof WallDecoration)
+						((WallDecoration) interface12).method16082(class476, -449891505);
 				}
 			}
 		}

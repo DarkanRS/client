@@ -305,12 +305,12 @@ public class Class174 {
 		class118.anInt1309 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -511891533);
 	}
 
-	static final void method2956(int i, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, int i_51_) {
+	static final void animateObject(int i, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, int i_51_) {
 		if (i_45_ >= 1 && i_46_ >= 1 && i_45_ <= IndexLoaders.MAP_REGION_DECODER.method4424(607754892) - 2 && i_46_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1534289910) - 2) {
 			int i_52_ = i;
 			if (i_52_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_45_, i_46_, 2056160372))
 				i_52_++;
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-1735262041) != null) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1735262041) != null) {
 				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i, i_44_, i_45_, i_46_, IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645), -1251785888);
 				if (i_47_ >= 0) {
 					int i_53_ = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 28);
@@ -367,7 +367,7 @@ public class Class174 {
 			SharedConfigsType.method2091(executor, (byte) -128);
 			break;
 		case 398:
-			Class198.method3233(executor, 1606647230);
+			HitbarDefinitions.method3233(executor, 1606647230);
 			break;
 		case 311:
 			Class121.method2104(executor, (short) 6914);
@@ -418,7 +418,7 @@ public class Class174 {
 			Class109.method1854(executor, -55825312);
 			break;
 		case 841:
-			Class521_Sub1_Sub3_Sub2.method16095(executor, -1845576037);
+			GroundDecoration.method16095(executor, -1845576037);
 			break;
 		case 504:
 			Class514.method8844(executor, 1206150202);
@@ -427,7 +427,7 @@ public class Class174 {
 			Class282_Sub40.method13301(executor, -1804603173);
 			break;
 		case 893:
-			Class263.method4775(executor, 1845242660);
+			Engine.method4775(executor, 1845242660);
 			break;
 		case 967:
 			Class11.method466(executor, -1305434793);
@@ -774,7 +774,7 @@ public class Class174 {
 			Class4.method291(executor, 1759451492);
 			break;
 		case 312:
-			Class263.method4776(executor, -1764845485);
+			Engine.method4776(executor, -1764845485);
 			break;
 		case 348:
 			LoadingStage.method6678(executor, (byte) 1);
@@ -1050,7 +1050,7 @@ public class Class174 {
 			Class362.method6281(executor, 1144689103);
 			break;
 		case 425:
-			Class521_Sub1_Sub1_Sub5.method16100(executor, 486138707);
+			InteractableObject.method16100(executor, 486138707);
 			break;
 		case 571:
 			Class96_Sub16.method14649(executor, (byte) 0);
@@ -1305,7 +1305,7 @@ public class Class174 {
 			Class225.method3791(executor, (byte) 37);
 			break;
 		case 183:
-			Class263.method4773(executor, -2026809420);
+			Engine.method4773(executor, -2026809420);
 			break;
 		case 945:
 			Class363.method6285(executor, 1345832973);
@@ -1431,7 +1431,7 @@ public class Class174 {
 			Class390.method6730(executor, 1558469536);
 			break;
 		case 916:
-			Class206.method3546(executor, (byte) -128);
+			SceneObjectManager.method3546(executor, (byte) -128);
 			break;
 		case 299:
 			Class51.method1067(executor, -1190866994);
@@ -1545,7 +1545,7 @@ public class Class174 {
 			Class230.method3909(executor, (byte) 124);
 			break;
 		case 696:
-			Class198.method3228(executor, (byte) 49);
+			HitbarDefinitions.method3228(executor, (byte) 49);
 			break;
 		case 143:
 			Class534.method11438(executor, (byte) -27);
@@ -1653,7 +1653,7 @@ public class Class174 {
 			Class123.method2153(executor, -2146932291);
 			break;
 		case 249:
-			Class198.method3229(executor, -289314013);
+			HitbarDefinitions.method3229(executor, -289314013);
 			break;
 		case 568:
 			PlayerAppearance.method4035(executor, -187921647);
@@ -2046,7 +2046,7 @@ public class Class174 {
 			Class106.method1817(executor, (byte) -21);
 			break;
 		case 951:
-			Class263.method4774(executor, 1570940877);
+			Engine.method4774(executor, 1570940877);
 			break;
 		case 831:
 			Class386.method6674(executor, -1793200224);
@@ -2394,7 +2394,7 @@ public class Class174 {
 			Class345.method6142(executor, 610011504);
 			break;
 		case 192:
-			Class521_Sub1_Sub4_Sub2.method16089(executor, 495509474);
+			WallDecoration.method16089(executor, 495509474);
 			break;
 		case 74:
 			Class175.method2963(executor, 1724737651);
@@ -2583,7 +2583,7 @@ public class Class174 {
 			Class533.method11406(executor, 595456640);
 			break;
 		case 85:
-			Class198.method3232(executor, -1033910256);
+			HitbarDefinitions.method3232(executor, -1033910256);
 			break;
 		case 397:
 			Class96_Sub2.method13756(executor, (short) 23541);
@@ -2937,7 +2937,7 @@ public class Class174 {
 			Class96_Sub10_Sub1.method15553(false, executor, -200336846);
 			break;
 		case 844:
-			Class206.method3547(executor, -828684786);
+			SceneObjectManager.method3547(executor, -828684786);
 			break;
 		case 649:
 			Class509.method8738(executor, 42229655);

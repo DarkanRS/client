@@ -117,7 +117,7 @@ public class Class113 {
 					}
 				}
 				class521_sub1_sub1_sub3.method15910(-383924731 * client.anInt7261, (short) 256);
-				IndexLoaders.MAP_REGION_DECODER.method4430(-1120760883).method3397(class521_sub1_sub1_sub3, true, -1495291324);
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1120760883).method3397(class521_sub1_sub1_sub3, true, -1495291324);
 			}
 		}
 	}

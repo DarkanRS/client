@@ -81,7 +81,7 @@ public class Game {
 	}
 
 	public static void method8207(int i, int i_3_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(16, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(16, (long) i);
 		class282_sub50_sub12.method14965((byte) -1);
 	}
 }

@@ -482,7 +482,7 @@ public class Class9 {
 							}
 							stream.writeByte(Class158.method2730((short) -27068));
 							stream.writeShort((-418109423 * (Class349.anInt4083)), 1417031095);
-							stream.writeShort((-969250379 * (Class263.anInt3243)), 1417031095);
+							stream.writeShort((-969250379 * (Engine.anInt3243)), 1417031095);
 							stream.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-847275641));
 							Class31.method809(stream, 1686252489);
 							stream.writeString(client.aString7281);
@@ -1146,7 +1146,7 @@ public class Class9 {
 							}
 							class282_sub35_sub2.writeByte(Class158.method2730((short) -129));
 							class282_sub35_sub2.writeShort((-418109423 * (Class349.anInt4083)), 1417031095);
-							class282_sub35_sub2.writeShort((-969250379 * (Class263.anInt3243)), 1417031095);
+							class282_sub35_sub2.writeShort((-969250379 * (Engine.anInt3243)), 1417031095);
 							class282_sub35_sub2.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1848044839));
 							Class31.method809(class282_sub35_sub2, 152085336);
 							class282_sub35_sub2.writeString(client.aString7281);
@@ -1707,64 +1707,64 @@ public class Class9 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
 	}
 
-	public static void method455(int i, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, byte i_51_) {
-		if (i_45_ >= 0 && i_46_ >= 0 && i_45_ < IndexLoaders.MAP_REGION_DECODER.method4424(-593501496) - 1 && i_46_ < IndexLoaders.MAP_REGION_DECODER.method4451(-763762693) - 1) {
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-931426590) != null) {
-				if (0 == i_47_) {
-					Interface12 interface12 = ((Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-2007440796).method3381(i, i_45_, i_46_, (byte) -24));
-					Interface12 interface12_52_ = ((Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-923571335).method3410(i, i_45_, i_46_, -1401820721));
-					if (interface12 != null && i_48_ != 2) {
-						if (interface12 instanceof Class521_Sub1_Sub5_Sub2) {
-							((Class521_Sub1_Sub5_Sub2) interface12).aClass123_10532.method2114(i_50_, 65280);
+	public static void animateObject(int plane, int localX, int localY, int group, int type, int orientation, int animation, byte i_51_) {
+		if (localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.method4424(-593501496) - 1 && localY < IndexLoaders.MAP_REGION_DECODER.method4451(-763762693) - 1) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-931426590) != null) {
+				if (0 == group) {
+					SceneObject object = ((SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2007440796).getWall(plane, localX, localY, (byte) -24));
+					SceneObject interface12_52_ = ((SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-923571335).getWall2(plane, localX, localY, -1401820721));
+					if (object != null && type != 2) {
+						if (object instanceof Wall) {
+							((Wall) object).aClass123_10532.animate(animation, 65280);
 						} else {
-							Class174.method2956(i, i_47_, i_45_, i_46_, interface12.method84(622402037), i_49_, i_48_, i_50_, -724241554);
+							Class174.animateObject(plane, group, localX, localY, object.getId(622402037), orientation, type, animation, -724241554);
 						}
 					}
 					if (null != interface12_52_) {
-						if (interface12_52_ instanceof Class521_Sub1_Sub5_Sub2) {
-							((Class521_Sub1_Sub5_Sub2) interface12_52_).aClass123_10532.method2114(i_50_, 65280);
+						if (interface12_52_ instanceof Wall) {
+							((Wall) interface12_52_).aClass123_10532.animate(animation, 65280);
 						} else {
-							Class174.method2956(i, i_47_, i_45_, i_46_, interface12_52_.method84(-1155370235), i_49_, i_48_, i_50_, -958170746);
+							Class174.animateObject(plane, group, localX, localY, interface12_52_.getId(-1155370235), orientation, type, animation, -958170746);
 						}
 					}
-				} else if (i_47_ == 1) {
-					Interface12 interface12 = ((Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-2074911720).method3511(i, i_45_, i_46_, (byte) 31));
+				} else if (group == 1) {
+					SceneObject interface12 = ((SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2074911720).getWallDecoration(plane, localX, localY, (byte) 31));
 					if (null != interface12) {
-						if (interface12 instanceof Class521_Sub1_Sub4_Sub2) {
-							((Class521_Sub1_Sub4_Sub2) interface12).aClass123_10501.method2114(i_50_, 65280);
+						if (interface12 instanceof WallDecoration) {
+							((WallDecoration) interface12).aClass123_10501.animate(animation, 65280);
 						} else {
-							int i_53_ = interface12.method84(1811097056);
-							if (4 == i_48_ || i_48_ == 5) {
-								Class174.method2956(i, i_47_, i_45_, i_46_, i_53_, i_49_, 4, i_50_, -517311617);
-							} else if (6 == i_48_) {
-								Class174.method2956(i, i_47_, i_45_, i_46_, i_53_, i_49_ + 4, 4, i_50_, -398135119);
-							} else if (i_48_ == 7) {
-								Class174.method2956(i, i_47_, i_45_, i_46_, i_53_, (2 + i_49_ & 0x3) + 4, 4, i_50_, -578636810);
-							} else if (8 == i_48_) {
-								Class174.method2956(i, i_47_, i_45_, i_46_, i_53_, 4 + i_49_, 4, i_50_, -1020779055);
-								Class174.method2956(i, i_47_, i_45_, i_46_, i_53_, (i_49_ + 2 & 0x3) + 4, 4, i_50_, -593163941);
+							int i_53_ = interface12.getId(1811097056);
+							if (4 == type || type == 5) {
+								Class174.animateObject(plane, group, localX, localY, i_53_, orientation, 4, animation, -517311617);
+							} else if (6 == type) {
+								Class174.animateObject(plane, group, localX, localY, i_53_, orientation + 4, 4, animation, -398135119);
+							} else if (type == 7) {
+								Class174.animateObject(plane, group, localX, localY, i_53_, (2 + orientation & 0x3) + 4, 4, animation, -578636810);
+							} else if (8 == type) {
+								Class174.animateObject(plane, group, localX, localY, i_53_, 4 + orientation, 4, animation, -1020779055);
+								Class174.animateObject(plane, group, localX, localY, i_53_, (orientation + 2 & 0x3) + 4, 4, animation, -593163941);
 							}
 						}
 					}
-				} else if (i_47_ == 2) {
-					Interface12 interface12 = ((Interface12) (IndexLoaders.MAP_REGION_DECODER.method4430(-847129684).method3413(i, i_45_, i_46_, client.anInterface25_7446, -233664382)));
+				} else if (group == 2) {
+					SceneObject interface12 = ((SceneObject) (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-847129684).getInteractableObject(plane, localX, localY, client.anInterface25_7446, -233664382)));
 					if (interface12 != null) {
-						if (i_48_ == 11) {
-							i_48_ = 10;
+						if (type == 11) {
+							type = 10;
 						}
-						if (interface12 instanceof Class521_Sub1_Sub1_Sub5) {
-							((Class521_Sub1_Sub1_Sub5) interface12).aClass123_10509.method2114(i_50_, 65280);
+						if (interface12 instanceof InteractableObject) {
+							((InteractableObject) interface12).aClass123_10509.animate(animation, 65280);
 						} else {
-							Class174.method2956(i, i_47_, i_45_, i_46_, interface12.method84(-469540620), i_49_, i_48_, i_50_, -283267512);
+							Class174.animateObject(plane, group, localX, localY, interface12.getId(-469540620), orientation, type, animation, -283267512);
 						}
 					}
-				} else if (i_47_ == 3) {
-					Interface12 interface12 = ((Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1134849254).method3415(i, i_45_, i_46_, -387297653));
+				} else if (group == 3) {
+					SceneObject interface12 = ((SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1134849254).getGroundDecoration(plane, localX, localY, -387297653));
 					if (null != interface12) {
-						if (interface12 instanceof Class521_Sub1_Sub3_Sub2) {
-							((Class521_Sub1_Sub3_Sub2) interface12).aClass123_10507.method2114(i_50_, 65280);
+						if (interface12 instanceof GroundDecoration) {
+							((GroundDecoration) interface12).aClass123_10507.animate(animation, 65280);
 						} else {
-							Class174.method2956(i, i_47_, i_45_, i_46_, interface12.method84(554771962), i_49_, i_48_, i_50_, -948532137);
+							Class174.animateObject(plane, group, localX, localY, interface12.getId(554771962), orientation, type, animation, -948532137);
 						}
 					}
 				}

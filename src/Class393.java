@@ -144,7 +144,7 @@ public class Class393 {
 	}
 
 	static void method6751(int i, int i_1_, int i_2_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(1, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(1, (long) i);
 		class282_sub50_sub12.method14995(1483198520);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = i_1_ * -1773141545;
 	}

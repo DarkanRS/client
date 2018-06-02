@@ -186,7 +186,7 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	Class521_Sub1_Sub1_Sub1(Class206 class206, Class281 class281, int i, int i_12_, int i_13_, int i_14_, int i_15_) {
+	Class521_Sub1_Sub1_Sub1(SceneObjectManager class206, Class281 class281, int i, int i_12_, int i_13_, int i_14_, int i_15_) {
 		super(class206, i, i_12_, i_13_, i_14_, i_15_, i_13_ >> 9, i_13_ >> 9, i_15_ >> 9, i_15_ >> 9, false, (byte) 0);
 		((Class521_Sub1_Sub1_Sub1) this).aClass281_10311 = class281;
 	}

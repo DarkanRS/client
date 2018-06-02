@@ -462,12 +462,12 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	public static final void method14840(byte i) {
-		Class263.aClass273_3244.method4853(-1473028742);
+		Engine.aClass273_3244.method4853(-1473028742);
 		for (int i_23_ = 0; i_23_ < 32; i_23_++)
-			Class263.aLongArray3246[i_23_] = 0L;
+			Engine.aLongArray3246[i_23_] = 0L;
 		for (int i_24_ = 0; i_24_ < 32; i_24_++)
-			Class263.aLongArray3247[i_24_] = 0L;
-		Class263.anInt3279 = 0;
+			Engine.aLongArray3247[i_24_] = 0L;
+		Engine.anInt3279 = 0;
 	}
 
 	static void method14841(CS2Executor class527, byte i) {

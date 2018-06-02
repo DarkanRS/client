@@ -301,7 +301,7 @@ public class Login {
 							}
 							out.writeByte(Class158.method2730((short) -2638));
 							out.writeShort((-418109423 * (Class349.anInt4083)), 1417031095);
-							out.writeShort((-969250379 * (Class263.anInt3243)), 1417031095);
+							out.writeShort((-969250379 * (Engine.anInt3243)), 1417031095);
 							out.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(919663007));
 							Class31.method809(out, 972141670);
 							out.writeString(client.aString7281);

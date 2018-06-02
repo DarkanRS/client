@@ -200,7 +200,7 @@ public class Class28 implements Interface2 {
 	}
 
 	static void method778(int i, int i_12_, int i_13_, int i_14_, byte i_15_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(10, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(10, (long) i);
 		class282_sub50_sub12.method14995(866600532);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = i_12_ * -1773141545;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_13_;

@@ -109,9 +109,9 @@ public class Class480 {
 	static void method8044(Class118[] class118s, Class118 class118, boolean bool, byte i) {
 		int i_12_ = (class118.anInt1376 * -354780671 != 0 ? -354780671 * class118.anInt1376 : 1506818197 * class118.anInt1301);
 		int i_13_ = (class118.anInt1314 * -37350919 != 0 ? -37350919 * class118.anInt1314 : class118.anInt1429 * -492594917);
-		Class521_Sub1_Sub1_Sub5.method16099(class118s, -1952846363 * class118.anInt1287, i_12_, i_13_, bool, (byte) 29);
+		InteractableObject.method16099(class118s, -1952846363 * class118.anInt1287, i_12_, i_13_, bool, (byte) 29);
 		if (class118.aClass118Array1439 != null)
-			Class521_Sub1_Sub1_Sub5.method16099(class118.aClass118Array1439, (-1952846363 * class118.anInt1287), i_12_, i_13_, bool, (byte) 17);
+			InteractableObject.method16099(class118.aClass118Array1439, (-1952846363 * class118.anInt1287), i_12_, i_13_, bool, (byte) 17);
 		Class282_Sub44 class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7754((long) (-1952846363 * class118.anInt1287)));
 		if (null != class282_sub44)
 			Class442.method7403(587626901 * class282_sub44.anInt8063, i_12_, i_13_, bool, 1720687852);

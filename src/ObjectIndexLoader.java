@@ -155,7 +155,7 @@ public class ObjectIndexLoader {
 	}
 
 	static void method7917(int i, int i_6_, byte i_7_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(14, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(14, (long) i);
 		class282_sub50_sub12.method14995(1795507411);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = i_6_ * -1773141545;
 	}

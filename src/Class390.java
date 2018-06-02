@@ -173,7 +173,7 @@ public abstract class Class390 {
 
 	public static final void method6731(int i, int i_141_, int i_142_, int i_143_, int i_144_, int i_145_, int i_146_, int i_147_) {
 		if (i >= Class532_Sub1.anInt7071 * -612590951 && i_141_ <= Class532_Sub1.anInt7069 * -1345107225 && i_142_ >= 324226563 * Class532_Sub1.anInt7070 && i_143_ <= -348932735 * Class532_Sub1.anInt7068)
-			Class198.method3230(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) 89);
+			HitbarDefinitions.method3230(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) 89);
 		else
 			PlayerAppearance.method4034(i, i_141_, i_142_, i_143_, i_144_, i_145_, i_146_, (byte) -84);
 	}

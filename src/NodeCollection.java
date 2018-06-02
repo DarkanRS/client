@@ -245,9 +245,9 @@ public class NodeCollection implements Iterable, Collection {
 
 	public static void method8148(byte i) {
 		Class253.method4330(22050, Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(722134232) == 1, 2);
-		Class320.aClass253_3723 = Class253.method4331(Class351.LOAD_CANVAS, 0, 22050);
+		Class320.aClass253_3723 = Class253.method4331(Class351.gameCanvas, 0, 22050);
 		Class42_Sub1.method14563(true, Class282_Sub20_Sub10.method15262(null, 191335579), (short) 27702);
-		Class100.aClass253_1008 = Class253.method4331(Class351.LOAD_CANVAS, 1, 2048);
+		Class100.aClass253_1008 = Class253.method4331(Class351.gameCanvas, 1, 2048);
 		Class79.aClass282_Sub15_Sub4_783 = new Class282_Sub15_Sub4();
 		Class100.aClass253_1008.method4329(Class79.aClass282_Sub15_Sub4_783);
 		Class119.aClass344_1460 = new Class344(22050, Class253.anInt3129);

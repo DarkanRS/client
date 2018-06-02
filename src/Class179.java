@@ -225,7 +225,7 @@ public class Class179 {
 					Class209.method3598(new StringBuilder().append("Device: ").append(class168.aString2053).toString(), -636825331);
 					Class209.method3598(new StringBuilder().append("Driver Version: ").append(-3062896818026551219L * class168.aLong2049).toString(), -1592558341);
 				} else if (string.equals("heap"))
-					Class209.method3598(new StringBuilder().append("Heap: ").append(-1346844585 * Class263.anInt3273).append("MB").toString(), -1095706712);
+					Class209.method3598(new StringBuilder().append("Heap: ").append(-1346844585 * Engine.MAX_MEMORY).append("MB").toString(), -1095706712);
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
@@ -878,7 +878,7 @@ public class Class179 {
 					Class209.method3598(new StringBuilder().append("Device: ").append(class168.aString2053).toString(), -702148994);
 					Class209.method3598(new StringBuilder().append("Driver Version: ").append(-3062896818026551219L * class168.aLong2049).toString(), -718025824);
 				} else if (string.equals("heap"))
-					Class209.method3598(new StringBuilder().append("Heap: ").append(-1346844585 * Class263.anInt3273).append("MB").toString(), -663049816);
+					Class209.method3598(new StringBuilder().append("Heap: ").append(-1346844585 * Engine.MAX_MEMORY).append("MB").toString(), -663049816);
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;

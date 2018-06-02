@@ -307,7 +307,7 @@ public class Class38 {
 	}
 
 	static void method860(int i, String string, int i_30_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(3, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(3, (long) i);
 		class282_sub50_sub12.method14995(902819927);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).aString9640 = string;
 	}

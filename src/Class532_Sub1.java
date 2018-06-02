@@ -19,14 +19,14 @@ public class Class532_Sub1 extends Class532 {
 
 	public static final void method12818(int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_) {
 		if (i >= anInt7071 * -612590951 && i_9_ <= anInt7069 * -1345107225 && i_10_ >= 324226563 * anInt7070 && i_11_ <= -348932735 * anInt7068)
-			Class198.method3230(i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, (byte) 30);
+			HitbarDefinitions.method3230(i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, (byte) 30);
 		else
 			PlayerAppearance.method4034(i, i_9_, i_10_, i_11_, i_12_, i_13_, i_14_, (byte) -81);
 	}
 
 	public static final void method12819(int i, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_, int i_20_) {
 		if (i >= anInt7071 * -612590951 && i_15_ <= anInt7069 * -1345107225 && i_16_ >= 324226563 * anInt7070 && i_17_ <= -348932735 * anInt7068)
-			Class198.method3230(i, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, (byte) 116);
+			HitbarDefinitions.method3230(i, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, (byte) 116);
 		else
 			PlayerAppearance.method4034(i, i_15_, i_16_, i_17_, i_18_, i_19_, i_20_, (byte) -2);
 	}
@@ -50,7 +50,7 @@ public class Class532_Sub1 extends Class532 {
 
 	public static final void method12821(int i, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_) {
 		if (i >= anInt7071 * -612590951 && i_34_ <= anInt7069 * -1345107225 && i_35_ >= 324226563 * anInt7070 && i_36_ <= -348932735 * anInt7068)
-			Class198.method3230(i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, (byte) 52);
+			HitbarDefinitions.method3230(i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, (byte) 52);
 		else
 			PlayerAppearance.method4034(i, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, (byte) -49);
 	}
@@ -375,14 +375,14 @@ public class Class532_Sub1 extends Class532 {
 					if (Class496.aClass496_5813 != Class90.aClass496_952 && -418109423 * Class349.anInt4083 < 1024 && client.anInt3243 * -969250379 >= 768) {
 						/* empty */
 					}
-					Class351.LOAD_CANVAS.setSize((-418109423 * Class349.anInt4083), (client.anInt3243 * -969250379));
+					Class351.gameCanvas.setSize((-418109423 * Class349.anInt4083), (client.anInt3243 * -969250379));
 					if (Renderers.SOFTWARE_RENDERER != null)
-						Renderers.SOFTWARE_RENDERER.method8414(Class351.LOAD_CANVAS, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379, -2138128111);
+						Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379, -2138128111);
 					if (container == client.aFrame3261) {
 						Insets insets = client.aFrame3261.getInsets();
-						Class351.LOAD_CANVAS.setLocation(insets.left + client.anInt3250 * -1911940837, insets.top + 698621615 * client.anInt3251);
+						Class351.gameCanvas.setLocation(insets.left + client.anInt3250 * -1911940837, insets.top + 698621615 * client.anInt3251);
 					} else
-						Class351.LOAD_CANVAS.setLocation((client.anInt3250 * -1911940837), (698621615 * client.anInt3251));
+						Class351.gameCanvas.setLocation((client.anInt3250 * -1911940837), (698621615 * client.anInt3251));
 					Class400.method6795(-366853248);
 					if (client.anInt7349 * -1699899559 != -1)
 						Class516.method8867(true, -905479502);

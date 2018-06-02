@@ -333,7 +333,7 @@ public class JS5LocalRequester implements Runnable {
 	}
 
 	public static void method5581(int i, byte i_13_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(17, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(17, (long) i);
 		class282_sub50_sub12.method14965((byte) 13);
 	}
 }

@@ -142,7 +142,7 @@ public class Class149_Sub4 extends Class149 {
 	}
 
 	static void method14663(int i, int i_58_, byte i_59_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(7, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(7, (long) i);
 		class282_sub50_sub12.method14995(2079559306);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_58_;
 	}

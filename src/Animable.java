@@ -84,7 +84,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15793(int i, int i_1_, boolean bool) {
 		if (method15900(-891096831))
-			Class521_Sub1_Sub1_Sub5.method16099((aClass98_10324.aClass118Array998), -1, i, i_1_, bool, (byte) 2);
+			InteractableObject.method16099((aClass98_10324.aClass118Array998), -1, i, i_1_, bool, (byte) 2);
 	}
 
 	public int method13017() {
@@ -101,7 +101,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15795(int i, int i_2_, boolean bool, byte i_3_) {
 		if (method15900(-1083675262))
-			Class521_Sub1_Sub1_Sub5.method16099((aClass98_10324.aClass118Array998), -1, i, i_2_, bool, (byte) 33);
+			InteractableObject.method16099((aClass98_10324.aClass118Array998), -1, i, i_2_, bool, (byte) 33);
 	}
 
 	public int method15796(byte i) {
@@ -334,7 +334,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_54_ = -1;
 		int i_55_ = 0;
 		if (i >= 0) {
-			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
+			HitsplatDefinitions class228 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i, 1856651955);
 			i_54_ = -1638316243 * class228.anInt2839;
 			i_55_ = class228.anInt2841 * -1006911631;
 		}
@@ -381,19 +381,19 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	public final void method15803(int i, int i_60_, int i_61_, int i_62_, int i_63_, int i_64_, byte i_65_) {
-		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, -133815568);
+	public final void displayHitbar(int type, int clientCycles, int i_61_, int delay, int startPerc, int endPerc, byte i_65_) {
+		HitbarDefinitions hitbarDefs = IndexLoaders.HITBAR_INDEX.getDefinitions(type, -133815568);
 		Class275_Sub7 class275_sub7 = null;
 		Class275_Sub7 class275_sub7_66_ = null;
-		int i_67_ = -1142991979 * class198.anInt2440;
+		int i_67_ = -1142991979 * hitbarDefs.anInt2440;
 		int i_68_ = 0;
 		for (Class275_Sub7 class275_sub7_69_ = (Class275_Sub7) aClass457_10333.method7659(301908602); null != class275_sub7_69_; class275_sub7_69_ = (Class275_Sub7) aClass457_10333.method7650((byte) 105)) {
 			i_68_++;
-			if (class275_sub7_69_.aClass198_7863 == class198) {
-				class275_sub7_69_.method12601(i_60_ + i_62_, i_63_, i_64_, i_61_, -555582799);
+			if (class275_sub7_69_.aClass198_7863 == hitbarDefs) {
+				class275_sub7_69_.method12601(clientCycles + delay, startPerc, endPerc, i_61_, -555582799);
 				return;
 			}
-			if (class275_sub7_69_.aClass198_7863.anInt2446 * -29546407 <= class198.anInt2446 * -29546407)
+			if (class275_sub7_69_.aClass198_7863.anInt2446 * -29546407 <= hitbarDefs.anInt2446 * -29546407)
 				class275_sub7 = class275_sub7_69_;
 			if (class275_sub7_69_.aClass198_7863.anInt2440 * -1142991979 > i_67_) {
 				class275_sub7_66_ = class275_sub7_69_;
@@ -401,12 +401,12 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 		}
 		if (null != class275_sub7_66_ || i_68_ < Class58.aClass529_527.anInt7032 * -1838667567) {
-			Class275_Sub7 class275_sub7_70_ = new Class275_Sub7(class198);
+			Class275_Sub7 class275_sub7_70_ = new Class275_Sub7(hitbarDefs);
 			if (null == class275_sub7)
 				aClass457_10333.method7647(class275_sub7_70_, -1998416604);
 			else
 				Class516.method8866(class275_sub7_70_, class275_sub7, -63118413);
-			class275_sub7_70_.method12601(i_60_ + i_62_, i_63_, i_64_, i_61_, -1371931787);
+			class275_sub7_70_.method12601(clientCycles + delay, startPerc, endPerc, i_61_, -1371931787);
 			if (i_68_ >= Class58.aClass529_527.anInt7032 * -1838667567)
 				class275_sub7_66_.method4887((byte) -33);
 		}
@@ -451,7 +451,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		aShort9457 = (short) ((int) class385.aFloat4673 + i_74_ >> 9);
 	}
 
-	Animable(Class206 class206) {
+	Animable(SceneObjectManager class206) {
 		this(class206, 10);
 	}
 
@@ -539,7 +539,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					client.aBoolArray7443[i_91_] = true;
 			}
 		} else
-			Class521_Sub1_Sub3_Sub2.method16094(aClass98_10324.method1616(2115136308), -1, i_84_, i_85_, i_86_, i_87_, i_88_, i_89_, i, false, (byte) 6);
+			GroundDecoration.method16094(aClass98_10324.method1616(2115136308), -1, i_84_, i_85_, i_86_, i_87_, i_88_, i_89_, i, false, (byte) 6);
 	}
 
 	void method15819(MeshRasterizer class528, int i) {
@@ -1361,7 +1361,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_217_ = -1;
 		int i_218_ = 0;
 		if (i >= 0) {
-			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
+			HitsplatDefinitions class228 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i, 1856651955);
 			i_217_ = -1638316243 * class228.anInt2839;
 			i_218_ = class228.anInt2841 * -1006911631;
 		}
@@ -1421,7 +1421,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_231_ = -1;
 		int i_232_ = 0;
 		if (i >= 0) {
-			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
+			HitsplatDefinitions class228 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i, 1856651955);
 			i_231_ = -1638316243 * class228.anInt2839;
 			i_232_ = class228.anInt2841 * -1006911631;
 		}
@@ -1481,7 +1481,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_245_ = -1;
 		int i_246_ = 0;
 		if (i >= 0) {
-			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
+			HitsplatDefinitions class228 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i, 1856651955);
 			i_245_ = -1638316243 * class228.anInt2839;
 			i_246_ = class228.anInt2841 * -1006911631;
 		}
@@ -1541,7 +1541,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		int i_259_ = -1;
 		int i_260_ = 0;
 		if (i >= 0) {
-			Class228 class228 = IndexLoaders.aClass210_3389.method3603(i, 1856651955);
+			HitsplatDefinitions class228 = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i, 1856651955);
 			i_259_ = -1638316243 * class228.anInt2839;
 			i_260_ = class228.anInt2841 * -1006911631;
 		}
@@ -1626,7 +1626,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public final void method15850(int i) {
-		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, 2065623331);
+		HitbarDefinitions class198 = IndexLoaders.HITBAR_INDEX.getDefinitions(i, 2065623331);
 		for (Class275_Sub7 class275_sub7 = (Class275_Sub7) aClass457_10333.method7659(301908602); null != class275_sub7; class275_sub7 = (Class275_Sub7) aClass457_10333.method7650((byte) 87)) {
 			if (class198 == class275_sub7.aClass198_7863) {
 				class275_sub7.method4887((byte) -113);
@@ -1784,7 +1784,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	}
 
 	public final void method15857(int i, int i_290_) {
-		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, 757267285);
+		HitbarDefinitions class198 = IndexLoaders.HITBAR_INDEX.getDefinitions(i, 757267285);
 		for (Class275_Sub7 class275_sub7 = (Class275_Sub7) aClass457_10333.method7659(301908602); null != class275_sub7; class275_sub7 = (Class275_Sub7) aClass457_10333.method7650((byte) 67)) {
 			if (class198 == class275_sub7.aClass198_7863) {
 				class275_sub7.method4887((byte) -33);
@@ -1989,7 +1989,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 	}
 
-	Animable(Class206 class206, int i) {
+	Animable(SceneObjectManager class206, int i) {
 		super(class206, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, (byte) 0);
 		anInt10321 = 0;
 		((Animable) this).anInt10325 = 0;
@@ -2061,7 +2061,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 	public abstract Class163 method15877();
 
 	public final void method15878(int i, int i_347_, int i_348_, int i_349_, int i_350_, int i_351_) {
-		Class198 class198 = IndexLoaders.aClass290_3402.method5102(i, 955218758);
+		HitbarDefinitions class198 = IndexLoaders.HITBAR_INDEX.getDefinitions(i, 955218758);
 		Class275_Sub7 class275_sub7 = null;
 		Class275_Sub7 class275_sub7_352_ = null;
 		int i_353_ = -1142991979 * class198.anInt2440;
@@ -2107,7 +2107,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15881(int i, int i_367_, boolean bool) {
 		if (method15900(586484177))
-			Class521_Sub1_Sub1_Sub5.method16099((aClass98_10324.aClass118Array998), -1, i, i_367_, bool, (byte) 60);
+			InteractableObject.method16099((aClass98_10324.aClass118Array998), -1, i, i_367_, bool, (byte) 60);
 	}
 
 	public void method15882(int i) {
@@ -2330,7 +2330,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					client.aBoolArray7443[i_416_] = true;
 			}
 		} else
-			Class521_Sub1_Sub3_Sub2.method16094(aClass98_10324.method1616(2138776200), -1, i_410_, i_411_, i_412_, i_413_, i_414_, i_415_, i, false, (byte) 6);
+			GroundDecoration.method16094(aClass98_10324.method1616(2138776200), -1, i_410_, i_411_, i_412_, i_413_, i_414_, i_415_, i, false, (byte) 6);
 	}
 
 	void method15895(int i, int i_417_, int i_418_, int i_419_, int i_420_, byte i_421_) {

@@ -13,7 +13,7 @@ public class Class281 {
 	static int anInt3376 = 0;
 	LinkedList aLinkedList3377;
 
-	void method4976(Class206 class206) {
+	void method4976(SceneObjectManager class206) {
 		((Class281) this).aLinkedList3377 = new LinkedList();
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1448463599);
@@ -53,7 +53,7 @@ public class Class281 {
 		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
 	}
 
-	public void method4978(Class206 class206, byte i) {
+	public void method4978(SceneObjectManager class206, byte i) {
 		if (class206 != null) {
 			if (i != -1) {
 				for (;;) {
@@ -75,7 +75,7 @@ public class Class281 {
 		}
 	}
 
-	public void method4979(Class206 class206, int i) {
+	public void method4979(SceneObjectManager class206, int i) {
 		if (null != class206 && null != ((Class281) this).aLinkedList3377) {
 			Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
 			while (iterator.hasNext()) {
@@ -85,7 +85,7 @@ public class Class281 {
 		}
 	}
 
-	public void method4980(Class206 class206) {
+	public void method4980(SceneObjectManager class206) {
 		if (null != class206 && null != ((Class281) this).aLinkedList3377) {
 			Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
 			while (iterator.hasNext()) {
@@ -104,7 +104,7 @@ public class Class281 {
 		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
 	}
 
-	public void method4982(Class206 class206) {
+	public void method4982(SceneObjectManager class206) {
 		if (class206 != null && ((Class281) this).anInt3374 * 1443022381 > 0) {
 			method4983(class206, -199147692);
 			Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
@@ -115,7 +115,7 @@ public class Class281 {
 		}
 	}
 
-	void method4983(Class206 class206, int i) {
+	void method4983(SceneObjectManager class206, int i) {
 		((Class281) this).aLinkedList3377 = new LinkedList();
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(309280433);

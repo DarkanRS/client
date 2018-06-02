@@ -69,7 +69,7 @@ public class Class421 {
 				i_8_ = -1;
 			} else
 				i_8_ = client.aClass118_7247.anInt1449 * -1338917705;
-			Class521_Sub1_Sub3_Sub2.method16094(class118s, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, true, (byte) 6);
+			GroundDecoration.method16094(class118s, i_1_, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, true, (byte) 6);
 			Class328.aClass118Array3772 = null;
 		}
 	}

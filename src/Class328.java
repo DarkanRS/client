@@ -87,26 +87,26 @@ public final class Class328 implements Comparable {
 		try {
 			File file = new File(Class110.aString1103, "random.dat");
 			if (file.exists())
-				Class263.aClass440_3269 = new Class440(new Class442(file, "rw", 25L), 24, 0);
+				Engine.aClass440_3269 = new Class440(new Class442(file, "rw", 25L), 24, 0);
 			else {
 				while_218_: for (int i_3_ = 0; i_3_ < Class106.aStringArray1077.length; i_3_++) {
 					for (int i_4_ = 0; i_4_ < Class246.aStringArray3028.length; i_4_++) {
 						File file_5_ = new File(new StringBuilder().append(Class246.aStringArray3028[i_4_]).append(Class106.aStringArray1077[i_3_]).append(File.separatorChar).append("random.dat").toString());
 						if (file_5_.exists()) {
-							Class263.aClass440_3269 = new Class440(new Class442(file_5_, "rw", 25L), 24, 0);
+							Engine.aClass440_3269 = new Class440(new Class442(file_5_, "rw", 25L), 24, 0);
 							break while_218_;
 						}
 					}
 				}
 			}
-			if (null == Class263.aClass440_3269) {
+			if (null == Engine.aClass440_3269) {
 				RandomAccessFile randomaccessfile = new RandomAccessFile(file, "rw");
 				int i_6_ = randomaccessfile.read();
 				randomaccessfile.seek(0L);
 				randomaccessfile.write(i_6_);
 				randomaccessfile.seek(0L);
 				randomaccessfile.close();
-				Class263.aClass440_3269 = new Class440(new Class442(file, "rw", 25L), 24, 0);
+				Engine.aClass440_3269 = new Class440(new Class442(file, "rw", 25L), 24, 0);
 			}
 		} catch (IOException ioexception) {
 			/* empty */

@@ -222,7 +222,7 @@ public class Class492 {
 	}
 
 	static final void method8263(CS2Executor class527, int i) {
-		if (Class475.aBool5623 && null != Class263.aFrame3260)
+		if (Class475.aBool5623 && null != Engine.aFrame3260)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(577867050), -1, -1, false, (byte) 35);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);

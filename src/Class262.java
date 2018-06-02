@@ -475,8 +475,8 @@ public class Class262 implements Interface36 {
 			if (i_37_ < 0)
 				i_37_ = 0;
 			int i_38_ = i_31_;
-			if (i_38_ + i_34_ > Class263.anInt3243 * -969250379)
-				i_38_ = Class263.anInt3243 * -969250379 - i_34_;
+			if (i_38_ + i_34_ > Engine.anInt3243 * -969250379)
+				i_38_ = Engine.anInt3243 * -969250379 - i_34_;
 			if (i_38_ < 0)
 				i_38_ = 0;
 			Class301.anInt3555 = i_37_ * 1699362117;

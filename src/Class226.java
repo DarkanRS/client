@@ -91,7 +91,7 @@ public class Class226 implements Interface46 {
 		int i_6_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (Class475.aBool5623) {
 			Class440.method7373(3, i_5_, i_6_, false, (byte) 114);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Class263.aFrame3260 ? 1 : 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
 		} else
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}

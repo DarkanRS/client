@@ -47,19 +47,19 @@ public class Class373 {
 	static void method6365(int i) {
 		synchronized (Class236.aQueue2914) {
 			Point point;
-			if (Class351.LOAD_CANVAS.isShowing())
-				point = Class351.LOAD_CANVAS.getLocationOnScreen();
+			if (Class351.gameCanvas.isShowing())
+				point = Class351.gameCanvas.getLocationOnScreen();
 			else
 				point = null;
 			for (;;) {
 				Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) Class236.aQueue2914.poll();
 				if (null == class282_sub53_sub1)
 					break;
-				if (point == null || !Class351.LOAD_CANVAS.isShowing() || !Class530.aBool7050)
+				if (point == null || !Class351.gameCanvas.isShowing() || !Class530.aBool7050)
 					class282_sub53_sub1.method13475(665742059);
 				else {
 					class282_sub53_sub1.method14732(point, -1545161336);
-					if (!class282_sub53_sub1.method14731(-1966919184) && (class282_sub53_sub1.method13481(1700591909) < -418109423 * Class349.anInt4083) && (class282_sub53_sub1.method13469(1495235000) < Class263.anInt3243 * -969250379) && class282_sub53_sub1.method13481(1815146840) >= 0 && class282_sub53_sub1.method13469(-1984385021) >= 0) {
+					if (!class282_sub53_sub1.method14731(-1966919184) && (class282_sub53_sub1.method13481(1700591909) < -418109423 * Class349.anInt4083) && (class282_sub53_sub1.method13469(1495235000) < Engine.anInt3243 * -969250379) && class282_sub53_sub1.method13481(1815146840) >= 0 && class282_sub53_sub1.method13469(-1984385021) >= 0) {
 						int i_1_ = class282_sub53_sub1.method13470(1166516765);
 						if (class282_sub53_sub1.method13470(1107239769) == -1)
 							Class236.aClass534_Sub1_2913.method11410(class282_sub53_sub1, (byte) 24);

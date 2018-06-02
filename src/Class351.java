@@ -6,7 +6,7 @@ import java.awt.Canvas;
 
 public class Class351 implements Interface3 {
 	public int anInt4095;
-	public static Canvas LOAD_CANVAS;
+	public static Canvas gameCanvas;
 	public static int anInt4097;
 
 	public Class60 method25() {

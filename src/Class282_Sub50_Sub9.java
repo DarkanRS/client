@@ -298,15 +298,15 @@ public class Class282_Sub50_Sub9 extends Class282_Sub50 {
 	}
 
 	static boolean method14921(int i, int i_28_, int i_29_, byte i_30_) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1536948250);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1536948250);
 		boolean bool = true;
-		Interface12 interface12 = (Interface12) class206.method3381(i, i_28_, i_29_, (byte) -61);
+		SceneObject interface12 = (SceneObject) class206.getWall(i, i_28_, i_29_, (byte) -61);
 		if (null != interface12)
 			bool &= Class93.method1577(interface12, -1691371970);
-		interface12 = (Interface12) class206.method3413(i, i_28_, i_29_, client.anInterface25_7446, -233664382);
+		interface12 = (SceneObject) class206.getInteractableObject(i, i_28_, i_29_, client.anInterface25_7446, -233664382);
 		if (interface12 != null)
 			bool &= Class93.method1577(interface12, -1754652045);
-		interface12 = (Interface12) class206.method3415(i, i_28_, i_29_, -387297653);
+		interface12 = (SceneObject) class206.getGroundDecoration(i, i_28_, i_29_, -387297653);
 		if (interface12 != null)
 			bool &= Class93.method1577(interface12, -1776795369);
 		return bool;

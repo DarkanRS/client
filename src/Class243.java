@@ -122,17 +122,17 @@ public class Class243 {
 
 	static final void method4179(int i, int i_17_, int i_18_, int i_19_, Class476 class476, byte i_20_) {
 		if (i_18_ >= 1 && i_19_ >= 1 && i_18_ <= IndexLoaders.MAP_REGION_DECODER.method4424(1811223828) - 2 && i_19_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1564374011) - 2) {
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-1940602014) != null) {
-				Interface12 interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_17_, i_18_, i_19_, 2009974413);
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1940602014) != null) {
+				SceneObject interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_17_, i_18_, i_19_, 2009974413);
 				if (interface12 != null) {
-					if (interface12 instanceof Class521_Sub1_Sub1_Sub5)
-						((Class521_Sub1_Sub1_Sub5) interface12).method16096(class476, -59212941);
-					else if (interface12 instanceof Class521_Sub1_Sub3_Sub2)
-						((Class521_Sub1_Sub3_Sub2) interface12).method16091(class476, -737324181);
-					else if (interface12 instanceof Class521_Sub1_Sub5_Sub2)
-						((Class521_Sub1_Sub5_Sub2) interface12).method16108(class476, -2063213607);
-					else if (interface12 instanceof Class521_Sub1_Sub4_Sub2)
-						((Class521_Sub1_Sub4_Sub2) interface12).method16082(class476, -449891505);
+					if (interface12 instanceof InteractableObject)
+						((InteractableObject) interface12).method16096(class476, -59212941);
+					else if (interface12 instanceof GroundDecoration)
+						((GroundDecoration) interface12).method16091(class476, -737324181);
+					else if (interface12 instanceof Wall)
+						((Wall) interface12).method16108(class476, -2063213607);
+					else if (interface12 instanceof WallDecoration)
+						((WallDecoration) interface12).method16082(class476, -449891505);
 				}
 			}
 		}

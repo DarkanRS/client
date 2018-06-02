@@ -94,7 +94,7 @@ public class Class383 implements Interface41 {
 		}
 		int i_15_;
 		try {
-			Dimension dimension = Class351.LOAD_CANVAS.getSize();
+			Dimension dimension = Class351.gameCanvas.getSize();
 			Class446.method7447(Message.PROFILING.translate(Class223.CURRENT_LANGUAGE, -1923061831), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -8);
 			RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, (Class58.aClass529_527.anInt7034 * -1878247413), 0);
 			long l = Class169.method2869(2130587013);

@@ -141,8 +141,8 @@ public class Class356 {
 			IndexLoaders.aClass45_5759.method916((byte) 60);
 			IndexLoaders.aClass436_7683.method7306(362287177);
 			IndexLoaders.aClass438_7932.method7324(1300086915);
-			IndexLoaders.aClass210_3389.method3604((short) 256);
-			IndexLoaders.aClass290_3402.method5103(-901972718);
+			IndexLoaders.HITSPLAT_INDEX_LOADER.method3604((short) 256);
+			IndexLoaders.HITBAR_INDEX.method5103(-901972718);
 			Class468_Sub8.method12679(2008833833);
 			Class520.method11161((byte) 1);
 			Class487.aClass378_5752.method6410((short) 25980);

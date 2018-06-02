@@ -161,10 +161,10 @@ public class Class371 {
 	}
 
 	public static Container method6354(byte i) {
-		if (null != Class263.aFrame3260)
-			return Class263.aFrame3260;
-		if (null != Class263.aFrame3261)
-			return Class263.aFrame3261;
+		if (null != Engine.aFrame3260)
+			return Engine.aFrame3260;
+		if (null != Engine.aFrame3261)
+			return Engine.aFrame3261;
 		return Class282_Sub44.anApplet8065;
 	}
 }

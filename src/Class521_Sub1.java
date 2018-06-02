@@ -8,7 +8,7 @@ public abstract class Class521_Sub1 extends Class521 {
 	public byte aByte7967;
 	public byte aByte7968;
 	int anInt7969;
-	public Class206 aClass206_7970;
+	public SceneObjectManager aClass206_7970;
 
 	abstract int method12982(Class282_Sub24[] class282_sub24s);
 
@@ -34,7 +34,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	public abstract Class200 method12993(GraphicalRenderer class505);
 
-	Class521_Sub1(Class206 class206) {
+	Class521_Sub1(SceneObjectManager class206) {
 		aClass206_7970 = class206;
 	}
 
@@ -66,14 +66,14 @@ public abstract class Class521_Sub1 extends Class521 {
 	public abstract int method13003();
 
 	int method13004(int i, int i_4_, Class282_Sub24[] class282_sub24s, int i_5_) {
-		long l = (((Class206) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_4_]);
+		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_4_]);
 		long l_6_ = 0L;
 		int i_7_ = 0;
 		for (/**/; l_6_ <= 48L; l_6_ += 16L) {
 			int i_8_ = (int) (l >> (int) l_6_ & 0xffffL);
 			if (i_8_ <= 0)
 				break;
-			class282_sub24s[i_7_++] = (((Class206) aClass206_7970).aClass287Array2646[i_8_ - 1].aClass282_Sub24_3425);
+			class282_sub24s[i_7_++] = (((SceneObjectManager) aClass206_7970).aClass287Array2646[i_8_ - 1].aClass282_Sub24_3425);
 		}
 		for (int i_9_ = i_7_; i_9_ < 4; i_9_++)
 			class282_sub24s[i_9_] = null;
@@ -105,14 +105,14 @@ public abstract class Class521_Sub1 extends Class521 {
 	abstract void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1_12_, int i, int i_13_, int i_14_, boolean bool, int i_15_);
 
 	int method13014(int i, int i_16_, Class282_Sub24[] class282_sub24s) {
-		long l = (((Class206) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_16_]);
+		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_16_]);
 		long l_17_ = 0L;
 		int i_18_ = 0;
 		for (/**/; l_17_ <= 48L; l_17_ += 16L) {
 			int i_19_ = (int) (l >> (int) l_17_ & 0xffffL);
 			if (i_19_ <= 0)
 				break;
-			class282_sub24s[i_18_++] = (((Class206) aClass206_7970).aClass287Array2646[i_19_ - 1].aClass282_Sub24_3425);
+			class282_sub24s[i_18_++] = (((SceneObjectManager) aClass206_7970).aClass287Array2646[i_19_ - 1].aClass282_Sub24_3425);
 		}
 		for (int i_20_ = i_18_; i_20_ < 4; i_20_++)
 			class282_sub24s[i_20_] = null;
@@ -164,14 +164,14 @@ public abstract class Class521_Sub1 extends Class521 {
 	abstract boolean method13034();
 
 	int method13035(int i, int i_25_, Class282_Sub24[] class282_sub24s) {
-		long l = (((Class206) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_25_]);
+		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_25_]);
 		long l_26_ = 0L;
 		int i_27_ = 0;
 		for (/**/; l_26_ <= 48L; l_26_ += 16L) {
 			int i_28_ = (int) (l >> (int) l_26_ & 0xffffL);
 			if (i_28_ <= 0)
 				break;
-			class282_sub24s[i_27_++] = (((Class206) aClass206_7970).aClass287Array2646[i_28_ - 1].aClass282_Sub24_3425);
+			class282_sub24s[i_27_++] = (((SceneObjectManager) aClass206_7970).aClass287Array2646[i_28_ - 1].aClass282_Sub24_3425);
 		}
 		for (int i_29_ = i_27_; i_29_ < 4; i_29_++)
 			class282_sub24s[i_29_] = null;

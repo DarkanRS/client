@@ -221,8 +221,8 @@ public class JS5Manager {
 							if (class293.aClass208_3504 != null) {
 								for (Class208 class208 = class293.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 									Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
-									if (class521_sub1_sub1 instanceof Interface12) {
-										Interface12 interface12 = (Interface12) class521_sub1_sub1;
+									if (class521_sub1_sub1 instanceof SceneObject) {
+										SceneObject interface12 = (SceneObject) class521_sub1_sub1;
 										int i_61_ = interface12.method89(1472550307);
 										int i_62_ = interface12.method92(522021412);
 										if (i_61_ == 21) {
@@ -255,7 +255,7 @@ public class JS5Manager {
 				}
 			}
 			if (bool_56_) {
-				int i_66_ = IndexLoaders.MAP_REGION_DECODER.method4430(-1297702822).aClass390Array2591[Class4.anInt35 * 675588453 + 1].method6722(i_50_, i_53_, 65280);
+				int i_66_ = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1297702822).aClass390Array2591[Class4.anInt35 * 675588453 + 1].method6722(i_50_, i_53_, 65280);
 				if (client.anIntArray7198[i] < i_66_) {
 					client.anIntArray7198[i] = i_66_;
 				}

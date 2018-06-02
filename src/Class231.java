@@ -22,7 +22,7 @@ public class Class231 {
 	short[] aShortArray2875;
 	public static String aString2876;
 
-	Class231(Class206 class206, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
+	Class231(SceneObjectManager class206, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
 		((Class231) this).aByte2863 = (byte) i;
 		((Class231) this).aByte2865 = (byte) i_0_;
 		((Class231) this).anIntArray2859 = new int[4];

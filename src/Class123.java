@@ -28,7 +28,7 @@ public class Class123 {
 		return -method2115(-1367637934);
 	}
 
-	public void method2114(int i, int i_0_) {
+	public void animate(int i, int i_0_) {
 		((Class123) this).aBool1546 = true;
 		method2124(false, i, 1, 1157413618);
 	}
@@ -49,7 +49,7 @@ public class Class123 {
 	void method2118(GraphicalRenderer class505, int i) {
 		if (((Class123) this).aClass282_Sub50_Sub17_1551 != null) {
 			Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-			IndexLoaders.MAP_REGION_DECODER.method4430(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -43);
+			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -43);
 			((Class123) this).aBoolArray1553 = null;
 			((Class123) this).aClass282_Sub50_Sub17_1551 = null;
 		}
@@ -218,7 +218,7 @@ public class Class123 {
 			return null;
 		}
 		Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-2004926636);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2004926636);
 		if (bool_14_) {
 			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -45);
 			((Class123) this).aBool1552 = false;
@@ -316,7 +316,7 @@ public class Class123 {
 			return null;
 		}
 		Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1379561670);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1379561670);
 		if (bool_17_) {
 			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -82);
 			((Class123) this).aBool1552 = false;

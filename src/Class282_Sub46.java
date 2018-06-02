@@ -44,7 +44,7 @@ public class Class282_Sub46 extends Node {
 			if (client.aBool7176) {
 				int i_11_ = i + i_1_ - 5;
 				int i_12_ = i_2_ + i_0_ - 8;
-				Class16.aClass8_144.method359(new StringBuilder().append("Fps:").append(Class263.anInt3253 * 457052913).toString(), i_11_, i_12_, 16776960, -1, 1878721557);
+				Class16.aClass8_144.method359(new StringBuilder().append("Fps:").append(Engine.FPS * 457052913).toString(), i_11_, i_12_, 16776960, -1, 1878721557);
 				i_12_ -= 15;
 				Runtime runtime = Runtime.getRuntime();
 				int i_13_ = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L);

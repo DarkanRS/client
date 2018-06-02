@@ -6,7 +6,7 @@ public class Class214 {
 	public static Interface17 method3665(RsByteBuffer class282_sub35) {
 		Class221 class221 = Class100.method1640(class282_sub35.readUnsignedByte(), (byte) -110);
 		if (class221 == Class221.aClass221_2759)
-			return Class206.method3545(class282_sub35, -1798122690);
+			return SceneObjectManager.method3545(class282_sub35, -1798122690);
 		if (Class221.aClass221_2761 == class221)
 			return Class97.method1614(class282_sub35, 1983678774);
 		if (class221 == Class221.aClass221_2760)
@@ -21,7 +21,7 @@ public class Class214 {
 	public static Interface17 method3666(RsByteBuffer class282_sub35) {
 		Class221 class221 = Class100.method1640(class282_sub35.readUnsignedByte(), (byte) -90);
 		if (class221 == Class221.aClass221_2759)
-			return Class206.method3545(class282_sub35, -1650725239);
+			return SceneObjectManager.method3545(class282_sub35, -1650725239);
 		if (Class221.aClass221_2761 == class221)
 			return Class97.method1614(class282_sub35, -521246323);
 		if (class221 == Class221.aClass221_2760)

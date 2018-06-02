@@ -344,14 +344,14 @@ public final class Class517 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7300 * 550395357;
 	}
 
-	public static void method8892(Class397 class397, int i, int i_30_, Interface12 interface12) {
+	public static void method8892(Class397 class397, int i, int i_30_, SceneObject interface12) {
 		CS2Executor class527 = Class125.method2167(872338188);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_30_, class527, (byte) 17);
 		class527.anInterface12_7013 = null;
 	}
 
-	public static void method8893(Class397 class397, int i, int i_31_, Interface12 interface12) {
+	public static void method8893(Class397 class397, int i, int i_31_, SceneObject interface12) {
 		CS2Executor class527 = Class125.method2167(659348090);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_31_, class527, (byte) 68);
@@ -365,7 +365,7 @@ public final class Class517 {
 		Class109.method1858(class118, (byte) 31);
 	}
 
-	public static void method8895(Class397 class397, int i, int i_32_, Interface12 interface12) {
+	public static void method8895(Class397 class397, int i, int i_32_, SceneObject interface12) {
 		CS2Executor class527 = Class125.method2167(-1071506799);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_32_, class527, (byte) 43);
@@ -2037,7 +2037,7 @@ public final class Class517 {
 		Class282_Sub52.method13468(class118, class98, class527, 769396750);
 	}
 
-	public static void method9074(Class397 class397, int i, int i_127_, Interface12 interface12) {
+	public static void method9074(Class397 class397, int i, int i_127_, SceneObject interface12) {
 		CS2Executor class527 = Class125.method2167(1282970744);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_127_, class527, (byte) 74);
@@ -2779,7 +2779,7 @@ public final class Class517 {
 	}
 
 	static final void method9172(CS2Executor class527) {
-		Class521_Sub1_Sub4_Sub2.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
+		WallDecoration.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
 	}
 
 	static final void method9173(CS2Executor class527) {
@@ -2965,7 +2965,7 @@ public final class Class517 {
 	}
 
 	static final void method9199(CS2Executor class527) {
-		if (Class475.aBool5623 && Class263.aFrame3260 != null)
+		if (Class475.aBool5623 && Engine.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(336211269), -1, -1, false, (byte) 104);
 		if (NamedFileReference.method867(1394927577) == Class279.aClass279_3368) {
 			Class282_Sub11.method12211(-1126265723);
@@ -3198,7 +3198,7 @@ public final class Class517 {
 		int i_147_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (Class475.aBool5623) {
 			Class440.method7373(3, i, i_147_, false, (byte) 108);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Class263.aFrame3260 ? 1 : 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
 		} else
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
@@ -5901,28 +5901,28 @@ public final class Class517 {
 		int i = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i, (byte) 26);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i >> 16];
-		Class263.method4772(class118, class98, class527, (byte) 16);
+		Engine.method4772(class118, class98, class527, (byte) 16);
 	}
 
 	static final void method9605(CS2Executor class527) {
 		int i = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i, (byte) 102);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i >> 16];
-		Class263.method4772(class118, class98, class527, (byte) 21);
+		Engine.method4772(class118, class98, class527, (byte) 21);
 	}
 
 	static final void method9606(CS2Executor class527) {
 		int i = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class118 class118 = Class117.method1981(i, (byte) 5);
 		Class98 class98 = Class468_Sub8.aClass98Array7889[i >> 16];
-		Class263.method4772(class118, class98, class527, (byte) -7);
+		Engine.method4772(class118, class98, class527, (byte) -7);
 	}
 
 	static final void method9607(CS2Executor class527) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class263.method4772(class118, class98, class527, (byte) 22);
+		Engine.method4772(class118, class98, class527, (byte) 22);
 	}
 
 	static final void method9608(CS2Executor class527) {
@@ -6662,7 +6662,7 @@ public final class Class517 {
 	}
 
 	static final void method9708(CS2Executor class527) {
-		if (Class475.aBool5623 && Class263.aFrame3260 != null)
+		if (Class475.aBool5623 && Engine.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-216205179), -1, -1, false, (byte) 50);
 	}
 
@@ -7667,7 +7667,7 @@ public final class Class517 {
 	}
 
 	static final void method9847(CS2Executor class527) {
-		if (Class475.aBool5623 && Class263.aFrame3260 != null)
+		if (Class475.aBool5623 && Engine.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-125085754), -1, -1, false, (byte) 76);
 		if (NamedFileReference.method867(407455979) == Class279.aClass279_3368) {
 			Class282_Sub11.method12211(96221665);
@@ -8551,7 +8551,7 @@ public final class Class517 {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class263.method4772(class118, class98, class527, (byte) -96);
+		Engine.method4772(class118, class98, class527, (byte) -96);
 	}
 
 	static final void method9972(CS2Executor class527) {
@@ -9275,7 +9275,7 @@ public final class Class517 {
 
 	static final void method10070(CS2Executor class527) {
 		int i = -2123019059 * Class363.anInt4203;
-		int i_297_ = 977902937 * Class263.anInt3249;
+		int i_297_ = 977902937 * Engine.anInt3249;
 		int i_298_ = -1;
 		if (Class475.aBool5623) {
 			Class467[] class467s = Class405.method6825((byte) -78);
@@ -12219,7 +12219,7 @@ public final class Class517 {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
-	public static void method10449(Class397 class397, int i, int i_404_, Interface12 interface12) {
+	public static void method10449(Class397 class397, int i, int i_404_, SceneObject interface12) {
 		CS2Executor class527 = Class125.method2167(1776771367);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_404_, class527, (byte) 87);
@@ -12830,7 +12830,7 @@ public final class Class517 {
 	}
 
 	static final void method10522(CS2Executor class527) {
-		Class521_Sub1_Sub4_Sub2.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
+		WallDecoration.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
 	}
 
 	static final void method10523(CS2Executor class527) {
@@ -12839,7 +12839,7 @@ public final class Class517 {
 		int i_418_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (Class475.aBool5623) {
 			Class440.method7373(3, i, i_418_, false, (byte) 5);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Class263.aFrame3260 ? 1 : 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
 		} else
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
@@ -12850,7 +12850,7 @@ public final class Class517 {
 		int i_419_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		if (Class475.aBool5623) {
 			Class440.method7373(3, i, i_419_, false, (byte) 78);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Class263.aFrame3260 ? 1 : 0;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
 		} else
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
@@ -12863,7 +12863,7 @@ public final class Class517 {
 	}
 
 	static final void method10526(CS2Executor class527) {
-		if (Class475.aBool5623 && Class263.aFrame3260 != null)
+		if (Class475.aBool5623 && Engine.aFrame3260 != null)
 			Class440.method7373(Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-2004463854), -1, -1, false, (byte) 42);
 	}
 
@@ -12901,7 +12901,7 @@ public final class Class517 {
 
 	static final void method10531(CS2Executor class527) {
 		int i = -2123019059 * Class363.anInt4203;
-		int i_420_ = 977902937 * Class263.anInt3249;
+		int i_420_ = 977902937 * Engine.anInt3249;
 		int i_421_ = -1;
 		if (Class475.aBool5623) {
 			Class467[] class467s = Class405.method6825((byte) -11);
@@ -12918,7 +12918,7 @@ public final class Class517 {
 
 	static final void method10532(CS2Executor class527) {
 		int i = -2123019059 * Class363.anInt4203;
-		int i_423_ = 977902937 * Class263.anInt3249;
+		int i_423_ = 977902937 * Engine.anInt3249;
 		int i_424_ = -1;
 		if (Class475.aBool5623) {
 			Class467[] class467s = Class405.method6825((byte) 97);
@@ -12935,7 +12935,7 @@ public final class Class517 {
 
 	static final void method10533(CS2Executor class527) {
 		int i = -2123019059 * Class363.anInt4203;
-		int i_426_ = 977902937 * Class263.anInt3249;
+		int i_426_ = 977902937 * Engine.anInt3249;
 		int i_427_ = -1;
 		if (Class475.aBool5623) {
 			Class467[] class467s = Class405.method6825((byte) -24);
@@ -15614,7 +15614,7 @@ public final class Class517 {
 	}
 
 	static final void method10904(CS2Executor class527) {
-		Class521_Sub1_Sub5_Sub2.method16114(-191485904);
+		Wall.method16114(-191485904);
 	}
 
 	static final void method10905(CS2Executor class527) {

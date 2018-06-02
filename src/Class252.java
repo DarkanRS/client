@@ -159,9 +159,9 @@ public class Class252 implements Interface43 {
 		int i_11_ = 15 + i_8_;
 		if (client.aBool7176) {
 			int i_12_ = -256;
-			if (457052913 * client.anInt3253 < 20)
+			if (457052913 * client.FPS < 20)
 				i_12_ = -65536;
-			Class16.aClass8_144.method359(new StringBuilder().append("Fps:").append(457052913 * client.anInt3253).toString(), i_10_, i_11_, i_12_, -1, 1878721557);
+			Class16.aClass8_144.method359(new StringBuilder().append("Fps:").append(457052913 * client.FPS).toString(), i_10_, i_11_, i_12_, -1, 1878721557);
 			i_11_ += 15;
 			Runtime runtime = Runtime.getRuntime();
 			long l = runtime.totalMemory() / 1024L;

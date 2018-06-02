@@ -64,7 +64,7 @@ public class NamedFileReference {
 	}
 
 	public static Class279 method867(int i) {
-		return Class263.aClass279_3267;
+		return Engine.aClass279_3267;
 	}
 
 	static void method868(CS2Executor class527, byte i) {

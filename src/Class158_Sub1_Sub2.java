@@ -244,7 +244,7 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 
 	public static final void method15535(int i, String string, Color color, Color color_0_, Color color_1_, int i_2_) {
 		try {
-			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
+			Graphics graphics = Class351.gameCanvas.getGraphics();
 			if (null == Class515.aFont5893)
 				Class515.aFont5893 = new Font("Helvetica", 1, 13);
 			if (color == null)
@@ -255,12 +255,12 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				color_1_ = new Color(255, 255, 255);
 			try {
 				if (OutputStream_Sub1.anImage7953 == null)
-					OutputStream_Sub1.anImage7953 = (Class351.LOAD_CANVAS.createImage(-418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243));
+					OutputStream_Sub1.anImage7953 = (Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083, -969250379 * Engine.anInt3243));
 				Graphics graphics_3_ = OutputStream_Sub1.anImage7953.getGraphics();
 				graphics_3_.setColor(Color.black);
-				graphics_3_.fillRect(0, 0, Class349.anInt4083 * -418109423, -969250379 * Class263.anInt3243);
+				graphics_3_.fillRect(0, 0, Class349.anInt4083 * -418109423, -969250379 * Engine.anInt3243);
 				int i_4_ = Class349.anInt4083 * -418109423 / 2 - 152;
-				int i_5_ = -969250379 * Class263.anInt3243 / 2 - 18;
+				int i_5_ = -969250379 * Engine.anInt3243 / 2 - 18;
 				graphics_3_.setColor(color_0_);
 				graphics_3_.drawRect(i_4_, i_5_, 303, 33);
 				graphics_3_.setColor(color);
@@ -271,17 +271,17 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				graphics_3_.setFont(Class515.aFont5893);
 				graphics_3_.setColor(color_1_);
 				graphics_3_.drawString(string, i_4_ + (304 - string.length() * 6) / 2, 22 + i_5_);
-				if (Class263.aString3252 != null) {
+				if (Engine.aString3252 != null) {
 					graphics_3_.setFont(Class515.aFont5893);
 					graphics_3_.setColor(color_1_);
-					graphics_3_.drawString(Class263.aString3252, (Class349.anInt4083 * -418109423 / 2 - (Class263.aString3252.length() * 6 / 2)), (Class263.anInt3243 * -969250379 / 2 - 26));
+					graphics_3_.drawString(Engine.aString3252, (Class349.anInt4083 * -418109423 / 2 - (Engine.aString3252.length() * 6 / 2)), (Engine.anInt3243 * -969250379 / 2 - 26));
 				}
 				graphics.drawImage(OutputStream_Sub1.anImage7953, 0, 0, null);
 			} catch (Exception exception) {
 				graphics.setColor(Color.black);
-				graphics.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243);
+				graphics.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Engine.anInt3243);
 				int i_6_ = Class349.anInt4083 * -418109423 / 2 - 152;
-				int i_7_ = -969250379 * Class263.anInt3243 / 2 - 18;
+				int i_7_ = -969250379 * Engine.anInt3243 / 2 - 18;
 				graphics.setColor(color_0_);
 				graphics.drawRect(i_6_, i_7_, 303, 33);
 				graphics.setColor(color);
@@ -291,15 +291,15 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				graphics.fillRect(3 * i + (i_6_ + 2), i_7_ + 2, 300 - 3 * i, 30);
 				graphics.setFont(Class515.aFont5893);
 				graphics.setColor(color_1_);
-				if (Class263.aString3252 != null) {
+				if (Engine.aString3252 != null) {
 					graphics.setFont(Class515.aFont5893);
 					graphics.setColor(color_1_);
-					graphics.drawString(Class263.aString3252, (-418109423 * Class349.anInt4083 / 2 - (Class263.aString3252.length() * 6 / 2)), (-969250379 * Class263.anInt3243 / 2 - 26));
+					graphics.drawString(Engine.aString3252, (-418109423 * Class349.anInt4083 / 2 - (Engine.aString3252.length() * 6 / 2)), (-969250379 * Engine.anInt3243 / 2 - 26));
 				}
 				graphics.drawString(string, i_6_ + (304 - string.length() * 6) / 2, 22 + i_7_);
 			}
 		} catch (Exception exception) {
-			Class351.LOAD_CANVAS.repaint();
+			Class351.gameCanvas.repaint();
 		}
 	}
 

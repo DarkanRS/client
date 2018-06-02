@@ -92,7 +92,7 @@ public class Class106 {
 	}
 
 	public static void method1818(int i, int i_7_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(8, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(8, (long) i);
 		class282_sub50_sub12.method14965((byte) 5);
 	}
 }

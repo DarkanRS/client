@@ -107,7 +107,7 @@ public abstract class Class504 {
 	}
 
 	public static final int method8389(int i, int i_3_, int i_4_, byte i_5_) {
-		if (IndexLoaders.MAP_REGION_DECODER.method4430(-1437330098) == null)
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1437330098) == null)
 			return 0;
 		int i_6_ = i >> 9;
 		int i_7_ = i_3_ >> 9;
@@ -116,7 +116,7 @@ public abstract class Class504 {
 		int i_8_ = i_4_;
 		if (i_8_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).aByteArrayArrayArray3638[1][i_6_][i_7_]) & 0x2) != 0)
 			i_8_++;
-		return IndexLoaders.MAP_REGION_DECODER.method4430(-1489528047).aClass390Array2591[i_8_].method6709(i, i_3_, 1879647652);
+		return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1489528047).aClass390Array2591[i_8_].method6709(i, i_3_, 1879647652);
 	}
 
 	static final void method8390(Class118 class118, Class98 class98, CS2Executor class527, int i) {

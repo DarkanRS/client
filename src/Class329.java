@@ -8,7 +8,7 @@ public class Class329 {
 	protected boolean aBool3773;
 	static int[][] anIntArrayArray3774;
 	static int[][] anIntArrayArray3775;
-	protected Class206 aClass206_3776;
+	protected SceneObjectManager aClass206_3776;
 	static int[] anIntArray3778;
 	public boolean aBool3780;
 	int anInt3781;
@@ -1175,7 +1175,7 @@ public class Class329 {
 		anIntArrayArray3836 = new int[][] { { 12, 12, 12, 12 }, { 12, 12, 12, 12, 12, 5 }, { 5, 5, 1, 1 }, { 5, 1, 1, 5 }, { 5, 5, 5 }, { 5, 5, 5 }, { 12, 12, 12, 12, 12, 12 }, { 1, 12, 12, 12, 12, 12 }, { 1, 1, 7, 1 }, { 8, 9, 9, 8, 8, 3, 1, 9 }, { 8, 8, 9, 8, 9, 9 }, { 10, 10, 11, 11, 11, 7, 3, 7 }, { 12, 12, 12, 12 } };
 	}
 
-	Class329(Class206 class206, int i, int i_435_, int i_436_, boolean bool, Class536 class536, UnderlayIndexLoader class479, Class311 class311) {
+	Class329(SceneObjectManager class206, int i, int i_435_, int i_436_, boolean bool, Class536 class536, UnderlayIndexLoader class479, Class311 class311) {
 		aBool3780 = false;
 		aBool3820 = false;
 		aBool3782 = false;
@@ -1434,16 +1434,16 @@ public class Class329 {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (Class468_Sub8.aClass98Array7889[i_1068_].aClass118Array998).length;
 	}
 
-	static long method5905(Interface12 interface12, int i, int i_1069_, byte i_1070_) {
+	static long method5905(SceneObject interface12, int i, int i_1069_, byte i_1070_) {
 		long l = 4194304L;
 		long l_1071_ = -9223372036854775808L;
-		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1495690632).getObjectDefinitions(interface12.method84(1049688189), 65280);
+		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1495690632).getObjectDefinitions(interface12.getId(1049688189), 65280);
 		long l_1072_ = (long) (i | i_1069_ << 7 | interface12.method89(1466657768) << 14 | interface12.method92(-524760179) << 20 | 0x40000000);
 		if (0 == -348507379 * class478.anInt5652)
 			l_1072_ |= l_1071_;
 		if (1 == -1062790731 * class478.anInt5687)
 			l_1072_ |= l;
-		l_1072_ |= (long) interface12.method84(-1337355622) << 32;
+		l_1072_ |= (long) interface12.getId(-1337355622) << 32;
 		return l_1072_;
 	}
 

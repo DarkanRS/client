@@ -138,7 +138,7 @@ public class Player extends Animable {
 		return null;
 	}
 
-	public Player(Class206 class206, int i) {
+	public Player(SceneObjectManager class206, int i) {
 		super(class206, i);
 		anInt10554 = 0;
 		anInt10555 = -12499273;
@@ -311,7 +311,7 @@ public class Player extends Animable {
 		return bool;
 	}
 
-	public Player(Class206 class206) {
+	public Player(SceneObjectManager class206) {
 		super(class206);
 		anInt10554 = 0;
 		anInt10555 = -12499273;
@@ -369,7 +369,7 @@ public class Player extends Animable {
 			i |= 0x80000;
 		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_38_, true, Class473.DEFAULTS_LOADER_6, (short) -9437));
 		int i_39_ = Class46.method932(-708293505);
-		if (Class263.anInt3273 * -1346844585 < 96 && i_39_ > 50)
+		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_39_ > 50)
 			JS5CacheFile.method3359(-1275511493);
 		if (Class496.aClass496_5813 != Class90.aClass496_952 && i_39_ < 50) {
 			int i_40_;
@@ -939,7 +939,7 @@ public class Player extends Animable {
 			i |= 0x80000;
 		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_119_, true, Class473.DEFAULTS_LOADER_6, (short) -8674));
 		int i_120_ = Class46.method932(-1668934621);
-		if (Class263.anInt3273 * -1346844585 < 96 && i_120_ > 50)
+		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_120_ > 50)
 			JS5CacheFile.method3359(-1275511493);
 		if (Class496.aClass496_5813 != Class90.aClass496_952 && i_120_ < 50) {
 			int i_121_;
@@ -990,7 +990,7 @@ public class Player extends Animable {
 			i |= 0x80000;
 		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_125_, true, Class473.DEFAULTS_LOADER_6, (short) -4743));
 		int i_126_ = Class46.method932(-1966796916);
-		if (Class263.anInt3273 * -1346844585 < 96 && i_126_ > 50)
+		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_126_ > 50)
 			JS5CacheFile.method3359(-1275511493);
 		if (Class496.aClass496_5813 != Class90.aClass496_952 && i_126_ < 50) {
 			int i_127_;

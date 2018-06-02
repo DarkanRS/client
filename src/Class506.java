@@ -452,7 +452,7 @@ public class Class506 {
 	}
 
 	static void method8722(int i, int i_25_, int i_26_, int i_27_, int i_28_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(18, (long) i_25_ << 32 | (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(18, (long) i_25_ << 32 | (long) i);
 		class282_sub50_sub12.method14995(540803591);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_26_;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_27_;

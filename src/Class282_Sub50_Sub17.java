@@ -36,7 +36,7 @@ public abstract class Class282_Sub50_Sub17 extends Class282_Sub50 {
 	}
 
 	public static File method15508(int i) {
-		return Class263.aFile3264;
+		return Engine.aFile3264;
 	}
 
 	static final void method15509(int i) {

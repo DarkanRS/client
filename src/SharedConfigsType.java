@@ -51,7 +51,7 @@ public class SharedConfigsType {
 	public static SharedConfigsType aClass120_1509;
 	public static SharedConfigsType aClass120_1510;
 	public static SharedConfigsType aClass120_1511;
-	public static SharedConfigsType aClass120_1512;
+	public static SharedConfigsType HITBARS;
 	static SharedConfigsType aClass120_1513;
 	public static SharedConfigsType aClass120_1514;
 	static SharedConfigsType aClass120_1515;
@@ -150,7 +150,7 @@ public class SharedConfigsType {
 		aClass120_1515 = new SharedConfigsType(53);
 		aClass120_1464 = new SharedConfigsType(54);
 		aClass120_1517 = new SharedConfigsType(70);
-		aClass120_1512 = new SharedConfigsType(72);
+		HITBARS = new SharedConfigsType(72);
 		aClass120_1519 = new SharedConfigsType(73);
 		aClass120_1520 = new SharedConfigsType(74);
 	}

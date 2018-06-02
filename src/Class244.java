@@ -162,7 +162,7 @@ public class Class244 {
 	}
 
 	public static void method4196(int i, byte i_12_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(22, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(22, (long) i);
 		class282_sub50_sub12.method14965((byte) -25);
 	}
 }

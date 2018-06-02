@@ -74,13 +74,13 @@ public class Class507 {
 				/* empty */
 			}
 			if (!bool) {
-				Class351.LOAD_CANVAS.setSize(-418109423 * Class349.anInt4083, client.anInt3243 * -969250379);
-				Renderers.SOFTWARE_RENDERER.method8414(Class351.LOAD_CANVAS, -418109423 * Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
+				Class351.gameCanvas.setSize(-418109423 * Class349.anInt4083, client.anInt3243 * -969250379);
+				Renderers.SOFTWARE_RENDERER.method8414(Class351.gameCanvas, -418109423 * Class349.anInt4083, client.anInt3243 * -969250379, -1972128400);
 				if (container == client.aFrame3261) {
 					Insets insets = client.aFrame3261.getInsets();
-					Class351.LOAD_CANVAS.setLocation(insets.left + -1911940837 * client.anInt3250, insets.top + client.anInt3251 * 698621615);
+					Class351.gameCanvas.setLocation(insets.left + -1911940837 * client.anInt3250, insets.top + client.anInt3251 * 698621615);
 				} else
-					Class351.LOAD_CANVAS.setLocation((-1911940837 * client.anInt3250), (client.anInt3251 * 698621615));
+					Class351.gameCanvas.setLocation((-1911940837 * client.anInt3250), (client.anInt3251 * 698621615));
 			} else
 				Class350_Sub2.method12571(-551950888);
 			if (i_2_ >= 2)

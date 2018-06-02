@@ -13,19 +13,19 @@ public class Class275_Sub4 extends Class275 {
 	}
 
 	static final void method12585(Class282_Sub31 class282_sub31, int i) {
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1869632062);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1869632062);
 		if (class206 != null) {
-			Interface12 interface12 = null;
+			SceneObject interface12 = null;
 			if (0 == ((Class282_Sub31) class282_sub31).anInt7766 * -497894501)
-				interface12 = ((Interface12) class206.method3381(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), (byte) 0));
+				interface12 = ((SceneObject) class206.getWall(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), (byte) 0));
 			if (-497894501 * ((Class282_Sub31) class282_sub31).anInt7766 == 1)
-				interface12 = ((Interface12) class206.method3511(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (class282_sub31.anInt7763 * -322610393), (byte) -42));
+				interface12 = ((SceneObject) class206.getWallDecoration(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (class282_sub31.anInt7763 * -322610393), (byte) -42));
 			if (2 == ((Class282_Sub31) class282_sub31).anInt7766 * -497894501)
-				interface12 = ((Interface12) class206.method3413(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), client.anInterface25_7446, -233664382));
+				interface12 = ((SceneObject) class206.getInteractableObject(1291499461 * (((Class282_Sub31) class282_sub31).anInt7764), 37618455 * class282_sub31.anInt7762, (-322610393 * class282_sub31.anInt7763), client.anInterface25_7446, -233664382));
 			if (-497894501 * ((Class282_Sub31) class282_sub31).anInt7766 == 3)
-				interface12 = ((Interface12) class206.method3415((((Class282_Sub31) class282_sub31).anInt7764) * 1291499461, class282_sub31.anInt7762 * 37618455, (class282_sub31.anInt7763 * -322610393), -387297653));
+				interface12 = ((SceneObject) class206.getGroundDecoration((((Class282_Sub31) class282_sub31).anInt7764) * 1291499461, class282_sub31.anInt7762 * 37618455, (class282_sub31.anInt7763 * -322610393), -387297653));
 			if (null != interface12) {
-				((Class282_Sub31) class282_sub31).anInt7765 = interface12.method84(109923272) * -233992759;
+				((Class282_Sub31) class282_sub31).anInt7765 = interface12.getId(109923272) * -233992759;
 				((Class282_Sub31) class282_sub31).anInt7770 = interface12.method89(696925802) * 1474006371;
 				((Class282_Sub31) class282_sub31).anInt7767 = interface12.method92(-1676463957) * 566178073;
 			} else {

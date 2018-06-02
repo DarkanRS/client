@@ -1171,7 +1171,7 @@ public final class Class251 {
 					Class209.method3598(new StringBuilder().append("Device: ").append(class168.aString2053).toString(), -1211113537);
 					Class209.method3598(new StringBuilder().append("Driver Version: ").append(-3062896818026551219L * class168.aLong2049).toString(), -598072423);
 				} else if (string.equals("heap"))
-					Class209.method3598(new StringBuilder().append("Heap: ").append(-1346844585 * Class263.anInt3273).append("MB").toString(), -845757732);
+					Class209.method3598(new StringBuilder().append("Heap: ").append(-1346844585 * Engine.MAX_MEMORY).append("MB").toString(), -845757732);
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;

@@ -61,7 +61,7 @@ public class Class42_Sub1 extends Class42 {
 		Class496.aClass510_5816 = null;
 		Class28.aLong351 = 0L;
 		Class316.method5594(-559600711);
-		Class228.method3851(-402153223);
+		HitsplatDefinitions.method3851(-402153223);
 	}
 
 	static void method14563(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2, short i) {

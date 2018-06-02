@@ -64,7 +64,7 @@ public class Class304 implements Interface27 {
 
 	final int method5397(int i, byte i_3_) {
 		if (((Class304) this).aBool3584)
-			return (Class263.anInt3243 * -969250379 - i) / 2;
+			return (Engine.anInt3243 * -969250379 - i) / 2;
 		return 0;
 	}
 
@@ -155,9 +155,9 @@ public class Class304 implements Interface27 {
 				int i = Class328.method5830(strings[11], -2144581898);
 				int i_7_ = Class285.method5026(strings[12].substring(2), 16, (byte) -78);
 				((Class304) this).aFont3573 = new Font(string, 0, i);
-				((Class304) this).aFontMetrics3570 = Class351.LOAD_CANVAS.getFontMetrics(((Class304) this).aFont3573);
+				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
 				((Class304) this).aColor3582 = new Color(i_7_);
-				MediaTracker mediatracker = new MediaTracker(Class351.LOAD_CANVAS);
+				MediaTracker mediatracker = new MediaTracker(Class351.gameCanvas);
 				((Class304) this).anImage3575 = method5399(strings[13], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3575, 0);
 				((Class304) this).anImage3574 = method5399(strings[14], (byte) 0);
@@ -185,16 +185,16 @@ public class Class304 implements Interface27 {
 		if (((Class304) this).aBool3572)
 			method5398((byte) 0);
 		else {
-			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
+			Graphics graphics = Class351.gameCanvas.getGraphics();
 			if (graphics != null) {
 				try {
 					int i = Class328.aClass306_3771.method5424((byte) 94);
 					String string = Class328.aClass306_3771.method5425(-620954186);
 					if (OutputStream_Sub1.anImage7953 == null)
-						OutputStream_Sub1.anImage7953 = (Class351.LOAD_CANVAS.createImage(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379));
+						OutputStream_Sub1.anImage7953 = (Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379));
 					Graphics graphics_8_ = OutputStream_Sub1.anImage7953.getGraphics();
 					graphics_8_.setColor(Color.BLACK);
-					graphics_8_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243);
+					graphics_8_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Engine.anInt3243);
 					int i_9_ = ((Class304) this).anImage3579.getWidth(null);
 					int i_10_ = ((Class304) this).anImage3580.getWidth(null);
 					int i_11_ = ((Class304) this).anImage3581.getWidth(null);
@@ -222,7 +222,7 @@ public class Class304 implements Interface27 {
 					graphics_8_.drawImage(((Class304) this).anImage3589, i_28_, ((1149083423 * ((Class304) this).anInt3571) - i_19_) / 2 + i_29_, null);
 					graphics_8_.drawImage(((Class304) this).anImage3576, (i_28_ + (-1500311941 * ((Class304) this).anInt3587) - i_20_), ((1149083423 * ((Class304) this).anInt3571) - i_21_) / 2 + i_29_, null);
 					if (((Class304) this).anImage3588 == null)
-						((Class304) this).anImage3588 = (Class351.LOAD_CANVAS.createImage((((Class304) this).anInt3587 * -1500311941 - i_18_ - i_20_), 1149083423 * ((Class304) this).anInt3571));
+						((Class304) this).anImage3588 = (Class351.gameCanvas.createImage((((Class304) this).anInt3587 * -1500311941 - i_18_ - i_20_), 1149083423 * ((Class304) this).anInt3571));
 					Graphics graphics_30_ = ((Class304) this).anImage3588.getGraphics();
 					for (int i_31_ = 0; i_31_ < (((Class304) this).anInt3587 * -1500311941 - i_18_ - i_20_); i_31_ += i_23_)
 						graphics_30_.drawImage(((Class304) this).anImage3577, i_31_, 0, null);
@@ -230,7 +230,7 @@ public class Class304 implements Interface27 {
 						graphics_30_.drawImage(((Class304) this).anImage3578, i_32_, (((Class304) this).anInt3571 * 1149083423) - i_22_, null);
 					int i_33_ = ((((Class304) this).anInt3587 * -1500311941 - i_18_ - i_20_) * i / 100);
 					if (i_33_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_33_, (1149083423 * ((Class304) this).anInt3571 - i_24_ - i_22_)));
+						Image image = (Class351.gameCanvas.createImage(i_33_, (1149083423 * ((Class304) this).anInt3571 - i_24_ - i_22_)));
 						int i_34_ = image.getWidth(null);
 						Graphics graphics_35_ = image.getGraphics();
 						int i_36_ = (((Class304) this).anInt3593 * -493710649 * Class509.method8740(-1334135782) / 10 % i_26_);
@@ -241,7 +241,7 @@ public class Class304 implements Interface27 {
 					int i_38_ = i_33_;
 					i_33_ = (-1500311941 * ((Class304) this).anInt3587 - i_18_ - i_20_ - i_33_);
 					if (i_33_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_33_, (1149083423 * ((Class304) this).anInt3571 - i_24_ - i_22_)));
+						Image image = (Class351.gameCanvas.createImage(i_33_, (1149083423 * ((Class304) this).anInt3571 - i_24_ - i_22_)));
 						int i_39_ = image.getWidth(null);
 						Graphics graphics_40_ = image.getGraphics();
 						for (int i_41_ = 0; i_41_ < i_39_; i_41_ += i_27_)
@@ -257,7 +257,7 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				}
 			} else
-				Class351.LOAD_CANVAS.repaint();
+				Class351.gameCanvas.repaint();
 		}
 	}
 
@@ -289,9 +289,9 @@ public class Class304 implements Interface27 {
 				int i = Class328.method5830(strings[11], -716552025);
 				int i_42_ = Class285.method5026(strings[12].substring(2), 16, (byte) -48);
 				((Class304) this).aFont3573 = new Font(string, 0, i);
-				((Class304) this).aFontMetrics3570 = Class351.LOAD_CANVAS.getFontMetrics(((Class304) this).aFont3573);
+				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
 				((Class304) this).aColor3582 = new Color(i_42_);
-				MediaTracker mediatracker = new MediaTracker(Class351.LOAD_CANVAS);
+				MediaTracker mediatracker = new MediaTracker(Class351.gameCanvas);
 				((Class304) this).anImage3575 = method5399(strings[13], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3575, 0);
 				((Class304) this).anImage3574 = method5399(strings[14], (byte) 0);
@@ -319,16 +319,16 @@ public class Class304 implements Interface27 {
 		if (((Class304) this).aBool3572)
 			method5398((byte) 0);
 		else {
-			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
+			Graphics graphics = Class351.gameCanvas.getGraphics();
 			if (graphics != null) {
 				try {
 					int i = Class328.aClass306_3771.method5424((byte) 101);
 					String string = Class328.aClass306_3771.method5425(1371688477);
 					if (OutputStream_Sub1.anImage7953 == null)
-						OutputStream_Sub1.anImage7953 = (Class351.LOAD_CANVAS.createImage(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379));
+						OutputStream_Sub1.anImage7953 = (Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379));
 					Graphics graphics_43_ = OutputStream_Sub1.anImage7953.getGraphics();
 					graphics_43_.setColor(Color.BLACK);
-					graphics_43_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243);
+					graphics_43_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Engine.anInt3243);
 					int i_44_ = ((Class304) this).anImage3579.getWidth(null);
 					int i_45_ = ((Class304) this).anImage3580.getWidth(null);
 					int i_46_ = ((Class304) this).anImage3581.getWidth(null);
@@ -356,7 +356,7 @@ public class Class304 implements Interface27 {
 					graphics_43_.drawImage(((Class304) this).anImage3589, i_63_, ((1149083423 * ((Class304) this).anInt3571) - i_54_) / 2 + i_64_, null);
 					graphics_43_.drawImage(((Class304) this).anImage3576, (i_63_ + (-1500311941 * ((Class304) this).anInt3587) - i_55_), ((1149083423 * ((Class304) this).anInt3571) - i_56_) / 2 + i_64_, null);
 					if (((Class304) this).anImage3588 == null)
-						((Class304) this).anImage3588 = (Class351.LOAD_CANVAS.createImage((((Class304) this).anInt3587 * -1500311941 - i_53_ - i_55_), 1149083423 * ((Class304) this).anInt3571));
+						((Class304) this).anImage3588 = (Class351.gameCanvas.createImage((((Class304) this).anInt3587 * -1500311941 - i_53_ - i_55_), 1149083423 * ((Class304) this).anInt3571));
 					Graphics graphics_65_ = ((Class304) this).anImage3588.getGraphics();
 					for (int i_66_ = 0; i_66_ < (((Class304) this).anInt3587 * -1500311941 - i_53_ - i_55_); i_66_ += i_58_)
 						graphics_65_.drawImage(((Class304) this).anImage3577, i_66_, 0, null);
@@ -364,7 +364,7 @@ public class Class304 implements Interface27 {
 						graphics_65_.drawImage(((Class304) this).anImage3578, i_67_, (((Class304) this).anInt3571 * 1149083423) - i_57_, null);
 					int i_68_ = ((((Class304) this).anInt3587 * -1500311941 - i_53_ - i_55_) * i / 100);
 					if (i_68_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_68_, (1149083423 * ((Class304) this).anInt3571 - i_59_ - i_57_)));
+						Image image = (Class351.gameCanvas.createImage(i_68_, (1149083423 * ((Class304) this).anInt3571 - i_59_ - i_57_)));
 						int i_69_ = image.getWidth(null);
 						Graphics graphics_70_ = image.getGraphics();
 						int i_71_ = (((Class304) this).anInt3593 * -493710649 * Class509.method8740(-1290011940) / 10 % i_61_);
@@ -375,7 +375,7 @@ public class Class304 implements Interface27 {
 					int i_73_ = i_68_;
 					i_68_ = (-1500311941 * ((Class304) this).anInt3587 - i_53_ - i_55_ - i_68_);
 					if (i_68_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_68_, (1149083423 * ((Class304) this).anInt3571 - i_59_ - i_57_)));
+						Image image = (Class351.gameCanvas.createImage(i_68_, (1149083423 * ((Class304) this).anInt3571 - i_59_ - i_57_)));
 						int i_74_ = image.getWidth(null);
 						Graphics graphics_75_ = image.getGraphics();
 						for (int i_76_ = 0; i_76_ < i_74_; i_76_ += i_62_)
@@ -391,7 +391,7 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				}
 			} else
-				Class351.LOAD_CANVAS.repaint();
+				Class351.gameCanvas.repaint();
 		}
 	}
 
@@ -432,9 +432,9 @@ public class Class304 implements Interface27 {
 				int i_79_ = Class328.method5830(strings[11], 60349585);
 				int i_80_ = Class285.method5026(strings[12].substring(2), 16, (byte) 113);
 				((Class304) this).aFont3573 = new Font(string, 0, i_79_);
-				((Class304) this).aFontMetrics3570 = Class351.LOAD_CANVAS.getFontMetrics(((Class304) this).aFont3573);
+				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
 				((Class304) this).aColor3582 = new Color(i_80_);
-				MediaTracker mediatracker = new MediaTracker(Class351.LOAD_CANVAS);
+				MediaTracker mediatracker = new MediaTracker(Class351.gameCanvas);
 				((Class304) this).anImage3575 = method5399(strings[13], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3575, 0);
 				((Class304) this).anImage3574 = method5399(strings[14], (byte) 0);
@@ -462,16 +462,16 @@ public class Class304 implements Interface27 {
 		if (((Class304) this).aBool3572)
 			method5398((byte) 0);
 		else {
-			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
+			Graphics graphics = Class351.gameCanvas.getGraphics();
 			if (graphics != null) {
 				try {
 					int i_81_ = Class328.aClass306_3771.method5424((byte) 48);
 					String string = Class328.aClass306_3771.method5425(-2106602009);
 					if (OutputStream_Sub1.anImage7953 == null)
-						OutputStream_Sub1.anImage7953 = (Class351.LOAD_CANVAS.createImage(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379));
+						OutputStream_Sub1.anImage7953 = (Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379));
 					Graphics graphics_82_ = OutputStream_Sub1.anImage7953.getGraphics();
 					graphics_82_.setColor(Color.BLACK);
-					graphics_82_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243);
+					graphics_82_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Engine.anInt3243);
 					int i_83_ = ((Class304) this).anImage3579.getWidth(null);
 					int i_84_ = ((Class304) this).anImage3580.getWidth(null);
 					int i_85_ = ((Class304) this).anImage3581.getWidth(null);
@@ -499,7 +499,7 @@ public class Class304 implements Interface27 {
 					graphics_82_.drawImage(((Class304) this).anImage3589, i_102_, ((1149083423 * ((Class304) this).anInt3571) - i_93_) / 2 + i_103_, null);
 					graphics_82_.drawImage(((Class304) this).anImage3576, (i_102_ + (-1500311941 * ((Class304) this).anInt3587) - i_94_), ((1149083423 * ((Class304) this).anInt3571) - i_95_) / 2 + i_103_, null);
 					if (((Class304) this).anImage3588 == null)
-						((Class304) this).anImage3588 = (Class351.LOAD_CANVAS.createImage((((Class304) this).anInt3587 * -1500311941 - i_92_ - i_94_), 1149083423 * ((Class304) this).anInt3571));
+						((Class304) this).anImage3588 = (Class351.gameCanvas.createImage((((Class304) this).anInt3587 * -1500311941 - i_92_ - i_94_), 1149083423 * ((Class304) this).anInt3571));
 					Graphics graphics_104_ = ((Class304) this).anImage3588.getGraphics();
 					for (int i_105_ = 0; i_105_ < (((Class304) this).anInt3587 * -1500311941 - i_92_ - i_94_); i_105_ += i_97_)
 						graphics_104_.drawImage(((Class304) this).anImage3577, i_105_, 0, null);
@@ -507,7 +507,7 @@ public class Class304 implements Interface27 {
 						graphics_104_.drawImage(((Class304) this).anImage3578, i_106_, (((Class304) this).anInt3571 * 1149083423) - i_96_, null);
 					int i_107_ = ((((Class304) this).anInt3587 * -1500311941 - i_92_ - i_94_) * i_81_ / 100);
 					if (i_107_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_107_, (1149083423 * ((Class304) this).anInt3571 - i_98_ - i_96_)));
+						Image image = (Class351.gameCanvas.createImage(i_107_, (1149083423 * ((Class304) this).anInt3571 - i_98_ - i_96_)));
 						int i_108_ = image.getWidth(null);
 						Graphics graphics_109_ = image.getGraphics();
 						int i_110_ = (((Class304) this).anInt3593 * -493710649 * Class509.method8740(-1387759931) / 10 % i_100_);
@@ -518,7 +518,7 @@ public class Class304 implements Interface27 {
 					int i_112_ = i_107_;
 					i_107_ = (-1500311941 * ((Class304) this).anInt3587 - i_92_ - i_94_ - i_107_);
 					if (i_107_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_107_, (1149083423 * ((Class304) this).anInt3571 - i_98_ - i_96_)));
+						Image image = (Class351.gameCanvas.createImage(i_107_, (1149083423 * ((Class304) this).anInt3571 - i_98_ - i_96_)));
 						int i_113_ = image.getWidth(null);
 						Graphics graphics_114_ = image.getGraphics();
 						for (int i_115_ = 0; i_115_ < i_113_; i_115_ += i_101_)
@@ -534,7 +534,7 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				}
 			} else
-				Class351.LOAD_CANVAS.repaint();
+				Class351.gameCanvas.repaint();
 		}
 	}
 
@@ -562,9 +562,9 @@ public class Class304 implements Interface27 {
 				int i = Class328.method5830(strings[11], 962870203);
 				int i_116_ = Class285.method5026(strings[12].substring(2), 16, (byte) 87);
 				((Class304) this).aFont3573 = new Font(string, 0, i);
-				((Class304) this).aFontMetrics3570 = Class351.LOAD_CANVAS.getFontMetrics(((Class304) this).aFont3573);
+				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
 				((Class304) this).aColor3582 = new Color(i_116_);
-				MediaTracker mediatracker = new MediaTracker(Class351.LOAD_CANVAS);
+				MediaTracker mediatracker = new MediaTracker(Class351.gameCanvas);
 				((Class304) this).anImage3575 = method5399(strings[13], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3575, 0);
 				((Class304) this).anImage3574 = method5399(strings[14], (byte) 0);
@@ -592,16 +592,16 @@ public class Class304 implements Interface27 {
 		if (((Class304) this).aBool3572)
 			method5398((byte) 0);
 		else {
-			Graphics graphics = Class351.LOAD_CANVAS.getGraphics();
+			Graphics graphics = Class351.gameCanvas.getGraphics();
 			if (graphics != null) {
 				try {
 					int i = Class328.aClass306_3771.method5424((byte) 110);
 					String string = Class328.aClass306_3771.method5425(-1434118755);
 					if (OutputStream_Sub1.anImage7953 == null)
-						OutputStream_Sub1.anImage7953 = (Class351.LOAD_CANVAS.createImage(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379));
+						OutputStream_Sub1.anImage7953 = (Class351.gameCanvas.createImage(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379));
 					Graphics graphics_117_ = OutputStream_Sub1.anImage7953.getGraphics();
 					graphics_117_.setColor(Color.BLACK);
-					graphics_117_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Class263.anInt3243);
+					graphics_117_.fillRect(0, 0, -418109423 * Class349.anInt4083, -969250379 * Engine.anInt3243);
 					int i_118_ = ((Class304) this).anImage3579.getWidth(null);
 					int i_119_ = ((Class304) this).anImage3580.getWidth(null);
 					int i_120_ = ((Class304) this).anImage3581.getWidth(null);
@@ -629,7 +629,7 @@ public class Class304 implements Interface27 {
 					graphics_117_.drawImage(((Class304) this).anImage3589, i_137_, ((1149083423 * ((Class304) this).anInt3571) - i_128_) / 2 + i_138_, null);
 					graphics_117_.drawImage(((Class304) this).anImage3576, (i_137_ + (-1500311941 * ((Class304) this).anInt3587) - i_129_), ((1149083423 * ((Class304) this).anInt3571) - i_130_) / 2 + i_138_, null);
 					if (((Class304) this).anImage3588 == null)
-						((Class304) this).anImage3588 = (Class351.LOAD_CANVAS.createImage((((Class304) this).anInt3587 * -1500311941 - i_127_ - i_129_), 1149083423 * ((Class304) this).anInt3571));
+						((Class304) this).anImage3588 = (Class351.gameCanvas.createImage((((Class304) this).anInt3587 * -1500311941 - i_127_ - i_129_), 1149083423 * ((Class304) this).anInt3571));
 					Graphics graphics_139_ = ((Class304) this).anImage3588.getGraphics();
 					for (int i_140_ = 0; i_140_ < (((Class304) this).anInt3587 * -1500311941 - i_127_ - i_129_); i_140_ += i_132_)
 						graphics_139_.drawImage(((Class304) this).anImage3577, i_140_, 0, null);
@@ -637,7 +637,7 @@ public class Class304 implements Interface27 {
 						graphics_139_.drawImage(((Class304) this).anImage3578, i_141_, (((Class304) this).anInt3571 * 1149083423) - i_131_, null);
 					int i_142_ = ((((Class304) this).anInt3587 * -1500311941 - i_127_ - i_129_) * i / 100);
 					if (i_142_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_142_, (1149083423 * ((Class304) this).anInt3571 - i_133_ - i_131_)));
+						Image image = (Class351.gameCanvas.createImage(i_142_, (1149083423 * ((Class304) this).anInt3571 - i_133_ - i_131_)));
 						int i_143_ = image.getWidth(null);
 						Graphics graphics_144_ = image.getGraphics();
 						int i_145_ = (((Class304) this).anInt3593 * -493710649 * Class509.method8740(-1010766912) / 10 % i_135_);
@@ -648,7 +648,7 @@ public class Class304 implements Interface27 {
 					int i_147_ = i_142_;
 					i_142_ = (-1500311941 * ((Class304) this).anInt3587 - i_127_ - i_129_ - i_142_);
 					if (i_142_ > 0) {
-						Image image = (Class351.LOAD_CANVAS.createImage(i_142_, (1149083423 * ((Class304) this).anInt3571 - i_133_ - i_131_)));
+						Image image = (Class351.gameCanvas.createImage(i_142_, (1149083423 * ((Class304) this).anInt3571 - i_133_ - i_131_)));
 						int i_148_ = image.getWidth(null);
 						Graphics graphics_149_ = image.getGraphics();
 						for (int i_150_ = 0; i_150_ < i_148_; i_150_ += i_136_)
@@ -664,7 +664,7 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				}
 			} else
-				Class351.LOAD_CANVAS.repaint();
+				Class351.gameCanvas.repaint();
 		}
 	}
 
@@ -674,7 +674,7 @@ public class Class304 implements Interface27 {
 
 	final int method5405(int i) {
 		if (((Class304) this).aBool3584)
-			return (Class263.anInt3243 * -969250379 - i) / 2;
+			return (Engine.anInt3243 * -969250379 - i) / 2;
 		return 0;
 	}
 
@@ -692,7 +692,7 @@ public class Class304 implements Interface27 {
 
 	final int method5406(int i) {
 		if (((Class304) this).aBool3584)
-			return (Class263.anInt3243 * -969250379 - i) / 2;
+			return (Engine.anInt3243 * -969250379 - i) / 2;
 		return 0;
 	}
 

@@ -686,8 +686,9 @@ public class ObjectDefinitions {
 		boolean bool_172_ = (841092183 * ((ObjectDefinitions) this).anInt5682 != 0 || 0 != 1290338989 * ((ObjectDefinitions) this).anInt5683 || 0 != 1789236723 * ((ObjectDefinitions) this).anInt5710);
 		if (bool_171_ || bool_172_) {
 			raster = raster.method11289((byte) 0, i_169_, true);
-//			if (bool_171_) //crashes in software
-//				raster.pa(((ObjectDefinitions) this).aByte5697, ((ObjectDefinitions) this).anInt5654 * -1064114405, class390, class390_164_, i_165_, i_166_, i_167_);
+			if (bool_171_ && (anInt5654 * -1064114405) < 16384) { //crashes in software
+				raster.pa(((ObjectDefinitions) this).aByte5697, ((ObjectDefinitions) this).anInt5654 * -1064114405, class390, class390_164_, i_165_, i_166_, i_167_);
+			}
 			if (bool_172_)
 				raster.ia(841092183 * ((ObjectDefinitions) this).anInt5682, 1290338989 * ((ObjectDefinitions) this).anInt5683, ((ObjectDefinitions) this).anInt5710 * 1789236723);
 			raster.KA(i);

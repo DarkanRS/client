@@ -117,7 +117,7 @@ public class Class282_Sub54 extends Node {
 
 	public Class282_Sub54(RsByteBuffer class282_sub35, Game class486, int i) {
 		((Class282_Sub54) this).aClass486_8191 = class486;
-		((Class282_Sub54) this).aClass463_8196 = new Class463(-1346844585 * Class263.anInt3273, Class263.anInt3277 * -1290103735, Class402.aString4828.indexOf("arm") != -1);
+		((Class282_Sub54) this).aClass463_8196 = new Class463(-1346844585 * Engine.MAX_MEMORY, Engine.AVAILABLE_PROCESSORS * -1290103735, Class402.aString4828.indexOf("arm") != -1);
 		aClass468_Sub18_8230 = new Class468_Sub18(i, this);
 		method13496(class282_sub35, (short) -14853);
 	}
@@ -528,7 +528,7 @@ public class Class282_Sub54 extends Node {
 
 	public Class282_Sub54(Game class486, int i) {
 		((Class282_Sub54) this).aClass486_8191 = class486;
-		((Class282_Sub54) this).aClass463_8196 = new Class463(Class263.anInt3273 * -1346844585, -1290103735 * Class263.anInt3277, (Class402.aString4828.toLowerCase().indexOf("arm") != -1));
+		((Class282_Sub54) this).aClass463_8196 = new Class463(Engine.MAX_MEMORY * -1346844585, -1290103735 * Engine.AVAILABLE_PROCESSORS, (Class402.aString4828.toLowerCase().indexOf("arm") != -1));
 		aClass468_Sub18_8230 = new Class468_Sub18(i, this);
 		method13497(true, 311350524);
 	}

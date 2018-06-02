@@ -8,11 +8,11 @@ public class Class530 {
 	int anInt7049;
 	public static boolean aBool7050;
 
-	public Interface12 method11342() {
-		Interface12 interface12 = method11348((short) 28673);
+	public SceneObject method11342() {
+		SceneObject interface12 = method11348((short) 28673);
 		if (null == interface12)
 			return null;
-		if (interface12.method84(-549147694) != ((Class530) this).anInt7049 * -1382651561)
+		if (interface12.getId(-549147694) != ((Class530) this).anInt7049 * -1382651561)
 			return null;
 		return interface12;
 	}
@@ -21,11 +21,11 @@ public class Class530 {
 		return client.anIntArray7230[((Class530) this).anInt7047 * 1219960497];
 	}
 
-	public Interface12 method11344(byte i) {
-		Interface12 interface12 = method11348((short) 17190);
+	public SceneObject method11344(byte i) {
+		SceneObject interface12 = method11348((short) 17190);
 		if (null == interface12)
 			return null;
-		if (interface12.method84(416174941) != ((Class530) this).anInt7049 * -1382651561)
+		if (interface12.getId(416174941) != ((Class530) this).anInt7049 * -1382651561)
 			return null;
 		return interface12;
 	}
@@ -48,7 +48,7 @@ public class Class530 {
 		return client.anIntArray7230[((Class530) this).anInt7047 * 1219960497];
 	}
 
-	Interface12 method11348(short i) {
+	SceneObject method11348(short i) {
 		int i_2_ = 298538453 * ((Class530) this).aClass219_7048.anInt2713;
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1217612419);
 		int i_3_ = (((Class530) this).aClass219_7048.anInt2711 * 1948093437 - 1948093437 * class219.anInt2711);
@@ -57,19 +57,19 @@ public class Class530 {
 			return null;
 		switch (method11343(-1790322453)) {
 		case 1:
-			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-2014086808).method3511(i_2_, i_3_, i_4_, (byte) 45);
+			return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2014086808).getWallDecoration(i_2_, i_3_, i_4_, (byte) 45);
 		case 3:
-			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1684834400).method3415(i_2_, i_3_, i_4_, -387297653);
+			return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1684834400).getGroundDecoration(i_2_, i_3_, i_4_, -387297653);
 		case 2:
-			return ((Interface12) (IndexLoaders.MAP_REGION_DECODER.method4430(-1571764476).method3413(i_2_, i_3_, i_4_, client.anInterface25_7446, -233664382)));
+			return ((SceneObject) (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1571764476).getInteractableObject(i_2_, i_3_, i_4_, client.anInterface25_7446, -233664382)));
 		default:
 			return null;
 		case 0:
-			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1288178726).method3381(i_2_, i_3_, i_4_, (byte) -33);
+			return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1288178726).getWall(i_2_, i_3_, i_4_, (byte) -33);
 		}
 	}
 
-	Interface12 method11349() {
+	SceneObject method11349() {
 		int i = 298538453 * ((Class530) this).aClass219_7048.anInt2713;
 		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1833251508);
 		int i_5_ = (((Class530) this).aClass219_7048.anInt2711 * 1948093437 - 1948093437 * class219.anInt2711);
@@ -78,15 +78,15 @@ public class Class530 {
 			return null;
 		switch (method11343(-1790322453)) {
 		case 1:
-			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-817952191).method3511(i, i_5_, i_6_, (byte) -69);
+			return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-817952191).getWallDecoration(i, i_5_, i_6_, (byte) -69);
 		case 3:
-			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1712945263).method3415(i, i_5_, i_6_, -387297653);
+			return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1712945263).getGroundDecoration(i, i_5_, i_6_, -387297653);
 		case 2:
-			return ((Interface12) (IndexLoaders.MAP_REGION_DECODER.method4430(-1727152520).method3413(i, i_5_, i_6_, client.anInterface25_7446, -233664382)));
+			return ((SceneObject) (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1727152520).getInteractableObject(i, i_5_, i_6_, client.anInterface25_7446, -233664382)));
 		default:
 			return null;
 		case 0:
-			return (Interface12) IndexLoaders.MAP_REGION_DECODER.method4430(-1378077948).method3381(i, i_5_, i_6_, (byte) -74);
+			return (SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1378077948).getWall(i, i_5_, i_6_, (byte) -74);
 		}
 	}
 

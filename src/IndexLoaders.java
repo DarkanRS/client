@@ -56,8 +56,8 @@ public class IndexLoaders {
 	public static Class211 aClass211_9383;
 	public static Class438 aClass438_7932;
 	public static Class31 aClass31_204;
-	public static Class290 aClass290_3402;
-	public static Class210 aClass210_3389;
+	public static Class290 HITBAR_INDEX;
+	public static Class210 HITSPLAT_INDEX_LOADER;
 	public static UnderlayIndexLoader UNDERLAY_INDEX_LOADER;
 	public static Class536 aClass536_1535;
 	public static Class444 aClass444_5570;
@@ -250,8 +250,8 @@ public class IndexLoaders {
 			aClass444_5570 = new Class444(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
 			aClass536_1535 = new Class536(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			UNDERLAY_INDEX_LOADER = new UnderlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			aClass210_3389 = new Class210(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-			aClass290_3402 = new Class290(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
+			HITSPLAT_INDEX_LOADER = new Class210(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
+			HITBAR_INDEX = new Class290(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			aClass31_204 = new Class31(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, MESH_INDEX);
 			INVENTORY_INDEX_LOADER = new InventoriesIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass436_7683 = new Class436(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
@@ -287,7 +287,7 @@ public class IndexLoaders {
 			Class173.method2943(MESH_INDEX, IMAGE_LOADER, 16711680);
 			Class117 class117 = new Class117(HUFFMAN_INDEX.method5626("huffman", "", (byte) 1));
 			InventoriesIndexLoader.method6740(class117, -1608458297);
-			Class263.aClass273_3244 = Class84.method1461(192179911);
+			Engine.aClass273_3244 = Class84.method1461(192179911);
 			Class11.aClass282_Sub51_124 = new Class282_Sub51(true);
 		}
 		if (LoadingStage.aClass387_4705 == LOADING_STAGE) {

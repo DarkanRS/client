@@ -91,7 +91,7 @@ public class Class306 implements Runnable {
 							i_3_ = i_3_ << 24 | 0xffffff;
 							Class275.method4891((byte) -26);
 							Renderers.SOFTWARE_RENDERER.ba(1, 0);
-							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -367647925));
+							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379, true, -367647925));
 							Class158_Sub1 class158_sub1 = Renderers.SOFTWARE_RENDERER.method8418();
 							class158_sub1.method13759(0, class160.method2808());
 							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, 2132781090);
@@ -155,7 +155,7 @@ public class Class306 implements Runnable {
 							i_6_ = i_6_ << 24 | 0xffffff;
 							Class275.method4891((byte) -118);
 							Renderers.SOFTWARE_RENDERER.ba(1, 0);
-							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, -166884611));
+							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379, true, -166884611));
 							Class158_Sub1 class158_sub1 = Renderers.SOFTWARE_RENDERER.method8418();
 							class158_sub1.method13759(0, class160.method2808());
 							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, -570536248);
@@ -219,7 +219,7 @@ public class Class306 implements Runnable {
 							i_9_ = i_9_ << 24 | 0xffffff;
 							Class275.method4891((byte) -46);
 							Renderers.SOFTWARE_RENDERER.ba(1, 0);
-							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Class263.anInt3243 * -969250379, true, 662915370));
+							NativeSprite class160 = (Renderers.SOFTWARE_RENDERER.method8440(-418109423 * Class349.anInt4083, Engine.anInt3243 * -969250379, true, 662915370));
 							Class158_Sub1 class158_sub1 = Renderers.SOFTWARE_RENDERER.method8418();
 							class158_sub1.method13759(0, class160.method2808());
 							Renderers.SOFTWARE_RENDERER.method8637(class158_sub1, -802865212);

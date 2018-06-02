@@ -2,12 +2,12 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public interface Interface12 {
+public interface SceneObject {
 	public void method38();
 
 	public void method83(GraphicalRenderer class505);
 
-	public int method84(int i);
+	public int getId(int i);
 
 	public void method85(byte i);
 

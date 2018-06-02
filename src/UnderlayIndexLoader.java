@@ -149,13 +149,13 @@ public class UnderlayIndexLoader {
 				Class419 class419 = IndexLoaders.aClass438_7932.method7325(i, -962986657);
 				Class91 class91 = class419.method7026(-890527904);
 				if (null != class91) {
-					MeshModifier.aClass267_5026.setcustomcursor(Class351.LOAD_CANVAS, class91.method1528(), class91.method1519(), class91.method1520(), new Point(class419.anInt5002 * 1805382875, class419.anInt5000 * -683952919));
+					MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, class91.method1528(), class91.method1519(), class91.method1520(), new Point(class419.anInt5002 * 1805382875, class419.anInt5000 * -683952919));
 					client.anInt7190 = i * -618386713;
 				} else
 					i = -1;
 			}
 			if (-1 == i && -1 != client.anInt7190 * -1474737961) {
-				MeshModifier.aClass267_5026.setcustomcursor(Class351.LOAD_CANVAS, null, -1, -1, new Point());
+				MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, null, -1, -1, new Point());
 				client.anInt7190 = 618386713;
 			}
 		}

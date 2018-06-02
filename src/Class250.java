@@ -183,10 +183,10 @@ public class Class250 {
 		Class96_Sub21.aClass199_9438.method3238(-1428980483);
 		Class163.aClass209_2031.method3584(-2146990157);
 		Class308.aclient3620.method4704(2044329067);
-		Class351.LOAD_CANVAS.setBackground(Color.black);
+		Class351.gameCanvas.setBackground(Color.black);
 		client.anInt7190 = 618386713;
-		Class96_Sub21.aClass199_9438 = Class325.method5787(Class351.LOAD_CANVAS, 539499635);
-		Class163.aClass209_2031 = FontRenderer.method400(Class351.LOAD_CANVAS, true, (byte) -106);
+		Class96_Sub21.aClass199_9438 = Class325.method5787(Class351.gameCanvas, 539499635);
+		Class163.aClass209_2031 = FontRenderer.method400(Class351.gameCanvas, true, (byte) -106);
 	}
 
 	static final void method4298(int i, int i_15_, int i_16_, int i_17_, int i_18_, int i_19_, byte i_20_) {
@@ -250,7 +250,7 @@ public class Class250 {
 					for (Class275_Sub7 class275_sub7 = (Class275_Sub7) class521_sub1_sub1_sub2.aClass457_10333.method7659(301908602); null != class275_sub7; class275_sub7 = (Class275_Sub7) class521_sub1_sub1_sub2.aClass457_10333.method7650((byte) 17)) {
 						Class275_Sub3 class275_sub3 = class275_sub7.method12600((-1809259861 * client.cycles), (short) 12514);
 						if (null != class275_sub3) {
-							Class198 class198 = class275_sub7.aClass198_7863;
+							HitbarDefinitions class198 = class275_sub7.aClass198_7863;
 							Player class521_sub1_sub1_sub2_sub1 = (client.players[is[i_23_]]);
 							NativeSprite class160;
 							NativeSprite class160_25_;
@@ -367,19 +367,19 @@ public class Class250 {
 				for (/**/; i_43_ < -1141871871 * Class58.aClass529_527.anInt7026; i_43_++) {
 					int i_44_ = class521_sub1_sub1_sub2.anIntArray10351[i_43_];
 					int i_45_ = class521_sub1_sub1_sub2.anIntArray10316[i_43_];
-					Class228 class228 = null;
+					HitsplatDefinitions class228 = null;
 					int i_46_ = 0;
 					if (i_45_ >= 0) {
 						if (i_44_ <= -1809259861 * client.cycles)
 							continue;
-						class228 = (IndexLoaders.aClass210_3389.method3603(class521_sub1_sub1_sub2.anIntArray10316[i_43_], 1856651955));
+						class228 = (IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(class521_sub1_sub1_sub2.anIntArray10316[i_43_], 1856651955));
 						i_46_ = class228.anInt2841 * -1006911631;
 					} else if (i_44_ < 0)
 						continue;
 					int i_47_ = class521_sub1_sub1_sub2.anIntArray10331[i_43_];
-					Class228 class228_48_ = null;
+					HitsplatDefinitions class228_48_ = null;
 					if (i_47_ >= 0)
-						class228_48_ = IndexLoaders.aClass210_3389.method3603(i_47_, 1856651955);
+						class228_48_ = IndexLoaders.HITSPLAT_INDEX_LOADER.getDefinitions(i_47_, 1856651955);
 					if (i_44_ - i_46_ <= client.cycles * -1809259861) {
 						if (null == class228)
 							class521_sub1_sub1_sub2.anIntArray10351[i_43_] = -1;

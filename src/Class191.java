@@ -21,8 +21,8 @@ public class Class191 implements Runnable {
 	public void run() {
 		Container container = Class371.method6354((byte) 1);
 		Frame frame = null;
-		if (null != Class263.aFrame3261)
-			frame = Class263.aFrame3261;
+		if (null != Engine.aFrame3261)
+			frame = Engine.aFrame3261;
 		else {
 			for (/**/; container != null; container = container.getParent()) {
 				if (container instanceof Frame) {
@@ -65,8 +65,8 @@ public class Class191 implements Runnable {
 	public void method3157() {
 		Container container = Class371.method6354((byte) 1);
 		Frame frame = null;
-		if (null != Class263.aFrame3261)
-			frame = Class263.aFrame3261;
+		if (null != Engine.aFrame3261)
+			frame = Engine.aFrame3261;
 		else {
 			for (/**/; container != null; container = container.getParent()) {
 				if (container instanceof Frame) {
@@ -99,8 +99,8 @@ public class Class191 implements Runnable {
 	public void method3160() {
 		Container container = Class371.method6354((byte) 1);
 		Frame frame = null;
-		if (null != Class263.aFrame3261)
-			frame = Class263.aFrame3261;
+		if (null != Engine.aFrame3261)
+			frame = Engine.aFrame3261;
 		else {
 			for (/**/; container != null; container = container.getParent()) {
 				if (container instanceof Frame) {

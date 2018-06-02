@@ -3,16 +3,8 @@
  */
 
 public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
-	public static final int anInt9613 = 64;
-	public static final int anInt9614 = 2;
 	public short aShort9615;
-	public static final int anInt9616 = 8;
-	public static final int anInt9617 = 16;
 	static int[] anIntArray9618 = { 19, 55, 38, 155, 255, 110, 137, 205, 76 };
-	public static final int anInt9619 = 1;
-	public static final int anInt9620 = 128;
-	public static final int anInt9621 = 4;
-	public static final int anInt9622 = 32;
 
 	boolean method12988(GraphicalRenderer class505) {
 		Class385 class385 = method11166().aClass385_3595;
@@ -24,13 +16,13 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		int i = ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_0_ = ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_1_ = 0;
-		if (-527863643 * ((Class206) aClass206_7970).anInt2628 == i)
+		if (-527863643 * ((SceneObjectManager) aClass206_7970).anInt2628 == i)
 			i_1_++;
-		else if (((Class206) aClass206_7970).anInt2628 * -527863643 < i)
+		else if (((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 < i)
 			i_1_ += 2;
-		if (i_0_ == 1580412859 * ((Class206) aClass206_7970).anInt2629)
+		if (i_0_ == 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629)
 			i_1_ += 3;
-		else if (1580412859 * ((Class206) aClass206_7970).anInt2629 > i_0_)
+		else if (1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629 > i_0_)
 			i_1_ += 6;
 		int i_2_ = anIntArray9618[i_1_];
 		if ((aShort9615 & i_2_) != 0)
@@ -61,7 +53,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	boolean method13029(byte i) {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((Class206) aClass206_7970).anInt2628))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((Class206) aClass206_7970).anInt2629 * 1580412859))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((SceneObjectManager) aClass206_7970).anInt2628))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((SceneObjectManager) aClass206_7970).anInt2629 * 1580412859))]);
 	}
 
 	int method13036(Class282_Sub24[] class282_sub24s, int i) {
@@ -69,13 +61,13 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		int i_3_ = ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_4_ = ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_5_ = 0;
-		if (-527863643 * ((Class206) aClass206_7970).anInt2628 == i_3_)
+		if (-527863643 * ((SceneObjectManager) aClass206_7970).anInt2628 == i_3_)
 			i_5_++;
-		else if (((Class206) aClass206_7970).anInt2628 * -527863643 < i_3_)
+		else if (((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 < i_3_)
 			i_5_ += 2;
-		if (i_4_ == 1580412859 * ((Class206) aClass206_7970).anInt2629)
+		if (i_4_ == 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629)
 			i_5_ += 3;
-		else if (1580412859 * ((Class206) aClass206_7970).anInt2629 > i_4_)
+		else if (1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629 > i_4_)
 			i_5_ += 6;
 		int i_6_ = anIntArray9618[i_5_];
 		if ((aShort9615 & i_6_) != 0)
@@ -101,10 +93,10 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	boolean method13034() {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((Class206) aClass206_7970).anInt2628))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((Class206) aClass206_7970).anInt2629 * 1580412859))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((SceneObjectManager) aClass206_7970).anInt2628))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((SceneObjectManager) aClass206_7970).anInt2629 * 1580412859))]);
 	}
 
-	Class521_Sub1_Sub5(Class206 class206, int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
+	Class521_Sub1_Sub5(SceneObjectManager class206, int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
 		super(class206);
 		aByte7967 = (byte) i_9_;
 		aByte7968 = (byte) i_10_;
@@ -127,13 +119,13 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		int i = ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_12_ = ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_13_ = 0;
-		if (-527863643 * ((Class206) aClass206_7970).anInt2628 == i)
+		if (-527863643 * ((SceneObjectManager) aClass206_7970).anInt2628 == i)
 			i_13_++;
-		else if (((Class206) aClass206_7970).anInt2628 * -527863643 < i)
+		else if (((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 < i)
 			i_13_ += 2;
-		if (i_12_ == 1580412859 * ((Class206) aClass206_7970).anInt2629)
+		if (i_12_ == 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629)
 			i_13_ += 3;
-		else if (1580412859 * ((Class206) aClass206_7970).anInt2629 > i_12_)
+		else if (1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629 > i_12_)
 			i_13_ += 6;
 		int i_14_ = anIntArray9618[i_13_];
 		if ((aShort9615 & i_14_) != 0)
@@ -167,13 +159,13 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		int i = ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_15_ = ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_16_ = 0;
-		if (-527863643 * ((Class206) aClass206_7970).anInt2628 == i)
+		if (-527863643 * ((SceneObjectManager) aClass206_7970).anInt2628 == i)
 			i_16_++;
-		else if (((Class206) aClass206_7970).anInt2628 * -527863643 < i)
+		else if (((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 < i)
 			i_16_ += 2;
-		if (i_15_ == 1580412859 * ((Class206) aClass206_7970).anInt2629)
+		if (i_15_ == 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629)
 			i_16_ += 3;
-		else if (1580412859 * ((Class206) aClass206_7970).anInt2629 > i_15_)
+		else if (1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629 > i_15_)
 			i_16_ += 6;
 		int i_17_ = anIntArray9618[i_16_];
 		if ((aShort9615 & i_17_) != 0)
@@ -199,12 +191,12 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	boolean method13032() {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((Class206) aClass206_7970).anInt2628))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((Class206) aClass206_7970).anInt2629 * 1580412859))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((SceneObjectManager) aClass206_7970).anInt2628))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((SceneObjectManager) aClass206_7970).anInt2629 * 1580412859))]);
 	}
 
 	boolean method13033() {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((Class206) aClass206_7970).anInt2628))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((Class206) aClass206_7970).anInt2629 * 1580412859))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293) - -527863643 * ((SceneObjectManager) aClass206_7970).anInt2628))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293) - ((SceneObjectManager) aClass206_7970).anInt2629 * 1580412859))]);
 	}
 
 	int method12982(Class282_Sub24[] class282_sub24s) {
@@ -212,13 +204,13 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 		int i = ((int) class385.aFloat4671 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_18_ = ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293);
 		int i_19_ = 0;
-		if (-527863643 * ((Class206) aClass206_7970).anInt2628 == i)
+		if (-527863643 * ((SceneObjectManager) aClass206_7970).anInt2628 == i)
 			i_19_++;
-		else if (((Class206) aClass206_7970).anInt2628 * -527863643 < i)
+		else if (((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 < i)
 			i_19_ += 2;
-		if (i_18_ == 1580412859 * ((Class206) aClass206_7970).anInt2629)
+		if (i_18_ == 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629)
 			i_19_ += 3;
-		else if (1580412859 * ((Class206) aClass206_7970).anInt2629 > i_18_)
+		else if (1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629 > i_18_)
 			i_19_ += 6;
 		int i_20_ = anIntArray9618[i_19_];
 		if ((aShort9615 & i_20_) != 0)

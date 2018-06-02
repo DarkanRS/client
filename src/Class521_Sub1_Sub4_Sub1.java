@@ -5,7 +5,7 @@
 import java.util.Iterator;
 import java.util.List;
 
-public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Interface12 {
+public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements SceneObject {
 	boolean aBool10481;
 	int anInt10482;
 	MeshRasterizer aClass528_10483;
@@ -93,7 +93,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 		return false;
 	}
 
-	public Class521_Sub1_Sub4_Sub1(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_, int i_12_) {
+	public Class521_Sub1_Sub4_Sub1(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_5_, int i_6_, int i_7_, int i_8_, boolean bool, int i_9_, int i_10_, int i_11_, int i_12_) {
 		super(class206, i_6_, i_7_, i_8_, i, i_5_, i_9_, i_10_);
 		((Class521_Sub1_Sub4_Sub1) this).aClass474_10489 = class474;
 		((Class521_Sub1_Sub4_Sub1) this).anInt10482 = class478.id * -1301990679;
@@ -270,7 +270,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) 44);
 	}
 
-	public int method84(int i) {
+	public int getId(int i) {
 		return ((Class521_Sub1_Sub4_Sub1) this).anInt10482 * 462020215;
 	}
 
@@ -432,7 +432,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 			class384.method6524();
 			int i_18_ = i - -1747787169 * Class20.anInt180;
 			int i_19_ = i_16_ - Class20.anInt181 * 1607392711;
-			if (IndexLoaders.MAP_REGION_DECODER.method4430(-955165498) != null && (!client.aBool7344 || (1310510077 * Class506.anInt5858 & 0x40) != 0)) {
+			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-955165498) != null && (!client.aBool7344 || (1310510077 * Class506.anInt5858 & 0x40) != 0)) {
 				int i_20_ = -1;
 				int i_21_ = -1;
 				float f = (2.0F * (float) i_18_ / (float) (Class20.anInt176 * -2026336709) - 1.0F);
@@ -471,7 +471,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 					}
 				}
 			}
-			Login class284 = IndexLoaders.MAP_REGION_DECODER.method4430(-1644964406).aClass284_2648;
+			Login class284 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1644964406).aClass284_2648;
 			int i_35_ = i;
 			int i_36_ = i_16_;
 			List list = class284.aList3388;
@@ -628,9 +628,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Inter
 							}
 						}
 					}
-					if (class285.aClass521_Sub1_3391 instanceof Interface12) {
-						Interface12 interface12 = (Interface12) class285.aClass521_Sub1_3391;
-						ObjectDefinitions class478 = (IndexLoaders.MAP_REGION_DECODER.method4436(-1539469212).getObjectDefinitions(interface12.method84(2000772127), 65280));
+					if (class285.aClass521_Sub1_3391 instanceof SceneObject) {
+						SceneObject interface12 = (SceneObject) class285.aClass521_Sub1_3391;
+						ObjectDefinitions class478 = (IndexLoaders.MAP_REGION_DECODER.method4436(-1539469212).getObjectDefinitions(interface12.getId(2000772127), 65280));
 						if (null != class478.anIntArray5650)
 							class478 = class478.method8013((Class158_Sub1.aClass3_8507), (byte) 107);
 						if (null != class478) {

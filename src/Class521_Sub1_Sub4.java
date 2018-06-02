@@ -22,7 +22,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method13029(byte i) {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((Class206) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((Class206) aClass206_7970).anInt2629))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629))]);
 	}
 
 	int method13024(Class282_Sub24[] class282_sub24s) {
@@ -62,7 +62,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method13034() {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((Class206) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((Class206) aClass206_7970).anInt2629))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629))]);
 	}
 
 	final boolean method12985(int i) {
@@ -84,7 +84,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 		return (aClass206_7970.aClass201_2600.method3273(aByte7968, ((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.aFloat4673 >> aClass206_7970.anInt2592 * -1928575293), method12995(-1441304110)));
 	}
 
-	Class521_Sub1_Sub4(Class206 class206, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
+	Class521_Sub1_Sub4(SceneObjectManager class206, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
 		super(class206);
 		aByte7967 = (byte) i_7_;
 		aByte7968 = (byte) i_8_;
@@ -104,12 +104,12 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	boolean method13032() {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((Class206) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((Class206) aClass206_7970).anInt2629))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629))]);
 	}
 
 	boolean method13033() {
 		Class385 class385 = method11166().aClass385_3595;
-		return (((Class206) aClass206_7970).aBoolArrayArray2651[(((Class206) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((Class206) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((Class206) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((Class206) aClass206_7970).anInt2629))]);
+		return (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651[(((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (((int) class385.aFloat4671 >> -1928575293 * aClass206_7970.anInt2592) - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643))][(1459994833 * ((SceneObjectManager) aClass206_7970).anInt2652 + (((int) class385.aFloat4673 >> -1928575293 * aClass206_7970.anInt2592) - 1580412859 * ((SceneObjectManager) aClass206_7970).anInt2629))]);
 	}
 
 	boolean method13030(GraphicalRenderer class505) {

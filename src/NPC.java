@@ -26,7 +26,7 @@ public class NPC extends Animable {
 		return aClass409_10580.anInt4913 * -1894935519;
 	}
 
-	public NPC(Class206 class206, int i) {
+	public NPC(SceneObjectManager class206, int i) {
 		super(class206, i);
 		anInt10577 = 1084745433;
 		anInt10583 = -371839573;
@@ -1038,7 +1038,7 @@ public class NPC extends Animable {
 		return 1 + anInt10314 * -1691508299;
 	}
 
-	public NPC(Class206 class206) {
+	public NPC(SceneObjectManager class206) {
 		super(class206);
 		anInt10577 = 1084745433;
 		anInt10583 = -371839573;

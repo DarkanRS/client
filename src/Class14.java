@@ -595,18 +595,18 @@ public class Class14 {
 						npc.applyHit(i_49_, i_47_, i_46_, i_48_, client.cycles * -1809259861, i_50_, 1810678734);
 					}
 				}
-				int i_51_ = buffer.readUnsignedByte128(-625812613);
-				if (i_51_ > 0) {
-					for (int i_52_ = 0; i_52_ < i_51_; i_52_++) {
-						int i_53_ = buffer.readUnsignedSmart(2098648600);
-						int i_54_ = buffer.readUnsignedSmart(2076092492);
-						if (i_54_ != 32767) {
-							int i_55_ = buffer.readUnsignedSmart(1675414519);
-							int i_56_ = buffer.readUnsigned128Byte();
-							int i_57_ = (i_54_ > 0 ? buffer.readUnsignedByte128(-1240191837) : i_56_);
-							npc.method15803(i_53_, client.cycles * -1809259861, i_54_, i_55_, i_56_, i_57_, (byte) 0);
+				int numHitbars = buffer.readUnsignedByte128(-625812613);
+				if (numHitbars > 0) {
+					for (int i_52_ = 0; i_52_ < numHitbars; i_52_++) {
+						int type = buffer.readUnsignedSmart(2098648600);
+						int timer = buffer.readUnsignedSmart(2076092492);
+						if (timer != 32767) {
+							int delay = buffer.readUnsignedSmart(1675414519);
+							int startPerc = buffer.readUnsigned128Byte();
+							int endPerc = (timer > 0 ? buffer.readUnsignedByte128(-1240191837) : startPerc);
+							npc.displayHitbar(type, client.cycles * -1809259861, timer, delay, startPerc, endPerc, (byte) 0);
 						} else {
-							npc.method15857(i_53_, 1885735347);
+							npc.method15857(type, 1885735347);
 						}
 					}
 				}

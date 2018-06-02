@@ -110,7 +110,7 @@ public abstract class Class152 {
 	}
 
 	static final void method2601(long l) {
-		if (IndexLoaders.MAP_REGION_DECODER.method4430(-1572720493) != null) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1572720493) != null) {
 			if (-672443707 * Class262.anInt3240 == 2 || -672443707 * Class262.anInt3240 == 1)
 				Class363.method6286(l);
 			else if (Class262.anInt3240 * -672443707 == 4)

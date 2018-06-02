@@ -15,7 +15,7 @@ public class Class353 {
 	static Class353 aClass353_4107 = new Class353();
 
 	public int method6198(int i, int i_0_, int i_1_) {
-		int i_2_ = (-969250379 * Class263.anInt3243 > i_0_ ? Class263.anInt3243 * -969250379 : i_0_);
+		int i_2_ = (-969250379 * Engine.anInt3243 > i_0_ ? Engine.anInt3243 * -969250379 : i_0_);
 		if (aClass353_4107 == this)
 			return 0;
 		if (aClass353_4106 == this)
@@ -26,7 +26,7 @@ public class Class353 {
 	}
 
 	public int method6199(int i, int i_3_) {
-		int i_4_ = (-969250379 * Class263.anInt3243 > i_3_ ? Class263.anInt3243 * -969250379 : i_3_);
+		int i_4_ = (-969250379 * Engine.anInt3243 > i_3_ ? Engine.anInt3243 * -969250379 : i_3_);
 		if (aClass353_4107 == this)
 			return 0;
 		if (aClass353_4106 == this)
@@ -58,7 +58,7 @@ public class Class353 {
 	}
 
 	public int method6203(int i, int i_5_) {
-		int i_6_ = (-969250379 * Class263.anInt3243 > i_5_ ? Class263.anInt3243 * -969250379 : i_5_);
+		int i_6_ = (-969250379 * Engine.anInt3243 > i_5_ ? Engine.anInt3243 * -969250379 : i_5_);
 		if (aClass353_4107 == this)
 			return 0;
 		if (aClass353_4106 == this)
@@ -69,7 +69,7 @@ public class Class353 {
 	}
 
 	public int method6204(int i, int i_7_) {
-		int i_8_ = (-969250379 * Class263.anInt3243 > i_7_ ? Class263.anInt3243 * -969250379 : i_7_);
+		int i_8_ = (-969250379 * Engine.anInt3243 > i_7_ ? Engine.anInt3243 * -969250379 : i_7_);
 		if (aClass353_4107 == this)
 			return 0;
 		if (aClass353_4106 == this)

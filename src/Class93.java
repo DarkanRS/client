@@ -143,8 +143,8 @@ public class Class93 {
 		return true;
 	}
 
-	static boolean method1577(Interface12 interface12, int i) {
-		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(interface12.method84(-1594739949), 65280);
+	static boolean method1577(SceneObject interface12, int i) {
+		ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1771032162).getObjectDefinitions(interface12.getId(-1594739949), 65280);
 		if (-272332433 * class478.anInt5689 == -1)
 			return true;
 		Class418 class418 = IndexLoaders.aClass427_995.method7172(-272332433 * class478.anInt5689, -1014703371);

@@ -15,7 +15,7 @@ public class Class275_Sub1_Sub1_Sub1 extends Class275_Sub1_Sub1 {
 	short aShort10431;
 	short aShort10432;
 
-	void method15952(Class206 class206, GraphicalRenderer class505, long l) {
+	void method15952(SceneObjectManager class206, GraphicalRenderer class505, long l) {
 		int i = anInt10205 >> 12 + class206.anInt2592 * -1928575293;
 		int i_0_ = anInt10202 >> 12 + class206.anInt2592 * -1928575293;
 		int i_1_ = anInt10208 >> 12;
@@ -662,7 +662,7 @@ public class Class275_Sub1_Sub1_Sub1 extends Class275_Sub1_Sub1 {
 		}
 	}
 
-	void method15964(Class206 class206, GraphicalRenderer class505, long l) {
+	void method15964(SceneObjectManager class206, GraphicalRenderer class505, long l) {
 		int i = anInt10205 >> 12 + class206.anInt2592 * -1928575293;
 		int i_119_ = anInt10202 >> 12 + class206.anInt2592 * -1928575293;
 		int i_120_ = anInt10208 >> 12;
@@ -763,7 +763,7 @@ public class Class275_Sub1_Sub1_Sub1 extends Class275_Sub1_Sub1 {
 		}
 	}
 
-	void method15965(Class206 class206, GraphicalRenderer class505, long l) {
+	void method15965(SceneObjectManager class206, GraphicalRenderer class505, long l) {
 		int i = anInt10205 >> 12 + class206.anInt2592 * -1928575293;
 		int i_128_ = anInt10202 >> 12 + class206.anInt2592 * -1928575293;
 		int i_129_ = anInt10208 >> 12;

@@ -110,7 +110,7 @@ public class Class329_Sub1 extends Class329 {
 								class521_sub1_sub3_sub1.method87(class505, -101230669);
 							class521_sub1_sub3 = class521_sub1_sub3_sub1;
 						} else
-							class521_sub1_sub3 = (new Class521_Sub1_Sub3_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_23_, i_25_));
+							class521_sub1_sub3 = (new GroundDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_23_, i_25_));
 						aClass206_3776.method3393(i_19_, i_20_, i_21_, class521_sub1_sub3, -1479943692);
 						if (647396503 * class478.anInt5677 == 1 && null != class336)
 							class336.method5968(i_20_, i_21_, 952601873);
@@ -125,7 +125,7 @@ public class Class329_Sub1 extends Class329 {
 						class521_sub1_sub1 = class521_sub1_sub1_sub6_38_;
 						class521_sub1_sub1_sub6 = class521_sub1_sub1_sub6_38_;
 					} else {
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_20_, i_27_ + i_20_ - 1, i_21_, i_21_ + i_28_ - 1, i_24_, i_23_, i_25_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_20_, i_27_ + i_20_ - 1, i_21_, i_21_ + i_28_ - 1, i_24_, i_23_, i_25_));
 						i_37_ = 15;
 					}
 					if (aClass206_3776.method3397(class521_sub1_sub1, false, 1685535245)) {
@@ -142,7 +142,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 					if (0 != 647396503 * class478.anInt5677 && class336 != null)
 						class336.method5967(i_20_, i_21_, i_27_, i_28_, class478.aBool5664, !class478.aBool5686, (byte) -99);
-				} else if (Class240.method4138(i_24_, -2013524019) || Class228.method3849(i_24_, 1006843265)) {
+				} else if (Class240.method4138(i_24_, -2013524019) || HitsplatDefinitions.method3849(i_24_, 1006843265)) {
 					Class521_Sub1_Sub1 class521_sub1_sub1;
 					if (bool_36_) {
 						Class521_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6 = (new Class521_Sub1_Sub1_Sub6(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_20_, i_27_ + i_20_ - 1, i_21_, i_28_ + i_21_ - 1, i_24_, i_23_, bool));
@@ -150,7 +150,7 @@ public class Class329_Sub1 extends Class329 {
 							class521_sub1_sub1_sub6.method87(class505, -101230669);
 						class521_sub1_sub1 = class521_sub1_sub1_sub6;
 					} else
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_20_, i_20_ + i_27_ - 1, i_21_, i_28_ + i_21_ - 1, i_24_, i_23_, i_25_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_19_, i, i_34_, i_33_, i_35_, aBool3786, i_20_, i_20_ + i_27_ - 1, i_21_, i_28_ + i_21_ - 1, i_24_, i_23_, i_25_));
 					aClass206_3776.method3397(class521_sub1_sub1, false, -83080800);
 					if (aBool3773 && !aBool3786 && Class240.method4138(i_24_, -1226229167) && (1109376893 * Class458.aClass458_5491.anInt5481 != i_24_) && i_19_ > 0 && 0 != class478.anInt5656 * -1316444551)
 						aByteArrayArrayArray3794[i_19_][i_20_][i_21_] |= 0x4;
@@ -426,7 +426,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_123_, i_124_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_123_, i_124_);
 			aClass206_3776.method3395(i_125_, i_130_, i_131_, class521_sub1_sub5, null, -759421433);
 			if (i_123_ == 0) {
 				if (aBool3773 && class478.aBool5657) {
@@ -471,7 +471,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_123_, i_124_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_123_, i_124_);
 			aClass206_3776.method3395(i_125_, i_130_, i_131_, class521_sub1_sub5, null, -68723515);
 			if (class478.aBool5657 && aBool3773) {
 				if (0 == i_123_)
@@ -501,8 +501,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 				class521_sub1_sub5_138_ = class521_sub1_sub5_sub1_139_;
 			} else {
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, 4 + i_123_, i_124_);
-				class521_sub1_sub5_138_ = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_137_, i_124_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, 4 + i_123_, i_124_);
+				class521_sub1_sub5_138_ = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_137_, i_124_);
 			}
 			aClass206_3776.method3395(i_125_, i_130_, i_131_, class521_sub1_sub5, class521_sub1_sub5_138_, -1866295330);
 			if ((1 == -1316444551 * class478.anInt5656 || aBool7714 && -1316444551 * class478.anInt5656 == -1) && !aBool3786) {
@@ -534,7 +534,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_123_, i_124_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i, i_123_, i_124_);
 			aClass206_3776.method3395(i_125_, i_130_, i_131_, class521_sub1_sub5, null, -340500627);
 			if (class478.aBool5657 && aBool3773) {
 				if (i_123_ == 0)
@@ -558,7 +558,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub1_sub6.method87(class505, -101230669);
 				class521_sub1_sub1 = class521_sub1_sub1_sub6;
 			} else
-				class521_sub1_sub1 = new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i_130_, i_130_ + i_133_ - 1, i_131_, i_131_ + i_134_ - 1, i, i_123_, i_124_);
+				class521_sub1_sub1 = new InteractableObject(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_125_, i_126_, i_127_, i_128_, i_129_, aBool3786, i_130_, i_130_ + i_133_ - 1, i_131_, i_131_ + i_134_ - 1, i, i_123_, i_124_);
 			aClass206_3776.method3397(class521_sub1_sub1, false, 1635515614);
 			if (1 == -1316444551 * class478.anInt5656 && !aBool3786) {
 				int i_140_;
@@ -586,15 +586,15 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, 0, 0, i, i_141_, i_142_);
+				class521_sub1_sub4 = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, 0, 0, i, i_141_, i_142_);
 			aClass206_3776.method3396(i_143_, i_148_, i_149_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (Class458.aClass458_5476.anInt5481 * 1109376893 == i) {
 			int i_151_ = 65;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_143_, i_148_, i_149_, (byte) -117);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_143_, i_148_, i_149_, (byte) -117);
 			if (null != interface12)
-				i_151_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(897339826), 65280).anInt5661) * -1085975425) + 1;
+				i_151_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(897339826), 65280).anInt5661) * -1085975425) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, anIntArray7724[i_141_] * i_151_, anIntArray7720[i_141_] * i_151_, i, i_141_));
@@ -602,15 +602,15 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, i_151_ * anIntArray7724[i_141_], i_151_ * anIntArray7720[i_141_], i, i_141_, i_142_));
+				class521_sub1_sub4 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, i_151_ * anIntArray7724[i_141_], i_151_ * anIntArray7720[i_141_], i, i_141_, i_142_));
 			aClass206_3776.method3396(i_143_, i_148_, i_149_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (1109376893 * Class458.aClass458_5477.anInt5481 == i) {
 			int i_152_ = 33;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_143_, i_148_, i_149_, (byte) -91);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_143_, i_148_, i_149_, (byte) -91);
 			if (null != interface12)
-				i_152_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-33334546), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_152_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-33334546), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, i_152_ * anIntArray7724[i_141_], anIntArray7720[i_141_] * i_152_, i, 4 + i_141_));
@@ -618,7 +618,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, anIntArray7721[i_141_] * i_152_, anIntArray7713[i_141_] * i_152_, i, 4 + i_141_, i_142_));
+				class521_sub1_sub4 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, anIntArray7721[i_141_] * i_152_, anIntArray7713[i_141_] * i_152_, i, 4 + i_141_, i_142_));
 			aClass206_3776.method3396(i_143_, i_148_, i_149_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
@@ -631,16 +631,16 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, 0, 0, i, 4 + i_153_, i_142_);
+				class521_sub1_sub4 = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, 0, 0, i, 4 + i_153_, i_142_);
 			aClass206_3776.method3396(i_143_, i_148_, i_149_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (Class458.aClass458_5479.anInt5481 * 1109376893 == i) {
 			int i_154_ = i_141_ + 2 & 0x3;
 			int i_155_ = 33;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_143_, i_148_, i_149_, (byte) -3);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_143_, i_148_, i_149_, (byte) -3);
 			if (null != interface12)
-				i_155_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-824380403), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_155_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-824380403), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			Class521_Sub1_Sub4 class521_sub1_sub4_156_;
 			if (bool) {
@@ -653,8 +653,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 				class521_sub1_sub4_156_ = class521_sub1_sub4_sub1_157_;
 			} else {
-				Class521_Sub1_Sub4_Sub2 class521_sub1_sub4_sub2 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, i_155_ * anIntArray7721[i_141_], i_155_ * anIntArray7713[i_141_], i, i_141_ + 4, i_142_));
-				Class521_Sub1_Sub4_Sub2 class521_sub1_sub4_sub2_158_ = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, 0, 0, i, 4 + i_154_, i_142_);
+				WallDecoration class521_sub1_sub4_sub2 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, i_155_ * anIntArray7721[i_141_], i_155_ * anIntArray7713[i_141_], i, i_141_ + 4, i_142_));
+				WallDecoration class521_sub1_sub4_sub2_158_ = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_143_, i_144_, i_145_, i_146_, i_147_, aBool3786, 0, 0, i, 4 + i_154_, i_142_);
 				class521_sub1_sub4 = class521_sub1_sub4_sub2;
 				class521_sub1_sub4_156_ = class521_sub1_sub4_sub2_158_;
 			}
@@ -676,7 +676,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_159_, i_160_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_159_, i_160_);
 			aClass206_3776.method3395(i_161_, i_166_, i_167_, class521_sub1_sub5, null, -1301918272);
 			if (i_159_ == 0) {
 				if (aBool3773 && class478.aBool5657) {
@@ -721,7 +721,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_159_, i_160_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_159_, i_160_);
 			aClass206_3776.method3395(i_161_, i_166_, i_167_, class521_sub1_sub5, null, -471027517);
 			if (class478.aBool5657 && aBool3773) {
 				if (0 == i_159_)
@@ -751,8 +751,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 				class521_sub1_sub5_173_ = class521_sub1_sub5_sub1_174_;
 			} else {
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, 4 + i_159_, i_160_);
-				class521_sub1_sub5_173_ = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_172_, i_160_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, 4 + i_159_, i_160_);
+				class521_sub1_sub5_173_ = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_172_, i_160_);
 			}
 			aClass206_3776.method3395(i_161_, i_166_, i_167_, class521_sub1_sub5, class521_sub1_sub5_173_, -1845541665);
 			if ((1 == -1316444551 * class478.anInt5656 || aBool7714 && -1316444551 * class478.anInt5656 == -1) && !aBool3786) {
@@ -784,7 +784,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_159_, i_160_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i, i_159_, i_160_);
 			aClass206_3776.method3395(i_161_, i_166_, i_167_, class521_sub1_sub5, null, -27200040);
 			if (class478.aBool5657 && aBool3773) {
 				if (i_159_ == 0)
@@ -808,7 +808,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub1_sub6.method87(class505, -101230669);
 				class521_sub1_sub1 = class521_sub1_sub1_sub6;
 			} else
-				class521_sub1_sub1 = new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i_166_, i_166_ + i_169_ - 1, i_167_, i_167_ + i_170_ - 1, i, i_159_, i_160_);
+				class521_sub1_sub1 = new InteractableObject(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_161_, i_162_, i_163_, i_164_, i_165_, aBool3786, i_166_, i_166_ + i_169_ - 1, i_167_, i_167_ + i_170_ - 1, i, i_159_, i_160_);
 			aClass206_3776.method3397(class521_sub1_sub1, false, 361119186);
 			if (1 == -1316444551 * class478.anInt5656 && !aBool3786) {
 				int i_175_;
@@ -827,16 +827,16 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	Interface12 method12467(int i, int i_176_, int i_177_, int i_178_, int i_179_) {
-		Interface12 interface12 = null;
+	SceneObject method12467(int i, int i_176_, int i_177_, int i_178_, int i_179_) {
+		SceneObject interface12 = null;
 		if (i_176_ == 0)
-			interface12 = (Interface12) aClass206_3776.method3381(i, i_177_, i_178_, (byte) -111);
+			interface12 = (SceneObject) aClass206_3776.getWall(i, i_177_, i_178_, (byte) -111);
 		if (1 == i_176_)
-			interface12 = (Interface12) aClass206_3776.method3511(i, i_177_, i_178_, (byte) -56);
+			interface12 = (SceneObject) aClass206_3776.getWallDecoration(i, i_177_, i_178_, (byte) -56);
 		if (2 == i_176_)
-			interface12 = ((Interface12) aClass206_3776.method3413(i, i_177_, i_178_, client.anInterface25_7446, -233664382));
+			interface12 = ((SceneObject) aClass206_3776.getInteractableObject(i, i_177_, i_178_, client.anInterface25_7446, -233664382));
 		if (3 == i_176_)
-			interface12 = (Interface12) aClass206_3776.method3415(i, i_177_, i_178_, -387297653);
+			interface12 = (SceneObject) aClass206_3776.getGroundDecoration(i, i_177_, i_178_, -387297653);
 		return interface12;
 	}
 
@@ -996,9 +996,9 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	void method12469(GraphicalRenderer class505, int i, int i_212_, int i_213_, int i_214_, Class336 class336) {
-		Interface12 interface12 = method12467(i, i_212_, i_213_, i_214_, 1070777471);
+		SceneObject interface12 = method12467(i, i_212_, i_213_, i_214_, 1070777471);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-1456391368), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-1456391368), 65280);
 			int i_215_ = interface12.method89(1195097723);
 			int i_216_ = interface12.method92(-908993374);
 			if (class478.method7974(36059504))
@@ -1091,7 +1091,7 @@ public class Class329_Sub1 extends Class329 {
 								class521_sub1_sub3_sub1.method87(class505, -101230669);
 							class521_sub1_sub3 = class521_sub1_sub3_sub1;
 						} else
-							class521_sub1_sub3 = (new Class521_Sub1_Sub3_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_221_, i_223_));
+							class521_sub1_sub3 = (new GroundDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_221_, i_223_));
 						aClass206_3776.method3393(i_217_, i_218_, i_219_, class521_sub1_sub3, -1190124781);
 						if (647396503 * class478.anInt5677 == 1 && null != class336)
 							class336.method5968(i_218_, i_219_, -1263652605);
@@ -1106,7 +1106,7 @@ public class Class329_Sub1 extends Class329 {
 						class521_sub1_sub1 = class521_sub1_sub1_sub6_235_;
 						class521_sub1_sub1_sub6 = class521_sub1_sub1_sub6_235_;
 					} else {
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_218_, i_224_ + i_218_ - 1, i_219_, i_219_ + i_225_ - 1, i_222_, i_221_, i_223_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_218_, i_224_ + i_218_ - 1, i_219_, i_219_ + i_225_ - 1, i_222_, i_221_, i_223_));
 						i_234_ = 15;
 					}
 					if (aClass206_3776.method3397(class521_sub1_sub1, false, 2008688782)) {
@@ -1123,7 +1123,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 					if (0 != 647396503 * class478.anInt5677 && class336 != null)
 						class336.method5967(i_218_, i_219_, i_224_, i_225_, class478.aBool5664, !class478.aBool5686, (byte) -30);
-				} else if (Class240.method4138(i_222_, -435117365) || Class228.method3849(i_222_, -161473702)) {
+				} else if (Class240.method4138(i_222_, -435117365) || HitsplatDefinitions.method3849(i_222_, -161473702)) {
 					Class521_Sub1_Sub1 class521_sub1_sub1;
 					if (bool_233_) {
 						Class521_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6 = (new Class521_Sub1_Sub1_Sub6(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_218_, i_224_ + i_218_ - 1, i_219_, i_225_ + i_219_ - 1, i_222_, i_221_, bool));
@@ -1131,7 +1131,7 @@ public class Class329_Sub1 extends Class329 {
 							class521_sub1_sub1_sub6.method87(class505, -101230669);
 						class521_sub1_sub1 = class521_sub1_sub1_sub6;
 					} else
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_218_, i_218_ + i_224_ - 1, i_219_, i_225_ + i_219_ - 1, i_222_, i_221_, i_223_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_217_, i, i_231_, i_230_, i_232_, aBool3786, i_218_, i_218_ + i_224_ - 1, i_219_, i_225_ + i_219_ - 1, i_222_, i_221_, i_223_));
 					aClass206_3776.method3397(class521_sub1_sub1, false, 1948828326);
 					if (aBool3773 && !aBool3786 && Class240.method4138(i_222_, -710046631) && (1109376893 * Class458.aClass458_5491.anInt5481 != i_222_) && i_217_ > 0 && 0 != class478.anInt5656 * -1316444551)
 						aByteArrayArrayArray3794[i_217_][i_218_][i_219_] |= 0x4;
@@ -1347,9 +1347,9 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	void method12475(GraphicalRenderer class505, int i, int i_287_, int i_288_, int i_289_, Class336 class336, int i_290_) {
-		Interface12 interface12 = method12467(i, i_287_, i_288_, i_289_, 1923565825);
+		SceneObject interface12 = method12467(i, i_287_, i_288_, i_289_, 1923565825);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-289246828), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-289246828), 65280);
 			int i_291_ = interface12.method89(1128699312);
 			int i_292_ = interface12.method92(-2000294676);
 			if (class478.method7974(1930590252))
@@ -1482,7 +1482,7 @@ public class Class329_Sub1 extends Class329 {
 								class521_sub1_sub3_sub1.method87(class505, -101230669);
 							class521_sub1_sub3 = class521_sub1_sub3_sub1;
 						} else
-							class521_sub1_sub3 = (new Class521_Sub1_Sub3_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_316_, i_318_));
+							class521_sub1_sub3 = (new GroundDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_316_, i_318_));
 						aClass206_3776.method3393(i_312_, i_313_, i_314_, class521_sub1_sub3, -1665704660);
 						if (647396503 * class478.anInt5677 == 1 && null != class336)
 							class336.method5968(i_313_, i_314_, 1482826222);
@@ -1497,7 +1497,7 @@ public class Class329_Sub1 extends Class329 {
 						class521_sub1_sub1 = class521_sub1_sub1_sub6_330_;
 						class521_sub1_sub1_sub6 = class521_sub1_sub1_sub6_330_;
 					} else {
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_313_, i_319_ + i_313_ - 1, i_314_, i_314_ + i_320_ - 1, i_317_, i_316_, i_318_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_313_, i_319_ + i_313_ - 1, i_314_, i_314_ + i_320_ - 1, i_317_, i_316_, i_318_));
 						i_329_ = 15;
 					}
 					if (aClass206_3776.method3397(class521_sub1_sub1, false, -526325651)) {
@@ -1514,7 +1514,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 					if (0 != 647396503 * class478.anInt5677 && class336 != null)
 						class336.method5967(i_313_, i_314_, i_319_, i_320_, class478.aBool5664, !class478.aBool5686, (byte) -10);
-				} else if (Class240.method4138(i_317_, -454147710) || Class228.method3849(i_317_, -691465723)) {
+				} else if (Class240.method4138(i_317_, -454147710) || HitsplatDefinitions.method3849(i_317_, -691465723)) {
 					Class521_Sub1_Sub1 class521_sub1_sub1;
 					if (bool_328_) {
 						Class521_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6 = (new Class521_Sub1_Sub1_Sub6(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_313_, i_319_ + i_313_ - 1, i_314_, i_320_ + i_314_ - 1, i_317_, i_316_, bool));
@@ -1522,7 +1522,7 @@ public class Class329_Sub1 extends Class329 {
 							class521_sub1_sub1_sub6.method87(class505, -101230669);
 						class521_sub1_sub1 = class521_sub1_sub1_sub6;
 					} else
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_313_, i_313_ + i_319_ - 1, i_314_, i_320_ + i_314_ - 1, i_317_, i_316_, i_318_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_312_, i, i_326_, i_325_, i_327_, aBool3786, i_313_, i_313_ + i_319_ - 1, i_314_, i_320_ + i_314_ - 1, i_317_, i_316_, i_318_));
 					aClass206_3776.method3397(class521_sub1_sub1, false, -809756893);
 					if (aBool3773 && !aBool3786 && Class240.method4138(i_317_, -472488054) && (1109376893 * Class458.aClass458_5491.anInt5481 != i_317_) && i_312_ > 0 && 0 != class478.anInt5656 * -1316444551)
 						aByteArrayArrayArray3794[i_312_][i_313_][i_314_] |= 0x4;
@@ -1585,7 +1585,7 @@ public class Class329_Sub1 extends Class329 {
 								class521_sub1_sub3_sub1.method87(class505, -101230669);
 							class521_sub1_sub3 = class521_sub1_sub3_sub1;
 						} else
-							class521_sub1_sub3 = (new Class521_Sub1_Sub3_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_337_, i_339_));
+							class521_sub1_sub3 = (new GroundDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_337_, i_339_));
 						aClass206_3776.method3393(i_333_, i_334_, i_335_, class521_sub1_sub3, -2044164766);
 						if (647396503 * class478.anInt5677 == 1 && null != class336)
 							class336.method5968(i_334_, i_335_, 961567118);
@@ -1600,7 +1600,7 @@ public class Class329_Sub1 extends Class329 {
 						class521_sub1_sub1 = class521_sub1_sub1_sub6_351_;
 						class521_sub1_sub1_sub6 = class521_sub1_sub1_sub6_351_;
 					} else {
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_334_, i_340_ + i_334_ - 1, i_335_, i_335_ + i_341_ - 1, i_338_, i_337_, i_339_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_334_, i_340_ + i_334_ - 1, i_335_, i_335_ + i_341_ - 1, i_338_, i_337_, i_339_));
 						i_350_ = 15;
 					}
 					if (aClass206_3776.method3397(class521_sub1_sub1, false, 788087164)) {
@@ -1617,7 +1617,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 					if (0 != 647396503 * class478.anInt5677 && class336 != null)
 						class336.method5967(i_334_, i_335_, i_340_, i_341_, class478.aBool5664, !class478.aBool5686, (byte) -61);
-				} else if (Class240.method4138(i_338_, -796531344) || Class228.method3849(i_338_, 1521462424)) {
+				} else if (Class240.method4138(i_338_, -796531344) || HitsplatDefinitions.method3849(i_338_, 1521462424)) {
 					Class521_Sub1_Sub1 class521_sub1_sub1;
 					if (bool_349_) {
 						Class521_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6 = (new Class521_Sub1_Sub1_Sub6(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_334_, i_340_ + i_334_ - 1, i_335_, i_341_ + i_335_ - 1, i_338_, i_337_, bool));
@@ -1625,7 +1625,7 @@ public class Class329_Sub1 extends Class329 {
 							class521_sub1_sub1_sub6.method87(class505, -101230669);
 						class521_sub1_sub1 = class521_sub1_sub1_sub6;
 					} else
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_334_, i_334_ + i_340_ - 1, i_335_, i_341_ + i_335_ - 1, i_338_, i_337_, i_339_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_333_, i, i_347_, i_346_, i_348_, aBool3786, i_334_, i_334_ + i_340_ - 1, i_335_, i_341_ + i_335_ - 1, i_338_, i_337_, i_339_));
 					aClass206_3776.method3397(class521_sub1_sub1, false, 172197782);
 					if (aBool3773 && !aBool3786 && Class240.method4138(i_338_, -1351386806) && (1109376893 * Class458.aClass458_5491.anInt5481 != i_338_) && i_333_ > 0 && 0 != class478.anInt5656 * -1316444551)
 						aByteArrayArrayArray3794[i_333_][i_334_][i_335_] |= 0x4;
@@ -1835,7 +1835,7 @@ public class Class329_Sub1 extends Class329 {
 								class521_sub1_sub3_sub1.method87(class505, -101230669);
 							class521_sub1_sub3 = class521_sub1_sub3_sub1;
 						} else
-							class521_sub1_sub3 = (new Class521_Sub1_Sub3_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_390_, i_392_));
+							class521_sub1_sub3 = (new GroundDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_390_, i_392_));
 						aClass206_3776.method3393(i_386_, i_387_, i_388_, class521_sub1_sub3, -1107670273);
 						if (647396503 * class478.anInt5677 == 1 && null != class336)
 							class336.method5968(i_387_, i_388_, 249367277);
@@ -1850,7 +1850,7 @@ public class Class329_Sub1 extends Class329 {
 						class521_sub1_sub1 = class521_sub1_sub1_sub6_404_;
 						class521_sub1_sub1_sub6 = class521_sub1_sub1_sub6_404_;
 					} else {
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_387_, i_393_ + i_387_ - 1, i_388_, i_388_ + i_394_ - 1, i_391_, i_390_, i_392_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_387_, i_393_ + i_387_ - 1, i_388_, i_388_ + i_394_ - 1, i_391_, i_390_, i_392_));
 						i_403_ = 15;
 					}
 					if (aClass206_3776.method3397(class521_sub1_sub1, false, -1748262655)) {
@@ -1867,7 +1867,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 					if (0 != 647396503 * class478.anInt5677 && class336 != null)
 						class336.method5967(i_387_, i_388_, i_393_, i_394_, class478.aBool5664, !class478.aBool5686, (byte) -3);
-				} else if (Class240.method4138(i_391_, -1735872381) || Class228.method3849(i_391_, 158354869)) {
+				} else if (Class240.method4138(i_391_, -1735872381) || HitsplatDefinitions.method3849(i_391_, 158354869)) {
 					Class521_Sub1_Sub1 class521_sub1_sub1;
 					if (bool_402_) {
 						Class521_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6 = (new Class521_Sub1_Sub1_Sub6(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_387_, i_393_ + i_387_ - 1, i_388_, i_394_ + i_388_ - 1, i_391_, i_390_, bool));
@@ -1875,7 +1875,7 @@ public class Class329_Sub1 extends Class329 {
 							class521_sub1_sub1_sub6.method87(class505, -101230669);
 						class521_sub1_sub1 = class521_sub1_sub1_sub6;
 					} else
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_387_, i_387_ + i_393_ - 1, i_388_, i_394_ + i_388_ - 1, i_391_, i_390_, i_392_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_386_, i, i_400_, i_399_, i_401_, aBool3786, i_387_, i_387_ + i_393_ - 1, i_388_, i_394_ + i_388_ - 1, i_391_, i_390_, i_392_));
 					aClass206_3776.method3397(class521_sub1_sub1, false, 1548532863);
 					if (aBool3773 && !aBool3786 && Class240.method4138(i_391_, -1191903530) && (1109376893 * Class458.aClass458_5491.anInt5481 != i_391_) && i_386_ > 0 && 0 != class478.anInt5656 * -1316444551)
 						aByteArrayArrayArray3794[i_386_][i_387_][i_388_] |= 0x4;
@@ -1938,7 +1938,7 @@ public class Class329_Sub1 extends Class329 {
 								class521_sub1_sub3_sub1.method87(class505, -101230669);
 							class521_sub1_sub3 = class521_sub1_sub3_sub1;
 						} else
-							class521_sub1_sub3 = (new Class521_Sub1_Sub3_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_411_, i_413_));
+							class521_sub1_sub3 = (new GroundDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_411_, i_413_));
 						aClass206_3776.method3393(i_407_, i_408_, i_409_, class521_sub1_sub3, -706684496);
 						if (647396503 * class478.anInt5677 == 1 && null != class336)
 							class336.method5968(i_408_, i_409_, 1756517421);
@@ -1953,7 +1953,7 @@ public class Class329_Sub1 extends Class329 {
 						class521_sub1_sub1 = class521_sub1_sub1_sub6_425_;
 						class521_sub1_sub1_sub6 = class521_sub1_sub1_sub6_425_;
 					} else {
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_408_, i_414_ + i_408_ - 1, i_409_, i_409_ + i_415_ - 1, i_412_, i_411_, i_413_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_408_, i_414_ + i_408_ - 1, i_409_, i_409_ + i_415_ - 1, i_412_, i_411_, i_413_));
 						i_424_ = 15;
 					}
 					if (aClass206_3776.method3397(class521_sub1_sub1, false, -1484677543)) {
@@ -1970,7 +1970,7 @@ public class Class329_Sub1 extends Class329 {
 					}
 					if (0 != 647396503 * class478.anInt5677 && class336 != null)
 						class336.method5967(i_408_, i_409_, i_414_, i_415_, class478.aBool5664, !class478.aBool5686, (byte) -48);
-				} else if (Class240.method4138(i_412_, -1906584221) || Class228.method3849(i_412_, -2028573250)) {
+				} else if (Class240.method4138(i_412_, -1906584221) || HitsplatDefinitions.method3849(i_412_, -2028573250)) {
 					Class521_Sub1_Sub1 class521_sub1_sub1;
 					if (bool_423_) {
 						Class521_Sub1_Sub1_Sub6 class521_sub1_sub1_sub6 = (new Class521_Sub1_Sub1_Sub6(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_408_, i_414_ + i_408_ - 1, i_409_, i_415_ + i_409_ - 1, i_412_, i_411_, bool));
@@ -1978,7 +1978,7 @@ public class Class329_Sub1 extends Class329 {
 							class521_sub1_sub1_sub6.method87(class505, -101230669);
 						class521_sub1_sub1 = class521_sub1_sub1_sub6;
 					} else
-						class521_sub1_sub1 = (new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_408_, i_408_ + i_414_ - 1, i_409_, i_415_ + i_409_ - 1, i_412_, i_411_, i_413_));
+						class521_sub1_sub1 = (new InteractableObject(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_407_, i, i_421_, i_420_, i_422_, aBool3786, i_408_, i_408_ + i_414_ - 1, i_409_, i_415_ + i_409_ - 1, i_412_, i_411_, i_413_));
 					aClass206_3776.method3397(class521_sub1_sub1, false, -1953004510);
 					if (aBool3773 && !aBool3786 && Class240.method4138(i_412_, -1949345534) && (1109376893 * Class458.aClass458_5491.anInt5481 != i_412_) && i_407_ > 0 && 0 != class478.anInt5656 * -1316444551)
 						aByteArrayArrayArray3794[i_407_][i_408_][i_409_] |= 0x4;
@@ -2000,15 +2000,15 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, 0, 0, i, i_428_, i_429_);
+				class521_sub1_sub4 = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, 0, 0, i, i_428_, i_429_);
 			aClass206_3776.method3396(i_430_, i_435_, i_436_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (Class458.aClass458_5476.anInt5481 * 1109376893 == i) {
 			int i_437_ = 65;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_430_, i_435_, i_436_, (byte) -44);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_430_, i_435_, i_436_, (byte) -44);
 			if (null != interface12)
-				i_437_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-226081178), 65280).anInt5661) * -1085975425) + 1;
+				i_437_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-226081178), 65280).anInt5661) * -1085975425) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, anIntArray7724[i_428_] * i_437_, anIntArray7720[i_428_] * i_437_, i, i_428_));
@@ -2016,15 +2016,15 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, i_437_ * anIntArray7724[i_428_], i_437_ * anIntArray7720[i_428_], i, i_428_, i_429_));
+				class521_sub1_sub4 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, i_437_ * anIntArray7724[i_428_], i_437_ * anIntArray7720[i_428_], i, i_428_, i_429_));
 			aClass206_3776.method3396(i_430_, i_435_, i_436_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (1109376893 * Class458.aClass458_5477.anInt5481 == i) {
 			int i_438_ = 33;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_430_, i_435_, i_436_, (byte) -68);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_430_, i_435_, i_436_, (byte) -68);
 			if (null != interface12)
-				i_438_ = (((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-2096581805), 65280).anInt5661) * -1085975425 / 2 + 1;
+				i_438_ = (((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-2096581805), 65280).anInt5661) * -1085975425 / 2 + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, i_438_ * anIntArray7724[i_428_], anIntArray7720[i_428_] * i_438_, i, 4 + i_428_));
@@ -2032,7 +2032,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, anIntArray7721[i_428_] * i_438_, anIntArray7713[i_428_] * i_438_, i, 4 + i_428_, i_429_));
+				class521_sub1_sub4 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, anIntArray7721[i_428_] * i_438_, anIntArray7713[i_428_] * i_438_, i, 4 + i_428_, i_429_));
 			aClass206_3776.method3396(i_430_, i_435_, i_436_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
@@ -2045,16 +2045,16 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, 0, 0, i, 4 + i_439_, i_429_);
+				class521_sub1_sub4 = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, 0, 0, i, 4 + i_439_, i_429_);
 			aClass206_3776.method3396(i_430_, i_435_, i_436_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (Class458.aClass458_5479.anInt5481 * 1109376893 == i) {
 			int i_440_ = i_428_ + 2 & 0x3;
 			int i_441_ = 33;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_430_, i_435_, i_436_, (byte) -87);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_430_, i_435_, i_436_, (byte) -87);
 			if (null != interface12)
-				i_441_ = (((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-1126651026), 65280).anInt5661) * -1085975425 / 2 + 1;
+				i_441_ = (((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-1126651026), 65280).anInt5661) * -1085975425 / 2 + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			Class521_Sub1_Sub4 class521_sub1_sub4_442_;
 			if (bool) {
@@ -2067,8 +2067,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 				class521_sub1_sub4_442_ = class521_sub1_sub4_sub1_443_;
 			} else {
-				Class521_Sub1_Sub4_Sub2 class521_sub1_sub4_sub2 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, i_441_ * anIntArray7721[i_428_], i_441_ * anIntArray7713[i_428_], i, i_428_ + 4, i_429_));
-				Class521_Sub1_Sub4_Sub2 class521_sub1_sub4_sub2_444_ = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, 0, 0, i, 4 + i_440_, i_429_);
+				WallDecoration class521_sub1_sub4_sub2 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, i_441_ * anIntArray7721[i_428_], i_441_ * anIntArray7713[i_428_], i, i_428_ + 4, i_429_));
+				WallDecoration class521_sub1_sub4_sub2_444_ = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_430_, i_431_, i_432_, i_433_, i_434_, aBool3786, 0, 0, i, 4 + i_440_, i_429_);
 				class521_sub1_sub4 = class521_sub1_sub4_sub2;
 				class521_sub1_sub4_442_ = class521_sub1_sub4_sub2_444_;
 			}
@@ -2090,7 +2090,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_445_, i_446_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_445_, i_446_);
 			aClass206_3776.method3395(i_447_, i_452_, i_453_, class521_sub1_sub5, null, -1174865687);
 			if (i_445_ == 0) {
 				if (aBool3773 && class478.aBool5657) {
@@ -2135,7 +2135,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_445_, i_446_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_445_, i_446_);
 			aClass206_3776.method3395(i_447_, i_452_, i_453_, class521_sub1_sub5, null, -1608952643);
 			if (class478.aBool5657 && aBool3773) {
 				if (0 == i_445_)
@@ -2165,8 +2165,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 				class521_sub1_sub5_459_ = class521_sub1_sub5_sub1_460_;
 			} else {
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, 4 + i_445_, i_446_);
-				class521_sub1_sub5_459_ = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_458_, i_446_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, 4 + i_445_, i_446_);
+				class521_sub1_sub5_459_ = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_458_, i_446_);
 			}
 			aClass206_3776.method3395(i_447_, i_452_, i_453_, class521_sub1_sub5, class521_sub1_sub5_459_, -1139878363);
 			if ((1 == -1316444551 * class478.anInt5656 || aBool7714 && -1316444551 * class478.anInt5656 == -1) && !aBool3786) {
@@ -2198,7 +2198,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_445_, i_446_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i, i_445_, i_446_);
 			aClass206_3776.method3395(i_447_, i_452_, i_453_, class521_sub1_sub5, null, -1300951933);
 			if (class478.aBool5657 && aBool3773) {
 				if (i_445_ == 0)
@@ -2222,7 +2222,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub1_sub6.method87(class505, -101230669);
 				class521_sub1_sub1 = class521_sub1_sub1_sub6;
 			} else
-				class521_sub1_sub1 = new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i_452_, i_452_ + i_455_ - 1, i_453_, i_453_ + i_456_ - 1, i, i_445_, i_446_);
+				class521_sub1_sub1 = new InteractableObject(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_447_, i_448_, i_449_, i_450_, i_451_, aBool3786, i_452_, i_452_ + i_455_ - 1, i_453_, i_453_ + i_456_ - 1, i, i_445_, i_446_);
 			aClass206_3776.method3397(class521_sub1_sub1, false, 1263107949);
 			if (1 == -1316444551 * class478.anInt5656 && !aBool3786) {
 				int i_461_;
@@ -2253,7 +2253,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_462_, i_463_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_462_, i_463_);
 			aClass206_3776.method3395(i_464_, i_469_, i_470_, class521_sub1_sub5, null, -499132262);
 			if (i_462_ == 0) {
 				if (aBool3773 && class478.aBool5657) {
@@ -2298,7 +2298,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_462_, i_463_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_462_, i_463_);
 			aClass206_3776.method3395(i_464_, i_469_, i_470_, class521_sub1_sub5, null, -115122776);
 			if (class478.aBool5657 && aBool3773) {
 				if (0 == i_462_)
@@ -2328,8 +2328,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 				class521_sub1_sub5_476_ = class521_sub1_sub5_sub1_477_;
 			} else {
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, 4 + i_462_, i_463_);
-				class521_sub1_sub5_476_ = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_475_, i_463_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, 4 + i_462_, i_463_);
+				class521_sub1_sub5_476_ = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_475_, i_463_);
 			}
 			aClass206_3776.method3395(i_464_, i_469_, i_470_, class521_sub1_sub5, class521_sub1_sub5_476_, -1543690512);
 			if ((1 == -1316444551 * class478.anInt5656 || aBool7714 && -1316444551 * class478.anInt5656 == -1) && !aBool3786) {
@@ -2361,7 +2361,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub5_sub1.method87(class505, -101230669);
 				class521_sub1_sub5 = class521_sub1_sub5_sub1;
 			} else
-				class521_sub1_sub5 = new Class521_Sub1_Sub5_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_462_, i_463_);
+				class521_sub1_sub5 = new Wall(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i, i_462_, i_463_);
 			aClass206_3776.method3395(i_464_, i_469_, i_470_, class521_sub1_sub5, null, -1327528030);
 			if (class478.aBool5657 && aBool3773) {
 				if (i_462_ == 0)
@@ -2385,7 +2385,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub1_sub6.method87(class505, -101230669);
 				class521_sub1_sub1 = class521_sub1_sub1_sub6;
 			} else
-				class521_sub1_sub1 = new Class521_Sub1_Sub1_Sub5(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i_469_, i_469_ + i_472_ - 1, i_470_, i_470_ + i_473_ - 1, i, i_462_, i_463_);
+				class521_sub1_sub1 = new InteractableObject(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_464_, i_465_, i_466_, i_467_, i_468_, aBool3786, i_469_, i_469_ + i_472_ - 1, i_470_, i_470_ + i_473_ - 1, i, i_462_, i_463_);
 			aClass206_3776.method3397(class521_sub1_sub1, false, 813959411);
 			if (1 == -1316444551 * class478.anInt5656 && !aBool3786) {
 				int i_478_;
@@ -2404,7 +2404,7 @@ public class Class329_Sub1 extends Class329 {
 		return false;
 	}
 
-	public Class329_Sub1(Class206 class206, ObjectIndexLoader class474, int i, int i_479_, int i_480_, boolean bool, Class311 class311, Class239 class239) {
+	public Class329_Sub1(SceneObjectManager class206, ObjectIndexLoader class474, int i, int i_479_, int i_480_, boolean bool, Class311 class311, Class239 class239) {
 		super(class206, i, i_479_, i_480_, bool, IndexLoaders.aClass536_1535, IndexLoaders.UNDERLAY_INDEX_LOADER, class311);
 		((Class329_Sub1) this).aClass474_7725 = class474;
 		((Class329_Sub1) this).aClass239_7719 = class239;
@@ -2419,15 +2419,15 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, 0, 0, i, i_481_, i_482_);
+				class521_sub1_sub4 = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, 0, 0, i, i_481_, i_482_);
 			aClass206_3776.method3396(i_483_, i_488_, i_489_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (Class458.aClass458_5476.anInt5481 * 1109376893 == i) {
 			int i_490_ = 65;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_483_, i_488_, i_489_, (byte) -67);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_483_, i_488_, i_489_, (byte) -67);
 			if (null != interface12)
-				i_490_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-281977030), 65280).anInt5661) * -1085975425) + 1;
+				i_490_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-281977030), 65280).anInt5661) * -1085975425) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, anIntArray7724[i_481_] * i_490_, anIntArray7720[i_481_] * i_490_, i, i_481_));
@@ -2435,15 +2435,15 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, i_490_ * anIntArray7724[i_481_], i_490_ * anIntArray7720[i_481_], i, i_481_, i_482_));
+				class521_sub1_sub4 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, i_490_ * anIntArray7724[i_481_], i_490_ * anIntArray7720[i_481_], i, i_481_, i_482_));
 			aClass206_3776.method3396(i_483_, i_488_, i_489_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (1109376893 * Class458.aClass458_5477.anInt5481 == i) {
 			int i_491_ = 33;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_483_, i_488_, i_489_, (byte) -85);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_483_, i_488_, i_489_, (byte) -85);
 			if (null != interface12)
-				i_491_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-671616235), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_491_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-671616235), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			if (bool) {
 				Class521_Sub1_Sub4_Sub1 class521_sub1_sub4_sub1 = (new Class521_Sub1_Sub4_Sub1(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, i_491_ * anIntArray7724[i_481_], anIntArray7720[i_481_] * i_491_, i, 4 + i_481_));
@@ -2451,7 +2451,7 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, anIntArray7721[i_481_] * i_491_, anIntArray7713[i_481_] * i_491_, i, 4 + i_481_, i_482_));
+				class521_sub1_sub4 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, anIntArray7721[i_481_] * i_491_, anIntArray7713[i_481_] * i_491_, i, 4 + i_481_, i_482_));
 			aClass206_3776.method3396(i_483_, i_488_, i_489_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
@@ -2464,16 +2464,16 @@ public class Class329_Sub1 extends Class329 {
 					class521_sub1_sub4_sub1.method87(class505, -101230669);
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 			} else
-				class521_sub1_sub4 = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, 0, 0, i, 4 + i_492_, i_482_);
+				class521_sub1_sub4 = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, 0, 0, i, 4 + i_492_, i_482_);
 			aClass206_3776.method3396(i_483_, i_488_, i_489_, class521_sub1_sub4, null, (byte) 13);
 			return true;
 		}
 		if (Class458.aClass458_5479.anInt5481 * 1109376893 == i) {
 			int i_493_ = i_481_ + 2 & 0x3;
 			int i_494_ = 33;
-			Interface12 interface12 = (Interface12) aClass206_3776.method3381(i_483_, i_488_, i_489_, (byte) -39);
+			SceneObject interface12 = (SceneObject) aClass206_3776.getWall(i_483_, i_488_, i_489_, (byte) -39);
 			if (null != interface12)
-				i_494_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-83884064), 65280).anInt5661) * -1085975425 / 2) + 1;
+				i_494_ = ((((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-83884064), 65280).anInt5661) * -1085975425 / 2) + 1;
 			Class521_Sub1_Sub4 class521_sub1_sub4;
 			Class521_Sub1_Sub4 class521_sub1_sub4_495_;
 			if (bool) {
@@ -2486,8 +2486,8 @@ public class Class329_Sub1 extends Class329 {
 				class521_sub1_sub4 = class521_sub1_sub4_sub1;
 				class521_sub1_sub4_495_ = class521_sub1_sub4_sub1_496_;
 			} else {
-				Class521_Sub1_Sub4_Sub2 class521_sub1_sub4_sub2 = (new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, i_494_ * anIntArray7721[i_481_], i_494_ * anIntArray7713[i_481_], i, i_481_ + 4, i_482_));
-				Class521_Sub1_Sub4_Sub2 class521_sub1_sub4_sub2_497_ = new Class521_Sub1_Sub4_Sub2(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, 0, 0, i, 4 + i_493_, i_482_);
+				WallDecoration class521_sub1_sub4_sub2 = (new WallDecoration(aClass206_3776, class505, ((Class329_Sub1) this).aClass474_7725, class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, i_494_ * anIntArray7721[i_481_], i_494_ * anIntArray7713[i_481_], i, i_481_ + 4, i_482_));
+				WallDecoration class521_sub1_sub4_sub2_497_ = new WallDecoration(aClass206_3776, class505, (((Class329_Sub1) this).aClass474_7725), class478, i_483_, i_484_, i_485_, i_486_, i_487_, aBool3786, 0, 0, i, 4 + i_493_, i_482_);
 				class521_sub1_sub4 = class521_sub1_sub4_sub2;
 				class521_sub1_sub4_495_ = class521_sub1_sub4_sub2_497_;
 			}
@@ -2498,9 +2498,9 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	void method12486(GraphicalRenderer class505, int i, int i_498_, int i_499_, int i_500_, Class336 class336) {
-		Interface12 interface12 = method12467(i, i_498_, i_499_, i_500_, 1742443241);
+		SceneObject interface12 = method12467(i, i_498_, i_499_, i_500_, 1742443241);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(-1786399385), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(-1786399385), 65280);
 			int i_501_ = interface12.method89(711079008);
 			int i_502_ = interface12.method92(1196494531);
 			if (class478.method7974(-380613495))
@@ -2544,9 +2544,9 @@ public class Class329_Sub1 extends Class329 {
 	}
 
 	void method12487(GraphicalRenderer class505, int i, int i_503_, int i_504_, int i_505_, Class336 class336) {
-		Interface12 interface12 = method12467(i, i_503_, i_504_, i_505_, 1980964506);
+		SceneObject interface12 = method12467(i, i_503_, i_504_, i_505_, 1980964506);
 		if (interface12 != null) {
-			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.method84(1225766237), 65280);
+			ObjectDefinitions class478 = ((Class329_Sub1) this).aClass474_7725.getObjectDefinitions(interface12.getId(1225766237), 65280);
 			int i_506_ = interface12.method89(1663361379);
 			int i_507_ = interface12.method92(499153391);
 			if (class478.method7974(1267716582))
@@ -2709,16 +2709,16 @@ public class Class329_Sub1 extends Class329 {
 		}
 	}
 
-	Interface12 method12489(int i, int i_540_, int i_541_, int i_542_) {
-		Interface12 interface12 = null;
+	SceneObject method12489(int i, int i_540_, int i_541_, int i_542_) {
+		SceneObject interface12 = null;
 		if (i_540_ == 0)
-			interface12 = (Interface12) aClass206_3776.method3381(i, i_541_, i_542_, (byte) -124);
+			interface12 = (SceneObject) aClass206_3776.getWall(i, i_541_, i_542_, (byte) -124);
 		if (1 == i_540_)
-			interface12 = (Interface12) aClass206_3776.method3511(i, i_541_, i_542_, (byte) 66);
+			interface12 = (SceneObject) aClass206_3776.getWallDecoration(i, i_541_, i_542_, (byte) 66);
 		if (2 == i_540_)
-			interface12 = ((Interface12) aClass206_3776.method3413(i, i_541_, i_542_, client.anInterface25_7446, -233664382));
+			interface12 = ((SceneObject) aClass206_3776.getInteractableObject(i, i_541_, i_542_, client.anInterface25_7446, -233664382));
 		if (3 == i_540_)
-			interface12 = (Interface12) aClass206_3776.method3415(i, i_541_, i_542_, -387297653);
+			interface12 = (SceneObject) aClass206_3776.getGroundDecoration(i, i_541_, i_542_, -387297653);
 		return interface12;
 	}
 

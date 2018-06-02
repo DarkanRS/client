@@ -350,7 +350,7 @@ public class Class538 {
 		Class235.anInt2900 += ((Class538) this).anInt7104 * 1527961209;
 	}
 
-	void method11496(Class206 class206, GraphicalRenderer class505, long l) {
+	void method11496(SceneObjectManager class206, GraphicalRenderer class505, long l) {
 		for (Class275_Sub1_Sub1_Sub1 class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7659(301908602)); class275_sub1_sub1_sub1 != null; class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7650((byte) 108)))
 			class275_sub1_sub1_sub1.method15965(class206, class505, l);
 	}
@@ -556,7 +556,7 @@ public class Class538 {
 		((Class234) ((Class538) this).aClass234_7109).anInt2884 = 1 * ((Class234) ((Class538) this).aClass234_7115).anInt2884;
 	}
 
-	void method11499(Class206 class206, GraphicalRenderer class505, long l) {
+	void method11499(SceneObjectManager class206, GraphicalRenderer class505, long l) {
 		for (Class275_Sub1_Sub1_Sub1 class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7659(301908602)); class275_sub1_sub1_sub1 != null; class275_sub1_sub1_sub1 = ((Class275_Sub1_Sub1_Sub1) ((Class538) this).aClass457_7100.method7650((byte) 108)))
 			class275_sub1_sub1_sub1.method15965(class206, class505, l);
 	}

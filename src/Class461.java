@@ -115,7 +115,7 @@ public class Class461 {
 		if (client.anInt7231 * -1638311881 < 0) {
 			Class414 class414 = Class114.method1887(-785695641);
 			if (!Class20.aBool161)
-				Class20.aBool162 = ((Class20.anInt198 * 215004571 != -1 && (Class20.anInt169 * 2144330291 >= Class20.anInt198 * 215004571)) || (((Class20.aBool187 ? 26 : 22) + (997766473 * Class20.anInt178 * (2144330291 * Class20.anInt169))) > -969250379 * Class263.anInt3243));
+				Class20.aBool162 = ((Class20.anInt198 * 215004571 != -1 && (Class20.anInt169 * 2144330291 >= Class20.anInt198 * 215004571)) || (((Class20.aBool187 ? 26 : 22) + (997766473 * Class20.anInt178 * (2144330291 * Class20.anInt169))) > -969250379 * Engine.anInt3243));
 			Class20.aClass482_174.method8118(1351673894);
 			Class20.aClass482_175.method8118(-1093691233);
 			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 53)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1807139429))) {
@@ -319,7 +319,7 @@ public class Class461 {
 	}
 
 	static final void method7704(CS2Executor class527, int i) {
-		Class521_Sub1_Sub4_Sub2.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
+		WallDecoration.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
 	}
 
 	static byte method7705(int i, int i_39_, byte i_40_) {

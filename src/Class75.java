@@ -23,7 +23,7 @@ public final class Class75 {
 		if (!aBool742) {
 			aBool742 = true;
 			if (anInt739 * 62352723 >= 0) {
-				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741 = (new NPC(IndexLoaders.MAP_REGION_DECODER.method4430(-1965384058), 25));
+				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741 = (new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1965384058), 25));
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10314 = 892633931 * ((Class75) this).anInt740;
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10353 = -537541873 * client.cycles;
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) 5), 687087501);
@@ -31,7 +31,7 @@ public final class Class75 {
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10340 = -222526911 * ((((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.aClass409_10580.anInt4889) * 1913503455 << 3);
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.anInt10321 = (((Class86.anInt819 += 523556513) * 272928097 - 1) * -2027750001);
 			} else {
-				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744 = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-1995345801), 25));
+				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744 = (new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1995345801), 25));
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.decodeAppearance(Class276.aClass282_Sub35_3346, 1925099603);
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10314 = ((Class75) this).anInt740 * 892633931;
 				((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.anInt10353 = -537541873 * client.cycles;

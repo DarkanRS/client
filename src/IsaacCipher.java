@@ -788,7 +788,7 @@ public final class IsaacCipher {
 			/* empty */
 		}
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1812615457);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1812615457);
 		int i_60_ = 1762352089 * Class11.anInt122 >> 9;
 		int i_61_ = 518160421 * Class266.anInt3289 >> 9;
 		int i_62_ = Class504.method8389(Class11.anInt122 * 1762352089, Class266.anInt3289 * 518160421, Class4.anInt35 * 675588453, (byte) 58);

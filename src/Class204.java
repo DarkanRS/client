@@ -32,7 +32,7 @@ public class Class204 implements Interface43 {
 	}
 
 	public static final int method3363(int i) {
-		return (int) (1000000000L / (-2258443257437157839L * Class263.aLong3242));
+		return (int) (1000000000L / (-2258443257437157839L * Engine.aLong3242));
 	}
 
 	static final void method3364(CS2Executor class527, int i) {

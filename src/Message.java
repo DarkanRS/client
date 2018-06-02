@@ -385,7 +385,7 @@ public class Message {
 	}
 
 	static void method7275(GraphicalRenderer class505, int i) {
-		if ((335283739 * Class187.anInt2351 != Class84.myPlayer.aByte7967) && IndexLoaders.MAP_REGION_DECODER.method4430(-1864995825) != null) {
+		if ((335283739 * Class187.anInt2351 != Class84.myPlayer.aByte7967) && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1864995825) != null) {
 			Class169.method2869(1767772693);
 			if (Class289.method5097(class505, (Class84.myPlayer.aByte7967), 17547042))
 				Class187.anInt2351 = (1481335827 * Class84.myPlayer.aByte7967);
@@ -410,7 +410,7 @@ public class Message {
 	}
 
 	public static void method7278(int i, int i_4_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(21, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(21, (long) i);
 		class282_sub50_sub12.method14965((byte) 33);
 	}
 }

@@ -5,7 +5,7 @@
 public class Class275_Sub7 extends Class275 {
 	Class457 aClass457_7861 = new Class457();
 	static Class400 aClass400_7862;
-	public Class198 aClass198_7863;
+	public HitbarDefinitions aClass198_7863;
 
 	public void method12599(int i, int i_0_, int i_1_, int i_2_) {
 		Class275_Sub3 class275_sub3 = null;
@@ -29,7 +29,7 @@ public class Class275_Sub7 extends Class275 {
 		}
 	}
 
-	public Class275_Sub7(Class198 class198) {
+	public Class275_Sub7(HitbarDefinitions class198) {
 		aClass198_7863 = class198;
 	}
 

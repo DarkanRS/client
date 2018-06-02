@@ -41,7 +41,7 @@ public class Class197 {
 	static final void method3189(RsBitsBuffer class282_sub35_sub2) {
 		class282_sub35_sub2.initBitAccess((byte) -49);
 		int i = client.anInt7315 * 1595512269;
-		Player class521_sub1_sub1_sub2_sub1 = (Class84.myPlayer = client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-1794916156))));
+		Player class521_sub1_sub1_sub2_sub1 = (Class84.myPlayer = client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1794916156))));
 		class521_sub1_sub1_sub2_sub1.anInt10314 = i * -1498872675;
 		int i_0_ = class282_sub35_sub2.readBits(30, (byte) -47);
 		byte i_1_ = (byte) (i_0_ >> 28);
@@ -508,7 +508,7 @@ public class Class197 {
 				throw new RuntimeException();
 			}
 			Class4 class4 = aClass4Array2430[i];
-			Player class521_sub1_sub1_sub2_sub1 = (client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-1686016454))));
+			Player class521_sub1_sub1_sub2_sub1 = (client.players[i] = (new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1686016454))));
 			class521_sub1_sub1_sub2_sub1.anInt10314 = -1498872675 * i;
 			if (aClass282_Sub35Array2428[i] != null) {
 				class521_sub1_sub1_sub2_sub1.decodeAppearance(aClass282_Sub35Array2428[i], 1925099603);
@@ -739,7 +739,7 @@ public class Class197 {
 						int i_122_ = class282_sub35_sub2.readUnsignedSmart(1701419819);
 						int i_123_ = class282_sub35_sub2.readUnsigned128Byte();
 						int i_124_ = (i_121_ > 0 ? class282_sub35_sub2.readUnsignedByte128(-988806076) : i_123_);
-						class521_sub1_sub1_sub2_sub1.method15803(i_120_, -1809259861 * client.cycles, i_121_, i_122_, i_123_, i_124_, (byte) 0);
+						class521_sub1_sub1_sub2_sub1.displayHitbar(i_120_, -1809259861 * client.cycles, i_121_, i_122_, i_123_, i_124_, (byte) 0);
 					} else {
 						class521_sub1_sub1_sub2_sub1.method15857(i_120_, 1885735347);
 					}
@@ -989,7 +989,7 @@ public class Class197 {
 						int i_181_ = class282_sub35_sub2.readUnsignedSmart(1882331652);
 						int i_182_ = class282_sub35_sub2.readUnsigned128Byte();
 						int i_183_ = (i_180_ > 0 ? class282_sub35_sub2.readUnsignedByte128(-1533432726) : i_182_);
-						class521_sub1_sub1_sub2_sub1.method15803(i_179_, -1809259861 * client.cycles, i_180_, i_181_, i_182_, i_183_, (byte) 0);
+						class521_sub1_sub1_sub2_sub1.displayHitbar(i_179_, -1809259861 * client.cycles, i_180_, i_181_, i_182_, i_183_, (byte) 0);
 					} else {
 						class521_sub1_sub1_sub2_sub1.method15857(i_179_, 1885735347);
 					}
@@ -1130,7 +1130,7 @@ public class Class197 {
 	public static Interface17 method3202(RsByteBuffer class282_sub35, int i) {
 		Class221 class221 = Class100.method1640(class282_sub35.readUnsignedByte(), (byte) -96);
 		if (class221 == Class221.aClass221_2759) {
-			return Class206.method3545(class282_sub35, -532578452);
+			return SceneObjectManager.method3545(class282_sub35, -532578452);
 		}
 		if (Class221.aClass221_2761 == class221) {
 			return Class97.method1614(class282_sub35, 1268954246);
@@ -1144,7 +1144,7 @@ public class Class197 {
 	static final void method3203(RsBitsBuffer stream, byte i) {
 		stream.initBitAccess((byte) -47);
 		int i_204_ = client.anInt7315 * 1595512269;
-		Player class521_sub1_sub1_sub2_sub1 = (Class84.myPlayer = client.players[i_204_] = (new Player(IndexLoaders.MAP_REGION_DECODER.method4430(-2015513411))));
+		Player class521_sub1_sub1_sub2_sub1 = (Class84.myPlayer = client.players[i_204_] = (new Player(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2015513411))));
 		class521_sub1_sub1_sub2_sub1.anInt10314 = i_204_ * -1498872675;
 		int i_205_ = stream.readBits(30, (byte) -49);
 		byte i_206_ = (byte) (i_205_ >> 28);

@@ -296,7 +296,7 @@ public class Class13 {
 	}
 
 	public static final int method507(int i, int i_64_, int i_65_, int i_66_, int i_67_, byte i_68_) {
-		if (IndexLoaders.MAP_REGION_DECODER.method4430(-888508075) == null)
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-888508075) == null)
 			return 0;
 		if (i_67_ < 3) {
 			Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
@@ -322,7 +322,7 @@ public class Class13 {
 			if (bool)
 				i_67_++;
 		}
-		return IndexLoaders.MAP_REGION_DECODER.method4430(-1611665057).aClass390Array2591[i_67_].method6709(i, i_64_, -1580541166);
+		return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1611665057).aClass390Array2591[i_67_].method6709(i, i_64_, -1580541166);
 	}
 
 	public static void method508(boolean bool, boolean bool_75_, int i) {

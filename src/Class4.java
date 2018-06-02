@@ -23,7 +23,7 @@ public class Class4 {
 		float f_10_ = 0.0F;
 		float f_11_ = 0.0F;
 		float f_12_ = 0.0F;
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-956350211);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-956350211);
 		for (/**/; f_6_ < 1.1F; f_6_ += 0.1F) {
 			float f_13_ = f_6_ * f_7_ + f;
 			float f_14_ = f_8_ * f_6_ + f_0_;

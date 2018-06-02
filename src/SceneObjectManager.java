@@ -4,7 +4,7 @@
  */
 import java.util.Iterator;
 
-public class Class206 {
+public class SceneObjectManager {
 	public Class390[] aClass390Array2591;
 	public int anInt2592;
 	int anInt2593;
@@ -75,15 +75,15 @@ public class Class206 {
 			int i_2_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-840829634)) {
 				if (class521_sub1_sub3.method12987(560630672)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_2_];
-					((Class206) this).aClass521_Sub1Array2633[i_2_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_2_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_2_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_2_];
-					((Class206) this).aClass521_Sub1Array2605[i_2_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_2_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_2_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_2_];
-				((Class206) this).aClass521_Sub1Array2649[i_2_] = class521_sub1_sub3;
+				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_2_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_2_] = class521_sub1_sub3;
 			}
 		}
 	}
@@ -107,7 +107,7 @@ public class Class206 {
 		anInt2601 = aClass293ArrayArrayArray2604.length * 483772969;
 	}
 
-	public Class521_Sub1_Sub5 method3381(int i, int i_4_, int i_5_, byte i_6_) {
+	public Class521_Sub1_Sub5 getWall(int i, int i_4_, int i_5_, byte i_6_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_4_][i_5_];
 		if (null == class293)
 			return null;
@@ -146,60 +146,60 @@ public class Class206 {
 
 	public void method3383(int i, int i_11_, int i_12_, int i_13_, byte[][][] is, int[] is_14_, int[] is_15_, int[] is_16_, int[] is_17_, int[] is_18_, int i_19_, byte i_20_, int i_21_, int i_22_, boolean bool, boolean bool_23_, int i_24_, boolean bool_25_) {
 		((Class201) aClass201_2600).aBool2542 = true;
-		((Class206) this).aBool2599 = bool_23_;
-		((Class206) this).anInt2628 = (i_11_ >> anInt2592 * -1928575293) * 453572397;
-		((Class206) this).anInt2629 = (i_13_ >> anInt2592 * -1928575293) * -1765393037;
-		((Class206) this).anInt2630 = i_11_ * -2116407601;
-		((Class206) this).anInt2650 = i_13_ * 1955010611;
-		((Class206) this).anInt2632 = i_12_ * 449309197;
-		((Class206) this).anInt2637 = (((Class206) this).anInt2628 * -94301647 - ((Class206) this).anInt2652 * -589362899);
-		if (260560053 * ((Class206) this).anInt2637 < 0) {
-			((Class206) this).anInt2602 = -(-869346571 * ((Class206) this).anInt2637);
-			((Class206) this).anInt2637 = 0;
+		((SceneObjectManager) this).aBool2599 = bool_23_;
+		((SceneObjectManager) this).anInt2628 = (i_11_ >> anInt2592 * -1928575293) * 453572397;
+		((SceneObjectManager) this).anInt2629 = (i_13_ >> anInt2592 * -1928575293) * -1765393037;
+		((SceneObjectManager) this).anInt2630 = i_11_ * -2116407601;
+		((SceneObjectManager) this).anInt2650 = i_13_ * 1955010611;
+		((SceneObjectManager) this).anInt2632 = i_12_ * 449309197;
+		((SceneObjectManager) this).anInt2637 = (((SceneObjectManager) this).anInt2628 * -94301647 - ((SceneObjectManager) this).anInt2652 * -589362899);
+		if (260560053 * ((SceneObjectManager) this).anInt2637 < 0) {
+			((SceneObjectManager) this).anInt2602 = -(-869346571 * ((SceneObjectManager) this).anInt2637);
+			((SceneObjectManager) this).anInt2637 = 0;
 		} else
-			((Class206) this).anInt2602 = 0;
-		((Class206) this).anInt2621 = (-2134113369 * ((Class206) this).anInt2629 - 1959093013 * ((Class206) this).anInt2652);
-		if (-1955723827 * ((Class206) this).anInt2621 < 0) {
-			((Class206) this).anInt2636 = -(-823028627 * ((Class206) this).anInt2621);
-			((Class206) this).anInt2621 = 0;
+			((SceneObjectManager) this).anInt2602 = 0;
+		((SceneObjectManager) this).anInt2621 = (-2134113369 * ((SceneObjectManager) this).anInt2629 - 1959093013 * ((SceneObjectManager) this).anInt2652);
+		if (-1955723827 * ((SceneObjectManager) this).anInt2621 < 0) {
+			((SceneObjectManager) this).anInt2636 = -(-823028627 * ((SceneObjectManager) this).anInt2621);
+			((SceneObjectManager) this).anInt2621 = 0;
 		} else
-			((Class206) this).anInt2636 = 0;
-		((Class206) this).anInt2638 = (-438519439 * ((Class206) this).anInt2652 + 2114225605 * ((Class206) this).anInt2628);
-		if (170184033 * ((Class206) this).anInt2638 > -1912960305 * anInt2617)
-			((Class206) this).anInt2638 = 438474287 * anInt2617;
-		((Class206) this).anInt2640 = (-1498695357 * ((Class206) this).anInt2652 + ((Class206) this).anInt2629 * -983308767);
-		if (-887086501 * ((Class206) this).anInt2640 > -18177099 * anInt2603)
-			((Class206) this).anInt2640 = anInt2603 * 1406340911;
-		boolean[][] bools = ((Class206) this).aBoolArrayArray2651;
-		boolean[][] bools_26_ = ((Class206) this).aBoolArrayArray2635;
-		if (((Class206) this).aBool2599) {
-			for (int i_27_ = 0; i_27_ < (((Class206) this).anInt2652 * 1459994833 + ((Class206) this).anInt2652 * 1459994833 + 2); i_27_++) {
+			((SceneObjectManager) this).anInt2636 = 0;
+		((SceneObjectManager) this).anInt2638 = (-438519439 * ((SceneObjectManager) this).anInt2652 + 2114225605 * ((SceneObjectManager) this).anInt2628);
+		if (170184033 * ((SceneObjectManager) this).anInt2638 > -1912960305 * anInt2617)
+			((SceneObjectManager) this).anInt2638 = 438474287 * anInt2617;
+		((SceneObjectManager) this).anInt2640 = (-1498695357 * ((SceneObjectManager) this).anInt2652 + ((SceneObjectManager) this).anInt2629 * -983308767);
+		if (-887086501 * ((SceneObjectManager) this).anInt2640 > -18177099 * anInt2603)
+			((SceneObjectManager) this).anInt2640 = anInt2603 * 1406340911;
+		boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2651;
+		boolean[][] bools_26_ = ((SceneObjectManager) this).aBoolArrayArray2635;
+		if (((SceneObjectManager) this).aBool2599) {
+			for (int i_27_ = 0; i_27_ < (((SceneObjectManager) this).anInt2652 * 1459994833 + ((SceneObjectManager) this).anInt2652 * 1459994833 + 2); i_27_++) {
 				int i_28_ = 0;
 				int i_29_ = 0;
-				for (int i_30_ = 0; i_30_ < 2 + (((Class206) this).anInt2652 * 1459994833 + ((Class206) this).anInt2652 * 1459994833); i_30_++) {
+				for (int i_30_ = 0; i_30_ < 2 + (((SceneObjectManager) this).anInt2652 * 1459994833 + ((SceneObjectManager) this).anInt2652 * 1459994833); i_30_++) {
 					if (i_30_ > 1)
-						((Class206) this).anIntArray2641[i_30_ - 2] = i_28_;
+						((SceneObjectManager) this).anIntArray2641[i_30_ - 2] = i_28_;
 					i_28_ = i_29_;
-					int i_31_ = (-527863643 * ((Class206) this).anInt2628 - 1459994833 * ((Class206) this).anInt2652 + i_27_);
-					int i_32_ = i_30_ + (((Class206) this).anInt2629 * 1580412859 - 1459994833 * ((Class206) this).anInt2652);
+					int i_31_ = (-527863643 * ((SceneObjectManager) this).anInt2628 - 1459994833 * ((SceneObjectManager) this).anInt2652 + i_27_);
+					int i_32_ = i_30_ + (((SceneObjectManager) this).anInt2629 * 1580412859 - 1459994833 * ((SceneObjectManager) this).anInt2652);
 					if (i_31_ >= 0 && i_32_ >= 0 && i_31_ < anInt2617 * -1912960305 && i_32_ < anInt2603 * -18177099) {
 						int i_33_ = i_31_ << anInt2592 * -1928575293;
 						int i_34_ = i_32_ << -1928575293 * anInt2592;
 						int i_35_ = (aClass390Array2607[aClass390Array2607.length - 1].method6722(i_31_, i_32_, 65280) - (1000 << -1928575293 * anInt2592 - 7));
-						int i_36_ = ((aClass390Array2614 != null ? (aClass390Array2614[0].method6722(i_31_, i_32_, 65280) + ((Class206) this).anInt2593 * 1885735347) : (aClass390Array2607[0].method6722(i_31_, i_32_, 65280) + ((Class206) this).anInt2593 * 1885735347)) + (1000 << -1928575293 * anInt2592 - 7));
-						i_29_ = (((Class206) this).aClass505_2596.method8437(i_33_, i_35_, i_34_, i_33_, i_36_, i_34_));
-						((Class206) this).aBoolArrayArray2635[i_27_][i_30_] = i_29_ == 0;
+						int i_36_ = ((aClass390Array2614 != null ? (aClass390Array2614[0].method6722(i_31_, i_32_, 65280) + ((SceneObjectManager) this).anInt2593 * 1885735347) : (aClass390Array2607[0].method6722(i_31_, i_32_, 65280) + ((SceneObjectManager) this).anInt2593 * 1885735347)) + (1000 << -1928575293 * anInt2592 - 7));
+						i_29_ = (((SceneObjectManager) this).aClass505_2596.method8437(i_33_, i_35_, i_34_, i_33_, i_36_, i_34_));
+						((SceneObjectManager) this).aBoolArrayArray2635[i_27_][i_30_] = i_29_ == 0;
 					} else {
 						i_29_ = -1;
-						((Class206) this).aBoolArrayArray2635[i_27_][i_30_] = false;
+						((SceneObjectManager) this).aBoolArrayArray2635[i_27_][i_30_] = false;
 					}
 					if (i_27_ > 0 && i_30_ > 0) {
-						int i_37_ = (((Class206) this).anIntArray2641[i_30_ - 1] & ((Class206) this).anIntArray2641[i_30_] & i_28_ & i_29_);
-						((Class206) this).aBoolArrayArray2651[i_27_ - 1][(i_30_ - 1)] = i_37_ == 0;
+						int i_37_ = (((SceneObjectManager) this).anIntArray2641[i_30_ - 1] & ((SceneObjectManager) this).anIntArray2641[i_30_] & i_28_ & i_29_);
+						((SceneObjectManager) this).aBoolArrayArray2651[i_27_ - 1][(i_30_ - 1)] = i_37_ == 0;
 					}
 				}
-				((Class206) this).anIntArray2641[(1459994833 * ((Class206) this).anInt2652 + 1459994833 * ((Class206) this).anInt2652)] = i_28_;
-				((Class206) this).anIntArray2641[1 + (((Class206) this).anInt2652 * 1459994833 + 1459994833 * ((Class206) this).anInt2652)] = i_29_;
+				((SceneObjectManager) this).anIntArray2641[(1459994833 * ((SceneObjectManager) this).anInt2652 + 1459994833 * ((SceneObjectManager) this).anInt2652)] = i_28_;
+				((SceneObjectManager) this).anIntArray2641[1 + (((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652)] = i_29_;
 			}
 			if (!bool_25_)
 				((Class201) aClass201_2600).aBool2542 = false;
@@ -209,24 +209,24 @@ public class Class206 {
 				((Class201) aClass201_2600).anIntArray2562 = is_16_;
 				((Class201) aClass201_2600).anIntArray2568 = is_17_;
 				((Class201) aClass201_2600).anIntArray2560 = is_18_;
-				aClass201_2600.method3265(((Class206) this).aClass505_2596, i_19_);
+				aClass201_2600.method3265(((SceneObjectManager) this).aClass505_2596, i_19_);
 			}
 		} else {
-			if (((Class206) this).aBoolArrayArray2631 == null)
-				((Class206) this).aBoolArrayArray2631 = (new boolean[(1459994833 * ((Class206) this).anInt2652 + ((Class206) this).anInt2652 * 1459994833 + 2)][(((Class206) this).anInt2652 * 1459994833 + ((Class206) this).anInt2652 * 1459994833 + 2)]);
-			for (int i_38_ = 0; i_38_ < ((Class206) this).aBoolArrayArray2631.length; i_38_++) {
-				for (int i_39_ = 0; i_39_ < ((Class206) this).aBoolArrayArray2631[0].length; i_39_++)
-					((Class206) this).aBoolArrayArray2631[i_38_][i_39_] = true;
+			if (((SceneObjectManager) this).aBoolArrayArray2631 == null)
+				((SceneObjectManager) this).aBoolArrayArray2631 = (new boolean[(1459994833 * ((SceneObjectManager) this).anInt2652 + ((SceneObjectManager) this).anInt2652 * 1459994833 + 2)][(((SceneObjectManager) this).anInt2652 * 1459994833 + ((SceneObjectManager) this).anInt2652 * 1459994833 + 2)]);
+			for (int i_38_ = 0; i_38_ < ((SceneObjectManager) this).aBoolArrayArray2631.length; i_38_++) {
+				for (int i_39_ = 0; i_39_ < ((SceneObjectManager) this).aBoolArrayArray2631[0].length; i_39_++)
+					((SceneObjectManager) this).aBoolArrayArray2631[i_38_][i_39_] = true;
 			}
-			((Class206) this).aBoolArrayArray2635 = ((Class206) this).aBoolArrayArray2631;
-			((Class206) this).aBoolArrayArray2651 = ((Class206) this).aBoolArrayArray2631;
-			((Class206) this).anInt2637 = 0;
-			((Class206) this).anInt2621 = 0;
-			((Class206) this).anInt2638 = anInt2617 * 438474287;
-			((Class206) this).anInt2640 = 1406340911 * anInt2603;
+			((SceneObjectManager) this).aBoolArrayArray2635 = ((SceneObjectManager) this).aBoolArrayArray2631;
+			((SceneObjectManager) this).aBoolArrayArray2651 = ((SceneObjectManager) this).aBoolArrayArray2631;
+			((SceneObjectManager) this).anInt2637 = 0;
+			((SceneObjectManager) this).anInt2621 = 0;
+			((SceneObjectManager) this).anInt2638 = anInt2617 * 438474287;
+			((SceneObjectManager) this).anInt2640 = 1406340911 * anInt2603;
 			((Class201) aClass201_2600).aBool2542 = false;
 		}
-		Class108.method1848(this, ((Class206) this).aClass505_2596, 1003653340);
+		Class108.method1848(this, ((SceneObjectManager) this).aClass505_2596, 1003653340);
 		if (!((Login) aClass284_2648).aBool3386) {
 			Iterator iterator = aClass284_2648.aList3388.iterator();
 			while (iterator.hasNext()) {
@@ -235,21 +235,21 @@ public class Class206 {
 				Class279.method4969(class285, 1362412061);
 			}
 		}
-		if (((Class206) this).aBool2598) {
-			for (int i_40_ = 0; i_40_ < ((Class206) this).anInt2615 * -1136166139; i_40_++)
-				((Class206) this).aClass287Array2646[i_40_].method5053(i, bool, -36765707);
+		if (((SceneObjectManager) this).aBool2598) {
+			for (int i_40_ = 0; i_40_ < ((SceneObjectManager) this).anInt2615 * -1136166139; i_40_++)
+				((SceneObjectManager) this).aClass287Array2646[i_40_].method5053(i, bool, -36765707);
 		}
 		if (null != aClass293ArrayArrayArray2608) {
 			method3380(true, -914334995);
-			((Class206) this).aClass505_2596.method8475(-1, new Class90(1583160, 40, 127, 63, 0, 0, 0));
+			((SceneObjectManager) this).aClass505_2596.method8475(-1, new Class90(1583160, 40, 127, 63, 0, 0, 0));
 			method3441(true, is, i_19_, i_20_, i_24_);
-			((Class206) this).aClass505_2596.O();
+			((SceneObjectManager) this).aClass505_2596.O();
 			method3380(false, -914334995);
 		}
 		method3441(false, is, i_19_, i_20_, i_24_);
-		if (!((Class206) this).aBool2599) {
-			((Class206) this).aBoolArrayArray2651 = bools;
-			((Class206) this).aBoolArrayArray2635 = bools_26_;
+		if (!((SceneObjectManager) this).aBool2599) {
+			((SceneObjectManager) this).aBoolArrayArray2651 = bools;
+			((SceneObjectManager) this).aBoolArrayArray2635 = bools_26_;
 		}
 	}
 
@@ -269,11 +269,11 @@ public class Class206 {
 	}
 
 	public int method3386(int i, int i_46_, int i_47_) {
-		return (null != ((Class206) this).aShortArrayArray2611 ? ((Class206) this).aShortArrayArray2611[i][i_46_] & 0xffff : 0);
+		return (null != ((SceneObjectManager) this).aShortArrayArray2611 ? ((SceneObjectManager) this).aShortArrayArray2611[i][i_46_] & 0xffff : 0);
 	}
 
 	public int method3387(int i, int i_48_, byte i_49_) {
-		return (null != ((Class206) this).anIntArrayArray2606 ? ((Class206) this).anIntArrayArray2606[i][i_48_] & 0xffffff : 0);
+		return (null != ((SceneObjectManager) this).anIntArrayArray2606 ? ((SceneObjectManager) this).anIntArrayArray2606[i][i_48_] & 0xffffff : 0);
 	}
 
 	void method3388(Class521_Sub1[] class521_sub1s, int i, int i_50_) {
@@ -330,42 +330,42 @@ public class Class206 {
 		if (i_68_ < -1912960305 * anInt2617) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_68_ + 1][i_69_];
 			if (class293 != null && null != class293.aClass521_Sub1_Sub3_3499 && class293.aClass521_Sub1_Sub3_3499.method12985(-1099111910))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, 0, true, -1781676417);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, 0, true, -1781676417);
 		}
 		if (i_69_ < anInt2617 * -1912960305) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_68_][1 + i_69_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1227844707))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((Class206) this).anInt2593 * 1885735347), true, -2025925569);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -2025925569);
 		}
 		if (i_68_ < -1912960305 * anInt2617 && i_69_ < -18177099 * anInt2603) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_68_][1 + i_69_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1211523084))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, (((Class206) this).anInt2593 * 1885735347), true, -1710939145);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -1710939145);
 		}
 		if (i_68_ < -1912960305 * anInt2617 && i_69_ > 0) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_68_][i_69_ - 1];
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1406035096))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((Class206) this).anInt2593 * 1885735347), 0, -(((Class206) this).anInt2593 * 1885735347), true, -2094823069);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((SceneObjectManager) this).anInt2593 * 1885735347), 0, -(((SceneObjectManager) this).anInt2593 * 1885735347), true, -2094823069);
 		}
 	}
 
 	public int method3391(int i, int i_70_, int i_71_) {
-		return (null != ((Class206) this).aByteArrayArray2620 ? ((Class206) this).aByteArrayArray2620[i][i_70_] & 0xff : 0);
+		return (null != ((SceneObjectManager) this).aByteArrayArray2620 ? ((SceneObjectManager) this).aByteArrayArray2620[i][i_70_] & 0xff : 0);
 	}
 
 	public void method3392(int i, int i_72_, int i_73_, int i_74_, int i_75_, int i_76_, int i_77_, int i_78_, short i_79_) {
-		if (((Class206) this).anIntArrayArray2606 != null)
-			((Class206) this).anIntArrayArray2606[i][i_72_] = ~0xffffff | i_73_;
-		if (((Class206) this).aShortArrayArray2611 != null)
-			((Class206) this).aShortArrayArray2611[i][i_72_] = (short) i_74_;
-		if (null != ((Class206) this).aByteArrayArray2612)
-			((Class206) this).aByteArrayArray2612[i][i_72_] = (byte) i_75_;
-		if (((Class206) this).aByteArrayArray2613 != null)
-			((Class206) this).aByteArrayArray2613[i][i_72_] = (byte) i_76_;
-		if (null != ((Class206) this).aByteArrayArray2595)
-			((Class206) this).aByteArrayArray2595[i][i_72_] = (byte) i_77_;
-		if (null != ((Class206) this).aByteArrayArray2620)
-			((Class206) this).aByteArrayArray2620[i][i_72_] = (byte) i_78_;
+		if (((SceneObjectManager) this).anIntArrayArray2606 != null)
+			((SceneObjectManager) this).anIntArrayArray2606[i][i_72_] = ~0xffffff | i_73_;
+		if (((SceneObjectManager) this).aShortArrayArray2611 != null)
+			((SceneObjectManager) this).aShortArrayArray2611[i][i_72_] = (short) i_74_;
+		if (null != ((SceneObjectManager) this).aByteArrayArray2612)
+			((SceneObjectManager) this).aByteArrayArray2612[i][i_72_] = (byte) i_75_;
+		if (((SceneObjectManager) this).aByteArrayArray2613 != null)
+			((SceneObjectManager) this).aByteArrayArray2613[i][i_72_] = (byte) i_76_;
+		if (null != ((SceneObjectManager) this).aByteArrayArray2595)
+			((SceneObjectManager) this).aByteArrayArray2595[i][i_72_] = (byte) i_77_;
+		if (null != ((SceneObjectManager) this).aByteArrayArray2620)
+			((SceneObjectManager) this).aByteArrayArray2620[i][i_72_] = (byte) i_78_;
 	}
 
 	public void method3393(int i, int i_80_, int i_81_, Class521_Sub1_Sub3 class521_sub1_sub3, int i_82_) {
@@ -375,15 +375,15 @@ public class Class206 {
 			int i_83_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-152076894)) {
 				if (class521_sub1_sub3.method12987(1864171775)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_83_];
-					((Class206) this).aClass521_Sub1Array2633[i_83_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_83_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_83_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_83_];
-					((Class206) this).aClass521_Sub1Array2605[i_83_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_83_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_83_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_83_];
-				((Class206) this).aClass521_Sub1Array2649[i_83_] = class521_sub1_sub3;
+				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_83_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_83_] = class521_sub1_sub3;
 			}
 		}
 	}
@@ -391,20 +391,20 @@ public class Class206 {
 	public void method3394(int i, int i_84_, int i_85_, int i_86_, Class521_Sub1_Sub2 class521_sub1_sub2, byte i_87_) {
 		Class293 class293 = method3459(i, i_84_, i_85_, 546259933);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((Class206) this).anInt2594 * -1428980483) + (i_84_ << anInt2592 * -1928575293)), (float) i_86_, (float) ((((Class206) this).anInt2594 * -1428980483) + (i_85_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_84_ << anInt2592 * -1928575293)), (float) i_86_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_85_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_88_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1465902560)) {
 				if (class521_sub1_sub2.method12987(-1746699245)) {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_88_];
-					((Class206) this).aClass521_Sub1Array2633[i_88_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_88_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_88_] = class521_sub1_sub2;
 				} else {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_88_];
-					((Class206) this).aClass521_Sub1Array2605[i_88_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_88_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_88_] = class521_sub1_sub2;
 				}
 			} else {
-				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_88_];
-				((Class206) this).aClass521_Sub1Array2649[i_88_] = class521_sub1_sub2;
+				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_88_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_88_] = class521_sub1_sub2;
 			}
 		}
 	}
@@ -417,28 +417,28 @@ public class Class206 {
 			int i_93_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub5.method12986(-422075919)) {
 				if (class521_sub1_sub5.method12987(-1845208495)) {
-					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_93_];
-					((Class206) this).aClass521_Sub1Array2633[i_93_] = class521_sub1_sub5;
+					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_93_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_93_] = class521_sub1_sub5;
 				} else {
-					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_93_];
-					((Class206) this).aClass521_Sub1Array2605[i_93_] = class521_sub1_sub5;
+					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_93_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_93_] = class521_sub1_sub5;
 				}
 			} else {
-				((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_93_];
-				((Class206) this).aClass521_Sub1Array2649[i_93_] = class521_sub1_sub5;
+				((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_93_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_93_] = class521_sub1_sub5;
 			}
 			if (null != class521_sub1_sub5_91_) {
 				if (class521_sub1_sub5_91_.method12986(-1805444814)) {
 					if (class521_sub1_sub5_91_.method12987(-1456067745)) {
-						((Class521_Sub1_Sub5) class521_sub1_sub5_91_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_93_];
-						((Class206) this).aClass521_Sub1Array2633[i_93_] = class521_sub1_sub5_91_;
+						((Class521_Sub1_Sub5) class521_sub1_sub5_91_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_93_];
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_93_] = class521_sub1_sub5_91_;
 					} else {
-						((Class521_Sub1_Sub5) class521_sub1_sub5_91_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_93_];
-						((Class206) this).aClass521_Sub1Array2605[i_93_] = class521_sub1_sub5_91_;
+						((Class521_Sub1_Sub5) class521_sub1_sub5_91_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_93_];
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_93_] = class521_sub1_sub5_91_;
 					}
 				} else {
-					((Class521_Sub1_Sub5) class521_sub1_sub5_91_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_93_];
-					((Class206) this).aClass521_Sub1Array2649[i_93_] = class521_sub1_sub5_91_;
+					((Class521_Sub1_Sub5) class521_sub1_sub5_91_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_93_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_93_] = class521_sub1_sub5_91_;
 				}
 			}
 		}
@@ -452,28 +452,28 @@ public class Class206 {
 			int i_98_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub4.method12986(-287475150)) {
 				if (class521_sub1_sub4.method12987(-1554775076)) {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_98_];
-					((Class206) this).aClass521_Sub1Array2633[i_98_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_98_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_98_] = class521_sub1_sub4;
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_98_];
-					((Class206) this).aClass521_Sub1Array2605[i_98_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_98_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_98_] = class521_sub1_sub4;
 				}
 			} else {
-				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_98_];
-				((Class206) this).aClass521_Sub1Array2649[i_98_] = class521_sub1_sub4;
+				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_98_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_98_] = class521_sub1_sub4;
 			}
 			if (null != class521_sub1_sub4_96_) {
 				if (class521_sub1_sub4_96_.method12986(-1380725108)) {
 					if (class521_sub1_sub4_96_.method12987(-1946462410)) {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_96_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_98_];
-						((Class206) this).aClass521_Sub1Array2633[i_98_] = class521_sub1_sub4_96_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_96_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_98_];
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_98_] = class521_sub1_sub4_96_;
 					} else {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_96_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_98_];
-						((Class206) this).aClass521_Sub1Array2605[i_98_] = class521_sub1_sub4_96_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_96_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_98_];
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_98_] = class521_sub1_sub4_96_;
 					}
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4_96_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_98_];
-					((Class206) this).aClass521_Sub1Array2649[i_98_] = class521_sub1_sub4_96_;
+					((Class521_Sub1_Sub4) class521_sub1_sub4_96_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_98_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_98_] = class521_sub1_sub4_96_;
 				}
 			}
 		}
@@ -502,10 +502,10 @@ public class Class206 {
 						}
 						class208_106_.aClass208_2660 = class208;
 					}
-					if (bool_99_ && ((((Class206) this).anIntArrayArray2606[i_104_][i_105_]) & ~0xffffff) != 0) {
-						i_100_ = (((Class206) this).anIntArrayArray2606[i_104_][i_105_]);
-						i_101_ = (((Class206) this).aShortArrayArray2611[i_104_][i_105_]);
-						i_102_ = (((Class206) this).aByteArrayArray2612[i_104_][i_105_]);
+					if (bool_99_ && ((((SceneObjectManager) this).anIntArrayArray2606[i_104_][i_105_]) & ~0xffffff) != 0) {
+						i_100_ = (((SceneObjectManager) this).anIntArrayArray2606[i_104_][i_105_]);
+						i_101_ = (((SceneObjectManager) this).aShortArrayArray2611[i_104_][i_105_]);
+						i_102_ = (((SceneObjectManager) this).aByteArrayArray2612[i_104_][i_105_]);
 					}
 					if (!bool && class293.aClass521_Sub1_Sub3_3499 != null && (class293.aClass521_Sub1_Sub3_3499.aShort9561 > i_103_))
 						i_103_ = class293.aClass521_Sub1_Sub3_3499.aShort9561;
@@ -515,30 +515,30 @@ public class Class206 {
 		if (bool_99_ && (i_100_ & ~0xffffff) != 0) {
 			for (int i_107_ = class521_sub1_sub1.aShort9458; i_107_ <= class521_sub1_sub1.aShort9455; i_107_++) {
 				for (int i_108_ = class521_sub1_sub1.aShort9456; i_108_ <= class521_sub1_sub1.aShort9457; i_108_++) {
-					if (0 == ((((Class206) this).anIntArrayArray2606[i_107_][i_108_]) & ~0xffffff)) {
-						((Class206) this).anIntArrayArray2606[i_107_][i_108_] = i_100_;
-						((Class206) this).aShortArrayArray2611[i_107_][i_108_] = i_101_;
-						((Class206) this).aByteArrayArray2612[i_107_][i_108_] = i_102_;
+					if (0 == ((((SceneObjectManager) this).anIntArrayArray2606[i_107_][i_108_]) & ~0xffffff)) {
+						((SceneObjectManager) this).anIntArrayArray2606[i_107_][i_108_] = i_100_;
+						((SceneObjectManager) this).aShortArrayArray2611[i_107_][i_108_] = i_101_;
+						((SceneObjectManager) this).aByteArrayArray2612[i_107_][i_108_] = i_102_;
 					}
 				}
 			}
 		}
 		if (bool) {
-			((Class206) this).aClass521_Sub1_Sub1Array2627[((((Class206) this).anInt2616 += -1378536477) * -1983534645 - 1)] = class521_sub1_sub1;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[((((SceneObjectManager) this).anInt2616 += -1378536477) * -1983534645 - 1)] = class521_sub1_sub1;
 			class521_sub1_sub1.aClass206_7970 = this;
 		} else {
 			int i_109_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub1.method12986(-874752575)) {
 				if (class521_sub1_sub1.method12987(331122687)) {
-					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_109_];
-					((Class206) this).aClass521_Sub1Array2633[i_109_] = class521_sub1_sub1;
+					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_109_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_109_] = class521_sub1_sub1;
 				} else {
-					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_109_];
-					((Class206) this).aClass521_Sub1Array2605[i_109_] = class521_sub1_sub1;
+					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_109_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_109_] = class521_sub1_sub1;
 				}
 			} else {
-				((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_109_];
-				((Class206) this).aClass521_Sub1Array2649[i_109_] = class521_sub1_sub1;
+				((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_109_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_109_] = class521_sub1_sub1;
 			}
 		}
 		if (bool) {
@@ -567,14 +567,14 @@ public class Class206 {
 	}
 
 	public void method3399(byte i) {
-		for (int i_115_ = 0; i_115_ < ((Class206) this).anInt2616 * -1983534645; i_115_++) {
+		for (int i_115_ = 0; i_115_ < ((SceneObjectManager) this).anInt2616 * -1983534645; i_115_++) {
 			if (i == 1)
 				return;
-			Class521_Sub1_Sub1 class521_sub1_sub1 = ((Class206) this).aClass521_Sub1_Sub1Array2627[i_115_];
+			Class521_Sub1_Sub1 class521_sub1_sub1 = ((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_115_];
 			method3407(class521_sub1_sub1, true, -1696604087);
-			((Class206) this).aClass521_Sub1_Sub1Array2627[i_115_] = null;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_115_] = null;
 		}
-		((Class206) this).anInt2616 = 0;
+		((SceneObjectManager) this).anInt2616 = 0;
 	}
 
 	public void method3400() {
@@ -589,7 +589,7 @@ public class Class206 {
 							method3452(class521_sub1_sub5, i, i_116_, i_117_, 1, 1);
 							if (class521_sub1_sub5_118_ != null && class521_sub1_sub5_118_.method12985(-770467208)) {
 								method3452(class521_sub1_sub5_118_, i, i_116_, i_117_, 1, 1);
-								class521_sub1_sub5_118_.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1985350019);
+								class521_sub1_sub5_118_.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1985350019);
 								class521_sub1_sub5_118_.method12984(150172527);
 							}
 							class521_sub1_sub5.method12984(-727923375);
@@ -613,7 +613,7 @@ public class Class206 {
 	}
 
 	public int method3401(int i, int i_119_) {
-		return (null != ((Class206) this).anIntArrayArray2606 ? ((Class206) this).anIntArrayArray2606[i][i_119_] & 0xffffff : 0);
+		return (null != ((SceneObjectManager) this).anIntArrayArray2606 ? ((SceneObjectManager) this).anIntArrayArray2606[i][i_119_] & 0xffffff : 0);
 	}
 
 	public Class521_Sub1_Sub4 method3402(int i, int i_120_, int i_121_, byte i_122_) {
@@ -631,8 +631,8 @@ public class Class206 {
 
 	void method3403(Class521_Sub1 class521_sub1) {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((Class206) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-700409118) >> 1)), (float) (int) class385.aFloat4673, ((Class206) this).aFloatArray2639);
-		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((Class206) this).aFloatArray2639[2] * -721433345;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-700409118) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	public Class521_Sub1_Sub3 method3404(int i, int i_123_, int i_124_, int i_125_) {
@@ -692,34 +692,34 @@ public class Class206 {
 			class521_sub1.method11176();
 			for (int i_132_ = 0; i_132_ < 2; i_132_++) {
 				Class521_Sub1 class521_sub1_133_ = null;
-				for (Class521_Sub1 class521_sub1_134_ = ((Class206) this).aClass521_Sub1Array2605[i_132_]; class521_sub1_134_ != null; class521_sub1_134_ = (((Class521_Sub1) class521_sub1_134_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_134_ = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_132_]; class521_sub1_134_ != null; class521_sub1_134_ = (((Class521_Sub1) class521_sub1_134_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_134_) {
 						if (class521_sub1_133_ != null)
 							((Class521_Sub1) class521_sub1_133_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_134_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2605[i_132_] = (((Class521_Sub1) class521_sub1_134_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2605[i_132_] = (((Class521_Sub1) class521_sub1_134_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_133_ = class521_sub1_134_;
 				}
 				class521_sub1_133_ = null;
-				for (Class521_Sub1 class521_sub1_135_ = ((Class206) this).aClass521_Sub1Array2633[i_132_]; null != class521_sub1_135_; class521_sub1_135_ = (((Class521_Sub1) class521_sub1_135_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_135_ = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_132_]; null != class521_sub1_135_; class521_sub1_135_ = (((Class521_Sub1) class521_sub1_135_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_135_) {
 						if (null != class521_sub1_133_)
 							((Class521_Sub1) class521_sub1_133_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_135_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2633[i_132_] = (((Class521_Sub1) class521_sub1_135_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2633[i_132_] = (((Class521_Sub1) class521_sub1_135_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_133_ = class521_sub1_135_;
 				}
 				class521_sub1_133_ = null;
-				for (Class521_Sub1 class521_sub1_136_ = ((Class206) this).aClass521_Sub1Array2649[i_132_]; null != class521_sub1_136_; class521_sub1_136_ = (((Class521_Sub1) class521_sub1_136_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_136_ = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_132_]; null != class521_sub1_136_; class521_sub1_136_ = (((Class521_Sub1) class521_sub1_136_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_136_) {
 						if (null != class521_sub1_133_)
 							((Class521_Sub1) class521_sub1_133_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_136_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2649[i_132_] = (((Class521_Sub1) class521_sub1_136_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2649[i_132_] = (((Class521_Sub1) class521_sub1_136_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_133_ = class521_sub1_136_;
@@ -758,7 +758,7 @@ public class Class206 {
 		aClass293ArrayArrayArray2604[3][i][i_137_] = null;
 	}
 
-	public Class521_Sub1_Sub5 method3410(int i, int i_140_, int i_141_, int i_142_) {
+	public Class521_Sub1_Sub5 getWall2(int i, int i_140_, int i_141_, int i_142_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_140_][i_141_];
 		if (null == class293)
 			return null;
@@ -769,30 +769,30 @@ public class Class206 {
 		if (i_143_ < -1912960305 * anInt2617) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_143_ + 1][i_144_];
 			if (class293 != null && null != class293.aClass521_Sub1_Sub3_3499 && class293.aClass521_Sub1_Sub3_3499.method12985(-985610915))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, 0, true, -2069932795);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, 0, true, -2069932795);
 		}
 		if (i_144_ < anInt2617 * -1912960305) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_143_][1 + i_144_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1385279027))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((Class206) this).anInt2593 * 1885735347), true, -1728349361);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -1728349361);
 		}
 		if (i_143_ < -1912960305 * anInt2617 && i_144_ < -18177099 * anInt2603) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_143_][1 + i_144_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1805732429))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, (((Class206) this).anInt2593 * 1885735347), true, -1982850059);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -1982850059);
 		}
 		if (i_143_ < -1912960305 * anInt2617 && i_144_ > 0) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_143_][i_144_ - 1];
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1999961181))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((Class206) this).anInt2593 * 1885735347), 0, -(((Class206) this).anInt2593 * 1885735347), true, -1758411074);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((SceneObjectManager) this).anInt2593 * 1885735347), 0, -(((SceneObjectManager) this).anInt2593 * 1885735347), true, -1758411074);
 		}
 	}
 
 	public int method3412(int i, int i_145_) {
-		return (null != ((Class206) this).aByteArrayArray2620 ? ((Class206) this).aByteArrayArray2620[i][i_145_] & 0xff : 0);
+		return (null != ((SceneObjectManager) this).aByteArrayArray2620 ? ((SceneObjectManager) this).aByteArrayArray2620[i][i_145_] & 0xff : 0);
 	}
 
-	public Class521_Sub1_Sub1 method3413(int i, int i_146_, int i_147_, Interface25 interface25, int i_148_) {
+	public Class521_Sub1_Sub1 getInteractableObject(int i, int i_146_, int i_147_, Interface25 interface25, int i_148_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_146_][i_147_];
 		if (class293 == null)
 			return null;
@@ -816,7 +816,7 @@ public class Class206 {
 							method3452(class521_sub1_sub5, i, i_149_, i_150_, 1, 1);
 							if (class521_sub1_sub5_151_ != null && class521_sub1_sub5_151_.method12985(-1634316233)) {
 								method3452(class521_sub1_sub5_151_, i, i_149_, i_150_, 1, 1);
-								class521_sub1_sub5_151_.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1754874448);
+								class521_sub1_sub5_151_.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1754874448);
 								class521_sub1_sub5_151_.method12984(1443746520);
 							}
 							class521_sub1_sub5.method12984(322429259);
@@ -839,37 +839,37 @@ public class Class206 {
 		}
 	}
 
-	public Class521_Sub1_Sub3 method3415(int i, int i_152_, int i_153_, int i_154_) {
-		Class293 class293 = aClass293ArrayArrayArray2604[i][i_152_][i_153_];
+	public Class521_Sub1_Sub3 getGroundDecoration(int plane, int x, int y, int i_154_) {
+		Class293 class293 = aClass293ArrayArrayArray2604[plane][x][y];
 		if (null == class293 || class293.aClass521_Sub1_Sub3_3499 == null)
 			return null;
 		return class293.aClass521_Sub1_Sub3_3499;
 	}
 
 	public int method3416(int i, int i_155_) {
-		return (null != ((Class206) this).anIntArrayArray2606 ? ((Class206) this).anIntArrayArray2606[i][i_155_] & 0xffffff : 0);
+		return (null != ((SceneObjectManager) this).anIntArrayArray2606 ? ((SceneObjectManager) this).anIntArrayArray2606[i][i_155_] & 0xffffff : 0);
 	}
 
 	void method3417(Class521_Sub1 class521_sub1, int i, int i_156_, int i_157_, int i_158_) {
 		if (i_156_ < -1912960305 * anInt2617) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_156_ + 1][i_157_];
 			if (class293 != null && null != class293.aClass521_Sub1_Sub3_3499 && class293.aClass521_Sub1_Sub3_3499.method12985(-1157326636))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, 0, true, -2061518556);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, 0, true, -2061518556);
 		}
 		if (i_157_ < anInt2617 * -1912960305) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_156_][1 + i_157_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1529728389))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((Class206) this).anInt2593 * 1885735347), true, -1951339273);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -1951339273);
 		}
 		if (i_156_ < -1912960305 * anInt2617 && i_157_ < -18177099 * anInt2603) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_156_][1 + i_157_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1925311637))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, (((Class206) this).anInt2593 * 1885735347), true, -1913658819);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -1913658819);
 		}
 		if (i_156_ < -1912960305 * anInt2617 && i_157_ > 0) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_156_][i_157_ - 1];
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-883899381))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((Class206) this).anInt2593 * 1885735347), 0, -(((Class206) this).anInt2593 * 1885735347), true, -1779065543);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((SceneObjectManager) this).anInt2593 * 1885735347), 0, -(((SceneObjectManager) this).anInt2593 * 1885735347), true, -1779065543);
 		}
 	}
 
@@ -880,15 +880,15 @@ public class Class206 {
 			int i_161_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-132760109)) {
 				if (class521_sub1_sub3.method12987(297507035)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_161_];
-					((Class206) this).aClass521_Sub1Array2633[i_161_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_161_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_161_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_161_];
-					((Class206) this).aClass521_Sub1Array2605[i_161_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_161_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_161_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_161_];
-				((Class206) this).aClass521_Sub1Array2649[i_161_] = class521_sub1_sub3;
+				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_161_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_161_] = class521_sub1_sub3;
 			}
 		}
 	}
@@ -915,8 +915,8 @@ public class Class206 {
 
 	void method3421(Class521_Sub1 class521_sub1, byte i) {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((Class206) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-353593796) >> 1)), (float) (int) class385.aFloat4673, ((Class206) this).aFloatArray2639);
-		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((Class206) this).aFloatArray2639[2] * -721433345;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-353593796) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	public Class521_Sub1_Sub5 method3422(int i, int i_166_, int i_167_, short i_168_) {
@@ -946,7 +946,7 @@ public class Class206 {
 	}
 
 	boolean method3424(Class521_Sub1 class521_sub1, boolean bool, byte[][][] is, int i, byte i_171_) {
-		if (!((Class206) this).aBool2599)
+		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
 			int i_172_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
@@ -955,10 +955,10 @@ public class Class206 {
 			int i_175_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_176_ = i_174_; i_176_ <= i_172_; i_176_++) {
 				for (int i_177_ = i_175_; i_177_ <= i_173_; i_177_++) {
-					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_176_ >= ((Class206) this).anInt2637 * 260560053 && i_176_ < ((Class206) this).anInt2638 * 170184033 && i_177_ >= ((Class206) this).anInt2621 * -1955723827 && i_177_ < ((Class206) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_171_ == (is[class521_sub1.aByte7967][i_176_][i_177_])) || !class521_sub1.method13029((byte) 1) || class521_sub1.method13037((((Class206) this).aClass505_2596), 1922998214)) {
-							if (!bool && i_176_ >= -527863643 * (((Class206) this).anInt2628) - 16 && i_176_ <= 16 + -527863643 * ((Class206) this).anInt2628 && i_177_ >= 1580412859 * (((Class206) this).anInt2629) - 16 && i_177_ <= 16 + (((Class206) this).anInt2629 * 1580412859))
-								class521_sub1.method12991((((Class206) this).aClass505_2596), -1308770774);
+					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_176_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_176_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_177_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_177_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+						if ((null != is && class521_sub1.aByte7967 >= i && i_171_ == (is[class521_sub1.aByte7967][i_176_][i_177_])) || !class521_sub1.method13029((byte) 1) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 1922998214)) {
+							if (!bool && i_176_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_176_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_177_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_177_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
+								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -1308770774);
 							return true;
 						}
 						return false;
@@ -970,10 +970,10 @@ public class Class206 {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
 		int i_178_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
 		int i_179_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
-		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_178_ >= ((Class206) this).anInt2637 * 260560053 && i_178_ < 170184033 * ((Class206) this).anInt2638 && i_179_ >= -1955723827 * ((Class206) this).anInt2621 && i_179_ < ((Class206) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_178_][i_179_] == i_171_) || !class521_sub1.method13029((byte) -39) || class521_sub1.method13037(((Class206) this).aClass505_2596, -53758878)) {
-				if (!bool && i_178_ >= -527863643 * ((Class206) this).anInt2628 - 16 && i_178_ <= -527863643 * ((Class206) this).anInt2628 + 16 && i_179_ >= ((Class206) this).anInt2629 * 1580412859 - 16 && i_179_ <= 16 + ((Class206) this).anInt2629 * 1580412859)
-					class521_sub1.method12991(((Class206) this).aClass505_2596, -1131763435);
+		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_178_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_178_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_179_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_179_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_178_][i_179_] == i_171_) || !class521_sub1.method13029((byte) -39) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -53758878)) {
+				if (!bool && i_178_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_178_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_179_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_179_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
+					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -1131763435);
 				return true;
 			}
 			return false;
@@ -982,7 +982,7 @@ public class Class206 {
 	}
 
 	boolean method3425(Class521_Sub1 class521_sub1, boolean bool, byte[][][] is, int i, byte i_180_) {
-		if (!((Class206) this).aBool2599)
+		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
 			int i_181_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
@@ -991,10 +991,10 @@ public class Class206 {
 			int i_184_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_185_ = i_183_; i_185_ <= i_181_; i_185_++) {
 				for (int i_186_ = i_184_; i_186_ <= i_182_; i_186_++) {
-					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_185_ >= ((Class206) this).anInt2637 * 260560053 && i_185_ < ((Class206) this).anInt2638 * 170184033 && i_186_ >= ((Class206) this).anInt2621 * -1955723827 && i_186_ < ((Class206) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_180_ == (is[class521_sub1.aByte7967][i_185_][i_186_])) || !class521_sub1.method13029((byte) -82) || class521_sub1.method13037((((Class206) this).aClass505_2596), 1868678759)) {
-							if (!bool && i_185_ >= -527863643 * (((Class206) this).anInt2628) - 16 && i_185_ <= 16 + -527863643 * ((Class206) this).anInt2628 && i_186_ >= 1580412859 * (((Class206) this).anInt2629) - 16 && i_186_ <= 16 + (((Class206) this).anInt2629 * 1580412859))
-								class521_sub1.method12991((((Class206) this).aClass505_2596), -978759949);
+					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_185_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_185_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_186_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_186_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+						if ((null != is && class521_sub1.aByte7967 >= i && i_180_ == (is[class521_sub1.aByte7967][i_185_][i_186_])) || !class521_sub1.method13029((byte) -82) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 1868678759)) {
+							if (!bool && i_185_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_185_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_186_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_186_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
+								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -978759949);
 							return true;
 						}
 						return false;
@@ -1006,10 +1006,10 @@ public class Class206 {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
 		int i_187_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
 		int i_188_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
-		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_187_ >= ((Class206) this).anInt2637 * 260560053 && i_187_ < 170184033 * ((Class206) this).anInt2638 && i_188_ >= -1955723827 * ((Class206) this).anInt2621 && i_188_ < ((Class206) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_187_][i_188_] == i_180_) || !class521_sub1.method13029((byte) -71) || class521_sub1.method13037(((Class206) this).aClass505_2596, -843272103)) {
-				if (!bool && i_187_ >= -527863643 * ((Class206) this).anInt2628 - 16 && i_187_ <= -527863643 * ((Class206) this).anInt2628 + 16 && i_188_ >= ((Class206) this).anInt2629 * 1580412859 - 16 && i_188_ <= 16 + ((Class206) this).anInt2629 * 1580412859)
-					class521_sub1.method12991(((Class206) this).aClass505_2596, -835940518);
+		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_187_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_187_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_188_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_188_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_187_][i_188_] == i_180_) || !class521_sub1.method13029((byte) -71) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -843272103)) {
+				if (!bool && i_187_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_187_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_188_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_188_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
+					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -835940518);
 				return true;
 			}
 			return false;
@@ -1066,11 +1066,11 @@ public class Class206 {
 	}
 
 	public void method3430(Class287 class287, byte i) {
-		if (-1136166139 * ((Class206) this).anInt2615 < 65361) {
+		if (-1136166139 * ((SceneObjectManager) this).anInt2615 < 65361) {
 			Class282_Sub24 class282_sub24 = class287.aClass282_Sub24_3425;
-			((Class206) this).aClass287Array2646[-1136166139 * ((Class206) this).anInt2615] = class287;
-			((Class206) this).aBoolArray2647[(-1136166139 * ((Class206) this).anInt2615)] = false;
-			((Class206) this).anInt2615 += -1292690995;
+			((SceneObjectManager) this).aClass287Array2646[-1136166139 * ((SceneObjectManager) this).anInt2615] = class287;
+			((SceneObjectManager) this).aBoolArray2647[(-1136166139 * ((SceneObjectManager) this).anInt2615)] = false;
+			((SceneObjectManager) this).anInt2615 += -1292690995;
 			int i_202_ = class287.anInt3419 * -2046020753;
 			if (((Class287) class287).aBool3427)
 				i_202_ = 0;
@@ -1079,32 +1079,32 @@ public class Class206 {
 				i_203_ = anInt2601 * -1485737447 - 1;
 			for (int i_204_ = i_202_; i_204_ <= i_203_; i_204_++) {
 				int i_205_ = 0;
-				int i_206_ = ((class282_sub24.method12394(997046092) - class282_sub24.method12370(-789603523) + ((Class206) this).anInt2594 * -1428980483) >> -1928575293 * anInt2592);
+				int i_206_ = ((class282_sub24.method12394(997046092) - class282_sub24.method12370(-789603523) + ((SceneObjectManager) this).anInt2594 * -1428980483) >> -1928575293 * anInt2592);
 				if (i_206_ < 0) {
 					i_205_ -= i_206_;
 					i_206_ = 0;
 				}
-				int i_207_ = ((class282_sub24.method12394(1086113153) + class282_sub24.method12370(-789603523) - ((Class206) this).anInt2594 * -1428980483) >> anInt2592 * -1928575293);
+				int i_207_ = ((class282_sub24.method12394(1086113153) + class282_sub24.method12370(-789603523) - ((SceneObjectManager) this).anInt2594 * -1428980483) >> anInt2592 * -1928575293);
 				if (i_207_ >= -18177099 * anInt2603)
 					i_207_ = anInt2603 * -18177099 - 1;
 				for (int i_208_ = i_206_; i_208_ <= i_207_; i_208_++) {
 					int i_209_ = ((Class287) class287).aShortArray3429[i_205_++];
-					int i_210_ = ((class282_sub24.method12368((byte) 47) - class282_sub24.method12370(-789603523) + ((Class206) this).anInt2594 * -1428980483) >> anInt2592 * -1928575293) + (i_209_ >>> 8);
+					int i_210_ = ((class282_sub24.method12368((byte) 47) - class282_sub24.method12370(-789603523) + ((SceneObjectManager) this).anInt2594 * -1428980483) >> anInt2592 * -1928575293) + (i_209_ >>> 8);
 					int i_211_ = (i_209_ & 0xff) + i_210_ - 1;
 					if (i_210_ < 0)
 						i_210_ = 0;
 					if (i_211_ >= -1912960305 * anInt2617)
 						i_211_ = anInt2617 * -1912960305 - 1;
 					for (int i_212_ = i_210_; i_212_ <= i_211_; i_212_++) {
-						long l = (((Class206) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_]);
+						long l = (((SceneObjectManager) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_]);
 						if ((l & 0xffffL) == 0L)
-							((Class206) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | (long) (-1136166139 * ((Class206) this).anInt2615);
+							((SceneObjectManager) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | (long) (-1136166139 * ((SceneObjectManager) this).anInt2615);
 						else if (0L == (l & 0xffff0000L))
-							((Class206) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | (long) (((Class206) this).anInt2615 * -1136166139) << 16;
+							((SceneObjectManager) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | (long) (((SceneObjectManager) this).anInt2615 * -1136166139) << 16;
 						else if ((l & 0xffff00000000L) == 0L)
-							((Class206) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | ((long) (-1136166139 * ((Class206) this).anInt2615) << 32);
+							((SceneObjectManager) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | ((long) (-1136166139 * ((SceneObjectManager) this).anInt2615) << 32);
 						else if (0L == (l & ~0xffffffffffffL))
-							((Class206) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | ((long) (-1136166139 * ((Class206) this).anInt2615) << 48);
+							((SceneObjectManager) this).aLongArrayArrayArray2645[i_204_][i_212_][i_208_] = l | ((long) (-1136166139 * ((SceneObjectManager) this).anInt2615) << 48);
 					}
 				}
 			}
@@ -1112,12 +1112,12 @@ public class Class206 {
 	}
 
 	public void method3431(int i) {
-		for (int i_213_ = 0; i_213_ < ((Class206) this).anInt2615 * -1136166139; i_213_++) {
-			if (!((Class206) this).aBoolArray2647[i_213_]) {
-				Class287 class287 = ((Class206) this).aClass287Array2646[i_213_];
+		for (int i_213_ = 0; i_213_ < ((SceneObjectManager) this).anInt2615 * -1136166139; i_213_++) {
+			if (!((SceneObjectManager) this).aBoolArray2647[i_213_]) {
+				Class287 class287 = ((SceneObjectManager) this).aClass287Array2646[i_213_];
 				Class282_Sub24 class282_sub24 = class287.aClass282_Sub24_3425;
 				int i_214_ = -2046020753 * class287.anInt3419;
-				int i_215_ = (class282_sub24.method12370(-789603523) - ((Class206) this).anInt2594 * -1428980483);
+				int i_215_ = (class282_sub24.method12370(-789603523) - ((SceneObjectManager) this).anInt2594 * -1428980483);
 				int i_216_ = (2 * i_215_ >> -1928575293 * anInt2592) + 1;
 				int i_217_ = 0;
 				int[] is = new int[i_216_ * i_216_];
@@ -1144,7 +1144,7 @@ public class Class206 {
 						i_226_ = anInt2617 * -1912960305 - 1;
 					for (int i_227_ = i_225_; i_227_ <= i_226_; i_227_++) {
 						int i_228_ = 1;
-						Class521_Sub1_Sub1 class521_sub1_sub1 = method3413(i_214_, i_227_, i_221_, null, -233664382);
+						Class521_Sub1_Sub1 class521_sub1_sub1 = getInteractableObject(i_214_, i_227_, i_221_, null, -233664382);
 						if (null != class521_sub1_sub1 && (((Class521_Sub1_Sub1) class521_sub1_sub1).aByte9454) != 0) {
 							if (1 == (((Class521_Sub1_Sub1) class521_sub1_sub1).aByte9454)) {
 								boolean bool = i_227_ - 1 >= i_225_;
@@ -1190,7 +1190,7 @@ public class Class206 {
 					}
 					i_217_++;
 				}
-				((Class206) this).aBoolArray2647[i_213_] = true;
+				((SceneObjectManager) this).aBoolArray2647[i_213_] = true;
 				if (aBool2644)
 					aClass390Array2591[i_214_].method6713(class282_sub24, is);
 			}
@@ -1198,7 +1198,7 @@ public class Class206 {
 	}
 
 	public int method3432(int i, int i_243_, byte i_244_) {
-		return (((Class206) this).aByteArrayArray2613 != null ? ((Class206) this).aByteArrayArray2613[i][i_243_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2613 != null ? ((SceneObjectManager) this).aByteArrayArray2613[i][i_243_] & 0xff : 0);
 	}
 
 	public void method3433(int i) {
@@ -1280,67 +1280,67 @@ public class Class206 {
 
 	void method3441(boolean bool, byte[][][] is, int i, byte i_254_, int i_255_) {
 		int i_256_ = bool ? 1 : 0;
-		((Class206) this).anInt2623 = 0;
-		((Class206) this).anInt2624 = 0;
-		((Class206) this).anInt2609 += -162594145;
+		((SceneObjectManager) this).anInt2623 = 0;
+		((SceneObjectManager) this).anInt2624 = 0;
+		((SceneObjectManager) this).anInt2609 += -162594145;
 		if (0 == (i_255_ & 0x2)) {
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2605[i_256_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_256_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) -60);
 				if ((-1 != ((Class521_Sub1) class521_sub1).anInt7969 * 1272394495) && !method3424(class521_sub1, bool, is, i, i_254_))
-					((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
+					((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
 			}
 		}
 		if ((i_255_ & 0x1) == 0) {
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2633[i_256_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_256_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) -30);
 				if ((1272394495 * ((Class521_Sub1) class521_sub1).anInt7969 != -1) && !method3424(class521_sub1, bool, is, i, i_254_))
-					((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
+					((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
 			}
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2649[i_256_]; class521_sub1 != null; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_256_]; class521_sub1 != null; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) 18);
 				if ((((Class521_Sub1) class521_sub1).anInt7969 * 1272394495 != -1) && !method3424(class521_sub1, bool, is, i, i_254_)) {
 					if (class521_sub1.method12987(1931050089))
-						((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
+						((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
 					else
-						((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
+						((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
 				}
 			}
 			if (!bool) {
-				for (int i_257_ = 0; i_257_ < -1983534645 * ((Class206) this).anInt2616; i_257_++) {
-					method3421((((Class206) this).aClass521_Sub1_Sub1Array2627[i_257_]), (byte) 8);
-					if ((1272394495 * ((Class521_Sub1_Sub1) (((Class206) this).aClass521_Sub1_Sub1Array2627[i_257_])).anInt7969) != -1 && !method3424((((Class206) this).aClass521_Sub1_Sub1Array2627[i_257_]), bool, is, i, i_254_)) {
-						if (((Class206) this).aClass521_Sub1_Sub1Array2627[i_257_].method12987(1185762690))
-							((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = (((Class206) this).aClass521_Sub1_Sub1Array2627[i_257_]);
+				for (int i_257_ = 0; i_257_ < -1983534645 * ((SceneObjectManager) this).anInt2616; i_257_++) {
+					method3421((((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_257_]), (byte) 8);
+					if ((1272394495 * ((Class521_Sub1_Sub1) (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_257_])).anInt7969) != -1 && !method3424((((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_257_]), bool, is, i, i_254_)) {
+						if (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_257_].method12987(1185762690))
+							((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_257_]);
 						else
-							((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = (((Class206) this).aClass521_Sub1_Sub1Array2627[i_257_]);
+							((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_257_]);
 					}
 				}
 			}
 		}
-		if (-390666023 * ((Class206) this).anInt2623 > 0) {
-			method3466(((Class206) this).aClass521_Sub1Array2626, 0, ((Class206) this).anInt2623 * -390666023 - 1);
-			for (int i_258_ = 0; i_258_ < ((Class206) this).anInt2623 * -390666023; i_258_++)
-				method3508(((Class206) this).aClass521_Sub1Array2626[i_258_], ((Class206) this).aClass282_Sub24Array2642);
+		if (-390666023 * ((SceneObjectManager) this).anInt2623 > 0) {
+			method3466(((SceneObjectManager) this).aClass521_Sub1Array2626, 0, ((SceneObjectManager) this).anInt2623 * -390666023 - 1);
+			for (int i_258_ = 0; i_258_ < ((SceneObjectManager) this).anInt2623 * -390666023; i_258_++)
+				method3508(((SceneObjectManager) this).aClass521_Sub1Array2626[i_258_], ((SceneObjectManager) this).aClass282_Sub24Array2642);
 		}
-		if (((Class206) this).aBool2598)
-			((Class206) this).aClass505_2596.method8547(0, null);
+		if (((SceneObjectManager) this).aBool2598)
+			((SceneObjectManager) this).aClass505_2596.method8547(0, null);
 		if ((i_255_ & 0x2) == 0) {
 			for (int i_259_ = 0; i_259_ < -1485737447 * anInt2601; i_259_++) {
 				if (i_259_ >= i && is != null) {
-					int i_260_ = ((Class206) this).aBoolArrayArray2651.length;
-					if ((((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053) > -1912960305 * anInt2617)
-						i_260_ -= (((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053 - anInt2617 * -1912960305);
-					int i_261_ = ((Class206) this).aBoolArrayArray2651[0].length;
-					if ((((Class206) this).aBoolArrayArray2651[0].length + ((Class206) this).anInt2621 * -1955723827) > -18177099 * anInt2603)
-						i_261_ -= (((Class206) this).anInt2621 * -1955723827 + (((Class206) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
-					boolean[][] bools = ((Class206) this).aBoolArrayArray2635;
-					if (((Class206) this).aBool2599) {
-						for (int i_262_ = ((Class206) this).anInt2602 * -1275764031; i_262_ < i_260_; i_262_++) {
-							int i_263_ = (i_262_ + 260560053 * ((Class206) this).anInt2637 - (-1275764031 * ((Class206) this).anInt2602));
-							for (int i_264_ = (-2139776287 * ((Class206) this).anInt2636); i_264_ < i_261_; i_264_++) {
+					int i_260_ = ((SceneObjectManager) this).aBoolArrayArray2651.length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053) > -1912960305 * anInt2617)
+						i_260_ -= (((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053 - anInt2617 * -1912960305);
+					int i_261_ = ((SceneObjectManager) this).aBoolArrayArray2651[0].length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651[0].length + ((SceneObjectManager) this).anInt2621 * -1955723827) > -18177099 * anInt2603)
+						i_261_ -= (((SceneObjectManager) this).anInt2621 * -1955723827 + (((SceneObjectManager) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
+					boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2635;
+					if (((SceneObjectManager) this).aBool2599) {
+						for (int i_262_ = ((SceneObjectManager) this).anInt2602 * -1275764031; i_262_ < i_260_; i_262_++) {
+							int i_263_ = (i_262_ + 260560053 * ((SceneObjectManager) this).anInt2637 - (-1275764031 * ((SceneObjectManager) this).anInt2602));
+							for (int i_264_ = (-2139776287 * ((SceneObjectManager) this).anInt2636); i_264_ < i_261_; i_264_++) {
 								bools[i_262_][i_264_] = false;
-								if (((Class206) this).aBoolArrayArray2651[i_262_][i_264_]) {
-									int i_265_ = (i_264_ + (((Class206) this).anInt2621 * -1955723827) - (-2139776287 * ((Class206) this).anInt2636));
+								if (((SceneObjectManager) this).aBoolArrayArray2651[i_262_][i_264_]) {
+									int i_265_ = (i_264_ + (((SceneObjectManager) this).anInt2621 * -1955723827) - (-2139776287 * ((SceneObjectManager) this).anInt2636));
 									for (int i_266_ = i_259_; i_266_ >= 0; i_266_--) {
 										if ((null != (aClass293ArrayArrayArray2604[i_266_][i_263_][i_265_])) && (aClass293ArrayArrayArray2604[i_266_][i_263_][i_265_].aByte3507) == i_259_) {
 											if ((i_266_ >= i && (is[i_266_][i_263_][i_265_] == i_254_)) || (aClass201_2600.method3271(i_259_, i_263_, i_265_)))
@@ -1354,100 +1354,100 @@ public class Class206 {
 							}
 						}
 					}
-					aClass390Array2591[i_259_].method6717(((Class206) this).anInt2628 * -527863643, 1580412859 * ((Class206) this).anInt2629, 1459994833 * ((Class206) this).anInt2652, ((Class206) this).aBoolArrayArray2635, false, i_255_);
+					aClass390Array2591[i_259_].method6717(((SceneObjectManager) this).anInt2628 * -527863643, 1580412859 * ((SceneObjectManager) this).anInt2629, 1459994833 * ((SceneObjectManager) this).anInt2652, ((SceneObjectManager) this).aBoolArrayArray2635, false, i_255_);
 				} else {
-					int i_267_ = ((Class206) this).aBoolArrayArray2651.length;
-					if ((((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053) > anInt2617 * -1912960305)
-						i_267_ -= (260560053 * ((Class206) this).anInt2637 + ((Class206) this).aBoolArrayArray2651.length - anInt2617 * -1912960305);
-					int i_268_ = ((Class206) this).aBoolArrayArray2651[0].length;
-					if ((-1955723827 * ((Class206) this).anInt2621 + ((Class206) this).aBoolArrayArray2651[0].length) > anInt2603 * -18177099)
-						i_268_ -= (((Class206) this).anInt2621 * -1955723827 + (((Class206) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
-					boolean[][] bools = ((Class206) this).aBoolArrayArray2635;
-					if (((Class206) this).aBool2599) {
-						for (int i_269_ = -1275764031 * ((Class206) this).anInt2602; i_269_ < i_267_; i_269_++) {
-							int i_270_ = (i_269_ + 260560053 * ((Class206) this).anInt2637 - (-1275764031 * ((Class206) this).anInt2602));
-							for (int i_271_ = (((Class206) this).anInt2636 * -2139776287); i_271_ < i_268_; i_271_++) {
-								if ((((Class206) this).aBoolArrayArray2651[i_269_][i_271_]) && !(aClass201_2600.method3271(i_259_, i_270_, (i_271_ + (-1955723827 * ((Class206) this).anInt2621) - -2139776287 * (((Class206) this).anInt2636)))))
+					int i_267_ = ((SceneObjectManager) this).aBoolArrayArray2651.length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053) > anInt2617 * -1912960305)
+						i_267_ -= (260560053 * ((SceneObjectManager) this).anInt2637 + ((SceneObjectManager) this).aBoolArrayArray2651.length - anInt2617 * -1912960305);
+					int i_268_ = ((SceneObjectManager) this).aBoolArrayArray2651[0].length;
+					if ((-1955723827 * ((SceneObjectManager) this).anInt2621 + ((SceneObjectManager) this).aBoolArrayArray2651[0].length) > anInt2603 * -18177099)
+						i_268_ -= (((SceneObjectManager) this).anInt2621 * -1955723827 + (((SceneObjectManager) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
+					boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2635;
+					if (((SceneObjectManager) this).aBool2599) {
+						for (int i_269_ = -1275764031 * ((SceneObjectManager) this).anInt2602; i_269_ < i_267_; i_269_++) {
+							int i_270_ = (i_269_ + 260560053 * ((SceneObjectManager) this).anInt2637 - (-1275764031 * ((SceneObjectManager) this).anInt2602));
+							for (int i_271_ = (((SceneObjectManager) this).anInt2636 * -2139776287); i_271_ < i_268_; i_271_++) {
+								if ((((SceneObjectManager) this).aBoolArrayArray2651[i_269_][i_271_]) && !(aClass201_2600.method3271(i_259_, i_270_, (i_271_ + (-1955723827 * ((SceneObjectManager) this).anInt2621) - -2139776287 * (((SceneObjectManager) this).anInt2636)))))
 									bools[i_269_][i_271_] = true;
 								else
 									bools[i_269_][i_271_] = false;
 							}
 						}
 					}
-					aClass390Array2591[i_259_].method6717(((Class206) this).anInt2628 * -527863643, 1580412859 * ((Class206) this).anInt2629, ((Class206) this).anInt2652 * 1459994833, ((Class206) this).aBoolArrayArray2635, true, i_255_);
+					aClass390Array2591[i_259_].method6717(((SceneObjectManager) this).anInt2628 * -527863643, 1580412859 * ((SceneObjectManager) this).anInt2629, ((SceneObjectManager) this).anInt2652 * 1459994833, ((SceneObjectManager) this).aBoolArrayArray2635, true, i_255_);
 				}
 			}
 		}
-		if (227522527 * ((Class206) this).anInt2624 > 0) {
-			method3502(((Class206) this).aClass521_Sub1Array2625, 0, 227522527 * ((Class206) this).anInt2624 - 1);
-			for (int i_272_ = 0; i_272_ < ((Class206) this).anInt2624 * 227522527; i_272_++)
-				method3508(((Class206) this).aClass521_Sub1Array2625[i_272_], ((Class206) this).aClass282_Sub24Array2642);
+		if (227522527 * ((SceneObjectManager) this).anInt2624 > 0) {
+			method3502(((SceneObjectManager) this).aClass521_Sub1Array2625, 0, 227522527 * ((SceneObjectManager) this).anInt2624 - 1);
+			for (int i_272_ = 0; i_272_ < ((SceneObjectManager) this).anInt2624 * 227522527; i_272_++)
+				method3508(((SceneObjectManager) this).aClass521_Sub1Array2625[i_272_], ((SceneObjectManager) this).aClass282_Sub24Array2642);
 		}
 	}
 
 	void method3442(boolean bool, byte[][][] is, int i, byte i_273_, int i_274_) {
 		int i_275_ = bool ? 1 : 0;
-		((Class206) this).anInt2623 = 0;
-		((Class206) this).anInt2624 = 0;
-		((Class206) this).anInt2609 += -162594145;
+		((SceneObjectManager) this).anInt2623 = 0;
+		((SceneObjectManager) this).anInt2624 = 0;
+		((SceneObjectManager) this).anInt2609 += -162594145;
 		if (0 == (i_274_ & 0x2)) {
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2605[i_275_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_275_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) -71);
 				if ((-1 != ((Class521_Sub1) class521_sub1).anInt7969 * 1272394495) && !method3424(class521_sub1, bool, is, i, i_273_))
-					((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
+					((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
 			}
 		}
 		if ((i_274_ & 0x1) == 0) {
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2633[i_275_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_275_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) 50);
 				if ((1272394495 * ((Class521_Sub1) class521_sub1).anInt7969 != -1) && !method3424(class521_sub1, bool, is, i, i_273_))
-					((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
+					((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
 			}
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2649[i_275_]; class521_sub1 != null; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_275_]; class521_sub1 != null; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) -11);
 				if ((((Class521_Sub1) class521_sub1).anInt7969 * 1272394495 != -1) && !method3424(class521_sub1, bool, is, i, i_273_)) {
 					if (class521_sub1.method12987(1059891180))
-						((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
+						((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
 					else
-						((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
+						((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
 				}
 			}
 			if (!bool) {
-				for (int i_276_ = 0; i_276_ < -1983534645 * ((Class206) this).anInt2616; i_276_++) {
-					method3421((((Class206) this).aClass521_Sub1_Sub1Array2627[i_276_]), (byte) 21);
-					if ((1272394495 * ((Class521_Sub1_Sub1) (((Class206) this).aClass521_Sub1_Sub1Array2627[i_276_])).anInt7969) != -1 && !method3424((((Class206) this).aClass521_Sub1_Sub1Array2627[i_276_]), bool, is, i, i_273_)) {
-						if (((Class206) this).aClass521_Sub1_Sub1Array2627[i_276_].method12987(1332006186))
-							((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = (((Class206) this).aClass521_Sub1_Sub1Array2627[i_276_]);
+				for (int i_276_ = 0; i_276_ < -1983534645 * ((SceneObjectManager) this).anInt2616; i_276_++) {
+					method3421((((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_276_]), (byte) 21);
+					if ((1272394495 * ((Class521_Sub1_Sub1) (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_276_])).anInt7969) != -1 && !method3424((((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_276_]), bool, is, i, i_273_)) {
+						if (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_276_].method12987(1332006186))
+							((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_276_]);
 						else
-							((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = (((Class206) this).aClass521_Sub1_Sub1Array2627[i_276_]);
+							((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_276_]);
 					}
 				}
 			}
 		}
-		if (-390666023 * ((Class206) this).anInt2623 > 0) {
-			method3466(((Class206) this).aClass521_Sub1Array2626, 0, ((Class206) this).anInt2623 * -390666023 - 1);
-			for (int i_277_ = 0; i_277_ < ((Class206) this).anInt2623 * -390666023; i_277_++)
-				method3508(((Class206) this).aClass521_Sub1Array2626[i_277_], ((Class206) this).aClass282_Sub24Array2642);
+		if (-390666023 * ((SceneObjectManager) this).anInt2623 > 0) {
+			method3466(((SceneObjectManager) this).aClass521_Sub1Array2626, 0, ((SceneObjectManager) this).anInt2623 * -390666023 - 1);
+			for (int i_277_ = 0; i_277_ < ((SceneObjectManager) this).anInt2623 * -390666023; i_277_++)
+				method3508(((SceneObjectManager) this).aClass521_Sub1Array2626[i_277_], ((SceneObjectManager) this).aClass282_Sub24Array2642);
 		}
-		if (((Class206) this).aBool2598)
-			((Class206) this).aClass505_2596.method8547(0, null);
+		if (((SceneObjectManager) this).aBool2598)
+			((SceneObjectManager) this).aClass505_2596.method8547(0, null);
 		if ((i_274_ & 0x2) == 0) {
 			for (int i_278_ = 0; i_278_ < -1485737447 * anInt2601; i_278_++) {
 				if (i_278_ >= i && is != null) {
-					int i_279_ = ((Class206) this).aBoolArrayArray2651.length;
-					if ((((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053) > -1912960305 * anInt2617)
-						i_279_ -= (((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053 - anInt2617 * -1912960305);
-					int i_280_ = ((Class206) this).aBoolArrayArray2651[0].length;
-					if ((((Class206) this).aBoolArrayArray2651[0].length + ((Class206) this).anInt2621 * -1955723827) > -18177099 * anInt2603)
-						i_280_ -= (((Class206) this).anInt2621 * -1955723827 + (((Class206) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
-					boolean[][] bools = ((Class206) this).aBoolArrayArray2635;
-					if (((Class206) this).aBool2599) {
-						for (int i_281_ = ((Class206) this).anInt2602 * -1275764031; i_281_ < i_279_; i_281_++) {
-							int i_282_ = (i_281_ + 260560053 * ((Class206) this).anInt2637 - (-1275764031 * ((Class206) this).anInt2602));
-							for (int i_283_ = (-2139776287 * ((Class206) this).anInt2636); i_283_ < i_280_; i_283_++) {
+					int i_279_ = ((SceneObjectManager) this).aBoolArrayArray2651.length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053) > -1912960305 * anInt2617)
+						i_279_ -= (((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053 - anInt2617 * -1912960305);
+					int i_280_ = ((SceneObjectManager) this).aBoolArrayArray2651[0].length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651[0].length + ((SceneObjectManager) this).anInt2621 * -1955723827) > -18177099 * anInt2603)
+						i_280_ -= (((SceneObjectManager) this).anInt2621 * -1955723827 + (((SceneObjectManager) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
+					boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2635;
+					if (((SceneObjectManager) this).aBool2599) {
+						for (int i_281_ = ((SceneObjectManager) this).anInt2602 * -1275764031; i_281_ < i_279_; i_281_++) {
+							int i_282_ = (i_281_ + 260560053 * ((SceneObjectManager) this).anInt2637 - (-1275764031 * ((SceneObjectManager) this).anInt2602));
+							for (int i_283_ = (-2139776287 * ((SceneObjectManager) this).anInt2636); i_283_ < i_280_; i_283_++) {
 								bools[i_281_][i_283_] = false;
-								if (((Class206) this).aBoolArrayArray2651[i_281_][i_283_]) {
-									int i_284_ = (i_283_ + (((Class206) this).anInt2621 * -1955723827) - (-2139776287 * ((Class206) this).anInt2636));
+								if (((SceneObjectManager) this).aBoolArrayArray2651[i_281_][i_283_]) {
+									int i_284_ = (i_283_ + (((SceneObjectManager) this).anInt2621 * -1955723827) - (-2139776287 * ((SceneObjectManager) this).anInt2636));
 									for (int i_285_ = i_278_; i_285_ >= 0; i_285_--) {
 										if ((null != (aClass293ArrayArrayArray2604[i_285_][i_282_][i_284_])) && (aClass293ArrayArrayArray2604[i_285_][i_282_][i_284_].aByte3507) == i_278_) {
 											if ((i_285_ >= i && (is[i_285_][i_282_][i_284_] == i_273_)) || (aClass201_2600.method3271(i_278_, i_282_, i_284_)))
@@ -1461,34 +1461,34 @@ public class Class206 {
 							}
 						}
 					}
-					aClass390Array2591[i_278_].method6717(((Class206) this).anInt2628 * -527863643, 1580412859 * ((Class206) this).anInt2629, 1459994833 * ((Class206) this).anInt2652, ((Class206) this).aBoolArrayArray2635, false, i_274_);
+					aClass390Array2591[i_278_].method6717(((SceneObjectManager) this).anInt2628 * -527863643, 1580412859 * ((SceneObjectManager) this).anInt2629, 1459994833 * ((SceneObjectManager) this).anInt2652, ((SceneObjectManager) this).aBoolArrayArray2635, false, i_274_);
 				} else {
-					int i_286_ = ((Class206) this).aBoolArrayArray2651.length;
-					if ((((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053) > anInt2617 * -1912960305)
-						i_286_ -= (260560053 * ((Class206) this).anInt2637 + ((Class206) this).aBoolArrayArray2651.length - anInt2617 * -1912960305);
-					int i_287_ = ((Class206) this).aBoolArrayArray2651[0].length;
-					if ((-1955723827 * ((Class206) this).anInt2621 + ((Class206) this).aBoolArrayArray2651[0].length) > anInt2603 * -18177099)
-						i_287_ -= (((Class206) this).anInt2621 * -1955723827 + (((Class206) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
-					boolean[][] bools = ((Class206) this).aBoolArrayArray2635;
-					if (((Class206) this).aBool2599) {
-						for (int i_288_ = -1275764031 * ((Class206) this).anInt2602; i_288_ < i_286_; i_288_++) {
-							int i_289_ = (i_288_ + 260560053 * ((Class206) this).anInt2637 - (-1275764031 * ((Class206) this).anInt2602));
-							for (int i_290_ = (((Class206) this).anInt2636 * -2139776287); i_290_ < i_287_; i_290_++) {
-								if ((((Class206) this).aBoolArrayArray2651[i_288_][i_290_]) && !(aClass201_2600.method3271(i_278_, i_289_, (i_290_ + (-1955723827 * ((Class206) this).anInt2621) - -2139776287 * (((Class206) this).anInt2636)))))
+					int i_286_ = ((SceneObjectManager) this).aBoolArrayArray2651.length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053) > anInt2617 * -1912960305)
+						i_286_ -= (260560053 * ((SceneObjectManager) this).anInt2637 + ((SceneObjectManager) this).aBoolArrayArray2651.length - anInt2617 * -1912960305);
+					int i_287_ = ((SceneObjectManager) this).aBoolArrayArray2651[0].length;
+					if ((-1955723827 * ((SceneObjectManager) this).anInt2621 + ((SceneObjectManager) this).aBoolArrayArray2651[0].length) > anInt2603 * -18177099)
+						i_287_ -= (((SceneObjectManager) this).anInt2621 * -1955723827 + (((SceneObjectManager) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
+					boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2635;
+					if (((SceneObjectManager) this).aBool2599) {
+						for (int i_288_ = -1275764031 * ((SceneObjectManager) this).anInt2602; i_288_ < i_286_; i_288_++) {
+							int i_289_ = (i_288_ + 260560053 * ((SceneObjectManager) this).anInt2637 - (-1275764031 * ((SceneObjectManager) this).anInt2602));
+							for (int i_290_ = (((SceneObjectManager) this).anInt2636 * -2139776287); i_290_ < i_287_; i_290_++) {
+								if ((((SceneObjectManager) this).aBoolArrayArray2651[i_288_][i_290_]) && !(aClass201_2600.method3271(i_278_, i_289_, (i_290_ + (-1955723827 * ((SceneObjectManager) this).anInt2621) - -2139776287 * (((SceneObjectManager) this).anInt2636)))))
 									bools[i_288_][i_290_] = true;
 								else
 									bools[i_288_][i_290_] = false;
 							}
 						}
 					}
-					aClass390Array2591[i_278_].method6717(((Class206) this).anInt2628 * -527863643, 1580412859 * ((Class206) this).anInt2629, ((Class206) this).anInt2652 * 1459994833, ((Class206) this).aBoolArrayArray2635, true, i_274_);
+					aClass390Array2591[i_278_].method6717(((SceneObjectManager) this).anInt2628 * -527863643, 1580412859 * ((SceneObjectManager) this).anInt2629, ((SceneObjectManager) this).anInt2652 * 1459994833, ((SceneObjectManager) this).aBoolArrayArray2635, true, i_274_);
 				}
 			}
 		}
-		if (227522527 * ((Class206) this).anInt2624 > 0) {
-			method3502(((Class206) this).aClass521_Sub1Array2625, 0, 227522527 * ((Class206) this).anInt2624 - 1);
-			for (int i_291_ = 0; i_291_ < ((Class206) this).anInt2624 * 227522527; i_291_++)
-				method3508(((Class206) this).aClass521_Sub1Array2625[i_291_], ((Class206) this).aClass282_Sub24Array2642);
+		if (227522527 * ((SceneObjectManager) this).anInt2624 > 0) {
+			method3502(((SceneObjectManager) this).aClass521_Sub1Array2625, 0, 227522527 * ((SceneObjectManager) this).anInt2624 - 1);
+			for (int i_291_ = 0; i_291_ < ((SceneObjectManager) this).anInt2624 * 227522527; i_291_++)
+				method3508(((SceneObjectManager) this).aClass521_Sub1Array2625[i_291_], ((SceneObjectManager) this).aClass282_Sub24Array2642);
 		}
 	}
 
@@ -1526,60 +1526,60 @@ public class Class206 {
 
 	public void method3447(int i, int i_299_, int i_300_, int i_301_, byte[][][] is, int[] is_302_, int[] is_303_, int[] is_304_, int[] is_305_, int[] is_306_, int i_307_, byte i_308_, int i_309_, int i_310_, boolean bool, boolean bool_311_, int i_312_, boolean bool_313_) {
 		((Class201) aClass201_2600).aBool2542 = true;
-		((Class206) this).aBool2599 = bool_311_;
-		((Class206) this).anInt2628 = (i_299_ >> anInt2592 * -1928575293) * 453572397;
-		((Class206) this).anInt2629 = (i_301_ >> anInt2592 * -1928575293) * -1765393037;
-		((Class206) this).anInt2630 = i_299_ * -2116407601;
-		((Class206) this).anInt2650 = i_301_ * 1955010611;
-		((Class206) this).anInt2632 = i_300_ * 449309197;
-		((Class206) this).anInt2637 = (((Class206) this).anInt2628 * -94301647 - ((Class206) this).anInt2652 * -589362899);
-		if (260560053 * ((Class206) this).anInt2637 < 0) {
-			((Class206) this).anInt2602 = -(-869346571 * ((Class206) this).anInt2637);
-			((Class206) this).anInt2637 = 0;
+		((SceneObjectManager) this).aBool2599 = bool_311_;
+		((SceneObjectManager) this).anInt2628 = (i_299_ >> anInt2592 * -1928575293) * 453572397;
+		((SceneObjectManager) this).anInt2629 = (i_301_ >> anInt2592 * -1928575293) * -1765393037;
+		((SceneObjectManager) this).anInt2630 = i_299_ * -2116407601;
+		((SceneObjectManager) this).anInt2650 = i_301_ * 1955010611;
+		((SceneObjectManager) this).anInt2632 = i_300_ * 449309197;
+		((SceneObjectManager) this).anInt2637 = (((SceneObjectManager) this).anInt2628 * -94301647 - ((SceneObjectManager) this).anInt2652 * -589362899);
+		if (260560053 * ((SceneObjectManager) this).anInt2637 < 0) {
+			((SceneObjectManager) this).anInt2602 = -(-869346571 * ((SceneObjectManager) this).anInt2637);
+			((SceneObjectManager) this).anInt2637 = 0;
 		} else
-			((Class206) this).anInt2602 = 0;
-		((Class206) this).anInt2621 = (-2134113369 * ((Class206) this).anInt2629 - 1959093013 * ((Class206) this).anInt2652);
-		if (-1955723827 * ((Class206) this).anInt2621 < 0) {
-			((Class206) this).anInt2636 = -(-823028627 * ((Class206) this).anInt2621);
-			((Class206) this).anInt2621 = 0;
+			((SceneObjectManager) this).anInt2602 = 0;
+		((SceneObjectManager) this).anInt2621 = (-2134113369 * ((SceneObjectManager) this).anInt2629 - 1959093013 * ((SceneObjectManager) this).anInt2652);
+		if (-1955723827 * ((SceneObjectManager) this).anInt2621 < 0) {
+			((SceneObjectManager) this).anInt2636 = -(-823028627 * ((SceneObjectManager) this).anInt2621);
+			((SceneObjectManager) this).anInt2621 = 0;
 		} else
-			((Class206) this).anInt2636 = 0;
-		((Class206) this).anInt2638 = (-438519439 * ((Class206) this).anInt2652 + 2114225605 * ((Class206) this).anInt2628);
-		if (170184033 * ((Class206) this).anInt2638 > -1912960305 * anInt2617)
-			((Class206) this).anInt2638 = 438474287 * anInt2617;
-		((Class206) this).anInt2640 = (-1498695357 * ((Class206) this).anInt2652 + ((Class206) this).anInt2629 * -983308767);
-		if (-887086501 * ((Class206) this).anInt2640 > -18177099 * anInt2603)
-			((Class206) this).anInt2640 = anInt2603 * 1406340911;
-		boolean[][] bools = ((Class206) this).aBoolArrayArray2651;
-		boolean[][] bools_314_ = ((Class206) this).aBoolArrayArray2635;
-		if (((Class206) this).aBool2599) {
-			for (int i_315_ = 0; i_315_ < (((Class206) this).anInt2652 * 1459994833 + ((Class206) this).anInt2652 * 1459994833 + 2); i_315_++) {
+			((SceneObjectManager) this).anInt2636 = 0;
+		((SceneObjectManager) this).anInt2638 = (-438519439 * ((SceneObjectManager) this).anInt2652 + 2114225605 * ((SceneObjectManager) this).anInt2628);
+		if (170184033 * ((SceneObjectManager) this).anInt2638 > -1912960305 * anInt2617)
+			((SceneObjectManager) this).anInt2638 = 438474287 * anInt2617;
+		((SceneObjectManager) this).anInt2640 = (-1498695357 * ((SceneObjectManager) this).anInt2652 + ((SceneObjectManager) this).anInt2629 * -983308767);
+		if (-887086501 * ((SceneObjectManager) this).anInt2640 > -18177099 * anInt2603)
+			((SceneObjectManager) this).anInt2640 = anInt2603 * 1406340911;
+		boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2651;
+		boolean[][] bools_314_ = ((SceneObjectManager) this).aBoolArrayArray2635;
+		if (((SceneObjectManager) this).aBool2599) {
+			for (int i_315_ = 0; i_315_ < (((SceneObjectManager) this).anInt2652 * 1459994833 + ((SceneObjectManager) this).anInt2652 * 1459994833 + 2); i_315_++) {
 				int i_316_ = 0;
 				int i_317_ = 0;
-				for (int i_318_ = 0; i_318_ < 2 + (((Class206) this).anInt2652 * 1459994833 + ((Class206) this).anInt2652 * 1459994833); i_318_++) {
+				for (int i_318_ = 0; i_318_ < 2 + (((SceneObjectManager) this).anInt2652 * 1459994833 + ((SceneObjectManager) this).anInt2652 * 1459994833); i_318_++) {
 					if (i_318_ > 1)
-						((Class206) this).anIntArray2641[i_318_ - 2] = i_316_;
+						((SceneObjectManager) this).anIntArray2641[i_318_ - 2] = i_316_;
 					i_316_ = i_317_;
-					int i_319_ = (-527863643 * ((Class206) this).anInt2628 - 1459994833 * ((Class206) this).anInt2652 + i_315_);
-					int i_320_ = (i_318_ + (((Class206) this).anInt2629 * 1580412859 - 1459994833 * ((Class206) this).anInt2652));
+					int i_319_ = (-527863643 * ((SceneObjectManager) this).anInt2628 - 1459994833 * ((SceneObjectManager) this).anInt2652 + i_315_);
+					int i_320_ = (i_318_ + (((SceneObjectManager) this).anInt2629 * 1580412859 - 1459994833 * ((SceneObjectManager) this).anInt2652));
 					if (i_319_ >= 0 && i_320_ >= 0 && i_319_ < anInt2617 * -1912960305 && i_320_ < anInt2603 * -18177099) {
 						int i_321_ = i_319_ << anInt2592 * -1928575293;
 						int i_322_ = i_320_ << -1928575293 * anInt2592;
 						int i_323_ = (aClass390Array2607[aClass390Array2607.length - 1].method6722(i_319_, i_320_, 65280) - (1000 << -1928575293 * anInt2592 - 7));
-						int i_324_ = ((aClass390Array2614 != null ? (aClass390Array2614[0].method6722(i_319_, i_320_, 65280) + ((Class206) this).anInt2593 * 1885735347) : (aClass390Array2607[0].method6722(i_319_, i_320_, 65280) + ((Class206) this).anInt2593 * 1885735347)) + (1000 << -1928575293 * anInt2592 - 7));
-						i_317_ = (((Class206) this).aClass505_2596.method8437(i_321_, i_323_, i_322_, i_321_, i_324_, i_322_));
-						((Class206) this).aBoolArrayArray2635[i_315_][i_318_] = i_317_ == 0;
+						int i_324_ = ((aClass390Array2614 != null ? (aClass390Array2614[0].method6722(i_319_, i_320_, 65280) + ((SceneObjectManager) this).anInt2593 * 1885735347) : (aClass390Array2607[0].method6722(i_319_, i_320_, 65280) + ((SceneObjectManager) this).anInt2593 * 1885735347)) + (1000 << -1928575293 * anInt2592 - 7));
+						i_317_ = (((SceneObjectManager) this).aClass505_2596.method8437(i_321_, i_323_, i_322_, i_321_, i_324_, i_322_));
+						((SceneObjectManager) this).aBoolArrayArray2635[i_315_][i_318_] = i_317_ == 0;
 					} else {
 						i_317_ = -1;
-						((Class206) this).aBoolArrayArray2635[i_315_][i_318_] = false;
+						((SceneObjectManager) this).aBoolArrayArray2635[i_315_][i_318_] = false;
 					}
 					if (i_315_ > 0 && i_318_ > 0) {
-						int i_325_ = (((Class206) this).anIntArray2641[i_318_ - 1] & ((Class206) this).anIntArray2641[i_318_] & i_316_ & i_317_);
-						((Class206) this).aBoolArrayArray2651[i_315_ - 1][i_318_ - 1] = i_325_ == 0;
+						int i_325_ = (((SceneObjectManager) this).anIntArray2641[i_318_ - 1] & ((SceneObjectManager) this).anIntArray2641[i_318_] & i_316_ & i_317_);
+						((SceneObjectManager) this).aBoolArrayArray2651[i_315_ - 1][i_318_ - 1] = i_325_ == 0;
 					}
 				}
-				((Class206) this).anIntArray2641[(1459994833 * ((Class206) this).anInt2652 + 1459994833 * ((Class206) this).anInt2652)] = i_316_;
-				((Class206) this).anIntArray2641[1 + (((Class206) this).anInt2652 * 1459994833 + 1459994833 * ((Class206) this).anInt2652)] = i_317_;
+				((SceneObjectManager) this).anIntArray2641[(1459994833 * ((SceneObjectManager) this).anInt2652 + 1459994833 * ((SceneObjectManager) this).anInt2652)] = i_316_;
+				((SceneObjectManager) this).anIntArray2641[1 + (((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652)] = i_317_;
 			}
 			if (!bool_313_)
 				((Class201) aClass201_2600).aBool2542 = false;
@@ -1589,24 +1589,24 @@ public class Class206 {
 				((Class201) aClass201_2600).anIntArray2562 = is_304_;
 				((Class201) aClass201_2600).anIntArray2568 = is_305_;
 				((Class201) aClass201_2600).anIntArray2560 = is_306_;
-				aClass201_2600.method3265(((Class206) this).aClass505_2596, i_307_);
+				aClass201_2600.method3265(((SceneObjectManager) this).aClass505_2596, i_307_);
 			}
 		} else {
-			if (((Class206) this).aBoolArrayArray2631 == null)
-				((Class206) this).aBoolArrayArray2631 = (new boolean[(1459994833 * ((Class206) this).anInt2652 + ((Class206) this).anInt2652 * 1459994833 + 2)][(((Class206) this).anInt2652 * 1459994833 + ((Class206) this).anInt2652 * 1459994833 + 2)]);
-			for (int i_326_ = 0; i_326_ < ((Class206) this).aBoolArrayArray2631.length; i_326_++) {
-				for (int i_327_ = 0; i_327_ < ((Class206) this).aBoolArrayArray2631[0].length; i_327_++)
-					((Class206) this).aBoolArrayArray2631[i_326_][i_327_] = true;
+			if (((SceneObjectManager) this).aBoolArrayArray2631 == null)
+				((SceneObjectManager) this).aBoolArrayArray2631 = (new boolean[(1459994833 * ((SceneObjectManager) this).anInt2652 + ((SceneObjectManager) this).anInt2652 * 1459994833 + 2)][(((SceneObjectManager) this).anInt2652 * 1459994833 + ((SceneObjectManager) this).anInt2652 * 1459994833 + 2)]);
+			for (int i_326_ = 0; i_326_ < ((SceneObjectManager) this).aBoolArrayArray2631.length; i_326_++) {
+				for (int i_327_ = 0; i_327_ < ((SceneObjectManager) this).aBoolArrayArray2631[0].length; i_327_++)
+					((SceneObjectManager) this).aBoolArrayArray2631[i_326_][i_327_] = true;
 			}
-			((Class206) this).aBoolArrayArray2635 = ((Class206) this).aBoolArrayArray2631;
-			((Class206) this).aBoolArrayArray2651 = ((Class206) this).aBoolArrayArray2631;
-			((Class206) this).anInt2637 = 0;
-			((Class206) this).anInt2621 = 0;
-			((Class206) this).anInt2638 = anInt2617 * 438474287;
-			((Class206) this).anInt2640 = 1406340911 * anInt2603;
+			((SceneObjectManager) this).aBoolArrayArray2635 = ((SceneObjectManager) this).aBoolArrayArray2631;
+			((SceneObjectManager) this).aBoolArrayArray2651 = ((SceneObjectManager) this).aBoolArrayArray2631;
+			((SceneObjectManager) this).anInt2637 = 0;
+			((SceneObjectManager) this).anInt2621 = 0;
+			((SceneObjectManager) this).anInt2638 = anInt2617 * 438474287;
+			((SceneObjectManager) this).anInt2640 = 1406340911 * anInt2603;
 			((Class201) aClass201_2600).aBool2542 = false;
 		}
-		Class108.method1848(this, ((Class206) this).aClass505_2596, 437446404);
+		Class108.method1848(this, ((SceneObjectManager) this).aClass505_2596, 437446404);
 		if (!((Login) aClass284_2648).aBool3386) {
 			Iterator iterator = aClass284_2648.aList3388.iterator();
 			while (iterator.hasNext()) {
@@ -1615,21 +1615,21 @@ public class Class206 {
 				Class279.method4969(class285, 1362412061);
 			}
 		}
-		if (((Class206) this).aBool2598) {
-			for (int i_328_ = 0; i_328_ < ((Class206) this).anInt2615 * -1136166139; i_328_++)
-				((Class206) this).aClass287Array2646[i_328_].method5053(i, bool, -1826281531);
+		if (((SceneObjectManager) this).aBool2598) {
+			for (int i_328_ = 0; i_328_ < ((SceneObjectManager) this).anInt2615 * -1136166139; i_328_++)
+				((SceneObjectManager) this).aClass287Array2646[i_328_].method5053(i, bool, -1826281531);
 		}
 		if (null != aClass293ArrayArrayArray2608) {
 			method3380(true, -914334995);
-			((Class206) this).aClass505_2596.method8475(-1, new Class90(1583160, 40, 127, 63, 0, 0, 0));
+			((SceneObjectManager) this).aClass505_2596.method8475(-1, new Class90(1583160, 40, 127, 63, 0, 0, 0));
 			method3441(true, is, i_307_, i_308_, i_312_);
-			((Class206) this).aClass505_2596.O();
+			((SceneObjectManager) this).aClass505_2596.O();
 			method3380(false, -914334995);
 		}
 		method3441(false, is, i_307_, i_308_, i_312_);
-		if (!((Class206) this).aBool2599) {
-			((Class206) this).aBoolArrayArray2651 = bools;
-			((Class206) this).aBoolArrayArray2635 = bools_314_;
+		if (!((SceneObjectManager) this).aBool2599) {
+			((SceneObjectManager) this).aBoolArrayArray2651 = bools;
+			((SceneObjectManager) this).aBoolArrayArray2635 = bools_314_;
 		}
 	}
 
@@ -1645,7 +1645,7 @@ public class Class206 {
 	}
 
 	public int method3449(int i, int i_329_) {
-		return (null != ((Class206) this).anIntArrayArray2606 ? ((Class206) this).anIntArrayArray2606[i][i_329_] & 0xffffff : 0);
+		return (null != ((SceneObjectManager) this).anIntArrayArray2606 ? ((SceneObjectManager) this).anIntArrayArray2606[i][i_329_] & 0xffffff : 0);
 	}
 
 	public Class521_Sub1_Sub2 method3450(int i, int i_330_, int i_331_) {
@@ -1659,7 +1659,7 @@ public class Class206 {
 	}
 
 	public int method3451(int i, int i_332_) {
-		return (null != ((Class206) this).anIntArrayArray2606 ? ((Class206) this).anIntArrayArray2606[i][i_332_] & 0xffffff : 0);
+		return (null != ((SceneObjectManager) this).anIntArrayArray2606 ? ((SceneObjectManager) this).anIntArrayArray2606[i][i_332_] & 0xffffff : 0);
 	}
 
 	void method3452(Class521_Sub1 class521_sub1, int i, int i_333_, int i_334_, int i_335_, int i_336_) {
@@ -1681,15 +1681,15 @@ public class Class206 {
 									Class521_Sub1_Sub5 class521_sub1_sub5 = class293.aClass521_Sub1_Sub5_3505;
 									Class521_Sub1_Sub5 class521_sub1_sub5_345_ = class293.aClass521_Sub1_Sub5_3502;
 									if (null != class521_sub1_sub5 && class521_sub1_sub5.method12985(-2063907301))
-										class521_sub1.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, ((((Class206) this).anInt2594 * -1428980483 * (1 - i_335_)) + ((i_342_ - i_333_) * (1885735347 * (((Class206) this).anInt2593)))), i_344_, (((1 - i_336_) * (-1428980483 * (((Class206) this).anInt2594))) + ((i_343_ - i_334_) * (((Class206) this).anInt2593 * 1885735347))), bool, -2001031070);
+										class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, ((((SceneObjectManager) this).anInt2594 * -1428980483 * (1 - i_335_)) + ((i_342_ - i_333_) * (1885735347 * (((SceneObjectManager) this).anInt2593)))), i_344_, (((1 - i_336_) * (-1428980483 * (((SceneObjectManager) this).anInt2594))) + ((i_343_ - i_334_) * (((SceneObjectManager) this).anInt2593 * 1885735347))), bool, -2001031070);
 									if (null != class521_sub1_sub5_345_ && class521_sub1_sub5_345_.method12985(-1646817954))
-										class521_sub1.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5_345_, (((i_342_ - i_333_) * (1885735347 * (((Class206) this).anInt2593))) + (-1428980483 * ((Class206) this).anInt2594 * (1 - i_335_))), i_344_, (((i_343_ - i_334_) * (1885735347 * (((Class206) this).anInt2593))) + ((1 - i_336_) * (((Class206) this).anInt2594 * -1428980483))), bool, -1714087738);
+										class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5_345_, (((i_342_ - i_333_) * (1885735347 * (((SceneObjectManager) this).anInt2593))) + (-1428980483 * ((SceneObjectManager) this).anInt2594 * (1 - i_335_))), i_344_, (((i_343_ - i_334_) * (1885735347 * (((SceneObjectManager) this).anInt2593))) + ((1 - i_336_) * (((SceneObjectManager) this).anInt2594 * -1428980483))), bool, -1714087738);
 									for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 										Class521_Sub1_Sub1 class521_sub1_sub1 = (class208.aClass521_Sub1_Sub1_2659);
 										if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1911399746) && ((class521_sub1_sub1.aShort9458 == i_342_) || i_337_ == i_342_) && ((class521_sub1_sub1.aShort9456 == i_343_) || i_339_ == i_343_)) {
 											int i_346_ = ((class521_sub1_sub1.aShort9455) - (class521_sub1_sub1.aShort9458) + 1);
 											int i_347_ = 1 + ((class521_sub1_sub1.aShort9457) - (class521_sub1_sub1.aShort9456));
-											class521_sub1.method13013((((Class206) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((Class206) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_333_)) + ((((Class206) this).anInt2594) * -1428980483 * (i_346_ - i_335_))), i_344_, (((i_347_ - i_336_) * ((((Class206) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_334_) * ((((Class206) this).anInt2593) * 1885735347))), bool, -1732186752);
+											class521_sub1.method13013((((SceneObjectManager) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((SceneObjectManager) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_333_)) + ((((SceneObjectManager) this).anInt2594) * -1428980483 * (i_346_ - i_335_))), i_344_, (((i_347_ - i_336_) * ((((SceneObjectManager) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_334_) * ((((SceneObjectManager) this).anInt2593) * 1885735347))), bool, -1732186752);
 										}
 									}
 								}
@@ -1705,20 +1705,20 @@ public class Class206 {
 
 	void method3453(Class521_Sub1 class521_sub1) {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((Class206) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-2077915442) >> 1)), (float) (int) class385.aFloat4673, ((Class206) this).aFloatArray2639);
-		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((Class206) this).aFloatArray2639[2] * -721433345;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-2077915442) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	public int method3454(int i, int i_348_) {
-		return (((Class206) this).aByteArrayArray2612 != null ? ((Class206) this).aByteArrayArray2612[i][i_348_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2612 != null ? ((SceneObjectManager) this).aByteArrayArray2612[i][i_348_] & 0xff : 0);
 	}
 
 	public int method3455(int i, int i_349_) {
-		return (((Class206) this).aByteArrayArray2613 != null ? ((Class206) this).aByteArrayArray2613[i][i_349_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2613 != null ? ((SceneObjectManager) this).aByteArrayArray2613[i][i_349_] & 0xff : 0);
 	}
 
 	public int method3456(int i, int i_350_) {
-		return (((Class206) this).aByteArrayArray2595 != null ? ((Class206) this).aByteArrayArray2595[i][i_350_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2595 != null ? ((SceneObjectManager) this).aByteArrayArray2595[i][i_350_] & 0xff : 0);
 	}
 
 	public Class208 method3457(int i, int i_351_, int i_352_) {
@@ -1771,21 +1771,21 @@ public class Class206 {
 			int i_365_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-1673897900)) {
 				if (class521_sub1_sub3.method12987(1125733672)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_365_];
-					((Class206) this).aClass521_Sub1Array2633[i_365_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_365_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_365_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_365_];
-					((Class206) this).aClass521_Sub1Array2605[i_365_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_365_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_365_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_365_];
-				((Class206) this).aClass521_Sub1Array2649[i_365_] = class521_sub1_sub3;
+				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_365_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_365_] = class521_sub1_sub3;
 			}
 		}
 	}
 
 	public int method3462(int i, int i_366_) {
-		return (((Class206) this).aByteArrayArray2595 != null ? ((Class206) this).aByteArrayArray2595[i][i_366_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2595 != null ? ((SceneObjectManager) this).aByteArrayArray2595[i][i_366_] & 0xff : 0);
 	}
 
 	public void method3463(int i, int i_367_, int i_368_, Class521_Sub1_Sub3 class521_sub1_sub3) {
@@ -1795,40 +1795,40 @@ public class Class206 {
 			int i_369_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-1184376980)) {
 				if (class521_sub1_sub3.method12987(-140492741)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_369_];
-					((Class206) this).aClass521_Sub1Array2633[i_369_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_369_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_369_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_369_];
-					((Class206) this).aClass521_Sub1Array2605[i_369_] = class521_sub1_sub3;
+					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_369_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_369_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_369_];
-				((Class206) this).aClass521_Sub1Array2649[i_369_] = class521_sub1_sub3;
+				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_369_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_369_] = class521_sub1_sub3;
 			}
 		}
 	}
 
 	public int method3464(int i, int i_370_, int i_371_) {
-		return (((Class206) this).aByteArrayArray2595 != null ? ((Class206) this).aByteArrayArray2595[i][i_370_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2595 != null ? ((SceneObjectManager) this).aByteArrayArray2595[i][i_370_] & 0xff : 0);
 	}
 
 	public void method3465(int i, int i_372_, int i_373_, int i_374_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_372_, i_373_, 1598284427);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((Class206) this).anInt2594 * -1428980483) + (i_372_ << anInt2592 * -1928575293)), (float) i_374_, (float) ((((Class206) this).anInt2594 * -1428980483) + (i_373_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_372_ << anInt2592 * -1928575293)), (float) i_374_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_373_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_375_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1328423037)) {
 				if (class521_sub1_sub2.method12987(192360478)) {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_375_];
-					((Class206) this).aClass521_Sub1Array2633[i_375_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_375_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_375_] = class521_sub1_sub2;
 				} else {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_375_];
-					((Class206) this).aClass521_Sub1Array2605[i_375_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_375_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_375_] = class521_sub1_sub2;
 				}
 			} else {
-				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_375_];
-				((Class206) this).aClass521_Sub1Array2649[i_375_] = class521_sub1_sub2;
+				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_375_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_375_] = class521_sub1_sub2;
 			}
 		}
 	}
@@ -1858,20 +1858,20 @@ public class Class206 {
 	public void method3467(int i, int i_382_, int i_383_, int i_384_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_382_, i_383_, 1220729187);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((Class206) this).anInt2594 * -1428980483) + (i_382_ << anInt2592 * -1928575293)), (float) i_384_, (float) ((((Class206) this).anInt2594 * -1428980483) + (i_383_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_382_ << anInt2592 * -1928575293)), (float) i_384_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_383_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_385_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1257836210)) {
 				if (class521_sub1_sub2.method12987(-2053763362)) {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_385_];
-					((Class206) this).aClass521_Sub1Array2633[i_385_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_385_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_385_] = class521_sub1_sub2;
 				} else {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_385_];
-					((Class206) this).aClass521_Sub1Array2605[i_385_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_385_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_385_] = class521_sub1_sub2;
 				}
 			} else {
-				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_385_];
-				((Class206) this).aClass521_Sub1Array2649[i_385_] = class521_sub1_sub2;
+				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_385_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_385_] = class521_sub1_sub2;
 			}
 		}
 	}
@@ -1884,28 +1884,28 @@ public class Class206 {
 			int i_389_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub5.method12986(-1511604811)) {
 				if (class521_sub1_sub5.method12987(-981332563)) {
-					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_389_];
-					((Class206) this).aClass521_Sub1Array2633[i_389_] = class521_sub1_sub5;
+					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_389_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_389_] = class521_sub1_sub5;
 				} else {
-					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_389_];
-					((Class206) this).aClass521_Sub1Array2605[i_389_] = class521_sub1_sub5;
+					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_389_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_389_] = class521_sub1_sub5;
 				}
 			} else {
-				((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_389_];
-				((Class206) this).aClass521_Sub1Array2649[i_389_] = class521_sub1_sub5;
+				((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_389_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_389_] = class521_sub1_sub5;
 			}
 			if (null != class521_sub1_sub5_388_) {
 				if (class521_sub1_sub5_388_.method12986(-160943714)) {
 					if (class521_sub1_sub5_388_.method12987(493277376)) {
-						((Class521_Sub1_Sub5) class521_sub1_sub5_388_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2633[i_389_]);
-						((Class206) this).aClass521_Sub1Array2633[i_389_] = class521_sub1_sub5_388_;
+						((Class521_Sub1_Sub5) class521_sub1_sub5_388_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2633[i_389_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_389_] = class521_sub1_sub5_388_;
 					} else {
-						((Class521_Sub1_Sub5) class521_sub1_sub5_388_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2605[i_389_]);
-						((Class206) this).aClass521_Sub1Array2605[i_389_] = class521_sub1_sub5_388_;
+						((Class521_Sub1_Sub5) class521_sub1_sub5_388_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2605[i_389_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_389_] = class521_sub1_sub5_388_;
 					}
 				} else {
-					((Class521_Sub1_Sub5) class521_sub1_sub5_388_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_389_];
-					((Class206) this).aClass521_Sub1Array2649[i_389_] = class521_sub1_sub5_388_;
+					((Class521_Sub1_Sub5) class521_sub1_sub5_388_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_389_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_389_] = class521_sub1_sub5_388_;
 				}
 			}
 		}
@@ -1919,28 +1919,28 @@ public class Class206 {
 			int i_393_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub5.method12986(-172724482)) {
 				if (class521_sub1_sub5.method12987(1682522206)) {
-					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_393_];
-					((Class206) this).aClass521_Sub1Array2633[i_393_] = class521_sub1_sub5;
+					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_393_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_393_] = class521_sub1_sub5;
 				} else {
-					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_393_];
-					((Class206) this).aClass521_Sub1Array2605[i_393_] = class521_sub1_sub5;
+					((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_393_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_393_] = class521_sub1_sub5;
 				}
 			} else {
-				((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_393_];
-				((Class206) this).aClass521_Sub1Array2649[i_393_] = class521_sub1_sub5;
+				((Class521_Sub1_Sub5) class521_sub1_sub5).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_393_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_393_] = class521_sub1_sub5;
 			}
 			if (null != class521_sub1_sub5_392_) {
 				if (class521_sub1_sub5_392_.method12986(-1330860725)) {
 					if (class521_sub1_sub5_392_.method12987(-729989421)) {
-						((Class521_Sub1_Sub5) class521_sub1_sub5_392_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2633[i_393_]);
-						((Class206) this).aClass521_Sub1Array2633[i_393_] = class521_sub1_sub5_392_;
+						((Class521_Sub1_Sub5) class521_sub1_sub5_392_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2633[i_393_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_393_] = class521_sub1_sub5_392_;
 					} else {
-						((Class521_Sub1_Sub5) class521_sub1_sub5_392_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2605[i_393_]);
-						((Class206) this).aClass521_Sub1Array2605[i_393_] = class521_sub1_sub5_392_;
+						((Class521_Sub1_Sub5) class521_sub1_sub5_392_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2605[i_393_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_393_] = class521_sub1_sub5_392_;
 					}
 				} else {
-					((Class521_Sub1_Sub5) class521_sub1_sub5_392_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_393_];
-					((Class206) this).aClass521_Sub1Array2649[i_393_] = class521_sub1_sub5_392_;
+					((Class521_Sub1_Sub5) class521_sub1_sub5_392_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_393_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_393_] = class521_sub1_sub5_392_;
 				}
 			}
 		}
@@ -1954,28 +1954,28 @@ public class Class206 {
 			int i_397_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub4.method12986(-168659728)) {
 				if (class521_sub1_sub4.method12987(-1139450492)) {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_397_];
-					((Class206) this).aClass521_Sub1Array2633[i_397_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_397_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_397_] = class521_sub1_sub4;
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_397_];
-					((Class206) this).aClass521_Sub1Array2605[i_397_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_397_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_397_] = class521_sub1_sub4;
 				}
 			} else {
-				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_397_];
-				((Class206) this).aClass521_Sub1Array2649[i_397_] = class521_sub1_sub4;
+				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_397_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_397_] = class521_sub1_sub4;
 			}
 			if (null != class521_sub1_sub4_396_) {
 				if (class521_sub1_sub4_396_.method12986(-1692001456)) {
 					if (class521_sub1_sub4_396_.method12987(548854399)) {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_396_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2633[i_397_]);
-						((Class206) this).aClass521_Sub1Array2633[i_397_] = class521_sub1_sub4_396_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_396_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2633[i_397_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_397_] = class521_sub1_sub4_396_;
 					} else {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_396_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2605[i_397_]);
-						((Class206) this).aClass521_Sub1Array2605[i_397_] = class521_sub1_sub4_396_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_396_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2605[i_397_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_397_] = class521_sub1_sub4_396_;
 					}
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4_396_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_397_];
-					((Class206) this).aClass521_Sub1Array2649[i_397_] = class521_sub1_sub4_396_;
+					((Class521_Sub1_Sub4) class521_sub1_sub4_396_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_397_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_397_] = class521_sub1_sub4_396_;
 				}
 			}
 		}
@@ -1989,28 +1989,28 @@ public class Class206 {
 			int i_401_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub4.method12986(-1593296975)) {
 				if (class521_sub1_sub4.method12987(602178619)) {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_401_];
-					((Class206) this).aClass521_Sub1Array2633[i_401_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_401_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_401_] = class521_sub1_sub4;
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_401_];
-					((Class206) this).aClass521_Sub1Array2605[i_401_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_401_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_401_] = class521_sub1_sub4;
 				}
 			} else {
-				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_401_];
-				((Class206) this).aClass521_Sub1Array2649[i_401_] = class521_sub1_sub4;
+				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_401_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_401_] = class521_sub1_sub4;
 			}
 			if (null != class521_sub1_sub4_400_) {
 				if (class521_sub1_sub4_400_.method12986(-754760841)) {
 					if (class521_sub1_sub4_400_.method12987(-1702139371)) {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_400_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2633[i_401_]);
-						((Class206) this).aClass521_Sub1Array2633[i_401_] = class521_sub1_sub4_400_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_400_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2633[i_401_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_401_] = class521_sub1_sub4_400_;
 					} else {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_400_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2605[i_401_]);
-						((Class206) this).aClass521_Sub1Array2605[i_401_] = class521_sub1_sub4_400_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_400_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2605[i_401_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_401_] = class521_sub1_sub4_400_;
 					}
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4_400_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_401_];
-					((Class206) this).aClass521_Sub1Array2649[i_401_] = class521_sub1_sub4_400_;
+					((Class521_Sub1_Sub4) class521_sub1_sub4_400_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_401_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_401_] = class521_sub1_sub4_400_;
 				}
 			}
 		}
@@ -2024,28 +2024,28 @@ public class Class206 {
 			int i_405_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub4.method12986(-556169391)) {
 				if (class521_sub1_sub4.method12987(-703844049)) {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_405_];
-					((Class206) this).aClass521_Sub1Array2633[i_405_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_405_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_405_] = class521_sub1_sub4;
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_405_];
-					((Class206) this).aClass521_Sub1Array2605[i_405_] = class521_sub1_sub4;
+					((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_405_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_405_] = class521_sub1_sub4;
 				}
 			} else {
-				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_405_];
-				((Class206) this).aClass521_Sub1Array2649[i_405_] = class521_sub1_sub4;
+				((Class521_Sub1_Sub4) class521_sub1_sub4).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_405_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_405_] = class521_sub1_sub4;
 			}
 			if (null != class521_sub1_sub4_404_) {
 				if (class521_sub1_sub4_404_.method12986(-2089571966)) {
 					if (class521_sub1_sub4_404_.method12987(-1924153764)) {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_404_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2633[i_405_]);
-						((Class206) this).aClass521_Sub1Array2633[i_405_] = class521_sub1_sub4_404_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_404_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2633[i_405_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2633[i_405_] = class521_sub1_sub4_404_;
 					} else {
-						((Class521_Sub1_Sub4) class521_sub1_sub4_404_).aClass521_Sub1_7966 = (((Class206) this).aClass521_Sub1Array2605[i_405_]);
-						((Class206) this).aClass521_Sub1Array2605[i_405_] = class521_sub1_sub4_404_;
+						((Class521_Sub1_Sub4) class521_sub1_sub4_404_).aClass521_Sub1_7966 = (((SceneObjectManager) this).aClass521_Sub1Array2605[i_405_]);
+						((SceneObjectManager) this).aClass521_Sub1Array2605[i_405_] = class521_sub1_sub4_404_;
 					}
 				} else {
-					((Class521_Sub1_Sub4) class521_sub1_sub4_404_).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_405_];
-					((Class206) this).aClass521_Sub1Array2649[i_405_] = class521_sub1_sub4_404_;
+					((Class521_Sub1_Sub4) class521_sub1_sub4_404_).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_405_];
+					((SceneObjectManager) this).aClass521_Sub1Array2649[i_405_] = class521_sub1_sub4_404_;
 				}
 			}
 		}
@@ -2074,10 +2074,10 @@ public class Class206 {
 						}
 						class208_412_.aClass208_2660 = class208;
 					}
-					if (bool_406_ && ((((Class206) this).anIntArrayArray2606[i_410_][i_411_]) & ~0xffffff) != 0) {
-						i = (((Class206) this).anIntArrayArray2606[i_410_][i_411_]);
-						i_407_ = (((Class206) this).aShortArrayArray2611[i_410_][i_411_]);
-						i_408_ = (((Class206) this).aByteArrayArray2612[i_410_][i_411_]);
+					if (bool_406_ && ((((SceneObjectManager) this).anIntArrayArray2606[i_410_][i_411_]) & ~0xffffff) != 0) {
+						i = (((SceneObjectManager) this).anIntArrayArray2606[i_410_][i_411_]);
+						i_407_ = (((SceneObjectManager) this).aShortArrayArray2611[i_410_][i_411_]);
+						i_408_ = (((SceneObjectManager) this).aByteArrayArray2612[i_410_][i_411_]);
 					}
 					if (!bool && class293.aClass521_Sub1_Sub3_3499 != null && (class293.aClass521_Sub1_Sub3_3499.aShort9561 > i_409_))
 						i_409_ = class293.aClass521_Sub1_Sub3_3499.aShort9561;
@@ -2087,30 +2087,30 @@ public class Class206 {
 		if (bool_406_ && (i & ~0xffffff) != 0) {
 			for (int i_413_ = class521_sub1_sub1.aShort9458; i_413_ <= class521_sub1_sub1.aShort9455; i_413_++) {
 				for (int i_414_ = class521_sub1_sub1.aShort9456; i_414_ <= class521_sub1_sub1.aShort9457; i_414_++) {
-					if (0 == ((((Class206) this).anIntArrayArray2606[i_413_][i_414_]) & ~0xffffff)) {
-						((Class206) this).anIntArrayArray2606[i_413_][i_414_] = i;
-						((Class206) this).aShortArrayArray2611[i_413_][i_414_] = i_407_;
-						((Class206) this).aByteArrayArray2612[i_413_][i_414_] = i_408_;
+					if (0 == ((((SceneObjectManager) this).anIntArrayArray2606[i_413_][i_414_]) & ~0xffffff)) {
+						((SceneObjectManager) this).anIntArrayArray2606[i_413_][i_414_] = i;
+						((SceneObjectManager) this).aShortArrayArray2611[i_413_][i_414_] = i_407_;
+						((SceneObjectManager) this).aByteArrayArray2612[i_413_][i_414_] = i_408_;
 					}
 				}
 			}
 		}
 		if (bool) {
-			((Class206) this).aClass521_Sub1_Sub1Array2627[((((Class206) this).anInt2616 += -1378536477) * -1983534645 - 1)] = class521_sub1_sub1;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[((((SceneObjectManager) this).anInt2616 += -1378536477) * -1983534645 - 1)] = class521_sub1_sub1;
 			class521_sub1_sub1.aClass206_7970 = this;
 		} else {
 			int i_415_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub1.method12986(-984176777)) {
 				if (class521_sub1_sub1.method12987(223602346)) {
-					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_415_];
-					((Class206) this).aClass521_Sub1Array2633[i_415_] = class521_sub1_sub1;
+					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_415_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_415_] = class521_sub1_sub1;
 				} else {
-					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_415_];
-					((Class206) this).aClass521_Sub1Array2605[i_415_] = class521_sub1_sub1;
+					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_415_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_415_] = class521_sub1_sub1;
 				}
 			} else {
-				((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_415_];
-				((Class206) this).aClass521_Sub1Array2649[i_415_] = class521_sub1_sub1;
+				((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_415_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_415_] = class521_sub1_sub1;
 			}
 		}
 		if (bool) {
@@ -2145,10 +2145,10 @@ public class Class206 {
 						}
 						class208_422_.aClass208_2660 = class208;
 					}
-					if (bool_416_ && ((((Class206) this).anIntArrayArray2606[i_420_][i_421_]) & ~0xffffff) != 0) {
-						i = (((Class206) this).anIntArrayArray2606[i_420_][i_421_]);
-						i_417_ = (((Class206) this).aShortArrayArray2611[i_420_][i_421_]);
-						i_418_ = (((Class206) this).aByteArrayArray2612[i_420_][i_421_]);
+					if (bool_416_ && ((((SceneObjectManager) this).anIntArrayArray2606[i_420_][i_421_]) & ~0xffffff) != 0) {
+						i = (((SceneObjectManager) this).anIntArrayArray2606[i_420_][i_421_]);
+						i_417_ = (((SceneObjectManager) this).aShortArrayArray2611[i_420_][i_421_]);
+						i_418_ = (((SceneObjectManager) this).aByteArrayArray2612[i_420_][i_421_]);
 					}
 					if (!bool && class293.aClass521_Sub1_Sub3_3499 != null && (class293.aClass521_Sub1_Sub3_3499.aShort9561 > i_419_))
 						i_419_ = class293.aClass521_Sub1_Sub3_3499.aShort9561;
@@ -2158,30 +2158,30 @@ public class Class206 {
 		if (bool_416_ && (i & ~0xffffff) != 0) {
 			for (int i_423_ = class521_sub1_sub1.aShort9458; i_423_ <= class521_sub1_sub1.aShort9455; i_423_++) {
 				for (int i_424_ = class521_sub1_sub1.aShort9456; i_424_ <= class521_sub1_sub1.aShort9457; i_424_++) {
-					if (0 == ((((Class206) this).anIntArrayArray2606[i_423_][i_424_]) & ~0xffffff)) {
-						((Class206) this).anIntArrayArray2606[i_423_][i_424_] = i;
-						((Class206) this).aShortArrayArray2611[i_423_][i_424_] = i_417_;
-						((Class206) this).aByteArrayArray2612[i_423_][i_424_] = i_418_;
+					if (0 == ((((SceneObjectManager) this).anIntArrayArray2606[i_423_][i_424_]) & ~0xffffff)) {
+						((SceneObjectManager) this).anIntArrayArray2606[i_423_][i_424_] = i;
+						((SceneObjectManager) this).aShortArrayArray2611[i_423_][i_424_] = i_417_;
+						((SceneObjectManager) this).aByteArrayArray2612[i_423_][i_424_] = i_418_;
 					}
 				}
 			}
 		}
 		if (bool) {
-			((Class206) this).aClass521_Sub1_Sub1Array2627[((((Class206) this).anInt2616 += -1378536477) * -1983534645 - 1)] = class521_sub1_sub1;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[((((SceneObjectManager) this).anInt2616 += -1378536477) * -1983534645 - 1)] = class521_sub1_sub1;
 			class521_sub1_sub1.aClass206_7970 = this;
 		} else {
 			int i_425_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub1.method12986(-287068670)) {
 				if (class521_sub1_sub1.method12987(934625577)) {
-					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_425_];
-					((Class206) this).aClass521_Sub1Array2633[i_425_] = class521_sub1_sub1;
+					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_425_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_425_] = class521_sub1_sub1;
 				} else {
-					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_425_];
-					((Class206) this).aClass521_Sub1Array2605[i_425_] = class521_sub1_sub1;
+					((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_425_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_425_] = class521_sub1_sub1;
 				}
 			} else {
-				((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_425_];
-				((Class206) this).aClass521_Sub1Array2649[i_425_] = class521_sub1_sub1;
+				((Class521_Sub1_Sub1) class521_sub1_sub1).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_425_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_425_] = class521_sub1_sub1;
 			}
 		}
 		if (bool) {
@@ -2194,30 +2194,30 @@ public class Class206 {
 	}
 
 	public void method3475() {
-		for (int i = 0; i < ((Class206) this).anInt2616 * -1983534645; i++) {
-			Class521_Sub1_Sub1 class521_sub1_sub1 = ((Class206) this).aClass521_Sub1_Sub1Array2627[i];
+		for (int i = 0; i < ((SceneObjectManager) this).anInt2616 * -1983534645; i++) {
+			Class521_Sub1_Sub1 class521_sub1_sub1 = ((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i];
 			method3407(class521_sub1_sub1, true, -1696604087);
-			((Class206) this).aClass521_Sub1_Sub1Array2627[i] = null;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i] = null;
 		}
-		((Class206) this).anInt2616 = 0;
+		((SceneObjectManager) this).anInt2616 = 0;
 	}
 
 	public void method3476() {
-		for (int i = 0; i < ((Class206) this).anInt2616 * -1983534645; i++) {
-			Class521_Sub1_Sub1 class521_sub1_sub1 = ((Class206) this).aClass521_Sub1_Sub1Array2627[i];
+		for (int i = 0; i < ((SceneObjectManager) this).anInt2616 * -1983534645; i++) {
+			Class521_Sub1_Sub1 class521_sub1_sub1 = ((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i];
 			method3407(class521_sub1_sub1, true, -1696604087);
-			((Class206) this).aClass521_Sub1_Sub1Array2627[i] = null;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i] = null;
 		}
-		((Class206) this).anInt2616 = 0;
+		((SceneObjectManager) this).anInt2616 = 0;
 	}
 
 	public void method3477() {
-		for (int i = 0; i < ((Class206) this).anInt2616 * -1983534645; i++) {
-			Class521_Sub1_Sub1 class521_sub1_sub1 = ((Class206) this).aClass521_Sub1_Sub1Array2627[i];
+		for (int i = 0; i < ((SceneObjectManager) this).anInt2616 * -1983534645; i++) {
+			Class521_Sub1_Sub1 class521_sub1_sub1 = ((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i];
 			method3407(class521_sub1_sub1, true, -1696604087);
-			((Class206) this).aClass521_Sub1_Sub1Array2627[i] = null;
+			((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i] = null;
 		}
-		((Class206) this).anInt2616 = 0;
+		((SceneObjectManager) this).anInt2616 = 0;
 	}
 
 	public Class521_Sub1_Sub5 method3478(int i, int i_426_, int i_427_) {
@@ -2308,7 +2308,7 @@ public class Class206 {
 	}
 
 	public int method3484(int i, int i_448_) {
-		return (null != ((Class206) this).aByteArrayArray2620 ? ((Class206) this).aByteArrayArray2620[i][i_448_] & 0xff : 0);
+		return (null != ((SceneObjectManager) this).aByteArrayArray2620 ? ((SceneObjectManager) this).aByteArrayArray2620[i][i_448_] & 0xff : 0);
 	}
 
 	public Class521_Sub1_Sub4 method3485(int i, int i_449_, int i_450_) {
@@ -2512,34 +2512,34 @@ public class Class206 {
 			class521_sub1.method11176();
 			for (int i = 0; i < 2; i++) {
 				Class521_Sub1 class521_sub1_488_ = null;
-				for (Class521_Sub1 class521_sub1_489_ = ((Class206) this).aClass521_Sub1Array2605[i]; class521_sub1_489_ != null; class521_sub1_489_ = (((Class521_Sub1) class521_sub1_489_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_489_ = ((SceneObjectManager) this).aClass521_Sub1Array2605[i]; class521_sub1_489_ != null; class521_sub1_489_ = (((Class521_Sub1) class521_sub1_489_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_489_) {
 						if (class521_sub1_488_ != null)
 							((Class521_Sub1) class521_sub1_488_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_489_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2605[i] = (((Class521_Sub1) class521_sub1_489_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2605[i] = (((Class521_Sub1) class521_sub1_489_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_488_ = class521_sub1_489_;
 				}
 				class521_sub1_488_ = null;
-				for (Class521_Sub1 class521_sub1_490_ = ((Class206) this).aClass521_Sub1Array2633[i]; null != class521_sub1_490_; class521_sub1_490_ = (((Class521_Sub1) class521_sub1_490_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_490_ = ((SceneObjectManager) this).aClass521_Sub1Array2633[i]; null != class521_sub1_490_; class521_sub1_490_ = (((Class521_Sub1) class521_sub1_490_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_490_) {
 						if (null != class521_sub1_488_)
 							((Class521_Sub1) class521_sub1_488_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_490_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2633[i] = (((Class521_Sub1) class521_sub1_490_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2633[i] = (((Class521_Sub1) class521_sub1_490_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_488_ = class521_sub1_490_;
 				}
 				class521_sub1_488_ = null;
-				for (Class521_Sub1 class521_sub1_491_ = ((Class206) this).aClass521_Sub1Array2649[i]; null != class521_sub1_491_; class521_sub1_491_ = (((Class521_Sub1) class521_sub1_491_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_491_ = ((SceneObjectManager) this).aClass521_Sub1Array2649[i]; null != class521_sub1_491_; class521_sub1_491_ = (((Class521_Sub1) class521_sub1_491_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_491_) {
 						if (null != class521_sub1_488_)
 							((Class521_Sub1) class521_sub1_488_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_491_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2649[i] = (((Class521_Sub1) class521_sub1_491_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2649[i] = (((Class521_Sub1) class521_sub1_491_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_488_ = class521_sub1_491_;
@@ -2553,34 +2553,34 @@ public class Class206 {
 			class521_sub1.method11176();
 			for (int i = 0; i < 2; i++) {
 				Class521_Sub1 class521_sub1_492_ = null;
-				for (Class521_Sub1 class521_sub1_493_ = ((Class206) this).aClass521_Sub1Array2605[i]; class521_sub1_493_ != null; class521_sub1_493_ = (((Class521_Sub1) class521_sub1_493_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_493_ = ((SceneObjectManager) this).aClass521_Sub1Array2605[i]; class521_sub1_493_ != null; class521_sub1_493_ = (((Class521_Sub1) class521_sub1_493_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_493_) {
 						if (class521_sub1_492_ != null)
 							((Class521_Sub1) class521_sub1_492_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_493_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2605[i] = (((Class521_Sub1) class521_sub1_493_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2605[i] = (((Class521_Sub1) class521_sub1_493_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_492_ = class521_sub1_493_;
 				}
 				class521_sub1_492_ = null;
-				for (Class521_Sub1 class521_sub1_494_ = ((Class206) this).aClass521_Sub1Array2633[i]; null != class521_sub1_494_; class521_sub1_494_ = (((Class521_Sub1) class521_sub1_494_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_494_ = ((SceneObjectManager) this).aClass521_Sub1Array2633[i]; null != class521_sub1_494_; class521_sub1_494_ = (((Class521_Sub1) class521_sub1_494_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_494_) {
 						if (null != class521_sub1_492_)
 							((Class521_Sub1) class521_sub1_492_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_494_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2633[i] = (((Class521_Sub1) class521_sub1_494_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2633[i] = (((Class521_Sub1) class521_sub1_494_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_492_ = class521_sub1_494_;
 				}
 				class521_sub1_492_ = null;
-				for (Class521_Sub1 class521_sub1_495_ = ((Class206) this).aClass521_Sub1Array2649[i]; null != class521_sub1_495_; class521_sub1_495_ = (((Class521_Sub1) class521_sub1_495_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_495_ = ((SceneObjectManager) this).aClass521_Sub1Array2649[i]; null != class521_sub1_495_; class521_sub1_495_ = (((Class521_Sub1) class521_sub1_495_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_495_) {
 						if (null != class521_sub1_492_)
 							((Class521_Sub1) class521_sub1_492_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_495_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2649[i] = (((Class521_Sub1) class521_sub1_495_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2649[i] = (((Class521_Sub1) class521_sub1_495_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_492_ = class521_sub1_495_;
@@ -2636,7 +2636,7 @@ public class Class206 {
 	}
 
 	public int method3504(int i, int i_506_) {
-		return (((Class206) this).aByteArrayArray2612 != null ? ((Class206) this).aByteArrayArray2612[i][i_506_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2612 != null ? ((SceneObjectManager) this).aByteArrayArray2612[i][i_506_] & 0xff : 0);
 	}
 
 	public Class521_Sub1_Sub1 method3505(int i, int i_507_, int i_508_, Interface25 interface25) {
@@ -2666,9 +2666,9 @@ public class Class206 {
 	}
 
 	void method3508(Class521_Sub1 class521_sub1, Class282_Sub24[] class282_sub24s) {
-		if (((Class206) this).aBool2598) {
+		if (((SceneObjectManager) this).aBool2598) {
 			int i = class521_sub1.method13036(class282_sub24s, -827011094);
-			((Class206) this).aClass505_2596.method8547(i, class282_sub24s);
+			((SceneObjectManager) this).aClass505_2596.method8547(i, class282_sub24s);
 		}
 		if (aClass390Array2614 == aClass390Array2591) {
 			boolean bool = false;
@@ -2690,9 +2690,9 @@ public class Class206 {
 			class90.anInt949 = method3432(i, i_515_, (byte) 1) * -1472617411;
 			class90.anInt950 = method3464(i, i_515_, 1819707800) * 1801644261;
 			class90.anInt951 = method3391(i, i_515_, 2124895018) * 1412616155;
-			((Class206) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -402315089), class90);
+			((SceneObjectManager) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -402315089), class90);
 		}
-		Class285 class285 = class521_sub1.method12990(((Class206) this).aClass505_2596, 389193782);
+		Class285 class285 = class521_sub1.method12990(((SceneObjectManager) this).aClass505_2596, 389193782);
 		if (null != class285) {
 			if (((Class285) class285).aBool3392) {
 				class285.aClass521_Sub1_3391 = class521_sub1;
@@ -2721,7 +2721,7 @@ public class Class206 {
 							method3452(class521_sub1_sub5, i, i_518_, i_519_, 1, 1);
 							if (class521_sub1_sub5_520_ != null && class521_sub1_sub5_520_.method12985(-1575616145)) {
 								method3452(class521_sub1_sub5_520_, i, i_518_, i_519_, 1, 1);
-								class521_sub1_sub5_520_.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1957409820);
+								class521_sub1_sub5_520_.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1957409820);
 								class521_sub1_sub5_520_.method12984(1095073923);
 							}
 							class521_sub1_sub5.method12984(505746949);
@@ -2744,7 +2744,7 @@ public class Class206 {
 		}
 	}
 
-	public Class521_Sub1_Sub4 method3511(int i, int i_521_, int i_522_, byte i_523_) {
+	public Class521_Sub1_Sub4 getWallDecoration(int i, int i_521_, int i_522_, byte i_523_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_521_][i_522_];
 		if (class293 == null) {
 			if (i_523_ == -1) {
@@ -2767,7 +2767,7 @@ public class Class206 {
 							method3452(class521_sub1_sub5, i, i_524_, i_525_, 1, 1);
 							if (class521_sub1_sub5_526_ != null && class521_sub1_sub5_526_.method12985(-1089911862)) {
 								method3452(class521_sub1_sub5_526_, i, i_524_, i_525_, 1, 1);
-								class521_sub1_sub5_526_.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1809126221);
+								class521_sub1_sub5_526_.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, 0, 0, 0, false, -1809126221);
 								class521_sub1_sub5_526_.method12984(-488883099);
 							}
 							class521_sub1_sub5.method12984(511398697);
@@ -2794,22 +2794,22 @@ public class Class206 {
 		if (i_527_ < -1912960305 * anInt2617) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_527_ + 1][i_528_];
 			if (class293 != null && null != class293.aClass521_Sub1_Sub3_3499 && class293.aClass521_Sub1_Sub3_3499.method12985(-1056520770))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, 0, true, -1880715157);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, 0, true, -1880715157);
 		}
 		if (i_528_ < anInt2617 * -1912960305) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][i_527_][1 + i_528_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1553993985))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((Class206) this).anInt2593 * 1885735347), true, -2085777643);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, 0, 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -2085777643);
 		}
 		if (i_527_ < -1912960305 * anInt2617 && i_528_ < -18177099 * anInt2603) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_527_][1 + i_528_];
 			if (null != class293 && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-2041919381))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((Class206) this).anInt2593), 0, (((Class206) this).anInt2593 * 1885735347), true, -2118207437);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (1885735347 * ((SceneObjectManager) this).anInt2593), 0, (((SceneObjectManager) this).anInt2593 * 1885735347), true, -2118207437);
 		}
 		if (i_527_ < -1912960305 * anInt2617 && i_528_ > 0) {
 			Class293 class293 = aClass293ArrayArrayArray2604[i][1 + i_527_][i_528_ - 1];
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null && class293.aClass521_Sub1_Sub3_3499.method12985(-1493429552))
-				class521_sub1.method13013(((Class206) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((Class206) this).anInt2593 * 1885735347), 0, -(((Class206) this).anInt2593 * 1885735347), true, -1937479153);
+				class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class293.aClass521_Sub1_Sub3_3499, (((SceneObjectManager) this).anInt2593 * 1885735347), 0, -(((SceneObjectManager) this).anInt2593 * 1885735347), true, -1937479153);
 		}
 	}
 
@@ -2868,15 +2868,15 @@ public class Class206 {
 									Class521_Sub1_Sub5 class521_sub1_sub5 = class293.aClass521_Sub1_Sub5_3505;
 									Class521_Sub1_Sub5 class521_sub1_sub5_549_ = class293.aClass521_Sub1_Sub5_3502;
 									if (null != class521_sub1_sub5 && class521_sub1_sub5.method12985(-2013074668))
-										class521_sub1.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, ((((Class206) this).anInt2594 * -1428980483 * (1 - i_539_)) + ((i_546_ - i_537_) * (1885735347 * (((Class206) this).anInt2593)))), i_548_, (((1 - i_540_) * (-1428980483 * (((Class206) this).anInt2594))) + ((i_547_ - i_538_) * (((Class206) this).anInt2593 * 1885735347))), bool, -2052835481);
+										class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, ((((SceneObjectManager) this).anInt2594 * -1428980483 * (1 - i_539_)) + ((i_546_ - i_537_) * (1885735347 * (((SceneObjectManager) this).anInt2593)))), i_548_, (((1 - i_540_) * (-1428980483 * (((SceneObjectManager) this).anInt2594))) + ((i_547_ - i_538_) * (((SceneObjectManager) this).anInt2593 * 1885735347))), bool, -2052835481);
 									if (null != class521_sub1_sub5_549_ && class521_sub1_sub5_549_.method12985(-1274793054))
-										class521_sub1.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5_549_, (((i_546_ - i_537_) * (1885735347 * (((Class206) this).anInt2593))) + (-1428980483 * ((Class206) this).anInt2594 * (1 - i_539_))), i_548_, (((i_547_ - i_538_) * (1885735347 * (((Class206) this).anInt2593))) + ((1 - i_540_) * (((Class206) this).anInt2594 * -1428980483))), bool, -1977659895);
+										class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5_549_, (((i_546_ - i_537_) * (1885735347 * (((SceneObjectManager) this).anInt2593))) + (-1428980483 * ((SceneObjectManager) this).anInt2594 * (1 - i_539_))), i_548_, (((i_547_ - i_538_) * (1885735347 * (((SceneObjectManager) this).anInt2593))) + ((1 - i_540_) * (((SceneObjectManager) this).anInt2594 * -1428980483))), bool, -1977659895);
 									for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 										Class521_Sub1_Sub1 class521_sub1_sub1 = (class208.aClass521_Sub1_Sub1_2659);
 										if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1526846111) && ((class521_sub1_sub1.aShort9458 == i_546_) || i_541_ == i_546_) && ((class521_sub1_sub1.aShort9456 == i_547_) || i_543_ == i_547_)) {
 											int i_550_ = ((class521_sub1_sub1.aShort9455) - (class521_sub1_sub1.aShort9458) + 1);
 											int i_551_ = 1 + ((class521_sub1_sub1.aShort9457) - (class521_sub1_sub1.aShort9456));
-											class521_sub1.method13013((((Class206) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((Class206) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_537_)) + ((((Class206) this).anInt2594) * -1428980483 * (i_550_ - i_539_))), i_548_, (((i_551_ - i_540_) * ((((Class206) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_538_) * ((((Class206) this).anInt2593) * 1885735347))), bool, -2029114862);
+											class521_sub1.method13013((((SceneObjectManager) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((SceneObjectManager) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_537_)) + ((((SceneObjectManager) this).anInt2594) * -1428980483 * (i_550_ - i_539_))), i_548_, (((i_551_ - i_540_) * ((((SceneObjectManager) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_538_) * ((((SceneObjectManager) this).anInt2593) * 1885735347))), bool, -2029114862);
 										}
 									}
 								}
@@ -2891,72 +2891,72 @@ public class Class206 {
 	}
 
 	public int method3518(int i, int i_552_) {
-		return (null != ((Class206) this).aShortArrayArray2611 ? ((Class206) this).aShortArrayArray2611[i][i_552_] & 0xffff : 0);
+		return (null != ((SceneObjectManager) this).aShortArrayArray2611 ? ((SceneObjectManager) this).aShortArrayArray2611[i][i_552_] & 0xffff : 0);
 	}
 
 	void method3519(boolean bool, byte[][][] is, int i, byte i_553_, int i_554_) {
 		int i_555_ = bool ? 1 : 0;
-		((Class206) this).anInt2623 = 0;
-		((Class206) this).anInt2624 = 0;
-		((Class206) this).anInt2609 += -162594145;
+		((SceneObjectManager) this).anInt2623 = 0;
+		((SceneObjectManager) this).anInt2624 = 0;
+		((SceneObjectManager) this).anInt2609 += -162594145;
 		if (0 == (i_554_ & 0x2)) {
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2605[i_555_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_555_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) 9);
 				if ((-1 != ((Class521_Sub1) class521_sub1).anInt7969 * 1272394495) && !method3424(class521_sub1, bool, is, i, i_553_))
-					((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
+					((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
 			}
 		}
 		if ((i_554_ & 0x1) == 0) {
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2633[i_555_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_555_]; null != class521_sub1; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) -3);
 				if ((1272394495 * ((Class521_Sub1) class521_sub1).anInt7969 != -1) && !method3424(class521_sub1, bool, is, i, i_553_))
-					((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
+					((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
 			}
-			for (Class521_Sub1 class521_sub1 = ((Class206) this).aClass521_Sub1Array2649[i_555_]; class521_sub1 != null; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
+			for (Class521_Sub1 class521_sub1 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_555_]; class521_sub1 != null; class521_sub1 = ((Class521_Sub1) class521_sub1).aClass521_Sub1_7966) {
 				method3421(class521_sub1, (byte) 65);
 				if ((((Class521_Sub1) class521_sub1).anInt7969 * 1272394495 != -1) && !method3424(class521_sub1, bool, is, i, i_553_)) {
 					if (class521_sub1.method12987(718816681))
-						((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
+						((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = class521_sub1;
 					else
-						((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
+						((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = class521_sub1;
 				}
 			}
 			if (!bool) {
-				for (int i_556_ = 0; i_556_ < -1983534645 * ((Class206) this).anInt2616; i_556_++) {
-					method3421((((Class206) this).aClass521_Sub1_Sub1Array2627[i_556_]), (byte) 0);
-					if ((1272394495 * ((Class521_Sub1_Sub1) (((Class206) this).aClass521_Sub1_Sub1Array2627[i_556_])).anInt7969) != -1 && !method3424((((Class206) this).aClass521_Sub1_Sub1Array2627[i_556_]), bool, is, i, i_553_)) {
-						if (((Class206) this).aClass521_Sub1_Sub1Array2627[i_556_].method12987(-622207769))
-							((Class206) this).aClass521_Sub1Array2625[((((Class206) this).anInt2624 += -814824417) * 227522527) - 1] = (((Class206) this).aClass521_Sub1_Sub1Array2627[i_556_]);
+				for (int i_556_ = 0; i_556_ < -1983534645 * ((SceneObjectManager) this).anInt2616; i_556_++) {
+					method3421((((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_556_]), (byte) 0);
+					if ((1272394495 * ((Class521_Sub1_Sub1) (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_556_])).anInt7969) != -1 && !method3424((((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_556_]), bool, is, i, i_553_)) {
+						if (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_556_].method12987(-622207769))
+							((SceneObjectManager) this).aClass521_Sub1Array2625[((((SceneObjectManager) this).anInt2624 += -814824417) * 227522527) - 1] = (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_556_]);
 						else
-							((Class206) this).aClass521_Sub1Array2626[((((Class206) this).anInt2623 += -1389947031) * -390666023) - 1] = (((Class206) this).aClass521_Sub1_Sub1Array2627[i_556_]);
+							((SceneObjectManager) this).aClass521_Sub1Array2626[((((SceneObjectManager) this).anInt2623 += -1389947031) * -390666023) - 1] = (((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627[i_556_]);
 					}
 				}
 			}
 		}
-		if (-390666023 * ((Class206) this).anInt2623 > 0) {
-			method3466(((Class206) this).aClass521_Sub1Array2626, 0, ((Class206) this).anInt2623 * -390666023 - 1);
-			for (int i_557_ = 0; i_557_ < ((Class206) this).anInt2623 * -390666023; i_557_++)
-				method3508(((Class206) this).aClass521_Sub1Array2626[i_557_], ((Class206) this).aClass282_Sub24Array2642);
+		if (-390666023 * ((SceneObjectManager) this).anInt2623 > 0) {
+			method3466(((SceneObjectManager) this).aClass521_Sub1Array2626, 0, ((SceneObjectManager) this).anInt2623 * -390666023 - 1);
+			for (int i_557_ = 0; i_557_ < ((SceneObjectManager) this).anInt2623 * -390666023; i_557_++)
+				method3508(((SceneObjectManager) this).aClass521_Sub1Array2626[i_557_], ((SceneObjectManager) this).aClass282_Sub24Array2642);
 		}
-		if (((Class206) this).aBool2598)
-			((Class206) this).aClass505_2596.method8547(0, null);
+		if (((SceneObjectManager) this).aBool2598)
+			((SceneObjectManager) this).aClass505_2596.method8547(0, null);
 		if ((i_554_ & 0x2) == 0) {
 			for (int i_558_ = 0; i_558_ < -1485737447 * anInt2601; i_558_++) {
 				if (i_558_ >= i && is != null) {
-					int i_559_ = ((Class206) this).aBoolArrayArray2651.length;
-					if ((((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053) > -1912960305 * anInt2617)
-						i_559_ -= (((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053 - anInt2617 * -1912960305);
-					int i_560_ = ((Class206) this).aBoolArrayArray2651[0].length;
-					if ((((Class206) this).aBoolArrayArray2651[0].length + ((Class206) this).anInt2621 * -1955723827) > -18177099 * anInt2603)
-						i_560_ -= (((Class206) this).anInt2621 * -1955723827 + (((Class206) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
-					boolean[][] bools = ((Class206) this).aBoolArrayArray2635;
-					if (((Class206) this).aBool2599) {
-						for (int i_561_ = ((Class206) this).anInt2602 * -1275764031; i_561_ < i_559_; i_561_++) {
-							int i_562_ = (i_561_ + 260560053 * ((Class206) this).anInt2637 - (-1275764031 * ((Class206) this).anInt2602));
-							for (int i_563_ = (-2139776287 * ((Class206) this).anInt2636); i_563_ < i_560_; i_563_++) {
+					int i_559_ = ((SceneObjectManager) this).aBoolArrayArray2651.length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053) > -1912960305 * anInt2617)
+						i_559_ -= (((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053 - anInt2617 * -1912960305);
+					int i_560_ = ((SceneObjectManager) this).aBoolArrayArray2651[0].length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651[0].length + ((SceneObjectManager) this).anInt2621 * -1955723827) > -18177099 * anInt2603)
+						i_560_ -= (((SceneObjectManager) this).anInt2621 * -1955723827 + (((SceneObjectManager) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
+					boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2635;
+					if (((SceneObjectManager) this).aBool2599) {
+						for (int i_561_ = ((SceneObjectManager) this).anInt2602 * -1275764031; i_561_ < i_559_; i_561_++) {
+							int i_562_ = (i_561_ + 260560053 * ((SceneObjectManager) this).anInt2637 - (-1275764031 * ((SceneObjectManager) this).anInt2602));
+							for (int i_563_ = (-2139776287 * ((SceneObjectManager) this).anInt2636); i_563_ < i_560_; i_563_++) {
 								bools[i_561_][i_563_] = false;
-								if (((Class206) this).aBoolArrayArray2651[i_561_][i_563_]) {
-									int i_564_ = (i_563_ + (((Class206) this).anInt2621 * -1955723827) - (-2139776287 * ((Class206) this).anInt2636));
+								if (((SceneObjectManager) this).aBoolArrayArray2651[i_561_][i_563_]) {
+									int i_564_ = (i_563_ + (((SceneObjectManager) this).anInt2621 * -1955723827) - (-2139776287 * ((SceneObjectManager) this).anInt2636));
 									for (int i_565_ = i_558_; i_565_ >= 0; i_565_--) {
 										if ((null != (aClass293ArrayArrayArray2604[i_565_][i_562_][i_564_])) && (aClass293ArrayArrayArray2604[i_565_][i_562_][i_564_].aByte3507) == i_558_) {
 											if ((i_565_ >= i && (is[i_565_][i_562_][i_564_] == i_553_)) || (aClass201_2600.method3271(i_558_, i_562_, i_564_)))
@@ -2970,108 +2970,108 @@ public class Class206 {
 							}
 						}
 					}
-					aClass390Array2591[i_558_].method6717(((Class206) this).anInt2628 * -527863643, 1580412859 * ((Class206) this).anInt2629, 1459994833 * ((Class206) this).anInt2652, ((Class206) this).aBoolArrayArray2635, false, i_554_);
+					aClass390Array2591[i_558_].method6717(((SceneObjectManager) this).anInt2628 * -527863643, 1580412859 * ((SceneObjectManager) this).anInt2629, 1459994833 * ((SceneObjectManager) this).anInt2652, ((SceneObjectManager) this).aBoolArrayArray2635, false, i_554_);
 				} else {
-					int i_566_ = ((Class206) this).aBoolArrayArray2651.length;
-					if ((((Class206) this).aBoolArrayArray2651.length + ((Class206) this).anInt2637 * 260560053) > anInt2617 * -1912960305)
-						i_566_ -= (260560053 * ((Class206) this).anInt2637 + ((Class206) this).aBoolArrayArray2651.length - anInt2617 * -1912960305);
-					int i_567_ = ((Class206) this).aBoolArrayArray2651[0].length;
-					if ((-1955723827 * ((Class206) this).anInt2621 + ((Class206) this).aBoolArrayArray2651[0].length) > anInt2603 * -18177099)
-						i_567_ -= (((Class206) this).anInt2621 * -1955723827 + (((Class206) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
-					boolean[][] bools = ((Class206) this).aBoolArrayArray2635;
-					if (((Class206) this).aBool2599) {
-						for (int i_568_ = -1275764031 * ((Class206) this).anInt2602; i_568_ < i_566_; i_568_++) {
-							int i_569_ = (i_568_ + 260560053 * ((Class206) this).anInt2637 - (-1275764031 * ((Class206) this).anInt2602));
-							for (int i_570_ = (((Class206) this).anInt2636 * -2139776287); i_570_ < i_567_; i_570_++) {
-								if ((((Class206) this).aBoolArrayArray2651[i_568_][i_570_]) && !(aClass201_2600.method3271(i_558_, i_569_, (i_570_ + (-1955723827 * ((Class206) this).anInt2621) - -2139776287 * (((Class206) this).anInt2636)))))
+					int i_566_ = ((SceneObjectManager) this).aBoolArrayArray2651.length;
+					if ((((SceneObjectManager) this).aBoolArrayArray2651.length + ((SceneObjectManager) this).anInt2637 * 260560053) > anInt2617 * -1912960305)
+						i_566_ -= (260560053 * ((SceneObjectManager) this).anInt2637 + ((SceneObjectManager) this).aBoolArrayArray2651.length - anInt2617 * -1912960305);
+					int i_567_ = ((SceneObjectManager) this).aBoolArrayArray2651[0].length;
+					if ((-1955723827 * ((SceneObjectManager) this).anInt2621 + ((SceneObjectManager) this).aBoolArrayArray2651[0].length) > anInt2603 * -18177099)
+						i_567_ -= (((SceneObjectManager) this).anInt2621 * -1955723827 + (((SceneObjectManager) this).aBoolArrayArray2651[0]).length - anInt2603 * -18177099);
+					boolean[][] bools = ((SceneObjectManager) this).aBoolArrayArray2635;
+					if (((SceneObjectManager) this).aBool2599) {
+						for (int i_568_ = -1275764031 * ((SceneObjectManager) this).anInt2602; i_568_ < i_566_; i_568_++) {
+							int i_569_ = (i_568_ + 260560053 * ((SceneObjectManager) this).anInt2637 - (-1275764031 * ((SceneObjectManager) this).anInt2602));
+							for (int i_570_ = (((SceneObjectManager) this).anInt2636 * -2139776287); i_570_ < i_567_; i_570_++) {
+								if ((((SceneObjectManager) this).aBoolArrayArray2651[i_568_][i_570_]) && !(aClass201_2600.method3271(i_558_, i_569_, (i_570_ + (-1955723827 * ((SceneObjectManager) this).anInt2621) - -2139776287 * (((SceneObjectManager) this).anInt2636)))))
 									bools[i_568_][i_570_] = true;
 								else
 									bools[i_568_][i_570_] = false;
 							}
 						}
 					}
-					aClass390Array2591[i_558_].method6717(((Class206) this).anInt2628 * -527863643, 1580412859 * ((Class206) this).anInt2629, ((Class206) this).anInt2652 * 1459994833, ((Class206) this).aBoolArrayArray2635, true, i_554_);
+					aClass390Array2591[i_558_].method6717(((SceneObjectManager) this).anInt2628 * -527863643, 1580412859 * ((SceneObjectManager) this).anInt2629, ((SceneObjectManager) this).anInt2652 * 1459994833, ((SceneObjectManager) this).aBoolArrayArray2635, true, i_554_);
 				}
 			}
 		}
-		if (227522527 * ((Class206) this).anInt2624 > 0) {
-			method3502(((Class206) this).aClass521_Sub1Array2625, 0, 227522527 * ((Class206) this).anInt2624 - 1);
-			for (int i_571_ = 0; i_571_ < ((Class206) this).anInt2624 * 227522527; i_571_++)
-				method3508(((Class206) this).aClass521_Sub1Array2625[i_571_], ((Class206) this).aClass282_Sub24Array2642);
+		if (227522527 * ((SceneObjectManager) this).anInt2624 > 0) {
+			method3502(((SceneObjectManager) this).aClass521_Sub1Array2625, 0, 227522527 * ((SceneObjectManager) this).anInt2624 - 1);
+			for (int i_571_ = 0; i_571_ < ((SceneObjectManager) this).anInt2624 * 227522527; i_571_++)
+				method3508(((SceneObjectManager) this).aClass521_Sub1Array2625[i_571_], ((SceneObjectManager) this).aClass282_Sub24Array2642);
 		}
 	}
 
 	public void method3520(int i, int i_572_, int i_573_, int i_574_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_572_, i_573_, 1879504414);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((Class206) this).anInt2594 * -1428980483) + (i_572_ << anInt2592 * -1928575293)), (float) i_574_, (float) ((((Class206) this).anInt2594 * -1428980483) + (i_573_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_572_ << anInt2592 * -1928575293)), (float) i_574_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_573_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_575_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1694477320)) {
 				if (class521_sub1_sub2.method12987(-1490917954)) {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_575_];
-					((Class206) this).aClass521_Sub1Array2633[i_575_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_575_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_575_] = class521_sub1_sub2;
 				} else {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_575_];
-					((Class206) this).aClass521_Sub1Array2605[i_575_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_575_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_575_] = class521_sub1_sub2;
 				}
 			} else {
-				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_575_];
-				((Class206) this).aClass521_Sub1Array2649[i_575_] = class521_sub1_sub2;
+				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_575_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_575_] = class521_sub1_sub2;
 			}
 		}
 	}
 
-	public Class206(GraphicalRenderer class505, int i, int i_576_, int i_577_, int i_578_, int i_579_, boolean bool, boolean bool_580_) {
-		((Class206) this).anInt2616 = 0;
-		((Class206) this).anInt2634 = 10072;
-		((Class206) this).anInt2618 = 5015;
-		((Class206) this).anInt2619 = 5040;
-		((Class206) this).aFloatArray2639 = new float[3];
-		((Class206) this).aClass282_Sub24Array2642 = new Class282_Sub24[8];
-		((Class206) this).anInt2643 = 65361;
-		((Class206) this).aClass505_2596 = class505;
-		((Class206) this).aBool2598 = ((Class206) this).aClass505_2596.method8463() > 0;
+	public SceneObjectManager(GraphicalRenderer class505, int i, int i_576_, int i_577_, int i_578_, int i_579_, boolean bool, boolean bool_580_) {
+		((SceneObjectManager) this).anInt2616 = 0;
+		((SceneObjectManager) this).anInt2634 = 10072;
+		((SceneObjectManager) this).anInt2618 = 5015;
+		((SceneObjectManager) this).anInt2619 = 5040;
+		((SceneObjectManager) this).aFloatArray2639 = new float[3];
+		((SceneObjectManager) this).aClass282_Sub24Array2642 = new Class282_Sub24[8];
+		((SceneObjectManager) this).anInt2643 = 65361;
+		((SceneObjectManager) this).aClass505_2596 = class505;
+		((SceneObjectManager) this).aBool2598 = ((SceneObjectManager) this).aClass505_2596.method8463() > 0;
 		anInt2592 = -2000283157 * i;
-		((Class206) this).anInt2593 = -1653092997 * (1 << anInt2592 * -1928575293);
-		((Class206) this).anInt2594 = 356352085 * (((Class206) this).anInt2593 * 1885735347 >> 1);
+		((SceneObjectManager) this).anInt2593 = -1653092997 * (1 << anInt2592 * -1928575293);
+		((SceneObjectManager) this).anInt2594 = 356352085 * (((SceneObjectManager) this).anInt2593 * 1885735347 >> 1);
 		anInt2601 = i_576_ * 483772969;
 		anInt2617 = i_577_ * 537410607;
 		anInt2603 = i_578_ * 1850176157;
-		((Class206) this).anInt2652 = 1632278577 * i_579_;
-		((Class206) this).aClass454_2597 = new Class454();
+		((SceneObjectManager) this).anInt2652 = 1632278577 * i_579_;
+		((SceneObjectManager) this).aClass454_2597 = new Class454();
 		aClass201_2600 = new Class201(this);
 		aClass293ArrayArrayArray2610 = (new Class293[i_576_][anInt2617 * -1912960305][-18177099 * anInt2603]);
 		aClass390Array2607 = new Class390[i_576_];
 		if (bool) {
-			((Class206) this).anIntArrayArray2606 = new int[anInt2617 * -1912960305][anInt2603 * -18177099];
-			((Class206) this).aByteArrayArray2612 = new byte[-1912960305 * anInt2617][-18177099 * anInt2603];
-			((Class206) this).aShortArrayArray2611 = new short[anInt2617 * -1912960305][anInt2603 * -18177099];
-			((Class206) this).aByteArrayArray2613 = new byte[anInt2617 * -1912960305][anInt2603 * -18177099];
-			((Class206) this).aByteArrayArray2595 = new byte[anInt2617 * -1912960305][-18177099 * anInt2603];
-			((Class206) this).aByteArrayArray2620 = new byte[anInt2617 * -1912960305][-18177099 * anInt2603];
+			((SceneObjectManager) this).anIntArrayArray2606 = new int[anInt2617 * -1912960305][anInt2603 * -18177099];
+			((SceneObjectManager) this).aByteArrayArray2612 = new byte[-1912960305 * anInt2617][-18177099 * anInt2603];
+			((SceneObjectManager) this).aShortArrayArray2611 = new short[anInt2617 * -1912960305][anInt2603 * -18177099];
+			((SceneObjectManager) this).aByteArrayArray2613 = new byte[anInt2617 * -1912960305][anInt2603 * -18177099];
+			((SceneObjectManager) this).aByteArrayArray2595 = new byte[anInt2617 * -1912960305][-18177099 * anInt2603];
+			((SceneObjectManager) this).aByteArrayArray2620 = new byte[anInt2617 * -1912960305][-18177099 * anInt2603];
 			aClass293ArrayArrayArray2608 = (new Class293[1][anInt2617 * -1912960305][-18177099 * anInt2603]);
 			aClass390Array2614 = new Class390[1];
 		}
 		if (bool_580_) {
-			((Class206) this).aLongArrayArrayArray2645 = new long[i_576_][i_577_][i_578_];
-			((Class206) this).aClass287Array2646 = new Class287[65361];
-			((Class206) this).aBoolArray2647 = new boolean[65361];
-			((Class206) this).anInt2615 = 0;
+			((SceneObjectManager) this).aLongArrayArrayArray2645 = new long[i_576_][i_577_][i_578_];
+			((SceneObjectManager) this).aClass287Array2646 = new Class287[65361];
+			((SceneObjectManager) this).aBoolArray2647 = new boolean[65361];
+			((SceneObjectManager) this).anInt2615 = 0;
 		}
 		method3380(false, -914334995);
-		((Class206) this).aClass521_Sub1Array2605 = new Class521_Sub1[2];
-		((Class206) this).aClass521_Sub1Array2633 = new Class521_Sub1[2];
-		((Class206) this).aClass521_Sub1Array2649 = new Class521_Sub1[2];
-		((Class206) this).aClass521_Sub1Array2626 = new Class521_Sub1[10072];
-		((Class206) this).anInt2623 = 0;
-		((Class206) this).aClass521_Sub1Array2625 = new Class521_Sub1[5015];
-		((Class206) this).anInt2624 = 0;
-		((Class206) this).aClass521_Sub1_Sub1Array2627 = new Class521_Sub1_Sub1[5040];
-		((Class206) this).anInt2616 = 0;
-		((Class206) this).aBoolArrayArray2651 = (new boolean[1 + (1459994833 * ((Class206) this).anInt2652 + 1459994833 * ((Class206) this).anInt2652)][(((Class206) this).anInt2652 * 1459994833 + 1459994833 * ((Class206) this).anInt2652 + 1)]);
-		((Class206) this).aBoolArrayArray2635 = (new boolean[2 + (((Class206) this).anInt2652 * 1459994833 + 1459994833 * ((Class206) this).anInt2652)][(((Class206) this).anInt2652 * 1459994833 + 1459994833 * ((Class206) this).anInt2652 + 2)]);
-		((Class206) this).anIntArray2641 = new int[(((Class206) this).anInt2652 * 1459994833 + 1459994833 * ((Class206) this).anInt2652 + 2)];
+		((SceneObjectManager) this).aClass521_Sub1Array2605 = new Class521_Sub1[2];
+		((SceneObjectManager) this).aClass521_Sub1Array2633 = new Class521_Sub1[2];
+		((SceneObjectManager) this).aClass521_Sub1Array2649 = new Class521_Sub1[2];
+		((SceneObjectManager) this).aClass521_Sub1Array2626 = new Class521_Sub1[10072];
+		((SceneObjectManager) this).anInt2623 = 0;
+		((SceneObjectManager) this).aClass521_Sub1Array2625 = new Class521_Sub1[5015];
+		((SceneObjectManager) this).anInt2624 = 0;
+		((SceneObjectManager) this).aClass521_Sub1_Sub1Array2627 = new Class521_Sub1_Sub1[5040];
+		((SceneObjectManager) this).anInt2616 = 0;
+		((SceneObjectManager) this).aBoolArrayArray2651 = (new boolean[1 + (1459994833 * ((SceneObjectManager) this).anInt2652 + 1459994833 * ((SceneObjectManager) this).anInt2652)][(((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652 + 1)]);
+		((SceneObjectManager) this).aBoolArrayArray2635 = (new boolean[2 + (((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652)][(((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652 + 2)]);
+		((SceneObjectManager) this).anIntArray2641 = new int[(((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652 + 2)];
 		aClass284_2648 = new Login(false);
 	}
 
@@ -3080,34 +3080,34 @@ public class Class206 {
 			class521_sub1.method11176();
 			for (int i = 0; i < 2; i++) {
 				Class521_Sub1 class521_sub1_581_ = null;
-				for (Class521_Sub1 class521_sub1_582_ = ((Class206) this).aClass521_Sub1Array2605[i]; class521_sub1_582_ != null; class521_sub1_582_ = (((Class521_Sub1) class521_sub1_582_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_582_ = ((SceneObjectManager) this).aClass521_Sub1Array2605[i]; class521_sub1_582_ != null; class521_sub1_582_ = (((Class521_Sub1) class521_sub1_582_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_582_) {
 						if (class521_sub1_581_ != null)
 							((Class521_Sub1) class521_sub1_581_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_582_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2605[i] = (((Class521_Sub1) class521_sub1_582_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2605[i] = (((Class521_Sub1) class521_sub1_582_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_581_ = class521_sub1_582_;
 				}
 				class521_sub1_581_ = null;
-				for (Class521_Sub1 class521_sub1_583_ = ((Class206) this).aClass521_Sub1Array2633[i]; null != class521_sub1_583_; class521_sub1_583_ = (((Class521_Sub1) class521_sub1_583_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_583_ = ((SceneObjectManager) this).aClass521_Sub1Array2633[i]; null != class521_sub1_583_; class521_sub1_583_ = (((Class521_Sub1) class521_sub1_583_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_583_) {
 						if (null != class521_sub1_581_)
 							((Class521_Sub1) class521_sub1_581_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_583_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2633[i] = (((Class521_Sub1) class521_sub1_583_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2633[i] = (((Class521_Sub1) class521_sub1_583_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_581_ = class521_sub1_583_;
 				}
 				class521_sub1_581_ = null;
-				for (Class521_Sub1 class521_sub1_584_ = ((Class206) this).aClass521_Sub1Array2649[i]; null != class521_sub1_584_; class521_sub1_584_ = (((Class521_Sub1) class521_sub1_584_).aClass521_Sub1_7966)) {
+				for (Class521_Sub1 class521_sub1_584_ = ((SceneObjectManager) this).aClass521_Sub1Array2649[i]; null != class521_sub1_584_; class521_sub1_584_ = (((Class521_Sub1) class521_sub1_584_).aClass521_Sub1_7966)) {
 					if (class521_sub1 == class521_sub1_584_) {
 						if (null != class521_sub1_581_)
 							((Class521_Sub1) class521_sub1_581_).aClass521_Sub1_7966 = (((Class521_Sub1) class521_sub1_584_).aClass521_Sub1_7966);
 						else
-							((Class206) this).aClass521_Sub1Array2649[i] = (((Class521_Sub1) class521_sub1_584_).aClass521_Sub1_7966);
+							((SceneObjectManager) this).aClass521_Sub1Array2649[i] = (((Class521_Sub1) class521_sub1_584_).aClass521_Sub1_7966);
 						return;
 					}
 					class521_sub1_581_ = class521_sub1_584_;
@@ -3118,20 +3118,20 @@ public class Class206 {
 
 	void method3522(Class521_Sub1 class521_sub1) {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((Class206) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(793354040) >> 1)), (float) (int) class385.aFloat4673, ((Class206) this).aFloatArray2639);
-		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((Class206) this).aFloatArray2639[2] * -721433345;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(793354040) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	void method3523(Class521_Sub1 class521_sub1) {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((Class206) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(358674030) >> 1)), (float) (int) class385.aFloat4673, ((Class206) this).aFloatArray2639);
-		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((Class206) this).aFloatArray2639[2] * -721433345;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(358674030) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	void method3524(Class521_Sub1 class521_sub1) {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((Class206) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-1590857294) >> 1)), (float) (int) class385.aFloat4673, ((Class206) this).aFloatArray2639);
-		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((Class206) this).aFloatArray2639[2] * -721433345;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-1590857294) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	void method3525(Class521_Sub1[] class521_sub1s, int i, int i_585_) {
@@ -3187,20 +3187,20 @@ public class Class206 {
 	public void method3527(int i, int i_603_, int i_604_, int i_605_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_603_, i_604_, -464174953);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((Class206) this).anInt2594 * -1428980483) + (i_603_ << anInt2592 * -1928575293)), (float) i_605_, (float) ((((Class206) this).anInt2594 * -1428980483) + (i_604_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_603_ << anInt2592 * -1928575293)), (float) i_605_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_604_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_606_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1273057709)) {
 				if (class521_sub1_sub2.method12987(-778978085)) {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2633[i_606_];
-					((Class206) this).aClass521_Sub1Array2633[i_606_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_606_];
+					((SceneObjectManager) this).aClass521_Sub1Array2633[i_606_] = class521_sub1_sub2;
 				} else {
-					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2605[i_606_];
-					((Class206) this).aClass521_Sub1Array2605[i_606_] = class521_sub1_sub2;
+					((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_606_];
+					((SceneObjectManager) this).aClass521_Sub1Array2605[i_606_] = class521_sub1_sub2;
 				}
 			} else {
-				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((Class206) this).aClass521_Sub1Array2649[i_606_];
-				((Class206) this).aClass521_Sub1Array2649[i_606_] = class521_sub1_sub2;
+				((Class521_Sub1_Sub2) class521_sub1_sub2).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_606_];
+				((SceneObjectManager) this).aClass521_Sub1Array2649[i_606_] = class521_sub1_sub2;
 			}
 		}
 	}
@@ -3228,7 +3228,7 @@ public class Class206 {
 	}
 
 	boolean method3529(Class521_Sub1 class521_sub1, boolean bool, byte[][][] is, int i, byte i_613_) {
-		if (!((Class206) this).aBool2599)
+		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
 			int i_614_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
@@ -3237,10 +3237,10 @@ public class Class206 {
 			int i_617_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_618_ = i_616_; i_618_ <= i_614_; i_618_++) {
 				for (int i_619_ = i_617_; i_619_ <= i_615_; i_619_++) {
-					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_618_ >= ((Class206) this).anInt2637 * 260560053 && i_618_ < ((Class206) this).anInt2638 * 170184033 && i_619_ >= ((Class206) this).anInt2621 * -1955723827 && i_619_ < ((Class206) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_613_ == (is[class521_sub1.aByte7967][i_618_][i_619_])) || !class521_sub1.method13029((byte) -41) || class521_sub1.method13037((((Class206) this).aClass505_2596), -1315565077)) {
-							if (!bool && i_618_ >= -527863643 * (((Class206) this).anInt2628) - 16 && i_618_ <= 16 + -527863643 * ((Class206) this).anInt2628 && i_619_ >= 1580412859 * (((Class206) this).anInt2629) - 16 && i_619_ <= 16 + (((Class206) this).anInt2629 * 1580412859))
-								class521_sub1.method12991((((Class206) this).aClass505_2596), -219071901);
+					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_618_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_618_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_619_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_619_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+						if ((null != is && class521_sub1.aByte7967 >= i && i_613_ == (is[class521_sub1.aByte7967][i_618_][i_619_])) || !class521_sub1.method13029((byte) -41) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), -1315565077)) {
+							if (!bool && i_618_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_618_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_619_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_619_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
+								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -219071901);
 							return true;
 						}
 						return false;
@@ -3252,10 +3252,10 @@ public class Class206 {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
 		int i_620_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
 		int i_621_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
-		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_620_ >= ((Class206) this).anInt2637 * 260560053 && i_620_ < 170184033 * ((Class206) this).anInt2638 && i_621_ >= -1955723827 * ((Class206) this).anInt2621 && i_621_ < ((Class206) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_620_][i_621_] == i_613_) || !class521_sub1.method13029((byte) -14) || class521_sub1.method13037(((Class206) this).aClass505_2596, -200390961)) {
-				if (!bool && i_620_ >= -527863643 * ((Class206) this).anInt2628 - 16 && i_620_ <= -527863643 * ((Class206) this).anInt2628 + 16 && i_621_ >= ((Class206) this).anInt2629 * 1580412859 - 16 && i_621_ <= 16 + ((Class206) this).anInt2629 * 1580412859)
-					class521_sub1.method12991(((Class206) this).aClass505_2596, -179855139);
+		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_620_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_620_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_621_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_621_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_620_][i_621_] == i_613_) || !class521_sub1.method13029((byte) -14) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -200390961)) {
+				if (!bool && i_620_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_620_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_621_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_621_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
+					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -179855139);
 				return true;
 			}
 			return false;
@@ -3278,7 +3278,7 @@ public class Class206 {
 	}
 
 	boolean method3531(Class521_Sub1 class521_sub1, boolean bool, byte[][][] is, int i, byte i_625_) {
-		if (!((Class206) this).aBool2599)
+		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
 			int i_626_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
@@ -3287,10 +3287,10 @@ public class Class206 {
 			int i_629_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_630_ = i_628_; i_630_ <= i_626_; i_630_++) {
 				for (int i_631_ = i_629_; i_631_ <= i_627_; i_631_++) {
-					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_630_ >= ((Class206) this).anInt2637 * 260560053 && i_630_ < ((Class206) this).anInt2638 * 170184033 && i_631_ >= ((Class206) this).anInt2621 * -1955723827 && i_631_ < ((Class206) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_625_ == (is[class521_sub1.aByte7967][i_630_][i_631_])) || !class521_sub1.method13029((byte) -19) || class521_sub1.method13037((((Class206) this).aClass505_2596), 146381757)) {
-							if (!bool && i_630_ >= -527863643 * (((Class206) this).anInt2628) - 16 && i_630_ <= 16 + -527863643 * ((Class206) this).anInt2628 && i_631_ >= 1580412859 * (((Class206) this).anInt2629) - 16 && i_631_ <= 16 + (((Class206) this).anInt2629 * 1580412859))
-								class521_sub1.method12991((((Class206) this).aClass505_2596), -1631650110);
+					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_630_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_630_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_631_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_631_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+						if ((null != is && class521_sub1.aByte7967 >= i && i_625_ == (is[class521_sub1.aByte7967][i_630_][i_631_])) || !class521_sub1.method13029((byte) -19) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 146381757)) {
+							if (!bool && i_630_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_630_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_631_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_631_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
+								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -1631650110);
 							return true;
 						}
 						return false;
@@ -3302,10 +3302,10 @@ public class Class206 {
 		Class385 class385 = class521_sub1.method11166().aClass385_3595;
 		int i_632_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
 		int i_633_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
-		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_632_ >= ((Class206) this).anInt2637 * 260560053 && i_632_ < 170184033 * ((Class206) this).anInt2638 && i_633_ >= -1955723827 * ((Class206) this).anInt2621 && i_633_ < ((Class206) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_632_][i_633_] == i_625_) || !class521_sub1.method13029((byte) -122) || class521_sub1.method13037(((Class206) this).aClass505_2596, 363865494)) {
-				if (!bool && i_632_ >= -527863643 * ((Class206) this).anInt2628 - 16 && i_632_ <= -527863643 * ((Class206) this).anInt2628 + 16 && i_633_ >= ((Class206) this).anInt2629 * 1580412859 - 16 && i_633_ <= 16 + ((Class206) this).anInt2629 * 1580412859)
-					class521_sub1.method12991(((Class206) this).aClass505_2596, -646183533);
+		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_632_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_632_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_633_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_633_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
+			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_632_][i_633_] == i_625_) || !class521_sub1.method13029((byte) -122) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, 363865494)) {
+				if (!bool && i_632_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_632_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_633_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_633_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
+					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -646183533);
 				return true;
 			}
 			return false;
@@ -3314,9 +3314,9 @@ public class Class206 {
 	}
 
 	void method3532(Class521_Sub1 class521_sub1, Class282_Sub24[] class282_sub24s) {
-		if (((Class206) this).aBool2598) {
+		if (((SceneObjectManager) this).aBool2598) {
 			int i = class521_sub1.method13036(class282_sub24s, -827011094);
-			((Class206) this).aClass505_2596.method8547(i, class282_sub24s);
+			((SceneObjectManager) this).aClass505_2596.method8547(i, class282_sub24s);
 		}
 		if (aClass390Array2614 == aClass390Array2591) {
 			boolean bool = false;
@@ -3338,9 +3338,9 @@ public class Class206 {
 			class90.anInt949 = method3432(i, i_635_, (byte) 1) * -1472617411;
 			class90.anInt950 = method3464(i, i_635_, -1198981558) * 1801644261;
 			class90.anInt951 = method3391(i, i_635_, 1883274655) * 1412616155;
-			((Class206) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.aFloat4671, (int) class385.aFloat4673, 1928410404), class90);
+			((SceneObjectManager) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.aFloat4671, (int) class385.aFloat4673, 1928410404), class90);
 		}
-		Class285 class285 = class521_sub1.method12990(((Class206) this).aClass505_2596, 245300010);
+		Class285 class285 = class521_sub1.method12990(((SceneObjectManager) this).aClass505_2596, 245300010);
 		if (null != class285) {
 			if (((Class285) class285).aBool3392) {
 				class285.aClass521_Sub1_3391 = class521_sub1;
@@ -3369,15 +3369,15 @@ public class Class206 {
 									Class521_Sub1_Sub5 class521_sub1_sub5 = class293.aClass521_Sub1_Sub5_3505;
 									Class521_Sub1_Sub5 class521_sub1_sub5_648_ = class293.aClass521_Sub1_Sub5_3502;
 									if (null != class521_sub1_sub5 && class521_sub1_sub5.method12985(-802427616))
-										class521_sub1.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5, ((((Class206) this).anInt2594 * -1428980483 * (1 - i_638_)) + ((i_645_ - i_636_) * (1885735347 * (((Class206) this).anInt2593)))), i_647_, (((1 - i_639_) * (-1428980483 * (((Class206) this).anInt2594))) + ((i_646_ - i_637_) * (((Class206) this).anInt2593 * 1885735347))), bool, -2045662067);
+										class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5, ((((SceneObjectManager) this).anInt2594 * -1428980483 * (1 - i_638_)) + ((i_645_ - i_636_) * (1885735347 * (((SceneObjectManager) this).anInt2593)))), i_647_, (((1 - i_639_) * (-1428980483 * (((SceneObjectManager) this).anInt2594))) + ((i_646_ - i_637_) * (((SceneObjectManager) this).anInt2593 * 1885735347))), bool, -2045662067);
 									if (null != class521_sub1_sub5_648_ && class521_sub1_sub5_648_.method12985(-1708136985))
-										class521_sub1.method13013(((Class206) this).aClass505_2596, class521_sub1_sub5_648_, (((i_645_ - i_636_) * (1885735347 * (((Class206) this).anInt2593))) + (-1428980483 * ((Class206) this).anInt2594 * (1 - i_638_))), i_647_, (((i_646_ - i_637_) * (1885735347 * (((Class206) this).anInt2593))) + ((1 - i_639_) * (((Class206) this).anInt2594 * -1428980483))), bool, -1804279827);
+										class521_sub1.method13013(((SceneObjectManager) this).aClass505_2596, class521_sub1_sub5_648_, (((i_645_ - i_636_) * (1885735347 * (((SceneObjectManager) this).anInt2593))) + (-1428980483 * ((SceneObjectManager) this).anInt2594 * (1 - i_638_))), i_647_, (((i_646_ - i_637_) * (1885735347 * (((SceneObjectManager) this).anInt2593))) + ((1 - i_639_) * (((SceneObjectManager) this).anInt2594 * -1428980483))), bool, -1804279827);
 									for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 										Class521_Sub1_Sub1 class521_sub1_sub1 = (class208.aClass521_Sub1_Sub1_2659);
 										if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1040604428) && ((class521_sub1_sub1.aShort9458 == i_645_) || i_640_ == i_645_) && ((class521_sub1_sub1.aShort9456 == i_646_) || i_642_ == i_646_)) {
 											int i_649_ = ((class521_sub1_sub1.aShort9455) - (class521_sub1_sub1.aShort9458) + 1);
 											int i_650_ = 1 + ((class521_sub1_sub1.aShort9457) - (class521_sub1_sub1.aShort9456));
-											class521_sub1.method13013((((Class206) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((Class206) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_636_)) + ((((Class206) this).anInt2594) * -1428980483 * (i_649_ - i_638_))), i_647_, (((i_650_ - i_639_) * ((((Class206) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_637_) * ((((Class206) this).anInt2593) * 1885735347))), bool, -1886773619);
+											class521_sub1.method13013((((SceneObjectManager) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((SceneObjectManager) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_636_)) + ((((SceneObjectManager) this).anInt2594) * -1428980483 * (i_649_ - i_638_))), i_647_, (((i_650_ - i_639_) * ((((SceneObjectManager) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_637_) * ((((SceneObjectManager) this).anInt2593) * 1885735347))), bool, -1886773619);
 										}
 									}
 								}
@@ -3392,7 +3392,7 @@ public class Class206 {
 	}
 
 	public int method3534(int i, int i_651_) {
-		return (((Class206) this).aByteArrayArray2612 != null ? ((Class206) this).aByteArrayArray2612[i][i_651_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2612 != null ? ((SceneObjectManager) this).aByteArrayArray2612[i][i_651_] & 0xff : 0);
 	}
 
 	public void method3535(Class282_Sub50_Sub17 class282_sub50_sub17, int i, int i_652_, int i_653_, boolean[] bools) {
@@ -3450,7 +3450,7 @@ public class Class206 {
 	}
 
 	public int method3538(int i, int i_672_, int i_673_) {
-		return (((Class206) this).aByteArrayArray2612 != null ? ((Class206) this).aByteArrayArray2612[i][i_672_] & 0xff : 0);
+		return (((SceneObjectManager) this).aByteArrayArray2612 != null ? ((SceneObjectManager) this).aByteArrayArray2612[i][i_672_] & 0xff : 0);
 	}
 
 	public Class521_Sub1_Sub1 method3539(int i, int i_674_, int i_675_, Interface25 interface25) {

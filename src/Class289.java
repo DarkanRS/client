@@ -295,7 +295,7 @@ public class Class289 implements Runnable {
 		int i_11_ = IndexLoaders.MAP_REGION_DECODER.method4424(-1338331391);
 		int i_12_ = IndexLoaders.MAP_REGION_DECODER.method4451(-663161868);
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1741761339);
+		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1741761339);
 		int i_13_ = i_11_ / 2;
 		int i_14_ = 0;
 		int i_15_ = 0;
@@ -448,15 +448,15 @@ public class Class289 implements Runnable {
 				for (int i_50_ = i_15_; i_50_ < i_12_ + i_15_; i_50_++) {
 					for (int i_51_ = i; i_51_ <= i + 1 && i_51_ <= 3; i_51_++) {
 						if (class311.method5498(i, i_51_, i_49_, i_50_, (short) -2270)) {
-							Interface12 interface12 = ((Interface12) class206.method3415(i_51_, i_49_, i_50_, -387297653));
+							SceneObject interface12 = ((SceneObject) class206.getGroundDecoration(i_51_, i_49_, i_50_, -387297653));
 							if (null == interface12)
-								interface12 = ((Interface12) (class206.method3413(i_51_, i_49_, i_50_, client.anInterface25_7446, -233664382)));
+								interface12 = ((SceneObject) (class206.getInteractableObject(i_51_, i_49_, i_50_, client.anInterface25_7446, -233664382)));
 							if (interface12 == null)
-								interface12 = ((Interface12) class206.method3381(i_51_, i_49_, i_50_, (byte) -90));
+								interface12 = ((SceneObject) class206.getWall(i_51_, i_49_, i_50_, (byte) -90));
 							if (interface12 == null)
-								interface12 = ((Interface12) class206.method3511(i_51_, i_49_, i_50_, (byte) 98));
+								interface12 = ((SceneObject) class206.getWallDecoration(i_51_, i_49_, i_50_, (byte) 98));
 							if (interface12 != null) {
-								ObjectDefinitions class478 = (class474.getObjectDefinitions(interface12.method84(905574000), 65280));
+								ObjectDefinitions class478 = (class474.getObjectDefinitions(interface12.getId(905574000), 65280));
 								if (!class478.aBool5660 || client.membersWorld) {
 									int i_52_ = class478.anInt5669 * -1796959211;
 									if (class478.anIntArray5650 != null) {

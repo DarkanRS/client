@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Interface12 {
+public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements SceneObject {
 	int anInt10534;
 	MeshRasterizer aClass528_10535;
 	boolean aBool10536;
@@ -68,7 +68,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 		return ((Class521_Sub1_Sub1_Sub6) this).aClass200_10537;
 	}
 
-	public Class521_Sub1_Sub1_Sub6(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, boolean bool_13_) {
+	public Class521_Sub1_Sub1_Sub6(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, boolean bool_13_) {
 		super(class206, i, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_, i_10_, -1062790731 * class478.anInt5687 == 1, Class472.method7853(i_11_, i_12_, 1133726339));
 		((Class521_Sub1_Sub1_Sub6) this).aClass474_10542 = class474;
 		((Class521_Sub1_Sub1_Sub6) this).anInt10534 = class478.id * -1214228387;
@@ -134,7 +134,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Inter
 			((Class521_Sub1_Sub1_Sub6) this).aClass528_10535.KA(((Class521_Sub1_Sub1_Sub6) this).aClass528_10535.m() & ~0x10000);
 	}
 
-	public int method84(int i) {
+	public int getId(int i) {
 		return -1638295397 * ((Class521_Sub1_Sub1_Sub6) this).anInt10534;
 	}
 

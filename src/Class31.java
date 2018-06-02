@@ -124,8 +124,8 @@ public class Class31 implements IndexLoader {
 	public static void method809(RsByteBuffer class282_sub35, int i) {
 		byte[] is = new byte[24];
 		try {
-			Class263.aClass440_3269.method7347(0L);
-			Class263.aClass440_3269.method7351(is, -991225250);
+			Engine.aClass440_3269.method7347(0L);
+			Engine.aClass440_3269.method7351(is, -991225250);
 			int i_3_;
 			for (i_3_ = 0; i_3_ < 24 && 0 == is[i_3_]; i_3_++) {
 				/* empty */

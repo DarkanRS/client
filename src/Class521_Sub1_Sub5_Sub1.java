@@ -4,7 +4,7 @@
  */
 import java.io.IOException;
 
-public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Interface12 {
+public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements SceneObject {
 	MeshRasterizer aClass528_10513;
 	int anInt10514;
 	ObjectIndexLoader aClass474_10515;
@@ -173,7 +173,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	@Override
-	public int method84(int i) {
+	public int getId(int i) {
 		return this.anInt10514 * -585553417;
 	}
 
@@ -329,7 +329,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Inter
 		}
 	}
 
-	public Class521_Sub1_Sub5_Sub1(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, boolean bool_12_) {
+	public Class521_Sub1_Sub5_Sub1(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, boolean bool_12_) {
 		super(class206, i_7_, i_8_, i_9_, i, i_6_, Class235.method3967(i_10_, i_11_, -1066763061));
 		this.aClass474_10515 = class474;
 		this.anInt10514 = 1742474857 * class478.id;

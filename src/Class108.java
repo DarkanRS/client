@@ -130,7 +130,7 @@ public class Class108 {
 		return class282_sub35;
 	}
 
-	public static void method1848(Class206 class206, GraphicalRenderer class505, int i) {
+	public static void method1848(SceneObjectManager class206, GraphicalRenderer class505, int i) {
 		Iterator iterator = Class235.aList2896.iterator();
 		while (iterator.hasNext()) {
 			Class539 class539 = (Class539) iterator.next();

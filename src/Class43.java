@@ -28,7 +28,7 @@ public class Class43 implements Interface2 {
 	public void method12(boolean bool) {
 		if (bool) {
 			int i = ((Class349.anInt4083 * -418109423 > 150480619 * client.anInt7439) ? -418109423 * Class349.anInt4083 : client.anInt7439 * 150480619);
-			int i_0_ = ((-969250379 * Class263.anInt3243 > 1176039023 * client.anInt7312) ? Class263.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
+			int i_0_ = ((-969250379 * Engine.anInt3243 > 1176039023 * client.anInt7312) ? Engine.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
 			int i_1_ = ((Class43) this).aClass160_417.method228();
 			int i_2_ = ((Class43) this).aClass160_417.method2748();
 			int i_3_ = 0;
@@ -48,7 +48,7 @@ public class Class43 implements Interface2 {
 	public void method11(boolean bool) {
 		if (bool) {
 			int i = ((Class349.anInt4083 * -418109423 > 150480619 * client.anInt7439) ? -418109423 * Class349.anInt4083 : client.anInt7439 * 150480619);
-			int i_7_ = ((-969250379 * Class263.anInt3243 > 1176039023 * client.anInt7312) ? Class263.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
+			int i_7_ = ((-969250379 * Engine.anInt3243 > 1176039023 * client.anInt7312) ? Engine.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
 			int i_8_ = ((Class43) this).aClass160_417.method228();
 			int i_9_ = ((Class43) this).aClass160_417.method2748();
 			int i_10_ = 0;
@@ -68,7 +68,7 @@ public class Class43 implements Interface2 {
 	public void method14(boolean bool) {
 		if (bool) {
 			int i = ((Class349.anInt4083 * -418109423 > 150480619 * client.anInt7439) ? -418109423 * Class349.anInt4083 : client.anInt7439 * 150480619);
-			int i_14_ = ((-969250379 * Class263.anInt3243 > 1176039023 * client.anInt7312) ? Class263.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
+			int i_14_ = ((-969250379 * Engine.anInt3243 > 1176039023 * client.anInt7312) ? Engine.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
 			int i_15_ = ((Class43) this).aClass160_417.method228();
 			int i_16_ = ((Class43) this).aClass160_417.method2748();
 			int i_17_ = 0;
@@ -104,7 +104,7 @@ public class Class43 implements Interface2 {
 	public void method20(boolean bool, int i) {
 		if (bool) {
 			int i_21_ = ((Class349.anInt4083 * -418109423 > 150480619 * client.anInt7439) ? -418109423 * Class349.anInt4083 : client.anInt7439 * 150480619);
-			int i_22_ = ((-969250379 * Class263.anInt3243 > 1176039023 * client.anInt7312) ? Class263.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
+			int i_22_ = ((-969250379 * Engine.anInt3243 > 1176039023 * client.anInt7312) ? Engine.anInt3243 * -969250379 : client.anInt7312 * 1176039023);
 			int i_23_ = ((Class43) this).aClass160_417.method228();
 			int i_24_ = ((Class43) this).aClass160_417.method2748();
 			int i_25_ = 0;

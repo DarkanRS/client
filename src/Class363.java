@@ -117,7 +117,7 @@ public class Class363 {
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
 		int i_10_ = Class427.method7188(class521_sub1_sub1_sub2, 1919547361);
-		Class521_Sub1_Sub4_Sub2.method16087(class521_sub1_sub1_sub2, -702995784);
+		WallDecoration.method16087(class521_sub1_sub1_sub2, -702995784);
 		Class302.method5361(class521_sub1_sub1_sub2, i_6_, i_7_, i_10_, 1792753982);
 		Class236.method3985(class521_sub1_sub1_sub2, i_6_, (byte) -27);
 		Class150.method2581(class521_sub1_sub1_sub2, -1454383651);

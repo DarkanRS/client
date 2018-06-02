@@ -64,8 +64,8 @@ public class Class282_Sub12 extends Node {
 				i_10_ = 0;
 			int i_11_ = (Class20.aBool187 ? 1 + (20 + 397683159 * class414.anInt4978) : 31);
 			int i_12_ = class414.anInt4978 * 397683159 + (i - i_11_) + 1;
-			if (i_9_ + i_12_ > Class263.anInt3243 * -969250379)
-				i_12_ = Class263.anInt3243 * -969250379 - i_9_;
+			if (i_9_ + i_12_ > Engine.anInt3243 * -969250379)
+				i_12_ = Engine.anInt3243 * -969250379 - i_9_;
 			if (i_12_ < 0)
 				i_12_ = 0;
 			Class341.anInt3996 = -1046325159 * i_10_;

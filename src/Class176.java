@@ -119,7 +119,7 @@ public class Class176 {
 	}
 
 	static long method2979(int i) {
-		return Class263.aClass273_3244.method4852(1483747562);
+		return Engine.aClass273_3244.method4852(1483747562);
 	}
 
 	static boolean method2980(int i, int i_11_) {

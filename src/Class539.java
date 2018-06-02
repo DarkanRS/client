@@ -178,7 +178,7 @@ public class Class539 {
 		((Class539) this).anInt7122 = i;
 	}
 
-	void method11516(Class206 class206, GraphicalRenderer class505) {
+	void method11516(SceneObjectManager class206, GraphicalRenderer class505) {
 		((Class539) this).aClass151_7131.aClass464_1961.method7740(493536965);
 		Iterator iterator = ((Class539) this).aList7129.iterator();
 		while (iterator.hasNext()) {
@@ -805,7 +805,7 @@ public class Class539 {
 		((Class539) this).aBool7119 = true;
 	}
 
-	void method11556(Class206 class206, GraphicalRenderer class505) {
+	void method11556(SceneObjectManager class206, GraphicalRenderer class505) {
 		((Class539) this).aClass151_7131.aClass464_1961.method7740(493536965);
 		Iterator iterator = ((Class539) this).aList7129.iterator();
 		while (iterator.hasNext()) {

@@ -46,7 +46,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 		int i_14_ = Class316.anInt3670 * -402153223;
 		int i_15_ = Class316.anInt3671 * -929726253;
 		Class233.method3936(is, -1894758972);
-		Class521_Sub1_Sub4_Sub2.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
+		WallDecoration.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
 		if (((Class282_Sub20_Sub19) this).aClass149Array9862 != null) {
 			for (int i_16_ = 0; (i_16_ < ((Class282_Sub20_Sub19) this).aClass149Array9862.length); i_16_++) {
 				Class149 class149 = ((Class282_Sub20_Sub19) this).aClass149Array9862[i_16_];
@@ -209,7 +209,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 		int i = Class316.anInt3670 * -402153223;
 		int i_40_ = Class316.anInt3671 * -929726253;
 		Class233.method3936(is, 849035483);
-		Class521_Sub1_Sub4_Sub2.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
+		WallDecoration.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
 		if (((Class282_Sub20_Sub19) this).aClass149Array9862 != null) {
 			for (int i_41_ = 0; (i_41_ < ((Class282_Sub20_Sub19) this).aClass149Array9862.length); i_41_++) {
 				Class149 class149 = ((Class282_Sub20_Sub19) this).aClass149Array9862[i_41_];
@@ -230,7 +230,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 		int i = Class316.anInt3670 * -402153223;
 		int i_44_ = Class316.anInt3671 * -929726253;
 		Class233.method3936(is, -819532276);
-		Class521_Sub1_Sub4_Sub2.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
+		WallDecoration.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
 		if (((Class282_Sub20_Sub19) this).aClass149Array9862 != null) {
 			for (int i_45_ = 0; (i_45_ < ((Class282_Sub20_Sub19) this).aClass149Array9862.length); i_45_++) {
 				Class149 class149 = ((Class282_Sub20_Sub19) this).aClass149Array9862[i_45_];
@@ -251,7 +251,7 @@ public class Class282_Sub20_Sub19 extends Class282_Sub20 {
 		int i = Class316.anInt3670 * -402153223;
 		int i_48_ = Class316.anInt3671 * -929726253;
 		Class233.method3936(is, 1711243204);
-		Class521_Sub1_Sub4_Sub2.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
+		WallDecoration.method16086(0, 0, Class316.anInt3669 * 1201532175, Class316.anInt3673 * 543225399, 1229420958);
 		if (((Class282_Sub20_Sub19) this).aClass149Array9862 != null) {
 			for (int i_49_ = 0; (i_49_ < ((Class282_Sub20_Sub19) this).aClass149Array9862.length); i_49_++) {
 				Class149 class149 = ((Class282_Sub20_Sub19) this).aClass149Array9862[i_49_];

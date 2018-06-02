@@ -397,20 +397,20 @@ public class Class435 {
 				for (int i_50_ = 0; i_50_ < class293s_48_[i_49_].length; i_50_++) {
 					Class293 class293 = class293s_48_[i_49_][i_50_];
 					if (null != class293) {
-						if (class293.aClass521_Sub1_Sub3_3499 instanceof Interface12)
-							((Interface12) class293.aClass521_Sub1_Sub3_3499).method85((byte) 1);
-						if (class293.aClass521_Sub1_Sub4_3503 instanceof Interface12)
-							((Interface12) class293.aClass521_Sub1_Sub4_3503).method85((byte) 1);
-						if (class293.aClass521_Sub1_Sub4_3500 instanceof Interface12)
-							((Interface12) class293.aClass521_Sub1_Sub4_3500).method85((byte) 1);
-						if (class293.aClass521_Sub1_Sub5_3505 instanceof Interface12)
-							((Interface12) class293.aClass521_Sub1_Sub5_3505).method85((byte) 1);
-						if (class293.aClass521_Sub1_Sub5_3502 instanceof Interface12)
-							((Interface12) class293.aClass521_Sub1_Sub5_3502).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub3_3499 instanceof SceneObject)
+							((SceneObject) class293.aClass521_Sub1_Sub3_3499).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub4_3503 instanceof SceneObject)
+							((SceneObject) class293.aClass521_Sub1_Sub4_3503).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub4_3500 instanceof SceneObject)
+							((SceneObject) class293.aClass521_Sub1_Sub4_3500).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub5_3505 instanceof SceneObject)
+							((SceneObject) class293.aClass521_Sub1_Sub5_3505).method85((byte) 1);
+						if (class293.aClass521_Sub1_Sub5_3502 instanceof SceneObject)
+							((SceneObject) class293.aClass521_Sub1_Sub5_3502).method85((byte) 1);
 						for (Class208 class208 = class293.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 							Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
-							if (class521_sub1_sub1 instanceof Interface12)
-								((Interface12) class521_sub1_sub1).method85((byte) 1);
+							if (class521_sub1_sub1 instanceof SceneObject)
+								((SceneObject) class521_sub1_sub1).method85((byte) 1);
 						}
 					}
 				}
@@ -521,42 +521,42 @@ public class Class435 {
 				Exception_Sub3.method15619(true, -147678453);
 				Class282_Sub15_Sub1.method14840((byte) -22);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 70) {
-				Class494.aClass194_5794 = new Class194(class505, 11, true, Class351.LOAD_CANVAS);
+				Class494.aClass194_5794 = new Class194(class505, 11, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 1004672533;
 				Exception_Sub3.method15619(true, -1670495557);
 				Class282_Sub15_Sub1.method14840((byte) 30);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 73) {
-				Class291_Sub1.aClass194_8017 = new Class194(class505, 12, true, Class351.LOAD_CANVAS);
+				Class291_Sub1.aClass194_8017 = new Class194(class505, 12, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 869454940;
 				Exception_Sub3.method15619(true, -1191023445);
 				Class282_Sub15_Sub1.method14840((byte) -90);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 76) {
-				Class291_Sub1.aClass194_8023 = new Class194(class505, 14, true, Class351.LOAD_CANVAS);
+				Class291_Sub1.aClass194_8023 = new Class194(class505, 14, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 734237347;
 				Exception_Sub3.method15619(true, -2098673020);
 				Class282_Sub15_Sub1.method14840((byte) -57);
 			} else if (79 == -8084891 * Class291_Sub1.anInt8015) {
-				Class446.aClass194_5416 = new Class194(class505, 17, true, Class351.LOAD_CANVAS);
+				Class446.aClass194_5416 = new Class194(class505, 17, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 599019754;
 				Exception_Sub3.method15619(true, 784313452);
 				Class282_Sub15_Sub1.method14840((byte) 55);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 82) {
-				Class114.aClass194_1243 = new Class194(class505, 19, true, Class351.LOAD_CANVAS);
+				Class114.aClass194_1243 = new Class194(class505, 19, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 463802161;
 				Exception_Sub3.method15619(true, 299968314);
 				Class282_Sub15_Sub1.method14840((byte) -88);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 85) {
-				DefaultsFile.aClass194_6967 = new Class194(class505, 22, true, Class351.LOAD_CANVAS);
+				DefaultsFile.aClass194_6967 = new Class194(class505, 22, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 328584568;
 				Exception_Sub3.method15619(true, 735044045);
 				Class282_Sub15_Sub1.method14840((byte) -35);
 			} else if (-8084891 * Class291_Sub1.anInt8015 == 88) {
-				Class251.aClass194_3103 = new Class194(class505, 26, true, Class351.LOAD_CANVAS);
+				Class251.aClass194_3103 = new Class194(class505, 26, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = 193366975;
 				Exception_Sub3.method15619(true, 1741477937);
 				Class282_Sub15_Sub1.method14840((byte) -64);
 			} else {
-				Class521_Sub1_Sub5_Sub1.aClass194_10527 = new Class194(class505, 30, true, Class351.LOAD_CANVAS);
+				Class521_Sub1_Sub5_Sub1.aClass194_10527 = new Class194(class505, 30, true, Class351.gameCanvas);
 				Class291_Sub1.anInt8015 = -212285804;
 				Exception_Sub3.method15619(true, -95185892);
 				Class282_Sub15_Sub1.method14840((byte) -14);

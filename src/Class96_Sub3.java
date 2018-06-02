@@ -20,7 +20,7 @@ public class Class96_Sub3 extends Class96 {
 
 	public void method1592(int i) {
 		Class92 class92 = (Class86.aClass92Array820[((Class96_Sub3) this).anInt8516 * -1978703627]);
-		Class9.method455(-1318859227 * ((Class92) class92).anInt965, ((Class92) class92).anInt962 * -76417803, -987984923 * ((Class92) class92).anInt966, (((Class92) class92).aClass458_963.anInt5494 * 480268417), (((Class92) class92).aClass458_963.anInt5481 * 1109376893), -71092145 * ((Class92) class92).anInt967, ((Class96_Sub3) this).anInt8517 * -45034787, (byte) 1);
+		Class9.animateObject(-1318859227 * ((Class92) class92).anInt965, ((Class92) class92).anInt962 * -76417803, -987984923 * ((Class92) class92).anInt966, (((Class92) class92).aClass458_963.anInt5494 * 480268417), (((Class92) class92).aClass458_963.anInt5481 * 1109376893), -71092145 * ((Class92) class92).anInt967, ((Class96_Sub3) this).anInt8517 * -45034787, (byte) 1);
 	}
 
 	boolean method1599(int i) {
@@ -30,7 +30,7 @@ public class Class96_Sub3 extends Class96 {
 
 	public void method1601() {
 		Class92 class92 = (Class86.aClass92Array820[((Class96_Sub3) this).anInt8516 * -1978703627]);
-		Class9.method455(-1318859227 * ((Class92) class92).anInt965, ((Class92) class92).anInt962 * -76417803, -987984923 * ((Class92) class92).anInt966, (((Class92) class92).aClass458_963.anInt5494 * 480268417), (((Class92) class92).aClass458_963.anInt5481 * 1109376893), -71092145 * ((Class92) class92).anInt967, ((Class96_Sub3) this).anInt8517 * -45034787, (byte) 1);
+		Class9.animateObject(-1318859227 * ((Class92) class92).anInt965, ((Class92) class92).anInt962 * -76417803, -987984923 * ((Class92) class92).anInt966, (((Class92) class92).aClass458_963.anInt5494 * 480268417), (((Class92) class92).aClass458_963.anInt5481 * 1109376893), -71092145 * ((Class92) class92).anInt967, ((Class96_Sub3) this).anInt8517 * -45034787, (byte) 1);
 	}
 
 	boolean method1591() {
@@ -52,7 +52,7 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	static void method13786(int i, int i_1_, int i_2_, int i_3_, byte i_4_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(4, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(4, (long) i);
 		class282_sub50_sub12.method14995(1205574173);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_1_;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_2_;

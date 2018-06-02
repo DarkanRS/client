@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Interface12 {
+public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements SceneObject {
 	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_10491;
 	ObjectIndexLoader aClass474_10492;
 	boolean aBool10493;
@@ -122,7 +122,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Inter
 			((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.KA(((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.m() & ~0x10000);
 	}
 
-	public int method84(int i) {
+	public int getId(int i) {
 		return -1419362635 * ((Class521_Sub1_Sub3_Sub1) this).anInt10495;
 	}
 
@@ -336,7 +336,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Inter
 		/* empty */
 	}
 
-	public Class521_Sub1_Sub3_Sub1(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_10_, int i_11_, int i_12_, int i_13_, boolean bool, int i_14_, boolean bool_15_) {
+	public Class521_Sub1_Sub3_Sub1(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_10_, int i_11_, int i_12_, int i_13_, boolean bool, int i_14_, boolean bool_15_) {
 		super(class206, i_11_, i_12_, i_13_, i, i_10_, class478.anInt5704 * 1338534295);
 		((Class521_Sub1_Sub3_Sub1) this).aClass474_10492 = class474;
 		((Class521_Sub1_Sub3_Sub1) this).anInt10495 = class478.id * 386955635;

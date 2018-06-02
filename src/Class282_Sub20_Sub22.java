@@ -235,7 +235,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 			Class151.method2592((byte) 21);
 		} else {
 			if (!Class20.aBool161)
-				Class228.method3851(-402153223);
+				HitsplatDefinitions.method3851(-402153223);
 			for (int i_33_ = 0; (i_33_ < 100 && Class8_Sub3.method14338(client.aClass184_7475, (byte) 2)); i_33_++) {
 				/* empty */
 			}
@@ -260,9 +260,9 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 					Class496.aClass510_5816 = client.aClass508_7223.method8729((Class159.aClass450_2010.aString5433), (short) 5418);
 				Class434.method7292((byte) -22);
 				Class282_Sub53 class282_sub53 = ((Class282_Sub53) client.aClass482_7267.head((byte) 106));
-				if (IndexLoaders.MAP_REGION_DECODER.method4430(-1135712280) != null) {
+				if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1135712280) != null) {
 					if (5 == Class262.anInt3240 * -672443707)
-						Class521_Sub1_Sub5_Sub2.method16113(70521151);
+						Wall.method16113(70521151);
 					else if (-672443707 * Class262.anInt3240 == 3)
 						Class515.method8860((byte) -76);
 				}

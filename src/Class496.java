@@ -82,10 +82,10 @@ public class Class496 implements Interface43 {
 	}
 
 	static void method8309(RsByteBuffer class282_sub35, int i, int i_1_) {
-		if (Class263.aClass440_3269 != null) {
+		if (Engine.aClass440_3269 != null) {
 			try {
-				Class263.aClass440_3269.method7347(0L);
-				Class263.aClass440_3269.method7352((class282_sub35.buffer), i, 24, 1942118537);
+				Engine.aClass440_3269.method7347(0L);
+				Engine.aClass440_3269.method7352((class282_sub35.buffer), i, 24, 1942118537);
 			} catch (Exception exception) {
 				/* empty */
 			}
@@ -110,7 +110,7 @@ public class Class496 implements Interface43 {
 
 	static int method8313(byte i) {
 		int i_3_;
-		if (Class263.anInt3273 * -1346844585 >= 96) {
+		if (Engine.MAX_MEMORY * -1346844585 >= 96) {
 			int i_4_ = Class241.method4150(1219422368);
 			if (i_4_ <= 104) {
 				Defaults6Loader.method11248(1422604274);

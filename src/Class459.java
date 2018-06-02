@@ -93,7 +93,7 @@ public final class Class459 {
 			boolean bool_3_ = false;
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) npcIndex));
 			if (class282_sub47 == null) {
-				NPC npc = (new NPC(IndexLoaders.MAP_REGION_DECODER.method4430(-1073098599)));
+				NPC npc = (new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1073098599)));
 				npc.anInt10314 = npcIndex * -1498872675;
 				class282_sub47 = new Class282_Sub47(npc);
 				client.aClass465_7208.method7765(class282_sub47, (long) npcIndex);

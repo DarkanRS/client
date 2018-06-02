@@ -91,7 +91,7 @@ public class Class429 {
 				int i_7_ = (int) class385.aFloat4671;
 				int i_8_ = (int) class385.aFloat4673;
 				Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-				Class206 class206 = IndexLoaders.MAP_REGION_DECODER.method4430(-1591290583);
+				SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1591290583);
 				if (-672443707 * Class262.anInt3240 == 2 || Class508.anInt5864 * 1927687797 != -1) {
 					if (Class262.anInt3240 * -672443707 != 2) {
 						i_7_ = 1927687797 * Class508.anInt5864;

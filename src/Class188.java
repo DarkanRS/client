@@ -101,7 +101,7 @@ public class Class188 {
 
 	static int method3125() {
 		int i;
-		if (Class263.anInt3273 * -1346844585 >= 96) {
+		if (Engine.MAX_MEMORY * -1346844585 >= 96) {
 			int i_0_ = Class241.method4150(286178564);
 			if (i_0_ <= 104) {
 				Defaults6Loader.method11248(1574716126);
@@ -131,7 +131,7 @@ public class Class188 {
 
 	static int method3126() {
 		int i;
-		if (Class263.anInt3273 * -1346844585 >= 96) {
+		if (Engine.MAX_MEMORY * -1346844585 >= 96) {
 			int i_1_ = Class241.method4150(-1032220208);
 			if (i_1_ <= 104) {
 				Defaults6Loader.method11248(699517376);
@@ -505,7 +505,7 @@ public class Class188 {
 	}
 
 	static void method3137() {
-		if (-1290103735 * Class263.anInt3277 > 1)
+		if (-1290103735 * Engine.AVAILABLE_PROCESSORS > 1)
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub5_8221), 4, 1591828920);
 		else
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub5_8221), 2, -2133012932);
@@ -626,7 +626,7 @@ public class Class188 {
 						int i_40_ = -1258088735 * Class272.anInt3331;
 						if (i_40_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_32_, i_33_, 1736872012))
 							i_40_++;
-						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.method4430(-1262511642), i_34_, i_36_, -1258088735 * Class272.anInt3331, i_40_, i_38_, Class504.method8389(i_38_, i_39_, (Class272.anInt3331 * -1258088735), (byte) 59) - i_35_, i_39_, i_32_, i_32_, i_33_, i_33_, i_37_, false));
+						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1262511642), i_34_, i_36_, -1258088735 * Class272.anInt3331, i_40_, i_38_, Class504.method8389(i_38_, i_39_, (Class272.anInt3331 * -1258088735), (byte) 59) - i_35_, i_39_, i_32_, i_32_, i_33_, i_33_, i_37_, false));
 						client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4), (long) (i_32_ << 16 | i_33_));
 					}
 				}
@@ -657,7 +657,7 @@ public class Class188 {
 					i_48_ <<= 2;
 					i_49_ <<= 2;
 					i_53_ <<= 2;
-					Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.method4430(-1524809877), i_47_, -1258088735 * Class272.anInt3331, Class272.anInt3331 * -1258088735, i_42_, i_43_, i_48_, -1809259861 * client.cycles + i_50_, i_51_ + -1809259861 * client.cycles, i_52_, i_53_, 0, i_46_, i_49_, bool, -1));
+					Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1524809877), i_47_, -1258088735 * Class272.anInt3331, Class272.anInt3331 * -1258088735, i_42_, i_43_, i_48_, -1809259861 * client.cycles + i_50_, i_51_ + -1809259861 * client.cycles, i_52_, i_53_, 0, i_46_, i_49_, bool, -1));
 					class521_sub1_sub1_sub3.method15904(i_44_, i_45_, Class504.method8389(i_44_, i_45_, -1258088735 * Class272.anInt3331, (byte) 20) - i_49_, client.cycles * -1809259861 + i_50_, -209443166);
 					client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -430462117);
 				}
@@ -826,7 +826,7 @@ public class Class188 {
 			int i_127_ = (i_125_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
 			int i_128_ = stream.readIntLE(1535034399);
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2057621455) != Class256.aClass256_3153)
-				Class9.method455(Class272.anInt3331 * -1258088735, i_126_, i_127_, i_124_, i_122_, i_123_, i_128_, (byte) 1);
+				Class9.animateObject(Class272.anInt3331 * -1258088735, i_126_, i_127_, i_124_, i_122_, i_123_, i_128_, (byte) 1);
 		} else if (class364 == TilestreamPacket.aClass364_4206) {
 			int i_129_ = stream.readShortLE128(602501853);
 			int i_130_ = stream.readUnsignedShort128();

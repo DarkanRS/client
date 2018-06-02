@@ -167,7 +167,7 @@ public class Class211 {
 					client.aBoolArray7443[i_13_] = true;
 			}
 		} else
-			Class521_Sub1_Sub3_Sub2.method16094(Class468_Sub8.aClass98Array7889[i].method1616(2127300382), -1, i_5_, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_, i_11_ < 0, (byte) 6);
+			GroundDecoration.method16094(Class468_Sub8.aClass98Array7889[i].method1616(2127300382), -1, i_5_, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_, i_11_ < 0, (byte) 6);
 	}
 
 	public static void method3630(int i) {
@@ -182,7 +182,7 @@ public class Class211 {
 	}
 
 	public static void method3631(int i, int i_14_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(3, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(3, (long) i);
 		class282_sub50_sub12.method14965((byte) -28);
 	}
 }

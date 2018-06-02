@@ -45,7 +45,7 @@ public class Class96_Sub5 extends Class96 {
 
 	static final void method14244(CS2Executor class527, int i) {
 		int i_0_ = -2123019059 * Class363.anInt4203;
-		int i_1_ = 977902937 * Class263.anInt3249;
+		int i_1_ = 977902937 * Engine.anInt3249;
 		int i_2_ = -1;
 		if (Class475.aBool5623) {
 			Class467[] class467s = Class405.method6825((byte) 55);

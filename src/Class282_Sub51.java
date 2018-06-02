@@ -260,9 +260,9 @@ public class Class282_Sub51 extends Node {
 			}
 			anInt8149 = 440242573 * i_2_;
 			((Class282_Sub51) this).aBool8150 = false;
-			((Class282_Sub51) this).anInt8151 = -1066842283 * Class263.anInt3273;
+			((Class282_Sub51) this).anInt8151 = -1066842283 * Engine.MAX_MEMORY;
 			if (anInt8147 * 1358864261 > 3)
-				((Class282_Sub51) this).anInt8146 = Class263.anInt3277 * -888695625;
+				((Class282_Sub51) this).anInt8146 = Engine.AVAILABLE_PROCESSORS * -888695625;
 			else
 				((Class282_Sub51) this).anInt8146 = 0;
 			try {

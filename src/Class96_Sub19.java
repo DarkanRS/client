@@ -48,7 +48,7 @@ public class Class96_Sub19 extends Class96 {
 				i_2_ = class521_sub1_sub1_sub2.aByte7967;
 		}
 		int i_5_ = -716833811 * ((Class96_Sub19) this).anInt9399 << 2;
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.method4430(-1436448746), ((Class96_Sub19) this).anInt9410 * 899631601, i_2_, i_2_, i_0_, i_1_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_5_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
+		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1436448746), ((Class96_Sub19) this).anInt9410 * 899631601, i_2_, i_2_, i_0_, i_1_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_5_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
 				((Class96_Sub19) this).anInt9400 * 1060287315 + 1, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, false, 0));
 		class521_sub1_sub1_sub3.method15904(i_3_, i_4_, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, (-511484631 * ((Class96_Sub19) this).anInt9409 + client.cycles * -1809259861), -209443166);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), 1701018076);
@@ -83,7 +83,7 @@ public class Class96_Sub19 extends Class96 {
 				i_7_ = class521_sub1_sub1_sub2.aByte7967;
 		}
 		int i_10_ = -716833811 * ((Class96_Sub19) this).anInt9399 << 2;
-		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.method4430(-2009786094), ((Class96_Sub19) this).anInt9410 * 899631601, i_7_, i_7_, i, i_6_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_10_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
+		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2009786094), ((Class96_Sub19) this).anInt9410 * 899631601, i_7_, i_7_, i, i_6_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_10_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
 				((Class96_Sub19) this).anInt9400 * 1060287315 + 1, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, false, 0));
 		class521_sub1_sub1_sub3.method15904(i_8_, i_9_, -209777139 * ((Class96_Sub19) this).anInt9413 << 2, (-511484631 * ((Class96_Sub19) this).anInt9409 + client.cycles * -1809259861), -209443166);
 		client.aClass482_7333.append(new Class282_Sub50_Sub16(class521_sub1_sub1_sub3), -1862724150);

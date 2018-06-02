@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Interface12 {
+public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 	boolean aBool10528 = true;
 	boolean aBool10529;
 	Class200 aClass200_10530;
@@ -16,7 +16,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub5_Sub2) this).aBool10529, (byte) -46);
+		Class285 class285 = Class470.method7824(((Wall) this).aBool10529, (byte) -46);
 		int i_0_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_1_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10532.method2119(class505, class528, class294, i_0_, i_0_, i_1_, i_1_, true, 319778577);
@@ -25,11 +25,11 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			Class151 class151 = ((Class123) aClass123_10532).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub5_Sub2) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
-		if (((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 == null)
-			((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -4);
+		((Wall) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
+		if (((Wall) this).aClass200_10530 == null)
+			((Wall) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -4);
 		else
-			Class388.method6694((((Class521_Sub1_Sub5_Sub2) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1850766643);
+			Class388.method6694((((Wall) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1850766643);
 		return class285;
 	}
 
@@ -38,11 +38,11 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	boolean method12987(int i) {
-		return ((Class521_Sub1_Sub5_Sub2) this).aBool10528;
+		return ((Wall) this).aBool10528;
 	}
 
 	public Class200 method12992(GraphicalRenderer class505, byte i) {
-		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
+		return ((Wall) this).aClass200_10530;
 	}
 
 	void method13023(GraphicalRenderer class505) {
@@ -57,7 +57,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	boolean method13001() {
-		return ((Class521_Sub1_Sub5_Sub2) this).aBool10528;
+		return ((Wall) this).aBool10528;
 	}
 
 	public void method16108(Class476 class476, int i) {
@@ -91,7 +91,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		throw new IllegalStateException();
 	}
 
-	public int method84(int i) {
+	public int getId(int i) {
 		return ((Class123) aClass123_10532).anInt1540 * 1535779425;
 	}
 
@@ -148,7 +148,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	boolean method13002() {
-		return ((Class521_Sub1_Sub5_Sub2) this).aBool10528;
+		return ((Wall) this).aBool10528;
 	}
 
 	Class285 method13010(GraphicalRenderer class505) {
@@ -157,7 +157,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub5_Sub2) this).aBool10529, (byte) -125);
+		Class285 class285 = Class470.method7824(((Wall) this).aBool10529, (byte) -125);
 		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_5_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10532.method2119(class505, class528, class294, i, i, i_5_, i_5_, true, -337672509);
@@ -166,11 +166,11 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			Class151 class151 = ((Class123) aClass123_10532).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub5_Sub2) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
-		if (((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 == null)
-			((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 5);
+		((Wall) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
+		if (((Wall) this).aClass200_10530 == null)
+			((Wall) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 5);
 		else
-			Class388.method6694((((Class521_Sub1_Sub5_Sub2) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -550552279);
+			Class388.method6694((((Wall) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -550552279);
 		return class285;
 	}
 
@@ -178,10 +178,10 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 		return ((Class123) aClass123_10532).anInt1555 * 845010167;
 	}
 
-	public Class521_Sub1_Sub5_Sub2(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
-		super(class206, i_7_, i_8_, i_9_, i, i_6_, Class263.method4777(i_10_, i_11_, (byte) -17));
+	public Wall(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
+		super(class206, i_7_, i_8_, i_9_, i, i_6_, Engine.method4777(i_10_, i_11_, (byte) -17));
 		aClass123_10532 = new Class123(class505, class474, class478, i_10_, i_11_, aByte7967, i_6_, this, bool, i_12_);
-		((Class521_Sub1_Sub5_Sub2) this).aBool10529 = 0 != class478.anInt5652 * -348507379 && !bool;
+		((Wall) this).aBool10529 = 0 != class478.anInt5652 * -348507379 && !bool;
 		method13008(1, (byte) -77);
 	}
 
@@ -206,7 +206,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 	}
 
 	boolean method13000() {
-		return ((Class521_Sub1_Sub5_Sub2) this).aBool10528;
+		return ((Wall) this).aBool10528;
 	}
 
 	boolean method12999() {
@@ -255,7 +255,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub5_Sub2) this).aBool10529, (byte) -77);
+		Class285 class285 = Class470.method7824(((Wall) this).aBool10529, (byte) -77);
 		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_15_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10532.method2119(class505, class528, class294, i, i, i_15_, i_15_, true, -204709260);
@@ -264,11 +264,11 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			Class151 class151 = ((Class123) aClass123_10532).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub5_Sub2) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
-		if (((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 == null)
-			((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 8);
+		((Wall) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
+		if (((Wall) this).aClass200_10530 == null)
+			((Wall) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 8);
 		else
-			Class388.method6694((((Class521_Sub1_Sub5_Sub2) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -237678782);
+			Class388.method6694((((Wall) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -237678782);
 		return class285;
 	}
 
@@ -304,7 +304,7 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub5_Sub2) this).aBool10529, (byte) -18);
+		Class285 class285 = Class470.method7824(((Wall) this).aBool10529, (byte) -18);
 		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_19_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10532.method2119(class505, class528, class294, i, i, i_19_, i_19_, true, 1290726085);
@@ -313,24 +313,24 @@ public class Class521_Sub1_Sub5_Sub2 extends Class521_Sub1_Sub5 implements Inter
 			Class151 class151 = ((Class123) aClass123_10532).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub5_Sub2) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
-		if (((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 == null)
-			((Class521_Sub1_Sub5_Sub2) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -25);
+		((Wall) this).aBool10528 = (class528.i() || ((Class123) aClass123_10532).aClass539_1538 != null);
+		if (((Wall) this).aClass200_10530 == null)
+			((Wall) this).aClass200_10530 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -25);
 		else
-			Class388.method6694((((Class521_Sub1_Sub5_Sub2) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -678461281);
+			Class388.method6694((((Wall) this).aClass200_10530), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -678461281);
 		return class285;
 	}
 
 	public Class200 method13019(GraphicalRenderer class505) {
-		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
+		return ((Wall) this).aClass200_10530;
 	}
 
 	public Class200 method13018(GraphicalRenderer class505) {
-		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
+		return ((Wall) this).aClass200_10530;
 	}
 
 	public Class200 method12993(GraphicalRenderer class505) {
-		return ((Class521_Sub1_Sub5_Sub2) this).aClass200_10530;
+		return ((Wall) this).aClass200_10530;
 	}
 
 	boolean method13020(GraphicalRenderer class505, int i, int i_20_) {

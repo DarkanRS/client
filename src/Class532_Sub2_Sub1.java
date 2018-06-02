@@ -41,7 +41,7 @@ public class Class532_Sub2_Sub1 extends Class532_Sub2 {
 	public static void method14762(int i, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_, int i_40_) {
 		if (i < anInt7071 * -612590951 || i > -1345107225 * anInt7069 || i_34_ < anInt7071 * -612590951 || i_34_ > -1345107225 * anInt7069 || i_36_ < -612590951 * anInt7071 || i_36_ > -1345107225 * anInt7069 || i_38_ < -612590951 * anInt7071 || i_38_ > -1345107225 * anInt7069 || i_33_ < anInt7070 * 324226563 || i_33_ > anInt7068 * -348932735 || i_35_ < anInt7070 * 324226563 || i_35_ > -348932735 * anInt7068 || i_37_ < anInt7070 * 324226563 || i_37_ > -348932735 * anInt7068
 				|| i_39_ < 324226563 * anInt7070 || i_39_ > anInt7068 * -348932735)
-			Class263.method4779(i, i_33_, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, i_40_, (byte) 16);
+			Engine.method4779(i, i_33_, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, i_40_, (byte) 16);
 		else
 			Class282_Sub4.method12117(i, i_33_, i_34_, i_35_, i_36_, i_37_, i_38_, i_39_, i_40_, -1117681382);
 	}
@@ -49,7 +49,7 @@ public class Class532_Sub2_Sub1 extends Class532_Sub2 {
 	public static void method14763(int i, int i_41_, int i_42_, int i_43_, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_) {
 		if (i < anInt7071 * -612590951 || i > -1345107225 * anInt7069 || i_42_ < anInt7071 * -612590951 || i_42_ > -1345107225 * anInt7069 || i_44_ < -612590951 * anInt7071 || i_44_ > -1345107225 * anInt7069 || i_46_ < -612590951 * anInt7071 || i_46_ > -1345107225 * anInt7069 || i_41_ < anInt7070 * 324226563 || i_41_ > anInt7068 * -348932735 || i_43_ < anInt7070 * 324226563 || i_43_ > -348932735 * anInt7068 || i_45_ < anInt7070 * 324226563 || i_45_ > -348932735 * anInt7068
 				|| i_47_ < 324226563 * anInt7070 || i_47_ > anInt7068 * -348932735)
-			Class263.method4779(i, i_41_, i_42_, i_43_, i_44_, i_45_, i_46_, i_47_, i_48_, (byte) 16);
+			Engine.method4779(i, i_41_, i_42_, i_43_, i_44_, i_45_, i_46_, i_47_, i_48_, (byte) 16);
 		else
 			Class282_Sub4.method12117(i, i_41_, i_42_, i_43_, i_44_, i_45_, i_46_, i_47_, i_48_, -1223743106);
 	}

@@ -94,7 +94,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 		return class285;
 	}
 
-	public Class521_Sub1_Sub1_Sub4(Class206 class206, int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, boolean bool) {
+	public Class521_Sub1_Sub1_Sub4(SceneObjectManager class206, int i, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, boolean bool) {
 		super(class206, i_5_, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_, i_12_, i_13_, false, (byte) 0);
 		((Class521_Sub1_Sub1_Sub4) this).anInt10407 = 0;
 		((Class521_Sub1_Sub1_Sub4) this).aBool10405 = true;

@@ -98,7 +98,7 @@ public class Class235 {
 		}
 	}
 
-	public static void method3959(Class206 class206, GraphicalRenderer class505) {
+	public static void method3959(SceneObjectManager class206, GraphicalRenderer class505) {
 		Iterator iterator = aList2896.iterator();
 		while (iterator.hasNext()) {
 			Class539 class539 = (Class539) iterator.next();

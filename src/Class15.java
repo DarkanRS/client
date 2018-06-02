@@ -94,7 +94,7 @@ final class Class15 implements Interface35 {
 		Class96_Sub10.method14603(9, i_7_ << 16 | i_8_, i_9_, "", (byte) 54);
 	}
 
-	public static void method549(Class397 class397, int i, int i_10_, Interface12 interface12, int i_11_) {
+	public static void method549(Class397 class397, int i, int i_10_, SceneObject interface12, int i_11_) {
 		CS2Executor class527 = Class125.method2167(1408358423);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_10_, class527, (byte) 23);

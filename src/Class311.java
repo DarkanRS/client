@@ -169,7 +169,7 @@ public class Class311 {
 	}
 
 	public static void method5513(int i, int i_36_, byte i_37_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Class263.method4778(18, (long) i_36_ << 32 | (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(18, (long) i_36_ << 32 | (long) i);
 		class282_sub50_sub12.method14965((byte) -18);
 	}
 }

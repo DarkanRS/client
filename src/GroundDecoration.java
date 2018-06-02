@@ -2,14 +2,14 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Interface12 {
+public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject {
 	Class200 aClass200_10505;
 	boolean aBool10506;
 	public Class123 aClass123_10507;
 	boolean aBool10508 = true;
 
 	public Class200 method12993(GraphicalRenderer class505) {
-		return ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505;
+		return ((GroundDecoration) this).aClass200_10505;
 	}
 
 	boolean method12986(int i) {
@@ -17,11 +17,11 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	boolean method12987(int i) {
-		return ((Class521_Sub1_Sub3_Sub2) this).aBool10508;
+		return ((GroundDecoration) this).aBool10508;
 	}
 
 	public Class200 method12992(GraphicalRenderer class505, byte i) {
-		return ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505;
+		return ((GroundDecoration) this).aClass200_10505;
 	}
 
 	public int method12995(int i) {
@@ -38,7 +38,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub2) this).aBool10506, (byte) -122);
+		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -122);
 		int i_0_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_1_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i_0_, i_0_, i_1_, i_1_, true, 1139295169);
@@ -47,11 +47,11 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			Class151 class151 = ((Class123) aClass123_10507).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub3_Sub2) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
-		if (null == ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505)
-			((Class521_Sub1_Sub3_Sub2) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -28);
+		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
+		if (null == ((GroundDecoration) this).aClass200_10505)
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -28);
 		else
-			Class388.method6694((((Class521_Sub1_Sub3_Sub2) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1412574443);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1412574443);
 		return class285;
 	}
 
@@ -88,7 +88,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 		return false;
 	}
 
-	public int method84(int i) {
+	public int getId(int i) {
 		return 1535779425 * ((Class123) aClass123_10507).anInt1540;
 	}
 
@@ -113,7 +113,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	boolean method13001() {
-		return ((Class521_Sub1_Sub3_Sub2) this).aBool10508;
+		return ((GroundDecoration) this).aBool10508;
 	}
 
 	public int method76() {
@@ -132,7 +132,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	boolean method13002() {
-		return ((Class521_Sub1_Sub3_Sub2) this).aBool10508;
+		return ((GroundDecoration) this).aBool10508;
 	}
 
 	public int method91() {
@@ -161,7 +161,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub2) this).aBool10506, (byte) -111);
+		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -111);
 		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_10_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i, i, i_10_, i_10_, true, 2037340333);
@@ -170,11 +170,11 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			Class151 class151 = ((Class123) aClass123_10507).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub3_Sub2) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
-		if (null == ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505)
-			((Class521_Sub1_Sub3_Sub2) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -26);
+		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
+		if (null == ((GroundDecoration) this).aClass200_10505)
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -26);
 		else
-			Class388.method6694((((Class521_Sub1_Sub3_Sub2) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1093700673);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1093700673);
 		return class285;
 	}
 
@@ -213,7 +213,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	boolean method13000() {
-		return ((Class521_Sub1_Sub3_Sub2) this).aBool10508;
+		return ((GroundDecoration) this).aBool10508;
 	}
 
 	public int method13003() {
@@ -228,10 +228,10 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 		return aClass123_10507.method2115(-1751223861);
 	}
 
-	public Class521_Sub1_Sub3_Sub2(Class206 class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_12_, int i_13_, int i_14_, int i_15_, boolean bool, int i_16_, int i_17_) {
+	public GroundDecoration(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_12_, int i_13_, int i_14_, int i_15_, boolean bool, int i_16_, int i_17_) {
 		super(class206, i_13_, i_14_, i_15_, i, i_12_, 1338534295 * class478.anInt5704);
 		aClass123_10507 = new Class123(class505, class474, class478, Class458.aClass458_5480.anInt5481 * 1109376893, i_16_, i, i_12_, this, bool, i_17_);
-		((Class521_Sub1_Sub3_Sub2) this).aBool10506 = class478.anInt5652 * -348507379 != 0 && !bool;
+		((GroundDecoration) this).aBool10506 = class478.anInt5652 * -348507379 != 0 && !bool;
 		method13008(1, (byte) -48);
 	}
 
@@ -253,7 +253,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub2) this).aBool10506, (byte) -77);
+		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -77);
 		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_18_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i, i, i_18_, i_18_, true, -467825416);
@@ -262,11 +262,11 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			Class151 class151 = ((Class123) aClass123_10507).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub3_Sub2) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
-		if (null == ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505)
-			((Class521_Sub1_Sub3_Sub2) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -32);
+		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
+		if (null == ((GroundDecoration) this).aClass200_10505)
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -32);
 		else
-			Class388.method6694((((Class521_Sub1_Sub3_Sub2) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 234784710);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 234784710);
 		return class285;
 	}
 
@@ -276,7 +276,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			return null;
 		Class294 class294 = method11168();
 		Class305 class305 = method11166();
-		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub2) this).aBool10506, (byte) -86);
+		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -86);
 		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
 		int i_19_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i, i, i_19_, i_19_, true, 973723182);
@@ -285,11 +285,11 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 			Class151 class151 = ((Class123) aClass123_10507).aClass539_1538.method11517();
 			class505.method8456(class151);
 		}
-		((Class521_Sub1_Sub3_Sub2) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
-		if (null == ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505)
-			((Class521_Sub1_Sub3_Sub2) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 68);
+		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
+		if (null == ((GroundDecoration) this).aClass200_10505)
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 68);
 		else
-			Class388.method6694((((Class521_Sub1_Sub3_Sub2) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1066988598);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1066988598);
 		return class285;
 	}
 
@@ -324,7 +324,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	public Class200 method13018(GraphicalRenderer class505) {
-		return ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505;
+		return ((GroundDecoration) this).aClass200_10505;
 	}
 
 	public void method16093(Class476 class476) {
@@ -352,7 +352,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 	}
 
 	public Class200 method13019(GraphicalRenderer class505) {
-		return ((Class521_Sub1_Sub3_Sub2) this).aClass200_10505;
+		return ((GroundDecoration) this).aClass200_10505;
 	}
 
 	public static final void method16094(Class118[] class118s, int i, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, boolean bool, byte i_30_) {
@@ -428,7 +428,7 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 					if (i_38_ < i_40_ && i_39_ < i_41_) {
 						if (class118.anInt1290 * 1449989045 != 0) {
 							if ((-741477579 * Class118.anInt1372 == 1449989045 * class118.anInt1290) || (260799187 * Class118.anInt1436 == class118.anInt1290 * 1449989045)) {
-								Class198.method3231(i_33_, i_34_, class118.anInt1301 * 1506818197, -492594917 * class118.anInt1429, (Class118.anInt1436 * 260799187 == 1449989045 * class118.anInt1290), 72550989);
+								HitbarDefinitions.method3231(i_33_, i_34_, class118.anInt1301 * 1506818197, -492594917 * class118.anInt1429, (Class118.anInt1436 * 260799187 == 1449989045 * class118.anInt1290), 72550989);
 								Class282_Sub23.method12366(i_32_, i_38_, i_39_, i_40_, i_41_, i_33_, i_34_, -368732775);
 								Renderers.SOFTWARE_RENDERER.method8421();
 								Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
@@ -742,6 +742,6 @@ public class Class521_Sub1_Sub3_Sub2 extends Class521_Sub1_Sub3 implements Inter
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class263.method4772(class118, class98, class527, (byte) 12);
+		Engine.method4772(class118, class98, class527, (byte) 12);
 	}
 }
