@@ -586,7 +586,7 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 		return is;
 	}
 
-	static final void method15207(Class118 class118, CS2Executor class527, int i) {
+	static final void method15207(IComponentDefinitions class118, CS2Executor class527, int i) {
 		int i_158_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_159_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 6 && 2 != class118.anInt1329 * 2131324949)

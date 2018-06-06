@@ -17,6 +17,6 @@ public class Class282_Sub45 extends Node {
 	static final void method13406(CS2Executor class527, int i) {
 		class527.anInt7001 -= 1918006146;
 		if ((class527.aLongArray7003[class527.anInt7001 * 1820448321]) <= (class527.aLongArray7003[1 + 1820448321 * class527.anInt7001]))
-			class527.instrPtr += (-1051529003 * (class527.unknown[301123709 * class527.instrPtr]));
+			class527.instrPtr += (-1051529003 * (class527.intOpValues[301123709 * class527.instrPtr]));
 	}
 }

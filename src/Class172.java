@@ -6,7 +6,7 @@ public class Class172 {
 	public int anInt2113;
 	public Class172 aClass172_2114;
 	public int anInt2115;
-	public Class384 aClass384_2116;
+	public Matrix44Arr aClass384_2116;
 	public int anInt2117;
 	public int anInt2118;
 	public int anInt2119;
@@ -41,7 +41,7 @@ public class Class172 {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
-	static final void method2915(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method2915(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class118.anInt1324 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 1596298199);
 		Class109.method1858(class118, (byte) 15);
 	}
@@ -50,10 +50,10 @@ public class Class172 {
 		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(2115091118);
 		if (class282_sub50_sub6 != null) {
-			boolean bool = class282_sub50_sub6.method14778(i_3_ >> 28 & 0x3, i_3_ >> 14 & 0x3fff, i_3_ & 0x3fff, Class517.anIntArray5900, -1837274243);
+			boolean bool = class282_sub50_sub6.method14778(i_3_ >> 28 & 0x3, i_3_ >> 14 & 0x3fff, i_3_ & 0x3fff, CS2Runner.anIntArray5900, -1837274243);
 			if (bool) {
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[1];
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[2];
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[1];
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[2];
 			} else {
 				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
 				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;

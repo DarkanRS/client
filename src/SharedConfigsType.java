@@ -160,8 +160,8 @@ public class SharedConfigsType {
 		int i_6_ = (class527.intStack[class527.anInt7012 * 1942118537]);
 		int i_7_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
 		int i_8_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
-		Class282_Sub50_Sub9 class282_sub50_sub9 = IndexLoaders.aClass429_4265.method7214(i_6_, -1670488027);
-		if ((class282_sub50_sub9.method14918(i_7_, -1596809459).anInt2997 * -1869685303) != 0) {
+		QuickchatDefinitions class282_sub50_sub9 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_6_, -1670488027);
+		if ((class282_sub50_sub9.method14918(i_7_, -1596809459).id * -1869685303) != 0) {
 			if (i >= 1)
 				return;
 			throw new RuntimeException("");
@@ -175,7 +175,7 @@ public class SharedConfigsType {
 	}
 
 	static final void method2093(CS2Executor class527, byte i) {
-		int i_9_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_9_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = ((NPC) class527.animable).aClass153_10579.method2610(i_9_, (short) 25901);
 	}
 

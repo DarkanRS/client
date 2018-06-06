@@ -38,7 +38,7 @@ public class Class282_Sub47 extends Node {
 			int i_8_ = -1;
 			if (client.cycles * -1809259861 % 30 > 15)
 				i_8_ = 16777215;
-			class505.method8428((10 + (Class288.aClass414_3438.method6946(new StringBuilder().append("--> ").append(Class400.method6793(Class179.aString2225, (byte) 1).substring(0, -530721645 * Class179.anInt2220)).toString(), -1967833701))), 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 11, 12, i_8_, -1796764807);
+			class505.method8428((10 + (Class288.aClass414_3438.getWidthNoSprites(new StringBuilder().append("--> ").append(Class400.method6793(Class179.aString2225, (byte) 1).substring(0, -530721645 * Class179.anInt2220)).toString(), -1967833701))), 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 11, 12, i_8_, -1796764807);
 		}
 		class505.L();
 		Class18.method574((short) 324);

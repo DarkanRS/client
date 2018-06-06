@@ -7,7 +7,7 @@ public class Class535 {
 	float aFloat7081;
 	float aFloat7082;
 	int anInt7083;
-	Class385 aClass385_7084;
+	Vector3 aClass385_7084;
 	int anInt7085;
 	int anInt7086;
 	Class152 aClass152_7087;
@@ -27,7 +27,7 @@ public class Class535 {
 
 	void method11443(int i) {
 		((Class535) this).anInt7083 = -1187075549 * Class239.anInt2935;
-		((Class535) this).aClass385_7084 = Class385.method6639(-50.0F, -60.0F, -50.0F);
+		((Class535) this).aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		((Class535) this).aFloat7081 = 1.1523438F;
 		((Class535) this).aFloat7082 = 0.69921875F;
 		((Class535) this).aFloat7090 = 1.2F;
@@ -45,7 +45,7 @@ public class Class535 {
 		((Class535) this).aFloat7081 = ((Class535) class535_1_).aFloat7081;
 		((Class535) this).aFloat7082 = ((Class535) class535_1_).aFloat7082;
 		((Class535) this).aFloat7090 = ((Class535) class535_1_).aFloat7090;
-		((Class535) this).aClass385_7084.method6627(((Class535) class535_1_).aClass385_7084);
+		((Class535) this).aClass385_7084.copy(((Class535) class535_1_).aClass385_7084);
 		((Class535) this).anInt7085 = ((Class535) class535_1_).anInt7085 * 1;
 		((Class535) this).anInt7086 = 1 * ((Class535) class535_1_).anInt7086;
 		((Class535) this).aClass152_7087 = ((Class535) class535_1_).aClass152_7087;
@@ -134,7 +134,7 @@ public class Class535 {
 
 	void method11452() {
 		((Class535) this).anInt7083 = -1187075549 * Class239.anInt2935;
-		((Class535) this).aClass385_7084 = Class385.method6639(-50.0F, -60.0F, -50.0F);
+		((Class535) this).aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		((Class535) this).aFloat7081 = 1.1523438F;
 		((Class535) this).aFloat7082 = 0.69921875F;
 		((Class535) this).aFloat7090 = 1.2F;
@@ -149,7 +149,7 @@ public class Class535 {
 
 	void method11453() {
 		((Class535) this).anInt7083 = -1187075549 * Class239.anInt2935;
-		((Class535) this).aClass385_7084 = Class385.method6639(-50.0F, -60.0F, -50.0F);
+		((Class535) this).aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		((Class535) this).aFloat7081 = 1.1523438F;
 		((Class535) this).aFloat7082 = 0.69921875F;
 		((Class535) this).aFloat7090 = 1.2F;
@@ -167,7 +167,7 @@ public class Class535 {
 		((Class535) this).aFloat7081 = ((Class535) class535_11_).aFloat7081;
 		((Class535) this).aFloat7082 = ((Class535) class535_11_).aFloat7082;
 		((Class535) this).aFloat7090 = ((Class535) class535_11_).aFloat7090;
-		((Class535) this).aClass385_7084.method6627(((Class535) class535_11_).aClass385_7084);
+		((Class535) this).aClass385_7084.copy(((Class535) class535_11_).aClass385_7084);
 		((Class535) this).anInt7085 = ((Class535) class535_11_).anInt7085 * 1;
 		((Class535) this).anInt7086 = 1 * ((Class535) class535_11_).anInt7086;
 		((Class535) this).aClass152_7087 = ((Class535) class535_11_).aClass152_7087;
@@ -186,7 +186,7 @@ public class Class535 {
 		((Class535) this).aFloat7081 = ((Class535) class535_12_).aFloat7081;
 		((Class535) this).aFloat7082 = ((Class535) class535_12_).aFloat7082;
 		((Class535) this).aFloat7090 = ((Class535) class535_12_).aFloat7090;
-		((Class535) this).aClass385_7084.method6627(((Class535) class535_12_).aClass385_7084);
+		((Class535) this).aClass385_7084.copy(((Class535) class535_12_).aClass385_7084);
 		((Class535) this).anInt7085 = ((Class535) class535_12_).anInt7085 * 1;
 		((Class535) this).anInt7086 = 1 * ((Class535) class535_12_).anInt7086;
 		((Class535) this).aClass152_7087 = ((Class535) class535_12_).aClass152_7087;
@@ -261,9 +261,9 @@ public class Class535 {
 			((Class535) this).aFloat7081 = 1.1523438F;
 		}
 		if ((i & 0x10) != 0)
-			((Class535) this).aClass385_7084 = Class385.method6639((float) class282_sub35.readShort(1915898354), (float) class282_sub35.readShort(1638997382), (float) class282_sub35.readShort(2052743731));
+			((Class535) this).aClass385_7084 = Vector3.method6639((float) class282_sub35.readShort(1915898354), (float) class282_sub35.readShort(1638997382), (float) class282_sub35.readShort(2052743731));
 		else
-			((Class535) this).aClass385_7084 = Class385.method6639(-50.0F, -60.0F, -50.0F);
+			((Class535) this).aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		if (0 != (i & 0x20))
 			((Class535) this).anInt7085 = class282_sub35.readInt() * 1335226663;
 		else
@@ -299,7 +299,7 @@ public class Class535 {
 		((Class535) this).aFloat7081 = ((Class535) class535_21_).aFloat7081;
 		((Class535) this).aFloat7082 = ((Class535) class535_21_).aFloat7082;
 		((Class535) this).aFloat7090 = ((Class535) class535_21_).aFloat7090;
-		((Class535) this).aClass385_7084.method6627(((Class535) class535_21_).aClass385_7084);
+		((Class535) this).aClass385_7084.copy(((Class535) class535_21_).aClass385_7084);
 		((Class535) this).anInt7085 = ((Class535) class535_21_).anInt7085 * 1;
 		((Class535) this).anInt7086 = 1 * ((Class535) class535_21_).anInt7086;
 		((Class535) this).aClass152_7087 = ((Class535) class535_21_).aClass152_7087;
@@ -373,9 +373,9 @@ public class Class535 {
 			((Class535) this).aFloat7081 = 1.1523438F;
 		}
 		if ((i_24_ & 0x10) != 0)
-			((Class535) this).aClass385_7084 = Class385.method6639((float) class282_sub35.readShort(1605613449), (float) class282_sub35.readShort(1992590834), (float) class282_sub35.readShort(1784943938));
+			((Class535) this).aClass385_7084 = Vector3.method6639((float) class282_sub35.readShort(1605613449), (float) class282_sub35.readShort(1992590834), (float) class282_sub35.readShort(1784943938));
 		else
-			((Class535) this).aClass385_7084 = Class385.method6639(-50.0F, -60.0F, -50.0F);
+			((Class535) this).aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		if (0 != (i_24_ & 0x20))
 			((Class535) this).anInt7085 = class282_sub35.readInt() * 1335226663;
 		else
@@ -422,7 +422,7 @@ public class Class535 {
 
 	static final void method11473(CS2Executor class527, int i) {
 		int i_36_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_36_, (byte) 123);
+		IComponentDefinitions class118 = Class117.method1981(i_36_, (byte) 123);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1312 * 682782159;
 	}
 }

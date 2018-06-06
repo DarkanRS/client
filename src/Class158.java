@@ -67,20 +67,20 @@ public abstract class Class158 {
 		return client.aBool7301 ? 2 : 1;
 	}
 
-	static void method2731(GraphicalRenderer class505, Class455 class455, Class118 class118, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
+	static void method2731(GraphicalRenderer class505, Class455 class455, IComponentDefinitions class118, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
 		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_6_, 2092552415);
 		if (class220 != null && class220.aBool2729 && class220.method3719(Class158_Sub1.aClass3_8507, -1138810540)) {
 			if (null != class220.anIntArray2717) {
 				int[] is = new int[class220.anIntArray2717.length];
 				for (int i_8_ = 0; i_8_ < is.length / 2; i_8_++) {
 					int i_9_;
-					if (-672443707 * Class262.anInt3240 == 4)
+					if (-672443707 * NativeLibraryLoader.anInt3240 == 4)
 						i_9_ = (int) client.aFloat7365 & 0x3fff;
 					else
 						i_9_ = (client.anInt7255 * -1790074477 + (int) client.aFloat7365) & 0x3fff;
 					int i_10_ = Class382.anIntArray4657[i_9_];
 					int i_11_ = Class382.anIntArray4661[i_9_];
-					if (4 != -672443707 * Class262.anInt3240) {
+					if (4 != -672443707 * NativeLibraryLoader.anInt3240) {
 						i_10_ = i_10_ * 256 / (client.anInt7203 * -1864403271 + 256);
 						i_11_ = 256 * i_11_ / (-1864403271 * client.anInt7203 + 256);
 					}
@@ -144,7 +144,7 @@ public abstract class Class158 {
 				if (sprites != null)
 					i_28_ = sprites.method2793();
 				FontRenderer fontRenderer = Renderers.FONT_RENDERER;
-				Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
+				FontMetrics class414 = Class282_Sub17_Sub2.aClass414_9933;
 				if (1 == class220.anInt2722 * 1172439539) {
 					fontRenderer = Class16.aClass8_144;
 					class414 = Class16.aClass414_139;
@@ -158,13 +158,13 @@ public abstract class Class158 {
 		}
 	}
 
-	static final void method2732(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method2732(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (!string.equals(class118.aString1391)) {
 			class118.aString1391 = string;
 			Class109.method1858(class118, (byte) 79);
 		}
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-			Class211.method3631(class118.anInt1287 * -1952846363, -1844455774);
+			Class211.method3631(class118.idHash * -1952846363, -1844455774);
 	}
 }

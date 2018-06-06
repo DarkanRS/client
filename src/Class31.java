@@ -153,7 +153,7 @@ public class Class31 implements IndexLoader {
 			Class351.method6196(class282_sub44_6_, (587626901 * class282_sub44.anInt8063 != class282_sub44_6_.anInt8063 * 587626901), bool, -1911344380);
 		client.aClass465_7442.method7765(class282_sub44, (long) i);
 		Class336.method6007(587626901 * class282_sub44.anInt8063, is, -1937827624);
-		Class118 class118 = Class117.method1981(i, (byte) 76);
+		IComponentDefinitions class118 = Class117.method1981(i, (byte) 76);
 		if (class118 != null)
 			Class109.method1858(class118, (byte) 12);
 		if (null != client.aClass118_7352) {
@@ -162,7 +162,7 @@ public class Class31 implements IndexLoader {
 		}
 		OutputStream_Sub1.method12938((byte) 26);
 		if (class118 != null)
-			Class12.method483((Class468_Sub8.aClass98Array7889[-1952846363 * class118.anInt1287 >>> 16]), class118, !bool, -1031164822);
+			Class12.method483((Class468_Sub8.aClass98Array7889[-1952846363 * class118.idHash >>> 16]), class118, !bool, -1031164822);
 		if (!bool)
 			Class150.method2582(587626901 * class282_sub44.anInt8063, is, -1100140607);
 		if (!bool && client.anInt7349 * -1699899559 != -1)
@@ -201,7 +201,7 @@ public class Class31 implements IndexLoader {
 
 	static final void method814(CS2Executor class527, int i) {
 		int i_21_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.aClass331_3535.method5918(i_21_, 1213236683);
+		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_21_, 1213236683);
 		if (null == class282_sub50_sub14.anIntArray9747)
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
@@ -210,7 +210,7 @@ public class Class31 implements IndexLoader {
 
 	static final void method815(CS2Executor class527, short i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class413.method6942(class118, class527, 312854602);
 	}
 }

@@ -1157,20 +1157,20 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			player.method15797(is, is_92_, -1858199952);
 		}
 		if (0 != (flag & 0x4000)) {
-			String string = buffer.readString(-406005188);
+			String string = buffer.readString();
 			if (player == Class84.myPlayer)
 				Class191.method3167(2, 0, player.method16127(true, 2097729093), player.method16128(false, 1912893547), player.username, string, 1185055161);
 			player.sendChat(string, 0, 0, (byte) -79);
 		}
 		if ((flag & 0x80000) != 0) {
-			String string = buffer.readString(-526945645);
+			String string = buffer.readString();
 			int i_96_ = buffer.readUnsignedByte128(-1590045136);
 			if (0 != (i_96_ & 0x1))
 				Class191.method3167(2, i_96_, player.method16127(true, 1944808899), player.method16128(false, 1912893547), player.username, string, 1566432010);
 			player.sendChat(string, 0, 0, (byte) -55);
 		}
 		if ((flag & 0x40000) != 0) {
-			int i_97_ = buffer.readShortLE128(602501853);
+			int i_97_ = buffer.readShortLE128();
 			int i_98_ = buffer.readIntV2(-1265526717);
 			if (i_97_ == 65535)
 				i_97_ = -1;
@@ -1254,7 +1254,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			for (int i_123_ = 0; i_123_ < i_120_; i_123_++) {
 				is[i_123_] = buffer.readBigSmart();
 				is_121_[i_123_] = buffer.readUnsignedByteC(145947443);
-				is_122_[i_123_] = buffer.readShortLE128(602501853);
+				is_122_[i_123_] = buffer.readShortLE128();
 			}
 			Class331.method5923(player, is, is_121_, is_122_, 263851655);
 		}
@@ -1262,7 +1262,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			Class197.playerMovementTypes[i] = buffer.read128Byte((short) -5982);
 		if (0 != (flag & 0x200000)) {
 			int i_124_ = buffer.readShortLE((byte) -115);
-			int i_125_ = buffer.readIntLE(771784879);
+			int i_125_ = buffer.readIntLE();
 			if (65535 == i_124_)
 				i_124_ = -1;
 			int i_126_ = buffer.readUnsigned128Byte();
@@ -1278,7 +1278,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			player.anInt10328 = buffer.read128Byte((short) -6627) * -2091025609;
 			player.anInt10341 = buffer.readByte128(1577194121) * 1110107435;
 			player.anInt10343 = buffer.readByteC(343474194) * -1352948627;
-			player.anInt10342 = (buffer.readShortLE128(602501853) + -1809259861 * client.cycles) * -506987231;
+			player.anInt10342 = (buffer.readShortLE128() + -1809259861 * client.cycles) * -506987231;
 			player.anInt10345 = (buffer.readShortLE((byte) -80) + -1809259861 * client.cycles) * -38144783;
 			player.anInt10346 = buffer.readUnsignedShort128() * -19018465;
 			if (player.aBool10568) {

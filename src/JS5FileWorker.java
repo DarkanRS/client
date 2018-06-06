@@ -38,7 +38,7 @@ public abstract class JS5FileWorker {
 			class513 = class527.aClass513_6994;
 		else
 			class513 = class527.aClass513_7007;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.aClass98_10324), i_3_, i_4_, (byte) 1) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.inter), i_3_, i_4_, (byte) 1) ? 1 : 0;
 	}
 
 	static Class221[] method5815(int i) {

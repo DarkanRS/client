@@ -92,7 +92,7 @@ public class AnimationDefinitions {
 				int i_14_ = class282_sub35.readUnsignedByte();
 				if (i_14_ > 0) {
 					anIntArrayArray5913[i_13_] = new int[i_14_];
-					anIntArrayArray5913[i_13_][0] = class282_sub35.read24BitUnsignedInteger((short) 6790);
+					anIntArrayArray5913[i_13_][0] = class282_sub35.read24BitUnsignedInteger();
 					for (int i_15_ = 1; i_15_ < i_14_; i_15_++)
 						anIntArrayArray5913[i_13_][i_15_] = class282_sub35.readUnsignedShort();
 				}
@@ -131,10 +131,10 @@ public class AnimationDefinitions {
 				}
 				for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
-					int i_22_ = class282_sub35.read24BitUnsignedInteger((short) 24364);
+					int i_22_ = class282_sub35.read24BitUnsignedInteger();
 					Node class282;
 					if (bool)
-						class282 = new Class282_Sub47(class282_sub35.readString(-487209290));
+						class282 = new Class282_Sub47(class282_sub35.readString());
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
 					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_22_);
@@ -229,7 +229,7 @@ public class AnimationDefinitions {
 				int i_39_ = class282_sub35.readUnsignedByte();
 				if (i_39_ > 0) {
 					anIntArrayArray5913[i_38_] = new int[i_39_];
-					anIntArrayArray5913[i_38_][0] = class282_sub35.read24BitUnsignedInteger((short) 20180);
+					anIntArrayArray5913[i_38_][0] = class282_sub35.read24BitUnsignedInteger();
 					for (int i_40_ = 1; i_40_ < i_39_; i_40_++)
 						anIntArrayArray5913[i_38_][i_40_] = class282_sub35.readUnsignedShort();
 				}
@@ -268,10 +268,10 @@ public class AnimationDefinitions {
 				}
 				for (int i_46_ = 0; i_46_ < i_44_; i_46_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
-					int i_47_ = class282_sub35.read24BitUnsignedInteger((short) 18162);
+					int i_47_ = class282_sub35.read24BitUnsignedInteger();
 					Node class282;
 					if (bool)
-						class282 = new Class282_Sub47(class282_sub35.readString(-342371097));
+						class282 = new Class282_Sub47(class282_sub35.readString());
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
 					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_47_);
@@ -335,7 +335,7 @@ public class AnimationDefinitions {
 				int i_59_ = class282_sub35.readUnsignedByte();
 				if (i_59_ > 0) {
 					anIntArrayArray5913[i_58_] = new int[i_59_];
-					anIntArrayArray5913[i_58_][0] = class282_sub35.read24BitUnsignedInteger((short) 23755);
+					anIntArrayArray5913[i_58_][0] = class282_sub35.read24BitUnsignedInteger();
 					for (int i_60_ = 1; i_60_ < i_59_; i_60_++)
 						anIntArrayArray5913[i_58_][i_60_] = class282_sub35.readUnsignedShort();
 				}
@@ -374,10 +374,10 @@ public class AnimationDefinitions {
 				}
 				for (int i_66_ = 0; i_66_ < i_64_; i_66_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
-					int i_67_ = class282_sub35.read24BitUnsignedInteger((short) 13915);
+					int i_67_ = class282_sub35.read24BitUnsignedInteger();
 					Node class282;
 					if (bool)
-						class282 = new Class282_Sub47(class282_sub35.readString(1708868767));
+						class282 = new Class282_Sub47(class282_sub35.readString());
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
 					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_67_);
@@ -441,7 +441,7 @@ public class AnimationDefinitions {
 				int i_79_ = class282_sub35.readUnsignedByte();
 				if (i_79_ > 0) {
 					anIntArrayArray5913[i_78_] = new int[i_79_];
-					anIntArrayArray5913[i_78_][0] = class282_sub35.read24BitUnsignedInteger((short) 2134);
+					anIntArrayArray5913[i_78_][0] = class282_sub35.read24BitUnsignedInteger();
 					for (int i_80_ = 1; i_80_ < i_79_; i_80_++)
 						anIntArrayArray5913[i_78_][i_80_] = class282_sub35.readUnsignedShort();
 				}
@@ -480,10 +480,10 @@ public class AnimationDefinitions {
 				}
 				for (int i_86_ = 0; i_86_ < i_84_; i_86_++) {
 					boolean bool = class282_sub35.readUnsignedByte() == 1;
-					int i_87_ = class282_sub35.read24BitUnsignedInteger((short) 6865);
+					int i_87_ = class282_sub35.read24BitUnsignedInteger();
 					Node class282;
 					if (bool)
-						class282 = new Class282_Sub47(class282_sub35.readString(1745796995));
+						class282 = new Class282_Sub47(class282_sub35.readString());
 					else
 						class282 = new Class282_Sub38(class282_sub35.readInt());
 					((AnimationDefinitions) this).aClass465_5910.method7765(class282, (long) i_87_);

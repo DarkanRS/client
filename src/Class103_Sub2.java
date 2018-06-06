@@ -11,7 +11,7 @@ public final class Class103_Sub2 extends Class103 {
 		aClass505_Sub2_1057.method14150();
 	}
 
-	public void method1788(Class384 class384) {
+	public void method1788(Matrix44Arr class384) {
 		aClass505_Sub2_1057.method13892(class384, aClass505_Sub2_1057.aClass384_8740, aClass505_Sub2_1057.aClass384_8727);
 	}
 
@@ -37,11 +37,11 @@ public final class Class103_Sub2 extends Class103 {
 		aClass505_Sub2_1057.method14150();
 	}
 
-	public void method1789(Class384 class384) {
+	public void method1789(Matrix44Arr class384) {
 		aClass505_Sub2_1057.method13892(class384, aClass505_Sub2_1057.aClass384_8740, aClass505_Sub2_1057.aClass384_8727);
 	}
 
-	public void method1786(Class384 class384) {
+	public void method1786(Matrix44Arr class384) {
 		aClass505_Sub2_1057.method13892(class384, aClass505_Sub2_1057.aClass384_8740, aClass505_Sub2_1057.aClass384_8727);
 	}
 

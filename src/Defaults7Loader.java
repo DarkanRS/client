@@ -159,14 +159,14 @@ public class Defaults7Loader {
 	static final void method8749(CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		if ((class527.intStack[1942118537 * class527.anInt7012]) < (class527.intStack[1942118537 * class527.anInt7012 + 1]))
-			class527.instrPtr += ((class527.unknown[301123709 * class527.instrPtr]) * -1051529003);
+			class527.instrPtr += ((class527.intOpValues[301123709 * class527.instrPtr]) * -1051529003);
 	}
 
 	static final void method8750(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 23);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
-		Class369.method6313(class118, class98, class527, 435475117);
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 23);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		OutgoingLoginPacket.method6313(class118, class98, class527, 435475117);
 	}
 
 	public static void method8751(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_2_, int i) {
@@ -205,7 +205,7 @@ public class Defaults7Loader {
 
 	static final void method8753(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.anInt7012 -= 283782002;
 		int i_9_ = (class527.intStack[class527.anInt7012 * 1942118537]);
 		int i_10_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
@@ -216,7 +216,7 @@ public class Defaults7Loader {
 			class118.method1995(i_9_, -1265527536);
 	}
 
-	static final void method8754(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method8754(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aBool1316 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 19);
 	}

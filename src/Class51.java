@@ -52,7 +52,7 @@ public class Class51 implements Interface2 {
 	}
 
 	public void method16() {
-		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 20);
+		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 20);
 		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
@@ -66,27 +66,27 @@ public class Class51 implements Interface2 {
 	}
 
 	public void method15() {
-		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 108);
+		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 108);
 		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method22(int i) {
-		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 81);
+		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 81);
 		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method23() {
-		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 60);
+		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 60);
 		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method18() {
-		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 122);
+		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 122);
 		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
 	public void method19() {
-		Class414 class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 65);
+		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 65);
 		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
 	}
 
@@ -137,20 +137,20 @@ public class Class51 implements Interface2 {
 		((CS2Executor) executor).instrPtr = 1051529003;
 		((CS2Executor) executor).current = script;
 		((CS2Executor) executor).operations = (((CS2Executor) executor).current.operations);
-		((CS2Executor) executor).unknown = ((CS2Executor) executor).current.intOpValues;
+		((CS2Executor) executor).intOpValues = ((CS2Executor) executor).current.intOpValues;
 		CS2OpInfo operation = null;
 		((CS2Executor) executor).anInt7002 = 0;
 		try {
 			try {
-				Class517.anInt5904 = 0;
+				CS2Runner.anInt5904 = 0;
 				for (;;) {
-					Class517.anInt5904 += -1084131875;
-					if (Class517.anInt5904 * -1176728971 > i)
+					CS2Runner.anInt5904 += -1084131875;
+					if (CS2Runner.anInt5904 * -1176728971 > i)
 						throw new RuntimeException("");
 					operation = (((CS2Executor) executor).operations[(((CS2Executor) executor).instrPtr += -1051529003) * 301123709]);
-					if (Class517.aBool5898 && (null == Class517.aString5897 || (((((CS2Executor) executor).current.scriptName) != null) && ((CS2Executor) executor).current.scriptName.indexOf(Class517.aString5897) != -1)))
+					if (CS2Runner.aBool5898 && (null == CS2Runner.aString5897 || (((((CS2Executor) executor).current.scriptName) != null) && ((CS2Executor) executor).current.scriptName.indexOf(CS2Runner.aString5897) != -1)))
 						System.out.println(new StringBuilder().append(((CS2Executor) executor).current.scriptName).append(": ").append(operation).toString());
-					if (1 == (((CS2Executor) executor).unknown[301123709 * ((CS2Executor) executor).instrPtr]))
+					if (1 == (((CS2Executor) executor).intOpValues[301123709 * ((CS2Executor) executor).instrPtr]))
 						((CS2Executor) executor).aBool7022 = true;
 					else
 						((CS2Executor) executor).aBool7022 = false;
@@ -177,8 +177,8 @@ public class Class51 implements Interface2 {
 
 	static final void method1069(CS2Executor class527, int i) {
 		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_8_, (byte) 52);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_8_, (byte) 52);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class282_Sub52.method13468(class118, class98, class527, 769396750);
 	}
 
@@ -204,7 +204,7 @@ public class Class51 implements Interface2 {
 	}
 
 	static final void method1073(CS2Executor class527, byte i) {
-		int i_11_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_11_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		Class158_Sub1.aClass3_8507.method266(i_11_, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -1744724277);
 	}
 

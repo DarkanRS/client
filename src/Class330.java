@@ -48,10 +48,10 @@ public class Class330 {
 	}
 
 	public static void method5913(int i) {
-		Class118.aClass229_1280.method3863(1550469296);
-		Class118.aClass229_1341.method3863(986985015);
-		Class118.aClass229_1303.method3863(759496379);
-		Class118.aClass229_1282.method3863(726939878);
+		IComponentDefinitions.aClass229_1280.method3863(1550469296);
+		IComponentDefinitions.aClass229_1341.method3863(986985015);
+		IComponentDefinitions.aClass229_1303.method3863(759496379);
+		IComponentDefinitions.aClass229_1282.method3863(726939878);
 	}
 
 	public static int method5914(byte[] is, int i, CharSequence charsequence, int i_0_) {

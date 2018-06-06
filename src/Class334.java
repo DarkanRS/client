@@ -119,13 +119,13 @@ public class Class334 {
 			int i_21_ = class528.o() - class528.YA();
 			int i_22_ = i_20_ > i_21_ ? i_20_ : i_21_;
 			int i_23_ = 1024 * ((Class334) this).anInt3902 / i_22_;
-			Class384 class384 = class505.method8453();
-			Class384 class384_24_ = class505.method8449();
+			Matrix44Arr class384 = class505.method8453();
+			Matrix44Arr class384_24_ = class505.method8449();
 			class384_24_.method6532((float) (((Class334) this).anInt3902 / 2), (float) (((Class334) this).anInt3902 / 2), (float) i_23_, (float) i_23_, 50.0F, 50000.0F, (float) class505.method8523((byte) 122).method2714(), (float) class505.method8523((byte) 112).method2716(), 1024.0F);
 			class505.method8424(class384_24_);
-			Class294 class294 = new Class294();
+			Matrix44Var class294 = new Matrix44Var();
 			class505.method8457(class294);
-			Class294 class294_25_ = class505.method8450();
+			Matrix44Var class294_25_ = class505.method8450();
 			class294_25_.method5223(0.0F, 0.0F, (float) (50 - class528.AA()));
 			class528.method11282(class294_25_, null, 1);
 			((Class334) this).aClass160_3910 = class505.method8668(0, 0, ((Class334) this).anInt3902, ((Class334) this).anInt3902, true);
@@ -237,12 +237,12 @@ public class Class334 {
 		int i_50_ = (1024 * ((Class334) this).anInt3902 / (class528.ya() - class528.RA()));
 		if (((Class334) this).anInt3894 != 0)
 			i_50_ = i_50_ * 13 / 16;
-		Class384 class384 = class505.method8453();
-		Class384 class384_51_ = class505.method8449();
+		Matrix44Arr class384 = class505.method8453();
+		Matrix44Arr class384_51_ = class505.method8449();
 		class384_51_.method6532((float) (((Class334) this).anInt3902 / 2), (float) (((Class334) this).anInt3902 / 2), (float) i_50_, (float) i_50_, 50.0F, 50000.0F, (float) class505.method8523((byte) 109).method2714(), (float) class505.method8523((byte) 103).method2716(), 1024.0F);
 		class505.method8424(class384_51_);
-		class505.method8457(new Class294());
-		Class294 class294 = new Class294();
+		class505.method8457(new Matrix44Var());
+		Matrix44Var class294 = new Matrix44Var();
 		class294.method5223(0.0F, 0.0F, (float) (50 - class528.AA()));
 		class528.method11282(class294, null, 1);
 		int i_52_ = ((Class334) this).anInt3902 * 13 / 16;

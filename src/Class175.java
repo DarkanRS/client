@@ -58,13 +58,13 @@ public class Class175 {
 	public static Class346 method2958(RsByteBuffer class282_sub35, int i) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1825001188);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1825001188);
 		return class346;
 	}
 
 	static final void method2959(CS2Executor class527, int i) {
-		int i_0_ = ((class527.unknown[301123709 * class527.instrPtr]) >> 16);
-		int i_1_ = ((class527.unknown[class527.instrPtr * 301123709]) & 0xffff);
+		int i_0_ = ((class527.intOpValues[301123709 * class527.instrPtr]) >> 16);
+		int i_1_ = ((class527.intOpValues[class527.instrPtr * 301123709]) & 0xffff);
 		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_2_ < 0 || i_2_ > 5000)
 			throw new RuntimeException();
@@ -76,11 +76,11 @@ public class Class175 {
 			class527.globalArrays[i_0_][i_4_] = i_3_;
 	}
 
-	static final void method2960(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method2960(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aBool1363 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 9);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
-			Class244.method4196(-1952846363 * class118.anInt1287, (byte) 0);
+			Class244.method4196(-1952846363 * class118.idHash, (byte) 0);
 	}
 
 	static final void method2961(CS2Executor class527, int i) {
@@ -251,8 +251,8 @@ public class Class175 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_24_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_24_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_24_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_24_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_24_).aClass98_5885;
 		Class504.method8387(class118, class98, class527, 2021162647);
 	}
 

@@ -113,8 +113,8 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
 		} else {
 			Class448.aBool5422 = true;
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4613, client.aClass184_7218.aClass432_2283, 1318116976);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(Class418.anInt4999 * 4249963);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4613, client.aClass184_7218.isaac, 1318116976);
+			class282_sub23.buffer.writeInt(Class418.anInt4999 * 4249963);
 			client.aClass184_7218.method3049(class282_sub23, -587637854);
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		}

@@ -1389,8 +1389,8 @@ public class Class272 {
 
 	static final void method4838(CS2Executor class527, short i) {
 		int i_299_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_299_, (byte) 10);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_299_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_299_, (byte) 10);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_299_ >> 16];
 		WorldMapAreaDefs.method3738(class118, class98, class527, (byte) -2);
 	}
 

@@ -26,16 +26,16 @@ public class Class282_Sub2 extends Node {
 		anInt7486 = class282_sub35.readUnsignedByte() * 435005063;
 	}
 
-	static Class282_Sub23 method12078(int i, int i_0_, int i_1_, int i_2_) {
-		Class282_Sub23 class282_sub23 = null;
+	static TCPMessage method12078(int i, int i_0_, int i_1_, int i_2_) {
+		TCPMessage class282_sub23 = null;
 		if (i_1_ == 0)
-			class282_sub23 = Class271.method4828(OutgoingPacket.WALK, client.aClass184_7475.aClass432_2283, 1058999201);
+			class282_sub23 = Class271.method4828(OutgoingPacket.WALK, client.aClass184_7475.isaac, 1058999201);
 		if (i_1_ == 1)
-			class282_sub23 = Class271.method4828(OutgoingPacket.MINI_WALK, client.aClass184_7475.aClass432_2283, -505511344);
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1520760306);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class84.method1465(-2046314159) ? 1 : 0);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i + 1948093437 * class219.anInt2711, 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(i_0_ + -1002240017 * class219.anInt2712, (short) -23988);
+			class282_sub23 = Class271.method4828(OutgoingPacket.MINI_WALK, client.aClass184_7475.isaac, -505511344);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1520760306);
+		class282_sub23.buffer.writeByte(Class84.method1465(-2046314159) ? 1 : 0);
+		class282_sub23.buffer.writeShort(i + 1948093437 * class219.x, 1417031095);
+		class282_sub23.buffer.writeShortLE(i_0_ + -1002240017 * class219.y, (short) -23988);
 		Class187.anInt2361 = -134656021 * i;
 		Class187.anInt2359 = i_0_ * -818291313;
 		Class187.aBool2360 = false;

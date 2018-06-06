@@ -29,8 +29,8 @@ public abstract class Class41_Sub1 extends Class41 {
 	static final int anInt9224 = 64;
 	static final int anInt9225 = 128;
 	int anInt9226;
-	Class384[] aClass384Array9227;
-	static Class384 aClass384_9228 = new Class384();
+	Matrix44Arr[] aClass384Array9227;
+	static Matrix44Arr aClass384_9228 = new Matrix44Arr();
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9229;
 	float[] aFloatArray9230 = new float[3];
 
@@ -89,7 +89,7 @@ public abstract class Class41_Sub1 extends Class41 {
 
 	abstract boolean method14524() throws Exception_Sub2;
 
-	void method14525(int i, Class294 class294) {
+	void method14525(int i, Matrix44Var class294) {
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9205 != null) {
 			float[] fs = { aClass505_Sub2_413.aFloatArray8747[0], aClass505_Sub2_413.aFloatArray8747[1], aClass505_Sub2_413.aFloatArray8747[2] };
 			class294.method5230(fs);
@@ -109,7 +109,7 @@ public abstract class Class41_Sub1 extends Class41 {
 			aClass101_9218.method1647();
 	}
 
-	void method14527(Class384 class384) {
+	void method14527(Matrix44Arr class384) {
 		if (aClass101_9218 != null && aClass101_9218.method1648() && aClass505_Sub2_413.method13963() == 0) {
 			int i = aClass101_9218.method1714(-1997910663);
 			if ((((Class41_Sub1) this).anIntArray9201[i] & 0x80) != 0 && ((Class41_Sub1) this).aClass282_Sub21_Sub1_9212 != null) {
@@ -158,10 +158,10 @@ public abstract class Class41_Sub1 extends Class41 {
 		}
 	}
 
-	void method14529(int i, Class294 class294) {
+	void method14529(int i, Matrix44Var class294) {
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9203 != null) {
-			Class384 class384 = aClass505_Sub2_413.method13998();
-			float[] fs = { class384.aFloatArray4667[12], class384.aFloatArray4667[13], class384.aFloatArray4667[14] };
+			Matrix44Arr class384 = aClass505_Sub2_413.method13998();
+			float[] fs = { class384.buf[12], class384.buf[13], class384.buf[14] };
 			float[] fs_1_ = { 0.0F, 0.0F, 0.0F };
 			class384.method6528(fs_1_);
 			float[] fs_2_ = { 0.0F, 0.0F, 0.0F };
@@ -172,7 +172,7 @@ public abstract class Class41_Sub1 extends Class41 {
 	}
 
 	void method886() {
-		method14532(Class294.aClass294_3518);
+		method14532(Matrix44Var.aClass294_3518);
 	}
 
 	void method14530(boolean bool) {
@@ -191,7 +191,7 @@ public abstract class Class41_Sub1 extends Class41 {
 	}
 
 	void method879() {
-		method14532(Class294.aClass294_3518);
+		method14532(Matrix44Var.aClass294_3518);
 	}
 
 	void method14531(boolean bool) {
@@ -209,8 +209,8 @@ public abstract class Class41_Sub1 extends Class41 {
 		}
 	}
 
-	void method14532(Class294 class294) {
-		Class384 class384 = aClass505_Sub2_413.aClass384_8683;
+	void method14532(Matrix44Var class294) {
+		Matrix44Arr class384 = aClass505_Sub2_413.aClass384_8683;
 		class384.method6522(class294);
 		int i = aClass101_9218.method1714(-1934547708);
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9211 != null) {
@@ -270,7 +270,7 @@ public abstract class Class41_Sub1 extends Class41 {
 		}
 	}
 
-	void method14534(Class384 class384) {
+	void method14534(Matrix44Arr class384) {
 		if (aClass101_9218 != null && aClass101_9218.method1648() && aClass505_Sub2_413.method13963() == 0) {
 			int i = aClass101_9218.method1714(-1878862147);
 			if ((((Class41_Sub1) this).anIntArray9201[i] & 0x80) != 0 && ((Class41_Sub1) this).aClass282_Sub21_Sub1_9212 != null) {
@@ -292,7 +292,7 @@ public abstract class Class41_Sub1 extends Class41 {
 	}
 
 	void method889() {
-		method14532(Class294.aClass294_3518);
+		method14532(Matrix44Var.aClass294_3518);
 	}
 
 	boolean method14535(String string) throws Exception_Sub2 {
@@ -369,7 +369,7 @@ public abstract class Class41_Sub1 extends Class41 {
 
 	abstract boolean method14539() throws Exception_Sub2;
 
-	void method14540(Class384 class384) {
+	void method14540(Matrix44Arr class384) {
 		if (aClass101_9218 != null && aClass101_9218.method1648() && aClass505_Sub2_413.method13963() == 0) {
 			int i = aClass101_9218.method1714(-2065553030);
 			if ((((Class41_Sub1) this).anIntArray9201[i] & 0x80) != 0 && ((Class41_Sub1) this).aClass282_Sub21_Sub1_9212 != null) {
@@ -420,10 +420,10 @@ public abstract class Class41_Sub1 extends Class41 {
 		}
 	}
 
-	void method14543(int i, Class294 class294) {
+	void method14543(int i, Matrix44Var class294) {
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9203 != null) {
-			Class384 class384 = aClass505_Sub2_413.method13998();
-			float[] fs = { class384.aFloatArray4667[12], class384.aFloatArray4667[13], class384.aFloatArray4667[14] };
+			Matrix44Arr class384 = aClass505_Sub2_413.method13998();
+			float[] fs = { class384.buf[12], class384.buf[13], class384.buf[14] };
 			float[] fs_6_ = { 0.0F, 0.0F, 0.0F };
 			class384.method6528(fs_6_);
 			float[] fs_7_ = { 0.0F, 0.0F, 0.0F };
@@ -433,7 +433,7 @@ public abstract class Class41_Sub1 extends Class41 {
 		}
 	}
 
-	void method14544(int i, Class294 class294) {
+	void method14544(int i, Matrix44Var class294) {
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9205 != null) {
 			float[] fs = { aClass505_Sub2_413.aFloatArray8747[0], aClass505_Sub2_413.aFloatArray8747[1], aClass505_Sub2_413.aFloatArray8747[2] };
 			class294.method5230(fs);
@@ -448,7 +448,7 @@ public abstract class Class41_Sub1 extends Class41 {
 		method14526();
 	}
 
-	void method14545(int i, Class294 class294) {
+	void method14545(int i, Matrix44Var class294) {
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9205 != null) {
 			float[] fs = { aClass505_Sub2_413.aFloatArray8747[0], aClass505_Sub2_413.aFloatArray8747[1], aClass505_Sub2_413.aFloatArray8747[2] };
 			class294.method5230(fs);
@@ -473,10 +473,10 @@ public abstract class Class41_Sub1 extends Class41 {
 
 	Class41_Sub1(Class505_Sub2 class505_sub2) {
 		super(class505_sub2);
-		new Class294();
-		((Class41_Sub1) this).aClass384Array9227 = new Class384[aClass505_Sub2_413.anInt8825];
+		new Matrix44Var();
+		((Class41_Sub1) this).aClass384Array9227 = new Matrix44Arr[aClass505_Sub2_413.anInt8825];
 		for (int i = 0; i < aClass505_Sub2_413.anInt8825; i++)
-			((Class41_Sub1) this).aClass384Array9227[i] = new Class384();
+			((Class41_Sub1) this).aClass384Array9227[i] = new Matrix44Arr();
 	}
 
 	void method14547(int i) {
@@ -489,7 +489,7 @@ public abstract class Class41_Sub1 extends Class41 {
 			((Class41_Sub1) this).anIntArray9201[i_9_] |= 128 << i;
 	}
 
-	void method14549(int i, Class294 class294) {
+	void method14549(int i, Matrix44Var class294) {
 		if (((Class41_Sub1) this).aClass282_Sub21_Sub1_9205 != null) {
 			float[] fs = { aClass505_Sub2_413.aFloatArray8747[0], aClass505_Sub2_413.aFloatArray8747[1], aClass505_Sub2_413.aFloatArray8747[2] };
 			class294.method5230(fs);

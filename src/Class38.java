@@ -32,7 +32,7 @@ public class Class38 {
 		else if (i == 5)
 			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
-			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 11913) * 929212777;
+			anInt404 = class282_sub35.read24BitUnsignedInteger() * 929212777;
 		else if (i == 7) {
 			anInt403 = class282_sub35.readShort(1729052508) * 1226097743;
 			anInt398 = class282_sub35.readShort(2077020068) * 405070739;
@@ -58,7 +58,7 @@ public class Class38 {
 		else if (i == 5)
 			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
-			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 4167) * 929212777;
+			anInt404 = class282_sub35.read24BitUnsignedInteger() * 929212777;
 		else if (i == 7) {
 			anInt403 = class282_sub35.readShort(1852655368) * 1226097743;
 			anInt398 = class282_sub35.readShort(2126737512) * 405070739;
@@ -98,7 +98,7 @@ public class Class38 {
 		else if (i == 5)
 			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
-			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 24474) * 929212777;
+			anInt404 = class282_sub35.read24BitUnsignedInteger() * 929212777;
 		else if (i == 7) {
 			anInt403 = class282_sub35.readShort(1977307492) * 1226097743;
 			anInt398 = class282_sub35.readShort(2113694101) * 405070739;
@@ -120,7 +120,7 @@ public class Class38 {
 		else if (i == 5)
 			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
-			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 10644) * 929212777;
+			anInt404 = class282_sub35.read24BitUnsignedInteger() * 929212777;
 		else if (i == 7) {
 			anInt403 = class282_sub35.readShort(1726375417) * 1226097743;
 			anInt398 = class282_sub35.readShort(1798022906) * 405070739;
@@ -142,7 +142,7 @@ public class Class38 {
 		else if (i == 5)
 			anInt402 = class282_sub35.readBigSmart() * 1489057977;
 		else if (6 == i)
-			anInt404 = class282_sub35.read24BitUnsignedInteger((short) 28766) * 929212777;
+			anInt404 = class282_sub35.read24BitUnsignedInteger() * 929212777;
 		else if (i == 7) {
 			anInt403 = class282_sub35.readShort(1661264331) * 1226097743;
 			anInt398 = class282_sub35.readShort(2005763884) * 405070739;
@@ -189,7 +189,7 @@ public class Class38 {
 
 	static final void method855(CS2Executor class527, byte i) {
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_7_, (byte) 78);
+		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 78);
 		Class235.method3965(class118, class527, -252931751);
 	}
 
@@ -219,7 +219,7 @@ public class Class38 {
 					i_14_ = Class349.anInt4083 * -418109423 - i_11_;
 				if (i_14_ < 0)
 					i_14_ = 0;
-				Class262.method4653(i_14_, 815250613 * Class184.anInt2300, 1505177278);
+				NativeLibraryLoader.method4653(i_14_, 815250613 * Class184.anInt2300, 1505177278);
 				return;
 			}
 		}
@@ -228,7 +228,7 @@ public class Class38 {
 			class8 = Class285.aClass8_3394;
 		else
 			class8 = Class186.aClass8_2348;
-		Class414 class414 = Class114.method1887(-864314974);
+		FontMetrics class414 = Class114.method1887(-864314974);
 		Class456_Sub2.method12680(class505, 1742345613 * Class301.anInt3555, Class184.anInt2300 * 815250613, Class158_Sub2.anInt8975 * -13788709, -1488439617 * Class110.anInt1104, i_13_, class8, class414, Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -827597083), -1519032164);
 		int i_15_ = (255 - Class182.anInt2262 * 1734917383 - Class20.anInt156 * -1454754391);
 		if (i_15_ < 0)
@@ -294,7 +294,7 @@ public class Class38 {
 
 	static final void method858(CS2Executor class527, int i) {
 		int i_28_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_28_, (byte) 35);
+		IComponentDefinitions class118 = Class117.method1981(i_28_, (byte) 35);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1376 * -354780671;
 	}
 

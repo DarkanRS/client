@@ -34,8 +34,8 @@ public class InventoriesIndexLoader implements IndexLoader {
 	
 	static final void method6738(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 91);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 91);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class278_Sub1.method13450(class118, class98, class527, -51249694);
 	}
 

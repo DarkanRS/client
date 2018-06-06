@@ -13,7 +13,7 @@ public class Class213 {
 	public static void method3661(int i, String string, int i_0_, byte i_1_) {
 		CS2Script class282_sub50_sub5 = Class225_Sub1.method12792(Class397.aClass397_4792, i, -1, 856735933);
 		if (null != class282_sub50_sub5) {
-			CS2Executor class527 = Class125.method2167(2125481004);
+			CS2Executor class527 = Class125.getNextScriptExecutor(2125481004);
 			class527.intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
 			class527.objectLocals = new String[1886892247 * class282_sub50_sub5.stringLocalsCount];
 			class527.objectLocals[0] = string;
@@ -50,9 +50,9 @@ public class Class213 {
 						return;
 				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(70703320) == 0)
 					return;
-				Class385 class385 = class521_sub1.method11166().aClass385_3595;
-				int i_10_ = (int) class385.aFloat4671 - 256 >> 9;
-				int i_11_ = (int) class385.aFloat4673 - 256 >> 9;
+				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+				int i_10_ = (int) class385.x - 256 >> 9;
+				int i_11_ = (int) class385.z - 256 >> 9;
 				int i_12_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_6_ + ((i_10_ << 16) + (class521_sub1.aByte7967 << 24) + (i_11_ << 8)));
 				Class260.aClass268Array3232[(Class260.anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_4_, i_5_, 0, i_9_, i_12_, i_8_, class521_sub1);
 			}

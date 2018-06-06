@@ -38,10 +38,10 @@ public class Class362 {
 		return strings_0_;
 	}
 
-	public static Interface36 method6278(int i) {
-		if (null == Class404.anInterface36_4830)
+	public static Interface36 getNativeLibraryLoader(int i) {
+		if (null == Class404.LIBRARY_LOADER)
 			throw new IllegalStateException("");
-		return Class404.anInterface36_4830;
+		return Class404.LIBRARY_LOADER;
 	}
 
 	static final void method6279(CS2Executor class527, int i) {

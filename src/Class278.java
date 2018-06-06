@@ -652,7 +652,7 @@ public abstract class Class278 {
 	}
 
 	Class278(int i) {
-		if (!Class362.method6278(616047582).method222("jagtheora", -784781962))
+		if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagtheora", -784781962))
 			throw new RuntimeException("");
 		((Class278) this).aByteArray3354 = new byte[i];
 		((Class278) this).anOggSyncState3355 = new OggSyncState();
@@ -834,22 +834,22 @@ public abstract class Class278 {
 
 	static final void method4960(CS2Executor class527, short i) {
 		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_8_, (byte) 120);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_8_, (byte) 120);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class172.method2915(class118, class98, class527, (byte) 0);
 	}
 
 	static final void method4961(CS2Executor class527, int i) {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_9_, (byte) 17);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_9_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 17);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_9_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 2, class527, (byte) 71);
 	}
 
 	static final void method4962(CS2Executor class527, int i) {
 		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_10_, (byte) 10);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_10_, (byte) 10);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
 		Class96_Sub18.method14664(class118, class98, false, 1, class527, (byte) 28);
 	}
 

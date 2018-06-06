@@ -84,10 +84,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		RuntimeException_Sub3.anInt10457 = 108751791 * i_7_;
 		InventoriesIndexLoader.anInt4781 = 122429149 * i_8_;
 		Class282_Sub20_Sub34.aString9967 = "Unknown";
-		Class108.aString1093 = "1.1";
+		ChatLine.aString1093 = "1.1";
 		try {
 			Class282_Sub20_Sub34.aString9967 = System.getProperty("java.vendor");
-			Class108.aString1093 = System.getProperty("java.version");
+			ChatLine.aString1093 = System.getProperty("java.version");
 		} catch (Exception exception) {
 			/* empty */
 		}
@@ -307,7 +307,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	public boolean method4662(byte i) {
-		return Class362.method6278(616047582).method222("jagtheora", -1470478737);
+		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jagtheora", -1470478737);
 	}
 
 	void method4663(Container container, int i) {
@@ -487,7 +487,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		}
 		Class156.method2645(true, 985239898);
 		if (Class187.method3118((byte) 80))
-			Class362.method6278(616047582).method219(1291104911);
+			Class362.getNativeLibraryLoader(616047582).method219(1291104911);
 		if (Class351.gameCanvas != null) {
 			try {
 				Class351.gameCanvas.removeFocusListener(this);
@@ -533,7 +533,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	public boolean method4681(byte i) {
-		((Engine) this).aBool3268 = Class362.method6278(616047582).method222("jaclib", -938566175);
+		((Engine) this).aBool3268 = Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", -938566175);
 		if (((Engine) this).aBool3268) {
 			try {
 				QueryPerformanceCounter.init();
@@ -725,7 +725,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		if (Class282_Sub20_Sub34.aString9967 != null) {
 			String string = Class282_Sub20_Sub34.aString9967.toLowerCase();
 			if (string.indexOf("sun") != -1 || string.indexOf("apple") != -1) {
-				String string_155_ = Class108.aString1093;
+				String string_155_ = ChatLine.aString1093;
 				if (string_155_.equals("1.1") || string_155_.startsWith("1.1.") || string_155_.equals("1.2") || string_155_.startsWith("1.2.") || string_155_.equals("1.3") || string_155_.startsWith("1.3.") || string_155_.equals("1.4") || string_155_.startsWith("1.4.") || string_155_.equals("1.5") || string_155_.startsWith("1.5.") || string_155_.equals("1.6.0")) {
 					method4680("wrongjava", -1236837356);
 					return;
@@ -736,7 +736,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 						/* empty */
 					}
 					String string_157_ = string_155_.substring(6, i_156_);
-					if (Class115.method1950(string_157_, 233261508) && Class328.method5830(string_157_, 1485921021) < 10) {
+					if (Class115.method1950(string_157_, 233261508) && Class328.parseInt(string_157_, 1485921021) < 10) {
 						method4680("wrongjava", -1712930660);
 						return;
 					}
@@ -845,7 +845,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		/* empty */
 	}
 
-	static final void method4772(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method4772(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1550392426) != null)
 			string = string.substring(0, string.length() - 1);

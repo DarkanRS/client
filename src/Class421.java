@@ -51,7 +51,7 @@ public class Class421 {
 			if (i <= -1) {
 				/* empty */
 			}
-			Class118[] class118s = Class328.aClass118Array3772;
+			IComponentDefinitions[] class118s = Class328.aClass118Array3772;
 			int i_1_ = -1412584499;
 			int i_2_ = 0;
 			int i_3_ = 0;

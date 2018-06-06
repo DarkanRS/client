@@ -39,7 +39,7 @@ public class Language implements Interface43 {
 		return ((Language) this).aString5803;
 	}
 
-	static final void method8277(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method8277(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1293603558) != null)
 			string = string.substring(0, string.length() - 1);
@@ -107,8 +107,8 @@ public class Language implements Interface43 {
 
 	static final void method8285(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		TilestreamPacket.method6289(class118, class98, class527, (byte) 30);
 	}
 
@@ -152,21 +152,21 @@ public class Language implements Interface43 {
 
 	static final void method8295(CS2Executor class527, int i) {
 		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_5_, (byte) 65);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 65);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 0, class527, (byte) -3);
 	}
 
 	static final void method8296(CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		Class184 class184 = Class468_Sub20.method12807(-625511967);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4541, class184.aClass432_2283, 103463045);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
-		int i_6_ = -1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(class527.aClass346_7009.anInt4048 * -624100047, 1417031095);
-		class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, class527.aClass346_7009.anIntArray4046, -1485943767);
-		class282_sub23.aClass282_Sub35_Sub2_7682.method13061((class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291 - i_6_), 460016164);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4541, class184.isaac, 103463045);
+		class282_sub23.buffer.writeByte(0);
+		int i_6_ = -1990677291 * class282_sub23.buffer.index;
+		class282_sub23.buffer.writeString(string);
+		class282_sub23.buffer.writeShort(class527.aClass346_7009.anInt4048 * -624100047, 1417031095);
+		class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.buffer, class527.aClass346_7009.anIntArray4046, -1485943767);
+		class282_sub23.buffer.method13061((class282_sub23.buffer.index * -1990677291 - i_6_), 460016164);
 		class184.method3049(class282_sub23, 1428748072);
 	}
 
@@ -189,8 +189,8 @@ public class Language implements Interface43 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_7_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_7_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_7_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_7_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_7_).aClass98_5885;
 		Class282_Sub21_Sub1.method15474(class118, class98, class527, (byte) 66);
 	}
 }

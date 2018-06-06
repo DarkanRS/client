@@ -237,7 +237,7 @@ public class ItemDefinitions implements Interface46 {
 		if (1 == i)
 			this.modelId = class282_sub35.readBigSmart() * 809144059;
 		else if (i == 2)
-			aString5043 = class282_sub35.readString(1760674316);
+			aString5043 = class282_sub35.readString();
 		else if (i == 4)
 			modelZoom = class282_sub35.readUnsignedShort() * 292917833;
 		else if (i == 5)
@@ -275,9 +275,9 @@ public class ItemDefinitions implements Interface46 {
 		else if (i == 27)
 			anInt5065 = class282_sub35.readUnsignedByte() * -1540246871;
 		else if (i >= 30 && i < 35)
-			groundOptions[i - 30] = class282_sub35.readString(-383945926);
+			groundOptions[i - 30] = class282_sub35.readString();
 		else if (i >= 35 && i < 40)
-			inventoryOptions[i - 35] = class282_sub35.readString(1233494937);
+			inventoryOptions[i - 35] = class282_sub35.readString();
 		else if (i == 40) {
 			int i_21_ = class282_sub35.readUnsignedByte();
 			this.originalColors = new short[i_21_];
@@ -386,10 +386,10 @@ public class ItemDefinitions implements Interface46 {
 			}
 			for (int i_31_ = 0; i_31_ < i_29_; i_31_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_32_ = class282_sub35.read24BitUnsignedInteger((short) 19822);
+				int i_32_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(1641742655));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				this.cs2Map.method7765(class282, (long) i_32_);
@@ -468,16 +468,16 @@ public class ItemDefinitions implements Interface46 {
 			zoom = (int) ((double) (modelZoom * -1468071943) * 1.04) << 2;
 		else
 			zoom = modelZoom * -1468071943 << 2;
-		Class384 class384 = hardwareRenderer.method8453();
-		Class384 class384_56_ = hardwareRenderer.method8449();
+		Matrix44Arr class384 = hardwareRenderer.method8453();
+		Matrix44Arr class384_56_ = hardwareRenderer.method8449();
 		class384_56_.method6531(16.0F, 16.0F, 512.0F, 512.0F, 50.0F, 2.14748365E9F, (float) hardwareRenderer.method8523((byte) 121).method2714(), (float) hardwareRenderer.method8523((byte) 111).method2716());
 		hardwareRenderer.method8424(class384_56_);
 		hardwareRenderer.method8617(0, 0, hardwareRenderer.method8523((byte) 122).method2714(), hardwareRenderer.method8523((byte) 122).method2716());
-		Class294 class294 = new Class294();
+		Matrix44Var class294 = new Matrix44Var();
 		hardwareRenderer.method8457(class294);
 		hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0));
 		hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0), 0.95F + (float) (Math.random() / 10.0), -50.0F, -10.0F, -50.0F);
-		Class294 class294_57_ = hardwareRenderer.method8450();
+		Matrix44Var class294_57_ = hardwareRenderer.method8450();
 		class294_57_.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-(anInt5074 * 701885681) << 3));
 		class294_57_.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(920448529 * anInt5045 << 3));
 		class294_57_.method5219((float) (406372201 * anInt5063 << 2), (float) (((zoom * (Class382.anIntArray4657[1752402275 * anInt5058 << 3])) >> 14) - meshRasterizer.YA() / 2 + (-1316014311 * anInt5044 << 2)), (float) ((((Class382.anIntArray4661[anInt5058 * 1752402275 << 3]) * zoom) >> 14) + (-1316014311 * anInt5044 << 2)));
@@ -863,8 +863,8 @@ public class ItemDefinitions implements Interface46 {
 				class160 = Renderers.SOFTWARE_RENDERER.method8444(class91s[0], true);
 				client.aClass229_7204.put(class160, (long) i_251_);
 			}
-			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			Class210.method3612(class521_sub1_sub1_sub2.aByte7967, (int) class385.aFloat4671, (int) class385.aFloat4673, (class521_sub1_sub1_sub2.method15805(828768449) * 256), 0, false, (byte) 2);
+			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+			Class210.method3612(class521_sub1_sub1_sub2.aByte7967, (int) class385.x, (int) class385.z, (class521_sub1_sub1_sub2.method15805(828768449) * 256), 0, false, (byte) 2);
 			int i_252_ = (int) ((float) i_244_ + client.aFloatArray7292[0] - 18.0F);
 			int i_253_ = (int) ((float) i_245_ + client.aFloatArray7292[1] - 16.0F - 54.0F);
 			i_252_ += 18 * (i / 4);
@@ -886,7 +886,7 @@ public class ItemDefinitions implements Interface46 {
 		Class329.method5906(i, -464275916);
 	}
 
-	static final void method7142(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method7142(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aBool1420 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 53);
 	}

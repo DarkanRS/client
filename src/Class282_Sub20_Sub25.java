@@ -186,7 +186,7 @@ public class Class282_Sub20_Sub25 extends Class282_Sub20 {
 	}
 
 	static final void method15392(CS2Executor class527, int i) {
-		Class118 class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 16);
+		IComponentDefinitions class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 16);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
 	}
 

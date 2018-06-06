@@ -24,9 +24,9 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491;
 			((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) 53);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) 53);
 	}
 
 	public void method96() {
@@ -45,7 +45,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	Class285 method12990(GraphicalRenderer class505, int i) {
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass528_10499 == null)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub1) this).aBool10498, (byte) -59);
 		((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -65,14 +65,14 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			else
 				class390_1_ = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
-		return class478.method8010(class505, i, (1109376893 * Class458.aClass458_5480.anInt5481), ((Class521_Sub1_Sub3_Sub1) this).aByte10496, class390, class390_1_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, bool, null, 219855525);
+		Vector3 class385 = method11166().aClass385_3595;
+		return class478.method8010(class505, i, (1109376893 * Class458.aClass458_5480.anInt5481), ((Class521_Sub1_Sub3_Sub1) this).aByte10496, class390, class390_1_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, 219855525);
 	}
 
 	public Class200 method12992(GraphicalRenderer class505, byte i) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 == null)
-			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16075(class505, 0, -857380966), (byte) -72);
+			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16075(class505, 0, -857380966), (byte) -72);
 		return ((Class521_Sub1_Sub3_Sub1) this).aClass200_10494;
 	}
 
@@ -94,15 +94,15 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491;
 			((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -76);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -76);
 	}
 
 	Class285 method13010(GraphicalRenderer class505) {
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass528_10499 == null)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub1) this).aBool10498, (byte) -56);
 		((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -168,9 +168,9 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491;
 			((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (class282_sub50_sub17 != null)
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -43);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -43);
 	}
 
 	boolean method12985(int i) {
@@ -203,9 +203,9 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491;
 			((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (class282_sub50_sub17 != null)
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -99);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -99);
 	}
 
 	void method13023(GraphicalRenderer class505) {
@@ -240,9 +240,9 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491;
 			((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (class282_sub50_sub17 != null)
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -62);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -62);
 	}
 
 	public void method97(GraphicalRenderer class505) {
@@ -255,9 +255,9 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491;
 			((Class521_Sub1_Sub3_Sub1) this).aClass282_Sub50_Sub17_10491 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) 71);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) 71);
 	}
 
 	public int method76() {
@@ -311,7 +311,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	Class285 method13009(GraphicalRenderer class505) {
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass528_10499 == null)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub1) this).aBool10498, (byte) -109);
 		((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -326,7 +326,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	Class285 method12989(GraphicalRenderer class505) {
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass528_10499 == null)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub3_Sub1) this).aBool10498, (byte) -30);
 		((Class521_Sub1_Sub3_Sub1) this).aClass528_10499.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -372,7 +372,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	boolean method13020(GraphicalRenderer class505, int i, int i_17_) {
 		MeshRasterizer class528 = method16075(class505, 131072, -338274423);
 		if (null != class528) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			return class528.method11270(i, i_17_, class294, false, 0);
 		}
 		return false;
@@ -384,23 +384,23 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	}
 
 	public Class200 method13019(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 == null)
-			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16075(class505, 0, 2111828058), (byte) 15);
+			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16075(class505, 0, 2111828058), (byte) 15);
 		return ((Class521_Sub1_Sub3_Sub1) this).aClass200_10494;
 	}
 
 	public Class200 method13018(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 == null)
-			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16075(class505, 0, -1243491544), (byte) 55);
+			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16075(class505, 0, -1243491544), (byte) 55);
 		return ((Class521_Sub1_Sub3_Sub1) this).aClass200_10494;
 	}
 
 	public Class200 method12993(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 == null)
-			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16075(class505, 0, 1861667283), (byte) 4);
+			((Class521_Sub1_Sub3_Sub1) this).aClass200_10494 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16075(class505, 0, 1861667283), (byte) 4);
 		return ((Class521_Sub1_Sub3_Sub1) this).aClass200_10494;
 	}
 
@@ -423,7 +423,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	boolean method12983(GraphicalRenderer class505, int i, int i_18_, int i_19_) {
 		MeshRasterizer class528 = method16075(class505, 131072, 1304391023);
 		if (null != class528) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			return class528.method11270(i, i_18_, class294, false, 0);
 		}
 		return false;

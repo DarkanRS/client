@@ -24,7 +24,7 @@ public class Class227 {
 	public int[][] anIntArrayArray2802;
 	public int anInt2803;
 	public int anInt2804;
-	Class294[] aClass294Array2805;
+	Matrix44Var[] aClass294Array2805;
 	public int anInt2806;
 	public int anInt2807;
 	public int anInt2808;
@@ -243,12 +243,12 @@ public class Class227 {
 		return false;
 	}
 
-	public Class294[] method3811(byte i) {
+	public Matrix44Var[] method3811(byte i) {
 		if (((Class227) this).aClass294Array2805 != null)
 			return ((Class227) this).aClass294Array2805;
 		if (null == anIntArrayArray2802)
 			return null;
-		((Class227) this).aClass294Array2805 = new Class294[anIntArrayArray2802.length];
+		((Class227) this).aClass294Array2805 = new Matrix44Var[anIntArrayArray2802.length];
 		for (int i_15_ = 0; i_15_ < anIntArrayArray2802.length; i_15_++) {
 			int i_16_ = 0;
 			int i_17_ = 0;
@@ -265,7 +265,7 @@ public class Class227 {
 				i_21_ = anIntArrayArray2802[i_15_][5] << 3;
 			}
 			if (0 != i_16_ || i_17_ != 0 || 0 != i_18_ || 0 != i_19_ || i_20_ != 0 || 0 != i_21_) {
-				Class294 class294 = (((Class227) this).aClass294Array2805[i_15_] = new Class294());
+				Matrix44Var class294 = (((Class227) this).aClass294Array2805[i_15_] = new Matrix44Var());
 				if (i_21_ != 0)
 					class294.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(i_21_));
 				if (i_19_ != 0)
@@ -529,12 +529,12 @@ public class Class227 {
 		}
 	}
 
-	public Class294[] method3817() {
+	public Matrix44Var[] method3817() {
 		if (((Class227) this).aClass294Array2805 != null)
 			return ((Class227) this).aClass294Array2805;
 		if (null == anIntArrayArray2802)
 			return null;
-		((Class227) this).aClass294Array2805 = new Class294[anIntArrayArray2802.length];
+		((Class227) this).aClass294Array2805 = new Matrix44Var[anIntArrayArray2802.length];
 		for (int i = 0; i < anIntArrayArray2802.length; i++) {
 			int i_42_ = 0;
 			int i_43_ = 0;
@@ -551,7 +551,7 @@ public class Class227 {
 				i_47_ = anIntArrayArray2802[i][5] << 3;
 			}
 			if (0 != i_42_ || i_43_ != 0 || 0 != i_44_ || 0 != i_45_ || i_46_ != 0 || 0 != i_47_) {
-				Class294 class294 = ((Class227) this).aClass294Array2805[i] = new Class294();
+				Matrix44Var class294 = ((Class227) this).aClass294Array2805[i] = new Matrix44Var();
 				if (i_47_ != 0)
 					class294.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(i_47_));
 				if (i_45_ != 0)
@@ -710,12 +710,12 @@ public class Class227 {
 		}
 	}
 
-	public Class294[] method3822() {
+	public Matrix44Var[] method3822() {
 		if (((Class227) this).aClass294Array2805 != null)
 			return ((Class227) this).aClass294Array2805;
 		if (null == anIntArrayArray2802)
 			return null;
-		((Class227) this).aClass294Array2805 = new Class294[anIntArrayArray2802.length];
+		((Class227) this).aClass294Array2805 = new Matrix44Var[anIntArrayArray2802.length];
 		for (int i = 0; i < anIntArrayArray2802.length; i++) {
 			int i_60_ = 0;
 			int i_61_ = 0;
@@ -732,7 +732,7 @@ public class Class227 {
 				i_65_ = anIntArrayArray2802[i][5] << 3;
 			}
 			if (0 != i_60_ || i_61_ != 0 || 0 != i_62_ || 0 != i_63_ || i_64_ != 0 || 0 != i_65_) {
-				Class294 class294 = ((Class227) this).aClass294Array2805[i] = new Class294();
+				Matrix44Var class294 = ((Class227) this).aClass294Array2805[i] = new Matrix44Var();
 				if (i_65_ != 0)
 					class294.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(i_65_));
 				if (i_63_ != 0)
@@ -745,12 +745,12 @@ public class Class227 {
 		return ((Class227) this).aClass294Array2805;
 	}
 
-	public Class294[] method3823() {
+	public Matrix44Var[] method3823() {
 		if (((Class227) this).aClass294Array2805 != null)
 			return ((Class227) this).aClass294Array2805;
 		if (null == anIntArrayArray2802)
 			return null;
-		((Class227) this).aClass294Array2805 = new Class294[anIntArrayArray2802.length];
+		((Class227) this).aClass294Array2805 = new Matrix44Var[anIntArrayArray2802.length];
 		for (int i = 0; i < anIntArrayArray2802.length; i++) {
 			int i_66_ = 0;
 			int i_67_ = 0;
@@ -767,7 +767,7 @@ public class Class227 {
 				i_71_ = anIntArrayArray2802[i][5] << 3;
 			}
 			if (0 != i_66_ || i_67_ != 0 || 0 != i_68_ || 0 != i_69_ || i_70_ != 0 || 0 != i_71_) {
-				Class294 class294 = ((Class227) this).aClass294Array2805[i] = new Class294();
+				Matrix44Var class294 = ((Class227) this).aClass294Array2805[i] = new Matrix44Var();
 				if (i_71_ != 0)
 					class294.method5220(0.0F, 0.0F, 1.0F, Class382.method6508(i_71_));
 				if (i_69_ != 0)

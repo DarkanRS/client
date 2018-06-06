@@ -20,7 +20,7 @@ public class Class6 {
 	static final void method298(CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
 		if ((class527.intStack[1942118537 * class527.anInt7012]) >= (class527.intStack[1 + 1942118537 * class527.anInt7012]))
-			class527.instrPtr += ((class527.unknown[class527.instrPtr * 301123709]) * -1051529003);
+			class527.instrPtr += ((class527.intOpValues[class527.instrPtr * 301123709]) * -1051529003);
 	}
 
 	static final void method299(CS2Executor class527, int i) {
@@ -73,8 +73,8 @@ public class Class6 {
 
 	static final void method305(CS2Executor class527, int i) {
 		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_3_, (byte) 121);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 121);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		Class349.method6186(class118, class98, class527, -94301647);
 	}
 }

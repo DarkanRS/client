@@ -16,7 +16,7 @@ public class Class1 {
 	}
 
 	public static void method252(Class397 class397, int i, int i_0_, Animable class521_sub1_sub1_sub2, int i_1_, int i_2_) {
-		CS2Executor class527 = Class125.method2167(1590618390);
+		CS2Executor class527 = Class125.getNextScriptExecutor(1590618390);
 		class527.animable = class521_sub1_sub1_sub2;
 		class527.anInt7004 = 2000547059 * i_1_;
 		Class107.method1834(class397, i, i_0_, class527, (byte) 104);

@@ -385,7 +385,7 @@ public class Class282_Sub14 extends Node {
 		((Class282_Sub14) this).anIntArray7596 = null;
 	}
 
-	public static final void method12221(Class118 class118, int i, int i_89_, int i_90_) {
+	public static final void method12221(IComponentDefinitions class118, int i, int i_89_, int i_90_) {
 		if (null == client.aClass118_7257 && !Class20.aBool161 && (null != class118 && Class96_Sub14.method14643(class118, 735931958))) {
 			client.aClass118_7257 = class118;
 			client.aClass118_7247 = Class468_Sub22.method12880(class118, (byte) 34);

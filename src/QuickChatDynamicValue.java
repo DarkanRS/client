@@ -2,91 +2,65 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class243 {
-	static Class243 aClass243_2983;
-	public static Class243 aClass243_2984;
-	static Class243 aClass243_2985;
-	static Class243 aClass243_2986;
-	static Class243 aClass243_2987;
-	static Class243 aClass243_2988;
-	static Class243 aClass243_2989;
-	static Class243 aClass243_2990;
-	public static Class243 aClass243_2991;
-	public static Class243 aClass243_2992;
-	public static Class243 aClass243_2993 = new Class243(0, 2, 2, 1);
-	static Class243 aClass243_2994;
-	public static Class243 aClass243_2995 = new Class243(1, 2, 2, 0);
-	public static Class243 aClass243_2996;
-	public int anInt2997;
-	public int anInt2998;
-	public int anInt2999;
-	public int anInt3000;
-	
-	public static Class243 method4169(int i) {
-		Class243[] class243s = Class92.method1561((short) -1058);
-		for (int i_0_ = 0; i_0_ < class243s.length; i_0_++) {
-			if (i == class243s[i_0_].anInt2997 * -1869685303)
-				return class243s[i_0_];
-		}
-		return null;
-	}
+public class QuickChatDynamicValue {
+	static QuickChatDynamicValue ACC_GETMEANCOMBATLEVEL;
+	public static QuickChatDynamicValue ENUM_STRING;
+	static QuickChatDynamicValue COUNTDIALOG;
+	static QuickChatDynamicValue STAT_BASE;
+	static QuickChatDynamicValue ACC_GETCOUNT_WORLD;
+	static QuickChatDynamicValue TOSTRING_SHARED;
+	static QuickChatDynamicValue TOSTRING_VARP;
+	static QuickChatDynamicValue TOSTRING_VARBIT;
+	public static QuickChatDynamicValue OBJTRADEDIALOG;
+	public static QuickChatDynamicValue ENUM_STRING_STATBASE;
+	public static QuickChatDynamicValue LISTDIALOG = new QuickChatDynamicValue(0, 2, 2, 1);
+	static QuickChatDynamicValue ACTIVECOMBATLEVEL;
+	public static QuickChatDynamicValue OBJDIALOG = new QuickChatDynamicValue(1, 2, 2, 0);
+	public static QuickChatDynamicValue ENUM_STRING_CLAN;
+	public int id;
+	public int clientTransmitSize;
+	public int serverTransmitSize;
+	public int paramCount;
 
 	static {
-		aClass243_2985 = new Class243(2, 4, 4, 0);
-		aClass243_2986 = new Class243(4, 1, 1, 1);
-		aClass243_2984 = new Class243(6, 0, 4, 2);
-		aClass243_2996 = new Class243(7, 0, 1, 1);
-		aClass243_2989 = new Class243(8, 0, 4, 1);
-		aClass243_2990 = new Class243(9, 0, 4, 1);
-		aClass243_2991 = new Class243(10, 2, 2, 0);
-		aClass243_2992 = new Class243(11, 0, 1, 2);
-		aClass243_2987 = new Class243(12, 0, 1, 0);
-		aClass243_2983 = new Class243(13, 0, 1, 0);
-		aClass243_2988 = new Class243(14, 0, 4, 1);
-		aClass243_2994 = new Class243(15, 0, 1, 0);
+		COUNTDIALOG = new QuickChatDynamicValue(2, 4, 4, 0);
+		STAT_BASE = new QuickChatDynamicValue(4, 1, 1, 1);
+		ENUM_STRING = new QuickChatDynamicValue(6, 0, 4, 2);
+		ENUM_STRING_CLAN = new QuickChatDynamicValue(7, 0, 1, 1);
+		TOSTRING_VARP = new QuickChatDynamicValue(8, 0, 4, 1);
+		TOSTRING_VARBIT = new QuickChatDynamicValue(9, 0, 4, 1);
+		OBJTRADEDIALOG = new QuickChatDynamicValue(10, 2, 2, 0);
+		ENUM_STRING_STATBASE = new QuickChatDynamicValue(11, 0, 1, 2);
+		ACC_GETCOUNT_WORLD = new QuickChatDynamicValue(12, 0, 1, 0);
+		ACC_GETMEANCOMBATLEVEL = new QuickChatDynamicValue(13, 0, 1, 0);
+		TOSTRING_SHARED = new QuickChatDynamicValue(14, 0, 4, 1);
+		ACTIVECOMBATLEVEL = new QuickChatDynamicValue(15, 0, 1, 0);
 	}
 
-	Class243(int i, int i_1_, int i_2_, int i_3_) {
-		anInt2997 = i * -1336554375;
-		anInt2998 = -1079524855 * i_1_;
-		anInt2999 = i_2_ * 538118299;
-		anInt3000 = 968865815 * i_3_;
-	}
-
-	static Class243[] method4170() {
-		return new Class243[] { aClass243_2984, aClass243_2987, aClass243_2986, aClass243_2994, aClass243_2991, aClass243_2996, aClass243_2985, aClass243_2990, aClass243_2989, aClass243_2993, aClass243_2983, aClass243_2988, aClass243_2995, aClass243_2992 };
-	}
-
-	public static Class243 method4171(int i) {
-		Class243[] class243s = Class92.method1561((short) 23630);
-		for (int i_4_ = 0; i_4_ < class243s.length; i_4_++) {
-			if (i == class243s[i_4_].anInt2997 * -1869685303)
-				return class243s[i_4_];
-		}
-		return null;
-	}
-
-	static Class243[] method4172() {
-		return new Class243[] { aClass243_2984, aClass243_2987, aClass243_2986, aClass243_2994, aClass243_2991, aClass243_2996, aClass243_2985, aClass243_2990, aClass243_2989, aClass243_2993, aClass243_2983, aClass243_2988, aClass243_2995, aClass243_2992 };
+	QuickChatDynamicValue(int i, int i_1_, int i_2_, int i_3_) {
+		id = i * -1336554375;
+		clientTransmitSize = -1079524855 * i_1_;
+		serverTransmitSize = i_2_ * 538118299;
+		paramCount = 968865815 * i_3_;
 	}
 
 	static final void method4173(CS2Executor class527, int i) {
 		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_5_, (byte) 117);
+		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 117);
 		Class413.method6942(class118, class527, -839720836);
 	}
 
 	static final void method4174(CS2Executor class527, int i) {
 		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_6_, (byte) 10);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 10);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		Class457.method7667(class118, class98, class527, 668340664);
 	}
 
 	static final void method4175(CS2Executor class527, short i) {
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_7_, (byte) 17);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 17);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class125.method2170(class118, class98, class527, 809860903);
 	}
 
@@ -101,8 +75,8 @@ public class Class243 {
 		int i_10_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		int i_11_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
 		int i_12_ = (class527.intStack[class527.anInt7012 * 1942118537 + 3]);
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1537474699);
-		Class225.method3794(((i_9_ >> 14 & 0x3fff) - class219.anInt2711 * 1948093437), (i_9_ & 0x3fff) - -1002240017 * class219.anInt2712, i_10_ << 2, i_11_, i_12_, false, (byte) -1);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1537474699);
+		Class225.method3794(((i_9_ >> 14 & 0x3fff) - class219.x * 1948093437), (i_9_ & 0x3fff) - -1002240017 * class219.y, i_10_ << 2, i_11_, i_12_, false, (byte) -1);
 	}
 
 	static final void method4178(CS2Executor class527, byte i) {
@@ -145,5 +119,14 @@ public class Class243 {
 	static final void method4181(CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		Class96_Sub19.method14665(string, 1220033429);
+	}
+
+	public static QuickChatDynamicValue get(int i, byte i_0_) {
+		QuickChatDynamicValue[] class243s = Class92.getQuickChatDynamicValueTypes((short) -10593);
+		for (int i_1_ = 0; i_1_ < class243s.length; i_1_++) {
+			if (i == class243s[i_1_].id * -1869685303)
+				return class243s[i_1_];
+		}
+		return null;
 	}
 }

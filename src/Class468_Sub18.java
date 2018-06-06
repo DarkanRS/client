@@ -34,7 +34,7 @@ public class Class468_Sub18 extends Class468 {
 	}
 
 	public int method7785(int i, int i_1_) {
-		if (3 == i && !Class362.method6278(616047582).method218("jagdx", -369170770))
+		if (3 == i && !Class362.getNativeLibraryLoader(616047582).method218("jagdx", -369170770))
 			return 3;
 		return 2;
 	}
@@ -53,7 +53,7 @@ public class Class468_Sub18 extends Class468 {
 	}
 
 	public int method7784(int i) {
-		if (3 == i && !Class362.method6278(616047582).method218("jagdx", -369170770))
+		if (3 == i && !Class362.getNativeLibraryLoader(616047582).method218("jagdx", -369170770))
 			return 3;
 		return 2;
 	}

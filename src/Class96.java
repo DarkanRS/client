@@ -325,13 +325,13 @@ public abstract class Class96 {
 
 	static final void method1603(CS2Executor class527, int i) {
 		Class184 class184 = Class468_Sub20.method12807(-846822027);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4591, class184.aClass432_2283, -312926267);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
-		int i_0_ = class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291;
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(3);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-624100047 * class527.aClass346_7009.anInt4048, 1417031095);
-		class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, class527.aClass346_7009.anIntArray4046, -1204920325);
-		class282_sub23.aClass282_Sub35_Sub2_7682.method13061((-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index - i_0_), -2062129936);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4591, class184.isaac, -312926267);
+		class282_sub23.buffer.writeByte(0);
+		int i_0_ = class282_sub23.buffer.index * -1990677291;
+		class282_sub23.buffer.writeByte(3);
+		class282_sub23.buffer.writeShort(-624100047 * class527.aClass346_7009.anInt4048, 1417031095);
+		class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.buffer, class527.aClass346_7009.anIntArray4046, -1204920325);
+		class282_sub23.buffer.method13061((-1990677291 * class282_sub23.buffer.index - i_0_), -2062129936);
 		class184.method3049(class282_sub23, 2118885707);
 	}
 
@@ -339,14 +339,14 @@ public abstract class Class96 {
 		System.out.println(class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]);
 	}
 
-	public static Class98 method1605(int i, byte i_1_) {
+	public static Interface method1605(int i, byte i_1_) {
 		return Class468_Sub8.aClass98Array7889[i >> 16];
 	}
 
 	static final void method1606(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class282_Sub17_Sub4.method15409(class118, class98, class527, -674550702);
 	}
 

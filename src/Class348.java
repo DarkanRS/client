@@ -80,7 +80,7 @@ public class Class348 {
 
 	static final void method6174(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 116);
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 116);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1337 * -1009302201;
 	}
 
@@ -115,7 +115,7 @@ public class Class348 {
 		Class84.myPlayer.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.method4451(-1038237242) / 2;
 		Class246.anInt3029 = 0;
 		Class31.anInt361 = 0;
-		if (5 == Class262.anInt3240 * -672443707) {
+		if (5 == NativeLibraryLoader.anInt3240 * -672443707) {
 			Class31.anInt361 = (Class296.anInt3534 * 1034829113 << 9) * -2043310439;
 			Class246.anInt3029 = (Class282_Sub44.anInt8064 * -2026930995 << 9) * 1442943697;
 		} else

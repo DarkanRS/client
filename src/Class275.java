@@ -51,9 +51,9 @@ public class Class275 {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int i_0_ = 0;
 		if (Class115.method1950(string, -1586612370))
-			i_0_ = Class328.method5830(string, 1827486792);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4585, client.aClass184_7475.aClass432_2283, 1022314002);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(i_0_);
+			i_0_ = Class328.parseInt(string, 1827486792);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4585, client.aClass184_7475.isaac, 1022314002);
+		class282_sub23.buffer.writeInt(i_0_);
 		client.aClass184_7475.method3049(class282_sub23, -492560470);
 	}
 

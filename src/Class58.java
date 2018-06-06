@@ -6,52 +6,52 @@ public class Class58 implements Interface19 {
 	public static Class529 aClass529_527;
 	public static Class61 aClass61_528;
 
-	public String method135(Class243 class243, int[] is, long l) {
-		if (class243 == Class243.aClass243_2993) {
+	public String method135(QuickChatDynamicValue class243, int[] is, long l) {
+		if (class243 == QuickChatDynamicValue.LISTDIALOG) {
 			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, -64424168);
 		}
-		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
+		if (class243 == QuickChatDynamicValue.OBJDIALOG || class243 == QuickChatDynamicValue.OBJTRADEDIALOG) {
 			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) l, 1575511012);
 			return class425.aString5043;
 		}
-		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
+		if (class243 == QuickChatDynamicValue.ENUM_STRING || class243 == QuickChatDynamicValue.ENUM_STRING_CLAN || QuickChatDynamicValue.ENUM_STRING_STATBASE == class243)
 			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 2106456977);
 		return null;
 	}
 
-	public String method136(Class243 class243, int[] is, long l) {
-		if (class243 == Class243.aClass243_2993) {
+	public String method136(QuickChatDynamicValue class243, int[] is, long l) {
+		if (class243 == QuickChatDynamicValue.LISTDIALOG) {
 			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, -451172927);
 		}
-		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
+		if (class243 == QuickChatDynamicValue.OBJDIALOG || class243 == QuickChatDynamicValue.OBJTRADEDIALOG) {
 			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) l, 1001383169);
 			return class425.aString5043;
 		}
-		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
+		if (class243 == QuickChatDynamicValue.ENUM_STRING || class243 == QuickChatDynamicValue.ENUM_STRING_CLAN || QuickChatDynamicValue.ENUM_STRING_STATBASE == class243)
 			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 579863966);
 		return null;
 	}
 
-	public String method137(Class243 class243, int[] is, long l) {
-		if (class243 == Class243.aClass243_2993) {
+	public String method137(QuickChatDynamicValue class243, int[] is, long l) {
+		if (class243 == QuickChatDynamicValue.LISTDIALOG) {
 			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, 1807301402);
 		}
-		if (class243 == Class243.aClass243_2995 || class243 == Class243.aClass243_2991) {
+		if (class243 == QuickChatDynamicValue.OBJDIALOG || class243 == QuickChatDynamicValue.OBJTRADEDIALOG) {
 			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) l, 980580063);
 			return class425.aString5043;
 		}
-		if (class243 == Class243.aClass243_2984 || class243 == Class243.aClass243_2996 || Class243.aClass243_2992 == class243)
+		if (class243 == QuickChatDynamicValue.ENUM_STRING || class243 == QuickChatDynamicValue.ENUM_STRING_CLAN || QuickChatDynamicValue.ENUM_STRING_STATBASE == class243)
 			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 870502499);
 		return null;
 	}
 
 	static final void method1136(CS2Executor class527, int i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 50);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 50);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class504.method8390(class118, class98, class527, 1964593641);
 	}
 
@@ -64,7 +64,7 @@ public class Class58 implements Interface19 {
 		int i_1_ = (class527.intStack[class527.anInt7012 * 1942118537]);
 		int i_2_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		int i_3_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
-		Class118 class118 = Index.method5694(i_1_ << 16 | i_2_, i_3_, -1458346299);
+		IComponentDefinitions class118 = Index.method5694(i_1_ << 16 | i_2_, i_3_, -1458346299);
 		Class60.method1170(-609337146);
 		Class282_Sub10 class282_sub10 = client.method11633(class118);
 		Class304.method5409(class118, class282_sub10.method12179(-995475092), 1831058647 * class282_sub10.anInt7541, (byte) -101);
@@ -88,7 +88,7 @@ public class Class58 implements Interface19 {
 				} else if (null != Class96_Sub23.aClass282_Sub50_Sub7_9445)
 					return (-1332134173 * (((Class282_Sub50_Sub7) Class96_Sub23.aClass282_Sub50_Sub7_9445).anInt9578));
 			} else {
-				Class414 class414 = Class114.method1887(466263588);
+				FontMetrics class414 = Class114.method1887(466263588);
 				int i_4_ = Class163.aClass209_2031.method3569(1973979950);
 				int i_5_ = Class163.aClass209_2031.method3570(756095591);
 				if (!Class20.aBool162) {

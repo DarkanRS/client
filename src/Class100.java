@@ -100,7 +100,7 @@ public class Class100 {
 		Class404.method6809(string, i_8_, 1250092294);
 	}
 
-	static final void method1642(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method1642(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1421907667) != null)
 			string = string.substring(0, string.length() - 1);

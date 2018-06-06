@@ -48,14 +48,14 @@ public class Class123 {
 
 	void method2118(GraphicalRenderer class505, int i) {
 		if (((Class123) this).aClass282_Sub50_Sub17_1551 != null) {
-			Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
-			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -43);
+			Vector3 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
+			IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1991984810).method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, ((Class123) this).aBoolArray1553, (byte) -43);
 			((Class123) this).aBoolArray1553 = null;
 			((Class123) this).aClass282_Sub50_Sub17_1551 = null;
 		}
 	}
 
-	void method2119(GraphicalRenderer class505, MeshRasterizer class528, Class294 class294, int i, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_) {
+	void method2119(GraphicalRenderer class505, MeshRasterizer class528, Matrix44Var class294, int i, int i_1_, int i_2_, int i_3_, boolean bool, int i_4_) {
 		Class87[] class87s = class528.method11253();
 		Class172[] class172s = class528.method11274();
 		if ((null == ((Class123) this).aClass539_1538 || ((Class123) this).aClass539_1538.aBool7132) && (null != class87s || class172s != null)) {
@@ -217,10 +217,10 @@ public class Class123 {
 			((Class123) this).anInt1547 = class478.id * 1529104709;
 			return null;
 		}
-		Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
+		Vector3 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
 		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2004926636);
 		if (bool_14_) {
-			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -45);
+			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, ((Class123) this).aBoolArray1553, (byte) -45);
 			((Class123) this).aBool1552 = false;
 		}
 		Class390 class390 = class206.aClass390Array2591[((Class123) this).aByte1549];
@@ -233,14 +233,14 @@ public class Class123 {
 		if (((Class123) this).aClass456_1545.method7564(204760796)) {
 			if (bool_14_)
 				i |= 0x40000;
-			class528 = (class478.method8012(class505, i, (11 != 845010167 * ((Class123) this).anInt1555 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == ((Class123) this).anInt1555 * 845010167 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -2124588555), (int) class385.aFloat4673, ((Class123) this).aClass456_1545,
+			class528 = (class478.method8012(class505, i, (11 != 845010167 * ((Class123) this).anInt1555 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == ((Class123) this).anInt1555 * 845010167 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.x, class390.method6709((int) class385.x, (int) class385.z, -2124588555), (int) class385.z, ((Class123) this).aClass456_1545,
 					((Class123) this).aClass476_1541, 1502121981));
 			if (class528 != null) {
 				if (bool_14_) {
 					if (null == ((Class123) this).aBoolArray1553)
 						((Class123) this).aBoolArray1553 = new boolean[4];
 					((Class123) this).aClass282_Sub50_Sub17_1551 = class528.ga(((Class123) this).aClass282_Sub50_Sub17_1551);
-					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -96);
+					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, ((Class123) this).aBoolArray1553, (byte) -96);
 					((Class123) this).aBool1552 = true;
 				}
 				((Class123) this).anInt1554 = class528.YA() * -14517499;
@@ -254,14 +254,14 @@ public class Class123 {
 		} else if (((Class123) this).aClass528_1544 == null || (((Class123) this).aClass528_1544.m() & i) != i || (-1003883901 * ((Class123) this).anInt1547 != class478.id * -2132690865)) {
 			if (((Class123) this).aClass528_1544 != null)
 				i |= ((Class123) this).aClass528_1544.m();
-			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -2029689654), (int) class385.aFloat4673, bool_14_,
+			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.x, class390.method6709((int) class385.x, (int) class385.z, -2029689654), (int) class385.z, bool_14_,
 					((Class123) this).aClass476_1541, 1886483873));
 			if (class452 != null) {
 				((Class123) this).aClass528_1544 = class528 = (MeshRasterizer) class452.anObject5443;
 				if (bool_14_) {
 					((Class123) this).aClass282_Sub50_Sub17_1551 = (Class282_Sub50_Sub17) class452.anObject5444;
 					((Class123) this).aBoolArray1553 = null;
-					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -31);
+					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, null, (byte) -31);
 					((Class123) this).aBool1552 = true;
 				}
 				((Class123) this).anInt1554 = class528.YA() * -14517499;
@@ -315,10 +315,10 @@ public class Class123 {
 			((Class123) this).anInt1547 = class478.id * 1529104709;
 			return null;
 		}
-		Class385 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
+		Vector3 class385 = (((Class123) this).aClass521_Sub1_1539.method11166().aClass385_3595);
 		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1379561670);
 		if (bool_17_) {
-			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -82);
+			class206.method3427(((Class123) this).aClass282_Sub50_Sub17_1551, ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, ((Class123) this).aBoolArray1553, (byte) -82);
 			((Class123) this).aBool1552 = false;
 		}
 		Class390 class390 = class206.aClass390Array2591[((Class123) this).aByte1549];
@@ -331,14 +331,14 @@ public class Class123 {
 		if (((Class123) this).aClass456_1545.method7564(311181349)) {
 			if (bool_17_)
 				i |= 0x40000;
-			class528 = (class478.method8012(class505, i, (11 != 845010167 * ((Class123) this).anInt1555 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == ((Class123) this).anInt1555 * 845010167 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -213074968), (int) class385.aFloat4673, ((Class123) this).aClass456_1545,
+			class528 = (class478.method8012(class505, i, (11 != 845010167 * ((Class123) this).anInt1555 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == ((Class123) this).anInt1555 * 845010167 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.x, class390.method6709((int) class385.x, (int) class385.z, -213074968), (int) class385.z, ((Class123) this).aClass456_1545,
 					((Class123) this).aClass476_1541, 1059680924));
 			if (class528 != null) {
 				if (bool_17_) {
 					if (null == ((Class123) this).aBoolArray1553)
 						((Class123) this).aBoolArray1553 = new boolean[4];
 					((Class123) this).aClass282_Sub50_Sub17_1551 = class528.ga(((Class123) this).aClass282_Sub50_Sub17_1551);
-					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, ((Class123) this).aBoolArray1553, (byte) -39);
+					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, ((Class123) this).aBoolArray1553, (byte) -39);
 					((Class123) this).aBool1552 = true;
 				}
 				((Class123) this).anInt1554 = class528.YA() * -14517499;
@@ -352,14 +352,14 @@ public class Class123 {
 		} else if (((Class123) this).aClass528_1544 == null || (((Class123) this).aClass528_1544.m() & i) != i || (-1003883901 * ((Class123) this).anInt1547 != class478.id * -2132690865)) {
 			if (((Class123) this).aClass528_1544 != null)
 				i |= ((Class123) this).aClass528_1544.m();
-			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.aFloat4671, class390.method6709((int) class385.aFloat4671, (int) class385.aFloat4673, 714009934), (int) class385.aFloat4673, bool_17_,
+			Class452 class452 = (class478.method8010(class505, i, (11 != ((Class123) this).anInt1555 * 845010167 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == 845010167 * ((Class123) this).anInt1555 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.x, class390.method6709((int) class385.x, (int) class385.z, 714009934), (int) class385.z, bool_17_,
 					((Class123) this).aClass476_1541, -1512660371));
 			if (class452 != null) {
 				((Class123) this).aClass528_1544 = class528 = (MeshRasterizer) class452.anObject5443;
 				if (bool_17_) {
 					((Class123) this).aClass282_Sub50_Sub17_1551 = (Class282_Sub50_Sub17) class452.anObject5444;
 					((Class123) this).aBoolArray1553 = null;
-					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -109);
+					class206.method3426((((Class123) this).aClass282_Sub50_Sub17_1551), ((Class123) this).aByte1549, (int) class385.x, (int) class385.z, null, (byte) -109);
 					((Class123) this).aBool1552 = true;
 				}
 				((Class123) this).anInt1554 = class528.YA() * -14517499;
@@ -552,8 +552,8 @@ public class Class123 {
 
 	static final void method2150(CS2Executor class527, byte i) {
 		int i_28_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_28_, (byte) 53);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_28_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_28_, (byte) 53);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_28_ >> 16];
 		NamedFileReference.method869(class118, class98, class527, -1209481120);
 	}
 

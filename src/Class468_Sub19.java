@@ -71,11 +71,11 @@ public class Class468_Sub19 extends Class468 {
 			if (-1 == class57.aByte525) {
 				String string = class57.aString524;
 				Class184 class184 = Class468_Sub20.method12807(-1321489648);
-				Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4617, class184.aClass432_2283, 1070287495);
-				class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(3 + Class108.method1846(string, 97290434));
-				class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
-				class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i, 1417031095);
-				class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+				TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4617, class184.isaac, 1070287495);
+				class282_sub23.buffer.writeByte(3 + ChatLine.getLength(string));
+				class282_sub23.buffer.writeByte(bool ? 1 : 0);
+				class282_sub23.buffer.writeShort(i, 1417031095);
+				class282_sub23.buffer.writeString(string);
 				class184.method3049(class282_sub23, -920214831);
 			}
 		}

@@ -226,8 +226,8 @@ public class ItemIndexLoader implements IndexLoader {
 			Class5.anIntArray36 = new int[i];
 	}
 
-	static String method7171(Class118 class118, int i, byte i_38_) {
-		if (!client.method11633(class118).method12178(i, (short) -32600) && class118.anObjectArray1410 == null)
+	static String method7171(IComponentDefinitions class118, int i, byte i_38_) {
+		if (!client.method11633(class118).method12178(i, (short) -32600) && class118.params == null)
 			return null;
 		if (class118.aStringArray1352 == null || class118.aStringArray1352.length <= i || class118.aStringArray1352[i] == null || class118.aStringArray1352[i].trim().length() == 0) {
 			if (client.aBool7168)

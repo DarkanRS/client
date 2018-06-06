@@ -91,21 +91,21 @@ public abstract class Class273 {
 
 	static final void method4863(CS2Executor class527, int i) {
 		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_3_, (byte) 84);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 84);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		ReferenceTable.method5763(class118, class98, class527, 258036500);
 	}
 
 	static final void method4864(CS2Executor class527, int i) {
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_4_, (byte) 65);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 65);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class282_Sub21_Sub1.method15474(class118, class98, class527, (byte) 126);
 	}
 
 	static final void method4865(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class88.method1494(class118, class527, (byte) -2);
 	}
 

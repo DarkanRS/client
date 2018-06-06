@@ -132,7 +132,7 @@ public class Class469 implements Iterator {
 		return class282_sub50;
 	}
 
-	static void method7805(GraphicalRenderer class505, int i, int i_0_, Class118 class118, Class455 class455, int i_1_, int i_2_, int i_3_) {
+	static void method7805(GraphicalRenderer class505, int i, int i_0_, IComponentDefinitions class118, Class455 class455, int i_1_, int i_2_, int i_3_) {
 		for (int i_4_ = 0; i_4_ < -685729279 * client.anInt7211; i_4_++) {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) client.anIntArray7212[i_4_]));
 			if (class282_sub47 != null) {
@@ -142,9 +142,9 @@ public class Class469 implements Iterator {
 					if (null != class409 && null != class409.anIntArray4886)
 						class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
 					if (class409 != null && class409.aBool4864 && class409.aBool4893) {
-						Class385 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-						int i_5_ = (int) class385.aFloat4671 / 128 - i / 128;
-						int i_6_ = (int) class385.aFloat4673 / 128 - i_0_ / 128;
+						Vector3 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+						int i_5_ = (int) class385.x / 128 - i / 128;
+						int i_6_ = (int) class385.z / 128 - i_0_ / 128;
 						if (-1230504941 * class409.anInt4914 != -1)
 							Class158.method2731(class505, class455, class118, i_1_, i_2_, i_5_, i_6_, (-1230504941 * class409.anInt4914), -1804553865);
 						else

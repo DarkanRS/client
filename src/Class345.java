@@ -299,7 +299,7 @@ public class Class345 {
 
 	static final void method6138(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = class513.aClass118_5886;
+		IComponentDefinitions class118 = class513.aClass118_5886;
 		Node.method5001(class118, class527, -1847769999);
 	}
 
@@ -314,14 +314,14 @@ public class Class345 {
 
 	static final void method6141(CS2Executor class527, int i) {
 		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_12_, (byte) 94);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_12_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_12_, (byte) 94);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_12_ >> 16];
 		Class453.method7547(class118, class98, class527, 1462639259);
 	}
 
 	static final void method6142(CS2Executor class527, int i) {
 		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_13_, (byte) 30);
+		IComponentDefinitions class118 = Class117.method1981(i_13_, (byte) 30);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 442725395 * class118.anInt1277;
 	}
 
@@ -330,8 +330,8 @@ public class Class345 {
 		Class282_Sub30.aClass229_7712.method3859(-1205784337);
 	}
 
-	static Class369[] method6144(int i) {
-		return (new Class369[] { Class369.aClass369_4273, Class369.aClass369_4270, Class369.aClass369_4279, Class369.aClass369_4277, Class369.aClass369_4272, Class369.aClass369_4269, Class369.aClass369_4275, Class369.aClass369_4268, Class369.aClass369_4274, Class369.aClass369_4276, Class369.aClass369_4271 });
+	static OutgoingLoginPacket[] getOutgoingLoginPackets() {
+		return (new OutgoingLoginPacket[] { OutgoingLoginPacket.GAMELOGIN_CONTINUE, OutgoingLoginPacket.LOBBYLOGIN, OutgoingLoginPacket.INIT_JS5REMOTE_CONNECTION, OutgoingLoginPacket.GAMELOGIN, OutgoingLoginPacket.INIT_GAME_CONNECTION, OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN, OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT, OutgoingLoginPacket.CHECK_WORLD_SUITABILITY, OutgoingLoginPacket.SSL_WEBCONNECTION, OutgoingLoginPacket.INIT_SOCIAL_NETWORK_CONNECTION, OutgoingLoginPacket.REQUEST_WORLDLIST });
 	}
 
 	static void worldLogin(String string, String string_15_, int i) {

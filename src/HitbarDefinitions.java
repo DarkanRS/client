@@ -395,18 +395,18 @@ public class HitbarDefinitions {
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2133910723) == null)
 			Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -114);
 		else {
-			Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+			Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 			boolean bool_23_ = false;
 			if (1 != -891719545 * client.anInt7341) {
 				if (!client.aBool7321)
 					bool_23_ = true;
-			} else if ((int) class385.aFloat4671 < 0 || ((int) class385.aFloat4671 >= IndexLoaders.MAP_REGION_DECODER.method4424(56329418) * 512) || (int) class385.aFloat4673 < 0 || ((int) class385.aFloat4673 >= (IndexLoaders.MAP_REGION_DECODER.method4451(-639715489) * 512)))
+			} else if ((int) class385.x < 0 || ((int) class385.x >= IndexLoaders.MAP_REGION_DECODER.method4424(56329418) * 512) || (int) class385.z < 0 || ((int) class385.z >= (IndexLoaders.MAP_REGION_DECODER.method4451(-639715489) * 512)))
 				bool_23_ = true;
 			if (bool_23_)
 				Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -104);
 			else {
 				client.anInt7286 += 1895928101;
-				if (null != Class84.myPlayer && ((int) class385.aFloat4671 - (Class84.myPlayer.method15805(828768449) - 1) * 256) >> 9 == Class187.anInt2361 * 895508675 && (((int) class385.aFloat4673 - (Class84.myPlayer.method15805(828768449) - 1) * 256) >> 9 == Class187.anInt2359 * -1068588689)) {
+				if (null != Class84.myPlayer && ((int) class385.x - (Class84.myPlayer.method15805(828768449) - 1) * 256) >> 9 == Class187.anInt2361 * 895508675 && (((int) class385.z - (Class84.myPlayer.method15805(828768449) - 1) * 256) >> 9 == Class187.anInt2359 * -1068588689)) {
 					Class187.anInt2361 = 134656021;
 					Class187.anInt2359 = 818291313;
 					Class282_Sub20_Sub9.method15255((short) -25188);
@@ -421,15 +421,15 @@ public class HitbarDefinitions {
 				i_20_ = 1064588657 * client.anInt7188;
 				i_21_ = 292041583 * client.anInt7440;
 				Class380.method6451(i, i_19_, -1689058679);
-				if (Class262.anInt3240 * -672443707 == 2) {
+				if (NativeLibraryLoader.anInt3240 * -672443707 == 2) {
 					int i_24_ = (int) client.aFloat7146;
 					if (client.anInt7273 * 1661251369 >> 8 > i_24_)
 						i_24_ = client.anInt7273 * 1661251369 >> 8;
 					if (client.aBoolArray7431[4] && 128 + client.anIntArray7433[4] > i_24_)
 						i_24_ = 128 + client.anIntArray7433[4];
 					int i_25_ = ((client.anInt7343 * -297983899 + (int) client.aFloat7365) & 0x3fff);
-					LoadingStage.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.aFloat4671, (int) class385.aFloat4673, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, 600 + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
-				} else if (4 == -672443707 * Class262.anInt3240) {
+					LoadingStage.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.x, (int) class385.z, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, 600 + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
+				} else if (4 == -672443707 * NativeLibraryLoader.anInt3240) {
 					int i_26_ = (int) client.aFloat7146;
 					if (client.anInt7273 * 1661251369 >> 8 > i_26_)
 						i_26_ = 1661251369 * client.anInt7273 >> 8;
@@ -437,7 +437,7 @@ public class HitbarDefinitions {
 						i_26_ = 128 + client.anIntArray7433[4];
 					int i_27_ = (int) client.aFloat7365 & 0x3fff;
 					LoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389(61805441 * client.anInt7262, client.anInt7376 * -1032332761, Class4.anInt35 * 675588453, (byte) 101) - 200, Class266.anInt3289 * 518160421, i_26_, i_27_, 600 + (i_26_ >> 3) * 3 << 2, i_21_, 1318646026);
-				} else if (1 == -672443707 * Class262.anInt3240)
+				} else if (1 == -672443707 * NativeLibraryLoader.anInt3240)
 					Class232.method3920(i_21_, -491570614);
 				int i_28_ = Class31.anInt361 * -360258135;
 				int i_29_ = Class109_Sub1.anInt9384 * 1929945579;
@@ -472,7 +472,7 @@ public class HitbarDefinitions {
 					Class246.anInt3029 = 0;
 				if (413271601 * Class246.anInt3029 > ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1972336821).anInt2603 * -18177099) << 9) - 1)
 					Class246.anInt3029 = (((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1780427901).anInt2603) * -18177099 << 9) - 1) * 1442943697;
-				Class429.method7215((byte) 2);
+				QuickchatDefinitionsLoader.method7215((byte) 2);
 				Renderers.SOFTWARE_RENDERER.method8617(i, i_19_, i_20_, i_21_);
 				Renderers.SOFTWARE_RENDERER.r(i, i_19_, i + i_20_, i_21_ + i_19_);
 				Class535 class535 = IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4038((short) 4699);
@@ -493,7 +493,7 @@ public class HitbarDefinitions {
 				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_20_, i_21_, (byte) -77);
 				IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
 				byte i_36_ = (Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) (48374445 * client.anInt7286) : (byte) 1);
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(-1809259861 * client.cycles, Class31.anInt361 * -360258135, 1929945579 * Class109_Sub1.anInt9384, Class246.anInt3029 * 413271601, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.aByte7967 + 1, i_36_, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9,
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(-1809259861 * client.cycles, Class31.anInt361 * -360258135, 1929945579 * Class109_Sub1.anInt9384, Class246.anInt3029 * 413271601, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.aByte7967 + 1, i_36_, (int) class385.x >> 9, (int) class385.z >> 9,
 						Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(619789577) == 0, true, 0, true);
 				client.anInt7396 += -752140529;
 				Class282_Sub20_Sub24.method15391(-1221353280);
@@ -524,8 +524,8 @@ public class HitbarDefinitions {
 
 	static final void method3232(CS2Executor class527, int i) {
 		int i_37_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_37_, (byte) 92);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_37_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_37_, (byte) 92);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_37_ >> 16];
 		Class282_Sub41_Sub1.method14700(class118, class98, class527, -442383470);
 	}
 

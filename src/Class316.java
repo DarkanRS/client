@@ -162,9 +162,9 @@ public class Class316 {
 
 	static final void method5595(CS2Executor class527, int i) {
 		int i_21_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_21_, (byte) 26);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_21_ >> 16];
-		Class108.method1845(class118, class98, class527, -1020802647);
+		IComponentDefinitions class118 = Class117.method1981(i_21_, (byte) 26);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_21_ >> 16];
+		ChatLine.method1845(class118, class98, class527, -1020802647);
 	}
 
 	static String method5596(long l) {
@@ -174,12 +174,12 @@ public class Class316 {
 	static final void method5597(CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		if ((class527.intStack[1942118537 * class527.anInt7012 + 1]) != (class527.intStack[1942118537 * class527.anInt7012]))
-			class527.instrPtr += ((class527.unknown[class527.instrPtr * 301123709]) * -1051529003);
+			class527.instrPtr += ((class527.intOpValues[class527.instrPtr * 301123709]) * -1051529003);
 	}
 
 	static final void method5598(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -492594917 * class118.anInt1429;
 	}
 

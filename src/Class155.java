@@ -222,8 +222,8 @@ public final class Class155 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_51_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_51_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_51_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_51_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_51_).aClass98_5885;
 		Class29.method786(class118, class98, class527, -1279446637);
 	}
 
@@ -247,11 +247,11 @@ public final class Class155 {
 			if (class521_sub1_sub1 instanceof Animable) {
 				Animable class521_sub1_sub1_sub2_59_ = (Animable) class521_sub1_sub1;
 				int i_60_ = (class521_sub1_sub1_sub2_59_.method15805(828768449) - 1) * 256 + 252;
-				Class385 class385 = class521_sub1_sub1_sub2_59_.method11166().aClass385_3595;
-				int i_61_ = (int) class385.aFloat4671 - i_60_ >> 9;
-				int i_62_ = (int) class385.aFloat4673 - i_60_ >> 9;
-				int i_63_ = (int) class385.aFloat4671 + i_60_ >> 9;
-				int i_64_ = i_60_ + (int) class385.aFloat4673 >> 9;
+				Vector3 class385 = class521_sub1_sub1_sub2_59_.method11166().aClass385_3595;
+				int i_61_ = (int) class385.x - i_60_ >> 9;
+				int i_62_ = (int) class385.z - i_60_ >> 9;
+				int i_63_ = (int) class385.x + i_60_ >> 9;
+				int i_64_ = i_60_ + (int) class385.z >> 9;
 				if (i_61_ <= i_55_ && i_62_ <= i_56_ && i_63_ >= i_55_ && i_64_ >= i_56_) {
 					int i_65_ = (i_63_ + 1 - i_55_) * (i_64_ + 1 - i_56_);
 					if (i_65_ > i_58_) {

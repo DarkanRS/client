@@ -46,10 +46,10 @@ public class Class350_Sub2 extends Class350 {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(1467773242);
 		if (class282_sub50_sub6 != null) {
-			boolean bool = class282_sub50_sub6.method14775(i_9_ >> 14 & 0x3fff, i_9_ & 0x3fff, Class517.anIntArray5900, -169630584);
+			boolean bool = class282_sub50_sub6.method14775(i_9_ >> 14 & 0x3fff, i_9_ & 0x3fff, CS2Runner.anIntArray5900, -169630584);
 			if (bool) {
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[1];
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[2];
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[1];
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[2];
 			} else {
 				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
 				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class443 {
+public class Whirlpool {
 	long[] aLongArray5361;
 	public static final int anInt5362 = 64;
 	static final int anInt5363 = 10;
@@ -24,54 +24,54 @@ public class Class443 {
 		int i = 0;
 		int i_0_ = 0;
 		while (i < 8) {
-			((Class443) this).aLongArray5365[i] = ((long) ((Class443) this).aByteArray5368[i_0_] << 56 ^ ((long) ((Class443) this).aByteArray5368[i_0_ + 1] & 0xffL) << 48 ^ ((long) ((Class443) this).aByteArray5368[2 + i_0_] & 0xffL) << 40 ^ ((long) ((Class443) this).aByteArray5368[3 + i_0_] & 0xffL) << 32 ^ ((long) ((Class443) this).aByteArray5368[4 + i_0_] & 0xffL) << 24 ^ ((long) ((Class443) this).aByteArray5368[5 + i_0_] & 0xffL) << 16
-					^ ((long) ((Class443) this).aByteArray5368[i_0_ + 6] & 0xffL) << 8 ^ ((long) ((Class443) this).aByteArray5368[i_0_ + 7] & 0xffL));
+			((Whirlpool) this).aLongArray5365[i] = ((long) ((Whirlpool) this).aByteArray5368[i_0_] << 56 ^ ((long) ((Whirlpool) this).aByteArray5368[i_0_ + 1] & 0xffL) << 48 ^ ((long) ((Whirlpool) this).aByteArray5368[2 + i_0_] & 0xffL) << 40 ^ ((long) ((Whirlpool) this).aByteArray5368[3 + i_0_] & 0xffL) << 32 ^ ((long) ((Whirlpool) this).aByteArray5368[4 + i_0_] & 0xffL) << 24 ^ ((long) ((Whirlpool) this).aByteArray5368[5 + i_0_] & 0xffL) << 16
+					^ ((long) ((Whirlpool) this).aByteArray5368[i_0_ + 6] & 0xffL) << 8 ^ ((long) ((Whirlpool) this).aByteArray5368[i_0_ + 7] & 0xffL));
 			i++;
 			i_0_ += 8;
 		}
 		for (i = 0; i < 8; i++)
-			((Class443) this).aLongArray5373[i] = (((Class443) this).aLongArray5365[i] ^ (((Class443) this).aLongArray5372[i] = ((Class443) this).aLongArray5361[i]));
+			((Whirlpool) this).aLongArray5373[i] = (((Whirlpool) this).aLongArray5365[i] ^ (((Whirlpool) this).aLongArray5372[i] = ((Whirlpool) this).aLongArray5361[i]));
 		for (i = 1; i <= 10; i++) {
 			for (i_0_ = 0; i_0_ < 8; i_0_++) {
-				((Class443) this).aLongArray5374[i_0_] = 0L;
+				((Whirlpool) this).aLongArray5374[i_0_] = 0L;
 				int i_1_ = 0;
 				int i_2_ = 56;
 				while (i_1_ < 8) {
-					((Class443) this).aLongArray5374[i_0_] ^= (aLongArrayArray5367[i_1_][(int) ((((Class443) this).aLongArray5372[i_0_ - i_1_ & 0x7]) >>> i_2_) & 0xff]);
+					((Whirlpool) this).aLongArray5374[i_0_] ^= (aLongArrayArray5367[i_1_][(int) ((((Whirlpool) this).aLongArray5372[i_0_ - i_1_ & 0x7]) >>> i_2_) & 0xff]);
 					i_1_++;
 					i_2_ -= 8;
 				}
 			}
 			for (i_0_ = 0; i_0_ < 8; i_0_++)
-				((Class443) this).aLongArray5372[i_0_] = ((Class443) this).aLongArray5374[i_0_];
-			((Class443) this).aLongArray5372[0] ^= aLongArray5366[i];
+				((Whirlpool) this).aLongArray5372[i_0_] = ((Whirlpool) this).aLongArray5374[i_0_];
+			((Whirlpool) this).aLongArray5372[0] ^= aLongArray5366[i];
 			for (i_0_ = 0; i_0_ < 8; i_0_++) {
-				((Class443) this).aLongArray5374[i_0_] = ((Class443) this).aLongArray5372[i_0_];
+				((Whirlpool) this).aLongArray5374[i_0_] = ((Whirlpool) this).aLongArray5372[i_0_];
 				int i_3_ = 0;
 				int i_4_ = 56;
 				while (i_3_ < 8) {
-					((Class443) this).aLongArray5374[i_0_] ^= (aLongArrayArray5367[i_3_][(int) ((((Class443) this).aLongArray5373[i_0_ - i_3_ & 0x7]) >>> i_4_) & 0xff]);
+					((Whirlpool) this).aLongArray5374[i_0_] ^= (aLongArrayArray5367[i_3_][(int) ((((Whirlpool) this).aLongArray5373[i_0_ - i_3_ & 0x7]) >>> i_4_) & 0xff]);
 					i_3_++;
 					i_4_ -= 8;
 				}
 			}
 			for (i_0_ = 0; i_0_ < 8; i_0_++)
-				((Class443) this).aLongArray5373[i_0_] = ((Class443) this).aLongArray5374[i_0_];
+				((Whirlpool) this).aLongArray5373[i_0_] = ((Whirlpool) this).aLongArray5374[i_0_];
 		}
 		for (i = 0; i < 8; i++)
-			((Class443) this).aLongArray5361[i] ^= (((Class443) this).aLongArray5373[i] ^ ((Class443) this).aLongArray5365[i]);
+			((Whirlpool) this).aLongArray5361[i] ^= (((Whirlpool) this).aLongArray5373[i] ^ ((Whirlpool) this).aLongArray5365[i]);
 	}
 
 	void method7405(byte[] is, long l) {
 		int i = 0;
 		int i_5_ = 8 - ((int) l & 0x7) & 0x7;
-		int i_6_ = 1189134755 * ((Class443) this).anInt5369 & 0x7;
+		int i_6_ = 1189134755 * ((Whirlpool) this).anInt5369 & 0x7;
 		long l_7_ = l;
 		int i_8_ = 31;
 		int i_9_ = 0;
 		for (/**/; i_8_ >= 0; i_8_--) {
-			i_9_ += ((((Class443) this).aByteArray5375[i_8_] & 0xff) + ((int) l_7_ & 0xff));
-			((Class443) this).aByteArray5375[i_8_] = (byte) i_9_;
+			i_9_ += ((((Whirlpool) this).aByteArray5375[i_8_] & 0xff) + ((int) l_7_ & 0xff));
+			((Whirlpool) this).aByteArray5375[i_8_] = (byte) i_9_;
 			i_9_ >>>= 8;
 			l_7_ >>>= 8;
 		}
@@ -79,61 +79,61 @@ public class Class443 {
 			int i_10_ = is[i] << i_5_ & 0xff | (is[i + 1] & 0xff) >>> 8 - i_5_;
 			if (i_10_ < 0 || i_10_ >= 256)
 				throw new RuntimeException();
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= i_10_ >>> i_6_;
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_6_);
-			if (512 == ((Class443) this).anInt5369 * 1189134755) {
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= i_10_ >>> i_6_;
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_6_);
+			if (512 == ((Whirlpool) this).anInt5369 * 1189134755) {
 				method7410((byte) -78);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_10_ << 8 - i_6_ & 0xff);
-			((Class443) this).anInt5369 += i_6_ * -391087605;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_10_ << 8 - i_6_ & 0xff);
+			((Whirlpool) this).anInt5369 += i_6_ * -391087605;
 			l -= 8L;
 			i++;
 		}
 		int i_11_;
 		if (l > 0L) {
 			i_11_ = is[i] << i_5_ & 0xff;
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] |= i_11_ >>> i_6_;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] |= i_11_ >>> i_6_;
 		} else
 			i_11_ = 0;
 		if ((long) i_6_ + l < 8L)
-			((Class443) this).anInt5369 += l * -391087605L;
+			((Whirlpool) this).anInt5369 += l * -391087605L;
 		else {
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_6_);
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_6_);
 			l -= (long) (8 - i_6_);
-			if (1189134755 * ((Class443) this).anInt5369 == 512) {
+			if (1189134755 * ((Whirlpool) this).anInt5369 == 512) {
 				method7410((byte) -123);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_11_ << 8 - i_6_ & 0xff);
-			((Class443) this).anInt5369 += -391087605 * (int) l;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_11_ << 8 - i_6_ & 0xff);
+			((Whirlpool) this).anInt5369 += -391087605 * (int) l;
 		}
 	}
 
 	void method7406(int i) {
 		for (int i_12_ = 0; i_12_ < 32; i_12_++)
-			((Class443) this).aByteArray5375[i_12_] = (byte) 0;
-		((Class443) this).anInt5370 = 0;
-		((Class443) this).anInt5369 = 0;
-		((Class443) this).aByteArray5368[0] = (byte) 0;
+			((Whirlpool) this).aByteArray5375[i_12_] = (byte) 0;
+		((Whirlpool) this).anInt5370 = 0;
+		((Whirlpool) this).anInt5369 = 0;
+		((Whirlpool) this).aByteArray5368[0] = (byte) 0;
 		for (int i_13_ = 0; i_13_ < 8; i_13_++)
-			((Class443) this).aLongArray5361[i_13_] = 0L;
+			((Whirlpool) this).aLongArray5361[i_13_] = 0L;
 	}
 
 	void method7407(byte[] is, long l) {
 		int i = 0;
 		int i_14_ = 8 - ((int) l & 0x7) & 0x7;
-		int i_15_ = 1189134755 * ((Class443) this).anInt5369 & 0x7;
+		int i_15_ = 1189134755 * ((Whirlpool) this).anInt5369 & 0x7;
 		long l_16_ = l;
 		int i_17_ = 31;
 		int i_18_ = 0;
 		for (/**/; i_17_ >= 0; i_17_--) {
-			i_18_ += ((((Class443) this).aByteArray5375[i_17_] & 0xff) + ((int) l_16_ & 0xff));
-			((Class443) this).aByteArray5375[i_17_] = (byte) i_18_;
+			i_18_ += ((((Whirlpool) this).aByteArray5375[i_17_] & 0xff) + ((int) l_16_ & 0xff));
+			((Whirlpool) this).aByteArray5375[i_17_] = (byte) i_18_;
 			i_18_ >>>= 8;
 			l_16_ >>>= 8;
 		}
@@ -141,58 +141,58 @@ public class Class443 {
 			int i_19_ = is[i] << i_14_ & 0xff | (is[i + 1] & 0xff) >>> 8 - i_14_;
 			if (i_19_ < 0 || i_19_ >= 256)
 				throw new RuntimeException();
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= i_19_ >>> i_15_;
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_15_);
-			if (512 == ((Class443) this).anInt5369 * 1189134755) {
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= i_19_ >>> i_15_;
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_15_);
+			if (512 == ((Whirlpool) this).anInt5369 * 1189134755) {
 				method7410((byte) -75);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_19_ << 8 - i_15_ & 0xff);
-			((Class443) this).anInt5369 += i_15_ * -391087605;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_19_ << 8 - i_15_ & 0xff);
+			((Whirlpool) this).anInt5369 += i_15_ * -391087605;
 			l -= 8L;
 			i++;
 		}
 		int i_20_;
 		if (l > 0L) {
 			i_20_ = is[i] << i_14_ & 0xff;
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] |= i_20_ >>> i_15_;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] |= i_20_ >>> i_15_;
 		} else
 			i_20_ = 0;
 		if ((long) i_15_ + l < 8L)
-			((Class443) this).anInt5369 += l * -391087605L;
+			((Whirlpool) this).anInt5369 += l * -391087605L;
 		else {
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_15_);
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_15_);
 			l -= (long) (8 - i_15_);
-			if (1189134755 * ((Class443) this).anInt5369 == 512) {
+			if (1189134755 * ((Whirlpool) this).anInt5369 == 512) {
 				method7410((byte) -85);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_20_ << 8 - i_15_ & 0xff);
-			((Class443) this).anInt5369 += -391087605 * (int) l;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_20_ << 8 - i_15_ & 0xff);
+			((Whirlpool) this).anInt5369 += -391087605 * (int) l;
 		}
 	}
 
 	void method7408(byte[] is, int i, int i_21_) {
-		((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Class443) this).anInt5369 & 0x7);
-		((Class443) this).anInt5370 += 1101767573;
-		if (-1706520643 * ((Class443) this).anInt5370 > 32) {
-			while (((Class443) this).anInt5370 * -1706520643 < 64)
-				((Class443) this).aByteArray5368[((((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
+		((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Whirlpool) this).anInt5369 & 0x7);
+		((Whirlpool) this).anInt5370 += 1101767573;
+		if (-1706520643 * ((Whirlpool) this).anInt5370 > 32) {
+			while (((Whirlpool) this).anInt5370 * -1706520643 < 64)
+				((Whirlpool) this).aByteArray5368[((((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
 			method7410((byte) -28);
-			((Class443) this).anInt5370 = 0;
+			((Whirlpool) this).anInt5370 = 0;
 		}
-		while (((Class443) this).anInt5370 * -1706520643 < 32)
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
-		System.arraycopy(((Class443) this).aByteArray5375, 0, ((Class443) this).aByteArray5368, 32, 32);
+		while (((Whirlpool) this).anInt5370 * -1706520643 < 32)
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
+		System.arraycopy(((Whirlpool) this).aByteArray5375, 0, ((Whirlpool) this).aByteArray5368, 32, 32);
 		method7410((byte) -57);
 		int i_22_ = 0;
 		int i_23_ = i;
 		while (i_22_ < 8) {
-			long l = ((Class443) this).aLongArray5361[i_22_];
+			long l = ((Whirlpool) this).aLongArray5361[i_22_];
 			is[i_23_] = (byte) (int) (l >>> 56);
 			is[1 + i_23_] = (byte) (int) (l >>> 48);
 			is[i_23_ + 2] = (byte) (int) (l >>> 40);
@@ -209,13 +209,13 @@ public class Class443 {
 	void method7409(byte[] is, long l) {
 		int i = 0;
 		int i_24_ = 8 - ((int) l & 0x7) & 0x7;
-		int i_25_ = 1189134755 * ((Class443) this).anInt5369 & 0x7;
+		int i_25_ = 1189134755 * ((Whirlpool) this).anInt5369 & 0x7;
 		long l_26_ = l;
 		int i_27_ = 31;
 		int i_28_ = 0;
 		for (/**/; i_27_ >= 0; i_27_--) {
-			i_28_ += ((((Class443) this).aByteArray5375[i_27_] & 0xff) + ((int) l_26_ & 0xff));
-			((Class443) this).aByteArray5375[i_27_] = (byte) i_28_;
+			i_28_ += ((((Whirlpool) this).aByteArray5375[i_27_] & 0xff) + ((int) l_26_ & 0xff));
+			((Whirlpool) this).aByteArray5375[i_27_] = (byte) i_28_;
 			i_28_ >>>= 8;
 			l_26_ >>>= 8;
 		}
@@ -223,38 +223,38 @@ public class Class443 {
 			int i_29_ = is[i] << i_24_ & 0xff | (is[i + 1] & 0xff) >>> 8 - i_24_;
 			if (i_29_ < 0 || i_29_ >= 256)
 				throw new RuntimeException();
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= i_29_ >>> i_25_;
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_25_);
-			if (512 == ((Class443) this).anInt5369 * 1189134755) {
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= i_29_ >>> i_25_;
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_25_);
+			if (512 == ((Whirlpool) this).anInt5369 * 1189134755) {
 				method7410((byte) -97);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_29_ << 8 - i_25_ & 0xff);
-			((Class443) this).anInt5369 += i_25_ * -391087605;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_29_ << 8 - i_25_ & 0xff);
+			((Whirlpool) this).anInt5369 += i_25_ * -391087605;
 			l -= 8L;
 			i++;
 		}
 		int i_30_;
 		if (l > 0L) {
 			i_30_ = is[i] << i_24_ & 0xff;
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] |= i_30_ >>> i_25_;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] |= i_30_ >>> i_25_;
 		} else
 			i_30_ = 0;
 		if ((long) i_25_ + l < 8L)
-			((Class443) this).anInt5369 += l * -391087605L;
+			((Whirlpool) this).anInt5369 += l * -391087605L;
 		else {
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_25_);
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_25_);
 			l -= (long) (8 - i_25_);
-			if (1189134755 * ((Class443) this).anInt5369 == 512) {
+			if (1189134755 * ((Whirlpool) this).anInt5369 == 512) {
 				method7410((byte) -79);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_30_ << 8 - i_25_ & 0xff);
-			((Class443) this).anInt5369 += -391087605 * (int) l;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_30_ << 8 - i_25_ & 0xff);
+			((Whirlpool) this).anInt5369 += -391087605 * (int) l;
 		}
 	}
 
@@ -262,53 +262,53 @@ public class Class443 {
 		int i_31_ = 0;
 		int i_32_ = 0;
 		while (i_31_ < 8) {
-			((Class443) this).aLongArray5365[i_31_] = ((long) ((Class443) this).aByteArray5368[i_32_] << 56 ^ ((long) ((Class443) this).aByteArray5368[i_32_ + 1] & 0xffL) << 48 ^ ((long) ((Class443) this).aByteArray5368[2 + i_32_] & 0xffL) << 40 ^ ((long) ((Class443) this).aByteArray5368[3 + i_32_] & 0xffL) << 32 ^ ((long) ((Class443) this).aByteArray5368[4 + i_32_] & 0xffL) << 24 ^ ((long) ((Class443) this).aByteArray5368[5 + i_32_] & 0xffL) << 16
-					^ ((long) ((Class443) this).aByteArray5368[i_32_ + 6] & 0xffL) << 8 ^ ((long) ((Class443) this).aByteArray5368[i_32_ + 7] & 0xffL));
+			((Whirlpool) this).aLongArray5365[i_31_] = ((long) ((Whirlpool) this).aByteArray5368[i_32_] << 56 ^ ((long) ((Whirlpool) this).aByteArray5368[i_32_ + 1] & 0xffL) << 48 ^ ((long) ((Whirlpool) this).aByteArray5368[2 + i_32_] & 0xffL) << 40 ^ ((long) ((Whirlpool) this).aByteArray5368[3 + i_32_] & 0xffL) << 32 ^ ((long) ((Whirlpool) this).aByteArray5368[4 + i_32_] & 0xffL) << 24 ^ ((long) ((Whirlpool) this).aByteArray5368[5 + i_32_] & 0xffL) << 16
+					^ ((long) ((Whirlpool) this).aByteArray5368[i_32_ + 6] & 0xffL) << 8 ^ ((long) ((Whirlpool) this).aByteArray5368[i_32_ + 7] & 0xffL));
 			i_31_++;
 			i_32_ += 8;
 		}
 		for (i_31_ = 0; i_31_ < 8; i_31_++)
-			((Class443) this).aLongArray5373[i_31_] = (((Class443) this).aLongArray5365[i_31_] ^ (((Class443) this).aLongArray5372[i_31_] = ((Class443) this).aLongArray5361[i_31_]));
+			((Whirlpool) this).aLongArray5373[i_31_] = (((Whirlpool) this).aLongArray5365[i_31_] ^ (((Whirlpool) this).aLongArray5372[i_31_] = ((Whirlpool) this).aLongArray5361[i_31_]));
 		for (i_31_ = 1; i_31_ <= 10; i_31_++) {
 			for (i_32_ = 0; i_32_ < 8; i_32_++) {
-				((Class443) this).aLongArray5374[i_32_] = 0L;
+				((Whirlpool) this).aLongArray5374[i_32_] = 0L;
 				int i_33_ = 0;
 				int i_34_ = 56;
 				while (i_33_ < 8) {
-					((Class443) this).aLongArray5374[i_32_] ^= (aLongArrayArray5367[i_33_][(int) ((((Class443) this).aLongArray5372[i_32_ - i_33_ & 0x7]) >>> i_34_) & 0xff]);
+					((Whirlpool) this).aLongArray5374[i_32_] ^= (aLongArrayArray5367[i_33_][(int) ((((Whirlpool) this).aLongArray5372[i_32_ - i_33_ & 0x7]) >>> i_34_) & 0xff]);
 					i_33_++;
 					i_34_ -= 8;
 				}
 			}
 			for (i_32_ = 0; i_32_ < 8; i_32_++)
-				((Class443) this).aLongArray5372[i_32_] = ((Class443) this).aLongArray5374[i_32_];
-			((Class443) this).aLongArray5372[0] ^= aLongArray5366[i_31_];
+				((Whirlpool) this).aLongArray5372[i_32_] = ((Whirlpool) this).aLongArray5374[i_32_];
+			((Whirlpool) this).aLongArray5372[0] ^= aLongArray5366[i_31_];
 			for (i_32_ = 0; i_32_ < 8; i_32_++) {
-				((Class443) this).aLongArray5374[i_32_] = ((Class443) this).aLongArray5372[i_32_];
+				((Whirlpool) this).aLongArray5374[i_32_] = ((Whirlpool) this).aLongArray5372[i_32_];
 				int i_35_ = 0;
 				int i_36_ = 56;
 				while (i_35_ < 8) {
-					((Class443) this).aLongArray5374[i_32_] ^= (aLongArrayArray5367[i_35_][(int) ((((Class443) this).aLongArray5373[i_32_ - i_35_ & 0x7]) >>> i_36_) & 0xff]);
+					((Whirlpool) this).aLongArray5374[i_32_] ^= (aLongArrayArray5367[i_35_][(int) ((((Whirlpool) this).aLongArray5373[i_32_ - i_35_ & 0x7]) >>> i_36_) & 0xff]);
 					i_35_++;
 					i_36_ -= 8;
 				}
 			}
 			for (i_32_ = 0; i_32_ < 8; i_32_++)
-				((Class443) this).aLongArray5373[i_32_] = ((Class443) this).aLongArray5374[i_32_];
+				((Whirlpool) this).aLongArray5373[i_32_] = ((Whirlpool) this).aLongArray5374[i_32_];
 		}
 		for (i_31_ = 0; i_31_ < 8; i_31_++)
-			((Class443) this).aLongArray5361[i_31_] ^= (((Class443) this).aLongArray5373[i_31_] ^ ((Class443) this).aLongArray5365[i_31_]);
+			((Whirlpool) this).aLongArray5361[i_31_] ^= (((Whirlpool) this).aLongArray5373[i_31_] ^ ((Whirlpool) this).aLongArray5365[i_31_]);
 	}
 
-	Class443() {
-		((Class443) this).aByteArray5368 = new byte[64];
-		((Class443) this).anInt5369 = 0;
-		((Class443) this).anInt5370 = 0;
-		((Class443) this).aLongArray5361 = new long[8];
-		((Class443) this).aLongArray5372 = new long[8];
-		((Class443) this).aLongArray5374 = new long[8];
-		((Class443) this).aLongArray5365 = new long[8];
-		((Class443) this).aLongArray5373 = new long[8];
+	Whirlpool() {
+		((Whirlpool) this).aByteArray5368 = new byte[64];
+		((Whirlpool) this).anInt5369 = 0;
+		((Whirlpool) this).anInt5370 = 0;
+		((Whirlpool) this).aLongArray5361 = new long[8];
+		((Whirlpool) this).aLongArray5372 = new long[8];
+		((Whirlpool) this).aLongArray5374 = new long[8];
+		((Whirlpool) this).aLongArray5365 = new long[8];
+		((Whirlpool) this).aLongArray5373 = new long[8];
 	}
 
 	public static byte[] method7411(byte[] is, int i, int i_37_) {
@@ -319,7 +319,7 @@ public class Class443 {
 				is_38_[i_39_] = is[i_39_ + i];
 		} else
 			is_38_ = is;
-		Class443 class443 = new Class443();
+		Whirlpool class443 = new Whirlpool();
 		class443.method7406(1964217241);
 		class443.method7407(is_38_, (long) (i_37_ * 8));
 		byte[] is_40_ = new byte[64];
@@ -330,13 +330,13 @@ public class Class443 {
 	void method7412(byte[] is, long l) {
 		int i = 0;
 		int i_41_ = 8 - ((int) l & 0x7) & 0x7;
-		int i_42_ = 1189134755 * ((Class443) this).anInt5369 & 0x7;
+		int i_42_ = 1189134755 * ((Whirlpool) this).anInt5369 & 0x7;
 		long l_43_ = l;
 		int i_44_ = 31;
 		int i_45_ = 0;
 		for (/**/; i_44_ >= 0; i_44_--) {
-			i_45_ += ((((Class443) this).aByteArray5375[i_44_] & 0xff) + ((int) l_43_ & 0xff));
-			((Class443) this).aByteArray5375[i_44_] = (byte) i_45_;
+			i_45_ += ((((Whirlpool) this).aByteArray5375[i_44_] & 0xff) + ((int) l_43_ & 0xff));
+			((Whirlpool) this).aByteArray5375[i_44_] = (byte) i_45_;
 			i_45_ >>>= 8;
 			l_43_ >>>= 8;
 		}
@@ -344,51 +344,51 @@ public class Class443 {
 			int i_46_ = is[i] << i_41_ & 0xff | (is[i + 1] & 0xff) >>> 8 - i_41_;
 			if (i_46_ < 0 || i_46_ >= 256)
 				throw new RuntimeException();
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= i_46_ >>> i_42_;
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_42_);
-			if (512 == ((Class443) this).anInt5369 * 1189134755) {
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= i_46_ >>> i_42_;
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_42_);
+			if (512 == ((Whirlpool) this).anInt5369 * 1189134755) {
 				method7410((byte) -20);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_46_ << 8 - i_42_ & 0xff);
-			((Class443) this).anInt5369 += i_42_ * -391087605;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_46_ << 8 - i_42_ & 0xff);
+			((Whirlpool) this).anInt5369 += i_42_ * -391087605;
 			l -= 8L;
 			i++;
 		}
 		int i_47_;
 		if (l > 0L) {
 			i_47_ = is[i] << i_41_ & 0xff;
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] |= i_47_ >>> i_42_;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] |= i_47_ >>> i_42_;
 		} else
 			i_47_ = 0;
 		if ((long) i_42_ + l < 8L)
-			((Class443) this).anInt5369 += l * -391087605L;
+			((Whirlpool) this).anInt5369 += l * -391087605L;
 		else {
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_42_);
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_42_);
 			l -= (long) (8 - i_42_);
-			if (1189134755 * ((Class443) this).anInt5369 == 512) {
+			if (1189134755 * ((Whirlpool) this).anInt5369 == 512) {
 				method7410((byte) -85);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_47_ << 8 - i_42_ & 0xff);
-			((Class443) this).anInt5369 += -391087605 * (int) l;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_47_ << 8 - i_42_ & 0xff);
+			((Whirlpool) this).anInt5369 += -391087605 * (int) l;
 		}
 	}
 
 	void method7413(byte[] is, long l) {
 		int i = 0;
 		int i_48_ = 8 - ((int) l & 0x7) & 0x7;
-		int i_49_ = 1189134755 * ((Class443) this).anInt5369 & 0x7;
+		int i_49_ = 1189134755 * ((Whirlpool) this).anInt5369 & 0x7;
 		long l_50_ = l;
 		int i_51_ = 31;
 		int i_52_ = 0;
 		for (/**/; i_51_ >= 0; i_51_--) {
-			i_52_ += ((((Class443) this).aByteArray5375[i_51_] & 0xff) + ((int) l_50_ & 0xff));
-			((Class443) this).aByteArray5375[i_51_] = (byte) i_52_;
+			i_52_ += ((((Whirlpool) this).aByteArray5375[i_51_] & 0xff) + ((int) l_50_ & 0xff));
+			((Whirlpool) this).aByteArray5375[i_51_] = (byte) i_52_;
 			i_52_ >>>= 8;
 			l_50_ >>>= 8;
 		}
@@ -396,58 +396,58 @@ public class Class443 {
 			int i_53_ = is[i] << i_48_ & 0xff | (is[i + 1] & 0xff) >>> 8 - i_48_;
 			if (i_53_ < 0 || i_53_ >= 256)
 				throw new RuntimeException();
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= i_53_ >>> i_49_;
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_49_);
-			if (512 == ((Class443) this).anInt5369 * 1189134755) {
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= i_53_ >>> i_49_;
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_49_);
+			if (512 == ((Whirlpool) this).anInt5369 * 1189134755) {
 				method7410((byte) -65);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_53_ << 8 - i_49_ & 0xff);
-			((Class443) this).anInt5369 += i_49_ * -391087605;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_53_ << 8 - i_49_ & 0xff);
+			((Whirlpool) this).anInt5369 += i_49_ * -391087605;
 			l -= 8L;
 			i++;
 		}
 		int i_54_;
 		if (l > 0L) {
 			i_54_ = is[i] << i_48_ & 0xff;
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] |= i_54_ >>> i_49_;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] |= i_54_ >>> i_49_;
 		} else
 			i_54_ = 0;
 		if ((long) i_49_ + l < 8L)
-			((Class443) this).anInt5369 += l * -391087605L;
+			((Whirlpool) this).anInt5369 += l * -391087605L;
 		else {
-			((Class443) this).anInt5370 += 1101767573;
-			((Class443) this).anInt5369 += -391087605 * (8 - i_49_);
+			((Whirlpool) this).anInt5370 += 1101767573;
+			((Whirlpool) this).anInt5369 += -391087605 * (8 - i_49_);
 			l -= (long) (8 - i_49_);
-			if (1189134755 * ((Class443) this).anInt5369 == 512) {
+			if (1189134755 * ((Whirlpool) this).anInt5369 == 512) {
 				method7410((byte) -28);
-				((Class443) this).anInt5370 = 0;
-				((Class443) this).anInt5369 = 0;
+				((Whirlpool) this).anInt5370 = 0;
+				((Whirlpool) this).anInt5369 = 0;
 			}
-			((Class443) this).aByteArray5368[(-1706520643 * ((Class443) this).anInt5370)] = (byte) (i_54_ << 8 - i_49_ & 0xff);
-			((Class443) this).anInt5369 += -391087605 * (int) l;
+			((Whirlpool) this).aByteArray5368[(-1706520643 * ((Whirlpool) this).anInt5370)] = (byte) (i_54_ << 8 - i_49_ & 0xff);
+			((Whirlpool) this).anInt5369 += -391087605 * (int) l;
 		}
 	}
 
 	void method7414(byte[] is, int i) {
-		((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Class443) this).anInt5369 & 0x7);
-		((Class443) this).anInt5370 += 1101767573;
-		if (-1706520643 * ((Class443) this).anInt5370 > 32) {
-			while (((Class443) this).anInt5370 * -1706520643 < 64)
-				((Class443) this).aByteArray5368[((((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
+		((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Whirlpool) this).anInt5369 & 0x7);
+		((Whirlpool) this).anInt5370 += 1101767573;
+		if (-1706520643 * ((Whirlpool) this).anInt5370 > 32) {
+			while (((Whirlpool) this).anInt5370 * -1706520643 < 64)
+				((Whirlpool) this).aByteArray5368[((((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
 			method7410((byte) -9);
-			((Class443) this).anInt5370 = 0;
+			((Whirlpool) this).anInt5370 = 0;
 		}
-		while (((Class443) this).anInt5370 * -1706520643 < 32)
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
-		System.arraycopy(((Class443) this).aByteArray5375, 0, ((Class443) this).aByteArray5368, 32, 32);
+		while (((Whirlpool) this).anInt5370 * -1706520643 < 32)
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
+		System.arraycopy(((Whirlpool) this).aByteArray5375, 0, ((Whirlpool) this).aByteArray5368, 32, 32);
 		method7410((byte) -113);
 		int i_55_ = 0;
 		int i_56_ = i;
 		while (i_55_ < 8) {
-			long l = ((Class443) this).aLongArray5361[i_55_];
+			long l = ((Whirlpool) this).aLongArray5361[i_55_];
 			is[i_56_] = (byte) (int) (l >>> 56);
 			is[1 + i_56_] = (byte) (int) (l >>> 48);
 			is[i_56_ + 2] = (byte) (int) (l >>> 40);
@@ -462,22 +462,22 @@ public class Class443 {
 	}
 
 	void method7415(byte[] is, int i) {
-		((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Class443) this).anInt5369 & 0x7);
-		((Class443) this).anInt5370 += 1101767573;
-		if (-1706520643 * ((Class443) this).anInt5370 > 32) {
-			while (((Class443) this).anInt5370 * -1706520643 < 64)
-				((Class443) this).aByteArray5368[((((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
+		((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Whirlpool) this).anInt5369 & 0x7);
+		((Whirlpool) this).anInt5370 += 1101767573;
+		if (-1706520643 * ((Whirlpool) this).anInt5370 > 32) {
+			while (((Whirlpool) this).anInt5370 * -1706520643 < 64)
+				((Whirlpool) this).aByteArray5368[((((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
 			method7410((byte) -80);
-			((Class443) this).anInt5370 = 0;
+			((Whirlpool) this).anInt5370 = 0;
 		}
-		while (((Class443) this).anInt5370 * -1706520643 < 32)
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
-		System.arraycopy(((Class443) this).aByteArray5375, 0, ((Class443) this).aByteArray5368, 32, 32);
+		while (((Whirlpool) this).anInt5370 * -1706520643 < 32)
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
+		System.arraycopy(((Whirlpool) this).aByteArray5375, 0, ((Whirlpool) this).aByteArray5368, 32, 32);
 		method7410((byte) -122);
 		int i_57_ = 0;
 		int i_58_ = i;
 		while (i_57_ < 8) {
-			long l = ((Class443) this).aLongArray5361[i_57_];
+			long l = ((Whirlpool) this).aLongArray5361[i_57_];
 			is[i_58_] = (byte) (int) (l >>> 56);
 			is[1 + i_58_] = (byte) (int) (l >>> 48);
 			is[i_58_ + 2] = (byte) (int) (l >>> 40);
@@ -492,22 +492,22 @@ public class Class443 {
 	}
 
 	void method7416(byte[] is, int i) {
-		((Class443) this).aByteArray5368[(((Class443) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Class443) this).anInt5369 & 0x7);
-		((Class443) this).anInt5370 += 1101767573;
-		if (-1706520643 * ((Class443) this).anInt5370 > 32) {
-			while (((Class443) this).anInt5370 * -1706520643 < 64)
-				((Class443) this).aByteArray5368[((((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
+		((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 * -1706520643)] |= 128 >>> (1189134755 * ((Whirlpool) this).anInt5369 & 0x7);
+		((Whirlpool) this).anInt5370 += 1101767573;
+		if (-1706520643 * ((Whirlpool) this).anInt5370 > 32) {
+			while (((Whirlpool) this).anInt5370 * -1706520643 < 64)
+				((Whirlpool) this).aByteArray5368[((((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1)] = (byte) 0;
 			method7410((byte) -123);
-			((Class443) this).anInt5370 = 0;
+			((Whirlpool) this).anInt5370 = 0;
 		}
-		while (((Class443) this).anInt5370 * -1706520643 < 32)
-			((Class443) this).aByteArray5368[(((Class443) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
-		System.arraycopy(((Class443) this).aByteArray5375, 0, ((Class443) this).aByteArray5368, 32, 32);
+		while (((Whirlpool) this).anInt5370 * -1706520643 < 32)
+			((Whirlpool) this).aByteArray5368[(((Whirlpool) this).anInt5370 += 1101767573) * -1706520643 - 1] = (byte) 0;
+		System.arraycopy(((Whirlpool) this).aByteArray5375, 0, ((Whirlpool) this).aByteArray5368, 32, 32);
 		method7410((byte) -99);
 		int i_59_ = 0;
 		int i_60_ = i;
 		while (i_59_ < 8) {
-			long l = ((Class443) this).aLongArray5361[i_59_];
+			long l = ((Whirlpool) this).aLongArray5361[i_59_];
 			is[i_60_] = (byte) (int) (l >>> 56);
 			is[1 + i_60_] = (byte) (int) (l >>> 48);
 			is[i_60_ + 2] = (byte) (int) (l >>> 40);
@@ -529,7 +529,7 @@ public class Class443 {
 				is_62_[i_63_] = is[i_63_ + i];
 		} else
 			is_62_ = is;
-		Class443 class443 = new Class443();
+		Whirlpool class443 = new Whirlpool();
 		class443.method7406(2081769325);
 		class443.method7407(is_62_, (long) (i_61_ * 8));
 		byte[] is_64_ = new byte[64];
@@ -545,7 +545,7 @@ public class Class443 {
 				is_66_[i_67_] = is[i_67_ + i];
 		} else
 			is_66_ = is;
-		Class443 class443 = new Class443();
+		Whirlpool class443 = new Whirlpool();
 		class443.method7406(2098335641);
 		class443.method7407(is_66_, (long) (i_65_ * 8));
 		byte[] is_68_ = new byte[64];
@@ -561,7 +561,7 @@ public class Class443 {
 				is_70_[i_71_] = is[i_71_ + i];
 		} else
 			is_70_ = is;
-		Class443 class443 = new Class443();
+		Whirlpool class443 = new Whirlpool();
 		class443.method7406(1974742323);
 		class443.method7407(is_70_, (long) (i_69_ * 8));
 		byte[] is_72_ = new byte[64];
@@ -641,7 +641,7 @@ public class Class443 {
 				i_85_ = (int) ((runtime.totalMemory() - runtime.freeMemory()) / 1024L);
 				Class209.method3598(new StringBuilder().append("").append(i_85_).toString(), -1441723190);
 			} else if (i == 19)
-				Class209.method3598((Class47_Sub1.aClass262_9143.method219(-1916862873) ? "Success" : "Failure"), -1724537176);
+				Class209.method3598((IndexLoaders.NATIVE_LIBRARY_LOADER.method219(-1916862873) ? "Success" : "Failure"), -1724537176);
 			else if (20 == i)
 				Class159.aClass450_2010.method7493(-799490388);
 			else if (i == 22)
@@ -659,14 +659,14 @@ public class Class443 {
 				IndexLoaders.MAP_REGION_DECODER.aBool3206 = true;
 				Class468.method7789(620089057);
 			} else if (i == 26) {
-				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class209.method3598(new StringBuilder().append((int) class385.aFloat4671 >> 9).append(" ").append((int) class385.aFloat4673 >> 9).toString(), -1980423440);
+				Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+				Class209.method3598(new StringBuilder().append((int) class385.x >> 9).append(" ").append((int) class385.z >> 9).toString(), -1980423440);
 			} else if (2 == i) {
-				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, 65280)).toString(), -1193762995);
+				Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.x >> 9, (int) class385.z >> 9, 65280)).toString(), -1193762995);
 			} else if (23 == i) {
-				Class209.method3598(new StringBuilder().append(Class118.aClass229_1280.method3861((byte) 1)).append(" ").append(Class118.aClass229_1280.method3860((byte) 53)).toString(), -622119201);
-				Class209.method3598(new StringBuilder().append(Class118.aClass229_1341.method3861((byte) 1)).append(" ").append(Class118.aClass229_1341.method3860((byte) 119)).toString(), -632491603);
+				Class209.method3598(new StringBuilder().append(IComponentDefinitions.aClass229_1280.method3861((byte) 1)).append(" ").append(IComponentDefinitions.aClass229_1280.method3860((byte) 53)).toString(), -622119201);
+				Class209.method3598(new StringBuilder().append(IComponentDefinitions.aClass229_1341.method3861((byte) 1)).append(" ").append(IComponentDefinitions.aClass229_1341.method3860((byte) 119)).toString(), -632491603);
 				Class209.method3598(new StringBuilder().append(IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3640()).append(" ").append(IndexLoaders.ITEM_INDEX_LOADER.aClass212_5114.method3632()).toString(), -1389047879);
 			} else if (i == 16)
 				Class356.method6227(false, (byte) 37);
@@ -691,7 +691,7 @@ public class Class443 {
 
 	static final void method7422(CS2Executor class527, int i) {
 		int i_87_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_87_, (byte) 68);
+		IComponentDefinitions class118 = Class117.method1981(i_87_, (byte) 68);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 276864765 * class118.anInt1311;
 	}
 }

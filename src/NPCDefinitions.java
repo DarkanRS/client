@@ -246,7 +246,7 @@ public class NPCDefinitions {
 		}
 		if (!bool_14_ && !bool_34_)
 			return class528_33_;
-		Class294[] class294s = null;
+		Matrix44Var[] class294s = null;
 		if (class227 != null)
 			class294s = class227.method3811((byte) 81);
 		if (bool_34_ && null != class294s) {
@@ -268,7 +268,7 @@ public class NPCDefinitions {
 				if (is[i_37_] != -1) {
 					i_38_ = is[i_37_] - i_9_;
 					i_38_ &= 0x3fff;
-					Class294 class294 = new Class294();
+					Matrix44Var class294 = new Matrix44Var();
 					class294.method5217(0.0F, 1.0F, 0.0F, Class382.method6508(i_38_));
 					class528_33_.method11298(class294, 1 << i_37_, false);
 				}
@@ -504,11 +504,11 @@ public class NPCDefinitions {
 			for (int i_181_ = 0; i_181_ < i_180_; i_181_++)
 				anIntArray4859[i_181_] = class282_sub35.readBigSmart();
 		} else if (i == 2)
-			aString4857 = class282_sub35.readString(763566128);
+			aString4857 = class282_sub35.readString();
 		else if (i == 12)
 			anInt4858 = class282_sub35.readUnsignedByte() * -1156523463;
 		else if (i >= 30 && i < 35)
-			aStringArray4882[i - 30] = class282_sub35.readString(1950048097);
+			aStringArray4882[i - 30] = class282_sub35.readString();
 		else if (40 == i) {
 			int i_182_ = class282_sub35.readUnsignedByte();
 			((NPCDefinitions) this).aShortArray4863 = new short[i_182_];
@@ -639,7 +639,7 @@ public class NPCDefinitions {
 		else if (143 == i)
 			aBool4890 = true;
 		else if (i >= 150 && i < 155) {
-			aStringArray4882[i - 150] = class282_sub35.readString(-571156301);
+			aStringArray4882[i - 150] = class282_sub35.readString();
 			if (!((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aBool4838)
 				aStringArray4882[i - 150] = null;
 		} else if (155 == i) {
@@ -677,10 +677,10 @@ public class NPCDefinitions {
 			}
 			for (int i_200_ = 0; i_200_ < i_198_; i_200_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_201_ = class282_sub35.read24BitUnsignedInteger((short) 13614);
+				int i_201_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(1838133803));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((NPCDefinitions) this).aClass465_4896.method7765(class282, (long) i_201_);

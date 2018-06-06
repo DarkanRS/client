@@ -114,7 +114,7 @@ public class Class8_Sub5 extends FontRenderer {
 			((Class8_Sub5) this).aClass505_Sub1_9323.method13595(0, 5890, 768);
 	}
 
-	Class8_Sub5(Class505_Sub1 class505_sub1, Class414 class414, Class91[] class91s, boolean bool) {
+	Class8_Sub5(Class505_Sub1 class505_sub1, FontMetrics class414, Class91[] class91s, boolean bool) {
 		super(class505_sub1, class414);
 		((Class8_Sub5) this).aClass505_Sub1_9323 = class505_sub1;
 		int i = 0;

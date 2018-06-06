@@ -11,7 +11,7 @@ public class Class96_Sub7 extends Class96 {
 	Class96_Sub7(RsByteBuffer class282_sub35) {
 		super(class282_sub35);
 		((Class96_Sub7) this).anInt9177 = class282_sub35.readUnsignedShort() * -711272535;
-		((Class96_Sub7) this).aString9175 = class282_sub35.readString(449405390);
+		((Class96_Sub7) this).aString9175 = class282_sub35.readString();
 		((Class96_Sub7) this).anInt9176 = class282_sub35.readInt() * -637588821;
 		((Class96_Sub7) this).anInt9174 = class282_sub35.readUnsignedShort() * -1631359867;
 	}

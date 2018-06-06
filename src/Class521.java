@@ -8,7 +8,7 @@ public class Class521 {
 	boolean aBool5938 = true;
 	Class305 aClass305_5939 = new Class305();
 	Class521 aClass521_5940;
-	Class294 aClass294_5941;
+	Matrix44Var aClass294_5941;
 	boolean aBool5942;
 	Class521 aClass521_5943;
 	Class521 aClass521_5944;
@@ -71,7 +71,7 @@ public class Class521 {
 		return ((Class521) this).aClass305_5937;
 	}
 
-	final Class294 method11168() {
+	final Matrix44Var method11168() {
 		if (((Class521) this).aBool5942) {
 			((Class521) this).aBool5942 = false;
 			((Class521) this).aClass294_5941.method5279(method11166());
@@ -89,21 +89,21 @@ public class Class521 {
 	}
 
 	public final void method11170(float f, float f_3_, float f_4_) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6626(f, f_3_, f_4_);
+		((Class521) this).aClass305_5936.aClass385_3595.set(f, f_3_, f_4_);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
 	}
 
-	public final void method11171(Class385 class385) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+	public final void method11171(Vector3 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.copy(class385);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
 	}
 
 	public final void method11172(float f, float f_5_, float f_6_) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6626(f, f_5_, f_6_);
+		((Class521) this).aClass305_5936.aClass385_3595.set(f, f_5_, f_6_);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
@@ -174,8 +174,8 @@ public class Class521 {
 		return ((Class521) this).aClass305_5936;
 	}
 
-	public final void method11179(Class385 class385) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+	public final void method11179(Vector3 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.copy(class385);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
@@ -271,8 +271,8 @@ public class Class521 {
 		((Class521) this).aClass521_5944 = null;
 	}
 
-	public final void method11187(Class381 class381) {
-		((Class521) this).aClass305_5936.aClass381_3594.method6490(class381);
+	public final void method11187(Quaternion class381) {
+		((Class521) this).aClass305_5936.aClass381_3594.copy(class381);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
@@ -286,25 +286,25 @@ public class Class521 {
 			((Class521) this).aClass521_5940.method11188();
 	}
 
-	public final void method11189(Class385 class385) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+	public final void method11189(Vector3 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.copy(class385);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
 	}
 
 	Class521() {
-		new Class384();
-		new Class384();
-		((Class521) this).aClass294_5941 = new Class294();
+		new Matrix44Arr();
+		new Matrix44Arr();
+		((Class521) this).aClass294_5941 = new Matrix44Var();
 		((Class521) this).aBool5942 = true;
 		((Class521) this).aClass521_5943 = null;
 		((Class521) this).aClass521_5944 = null;
 		((Class521) this).aClass521_5940 = null;
 	}
 
-	public final void method11190(Class385 class385) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+	public final void method11190(Vector3 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.copy(class385);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
@@ -319,8 +319,8 @@ public class Class521 {
 			method11175(class305);
 	}
 
-	public final void method11192(Class385 class385) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+	public final void method11192(Vector3 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.copy(class385);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
@@ -335,8 +335,8 @@ public class Class521 {
 			method11175(class305);
 	}
 
-	public final void method11194(Class385 class385) {
-		((Class521) this).aClass305_5936.aClass385_3595.method6627(class385);
+	public final void method11194(Vector3 class385) {
+		((Class521) this).aClass305_5936.aClass385_3595.copy(class385);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();
@@ -362,8 +362,8 @@ public class Class521 {
 			((Class521) this).aClass521_5940.method11188();
 	}
 
-	public final void method11198(Class381 class381) {
-		((Class521) this).aClass305_5936.aClass381_3594.method6490(class381);
+	public final void method11198(Quaternion class381) {
+		((Class521) this).aClass305_5936.aClass381_3594.copy(class381);
 		method11174();
 		if (((Class521) this).aClass521_5944 != null)
 			((Class521) this).aClass521_5944.method11188();

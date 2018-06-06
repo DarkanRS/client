@@ -74,7 +74,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			Renderers.SOFTWARE_RENDERER = Class320.method5732(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1783373613) * 2, -1283280673);
 			if (string != null) {
 				Renderers.SOFTWARE_RENDERER.ba(1, 0);
-				Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136 * 436671641, 0, 1150997063);
+				FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136 * 436671641, 0, 1150997063);
 				FontRenderer class8 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1514(IndexLoaders.SPRITES_INDEX, Class16.anInt136 * 436671641, 0), true));
 				Class275.method4891((byte) -128);
 				Class446.method7447(string, true, Renderers.SOFTWARE_RENDERER, class8, class414, (byte) -87);
@@ -84,7 +84,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 			if (string != null) {
 				renderer = Class320.method5732(0, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, 0, -603391790);
 				renderer.ba(1, 0);
-				Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136 * 436671641, 0, 1961117540);
+				FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, Class16.anInt136 * 436671641, 0, 1961117540);
 				FontRenderer class8 = (renderer.method8448(class414, Class91.method1514(IndexLoaders.SPRITES_INDEX, 436671641 * Class16.anInt136, 0), true));
 				Class275.method4891((byte) -74);
 				Class446.method7447(string, true, renderer, class8, class414, (byte) -82);
@@ -94,7 +94,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 					Renderers.SOFTWARE_RENDERER = Class320.method5732(i, Class351.gameCanvas, IndexLoaders.IMAGE_LOADER, IndexLoaders.SHADER_INDEX, Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(169664234) * 2, -694595538);
 					if (string != null) {
 						renderer.ba(1, 0);
-						Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, 436671641 * Class16.anInt136, 0, 1716473063);
+						FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, 436671641 * Class16.anInt136, 0, 1716473063);
 						FontRenderer class8 = (renderer.method8448(class414, Class91.method1514(IndexLoaders.SPRITES_INDEX, (436671641 * Class16.anInt136), 0), true));
 						Class275.method4891((byte) -30);
 						Class446.method7447(string, true, renderer, class8, class414, (byte) -16);

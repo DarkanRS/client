@@ -244,7 +244,7 @@ public final class Class453 {
 		return i;
 	}
 
-	static final void method7547(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method7547(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aString1348 = (String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]);
 	}
 }

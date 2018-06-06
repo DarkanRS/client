@@ -42,11 +42,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Class294 class294 = class505.method8450();
-			Class294 class294_6_ = method11168();
+			Matrix44Var class294 = class505.method8450();
+			Matrix44Var class294_6_ = method11168();
 			Class305 class305 = method11166();
 			class294.method5209(class294_6_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
@@ -108,11 +108,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Class294 class294 = class505.method8450();
-			Class294 class294_7_ = method11168();
+			Matrix44Var class294 = class505.method8450();
+			Matrix44Var class294_7_ = method11168();
 			Class305 class305 = method11166();
 			class294.method5209(class294_7_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
@@ -128,11 +128,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Class294 class294 = class505.method8450();
-			Class294 class294_8_ = method11168();
+			Matrix44Var class294 = class505.method8450();
+			Matrix44Var class294_8_ = method11168();
 			Class305 class305 = method11166();
 			class294.method5209(class294_8_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
@@ -160,11 +160,11 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
 		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Class294 class294 = class505.method8450();
-			Class294 class294_11_ = method11168();
+			Matrix44Var class294 = class505.method8450();
+			Matrix44Var class294_11_ = method11168();
 			Class305 class305 = method11166();
 			class294.method5209(class294_11_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
 			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);

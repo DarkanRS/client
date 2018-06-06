@@ -73,7 +73,7 @@ public class CS2Script extends Class282_Sub50 {
 		if (operation == CS2OpInfo.PUSH_STRING) {
 			if (stringOpValues == null)
 				stringOpValues = new String[opLength];
-			stringOpValues[opIndex] = buffer.readString(835506752).intern();
+			stringOpValues[opIndex] = buffer.readString().intern();
 		} else if (CS2OpInfo.PUSH_LONG == operation) {
 			if (null == longOpValues)
 				longOpValues = new long[opLength];

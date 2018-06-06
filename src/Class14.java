@@ -17,7 +17,7 @@ public class Class14 {
 		Class404.aClass466_4831 = Class466.aClass466_5569;
 	}
 
-	static int[] method510(Class282_Sub23 class282_sub23) {
+	static int[] method510(TCPMessage class282_sub23) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(518);
 		int[] is = new int[4];
 		for (int i = 0; i < 4; i++) {
@@ -33,7 +33,7 @@ public class Class14 {
 		}
 		class282_sub35.writeShort((int) (Math.random() * 9.9999999E7), 1417031095);
 		class282_sub35.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
+		class282_sub23.buffer.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 		return is;
 	}
 
@@ -45,8 +45,8 @@ public class Class14 {
 
 	public static void method512(int i) {
 		if (3 == client.anInt7166 * -1741204137) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.aClass432_2283, 113846186);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.isaac, 113846186);
+			class282_sub23.buffer.writeByte(i);
 			client.aClass184_7218.method3049(class282_sub23, 956883870);
 		}
 	}
@@ -73,7 +73,7 @@ public class Class14 {
 		Class237.aClass494_2916 = class494;
 	}
 
-	static int[] method517(Class282_Sub23 class282_sub23) {
+	static int[] method517(TCPMessage class282_sub23) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(518);
 		int[] is = new int[4];
 		for (int i = 0; i < 4; i++) {
@@ -89,27 +89,27 @@ public class Class14 {
 		}
 		class282_sub35.writeShort((int) (Math.random() * 9.9999999E7), 1417031095);
 		class282_sub35.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
+		class282_sub23.buffer.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 		return is;
 	}
 
 	public static void method518(int i) {
 		if (3 == client.anInt7166 * -1741204137) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.aClass432_2283, 762027735);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.isaac, 762027735);
+			class282_sub23.buffer.writeByte(i);
 			client.aClass184_7218.method3049(class282_sub23, -431175530);
 		}
 	}
 
 	public static void method519(String string) {
 		if (-1741204137 * client.anInt7166 == 3) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4570, client.aClass184_7218.aClass432_2283, 1877460792);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-			int i = (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13101(anIntArray131, i, (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index), 1215552851);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index) - i, 1201423895);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4570, client.aClass184_7218.isaac, 1877460792);
+			class282_sub23.buffer.writeShort(0, 1417031095);
+			int i = (class282_sub23.buffer.index * -1990677291);
+			class282_sub23.buffer.writeString(string);
+			class282_sub23.buffer.index += 781596523;
+			class282_sub23.buffer.method13101(anIntArray131, i, (-1990677291 * class282_sub23.buffer.index), 1215552851);
+			class282_sub23.buffer.method13281((-1990677291 * class282_sub23.buffer.index) - i, 1201423895);
 			client.aClass184_7218.method3049(class282_sub23, 1299979472);
 			Class404.aClass466_4831 = Class466.aClass466_5564;
 		}
@@ -129,7 +129,7 @@ public class Class14 {
 		return Class237.aClass494_2916;
 	}
 
-	static int[] method522(Class282_Sub23 class282_sub23) {
+	static int[] method522(TCPMessage class282_sub23) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(518);
 		int[] is = new int[4];
 		for (int i = 0; i < 4; i++) {
@@ -145,7 +145,7 @@ public class Class14 {
 		}
 		class282_sub35.writeShort((int) (Math.random() * 9.9999999E7), 1417031095);
 		class282_sub35.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
+		class282_sub23.buffer.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 		return is;
 	}
 
@@ -199,30 +199,30 @@ public class Class14 {
 				if (Class192.aClass1_2391 == Class1.aClass1_11) {
 					client.aClass184_7218.method3050(Class38.method852(Class448.aClass450_5424.method7494((byte) 113), 15000, 1368325142), Class448.aClass450_5424.aString5433, (byte) -14);
 					client.aClass184_7218.method3054((short) -9124);
-					Class282_Sub23 class282_sub23 = Class207.method3558((byte) 21);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(1627920319 * Class369.aClass369_4275.anInt4278);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-					int i_0_ = -1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(727, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(1, 1417031095);
+					TCPMessage class282_sub23 = Class207.method3558((byte) 21);
+					class282_sub23.buffer.writeByte(1627920319 * OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
+					class282_sub23.buffer.writeShort(0, 1417031095);
+					int i_0_ = -1990677291 * (class282_sub23.buffer.index);
+					class282_sub23.buffer.writeShort(727, 1417031095);
+					class282_sub23.buffer.writeShort(1, 1417031095);
 					anIntArray131 = Class463.method7725(class282_sub23, (byte) -81);
-					int i_1_ = (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(client.aString7164);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1543197399 * client.anInt7149, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeLong(-8972807970865466165L * client.aLong7153);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(Class464.aString5555);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
-					Class31.method809(class282_sub23.aClass282_Sub35_Sub2_7682, -1203327887);
+					int i_1_ = (class282_sub23.buffer.index * -1990677291);
+					class282_sub23.buffer.writeString(client.aString7164);
+					class282_sub23.buffer.writeShort(-1543197399 * client.anInt7149, 1417031095);
+					class282_sub23.buffer.writeLong(-8972807970865466165L * client.aLong7153);
+					class282_sub23.buffer.writeString(Class464.aString5555);
+					class282_sub23.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					class282_sub23.buffer.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
+					Class31.method809(class282_sub23.buffer, -1203327887);
 					String string = client.aString7156;
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string == null ? 0 : 1);
+					class282_sub23.buffer.writeByte(string == null ? 0 : 1);
 					if (string != null) {
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+						class282_sub23.buffer.writeString(string);
 					}
-					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.aClass282_Sub35_Sub2_7682, 419814551);
-					class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13101(anIntArray131, i_1_, (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291), 1018047228);
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_0_), 1201423895);
+					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.buffer, 419814551);
+					class282_sub23.buffer.index += 781596523;
+					class282_sub23.buffer.method13101(anIntArray131, i_1_, (class282_sub23.buffer.index * -1990677291), 1018047228);
+					class282_sub23.buffer.method13281((-1990677291 * (class282_sub23.buffer.index) - i_0_), 1201423895);
 					client.aClass184_7218.method3049(class282_sub23, -593422595);
 					client.aClass184_7218.method3047(-126216739);
 					Class192.aClass1_2391 = Class1.aClass1_10;
@@ -232,16 +232,16 @@ public class Class14 {
 						Class5.method297(1947398967);
 					} else if (client.aClass184_7218.method3053((byte) -82).method3315(1, (byte) 32)) {
 						client.aClass184_7218.method3053((byte) -37).method3327((client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1954229573);
-						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Class98.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -2094829621));
+						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Interface.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -2094829621));
 						if (Class483.aClass483_5734 == Class96_Sub9.aClass483_9278) {
-							client.aClass184_7218.aClass432_2283 = new IsaacCipher(anIntArray131);
+							client.aClass184_7218.isaac = new IsaacCipher(anIntArray131);
 							int[] is = new int[4];
 							for (int i_2_ = 0; i_2_ < 4; i_2_++) {
 								is[i_2_] = anIntArray131[i_2_] + 50;
 							}
 							client.aClass184_7218.aClass432_2295 = new IsaacCipher(is);
 							new IsaacCipher(is);
-							client.aClass184_7218.aClass282_Sub35_Sub2_2284.method14867((client.aClass184_7218.aClass432_2295), 265937050);
+							client.aClass184_7218.aClass282_Sub35_Sub2_2284.setIsaacCipher((client.aClass184_7218.aClass432_2295), 265937050);
 							Class365.method6298(3, 1921190304);
 							client.aClass184_7218.method3054((short) 8755);
 							client.aClass184_7218.aClass282_Sub35_Sub2_2284.index = 0;
@@ -278,30 +278,30 @@ public class Class14 {
 				if (Class192.aClass1_2391 == Class1.aClass1_11) {
 					client.aClass184_7218.method3050(Class38.method852(Class448.aClass450_5424.method7494((byte) 126), 15000, -1073158074), Class448.aClass450_5424.aString5433, (byte) -49);
 					client.aClass184_7218.method3054((short) -9437);
-					Class282_Sub23 class282_sub23 = Class207.method3558((byte) 98);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(1627920319 * Class369.aClass369_4275.anInt4278);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-					int i_3_ = -1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(727, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(1, 1417031095);
+					TCPMessage class282_sub23 = Class207.method3558((byte) 98);
+					class282_sub23.buffer.writeByte(1627920319 * OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
+					class282_sub23.buffer.writeShort(0, 1417031095);
+					int i_3_ = -1990677291 * (class282_sub23.buffer.index);
+					class282_sub23.buffer.writeShort(727, 1417031095);
+					class282_sub23.buffer.writeShort(1, 1417031095);
 					anIntArray131 = Class463.method7725(class282_sub23, (byte) -73);
-					int i_4_ = (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(client.aString7164);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1543197399 * client.anInt7149, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeLong(-8972807970865466165L * client.aLong7153);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(Class464.aString5555);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
-					Class31.method809(class282_sub23.aClass282_Sub35_Sub2_7682, -1909494425);
+					int i_4_ = (class282_sub23.buffer.index * -1990677291);
+					class282_sub23.buffer.writeString(client.aString7164);
+					class282_sub23.buffer.writeShort(-1543197399 * client.anInt7149, 1417031095);
+					class282_sub23.buffer.writeLong(-8972807970865466165L * client.aLong7153);
+					class282_sub23.buffer.writeString(Class464.aString5555);
+					class282_sub23.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					class282_sub23.buffer.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
+					Class31.method809(class282_sub23.buffer, -1909494425);
 					String string = client.aString7156;
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string == null ? 0 : 1);
+					class282_sub23.buffer.writeByte(string == null ? 0 : 1);
 					if (string != null) {
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+						class282_sub23.buffer.writeString(string);
 					}
-					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.aClass282_Sub35_Sub2_7682, 419814551);
-					class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13101(anIntArray131, i_4_, (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291), 1166498960);
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_3_), 1201423895);
+					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.buffer, 419814551);
+					class282_sub23.buffer.index += 781596523;
+					class282_sub23.buffer.method13101(anIntArray131, i_4_, (class282_sub23.buffer.index * -1990677291), 1166498960);
+					class282_sub23.buffer.method13281((-1990677291 * (class282_sub23.buffer.index) - i_3_), 1201423895);
 					client.aClass184_7218.method3049(class282_sub23, 633127749);
 					client.aClass184_7218.method3047(-54298491);
 					Class192.aClass1_2391 = Class1.aClass1_10;
@@ -311,16 +311,16 @@ public class Class14 {
 						Class5.method297(1963604679);
 					} else if (client.aClass184_7218.method3053((byte) -9).method3315(1, (byte) 70)) {
 						client.aClass184_7218.method3053((byte) -22).method3327((client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1209978686);
-						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Class98.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -1986301155));
+						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Interface.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -1986301155));
 						if (Class483.aClass483_5734 == Class96_Sub9.aClass483_9278) {
-							client.aClass184_7218.aClass432_2283 = new IsaacCipher(anIntArray131);
+							client.aClass184_7218.isaac = new IsaacCipher(anIntArray131);
 							int[] is = new int[4];
 							for (int i_5_ = 0; i_5_ < 4; i_5_++) {
 								is[i_5_] = anIntArray131[i_5_] + 50;
 							}
 							client.aClass184_7218.aClass432_2295 = new IsaacCipher(is);
 							new IsaacCipher(is);
-							client.aClass184_7218.aClass282_Sub35_Sub2_2284.method14867((client.aClass184_7218.aClass432_2295), 1278346129);
+							client.aClass184_7218.aClass282_Sub35_Sub2_2284.setIsaacCipher((client.aClass184_7218.aClass432_2295), 1278346129);
 							Class365.method6298(3, 703977156);
 							client.aClass184_7218.method3054((short) 19258);
 							client.aClass184_7218.aClass282_Sub35_Sub2_2284.index = 0;
@@ -343,16 +343,16 @@ public class Class14 {
 
 	public static void method531(String string, String string_6_, int i, boolean bool) {
 		if (3 == client.anInt7166 * -1741204137) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.aClass432_2283, 850444840);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-			int i_7_ = (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string_6_);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
-			class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13101(anIntArray131, i_7_, (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291), 1159424708);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_7_, 1201423895);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.isaac, 850444840);
+			class282_sub23.buffer.writeShort(0, 1417031095);
+			int i_7_ = (-1990677291 * class282_sub23.buffer.index);
+			class282_sub23.buffer.writeString(string);
+			class282_sub23.buffer.writeString(string_6_);
+			class282_sub23.buffer.writeByte(i);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
+			class282_sub23.buffer.index += 781596523;
+			class282_sub23.buffer.method13101(anIntArray131, i_7_, (class282_sub23.buffer.index * -1990677291), 1159424708);
+			class282_sub23.buffer.method13281((-1990677291 * class282_sub23.buffer.index) - i_7_, 1201423895);
 			client.aClass184_7218.method3049(class282_sub23, 1205023217);
 			if (i < 13) {
 				client.aBool7189 = true;
@@ -501,7 +501,7 @@ public class Class14 {
 				npc.anInt10343 = (buffer.readByte128(1932630708) * -1352948627);
 				npc.anInt10342 = (buffer.readShortLE((byte) -102) + client.cycles * -1809259861) * -506987231;
 				npc.anInt10345 = (buffer.readShortLE((byte) -65) + -1809259861 * client.cycles) * -38144783;
-				npc.anInt10346 = buffer.readShortLE128(602501853) * -19018465;
+				npc.anInt10346 = buffer.readShortLE128() * -19018465;
 				npc.anInt10326 += (npc.regionBaseX[0] * 830034083);
 				npc.anInt10328 += (npc.regionBaseY[0] * -2091025609);
 				npc.anInt10341 += (1110107435 * npc.regionBaseX[0]);
@@ -518,7 +518,7 @@ public class Class14 {
 			if ((flags & 0x200000) != 0) {
 				int i_25_ = ((buffer.buffer[((buffer.index += -1115476867) * -1990677291) - 1]) & 0xff);
 				for (int i_26_ = 0; i_26_ < i_25_; i_26_++) {
-					int i_27_ = buffer.readShortLE128(602501853);
+					int i_27_ = buffer.readShortLE128();
 					int i_28_ = buffer.readIntV1();
 					npc.aClass153_10579.method2614(i_27_, i_28_, (short) 768);
 				}
@@ -624,7 +624,7 @@ public class Class14 {
 			}
 			if ((flags & 0x2000000) != 0) {
 				int i_58_ = buffer.readShortLE((byte) -78);
-				int i_59_ = buffer.readIntLE(1663978297);
+				int i_59_ = buffer.readIntLE();
 				if (i_58_ == 65535) {
 					i_58_ = -1;
 				}
@@ -676,7 +676,7 @@ public class Class14 {
 					if ((i_71_ & 0x8) == 8) {
 						is_75_ = new short[i_70_];
 						for (int i_76_ = 0; i_76_ < i_70_; i_76_++) {
-							is_75_[i_76_] = (short) buffer.readShortLE128(602501853);
+							is_75_[i_76_] = (short) buffer.readShortLE128();
 						}
 					}
 					long l = (npcIndex | (long) ((npc.anInt10576 += -1761803989) * -476072573 - 1) << 32);
@@ -699,7 +699,7 @@ public class Class14 {
 				}
 			}
 			if (0 != (flags & 0x4)) {
-				npc.anInt10578 = buffer.readShortLE128(602501853) * 119874337;
+				npc.anInt10578 = buffer.readShortLE128() * 119874337;
 				npc.anInt10577 = (buffer.readShortLE((byte) -32) * -1084745433);
 			}
 			if ((flags & 0x20000) != 0) {
@@ -711,27 +711,27 @@ public class Class14 {
 				npc.anInt10348 = ((-1809259861 * client.cycles + buffer.readUnsignedShort()) * 485671023);
 			}
 			if (0 != (flags & 0x800000)) {
-				npc.aString10584 = buffer.readString(724047844);
+				npc.aString10584 = buffer.readString();
 				if ("".equals(npc.aString10584) || (npc.aString10584.equals(npc.aClass409_10580.aString4857))) {
 					npc.aString10584 = (npc.aClass409_10580.aString4857);
 				}
 			}
 			if ((flags & 0x2) != 0) {
-				npc.method16164(buffer.readString(1804278403), 0, 0, (byte) -84);
+				npc.method16164(buffer.readString(), 0, 0, (byte) -84);
 			}
 			if ((flags & 0x4000) != 0) {
 				int i_81_ = buffer.readUnsigned128Byte();
 				int[] is = new int[i_81_];
 				int[] is_82_ = new int[i_81_];
 				for (int i_83_ = 0; i_83_ < i_81_; i_83_++) {
-					int i_84_ = buffer.readShortLE128(602501853);
+					int i_84_ = buffer.readShortLE128();
 					if (49152 == (i_84_ & 0xc000)) {
 						int i_85_ = buffer.readUnsignedShort();
 						is[i_83_] = i_84_ << 16 | i_85_;
 					} else {
 						is[i_83_] = i_84_;
 					}
-					is_82_[i_83_] = buffer.readShortLE128(602501853);
+					is_82_[i_83_] = buffer.readShortLE128();
 				}
 				npc.method15797(is, is_82_, -1858199952);
 			}

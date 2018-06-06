@@ -103,9 +103,9 @@ public class Class325 {
 
 	static final void method5786(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4607, client.aClass184_7475.aClass432_2283, 1863419528);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string.length() + 1);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4607, client.aClass184_7475.isaac, 1863419528);
+		class282_sub23.buffer.writeByte(string.length() + 1);
+		class282_sub23.buffer.writeString(string);
 		client.aClass184_7475.method3049(class282_sub23, -495344290);
 	}
 

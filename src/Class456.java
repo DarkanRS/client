@@ -816,7 +816,7 @@ public class Class456 {
 
 	static final void method7643(CS2Executor class527, byte i) {
 		int i_56_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_56_, (byte) 98);
+		IComponentDefinitions class118 = Class117.method1981(i_56_, (byte) 98);
 		int i_57_ = -1;
 		int i_58_ = -1;
 		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, 1740359651);
@@ -831,6 +831,6 @@ public class Class456 {
 	}
 
 	static Class149_Sub1 method7644(RsByteBuffer class282_sub35, int i) {
-		return new Class149_Sub1(class282_sub35.readShort(2106402099), class282_sub35.readShort(1584223282), class282_sub35.readShort(1636690940), class282_sub35.readShort(1585273759), class282_sub35.read24BitUnsignedInteger((short) 9349), class282_sub35.read24BitUnsignedInteger((short) 13270), class282_sub35.readUnsignedByte());
+		return new Class149_Sub1(class282_sub35.readShort(2106402099), class282_sub35.readShort(1584223282), class282_sub35.readShort(1636690940), class282_sub35.readShort(1585273759), class282_sub35.read24BitUnsignedInteger(), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 }

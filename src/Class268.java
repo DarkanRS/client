@@ -54,8 +54,8 @@ public class Class268 {
 
 	static final void method4797(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class169.method2874(class118, class98, class527, (byte) 11);
 	}
 
@@ -103,14 +103,14 @@ public class Class268 {
 
 	static final void method4801(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class282_Sub20_Sub9.method15256(class118, class98, class527, -158517117);
 	}
 
 	static final void method4802(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1288 * 1924549737;
 	}
 }

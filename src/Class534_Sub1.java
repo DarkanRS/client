@@ -21,10 +21,10 @@ public class Class534_Sub1 extends Class534 {
 	void method11414(int i) {
 		Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) ((Class534_Sub1) this).aQueue7921.poll();
 		if (class282_sub53_sub1 != null) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4584, client.aClass184_7475.aClass432_2283, -342114191);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt((class282_sub53_sub1.method13481(2071740821) | class282_sub53_sub1.method13469(1875995188) << 16), (byte) 22);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte128((class282_sub53_sub1.method14730(-24722123) << 1 | class282_sub53_sub1.method14729(-1996461669) & 0x1), 670389922);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(method11408(class282_sub53_sub1, 65535, 1958251581), (short) -6480);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4584, client.aClass184_7475.isaac, -342114191);
+			class282_sub23.buffer.writeLEInt((class282_sub53_sub1.method13481(2071740821) | class282_sub53_sub1.method13469(1875995188) << 16), (byte) 22);
+			class282_sub23.buffer.writeByte128((class282_sub53_sub1.method14730(-24722123) << 1 | class282_sub53_sub1.method14729(-1996461669) & 0x1), 670389922);
+			class282_sub23.buffer.writeShortLE(method11408(class282_sub53_sub1, 65535, 1958251581), (short) -6480);
 			client.aClass184_7475.method3049(class282_sub23, 2146130042);
 			class282_sub53_sub1.method13475(-1706861091);
 		}
@@ -63,10 +63,10 @@ public class Class534_Sub1 extends Class534 {
 	void method11431() {
 		Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) ((Class534_Sub1) this).aQueue7921.poll();
 		if (class282_sub53_sub1 != null) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4584, client.aClass184_7475.aClass432_2283, 329623917);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt((class282_sub53_sub1.method13481(1928533930) | class282_sub53_sub1.method13469(-2039460343) << 16), (byte) -49);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte128((class282_sub53_sub1.method14730(-1430500590) << 1 | class282_sub53_sub1.method14729(-1996461669) & 0x1), -2080491977);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(method11408(class282_sub53_sub1, 65535, 2099731488), (short) -23063);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4584, client.aClass184_7475.isaac, 329623917);
+			class282_sub23.buffer.writeLEInt((class282_sub53_sub1.method13481(1928533930) | class282_sub53_sub1.method13469(-2039460343) << 16), (byte) -49);
+			class282_sub23.buffer.writeByte128((class282_sub53_sub1.method14730(-1430500590) << 1 | class282_sub53_sub1.method14729(-1996461669) & 0x1), -2080491977);
+			class282_sub23.buffer.writeShortLE(method11408(class282_sub53_sub1, 65535, 2099731488), (short) -23063);
 			client.aClass184_7475.method3049(class282_sub23, -608010003);
 			class282_sub53_sub1.method13475(1162879870);
 		}
@@ -75,10 +75,10 @@ public class Class534_Sub1 extends Class534 {
 	void method11418() {
 		Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) ((Class534_Sub1) this).aQueue7921.poll();
 		if (class282_sub53_sub1 != null) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4584, client.aClass184_7475.aClass432_2283, -642495389);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt((class282_sub53_sub1.method13481(932524891) | class282_sub53_sub1.method13469(-1600764926) << 16), (byte) 96);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte128((class282_sub53_sub1.method14730(2068393904) << 1 | class282_sub53_sub1.method14729(-1996461669) & 0x1), -414105270);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(method11408(class282_sub53_sub1, 65535, -352975879), (short) -24854);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4584, client.aClass184_7475.isaac, -642495389);
+			class282_sub23.buffer.writeLEInt((class282_sub53_sub1.method13481(932524891) | class282_sub53_sub1.method13469(-1600764926) << 16), (byte) 96);
+			class282_sub23.buffer.writeByte128((class282_sub53_sub1.method14730(2068393904) << 1 | class282_sub53_sub1.method14729(-1996461669) & 0x1), -414105270);
+			class282_sub23.buffer.writeShortLE(method11408(class282_sub53_sub1, 65535, -352975879), (short) -24854);
 			client.aClass184_7475.method3049(class282_sub23, 1053975975);
 			class282_sub53_sub1.method13475(-92529177);
 		}
@@ -88,20 +88,20 @@ public class Class534_Sub1 extends Class534 {
 		return (!((Class534_Sub1) this).aQueue7921.isEmpty() || (2966128844247041579L * ((Class534_Sub1) this).aLong7076 < Class169.method2869(1749452081) - 2000L));
 	}
 
-	Class282_Sub23 method11416(byte i) {
-		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.aClass432_2283, 361662405);
+	TCPMessage method11416(byte i) {
+		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.isaac, 361662405);
 	}
 
-	Class282_Sub23 method11420() {
-		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.aClass432_2283, 1749991235);
+	TCPMessage method11420() {
+		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.isaac, 1749991235);
 	}
 
-	Class282_Sub23 method11428() {
-		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.aClass432_2283, -127030354);
+	TCPMessage method11428() {
+		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.isaac, -127030354);
 	}
 
-	Class282_Sub23 method11422() {
-		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.aClass432_2283, 469247032);
+	TCPMessage method11422() {
+		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.isaac, 469247032);
 	}
 
 	void method12812(RsByteBuffer class282_sub35, Class282_Sub53_Sub1 class282_sub53_sub1) {
@@ -130,8 +130,8 @@ public class Class534_Sub1 extends Class534 {
 		method12810(class282_sub35, (Class282_Sub53_Sub1) class282_sub53, (byte) 110);
 	}
 
-	Class282_Sub23 method11421() {
-		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.aClass432_2283, 610044227);
+	TCPMessage method11421() {
+		return Class271.method4828(OutgoingPacket.aClass379_4567, client.aClass184_7475.isaac, 610044227);
 	}
 
 	static int[] method12815(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {

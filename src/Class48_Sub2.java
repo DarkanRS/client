@@ -29,7 +29,7 @@ public class Class48_Sub2 extends Class48 {
 	static final int anInt9256 = 12;
 	Class101 aClass101_9257;
 	int[][] anIntArrayArray9258;
-	Class384 aClass384_9259 = new Class384();
+	Matrix44Arr aClass384_9259 = new Matrix44Arr();
 	static final int anInt9260 = 12;
 	static final int anInt9261 = 9;
 	static final int anInt9262 = 17;
@@ -45,10 +45,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, 453082583);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), -1217458582);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 82);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 45);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, -1433198453);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 80);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, -767770113);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 45);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, -1433198453);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 80);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, -767770113);
 		aClass505_Sub2_449.method14002(Class352.aClass352_4098, anInt467, anInt468, anInt469, anInt470);
 	}
 
@@ -56,12 +56,12 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1655(((Class48_Sub2) this).aClass115Array9254[i + 7]);
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-2072302880)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, 47104762);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, 47104762);
 		((Class48_Sub2) this).aClass101_9257.method1749((((Class48_Sub2) this).anIntArray9233[16]), aFloat456, aFloat453, 0.0F, 0.0F, (byte) 116);
 		method14564(i, 1675559145);
 	}
 
-	public void method967(Class384 class384) {
+	public void method967(Matrix44Arr class384) {
 		((Class48_Sub2) this).aClass384_9259.method6562(class384);
 		((Class48_Sub2) this).aClass384_9259.method6523(aClass505_Sub2_449.aClass384_8729);
 	}
@@ -76,10 +76,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, -956219190);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), 1888868899);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 109);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 118);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, -1035790927);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 66);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, -1490265321);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 118);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, -1035790927);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 66);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, -1490265321);
 		aClass505_Sub2_449.method14002(Class352.aClass352_4098, anInt467, anInt468, anInt469, anInt470);
 	}
 
@@ -94,10 +94,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, 2040380246);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), 2139383283);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 50);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 74);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, -1782352428);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 125);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, -560430495);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 74);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, -1782352428);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 125);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, -560430495);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[11]), aClass385_466, (byte) 29);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[12]), aClass385_448, (byte) 2);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[13]), aClass385_464, (byte) 8);
@@ -120,7 +120,7 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1655(((Class48_Sub2) this).aClass115Array9254[i + 7]);
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-2006880089)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, -202231546);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, -202231546);
 		((Class48_Sub2) this).aClass101_9257.method1749((((Class48_Sub2) this).anIntArray9233[16]), aFloat456, aFloat453, 0.0F, 0.0F, (byte) 50);
 		method14564(i, 2089745426);
 	}
@@ -130,27 +130,27 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-1924915864)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
 		((Class48_Sub2) this).aClass101_9257.method1674((((Class48_Sub2) this).anIntArray9233[15]), aClass384_465, -899265256);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, 703628895);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, 703628895);
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[3]), 1, anInterface31_451, -432714576);
 		method14564(i, 1162635311);
 	}
 
-	public void method951(Class384 class384) {
+	public void method951(Matrix44Arr class384) {
 		((Class48_Sub2) this).aClass384_9259.method6562(class384);
 		((Class48_Sub2) this).aClass384_9259.method6523(aClass505_Sub2_449.aClass384_8729);
 	}
 
-	public void method952(Class384 class384) {
+	public void method952(Matrix44Arr class384) {
 		((Class48_Sub2) this).aClass384_9259.method6562(class384);
 		((Class48_Sub2) this).aClass384_9259.method6523(aClass505_Sub2_449.aClass384_8729);
 	}
 
-	public void method953(Class384 class384) {
+	public void method953(Matrix44Arr class384) {
 		((Class48_Sub2) this).aClass384_9259.method6562(class384);
 		((Class48_Sub2) this).aClass384_9259.method6523(aClass505_Sub2_449.aClass384_8729);
 	}
 
-	public void method963(Class384 class384) {
+	public void method963(Matrix44Arr class384) {
 		((Class48_Sub2) this).aClass384_9259.method6562(class384);
 		((Class48_Sub2) this).aClass384_9259.method6523(aClass505_Sub2_449.aClass384_8729);
 	}
@@ -216,10 +216,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, 1361853962);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), 695769081);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 45);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 24);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, -385081679);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 113);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, 803125359);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 24);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, -385081679);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 113);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, 803125359);
 		aClass505_Sub2_449.method14002(Class352.aClass352_4098, anInt467, anInt468, anInt469, anInt470);
 	}
 
@@ -233,10 +233,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, -1278912022);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), 1212549473);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 70);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 59);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, 1042218945);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 77);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, 245640981);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 59);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, 1042218945);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 77);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, 245640981);
 		aClass505_Sub2_449.method14002(Class352.aClass352_4098, anInt467, anInt468, anInt469, anInt470);
 	}
 
@@ -265,7 +265,7 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1655(((Class48_Sub2) this).aClass115Array9254[i + 7]);
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-2127764452)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, 943954770);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, 943954770);
 		((Class48_Sub2) this).aClass101_9257.method1749((((Class48_Sub2) this).anIntArray9233[16]), aFloat456, aFloat453, 0.0F, 0.0F, (byte) 48);
 		method14564(i, 342700156);
 	}
@@ -274,10 +274,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, 2127252913);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), 2045218041);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 87);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 13);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, 387513847);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 114);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, -631832113);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 13);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, 387513847);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 114);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, -631832113);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[11]), aClass385_466, (byte) 103);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[12]), aClass385_448, (byte) 112);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[13]), aClass385_464, (byte) 114);
@@ -300,7 +300,7 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1655(((Class48_Sub2) this).aClass115Array9254[i + 7]);
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-2022586549)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, -404792315);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, -404792315);
 		((Class48_Sub2) this).aClass101_9257.method1749((((Class48_Sub2) this).anIntArray9233[16]), aFloat456, aFloat453, 0.0F, 0.0F, (byte) 113);
 		method14564(i, 2016572869);
 	}
@@ -309,7 +309,7 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1655(((Class48_Sub2) this).aClass115Array9254[i + 7]);
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-2105378964)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, -1125350225);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, -1125350225);
 		((Class48_Sub2) this).aClass101_9257.method1749((((Class48_Sub2) this).anIntArray9233[16]), aFloat456, aFloat453, 0.0F, 0.0F, (byte) 13);
 		method14564(i, 1489332268);
 	}
@@ -319,7 +319,7 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).anIntArray9233 = (((Class48_Sub2) this).anIntArrayArray9258[((Class48_Sub2) this).aClass101_9257.method1714(-2017240700)]);
 		((Class48_Sub2) this).aClass101_9257.method1646();
 		((Class48_Sub2) this).aClass101_9257.method1674((((Class48_Sub2) this).anIntArray9233[15]), aClass384_465, -899265256);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.aFloat4671, aClass385_455.aFloat4672, aClass385_455.aFloat4673, 1067202636);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[6], aClass385_455.x, aClass385_455.y, aClass385_455.z, 1067202636);
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[3]), 1, anInterface31_451, 2108931514);
 		method14564(i, -1921268776);
 	}
@@ -477,7 +477,7 @@ public class Class48_Sub2 extends Class48 {
 		return true;
 	}
 
-	public void method957(Class384 class384) {
+	public void method957(Matrix44Arr class384) {
 		((Class48_Sub2) this).aClass384_9259.method6562(class384);
 		((Class48_Sub2) this).aClass384_9259.method6523(aClass505_Sub2_449.aClass384_8729);
 	}
@@ -493,10 +493,10 @@ public class Class48_Sub2 extends Class48 {
 		((Class48_Sub2) this).aClass101_9257.method1677((((Class48_Sub2) this).anIntArray9233[2]), 0, anInterface6_452, 743769305);
 		((Class48_Sub2) this).aClass101_9257.method1676((((Class48_Sub2) this).anIntArray9233[4]), (((Class48_Sub2) this).aClass384_9259), 446517994);
 		((Class48_Sub2) this).aClass101_9257.method1675((((Class48_Sub2) this).anIntArray9233[5]), aClass384_454, (byte) 103);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.aFloat3568, aClass303_458.aFloat3566, aClass303_458.aFloat3565, aClass303_458.aFloat3567, (byte) 110);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.aFloat4671, aClass385_459.aFloat4672, aClass385_459.aFloat4673, 977151427);
-		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.aFloat3568, aClass303_460.aFloat3566, aClass303_460.aFloat3565, aClass303_460.aFloat3567, (byte) 81);
-		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.aFloat4671, aClass385_457.aFloat4672, aClass385_457.aFloat4673, 1618717564);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[7], aClass303_458.x, aClass303_458.y, aClass303_458.z, aClass303_458.w, (byte) 110);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[8], aClass385_459.x, aClass385_459.y, aClass385_459.z, 977151427);
+		((Class48_Sub2) this).aClass101_9257.method1749(((Class48_Sub2) this).anIntArray9233[9], aClass303_460.x, aClass303_460.y, aClass303_460.z, aClass303_460.w, (byte) 81);
+		((Class48_Sub2) this).aClass101_9257.method1670(((Class48_Sub2) this).anIntArray9233[10], aClass385_457.x, aClass385_457.y, aClass385_457.z, 1618717564);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[11]), aClass385_466, (byte) 118);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[12]), aClass385_448, (byte) 22);
 		((Class48_Sub2) this).aClass101_9257.method1672((((Class48_Sub2) this).anIntArray9233[13]), aClass385_464, (byte) 76);

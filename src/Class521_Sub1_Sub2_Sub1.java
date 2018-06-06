@@ -64,7 +64,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	boolean method12983(GraphicalRenderer class505, int i, int i_0_, int i_1_) {
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5210(method11166());
 		class294.method5219(0.0F, -10.0F, 0.0F);
 		MeshRasterizer class528 = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(anInt10423 * -876219087, 1970157841).method7084(class505, 131072, anInt10416 * 513267953, null, null, 0, 0, 0, 0, (byte) 0));
@@ -100,20 +100,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method13009(GraphicalRenderer class505) {
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) -112);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) -112);
+		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i = class208.aClass521_Sub1_Sub1_2659.method12995(21913800);
 		if (null != class521_sub1_sub3 && class521_sub1_sub3.aShort9561 > -i)
 			i = -class521_sub1_sub3.aShort9561;
 		if (i != 1327971947 * anInt10422) {
-			class385.aFloat4672 += (float) (i - 1327971947 * anInt10422);
+			class385.y += (float) (i - 1327971947 * anInt10422);
 			method11171(class385);
 			anInt10422 = -460947901 * i;
 		}
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5212();
 		if (0 == anInt10422 * 1327971947) {
 			boolean bool = false;
@@ -124,16 +124,16 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_5_ = i_4_;
 			int i_6_ = -i_4_ / 2;
 			int i_7_ = -i_5_ / 2;
-			int i_8_ = class390.method6709((int) class385.aFloat4671 + i_6_, (int) class385.aFloat4673 + i_7_, 2105992060);
+			int i_8_ = class390.method6709((int) class385.x + i_6_, (int) class385.z + i_7_, 2105992060);
 			int i_9_ = i_4_ / 2;
 			int i_10_ = -i_5_ / 2;
-			int i_11_ = class390.method6709((int) class385.aFloat4671 + i_9_, i_10_ + (int) class385.aFloat4673, 1157857956);
+			int i_11_ = class390.method6709((int) class385.x + i_9_, i_10_ + (int) class385.z, 1157857956);
 			int i_12_ = -i_4_ / 2;
 			int i_13_ = i_5_ / 2;
-			int i_14_ = class390.method6709((int) class385.aFloat4671 + i_12_, i_13_ + (int) class385.aFloat4673, -102791110);
+			int i_14_ = class390.method6709((int) class385.x + i_12_, i_13_ + (int) class385.z, -102791110);
 			int i_15_ = i_4_ / 2;
 			int i_16_ = i_5_ / 2;
-			int i_17_ = class390.method6709((int) class385.aFloat4671 + i_15_, (int) class385.aFloat4673 + i_16_, 63414596);
+			int i_17_ = class390.method6709((int) class385.x + i_15_, (int) class385.z + i_16_, 63414596);
 			int i_18_ = i_8_ < i_11_ ? i_8_ : i_11_;
 			int i_19_ = i_14_ < i_17_ ? i_14_ : i_17_;
 			int i_20_ = i_11_ < i_17_ ? i_11_ : i_17_;
@@ -151,13 +151,13 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_24_ = i_8_ + i_17_;
 			if (i_11_ + i_14_ < i_24_)
 				i_24_ = i_11_ + i_14_;
-			i_24_ = (i_24_ >> 1) - (int) class385.aFloat4672;
+			i_24_ = (i_24_ >> 1) - (int) class385.y;
 			if (i_24_ != 0)
 				class294.method5219(0.0F, (float) i_24_, 0.0F);
 		}
 		class385.method6624();
-		Class385 class385_25_ = method11166().aClass385_3595;
-		class294.method5219(class385_25_.aFloat4671, class385_25_.aFloat4672 - 10.0F, class385_25_.aFloat4673);
+		Vector3 class385_25_ = method11166().aClass385_3595;
+		class294.method5219(class385_25_.x, class385_25_.y - 10.0F, class385_25_.z);
 		Class285 class285 = Class470.method7824(true, (byte) 2);
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
@@ -229,20 +229,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method13010(GraphicalRenderer class505) {
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) 62);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) 62);
+		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i = class208.aClass521_Sub1_Sub1_2659.method12995(-2077263748);
 		if (null != class521_sub1_sub3 && class521_sub1_sub3.aShort9561 > -i)
 			i = -class521_sub1_sub3.aShort9561;
 		if (i != 1327971947 * anInt10422) {
-			class385.aFloat4672 += (float) (i - 1327971947 * anInt10422);
+			class385.y += (float) (i - 1327971947 * anInt10422);
 			method11171(class385);
 			anInt10422 = -460947901 * i;
 		}
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5212();
 		if (0 == anInt10422 * 1327971947) {
 			boolean bool = false;
@@ -253,16 +253,16 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_36_ = i_35_;
 			int i_37_ = -i_35_ / 2;
 			int i_38_ = -i_36_ / 2;
-			int i_39_ = class390.method6709((int) class385.aFloat4671 + i_37_, (int) class385.aFloat4673 + i_38_, 1641785657);
+			int i_39_ = class390.method6709((int) class385.x + i_37_, (int) class385.z + i_38_, 1641785657);
 			int i_40_ = i_35_ / 2;
 			int i_41_ = -i_36_ / 2;
-			int i_42_ = class390.method6709((int) class385.aFloat4671 + i_40_, i_41_ + (int) class385.aFloat4673, -450358171);
+			int i_42_ = class390.method6709((int) class385.x + i_40_, i_41_ + (int) class385.z, -450358171);
 			int i_43_ = -i_35_ / 2;
 			int i_44_ = i_36_ / 2;
-			int i_45_ = class390.method6709((int) class385.aFloat4671 + i_43_, i_44_ + (int) class385.aFloat4673, -1463134594);
+			int i_45_ = class390.method6709((int) class385.x + i_43_, i_44_ + (int) class385.z, -1463134594);
 			int i_46_ = i_35_ / 2;
 			int i_47_ = i_36_ / 2;
-			int i_48_ = class390.method6709((int) class385.aFloat4671 + i_46_, (int) class385.aFloat4673 + i_47_, -1500462449);
+			int i_48_ = class390.method6709((int) class385.x + i_46_, (int) class385.z + i_47_, -1500462449);
 			int i_49_ = i_39_ < i_42_ ? i_39_ : i_42_;
 			int i_50_ = i_45_ < i_48_ ? i_45_ : i_48_;
 			int i_51_ = i_42_ < i_48_ ? i_42_ : i_48_;
@@ -280,13 +280,13 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_55_ = i_39_ + i_48_;
 			if (i_42_ + i_45_ < i_55_)
 				i_55_ = i_42_ + i_45_;
-			i_55_ = (i_55_ >> 1) - (int) class385.aFloat4672;
+			i_55_ = (i_55_ >> 1) - (int) class385.y;
 			if (i_55_ != 0)
 				class294.method5219(0.0F, (float) i_55_, 0.0F);
 		}
 		class385.method6624();
-		Class385 class385_56_ = method11166().aClass385_3595;
-		class294.method5219(class385_56_.aFloat4671, class385_56_.aFloat4672 - 10.0F, class385_56_.aFloat4673);
+		Vector3 class385_56_ = method11166().aClass385_3595;
+		class294.method5219(class385_56_.x, class385_56_.y - 10.0F, class385_56_.z);
 		Class285 class285 = Class470.method7824(true, (byte) -32);
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
@@ -318,20 +318,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method12989(GraphicalRenderer class505) {
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) 88);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) 88);
+		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i = class208.aClass521_Sub1_Sub1_2659.method12995(-1830209037);
 		if (null != class521_sub1_sub3 && class521_sub1_sub3.aShort9561 > -i)
 			i = -class521_sub1_sub3.aShort9561;
 		if (i != 1327971947 * anInt10422) {
-			class385.aFloat4672 += (float) (i - 1327971947 * anInt10422);
+			class385.y += (float) (i - 1327971947 * anInt10422);
 			method11171(class385);
 			anInt10422 = -460947901 * i;
 		}
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5212();
 		if (0 == anInt10422 * 1327971947) {
 			boolean bool = false;
@@ -342,16 +342,16 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_60_ = i_59_;
 			int i_61_ = -i_59_ / 2;
 			int i_62_ = -i_60_ / 2;
-			int i_63_ = class390.method6709((int) class385.aFloat4671 + i_61_, (int) class385.aFloat4673 + i_62_, 1551660618);
+			int i_63_ = class390.method6709((int) class385.x + i_61_, (int) class385.z + i_62_, 1551660618);
 			int i_64_ = i_59_ / 2;
 			int i_65_ = -i_60_ / 2;
-			int i_66_ = class390.method6709((int) class385.aFloat4671 + i_64_, i_65_ + (int) class385.aFloat4673, 250380296);
+			int i_66_ = class390.method6709((int) class385.x + i_64_, i_65_ + (int) class385.z, 250380296);
 			int i_67_ = -i_59_ / 2;
 			int i_68_ = i_60_ / 2;
-			int i_69_ = class390.method6709((int) class385.aFloat4671 + i_67_, i_68_ + (int) class385.aFloat4673, -268709026);
+			int i_69_ = class390.method6709((int) class385.x + i_67_, i_68_ + (int) class385.z, -268709026);
 			int i_70_ = i_59_ / 2;
 			int i_71_ = i_60_ / 2;
-			int i_72_ = class390.method6709((int) class385.aFloat4671 + i_70_, (int) class385.aFloat4673 + i_71_, 1481182627);
+			int i_72_ = class390.method6709((int) class385.x + i_70_, (int) class385.z + i_71_, 1481182627);
 			int i_73_ = i_63_ < i_66_ ? i_63_ : i_66_;
 			int i_74_ = i_69_ < i_72_ ? i_69_ : i_72_;
 			int i_75_ = i_66_ < i_72_ ? i_66_ : i_72_;
@@ -369,13 +369,13 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_79_ = i_63_ + i_72_;
 			if (i_66_ + i_69_ < i_79_)
 				i_79_ = i_66_ + i_69_;
-			i_79_ = (i_79_ >> 1) - (int) class385.aFloat4672;
+			i_79_ = (i_79_ >> 1) - (int) class385.y;
 			if (i_79_ != 0)
 				class294.method5219(0.0F, (float) i_79_, 0.0F);
 		}
 		class385.method6624();
-		Class385 class385_80_ = method11166().aClass385_3595;
-		class294.method5219(class385_80_.aFloat4671, class385_80_.aFloat4672 - 10.0F, class385_80_.aFloat4673);
+		Vector3 class385_80_ = method11166().aClass385_3595;
+		class294.method5219(class385_80_.x, class385_80_.y - 10.0F, class385_80_.z);
 		Class285 class285 = Class470.method7824(true, (byte) -61);
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;
@@ -415,7 +415,7 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	boolean method13020(GraphicalRenderer class505, int i, int i_81_) {
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5210(method11166());
 		class294.method5219(0.0F, -10.0F, 0.0F);
 		MeshRasterizer class528 = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(anInt10423 * -876219087, 1772986804).method7084(class505, 131072, anInt10416 * 513267953, null, null, 0, 0, 0, 0, (byte) 0));
@@ -443,20 +443,20 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 	}
 
 	Class285 method12990(GraphicalRenderer class505, int i) {
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, (byte) -92);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.aFloat4671 >> 9, (int) class385.aFloat4673 >> 9, -387297653);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) -92);
+		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i_82_ = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i_82_ = class208.aClass521_Sub1_Sub1_2659.method12995(-1954899292);
 		if (null != class521_sub1_sub3 && class521_sub1_sub3.aShort9561 > -i_82_)
 			i_82_ = -class521_sub1_sub3.aShort9561;
 		if (i_82_ != 1327971947 * anInt10422) {
-			class385.aFloat4672 += (float) (i_82_ - 1327971947 * anInt10422);
+			class385.y += (float) (i_82_ - 1327971947 * anInt10422);
 			method11171(class385);
 			anInt10422 = -460947901 * i_82_;
 		}
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5212();
 		if (0 == anInt10422 * 1327971947) {
 			boolean bool = false;
@@ -467,16 +467,16 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_86_ = i_85_;
 			int i_87_ = -i_85_ / 2;
 			int i_88_ = -i_86_ / 2;
-			int i_89_ = class390.method6709((int) class385.aFloat4671 + i_87_, (int) class385.aFloat4673 + i_88_, 924924615);
+			int i_89_ = class390.method6709((int) class385.x + i_87_, (int) class385.z + i_88_, 924924615);
 			int i_90_ = i_85_ / 2;
 			int i_91_ = -i_86_ / 2;
-			int i_92_ = class390.method6709((int) class385.aFloat4671 + i_90_, i_91_ + (int) class385.aFloat4673, 533438354);
+			int i_92_ = class390.method6709((int) class385.x + i_90_, i_91_ + (int) class385.z, 533438354);
 			int i_93_ = -i_85_ / 2;
 			int i_94_ = i_86_ / 2;
-			int i_95_ = class390.method6709((int) class385.aFloat4671 + i_93_, i_94_ + (int) class385.aFloat4673, 656324571);
+			int i_95_ = class390.method6709((int) class385.x + i_93_, i_94_ + (int) class385.z, 656324571);
 			int i_96_ = i_85_ / 2;
 			int i_97_ = i_86_ / 2;
-			int i_98_ = class390.method6709((int) class385.aFloat4671 + i_96_, (int) class385.aFloat4673 + i_97_, -1831727640);
+			int i_98_ = class390.method6709((int) class385.x + i_96_, (int) class385.z + i_97_, -1831727640);
 			int i_99_ = i_89_ < i_92_ ? i_89_ : i_92_;
 			int i_100_ = i_95_ < i_98_ ? i_95_ : i_98_;
 			int i_101_ = i_92_ < i_98_ ? i_92_ : i_98_;
@@ -494,13 +494,13 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 			int i_105_ = i_89_ + i_98_;
 			if (i_92_ + i_95_ < i_105_)
 				i_105_ = i_92_ + i_95_;
-			i_105_ = (i_105_ >> 1) - (int) class385.aFloat4672;
+			i_105_ = (i_105_ >> 1) - (int) class385.y;
 			if (i_105_ != 0)
 				class294.method5219(0.0F, (float) i_105_, 0.0F);
 		}
 		class385.method6624();
-		Class385 class385_106_ = method11166().aClass385_3595;
-		class294.method5219(class385_106_.aFloat4671, class385_106_.aFloat4672 - 10.0F, class385_106_.aFloat4673);
+		Vector3 class385_106_ = method11166().aClass385_3595;
+		class294.method5219(class385_106_.x, class385_106_.y - 10.0F, class385_106_.z);
 		Class285 class285 = Class470.method7824(true, (byte) -5);
 		((Class521_Sub1_Sub2_Sub1) this).aBool10419 = false;
 		((Class521_Sub1_Sub2_Sub1) this).anInt10418 = 0;

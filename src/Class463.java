@@ -3,7 +3,7 @@
  */
 
 public class Class463 {
-	static Index aClass317_5549;
+	static Index SPRITES_INDEX;
 	int anInt5550;
 	int anInt5551;
 	boolean aBool5552;
@@ -57,7 +57,7 @@ public class Class463 {
 		}
 	}
 
-	static int[] method7725(Class282_Sub23 class282_sub23, byte i) {
+	static int[] method7725(TCPMessage class282_sub23, byte i) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(518);
 		int[] is = new int[4];
 		for (int i_1_ = 0; i_1_ < 4; i_1_++)
@@ -71,7 +71,7 @@ public class Class463 {
 			class282_sub35.writeInt((int) (Math.random() * 9.9999999E7));
 		class282_sub35.writeShort((int) (Math.random() * 9.9999999E7), 1417031095);
 		class282_sub35.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
+		class282_sub23.buffer.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 		return is;
 	}
 
@@ -93,8 +93,8 @@ public class Class463 {
 			int i_9_ = (-699068928 * class521_sub1_sub1_sub2.anInt10328 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
 			int i_10_ = (-1654454784 * class521_sub1_sub1_sub2.anInt10341 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
 			int i_11_ = (-737490432 * class521_sub1_sub1_sub2.anInt10343 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
-			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			class521_sub1_sub1_sub2.method11172((float) (((i_6_ - i_7_) * i_8_ + i_10_ * i_7_) / i_6_), (float) (int) class385.aFloat4672, (float) (((i_6_ - i_7_) * i_9_ + i_7_ * i_11_) / i_6_));
+			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+			class521_sub1_sub1_sub2.method11172((float) (((i_6_ - i_7_) * i_8_ + i_10_ * i_7_) / i_6_), (float) (int) class385.y, (float) (((i_6_ - i_7_) * i_9_ + i_7_ * i_11_) / i_6_));
 		}
 		class521_sub1_sub1_sub2.anInt10366 = 0;
 		class521_sub1_sub1_sub2.method15791((class521_sub1_sub1_sub2.anInt10346 * -445026593), false, (byte) 9);
@@ -109,7 +109,7 @@ public class Class463 {
 			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_21_], i_19_, i_20_, i_15_, (byte) 2);
 	}
 
-	static final void method7729(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method7729(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		class118.anInt1430 = (class527.intStack[class527.anInt7012 * 1942118537]) * -1019275441;
 		class118.anInt1431 = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) * 1761303305);

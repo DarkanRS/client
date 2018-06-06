@@ -11,8 +11,8 @@ public class MapRegion {
 	Class106 aClass106_3165;
 	Class329_Sub1 aClass329_Sub1_3166;
 	Class329_Sub1 aClass329_Sub1_3167;
-	Class219 aClass219_3168 = new Class219();
-	Class219 aClass219_3169 = new Class219();
+	CoordGrid coordGrid = new CoordGrid();
+	CoordGrid aClass219_3169 = new CoordGrid();
 	int anInt3170;
 	boolean aBool3171;
 	int anInt3172;
@@ -59,8 +59,8 @@ public class MapRegion {
 		Class256 class256 = class257_0_.aClass256_3164;
 		class257_0_.aClass256_3164 = this.aClass256_3164;
 		this.aClass256_3164 = class256;
-		class257_0_.aClass219_3169 = this.aClass219_3168;
-		this.aClass219_3169 = class257_0_.aClass219_3168;
+		class257_0_.aClass219_3169 = this.coordGrid;
+		this.aClass219_3169 = class257_0_.coordGrid;
 		this.aClass239_3175.method4039(class257_0_.method4435((byte) 1), (byte) 60);
 	}
 
@@ -78,8 +78,8 @@ public class MapRegion {
 
 	void method4422(byte i) {
 		method4456(Class480.method8046(Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method12615(-765902295), (byte) 100), 375022217);
-		int i_1_ = this.aClass219_3168.anInt2711 * 1948093437;
-		int i_2_ = this.aClass219_3168.anInt2712 * -1002240017;
+		int i_1_ = this.coordGrid.x * 1948093437;
+		int i_2_ = this.coordGrid.y * -1002240017;
 		int i_3_ = (-360258135 * Class31.anInt361 >> 12) + (i_1_ >> 3);
 		int i_4_ = (i_2_ >> 3) + (Class246.anInt3029 * 413271601 >> 12);
 		Class84.myPlayer.aByte7967 = (byte) 0;
@@ -432,13 +432,13 @@ public class MapRegion {
 				Class365.method6298(i_102_, 1265357038);
 				Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -532223437), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -29);
 			}
-			if (this.aClass219_3168 != null) {
-				this.aClass219_3169 = this.aClass219_3168;
+			if (this.coordGrid != null) {
+				this.aClass219_3169 = this.coordGrid;
 			} else {
-				this.aClass219_3169 = new Class219(0, 0, 0);
+				this.aClass219_3169 = new CoordGrid(0, 0, 0);
 			}
-			this.aClass219_3168 = new Class219(0, (-1892499075 * this.anInt3170 - (-2082656295 * this.anInt3172 >> 4)) * 8, (this.anInt3207 * -975658881 - (315871463 * this.anInt3194 >> 4)) * 8);
-			this.aClass282_Sub50_Sub6_3176 = Class291.method5175(1948093437 * (this.aClass219_3168.anInt2711), (this.aClass219_3168.anInt2712) * -1002240017);
+			this.coordGrid = new CoordGrid(0, (-1892499075 * this.anInt3170 - (-2082656295 * this.anInt3172 >> 4)) * 8, (this.anInt3207 * -975658881 - (315871463 * this.anInt3194 >> 4)) * 8);
+			this.aClass282_Sub50_Sub6_3176 = Class291.method5175(1948093437 * (this.coordGrid.x), (this.coordGrid.y) * -1002240017);
 			this.aClass283_3180 = null;
 			if (!this.aBool3171) {
 				method4459(i_102_, (byte) 119);
@@ -447,8 +447,8 @@ public class MapRegion {
 	}
 
 	void method4459(int i, byte i_104_) {
-		int i_105_ = (this.aClass219_3168.anInt2711 * 1948093437 - 1948093437 * this.aClass219_3169.anInt2711);
-		int i_106_ = (this.aClass219_3168.anInt2712 * -1002240017 - this.aClass219_3169.anInt2712 * -1002240017);
+		int i_105_ = (this.coordGrid.x * 1948093437 - 1948093437 * this.aClass219_3169.x);
+		int i_106_ = (this.coordGrid.y * -1002240017 - this.aClass219_3169.y * -1002240017);
 		if (18 == i) {
 			for (int i_107_ = 0; i_107_ < 1658163325 * client.anInt7210; i_107_++) {
 				Class282_Sub47 class282_sub47 = client.aClass282_Sub47Array7209[i_107_];
@@ -458,9 +458,9 @@ public class MapRegion {
 						class521_sub1_sub1_sub2_sub2.regionBaseX[i_108_] -= i_105_;
 						class521_sub1_sub1_sub2_sub2.regionBaseY[i_108_] -= i_106_;
 					}
-					Class385 class385 = Class385.method6623(class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-					class385.aFloat4671 -= i_105_ * 512;
-					class385.aFloat4673 -= 512 * i_106_;
+					Vector3 class385 = Vector3.method6623(class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+					class385.x -= i_105_ * 512;
+					class385.z -= 512 * i_106_;
 					class521_sub1_sub1_sub2_sub2.method11171(class385);
 					class385.method6624();
 				}
@@ -474,11 +474,11 @@ public class MapRegion {
 				Class282_Sub47 class282_sub47 = client.aClass282_Sub47Array7209[i_111_];
 				if (null != class282_sub47) {
 					NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-					Class385 class385 = Class385.method6623(class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-					class385.aFloat4671 -= i_105_ * 512;
-					class385.aFloat4673 -= 512 * i_106_;
+					Vector3 class385 = Vector3.method6623(class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+					class385.x -= i_105_ * 512;
+					class385.z -= 512 * i_106_;
 					class521_sub1_sub1_sub2_sub2.method11171(class385);
-					if ((int) class385.aFloat4671 < 0 || (int) class385.aFloat4671 > i_109_ || (int) class385.aFloat4673 < 0 || (int) class385.aFloat4673 > i_110_) {
+					if ((int) class385.x < 0 || (int) class385.x > i_109_ || (int) class385.z < 0 || (int) class385.z > i_110_) {
 						class521_sub1_sub1_sub2_sub2.method16166(null, -1796042830);
 						class282_sub47.unlink(-371378792);
 						bool = true;
@@ -519,9 +519,9 @@ public class MapRegion {
 					class521_sub1_sub1_sub2_sub1.regionBaseX[i_116_] -= i_105_;
 					class521_sub1_sub1_sub2_sub1.regionBaseY[i_116_] -= i_106_;
 				}
-				Class385 class385 = Class385.method6623(class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-				class385.aFloat4671 -= i_105_ * 512;
-				class385.aFloat4673 -= i_106_ * 512;
+				Vector3 class385 = Vector3.method6623(class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+				class385.x -= i_105_ * 512;
+				class385.z -= i_106_ * 512;
 				class521_sub1_sub1_sub2_sub1.method11171(class385);
 				class385.method6624();
 			}
@@ -551,9 +551,9 @@ public class MapRegion {
 		for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-1570433820)); null != class282_sub29; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 4))) {
 			int i_118_ = (int) (class282_sub29.data * -3442165056282524525L >> 28 & 0x3L);
 			int i_119_ = (int) (class282_sub29.data * -3442165056282524525L & 0x3fffL);
-			int i_120_ = (i_119_ - this.aClass219_3168.anInt2711 * 1948093437);
+			int i_120_ = (i_119_ - this.coordGrid.x * 1948093437);
 			int i_121_ = (int) (-3442165056282524525L * class282_sub29.data >> 14 & 0x3fffL);
-			int i_122_ = (i_121_ - this.aClass219_3168.anInt2712 * -1002240017);
+			int i_122_ = (i_121_ - this.coordGrid.y * -1002240017);
 			if (null != this.sceneObjectManager) {
 				if (i_120_ < 0 || i_122_ < 0 || i_120_ >= -2082656295 * this.anInt3172 || i_122_ >= this.anInt3194 * 315871463 || i_120_ >= (this.sceneObjectManager.anInt2617 * -1912960305) || i_122_ >= -18177099 * (this.sceneObjectManager.anInt2603)) {
 					if (this.aClass256_3163 != Class256.aClass256_3161) {
@@ -575,8 +575,8 @@ public class MapRegion {
 			client.anInt7376 -= i_106_ * 1139486208;
 			Class11.anInt122 -= -1024929280 * i_105_;
 			Class266.anInt3289 -= 1261918720 * i_106_;
-			if (-672443707 * Class262.anInt3240 != 4) {
-				Class262.anInt3240 = 770488346;
+			if (-672443707 * NativeLibraryLoader.anInt3240 != 4) {
+				NativeLibraryLoader.anInt3240 = 770488346;
 				Class86.anInt833 = -1509271845;
 				Class508.anInt5864 = 987778595;
 			}
@@ -584,7 +584,7 @@ public class MapRegion {
 			Class296.anInt3534 -= 39297289 * i_105_;
 			Class282_Sub44.anInt8064 -= i_106_ * -1587752955;
 			Class96_Sub13.anInt9368 -= -2005398665 * i_105_;
-			Class369.anInt4280 -= i_106_ * -772343735;
+			OutgoingLoginPacket.anInt4280 -= i_106_ * -772343735;
 			Class31.anInt361 -= 1797075456 * i_105_;
 			Class246.anInt3029 -= i_106_ * 52797952;
 			if (Math.abs(i_105_) > -2082656295 * this.anInt3172 || Math.abs(i_106_) > this.anInt3194 * 315871463) {
@@ -678,8 +678,8 @@ public class MapRegion {
 		for (int i_125_ = 0; i_125_ < this.mapDataBuffer.length; i_125_++) {
 			byte[] is = this.landscapeDataBuffer[i_125_];
 			if (null != is) {
-				int regionX = (64 * (this.regionIds[i_125_] >> 8) - (this.aClass219_3168.anInt2711 * 1948093437));
-				int regionY = ((this.regionIds[i_125_] & 0xff) * 64 - (this.aClass219_3168.anInt2712 * -1002240017));
+				int regionX = (64 * (this.regionIds[i_125_] >> 8) - (this.coordGrid.x * 1948093437));
+				int regionY = ((this.regionIds[i_125_] & 0xff) * 64 - (this.coordGrid.y * -1002240017));
 				if (this.aClass256_3163.method4410((byte) 64)) {
 					regionX = 10;
 					regionY = 10;
@@ -691,8 +691,8 @@ public class MapRegion {
 			}
 			is = this.landscapeDataUnderlayBuffer[i_125_];
 			if (is != null) {
-				int i_129_ = (64 * (this.regionIds[i_125_] >> 8) - (1948093437 * this.aClass219_3168.anInt2711));
-				int i_130_ = ((this.regionIds[i_125_] & 0xff) * 64 - (-1002240017 * this.aClass219_3168.anInt2712));
+				int i_129_ = (64 * (this.regionIds[i_125_] >> 8) - (1948093437 * this.coordGrid.x));
+				int i_130_ = ((this.regionIds[i_125_] & 0xff) * 64 - (-1002240017 * this.coordGrid.y));
 				if (this.aClass256_3163.method4410((byte) 9)) {
 					i_129_ = 10;
 					i_130_ = 10;
@@ -908,8 +908,8 @@ public class MapRegion {
 		Class405.method6823(-734889653);
 		Class48_Sub2.method14571((byte) 0);
 		if (NamedFileReference.method867(-1009865629) == Class279.aClass279_3368 && client.aClass184_7475.method3053((byte) -27) != null && -1741204137 * client.anInt7166 == 18) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4609, client.aClass184_7475.aClass432_2283, 582872651);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(1057001181);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4609, client.aClass184_7475.isaac, 582872651);
+			class282_sub23.buffer.writeInt(1057001181);
 			client.aClass184_7475.method3049(class282_sub23, 278728590);
 		}
 		if (!this.aClass256_3163.method4410((byte) 29)) {
@@ -939,7 +939,7 @@ public class MapRegion {
 		} else {
 			Class365.method6298(13, 850026987);
 			if (client.aClass184_7475.method3053((byte) -84) != null) {
-				Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.aClass432_2283, 1466063096);
+				TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.isaac, 1466063096);
 				client.aClass184_7475.method3049(class282_sub23, 1512043524);
 			}
 		}
@@ -972,18 +972,18 @@ public class MapRegion {
 				RsByteBuffer class282_sub35 = new RsByteBuffer(is_151_);
 				int i_152_ = this.regionIds[i_150_] >> 8;
 				int i_153_ = this.regionIds[i_150_] & 0xff;
-				int i_154_ = i_152_ * 64 - 1948093437 * (this.aClass219_3168.anInt2711);
-				int i_155_ = i_153_ * 64 - (this.aClass219_3168.anInt2712 * -1002240017);
+				int i_154_ = i_152_ * 64 - 1948093437 * (this.coordGrid.x);
+				int i_155_ = i_153_ * 64 - (this.coordGrid.y * -1002240017);
 				if (!this.aBool3171) {
 					Class282_Sub20_Sub24.method15391(-1503224937);
 				}
-				class329_sub1.method5839(class282_sub35, i_154_, i_155_, 1948093437 * this.aClass219_3168.anInt2711, -1002240017 * this.aClass219_3168.anInt2712, this.aClass336Array3182, (byte) -77);
+				class329_sub1.method5839(class282_sub35, i_154_, i_155_, 1948093437 * this.coordGrid.x, -1002240017 * this.coordGrid.y, this.aClass336Array3182, (byte) -77);
 				class329_sub1.method12471(Renderers.SOFTWARE_RENDERER, class282_sub35, i_154_, i_155_, -885428044);
 			}
 		}
 		for (int i_156_ = 0; i_156_ < i_149_; i_156_++) {
-			int i_157_ = (64 * (this.regionIds[i_156_] >> 8) - this.aClass219_3168.anInt2711 * 1948093437);
-			int i_158_ = ((this.regionIds[i_156_] & 0xff) * 64 - this.aClass219_3168.anInt2712 * -1002240017);
+			int i_157_ = (64 * (this.regionIds[i_156_] >> 8) - this.coordGrid.x * 1948093437);
+			int i_158_ = ((this.regionIds[i_156_] & 0xff) * 64 - this.coordGrid.y * -1002240017);
 			byte[] is_159_ = is[i_156_];
 			if (null == is_159_ && this.anInt3207 * -975658881 < 800) {
 				if (!this.aBool3171) {
@@ -1042,8 +1042,8 @@ public class MapRegion {
 		for (int i_175_ = 0; i_175_ < i_174_; i_175_++) {
 			byte[] is_176_ = is[i_175_];
 			if (is_176_ != null) {
-				int i_177_ = ((this.regionIds[i_175_] >> 8) * 64 - (this.aClass219_3168.anInt2711 * 1948093437));
-				int i_178_ = ((this.regionIds[i_175_] & 0xff) * 64 - (-1002240017 * this.aClass219_3168.anInt2712));
+				int i_177_ = ((this.regionIds[i_175_] >> 8) * 64 - (this.coordGrid.x * 1948093437));
+				int i_178_ = ((this.regionIds[i_175_] & 0xff) * 64 - (-1002240017 * this.coordGrid.y));
 				if (!this.aBool3171) {
 					Class282_Sub20_Sub24.method15391(-233080678);
 				}
@@ -1078,8 +1078,8 @@ public class MapRegion {
 					int i_186_ = i_185_ >> 14;
 					int i_187_ = i_185_ >> 7 & 0x3f;
 					int i_188_ = i_185_ & 0x3f;
-					int x = ((this.regionIds[regionIdx] >> 8) * 64 - (1948093437 * this.aClass219_3168.anInt2711) + i_187_);
-					int y = (64 * (this.regionIds[regionIdx] & 0xff) - (this.aClass219_3168.anInt2712 * -1002240017) + i_188_);
+					int x = ((this.regionIds[regionIdx] >> 8) * 64 - (1948093437 * this.coordGrid.x) + i_187_);
+					int y = (64 * (this.regionIds[regionIdx] & 0xff) - (this.coordGrid.y * -1002240017) + i_188_);
 					NPCDefinitions npcDefs = (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(stream.readUnsignedShort(), (byte) -4));
 					Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754(i_184_));
 					if (null == class282_sub47 && (npcDefs.aByte4900 & 0x1) > 0 && x >= 0 && (x + npcDefs.anInt4858 * 1203434505 < -2082656295 * this.anInt3172) && y >= 0 && (npcDefs.anInt4858 * 1203434505 + y < this.anInt3194 * 315871463)) {
@@ -1102,7 +1102,7 @@ public class MapRegion {
 	}
 
 	public void method4485(int i) {
-		this.aClass219_3168 = new Class219();
+		this.coordGrid = new CoordGrid();
 		this.anInt3207 = 0;
 		this.anInt3170 = 0;
 	}
@@ -1162,7 +1162,7 @@ public class MapRegion {
 				i_250_ += i_253_;
 			}
 		}
-		int i_257_ = Class262.anIntArrayArray3239.length;
+		int i_257_ = NativeLibraryLoader.anIntArrayArray3239.length;
 		this.regionIds = new int[i_257_];
 		this.mapDataArchiveIds = new int[i_257_];
 		this.landscapeDataArchiveIds = new int[i_257_];
@@ -1205,8 +1205,8 @@ public class MapRegion {
 				}
 			}
 		}
-		this.xteas = Class262.anIntArrayArray3239;
-		Class262.anIntArrayArray3239 = null;
+		this.xteas = NativeLibraryLoader.anIntArrayArray3239;
+		NativeLibraryLoader.anIntArrayArray3239 = null;
 		method4458(-2082656295 * this.anInt3172 >> 4, this.anInt3194 * 315871463 >> 4, 18, false, 1473478915);
 	}
 
@@ -1230,8 +1230,8 @@ public class MapRegion {
 		return null;
 	}
 
-	public Class219 method4519(int i) {
-		return this.aClass219_3168;
+	public CoordGrid getCoordGrid(int i) {
+		return this.coordGrid;
 	}
 
 	public int method4522(int i) {
@@ -1288,7 +1288,7 @@ public class MapRegion {
 			this.aByteArrayArrayArray3162 = class257_406_.aByteArrayArrayArray3162;
 			this.aClass256_3163 = class257_406_.aClass256_3163;
 			this.aClass106_3165 = class257_406_.aClass106_3165;
-			this.aClass219_3168 = class257_406_.aClass219_3168;
+			this.coordGrid = class257_406_.coordGrid;
 			this.aClass219_3169 = class257_406_.aClass219_3169;
 			this.anInt3170 = class257_406_.anInt3170 * 1;
 			this.anInt3207 = 1 * class257_406_.anInt3207;
@@ -1322,8 +1322,8 @@ public class MapRegion {
 
 	static final void method4558(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = class513.aClass118_5886;
-		Class98 class98 = class513.aClass98_5885;
+		IComponentDefinitions class118 = class513.aClass118_5886;
+		Interface class98 = class513.aClass98_5885;
 		Class13.method505(class118, class98, class527, (byte) 1);
 	}
 

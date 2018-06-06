@@ -7,7 +7,7 @@ public class Class16 {
 	static int anInt136;
 	static int anInt137;
 	static NativeSprite[] aClass160Array138;
-	public static Class414 aClass414_139;
+	public static FontMetrics aClass414_139;
 	static int anInt140;
 	static int anInt141;
 	static int anInt142;
@@ -263,24 +263,24 @@ public class Class16 {
 
 	static final void method563(CS2Executor class527, int i) {
 		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_6_, (byte) 11);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 11);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		RsByteBuffer.method13292(class118, class98, class527, (byte) 60);
 	}
 
 	static final void method564(CS2Executor class527, byte i) {
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_7_, (byte) 53);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
-		Class262.method4651(class118, class98, class527, (byte) 59);
+		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 53);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
+		NativeLibraryLoader.method4651(class118, class98, class527, (byte) 59);
 	}
 
 	static final void method565(CS2Executor class527, int i) {
 		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class108 class108 = Class180.method3032(i_8_, (byte) -1);
+		ChatLine class108 = Class180.method3032(i_8_, (byte) -1);
 		String string = "";
-		if (null != class108 && null != class108.aString1088)
-			string = class108.aString1088;
+		if (null != class108 && null != class108.nameSimple)
+			string = class108.nameSimple;
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
@@ -330,10 +330,10 @@ public class Class16 {
 						LoadingStage.method6681(4, (Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410)), (byte) -31);
 					else {
 						Class184 class184 = Class468_Sub20.method12807(1039135585);
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4578, class184.aClass432_2283, 732263274);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class108.method1846(string, -1697918722) + 1);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4578, class184.isaac, 732263274);
+						class282_sub23.buffer.writeByte(ChatLine.getLength(string) + 1);
+						class282_sub23.buffer.writeString(string);
+						class282_sub23.buffer.writeByte(bool ? 1 : 0);
 						class184.method3049(class282_sub23, -1139033433);
 					}
 				}

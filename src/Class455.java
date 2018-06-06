@@ -9,46 +9,46 @@ public abstract class Class455 {
 		/* empty */
 	}
 
-	static void method7553(Class118 class118, int i, int i_0_, int i_1_) {
+	static void method7553(IComponentDefinitions class118, int i, int i_0_, int i_1_) {
 		if (client.aBool7344) {
 			AttributeDefault class437 = (Class96_Sub12.anInt9319 * -1605351655 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069((-1605351655 * (Class96_Sub12.anInt9319)), (byte) 0) : null);
 			if (client.method11633(class118).method12181(2135995178) && (Class506.anInt5858 * 1310510077 & 0x20) != 0 && (class437 == null || (class118.method1997((Class96_Sub12.anInt9319 * -1605351655), -1741480635 * class437.anInt5337, 1315662275) != class437.anInt5337 * -1741480635)))
-				PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(class118.aString1369).toString(), -239192305 * Defaults8Loader.anInt5932, 58, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1704442537);
+				PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(class118.aString1369).toString(), -239192305 * Defaults8Loader.anInt5932, 58, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.idHash * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.idHash), false, -1704442537);
 		}
 		for (int i_2_ = 9; i_2_ >= 5; i_2_--) {
 			String string = ItemIndexLoader.method7171(class118, i_2_, (byte) -85);
 			if (null != string)
-				PlayerAppearance.method4032(string, class118.aString1369, Class520.method11163(class118, i_2_, 556653013), 1007, -56249735 * class118.anInt1426, (long) (i_2_ + 1), class118.anInt1288 * 1924549737, -1952846363 * class118.anInt1287, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.anInt1287 * -1952846363), false, -976206052);
+				PlayerAppearance.method4032(string, class118.aString1369, Class520.method11163(class118, i_2_, 556653013), 1007, -56249735 * class118.anInt1426, (long) (i_2_ + 1), class118.anInt1288 * 1924549737, -1952846363 * class118.idHash, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.idHash * -1952846363), false, -976206052);
 		}
 		String string = Class346.method6157(class118, -948753255);
 		if (string != null)
-			PlayerAppearance.method4032(string, class118.aString1369, class118.anInt1378 * 1289545277, 25, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.anInt1287, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.anInt1287 * -1952846363), false, -1589662667);
+			PlayerAppearance.method4032(string, class118.aString1369, class118.anInt1378 * 1289545277, 25, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.idHash, true, false, (long) (1924549737 * class118.anInt1288 << 32 | class118.idHash * -1952846363), false, -1589662667);
 		for (int i_3_ = 4; i_3_ >= 0; i_3_--) {
 			String string_4_ = ItemIndexLoader.method7171(class118, i_3_, (byte) 19);
 			if (null != string_4_)
-				PlayerAppearance.method4032(string_4_, class118.aString1369, Class520.method11163(class118, i_3_, 1809769976), 57, class118.anInt1426 * -56249735, (long) (i_3_ + 1), 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (class118.anInt1288 * 1924549737 << 32 | -1952846363 * class118.anInt1287), false, -1644118104);
+				PlayerAppearance.method4032(string_4_, class118.aString1369, Class520.method11163(class118, i_3_, 1809769976), 57, class118.anInt1426 * -56249735, (long) (i_3_ + 1), 1924549737 * class118.anInt1288, class118.idHash * -1952846363, true, false, (long) (class118.anInt1288 * 1924549737 << 32 | -1952846363 * class118.idHash), false, -1644118104);
 		}
 		if (client.method11633(class118).method12182(-1173401009)) {
 			if (class118.aString1348 != null)
-				PlayerAppearance.method4032(class118.aString1348, "", -1, 30, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.anInt1287, true, false, (long) ((1924549737 * class118.anInt1288 << 32) | (class118.anInt1287 * -1952846363)), false, -1336342241);
+				PlayerAppearance.method4032(class118.aString1348, "", -1, 30, -56249735 * class118.anInt1426, 0L, 1924549737 * class118.anInt1288, -1952846363 * class118.idHash, true, false, (long) ((1924549737 * class118.anInt1288 << 32) | (class118.idHash * -1952846363)), false, -1336342241);
 			else
-				PlayerAppearance.method4032(Message.CONTINUE.translate(Class223.CURRENT_LANGUAGE, -1421679788), "", -1, 30, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.anInt1287 * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.anInt1287), false, -1542959326);
+				PlayerAppearance.method4032(Message.CONTINUE.translate(Class223.CURRENT_LANGUAGE, -1421679788), "", -1, 30, class118.anInt1426 * -56249735, 0L, 1924549737 * class118.anInt1288, class118.idHash * -1952846363, true, false, (long) (1924549737 * class118.anInt1288 << 32 | -1952846363 * class118.idHash), false, -1542959326);
 		}
 	}
 
-	static void method7554(Class98 class98, Class118 class118, int i) {
+	static void method7554(Interface class98, IComponentDefinitions class118, int i) {
 		if (null != class118) {
 			if (class118.anInt1288 * 1924549737 != -1) {
-				Class118 class118_5_ = class98.method1618(class118.anInt1305 * 2110532063, (byte) 12);
+				IComponentDefinitions class118_5_ = class98.method1618(class118.anInt1305 * 2110532063, (byte) 12);
 				if (null != class118_5_) {
 					if (class118_5_.aClass118Array1439 == class118_5_.aClass118Array1438) {
-						class118_5_.aClass118Array1439 = (new Class118[class118_5_.aClass118Array1438.length]);
+						class118_5_.aClass118Array1439 = (new IComponentDefinitions[class118_5_.aClass118Array1438.length]);
 						class118_5_.aClass118Array1439[class118_5_.aClass118Array1439.length - 1] = class118;
 						Class503.method8359(class118_5_.aClass118Array1438, 0, class118_5_.aClass118Array1439, 0, class118.anInt1288 * 1924549737);
 						Class503.method8359(class118_5_.aClass118Array1438, (1924549737 * class118.anInt1288 + 1), class118_5_.aClass118Array1439, class118.anInt1288 * 1924549737, ((class118_5_.aClass118Array1438).length - class118.anInt1288 * 1924549737 - 1));
 					} else {
 						int i_6_ = 0;
-						Class118[] class118s;
+						IComponentDefinitions[] class118s;
 						for (class118s = class118_5_.aClass118Array1439; (i_6_ < class118s.length && class118s[i_6_] != class118); i_6_++) {
 							/* empty */
 						}
@@ -59,7 +59,7 @@ public abstract class Class455 {
 					}
 				}
 			} else {
-				Class118[] class118s = class98.method1617(-894902521);
+				IComponentDefinitions[] class118s = class98.method1617(-894902521);
 				int i_7_;
 				for (i_7_ = 0; i_7_ < class118s.length && class118s[i_7_] != class118; i_7_++) {
 					/* empty */
@@ -72,12 +72,12 @@ public abstract class Class455 {
 		}
 	}
 
-	static final void method7555(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method7555(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class118.anInt1329 = 589750077;
 		class118.anInt1330 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -636815827);
 		Class109.method1858(class118, (byte) -15);
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-			Class92.method1565(class118.anInt1287 * -1952846363, -624586705);
+			Class92.method1565(class118.idHash * -1952846363, -624586705);
 	}
 
 	static final void method7556(CS2Executor class527, int i) {
@@ -187,15 +187,15 @@ public abstract class Class455 {
 
 	static final void method7560(CS2Executor class527, int i) {
 		int i_31_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_31_, (byte) 59);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_31_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_31_, (byte) 59);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_31_ >> 16];
 		Class336.method6010(class118, class98, class527, -298020679);
 	}
 
 	static final void method7561(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class236.method3983(class118, class98, class527, -1010803403);
 	}
 }

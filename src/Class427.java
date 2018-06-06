@@ -171,9 +171,9 @@ public class Class427 {
 			} else if (class521_sub1_sub1_sub2.faceEntity * -737324181 >= 32768)
 				class521_sub1_sub1_sub2_9_ = (client.players[(-737324181 * class521_sub1_sub1_sub2.faceEntity - 32768)]);
 			if (class521_sub1_sub1_sub2_9_ != null) {
-				Class385 class385 = Class385.method6632((class521_sub1_sub1_sub2.method11166().aClass385_3595), class521_sub1_sub1_sub2_9_.method11166().aClass385_3595);
-				int i_10_ = (int) class385.aFloat4671;
-				int i_11_ = (int) class385.aFloat4673;
+				Vector3 class385 = Vector3.method6632((class521_sub1_sub1_sub2.method11166().aClass385_3595), class521_sub1_sub1_sub2_9_.method11166().aClass385_3595);
+				int i_10_ = (int) class385.x;
+				int i_11_ = (int) class385.z;
 				if (i_10_ != 0 || i_11_ != 0)
 					class521_sub1_sub1_sub2.method15863((int) (Math.atan2((double) i_10_, (double) i_11_) * 2607.5945876176133) & 0x3fff, 1489120080);
 			}
@@ -187,10 +187,10 @@ public class Class427 {
 		} else if (class521_sub1_sub1_sub2 instanceof NPC) {
 			NPC class521_sub1_sub1_sub2_sub2 = (NPC) class521_sub1_sub1_sub2;
 			if (-1929895711 * class521_sub1_sub1_sub2_sub2.anInt10578 != -1 && (0 == class521_sub1_sub1_sub2_sub2.anInt10355 * 1871221471 || (class521_sub1_sub1_sub2_sub2.anInt10366 * -666607017 > 0))) {
-				Class385 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1777766742);
-				int i_12_ = ((int) class385.aFloat4671 - (class521_sub1_sub1_sub2_sub2.anInt10578 * -132062976 - class219.anInt2711 * 495713536 - class219.anInt2711 * 495713536));
-				int i_13_ = ((int) class385.aFloat4673 - (-473524480 * class521_sub1_sub1_sub2_sub2.anInt10577 - class219.anInt2712 * 1124593408 - class219.anInt2712 * 1124593408));
+				Vector3 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+				CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1777766742);
+				int i_12_ = ((int) class385.x - (class521_sub1_sub1_sub2_sub2.anInt10578 * -132062976 - class219.x * 495713536 - class219.x * 495713536));
+				int i_13_ = ((int) class385.z - (-473524480 * class521_sub1_sub1_sub2_sub2.anInt10577 - class219.y * 1124593408 - class219.y * 1124593408));
 				if (i_12_ != 0 || 0 != i_13_)
 					class521_sub1_sub1_sub2_sub2.method15863((int) (Math.atan2((double) i_12_, (double) i_13_) * 2607.5945876176133) & 0x3fff, 1631347734);
 				class521_sub1_sub1_sub2_sub2.anInt10578 = -119874337;

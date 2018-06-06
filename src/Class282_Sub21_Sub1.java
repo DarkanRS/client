@@ -96,7 +96,7 @@ public abstract class Class282_Sub21_Sub1 extends Class282_Sub21 {
 
 	public abstract int method15473(int i);
 
-	static final void method15474(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method15474(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class118.aStringArray1352 = null;
 	}
 }

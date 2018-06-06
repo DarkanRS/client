@@ -39,7 +39,7 @@ public class Class193 {
 
 	static final void method3171(CS2Executor class527, byte i) {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_9_, (byte) 105);
+		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 105);
 		Class209.method3601(class118, class527, -1995583516);
 	}
 

@@ -13,7 +13,7 @@ public abstract class Class109 {
 
 	abstract void method1851();
 
-	static final void method1852(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method1852(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		class118.anInt1311 = 1982656085 * (class527.intStack[1942118537 * class527.anInt7012]);
 		if (class118.anInt1311 * 276864765 > (-354780671 * class118.anInt1376 - 1506818197 * class118.anInt1301))
@@ -27,7 +27,7 @@ public abstract class Class109 {
 			class118.anInt1312 = 0;
 		method1858(class118, (byte) 19);
 		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			Class468_Sub12.method12709(-1952846363 * class118.anInt1287, (byte) 67);
+			Class468_Sub12.method12709(-1952846363 * class118.idHash, (byte) 67);
 	}
 
 	static final void method1853(CS2Executor class527, int i) {
@@ -50,8 +50,8 @@ public abstract class Class109 {
 	static final void method1854(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_4_, 0, 1361822536);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class414.method6947(string, Class182.aClass160Array2261, -106589048);
+		FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_4_, 0, 1361822536);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class414.getWidth(string, Class182.aClass160Array2261);
 	}
 
 	static final void method1855(CS2Executor class527, int i) {
@@ -71,7 +71,7 @@ public abstract class Class109 {
 		Class190.method3148((byte) 35);
 	}
 
-	public static void method1858(Class118 class118, byte i) {
+	public static void method1858(IComponentDefinitions class118, byte i) {
 		if (class118.anInt1450 * 1767918125 == -1048101161 * client.anInt7408)
 			client.aBoolArray7443[-1338917705 * class118.anInt1449] = true;
 	}

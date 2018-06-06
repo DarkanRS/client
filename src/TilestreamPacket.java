@@ -41,7 +41,7 @@ public class TilestreamPacket {
 		aClass364_4218 = new TilestreamPacket(8);
 	}
 
-	static final void method6289(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method6289(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -14681089) != null)
 			string = string.substring(0, string.length() - 1);
@@ -64,8 +64,8 @@ public class TilestreamPacket {
 
 	static final void method6291(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class158.method2732(class118, class98, class527, -1950907302);
 	}
 

@@ -94,8 +94,8 @@ public class MeshModifier {
 	}
 
 	public static void method7041(byte i) {
-		Class468_Sub8.aClass98Array7889 = new Class98[Class388.aClass317_4721.containersCount(-989265149)];
-		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.aClass317_4721.containersCount(-1315651594)];
+		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount(-989265149)];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount(-1315651594)];
 	}
 
 	public static void method7042(byte i) {
@@ -112,10 +112,10 @@ public class MeshModifier {
 	static final void method7043(CS2Executor class527, int i) {
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(1468656099);
 		if (null != class282_sub50_sub6) {
-			boolean bool = (class282_sub50_sub6.method14775(Class291.anInt3472 + Class427.anInt5123 * -861975801, Class291.anInt3473 + Class475.anInt5624 * 483850921, Class517.anIntArray5900, -1687346032));
+			boolean bool = (class282_sub50_sub6.method14775(Class291.anInt3472 + Class427.anInt5123 * -861975801, Class291.anInt3473 + Class475.anInt5624 * 483850921, CS2Runner.anIntArray5900, -1687346032));
 			if (bool) {
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[1];
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = Class517.anIntArray5900[2];
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[1];
+				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[2];
 			} else {
 				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
 				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;

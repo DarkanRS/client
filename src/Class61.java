@@ -670,7 +670,7 @@ public class Class61 {
 			((Class61) this).anInt623 += -115958176;
 		anInt632 = class282_sub35.readUnsignedShort() * -1571510773;
 		anInt641 = class282_sub35.readUnsignedByte() * 2065781847;
-		aString622 = class282_sub35.readString(1873945985);
+		aString622 = class282_sub35.readString();
 		if (i_63_ >= 4)
 			class282_sub35.readInt();
 		aBool624 = class282_sub35.readUnsignedByte() == 1;
@@ -731,7 +731,7 @@ public class Class61 {
 						long l = class282_sub35.readLong(1934711036);
 						((Class61) this).aClass465_629.method7765(new Class282_Sub45(l), (long) i_69_);
 					} else if (i_70_ == 2) {
-						String string = class282_sub35.readString(-87216806);
+						String string = class282_sub35.readString();
 						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), (long) i_69_);
 					}
 				}
@@ -1109,7 +1109,7 @@ public class Class61 {
 	}
 
 	static final void method1254(CS2Executor class527, int i) {
-		class527.instrPtr += (class527.unknown[class527.instrPtr * 301123709]) * -1051529003;
+		class527.instrPtr += (class527.intOpValues[class527.instrPtr * 301123709]) * -1051529003;
 	}
 
 	static final void method1255(CS2Executor class527, int i) {

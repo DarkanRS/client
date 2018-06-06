@@ -13,15 +13,15 @@ public class Class363 {
 
 	static final void method6282(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class359.method6244(class118, class98, class527, -1411462408);
 	}
 
 	static final void method6283(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class287.method5066(class118, class98, class527, 2045260236);
 	}
 
@@ -35,9 +35,9 @@ public class Class363 {
 	}
 
 	static final void method6286(long l) {
-		Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-		int i = (int) class385.aFloat4671 + 1798620263 * client.anInt7248;
-		int i_1_ = (int) class385.aFloat4673 + client.anInt7250 * -537269317;
+		Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+		int i = (int) class385.x + 1798620263 * client.anInt7248;
+		int i_1_ = (int) class385.z + client.anInt7250 * -537269317;
 		if (Class11.anInt122 * 1762352089 - i < -2000 || Class11.anInt122 * 1762352089 - i > 2000 || 518160421 * Class266.anInt3289 - i_1_ < -2000 || 518160421 * Class266.anInt3289 - i_1_ > 2000) {
 			Class11.anInt122 = i * -2082376599;
 			Class266.anInt3289 = 405117869 * i_1_;
@@ -87,8 +87,8 @@ public class Class363 {
 			i_6_ = 1714233093 * Class44.anInt430;
 			i_7_ = Class8_Sub1.anInt8515 * -1293360775;
 		}
-		Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-		if ((int) class385.aFloat4671 < 512 || (int) class385.aFloat4673 < 512 || ((int) class385.aFloat4671 >= (IndexLoaders.MAP_REGION_DECODER.method4424(735172073) - 1) * 512) || ((int) class385.aFloat4673 >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-1048165287) - 1) * 512))) {
+		Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+		if ((int) class385.x < 512 || (int) class385.z < 512 || ((int) class385.x >= (IndexLoaders.MAP_REGION_DECODER.method4424(735172073) - 1) * 512) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-1048165287) - 1) * 512))) {
 			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
 			for (int i_8_ = 0; i_8_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_8_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_8_].anInt2012 = 1025302087;
@@ -99,10 +99,10 @@ public class Class363 {
 			class521_sub1_sub1_sub2.anInt10345 = 0;
 			i_6_ = Class249.aClass249_3083.aByte3085;
 			i_7_ = 0;
-			class521_sub1_sub1_sub2.method11172((float) (512 * class521_sub1_sub1_sub2.regionBaseX[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.aFloat4672, (float) (class521_sub1_sub1_sub2.regionBaseY[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
+			class521_sub1_sub1_sub2.method11172((float) (512 * class521_sub1_sub1_sub2.regionBaseX[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.y, (float) (class521_sub1_sub1_sub2.regionBaseY[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
-		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.aFloat4671 < 6144 || (int) class385.aFloat4673 < 6144 || ((int) class385.aFloat4671 >= ((IndexLoaders.MAP_REGION_DECODER.method4424(723986373) - 12) * 512)) || ((int) class385.aFloat4673 >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-806842262) - 12) * 512)))) {
+		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.x < 6144 || (int) class385.z < 6144 || ((int) class385.x >= ((IndexLoaders.MAP_REGION_DECODER.method4424(723986373) - 12) * 512)) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-806842262) - 12) * 512)))) {
 			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
 			for (int i_9_ = 0; i_9_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_9_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_9_].anInt2012 = 1025302087;
@@ -113,7 +113,7 @@ public class Class363 {
 			class521_sub1_sub1_sub2.anInt10345 = 0;
 			i_6_ = Class249.aClass249_3083.aByte3085;
 			i_7_ = 0;
-			class521_sub1_sub1_sub2.method11172((float) (class521_sub1_sub1_sub2.regionBaseX[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.aFloat4672, (float) (512 * class521_sub1_sub1_sub2.regionBaseY[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
+			class521_sub1_sub1_sub2.method11172((float) (class521_sub1_sub1_sub2.regionBaseX[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.y, (float) (512 * class521_sub1_sub1_sub2.regionBaseY[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
 		int i_10_ = Class427.method7188(class521_sub1_sub1_sub2, 1919547361);
@@ -121,13 +121,13 @@ public class Class363 {
 		Class302.method5361(class521_sub1_sub1_sub2, i_6_, i_7_, i_10_, 1792753982);
 		Class236.method3985(class521_sub1_sub1_sub2, i_6_, (byte) -27);
 		Class150.method2581(class521_sub1_sub1_sub2, -1454383651);
-		Class381 class381 = Class381.method6455();
-		class381.method6480(Class382.method6508(class521_sub1_sub1_sub2.aClass19_10359.method578((byte) 2)), Class382.method6508(class521_sub1_sub1_sub2.aClass19_10330.method578((byte) 2)), Class382.method6508(class521_sub1_sub1_sub2.aClass19_10360.method578((byte) 2)));
+		Quaternion class381 = Quaternion.create();
+		class381.romYawPitchRoll(Class382.method6508(class521_sub1_sub1_sub2.aClass19_10359.method578((byte) 2)), Class382.method6508(class521_sub1_sub1_sub2.aClass19_10330.method578((byte) 2)), Class382.method6508(class521_sub1_sub1_sub2.aClass19_10360.method578((byte) 2)));
 		class521_sub1_sub1_sub2.method11187(class381);
-		class381.method6477();
+		class381.cache();
 	}
 
-	static final void method6288(Class118 class118, Class98 class98, CS2Executor class527, short i) {
+	static final void method6288(IComponentDefinitions class118, Interface class98, CS2Executor class527, short i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, -37726580);
 		if (null != is)

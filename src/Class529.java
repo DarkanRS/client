@@ -52,9 +52,9 @@ public class Class529 {
 			} else if (i == 4)
 				aBool7044 = false;
 			else if (i == 5)
-				anInt7036 = class282_sub35.read24BitUnsignedInteger((short) 24896) * -724690589;
+				anInt7036 = class282_sub35.read24BitUnsignedInteger() * -724690589;
 			else if (i == 6)
-				anInt7027 = class282_sub35.read24BitUnsignedInteger((short) 29540) * 1334209789;
+				anInt7027 = class282_sub35.read24BitUnsignedInteger() * 1334209789;
 			else if (i == 7) {
 				aShortArrayArray7039 = new short[10][4];
 				aShortArrayArrayArray7040 = new short[10][4][];
@@ -131,9 +131,9 @@ public class Class529 {
 			} else if (i == 4)
 				aBool7044 = false;
 			else if (i == 5)
-				anInt7036 = class282_sub35.read24BitUnsignedInteger((short) 3285) * -724690589;
+				anInt7036 = class282_sub35.read24BitUnsignedInteger() * -724690589;
 			else if (i == 6)
-				anInt7027 = class282_sub35.read24BitUnsignedInteger((short) 31596) * 1334209789;
+				anInt7027 = class282_sub35.read24BitUnsignedInteger() * 1334209789;
 			else if (i == 7) {
 				aShortArrayArray7039 = new short[10][4];
 				aShortArrayArrayArray7040 = new short[10][4][];
@@ -227,9 +227,9 @@ public class Class529 {
 			} else if (i_14_ == 4)
 				aBool7044 = false;
 			else if (i_14_ == 5)
-				anInt7036 = class282_sub35.read24BitUnsignedInteger((short) 24352) * -724690589;
+				anInt7036 = class282_sub35.read24BitUnsignedInteger() * -724690589;
 			else if (i_14_ == 6)
-				anInt7027 = class282_sub35.read24BitUnsignedInteger((short) 20382) * 1334209789;
+				anInt7027 = class282_sub35.read24BitUnsignedInteger() * 1334209789;
 			else if (i_14_ == 7) {
 				aShortArrayArray7039 = new short[10][4];
 				aShortArrayArrayArray7040 = new short[10][4][];
@@ -306,9 +306,9 @@ public class Class529 {
 			} else if (i == 4)
 				aBool7044 = false;
 			else if (i == 5)
-				anInt7036 = class282_sub35.read24BitUnsignedInteger((short) 16697) * -724690589;
+				anInt7036 = class282_sub35.read24BitUnsignedInteger() * -724690589;
 			else if (i == 6)
-				anInt7027 = class282_sub35.read24BitUnsignedInteger((short) 26756) * 1334209789;
+				anInt7027 = class282_sub35.read24BitUnsignedInteger() * 1334209789;
 			else if (i == 7) {
 				aShortArrayArray7039 = new short[10][4];
 				aShortArrayArrayArray7040 = new short[10][4][];
@@ -359,18 +359,18 @@ public class Class529 {
 		}
 	}
 
-	static final void method11337(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method11337(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1329 = -756466834;
 		class118.aClass417_1308 = null;
 		class118.anInt1330 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -636815827);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999)
-			Class92.method1565(class118.anInt1287 * -1952846363, -515297121);
+			Class92.method1565(class118.idHash * -1952846363, -515297121);
 	}
 
 	static final void method11338(CS2Executor class527, int i) {
 		int i_30_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_30_, (byte) 115);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_30_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_30_, (byte) 115);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_30_ >> 16];
 		Class346.method6158(class118, class98, class527, -1706086119);
 	}
 

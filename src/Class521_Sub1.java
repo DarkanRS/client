@@ -200,7 +200,7 @@ public abstract class Class521_Sub1 extends Class521 {
 
 	static final void method13041(CS2Executor class527, int i) {
 		int i_34_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_34_, (byte) 107);
+		IComponentDefinitions class118 = Class117.method1981(i_34_, (byte) 107);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
 	}
 }

@@ -22,7 +22,7 @@ public class Class378 {
 		((Class378) this).aMap4525 = new HashMap(((Class378) this).anIntArray4521.length);
 		for (int i_0_ = 0; i_0_ < ((Class378) this).anIntArray4521.length; i_0_++) {
 			int i_1_ = ((Class378) this).anIntArray4521[i_0_];
-			Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i_1_, (byte) 31);
+			FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i_1_, (byte) 31);
 			byte[] is = ((Class378) this).aClass317_4522.getFile(i_1_, -1652257518);
 			Object object = interface35.method216(is, class414, true, 1942118537);
 			((Class378) this).aMap4525.put(Integer.valueOf(i_0_), new Class452(object, class414));
@@ -70,7 +70,7 @@ public class Class378 {
 		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_6_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
-				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 102);
+				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 102);
 				if (class414 == null)
 					return null;
 				class452.anObject5444 = class414;
@@ -80,7 +80,7 @@ public class Class378 {
 		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -751208839);
 		if (is == null)
 			return null;
-		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 94);
+		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 94);
 		if (null == class414)
 			return null;
 		if (bool)
@@ -115,7 +115,7 @@ public class Class378 {
 		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_8_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
-				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 119);
+				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 119);
 				if (class414 == null)
 					return null;
 				class452.anObject5444 = class414;
@@ -125,7 +125,7 @@ public class Class378 {
 		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -36884822);
 		if (is == null)
 			return null;
-		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 90);
+		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 90);
 		if (null == class414)
 			return null;
 		if (bool)
@@ -152,7 +152,7 @@ public class Class378 {
 		((Class378) this).aMap4525 = new HashMap(((Class378) this).anIntArray4521.length);
 		for (int i = 0; i < ((Class378) this).anIntArray4521.length; i++) {
 			int i_12_ = ((Class378) this).anIntArray4521[i];
-			Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i_12_, (byte) 123);
+			FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i_12_, (byte) 123);
 			byte[] is = ((Class378) this).aClass317_4522.getFile(i_12_, -2122877522);
 			Object object = interface35.method216(is, class414, true, 1942118537);
 			((Class378) this).aMap4525.put(Integer.valueOf(i), new Class452(object, class414));
@@ -163,18 +163,18 @@ public class Class378 {
 		((Class378) this).aMap4525 = new HashMap(((Class378) this).anIntArray4521.length);
 		for (int i = 0; i < ((Class378) this).anIntArray4521.length; i++) {
 			int i_13_ = ((Class378) this).anIntArray4521[i];
-			Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i_13_, (byte) 90);
+			FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i_13_, (byte) 90);
 			byte[] is = ((Class378) this).aClass317_4522.getFile(i_13_, -1634640229);
 			Object object = interface35.method216(is, class414, true, 1942118537);
 			((Class378) this).aMap4525.put(Integer.valueOf(i), new Class452(object, class414));
 		}
 	}
 
-	public Class414 method6415(Interface35 interface35, int i, int i_14_) {
+	public FontMetrics method6415(Interface35 interface35, int i, int i_14_) {
 		Class452 class452 = method6409(interface35, i, true, true, (byte) 1);
 		if (class452 == null)
 			return null;
-		return (Class414) class452.anObject5444;
+		return (FontMetrics) class452.anObject5444;
 	}
 
 	public void method6416() {
@@ -233,7 +233,7 @@ public class Class378 {
 		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_19_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
-				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 89);
+				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 89);
 				if (class414 == null)
 					return null;
 				class452.anObject5444 = class414;
@@ -243,7 +243,7 @@ public class Class378 {
 		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -871336505);
 		if (is == null)
 			return null;
-		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 88);
+		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 88);
 		if (null == class414)
 			return null;
 		if (bool)
@@ -270,11 +270,11 @@ public class Class378 {
 		((Class378) this).aClass229_4524.method3858(i, (byte) 11);
 	}
 
-	public Class414 method6425(Interface35 interface35, int i) {
+	public FontMetrics method6425(Interface35 interface35, int i) {
 		Class452 class452 = method6409(interface35, i, true, true, (byte) 1);
 		if (class452 == null)
 			return null;
-		return (Class414) class452.anObject5444;
+		return (FontMetrics) class452.anObject5444;
 	}
 
 	public Object method6426(Interface35 interface35, int i, boolean bool, boolean bool_21_, int i_22_) {
@@ -296,7 +296,7 @@ public class Class378 {
 		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_23_ ? 1 : 0)));
 		if (null != class452) {
 			if (bool && null == class452.anObject5444) {
-				Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 69);
+				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 69);
 				if (class414 == null)
 					return null;
 				class452.anObject5444 = class414;
@@ -306,7 +306,7 @@ public class Class378 {
 		byte[] is = ((Class378) this).aClass317_4522.getFile(i, -1372223000);
 		if (is == null)
 			return null;
-		Class414 class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 52);
+		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 52);
 		if (null == class414)
 			return null;
 		if (bool)
@@ -405,6 +405,6 @@ public class Class378 {
 		ReferenceTable.method5768(5, (byte) -42);
 		client.aClass229_7204.method3858(5, (byte) 17);
 		Class20.aClass229_191.method3858(5, (byte) 15);
-		Class517.aClass229_5901.method3858(5, (byte) -83);
+		CS2Runner.aClass229_5901.method3858(5, (byte) -83);
 	}
 }

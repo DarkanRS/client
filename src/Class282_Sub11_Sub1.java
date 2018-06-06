@@ -87,7 +87,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 		Class59 class59 = (Class59) Class59.aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
-		byte[] is = Class219.aClass317_2710.getFile(0, i, -1383197542);
+		byte[] is = CoordGrid.aClass317_2710.getFile(0, i, -1383197542);
 		class59 = new Class59();
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1621727040);

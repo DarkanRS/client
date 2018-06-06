@@ -204,7 +204,7 @@ public class Class515 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_5_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_5_).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_5_).aClass118_5886;
 		Class235.method3965(class118, class527, -757819357);
 	}
 
@@ -236,10 +236,10 @@ public class Class515 {
 				int i_15_ = i_10_ + ((client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_ + 2][i_8_]) - i_12_) - i_11_;
 				fs[i_8_] = (float) i_12_ + (((float) i_15_ * f + (float) i_14_) * f + (float) i_13_) * f;
 			}
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1394522751);
-			Class31.anInt361 = ((int) fs[0] - 991427072 * class219.anInt2711) * -2043310439;
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1394522751);
+			Class31.anInt361 = ((int) fs[0] - 991427072 * class219.x) * -2043310439;
 			Class109_Sub1.anInt9384 = 126779709 * (int) fs[1];
-			Class246.anInt3029 = (((int) fs[2] - class219.anInt2712 * -2045780480) * 1442943697);
+			Class246.anInt3029 = (((int) fs[2] - class219.y * -2045780480) * 1442943697);
 			float[] fs_16_ = new float[3];
 			int i_17_ = client.anInt7280 * 1277820518;
 			for (int i_18_ = 0; i_18_ < 3; i_18_++) {
@@ -263,7 +263,7 @@ public class Class515 {
 	}
 
 	public static int method8861(int i, int i_29_, boolean bool, int i_30_) {
-		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 1815831231);
+		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1815831231);
 		if (null == class282_sub30)
 			return -1;
 		if (i_29_ < 0 || i_29_ >= (((Class282_Sub30) class282_sub30).anIntArray7710).length)
@@ -285,7 +285,7 @@ public class Class515 {
 
 	static final void method8863(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1299 * 597157617;
 	}
 }

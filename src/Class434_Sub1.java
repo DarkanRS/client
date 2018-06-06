@@ -438,9 +438,9 @@ public class Class434_Sub1 extends Class434 {
 	}
 
 	public static void method12760(int i, int i_57_, int i_58_, int i_59_) {
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(499129134);
-		int i_60_ = class219.anInt2711 * 1948093437 + i_57_;
-		int i_61_ = i_58_ + class219.anInt2712 * -1002240017;
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(499129134);
+		int i_60_ = class219.x * 1948093437 + i_57_;
+		int i_61_ = i_58_ + class219.y * -1002240017;
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && (IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153) && i_57_ >= 0 && i_58_ >= 0 && i_57_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1612887157) && i_58_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1255966708)) {
 			long l = (long) (i << 28 | i_61_ << 14 | i_60_);
 			Class282_Sub29 class282_sub29 = (Class282_Sub29) client.aClass465_7414.method7754(l);

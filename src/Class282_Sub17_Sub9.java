@@ -77,8 +77,8 @@ public class Class282_Sub17_Sub9 extends Class282_Sub17 {
 
 	static final void method15448(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class28.method774(class118, class98, class527, -1296322680);
 	}
 }

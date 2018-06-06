@@ -3,7 +3,7 @@
  */
 
 public class Class41_Sub1_Sub2 extends Class41_Sub1 {
-	public Class384 aClass384_10138 = new Class384();
+	public Matrix44Arr aClass384_10138 = new Matrix44Arr();
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10139;
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10140;
 	Class115 aClass115_10141;
@@ -11,7 +11,7 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10143;
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10144;
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_10145;
-	public Class384 aClass384_10146 = new Class384();
+	public Matrix44Arr aClass384_10146 = new Matrix44Arr();
 	Class49 aClass49_10147;
 	float[] aFloatArray10148 = new float[4];
 	float aFloat10149;
@@ -93,9 +93,9 @@ public class Class41_Sub1_Sub2 extends Class41_Sub1 {
 			aClass101_9218.method1671((((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10140), 0, (((Class41_Sub1_Sub2) this).aClass49_10147.anInterface1_479), (byte) 0);
 		aClass101_9218.method1668((((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10145), aClass384_10146, (byte) -98);
 		aClass101_9218.method1668((((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10154), aClass384_10138, (byte) -57);
-		aClass101_9218.method1689(((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10144, new Class303(((Class41_Sub1_Sub2) this).aFloatArray10148[0], ((Class41_Sub1_Sub2) this).aFloatArray10148[1], ((Class41_Sub1_Sub2) this).aFloatArray10148[2], ((Class41_Sub1_Sub2) this).aFloatArray10148[3]), 1522147633);
-		aClass101_9218.method1689(((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10143, new Class303(((Class41_Sub1_Sub2) this).aFloatArray10150[0], ((Class41_Sub1_Sub2) this).aFloatArray10150[1], ((Class41_Sub1_Sub2) this).aFloatArray10150[2], ((Class41_Sub1_Sub2) this).aFloatArray10150[3]), 1537911160);
-		aClass101_9218.method1689((((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10139), new Class303((((Class41_Sub1_Sub2) this).aFloat10149), 0.0F, 0.0F, 0.0F), 1904707370);
+		aClass101_9218.method1689(((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10144, new Vector4(((Class41_Sub1_Sub2) this).aFloatArray10148[0], ((Class41_Sub1_Sub2) this).aFloatArray10148[1], ((Class41_Sub1_Sub2) this).aFloatArray10148[2], ((Class41_Sub1_Sub2) this).aFloatArray10148[3]), 1522147633);
+		aClass101_9218.method1689(((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10143, new Vector4(((Class41_Sub1_Sub2) this).aFloatArray10150[0], ((Class41_Sub1_Sub2) this).aFloatArray10150[1], ((Class41_Sub1_Sub2) this).aFloatArray10150[2], ((Class41_Sub1_Sub2) this).aFloatArray10150[3]), 1537911160);
+		aClass101_9218.method1689((((Class41_Sub1_Sub2) this).aClass282_Sub21_Sub1_10139), new Vector4((((Class41_Sub1_Sub2) this).aFloat10149), 0.0F, 0.0F, 0.0F), 1904707370);
 		aClass505_Sub2_413.method14002(Class352.aClass352_4098, anInt10152 * 2132515209, anInt10153 * -1213533977, 433051785 * anInt10142, anInt10155 * 25583391);
 	}
 

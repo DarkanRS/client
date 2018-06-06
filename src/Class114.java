@@ -85,8 +85,8 @@ public class Class114 {
 		}
 	}
 
-	static Class414 method1887(int i) {
-		Class414 class414;
+	static FontMetrics method1887(int i) {
+		FontMetrics class414;
 		if (Class20.aBool187) {
 			if (null != Class186.aClass8_2348 && Class176.aClass414_2200 != null)
 				class414 = Class176.aClass414_2200;

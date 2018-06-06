@@ -72,21 +72,21 @@ public class Class93 {
 
 	static final void method1569(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class249.method4280(class118, class98, class527, (byte) 60);
 	}
 
 	static final void method1570(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, true, 1, class527, (byte) -4);
 	}
 
 	static final void method1571(CS2Executor class527, short i) {
 		int i_15_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_15_, (byte) 38);
+		IComponentDefinitions class118 = Class117.method1981(i_15_, (byte) 38);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1336 * 682349813;
 	}
 

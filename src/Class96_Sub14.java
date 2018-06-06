@@ -126,7 +126,7 @@ public class Class96_Sub14 extends Class96 {
 		return is;
 	}
 
-	static boolean method14643(Class118 class118, int i) {
+	static boolean method14643(IComponentDefinitions class118, int i) {
 		Class282_Sub10 class282_sub10 = client.method11633(class118);
 		if (class282_sub10.method12180((byte) 102) > 0)
 			return true;

@@ -108,7 +108,7 @@ public class Class116 {
 
 	static final void method1967(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class96_Sub22.method14680(class118, class527, -493402778);
 	}
 

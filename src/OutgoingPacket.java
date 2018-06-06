@@ -228,7 +228,7 @@ public class OutgoingPacket {
 		class527.anInt7012 -= 283782002;
 		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_2_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		int i_3_ = (IndexLoaders.aClass429_4265.method7214(i_1_, -1579462583).method14918(i_2_, -1799645652).anInt2997 * -1869685303);
+		int i_3_ = (IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_1_, -1579462583).method14918(i_2_, -1799645652).id * -1869685303);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_3_;
 	}
 

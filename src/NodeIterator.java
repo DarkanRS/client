@@ -160,7 +160,7 @@ public class NodeIterator implements Iterator {
 	}
 
 	static final void method7700(CS2Executor class527, int i) {
-		int i_0_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_0_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		Class537 class537 = IndexLoaders.aClass233_5822.method3933(i_0_, 1537794608);
 		if (null == class537)
 			throw new RuntimeException();

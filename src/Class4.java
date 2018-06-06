@@ -50,7 +50,7 @@ public class Class4 {
 
 	static final void method289(CS2Executor class527, byte i) {
 		int i_20_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_20_, (byte) 125);
+		IComponentDefinitions class118 = Class117.method1981(i_20_, (byte) 125);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1343 * -1823193031;
 	}
 
@@ -64,7 +64,7 @@ public class Class4 {
 		class527.anInt7012 -= 283782002;
 		int i_22_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_23_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.aClass331_3535.method5918(i_22_, -1111901377).aCharArray9745[i_23_]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_22_, -1111901377).aCharArray9745[i_23_]);
 	}
 
 	static final void method292(CS2Executor class527, int i) {

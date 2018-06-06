@@ -154,7 +154,7 @@ public class Class210 {
 	}
 
 	public static void method3614(Class397 class397, int i, int i_9_, byte i_10_) {
-		CS2Executor class527 = Class125.method2167(-547790370);
+		CS2Executor class527 = Class125.getNextScriptExecutor(-547790370);
 		Class107.method1834(class397, i, i_9_, class527, (byte) 7);
 	}
 }

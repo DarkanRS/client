@@ -105,7 +105,7 @@ public class Class88 {
 		throw new IllegalArgumentException("");
 	}
 
-	static final void method1494(Class118 class118, CS2Executor class527, byte i) {
+	static final void method1494(IComponentDefinitions class118, CS2Executor class527, byte i) {
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_5_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 2)

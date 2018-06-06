@@ -271,7 +271,7 @@ public class Class111 {
 
 	static final void method1864(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		if (class118.aString1369 == null)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else

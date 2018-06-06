@@ -325,19 +325,19 @@ public final class Class514 {
 		client.anInt7448 = -1044733407;
 		Class473.anInt5606 = 0;
 		Class501.anInt5828 = 0;
-		Class262.anInt3240 = 770488346;
+		NativeLibraryLoader.anInt3240 = 770488346;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
 	}
 
 	static Class149_Sub2 method8842(RsByteBuffer class282_sub35, byte i) {
-		return new Class149_Sub2(class282_sub35.readShort(2062480698), class282_sub35.readShort(1765551436), class282_sub35.readShort(2011697499), class282_sub35.readShort(1939860033), class282_sub35.readShort(1983367129), class282_sub35.readShort(1921374932), class282_sub35.readShort(1913492569), class282_sub35.readShort(1761029580), class282_sub35.read24BitUnsignedInteger((short) 32217), class282_sub35.readUnsignedByte());
+		return new Class149_Sub2(class282_sub35.readShort(2062480698), class282_sub35.readShort(1765551436), class282_sub35.readShort(2011697499), class282_sub35.readShort(1939860033), class282_sub35.readShort(1983367129), class282_sub35.readShort(1921374932), class282_sub35.readShort(1913492569), class282_sub35.readShort(1761029580), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 
 	static final void method8843(CS2Executor class527, byte i) {
 		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_5_, (byte) 47);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 47);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
 		Class363.method6288(class118, class98, class527, (short) 25412);
 	}
 

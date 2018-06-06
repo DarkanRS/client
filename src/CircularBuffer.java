@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class491 {
+public class CircularBuffer {
 	static byte[][] aByteArrayArray5767;
 	static int anInt5768 = 0;
 	static int anInt5769 = 0;
@@ -11,45 +11,13 @@ public class Class491 {
 	static int anInt5772 = 0;
 	static int[] anIntArray5773;
 
-	public static synchronized void method8237(byte[] is) {
-		if (is.length == 100 && anInt5768 * -1753327595 < 1000) {
-			aByteArrayArray5767[(anInt5768 += -608782531) * -1753327595 - 1] = is;
-		} else if (5000 == is.length && anInt5769 * -495226665 < 250) {
-			aByteArrayArray5771[(anInt5769 += 758153959) * -495226665 - 1] = is;
-		} else if (30000 == is.length && -1159034629 * anInt5772 < 50) {
-			aByteArrayArray5770[(anInt5772 += -1912454605) * -1159034629 - 1] = is;
-		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				if (is.length == anIntArray5773[i] && Class412.anIntArray4962[i] < (IcmpService_Sub1.aByteArrayArrayArray7963[i]).length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i][Class412.anIntArray4962[i]++] = is;
-					break;
-				}
-			}
-		}
-	}
-
-	public static void method8238(int[] is, int[] is_0_) {
-		if (is == null || is_0_ == null) {
-			anIntArray5773 = null;
-			Class412.anIntArray4962 = null;
-			IcmpService_Sub1.aByteArrayArrayArray7963 = null;
-		} else {
-			anIntArray5773 = is;
-			Class412.anIntArray4962 = new int[is.length];
-			IcmpService_Sub1.aByteArrayArrayArray7963 = new byte[is.length][][];
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				IcmpService_Sub1.aByteArrayArrayArray7963[i] = new byte[is_0_[i]][];
-			}
-		}
-	}
-
 	static {
 		aByteArrayArray5767 = new byte[1000][];
 		aByteArrayArray5771 = new byte[250][];
 		aByteArrayArray5770 = new byte[50][];
 	}
 
-	Class491() throws Throwable {
+	CircularBuffer() throws Throwable {
 		throw new Error();
 	}
 
@@ -79,119 +47,6 @@ public class Class491 {
 			}
 		}
 		return new byte[i];
-	}
-
-	public static synchronized byte[] method8240(int i) {
-		if (100 == i && -1753327595 * anInt5768 > 0) {
-			byte[] is = aByteArrayArray5767[(anInt5768 -= -608782531) * -1753327595];
-			aByteArrayArray5767[anInt5768 * -1753327595] = null;
-			return is;
-		}
-		if (i == 5000 && anInt5769 * -495226665 > 0) {
-			byte[] is = aByteArrayArray5771[(anInt5769 -= 758153959) * -495226665];
-			aByteArrayArray5771[-495226665 * anInt5769] = null;
-			return is;
-		}
-		if (i == 30000 && -1159034629 * anInt5772 > 0) {
-			byte[] is = (aByteArrayArray5770[(anInt5772 -= -1912454605) * -1159034629]);
-			aByteArrayArray5770[anInt5772 * -1159034629] = null;
-			return is;
-		}
-		if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i_3_ = 0; i_3_ < anIntArray5773.length; i_3_++) {
-				if (anIntArray5773[i_3_] == i && Class412.anIntArray4962[i_3_] > 0) {
-					byte[] is = (IcmpService_Sub1.aByteArrayArrayArray7963[i_3_][--Class412.anIntArray4962[i_3_]]);
-					IcmpService_Sub1.aByteArrayArrayArray7963[i_3_][Class412.anIntArray4962[i_3_]] = null;
-					return is;
-				}
-			}
-		}
-		return new byte[i];
-	}
-
-	public static synchronized void method8241(byte[] is) {
-		if (is.length == 100 && anInt5768 * -1753327595 < 1000) {
-			aByteArrayArray5767[(anInt5768 += -608782531) * -1753327595 - 1] = is;
-		} else if (5000 == is.length && anInt5769 * -495226665 < 250) {
-			aByteArrayArray5771[(anInt5769 += 758153959) * -495226665 - 1] = is;
-		} else if (30000 == is.length && -1159034629 * anInt5772 < 50) {
-			aByteArrayArray5770[(anInt5772 += -1912454605) * -1159034629 - 1] = is;
-		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				if (is.length == anIntArray5773[i] && Class412.anIntArray4962[i] < (IcmpService_Sub1.aByteArrayArrayArray7963[i]).length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i][Class412.anIntArray4962[i]++] = is;
-					break;
-				}
-			}
-		}
-	}
-
-	public static synchronized void method8242(byte[] is) {
-		if (is.length == 100 && anInt5768 * -1753327595 < 1000) {
-			aByteArrayArray5767[(anInt5768 += -608782531) * -1753327595 - 1] = is;
-		} else if (5000 == is.length && anInt5769 * -495226665 < 250) {
-			aByteArrayArray5771[(anInt5769 += 758153959) * -495226665 - 1] = is;
-		} else if (30000 == is.length && -1159034629 * anInt5772 < 50) {
-			aByteArrayArray5770[(anInt5772 += -1912454605) * -1159034629 - 1] = is;
-		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				if (is.length == anIntArray5773[i] && Class412.anIntArray4962[i] < (IcmpService_Sub1.aByteArrayArrayArray7963[i]).length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i][Class412.anIntArray4962[i]++] = is;
-					break;
-				}
-			}
-		}
-	}
-
-	public static synchronized void method8243(byte[] is) {
-		if (is.length == 100 && anInt5768 * -1753327595 < 1000) {
-			aByteArrayArray5767[(anInt5768 += -608782531) * -1753327595 - 1] = is;
-		} else if (5000 == is.length && anInt5769 * -495226665 < 250) {
-			aByteArrayArray5771[(anInt5769 += 758153959) * -495226665 - 1] = is;
-		} else if (30000 == is.length && -1159034629 * anInt5772 < 50) {
-			aByteArrayArray5770[(anInt5772 += -1912454605) * -1159034629 - 1] = is;
-		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				if (is.length == anIntArray5773[i] && Class412.anIntArray4962[i] < (IcmpService_Sub1.aByteArrayArrayArray7963[i]).length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i][Class412.anIntArray4962[i]++] = is;
-					break;
-				}
-			}
-		}
-	}
-
-	public static synchronized void method8244(byte[] is) {
-		if (is.length == 100 && anInt5768 * -1753327595 < 1000) {
-			aByteArrayArray5767[(anInt5768 += -608782531) * -1753327595 - 1] = is;
-		} else if (5000 == is.length && anInt5769 * -495226665 < 250) {
-			aByteArrayArray5771[(anInt5769 += 758153959) * -495226665 - 1] = is;
-		} else if (30000 == is.length && -1159034629 * anInt5772 < 50) {
-			aByteArrayArray5770[(anInt5772 += -1912454605) * -1159034629 - 1] = is;
-		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				if (is.length == anIntArray5773[i] && Class412.anIntArray4962[i] < (IcmpService_Sub1.aByteArrayArrayArray7963[i]).length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i][Class412.anIntArray4962[i]++] = is;
-					break;
-				}
-			}
-		}
-	}
-
-	public static synchronized void method8245(byte[] is) {
-		if (is.length == 100 && anInt5768 * -1753327595 < 1000) {
-			aByteArrayArray5767[(anInt5768 += -608782531) * -1753327595 - 1] = is;
-		} else if (5000 == is.length && anInt5769 * -495226665 < 250) {
-			aByteArrayArray5771[(anInt5769 += 758153959) * -495226665 - 1] = is;
-		} else if (30000 == is.length && -1159034629 * anInt5772 < 50) {
-			aByteArrayArray5770[(anInt5772 += -1912454605) * -1159034629 - 1] = is;
-		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i = 0; i < anIntArray5773.length; i++) {
-				if (is.length == anIntArray5773[i] && Class412.anIntArray4962[i] < (IcmpService_Sub1.aByteArrayArrayArray7963[i]).length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i][Class412.anIntArray4962[i]++] = is;
-					break;
-				}
-			}
-		}
 	}
 
 	public static byte[][][] method8246(int i, short i_4_) {

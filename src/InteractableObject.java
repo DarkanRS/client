@@ -38,7 +38,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -97);
 		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, -219339696);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
@@ -49,9 +49,9 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		((InteractableObject) this).aBool10512 = (class528.i() || ((Class123) aClass123_10509).aClass539_1538 != null);
 		Class305 class305 = method11166();
 		if (((InteractableObject) this).aClass200_10510 == null)
-			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -19);
+			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -19);
 		else
-			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 464369048);
+			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, 464369048);
 		return class285;
 	}
 
@@ -167,7 +167,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -2);
 		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, 915832914);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
@@ -178,9 +178,9 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		((InteractableObject) this).aBool10512 = (class528.i() || ((Class123) aClass123_10509).aClass539_1538 != null);
 		Class305 class305 = method11166();
 		if (((InteractableObject) this).aClass200_10510 == null)
-			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 1);
+			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) 1);
 		else
-			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1316927176);
+			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, -1316927176);
 		return class285;
 	}
 
@@ -240,7 +240,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -19);
 		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, 1469676287);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
@@ -251,9 +251,9 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		((InteractableObject) this).aBool10512 = (class528.i() || ((Class123) aClass123_10509).aClass539_1538 != null);
 		Class305 class305 = method11166();
 		if (((InteractableObject) this).aClass200_10510 == null)
-			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 4);
+			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) 4);
 		else
-			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1083467352);
+			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, 1083467352);
 		return class285;
 	}
 
@@ -265,7 +265,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -5);
 		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, 1385050972);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
@@ -276,9 +276,9 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		((InteractableObject) this).aBool10512 = (class528.i() || ((Class123) aClass123_10509).aClass539_1538 != null);
 		Class305 class305 = method11166();
 		if (((InteractableObject) this).aClass200_10510 == null)
-			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -21);
+			((InteractableObject) this).aClass200_10510 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -21);
 		else
-			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -640718163);
+			Class388.method6694((((InteractableObject) this).aClass200_10510), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, -640718163);
 		return class285;
 	}
 
@@ -335,9 +335,9 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 		throw new IllegalStateException();
 	}
 
-	public static void method16099(Class118[] class118s, int i, int i_20_, int i_21_, boolean bool, byte i_22_) {
+	public static void method16099(IComponentDefinitions[] class118s, int i, int i_20_, int i_21_, boolean bool, byte i_22_) {
 		for (int i_23_ = 0; i_23_ < class118s.length; i_23_++) {
-			Class118 class118 = class118s[i_23_];
+			IComponentDefinitions class118 = class118s[i_23_];
 			if (class118 != null && 2110532063 * class118.anInt1305 == i) {
 				Class484.method8200(class118, i_20_, i_21_, bool, -417515150);
 				Class246.method4204(class118, i_20_, i_21_, -878856707);

@@ -27,7 +27,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void ma(boolean bool);
 
-	public void method11273(Class294 class294) {
+	public void method11273(Matrix44Var class294) {
 		method11604(ja.aa, class294);
 		int i = 0;
 		if (((h) this).aClass87Array7139 != null) {
@@ -51,7 +51,7 @@ public class h extends MeshRasterizer implements Interface40 {
 				if (class172.aClass172_2114 != null)
 					class172_43_ = class172.aClass172_2114;
 				if (class172.aClass384_2116 == null)
-					class172.aClass384_2116 = new Class384();
+					class172.aClass384_2116 = new Matrix44Arr();
 				class172.aClass384_2116.method6522(class294);
 				class172_43_.anInt2113 = ja.aa[i++] * 959663283;
 				class172_43_.anInt2117 = ja.aa[i++] * -1084180847;
@@ -159,17 +159,17 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	native void ka();
 
-	public void method11263(Class294 class294, int i, boolean bool) {
-		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+	public void method11263(Matrix44Var class294, int i, boolean bool) {
+		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
 		class384.method6522(class294);
-		aa(class384.aFloatArray4667, i, bool);
+		aa(class384.buf, i, bool);
 	}
 
 	native void aa(float[] fs, int i, boolean bool);
 
 	public native int co();
 
-	public boolean method11270(int i, int i_81_, Class294 class294, boolean bool, int i_82_) {
+	public boolean method11270(int i, int i_81_, Matrix44Var class294, boolean bool, int i_82_) {
 		return ((h) this).aja7140.nx().method335(this, i, i_81_, class294, bool);
 	}
 
@@ -225,10 +225,10 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void W(short i, short i_87_);
 
-	public void method11298(Class294 class294, int i, boolean bool) {
-		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+	public void method11298(Matrix44Var class294, int i, boolean bool) {
+		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
 		class384.method6522(class294);
-		aa(class384.aFloatArray4667, i, bool);
+		aa(class384.buf, i, bool);
 	}
 
 	public native int du();
@@ -273,7 +273,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native int ae();
 
-	public void method11282(Class294 class294, Class275_Sub5 class275_sub5, int i) {
+	public void method11282(Matrix44Var class294, Class275_Sub5 class275_sub5, int i) {
 		if (class275_sub5 == null)
 			((h) this).aja7140.nx().method314(this, class294, null, i);
 		else {
@@ -329,7 +329,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		}
 	}
 
-	void method11604(int[] is, Class294 class294) {
+	void method11604(int[] is, Matrix44Var class294) {
 		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
@@ -351,16 +351,16 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void S(int i);
 
-	public void method11290(Class294 class294, int i, boolean bool) {
-		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+	public void method11290(Matrix44Var class294, int i, boolean bool) {
+		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
 		class384.method6522(class294);
-		aa(class384.aFloatArray4667, i, bool);
+		aa(class384.buf, i, bool);
 	}
 
-	public void method11291(Class294 class294, int i, boolean bool) {
-		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+	public void method11291(Matrix44Var class294, int i, boolean bool) {
+		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
 		class384.method6522(class294);
-		aa(class384.aFloatArray4667, i, bool);
+		aa(class384.buf, i, bool);
 	}
 
 	h(ja var_ja) {
@@ -369,7 +369,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		ba(var_ja);
 	}
 
-	public void method11293(Class294 class294, Class275_Sub5 class275_sub5, int i) {
+	public void method11293(Matrix44Var class294, Class275_Sub5 class275_sub5, int i) {
 		if (class275_sub5 == null)
 			((h) this).aja7140.nx().method314(this, class294, null, i);
 		else {
@@ -384,7 +384,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		}
 	}
 
-	public void method11315(Class294 class294) {
+	public void method11315(Matrix44Var class294) {
 		method11604(ja.aa, class294);
 		int i = 0;
 		if (((h) this).aClass87Array7139 != null) {
@@ -408,7 +408,7 @@ public class h extends MeshRasterizer implements Interface40 {
 				if (class172.aClass172_2114 != null)
 					class172_106_ = class172.aClass172_2114;
 				if (class172.aClass384_2116 == null)
-					class172.aClass384_2116 = new Class384();
+					class172.aClass384_2116 = new Matrix44Arr();
 				class172.aClass384_2116.method6522(class294);
 				class172_106_.anInt2113 = ja.aa[i++] * 959663283;
 				class172_106_.anInt2117 = ja.aa[i++] * -1084180847;
@@ -458,7 +458,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		return ((h) this).aja7140.nx().method325(this, i, i_110_, bool);
 	}
 
-	public boolean method11286(int i, int i_111_, Class294 class294, boolean bool, int i_112_) {
+	public boolean method11286(int i, int i_111_, Matrix44Var class294, boolean bool, int i_112_) {
 		return ((h) this).aja7140.nx().method335(this, i, i_111_, class294, bool);
 	}
 
@@ -544,7 +544,7 @@ public class h extends MeshRasterizer implements Interface40 {
 		}
 	}
 
-	public boolean method11309(int i, int i_130_, Class294 class294, boolean bool, int i_131_) {
+	public boolean method11309(int i, int i_130_, Matrix44Var class294, boolean bool, int i_131_) {
 		return ((h) this).aja7140.nx().method335(this, i, i_130_, class294, bool);
 	}
 
@@ -577,7 +577,7 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	native void fh(ja var_ja);
 
-	public void method11294(Class294 class294) {
+	public void method11294(Matrix44Var class294) {
 		method11604(ja.aa, class294);
 		int i = 0;
 		if (((h) this).aClass87Array7139 != null) {
@@ -601,7 +601,7 @@ public class h extends MeshRasterizer implements Interface40 {
 				if (class172.aClass172_2114 != null)
 					class172_217_ = class172.aClass172_2114;
 				if (class172.aClass384_2116 == null)
-					class172.aClass384_2116 = new Class384();
+					class172.aClass384_2116 = new Matrix44Arr();
 				class172.aClass384_2116.method6522(class294);
 				class172_217_.anInt2113 = ja.aa[i++] * 959663283;
 				class172_217_.anInt2117 = ja.aa[i++] * -1084180847;
@@ -610,19 +610,19 @@ public class h extends MeshRasterizer implements Interface40 {
 		}
 	}
 
-	void method11606(int[] is, Class294 class294) {
+	void method11606(int[] is, Matrix44Var class294) {
 		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	void method11607(int[] is, Class294 class294) {
+	void method11607(int[] is, Matrix44Var class294) {
 		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	void method11608(int[] is, Class294 class294) {
+	void method11608(int[] is, Matrix44Var class294) {
 		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
-	void method11609(int[] is, Class294 class294) {
+	void method11609(int[] is, Matrix44Var class294) {
 		((h) this).aja7140.nx().method331(this, is, class294);
 	}
 
@@ -644,9 +644,9 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	native void fw(byte i, byte[] is);
 
-	public void method11292(Class294 class294, int i, boolean bool) {
-		Class384 class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
+	public void method11292(Matrix44Var class294, int i, boolean bool) {
+		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
 		class384.method6522(class294);
-		aa(class384.aFloatArray4667, i, bool);
+		aa(class384.buf, i, bool);
 	}
 }

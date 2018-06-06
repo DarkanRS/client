@@ -62,6 +62,6 @@ public class Class357_Sub1 extends Class357 {
 		Class354.method6215((byte) 69);
 		client.aClass229_7204.method3863(1522845266);
 		Class20.aClass229_191.method3863(691961844);
-		Class517.aClass229_5901.method3863(1768110542);
+		CS2Runner.aClass229_5901.method3863(1768110542);
 	}
 }

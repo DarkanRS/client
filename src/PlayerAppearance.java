@@ -454,7 +454,7 @@ public class PlayerAppearance {
 		MeshRasterizer class528_75_ = class528.method11289((byte) 4, i_42_, true);
 		if (!bool_51_ && !bool_54_)
 			return class528_75_;
-		Class294[] class294s = null;
+		Matrix44Var[] class294s = null;
 		if (null != class227)
 			class294s = class227.method3811((byte) 98);
 		if (bool_54_ && null != class294s) {
@@ -476,7 +476,7 @@ public class PlayerAppearance {
 				if (-1 != is[i_77_]) {
 					i_78_ = is[i_77_] - i_40_;
 					i_78_ &= 0x3fff;
-					Class294 class294 = new Class294();
+					Matrix44Var class294 = new Matrix44Var();
 					class294.method5217(0.0F, 1.0F, 0.0F, Class382.method6508(i_78_));
 					class528_75_.method11298(class294, 1 << i_77_, false);
 				}
@@ -1002,7 +1002,7 @@ public class PlayerAppearance {
 		MeshRasterizer class528_155_ = class528.method11289((byte) 4, i_122_, true);
 		if (!bool_131_ && !bool_134_)
 			return class528_155_;
-		Class294[] class294s = null;
+		Matrix44Var[] class294s = null;
 		if (null != class227)
 			class294s = class227.method3811((byte) 36);
 		if (bool_134_ && null != class294s) {
@@ -1024,7 +1024,7 @@ public class PlayerAppearance {
 				if (-1 != is[i_157_]) {
 					i_158_ = is[i_157_] - i_121_;
 					i_158_ &= 0x3fff;
-					Class294 class294 = new Class294();
+					Matrix44Var class294 = new Matrix44Var();
 					class294.method5217(0.0F, 1.0F, 0.0F, Class382.method6508(i_158_));
 					class528_155_.method11298(class294, 1 << i_157_, false);
 				}
@@ -1233,7 +1233,7 @@ public class PlayerAppearance {
 		MeshRasterizer class528_194_ = class528.method11289((byte) 4, i_161_, true);
 		if (!bool_170_ && !bool_173_)
 			return class528_194_;
-		Class294[] class294s = null;
+		Matrix44Var[] class294s = null;
 		if (null != class227)
 			class294s = class227.method3811((byte) 25);
 		if (bool_173_ && null != class294s) {
@@ -1255,7 +1255,7 @@ public class PlayerAppearance {
 				if (-1 != is[i_196_]) {
 					i_197_ = is[i_196_] - i_160_;
 					i_197_ &= 0x3fff;
-					Class294 class294 = new Class294();
+					Matrix44Var class294 = new Matrix44Var();
 					class294.method5217(0.0F, 1.0F, 0.0F, Class382.method6508(i_197_));
 					class528_194_.method11298(class294, 1 << i_196_, false);
 				}
@@ -1487,8 +1487,8 @@ public class PlayerAppearance {
 
 	static final void method4030(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class204.method3365(class118, class98, class527, -296742554);
 	}
 
@@ -1508,8 +1508,8 @@ public class PlayerAppearance {
 
 	static final void method4033(CS2Executor class527, byte i) {
 		int i_233_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_233_, (byte) 64);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_233_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_233_, (byte) 64);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_233_ >> 16];
 		Class96_Sub17.method14653(class118, class98, class527, -1617819065);
 	}
 

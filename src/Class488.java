@@ -9,7 +9,7 @@ public class Class488 {
 	public static final int anInt5756 = 20;
 	public static final int anInt5757 = -1;
 	public static int anInt5760;
-	static Index aClass317_5761;
+	static Index MESH_INDEX;
 
 	Class488() throws Throwable {
 		throw new Error();
@@ -28,14 +28,14 @@ public class Class488 {
 
 	static final void method8211(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1009302201 * class118.anInt1337;
 	}
 
 	static final void method8212(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class529.method11337(class118, class98, class527, -2109817364);
 	}
 }

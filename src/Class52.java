@@ -15,7 +15,7 @@ public abstract class Class52 implements Interface2 {
 	abstract void method1076(boolean bool, int i, int i_1_);
 
 	public void method22(int i) {
-		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 32);
+		FontMetrics class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 32);
 		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
@@ -87,27 +87,27 @@ public abstract class Class52 implements Interface2 {
 	abstract void method1079(boolean bool, int i, int i_11_);
 
 	public void method15() {
-		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 91);
+		FontMetrics class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 91);
 		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method16() {
-		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 27);
+		FontMetrics class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 27);
 		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method23() {
-		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 126);
+		FontMetrics class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 126);
 		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method18() {
-		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 51);
+		FontMetrics class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 51);
 		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
 	public void method19() {
-		Class414 class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 125);
+		FontMetrics class414 = Class163.method2845(((Class52) this).aClass317_490, (985690519 * ((Class52) this).aClass350_489.anInt4086), (byte) 125);
 		((Class52) this).aClass8_492 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class52) this).aClass317_493, (((Class52) this).aClass350_489.anInt4086 * 985690519)), true));
 	}
 
@@ -193,7 +193,7 @@ public abstract class Class52 implements Interface2 {
 		return i_19_;
 	}
 
-	static final void method1083(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method1083(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1248172600) != null)
 			string = string.substring(0, string.length() - 1);
@@ -203,8 +203,8 @@ public abstract class Class52 implements Interface2 {
 
 	static final void method1084(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class346.method6158(class118, class98, class527, -1064421);
 	}
 
@@ -238,7 +238,7 @@ public abstract class Class52 implements Interface2 {
 
 	static Class282_Sub50_Sub6 method1087(Index class317, int i, int i_34_, int i_35_) {
 		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_34_, -1701555254));
-		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_34_, class282_sub35.readString(-392505636), class282_sub35.readString(846172936), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
+		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_34_, class282_sub35.readString(), class282_sub35.readString(), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_36_ = class282_sub35.readUnsignedByte();
 		for (int i_37_ = 0; i_37_ < i_36_; i_37_++)
 			((Class282_Sub50_Sub6) class282_sub50_sub6).aClass482_9537.append(new Class282_Sub28(class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort(), class282_sub35.readUnsignedShort()), 1886479392);

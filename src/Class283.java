@@ -85,12 +85,12 @@ public class Class283 {
 
 	static final void method5008(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		DefaultsFile.method11223(class118, class98, class527, 4317906);
 	}
 
-	static final void method5009(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5009(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1962956605) != null)
 			string = string.substring(0, string.length() - 1);

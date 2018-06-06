@@ -112,7 +112,7 @@ public class Class275_Sub7 extends Class275 {
 		client.anInt7448 = -1044733407;
 		Class473.anInt5606 = 0;
 		Class501.anInt5828 = 0;
-		Class262.anInt3240 = 385244173;
+		NativeLibraryLoader.anInt3240 = 385244173;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
 		client.anInt7429 = -914265549 * client.cycles;

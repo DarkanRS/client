@@ -369,7 +369,7 @@ public class Class286 implements Runnable {
 
 	static final void method5045(CS2Executor class527, int i) {
 		int i_21_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_21_, (byte) 61);
+		IComponentDefinitions class118 = Class117.method1981(i_21_, (byte) 61);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
 	}
 
@@ -420,7 +420,7 @@ public class Class286 implements Runnable {
 		return null;
 	}
 
-	static CS2Script method5049(int i, int i_24_) {
+	static CS2Script getCS2Script(int i) {
 		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i));
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;

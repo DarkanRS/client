@@ -98,7 +98,7 @@ public abstract class Class504 {
 		throw new IllegalArgumentException();
 	}
 
-	static final void method8387(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method8387(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1380 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1380100089);
 	}
 
@@ -119,13 +119,13 @@ public abstract class Class504 {
 		return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1489528047).aClass390Array2591[i_8_].method6709(i, i_3_, 1879647652);
 	}
 
-	static final void method8390(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method8390(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (class118.anInt1320 * 985215637 != i_9_) {
 			class118.anInt1320 = i_9_ * -1179842371;
 			Class109.method1858(class118, (byte) 22);
 		}
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
-			Class105.method1807(class118.anInt1287 * -1952846363, (byte) 68);
+			Class105.method1807(class118.idHash * -1952846363, (byte) 68);
 	}
 }

@@ -22,7 +22,7 @@ public class Class516 {
 	}
 
 	static final void method8864(CS2Executor class527, byte i) {
-		int i_3_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_3_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		String string = (class527.aClass61_7010.method1202(client.CURRENT_GAME.anInt5746 * 1648080491 << 16 | i_3_, -735824266));
 		String string_4_;
 		if (null == string) {
@@ -36,7 +36,7 @@ public class Class516 {
 
 	static final void method8865(CS2Executor class527, byte i) {
 		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub9 class282_sub50_sub9 = IndexLoaders.aClass429_4265.method7214(i_5_, -1707891446);
+		QuickchatDefinitions class282_sub50_sub9 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_5_, -1707891446);
 		if (null == class282_sub50_sub9.anIntArray9624)
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else

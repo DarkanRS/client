@@ -14,10 +14,10 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 			}
 			for (int i_3_ = 0; i_3_ < i_1_; i_3_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_4_ = class282_sub35.read24BitUnsignedInteger((short) 20945);
+				int i_4_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(288497349));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class282_Sub50_Sub4) this).aClass465_9518.method7765(class282, (long) i_4_);
@@ -91,10 +91,10 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 			}
 			for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_12_ = class282_sub35.read24BitUnsignedInteger((short) 24774);
+				int i_12_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(775635941));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class282_Sub50_Sub4) this).aClass465_9518.method7765(class282, (long) i_12_);
@@ -115,10 +115,10 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 			}
 			for (int i_15_ = 0; i_15_ < i_13_; i_15_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_16_ = class282_sub35.read24BitUnsignedInteger((short) 12573);
+				int i_16_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(1574624072));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class282_Sub50_Sub4) this).aClass465_9518.method7765(class282, (long) i_16_);
@@ -162,10 +162,10 @@ public class Class282_Sub50_Sub4 extends Class282_Sub50 {
 			}
 			for (int i_21_ = 0; i_21_ < i_19_; i_21_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_22_ = class282_sub35.read24BitUnsignedInteger((short) 25793);
+				int i_22_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(481209285));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class282_Sub50_Sub4) this).aClass465_9518.method7765(class282, (long) i_22_);

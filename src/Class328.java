@@ -12,7 +12,7 @@ public final class Class328 implements Comparable {
 	long aLong3769;
 	Object anObject3770;
 	public static Class306 aClass306_3771;
-	static Class118[] aClass118Array3772;
+	static IComponentDefinitions[] aClass118Array3772;
 
 	public int method5817(Object object) {
 		return method5822((Class328) object, (byte) 98);
@@ -120,9 +120,9 @@ public final class Class328 implements Comparable {
 		boolean bool = ((class527.intStack[class527.anInt7012 * 1942118537]) == 1);
 		boolean bool_7_ = ((class527.intStack[1 + class527.anInt7012 * 1942118537]) == 1);
 		boolean bool_8_ = ((class527.intStack[2 + 1942118537 * class527.anInt7012]) == 1);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4619, client.aClass184_7218.aClass432_2283, -685598433);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(Class108.method1846(string, 108230630) + 1, 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4619, client.aClass184_7218.isaac, -685598433);
+		class282_sub23.buffer.writeShort(ChatLine.getLength(string) + 1, 1417031095);
+		class282_sub23.buffer.writeString(string);
 		int i_9_ = 0;
 		if (bool)
 			i_9_ |= 0x1;
@@ -130,7 +130,7 @@ public final class Class328 implements Comparable {
 			i_9_ |= 0x2;
 		if (bool_8_)
 			i_9_ |= 0x4;
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_9_);
+		class282_sub23.buffer.writeByte(i_9_);
 		client.aClass184_7218.method3049(class282_sub23, 1599721330);
 	}
 
@@ -139,8 +139,8 @@ public final class Class328 implements Comparable {
 		SharedConfigsType.method2094(i_10_, (byte) 1);
 	}
 
-	public static int method5830(CharSequence charsequence, int i) {
-		return Class356.method6225(charsequence, 10, true, 2038427942);
+	public static int parseInt(CharSequence charsequence, int i) {
+		return Class356.parseInt(charsequence, 10, true, 2038427942);
 	}
 
 	static final void method5831(CS2Executor class527, int i) {
@@ -154,8 +154,8 @@ public final class Class328 implements Comparable {
 
 	static final void method5833(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class282_Sub52.method13468(class118, class98, class527, 769396750);
 	}
 }

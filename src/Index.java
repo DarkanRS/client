@@ -562,8 +562,8 @@ public final class Index {
 		return i_168_;
 	}
 
-	public static Class118 method5694(int i, int i_170_, int i_171_) {
-		Class118 class118 = Class117.method1981(i, (byte) 33);
+	public static IComponentDefinitions method5694(int i, int i_170_, int i_171_) {
+		IComponentDefinitions class118 = Class117.method1981(i, (byte) 33);
 		if (-1 == i_170_)
 			return class118;
 		if (class118 == null || class118.aClass118Array1438 == null || i_170_ >= class118.aClass118Array1438.length)

@@ -34,7 +34,7 @@ public class Class489 {
 
 	static final void method8215(CS2Executor class527, int i) {
 		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_2_, (byte) 98);
+		IComponentDefinitions class118 = Class117.method1981(i_2_, (byte) 98);
 		if (null == class118.aString1369)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else
@@ -80,9 +80,9 @@ public class Class489 {
 
 	static final void method8220(CS2Executor class527, byte i) {
 		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_11_, (byte) 50);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_11_ >>> 16];
-		Class118 class118_12_ = Class96_Sub23.method14682(class98, class118, -838454718);
+		IComponentDefinitions class118 = Class117.method1981(i_11_, (byte) 50);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_11_ >>> 16];
+		IComponentDefinitions class118_12_ = Class96_Sub23.method14682(class98, class118, -838454718);
 		int[] is = class527.intStack;
 		int i_13_ = (class527.anInt7012 += 141891001) * 1942118537 - 1;
 		int i_14_;
@@ -91,7 +91,7 @@ public class Class489 {
 				return;
 			i_14_ = -1;
 		} else
-			i_14_ = class118_12_.anInt1287 * -1952846363;
+			i_14_ = class118_12_.idHash * -1952846363;
 		is[i_13_] = i_14_;
 	}
 }

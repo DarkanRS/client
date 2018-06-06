@@ -121,15 +121,15 @@ public final class Class464 {
 		return 11 == i || i == 2 || i == 18 || i == 6 || i == 9;
 	}
 
-	static final void method7743(Class118[] class118s, int i, byte i_2_) {
+	static final void method7743(IComponentDefinitions[] class118s, int i, byte i_2_) {
 		for (int i_3_ = 0; i_3_ < class118s.length; i_3_++) {
-			Class118 class118 = class118s[i_3_];
+			IComponentDefinitions class118 = class118s[i_3_];
 			if (class118 != null && 2110532063 * class118.anInt1305 == i && !client.method11651(class118)) {
 				if (0 == class118.anInt1268 * -2131393857) {
-					method7743(class118s, -1952846363 * class118.anInt1287, (byte) 10);
+					method7743(class118s, -1952846363 * class118.idHash, (byte) 10);
 					if (class118.aClass118Array1439 != null)
-						method7743(class118.aClass118Array1439, class118.anInt1287 * -1952846363, (byte) 10);
-					Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.anInt1287))));
+						method7743(class118.aClass118Array1439, class118.idHash * -1952846363, (byte) 10);
+					Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.idHash))));
 					if (class282_sub44 != null)
 						UnderlayDefinition.method8777((587626901 * class282_sub44.anInt8063), (byte) -57);
 				}

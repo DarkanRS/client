@@ -488,7 +488,7 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 		super(class206);
 		aByte7967 = (byte) i;
 		aByte7968 = (byte) i_81_;
-		method11171(new Class385((float) i_82_, (float) i_83_, (float) i_84_));
+		method11171(new Vector3((float) i_82_, (float) i_83_, (float) i_84_));
 		aShort9458 = (short) i_85_;
 		aShort9455 = (short) i_86_;
 		aShort9456 = (short) i_87_;

@@ -172,14 +172,14 @@ public final class Class115_Sub1 extends Class115 {
 		((Class115_Sub1) this).aClass505_Sub2_Sub2_9293.method14035(interface30);
 	}
 
-	void method1942(int i, Class384 class384) {
+	void method1942(int i, Matrix44Arr class384) {
 		int i_17_ = i >> 16;
 		int i_18_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6589(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_17_], i_18_, 8);
 		((Class115_Sub1) this).aBoolArray9285[i_17_] = true;
 	}
 
-	void method1936(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1936(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		int i = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15782();
 		int i_19_ = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15783();
 		if (class282_sub21_sub1.method15457((byte) 115) != Class111.aClass111_1168)
@@ -190,7 +190,7 @@ public final class Class115_Sub1 extends Class115 {
 			method14590(i_19_, class384.method6589(aFloatArray9288), 8);
 	}
 
-	void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		int i = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15782();
 		int i_20_ = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15783();
 		if (class282_sub21_sub1.method15457((byte) 27) != Class111.aClass111_1150)
@@ -230,21 +230,21 @@ public final class Class115_Sub1 extends Class115 {
 		((Class115_Sub1) this).aBoolArray9285[i_30_] = true;
 	}
 
-	void method1905(int i, Class384 class384) {
+	void method1905(int i, Matrix44Arr class384) {
 		int i_32_ = i >> 16;
 		int i_33_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_32_], i_33_, 12);
 		((Class115_Sub1) this).aBoolArray9285[i_32_] = true;
 	}
 
-	void method1906(int i, Class384 class384) {
+	void method1906(int i, Matrix44Arr class384) {
 		int i_34_ = i >> 16;
 		int i_35_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6589(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_34_], i_35_, 8);
 		((Class115_Sub1) this).aBoolArray9285[i_34_] = true;
 	}
 
-	void method1900(int i, Class384 class384) {
+	void method1900(int i, Matrix44Arr class384) {
 		int i_36_ = i >> 16;
 		int i_37_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_36_], i_37_, 16);
@@ -577,7 +577,7 @@ public final class Class115_Sub1 extends Class115 {
 		}
 	}
 
-	void method1925(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1925(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		int i = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15782();
 		int i_81_ = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15783();
 		if (class282_sub21_sub1.method15457((byte) 127) != Class111.aClass111_1168)
@@ -626,7 +626,7 @@ public final class Class115_Sub1 extends Class115 {
 			method14590(i_87_, fs, i);
 	}
 
-	void method1924(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1924(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		int i = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15782();
 		int i_88_ = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15783();
 		if (class282_sub21_sub1.method15457((byte) 110) != Class111.aClass111_1168)
@@ -648,7 +648,7 @@ public final class Class115_Sub1 extends Class115 {
 			method14590(i_90_, fs, i);
 	}
 
-	void method1926(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1926(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		int i = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15782();
 		int i_91_ = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15783();
 		if (class282_sub21_sub1.method15457((byte) 69) != Class111.aClass111_1150)
@@ -659,7 +659,7 @@ public final class Class115_Sub1 extends Class115 {
 			method14590(i_91_, class384.method6545(aFloatArray9288), 16);
 	}
 
-	void method1927(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1927(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		int i = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15782();
 		int i_92_ = ((Class282_Sub21_Sub1_Sub1) class282_sub21_sub1).method15783();
 		if (class282_sub21_sub1.method15457((byte) 44) != Class111.aClass111_1150)
@@ -670,7 +670,7 @@ public final class Class115_Sub1 extends Class115 {
 			method14590(i_92_, class384.method6545(aFloatArray9288), 16);
 	}
 
-	void method1910(int i, Class384 class384) {
+	void method1910(int i, Matrix44Arr class384) {
 		int i_93_ = i >> 16;
 		int i_94_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_93_], i_94_, 16);
@@ -682,7 +682,7 @@ public final class Class115_Sub1 extends Class115 {
 		((Class115_Sub1) this).aClass505_Sub2_Sub2_9293.method14035(interface30);
 	}
 
-	void method1922(int i, Class384 class384) {
+	void method1922(int i, Matrix44Arr class384) {
 		int i_95_ = i >> 16;
 		int i_96_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_95_], i_96_, 12);
@@ -794,7 +794,7 @@ public final class Class115_Sub1 extends Class115 {
 		}
 	}
 
-	void method1940(int i, Class384 class384) {
+	void method1940(int i, Matrix44Arr class384) {
 		int i_133_ = i >> 16;
 		int i_134_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_133_], i_134_, 12);
@@ -820,14 +820,14 @@ public final class Class115_Sub1 extends Class115 {
 		}
 	}
 
-	void method1943(int i, Class384 class384) {
+	void method1943(int i, Matrix44Arr class384) {
 		int i_137_ = i >> 16;
 		int i_138_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_137_], i_138_, 16);
 		((Class115_Sub1) this).aBoolArray9285[i_137_] = true;
 	}
 
-	void method1902(int i, Class384 class384) {
+	void method1902(int i, Matrix44Arr class384) {
 		int i_139_ = i >> 16;
 		int i_140_ = (i & 0xffff) * 4;
 		System.arraycopy(class384.method6545(aFloatArray9288), 0, ((Class115_Sub1) this).aFloatArrayArray9283[i_139_], i_140_, 12);

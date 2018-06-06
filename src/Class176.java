@@ -14,7 +14,7 @@ public class Class176 {
 	int anInt2197;
 	int anInt2198;
 	int anInt2199;
-	static Class414 aClass414_2200;
+	static FontMetrics aClass414_2200;
 	static Class472 aClass472_2201;
 
 	void method2967(Class176 class176_0_) {

@@ -112,7 +112,7 @@ public class Class436 {
 			if (class282_sub44 != null && !class282_sub44.method13401((byte) -110))
 				Class351.method6196(class282_sub44, true, false, -1434411886);
 			else {
-				Class98 class98 = Class468_Sub8.aClass98Array7889[i];
+				Interface class98 = Class468_Sub8.aClass98Array7889[i];
 				client.method11768(class98, class98.method1616(2121969346), -1, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_);
 			}
 		}

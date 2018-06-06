@@ -91,25 +91,25 @@ public class MapRegionLoaderTask implements Runnable {
 		}
 	}
 
-	public static void method6070(int i, int i_2_, String string, String string_3_, String string_4_, String string_5_, String string_6_, int i_7_, int i_8_) {
-		Class108 class108 = Class81.aClass108Array798[99];
+	public static void appendMessage(int type, int i_2_, String name, String nameUnfiltered, String nameSimple, String message, String clan, int i_7_) {
+		ChatLine line = Class81.CHAT_LINES[99];
 		for (int i_9_ = 99; i_9_ > 0; i_9_--) {
-			Class81.aClass108Array798[i_9_] = Class81.aClass108Array798[i_9_ - 1];
+			Class81.CHAT_LINES[i_9_] = Class81.CHAT_LINES[i_9_ - 1];
 		}
-		if (null == class108) {
-			class108 = new Class108(i, i_2_, string, string_3_, string_4_, string_6_, i_7_, string_5_);
+		if (null == line) {
+			line = new ChatLine(type, i_2_, name, nameUnfiltered, nameSimple, clan, i_7_, message);
 		} else {
-			class108.method1840(i, i_2_, string, string_3_, string_4_, string_6_, i_7_, string_5_, 34167);
+			line.set(type, i_2_, name, nameUnfiltered, nameSimple, clan, i_7_, message);
 		}
-		Class81.aClass108Array798[0] = class108;
-		Class81.anInt800 += 809055037;
+		Class81.CHAT_LINES[0] = line;
+		Class81.NUM_CHAT_LINES += 809055037;
 		client.anInt7391 = -1529209901 * client.anInt7347;
 	}
 
 	static final void method6071(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = class513.aClass118_5886;
-		Class98 class98 = class513.aClass98_5885;
+		IComponentDefinitions class118 = class513.aClass118_5886;
+		Interface class98 = class513.aClass98_5885;
 		Class504.method8390(class118, class98, class527, 1964593641);
 	}
 

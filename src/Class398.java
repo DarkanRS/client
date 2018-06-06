@@ -13,7 +13,7 @@ public class Class398 {
 			else if (' ' == c)
 				stringbuilder.append('+');
 			else {
-				int i_1_ = Class242.method4163(c, (byte) 35);
+				int i_1_ = Class242.getByteForChar(c);
 				stringbuilder.append('%');
 				int i_2_ = i_1_ >> 4 & 0xf;
 				if (i_2_ >= 10)

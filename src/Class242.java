@@ -68,7 +68,7 @@ public class Class242 {
 		return i;
 	}
 
-	static final void method4159(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method4159(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 567564004;
 		class118.anInt1340 = 788815611 * (class527.intStack[class527.anInt7012 * 1942118537]);
 		class118.anInt1350 = (2093089603 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]));
@@ -77,7 +77,7 @@ public class Class242 {
 		Class109.method1858(class118, (byte) -26);
 	}
 
-	static final void method4160(Class118 class118, Class98 class98, CS2Executor class527, short i) {
+	static final void method4160(IComponentDefinitions class118, Interface class98, CS2Executor class527, short i) {
 		class118.anInt1323 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -848451677);
 		Class109.method1858(class118, (byte) -6);
 	}
@@ -104,7 +104,7 @@ public class Class242 {
 		return i_4_ + (i & 0xff80);
 	}
 
-	public static byte method4163(char c, byte i) {
+	public static byte getByteForChar(char c) {
 		byte i_6_;
 		if (c > 0 && c < '\u0080' || c >= '\u00a0' && c <= '\u00ff')
 			i_6_ = (byte) c;
@@ -171,13 +171,13 @@ public class Class242 {
 		if (Class20.anInt167 * -468886213 == 1)
 			Class96_Sub4.method13789(Class46.aClass282_Sub50_Sub7_438, i, i_7_, -549787245);
 		else if (2 == -468886213 * Class20.anInt167)
-			Class262.method4653(i, i_7_, -769540795);
+			NativeLibraryLoader.method4653(i, i_7_, -769540795);
 		Class20.anInt167 = 0;
 		Class46.aClass282_Sub50_Sub7_438 = null;
 	}
 
 	static Class149_Sub3 method4165(RsByteBuffer class282_sub35, int i) {
-		return new Class149_Sub3(class282_sub35.readShort(1658104919), class282_sub35.readShort(1705227576), class282_sub35.readShort(1944156439), class282_sub35.readShort(1826689073), class282_sub35.read24BitUnsignedInteger((short) 30111), class282_sub35.readUnsignedByte());
+		return new Class149_Sub3(class282_sub35.readShort(1658104919), class282_sub35.readShort(1705227576), class282_sub35.readShort(1944156439), class282_sub35.readShort(1826689073), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 
 	public static final void method4166(int i) {
@@ -196,12 +196,12 @@ public class Class242 {
 			for (int i_10_ = 0; i_10_ < i_9_; i_10_++) {
 				Player class521_sub1_sub1_sub2_sub1 = client.players[is[i_10_]];
 				if (null != class521_sub1_sub1_sub2_sub1.displayName && class521_sub1_sub1_sub2_sub1.displayName.equalsIgnoreCase(string) && (((Class84.myPlayer == class521_sub1_sub1_sub2_sub1) && (Class506.anInt5858 * 1310510077 & 0x10) != 0) || (Class506.anInt5858 * 1310510077 & 0x8) != 0)) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4540, (client.aClass184_7475.aClass432_2283), 623584347);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1673073865 * client.anInt7345, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(is[i_10_], (short) -11612);
-					class282_sub23.aClass282_Sub35_Sub2_7682.write128Byte(0, -2130241701);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeIntV2(728544879 * Class7.anInt56, (byte) 104);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(client.anInt7346 * -1555739329, (short) -16837);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4540, (client.aClass184_7475.isaac), 623584347);
+					class282_sub23.buffer.writeShort(-1673073865 * client.anInt7345, 1417031095);
+					class282_sub23.buffer.writeShortLE(is[i_10_], (short) -11612);
+					class282_sub23.buffer.write128Byte(0, -2130241701);
+					class282_sub23.buffer.writeIntV2(728544879 * Class7.anInt56, (byte) 104);
+					class282_sub23.buffer.writeShortLE(client.anInt7346 * -1555739329, (short) -16837);
 					client.aClass184_7475.method3049(class282_sub23, 2109181627);
 					int i_11_ = class521_sub1_sub1_sub2_sub1.method15805(828768449);
 					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), i_11_, i_11_, 0, 971339209), 1352975566);

@@ -163,7 +163,7 @@ public class Class508 implements Runnable {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_0_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1453 * 1762983005;
 	}
 

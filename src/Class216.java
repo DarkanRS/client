@@ -34,16 +34,16 @@ public class Class216 {
 
 	static void method3675(int i) {
 		if (Class260.aClass116_3229 != null && !Class260.aClass116_3229.method1956(1097733979) && Class260.aClass116_3229.method1963(1418683997)) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, 920221723);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(773403033 * Class260.aClass116_3229.anInt1254);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, 920221723);
+			class282_sub23.buffer.writeInt(773403033 * Class260.aClass116_3229.anInt1254);
 			client.aClass184_7475.method3049(class282_sub23, 17076661);
 		}
 	}
 
 	static final void method3676(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class473.method7889(class118, class98, class527, 1072784051);
 	}
 
@@ -54,6 +54,6 @@ public class Class216 {
 	static final void method3678(CS2Executor class527, int i) {
 		class527.anInt7001 -= 1918006146;
 		if ((class527.aLongArray7003[1820448321 * class527.anInt7001]) > (class527.aLongArray7003[1 + class527.anInt7001 * 1820448321]))
-			class527.instrPtr += ((class527.unknown[301123709 * class527.instrPtr]) * -1051529003);
+			class527.instrPtr += ((class527.intOpValues[301123709 * class527.instrPtr]) * -1051529003);
 	}
 }

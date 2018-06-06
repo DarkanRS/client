@@ -54,7 +54,7 @@ public class Class275_Sub2 extends Class275 {
 	}
 
 	static final void method12504(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.intLocals[(class527.unknown[class527.instrPtr * 301123709])]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.intLocals[(class527.intOpValues[class527.instrPtr * 301123709])]);
 	}
 
 	static Class200 method12505(int i, int i_0_, int i_1_, MeshRasterizer class528, byte i_2_) {

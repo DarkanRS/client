@@ -66,7 +66,7 @@ public class Class413 implements Interface43 {
 		byte[] is = { (byte) class527.intStack[class527.anInt7012 * 1942118537] };
 		byte[] is_4_ = { (byte) class527.intStack[1 + 1942118537 * class527.anInt7012] };
 		int i_5_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
-		Class118 class118 = Class117.method1981(i_5_, (byte) 48);
+		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 48);
 		Class107.method1838(class118, is, is_4_, class527, 1844755981);
 	}
 
@@ -84,14 +84,14 @@ public class Class413 implements Interface43 {
 
 	static final void method6941(CS2Executor class527, int i) {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_9_, (byte) 102);
+		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 102);
 		Node.method5001(class118, class527, -11442386);
 	}
 
-	static final void method6942(Class118 class118, CS2Executor class527, int i) {
+	static final void method6942(IComponentDefinitions class118, CS2Executor class527, int i) {
 		if (client.method11633(class118).method12182(1317632638) && client.aClass118_7352 == null) {
-			Class158_Sub2.method14355(class118.anInt1287 * -1952846363, 1924549737 * class118.anInt1288, -946546687);
-			client.aClass118_7352 = Index.method5694(-1952846363 * class118.anInt1287, 1924549737 * class118.anInt1288, -1963750401);
+			Class158_Sub2.method14355(class118.idHash * -1952846363, 1924549737 * class118.anInt1288, -946546687);
+			client.aClass118_7352 = Index.method5694(-1952846363 * class118.idHash, 1924549737 * class118.anInt1288, -1963750401);
 			Class109.method1858(client.aClass118_7352, (byte) -38);
 		}
 	}

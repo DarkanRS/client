@@ -7,7 +7,7 @@ public class Class282_Sub20_Sub24 extends Class282_Sub20 {
 	int[] anIntArray9881;
 	int anInt9882 = -663619531;
 	int anInt9883;
-	public static Class118 aClass118_9884;
+	public static IComponentDefinitions aClass118_9884;
 
 	int[][] method12339(int i) {
 		int[][] is = aClass308_7670.method5463(i, 786360379);

@@ -24,8 +24,8 @@ public class Class168 {
 
 	static final void method2865(CS2Executor class527, int i) {
 		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_2_, (byte) 45);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_2_, (byte) 45);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class529.method11337(class118, class98, class527, -1404316012);
 	}
 

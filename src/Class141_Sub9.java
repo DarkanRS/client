@@ -50,7 +50,7 @@ public class Class141_Sub9 extends Class141 {
 			((Class141_Sub9) this).aClass138_9109.method2379('\0');
 			((Class141_Sub9) this).aClass505_Sub1_1664.method13610(1);
 			OpenGL.glMatrixMode(5890);
-			OpenGL.glLoadMatrixf((((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).aClass384_8391.aFloatArray4667), 0);
+			OpenGL.glLoadMatrixf((((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).aClass384_8391.buf), 0);
 			OpenGL.glMatrixMode(5888);
 			((Class141_Sub9) this).aClass505_Sub1_1664.method13610(0);
 			if (((Class141_Sub9) this).anInt9110 != ((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).anInt8368) {
@@ -163,7 +163,7 @@ public class Class141_Sub9 extends Class141 {
 			((Class141_Sub9) this).aClass138_9109.method2379('\0');
 			((Class141_Sub9) this).aClass505_Sub1_1664.method13610(1);
 			OpenGL.glMatrixMode(5890);
-			OpenGL.glLoadMatrixf((((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).aClass384_8391.aFloatArray4667), 0);
+			OpenGL.glLoadMatrixf((((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).aClass384_8391.buf), 0);
 			OpenGL.glMatrixMode(5888);
 			((Class141_Sub9) this).aClass505_Sub1_1664.method13610(0);
 			if (((Class141_Sub9) this).anInt9110 != ((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).anInt8368) {
@@ -367,7 +367,7 @@ public class Class141_Sub9 extends Class141 {
 			((Class141_Sub9) this).aClass138_9109.method2379('\0');
 			((Class141_Sub9) this).aClass505_Sub1_1664.method13610(1);
 			OpenGL.glMatrixMode(5890);
-			OpenGL.glLoadMatrixf((((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).aClass384_8391.aFloatArray4667), 0);
+			OpenGL.glLoadMatrixf((((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).aClass384_8391.buf), 0);
 			OpenGL.glMatrixMode(5888);
 			((Class141_Sub9) this).aClass505_Sub1_1664.method13610(0);
 			if (((Class141_Sub9) this).anInt9110 != ((Class505_Sub1) ((Class141_Sub9) this).aClass505_Sub1_1664).anInt8368) {

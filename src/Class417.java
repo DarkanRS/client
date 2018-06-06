@@ -51,7 +51,7 @@ public class Class417 {
 		if (null == Class468_Sub8.aClass98Array7889[i_3_])
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else {
-			String string = (Class468_Sub8.aClass98Array7889[i_3_].aClass118Array998[0].aString1285);
+			String string = (Class468_Sub8.aClass98Array7889[i_3_].components[0].aString1285);
 			if (string == null)
 				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
 			else

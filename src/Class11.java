@@ -10,7 +10,7 @@ public class Class11 {
 	static int anInt123;
 	public static Class282_Sub51 aClass282_Sub51_124;
 
-	static void method461(GraphicalRenderer class505, int i, int i_0_, Class118 class118) {
+	static void method461(GraphicalRenderer class505, int i, int i_0_, IComponentDefinitions class118) {
 		int i_1_ = 63;
 		int i_2_ = 7;
 		for (int i_3_ = 63; i_3_ >= 0; i_3_--) {
@@ -22,7 +22,7 @@ public class Class11 {
 		}
 	}
 
-	static void method462(GraphicalRenderer class505, int i, int i_6_, Class118 class118, int i_7_) {
+	static void method462(GraphicalRenderer class505, int i, int i_6_, IComponentDefinitions class118, int i_7_) {
 		for (int i_8_ = 7; i_8_ >= 0; i_8_--) {
 			for (int i_9_ = 127; i_9_ >= 0; i_9_--) {
 				int i_10_ = (i_7_ & 0x3f) << 10 | (i_8_ & 0x7) << 7 | i_9_ & 0x7f;
@@ -34,7 +34,7 @@ public class Class11 {
 		}
 	}
 
-	static void method463(GraphicalRenderer class505, int i, int i_12_, Class118 class118) {
+	static void method463(GraphicalRenderer class505, int i, int i_12_, IComponentDefinitions class118) {
 		int i_13_ = 63;
 		int i_14_ = 7;
 		for (int i_15_ = 63; i_15_ >= 0; i_15_--) {
@@ -46,7 +46,7 @@ public class Class11 {
 		}
 	}
 
-	static void method464(GraphicalRenderer class505, int i, int i_18_, Class118 class118, int i_19_) {
+	static void method464(GraphicalRenderer class505, int i, int i_18_, IComponentDefinitions class118, int i_19_) {
 		for (int i_20_ = 7; i_20_ >= 0; i_20_--) {
 			for (int i_21_ = 127; i_21_ >= 0; i_21_--) {
 				int i_22_ = (i_19_ & 0x3f) << 10 | (i_20_ & 0x7) << 7 | i_21_ & 0x7f;
@@ -58,7 +58,7 @@ public class Class11 {
 		}
 	}
 
-	static void method465(GraphicalRenderer class505, int i, int i_24_, Class118 class118, int i_25_) {
+	static void method465(GraphicalRenderer class505, int i, int i_24_, IComponentDefinitions class118, int i_25_) {
 		for (int i_26_ = 7; i_26_ >= 0; i_26_--) {
 			for (int i_27_ = 127; i_27_ >= 0; i_27_--) {
 				int i_28_ = (i_25_ & 0x3f) << 10 | (i_26_ & 0x7) << 7 | i_27_ & 0x7f;
@@ -81,30 +81,30 @@ public class Class11 {
 	static final void method467(CS2Executor class527, byte i) {
 		class527.anInt7001 -= 1918006146;
 		if ((class527.aLongArray7003[1820448321 * class527.anInt7001]) < (class527.aLongArray7003[1820448321 * class527.anInt7001 + 1]))
-			class527.instrPtr += ((class527.unknown[301123709 * class527.instrPtr]) * -1051529003);
+			class527.instrPtr += ((class527.intOpValues[301123709 * class527.instrPtr]) * -1051529003);
 	}
 
 	static final void method468(CS2Executor class527, int i) {
 		Class184 class184 = Class468_Sub20.method12807(461566707);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4591, class184.aClass432_2283, 1283884802);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
-		int i_30_ = class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291;
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(2);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(class527.aClass346_7009.anInt4048 * -624100047, 1417031095);
-		class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.aClass282_Sub35_Sub2_7682, class527.aClass346_7009.anIntArray4046, -463581846);
-		class282_sub23.aClass282_Sub35_Sub2_7682.method13061((class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291 - i_30_), -76404824);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4591, class184.isaac, 1283884802);
+		class282_sub23.buffer.writeByte(0);
+		int i_30_ = class282_sub23.buffer.index * -1990677291;
+		class282_sub23.buffer.writeByte(2);
+		class282_sub23.buffer.writeShort(class527.aClass346_7009.anInt4048 * -624100047, 1417031095);
+		class527.aClass346_7009.aClass282_Sub50_Sub9_4047.method14896(class282_sub23.buffer, class527.aClass346_7009.anIntArray4046, -463581846);
+		class282_sub23.buffer.method13061((class282_sub23.buffer.index * -1990677291 - i_30_), -76404824);
 		class184.method3049(class282_sub23, -206649129);
 	}
 
 	public static final void method469(int i, int i_31_, int i_32_, int i_33_, int i_34_, byte i_35_) {
 		Class96_Sub13.anInt9368 = -2005398665 * i;
-		Class369.anInt4280 = i_31_ * -772343735;
+		OutgoingLoginPacket.anInt4280 = i_31_ * -772343735;
 		Class121.anInt1527 = -366984663 * i_32_;
 		Class473.anInt5606 = 2044511935 * i_33_;
 		Class501.anInt5828 = -1387629705 * i_34_;
 		if (1123046983 * Class501.anInt5828 >= 100) {
 			int i_36_ = 75271680 * Class96_Sub13.anInt9368 + 256;
-			int i_37_ = -51121664 * Class369.anInt4280 + 256;
+			int i_37_ = -51121664 * OutgoingLoginPacket.anInt4280 + 256;
 			int i_38_ = (Class504.method8389(i_36_, i_37_, Class4.anInt35 * 675588453, (byte) 25) - Class121.anInt1527 * 654473753);
 			int i_39_ = i_36_ - Class31.anInt361 * -360258135;
 			int i_40_ = i_38_ - Class109_Sub1.anInt9384 * 1929945579;
@@ -118,7 +118,7 @@ public class Class11 {
 			if (726126721 * Class293.anInt3512 > 3072)
 				Class293.anInt3512 = -449180672;
 		}
-		Class262.anInt3240 = 1926220865;
+		NativeLibraryLoader.anInt3240 = 1926220865;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
 	}
@@ -138,5 +138,9 @@ public class Class11 {
 
 	static final void method471(CS2Executor class527, byte i) {
 		class527.intStack[class527.anInt7012 * 1942118537 - 1] = (class527.aClass282_Sub4_7011.method12095(837376369)[(class527.intStack[class527.anInt7012 * 1942118537 - 1])]);
+	}
+
+	public static void method13400(Index class317, int i, int i_0_, int i_1_, boolean bool, byte i_2_) {
+		Class271.method4827(class317, i, i_0_, i_1_, bool, 0L);
 	}
 }

@@ -41,13 +41,13 @@ public class Class165 {
 	static final void method2854(CS2Executor class527, byte i) {
 		class527.anInt7001 -= 1918006146;
 		if ((class527.aLongArray7003[1820448321 * class527.anInt7001]) != (class527.aLongArray7003[1 + class527.anInt7001 * 1820448321]))
-			class527.instrPtr += (-1051529003 * (class527.unknown[class527.instrPtr * 301123709]));
+			class527.instrPtr += (-1051529003 * (class527.intOpValues[class527.instrPtr * 301123709]));
 	}
 
 	static final void method2855(CS2Executor class527, byte i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 59);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 59);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Login.method5017(class118, class98, class527, -974856399);
 	}
 

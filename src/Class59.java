@@ -368,14 +368,14 @@ public class Class59 {
 	}
 
 	public static void method1148(Index class317) {
-		Class219.aClass317_2710 = class317;
+		CoordGrid.aClass317_2710 = class317;
 	}
 
 	public static Class59 method1149(int i) {
 		Class59 class59 = (Class59) aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
-		byte[] is = Class219.aClass317_2710.getFile(0, i, -1194205238);
+		byte[] is = CoordGrid.aClass317_2710.getFile(0, i, -1194205238);
 		class59 = new Class59();
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -613926670);
@@ -634,7 +634,7 @@ public class Class59 {
 		Class59 class59 = (Class59) aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
-		byte[] is = Class219.aClass317_2710.getFile(0, i, -1943902052);
+		byte[] is = CoordGrid.aClass317_2710.getFile(0, i, -1943902052);
 		class59 = new Class59();
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1658973926);
@@ -710,8 +710,8 @@ public class Class59 {
 		int i_46_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
 		int i_47_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
 		int i_48_ = (class527.intStack[3 + class527.anInt7012 * 1942118537]);
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(988818864);
-		Class11.method469(((i_45_ >> 14 & 0x3fff) - 1948093437 * class219.anInt2711), (i_45_ & 0x3fff) - class219.anInt2712 * -1002240017, i_46_ << 2, i_47_, i_48_, (byte) -62);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(988818864);
+		Class11.method469(((i_45_ >> 14 & 0x3fff) - 1948093437 * class219.x), (i_45_ & 0x3fff) - class219.y * -1002240017, i_46_ << 2, i_47_, i_48_, (byte) -62);
 	}
 
 	public static String method1163(int i, int i_49_) {

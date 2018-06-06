@@ -643,7 +643,7 @@ public class Class8_Sub3 extends FontRenderer {
 		}
 	}
 
-	Class8_Sub3(HardwareRenderer class505_sub3, Class414 class414, Class91[] class91s, int[] is, int[] is_254_) {
+	Class8_Sub3(HardwareRenderer class505_sub3, FontMetrics class414, Class91[] class91s, int[] is, int[] is_254_) {
 		super(class505_sub3, class414);
 		((Class8_Sub3) this).aClass505_Sub3_8968 = class505_sub3;
 		((Class8_Sub3) this).aClass505_Sub3_8968 = class505_sub3;
@@ -854,9 +854,9 @@ public class Class8_Sub3 extends FontRenderer {
 			i_333_ = (class521_sub1_sub1.aShort9458 << 9) + i_335_ / 2;
 			i_334_ = (class521_sub1_sub1.aShort9456 << 9) + i_336_ / 2;
 		} else {
-			Class385 class385 = class521_sub1.method11166().aClass385_3595;
-			i_333_ = (int) class385.aFloat4671;
-			i_334_ = (int) class385.aFloat4673;
+			Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+			i_333_ = (int) class385.x;
+			i_334_ = (int) class385.z;
 		}
 		Class210.method3612(class521_sub1.aByte7967, i_333_, i_334_, 0, i, bool, (byte) 29);
 	}
@@ -879,9 +879,9 @@ public class Class8_Sub3 extends FontRenderer {
 			Class151.method2592((byte) 31);
 			return true;
 		} catch (Exception exception) {
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1387149052);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1387149052);
 			String string = new StringBuilder().append(((Class184) class184).aClass375_2286 != null ? (1694502249 * ((Class184) class184).aClass375_2286.anInt4512) : -1).append(Class2.aString14).append(((Class184) class184).aClass375_2296 != null ? (((Class184) class184).aClass375_2296.anInt4512 * 1694502249) : -1).append(Class2.aString14).append(null != ((Class184) class184).aClass375_2291 ? (1694502249 * ((Class184) class184).aClass375_2291.anInt4512) : -1).append(" ")
-					.append(((Class184) class184).anInt2287 * 715663393).append(Class2.aString14).append(1948093437 * class219.anInt2711 + (Class84.myPlayer.regionBaseX[0])).append(Class2.aString14).append(class219.anInt2712 * -1002240017 + (Class84.myPlayer.regionBaseY[0])).append(" ").toString();
+					.append(((Class184) class184).anInt2287 * 715663393).append(Class2.aString14).append(1948093437 * class219.x + (Class84.myPlayer.regionBaseX[0])).append(Class2.aString14).append(class219.y * -1002240017 + (Class84.myPlayer.regionBaseY[0])).append(" ").toString();
 			for (int i_341_ = 0; (i_341_ < 715663393 * ((Class184) class184).anInt2287 && i_341_ < 50); i_341_++)
 				string = new StringBuilder().append(string).append(((Class184) class184).aClass282_Sub35_Sub2_2284.buffer[i_341_]).append(Class2.aString14).toString();
 			Class151.method2594(string, exception, (byte) -124);
@@ -904,8 +904,8 @@ public class Class8_Sub3 extends FontRenderer {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_342_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_342_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_342_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_342_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_342_).aClass98_5885;
 		Class96_Sub17.method14653(class118, class98, class527, -1985356850);
 	}
 
@@ -917,8 +917,8 @@ public class Class8_Sub3 extends FontRenderer {
 
 	static final void method14342(CS2Executor class527, byte i) {
 		int i_343_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_343_, (byte) 90);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_343_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_343_, (byte) 90);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_343_ >> 16];
 		Class29.method789(class118, class98, class527, -19478635);
 	}
 }

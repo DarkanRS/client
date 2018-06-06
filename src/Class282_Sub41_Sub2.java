@@ -35,10 +35,10 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 						throw new IllegalStateException();
 					RsByteBuffer class282_sub35_1_ = new RsByteBuffer(16);
 					class282_sub35.readBytes((class282_sub35_1_.buffer), 0, 16, -535587345);
-					((Class282_Sub41_Sub2) this).aString9466 = class282_sub35_1_.readString(-419573156);
+					((Class282_Sub41_Sub2) this).aString9466 = class282_sub35_1_.readString();
 					class282_sub35_1_.index = 0;
 					class282_sub35.readBytes((class282_sub35_1_.buffer), 0, 16, -346714339);
-					((Class282_Sub41_Sub2) this).aString9469 = class282_sub35_1_.readString(697517004);
+					((Class282_Sub41_Sub2) this).aString9469 = class282_sub35_1_.readString();
 				}
 			} else {
 				if (i_0_ == 0) {
@@ -79,10 +79,10 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 						throw new IllegalStateException();
 					RsByteBuffer class282_sub35_5_ = new RsByteBuffer(16);
 					class282_sub35.readBytes((class282_sub35_5_.buffer), 0, 16, -399425573);
-					((Class282_Sub41_Sub2) this).aString9466 = class282_sub35_5_.readString(1967332064);
+					((Class282_Sub41_Sub2) this).aString9466 = class282_sub35_5_.readString();
 					class282_sub35_5_.index = 0;
 					class282_sub35.readBytes((class282_sub35_5_.buffer), 0, 16, 1205214509);
-					((Class282_Sub41_Sub2) this).aString9469 = class282_sub35_5_.readString(119263690);
+					((Class282_Sub41_Sub2) this).aString9469 = class282_sub35_5_.readString();
 				}
 			} else {
 				if (i == 0) {
@@ -131,10 +131,10 @@ public class Class282_Sub41_Sub2 extends Class282_Sub41 {
 						throw new IllegalStateException();
 					RsByteBuffer class282_sub35_9_ = new RsByteBuffer(16);
 					class282_sub35.readBytes((class282_sub35_9_.buffer), 0, 16, 1763599266);
-					((Class282_Sub41_Sub2) this).aString9466 = class282_sub35_9_.readString(1226058802);
+					((Class282_Sub41_Sub2) this).aString9466 = class282_sub35_9_.readString();
 					class282_sub35_9_.index = 0;
 					class282_sub35.readBytes((class282_sub35_9_.buffer), 0, 16, 843155159);
-					((Class282_Sub41_Sub2) this).aString9469 = class282_sub35_9_.readString(-149419627);
+					((Class282_Sub41_Sub2) this).aString9469 = class282_sub35_9_.readString();
 				}
 			} else {
 				if (i == 0) {

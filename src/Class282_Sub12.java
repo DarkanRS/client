@@ -47,7 +47,7 @@ public class Class282_Sub12 extends Node {
 
 	static void method12212(Class282_Sub50_Sub15 class282_sub50_sub15, int i, int i_6_) {
 		if (Class20.aBool161) {
-			Class414 class414 = Class114.method1887(-1200220753);
+			FontMetrics class414 = Class114.method1887(-1200220753);
 			int i_7_ = 0;
 			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7941((byte) 4)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7955(-726833918))) {
 				int i_8_ = Class282_Sub50_Sub17.method15507(class282_sub50_sub7, class414, 943671530);

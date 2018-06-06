@@ -102,7 +102,7 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -243982531 * class227.anInt2819;
 	}
 
-	static final void method15409(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method15409(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1686354780) != null)
 			string = string.substring(0, string.length() - 1);

@@ -91,7 +91,7 @@ public class Class282_Sub33 extends Node {
 
 	static final void method12583(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class209.method3601(class118, class527, -1856078763);
 	}
 

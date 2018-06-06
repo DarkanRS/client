@@ -57,12 +57,12 @@ final class Class237 implements Interface45 {
 		/* empty */
 	}
 
-	static final void method3987(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method3987(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1329 = 1769250231;
 		class118.anInt1330 = -1183558903 * client.anInt7315;
 		class118.anInt1339 = 0;
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999)
-			Class92.method1565(class118.anInt1287 * -1952846363, -1355203883);
+			Class92.method1565(class118.idHash * -1952846363, -1355203883);
 	}
 
 	static final void method3988(CS2Executor class527, byte i) {

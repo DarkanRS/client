@@ -94,8 +94,8 @@ public class Class42 implements Interface2 {
 			Class260.anInt3223 = i * 919080253;
 			Class260.aClass116_3229 = null;
 			Class260.aClass282_Sub15_Sub2_3231 = null;
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, -228003010);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, -228003010);
+			class282_sub23.buffer.writeInt(-1);
 			client.aClass184_7475.method3049(class282_sub23, 1617512289);
 		} else {
 			i_5_ = i_5_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-1100344734) >> 8;
@@ -120,7 +120,7 @@ public class Class42 implements Interface2 {
 
 	static final void method892(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.aBool1306 ? 1 : 0;
 	}
 }

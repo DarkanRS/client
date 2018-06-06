@@ -20,7 +20,7 @@ public class Class96_Sub11 extends Class96 {
 		client.anInt7182 = ((Class96_Sub11) this).anInt9304 * -722833781;
 		client.anInt7448 = 1044733407;
 		client.anInt7280 = ((Class96_Sub11) this).anInt9302 * 1496611753;
-		Class262.anInt3240 = 1155732519;
+		NativeLibraryLoader.anInt3240 = 1155732519;
 		Class515.method8860((byte) -29);
 		client.aBool7321 = true;
 	}
@@ -45,12 +45,12 @@ public class Class96_Sub11 extends Class96 {
 		client.anInt7182 = ((Class96_Sub11) this).anInt9304 * -722833781;
 		client.anInt7448 = 1044733407;
 		client.anInt7280 = ((Class96_Sub11) this).anInt9302 * 1496611753;
-		Class262.anInt3240 = 1155732519;
+		NativeLibraryLoader.anInt3240 = 1155732519;
 		Class515.method8860((byte) -117);
 		client.aBool7321 = true;
 	}
 
 	static final void method14606(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == client.aClass118_7183 ? -1 : -1952846363 * client.aClass118_7183.anInt1287);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == client.aClass118_7183 ? -1 : -1952846363 * client.aClass118_7183.idHash);
 	}
 }

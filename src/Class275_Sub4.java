@@ -41,7 +41,7 @@ public class Class275_Sub4 extends Class275 {
 		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
 		int i_2_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
-		Class159.method2738((class527.animable.aClass98_10324), i_0_ & 0xffff, i_1_, i_2_, class527.aBool7022, class527, -1306169472);
+		Class159.method2738((class527.animable.inter), i_0_ & 0xffff, i_1_, i_2_, class527.aBool7022, class527, -1306169472);
 	}
 
 	static void method12587(CS2Executor class527, byte i) {

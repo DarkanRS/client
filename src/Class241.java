@@ -184,13 +184,13 @@ public final class Class241 {
 
 	static final void method4146(CS2Executor class527, int i) {
 		int i_26_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_26_, (byte) 59);
+		IComponentDefinitions class118 = Class117.method1981(i_26_, (byte) 59);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 597157617 * class118.anInt1299;
 	}
 
 	static final void method4147(CS2Executor class527, int i) {
 		int i_27_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_27_, (byte) 107);
+		IComponentDefinitions class118 = Class117.method1981(i_27_, (byte) 107);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -492594917 * class118.anInt1429;
 	}
 
@@ -201,10 +201,10 @@ public final class Class241 {
 		if (-1 == i_29_)
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.aClass331_3535.method5918(i_28_, 230168792).method15211((char) i_29_, 1343010087);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_28_, 230168792).method15211((char) i_29_, 1343010087);
 	}
 
-	static final void method4149(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method4149(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1378 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 125067541);
 	}
 
@@ -228,9 +228,9 @@ public final class Class241 {
 		return i_36_ / 4 + (i_35_ / 8 + i_34_ / 16);
 	}
 
-	static void method4152(Class118 class118, Class455 class455, int i, int i_37_, int i_38_, int i_39_, int i_40_, String string, FontRenderer class8, Class414 class414, int i_41_, int i_42_) {
+	static void method4152(IComponentDefinitions class118, Class455 class455, int i, int i_37_, int i_38_, int i_39_, int i_40_, String string, FontRenderer class8, FontMetrics class414, int i_41_, int i_42_) {
 		int i_43_;
-		if (4 == -672443707 * Class262.anInt3240)
+		if (4 == -672443707 * NativeLibraryLoader.anInt3240)
 			i_43_ = (int) client.aFloat7365 & 0x3fff;
 		else
 			i_43_ = (client.anInt7255 * -1790074477 + (int) client.aFloat7365 & 0x3fff);
@@ -239,7 +239,7 @@ public final class Class241 {
 		if (i_45_ <= i_44_ * i_44_) {
 			int i_46_ = Class382.anIntArray4657[i_43_];
 			int i_47_ = Class382.anIntArray4661[i_43_];
-			if (4 != -672443707 * Class262.anInt3240) {
+			if (4 != -672443707 * NativeLibraryLoader.anInt3240) {
 				i_46_ = i_46_ * 256 / (256 + client.anInt7203 * -1864403271);
 				i_47_ = i_47_ * 256 / (256 + client.anInt7203 * -1864403271);
 			}

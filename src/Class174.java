@@ -37,7 +37,7 @@ public class Class174 {
 		throw new Error();
 	}
 
-	public static void method2947(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, Class414 class414) {
+	public static void method2947(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, FontMetrics class414) {
 		boolean bool_8_ = !aBool2135 || method2954(1412758933);
 		if (bool_8_) {
 			if (aBool2135 && bool_8_) {
@@ -203,7 +203,7 @@ public class Class174 {
 		aBool2135 = true;
 	}
 
-	public static void method2952(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, Class414 class414) {
+	public static void method2952(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, FontMetrics class414) {
 		boolean bool_34_ = !aBool2135 || method2954(762227546);
 		if (bool_34_) {
 			if (aBool2135 && bool_34_) {
@@ -301,7 +301,7 @@ public class Class174 {
 		return bool;
 	}
 
-	static final void method2955(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method2955(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class118.anInt1309 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -511891533);
 	}
 
@@ -670,7 +670,7 @@ public class Class174 {
 			Class245.method4197(executor, -1500312404);
 			break;
 		case 602:
-			Class369.method6316(executor, 670685920);
+			OutgoingLoginPacket.method6316(executor, 670685920);
 			break;
 		case 969:
 			Class529.method11339(executor, 2145994396);
@@ -756,7 +756,7 @@ public class Class174 {
 			Class96_Sub10_Sub1.method15555(executor, (byte) 11);
 			break;
 		case 449:
-			Class369.method6314(executor, (short) -943);
+			OutgoingLoginPacket.method6314(executor, (short) -943);
 			break;
 		case 551:
 			Class271.method4826(executor, 1815223167);
@@ -963,7 +963,7 @@ public class Class174 {
 			Class28.method775(executor, -1498612955);
 			break;
 		case 653:
-			Class517.method11128(executor, 459456376);
+			CS2Runner.method11128(executor, 459456376);
 			break;
 		case 727:
 			Class251.method4312(executor, (byte) 76);
@@ -1017,7 +1017,7 @@ public class Class174 {
 			Class483.method8156(executor, -302588228);
 			break;
 		case 778:
-			Class219.method3714(executor, 630870713);
+			CoordGrid.method3714(executor, 630870713);
 			break;
 		case 737:
 			Class46.method934(executor, -1679015333);
@@ -1500,7 +1500,7 @@ public class Class174 {
 			Class185.method3080(executor, (byte) -49);
 			break;
 		case 636:
-			Class243.method4178(executor, (byte) 42);
+			QuickChatDynamicValue.method4178(executor, (byte) 42);
 			break;
 		case 370:
 			Class31.method811(executor, -1685060774);
@@ -1701,10 +1701,10 @@ public class Class174 {
 			Class282_Sub20_Sub15.method15306(executor, -892589803);
 			break;
 		case 494:
-			Class517.method11125(executor, -217266584);
+			CS2Runner.method11125(executor, -217266584);
 			break;
 		case 570:
-			Class243.method4177(executor, (byte) -36);
+			QuickChatDynamicValue.method4177(executor, (byte) -36);
 			break;
 		case 766:
 			Class193.method3170(executor, -1825853988);
@@ -1791,7 +1791,7 @@ public class Class174 {
 			Node.method5002(executor, 1340326579);
 			break;
 		case 329:
-			Class369.method6315(executor, (byte) -7);
+			OutgoingLoginPacket.method6315(executor, (byte) -7);
 			break;
 		case 193:
 			Class290.method5122(executor, (short) 25029);
@@ -1809,7 +1809,7 @@ public class Class174 {
 			Class217_Sub1.method13057(executor, -1675313900);
 			break;
 		case 326:
-			Class243.method4173(executor, -83055370);
+			QuickChatDynamicValue.method4173(executor, -83055370);
 			break;
 		case 947:
 			GraphicalRenderer.method8694(executor, -1324558334);
@@ -1947,7 +1947,7 @@ public class Class174 {
 			Class252.method4323(executor, (byte) 1);
 			break;
 		case 238:
-			Class118.method2072(executor, 404608407);
+			IComponentDefinitions.method2072(executor, 404608407);
 			break;
 		case 632:
 			Class197.method3200(executor, 931421496);
@@ -1965,7 +1965,7 @@ public class Class174 {
 			Class222.method3753(executor, 1873489366);
 			break;
 		case 645:
-			Class262.method4652(executor, -1281775789);
+			NativeLibraryLoader.method4652(executor, -1281775789);
 			break;
 		case 260:
 			Class350_Sub2.method12572(executor, 693718550);
@@ -2004,7 +2004,7 @@ public class Class174 {
 			Class77.method1370(executor, -373798838);
 			break;
 		case 744:
-			Class517.method11126(executor, (byte) 52);
+			CS2Runner.method11126(executor, (byte) 52);
 			break;
 		case 921:
 			Class275_Sub6.method12596(executor, -1202444535);
@@ -2079,7 +2079,7 @@ public class Class174 {
 			ItemDefinitions.method7143(executor, 990784531);
 			break;
 		case 258:
-			Class443.method7420(executor, -1275463203);
+			Whirlpool.method7420(executor, -1275463203);
 			break;
 		case 667:
 			Class282_Sub15_Sub1.method14833(executor, -320513089);
@@ -2466,7 +2466,7 @@ public class Class174 {
 			Class311.method5511(executor, -1504750167);
 			break;
 		case 871:
-			Class243.method4181(executor, (byte) -39);
+			QuickChatDynamicValue.method4181(executor, (byte) -39);
 			break;
 		case 303:
 			Class182.method3039(executor, (byte) 1);
@@ -2502,7 +2502,7 @@ public class Class174 {
 			Class282_Sub15_Sub1.method14836(executor, (byte) -91);
 			break;
 		case 478:
-			Class118.method2071(executor, -671434661);
+			IComponentDefinitions.method2071(executor, -671434661);
 			break;
 		case 196:
 			Class301.method5332(executor, (byte) 1);
@@ -2607,7 +2607,7 @@ public class Class174 {
 			Class456.method7643(executor, (byte) -110);
 			break;
 		case 878:
-			Class369.method6318(executor, 1973091635);
+			OutgoingLoginPacket.method6318(executor, 1973091635);
 			break;
 		case 719:
 			Class216.method3676(executor, (byte) -114);
@@ -2712,13 +2712,13 @@ public class Class174 {
 			Class89.method1500(executor, 2107931431);
 			break;
 		case 868:
-			Class98.method1627(executor, -1274376736);
+			Interface.method1627(executor, -1274376736);
 			break;
 		case 1002:
 			LoadingStage.method6680(executor, -1814887621);
 			break;
 		case 179:
-			Class243.method4175(executor, (short) 14459);
+			QuickChatDynamicValue.method4175(executor, (short) 14459);
 			break;
 		case 627:
 			Class346.method6150(executor, (short) 245);
@@ -2877,7 +2877,7 @@ public class Class174 {
 			Class202.method3340(executor, -1621526005);
 			break;
 		case 442:
-			Class219.method3713(executor, -2105172211);
+			CoordGrid.method3713(executor, -2105172211);
 			break;
 		case 720:
 			Class357.method6230(executor, 459118110);
@@ -2886,7 +2886,7 @@ public class Class174 {
 			Class282_Sub13.method12215(executor, -1735501688);
 			break;
 		case 880:
-			Class98.method1625(executor, 1911957981);
+			Interface.method1625(executor, 1911957981);
 			break;
 		case 30:
 			Class148.method2549(executor, -1130456570);
@@ -2922,7 +2922,7 @@ public class Class174 {
 			Class224.method3781(executor, (byte) 96);
 			break;
 		case 194:
-			Class243.method4174(executor, -1364305642);
+			QuickChatDynamicValue.method4174(executor, -1364305642);
 			break;
 		case 14:
 			Login.method5016(executor, -1796150682);
@@ -3015,7 +3015,7 @@ public class Class174 {
 			Class512.method8763(executor, -1688047816);
 			break;
 		case 932:
-			Class443.method7422(executor, -891094646);
+			Whirlpool.method7422(executor, -891094646);
 			break;
 		case 220:
 			Class152.method2602(executor, 1641483926);
@@ -3156,7 +3156,7 @@ public class Class174 {
 			Class325.method5788(executor, 1718947819);
 			break;
 		case 1004:
-			Class369.method6317(executor, 1070444161);
+			OutgoingLoginPacket.method6317(executor, 1070444161);
 			break;
 		case 226:
 			Class282_Sub41_Sub4.method14857(executor, 1781356630);
@@ -3165,7 +3165,7 @@ public class Class174 {
 			Class532.method11380(executor, -1039594890);
 			break;
 		case 595:
-			Class243.method4176(executor, -891282015);
+			QuickChatDynamicValue.method4176(executor, -891282015);
 			break;
 		case 990:
 			Class149.method2566(executor, 1935420646);
@@ -3180,7 +3180,7 @@ public class Class174 {
 			Index.method5692(executor, -10665240);
 			break;
 		case 432:
-			Class98.method1624(executor, 1894794212);
+			Interface.method1624(executor, 1894794212);
 			break;
 		case 511:
 			Class328.method5828(executor, -2101571012);

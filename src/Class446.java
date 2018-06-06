@@ -148,7 +148,7 @@ public class Class446 {
 		((Class446) this).anInt5408 = i * -1530265891;
 	}
 
-	public static void method7447(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, Class414 class414, byte i) {
+	public static void method7447(String string, boolean bool, GraphicalRenderer class505, FontRenderer class8, FontMetrics class414, byte i) {
 		boolean bool_4_ = !Class174.aBool2135 || Class174.method2954(1454743484);
 		if (bool_4_) {
 			if (Class174.aBool2135 && bool_4_) {

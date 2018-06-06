@@ -351,14 +351,14 @@ public class Class506 {
 
 	static final void method8714(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class175.method2960(class118, class98, class527, 1306300088);
 	}
 
 	static final void method8715(CS2Executor class527, int i) {
 		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_10_, (byte) 60);
+		IComponentDefinitions class118 = Class117.method1981(i_10_, (byte) 60);
 		Class199.method3251(class118, class527, 1146866687);
 	}
 
@@ -391,7 +391,7 @@ public class Class506 {
 	}
 
 	static final void method8720(CS2Executor class527, int i) {
-		int i_15_ = (class527.unknown[301123709 * class527.instrPtr]);
+		int i_15_ = (class527.intOpValues[301123709 * class527.instrPtr]);
 		int i_16_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_16_ < 0 || i_16_ >= class527.globalArrayLengths[i_15_])
 			throw new RuntimeException();

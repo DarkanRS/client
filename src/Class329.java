@@ -1431,7 +1431,7 @@ public class Class329 {
 		if (null == Class468_Sub8.aClass98Array7889[i_1068_])
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (Class468_Sub8.aClass98Array7889[i_1068_].aClass118Array998).length;
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (Class468_Sub8.aClass98Array7889[i_1068_].components).length;
 	}
 
 	static long method5905(SceneObject interface12, int i, int i_1069_, byte i_1070_) {

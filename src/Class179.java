@@ -144,7 +144,7 @@ public class Class179 {
 			int i_8_ = -1;
 			if (client.cycles * -1809259861 % 30 > 15)
 				i_8_ = 16777215;
-			class505.method8428(10 + (Class288.aClass414_3438.method6946(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1).substring(0, -530721645 * anInt2220)).toString(), -1967833701)), 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 11, 12, i_8_, -1796764807);
+			class505.method8428(10 + (Class288.aClass414_3438.getWidthNoSprites(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1).substring(0, -530721645 * anInt2220)).toString(), -1967833701)), 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 11, 12, i_8_, -1796764807);
 		}
 		class505.L();
 		Class18.method574((short) -6236);
@@ -229,11 +229,11 @@ public class Class179 {
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
-					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(914377736);
-					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.anInt2711) >> 6).append(",").append((-1002240017 * class219.anInt2712 + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.anInt2711 * 1948093437) & 0x3f).append(",")
-							.append((class219.anInt2712 * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 126)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -1834471946);
-					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.anInt2711 * 1948093437) >> 6).append(",").append((Class369.anInt4280 * 469662201 + class219.anInt2712 * -1002240017) >> 6).append(",").append((class219.anInt2711 * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
-							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
+					CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(914377736);
+					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 126)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -1834471946);
+					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.aByte7967), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
 				}
 			} catch (Exception exception) {
 				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -515552037)), -1127364284);
@@ -428,11 +428,11 @@ public class Class179 {
 					Class341.method6074(strings, 1624396687);
 				}
 				if (-1741204137 * client.anInt7166 == 13) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4612, (client.aClass184_7475.aClass432_2283), 649205617);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string.length() + 3);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool_17_ ? 1 : 0);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4612, (client.aClass184_7475.isaac), 649205617);
+					class282_sub23.buffer.writeByte(string.length() + 3);
+					class282_sub23.buffer.writeByte(bool ? 1 : 0);
+					class282_sub23.buffer.writeByte(bool_17_ ? 1 : 0);
+					class282_sub23.buffer.writeString(string);
 					client.aClass184_7475.method3049(class282_sub23, 881777984);
 				}
 			} catch (Exception exception) {
@@ -808,7 +808,7 @@ public class Class179 {
 			int i_51_ = -1;
 			if (client.cycles * -1809259861 % 30 > 15)
 				i_51_ = 16777215;
-			class505.method8428(10 + (Class288.aClass414_3438.method6946(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1).substring(0, -530721645 * anInt2220)).toString(), -1967833701)), 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 11, 12, i_51_, -1796764807);
+			class505.method8428(10 + (Class288.aClass414_3438.getWidthNoSprites(new StringBuilder().append("--> ").append(Class400.method6793(aString2225, (byte) 1).substring(0, -530721645 * anInt2220)).toString(), -1967833701)), 350 - -1518951631 * Class288.aClass414_3438.anInt4979 - 11, 12, i_51_, -1796764807);
 		}
 		class505.L();
 		Class18.method574((short) 87);
@@ -882,11 +882,11 @@ public class Class179 {
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
-					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1419754749);
-					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.anInt2711) >> 6).append(",").append((-1002240017 * class219.anInt2712 + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.anInt2711 * 1948093437) & 0x3f).append(",")
-							.append((class219.anInt2712 * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 51)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -434108193);
-					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.anInt2711 * 1948093437) >> 6).append(",").append((Class369.anInt4280 * 469662201 + class219.anInt2712 * -1002240017) >> 6).append(",").append((class219.anInt2711 * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
-							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
+					CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1419754749);
+					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 51)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -434108193);
+					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.aByte7967), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
 				}
 			} catch (Exception exception) {
 				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1590942601)), -291693412);
@@ -1081,11 +1081,11 @@ public class Class179 {
 					Class341.method6074(strings, 1082942774);
 				}
 				if (-1741204137 * client.anInt7166 == 13) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4612, (client.aClass184_7475.aClass432_2283), 256372392);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string.length() + 3);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool_53_ ? 1 : 0);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4612, (client.aClass184_7475.isaac), 256372392);
+					class282_sub23.buffer.writeByte(string.length() + 3);
+					class282_sub23.buffer.writeByte(bool ? 1 : 0);
+					class282_sub23.buffer.writeByte(bool_53_ ? 1 : 0);
+					class282_sub23.buffer.writeString(string);
 					client.aClass184_7475.method3049(class282_sub23, 1616485384);
 				}
 			} catch (Exception exception) {
@@ -1180,8 +1180,8 @@ public class Class179 {
 
 	static final void method3020(CS2Executor class527, int i) {
 		int i_60_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_60_, (byte) 40);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_60_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_60_, (byte) 40);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_60_ >> 16];
 		Class249.method4276(class118, class98, class527, -724687188);
 	}
 

@@ -51,7 +51,7 @@ public class Class418 {
 		if (1 == i)
 			anInt4995 = class282_sub35.readBigSmart() * 255251501;
 		else if (2 == i)
-			anInt4997 = class282_sub35.read24BitUnsignedInteger((short) 28155) * -1533569987;
+			anInt4997 = class282_sub35.read24BitUnsignedInteger() * -1533569987;
 		else if (3 == i)
 			aBool4996 = true;
 		else if (i == 4)

@@ -81,23 +81,23 @@ public class Class159 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 100 == -8084891 * Class291_Sub1.anInt8015 ? 1 : 0;
 	}
 
-	static void method2738(Class98 class98, int i, int i_19_, int i_20_, boolean bool, CS2Executor class527, int i_21_) {
+	static void method2738(Interface class98, int i, int i_19_, int i_20_, boolean bool, CS2Executor class527, int i_21_) {
 		if (0 == i_19_)
 			throw new RuntimeException();
-		Class118 class118 = class98.aClass118Array998[i];
+		IComponentDefinitions class118 = class98.components[i];
 		if (class118.aClass118Array1438 == null) {
-			class118.aClass118Array1438 = new Class118[1 + i_20_];
+			class118.aClass118Array1438 = new IComponentDefinitions[1 + i_20_];
 			class118.aClass118Array1439 = class118.aClass118Array1438;
 		}
 		if (class118.aClass118Array1438.length <= i_20_) {
 			if (class118.aClass118Array1438 == class118.aClass118Array1439) {
-				Class118[] class118s = new Class118[i_20_ + 1];
+				IComponentDefinitions[] class118s = new IComponentDefinitions[i_20_ + 1];
 				for (int i_22_ = 0; i_22_ < class118.aClass118Array1438.length; i_22_++)
 					class118s[i_22_] = class118.aClass118Array1438[i_22_];
 				class118.aClass118Array1438 = class118.aClass118Array1439 = class118s;
 			} else {
-				Class118[] class118s = new Class118[i_20_ + 1];
-				Class118[] class118s_23_ = new Class118[i_20_ + 1];
+				IComponentDefinitions[] class118s = new IComponentDefinitions[i_20_ + 1];
+				IComponentDefinitions[] class118s_23_ = new IComponentDefinitions[i_20_ + 1];
 				for (int i_24_ = 0; i_24_ < class118.aClass118Array1438.length; i_24_++) {
 					class118s[i_24_] = class118.aClass118Array1438[i_24_];
 					class118s_23_[i_24_] = class118.aClass118Array1439[i_24_];
@@ -108,9 +108,9 @@ public class Class159 {
 		}
 		if (i_20_ > 0 && class118.aClass118Array1438[i_20_ - 1] == null)
 			throw new RuntimeException(new StringBuilder().append("").append(i_20_ - 1).toString());
-		Class118 class118_25_ = new Class118();
+		IComponentDefinitions class118_25_ = new IComponentDefinitions();
 		class118_25_.anInt1268 = i_19_ * 720825663;
-		class118_25_.anInt1305 = (class118_25_.anInt1287 = 1 * class118.anInt1287) * 1571006651;
+		class118_25_.anInt1305 = (class118_25_.idHash = 1 * class118.idHash) * 1571006651;
 		class118_25_.anInt1288 = -646708263 * i_20_;
 		class118.aClass118Array1438[i_20_] = class118_25_;
 		if (class118.aClass118Array1438 != class118.aClass118Array1439)
@@ -150,14 +150,14 @@ public class Class159 {
 		return i_27_ + i;
 	}
 
-	public static void method2740(Interface36 interface36, int i) {
-		if (Class404.anInterface36_4830 != null)
+	public static void setNativeLibraryLoader(Interface36 nativeLibraryLoader, int i) {
+		if (Class404.LIBRARY_LOADER != null)
 			throw new IllegalStateException("");
-		Class404.anInterface36_4830 = interface36;
+		Class404.LIBRARY_LOADER = nativeLibraryLoader;
 	}
 
-	static final void method2741(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
-		Class118 class118_28_ = class118;
+	static final void method2741(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
+		IComponentDefinitions class118_28_ = class118;
 		boolean bool;
 		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) {
 			if (i == -1) {

@@ -16,7 +16,7 @@ public class Exception_Sub3 extends Exception {
 					return;
 				class184.anInt2290 = 0;
 				if (!class184.aBool2298 && class184.method3053((byte) -85) != null) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, class184.aClass432_2283, -105520716);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, class184.isaac, -105520716);
 					class184.method3049(class282_sub23, 1142654187);
 					try {
 						class184.method3047(168161979);

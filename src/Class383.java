@@ -57,8 +57,8 @@ public class Class383 implements Interface41 {
 
 	static final void method6510(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class82.method1455(class118, class98, class527, -1784890209);
 	}
 
@@ -101,7 +101,7 @@ public class Class383 implements Interface41 {
 			Renderers.SOFTWARE_RENDERER.L();
 			client.aClass294_7457.method5223(0.0F, 256.0F, 0.0F);
 			Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
-			Class384 class384 = Renderers.SOFTWARE_RENDERER.method8449();
+			Matrix44Arr class384 = Renderers.SOFTWARE_RENDERER.method8449();
 			class384.method6531((float) (dimension.width / 2), (float) (dimension.height / 2), 512.0F, 512.0F, (float) IndexLoaders.MAP_REGION_DECODER.method4544(1468645069), (float) IndexLoaders.MAP_REGION_DECODER.method4522(-1126120958), (float) dimension.width, (float) dimension.height);
 			Renderers.SOFTWARE_RENDERER.method8424(class384);
 			Renderers.SOFTWARE_RENDERER.IA(1.0F);
@@ -133,7 +133,7 @@ public class Class383 implements Interface41 {
 
 	static final void method6514(int i, int i_21_, int i_22_) {
 		if (Class456_Sub3.method12682(i, null, -1336109157))
-			Class151.method2591((Class468_Sub8.aClass98Array7889[i].aClass118Array998), i_21_, (byte) -17);
+			Class151.method2591((Class468_Sub8.aClass98Array7889[i].components), i_21_, (byte) -17);
 	}
 
 	public static String method6515(CharSequence charsequence, int i) {

@@ -50,7 +50,7 @@ public class HitsplatDefinitions {
 		if (1 == i)
 			anInt2849 = class282_sub35.readBigSmart() * -1924818623;
 		else if (i == 2) {
-			anInt2844 = class282_sub35.read24BitUnsignedInteger((short) 23294) * -12518251;
+			anInt2844 = class282_sub35.read24BitUnsignedInteger() * -12518251;
 			aBool2838 = true;
 		} else if (3 == i)
 			((HitsplatDefinitions) this).anInt2842 = class282_sub35.readBigSmart() * -1198566823;
@@ -82,7 +82,7 @@ public class HitsplatDefinitions {
 		if (1 == i)
 			anInt2849 = class282_sub35.readBigSmart() * -1924818623;
 		else if (i == 2) {
-			anInt2844 = class282_sub35.read24BitUnsignedInteger((short) 20684) * -12518251;
+			anInt2844 = class282_sub35.read24BitUnsignedInteger() * -12518251;
 			aBool2838 = true;
 		} else if (3 == i)
 			((HitsplatDefinitions) this).anInt2842 = class282_sub35.readBigSmart() * -1198566823;
@@ -295,7 +295,7 @@ public class HitsplatDefinitions {
 		return (i >= Class458.aClass458_5471.anInt5481 * 1109376893 && i <= Class458.aClass458_5489.anInt5481 * 1109376893);
 	}
 
-	static void method3850(Class384 class384, boolean bool, float f, float f_5_, float f_6_, float f_7_, int i, int i_8_, byte i_9_) {
+	static void method3850(Matrix44Arr class384, boolean bool, float f, float f_5_, float f_6_, float f_7_, int i, int i_8_, byte i_9_) {
 		int i_10_ = IndexLoaders.MAP_REGION_DECODER.method4522(-2126255936);
 		int i_11_ = IndexLoaders.MAP_REGION_DECODER.method4544(820314682);
 		class384.method6531(f, f_5_, f_6_, f_7_, (float) i_11_, (float) i_10_, (float) i, (float) i_8_);

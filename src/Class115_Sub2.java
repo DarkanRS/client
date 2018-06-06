@@ -158,7 +158,7 @@ public class Class115_Sub2 extends Class115 {
 			OpenGL.glUniform4fv(i_9_, i, fs, 0);
 	}
 
-	void method1936(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1936(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		if (!$assertionsDisabled && (class282_sub21_sub1.method15457((byte) 19) != Class111.aClass111_1168))
 			throw new AssertionError();
 		int i = ((Class282_Sub21_Sub1_Sub2) class282_sub21_sub1).method15788();
@@ -166,7 +166,7 @@ public class Class115_Sub2 extends Class115 {
 			OpenGL.glUniform2fv(i, 4, class384.method6551(aFloatArray9427), 0);
 	}
 
-	void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		if (!$assertionsDisabled && (class282_sub21_sub1.method15457((byte) 98) != Class111.aClass111_1150))
 			throw new AssertionError();
 		int i = ((Class282_Sub21_Sub1_Sub2) class282_sub21_sub1).method15788();
@@ -216,19 +216,19 @@ public class Class115_Sub2 extends Class115 {
 		}
 	}
 
-	void method1905(int i, Class384 class384) {
+	void method1905(int i, Matrix44Arr class384) {
 		OpenGL.glUniform3fv(i, 3, class384.method6544(aFloatArray9427), 0);
 	}
 
-	void method1906(int i, Class384 class384) {
+	void method1906(int i, Matrix44Arr class384) {
 		OpenGL.glUniform2fv(i, 4, class384.method6551(aFloatArray9427), 0);
 	}
 
-	void method1900(int i, Class384 class384) {
+	void method1900(int i, Matrix44Arr class384) {
 		OpenGL.glUniform4fv(i, 4, class384.method6517(aFloatArray9427), 0);
 	}
 
-	void method1927(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1927(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		if (!$assertionsDisabled && (class282_sub21_sub1.method15457((byte) 94) != Class111.aClass111_1150))
 			throw new AssertionError();
 		int i = ((Class282_Sub21_Sub1_Sub2) class282_sub21_sub1).method15788();
@@ -568,7 +568,7 @@ public class Class115_Sub2 extends Class115 {
 		return true;
 	}
 
-	void method1925(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1925(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		if (!$assertionsDisabled && (class282_sub21_sub1.method15457((byte) 93) != Class111.aClass111_1168))
 			throw new AssertionError();
 		int i = ((Class282_Sub21_Sub1_Sub2) class282_sub21_sub1).method15788();
@@ -576,7 +576,7 @@ public class Class115_Sub2 extends Class115 {
 			OpenGL.glUniform2fv(i, 4, class384.method6551(aFloatArray9427), 0);
 	}
 
-	void method1924(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1924(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		if (!$assertionsDisabled && (class282_sub21_sub1.method15457((byte) 100) != Class111.aClass111_1168))
 			throw new AssertionError();
 		int i = ((Class282_Sub21_Sub1_Sub2) class282_sub21_sub1).method15788();
@@ -599,7 +599,7 @@ public class Class115_Sub2 extends Class115 {
 		}
 	}
 
-	void method1926(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	void method1926(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		if (!$assertionsDisabled && (class282_sub21_sub1.method15457((byte) 117) != Class111.aClass111_1150))
 			throw new AssertionError();
 		int i = ((Class282_Sub21_Sub1_Sub2) class282_sub21_sub1).method15788();
@@ -668,7 +668,7 @@ public class Class115_Sub2 extends Class115 {
 			OpenGL.glUniform4fv(i_78_, i, fs, 0);
 	}
 
-	void method1902(int i, Class384 class384) {
+	void method1902(int i, Matrix44Arr class384) {
 		OpenGL.glUniform3fv(i, 3, class384.method6544(aFloatArray9427), 0);
 	}
 
@@ -691,23 +691,23 @@ public class Class115_Sub2 extends Class115 {
 		}
 	}
 
-	void method1940(int i, Class384 class384) {
+	void method1940(int i, Matrix44Arr class384) {
 		OpenGL.glUniform3fv(i, 3, class384.method6544(aFloatArray9427), 0);
 	}
 
-	void method1922(int i, Class384 class384) {
+	void method1922(int i, Matrix44Arr class384) {
 		OpenGL.glUniform3fv(i, 3, class384.method6544(aFloatArray9427), 0);
 	}
 
-	void method1942(int i, Class384 class384) {
+	void method1942(int i, Matrix44Arr class384) {
 		OpenGL.glUniform2fv(i, 4, class384.method6551(aFloatArray9427), 0);
 	}
 
-	void method1943(int i, Class384 class384) {
+	void method1943(int i, Matrix44Arr class384) {
 		OpenGL.glUniform4fv(i, 4, class384.method6517(aFloatArray9427), 0);
 	}
 
-	void method1910(int i, Class384 class384) {
+	void method1910(int i, Matrix44Arr class384) {
 		OpenGL.glUniform4fv(i, 4, class384.method6517(aFloatArray9427), 0);
 	}
 

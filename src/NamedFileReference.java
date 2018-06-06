@@ -72,9 +72,9 @@ public class NamedFileReference {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2961 ? 0 : class240.anIntArray2961.length);
 	}
 
-	static final void method869(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method869(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		if (-281434611 * Class118.anInt1283 == i_13_ || i_13_ == -85967273 * Class118.anInt1373 || Class118.anInt1265 * -1267941319 == i_13_)
+		if (-281434611 * IComponentDefinitions.anInt1283 == i_13_ || i_13_ == -85967273 * IComponentDefinitions.anInt1373 || IComponentDefinitions.anInt1265 * -1267941319 == i_13_)
 			class118.anInt1382 = i_13_ * -1316583121;
 	}
 
@@ -83,7 +83,7 @@ public class NamedFileReference {
 		int i_14_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_15_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
 		int i_16_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
-		Class118 class118 = Class117.method1981(i_16_, (byte) 9);
+		IComponentDefinitions class118 = Class117.method1981(i_16_, (byte) 9);
 		Class282_Sub14.method12221(class118, i_14_, i_15_, 1698123949);
 	}
 

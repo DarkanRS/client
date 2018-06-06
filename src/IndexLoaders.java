@@ -83,8 +83,8 @@ public class IndexLoaders {
 	public static Class498 aClass498_3001;
 	public static Class394 aClass394_5831;
 	public static Class233 aClass233_5822;
-	public static Class331 aClass331_3535;
-	public static Class429 aClass429_4265;
+	public static Class331 QUICK_CHAT_INDEX_LOADER;
+	public static QuickchatDefinitionsLoader QUICK_CHAT_INDEX_LOADER2;
 
 	public static int initializeGame(byte i) {
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub25_8206.method12926((byte) 1) == 0) {
@@ -98,7 +98,7 @@ public class IndexLoaders {
 		}
 		if (LOADING_STAGE == LoadingStage.aClass387_4697) {
 			if (Class468_Sub9.JS5_MANAGER == null) {
-				Class468_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Class443.JS5_LOCAL_REQUESTER, Class18.UPDATE_SERVER_EXPONENT, Class18.UPDATE_SERVER_MODULUS);
+				Class468_Sub9.JS5_MANAGER = new JS5Manager(Class119.JS5_STANDARD_REQUESTER, Whirlpool.JS5_LOCAL_REQUESTER, Class18.UPDATE_SERVER_EXPONENT, Class18.UPDATE_SERVER_MODULUS);
 			}
 			if (!Class468_Sub9.JS5_MANAGER.verify255RSA((byte) -44)) {
 				return 0;
@@ -219,8 +219,8 @@ public class IndexLoaders {
 			Class365.method6298(1, 1855105859);
 		}
 		if (LoadingStage.aClass387_4709 == LOADING_STAGE) {
-			Class47_Sub1.aClass262_9143 = new Class262(NATIVE_LIBRARY_INDEX);
-			Class159.method2740(Class47_Sub1.aClass262_9143, 1544888001);
+			NATIVE_LIBRARY_LOADER = new NativeLibraryLoader(NATIVE_LIBRARY_INDEX);
+			Class159.setNativeLibraryLoader(NATIVE_LIBRARY_LOADER, 1544888001);
 		}
 		if (LoadingStage.aClass387_4716 == LOADING_STAGE) {
 			int i_14_ = Class461.method7702(-1152427430);
@@ -278,8 +278,8 @@ public class IndexLoaders {
 			aClass233_5822 = new Class233(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			Class403.method6803(INTERFACE_INDEX, MESH_INDEX, SPRITES_INDEX, FONT_METRICS_INDEX, 78858918);
 			JS5StandardRequester.method5559(BILLBOARD_INDEX, -1845335453);
-			aClass331_3535 = new Class331(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX);
-			aClass429_4265 = new Class429(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX, new Class58());
+			QUICK_CHAT_INDEX_LOADER = new Class331(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX);
+			QUICK_CHAT_INDEX_LOADER2 = new QuickchatDefinitionsLoader(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX, new Class58());
 			Class158_Sub1.aClass3_8507 = new Class3();
 			Class94.method1589((short) 255);
 			Class77.method1369(aClass523_3868, 1486901897);
@@ -324,8 +324,8 @@ public class IndexLoaders {
 				return 0;
 			}
 			boolean bool = true;
-			for (int i_18_ = 0; i_18_ < (Class468_Sub8.aClass98Array7889[Class58.aClass529_527.anInt7036 * 376713291].aClass118Array998).length; i_18_++) {
-				Class118 class118 = (Class468_Sub8.aClass98Array7889[376713291 * Class58.aClass529_527.anInt7036].aClass118Array998[i_18_]);
+			for (int i_18_ = 0; i_18_ < (Class468_Sub8.aClass98Array7889[Class58.aClass529_527.anInt7036 * 376713291].components).length; i_18_++) {
+				IComponentDefinitions class118 = (Class468_Sub8.aClass98Array7889[376713291 * Class58.aClass529_527.anInt7036].components[i_18_]);
 				if (-2131393857 * class118.anInt1268 == 5 && 985215637 * class118.anInt1320 != -1 && !SPRITES_INDEX.load((class118.anInt1320 * 985215637), 0, 16711935)) {
 					bool = false;
 				}
@@ -384,4 +384,6 @@ public class IndexLoaders {
 		Class492.aClass327_Sub1Array5777[i_93_].method12544((short) -3210);
 		return new Index(Class492.aClass327_Sub1Array5777[i_93_], bool, i);
 	}
+
+	public static NativeLibraryLoader NATIVE_LIBRARY_LOADER;
 }

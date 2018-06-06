@@ -5,7 +5,7 @@
 public class Class282_Sub17_Sub2 extends Class282_Sub17 {
 	int anInt9932;
 	Class348 this$0;
-	static Class414 aClass414_9933;
+	static FontMetrics aClass414_9933;
 	public static boolean[] aBoolArray9934;
 
 	void method12252(Class61 class61) {

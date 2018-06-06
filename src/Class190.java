@@ -101,10 +101,10 @@ public class Class190 {
 		}
 	}
 
-	static void method3149(Class118 class118, Class455 class455, int i, int i_3_, int i_4_, int i_5_, NativeSprite class160, int i_6_) {
+	static void method3149(IComponentDefinitions class118, Class455 class455, int i, int i_3_, int i_4_, int i_5_, NativeSprite class160, int i_6_) {
 		if (null != class160) {
 			int i_7_;
-			if (4 == Class262.anInt3240 * -672443707) {
+			if (4 == NativeLibraryLoader.anInt3240 * -672443707) {
 				i_7_ = (int) client.aFloat7365 & 0x3fff;
 			} else {
 				i_7_ = ((int) client.aFloat7365 + client.anInt7255 * -1790074477 & 0x3fff);
@@ -114,7 +114,7 @@ public class Class190 {
 			if (i_9_ <= i_8_ * i_8_) {
 				int i_10_ = Class382.anIntArray4657[i_7_];
 				int i_11_ = Class382.anIntArray4661[i_7_];
-				if (4 != -672443707 * Class262.anInt3240) {
+				if (4 != -672443707 * NativeLibraryLoader.anInt3240) {
 					i_10_ = 256 * i_10_ / (-1864403271 * client.anInt7203 + 256);
 					i_11_ = 256 * i_11_ / (client.anInt7203 * -1864403271 + 256);
 				}
@@ -134,7 +134,7 @@ public class Class190 {
 		return Class224.aClass225_Sub2_2778;
 	}
 
-	static void method3151(int i, int i_19_, Class118 class118, Class119 class119, int i_20_, int i_21_, int i_22_) {
+	static void method3151(int i, int i_19_, IComponentDefinitions class118, Class119 class119, int i_20_, int i_21_, int i_22_) {
 		Class180[] class180s = client.aClass180Array7348;
 		for (int i_23_ = 0; i_23_ < class180s.length; i_23_++) {
 			Class180 class180 = class180s[i_23_];
@@ -143,9 +143,9 @@ public class Class190 {
 					Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754(1505135749 * class180.anInt2238)));
 					if (null != class282_sub47) {
 						NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-						Class385 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-						int i_24_ = (int) class385.aFloat4671 / 128 - i / 128;
-						int i_25_ = (int) class385.aFloat4673 / 128 - i_19_ / 128;
+						Vector3 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+						int i_24_ = (int) class385.x / 128 - i / 128;
+						int i_25_ = (int) class385.z / 128 - i_19_ / 128;
 						Class390.method6728(class118, class119, i_20_, i_21_, i_24_, i_25_, -1923151643 * class180.anInt2240, 360000L);
 					}
 				}
@@ -159,9 +159,9 @@ public class Class190 {
 				if (class180.anInt2236 * -379447335 == 10 && 1505135749 * class180.anInt2238 >= 0 && (class180.anInt2238 * 1505135749 < (client.players).length)) {
 					Player class521_sub1_sub1_sub2_sub1 = (client.players[class180.anInt2238 * 1505135749]);
 					if (class521_sub1_sub1_sub2_sub1 != null) {
-						Class385 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-						int i_28_ = (int) class385.aFloat4671 / 128 - i / 128;
-						int i_29_ = (int) class385.aFloat4673 / 128 - i_19_ / 128;
+						Vector3 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+						int i_28_ = (int) class385.x / 128 - i / 128;
+						int i_29_ = (int) class385.z / 128 - i_19_ / 128;
 						Class390.method6728(class118, class119, i_20_, i_21_, i_28_, i_29_, (class180.anInt2240 * -1923151643), 360000L);
 					}
 				}
@@ -210,7 +210,7 @@ public class Class190 {
 		Class454.anInt5451 = 0;
 		Class115.anInt1249 = 0;
 		Class96_Sub13.anInt9368 = 0;
-		Class369.anInt4280 = 0;
+		OutgoingLoginPacket.anInt4280 = 0;
 		Class121.anInt1527 = 0;
 		Class473.anInt5606 = 0;
 		Class501.anInt5828 = 0;

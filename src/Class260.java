@@ -73,8 +73,8 @@ public class Class260 {
 			anInt3223 = i * 919080253;
 			aClass116_3229 = null;
 			aClass282_Sub15_Sub2_3231 = null;
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, 2058137528);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, 2058137528);
+			class282_sub23.buffer.writeInt(-1);
 			client.aClass184_7475.method3049(class282_sub23, 1047416964);
 		} else {
 			i_2_ = i_2_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1862879949) >> 8;
@@ -106,12 +106,12 @@ public class Class260 {
 
 	static void method4579() {
 		if (aClass277_3221 != null) {
-			Class385 class385 = Class385.method6623(Class84.myPlayer.method11166().aClass385_3595);
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1057014816);
-			class385.aFloat4671 += (float) (class219.anInt2711 * 1948093437 << 9);
-			class385.aFloat4673 += (float) (class219.anInt2712 * -1002240017 << 9);
-			class385.method6631((float) (((Class277) aClass277_3221).anInt3349 * -142397055), class385.aFloat4672, (float) (-1830451005 * (((Class277) aClass277_3221).anInt3348)));
-			float f = class385.method6633();
+			Vector3 class385 = Vector3.method6623(Class84.myPlayer.method11166().aClass385_3595);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1057014816);
+			class385.x += (float) (class219.x * 1948093437 << 9);
+			class385.z += (float) (class219.y * -1002240017 << 9);
+			class385.subtract((float) (((Class277) aClass277_3221).anInt3349 * -142397055), class385.y, (float) (-1830451005 * (((Class277) aClass277_3221).anInt3348)));
+			float f = class385.magnitude();
 			class385.method6624();
 			float f_7_ = 0.0F;
 			if (f < (float) (((Class277) aClass277_3221).anInt3351 * -495770161))
@@ -202,9 +202,9 @@ public class Class260 {
 						return;
 				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(-2120881535) == 0)
 					return;
-				Class385 class385 = class521_sub1.method11166().aClass385_3595;
-				int i_15_ = (int) class385.aFloat4671 - 256 >> 9;
-				int i_16_ = (int) class385.aFloat4673 - 256 >> 9;
+				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+				int i_15_ = (int) class385.x - 256 >> 9;
+				int i_16_ = (int) class385.z - 256 >> 9;
 				int i_17_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_11_ + ((i_15_ << 16) + (class521_sub1.aByte7967 << 24) + (i_16_ << 8)));
 				aClass268Array3232[(anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_9_, i_10_, 0, i_14_, i_17_, i_13_, class521_sub1);
 			}
@@ -239,9 +239,9 @@ public class Class260 {
 						return;
 				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(2008105785) == 0)
 					return;
-				Class385 class385 = class521_sub1.method11166().aClass385_3595;
-				int i_25_ = (int) class385.aFloat4671 - 256 >> 9;
-				int i_26_ = (int) class385.aFloat4673 - 256 >> 9;
+				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+				int i_25_ = (int) class385.x - 256 >> 9;
+				int i_26_ = (int) class385.z - 256 >> 9;
 				int i_27_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_21_ + ((i_25_ << 16) + (class521_sub1.aByte7967 << 24) + (i_26_ << 8)));
 				aClass268Array3232[(anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_19_, i_20_, 0, i_24_, i_27_, i_23_, class521_sub1);
 			}
@@ -261,8 +261,8 @@ public class Class260 {
 			anInt3223 = i * 919080253;
 			aClass116_3229 = null;
 			aClass282_Sub15_Sub2_3231 = null;
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, -519429332);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, -519429332);
+			class282_sub23.buffer.writeInt(-1);
 			client.aClass184_7475.method3049(class282_sub23, -916114407);
 		} else {
 			i_31_ = i_31_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-289835) >> 8;
@@ -416,12 +416,12 @@ public class Class260 {
 
 	static void method4604() {
 		if (aClass277_3221 != null) {
-			Class385 class385 = Class385.method6623(Class84.myPlayer.method11166().aClass385_3595);
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(45783610);
-			class385.aFloat4671 += (float) (class219.anInt2711 * 1948093437 << 9);
-			class385.aFloat4673 += (float) (class219.anInt2712 * -1002240017 << 9);
-			class385.method6631((float) (((Class277) aClass277_3221).anInt3349 * -142397055), class385.aFloat4672, (float) (-1830451005 * (((Class277) aClass277_3221).anInt3348)));
-			float f = class385.method6633();
+			Vector3 class385 = Vector3.method6623(Class84.myPlayer.method11166().aClass385_3595);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(45783610);
+			class385.x += (float) (class219.x * 1948093437 << 9);
+			class385.z += (float) (class219.y * -1002240017 << 9);
+			class385.subtract((float) (((Class277) aClass277_3221).anInt3349 * -142397055), class385.y, (float) (-1830451005 * (((Class277) aClass277_3221).anInt3348)));
+			float f = class385.magnitude();
 			class385.method6624();
 			float f_96_ = 0.0F;
 			if (f < (float) (((Class277) aClass277_3221).anInt3351 * -495770161))
@@ -468,8 +468,8 @@ public class Class260 {
 			anInt3223 = i * 919080253;
 			aClass116_3229 = null;
 			aClass282_Sub15_Sub2_3231 = null;
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, 1168092558);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, 1168092558);
+			class282_sub23.buffer.writeInt(-1);
 			client.aClass184_7475.method3049(class282_sub23, 1268311768);
 		} else {
 			i_101_ = i_101_ * Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1500365897) >> 8;
@@ -505,7 +505,7 @@ public class Class260 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, -1870974818);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 9841);
 			}
-			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_104_, false, (byte) -46);
+			Class11.method13400(IndexLoaders.INDEX_11, i, 0, i_104_, false, (byte) -46);
 			Class150.method2580(-1, 255, (byte) 48);
 			aBool3220 = true;
 		}
@@ -520,7 +520,7 @@ public class Class260 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, -128022584);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 14000);
 			}
-			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_106_, false, (byte) -27);
+			Class11.method13400(IndexLoaders.INDEX_11, i, 0, i_106_, false, (byte) -27);
 			Class150.method2580(-1, 255, (byte) -35);
 			aBool3220 = true;
 		}
@@ -546,7 +546,7 @@ public class Class260 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = Class282_Sub20_Sub10.method15262(aClass282_Sub15_Sub2_3231, 29215494);
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 7925);
 			}
-			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_112_, false, (byte) -40);
+			Class11.method13400(IndexLoaders.INDEX_11, i, 0, i_112_, false, (byte) -40);
 			Class150.method2580(-1, 255, (byte) 12);
 			aBool3220 = true;
 		}
@@ -649,9 +649,9 @@ public class Class260 {
 						return;
 				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(1842845443) == 0)
 					return;
-				Class385 class385 = class521_sub1.method11166().aClass385_3595;
-				int i_132_ = (int) class385.aFloat4671 - 256 >> 9;
-				int i_133_ = (int) class385.aFloat4673 - 256 >> 9;
+				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+				int i_132_ = (int) class385.x - 256 >> 9;
+				int i_133_ = (int) class385.z - 256 >> 9;
 				int i_134_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_128_ + ((i_132_ << 16) + (class521_sub1.aByte7967 << 24) + (i_133_ << 8)));
 				aClass268Array3232[(anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_126_, i_127_, 0, i_131_, i_134_, i_130_, class521_sub1);
 			}
@@ -673,23 +673,23 @@ public class Class260 {
 	}
 
 	public static void method4627(int i) {
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, -376501848);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, -376501848);
+		class282_sub23.buffer.writeInt(-1);
 		client.aClass184_7475.method3049(class282_sub23, -340583361);
 		aClass116_3229 = new Class116(IndexLoaders.MUSIC_INDEX, i);
 	}
 
 	public static void method4628(int i) {
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.aClass432_2283, -97242203);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(-1);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4531, client.aClass184_7475.isaac, -97242203);
+		class282_sub23.buffer.writeInt(-1);
 		client.aClass184_7475.method3049(class282_sub23, -553178131);
 		aClass116_3229 = new Class116(IndexLoaders.MUSIC_INDEX, i);
 	}
 
 	static final void method4629(CS2Executor class527, int i) {
 		int i_135_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_135_, (byte) 40);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_135_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_135_, (byte) 40);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_135_ >> 16];
 		Class306.method5455(class118, class98, class527, 1919949252);
 	}
 
@@ -722,8 +722,8 @@ public class Class260 {
 
 	static final void method4633(CS2Executor class527, byte i) {
 		int i_144_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_144_, (byte) 59);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_144_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_144_, (byte) 59);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_144_ >> 16];
 		Class204.method3369(class118, class98, class527, (byte) 0);
 	}
 }

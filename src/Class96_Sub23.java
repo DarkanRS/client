@@ -77,11 +77,11 @@ public class Class96_Sub23 extends Class96 {
 		return file_1_;
 	}
 
-	public static final Class118 method14682(Class98 class98, Class118 class118, int i) {
+	public static final IComponentDefinitions method14682(Interface class98, IComponentDefinitions class118, int i) {
 		if (2110532063 * class118.anInt1305 != -1)
 			return class98.method1618(2110532063 * class118.anInt1305, (byte) 12);
 		if (!class98.aBool999) {
-			int i_5_ = class118.anInt1287 * -1952846363 >>> 16;
+			int i_5_ = class118.idHash * -1952846363 >>> 16;
 			Class451 class451 = new Class451(client.aClass465_7442);
 			for (Class282_Sub44 class282_sub44 = (Class282_Sub44) class451.method7503(1677593260); null != class282_sub44; class282_sub44 = (Class282_Sub44) class451.next()) {
 				if (class282_sub44.anInt8063 * 587626901 == i_5_)

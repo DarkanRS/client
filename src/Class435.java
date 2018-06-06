@@ -146,8 +146,8 @@ public class Class435 {
 			try {
 				int i_7_ = class282_sub35.readUnsignedByte();
 				if (i_7_ == 0 || 1 == i_7_ || i_7_ == 2) {
-					String string = class282_sub35.readString(1691179705);
-					String string_8_ = class282_sub35.readString(1360799529);
+					String string = class282_sub35.readString();
+					String string_8_ = class282_sub35.readString();
 					int i_9_ = 0;
 					if (1 == i_7_)
 						i_9_ = class282_sub35.readInt();
@@ -157,13 +157,13 @@ public class Class435 {
 						throw new SecurityException();
 					((Class282_Sub42) class282_sub42).aFieldArray8037[i_6_] = Class148.method2553(string, (short) 22853).getDeclaredField(string_8_);
 				} else if (3 == i_7_ || 4 == i_7_) {
-					String string = class282_sub35.readString(1272914086);
-					String string_10_ = class282_sub35.readString(-535813623);
+					String string = class282_sub35.readString();
+					String string_10_ = class282_sub35.readString();
 					int i_11_ = class282_sub35.readUnsignedByte();
 					String[] strings = new String[i_11_];
 					for (int i_12_ = 0; i_12_ < i_11_; i_12_++)
-						strings[i_12_] = class282_sub35.readString(2068860529);
-					String string_13_ = class282_sub35.readString(8048194);
+						strings[i_12_] = class282_sub35.readString();
+					String string_13_ = class282_sub35.readString();
 					byte[][] is = new byte[i_11_][];
 					if (3 == i_7_) {
 						for (int i_14_ = 0; i_14_ < i_11_; i_14_++) {
@@ -229,8 +229,8 @@ public class Class435 {
 			try {
 				int i_22_ = class282_sub35.readUnsignedByte();
 				if (i_22_ == 0 || 1 == i_22_ || i_22_ == 2) {
-					String string = class282_sub35.readString(2480784);
-					String string_23_ = class282_sub35.readString(940000463);
+					String string = class282_sub35.readString();
+					String string_23_ = class282_sub35.readString();
 					int i_24_ = 0;
 					if (1 == i_22_)
 						i_24_ = class282_sub35.readInt();
@@ -240,13 +240,13 @@ public class Class435 {
 						throw new SecurityException();
 					((Class282_Sub42) class282_sub42).aFieldArray8037[i_21_] = Class148.method2553(string, (short) 25870).getDeclaredField(string_23_);
 				} else if (3 == i_22_ || 4 == i_22_) {
-					String string = class282_sub35.readString(-574718880);
-					String string_25_ = class282_sub35.readString(1175148267);
+					String string = class282_sub35.readString();
+					String string_25_ = class282_sub35.readString();
 					int i_26_ = class282_sub35.readUnsignedByte();
 					String[] strings = new String[i_26_];
 					for (int i_27_ = 0; i_27_ < i_26_; i_27_++)
-						strings[i_27_] = class282_sub35.readString(1790186049);
-					String string_28_ = class282_sub35.readString(786563257);
+						strings[i_27_] = class282_sub35.readString();
+					String string_28_ = class282_sub35.readString();
 					byte[][] is = new byte[i_26_][];
 					if (3 == i_22_) {
 						for (int i_29_ = 0; i_29_ < i_26_; i_29_++) {
@@ -438,9 +438,9 @@ public class Class435 {
 				int[] is = new int[3];
 				int i_51_ = -1;
 				int i_52_ = -1;
-				Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1209620896);
-				if (Class291_Sub1.aClass282_Sub50_Sub6_3491.method14778(Class84.myPlayer.aByte7967, (class219.anInt2711 * 1948093437 + ((int) class385.aFloat4671 >> 9)), (((int) class385.aFloat4673 >> 9) + class219.anInt2712 * -1002240017), is, -1889386276)) {
+				Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+				CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1209620896);
+				if (Class291_Sub1.aClass282_Sub50_Sub6_3491.method14778(Class84.myPlayer.aByte7967, (class219.x * 1948093437 + ((int) class385.x >> 9)), (((int) class385.z >> 9) + class219.y * -1002240017), is, -1889386276)) {
 					i_51_ = is[1] - Class291_Sub1.anInt3472;
 					i_52_ = is[2] - Class291_Sub1.anInt3473;
 				}
@@ -483,7 +483,7 @@ public class Class435 {
 					Class291_Sub1.aFloat3462 = 8.0F;
 				}
 				Class291_Sub1.anInt3469 = (int) Class291_Sub1.aFloat3468 >> 1;
-				Class291_Sub1.aByteArrayArrayArray3464 = Class491.method8246(Class291_Sub1.anInt3469, (short) 8192);
+				Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469, (short) 8192);
 				Class89.method1502(-931909822);
 				Class291_Sub1.method5126();
 				Class346.aClass482_4049 = new NodeCollection();

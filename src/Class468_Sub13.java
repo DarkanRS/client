@@ -90,8 +90,8 @@ public class Class468_Sub13 extends Class468 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_2_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, false, 0, class527, (byte) -113);
 	}
 }

@@ -164,7 +164,7 @@ public class Class361 {
 	}
 
 	static void method6270(byte i) {
-		if (Class243.method4180(client.anInt7166 * -1741204137, (byte) -11)) {
+		if (QuickChatDynamicValue.method4180(client.anInt7166 * -1741204137, (byte) -11)) {
 			if (client.aClass184_7218.method3053((byte) -30) == null)
 				Class365.method6298(14, 1288084460);
 			else
@@ -177,8 +177,8 @@ public class Class361 {
 
 	static final void method6271(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class125.method2168(class118, class98, class527, 539000010);
 	}
 
@@ -197,7 +197,7 @@ public class Class361 {
 				is_3_[i_4_] = is[i_4_ + i];
 		} else
 			is_3_ = is;
-		Class443 class443 = new Class443();
+		Whirlpool class443 = new Whirlpool();
 		class443.method7406(1953997400);
 		class443.method7407(is_3_, (long) (i_1_ * 8));
 		byte[] is_5_ = new byte[64];

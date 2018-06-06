@@ -37,7 +37,7 @@ public class Class431 {
 		else if (2 == i)
 			aChar5140 = Class11.method470(class282_sub35.readByte((short) -9162), -940945676);
 		else if (i == 3)
-			((Class431) this).aString5142 = class282_sub35.readString(1536445218);
+			((Class431) this).aString5142 = class282_sub35.readString();
 		else if (4 == i)
 			((Class431) this).anInt5143 = class282_sub35.readInt() * -1641160573;
 		else if (i == 5 || 6 == i) {
@@ -47,7 +47,7 @@ public class Class431 {
 				int i_2_ = class282_sub35.readInt();
 				java.io.Serializable serializable;
 				if (5 == i)
-					serializable = class282_sub35.readString(100976796);
+					serializable = class282_sub35.readString();
 				else
 					serializable = new Integer(class282_sub35.readInt());
 				((Class431) this).aMap5144.put(new Integer(i_2_), serializable);
@@ -59,7 +59,7 @@ public class Class431 {
 			for (int i_4_ = 0; i_4_ < 451970335 * ((Class431) this).anInt5141; i_4_++) {
 				int i_5_ = class282_sub35.readUnsignedShort();
 				if (7 == i)
-					((Class431) this).anObjectArray5145[i_5_] = class282_sub35.readString(-258913669);
+					((Class431) this).anObjectArray5145[i_5_] = class282_sub35.readString();
 				else
 					((Class431) this).anObjectArray5145[i_5_] = new Integer(class282_sub35.readInt());
 			}
@@ -107,7 +107,7 @@ public class Class431 {
 		else if (2 == i)
 			aChar5140 = Class11.method470(class282_sub35.readByte((short) -22753), 1267007843);
 		else if (i == 3)
-			((Class431) this).aString5142 = class282_sub35.readString(1863822320);
+			((Class431) this).aString5142 = class282_sub35.readString();
 		else if (4 == i)
 			((Class431) this).anInt5143 = class282_sub35.readInt() * -1641160573;
 		else if (i == 5 || 6 == i) {
@@ -117,7 +117,7 @@ public class Class431 {
 				int i_10_ = class282_sub35.readInt();
 				java.io.Serializable serializable;
 				if (5 == i)
-					serializable = class282_sub35.readString(185126386);
+					serializable = class282_sub35.readString();
 				else
 					serializable = new Integer(class282_sub35.readInt());
 				((Class431) this).aMap5144.put(new Integer(i_10_), serializable);
@@ -129,7 +129,7 @@ public class Class431 {
 			for (int i_12_ = 0; i_12_ < 451970335 * ((Class431) this).anInt5141; i_12_++) {
 				int i_13_ = class282_sub35.readUnsignedShort();
 				if (7 == i)
-					((Class431) this).anObjectArray5145[i_13_] = class282_sub35.readString(1149772193);
+					((Class431) this).anObjectArray5145[i_13_] = class282_sub35.readString();
 				else
 					((Class431) this).anObjectArray5145[i_13_] = new Integer(class282_sub35.readInt());
 			}
@@ -249,7 +249,7 @@ public class Class431 {
 		else if (2 == i)
 			aChar5140 = Class11.method470(class282_sub35.readByte((short) -19143), 1492940801);
 		else if (i == 3)
-			((Class431) this).aString5142 = class282_sub35.readString(386674298);
+			((Class431) this).aString5142 = class282_sub35.readString();
 		else if (4 == i)
 			((Class431) this).anInt5143 = class282_sub35.readInt() * -1641160573;
 		else if (i == 5 || 6 == i) {
@@ -259,7 +259,7 @@ public class Class431 {
 				int i_20_ = class282_sub35.readInt();
 				java.io.Serializable serializable;
 				if (5 == i)
-					serializable = class282_sub35.readString(-24415718);
+					serializable = class282_sub35.readString();
 				else
 					serializable = new Integer(class282_sub35.readInt());
 				((Class431) this).aMap5144.put(new Integer(i_20_), serializable);
@@ -271,7 +271,7 @@ public class Class431 {
 			for (int i_22_ = 0; i_22_ < 451970335 * ((Class431) this).anInt5141; i_22_++) {
 				int i_23_ = class282_sub35.readUnsignedShort();
 				if (7 == i)
-					((Class431) this).anObjectArray5145[i_23_] = class282_sub35.readString(1194875966);
+					((Class431) this).anObjectArray5145[i_23_] = class282_sub35.readString();
 				else
 					((Class431) this).anObjectArray5145[i_23_] = new Integer(class282_sub35.readInt());
 			}

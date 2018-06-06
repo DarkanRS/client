@@ -57,18 +57,18 @@ public class Class141_Sub4 extends Class141 {
 	}
 
 	void method14427() {
-		Class384 class384 = (((Class505_Sub1) ((Class141_Sub4) this).aClass505_Sub1_1664).aClass384_8348);
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class141_Sub4) this).aClass505_Sub1_1664).aClass384_8348);
 		if (((Class141_Sub4) this).aBool9069)
 			OpenGL.glBindProgramARB(34336, ((((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450) == 2147483647 ? ((Class133) (((Class141_Sub4) this).aClass133_9067)).anInt1596 : (((Class133) ((Class141_Sub4) this).aClass133_9072).anInt1596)));
 		else
 			OpenGL.glBindProgramARB(34336, ((((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450) == 2147483647 ? ((Class133) (((Class141_Sub4) this).aClass133_9075)).anInt1596 : (((Class133) ((Class141_Sub4) this).aClass133_9074).anInt1596)));
 		float f = (float) ((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450;
-		float f_0_ = class384.aFloatArray4667[4] * f + class384.aFloatArray4667[12];
-		float f_1_ = class384.aFloatArray4667[5] * f + class384.aFloatArray4667[13];
-		float f_2_ = class384.aFloatArray4667[6] * f + class384.aFloatArray4667[14];
-		aFloatArray9076[0] = -class384.aFloatArray4667[4];
-		aFloatArray9076[1] = -class384.aFloatArray4667[5];
-		aFloatArray9076[2] = -class384.aFloatArray4667[6];
+		float f_0_ = class384.buf[4] * f + class384.buf[12];
+		float f_1_ = class384.buf[5] * f + class384.buf[13];
+		float f_2_ = class384.buf[6] * f + class384.buf[14];
+		aFloatArray9076[0] = -class384.buf[4];
+		aFloatArray9076[1] = -class384.buf[5];
+		aFloatArray9076[2] = -class384.buf[6];
 		aFloatArray9076[3] = -(aFloatArray9076[0] * f_0_ + aFloatArray9076[1] * f_1_ + aFloatArray9076[2] * f_2_);
 		OpenGL.glProgramLocalParameter4fARB(34336, 1, aFloatArray9076[0], aFloatArray9076[1], aFloatArray9076[2], aFloatArray9076[3]);
 		OpenGL.glEnable(34336);
@@ -306,18 +306,18 @@ public class Class141_Sub4 extends Class141 {
 	}
 
 	void method14430() {
-		Class384 class384 = (((Class505_Sub1) ((Class141_Sub4) this).aClass505_Sub1_1664).aClass384_8348);
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class141_Sub4) this).aClass505_Sub1_1664).aClass384_8348);
 		if (((Class141_Sub4) this).aBool9069)
 			OpenGL.glBindProgramARB(34336, ((((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450) == 2147483647 ? ((Class133) (((Class141_Sub4) this).aClass133_9067)).anInt1596 : (((Class133) ((Class141_Sub4) this).aClass133_9072).anInt1596)));
 		else
 			OpenGL.glBindProgramARB(34336, ((((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450) == 2147483647 ? ((Class133) (((Class141_Sub4) this).aClass133_9075)).anInt1596 : (((Class133) ((Class141_Sub4) this).aClass133_9074).anInt1596)));
 		float f = (float) ((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450;
-		float f_12_ = class384.aFloatArray4667[4] * f + class384.aFloatArray4667[12];
-		float f_13_ = class384.aFloatArray4667[5] * f + class384.aFloatArray4667[13];
-		float f_14_ = class384.aFloatArray4667[6] * f + class384.aFloatArray4667[14];
-		aFloatArray9076[0] = -class384.aFloatArray4667[4];
-		aFloatArray9076[1] = -class384.aFloatArray4667[5];
-		aFloatArray9076[2] = -class384.aFloatArray4667[6];
+		float f_12_ = class384.buf[4] * f + class384.buf[12];
+		float f_13_ = class384.buf[5] * f + class384.buf[13];
+		float f_14_ = class384.buf[6] * f + class384.buf[14];
+		aFloatArray9076[0] = -class384.buf[4];
+		aFloatArray9076[1] = -class384.buf[5];
+		aFloatArray9076[2] = -class384.buf[6];
 		aFloatArray9076[3] = -(aFloatArray9076[0] * f_12_ + aFloatArray9076[1] * f_13_ + aFloatArray9076[2] * f_14_);
 		OpenGL.glProgramLocalParameter4fARB(34336, 1, aFloatArray9076[0], aFloatArray9076[1], aFloatArray9076[2], aFloatArray9076[3]);
 		OpenGL.glEnable(34336);
@@ -326,18 +326,18 @@ public class Class141_Sub4 extends Class141 {
 	}
 
 	void method14431() {
-		Class384 class384 = (((Class505_Sub1) ((Class141_Sub4) this).aClass505_Sub1_1664).aClass384_8348);
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class141_Sub4) this).aClass505_Sub1_1664).aClass384_8348);
 		if (((Class141_Sub4) this).aBool9069)
 			OpenGL.glBindProgramARB(34336, ((((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450) == 2147483647 ? ((Class133) (((Class141_Sub4) this).aClass133_9067)).anInt1596 : (((Class133) ((Class141_Sub4) this).aClass133_9072).anInt1596)));
 		else
 			OpenGL.glBindProgramARB(34336, ((((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450) == 2147483647 ? ((Class133) (((Class141_Sub4) this).aClass133_9075)).anInt1596 : (((Class133) ((Class141_Sub4) this).aClass133_9074).anInt1596)));
 		float f = (float) ((Class505_Sub1) (((Class141_Sub4) this).aClass505_Sub1_1664)).anInt8450;
-		float f_15_ = class384.aFloatArray4667[4] * f + class384.aFloatArray4667[12];
-		float f_16_ = class384.aFloatArray4667[5] * f + class384.aFloatArray4667[13];
-		float f_17_ = class384.aFloatArray4667[6] * f + class384.aFloatArray4667[14];
-		aFloatArray9076[0] = -class384.aFloatArray4667[4];
-		aFloatArray9076[1] = -class384.aFloatArray4667[5];
-		aFloatArray9076[2] = -class384.aFloatArray4667[6];
+		float f_15_ = class384.buf[4] * f + class384.buf[12];
+		float f_16_ = class384.buf[5] * f + class384.buf[13];
+		float f_17_ = class384.buf[6] * f + class384.buf[14];
+		aFloatArray9076[0] = -class384.buf[4];
+		aFloatArray9076[1] = -class384.buf[5];
+		aFloatArray9076[2] = -class384.buf[6];
 		aFloatArray9076[3] = -(aFloatArray9076[0] * f_15_ + aFloatArray9076[1] * f_16_ + aFloatArray9076[2] * f_17_);
 		OpenGL.glProgramLocalParameter4fARB(34336, 1, aFloatArray9076[0], aFloatArray9076[1], aFloatArray9076[2], aFloatArray9076[3]);
 		OpenGL.glEnable(34336);

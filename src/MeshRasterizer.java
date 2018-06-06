@@ -298,7 +298,7 @@ public abstract class MeshRasterizer {
 		}
 	}
 
-	public abstract void method11263(Class294 class294, int i, boolean bool);
+	public abstract void method11263(Matrix44Var class294, int i, boolean bool);
 
 	public final void method11264(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_89_, int i_90_, int i_91_, int i_92_, Class282_Sub50_Sub13 class282_sub50_sub13_93_, int i_94_, Class282_Sub50_Sub13 class282_sub50_sub13_95_, int i_96_, int i_97_, int i_98_, boolean[] bools, boolean bool) {
 		if (i != -1) {
@@ -556,7 +556,7 @@ public abstract class MeshRasterizer {
 
 	public abstract int ct();
 
-	public abstract boolean method11270(int i, int i_169_, Class294 class294, boolean bool, int i_170_);
+	public abstract boolean method11270(int i, int i_169_, Matrix44Var class294, boolean bool, int i_170_);
 
 	public abstract Class282_Sub50_Sub17 ga(Class282_Sub50_Sub17 class282_sub50_sub17);
 
@@ -626,7 +626,7 @@ public abstract class MeshRasterizer {
 
 	public abstract boolean u();
 
-	public abstract void method11273(Class294 class294);
+	public abstract void method11273(Matrix44Var class294);
 
 	public abstract int cw();
 
@@ -733,7 +733,7 @@ public abstract class MeshRasterizer {
 
 	public abstract int cu();
 
-	public abstract void method11282(Class294 class294, Class275_Sub5 class275_sub5, int i);
+	public abstract void method11282(Matrix44Var class294, Class275_Sub5 class275_sub5, int i);
 
 	public abstract void X(short i, short i_247_);
 
@@ -785,7 +785,7 @@ public abstract class MeshRasterizer {
 
 	abstract void method11285();
 
-	public abstract boolean method11286(int i, int i_253_, Class294 class294, boolean bool, int i_254_);
+	public abstract boolean method11286(int i, int i_253_, Matrix44Var class294, boolean bool, int i_254_);
 
 	abstract boolean bv();
 
@@ -843,17 +843,17 @@ public abstract class MeshRasterizer {
 
 	public abstract int cc();
 
-	public abstract void method11290(Class294 class294, int i, boolean bool);
+	public abstract void method11290(Matrix44Var class294, int i, boolean bool);
 
-	public abstract void method11291(Class294 class294, int i, boolean bool);
+	public abstract void method11291(Matrix44Var class294, int i, boolean bool);
 
-	public abstract void method11292(Class294 class294, int i, boolean bool);
+	public abstract void method11292(Matrix44Var class294, int i, boolean bool);
 
-	public abstract void method11293(Class294 class294, Class275_Sub5 class275_sub5, int i);
+	public abstract void method11293(Matrix44Var class294, Class275_Sub5 class275_sub5, int i);
 
 	public abstract int ar();
 
-	public abstract void method11294(Class294 class294);
+	public abstract void method11294(Matrix44Var class294);
 
 	public abstract int cv();
 
@@ -925,7 +925,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void ce(int i);
 
-	public abstract void method11298(Class294 class294, int i, boolean bool);
+	public abstract void method11298(Matrix44Var class294, int i, boolean bool);
 
 	public abstract int ch();
 
@@ -1084,7 +1084,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void S(int i);
 
-	public abstract boolean method11309(int i, int i_343_, Class294 class294, boolean bool, int i_344_);
+	public abstract boolean method11309(int i, int i_343_, Matrix44Var class294, boolean bool, int i_344_);
 
 	public abstract void EA(int i);
 
@@ -1200,7 +1200,7 @@ public abstract class MeshRasterizer {
 
 	public abstract int cd();
 
-	public abstract void method11315(Class294 class294);
+	public abstract void method11315(Matrix44Var class294);
 
 	void method11316(int i, int i_395_, int i_396_, int i_397_, int i_398_, int i_399_, int i_400_, float[] fs, int i_401_, float f, float f_402_, float f_403_, float[] fs_404_) {
 		i -= i_397_;

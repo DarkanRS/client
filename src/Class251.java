@@ -1131,8 +1131,8 @@ public final class Class251 {
 
 	static final void method4311(CS2Executor class527, int i) {
 		int i_172_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_172_, (byte) 118);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_172_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_172_, (byte) 118);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_172_ >> 16];
 		Class455.method7555(class118, class98, class527, (byte) -54);
 	}
 
@@ -1175,11 +1175,11 @@ public final class Class251 {
 				else {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
-					Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1275338740);
-					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.anInt2711) >> 6).append(",").append((-1002240017 * class219.anInt2712 + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.anInt2711 * 1948093437) & 0x3f).append(",")
-							.append((class219.anInt2712 * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 22)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -2096324041);
-					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.anInt2711 * 1948093437) >> 6).append(",").append((Class369.anInt4280 * 469662201 + class219.anInt2712 * -1002240017) >> 6).append(",").append((class219.anInt2711 * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
-							.append((class219.anInt2712 * -1002240017 + 469662201 * Class369.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * Class369.anInt4280, (Class84.myPlayer.aByte7967), (byte) 2)) - 654473753 * Class121.anInt1527).toString(), -2049086171);
+					CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1275338740);
+					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 22)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -2096324041);
+					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.aByte7967), (byte) 2)) - 654473753 * Class121.anInt1527).toString(), -2049086171);
 				}
 			} catch (Exception exception) {
 				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -927245115)), -314816204);
@@ -1394,11 +1394,11 @@ public final class Class251 {
 					Class341.method6074(strings, 1579654554);
 				}
 				if (-1741204137 * client.anInt7166 == 13) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4612, (client.aClass184_7475.aClass432_2283), 704086040);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string.length() + 3);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool_173_ ? 1 : 0);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4612, (client.aClass184_7475.isaac), 704086040);
+					class282_sub23.buffer.writeByte(string.length() + 3);
+					class282_sub23.buffer.writeByte(bool ? 1 : 0);
+					class282_sub23.buffer.writeByte(bool_173_ ? 1 : 0);
+					class282_sub23.buffer.writeString(string);
 					client.aClass184_7475.method3049(class282_sub23, -273447008);
 				}
 			} catch (Exception exception) {

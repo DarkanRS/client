@@ -32,15 +32,15 @@ public class Class10 {
 
 	static final void method459(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class109.method1852(class118, class98, class527, 1050548242);
 	}
 
 	static final void method460(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 25);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 25);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class496.method8310(class118, class98, class527, (byte) -108);
 	}
 }

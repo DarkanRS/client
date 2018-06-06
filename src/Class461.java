@@ -113,7 +113,7 @@ public class Class461 {
 
 	static void method7703(int i) {
 		if (client.anInt7231 * -1638311881 < 0) {
-			Class414 class414 = Class114.method1887(-785695641);
+			FontMetrics class414 = Class114.method1887(-785695641);
 			if (!Class20.aBool161)
 				Class20.aBool162 = ((Class20.anInt198 * 215004571 != -1 && (Class20.anInt169 * 2144330291 >= Class20.anInt198 * 215004571)) || (((Class20.aBool187 ? 26 : 22) + (997766473 * Class20.anInt178 * (2144330291 * Class20.anInt169))) > -969250379 * Engine.anInt3243));
 			Class20.aClass482_174.method8118(1351673894);
@@ -293,7 +293,7 @@ public class Class461 {
 					bool_37_ = true;
 				if (bool_37_ && Class20.anInt169 * 2144330291 > 0) {
 					if (null == client.aClass118_7257 && 0 == client.anInt7184 * 676534483)
-						Class262.method4653(i_13_, i_14_, 272985628);
+						NativeLibraryLoader.method4653(i_13_, i_14_, 272985628);
 					else
 						Class20.anInt167 = -256186394;
 				} else if (bool_36_) {

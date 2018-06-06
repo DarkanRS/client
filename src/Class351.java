@@ -66,7 +66,7 @@ public class Class351 implements Interface3 {
 		if (bool)
 			Class337.method6017(i_4_, -775991491);
 		Class109_Sub1.method14650(i_4_, 185452428);
-		Class118 class118 = Class117.method1981(i_5_, (byte) 49);
+		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 49);
 		if (null != class118)
 			Class109.method1858(class118, (byte) -15);
 		OutputStream_Sub1.method12938((byte) 7);
@@ -88,15 +88,15 @@ public class Class351 implements Interface3 {
 	}
 
 	public static synchronized void method6197(byte[] is, int i) {
-		if (is.length == 100 && Class491.anInt5768 * -1753327595 < 1000)
-			Class491.aByteArrayArray5767[(Class491.anInt5768 += -608782531) * -1753327595 - 1] = is;
-		else if (5000 == is.length && Class491.anInt5769 * -495226665 < 250)
-			Class491.aByteArrayArray5771[(Class491.anInt5769 += 758153959) * -495226665 - 1] = is;
-		else if (30000 == is.length && -1159034629 * Class491.anInt5772 < 50)
-			Class491.aByteArrayArray5770[(Class491.anInt5772 += -1912454605) * -1159034629 - 1] = is;
+		if (is.length == 100 && CircularBuffer.anInt5768 * -1753327595 < 1000)
+			CircularBuffer.aByteArrayArray5767[(CircularBuffer.anInt5768 += -608782531) * -1753327595 - 1] = is;
+		else if (5000 == is.length && CircularBuffer.anInt5769 * -495226665 < 250)
+			CircularBuffer.aByteArrayArray5771[(CircularBuffer.anInt5769 += 758153959) * -495226665 - 1] = is;
+		else if (30000 == is.length && -1159034629 * CircularBuffer.anInt5772 < 50)
+			CircularBuffer.aByteArrayArray5770[(CircularBuffer.anInt5772 += -1912454605) * -1159034629 - 1] = is;
 		else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
-			for (int i_8_ = 0; i_8_ < Class491.anIntArray5773.length; i_8_++) {
-				if (is.length == Class491.anIntArray5773[i_8_] && (Class412.anIntArray4962[i_8_] < (IcmpService_Sub1.aByteArrayArrayArray7963[i_8_]).length)) {
+			for (int i_8_ = 0; i_8_ < CircularBuffer.anIntArray5773.length; i_8_++) {
+				if (is.length == CircularBuffer.anIntArray5773[i_8_] && (Class412.anIntArray4962[i_8_] < (IcmpService_Sub1.aByteArrayArrayArray7963[i_8_]).length)) {
 					IcmpService_Sub1.aByteArrayArrayArray7963[i_8_][Class412.anIntArray4962[i_8_]++] = is;
 					break;
 				}

@@ -118,7 +118,7 @@ public final class Class475 {
 			else if (' ' == c)
 				stringbuilder.append('+');
 			else {
-				int i_6_ = Class242.method4163(c, (byte) 115);
+				int i_6_ = Class242.getByteForChar(c);
 				stringbuilder.append('%');
 				int i_7_ = i_6_ >> 4 & 0xf;
 				if (i_7_ >= 10)
@@ -135,7 +135,7 @@ public final class Class475 {
 		return stringbuilder.toString();
 	}
 
-	static final void method7927(Class118 class118, CS2Executor class527, byte i) {
+	static final void method7927(IComponentDefinitions class118, CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
 		int i_8_ = ((class527.intStack[1942118537 * class527.anInt7012]) - 1);
 		int i_9_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);

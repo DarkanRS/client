@@ -11,23 +11,23 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	NodeCollection au;
 	int ac;
 	int at;
-	Class384 af;
+	Matrix44Arr af;
 	static int[] bi;
-	Class294 ay;
+	Matrix44Var ay;
 	static int[] bx;
 	ba z;
-	Class384 aw;
+	Matrix44Arr aw;
 	float az;
 	float ax;
-	Class384 an;
+	Matrix44Arr an;
 	float al;
 	int as;
 	a[] ai;
-	Class294 ag;
+	Matrix44Var ag;
 	static final int aj = 104;
 	static final int am = 20;
 	static int[] ab = new int[Math.max(Math.max(104, 20), 24573)];
-	Class384 ao;
+	Matrix44Arr ao;
 	static byte[] bj;
 	static float[] ar = new float[20];
 	static int[] ae = new int[6];
@@ -109,7 +109,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		}
 	}
 
-	public Class294 method8458() {
+	public Matrix44Var method8458() {
 		return ((ja) this).ay;
 	}
 
@@ -156,10 +156,10 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	}
 
 	public void method8479(float f, float f_16_, float f_17_, float[] fs) {
-		float f_18_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * f + ((ja) this).aw.aFloatArray4667[7] * f_16_ + ((ja) this).aw.aFloatArray4667[11] * f_17_);
-		float f_19_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * f + ((ja) this).aw.aFloatArray4667[4] * f_16_ + ((ja) this).aw.aFloatArray4667[8] * f_17_);
-		float f_20_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * f + ((ja) this).aw.aFloatArray4667[5] * f_16_ + ((ja) this).aw.aFloatArray4667[9] * f_17_);
-		float f_21_ = (((ja) this).ao.aFloatArray4667[14] + ((ja) this).ao.aFloatArray4667[2] * f + ((ja) this).ao.aFloatArray4667[6] * f_16_ + ((ja) this).ao.aFloatArray4667[10] * f_17_);
+		float f_18_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * f + ((ja) this).aw.buf[7] * f_16_ + ((ja) this).aw.buf[11] * f_17_);
+		float f_19_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * f + ((ja) this).aw.buf[4] * f_16_ + ((ja) this).aw.buf[8] * f_17_);
+		float f_20_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * f + ((ja) this).aw.buf[5] * f_16_ + ((ja) this).aw.buf[9] * f_17_);
+		float f_21_ = (((ja) this).ao.buf[14] + ((ja) this).ao.buf[2] * f + ((ja) this).ao.buf[6] * f_16_ + ((ja) this).ao.buf[10] * f_17_);
 		fs[0] = ((ja) this).ax + ((ja) this).az * f_19_ / f_18_;
 		fs[1] = ((ja) this).al + ((ja) this).ap * f_20_ / f_18_;
 		fs[2] = f_21_;
@@ -219,7 +219,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void A(int i, int i_37_, int i_38_, int i_39_);
 
-	public Class384 method8587() {
+	public Matrix44Arr method8587() {
 		return ((ja) this).an;
 	}
 
@@ -279,22 +279,22 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public int method8437(int i, int i_110_, int i_111_, int i_112_, int i_113_, int i_114_) {
 		int i_115_ = 0;
-		float f = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i + ((ja) this).aw.aFloatArray4667[6] * (float) i_110_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_111_);
-		float f_116_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i_112_ + ((ja) this).aw.aFloatArray4667[6] * (float) i_113_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_114_);
-		float f_117_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i + ((ja) this).aw.aFloatArray4667[7] * (float) i_110_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_111_);
-		float f_118_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i_112_ + ((ja) this).aw.aFloatArray4667[7] * (float) i_113_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_114_);
+		float f = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i + ((ja) this).aw.buf[6] * (float) i_110_ + ((ja) this).aw.buf[10] * (float) i_111_);
+		float f_116_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i_112_ + ((ja) this).aw.buf[6] * (float) i_113_ + ((ja) this).aw.buf[10] * (float) i_114_);
+		float f_117_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i + ((ja) this).aw.buf[7] * (float) i_110_ + ((ja) this).aw.buf[11] * (float) i_111_);
+		float f_118_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i_112_ + ((ja) this).aw.buf[7] * (float) i_113_ + ((ja) this).aw.buf[11] * (float) i_114_);
 		if (f < -f_117_ && f_116_ < -f_118_)
 			i_115_ |= 0x10;
 		else if (f > f_117_ && f_116_ > f_118_)
 			i_115_ |= 0x20;
-		float f_119_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i + ((ja) this).aw.aFloatArray4667[4] * (float) i_110_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_111_);
-		float f_120_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i_112_ + ((ja) this).aw.aFloatArray4667[4] * (float) i_113_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_114_);
+		float f_119_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i + ((ja) this).aw.buf[4] * (float) i_110_ + ((ja) this).aw.buf[8] * (float) i_111_);
+		float f_120_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i_112_ + ((ja) this).aw.buf[4] * (float) i_113_ + ((ja) this).aw.buf[8] * (float) i_114_);
 		if (f_119_ < -f_117_ && f_120_ < -f_118_)
 			i_115_ |= 0x1;
 		if (f_119_ > f_117_ && f_120_ > f_118_)
 			i_115_ |= 0x2;
-		float f_121_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i + ((ja) this).aw.aFloatArray4667[5] * (float) i_110_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_111_);
-		float f_122_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i_112_ + ((ja) this).aw.aFloatArray4667[5] * (float) i_113_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_114_);
+		float f_121_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i + ((ja) this).aw.buf[5] * (float) i_110_ + ((ja) this).aw.buf[9] * (float) i_111_);
+		float f_122_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i_112_ + ((ja) this).aw.buf[5] * (float) i_113_ + ((ja) this).aw.buf[9] * (float) i_114_);
 		if (f_121_ < -f_117_ && f_122_ < -f_118_)
 			i_115_ |= 0x4;
 		if (f_121_ > f_117_ && f_122_ > f_118_)
@@ -307,8 +307,8 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	}
 
 	public void method8515(float f, float f_123_, float f_124_, float[] fs) {
-		float f_125_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * f + ((ja) this).aw.aFloatArray4667[6] * f_123_ + ((ja) this).aw.aFloatArray4667[10] * f_124_);
-		float f_126_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * f + ((ja) this).aw.aFloatArray4667[7] * f_123_ + ((ja) this).aw.aFloatArray4667[11] * f_124_);
+		float f_125_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * f + ((ja) this).aw.buf[6] * f_123_ + ((ja) this).aw.buf[10] * f_124_);
+		float f_126_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * f + ((ja) this).aw.buf[7] * f_123_ + ((ja) this).aw.buf[11] * f_124_);
 		if (f_125_ < -f_126_ || f_125_ > f_126_) {
 			float[] fs_127_ = fs;
 			float[] fs_128_ = fs;
@@ -316,7 +316,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			fs_128_[1] = Float.NaN;
 			fs_127_[0] = Float.NaN;
 		} else {
-			float f_129_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * f + ((ja) this).aw.aFloatArray4667[4] * f_123_ + ((ja) this).aw.aFloatArray4667[8] * f_124_);
+			float f_129_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * f + ((ja) this).aw.buf[4] * f_123_ + ((ja) this).aw.buf[8] * f_124_);
 			if (f_129_ < -f_126_ || f_129_ > f_126_) {
 				float[] fs_130_ = fs;
 				float[] fs_131_ = fs;
@@ -324,7 +324,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				fs_131_[1] = Float.NaN;
 				fs_130_[0] = Float.NaN;
 			} else {
-				float f_132_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * f + ((ja) this).aw.aFloatArray4667[5] * f_123_ + ((ja) this).aw.aFloatArray4667[9] * f_124_);
+				float f_132_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * f + ((ja) this).aw.buf[5] * f_123_ + ((ja) this).aw.buf[9] * f_124_);
 				if (f_132_ < -f_126_ || f_132_ > f_126_) {
 					float[] fs_133_ = fs;
 					float[] fs_134_ = fs;
@@ -332,7 +332,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 					fs_134_[1] = Float.NaN;
 					fs_133_[0] = Float.NaN;
 				} else {
-					float f_135_ = (((ja) this).ao.aFloatArray4667[14] + ((ja) this).ao.aFloatArray4667[2] * f + ((ja) this).ao.aFloatArray4667[6] * f_123_ + ((ja) this).ao.aFloatArray4667[10] * f_124_);
+					float f_135_ = (((ja) this).ao.buf[14] + ((ja) this).ao.buf[2] * f + ((ja) this).ao.buf[6] * f_123_ + ((ja) this).ao.buf[10] * f_124_);
 					fs[0] = ((ja) this).ax + ((ja) this).az * f_129_ / f_126_;
 					fs[1] = ((ja) this).al + ((ja) this).ap * f_132_ / f_126_;
 					fs[2] = f_135_;
@@ -372,7 +372,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void DA(int i, Class455 class455, int i_138_, int i_139_);
 
-	public FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8448(FontMetrics class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_140_ = new int[class91s.length];
 		boolean bool_141_ = false;
@@ -450,10 +450,10 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		}
 	}
 
-	public void method8457(Class294 class294) {
+	public void method8457(Matrix44Var class294) {
 		((ja) this).ay = class294;
 		((ja) this).ao.method6522(class294);
-		AA(((ja) this).ao.aFloatArray4667);
+		AA(((ja) this).ao.buf);
 		((ja) this).aw.method6568(((ja) this).ao, ((ja) this).an);
 	}
 
@@ -461,9 +461,9 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	native void AA(float[] fs);
 
-	public void method8424(Class384 class384) {
+	public void method8424(Matrix44Arr class384) {
 		((ja) this).an = class384;
-		wa(((ja) this).an.aFloatArray4667);
+		wa(((ja) this).an.buf);
 		((ja) this).aw.method6568(((ja) this).ao, ((ja) this).an);
 	}
 
@@ -471,7 +471,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return true;
 	}
 
-	public Class384 method8453() {
+	public Matrix44Arr method8453() {
 		return ((ja) this).an;
 	}
 
@@ -654,21 +654,21 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		((ja) this).at = 4096;
 		((ja) this).bm = false;
 		try {
-			if (!Class362.method6278(616047582).method222("sw3d", -1251324674))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("sw3d", -1251324674))
 				throw new RuntimeException("");
 			Class156.method2643((byte) 53);
 			q(anInterface22_5834, anInterface22_5834.method84(-670973656), 0);
 			Class38.method854(false, true, -1602514184);
 			((ja) this).bm = true;
-			((ja) this).af = new Class384();
-			new Class385();
-			((ja) this).ag = new Class294();
-			new Class381();
-			((ja) this).ao = new Class384();
-			((ja) this).an = new Class384();
-			((ja) this).aw = new Class384();
-			method8457(new Class294());
-			method8424(new Class384());
+			((ja) this).af = new Matrix44Arr();
+			new Vector3();
+			((ja) this).ag = new Matrix44Var();
+			new Quaternion();
+			((ja) this).ao = new Matrix44Arr();
+			((ja) this).an = new Matrix44Arr();
+			((ja) this).aw = new Matrix44Arr();
+			method8457(new Matrix44Var());
+			method8424(new Matrix44Arr());
 			nu(1);
 			ni(0);
 			if (canvas != null) {
@@ -687,7 +687,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		}
 	}
 
-	public Class384 method8449() {
+	public Matrix44Arr method8449() {
 		return ((ja) this).af;
 	}
 
@@ -746,7 +746,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return true;
 	}
 
-	public Class384 method8517() {
+	public Matrix44Arr method8517() {
 		return ((ja) this).af;
 	}
 
@@ -879,7 +879,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public native void fv(int i, int i_299_, int i_300_, int i_301_, int i_302_, int i_303_, byte[] is, int i_304_, int i_305_);
 
-	public FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8660(FontMetrics class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_306_ = new int[class91s.length];
 		boolean bool_307_ = false;
@@ -914,10 +914,10 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	native void oj(int i, int i_329_, int i_330_, int i_331_);
 
 	public void method8573(float f, float f_332_, float f_333_, float[] fs) {
-		float f_334_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * f + ((ja) this).aw.aFloatArray4667[7] * f_332_ + ((ja) this).aw.aFloatArray4667[11] * f_333_);
-		float f_335_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * f + ((ja) this).aw.aFloatArray4667[4] * f_332_ + ((ja) this).aw.aFloatArray4667[8] * f_333_);
-		float f_336_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * f + ((ja) this).aw.aFloatArray4667[5] * f_332_ + ((ja) this).aw.aFloatArray4667[9] * f_333_);
-		float f_337_ = (((ja) this).ao.aFloatArray4667[14] + ((ja) this).ao.aFloatArray4667[2] * f + ((ja) this).ao.aFloatArray4667[6] * f_332_ + ((ja) this).ao.aFloatArray4667[10] * f_333_);
+		float f_334_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * f + ((ja) this).aw.buf[7] * f_332_ + ((ja) this).aw.buf[11] * f_333_);
+		float f_335_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * f + ((ja) this).aw.buf[4] * f_332_ + ((ja) this).aw.buf[8] * f_333_);
+		float f_336_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * f + ((ja) this).aw.buf[5] * f_332_ + ((ja) this).aw.buf[9] * f_333_);
+		float f_337_ = (((ja) this).ao.buf[14] + ((ja) this).ao.buf[2] * f + ((ja) this).ao.buf[6] * f_332_ + ((ja) this).ao.buf[10] * f_333_);
 		fs[0] = ((ja) this).ax + ((ja) this).az * f_335_ / f_334_;
 		fs[1] = ((ja) this).al + ((ja) this).ap * f_336_ / f_334_;
 		fs[2] = f_337_;
@@ -950,22 +950,22 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public int method8537(int i, int i_376_, int i_377_, int i_378_, int i_379_, int i_380_) {
 		int i_381_ = 0;
-		float f = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i + ((ja) this).aw.aFloatArray4667[6] * (float) i_376_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_377_);
-		float f_382_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i_378_ + ((ja) this).aw.aFloatArray4667[6] * (float) i_379_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_380_);
-		float f_383_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i + ((ja) this).aw.aFloatArray4667[7] * (float) i_376_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_377_);
-		float f_384_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i_378_ + ((ja) this).aw.aFloatArray4667[7] * (float) i_379_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_380_);
+		float f = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i + ((ja) this).aw.buf[6] * (float) i_376_ + ((ja) this).aw.buf[10] * (float) i_377_);
+		float f_382_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i_378_ + ((ja) this).aw.buf[6] * (float) i_379_ + ((ja) this).aw.buf[10] * (float) i_380_);
+		float f_383_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i + ((ja) this).aw.buf[7] * (float) i_376_ + ((ja) this).aw.buf[11] * (float) i_377_);
+		float f_384_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i_378_ + ((ja) this).aw.buf[7] * (float) i_379_ + ((ja) this).aw.buf[11] * (float) i_380_);
 		if (f < -f_383_ && f_382_ < -f_384_)
 			i_381_ |= 0x10;
 		else if (f > f_383_ && f_382_ > f_384_)
 			i_381_ |= 0x20;
-		float f_385_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i + ((ja) this).aw.aFloatArray4667[4] * (float) i_376_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_377_);
-		float f_386_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i_378_ + ((ja) this).aw.aFloatArray4667[4] * (float) i_379_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_380_);
+		float f_385_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i + ((ja) this).aw.buf[4] * (float) i_376_ + ((ja) this).aw.buf[8] * (float) i_377_);
+		float f_386_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i_378_ + ((ja) this).aw.buf[4] * (float) i_379_ + ((ja) this).aw.buf[8] * (float) i_380_);
 		if (f_385_ < -f_383_ && f_386_ < -f_384_)
 			i_381_ |= 0x1;
 		if (f_385_ > f_383_ && f_386_ > f_384_)
 			i_381_ |= 0x2;
-		float f_387_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i + ((ja) this).aw.aFloatArray4667[5] * (float) i_376_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_377_);
-		float f_388_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i_378_ + ((ja) this).aw.aFloatArray4667[5] * (float) i_379_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_380_);
+		float f_387_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i + ((ja) this).aw.buf[5] * (float) i_376_ + ((ja) this).aw.buf[9] * (float) i_377_);
+		float f_388_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i_378_ + ((ja) this).aw.buf[5] * (float) i_379_ + ((ja) this).aw.buf[9] * (float) i_380_);
 		if (f_387_ < -f_383_ && f_388_ < -f_384_)
 			i_381_ |= 0x4;
 		if (f_387_ > f_383_ && f_388_ > f_384_)
@@ -975,22 +975,22 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public int method8538(int i, int i_389_, int i_390_, int i_391_, int i_392_, int i_393_) {
 		int i_394_ = 0;
-		float f = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i + ((ja) this).aw.aFloatArray4667[6] * (float) i_389_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_390_);
-		float f_395_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i_391_ + ((ja) this).aw.aFloatArray4667[6] * (float) i_392_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_393_);
-		float f_396_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i + ((ja) this).aw.aFloatArray4667[7] * (float) i_389_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_390_);
-		float f_397_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i_391_ + ((ja) this).aw.aFloatArray4667[7] * (float) i_392_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_393_);
+		float f = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i + ((ja) this).aw.buf[6] * (float) i_389_ + ((ja) this).aw.buf[10] * (float) i_390_);
+		float f_395_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i_391_ + ((ja) this).aw.buf[6] * (float) i_392_ + ((ja) this).aw.buf[10] * (float) i_393_);
+		float f_396_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i + ((ja) this).aw.buf[7] * (float) i_389_ + ((ja) this).aw.buf[11] * (float) i_390_);
+		float f_397_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i_391_ + ((ja) this).aw.buf[7] * (float) i_392_ + ((ja) this).aw.buf[11] * (float) i_393_);
 		if (f < -f_396_ && f_395_ < -f_397_)
 			i_394_ |= 0x10;
 		else if (f > f_396_ && f_395_ > f_397_)
 			i_394_ |= 0x20;
-		float f_398_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i + ((ja) this).aw.aFloatArray4667[4] * (float) i_389_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_390_);
-		float f_399_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i_391_ + ((ja) this).aw.aFloatArray4667[4] * (float) i_392_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_393_);
+		float f_398_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i + ((ja) this).aw.buf[4] * (float) i_389_ + ((ja) this).aw.buf[8] * (float) i_390_);
+		float f_399_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i_391_ + ((ja) this).aw.buf[4] * (float) i_392_ + ((ja) this).aw.buf[8] * (float) i_393_);
 		if (f_398_ < -f_396_ && f_399_ < -f_397_)
 			i_394_ |= 0x1;
 		if (f_398_ > f_396_ && f_399_ > f_397_)
 			i_394_ |= 0x2;
-		float f_400_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i + ((ja) this).aw.aFloatArray4667[5] * (float) i_389_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_390_);
-		float f_401_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i_391_ + ((ja) this).aw.aFloatArray4667[5] * (float) i_392_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_393_);
+		float f_400_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i + ((ja) this).aw.buf[5] * (float) i_389_ + ((ja) this).aw.buf[9] * (float) i_390_);
+		float f_401_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i_391_ + ((ja) this).aw.buf[5] * (float) i_392_ + ((ja) this).aw.buf[9] * (float) i_393_);
 		if (f_400_ < -f_396_ && f_401_ < -f_397_)
 			i_394_ |= 0x4;
 		if (f_400_ > f_396_ && f_401_ > f_397_)
@@ -1000,22 +1000,22 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public int method8539(int i, int i_402_, int i_403_, int i_404_, int i_405_, int i_406_) {
 		int i_407_ = 0;
-		float f = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i + ((ja) this).aw.aFloatArray4667[6] * (float) i_402_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_403_);
-		float f_408_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i_404_ + ((ja) this).aw.aFloatArray4667[6] * (float) i_405_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_406_);
-		float f_409_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i + ((ja) this).aw.aFloatArray4667[7] * (float) i_402_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_403_);
-		float f_410_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i_404_ + ((ja) this).aw.aFloatArray4667[7] * (float) i_405_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_406_);
+		float f = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i + ((ja) this).aw.buf[6] * (float) i_402_ + ((ja) this).aw.buf[10] * (float) i_403_);
+		float f_408_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i_404_ + ((ja) this).aw.buf[6] * (float) i_405_ + ((ja) this).aw.buf[10] * (float) i_406_);
+		float f_409_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i + ((ja) this).aw.buf[7] * (float) i_402_ + ((ja) this).aw.buf[11] * (float) i_403_);
+		float f_410_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i_404_ + ((ja) this).aw.buf[7] * (float) i_405_ + ((ja) this).aw.buf[11] * (float) i_406_);
 		if (f < -f_409_ && f_408_ < -f_410_)
 			i_407_ |= 0x10;
 		else if (f > f_409_ && f_408_ > f_410_)
 			i_407_ |= 0x20;
-		float f_411_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i + ((ja) this).aw.aFloatArray4667[4] * (float) i_402_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_403_);
-		float f_412_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i_404_ + ((ja) this).aw.aFloatArray4667[4] * (float) i_405_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_406_);
+		float f_411_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i + ((ja) this).aw.buf[4] * (float) i_402_ + ((ja) this).aw.buf[8] * (float) i_403_);
+		float f_412_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i_404_ + ((ja) this).aw.buf[4] * (float) i_405_ + ((ja) this).aw.buf[8] * (float) i_406_);
 		if (f_411_ < -f_409_ && f_412_ < -f_410_)
 			i_407_ |= 0x1;
 		if (f_411_ > f_409_ && f_412_ > f_410_)
 			i_407_ |= 0x2;
-		float f_413_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i + ((ja) this).aw.aFloatArray4667[5] * (float) i_402_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_403_);
-		float f_414_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i_404_ + ((ja) this).aw.aFloatArray4667[5] * (float) i_405_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_406_);
+		float f_413_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i + ((ja) this).aw.buf[5] * (float) i_402_ + ((ja) this).aw.buf[9] * (float) i_403_);
+		float f_414_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i_404_ + ((ja) this).aw.buf[5] * (float) i_405_ + ((ja) this).aw.buf[9] * (float) i_406_);
 		if (f_413_ < -f_409_ && f_414_ < -f_410_)
 			i_407_ |= 0x4;
 		if (f_413_ > f_409_ && f_414_ > f_410_)
@@ -1025,22 +1025,22 @@ public class ja extends GraphicalRenderer implements Interface40 {
 
 	public int method8540(int i, int i_415_, int i_416_, int i_417_, int i_418_, int i_419_) {
 		int i_420_ = 0;
-		float f = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i + ((ja) this).aw.aFloatArray4667[6] * (float) i_415_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_416_);
-		float f_421_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * (float) i_417_ + ((ja) this).aw.aFloatArray4667[6] * (float) i_418_ + ((ja) this).aw.aFloatArray4667[10] * (float) i_419_);
-		float f_422_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i + ((ja) this).aw.aFloatArray4667[7] * (float) i_415_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_416_);
-		float f_423_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * (float) i_417_ + ((ja) this).aw.aFloatArray4667[7] * (float) i_418_ + ((ja) this).aw.aFloatArray4667[11] * (float) i_419_);
+		float f = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i + ((ja) this).aw.buf[6] * (float) i_415_ + ((ja) this).aw.buf[10] * (float) i_416_);
+		float f_421_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * (float) i_417_ + ((ja) this).aw.buf[6] * (float) i_418_ + ((ja) this).aw.buf[10] * (float) i_419_);
+		float f_422_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i + ((ja) this).aw.buf[7] * (float) i_415_ + ((ja) this).aw.buf[11] * (float) i_416_);
+		float f_423_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * (float) i_417_ + ((ja) this).aw.buf[7] * (float) i_418_ + ((ja) this).aw.buf[11] * (float) i_419_);
 		if (f < -f_422_ && f_421_ < -f_423_)
 			i_420_ |= 0x10;
 		else if (f > f_422_ && f_421_ > f_423_)
 			i_420_ |= 0x20;
-		float f_424_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i + ((ja) this).aw.aFloatArray4667[4] * (float) i_415_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_416_);
-		float f_425_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * (float) i_417_ + ((ja) this).aw.aFloatArray4667[4] * (float) i_418_ + ((ja) this).aw.aFloatArray4667[8] * (float) i_419_);
+		float f_424_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i + ((ja) this).aw.buf[4] * (float) i_415_ + ((ja) this).aw.buf[8] * (float) i_416_);
+		float f_425_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * (float) i_417_ + ((ja) this).aw.buf[4] * (float) i_418_ + ((ja) this).aw.buf[8] * (float) i_419_);
 		if (f_424_ < -f_422_ && f_425_ < -f_423_)
 			i_420_ |= 0x1;
 		if (f_424_ > f_422_ && f_425_ > f_423_)
 			i_420_ |= 0x2;
-		float f_426_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i + ((ja) this).aw.aFloatArray4667[5] * (float) i_415_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_416_);
-		float f_427_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * (float) i_417_ + ((ja) this).aw.aFloatArray4667[5] * (float) i_418_ + ((ja) this).aw.aFloatArray4667[9] * (float) i_419_);
+		float f_426_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i + ((ja) this).aw.buf[5] * (float) i_415_ + ((ja) this).aw.buf[9] * (float) i_416_);
+		float f_427_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * (float) i_417_ + ((ja) this).aw.buf[5] * (float) i_418_ + ((ja) this).aw.buf[9] * (float) i_419_);
 		if (f_426_ < -f_422_ && f_427_ < -f_423_)
 			i_420_ |= 0x4;
 		if (f_426_ > f_422_ && f_427_ > f_423_)
@@ -1138,7 +1138,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return false;
 	}
 
-	public FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8625(FontMetrics class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_469_ = new int[class91s.length];
 		boolean bool_470_ = false;
@@ -1226,15 +1226,15 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return var_ba;
 	}
 
-	public Class384 method8571() {
+	public Matrix44Arr method8571() {
 		return ((ja) this).af;
 	}
 
-	public Class294 method8572() {
+	public Matrix44Var method8572() {
 		return ((ja) this).ag;
 	}
 
-	public Class294 method8626() {
+	public Matrix44Var method8626() {
 		return ((ja) this).ag;
 	}
 
@@ -1286,44 +1286,44 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		}
 	}
 
-	public void method8423(Class294 class294) {
+	public void method8423(Matrix44Var class294) {
 		((ja) this).ay = class294;
 		((ja) this).ao.method6522(class294);
-		AA(((ja) this).ao.aFloatArray4667);
+		AA(((ja) this).ao.buf);
 		((ja) this).aw.method6568(((ja) this).ao, ((ja) this).an);
 	}
 
-	public Class294 method8583() {
+	public Matrix44Var method8583() {
 		return ((ja) this).ay;
 	}
 
-	public Class294 method8685() {
+	public Matrix44Var method8685() {
 		return ((ja) this).ay;
 	}
 
-	public void method8446(Class384 class384) {
+	public void method8446(Matrix44Arr class384) {
 		((ja) this).an = class384;
-		wa(((ja) this).an.aFloatArray4667);
+		wa(((ja) this).an.buf);
 		((ja) this).aw.method6568(((ja) this).ao, ((ja) this).an);
 	}
 
-	public void method8586(Class384 class384) {
+	public void method8586(Matrix44Arr class384) {
 		((ja) this).an = class384;
-		wa(((ja) this).an.aFloatArray4667);
+		wa(((ja) this).an.buf);
 		((ja) this).aw.method6568(((ja) this).ao, ((ja) this).an);
 	}
 
 	public native void is(int i, int i_512_, int i_513_);
 
-	public Class384 method8588() {
+	public Matrix44Arr method8588() {
 		return ((ja) this).an;
 	}
 
-	public Class384 method8589() {
+	public Matrix44Arr method8589() {
 		return ((ja) this).an;
 	}
 
-	public Class384 method8590() {
+	public Matrix44Arr method8590() {
 		return ((ja) this).an;
 	}
 
@@ -1451,18 +1451,18 @@ public class ja extends GraphicalRenderer implements Interface40 {
 	}
 
 	public void method8650(float f, float f_569_, float f_570_, float[] fs) {
-		float f_571_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * f + ((ja) this).aw.aFloatArray4667[7] * f_569_ + ((ja) this).aw.aFloatArray4667[11] * f_570_);
-		float f_572_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * f + ((ja) this).aw.aFloatArray4667[4] * f_569_ + ((ja) this).aw.aFloatArray4667[8] * f_570_);
-		float f_573_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * f + ((ja) this).aw.aFloatArray4667[5] * f_569_ + ((ja) this).aw.aFloatArray4667[9] * f_570_);
-		float f_574_ = (((ja) this).ao.aFloatArray4667[14] + ((ja) this).ao.aFloatArray4667[2] * f + ((ja) this).ao.aFloatArray4667[6] * f_569_ + ((ja) this).ao.aFloatArray4667[10] * f_570_);
+		float f_571_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * f + ((ja) this).aw.buf[7] * f_569_ + ((ja) this).aw.buf[11] * f_570_);
+		float f_572_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * f + ((ja) this).aw.buf[4] * f_569_ + ((ja) this).aw.buf[8] * f_570_);
+		float f_573_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * f + ((ja) this).aw.buf[5] * f_569_ + ((ja) this).aw.buf[9] * f_570_);
+		float f_574_ = (((ja) this).ao.buf[14] + ((ja) this).ao.buf[2] * f + ((ja) this).ao.buf[6] * f_569_ + ((ja) this).ao.buf[10] * f_570_);
 		fs[0] = ((ja) this).ax + ((ja) this).az * f_572_ / f_571_;
 		fs[1] = ((ja) this).al + ((ja) this).ap * f_573_ / f_571_;
 		fs[2] = f_574_;
 	}
 
 	public void method8619(float f, float f_575_, float f_576_, float[] fs) {
-		float f_577_ = (((ja) this).aw.aFloatArray4667[14] + ((ja) this).aw.aFloatArray4667[2] * f + ((ja) this).aw.aFloatArray4667[6] * f_575_ + ((ja) this).aw.aFloatArray4667[10] * f_576_);
-		float f_578_ = (((ja) this).aw.aFloatArray4667[15] + ((ja) this).aw.aFloatArray4667[3] * f + ((ja) this).aw.aFloatArray4667[7] * f_575_ + ((ja) this).aw.aFloatArray4667[11] * f_576_);
+		float f_577_ = (((ja) this).aw.buf[14] + ((ja) this).aw.buf[2] * f + ((ja) this).aw.buf[6] * f_575_ + ((ja) this).aw.buf[10] * f_576_);
+		float f_578_ = (((ja) this).aw.buf[15] + ((ja) this).aw.buf[3] * f + ((ja) this).aw.buf[7] * f_575_ + ((ja) this).aw.buf[11] * f_576_);
 		if (f_577_ < -f_578_ || f_577_ > f_578_) {
 			float[] fs_579_ = fs;
 			float[] fs_580_ = fs;
@@ -1470,7 +1470,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 			fs_580_[1] = Float.NaN;
 			fs_579_[0] = Float.NaN;
 		} else {
-			float f_581_ = (((ja) this).aw.aFloatArray4667[12] + ((ja) this).aw.aFloatArray4667[0] * f + ((ja) this).aw.aFloatArray4667[4] * f_575_ + ((ja) this).aw.aFloatArray4667[8] * f_576_);
+			float f_581_ = (((ja) this).aw.buf[12] + ((ja) this).aw.buf[0] * f + ((ja) this).aw.buf[4] * f_575_ + ((ja) this).aw.buf[8] * f_576_);
 			if (f_581_ < -f_578_ || f_581_ > f_578_) {
 				float[] fs_582_ = fs;
 				float[] fs_583_ = fs;
@@ -1478,7 +1478,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 				fs_583_[1] = Float.NaN;
 				fs_582_[0] = Float.NaN;
 			} else {
-				float f_584_ = (((ja) this).aw.aFloatArray4667[13] + ((ja) this).aw.aFloatArray4667[1] * f + ((ja) this).aw.aFloatArray4667[5] * f_575_ + ((ja) this).aw.aFloatArray4667[9] * f_576_);
+				float f_584_ = (((ja) this).aw.buf[13] + ((ja) this).aw.buf[1] * f + ((ja) this).aw.buf[5] * f_575_ + ((ja) this).aw.buf[9] * f_576_);
 				if (f_584_ < -f_578_ || f_584_ > f_578_) {
 					float[] fs_585_ = fs;
 					float[] fs_586_ = fs;
@@ -1486,7 +1486,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 					fs_586_[1] = Float.NaN;
 					fs_585_[0] = Float.NaN;
 				} else {
-					float f_587_ = (((ja) this).ao.aFloatArray4667[14] + ((ja) this).ao.aFloatArray4667[2] * f + ((ja) this).ao.aFloatArray4667[6] * f_575_ + ((ja) this).ao.aFloatArray4667[10] * f_576_);
+					float f_587_ = (((ja) this).ao.buf[14] + ((ja) this).ao.buf[2] * f + ((ja) this).ao.buf[6] * f_575_ + ((ja) this).ao.buf[10] * f_576_);
 					fs[0] = ((ja) this).ax + ((ja) this).az * f_581_ / f_578_;
 					fs[1] = ((ja) this).al + ((ja) this).ap * f_584_ / f_578_;
 					fs[2] = f_587_;
@@ -1503,7 +1503,7 @@ public class ja extends GraphicalRenderer implements Interface40 {
 		return new oa(i, i_595_);
 	}
 
-	public Class294 method8450() {
+	public Matrix44Var method8450() {
 		return ((ja) this).ag;
 	}
 

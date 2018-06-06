@@ -123,7 +123,7 @@ public class Class252 implements Interface43 {
 	}
 
 	static final void method4323(CS2Executor class527, byte i) {
-		int i_1_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_1_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		Integer integer = (Integer) Class46.anObjectArray437[i_1_];
 		if (integer == null) {
 			Class405 class405 = IndexLoaders.aClass394_5831.method6753(i_1_, 908110130);
@@ -154,7 +154,7 @@ public class Class252 implements Interface43 {
 		return i_7_;
 	}
 
-	static void method4326(int i, int i_8_, Class118 class118, int i_9_) {
+	static void method4326(int i, int i_8_, IComponentDefinitions class118, int i_9_) {
 		int i_10_ = i + 1506818197 * class118.anInt1301;
 		int i_11_ = 15 + i_8_;
 		if (client.aBool7176) {
@@ -211,7 +211,7 @@ public class Class252 implements Interface43 {
 	}
 
 	public static int method4327(int i, int i_26_, boolean bool, boolean bool_27_, byte i_28_) {
-		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool_27_, 1863818579);
+		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool_27_, 1863818579);
 		if (class282_sub30 == null)
 			return 0;
 		int i_29_ = 0;

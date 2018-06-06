@@ -223,8 +223,8 @@ public class Class282_Sub51 extends Node {
 			int i = 2;
 			int i_2_ = 0;
 			try {
-				for (/**/; i < Class108.aString1093.length(); i++) {
-					int i_3_ = Class108.aString1093.charAt(i);
+				for (/**/; i < ChatLine.aString1093.length(); i++) {
+					int i_3_ = ChatLine.aString1093.charAt(i);
 					if (i_3_ < 48 || i_3_ > 57)
 						break;
 					i_2_ = i_3_ - 48 + 10 * i_2_;
@@ -233,11 +233,11 @@ public class Class282_Sub51 extends Node {
 				/* empty */
 			}
 			anInt8147 = i_2_ * -1687649971;
-			i = Class108.aString1093.indexOf('.', 2) + 1;
+			i = ChatLine.aString1093.indexOf('.', 2) + 1;
 			i_2_ = 0;
 			try {
-				for (/**/; i < Class108.aString1093.length(); i++) {
-					int i_4_ = Class108.aString1093.charAt(i);
+				for (/**/; i < ChatLine.aString1093.length(); i++) {
+					int i_4_ = ChatLine.aString1093.charAt(i);
 					if (i_4_ < 48 || i_4_ > 57)
 						break;
 					i_2_ = 10 * i_2_ + (i_4_ - 48);
@@ -246,11 +246,11 @@ public class Class282_Sub51 extends Node {
 				/* empty */
 			}
 			((Class282_Sub51) this).anInt8148 = i_2_ * 591981031;
-			i = Class108.aString1093.indexOf('_', 4) + 1;
+			i = ChatLine.aString1093.indexOf('_', 4) + 1;
 			i_2_ = 0;
 			try {
-				for (/**/; i < Class108.aString1093.length(); i++) {
-					int i_5_ = Class108.aString1093.charAt(i);
+				for (/**/; i < ChatLine.aString1093.length(); i++) {
+					int i_5_ = ChatLine.aString1093.charAt(i);
 					if (i_5_ < 48 || i_5_ > 57)
 						break;
 					i_2_ = i_5_ - 48 + 10 * i_2_;
@@ -291,7 +291,7 @@ public class Class282_Sub51 extends Node {
 						class282_sub35.method13232((((Class430) class430).anInt5136) * 1645440037, (byte) -21);
 						class282_sub35.method13232((-155922493 * (((Class430) class430).anInt5138)), (byte) -95);
 						class282_sub35.index = 0;
-						((Class282_Sub51) this).aString8165 = class282_sub35.readString(-387669874);
+						((Class282_Sub51) this).aString8165 = class282_sub35.readString();
 					}
 					Class430 class430_13_ = (Class430) hashmap.get(Integer.valueOf(1));
 					if (null != class430_13_) {
@@ -315,7 +315,7 @@ public class Class282_Sub51 extends Node {
 						}
 					}
 					class282_sub35.index = 0;
-					((Class282_Sub51) this).aString8166 = class282_sub35.readString(954525820);
+					((Class282_Sub51) this).aString8166 = class282_sub35.readString();
 				}
 				String[][] strings = HardwareInfo.getDXDiagDisplayDevicesProps();
 				if (strings != null && strings.length > 0 && null != strings[0]) {
@@ -502,9 +502,9 @@ public class Class282_Sub51 extends Node {
 					}
 				}
 			}
-			Class385 class385 = Class385.method6623(class521_sub1_sub1_sub2.method11166().aClass385_3595);
-			int i_26_ = (int) class385.aFloat4671;
-			int i_27_ = (int) class385.aFloat4673;
+			Vector3 class385 = Vector3.method6623(class521_sub1_sub1_sub2.method11166().aClass385_3595);
+			int i_26_ = (int) class385.x;
+			int i_27_ = (int) class385.z;
 			int i_28_ = ((512 * (class521_sub1_sub1_sub2.regionBaseX[1871221471 * class521_sub1_sub1_sub2.anInt10355 - 1])) + class521_sub1_sub1_sub2.method15805(828768449) * 256);
 			int i_29_ = (((class521_sub1_sub1_sub2.regionBaseY[1871221471 * class521_sub1_sub1_sub2.anInt10355 - 1]) * 512) + class521_sub1_sub1_sub2.method15805(828768449) * 256);
 			if (i_26_ < i_28_) {
@@ -527,7 +527,7 @@ public class Class282_Sub51 extends Node {
 				class521_sub1_sub1_sub2.method15863(0, 1630860423);
 			int i_30_ = (class521_sub1_sub1_sub2.aByteArray10365[1871221471 * class521_sub1_sub1_sub2.anInt10355 - 1]);
 			if (!bool && (i_28_ - i_26_ > 1024 || i_28_ - i_26_ < -1024 || i_29_ - i_27_ > 1024 || i_29_ - i_27_ < -1024)) {
-				class521_sub1_sub1_sub2.method11172((float) i_28_, class385.aFloat4672, (float) i_29_);
+				class521_sub1_sub1_sub2.method11172((float) i_28_, class385.y, (float) i_29_);
 				class521_sub1_sub1_sub2.method15791((class521_sub1_sub1_sub2.anInt10361) * 1633416769, false, (byte) -111);
 				class521_sub1_sub1_sub2.anInt10355 -= -2086688481;
 				if (class521_sub1_sub1_sub2.anInt10367 * 41504957 > 0)
@@ -566,8 +566,8 @@ public class Class282_Sub51 extends Node {
 					i_31_ <<= 9;
 					if (1871221471 * class521_sub1_sub1_sub2.anInt10355 == 1) {
 						int i_34_ = (-531167237 * class521_sub1_sub1_sub2.anInt10368 * (class521_sub1_sub1_sub2.anInt10368 * -531167237));
-						int i_35_ = (((int) class385.aFloat4671 > i_28_ ? (int) class385.aFloat4671 - i_28_ : i_28_ - (int) class385.aFloat4671) << 9);
-						int i_36_ = (((int) class385.aFloat4673 > i_29_ ? (int) class385.aFloat4673 - i_29_ : i_29_ - (int) class385.aFloat4673) << 9);
+						int i_35_ = (((int) class385.x > i_28_ ? (int) class385.x - i_28_ : i_28_ - (int) class385.x) << 9);
+						int i_36_ = (((int) class385.z > i_29_ ? (int) class385.z - i_29_ : i_29_ - (int) class385.z) << 9);
 						int i_37_ = i_35_ > i_36_ ? i_35_ : i_36_;
 						int i_38_ = class227.anInt2826 * 1082265614 * i_37_;
 						if (i_34_ > i_38_) {
@@ -598,26 +598,26 @@ public class Class282_Sub51 extends Node {
 				Class8_Sub1.anInt8515 = 0;
 				if (i_28_ != i_26_ || i_29_ != i_27_) {
 					if (i_26_ < i_28_) {
-						class385.aFloat4671 += (float) i_31_;
+						class385.x += (float) i_31_;
 						Class8_Sub1.anInt8515 = ((-1293360775 * Class8_Sub1.anInt8515 | 0x4) * 1608038601);
-						if (class385.aFloat4671 > (float) i_28_)
-							class385.aFloat4671 = (float) i_28_;
+						if (class385.x > (float) i_28_)
+							class385.x = (float) i_28_;
 					} else if (i_26_ > i_28_) {
-						class385.aFloat4671 -= (float) i_31_;
+						class385.x -= (float) i_31_;
 						Class8_Sub1.anInt8515 = ((Class8_Sub1.anInt8515 * -1293360775 | 0x8) * 1608038601);
-						if (class385.aFloat4671 < (float) i_28_)
-							class385.aFloat4671 = (float) i_28_;
+						if (class385.x < (float) i_28_)
+							class385.x = (float) i_28_;
 					}
 					if (i_27_ < i_29_) {
-						class385.aFloat4673 += (float) i_31_;
+						class385.z += (float) i_31_;
 						Class8_Sub1.anInt8515 = 1608038601 * (-1293360775 * Class8_Sub1.anInt8515 | 0x1);
-						if (class385.aFloat4673 > (float) i_29_)
-							class385.aFloat4673 = (float) i_29_;
+						if (class385.z > (float) i_29_)
+							class385.z = (float) i_29_;
 					} else if (i_27_ > i_29_) {
-						class385.aFloat4673 -= (float) i_31_;
+						class385.z -= (float) i_31_;
 						Class8_Sub1.anInt8515 = 1608038601 * (-1293360775 * Class8_Sub1.anInt8515 | 0x2);
-						if (class385.aFloat4673 < (float) i_29_)
-							class385.aFloat4673 = (float) i_29_;
+						if (class385.z < (float) i_29_)
+							class385.z = (float) i_29_;
 					}
 					class521_sub1_sub1_sub2.method11171(class385);
 					if (i_31_ >= 32)
@@ -626,7 +626,7 @@ public class Class282_Sub51 extends Node {
 						Class44.anInt430 = 235132365 * i_30_;
 				} else
 					Class44.anInt430 = Class249.aClass249_3083.aByte3085 * 235132365;
-				if ((int) class385.aFloat4671 == i_28_ && i_29_ == (int) class385.aFloat4673) {
+				if ((int) class385.x == i_28_ && i_29_ == (int) class385.z) {
 					class521_sub1_sub1_sub2.anInt10355 -= -2086688481;
 					if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0)
 						class521_sub1_sub1_sub2.anInt10367 -= -276223339;

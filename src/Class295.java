@@ -17,7 +17,7 @@ public class Class295 {
 		class527.intStack[class527.anInt7012 * 1942118537 - 1] = IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 1]), -1396181317).method4099(Class158_Sub1.aClass3_8507, 54222589) ? 1 : 0;
 	}
 
-	static final void method5291(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5291(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_0_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (i_0_ < 0 || i_0_ > 9)
 			class527.anInt7000 -= 1476624725;

@@ -226,7 +226,7 @@ public class SceneObjectManager {
 			((SceneObjectManager) this).anInt2640 = 1406340911 * anInt2603;
 			((Class201) aClass201_2600).aBool2542 = false;
 		}
-		Class108.method1848(this, ((SceneObjectManager) this).aClass505_2596, 1003653340);
+		ChatLine.method1848(this, ((SceneObjectManager) this).aClass505_2596, 1003653340);
 		if (!((Login) aClass284_2648).aBool3386) {
 			Iterator iterator = aClass284_2648.aList3388.iterator();
 			while (iterator.hasNext()) {
@@ -391,7 +391,7 @@ public class SceneObjectManager {
 	public void method3394(int i, int i_84_, int i_85_, int i_86_, Class521_Sub1_Sub2 class521_sub1_sub2, byte i_87_) {
 		Class293 class293 = method3459(i, i_84_, i_85_, 546259933);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_84_ << anInt2592 * -1928575293)), (float) i_86_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_85_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Vector3((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_84_ << anInt2592 * -1928575293)), (float) i_86_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_85_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_88_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1465902560)) {
@@ -542,8 +542,8 @@ public class SceneObjectManager {
 			}
 		}
 		if (bool) {
-			Class385 class385 = Class385.method6623(class521_sub1_sub1.method11166().aClass385_3595);
-			class385.aFloat4672 -= (float) i_103_;
+			Vector3 class385 = Vector3.method6623(class521_sub1_sub1.method11166().aClass385_3595);
+			class385.y -= (float) i_103_;
 			class521_sub1_sub1.method11171(class385);
 			class385.method6624();
 		}
@@ -630,8 +630,8 @@ public class SceneObjectManager {
 	}
 
 	void method3403(Class521_Sub1 class521_sub1) {
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-700409118) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.x, (float) ((int) class385.y + (class521_sub1.method12995(-700409118) >> 1)), (float) (int) class385.z, ((SceneObjectManager) this).aFloatArray2639);
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
@@ -914,8 +914,8 @@ public class SceneObjectManager {
 	}
 
 	void method3421(Class521_Sub1 class521_sub1, byte i) {
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-353593796) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.x, (float) ((int) class385.y + (class521_sub1.method12995(-353593796) >> 1)), (float) (int) class385.z, ((SceneObjectManager) this).aFloatArray2639);
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
@@ -967,9 +967,9 @@ public class SceneObjectManager {
 			}
 			return true;
 		}
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		int i_178_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
-		int i_179_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		int i_178_ = (int) class385.x >> -1928575293 * anInt2592;
+		int i_179_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_178_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_178_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_179_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_179_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
 			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_178_][i_179_] == i_171_) || !class521_sub1.method13029((byte) -39) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -53758878)) {
 				if (!bool && i_178_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_178_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_179_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_179_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
@@ -1003,9 +1003,9 @@ public class SceneObjectManager {
 			}
 			return true;
 		}
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		int i_187_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
-		int i_188_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		int i_187_ = (int) class385.x >> -1928575293 * anInt2592;
+		int i_188_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_187_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_187_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_188_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_188_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
 			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_187_][i_188_] == i_180_) || !class521_sub1.method13029((byte) -71) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -843272103)) {
 				if (!bool && i_187_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_187_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_188_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_188_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
@@ -1606,7 +1606,7 @@ public class SceneObjectManager {
 			((SceneObjectManager) this).anInt2640 = 1406340911 * anInt2603;
 			((Class201) aClass201_2600).aBool2542 = false;
 		}
-		Class108.method1848(this, ((SceneObjectManager) this).aClass505_2596, 437446404);
+		ChatLine.method1848(this, ((SceneObjectManager) this).aClass505_2596, 437446404);
 		if (!((Login) aClass284_2648).aBool3386) {
 			Iterator iterator = aClass284_2648.aList3388.iterator();
 			while (iterator.hasNext()) {
@@ -1704,8 +1704,8 @@ public class SceneObjectManager {
 	}
 
 	void method3453(Class521_Sub1 class521_sub1) {
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-2077915442) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.x, (float) ((int) class385.y + (class521_sub1.method12995(-2077915442) >> 1)), (float) (int) class385.z, ((SceneObjectManager) this).aFloatArray2639);
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
@@ -1815,7 +1815,7 @@ public class SceneObjectManager {
 	public void method3465(int i, int i_372_, int i_373_, int i_374_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_372_, i_373_, 1598284427);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_372_ << anInt2592 * -1928575293)), (float) i_374_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_373_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Vector3((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_372_ << anInt2592 * -1928575293)), (float) i_374_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_373_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_375_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1328423037)) {
@@ -1858,7 +1858,7 @@ public class SceneObjectManager {
 	public void method3467(int i, int i_382_, int i_383_, int i_384_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_382_, i_383_, 1220729187);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_382_ << anInt2592 * -1928575293)), (float) i_384_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_383_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Vector3((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_382_ << anInt2592 * -1928575293)), (float) i_384_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_383_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_385_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1257836210)) {
@@ -2114,8 +2114,8 @@ public class SceneObjectManager {
 			}
 		}
 		if (bool) {
-			Class385 class385 = Class385.method6623(class521_sub1_sub1.method11166().aClass385_3595);
-			class385.aFloat4672 -= (float) i_409_;
+			Vector3 class385 = Vector3.method6623(class521_sub1_sub1.method11166().aClass385_3595);
+			class385.y -= (float) i_409_;
 			class521_sub1_sub1.method11171(class385);
 			class385.method6624();
 		}
@@ -2185,8 +2185,8 @@ public class SceneObjectManager {
 			}
 		}
 		if (bool) {
-			Class385 class385 = Class385.method6623(class521_sub1_sub1.method11166().aClass385_3595);
-			class385.aFloat4672 -= (float) i_419_;
+			Vector3 class385 = Vector3.method6623(class521_sub1_sub1.method11166().aClass385_3595);
+			class385.y -= (float) i_419_;
 			class521_sub1_sub1.method11171(class385);
 			class385.method6624();
 		}
@@ -2673,15 +2673,15 @@ public class SceneObjectManager {
 		if (aClass390Array2614 == aClass390Array2591) {
 			boolean bool = false;
 			boolean bool_514_ = false;
-			Class385 class385 = class521_sub1.method11166().aClass385_3595;
+			Vector3 class385 = class521_sub1.method11166().aClass385_3595;
 			int i;
 			int i_515_;
 			if (class521_sub1 instanceof Class521_Sub1_Sub1) {
 				i = ((Class521_Sub1_Sub1) class521_sub1).aShort9458;
 				i_515_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			} else {
-				i = (int) class385.aFloat4671 >> anInt2592 * -1928575293;
-				i_515_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
+				i = (int) class385.x >> anInt2592 * -1928575293;
+				i_515_ = (int) class385.z >> -1928575293 * anInt2592;
 			}
 			Class90 class90 = new Class90();
 			class90.anInt946 = method3387(i, i_515_, (byte) 102) * -1856397433;
@@ -2690,7 +2690,7 @@ public class SceneObjectManager {
 			class90.anInt949 = method3432(i, i_515_, (byte) 1) * -1472617411;
 			class90.anInt950 = method3464(i, i_515_, 1819707800) * 1801644261;
 			class90.anInt951 = method3391(i, i_515_, 2124895018) * 1412616155;
-			((SceneObjectManager) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.aFloat4671, (int) class385.aFloat4673, -402315089), class90);
+			((SceneObjectManager) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.x, (int) class385.z, -402315089), class90);
 		}
 		Class285 class285 = class521_sub1.method12990(((SceneObjectManager) this).aClass505_2596, 389193782);
 		if (null != class285) {
@@ -3004,7 +3004,7 @@ public class SceneObjectManager {
 	public void method3520(int i, int i_572_, int i_573_, int i_574_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_572_, i_573_, 1879504414);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_572_ << anInt2592 * -1928575293)), (float) i_574_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_573_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Vector3((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_572_ << anInt2592 * -1928575293)), (float) i_574_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_573_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_575_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1694477320)) {
@@ -3117,20 +3117,20 @@ public class SceneObjectManager {
 	}
 
 	void method3522(Class521_Sub1 class521_sub1) {
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(793354040) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.x, (float) ((int) class385.y + (class521_sub1.method12995(793354040) >> 1)), (float) (int) class385.z, ((SceneObjectManager) this).aFloatArray2639);
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	void method3523(Class521_Sub1 class521_sub1) {
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(358674030) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.x, (float) ((int) class385.y + (class521_sub1.method12995(358674030) >> 1)), (float) (int) class385.z, ((SceneObjectManager) this).aFloatArray2639);
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
 	void method3524(Class521_Sub1 class521_sub1) {
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.aFloat4671, (float) ((int) class385.aFloat4672 + (class521_sub1.method12995(-1590857294) >> 1)), (float) (int) class385.aFloat4673, ((SceneObjectManager) this).aFloatArray2639);
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		((SceneObjectManager) this).aClass505_2596.method8479((float) (int) class385.x, (float) ((int) class385.y + (class521_sub1.method12995(-1590857294) >> 1)), (float) (int) class385.z, ((SceneObjectManager) this).aFloatArray2639);
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
@@ -3187,7 +3187,7 @@ public class SceneObjectManager {
 	public void method3527(int i, int i_603_, int i_604_, int i_605_, Class521_Sub1_Sub2 class521_sub1_sub2) {
 		Class293 class293 = method3459(i, i_603_, i_604_, -464174953);
 		if (class293 != null) {
-			class521_sub1_sub2.method11171(new Class385((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_603_ << anInt2592 * -1928575293)), (float) i_605_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_604_ << anInt2592 * -1928575293))));
+			class521_sub1_sub2.method11171(new Vector3((float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_603_ << anInt2592 * -1928575293)), (float) i_605_, (float) ((((SceneObjectManager) this).anInt2594 * -1428980483) + (i_604_ << anInt2592 * -1928575293))));
 			((Class293) class293).aClass521_Sub1_Sub2_3506 = class521_sub1_sub2;
 			int i_606_ = aClass390Array2614 == aClass390Array2591 ? 1 : 0;
 			if (class521_sub1_sub2.method12986(-1273057709)) {
@@ -3249,9 +3249,9 @@ public class SceneObjectManager {
 			}
 			return true;
 		}
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		int i_620_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
-		int i_621_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		int i_620_ = (int) class385.x >> -1928575293 * anInt2592;
+		int i_621_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_620_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_620_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_621_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_621_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
 			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_620_][i_621_] == i_613_) || !class521_sub1.method13029((byte) -14) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -200390961)) {
 				if (!bool && i_620_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_620_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_621_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_621_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
@@ -3299,9 +3299,9 @@ public class SceneObjectManager {
 			}
 			return true;
 		}
-		Class385 class385 = class521_sub1.method11166().aClass385_3595;
-		int i_632_ = (int) class385.aFloat4671 >> -1928575293 * anInt2592;
-		int i_633_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
+		Vector3 class385 = class521_sub1.method11166().aClass385_3595;
+		int i_632_ = (int) class385.x >> -1928575293 * anInt2592;
+		int i_633_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_632_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_632_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_633_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_633_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
 			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_632_][i_633_] == i_625_) || !class521_sub1.method13029((byte) -122) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, 363865494)) {
 				if (!bool && i_632_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_632_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_633_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_633_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
@@ -3321,15 +3321,15 @@ public class SceneObjectManager {
 		if (aClass390Array2614 == aClass390Array2591) {
 			boolean bool = false;
 			boolean bool_634_ = false;
-			Class385 class385 = class521_sub1.method11166().aClass385_3595;
+			Vector3 class385 = class521_sub1.method11166().aClass385_3595;
 			int i;
 			int i_635_;
 			if (class521_sub1 instanceof Class521_Sub1_Sub1) {
 				i = ((Class521_Sub1_Sub1) class521_sub1).aShort9458;
 				i_635_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			} else {
-				i = (int) class385.aFloat4671 >> anInt2592 * -1928575293;
-				i_635_ = (int) class385.aFloat4673 >> -1928575293 * anInt2592;
+				i = (int) class385.x >> anInt2592 * -1928575293;
+				i_635_ = (int) class385.z >> -1928575293 * anInt2592;
 			}
 			Class90 class90 = new Class90();
 			class90.anInt946 = method3387(i, i_635_, (byte) 120) * -1856397433;
@@ -3338,7 +3338,7 @@ public class SceneObjectManager {
 			class90.anInt949 = method3432(i, i_635_, (byte) 1) * -1472617411;
 			class90.anInt950 = method3464(i, i_635_, -1198981558) * 1801644261;
 			class90.anInt951 = method3391(i, i_635_, 1883274655) * 1412616155;
-			((SceneObjectManager) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.aFloat4671, (int) class385.aFloat4673, 1928410404), class90);
+			((SceneObjectManager) this).aClass505_2596.method8476(aClass390Array2607[0].method6709((int) class385.x, (int) class385.z, 1928410404), class90);
 		}
 		Class285 class285 = class521_sub1.method12990(((SceneObjectManager) this).aClass505_2596, 245300010);
 		if (null != class285) {
@@ -3550,8 +3550,8 @@ public class SceneObjectManager {
 
 	static final void method3546(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Login.method5017(class118, class98, class527, -974856399);
 	}
 

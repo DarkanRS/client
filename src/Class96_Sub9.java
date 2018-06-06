@@ -45,7 +45,7 @@ public class Class96_Sub9 extends Class96 {
 		return (i & -i) == i;
 	}
 
-	static final void method14586(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method14586(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -159099843) != null)
 			string = string.substring(0, string.length() - 1);

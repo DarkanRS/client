@@ -80,7 +80,7 @@ public class Class274 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 292041583 * client.anInt7440;
 	}
 
-	static final void method4883(Class118 class118, int i, int i_3_, CS2Executor class527, int i_4_) {
+	static final void method4883(IComponentDefinitions class118, int i, int i_3_, CS2Executor class527, int i_4_) {
 		if (null == class118.anIntArray1267) {
 			if (i_3_ > 0) {
 				class118.aByteArrayArray1366 = new byte[11][];

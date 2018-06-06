@@ -76,12 +76,12 @@ public class Class247 {
 			} else
 				class505.B(i_0_, i_1_, i_2_, i_3_, i_11_ << 24 | i_7_, 1);
 		} else if (bool_8_) {
-			Class384 class384 = class505.method8453();
-			Class384 class384_18_ = class505.method8453();
-			class384.aFloatArray4667[2] = class384.aFloatArray4667[3];
-			class384.aFloatArray4667[6] = class384.aFloatArray4667[7];
-			class384.aFloatArray4667[10] = class384.aFloatArray4667[11];
-			class384.aFloatArray4667[14] = class384.aFloatArray4667[15];
+			Matrix44Arr class384 = class505.method8453();
+			Matrix44Arr class384_18_ = class505.method8453();
+			class384.buf[2] = class384.buf[3];
+			class384.buf[6] = class384.buf[7];
+			class384.buf[10] = class384.buf[11];
+			class384.buf[14] = class384.buf[15];
 			class505.method8424(class384);
 			method4231(class505, i_4_, i_5_, i_6_, i_9_, 1009070761);
 			class505.method8424(class384_18_);
@@ -218,14 +218,14 @@ public class Class247 {
 	}
 
 	void method4231(GraphicalRenderer class505, int i, int i_82_, int i_83_, int i_84_, int i_85_) {
-		Class294 class294 = class505.method8458();
-		Class294 class294_86_ = new Class294();
+		Matrix44Var class294 = class505.method8458();
+		Matrix44Var class294_86_ = new Matrix44Var();
 		class294_86_.method5223(0.0F, 0.0F, 0.0F);
 		class294_86_.method5220(0.0F, -1.0F, 0.0F, Class382.method6508(-i_82_ & 0x3fff));
 		class294_86_.method5220(-1.0F, 0.0F, 0.0F, Class382.method6508(-i & 0x3fff));
 		class294_86_.method5220(0.0F, 0.0F, -1.0F, Class382.method6508(-i_83_ & 0x3fff));
 		class505.method8457(class294_86_);
-		Class294 class294_87_ = new Class294();
+		Matrix44Var class294_87_ = new Matrix44Var();
 		if (i_84_ != ((Class247) this).anInt3036 * -510157735) {
 			((Class247) this).aClass528_3048.method11312((byte) i_84_, ((Class247) this).aByteArray3037);
 			((Class247) this).anInt3036 = i_84_ * -1329206295;
@@ -261,20 +261,20 @@ public class Class247 {
 			return false;
 		int i_188_ = i >> 16;
 		int i_189_ = i & 0xffff;
-		if (null == Class468_Sub8.aClass98Array7889[i_188_] || (Class468_Sub8.aClass98Array7889[i_188_].aClass118Array998[i_189_]) == null)
+		if (null == Class468_Sub8.aClass98Array7889[i_188_] || (Class468_Sub8.aClass98Array7889[i_188_].components[i_189_]) == null)
 			return false;
-		Class118 class118 = (Class468_Sub8.aClass98Array7889[i_188_].aClass118Array998[i_189_]);
+		IComponentDefinitions class118 = (Class468_Sub8.aClass98Array7889[i_188_].components[i_189_]);
 		if (i_186_ != -1 || -2131393857 * class118.anInt1268 != 0) {
 			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 31)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(2009173063))) {
-				if (i_186_ == (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9581) * 1575008129 && (class118.anInt1287 * -1952846363 == 395156599 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582)
+				if (i_186_ == (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9581) * 1575008129 && (class118.idHash * -1952846363 == 395156599 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582)
 						&& (58 == (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587) * -1441507225 || (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587) * -1441507225 == 1007 || -1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 == 25 || (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587) * -1441507225 == 57 || 30 == -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587)))
 					return true;
 			}
 		} else {
 			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 59)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1787533982))) {
 				if ((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225) == 58 || 1007 == -1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 || -1441507225 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 == 25 || (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225) == 57 || 30 == (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587) * -1441507225) {
-					for (Class118 class118_190_ = Class117.method1981((395156599 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582)), (byte) 70); null != class118_190_; class118_190_ = Class96_Sub23.method14682((Class468_Sub8.aClass98Array7889[(((class118_190_.anInt1287) * -1952846363) >> 16)]), class118_190_, -838454718)) {
-						if (-1952846363 * class118_190_.anInt1287 == -1952846363 * class118.anInt1287)
+					for (IComponentDefinitions class118_190_ = Class117.method1981((395156599 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582)), (byte) 70); null != class118_190_; class118_190_ = Class96_Sub23.method14682((Class468_Sub8.aClass98Array7889[(((class118_190_.idHash) * -1952846363) >> 16)]), class118_190_, -838454718)) {
+						if (-1952846363 * class118_190_.idHash == -1952846363 * class118.idHash)
 							return true;
 					}
 				}

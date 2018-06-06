@@ -154,12 +154,12 @@ public class ReferenceTable {
 		decodeHeader(is, 227007259);
 	}
 
-	static final void method5763(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5763(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1329 = 1179500154;
 		class118.aClass417_1308 = null;
 		class118.anInt1330 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -636815827);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999)
-			Class92.method1565(class118.anInt1287 * -1952846363, -1575336609);
+			Class92.method1565(class118.idHash * -1952846363, -1575336609);
 	}
 
 	static final void method5764(CS2Executor class527, short i) {

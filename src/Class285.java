@@ -62,8 +62,8 @@ public class Class285 {
 
 	static final void method5024(CS2Executor class527, int i) {
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_4_, (byte) 82);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 82);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class96_Sub18.method14664(class118, class98, false, 2, class527, (byte) 56);
 	}
 
@@ -75,7 +75,7 @@ public class Class285 {
 	}
 
 	public static int method5026(CharSequence charsequence, int i, byte i_5_) {
-		return Class356.method6225(charsequence, i, true, 2038427942);
+		return Class356.parseInt(charsequence, i, true, 2038427942);
 	}
 
 	static final void method5027(CS2Executor class527, int i) {
@@ -89,7 +89,7 @@ public class Class285 {
 
 	static final void method5029(CS2Executor class527, short i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class282_Sub20_Sub4.method15207(class118, class527, -304097122);
 	}
 }

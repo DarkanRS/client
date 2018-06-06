@@ -5,7 +5,7 @@
 public class Class401 {
 	public int anInt4823;
 	Index aClass317_4824;
-	static Class118 aClass118_4825;
+	static IComponentDefinitions aClass118_4825;
 
 	public Class401(Game class486, Language class495, Index class317) {
 		new SoftCache(64);
@@ -15,7 +15,7 @@ public class Class401 {
 
 	static final void method6796(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1428 * 198275475;
 	}
 

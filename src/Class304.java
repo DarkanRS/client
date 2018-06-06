@@ -143,16 +143,16 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				((Class304) this).aBool3583 = Boolean.parseBoolean(strings[0]);
 				((Class304) this).aBool3584 = Boolean.parseBoolean(strings[1]);
-				((Class304) this).anInt3585 = (Class328.method5830(strings[2], -2030396621) * -1241431707);
-				((Class304) this).anInt3586 = Class328.method5830(strings[3], 974172112) * 1545138689;
-				((Class304) this).anInt3587 = Class328.method5830(strings[4], 591996672) * -1872715597;
-				((Class304) this).anInt3571 = Class328.method5830(strings[5], -1261326942) * 544546015;
-				((Class304) this).anInt3569 = (Class328.method5830(strings[6], -1478060576) * -850535471);
-				((Class304) this).anInt3590 = Class328.method5830(strings[7], 815852619) * -537340309;
-				((Class304) this).anInt3591 = (Class328.method5830(strings[8], -1480568222) * 1020096939);
-				((Class304) this).anInt3592 = Class328.method5830(strings[9], -1007765739) * -29425429;
+				((Class304) this).anInt3585 = (Class328.parseInt(strings[2], -2030396621) * -1241431707);
+				((Class304) this).anInt3586 = Class328.parseInt(strings[3], 974172112) * 1545138689;
+				((Class304) this).anInt3587 = Class328.parseInt(strings[4], 591996672) * -1872715597;
+				((Class304) this).anInt3571 = Class328.parseInt(strings[5], -1261326942) * 544546015;
+				((Class304) this).anInt3569 = (Class328.parseInt(strings[6], -1478060576) * -850535471);
+				((Class304) this).anInt3590 = Class328.parseInt(strings[7], 815852619) * -537340309;
+				((Class304) this).anInt3591 = (Class328.parseInt(strings[8], -1480568222) * 1020096939);
+				((Class304) this).anInt3592 = Class328.parseInt(strings[9], -1007765739) * -29425429;
 				String string = strings[10];
-				int i = Class328.method5830(strings[11], -2144581898);
+				int i = Class328.parseInt(strings[11], -2144581898);
 				int i_7_ = Class285.method5026(strings[12].substring(2), 16, (byte) -78);
 				((Class304) this).aFont3573 = new Font(string, 0, i);
 				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
@@ -177,7 +177,7 @@ public class Class304 implements Interface27 {
 				((Class304) this).anImage3581 = method5399(strings[21], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3581, 8);
 				mediatracker.waitForAll();
-				((Class304) this).anInt3593 = (Class328.method5830(strings[22], -949578085) * -1517908233);
+				((Class304) this).anInt3593 = (Class328.parseInt(strings[22], -949578085) * -1517908233);
 			} catch (Exception exception) {
 				((Class304) this).aBool3572 = true;
 			}
@@ -277,16 +277,16 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				((Class304) this).aBool3583 = Boolean.parseBoolean(strings[0]);
 				((Class304) this).aBool3584 = Boolean.parseBoolean(strings[1]);
-				((Class304) this).anInt3585 = (Class328.method5830(strings[2], -346568032) * -1241431707);
-				((Class304) this).anInt3586 = (Class328.method5830(strings[3], -1703440249) * 1545138689);
-				((Class304) this).anInt3587 = (Class328.method5830(strings[4], -2144517952) * -1872715597);
-				((Class304) this).anInt3571 = Class328.method5830(strings[5], -665574879) * 544546015;
-				((Class304) this).anInt3569 = Class328.method5830(strings[6], -867673357) * -850535471;
-				((Class304) this).anInt3590 = Class328.method5830(strings[7], 1101144441) * -537340309;
-				((Class304) this).anInt3591 = Class328.method5830(strings[8], 1548892014) * 1020096939;
-				((Class304) this).anInt3592 = Class328.method5830(strings[9], -971832079) * -29425429;
+				((Class304) this).anInt3585 = (Class328.parseInt(strings[2], -346568032) * -1241431707);
+				((Class304) this).anInt3586 = (Class328.parseInt(strings[3], -1703440249) * 1545138689);
+				((Class304) this).anInt3587 = (Class328.parseInt(strings[4], -2144517952) * -1872715597);
+				((Class304) this).anInt3571 = Class328.parseInt(strings[5], -665574879) * 544546015;
+				((Class304) this).anInt3569 = Class328.parseInt(strings[6], -867673357) * -850535471;
+				((Class304) this).anInt3590 = Class328.parseInt(strings[7], 1101144441) * -537340309;
+				((Class304) this).anInt3591 = Class328.parseInt(strings[8], 1548892014) * 1020096939;
+				((Class304) this).anInt3592 = Class328.parseInt(strings[9], -971832079) * -29425429;
 				String string = strings[10];
-				int i = Class328.method5830(strings[11], -716552025);
+				int i = Class328.parseInt(strings[11], -716552025);
 				int i_42_ = Class285.method5026(strings[12].substring(2), 16, (byte) -48);
 				((Class304) this).aFont3573 = new Font(string, 0, i);
 				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
@@ -311,7 +311,7 @@ public class Class304 implements Interface27 {
 				((Class304) this).anImage3581 = method5399(strings[21], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3581, 8);
 				mediatracker.waitForAll();
-				((Class304) this).anInt3593 = (Class328.method5830(strings[22], -60073066) * -1517908233);
+				((Class304) this).anInt3593 = (Class328.parseInt(strings[22], -60073066) * -1517908233);
 			} catch (Exception exception) {
 				((Class304) this).aBool3572 = true;
 			}
@@ -420,16 +420,16 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				((Class304) this).aBool3583 = Boolean.parseBoolean(strings[0]);
 				((Class304) this).aBool3584 = Boolean.parseBoolean(strings[1]);
-				((Class304) this).anInt3585 = (Class328.method5830(strings[2], 1033089484) * -1241431707);
-				((Class304) this).anInt3586 = (Class328.method5830(strings[3], -1313656246) * 1545138689);
-				((Class304) this).anInt3587 = (Class328.method5830(strings[4], -1060623325) * -1872715597);
-				((Class304) this).anInt3571 = Class328.method5830(strings[5], -948777137) * 544546015;
-				((Class304) this).anInt3569 = Class328.method5830(strings[6], 58867236) * -850535471;
-				((Class304) this).anInt3590 = (Class328.method5830(strings[7], -2109433001) * -537340309);
-				((Class304) this).anInt3591 = Class328.method5830(strings[8], -732361811) * 1020096939;
-				((Class304) this).anInt3592 = Class328.method5830(strings[9], -2066543129) * -29425429;
+				((Class304) this).anInt3585 = (Class328.parseInt(strings[2], 1033089484) * -1241431707);
+				((Class304) this).anInt3586 = (Class328.parseInt(strings[3], -1313656246) * 1545138689);
+				((Class304) this).anInt3587 = (Class328.parseInt(strings[4], -1060623325) * -1872715597);
+				((Class304) this).anInt3571 = Class328.parseInt(strings[5], -948777137) * 544546015;
+				((Class304) this).anInt3569 = Class328.parseInt(strings[6], 58867236) * -850535471;
+				((Class304) this).anInt3590 = (Class328.parseInt(strings[7], -2109433001) * -537340309);
+				((Class304) this).anInt3591 = Class328.parseInt(strings[8], -732361811) * 1020096939;
+				((Class304) this).anInt3592 = Class328.parseInt(strings[9], -2066543129) * -29425429;
 				String string = strings[10];
-				int i_79_ = Class328.method5830(strings[11], 60349585);
+				int i_79_ = Class328.parseInt(strings[11], 60349585);
 				int i_80_ = Class285.method5026(strings[12].substring(2), 16, (byte) 113);
 				((Class304) this).aFont3573 = new Font(string, 0, i_79_);
 				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
@@ -454,7 +454,7 @@ public class Class304 implements Interface27 {
 				((Class304) this).anImage3581 = method5399(strings[21], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3581, 8);
 				mediatracker.waitForAll();
-				((Class304) this).anInt3593 = (Class328.method5830(strings[22], 651937374) * -1517908233);
+				((Class304) this).anInt3593 = (Class328.parseInt(strings[22], 651937374) * -1517908233);
 			} catch (Exception exception) {
 				((Class304) this).aBool3572 = true;
 			}
@@ -550,16 +550,16 @@ public class Class304 implements Interface27 {
 					((Class304) this).aBool3572 = true;
 				((Class304) this).aBool3583 = Boolean.parseBoolean(strings[0]);
 				((Class304) this).aBool3584 = Boolean.parseBoolean(strings[1]);
-				((Class304) this).anInt3585 = Class328.method5830(strings[2], 895203431) * -1241431707;
-				((Class304) this).anInt3586 = Class328.method5830(strings[3], 1978076845) * 1545138689;
-				((Class304) this).anInt3587 = (Class328.method5830(strings[4], -930354221) * -1872715597);
-				((Class304) this).anInt3571 = Class328.method5830(strings[5], -1326044091) * 544546015;
-				((Class304) this).anInt3569 = Class328.method5830(strings[6], 1309882503) * -850535471;
-				((Class304) this).anInt3590 = Class328.method5830(strings[7], 129092294) * -537340309;
-				((Class304) this).anInt3591 = Class328.method5830(strings[8], -315499877) * 1020096939;
-				((Class304) this).anInt3592 = Class328.method5830(strings[9], -221145728) * -29425429;
+				((Class304) this).anInt3585 = Class328.parseInt(strings[2], 895203431) * -1241431707;
+				((Class304) this).anInt3586 = Class328.parseInt(strings[3], 1978076845) * 1545138689;
+				((Class304) this).anInt3587 = (Class328.parseInt(strings[4], -930354221) * -1872715597);
+				((Class304) this).anInt3571 = Class328.parseInt(strings[5], -1326044091) * 544546015;
+				((Class304) this).anInt3569 = Class328.parseInt(strings[6], 1309882503) * -850535471;
+				((Class304) this).anInt3590 = Class328.parseInt(strings[7], 129092294) * -537340309;
+				((Class304) this).anInt3591 = Class328.parseInt(strings[8], -315499877) * 1020096939;
+				((Class304) this).anInt3592 = Class328.parseInt(strings[9], -221145728) * -29425429;
 				String string = strings[10];
-				int i = Class328.method5830(strings[11], 962870203);
+				int i = Class328.parseInt(strings[11], 962870203);
 				int i_116_ = Class285.method5026(strings[12].substring(2), 16, (byte) 87);
 				((Class304) this).aFont3573 = new Font(string, 0, i);
 				((Class304) this).aFontMetrics3570 = Class351.gameCanvas.getFontMetrics(((Class304) this).aFont3573);
@@ -584,7 +584,7 @@ public class Class304 implements Interface27 {
 				((Class304) this).anImage3581 = method5399(strings[21], (byte) 0);
 				mediatracker.addImage(((Class304) this).anImage3581, 8);
 				mediatracker.waitForAll();
-				((Class304) this).anInt3593 = (Class328.method5830(strings[22], -1276931523) * -1517908233);
+				((Class304) this).anInt3593 = (Class328.parseInt(strings[22], -1276931523) * -1517908233);
 			} catch (Exception exception) {
 				((Class304) this).aBool3572 = true;
 			}
@@ -722,23 +722,23 @@ public class Class304 implements Interface27 {
 
 	static final void method5408(CS2Executor class527, int i) {
 		int i_152_ = Class84.myPlayer.aByte7967;
-		Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(165047864);
-		int i_153_ = (1948093437 * class219.anInt2711 + ((int) class385.aFloat4671 >> 9));
-		int i_154_ = (((int) class385.aFloat4673 >> 9) + class219.anInt2712 * -1002240017);
+		Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(165047864);
+		int i_153_ = (1948093437 * class219.x + ((int) class385.x >> 9));
+		int i_154_ = (((int) class385.z >> 9) + class219.y * -1002240017);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
 	}
 
-	public static void method5409(Class118 class118, int i, int i_155_, byte i_156_) {
+	public static void method5409(IComponentDefinitions class118, int i, int i_155_, byte i_156_) {
 		if (class118 != null) {
 			if (null != class118.anObjectArray1400) {
-				Class282_Sub43 class282_sub43 = new Class282_Sub43();
-				class282_sub43.aClass118_8053 = class118;
-				class282_sub43.anObjectArray8054 = class118.anObjectArray1400;
-				Class96_Sub4.method13790(class282_sub43, 1699733120);
+				HookRequest class282_sub43 = new HookRequest();
+				class282_sub43.iComponentDefs = class118;
+				class282_sub43.params = class118.anObjectArray1400;
+				Class96_Sub4.executeHookInner200k(class282_sub43, 1699733120);
 			}
 			client.aBool7344 = true;
-			Class7.anInt56 = -12326165 * class118.anInt1287;
+			Class7.anInt56 = -12326165 * class118.idHash;
 			client.anInt7345 = -1988979361 * class118.anInt1288;
 			Class506.anInt5858 = i * -1022105259;
 			Class96_Sub12.anInt9319 = -1316084439 * i_155_;

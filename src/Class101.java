@@ -22,7 +22,7 @@ public abstract class Class101 {
 
 	public abstract boolean method1648();
 
-	public final void method1649(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1649(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1936(class282_sub21_sub1, class384);
 	}
 
@@ -87,7 +87,7 @@ public abstract class Class101 {
 		return (-401096109 * anInt1015 >= 0 ? ((Class101) this).aClass115Array1010[anInt1015 * -401096109] : null);
 	}
 
-	public final void method1657(int i, Class384 class384) {
+	public final void method1657(int i, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1905(i, class384);
 	}
 
@@ -111,23 +111,23 @@ public abstract class Class101 {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, f, f_10_, f_11_, f_12_);
 	}
 
-	public final void method1663(Class282_Sub21_Sub1 class282_sub21_sub1, Class385 class385, int i) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1939(class282_sub21_sub1, class385.aFloat4671, class385.aFloat4672, class385.aFloat4673);
+	public final void method1663(Class282_Sub21_Sub1 class282_sub21_sub1, Vector3 class385, int i) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1939(class282_sub21_sub1, class385.x, class385.y, class385.z);
 	}
 
 	public abstract boolean method1664();
 
 	abstract Class115 method1665(Class505_Sub2 class505_sub2, Class99 class99);
 
-	public final void method1666(int i, Class384 class384) {
+	public final void method1666(int i, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1906(i, class384);
 	}
 
-	public final void method1667(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384, int i) {
+	public final void method1667(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384, int i) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1936(class282_sub21_sub1, class384);
 	}
 
-	public final void method1668(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384, byte i) {
+	public final void method1668(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384, byte i) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1891(class282_sub21_sub1, class384);
 	}
 
@@ -143,23 +143,23 @@ public abstract class Class101 {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1896(class282_sub21_sub1, i, interface30);
 	}
 
-	public final void method1672(int i, Class385 class385, byte i_17_) {
-		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1893(i, class385.aFloat4671, class385.aFloat4672, class385.aFloat4673);
+	public final void method1672(int i, Vector3 class385, byte i_17_) {
+		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1893(i, class385.x, class385.y, class385.z);
 	}
 
 	public final void method1673(int i, float[] fs, int i_18_, int i_19_) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1904(i, fs, i_18_);
 	}
 
-	public final void method1674(int i, Class384 class384, int i_20_) {
+	public final void method1674(int i, Matrix44Arr class384, int i_20_) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1905(i, class384);
 	}
 
-	public final void method1675(int i, Class384 class384, byte i_21_) {
+	public final void method1675(int i, Matrix44Arr class384, byte i_21_) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1906(i, class384);
 	}
 
-	public final void method1676(int i, Class384 class384, int i_22_) {
+	public final void method1676(int i, Matrix44Arr class384, int i_22_) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1900(i, class384);
 	}
 
@@ -173,8 +173,8 @@ public abstract class Class101 {
 		return ((Class101) this).anInt1016 * -962704009;
 	}
 
-	public final void method1680(int i, Class385 class385) {
-		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1893(i, class385.aFloat4671, class385.aFloat4672, class385.aFloat4673);
+	public final void method1680(int i, Vector3 class385) {
+		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1893(i, class385.x, class385.y, class385.z);
 	}
 
 	public Class282_Sub21_Sub1 method1681(String string, byte i) {
@@ -201,8 +201,8 @@ public abstract class Class101 {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1903(class282_sub21_sub1, fs, fs.length);
 	}
 
-	public final void method1689(Class282_Sub21_Sub1 class282_sub21_sub1, Class303 class303, int i) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.aFloat3568, class303.aFloat3566, class303.aFloat3565, class303.aFloat3567);
+	public final void method1689(Class282_Sub21_Sub1 class282_sub21_sub1, Vector4 class303, int i) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.x, class303.y, class303.z, class303.w);
 	}
 
 	public abstract void method1690();
@@ -338,24 +338,24 @@ public abstract class Class101 {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, f, f_38_, f_39_, f_40_);
 	}
 
-	public final void method1719(Class282_Sub21_Sub1 class282_sub21_sub1, Class385 class385) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1939(class282_sub21_sub1, class385.aFloat4671, class385.aFloat4672, class385.aFloat4673);
+	public final void method1719(Class282_Sub21_Sub1 class282_sub21_sub1, Vector3 class385) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1939(class282_sub21_sub1, class385.x, class385.y, class385.z);
 	}
 
-	public final void method1720(Class282_Sub21_Sub1 class282_sub21_sub1, Class385 class385) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1939(class282_sub21_sub1, class385.aFloat4671, class385.aFloat4672, class385.aFloat4673);
+	public final void method1720(Class282_Sub21_Sub1 class282_sub21_sub1, Vector3 class385) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1939(class282_sub21_sub1, class385.x, class385.y, class385.z);
 	}
 
-	public final void method1721(Class282_Sub21_Sub1 class282_sub21_sub1, Class303 class303) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.aFloat3568, class303.aFloat3566, class303.aFloat3565, class303.aFloat3567);
+	public final void method1721(Class282_Sub21_Sub1 class282_sub21_sub1, Vector4 class303) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.x, class303.y, class303.z, class303.w);
 	}
 
-	public final void method1722(Class282_Sub21_Sub1 class282_sub21_sub1, Class303 class303) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.aFloat3568, class303.aFloat3566, class303.aFloat3565, class303.aFloat3567);
+	public final void method1722(Class282_Sub21_Sub1 class282_sub21_sub1, Vector4 class303) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.x, class303.y, class303.z, class303.w);
 	}
 
-	public final void method1723(Class282_Sub21_Sub1 class282_sub21_sub1, Class303 class303) {
-		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.aFloat3568, class303.aFloat3566, class303.aFloat3565, class303.aFloat3567);
+	public final void method1723(Class282_Sub21_Sub1 class282_sub21_sub1, Vector4 class303) {
+		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1897(class282_sub21_sub1, class303.x, class303.y, class303.z, class303.w);
 	}
 
 	public final void method1724(Class282_Sub21_Sub1 class282_sub21_sub1, float[] fs) {
@@ -406,11 +406,11 @@ public abstract class Class101 {
 		return 957442475 * ((Class101) this).anInt1009;
 	}
 
-	public final void method1732(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1732(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1936(class282_sub21_sub1, class384);
 	}
 
-	public final void method1733(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1733(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1936(class282_sub21_sub1, class384);
 	}
 
@@ -420,11 +420,11 @@ public abstract class Class101 {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1893(i, f, f_53_, f_54_);
 	}
 
-	public final void method1736(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1736(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1891(class282_sub21_sub1, class384);
 	}
 
-	public final void method1737(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1737(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1891(class282_sub21_sub1, class384);
 	}
 
@@ -436,7 +436,7 @@ public abstract class Class101 {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1893(i, f, f_57_, f_58_);
 	}
 
-	public final void method1740(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1740(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1891(class282_sub21_sub1, class384);
 	}
 
@@ -454,8 +454,8 @@ public abstract class Class101 {
 		return ((Class282_Sub21_Sub1) ((Class101) this).aClass107_1011.method1823(i, 1719849700));
 	}
 
-	public final void method1745(int i, Class385 class385) {
-		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1893(i, class385.aFloat4671, class385.aFloat4672, class385.aFloat4673);
+	public final void method1745(int i, Vector3 class385) {
+		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1893(i, class385.x, class385.y, class385.z);
 	}
 
 	public final void method1746(int i, float[] fs, int i_60_) {
@@ -488,11 +488,11 @@ public abstract class Class101 {
 		return null;
 	}
 
-	public final void method1752(int i, Class384 class384) {
+	public final void method1752(int i, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1900(i, class384);
 	}
 
-	public final void method1753(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384) {
+	public final void method1753(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[anInt1015 * -401096109].method1936(class282_sub21_sub1, class384);
 	}
 
@@ -567,7 +567,7 @@ public abstract class Class101 {
 		return 957442475 * ((Class101) this).anInt1009;
 	}
 
-	public final void method1769(int i, Class384 class384) {
+	public final void method1769(int i, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1905(i, class384);
 	}
 
@@ -575,7 +575,7 @@ public abstract class Class101 {
 		return ((Class282_Sub21_Sub1) ((Class101) this).aClass107_1013.method1823(i, 1767352446));
 	}
 
-	public final void method1771(int i, Class384 class384) {
+	public final void method1771(int i, Matrix44Arr class384) {
 		((Class101) this).aClass115Array1010[-401096109 * anInt1015].method1906(i, class384);
 	}
 
@@ -619,7 +619,7 @@ public abstract class Class101 {
 
 	static final void method1775(CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (string.startsWith(Class76.method1358(0, (byte) 0)) || string.startsWith(Class76.method1358(1, (byte) 0)))
+		if (string.startsWith(Class76.getCrown(0)) || string.startsWith(Class76.getCrown(1)))
 			string = string.substring(7);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class230.method3910(string, -555098945);
 	}
@@ -627,7 +627,7 @@ public abstract class Class101 {
 	public static int method1776(int i, boolean bool, int i_79_) {
 		if (bool)
 			return 0;
-		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 1085109812);
+		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1085109812);
 		if (class282_sub30 == null)
 			return ((IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i, (short) 6976).anInt10277) * 875957203);
 		int i_80_ = 0;
@@ -641,8 +641,8 @@ public abstract class Class101 {
 
 	static final void method1777(CS2Executor class527, int i) {
 		int i_82_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_82_, (byte) 29);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_82_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_82_, (byte) 29);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_82_ >> 16];
 		Class282_Sub17_Sub4.method15409(class118, class98, class527, -1219012115);
 	}
 }

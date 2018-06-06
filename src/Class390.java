@@ -121,17 +121,17 @@ public abstract class Class390 {
 		return anIntArrayArray4772[i][i_120_];
 	}
 
-	static void method6728(Class118 class118, Class119 class119, int i, int i_121_, int i_122_, int i_123_, int i_124_, long l) {
+	static void method6728(IComponentDefinitions class118, Class119 class119, int i, int i_121_, int i_122_, int i_123_, int i_124_, long l) {
 		int i_125_ = i_122_ * i_122_ + i_123_ * i_123_;
 		if ((long) i_125_ <= l) {
 			int i_126_;
-			if (4 == -672443707 * Class262.anInt3240)
+			if (4 == -672443707 * NativeLibraryLoader.anInt3240)
 				i_126_ = (int) client.aFloat7365 & 0x3fff;
 			else
 				i_126_ = ((int) client.aFloat7365 + client.anInt7255 * -1790074477 & 0x3fff);
 			int i_127_ = Class382.anIntArray4657[i_126_];
 			int i_128_ = Class382.anIntArray4661[i_126_];
-			if (-672443707 * Class262.anInt3240 != 4) {
+			if (-672443707 * NativeLibraryLoader.anInt3240 != 4) {
 				i_127_ = i_127_ * 256 / (client.anInt7203 * -1864403271 + 256);
 				i_128_ = 256 * i_128_ / (256 + -1864403271 * client.anInt7203);
 			}

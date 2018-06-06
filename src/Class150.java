@@ -112,13 +112,13 @@ public class Class150 {
 
 	public static void method2582(int i, int[] is, int i_6_) {
 		if (i != -1 && Class456_Sub3.method12682(i, is, -1943227865)) {
-			Class118[] class118s = Class468_Sub8.aClass98Array7889[i].aClass118Array998;
-			Class202.method3337(class118s, 2088119296);
+			IComponentDefinitions[] class118s = Class468_Sub8.aClass98Array7889[i].components;
+			Class202.runIComponentScripts(class118s, 2088119296);
 		}
 	}
 
 	public static void method2583(Class397 class397, int i, int i_7_, Class520 class520, Class521_Sub1_Sub2_Sub1 class521_sub1_sub2_sub1, int i_8_) {
-		CS2Executor class527 = Class125.method2167(1132906159);
+		CS2Executor class527 = Class125.getNextScriptExecutor(1132906159);
 		class527.aClass521_Sub1_Sub2_Sub1_7014 = class521_sub1_sub2_sub1;
 		Class107.method1834(class397, i, i_7_, class527, (byte) 35);
 		class527.aClass521_Sub1_Sub2_Sub1_7014 = null;

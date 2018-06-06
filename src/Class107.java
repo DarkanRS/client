@@ -269,7 +269,7 @@ public class Class107 {
 		Class514.method8841(1236129433);
 	}
 
-	static final void method1838(Class118 class118, byte[] is, byte[] is_35_, CS2Executor class527, int i) {
+	static final void method1838(IComponentDefinitions class118, byte[] is, byte[] is_35_, CS2Executor class527, int i) {
 		int i_36_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (i_36_ < 0 || i_36_ > 9)
 			throw new RuntimeException();

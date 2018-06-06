@@ -5,7 +5,7 @@
 public class Class388 implements Interface41 {
 	String aString4719;
 	Index aClass317_4720;
-	static Index aClass317_4721;
+	static Index INTERFACE_INDEX;
 	public static int anInt4722;
 	public static int anInt4723;
 
@@ -48,8 +48,8 @@ public class Class388 implements Interface41 {
 
 	static final void method6687(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class521_Sub1_Sub4.method14892(class118, class98, class527, (byte) 121);
 	}
 
@@ -62,12 +62,12 @@ public class Class388 implements Interface41 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_0_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
 		Class336.method6010(class118, class98, class527, -1956215078);
 	}
 
-	static final void method6689(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6689(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, 1724948075);
 		if (is != null)
@@ -77,7 +77,7 @@ public class Class388 implements Interface41 {
 		class118.aBool1384 = true;
 	}
 
-	static final void method6690(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method6690(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 41262162) != null)
 			string = string.substring(0, string.length() - 1);
@@ -92,11 +92,11 @@ public class Class388 implements Interface41 {
 	}
 
 	static void method6692(int i) {
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.aClass432_2283, 1965593342);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class158.method2730((short) -245));
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-418109423 * Class349.anInt4083, 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(client.anInt3243 * -969250379, 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-965992195));
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
+		class282_sub23.buffer.writeByte(Class158.method2730((short) -245));
+		class282_sub23.buffer.writeShort(-418109423 * Class349.anInt4083, 1417031095);
+		class282_sub23.buffer.writeShort(client.anInt3243 * -969250379, 1417031095);
+		class282_sub23.buffer.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-965992195));
 		client.aClass184_7475.method3049(class282_sub23, 664640946);
 	}
 

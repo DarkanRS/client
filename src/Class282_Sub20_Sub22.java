@@ -241,17 +241,17 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 			}
 			if (13 == client.anInt7166 * -1741204137) {
 				while (Class451.method7517((byte) 8)) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4563, (client.aClass184_7475.aClass432_2283), 780391787);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
-					int i_34_ = (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291);
-					Class8_Sub2.method14264((class282_sub23.aClass282_Sub35_Sub2_7682), 1655549985);
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13061((class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291) - i_34_, 788141162);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4563, (client.aClass184_7475.isaac), 780391787);
+					class282_sub23.buffer.writeByte(0);
+					int i_34_ = (class282_sub23.buffer.index * -1990677291);
+					Class8_Sub2.method14264((class282_sub23.buffer), 1655549985);
+					class282_sub23.buffer.method13061((class282_sub23.buffer.index * -1990677291) - i_34_, 788141162);
 					client.aClass184_7475.method3049(class282_sub23, -467156881);
 				}
 				if (Class496.aClass510_5816 != null) {
 					if (Class496.aClass510_5816.anInt5872 * -117494151 != -1) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4615, (client.aClass184_7475.aClass432_2283), 312457209);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(Class496.aClass510_5816.anInt5872 * -117494151, 1417031095);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4615, (client.aClass184_7475.isaac), 312457209);
+						class282_sub23.buffer.writeShort(Class496.aClass510_5816.anInt5872 * -117494151, 1417031095);
 						client.aClass184_7475.method3049(class282_sub23, 496271189);
 						Class496.aClass510_5816 = null;
 						Class28.aLong351 = (Class169.method2869(1633582571) + 30000L) * 8256174513244947971L;
@@ -261,9 +261,9 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 				Class434.method7292((byte) -22);
 				Class282_Sub53 class282_sub53 = ((Class282_Sub53) client.aClass482_7267.head((byte) 106));
 				if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1135712280) != null) {
-					if (5 == Class262.anInt3240 * -672443707)
+					if (5 == NativeLibraryLoader.anInt3240 * -672443707)
 						Wall.method16113(70521151);
-					else if (-672443707 * Class262.anInt3240 == 3)
+					else if (-672443707 * NativeLibraryLoader.anInt3240 == 3)
 						Class515.method8860((byte) -76);
 				}
 				if (client.aBool7331)
@@ -278,7 +278,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 				if (-1741204137 * client.anInt7166 == 13) {
 					IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 81);
 					Class350_Sub1.method12516(16232323);
-					Class98.method1623(759137270);
+					Interface.method1623(759137270);
 					if (1663946735 * client.anInt7396 > 10)
 						((Class184) client.aClass184_7475).anInt2289 += 1896636235;
 					if ((-1614826909 * ((Class184) client.aClass184_7475).anInt2289) > 2250)
@@ -348,46 +348,46 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						Class496.method8315(-472472191);
 						client.anInt7347 += 1196922783;
 						if (client.aBool7375) {
-							Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4549, (client.aClass184_7475.aClass432_2283), 771698207);
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt(((Class282_Sub15_Sub5.anInt9859 * 2032760273 << 28) | Class44.anInt431 * 238441297 << 14 | Class421.anInt5015 * -321481591), (byte) -22);
+							TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4549, (client.aClass184_7475.isaac), 771698207);
+							class282_sub23.buffer.writeLEInt(((Class282_Sub15_Sub5.anInt9859 * 2032760273 << 28) | Class44.anInt431 * 238441297 << 14 | Class421.anInt5015 * -321481591), (byte) -22);
 							client.aClass184_7475.method3049(class282_sub23, -1247398056);
 							client.aBool7375 = false;
 						}
 						for (;;) {
-							Class282_Sub43 class282_sub43 = (Class282_Sub43) client.aClass482_7233.method8061((byte) -22);
+							HookRequest class282_sub43 = (HookRequest) client.aClass482_7233.method8061((byte) -22);
 							if (null == class282_sub43)
 								break;
-							Class118 class118 = class282_sub43.aClass118_8053;
+							IComponentDefinitions class118 = class282_sub43.iComponentDefs;
 							if (class118.anInt1288 * 1924549737 >= 0) {
-								Class118 class118_37_ = Class117.method1981((class118.anInt1305 * 2110532063), (byte) 48);
+								IComponentDefinitions class118_37_ = Class117.method1981((class118.anInt1305 * 2110532063), (byte) 48);
 								if (class118_37_ == null || null == class118_37_.aClass118Array1438 || (1924549737 * class118.anInt1288 >= (class118_37_.aClass118Array1438).length) || ((class118_37_.aClass118Array1438[1924549737 * class118.anInt1288]) != class118))
 									continue;
 							}
-							Class96_Sub4.method13790(class282_sub43, 859874447);
+							Class96_Sub4.executeHookInner200k(class282_sub43, 859874447);
 						}
 						for (;;) {
-							Class282_Sub43 class282_sub43 = (Class282_Sub43) client.aClass482_7404.method8061((byte) -73);
+							HookRequest class282_sub43 = (HookRequest) client.aClass482_7404.method8061((byte) -73);
 							if (class282_sub43 == null)
 								break;
-							Class118 class118 = class282_sub43.aClass118_8053;
+							IComponentDefinitions class118 = class282_sub43.iComponentDefs;
 							if (class118.anInt1288 * 1924549737 >= 0) {
-								Class118 class118_38_ = Class117.method1981((class118.anInt1305 * 2110532063), (byte) 7);
+								IComponentDefinitions class118_38_ = Class117.method1981((class118.anInt1305 * 2110532063), (byte) 7);
 								if (class118_38_ == null || class118_38_.aClass118Array1438 == null || (1924549737 * class118.anInt1288 >= (class118_38_.aClass118Array1438).length) || class118 != (class118_38_.aClass118Array1438[(class118.anInt1288 * 1924549737)]))
 									continue;
 							}
-							Class96_Sub4.method13790(class282_sub43, 690549551);
+							Class96_Sub4.executeHookInner200k(class282_sub43, 690549551);
 						}
 						for (;;) {
-							Class282_Sub43 class282_sub43 = ((Class282_Sub43) client.aClass482_7402.method8061((byte) -101));
+							HookRequest class282_sub43 = ((HookRequest) client.aClass482_7402.method8061((byte) -101));
 							if (null == class282_sub43)
 								break;
-							Class118 class118 = class282_sub43.aClass118_8053;
+							IComponentDefinitions class118 = class282_sub43.iComponentDefs;
 							if (class118.anInt1288 * 1924549737 >= 0) {
-								Class118 class118_39_ = Class117.method1981((2110532063 * (class118.anInt1305)), (byte) 33);
+								IComponentDefinitions class118_39_ = Class117.method1981((2110532063 * (class118.anInt1305)), (byte) 33);
 								if (class118_39_ == null || class118_39_.aClass118Array1438 == null || (1924549737 * class118.anInt1288 >= (class118_39_.aClass118Array1438).length) || class118 != (class118_39_.aClass118Array1438[(class118.anInt1288 * 1924549737)]))
 									continue;
 							}
-							Class96_Sub4.method13790(class282_sub43, 2146300541);
+							Class96_Sub4.executeHookInner200k(class282_sub43, 2146300541);
 						}
 						if (Class282_Sub20_Sub24.aClass118_9884 == null)
 							client.anInt7184 = 0;
@@ -400,8 +400,8 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 								i_40_ = 0;
 							else if (i_40_ > 3)
 								i_40_ = 3;
-							Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1589459272);
-							Class447.method7460(i_40_, ((Class84.myPlayer.regionBaseX[0]) + class219.anInt2711 * 1948093437), (class219.anInt2712 * -1002240017 + (Class84.myPlayer.regionBaseY[0])), -1104014965);
+							CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1589459272);
+							Class447.method7460(i_40_, ((Class84.myPlayer.regionBaseX[0]) + class219.x * 1948093437), (class219.y * -1002240017 + (Class84.myPlayer.regionBaseY[0])), -1104014965);
 						}
 						for (int i_41_ = 0; i_41_ < 5; i_41_++)
 							client.anIntArray7435[i_41_]++;
@@ -458,7 +458,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 							client.anInt7258 = 2025825177;
 						client.aClass184_7475.anInt2290 += 352048501;
 						if (804033245 * client.aClass184_7475.anInt2290 > 50) {
-							Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, (client.aClass184_7475.aClass432_2283), -169588500);
+							TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, (client.aClass184_7475.isaac), -169588500);
 							client.aClass184_7475.method3049(class282_sub23, -57681873);
 						}
 						if (client.aBool7459) {
@@ -485,6 +485,6 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 	}
 
 	public static void method15388(Index class317, byte i) {
-		Class219.aClass317_2710 = class317;
+		CoordGrid.aClass317_2710 = class317;
 	}
 }

@@ -149,12 +149,12 @@ public class Class211 {
 		if (string_2_.length() > 80)
 			string_2_ = string_2_.substring(0, 80);
 		Class184 class184 = Class468_Sub20.method12807(-837831842);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4611, class184.aClass432_2283, -589637310);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte((Class108.method1846(string, -927657746) + 2 + Class108.method1846(string_2_, -2071148317)));
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_3_ - 1);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_4_);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string_2_);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4611, class184.isaac, -589637310);
+		class282_sub23.buffer.writeByte((ChatLine.getLength(string) + 2 + ChatLine.getLength(string_2_)));
+		class282_sub23.buffer.writeString(string);
+		class282_sub23.buffer.writeByte(i_3_ - 1);
+		class282_sub23.buffer.writeByte(i_4_);
+		class282_sub23.buffer.writeString(string_2_);
 		class184.method3049(class282_sub23, -187330762);
 	}
 

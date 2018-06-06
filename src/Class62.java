@@ -44,7 +44,7 @@ public class Class62 implements Interface3 {
 	}
 
 	public static Class62 method1256(RsByteBuffer class282_sub35) {
-		String string = class282_sub35.readString(-210384568);
+		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(755585650)[class282_sub35.readUnsignedByte()]);
 		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(1780936894);
@@ -61,7 +61,7 @@ public class Class62 implements Interface3 {
 	}
 
 	public static Class62 method1257(RsByteBuffer class282_sub35) {
-		String string = class282_sub35.readString(1353033153);
+		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(563954548)[class282_sub35.readUnsignedByte()]);
 		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(1756940293);
@@ -78,7 +78,7 @@ public class Class62 implements Interface3 {
 	}
 
 	public static Class62 method1258(RsByteBuffer class282_sub35) {
-		String string = class282_sub35.readString(-615738790);
+		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(1630681329)[class282_sub35.readUnsignedByte()]);
 		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(2113135095);
@@ -96,15 +96,15 @@ public class Class62 implements Interface3 {
 
 	static final void method1259(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class278_Sub1.method13450(class118, class98, class527, -2236332);
 	}
 
 	static void method1260(int i, boolean bool, int i_36_) {
 		if (bool) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4556, client.aClass184_7475.aClass432_2283, -341537070);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i, 1417031095);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4556, client.aClass184_7475.isaac, -341537070);
+			class282_sub23.buffer.writeShort(i, 1417031095);
 			client.aClass184_7475.method3049(class282_sub23, 684083045);
 		} else
 			Class210.method3614(Class397.aClass397_4800, i, -1, (byte) 69);

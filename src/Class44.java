@@ -308,11 +308,11 @@ public class Class44 implements Interface46 {
 		}
 	}
 
-	static final void method910(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method910(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 513538858) != null)
 			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1410 = Class351.method6193(string, class527, 240682174);
+		class118.params = Class351.method6193(string, class527, 240682174);
 		class118.aBool1384 = true;
 	}
 
@@ -335,8 +335,8 @@ public class Class44 implements Interface46 {
 		return Class5.method294(i, (byte) -81);
 	}
 
-	public static void method913(Class98 class98, Class118 class118, byte i) {
-		Class118 class118_36_ = Class96_Sub23.method14682(class98, class118, -838454718);
+	public static void method913(Interface class98, IComponentDefinitions class118, byte i) {
+		IComponentDefinitions class118_36_ = Class96_Sub23.method14682(class98, class118, -838454718);
 		int i_37_;
 		int i_38_;
 		if (class118_36_ == null) {

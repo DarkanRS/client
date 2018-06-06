@@ -29,15 +29,15 @@ public abstract class Class225 {
 				throw new RuntimeException("");
 			throw new RuntimeException("");
 		}
-		Class118 class118 = class513.method8772(42076446);
+		IComponentDefinitions class118 = class513.method8772(42076446);
 		class118.aClass118Array1438[1924549737 * (((UnderlayDefinition) class513).aClass118_5886.anInt1288)] = null;
 		Class109.method1858(class118, (byte) -39);
 	}
 
 	static final void method3791(CS2Executor class527, byte i) {
 		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_11_, (byte) 77);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_11_, (byte) 77);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
 		DefaultsFile.method11223(class118, class98, class527, 334837898);
 	}
 
@@ -69,7 +69,7 @@ public abstract class Class225 {
 				Class109_Sub1.anInt9384 = (Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, 675588453 * Class4.anInt35, (byte) 10) - 368694431 * Class525.anInt6985) * -126779709;
 			}
 		}
-		Class262.anInt3240 = 1926220865;
+		NativeLibraryLoader.anInt3240 = 1926220865;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
 	}

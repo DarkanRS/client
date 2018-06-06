@@ -13,7 +13,7 @@ final class Class17 implements Interface25 {
 		return class521_sub1_sub1 instanceof SceneObject;
 	}
 
-	static final void method569(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method569(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1362 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -310295877);
 		Class109.method1858(class118, (byte) 60);
 	}

@@ -40,8 +40,8 @@ public class Class466 implements Interface43 {
 	}
 
 	static void method7776(int i) {
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4582, client.aClass184_7475.aClass432_2283, -384952781);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(client.anInt7221 * 588706901);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4582, client.aClass184_7475.isaac, -384952781);
+		class282_sub23.buffer.writeInt(client.anInt7221 * 588706901);
 		client.aClass184_7475.method3049(class282_sub23, -226174867);
 	}
 

@@ -22,10 +22,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 	int anInt8990;
 	int anInt8991;
 	int anInt8992;
-	Class294 aClass294_8993;
-	Class384 aClass384_8994;
-	Class384 aClass384_8995;
-	Class384 aClass384_8996;
+	Matrix44Var aClass294_8993;
+	Matrix44Arr aClass384_8994;
+	Matrix44Arr aClass384_8995;
+	Matrix44Arr aClass384_8996;
 	boolean aBool8997;
 	int anInt8998;
 	int anInt8999;
@@ -189,17 +189,17 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i = class275_sub1_sub1.anInt10205 >> 12;
 			int i_33_ = class275_sub1_sub1.anInt10208 >> 12;
 			int i_34_ = class275_sub1_sub1.anInt10202 >> 12;
-			float f = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) * (float) i_34_ + ((float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]) + (float) i_33_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]))));
-			float f_35_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * (float) i_33_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) * (float) i + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]) * (float) i_34_));
+			float f = (((HardwareRenderer) this).aClass384_8996.buf[14] + ((((HardwareRenderer) this).aClass384_8996.buf[10]) * (float) i_34_ + ((float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]) + (float) i_33_ * (((HardwareRenderer) this).aClass384_8996.buf[6]))));
+			float f_35_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((((HardwareRenderer) this).aClass384_8996.buf[7] * (float) i_33_) + (((HardwareRenderer) this).aClass384_8996.buf[3]) * (float) i + (((HardwareRenderer) this).aClass384_8996.buf[11]) * (float) i_34_));
 			if (!(f < -f_35_)) {
 				float f_36_ = (((HardwareRenderer) this).aFloat8985 + f * ((HardwareRenderer) this).aFloat8978 / f_35_);
 				if (!(f > ((Class185) class185).aFloat2305)) {
-					float f_37_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) * (float) i + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) * (float) i_33_ + (float) i_34_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12]));
-					float f_38_ = ((float) i_34_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) * (float) i + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) * (float) i_33_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]));
+					float f_37_ = ((((HardwareRenderer) this).aClass384_8996.buf[0]) * (float) i + (((HardwareRenderer) this).aClass384_8996.buf[4]) * (float) i_33_ + (float) i_34_ * (((HardwareRenderer) this).aClass384_8996.buf[8]) + (((HardwareRenderer) this).aClass384_8996.buf[12]));
+					float f_38_ = ((float) i_34_ * (((HardwareRenderer) this).aClass384_8996.buf[9]) + ((((HardwareRenderer) this).aClass384_8996.buf[1]) * (float) i + (((HardwareRenderer) this).aClass384_8996.buf[5]) * (float) i_33_) + (((HardwareRenderer) this).aClass384_8996.buf[13]));
 					if (!(f_37_ < -f_35_) && !(f_37_ > f_35_) && !(f_38_ < -f_35_) && !(f_38_ > f_35_)) {
 						float f_39_ = (float) class275_sub1_sub1.anInt10206 / 4096.0F;
-						float f_40_ = (f_39_ * (((HardwareRenderer) this).aClass384_8995.aFloatArray4667[0]) + f_37_);
-						float f_41_ = f_35_ + (((HardwareRenderer) this).aClass384_8995.aFloatArray4667[3]) * f_39_;
+						float f_40_ = (f_39_ * (((HardwareRenderer) this).aClass384_8995.buf[0]) + f_37_);
+						float f_41_ = f_35_ + (((HardwareRenderer) this).aClass384_8995.buf[3]) * f_39_;
 						float f_42_ = (((HardwareRenderer) this).aFloat9003 + (f_37_ * ((HardwareRenderer) this).aFloat8976 / f_35_));
 						float f_43_ = ((((HardwareRenderer) this).aFloat9004 * f_38_ / f_35_) + ((HardwareRenderer) this).aFloat8982);
 						float f_44_ = (((HardwareRenderer) this).aFloat9003 + (f_40_ * ((HardwareRenderer) this).aFloat8976 / f_41_));
@@ -248,22 +248,22 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public int method8539(int i, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_) {
 		int i_50_ = 0;
-		float f = (((float) i_46_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) + (((float) i_45_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]))));
-		float f_51_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6] * (float) i_48_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] * (float) i_47_)) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * (float) i_49_));
-		float f_52_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + ((float) i_45_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (float) i_46_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
-		float f_53_ = (((float) i_48_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * (float) i_47_)) + (float) i_49_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f = (((float) i_46_ * ((HardwareRenderer) this).aClass384_8996.buf[10]) + (((float) i_45_ * ((HardwareRenderer) this).aClass384_8996.buf[6]) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]))));
+		float f_51_ = ((((HardwareRenderer) this).aClass384_8996.buf[6] * (float) i_48_) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (((HardwareRenderer) this).aClass384_8996.buf[2] * (float) i_47_)) + (((HardwareRenderer) this).aClass384_8996.buf[10] * (float) i_49_));
+		float f_52_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.buf[3]) + ((float) i_45_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (float) i_46_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
+		float f_53_ = (((float) i_48_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[3] * (float) i_47_)) + (float) i_49_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f < -f_52_ && f_51_ < -f_53_)
 			i_50_ |= 0x10;
 		else if (f > f_52_ && f_51_ > f_53_)
 			i_50_ |= 0x20;
-		float f_54_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_45_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + ((float) i_46_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]));
-		float f_55_ = (((float) i_49_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((float) i_47_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_48_)));
+		float f_54_ = ((((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_45_) + (((HardwareRenderer) this).aClass384_8996.buf[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[0])) + ((float) i_46_ * ((HardwareRenderer) this).aClass384_8996.buf[8]));
+		float f_55_ = (((float) i_49_ * ((HardwareRenderer) this).aClass384_8996.buf[8]) + (((float) i_47_ * ((HardwareRenderer) this).aClass384_8996.buf[0]) + ((HardwareRenderer) this).aClass384_8996.buf[12] + (((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_48_)));
 		if (f_54_ < -f_52_ && f_55_ < -f_53_)
 			i_50_ |= 0x1;
 		if (f_54_ > f_52_ && f_55_ > f_53_)
 			i_50_ |= 0x2;
-		float f_56_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_45_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9] * (float) i_46_));
-		float f_57_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] * (float) i_47_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_48_) + ((float) i_49_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
+		float f_56_ = ((((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_45_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.buf[1]) + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[9] * (float) i_46_));
+		float f_57_ = (((HardwareRenderer) this).aClass384_8996.buf[13] + (((HardwareRenderer) this).aClass384_8996.buf[1] * (float) i_47_) + (((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_48_) + ((float) i_49_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
 		if (f_56_ < -f_52_ && f_57_ < -f_53_)
 			i_50_ |= 0x4;
 		if (f_56_ > f_52_ && f_57_ > f_53_)
@@ -376,7 +376,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return new Class160_Sub1_Sub1(this, is, i, i_75_, i_76_, i_77_, bool);
 	}
 
-	public FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8448(FontMetrics class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_83_ = new int[class91s.length];
 		boolean bool_84_ = false;
@@ -970,7 +970,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public Class384 method8449() {
+	public Matrix44Arr method8449() {
 		Class185 class185 = method14370(Thread.currentThread());
 		return ((Class185) class185).aClass384_2346;
 	}
@@ -1292,22 +1292,22 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public int method8437(int i, int i_377_, int i_378_, int i_379_, int i_380_, int i_381_) {
 		int i_382_ = 0;
-		float f = (((float) i_378_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) + (((float) i_377_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]))));
-		float f_383_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6] * (float) i_380_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] * (float) i_379_)) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * (float) i_381_));
-		float f_384_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + ((float) i_377_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (float) i_378_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
-		float f_385_ = (((float) i_380_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * (float) i_379_)) + (float) i_381_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f = (((float) i_378_ * ((HardwareRenderer) this).aClass384_8996.buf[10]) + (((float) i_377_ * ((HardwareRenderer) this).aClass384_8996.buf[6]) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]))));
+		float f_383_ = ((((HardwareRenderer) this).aClass384_8996.buf[6] * (float) i_380_) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (((HardwareRenderer) this).aClass384_8996.buf[2] * (float) i_379_)) + (((HardwareRenderer) this).aClass384_8996.buf[10] * (float) i_381_));
+		float f_384_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.buf[3]) + ((float) i_377_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (float) i_378_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
+		float f_385_ = (((float) i_380_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[3] * (float) i_379_)) + (float) i_381_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f < -f_384_ && f_383_ < -f_385_)
 			i_382_ |= 0x10;
 		else if (f > f_384_ && f_383_ > f_385_)
 			i_382_ |= 0x20;
-		float f_386_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_377_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + ((float) i_378_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]));
-		float f_387_ = (((float) i_381_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((float) i_379_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_380_)));
+		float f_386_ = ((((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_377_) + (((HardwareRenderer) this).aClass384_8996.buf[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[0])) + ((float) i_378_ * ((HardwareRenderer) this).aClass384_8996.buf[8]));
+		float f_387_ = (((float) i_381_ * ((HardwareRenderer) this).aClass384_8996.buf[8]) + (((float) i_379_ * ((HardwareRenderer) this).aClass384_8996.buf[0]) + ((HardwareRenderer) this).aClass384_8996.buf[12] + (((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_380_)));
 		if (f_386_ < -f_384_ && f_387_ < -f_385_)
 			i_382_ |= 0x1;
 		if (f_386_ > f_384_ && f_387_ > f_385_)
 			i_382_ |= 0x2;
-		float f_388_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_377_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9] * (float) i_378_));
-		float f_389_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] * (float) i_379_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_380_) + ((float) i_381_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
+		float f_388_ = ((((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_377_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.buf[1]) + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[9] * (float) i_378_));
+		float f_389_ = (((HardwareRenderer) this).aClass384_8996.buf[13] + (((HardwareRenderer) this).aClass384_8996.buf[1] * (float) i_379_) + (((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_380_) + ((float) i_381_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
 		if (f_388_ < -f_384_ && f_389_ < -f_385_)
 			i_382_ |= 0x4;
 		if (f_388_ > f_384_ && f_389_ > f_385_)
@@ -1459,10 +1459,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8479(float f, float f_438_, float f_439_, float[] fs) {
-		float f_440_ = ((f_439_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * f_438_) + (f * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15]))));
-		float f_441_ = ((f_438_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8] * f_439_));
-		float f_442_ = ((f_438_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (f_439_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
-		float f_443_ = ((f_439_ * ((HardwareRenderer) this).aClass384_8994.aFloatArray4667[10]) + ((((HardwareRenderer) this).aClass384_8994.aFloatArray4667[6] * f_438_) + (f * (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[2]) + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[14]))));
+		float f_440_ = ((f_439_ * ((HardwareRenderer) this).aClass384_8996.buf[11]) + ((((HardwareRenderer) this).aClass384_8996.buf[7] * f_438_) + (f * (((HardwareRenderer) this).aClass384_8996.buf[3]) + (((HardwareRenderer) this).aClass384_8996.buf[15]))));
+		float f_441_ = ((f_438_ * ((HardwareRenderer) this).aClass384_8996.buf[4]) + (f * ((HardwareRenderer) this).aClass384_8996.buf[0] + ((HardwareRenderer) this).aClass384_8996.buf[12]) + (((HardwareRenderer) this).aClass384_8996.buf[8] * f_439_));
+		float f_442_ = ((f_438_ * ((HardwareRenderer) this).aClass384_8996.buf[5]) + (f * ((HardwareRenderer) this).aClass384_8996.buf[1] + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (f_439_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
+		float f_443_ = ((f_439_ * ((HardwareRenderer) this).aClass384_8994.buf[10]) + ((((HardwareRenderer) this).aClass384_8994.buf[6] * f_438_) + (f * (((HardwareRenderer) this).aClass384_8994.buf[2]) + (((HardwareRenderer) this).aClass384_8994.buf[14]))));
 		fs[0] = (((HardwareRenderer) this).aFloat9003 + f_441_ * ((HardwareRenderer) this).aFloat8976 / f_440_);
 		fs[1] = (((HardwareRenderer) this).aFloat8982 + f_442_ * ((HardwareRenderer) this).aFloat9004 / f_440_);
 		fs[2] = f_443_;
@@ -1508,7 +1508,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public void method8446(Class384 class384) {
+	public void method8446(Matrix44Arr class384) {
 		((HardwareRenderer) this).aClass384_8995.method6562(class384);
 		method14374();
 	}
@@ -1570,7 +1570,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		method14364();
 	}
 
-	public Class294 method8450() {
+	public Matrix44Var method8450() {
 		Class185 class185 = method14370(Thread.currentThread());
 		return ((Class185) class185).aClass294_2314;
 	}
@@ -1990,21 +1990,21 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public void method8457(Class294 class294) {
+	public void method8457(Matrix44Var class294) {
 		((HardwareRenderer) this).aClass294_8993 = class294;
 		method14374();
 	}
 
-	public Class294 method8458() {
-		return new Class294(((HardwareRenderer) this).aClass294_8993);
+	public Matrix44Var method8458() {
+		return new Matrix44Var(((HardwareRenderer) this).aClass294_8993);
 	}
 
 	public void method8521() {
 		/* empty */
 	}
 
-	public Class384 method8453() {
-		return new Class384(((HardwareRenderer) this).aClass384_8995);
+	public Matrix44Arr method8453() {
+		return new Matrix44Arr(((HardwareRenderer) this).aClass384_8995);
 	}
 
 	HardwareRenderer(Interface22 interface22) {
@@ -2026,10 +2026,10 @@ public class HardwareRenderer extends GraphicalRenderer {
 		((HardwareRenderer) this).anInt9015 = -1591418195;
 		try {
 			((HardwareRenderer) this).aClass229_9006 = new SoftCache(256);
-			((HardwareRenderer) this).aClass294_8993 = new Class294();
-			((HardwareRenderer) this).aClass384_8994 = new Class384();
-			((HardwareRenderer) this).aClass384_8995 = new Class384();
-			((HardwareRenderer) this).aClass384_8996 = new Class384();
+			((HardwareRenderer) this).aClass294_8993 = new Matrix44Var();
+			((HardwareRenderer) this).aClass384_8994 = new Matrix44Arr();
+			((HardwareRenderer) this).aClass384_8995 = new Matrix44Arr();
+			((HardwareRenderer) this).aClass384_8996 = new Matrix44Arr();
 			method14369(1);
 			method14409(0);
 			Class38.method854(true, true, -1425832759);
@@ -2092,8 +2092,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		((HardwareRenderer) this).aClass384_8996.method6613(((HardwareRenderer) this).aFloatArrayArray8989[4]);
 		((HardwareRenderer) this).aClass384_8996.method6538(((HardwareRenderer) this).aFloatArrayArray8989[5]);
 		float f = ((HardwareRenderer) this).aClass384_8995.method6587();
-		float f_606_ = ((((HardwareRenderer) this).aClass384_8995.aFloatArray4667[10] * (f - 255.0F)) + ((HardwareRenderer) this).aClass384_8995.aFloatArray4667[14]);
-		float f_607_ = (((HardwareRenderer) this).aClass384_8995.aFloatArray4667[10] * f + ((HardwareRenderer) this).aClass384_8995.aFloatArray4667[14]);
+		float f_606_ = ((((HardwareRenderer) this).aClass384_8995.buf[10] * (f - 255.0F)) + ((HardwareRenderer) this).aClass384_8995.buf[14]);
+		float f_607_ = (((HardwareRenderer) this).aClass384_8995.buf[10] * f + ((HardwareRenderer) this).aClass384_8995.buf[14]);
 		float f_608_ = f_607_ - f_606_;
 		for (int i = 0; i < 656550451 * ((HardwareRenderer) this).anInt9008; i++) {
 			Class185 class185 = ((HardwareRenderer) this).aClass185Array8984[i];
@@ -2127,28 +2127,28 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public Class384 method8590() {
-		return new Class384(((HardwareRenderer) this).aClass384_8995);
+	public Matrix44Arr method8590() {
+		return new Matrix44Arr(((HardwareRenderer) this).aClass384_8995);
 	}
 
 	public int method8537(int i, int i_620_, int i_621_, int i_622_, int i_623_, int i_624_) {
 		int i_625_ = 0;
-		float f = (((float) i_621_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) + (((float) i_620_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]))));
-		float f_626_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6] * (float) i_623_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] * (float) i_622_)) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * (float) i_624_));
-		float f_627_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + ((float) i_620_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (float) i_621_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
-		float f_628_ = (((float) i_623_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * (float) i_622_)) + (float) i_624_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f = (((float) i_621_ * ((HardwareRenderer) this).aClass384_8996.buf[10]) + (((float) i_620_ * ((HardwareRenderer) this).aClass384_8996.buf[6]) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]))));
+		float f_626_ = ((((HardwareRenderer) this).aClass384_8996.buf[6] * (float) i_623_) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (((HardwareRenderer) this).aClass384_8996.buf[2] * (float) i_622_)) + (((HardwareRenderer) this).aClass384_8996.buf[10] * (float) i_624_));
+		float f_627_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.buf[3]) + ((float) i_620_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (float) i_621_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
+		float f_628_ = (((float) i_623_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[3] * (float) i_622_)) + (float) i_624_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f < -f_627_ && f_626_ < -f_628_)
 			i_625_ |= 0x10;
 		else if (f > f_627_ && f_626_ > f_628_)
 			i_625_ |= 0x20;
-		float f_629_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_620_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + ((float) i_621_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]));
-		float f_630_ = (((float) i_624_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((float) i_622_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_623_)));
+		float f_629_ = ((((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_620_) + (((HardwareRenderer) this).aClass384_8996.buf[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[0])) + ((float) i_621_ * ((HardwareRenderer) this).aClass384_8996.buf[8]));
+		float f_630_ = (((float) i_624_ * ((HardwareRenderer) this).aClass384_8996.buf[8]) + (((float) i_622_ * ((HardwareRenderer) this).aClass384_8996.buf[0]) + ((HardwareRenderer) this).aClass384_8996.buf[12] + (((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_623_)));
 		if (f_629_ < -f_627_ && f_630_ < -f_628_)
 			i_625_ |= 0x1;
 		if (f_629_ > f_627_ && f_630_ > f_628_)
 			i_625_ |= 0x2;
-		float f_631_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_620_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9] * (float) i_621_));
-		float f_632_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] * (float) i_622_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_623_) + ((float) i_624_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
+		float f_631_ = ((((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_620_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.buf[1]) + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[9] * (float) i_621_));
+		float f_632_ = (((HardwareRenderer) this).aClass384_8996.buf[13] + (((HardwareRenderer) this).aClass384_8996.buf[1] * (float) i_622_) + (((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_623_) + ((float) i_624_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
 		if (f_631_ < -f_627_ && f_632_ < -f_628_)
 			i_625_ |= 0x4;
 		if (f_631_ > f_627_ && f_632_ > f_628_)
@@ -2237,8 +2237,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public Class384 method8587() {
-		return new Class384(((HardwareRenderer) this).aClass384_8995);
+	public Matrix44Arr method8587() {
+		return new Matrix44Arr(((HardwareRenderer) this).aClass384_8995);
 	}
 
 	public void method8536(int i, int i_652_, int i_653_, int i_654_, int i_655_, int i_656_, int i_657_) {
@@ -2324,8 +2324,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8515(float f, float f_678_, float f_679_, float[] fs) {
-		float f_680_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * f_679_) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + f_678_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6])));
-		float f_681_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * f + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * f_678_) + f_679_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f_680_ = ((((HardwareRenderer) this).aClass384_8996.buf[10] * f_679_) + (f * ((HardwareRenderer) this).aClass384_8996.buf[2] + ((HardwareRenderer) this).aClass384_8996.buf[14] + f_678_ * (((HardwareRenderer) this).aClass384_8996.buf[6])));
+		float f_681_ = (((HardwareRenderer) this).aClass384_8996.buf[3] * f + ((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[7] * f_678_) + f_679_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f_680_ < -f_681_ || f_680_ > f_681_) {
 			float[] fs_682_ = fs;
 			float[] fs_683_ = fs;
@@ -2333,7 +2333,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			fs_683_[1] = Float.NaN;
 			fs_682_[0] = Float.NaN;
 		} else {
-			float f_684_ = ((f_678_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + f * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8] * f_679_));
+			float f_684_ = ((f_678_ * ((HardwareRenderer) this).aClass384_8996.buf[4]) + (((HardwareRenderer) this).aClass384_8996.buf[12] + f * (((HardwareRenderer) this).aClass384_8996.buf[0])) + (((HardwareRenderer) this).aClass384_8996.buf[8] * f_679_));
 			if (f_684_ < -f_681_ || f_684_ > f_681_) {
 				float[] fs_685_ = fs;
 				float[] fs_686_ = fs;
@@ -2341,7 +2341,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				fs_686_[1] = Float.NaN;
 				fs_685_[0] = Float.NaN;
 			} else {
-				float f_687_ = (f_679_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) * f + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) * f_678_));
+				float f_687_ = (f_679_ * (((HardwareRenderer) this).aClass384_8996.buf[9]) + ((((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[1]) * f + (((HardwareRenderer) this).aClass384_8996.buf[5]) * f_678_));
 				if (f_687_ < -f_681_ || f_687_ > f_681_) {
 					float[] fs_688_ = fs;
 					float[] fs_689_ = fs;
@@ -2349,7 +2349,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					fs_689_[1] = Float.NaN;
 					fs_688_[0] = Float.NaN;
 				} else {
-					float f_690_ = ((((HardwareRenderer) this).aClass384_8994.aFloatArray4667[14]) + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[2]) * f + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[6]) * f_678_ + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[10]) * f_679_);
+					float f_690_ = ((((HardwareRenderer) this).aClass384_8994.buf[14]) + (((HardwareRenderer) this).aClass384_8994.buf[2]) * f + (((HardwareRenderer) this).aClass384_8994.buf[6]) * f_678_ + (((HardwareRenderer) this).aClass384_8994.buf[10]) * f_679_);
 					fs[0] = (((HardwareRenderer) this).aFloat9003 + (f_684_ * ((HardwareRenderer) this).aFloat8976 / f_681_));
 					fs[1] = (f_687_ * ((HardwareRenderer) this).aFloat9004 / f_681_ + ((HardwareRenderer) this).aFloat8982);
 					fs[2] = f_690_;
@@ -2479,7 +2479,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return ((HardwareRenderer) this).aBool9014;
 	}
 
-	public FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8660(FontMetrics class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_717_ = new int[class91s.length];
 		boolean bool_718_ = false;
@@ -2811,7 +2811,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		/* empty */
 	}
 
-	public void method8424(Class384 class384) {
+	public void method8424(Matrix44Arr class384) {
 		((HardwareRenderer) this).aClass384_8995.method6562(class384);
 		method14374();
 	}
@@ -3156,8 +3156,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 			anInterface22_5834.method161(-1963503773);
 	}
 
-	public Class294 method8685() {
-		return new Class294(((HardwareRenderer) this).aClass294_8993);
+	public Matrix44Var method8685() {
+		return new Matrix44Var(((HardwareRenderer) this).aClass294_8993);
 	}
 
 	public void method8496(int i, int i_858_, int i_859_, int i_860_, int i_861_, int i_862_, int i_863_) {
@@ -4345,8 +4345,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public Class384 method8588() {
-		return new Class384(((HardwareRenderer) this).aClass384_8995);
+	public Matrix44Arr method8588() {
+		return new Matrix44Arr(((HardwareRenderer) this).aClass384_8995);
 	}
 
 	public void method8494(int i, int i_1267_, int i_1268_, int i_1269_, int i_1270_, int i_1271_, int i_1272_, int i_1273_, int i_1274_) {
@@ -5243,22 +5243,22 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public int method8538(int i, int i_1529_, int i_1530_, int i_1531_, int i_1532_, int i_1533_) {
 		int i_1534_ = 0;
-		float f = (((float) i_1530_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) + (((float) i_1529_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]))));
-		float f_1535_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6] * (float) i_1532_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] * (float) i_1531_)) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * (float) i_1533_));
-		float f_1536_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + ((float) i_1529_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (float) i_1530_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
-		float f_1537_ = (((float) i_1532_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * (float) i_1531_)) + (float) i_1533_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f = (((float) i_1530_ * ((HardwareRenderer) this).aClass384_8996.buf[10]) + (((float) i_1529_ * ((HardwareRenderer) this).aClass384_8996.buf[6]) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]))));
+		float f_1535_ = ((((HardwareRenderer) this).aClass384_8996.buf[6] * (float) i_1532_) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (((HardwareRenderer) this).aClass384_8996.buf[2] * (float) i_1531_)) + (((HardwareRenderer) this).aClass384_8996.buf[10] * (float) i_1533_));
+		float f_1536_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.buf[3]) + ((float) i_1529_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (float) i_1530_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
+		float f_1537_ = (((float) i_1532_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[3] * (float) i_1531_)) + (float) i_1533_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f < -f_1536_ && f_1535_ < -f_1537_)
 			i_1534_ |= 0x10;
 		else if (f > f_1536_ && f_1535_ > f_1537_)
 			i_1534_ |= 0x20;
-		float f_1538_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_1529_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + ((float) i_1530_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]));
-		float f_1539_ = (((float) i_1533_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((float) i_1531_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_1532_)));
+		float f_1538_ = ((((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_1529_) + (((HardwareRenderer) this).aClass384_8996.buf[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[0])) + ((float) i_1530_ * ((HardwareRenderer) this).aClass384_8996.buf[8]));
+		float f_1539_ = (((float) i_1533_ * ((HardwareRenderer) this).aClass384_8996.buf[8]) + (((float) i_1531_ * ((HardwareRenderer) this).aClass384_8996.buf[0]) + ((HardwareRenderer) this).aClass384_8996.buf[12] + (((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_1532_)));
 		if (f_1538_ < -f_1536_ && f_1539_ < -f_1537_)
 			i_1534_ |= 0x1;
 		if (f_1538_ > f_1536_ && f_1539_ > f_1537_)
 			i_1534_ |= 0x2;
-		float f_1540_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_1529_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9] * (float) i_1530_));
-		float f_1541_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] * (float) i_1531_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_1532_) + ((float) i_1533_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
+		float f_1540_ = ((((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_1529_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.buf[1]) + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[9] * (float) i_1530_));
+		float f_1541_ = (((HardwareRenderer) this).aClass384_8996.buf[13] + (((HardwareRenderer) this).aClass384_8996.buf[1] * (float) i_1531_) + (((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_1532_) + ((float) i_1533_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
 		if (f_1540_ < -f_1536_ && f_1541_ < -f_1537_)
 			i_1534_ |= 0x4;
 		if (f_1540_ > f_1536_ && f_1541_ > f_1537_)
@@ -5301,22 +5301,22 @@ public class HardwareRenderer extends GraphicalRenderer {
 
 	public int method8540(int i, int i_1555_, int i_1556_, int i_1557_, int i_1558_, int i_1559_) {
 		int i_1560_ = 0;
-		float f = (((float) i_1556_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) + (((float) i_1555_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]))));
-		float f_1561_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6] * (float) i_1558_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] * (float) i_1557_)) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * (float) i_1559_));
-		float f_1562_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + ((float) i_1555_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (float) i_1556_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
-		float f_1563_ = (((float) i_1558_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * (float) i_1557_)) + (float) i_1559_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f = (((float) i_1556_ * ((HardwareRenderer) this).aClass384_8996.buf[10]) + (((float) i_1555_ * ((HardwareRenderer) this).aClass384_8996.buf[6]) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]))));
+		float f_1561_ = ((((HardwareRenderer) this).aClass384_8996.buf[6] * (float) i_1558_) + (((HardwareRenderer) this).aClass384_8996.buf[14] + (((HardwareRenderer) this).aClass384_8996.buf[2] * (float) i_1557_)) + (((HardwareRenderer) this).aClass384_8996.buf[10] * (float) i_1559_));
+		float f_1562_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((float) i * ((HardwareRenderer) this).aClass384_8996.buf[3]) + ((float) i_1555_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (float) i_1556_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
+		float f_1563_ = (((float) i_1558_ * ((HardwareRenderer) this).aClass384_8996.buf[7]) + (((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[3] * (float) i_1557_)) + (float) i_1559_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f < -f_1562_ && f_1561_ < -f_1563_)
 			i_1560_ |= 0x10;
 		else if (f > f_1562_ && f_1561_ > f_1563_)
 			i_1560_ |= 0x20;
-		float f_1564_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_1555_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + ((float) i_1556_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]));
-		float f_1565_ = (((float) i_1559_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((float) i_1557_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4] * (float) i_1558_)));
+		float f_1564_ = ((((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_1555_) + (((HardwareRenderer) this).aClass384_8996.buf[12] + (float) i * (((HardwareRenderer) this).aClass384_8996.buf[0])) + ((float) i_1556_ * ((HardwareRenderer) this).aClass384_8996.buf[8]));
+		float f_1565_ = (((float) i_1559_ * ((HardwareRenderer) this).aClass384_8996.buf[8]) + (((float) i_1557_ * ((HardwareRenderer) this).aClass384_8996.buf[0]) + ((HardwareRenderer) this).aClass384_8996.buf[12] + (((HardwareRenderer) this).aClass384_8996.buf[4] * (float) i_1558_)));
 		if (f_1564_ < -f_1562_ && f_1565_ < -f_1563_)
 			i_1560_ |= 0x1;
 		if (f_1564_ > f_1562_ && f_1565_ > f_1563_)
 			i_1560_ |= 0x2;
-		float f_1566_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_1555_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9] * (float) i_1556_));
-		float f_1567_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] * (float) i_1557_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5] * (float) i_1558_) + ((float) i_1559_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
+		float f_1566_ = ((((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_1555_) + (((float) i * ((HardwareRenderer) this).aClass384_8996.buf[1]) + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[9] * (float) i_1556_));
+		float f_1567_ = (((HardwareRenderer) this).aClass384_8996.buf[13] + (((HardwareRenderer) this).aClass384_8996.buf[1] * (float) i_1557_) + (((HardwareRenderer) this).aClass384_8996.buf[5] * (float) i_1558_) + ((float) i_1559_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
 		if (f_1566_ < -f_1562_ && f_1567_ < -f_1563_)
 			i_1560_ |= 0x4;
 		if (f_1566_ > f_1562_ && f_1567_ > f_1563_)
@@ -5340,17 +5340,17 @@ public class HardwareRenderer extends GraphicalRenderer {
 			int i = class275_sub1_sub1.anInt10205 >> 12;
 			int i_1571_ = class275_sub1_sub1.anInt10208 >> 12;
 			int i_1572_ = class275_sub1_sub1.anInt10202 >> 12;
-			float f = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10]) * (float) i_1572_ + ((float) i * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2]) + (float) i_1571_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6]))));
-			float f_1573_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * (float) i_1571_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) * (float) i + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]) * (float) i_1572_));
+			float f = (((HardwareRenderer) this).aClass384_8996.buf[14] + ((((HardwareRenderer) this).aClass384_8996.buf[10]) * (float) i_1572_ + ((float) i * (((HardwareRenderer) this).aClass384_8996.buf[2]) + (float) i_1571_ * (((HardwareRenderer) this).aClass384_8996.buf[6]))));
+			float f_1573_ = (((HardwareRenderer) this).aClass384_8996.buf[15] + ((((HardwareRenderer) this).aClass384_8996.buf[7] * (float) i_1571_) + (((HardwareRenderer) this).aClass384_8996.buf[3]) * (float) i + (((HardwareRenderer) this).aClass384_8996.buf[11]) * (float) i_1572_));
 			if (!(f < -f_1573_)) {
 				float f_1574_ = (((HardwareRenderer) this).aFloat8985 + f * ((HardwareRenderer) this).aFloat8978 / f_1573_);
 				if (!(f > ((Class185) class185).aFloat2305)) {
-					float f_1575_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0]) * (float) i + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) * (float) i_1571_ + (float) i_1572_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12]));
-					float f_1576_ = ((float) i_1572_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) * (float) i + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) * (float) i_1571_) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]));
+					float f_1575_ = ((((HardwareRenderer) this).aClass384_8996.buf[0]) * (float) i + (((HardwareRenderer) this).aClass384_8996.buf[4]) * (float) i_1571_ + (float) i_1572_ * (((HardwareRenderer) this).aClass384_8996.buf[8]) + (((HardwareRenderer) this).aClass384_8996.buf[12]));
+					float f_1576_ = ((float) i_1572_ * (((HardwareRenderer) this).aClass384_8996.buf[9]) + ((((HardwareRenderer) this).aClass384_8996.buf[1]) * (float) i + (((HardwareRenderer) this).aClass384_8996.buf[5]) * (float) i_1571_) + (((HardwareRenderer) this).aClass384_8996.buf[13]));
 					if (!(f_1575_ < -f_1573_) && !(f_1575_ > f_1573_) && !(f_1576_ < -f_1573_) && !(f_1576_ > f_1573_)) {
 						float f_1577_ = (float) class275_sub1_sub1.anInt10206 / 4096.0F;
-						float f_1578_ = (f_1577_ * (((HardwareRenderer) this).aClass384_8995.aFloatArray4667[0]) + f_1575_);
-						float f_1579_ = f_1573_ + (((HardwareRenderer) this).aClass384_8995.aFloatArray4667[3]) * f_1577_;
+						float f_1578_ = (f_1577_ * (((HardwareRenderer) this).aClass384_8995.buf[0]) + f_1575_);
+						float f_1579_ = f_1573_ + (((HardwareRenderer) this).aClass384_8995.buf[3]) * f_1577_;
 						float f_1580_ = (((HardwareRenderer) this).aFloat9003 + (f_1575_ * ((HardwareRenderer) this).aFloat8976 / f_1573_));
 						float f_1581_ = ((((HardwareRenderer) this).aFloat9004 * f_1576_ / f_1573_) + ((HardwareRenderer) this).aFloat8982);
 						float f_1582_ = (((HardwareRenderer) this).aFloat9003 + (f_1578_ * ((HardwareRenderer) this).aFloat8976 / f_1579_));
@@ -5637,7 +5637,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		/* empty */
 	}
 
-	public FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public FontRenderer method8625(FontMetrics class414, Class91[] class91s, boolean bool) {
 		int[] is = new int[class91s.length];
 		int[] is_1675_ = new int[class91s.length];
 		boolean bool_1676_ = false;
@@ -5657,7 +5657,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return new Class8_Sub3(this, class414, class91s, is, is_1675_);
 	}
 
-	public void method8586(Class384 class384) {
+	public void method8586(Matrix44Arr class384) {
 		((HardwareRenderer) this).aClass384_8995.method6562(class384);
 		method14374();
 	}
@@ -5758,12 +5758,12 @@ public class HardwareRenderer extends GraphicalRenderer {
 		return new Class390_Sub3(this, i_1707_, i_1708_, i, i_1704_, is, is_1705_, i_1706_);
 	}
 
-	public Class384 method8517() {
+	public Matrix44Arr method8517() {
 		Class185 class185 = method14370(Thread.currentThread());
 		return ((Class185) class185).aClass384_2346;
 	}
 
-	public Class384 method8571() {
+	public Matrix44Arr method8571() {
 		Class185 class185 = method14370(Thread.currentThread());
 		return ((Class185) class185).aClass384_2346;
 	}
@@ -5772,7 +5772,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		method14363(((HardwareRenderer) this).anIntArray8979 != null, null != ((HardwareRenderer) this).aFloatArray9010, false, class151);
 	}
 
-	public Class294 method8626() {
+	public Matrix44Var method8626() {
 		Class185 class185 = method14370(Thread.currentThread());
 		return ((Class185) class185).aClass294_2314;
 	}
@@ -5985,13 +5985,13 @@ public class HardwareRenderer extends GraphicalRenderer {
 		}
 	}
 
-	public void method8423(Class294 class294) {
+	public void method8423(Matrix44Var class294) {
 		((HardwareRenderer) this).aClass294_8993 = class294;
 		method14374();
 	}
 
-	public Class294 method8583() {
-		return new Class294(((HardwareRenderer) this).aClass294_8993);
+	public Matrix44Var method8583() {
+		return new Matrix44Var(((HardwareRenderer) this).aClass294_8993);
 	}
 
 	public int method8566(int i, int i_1779_) {
@@ -6179,8 +6179,8 @@ public class HardwareRenderer extends GraphicalRenderer {
 		method14364();
 	}
 
-	public Class384 method8589() {
-		return new Class384(((HardwareRenderer) this).aClass384_8995);
+	public Matrix44Arr method8589() {
+		return new Matrix44Arr(((HardwareRenderer) this).aClass384_8995);
 	}
 
 	public Class152 method8467(Class152 class152, Class152 class152_1823_, float f, Class152 class152_1824_) {
@@ -6446,7 +6446,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 		/* empty */
 	}
 
-	public Class294 method8572() {
+	public Matrix44Var method8572() {
 		Class185 class185 = method14370(Thread.currentThread());
 		return ((Class185) class185).aClass294_2314;
 	}
@@ -6559,28 +6559,28 @@ public class HardwareRenderer extends GraphicalRenderer {
 	}
 
 	public void method8573(float f, float f_1909_, float f_1910_, float[] fs) {
-		float f_1911_ = ((f_1910_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * f_1909_) + (f * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15]))));
-		float f_1912_ = ((f_1909_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8] * f_1910_));
-		float f_1913_ = ((f_1909_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (f_1910_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
-		float f_1914_ = ((f_1910_ * ((HardwareRenderer) this).aClass384_8994.aFloatArray4667[10]) + ((((HardwareRenderer) this).aClass384_8994.aFloatArray4667[6] * f_1909_) + (f * (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[2]) + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[14]))));
+		float f_1911_ = ((f_1910_ * ((HardwareRenderer) this).aClass384_8996.buf[11]) + ((((HardwareRenderer) this).aClass384_8996.buf[7] * f_1909_) + (f * (((HardwareRenderer) this).aClass384_8996.buf[3]) + (((HardwareRenderer) this).aClass384_8996.buf[15]))));
+		float f_1912_ = ((f_1909_ * ((HardwareRenderer) this).aClass384_8996.buf[4]) + (f * ((HardwareRenderer) this).aClass384_8996.buf[0] + ((HardwareRenderer) this).aClass384_8996.buf[12]) + (((HardwareRenderer) this).aClass384_8996.buf[8] * f_1910_));
+		float f_1913_ = ((f_1909_ * ((HardwareRenderer) this).aClass384_8996.buf[5]) + (f * ((HardwareRenderer) this).aClass384_8996.buf[1] + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (f_1910_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
+		float f_1914_ = ((f_1910_ * ((HardwareRenderer) this).aClass384_8994.buf[10]) + ((((HardwareRenderer) this).aClass384_8994.buf[6] * f_1909_) + (f * (((HardwareRenderer) this).aClass384_8994.buf[2]) + (((HardwareRenderer) this).aClass384_8994.buf[14]))));
 		fs[0] = (((HardwareRenderer) this).aFloat9003 + f_1912_ * ((HardwareRenderer) this).aFloat8976 / f_1911_);
 		fs[1] = (((HardwareRenderer) this).aFloat8982 + f_1913_ * ((HardwareRenderer) this).aFloat9004 / f_1911_);
 		fs[2] = f_1914_;
 	}
 
 	public void method8650(float f, float f_1915_, float f_1916_, float[] fs) {
-		float f_1917_ = ((f_1916_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * f_1915_) + (f * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15]))));
-		float f_1918_ = ((f_1915_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8] * f_1916_));
-		float f_1919_ = ((f_1915_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (f_1916_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]));
-		float f_1920_ = ((f_1916_ * ((HardwareRenderer) this).aClass384_8994.aFloatArray4667[10]) + ((((HardwareRenderer) this).aClass384_8994.aFloatArray4667[6] * f_1915_) + (f * (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[2]) + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[14]))));
+		float f_1917_ = ((f_1916_ * ((HardwareRenderer) this).aClass384_8996.buf[11]) + ((((HardwareRenderer) this).aClass384_8996.buf[7] * f_1915_) + (f * (((HardwareRenderer) this).aClass384_8996.buf[3]) + (((HardwareRenderer) this).aClass384_8996.buf[15]))));
+		float f_1918_ = ((f_1915_ * ((HardwareRenderer) this).aClass384_8996.buf[4]) + (f * ((HardwareRenderer) this).aClass384_8996.buf[0] + ((HardwareRenderer) this).aClass384_8996.buf[12]) + (((HardwareRenderer) this).aClass384_8996.buf[8] * f_1916_));
+		float f_1919_ = ((f_1915_ * ((HardwareRenderer) this).aClass384_8996.buf[5]) + (f * ((HardwareRenderer) this).aClass384_8996.buf[1] + ((HardwareRenderer) this).aClass384_8996.buf[13]) + (f_1916_ * ((HardwareRenderer) this).aClass384_8996.buf[9]));
+		float f_1920_ = ((f_1916_ * ((HardwareRenderer) this).aClass384_8994.buf[10]) + ((((HardwareRenderer) this).aClass384_8994.buf[6] * f_1915_) + (f * (((HardwareRenderer) this).aClass384_8994.buf[2]) + (((HardwareRenderer) this).aClass384_8994.buf[14]))));
 		fs[0] = (((HardwareRenderer) this).aFloat9003 + f_1918_ * ((HardwareRenderer) this).aFloat8976 / f_1917_);
 		fs[1] = (((HardwareRenderer) this).aFloat8982 + f_1919_ * ((HardwareRenderer) this).aFloat9004 / f_1917_);
 		fs[2] = f_1920_;
 	}
 
 	public void method8619(float f, float f_1921_, float f_1922_, float[] fs) {
-		float f_1923_ = ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[10] * f_1922_) + (f * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[2] + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[14] + f_1921_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[6])));
-		float f_1924_ = (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[3] * f + ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[15] + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[7] * f_1921_) + f_1922_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[11]));
+		float f_1923_ = ((((HardwareRenderer) this).aClass384_8996.buf[10] * f_1922_) + (f * ((HardwareRenderer) this).aClass384_8996.buf[2] + ((HardwareRenderer) this).aClass384_8996.buf[14] + f_1921_ * (((HardwareRenderer) this).aClass384_8996.buf[6])));
+		float f_1924_ = (((HardwareRenderer) this).aClass384_8996.buf[3] * f + ((HardwareRenderer) this).aClass384_8996.buf[15] + (((HardwareRenderer) this).aClass384_8996.buf[7] * f_1921_) + f_1922_ * (((HardwareRenderer) this).aClass384_8996.buf[11]));
 		if (f_1923_ < -f_1924_ || f_1923_ > f_1924_) {
 			float[] fs_1925_ = fs;
 			float[] fs_1926_ = fs;
@@ -6588,7 +6588,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 			fs_1926_[1] = Float.NaN;
 			fs_1925_[0] = Float.NaN;
 		} else {
-			float f_1927_ = ((f_1921_ * ((HardwareRenderer) this).aClass384_8996.aFloatArray4667[4]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[12] + f * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[0])) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[8] * f_1922_));
+			float f_1927_ = ((f_1921_ * ((HardwareRenderer) this).aClass384_8996.buf[4]) + (((HardwareRenderer) this).aClass384_8996.buf[12] + f * (((HardwareRenderer) this).aClass384_8996.buf[0])) + (((HardwareRenderer) this).aClass384_8996.buf[8] * f_1922_));
 			if (f_1927_ < -f_1924_ || f_1927_ > f_1924_) {
 				float[] fs_1928_ = fs;
 				float[] fs_1929_ = fs;
@@ -6596,7 +6596,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 				fs_1929_[1] = Float.NaN;
 				fs_1928_[0] = Float.NaN;
 			} else {
-				float f_1930_ = (f_1922_ * (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[9]) + ((((HardwareRenderer) this).aClass384_8996.aFloatArray4667[13]) + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[1]) * f + (((HardwareRenderer) this).aClass384_8996.aFloatArray4667[5]) * f_1921_));
+				float f_1930_ = (f_1922_ * (((HardwareRenderer) this).aClass384_8996.buf[9]) + ((((HardwareRenderer) this).aClass384_8996.buf[13]) + (((HardwareRenderer) this).aClass384_8996.buf[1]) * f + (((HardwareRenderer) this).aClass384_8996.buf[5]) * f_1921_));
 				if (f_1930_ < -f_1924_ || f_1930_ > f_1924_) {
 					float[] fs_1931_ = fs;
 					float[] fs_1932_ = fs;
@@ -6604,7 +6604,7 @@ public class HardwareRenderer extends GraphicalRenderer {
 					fs_1932_[1] = Float.NaN;
 					fs_1931_[0] = Float.NaN;
 				} else {
-					float f_1933_ = ((((HardwareRenderer) this).aClass384_8994.aFloatArray4667[14]) + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[2]) * f + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[6]) * f_1921_ + (((HardwareRenderer) this).aClass384_8994.aFloatArray4667[10]) * f_1922_);
+					float f_1933_ = ((((HardwareRenderer) this).aClass384_8994.buf[14]) + (((HardwareRenderer) this).aClass384_8994.buf[2]) * f + (((HardwareRenderer) this).aClass384_8994.buf[6]) * f_1921_ + (((HardwareRenderer) this).aClass384_8994.buf[10]) * f_1922_);
 					fs[0] = (((HardwareRenderer) this).aFloat9003 + (f_1927_ * ((HardwareRenderer) this).aFloat8976 / f_1924_));
 					fs[1] = (f_1930_ * ((HardwareRenderer) this).aFloat9004 / f_1924_) + ((HardwareRenderer) this).aFloat8982;
 					fs[2] = f_1933_;

@@ -61,7 +61,7 @@ public class Class357 implements Interface3 {
 
 	static final void method6232(CS2Executor class527, int i) {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_9_, (byte) 107);
+		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 107);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.aBool1306 ? 1 : 0;
 	}
 

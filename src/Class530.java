@@ -4,7 +4,7 @@
 
 public class Class530 {
 	int anInt7047;
-	Class219 aClass219_7048;
+	CoordGrid aClass219_7048;
 	int anInt7049;
 	public static boolean aBool7050;
 
@@ -34,7 +34,7 @@ public class Class530 {
 		return client.anIntArray7230[((Class530) this).anInt7047 * 1219960497];
 	}
 
-	public Class530(Class219 class219, int i, int i_0_, int i_1_) {
+	public Class530(CoordGrid class219, int i, int i_0_, int i_1_) {
 		((Class530) this).aClass219_7048 = class219;
 		((Class530) this).anInt7047 = i * -75863471;
 		((Class530) this).anInt7049 = i_1_ * 433623655;
@@ -49,10 +49,10 @@ public class Class530 {
 	}
 
 	SceneObject method11348(short i) {
-		int i_2_ = 298538453 * ((Class530) this).aClass219_7048.anInt2713;
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1217612419);
-		int i_3_ = (((Class530) this).aClass219_7048.anInt2711 * 1948093437 - 1948093437 * class219.anInt2711);
-		int i_4_ = (-1002240017 * ((Class530) this).aClass219_7048.anInt2712 - class219.anInt2712 * -1002240017);
+		int i_2_ = 298538453 * ((Class530) this).aClass219_7048.level;
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1217612419);
+		int i_3_ = (((Class530) this).aClass219_7048.x * 1948093437 - 1948093437 * class219.x);
+		int i_4_ = (-1002240017 * ((Class530) this).aClass219_7048.y - class219.y * -1002240017);
 		if (i_3_ < 0 || i_4_ < 0 || i_3_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-444629403) || i_4_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-343963365))
 			return null;
 		switch (method11343(-1790322453)) {
@@ -70,10 +70,10 @@ public class Class530 {
 	}
 
 	SceneObject method11349() {
-		int i = 298538453 * ((Class530) this).aClass219_7048.anInt2713;
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1833251508);
-		int i_5_ = (((Class530) this).aClass219_7048.anInt2711 * 1948093437 - 1948093437 * class219.anInt2711);
-		int i_6_ = (-1002240017 * ((Class530) this).aClass219_7048.anInt2712 - class219.anInt2712 * -1002240017);
+		int i = 298538453 * ((Class530) this).aClass219_7048.level;
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1833251508);
+		int i_5_ = (((Class530) this).aClass219_7048.x * 1948093437 - 1948093437 * class219.x);
+		int i_6_ = (-1002240017 * ((Class530) this).aClass219_7048.y - class219.y * -1002240017);
 		if (i_5_ < 0 || i_6_ < 0 || i_5_ >= IndexLoaders.MAP_REGION_DECODER.method4424(1337608146) || i_6_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-2076212393))
 			return null;
 		switch (method11343(-1790322453)) {
@@ -92,7 +92,7 @@ public class Class530 {
 
 	static final void method11350(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 1552292309 * class118.anInt1293;
 	}
 

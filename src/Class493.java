@@ -235,13 +235,13 @@ public class Class493 {
 				/* empty */
 			}
 		} else {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4570, client.aClass184_7218.aClass432_2283, 302264892);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-			int i_21_ = (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13101(Class14.anIntArray131, i_21_, (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index), 1836980481);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13281(-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_21_, 1201423895);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4570, client.aClass184_7218.isaac, 302264892);
+			class282_sub23.buffer.writeShort(0, 1417031095);
+			int i_21_ = (class282_sub23.buffer.index * -1990677291);
+			class282_sub23.buffer.writeString(string);
+			class282_sub23.buffer.index += 781596523;
+			class282_sub23.buffer.method13101(Class14.anIntArray131, i_21_, (-1990677291 * class282_sub23.buffer.index), 1836980481);
+			class282_sub23.buffer.method13281(-1990677291 * (class282_sub23.buffer.index) - i_21_, 1201423895);
 			client.aClass184_7218.method3049(class282_sub23, -349048671);
 			Class404.aClass466_4831 = Class466.aClass466_5564;
 		}

@@ -147,7 +147,7 @@ public class Class77 {
 		if (i_24_ + 1 >= (client.anIntArrayArrayArray7302[-74015201 * client.anInt7448]).length >> 1)
 			throw new RuntimeException();
 		client.anInt7280 = 1872958459 * i_24_;
-		Class262.anInt3240 = 1155732519;
+		NativeLibraryLoader.anInt3240 = 1155732519;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
 	}

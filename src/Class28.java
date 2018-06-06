@@ -162,7 +162,7 @@ public class Class28 implements Interface2 {
 			Class84.myPlayer.playerAppearance.method3995(i_10_, i_11_, IndexLoaders.ITEM_INDEX_LOADER, (byte) 57);
 	}
 
-	static final void method774(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method774(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aBool1351 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 44);
 	}
@@ -171,8 +171,8 @@ public class Class28 implements Interface2 {
 		Class438.method7333(false, 2001834911);
 	}
 
-	static final void method776(Class118 class118, byte i) {
-		if (1422794759 * Class118.anInt1266 == 1449989045 * class118.anInt1290) {
+	static final void method776(IComponentDefinitions class118, byte i) {
+		if (1422794759 * IComponentDefinitions.anInt1266 == 1449989045 * class118.anInt1290) {
 			if (Class84.myPlayer.displayName == null) {
 				class118.anInt1330 = 0;
 				class118.anInt1339 = 0;
@@ -209,7 +209,7 @@ public class Class28 implements Interface2 {
 
 	static final void method779(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		int i_16_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		i_16_--;
 		if (class118.aStringArray1352 == null || i_16_ >= class118.aStringArray1352.length || class118.aStringArray1352[i_16_] == null)

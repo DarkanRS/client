@@ -12,8 +12,8 @@ public final class Class510 {
 
 	static final void method8741(CS2Executor class527, int i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 19);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 19);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class30.method797(class118, class98, class527, 2057644852);
 	}
 
@@ -26,11 +26,11 @@ public final class Class510 {
 			Class509 class509 = (class527.aClass509Array7016[(class527.anInt7002 -= -72641453) * -1837903909]);
 			class527.current = ((Class509) class509).aClass282_Sub50_Sub5_5869;
 			class527.operations = (class527.current.operations);
-			class527.unknown = (class527.current.intOpValues);
+			class527.intOpValues = (class527.current.intOpValues);
 			class527.instrPtr = ((Class509) class509).anInt5866 * -390085499;
 			class527.intLocals = ((Class509) class509).anIntArray5867;
 			class527.objectLocals = ((Class509) class509).anObjectArray5865;
-			class527.aLongArray6996 = ((Class509) class509).aLongArray5868;
+			class527.longLocals = ((Class509) class509).aLongArray5868;
 		}
 	}
 

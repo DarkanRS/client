@@ -5,7 +5,7 @@
 public class CS2Executor {
 	UnderlayDefinition aClass513_6994;
 	int[] intLocals;
-	long[] aLongArray6996;
+	long[] longLocals;
 	int[] globalArrayLengths = new int[5];
 	int[][] globalArrays = new int[5][5000];
 	int[] intStack = new int[1000];
@@ -27,7 +27,7 @@ public class CS2Executor {
 	int anInt7015;
 	Class509[] aClass509Array7016;
 	Object[] objectLocals;
-	int[] unknown;
+	int[] intOpValues;
 	Object[] objectStack = new Object[1000];
 	int instrPtr;
 	CS2Script current;
@@ -59,8 +59,8 @@ public class CS2Executor {
 
 	static final void method11252(CS2Executor class527, int i) {
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_4_, (byte) 112);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 112);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class159.method2741(class118, class98, class527, (byte) 59);
 	}
 }

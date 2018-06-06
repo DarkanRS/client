@@ -369,19 +369,19 @@ public class Class306 implements Runnable {
 		return ((Class306) this).aClass387_3605;
 	}
 
-	static final void method5453(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5453(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1453 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 542423029);
 		Class109.method1858(class118, (byte) 38);
 	}
 
 	static final void method5454(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class388.method6689(class118, class98, class527, -1325522232);
 	}
 
-	static final void method5455(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5455(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1521695883) != null)
 			string = string.substring(0, string.length() - 1);
@@ -428,13 +428,13 @@ public class Class306 implements Runnable {
 		Class89.method1502(825346113);
 	}
 
-	static final void method5459(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5459(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_19_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_19_ != class118.anInt1435 * 602613369) {
 			class118.anInt1435 = -655465527 * i_19_;
 			Class109.method1858(class118, (byte) 77);
 		}
 		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			JS5LocalRequester.method5581(-1952846363 * class118.anInt1287, (byte) 2);
+			JS5LocalRequester.method5581(-1952846363 * class118.idHash, (byte) 2);
 	}
 }

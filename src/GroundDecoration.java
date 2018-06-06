@@ -36,11 +36,11 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -122);
-		int i_0_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_1_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i_0_ = (int) class305.aClass385_3595.x >> 9;
+		int i_1_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i_0_, i_0_, i_1_, i_1_, true, 1139295169);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10507).aClass539_1538 != null) {
@@ -49,18 +49,18 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		}
 		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
 		if (null == ((GroundDecoration) this).aClass200_10505)
-			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -28);
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -28);
 		else
-			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1412574443);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, -1412574443);
 		return class285;
 	}
 
 	void method12991(GraphicalRenderer class505, int i) {
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null) {
-			Class385 class385 = method11166().aClass385_3595;
-			int i_2_ = (int) class385.aFloat4671 >> 9;
-			int i_3_ = (int) class385.aFloat4673 >> 9;
+			Vector3 class385 = method11166().aClass385_3595;
+			int i_2_ = (int) class385.x >> 9;
+			int i_3_ = (int) class385.z >> 9;
 			aClass123_10507.method2119(class505, class528, method11168(), i_2_, i_2_, i_3_, i_3_, false, 205228660);
 		}
 	}
@@ -159,11 +159,11 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -111);
-		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_10_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i = (int) class305.aClass385_3595.x >> 9;
+		int i_10_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i, i, i_10_, i_10_, true, 2037340333);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10507).aClass539_1538 != null) {
@@ -172,18 +172,18 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		}
 		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
 		if (null == ((GroundDecoration) this).aClass200_10505)
-			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -26);
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -26);
 		else
-			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1093700673);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, 1093700673);
 		return class285;
 	}
 
 	void method13023(GraphicalRenderer class505) {
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null) {
-			Class385 class385 = method11166().aClass385_3595;
-			int i = (int) class385.aFloat4671 >> 9;
-			int i_11_ = (int) class385.aFloat4673 >> 9;
+			Vector3 class385 = method11166().aClass385_3595;
+			int i = (int) class385.x >> 9;
+			int i_11_ = (int) class385.z >> 9;
 			aClass123_10507.method2119(class505, class528, method11168(), i, i, i_11_, i_11_, false, 77499913);
 		}
 	}
@@ -251,11 +251,11 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -77);
-		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_18_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i = (int) class305.aClass385_3595.x >> 9;
+		int i_18_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i, i, i_18_, i_18_, true, -467825416);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10507).aClass539_1538 != null) {
@@ -264,9 +264,9 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		}
 		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
 		if (null == ((GroundDecoration) this).aClass200_10505)
-			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -32);
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -32);
 		else
-			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 234784710);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, 234784710);
 		return class285;
 	}
 
@@ -274,11 +274,11 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((GroundDecoration) this).aBool10506, (byte) -86);
-		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_19_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i = (int) class305.aClass385_3595.x >> 9;
+		int i_19_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10507.method2119(class505, class528, class294, i, i, i_19_, i_19_, true, 973723182);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10507).aClass539_1538 != null) {
@@ -287,18 +287,18 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		}
 		((GroundDecoration) this).aBool10508 = (class528.i() || null != ((Class123) aClass123_10507).aClass539_1538);
 		if (null == ((GroundDecoration) this).aClass200_10505)
-			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 68);
+			((GroundDecoration) this).aClass200_10505 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) 68);
 		else
-			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 1066988598);
+			Class388.method6694((((GroundDecoration) this).aClass200_10505), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, 1066988598);
 		return class285;
 	}
 
 	void method13012(GraphicalRenderer class505) {
 		MeshRasterizer class528 = aClass123_10507.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null) {
-			Class385 class385 = method11166().aClass385_3595;
-			int i = (int) class385.aFloat4671 >> 9;
-			int i_20_ = (int) class385.aFloat4673 >> 9;
+			Vector3 class385 = method11166().aClass385_3595;
+			int i = (int) class385.x >> 9;
+			int i_20_ = (int) class385.z >> 9;
 			aClass123_10507.method2119(class505, class528, method11168(), i, i, i_20_, i_20_, false, 315040844);
 		}
 	}
@@ -355,10 +355,10 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 		return ((GroundDecoration) this).aClass200_10505;
 	}
 
-	public static final void method16094(Class118[] class118s, int i, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, boolean bool, byte i_30_) {
+	public static final void method16094(IComponentDefinitions[] class118s, int i, int i_23_, int i_24_, int i_25_, int i_26_, int i_27_, int i_28_, int i_29_, boolean bool, byte i_30_) {
 		Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
 		for (int i_31_ = 0; i_31_ < class118s.length; i_31_++) {
-			Class118 class118 = class118s[i_31_];
+			IComponentDefinitions class118 = class118s[i_31_];
 			if (class118 != null && (2110532063 * class118.anInt1305 == i || (i == -1412584499 && client.aClass118_7257 == class118))) {
 				int i_32_;
 				if (i_29_ == -1) {
@@ -377,7 +377,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 					if (client.aBool7168 && ((client.method11633(class118).anInt7547 * 488242129 != 0) || 0 == class118.anInt1268 * -2131393857) && i_35_ > 127)
 						i_35_ = 127;
 					if (class118 == client.aClass118_7257) {
-						if (i != -1412584499 && ((930045391 * class118.anInt1382 == Class118.anInt1265 * -1267941319) || (930045391 * class118.anInt1382 == -281434611 * Class118.anInt1283) || client.method11633(class118).method12196(-28031909))) {
+						if (i != -1412584499 && ((930045391 * class118.anInt1382 == IComponentDefinitions.anInt1265 * -1267941319) || (930045391 * class118.anInt1382 == -281434611 * IComponentDefinitions.anInt1283) || client.method11633(class118).method12196(-28031909))) {
 							Class328.aClass118Array3772 = class118s;
 							Class400.anInt4822 = -1596738261 * i_27_;
 							IsaacCipher.anInt5157 = 1474036921 * i_28_;
@@ -401,7 +401,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 							i_33_ = i_36_;
 							i_34_ = i_37_;
 						}
-						if (class118.anInt1382 * 930045391 == -281434611 * Class118.anInt1283)
+						if (class118.anInt1382 * 930045391 == -281434611 * IComponentDefinitions.anInt1283)
 							i_35_ = 128;
 					}
 					int i_38_;
@@ -427,15 +427,15 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 					}
 					if (i_38_ < i_40_ && i_39_ < i_41_) {
 						if (class118.anInt1290 * 1449989045 != 0) {
-							if ((-741477579 * Class118.anInt1372 == 1449989045 * class118.anInt1290) || (260799187 * Class118.anInt1436 == class118.anInt1290 * 1449989045)) {
-								HitbarDefinitions.method3231(i_33_, i_34_, class118.anInt1301 * 1506818197, -492594917 * class118.anInt1429, (Class118.anInt1436 * 260799187 == 1449989045 * class118.anInt1290), 72550989);
-								Class282_Sub23.method12366(i_32_, i_38_, i_39_, i_40_, i_41_, i_33_, i_34_, -368732775);
+							if ((-741477579 * IComponentDefinitions.anInt1372 == 1449989045 * class118.anInt1290) || (260799187 * IComponentDefinitions.anInt1436 == class118.anInt1290 * 1449989045)) {
+								HitbarDefinitions.method3231(i_33_, i_34_, class118.anInt1301 * 1506818197, -492594917 * class118.anInt1429, (IComponentDefinitions.anInt1436 * 260799187 == 1449989045 * class118.anInt1290), 72550989);
+								TCPMessage.method12366(i_32_, i_38_, i_39_, i_40_, i_41_, i_33_, i_34_, -368732775);
 								Renderers.SOFTWARE_RENDERER.method8421();
 								Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
 								client.aBoolArray7443[i_32_] = true;
 								continue;
 							}
-							if ((class118.anInt1290 * 1449989045 == 1575345145 * Class118.anInt1269) && -891719545 * client.anInt7341 == 1) {
+							if ((class118.anInt1290 * 1449989045 == 1575345145 * IComponentDefinitions.anInt1269) && -891719545 * client.anInt7341 == 1) {
 								if (class118.method2046((Renderers.SOFTWARE_RENDERER), -890940576) != null) {
 									Class282_Sub20_Sub24.method15391(-165186170);
 									Item.method12574(Renderers.SOFTWARE_RENDERER, class118, i_33_, i_34_, -1198677116);
@@ -443,34 +443,34 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 								}
 								continue;
 							}
-							if (Class118.anInt1276 * -47064917 == 1449989045 * class118.anInt1290) {
+							if (IComponentDefinitions.anInt1276 * -47064917 == 1449989045 * class118.anInt1290) {
 								Class282_Sub50_Sub17.method15506(Renderers.SOFTWARE_RENDERER, i_33_, i_34_, class118, 1138717057);
 								continue;
 							}
-							if (-362135887 * Class118.anInt1300 == class118.anInt1290 * 1449989045) {
+							if (-362135887 * IComponentDefinitions.anInt1300 == class118.anInt1290 * 1449989045) {
 								Class366.method6301(Renderers.SOFTWARE_RENDERER, i_33_, i_34_, class118, (class118.anInt1264 * -795991475 % 64), -16711936);
 								continue;
 							}
-							if (-431010797 * Class118.anInt1270 == 1449989045 * class118.anInt1290) {
+							if (-431010797 * IComponentDefinitions.anInt1270 == 1449989045 * class118.anInt1290) {
 								if (class118.method2046((Renderers.SOFTWARE_RENDERER), -1781031351) != null) {
 									Class278_Sub1.method13448(class118, i_33_, i_34_, 1237889366);
 									Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
 								}
 								continue;
 							}
-							if (Class118.anInt1313 * 663156097 == class118.anInt1290 * 1449989045) {
+							if (IComponentDefinitions.anInt1313 * 663156097 == class118.anInt1290 * 1449989045) {
 								Class282_Sub46.method13407(Renderers.SOFTWARE_RENDERER, IndexLoaders.IMAGE_LOADER, i_33_, i_34_, 1506818197 * class118.anInt1301, class118.anInt1429 * -492594917, (byte) 85);
 								client.aBoolArray7443[i_32_] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
 								continue;
 							}
-							if (Class118.anInt1272 * -1417910959 == 1449989045 * class118.anInt1290) {
+							if (IComponentDefinitions.anInt1272 * -1417910959 == 1449989045 * class118.anInt1290) {
 								LoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, i_33_, i_34_, (class118.anInt1301 * 1506818197), (-492594917 * class118.anInt1429), (short) 20938);
 								client.aBoolArray7443[i_32_] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
 								continue;
 							}
-							if (Class118.anInt1273 * -639931977 == class118.anInt1290 * 1449989045) {
+							if (IComponentDefinitions.anInt1273 * -639931977 == class118.anInt1290 * 1449989045) {
 								if (client.aBool7176 || client.aBool7177) {
 									Class252.method4326(i_33_, i_34_, class118, -2019729413);
 									client.aBoolArray7443[i_32_] = true;
@@ -479,15 +479,15 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 							}
 						}
 						if (-2131393857 * class118.anInt1268 == 0) {
-							if ((1449989045 * class118.anInt1290 == 1718905043 * Class118.anInt1275) && Renderers.SOFTWARE_RENDERER.method8471())
+							if ((1449989045 * class118.anInt1290 == 1718905043 * IComponentDefinitions.anInt1275) && Renderers.SOFTWARE_RENDERER.method8471())
 								Renderers.SOFTWARE_RENDERER.method8525(0, 0, Class349.anInt4083 * -418109423, client.anInt3243 * -969250379);
-							method16094(class118s, -1952846363 * class118.anInt1287, i_38_, i_39_, i_40_, i_41_, i_33_ - 276864765 * class118.anInt1311, i_34_ - 682782159 * class118.anInt1312, i_32_, bool, (byte) 6);
+							method16094(class118s, -1952846363 * class118.idHash, i_38_, i_39_, i_40_, i_41_, i_33_ - 276864765 * class118.anInt1311, i_34_ - 682782159 * class118.anInt1312, i_32_, bool, (byte) 6);
 							if (null != class118.aClass118Array1439)
-								method16094(class118.aClass118Array1439, -1952846363 * class118.anInt1287, i_38_, i_39_, i_40_, i_41_, (i_33_ - class118.anInt1311 * 276864765), (i_34_ - 682782159 * class118.anInt1312), i_32_, bool, (byte) 6);
-							Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.anInt1287))));
+								method16094(class118.aClass118Array1439, -1952846363 * class118.idHash, i_38_, i_39_, i_40_, i_41_, (i_33_ - class118.anInt1311 * 276864765), (i_34_ - 682782159 * class118.anInt1312), i_32_, bool, (byte) 6);
+							Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.idHash))));
 							if (null != class282_sub44)
 								Class211.method3629((class282_sub44.anInt8063 * 587626901), i_38_, i_39_, i_40_, i_41_, i_33_, i_34_, i_32_, -1473886497);
-							if (1718905043 * Class118.anInt1275 == class118.anInt1290 * 1449989045) {
+							if (1718905043 * IComponentDefinitions.anInt1275 == class118.anInt1290 * 1449989045) {
 								if (Renderers.SOFTWARE_RENDERER.method8471())
 									Renderers.SOFTWARE_RENDERER.method8474();
 								if (4 == client.anInt7341 * -891719545) {
@@ -522,7 +522,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 							} else if (-2131393857 * class118.anInt1268 == 4) {
 								FontRenderer class8 = (class118.method1988(Class487.aClass378_5752, client.anInterface35_7206, 177804367));
 								if (null == class8) {
-									if (Class118.aBool1399)
+									if (IComponentDefinitions.aBool1399)
 										Class109.method1858(class118, (byte) -4);
 								} else {
 									int i_48_ = -795991475 * class118.anInt1264;
@@ -600,7 +600,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 											class160.method2789(i_33_, i_34_, (1506818197 * class118.anInt1301), (-492594917 * class118.anInt1429));
 										else
 											class160.method2752(i_33_, i_34_);
-									} else if (Class118.aBool1399)
+									} else if (IComponentDefinitions.aBool1399)
 										Class109.method1858(class118, (byte) 43);
 								}
 							} else if (6 == class118.anInt1268 * -2131393857) {
@@ -626,7 +626,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 										Player class521_sub1_sub1_sub2_sub1 = (client.players[i_58_]);
 										if ((null != class521_sub1_sub1_sub2_sub1) && ((client.anInt7315 * 1595512269 == i_58_) || ((Class272.method4840((class521_sub1_sub1_sub2_sub1.displayName), (byte) 111)) == (class118.anInt1339 * 1871217945)))) {
 											class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.aClass211_9383), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class118.aClass456_1437, (class521_sub1_sub1_sub2_sub1.playerAppearance), -1254103030));
-											if (null == class528 && Class118.aBool1399)
+											if (null == class528 && IComponentDefinitions.aBool1399)
 												Class109.method1858(class118, (byte) -76);
 										}
 									}
@@ -638,16 +638,16 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 											class528 = (class521_sub1_sub1_sub2_sub1.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.aClass211_9383), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class118.aClass456_1437, null, null, null, 0, true, Class473.DEFAULTS_LOADER_6, (short) -10357));
 									}
 								} else if (2131324949 * class118.anInt1329 == 8 || 9 == (class118.anInt1329 * 2131324949)) {
-									Class282_Sub30 class282_sub30 = Class517.method11127(((class118.anInt1330) * -402732635), false, 1899477275);
+									Class282_Sub30 class282_sub30 = CS2Runner.method11127(((class118.anInt1330) * -402732635), false, 1899477275);
 									if (null != class282_sub30)
 										class528 = (class282_sub30.method12429(Renderers.SOFTWARE_RENDERER, i_56_, class118.aClass456_1437, (1871217945 * class118.anInt1339), (2131324949 * class118.anInt1329) == 9, (class118.aBool1388 ? (Class84.myPlayer.playerAppearance) : null), -1983093950));
 								} else if (class118.aClass456_1437 == null || !class118.aClass456_1437.method7564(1507425525)) {
 									class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, null, (Class84.myPlayer.playerAppearance), -1254103030));
-									if (null == class528 && Class118.aBool1399)
+									if (null == class528 && IComponentDefinitions.aBool1399)
 										Class109.method1858(class118, (byte) -35);
 								} else {
 									class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class118.aClass456_1437, (Class84.myPlayer.playerAppearance), -1254103030));
-									if (class528 == null && Class118.aBool1399)
+									if (class528 == null && IComponentDefinitions.aBool1399)
 										Class109.method1858(class118, (byte) -7);
 								}
 								if (null != class528) {
@@ -671,7 +671,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 									}
 									client.aClass294_7457.method5212();
 									Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
-									Class384 class384 = Renderers.SOFTWARE_RENDERER.method8449();
+									Matrix44Arr class384 = Renderers.SOFTWARE_RENDERER.method8449();
 									int i_64_ = IndexLoaders.MAP_REGION_DECODER.method4544(-1051442584);
 									int i_65_ = IndexLoaders.MAP_REGION_DECODER.method4522(-1749801746);
 									i_65_ += -1823193031 * class118.anInt1343;
@@ -740,8 +740,8 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 
 	static final void method16095(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Engine.method4772(class118, class98, class527, (byte) 12);
 	}
 }

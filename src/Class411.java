@@ -122,12 +122,12 @@ public class Class411 {
 		String string_7_ = (String) (class527.objectStack[class527.anInt7000 * 1806726141 + 1]);
 		if (client.rights * -644057819 != 0 || (!client.aBool7224 || client.aBool7244) && !client.aBool7325) {
 			Class184 class184 = Class468_Sub20.method12807(65699692);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4542, class184.aClass432_2283, 1733219960);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-			int i_8_ = (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			Class427.method7189(class282_sub23.aClass282_Sub35_Sub2_7682, string_7_, -1045149130);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_8_, 1201423895);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4542, class184.isaac, 1733219960);
+			class282_sub23.buffer.writeShort(0, 1417031095);
+			int i_8_ = (-1990677291 * class282_sub23.buffer.index);
+			class282_sub23.buffer.writeString(string);
+			Class427.method7189(class282_sub23.buffer, string_7_, -1045149130);
+			class282_sub23.buffer.method13281((-1990677291 * class282_sub23.buffer.index) - i_8_, 1201423895);
 			class184.method3049(class282_sub23, 850371200);
 		}
 	}

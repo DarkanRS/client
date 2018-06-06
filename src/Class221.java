@@ -8,7 +8,7 @@ public class Class221 {
 	static Class221 aClass221_2760;
 	static Class221 aClass221_2761 = new Class221(1);
 	public static int anInt2762;
-	static Class118 aClass118_2763;
+	static IComponentDefinitions aClass118_2763;
 
 	static Class221 method3744(int i) {
 		Class221[] class221s = JS5FileWorker.method5815(288844894);
@@ -37,7 +37,7 @@ public class Class221 {
 	}
 
 	static final void method3747(CS2Executor class527, int i) {
-		int i_1_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_1_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		Long var_long = (Long) Class46.anObjectArray437[i_1_];
 		if (var_long == null)
 			class527.aLongArray7003[((class527.anInt7001 += -1188480575) * 1820448321 - 1)] = -1L;

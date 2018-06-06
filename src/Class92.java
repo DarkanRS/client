@@ -54,13 +54,13 @@ public class Class92 {
 		return i_9_;
 	}
 
-	static Class243[] method1561(short i) {
-		return (new Class243[] { Class243.aClass243_2984, Class243.aClass243_2987, Class243.aClass243_2986, Class243.aClass243_2994, Class243.aClass243_2991, Class243.aClass243_2996, Class243.aClass243_2985, Class243.aClass243_2990, Class243.aClass243_2989, Class243.aClass243_2993, Class243.aClass243_2983, Class243.aClass243_2988, Class243.aClass243_2995, Class243.aClass243_2992 });
+	static QuickChatDynamicValue[] getQuickChatDynamicValueTypes(short i) {
+		return (new QuickChatDynamicValue[] { QuickChatDynamicValue.ENUM_STRING, QuickChatDynamicValue.ACC_GETCOUNT_WORLD, QuickChatDynamicValue.STAT_BASE, QuickChatDynamicValue.ACTIVECOMBATLEVEL, QuickChatDynamicValue.OBJTRADEDIALOG, QuickChatDynamicValue.ENUM_STRING_CLAN, QuickChatDynamicValue.COUNTDIALOG, QuickChatDynamicValue.TOSTRING_VARBIT, QuickChatDynamicValue.TOSTRING_VARP, QuickChatDynamicValue.LISTDIALOG, QuickChatDynamicValue.ACC_GETMEANCOMBATLEVEL, QuickChatDynamicValue.TOSTRING_SHARED, QuickChatDynamicValue.OBJDIALOG, QuickChatDynamicValue.ENUM_STRING_STATBASE });
 	}
 
 	static final void method1562(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.method11633(class118).method12179(-394361694);
 	}
 

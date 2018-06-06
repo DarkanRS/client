@@ -72,7 +72,7 @@ public final class Class459 {
 
 	static final void method7676(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		int i_0_ = -1;
 		int i_1_ = -1;
 		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, 1887351094);

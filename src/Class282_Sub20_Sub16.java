@@ -331,6 +331,6 @@ public class Class282_Sub20_Sub16 extends Class282_Sub20 {
 	static final void method15307(CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		if ((class527.intStack[class527.anInt7012 * 1942118537]) > (class527.intStack[1 + 1942118537 * class527.anInt7012]))
-			class527.instrPtr += ((class527.unknown[301123709 * class527.instrPtr]) * -1051529003);
+			class527.instrPtr += ((class527.intOpValues[301123709 * class527.instrPtr]) * -1051529003);
 	}
 }

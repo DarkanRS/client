@@ -106,13 +106,13 @@ public class Class480 {
 		Class282_Sub50_Sub6.method14788(string, false, Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(375740834) == 5, client.aBool7158, client.aBool7159, (byte) -111);
 	}
 
-	static void method8044(Class118[] class118s, Class118 class118, boolean bool, byte i) {
+	static void method8044(IComponentDefinitions[] class118s, IComponentDefinitions class118, boolean bool, byte i) {
 		int i_12_ = (class118.anInt1376 * -354780671 != 0 ? -354780671 * class118.anInt1376 : 1506818197 * class118.anInt1301);
 		int i_13_ = (class118.anInt1314 * -37350919 != 0 ? -37350919 * class118.anInt1314 : class118.anInt1429 * -492594917);
-		InteractableObject.method16099(class118s, -1952846363 * class118.anInt1287, i_12_, i_13_, bool, (byte) 29);
+		InteractableObject.method16099(class118s, -1952846363 * class118.idHash, i_12_, i_13_, bool, (byte) 29);
 		if (class118.aClass118Array1439 != null)
-			InteractableObject.method16099(class118.aClass118Array1439, (-1952846363 * class118.anInt1287), i_12_, i_13_, bool, (byte) 17);
-		Class282_Sub44 class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7754((long) (-1952846363 * class118.anInt1287)));
+			InteractableObject.method16099(class118.aClass118Array1439, (-1952846363 * class118.idHash), i_12_, i_13_, bool, (byte) 17);
+		Class282_Sub44 class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7754((long) (-1952846363 * class118.idHash)));
 		if (null != class282_sub44)
 			Class442.method7403(587626901 * class282_sub44.anInt8063, i_12_, i_13_, bool, 1720687852);
 		if (class118 == client.aClass118_7183) {
@@ -134,7 +134,7 @@ public class Class480 {
 
 	static final void method8045(CS2Executor class527, byte i) {
 		int i_18_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_18_, (byte) 119);
+		IComponentDefinitions class118 = Class117.method1981(i_18_, (byte) 119);
 		int i_19_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		i_19_--;
 		if (null == class118.aStringArray1352 || i_19_ >= class118.aStringArray1352.length || null == class118.aStringArray1352[i_19_])

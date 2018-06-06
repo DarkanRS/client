@@ -530,10 +530,10 @@ public class Class287 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub30_8194.method13421(635605552) ? 1 : 0;
 	}
 
-	static final void method5066(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5066(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.anInt1329 = -1346216911;
 		class118.anInt1330 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -636815827);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999)
-			Class92.method1565(-1952846363 * class118.anInt1287, 1743541888);
+			Class92.method1565(-1952846363 * class118.idHash, 1743541888);
 	}
 }

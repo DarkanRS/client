@@ -41,8 +41,8 @@ public class Class76 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class96_Sub1.anInt8307 * -993852069;
 	}
 
-	public static String method1358(int i, byte i_5_) {
-		return new StringBuilder().append("<img=").append(i).append(">").toString();
+	public static String getCrown(int id) {
+		return new StringBuilder().append("<img=").append(id).append(">").toString();
 	}
 
 	public static void method1360(String string, boolean bool, byte i) {
@@ -50,9 +50,9 @@ public class Class76 {
 		short[] is = new short[16];
 		int i_19_ = 0;
 		int i_20_ = bool ? 32768 : 0;
-		int i_21_ = ((bool ? IndexLoaders.aClass429_4265.anInt5133 * 748884943 : IndexLoaders.aClass429_4265.anInt5130 * 1033695499) + i_20_);
+		int i_21_ = ((bool ? IndexLoaders.QUICK_CHAT_INDEX_LOADER2.anInt5133 * 748884943 : IndexLoaders.QUICK_CHAT_INDEX_LOADER2.anInt5130 * 1033695499) + i_20_);
 		for (int i_22_ = i_20_; i_22_ < i_21_; i_22_++) {
-			Class282_Sub50_Sub9 class282_sub50_sub9 = IndexLoaders.aClass429_4265.method7214(i_22_, -1918466805);
+			QuickchatDefinitions class282_sub50_sub9 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_22_, -1918466805);
 			if (class282_sub50_sub9.aBool9628 && class282_sub50_sub9.method14898(409119349).toLowerCase().indexOf(string) != -1) {
 				if (i_19_ >= 50) {
 					Class415.anInt4985 = -1978366005;
@@ -74,7 +74,7 @@ public class Class76 {
 		Class415.anInt4985 = i_19_ * 1978366005;
 		String[] strings = new String[560339485 * Class415.anInt4985];
 		for (int i_25_ = 0; i_25_ < 560339485 * Class415.anInt4985; i_25_++) {
-			strings[i_25_] = IndexLoaders.aClass429_4265.method7214(is[i_25_], -1792601455).method14898(-47369611);
+			strings[i_25_] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(is[i_25_], -1792601455).method14898(-47369611);
 		}
 		Class100.method1644(strings, Class308.aShortArray3621, (short) 30307);
 	}
@@ -88,6 +88,6 @@ public class Class76 {
 		class527.anInt7012 -= 283782002;
 		int i_26_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_27_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.aClass429_4265.method7214(i_26_, -2012754494).anIntArray9624[i_27_]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_26_, -2012754494).anIntArray9624[i_27_]);
 	}
 }

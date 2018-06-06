@@ -77,7 +77,7 @@ public class Class282_Sub20_Sub28 extends Class282_Sub20 {
 			((Class282_Sub20_Sub28) this).anInt9907 = class282_sub35.readUnsignedShort() * 1848186891;
 			break;
 		case 4: {
-			int i_14_ = class282_sub35.read24BitUnsignedInteger((short) 5083);
+			int i_14_ = class282_sub35.read24BitUnsignedInteger();
 			((Class282_Sub20_Sub28) this).anIntArray9911[0] = (i_14_ & 0xff0000) << 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[1] = (i_14_ & 0xff00) >> 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[2] = (i_14_ & 0xff) >> 12;
@@ -101,7 +101,7 @@ public class Class282_Sub20_Sub28 extends Class282_Sub20 {
 			((Class282_Sub20_Sub28) this).anInt9907 = class282_sub35.readUnsignedShort() * 1848186891;
 			break;
 		case 4: {
-			int i_15_ = class282_sub35.read24BitUnsignedInteger((short) 7615);
+			int i_15_ = class282_sub35.read24BitUnsignedInteger();
 			((Class282_Sub20_Sub28) this).anIntArray9911[0] = (i_15_ & 0xff0000) << 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[1] = (i_15_ & 0xff00) >> 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[2] = (i_15_ & 0xff) >> 12;
@@ -125,7 +125,7 @@ public class Class282_Sub20_Sub28 extends Class282_Sub20 {
 			((Class282_Sub20_Sub28) this).anInt9907 = class282_sub35.readUnsignedShort() * 1848186891;
 			break;
 		case 4: {
-			int i_16_ = class282_sub35.read24BitUnsignedInteger((short) 4011);
+			int i_16_ = class282_sub35.read24BitUnsignedInteger();
 			((Class282_Sub20_Sub28) this).anIntArray9911[0] = (i_16_ & 0xff0000) << 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[1] = (i_16_ & 0xff00) >> 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[2] = (i_16_ & 0xff) >> 12;
@@ -149,7 +149,7 @@ public class Class282_Sub20_Sub28 extends Class282_Sub20 {
 			((Class282_Sub20_Sub28) this).anInt9907 = class282_sub35.readUnsignedShort() * 1848186891;
 			break;
 		case 4: {
-			int i_17_ = class282_sub35.read24BitUnsignedInteger((short) 23406);
+			int i_17_ = class282_sub35.read24BitUnsignedInteger();
 			((Class282_Sub20_Sub28) this).anIntArray9911[0] = (i_17_ & 0xff0000) << 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[1] = (i_17_ & 0xff00) >> 4;
 			((Class282_Sub20_Sub28) this).anIntArray9911[2] = (i_17_ & 0xff) >> 12;

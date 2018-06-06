@@ -199,7 +199,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void L();
 
-	public abstract void method8423(Class294 class294);
+	public abstract void method8423(Matrix44Var class294);
 
 	public abstract void o(int i, int i_35_, int i_36_, int i_37_);
 
@@ -207,7 +207,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void ba(int i, int i_38_);
 
-	public abstract void method8424(Class384 class384);
+	public abstract void method8424(Matrix44Arr class384);
 
 	public final void method8425(int i, int i_39_, int i_40_, int i_41_, int i_42_, byte i_43_) {
 		B(i, i_39_, i_40_, i_41_, i_42_, 1);
@@ -306,17 +306,17 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8445();
 
-	public abstract void method8446(Class384 class384);
+	public abstract void method8446(Matrix44Arr class384);
 
 	public final void method8447(int i, int i_109_, int i_110_, int i_111_) {
 		CA(i, i_109_, i_110_, i_111_, 1);
 	}
 
-	public abstract FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool);
+	public abstract FontRenderer method8448(FontMetrics class414, Class91[] class91s, boolean bool);
 
-	public abstract Class384 method8449();
+	public abstract Matrix44Arr method8449();
 
-	public abstract Class294 method8450();
+	public abstract Matrix44Var method8450();
 
 	public abstract void ez();
 
@@ -324,7 +324,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract int method8452(int i, int i_115_);
 
-	public abstract Class384 method8453();
+	public abstract Matrix44Arr method8453();
 
 	public abstract boolean method8454();
 
@@ -334,9 +334,9 @@ public abstract class GraphicalRenderer {
 
 	public abstract void method8456(Class151 class151);
 
-	public abstract void method8457(Class294 class294);
+	public abstract void method8457(Matrix44Var class294);
 
-	public abstract Class294 method8458();
+	public abstract Matrix44Var method8458();
 
 	public abstract void RA(boolean bool);
 
@@ -551,7 +551,7 @@ public abstract class GraphicalRenderer {
 
 	public abstract void fe(int i, int i_225_, int i_226_, int i_227_);
 
-	public abstract Class384 method8517();
+	public abstract Matrix44Arr method8517();
 
 	public abstract void fh(int[] is);
 
@@ -737,9 +737,9 @@ public abstract class GraphicalRenderer {
 
 	public abstract Class282_Sub1 method8570(int i);
 
-	public abstract Class384 method8571();
+	public abstract Matrix44Arr method8571();
 
-	public abstract Class294 method8572();
+	public abstract Matrix44Var method8572();
 
 	public abstract void method8573(float f, float f_408_, float f_409_, float[] fs);
 
@@ -763,21 +763,21 @@ public abstract class GraphicalRenderer {
 		method8430(i, i_426_, i_427_, i_428_, i_429_, 1);
 	}
 
-	public abstract Class294 method8583();
+	public abstract Matrix44Var method8583();
 
 	public abstract void method8584(Class152 class152);
 
 	public abstract void method8585(int i, Class90 class90);
 
-	public abstract void method8586(Class384 class384);
+	public abstract void method8586(Matrix44Arr class384);
 
-	public abstract Class384 method8587();
+	public abstract Matrix44Arr method8587();
 
-	public abstract Class384 method8588();
+	public abstract Matrix44Arr method8588();
 
-	public abstract Class384 method8589();
+	public abstract Matrix44Arr method8589();
 
-	public abstract Class384 method8590();
+	public abstract Matrix44Arr method8590();
 
 	public final void method8591(Canvas canvas, int i, int i_430_) {
 		if (!aHashtable5855.containsKey(canvas)) {
@@ -881,9 +881,9 @@ public abstract class GraphicalRenderer {
 
 	public abstract int[] kh(int i, int i_478_, int i_479_, int i_480_);
 
-	public abstract FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool);
+	public abstract FontRenderer method8625(FontMetrics class414, Class91[] class91s, boolean bool);
 
-	public abstract Class294 method8626();
+	public abstract Matrix44Var method8626();
 
 	public abstract void method8627(int i, int i_481_, float f, int i_482_, int i_483_, float f_484_, int i_485_, int i_486_, float f_487_, int i_488_, int i_489_, int i_490_, int i_491_);
 
@@ -1062,7 +1062,7 @@ public abstract class GraphicalRenderer {
 
 	abstract void fw(int i, int i_544_, int i_545_, int i_546_, int i_547_);
 
-	public abstract FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool);
+	public abstract FontRenderer method8660(FontMetrics class414, Class91[] class91s, boolean bool);
 
 	public void method8661(int[] is) {
 		if (null != aClass158_Sub2_5841) {
@@ -1204,7 +1204,7 @@ public abstract class GraphicalRenderer {
 		XA(i, i_611_, i_612_, i_613_, 1);
 	}
 
-	public abstract Class294 method8685();
+	public abstract Matrix44Var method8685();
 
 	public final void method8686(int i, int i_614_, int i_615_, int i_616_, int i_617_) {
 		method8433(i, i_614_, i_615_, i_616_, i_617_, 1);
@@ -1238,8 +1238,8 @@ public abstract class GraphicalRenderer {
 
 	static final void method8694(CS2Executor class527, int i) {
 		int i_627_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_627_, (byte) 95);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_627_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_627_, (byte) 95);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_627_ >> 16];
 		Class388.method6690(class118, class98, class527, (byte) 95);
 	}
 
@@ -1255,7 +1255,7 @@ public abstract class GraphicalRenderer {
 		int i_628_ = charsequence.length();
 		int i_629_ = 0;
 		for (int i_630_ = 0; i_630_ < i_628_; i_630_++)
-			i_629_ = ((i_629_ << 5) - i_629_ + Class242.method4163(charsequence.charAt(i_630_), (byte) 117));
+			i_629_ = ((i_629_ << 5) - i_629_ + Class242.getByteForChar(charsequence.charAt(i_630_)));
 		return i_629_;
 	}
 

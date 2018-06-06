@@ -19,9 +19,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	protected int anInt8680;
 	boolean aBool8681;
 	Interface4 anInterface4_8682;
-	protected Class384 aClass384_8683;
+	protected Matrix44Arr aClass384_8683;
 	protected boolean aBool8684;
-	Class384 aClass384_8685;
+	Matrix44Arr aClass384_8685;
 	static final int anInt8686 = 4;
 	static final int anInt8687 = 8;
 	static final int anInt8688 = 55;
@@ -40,18 +40,18 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	public int anInt8701;
 	public int anInt8702;
 	int anInt8703;
-	Class294 aClass294_8704;
-	Class384 aClass384_8705;
-	Class294 aClass294_8706;
-	Class385 aClass385_8707;
-	Class384 aClass384_8708;
+	Matrix44Var aClass294_8704;
+	Matrix44Arr aClass384_8705;
+	Matrix44Var aClass294_8706;
+	Vector3 aClass385_8707;
+	Matrix44Arr aClass384_8708;
 	public int anInt8709;
-	Class294 aClass294_8710;
+	Matrix44Var aClass294_8710;
 	static Object anObject8711 = new Object();
-	static Class384 aClass384_8712 = new Class384();
-	Class294 aClass294_8713;
+	static Matrix44Arr aClass384_8712 = new Matrix44Arr();
+	Matrix44Var aClass294_8713;
 	Class32 aClass32_8714;
-	Class384 aClass384_8715;
+	Matrix44Arr aClass384_8715;
 	protected Class282_Sub24[] aClass282_Sub24Array8716;
 	float[] aFloatArray8717;
 	public boolean aBool8718;
@@ -60,12 +60,12 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	Class70 aClass70_8721;
 	int anInt8722;
 	boolean aBool8723;
-	Class384 aClass384_8724;
-	Class384 aClass384_8725;
+	Matrix44Arr aClass384_8724;
+	Matrix44Arr aClass384_8725;
 	protected float aFloat8726;
-	public Class384 aClass384_8727;
-	Class384 aClass384_8728;
-	public Class384 aClass384_8729;
+	public Matrix44Arr aClass384_8727;
+	Matrix44Arr aClass384_8728;
+	public Matrix44Arr aClass384_8729;
 	float[][] aFloatArrayArray8730;
 	Class152_Sub2 aClass152_Sub2_8731;
 	float aFloat8732;
@@ -76,7 +76,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	float aFloat8737;
 	float aFloat8738;
 	int anInt8739;
-	public Class384 aClass384_8740;
+	public Matrix44Arr aClass384_8740;
 	float aFloat8741;
 	protected int anInt8742;
 	protected int anInt8743;
@@ -110,7 +110,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	static final int anInt8771 = -1;
 	Class428 aClass428_8772 = new Class428();
 	protected int anInt8773;
-	Class384 aClass384_8774;
+	Matrix44Arr aClass384_8774;
 	int anInt8775;
 	protected int anInt8776;
 	int anInt8777;
@@ -118,7 +118,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	boolean aBool8779;
 	protected int anInt8780;
 	Interface30[] anInterface30Array8781;
-	protected Class384[] aClass384Array8782;
+	protected Matrix44Arr[] aClass384Array8782;
 	protected Class37[] aClass37Array8783;
 	protected Class68[] aClass68Array8784;
 	protected Class68[] aClass68Array8785;
@@ -140,7 +140,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	static final int anInt8801 = 2;
 	Class55[] aClass55Array8802;
 	int[] anIntArray8803;
-	Class294 aClass294_8804;
+	Matrix44Var aClass294_8804;
 	boolean aBool8805;
 	int anInt8806;
 	Class90 aClass90_8807;
@@ -148,9 +148,9 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	protected boolean aBool8809;
 	protected int anInt8810;
 	protected int anInt8811;
-	Class384 aClass384_8812;
+	Matrix44Arr aClass384_8812;
 	protected float aFloat8813;
-	Class384 aClass384_8814;
+	Matrix44Arr aClass384_8814;
 	int anInt8815;
 	static final int anInt8816 = 1;
 	protected boolean aBool8817;
@@ -177,12 +177,12 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	public ByteBuffer aByteBuffer8838;
 	Class528_Sub3[] aClass528_Sub3Array8839;
 	Class528_Sub3[] aClass528_Sub3Array8840;
-	Class384 aClass384_8841;
-	Class294 aClass294_8842;
+	Matrix44Arr aClass384_8841;
+	Matrix44Var aClass294_8842;
 	protected boolean aBool8843;
 	protected int anInt8844;
 
-	final Class384 method13884() {
+	final Matrix44Arr method13884() {
 		return aClass384Array8782[anInt8780];
 	}
 
@@ -209,7 +209,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public abstract Class101 method13890(String string);
 
-	public final void method8586(Class384 class384) {
+	public final void method8586(Matrix44Arr class384) {
 		((Class505_Sub2) this).aClass384_8724.method6562(class384);
 		method13926();
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
@@ -228,41 +228,41 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return class114;
 	}
 
-	public abstract void method13892(Class384 class384, Class384 class384_0_, Class384 class384_1_);
+	public abstract void method13892(Matrix44Arr class384, Matrix44Arr class384_0_, Matrix44Arr class384_1_);
 
 	public static boolean method13893() {
-		return Class362.method6278(616047582).method222("jaclib", 879905383);
+		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", 879905383);
 	}
 
 	Class505_Sub2(Interface22 interface22, Index class317, int i, int i_2_) {
 		super(interface22);
 		((Class505_Sub2) this).anInt8696 = 4194304;
 		((Class505_Sub2) this).aClass473_8700 = new Class473();
-		((Class505_Sub2) this).aClass294_8704 = new Class294();
-		((Class505_Sub2) this).aClass384_8705 = new Class384();
-		((Class505_Sub2) this).aClass294_8706 = new Class294();
-		((Class505_Sub2) this).aClass294_8804 = new Class294();
-		aClass384_8740 = new Class384();
-		((Class505_Sub2) this).aClass384_8814 = new Class384();
-		((Class505_Sub2) this).aClass294_8710 = new Class294();
-		((Class505_Sub2) this).aClass384_8685 = new Class384();
-		((Class505_Sub2) this).aClass294_8713 = new Class294();
-		aClass384_8683 = new Class384();
-		((Class505_Sub2) this).aClass384_8715 = new Class384();
-		((Class505_Sub2) this).aClass385_8707 = new Class385();
+		((Class505_Sub2) this).aClass294_8704 = new Matrix44Var();
+		((Class505_Sub2) this).aClass384_8705 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass294_8706 = new Matrix44Var();
+		((Class505_Sub2) this).aClass294_8804 = new Matrix44Var();
+		aClass384_8740 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass384_8814 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass294_8710 = new Matrix44Var();
+		((Class505_Sub2) this).aClass384_8685 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass294_8713 = new Matrix44Var();
+		aClass384_8683 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass384_8715 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass385_8707 = new Vector3();
 		((Class505_Sub2) this).aFloatArray8717 = new float[4];
 		((Class505_Sub2) this).aBool8829 = false;
 		((Class505_Sub2) this).aClass33_8719 = Class33.aClass33_380;
 		((Class505_Sub2) this).aBool8720 = false;
-		((Class505_Sub2) this).aClass384_8774 = new Class384();
-		((Class505_Sub2) this).aClass384_8812 = new Class384();
+		((Class505_Sub2) this).aClass384_8774 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass384_8812 = new Matrix44Arr();
 		((Class505_Sub2) this).aBool8723 = false;
-		((Class505_Sub2) this).aClass384_8724 = new Class384();
-		((Class505_Sub2) this).aClass384_8725 = new Class384();
+		((Class505_Sub2) this).aClass384_8724 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass384_8725 = new Matrix44Arr();
 		((Class505_Sub2) this).aClass384_8708 = ((Class505_Sub2) this).aClass384_8725;
-		aClass384_8727 = new Class384();
-		((Class505_Sub2) this).aClass384_8728 = new Class384();
-		aClass384_8729 = new Class384();
+		aClass384_8727 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass384_8728 = new Matrix44Arr();
+		aClass384_8729 = new Matrix44Arr();
 		((Class505_Sub2) this).aFloatArrayArray8730 = new float[6][4];
 		aFloat8735 = 0.0F;
 		aFloat8736 = 1.0F;
@@ -320,8 +320,8 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		new Stream();
 		((Class505_Sub2) this).aClass528_Sub3Array8839 = new Class528_Sub3[7];
 		((Class505_Sub2) this).aClass528_Sub3Array8840 = new Class528_Sub3[7];
-		((Class505_Sub2) this).aClass384_8841 = new Class384();
-		((Class505_Sub2) this).aClass294_8842 = new Class294();
+		((Class505_Sub2) this).aClass384_8841 = new Matrix44Arr();
+		((Class505_Sub2) this).aClass294_8842 = new Matrix44Var();
 		anInt8844 = -1;
 		try {
 			((Class505_Sub2) this).aClass317_8789 = class317;
@@ -407,10 +407,10 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public void method8573(float f, float f_4_, float f_5_, float[] fs) {
-		float f_6_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * f_4_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * f_5_));
-		float f_7_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * f_4_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * f_5_));
-		float f_8_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * f_4_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * f_5_));
-		float f_9_ = (aClass384_8740.aFloatArray4667[14] + aClass384_8740.aFloatArray4667[2] * f + aClass384_8740.aFloatArray4667[6] * f_4_ + aClass384_8740.aFloatArray4667[10] * f_5_);
+		float f_6_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + ((Class505_Sub2) this).aClass384_8728.buf[3] * f + (((Class505_Sub2) this).aClass384_8728.buf[7] * f_4_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * f_5_));
+		float f_7_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + ((Class505_Sub2) this).aClass384_8728.buf[0] * f + (((Class505_Sub2) this).aClass384_8728.buf[4] * f_4_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * f_5_));
+		float f_8_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + ((Class505_Sub2) this).aClass384_8728.buf[1] * f + (((Class505_Sub2) this).aClass384_8728.buf[5] * f_4_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * f_5_));
+		float f_9_ = (aClass384_8740.buf[14] + aClass384_8740.buf[2] * f + aClass384_8740.buf[6] * f_4_ + aClass384_8740.buf[10] * f_5_);
 		fs[0] = (((Class505_Sub2) this).aFloat8797 + ((Class505_Sub2) this).aFloat8732 * f_7_ / f_6_);
 		fs[1] = (((Class505_Sub2) this).aFloat8741 + ((Class505_Sub2) this).aFloat8734 * f_8_ / f_6_);
 		fs[2] = f_9_;
@@ -509,7 +509,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public static boolean method13902() {
-		return Class362.method6278(616047582).method222("jaclib", 350069186);
+		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", 350069186);
 	}
 
 	public final boolean method8664() {
@@ -698,7 +698,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return anInt8702 + anInt8701 + anInt8761;
 	}
 
-	public final FontRenderer method8660(Class414 class414, Class91[] class91s, boolean bool) {
+	public final FontRenderer method8660(FontMetrics class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub4(this, class414, class91s, bool);
 	}
 
@@ -734,7 +734,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return new Class160_Sub3(this, i_41_, i_42_, is, i, i_40_);
 	}
 
-	final Class384 method13912() {
+	final Matrix44Arr method13912() {
 		return aClass384_8727;
 	}
 
@@ -764,7 +764,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method13915();
 
-	public final Class294 method8450() {
+	public final Matrix44Var method8450() {
 		return ((Class505_Sub2) this).aClass294_8842;
 	}
 
@@ -921,10 +921,10 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	abstract Interface4 method13925(boolean bool);
 
 	public void method8650(float f, float f_71_, float f_72_, float[] fs) {
-		float f_73_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * f_71_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * f_72_));
-		float f_74_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * f_71_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * f_72_));
-		float f_75_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * f_71_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * f_72_));
-		float f_76_ = (aClass384_8740.aFloatArray4667[14] + aClass384_8740.aFloatArray4667[2] * f + aClass384_8740.aFloatArray4667[6] * f_71_ + aClass384_8740.aFloatArray4667[10] * f_72_);
+		float f_73_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + ((Class505_Sub2) this).aClass384_8728.buf[3] * f + (((Class505_Sub2) this).aClass384_8728.buf[7] * f_71_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * f_72_));
+		float f_74_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + ((Class505_Sub2) this).aClass384_8728.buf[0] * f + (((Class505_Sub2) this).aClass384_8728.buf[4] * f_71_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * f_72_));
+		float f_75_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + ((Class505_Sub2) this).aClass384_8728.buf[1] * f + (((Class505_Sub2) this).aClass384_8728.buf[5] * f_71_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * f_72_));
+		float f_76_ = (aClass384_8740.buf[14] + aClass384_8740.buf[2] * f + aClass384_8740.buf[6] * f_71_ + aClass384_8740.buf[10] * f_72_);
 		fs[0] = (((Class505_Sub2) this).aFloat8797 + ((Class505_Sub2) this).aFloat8732 * f_74_ / f_73_);
 		fs[1] = (((Class505_Sub2) this).aFloat8741 + ((Class505_Sub2) this).aFloat8734 * f_75_ / f_73_);
 		fs[2] = f_76_;
@@ -943,7 +943,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		method13933(aClass384_8729);
 	}
 
-	public final Class384 method8453() {
+	public final Matrix44Arr method8453() {
 		return ((Class505_Sub2) this).aClass384_8724;
 	}
 
@@ -951,7 +951,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		((Class505_Sub2) this).aBool8829 = false;
 	}
 
-	final Class384 method13928() {
+	final Matrix44Arr method13928() {
 		return aClass384_8729;
 	}
 
@@ -960,7 +960,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		method13976();
 	}
 
-	Class384 method13930() {
+	Matrix44Arr method13930() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381) {
 			if (!((Class505_Sub2) this).aBool8829)
 				method14130();
@@ -969,7 +969,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return ((Class505_Sub2) this).aClass384_8705;
 	}
 
-	final Class384 method13931() {
+	final Matrix44Arr method13931() {
 		return aClass384_8729;
 	}
 
@@ -984,7 +984,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				i = 0;
 				i_77_ = 0;
 			}
-			Class384 class384 = ((Class505_Sub2) this).aClass384_8774;
+			Matrix44Arr class384 = ((Class505_Sub2) this).aClass384_8774;
 			if (i_77_ != 0 && i != 0)
 				class384.method6530(0.0F, (float) i_77_, 0.0F, (float) i, -1.0F, 1.0F);
 			else
@@ -995,7 +995,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	public abstract void method13933(Class384 class384);
+	public abstract void method13933(Matrix44Arr class384);
 
 	final void method13934() {
 		if (((Class505_Sub2) this).aClass33_8719 != Class33.aClass33_380) {
@@ -1145,18 +1145,18 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public void method8479(float f, float f_78_, float f_79_, float[] fs) {
-		float f_80_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * f_78_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * f_79_));
-		float f_81_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * f_78_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * f_79_));
-		float f_82_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * f_78_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * f_79_));
-		float f_83_ = (aClass384_8740.aFloatArray4667[14] + aClass384_8740.aFloatArray4667[2] * f + aClass384_8740.aFloatArray4667[6] * f_78_ + aClass384_8740.aFloatArray4667[10] * f_79_);
+		float f_80_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + ((Class505_Sub2) this).aClass384_8728.buf[3] * f + (((Class505_Sub2) this).aClass384_8728.buf[7] * f_78_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * f_79_));
+		float f_81_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + ((Class505_Sub2) this).aClass384_8728.buf[0] * f + (((Class505_Sub2) this).aClass384_8728.buf[4] * f_78_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * f_79_));
+		float f_82_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + ((Class505_Sub2) this).aClass384_8728.buf[1] * f + (((Class505_Sub2) this).aClass384_8728.buf[5] * f_78_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * f_79_));
+		float f_83_ = (aClass384_8740.buf[14] + aClass384_8740.buf[2] * f + aClass384_8740.buf[6] * f_78_ + aClass384_8740.buf[10] * f_79_);
 		fs[0] = (((Class505_Sub2) this).aFloat8797 + ((Class505_Sub2) this).aFloat8732 * f_81_ / f_80_);
 		fs[1] = (((Class505_Sub2) this).aFloat8741 + ((Class505_Sub2) this).aFloat8734 * f_82_ / f_80_);
 		fs[2] = f_83_;
 	}
 
 	public void method8515(float f, float f_84_, float f_85_, float[] fs) {
-		float f_86_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * f_84_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * f_85_));
-		float f_87_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * f_84_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * f_85_));
+		float f_86_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + ((Class505_Sub2) this).aClass384_8728.buf[2] * f + (((Class505_Sub2) this).aClass384_8728.buf[6] * f_84_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * f_85_));
+		float f_87_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + ((Class505_Sub2) this).aClass384_8728.buf[3] * f + (((Class505_Sub2) this).aClass384_8728.buf[7] * f_84_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * f_85_));
 		if (f_86_ < -f_87_ || f_86_ > f_87_) {
 			float[] fs_88_ = fs;
 			float[] fs_89_ = fs;
@@ -1164,7 +1164,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			fs_89_[1] = Float.NaN;
 			fs_88_[0] = Float.NaN;
 		} else {
-			float f_90_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * f) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * f_84_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * f_85_));
+			float f_90_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * f) + (((Class505_Sub2) this).aClass384_8728.buf[4] * f_84_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * f_85_));
 			if (f_90_ < -f_87_ || f_90_ > f_87_) {
 				float[] fs_91_ = fs;
 				float[] fs_92_ = fs;
@@ -1172,7 +1172,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				fs_92_[1] = Float.NaN;
 				fs_91_[0] = Float.NaN;
 			} else {
-				float f_93_ = ((((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13]) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1]) * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5]) * f_84_ + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9]) * f_85_);
+				float f_93_ = ((((Class505_Sub2) this).aClass384_8728.buf[13]) + (((Class505_Sub2) this).aClass384_8728.buf[1]) * f + (((Class505_Sub2) this).aClass384_8728.buf[5]) * f_84_ + (((Class505_Sub2) this).aClass384_8728.buf[9]) * f_85_);
 				if (f_93_ < -f_87_ || f_93_ > f_87_) {
 					float[] fs_94_ = fs;
 					float[] fs_95_ = fs;
@@ -1180,7 +1180,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 					fs_95_[1] = Float.NaN;
 					fs_94_[0] = Float.NaN;
 				} else {
-					float f_96_ = (aClass384_8740.aFloatArray4667[14] + aClass384_8740.aFloatArray4667[2] * f + aClass384_8740.aFloatArray4667[6] * f_84_ + aClass384_8740.aFloatArray4667[10] * f_85_);
+					float f_96_ = (aClass384_8740.buf[14] + aClass384_8740.buf[2] * f + aClass384_8740.buf[6] * f_84_ + aClass384_8740.buf[10] * f_85_);
 					fs[0] = (((Class505_Sub2) this).aFloat8797 + (((Class505_Sub2) this).aFloat8732 * f_90_ / f_87_));
 					fs[1] = (((Class505_Sub2) this).aFloat8741 + (((Class505_Sub2) this).aFloat8734 * f_93_ / f_87_));
 					fs[2] = f_96_;
@@ -1320,7 +1320,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract Interface6 method13961(Class150 class150, int i, int i_118_, boolean bool, float[] fs, int i_119_, int i_120_);
 
-	public Class294 method8458() {
+	public Matrix44Var method8458() {
 		return ((Class505_Sub2) this).aClass294_8706;
 	}
 
@@ -1416,7 +1416,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		((Class505_Sub2) this).anInterface4_8693.method42(0, aByteBuffer8838.position(), aLong8695);
 	}
 
-	public final Class384 method13973() {
+	public final Matrix44Arr method13973() {
 		return aClass384Array8782[anInt8780];
 	}
 
@@ -1530,7 +1530,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method13987();
 
-	final Class384 method13988() {
+	final Matrix44Arr method13988() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
 			return aClass384_8740;
 		return aClass384_8712;
@@ -1554,7 +1554,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	public final void method8457(Class294 class294) {
+	public final void method8457(Matrix44Var class294) {
 		((Class505_Sub2) this).aClass294_8706 = class294;
 		aClass384_8740.method6522(((Class505_Sub2) this).aClass294_8706);
 		((Class505_Sub2) this).aClass294_8804.method5209(class294);
@@ -1608,7 +1608,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method13997(Interface32 interface32);
 
-	final Class384 method13998() {
+	final Matrix44Arr method13998() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
 			return ((Class505_Sub2) this).aClass384_8814;
 		return aClass384_8712;
@@ -1781,8 +1781,8 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public void method8619(float f, float f_220_, float f_221_, float[] fs) {
-		float f_222_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * f_220_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * f_221_));
-		float f_223_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + ((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * f_220_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * f_221_));
+		float f_222_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + ((Class505_Sub2) this).aClass384_8728.buf[2] * f + (((Class505_Sub2) this).aClass384_8728.buf[6] * f_220_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * f_221_));
+		float f_223_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + ((Class505_Sub2) this).aClass384_8728.buf[3] * f + (((Class505_Sub2) this).aClass384_8728.buf[7] * f_220_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * f_221_));
 		if (f_222_ < -f_223_ || f_222_ > f_223_) {
 			float[] fs_224_ = fs;
 			float[] fs_225_ = fs;
@@ -1790,7 +1790,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			fs_225_[1] = Float.NaN;
 			fs_224_[0] = Float.NaN;
 		} else {
-			float f_226_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * f) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * f_220_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * f_221_));
+			float f_226_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * f) + (((Class505_Sub2) this).aClass384_8728.buf[4] * f_220_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * f_221_));
 			if (f_226_ < -f_223_ || f_226_ > f_223_) {
 				float[] fs_227_ = fs;
 				float[] fs_228_ = fs;
@@ -1798,7 +1798,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				fs_228_[1] = Float.NaN;
 				fs_227_[0] = Float.NaN;
 			} else {
-				float f_229_ = ((((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13]) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1]) * f + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5]) * f_220_ + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9]) * f_221_);
+				float f_229_ = ((((Class505_Sub2) this).aClass384_8728.buf[13]) + (((Class505_Sub2) this).aClass384_8728.buf[1]) * f + (((Class505_Sub2) this).aClass384_8728.buf[5]) * f_220_ + (((Class505_Sub2) this).aClass384_8728.buf[9]) * f_221_);
 				if (f_229_ < -f_223_ || f_229_ > f_223_) {
 					float[] fs_230_ = fs;
 					float[] fs_231_ = fs;
@@ -1806,7 +1806,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 					fs_231_[1] = Float.NaN;
 					fs_230_[0] = Float.NaN;
 				} else {
-					float f_232_ = (aClass384_8740.aFloatArray4667[14] + aClass384_8740.aFloatArray4667[2] * f + aClass384_8740.aFloatArray4667[6] * f_220_ + aClass384_8740.aFloatArray4667[10] * f_221_);
+					float f_232_ = (aClass384_8740.buf[14] + aClass384_8740.buf[2] * f + aClass384_8740.buf[6] * f_220_ + aClass384_8740.buf[10] * f_221_);
 					fs[0] = (((Class505_Sub2) this).aFloat8797 + (((Class505_Sub2) this).aFloat8732 * f_226_ / f_223_));
 					fs[1] = (((Class505_Sub2) this).aFloat8741 + (((Class505_Sub2) this).aFloat8734 * f_229_ / f_223_));
 					fs[2] = f_232_;
@@ -1915,14 +1915,14 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return anInt8702 + anInt8701 + anInt8761;
 	}
 
-	public final void method8424(Class384 class384) {
+	public final void method8424(Matrix44Arr class384) {
 		((Class505_Sub2) this).aClass384_8724.method6562(class384);
 		method13926();
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
 			method14030();
 	}
 
-	public final Class384 method8571() {
+	public final Matrix44Arr method8571() {
 		return ((Class505_Sub2) this).aClass384_8841;
 	}
 
@@ -2154,7 +2154,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public static boolean method14018() {
-		return Class362.method6278(616047582).method222("jaclib", -1607557208);
+		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", -1607557208);
 	}
 
 	abstract void method14019();
@@ -2475,7 +2475,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public static boolean method14023() {
-		return Class362.method6278(616047582).method222("jaclib", -1840086140);
+		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", -1840086140);
 	}
 
 	final Interface6 method14024(int i, int i_414_, boolean bool, int[] is) {
@@ -2484,22 +2484,22 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public int method8538(int i, int i_415_, int i_416_, int i_417_, int i_418_, int i_419_) {
 		int i_420_ = 0;
-		float f = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_416_));
-		float f_421_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_419_));
-		float f_422_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_416_));
-		float f_423_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_419_));
+		float f = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_416_));
+		float f_421_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_419_));
+		float f_422_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_416_));
+		float f_423_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_419_));
 		if (f < -f_422_ && f_421_ < -f_423_)
 			i_420_ |= 0x10;
 		else if (f > f_422_ && f_421_ > f_423_)
 			i_420_ |= 0x20;
-		float f_424_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_416_));
-		float f_425_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_419_));
+		float f_424_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_416_));
+		float f_425_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_419_));
 		if (f_424_ < -f_422_ && f_425_ < -f_423_)
 			i_420_ |= 0x1;
 		if (f_424_ > f_422_ && f_425_ > f_423_)
 			i_420_ |= 0x2;
-		float f_426_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_416_));
-		float f_427_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_419_));
+		float f_426_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_415_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_416_));
+		float f_427_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i_417_) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_418_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_419_));
 		if (f_426_ < -f_422_ && f_427_ < -f_423_)
 			i_420_ |= 0x4;
 		if (f_426_ > f_422_ && f_427_ > f_423_)
@@ -2509,22 +2509,22 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public int method8539(int i, int i_428_, int i_429_, int i_430_, int i_431_, int i_432_) {
 		int i_433_ = 0;
-		float f = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_429_));
-		float f_434_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_432_));
-		float f_435_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_429_));
-		float f_436_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_432_));
+		float f = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_429_));
+		float f_434_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_432_));
+		float f_435_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_429_));
+		float f_436_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_432_));
 		if (f < -f_435_ && f_434_ < -f_436_)
 			i_433_ |= 0x10;
 		else if (f > f_435_ && f_434_ > f_436_)
 			i_433_ |= 0x20;
-		float f_437_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_429_));
-		float f_438_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_432_));
+		float f_437_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_429_));
+		float f_438_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_432_));
 		if (f_437_ < -f_435_ && f_438_ < -f_436_)
 			i_433_ |= 0x1;
 		if (f_437_ > f_435_ && f_438_ > f_436_)
 			i_433_ |= 0x2;
-		float f_439_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_429_));
-		float f_440_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_432_));
+		float f_439_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_428_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_429_));
+		float f_440_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i_430_) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_431_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_432_));
 		if (f_439_ < -f_435_ && f_440_ < -f_436_)
 			i_433_ |= 0x4;
 		if (f_439_ > f_435_ && f_440_ > f_436_)
@@ -2534,22 +2534,22 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public int method8540(int i, int i_441_, int i_442_, int i_443_, int i_444_, int i_445_) {
 		int i_446_ = 0;
-		float f = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_442_));
-		float f_447_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_445_));
-		float f_448_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_442_));
-		float f_449_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_445_));
+		float f = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_442_));
+		float f_447_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_445_));
+		float f_448_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_442_));
+		float f_449_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_445_));
 		if (f < -f_448_ && f_447_ < -f_449_)
 			i_446_ |= 0x10;
 		else if (f > f_448_ && f_447_ > f_449_)
 			i_446_ |= 0x20;
-		float f_450_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_442_));
-		float f_451_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_445_));
+		float f_450_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_442_));
+		float f_451_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_445_));
 		if (f_450_ < -f_448_ && f_451_ < -f_449_)
 			i_446_ |= 0x1;
 		if (f_450_ > f_448_ && f_451_ > f_449_)
 			i_446_ |= 0x2;
-		float f_452_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_442_));
-		float f_453_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_445_));
+		float f_452_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_441_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_442_));
+		float f_453_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i_443_) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_444_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_445_));
 		if (f_452_ < -f_448_ && f_453_ < -f_449_)
 			i_446_ |= 0x4;
 		if (f_452_ > f_448_ && f_453_ > f_449_)
@@ -2714,7 +2714,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		RA(true);
 	}
 
-	public final Class384 method8588() {
+	public final Matrix44Arr method8588() {
 		return ((Class505_Sub2) this).aClass384_8724;
 	}
 
@@ -2726,7 +2726,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	public final Class294 method8626() {
+	public final Matrix44Var method8626() {
 		return ((Class505_Sub2) this).aClass294_8842;
 	}
 
@@ -2768,7 +2768,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return i & i_502_ ^ i_502_;
 	}
 
-	final Class384 method14028() {
+	final Matrix44Arr method14028() {
 		return aClass384Array8782[anInt8780];
 	}
 
@@ -2776,7 +2776,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return new Class390_Sub1(this, i_506_, i_507_, i, i_503_, is, is_504_, i_505_);
 	}
 
-	public final Class384 method8517() {
+	public final Matrix44Arr method8517() {
 		return ((Class505_Sub2) this).aClass384_8841;
 	}
 
@@ -2784,7 +2784,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		/* empty */
 	}
 
-	public final Class294 method8572() {
+	public final Matrix44Var method8572() {
 		return ((Class505_Sub2) this).aClass294_8842;
 	}
 
@@ -2823,11 +2823,11 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		((Class505_Sub2) this).aClass54_8837.method1091(this, class151);
 	}
 
-	public Class294 method8685() {
+	public Matrix44Var method8685() {
 		return ((Class505_Sub2) this).aClass294_8706;
 	}
 
-	public final void method8423(Class294 class294) {
+	public final void method8423(Matrix44Var class294) {
 		((Class505_Sub2) this).aClass294_8706 = class294;
 		aClass384_8740.method6522(((Class505_Sub2) this).aClass294_8706);
 		((Class505_Sub2) this).aClass294_8804.method5209(class294);
@@ -2838,7 +2838,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			method13927();
 	}
 
-	public Class294 method8583() {
+	public Matrix44Var method8583() {
 		return ((Class505_Sub2) this).aClass294_8706;
 	}
 
@@ -2846,7 +2846,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return aBool8828;
 	}
 
-	public final void method8446(Class384 class384) {
+	public final void method8446(Matrix44Arr class384) {
 		((Class505_Sub2) this).aClass384_8724.method6562(class384);
 		method13926();
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
@@ -2857,7 +2857,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return true;
 	}
 
-	public final Class384 method8449() {
+	public final Matrix44Arr method8449() {
 		return ((Class505_Sub2) this).aClass384_8841;
 	}
 
@@ -2872,12 +2872,12 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	final void method14030() {
 		aClass384_8727.method6562(((Class505_Sub2) this).aClass384_8708);
 		method13933(aClass384_8727);
-		aFloat8697 = ((aClass384_8727.aFloatArray4667[14] - aClass384_8727.aFloatArray4667[15]) / (aClass384_8727.aFloatArray4667[11] - aClass384_8727.aFloatArray4667[10]));
-		aFloat8726 = (-aClass384_8727.aFloatArray4667[14] / aClass384_8727.aFloatArray4667[10]);
+		aFloat8697 = ((aClass384_8727.buf[14] - aClass384_8727.buf[15]) / (aClass384_8727.buf[11] - aClass384_8727.buf[10]));
+		aFloat8726 = (-aClass384_8727.buf[14] / aClass384_8727.buf[10]);
 		method14062();
 	}
 
-	public final Class384 method8590() {
+	public final Matrix44Arr method8590() {
 		return ((Class505_Sub2) this).aClass384_8724;
 	}
 
@@ -2950,7 +2950,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		((Class505_Sub2) this).anInt8775 = 1 << ((Class505_Sub2) this).anInt8806;
 	}
 
-	public final FontRenderer method8448(Class414 class414, Class91[] class91s, boolean bool) {
+	public final FontRenderer method8448(FontMetrics class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub4(this, class414, class91s, bool);
 	}
 
@@ -3111,7 +3111,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	Class384 method14036() {
+	Matrix44Arr method14036() {
 		return ((Class505_Sub2) this).aClass384_8705;
 	}
 
@@ -3173,7 +3173,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	final Class384 method14038() {
+	final Matrix44Arr method14038() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
 			return ((Class505_Sub2) this).aClass384_8814;
 		return aClass384_8712;
@@ -3195,7 +3195,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		method13918();
 	}
 
-	public final Class384 method8589() {
+	public final Matrix44Arr method8589() {
 		return ((Class505_Sub2) this).aClass384_8724;
 	}
 
@@ -3237,7 +3237,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	public final FontRenderer method8625(Class414 class414, Class91[] class91s, boolean bool) {
+	public final FontRenderer method8625(FontMetrics class414, Class91[] class91s, boolean bool) {
 		return new Class8_Sub4(this, class414, class91s, bool);
 	}
 
@@ -3280,22 +3280,22 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public int method8537(int i, int i_570_, int i_571_, int i_572_, int i_573_, int i_574_) {
 		int i_575_ = 0;
-		float f = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_571_));
-		float f_576_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_574_));
-		float f_577_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_571_));
-		float f_578_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_574_));
+		float f = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_571_));
+		float f_576_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_574_));
+		float f_577_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_571_));
+		float f_578_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_574_));
 		if (f < -f_577_ && f_576_ < -f_578_)
 			i_575_ |= 0x10;
 		else if (f > f_577_ && f_576_ > f_578_)
 			i_575_ |= 0x20;
-		float f_579_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_571_));
-		float f_580_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_574_));
+		float f_579_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_571_));
+		float f_580_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_574_));
 		if (f_579_ < -f_577_ && f_580_ < -f_578_)
 			i_575_ |= 0x1;
 		if (f_579_ > f_577_ && f_580_ > f_578_)
 			i_575_ |= 0x2;
-		float f_581_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_571_));
-		float f_582_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_574_));
+		float f_581_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_570_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_571_));
+		float f_582_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i_572_) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_573_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_574_));
 		if (f_581_ < -f_577_ && f_582_ < -f_578_)
 			i_575_ |= 0x4;
 		if (f_581_ > f_577_ && f_582_ > f_578_)
@@ -3317,13 +3317,13 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return class114;
 	}
 
-	public abstract void method14056(Class384 class384, Class384 class384_583_, Class384 class384_584_);
+	public abstract void method14056(Matrix44Arr class384, Matrix44Arr class384_583_, Matrix44Arr class384_584_);
 
-	public abstract void method14057(Class384 class384, Class384 class384_585_, Class384 class384_586_);
+	public abstract void method14057(Matrix44Arr class384, Matrix44Arr class384_585_, Matrix44Arr class384_586_);
 
-	public abstract void method14058(Class384 class384, Class384 class384_587_, Class384 class384_588_);
+	public abstract void method14058(Matrix44Arr class384, Matrix44Arr class384_587_, Matrix44Arr class384_588_);
 
-	public final Class384 method8587() {
+	public final Matrix44Arr method8587() {
 		return ((Class505_Sub2) this).aClass384_8724;
 	}
 
@@ -3332,7 +3332,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	}
 
 	public static boolean method14059() {
-		return Class362.method6278(616047582).method222("jaclib", 542600630);
+		return Class362.getNativeLibraryLoader(616047582).loadLibrary("jaclib", 542600630);
 	}
 
 	Class114 method14060(byte[] is) {
@@ -3349,7 +3349,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public final void method14061() {
 		((Class505_Sub2) this).anInterface30Array8781 = new Interface30[anInt8825];
-		aClass384Array8782 = new Class384[anInt8825];
+		aClass384Array8782 = new Matrix44Arr[anInt8825];
 		aClass37Array8783 = new Class37[anInt8825];
 		aClass68Array8784 = new Class68[anInt8825];
 		aClass68Array8785 = new Class68[anInt8825];
@@ -3357,7 +3357,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			aClass68Array8785[i] = Class68.aClass68_683;
 			aClass68Array8784[i] = Class68.aClass68_683;
 			aClass37Array8783[i] = Class37.aClass37_393;
-			aClass384Array8782[i] = new Class384();
+			aClass384Array8782[i] = new Matrix44Arr();
 		}
 		aClass282_Sub24Array8716 = new Class282_Sub24[anInt8799 - 2];
 		int[] is = { -1 };
@@ -3547,7 +3547,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		method13920();
 	}
 
-	Class384 method14068() {
+	Matrix44Arr method14068() {
 		return ((Class505_Sub2) this).aClass384_8705;
 	}
 
@@ -3783,7 +3783,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract Interface6 method14094(int i, int i_645_, boolean bool, int[] is, int i_646_, int i_647_);
 
-	Class294 method14095() {
+	Matrix44Var method14095() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381) {
 			if (!((Class505_Sub2) this).aBool8829) {
 				((Class505_Sub2) this).aClass294_8710.method5209(((Class505_Sub2) this).aClass294_8704);
@@ -3796,7 +3796,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return ((Class505_Sub2) this).aClass294_8704;
 	}
 
-	Class384 method14096() {
+	Matrix44Arr method14096() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381) {
 			if (!((Class505_Sub2) this).aBool8829)
 				method14130();
@@ -3805,7 +3805,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		return ((Class505_Sub2) this).aClass384_8705;
 	}
 
-	Class384 method14097() {
+	Matrix44Arr method14097() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381) {
 			if (!((Class505_Sub2) this).aBool8829)
 				method14130();
@@ -3816,17 +3816,17 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method14098(int i);
 
-	final Class384 method14099() {
+	final Matrix44Arr method14099() {
 		return aClass384_8729;
 	}
 
-	final Class384 method14100() {
+	final Matrix44Arr method14100() {
 		return aClass384_8729;
 	}
 
 	public abstract void method14101(Class352 class352, int i, int i_648_, int i_649_, int i_650_);
 
-	final Class384 method14102() {
+	final Matrix44Arr method14102() {
 		return aClass384_8727;
 	}
 
@@ -3850,8 +3850,8 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	final void method14104() {
 		aClass384_8727.method6562(((Class505_Sub2) this).aClass384_8708);
 		method13933(aClass384_8727);
-		aFloat8697 = ((aClass384_8727.aFloatArray4667[14] - aClass384_8727.aFloatArray4667[15]) / (aClass384_8727.aFloatArray4667[11] - aClass384_8727.aFloatArray4667[10]));
-		aFloat8726 = (-aClass384_8727.aFloatArray4667[14] / aClass384_8727.aFloatArray4667[10]);
+		aFloat8697 = ((aClass384_8727.buf[14] - aClass384_8727.buf[15]) / (aClass384_8727.buf[11] - aClass384_8727.buf[10]));
+		aFloat8726 = (-aClass384_8727.buf[14] / aClass384_8727.buf[10]);
 		method14062();
 	}
 
@@ -3882,7 +3882,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		}
 	}
 
-	public abstract void method14107(Class384 class384);
+	public abstract void method14107(Matrix44Arr class384);
 
 	final void method14108() {
 		((Class505_Sub2) this).aBool8720 = false;
@@ -3922,7 +3922,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				i = 0;
 				i_658_ = 0;
 			}
-			Class384 class384 = ((Class505_Sub2) this).aClass384_8774;
+			Matrix44Arr class384 = ((Class505_Sub2) this).aClass384_8774;
 			if (i_658_ != 0 && i != 0)
 				class384.method6530(0.0F, (float) i_658_, 0.0F, (float) i, -1.0F, 1.0F);
 			else
@@ -3944,7 +3944,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 				i = 0;
 				i_659_ = 0;
 			}
-			Class384 class384 = ((Class505_Sub2) this).aClass384_8774;
+			Matrix44Arr class384 = ((Class505_Sub2) this).aClass384_8774;
 			if (i_659_ != 0 && i != 0)
 				class384.method6530(0.0F, (float) i_659_, 0.0F, (float) i, -1.0F, 1.0F);
 			else
@@ -3962,16 +3962,16 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	final void method14113() {
 		aClass384_8727.method6562(((Class505_Sub2) this).aClass384_8708);
 		method13933(aClass384_8727);
-		aFloat8697 = ((aClass384_8727.aFloatArray4667[14] - aClass384_8727.aFloatArray4667[15]) / (aClass384_8727.aFloatArray4667[11] - aClass384_8727.aFloatArray4667[10]));
-		aFloat8726 = (-aClass384_8727.aFloatArray4667[14] / aClass384_8727.aFloatArray4667[10]);
+		aFloat8697 = ((aClass384_8727.buf[14] - aClass384_8727.buf[15]) / (aClass384_8727.buf[11] - aClass384_8727.buf[10]));
+		aFloat8726 = (-aClass384_8727.buf[14] / aClass384_8727.buf[10]);
 		method14062();
 	}
 
 	final void method14114() {
 		aClass384_8727.method6562(((Class505_Sub2) this).aClass384_8708);
 		method13933(aClass384_8727);
-		aFloat8697 = ((aClass384_8727.aFloatArray4667[14] - aClass384_8727.aFloatArray4667[15]) / (aClass384_8727.aFloatArray4667[11] - aClass384_8727.aFloatArray4667[10]));
-		aFloat8726 = (-aClass384_8727.aFloatArray4667[14] / aClass384_8727.aFloatArray4667[10]);
+		aFloat8697 = ((aClass384_8727.buf[14] - aClass384_8727.buf[15]) / (aClass384_8727.buf[11] - aClass384_8727.buf[10]));
+		aFloat8726 = (-aClass384_8727.buf[14] / aClass384_8727.buf[10]);
 		method14062();
 	}
 
@@ -4033,22 +4033,22 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public int method8437(int i, int i_662_, int i_663_, int i_664_, int i_665_, int i_666_) {
 		int i_667_ = 0;
-		float f = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_663_));
-		float f_668_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[14] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[2] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[6] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[10] * (float) i_666_));
-		float f_669_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_663_));
-		float f_670_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[15] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[3] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[7] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[11] * (float) i_666_));
+		float f = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_663_));
+		float f_668_ = (((Class505_Sub2) this).aClass384_8728.buf[14] + (((Class505_Sub2) this).aClass384_8728.buf[2] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.buf[6] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.buf[10] * (float) i_666_));
+		float f_669_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_663_));
+		float f_670_ = (((Class505_Sub2) this).aClass384_8728.buf[15] + (((Class505_Sub2) this).aClass384_8728.buf[3] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.buf[7] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.buf[11] * (float) i_666_));
 		if (f < -f_669_ && f_668_ < -f_670_)
 			i_667_ |= 0x10;
 		else if (f > f_669_ && f_668_ > f_670_)
 			i_667_ |= 0x20;
-		float f_671_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_663_));
-		float f_672_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[12] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[0] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[4] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[8] * (float) i_666_));
+		float f_671_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_663_));
+		float f_672_ = (((Class505_Sub2) this).aClass384_8728.buf[12] + (((Class505_Sub2) this).aClass384_8728.buf[0] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.buf[4] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.buf[8] * (float) i_666_));
 		if (f_671_ < -f_669_ && f_672_ < -f_670_)
 			i_667_ |= 0x1;
 		if (f_671_ > f_669_ && f_672_ > f_670_)
 			i_667_ |= 0x2;
-		float f_673_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_663_));
-		float f_674_ = (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[13] + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[1] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[5] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.aFloatArray4667[9] * (float) i_666_));
+		float f_673_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_662_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_663_));
+		float f_674_ = (((Class505_Sub2) this).aClass384_8728.buf[13] + (((Class505_Sub2) this).aClass384_8728.buf[1] * (float) i_664_) + (((Class505_Sub2) this).aClass384_8728.buf[5] * (float) i_665_) + (((Class505_Sub2) this).aClass384_8728.buf[9] * (float) i_666_));
 		if (f_673_ < -f_669_ && f_674_ < -f_670_)
 			i_667_ |= 0x4;
 		if (f_673_ > f_669_ && f_674_ > f_670_)
@@ -4082,7 +4082,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method14125();
 
-	final Class384 method14126() {
+	final Matrix44Arr method14126() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381)
 			return aClass384_8740;
 		return aClass384_8712;
@@ -4103,11 +4103,11 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		method14133();
 	}
 
-	final Class384 method14129() {
+	final Matrix44Arr method14129() {
 		return aClass384_8729;
 	}
 
-	Class294 method14130() {
+	Matrix44Var method14130() {
 		if (((Class505_Sub2) this).aClass33_8719 == Class33.aClass33_381) {
 			if (!((Class505_Sub2) this).aBool8829) {
 				((Class505_Sub2) this).aClass294_8710.method5209(((Class505_Sub2) this).aClass294_8704);
@@ -4198,7 +4198,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public final void method14147() {
 		((Class505_Sub2) this).anInterface30Array8781 = new Interface30[anInt8825];
-		aClass384Array8782 = new Class384[anInt8825];
+		aClass384Array8782 = new Matrix44Arr[anInt8825];
 		aClass37Array8783 = new Class37[anInt8825];
 		aClass68Array8784 = new Class68[anInt8825];
 		aClass68Array8785 = new Class68[anInt8825];
@@ -4206,7 +4206,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			aClass68Array8785[i] = Class68.aClass68_683;
 			aClass68Array8784[i] = Class68.aClass68_683;
 			aClass37Array8783[i] = Class37.aClass37_393;
-			aClass384Array8782[i] = new Class384();
+			aClass384Array8782[i] = new Matrix44Arr();
 		}
 		aClass282_Sub24Array8716 = new Class282_Sub24[anInt8799 - 2];
 		int[] is = { -1 };
@@ -4369,7 +4369,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	abstract void method14169();
 
-	final Class384 method14170() {
+	final Matrix44Arr method14170() {
 		return aClass384Array8782[anInt8780];
 	}
 
@@ -4377,7 +4377,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		/* empty */
 	}
 
-	public final Class384 method14171() {
+	public final Matrix44Arr method14171() {
 		return aClass384Array8782[anInt8780];
 	}
 

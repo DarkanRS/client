@@ -3,15 +3,15 @@
  */
 
 final class Class15 implements Interface35 {
-	public Object method216(byte[] is, Class414 class414, boolean bool, int i) {
+	public Object method216(byte[] is, FontMetrics class414, boolean bool, int i) {
 		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
 	}
 
-	public Object method215(byte[] is, Class414 class414, boolean bool) {
+	public Object method215(byte[] is, FontMetrics class414, boolean bool) {
 		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
 	}
 
-	public Object method214(byte[] is, Class414 class414, boolean bool) {
+	public Object method214(byte[] is, FontMetrics class414, boolean bool) {
 		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
 	}
 
@@ -26,12 +26,12 @@ final class Class15 implements Interface35 {
 
 	static final void method541(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class453.method7547(class118, class98, class527, -996229805);
 	}
 
-	static final void method542(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method542(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 876649685) != null)
 			string = string.substring(0, string.length() - 1);
@@ -43,7 +43,7 @@ final class Class15 implements Interface35 {
 		class527.animable.method15813((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 109);
 	}
 
-	static void method544(Class118 class118, int i, int i_1_, int i_2_) {
+	static void method544(IComponentDefinitions class118, int i, int i_1_, int i_2_) {
 		Class20.aClass118_183 = class118;
 		Class20.anInt195 = i * 1511257025;
 		Class20.anInt179 = -248935111 * i_1_;
@@ -95,7 +95,7 @@ final class Class15 implements Interface35 {
 	}
 
 	public static void method549(Class397 class397, int i, int i_10_, SceneObject interface12, int i_11_) {
-		CS2Executor class527 = Class125.method2167(1408358423);
+		CS2Executor class527 = Class125.getNextScriptExecutor(1408358423);
 		class527.anInterface12_7013 = interface12;
 		Class107.method1834(class397, i, i_10_, class527, (byte) 23);
 		class527.anInterface12_7013 = null;

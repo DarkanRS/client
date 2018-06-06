@@ -15,7 +15,7 @@ public class UnderlayDef {
 
 	void method8047(RsByteBuffer class282_sub35, int i) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger((short) 23860) * 1504179655;
+			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
 			method8048(((UnderlayDef) this).anInt5723 * -129287177, 876511716);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
@@ -80,7 +80,7 @@ public class UnderlayDef {
 
 	void method8049(RsByteBuffer class282_sub35, int i, byte i_8_) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger((short) 12399) * 1504179655;
+			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
 			method8048(((UnderlayDef) this).anInt5723 * -129287177, 1049430248);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
@@ -123,7 +123,7 @@ public class UnderlayDef {
 
 	void method8053(RsByteBuffer class282_sub35, int i) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger((short) 19945) * 1504179655;
+			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
 			method8048(((UnderlayDef) this).anInt5723 * -129287177, 255699844);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
@@ -146,7 +146,7 @@ public class UnderlayDef {
 
 	void method8054(RsByteBuffer class282_sub35, int i) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger((short) 27481) * 1504179655;
+			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
 			method8048(((UnderlayDef) this).anInt5723 * -129287177, 515760809);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
@@ -162,7 +162,7 @@ public class UnderlayDef {
 
 	void method8055(RsByteBuffer class282_sub35, int i) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger((short) 9985) * 1504179655;
+			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
 			method8048(((UnderlayDef) this).anInt5723 * -129287177, -71891519);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
@@ -178,7 +178,7 @@ public class UnderlayDef {
 
 	void method8056(RsByteBuffer class282_sub35, int i) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger((short) 12325) * 1504179655;
+			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
 			method8048(((UnderlayDef) this).anInt5723 * -129287177, -1054865466);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;

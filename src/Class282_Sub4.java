@@ -74,7 +74,7 @@ public class Class282_Sub4 extends Node {
 			((Class282_Sub4) this).aBool7498 = true;
 		data = class282_sub35.readLong(181951412) * -1253863389874800229L;
 		((Class282_Sub4) this).aLong7502 = class282_sub35.readLong(456385505) * 8833176109314392467L;
-		aString7501 = class282_sub35.readString(1235767360);
+		aString7501 = class282_sub35.readString();
 		class282_sub35.readUnsignedByte();
 		aByte7497 = class282_sub35.readByte((short) -12461);
 		aByte7504 = class282_sub35.readByte((short) -22068);
@@ -86,7 +86,7 @@ public class Class282_Sub4 extends Node {
 				if (((Class282_Sub4) this).aBool7505)
 					class282_sub35.readLong(-77478356);
 				if (((Class282_Sub4) this).aBool7498)
-					class57.aString524 = class282_sub35.readString(1858972941);
+					class57.aString524 = class282_sub35.readString();
 				class57.aByte525 = class282_sub35.readByte((short) -21219);
 				class57.anInt526 = class282_sub35.readUnsignedShort() * -480639949;
 				aClass57Array7499[i_4_] = class57;
@@ -166,7 +166,7 @@ public class Class282_Sub4 extends Node {
 			((Class282_Sub4) this).aBool7498 = true;
 		data = class282_sub35.readLong(-16638582) * -1253863389874800229L;
 		((Class282_Sub4) this).aLong7502 = class282_sub35.readLong(1432158484) * 8833176109314392467L;
-		aString7501 = class282_sub35.readString(882668786);
+		aString7501 = class282_sub35.readString();
 		class282_sub35.readUnsignedByte();
 		aByte7497 = class282_sub35.readByte((short) -14797);
 		aByte7504 = class282_sub35.readByte((short) -7982);
@@ -178,7 +178,7 @@ public class Class282_Sub4 extends Node {
 				if (((Class282_Sub4) this).aBool7505)
 					class282_sub35.readLong(35779506);
 				if (((Class282_Sub4) this).aBool7498)
-					class57.aString524 = class282_sub35.readString(979016376);
+					class57.aString524 = class282_sub35.readString();
 				class57.aByte525 = class282_sub35.readByte((short) -3875);
 				class57.anInt526 = class282_sub35.readUnsignedShort() * -480639949;
 				aClass57Array7499[i_5_] = class57;
@@ -233,7 +233,7 @@ public class Class282_Sub4 extends Node {
 			((Class282_Sub4) this).aBool7498 = true;
 		data = class282_sub35.readLong(1863348043) * -1253863389874800229L;
 		((Class282_Sub4) this).aLong7502 = class282_sub35.readLong(2125197101) * 8833176109314392467L;
-		aString7501 = class282_sub35.readString(-459788587);
+		aString7501 = class282_sub35.readString();
 		class282_sub35.readUnsignedByte();
 		aByte7497 = class282_sub35.readByte((short) -23009);
 		aByte7504 = class282_sub35.readByte((short) -2609);
@@ -245,7 +245,7 @@ public class Class282_Sub4 extends Node {
 				if (((Class282_Sub4) this).aBool7505)
 					class282_sub35.readLong(1267407828);
 				if (((Class282_Sub4) this).aBool7498)
-					class57.aString524 = class282_sub35.readString(696679796);
+					class57.aString524 = class282_sub35.readString();
 				class57.aByte525 = class282_sub35.readByte((short) -1122);
 				class57.anInt526 = class282_sub35.readUnsignedShort() * -480639949;
 				aClass57Array7499[i_7_] = class57;
@@ -269,13 +269,13 @@ public class Class282_Sub4 extends Node {
 	}
 
 	static final void method12115(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -672443707 * Class262.anInt3240 == 2 ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -672443707 * NativeLibraryLoader.anInt3240 == 2 ? 1 : 0;
 	}
 
 	static final void method12116(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class282_Sub50_Sub17.method15511(class118, class98, class527, (byte) 63);
 	}
 
@@ -316,8 +316,8 @@ public class Class282_Sub4 extends Node {
 
 	static final void method12118(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class241.method4149(class118, class98, class527, -799762783);
 	}
 }

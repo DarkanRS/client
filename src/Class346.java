@@ -7,28 +7,28 @@ import java.util.Arrays;
 
 public class Class346 {
 	public int[] anIntArray4046;
-	public Class282_Sub50_Sub9 aClass282_Sub50_Sub9_4047;
+	public QuickchatDefinitions aClass282_Sub50_Sub9_4047;
 	public int anInt4048;
 	static NodeCollection aClass482_4049;
 
 	public static Class346 method6146(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1934243316);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1934243316);
 		return class346;
 	}
 
 	public static Class346 method6147(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1564761464);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1564761464);
 		return class346;
 	}
 
 	public static Class346 method6148(RsByteBuffer class282_sub35) {
 		Class346 class346 = new Class346();
 		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.aClass429_4265.method7214(-624100047 * class346.anInt4048, -1849534305);
+		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1849534305);
 		return class346;
 	}
 
@@ -45,14 +45,14 @@ public class Class346 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_0_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
 		Class339.method6045(class118, class98, class527, (byte) -37);
 	}
 
 	static final void method6151(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 7);
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 7);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 198275475 * class118.anInt1428;
 	}
 
@@ -107,9 +107,9 @@ public class Class346 {
 			int i_7_ = i_6_ >> 28;
 			int i_8_ = i_6_ >> 14 & 0xff;
 			int i_9_ = i_6_ & 0xff;
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1961926059);
-			int i_10_ = (i_8_ << 6) + i_4_ - class219.anInt2711 * 1948093437;
-			int i_11_ = i_5_ + (i_9_ << 6) - class219.anInt2712 * -1002240017;
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1961926059);
+			int i_10_ = (i_8_ << 6) + i_4_ - class219.x * 1948093437;
+			int i_11_ = i_5_ + (i_9_ << 6) - class219.y * -1002240017;
 			player.aBool10571 = ((Class4) class4).aBool29;
 			player.aBool10550 = ((Class4) class4).aBool33;
 			player.aByteArray10365[0] = Class197.playerMovementTypes[i];
@@ -185,7 +185,7 @@ public class Class346 {
 		return null;
 	}
 
-	static String method6157(Class118 class118, int i) {
+	static String method6157(IComponentDefinitions class118, int i) {
 		if (client.method11633(class118).method12179(-461437925) == 0)
 			return null;
 		if (null == class118.aString1338 || class118.aString1338.trim().length() == 0) {
@@ -196,7 +196,7 @@ public class Class346 {
 		return class118.aString1338;
 	}
 
-	static final void method6158(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6158(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 908211513) != null)
 			string = string.substring(0, string.length() - 1);

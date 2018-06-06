@@ -33,7 +33,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	boolean[] aBoolArray10258;
 	long aLong10259;
 	int anInt10260;
-	Class384 aClass384_10261;
+	Matrix44Arr aClass384_10261;
 	int anInt10262;
 	boolean aBool10263;
 	float[] aFloatArray10264;
@@ -158,10 +158,10 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 			((Class505_Sub2_Sub2) this).aClass35Array10245 = new Class35[anInt8825];
 			((Class505_Sub2_Sub2) this).aBoolArray10258 = new boolean[anInt8825];
 			((Class505_Sub2_Sub2) this).anIntArray10266 = new int[anInt8825];
-			Class294 class294 = new Class294();
+			Matrix44Var class294 = new Matrix44Var();
 			class294.method5259(1.0F, -1.0F, 0.5F);
 			class294.method5219(0.0F, 0.0F, 0.5F);
-			((Class505_Sub2_Sub2) this).aClass384_10261 = new Class384();
+			((Class505_Sub2_Sub2) this).aClass384_10261 = new Matrix44Arr();
 			((Class505_Sub2_Sub2) this).aClass384_10261.method6522(class294);
 			IDirect3DDevice.BeginScene(((Class505_Sub2_Sub2) this).aLong10252);
 		} catch (Throwable throwable) {
@@ -419,13 +419,13 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		IDirect3DDevice.SetPixelShader(((Class505_Sub2_Sub2) this).aLong10252, l);
 	}
 
-	public void method13892(Class384 class384, Class384 class384_25_, Class384 class384_26_) {
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_25_.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_26_.aFloatArray4667);
+	public void method13892(Matrix44Arr class384, Matrix44Arr class384_25_, Matrix44Arr class384_26_) {
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_25_.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_26_.buf);
 	}
 
-	public void method13933(Class384 class384) {
+	public void method13933(Matrix44Arr class384) {
 		class384.method6523(((Class505_Sub2_Sub2) this).aClass384_10261);
 	}
 
@@ -1180,22 +1180,22 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		return new Class101_Sub2(this, class114);
 	}
 
-	public void method14056(Class384 class384, Class384 class384_79_, Class384 class384_80_) {
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_79_.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_80_.aFloatArray4667);
+	public void method14056(Matrix44Arr class384, Matrix44Arr class384_79_, Matrix44Arr class384_80_) {
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_79_.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_80_.buf);
 	}
 
-	public void method14057(Class384 class384, Class384 class384_81_, Class384 class384_82_) {
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_81_.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_82_.aFloatArray4667);
+	public void method14057(Matrix44Arr class384, Matrix44Arr class384_81_, Matrix44Arr class384_82_) {
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_81_.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_82_.buf);
 	}
 
-	public void method14058(Class384 class384, Class384 class384_83_, Class384 class384_84_) {
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_83_.aFloatArray4667);
-		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_84_.aFloatArray4667);
+	public void method14058(Matrix44Arr class384, Matrix44Arr class384_83_, Matrix44Arr class384_84_) {
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 256, class384.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 2, class384_83_.buf);
+		IDirect3DDevice.SetTransform(((Class505_Sub2_Sub2) this).aLong10252, 3, class384_84_.buf);
 	}
 
 	void method14051() {
@@ -1351,7 +1351,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 		IDirect3DDevice.method14471(((Class505_Sub2_Sub2) this).aLong10252, 174, aBool8843);
 	}
 
-	public void method14107(Class384 class384) {
+	public void method14107(Matrix44Arr class384) {
 		class384.method6523(((Class505_Sub2_Sub2) this).aClass384_10261);
 	}
 

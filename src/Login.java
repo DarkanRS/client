@@ -124,7 +124,7 @@ public class Login {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
 	}
 
-	static final void method5017(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method5017(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -305873852) != null) {
 			string = string.substring(0, string.length() - 1);
@@ -173,15 +173,15 @@ public class Login {
 							Class9.aClass184_73.method3050(Class38.method852(Class448.aClass450_5424.method7494((byte) 75), 15000, 1248559901), Class448.aClass450_5424.aString5433, (byte) -64);
 						}
 						Class9.aClass184_73.method3054((short) -6917);
-						Class282_Sub23 class282_sub23 = Class207.method3558((byte) 88);
+						TCPMessage class282_sub23 = Class207.method3558((byte) 88);
 						if (Class9.aBool105) {
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeByte((1627920319 * Class369.aClass369_4276.anInt4278));
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-							int i_6_ = (-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index));
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(727);
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(1);
+							class282_sub23.buffer.writeByte((1627920319 * OutgoingLoginPacket.INIT_SOCIAL_NETWORK_CONNECTION.id));
+							class282_sub23.buffer.writeShort(0, 1417031095);
+							int i_6_ = (-1990677291 * (class282_sub23.buffer.index));
+							class282_sub23.buffer.writeInt(727);
+							class282_sub23.buffer.writeInt(1);
 							if (273 == 368603503 * Class9.lobbyStage) {
-								class282_sub23.aClass282_Sub35_Sub2_7682.writeByte((10 == -1741204137 * client.anInt7166 ? 1 : 0));
+								class282_sub23.buffer.writeByte((10 == -1741204137 * client.anInt7166 ? 1 : 0));
 							}
 							RsByteBuffer class282_sub35 = Class94.method1587((byte) -40);
 							class282_sub35.writeByte((1051306693 * Class9.anInt76));
@@ -195,10 +195,10 @@ public class Login {
 							class282_sub35.writeByte(((client.CURRENT_GAME.anInt5746) * 1648080491));
 							class282_sub35.writeByte((int) (Math.random() * 9.9999999E7));
 							class282_sub35.applyRSA(Class18.LOGIN_EXPONENT, Class18.LOGIN_MODULUS);
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeBytes(class282_sub35.buffer, 0, class282_sub35.index * -1990677291);
-							class282_sub23.aClass282_Sub35_Sub2_7682.method13281(-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_6_, 1201423895);
+							class282_sub23.buffer.writeBytes(class282_sub35.buffer, 0, class282_sub35.index * -1990677291);
+							class282_sub23.buffer.method13281(-1990677291 * (class282_sub23.buffer.index) - i_6_, 1201423895);
 						} else {
-							class282_sub23.aClass282_Sub35_Sub2_7682.writeByte((Class369.aClass369_4272.anInt4278 * 1627920319));
+							class282_sub23.buffer.writeByte((OutgoingLoginPacket.INIT_GAME_CONNECTION.id * 1627920319));
 						}
 						Class9.aClass184_73.method3049(class282_sub23, 1846695910);
 						Class9.aClass184_73.method3047(146720590);
@@ -271,16 +271,16 @@ public class Login {
 					if (80 == 1923286921 * Class9.loginStage) {
 						Class9.aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
 						Class9.aClass184_73.method3054((short) -24062);
-						Class282_Sub23 class282_sub23 = Class207.method3558((byte) 82);
-						RsBitsBuffer out = class282_sub23.aClass282_Sub35_Sub2_7682;
+						TCPMessage class282_sub23 = Class207.method3558((byte) 82);
+						RsBitsBuffer out = class282_sub23.buffer;
 						if (368603503 * Class9.lobbyStage == 273) {
-							Class369 class369;
+							OutgoingLoginPacket class369;
 							if (Class9.aBool105) {
-								class369 = Class369.aClass369_4269;
+								class369 = OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN;
 							} else {
-								class369 = Class369.aClass369_4277;
+								class369 = OutgoingLoginPacket.GAMELOGIN;
 							}
-							out.writeByte((class369.anInt4278 * 1627920319));
+							out.writeByte((class369.id * 1627920319));
 							out.writeShort(0, 1417031095);
 							int i_10_ = out.index * -1990677291;
 							int i_11_ = out.index * -1990677291;
@@ -289,7 +289,7 @@ public class Login {
 								out.writeInt(1);
 								out.writeByte((-1741204137 * client.anInt7166 == 10 ? 1 : 0));
 								i_11_ = (-1990677291 * out.index);
-								RsByteBuffer class282_sub35 = Class108.getLoginMod();
+								RsByteBuffer class282_sub35 = ChatLine.getLoginMod();
 								out.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 								i_11_ = (out.index * -1990677291);
 								out.writeByte((Class9.aLong77 * 8013795473128403269L == -1L) ? 1 : 0);
@@ -320,7 +320,7 @@ public class Login {
 							if (client.aString7156 != null) {
 								out.writeString((client.aString7156));
 							}
-							out.writeByte((Class47_Sub1.aClass262_9143.method4639("jagtheora", (short) 255) ? 1 : 0));
+							out.writeByte((IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0));
 							out.writeByte((client.aBool7310 ? 1 : 0));
 							out.writeByte((client.aBool7160 ? 1 : 0));
 							out.writeByte((-1439277437 * (Class227.anInt2831)));
@@ -333,20 +333,20 @@ public class Login {
 							out.method13101(Class500.anIntArray5827, i_11_, out.index * -1990677291, 1754334967);
 							out.method13281((-1990677291 * out.index - i_10_), 1201423895);
 						} else {
-							Class369 class369;
+							OutgoingLoginPacket class369;
 							if (Class9.aBool105) {
-								class369 = Class369.aClass369_4269;
+								class369 = OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN;
 							} else {
-								class369 = Class369.aClass369_4270;
+								class369 = OutgoingLoginPacket.LOBBYLOGIN;
 							}
-							out.writeByte((1627920319 * (class369.anInt4278)));
+							out.writeByte((1627920319 * (class369.id)));
 							out.writeShort(0, 1417031095);
 							int i_13_ = out.index * -1990677291;
 							int i_14_ = out.index * -1990677291;
 							if (!Class9.aBool105) {
 								out.writeInt(727);
 								out.writeInt(1);
-								RsByteBuffer class282_sub35 = Class108.getLoginMod();
+								RsByteBuffer class282_sub35 = ChatLine.getLoginMod();
 								out.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 								i_14_ = (-1990677291 * out.index);
 								out.writeByte((Class9.aLong77 * 8013795473128403269L == -1L) ? 1 : 0);
@@ -376,13 +376,13 @@ public class Login {
 						}
 						Class9.aClass184_73.method3049(class282_sub23, 96752034);
 						Class9.aClass184_73.method3047(124172931);
-						Class9.aClass184_73.aClass432_2283 = new IsaacCipher(Class500.anIntArray5827);
+						Class9.aClass184_73.isaac = new IsaacCipher(Class500.anIntArray5827);
 						for (int i_16_ = 0; i_16_ < 4; i_16_++) {
 							Class500.anIntArray5827[i_16_] += 50;
 						}
 						Class9.aClass184_73.aClass432_2295 = new IsaacCipher(Class500.anIntArray5827);
 						new IsaacCipher(Class500.anIntArray5827);
-						Class9.aClass184_73.aClass282_Sub35_Sub2_2284.method14867(Class9.aClass184_73.aClass432_2295, 1851257503);
+						Class9.aClass184_73.aClass282_Sub35_Sub2_2284.setIsaacCipher(Class9.aClass184_73.aClass432_2295, 1851257503);
 						Class500.anIntArray5827 = null;
 						Class9.loginStage = -1298324455;
 					}
@@ -441,10 +441,10 @@ public class Login {
 					}
 					if (Class9.loginStage * 1923286921 == 115) {
 						Class9.aClass184_73.method3054((short) 7627);
-						Class282_Sub23 class282_sub23 = Class207.method3558((byte) 32);
-						RsBitsBuffer class282_sub35_sub2 = class282_sub23.aClass282_Sub35_Sub2_7682;
-						class282_sub35_sub2.method14867((Class9.aClass184_73.aClass432_2283), 271369997);
-						class282_sub35_sub2.method14883(((Class369.aClass369_4273.anInt4278) * 1627920319), 264695091);
+						TCPMessage class282_sub23 = Class207.method3558((byte) 32);
+						RsBitsBuffer class282_sub35_sub2 = class282_sub23.buffer;
+						class282_sub35_sub2.setIsaacCipher((Class9.aClass184_73.isaac), 271369997);
+						class282_sub35_sub2.writeIsaacByte(((OutgoingLoginPacket.GAMELOGIN_CONTINUE.id) * 1627920319), 264695091);
 						Class9.aClass184_73.method3049(class282_sub23, 132701015);
 						Class9.aClass184_73.method3047(-692056530);
 						Class9.loginStage = -1298324455;
@@ -510,7 +510,7 @@ public class Login {
 								client.aBool7316 = stream.readUnsignedByte() == 1;
 								Class504.anInt5832 = (stream.read24BitInteger(1818887431) * 1346472513);
 								client.membersWorld = stream.readUnsignedByte() == 1;
-								Class311.aString3643 = stream.readString(2109747310);
+								Class311.aString3643 = stream.readString();
 								IndexLoaders.MAP_REGION_DECODER.method4436(-1683757670).method7912(client.membersWorld, 65280);
 								IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) 2983).method4436(-1487690474).method7912(client.membersWorld, 65280);
 								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1605655563);

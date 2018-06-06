@@ -32,15 +32,15 @@ public abstract class Class158_Sub2 extends Class158 {
 	abstract void method14354(int i, int i_6_);
 
 	public static void method14355(int i, int i_7_, int i_8_) {
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4548, client.aClass184_7475.aClass432_2283, -184524303);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeIntV1(i, 834716715);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE128(i_7_, -1183932171);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4548, client.aClass184_7475.isaac, -184524303);
+		class282_sub23.buffer.writeIntV1(i, 834716715);
+		class282_sub23.buffer.writeShortLE128(i_7_, -1183932171);
 		client.aClass184_7475.method3049(class282_sub23, 1272182727);
 	}
 
-	static Class282_Sub23 method14356(short i) {
-		if (-918638833 * Class282_Sub23.anInt7679 == 0)
-			return new Class282_Sub23();
-		return (Class282_Sub23.aClass282_Sub23Array7677[(Class282_Sub23.anInt7679 -= -331587601) * -918638833]);
+	static TCPMessage method14356(short i) {
+		if (-918638833 * TCPMessage.index == 0)
+			return new TCPMessage();
+		return (TCPMessage.OUTGOING_PACKETS[(TCPMessage.index -= -331587601) * -918638833]);
 	}
 }

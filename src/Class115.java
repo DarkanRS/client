@@ -10,7 +10,7 @@ public abstract class Class115 implements Interface7 {
 	static NativeSprite[] aClass160Array1248;
 	static int anInt1249;
 
-	abstract void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);
+	abstract void method1891(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384);
 
 	String method1892(byte i) {
 		return aString1245;
@@ -30,19 +30,19 @@ public abstract class Class115 implements Interface7 {
 
 	public abstract boolean method1899();
 
-	abstract void method1900(int i, Class384 class384);
+	abstract void method1900(int i, Matrix44Arr class384);
 
 	abstract void method1901(Class282_Sub21_Sub1 class282_sub21_sub1, float f, float f_8_, float f_9_, float f_10_);
 
-	abstract void method1902(int i, Class384 class384);
+	abstract void method1902(int i, Matrix44Arr class384);
 
 	abstract void method1903(Class282_Sub21_Sub1 class282_sub21_sub1, float[] fs, int i);
 
 	abstract void method1904(int i, float[] fs, int i_11_);
 
-	abstract void method1905(int i, Class384 class384);
+	abstract void method1905(int i, Matrix44Arr class384);
 
-	abstract void method1906(int i, Class384 class384);
+	abstract void method1906(int i, Matrix44Arr class384);
 
 	abstract void method1907(int i, float f, float f_12_, float f_13_, float f_14_);
 
@@ -52,7 +52,7 @@ public abstract class Class115 implements Interface7 {
 		return aString1245;
 	}
 
-	abstract void method1910(int i, Class384 class384);
+	abstract void method1910(int i, Matrix44Arr class384);
 
 	public abstract boolean method1911();
 
@@ -76,7 +76,7 @@ public abstract class Class115 implements Interface7 {
 
 	abstract void method1921(Class282_Sub21_Sub1 class282_sub21_sub1, float[] fs, int i);
 
-	abstract void method1922(int i, Class384 class384);
+	abstract void method1922(int i, Matrix44Arr class384);
 
 	Class115() {
 		/* empty */
@@ -84,13 +84,13 @@ public abstract class Class115 implements Interface7 {
 
 	abstract void method1923(Class282_Sub21_Sub1 class282_sub21_sub1, float f, float f_29_);
 
-	abstract void method1924(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);
+	abstract void method1924(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384);
 
-	abstract void method1925(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);
+	abstract void method1925(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384);
 
-	abstract void method1926(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);
+	abstract void method1926(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384);
 
-	abstract void method1927(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);
+	abstract void method1927(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384);
 
 	abstract void method1928(Class282_Sub21_Sub1 class282_sub21_sub1, int i, Interface30 interface30);
 
@@ -108,7 +108,7 @@ public abstract class Class115 implements Interface7 {
 
 	abstract void method1935(int i, float f, float f_41_, float f_42_, float f_43_);
 
-	abstract void method1936(Class282_Sub21_Sub1 class282_sub21_sub1, Class384 class384);
+	abstract void method1936(Class282_Sub21_Sub1 class282_sub21_sub1, Matrix44Arr class384);
 
 	abstract void method1937(int i, float[] fs, int i_44_);
 
@@ -116,13 +116,13 @@ public abstract class Class115 implements Interface7 {
 
 	abstract void method1939(Class282_Sub21_Sub1 class282_sub21_sub1, float f, float f_46_, float f_47_);
 
-	abstract void method1940(int i, Class384 class384);
+	abstract void method1940(int i, Matrix44Arr class384);
 
 	abstract void method1941(Class282_Sub21_Sub1 class282_sub21_sub1, float f, float f_48_, float f_49_, float f_50_);
 
-	abstract void method1942(int i, Class384 class384);
+	abstract void method1942(int i, Matrix44Arr class384);
 
-	abstract void method1943(int i, Class384 class384);
+	abstract void method1943(int i, Matrix44Arr class384);
 
 	abstract void method1944(Class282_Sub21_Sub1 class282_sub21_sub1, float[] fs, int i);
 
@@ -136,8 +136,8 @@ public abstract class Class115 implements Interface7 {
 
 	static final void method1949(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class17.method569(class118, class98, class527, 2101137019);
 	}
 

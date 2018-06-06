@@ -111,9 +111,9 @@ public abstract class Class152 {
 
 	static final void method2601(long l) {
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1572720493) != null) {
-			if (-672443707 * Class262.anInt3240 == 2 || -672443707 * Class262.anInt3240 == 1)
+			if (-672443707 * NativeLibraryLoader.anInt3240 == 2 || -672443707 * NativeLibraryLoader.anInt3240 == 1)
 				Class363.method6286(l);
-			else if (Class262.anInt3240 * -672443707 == 4)
+			else if (NativeLibraryLoader.anInt3240 * -672443707 == 4)
 				Class280.method4974(l);
 		}
 		Class96_Sub12.method14614(Renderers.SOFTWARE_RENDERER, (long) (-1809259861 * client.cycles));
@@ -138,13 +138,13 @@ public abstract class Class152 {
 			i = -141702765 * client.anInt7340;
 		UnderlayIndexLoader.method8036(i, (byte) 4);
 		int i_3_ = (Class84.myPlayer.method15805(828768449) << 8);
-		Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-		Class96_Sub21.method14675((Class84.myPlayer.aByte7967), (int) class385.aFloat4671 + i_3_, (int) class385.aFloat4673 + i_3_, -383924731 * client.anInt7261, 323581916);
+		Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+		Class96_Sub21.method14675((Class84.myPlayer.aByte7967), (int) class385.x + i_3_, (int) class385.z + i_3_, -383924731 * client.anInt7261, 323581916);
 		client.anInt7261 = 0;
 	}
 
 	static final void method2602(CS2Executor class527, int i) {
-		int i_4_ = (class527.unknown[301123709 * class527.instrPtr]);
+		int i_4_ = (class527.intOpValues[301123709 * class527.instrPtr]);
 		Class405 class405 = IndexLoaders.aClass394_5831.method6753(i_4_, -292141252);
 		if (class405.aChar4832 != '\001')
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
@@ -198,9 +198,9 @@ public abstract class Class152 {
 						LoadingStage.method6681(4, (Message.aClass433_5227.translate(Class223.CURRENT_LANGUAGE, -2084734592)), (byte) 58);
 					else {
 						Class184 class184 = Class468_Sub20.method12807(1188178835);
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4553, class184.aClass432_2283, 564733792);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class108.method1846(string, -1741873720));
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4553, class184.isaac, 564733792);
+						class282_sub23.buffer.writeByte(ChatLine.getLength(string));
+						class282_sub23.buffer.writeString(string);
 						class184.method3049(class282_sub23, -92929013);
 					}
 				}
@@ -216,7 +216,7 @@ public abstract class Class152 {
 	}
 
 	static final void method2605(CS2Executor class527, int i) {
-		int i_14_ = (class527.unknown[301123709 * class527.instrPtr]);
+		int i_14_ = (class527.intOpValues[301123709 * class527.instrPtr]);
 		Long var_long = (class527.aClass61_7010.method1201(client.CURRENT_GAME.anInt5746 * 1648080491 << 16 | i_14_, 1958434699));
 		long l;
 		if (null == var_long)

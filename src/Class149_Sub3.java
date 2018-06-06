@@ -35,7 +35,7 @@ public class Class149_Sub3 extends Class149 {
 	}
 
 	static Class149_Sub3 method14646(RsByteBuffer class282_sub35) {
-		return new Class149_Sub3(class282_sub35.readShort(2017088828), class282_sub35.readShort(2048683437), class282_sub35.readShort(1960465159), class282_sub35.readShort(1689198333), class282_sub35.read24BitUnsignedInteger((short) 8422), class282_sub35.readUnsignedByte());
+		return new Class149_Sub3(class282_sub35.readShort(2017088828), class282_sub35.readShort(2048683437), class282_sub35.readShort(1960465159), class282_sub35.readShort(1689198333), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 
 	void method2562(int i, int i_14_) {

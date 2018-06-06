@@ -11,7 +11,7 @@ public class ea extends FontRenderer implements Interface40 {
 
 	native void aq(char c, int i, int i_6_, int i_7_, boolean bool, Class455 class455, int i_8_, int i_9_);
 
-	ea(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, NativeSprite[] class160s) {
+	ea(ja var_ja, ba var_ba, FontMetrics class414, Class91[] class91s, NativeSprite[] class160s) {
 		super(var_ja, class414);
 		byte[][] is = new byte[class91s.length][];
 		int[] is_10_ = new int[class91s.length];

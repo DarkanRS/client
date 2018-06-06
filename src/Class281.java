@@ -16,22 +16,22 @@ public class Class281 {
 	void method4976(SceneObjectManager class206) {
 		((Class281) this).aLinkedList3377 = new LinkedList();
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1448463599);
-		Class219 class219_0_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1448463599);
+		CoordGrid class219_0_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
 		for (int i = 1; i < 1443022381 * ((Class281) this).anInt3374; i++) {
-			Class219 class219_1_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i], ((Class281) this).anIntArray3373[i]);
-			while ((class219_0_.anInt2711 * 1948093437 != 1948093437 * class219_1_.anInt2711) || (-1002240017 * class219_0_.anInt2712 != -1002240017 * class219_1_.anInt2712)) {
-				if (class219_0_.anInt2711 * 1948093437 < class219_1_.anInt2711 * 1948093437)
-					class219_0_.anInt2711 += 1013524821;
-				else if (1948093437 * class219_0_.anInt2711 > 1948093437 * class219_1_.anInt2711)
-					class219_0_.anInt2711 -= 1013524821;
-				if (class219_0_.anInt2712 * -1002240017 < class219_1_.anInt2712 * -1002240017)
-					class219_0_.anInt2712 += -2816241;
-				else if (-1002240017 * class219_0_.anInt2712 > -1002240017 * class219_1_.anInt2712)
-					class219_0_.anInt2712 -= -2816241;
+			CoordGrid class219_1_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i], ((Class281) this).anIntArray3373[i]);
+			while ((class219_0_.x * 1948093437 != 1948093437 * class219_1_.x) || (-1002240017 * class219_0_.y != -1002240017 * class219_1_.y)) {
+				if (class219_0_.x * 1948093437 < class219_1_.x * 1948093437)
+					class219_0_.x += 1013524821;
+				else if (1948093437 * class219_0_.x > 1948093437 * class219_1_.x)
+					class219_0_.x -= 1013524821;
+				if (class219_0_.y * -1002240017 < class219_1_.y * -1002240017)
+					class219_0_.y += -2816241;
+				else if (-1002240017 * class219_0_.y > -1002240017 * class219_1_.y)
+					class219_0_.y -= -2816241;
 				int i_2_ = 675588453 * Class4.anInt35;
-				int i_3_ = (1948093437 * class219_0_.anInt2711 - class219.anInt2711 * 1948093437);
-				int i_4_ = (-1002240017 * class219_0_.anInt2712 - -1002240017 * class219.anInt2712);
+				int i_3_ = (1948093437 * class219_0_.x - class219.x * 1948093437);
+				int i_4_ = (-1002240017 * class219_0_.y - -1002240017 * class219.y);
 				if (i_3_ >= 0 && i_3_ < class206.anInt2617 * -1912960305 && i_4_ >= 0 && i_4_ < class206.anInt2603 * -18177099) {
 					int i_5_ = (i_3_ << 9) + 256;
 					int i_6_ = (i_4_ << 9) + 256;
@@ -118,22 +118,22 @@ public class Class281 {
 	void method4983(SceneObjectManager class206, int i) {
 		((Class281) this).aLinkedList3377 = new LinkedList();
 		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(309280433);
-		Class219 class219_7_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(309280433);
+		CoordGrid class219_7_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
 		for (int i_8_ = 1; i_8_ < 1443022381 * ((Class281) this).anInt3374; i_8_++) {
-			Class219 class219_9_ = new Class219(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i_8_], ((Class281) this).anIntArray3373[i_8_]);
-			while ((class219_7_.anInt2711 * 1948093437 != 1948093437 * class219_9_.anInt2711) || (-1002240017 * class219_7_.anInt2712 != -1002240017 * class219_9_.anInt2712)) {
-				if (class219_7_.anInt2711 * 1948093437 < class219_9_.anInt2711 * 1948093437)
-					class219_7_.anInt2711 += 1013524821;
-				else if (1948093437 * class219_7_.anInt2711 > 1948093437 * class219_9_.anInt2711)
-					class219_7_.anInt2711 -= 1013524821;
-				if (class219_7_.anInt2712 * -1002240017 < class219_9_.anInt2712 * -1002240017)
-					class219_7_.anInt2712 += -2816241;
-				else if (-1002240017 * class219_7_.anInt2712 > -1002240017 * class219_9_.anInt2712)
-					class219_7_.anInt2712 -= -2816241;
+			CoordGrid class219_9_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i_8_], ((Class281) this).anIntArray3373[i_8_]);
+			while ((class219_7_.x * 1948093437 != 1948093437 * class219_9_.x) || (-1002240017 * class219_7_.y != -1002240017 * class219_9_.y)) {
+				if (class219_7_.x * 1948093437 < class219_9_.x * 1948093437)
+					class219_7_.x += 1013524821;
+				else if (1948093437 * class219_7_.x > 1948093437 * class219_9_.x)
+					class219_7_.x -= 1013524821;
+				if (class219_7_.y * -1002240017 < class219_9_.y * -1002240017)
+					class219_7_.y += -2816241;
+				else if (-1002240017 * class219_7_.y > -1002240017 * class219_9_.y)
+					class219_7_.y -= -2816241;
 				int i_10_ = 675588453 * Class4.anInt35;
-				int i_11_ = (1948093437 * class219_7_.anInt2711 - class219.anInt2711 * 1948093437);
-				int i_12_ = (-1002240017 * class219_7_.anInt2712 - -1002240017 * class219.anInt2712);
+				int i_11_ = (1948093437 * class219_7_.x - class219.x * 1948093437);
+				int i_12_ = (-1002240017 * class219_7_.y - -1002240017 * class219.y);
 				if (i_11_ >= 0 && i_11_ < class206.anInt2617 * -1912960305 && i_12_ >= 0 && i_12_ < class206.anInt2603 * -18177099) {
 					int i_13_ = (i_11_ << 9) + 256;
 					int i_14_ = (i_12_ << 9) + 256;
@@ -169,7 +169,7 @@ public class Class281 {
 	}
 
 	static final void method4986(CS2Executor class527, int i) {
-		int i_18_ = (class527.unknown[class527.instrPtr * 301123709]);
+		int i_18_ = (class527.intOpValues[class527.instrPtr * 301123709]);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = ((Player) class527.animable).aClass155_10561.method2627(i_18_, -1165969492);
 	}
 

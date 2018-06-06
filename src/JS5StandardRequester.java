@@ -206,8 +206,8 @@ public abstract class JS5StandardRequester {
 			try {
 				int i_7_ = class282_sub35.readUnsignedByte();
 				if (i_7_ == 0 || 1 == i_7_ || i_7_ == 2) {
-					String string = class282_sub35.readString(950258426);
-					String string_8_ = class282_sub35.readString(110703663);
+					String string = class282_sub35.readString();
+					String string_8_ = class282_sub35.readString();
 					int i_9_ = 0;
 					if (1 == i_7_)
 						i_9_ = class282_sub35.readInt();
@@ -217,13 +217,13 @@ public abstract class JS5StandardRequester {
 						throw new SecurityException();
 					((Class282_Sub42) class282_sub42).aFieldArray8037[i_6_] = Class148.method2553(string, (short) 8812).getDeclaredField(string_8_);
 				} else if (3 == i_7_ || 4 == i_7_) {
-					String string = class282_sub35.readString(1516633120);
-					String string_10_ = class282_sub35.readString(-9080598);
+					String string = class282_sub35.readString();
+					String string_10_ = class282_sub35.readString();
 					int i_11_ = class282_sub35.readUnsignedByte();
 					String[] strings = new String[i_11_];
 					for (int i_12_ = 0; i_12_ < i_11_; i_12_++)
-						strings[i_12_] = class282_sub35.readString(-94718751);
-					String string_13_ = class282_sub35.readString(103146882);
+						strings[i_12_] = class282_sub35.readString();
+					String string_13_ = class282_sub35.readString();
 					byte[][] is = new byte[i_11_][];
 					if (3 == i_7_) {
 						for (int i_14_ = 0; i_14_ < i_11_; i_14_++) {

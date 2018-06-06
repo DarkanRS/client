@@ -132,22 +132,22 @@ public class Class271 {
 		Class109.method1859(class317, i, i_13_, i_14_, bool, l, 0, 2065437582);
 	}
 
-	public static Class282_Sub23 method4828(OutgoingPacket class379, IsaacCipher class432, int i) {
-		Class282_Sub23 class282_sub23 = Class158_Sub2.method14356((short) 2048);
-		((Class282_Sub23) class282_sub23).aClass379_7681 = class379;
-		((Class282_Sub23) class282_sub23).anInt7678 = ((OutgoingPacket) class379).anInt4632 * -1049235717;
-		if (-1490091691 * ((Class282_Sub23) class282_sub23).anInt7678 == -1)
-			class282_sub23.aClass282_Sub35_Sub2_7682 = new RsBitsBuffer(260);
-		else if (-1490091691 * ((Class282_Sub23) class282_sub23).anInt7678 == -2)
-			class282_sub23.aClass282_Sub35_Sub2_7682 = new RsBitsBuffer(10000);
-		else if (((Class282_Sub23) class282_sub23).anInt7678 * -1490091691 <= 18)
-			class282_sub23.aClass282_Sub35_Sub2_7682 = new RsBitsBuffer(20);
-		else if (((Class282_Sub23) class282_sub23).anInt7678 * -1490091691 <= 98)
-			class282_sub23.aClass282_Sub35_Sub2_7682 = new RsBitsBuffer(100);
+	public static TCPMessage method4828(OutgoingPacket class379, IsaacCipher class432, int i) {
+		TCPMessage class282_sub23 = Class158_Sub2.method14356((short) 2048);
+		((TCPMessage) class282_sub23).packet = class379;
+		((TCPMessage) class282_sub23).anInt7678 = ((OutgoingPacket) class379).anInt4632 * -1049235717;
+		if (-1490091691 * ((TCPMessage) class282_sub23).anInt7678 == -1)
+			class282_sub23.buffer = new RsBitsBuffer(260);
+		else if (-1490091691 * ((TCPMessage) class282_sub23).anInt7678 == -2)
+			class282_sub23.buffer = new RsBitsBuffer(10000);
+		else if (((TCPMessage) class282_sub23).anInt7678 * -1490091691 <= 18)
+			class282_sub23.buffer = new RsBitsBuffer(20);
+		else if (((TCPMessage) class282_sub23).anInt7678 * -1490091691 <= 98)
+			class282_sub23.buffer = new RsBitsBuffer(100);
 		else
-			class282_sub23.aClass282_Sub35_Sub2_7682 = new RsBitsBuffer(260);
-		class282_sub23.aClass282_Sub35_Sub2_7682.method14867(class432, 351906319);
-		class282_sub23.aClass282_Sub35_Sub2_7682.method14883((((OutgoingPacket) ((Class282_Sub23) class282_sub23).aClass379_7681).anInt4631) * -498570583, 328020366);
+			class282_sub23.buffer = new RsBitsBuffer(260);
+		class282_sub23.buffer.setIsaacCipher(class432, 351906319);
+		class282_sub23.buffer.writeIsaacByte((((OutgoingPacket) ((TCPMessage) class282_sub23).packet).anInt4631) * -498570583, 328020366);
 		class282_sub23.anInt7680 = 0;
 		return class282_sub23;
 	}
@@ -160,7 +160,7 @@ public class Class271 {
 	}
 
 	static final void method4830(CS2Executor class527, int i) {
-		Class118 class118 = (class527.animable.aClass98_10324.method1618((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), (byte) 12));
+		IComponentDefinitions class118 = (class527.animable.inter.method1618((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), (byte) 12));
 		class118.aClass118Array1438 = null;
 		class118.aClass118Array1439 = null;
 		Class109.method1858(class118, (byte) -73);

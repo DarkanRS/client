@@ -24,13 +24,13 @@ public class Class239 {
 	static final int anInt2949 = -50;
 	static final float aFloat2950 = 1.2F;
 	Class535 aClass535_2951;
-	Class385 aClass385_2952;
+	Vector3 aClass385_2952;
 	SoftCache aClass229_2953;
 	SoftCache aClass229_2954;
 
 	void method4036() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1217777158)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
-		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.aFloat4671 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4672 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4673 << 2));
+		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.x << 2), (float) ((int) ((Class239) this).aClass385_2952.y << 2), (float) ((int) ((Class239) this).aClass385_2952.z << 2));
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
@@ -113,13 +113,13 @@ public class Class239 {
 	public void method4045(int i, int i_9_, int i_10_) {
 		Class535 class535 = ((Class239) this).aClass535ArrayArray2943[i][i_9_];
 		if (null != class535)
-			((Class239) this).aClass385_2952.method6627(((Class535) class535).aClass385_7084);
+			((Class239) this).aClass385_2952.copy(((Class535) class535).aClass385_7084);
 		method4049((byte) 70);
 	}
 
 	void method4046() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(899196772)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
-		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.aFloat4671 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4672 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4673 << 2));
+		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.x << 2), (float) ((int) ((Class239) this).aClass385_2952.y << 2), (float) ((int) ((Class239) this).aClass385_2952.z << 2));
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
@@ -136,7 +136,7 @@ public class Class239 {
 
 	void method4049(byte i) {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-1566103967)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
-		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.aFloat4671 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4672 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4673 << 2));
+		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.x << 2), (float) ((int) ((Class239) this).aClass385_2952.y << 2), (float) ((int) ((Class239) this).aClass385_2952.z << 2));
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
@@ -316,7 +316,7 @@ public class Class239 {
 	public void method4067(int i, int i_37_) {
 		Class535 class535 = ((Class239) this).aClass535ArrayArray2943[i][i_37_];
 		if (null != class535)
-			((Class239) this).aClass385_2952.method6627(((Class535) class535).aClass385_7084);
+			((Class239) this).aClass385_2952.copy(((Class535) class535).aClass385_7084);
 		method4049((byte) 68);
 	}
 
@@ -449,7 +449,7 @@ public class Class239 {
 
 	void method4078() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-677567831)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
-		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.aFloat4671 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4672 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4673 << 2));
+		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.x << 2), (float) ((int) ((Class239) this).aClass385_2952.y << 2), (float) ((int) ((Class239) this).aClass385_2952.z << 2));
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
@@ -457,7 +457,7 @@ public class Class239 {
 		((Class239) this).anInt2945 = -824774497;
 		((Class239) this).aLong2936 = 0L;
 		((Class239) this).aBool2947 = false;
-		((Class239) this).aClass385_2952 = new Class385(-50.0F, -60.0F, -50.0F);
+		((Class239) this).aClass385_2952 = new Vector3(-50.0F, -60.0F, -50.0F);
 		((Class239) this).aClass229_2953 = new SoftCache(9);
 		((Class239) this).aClass229_2954 = new SoftCache(9);
 		((Class239) this).aClass505_2944 = class505;
@@ -484,13 +484,13 @@ public class Class239 {
 
 	void method4080() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(557786587)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
-		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.aFloat4671 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4672 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4673 << 2));
+		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.x << 2), (float) ((int) ((Class239) this).aClass385_2952.y << 2), (float) ((int) ((Class239) this).aClass385_2952.z << 2));
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
 	void method4081() {
 		((Class239) this).aClass505_2944.IA((0.7F + (float) Class393.aClass282_Sub54_4783.aClass468_Sub21_8222.method12865(475375870) * 0.1F + IndexLoaders.MAP_REGION_DECODER.method4428(-596084463)) * ((Class535) ((Class239) this).aClass535_2951).aFloat7081);
-		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.aFloat4671 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4672 << 2), (float) ((int) ((Class239) this).aClass385_2952.aFloat4673 << 2));
+		((Class239) this).aClass505_2944.m((783185137 * ((Class535) ((Class239) this).aClass535_2951).anInt7083), ((Class535) ((Class239) this).aClass535_2951).aFloat7082, ((Class535) ((Class239) this).aClass535_2951).aFloat7090, (float) ((int) ((Class239) this).aClass385_2952.x << 2), (float) ((int) ((Class239) this).aClass385_2952.y << 2), (float) ((int) ((Class239) this).aClass385_2952.z << 2));
 		((Class239) this).aClass505_2944.method8477(((Class535) ((Class239) this).aClass535_2951).aClass152_7087);
 	}
 
@@ -559,14 +559,14 @@ public class Class239 {
 
 	public static void method4090(int[] is, int[] is_60_, int i) {
 		if (is == null || is_60_ == null) {
-			Class491.anIntArray5773 = null;
+			CircularBuffer.anIntArray5773 = null;
 			Class412.anIntArray4962 = null;
 			IcmpService_Sub1.aByteArrayArrayArray7963 = null;
 		} else {
-			Class491.anIntArray5773 = is;
+			CircularBuffer.anIntArray5773 = is;
 			Class412.anIntArray4962 = new int[is.length];
 			IcmpService_Sub1.aByteArrayArrayArray7963 = new byte[is.length][][];
-			for (int i_61_ = 0; i_61_ < Class491.anIntArray5773.length; i_61_++)
+			for (int i_61_ = 0; i_61_ < CircularBuffer.anIntArray5773.length; i_61_++)
 				IcmpService_Sub1.aByteArrayArrayArray7963[i_61_] = new byte[is_60_[i_61_]][];
 		}
 	}

@@ -17,7 +17,7 @@ public class Class315 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jaggl", -8022122))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jaggl", -8022122))
 				throw new RuntimeException("");
 			Class459.method7679(canvas, 1663051494);
 			OpenGL opengl = new OpenGL();
@@ -41,7 +41,7 @@ public class Class315 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jaggl", -1157219139))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jaggl", -1157219139))
 				throw new RuntimeException("");
 			Class459.method7679(canvas, 1988390598);
 			OpenGL opengl = new OpenGL();
@@ -65,7 +65,7 @@ public class Class315 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jaggl", -1661577036))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jaggl", -1661577036))
 				throw new RuntimeException("");
 			Class459.method7679(canvas, 2046172802);
 			OpenGL opengl = new OpenGL();
@@ -89,7 +89,7 @@ public class Class315 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jaggl", 685919251))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jaggl", 685919251))
 				throw new RuntimeException("");
 			Class459.method7679(canvas, 1169167916);
 			OpenGL opengl = new OpenGL();

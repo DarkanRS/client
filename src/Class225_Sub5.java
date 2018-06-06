@@ -102,7 +102,7 @@ public class Class225_Sub5 extends Class225 {
 	}
 
 	static void method13043(int i, boolean bool, short i_25_) {
-		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 1007335801);
+		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1007335801);
 		if (null != class282_sub30) {
 			for (int i_26_ = 0; (i_26_ < ((Class282_Sub30) class282_sub30).anIntArray7710.length); i_26_++) {
 				((Class282_Sub30) class282_sub30).anIntArray7710[i_26_] = -1;

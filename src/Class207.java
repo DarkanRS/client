@@ -89,8 +89,8 @@ public class Class207 {
 
 	static final void method3554(CS2Executor class527, int i) {
 		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_6_, (byte) 71);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 71);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		Defaults7Loader.method8754(class118, class98, class527, 1449946769);
 	}
 
@@ -102,9 +102,9 @@ public class Class207 {
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(1333145388);
 		if (class282_sub50_sub6 != null) {
-			boolean bool = class282_sub50_sub6.method14778(i_7_ >> 28 & 0x3, i_7_ >> 14 & 0x3fff, i_7_ & 0x3fff, Class517.anIntArray5900, -1889413502);
+			boolean bool = class282_sub50_sub6.method14778(i_7_ >> 28 & 0x3, i_7_ >> 14 & 0x3fff, i_7_ & 0x3fff, CS2Runner.anIntArray5900, -1889413502);
 			if (bool)
-				Class8_Sub2.method14263(Class517.anIntArray5900[1], Class517.anIntArray5900[2], (byte) 0);
+				Class8_Sub2.method14263(CS2Runner.anIntArray5900[1], CS2Runner.anIntArray5900[2], (byte) 0);
 		}
 	}
 
@@ -117,11 +117,11 @@ public class Class207 {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
-	public static Class282_Sub23 method3558(byte i) {
-		Class282_Sub23 class282_sub23 = Class158_Sub2.method14356((short) 2048);
-		((Class282_Sub23) class282_sub23).aClass379_7681 = null;
-		((Class282_Sub23) class282_sub23).anInt7678 = 0;
-		class282_sub23.aClass282_Sub35_Sub2_7682 = new RsBitsBuffer(5000);
+	public static TCPMessage method3558(byte i) {
+		TCPMessage class282_sub23 = Class158_Sub2.method14356((short) 2048);
+		((TCPMessage) class282_sub23).packet = null;
+		((TCPMessage) class282_sub23).anInt7678 = 0;
+		class282_sub23.buffer = new RsBitsBuffer(5000);
 		return class282_sub23;
 	}
 }

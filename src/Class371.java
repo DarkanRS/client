@@ -155,8 +155,8 @@ public class Class371 {
 
 	public static final void method6353(short i) {
 		Class184 class184 = Class468_Sub20.method12807(2071524191);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4598, class184.aClass432_2283, -585449353);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4598, class184.isaac, -585449353);
+		class282_sub23.buffer.writeByte(0);
 		class184.method3049(class282_sub23, 963665082);
 	}
 

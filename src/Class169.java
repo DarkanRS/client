@@ -51,9 +51,9 @@ public class Class169 {
 
 	static final void method2870(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4596, client.aClass184_7475.aClass432_2283, 1814841723);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string.length() + 1);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4596, client.aClass184_7475.isaac, 1814841723);
+		class282_sub23.buffer.writeByte(string.length() + 1);
+		class282_sub23.buffer.writeString(string);
 		client.aClass184_7475.method3049(class282_sub23, 426449473);
 	}
 
@@ -73,7 +73,7 @@ public class Class169 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644);
 	}
 
-	static final void method2874(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method2874(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 69608151) != null)
 			string = string.substring(0, string.length() - 1);

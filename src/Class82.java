@@ -25,7 +25,7 @@ final class Class82 implements Interface11 {
 		return Class254.method4379(string, 1048776146);
 	}
 
-	static final void method1454(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method1454(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
 		int i_0_ = (class527.intStack[class527.anInt7012 * 1942118537]);
 		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
@@ -36,7 +36,7 @@ final class Class82 implements Interface11 {
 			class118.method1995(i_0_, -1265527536);
 	}
 
-	static final void method1455(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method1455(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 567564004;
 		class118.anInt1330 = (class527.intStack[class527.anInt7012 * 1942118537]) * -636815827;
 		class118.anInt1339 = (class527.intStack[class527.anInt7012 * 1942118537 + 1]) * 207030057;
@@ -49,22 +49,22 @@ final class Class82 implements Interface11 {
 		else
 			class118.aBool1388 = false;
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-			Class92.method1565(-1952846363 * class118.anInt1287, -940537484);
+			Class92.method1565(-1952846363 * class118.idHash, -940537484);
 	}
 
 	static final void method1456(CS2Executor class527, int i) {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7146 >> 3;
 	}
 
-	static void method1457(int i, int i_2_, Class118 class118, Class455 class455, int i_3_, int i_4_, int i_5_) {
+	static void method1457(int i, int i_2_, IComponentDefinitions class118, Class455 class455, int i_3_, int i_4_, int i_5_) {
 		int i_6_ = -963499271 * Class197.NUM_PLAYER_INDICES;
 		int[] is = Class197.PLAYER_INDICES;
 		for (int i_7_ = 0; i_7_ < i_6_; i_7_++) {
 			Player class521_sub1_sub1_sub2_sub1 = client.players[is[i_7_]];
 			if (null != class521_sub1_sub1_sub2_sub1 && class521_sub1_sub1_sub2_sub1.method16126((byte) 69) && !class521_sub1_sub1_sub2_sub1.hidden && (Class84.myPlayer != class521_sub1_sub1_sub2_sub1) && (class521_sub1_sub1_sub2_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
-				Class385 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-				int i_8_ = (int) class385.aFloat4671 / 128 - i / 128;
-				int i_9_ = (int) class385.aFloat4673 / 128 - i_2_ / 128;
+				Vector3 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+				int i_8_ = (int) class385.x / 128 - i / 128;
+				int i_9_ = (int) class385.z / 128 - i_2_ / 128;
 				boolean bool = false;
 				for (int i_10_ = 0; i_10_ < client.anInt7449 * 493536965; i_10_++) {
 					Class6 class6 = client.aClass6Array7452[i_10_];

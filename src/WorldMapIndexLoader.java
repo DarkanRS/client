@@ -160,19 +160,19 @@ public class WorldMapIndexLoader {
 		}
 	}
 
-	static void method3710(Class98 class98, Class118 class118, int i) {
+	static void method3710(Interface class98, IComponentDefinitions class118, int i) {
 		if (null != class118) {
 			if (class118.anInt1288 * 1924549737 != -1) {
-				Class118 class118_10_ = (class98.aClass118Array998[class118.anInt1305 * 2110532063 & 0xffff]);
+				IComponentDefinitions class118_10_ = (class98.components[class118.anInt1305 * 2110532063 & 0xffff]);
 				if (null != class118_10_) {
 					if (class118_10_.aClass118Array1438 == class118_10_.aClass118Array1439) {
-						class118_10_.aClass118Array1439 = (new Class118[class118_10_.aClass118Array1438.length]);
+						class118_10_.aClass118Array1439 = (new IComponentDefinitions[class118_10_.aClass118Array1438.length]);
 						class118_10_.aClass118Array1439[0] = class118;
 						Class503.method8359(class118_10_.aClass118Array1438, 0, class118_10_.aClass118Array1439, 1, 1924549737 * class118.anInt1288);
 						Class503.method8359(class118_10_.aClass118Array1438, 1 + 1924549737 * class118.anInt1288, class118_10_.aClass118Array1439, 1924549737 * class118.anInt1288 + 1, (class118_10_.aClass118Array1438.length - 1924549737 * class118.anInt1288 - 1));
 					} else {
 						int i_11_ = 0;
-						Class118[] class118s;
+						IComponentDefinitions[] class118s;
 						for (class118s = class118_10_.aClass118Array1439; (i_11_ < class118s.length && class118s[i_11_] != class118); i_11_++) {
 							/* empty */
 						}
@@ -183,7 +183,7 @@ public class WorldMapIndexLoader {
 					}
 				}
 			} else {
-				Class118[] class118s = class98.method1617(-1207733107);
+				IComponentDefinitions[] class118s = class98.method1617(-1207733107);
 				int i_12_;
 				for (i_12_ = 0; i_12_ < class118s.length && class118 != class118s[i_12_]; i_12_++) {
 					/* empty */

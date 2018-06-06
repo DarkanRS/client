@@ -29,9 +29,9 @@ public class Class96_Sub19 extends Class96 {
 			i_2_ = 1713842129 * ((Class96_Sub19) this).anInt9401;
 		} else {
 			Animable class521_sub1_sub1_sub2 = Class82.aClass75Array804[-772738915 * ((Class96_Sub19) this).anInt9402].method1342((byte) 70);
-			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			i_0_ = (int) class385.aFloat4671;
-			i_1_ = (int) class385.aFloat4673;
+			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+			i_0_ = (int) class385.x;
+			i_1_ = (int) class385.z;
 			i_2_ = class521_sub1_sub1_sub2.aByte7967;
 		}
 		int i_3_;
@@ -41,9 +41,9 @@ public class Class96_Sub19 extends Class96 {
 			i_4_ = ((Class96_Sub19) this).anInt9408 * -2078663168 + 256;
 		} else {
 			Animable class521_sub1_sub1_sub2 = Class82.aClass75Array804[((Class96_Sub19) this).anInt9400 * 1060287315].method1342((byte) 21);
-			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			i_3_ = (int) class385.aFloat4671;
-			i_4_ = (int) class385.aFloat4673;
+			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+			i_3_ = (int) class385.x;
+			i_4_ = (int) class385.z;
 			if (i_2_ < 0)
 				i_2_ = class521_sub1_sub1_sub2.aByte7967;
 		}
@@ -64,9 +64,9 @@ public class Class96_Sub19 extends Class96 {
 			i_7_ = 1713842129 * ((Class96_Sub19) this).anInt9401;
 		} else {
 			Animable class521_sub1_sub1_sub2 = Class82.aClass75Array804[-772738915 * ((Class96_Sub19) this).anInt9402].method1342((byte) 45);
-			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			i = (int) class385.aFloat4671;
-			i_6_ = (int) class385.aFloat4673;
+			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+			i = (int) class385.x;
+			i_6_ = (int) class385.z;
 			i_7_ = class521_sub1_sub1_sub2.aByte7967;
 		}
 		int i_8_;
@@ -76,9 +76,9 @@ public class Class96_Sub19 extends Class96 {
 			i_9_ = ((Class96_Sub19) this).anInt9408 * -2078663168 + 256;
 		} else {
 			Animable class521_sub1_sub1_sub2 = Class82.aClass75Array804[((Class96_Sub19) this).anInt9400 * 1060287315].method1342((byte) 42);
-			Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			i_8_ = (int) class385.aFloat4671;
-			i_9_ = (int) class385.aFloat4673;
+			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+			i_8_ = (int) class385.x;
+			i_9_ = (int) class385.z;
 			if (i_7_ < 0)
 				i_7_ = class521_sub1_sub1_sub2.aByte7967;
 		}
@@ -126,7 +126,7 @@ public class Class96_Sub19 extends Class96 {
 		((Class96_Sub19) this).anInt9410 = class282_sub35.readUnsignedShort() * 2035189521;
 		((Class96_Sub19) this).anInt9405 = class282_sub35.readUnsignedByte() * 2127134041;
 		((Class96_Sub19) this).anInt9413 = class282_sub35.readUnsignedByte() * 885452997;
-		((Class96_Sub19) this).anInt9409 = class282_sub35.read24BitUnsignedInteger((short) 21871) * -229470439;
+		((Class96_Sub19) this).anInt9409 = class282_sub35.read24BitUnsignedInteger() * -229470439;
 		((Class96_Sub19) this).anInt9412 = class282_sub35.readUnsignedShort() * -1446164009;
 		((Class96_Sub19) this).anInt9399 = class282_sub35.readUnsignedByte() * 2139724261;
 	}
@@ -161,9 +161,9 @@ public class Class96_Sub19 extends Class96 {
 							client.aClass10Array7456[i_18_] = client.aClass10Array7456[1 + i_18_];
 						client.anInt7386 = client.anInt7347 * 23579151;
 						Class184 class184 = Class468_Sub20.method12807(-1089718324);
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4561, class184.aClass432_2283, 1422272717);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class108.method1846(string, -984668828));
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4561, class184.isaac, 1422272717);
+						class282_sub23.buffer.writeByte(ChatLine.getLength(string));
+						class282_sub23.buffer.writeString(string);
 						class184.method3049(class282_sub23, 1742869197);
 						break;
 					}

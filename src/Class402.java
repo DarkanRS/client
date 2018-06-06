@@ -26,9 +26,9 @@ public class Class402 {
 							client.aClass6Array7452[i_4_] = client.aClass6Array7452[1 + i_4_];
 						client.anInt7386 = client.anInt7347 * 23579151;
 						Class184 class184 = Class468_Sub20.method12807(222304163);
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4551, class184.aClass432_2283, 1980188569);
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class108.method1846(string, -1277448115));
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4551, class184.isaac, 1980188569);
+						class282_sub23.buffer.writeByte(ChatLine.getLength(string));
+						class282_sub23.buffer.writeString(string);
 						class184.method3049(class282_sub23, -234662582);
 						break;
 					}
@@ -43,8 +43,8 @@ public class Class402 {
 
 	static final void method6800(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class468_Sub2.method12630(class118, class98, class527, 1465627737);
 	}
 }

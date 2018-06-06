@@ -27,10 +27,10 @@ public class Class134 {
 	void method2327(Class505_Sub1 class505_sub1, Class151 class151) {
 		if (((Class505_Sub1) class505_sub1).aClass384_8348 != null) {
 			method2331(class505_sub1);
-			float f = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[2]);
-			float f_0_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[6]);
-			float f_1_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[10]);
-			float f_2_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[14]);
+			float f = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[2]);
+			float f_0_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[6]);
+			float f_1_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[10]);
+			float f_2_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[14]);
 			try {
 				int i = 0;
 				int i_3_ = 2147483647;
@@ -117,10 +117,10 @@ public class Class134 {
 	void method2329(Class505_Sub1 class505_sub1, Class151 class151) {
 		if (((Class505_Sub1) class505_sub1).aClass384_8348 != null) {
 			method2331(class505_sub1);
-			float f = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[2]);
-			float f_15_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[6]);
-			float f_16_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[10]);
-			float f_17_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[14]);
+			float f = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[2]);
+			float f_15_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[6]);
+			float f_16_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[10]);
+			float f_17_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[14]);
 			try {
 				int i = 0;
 				int i_18_ = 2147483647;
@@ -468,10 +468,10 @@ public class Class134 {
 	void method2335(Class505_Sub1 class505_sub1, Class151 class151) {
 		if (((Class505_Sub1) class505_sub1).aClass384_8348 != null) {
 			method2331(class505_sub1);
-			float f = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[2]);
-			float f_90_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[6]);
-			float f_91_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[10]);
-			float f_92_ = (((Class505_Sub1) class505_sub1).aClass384_8348.aFloatArray4667[14]);
+			float f = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[2]);
+			float f_90_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[6]);
+			float f_91_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[10]);
+			float f_92_ = (((Class505_Sub1) class505_sub1).aClass384_8348.buf[14]);
 			try {
 				int i = 0;
 				int i_93_ = 2147483647;

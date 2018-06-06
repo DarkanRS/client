@@ -336,7 +336,7 @@ public class Class148 {
 		} else {
 			if (null != class109)
 				class109.method1849((byte) -81);
-			Class282_Sub43.method13400(class317, i_24_, i_25_, i_26_, bool, (byte) -46);
+			Class11.method13400(class317, i_24_, i_25_, i_26_, bool, (byte) -46);
 		}
 	}
 
@@ -419,7 +419,7 @@ public class Class148 {
 	}
 
 	public static void method2538(Index class317, int i, int i_27_, int i_28_, boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2) {
-		Class282_Sub43.method13400(class317, i, i_27_, i_28_, bool, (byte) -96);
+		Class11.method13400(class317, i, i_27_, i_28_, bool, (byte) -96);
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = class282_sub15_sub2;
 	}
 
@@ -616,7 +616,7 @@ public class Class148 {
 		if (i_39_ != i_40_) {
 			if (Class169.method2875(-1741204137 * client.anInt7166, -2096796884)) {
 				if (0 == i_40_ && Class260.anInt3223 * 1293234709 != -1) {
-					Class282_Sub43.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, i_39_, false, (byte) -40);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, i_39_, false, (byte) -40);
 					Class468_Sub6.method12658(1298761444);
 					Class260.aBool3220 = false;
 				} else if (i_39_ == 0) {

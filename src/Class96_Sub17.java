@@ -13,7 +13,7 @@ public class Class96_Sub17 extends Class96 {
 		super(class282_sub35);
 		((Class96_Sub17) this).anInt9385 = class282_sub35.readUnsignedShort() * -1930592711;
 		((Class96_Sub17) this).anInt9386 = class282_sub35.readUnsignedShort() * -621881623;
-		((Class96_Sub17) this).aString9387 = class282_sub35.readString(835290554);
+		((Class96_Sub17) this).aString9387 = class282_sub35.readString();
 		((Class96_Sub17) this).anInt9388 = class282_sub35.readInt() * -1475639137;
 		((Class96_Sub17) this).anInt9389 = class282_sub35.readUnsignedShort() * -159499065;
 	}
@@ -26,7 +26,7 @@ public class Class96_Sub17 extends Class96 {
 		Class59.method1161(Class4.anInt35 * 675588453, 31133705 * ((Class96_Sub17) this).anInt9385, ((Class96_Sub17) this).anInt9386 * -2086575783, (Class504.method8389(31133705 * ((Class96_Sub17) this).anInt9385, -2086575783 * ((Class96_Sub17) this).anInt9386, 675588453 * Class4.anInt35, (byte) 93)), ((Class96_Sub17) this).anInt9389 * -469908233, ((Class96_Sub17) this).anInt9388 * 882611039, ((Class96_Sub17) this).aString9387, (short) 20309);
 	}
 
-	static final void method14653(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method14653(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, -271288407) != null)
 			string = string.substring(0, string.length() - 1);

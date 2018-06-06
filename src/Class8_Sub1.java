@@ -55,7 +55,7 @@ public class Class8_Sub1 extends FontRenderer {
 		}
 	}
 
-	Class8_Sub1(HardwareRenderer class505_sub3, Class414 class414, Class91[] class91s, int[] is, int[] is_12_) {
+	Class8_Sub1(HardwareRenderer class505_sub3, FontMetrics class414, Class91[] class91s, int[] is, int[] is_12_) {
 		super(class505_sub3, class414);
 		((Class8_Sub1) this).aClass505_Sub3_8513 = class505_sub3;
 		((Class8_Sub1) this).anIntArray8511 = is;

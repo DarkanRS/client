@@ -134,7 +134,7 @@ public class IndexReference {
 		if (i_1_ == -1)
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.aClass331_3535.method5918(i_0_, -559215225).method15212((char) i_1_, (byte) 13);
+			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_0_, -559215225).method15212((char) i_1_, (byte) 13);
 	}
 
 	static final void method1784(CS2Executor class527, byte i) {
@@ -144,6 +144,6 @@ public class IndexReference {
 			class513 = class527.aClass513_6994;
 		else
 			class513 = class527.aClass513_7007;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.aClass98_10324), i_2_, -1, (byte) 1) ? 1 : 0;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.inter), i_2_, -1, (byte) 1) ? 1 : 0;
 	}
 }

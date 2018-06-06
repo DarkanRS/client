@@ -129,7 +129,7 @@ public class Class278_Sub1 extends Class278 {
 		}
 	}
 
-	static void method13448(Class118 class118, int i, int i_12_, int i_13_) {
+	static void method13448(IComponentDefinitions class118, int i, int i_12_, int i_13_) {
 		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, -1375447309);
 		if (class119 != null) {
 			Renderers.SOFTWARE_RENDERER.r(i, i_12_, i + 1506818197 * class118.anInt1301, i_12_ + class118.anInt1429 * -492594917);
@@ -150,7 +150,7 @@ public class Class278_Sub1 extends Class278 {
 			Class100.aClass253_1008.method4335();
 	}
 
-	static final void method13450(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method13450(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_15_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		class118.aBool1357 = 1 == i_15_;
 		Class109.method1858(class118, (byte) 41);

@@ -14,7 +14,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -17571);
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(1060653483);
-		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString(856431251);
+		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
 	}
 
 	void method12208(RsByteBuffer class282_sub35) {
@@ -22,7 +22,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -25078);
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(1948051444);
-		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString(15294387);
+		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
 	}
 
 	void method12204(Class282_Sub4 class282_sub4, int i) {
@@ -42,7 +42,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -30046);
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(-3036577);
-		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString(1404627570);
+		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
 	}
 
 	void method12207(RsByteBuffer class282_sub35) {
@@ -50,7 +50,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -300);
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(270516625);
-		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString(80475538);
+		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
 	}
 
 	void method12205(Class282_Sub4 class282_sub4) {
@@ -62,8 +62,8 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 
 	static final void method15475(CS2Executor class527, int i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 19);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 19);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class295.method5291(class118, class98, class527, 464841858);
 	}
 

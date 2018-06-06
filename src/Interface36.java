@@ -13,7 +13,7 @@ public interface Interface36 {
 
 	public boolean method221(String string);
 
-	public boolean method222(String string, int i);
+	public boolean loadLibrary(String string, int i);
 
 	public boolean method223(String string);
 

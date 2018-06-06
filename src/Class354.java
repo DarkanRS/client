@@ -16,7 +16,7 @@ public final class Class354 {
 
 	static final void method6212(CS2Executor class527, byte i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 87);
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 87);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 985215637 * class118.anInt1320;
 	}
 

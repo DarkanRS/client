@@ -243,12 +243,12 @@ public class Class13 {
 		}
 	}
 
-	static final void method501(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method501(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class118.aBool1322 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) -70);
 	}
 
-	static final void method502(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method502(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, 2090816514);
 		if (null != is)
@@ -273,10 +273,10 @@ public class Class13 {
 	}
 
 	static final void method504(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1176728971 * Class517.anInt5904;
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1176728971 * CS2Runner.anInt5904;
 	}
 
-	static final void method505(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method505(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		int i_63_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_63_, (byte) 0);
@@ -286,7 +286,7 @@ public class Class13 {
 			class118.method1995(i_63_, -1265527536);
 	}
 
-	static final void method506(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method506(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		class118.anInt1376 = -280394239 * (class527.intStack[1942118537 * class527.anInt7012]);
 		class118.anInt1314 = (1004789833 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]));

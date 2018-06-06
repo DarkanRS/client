@@ -32,15 +32,15 @@ public abstract class Class149 {
 
 	static final void method2563(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, true, 0, class527, (byte) -16);
 	}
 
 	static final void method2564(CS2Executor class527, byte i) {
 		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_13_, (byte) 82);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_13_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_13_, (byte) 82);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_13_ >> 16];
 		Class44.method910(class118, class98, class527, 1996171820);
 	}
 
@@ -62,19 +62,19 @@ public abstract class Class149 {
 			client.aByte7458 = (byte) -4;
 		else {
 			client.aByte7458 = (byte) -1;
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4624, client.aClass184_7218.aClass432_2283, 1473933655);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
-			int i_17_ = (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13061(-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_17_, -1911140874);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4624, client.aClass184_7218.isaac, 1473933655);
+			class282_sub23.buffer.writeByte(0);
+			int i_17_ = (-1990677291 * class282_sub23.buffer.index);
+			class282_sub23.buffer.writeString(string);
+			class282_sub23.buffer.method13061(-1990677291 * (class282_sub23.buffer.index) - i_17_, -1911140874);
 			client.aClass184_7218.method3049(class282_sub23, -861728727);
 		}
 	}
 
 	static final void method2567(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class463.method7729(class118, class98, class527, 1735506761);
 	}
 

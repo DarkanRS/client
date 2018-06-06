@@ -5,7 +5,7 @@
 public class ia extends FontRenderer implements Interface40 {
 	long nativeid;
 
-	ia(ja var_ja, ba var_ba, Class414 class414, Class91[] class91s, NativeSprite[] class160s) {
+	ia(ja var_ja, ba var_ba, FontMetrics class414, Class91[] class91s, NativeSprite[] class160s) {
 		super(var_ja, class414);
 		byte[][] is = new byte[class91s.length][];
 		int[] is_0_ = new int[class91s.length];

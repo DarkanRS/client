@@ -236,7 +236,7 @@ public class Class250 {
 				if (class521_sub1_sub1_sub2.method15887(141891001)) {
 					Class163 class163 = class521_sub1_sub1_sub2.method15811(-709125350);
 					if (null != class163 && (client.anInt7415 * -854034157 < client.anInt7366 * 432489217)) {
-						client.anIntArray7263[client.anInt7415 * -854034157] = ((Class288.aClass414_3438.method6946(class163.method2829(-766550436), -1967833701)) / 2);
+						client.anIntArray7263[client.anInt7415 * -854034157] = ((Class288.aClass414_3438.getWidthNoSprites(class163.method2829(-766550436), -1967833701)) / 2);
 						client.anIntArray7420[client.anInt7415 * -854034157] = (int) client.aFloatArray7292[0];
 						client.anIntArray7417[-854034157 * client.anInt7415] = (int) client.aFloatArray7292[1];
 						client.aClass163Array7419[(client.anInt7415 * -854034157)] = class163;
@@ -490,12 +490,12 @@ public class Class250 {
 								}
 								FontRenderer class8 = Renderers.FONT_RENDERER;
 								FontRenderer class8_85_ = Renderers.FONT_RENDERER;
-								Class414 class414 = Class282_Sub17_Sub2.aClass414_9933;
-								Class414 class414_86_ = Class282_Sub17_Sub2.aClass414_9933;
+								FontMetrics class414 = Class282_Sub17_Sub2.aClass414_9933;
+								FontMetrics class414_86_ = Class282_Sub17_Sub2.aClass414_9933;
 								int i_87_ = class228.anInt2849 * -243009855;
 								if (i_87_ >= 0) {
 									FontRenderer class8_88_ = ((FontRenderer) (Class487.aClass378_5752.method6426(client.anInterface35_7206, i_87_, true, class228.aBool2838, -2104806064)));
-									Class414 class414_89_ = (Class487.aClass378_5752.method6415(client.anInterface35_7206, i_87_, 849439454));
+									FontMetrics class414_89_ = (Class487.aClass378_5752.method6415(client.anInterface35_7206, i_87_, 849439454));
 									if (class8_88_ != null && class414_89_ != null) {
 										class8 = class8_88_;
 										class414 = class414_89_;
@@ -505,7 +505,7 @@ public class Class250 {
 									i_87_ = -243009855 * class228_48_.anInt2849;
 									if (i_87_ >= 0) {
 										FontRenderer class8_90_ = ((FontRenderer) (Class487.aClass378_5752.method6426(client.anInterface35_7206, i_87_, true, class228_48_.aBool2838, -2122773037)));
-										Class414 class414_91_ = (Class487.aClass378_5752.method6415(client.anInterface35_7206, i_87_, -1865476378));
+										FontMetrics class414_91_ = (Class487.aClass378_5752.method6415(client.anInterface35_7206, i_87_, -1865476378));
 										if (class8_90_ != null && null != class414_91_) {
 											class8_85_ = class8_90_;
 											class414_86_ = class414_91_;
@@ -517,10 +517,10 @@ public class Class250 {
 								boolean bool_93_ = false;
 								int i_94_ = 0;
 								String string_95_ = (class228.method3844((class521_sub1_sub1_sub2.anIntArray10329[i_43_]), (byte) -109));
-								int i_96_ = class414.method6946(string_95_, -1967833701);
+								int i_96_ = class414.getWidthNoSprites(string_95_, -1967833701);
 								if (class228_48_ != null) {
 									string = (class228_48_.method3844((class521_sub1_sub1_sub2.anIntArray10332[i_43_]), (byte) -122));
-									i_94_ = class414_86_.method6946(string, -1967833701);
+									i_94_ = class414_86_.getWidthNoSprites(string, -1967833701);
 								}
 								int i_97_ = 0;
 								int i_98_ = 0;
@@ -743,7 +743,7 @@ public class Class250 {
 				}
 				if (i_148_ == 4) {
 					int i_150_ = 150 - (client.aClass163Array7419[i_137_].method2833(-315932327) * 150 / client.aClass163Array7419[i_137_].method2832(744941042));
-					int i_151_ = i_150_ * (Class288.aClass414_3438.method6946(string, -1967833701) + 100) / 150;
+					int i_151_ = i_150_ * (Class288.aClass414_3438.getWidthNoSprites(string, -1967833701) + 100) / 150;
 					Renderers.SOFTWARE_RENDERER.o(i + i_138_ - 50, i_15_, 50 + (i + i_138_), i_15_ + i_17_);
 					Class285.aClass8_3394.renderText(string, 50 + (i + i_138_) - i_151_, i_139_ + i_15_, i_147_, -16777216, -418109423);
 					Renderers.SOFTWARE_RENDERER.r(i, i_15_, i_16_ + i, i_17_ + i_15_);
@@ -768,6 +768,6 @@ public class Class250 {
 	static final void method4299(CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		if ((class527.intStack[class527.anInt7012 * 1942118537]) == (class527.intStack[1 + class527.anInt7012 * 1942118537]))
-			class527.instrPtr += (-1051529003 * (class527.unknown[class527.instrPtr * 301123709]));
+			class527.instrPtr += (-1051529003 * (class527.intOpValues[class527.instrPtr * 301123709]));
 	}
 }

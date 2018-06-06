@@ -61,11 +61,11 @@ public class WorldMapAreaDefs {
 		else if (2 == i)
 			anInt2757 = stream.readBigSmart() * 953100891;
 		else if (i == 3)
-			areaName = stream.readString(1816271322);
+			areaName = stream.readString();
 		else if (4 == i)
-			anInt2720 = stream.read24BitUnsignedInteger((short) 13167) * 646948849;
+			anInt2720 = stream.read24BitUnsignedInteger() * 646948849;
 		else if (5 == i)
-			anInt2721 = stream.read24BitUnsignedInteger((short) 20127) * -1023529093;
+			anInt2721 = stream.read24BitUnsignedInteger() * -1023529093;
 		else if (i == 6)
 			anInt2722 = stream.readUnsignedByte() * -1396277445;
 		else if (i == 7) {
@@ -86,7 +86,7 @@ public class WorldMapAreaDefs {
 			((WorldMapAreaDefs) this).anInt2734 = stream.readInt() * 851050709;
 			((WorldMapAreaDefs) this).anInt2735 = stream.readInt() * 467386983;
 		} else if (i >= 10 && i <= 14)
-			aStringArray2740[i - 10] = stream.readString(138200082);
+			aStringArray2740[i - 10] = stream.readString();
 		else if (15 == i) {
 			int i_4_ = stream.readUnsignedByte();
 			anIntArray2717 = new int[2 * i_4_];
@@ -103,7 +103,7 @@ public class WorldMapAreaDefs {
 		} else if (i == 16)
 			aBool2742 = false;
 		else if (17 == i)
-			aString2732 = stream.readString(-318635961);
+			aString2732 = stream.readString();
 		else if (i == 18)
 			((WorldMapAreaDefs) this).anInt2733 = stream.readBigSmart() * -868666115;
 		else if (19 == i)
@@ -136,10 +136,10 @@ public class WorldMapAreaDefs {
 			}
 			for (int i_11_ = 0; i_11_ < i_9_; i_11_++) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				int i_12_ = stream.read24BitUnsignedInteger((short) 1908);
+				int i_12_ = stream.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(stream.readString(-189509374));
+					class282 = new Class282_Sub47(stream.readString());
 				else
 					class282 = new Class282_Sub38(stream.readInt());
 				((WorldMapAreaDefs) this).aClass465_2737.method7765(class282, (long) i_12_);
@@ -343,11 +343,11 @@ public class WorldMapAreaDefs {
 	static final void method3737(CS2Executor class527, short i) {
 		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 0) {
 			if (i < 2048)
-				class527.instrPtr += (-1051529003 * (class527.unknown[class527.instrPtr * 301123709]));
+				class527.instrPtr += (-1051529003 * (class527.intOpValues[class527.instrPtr * 301123709]));
 		}
 	}
 
-	static final void method3738(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method3738(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
 		int i_73_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_74_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);

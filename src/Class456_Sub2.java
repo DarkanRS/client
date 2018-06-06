@@ -38,7 +38,7 @@ public class Class456_Sub2 extends Class456 {
 		Class213.method3662(class518, i, ((Class456_Sub2) this).aClass521_Sub1_7890, (short) 255);
 	}
 
-	static void method12680(GraphicalRenderer class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, FontRenderer class8, Class414 class414, String string, int i_5_) {
+	static void method12680(GraphicalRenderer class505, int i, int i_1_, int i_2_, int i_3_, int i_4_, FontRenderer class8, FontMetrics class414, String string, int i_5_) {
 		int i_6_ = (255 - Class301.anInt3556 * 233097173 - Class20.anInt156 * -1454754391);
 		if (i_6_ < 0)
 			i_6_ = 0;

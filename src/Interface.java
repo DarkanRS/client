@@ -2,72 +2,72 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class98 {
-	Class118[] aClass118Array997;
-	public Class118[] aClass118Array998;
+public class Interface {
+	IComponentDefinitions[] aClass118Array997;
+	public IComponentDefinitions[] components;
 	public boolean aBool999;
 
-	public Class118[] method1615() {
-		if (((Class98) this).aClass118Array997 == null) {
-			int i = aClass118Array998.length;
-			((Class98) this).aClass118Array997 = new Class118[i];
-			System.arraycopy(aClass118Array998, 0, ((Class98) this).aClass118Array997, 0, aClass118Array998.length);
+	public IComponentDefinitions[] method1615() {
+		if (((Interface) this).aClass118Array997 == null) {
+			int i = components.length;
+			((Interface) this).aClass118Array997 = new IComponentDefinitions[i];
+			System.arraycopy(components, 0, ((Interface) this).aClass118Array997, 0, components.length);
 		}
-		return ((Class98) this).aClass118Array997;
+		return ((Interface) this).aClass118Array997;
 	}
 
-	public Class118[] method1616(int i) {
-		return (((Class98) this).aClass118Array997 == null ? aClass118Array998 : ((Class98) this).aClass118Array997);
+	public IComponentDefinitions[] method1616(int i) {
+		return (((Interface) this).aClass118Array997 == null ? components : ((Interface) this).aClass118Array997);
 	}
 
-	public Class118[] method1617(int i) {
-		if (((Class98) this).aClass118Array997 == null) {
-			int i_0_ = aClass118Array998.length;
-			((Class98) this).aClass118Array997 = new Class118[i_0_];
-			System.arraycopy(aClass118Array998, 0, ((Class98) this).aClass118Array997, 0, aClass118Array998.length);
+	public IComponentDefinitions[] method1617(int i) {
+		if (((Interface) this).aClass118Array997 == null) {
+			int i_0_ = components.length;
+			((Interface) this).aClass118Array997 = new IComponentDefinitions[i_0_];
+			System.arraycopy(components, 0, ((Interface) this).aClass118Array997, 0, components.length);
 		}
-		return ((Class98) this).aClass118Array997;
+		return ((Interface) this).aClass118Array997;
 	}
 
-	public Class118 method1618(int i, byte i_1_) {
-		if (aClass118Array998[0].anInt1287 * -1952846363 >>> 16 != i >>> 16)
+	public IComponentDefinitions method1618(int i, byte i_1_) {
+		if (components[0].idHash * -1952846363 >>> 16 != i >>> 16)
 			throw new IllegalArgumentException();
-		return aClass118Array998[i & 0xffff];
+		return components[i & 0xffff];
 	}
 
-	public Class118[] method1619() {
-		if (((Class98) this).aClass118Array997 == null) {
-			int i = aClass118Array998.length;
-			((Class98) this).aClass118Array997 = new Class118[i];
-			System.arraycopy(aClass118Array998, 0, ((Class98) this).aClass118Array997, 0, aClass118Array998.length);
+	public IComponentDefinitions[] method1619() {
+		if (((Interface) this).aClass118Array997 == null) {
+			int i = components.length;
+			((Interface) this).aClass118Array997 = new IComponentDefinitions[i];
+			System.arraycopy(components, 0, ((Interface) this).aClass118Array997, 0, components.length);
 		}
-		return ((Class98) this).aClass118Array997;
+		return ((Interface) this).aClass118Array997;
 	}
 
-	public Class118[] method1620() {
-		if (((Class98) this).aClass118Array997 == null) {
-			int i = aClass118Array998.length;
-			((Class98) this).aClass118Array997 = new Class118[i];
-			System.arraycopy(aClass118Array998, 0, ((Class98) this).aClass118Array997, 0, aClass118Array998.length);
+	public IComponentDefinitions[] method1620() {
+		if (((Interface) this).aClass118Array997 == null) {
+			int i = components.length;
+			((Interface) this).aClass118Array997 = new IComponentDefinitions[i];
+			System.arraycopy(components, 0, ((Interface) this).aClass118Array997, 0, components.length);
 		}
-		return ((Class98) this).aClass118Array997;
+		return ((Interface) this).aClass118Array997;
 	}
 
-	Class98(boolean bool, Class118[] class118s) {
-		aClass118Array998 = class118s;
+	Interface(boolean bool, IComponentDefinitions[] class118s) {
+		components = class118s;
 		aBool999 = bool;
 	}
 
-	public Class118 method1621(int i) {
-		if (aClass118Array998[0].anInt1287 * -1952846363 >>> 16 != i >>> 16)
+	public IComponentDefinitions method1621(int i) {
+		if (components[0].idHash * -1952846363 >>> 16 != i >>> 16)
 			throw new IllegalArgumentException();
-		return aClass118Array998[i & 0xffff];
+		return components[i & 0xffff];
 	}
 
-	public Class118 method1622(int i) {
-		if (aClass118Array998[0].anInt1287 * -1952846363 >>> 16 != i >>> 16)
+	public IComponentDefinitions method1622(int i) {
+		if (components[0].idHash * -1952846363 >>> 16 != i >>> 16)
 			throw new IllegalArgumentException();
-		return aClass118Array998[i & 0xffff];
+		return components[i & 0xffff];
 	}
 
 	public static final void method1623(int i) {
@@ -102,11 +102,11 @@ public class Class98 {
 							if ((Class84.myPlayer.aByte7967) == i_5_) {
 								int i_6_ = ((-19172361 * (((Class268) class268).anInt3298) & 0xff) << 9);
 								int i_7_ = Class84.myPlayer.method15805(828768449) << 8;
-								Class385 class385 = Class84.myPlayer.method11166().aClass385_3595;
+								Vector3 class385 = Class84.myPlayer.method11166().aClass385_3595;
 								int i_8_ = ((((Class268) class268).anInt3298 * -19172361) >> 16 & 0xff);
-								int i_9_ = (256 + (i_8_ << 9) - (int) class385.aFloat4671 + i_7_);
+								int i_9_ = (256 + (i_8_ << 9) - (int) class385.x + i_7_);
 								int i_10_ = (-19172361 * (((Class268) class268).anInt3298) >> 8 & 0xff);
-								int i_11_ = i_7_ + (256 + (i_10_ << 9) - (int) class385.aFloat4673);
+								int i_11_ = i_7_ + (256 + (i_10_ << 9) - (int) class385.z);
 								int i_12_ = Math.abs(i_9_) + Math.abs(i_11_) - 512;
 								if (i_12_ > i_6_) {
 									((Class268) class268).anInt3297 = 1176901669;
@@ -163,13 +163,13 @@ public class Class98 {
 				if (Class260.aClass282_Sub15_Sub2_3231 != null)
 					Class217.method3690(IndexLoaders.MUSIC_INDEX, Class260.anInt3223 * 1293234709, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(1791834725), false, Class260.aClass282_Sub15_Sub2_3231, 62181845);
 				else
-					Class282_Sub43.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
+					Class11.method13400(IndexLoaders.MUSIC_INDEX, 1293234709 * Class260.anInt3223, 0, Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-786685196), false, (byte) -3);
 			}
 			Class260.aBool3220 = false;
 			Class260.aClass282_Sub15_Sub2_3231 = null;
 		} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8228.method12714(-597103482) != 0 && Class260.anInt3223 * 1293234709 != -1 && !Class116.method1966(1621182156)) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4529, client.aClass184_7475.aClass432_2283, 61949935);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeInt(1293234709 * Class260.anInt3223);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4529, client.aClass184_7475.isaac, 61949935);
+			class282_sub23.buffer.writeInt(1293234709 * Class260.anInt3223);
 			client.aClass184_7475.method3049(class282_sub23, -952420572);
 			Class260.anInt3223 = -919080253;
 		}
@@ -177,8 +177,8 @@ public class Class98 {
 
 	static final void method1624(CS2Executor class527, int i) {
 		int i_16_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_16_, (byte) 24);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_16_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_16_, (byte) 24);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_16_ >> 16];
 		Class17.method569(class118, class98, class527, -575655435);
 	}
 

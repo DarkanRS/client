@@ -165,7 +165,7 @@ public final class Class75 {
 		default:
 			anInt739 = -422272731;
 		}
-		class282_sub35.readString(-463148700);
+		class282_sub35.readString();
 	}
 
 	boolean method1348() {
@@ -188,8 +188,8 @@ public final class Class75 {
 
 	static final void method1349(CS2Executor class527, int i) {
 		int i_18_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_18_, (byte) 104);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_18_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_18_, (byte) 104);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_18_ >> 16];
 		Class174.method2955(class118, class98, class527, (byte) 0);
 	}
 

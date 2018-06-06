@@ -132,7 +132,7 @@ public class Class240 {
 				anIntArray2961[i_19_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2969[i_19_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2970[i_19_] = class282_sub35.readInt();
-				aStringArray2971[i_19_] = class282_sub35.readString(765549549);
+				aStringArray2971[i_19_] = class282_sub35.readString();
 			}
 		} else if (i == 19) {
 			int i_20_ = class282_sub35.readUnsignedByte();
@@ -144,7 +144,7 @@ public class Class240 {
 				anIntArray2964[i_21_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2967[i_21_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2974[i_21_] = class282_sub35.readInt();
-				aStringArray2975[i_21_] = class282_sub35.readString(-562922079);
+				aStringArray2975[i_21_] = class282_sub35.readString();
 			}
 		} else if (i == 249) {
 			int i_22_ = class282_sub35.readUnsignedByte();
@@ -154,10 +154,10 @@ public class Class240 {
 			}
 			for (int i_24_ = 0; i_24_ < i_22_; i_24_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_25_ = class282_sub35.read24BitUnsignedInteger((short) 29962);
+				int i_25_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(-375319548));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class240) this).aClass465_2972.method7765(class282, (long) i_25_);
@@ -307,7 +307,7 @@ public class Class240 {
 				anIntArray2961[i_43_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2969[i_43_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2970[i_43_] = class282_sub35.readInt();
-				aStringArray2971[i_43_] = class282_sub35.readString(1451627861);
+				aStringArray2971[i_43_] = class282_sub35.readString();
 			}
 		} else if (i == 19) {
 			int i_44_ = class282_sub35.readUnsignedByte();
@@ -319,7 +319,7 @@ public class Class240 {
 				anIntArray2964[i_45_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2967[i_45_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2974[i_45_] = class282_sub35.readInt();
-				aStringArray2975[i_45_] = class282_sub35.readString(2017854459);
+				aStringArray2975[i_45_] = class282_sub35.readString();
 			}
 		} else if (i == 249) {
 			int i_46_ = class282_sub35.readUnsignedByte();
@@ -329,10 +329,10 @@ public class Class240 {
 			}
 			for (int i_48_ = 0; i_48_ < i_46_; i_48_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_49_ = class282_sub35.read24BitUnsignedInteger((short) 4505);
+				int i_49_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(1090369711));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class240) this).aClass465_2972.method7765(class282, (long) i_49_);
@@ -459,7 +459,7 @@ public class Class240 {
 				anIntArray2961[i_66_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2969[i_66_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2970[i_66_] = class282_sub35.readInt();
-				aStringArray2971[i_66_] = class282_sub35.readString(277681951);
+				aStringArray2971[i_66_] = class282_sub35.readString();
 			}
 		} else if (i == 19) {
 			int i_67_ = class282_sub35.readUnsignedByte();
@@ -471,7 +471,7 @@ public class Class240 {
 				anIntArray2964[i_68_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2967[i_68_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2974[i_68_] = class282_sub35.readInt();
-				aStringArray2975[i_68_] = class282_sub35.readString(-327101983);
+				aStringArray2975[i_68_] = class282_sub35.readString();
 			}
 		} else if (i == 249) {
 			int i_69_ = class282_sub35.readUnsignedByte();
@@ -481,10 +481,10 @@ public class Class240 {
 			}
 			for (int i_71_ = 0; i_71_ < i_69_; i_71_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_72_ = class282_sub35.read24BitUnsignedInteger((short) 20301);
+				int i_72_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(-297164470));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class240) this).aClass465_2972.method7765(class282, (long) i_72_);
@@ -582,7 +582,7 @@ public class Class240 {
 				anIntArray2961[i_87_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2969[i_87_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2970[i_87_] = class282_sub35.readInt();
-				aStringArray2971[i_87_] = class282_sub35.readString(601097070);
+				aStringArray2971[i_87_] = class282_sub35.readString();
 			}
 		} else if (i == 19) {
 			int i_88_ = class282_sub35.readUnsignedByte();
@@ -594,7 +594,7 @@ public class Class240 {
 				anIntArray2964[i_89_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2967[i_89_] = class282_sub35.readInt();
 				((Class240) this).anIntArray2974[i_89_] = class282_sub35.readInt();
-				aStringArray2975[i_89_] = class282_sub35.readString(1074572976);
+				aStringArray2975[i_89_] = class282_sub35.readString();
 			}
 		} else if (i == 249) {
 			int i_90_ = class282_sub35.readUnsignedByte();
@@ -604,10 +604,10 @@ public class Class240 {
 			}
 			for (int i_92_ = 0; i_92_ < i_90_; i_92_++) {
 				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_93_ = class282_sub35.read24BitUnsignedInteger((short) 4404);
+				int i_93_ = class282_sub35.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString(242580108));
+					class282 = new Class282_Sub47(class282_sub35.readString());
 				else
 					class282 = new Class282_Sub38(class282_sub35.readInt());
 				((Class240) this).aClass465_2972.method7765(class282, (long) i_93_);
@@ -861,7 +861,7 @@ public class Class240 {
 		return class282_sub38.anInt8002 * -570797415;
 	}
 
-	static final void method4136(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method4136(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 718441711) != null)
 			string = string.substring(0, string.length() - 1);

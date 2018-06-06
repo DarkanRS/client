@@ -42,56 +42,56 @@ public class Class151 {
 		}
 	}
 
-	static void method2590(Class118 class118, byte i) {
+	static void method2590(IComponentDefinitions class118, byte i) {
 		if (client.aBool7344) {
 			if (class118.anObjectArray1393 != null) {
-				Class118 class118_2_ = Index.method5694(Class7.anInt56 * 728544879, client.anInt7345 * -1673073865, -1264111799);
+				IComponentDefinitions class118_2_ = Index.method5694(Class7.anInt56 * 728544879, client.anInt7345 * -1673073865, -1264111799);
 				if (class118_2_ != null) {
-					Class282_Sub43 class282_sub43 = new Class282_Sub43();
-					class282_sub43.aClass118_8053 = class118;
+					HookRequest class282_sub43 = new HookRequest();
+					class282_sub43.iComponentDefs = class118;
 					class282_sub43.aClass118_8057 = class118_2_;
-					class282_sub43.anObjectArray8054 = class118.anObjectArray1393;
-					Class96_Sub4.method13790(class282_sub43, 1791224764);
+					class282_sub43.params = class118.anObjectArray1393;
+					Class96_Sub4.executeHookInner200k(class282_sub43, 1791224764);
 				}
 			}
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4573, client.aClass184_7475.aClass432_2283, 891007251);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE128(class118.anInt1288 * 1924549737, -1183932171);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(client.anInt7345 * -1673073865, (short) -9723);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE128(class118.anInt1426 * -56249735, -1183932171);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt(-1952846363 * class118.anInt1287, (byte) 89);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeIntV2(Class7.anInt56 * 728544879, (byte) 104);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(client.anInt7346 * -1555739329, (short) -1117);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4573, client.aClass184_7475.isaac, 891007251);
+			class282_sub23.buffer.writeShortLE128(class118.anInt1288 * 1924549737, -1183932171);
+			class282_sub23.buffer.writeShortLE(client.anInt7345 * -1673073865, (short) -9723);
+			class282_sub23.buffer.writeShortLE128(class118.anInt1426 * -56249735, -1183932171);
+			class282_sub23.buffer.writeLEInt(-1952846363 * class118.idHash, (byte) 89);
+			class282_sub23.buffer.writeIntV2(Class7.anInt56 * 728544879, (byte) 104);
+			class282_sub23.buffer.writeShortLE(client.anInt7346 * -1555739329, (short) -1117);
 			client.aClass184_7475.method3049(class282_sub23, 656208756);
 		}
 	}
 
-	static final void method2591(Class118[] class118s, int i, byte i_3_) {
+	static final void method2591(IComponentDefinitions[] class118s, int i, byte i_3_) {
 		for (int i_4_ = 0; i_4_ < class118s.length; i_4_++) {
-			Class118 class118 = class118s[i_4_];
+			IComponentDefinitions class118 = class118s[i_4_];
 			if (null != class118) {
 				if (0 == class118.anInt1268 * -2131393857) {
 					if (null != class118.aClass118Array1439)
 						method2591(class118.aClass118Array1439, i, (byte) -28);
-					Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.anInt1287))));
+					Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.idHash))));
 					if (class282_sub44 != null)
 						Class383.method6514((587626901 * class282_sub44.anInt8063), i, -138211954);
 				}
 				if (0 == i && class118.anObjectArray1421 != null) {
-					Class282_Sub43 class282_sub43 = new Class282_Sub43();
-					class282_sub43.aClass118_8053 = class118;
-					class282_sub43.anObjectArray8054 = class118.anObjectArray1421;
-					Class96_Sub4.method13790(class282_sub43, 506526261);
+					HookRequest class282_sub43 = new HookRequest();
+					class282_sub43.iComponentDefs = class118;
+					class282_sub43.params = class118.anObjectArray1421;
+					Class96_Sub4.executeHookInner200k(class282_sub43, 506526261);
 				}
 				if (1 == i && null != class118.anObjectArray1346) {
 					if (class118.anInt1288 * 1924549737 >= 0) {
-						Class118 class118_5_ = Class117.method1981((class118.anInt1287 * -1952846363), (byte) 87);
+						IComponentDefinitions class118_5_ = Class117.method1981((class118.idHash * -1952846363), (byte) 87);
 						if (null == class118_5_ || null == class118_5_.aClass118Array1438 || (1924549737 * class118.anInt1288 >= class118_5_.aClass118Array1438.length) || class118 != (class118_5_.aClass118Array1438[class118.anInt1288 * 1924549737]))
 							continue;
 					}
-					Class282_Sub43 class282_sub43 = new Class282_Sub43();
-					class282_sub43.aClass118_8053 = class118;
-					class282_sub43.anObjectArray8054 = class118.anObjectArray1346;
-					Class96_Sub4.method13790(class282_sub43, 2094989397);
+					HookRequest class282_sub43 = new HookRequest();
+					class282_sub43.iComponentDefs = class118;
+					class282_sub43.params = class118.anObjectArray1346;
+					Class96_Sub4.executeHookInner200k(class282_sub43, 2094989397);
 				}
 			}
 		}
@@ -107,7 +107,7 @@ public class Class151 {
 		}
 	}
 
-	static final void method2593(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method2593(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1647551269) != null)
 			string = string.substring(0, string.length() - 1);
@@ -149,8 +149,8 @@ public class Class151 {
 
 	static final void method2595(CS2Executor class527, int i) {
 		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_9_, (byte) 76);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_9_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 76);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_9_ >> 16];
 		Class380.method6453(class118, class98, class527, -1649840188);
 	}
 }

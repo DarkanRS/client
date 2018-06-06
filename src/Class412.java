@@ -351,9 +351,9 @@ public class Class412 {
 		}
 	}
 
-	static void method6934(Class294 class294, Class384 class384, int i, int i_30_, byte i_31_) {
+	static void method6934(Matrix44Var class294, Matrix44Arr class384, int i, int i_30_, byte i_31_) {
 		if (Class20.aClass384_158 == null)
-			Class20.aClass384_158 = new Class384(class384);
+			Class20.aClass384_158 = new Matrix44Arr(class384);
 		else
 			Class20.aClass384_158.method6562(class384);
 		Class20.aClass294_155.method5209(class294);

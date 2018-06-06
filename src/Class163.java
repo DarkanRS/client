@@ -62,9 +62,9 @@ public class Class163 {
 		return ((Class163) this).anInt2030 * -1892593353;
 	}
 
-	static int method2840(Class282_Sub50_Sub15 class282_sub50_sub15, Class414 class414, int i) {
+	static int method2840(Class282_Sub50_Sub15 class282_sub50_sub15, FontMetrics class414, int i) {
 		String string = Class75.method1354(class282_sub50_sub15, -938758900);
-		return class414.method6947(string, Class115.aClass160Array1248, 1478525027);
+		return class414.getWidth(string, Class115.aClass160Array1248);
 	}
 
 	static void method2841(CS2Executor class527, int i) {
@@ -100,10 +100,10 @@ public class Class163 {
 		}
 	}
 
-	public static Class414 method2845(Index class317, int i, byte i_12_) {
+	public static FontMetrics method2845(Index class317, int i, byte i_12_) {
 		byte[] is = class317.getFile(i, -48187812);
 		if (is == null)
 			return null;
-		return new Class414(is);
+		return new FontMetrics(is);
 	}
 }

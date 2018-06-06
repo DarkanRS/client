@@ -168,6 +168,6 @@ public final class Class442 {
 
 	static final void method7403(int i, int i_18_, int i_19_, boolean bool, int i_20_) {
 		if (Class456_Sub3.method12682(i, null, 1896916428))
-			InteractableObject.method16099((Class468_Sub8.aClass98Array7889[i].aClass118Array998), -1, i_18_, i_19_, bool, (byte) 60);
+			InteractableObject.method16099((Class468_Sub8.aClass98Array7889[i].components), -1, i_18_, i_19_, bool, (byte) 60);
 	}
 }

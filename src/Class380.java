@@ -90,7 +90,7 @@ public class Class380 implements Iterator {
 
 	static final void method6449(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (1 == class118.anInt1329 * 2131324949 ? class118.anInt1330 * -402732635 : -1);
 	}
 
@@ -105,12 +105,12 @@ public class Class380 implements Iterator {
 
 	static final void method6452(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class295.method5291(class118, class98, class527, 989451427);
 	}
 
-	static final void method6453(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6453(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		int[] is = Class96_Sub14.method14642(string, class527, 1022957959);
 		if (is != null)

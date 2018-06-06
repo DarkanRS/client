@@ -78,7 +78,7 @@ public class Class226 implements Interface46 {
 
 	static final void method3803(CS2Executor class527, short i) {
 		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class108 class108 = Class180.method3032(i_3_, (byte) -1);
+		ChatLine class108 = Class180.method3032(i_3_, (byte) -1);
 		int i_4_ = -1;
 		if (null != class108)
 			i_4_ = 840973581 * class108.anInt1085;
@@ -105,8 +105,8 @@ public class Class226 implements Interface46 {
 
 	static final void method3806(CS2Executor class527, int i) {
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_7_, (byte) 114);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 114);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 1, class527, (byte) -9);
 	}
 }

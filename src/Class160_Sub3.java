@@ -66,9 +66,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 126).method2714();
 		float f_14_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 104).method2716();
 		class47.aClass384_442.method6525((float) i_8_ * 2.0F / f, (float) i_9_ * 2.0F / f_14_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_7_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_14_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_7_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_14_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -139,13 +139,13 @@ public class Class160_Sub3 extends NativeSprite {
 		float f_52_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 112).method2714();
 		float f_53_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 122).method2716();
 		class47.aClass384_442.method6518();
-		class47.aClass384_442.aFloatArray4667[0] = (f_31_ - f) * 2.0F / f_52_;
-		class47.aClass384_442.aFloatArray4667[1] = (f_32_ - f_30_) * 2.0F / f_53_;
-		class47.aClass384_442.aFloatArray4667[4] = (f_33_ - f) * 2.0F / f_52_;
-		class47.aClass384_442.aFloatArray4667[5] = (f_34_ - f_30_) * 2.0F / f_53_;
-		class47.aClass384_442.aFloatArray4667[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_52_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = ((f_30_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_53_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[0] = (f_31_ - f) * 2.0F / f_52_;
+		class47.aClass384_442.buf[1] = (f_32_ - f_30_) * 2.0F / f_53_;
+		class47.aClass384_442.buf[4] = (f_33_ - f) * 2.0F / f_52_;
+		class47.aClass384_442.buf[5] = (f_34_ - f_30_) * 2.0F / f_53_;
+		class47.aClass384_442.buf[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_52_) - 1.0F;
+		class47.aClass384_442.buf[13] = ((f_30_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_53_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -205,13 +205,13 @@ public class Class160_Sub3 extends NativeSprite {
 		float f_82_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 126).method2714();
 		float f_83_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 123).method2716();
 		class47.aClass384_442.method6518();
-		class47.aClass384_442.aFloatArray4667[0] = (f_61_ - f) * 2.0F / f_82_;
-		class47.aClass384_442.aFloatArray4667[1] = (f_62_ - f_60_) * 2.0F / f_83_;
-		class47.aClass384_442.aFloatArray4667[4] = (f_63_ - f) * 2.0F / f_82_;
-		class47.aClass384_442.aFloatArray4667[5] = (f_64_ - f_60_) * 2.0F / f_83_;
-		class47.aClass384_442.aFloatArray4667[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_82_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = ((f_60_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_83_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[0] = (f_61_ - f) * 2.0F / f_82_;
+		class47.aClass384_442.buf[1] = (f_62_ - f_60_) * 2.0F / f_83_;
+		class47.aClass384_442.buf[4] = (f_63_ - f) * 2.0F / f_82_;
+		class47.aClass384_442.buf[5] = (f_64_ - f_60_) * 2.0F / f_83_;
+		class47.aClass384_442.buf[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_82_) - 1.0F;
+		class47.aClass384_442.buf[13] = ((f_60_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_83_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -242,9 +242,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 115).method2714();
 		float f_93_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 104).method2716();
 		class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_93_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_90_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_93_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_90_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_93_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -252,8 +252,8 @@ public class Class160_Sub3 extends NativeSprite {
 		Interface6 interface6 = ((Class455_Sub1) (Class455_Sub1) class455).anInterface6_8508;
 		class47.anInterface6_441 = interface6;
 		class47.aClass384_444.method6525(interface6.method47((float) ((Class160_Sub3) this).anInt9060), interface6.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
-		class47.aClass384_444.aFloatArray4667[12] = interface6.method47((float) (i - i_91_));
-		class47.aClass384_444.aFloatArray4667[13] = interface6.method62((float) (i_90_ - i_92_));
+		class47.aClass384_444.buf[12] = interface6.method47((float) (i - i_91_));
+		class47.aClass384_444.buf[13] = interface6.method62((float) (i_90_ - i_92_));
 		class47.method938();
 	}
 
@@ -267,9 +267,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 121).method2714();
 		float f_97_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 125).method2716();
 		class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_97_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_94_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_97_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_94_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_97_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -277,8 +277,8 @@ public class Class160_Sub3 extends NativeSprite {
 		Interface6 interface6 = ((Class455_Sub1) (Class455_Sub1) class455).anInterface6_8508;
 		class47.anInterface6_441 = interface6;
 		class47.aClass384_444.method6525(interface6.method47((float) ((Class160_Sub3) this).anInt9060), interface6.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
-		class47.aClass384_444.aFloatArray4667[12] = interface6.method47((float) (i - i_95_));
-		class47.aClass384_444.aFloatArray4667[13] = interface6.method62((float) (i_94_ - i_96_));
+		class47.aClass384_444.buf[12] = interface6.method47((float) (i - i_95_));
+		class47.aClass384_444.buf[13] = interface6.method62((float) (i_94_ - i_96_));
 		class47.method938();
 	}
 
@@ -301,9 +301,9 @@ public class Class160_Sub3 extends NativeSprite {
 		boolean bool_105_ = (((Class160_Sub3) this).aBool9061 && ((Class160_Sub3) this).anInt9055 == 0 && ((Class160_Sub3) this).anInt9058 == 0);
 		if (bool_105_ & bool) {
 			class47.aClass384_442.method6525((float) i_99_ * 2.0F / f, (float) i_100_ * 2.0F / f_104_, 1.0F, 1.0F);
-			class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-			class47.aClass384_442.aFloatArray4667[13] = (((float) i_98_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_) - 1.0F;
-			class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+			class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+			class47.aClass384_442.buf[13] = (((float) i_98_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_) - 1.0F;
+			class47.aClass384_442.buf[14] = -1.0F;
 			class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_99_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_100_), 1.0F, 1.0F);
 			class47.method936();
 		} else if (bool_105_) {
@@ -313,9 +313,9 @@ public class Class160_Sub3 extends NativeSprite {
 			int i_108_ = i_98_ + ((Class160_Sub3) this).anInt9057;
 			for (int i_109_ = i_108_ + ((Class160_Sub3) this).anInt9053; i_109_ <= i_106_; i_109_ += i_107_) {
 				class47.aClass384_442.method6525((float) i_99_ * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_104_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_108_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_108_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 				i_108_ += i_107_;
 			}
@@ -323,9 +323,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_110_ = i_106_ - i_108_;
 				class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_99_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_110_), 1.0F, 1.0F);
 				class47.aClass384_442.method6525((float) i_99_ * 2.0F / f, ((float) i_110_ * 2.0F / f_104_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_108_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_108_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 			}
 		} else if (bool) {
@@ -335,9 +335,9 @@ public class Class160_Sub3 extends NativeSprite {
 			int i_113_ = i + ((Class160_Sub3) this).anInt9055;
 			for (int i_114_ = i_113_ + ((Class160_Sub3) this).anInt9060; i_114_ <= i_111_; i_114_ += i_112_) {
 				class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) i_100_ * 2.0F / f_104_, 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i_113_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = (((float) i_98_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_) - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i_113_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = (((float) i_98_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_) - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 				i_113_ += i_112_;
 			}
@@ -345,9 +345,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_115_ = i_111_ - i_113_;
 				class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_115_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_100_), 1.0F, 1.0F);
 				class47.aClass384_442.method6525((float) i_115_ * 2.0F / f, ((float) i_100_ * 2.0F / f_104_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i_113_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = (((float) i_98_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_) - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i_113_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = (((float) i_98_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_) - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 			}
 		} else {
@@ -361,9 +361,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_122_ = i + ((Class160_Sub3) this).anInt9055;
 				for (int i_123_ = i_122_ + ((Class160_Sub3) this).anInt9060; i_123_ <= i_117_; i_123_ += i_118_) {
 					class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_104_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_122_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_122_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 					i_122_ += i_118_;
 				}
@@ -371,9 +371,9 @@ public class Class160_Sub3 extends NativeSprite {
 					int i_124_ = i_117_ - i_122_;
 					class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_124_), (((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053)), 1.0F, 1.0F);
 					class47.aClass384_442.method6525((float) i_124_ * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_104_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_122_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_122_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 				}
 				i_120_ += i_119_;
@@ -384,9 +384,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_126_ = i + ((Class160_Sub3) this).anInt9055;
 				for (int i_127_ = i_126_ + ((Class160_Sub3) this).anInt9060; i_127_ <= i_117_; i_127_ += i_118_) {
 					class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) i_125_ * 2.0F / f_104_, 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_126_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_126_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 					i_126_ += i_118_;
 				}
@@ -394,9 +394,9 @@ public class Class160_Sub3 extends NativeSprite {
 					int i_128_ = i_117_ - i_126_;
 					class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_128_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_125_), 1.0F, 1.0F);
 					class47.aClass384_442.method6525((float) i_128_ * 2.0F / f, ((float) i_125_ * 2.0F / f_104_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_126_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_126_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_120_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_104_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 				}
 			}
@@ -418,27 +418,27 @@ public class Class160_Sub3 extends NativeSprite {
 		if (((Class160_Sub3) this).aBool9051) {
 			float f_138_ = ((float) ((Class160_Sub3) this).anInt9060 / (float) method228());
 			float f_139_ = ((float) ((Class160_Sub3) this).anInt9053 / (float) method2748());
-			class47.aClass384_442.aFloatArray4667[0] = (f_130_ - f) * f_138_;
-			class47.aClass384_442.aFloatArray4667[1] = (f_131_ - f_129_) * f_138_;
-			class47.aClass384_442.aFloatArray4667[4] = (f_132_ - f) * f_139_;
-			class47.aClass384_442.aFloatArray4667[5] = (f_133_ - f_129_) * f_139_;
-			class47.aClass384_442.aFloatArray4667[12] = ((f + (float) ((Class160_Sub3) this).anInt9055) * f_138_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
-			class47.aClass384_442.aFloatArray4667[13] = ((f_129_ + (float) ((Class160_Sub3) this).anInt9057) * f_139_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[0] = (f_130_ - f) * f_138_;
+			class47.aClass384_442.buf[1] = (f_131_ - f_129_) * f_138_;
+			class47.aClass384_442.buf[4] = (f_132_ - f) * f_139_;
+			class47.aClass384_442.buf[5] = (f_133_ - f_129_) * f_139_;
+			class47.aClass384_442.buf[12] = ((f + (float) ((Class160_Sub3) this).anInt9055) * f_138_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[13] = ((f_129_ + (float) ((Class160_Sub3) this).anInt9057) * f_139_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
 		} else {
-			class47.aClass384_442.aFloatArray4667[0] = f_130_ - f;
-			class47.aClass384_442.aFloatArray4667[1] = f_131_ - f_129_;
-			class47.aClass384_442.aFloatArray4667[4] = f_132_ - f;
-			class47.aClass384_442.aFloatArray4667[5] = f_133_ - f_129_;
-			class47.aClass384_442.aFloatArray4667[12] = f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905();
-			class47.aClass384_442.aFloatArray4667[13] = (f_129_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[0] = f_130_ - f;
+			class47.aClass384_442.buf[1] = f_131_ - f_129_;
+			class47.aClass384_442.buf[4] = f_132_ - f;
+			class47.aClass384_442.buf[5] = f_133_ - f_129_;
+			class47.aClass384_442.buf[12] = f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905();
+			class47.aClass384_442.buf[13] = (f_129_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
 		}
-		Class384 class384 = ((Class160_Sub3) this).aClass505_Sub2_9052.aClass384_8683;
+		Matrix44Arr class384 = ((Class160_Sub3) this).aClass505_Sub2_9052.aClass384_8683;
 		class384.method6518();
-		class384.aFloatArray4667[0] = 2.0F / f_136_;
-		class384.aFloatArray4667[5] = 2.0F / f_137_;
-		class384.aFloatArray4667[12] = -1.0F;
-		class384.aFloatArray4667[13] = -1.0F;
-		class384.aFloatArray4667[14] = -1.0F;
+		class384.buf[0] = 2.0F / f_136_;
+		class384.buf[5] = 2.0F / f_137_;
+		class384.buf[12] = -1.0F;
+		class384.buf[13] = -1.0F;
+		class384.buf[14] = -1.0F;
 		class47.aClass384_442.method6523(class384);
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
@@ -447,12 +447,12 @@ public class Class160_Sub3 extends NativeSprite {
 		Interface6 interface6 = ((Class455_Sub1) (Class455_Sub1) class455).anInterface6_8508;
 		class47.anInterface6_441 = interface6;
 		class47.aClass384_444.method6518();
-		class47.aClass384_444.aFloatArray4667[0] = (f_130_ - f) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[1] = (f_131_ - f_129_) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[4] = (f_132_ - f) * interface6.method62(1.0F);
-		class47.aClass384_444.aFloatArray4667[5] = (f_133_ - f_129_) * interface6.method62(1.0F);
-		class47.aClass384_444.aFloatArray4667[12] = (f - (float) i_134_) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[13] = (f_129_ - (float) i_135_) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[0] = (f_130_ - f) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[1] = (f_131_ - f_129_) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[4] = (f_132_ - f) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[5] = (f_133_ - f_129_) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[12] = (f - (float) i_134_) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[13] = (f_129_ - (float) i_135_) * interface6.method62(1.0F);
 		class47.method938();
 	}
 
@@ -471,9 +471,9 @@ public class Class160_Sub3 extends NativeSprite {
 		boolean bool_147_ = (((Class160_Sub3) this).aBool9061 && ((Class160_Sub3) this).anInt9055 == 0 && ((Class160_Sub3) this).anInt9058 == 0);
 		if (bool_147_ & bool) {
 			class47.aClass384_442.method6525((float) i_141_ * 2.0F / f, (float) i_142_ * 2.0F / f_146_, 1.0F, 1.0F);
-			class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-			class47.aClass384_442.aFloatArray4667[13] = (((float) i_140_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_) - 1.0F;
-			class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+			class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+			class47.aClass384_442.buf[13] = (((float) i_140_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_) - 1.0F;
+			class47.aClass384_442.buf[14] = -1.0F;
 			class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_141_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_142_), 1.0F, 1.0F);
 			class47.method936();
 		} else if (bool_147_) {
@@ -483,9 +483,9 @@ public class Class160_Sub3 extends NativeSprite {
 			int i_150_ = i_140_ + ((Class160_Sub3) this).anInt9057;
 			for (int i_151_ = i_150_ + ((Class160_Sub3) this).anInt9053; i_151_ <= i_148_; i_151_ += i_149_) {
 				class47.aClass384_442.method6525((float) i_141_ * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_146_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_150_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_150_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 				i_150_ += i_149_;
 			}
@@ -493,9 +493,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_152_ = i_148_ - i_150_;
 				class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_141_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_152_), 1.0F, 1.0F);
 				class47.aClass384_442.method6525((float) i_141_ * 2.0F / f, ((float) i_152_ * 2.0F / f_146_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_150_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_150_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 			}
 		} else if (bool) {
@@ -505,9 +505,9 @@ public class Class160_Sub3 extends NativeSprite {
 			int i_155_ = i + ((Class160_Sub3) this).anInt9055;
 			for (int i_156_ = i_155_ + ((Class160_Sub3) this).anInt9060; i_156_ <= i_153_; i_156_ += i_154_) {
 				class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) i_142_ * 2.0F / f_146_, 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i_155_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_140_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i_155_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_140_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 				i_155_ += i_154_;
 			}
@@ -515,9 +515,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_157_ = i_153_ - i_155_;
 				class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_157_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_142_), 1.0F, 1.0F);
 				class47.aClass384_442.method6525((float) i_157_ * 2.0F / f, ((float) i_142_ * 2.0F / f_146_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i_155_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_140_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i_155_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_140_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 			}
 		} else {
@@ -531,9 +531,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_164_ = i + ((Class160_Sub3) this).anInt9055;
 				for (int i_165_ = i_164_ + ((Class160_Sub3) this).anInt9060; i_165_ <= i_159_; i_165_ += i_160_) {
 					class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_146_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_164_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_164_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 					i_164_ += i_160_;
 				}
@@ -541,9 +541,9 @@ public class Class160_Sub3 extends NativeSprite {
 					int i_166_ = i_159_ - i_164_;
 					class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_166_), (((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053)), 1.0F, 1.0F);
 					class47.aClass384_442.method6525((float) i_166_ * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_146_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_164_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_164_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 				}
 				i_162_ += i_161_;
@@ -554,9 +554,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_168_ = i + ((Class160_Sub3) this).anInt9055;
 				for (int i_169_ = i_168_ + ((Class160_Sub3) this).anInt9060; i_169_ <= i_159_; i_169_ += i_160_) {
 					class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) i_167_ * 2.0F / f_146_, 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_168_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_168_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 					i_168_ += i_160_;
 				}
@@ -564,9 +564,9 @@ public class Class160_Sub3 extends NativeSprite {
 					int i_170_ = i_159_ - i_168_;
 					class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_170_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_167_), 1.0F, 1.0F);
 					class47.aClass384_442.method6525((float) i_170_ * 2.0F / f, ((float) i_167_ * 2.0F / f_146_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_168_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_168_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_162_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_146_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 				}
 			}
@@ -584,9 +584,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 114).method2714();
 		float f_175_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 112).method2716();
 		class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_175_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_171_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_175_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_171_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_175_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -657,9 +657,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 113).method2714();
 		float f_208_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 122).method2716();
 		class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_208_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_205_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_208_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_205_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_208_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -667,8 +667,8 @@ public class Class160_Sub3 extends NativeSprite {
 		Interface6 interface6 = ((Class455_Sub1) (Class455_Sub1) class455).anInterface6_8508;
 		class47.anInterface6_441 = interface6;
 		class47.aClass384_444.method6525(interface6.method47((float) ((Class160_Sub3) this).anInt9060), interface6.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
-		class47.aClass384_444.aFloatArray4667[12] = interface6.method47((float) (i - i_206_));
-		class47.aClass384_444.aFloatArray4667[13] = interface6.method62((float) (i_205_ - i_207_));
+		class47.aClass384_444.buf[12] = interface6.method47((float) (i - i_206_));
+		class47.aClass384_444.buf[13] = interface6.method62((float) (i_205_ - i_207_));
 		class47.method938();
 	}
 
@@ -699,9 +699,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 115).method2714();
 		float f_219_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 123).method2716();
 		class47.aClass384_442.method6525((float) i_213_ * 2.0F / f, (float) i_214_ * 2.0F / f_219_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_212_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_219_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_212_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_219_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -720,9 +720,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 106).method2714();
 		float f_224_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 106).method2716();
 		class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_224_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_220_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_224_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_220_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_224_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -741,9 +741,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 113).method2714();
 		float f_229_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 110).method2716();
 		class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_229_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_225_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_229_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_225_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_229_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -766,9 +766,9 @@ public class Class160_Sub3 extends NativeSprite {
 		float f = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 115).method2714();
 		float f_237_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 120).method2716();
 		class47.aClass384_442.method6525((float) i_231_ * 2.0F / f, (float) i_232_ * 2.0F / f_237_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_230_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_237_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_230_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_237_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -923,9 +923,9 @@ public class Class160_Sub3 extends NativeSprite {
 		boolean bool_269_ = (((Class160_Sub3) this).aBool9061 && ((Class160_Sub3) this).anInt9055 == 0 && ((Class160_Sub3) this).anInt9058 == 0);
 		if (bool_269_ & bool) {
 			class47.aClass384_442.method6525((float) i_263_ * 2.0F / f, (float) i_264_ * 2.0F / f_268_, 1.0F, 1.0F);
-			class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
-			class47.aClass384_442.aFloatArray4667[13] = (((float) i_262_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_) - 1.0F;
-			class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+			class47.aClass384_442.buf[12] = (((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f) - 1.0F;
+			class47.aClass384_442.buf[13] = (((float) i_262_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_) - 1.0F;
+			class47.aClass384_442.buf[14] = -1.0F;
 			class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_263_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_264_), 1.0F, 1.0F);
 			class47.method936();
 		} else if (bool_269_) {
@@ -935,9 +935,9 @@ public class Class160_Sub3 extends NativeSprite {
 			int i_272_ = i_262_ + ((Class160_Sub3) this).anInt9057;
 			for (int i_273_ = i_272_ + ((Class160_Sub3) this).anInt9053; i_273_ <= i_270_; i_273_ += i_271_) {
 				class47.aClass384_442.method6525((float) i_263_ * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_268_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_272_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_272_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 				i_272_ += i_271_;
 			}
@@ -945,9 +945,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_274_ = i_270_ - i_272_;
 				class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_263_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_274_), 1.0F, 1.0F);
 				class47.aClass384_442.method6525((float) i_263_ * 2.0F / f, ((float) i_274_ * 2.0F / f_268_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_272_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_272_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 			}
 		} else if (bool) {
@@ -957,9 +957,9 @@ public class Class160_Sub3 extends NativeSprite {
 			int i_277_ = i + ((Class160_Sub3) this).anInt9055;
 			for (int i_278_ = i_277_ + ((Class160_Sub3) this).anInt9060; i_278_ <= i_275_; i_278_ += i_276_) {
 				class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) i_264_ * 2.0F / f_268_, 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i_277_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_262_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i_277_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_262_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 				i_277_ += i_276_;
 			}
@@ -967,9 +967,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_279_ = i_275_ - i_277_;
 				class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_279_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_264_), 1.0F, 1.0F);
 				class47.aClass384_442.method6525((float) i_279_ * 2.0F / f, ((float) i_264_ * 2.0F / f_268_), 1.0F, 1.0F);
-				class47.aClass384_442.aFloatArray4667[12] = ((float) i_277_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-				class47.aClass384_442.aFloatArray4667[13] = ((float) i_262_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-				class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+				class47.aClass384_442.buf[12] = ((float) i_277_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+				class47.aClass384_442.buf[13] = ((float) i_262_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+				class47.aClass384_442.buf[14] = -1.0F;
 				class47.method936();
 			}
 		} else {
@@ -983,9 +983,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_286_ = i + ((Class160_Sub3) this).anInt9055;
 				for (int i_287_ = i_286_ + ((Class160_Sub3) this).anInt9060; i_287_ <= i_281_; i_287_ += i_282_) {
 					class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_268_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_286_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_286_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 					i_286_ += i_282_;
 				}
@@ -993,9 +993,9 @@ public class Class160_Sub3 extends NativeSprite {
 					int i_288_ = i_281_ - i_286_;
 					class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_288_), (((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053)), 1.0F, 1.0F);
 					class47.aClass384_442.method6525((float) i_288_ * 2.0F / f, ((float) ((Class160_Sub3) this).anInt9053 * 2.0F / f_268_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_286_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_286_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 				}
 				i_284_ += i_283_;
@@ -1006,9 +1006,9 @@ public class Class160_Sub3 extends NativeSprite {
 				int i_290_ = i + ((Class160_Sub3) this).anInt9055;
 				for (int i_291_ = i_290_ + ((Class160_Sub3) this).anInt9060; i_291_ <= i_281_; i_291_ += i_282_) {
 					class47.aClass384_442.method6525((float) ((Class160_Sub3) this).anInt9060 * 2.0F / f, (float) i_289_ * 2.0F / f_268_, 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_290_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_290_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 					i_290_ += i_282_;
 				}
@@ -1016,9 +1016,9 @@ public class Class160_Sub3 extends NativeSprite {
 					int i_292_ = i_281_ - i_290_;
 					class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) i_292_), ((Class160_Sub3) this).anInterface6_9050.method62((float) i_289_), 1.0F, 1.0F);
 					class47.aClass384_442.method6525((float) i_292_ * 2.0F / f, ((float) i_289_ * 2.0F / f_268_), 1.0F, 1.0F);
-					class47.aClass384_442.aFloatArray4667[12] = ((float) i_290_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
-					class47.aClass384_442.aFloatArray4667[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
-					class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+					class47.aClass384_442.buf[12] = ((float) i_290_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f - 1.0F;
+					class47.aClass384_442.buf[13] = ((float) i_284_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_268_ - 1.0F;
+					class47.aClass384_442.buf[14] = -1.0F;
 					class47.method936();
 				}
 			}
@@ -1060,13 +1060,13 @@ public class Class160_Sub3 extends NativeSprite {
 		float f_315_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 106).method2714();
 		float f_316_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 105).method2716();
 		class47.aClass384_442.method6518();
-		class47.aClass384_442.aFloatArray4667[0] = (f_294_ - f) * 2.0F / f_315_;
-		class47.aClass384_442.aFloatArray4667[1] = (f_295_ - f_293_) * 2.0F / f_316_;
-		class47.aClass384_442.aFloatArray4667[4] = (f_296_ - f) * 2.0F / f_315_;
-		class47.aClass384_442.aFloatArray4667[5] = (f_297_ - f_293_) * 2.0F / f_316_;
-		class47.aClass384_442.aFloatArray4667[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_315_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = ((f_293_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_316_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[0] = (f_294_ - f) * 2.0F / f_315_;
+		class47.aClass384_442.buf[1] = (f_295_ - f_293_) * 2.0F / f_316_;
+		class47.aClass384_442.buf[4] = (f_296_ - f) * 2.0F / f_315_;
+		class47.aClass384_442.buf[5] = (f_297_ - f_293_) * 2.0F / f_316_;
+		class47.aClass384_442.buf[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_315_) - 1.0F;
+		class47.aClass384_442.buf[13] = ((f_293_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_316_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -1128,13 +1128,13 @@ public class Class160_Sub3 extends NativeSprite {
 		float f_341_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 122).method2714();
 		float f_342_ = (float) ((Class160_Sub3) this).aClass505_Sub2_9052.method8523((byte) 117).method2716();
 		class47.aClass384_442.method6518();
-		class47.aClass384_442.aFloatArray4667[0] = (f_320_ - f) * 2.0F / f_341_;
-		class47.aClass384_442.aFloatArray4667[1] = (f_321_ - f_319_) * 2.0F / f_342_;
-		class47.aClass384_442.aFloatArray4667[4] = (f_322_ - f) * 2.0F / f_341_;
-		class47.aClass384_442.aFloatArray4667[5] = (f_323_ - f_319_) * 2.0F / f_342_;
-		class47.aClass384_442.aFloatArray4667[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_341_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = ((f_319_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_342_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[0] = (f_320_ - f) * 2.0F / f_341_;
+		class47.aClass384_442.buf[1] = (f_321_ - f_319_) * 2.0F / f_342_;
+		class47.aClass384_442.buf[4] = (f_322_ - f) * 2.0F / f_341_;
+		class47.aClass384_442.buf[5] = (f_323_ - f_319_) * 2.0F / f_342_;
+		class47.aClass384_442.buf[12] = ((f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_341_) - 1.0F;
+		class47.aClass384_442.buf[13] = ((f_319_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905()) * 2.0F / f_342_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
 		class47.anInt446 = 0;
@@ -1153,27 +1153,27 @@ public class Class160_Sub3 extends NativeSprite {
 		if (((Class160_Sub3) this).aBool9051) {
 			float f_352_ = ((float) ((Class160_Sub3) this).anInt9060 / (float) method228());
 			float f_353_ = ((float) ((Class160_Sub3) this).anInt9053 / (float) method2748());
-			class47.aClass384_442.aFloatArray4667[0] = (f_344_ - f) * f_352_;
-			class47.aClass384_442.aFloatArray4667[1] = (f_345_ - f_343_) * f_352_;
-			class47.aClass384_442.aFloatArray4667[4] = (f_346_ - f) * f_353_;
-			class47.aClass384_442.aFloatArray4667[5] = (f_347_ - f_343_) * f_353_;
-			class47.aClass384_442.aFloatArray4667[12] = ((f + (float) ((Class160_Sub3) this).anInt9055) * f_352_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
-			class47.aClass384_442.aFloatArray4667[13] = ((f_343_ + (float) ((Class160_Sub3) this).anInt9057) * f_353_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[0] = (f_344_ - f) * f_352_;
+			class47.aClass384_442.buf[1] = (f_345_ - f_343_) * f_352_;
+			class47.aClass384_442.buf[4] = (f_346_ - f) * f_353_;
+			class47.aClass384_442.buf[5] = (f_347_ - f_343_) * f_353_;
+			class47.aClass384_442.buf[12] = ((f + (float) ((Class160_Sub3) this).anInt9055) * f_352_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[13] = ((f_343_ + (float) ((Class160_Sub3) this).anInt9057) * f_353_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
 		} else {
-			class47.aClass384_442.aFloatArray4667[0] = f_344_ - f;
-			class47.aClass384_442.aFloatArray4667[1] = f_345_ - f_343_;
-			class47.aClass384_442.aFloatArray4667[4] = f_346_ - f;
-			class47.aClass384_442.aFloatArray4667[5] = f_347_ - f_343_;
-			class47.aClass384_442.aFloatArray4667[12] = f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905();
-			class47.aClass384_442.aFloatArray4667[13] = (f_343_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[0] = f_344_ - f;
+			class47.aClass384_442.buf[1] = f_345_ - f_343_;
+			class47.aClass384_442.buf[4] = f_346_ - f;
+			class47.aClass384_442.buf[5] = f_347_ - f_343_;
+			class47.aClass384_442.buf[12] = f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905();
+			class47.aClass384_442.buf[13] = (f_343_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
 		}
-		Class384 class384 = ((Class160_Sub3) this).aClass505_Sub2_9052.aClass384_8683;
+		Matrix44Arr class384 = ((Class160_Sub3) this).aClass505_Sub2_9052.aClass384_8683;
 		class384.method6518();
-		class384.aFloatArray4667[0] = 2.0F / f_350_;
-		class384.aFloatArray4667[5] = 2.0F / f_351_;
-		class384.aFloatArray4667[12] = -1.0F;
-		class384.aFloatArray4667[13] = -1.0F;
-		class384.aFloatArray4667[14] = -1.0F;
+		class384.buf[0] = 2.0F / f_350_;
+		class384.buf[5] = 2.0F / f_351_;
+		class384.buf[12] = -1.0F;
+		class384.buf[13] = -1.0F;
+		class384.buf[14] = -1.0F;
 		class47.aClass384_442.method6523(class384);
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
@@ -1182,12 +1182,12 @@ public class Class160_Sub3 extends NativeSprite {
 		Interface6 interface6 = ((Class455_Sub1) (Class455_Sub1) class455).anInterface6_8508;
 		class47.anInterface6_441 = interface6;
 		class47.aClass384_444.method6518();
-		class47.aClass384_444.aFloatArray4667[0] = (f_344_ - f) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[1] = (f_345_ - f_343_) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[4] = (f_346_ - f) * interface6.method62(1.0F);
-		class47.aClass384_444.aFloatArray4667[5] = (f_347_ - f_343_) * interface6.method62(1.0F);
-		class47.aClass384_444.aFloatArray4667[12] = (f - (float) i_348_) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[13] = (f_343_ - (float) i_349_) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[0] = (f_344_ - f) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[1] = (f_345_ - f_343_) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[4] = (f_346_ - f) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[5] = (f_347_ - f_343_) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[12] = (f - (float) i_348_) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[13] = (f_343_ - (float) i_349_) * interface6.method62(1.0F);
 		class47.method938();
 	}
 
@@ -1202,27 +1202,27 @@ public class Class160_Sub3 extends NativeSprite {
 		if (((Class160_Sub3) this).aBool9051) {
 			float f_363_ = ((float) ((Class160_Sub3) this).anInt9060 / (float) method228());
 			float f_364_ = ((float) ((Class160_Sub3) this).anInt9053 / (float) method2748());
-			class47.aClass384_442.aFloatArray4667[0] = (f_355_ - f) * f_363_;
-			class47.aClass384_442.aFloatArray4667[1] = (f_356_ - f_354_) * f_363_;
-			class47.aClass384_442.aFloatArray4667[4] = (f_357_ - f) * f_364_;
-			class47.aClass384_442.aFloatArray4667[5] = (f_358_ - f_354_) * f_364_;
-			class47.aClass384_442.aFloatArray4667[12] = ((f + (float) ((Class160_Sub3) this).anInt9055) * f_363_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
-			class47.aClass384_442.aFloatArray4667[13] = ((f_354_ + (float) ((Class160_Sub3) this).anInt9057) * f_364_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[0] = (f_355_ - f) * f_363_;
+			class47.aClass384_442.buf[1] = (f_356_ - f_354_) * f_363_;
+			class47.aClass384_442.buf[4] = (f_357_ - f) * f_364_;
+			class47.aClass384_442.buf[5] = (f_358_ - f_354_) * f_364_;
+			class47.aClass384_442.buf[12] = ((f + (float) ((Class160_Sub3) this).anInt9055) * f_363_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[13] = ((f_354_ + (float) ((Class160_Sub3) this).anInt9057) * f_364_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
 		} else {
-			class47.aClass384_442.aFloatArray4667[0] = f_355_ - f;
-			class47.aClass384_442.aFloatArray4667[1] = f_356_ - f_354_;
-			class47.aClass384_442.aFloatArray4667[4] = f_357_ - f;
-			class47.aClass384_442.aFloatArray4667[5] = f_358_ - f_354_;
-			class47.aClass384_442.aFloatArray4667[12] = f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905();
-			class47.aClass384_442.aFloatArray4667[13] = (f_354_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
+			class47.aClass384_442.buf[0] = f_355_ - f;
+			class47.aClass384_442.buf[1] = f_356_ - f_354_;
+			class47.aClass384_442.buf[4] = f_357_ - f;
+			class47.aClass384_442.buf[5] = f_358_ - f_354_;
+			class47.aClass384_442.buf[12] = f + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905();
+			class47.aClass384_442.buf[13] = (f_354_ + ((Class160_Sub3) this).aClass505_Sub2_9052.method13905());
 		}
-		Class384 class384 = ((Class160_Sub3) this).aClass505_Sub2_9052.aClass384_8683;
+		Matrix44Arr class384 = ((Class160_Sub3) this).aClass505_Sub2_9052.aClass384_8683;
 		class384.method6518();
-		class384.aFloatArray4667[0] = 2.0F / f_361_;
-		class384.aFloatArray4667[5] = 2.0F / f_362_;
-		class384.aFloatArray4667[12] = -1.0F;
-		class384.aFloatArray4667[13] = -1.0F;
-		class384.aFloatArray4667[14] = -1.0F;
+		class384.buf[0] = 2.0F / f_361_;
+		class384.buf[5] = 2.0F / f_362_;
+		class384.buf[12] = -1.0F;
+		class384.buf[13] = -1.0F;
+		class384.buf[14] = -1.0F;
 		class47.aClass384_442.method6523(class384);
 		class47.aClass384_440.method6525(((Class160_Sub3) this).anInterface6_9050.method47((float) ((Class160_Sub3) this).anInt9060), ((Class160_Sub3) this).anInterface6_9050.method62((float) ((Class160_Sub3) this).anInt9053), 1.0F, 1.0F);
 		class47.anInterface4_445 = (((Class505_Sub2) ((Class160_Sub3) this).aClass505_Sub2_9052).anInterface4_8746);
@@ -1231,12 +1231,12 @@ public class Class160_Sub3 extends NativeSprite {
 		Interface6 interface6 = ((Class455_Sub1) (Class455_Sub1) class455).anInterface6_8508;
 		class47.anInterface6_441 = interface6;
 		class47.aClass384_444.method6518();
-		class47.aClass384_444.aFloatArray4667[0] = (f_355_ - f) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[1] = (f_356_ - f_354_) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[4] = (f_357_ - f) * interface6.method62(1.0F);
-		class47.aClass384_444.aFloatArray4667[5] = (f_358_ - f_354_) * interface6.method62(1.0F);
-		class47.aClass384_444.aFloatArray4667[12] = (f - (float) i_359_) * interface6.method47(1.0F);
-		class47.aClass384_444.aFloatArray4667[13] = (f_354_ - (float) i_360_) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[0] = (f_355_ - f) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[1] = (f_356_ - f_354_) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[4] = (f_357_ - f) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[5] = (f_358_ - f_354_) * interface6.method62(1.0F);
+		class47.aClass384_444.buf[12] = (f - (float) i_359_) * interface6.method47(1.0F);
+		class47.aClass384_444.buf[13] = (f_354_ - (float) i_360_) * interface6.method62(1.0F);
 		class47.method938();
 	}
 

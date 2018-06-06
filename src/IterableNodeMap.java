@@ -326,7 +326,7 @@ public final class IterableNodeMap implements Iterable {
 				if (!bool)
 					Class174.animateObject((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1133711870);
 				else
-					Class243.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 30);
+					QuickChatDynamicValue.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 30);
 				class282_sub31.unlink(-371378792);
 			}
 		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= IndexLoaders.MAP_REGION_DECODER.method4424(800318016) - 2) && (-322610393 * class282_sub31.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.method4451(-349859539) - 2)
@@ -334,7 +334,7 @@ public final class IterableNodeMap implements Iterable {
 			if (!bool)
 				Class174.animateObject(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -1118636715);
 			else
-				Class243.method4179(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, class282_sub31.anInt7762 * 37618455, -322610393 * class282_sub31.anInt7763, ((Class282_Sub31) class282_sub31).aClass476_7768, (byte) 127);
+				QuickChatDynamicValue.method4179(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, class282_sub31.anInt7762 * 37618455, -322610393 * class282_sub31.anInt7763, ((Class282_Sub31) class282_sub31).aClass476_7768, (byte) 127);
 			((Class282_Sub31) class282_sub31).aBool7773 = false;
 			if (!bool && (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 == (((Class282_Sub31) class282_sub31).anInt7769 * -1809279077)) && (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 == -1))
 				class282_sub31.unlink(-371378792);

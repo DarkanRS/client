@@ -11,10 +11,10 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	void method13012(GraphicalRenderer class505) {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 262144, false, true, -1384937123);
 		if (class528 != null) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			Class305 class305 = method11166();
-			int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-			int i_0_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+			int i = (int) class305.aClass385_3595.x >> 9;
+			int i_0_ = (int) class305.aClass385_3595.z >> 9;
 			aClass123_10501.method2119(class505, class528, class294, i, i, i_0_, i_0_, false, 481625826);
 		}
 	}
@@ -47,13 +47,13 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((WallDecoration) this).aBool10502, (byte) -19);
-		int i_1_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_2_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i_1_ = (int) class305.aClass385_3595.x >> 9;
+		int i_2_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10501.method2119(class505, class528, class294, i_1_, i_1_, i_2_, i_2_, true, 2117778784);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (null != ((Class123) aClass123_10501).aClass539_1538) {
@@ -62,19 +62,19 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		}
 		((WallDecoration) this).aBool10504 = (class528.i() || ((Class123) aClass123_10501).aClass539_1538 != null);
 		if (((WallDecoration) this).aClass200_10503 == null)
-			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) 64);
+			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) 64);
 		else
-			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -862136190);
+			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, -862136190);
 		return class285;
 	}
 
 	void method12991(GraphicalRenderer class505, int i) {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 262144, false, true, -1384937123);
 		if (class528 != null) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			Class305 class305 = method11166();
-			int i_3_ = (int) class305.aClass385_3595.aFloat4671 >> 9;
-			int i_4_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+			int i_3_ = (int) class305.aClass385_3595.x >> 9;
+			int i_4_ = (int) class305.aClass385_3595.z >> 9;
 			aClass123_10501.method2119(class505, class528, class294, i_3_, i_3_, i_4_, i_4_, false, 810474788);
 		}
 	}
@@ -89,10 +89,10 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	void method13023(GraphicalRenderer class505) {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 262144, false, true, -1384937123);
 		if (class528 != null) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			Class305 class305 = method11166();
-			int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-			int i_7_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+			int i = (int) class305.aClass385_3595.x >> 9;
+			int i_7_ = (int) class305.aClass385_3595.z >> 9;
 			aClass123_10501.method2119(class505, class528, class294, i, i, i_7_, i_7_, false, 499948673);
 		}
 	}
@@ -208,13 +208,13 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((WallDecoration) this).aBool10502, (byte) -29);
-		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_17_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i = (int) class305.aClass385_3595.x >> 9;
+		int i_17_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10501.method2119(class505, class528, class294, i, i, i_17_, i_17_, true, 801514354);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (null != ((Class123) aClass123_10501).aClass539_1538) {
@@ -223,9 +223,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		}
 		((WallDecoration) this).aBool10504 = (class528.i() || ((Class123) aClass123_10501).aClass539_1538 != null);
 		if (((WallDecoration) this).aClass200_10503 == null)
-			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -95);
+			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -95);
 		else
-			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, 478482041);
+			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, 478482041);
 		return class285;
 	}
 
@@ -249,13 +249,13 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((WallDecoration) this).aBool10502, (byte) -73);
-		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_18_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i = (int) class305.aClass385_3595.x >> 9;
+		int i_18_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10501.method2119(class505, class528, class294, i, i, i_18_, i_18_, true, 1608810000);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (null != ((Class123) aClass123_10501).aClass539_1538) {
@@ -264,9 +264,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		}
 		((WallDecoration) this).aBool10504 = (class528.i() || ((Class123) aClass123_10501).aClass539_1538 != null);
 		if (((WallDecoration) this).aClass200_10503 == null)
-			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -44);
+			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -44);
 		else
-			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -369350425);
+			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, -369350425);
 		return class285;
 	}
 
@@ -274,13 +274,13 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		MeshRasterizer class528 = aClass123_10501.method2132(class505, 2048, false, true, -1384937123);
 		if (null == class528)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class305 class305 = method11166();
 		Class285 class285 = Class470.method7824(((WallDecoration) this).aBool10502, (byte) -12);
-		int i = (int) class305.aClass385_3595.aFloat4671 >> 9;
-		int i_19_ = (int) class305.aClass385_3595.aFloat4673 >> 9;
+		int i = (int) class305.aClass385_3595.x >> 9;
+		int i_19_ = (int) class305.aClass385_3595.z >> 9;
 		aClass123_10501.method2119(class505, class528, class294, i, i, i_19_, i_19_, true, 2103867839);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (null != ((Class123) aClass123_10501).aClass539_1538) {
@@ -289,9 +289,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 		}
 		((WallDecoration) this).aBool10504 = (class528.i() || ((Class123) aClass123_10501).aClass539_1538 != null);
 		if (((WallDecoration) this).aClass200_10503 == null)
-			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.aFloat4671), (int) (class305.aClass385_3595.aFloat4672), (int) (class305.aClass385_3595.aFloat4673), class528, (byte) -14);
+			((WallDecoration) this).aClass200_10503 = Class275_Sub2.method12505((int) (class305.aClass385_3595.x), (int) (class305.aClass385_3595.y), (int) (class305.aClass385_3595.z), class528, (byte) -14);
 		else
-			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.aFloat4671, (int) class305.aClass385_3595.aFloat4672, (int) class305.aClass385_3595.aFloat4673, class528, -1553157461);
+			Class388.method6694((((WallDecoration) this).aClass200_10503), (int) class305.aClass385_3595.x, (int) class305.aClass385_3595.y, (int) class305.aClass385_3595.z, class528, -1553157461);
 		return class285;
 	}
 
@@ -344,7 +344,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	static final void method16087(Animable class521_sub1_sub1_sub2, int i) {
 		if (class521_sub1_sub1_sub2.anIntArray10335 != null || class521_sub1_sub1_sub2.anIntArray10362 != null) {
 			boolean bool = true;
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1583283390);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1583283390);
 			for (int i_25_ = 0; i_25_ < class521_sub1_sub1_sub2.anIntArray10335.length; i_25_++) {
 				int i_26_ = -1;
 				if (null != class521_sub1_sub1_sub2.anIntArray10335)
@@ -356,22 +356,22 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 					bool = false;
 					boolean bool_27_ = false;
 					boolean bool_28_ = false;
-					Class385 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
+					Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 					int i_29_;
 					int i_30_;
 					if ((i_26_ & ~0x3fffffff) == -1073741824) {
 						int i_31_ = i_26_ & 0xfffffff;
 						int i_32_ = i_31_ >> 14;
 						int i_33_ = i_31_ & 0x3fff;
-						i_29_ = ((int) class385.aFloat4671 - (512 * (i_32_ - class219.anInt2711 * 1948093437) + 256));
-						i_30_ = ((int) class385.aFloat4673 - (256 + 512 * (i_33_ - (class219.anInt2712 * -1002240017))));
+						i_29_ = ((int) class385.x - (512 * (i_32_ - class219.x * 1948093437) + 256));
+						i_30_ = ((int) class385.z - (256 + 512 * (i_33_ - (class219.y * -1002240017))));
 					} else if ((i_26_ & 0x8000) != 0) {
 						int i_34_ = i_26_ & 0x7fff;
 						Player class521_sub1_sub1_sub2_sub1 = (client.players[i_34_]);
 						if (null != class521_sub1_sub1_sub2_sub1) {
-							Class385 class385_35_ = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-							i_29_ = ((int) class385.aFloat4671 - (int) class385_35_.aFloat4671);
-							i_30_ = ((int) class385.aFloat4673 - (int) class385_35_.aFloat4673);
+							Vector3 class385_35_ = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+							i_29_ = ((int) class385.x - (int) class385_35_.x);
+							i_30_ = ((int) class385.z - (int) class385_35_.z);
 						} else {
 							class521_sub1_sub1_sub2.method15798(i_25_, -1, (short) 256);
 							continue;
@@ -380,9 +380,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 						Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) i_26_));
 						if (null != class282_sub47) {
 							NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-							Class385 class385_36_ = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-							i_29_ = ((int) class385.aFloat4671 - (int) class385_36_.aFloat4671);
-							i_30_ = ((int) class385.aFloat4673 - (int) class385_36_.aFloat4673);
+							Vector3 class385_36_ = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+							i_29_ = ((int) class385.x - (int) class385_36_.x);
+							i_30_ = ((int) class385.z - (int) class385_36_.z);
 						} else {
 							class521_sub1_sub1_sub2.method15798(i_25_, -1, (short) 256);
 							continue;
@@ -405,8 +405,8 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 				/* empty */
 			}
 		} else {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.aClass432_2283, -396054970);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4606, client.aClass184_7218.isaac, -396054970);
+			class282_sub23.buffer.writeByte(i);
 			client.aClass184_7218.method3049(class282_sub23, 820598049);
 		}
 	}

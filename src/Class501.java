@@ -86,7 +86,7 @@ public class Class501 {
 				class521_sub1_sub1_sub2.faceEntity = 2059452093;
 		}
 		Class8_Sub2.method14262(882795829);
-		Class262.anInt3240 = 770488346;
+		NativeLibraryLoader.anInt3240 = 770488346;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
 		Class365.method6298(13, 2041470654);
@@ -95,6 +95,6 @@ public class Class501 {
 		Class388.method6692(1016678349);
 		Class496.aClass510_5816 = null;
 		Class28.aLong351 = 0L;
-		Class414.method6989(1407669515);
+		FontMetrics.method6989(1407669515);
 	}
 }

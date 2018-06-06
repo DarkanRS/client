@@ -310,8 +310,8 @@ public class Class344 {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_87_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_87_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_87_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_87_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_87_).aClass98_5885;
 		Class282_Sub17.method12260(class118, class98, class527, 603809090);
 	}
 
@@ -344,17 +344,17 @@ public class Class344 {
 	public static final void method6119(String string, int i) {
 		if (Class467.aClass173Array5575 != null) {
 			Class184 class184 = Class468_Sub20.method12807(978713855);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4618, class184.aClass432_2283, 808752825);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class108.method1846(string, -1045818215));
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4618, class184.isaac, 808752825);
+			class282_sub23.buffer.writeByte(ChatLine.getLength(string));
+			class282_sub23.buffer.writeString(string);
 			class184.method3049(class282_sub23, 1620839155);
 		}
 	}
 
 	static final void method6120(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class52.method1083(class118, class98, class527, -1250124563);
 	}
 
@@ -363,7 +363,7 @@ public class Class344 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class20.anInt170 * 292682521;
 	}
 
-	static final void method6122(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6122(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aString1369 = (String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]);
 	}
 }

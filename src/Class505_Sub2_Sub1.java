@@ -82,8 +82,8 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			String[] strings = Class456_Sub3.method12681(string.replace('.', ' '), ' ', 229848533);
 			if (strings.length >= 2) {
 				try {
-					int i_0_ = Class328.method5830(strings[0], 102234625);
-					int i_1_ = Class328.method5830(strings[1], -768077921);
+					int i_0_ = Class328.parseInt(strings[0], 102234625);
+					int i_1_ = Class328.parseInt(strings[1], -768077921);
 					((Class505_Sub2_Sub1) this).anInt10196 = i_0_ * 10 + i_1_;
 				} catch (NumberFormatException numberformatexception) {
 					throw new RuntimeException("");
@@ -143,7 +143,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 						}
 						if (string_6_.length() < 4 || !Class115.method1950(string_6_.substring(0, 4), -77816633))
 							continue;
-						i_2_ = Class328.method5830(string_6_.substring(0, 4), 1896827568);
+						i_2_ = Class328.parseInt(string_6_.substring(0, 4), 1896827568);
 					} catch (Exception exception) {
 						continue;
 					}
@@ -494,8 +494,8 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		OpenGL.glLightfv(16385, 4609, ((Class505_Sub2_Sub1) this).aFloatArray10172, 0);
 	}
 
-	public void method13933(Class384 class384) {
-		float[] fs = class384.aFloatArray4667;
+	public void method13933(Matrix44Arr class384) {
+		float[] fs = class384.buf;
 		fs[1] = -fs[1];
 		fs[5] = -fs[5];
 		fs[9] = -fs[9];
@@ -518,7 +518,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	void method13953() {
 		OpenGL.glMatrixMode(5888);
-		OpenGL.glLoadMatrixf(aClass384_8740.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8740.buf, 0);
 		int i;
 		for (i = 0; i < anInt8773; i++) {
 			Class282_Sub24 class282_sub24 = aClass282_Sub24Array8716[i];
@@ -773,12 +773,12 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		return new Class319_Sub1(this, class150, i, i_50_, i_51_, bool, is);
 	}
 
-	public void method14057(Class384 class384, Class384 class384_52_, Class384 class384_53_) {
+	public void method14057(Matrix44Arr class384, Matrix44Arr class384_52_, Matrix44Arr class384_53_) {
 		OpenGL.glMatrixMode(5888);
 		aClass384_8683.method6568(class384, class384_52_);
-		OpenGL.glLoadMatrixf(aClass384_8683.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8683.buf, 0);
 		OpenGL.glMatrixMode(5889);
-		OpenGL.glLoadMatrixf(class384_53_.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(class384_53_.buf, 0);
 	}
 
 	public void method14161(int i, Interface4 interface4) {
@@ -1308,12 +1308,12 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		OpenGL.glClear(i_89_);
 	}
 
-	public void method14056(Class384 class384, Class384 class384_90_, Class384 class384_91_) {
+	public void method14056(Matrix44Arr class384, Matrix44Arr class384_90_, Matrix44Arr class384_91_) {
 		OpenGL.glMatrixMode(5888);
 		aClass384_8683.method6568(class384, class384_90_);
-		OpenGL.glLoadMatrixf(aClass384_8683.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8683.buf, 0);
 		OpenGL.glMatrixMode(5889);
-		OpenGL.glLoadMatrixf(class384_91_.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(class384_91_.buf, 0);
 	}
 
 	final synchronized void method15576(int i) {
@@ -1424,12 +1424,12 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		super.method13897();
 	}
 
-	public void method14058(Class384 class384, Class384 class384_101_, Class384 class384_102_) {
+	public void method14058(Matrix44Arr class384, Matrix44Arr class384_101_, Matrix44Arr class384_102_) {
 		OpenGL.glMatrixMode(5888);
 		aClass384_8683.method6568(class384, class384_101_);
-		OpenGL.glLoadMatrixf(aClass384_8683.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8683.buf, 0);
 		OpenGL.glMatrixMode(5889);
-		OpenGL.glLoadMatrixf(class384_102_.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(class384_102_.buf, 0);
 	}
 
 	void method14051() {
@@ -1584,8 +1584,8 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 			OpenGL.glDisable(3089);
 	}
 
-	public void method14107(Class384 class384) {
-		float[] fs = class384.aFloatArray4667;
+	public void method14107(Matrix44Arr class384) {
+		float[] fs = class384.buf;
 		fs[1] = -fs[1];
 		fs[5] = -fs[5];
 		fs[9] = -fs[9];
@@ -1709,7 +1709,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	void method14132() {
 		OpenGL.glMatrixMode(5888);
-		OpenGL.glLoadMatrixf(aClass384_8740.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8740.buf, 0);
 		int i;
 		for (i = 0; i < anInt8773; i++) {
 			Class282_Sub24 class282_sub24 = aClass282_Sub24Array8716[i];
@@ -1735,7 +1735,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	void method13982() {
 		OpenGL.glMatrixMode(5888);
-		OpenGL.glLoadMatrixf(aClass384_8740.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8740.buf, 0);
 		int i;
 		for (i = 0; i < anInt8773; i++) {
 			Class282_Sub24 class282_sub24 = aClass282_Sub24Array8716[i];
@@ -2139,12 +2139,12 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 		OpenGL.glTexEnvi(8960, 34162, method15583(aClass68Array8785[anInt8780]));
 	}
 
-	public void method13892(Class384 class384, Class384 class384_165_, Class384 class384_166_) {
+	public void method13892(Matrix44Arr class384, Matrix44Arr class384_165_, Matrix44Arr class384_166_) {
 		OpenGL.glMatrixMode(5888);
 		aClass384_8683.method6568(class384, class384_165_);
-		OpenGL.glLoadMatrixf(aClass384_8683.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8683.buf, 0);
 		OpenGL.glMatrixMode(5889);
-		OpenGL.glLoadMatrixf(class384_166_.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(class384_166_.buf, 0);
 	}
 
 	void method14200() {
@@ -2388,7 +2388,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	void method13950() {
 		OpenGL.glMatrixMode(5888);
-		OpenGL.glLoadMatrixf(aClass384_8740.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8740.buf, 0);
 		OpenGL.glLightfv(16384, 4611, aFloatArray8747, 0);
 		OpenGL.glLightfv(16385, 4611, aFloatArray8762, 0);
 	}
@@ -2724,7 +2724,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	void method13915() {
 		OpenGL.glMatrixMode(5888);
-		OpenGL.glLoadMatrixf(aClass384_8740.aFloatArray4667, 0);
+		OpenGL.glLoadMatrixf(aClass384_8740.buf, 0);
 		OpenGL.glLightfv(16384, 4611, aFloatArray8747, 0);
 		OpenGL.glLightfv(16385, 4611, aFloatArray8762, 0);
 	}

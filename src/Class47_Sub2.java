@@ -10,7 +10,7 @@ public final class Class47_Sub2 extends Class47 {
 	void method14552() {
 		aClass505_Sub2_439.method14003();
 		aClass505_Sub2_439.method13933(aClass384_442);
-		aClass505_Sub2_439.method13892(Class384.aClass384_4666, Class384.aClass384_4666, aClass384_442);
+		aClass505_Sub2_439.method13892(Matrix44Arr.aClass384_4666, Matrix44Arr.aClass384_4666, aClass384_442);
 		aClass505_Sub2_439.method14163(0);
 		aClass505_Sub2_439.method14035(anInterface6_443);
 		aClass505_Sub2_439.method13967(0, Class67.aClass67_680);
@@ -27,7 +27,7 @@ public final class Class47_Sub2 extends Class47 {
 	void method14553() {
 		aClass505_Sub2_439.method14003();
 		aClass505_Sub2_439.method13933(aClass384_442);
-		aClass505_Sub2_439.method13892(Class384.aClass384_4666, Class384.aClass384_4666, aClass384_442);
+		aClass505_Sub2_439.method13892(Matrix44Arr.aClass384_4666, Matrix44Arr.aClass384_4666, aClass384_442);
 		aClass505_Sub2_439.method14163(0);
 		aClass505_Sub2_439.method14035(anInterface6_443);
 		aClass505_Sub2_439.method13967(0, Class67.aClass67_680);
@@ -61,7 +61,7 @@ public final class Class47_Sub2 extends Class47 {
 	void method14554() {
 		aClass505_Sub2_439.method14003();
 		aClass505_Sub2_439.method13933(aClass384_442);
-		aClass505_Sub2_439.method13892(Class384.aClass384_4666, Class384.aClass384_4666, aClass384_442);
+		aClass505_Sub2_439.method13892(Matrix44Arr.aClass384_4666, Matrix44Arr.aClass384_4666, aClass384_442);
 		aClass505_Sub2_439.method14163(0);
 		aClass505_Sub2_439.method14035(anInterface6_443);
 		aClass505_Sub2_439.method13967(0, Class67.aClass67_680);
@@ -82,7 +82,7 @@ public final class Class47_Sub2 extends Class47 {
 	void method14555() {
 		aClass505_Sub2_439.method14003();
 		aClass505_Sub2_439.method13933(aClass384_442);
-		aClass505_Sub2_439.method13892(Class384.aClass384_4666, Class384.aClass384_4666, aClass384_442);
+		aClass505_Sub2_439.method13892(Matrix44Arr.aClass384_4666, Matrix44Arr.aClass384_4666, aClass384_442);
 		aClass505_Sub2_439.method14163(0);
 		aClass505_Sub2_439.method14035(anInterface6_443);
 		aClass505_Sub2_439.method13967(0, Class67.aClass67_680);
@@ -99,7 +99,7 @@ public final class Class47_Sub2 extends Class47 {
 	void method14556() {
 		aClass505_Sub2_439.method14003();
 		aClass505_Sub2_439.method13933(aClass384_442);
-		aClass505_Sub2_439.method13892(Class384.aClass384_4666, Class384.aClass384_4666, aClass384_442);
+		aClass505_Sub2_439.method13892(Matrix44Arr.aClass384_4666, Matrix44Arr.aClass384_4666, aClass384_442);
 		aClass505_Sub2_439.method14163(0);
 		aClass505_Sub2_439.method14035(anInterface6_443);
 		aClass505_Sub2_439.method13967(0, Class67.aClass67_680);

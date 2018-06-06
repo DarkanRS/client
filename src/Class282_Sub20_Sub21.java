@@ -25,7 +25,7 @@ public class Class282_Sub20_Sub21 extends Class282_Sub20 {
 	void method12334(int i, RsByteBuffer class282_sub35) {
 		switch (i) {
 		case 0:
-			method15378(class282_sub35.read24BitUnsignedInteger((short) 7781), -175309299);
+			method15378(class282_sub35.read24BitUnsignedInteger(), -175309299);
 		}
 	}
 
@@ -38,21 +38,21 @@ public class Class282_Sub20_Sub21 extends Class282_Sub20 {
 	void method12332(int i, RsByteBuffer class282_sub35) {
 		switch (i) {
 		case 0:
-			method15378(class282_sub35.read24BitUnsignedInteger((short) 23422), -175309299);
+			method15378(class282_sub35.read24BitUnsignedInteger(), -175309299);
 		}
 	}
 
 	void method12322(int i, RsByteBuffer class282_sub35, int i_1_) {
 		switch (i) {
 		case 0:
-			method15378(class282_sub35.read24BitUnsignedInteger((short) 10196), -175309299);
+			method15378(class282_sub35.read24BitUnsignedInteger(), -175309299);
 		}
 	}
 
 	void method12335(int i, RsByteBuffer class282_sub35) {
 		switch (i) {
 		case 0:
-			method15378(class282_sub35.read24BitUnsignedInteger((short) 25546), -175309299);
+			method15378(class282_sub35.read24BitUnsignedInteger(), -175309299);
 		}
 	}
 

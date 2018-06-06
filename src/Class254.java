@@ -55,8 +55,8 @@ public abstract class Class254 implements Runnable {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_21_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_21_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_21_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_21_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_21_).aClass98_5885;
 		Class282_Sub25.method12401(class118, class98, class527, 1213503004);
 	}
 }

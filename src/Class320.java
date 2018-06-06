@@ -265,7 +265,7 @@ public class Class320 {
 		class527.anInt7012 -= 283782002;
 		int i_21_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_22_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
-		Class414 class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_22_, 0, 1444002710);
+		FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_22_, 0, 1444002710);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class414.method6951(string, i_21_, Class182.aClass160Array2261, (byte) 76);
 	}
 

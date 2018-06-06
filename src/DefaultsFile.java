@@ -28,7 +28,7 @@ public class DefaultsFile {
 		FILE_8 = new DefaultsFile(8);
 	}
 
-	static final void method11221(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method11221(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1482833983) != null)
 			string = string.substring(0, string.length() - 1);
@@ -47,7 +47,7 @@ public class DefaultsFile {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
 	}
 
-	static final void method11223(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method11223(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 382641837) != null)
 			string = string.substring(0, string.length() - 1);

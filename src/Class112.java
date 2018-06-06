@@ -146,7 +146,7 @@ public final class Class112 {
 	}
 
 	static final void method1874(CS2Executor class527, int i) {
-		String string = (Class462.aStringArray5548[(class527.unknown[class527.instrPtr * 301123709])]);
+		String string = (Class462.aStringArray5548[(class527.intOpValues[class527.instrPtr * 301123709])]);
 		if (null == string)
 			string = "";
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;

@@ -51,15 +51,15 @@ public class Class125 implements Interface8 {
 		return ((Class125) this).anInt1569 * 946359657;
 	}
 
-	static final CS2Executor method2167(int i) {
-		if (788272697 * Class517.anInt5905 == Class517.anArrayList5903.size())
-			Class517.anArrayList5903.add(new CS2Executor());
-		CS2Executor class527 = ((CS2Executor) Class517.anArrayList5903.get(Class517.anInt5905 * 788272697));
-		Class517.anInt5905 += 1618802697;
+	static final CS2Executor getNextScriptExecutor(int i) {
+		if (788272697 * CS2Runner.CURRENT_CS2_EXEC_IDX == CS2Runner.CS2_EXECUTORS.size())
+			CS2Runner.CS2_EXECUTORS.add(new CS2Executor());
+		CS2Executor class527 = ((CS2Executor) CS2Runner.CS2_EXECUTORS.get(CS2Runner.CURRENT_CS2_EXEC_IDX * 788272697));
+		CS2Runner.CURRENT_CS2_EXEC_IDX += 1618802697;
 		return class527;
 	}
 
-	static final void method2168(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method2168(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 425673003;
 		class118.anInt1359 = (class527.intStack[1942118537 * class527.anInt7012]) * 1576498757;
 		class118.anInt1360 = (class527.intStack[1 + 1942118537 * class527.anInt7012]) * 361885101;
@@ -69,12 +69,12 @@ public class Class125 implements Interface8 {
 
 	static final void method2169(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		NamedFileReference.method869(class118, class98, class527, 1852179585);
 	}
 
-	static final void method2170(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method2170(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1404763010) != null)
 			string = string.substring(0, string.length() - 1);

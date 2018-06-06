@@ -60,7 +60,7 @@ public abstract class Class217 {
 	}
 
 	public static void method3690(Index class317, int i, int i_0_, int i_1_, boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2, int i_2_) {
-		Class282_Sub43.method13400(class317, i, i_0_, i_1_, bool, (byte) -86);
+		Class11.method13400(class317, i, i_0_, i_1_, bool, (byte) -86);
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = class282_sub15_sub2;
 	}
 

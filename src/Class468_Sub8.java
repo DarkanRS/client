@@ -5,7 +5,7 @@
 public class Class468_Sub8 extends Class468 {
 	public static final int anInt7887 = 0;
 	public static final int anInt7888 = 1;
-	public static Class98[] aClass98Array7889;
+	public static Interface[] aClass98Array7889;
 
 	void method7783(int i, int i_0_) {
 		anInt5578 = i * -754033619;

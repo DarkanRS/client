@@ -142,8 +142,8 @@ public class Class235 {
 		return -391332475 * anInt2906;
 	}
 
-	static final void method3965(Class118 class118, CS2Executor class527, int i) {
-		Class414 class414 = class118.method1989(Class487.aClass378_5752, client.anInterface35_7206, 1667104026);
+	static final void method3965(IComponentDefinitions class118, CS2Executor class527, int i) {
+		FontMetrics class414 = class118.method1989(Class487.aClass378_5752, client.anInterface35_7206, 1667104026);
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_2_ = class414.method6956(class118.aString1391, 1506818197 * class118.anInt1301, -753644021 * class118.anInt1358, i_1_, i_0_, Class182.aClass160Array2261, 1449374266);

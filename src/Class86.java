@@ -30,12 +30,12 @@ public class Class86 {
 				}
 			}
 			client.anInt7341 = 761834094;
-			Class262.anIntArrayArray3239 = null;
+			NativeLibraryLoader.anIntArrayArray3239 = null;
 			Class276.aClass282_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(-1754686812);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.aClass432_2283, -321060949);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.isaac, -321060949);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
 			client.aClass184_7475.method3049(class282_sub23, -359726056);
 		}
 	}
@@ -201,12 +201,12 @@ public class Class86 {
 				}
 			}
 			client.anInt7341 = 761834094;
-			Class262.anIntArrayArray3239 = null;
+			NativeLibraryLoader.anIntArrayArray3239 = null;
 			Class276.aClass282_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(2109894057);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.aClass432_2283, 492734490);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.isaac, 492734490);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
 			client.aClass184_7475.method3049(class282_sub23, 1960953052);
 		}
 	}
@@ -221,12 +221,12 @@ public class Class86 {
 				}
 			}
 			client.anInt7341 = 761834094;
-			Class262.anIntArrayArray3239 = null;
+			NativeLibraryLoader.anIntArrayArray3239 = null;
 			Class276.aClass282_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(-2058569097);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.aClass432_2283, -409403571);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.isaac, -409403571);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
 			client.aClass184_7475.method3049(class282_sub23, -129762551);
 		}
 	}
@@ -245,12 +245,12 @@ public class Class86 {
 				}
 			}
 			client.anInt7341 = 761834094;
-			Class262.anIntArrayArray3239 = null;
+			NativeLibraryLoader.anIntArrayArray3239 = null;
 			Class276.aClass282_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(450147318);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.aClass432_2283, 883726871);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.isaac, 883726871);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
 			client.aClass184_7475.method3049(class282_sub23, -1224202096);
 		}
 	}
@@ -280,14 +280,14 @@ public class Class86 {
 	}
 
 	static final long method1480(int i) {
-		return (((long) ((Class517.anInt5906 += -1393099101) * -336812789 - 1) << 32) | 0xffffffffL);
+		return (((long) ((CS2Runner.anInt5906 += -1393099101) * -336812789 - 1) << 32) | 0xffffffffL);
 	}
 
 	static boolean method1481(Class232 class232, byte i) {
 		return Class6.method302(class232, null, 898171196);
 	}
 
-	static void method1482(Class118 class118, byte i) {
+	static void method1482(IComponentDefinitions class118, byte i) {
 		if (5 == -2131393857 * class118.anInt1268 && -1 != class118.anInt1426 * -56249735)
 			Class415.method6996(Renderers.SOFTWARE_RENDERER, class118, -585931804);
 	}

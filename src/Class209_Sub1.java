@@ -312,8 +312,8 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		for (int i_15_ = 0; i_15_ < 100; i_15_++) {
 			if (i != 16)
 				return;
-			Class81.aClass108Array798[i_15_] = null;
+			Class81.CHAT_LINES[i_15_] = null;
 		}
-		Class81.anInt800 = 0;
+		Class81.NUM_CHAT_LINES = 0;
 	}
 }

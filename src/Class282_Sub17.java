@@ -31,7 +31,7 @@ public abstract class Class282_Sub17 extends Node {
 		return 0 == i || i == 2 || i == 7 || 6 == i;
 	}
 
-	static final void method12260(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method12260(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 567564004;
 		class118.anInt1297 = (class527.intStack[class527.anInt7012 * 1942118537]) * -81350191;
 		class118.anInt1298 = ((class527.intStack[class527.anInt7012 * 1942118537 + 1]) * 2017388241);

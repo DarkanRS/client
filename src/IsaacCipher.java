@@ -137,7 +137,7 @@ public final class IsaacCipher {
 		this.anInt5152 = 1059992832;
 	}
 
-	public final int method7254(int i) {
+	public final int nextInt(int i) {
 		if (0 == -566152163 * this.anInt5152) {
 			method7256(420526674);
 			this.anInt5152 = 1059992832;
@@ -769,7 +769,7 @@ public final class IsaacCipher {
 		return ObjectIndexLoader.method7916((-87869981 * Class159.aClass450_2010.worldId), 1371284314);
 	}
 
-	static final void method7267(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method7267(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aBool1344 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 89);
 	}

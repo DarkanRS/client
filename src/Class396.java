@@ -5,8 +5,8 @@
 import java.io.File;
 
 public class Class396 {
-	public static String aString4789;
-	public static String aString4790;
+	public static String OS_ARCHITECTURE;
+	public static String OS_NAME;
 	
 	static {
 		String string = "Unknown";
@@ -29,14 +29,14 @@ public class Class396 {
 		} catch (Exception exception) {
 			/* empty */
 		}
-		aString4790 = string.toLowerCase();
+		OS_NAME = string.toLowerCase();
 		string = "Unknown";
 		try {
 			string = System.getProperty("os.arch").toLowerCase();
 		} catch (Exception exception) {
 			/* empty */
 		}
-		aString4789 = string.toLowerCase();
+		OS_ARCHITECTURE = string.toLowerCase();
 		string = "Unknown";
 		try {
 			string = System.getProperty("os.version").toLowerCase();

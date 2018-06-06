@@ -32,9 +32,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 			class282_sub50_sub17 = this.aClass282_Sub50_Sub17_10517;
 			this.aClass282_Sub50_Sub17_10517 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17) {
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -17);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -17);
 		}
 	}
 
@@ -61,8 +61,8 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				class390_1_ = null;
 			}
 		}
-		Class385 class385 = method11166().aClass385_3595;
-		return class478.method8010(class505, i, this.aByte10521, this.aByte10520, class390, class390_1_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, bool, null, 1259203877);
+		Vector3 class385 = method11166().aClass385_3595;
+		return class478.method8010(class505, i, this.aByte10521, this.aByte10520, class390, class390_1_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, 1259203877);
 	}
 
 	@Override
@@ -76,9 +76,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 			class282_sub50_sub17 = this.aClass282_Sub50_Sub17_10517;
 			this.aClass282_Sub50_Sub17_10517 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (class282_sub50_sub17 != null) {
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -128);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -128);
 		}
 	}
 
@@ -98,7 +98,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		if (this.aClass528_10513 == null) {
 			return null;
 		}
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(this.aBool10523, (byte) -98);
 		this.aClass528_10513.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -106,9 +106,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 	@Override
 	public Class200 method12992(GraphicalRenderer class505, byte i) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (this.aClass200_10519 == null) {
-			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16102(class505, 0, 2053058474), (byte) 82);
+			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16102(class505, 0, 2053058474), (byte) 82);
 		}
 		return this.aClass200_10519;
 	}
@@ -158,9 +158,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 			class282_sub50_sub17 = this.aClass282_Sub50_Sub17_10517;
 			this.aClass282_Sub50_Sub17_10517 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (class282_sub50_sub17 != null) {
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -90);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -90);
 		}
 	}
 
@@ -208,9 +208,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 			class282_sub50_sub17 = this.aClass282_Sub50_Sub17_10517;
 			this.aClass282_Sub50_Sub17_10517 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (class282_sub50_sub17 != null) {
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -39);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -39);
 		}
 	}
 
@@ -306,9 +306,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 			class282_sub50_sub17 = this.aClass282_Sub50_Sub17_10517;
 			this.aClass282_Sub50_Sub17_10517 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17) {
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) 23);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) 23);
 		}
 	}
 
@@ -323,9 +323,9 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 			class282_sub50_sub17 = this.aClass282_Sub50_Sub17_10517;
 			this.aClass282_Sub50_Sub17_10517 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17) {
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) 45);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) 45);
 		}
 	}
 
@@ -366,7 +366,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		if (this.aClass528_10513 == null) {
 			return null;
 		}
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(this.aBool10523, (byte) -74);
 		this.aClass528_10513.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -429,7 +429,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		if (this.aClass528_10513 == null) {
 			return null;
 		}
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(this.aBool10523, (byte) -12);
 		this.aClass528_10513.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -440,7 +440,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		if (this.aClass528_10513 == null) {
 			return null;
 		}
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(this.aBool10523, (byte) -7);
 		this.aClass528_10513.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		return class285;
@@ -471,8 +471,8 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				class390_18_ = null;
 			}
 		}
-		Class385 class385 = method11166().aClass385_3595;
-		return class478.method8010(class505, i, this.aByte10521, this.aByte10520, class390, class390_18_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, bool, null, -344511963);
+		Vector3 class385 = method11166().aClass385_3595;
+		return class478.method8010(class505, i, this.aByte10521, this.aByte10520, class390, class390_18_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, -344511963);
 	}
 
 	@Override
@@ -494,27 +494,27 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 
 	@Override
 	public Class200 method13019(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (this.aClass200_10519 == null) {
-			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16102(class505, 0, 1598187689), (byte) -54);
+			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16102(class505, 0, 1598187689), (byte) -54);
 		}
 		return this.aClass200_10519;
 	}
 
 	@Override
 	public Class200 method13018(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (this.aClass200_10519 == null) {
-			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16102(class505, 0, -6951740), (byte) -23);
+			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16102(class505, 0, -6951740), (byte) -23);
 		}
 		return this.aClass200_10519;
 	}
 
 	@Override
 	public Class200 method12993(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (this.aClass200_10519 == null) {
-			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16102(class505, 0, 1171214573), (byte) -10);
+			this.aClass200_10519 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16102(class505, 0, 1171214573), (byte) -10);
 		}
 		return this.aClass200_10519;
 	}
@@ -523,7 +523,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 	boolean method13020(GraphicalRenderer class505, int i, int i_20_) {
 		MeshRasterizer class528 = method16102(class505, 131072, 67761408);
 		if (null != class528) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			return class528.method11270(i, i_20_, class294, false, 0);
 		}
 		return false;
@@ -573,7 +573,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 	boolean method12983(GraphicalRenderer class505, int i, int i_21_, int i_22_) {
 		MeshRasterizer class528 = method16102(class505, 131072, 1136432980);
 		if (null != class528) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			return class528.method11270(i, i_21_, class294, false, 0);
 		}
 		return false;
@@ -595,30 +595,30 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				if (Class192.aClass1_2391 == Class1.aClass1_11) {
 					client.aClass184_7218.method3050(Class38.method852(Class448.aClass450_5424.method7494((byte) 121), 15000, 1038176780), Class448.aClass450_5424.aString5433, (byte) -47);
 					client.aClass184_7218.method3054((short) 8665);
-					Class282_Sub23 class282_sub23 = Class207.method3558((byte) 87);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(1627920319 * Class369.aClass369_4275.anInt4278);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-					int i_24_ = -1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(727, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(1, 1417031095);
+					TCPMessage class282_sub23 = Class207.method3558((byte) 87);
+					class282_sub23.buffer.writeByte(1627920319 * OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
+					class282_sub23.buffer.writeShort(0, 1417031095);
+					int i_24_ = -1990677291 * (class282_sub23.buffer.index);
+					class282_sub23.buffer.writeShort(727, 1417031095);
+					class282_sub23.buffer.writeShort(1, 1417031095);
 					Class14.anIntArray131 = Class463.method7725(class282_sub23, (byte) -61);
-					int i_25_ = (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(client.aString7164);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(-1543197399 * client.anInt7149, 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeLong(-8972807970865466165L * client.aLong7153);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeString(Class464.aString5555);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
-					Class31.method809(class282_sub23.aClass282_Sub35_Sub2_7682, -1671456029);
+					int i_25_ = (class282_sub23.buffer.index * -1990677291);
+					class282_sub23.buffer.writeString(client.aString7164);
+					class282_sub23.buffer.writeShort(-1543197399 * client.anInt7149, 1417031095);
+					class282_sub23.buffer.writeLong(-8972807970865466165L * client.aLong7153);
+					class282_sub23.buffer.writeString(Class464.aString5555);
+					class282_sub23.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					class282_sub23.buffer.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
+					Class31.method809(class282_sub23.buffer, -1671456029);
 					String string = client.aString7156;
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(string == null ? 0 : 1);
+					class282_sub23.buffer.writeByte(string == null ? 0 : 1);
 					if (string != null) {
-						class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
+						class282_sub23.buffer.writeString(string);
 					}
-					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.aClass282_Sub35_Sub2_7682, 419814551);
-					class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13101(Class14.anIntArray131, i_25_, (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291), 1645773158);
-					class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * (class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_24_), 1201423895);
+					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.buffer, 419814551);
+					class282_sub23.buffer.index += 781596523;
+					class282_sub23.buffer.method13101(Class14.anIntArray131, i_25_, (class282_sub23.buffer.index * -1990677291), 1645773158);
+					class282_sub23.buffer.method13281((-1990677291 * (class282_sub23.buffer.index) - i_24_), 1201423895);
 					client.aClass184_7218.method3049(class282_sub23, -1007484142);
 					client.aClass184_7218.method3047(557990439);
 					Class192.aClass1_2391 = Class1.aClass1_10;
@@ -628,16 +628,16 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 						Class5.method297(2055895853);
 					} else if (client.aClass184_7218.method3053((byte) -55).method3315(1, (byte) 85)) {
 						client.aClass184_7218.method3053((byte) -73).method3327((client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1181691571);
-						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Class98.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -865772612));
+						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Interface.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -865772612));
 						if (Class483.aClass483_5734 == Class96_Sub9.aClass483_9278) {
-							client.aClass184_7218.aClass432_2283 = new IsaacCipher(Class14.anIntArray131);
+							client.aClass184_7218.isaac = new IsaacCipher(Class14.anIntArray131);
 							int[] is = new int[4];
 							for (int i_26_ = 0; i_26_ < 4; i_26_++) {
 								is[i_26_] = Class14.anIntArray131[i_26_] + 50;
 							}
 							client.aClass184_7218.aClass432_2295 = new IsaacCipher(is);
 							new IsaacCipher(is);
-							client.aClass184_7218.aClass282_Sub35_Sub2_2284.method14867((client.aClass184_7218.aClass432_2295), 1577326429);
+							client.aClass184_7218.aClass282_Sub35_Sub2_2284.setIsaacCipher((client.aClass184_7218.aClass432_2295), 1577326429);
 							Class365.method6298(3, 801938860);
 							client.aClass184_7218.method3054((short) -8634);
 							client.aClass184_7218.aClass282_Sub35_Sub2_2284.index = 0;

@@ -10,7 +10,7 @@ public class Class48_Sub1 extends Class48 {
 		aClass505_Sub2_449.method14002(Class352.aClass352_4098, anInt467, anInt468, anInt469, anInt470);
 	}
 
-	public void method957(Class384 class384) {
+	public void method957(Matrix44Arr class384) {
 		aClass505_Sub2_449.method13892(class384, aClass505_Sub2_449.aClass384_8740, aClass505_Sub2_449.aClass384_8727);
 	}
 
@@ -55,11 +55,11 @@ public class Class48_Sub1 extends Class48 {
 		method14515();
 	}
 
-	public void method951(Class384 class384) {
+	public void method951(Matrix44Arr class384) {
 		aClass505_Sub2_449.method13892(class384, aClass505_Sub2_449.aClass384_8740, aClass505_Sub2_449.aClass384_8727);
 	}
 
-	public void method952(Class384 class384) {
+	public void method952(Matrix44Arr class384) {
 		aClass505_Sub2_449.method13892(class384, aClass505_Sub2_449.aClass384_8740, aClass505_Sub2_449.aClass384_8727);
 	}
 
@@ -73,7 +73,7 @@ public class Class48_Sub1 extends Class48 {
 		method14515();
 	}
 
-	public void method953(Class384 class384) {
+	public void method953(Matrix44Arr class384) {
 		aClass505_Sub2_449.method13892(class384, aClass505_Sub2_449.aClass384_8740, aClass505_Sub2_449.aClass384_8727);
 	}
 
@@ -108,7 +108,7 @@ public class Class48_Sub1 extends Class48 {
 		method14515();
 	}
 
-	public void method963(Class384 class384) {
+	public void method963(Matrix44Arr class384) {
 		aClass505_Sub2_449.method13892(class384, aClass505_Sub2_449.aClass384_8740, aClass505_Sub2_449.aClass384_8727);
 	}
 
@@ -152,7 +152,7 @@ public class Class48_Sub1 extends Class48 {
 		method14515();
 	}
 
-	public void method967(Class384 class384) {
+	public void method967(Matrix44Arr class384) {
 		aClass505_Sub2_449.method13892(class384, aClass505_Sub2_449.aClass384_8740, aClass505_Sub2_449.aClass384_8727);
 	}
 

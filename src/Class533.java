@@ -457,25 +457,25 @@ public class Class533 {
 
 	static final void method11403(CS2Executor class527, short i) {
 		int i_107_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_107_, (byte) 25);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_107_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_107_, (byte) 25);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_107_ >> 16];
 		Class237.method3987(class118, class98, class527, -599656695);
 	}
 
 	static void method11404(String string, String string_108_, String string_109_, boolean bool, boolean bool_110_, int i) {
 		Class184 class184 = Class468_Sub20.method12807(-1561736689);
 		if (class184.method3053((byte) -70) != null) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4543, class184.aClass432_2283, 666430203);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort((Class108.method1846(string, 210097885) + Class108.method1846(string_108_, -1117407673) + Class108.method1846(string_109_, -1372593194) + 1), 1417031095);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string_108_);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string_109_);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4543, class184.isaac, 666430203);
+			class282_sub23.buffer.writeShort((ChatLine.getLength(string) + ChatLine.getLength(string_108_) + ChatLine.getLength(string_109_) + 1), 1417031095);
+			class282_sub23.buffer.writeString(string);
+			class282_sub23.buffer.writeString(string_108_);
+			class282_sub23.buffer.writeString(string_109_);
 			int i_111_ = 0;
 			if (bool)
 				i_111_ |= 0x1;
 			if (bool_110_)
 				i_111_ |= 0x2;
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_111_);
+			class282_sub23.buffer.writeByte(i_111_);
 			class184.method3049(class282_sub23, 1665621152);
 		}
 	}

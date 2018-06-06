@@ -50,14 +50,14 @@ public class Class96_Sub18 extends Class96 {
 		return class518.method11132(1964744017);
 	}
 
-	static final void method14664(Class118 class118, Class98 class98, boolean bool, int i, CS2Executor class527, byte i_0_) {
+	static final void method14664(IComponentDefinitions class118, Interface class98, boolean bool, int i, CS2Executor class527, byte i_0_) {
 		class527.anInt7012 -= 283782002;
 		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		int i_2_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999) {
-			Class411.method6914(class118.anInt1287 * -1952846363, (short) 887);
-			Class106.method1818(class118.anInt1287 * -1952846363, 209948825);
-			Item.method12575(-1952846363 * class118.anInt1287, (byte) 59);
+			Class411.method6914(class118.idHash * -1952846363, (short) 887);
+			Class106.method1818(class118.idHash * -1952846363, 209948825);
+			Item.method12575(-1952846363 * class118.idHash, (byte) 59);
 		}
 		if (-1 == i_1_) {
 			class118.anInt1329 = 589750077;

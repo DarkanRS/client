@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class NativeSprite implements Interface39 {
+public abstract class NativeSprite implements Sprite {
 	public abstract void method2742(int i, int i_0_, int i_1_, int i_2_, int i_3_);
 
 	public abstract void method2743(int i, int i_4_, int i_5_, int i_6_);

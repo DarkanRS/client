@@ -59,12 +59,12 @@ public class Class94 {
 		}
 	}
 
-	static String method1585(String string, byte i) {
-		if (Class396.aString4790.startsWith("win"))
+	static String prependOS(String string, byte i) {
+		if (Class396.OS_NAME.startsWith("win"))
 			return new StringBuilder().append(string).append(".dll").toString();
-		if (Class396.aString4790.startsWith("linux"))
+		if (Class396.OS_NAME.startsWith("linux"))
 			return new StringBuilder().append("lib").append(string).append(".so").toString();
-		if (Class396.aString4790.startsWith("mac"))
+		if (Class396.OS_NAME.startsWith("mac"))
 			return new StringBuilder().append("lib").append(string).append(".dylib").toString();
 		return null;
 	}
@@ -95,11 +95,11 @@ public class Class94 {
 		return class282_sub35;
 	}
 
-	public static Class414 method1588(Index class317, int i, int i_1_, int i_2_) {
+	public static FontMetrics method1588(Index class317, int i, int i_1_, int i_2_) {
 		byte[] is = class317.getFile(i, i_1_, -1787886103);
 		if (is == null)
 			return null;
-		return new Class414(is);
+		return new FontMetrics(is);
 	}
 
 	public static void method1589(short i) {

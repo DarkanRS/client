@@ -19,7 +19,7 @@ public class Class282_Sub39 extends Node {
 		return (long) ((((Class282_Sub39) this).aShortArrayArray8003.length << 32) | (((Class282_Sub39) this).aShortArrayArray8003[0]).length);
 	}
 
-	static void method13296(Class384 class384, int i) {
+	static void method13296(Matrix44Arr class384, int i) {
 		Class20.aClass384_185.method6562(class384);
 	}
 

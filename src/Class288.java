@@ -7,7 +7,7 @@ import java.util.Date;
 public class Class288 {
 	Index aClass317_3436;
 	SoftCache aClass229_3437 = new SoftCache(16);
-	static Class414 aClass414_3438;
+	static FontMetrics aClass414_3438;
 
 	public void method5067() {
 		synchronized (((Class288) this).aClass229_3437) {
@@ -193,33 +193,33 @@ public class Class288 {
 		Class407.aCalendar4846.setTime(new Date(l));
 	}
 
-	public static Class98 method5084(int i, int[] is, Class98 class98, boolean bool, byte i_9_) {
-		if (!Class388.aClass317_4721.method5647(i, -2119577317))
+	public static Interface getInterface(int interfaceId, int[] xteas, Interface inter, boolean bool, byte i_9_) {
+		if (!Class388.INTERFACE_INDEX.method5647(interfaceId, -2119577317))
 			return null;
-		int i_10_ = Class388.aClass317_4721.filesCount(i, 1474003408);
-		Class118[] class118s;
-		if (i_10_ == 0)
-			class118s = new Class118[0];
-		else if (class98 == null)
-			class118s = new Class118[i_10_];
+		int numComponents = Class388.INTERFACE_INDEX.filesCount(interfaceId, 1474003408);
+		IComponentDefinitions[] componentDefs;
+		if (numComponents == 0)
+			componentDefs = new IComponentDefinitions[0];
+		else if (inter == null)
+			componentDefs = new IComponentDefinitions[numComponents];
 		else
-			class118s = class98.aClass118Array998;
-		if (null == class98)
-			class98 = new Class98(bool, class118s);
+			componentDefs = inter.components;
+		if (null == inter)
+			inter = new Interface(bool, componentDefs);
 		else {
-			class98.aClass118Array998 = class118s;
-			class98.aBool999 = bool;
+			inter.components = componentDefs;
+			inter.aBool999 = bool;
 		}
-		for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
-			if (class98.aClass118Array998[i_11_] == null) {
-				byte[] is_12_ = Class388.aClass317_4721.getFile(i, i_11_, is, -440613598);
-				if (null != is_12_) {
-					Class118 class118 = class98.aClass118Array998[i_11_] = new Class118();
-					class118.anInt1287 = ((i << 16) + i_11_) * -1255176211;
-					class118.method1984(new RsByteBuffer(is_12_), 1943098120);
+		for (int componentId = 0; componentId < numComponents; componentId++) {
+			if (inter.components[componentId] == null) {
+				byte[] data = Class388.INTERFACE_INDEX.getFile(interfaceId, componentId, xteas, -440613598);
+				if (null != data) {
+					IComponentDefinitions defs = inter.components[componentId] = new IComponentDefinitions();
+					defs.idHash = ((interfaceId << 16) + componentId) * -1255176211;
+					defs.readValues(new RsByteBuffer(data), 1943098120);
 				}
 			}
 		}
-		return class98;
+		return inter;
 	}
 }

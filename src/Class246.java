@@ -23,7 +23,7 @@ public class Class246 {
 					return;
 				class184.anInt2290 = 0;
 				if (!class184.aBool2298 && class184.method3053((byte) -113) != null) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, class184.aClass432_2283, -98412133);
+					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.KEEP_ALIVE, class184.isaac, -98412133);
 					class184.method3049(class282_sub23, 1836352081);
 					try {
 						class184.method3047(414932495);
@@ -38,7 +38,7 @@ public class Class246 {
 
 	static final void method4200(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.anInt7012 -= 1418910010;
 		byte[] is = null;
 		byte[] is_0_ = null;
@@ -58,7 +58,7 @@ public class Class246 {
 	}
 
 	static final void method4201(CS2Executor class527, int i) {
-		Class118 class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 117);
+		IComponentDefinitions class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 117);
 		if (-1 != -56249735 * class118.anInt1426)
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class118.anInt1427 * 6040081;
 		else
@@ -86,7 +86,7 @@ public class Class246 {
 		return null;
 	}
 
-	static void method4204(Class118 class118, int i, int i_6_, int i_7_) {
+	static void method4204(IComponentDefinitions class118, int i, int i_6_, int i_7_) {
 		if (0 == class118.aByte1333)
 			class118.anInt1299 = class118.anInt1295 * 1054420063;
 		else if (1 == class118.aByte1333)
@@ -125,8 +125,8 @@ public class Class246 {
 
 	static final void method4205(CS2Executor class527, int i) {
 		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_8_, (byte) 63);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_8_, (byte) 63);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class125.method2168(class118, class98, class527, -1301648510);
 	}
 }

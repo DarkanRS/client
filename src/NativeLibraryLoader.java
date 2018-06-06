@@ -11,87 +11,33 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 
-public class Class262 implements Interface36 {
-	Index aClass317_3235;
-	String aString3236;
+@SuppressWarnings({"rawtypes", "unchecked"})
+public class NativeLibraryLoader implements Interface36 {
+	Index nativeLibraryIndex;
+	String OS_AND_ARCHITECTURE;
 	Hashtable aHashtable3237 = new Hashtable();
-	Hashtable aHashtable3238 = new Hashtable();
+	Hashtable linkedLibraries = new Hashtable();
 	public static int[][] anIntArrayArray3239;
 	public static int anInt3240;
 
-	static String method4635(String string) {
-		if (Class396.aString4790.startsWith("win"))
-			return new StringBuilder().append(string).append(".dll").toString();
-		if (Class396.aString4790.startsWith("linux"))
-			return new StringBuilder().append("lib").append(string).append(".so").toString();
-		if (Class396.aString4790.startsWith("mac"))
-			return new StringBuilder().append("lib").append(string).append(".dylib").toString();
-		return null;
-	}
-
-	public boolean method4636(String string) {
-		return ((Class262) this).aHashtable3238.containsKey(string);
-	}
-
 	void method4637(String string, File file, byte i) {
-		((Class262) this).aHashtable3237.put(string, file);
-	}
-
-	boolean method4638(String string, Class var_class) {
-		Class var_class_0_ = (Class) ((Class262) this).aHashtable3238.get(string);
-		if (var_class_0_ != null) {
-			if (var_class_0_.getClassLoader() != var_class.getClassLoader())
-				return false;
-			return true;
-		}
-		File file = null;
-		if (file == null)
-			file = (File) ((Class262) this).aHashtable3237.get(string);
-		do {
-			if (null != file) {
-				boolean bool;
-				try {
-					file = new File(file.getCanonicalPath());
-					Class var_class_1_ = Class.forName("java.lang.Runtime");
-					Class var_class_2_ = Class.forName("java.lang.reflect.AccessibleObject");
-					Method method = var_class_2_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-					Method method_3_ = (var_class_1_.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
-					method.invoke(method_3_, new Object[] { Boolean.TRUE });
-					method_3_.invoke(Runtime.getRuntime(), new Object[] { var_class, file.getPath() });
-					method.invoke(method_3_, new Object[] { Boolean.FALSE });
-					((Class262) this).aHashtable3238.put(string, var_class);
-					bool = true;
-				} catch (NoSuchMethodException nosuchmethodexception) {
-					System.load(file.getPath());
-					((Class262) this).aHashtable3238.put(string, Class266.class);
-					return true;
-				} catch (Throwable throwable) {
-					break;
-				}
-				return bool;
-			}
-		} while (false);
-		return false;
+		((NativeLibraryLoader) this).aHashtable3237.put(string, file);
 	}
 
 	public boolean method4639(String string, short i) {
-		return ((Class262) this).aHashtable3238.containsKey(string);
+		return ((NativeLibraryLoader) this).linkedLibraries.containsKey(string);
 	}
 
-	public boolean method222(String string, int i) {
-		return method4645(string, Class266.class, (byte) 2);
-	}
-
-	void method4640(String string, File file) {
-		((Class262) this).aHashtable3237.put(string, file);
+	public boolean loadLibrary(String dllName, int i) {
+		return loadLibrary(dllName, Class266.class, (byte) 2);
 	}
 
 	public boolean method219(int i) {
 		Hashtable hashtable = new Hashtable();
-		Enumeration enumeration = ((Class262) this).aHashtable3238.keys();
+		Enumeration enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
 		while (enumeration.hasMoreElements()) {
 			String string = (String) enumeration.nextElement();
-			hashtable.put(string, ((Class262) this).aHashtable3238.get(string));
+			hashtable.put(string, ((NativeLibraryLoader) this).linkedLibraries.get(string));
 		}
 		try {
 			Class var_class = Class.forName("java.lang.reflect.AccessibleObject");
@@ -100,12 +46,12 @@ public class Class262 implements Interface36 {
 			Method method = var_class.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
 			method.invoke(field, new Object[] { Boolean.TRUE });
 			try {
-				enumeration = ((Class262) this).aHashtable3238.keys();
+				enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
 				while (enumeration.hasMoreElements()) {
 					String string = (String) enumeration.nextElement();
 					try {
-						File file = ((File) ((Class262) this).aHashtable3237.get(string));
-						Class var_class_5_ = ((Class) ((Class262) this).aHashtable3238.get(string));
+						File file = ((File) ((NativeLibraryLoader) this).aHashtable3237.get(string));
+						Class var_class_5_ = ((Class) ((NativeLibraryLoader) this).linkedLibraries.get(string));
 						Vector vector = ((Vector) field.get(var_class_5_.getClassLoader()));
 						for (int i_6_ = 0; i_6_ < vector.size(); i_6_++) {
 							try {
@@ -148,102 +94,48 @@ public class Class262 implements Interface36 {
 		} catch (Throwable throwable) {
 			/* empty */
 		}
-		((Class262) this).aHashtable3238 = hashtable;
-		return ((Class262) this).aHashtable3238.isEmpty();
-	}
-
-	boolean method4641(String string, Class var_class) {
-		Class var_class_11_ = (Class) ((Class262) this).aHashtable3238.get(string);
-		if (var_class_11_ != null) {
-			if (var_class_11_.getClassLoader() != var_class.getClassLoader())
-				return false;
-			return true;
-		}
-		File file = null;
-		if (file == null)
-			file = (File) ((Class262) this).aHashtable3237.get(string);
-		do {
-			if (null != file) {
-				boolean bool;
-				try {
-					file = new File(file.getCanonicalPath());
-					Class var_class_12_ = Class.forName("java.lang.Runtime");
-					Class var_class_13_ = Class.forName("java.lang.reflect.AccessibleObject");
-					Method method = var_class_13_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-					Method method_14_ = (var_class_12_.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
-					method.invoke(method_14_, new Object[] { Boolean.TRUE });
-					method_14_.invoke(Runtime.getRuntime(), new Object[] { var_class, file.getPath() });
-					method.invoke(method_14_, new Object[] { Boolean.FALSE });
-					((Class262) this).aHashtable3238.put(string, var_class);
-					bool = true;
-				} catch (NoSuchMethodException nosuchmethodexception) {
-					System.load(file.getPath());
-					((Class262) this).aHashtable3238.put(string, Class266.class);
-					return true;
-				} catch (Throwable throwable) {
-					break;
-				}
-				return bool;
-			}
-		} while (false);
-		return false;
-	}
-
-	static String method4642(String string) {
-		if (Class396.aString4790.startsWith("win"))
-			return new StringBuilder().append(string).append(".dll").toString();
-		if (Class396.aString4790.startsWith("linux"))
-			return new StringBuilder().append("lib").append(string).append(".so").toString();
-		if (Class396.aString4790.startsWith("mac"))
-			return new StringBuilder().append("lib").append(string).append(".dylib").toString();
-		return null;
+		((NativeLibraryLoader) this).linkedLibraries = hashtable;
+		return ((NativeLibraryLoader) this).linkedLibraries.isEmpty();
 	}
 
 	public boolean method224(String string) {
-		return method4645(string, Class266.class, (byte) 2);
+		return loadLibrary(string, Class266.class, (byte) 2);
 	}
 
 	public boolean method218(String string, int i) {
-		return ((Class262) this).aHashtable3237.containsKey(string);
+		return ((NativeLibraryLoader) this).aHashtable3237.containsKey(string);
 	}
 
-	void method4643(String string, File file) {
-		((Class262) this).aHashtable3237.put(string, file);
-	}
-
-	void method4644(String string, File file) {
-		((Class262) this).aHashtable3237.put(string, file);
-	}
-
-	boolean method4645(String string, Class var_class, byte i) {
-		Class var_class_15_ = (Class) ((Class262) this).aHashtable3238.get(string);
-		if (var_class_15_ != null) {
-			if (var_class_15_.getClassLoader() != var_class.getClassLoader())
+	boolean loadLibrary(String libName, Class classToLoadFrom, byte i) {
+		Class clazz = (Class) ((NativeLibraryLoader) this).linkedLibraries.get(libName);
+		if (clazz != null) {
+			if (clazz.getClassLoader() != classToLoadFrom.getClassLoader())
 				return false;
 			return true;
 		}
 		File file = null;
 		if (file == null)
-			file = (File) ((Class262) this).aHashtable3237.get(string);
+			file = (File) ((NativeLibraryLoader) this).aHashtable3237.get(libName);
 		do {
 			if (null != file) {
 				boolean bool;
 				try {
 					file = new File(file.getCanonicalPath());
-					Class var_class_16_ = Class.forName("java.lang.Runtime");
-					Class var_class_17_ = Class.forName("java.lang.reflect.AccessibleObject");
-					Method method = var_class_17_.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-					Method method_18_ = (var_class_16_.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
-					method.invoke(method_18_, new Object[] { Boolean.TRUE });
-					method_18_.invoke(Runtime.getRuntime(), new Object[] { var_class, file.getPath() });
-					method.invoke(method_18_, new Object[] { Boolean.FALSE });
-					((Class262) this).aHashtable3238.put(string, var_class);
+					Class runtime = Class.forName("java.lang.Runtime");
+					Class accessibleObject = Class.forName("java.lang.reflect.AccessibleObject");
+					Method setAccessible = accessibleObject.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
+					Method load = (runtime.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
+					setAccessible.invoke(load, new Object[] { Boolean.TRUE });
+					load.invoke(Runtime.getRuntime(), new Object[] { classToLoadFrom, file.getPath() });
+					setAccessible.invoke(load, new Object[] { Boolean.FALSE });
+					((NativeLibraryLoader) this).linkedLibraries.put(libName, classToLoadFrom);
 					bool = true;
 				} catch (NoSuchMethodException nosuchmethodexception) {
 					System.load(file.getPath());
-					((Class262) this).aHashtable3238.put(string, Class266.class);
+					((NativeLibraryLoader) this).linkedLibraries.put(libName, Class266.class);
 					return true;
 				} catch (Throwable throwable) {
+					throwable.printStackTrace();
 					break;
 				}
 				return bool;
@@ -253,56 +145,48 @@ public class Class262 implements Interface36 {
 	}
 
 	public boolean method223(String string) {
-		return ((Class262) this).aHashtable3237.containsKey(string);
+		return ((NativeLibraryLoader) this).aHashtable3237.containsKey(string);
 	}
 
-	public boolean method4646(String string) {
-		return ((Class262) this).aHashtable3238.containsKey(string);
-	}
-
-	public Class262(Index class317) {
-		((Class262) this).aClass317_3235 = class317;
+	public NativeLibraryLoader(Index nativeLibraryIndex) {
+		((NativeLibraryLoader) this).nativeLibraryIndex = nativeLibraryIndex;
 		String string = "";
-		if (Class396.aString4790.startsWith("win") || Class396.aString4790.startsWith("windows 7"))
+		if (Class396.OS_NAME.startsWith("win") || Class396.OS_NAME.startsWith("windows 7"))
 			string = new StringBuilder().append(string).append("windows/").toString();
-		else if (Class396.aString4790.startsWith("linux"))
+		else if (Class396.OS_NAME.startsWith("linux"))
 			string = new StringBuilder().append(string).append("linux/").toString();
-		else if (Class396.aString4790.startsWith("mac"))
+		else if (Class396.OS_NAME.startsWith("mac"))
 			string = new StringBuilder().append(string).append("macos/").toString();
-		if (Class396.aString4789.startsWith("amd64") || Class396.aString4789.startsWith("x86_64"))
+		if (Class396.OS_ARCHITECTURE.startsWith("amd64") || Class396.OS_ARCHITECTURE.startsWith("x86_64"))
 			string = new StringBuilder().append(string).append("x86_64/").toString();
-		else if (Class396.aString4789.startsWith("i386") || Class396.aString4789.startsWith("i486") || Class396.aString4789.startsWith("i586") || Class396.aString4789.startsWith("x86"))
+		else if (Class396.OS_ARCHITECTURE.startsWith("i386") || Class396.OS_ARCHITECTURE.startsWith("i486") || Class396.OS_ARCHITECTURE.startsWith("i586") || Class396.OS_ARCHITECTURE.startsWith("x86"))
 			string = new StringBuilder().append(string).append("x86/").toString();
-		else if (Class396.aString4789.startsWith("ppc"))
+		else if (Class396.OS_ARCHITECTURE.startsWith("ppc"))
 			string = new StringBuilder().append(string).append("ppc/").toString();
 		else
 			string = new StringBuilder().append(string).append("universal/").toString();
-		((Class262) this).aString3236 = string;
+		((NativeLibraryLoader) this).OS_AND_ARCHITECTURE = string;
 	}
 
-	public boolean method4647(String string) {
-		return ((Class262) this).aHashtable3238.containsKey(string);
-	}
-
-	public int method4648(String string, int i) {
-		if (((Class262) this).aHashtable3237.containsKey(string))
+	public int method4648(String fileName, int i) {
+		if (((NativeLibraryLoader) this).aHashtable3237.containsKey(fileName))
 			return 100;
-		String string_19_ = Class94.method1585(string, (byte) 70);
-		if (string_19_ == null)
+		String libraryName = Class94.prependOS(fileName, (byte) 70);
+		if (libraryName == null)
 			return -1;
-		String string_20_ = null;
-		if (string_20_ == null) {
-			string_20_ = new StringBuilder().append(((Class262) this).aString3236).append(string_19_).toString();
-			if (!((Class262) this).aClass317_3235.method5625(string_20_, "", (byte) -91))
+		String fullLibName = null;
+		if (fullLibName == null) {
+			fullLibName = new StringBuilder().append(((NativeLibraryLoader) this).OS_AND_ARCHITECTURE).append(libraryName).toString();
+			if (!((NativeLibraryLoader) this).nativeLibraryIndex.method5625(fullLibName, "", (byte) -91))
 				return -1;
 		}
-		if (!((Class262) this).aClass317_3235.method5629(string_20_, 71472045))
-			return ((Class262) this).aClass317_3235.method5631(string_20_, (byte) 113);
-		byte[] is = ((Class262) this).aClass317_3235.method5626(string_20_, "", (byte) 1);
+		if (!((NativeLibraryLoader) this).nativeLibraryIndex.method5629(fullLibName, 71472045))
+			return ((NativeLibraryLoader) this).nativeLibraryIndex.method5631(fullLibName, (byte) 113);
+		byte[] is = ((NativeLibraryLoader) this).nativeLibraryIndex.method5626(fullLibName, "", (byte) 1);
 		Object object = null;
 		File file;
 		try {
-			file = Class96_Sub23.method14681(string_19_, 827415998);
+			file = Class96_Sub23.method14681(libraryName, 827415998);
 		} catch (RuntimeException runtimeexception) {
 			return -1;
 		}
@@ -331,34 +215,26 @@ public class Class262 implements Interface36 {
 			} catch (Throwable throwable) {
 				return -1;
 			}
-			method4637(string, file, (byte) -88);
+			method4637(fileName, file, (byte) -88);
 			return 100;
 		}
 		return -1;
 	}
 
 	public boolean method221(String string) {
-		return method4645(string, Class266.class, (byte) 2);
+		return loadLibrary(string, Class266.class, (byte) 2);
 	}
 
 	public boolean method217(String string) {
-		return method4645(string, Class266.class, (byte) 2);
-	}
-
-	void method4649(String string, File file) {
-		((Class262) this).aHashtable3237.put(string, file);
-	}
-
-	void method4650(String string, File file) {
-		((Class262) this).aHashtable3237.put(string, file);
+		return loadLibrary(string, Class266.class, (byte) 2);
 	}
 
 	public boolean method220() {
 		Hashtable hashtable = new Hashtable();
-		Enumeration enumeration = ((Class262) this).aHashtable3238.keys();
+		Enumeration enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
 		while (enumeration.hasMoreElements()) {
 			String string = (String) enumeration.nextElement();
-			hashtable.put(string, ((Class262) this).aHashtable3238.get(string));
+			hashtable.put(string, ((NativeLibraryLoader) this).linkedLibraries.get(string));
 		}
 		try {
 			Class var_class = Class.forName("java.lang.reflect.AccessibleObject");
@@ -367,12 +243,12 @@ public class Class262 implements Interface36 {
 			Method method = var_class.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
 			method.invoke(field, new Object[] { Boolean.TRUE });
 			try {
-				enumeration = ((Class262) this).aHashtable3238.keys();
+				enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
 				while (enumeration.hasMoreElements()) {
 					String string = (String) enumeration.nextElement();
 					try {
-						File file = ((File) ((Class262) this).aHashtable3237.get(string));
-						Class var_class_24_ = ((Class) ((Class262) this).aHashtable3238.get(string));
+						File file = ((File) ((NativeLibraryLoader) this).aHashtable3237.get(string));
+						Class var_class_24_ = ((Class) ((NativeLibraryLoader) this).linkedLibraries.get(string));
 						Vector vector = ((Vector) field.get(var_class_24_.getClassLoader()));
 						for (int i = 0; i < vector.size(); i++) {
 							try {
@@ -415,11 +291,11 @@ public class Class262 implements Interface36 {
 		} catch (Throwable throwable) {
 			/* empty */
 		}
-		((Class262) this).aHashtable3238 = hashtable;
-		return ((Class262) this).aHashtable3238.isEmpty();
+		((NativeLibraryLoader) this).linkedLibraries = hashtable;
+		return ((NativeLibraryLoader) this).linkedLibraries.isEmpty();
 	}
 
-	static final void method4651(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method4651(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 1522252372) != null) {
 			if (i <= 0)
@@ -442,8 +318,8 @@ public class Class262 implements Interface36 {
 
 	static void method4653(int i, int i_31_, int i_32_) {
 		if (Class58.aClass529_527.aBool7044 || (1 != 2144330291 * Class20.anInt169 && (!Class96_Sub6.aBool9173 || 2 != 2144330291 * Class20.anInt169 || !(((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12).aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1649910920)))))) {
-			Class414 class414 = Class114.method1887(2016134923);
-			int i_33_ = (class414.method6946(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -2018972202), -1967833701));
+			FontMetrics class414 = Class114.method1887(2016134923);
+			int i_33_ = (class414.getWidthNoSprites(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -2018972202), -1967833701));
 			int i_34_;
 			if (!Class20.aBool162) {
 				for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361))) {

@@ -11,7 +11,7 @@ public class Class103_Sub1 extends Class103 {
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9144;
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9145;
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9146;
-	Class384 aClass384_9147 = new Class384();
+	Matrix44Arr aClass384_9147 = new Matrix44Arr();
 	Class101 aClass101_9148;
 	Class282_Sub21_Sub1 aClass282_Sub21_Sub1_9149;
 
@@ -34,7 +34,7 @@ public class Class103_Sub1 extends Class103 {
 		((Class103_Sub1) this).aClass101_9148.method1696(((Class103_Sub1) this).aClass282_Sub21_Sub1_9146, anInt1056, 2086125175);
 	}
 
-	public void method1788(Class384 class384) {
+	public void method1788(Matrix44Arr class384) {
 		((Class103_Sub1) this).aClass384_9147.method6562(class384);
 		((Class103_Sub1) this).aClass384_9147.method6523(aClass505_Sub2_1057.aClass384_8729);
 	}
@@ -58,12 +58,12 @@ public class Class103_Sub1 extends Class103 {
 		((Class103_Sub1) this).aClass101_9148.method1696(((Class103_Sub1) this).aClass282_Sub21_Sub1_9146, anInt1056, 1874762749);
 	}
 
-	public void method1789(Class384 class384) {
+	public void method1789(Matrix44Arr class384) {
 		((Class103_Sub1) this).aClass384_9147.method6562(class384);
 		((Class103_Sub1) this).aClass384_9147.method6523(aClass505_Sub2_1057.aClass384_8729);
 	}
 
-	public void method1786(Class384 class384) {
+	public void method1786(Matrix44Arr class384) {
 		((Class103_Sub1) this).aClass384_9147.method6562(class384);
 		((Class103_Sub1) this).aClass384_9147.method6523(aClass505_Sub2_1057.aClass384_8729);
 	}

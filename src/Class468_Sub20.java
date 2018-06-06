@@ -109,9 +109,9 @@ public class Class468_Sub20 extends Class468 {
 
 	static final void method12802(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class262.method4651(class118, class98, class527, (byte) 56);
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		NativeLibraryLoader.method4651(class118, class98, class527, (byte) 56);
 	}
 
 	static final void method12803(CS2Executor class527, int i) {
@@ -122,7 +122,7 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	static final void method12804(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.unknown[class527.instrPtr * 301123709]);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.intOpValues[class527.instrPtr * 301123709]);
 	}
 
 	static short[][] method12805(float[][] fs, short[][] is, int i) {

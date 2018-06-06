@@ -655,9 +655,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return fs_153_;
 	}
 
-	public void method11291(Class294 class294, int i, boolean bool) {
+	public void method11291(Matrix44Var class294, int i, boolean bool) {
 		if (((Class528_Sub1) this).aShortArray8253 != null) {
-			Class294 class294_154_ = class294;
+			Matrix44Var class294_154_ = class294;
 			if (bool) {
 				class294_154_ = ((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass294_8405;
 				class294_154_.method5215(class294);
@@ -1303,8 +1303,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return ((Class528_Sub1) this).aShort8285;
 	}
 
-	public void method11294(Class294 class294) {
-		Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+	public void method11294(Matrix44Var class294) {
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
 		class384.method6522(class294);
 		if (((Class528_Sub1) this).aClass87Array8252 != null) {
 			for (int i = 0; i < ((Class528_Sub1) this).aClass87Array8252.length; i++) {
@@ -1312,15 +1312,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 				Class87 class87_252_ = class87;
 				if (class87.aClass87_835 != null)
 					class87_252_ = class87.aClass87_835;
-				class87_252_.anInt844 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * -1929058355);
-				class87_252_.anInt841 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 996785411);
-				class87_252_.anInt847 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 976806429);
-				class87_252_.anInt834 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * -458323579);
-				class87_252_.anInt843 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 543149547);
-				class87_252_.anInt845 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 1054448197);
-				class87_252_.anInt846 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1348028043);
-				class87_252_.anInt840 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * -1652520905);
-				class87_252_.anInt848 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1757672349);
+				class87_252_.anInt844 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * -1929058355);
+				class87_252_.anInt841 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 996785411);
+				class87_252_.anInt847 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 976806429);
+				class87_252_.anInt834 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * -458323579);
+				class87_252_.anInt843 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 543149547);
+				class87_252_.anInt845 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 1054448197);
+				class87_252_.anInt846 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1348028043);
+				class87_252_.anInt840 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * -1652520905);
+				class87_252_.anInt848 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1757672349);
 			}
 		}
 		if (((Class528_Sub1) this).aClass172Array8244 != null) {
@@ -1332,10 +1332,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				if (class172.aClass384_2116 != null)
 					class172.aClass384_2116.method6562(class384);
 				else
-					class172.aClass384_2116 = new Class384(class384);
-				class172_253_.anInt2113 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * 959663283);
-				class172_253_.anInt2117 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1084180847);
-				class172_253_.anInt2118 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1221574613);
+					class172.aClass384_2116 = new Matrix44Arr(class384);
+				class172_253_.anInt2113 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * 959663283);
+				class172_253_.anInt2117 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1084180847);
+				class172_253_.anInt2118 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1221574613);
 			}
 		}
 	}
@@ -1536,8 +1536,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return ((Class528_Sub1) this).aShort8257;
 	}
 
-	public void method11315(Class294 class294) {
-		Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+	public void method11315(Matrix44Var class294) {
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
 		class384.method6522(class294);
 		if (((Class528_Sub1) this).aClass87Array8252 != null) {
 			for (int i = 0; i < ((Class528_Sub1) this).aClass87Array8252.length; i++) {
@@ -1545,15 +1545,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 				Class87 class87_301_ = class87;
 				if (class87.aClass87_835 != null)
 					class87_301_ = class87.aClass87_835;
-				class87_301_.anInt844 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * -1929058355);
-				class87_301_.anInt841 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 996785411);
-				class87_301_.anInt847 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 976806429);
-				class87_301_.anInt834 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * -458323579);
-				class87_301_.anInt843 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 543149547);
-				class87_301_.anInt845 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 1054448197);
-				class87_301_.anInt846 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1348028043);
-				class87_301_.anInt840 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * -1652520905);
-				class87_301_.anInt848 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1757672349);
+				class87_301_.anInt844 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * -1929058355);
+				class87_301_.anInt841 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 996785411);
+				class87_301_.anInt847 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 976806429);
+				class87_301_.anInt834 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * -458323579);
+				class87_301_.anInt843 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 543149547);
+				class87_301_.anInt845 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 1054448197);
+				class87_301_.anInt846 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1348028043);
+				class87_301_.anInt840 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * -1652520905);
+				class87_301_.anInt848 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1757672349);
 			}
 		}
 		if (((Class528_Sub1) this).aClass172Array8244 != null) {
@@ -1565,10 +1565,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				if (class172.aClass384_2116 != null)
 					class172.aClass384_2116.method6562(class384);
 				else
-					class172.aClass384_2116 = new Class384(class384);
-				class172_302_.anInt2113 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * 959663283);
-				class172_302_.anInt2117 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1084180847);
-				class172_302_.anInt2118 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1221574613);
+					class172.aClass384_2116 = new Matrix44Arr(class384);
+				class172_302_.anInt2113 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * 959663283);
+				class172_302_.anInt2117 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1084180847);
+				class172_302_.anInt2118 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1221574613);
 			}
 		}
 	}
@@ -2850,9 +2850,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		((Class528_Sub1) this).aBool8254 = false;
 	}
 
-	public void method11298(Class294 class294, int i, boolean bool) {
+	public void method11298(Matrix44Var class294, int i, boolean bool) {
 		if (((Class528_Sub1) this).aShortArray8253 != null) {
-			Class294 class294_705_ = class294;
+			Matrix44Var class294_705_ = class294;
 			if (bool) {
 				class294_705_ = ((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass294_8405;
 				class294_705_.method5215(class294);
@@ -2877,8 +2877,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return ((Class528_Sub1) this).aClass87Array8252;
 	}
 
-	public void method11273(Class294 class294) {
-		Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+	public void method11273(Matrix44Var class294) {
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
 		class384.method6522(class294);
 		if (((Class528_Sub1) this).aClass87Array8252 != null) {
 			for (int i = 0; i < ((Class528_Sub1) this).aClass87Array8252.length; i++) {
@@ -2886,15 +2886,15 @@ public class Class528_Sub1 extends MeshRasterizer {
 				Class87 class87_707_ = class87;
 				if (class87.aClass87_835 != null)
 					class87_707_ = class87.aClass87_835;
-				class87_707_.anInt844 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * -1929058355);
-				class87_707_.anInt841 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 996785411);
-				class87_707_.anInt847 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 976806429);
-				class87_707_.anInt834 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * -458323579);
-				class87_707_.anInt843 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 543149547);
-				class87_707_.anInt845 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 1054448197);
-				class87_707_.anInt846 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1348028043);
-				class87_707_.anInt840 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * -1652520905);
-				class87_707_.anInt848 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1757672349);
+				class87_707_.anInt844 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * -1929058355);
+				class87_707_.anInt841 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 996785411);
+				class87_707_.anInt847 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt836 * -1572033967])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt836 * -1572033967)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt836 * -1572033967)])))) * 976806429);
+				class87_707_.anInt834 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * -458323579);
+				class87_707_.anInt843 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 543149547);
+				class87_707_.anInt845 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt837 * -1955014451])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt837 * -1955014451)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt837 * -1955014451)])))) * 1054448197);
+				class87_707_.anInt846 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1348028043);
+				class87_707_.anInt840 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * -1652520905);
+				class87_707_.anInt848 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[class87.anInt838 * -2135413869])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class87.anInt838 * -2135413869)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class87.anInt838 * -2135413869)])))) * 1757672349);
 			}
 		}
 		if (((Class528_Sub1) this).aClass172Array8244 != null) {
@@ -2906,16 +2906,16 @@ public class Class528_Sub1 extends MeshRasterizer {
 				if (class172.aClass384_2116 != null)
 					class172.aClass384_2116.method6562(class384);
 				else
-					class172.aClass384_2116 = new Class384(class384);
-				class172_708_.anInt2113 = ((int) (class384.aFloatArray4667[12] + ((class384.aFloatArray4667[0] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * 959663283);
-				class172_708_.anInt2117 = ((int) (class384.aFloatArray4667[13] + ((class384.aFloatArray4667[1] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1084180847);
-				class172_708_.anInt2118 = ((int) (class384.aFloatArray4667[14] + ((class384.aFloatArray4667[2] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.aFloatArray4667[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1221574613);
+					class172.aClass384_2116 = new Matrix44Arr(class384);
+				class172_708_.anInt2113 = ((int) (class384.buf[12] + ((class384.buf[0] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[4] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[8] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * 959663283);
+				class172_708_.anInt2117 = ((int) (class384.buf[13] + ((class384.buf[1] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[5] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[9] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1084180847);
+				class172_708_.anInt2118 = ((int) (class384.buf[14] + ((class384.buf[2] * (float) (((Class528_Sub1) this).anIntArray8249[(class172.anInt2119 * -1382123871)])) + (class384.buf[6] * (float) (((Class528_Sub1) this).anIntArray8250[(class172.anInt2119 * -1382123871)])) + (class384.buf[10] * (float) (((Class528_Sub1) this).anIntArray8251[(class172.anInt2119 * -1382123871)])))) * -1221574613);
 			}
 		}
 	}
 
-	public boolean method11270(int i, int i_709_, Class294 class294, boolean bool, int i_710_) {
-		Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+	public boolean method11270(int i, int i_709_, Matrix44Var class294, boolean bool, int i_710_) {
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
 		class384.method6522(class294);
 		class384.method6523(((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8394);
 		boolean bool_711_ = false;
@@ -2965,11 +2965,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 			int i_729_ = anIntArray8296[i_728_];
 			int i_730_ = anIntArray8301[i_728_];
 			int i_731_ = anIntArray8268[i_728_];
-			float f = (class384.aFloatArray4667[2] * (float) i_729_ + class384.aFloatArray4667[6] * (float) i_730_ + class384.aFloatArray4667[10] * (float) i_731_ + class384.aFloatArray4667[14]);
-			float f_732_ = (class384.aFloatArray4667[3] * (float) i_729_ + class384.aFloatArray4667[7] * (float) i_730_ + class384.aFloatArray4667[11] * (float) i_731_ + class384.aFloatArray4667[15]);
+			float f = (class384.buf[2] * (float) i_729_ + class384.buf[6] * (float) i_730_ + class384.buf[10] * (float) i_731_ + class384.buf[14]);
+			float f_732_ = (class384.buf[3] * (float) i_729_ + class384.buf[7] * (float) i_730_ + class384.buf[11] * (float) i_731_ + class384.buf[15]);
 			if (f >= -f_732_) {
-				float f_733_ = (class384.aFloatArray4667[0] * (float) i_729_ + class384.aFloatArray4667[4] * (float) i_730_ + class384.aFloatArray4667[8] * (float) i_731_ + class384.aFloatArray4667[12]);
-				float f_734_ = (class384.aFloatArray4667[1] * (float) i_729_ + class384.aFloatArray4667[5] * (float) i_730_ + class384.aFloatArray4667[9] * (float) i_731_ + class384.aFloatArray4667[13]);
+				float f_733_ = (class384.buf[0] * (float) i_729_ + class384.buf[4] * (float) i_730_ + class384.buf[8] * (float) i_731_ + class384.buf[12]);
+				float f_734_ = (class384.buf[1] * (float) i_729_ + class384.buf[5] * (float) i_730_ + class384.buf[9] * (float) i_731_ + class384.buf[13]);
 				int i_735_ = (int) ((((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8315) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398) * f_733_ / f_732_);
 				int i_736_ = (int) ((((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8399) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8400) * f_734_ / f_732_);
 				if (i_735_ < i_712_)
@@ -2996,11 +2996,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 				int i_739_ = ((Class528_Sub1) this).anIntArray8249[i_738_];
 				int i_740_ = ((Class528_Sub1) this).anIntArray8250[i_738_];
 				int i_741_ = ((Class528_Sub1) this).anIntArray8251[i_738_];
-				float f = (class384.aFloatArray4667[2] * (float) i_739_ + class384.aFloatArray4667[6] * (float) i_740_ + class384.aFloatArray4667[10] * (float) i_741_ + class384.aFloatArray4667[14]);
-				float f_742_ = (class384.aFloatArray4667[3] * (float) i_739_ + class384.aFloatArray4667[7] * (float) i_740_ + class384.aFloatArray4667[11] * (float) i_741_ + class384.aFloatArray4667[15]);
+				float f = (class384.buf[2] * (float) i_739_ + class384.buf[6] * (float) i_740_ + class384.buf[10] * (float) i_741_ + class384.buf[14]);
+				float f_742_ = (class384.buf[3] * (float) i_739_ + class384.buf[7] * (float) i_740_ + class384.buf[11] * (float) i_741_ + class384.buf[15]);
 				if (f >= -f_742_) {
-					float f_743_ = (class384.aFloatArray4667[0] * (float) i_739_ + class384.aFloatArray4667[4] * (float) i_740_ + class384.aFloatArray4667[8] * (float) i_741_ + class384.aFloatArray4667[12]);
-					float f_744_ = (class384.aFloatArray4667[1] * (float) i_739_ + class384.aFloatArray4667[5] * (float) i_740_ + class384.aFloatArray4667[9] * (float) i_741_ + class384.aFloatArray4667[13]);
+					float f_743_ = (class384.buf[0] * (float) i_739_ + class384.buf[4] * (float) i_740_ + class384.buf[8] * (float) i_741_ + class384.buf[12]);
+					float f_744_ = (class384.buf[1] * (float) i_739_ + class384.buf[5] * (float) i_740_ + class384.buf[9] * (float) i_741_ + class384.buf[13]);
 					int i_745_ = ((Class528_Sub1) this).anIntArray8290[i_738_];
 					int i_746_ = ((Class528_Sub1) this).anIntArray8290[i_738_ + 1];
 					for (int i_747_ = i_745_; i_747_ < i_746_; i_747_++) {
@@ -3091,13 +3091,13 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return class282_sub50_sub17_sub1_773_;
 	}
 
-	public void method11282(Class294 class294, Class275_Sub5 class275_sub5, int i) {
+	public void method11282(Matrix44Var class294, Class275_Sub5 class275_sub5, int i) {
 		if ((i & 0x2) != 0)
 			OpenGL.glPolygonMode(1032, 6913);
 		if (((Class528_Sub1) this).anInt8300 != 0) {
-			Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8442);
-			Class384 class384_774_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
-			Class384 class384_775_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8407);
+			Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8442);
+			Matrix44Arr class384_774_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+			Matrix44Arr class384_775_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8407);
 			class384_774_.method6522(class294);
 			class384_775_.method6562(class384_774_);
 			class384_775_.method6523(((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass384_8394);
@@ -3127,10 +3127,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				int i_788_ = i_786_;
 				short i_789_ = ((Class528_Sub1) this).aShort8283;
 				int i_790_ = i_787_;
-				float f_791_ = (class384_775_.aFloatArray4667[0] * (float) i_788_ + class384_775_.aFloatArray4667[4] * (float) i_789_ + class384_775_.aFloatArray4667[8] * (float) i_790_ + class384_775_.aFloatArray4667[12]);
-				float f_792_ = (class384_775_.aFloatArray4667[1] * (float) i_788_ + class384_775_.aFloatArray4667[5] * (float) i_789_ + class384_775_.aFloatArray4667[9] * (float) i_790_ + class384_775_.aFloatArray4667[13]);
-				float f_793_ = (class384_775_.aFloatArray4667[2] * (float) i_788_ + class384_775_.aFloatArray4667[6] * (float) i_789_ + class384_775_.aFloatArray4667[10] * (float) i_790_ + class384_775_.aFloatArray4667[14]);
-				float f_794_ = (class384_775_.aFloatArray4667[3] * (float) i_788_ + class384_775_.aFloatArray4667[7] * (float) i_789_ + class384_775_.aFloatArray4667[11] * (float) i_790_ + class384_775_.aFloatArray4667[15]);
+				float f_791_ = (class384_775_.buf[0] * (float) i_788_ + class384_775_.buf[4] * (float) i_789_ + class384_775_.buf[8] * (float) i_790_ + class384_775_.buf[12]);
+				float f_792_ = (class384_775_.buf[1] * (float) i_788_ + class384_775_.buf[5] * (float) i_789_ + class384_775_.buf[9] * (float) i_790_ + class384_775_.buf[13]);
+				float f_793_ = (class384_775_.buf[2] * (float) i_788_ + class384_775_.buf[6] * (float) i_789_ + class384_775_.buf[10] * (float) i_790_ + class384_775_.buf[14]);
+				float f_794_ = (class384_775_.buf[3] * (float) i_788_ + class384_775_.buf[7] * (float) i_789_ + class384_775_.buf[11] * (float) i_790_ + class384_775_.buf[15]);
 				if (f_793_ >= -f_794_) {
 					class275_sub5.anInt7847 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8315) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398) * f_791_ / f_794_);
 					class275_sub5.anInt7848 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8399) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8400) * f_792_ / f_794_);
@@ -3139,10 +3139,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				i_788_ = i_786_;
 				i_789_ = ((Class528_Sub1) this).aShort8284;
 				i_790_ = i_787_;
-				float f_795_ = (class384_775_.aFloatArray4667[0] * (float) i_788_ + class384_775_.aFloatArray4667[4] * (float) i_789_ + class384_775_.aFloatArray4667[8] * (float) i_790_ + class384_775_.aFloatArray4667[12]);
-				float f_796_ = (class384_775_.aFloatArray4667[1] * (float) i_788_ + class384_775_.aFloatArray4667[5] * (float) i_789_ + class384_775_.aFloatArray4667[9] * (float) i_790_ + class384_775_.aFloatArray4667[13]);
-				float f_797_ = (class384_775_.aFloatArray4667[2] * (float) i_788_ + class384_775_.aFloatArray4667[6] * (float) i_789_ + class384_775_.aFloatArray4667[10] * (float) i_790_ + class384_775_.aFloatArray4667[14]);
-				float f_798_ = (class384_775_.aFloatArray4667[3] * (float) i_788_ + class384_775_.aFloatArray4667[7] * (float) i_789_ + class384_775_.aFloatArray4667[11] * (float) i_790_ + class384_775_.aFloatArray4667[15]);
+				float f_795_ = (class384_775_.buf[0] * (float) i_788_ + class384_775_.buf[4] * (float) i_789_ + class384_775_.buf[8] * (float) i_790_ + class384_775_.buf[12]);
+				float f_796_ = (class384_775_.buf[1] * (float) i_788_ + class384_775_.buf[5] * (float) i_789_ + class384_775_.buf[9] * (float) i_790_ + class384_775_.buf[13]);
+				float f_797_ = (class384_775_.buf[2] * (float) i_788_ + class384_775_.buf[6] * (float) i_789_ + class384_775_.buf[10] * (float) i_790_ + class384_775_.buf[14]);
+				float f_798_ = (class384_775_.buf[3] * (float) i_788_ + class384_775_.buf[7] * (float) i_789_ + class384_775_.buf[11] * (float) i_790_ + class384_775_.buf[15]);
 				if (f_797_ >= -f_798_) {
 					class275_sub5.anInt7850 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8315) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398) * f_795_ / f_798_);
 					class275_sub5.anInt7846 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8399) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8400) * f_796_ / f_798_);
@@ -3169,12 +3169,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 				}
 				if (bool_785_) {
 					if (f_793_ / f_794_ > f_797_ / f_798_) {
-						float f_807_ = (f_791_ + (class384.aFloatArray4667[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[12]);
-						float f_808_ = (f_794_ + (class384.aFloatArray4667[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[15]);
+						float f_807_ = (f_791_ + (class384.buf[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[12]);
+						float f_808_ = (f_794_ + (class384.buf[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[15]);
 						class275_sub5.anInt7851 = (int) ((((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8315) - (float) class275_sub5.anInt7847 + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398 * f_807_ / f_808_));
 					} else {
-						float f_809_ = (f_795_ + (class384.aFloatArray4667[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[12]);
-						float f_810_ = (f_798_ + (class384.aFloatArray4667[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[15]);
+						float f_809_ = (f_795_ + (class384.buf[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[12]);
+						float f_810_ = (f_798_ + (class384.buf[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[15]);
 						class275_sub5.anInt7851 = (int) ((((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8315) - (float) class275_sub5.anInt7850 + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398 * f_809_ / f_810_));
 					}
 					class275_sub5.aBool7849 = true;
@@ -3218,9 +3218,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 	}
 
-	void method13535(Class384 class384) {
+	void method13535(Matrix44Arr class384) {
 		if (((Class528_Sub1) this).aClass162Array8295 != null) {
-			Class384 class384_815_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8361);
+			Matrix44Arr class384_815_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8361);
 			((Class528_Sub1) this).aClass505_Sub1_8239.method13576();
 			((Class528_Sub1) this).aClass505_Sub1_8239.RA(!((Class528_Sub1) this).aBool8245);
 			((Class528_Sub1) this).aClass505_Sub1_8239.method13620(false);
@@ -3232,9 +3232,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					float f = ((float) ((((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2021])) * 0.3333333F);
 					float f_816_ = ((float) ((((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2021])) * 0.3333333F);
 					float f_817_ = ((float) ((((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2021])) * 0.3333333F);
-					float f_818_ = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_816_ + class384.aFloatArray4667[8] * f_817_ + class384.aFloatArray4667[12]);
-					float f_819_ = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_816_ + class384.aFloatArray4667[9] * f_817_ + class384.aFloatArray4667[13]);
-					float f_820_ = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_816_ + class384.aFloatArray4667[10] * f_817_ + class384.aFloatArray4667[14]);
+					float f_818_ = (class384.buf[0] * f + class384.buf[4] * f_816_ + class384.buf[8] * f_817_ + class384.buf[12]);
+					float f_819_ = (class384.buf[1] * f + class384.buf[5] * f_816_ + class384.buf[9] * f_817_ + class384.buf[13]);
+					float f_820_ = (class384.buf[2] * f + class384.buf[6] * f_816_ + class384.buf[10] * f_817_ + class384.buf[14]);
 					float f_821_ = ((float) (1.0 / Math.sqrt((double) (f_818_ * f_818_ + f_819_ * f_819_ + f_820_ * f_820_))) * (float) ((Class162) class162).anInt2025);
 					class384_815_.method6549(((Class145) class145).anInt1712, (((Class145) class145).anInt1710 * ((Class162) class162).aShort2020) >> 7, (((Class145) class145).anInt1711 * ((Class162) class162).aShort2016) >> 7, (f_818_ + (float) ((Class145) class145).anInt1709 - f_818_ * f_821_), (f_819_ + (float) ((Class145) class145).anInt1713 - f_819_ * f_821_), f_820_ - f_820_ * f_821_);
 					((Class528_Sub1) this).aClass505_Sub1_8239.method13585(class384_815_);
@@ -3595,9 +3595,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return (i & 0xff80) + i_881_;
 	}
 
-	public void method11292(Class294 class294, int i, boolean bool) {
+	public void method11292(Matrix44Var class294, int i, boolean bool) {
 		if (((Class528_Sub1) this).aShortArray8253 != null) {
-			Class294 class294_882_ = class294;
+			Matrix44Var class294_882_ = class294;
 			if (bool) {
 				class294_882_ = ((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass294_8405;
 				class294_882_.method5215(class294);
@@ -5225,9 +5225,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 	}
 
-	public void method11263(Class294 class294, int i, boolean bool) {
+	public void method11263(Matrix44Var class294, int i, boolean bool) {
 		if (((Class528_Sub1) this).aShortArray8253 != null) {
-			Class294 class294_1288_ = class294;
+			Matrix44Var class294_1288_ = class294;
 			if (bool) {
 				class294_1288_ = ((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass294_8405;
 				class294_1288_.method5215(class294);
@@ -5244,9 +5244,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 	}
 
-	public void method11290(Class294 class294, int i, boolean bool) {
+	public void method11290(Matrix44Var class294, int i, boolean bool) {
 		if (((Class528_Sub1) this).aShortArray8253 != null) {
-			Class294 class294_1290_ = class294;
+			Matrix44Var class294_1290_ = class294;
 			if (bool) {
 				class294_1290_ = ((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass294_8405;
 				class294_1290_.method5215(class294);
@@ -5271,13 +5271,13 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return ((Class528_Sub1) this).anInt8240;
 	}
 
-	public void method11293(Class294 class294, Class275_Sub5 class275_sub5, int i) {
+	public void method11293(Matrix44Var class294, Class275_Sub5 class275_sub5, int i) {
 		if ((i & 0x2) != 0)
 			OpenGL.glPolygonMode(1032, 6913);
 		if (((Class528_Sub1) this).anInt8300 != 0) {
-			Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8442);
-			Class384 class384_1292_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
-			Class384 class384_1293_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8407);
+			Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8442);
+			Matrix44Arr class384_1292_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+			Matrix44Arr class384_1293_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8407);
 			class384_1292_.method6522(class294);
 			class384_1293_.method6562(class384_1292_);
 			class384_1293_.method6523(((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aClass384_8394);
@@ -5307,10 +5307,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				int i_1306_ = i_1304_;
 				short i_1307_ = ((Class528_Sub1) this).aShort8283;
 				int i_1308_ = i_1305_;
-				float f_1309_ = (class384_1293_.aFloatArray4667[0] * (float) i_1306_ + class384_1293_.aFloatArray4667[4] * (float) i_1307_ + class384_1293_.aFloatArray4667[8] * (float) i_1308_ + class384_1293_.aFloatArray4667[12]);
-				float f_1310_ = (class384_1293_.aFloatArray4667[1] * (float) i_1306_ + class384_1293_.aFloatArray4667[5] * (float) i_1307_ + class384_1293_.aFloatArray4667[9] * (float) i_1308_ + class384_1293_.aFloatArray4667[13]);
-				float f_1311_ = (class384_1293_.aFloatArray4667[2] * (float) i_1306_ + class384_1293_.aFloatArray4667[6] * (float) i_1307_ + class384_1293_.aFloatArray4667[10] * (float) i_1308_ + class384_1293_.aFloatArray4667[14]);
-				float f_1312_ = (class384_1293_.aFloatArray4667[3] * (float) i_1306_ + class384_1293_.aFloatArray4667[7] * (float) i_1307_ + class384_1293_.aFloatArray4667[11] * (float) i_1308_ + class384_1293_.aFloatArray4667[15]);
+				float f_1309_ = (class384_1293_.buf[0] * (float) i_1306_ + class384_1293_.buf[4] * (float) i_1307_ + class384_1293_.buf[8] * (float) i_1308_ + class384_1293_.buf[12]);
+				float f_1310_ = (class384_1293_.buf[1] * (float) i_1306_ + class384_1293_.buf[5] * (float) i_1307_ + class384_1293_.buf[9] * (float) i_1308_ + class384_1293_.buf[13]);
+				float f_1311_ = (class384_1293_.buf[2] * (float) i_1306_ + class384_1293_.buf[6] * (float) i_1307_ + class384_1293_.buf[10] * (float) i_1308_ + class384_1293_.buf[14]);
+				float f_1312_ = (class384_1293_.buf[3] * (float) i_1306_ + class384_1293_.buf[7] * (float) i_1307_ + class384_1293_.buf[11] * (float) i_1308_ + class384_1293_.buf[15]);
 				if (f_1311_ >= -f_1312_) {
 					class275_sub5.anInt7847 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8315) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398) * f_1309_ / f_1312_);
 					class275_sub5.anInt7848 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8399) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8400) * f_1310_ / f_1312_);
@@ -5319,10 +5319,10 @@ public class Class528_Sub1 extends MeshRasterizer {
 				i_1306_ = i_1304_;
 				i_1307_ = ((Class528_Sub1) this).aShort8284;
 				i_1308_ = i_1305_;
-				float f_1313_ = (class384_1293_.aFloatArray4667[0] * (float) i_1306_ + class384_1293_.aFloatArray4667[4] * (float) i_1307_ + class384_1293_.aFloatArray4667[8] * (float) i_1308_ + class384_1293_.aFloatArray4667[12]);
-				float f_1314_ = (class384_1293_.aFloatArray4667[1] * (float) i_1306_ + class384_1293_.aFloatArray4667[5] * (float) i_1307_ + class384_1293_.aFloatArray4667[9] * (float) i_1308_ + class384_1293_.aFloatArray4667[13]);
-				float f_1315_ = (class384_1293_.aFloatArray4667[2] * (float) i_1306_ + class384_1293_.aFloatArray4667[6] * (float) i_1307_ + class384_1293_.aFloatArray4667[10] * (float) i_1308_ + class384_1293_.aFloatArray4667[14]);
-				float f_1316_ = (class384_1293_.aFloatArray4667[3] * (float) i_1306_ + class384_1293_.aFloatArray4667[7] * (float) i_1307_ + class384_1293_.aFloatArray4667[11] * (float) i_1308_ + class384_1293_.aFloatArray4667[15]);
+				float f_1313_ = (class384_1293_.buf[0] * (float) i_1306_ + class384_1293_.buf[4] * (float) i_1307_ + class384_1293_.buf[8] * (float) i_1308_ + class384_1293_.buf[12]);
+				float f_1314_ = (class384_1293_.buf[1] * (float) i_1306_ + class384_1293_.buf[5] * (float) i_1307_ + class384_1293_.buf[9] * (float) i_1308_ + class384_1293_.buf[13]);
+				float f_1315_ = (class384_1293_.buf[2] * (float) i_1306_ + class384_1293_.buf[6] * (float) i_1307_ + class384_1293_.buf[10] * (float) i_1308_ + class384_1293_.buf[14]);
+				float f_1316_ = (class384_1293_.buf[3] * (float) i_1306_ + class384_1293_.buf[7] * (float) i_1307_ + class384_1293_.buf[11] * (float) i_1308_ + class384_1293_.buf[15]);
 				if (f_1315_ >= -f_1316_) {
 					class275_sub5.anInt7850 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8315) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398) * f_1313_ / f_1316_);
 					class275_sub5.anInt7846 = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8399) + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8400) * f_1314_ / f_1316_);
@@ -5349,12 +5349,12 @@ public class Class528_Sub1 extends MeshRasterizer {
 				}
 				if (bool_1303_) {
 					if (f_1311_ / f_1312_ > f_1315_ / f_1316_) {
-						float f_1325_ = (f_1309_ + (class384.aFloatArray4667[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[12]);
-						float f_1326_ = (f_1312_ + (class384.aFloatArray4667[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[15]);
+						float f_1325_ = (f_1309_ + (class384.buf[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[12]);
+						float f_1326_ = (f_1312_ + (class384.buf[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[15]);
 						class275_sub5.anInt7851 = (int) ((((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8315) - (float) class275_sub5.anInt7847 + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398 * f_1325_ / f_1326_));
 					} else {
-						float f_1327_ = (f_1313_ + (class384.aFloatArray4667[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[12]);
-						float f_1328_ = (f_1316_ + (class384.aFloatArray4667[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.aFloatArray4667[15]);
+						float f_1327_ = (f_1313_ + (class384.buf[0] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[12]);
+						float f_1328_ = (f_1316_ + (class384.buf[3] * (float) ((Class528_Sub1) this).anInt8281) + class384.buf[15]);
 						class275_sub5.anInt7851 = (int) ((((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8315) - (float) class275_sub5.anInt7850 + (((Class505_Sub1) (((Class528_Sub1) this).aClass505_Sub1_8239)).aFloat8398 * f_1327_ / f_1328_));
 					}
 					class275_sub5.aBool7849 = true;
@@ -6100,8 +6100,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 		/* empty */
 	}
 
-	public boolean method11309(int i, int i_1446_, Class294 class294, boolean bool, int i_1447_) {
-		Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+	public boolean method11309(int i, int i_1446_, Matrix44Var class294, boolean bool, int i_1447_) {
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
 		class384.method6522(class294);
 		class384.method6523(((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8394);
 		boolean bool_1448_ = false;
@@ -6151,11 +6151,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 			int i_1466_ = anIntArray8296[i_1465_];
 			int i_1467_ = anIntArray8301[i_1465_];
 			int i_1468_ = anIntArray8268[i_1465_];
-			float f = (class384.aFloatArray4667[2] * (float) i_1466_ + class384.aFloatArray4667[6] * (float) i_1467_ + class384.aFloatArray4667[10] * (float) i_1468_ + class384.aFloatArray4667[14]);
-			float f_1469_ = (class384.aFloatArray4667[3] * (float) i_1466_ + class384.aFloatArray4667[7] * (float) i_1467_ + class384.aFloatArray4667[11] * (float) i_1468_ + class384.aFloatArray4667[15]);
+			float f = (class384.buf[2] * (float) i_1466_ + class384.buf[6] * (float) i_1467_ + class384.buf[10] * (float) i_1468_ + class384.buf[14]);
+			float f_1469_ = (class384.buf[3] * (float) i_1466_ + class384.buf[7] * (float) i_1467_ + class384.buf[11] * (float) i_1468_ + class384.buf[15]);
 			if (f >= -f_1469_) {
-				float f_1470_ = (class384.aFloatArray4667[0] * (float) i_1466_ + class384.aFloatArray4667[4] * (float) i_1467_ + class384.aFloatArray4667[8] * (float) i_1468_ + class384.aFloatArray4667[12]);
-				float f_1471_ = (class384.aFloatArray4667[1] * (float) i_1466_ + class384.aFloatArray4667[5] * (float) i_1467_ + class384.aFloatArray4667[9] * (float) i_1468_ + class384.aFloatArray4667[13]);
+				float f_1470_ = (class384.buf[0] * (float) i_1466_ + class384.buf[4] * (float) i_1467_ + class384.buf[8] * (float) i_1468_ + class384.buf[12]);
+				float f_1471_ = (class384.buf[1] * (float) i_1466_ + class384.buf[5] * (float) i_1467_ + class384.buf[9] * (float) i_1468_ + class384.buf[13]);
 				int i_1472_ = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8315) + (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8398) * f_1470_ / f_1469_);
 				int i_1473_ = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8399) + (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8400) * f_1471_ / f_1469_);
 				if (i_1472_ < i_1449_)
@@ -6182,11 +6182,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 				int i_1476_ = ((Class528_Sub1) this).anIntArray8249[i_1475_];
 				int i_1477_ = ((Class528_Sub1) this).anIntArray8250[i_1475_];
 				int i_1478_ = ((Class528_Sub1) this).anIntArray8251[i_1475_];
-				float f = (class384.aFloatArray4667[2] * (float) i_1476_ + class384.aFloatArray4667[6] * (float) i_1477_ + class384.aFloatArray4667[10] * (float) i_1478_ + class384.aFloatArray4667[14]);
-				float f_1479_ = (class384.aFloatArray4667[3] * (float) i_1476_ + class384.aFloatArray4667[7] * (float) i_1477_ + class384.aFloatArray4667[11] * (float) i_1478_ + class384.aFloatArray4667[15]);
+				float f = (class384.buf[2] * (float) i_1476_ + class384.buf[6] * (float) i_1477_ + class384.buf[10] * (float) i_1478_ + class384.buf[14]);
+				float f_1479_ = (class384.buf[3] * (float) i_1476_ + class384.buf[7] * (float) i_1477_ + class384.buf[11] * (float) i_1478_ + class384.buf[15]);
 				if (f >= -f_1479_) {
-					float f_1480_ = (class384.aFloatArray4667[0] * (float) i_1476_ + class384.aFloatArray4667[4] * (float) i_1477_ + class384.aFloatArray4667[8] * (float) i_1478_ + class384.aFloatArray4667[12]);
-					float f_1481_ = (class384.aFloatArray4667[1] * (float) i_1476_ + class384.aFloatArray4667[5] * (float) i_1477_ + class384.aFloatArray4667[9] * (float) i_1478_ + class384.aFloatArray4667[13]);
+					float f_1480_ = (class384.buf[0] * (float) i_1476_ + class384.buf[4] * (float) i_1477_ + class384.buf[8] * (float) i_1478_ + class384.buf[12]);
+					float f_1481_ = (class384.buf[1] * (float) i_1476_ + class384.buf[5] * (float) i_1477_ + class384.buf[9] * (float) i_1478_ + class384.buf[13]);
 					int i_1482_ = ((Class528_Sub1) this).anIntArray8290[i_1475_];
 					int i_1483_ = ((Class528_Sub1) this).anIntArray8290[i_1475_ + 1];
 					for (int i_1484_ = i_1482_; i_1484_ < i_1483_; i_1484_++) {
@@ -6284,8 +6284,8 @@ public class Class528_Sub1 extends MeshRasterizer {
 		return ((Class528_Sub1) this).aShort8243;
 	}
 
-	public boolean method11286(int i, int i_1505_, Class294 class294, boolean bool, int i_1506_) {
-		Class384 class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
+	public boolean method11286(int i, int i_1505_, Matrix44Var class294, boolean bool, int i_1506_) {
+		Matrix44Arr class384 = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8380);
 		class384.method6522(class294);
 		class384.method6523(((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8394);
 		boolean bool_1507_ = false;
@@ -6335,11 +6335,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 			int i_1525_ = anIntArray8296[i_1524_];
 			int i_1526_ = anIntArray8301[i_1524_];
 			int i_1527_ = anIntArray8268[i_1524_];
-			float f = (class384.aFloatArray4667[2] * (float) i_1525_ + class384.aFloatArray4667[6] * (float) i_1526_ + class384.aFloatArray4667[10] * (float) i_1527_ + class384.aFloatArray4667[14]);
-			float f_1528_ = (class384.aFloatArray4667[3] * (float) i_1525_ + class384.aFloatArray4667[7] * (float) i_1526_ + class384.aFloatArray4667[11] * (float) i_1527_ + class384.aFloatArray4667[15]);
+			float f = (class384.buf[2] * (float) i_1525_ + class384.buf[6] * (float) i_1526_ + class384.buf[10] * (float) i_1527_ + class384.buf[14]);
+			float f_1528_ = (class384.buf[3] * (float) i_1525_ + class384.buf[7] * (float) i_1526_ + class384.buf[11] * (float) i_1527_ + class384.buf[15]);
 			if (f >= -f_1528_) {
-				float f_1529_ = (class384.aFloatArray4667[0] * (float) i_1525_ + class384.aFloatArray4667[4] * (float) i_1526_ + class384.aFloatArray4667[8] * (float) i_1527_ + class384.aFloatArray4667[12]);
-				float f_1530_ = (class384.aFloatArray4667[1] * (float) i_1525_ + class384.aFloatArray4667[5] * (float) i_1526_ + class384.aFloatArray4667[9] * (float) i_1527_ + class384.aFloatArray4667[13]);
+				float f_1529_ = (class384.buf[0] * (float) i_1525_ + class384.buf[4] * (float) i_1526_ + class384.buf[8] * (float) i_1527_ + class384.buf[12]);
+				float f_1530_ = (class384.buf[1] * (float) i_1525_ + class384.buf[5] * (float) i_1526_ + class384.buf[9] * (float) i_1527_ + class384.buf[13]);
 				int i_1531_ = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8315) + (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8398) * f_1529_ / f_1528_);
 				int i_1532_ = (int) ((((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8399) + (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aFloat8400) * f_1530_ / f_1528_);
 				if (i_1531_ < i_1508_)
@@ -6366,11 +6366,11 @@ public class Class528_Sub1 extends MeshRasterizer {
 				int i_1535_ = ((Class528_Sub1) this).anIntArray8249[i_1534_];
 				int i_1536_ = ((Class528_Sub1) this).anIntArray8250[i_1534_];
 				int i_1537_ = ((Class528_Sub1) this).anIntArray8251[i_1534_];
-				float f = (class384.aFloatArray4667[2] * (float) i_1535_ + class384.aFloatArray4667[6] * (float) i_1536_ + class384.aFloatArray4667[10] * (float) i_1537_ + class384.aFloatArray4667[14]);
-				float f_1538_ = (class384.aFloatArray4667[3] * (float) i_1535_ + class384.aFloatArray4667[7] * (float) i_1536_ + class384.aFloatArray4667[11] * (float) i_1537_ + class384.aFloatArray4667[15]);
+				float f = (class384.buf[2] * (float) i_1535_ + class384.buf[6] * (float) i_1536_ + class384.buf[10] * (float) i_1537_ + class384.buf[14]);
+				float f_1538_ = (class384.buf[3] * (float) i_1535_ + class384.buf[7] * (float) i_1536_ + class384.buf[11] * (float) i_1537_ + class384.buf[15]);
 				if (f >= -f_1538_) {
-					float f_1539_ = (class384.aFloatArray4667[0] * (float) i_1535_ + class384.aFloatArray4667[4] * (float) i_1536_ + class384.aFloatArray4667[8] * (float) i_1537_ + class384.aFloatArray4667[12]);
-					float f_1540_ = (class384.aFloatArray4667[1] * (float) i_1535_ + class384.aFloatArray4667[5] * (float) i_1536_ + class384.aFloatArray4667[9] * (float) i_1537_ + class384.aFloatArray4667[13]);
+					float f_1539_ = (class384.buf[0] * (float) i_1535_ + class384.buf[4] * (float) i_1536_ + class384.buf[8] * (float) i_1537_ + class384.buf[12]);
+					float f_1540_ = (class384.buf[1] * (float) i_1535_ + class384.buf[5] * (float) i_1536_ + class384.buf[9] * (float) i_1537_ + class384.buf[13]);
 					int i_1541_ = ((Class528_Sub1) this).anIntArray8290[i_1534_];
 					int i_1542_ = ((Class528_Sub1) this).anIntArray8290[i_1534_ + 1];
 					for (int i_1543_ = i_1541_; i_1543_ < i_1542_; i_1543_++) {
@@ -6528,9 +6528,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 	}
 
-	void method13560(Class384 class384) {
+	void method13560(Matrix44Arr class384) {
 		if (((Class528_Sub1) this).aClass162Array8295 != null) {
-			Class384 class384_1570_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8361);
+			Matrix44Arr class384_1570_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8361);
 			((Class528_Sub1) this).aClass505_Sub1_8239.method13576();
 			((Class528_Sub1) this).aClass505_Sub1_8239.RA(!((Class528_Sub1) this).aBool8245);
 			((Class528_Sub1) this).aClass505_Sub1_8239.method13620(false);
@@ -6542,9 +6542,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					float f = ((float) ((((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2021])) * 0.3333333F);
 					float f_1571_ = ((float) ((((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2021])) * 0.3333333F);
 					float f_1572_ = ((float) ((((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2021])) * 0.3333333F);
-					float f_1573_ = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_1571_ + class384.aFloatArray4667[8] * f_1572_ + class384.aFloatArray4667[12]);
-					float f_1574_ = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_1571_ + class384.aFloatArray4667[9] * f_1572_ + class384.aFloatArray4667[13]);
-					float f_1575_ = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_1571_ + class384.aFloatArray4667[10] * f_1572_ + class384.aFloatArray4667[14]);
+					float f_1573_ = (class384.buf[0] * f + class384.buf[4] * f_1571_ + class384.buf[8] * f_1572_ + class384.buf[12]);
+					float f_1574_ = (class384.buf[1] * f + class384.buf[5] * f_1571_ + class384.buf[9] * f_1572_ + class384.buf[13]);
+					float f_1575_ = (class384.buf[2] * f + class384.buf[6] * f_1571_ + class384.buf[10] * f_1572_ + class384.buf[14]);
 					float f_1576_ = ((float) (1.0 / Math.sqrt((double) (f_1573_ * f_1573_ + f_1574_ * f_1574_ + (f_1575_ * f_1575_)))) * (float) ((Class162) class162).anInt2025);
 					class384_1570_.method6549(((Class145) class145).anInt1712, (((Class145) class145).anInt1710 * ((Class162) class162).aShort2020) >> 7, (((Class145) class145).anInt1711 * ((Class162) class162).aShort2016) >> 7, (f_1573_ + (float) ((Class145) class145).anInt1709 - f_1573_ * f_1576_), (f_1574_ + (float) ((Class145) class145).anInt1713 - f_1574_ * f_1576_), f_1575_ - f_1575_ * f_1576_);
 					((Class528_Sub1) this).aClass505_Sub1_8239.method13585(class384_1570_);
@@ -6560,9 +6560,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 		}
 	}
 
-	void method13561(Class384 class384) {
+	void method13561(Matrix44Arr class384) {
 		if (((Class528_Sub1) this).aClass162Array8295 != null) {
-			Class384 class384_1578_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8361);
+			Matrix44Arr class384_1578_ = (((Class505_Sub1) ((Class528_Sub1) this).aClass505_Sub1_8239).aClass384_8361);
 			((Class528_Sub1) this).aClass505_Sub1_8239.method13576();
 			((Class528_Sub1) this).aClass505_Sub1_8239.RA(!((Class528_Sub1) this).aBool8245);
 			((Class528_Sub1) this).aClass505_Sub1_8239.method13620(false);
@@ -6574,9 +6574,9 @@ public class Class528_Sub1 extends MeshRasterizer {
 					float f = ((float) ((((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8249[((Class162) class162).anInt2021])) * 0.3333333F);
 					float f_1579_ = ((float) ((((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8250[((Class162) class162).anInt2021])) * 0.3333333F);
 					float f_1580_ = ((float) ((((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2017]) + (((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2019]) + (((Class528_Sub1) this).anIntArray8251[((Class162) class162).anInt2021])) * 0.3333333F);
-					float f_1581_ = (class384.aFloatArray4667[0] * f + class384.aFloatArray4667[4] * f_1579_ + class384.aFloatArray4667[8] * f_1580_ + class384.aFloatArray4667[12]);
-					float f_1582_ = (class384.aFloatArray4667[1] * f + class384.aFloatArray4667[5] * f_1579_ + class384.aFloatArray4667[9] * f_1580_ + class384.aFloatArray4667[13]);
-					float f_1583_ = (class384.aFloatArray4667[2] * f + class384.aFloatArray4667[6] * f_1579_ + class384.aFloatArray4667[10] * f_1580_ + class384.aFloatArray4667[14]);
+					float f_1581_ = (class384.buf[0] * f + class384.buf[4] * f_1579_ + class384.buf[8] * f_1580_ + class384.buf[12]);
+					float f_1582_ = (class384.buf[1] * f + class384.buf[5] * f_1579_ + class384.buf[9] * f_1580_ + class384.buf[13]);
+					float f_1583_ = (class384.buf[2] * f + class384.buf[6] * f_1579_ + class384.buf[10] * f_1580_ + class384.buf[14]);
 					float f_1584_ = ((float) (1.0 / Math.sqrt((double) (f_1581_ * f_1581_ + f_1582_ * f_1582_ + (f_1583_ * f_1583_)))) * (float) ((Class162) class162).anInt2025);
 					class384_1578_.method6549(((Class145) class145).anInt1712, (((Class145) class145).anInt1710 * ((Class162) class162).aShort2020) >> 7, (((Class145) class145).anInt1711 * ((Class162) class162).aShort2016) >> 7, (f_1581_ + (float) ((Class145) class145).anInt1709 - f_1581_ * f_1584_), (f_1582_ + (float) ((Class145) class145).anInt1713 - f_1582_ * f_1584_), f_1583_ - f_1583_ * f_1584_);
 					((Class528_Sub1) this).aClass505_Sub1_8239.method13585(class384_1578_);

@@ -150,7 +150,7 @@ public class Class400 {
 				int i_23_;
 				if (i > 2) {
 					((Class400) this).anInt4820 = class282_sub35.readShort(2041179357) * 1381598733;
-					i_22_ = class282_sub35.read24BitUnsignedInteger((short) 22864);
+					i_22_ = class282_sub35.read24BitUnsignedInteger();
 					i_23_ = class282_sub35.readUnsignedShort();
 				} else {
 					((Class400) this).anInt4820 = -1381598733;
@@ -167,7 +167,7 @@ public class Class400 {
 						class399s = new Class399[i_27_];
 						for (int i_28_ = 0; i_28_ < i_27_; i_28_++) {
 							int i_29_ = class282_sub35.readUnsignedShort();
-							int i_30_ = class282_sub35.read24BitUnsignedInteger((short) 8450);
+							int i_30_ = class282_sub35.read24BitUnsignedInteger();
 							int i_31_ = class282_sub35.readUnsignedShort();
 							class399s[i_28_] = new Class399(i_29_, i_30_, i_31_);
 						}
@@ -177,7 +177,7 @@ public class Class400 {
 						class399s[0] = new Class399((((Class400) this).anInt4820 * 162347205), i_22_, i_23_);
 						for (int i_32_ = 0; i_32_ < i_27_; i_32_++) {
 							int i_33_ = class282_sub35.readUnsignedShort();
-							int i_34_ = class282_sub35.read24BitUnsignedInteger((short) 6867);
+							int i_34_ = class282_sub35.read24BitUnsignedInteger();
 							int i_35_ = class282_sub35.readUnsignedShort();
 							class399s[1 + i_32_] = new Class399(i_33_, i_34_, i_35_);
 						}
@@ -216,52 +216,52 @@ public class Class400 {
 		return string;
 	}
 
-	static void method6794(Class282_Sub43 class282_sub43, int i, byte i_42_) {
-		Object[] objects = class282_sub43.anObjectArray8054;
-		int i_43_ = ((Integer) objects[0]).intValue();
-		CS2Script class282_sub50_sub5 = Class286.method5049(i_43_, -905040063);
-		if (null != class282_sub50_sub5) {
-			CS2Executor class527 = Class125.method2167(-444057050);
-			class527.intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
-			int i_44_ = 0;
-			class527.objectLocals = new String[class282_sub50_sub5.stringLocalsCount * 1886892247];
-			int i_45_ = 0;
-			class527.aLongArray6996 = new long[class282_sub50_sub5.longLocalsCount * -684160137];
-			int i_46_ = 0;
-			for (int i_47_ = 1; i_47_ < objects.length; i_47_++) {
-				if (objects[i_47_] instanceof Integer) {
-					int i_48_ = ((Integer) objects[i_47_]).intValue();
+	static void executeHookInner(HookRequest hook, int instrMax, byte i_42_) {
+		Object[] params = hook.params;
+		int scriptId = ((Integer) params[0]).intValue();
+		CS2Script script = Class286.getCS2Script(scriptId);
+		if (null != script) {
+			CS2Executor executor = Class125.getNextScriptExecutor(-444057050);
+			executor.intLocals = new int[script.intLocalsCount * 693687803];
+			int intLocalsCounter = 0;
+			executor.objectLocals = new String[script.stringLocalsCount * 1886892247];
+			int objectLocalsCounter = 0;
+			executor.longLocals = new long[script.longLocalsCount * -684160137];
+			int longLocalsCounter = 0;
+			for (int i = 1; i < params.length; i++) {
+				if (params[i] instanceof Integer) {
+					int i_48_ = ((Integer) params[i]).intValue();
 					if (i_48_ == -2147483647)
-						i_48_ = class282_sub43.anInt8059 * 1154494623;
+						i_48_ = hook.anInt8059 * 1154494623;
 					if (i_48_ == -2147483646)
-						i_48_ = 558772889 * class282_sub43.anInt8055;
+						i_48_ = 558772889 * hook.anInt8055;
 					if (-2147483645 == i_48_)
-						i_48_ = (class282_sub43.aClass118_8053 != null ? (-1952846363 * class282_sub43.aClass118_8053.anInt1287) : -1);
+						i_48_ = (hook.iComponentDefs != null ? (-1952846363 * hook.iComponentDefs.idHash) : -1);
 					if (-2147483644 == i_48_)
-						i_48_ = class282_sub43.anInt8051 * -1778855835;
+						i_48_ = hook.anInt8051 * -1778855835;
 					if (-2147483643 == i_48_)
-						i_48_ = (class282_sub43.aClass118_8053 != null ? (1924549737 * class282_sub43.aClass118_8053.anInt1288) : -1);
+						i_48_ = (hook.iComponentDefs != null ? (1924549737 * hook.iComponentDefs.anInt1288) : -1);
 					if (i_48_ == -2147483642)
-						i_48_ = (null != class282_sub43.aClass118_8057 ? (class282_sub43.aClass118_8057.anInt1287 * -1952846363) : -1);
+						i_48_ = (null != hook.aClass118_8057 ? (hook.aClass118_8057.idHash * -1952846363) : -1);
 					if (-2147483641 == i_48_)
-						i_48_ = (null != class282_sub43.aClass118_8057 ? (class282_sub43.aClass118_8057.anInt1288 * 1924549737) : -1);
+						i_48_ = (null != hook.aClass118_8057 ? (hook.aClass118_8057.anInt1288 * 1924549737) : -1);
 					if (-2147483640 == i_48_)
-						i_48_ = class282_sub43.anInt8058 * 101519687;
+						i_48_ = hook.anInt8058 * 101519687;
 					if (-2147483639 == i_48_)
-						i_48_ = 505716237 * class282_sub43.anInt8056;
-					class527.intLocals[i_44_++] = i_48_;
-				} else if (objects[i_47_] instanceof String) {
-					String string = (String) objects[i_47_];
+						i_48_ = 505716237 * hook.anInt8056;
+					executor.intLocals[intLocalsCounter++] = i_48_;
+				} else if (params[i] instanceof String) {
+					String string = (String) params[i];
 					if (string.equals("event_opbase"))
-						string = class282_sub43.aString8060;
-					class527.objectLocals[i_45_++] = string;
-				} else if (objects[i_47_] instanceof Long) {
-					long l = ((Long) objects[i_47_]).longValue();
-					class527.aLongArray6996[i_46_++] = l;
+						string = hook.opName;
+					executor.objectLocals[objectLocalsCounter++] = string;
+				} else if (params[i] instanceof Long) {
+					long l = ((Long) params[i]).longValue();
+					executor.longLocals[longLocalsCounter++] = l;
 				}
 			}
-			class527.anInt7015 = -1709878683 * ((Class282_Sub43) class282_sub43).anInt8061;
-			Class51.method1068(class282_sub50_sub5, i, class527, 564283341);
+			executor.anInt7015 = -1709878683 * ((HookRequest) hook).anInt8061;
+			Class51.method1068(script, instrMax, executor, 564283341);
 		}
 	}
 

@@ -99,8 +99,8 @@ public class Class74 {
 								for (int i_30_ = i_24_; i_30_ < i_25_; i_30_++) {
 									if (i_30_ - i_21_ >= -i_22_ && i_30_ - i_21_ <= i_22_ && (bools[i_29_ - i + i_22_][i_30_ - i_21_ + i_22_])) {
 										class48.aClass384_454.method6525(f, f, 1.0F, 1.0F);
-										class48.aClass384_454.aFloatArray4667[12] = (float) -i_26_;
-										class48.aClass384_454.aFloatArray4667[13] = (float) -i_23_;
+										class48.aClass384_454.buf[12] = (float) -i_26_;
+										class48.aClass384_454.buf[13] = (float) -i_23_;
 										((Class74) this).aClass71ArrayArray738[i_26_][i_23_].method1288(class48);
 										break while_48_;
 									}
@@ -156,8 +156,8 @@ public class Class74 {
 					for (int i_47_ = 0; i_47_ < ((Class74) this).anInt735; i_47_++) {
 						if (is[i_31_] != 0) {
 							class48.aClass384_454.method6525(f, f, 1.0F, 1.0F);
-							class48.aClass384_454.aFloatArray4667[12] = (float) -i_47_;
-							class48.aClass384_454.aFloatArray4667[13] = (float) -i_46_;
+							class48.aClass384_454.buf[12] = (float) -i_47_;
+							class48.aClass384_454.buf[13] = (float) -i_46_;
 							((Class74) this).aClass71ArrayArray738[i_47_][i_46_].method1290(class48, interface32, i_45_, is[i_31_] / 3);
 							i_45_ += is[i_31_];
 						}
@@ -427,8 +427,8 @@ public class Class74 {
 								for (int i_123_ = i_117_; i_123_ < i_118_; i_123_++) {
 									if (i_123_ - i_114_ >= -i_115_ && i_123_ - i_114_ <= i_115_ && (bools[i_122_ - i + i_115_][i_123_ - i_114_ + i_115_])) {
 										class48.aClass384_454.method6525(f, f, 1.0F, 1.0F);
-										class48.aClass384_454.aFloatArray4667[12] = (float) -i_119_;
-										class48.aClass384_454.aFloatArray4667[13] = (float) -i_116_;
+										class48.aClass384_454.buf[12] = (float) -i_119_;
+										class48.aClass384_454.buf[13] = (float) -i_116_;
 										((Class74) this).aClass71ArrayArray738[i_119_][i_116_].method1288(class48);
 										break while_49_;
 									}
@@ -484,8 +484,8 @@ public class Class74 {
 					for (int i_140_ = 0; i_140_ < ((Class74) this).anInt735; i_140_++) {
 						if (is[i_124_] != 0) {
 							class48.aClass384_454.method6525(f, f, 1.0F, 1.0F);
-							class48.aClass384_454.aFloatArray4667[12] = (float) -i_140_;
-							class48.aClass384_454.aFloatArray4667[13] = (float) -i_139_;
+							class48.aClass384_454.buf[12] = (float) -i_140_;
+							class48.aClass384_454.buf[13] = (float) -i_139_;
 							((Class74) this).aClass71ArrayArray738[i_140_][i_139_].method1290(class48, interface32, i_138_, is[i_124_] / 3);
 							i_138_ += is[i_124_];
 						}
@@ -511,8 +511,8 @@ public class Class74 {
 								for (int i_150_ = i_144_; i_150_ < i_145_; i_150_++) {
 									if (i_150_ - i_141_ >= -i_142_ && i_150_ - i_141_ <= i_142_ && (bools[i_149_ - i + i_142_][i_150_ - i_141_ + i_142_])) {
 										class48.aClass384_454.method6525(f, f, 1.0F, 1.0F);
-										class48.aClass384_454.aFloatArray4667[12] = (float) -i_146_;
-										class48.aClass384_454.aFloatArray4667[13] = (float) -i_143_;
+										class48.aClass384_454.buf[12] = (float) -i_146_;
+										class48.aClass384_454.buf[13] = (float) -i_143_;
 										((Class74) this).aClass71ArrayArray738[i_146_][i_143_].method1288(class48);
 										break while_50_;
 									}
@@ -568,8 +568,8 @@ public class Class74 {
 					for (int i_167_ = 0; i_167_ < ((Class74) this).anInt735; i_167_++) {
 						if (is[i_151_] != 0) {
 							class48.aClass384_454.method6525(f, f, 1.0F, 1.0F);
-							class48.aClass384_454.aFloatArray4667[12] = (float) -i_167_;
-							class48.aClass384_454.aFloatArray4667[13] = (float) -i_166_;
+							class48.aClass384_454.buf[12] = (float) -i_167_;
+							class48.aClass384_454.buf[13] = (float) -i_166_;
 							((Class74) this).aClass71ArrayArray738[i_167_][i_166_].method1290(class48, interface32, i_165_, is[i_151_] / 3);
 							i_165_ += is[i_151_];
 						}

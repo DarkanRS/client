@@ -30,7 +30,7 @@ public class AttributeDefault {
 		else if (4 == i)
 			autoDisable = false;
 		else if (i == 5)
-			aString5335 = class282_sub35.readString(912160510);
+			aString5335 = class282_sub35.readString();
 	}
 
 	void method7317(RsByteBuffer class282_sub35, int i) {
@@ -41,7 +41,7 @@ public class AttributeDefault {
 		else if (4 == i)
 			autoDisable = false;
 		else if (i == 5)
-			aString5335 = class282_sub35.readString(51672565);
+			aString5335 = class282_sub35.readString();
 	}
 
 	void method7318(RsByteBuffer class282_sub35) {
@@ -69,7 +69,7 @@ public class AttributeDefault {
 		else if (4 == i)
 			autoDisable = false;
 		else if (i == 5)
-			aString5335 = class282_sub35.readString(-347682615);
+			aString5335 = class282_sub35.readString();
 	}
 
 	public boolean method7321() {

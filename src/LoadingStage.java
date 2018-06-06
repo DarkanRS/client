@@ -335,8 +335,8 @@ public class LoadingStage {
 
 	static final void method6685(CS2Executor class527, int i) {
 		int i_71_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_71_, (byte) 18);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_71_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_71_, (byte) 18);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_71_ >> 16];
 		Class13.method502(class118, class98, class527, 577432492);
 	}
 

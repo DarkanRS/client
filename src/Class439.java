@@ -71,10 +71,10 @@ public final class Class439 {
 	}
 
 	public static void method7343(int i, int i_2_) {
-		Class118.aClass229_1280.method3858(i, (byte) 2);
-		Class118.aClass229_1341.method3858(i, (byte) 35);
-		Class118.aClass229_1303.method3858(i, (byte) 34);
-		Class118.aClass229_1282.method3858(i, (byte) -52);
+		IComponentDefinitions.aClass229_1280.method3858(i, (byte) 2);
+		IComponentDefinitions.aClass229_1341.method3858(i, (byte) 35);
+		IComponentDefinitions.aClass229_1303.method3858(i, (byte) 34);
+		IComponentDefinitions.aClass229_1282.method3858(i, (byte) -52);
 	}
 
 	static final void method7344(int i, int i_3_, long l) {

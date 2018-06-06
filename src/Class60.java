@@ -46,8 +46,8 @@ public class Class60 {
 
 	static final void method1167(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 23);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 23);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		FontRenderer.method403(class118, class98, class527, 2136495218);
 	}
 
@@ -71,12 +71,12 @@ public class Class60 {
 
 	public static void method1170(int i) {
 		if (client.aBool7344) {
-			Class118 class118 = Index.method5694(728544879 * Class7.anInt56, client.anInt7345 * -1673073865, 1160609713);
+			IComponentDefinitions class118 = Index.method5694(728544879 * Class7.anInt56, client.anInt7345 * -1673073865, 1160609713);
 			if (class118 != null && class118.anObjectArray1396 != null) {
-				Class282_Sub43 class282_sub43 = new Class282_Sub43();
-				class282_sub43.aClass118_8053 = class118;
-				class282_sub43.anObjectArray8054 = class118.anObjectArray1396;
-				Class96_Sub4.method13790(class282_sub43, 1386646091);
+				HookRequest class282_sub43 = new HookRequest();
+				class282_sub43.iComponentDefs = class118;
+				class282_sub43.params = class118.anObjectArray1396;
+				Class96_Sub4.executeHookInner200k(class282_sub43, 1386646091);
 			}
 			client.anInt7427 = 434551523;
 			client.anInt7346 = -2109153983;

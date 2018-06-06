@@ -11,7 +11,7 @@ public class Class374 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jagdx", -1413533168))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1413533168))
 				throw new RuntimeException("");
 			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
 		} catch (RuntimeException runtimeexception) {
@@ -28,7 +28,7 @@ public class Class374 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jagdx", -1240220089))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1240220089))
 				throw new RuntimeException("");
 			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
 		} catch (RuntimeException runtimeexception) {
@@ -45,7 +45,7 @@ public class Class374 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jagdx", -2058830414))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -2058830414))
 				throw new RuntimeException("");
 			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
 		} catch (RuntimeException runtimeexception) {
@@ -66,7 +66,7 @@ public class Class374 {
 			boolean bool = Class505_Sub2.method13893();
 			if (!bool)
 				throw new RuntimeException("");
-			if (!Class362.method6278(616047582).method222("jagdx", -1912806589))
+			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1912806589))
 				throw new RuntimeException("");
 			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
 		} catch (RuntimeException runtimeexception) {

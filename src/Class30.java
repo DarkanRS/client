@@ -122,7 +122,7 @@ public class Class30 implements Runnable {
 		Class51.method1074(is, objects, 0, is.length - 1, -990491051);
 	}
 
-	static final void method797(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method797(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_4_ != class118.anInt1321 * 1241177935) {
 			if (i_4_ != -1) {
@@ -135,7 +135,7 @@ public class Class30 implements Runnable {
 			Class109.method1858(class118, (byte) 39);
 		}
 		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			Class149_Sub1.method14582(-1952846363 * class118.anInt1287, -370064085);
+			Class149_Sub1.method14582(-1952846363 * class118.idHash, -370064085);
 	}
 
 	static final void method798(CS2Executor class527, int i) {

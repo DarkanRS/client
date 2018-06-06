@@ -160,8 +160,8 @@ public final class Class78 {
 
 	static final void method1385(CS2Executor class527, int i) {
 		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_10_, (byte) 32);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_10_, (byte) 32);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
 		Class241.method4149(class118, class98, class527, -1861412275);
 	}
 

@@ -108,15 +108,15 @@ public class JS5Manager {
 
 	static final void method5487(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = class513.aClass118_5886;
-		Class98 class98 = class513.aClass98_5885;
+		IComponentDefinitions class118 = class513.aClass118_5886;
+		Interface class98 = class513.aClass98_5885;
 		Class306.method5453(class118, class98, class527, -218121128);
 	}
 
 	static final void method5488(CS2Executor class527, int i) {
 		int i_36_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_36_, (byte) 80);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_36_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_36_, (byte) 80);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_36_ >> 16];
 		Class282_Sub20_Sub9.method15256(class118, class98, class527, -1115547958);
 	}
 

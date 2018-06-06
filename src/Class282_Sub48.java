@@ -558,11 +558,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8089 = 51937289 * class409.anInt4909;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.aFloat4671 * 80768833;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.aFloat4673 * 1225707357;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.x * 80768833;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.z * 1225707357;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = 1589843113 * (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aByte7967);
 			Class175.method2964(class282_sub48, i, i_16_, i_17_, i_18_, -1661060558);
 		}
@@ -602,11 +602,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8091 = i_22_ * -983037179;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.aFloat4671;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.aFloat4673;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.x;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.z;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aByte7967) * 1589843113;
 			Class175.method2964(class282_sub48, i, i_16_, i_17_, i_18_, -1693662930);
 		}
@@ -658,11 +658,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8089 = 51937289 * class409.anInt4909;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.aFloat4671 * 80768833;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.aFloat4673 * 1225707357;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.x * 80768833;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.z * 1225707357;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = 1589843113 * (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aByte7967);
 			Class175.method2964(class282_sub48, i, i_25_, i_26_, i_27_, -1080566209);
 		}
@@ -702,11 +702,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8091 = i_31_ * -983037179;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.aFloat4671;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.aFloat4673;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.x;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.z;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aByte7967) * 1589843113;
 			Class175.method2964(class282_sub48, i, i_25_, i_26_, i_27_, -1393636192);
 		}
@@ -758,11 +758,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8089 = 51937289 * class409.anInt4909;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.aFloat4671 * 80768833;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.aFloat4673 * 1225707357;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.x * 80768833;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.z * 1225707357;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = 1589843113 * (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aByte7967);
 			Class175.method2964(class282_sub48, i, i_34_, i_35_, i_36_, -1295686790);
 		}
@@ -802,11 +802,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8091 = i_40_ * -983037179;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.aFloat4671;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.aFloat4673;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.x;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.z;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aByte7967) * 1589843113;
 			Class175.method2964(class282_sub48, i, i_34_, i_35_, i_36_, -1772084925);
 		}
@@ -858,11 +858,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8089 = 51937289 * class409.anInt4909;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.aFloat4671 * 80768833;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.aFloat4673 * 1225707357;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = (int) class385.x * 80768833;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = (int) class385.z * 1225707357;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = 1589843113 * (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aByte7967);
 			Class175.method2964(class282_sub48, i, i_43_, i_44_, i_45_, -1718610841);
 		}
@@ -902,11 +902,11 @@ public class Class282_Sub48 extends Node {
 					((Class282_Sub48) class282_sub48).anInt8091 = i_49_ * -983037179;
 				}
 			}
-			Class385 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
-			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.aFloat4671;
-			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.aFloat4671 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.aFloat4673;
-			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.aFloat4673 + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
+			Vector3 class385 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method11166().aClass385_3595);
+			((Class282_Sub48) class282_sub48).anInt8107 = 80768833 * (int) class385.x;
+			((Class282_Sub48) class282_sub48).anInt8079 = ((int) class385.x + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8078 = 1225707357 * (int) class385.z;
+			((Class282_Sub48) class282_sub48).anInt8077 = ((int) class385.z + (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15805(828768449) << 8)) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8076 = (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aByte7967) * 1589843113;
 			Class175.method2964(class282_sub48, i, i_43_, i_44_, i_45_, -403457460);
 		}

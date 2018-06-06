@@ -512,7 +512,7 @@ public class Class188 {
 	}
 
 	static final void method3138(CS2Executor class527, int i) {
-		class527.intLocals[(class527.unknown[301123709 * class527.instrPtr])] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intLocals[(class527.intOpValues[301123709 * class527.instrPtr])] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 	}
 
 	public static void method3139(GraphicalRenderer class505, Index class317, int i) {
@@ -575,11 +575,11 @@ public class Class188 {
 		RsBitsBuffer stream = ((Class184) client.aClass184_7475).aClass282_Sub35_Sub2_2284;
 		if (TilestreamPacket.aClass364_4204 == class364) {
 			int i_21_ = stream.readUnsignedByte();
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1837937091);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1837937091);
 			int i_22_ = (i_21_ & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
-			int i_23_ = i_22_ + class219.anInt2712 * -1002240017;
+			int i_23_ = i_22_ + class219.y * -1002240017;
 			int i_24_ = Class458.anInt5495 * -2109540951 + (i_21_ >> 4 & 0x7);
-			int i_25_ = i_24_ + 1948093437 * class219.anInt2711;
+			int i_25_ = i_24_ + 1948093437 * class219.x;
 			int i_26_ = stream.readUnsignedShort();
 			int i_27_ = stream.readUnsignedShort();
 			int i_28_ = stream.readUnsignedShort();
@@ -685,13 +685,13 @@ public class Class188 {
 		} else if (TilestreamPacket.aClass364_4205 == class364) {
 			int i_65_ = stream.readUnsignedShort();
 			int i_66_ = stream.readUnsignedByte();
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1818214745);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1818214745);
 			int i_67_ = (i_66_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
-			int i_68_ = class219.anInt2712 * -1002240017 + i_67_;
+			int i_68_ = class219.y * -1002240017 + i_67_;
 			int i_69_ = Class458.anInt5495 * -2109540951 + (i_66_ >> 4 & 0x7);
-			int i_70_ = i_69_ + class219.anInt2711 * 1948093437;
-			int i_71_ = stream.readShortLE128(602501853);
-			int i_72_ = stream.readShortLE128(602501853);
+			int i_70_ = i_69_ + class219.x * 1948093437;
+			int i_71_ = stream.readShortLE128();
+			int i_72_ = stream.readShortLE128();
 			if (i_65_ != 1595512269 * client.anInt7315) {
 				boolean bool = (i_69_ >= 0 && i_67_ >= 0 && i_69_ < IndexLoaders.MAP_REGION_DECODER.method4424(-550020806) && (i_67_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1767012747)));
 				if (bool || IndexLoaders.MAP_REGION_DECODER.method4419(-1899363566).method4401(-557011908)) {
@@ -712,12 +712,12 @@ public class Class188 {
 				Class299.method5313(-1258088735 * Class272.anInt3331, i_78_, i_79_, i_76_, -1, i_74_, i_75_, 1736684675);
 		} else if (class364 == TilestreamPacket.aClass364_4207) {
 			int i_80_ = stream.readUnsignedByteC(-1607193362);
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1369508080);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1369508080);
 			int i_81_ = 71472045 * Class158_Sub1_Sub2.anInt10131 + (i_80_ & 0x7);
-			int i_82_ = i_81_ + -1002240017 * class219.anInt2712;
+			int i_82_ = i_81_ + -1002240017 * class219.y;
 			int i_83_ = (i_80_ >> 4 & 0x7) + Class458.anInt5495 * -2109540951;
-			int i_84_ = class219.anInt2711 * 1948093437 + i_83_;
-			int i_85_ = stream.readShortLE128(602501853);
+			int i_84_ = class219.x * 1948093437 + i_83_;
+			int i_85_ = stream.readShortLE128();
 			Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) (Class272.anInt3331 * -1258088735 << 28 | i_82_ << 14 | i_84_))));
 			if (null != class282_sub29) {
 				for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 19); class282_sub34 != null; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.next(715558625)) {
@@ -791,8 +791,8 @@ public class Class188 {
 			int i_106_ = Class158_Sub1_Sub2.anInt10131 * 71472045 + (i_104_ & 0x7);
 			int i_107_ = stream.readUnsignedShort();
 			int i_108_ = stream.readUnsignedByte();
-			int i_109_ = stream.read24BitUnsignedInteger((short) 28258);
-			String string = stream.readString(2108962814);
+			int i_109_ = stream.read24BitUnsignedInteger();
+			String string = stream.readString();
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2041304970) != Class256.aClass256_3153)
 				Class59.method1161(-1258088735 * Class272.anInt3331, i_105_, i_106_, i_108_, i_107_, i_109_, string, (short) 17078);
 		} else if (class364 == TilestreamPacket.aClass364_4217) {
@@ -824,18 +824,18 @@ public class Class188 {
 			int i_125_ = stream.readUnsigned128Byte();
 			int i_126_ = (i_125_ >> 4 & 0x7) + -2109540951 * Class458.anInt5495;
 			int i_127_ = (i_125_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
-			int i_128_ = stream.readIntLE(1535034399);
+			int i_128_ = stream.readIntLE();
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2057621455) != Class256.aClass256_3153)
 				Class9.animateObject(Class272.anInt3331 * -1258088735, i_126_, i_127_, i_124_, i_122_, i_123_, i_128_, (byte) 1);
 		} else if (class364 == TilestreamPacket.aClass364_4206) {
-			int i_129_ = stream.readShortLE128(602501853);
+			int i_129_ = stream.readShortLE128();
 			int i_130_ = stream.readUnsignedShort128();
 			int i_131_ = stream.readUnsignedByteC(-1139243709);
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(171672593);
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(171672593);
 			int i_132_ = (i_131_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
-			int i_133_ = i_132_ + -1002240017 * class219.anInt2712;
+			int i_133_ = i_132_ + -1002240017 * class219.y;
 			int i_134_ = (i_131_ >> 4 & 0x7) + Class458.anInt5495 * -2109540951;
-			int i_135_ = i_134_ + 1948093437 * class219.anInt2711;
+			int i_135_ = i_134_ + 1948093437 * class219.x;
 			boolean bool = (i_134_ >= 0 && i_132_ >= 0 && i_134_ < IndexLoaders.MAP_REGION_DECODER.method4424(1965458843) && i_132_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1811316937));
 			if (bool || IndexLoaders.MAP_REGION_DECODER.method4419(-2008774639).method4401(-557011908)) {
 				Class353.method6209(Class272.anInt3331 * -1258088735, i_135_, i_133_, new Class282_Sub34(i_130_, i_129_), 1102559151);

@@ -109,7 +109,7 @@ public class Class215 implements Interface17 {
 		return true;
 	}
 
-	static final void method3672(Class118 class118, Class98 class98, CS2Executor class527, short i) {
+	static final void method3672(IComponentDefinitions class118, Interface class98, CS2Executor class527, short i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 394644224) != null)
 			string = string.substring(0, string.length() - 1);

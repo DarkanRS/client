@@ -19,11 +19,10 @@ public final class Class47_Sub1 extends Class47 {
 	Class115[] aClass115Array9137 = new Class115[3];
 	static final int anInt9138 = 2;
 	int[] anIntArray9139;
-	Class303 aClass303_9140;
-	Class303 aClass303_9141;
+	Vector4 aClass303_9140;
+	Vector4 aClass303_9141;
 	static Class202 aClass202_9142;
-	public static Class262 aClass262_9143;
-
+	
 	public void method936() {
 		((Class47_Sub1) this).aClass101_9124.method1655(((Class47_Sub1) this).aClass115Array9137[0]);
 		((Class47_Sub1) this).anIntArray9139 = (((Class47_Sub1) this).anIntArrayArray9130[((Class47_Sub1) this).aClass101_9124.method1714(-2049604923)]);
@@ -59,25 +58,25 @@ public final class Class47_Sub1 extends Class47 {
 	public void method937(int i, int i_8_) {
 		switch (i) {
 		case 3:
-			((Class47_Sub1) this).aClass303_9140.method5368(0xffffff | i_8_ & ~0xffffff);
-			((Class47_Sub1) this).aClass303_9141.method5368(i_8_ & 0xffffff);
+			((Class47_Sub1) this).aClass303_9140.fromInt(0xffffff | i_8_ & ~0xffffff);
+			((Class47_Sub1) this).aClass303_9141.fromInt(i_8_ & 0xffffff);
 			break;
 		case 1:
-			((Class47_Sub1) this).aClass303_9140.method5368(-1);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(-1);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		case 0:
-			((Class47_Sub1) this).aClass303_9140.method5368(i_8_);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(i_8_);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		case 4:
-			((Class47_Sub1) this).aClass303_9140.method5368(-1);
-			((Class47_Sub1) this).aClass303_9141.method5368(i_8_);
-			((Class47_Sub1) this).aClass303_9141.method5370();
+			((Class47_Sub1) this).aClass303_9140.fromInt(-1);
+			((Class47_Sub1) this).aClass303_9141.fromInt(i_8_);
+			((Class47_Sub1) this).aClass303_9141.negate();
 			break;
 		case 2:
-			((Class47_Sub1) this).aClass303_9140.method5368(i_8_);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(i_8_);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		}
 	}
@@ -94,8 +93,8 @@ public final class Class47_Sub1 extends Class47 {
 		aClass505_Sub2_439.method13933(aClass384_442);
 		((Class47_Sub1) this).aClass101_9124.method1676((((Class47_Sub1) this).anIntArray9139[0]), aClass384_442, -376306243);
 		((Class47_Sub1) this).aClass101_9124.method1675((((Class47_Sub1) this).anIntArray9139[3]), aClass384_440, (byte) 14);
-		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[5], ((Class47_Sub1) this).aClass303_9140.aFloat3568, ((Class47_Sub1) this).aClass303_9140.aFloat3566, ((Class47_Sub1) this).aClass303_9140.aFloat3565, ((Class47_Sub1) this).aClass303_9140.aFloat3567, (byte) 38);
-		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[6], ((Class47_Sub1) this).aClass303_9141.aFloat3568, ((Class47_Sub1) this).aClass303_9141.aFloat3566, ((Class47_Sub1) this).aClass303_9141.aFloat3565, ((Class47_Sub1) this).aClass303_9141.aFloat3567, (byte) 44);
+		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[5], ((Class47_Sub1) this).aClass303_9140.x, ((Class47_Sub1) this).aClass303_9140.y, ((Class47_Sub1) this).aClass303_9140.z, ((Class47_Sub1) this).aClass303_9140.w, (byte) 38);
+		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[6], ((Class47_Sub1) this).aClass303_9141.x, ((Class47_Sub1) this).aClass303_9141.y, ((Class47_Sub1) this).aClass303_9141.z, ((Class47_Sub1) this).aClass303_9141.w, (byte) 44);
 		aClass505_Sub2_439.method14161(0, anInterface4_445);
 		aClass505_Sub2_439.method13996(aClass70_447);
 		aClass505_Sub2_439.method13923(Class352.aClass352_4104, anInt446, 2);
@@ -112,25 +111,25 @@ public final class Class47_Sub1 extends Class47 {
 	public void method939(int i, int i_9_) {
 		switch (i) {
 		case 3:
-			((Class47_Sub1) this).aClass303_9140.method5368(0xffffff | i_9_ & ~0xffffff);
-			((Class47_Sub1) this).aClass303_9141.method5368(i_9_ & 0xffffff);
+			((Class47_Sub1) this).aClass303_9140.fromInt(0xffffff | i_9_ & ~0xffffff);
+			((Class47_Sub1) this).aClass303_9141.fromInt(i_9_ & 0xffffff);
 			break;
 		case 1:
-			((Class47_Sub1) this).aClass303_9140.method5368(-1);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(-1);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		case 0:
-			((Class47_Sub1) this).aClass303_9140.method5368(i_9_);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(i_9_);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		case 4:
-			((Class47_Sub1) this).aClass303_9140.method5368(-1);
-			((Class47_Sub1) this).aClass303_9141.method5368(i_9_);
-			((Class47_Sub1) this).aClass303_9141.method5370();
+			((Class47_Sub1) this).aClass303_9140.fromInt(-1);
+			((Class47_Sub1) this).aClass303_9141.fromInt(i_9_);
+			((Class47_Sub1) this).aClass303_9141.negate();
 			break;
 		case 2:
-			((Class47_Sub1) this).aClass303_9140.method5368(i_9_);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(i_9_);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		}
 	}
@@ -138,25 +137,25 @@ public final class Class47_Sub1 extends Class47 {
 	public void method940(int i, int i_10_) {
 		switch (i) {
 		case 3:
-			((Class47_Sub1) this).aClass303_9140.method5368(0xffffff | i_10_ & ~0xffffff);
-			((Class47_Sub1) this).aClass303_9141.method5368(i_10_ & 0xffffff);
+			((Class47_Sub1) this).aClass303_9140.fromInt(0xffffff | i_10_ & ~0xffffff);
+			((Class47_Sub1) this).aClass303_9141.fromInt(i_10_ & 0xffffff);
 			break;
 		case 1:
-			((Class47_Sub1) this).aClass303_9140.method5368(-1);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(-1);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		case 0:
-			((Class47_Sub1) this).aClass303_9140.method5368(i_10_);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(i_10_);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		case 4:
-			((Class47_Sub1) this).aClass303_9140.method5368(-1);
-			((Class47_Sub1) this).aClass303_9141.method5368(i_10_);
-			((Class47_Sub1) this).aClass303_9141.method5370();
+			((Class47_Sub1) this).aClass303_9140.fromInt(-1);
+			((Class47_Sub1) this).aClass303_9141.fromInt(i_10_);
+			((Class47_Sub1) this).aClass303_9141.negate();
 			break;
 		case 2:
-			((Class47_Sub1) this).aClass303_9140.method5368(i_10_);
-			((Class47_Sub1) this).aClass303_9141.method5368(0);
+			((Class47_Sub1) this).aClass303_9140.fromInt(i_10_);
+			((Class47_Sub1) this).aClass303_9141.fromInt(0);
 			break;
 		}
 	}
@@ -190,8 +189,8 @@ public final class Class47_Sub1 extends Class47 {
 	public Class47_Sub1(Class505_Sub2 class505_sub2) throws Exception_Sub2 {
 		super(class505_sub2);
 		((Class47_Sub1) this).anIntArrayArray9130 = new int[3][7];
-		((Class47_Sub1) this).aClass303_9140 = new Class303(1.0F, 1.0F, 1.0F, 1.0F);
-		((Class47_Sub1) this).aClass303_9141 = new Class303(0.0F, 0.0F, 0.0F, 0.0F);
+		((Class47_Sub1) this).aClass303_9140 = new Vector4(1.0F, 1.0F, 1.0F, 1.0F);
+		((Class47_Sub1) this).aClass303_9141 = new Vector4(0.0F, 0.0F, 0.0F, 0.0F);
 		method14475((byte) 0);
 	}
 
@@ -209,8 +208,8 @@ public final class Class47_Sub1 extends Class47 {
 		aClass505_Sub2_439.method13933(aClass384_442);
 		((Class47_Sub1) this).aClass101_9124.method1676((((Class47_Sub1) this).anIntArray9139[0]), aClass384_442, 731170241);
 		((Class47_Sub1) this).aClass101_9124.method1675((((Class47_Sub1) this).anIntArray9139[3]), aClass384_440, (byte) 56);
-		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[5], ((Class47_Sub1) this).aClass303_9140.aFloat3568, ((Class47_Sub1) this).aClass303_9140.aFloat3566, ((Class47_Sub1) this).aClass303_9140.aFloat3565, ((Class47_Sub1) this).aClass303_9140.aFloat3567, (byte) 35);
-		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[6], ((Class47_Sub1) this).aClass303_9141.aFloat3568, ((Class47_Sub1) this).aClass303_9141.aFloat3566, ((Class47_Sub1) this).aClass303_9141.aFloat3565, ((Class47_Sub1) this).aClass303_9141.aFloat3567, (byte) 30);
+		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[5], ((Class47_Sub1) this).aClass303_9140.x, ((Class47_Sub1) this).aClass303_9140.y, ((Class47_Sub1) this).aClass303_9140.z, ((Class47_Sub1) this).aClass303_9140.w, (byte) 35);
+		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[6], ((Class47_Sub1) this).aClass303_9141.x, ((Class47_Sub1) this).aClass303_9141.y, ((Class47_Sub1) this).aClass303_9141.z, ((Class47_Sub1) this).aClass303_9141.w, (byte) 30);
 		aClass505_Sub2_439.method14161(0, anInterface4_445);
 		aClass505_Sub2_439.method13996(aClass70_447);
 		aClass505_Sub2_439.method13923(Class352.aClass352_4104, anInt446, 2);
@@ -248,8 +247,8 @@ public final class Class47_Sub1 extends Class47 {
 		aClass505_Sub2_439.method13933(aClass384_442);
 		((Class47_Sub1) this).aClass101_9124.method1676((((Class47_Sub1) this).anIntArray9139[0]), aClass384_442, -1760623207);
 		((Class47_Sub1) this).aClass101_9124.method1675((((Class47_Sub1) this).anIntArray9139[3]), aClass384_440, (byte) 7);
-		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[5], ((Class47_Sub1) this).aClass303_9140.aFloat3568, ((Class47_Sub1) this).aClass303_9140.aFloat3566, ((Class47_Sub1) this).aClass303_9140.aFloat3565, ((Class47_Sub1) this).aClass303_9140.aFloat3567, (byte) 110);
-		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[6], ((Class47_Sub1) this).aClass303_9141.aFloat3568, ((Class47_Sub1) this).aClass303_9141.aFloat3566, ((Class47_Sub1) this).aClass303_9141.aFloat3565, ((Class47_Sub1) this).aClass303_9141.aFloat3567, (byte) 47);
+		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[5], ((Class47_Sub1) this).aClass303_9140.x, ((Class47_Sub1) this).aClass303_9140.y, ((Class47_Sub1) this).aClass303_9140.z, ((Class47_Sub1) this).aClass303_9140.w, (byte) 110);
+		((Class47_Sub1) this).aClass101_9124.method1749(((Class47_Sub1) this).anIntArray9139[6], ((Class47_Sub1) this).aClass303_9141.x, ((Class47_Sub1) this).aClass303_9141.y, ((Class47_Sub1) this).aClass303_9141.z, ((Class47_Sub1) this).aClass303_9141.w, (byte) 47);
 		aClass505_Sub2_439.method14161(0, anInterface4_445);
 		aClass505_Sub2_439.method13996(aClass70_447);
 		aClass505_Sub2_439.method13923(Class352.aClass352_4104, anInt446, 2);
@@ -281,7 +280,7 @@ public final class Class47_Sub1 extends Class47 {
 		return true;
 	}
 
-	static final void method14482(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method14482(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		int i_32_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_33_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		if (i_33_ >= 1 && i_33_ <= 10)

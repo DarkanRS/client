@@ -141,12 +141,12 @@ public class SoftwareItemRender implements Interface18 {
 
 	static final void method7032(CS2Executor class527, short i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1301 * 1506818197;
 	}
 
 	static Class149_Sub4 method7033(RsByteBuffer class282_sub35, int i) {
-		return new Class149_Sub4(class282_sub35.readShort(1848939200), class282_sub35.readShort(1780715141), class282_sub35.readShort(1644491611), class282_sub35.readShort(1586203891), class282_sub35.read24BitUnsignedInteger((short) 4319), class282_sub35.read24BitUnsignedInteger((short) 18735), class282_sub35.readUnsignedByte());
+		return new Class149_Sub4(class282_sub35.readShort(1848939200), class282_sub35.readShort(1780715141), class282_sub35.readShort(1644491611), class282_sub35.readShort(1586203891), class282_sub35.read24BitUnsignedInteger(), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 
 	public static void method7034(AnimationDefinitions class518, int i, int i_4_) {

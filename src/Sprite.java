@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public interface Interface39 {
+public interface Sprite {
 	public int method225();
 
 	public int method226();

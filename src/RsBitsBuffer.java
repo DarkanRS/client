@@ -5,23 +5,23 @@
 public class RsBitsBuffer extends RsByteBuffer {
 
 	int anInt9608;
-	IsaacCipher aClass432_9609;
+	IsaacCipher isaac;
 	static int[] anIntArray9610 = { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1 };
 
 	public void method14866() {
 		this.anInt9608 = -436806392 * index;
 	}
 
-	public void method14867(IsaacCipher class432, int i) {
-		this.aClass432_9609 = class432;
+	public void setIsaacCipher(IsaacCipher class432, int i) {
+		this.isaac = class432;
 	}
 
 	public void method14868(int i) {
-		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.aClass432_9609.method7254(1662845708));
+		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.isaac.nextInt(1662845708));
 	}
 
 	public boolean method14869(short i) {
-		int i_0_ = ((buffer[index * -1990677291] - this.aClass432_9609.method7255(-44751888)) & 0xff);
+		int i_0_ = ((buffer[index * -1990677291] - this.isaac.method7255(-44751888)) & 0xff);
 		if (i_0_ < 128) {
 			return false;
 		}
@@ -29,11 +29,11 @@ public class RsBitsBuffer extends RsByteBuffer {
 	}
 
 	public int method14870() {
-		int i_1_ = ((buffer[(index += -1115476867) * -1990677291 - 1] - this.aClass432_9609.method7254(1151052161)) & 0xff);
+		int i_1_ = ((buffer[(index += -1115476867) * -1990677291 - 1] - this.isaac.nextInt(1151052161)) & 0xff);
 		if (i_1_ < 128) {
 			return i_1_;
 		}
-		return ((i_1_ - 128 << 8) + (((buffer[(index += -1115476867) * -1990677291 - 1]) - this.aClass432_9609.method7254(843866869)) & 0xff));
+		return ((i_1_ - 128 << 8) + (((buffer[(index += -1115476867) * -1990677291 - 1]) - this.isaac.nextInt(843866869)) & 0xff));
 	}
 
 	public int readBits(int i, byte i_2_) {
@@ -62,7 +62,7 @@ public class RsBitsBuffer extends RsByteBuffer {
 			if (i_7_ != 8) {
 				break;
 			}
-			is[i_8_ + i] = (byte) ((buffer[(index += -1115476867) * -1990677291 - 1]) - this.aClass432_9609.method7254(1542383540));
+			is[i_8_ + i] = (byte) ((buffer[(index += -1115476867) * -1990677291 - 1]) - this.isaac.nextInt(1542383540));
 		}
 	}
 
@@ -75,11 +75,11 @@ public class RsBitsBuffer extends RsByteBuffer {
 	}
 
 	public void method14876(int i) {
-		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.aClass432_9609.method7254(669057184));
+		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.isaac.nextInt(669057184));
 	}
 
 	public void method14877(int i) {
-		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.aClass432_9609.method7254(1338157466));
+		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.isaac.nextInt(1338157466));
 	}
 
 	public int method14878(int i) {
@@ -100,7 +100,7 @@ public class RsBitsBuffer extends RsByteBuffer {
 	}
 
 	public boolean method14879() {
-		int i = ((buffer[index * -1990677291] - this.aClass432_9609.method7255(-692378847)) & 0xff);
+		int i = ((buffer[index * -1990677291] - this.isaac.method7255(-692378847)) & 0xff);
 		if (i < 128) {
 			return false;
 		}
@@ -112,25 +112,25 @@ public class RsBitsBuffer extends RsByteBuffer {
 	}
 
 	public int method14881() {
-		int i = ((buffer[(index += -1115476867) * -1990677291 - 1] - this.aClass432_9609.method7254(2040665613)) & 0xff);
+		int i = ((buffer[(index += -1115476867) * -1990677291 - 1] - this.isaac.nextInt(2040665613)) & 0xff);
 		if (i < 128) {
 			return i;
 		}
-		return ((i - 128 << 8) + (((buffer[(index += -1115476867) * -1990677291 - 1]) - this.aClass432_9609.method7254(617496031)) & 0xff));
+		return ((i - 128 << 8) + (((buffer[(index += -1115476867) * -1990677291 - 1]) - this.isaac.nextInt(617496031)) & 0xff));
 	}
 
 	public void method14882(byte[] is, int i, int i_13_) {
 		for (int i_14_ = 0; i_14_ < i_13_; i_14_++) {
-			is[i_14_ + i] = (byte) ((buffer[(index += -1115476867) * -1990677291 - 1]) - this.aClass432_9609.method7254(1348910147));
+			is[i_14_ + i] = (byte) ((buffer[(index += -1115476867) * -1990677291 - 1]) - this.isaac.nextInt(1348910147));
 		}
 	}
 
-	public void method14883(int i, int i_15_) {
-		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.aClass432_9609.method7254(1317631877));
+	public void writeIsaacByte(int i, int i_15_) {
+		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i + this.isaac.nextInt(1317631877));
 	}
 
 	public boolean method14884() {
-		int i = ((buffer[index * -1990677291] - this.aClass432_9609.method7255(1157859893)) & 0xff);
+		int i = ((buffer[index * -1990677291] - this.isaac.method7255(1157859893)) & 0xff);
 		if (i < 128) {
 			return false;
 		}
@@ -159,7 +159,7 @@ public class RsBitsBuffer extends RsByteBuffer {
 
 	public void method14889(byte[] is, int i, int i_16_) {
 		for (int i_17_ = 0; i_17_ < i_16_; i_17_++) {
-			is[i_17_ + i] = (byte) ((buffer[(index += -1115476867) * -1990677291 - 1]) - this.aClass432_9609.method7254(1242633396));
+			is[i_17_ + i] = (byte) ((buffer[(index += -1115476867) * -1990677291 - 1]) - this.isaac.nextInt(1242633396));
 		}
 	}
 

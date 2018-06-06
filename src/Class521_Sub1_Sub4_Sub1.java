@@ -60,8 +60,8 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			else
 				class390_2_ = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
-		return class478.method8010(class505, i, ((Class521_Sub1_Sub4_Sub1) this).aByte10485, ((Class521_Sub1_Sub4_Sub1) this).aByte10487, class390, class390_2_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, bool, null, 921813682);
+		Vector3 class385 = method11166().aClass385_3595;
+		return class478.method8010(class505, i, ((Class521_Sub1_Sub4_Sub1) this).aByte10485, ((Class521_Sub1_Sub4_Sub1) this).aByte10487, class390, class390_2_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, 921813682);
 	}
 
 	public void method90() {
@@ -72,7 +72,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	Class285 method12990(GraphicalRenderer class505, int i) {
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass528_10483)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub4_Sub1) this).aBool10481, (byte) -111);
@@ -87,7 +87,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	boolean method12983(GraphicalRenderer class505, int i, int i_3_, int i_4_) {
 		MeshRasterizer class528 = method16068(class505, 131072, (byte) -65);
 		if (null != class528) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			return class528.method11270(i, i_3_, class294, false, 0);
 		}
 		return false;
@@ -136,7 +136,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	Class285 method12989(GraphicalRenderer class505) {
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass528_10483)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub4_Sub1) this).aBool10481, (byte) -46);
@@ -154,9 +154,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486;
 			((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -33);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -33);
 	}
 
 	public void method88(GraphicalRenderer class505, int i) {
@@ -169,9 +169,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486;
 			((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -18);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -18);
 	}
 
 	boolean method13002() {
@@ -209,9 +209,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	}
 
 	public Class200 method12992(GraphicalRenderer class505, byte i) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484)
-			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16068(class505, 0, (byte) 22), (byte) 106);
+			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16068(class505, 0, (byte) 22), (byte) 106);
 		return ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484;
 	}
 
@@ -235,9 +235,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486;
 			((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -19);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -19);
 	}
 
 	public void method83(GraphicalRenderer class505) {
@@ -250,9 +250,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486;
 			((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -64);
+			aClass206_7970.method3426(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -64);
 	}
 
 	public void method97(GraphicalRenderer class505) {
@@ -265,9 +265,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486;
 			((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) 44);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) 44);
 	}
 
 	public int getId(int i) {
@@ -284,9 +284,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			class282_sub50_sub17 = ((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486;
 			((Class521_Sub1_Sub4_Sub1) this).aClass282_Sub50_Sub17_10486 = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null != class282_sub50_sub17)
-			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.aFloat4671, (int) class385.aFloat4673, null, (byte) -74);
+			aClass206_7970.method3427(class282_sub50_sub17, aByte7968, (int) class385.x, (int) class385.z, null, (byte) -74);
 	}
 
 	public boolean method86(int i) {
@@ -294,9 +294,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	}
 
 	public Class200 method12993(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484)
-			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16068(class505, 0, (byte) -75), (byte) -30);
+			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16068(class505, 0, (byte) -75), (byte) -30);
 		return ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484;
 	}
 
@@ -325,7 +325,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	Class285 method13009(GraphicalRenderer class505) {
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass528_10483)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub4_Sub1) this).aBool10481, (byte) -51);
@@ -336,7 +336,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	Class285 method13010(GraphicalRenderer class505) {
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass528_10483)
 			return null;
-		Class294 class294 = class505.method8450();
+		Matrix44Var class294 = class505.method8450();
 		class294.method5209(method11168());
 		class294.method5219((float) aShort9611, 0.0F, (float) aShort9612);
 		Class285 class285 = Class470.method7824(((Class521_Sub1_Sub4_Sub1) this).aBool10481, (byte) -61);
@@ -345,9 +345,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	}
 
 	public Class200 method13019(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484)
-			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16068(class505, 0, (byte) -38), (byte) 41);
+			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16068(class505, 0, (byte) -38), (byte) 41);
 		return ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484;
 	}
 
@@ -364,9 +364,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	}
 
 	public Class200 method13018(GraphicalRenderer class505) {
-		Class385 class385 = method11166().aClass385_3595;
+		Vector3 class385 = method11166().aClass385_3595;
 		if (null == ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484)
-			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, method16068(class505, 0, (byte) 32), (byte) 31);
+			((Class521_Sub1_Sub4_Sub1) this).aClass200_10484 = Class275_Sub2.method12505((int) class385.x, (int) class385.y, (int) class385.z, method16068(class505, 0, (byte) 32), (byte) 31);
 		return ((Class521_Sub1_Sub4_Sub1) this).aClass200_10484;
 	}
 
@@ -377,7 +377,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 	boolean method13020(GraphicalRenderer class505, int i, int i_14_) {
 		MeshRasterizer class528 = method16068(class505, 131072, (byte) -6);
 		if (null != class528) {
-			Class294 class294 = method11168();
+			Matrix44Var class294 = method11168();
 			return class528.method11270(i, i_14_, class294, false, 0);
 		}
 		return false;
@@ -415,14 +415,14 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			else
 				class390_15_ = null;
 		}
-		Class385 class385 = method11166().aClass385_3595;
-		return class478.method8010(class505, i, ((Class521_Sub1_Sub4_Sub1) this).aByte10485, ((Class521_Sub1_Sub4_Sub1) this).aByte10487, class390, class390_15_, (int) class385.aFloat4671, (int) class385.aFloat4672, (int) class385.aFloat4673, bool, null, 982185102);
+		Vector3 class385 = method11166().aClass385_3595;
+		return class478.method8010(class505, i, ((Class521_Sub1_Sub4_Sub1) this).aByte10485, ((Class521_Sub1_Sub4_Sub1) this).aByte10487, class390, class390_15_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, 982185102);
 	}
 
 	static void method16073(GraphicalRenderer class505, int i, int i_16_, int i_17_) {
 		if (i >= 0 && i_16_ >= 0 && Class20.aClass384_158 != null) {
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(1956252326);
-			Class384 class384 = class505.method8449();
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1956252326);
+			Matrix44Arr class384 = class505.method8449();
 			class505.method8424(Class20.aClass384_158);
 			class505.method8457(Class20.aClass294_155);
 			class505.r(Class20.anInt180 * -1747787169, 1607392711 * Class20.anInt181, (Class20.anInt180 * -1747787169 + Class20.anInt176 * -2026336709), (Class20.anInt184 * 919355353 + 1607392711 * Class20.anInt181));
@@ -459,7 +459,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 				}
 				if (-1 != i_20_ && i_21_ != -1) {
 					if (client.aBool7344 && 0 != (1310510077 * Class506.anInt5858 & 0x40)) {
-						Class118 class118 = Index.method5694(Class7.anInt56 * 728544879, (client.anInt7345 * -1673073865), -649580549);
+						IComponentDefinitions class118 = Index.method5694(Class7.anInt56 * 728544879, (client.anInt7345 * -1673073865), -649580549);
 						if (class118 != null)
 							PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(" ").append(Class2.aString17).append(" ").toString(), (Defaults8Loader.anInt5932 * -239192305), 59, -1, 0L, i_20_, i_21_, true, false, (long) (i_20_ << 32 | i_21_), true, -1546030291);
 						else
@@ -487,25 +487,25 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 						i_38_ = ((Class521_Sub1_Sub1) class285.aClass521_Sub1_3391).aShort9458;
 						i_39_ = ((Class521_Sub1_Sub1) class285.aClass521_Sub1_3391).aShort9456;
 					} else {
-						Class385 class385 = (class285.aClass521_Sub1_3391.method11166().aClass385_3595);
-						i_38_ = (int) class385.aFloat4671 >> 9;
-						i_39_ = (int) class385.aFloat4673 >> 9;
+						Vector3 class385 = (class285.aClass521_Sub1_3391.method11166().aClass385_3595);
+						i_38_ = (int) class385.x >> 9;
+						i_39_ = (int) class385.z >> 9;
 					}
 					if (class285.aClass521_Sub1_3391 instanceof Player) {
 						Player class521_sub1_sub1_sub2_sub1 = ((Player) class285.aClass521_Sub1_3391);
 						int i_40_ = class521_sub1_sub1_sub2_sub1.method15805(828768449);
-						Class385 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-						if ((0 == (i_40_ & 0x1) && 0 == ((int) class385.aFloat4671 & 0x1ff) && 0 == ((int) class385.aFloat4673 & 0x1ff)) || (1 == (i_40_ & 0x1) && 256 == ((int) class385.aFloat4671 & 0x1ff) && (((int) class385.aFloat4673 & 0x1ff) == 256))) {
-							int i_41_ = ((int) class385.aFloat4671 - (class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1 << 8));
-							int i_42_ = ((int) class385.aFloat4673 - (class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1 << 8));
+						Vector3 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+						if ((0 == (i_40_ & 0x1) && 0 == ((int) class385.x & 0x1ff) && 0 == ((int) class385.z & 0x1ff)) || (1 == (i_40_ & 0x1) && 256 == ((int) class385.x & 0x1ff) && (((int) class385.z & 0x1ff) == 256))) {
+							int i_41_ = ((int) class385.x - (class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1 << 8));
+							int i_42_ = ((int) class385.z - (class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1 << 8));
 							for (int i_43_ = 0; i_43_ < client.anInt7211 * -685729279; i_43_++) {
 								Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) client.anIntArray7212[i_43_])));
 								if (class282_sub47 != null) {
 									NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
 									if (((class521_sub1_sub1_sub2_sub2.anInt10375) * 717008059 != client.cycles * -1809259861) && (class521_sub1_sub1_sub2_sub2.aBool10318)) {
-										Class385 class385_44_ = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-										int i_45_ = ((int) class385_44_.aFloat4671 - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
-										int i_46_ = ((int) class385_44_.aFloat4673 - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
+										Vector3 class385_44_ = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+										int i_45_ = ((int) class385_44_.x - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
+										int i_46_ = ((int) class385_44_.z - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
 										if (i_45_ >= i_41_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_45_ - i_41_ >> 9))) && i_46_ >= i_42_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_46_ - i_42_ >> 9)))) {
 											WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1752430415);
 											class521_sub1_sub1_sub2_sub2.anInt10375 = (client.cycles * 1977662161);
@@ -518,9 +518,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 							for (int i_48_ = 0; i_48_ < i_47_; i_48_++) {
 								Player class521_sub1_sub1_sub2_sub1_49_ = (client.players[is[i_48_]]);
 								if (class521_sub1_sub1_sub2_sub1_49_ != null && ((class521_sub1_sub1_sub2_sub1_49_.anInt10375) * 717008059 != -1809259861 * client.cycles) && (class521_sub1_sub1_sub2_sub1 != class521_sub1_sub1_sub2_sub1_49_) && (class521_sub1_sub1_sub2_sub1_49_.aBool10318)) {
-									Class385 class385_50_ = (class521_sub1_sub1_sub2_sub1_49_.method11166().aClass385_3595);
-									int i_51_ = ((int) class385_50_.aFloat4671 - (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) - 1 << 8));
-									int i_52_ = ((int) class385_50_.aFloat4673 - (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) - 1 << 8));
+									Vector3 class385_50_ = (class521_sub1_sub1_sub2_sub1_49_.method11166().aClass385_3595);
+									int i_51_ = ((int) class385_50_.x - (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) - 1 << 8));
+									int i_52_ = ((int) class385_50_.z - (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) - 1 << 8));
 									if (i_51_ >= i_41_ && (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_51_ - i_41_ >> 9))) && i_52_ >= i_42_ && (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_52_ - i_42_ >> 9)))) {
 										Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1_49_, ((class285.aClass521_Sub1_3391.aByte7967) != (Class84.myPlayer.aByte7967)), 1557506355);
 										class521_sub1_sub1_sub2_sub1_49_.anInt10375 = client.cycles * 1977662161;
@@ -536,18 +536,18 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 					if (class285.aClass521_Sub1_3391 instanceof NPC) {
 						NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class285.aClass521_Sub1_3391);
 						if (null != class521_sub1_sub1_sub2_sub2.aClass409_10580) {
-							Class385 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-							if ((0 == (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) & 0x1) && 0 == ((int) class385.aFloat4671 & 0x1ff) && 0 == ((int) class385.aFloat4673 & 0x1ff)) || (1 == ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) & 0x1) && 256 == ((int) class385.aFloat4671 & 0x1ff) && 256 == ((int) class385.aFloat4673 & 0x1ff))) {
-								int i_53_ = ((int) class385.aFloat4671 - (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) - 1 << 8));
-								int i_54_ = ((int) class385.aFloat4673 - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
+							Vector3 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
+							if ((0 == (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) & 0x1) && 0 == ((int) class385.x & 0x1ff) && 0 == ((int) class385.z & 0x1ff)) || (1 == ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) & 0x1) && 256 == ((int) class385.x & 0x1ff) && 256 == ((int) class385.z & 0x1ff))) {
+								int i_53_ = ((int) class385.x - (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) - 1 << 8));
+								int i_54_ = ((int) class385.z - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
 								for (int i_55_ = 0; i_55_ < client.anInt7211 * -685729279; i_55_++) {
 									Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) client.anIntArray7212[i_55_])));
 									if (null != class282_sub47) {
 										NPC class521_sub1_sub1_sub2_sub2_56_ = ((NPC) class282_sub47.anObject8068);
 										if (((717008059 * (class521_sub1_sub1_sub2_sub2_56_.anInt10375)) != -1809259861 * client.cycles) && (class521_sub1_sub1_sub2_sub2 != class521_sub1_sub1_sub2_sub2_56_) && (class521_sub1_sub1_sub2_sub2_56_.aBool10318)) {
-											Class385 class385_57_ = (class521_sub1_sub1_sub2_sub2_56_.method11166().aClass385_3595);
-											int i_58_ = ((int) (class385_57_.aFloat4671) - ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) - 1 << 8));
-											int i_59_ = ((int) (class385_57_.aFloat4673) - (((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505) - 1 << 8));
+											Vector3 class385_57_ = (class521_sub1_sub1_sub2_sub2_56_.method11166().aClass385_3595);
+											int i_58_ = ((int) (class385_57_.x) - ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) - 1 << 8));
+											int i_59_ = ((int) (class385_57_.z) - (((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505) - 1 << 8));
 											if (i_58_ >= i_53_ && ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_58_ - i_53_ >> 9))) && i_59_ >= i_54_ && ((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505 <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_59_ - i_54_ >> 9)))) {
 												WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2_56_, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1644654446);
 												class521_sub1_sub1_sub2_sub2_56_.anInt10375 = (1977662161 * client.cycles);
@@ -560,9 +560,9 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 								for (int i_61_ = 0; i_61_ < i_60_; i_61_++) {
 									Player class521_sub1_sub1_sub2_sub1 = (client.players[is[i_61_]]);
 									if (null != class521_sub1_sub1_sub2_sub1 && (-1809259861 * client.cycles != (717008059 * (class521_sub1_sub1_sub2_sub1.anInt10375))) && (class521_sub1_sub1_sub2_sub1.aBool10318)) {
-										Class385 class385_62_ = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-										int i_63_ = ((int) class385_62_.aFloat4671 - ((class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1) << 8));
-										int i_64_ = ((int) class385_62_.aFloat4673 - ((class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1) << 8));
+										Vector3 class385_62_ = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
+										int i_63_ = ((int) class385_62_.x - ((class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1) << 8));
+										int i_64_ = ((int) class385_62_.z - ((class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1) << 8));
 										if (i_63_ >= i_53_ && (class521_sub1_sub1_sub2_sub1.method15805(828768449) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_63_ - i_53_ >> 9))) && i_64_ >= i_54_ && (class521_sub1_sub1_sub2_sub1.method15805(828768449) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_64_ - i_54_ >> 9)))) {
 											Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, ((class285.aClass521_Sub1_3391.aByte7967) != (Class84.myPlayer.aByte7967)), 1557506355);
 											class521_sub1_sub1_sub2_sub1.anInt10375 = (client.cycles * 1977662161);
@@ -577,8 +577,8 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 						}
 					}
 					if (class285.aClass521_Sub1_3391 instanceof Class521_Sub1_Sub2_Sub1) {
-						int i_65_ = class219.anInt2711 * 1948093437 + i_38_;
-						int i_66_ = i_39_ + class219.anInt2712 * -1002240017;
+						int i_65_ = class219.x * 1948093437 + i_38_;
+						int i_66_ = i_39_ + class219.y * -1002240017;
 						Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) ((class285.aClass521_Sub1_3391.aByte7967) << 28 | i_66_ << 14 | i_65_))));
 						if (null != class282_sub29) {
 							int i_67_ = 0;

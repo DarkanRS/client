@@ -19,7 +19,7 @@ public abstract class Class282_Sub11 extends Node {
 
 	abstract void method12208(RsByteBuffer class282_sub35);
 
-	static final void method12209(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method12209(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		int i_0_ = 10;
 		byte[] is = { (byte) class527.intStack[class527.anInt7012 * 1942118537] };

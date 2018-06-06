@@ -41,11 +41,11 @@ public class Player extends Animable {
 	Class285 method13010(GraphicalRenderer class505) {
 		if (null == playerAppearance || !method16133(class505, 2048, -231081740))
 			return null;
-		Class294 class294 = class505.method8450();
-		Class294 class294_0_ = method11168();
+		Matrix44Var class294 = class505.method8450();
+		Matrix44Var class294_0_ = method11168();
 		Class305 class305 = method11166();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_1_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_1_ / 10.0F) * -374848179;
@@ -80,16 +80,16 @@ public class Player extends Animable {
 						Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (1505135749 * class180.anInt2238))));
 						if (null != class282_sub47) {
 							NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-							Class385 class385 = (Class385.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
-							int i_3_ = (int) class385.aFloat4671;
-							int i_4_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
+							int i_3_ = (int) class385.x;
+							int i_4_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_3_, (long) i_4_, 1869984395 * class180.anInt2242, 92160000L);
 						}
 					}
 					if (2 == class180.anInt2236 * -379447335) {
-						Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.aFloat4671);
-						long l_5_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.aFloat4673);
+						Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.x);
+						long l_5_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.z);
 						long l_6_ = (long) (1116475963 * class180.anInt2237 << 9);
 						l_6_ *= l_6_;
 						method16136(class505, class294, aClass528Array10372[0], l, l_5_, class180.anInt2242 * 1869984395, l_6_);
@@ -97,9 +97,9 @@ public class Player extends Animable {
 					if (-379447335 * class180.anInt2236 == 10 && 1505135749 * class180.anInt2238 >= 0 && (1505135749 * class180.anInt2238 < (client.players).length)) {
 						Player class521_sub1_sub1_sub2_sub1_7_ = (client.players[1505135749 * class180.anInt2238]);
 						if (null != class521_sub1_sub1_sub2_sub1_7_) {
-							Class385 class385 = (Class385.method6632(class521_sub1_sub1_sub2_sub1_7_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
-							int i_8_ = (int) class385.aFloat4671;
-							int i_9_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632(class521_sub1_sub1_sub2_sub1_7_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
+							int i_8_ = (int) class385.x;
+							int i_9_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_8_, (long) i_9_, class180.anInt2242 * 1869984395, 92160000L);
 						}
 					}
@@ -162,7 +162,7 @@ public class Player extends Animable {
 
 	void method12991(GraphicalRenderer class505, int i) {
 		if (playerAppearance != null && (((Player) this).aBool10370 || method16133(class505, 0, -231081740))) {
-			Class294 class294 = class505.method8450();
+			Matrix44Var class294 = class505.method8450();
 			class294.method5210(method11166());
 			class294.method5219(0.0F, -5.0F, 0.0F);
 			method15799(class505, aClass528Array10372, class294, ((Player) this).aBool10370, (byte) -50);
@@ -179,7 +179,7 @@ public class Player extends Animable {
 
 	void method13023(GraphicalRenderer class505) {
 		if (playerAppearance != null && (((Player) this).aBool10370 || method16133(class505, 0, -231081740))) {
-			Class294 class294 = class505.method8450();
+			Matrix44Var class294 = class505.method8450();
 			class294.method5210(method11166());
 			class294.method5219(0.0F, -5.0F, 0.0F);
 			method15799(class505, aClass528Array10372, class294, ((Player) this).aBool10370, (byte) -26);
@@ -240,9 +240,9 @@ public class Player extends Animable {
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_17_;
 		int i_19_ = method15805(828768449);
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 = (float) (256 * i_19_ + 512 * regionBaseX[0]);
-		class385.aFloat4673 = (float) (i_19_ * 256 + 512 * regionBaseY[0]);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x = (float) (256 * i_19_ + 512 * regionBaseX[0]);
+		class385.z = (float) (i_19_ * 256 + 512 * regionBaseY[0]);
 		method11171(class385);
 		class385.method6624();
 		if (Class84.myPlayer == this)
@@ -298,7 +298,7 @@ public class Player extends Animable {
 	boolean method12983(GraphicalRenderer class505, int i, int i_23_, int i_24_) {
 		if (playerAppearance == null || !method16133(class505, 131072, -231081740))
 			return false;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		boolean bool = false;
 		for (int i_25_ = 0; i_25_ < aClass528Array10372.length; i_25_++) {
 			if (null != aClass528Array10372[i_25_] && aClass528Array10372[i_25_].method11270(i, i_23_, class294, true, 0)) {
@@ -416,11 +416,11 @@ public class Player extends Animable {
 	Class285 method13009(GraphicalRenderer class505) {
 		if (null == playerAppearance || !method16133(class505, 2048, -231081740))
 			return null;
-		Class294 class294 = class505.method8450();
-		Class294 class294_43_ = method11168();
+		Matrix44Var class294 = class505.method8450();
+		Matrix44Var class294_43_ = method11168();
 		Class305 class305 = method11166();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_44_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_44_ / 10.0F) * -374848179;
@@ -455,16 +455,16 @@ public class Player extends Animable {
 						Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (1505135749 * class180.anInt2238))));
 						if (null != class282_sub47) {
 							NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-							Class385 class385 = (Class385.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
-							int i_46_ = (int) class385.aFloat4671;
-							int i_47_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
+							int i_46_ = (int) class385.x;
+							int i_47_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_46_, (long) i_47_, 1869984395 * class180.anInt2242, 92160000L);
 						}
 					}
 					if (2 == class180.anInt2236 * -379447335) {
-						Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.aFloat4671);
-						long l_48_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.aFloat4673);
+						Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.x);
+						long l_48_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.z);
 						long l_49_ = (long) (1116475963 * class180.anInt2237 << 9);
 						l_49_ *= l_49_;
 						method16136(class505, class294, aClass528Array10372[0], l, l_48_, class180.anInt2242 * 1869984395, l_49_);
@@ -472,9 +472,9 @@ public class Player extends Animable {
 					if (-379447335 * class180.anInt2236 == 10 && 1505135749 * class180.anInt2238 >= 0 && (1505135749 * class180.anInt2238 < (client.players).length)) {
 						Player class521_sub1_sub1_sub2_sub1_50_ = (client.players[1505135749 * class180.anInt2238]);
 						if (null != class521_sub1_sub1_sub2_sub1_50_) {
-							Class385 class385 = (Class385.method6632(class521_sub1_sub1_sub2_sub1_50_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
-							int i_51_ = (int) class385.aFloat4671;
-							int i_52_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632(class521_sub1_sub1_sub2_sub1_50_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
+							int i_51_ = (int) class385.x;
+							int i_52_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_51_, (long) i_52_, class180.anInt2242 * 1869984395, 92160000L);
 						}
 					}
@@ -514,11 +514,11 @@ public class Player extends Animable {
 	Class285 method12989(GraphicalRenderer class505) {
 		if (null == playerAppearance || !method16133(class505, 2048, -231081740))
 			return null;
-		Class294 class294 = class505.method8450();
-		Class294 class294_55_ = method11168();
+		Matrix44Var class294 = class505.method8450();
+		Matrix44Var class294_55_ = method11168();
 		Class305 class305 = method11166();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_56_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_56_ / 10.0F) * -374848179;
@@ -553,16 +553,16 @@ public class Player extends Animable {
 						Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (1505135749 * class180.anInt2238))));
 						if (null != class282_sub47) {
 							NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-							Class385 class385 = (Class385.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
-							int i_58_ = (int) class385.aFloat4671;
-							int i_59_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
+							int i_58_ = (int) class385.x;
+							int i_59_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_58_, (long) i_59_, 1869984395 * class180.anInt2242, 92160000L);
 						}
 					}
 					if (2 == class180.anInt2236 * -379447335) {
-						Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.aFloat4671);
-						long l_60_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.aFloat4673);
+						Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.x);
+						long l_60_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.z);
 						long l_61_ = (long) (1116475963 * class180.anInt2237 << 9);
 						l_61_ *= l_61_;
 						method16136(class505, class294, aClass528Array10372[0], l, l_60_, class180.anInt2242 * 1869984395, l_61_);
@@ -570,9 +570,9 @@ public class Player extends Animable {
 					if (-379447335 * class180.anInt2236 == 10 && 1505135749 * class180.anInt2238 >= 0 && (1505135749 * class180.anInt2238 < (client.players).length)) {
 						Player class521_sub1_sub1_sub2_sub1_62_ = (client.players[1505135749 * class180.anInt2238]);
 						if (null != class521_sub1_sub1_sub2_sub1_62_) {
-							Class385 class385 = (Class385.method6632(class521_sub1_sub1_sub2_sub1_62_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
-							int i_63_ = (int) class385.aFloat4671;
-							int i_64_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632(class521_sub1_sub1_sub2_sub1_62_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
+							int i_63_ = (int) class385.x;
+							int i_64_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_63_, (long) i_64_, class180.anInt2242 * 1869984395, 92160000L);
 						}
 					}
@@ -605,7 +605,7 @@ public class Player extends Animable {
 
 	void method13012(GraphicalRenderer class505) {
 		if (playerAppearance != null && (((Player) this).aBool10370 || method16133(class505, 0, -231081740))) {
-			Class294 class294 = class505.method8450();
+			Matrix44Var class294 = class505.method8450();
 			class294.method5210(method11166());
 			class294.method5219(0.0F, -5.0F, 0.0F);
 			method15799(class505, aClass528Array10372, class294, ((Player) this).aBool10370, (byte) 12);
@@ -630,7 +630,7 @@ public class Player extends Animable {
 		throw new IllegalStateException();
 	}
 
-	void method16136(GraphicalRenderer class505, Class294 class294, MeshRasterizer class528, long l, long l_69_, int i, long l_70_) {
+	void method16136(GraphicalRenderer class505, Matrix44Var class294, MeshRasterizer class528, long l, long l_69_, int i, long l_70_) {
 		long l_71_ = l * l + l_69_ * l_69_;
 		if (l_71_ >= 262144L && l_71_ <= l_70_) {
 			int i_72_ = ((int) ((Math.atan2((double) l, (double) l_69_) * 2607.5945876176133) - (double) aClass19_10359.method578((byte) 2)) & 0x3fff);
@@ -700,7 +700,7 @@ public class Player extends Animable {
 	boolean method13020(GraphicalRenderer class505, int i, int i_74_) {
 		if (playerAppearance == null || !method16133(class505, 131072, -231081740))
 			return false;
-		Class294 class294 = method11168();
+		Matrix44Var class294 = method11168();
 		boolean bool = false;
 		for (int i_75_ = 0; i_75_ < aClass528Array10372.length; i_75_++) {
 			if (null != aClass528Array10372[i_75_] && aClass528Array10372[i_75_].method11270(i, i_74_, class294, true, 0)) {
@@ -732,9 +732,9 @@ public class Player extends Animable {
 		method15836(1 + (flag >> 3 & 0x7), (byte) -78);
 		boolean prefixTitle = (flag & 0x40) != 0;
 		boolean postfixTitlle = (flag & 0x80) != 0;
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 += (float) (method15805(828768449) - i_79_ << 8);
-		class385.aFloat4673 += (float) (method15805(828768449) - i_79_ << 8);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x += (float) (method15805(828768449) - i_79_ << 8);
+		class385.z += (float) (method15805(828768449) - i_79_ << 8);
 		method11171(class385);
 		class385.method6624();
 		if (prefixTitle)
@@ -799,7 +799,7 @@ public class Player extends Animable {
 			colors[colorIndex] = color;
 		}
 		((Player) this).anInt10545 = buffer.readUnsignedShort() * -900819287;
-		username = buffer.readString(1238215024);
+		username = buffer.readString();
 		displayName = username;
 		if (this == Class84.myPlayer)
 			RuntimeException_Sub3.aString10458 = username;
@@ -840,9 +840,9 @@ public class Player extends Animable {
 		int[] is_101_ = playerAppearance.colors;
 		playerAppearance.method3992(method15808(635765286), is, itemEffects, colors, 1 == male, effectData, 1600934567);
 		if (effectData != i_100_) {
-			class385 = Class385.method6623(method11166().aClass385_3595);
-			class385.aFloat4671 = (float) ((regionBaseX[0] << 9) + (method15805(828768449) << 8));
-			class385.aFloat4673 = (float) ((regionBaseY[0] << 9) + (method15805(828768449) << 8));
+			class385 = Vector3.method6623(method11166().aClass385_3595);
+			class385.x = (float) ((regionBaseX[0] << 9) + (method15805(828768449) << 8));
+			class385.z = (float) ((regionBaseY[0] << 9) + (method15805(828768449) << 8));
 			method11171(class385);
 			class385.method6624();
 		}
@@ -898,7 +898,7 @@ public class Player extends Animable {
 		return displayName;
 	}
 
-	void method16140(GraphicalRenderer class505, Class294 class294, MeshRasterizer class528, long l, long l_106_, int i, long l_107_) {
+	void method16140(GraphicalRenderer class505, Matrix44Var class294, MeshRasterizer class528, long l, long l_106_, int i, long l_107_) {
 		long l_108_ = l * l + l_106_ * l_106_;
 		if (l_108_ >= 262144L && l_108_ <= l_107_) {
 			int i_109_ = ((int) ((Math.atan2((double) l, (double) l_106_) * 2607.5945876176133) - (double) aClass19_10359.method578((byte) 2)) & 0x3fff);
@@ -911,7 +911,7 @@ public class Player extends Animable {
 		}
 	}
 
-	void method16141(GraphicalRenderer class505, Class294 class294, MeshRasterizer class528, long l, long l_111_, int i, long l_112_) {
+	void method16141(GraphicalRenderer class505, Matrix44Var class294, MeshRasterizer class528, long l, long l_111_, int i, long l_112_) {
 		long l_113_ = l * l + l_111_ * l_111_;
 		if (l_113_ >= 262144L && l_113_ <= l_112_) {
 			int i_114_ = ((int) ((Math.atan2((double) l, (double) l_111_) * 2607.5945876176133) - (double) aClass19_10359.method578((byte) 2)) & 0x3fff);
@@ -1062,7 +1062,7 @@ public class Player extends Animable {
 		}
 	}
 
-	void method16146(GraphicalRenderer class505, Class294 class294, MeshRasterizer class528, long l, long l_131_, int i, long l_132_) {
+	void method16146(GraphicalRenderer class505, Matrix44Var class294, MeshRasterizer class528, long l, long l_131_, int i, long l_132_) {
 		long l_133_ = l * l + l_131_ * l_131_;
 		if (l_133_ >= 262144L && l_133_ <= l_132_) {
 			int i_134_ = ((int) ((Math.atan2((double) l, (double) l_131_) * 2607.5945876176133) - (double) aClass19_10359.method578((byte) 2)) & 0x3fff);
@@ -1082,9 +1082,9 @@ public class Player extends Animable {
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_136_;
 		int i_137_ = method15805(828768449);
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 = (float) (256 * i_137_ + 512 * regionBaseX[0]);
-		class385.aFloat4673 = (float) (i_137_ * 256 + 512 * regionBaseY[0]);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x = (float) (256 * i_137_ + 512 * regionBaseX[0]);
+		class385.z = (float) (i_137_ * 256 + 512 * regionBaseY[0]);
 		method11171(class385);
 		class385.method6624();
 		if (Class84.myPlayer == this)
@@ -1100,9 +1100,9 @@ public class Player extends Animable {
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_138_;
 		int i_139_ = method15805(828768449);
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 = (float) (256 * i_139_ + 512 * regionBaseX[0]);
-		class385.aFloat4673 = (float) (i_139_ * 256 + 512 * regionBaseY[0]);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x = (float) (256 * i_139_ + 512 * regionBaseX[0]);
+		class385.z = (float) (i_139_ * 256 + 512 * regionBaseY[0]);
 		method11171(class385);
 		class385.method6624();
 		if (Class84.myPlayer == this)
@@ -1118,9 +1118,9 @@ public class Player extends Animable {
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_140_;
 		int i_141_ = method15805(828768449);
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 = (float) (256 * i_141_ + 512 * regionBaseX[0]);
-		class385.aFloat4673 = (float) (i_141_ * 256 + 512 * regionBaseY[0]);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x = (float) (256 * i_141_ + 512 * regionBaseX[0]);
+		class385.z = (float) (i_141_ * 256 + 512 * regionBaseY[0]);
 		method11171(class385);
 		class385.method6624();
 		if (Class84.myPlayer == this)
@@ -1136,9 +1136,9 @@ public class Player extends Animable {
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_142_;
 		int i_143_ = method15805(828768449);
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 = (float) (256 * i_143_ + 512 * regionBaseX[0]);
-		class385.aFloat4673 = (float) (i_143_ * 256 + 512 * regionBaseY[0]);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x = (float) (256 * i_143_ + 512 * regionBaseX[0]);
+		class385.z = (float) (i_143_ * 256 + 512 * regionBaseY[0]);
 		method11171(class385);
 		class385.method6624();
 		if (Class84.myPlayer == this)
@@ -1154,9 +1154,9 @@ public class Player extends Animable {
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_144_;
 		int i_145_ = method15805(828768449);
-		Class385 class385 = Class385.method6623(method11166().aClass385_3595);
-		class385.aFloat4671 = (float) (256 * i_145_ + 512 * regionBaseX[0]);
-		class385.aFloat4673 = (float) (i_145_ * 256 + 512 * regionBaseY[0]);
+		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
+		class385.x = (float) (256 * i_145_ + 512 * regionBaseX[0]);
+		class385.z = (float) (i_145_ * 256 + 512 * regionBaseY[0]);
 		method11171(class385);
 		class385.method6624();
 		if (Class84.myPlayer == this)
@@ -1196,11 +1196,11 @@ public class Player extends Animable {
 	Class285 method12990(GraphicalRenderer class505, int i) {
 		if (null == playerAppearance || !method16133(class505, 2048, -231081740))
 			return null;
-		Class294 class294 = class505.method8450();
-		Class294 class294_146_ = method11168();
+		Matrix44Var class294 = class505.method8450();
+		Matrix44Var class294_146_ = method11168();
 		Class305 class305 = method11166();
 		int i_147_ = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.aFloat4671 >> 9][(int) class305.aClass385_3595.aFloat4673 >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_148_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_148_ / 10.0F) * -374848179;
@@ -1235,16 +1235,16 @@ public class Player extends Animable {
 						Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (1505135749 * class180.anInt2238))));
 						if (null != class282_sub47) {
 							NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
-							Class385 class385 = (Class385.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
-							int i_150_ = (int) class385.aFloat4671;
-							int i_151_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632((class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595), Class84.myPlayer.method11166().aClass385_3595));
+							int i_150_ = (int) class385.x;
+							int i_151_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_150_, (long) i_151_, 1869984395 * class180.anInt2242, 92160000L);
 						}
 					}
 					if (2 == class180.anInt2236 * -379447335) {
-						Class385 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.aFloat4671);
-						long l_152_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.aFloat4673);
+						Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
+						long l = (long) (class180.anInt2243 * -51612493 - (int) class385.x);
+						long l_152_ = (long) (class180.anInt2235 * -1074026889 - (int) class385.z);
 						long l_153_ = (long) (1116475963 * class180.anInt2237 << 9);
 						l_153_ *= l_153_;
 						method16136(class505, class294, aClass528Array10372[0], l, l_152_, class180.anInt2242 * 1869984395, l_153_);
@@ -1252,9 +1252,9 @@ public class Player extends Animable {
 					if (-379447335 * class180.anInt2236 == 10 && 1505135749 * class180.anInt2238 >= 0 && (1505135749 * class180.anInt2238 < (client.players).length)) {
 						Player class521_sub1_sub1_sub2_sub1_154_ = (client.players[1505135749 * class180.anInt2238]);
 						if (null != class521_sub1_sub1_sub2_sub1_154_) {
-							Class385 class385 = (Class385.method6632(class521_sub1_sub1_sub2_sub1_154_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
-							int i_155_ = (int) class385.aFloat4671;
-							int i_156_ = (int) class385.aFloat4673;
+							Vector3 class385 = (Vector3.method6632(class521_sub1_sub1_sub2_sub1_154_.method11166().aClass385_3595, Class84.myPlayer.method11166().aClass385_3595));
+							int i_155_ = (int) class385.x;
+							int i_156_ = (int) class385.z;
 							method16136(class505, class294, aClass528Array10372[0], (long) i_155_, (long) i_156_, class180.anInt2242 * 1869984395, 92160000L);
 						}
 					}

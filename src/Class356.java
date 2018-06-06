@@ -62,12 +62,12 @@ public class Class356 {
 
 	static final void method6224(CS2Executor class527, int i) {
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_7_, (byte) 8);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 8);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class158.method2732(class118, class98, class527, 2144367938);
 	}
 
-	static int method6225(CharSequence charsequence, int i, boolean bool, int i_8_) {
+	static int parseInt(CharSequence charsequence, int i, boolean bool, int i_8_) {
 		if (i < 2 || i > 36)
 			throw new IllegalArgumentException(new StringBuilder().append("").append(i).toString());
 		boolean bool_9_ = false;
@@ -157,7 +157,7 @@ public class Class356 {
 			Class188.method3140((byte) -62);
 			Class191.method3166(-96454499);
 			Class321.method5757(1880031383);
-			Class517.aClass229_5901.method3859(876370296);
+			CS2Runner.aClass229_5901.method3859(876370296);
 			client.aClass229_7204.method3859(-1910455391);
 			Class20.aClass229_191.method3859(-1112414148);
 		}

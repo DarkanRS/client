@@ -31,7 +31,7 @@ public class Class301 implements Interface41 {
 	public int method231() {
 		if (((Class301) this).aBool3554)
 			return 100;
-		int i = Class47_Sub1.aClass262_9143.method4648(((Class301) this).aString3553, 2070008290);
+		int i = IndexLoaders.NATIVE_LIBRARY_LOADER.method4648(((Class301) this).aString3553, 2070008290);
 		if (i >= 0 && i <= 100)
 			return i;
 		((Class301) this).aBool3554 = true;
@@ -61,7 +61,7 @@ public class Class301 implements Interface41 {
 	public int method84(int i) {
 		if (((Class301) this).aBool3554)
 			return 100;
-		int i_0_ = Class47_Sub1.aClass262_9143.method4648(((Class301) this).aString3553, -419242357);
+		int i_0_ = IndexLoaders.NATIVE_LIBRARY_LOADER.method4648(((Class301) this).aString3553, -419242357);
 		if (i_0_ >= 0 && i_0_ <= 100)
 			return i_0_;
 		((Class301) this).aBool3554 = true;
@@ -101,8 +101,8 @@ public class Class301 implements Interface41 {
 
 	static final void method5332(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class496.method8310(class118, class98, class527, (byte) -121);
 	}
 

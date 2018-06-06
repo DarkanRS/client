@@ -308,7 +308,7 @@ public class Class289 implements Runnable {
 						if (class311.method5497(i_16_, i_17_, 1914032698))
 							i_19_--;
 						if (i_19_ >= 0)
-							bool &= Class282_Sub50_Sub9.method14921(i_19_, i_16_, i_17_, (byte) 95);
+							bool &= QuickchatDefinitions.method14921(i_19_, i_16_, i_17_, (byte) 95);
 					}
 				}
 			}
@@ -507,12 +507,12 @@ public class Class289 implements Runnable {
 			Class283 class283 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 79);
 			if (class283 != null) {
 				IndexLoaders.WORLD_MAP_INDEX_LOADER.method3697(1024, 64, -2093693613);
-				Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(825342307);
+				CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(825342307);
 				for (int i_63_ = 0; i_63_ < class283.anInt3382 * -361490119; i_63_++) {
 					int i_64_ = class283.anIntArray3381[i_63_];
 					if (i_64_ >> 28 == (Class84.myPlayer.aByte7967)) {
-						int i_65_ = ((i_64_ >> 14 & 0x3fff) - class219.anInt2711 * 1948093437);
-						int i_66_ = ((i_64_ & 0x3fff) - class219.anInt2712 * -1002240017);
+						int i_65_ = ((i_64_ >> 14 & 0x3fff) - class219.x * 1948093437);
+						int i_66_ = ((i_64_ & 0x3fff) - class219.y * -1002240017);
 						if (i_65_ >= 0 && i_65_ < i_11_ && i_66_ >= 0 && i_66_ < i_12_)
 							Class187.aClass482_2350.append(new Class282_Sub38(i_63_), -2102160301);
 						else {
@@ -529,7 +529,7 @@ public class Class289 implements Runnable {
 	}
 
 	static final void method5098(CS2Executor class527, int i) {
-		int i_67_ = (class527.unknown[301123709 * class527.instrPtr]);
+		int i_67_ = (class527.intOpValues[301123709 * class527.instrPtr]);
 		Class320.anIntArray3724[i_67_] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class282_Sub20_Sub11.method15264(i_67_, (short) -20101);
 		client.aBool7400 |= Class282_Sub17_Sub2.aBoolArray9934[i_67_];
@@ -537,8 +537,8 @@ public class Class289 implements Runnable {
 
 	static final void method5099(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class242.method4159(class118, class98, class527, -1802550840);
 	}
 

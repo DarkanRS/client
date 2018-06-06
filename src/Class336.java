@@ -2044,8 +2044,8 @@ public class Class336 {
 	static final void method6005(CS2Executor class527, byte i) {
 		int i_196_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class184 class184 = Class468_Sub20.method12807(-1949417532);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4557, class184.aClass432_2283, 502225021);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_196_);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4557, class184.isaac, 502225021);
+		class282_sub23.buffer.writeByte(i_196_);
 		class184.method3049(class282_sub23, -616684350);
 	}
 
@@ -2056,9 +2056,9 @@ public class Class336 {
 
 	static final void method6007(int i, int[] is, int i_197_) {
 		if (Class456_Sub3.method12682(i, is, 214426228)) {
-			Class118[] class118s = Class468_Sub8.aClass98Array7889[i].aClass118Array998;
+			IComponentDefinitions[] class118s = Class468_Sub8.aClass98Array7889[i].components;
 			for (int i_198_ = 0; i_198_ < class118s.length; i_198_++) {
-				Class118 class118 = class118s[i_198_];
+				IComponentDefinitions class118 = class118s[i_198_];
 				if (null != class118 && null != class118.aClass456_1437)
 					class118.aClass456_1437.method7582((byte) -62);
 			}
@@ -2103,7 +2103,7 @@ public class Class336 {
 		return new Class232(is);
 	}
 
-	static final void method6010(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6010(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 425673003;
 		int i_201_ = (class527.intStack[1942118537 * class527.anInt7012]);
 		short i_202_ = (short) (class527.intStack[1 + class527.anInt7012 * 1942118537]);
@@ -2112,7 +2112,7 @@ public class Class336 {
 			class118.method2013(i_201_, i_202_, i_203_, (byte) 11);
 			Class109.method1858(class118, (byte) -78);
 			if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-				Class276.method4903(-1952846363 * class118.anInt1287, i_201_, -1379026024);
+				Class276.method4903(-1952846363 * class118.idHash, i_201_, -1379026024);
 		}
 	}
 }

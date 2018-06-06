@@ -17,7 +17,7 @@ public class Class258 {
 
 	static final void method4565(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		if (-1 != -56249735 * class118.anInt1426)
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 6040081 * class118.anInt1427;
 		else

@@ -125,7 +125,7 @@ public class Class230 implements IndexLoader {
 	}
 
 	static final void method3909(CS2Executor class527, byte i) {
-		Class118 class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 38);
+		IComponentDefinitions class118 = Class117.method1981((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 38);
 		class118.aClass118Array1438 = null;
 		class118.aClass118Array1439 = null;
 		Class109.method1858(class118, (byte) -71);

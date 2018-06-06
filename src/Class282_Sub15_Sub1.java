@@ -210,7 +210,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static final void method14818(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class47_Sub1.aClass262_9143.method4639("jagtheora", (short) 255) ? 1 : 0);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0);
 	}
 
 	synchronized void method12240(int[] is, int i, int i_10_) {
@@ -421,10 +421,10 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 
 	static final void method14835(CS2Executor class527, byte i) {
 		int i_21_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class108 class108 = Class180.method3032(i_21_, (byte) -1);
+		ChatLine class108 = Class180.method3032(i_21_, (byte) -1);
 		String string = "";
-		if (null != class108 && null != class108.aString1089)
-			string = class108.aString1089;
+		if (null != class108 && null != class108.name)
+			string = class108.name;
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 

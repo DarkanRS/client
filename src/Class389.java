@@ -58,14 +58,14 @@ public class Class389 {
 
 	static final void method6696(CS2Executor class527, int i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 20);
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 20);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1334 * 539377845;
 	}
 
-	static final void method6697(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6697(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class118.aBool1356 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 17);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
-			Class96_Sub17.method14656(class118.anInt1287 * -1952846363, -768470784);
+			Class96_Sub17.method14656(class118.idHash * -1952846363, -768470784);
 	}
 }

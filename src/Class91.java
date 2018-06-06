@@ -54,7 +54,7 @@ public class Class91 {
 		class282_sub35.index = (is.length - 7 - i * 8 - (i_22_ - 1) * 3) * -1115476867;
 		int[] is_28_ = new int[i_22_];
 		for (int i_29_ = 1; i_29_ < i_22_; i_29_++) {
-			is_28_[i_29_] = class282_sub35.read24BitUnsignedInteger((short) 31603);
+			is_28_[i_29_] = class282_sub35.read24BitUnsignedInteger();
 			if (is_28_[i_29_] == 0)
 				is_28_[i_29_] = 1;
 		}

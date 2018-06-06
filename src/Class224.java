@@ -105,7 +105,7 @@ public final class Class224 {
 		class527.anInt7012 -= 283782002;
 		int i_29_ = (class527.intStack[class527.anInt7012 * 1942118537]);
 		int i_30_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
-		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.aClass331_3535.method5918(i_29_, -2049190154);
+		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_29_, -2049190154);
 		int i_31_ = class282_sub50_sub14.anIntArray9746[i_30_];
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_31_;
 	}
@@ -125,7 +125,7 @@ public final class Class224 {
 
 	static final void method3783(CS2Executor class527, int i) {
 		int i_33_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class108 class108 = Class180.method3032(i_33_, (byte) -1);
+		ChatLine class108 = Class180.method3032(i_33_, (byte) -1);
 		int i_34_ = -1;
 		if (class108 != null)
 			i_34_ = class108.anInt1091 * -1987818893;

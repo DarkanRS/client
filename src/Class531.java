@@ -36,7 +36,7 @@ public class Class531 {
 
 	void method11358(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			anInt7054 = Class44.method912(class282_sub35.read24BitUnsignedInteger((short) 7613), 2117926535) * 695388511;
+			anInt7054 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 695388511;
 		else if (i == 2)
 			anInt7066 = class282_sub35.readUnsignedByte() * -1613793573;
 		else if (3 == i) {
@@ -46,7 +46,7 @@ public class Class531 {
 		} else if (i == 5)
 			aBool7056 = false;
 		else if (i == 7)
-			anInt7058 = Class44.method912(class282_sub35.read24BitUnsignedInteger((short) 23860), 2117926535) * 217561855;
+			anInt7058 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 217561855;
 		else if (8 == i)
 			((Class531) this).aClass536_7062.anInt7093 = ((Class531) this).anInt7053 * 1866199091;
 		else if (9 == i)
@@ -58,7 +58,7 @@ public class Class531 {
 		else if (i == 12)
 			aBool7061 = true;
 		else if (i == 13)
-			anInt7051 = class282_sub35.read24BitUnsignedInteger((short) 2073) * 837652943;
+			anInt7051 = class282_sub35.read24BitUnsignedInteger() * 837652943;
 		else if (i == 14)
 			anInt7063 = (class282_sub35.readUnsignedByte() << 2) * 2048044799;
 		else if (i == 16)
@@ -103,7 +103,7 @@ public class Class531 {
 
 	void method11363(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			anInt7054 = Class44.method912(class282_sub35.read24BitUnsignedInteger((short) 17607), 2117926535) * 695388511;
+			anInt7054 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 695388511;
 		else if (i == 2)
 			anInt7066 = class282_sub35.readUnsignedByte() * -1613793573;
 		else if (3 == i) {
@@ -113,7 +113,7 @@ public class Class531 {
 		} else if (i == 5)
 			aBool7056 = false;
 		else if (i == 7)
-			anInt7058 = Class44.method912(class282_sub35.read24BitUnsignedInteger((short) 5792), 2117926535) * 217561855;
+			anInt7058 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 217561855;
 		else if (8 == i)
 			((Class531) this).aClass536_7062.anInt7093 = ((Class531) this).anInt7053 * 1866199091;
 		else if (9 == i)
@@ -125,7 +125,7 @@ public class Class531 {
 		else if (i == 12)
 			aBool7061 = true;
 		else if (i == 13)
-			anInt7051 = class282_sub35.read24BitUnsignedInteger((short) 1114) * 837652943;
+			anInt7051 = class282_sub35.read24BitUnsignedInteger() * 837652943;
 		else if (i == 14)
 			anInt7063 = (class282_sub35.readUnsignedByte() << 2) * 2048044799;
 		else if (i == 16)
@@ -140,7 +140,7 @@ public class Class531 {
 
 	void method11364(RsByteBuffer class282_sub35, int i, byte i_1_) {
 		if (i == 1)
-			anInt7054 = Class44.method912(class282_sub35.read24BitUnsignedInteger((short) 18296), 2117926535) * 695388511;
+			anInt7054 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 695388511;
 		else if (i == 2)
 			anInt7066 = class282_sub35.readUnsignedByte() * -1613793573;
 		else if (3 == i) {
@@ -150,7 +150,7 @@ public class Class531 {
 		} else if (i == 5)
 			aBool7056 = false;
 		else if (i == 7)
-			anInt7058 = Class44.method912(class282_sub35.read24BitUnsignedInteger((short) 10548), 2117926535) * 217561855;
+			anInt7058 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 217561855;
 		else if (8 == i)
 			((Class531) this).aClass536_7062.anInt7093 = ((Class531) this).anInt7053 * 1866199091;
 		else if (9 == i)
@@ -162,7 +162,7 @@ public class Class531 {
 		else if (i == 12)
 			aBool7061 = true;
 		else if (i == 13)
-			anInt7051 = class282_sub35.read24BitUnsignedInteger((short) 2210) * 837652943;
+			anInt7051 = class282_sub35.read24BitUnsignedInteger() * 837652943;
 		else if (i == 14)
 			anInt7063 = (class282_sub35.readUnsignedByte() << 2) * 2048044799;
 		else if (i == 16)
@@ -235,24 +235,24 @@ public class Class531 {
 			Class149_Sub2.aClass461_9316 = Class461.aClass461_5539;
 		client.anInt7422 = ((class527.intStack[2 + class527.anInt7012 * 1942118537]) * 1267760345);
 		Class184 class184 = Class468_Sub20.method12807(-405485002);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4547, class184.aClass432_2283, 984159932);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(-574868913 * client.anInt7416);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(-1977256787 * Class149_Sub2.aClass461_9316.anInt5541);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(client.anInt7422 * 1334854505);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4547, class184.isaac, 984159932);
+		class282_sub23.buffer.writeByte(-574868913 * client.anInt7416);
+		class282_sub23.buffer.writeByte(-1977256787 * Class149_Sub2.aClass461_9316.anInt5541);
+		class282_sub23.buffer.writeByte(client.anInt7422 * 1334854505);
 		class184.method3049(class282_sub23, 1462868199);
 	}
 
 	static final void method11372(CS2Executor class527, int i) {
 		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_3_, (byte) 14);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 14);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		Class473.method7889(class118, class98, class527, 1072784051);
 	}
 
 	static final void method11373(CS2Executor class527, int i) {
 		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_4_, (byte) 42);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 42);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class339.method6045(class118, class98, class527, (byte) -2);
 	}
 }

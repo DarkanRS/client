@@ -331,8 +331,8 @@ public final class Class321 {
 
 	static final void method5756(CS2Executor class527, byte i) {
 		int i_30_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_30_, (byte) 45);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_30_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_30_, (byte) 45);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_30_ >> 16];
 		Class82.method1454(class118, class98, class527, (byte) 50);
 	}
 
@@ -342,7 +342,7 @@ public final class Class321 {
 
 	static final void method5758(CS2Executor class527, byte i) {
 		int i_31_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_31_, (byte) 127);
+		IComponentDefinitions class118 = Class117.method1981(i_31_, (byte) 127);
 		Class475.method7927(class118, class527, (byte) -98);
 	}
 }

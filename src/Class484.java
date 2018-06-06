@@ -219,23 +219,23 @@ public final class Class484 {
 	}
 
 	public static int method8169(CharSequence charsequence) {
-		return Class356.method6225(charsequence, 10, true, 2038427942);
+		return Class356.parseInt(charsequence, 10, true, 2038427942);
 	}
 
 	public static int method8170(CharSequence charsequence) {
-		return Class356.method6225(charsequence, 10, true, 2038427942);
+		return Class356.parseInt(charsequence, 10, true, 2038427942);
 	}
 
 	public static int method8171(CharSequence charsequence) {
-		return Class356.method6225(charsequence, 10, true, 2038427942);
+		return Class356.parseInt(charsequence, 10, true, 2038427942);
 	}
 
 	public static int method8172(CharSequence charsequence) {
-		return Class356.method6225(charsequence, 10, true, 2038427942);
+		return Class356.parseInt(charsequence, 10, true, 2038427942);
 	}
 
 	public static int method8173(CharSequence charsequence, int i) {
-		return Class356.method6225(charsequence, i, true, 2038427942);
+		return Class356.parseInt(charsequence, i, true, 2038427942);
 	}
 
 	static int method8174(CharSequence charsequence, char c) {
@@ -332,7 +332,7 @@ public final class Class484 {
 		int i = charsequence.length();
 		int i_53_ = 0;
 		for (int i_54_ = 0; i_54_ < i; i_54_++)
-			i_53_ = ((i_53_ << 5) - i_53_ + Class242.method4163(charsequence.charAt(i_54_), (byte) 36));
+			i_53_ = ((i_53_ << 5) - i_53_ + Class242.getByteForChar(charsequence.charAt(i_54_)));
 		return i_53_;
 	}
 
@@ -690,7 +690,7 @@ public final class Class484 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class158.method2730((short) -26831);
 	}
 
-	static void method8200(Class118 class118, int i, int i_118_, boolean bool, int i_119_) {
+	static void method8200(IComponentDefinitions class118, int i, int i_118_, boolean bool, int i_119_) {
 		int i_120_ = 1506818197 * class118.anInt1301;
 		int i_121_ = -492594917 * class118.anInt1429;
 		if (0 == class118.aByte1368)
@@ -720,12 +720,12 @@ public final class Class484 {
 					class118.anInt1301 = -970973775;
 			}
 		}
-		if (Class118.anInt1372 * -741477579 == 1449989045 * class118.anInt1290)
+		if (IComponentDefinitions.anInt1372 * -741477579 == 1449989045 * class118.anInt1290)
 			client.aClass118_7183 = class118;
 		if (bool && class118.anObjectArray1271 != null && (i_120_ != 1506818197 * class118.anInt1301 || -492594917 * class118.anInt1429 != i_121_)) {
-			Class282_Sub43 class282_sub43 = new Class282_Sub43();
-			class282_sub43.aClass118_8053 = class118;
-			class282_sub43.anObjectArray8054 = class118.anObjectArray1271;
+			HookRequest class282_sub43 = new HookRequest();
+			class282_sub43.iComponentDefs = class118;
+			class282_sub43.params = class118.anObjectArray1271;
 			client.aClass482_7402.append(class282_sub43, -1019002091);
 		}
 	}

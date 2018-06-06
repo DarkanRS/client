@@ -33,16 +33,16 @@ public class Class119 {
 
 	public static void method2074(String string, String string_6_, int i, boolean bool, byte i_7_) {
 		if (3 == client.anInt7166 * -1741204137) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.aClass432_2283, 94516093);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(0, 1417031095);
-			int i_8_ = (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string_6_);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
-			class282_sub23.aClass282_Sub35_Sub2_7682.index += 781596523;
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13101(Class14.anIntArray131, i_8_, (class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291), 1773448479);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13281((-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index) - i_8_, 1201423895);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4628, client.aClass184_7218.isaac, 94516093);
+			class282_sub23.buffer.writeShort(0, 1417031095);
+			int i_8_ = (-1990677291 * class282_sub23.buffer.index);
+			class282_sub23.buffer.writeString(string);
+			class282_sub23.buffer.writeString(string_6_);
+			class282_sub23.buffer.writeByte(i);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
+			class282_sub23.buffer.index += 781596523;
+			class282_sub23.buffer.method13101(Class14.anIntArray131, i_8_, (class282_sub23.buffer.index * -1990677291), 1773448479);
+			class282_sub23.buffer.method13281((-1990677291 * class282_sub23.buffer.index) - i_8_, 1201423895);
 			client.aClass184_7218.method3049(class282_sub23, -593132534);
 			if (i < 13) {
 				client.aBool7189 = true;
@@ -73,9 +73,9 @@ public class Class119 {
 				else if (i == 9)
 					class379 = OutgoingPacket.aClass379_4580;
 				if (null != class379) {
-					Class282_Sub23 class282_sub23 = Class271.method4828(class379, (client.aClass184_7475.aClass432_2283), -147657643);
-					class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(is[i_11_], 1417031095);
-					class282_sub23.aClass282_Sub35_Sub2_7682.write128Byte(0, 1653548844);
+					TCPMessage class282_sub23 = Class271.method4828(class379, (client.aClass184_7475.isaac), -147657643);
+					class282_sub23.buffer.writeShort(is[i_11_], 1417031095);
+					class282_sub23.buffer.write128Byte(0, 1653548844);
 					client.aClass184_7475.method3049(class282_sub23, 669327577);
 				}
 				bool = true;
@@ -86,14 +86,14 @@ public class Class119 {
 			LoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111)).append(string).toString(), (byte) -65);
 	}
 
-	static void method2076(Class118 class118, Class118 class118_12_, int i) {
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4601, client.aClass184_7475.aClass432_2283, -3887603);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE128(class118_12_.anInt1288 * 1924549737, -1183932171);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE(1924549737 * class118.anInt1288, (short) -28348);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(class118_12_.anInt1426 * -56249735, 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShortLE128(-56249735 * class118.anInt1426, -1183932171);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeIntV1(class118.anInt1287 * -1952846363, -1596162032);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt(class118_12_.anInt1287 * -1952846363, (byte) 77);
+	static void method2076(IComponentDefinitions class118, IComponentDefinitions class118_12_, int i) {
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4601, client.aClass184_7475.isaac, -3887603);
+		class282_sub23.buffer.writeShortLE128(class118_12_.anInt1288 * 1924549737, -1183932171);
+		class282_sub23.buffer.writeShortLE(1924549737 * class118.anInt1288, (short) -28348);
+		class282_sub23.buffer.writeShort(class118_12_.anInt1426 * -56249735, 1417031095);
+		class282_sub23.buffer.writeShortLE128(-56249735 * class118.anInt1426, -1183932171);
+		class282_sub23.buffer.writeIntV1(class118.idHash * -1952846363, -1596162032);
+		class282_sub23.buffer.writeLEInt(class118_12_.idHash * -1952846363, (byte) 77);
 		client.aClass184_7475.method3049(class282_sub23, -683028728);
 	}
 

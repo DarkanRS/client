@@ -23,7 +23,7 @@ public class Class366 implements Interface3 {
 		return Class60.aClass60_609;
 	}
 
-	static void method6301(GraphicalRenderer class505, int i, int i_0_, Class118 class118, int i_1_, int i_2_) {
+	static void method6301(GraphicalRenderer class505, int i, int i_0_, IComponentDefinitions class118, int i_1_, int i_2_) {
 		for (int i_3_ = 7; i_3_ >= 0; i_3_--) {
 			for (int i_4_ = 127; i_4_ >= 0; i_4_--) {
 				int i_5_ = (i_1_ & 0x3f) << 10 | (i_3_ & 0x7) << 7 | i_4_ & 0x7f;
@@ -73,12 +73,12 @@ public class Class366 implements Interface3 {
 
 	static final void method6304(CS2Executor class527, int i) {
 		int i_17_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = IndexLoaders.aClass429_4265.method7214(i_17_, -2138128366).method14916(-235375245);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_17_, -2138128366).method14916(-235375245);
 	}
 
 	static final void method6305(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class475.method7927(class118, class527, (byte) -27);
 	}
 }

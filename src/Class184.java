@@ -10,7 +10,7 @@ public class Class184 {
 	NodeCollection aClass482_2280 = new NodeCollection();
 	Class202 aClass202_2281;
 	RsByteBuffer aClass282_Sub35_2282;
-	public IsaacCipher aClass432_2283;
+	public IsaacCipher isaac;
 	RsBitsBuffer aClass282_Sub35_Sub2_2284;
 	static final int anInt2285 = 15000;
 	IncomingPacket aClass375_2286;
@@ -43,13 +43,13 @@ public class Class184 {
 		if (null != ((Class184) this).aClass202_2281 && ((Class184) this).anInt2279 * -99760051 > 0) {
 			((Class184) this).aClass282_Sub35_2282.index = 0;
 			for (;;) {
-				Class282_Sub23 class282_sub23 = ((Class282_Sub23) ((Class184) this).aClass482_2280.head((byte) 41));
+				TCPMessage class282_sub23 = ((TCPMessage) ((Class184) this).aClass482_2280.head((byte) 41));
 				if (class282_sub23 == null || (class282_sub23.anInt7680 * -766688357 > ((((Class184) this).aClass282_Sub35_2282.buffer).length - -1990677291 * (((Class184) this).aClass282_Sub35_2282.index))))
 					break;
-				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.aClass282_Sub35_Sub2_7682.buffer, 0, class282_sub23.anInt7680 * -766688357);
+				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.buffer.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
 				class282_sub23.unlink(-371378792);
-				class282_sub23.aClass282_Sub35_Sub2_7682.method13059(1420319429);
+				class282_sub23.buffer.method13059(1420319429);
 				class282_sub23.method12360(-923048057);
 			}
 			((Class184) this).aClass202_2281.method3311(((Class184) this).aClass282_Sub35_2282.buffer, 0, (-1990677291 * ((Class184) this).aClass282_Sub35_2282.index), -771843978);
@@ -63,10 +63,10 @@ public class Class184 {
 		((Class184) this).anInt2279 = 0;
 	}
 
-	public final void method3049(Class282_Sub23 class282_sub23, int i) {
+	public final void method3049(TCPMessage class282_sub23, int i) {
 		((Class184) this).aClass482_2280.append(class282_sub23, 1467393733);
-		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
-		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
+		class282_sub23.anInt7680 = -115904433 * class282_sub23.buffer.index;
+		class282_sub23.buffer.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
 	}
 
@@ -105,13 +105,13 @@ public class Class184 {
 		if (null != ((Class184) this).aClass202_2281 && ((Class184) this).anInt2279 * -99760051 > 0) {
 			((Class184) this).aClass282_Sub35_2282.index = 0;
 			for (;;) {
-				Class282_Sub23 class282_sub23 = (Class282_Sub23) ((Class184) this).aClass482_2280.head((byte) 104);
+				TCPMessage class282_sub23 = (TCPMessage) ((Class184) this).aClass482_2280.head((byte) 104);
 				if (class282_sub23 == null || (class282_sub23.anInt7680 * -766688357 > ((((Class184) this).aClass282_Sub35_2282.buffer).length - -1990677291 * (((Class184) this).aClass282_Sub35_2282.index))))
 					break;
-				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.aClass282_Sub35_Sub2_7682.buffer, 0, class282_sub23.anInt7680 * -766688357);
+				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.buffer.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
 				class282_sub23.unlink(-371378792);
-				class282_sub23.aClass282_Sub35_Sub2_7682.method13059(1701861837);
+				class282_sub23.buffer.method13059(1701861837);
 				class282_sub23.method12360(-1158414947);
 			}
 			((Class184) this).aClass202_2281.method3311(((Class184) this).aClass282_Sub35_2282.buffer, 0, (-1990677291 * ((Class184) this).aClass282_Sub35_2282.index), -1139030272);
@@ -124,13 +124,13 @@ public class Class184 {
 		if (null != ((Class184) this).aClass202_2281 && ((Class184) this).anInt2279 * -99760051 > 0) {
 			((Class184) this).aClass282_Sub35_2282.index = 0;
 			for (;;) {
-				Class282_Sub23 class282_sub23 = (Class282_Sub23) ((Class184) this).aClass482_2280.head((byte) 114);
+				TCPMessage class282_sub23 = (TCPMessage) ((Class184) this).aClass482_2280.head((byte) 114);
 				if (class282_sub23 == null || (class282_sub23.anInt7680 * -766688357 > ((((Class184) this).aClass282_Sub35_2282.buffer).length - -1990677291 * (((Class184) this).aClass282_Sub35_2282.index))))
 					break;
-				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.aClass282_Sub35_Sub2_7682.buffer, 0, class282_sub23.anInt7680 * -766688357);
+				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.buffer.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
 				class282_sub23.unlink(-371378792);
-				class282_sub23.aClass282_Sub35_Sub2_7682.method13059(1721372976);
+				class282_sub23.buffer.method13059(1721372976);
 				class282_sub23.method12360(-1410304456);
 			}
 			((Class184) this).aClass202_2281.method3311(((Class184) this).aClass282_Sub35_2282.buffer, 0, (-1990677291 * ((Class184) this).aClass282_Sub35_2282.index), -685901287);
@@ -155,17 +155,17 @@ public class Class184 {
 		thread.start();
 	}
 
-	public final void method3057(Class282_Sub23 class282_sub23) {
+	public final void method3057(TCPMessage class282_sub23) {
 		((Class184) this).aClass482_2280.append(class282_sub23, 543008654);
-		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
-		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
+		class282_sub23.anInt7680 = -115904433 * class282_sub23.buffer.index;
+		class282_sub23.buffer.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
 	}
 
-	public final void method3058(Class282_Sub23 class282_sub23) {
+	public final void method3058(TCPMessage class282_sub23) {
 		((Class184) this).aClass482_2280.append(class282_sub23, -1756231606);
-		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
-		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
+		class282_sub23.anInt7680 = -115904433 * class282_sub23.buffer.index;
+		class282_sub23.buffer.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
 	}
 
@@ -192,10 +192,10 @@ public class Class184 {
 		((Class184) this).aClass7_2299.method346(null, 958256601);
 	}
 
-	public final void method3062(Class282_Sub23 class282_sub23) {
+	public final void method3062(TCPMessage class282_sub23) {
 		((Class184) this).aClass482_2280.append(class282_sub23, -1560002099);
-		class282_sub23.anInt7680 = -115904433 * class282_sub23.aClass282_Sub35_Sub2_7682.index;
-		class282_sub23.aClass282_Sub35_Sub2_7682.index = 0;
+		class282_sub23.anInt7680 = -115904433 * class282_sub23.buffer.index;
+		class282_sub23.buffer.index = 0;
 		((Class184) this).anInt2279 += class282_sub23.anInt7680 * 2072817543;
 	}
 
@@ -205,14 +205,14 @@ public class Class184 {
 
 	static final void method3064(CS2Executor class527, short i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 73);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 73);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class175.method2960(class118, class98, class527, 1289929299);
 	}
 
 	static final void method3065(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 93);
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 93);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1423 * -169127141;
 	}
 

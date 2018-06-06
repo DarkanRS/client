@@ -6,22 +6,22 @@ public class Class282_Sub24 extends Node {
 	int anInt7684;
 	int anInt7685;
 	float aFloat7686;
-	public Class385 aClass385_7687 = new Class385();
+	public Vector3 aClass385_7687 = new Vector3();
 
 	public final int method12367() {
-		return (int) aClass385_7687.aFloat4672;
+		return (int) aClass385_7687.y;
 	}
 
 	public final int method12368(byte i) {
-		return (int) aClass385_7687.aFloat4671;
+		return (int) aClass385_7687.x;
 	}
 
 	public final int method12369(int i) {
-		return (int) aClass385_7687.aFloat4672;
+		return (int) aClass385_7687.y;
 	}
 
 	Class282_Sub24(int i, int i_0_, int i_1_, int i_2_, int i_3_, float f) {
-		aClass385_7687.method6626((float) i, (float) i_0_, (float) i_1_);
+		aClass385_7687.set((float) i, (float) i_0_, (float) i_1_);
 		((Class282_Sub24) this).anInt7684 = -219119419 * i_2_;
 		((Class282_Sub24) this).anInt7685 = i_3_ * 1876068859;
 		((Class282_Sub24) this).aFloat7686 = f;
@@ -44,19 +44,19 @@ public class Class282_Sub24 extends Node {
 	}
 
 	public void method12374(int i, int i_4_, int i_5_, int i_6_) {
-		aClass385_7687.method6626((float) i, (float) i_4_, (float) i_5_);
+		aClass385_7687.set((float) i, (float) i_4_, (float) i_5_);
 	}
 
 	public final int method12375() {
-		return (int) aClass385_7687.aFloat4671;
+		return (int) aClass385_7687.x;
 	}
 
 	public final int method12376() {
-		return (int) aClass385_7687.aFloat4671;
+		return (int) aClass385_7687.x;
 	}
 
 	public final int method12377() {
-		return (int) aClass385_7687.aFloat4672;
+		return (int) aClass385_7687.y;
 	}
 
 	public final int method12378() {
@@ -64,27 +64,27 @@ public class Class282_Sub24 extends Node {
 	}
 
 	public final int method12379() {
-		return (int) aClass385_7687.aFloat4672;
+		return (int) aClass385_7687.y;
 	}
 
 	public final int method12380() {
-		return (int) aClass385_7687.aFloat4672;
+		return (int) aClass385_7687.y;
 	}
 
 	public final int method12381() {
-		return (int) aClass385_7687.aFloat4672;
+		return (int) aClass385_7687.y;
 	}
 
 	public final int method12382() {
-		return (int) aClass385_7687.aFloat4673;
+		return (int) aClass385_7687.z;
 	}
 
 	public final int method12383() {
-		return (int) aClass385_7687.aFloat4673;
+		return (int) aClass385_7687.z;
 	}
 
 	public final int method12384() {
-		return (int) aClass385_7687.aFloat4673;
+		return (int) aClass385_7687.z;
 	}
 
 	public final int method12385() {
@@ -124,7 +124,7 @@ public class Class282_Sub24 extends Node {
 	}
 
 	public final int method12394(int i) {
-		return (int) aClass385_7687.aFloat4673;
+		return (int) aClass385_7687.z;
 	}
 
 	public final float method12395(int i) {
@@ -140,7 +140,7 @@ public class Class282_Sub24 extends Node {
 	}
 
 	public void method12398(int i, int i_7_, int i_8_) {
-		aClass385_7687.method6626((float) i, (float) i_7_, (float) i_8_);
+		aClass385_7687.set((float) i, (float) i_7_, (float) i_8_);
 	}
 
 	public static void method12399(int i, int i_9_, int i_10_, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {

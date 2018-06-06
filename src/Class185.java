@@ -16,11 +16,11 @@ public class Class185 {
 	float aFloat2311;
 	int[] anIntArray2312;
 	int anInt2313;
-	Class294 aClass294_2314;
+	Matrix44Var aClass294_2314;
 	float[] aFloatArray2315;
-	Class294 aClass294_2316;
-	Class384 aClass384_2317;
-	Class384 aClass384_2318;
+	Matrix44Var aClass294_2316;
+	Matrix44Arr aClass384_2317;
+	Matrix44Arr aClass384_2318;
 	int[] anIntArray2319;
 	HardwareRenderer aClass505_Sub3_2320;
 	int[] anIntArray2321;
@@ -48,7 +48,7 @@ public class Class185 {
 	Runnable aRunnable2343;
 	float[] aFloatArray2344;
 	float[] aFloatArray2345;
-	Class384 aClass384_2346;
+	Matrix44Arr aClass384_2346;
 
 	void method3070(Runnable runnable, int i) {
 		((Class185) this).aRunnable2343 = runnable;
@@ -82,11 +82,11 @@ public class Class185 {
 		((Class185) this).anInt2306 = 0;
 		((Class185) this).anInt2313 = 0;
 		((Class185) this).aBool2334 = true;
-		((Class185) this).aClass384_2346 = new Class384();
-		((Class185) this).aClass294_2314 = new Class294();
-		((Class185) this).aClass294_2316 = new Class294();
-		((Class185) this).aClass384_2317 = new Class384();
-		((Class185) this).aClass384_2318 = new Class384();
+		((Class185) this).aClass384_2346 = new Matrix44Arr();
+		((Class185) this).aClass294_2314 = new Matrix44Var();
+		((Class185) this).aClass294_2316 = new Matrix44Var();
+		((Class185) this).aClass384_2317 = new Matrix44Arr();
+		((Class185) this).aClass384_2318 = new Matrix44Arr();
 		((Class185) this).anIntArray2319 = new int[Class528_Sub2.anInt8644];
 		((Class185) this).aFloatArray2302 = new float[Class528_Sub2.anInt8644];
 		((Class185) this).aFloatArray2341 = new float[Class528_Sub2.anInt8644];
@@ -132,7 +132,7 @@ public class Class185 {
 		}
 	}
 
-	static final void method3078(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method3078(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (Class96_Sub14.method14642(string, class527, 198501911) != null)
 			string = string.substring(0, string.length() - 1);
@@ -149,8 +149,8 @@ public class Class185 {
 
 	static final void method3080(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		Class96_Sub18.method14664(class118, class98, false, 2, class527, (byte) -57);
 	}
 }

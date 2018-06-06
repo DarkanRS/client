@@ -18,9 +18,9 @@ public class Class8_Sub4 extends FontRenderer {
 		float f = (float) ((Class8_Sub4) this).aClass505_Sub2_9321.method8523((byte) 120).method2714();
 		float f_2_ = (float) ((Class8_Sub4) this).aClass505_Sub2_9321.method8523((byte) 114).method2716();
 		class47.aClass384_442.method6525(2.0F / f, 2.0F / f_2_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_0_ + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f_2_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_0_ + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f_2_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6518();
 		class47.anInterface4_445 = ((Class8_Sub4) this).anInterface4_9320;
 		class47.anInt446 = c * '\004';
@@ -28,7 +28,7 @@ public class Class8_Sub4 extends FontRenderer {
 		class47.method936();
 	}
 
-	Class8_Sub4(Class505_Sub2 class505_sub2, Class414 class414, Class91[] class91s, boolean bool) {
+	Class8_Sub4(Class505_Sub2 class505_sub2, FontMetrics class414, Class91[] class91s, boolean bool) {
 		super(class505_sub2, class414);
 		((Class8_Sub4) this).aClass505_Sub2_9321 = class505_sub2;
 		int i = 0;
@@ -166,9 +166,9 @@ public class Class8_Sub4 extends FontRenderer {
 		float f = (float) ((Class8_Sub4) this).aClass505_Sub2_9321.method8523((byte) 111).method2714();
 		float f_53_ = (float) ((Class8_Sub4) this).aClass505_Sub2_9321.method8523((byte) 111).method2716();
 		class47.aClass384_442.method6525(2.0F / f, 2.0F / f_53_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_51_ + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f_53_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_51_ + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f_53_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6518();
 		class47.anInterface4_445 = ((Class8_Sub4) this).anInterface4_9320;
 		class47.anInt446 = c * '\004';
@@ -189,9 +189,9 @@ public class Class8_Sub4 extends FontRenderer {
 		float f = (float) ((Class8_Sub4) this).aClass505_Sub2_9321.method8523((byte) 124).method2714();
 		float f_60_ = (float) ((Class8_Sub4) this).aClass505_Sub2_9321.method8523((byte) 115).method2716();
 		class47.aClass384_442.method6525(2.0F / f, 2.0F / f_60_, 1.0F, 1.0F);
-		class47.aClass384_442.aFloatArray4667[12] = (((float) i + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[13] = (((float) i_58_ + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f_60_) - 1.0F;
-		class47.aClass384_442.aFloatArray4667[14] = -1.0F;
+		class47.aClass384_442.buf[12] = (((float) i + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f) - 1.0F;
+		class47.aClass384_442.buf[13] = (((float) i_58_ + ((Class8_Sub4) this).aClass505_Sub2_9321.method13905()) * 2.0F / f_60_) - 1.0F;
+		class47.aClass384_442.buf[14] = -1.0F;
 		class47.aClass384_440.method6518();
 		class47.anInterface4_445 = ((Class8_Sub4) this).anInterface4_9320;
 		class47.anInt446 = c * '\004';

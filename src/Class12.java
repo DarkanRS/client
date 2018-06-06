@@ -51,7 +51,7 @@ public class Class12 implements Runnable {
 
 	public static void method480(int i, int i_0_) {
 		if (i != -1 && !WorldMapIndexLoader.aBoolArray2709[i]) {
-			Class388.aClass317_4721.method5619(i, -566159763);
+			Class388.INTERFACE_INDEX.method5619(i, -566159763);
 			Class468_Sub8.aClass98Array7889[i] = null;
 		}
 	}
@@ -70,14 +70,14 @@ public class Class12 implements Runnable {
 		}
 	}
 
-	public static void method483(Class98 class98, Class118 class118, boolean bool, int i) {
-		Class480.method8044(class98.aClass118Array998, class118, bool, (byte) 4);
+	public static void method483(Interface class98, IComponentDefinitions class118, boolean bool, int i) {
+		Class480.method8044(class98.components, class118, bool, (byte) 4);
 	}
 
 	static final void method484(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 9);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 9);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class242.method4160(class118, class98, class527, (short) 8078);
 	}
 
@@ -90,8 +90,8 @@ public class Class12 implements Runnable {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_2_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_2_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_2_).aClass98_5885;
 		Class100.method1642(class118, class98, class527, -107525091);
 	}
 
@@ -101,7 +101,7 @@ public class Class12 implements Runnable {
 		i_4_ <<= 3;
 		client.aFloat7146 = (float) i;
 		client.aFloat7365 = (float) i_3_;
-		if (5 == -672443707 * Class262.anInt3240) {
+		if (5 == -672443707 * NativeLibraryLoader.anInt3240) {
 			Class293.anInt3512 = i * -647467135;
 			AnimationDefinitions.anInt5930 = 1898253385 * i_3_;
 			Class121.anInt1525 = i_4_ * -833027875;

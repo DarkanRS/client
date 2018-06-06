@@ -108,8 +108,8 @@ public class Class468_Sub22 extends Class468 {
 		super(i, class282_sub54);
 	}
 
-	static Class118 method12880(Class118 class118, byte i) {
-		Class118 class118_2_ = client.method11634(class118);
+	static IComponentDefinitions method12880(IComponentDefinitions class118, byte i) {
+		IComponentDefinitions class118_2_ = client.method11634(class118);
 		if (class118_2_ == null)
 			class118_2_ = class118.aClass118_1379;
 		return class118_2_;

@@ -98,8 +98,8 @@ public abstract class Class209 {
 
 	static final void method3596(CS2Executor class527, int i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 50);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 50);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class151.method2593(class118, class98, class527, -1741314875);
 	}
 
@@ -154,7 +154,7 @@ public abstract class Class209 {
 		return true;
 	}
 
-	static final void method3601(Class118 class118, CS2Executor class527, int i) {
+	static final void method3601(IComponentDefinitions class118, CS2Executor class527, int i) {
 		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		int i_11_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
 		if (6 != class118.anInt1329 * 2131324949 && 2 != 2131324949 * class118.anInt1329)

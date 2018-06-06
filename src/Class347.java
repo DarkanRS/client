@@ -113,14 +113,14 @@ public class Class347 {
 				Class291_Sub1.aFloat3468 = Class291_Sub1.aFloat3462;
 			Class89.method1502(-463679465);
 			Class291_Sub1.anInt3469 = (int) Class291_Sub1.aFloat3468 >> 1;
-			Class291_Sub1.aByteArrayArrayArray3464 = Class491.method8246(Class291_Sub1.anInt3469, (short) 8192);
+			Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469, (short) 8192);
 		} else if (Class291_Sub1.aFloat3468 > Class291_Sub1.aFloat3462) {
 			Class291_Sub1.aFloat3468 -= (double) Class291_Sub1.aFloat3468 / 30.0;
 			if (Class291_Sub1.aFloat3468 < Class291_Sub1.aFloat3462)
 				Class291_Sub1.aFloat3468 = Class291_Sub1.aFloat3462;
 			Class89.method1502(372349674);
 			Class291_Sub1.anInt3469 = (int) Class291_Sub1.aFloat3468 >> 1;
-			Class291_Sub1.aByteArrayArrayArray3464 = Class491.method8246(Class291_Sub1.anInt3469, (short) 8192);
+			Class291_Sub1.aByteArrayArrayArray3464 = CircularBuffer.method8246(Class291_Sub1.anInt3469, (short) 8192);
 		}
 		if (Class291_Sub1.anInt8014 * -1359738663 != -1 && -1 != -162722139 * Class291_Sub1.anInt8016) {
 			int i_9_ = (Class291_Sub1.anInt8014 * -1359738663 - -861975801 * Class427.anInt5123);

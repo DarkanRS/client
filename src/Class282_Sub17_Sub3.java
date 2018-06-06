@@ -11,7 +11,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 	}
 
 	void method12250(RsByteBuffer class282_sub35, int i) {
-		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString(-64443024);
+		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString();
 		class282_sub35.readInt();
 	}
 
@@ -20,7 +20,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 	}
 
 	void method12257(RsByteBuffer class282_sub35) {
-		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString(231625490);
+		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString();
 		class282_sub35.readInt();
 	}
 
@@ -29,7 +29,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 	}
 
 	void method12253(RsByteBuffer class282_sub35) {
-		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString(1512564224);
+		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString();
 		class282_sub35.readInt();
 	}
 
@@ -46,7 +46,7 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 	}
 
 	void method12249(RsByteBuffer class282_sub35) {
-		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString(816107674);
+		((Class282_Sub17_Sub3) this).aString9935 = class282_sub35.readString();
 		class282_sub35.readInt();
 	}
 

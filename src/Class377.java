@@ -133,8 +133,8 @@ public class Class377 implements IndexLoader {
 		} else
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_8_ = class513;
-		Class118 class118 = ((UnderlayDefinition) class513_8_).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513_8_).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513_8_).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513_8_).aClass98_5885;
 		Class283.method5009(class118, class98, class527, -1781977981);
 	}
 
@@ -194,7 +194,7 @@ public class Class377 implements IndexLoader {
 	}
 
 	public static Class62 method6401(RsByteBuffer class282_sub35, byte i) {
-		String string = class282_sub35.readString(1138244216);
+		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(180670091)[class282_sub35.readUnsignedByte()]);
 		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_20_ = class282_sub35.readShort(1978619926);

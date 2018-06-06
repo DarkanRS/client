@@ -195,7 +195,7 @@ public class Class80 {
 				return 1;
 			}
 			if (i_16_ == 81) {
-				int i_18_ = ((Class80) this).aClass282_Sub35_792.read24BitUnsignedInteger((short) 5799);
+				int i_18_ = ((Class80) this).aClass282_Sub35_792.read24BitUnsignedInteger();
 				i_17_ -= 3;
 				int i_19_ = ((Class80) this).anIntArray788[i];
 				((Class80) this).aLong786 += (long) i_19_ * (long) (((Class80) this).anInt790 - i_18_);
@@ -350,7 +350,7 @@ public class Class80 {
 				return 1;
 			}
 			if (i_34_ == 81) {
-				int i_36_ = ((Class80) this).aClass282_Sub35_792.read24BitUnsignedInteger((short) 10097);
+				int i_36_ = ((Class80) this).aClass282_Sub35_792.read24BitUnsignedInteger();
 				i_35_ -= 3;
 				int i_37_ = ((Class80) this).anIntArray788[i];
 				((Class80) this).aLong786 += (long) i_37_ * (long) (((Class80) this).anInt790 - i_36_);

@@ -132,8 +132,8 @@ public class Class191 implements Runnable {
 
 	static final void method3163(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		FontRenderer.method403(class118, class98, class527, 1299404618);
 	}
 
@@ -147,14 +147,14 @@ public class Class191 implements Runnable {
 	}
 
 	public static void method3167(int i, int i_1_, String string, String string_2_, String string_3_, String string_4_, int i_5_) {
-		MapRegionLoaderTask.method6070(i, i_1_, string, string_2_, string_3_, string_4_, null, -1, 30927485);
+		MapRegionLoaderTask.appendMessage(i, i_1_, string, string_2_, string_3_, string_4_, null, -1);
 	}
 
 	static final void method3168(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class118 class118_6_ = Class96_Sub23.method14682(class98, class118, -838454718);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.anInt1287 * -1952846363;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		IComponentDefinitions class118_6_ = Class96_Sub23.method14682(class98, class118, -838454718);
+		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.idHash * -1952846363;
 	}
 }

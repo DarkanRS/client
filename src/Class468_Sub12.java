@@ -84,6 +84,6 @@ public class Class468_Sub12 extends Class468 {
 
 	public static void method12710(int i, byte i_3_) {
 		Class282_Sub14.anInt7597 = 1427573427 * i;
-		Class118.aClass229_1341.method3859(-1043512499);
+		IComponentDefinitions.aClass229_1341.method3859(-1043512499);
 	}
 }

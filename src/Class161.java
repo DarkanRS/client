@@ -20,10 +20,10 @@ public class Class161 {
 
 	static final void method2824(CS2Executor class527, byte i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class108 class108 = Class180.method3032(i_0_, (byte) -1);
+		ChatLine class108 = Class180.method3032(i_0_, (byte) -1);
 		String string = "";
-		if (class108 != null && null != class108.aString1083)
-			string = class108.aString1083;
+		if (class108 != null && null != class108.message)
+			string = class108.message;
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
 	}
 
@@ -37,8 +37,8 @@ public class Class161 {
 
 	static final void method2826(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_1_, (byte) 25);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 25);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class282_Sub17.method12260(class118, class98, class527, 456705608);
 	}
 
@@ -76,13 +76,13 @@ public class Class161 {
 				if (client.aBool7364) {
 					Class60.method1170(-609337146);
 					if (null != client.aClass118_7257.anObjectArray1394) {
-						Class282_Sub43 class282_sub43 = new Class282_Sub43();
-						class282_sub43.aClass118_8053 = client.aClass118_7257;
+						HookRequest class282_sub43 = new HookRequest();
+						class282_sub43.iComponentDefs = client.aClass118_7257;
 						class282_sub43.anInt8059 = i_4_ * 610593631;
 						class282_sub43.anInt8055 = -916586071 * i_5_;
 						class282_sub43.aClass118_8057 = client.aClass118_7370;
-						class282_sub43.anObjectArray8054 = client.aClass118_7257.anObjectArray1394;
-						Class96_Sub4.method13790(class282_sub43, 79466209);
+						class282_sub43.params = client.aClass118_7257.anObjectArray1394;
+						Class96_Sub4.executeHookInner200k(class282_sub43, 79466209);
 					}
 					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null)
 						Class119.method2076(client.aClass118_7257, client.aClass118_7370, 1527549411);
@@ -100,12 +100,12 @@ public class Class161 {
 						client.aBool7364 = true;
 				}
 				if (null != client.aClass118_7257.anObjectArray1451 && client.aBool7364) {
-					Class282_Sub43 class282_sub43 = new Class282_Sub43();
-					class282_sub43.aClass118_8053 = client.aClass118_7257;
+					HookRequest class282_sub43 = new HookRequest();
+					class282_sub43.iComponentDefs = client.aClass118_7257;
 					class282_sub43.anInt8059 = 610593631 * i_4_;
 					class282_sub43.anInt8055 = i_5_ * -916586071;
-					class282_sub43.anObjectArray8054 = client.aClass118_7257.anObjectArray1451;
-					Class96_Sub4.method13790(class282_sub43, 814557204);
+					class282_sub43.params = client.aClass118_7257.anObjectArray1451;
+					Class96_Sub4.executeHookInner200k(class282_sub43, 814557204);
 				}
 			}
 		}

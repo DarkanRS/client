@@ -26,11 +26,11 @@ public class Class105 {
 
 	static void method1804(int i, String string, String string_2_, byte i_3_) {
 		if (client.aClass184_7475 != null) {
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4533, client.aClass184_7475.aClass432_2283, -368168097);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeShort((1 + Class234.method3952(string, 1356057931) + Class234.method3952(string_2_, 876996155)), 1417031095);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13070(string_2_, 2115936374);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13070(string, 2111937462);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4533, client.aClass184_7475.isaac, -368168097);
+			class282_sub23.buffer.writeShort((1 + Class234.method3952(string, 1356057931) + Class234.method3952(string_2_, 876996155)), 1417031095);
+			class282_sub23.buffer.writeByte(i);
+			class282_sub23.buffer.method13070(string_2_, 2115936374);
+			class282_sub23.buffer.method13070(string, 2111937462);
 			client.aClass184_7475.method3049(class282_sub23, 1078445586);
 		}
 	}
@@ -48,7 +48,7 @@ public class Class105 {
 	}
 
 	static void method1806(RsBitsBuffer buffer, int i, int i_10_) {
-		Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(2087234907);
+		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(2087234907);
 		boolean needsUpdate = buffer.readBits(1, (byte) 56) == 1;
 		if (needsUpdate)
 			Class197.anIntArray2435[(Class197.anInt2434 += 1879181821) * -706143403 - 1] = i;
@@ -61,7 +61,7 @@ public class Class105 {
 				if (i == 1595512269 * client.anInt7315)
 					throw new RuntimeException();
 				Class4 class4 = Class197.aClass4Array2430[i] = new Class4();
-				((Class4) class4).anInt31 = (-1096995395 * (((class219.anInt2712 * -1002240017 + player.regionBaseY[0]) >> 6) + ((player.aByte7967 << 28) + ((1948093437 * class219.anInt2711 + (player.regionBaseX[0])) >> 6 << 14))));
+				((Class4) class4).anInt31 = (-1096995395 * (((class219.y * -1002240017 + player.regionBaseY[0]) >> 6) + ((player.aByte7967 << 28) + ((1948093437 * class219.x + (player.regionBaseX[0])) >> 6 << 14))));
 				if (-1 != 327043279 * player.faceDirection)
 					((Class4) class4).anInt30 = player.faceDirection * 20062537;
 				else
@@ -190,8 +190,8 @@ public class Class105 {
 				int i_26_ = i_25_ >> 28;
 				int i_27_ = i_25_ >> 14 & 0x3fff;
 				int i_28_ = i_25_ & 0x3fff;
-				int i_29_ = ((i_27_ + (class219.anInt2711 * 1948093437 + (player.regionBaseX[0])) & 0x3fff) - 1948093437 * class219.anInt2711);
-				int i_30_ = (i_28_ + (player.regionBaseY[0] + class219.anInt2712 * -1002240017) & 0x3fff) - class219.anInt2712 * -1002240017;
+				int i_29_ = ((i_27_ + (class219.x * 1948093437 + (player.regionBaseX[0])) & 0x3fff) - 1948093437 * class219.x);
+				int i_30_ = (i_28_ + (player.regionBaseY[0] + class219.y * -1002240017) & 0x3fff) - class219.y * -1002240017;
 				if (needsUpdate) {
 					player.anInt10569 = i_29_ * -618896179;
 					player.anInt10570 = i_30_ * -108698839;

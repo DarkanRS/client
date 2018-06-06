@@ -3,11 +3,9 @@
  */
 
 public class Class331 {
-	static final int anInt3869 = 0;
 	Index aClass317_3870;
 	SoftCache aClass229_3871 = new SoftCache(64);
 	Index aClass317_3872;
-	static final int anInt3873 = 32768;
 
 	public Class282_Sub50_Sub14 method5917(int i) {
 		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
@@ -39,42 +37,6 @@ public class Class331 {
 		class282_sub50_sub14 = new Class282_Sub50_Sub14();
 		if (null != is)
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), 625561470);
-		if (i >= 32768)
-			class282_sub50_sub14.method15213(707027607);
-		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
-		return class282_sub50_sub14;
-	}
-
-	public Class282_Sub50_Sub14 method5919(int i) {
-		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
-		if (null != class282_sub50_sub14)
-			return class282_sub50_sub14;
-		byte[] is;
-		if (i >= 32768)
-			is = ((Class331) this).aClass317_3870.getFile(0, i & 0x7fff, -1429282699);
-		else
-			is = ((Class331) this).aClass317_3872.getFile(0, i, -1561425664);
-		class282_sub50_sub14 = new Class282_Sub50_Sub14();
-		if (null != is)
-			class282_sub50_sub14.method15209(new RsByteBuffer(is), -326489303);
-		if (i >= 32768)
-			class282_sub50_sub14.method15213(707027607);
-		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
-		return class282_sub50_sub14;
-	}
-
-	public Class282_Sub50_Sub14 method5920(int i) {
-		Class282_Sub50_Sub14 class282_sub50_sub14 = ((Class282_Sub50_Sub14) ((Class331) this).aClass229_3871.get((long) i));
-		if (null != class282_sub50_sub14)
-			return class282_sub50_sub14;
-		byte[] is;
-		if (i >= 32768)
-			is = ((Class331) this).aClass317_3870.getFile(0, i & 0x7fff, -2080493810);
-		else
-			is = ((Class331) this).aClass317_3872.getFile(0, i, -2118557851);
-		class282_sub50_sub14 = new Class282_Sub50_Sub14();
-		if (null != is)
-			class282_sub50_sub14.method15209(new RsByteBuffer(is), 434656878);
 		if (i >= 32768)
 			class282_sub50_sub14.method15213(707027607);
 		((Class331) this).aClass229_3871.put(class282_sub50_sub14, (long) i);
@@ -160,7 +122,7 @@ public class Class331 {
 
 	static final void method5926(CS2Executor class527, int i) {
 		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_12_, (byte) 108);
+		IComponentDefinitions class118 = Class117.method1981(i_12_, (byte) 108);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1293 * 1552292309;
 	}
 }

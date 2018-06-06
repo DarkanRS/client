@@ -16,7 +16,7 @@ public class Class182 {
 		throw new Error();
 	}
 
-	static void method3034(GraphicalRenderer class505, Class118 class118) {
+	static void method3034(GraphicalRenderer class505, IComponentDefinitions class118) {
 		boolean bool = ((IndexLoaders.ITEM_INDEX_LOADER.softwareRender(class505, class118.anInt1426 * -56249735, 6040081 * class118.anInt1427, class118.anInt1323 * -346307573, ~0xffffff | class118.anInt1324 * 1279397863, 71935343 * class118.anInt1335, (class118.aBool1388 ? Class84.myPlayer.playerAppearance : null), 206421629)) == null);
 		if (bool) {
 			ITEMS.append(new Item(-56249735 * class118.anInt1426, 6040081 * class118.anInt1427, -346307573 * class118.anInt1323, (~0xffffff | 1279397863 * class118.anInt1324), 71935343 * class118.anInt1335, class118.aBool1388), -2006343484);
@@ -24,7 +24,7 @@ public class Class182 {
 		}
 	}
 
-	static void method3035(GraphicalRenderer class505, Class118 class118) {
+	static void method3035(GraphicalRenderer class505, IComponentDefinitions class118) {
 		boolean bool = ((IndexLoaders.ITEM_INDEX_LOADER.softwareRender(class505, class118.anInt1426 * -56249735, 6040081 * class118.anInt1427, class118.anInt1323 * -346307573, ~0xffffff | class118.anInt1324 * 1279397863, 71935343 * class118.anInt1335, (class118.aBool1388 ? Class84.myPlayer.playerAppearance : null), 206421629)) == null);
 		if (bool) {
 			ITEMS.append(new Item(-56249735 * class118.anInt1426, 6040081 * class118.anInt1427, -346307573 * class118.anInt1323, (~0xffffff | 1279397863 * class118.anInt1324), 71935343 * class118.anInt1335, class118.aBool1388), 949305639);
@@ -53,13 +53,13 @@ public class Class182 {
 		if (i_0_ == -1) {
 			int i_1_ = i_0_ >> 14 & 0x3fff;
 			int i_2_ = i_0_ & 0x3fff;
-			Class219 class219 = IndexLoaders.MAP_REGION_DECODER.method4519(660934001);
-			i_1_ -= class219.anInt2711 * 1948093437;
+			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(660934001);
+			i_1_ -= class219.x * 1948093437;
 			if (i_1_ < 0)
 				i_1_ = 0;
 			else if (i_1_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-1010474219))
 				i_1_ = IndexLoaders.MAP_REGION_DECODER.method4424(-751193521);
-			i_2_ -= class219.anInt2712 * -1002240017;
+			i_2_ -= class219.y * -1002240017;
 			if (i_2_ < 0)
 				i_2_ = 0;
 			else if (i_2_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-281530054))
@@ -89,9 +89,9 @@ public class Class182 {
 
 	static final void method3041(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class98 class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class108.method1845(class118, class98, class527, -1951994229);
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
+		ChatLine.method1845(class118, class98, class527, -1951994229);
 	}
 
 	static final void method3042(CS2Executor class527, int i) {

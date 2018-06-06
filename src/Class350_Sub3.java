@@ -50,9 +50,9 @@ public class Class350_Sub3 extends Class350 {
 		return new Class350_Sub3(class350.aClass356_4094, class350.aClass353_4087, class350.anInt4090 * -1967081549, class350.anInt4089 * -1196256967, class350.anInt4093 * 329542577, class350.anInt4088 * 323608093, class350.anInt4092 * -1921815535, class350.anInt4086 * 985690519, -771513131 * class350.anInt4091, i, i_17_, i_18_, i_19_, i_20_, i_21_);
 	}
 
-	static void method12590(Class282_Sub23 class282_sub23, int i, int i_22_, int i_23_, int i_24_) {
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeLEInt(i, (byte) -5);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort(i_23_, 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort128(i_22_, -800257688);
+	static void method12590(TCPMessage class282_sub23, int i, int i_22_, int i_23_, int i_24_) {
+		class282_sub23.buffer.writeLEInt(i, (byte) -5);
+		class282_sub23.buffer.writeShort(i_23_, 1417031095);
+		class282_sub23.buffer.writeShort128(i_22_, -800257688);
 	}
 }

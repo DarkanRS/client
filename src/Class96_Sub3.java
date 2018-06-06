@@ -45,7 +45,7 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	static final void method13785(CS2Executor class527, int i) {
-		int i_0_ = (class527.unknown[301123709 * class527.instrPtr]);
+		int i_0_ = (class527.intOpValues[301123709 * class527.instrPtr]);
 		class527.anInt7000 -= i_0_ * 1476624725;
 		String string = Class377.method6398(class527.objectStack, 1806726141 * class527.anInt7000, i_0_, 2084790838);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;

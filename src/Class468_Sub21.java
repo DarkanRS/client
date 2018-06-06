@@ -89,12 +89,12 @@ public class Class468_Sub21 extends Class468 {
 				}
 			}
 			client.anInt7341 = 761834094;
-			Class262.anIntArrayArray3239 = null;
+			NativeLibraryLoader.anIntArrayArray3239 = null;
 			Class276.aClass282_Sub35_3346 = null;
 			client.aBool7321 = false;
 			Class79.method1390(2119033925);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.aClass432_2283, 775399982);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(bool ? 1 : 0);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4572, client.aClass184_7475.isaac, 775399982);
+			class282_sub23.buffer.writeByte(bool ? 1 : 0);
 			client.aClass184_7475.method3049(class282_sub23, 663784831);
 		}
 	}

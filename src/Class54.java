@@ -37,10 +37,10 @@ public class Class54 {
 	void method1091(Class505_Sub2 class505_sub2, Class151 class151) {
 		class505_sub2.RA(false);
 		aFloat512 = class505_sub2.aFloat8769;
-		float f = class505_sub2.aClass384_8740.aFloatArray4667[2];
-		float f_0_ = class505_sub2.aClass384_8740.aFloatArray4667[6];
-		float f_1_ = class505_sub2.aClass384_8740.aFloatArray4667[10];
-		float f_2_ = class505_sub2.aClass384_8740.aFloatArray4667[14];
+		float f = class505_sub2.aClass384_8740.buf[2];
+		float f_0_ = class505_sub2.aClass384_8740.buf[6];
+		float f_1_ = class505_sub2.aClass384_8740.buf[10];
+		float f_2_ = class505_sub2.aClass384_8740.buf[14];
 		int i = 0;
 		int i_3_ = 2147483647;
 		int i_4_ = 0;
@@ -67,7 +67,7 @@ public class Class54 {
 		i = 0;
 		class505_sub2.method13997(((Class54) this).anInterface32_511);
 		Class103 class103 = ((Class505_Sub2) class505_sub2).aClass103_8796;
-		class103.method1788(Class384.aClass384_4666);
+		class103.method1788(Matrix44Arr.aClass384_4666);
 		class103.aClass384_1058.method6518();
 		class103.anInt1056 = -1;
 		int i_10_ = -2;
@@ -118,13 +118,13 @@ public class Class54 {
 
 	void method1092(Class505_Sub2 class505_sub2, int i) {
 		int i_15_ = 0;
-		Class384 class384 = class505_sub2.aClass384_8740;
-		float f = class384.aFloatArray4667[0];
-		float f_16_ = class384.aFloatArray4667[4];
-		float f_17_ = class384.aFloatArray4667[8];
-		float f_18_ = class384.aFloatArray4667[1];
-		float f_19_ = class384.aFloatArray4667[5];
-		float f_20_ = class384.aFloatArray4667[9];
+		Matrix44Arr class384 = class505_sub2.aClass384_8740;
+		float f = class384.buf[0];
+		float f_16_ = class384.buf[4];
+		float f_17_ = class384.buf[8];
+		float f_18_ = class384.buf[1];
+		float f_19_ = class384.buf[5];
+		float f_20_ = class384.buf[9];
 		float f_21_ = f + f_18_;
 		float f_22_ = f_16_ + f_19_;
 		float f_23_ = f_17_ + f_20_;
@@ -357,10 +357,10 @@ public class Class54 {
 	void method1094(Class505_Sub2 class505_sub2, Class151 class151) {
 		class505_sub2.RA(false);
 		aFloat512 = class505_sub2.aFloat8769;
-		float f = class505_sub2.aClass384_8740.aFloatArray4667[2];
-		float f_54_ = class505_sub2.aClass384_8740.aFloatArray4667[6];
-		float f_55_ = class505_sub2.aClass384_8740.aFloatArray4667[10];
-		float f_56_ = class505_sub2.aClass384_8740.aFloatArray4667[14];
+		float f = class505_sub2.aClass384_8740.buf[2];
+		float f_54_ = class505_sub2.aClass384_8740.buf[6];
+		float f_55_ = class505_sub2.aClass384_8740.buf[10];
+		float f_56_ = class505_sub2.aClass384_8740.buf[14];
 		int i = 0;
 		int i_57_ = 2147483647;
 		int i_58_ = 0;
@@ -387,7 +387,7 @@ public class Class54 {
 		i = 0;
 		class505_sub2.method13997(((Class54) this).anInterface32_511);
 		Class103 class103 = ((Class505_Sub2) class505_sub2).aClass103_8796;
-		class103.method1788(Class384.aClass384_4666);
+		class103.method1788(Matrix44Arr.aClass384_4666);
 		class103.aClass384_1058.method6518();
 		class103.anInt1056 = -1;
 		int i_64_ = -2;
@@ -439,10 +439,10 @@ public class Class54 {
 	void method1095(Class505_Sub2 class505_sub2, Class151 class151) {
 		class505_sub2.RA(false);
 		aFloat512 = class505_sub2.aFloat8769;
-		float f = class505_sub2.aClass384_8740.aFloatArray4667[2];
-		float f_69_ = class505_sub2.aClass384_8740.aFloatArray4667[6];
-		float f_70_ = class505_sub2.aClass384_8740.aFloatArray4667[10];
-		float f_71_ = class505_sub2.aClass384_8740.aFloatArray4667[14];
+		float f = class505_sub2.aClass384_8740.buf[2];
+		float f_69_ = class505_sub2.aClass384_8740.buf[6];
+		float f_70_ = class505_sub2.aClass384_8740.buf[10];
+		float f_71_ = class505_sub2.aClass384_8740.buf[14];
 		int i = 0;
 		int i_72_ = 2147483647;
 		int i_73_ = 0;
@@ -469,7 +469,7 @@ public class Class54 {
 		i = 0;
 		class505_sub2.method13997(((Class54) this).anInterface32_511);
 		Class103 class103 = ((Class505_Sub2) class505_sub2).aClass103_8796;
-		class103.method1788(Class384.aClass384_4666);
+		class103.method1788(Matrix44Arr.aClass384_4666);
 		class103.aClass384_1058.method6518();
 		class103.anInt1056 = -1;
 		int i_79_ = -2;
@@ -520,13 +520,13 @@ public class Class54 {
 
 	void method1096(Class505_Sub2 class505_sub2, int i) {
 		int i_84_ = 0;
-		Class384 class384 = class505_sub2.aClass384_8740;
-		float f = class384.aFloatArray4667[0];
-		float f_85_ = class384.aFloatArray4667[4];
-		float f_86_ = class384.aFloatArray4667[8];
-		float f_87_ = class384.aFloatArray4667[1];
-		float f_88_ = class384.aFloatArray4667[5];
-		float f_89_ = class384.aFloatArray4667[9];
+		Matrix44Arr class384 = class505_sub2.aClass384_8740;
+		float f = class384.buf[0];
+		float f_85_ = class384.buf[4];
+		float f_86_ = class384.buf[8];
+		float f_87_ = class384.buf[1];
+		float f_88_ = class384.buf[5];
+		float f_89_ = class384.buf[9];
 		float f_90_ = f + f_87_;
 		float f_91_ = f_85_ + f_88_;
 		float f_92_ = f_86_ + f_89_;

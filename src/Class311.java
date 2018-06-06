@@ -157,14 +157,14 @@ public class Class311 {
 
 	static final void method5511(CS2Executor class527, int i) {
 		int i_35_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_35_, (byte) 98);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_35_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_35_, (byte) 98);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_35_ >> 16];
 		Class169.method2874(class118, class98, class527, (byte) 3);
 	}
 
 	static final void method5512(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		Class118 class118 = ((UnderlayDefinition) class513).aClass118_5886;
+		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Class96_Sub10.method14605(class118, class527, (byte) -77);
 	}
 

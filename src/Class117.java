@@ -619,7 +619,7 @@ public class Class117 {
 				Class282_Sub15_Sub2 class282_sub15_sub2 = (Class282_Sub20_Sub10.method15262(Class260.aClass282_Sub15_Sub2_3231, 1475290596));
 				Class42_Sub1.method14563(true, class282_sub15_sub2, (short) 569);
 			}
-			Class282_Sub43.method13400(IndexLoaders.INDEX_11, i, 0, i_95_, false, (byte) -50);
+			Class11.method13400(IndexLoaders.INDEX_11, i, 0, i_95_, false, (byte) -50);
 			Class150.method2580(-1, 255, (byte) -39);
 			Class260.aBool3220 = true;
 		}
@@ -631,7 +631,7 @@ public class Class117 {
 	}
 
 	public static int method1980(int i, int i_98_, boolean bool, int i_99_) {
-		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, -2136766081);
+		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, -2136766081);
 		if (class282_sub30 == null) {
 			return 0;
 		}
@@ -647,7 +647,7 @@ public class Class117 {
 		return i_100_;
 	}
 
-	public static Class118 method1981(int i, byte i_102_) {
+	public static IComponentDefinitions method1981(int i, byte i_102_) {
 		int i_103_ = i >> 16;
 		if (null == Class468_Sub8.aClass98Array7889[i_103_] || (Class468_Sub8.aClass98Array7889[i_103_].method1618(i, (byte) 12) == null)) {
 			boolean bool = Class456_Sub3.method12682(i_103_, null, -1161112150);

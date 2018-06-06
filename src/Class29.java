@@ -132,14 +132,14 @@ public class Class29 {
 		return null;
 	}
 
-	static final void method786(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method786(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
 		if (bool != class118.aBool1306) {
 			class118.aBool1306 = bool;
 			Class109.method1858(class118, (byte) -3);
 		}
 		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			Class78.method1389(class118.anInt1287 * -1952846363, -626903266);
+			Class78.method1389(class118.idHash * -1952846363, -626903266);
 	}
 
 	static final void method787(CS2Executor class527, byte i) {
@@ -157,12 +157,12 @@ public class Class29 {
 	}
 
 	static void method788(int i, boolean bool, int i_2_) {
-		Class282_Sub30 class282_sub30 = Class517.method11127(i, bool, 1384603359);
+		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1384603359);
 		if (class282_sub30 != null)
 			class282_sub30.unlink(-371378792);
 	}
 
-	static final void method789(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method789(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		if (5 == -2131393857 * class118.anInt1268)
 			Class306.method5459(class118, class98, class527, -1486072931);
 	}

@@ -21,7 +21,7 @@ public class Class149_Sub2 extends Class149 {
 	}
 
 	static Class149_Sub2 method14607(RsByteBuffer class282_sub35) {
-		return new Class149_Sub2(class282_sub35.readShort(2003141552), class282_sub35.readShort(2055658374), class282_sub35.readShort(1667236096), class282_sub35.readShort(2139929831), class282_sub35.readShort(1862763469), class282_sub35.readShort(1819463410), class282_sub35.readShort(1592654655), class282_sub35.readShort(1671590886), class282_sub35.read24BitUnsignedInteger((short) 24536), class282_sub35.readUnsignedByte());
+		return new Class149_Sub2(class282_sub35.readShort(2003141552), class282_sub35.readShort(2055658374), class282_sub35.readShort(1667236096), class282_sub35.readShort(2139929831), class282_sub35.readShort(1862763469), class282_sub35.readShort(1819463410), class282_sub35.readShort(1592654655), class282_sub35.readShort(1671590886), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 
 	void method2556(int i, int i_1_, int i_2_) {
@@ -61,7 +61,7 @@ public class Class149_Sub2 extends Class149 {
 	}
 
 	static Class149_Sub2 method14608(RsByteBuffer class282_sub35) {
-		return new Class149_Sub2(class282_sub35.readShort(1998911843), class282_sub35.readShort(1983145739), class282_sub35.readShort(2049498865), class282_sub35.readShort(1897994004), class282_sub35.readShort(1836323433), class282_sub35.readShort(1953394053), class282_sub35.readShort(1576305204), class282_sub35.readShort(1947146012), class282_sub35.read24BitUnsignedInteger((short) 28889), class282_sub35.readUnsignedByte());
+		return new Class149_Sub2(class282_sub35.readShort(1998911843), class282_sub35.readShort(1983145739), class282_sub35.readShort(2049498865), class282_sub35.readShort(1897994004), class282_sub35.readShort(1836323433), class282_sub35.readShort(1953394053), class282_sub35.readShort(1576305204), class282_sub35.readShort(1947146012), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
 	}
 
 	void method2562(int i, int i_25_) {

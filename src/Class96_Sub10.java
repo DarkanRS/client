@@ -40,71 +40,71 @@ public abstract class Class96_Sub10 extends Class96 {
 
 	static final void method14602(CS2Executor class527, int i) {
 		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_0_, (byte) 123);
+		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 123);
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1277 * 442725395;
 	}
 
 	public static void method14603(int i, int i_1_, int i_2_, String string, byte i_3_) {
-		Class118 class118 = Index.method5694(i_1_, i_2_, -1959607972);
+		IComponentDefinitions class118 = Index.method5694(i_1_, i_2_, -1959607972);
 		if (null != class118) {
-			if (class118.anObjectArray1410 != null) {
-				Class282_Sub43 class282_sub43 = new Class282_Sub43();
-				class282_sub43.aClass118_8053 = class118;
-				class282_sub43.anInt8051 = i * 161833325;
-				class282_sub43.aString8060 = string;
-				class282_sub43.anObjectArray8054 = class118.anObjectArray1410;
-				Class96_Sub4.method13790(class282_sub43, 156165111);
+			if (class118.params != null) {
+				HookRequest request = new HookRequest();
+				request.iComponentDefs = class118;
+				request.anInt8051 = i * 161833325;
+				request.opName = string;
+				request.params = class118.params;
+				Class96_Sub4.executeHookInner200k(request, 156165111);
 			}
 			if (client.method11633(class118).method12178(i - 1, (short) -2626)) {
 				Class184 class184 = Class468_Sub20.method12807(870102038);
 				if (-1741204137 * client.anInt7166 == 0 || 13 == client.anInt7166 * -1741204137) {
 					if (1 == i) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4574, class184.aClass432_2283, 440245011);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4574, class184.isaac, 440245011);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, 1677489806);
 					}
 					if (i == 2) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4554, class184.aClass432_2283, -209568629);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4554, class184.isaac, -209568629);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, -641320368);
 					}
 					if (3 == i) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4527, class184.aClass432_2283, 67534413);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4527, class184.isaac, 67534413);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, 34641642);
 					}
 					if (i == 4) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4536, class184.aClass432_2283, 941336151);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4536, class184.isaac, 941336151);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (class118.anInt1426 * -56249735), -1836374495);
 						class184.method3049(class282_sub23, 1717133549);
 					}
 					if (i == 5) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4562, class184.aClass432_2283, -519873323);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4562, class184.isaac, -519873323);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, 1443340985);
 					}
 					if (6 == i) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4546, class184.aClass432_2283, 516854951);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4546, class184.isaac, 516854951);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, 1118744569);
 					}
 					if (i == 7) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4550, class184.aClass432_2283, 216995585);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4550, class184.isaac, 216995585);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, 1074910390);
 					}
 					if (i == 8) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4605, class184.aClass432_2283, 1816324678);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4605, class184.isaac, 1816324678);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (class118.anInt1426 * -56249735), -1836374495);
 						class184.method3049(class282_sub23, -358596995);
 					}
 					if (i == 9) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4604, class184.aClass432_2283, 868991635);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4604, class184.isaac, 868991635);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, -986323584);
 					}
 					if (i == 10) {
-						Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4608, class184.aClass432_2283, 486801259);
+						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4608, class184.isaac, 486801259);
 						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
 						class184.method3049(class282_sub23, -28228352);
 					}
@@ -120,7 +120,7 @@ public abstract class Class96_Sub10 extends Class96 {
 		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_4_ & i_5_;
 	}
 
-	static final void method14605(Class118 class118, CS2Executor class527, byte i) {
+	static final void method14605(IComponentDefinitions class118, CS2Executor class527, byte i) {
 		int i_6_ = 10;
 		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
 		Class274.method4883(class118, i_6_, i_7_, class527, -838566564);

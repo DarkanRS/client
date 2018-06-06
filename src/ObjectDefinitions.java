@@ -117,7 +117,7 @@ public class ObjectDefinitions {
 					anIntArrayArray5637[i_5_][i_7_] = stream.readBigSmart();
 			}
 		} else if (opcode == 2)
-			aString5638 = stream.readString(501873848);
+			aString5638 = stream.readString();
 		else if (opcode == 14)
 			anInt5648 = stream.readUnsignedByte() * 63498699;
 		else if (15 == opcode)
@@ -148,7 +148,7 @@ public class ObjectDefinitions {
 		else if (39 == opcode)
 			((ObjectDefinitions) this).anInt5663 = stream.readByte((short) -24295) * -520358997;
 		else if (opcode >= 30 && opcode < 35)
-			options[opcode - 30] = stream.readString(1449027993);
+			options[opcode - 30] = stream.readString();
 		else if (40 == opcode) {
 			int i_9_ = stream.readUnsignedByte();
 			((ObjectDefinitions) this).aShortArray5645 = new short[i_9_];
@@ -273,7 +273,7 @@ public class ObjectDefinitions {
 		} else if (opcode == 107)
 			anInt5669 = stream.readUnsignedShort() * 945855293;
 		else if (opcode >= 150 && opcode < 155) {
-			options[opcode - 150] = stream.readString(49209846);
+			options[opcode - 150] = stream.readString();
 			if (!((ObjectIndexLoader) ((ObjectDefinitions) this).loader).showOptions)
 				options[opcode - 150] = null;
 		} else if (160 == opcode) {
@@ -322,10 +322,10 @@ public class ObjectDefinitions {
 			}
 			for (int i_28_ = 0; i_28_ < i_26_; i_28_++) {
 				boolean bool = stream.readUnsignedByte() == 1;
-				int i_29_ = stream.read24BitUnsignedInteger((short) 13754);
+				int i_29_ = stream.read24BitUnsignedInteger();
 				Node class282;
 				if (bool)
-					class282 = new Class282_Sub47(stream.readString(1733811807));
+					class282 = new Class282_Sub47(stream.readString());
 				else
 					class282 = new Class282_Sub38(stream.readInt());
 				((ObjectDefinitions) this).aClass465_5668.method7765(class282, (long) i_29_);
@@ -784,8 +784,8 @@ public class ObjectDefinitions {
 
 	static final void method8018(CS2Executor class527, int i) {
 		int i_186_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		Class118 class118 = Class117.method1981(i_186_, (byte) 74);
-		Class98 class98 = Class468_Sub8.aClass98Array7889[i_186_ >> 16];
+		IComponentDefinitions class118 = Class117.method1981(i_186_, (byte) 74);
+		Interface class98 = Class468_Sub8.aClass98Array7889[i_186_ >> 16];
 		ItemDefinitions.method7142(class118, class98, class527, -1447710686);
 	}
 

@@ -102,10 +102,10 @@ public class Class450 {
 	static final void method7501(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		String string_9_ = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4558, client.aClass184_7218.aClass432_2283, -375525383);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeShort((Class108.method1846(string, 204305012) + Class108.method1846(string_9_, -1829354202)), 1417031095);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string);
-		class282_sub23.aClass282_Sub35_Sub2_7682.writeString(string_9_);
+		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4558, client.aClass184_7218.isaac, -375525383);
+		class282_sub23.buffer.writeShort((ChatLine.getLength(string) + ChatLine.getLength(string_9_)), 1417031095);
+		class282_sub23.buffer.writeString(string);
+		class282_sub23.buffer.writeString(string_9_);
 		client.aClass184_7218.method3049(class282_sub23, -283007581);
 	}
 
@@ -120,7 +120,7 @@ public class Class450 {
 			class513 = class527.aClass513_7007;
 		}
 		UnderlayDefinition class513_10_ = class513;
-		Class118 class118 = class513_10_.aClass118_5886;
+		IComponentDefinitions class118 = class513_10_.aClass118_5886;
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
 	}
 }

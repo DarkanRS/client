@@ -1399,23 +1399,23 @@ public class Class390_Sub3 extends Class390 {
 	public void method6717(int i, int i_316_, int i_317_, boolean[][] bools, boolean bool, int i_318_) {
 		if ((((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anIntArray8979) == null || (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aFloatArray9010) == null)
 			throw new IllegalStateException("");
-		Class384 class384 = (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
-		((Class390_Sub3) this).aFloat9338 = class384.aFloatArray4667[0];
-		((Class390_Sub3) this).aFloat9340 = class384.aFloatArray4667[1];
-		((Class390_Sub3) this).aFloat9341 = class384.aFloatArray4667[2];
-		((Class390_Sub3) this).aFloat9342 = class384.aFloatArray4667[3];
-		((Class390_Sub3) this).aFloat9343 = class384.aFloatArray4667[4];
-		((Class390_Sub3) this).aFloat9344 = class384.aFloatArray4667[5];
-		((Class390_Sub3) this).aFloat9334 = class384.aFloatArray4667[6];
-		((Class390_Sub3) this).aFloat9346 = class384.aFloatArray4667[7];
-		((Class390_Sub3) this).aFloat9339 = class384.aFloatArray4667[8];
-		((Class390_Sub3) this).aFloat9327 = class384.aFloatArray4667[9];
-		((Class390_Sub3) this).aFloat9349 = class384.aFloatArray4667[10];
-		((Class390_Sub3) this).aFloat9350 = class384.aFloatArray4667[11];
-		((Class390_Sub3) this).aFloat9351 = class384.aFloatArray4667[12];
-		((Class390_Sub3) this).aFloat9328 = class384.aFloatArray4667[13];
-		((Class390_Sub3) this).aFloat9333 = class384.aFloatArray4667[14];
-		((Class390_Sub3) this).aFloat9354 = class384.aFloatArray4667[15];
+		Matrix44Arr class384 = (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
+		((Class390_Sub3) this).aFloat9338 = class384.buf[0];
+		((Class390_Sub3) this).aFloat9340 = class384.buf[1];
+		((Class390_Sub3) this).aFloat9341 = class384.buf[2];
+		((Class390_Sub3) this).aFloat9342 = class384.buf[3];
+		((Class390_Sub3) this).aFloat9343 = class384.buf[4];
+		((Class390_Sub3) this).aFloat9344 = class384.buf[5];
+		((Class390_Sub3) this).aFloat9334 = class384.buf[6];
+		((Class390_Sub3) this).aFloat9346 = class384.buf[7];
+		((Class390_Sub3) this).aFloat9339 = class384.buf[8];
+		((Class390_Sub3) this).aFloat9327 = class384.buf[9];
+		((Class390_Sub3) this).aFloat9349 = class384.buf[10];
+		((Class390_Sub3) this).aFloat9350 = class384.buf[11];
+		((Class390_Sub3) this).aFloat9351 = class384.buf[12];
+		((Class390_Sub3) this).aFloat9328 = class384.buf[13];
+		((Class390_Sub3) this).aFloat9333 = class384.buf[14];
+		((Class390_Sub3) this).aFloat9354 = class384.buf[15];
 		for (int i_319_ = 0; i_319_ < i_317_ + i_317_; i_319_++) {
 			for (int i_320_ = 0; i_320_ < i_317_ + i_317_; i_320_++) {
 				if (bools[i_319_][i_320_]) {
@@ -1681,23 +1681,23 @@ public class Class390_Sub3 extends Class390 {
 	public void method6716(int i, int i_419_, int i_420_, boolean[][] bools, boolean bool, int i_421_) {
 		if ((((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).anIntArray8979) == null || (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aFloatArray9010) == null)
 			throw new IllegalStateException("");
-		Class384 class384 = (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
-		((Class390_Sub3) this).aFloat9338 = class384.aFloatArray4667[0];
-		((Class390_Sub3) this).aFloat9340 = class384.aFloatArray4667[1];
-		((Class390_Sub3) this).aFloat9341 = class384.aFloatArray4667[2];
-		((Class390_Sub3) this).aFloat9342 = class384.aFloatArray4667[3];
-		((Class390_Sub3) this).aFloat9343 = class384.aFloatArray4667[4];
-		((Class390_Sub3) this).aFloat9344 = class384.aFloatArray4667[5];
-		((Class390_Sub3) this).aFloat9334 = class384.aFloatArray4667[6];
-		((Class390_Sub3) this).aFloat9346 = class384.aFloatArray4667[7];
-		((Class390_Sub3) this).aFloat9339 = class384.aFloatArray4667[8];
-		((Class390_Sub3) this).aFloat9327 = class384.aFloatArray4667[9];
-		((Class390_Sub3) this).aFloat9349 = class384.aFloatArray4667[10];
-		((Class390_Sub3) this).aFloat9350 = class384.aFloatArray4667[11];
-		((Class390_Sub3) this).aFloat9351 = class384.aFloatArray4667[12];
-		((Class390_Sub3) this).aFloat9328 = class384.aFloatArray4667[13];
-		((Class390_Sub3) this).aFloat9333 = class384.aFloatArray4667[14];
-		((Class390_Sub3) this).aFloat9354 = class384.aFloatArray4667[15];
+		Matrix44Arr class384 = (((HardwareRenderer) ((Class390_Sub3) this).aClass505_Sub3_9353).aClass384_8996);
+		((Class390_Sub3) this).aFloat9338 = class384.buf[0];
+		((Class390_Sub3) this).aFloat9340 = class384.buf[1];
+		((Class390_Sub3) this).aFloat9341 = class384.buf[2];
+		((Class390_Sub3) this).aFloat9342 = class384.buf[3];
+		((Class390_Sub3) this).aFloat9343 = class384.buf[4];
+		((Class390_Sub3) this).aFloat9344 = class384.buf[5];
+		((Class390_Sub3) this).aFloat9334 = class384.buf[6];
+		((Class390_Sub3) this).aFloat9346 = class384.buf[7];
+		((Class390_Sub3) this).aFloat9339 = class384.buf[8];
+		((Class390_Sub3) this).aFloat9327 = class384.buf[9];
+		((Class390_Sub3) this).aFloat9349 = class384.buf[10];
+		((Class390_Sub3) this).aFloat9350 = class384.buf[11];
+		((Class390_Sub3) this).aFloat9351 = class384.buf[12];
+		((Class390_Sub3) this).aFloat9328 = class384.buf[13];
+		((Class390_Sub3) this).aFloat9333 = class384.buf[14];
+		((Class390_Sub3) this).aFloat9354 = class384.buf[15];
 		for (int i_422_ = 0; i_422_ < i_420_ + i_420_; i_422_++) {
 			for (int i_423_ = 0; i_423_ < i_420_ + i_420_; i_423_++) {
 				if (bools[i_422_][i_423_]) {

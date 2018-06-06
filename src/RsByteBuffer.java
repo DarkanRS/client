@@ -164,7 +164,7 @@ public class RsByteBuffer extends Node {
 		return i_24_;
 	}
 
-	public int read24BitUnsignedInteger(short i) {
+	public int read24BitUnsignedInteger() {
 		index += 948536695;
 		return (((buffer[index * -1990677291 - 2] & 0xff) << 8) + ((buffer[index * -1990677291 - 3] & 0xff) << 16) + (buffer[-1990677291 * index - 1] & 0xff));
 	}
@@ -211,11 +211,11 @@ public class RsByteBuffer extends Node {
 			index += -1115476867;
 			return null;
 		}
-		return readString(613401213);
+		return readString();
 	}
 
 	public RsByteBuffer(int i) {
-		buffer = Class491.method8239(i, 1959390720);
+		buffer = CircularBuffer.method8239(i, 1959390720);
 		index = 0;
 	}
 
@@ -376,7 +376,7 @@ public class RsByteBuffer extends Node {
 	}
 
 
-	public int readShortLE128(int i) {
+	public int readShortLE128() {
 		index += 2064013562;
 		return (((buffer[-1990677291 * index - 1] & 0xff) << 8) + (buffer[index * -1990677291 - 2] - 128 & 0xff));
 	}
@@ -422,7 +422,7 @@ public class RsByteBuffer extends Node {
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i >> 8);
 	}
 
-	public int readIntLE(int i) {
+	public int readIntLE() {
 		index += -166940172;
 		return ((buffer[index * -1990677291 - 4] & 0xff) + (((buffer[-1990677291 * index - 2] & 0xff) << 16) + ((buffer[index * -1990677291 - 1] & 0xff) << 24) + ((buffer[-1990677291 * index - 3] & 0xff) << 8)));
 	}
@@ -534,7 +534,7 @@ public class RsByteBuffer extends Node {
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (int) l;
 	}
 
-	public String readString(int i) {
+	public String readString() {
 		int i_119_ = index * -1990677291;
 		while (buffer[(index += -1115476867) * -1990677291 - 1] != 0) {
 			/* empty */
@@ -616,7 +616,7 @@ public class RsByteBuffer extends Node {
 		buffer[-1990677291 * index - i - 1] = (byte) i;
 	}
 
-	static final void method13292(Class118 class118, Class98 class98, CS2Executor class527, byte i) {
+	static final void method13292(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class527.anInt7012 -= 283782002;
 		class118.anInt1441 = 304814545 * (class527.intStack[class527.anInt7012 * 1942118537]);
 		class118.anInt1263 = ((class527.intStack[1942118537 * class527.anInt7012 + 1]) * -1208146817);

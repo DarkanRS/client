@@ -201,7 +201,7 @@ public class Class457 {
 		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
 	}
 
-	static final void method7667(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method7667(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 425673003;
 		int i_4_ = (class527.intStack[class527.anInt7012 * 1942118537]);
 		short i_5_ = (short) (class527.intStack[1 + class527.anInt7012 * 1942118537]);
@@ -210,7 +210,7 @@ public class Class457 {
 			class118.method2007(i_4_, i_5_, i_6_, -1261332787);
 			Class109.method1858(class118, (byte) -93);
 			if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-				Class311.method5513(class118.anInt1287 * -1952846363, i_4_, (byte) -1);
+				Class311.method5513(class118.idHash * -1952846363, i_4_, (byte) -1);
 		}
 	}
 

@@ -136,13 +136,13 @@ public class Class110 {
 				}
 			}
 			Class184 class184 = Class468_Sub20.method12807(-1317872697);
-			Class282_Sub23 class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4538, class184.aClass432_2283, 1631130061);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(0);
-			int i_3_ = (-1990677291 * class282_sub23.aClass282_Sub35_Sub2_7682.index);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_1_);
-			class282_sub23.aClass282_Sub35_Sub2_7682.writeByte(i_2_);
-			Class427.method7189(class282_sub23.aClass282_Sub35_Sub2_7682, string, 151728977);
-			class282_sub23.aClass282_Sub35_Sub2_7682.method13061((class282_sub23.aClass282_Sub35_Sub2_7682.index * -1990677291) - i_3_, -918882679);
+			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4538, class184.isaac, 1631130061);
+			class282_sub23.buffer.writeByte(0);
+			int i_3_ = (-1990677291 * class282_sub23.buffer.index);
+			class282_sub23.buffer.writeByte(i_1_);
+			class282_sub23.buffer.writeByte(i_2_);
+			Class427.method7189(class282_sub23.buffer, string, 151728977);
+			class282_sub23.buffer.method13061((class282_sub23.buffer.index * -1990677291) - i_3_, -918882679);
 			class184.method3049(class282_sub23, 1177303743);
 		}
 	}

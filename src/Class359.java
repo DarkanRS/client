@@ -53,7 +53,7 @@ public class Class359 {
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = string;
 	}
 
-	static final void method6244(Class118 class118, Class98 class98, CS2Executor class527, int i) {
+	static final void method6244(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
 		class527.anInt7012 -= 283782002;
 		class118.anInt1289 = (class527.intStack[class527.anInt7012 * 1942118537]) * 1000406043;
 		class118.anInt1375 = 657648623 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
