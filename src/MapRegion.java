@@ -22,7 +22,7 @@ public class MapRegion {
 	Class282_Sub50_Sub6 aClass282_Sub50_Sub6_3176;
 	int anInt3177;
 	byte[][] mapDataUnderlayBuffer;
-	int anInt3179;
+	int zFar;
 	Class283 aClass283_3180;
 	Class341 aClass341_3181 = new Class341(0, 0, 0, 0);
 	Class336[] aClass336Array3182 = new Class336[4];
@@ -325,11 +325,12 @@ public class MapRegion {
 
 	public void method4447(int i) {
 		this.anInt3177 = 840435000;
-		this.anInt3179 = (int) (34.46 * (this.anInt3172 * -2082656295)) * -1709679659;
-		this.anInt3179 = -1709679659 * (-552598147 * this.anInt3179 << 2);
+		this.zFar = (int) (34.46 * (this.anInt3172 * -2082656295)) * -1709679659;
+		this.zFar = -1709679659 * (-552598147 * this.zFar << 2);
 		if (Renderers.SOFTWARE_RENDERER.method8454()) {
-			this.anInt3179 += 817342976;
+			this.zFar += 817342976;
 		}
+		this.zFar += (817342976 * 6);
 	}
 
 	public int method4451(int i) {
@@ -746,7 +747,7 @@ public class MapRegion {
 				}
 			}
 		}
-		int i_135_ = (Class5.method295(Class393.aClass282_Sub54_4783.aClass468_Sub16_8198.method12750((byte) 32), 44628475).anInt1064 * 793844040);
+		int i_135_ = (Class5.method295(Class393.aClass282_Sub54_4783.aClass468_Sub16_8198.method12750((byte) 32), 44628475).chunkSize * 793844040);
 		if (Renderers.SOFTWARE_RENDERER.method8454()) {
 			i_135_++;
 		}
@@ -1235,7 +1236,7 @@ public class MapRegion {
 	}
 
 	public int method4522(int i) {
-		return -552598147 * this.anInt3179;
+		return -552598147 * this.zFar;
 	}
 
 	public MapRegion(boolean bool) {
@@ -1280,7 +1281,7 @@ public class MapRegion {
 			this.aClass239_3175 = class257_406_.aClass239_3175;
 			this.anIntArrayArrayArray3205 = class257_406_.anIntArrayArrayArray3205;
 			this.anInt3177 = 1 * class257_406_.anInt3177;
-			this.anInt3179 = class257_406_.anInt3179 * 1;
+			this.zFar = class257_406_.zFar * 1;
 			this.aClass282_Sub50_Sub6_3176 = class257_406_.aClass282_Sub50_Sub6_3176;
 			this.aClass283_3180 = class257_406_.aClass283_3180;
 			this.anIntArrayArray3185 = class257_406_.anIntArrayArray3185;

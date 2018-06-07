@@ -4,7 +4,7 @@
 
 public class Game {
 	static Game aClass486_5743;
-	public static Game runescape = new Game("runescape", "RuneScape", 0);
+	public static Game darkan = new Game("darkan", "Darkan", 0);
 	static Game aClass486_5745;
 	public int anInt5746;
 	static Game aClass486_5747;
@@ -25,7 +25,7 @@ public class Game {
 	}
 
 	static Game[] method8202() {
-		return new Game[] { aClass486_5745, aClass486_5743, stellarDawn, aClass486_5747, runescape };
+		return new Game[] { aClass486_5745, aClass486_5743, stellarDawn, aClass486_5747, darkan };
 	}
 
 	public static Game method8203(int i) {

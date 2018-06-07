@@ -123,7 +123,7 @@ public class ObjectIndexLoader {
 			SharedConfigsType.OBJECT_DEFINITIONS.filesPerContainer(-1090472574);
 			((ObjectIndexLoader) this).objectIndex.filesCount(i, -1510124116);
 		}
-		if (((ObjectIndexLoader) this).game == Game.runescape)
+		if (((ObjectIndexLoader) this).game == Game.darkan)
 			((ObjectIndexLoader) this).defaultOptions = (new String[] { null, null, null, null, null, Message.EXAMINE.translate((((ObjectIndexLoader) this).aClass495_5608), -952366759) });
 		else
 			((ObjectIndexLoader) this).defaultOptions = new String[] { null, null, null, null, null, null };

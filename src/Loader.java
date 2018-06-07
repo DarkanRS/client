@@ -22,7 +22,9 @@ public class Loader extends Applet implements AppletStub {
 	public static final int CLIENT_REVISON = 727;
 	public static final int SUB_REVISION = 1;
 
-	public static final String IP_ADDRESS = /*"axios.trentonkress.com"*/"127.0.0.1";
+	public static final String IP_ADDRESS = "127.0.0.1";
+	//public static final String IP_ADDRESS = "axios.trentonkress.com";
+	
 	public static final int LOBBY_PORT = 5555;
 
 	public static final boolean USING_ISAAC = false;
@@ -32,7 +34,7 @@ public class Loader extends Applet implements AppletStub {
 	public static int clientRevision = 5;
 	public static int newClientRevision = clientRevision+1;
 	
-	public static final String clientLink = "http://darkan.org/assets/uploads/files/Darkan.jar";
+	public static final String clientLink = "http://darkan.org/assets/uploads/files/darkanclient.jar";
 
 	public static Properties clientParams = new Properties();
 
@@ -133,7 +135,7 @@ public class Loader extends Applet implements AppletStub {
 	}
 
 	private void openFrame() {
-		clientFrame = new JFrame("Darkan v" + clientRevision);
+		clientFrame = new JFrame("Darkan Client");
 		clientFrame.setLayout(new BorderLayout());
 		final JPanel client_panel = new JPanel();
 		client_panel.setLayout(new BorderLayout());

@@ -133,7 +133,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			/* empty */
 		}
 		Class246.aStringArray3028 = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/", Class110.aString1103, "/tmp/", "" };
-		Class106.aStringArray1077 = new String[] { new StringBuilder().append(".jagex_cache_").append(-1179779029 * Class514.anInt5887).toString(), new StringBuilder().append(".file_store_").append(Class514.anInt5887 * -1179779029).toString() };
+		Class106.aStringArray1077 = new String[] { new StringBuilder().append(".dk_cache_").append(-1179779029 * Class514.anInt5887).toString(), new StringBuilder().append(".file_store_").append(Class514.anInt5887 * -1179779029).toString() };
 		while_52_: for (int i_10_ = 0; i_10_ < 4; i_10_++) {
 			aFile3264 = method4657(string, string_5_, i_10_, (byte) 75);
 			if (!aFile3264.exists())
@@ -179,7 +179,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	File method4657(String string, String string_16_, int i, byte i_17_) {
 		String string_18_ = (i == 0 ? "" : new StringBuilder().append("").append(i).toString());
-		Canvas_Sub1.aFile9453 = new File(Class110.aString1103, new StringBuilder().append("jagex_cl_").append(string).append("_").append(string_16_).append(string_18_).append(".dat").toString());
+		Canvas_Sub1.aFile9453 = new File(Class110.aString1103, new StringBuilder().append("dk_cl_").append(string).append("_").append(string_16_).append(string_18_).append(".dat").toString());
 		String string_19_ = null;
 		String string_20_ = null;
 		boolean bool = false;
@@ -237,7 +237,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 			}
 		}
 		if (null == string_19_) {
-			string_19_ = new StringBuilder().append(Class110.aString1103).append(File.separatorChar).append("jagexcache").append(string_18_).append(File.separatorChar).append(string).append(File.separatorChar).append(string_16_).append(File.separatorChar).toString();
+			string_19_ = new StringBuilder().append(Class110.aString1103).append(File.separatorChar).append("dkcache").append(string_18_).append(File.separatorChar).append(string).append(File.separatorChar).append(string_16_).append(File.separatorChar).toString();
 			bool = true;
 		}
 		if (string_20_ != null) {

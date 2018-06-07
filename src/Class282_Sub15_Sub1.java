@@ -198,7 +198,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static Game[] method14817(int i) {
-		return (new Game[] { Game.aClass486_5745, Game.aClass486_5743, Game.stellarDawn, Game.aClass486_5747, Game.runescape });
+		return (new Game[] { Game.aClass486_5745, Game.aClass486_5743, Game.stellarDawn, Game.aClass486_5747, Game.darkan });
 	}
 
 	int method12224() {

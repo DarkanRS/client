@@ -176,6 +176,16 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 		int i = mousewheelevent.getX();
 		int i_6_ = mousewheelevent.getY();
 		int i_7_ = mousewheelevent.getWheelRotation();
+		if (mousewheelevent.getWheelRotation() == -1) {
+			if (HitbarDefinitions.CAMERA_ZOOM >= -50) {
+				HitbarDefinitions.CAMERA_ZOOM -= 30;
+			}
+		}
+		if (mousewheelevent.getWheelRotation() == 1) {
+			if (HitbarDefinitions.CAMERA_ZOOM < 1700) {
+				HitbarDefinitions.CAMERA_ZOOM += 30;
+			}
+		}
 		method12909(6, i, i_6_, i_7_, -1931505233);
 		mousewheelevent.consume();
 	}
@@ -248,48 +258,6 @@ public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotio
 
 	public void method3595() {
 		method12907((short) 31873);
-	}
-
-	void method12910(Component component) {
-		method12907((short) 21776);
-		((Class209_Sub1) this).aComponent7935 = component;
-		((Class209_Sub1) this).aComponent7935.addMouseListener(this);
-		((Class209_Sub1) this).aComponent7935.addMouseMotionListener(this);
-		((Class209_Sub1) this).aComponent7935.addMouseWheelListener(this);
-	}
-
-	void method12911() {
-		if (((Class209_Sub1) this).aComponent7935 != null) {
-			((Class209_Sub1) this).aComponent7935.removeMouseWheelListener(this);
-			((Class209_Sub1) this).aComponent7935.removeMouseMotionListener(this);
-			((Class209_Sub1) this).aComponent7935.removeMouseListener(this);
-			((Class209_Sub1) this).aComponent7935 = null;
-			((Class209_Sub1) this).anInt7940 = 0;
-			((Class209_Sub1) this).anInt7939 = 0;
-			((Class209_Sub1) this).anInt7938 = 0;
-			((Class209_Sub1) this).anInt7944 = 0;
-			((Class209_Sub1) this).anInt7943 = 0;
-			((Class209_Sub1) this).anInt7942 = 0;
-			((Class209_Sub1) this).aClass482_7941 = null;
-			((Class209_Sub1) this).aClass482_7945 = null;
-		}
-	}
-
-	void method12912(int i, int i_8_, int i_9_, int i_10_) {
-		Class282_Sub53_Sub2 class282_sub53_sub2 = Class521_Sub1_Sub3_Sub1.method16080(i, i_8_, i_9_, Class169.method2869(2110720470), i_10_, 2004293850);
-		((Class209_Sub1) this).aClass482_7945.append(class282_sub53_sub2, 1726247046);
-	}
-
-	void method12913(int i, int i_11_, int i_12_, int i_13_) {
-		Class282_Sub53_Sub2 class282_sub53_sub2 = Class521_Sub1_Sub3_Sub1.method16080(i, i_11_, i_12_, Class169.method2869(1587211340), i_13_, 1414576799);
-		((Class209_Sub1) this).aClass482_7945.append(class282_sub53_sub2, 33532215);
-	}
-
-	void method12914(int i, int i_14_) {
-		((Class209_Sub1) this).anInt7942 = 1679338381 * i;
-		((Class209_Sub1) this).anInt7943 = 1672782407 * i_14_;
-		if (((Class209_Sub1) this).aBool7946)
-			method12909(-1, i, i_14_, 0, -1931505233);
 	}
 
 	static final void method12915(CS2Executor class527, int i) {

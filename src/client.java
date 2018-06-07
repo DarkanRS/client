@@ -1774,7 +1774,7 @@ public final class client extends Engine {
 			Class448.aClass450_5424.anInt5437 = -1441381029 * Class448.aClass450_5424.worldId + 1250363344;
 		}
 		Class159.aClass450_2010 = Class448.aClass450_5420;
-		if (Game.runescape == CURRENT_GAME)
+		if (Game.darkan == CURRENT_GAME)
 			aBool7372 = false;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		try {
@@ -8052,7 +8052,7 @@ public final class client extends Engine {
 			Class448.aClass450_5424.anInt5437 = -1441381029 * Class448.aClass450_5424.worldId + 1250363344;
 		}
 		Class159.aClass450_2010 = Class448.aClass450_5420;
-		if (Game.runescape == CURRENT_GAME)
+		if (Game.darkan == CURRENT_GAME)
 			aBool7372 = false;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		try {
@@ -9019,7 +9019,7 @@ public final class client extends Engine {
 								method11768(class98, class118.aClass118Array1439, class118.idHash * -1952846363, i_776_, i_777_, i_778_, i_779_, (i_774_ - class118.anInt1311 * 276864765), (i_775_ - class118.anInt1312 * 682782159), i_771_, i_772_);
 							Class282_Sub44 class282_sub44 = (Class282_Sub44) (aClass465_7442.method7754((long) (class118.idHash * -1952846363)));
 							if (null != class282_sub44) {
-								if (Game.runescape == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_782_ && !aBool7168)
+								if (Game.darkan == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_782_ && !aBool7168)
 									HitsplatDefinitions.method3851(-402153223);
 								Class436.method7313(class282_sub44, (class282_sub44.anInt8063 * 587626901), i_776_, i_777_, i_778_, i_779_, i_774_, i_775_, i_771_, i_772_, (byte) -89);
 							}
@@ -16201,7 +16201,7 @@ public final class client extends Engine {
 								method11768(class98, class118.aClass118Array1439, class118.idHash * -1952846363, i_1906_, i_1907_, i_1908_, i_1909_, (i_1904_ - class118.anInt1311 * 276864765), (i_1905_ - class118.anInt1312 * 682782159), i_1901_, i_1902_);
 							Class282_Sub44 class282_sub44 = (Class282_Sub44) (aClass465_7442.method7754((long) (class118.idHash * -1952846363)));
 							if (null != class282_sub44) {
-								if (Game.runescape == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_1912_ && !aBool7168)
+								if (Game.darkan == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_1912_ && !aBool7168)
 									HitsplatDefinitions.method3851(-402153223);
 								Class436.method7313(class282_sub44, (class282_sub44.anInt8063 * 587626901), i_1906_, i_1907_, i_1908_, i_1909_, i_1904_, i_1905_, i_1901_, i_1902_, (byte) -87);
 							}
@@ -17301,7 +17301,7 @@ public final class client extends Engine {
 								method11768(class98, class118.aClass118Array1439, class118.idHash * -1952846363, i_2046_, i_2047_, i_2048_, i_2049_, (i_2044_ - class118.anInt1311 * 276864765), (i_2045_ - class118.anInt1312 * 682782159), i_2041_, i_2042_);
 							Class282_Sub44 class282_sub44 = (Class282_Sub44) (aClass465_7442.method7754((long) (class118.idHash * -1952846363)));
 							if (null != class282_sub44) {
-								if (Game.runescape == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_2052_ && !aBool7168)
+								if (Game.darkan == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_2052_ && !aBool7168)
 									HitsplatDefinitions.method3851(-402153223);
 								Class436.method7313(class282_sub44, (class282_sub44.anInt8063 * 587626901), i_2046_, i_2047_, i_2048_, i_2049_, i_2044_, i_2045_, i_2041_, i_2042_, (byte) -37);
 							}
@@ -17920,7 +17920,7 @@ public final class client extends Engine {
 								method11768(class98, class118.aClass118Array1439, class118.idHash * -1952846363, i_2118_, i_2119_, i_2120_, i_2121_, (i_2116_ - class118.anInt1311 * 276864765), (i_2117_ - class118.anInt1312 * 682782159), i_2113_, i_2114_);
 							Class282_Sub44 class282_sub44 = (Class282_Sub44) (aClass465_7442.method7754((long) (class118.idHash * -1952846363)));
 							if (null != class282_sub44) {
-								if (Game.runescape == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_2124_ && !aBool7168)
+								if (Game.darkan == CURRENT_GAME && 0 == (class282_sub44.anInt8062 * -1517697923) && !Class20.aBool161 && bool_2124_ && !aBool7168)
 									HitsplatDefinitions.method3851(-402153223);
 								Class436.method7313(class282_sub44, (class282_sub44.anInt8063 * 587626901), i_2118_, i_2119_, i_2120_, i_2121_, i_2116_, i_2117_, i_2113_, i_2114_, (byte) -83);
 							}
@@ -18809,7 +18809,7 @@ public final class client extends Engine {
 			Class448.aClass450_5424.anInt5437 = -1441381029 * Class448.aClass450_5424.worldId + 1250363344;
 		}
 		Class159.aClass450_2010 = Class448.aClass450_5420;
-		if (Game.runescape == CURRENT_GAME)
+		if (Game.darkan == CURRENT_GAME)
 			aBool7372 = false;
 		Class455.aShortArray5452 = ObjectDefinitions.aShortArray5691 = NPCDefinitions.aShortArray4862 = ItemDefinitions.staticColorArr256 = new short[256];
 		try {

@@ -15,7 +15,7 @@ public class Class468_Sub22 extends Class468 {
 	}
 
 	public void method12871(byte i) {
-		if (aClass282_Sub54_5581.method13514((byte) 28) != Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 28) != Game.darkan)
 			anInt5578 = -754033619;
 		if (0 != -859024475 * anInt5578 && 1 != anInt5578 * -859024475)
 			anInt5578 = method7781(2131611866) * -754033619;
@@ -26,13 +26,13 @@ public class Class468_Sub22 extends Class468 {
 	}
 
 	public boolean method12872(int i) {
-		if (aClass282_Sub54_5581.method13514((byte) 119) == Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 119) == Game.darkan)
 			return true;
 		return false;
 	}
 
 	public int method7785(int i, int i_0_) {
-		if (aClass282_Sub54_5581.method13514((byte) 66) == Game.runescape) {
+		if (aClass282_Sub54_5581.method13514((byte) 66) == Game.darkan) {
 			if (i == 0 || aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(288309414) == 1)
 				return 1;
 			return 2;
@@ -49,7 +49,7 @@ public class Class468_Sub22 extends Class468 {
 	}
 
 	public int method7784(int i) {
-		if (aClass282_Sub54_5581.method13514((byte) 72) == Game.runescape) {
+		if (aClass282_Sub54_5581.method13514((byte) 72) == Game.darkan) {
 			if (i == 0 || aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(-925093981) == 1)
 				return 1;
 			return 2;
@@ -70,32 +70,32 @@ public class Class468_Sub22 extends Class468 {
 	}
 
 	public void method12874() {
-		if (aClass282_Sub54_5581.method13514((byte) 68) != Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 68) != Game.darkan)
 			anInt5578 = -754033619;
 		if (0 != -859024475 * anInt5578 && 1 != anInt5578 * -859024475)
 			anInt5578 = method7781(1923068196) * -754033619;
 	}
 
 	public boolean method12875() {
-		if (aClass282_Sub54_5581.method13514((byte) 114) == Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 114) == Game.darkan)
 			return true;
 		return false;
 	}
 
 	public boolean method12876() {
-		if (aClass282_Sub54_5581.method13514((byte) 60) == Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 60) == Game.darkan)
 			return true;
 		return false;
 	}
 
 	public boolean method12877() {
-		if (aClass282_Sub54_5581.method13514((byte) 63) == Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 63) == Game.darkan)
 			return true;
 		return false;
 	}
 
 	public boolean method12878() {
-		if (aClass282_Sub54_5581.method13514((byte) 27) == Game.runescape)
+		if (aClass282_Sub54_5581.method13514((byte) 27) == Game.darkan)
 			return true;
 		return false;
 	}

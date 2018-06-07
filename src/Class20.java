@@ -1513,7 +1513,7 @@ public class Class20 {
 					for (int i = 7; i >= 0; i--) {
 						if (client.aStringArray7329[i] != null) {
 							short i_231_ = 0;
-							if ((Game.runescape == client.CURRENT_GAME) && (client.aStringArray7329[i].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -323654065)))) {
+							if ((Game.darkan == client.CURRENT_GAME) && (client.aStringArray7329[i].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -323654065)))) {
 								if (client.aBool7454 && ((class521_sub1_sub1_sub2_sub1.anInt10565) * -1880473919 > (-1880473919 * (Class84.myPlayer.anInt10565))))
 									i_231_ = (short) 2000;
 								if ((-1623446397 * (Class84.myPlayer.anInt10559)) != 0 && 0 != (class521_sub1_sub1_sub2_sub1.anInt10559) * -1623446397) {
@@ -3785,7 +3785,7 @@ public class Class20 {
 					for (int i = 7; i >= 0; i--) {
 						if (client.aStringArray7329[i] != null) {
 							short i_493_ = 0;
-							if ((Game.runescape == client.CURRENT_GAME) && (client.aStringArray7329[i].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -686029929)))) {
+							if ((Game.darkan == client.CURRENT_GAME) && (client.aStringArray7329[i].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -686029929)))) {
 								if (client.aBool7454 && ((class521_sub1_sub1_sub2_sub1.anInt10565) * -1880473919 > (-1880473919 * (Class84.myPlayer.anInt10565))))
 									i_493_ = (short) 2000;
 								if ((-1623446397 * (Class84.myPlayer.anInt10559)) != 0 && 0 != (class521_sub1_sub1_sub2_sub1.anInt10559) * -1623446397) {
@@ -3875,7 +3875,7 @@ public class Class20 {
 					for (int i = 7; i >= 0; i--) {
 						if (client.aStringArray7329[i] != null) {
 							short i_508_ = 0;
-							if ((Game.runescape == client.CURRENT_GAME) && (client.aStringArray7329[i].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1655332215)))) {
+							if ((Game.darkan == client.CURRENT_GAME) && (client.aStringArray7329[i].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -1655332215)))) {
 								if (client.aBool7454 && ((class521_sub1_sub1_sub2_sub1.anInt10565) * -1880473919 > (-1880473919 * (Class84.myPlayer.anInt10565))))
 									i_508_ = (short) 2000;
 								if ((-1623446397 * (Class84.myPlayer.anInt10559)) != 0 && 0 != (class521_sub1_sub1_sub2_sub1.anInt10559) * -1623446397) {

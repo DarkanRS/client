@@ -264,7 +264,7 @@ public class Class345 {
 			}
 			string_8_ = "_wip";
 		}
-		File file_9_ = new File(Class110.aString1103, new StringBuilder().append("jagex_").append(string_6_).append("_preferences").append(string).append(string_8_).append(".dat").toString());
+		File file_9_ = new File(Class110.aString1103, new StringBuilder().append("dk_").append(string_6_).append("_preferences").append(string).append(string_8_).append(".dat").toString());
 		do {
 			if (!bool) {
 				if (i != -1) {

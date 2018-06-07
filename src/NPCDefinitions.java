@@ -96,7 +96,7 @@ public class NPCDefinitions {
 		if (anIntArray4859 == null)
 			anIntArray4859 = new int[0];
 		if (aByte4916 == -1) {
-			if (Game.runescape == (((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass486_4844))
+			if (Game.darkan == (((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass486_4844))
 				aByte4916 = (byte) 1;
 			else
 				aByte4916 = (byte) 0;

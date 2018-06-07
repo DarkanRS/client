@@ -220,7 +220,7 @@ public class NPCIndexLoader {
 			SharedConfigsType.aClass120_1467.filesPerContainer(-443341258);
 			((NPCIndexLoader) this).aClass317_4839.filesCount(i, 1971095578);
 		}
-		if (((NPCIndexLoader) this).aClass486_4844 == Game.runescape)
+		if (((NPCIndexLoader) this).aClass486_4844 == Game.darkan)
 			((NPCIndexLoader) this).aStringArray4840 = (new String[] { null, null, null, null, null, Message.EXAMINE.translate((((NPCIndexLoader) this).aClass495_4837), -1623078066) });
 		else
 			((NPCIndexLoader) this).aStringArray4840 = new String[] { null, null, null, null, null, null };

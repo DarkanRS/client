@@ -170,7 +170,7 @@ public class ItemIndexLoader implements IndexLoader {
 			maxItemsCount = (i * SharedConfigsType.ITEM_DEFINITIONS.filesPerContainer(-1077198554) + ((ItemIndexLoader) this).fs19.filesCount(i, -1891673686)) * -230207835;
 		} else
 			maxItemsCount = 0;
-		if (Game.runescape == ((ItemIndexLoader) this).game)
+		if (Game.darkan == ((ItemIndexLoader) this).game)
 			((ItemIndexLoader) this).defaultGroundOptions = (new String[] { null, null, Message.TAKE.translate((((ItemIndexLoader) this).language), -1215966862), null, null, Message.EXAMINE.translate((((ItemIndexLoader) this).language), -380297277) });
 		else
 			((ItemIndexLoader) this).defaultGroundOptions = (new String[] { null, null, Message.TAKE.translate((((ItemIndexLoader) this).language), -791276439), null, null, null });

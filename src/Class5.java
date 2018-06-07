@@ -69,7 +69,7 @@ public class Class5 {
 		Class104[] class104s = Class52_Sub2_Sub1.method15631(1580412859);
 		for (int i_12_ = 0; i_12_ < class104s.length; i_12_++) {
 			Class104 class104 = class104s[i_12_];
-			if (-1544200711 * ((Class104) class104).anInt1063 == i)
+			if (-1544200711 * ((Class104) class104).id == i)
 				return class104;
 		}
 		return null;

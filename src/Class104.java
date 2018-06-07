@@ -4,12 +4,13 @@
 
 public class Class104 {
 	static Class104 aClass104_1060;
-	static Class104 aClass104_1061 = new Class104(0, 4);
+	static Class104 aClass104_1061;
 	static Class104 aClass104_1062;
-	int anInt1063;
-	public int anInt1064;
+	int id;
+	public int chunkSize;
 	
 	static {
+		aClass104_1061 = new Class104(0, 4);
 		aClass104_1060 = new Class104(1, 5);
 		aClass104_1062 = new Class104(2, 6);
 	}
@@ -19,8 +20,8 @@ public class Class104 {
 	}
 
 	Class104(int i, int i_0_) {
-		((Class104) this).anInt1063 = i * 2087113801;
-		anInt1064 = 1100556569 * i_0_;
+		((Class104) this).id = i * 2087113801;
+		chunkSize = 1100556569 * i_0_;
 	}
 
 	static Class104[] method1794() {
@@ -31,7 +32,7 @@ public class Class104 {
 		Class104[] class104s = Class52_Sub2_Sub1.method15631(1580412859);
 		for (int i_1_ = 0; i_1_ < class104s.length; i_1_++) {
 			Class104 class104 = class104s[i_1_];
-			if (-1544200711 * ((Class104) class104).anInt1063 == i)
+			if (-1544200711 * ((Class104) class104).id == i)
 				return class104;
 		}
 		return null;
@@ -41,7 +42,7 @@ public class Class104 {
 		Class104[] class104s = Class52_Sub2_Sub1.method15631(1580412859);
 		for (int i_2_ = 0; i_2_ < class104s.length; i_2_++) {
 			Class104 class104 = class104s[i_2_];
-			if (-1544200711 * ((Class104) class104).anInt1063 == i)
+			if (-1544200711 * ((Class104) class104).id == i)
 				return class104;
 		}
 		return null;
@@ -51,7 +52,7 @@ public class Class104 {
 		Class104[] class104s = Class52_Sub2_Sub1.method15631(1580412859);
 		for (int i_3_ = 0; i_3_ < class104s.length; i_3_++) {
 			Class104 class104 = class104s[i_3_];
-			if (-1544200711 * ((Class104) class104).anInt1063 == i)
+			if (-1544200711 * ((Class104) class104).id == i)
 				return class104;
 		}
 		return null;
@@ -61,7 +62,7 @@ public class Class104 {
 		Class104[] class104s = Class52_Sub2_Sub1.method15631(1580412859);
 		for (int i_4_ = 0; i_4_ < class104s.length; i_4_++) {
 			Class104 class104 = class104s[i_4_];
-			if (-1544200711 * ((Class104) class104).anInt1063 == i)
+			if (-1544200711 * ((Class104) class104).id == i)
 				return class104;
 		}
 		return null;

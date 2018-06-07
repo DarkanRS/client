@@ -60,7 +60,7 @@ public class Class96_Sub22 extends Class96 {
 					for (int i_4_ = 7; i_4_ >= 0; i_4_--) {
 						if (client.aStringArray7329[i_4_] != null) {
 							short i_5_ = 0;
-							if ((Game.runescape == client.CURRENT_GAME) && (client.aStringArray7329[i_4_].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -440996695)))) {
+							if ((Game.darkan == client.CURRENT_GAME) && (client.aStringArray7329[i_4_].equalsIgnoreCase(Message.ATTACK.translate(Class223.CURRENT_LANGUAGE, -440996695)))) {
 								if (client.aBool7454 && ((class521_sub1_sub1_sub2_sub1.anInt10565) * -1880473919 > (-1880473919 * (Class84.myPlayer.anInt10565))))
 									i_5_ = (short) 2000;
 								if ((-1623446397 * (Class84.myPlayer.anInt10559)) != 0 && 0 != (class521_sub1_sub1_sub2_sub1.anInt10559) * -1623446397) {

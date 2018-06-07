@@ -8,21 +8,21 @@ public class Class468_Sub16 extends Class468 {
 	}
 
 	public void method12748() {
-		if ((anInt5578 * -859024475 < -1544200711 * ((Class104) Class104.aClass104_1061).anInt1063) || anInt5578 * -859024475 > (((Class104) Class104.aClass104_1062).anInt1063) * -1544200711)
+		if ((anInt5578 * -859024475 < -1544200711 * ((Class104) Class104.aClass104_1061).id) || anInt5578 * -859024475 > (((Class104) Class104.aClass104_1062).id) * -1544200711)
 			anInt5578 = method7781(1827696505) * -754033619;
 	}
 
 	public void method12749(int i) {
-		if ((anInt5578 * -859024475 < -1544200711 * ((Class104) Class104.aClass104_1061).anInt1063) || anInt5578 * -859024475 > (((Class104) Class104.aClass104_1062).anInt1063) * -1544200711)
+		if ((anInt5578 * -859024475 < -1544200711 * ((Class104) Class104.aClass104_1061).id) || anInt5578 * -859024475 > (((Class104) Class104.aClass104_1062).id) * -1544200711)
 			anInt5578 = method7781(1820963129) * -754033619;
 	}
 
 	int method7781(int i) {
-		return -1544200711 * ((Class104) Class104.aClass104_1061).anInt1063;
+		return -1544200711 * ((Class104) Class104.aClass104_1061).id;
 	}
 
 	int method7787() {
-		return -1544200711 * ((Class104) Class104.aClass104_1061).anInt1063;
+		return -1544200711 * ((Class104) Class104.aClass104_1061).id;
 	}
 
 	int method7785(int i, int i_0_) {
@@ -42,7 +42,7 @@ public class Class468_Sub16 extends Class468 {
 	}
 
 	int method7786() {
-		return -1544200711 * ((Class104) Class104.aClass104_1061).anInt1063;
+		return -1544200711 * ((Class104) Class104.aClass104_1061).id;
 	}
 
 	public Class468_Sub16(Class282_Sub54 class282_sub54) {
@@ -54,7 +54,7 @@ public class Class468_Sub16 extends Class468 {
 	}
 
 	public void method12752() {
-		if ((anInt5578 * -859024475 < -1544200711 * ((Class104) Class104.aClass104_1061).anInt1063) || anInt5578 * -859024475 > (((Class104) Class104.aClass104_1062).anInt1063) * -1544200711)
+		if ((anInt5578 * -859024475 < -1544200711 * ((Class104) Class104.aClass104_1061).id) || anInt5578 * -859024475 > (((Class104) Class104.aClass104_1062).id) * -1544200711)
 			anInt5578 = method7781(1957472537) * -754033619;
 	}
 
