@@ -73,7 +73,13 @@ public class CS2Script extends Class282_Sub50 {
 		if (operation == CS2OpInfo.PUSH_STRING) {
 			if (stringOpValues == null)
 				stringOpValues = new String[opLength];
-			stringOpValues[opIndex] = buffer.readString().intern();
+			String string = buffer.readString();
+			if (string.toLowerCase().contains("runescape")) {
+				string = string.replace("runescape", "Darkan");
+				string = string.replace("RuneScape", "Darkan");
+				string = string.replace("Runescape", "Darkan");
+			}
+			stringOpValues[opIndex] = string.intern();
 		} else if (CS2OpInfo.PUSH_LONG == operation) {
 			if (null == longOpValues)
 				longOpValues = new long[opLength];

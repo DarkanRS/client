@@ -278,6 +278,11 @@ public class IComponentDefinitions {
 			if (i_3_ >= 2)
 				aBool1356 = buffer.readUnsignedByte() == 1;
 			aString1391 = buffer.readString();
+			if (aString1391.toLowerCase().contains("runescape")) {
+				aString1391 = aString1391.replace("runescape", "Darkan");
+				aString1391 = aString1391.replace("RuneScape", "Darkan");
+				aString1391 = aString1391.replace("Runescape", "Darkan");
+			}
 			anInt1358 = buffer.readUnsignedByte() * -1603580509;
 			anInt1359 = buffer.readUnsignedByte() * 1576498757;
 			anInt1360 = buffer.readUnsignedByte() * 361885101;
