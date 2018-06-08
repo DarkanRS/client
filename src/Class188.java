@@ -572,7 +572,7 @@ public class Class188 {
 	}
 
 	static final void decodeTilestreamPacket(TilestreamPacket class364, int i) {
-		RsBitsBuffer stream = ((Class184) client.aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer stream = ((Class184) client.aClass184_7475).recievedBuffer;
 		if (TilestreamPacket.aClass364_4204 == class364) {
 			int i_21_ = stream.readUnsignedByte();
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1837937091);

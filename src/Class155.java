@@ -123,7 +123,7 @@ public final class Class155 {
 			Class290.method5118((byte) -126);
 			Class9.aString99 = string;
 			Class9.aString102 = string_14_;
-			Class365.method6298(14, 2000356060);
+			Class365.setGameState(14, 2000356060);
 		}
 	}
 

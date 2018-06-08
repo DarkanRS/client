@@ -579,8 +579,8 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 		return false;
 	}
 
-	static void method16107(int i) {
-		if (null != Class192.aClass1_2391) {
+	static void handleAccountCreationStart(int i) {
+		if (null != Class192.ACCOUNT_CREATION_STAGE) {
 			try {
 				int i_23_;
 				if (0 == 1539502519 * Class14.anInt134) {
@@ -592,55 +592,54 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 				if (-623501739 * Class14.anInt133 > i_23_) {
 					Class5.method297(2057502740);
 				}
-				if (Class192.aClass1_2391 == Class1.aClass1_11) {
+				if (Class192.ACCOUNT_CREATION_STAGE == Class1.REQUEST) {
 					client.aClass184_7218.method3050(Class38.method852(Class448.aClass450_5424.method7494((byte) 121), 15000, 1038176780), Class448.aClass450_5424.aString5433, (byte) -47);
 					client.aClass184_7218.method3054((short) 8665);
-					TCPMessage class282_sub23 = Class207.method3558((byte) 87);
-					class282_sub23.buffer.writeByte(1627920319 * OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
-					class282_sub23.buffer.writeShort(0, 1417031095);
-					int i_24_ = -1990677291 * (class282_sub23.buffer.index);
-					class282_sub23.buffer.writeShort(727, 1417031095);
-					class282_sub23.buffer.writeShort(1, 1417031095);
-					Class14.anIntArray131 = Class463.method7725(class282_sub23, (byte) -61);
-					int i_25_ = (class282_sub23.buffer.index * -1990677291);
-					class282_sub23.buffer.writeString(client.aString7164);
-					class282_sub23.buffer.writeShort(-1543197399 * client.anInt7149, 1417031095);
-					class282_sub23.buffer.writeLong(-8972807970865466165L * client.aLong7153);
-					class282_sub23.buffer.writeString(Class464.aString5555);
-					class282_sub23.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
-					class282_sub23.buffer.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
-					Class31.method809(class282_sub23.buffer, -1671456029);
+					TCPMessage message = Class207.method3558((byte) 87);
+					message.buffer.writeByte(1627920319 * OutgoingLoginPacket.CREATE_ACCOUNT_CONNECT.id);
+					message.buffer.writeShort(0, 1417031095);
+					int i_24_ = -1990677291 * (message.buffer.index);
+					message.buffer.writeShort(727, 1417031095);
+					message.buffer.writeShort(1, 1417031095);
+					Class14.LOGIN_XTEAS = Class463.method7725(message, (byte) -61);
+					int i_25_ = (message.buffer.index * -1990677291);
+					message.buffer.writeString(client.aString7164);
+					message.buffer.writeShort(-1543197399 * client.anInt7149, 1417031095);
+					message.buffer.writeLong(-8972807970865466165L * client.aLong7153);
+					message.buffer.writeString(Class464.aString5555);
+					message.buffer.writeByte(Class223.CURRENT_LANGUAGE.method243((byte) 1));
+					message.buffer.writeByte(client.CURRENT_GAME.anInt5746 * 1648080491);
+					Class31.method809(message.buffer, -1671456029);
 					String string = client.aString7156;
-					class282_sub23.buffer.writeByte(string == null ? 0 : 1);
+					message.buffer.writeByte(string == null ? 0 : 1);
 					if (string != null) {
-						class282_sub23.buffer.writeString(string);
+						message.buffer.writeString(string);
 					}
-					Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub23.buffer, 419814551);
-					class282_sub23.buffer.index += 781596523;
-					class282_sub23.buffer.method13101(Class14.anIntArray131, i_25_, (class282_sub23.buffer.index * -1990677291), 1645773158);
-					class282_sub23.buffer.method13281((-1990677291 * (class282_sub23.buffer.index) - i_24_), 1201423895);
-					client.aClass184_7218.method3049(class282_sub23, -1007484142);
+					Class11.aClass282_Sub51_124.writeMachineInformation(message.buffer, 419814551);
+					message.buffer.index += 781596523;
+					message.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_25_, (message.buffer.index * -1990677291), 1645773158);
+					message.buffer.method13281((-1990677291 * (message.buffer.index) - i_24_), 1201423895);
+					client.aClass184_7218.method3049(message, -1007484142);
 					client.aClass184_7218.method3047(557990439);
-					Class192.aClass1_2391 = Class1.aClass1_10;
+					Class192.ACCOUNT_CREATION_STAGE = Class1.RESPONSE;
 				}
-				if (Class1.aClass1_10 == Class192.aClass1_2391) {
+				if (Class1.RESPONSE == Class192.ACCOUNT_CREATION_STAGE) {
 					if (client.aClass184_7218.method3053((byte) -48) == null) {
 						Class5.method297(2055895853);
 					} else if (client.aClass184_7218.method3053((byte) -55).method3315(1, (byte) 85)) {
-						client.aClass184_7218.method3053((byte) -73).method3327((client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1181691571);
-						Class96_Sub9.aClass483_9278 = ((Class483) Class386.method6672(Interface.method1626(1186080710), (client.aClass184_7218.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff, -865772612));
-						if (Class483.aClass483_5734 == Class96_Sub9.aClass483_9278) {
-							client.aClass184_7218.isaac = new IsaacCipher(Class14.anIntArray131);
+						client.aClass184_7218.method3053((byte) -73).method3327((client.aClass184_7218.recievedBuffer.buffer), 0, 1, -1181691571);
+						Class96_Sub9.RECIEVED_RESPONSE = ((AccountCreationResponseOpcodes) Class386.method6672(Interface.method1626(1186080710), (client.aClass184_7218.recievedBuffer.buffer[0]) & 0xff, -865772612));
+						if (AccountCreationResponseOpcodes.CONTINUE == Class96_Sub9.RECIEVED_RESPONSE) {
+							client.aClass184_7218.isaac = new IsaacCipher(Class14.LOGIN_XTEAS);
 							int[] is = new int[4];
 							for (int i_26_ = 0; i_26_ < 4; i_26_++) {
-								is[i_26_] = Class14.anIntArray131[i_26_] + 50;
+								is[i_26_] = Class14.LOGIN_XTEAS[i_26_] + 50;
 							}
 							client.aClass184_7218.aClass432_2295 = new IsaacCipher(is);
-							new IsaacCipher(is);
-							client.aClass184_7218.aClass282_Sub35_Sub2_2284.setIsaacCipher((client.aClass184_7218.aClass432_2295), 1577326429);
-							Class365.method6298(3, 801938860);
+							client.aClass184_7218.recievedBuffer.setIsaacCipher((client.aClass184_7218.aClass432_2295), 1577326429);
+							Class365.setGameState(3, 801938860);
 							client.aClass184_7218.method3054((short) -8634);
-							client.aClass184_7218.aClass282_Sub35_Sub2_2284.index = 0;
+							client.aClass184_7218.recievedBuffer.index = 0;
 							client.aClass184_7218.aClass375_2278 = null;
 							client.aClass184_7218.aClass375_2296 = null;
 							client.aClass184_7218.aClass375_2291 = null;
@@ -649,7 +648,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 							client.aClass184_7218.method3051((byte) -45);
 						}
 						client.aClass184_7218.aClass375_2286 = null;
-						Class192.aClass1_2391 = null;
+						Class192.ACCOUNT_CREATION_STAGE = null;
 					}
 				}
 			} catch (IOException ioexception) {

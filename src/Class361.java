@@ -166,13 +166,13 @@ public class Class361 {
 	static void method6270(byte i) {
 		if (QuickChatDynamicValue.method4180(client.anInt7166 * -1741204137, (byte) -11)) {
 			if (client.aClass184_7218.method3053((byte) -30) == null)
-				Class365.method6298(14, 1288084460);
+				Class365.setGameState(14, 1288084460);
 			else
-				Class365.method6298(0, 2055282492);
+				Class365.setGameState(0, 2055282492);
 		} else if (-1741204137 * client.anInt7166 == 14 || 19 == -1741204137 * client.anInt7166)
-			Class365.method6298(5, 1099298467);
+			Class365.setGameState(5, 1099298467);
 		else if (12 == client.anInt7166 * -1741204137)
-			Class365.method6298(5, 2013882728);
+			Class365.setGameState(5, 2013882728);
 	}
 
 	static final void method6271(CS2Executor class527, int i) {

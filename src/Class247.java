@@ -312,8 +312,8 @@ public class Class247 {
 	}
 
 	static void method4251(short i) {
-		Class192.aClass1_2391 = Class1.aClass1_11;
-		Class96_Sub9.aClass483_9278 = Class483.aClass483_5729;
+		Class192.ACCOUNT_CREATION_STAGE = Class1.REQUEST;
+		Class96_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5729;
 		Class237.aClass494_2916 = Class494.aClass494_5786;
 		Class404.aClass466_4831 = Class466.aClass466_5569;
 	}

@@ -3,8 +3,8 @@
  */
 
 public class Class1 {
-	static Class1 aClass1_10;
-	static Class1 aClass1_11 = new Class1();
+	static Class1 RESPONSE;
+	static Class1 REQUEST = new Class1();
 	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_12;
 
 	Class1() {
@@ -12,7 +12,7 @@ public class Class1 {
 	}
 
 	static {
-		aClass1_10 = new Class1();
+		RESPONSE = new Class1();
 	}
 
 	public static void method252(Class397 class397, int i, int i_0_, Animable class521_sub1_sub1_sub2, int i_1_, int i_2_) {

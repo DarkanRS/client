@@ -77,7 +77,7 @@ public class Class186 {
 
 	static void method3083(int i) {
 		Class9.aClass184_73.method3054((short) 18699);
-		((Class184) Class9.aClass184_73).aClass282_Sub35_Sub2_2284.index = 0;
+		((Class184) Class9.aClass184_73).recievedBuffer.index = 0;
 		((Class184) Class9.aClass184_73).aClass375_2278 = null;
 		((Class184) Class9.aClass184_73).aClass375_2296 = null;
 		((Class184) Class9.aClass184_73).aClass375_2291 = null;

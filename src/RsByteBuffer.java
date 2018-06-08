@@ -68,7 +68,7 @@ public class RsByteBuffer extends Node {
 		}
 	}
 
-	public void method13070(String string, int i) {
+	public void writeJagString(String string, int i) {
 		int i_9_ = string.indexOf('\0');
 		if (i_9_ >= 0) {
 			throw new IllegalArgumentException("");
@@ -289,7 +289,7 @@ public class RsByteBuffer extends Node {
 		}
 	}
 
-	public void method13101(int[] is, int i, int i_51_, int i_52_) {
+	public void encryptWithXtea(int[] is, int i, int i_51_, int i_52_) {
 		int i_53_ = index * -1990677291;
 		index = -1115476867 * i;
 		int i_54_ = (i_51_ - i) / 8;
@@ -520,7 +520,7 @@ public class RsByteBuffer extends Node {
 		return (l << 32) + l_113_;
 	}
 
-	public void method13195(int i, byte i_114_) {
+	public void write24BitInt(int i, byte i_114_) {
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i >> 16);
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i >> 8);
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) i;

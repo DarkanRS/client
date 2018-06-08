@@ -915,7 +915,7 @@ public class Class174 {
 			Class402.method6799(executor, (byte) 0);
 			break;
 		case 122:
-			Class483.method8152(executor, 1606867880);
+			AccountCreationResponseOpcodes.method8152(executor, 1606867880);
 			break;
 		case 291:
 			Class272.method4839(executor, (byte) 0);
@@ -1014,7 +1014,7 @@ public class Class174 {
 			Class101.method1775(executor, (byte) 2);
 			break;
 		case 848:
-			Class483.method8156(executor, -302588228);
+			AccountCreationResponseOpcodes.method8156(executor, -302588228);
 			break;
 		case 778:
 			CoordGrid.method3714(executor, 630870713);
@@ -1869,7 +1869,7 @@ public class Class174 {
 			Class373.method6364(executor, -685758415);
 			break;
 		case 959:
-			Class483.method8153(executor, 440050047);
+			AccountCreationResponseOpcodes.method8153(executor, 440050047);
 			break;
 		case 267:
 			Class445.method7428(executor, (byte) 54);
@@ -2571,7 +2571,7 @@ public class Class174 {
 			Class149_Sub4.method14660(executor, -1269801212);
 			break;
 		case 137:
-			Class483.method8154(executor, 587626901);
+			AccountCreationResponseOpcodes.method8154(executor, 587626901);
 			break;
 		case 144:
 			Class521_Sub1_Sub3_Sub1.method16079(executor, (short) 17688);

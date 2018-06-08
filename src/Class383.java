@@ -73,7 +73,7 @@ public class Class383 implements Interface41 {
 
 	static Class350 method6512(RsByteBuffer class282_sub35, int i) {
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(-535190719)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_6_ = class282_sub35.readShort(1882805883);
 		int i_7_ = class282_sub35.readShort(1909994135);
 		int i_8_ = class282_sub35.readUnsignedShort();

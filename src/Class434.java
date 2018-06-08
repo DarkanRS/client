@@ -88,7 +88,7 @@ public abstract class Class434 {
 				}
 				Class236.aLong2910 = interface16.method119(941918410) * 7066845128101291095L;
 				class282_sub23.buffer.writeByte(interface16.method92(317240429));
-				class282_sub23.buffer.method13195((int) l, (byte) 14);
+				class282_sub23.buffer.write24BitInt((int) l, (byte) 14);
 			}
 			client.aClass184_7475.method3049(class282_sub23, 394731592);
 		}

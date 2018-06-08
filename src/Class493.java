@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /* Class493 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
@@ -229,7 +231,7 @@ public class Class493 {
 		return '\0';
 	}
 
-	public static void method8273(String string, byte i) {
+	public static void sendCheckEmailPacket(String string, byte i) {
 		if (-1741204137 * client.anInt7166 != 3) {
 			if (i == 1) {
 				/* empty */
@@ -239,8 +241,8 @@ public class Class493 {
 			class282_sub23.buffer.writeShort(0, 1417031095);
 			int i_21_ = (class282_sub23.buffer.index * -1990677291);
 			class282_sub23.buffer.writeString(string);
-			class282_sub23.buffer.index += 781596523;
-			class282_sub23.buffer.method13101(Class14.anIntArray131, i_21_, (-1990677291 * class282_sub23.buffer.index), 1836980481);
+			class282_sub23.buffer.index += 781596523; //7
+			class282_sub23.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_21_, (-1990677291 * class282_sub23.buffer.index), 1836980481);
 			class282_sub23.buffer.method13281(-1990677291 * (class282_sub23.buffer.index) - i_21_, 1201423895);
 			client.aClass184_7218.method3049(class282_sub23, -349048671);
 			Class404.aClass466_4831 = Class466.aClass466_5564;

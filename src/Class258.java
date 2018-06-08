@@ -58,7 +58,7 @@ public class Class258 {
 	public static Class357 method4570(RsByteBuffer class282_sub35, int i) {
 		int i_3_ = class282_sub35.readBigSmart();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(251815760)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_4_ = class282_sub35.readShort(1666577229);
 		int i_5_ = class282_sub35.readShort(1649901104);
 		return new Class357(i_3_, class356, class353, i_4_, i_5_);

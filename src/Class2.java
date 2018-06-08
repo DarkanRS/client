@@ -36,7 +36,7 @@ public class Class2 {
 			Class290.method5118((byte) -52);
 			Class9.aString99 = string;
 			Class9.aString102 = string_0_;
-			Class365.method6298(19, 1621476114);
+			Class365.setGameState(19, 1621476114);
 		}
 	}
 

@@ -11,7 +11,7 @@ public class Class184 {
 	Class202 aClass202_2281;
 	RsByteBuffer aClass282_Sub35_2282;
 	public IsaacCipher isaac;
-	RsBitsBuffer aClass282_Sub35_Sub2_2284;
+	RsBitsBuffer recievedBuffer;
 	static final int anInt2285 = 15000;
 	IncomingPacket aClass375_2286;
 	int anInt2287;
@@ -142,7 +142,7 @@ public class Class184 {
 	Class184() {
 		((Class184) this).anInt2279 = 0;
 		((Class184) this).aClass282_Sub35_2282 = new RsByteBuffer(1600);
-		((Class184) this).aClass282_Sub35_Sub2_2284 = new RsBitsBuffer(15000);
+		((Class184) this).recievedBuffer = new RsBitsBuffer(15000);
 		((Class184) this).aClass375_2286 = null;
 		((Class184) this).anInt2287 = 0;
 		((Class184) this).aBool2288 = true;

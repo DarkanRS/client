@@ -154,9 +154,9 @@ public class Class438 {
 		Class204.method3367(-2146743661);
 		Class42_Sub1.method14562(1915286568);
 		if (bool)
-			Class365.method6298(12, 1408893156);
+			Class365.setGameState(12, 1408893156);
 		else {
-			Class365.method6298(5, 1704453778);
+			Class365.setGameState(5, 1704453778);
 			try {
 				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1769975690);
 			} catch (Throwable throwable) {

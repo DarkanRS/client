@@ -12,7 +12,7 @@ public class Exception_Sub2_Sub2 extends Exception_Sub2 {
 	}
 
 	static final void decodeAddRemove(int i) {
-		RsBitsBuffer buffer = ((Class184) client.aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer buffer = ((Class184) client.aClass184_7475).recievedBuffer;
 		buffer.initBitAccess((byte) 104);
 		int numNpcs = buffer.readBits(8, (byte) -33);
 		if (numNpcs < client.anInt7211 * -685729279) {

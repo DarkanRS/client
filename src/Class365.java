@@ -18,7 +18,7 @@ public class Class365 implements Interface3 {
 	public static Class365 method6293(RsByteBuffer class282_sub35) {
 		int i = class282_sub35.readUnsignedByte();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(1854960259)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_0_ = class282_sub35.readShort(2043906445);
 		int i_1_ = class282_sub35.readShort(1811161684);
 		int i_2_ = class282_sub35.readUnsignedShort();
@@ -33,7 +33,7 @@ public class Class365 implements Interface3 {
 	public static Class365 method6294(RsByteBuffer class282_sub35) {
 		int i = class282_sub35.readUnsignedByte();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(549608758)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_7_ = class282_sub35.readShort(2032279624);
 		int i_8_ = class282_sub35.readShort(1879678143);
 		int i_9_ = class282_sub35.readUnsignedShort();
@@ -72,7 +72,7 @@ public class Class365 implements Interface3 {
 	public static Class365 method6295(RsByteBuffer class282_sub35) {
 		int i = class282_sub35.readUnsignedByte();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(1993261440)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_21_ = class282_sub35.readShort(1715691742);
 		int i_22_ = class282_sub35.readShort(1904199456);
 		int i_23_ = class282_sub35.readUnsignedShort();
@@ -87,7 +87,7 @@ public class Class365 implements Interface3 {
 	public static Class365 method6296(RsByteBuffer class282_sub35) {
 		int i = class282_sub35.readUnsignedByte();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(723447286)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_28_ = class282_sub35.readShort(1939202286);
 		int i_29_ = class282_sub35.readShort(1789526211);
 		int i_30_ = class282_sub35.readUnsignedShort();
@@ -102,7 +102,7 @@ public class Class365 implements Interface3 {
 	public static Class365 method6297(RsByteBuffer class282_sub35) {
 		int i = class282_sub35.readUnsignedByte();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(105705767)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_35_ = class282_sub35.readShort(1786557142);
 		int i_36_ = class282_sub35.readShort(1855918084);
 		int i_37_ = class282_sub35.readUnsignedShort();
@@ -114,7 +114,7 @@ public class Class365 implements Interface3 {
 		return new Class365(i, class356, class353, i_35_, i_36_, i_37_, i_38_, i_39_, i_40_, i_41_, bool);
 	}
 
-	public static void method6298(int i, int i_42_) {
+	public static void setGameState(int i, int i_42_) {
 		if (client.anInt7166 * -1741204137 != i) {
 			client.anInt7396 = 0;
 			if (i == 10 || 17 == i) {

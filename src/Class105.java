@@ -29,8 +29,8 @@ public class Class105 {
 			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4533, client.aClass184_7475.isaac, -368168097);
 			class282_sub23.buffer.writeShort((1 + Class234.method3952(string, 1356057931) + Class234.method3952(string_2_, 876996155)), 1417031095);
 			class282_sub23.buffer.writeByte(i);
-			class282_sub23.buffer.method13070(string_2_, 2115936374);
-			class282_sub23.buffer.method13070(string, 2111937462);
+			class282_sub23.buffer.writeJagString(string_2_, 2115936374);
+			class282_sub23.buffer.writeJagString(string, 2111937462);
 			client.aClass184_7475.method3049(class282_sub23, 1078445586);
 		}
 	}

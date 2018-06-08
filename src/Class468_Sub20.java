@@ -172,7 +172,7 @@ public class Class468_Sub20 extends Class468 {
 				Class380.aString4636 = new StringBuilder().append(Class380.aString4636).append(-723319227 * Class302.anInt3563).append("%").toString();
 		} else if (IndexLoaders.LOADING_STAGE == LoadingStage.aClass387_4701) {
 			Class328.aClass306_3771 = null;
-			Class365.method6298(5, 2138325476);
+			Class365.setGameState(5, 2138325476);
 		} else {
 			Class380.aString4636 = ((LoadingStage) class387).aClass433_4714.translate(Class223.CURRENT_LANGUAGE, -2022596623);
 			if (((LoadingStage) IndexLoaders.LOADING_STAGE).aBool4694)

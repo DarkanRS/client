@@ -156,7 +156,7 @@ public class IndexLoaders {
 			}
 			Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
 			Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 425996443);
-			Class365.method6298(15, 1025544676);
+			Class365.setGameState(15, 1025544676);
 		}
 		if (LOADING_STAGE == LoadingStage.aClass387_4699) {
 			SPRITES_INDEX = loadIndex(IndexReference.INDEX_8, false, 1, false);
@@ -216,7 +216,7 @@ public class IndexLoaders {
 			}
 			Class89.method1496(is, -164492309);
 			NodeCollection.method8148((byte) 4);
-			Class365.method6298(1, 1855105859);
+			Class365.setGameState(1, 1855105859);
 		}
 		if (LoadingStage.aClass387_4709 == LOADING_STAGE) {
 			NATIVE_LIBRARY_LOADER = new NativeLibraryLoader(NATIVE_LIBRARY_INDEX);

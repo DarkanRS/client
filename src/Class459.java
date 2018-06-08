@@ -85,7 +85,7 @@ public final class Class459 {
 	}
 
 	static final void decodeUpdate(boolean largeSceneView, int i) {
-		RsBitsBuffer buffer = ((Class184) client.aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer buffer = ((Class184) client.aClass184_7475).recievedBuffer;
 		while (buffer.readableBits((715663393 * (((Class184) client.aClass184_7475).anInt2287)), 816213370) >= 15) {
 			int npcIndex = buffer.readBits(15, (byte) -53);
 			if (32767 == npcIndex)

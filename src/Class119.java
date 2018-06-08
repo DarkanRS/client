@@ -41,7 +41,7 @@ public class Class119 {
 			class282_sub23.buffer.writeByte(i);
 			class282_sub23.buffer.writeByte(bool ? 1 : 0);
 			class282_sub23.buffer.index += 781596523;
-			class282_sub23.buffer.method13101(Class14.anIntArray131, i_8_, (class282_sub23.buffer.index * -1990677291), 1773448479);
+			class282_sub23.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_8_, (class282_sub23.buffer.index * -1990677291), 1773448479);
 			class282_sub23.buffer.method13281((-1990677291 * class282_sub23.buffer.index) - i_8_, 1201423895);
 			client.aClass184_7218.method3049(class282_sub23, -593132534);
 			if (i < 13) {

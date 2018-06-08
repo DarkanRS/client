@@ -85,7 +85,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			try {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(6);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13195(3, (byte) 14);
+				((Class312_Sub1) this).aClass282_Sub35_3655.write24BitInt(3, (byte) 14);
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeShort(0, 1417031095);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -2077167931);
 			} catch (IOException ioexception) {
@@ -475,7 +475,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			try {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(6);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13195(3, (byte) 14);
+				((Class312_Sub1) this).aClass282_Sub35_3655.write24BitInt(3, (byte) 14);
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeShort(0, 1417031095);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, 810595372);
 			} catch (IOException ioexception) {

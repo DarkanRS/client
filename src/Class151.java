@@ -103,7 +103,7 @@ public class Class151 {
 		else {
 			Class233.aClass202_2883 = client.aClass184_7475.method3053((byte) -113);
 			client.aClass184_7475.method3061(-1872117357);
-			Class365.method6298(10, 1328603649);
+			Class365.setGameState(10, 1328603649);
 		}
 	}
 

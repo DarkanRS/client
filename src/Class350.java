@@ -15,7 +15,7 @@ public class Class350 implements Interface3 {
 
 	static Class350 method6187(RsByteBuffer class282_sub35) {
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(1505926417)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(2010035576);
 		int i_0_ = class282_sub35.readShort(1760455590);
 		int i_1_ = class282_sub35.readUnsignedShort();
@@ -36,7 +36,7 @@ public class Class350 implements Interface3 {
 
 	static Class350 method6188(RsByteBuffer class282_sub35) {
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(-556784147)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(1599050571);
 		int i_6_ = class282_sub35.readShort(2129989949);
 		int i_7_ = class282_sub35.readUnsignedShort();

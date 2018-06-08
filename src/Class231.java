@@ -68,16 +68,16 @@ public class Class231 {
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
 		if (5 == -1741204137 * client.anInt7166)
-			Class365.method6298(11, 2080039213);
+			Class365.setGameState(11, 2080039213);
 		else if (0 == -1741204137 * client.anInt7166)
-			Class365.method6298(2, 2028461626);
+			Class365.setGameState(2, 2028461626);
 		else if (client.anInt7166 * -1741204137 == 7)
-			Class365.method6298(6, 1241604185);
+			Class365.setGameState(6, 1241604185);
 		else if (13 == -1741204137 * client.anInt7166)
-			Class365.method6298(18, 1354384204);
+			Class365.setGameState(18, 1354384204);
 		else if (15 == -1741204137 * client.anInt7166 || client.anInt7166 * -1741204137 == 1)
 			Class386.method6673(1101279462);
 		else if (client.anInt7166 * -1741204137 == 3)
-			Class365.method6298(9, 703598448);
+			Class365.setGameState(9, 703598448);
 	}
 }

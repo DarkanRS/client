@@ -165,7 +165,7 @@ public class Class236 {
 					l = 16777215L;
 				aLong2910 = interface16.method119(1978831775) * 7066845128101291095L;
 				class282_sub23.buffer.writeByte(interface16.method92(317240429));
-				class282_sub23.buffer.method13195((int) l, (byte) 14);
+				class282_sub23.buffer.write24BitInt((int) l, (byte) 14);
 			}
 			client.aClass184_7475.method3049(class282_sub23, 1095849519);
 		}
@@ -211,7 +211,7 @@ public class Class236 {
 					l = 16777215L;
 				aLong2910 = (interface16.method119(-2082955085) * 7066845128101291095L);
 				class282_sub23.buffer.writeByte(interface16.method92(317240429));
-				class282_sub23.buffer.method13195((int) l, (byte) 14);
+				class282_sub23.buffer.write24BitInt((int) l, (byte) 14);
 			}
 			client.aClass184_7475.method3049(class282_sub23, -905187608);
 		}
@@ -257,7 +257,7 @@ public class Class236 {
 					l = 16777215L;
 				aLong2910 = (interface16.method119(-1304839736) * 7066845128101291095L);
 				class282_sub23.buffer.writeByte(interface16.method92(317240429));
-				class282_sub23.buffer.method13195((int) l, (byte) 14);
+				class282_sub23.buffer.write24BitInt((int) l, (byte) 14);
 			}
 			client.aClass184_7475.method3049(class282_sub23, 1455330085);
 		}

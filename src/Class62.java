@@ -46,7 +46,7 @@ public class Class62 implements Interface3 {
 	public static Class62 method1256(RsByteBuffer class282_sub35) {
 		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(755585650)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(1780936894);
 		int i_9_ = class282_sub35.readShort(1846262904);
 		int i_10_ = class282_sub35.readUnsignedByte();
@@ -63,7 +63,7 @@ public class Class62 implements Interface3 {
 	public static Class62 method1257(RsByteBuffer class282_sub35) {
 		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(563954548)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(1756940293);
 		int i_18_ = class282_sub35.readShort(1893190838);
 		int i_19_ = class282_sub35.readUnsignedByte();
@@ -80,7 +80,7 @@ public class Class62 implements Interface3 {
 	public static Class62 method1258(RsByteBuffer class282_sub35) {
 		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(1630681329)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i = class282_sub35.readShort(2113135095);
 		int i_27_ = class282_sub35.readShort(1636498629);
 		int i_28_ = class282_sub35.readUnsignedByte();

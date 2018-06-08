@@ -16,7 +16,7 @@ public class PacketsDecoder extends Class455 {
 
 	static final boolean method14433(Class184 class184, int i) throws IOException {
 		Class202 class202 = class184.method3053((byte) -107);
-		RsBitsBuffer stream = class184.aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer stream = class184.recievedBuffer;
 		if (null == class202) {
 			return false;
 		}
@@ -25,7 +25,7 @@ public class PacketsDecoder extends Class455 {
 				if (!class202.method3315(1, (byte) 84)) {
 					return false;
 				}
-				class202.method3327((class184.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1338515791);
+				class202.method3327((class184.recievedBuffer.buffer), 0, 1, -1338515791);
 				class184.anInt2292 += 755149573;
 				class184.anInt2289 = 0;
 				class184.aBool2288 = false;
@@ -35,7 +35,7 @@ public class PacketsDecoder extends Class455 {
 				if (!class202.method3315(1, (byte) 98)) {
 					return false;
 				}
-				class202.method3327((class184.aClass282_Sub35_Sub2_2284.buffer), 1, 1, -566199770);
+				class202.method3327((class184.recievedBuffer.buffer), 1, 1, -566199770);
 				class184.anInt2292 += 755149573;
 				class184.anInt2289 = 0;
 			}
@@ -660,7 +660,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (IncomingPacket.DYNAMIC_MAP_REGION == class184.aClass375_2286) {
 			RsBitsBuffer class282_sub35_sub2_112_ = new RsBitsBuffer(class184.anInt2287 * 715663393);
-			System.arraycopy((class184.aClass282_Sub35_Sub2_2284.buffer), -1990677291 * (class184.aClass282_Sub35_Sub2_2284.index), class282_sub35_sub2_112_.buffer, 0, 715663393 * class184.anInt2287);
+			System.arraycopy((class184.recievedBuffer.buffer), -1990677291 * (class184.recievedBuffer.index), class282_sub35_sub2_112_.buffer, 0, 715663393 * class184.anInt2287);
 			FontMetrics.method6989(1407669515);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(917077703) == 1) {
 				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3155, class282_sub35_sub2_112_), 301123709);
@@ -748,7 +748,7 @@ public class PacketsDecoder extends Class455 {
 			Class448.aBool5428 = bool;
 			Class62.method1262(i_121_, string, (byte) 0);
 			Object object = null;
-			Class365.method6298(17, 1752786993);
+			Class365.setGameState(17, 1752786993);
 			class184.aClass375_2286 = null;
 			return false;
 		}
@@ -1569,7 +1569,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.REGION) {
 			RsBitsBuffer class282_sub35_sub2_254_ = new RsBitsBuffer(class184.anInt2287 * 715663393);
-			System.arraycopy((class184.aClass282_Sub35_Sub2_2284.buffer), (class184.aClass282_Sub35_Sub2_2284.index) * -1990677291, class282_sub35_sub2_254_.buffer, 0, 715663393 * class184.anInt2287);
+			System.arraycopy((class184.recievedBuffer.buffer), (class184.recievedBuffer.index) * -1990677291, class282_sub35_sub2_254_.buffer, 0, 715663393 * class184.anInt2287);
 			FontMetrics.method6989(1407669515);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(621836544) == 1) {
 				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3158, class282_sub35_sub2_254_), 301123709);

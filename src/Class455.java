@@ -154,7 +154,7 @@ public abstract class Class455 {
 	}
 
 	static void method7558(boolean bool, boolean bool_25_, String string, String string_26_, long l) {
-		Class9.aBool105 = bool;
+		Class9.socialNetworkLogin = bool;
 		if (!bool_25_)
 			Class9.anInt76 = -1481524237;
 		Class9.aBool74 = bool_25_;

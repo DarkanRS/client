@@ -883,7 +883,7 @@ public class Class8_Sub3 extends FontRenderer {
 			String string = new StringBuilder().append(((Class184) class184).aClass375_2286 != null ? (1694502249 * ((Class184) class184).aClass375_2286.anInt4512) : -1).append(Class2.aString14).append(((Class184) class184).aClass375_2296 != null ? (((Class184) class184).aClass375_2296.anInt4512 * 1694502249) : -1).append(Class2.aString14).append(null != ((Class184) class184).aClass375_2291 ? (1694502249 * ((Class184) class184).aClass375_2291.anInt4512) : -1).append(" ")
 					.append(((Class184) class184).anInt2287 * 715663393).append(Class2.aString14).append(1948093437 * class219.x + (Class84.myPlayer.regionBaseX[0])).append(Class2.aString14).append(class219.y * -1002240017 + (Class84.myPlayer.regionBaseY[0])).append(" ").toString();
 			for (int i_341_ = 0; (i_341_ < 715663393 * ((Class184) class184).anInt2287 && i_341_ < 50); i_341_++)
-				string = new StringBuilder().append(string).append(((Class184) class184).aClass282_Sub35_Sub2_2284.buffer[i_341_]).append(Class2.aString14).toString();
+				string = new StringBuilder().append(string).append(((Class184) class184).recievedBuffer.buffer[i_341_]).append(Class2.aString14).toString();
 			Class151.method2594(string, exception, (byte) -124);
 			Class438.method7333(false, 2019589827);
 			return true;

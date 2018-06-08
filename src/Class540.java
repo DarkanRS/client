@@ -904,8 +904,8 @@ public class Class540 {
 			for (int i_199_ = client.anInt7210 * 1658163325; i_199_ < i_197_; i_199_++)
 				client.aClass282_Sub47Array7209[i_199_] = null;
 		}
-		if ((((Class184) client.aClass184_7475).aClass282_Sub35_Sub2_2284.index) * -1990677291 != ((Class184) client.aClass184_7475).anInt2287 * 715663393)
-			throw new RuntimeException(new StringBuilder().append((((Class184) client.aClass184_7475).aClass282_Sub35_Sub2_2284.index) * -1990677291).append(" ").append(715663393 * (((Class184) client.aClass184_7475).anInt2287)).toString());
+		if ((((Class184) client.aClass184_7475).recievedBuffer.index) * -1990677291 != ((Class184) client.aClass184_7475).anInt2287 * 715663393)
+			throw new RuntimeException(new StringBuilder().append((((Class184) client.aClass184_7475).recievedBuffer.index) * -1990677291).append(" ").append(715663393 * (((Class184) client.aClass184_7475).anInt2287)).toString());
 		for (int i_200_ = 0; i_200_ < client.anInt7211 * -685729279; i_200_++) {
 			if (client.aClass465_7208.method7754((long) client.anIntArray7212[i_200_]) == null)
 				throw new RuntimeException(new StringBuilder().append(i_200_).append(" ").append(-685729279 * client.anInt7211).toString());

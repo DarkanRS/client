@@ -430,7 +430,7 @@ public class MapRegion {
 			this.anInt3170 = -93814827 * i;
 			this.anInt3207 = 1969692543 * i_101_;
 			if (!this.aBool3171) {
-				Class365.method6298(i_102_, 1265357038);
+				Class365.setGameState(i_102_, 1265357038);
 				Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -532223437), true, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -29);
 			}
 			if (this.coordGrid != null) {
@@ -930,15 +930,15 @@ public class MapRegion {
 			}
 		}
 		if (-1741204137 * client.anInt7166 == 11) {
-			Class365.method6298(5, 897954436);
+			Class365.setGameState(5, 897954436);
 		} else if (2 == client.anInt7166 * -1741204137) {
-			Class365.method6298(0, 1905920660);
+			Class365.setGameState(0, 1905920660);
 		} else if (-1741204137 * client.anInt7166 == 6) {
-			Class365.method6298(7, 1471410444);
+			Class365.setGameState(7, 1471410444);
 		} else if (9 == -1741204137 * client.anInt7166) {
-			Class365.method6298(3, 1843758807);
+			Class365.setGameState(3, 1843758807);
 		} else {
-			Class365.method6298(13, 850026987);
+			Class365.setGameState(13, 850026987);
 			if (client.aClass184_7475.method3053((byte) -84) != null) {
 				TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4603, client.aClass184_7475.isaac, 1466063096);
 				client.aClass184_7475.method3049(class282_sub23, 1512043524);
@@ -1296,15 +1296,15 @@ public class MapRegion {
 			this.anInt3172 = 1 * class257_406_.anInt3172;
 			this.anInt3194 = 1 * class257_406_.anInt3194;
 		} else if (5 == -1741204137 * client.anInt7166) {
-			Class365.method6298(11, 1377312199);
+			Class365.setGameState(11, 1377312199);
 		} else if (-1741204137 * client.anInt7166 == 0) {
-			Class365.method6298(2, 1244371600);
+			Class365.setGameState(2, 1244371600);
 		} else if (-1741204137 * client.anInt7166 == 7) {
-			Class365.method6298(6, 1707832511);
+			Class365.setGameState(6, 1707832511);
 		} else if (13 == -1741204137 * client.anInt7166) {
-			Class365.method6298(18, 706362895);
+			Class365.setGameState(18, 706362895);
 		} else if (-1741204137 * client.anInt7166 == 3) {
-			Class365.method6298(9, 1330863416);
+			Class365.setGameState(9, 1330863416);
 		}
 	}
 

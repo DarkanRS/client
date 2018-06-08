@@ -67,7 +67,7 @@ public class Class501 {
 
 	static void method8350(int i) {
 		Class9.aClass184_73.method3054((short) 1653);
-		((Class184) Class9.aClass184_73).aClass282_Sub35_Sub2_2284.index = 0;
+		((Class184) Class9.aClass184_73).recievedBuffer.index = 0;
 		((Class184) Class9.aClass184_73).aClass375_2286 = null;
 		((Class184) Class9.aClass184_73).aClass375_2278 = null;
 		((Class184) Class9.aClass184_73).aClass375_2296 = null;
@@ -89,7 +89,7 @@ public class Class501 {
 		NativeLibraryLoader.anInt3240 = 770488346;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
-		Class365.method6298(13, 2041470654);
+		Class365.setGameState(13, 2041470654);
 		for (int i_12_ = 0; i_12_ < 107; i_12_++)
 			client.aBoolArray7443[i_12_] = true;
 		Class388.method6692(1016678349);

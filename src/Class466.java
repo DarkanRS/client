@@ -47,7 +47,7 @@ public class Class466 implements Interface43 {
 
 	public static void method7777(int i) {
 		if (-1741204137 * client.anInt7166 == 0 && (!JS5CacheFile.method3360((byte) -101) && !Class85.method1466(-873027647)))
-			Class365.method6298(7, 1294847901);
+			Class365.setGameState(7, 1294847901);
 	}
 
 	static char method7778(char c, int i) {

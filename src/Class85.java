@@ -13,7 +13,7 @@ public class Class85 {
 	}
 
 	static boolean method1466(int i) {
-		return Class192.aClass1_2391 != null;
+		return Class192.ACCOUNT_CREATION_STAGE != null;
 	}
 
 	Class85() {

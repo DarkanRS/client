@@ -89,11 +89,11 @@ public class Class5 {
 			Class448.aClass450_5424.method7493(876652608);
 			Class14.anInt133 = 0;
 			Class14.anInt134 += 1763687431;
-			Class192.aClass1_2391 = Class1.aClass1_11;
+			Class192.ACCOUNT_CREATION_STAGE = Class1.REQUEST;
 		} else {
-			Class192.aClass1_2391 = null;
-			Class96_Sub9.aClass483_9278 = Class483.aClass483_5731;
-			Class365.method6298(5, 1700286123);
+			Class192.ACCOUNT_CREATION_STAGE = null;
+			Class96_Sub9.RECIEVED_RESPONSE = AccountCreationResponseOpcodes.aClass483_5731;
+			Class365.setGameState(5, 1700286123);
 		}
 	}
 }

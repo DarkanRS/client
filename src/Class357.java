@@ -28,7 +28,7 @@ public class Class357 implements Interface3 {
 	public static Class357 method6228(RsByteBuffer class282_sub35) {
 		int i = class282_sub35.readBigSmart();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(968256486)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_2_ = class282_sub35.readShort(1848566217);
 		int i_3_ = class282_sub35.readShort(1828315764);
 		return new Class357(i, class356, class353, i_2_, i_3_);

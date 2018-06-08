@@ -196,7 +196,7 @@ public class Class377 implements IndexLoader {
 	public static Class62 method6401(RsByteBuffer class282_sub35, byte i) {
 		String string = class282_sub35.readString();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(180670091)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_20_ = class282_sub35.readShort(1978619926);
 		int i_21_ = class282_sub35.readShort(1827949740);
 		int i_22_ = class282_sub35.readUnsignedByte();

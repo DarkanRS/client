@@ -41,7 +41,7 @@ public class Class9 {
 	static String aString102;
 	public static int anInt103;
 	static int anInt104;
-	static boolean aBool105 = false;
+	static boolean socialNetworkLogin = false;
 	public static int anInt106;
 	public static int anInt107;
 	public static int anInt108;
@@ -116,7 +116,7 @@ public class Class9 {
 			Class290.method5118((byte) -111);
 			aString99 = string;
 			aString102 = string_0_;
-			Class365.method6298(19, 1963550159);
+			Class365.setGameState(19, 1963550159);
 		}
 	}
 
@@ -125,7 +125,7 @@ public class Class9 {
 			Class290.method5118((byte) -114);
 			aString99 = string;
 			aString102 = string_1_;
-			Class365.method6298(19, 1880632228);
+			Class365.setGameState(19, 1880632228);
 		}
 	}
 
@@ -135,7 +135,7 @@ public class Class9 {
 				aLong77 = -2087908126908168589L;
 			}
 			anInt76 = i * 1481524237;
-			Class365.method6298(19, 1714081880);
+			Class365.setGameState(19, 1714081880);
 		}
 	}
 
@@ -145,7 +145,7 @@ public class Class9 {
 				aLong77 = -2087908126908168589L;
 			}
 			anInt76 = i * 1481524237;
-			Class365.method6298(19, 763173979);
+			Class365.setGameState(19, 763173979);
 		}
 	}
 
@@ -164,7 +164,7 @@ public class Class9 {
 			}
 			anInt76 = i * 1481524237;
 			client.aClass184_7218.method3051((byte) -47);
-			Class365.method6298(14, 1320296679);
+			Class365.setGameState(14, 1320296679);
 		}
 	}
 
@@ -175,7 +175,7 @@ public class Class9 {
 			}
 			anInt76 = i * 1481524237;
 			client.aClass184_7218.method3051((byte) -117);
-			Class365.method6298(14, 1947211970);
+			Class365.setGameState(14, 1947211970);
 		}
 	}
 
@@ -185,13 +185,13 @@ public class Class9 {
 				aLong77 = -2087908126908168589L;
 			}
 			anInt76 = i * 1481524237;
-			Class365.method6298(19, 1027492154);
+			Class365.setGameState(19, 1027492154);
 		}
 	}
 
 	public static void method419() {
 		if (-1741204137 * client.anInt7166 == 0 && (!JS5CacheFile.method3360((byte) 59) && !Class85.method1466(908661087))) {
-			Class365.method6298(7, 1790327246);
+			Class365.setGameState(7, 1790327246);
 		}
 	}
 
@@ -222,7 +222,7 @@ public class Class9 {
 			}
 			anInt76 = i * 1481524237;
 			client.aClass184_7218.method3051((byte) -20);
-			Class365.method6298(14, 812413306);
+			Class365.setGameState(14, 812413306);
 		}
 	}
 
@@ -274,7 +274,7 @@ public class Class9 {
 
 	static void method430() {
 		aClass184_73.method3054((short) 10681);
-		aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+		aClass184_73.recievedBuffer.index = 0;
 		aClass184_73.aClass375_2286 = null;
 		aClass184_73.aClass375_2278 = null;
 		aClass184_73.aClass375_2296 = null;
@@ -298,7 +298,7 @@ public class Class9 {
 		NativeLibraryLoader.anInt3240 = 770488346;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
-		Class365.method6298(13, 1193323946);
+		Class365.setGameState(13, 1193323946);
 		for (int i = 0; i < 107; i++) {
 			client.aBoolArray7443[i] = true;
 		}
@@ -324,7 +324,7 @@ public class Class9 {
 					} else {
 						i = 2000;
 					}
-					if (aBool105 && 1923286921 * loginStage >= 65) {
+					if (socialNetworkLogin && 1923286921 * loginStage >= 65) {
 						i = 6000;
 					}
 					if (273 != 368603503 * lobbyStage || (201 != 1923286921 * loginStage && -1378127363 * anInt106 != 42)) {
@@ -355,7 +355,7 @@ public class Class9 {
 						}
 						aClass184_73.method3054((short) -8886);
 						TCPMessage class282_sub23 = Class207.method3558((byte) 106);
-						if (aBool105) {
+						if (socialNetworkLogin) {
 							class282_sub23.buffer.writeByte((1627920319 * OutgoingLoginPacket.INIT_SOCIAL_NETWORK_CONNECTION.id));
 							class282_sub23.buffer.writeShort(0, 1417031095);
 							int i_3_ = (-1990677291 * (class282_sub23.buffer.index));
@@ -389,8 +389,8 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -22).method3315(1, (byte) 38)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -67).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1262097925);
-						int i_5_ = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+						aClass184_73.method3053((byte) -67).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -1262097925);
+						int i_5_ = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 						if (i_5_ != 0) {
 							loginStage = -469549710;
 							Class8_Sub1.method13784(i_5_, 1655637166);
@@ -398,7 +398,7 @@ public class Class9 {
 							Class361.method6270((byte) 26);
 							break;
 						}
-						if (aBool105) {
+						if (socialNetworkLogin) {
 							loginStage = 2085258558;
 						} else {
 							loginStage = -1602119216;
@@ -408,20 +408,20 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -96).method3315(2, (byte) 38)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -96).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 2, -1407046348);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = aClass184_73.aClass282_Sub35_Sub2_2284.readUnsignedShort() * -1115476867;
+						aClass184_73.method3053((byte) -96).method3327((aClass184_73.recievedBuffer.buffer), 0, 2, -1407046348);
+						aClass184_73.recievedBuffer.index = 0;
+						aClass184_73.recievedBuffer.index = aClass184_73.recievedBuffer.readUnsignedShort() * -1115476867;
 						loginStage = -497264847;
 					}
 					if (1923286921 * loginStage == 57) {
-						if (!aClass184_73.method3053((byte) -3).method3315(((aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291), (byte) 125)) {
+						if (!aClass184_73.method3053((byte) -3).method3315(((aClass184_73.recievedBuffer.index) * -1990677291), (byte) 125)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -68).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, -1990677291 * (aClass184_73.aClass282_Sub35_Sub2_2284.index), -1684105677);
-						aClass184_73.aClass282_Sub35_Sub2_2284.method13100(Class500.anIntArray5827, 1745783935);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-						String string = aClass184_73.aClass282_Sub35_Sub2_2284.readGJString(-446306734);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+						aClass184_73.method3053((byte) -68).method3327((aClass184_73.recievedBuffer.buffer), 0, -1990677291 * (aClass184_73.recievedBuffer.index), -1684105677);
+						aClass184_73.recievedBuffer.method13100(Class500.anIntArray5827, 1745783935);
+						aClass184_73.recievedBuffer.index = 0;
+						String string = aClass184_73.recievedBuffer.readGJString(-446306734);
+						aClass184_73.recievedBuffer.index = 0;
 						String string_6_ = Class361.aClass361_4176.method6253((byte) -55);
 						if (!client.aBool7310 || !Class186.method3082(string, 1, string_6_, 145298920)) {
 							Class508.method8736(string, true, (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1785769533) == 5), string_6_, client.aBool7158, client.aBool7159, (byte) -91);
@@ -432,8 +432,8 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -111).method3315(1, (byte) 41)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -128).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -646099318);
-						if (1 == ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff)) {
+						aClass184_73.method3053((byte) -128).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -646099318);
+						if (1 == ((aClass184_73.recievedBuffer.buffer[0]) & 0xff)) {
 							loginStage = -428244941;
 						}
 					}
@@ -441,22 +441,22 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -37).method3315(16, (byte) 55)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -13).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 16, -1149259535);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = -667760688;
-						aClass184_73.aClass282_Sub35_Sub2_2284.method13100(Class500.anIntArray5827, 1793552474);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-						aLong77 = (aClass184_73.aClass282_Sub35_Sub2_2284.readLong(790216619) * 2087908126908168589L);
-						aLong86 = (aClass184_73.aClass282_Sub35_Sub2_2284.readLong(615291377) * -3627564723025713089L);
+						aClass184_73.method3053((byte) -13).method3327((aClass184_73.recievedBuffer.buffer), 0, 16, -1149259535);
+						aClass184_73.recievedBuffer.index = -667760688;
+						aClass184_73.recievedBuffer.method13100(Class500.anIntArray5827, 1793552474);
+						aClass184_73.recievedBuffer.index = 0;
+						aLong77 = (aClass184_73.recievedBuffer.readLong(790216619) * 2087908126908168589L);
+						aLong86 = (aClass184_73.recievedBuffer.readLong(615291377) * -3627564723025713089L);
 						loginStage = -1602119216;
 					}
 					if (80 == 1923286921 * loginStage) {
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+						aClass184_73.recievedBuffer.index = 0;
 						aClass184_73.method3054((short) 5366);
 						TCPMessage class282_sub23 = Class207.method3558((byte) 125);
 						RsBitsBuffer stream = class282_sub23.buffer;
 						if (368603503 * lobbyStage == 273) {// World Login
 							OutgoingLoginPacket class369;
-							if (aBool105) {
+							if (socialNetworkLogin) {
 								class369 = OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN;
 							} else {
 								class369 = OutgoingLoginPacket.GAMELOGIN;
@@ -465,7 +465,7 @@ public class Class9 {
 							stream.writeShort(0, 1417031095);
 							int i_7_ = stream.index * -1990677291;
 							int i_8_ = stream.index * -1990677291;
-							if (!aBool105) {
+							if (!socialNetworkLogin) {
 								stream.writeInt(727);
 								stream.writeInt(1);
 								stream.writeByte((-1741204137 * client.anInt7166 == 10 ? 1 : 0));
@@ -511,11 +511,11 @@ public class Class9 {
 							System.out.println(client.aString7164);
 							stream.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
 							Class240.writeCRCs(stream, 144261488);
-							stream.method13101(Class500.anIntArray5827, i_8_, stream.index * -1990677291, 705394503);
+							stream.encryptWithXtea(Class500.anIntArray5827, i_8_, stream.index * -1990677291, 705394503);
 							stream.method13281((-1990677291 * stream.index - i_7_), 1201423895);
 						} else {
 							OutgoingLoginPacket class369;
-							if (aBool105) {
+							if (socialNetworkLogin) {
 								class369 = OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN;
 							} else {
 								class369 = OutgoingLoginPacket.LOBBYLOGIN;
@@ -524,7 +524,7 @@ public class Class9 {
 							stream.writeShort(0, 1417031095);
 							int i_10_ = stream.index * -1990677291;
 							int i_11_ = stream.index * -1990677291;
-							if (!aBool105) {
+							if (!socialNetworkLogin) {
 								stream.writeInt(727);
 								stream.writeInt(1);
 								RsByteBuffer class282_sub35 = ChatLine.getLoginMod();
@@ -552,7 +552,7 @@ public class Class9 {
 							stream.writeInt((client.anInt7163 * 204524791));
 							stream.writeString(client.aString7164);
 							Class240.writeCRCs(stream, -231634376);
-							stream.method13101(Class500.anIntArray5827, i_11_, -1990677291 * stream.index, 516922321);
+							stream.encryptWithXtea(Class500.anIntArray5827, i_11_, -1990677291 * stream.index, 516922321);
 							stream.method13281((stream.index * -1990677291 - i_10_), 1201423895);
 						}
 						aClass184_73.method3049(class282_sub23, 701859501);
@@ -563,7 +563,7 @@ public class Class9 {
 						}
 						aClass184_73.aClass432_2295 = new IsaacCipher(Class500.anIntArray5827);
 						new IsaacCipher(Class500.anIntArray5827);
-						aClass184_73.aClass282_Sub35_Sub2_2284.setIsaacCipher(aClass184_73.aClass432_2295, 2054346238);
+						aClass184_73.recievedBuffer.setIsaacCipher(aClass184_73.aClass432_2295, 2054346238);
 						Class500.anIntArray5827 = null;
 						loginStage = -1298324455;
 					}
@@ -571,8 +571,8 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -105).method3315(1, (byte) 49)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -12).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -713377911);
-						int i_14_ = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+						aClass184_73.method3053((byte) -12).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -713377911);
+						int i_14_ = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 						if (21 == i_14_) {
 							loginStage = 13589632;
 						} else if (i_14_ == 29 || 45 == i_14_) {
@@ -600,8 +600,8 @@ public class Class9 {
 										loginStage = 54894401;
 										Class8_Sub1.method13784(i_14_, -2131379156);
 									} else {
-										if (aBool74 && !aBool105 && -1 != 1051306693 * anInt76 && i_14_ == 35) {
-											aBool105 = true;
+										if (aBool74 && !socialNetworkLogin && -1 != 1051306693 * anInt76 && i_14_ == 35) {
+											socialNetworkLogin = true;
 											anInt90 = 0;
 											loginStage = 69019906;
 											aClass184_73.method3051((byte) -10);
@@ -631,8 +631,8 @@ public class Class9 {
 						loginStage = -1298324455;
 					} else if (loginStage * 1923286921 == 128) {
 						if (aClass184_73.method3053((byte) -42).method3315(1, (byte) 126)) {
-							aClass184_73.method3053((byte) -70).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1240070766);
-							int i_15_ = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+							aClass184_73.method3053((byte) -70).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -1240070766);
+							int i_15_ = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 							anInt103 = i_15_ * 547570654;
 							loginStage = -469549710;
 							Class8_Sub1.method13784(21, 937056164);
@@ -641,8 +641,8 @@ public class Class9 {
 						}
 					} else if (201 == 1923286921 * loginStage) {
 						if (aClass184_73.method3053((byte) -78).method3315(2, (byte) 81)) {
-							aClass184_73.method3053((byte) -126).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 2, -784371712);
-							anInt113 = ((((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff) << 8) + ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[1]) & 0xff)) * 1532398177;
+							aClass184_73.method3053((byte) -126).method3327((aClass184_73.recievedBuffer.buffer), 0, 2, -784371712);
+							anInt113 = ((((aClass184_73.recievedBuffer.buffer[0]) & 0xff) << 8) + ((aClass184_73.recievedBuffer.buffer[1]) & 0xff)) * 1532398177;
 							loginStage = -1298324455;
 						}
 					} else if (180 == loginStage * 1923286921) {
@@ -650,15 +650,15 @@ public class Class9 {
 							if (!aClass184_73.method3053((byte) -71).method3315(1, (byte) 90)) {
 								break;
 							}
-							aClass184_73.method3053((byte) -120).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -599109613);
-							anInt112 = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff) * -1260694625;
+							aClass184_73.method3053((byte) -120).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -599109613);
+							anInt112 = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff) * -1260694625;
 						} else if (Class110.anInt1105 * -1857761539 == 45) {
 							if (!aClass184_73.method3053((byte) -108).method3315(3, (byte) 30)) {
 								break;
 							}
-							aClass184_73.method3053((byte) -76).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 3, -1318798554);
-							anInt112 = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff) * -1260694625;
-							anInt94 = (((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[2]) & 0xff) + (((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[1]) & 0xff) << 8)) * 605935537;
+							aClass184_73.method3053((byte) -76).method3327((aClass184_73.recievedBuffer.buffer), 0, 3, -1318798554);
+							anInt112 = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff) * -1260694625;
+							anInt94 = (((aClass184_73.recievedBuffer.buffer[2]) & 0xff) + (((aClass184_73.recievedBuffer.buffer[1]) & 0xff) << 8)) * 605935537;
 						} else {
 							throw new IllegalStateException();
 						}
@@ -668,13 +668,13 @@ public class Class9 {
 						Class361.method6270((byte) 60);
 					} else if (133 == 1923286921 * loginStage) {
 						if (aClass184_73.method3053((byte) -58).method3315(1, (byte) 74)) {
-							aClass184_73.method3053((byte) -2).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1539954013);
-							Class153.anInt1965 = 1058974525 * ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+							aClass184_73.method3053((byte) -2).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -1539954013);
+							Class153.anInt1965 = 1058974525 * ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 							loginStage = 1491258668;
 						}
 					} else {
 						if (140 == loginStage * 1923286921) {
-							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.aClass282_Sub35_Sub2_2284);
+							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.recievedBuffer);
 							if (273 == lobbyStage * 368603503) {
 								if (!aClass184_73.method3053((byte) -24).method3315(1878721557 * Class153.anInt1965, (byte) 34)) {
 									break;
@@ -773,7 +773,7 @@ public class Class9 {
 								loginStage = -469549710;
 								Class8_Sub1.method13784(2, -858062048);
 								IncomingPacket.method6377(-151448236);
-								Class365.method6298(0, 2023608078);
+								Class365.setGameState(0, 2023608078);
 								aClass184_73.aClass375_2286 = null;
 								break;
 							}
@@ -782,11 +782,11 @@ public class Class9 {
 							if (!aClass184_73.method3053((byte) -10).method3315(3, (byte) 36)) {
 								break;
 							}
-							aClass184_73.method3053((byte) -15).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 3, -1210659726);
+							aClass184_73.method3053((byte) -15).method3327((aClass184_73.recievedBuffer.buffer), 0, 3, -1210659726);
 							loginStage = -1961344251;
 						}
 						if (173 == 1923286921 * loginStage) {
-							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.aClass282_Sub35_Sub2_2284);
+							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.recievedBuffer);
 							class282_sub35_sub2.index = 0;
 							if (class282_sub35_sub2.method14869((short) -1318)) {
 								if (!aClass184_73.method3053((byte) -81).method3315(1, (byte) 107)) {
@@ -800,24 +800,24 @@ public class Class9 {
 						}
 						if (156 == loginStage * 1923286921) {
 							if (aClass184_73.method3053((byte) -3).method3315((aClass184_73.anInt2287 * 715663393), (byte) 118)) {
-								aClass184_73.method3053((byte) -123).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, (aClass184_73.anInt2287 * 715663393), -917084414);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+								aClass184_73.method3053((byte) -123).method3327((aClass184_73.recievedBuffer.buffer), 0, (aClass184_73.anInt2287 * 715663393), -917084414);
+								aClass184_73.recievedBuffer.index = 0;
 								int i_17_ = (aClass184_73.anInt2287 * 715663393);
 								loginStage = -469549710;
 								Class8_Sub1.method13784(2, -1592541754);
 								Class190.method3152((byte) 77);
-								Class197.method3203((aClass184_73.aClass282_Sub35_Sub2_2284), (byte) 114);
-								int i_18_ = i_17_ - (aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291;
+								Class197.method3203((aClass184_73.recievedBuffer), (byte) 114);
+								int i_18_ = i_17_ - (aClass184_73.recievedBuffer.index) * -1990677291;
 								RsBitsBuffer class282_sub35_sub2 = new RsBitsBuffer(i_18_);
-								System.arraycopy((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), (aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291, (class282_sub35_sub2.buffer), 0, i_18_);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index += -1115476867 * i_18_;
+								System.arraycopy((aClass184_73.recievedBuffer.buffer), (aClass184_73.recievedBuffer.index) * -1990677291, (class282_sub35_sub2.buffer), 0, i_18_);
+								aClass184_73.recievedBuffer.index += -1115476867 * i_18_;
 								if (IncomingPacket.DYNAMIC_MAP_REGION == (aClass184_73.aClass375_2286)) {
 									IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, class282_sub35_sub2), 1554888206);
 								} else {
 									IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, class282_sub35_sub2), 906010556);
 								}
-								if (-1990677291 * (aClass184_73.aClass282_Sub35_Sub2_2284.index) != i_17_) {
-									throw new RuntimeException(new StringBuilder().append(-1990677291 * (aClass184_73.aClass282_Sub35_Sub2_2284.index)).append(" ").append(i_17_).toString());
+								if (-1990677291 * (aClass184_73.recievedBuffer.index) != i_17_) {
+									throw new RuntimeException(new StringBuilder().append(-1990677291 * (aClass184_73.recievedBuffer.index)).append(" ").append(i_17_).toString());
 								}
 								aClass184_73.aClass375_2286 = null;
 							}
@@ -829,20 +829,20 @@ public class Class9 {
 								if (!aClass184_73.method3053((byte) -58).method3315(2, (byte) 87)) {
 									break;
 								}
-								aClass184_73.method3053((byte) -86).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 2, -1798190121);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-								aClass184_73.anInt2287 = (aClass184_73.aClass282_Sub35_Sub2_2284.readUnsignedShort() * -640590879);
+								aClass184_73.method3053((byte) -86).method3327((aClass184_73.recievedBuffer.buffer), 0, 2, -1798190121);
+								aClass184_73.recievedBuffer.index = 0;
+								aClass184_73.anInt2287 = (aClass184_73.recievedBuffer.readUnsignedShort() * -640590879);
 							}
 							if (aClass184_73.method3053((byte) -37).method3315((715663393 * aClass184_73.anInt2287), (byte) 105)) {
-								aClass184_73.method3053((byte) -85).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, (aClass184_73.anInt2287 * 715663393), -943126634);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+								aClass184_73.method3053((byte) -85).method3327((aClass184_73.recievedBuffer.buffer), 0, (aClass184_73.anInt2287 * 715663393), -943126634);
+								aClass184_73.recievedBuffer.index = 0;
 								int i_19_ = (aClass184_73.anInt2287 * 715663393);
 								loginStage = -469549710;
 								Class8_Sub1.method13784(15, 433626229);
 								Class501.method8350(2122015550);
-								Class197.method3203((aClass184_73.aClass282_Sub35_Sub2_2284), (byte) 56);
-								if (((aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291) != i_19_) {
-									throw new RuntimeException(new StringBuilder().append((aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291).append(" ").append(i_19_).toString());
+								Class197.method3203((aClass184_73.recievedBuffer), (byte) 56);
+								if (((aClass184_73.recievedBuffer.index) * -1990677291) != i_19_) {
+									throw new RuntimeException(new StringBuilder().append((aClass184_73.recievedBuffer.index) * -1990677291).append(" ").append(i_19_).toString());
 								}
 								aClass184_73.aClass375_2286 = null;
 							}
@@ -876,7 +876,7 @@ public class Class9 {
 	}
 
 	static void method434(boolean bool, boolean bool_20_, String string, String string_21_, long l) {
-		aBool105 = bool;
+		socialNetworkLogin = bool;
 		if (!bool_20_) {
 			anInt76 = -1481524237;
 		}
@@ -901,7 +901,7 @@ public class Class9 {
 	}
 
 	static void method435(boolean bool, boolean bool_22_, String string, String string_23_, long l) {
-		aBool105 = bool;
+		socialNetworkLogin = bool;
 		if (!bool_22_) {
 			anInt76 = -1481524237;
 		}
@@ -930,7 +930,7 @@ public class Class9 {
 			Class290.method5118((byte) -97);
 			aString99 = string;
 			aString102 = string_24_;
-			Class365.method6298(19, 1922861520);
+			Class365.setGameState(19, 1922861520);
 		}
 	}
 
@@ -988,7 +988,7 @@ public class Class9 {
 					} else {
 						i = 2000;
 					}
-					if (aBool105 && 1923286921 * loginStage >= 65) {
+					if (socialNetworkLogin && 1923286921 * loginStage >= 65) {
 						i = 6000;
 					}
 					if (273 != 368603503 * lobbyStage || (201 != 1923286921 * loginStage && -1378127363 * anInt106 != 42)) {
@@ -1019,7 +1019,7 @@ public class Class9 {
 						}
 						aClass184_73.method3054((short) -13389);
 						TCPMessage class282_sub23 = Class207.method3558((byte) 61);
-						if (aBool105) {
+						if (socialNetworkLogin) {
 							class282_sub23.buffer.writeByte((1627920319 * OutgoingLoginPacket.INIT_SOCIAL_NETWORK_CONNECTION.id));
 							class282_sub23.buffer.writeShort(0, 1417031095);
 							int i_25_ = (-1990677291 * (class282_sub23.buffer.index));
@@ -1053,8 +1053,8 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -44).method3315(1, (byte) 126)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -33).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -2001776540);
-						int i_27_ = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+						aClass184_73.method3053((byte) -33).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -2001776540);
+						int i_27_ = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 						if (i_27_ != 0) {
 							loginStage = -469549710;
 							Class8_Sub1.method13784(i_27_, 372161942);
@@ -1062,7 +1062,7 @@ public class Class9 {
 							Class361.method6270((byte) 35);
 							break;
 						}
-						if (aBool105) {
+						if (socialNetworkLogin) {
 							loginStage = 2085258558;
 						} else {
 							loginStage = -1602119216;
@@ -1072,20 +1072,20 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -76).method3315(2, (byte) 87)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -88).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 2, -1407378995);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = aClass184_73.aClass282_Sub35_Sub2_2284.readUnsignedShort() * -1115476867;
+						aClass184_73.method3053((byte) -88).method3327((aClass184_73.recievedBuffer.buffer), 0, 2, -1407378995);
+						aClass184_73.recievedBuffer.index = 0;
+						aClass184_73.recievedBuffer.index = aClass184_73.recievedBuffer.readUnsignedShort() * -1115476867;
 						loginStage = -497264847;
 					}
 					if (1923286921 * loginStage == 57) {
-						if (!aClass184_73.method3053((byte) -2).method3315(((aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291), (byte) 100)) {
+						if (!aClass184_73.method3053((byte) -2).method3315(((aClass184_73.recievedBuffer.index) * -1990677291), (byte) 100)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -102).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, -1990677291 * (aClass184_73.aClass282_Sub35_Sub2_2284.index), -1915632506);
-						aClass184_73.aClass282_Sub35_Sub2_2284.method13100(Class500.anIntArray5827, 1010429212);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-						String string = aClass184_73.aClass282_Sub35_Sub2_2284.readGJString(-2031775216);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+						aClass184_73.method3053((byte) -102).method3327((aClass184_73.recievedBuffer.buffer), 0, -1990677291 * (aClass184_73.recievedBuffer.index), -1915632506);
+						aClass184_73.recievedBuffer.method13100(Class500.anIntArray5827, 1010429212);
+						aClass184_73.recievedBuffer.index = 0;
+						String string = aClass184_73.recievedBuffer.readGJString(-2031775216);
+						aClass184_73.recievedBuffer.index = 0;
 						String string_28_ = Class361.aClass361_4176.method6253((byte) -102);
 						if (!client.aBool7310 || !Class186.method3082(string, 1, string_28_, 145298920)) {
 							Class508.method8736(string, true, (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1414703719) == 5), string_28_, client.aBool7158, client.aBool7159, (byte) 29);
@@ -1096,8 +1096,8 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -66).method3315(1, (byte) 29)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -86).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -644056918);
-						if (1 == ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff)) {
+						aClass184_73.method3053((byte) -86).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -644056918);
+						if (1 == ((aClass184_73.recievedBuffer.buffer[0]) & 0xff)) {
 							loginStage = -428244941;
 						}
 					}
@@ -1105,22 +1105,22 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -73).method3315(16, (byte) 48)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -128).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 16, -1299463584);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = -667760688;
-						aClass184_73.aClass282_Sub35_Sub2_2284.method13100(Class500.anIntArray5827, 1195262685);
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-						aLong77 = (aClass184_73.aClass282_Sub35_Sub2_2284.readLong(941389488) * 2087908126908168589L);
-						aLong86 = (aClass184_73.aClass282_Sub35_Sub2_2284.readLong(1245475773) * -3627564723025713089L);
+						aClass184_73.method3053((byte) -128).method3327((aClass184_73.recievedBuffer.buffer), 0, 16, -1299463584);
+						aClass184_73.recievedBuffer.index = -667760688;
+						aClass184_73.recievedBuffer.method13100(Class500.anIntArray5827, 1195262685);
+						aClass184_73.recievedBuffer.index = 0;
+						aLong77 = (aClass184_73.recievedBuffer.readLong(941389488) * 2087908126908168589L);
+						aLong86 = (aClass184_73.recievedBuffer.readLong(1245475773) * -3627564723025713089L);
 						loginStage = -1602119216;
 					}
 					if (80 == 1923286921 * loginStage) {
-						aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+						aClass184_73.recievedBuffer.index = 0;
 						aClass184_73.method3054((short) 5664);
 						TCPMessage class282_sub23 = Class207.method3558((byte) 59);
 						RsBitsBuffer class282_sub35_sub2 = class282_sub23.buffer;
 						if (368603503 * lobbyStage == 273) {
 							OutgoingLoginPacket class369;
-							if (aBool105) {
+							if (socialNetworkLogin) {
 								class369 = OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN;
 							} else {
 								class369 = OutgoingLoginPacket.GAMELOGIN;
@@ -1129,7 +1129,7 @@ public class Class9 {
 							class282_sub35_sub2.writeShort(0, 1417031095);
 							int i_29_ = class282_sub35_sub2.index * -1990677291;
 							int i_30_ = class282_sub35_sub2.index * -1990677291;
-							if (!aBool105) {
+							if (!socialNetworkLogin) {
 								class282_sub35_sub2.writeInt(727);
 								class282_sub35_sub2.writeInt(1);
 								class282_sub35_sub2.writeByte((-1741204137 * client.anInt7166 == 10 ? 1 : 0));
@@ -1173,11 +1173,11 @@ public class Class9 {
 							class282_sub35_sub2.writeString(client.aString7164);
 							class282_sub35_sub2.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
 							Class240.writeCRCs(class282_sub35_sub2, 2084683894);
-							class282_sub35_sub2.method13101(Class500.anIntArray5827, i_30_, class282_sub35_sub2.index * -1990677291, 1807823276);
+							class282_sub35_sub2.encryptWithXtea(Class500.anIntArray5827, i_30_, class282_sub35_sub2.index * -1990677291, 1807823276);
 							class282_sub35_sub2.method13281((-1990677291 * class282_sub35_sub2.index - i_29_), 1201423895);
 						} else {
 							OutgoingLoginPacket class369;
-							if (aBool105) {
+							if (socialNetworkLogin) {
 								class369 = OutgoingLoginPacket.SOCIAL_NETWORK_LOGIN;
 							} else {
 								class369 = OutgoingLoginPacket.LOBBYLOGIN;
@@ -1186,7 +1186,7 @@ public class Class9 {
 							class282_sub35_sub2.writeShort(0, 1417031095);
 							int i_32_ = class282_sub35_sub2.index * -1990677291;
 							int i_33_ = class282_sub35_sub2.index * -1990677291;
-							if (!aBool105) {
+							if (!socialNetworkLogin) {
 								class282_sub35_sub2.writeInt(727);
 								class282_sub35_sub2.writeInt(1);
 								RsByteBuffer class282_sub35 = ChatLine.getLoginMod();
@@ -1214,7 +1214,7 @@ public class Class9 {
 							class282_sub35_sub2.writeInt((client.anInt7163 * 204524791));
 							class282_sub35_sub2.writeString(client.aString7164);
 							Class240.writeCRCs(class282_sub35_sub2, 1971599880);
-							class282_sub35_sub2.method13101(Class500.anIntArray5827, i_33_, -1990677291 * class282_sub35_sub2.index, 1499562936);
+							class282_sub35_sub2.encryptWithXtea(Class500.anIntArray5827, i_33_, -1990677291 * class282_sub35_sub2.index, 1499562936);
 							class282_sub35_sub2.method13281((class282_sub35_sub2.index * -1990677291 - i_32_), 1201423895);
 						}
 						aClass184_73.method3049(class282_sub23, 1352466298);
@@ -1225,7 +1225,7 @@ public class Class9 {
 						}
 						aClass184_73.aClass432_2295 = new IsaacCipher(Class500.anIntArray5827);
 						new IsaacCipher(Class500.anIntArray5827);
-						aClass184_73.aClass282_Sub35_Sub2_2284.setIsaacCipher(aClass184_73.aClass432_2295, 1649633770);
+						aClass184_73.recievedBuffer.setIsaacCipher(aClass184_73.aClass432_2295, 1649633770);
 						Class500.anIntArray5827 = null;
 						loginStage = -1298324455;
 					}
@@ -1233,8 +1233,8 @@ public class Class9 {
 						if (!aClass184_73.method3053((byte) -85).method3315(1, (byte) 64)) {
 							break;
 						}
-						aClass184_73.method3053((byte) -80).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -596226935);
-						int i_36_ = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+						aClass184_73.method3053((byte) -80).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -596226935);
+						int i_36_ = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 						if (21 == i_36_) {
 							loginStage = 13589632;
 						} else if (i_36_ == 29 || 45 == i_36_) {
@@ -1262,8 +1262,8 @@ public class Class9 {
 										loginStage = 54894401;
 										Class8_Sub1.method13784(i_36_, -617797992);
 									} else {
-										if (aBool74 && !aBool105 && -1 != 1051306693 * anInt76 && i_36_ == 35) {
-											aBool105 = true;
+										if (aBool74 && !socialNetworkLogin && -1 != 1051306693 * anInt76 && i_36_ == 35) {
+											socialNetworkLogin = true;
 											anInt90 = 0;
 											loginStage = 69019906;
 											aClass184_73.method3051((byte) -85);
@@ -1293,8 +1293,8 @@ public class Class9 {
 						loginStage = -1298324455;
 					} else if (loginStage * 1923286921 == 128) {
 						if (aClass184_73.method3053((byte) -44).method3315(1, (byte) 38)) {
-							aClass184_73.method3053((byte) -99).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1929630006);
-							int i_37_ = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+							aClass184_73.method3053((byte) -99).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -1929630006);
+							int i_37_ = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 							anInt103 = i_37_ * 547570654;
 							loginStage = -469549710;
 							Class8_Sub1.method13784(21, -1318789468);
@@ -1303,8 +1303,8 @@ public class Class9 {
 						}
 					} else if (201 == 1923286921 * loginStage) {
 						if (aClass184_73.method3053((byte) -112).method3315(2, (byte) 114)) {
-							aClass184_73.method3053((byte) -119).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 2, -1838852986);
-							anInt113 = ((((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff) << 8) + ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[1]) & 0xff)) * 1532398177;
+							aClass184_73.method3053((byte) -119).method3327((aClass184_73.recievedBuffer.buffer), 0, 2, -1838852986);
+							anInt113 = ((((aClass184_73.recievedBuffer.buffer[0]) & 0xff) << 8) + ((aClass184_73.recievedBuffer.buffer[1]) & 0xff)) * 1532398177;
 							loginStage = -1298324455;
 						}
 					} else if (180 == loginStage * 1923286921) {
@@ -1312,15 +1312,15 @@ public class Class9 {
 							if (!aClass184_73.method3053((byte) -126).method3315(1, (byte) 38)) {
 								break;
 							}
-							aClass184_73.method3053((byte) -122).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -554975684);
-							anInt112 = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff) * -1260694625;
+							aClass184_73.method3053((byte) -122).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -554975684);
+							anInt112 = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff) * -1260694625;
 						} else if (Class110.anInt1105 * -1857761539 == 45) {
 							if (!aClass184_73.method3053((byte) -101).method3315(3, (byte) 85)) {
 								break;
 							}
-							aClass184_73.method3053((byte) -113).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 3, -1709246165);
-							anInt112 = ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff) * -1260694625;
-							anInt94 = (((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[2]) & 0xff) + (((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[1]) & 0xff) << 8)) * 605935537;
+							aClass184_73.method3053((byte) -113).method3327((aClass184_73.recievedBuffer.buffer), 0, 3, -1709246165);
+							anInt112 = ((aClass184_73.recievedBuffer.buffer[0]) & 0xff) * -1260694625;
+							anInt94 = (((aClass184_73.recievedBuffer.buffer[2]) & 0xff) + (((aClass184_73.recievedBuffer.buffer[1]) & 0xff) << 8)) * 605935537;
 						} else {
 							throw new IllegalStateException();
 						}
@@ -1330,13 +1330,13 @@ public class Class9 {
 						Class361.method6270((byte) 115);
 					} else if (133 == 1923286921 * loginStage) {
 						if (aClass184_73.method3053((byte) -110).method3315(1, (byte) 27)) {
-							aClass184_73.method3053((byte) -52).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 1, -604649885);
-							Class153.anInt1965 = 1058974525 * ((aClass184_73.aClass282_Sub35_Sub2_2284.buffer[0]) & 0xff);
+							aClass184_73.method3053((byte) -52).method3327((aClass184_73.recievedBuffer.buffer), 0, 1, -604649885);
+							Class153.anInt1965 = 1058974525 * ((aClass184_73.recievedBuffer.buffer[0]) & 0xff);
 							loginStage = 1491258668;
 						}
 					} else {
 						if (140 == loginStage * 1923286921) {
-							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.aClass282_Sub35_Sub2_2284);
+							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.recievedBuffer);
 							if (273 == lobbyStage * 368603503) {
 								if (!aClass184_73.method3053((byte) -89).method3315(1878721557 * Class153.anInt1965, (byte) 79)) {
 									break;
@@ -1435,7 +1435,7 @@ public class Class9 {
 								loginStage = -469549710;
 								Class8_Sub1.method13784(2, -140185879);
 								IncomingPacket.method6377(-752370576);
-								Class365.method6298(0, 818605937);
+								Class365.setGameState(0, 818605937);
 								aClass184_73.aClass375_2286 = null;
 								break;
 							}
@@ -1444,11 +1444,11 @@ public class Class9 {
 							if (!aClass184_73.method3053((byte) -5).method3315(3, (byte) 26)) {
 								break;
 							}
-							aClass184_73.method3053((byte) -127).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 3, -625807629);
+							aClass184_73.method3053((byte) -127).method3327((aClass184_73.recievedBuffer.buffer), 0, 3, -625807629);
 							loginStage = -1961344251;
 						}
 						if (173 == 1923286921 * loginStage) {
-							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.aClass282_Sub35_Sub2_2284);
+							RsBitsBuffer class282_sub35_sub2 = (aClass184_73.recievedBuffer);
 							class282_sub35_sub2.index = 0;
 							if (class282_sub35_sub2.method14869((short) -8291)) {
 								if (!aClass184_73.method3053((byte) -71).method3315(1, (byte) 46)) {
@@ -1462,24 +1462,24 @@ public class Class9 {
 						}
 						if (156 == loginStage * 1923286921) {
 							if (aClass184_73.method3053((byte) -118).method3315((aClass184_73.anInt2287 * 715663393), (byte) 53)) {
-								aClass184_73.method3053((byte) -68).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, (aClass184_73.anInt2287 * 715663393), -2060683615);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+								aClass184_73.method3053((byte) -68).method3327((aClass184_73.recievedBuffer.buffer), 0, (aClass184_73.anInt2287 * 715663393), -2060683615);
+								aClass184_73.recievedBuffer.index = 0;
 								int i_39_ = (aClass184_73.anInt2287 * 715663393);
 								loginStage = -469549710;
 								Class8_Sub1.method13784(2, -2010476267);
 								Class190.method3152((byte) 74);
-								Class197.method3203((aClass184_73.aClass282_Sub35_Sub2_2284), (byte) 59);
-								int i_40_ = i_39_ - (aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291;
+								Class197.method3203((aClass184_73.recievedBuffer), (byte) 59);
+								int i_40_ = i_39_ - (aClass184_73.recievedBuffer.index) * -1990677291;
 								RsBitsBuffer class282_sub35_sub2 = new RsBitsBuffer(i_40_);
-								System.arraycopy((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), (aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291, (class282_sub35_sub2.buffer), 0, i_40_);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index += -1115476867 * i_40_;
+								System.arraycopy((aClass184_73.recievedBuffer.buffer), (aClass184_73.recievedBuffer.index) * -1990677291, (class282_sub35_sub2.buffer), 0, i_40_);
+								aClass184_73.recievedBuffer.index += -1115476867 * i_40_;
 								if (IncomingPacket.DYNAMIC_MAP_REGION == (aClass184_73.aClass375_2286)) {
 									IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3155, class282_sub35_sub2), 837203869);
 								} else {
 									IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3158, class282_sub35_sub2), 569444316);
 								}
-								if (-1990677291 * (aClass184_73.aClass282_Sub35_Sub2_2284.index) != i_39_) {
-									throw new RuntimeException(new StringBuilder().append(-1990677291 * (aClass184_73.aClass282_Sub35_Sub2_2284.index)).append(" ").append(i_39_).toString());
+								if (-1990677291 * (aClass184_73.recievedBuffer.index) != i_39_) {
+									throw new RuntimeException(new StringBuilder().append(-1990677291 * (aClass184_73.recievedBuffer.index)).append(" ").append(i_39_).toString());
 								}
 								aClass184_73.aClass375_2286 = null;
 							}
@@ -1491,20 +1491,20 @@ public class Class9 {
 								if (!aClass184_73.method3053((byte) -109).method3315(2, (byte) 63)) {
 									break;
 								}
-								aClass184_73.method3053((byte) -85).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, 2, -1969496089);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
-								aClass184_73.anInt2287 = (aClass184_73.aClass282_Sub35_Sub2_2284.readUnsignedShort() * -640590879);
+								aClass184_73.method3053((byte) -85).method3327((aClass184_73.recievedBuffer.buffer), 0, 2, -1969496089);
+								aClass184_73.recievedBuffer.index = 0;
+								aClass184_73.anInt2287 = (aClass184_73.recievedBuffer.readUnsignedShort() * -640590879);
 							}
 							if (aClass184_73.method3053((byte) -126).method3315((715663393 * aClass184_73.anInt2287), (byte) 108)) {
-								aClass184_73.method3053((byte) -113).method3327((aClass184_73.aClass282_Sub35_Sub2_2284.buffer), 0, (aClass184_73.anInt2287 * 715663393), -1843776811);
-								aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+								aClass184_73.method3053((byte) -113).method3327((aClass184_73.recievedBuffer.buffer), 0, (aClass184_73.anInt2287 * 715663393), -1843776811);
+								aClass184_73.recievedBuffer.index = 0;
 								int i_41_ = (aClass184_73.anInt2287 * 715663393);
 								loginStage = -469549710;
 								Class8_Sub1.method13784(15, -584490160);
 								Class501.method8350(2117484903);
-								Class197.method3203((aClass184_73.aClass282_Sub35_Sub2_2284), (byte) 36);
-								if (((aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291) != i_41_) {
-									throw new RuntimeException(new StringBuilder().append((aClass184_73.aClass282_Sub35_Sub2_2284.index) * -1990677291).append(" ").append(i_41_).toString());
+								Class197.method3203((aClass184_73.recievedBuffer), (byte) 36);
+								if (((aClass184_73.recievedBuffer.index) * -1990677291) != i_41_) {
+									throw new RuntimeException(new StringBuilder().append((aClass184_73.recievedBuffer.index) * -1990677291).append(" ").append(i_41_).toString());
 								}
 								aClass184_73.aClass375_2286 = null;
 							}
@@ -1585,20 +1585,20 @@ public class Class9 {
 	static void method445() {
 		if (QuickChatDynamicValue.method4180(client.anInt7166 * -1741204137, (byte) -41)) {
 			if (client.aClass184_7218.method3053((byte) -3) == null) {
-				Class365.method6298(14, 1380869991);
+				Class365.setGameState(14, 1380869991);
 			} else {
-				Class365.method6298(0, 1174944233);
+				Class365.setGameState(0, 1174944233);
 			}
 		} else if (-1741204137 * client.anInt7166 == 14 || 19 == -1741204137 * client.anInt7166) {
-			Class365.method6298(5, 979384993);
+			Class365.setGameState(5, 979384993);
 		} else if (12 == client.anInt7166 * -1741204137) {
-			Class365.method6298(5, 1621197430);
+			Class365.setGameState(5, 1621197430);
 		}
 	}
 
 	static void method446() {
 		aClass184_73.method3054((short) 16525);
-		aClass184_73.aClass282_Sub35_Sub2_2284.index = 0;
+		aClass184_73.recievedBuffer.index = 0;
 		aClass184_73.aClass375_2286 = null;
 		aClass184_73.aClass375_2278 = null;
 		aClass184_73.aClass375_2296 = null;
@@ -1622,7 +1622,7 @@ public class Class9 {
 		NativeLibraryLoader.anInt3240 = 770488346;
 		Class86.anInt833 = -1509271845;
 		Class508.anInt5864 = 987778595;
-		Class365.method6298(13, 1638936826);
+		Class365.setGameState(13, 1638936826);
 		for (int i = 0; i < 107; i++) {
 			client.aBoolArray7443[i] = true;
 		}

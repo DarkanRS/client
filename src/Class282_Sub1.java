@@ -32,7 +32,7 @@ public abstract class Class282_Sub1 extends Node {
 			if (Class9.anInt76 * 1051306693 != i)
 				Class9.aLong77 = -2087908126908168589L;
 			Class9.anInt76 = i * 1481524237;
-			Class365.method6298(19, 1363938860);
+			Class365.setGameState(19, 1363938860);
 		}
 	}
 

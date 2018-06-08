@@ -51,10 +51,10 @@ public class Class87 {
 		aByte839 = i_12_;
 	}
 
-	public static Class483 method1489(int i) {
-		if (null == Class96_Sub9.aClass483_9278)
-			return Class483.aClass483_5730;
-		return Class96_Sub9.aClass483_9278;
+	public static AccountCreationResponseOpcodes method1489(int i) {
+		if (null == Class96_Sub9.RECIEVED_RESPONSE)
+			return AccountCreationResponseOpcodes.aClass483_5730;
+		return Class96_Sub9.RECIEVED_RESPONSE;
 	}
 
 	static final void method1490(CS2Executor class527, byte i) {

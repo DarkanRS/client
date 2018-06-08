@@ -2051,7 +2051,7 @@ public class Class336 {
 
 	static final void method6006(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		Class493.method8273(string, (byte) -74);
+		Class493.sendCheckEmailPacket(string, (byte) -74);
 	}
 
 	static final void method6007(int i, int[] is, int i_197_) {

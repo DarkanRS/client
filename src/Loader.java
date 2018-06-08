@@ -22,8 +22,8 @@ public class Loader extends Applet implements AppletStub {
 	public static final int CLIENT_REVISON = 727;
 	public static final int SUB_REVISION = 1;
 
-	public static final String IP_ADDRESS = "127.0.0.1";
-	//public static final String IP_ADDRESS = "axios.trentonkress.com";
+	//public static final String IP_ADDRESS = "127.0.0.1";
+	public static final String IP_ADDRESS = "axios.trentonkress.com";
 	
 	public static final int LOBBY_PORT = 5555;
 
@@ -31,7 +31,7 @@ public class Loader extends Applet implements AppletStub {
 	public static final boolean LOBBY_ENABLED = true;
 	public static final boolean DISABLE_XTEA_CRASH = true;
 	
-	public static int clientRevision = 5;
+	public static int clientRevision = 6;
 	public static int newClientRevision = clientRevision+1;
 	
 	public static final String clientLink = "http://darkan.org/assets/uploads/files/darkanclient.jar";

@@ -3,7 +3,7 @@
  */
 
 public class Class96_Sub9 extends Class96 {
-	static Class483 aClass483_9278;
+	static AccountCreationResponseOpcodes RECIEVED_RESPONSE;
 	int anInt9279;
 	int anInt9280;
 	Class116 aClass116_9281;

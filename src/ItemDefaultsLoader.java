@@ -180,7 +180,7 @@ public class ItemDefaultsLoader {
 	}
 
 	public static void method7081(byte i) {
-		Class365.method6298(18, 1932929676);
+		Class365.setGameState(18, 1932929676);
 		Class459.method7678(142230333);
 		System.gc();
 	}

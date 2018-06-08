@@ -190,8 +190,8 @@ public class Interface {
 			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
 	}
 
-	public static Class483[] method1626(int i) {
-		return (new Class483[] { Class483.aClass483_5729, Class483.aClass483_5738, Class483.aClass483_5734, Class483.aClass483_5733, Class483.aClass483_5730, Class483.aClass483_5735, Class483.aClass483_5732, Class483.aClass483_5736, Class483.aClass483_5737, Class483.aClass483_5731 });
+	public static AccountCreationResponseOpcodes[] method1626(int i) {
+		return (new AccountCreationResponseOpcodes[] { AccountCreationResponseOpcodes.aClass483_5729, AccountCreationResponseOpcodes.CLIENT_HAS_BEEN_UPDATED, AccountCreationResponseOpcodes.CONTINUE, AccountCreationResponseOpcodes.aClass483_5733, AccountCreationResponseOpcodes.aClass483_5730, AccountCreationResponseOpcodes.aClass483_5735, AccountCreationResponseOpcodes.aClass483_5732, AccountCreationResponseOpcodes.aClass483_5736, AccountCreationResponseOpcodes.aClass483_5737, AccountCreationResponseOpcodes.aClass483_5731 });
 	}
 
 	static final void method1627(CS2Executor class527, int i) {

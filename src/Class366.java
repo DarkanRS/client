@@ -59,7 +59,7 @@ public class Class366 implements Interface3 {
 	public static Class365 method6303(RsByteBuffer class282_sub35, byte i) {
 		int i_9_ = class282_sub35.readUnsignedByte();
 		Class356 class356 = (Class350_Sub3_Sub1.method15558(-41327107)[class282_sub35.readUnsignedByte()]);
-		Class353 class353 = (Class483.method8155(152314627)[class282_sub35.readUnsignedByte()]);
+		Class353 class353 = (AccountCreationResponseOpcodes.method8155(152314627)[class282_sub35.readUnsignedByte()]);
 		int i_10_ = class282_sub35.readShort(1637042593);
 		int i_11_ = class282_sub35.readShort(1591872384);
 		int i_12_ = class282_sub35.readUnsignedShort();

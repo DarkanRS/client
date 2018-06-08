@@ -622,7 +622,7 @@ public final class client extends Engine {
 				IndexLoaders.MAP_REGION_DECODER.method4461((byte) -96);
 			if (Class97.method1612(anInt7166 * -1741204137, 1908805257) && !Class464.method7742(anInt7166 * -1741204137, (byte) 101)) {
 				method12044((short) 3630);
-				Class521_Sub1_Sub5_Sub1.method16107(-1548261686);
+				Class521_Sub1_Sub5_Sub1.handleAccountCreationStart(-1548261686);
 				Login.method5018((byte) -128);
 			} else if (Class282_Sub17.method12259(anInt7166 * -1741204137, -1507650612) && !Class464.method7742(anInt7166 * -1741204137, (byte) 25)) {
 				method12044((short) 3677);
@@ -641,7 +641,7 @@ public final class client extends Engine {
 						if (Class448.aBool5428) {
 							Class62.method1262((Class448.aClass450_5429.worldId) * -87869981, (Class448.aClass450_5429.aString5433), (byte) 8);
 							aClass184_7475.method3061(-1506150960);
-							Class365.method6298(10, 1906023297);
+							Class365.setGameState(10, 1906023297);
 						} else
 							Class438.method7333(Class9.aBool71, 2069442218);
 					} else
@@ -2157,7 +2157,7 @@ public final class client extends Engine {
 			String string = new StringBuilder().append(((Class184) class184).aClass375_2286 != null ? (1694502249 * ((Class184) class184).aClass375_2286.anInt4512) : -1).append(Class2.aString14).append(((Class184) class184).aClass375_2296 != null ? (((Class184) class184).aClass375_2296.anInt4512 * 1694502249) : -1).append(Class2.aString14).append(null != ((Class184) class184).aClass375_2291 ? (1694502249 * ((Class184) class184).aClass375_2291.anInt4512) : -1).append(" ")
 					.append(((Class184) class184).anInt2287 * 715663393).append(Class2.aString14).append(1948093437 * class219.x + (Class84.myPlayer.regionBaseX[0])).append(Class2.aString14).append(class219.y * -1002240017 + (Class84.myPlayer.regionBaseY[0])).append(" ").toString();
 			for (int i = 0; i < 715663393 * ((Class184) class184).anInt2287 && i < 50; i++)
-				string = new StringBuilder().append(string).append(((Class184) class184).aClass282_Sub35_Sub2_2284.buffer[i]).append(Class2.aString14).toString();
+				string = new StringBuilder().append(string).append(((Class184) class184).recievedBuffer.buffer[i]).append(Class2.aString14).toString();
 			Class151.method2594(string, exception, (byte) -95);
 			Class438.method7333(false, 2082278710);
 			return true;
@@ -2783,17 +2783,17 @@ public final class client extends Engine {
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
 		if (5 == -1741204137 * anInt7166)
-			Class365.method6298(11, 954981797);
+			Class365.setGameState(11, 954981797);
 		else if (0 == -1741204137 * anInt7166)
-			Class365.method6298(2, 1607897033);
+			Class365.setGameState(2, 1607897033);
 		else if (anInt7166 * -1741204137 == 7)
-			Class365.method6298(6, 2057877192);
+			Class365.setGameState(6, 2057877192);
 		else if (13 == -1741204137 * anInt7166)
-			Class365.method6298(18, 1729460659);
+			Class365.setGameState(18, 1729460659);
 		else if (15 == -1741204137 * anInt7166 || anInt7166 * -1741204137 == 1)
 			Class386.method6673(1245098874);
 		else if (anInt7166 * -1741204137 == 3)
-			Class365.method6298(9, 989637308);
+			Class365.setGameState(9, 989637308);
 	}
 
 	public static void method11676(Animable class521_sub1_sub1_sub2, int[] is, int i, boolean bool) {
@@ -2848,17 +2848,17 @@ public final class client extends Engine {
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
 		if (5 == -1741204137 * anInt7166)
-			Class365.method6298(11, 1862282801);
+			Class365.setGameState(11, 1862282801);
 		else if (0 == -1741204137 * anInt7166)
-			Class365.method6298(2, 1851115395);
+			Class365.setGameState(2, 1851115395);
 		else if (anInt7166 * -1741204137 == 7)
-			Class365.method6298(6, 1483684298);
+			Class365.setGameState(6, 1483684298);
 		else if (13 == -1741204137 * anInt7166)
-			Class365.method6298(18, 706564009);
+			Class365.setGameState(18, 706564009);
 		else if (15 == -1741204137 * anInt7166 || anInt7166 * -1741204137 == 1)
 			Class386.method6673(-655010504);
 		else if (anInt7166 * -1741204137 == 3)
-			Class365.method6298(9, 1556145493);
+			Class365.setGameState(9, 1556145493);
 	}
 
 	static void method11678(int i, String string, boolean bool) {
@@ -2875,17 +2875,17 @@ public final class client extends Engine {
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
 		if (5 == -1741204137 * anInt7166)
-			Class365.method6298(11, 1747574320);
+			Class365.setGameState(11, 1747574320);
 		else if (0 == -1741204137 * anInt7166)
-			Class365.method6298(2, 1401201174);
+			Class365.setGameState(2, 1401201174);
 		else if (anInt7166 * -1741204137 == 7)
-			Class365.method6298(6, 2036713063);
+			Class365.setGameState(6, 2036713063);
 		else if (13 == -1741204137 * anInt7166)
-			Class365.method6298(18, 1936513710);
+			Class365.setGameState(18, 1936513710);
 		else if (15 == -1741204137 * anInt7166 || anInt7166 * -1741204137 == 1)
 			Class386.method6673(1859785695);
 		else if (anInt7166 * -1741204137 == 3)
-			Class365.method6298(9, 1733564630);
+			Class365.setGameState(9, 1733564630);
 	}
 
 	static void method11679() {
@@ -2898,7 +2898,7 @@ public final class client extends Engine {
 	}
 
 	static final void method11680() {
-		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).recievedBuffer;
 		class282_sub35_sub2.initBitAccess((byte) 17);
 		int i = class282_sub35_sub2.readBits(8, (byte) 33);
 		if (i < anInt7211 * -685729279) {
@@ -3415,7 +3415,7 @@ public final class client extends Engine {
 			String string = new StringBuilder().append(((Class184) class184).aClass375_2286 != null ? (1694502249 * ((Class184) class184).aClass375_2286.anInt4512) : -1).append(Class2.aString14).append(((Class184) class184).aClass375_2296 != null ? (((Class184) class184).aClass375_2296.anInt4512 * 1694502249) : -1).append(Class2.aString14).append(null != ((Class184) class184).aClass375_2291 ? (1694502249 * ((Class184) class184).aClass375_2291.anInt4512) : -1).append(" ")
 					.append(((Class184) class184).anInt2287 * 715663393).append(Class2.aString14).append(1948093437 * class219.x + (Class84.myPlayer.regionBaseX[0])).append(Class2.aString14).append(class219.y * -1002240017 + (Class84.myPlayer.regionBaseY[0])).append(" ").toString();
 			for (int i = 0; i < 715663393 * ((Class184) class184).anInt2287 && i < 50; i++)
-				string = new StringBuilder().append(string).append(((Class184) class184).aClass282_Sub35_Sub2_2284.buffer[i]).append(Class2.aString14).toString();
+				string = new StringBuilder().append(string).append(((Class184) class184).recievedBuffer.buffer[i]).append(Class2.aString14).toString();
 			Class151.method2594(string, exception, (byte) -106);
 			Class438.method7333(false, 2001063155);
 			return true;
@@ -3496,14 +3496,14 @@ public final class client extends Engine {
 
 	static final boolean method11702(Class184 class184) throws IOException {
 		Class202 class202 = class184.method3053((byte) -40);
-		RsBitsBuffer class282_sub35_sub2 = ((Class184) class184).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer class282_sub35_sub2 = ((Class184) class184).recievedBuffer;
 		if (null == class202)
 			return false;
 		if (null == ((Class184) class184).aClass375_2286) {
 			if (((Class184) class184).aBool2288) {
 				if (!class202.method3315(1, (byte) 106))
 					return false;
-				class202.method3327((((Class184) class184).aClass282_Sub35_Sub2_2284.buffer), 0, 1, -1284712403);
+				class202.method3327((((Class184) class184).recievedBuffer.buffer), 0, 1, -1284712403);
 				((Class184) class184).anInt2292 += 755149573;
 				((Class184) class184).anInt2289 = 0;
 				((Class184) class184).aBool2288 = false;
@@ -3512,7 +3512,7 @@ public final class client extends Engine {
 			if (class282_sub35_sub2.method14869((short) 4875)) {
 				if (!class202.method3315(1, (byte) 104))
 					return false;
-				class202.method3327((((Class184) class184).aClass282_Sub35_Sub2_2284.buffer), 1, 1, -2129532714);
+				class202.method3327((((Class184) class184).recievedBuffer.buffer), 1, 1, -2129532714);
 				((Class184) class184).anInt2292 += 755149573;
 				((Class184) class184).anInt2289 = 0;
 			}
@@ -4096,7 +4096,7 @@ public final class client extends Engine {
 		}
 		if (IncomingPacket.DYNAMIC_MAP_REGION == ((Class184) class184).aClass375_2286) {
 			RsBitsBuffer class282_sub35_sub2_284_ = new RsBitsBuffer(((Class184) class184).anInt2287 * 715663393);
-			System.arraycopy((((Class184) class184).aClass282_Sub35_Sub2_2284.buffer), -1990677291 * (((Class184) class184).aClass282_Sub35_Sub2_2284.index), class282_sub35_sub2_284_.buffer, 0, 715663393 * ((Class184) class184).anInt2287);
+			System.arraycopy((((Class184) class184).recievedBuffer.buffer), -1990677291 * (((Class184) class184).recievedBuffer.index), class282_sub35_sub2_284_.buffer, 0, 715663393 * ((Class184) class184).anInt2287);
 			FontMetrics.method6989(1407669515);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(2123594363) == 1)
 				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3155, class282_sub35_sub2_284_), 301123709);
@@ -4177,7 +4177,7 @@ public final class client extends Engine {
 			Class448.aBool5428 = bool;
 			Class62.method1262(i, string, (byte) -13);
 			Object object = null;
-			Class365.method6298(17, 1288127291);
+			Class365.setGameState(17, 1288127291);
 			((Class184) class184).aClass375_2286 = null;
 			return false;
 		}
@@ -4954,7 +4954,7 @@ public final class client extends Engine {
 		}
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.REGION) {
 			RsBitsBuffer class282_sub35_sub2_390_ = new RsBitsBuffer(((Class184) class184).anInt2287 * 715663393);
-			System.arraycopy((((Class184) class184).aClass282_Sub35_Sub2_2284.buffer), (((Class184) class184).aClass282_Sub35_Sub2_2284.index) * -1990677291, class282_sub35_sub2_390_.buffer, 0, 715663393 * ((Class184) class184).anInt2287);
+			System.arraycopy((((Class184) class184).recievedBuffer.buffer), (((Class184) class184).recievedBuffer.index) * -1990677291, class282_sub35_sub2_390_.buffer, 0, 715663393 * ((Class184) class184).anInt2287);
 			FontMetrics.method6989(1407669515);
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub3_8199.method12632(1399975277) == 1)
 				IndexLoaders.MAP_REGION_LOADER_THREAD.method6049(new Class335(Class256.aClass256_3158, class282_sub35_sub2_390_), 301123709);
@@ -5941,9 +5941,9 @@ public final class client extends Engine {
 		Class204.method3367(-1908354270);
 		Class42_Sub1.method14562(806717069);
 		if (bool)
-			Class365.method6298(12, 2048024615);
+			Class365.setGameState(12, 2048024615);
 		else {
-			Class365.method6298(5, 864316642);
+			Class365.setGameState(5, 864316642);
 			try {
 				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1161967095);
 			} catch (Throwable throwable) {
@@ -5977,9 +5977,9 @@ public final class client extends Engine {
 		Class204.method3367(289191277);
 		Class42_Sub1.method14562(1531562911);
 		if (bool)
-			Class365.method6298(12, 830025422);
+			Class365.setGameState(12, 830025422);
 		else {
-			Class365.method6298(5, 2017739514);
+			Class365.setGameState(5, 2017739514);
 			try {
 				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1862933710);
 			} catch (Throwable throwable) {
@@ -6259,7 +6259,7 @@ public final class client extends Engine {
 		else {
 			Class233.aClass202_2883 = aClass184_7475.method3053((byte) -33);
 			aClass184_7475.method3061(-1769578365);
-			Class365.method6298(10, 1733729442);
+			Class365.setGameState(10, 1733729442);
 		}
 	}
 
@@ -6269,7 +6269,7 @@ public final class client extends Engine {
 		else {
 			Class233.aClass202_2883 = aClass184_7475.method3053((byte) -117);
 			aClass184_7475.method3061(-972778682);
-			Class365.method6298(10, 1001889631);
+			Class365.setGameState(10, 1001889631);
 		}
 	}
 
@@ -14413,8 +14413,8 @@ public final class client extends Engine {
 			for (int i_1713_ = anInt7210 * 1658163325; i_1713_ < i; i_1713_++)
 				aClass282_Sub47Array7209[i_1713_] = null;
 		}
-		if ((((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284.index * -1990677291) != ((Class184) aClass184_7475).anInt2287 * 715663393)
-			throw new RuntimeException(new StringBuilder().append((((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284.index) * -1990677291).append(" ").append(715663393 * (((Class184) aClass184_7475).anInt2287)).toString());
+		if ((((Class184) aClass184_7475).recievedBuffer.index * -1990677291) != ((Class184) aClass184_7475).anInt2287 * 715663393)
+			throw new RuntimeException(new StringBuilder().append((((Class184) aClass184_7475).recievedBuffer.index) * -1990677291).append(" ").append(715663393 * (((Class184) aClass184_7475).anInt2287)).toString());
 		for (int i = 0; i < anInt7211 * -685729279; i++) {
 			if (aClass465_7208.method7754((long) anIntArray7212[i]) == null)
 				throw new RuntimeException(new StringBuilder().append(i).append(" ").append(-685729279 * anInt7211).toString());
@@ -14428,7 +14428,7 @@ public final class client extends Engine {
 	}
 
 	static final void method11903() {
-		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).recievedBuffer;
 		class282_sub35_sub2.initBitAccess((byte) -84);
 		int i = class282_sub35_sub2.readBits(8, (byte) -35);
 		if (i < anInt7211 * -685729279) {
@@ -14490,7 +14490,7 @@ public final class client extends Engine {
 	}
 
 	static final void method11905(boolean bool) {
-		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).recievedBuffer;
 		while (class282_sub35_sub2.readableBits((715663393 * (((Class184) aClass184_7475).anInt2287)), 237305186) >= 15) {
 			int i = class282_sub35_sub2.readBits(15, (byte) -41);
 			if (32767 == i)
@@ -14549,7 +14549,7 @@ public final class client extends Engine {
 	}
 
 	static final void method11906(boolean bool) {
-		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).recievedBuffer;
 		while (class282_sub35_sub2.readableBits((715663393 * (((Class184) aClass184_7475).anInt2287)), 857628250) >= 15) {
 			int i = class282_sub35_sub2.readBits(15, (byte) -52);
 			if (32767 == i)
@@ -16649,13 +16649,13 @@ public final class client extends Engine {
 	}
 
 	public static void method11959() {
-		Class365.method6298(18, 1008976618);
+		Class365.setGameState(18, 1008976618);
 		Class459.method7678(-1684863860);
 		System.gc();
 	}
 
 	public static void method11960() {
-		Class365.method6298(18, 1648159826);
+		Class365.setGameState(18, 1648159826);
 		Class459.method7678(365618242);
 		System.gc();
 	}
@@ -18567,8 +18567,8 @@ public final class client extends Engine {
 			for (int i_2243_ = anInt7210 * 1658163325; i_2243_ < i; i_2243_++)
 				aClass282_Sub47Array7209[i_2243_] = null;
 		}
-		if ((((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284.index * -1990677291) != ((Class184) aClass184_7475).anInt2287 * 715663393)
-			throw new RuntimeException(new StringBuilder().append((((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284.index) * -1990677291).append(" ").append(715663393 * (((Class184) aClass184_7475).anInt2287)).toString());
+		if ((((Class184) aClass184_7475).recievedBuffer.index * -1990677291) != ((Class184) aClass184_7475).anInt2287 * 715663393)
+			throw new RuntimeException(new StringBuilder().append((((Class184) aClass184_7475).recievedBuffer.index) * -1990677291).append(" ").append(715663393 * (((Class184) aClass184_7475).anInt2287)).toString());
 		for (int i = 0; i < anInt7211 * -685729279; i++) {
 			if (aClass465_7208.method7754((long) anIntArray7212[i]) == null)
 				throw new RuntimeException(new StringBuilder().append(i).append(" ").append(-685729279 * anInt7211).toString());
@@ -19466,7 +19466,7 @@ public final class client extends Engine {
 	}
 
 	static final void method12022(TilestreamPacket class364) {
-		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).aClass282_Sub35_Sub2_2284;
+		RsBitsBuffer class282_sub35_sub2 = ((Class184) aClass184_7475).recievedBuffer;
 		if (TilestreamPacket.aClass364_4204 == class364) {
 			int i = class282_sub35_sub2.readUnsignedByte();
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(246629890);
@@ -19850,17 +19850,17 @@ public final class client extends Engine {
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
 		if (5 == -1741204137 * anInt7166)
-			Class365.method6298(11, 1573861476);
+			Class365.setGameState(11, 1573861476);
 		else if (0 == -1741204137 * anInt7166)
-			Class365.method6298(2, 868794699);
+			Class365.setGameState(2, 868794699);
 		else if (anInt7166 * -1741204137 == 7)
-			Class365.method6298(6, 1770051620);
+			Class365.setGameState(6, 1770051620);
 		else if (13 == -1741204137 * anInt7166)
-			Class365.method6298(18, 944224204);
+			Class365.setGameState(18, 944224204);
 		else if (15 == -1741204137 * anInt7166 || anInt7166 * -1741204137 == 1)
 			Class386.method6673(-471593960);
 		else if (anInt7166 * -1741204137 == 3)
-			Class365.method6298(9, 685529413);
+			Class365.setGameState(9, 685529413);
 	}
 
 	public static void method12029(int i, int i_2462_, int i_2463_) {
