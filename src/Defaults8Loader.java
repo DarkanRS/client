@@ -71,7 +71,7 @@ public class Defaults8Loader {
 	}
 
 	static void method11155(int i, int i_1_, int i_2_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(15, 0L);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(15, 0L);
 		class282_sub50_sub12.method14995(1022143569);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = i_1_ * 717659479;

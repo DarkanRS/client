@@ -112,7 +112,7 @@ public class Class276 {
 	}
 
 	public static void method4903(int i, int i_17_, int i_18_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(19, (long) i_17_ << 32 | (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(19, (long) i_17_ << 32 | (long) i);
 		class282_sub50_sub12.method14965((byte) -68);
 	}
 }

@@ -1372,7 +1372,7 @@ public class MapRegion {
 	}
 
 	static void method4562(int i, String string, int i_464_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(2, i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(2, i);
 		class282_sub50_sub12.method14995(860950307);
 		class282_sub50_sub12.aString9640 = string;
 	}

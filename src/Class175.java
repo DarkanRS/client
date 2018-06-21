@@ -257,7 +257,7 @@ public class Class175 {
 	}
 
 	static void method2966(int i, int i_25_, short i_26_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(12, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(12, (long) i);
 		class282_sub50_sub12.method14995(1634011909);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_25_;
 	}

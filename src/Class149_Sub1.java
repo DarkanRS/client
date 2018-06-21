@@ -78,12 +78,12 @@ public class Class149_Sub1 extends Class149 {
 	}
 
 	public static void method14582(int i, int i_37_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(5, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(5, (long) i);
 		class282_sub50_sub12.method14965((byte) -51);
 	}
 
 	static void method14583(int i, int i_38_, int i_39_, int i_40_, int i_41_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(8, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(8, (long) i);
 		class282_sub50_sub12.method14995(1672803485);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_38_;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = i_39_ * 717659479;

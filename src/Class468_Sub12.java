@@ -78,7 +78,7 @@ public class Class468_Sub12 extends Class468 {
 	}
 
 	public static void method12709(int i, byte i_2_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(12, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(12, (long) i);
 		class282_sub50_sub12.method14965((byte) 7);
 	}
 

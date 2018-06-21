@@ -887,7 +887,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 		return Wall.anIntArray10531[i_168_ & 0x3];
 	}
 
-	static Class282_Sub50_Sub12 method4778(int i, long l) {
+	static Class282_Sub50_Sub12 getIComponentVar(int i, long l) {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = (Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass465_9667.method7754((long) i << 56 | l);
 		if (class282_sub50_sub12 == null) {
 			class282_sub50_sub12 = new Class282_Sub50_Sub12(i, l);

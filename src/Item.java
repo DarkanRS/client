@@ -95,7 +95,7 @@ public class Item extends Node {
 	}
 
 	public static void method12575(int i, byte i_27_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(10, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(10, (long) i);
 		class282_sub50_sub12.method14965((byte) 34);
 	}
 }

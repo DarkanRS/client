@@ -81,7 +81,7 @@ public class PacketsDecoder extends Class455 {
 		class184.aClass375_2278 = class184.aClass375_2286;
 		if (IncomingPacket.aClass375_4486 == class184.aClass375_2286) {
 			int i_3_ = stream.readInt();
-			int i_4_ = stream.readIntV2(-1998341482);
+			int i_4_ = stream.readIntV2(-1998341482); //setmodel
 			Class470.method7825(-402122141);
 			Class96_Sub3.method13786(i_3_, 1, i_4_, -1, (byte) -45);
 			class184.aClass375_2286 = null;
@@ -220,7 +220,7 @@ public class PacketsDecoder extends Class455 {
 		if (IncomingPacket.aClass375_4478 == class184.aClass375_2286) {
 			int i_27_ = stream.readUnsignedShort128();
 			int i_28_ = stream.readIntV1();
-			int i_29_ = stream.readIntV1();
+			int i_29_ = stream.readIntV1(); //playermodel other
 			Class470.method7825(994147760);
 			Class96_Sub3.method13786(i_28_, 5, i_27_, i_29_, (byte) -76);
 			class184.aClass375_2286 = null;
@@ -329,7 +329,7 @@ public class PacketsDecoder extends Class455 {
 			int i_48_ = stream.readInt();
 			int i_49_ = stream.readShortLE128();
 			int i_50_ = stream.readIntV1();
-			Class470.method7825(-444552624);
+			Class470.method7825(-444552624); //playerhead other
 			Class96_Sub3.method13786(i_50_, 3, i_49_, i_48_, (byte) -84);
 			class184.aClass375_2286 = null;
 			return true;
@@ -1796,7 +1796,7 @@ public class PacketsDecoder extends Class455 {
 			int i_300_ = stream.readUnsignedShort128();
 			int i_301_ = stream.readUnsignedShort128();
 			int i_302_ = stream.readIntV2(-1297851300);
-			Class470.method7825(754356437);
+			Class470.method7825(754356437); //setplayerhead ignoreworn
 			Class96_Sub3.method13786(i_302_, 7, i_299_ << 16 | i_301_, i_300_, (byte) -41);
 			class184.aClass375_2286 = null;
 			return true;
@@ -1808,7 +1808,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (IncomingPacket.aClass375_4423 == class184.aClass375_2286) {
 			int i_303_ = stream.readIntV1();
-			Class470.method7825(627328237);
+			Class470.method7825(627328237); //setplayermodel self
 			Class96_Sub3.method13786(i_303_, 5, 1595512269 * client.anInt7315, 0, (byte) -60);
 			class184.aClass375_2286 = null;
 			return true;

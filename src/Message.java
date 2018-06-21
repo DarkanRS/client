@@ -410,7 +410,7 @@ public class Message {
 	}
 
 	public static void method7278(int i, int i_4_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(21, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(21, (long) i);
 		class282_sub50_sub12.method14965((byte) 33);
 	}
 }

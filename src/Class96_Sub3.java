@@ -52,7 +52,7 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	static void method13786(int i, int i_1_, int i_2_, int i_3_, byte i_4_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(4, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(4, (long) i);
 		class282_sub50_sub12.method14995(1205574173);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_1_;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_2_;

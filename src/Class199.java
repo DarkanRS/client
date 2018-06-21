@@ -147,7 +147,7 @@ public abstract class Class199 {
 	}
 
 	static void method3252(int i, boolean bool, int i_2_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(22, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(22, (long) i);
 		class282_sub50_sub12.method14995(2035738525);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = (bool ? 1 : 0) * -1773141545;
 	}

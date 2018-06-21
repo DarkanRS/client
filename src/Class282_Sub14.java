@@ -401,7 +401,7 @@ public class Class282_Sub14 extends Node {
 	}
 
 	public static void method12223(int i, byte i_91_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(6, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(6, (long) i);
 		class282_sub50_sub12.method14965((byte) -46);
 	}
 }

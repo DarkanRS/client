@@ -104,7 +104,7 @@ public class Class282_Sub28 extends Node {
 	}
 
 	static void method12420(int i, int i_27_, int i_28_, int i_29_, int i_30_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(19, (long) i_27_ << 32 | (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(19, (long) i_27_ << 32 | (long) i);
 		class282_sub50_sub12.method14995(956319706);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = i_28_ * -1773141545;
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_29_;

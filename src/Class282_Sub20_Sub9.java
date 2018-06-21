@@ -891,7 +891,7 @@ public class Class282_Sub20_Sub9 extends Class282_Sub20 {
 	}
 
 	static void method15255(short i) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(15, 0L);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(15, 0L);
 		class282_sub50_sub12.method14965((byte) 18);
 	}
 

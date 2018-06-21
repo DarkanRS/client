@@ -99,7 +99,7 @@ public class Class282_Sub20_Sub21 extends Class282_Sub20 {
 	}
 
 	static void method15381(int i, int i_11_, int i_12_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(17, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(17, (long) i);
 		class282_sub50_sub12.method14995(1421038918);
 		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = i_11_ * -1773141545;
 	}

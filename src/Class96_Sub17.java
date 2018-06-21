@@ -129,7 +129,7 @@ public class Class96_Sub17 extends Class96 {
 	}
 
 	public static void method14656(int i, int i_13_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.method4778(20, (long) i);
+		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(20, (long) i);
 		class282_sub50_sub12.method14965((byte) 40);
 	}
 }
