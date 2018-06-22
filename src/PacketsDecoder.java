@@ -3,6 +3,11 @@
  * Visit http://jode.sourceforge.net/
  */
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.util.concurrent.ConcurrentHashMap;
+
+import net.arikia.dev.drpc.DiscordRPC;
+import net.arikia.dev.drpc.DiscordRichPresence;
 
 public class PacketsDecoder extends Class455 {
 	int[] anIntArray9077;
@@ -237,6 +242,24 @@ public class PacketsDecoder extends Class455 {
 			int i_30_ = stream.readShortLE128();
 			Class470.method7825(1212962087);
 			MapRegion.method4562(i_30_, string, -1783534567);
+			class184.aClass375_2286 = null;
+			return true;
+		}
+		if (class184.aClass375_2286 == IncomingPacket.aClass375_4459) {
+			try {
+				Class<? extends DiscordRichPresence> presence = client.presence.getClass();
+				Field f = presence.getDeclaredField(stream.readString());
+				int type = stream.readInt();
+				if (type == 0)
+					f.setInt(client.presence, stream.readInt());
+				else if (type == 1)
+					f.set(client.presence, stream.readString());
+				else if (type == 2)
+					f.setLong(client.presence, stream.readLong(-1));
+				DiscordRPC.discordUpdatePresence(client.presence);
+			} catch (Throwable e) {
+				e.printStackTrace();
+			}
 			class184.aClass375_2286 = null;
 			return true;
 		}

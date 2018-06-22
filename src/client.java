@@ -23,6 +23,8 @@ import java.util.TimeZone;
 import java.util.Vector;
 
 import jaclib.ping.Ping;
+import net.arikia.dev.drpc.DiscordRPC;
+import net.arikia.dev.drpc.DiscordRichPresence;
 
 @SuppressWarnings({"rawtypes", "unchecked"})
 public final class client extends Engine {
@@ -356,6 +358,7 @@ public final class client extends Engine {
 	public static short aShort7474;
 	public static Class184 aClass184_7475;
 	static int anInt7476;
+	public static DiscordRichPresence presence;
 
 	public final void init() {
 		if (method4665((byte) 80)) {

@@ -165,6 +165,7 @@ public class IncomingPacket {
 	public static IncomingPacket aClass375_4509;
 	public static IncomingPacket aClass375_4510;
 	public static IncomingPacket aClass375_4511;
+	public static IncomingPacket aClass375_4459;
 	public int anInt4512;
 	public int anInt4513;
 
@@ -329,6 +330,7 @@ public class IncomingPacket {
 		aClass375_4379 = new IncomingPacket(158, 10);
 		aClass375_4405 = new IncomingPacket(159, 8);
 		GAME_MESSAGE = new IncomingPacket(160, -1);
+		aClass375_4459 = new IncomingPacket(161, -1);
 	}
 
 	public static IncomingPacket[] method6370() {
@@ -337,7 +339,7 @@ public class IncomingPacket {
 				aClass375_4411, aClass375_4412, aClass375_4413, aClass375_4414, RUN_ENERGY, aClass375_4416, aClass375_4390, aClass375_4373, VARPBIT_1, DESTROY_OBJECT, aClass375_4421, aClass375_4422, aClass375_4423, aClass375_4396, aClass375_4425, aClass375_4426, aClass375_4492, aClass375_4428, aClass375_4407, aClass375_4430, OBJECT_ANIMATION, aClass375_4432, aClass375_4417, aClass375_4434, aClass375_4435, REGION, aClass375_4437, aClass375_4438, aClass375_4439, aClass375_4387,
 				aClass375_4441, aClass375_4442, aClass375_4443, aClass375_4359, aClass375_4445, aClass375_4446, aClass375_4418, aClass375_4448, aClass375_4449, RUN_CS2_SCRIPT, aClass375_4451, aClass375_4452, aClass375_4491, aClass375_4358, aClass375_4455, aClass375_4456, aClass375_4457, aClass375_4458, VARPBIT_2, NPC_ON_ICOMPONENT, aClass375_4461, aClass375_4462, aClass375_4463, aClass375_4464, aClass375_4465, CONFIG_1, GLOBAL_CONFIG_2, CREATE_OBJECT, aClass375_4469, aClass375_4470,
 				aClass375_4404, ICOMPONENT_SETTINGS, aClass375_4509, aClass375_4474, aClass375_4475, REMOVE_GROUND_ITEM, aClass375_4477, aClass375_4500, aClass375_4479, aClass375_4364, aClass375_4481, aClass375_4353, aClass375_4483, aClass375_4355, aClass375_4453, aClass375_4486, aClass375_4487, aClass375_4488, aClass375_4489, aClass375_4351, aClass375_4490, aClass375_4484, aClass375_4493, PROJECTILE, aClass375_4495, aClass375_4496, aClass375_4497, aClass375_4498, aClass375_4383, aClass375_4375,
-				aClass375_4501, aClass375_4444, aClass375_4369, aClass375_4482, aClass375_4505, aClass375_4506, aClass375_4507, aClass375_4508, aClass375_4379, aClass375_4405, GAME_MESSAGE };
+				aClass375_4501, aClass375_4444, aClass375_4369, aClass375_4482, aClass375_4505, aClass375_4506, aClass375_4507, aClass375_4508, aClass375_4379, aClass375_4405, GAME_MESSAGE, aClass375_4459 };
 	}
 
 	IncomingPacket(int i, int i_0_) {
@@ -351,7 +353,7 @@ public class IncomingPacket {
 				aClass375_4411, aClass375_4412, aClass375_4413, aClass375_4414, RUN_ENERGY, aClass375_4416, aClass375_4390, aClass375_4373, VARPBIT_1, DESTROY_OBJECT, aClass375_4421, aClass375_4422, aClass375_4423, aClass375_4396, aClass375_4425, aClass375_4426, aClass375_4492, aClass375_4428, aClass375_4407, aClass375_4430, OBJECT_ANIMATION, aClass375_4432, aClass375_4417, aClass375_4434, aClass375_4435, REGION, aClass375_4437, aClass375_4438, aClass375_4439, aClass375_4387,
 				aClass375_4441, aClass375_4442, aClass375_4443, aClass375_4359, aClass375_4445, aClass375_4446, aClass375_4418, aClass375_4448, aClass375_4449, RUN_CS2_SCRIPT, aClass375_4451, aClass375_4452, aClass375_4491, aClass375_4358, aClass375_4455, aClass375_4456, aClass375_4457, aClass375_4458, VARPBIT_2, NPC_ON_ICOMPONENT, aClass375_4461, aClass375_4462, aClass375_4463, aClass375_4464, aClass375_4465, CONFIG_1, GLOBAL_CONFIG_2, CREATE_OBJECT, aClass375_4469, aClass375_4470,
 				aClass375_4404, ICOMPONENT_SETTINGS, aClass375_4509, aClass375_4474, aClass375_4475, REMOVE_GROUND_ITEM, aClass375_4477, aClass375_4500, aClass375_4479, aClass375_4364, aClass375_4481, aClass375_4353, aClass375_4483, aClass375_4355, aClass375_4453, aClass375_4486, aClass375_4487, aClass375_4488, aClass375_4489, aClass375_4351, aClass375_4490, aClass375_4484, aClass375_4493, PROJECTILE, aClass375_4495, aClass375_4496, aClass375_4497, aClass375_4498, aClass375_4383, aClass375_4375,
-				aClass375_4501, aClass375_4444, aClass375_4369, aClass375_4482, aClass375_4505, aClass375_4506, aClass375_4507, aClass375_4508, aClass375_4379, aClass375_4405, GAME_MESSAGE };
+				aClass375_4501, aClass375_4444, aClass375_4369, aClass375_4482, aClass375_4505, aClass375_4506, aClass375_4507, aClass375_4508, aClass375_4379, aClass375_4405, GAME_MESSAGE, aClass375_4459 };
 	}
 
 	static final void method6372(CS2Executor class527, int i) {
