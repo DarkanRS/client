@@ -15,9 +15,6 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.border.Border;
 
-import net.arikia.dev.drpc.DiscordRPC;
-import net.arikia.dev.drpc.DiscordRichPresence;
-
 public class Loader extends Applet implements AppletStub {
 
 	private static final long serialVersionUID = 1L;
@@ -153,11 +150,11 @@ public class Loader extends Applet implements AppletStub {
 	private void startClient() {
 		try {
 			client clnt = new client();
-			DiscordRPC.discordInitialize("459588260252090378", null, true);
-			client.presence = new DiscordRichPresence.Builder("In Menu").setBigImage("main", "http://darkan.org").build();
-			client.presence.details = "http://darkan.org";
-			client.presence.startTimestamp = System.currentTimeMillis() / 1000L;
-			DiscordRPC.discordUpdatePresence(client.presence);
+//			DiscordRPC.discordInitialize("459588260252090378", null, true);
+//			client.presence = new DiscordRichPresence.Builder("In Menu").setBigImage("main", "http://darkan.org").build();
+//			client.presence.details = "http://darkan.org";
+//			client.presence.startTimestamp = System.currentTimeMillis() / 1000L;
+//			DiscordRPC.discordUpdatePresence(client.presence);
 			clnt.supplyApplet(this);
 			clnt.init();
 			clnt.start();

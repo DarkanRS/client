@@ -6,9 +6,6 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.concurrent.ConcurrentHashMap;
 
-import net.arikia.dev.drpc.DiscordRPC;
-import net.arikia.dev.drpc.DiscordRichPresence;
-
 public class PacketsDecoder extends Class455 {
 	int[] anIntArray9077;
 	int[] anIntArray9078;
@@ -245,24 +242,25 @@ public class PacketsDecoder extends Class455 {
 			class184.aClass375_2286 = null;
 			return true;
 		}
-		if (class184.aClass375_2286 == IncomingPacket.aClass375_4459) {
-			try {
-				Class<? extends DiscordRichPresence> presence = client.presence.getClass();
-				Field f = presence.getDeclaredField(stream.readString());
-				int type = stream.readInt();
-				if (type == 0)
-					f.setInt(client.presence, stream.readInt());
-				else if (type == 1)
-					f.set(client.presence, stream.readString());
-				else if (type == 2)
-					f.setLong(client.presence, stream.readLong(-1));
-				DiscordRPC.discordUpdatePresence(client.presence);
-			} catch (Throwable e) {
-				e.printStackTrace();
-			}
-			class184.aClass375_2286 = null;
-			return true;
-		}
+//		if (class184.aClass375_2286 == IncomingPacket.aClass375_4459) {
+//			try {
+//				Class<? extends DiscordRichPresence> presence = client.presence.getClass();
+//				Field f = presence.getDeclaredField(stream.readString());
+//				f.setAccessible(true);
+//				int type = stream.readInt();
+//				if (type == 0)
+//					f.setInt(client.presence, stream.readInt());
+//				else if (type == 1)
+//					f.set(client.presence, stream.readString());
+//				else if (type == 2)
+//					f.setLong(client.presence, stream.readLong(-1));
+//				DiscordRPC.discordUpdatePresence(client.presence);
+//			} catch (Throwable e) {
+//				e.printStackTrace();
+//			}
+//			class184.aClass375_2286 = null;
+//			return true;
+//		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4416) {
 			Class158_Sub1_Sub2.anInt10131 = ((stream.read128Byte((short) 9583) << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte128(-1153285276) * 1822731553;
