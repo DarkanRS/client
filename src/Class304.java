@@ -92,7 +92,7 @@ public class Class304 implements Interface27 {
 			Image image_6_ = Toolkit.getDefaultToolkit().createImage(is);
 			image = image_6_;
 		} catch (Exception exception) {
-			throw new IOException();
+			return null;
 		}
 		return image;
 	}
