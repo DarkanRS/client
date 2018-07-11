@@ -292,9 +292,9 @@ public class Class289 implements Runnable {
 		Class169.method2869(1783349516);
 		if (!class505.method8455(1890093661))
 			return false;
-		int i_11_ = IndexLoaders.MAP_REGION_DECODER.method4424(-1338331391);
-		int i_12_ = IndexLoaders.MAP_REGION_DECODER.method4451(-663161868);
-		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		int i_11_ = IndexLoaders.MAP_REGION_DECODER.getSizeX(-1338331391);
+		int i_12_ = IndexLoaders.MAP_REGION_DECODER.getSizeY(-663161868);
+		RegionMap class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1741761339);
 		int i_13_ = i_11_ / 2;
 		int i_14_ = 0;
@@ -305,7 +305,7 @@ public class Class289 implements Runnable {
 				for (int i_18_ = i; i_18_ <= 3; i_18_++) {
 					if (class311.method5498(i, i_18_, i_16_, i_17_, (short) -19634)) {
 						int i_19_ = i_18_;
-						if (class311.method5497(i_16_, i_17_, 1914032698))
+						if (class311.is0x2(i_16_, i_17_, 1914032698))
 							i_19_--;
 						if (i_19_ >= 0)
 							bool &= QuickchatDefinitions.method14921(i_19_, i_16_, i_17_, (byte) 95);
@@ -381,7 +381,7 @@ public class Class289 implements Runnable {
 								int i_42_ = i_28_ + i_40_;
 								if (i_41_ >= i_14_ && i_42_ >= i_15_ && class311.method5498(i, i_36_, i_41_, i_42_, (short) -7367)) {
 									int i_43_ = i_36_;
-									if (class311.method5497(i_41_, i_42_, 2011719380))
+									if (class311.is0x2(i_41_, i_42_, 2011719380))
 										i_43_--;
 									if (i_43_ >= 0)
 										Class225_Sub5.method13042(class505, i_43_, i_41_, i_42_, i_29_ + 4 * i_39_, i_30_ + 4 * (i_13_ - i_40_) - 4, i_24_, i_25_, 1677446637);
@@ -391,12 +391,12 @@ public class Class289 implements Runnable {
 					}
 				}
 				if (Class187.aBool2356) {
-					Class336 class336 = IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645);
+					ClipMap class336 = IndexLoaders.MAP_REGION_DECODER.getClipMap(i, 1801793645);
 					for (int i_44_ = 0; i_44_ < i_13_; i_44_++) {
 						for (int i_45_ = 0; i_45_ < i_13_; i_45_++) {
 							int i_46_ = i_27_ + i_44_;
 							int i_47_ = i_28_ + i_45_;
-							int i_48_ = (class336.anIntArrayArray3922[i_46_ - -1969357273 * class336.anInt3931][i_47_ - 1503444365 * class336.anInt3964]);
+							int i_48_ = (class336.map[i_46_ - -1969357273 * class336.offsetX][i_47_ - 1503444365 * class336.offsetY]);
 							if (0 != (i_48_ & 0x40240000))
 								class505.method8425(4 * i_44_ + i_29_, i_30_ + 4 * (i_13_ - i_45_) - 4, 4, 4, -1713569622, (byte) -107);
 							else if ((i_48_ & 0x800000) != 0)
@@ -478,9 +478,9 @@ public class Class289 implements Runnable {
 										int i_56_ = i_49_;
 										int i_57_ = i_50_;
 										if (bool_55_) {
-											int[][] is_58_ = (IndexLoaders.MAP_REGION_DECODER.method4552(i_51_, 1801793645).anIntArrayArray3922);
-											int i_59_ = ((IndexLoaders.MAP_REGION_DECODER.method4552(i_51_, 1801793645).anInt3931) * -1969357273);
-											int i_60_ = ((IndexLoaders.MAP_REGION_DECODER.method4552(i_51_, 1801793645).anInt3964) * 1503444365);
+											int[][] is_58_ = (IndexLoaders.MAP_REGION_DECODER.getClipMap(i_51_, 1801793645).map);
+											int i_59_ = ((IndexLoaders.MAP_REGION_DECODER.getClipMap(i_51_, 1801793645).offsetX) * -1969357273);
+											int i_60_ = ((IndexLoaders.MAP_REGION_DECODER.getClipMap(i_51_, 1801793645).offsetY) * 1503444365);
 											for (int i_61_ = 0; i_61_ < 10; i_61_++) {
 												int i_62_ = (int) (Math.random() * 4.0);
 												if (0 == i_62_ && i_56_ > i_14_ && i_56_ > i_49_ - 3 && 0 == ((is_58_[(i_56_ - 1 - i_59_)][i_57_ - i_60_]) & 0x2c0108))
@@ -510,7 +510,7 @@ public class Class289 implements Runnable {
 				CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(825342307);
 				for (int i_63_ = 0; i_63_ < class283.anInt3382 * -361490119; i_63_++) {
 					int i_64_ = class283.anIntArray3381[i_63_];
-					if (i_64_ >> 28 == (Class84.myPlayer.aByte7967)) {
+					if (i_64_ >> 28 == (Class84.myPlayer.plane)) {
 						int i_65_ = ((i_64_ >> 14 & 0x3fff) - class219.x * 1948093437);
 						int i_66_ = ((i_64_ & 0x3fff) - class219.y * -1002240017);
 						if (i_65_ >= 0 && i_65_ < i_11_ && i_66_ >= 0 && i_66_ < i_12_)
@@ -530,7 +530,7 @@ public class Class289 implements Runnable {
 
 	static final void method5098(CS2Executor class527, int i) {
 		int i_67_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		Class320.anIntArray3724[i_67_] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		Class320.anIntArray3724[i_67_] = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class282_Sub20_Sub11.method15264(i_67_, (short) -20101);
 		client.aBool7400 |= Class282_Sub17_Sub2.aBoolArray9934[i_67_];
 	}
@@ -543,6 +543,6 @@ public class Class289 implements Runnable {
 	}
 
 	static final void method5100(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class41_Sub1_Sub1.method15524((byte) -41);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class41_Sub1_Sub1.method15524((byte) -41);
 	}
 }

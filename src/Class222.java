@@ -48,7 +48,7 @@ public class Class222 implements Interface17 {
 	}
 
 	static void method3753(CS2Executor class527, int i) {
-		class527.intStack[1942118537 * class527.anInt7012 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 1]), -1396181317).anInt2973) * -985547275;
+		class527.intStack[1942118537 * class527.intStackPtr - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.intStackPtr - 1]), -1396181317).anInt2973) * -985547275;
 	}
 
 	static String method3754(CharSequence charsequence, Class413 class413, int i) {
@@ -80,9 +80,9 @@ public class Class222 implements Interface17 {
 	}
 
 	static final void method3755(CS2Executor class527, byte i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_11_, 262031096);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class220.anInt2722 * 1172439539;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class220.anInt2722 * 1172439539;
 	}
 
 	public static int method3756(int i, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, byte i_17_) {

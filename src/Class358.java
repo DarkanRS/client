@@ -104,11 +104,11 @@ public class Class358 {
 	static final void method6236(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 682349813 * class118.anInt1336;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 682349813 * class118.anInt1336;
 	}
 
 	static final void method6237(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_3_, (byte) -1);
 		String string = "";
 		if (class108 != null && null != class108.crownedName)
@@ -117,7 +117,7 @@ public class Class358 {
 	}
 
 	static final void method6238(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7465 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7465 ? 1 : 0;
 	}
 
 	static final void method6239(CS2Executor class527, int i) {

@@ -687,7 +687,7 @@ public final class Class484 {
 	}
 
 	static final void method8199(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class158.method2730((short) -26831);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class158.method2730((short) -26831);
 	}
 
 	static void method8200(IComponentDefinitions class118, int i, int i_118_, boolean bool, int i_119_) {

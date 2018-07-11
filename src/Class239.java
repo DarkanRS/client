@@ -44,8 +44,8 @@ public class Class239 {
 				i_0_ = (Class84.myPlayer.regionBaseX[0]) >> 3;
 				i_1_ = (Class84.myPlayer.regionBaseY[0]) >> 3;
 			}
-			if (i_0_ < 0 || i_0_ >= class257.method4424(-1174933270) >> 3 || i_1_ < 0 || i_1_ >= class257.method4451(-1872557951) >> 3)
-				method4072(class257.method4424(-848412942) >> 4, class257.method4451(-1591004572) >> 4, 0, -1860642378);
+			if (i_0_ < 0 || i_0_ >= class257.getSizeX(-1174933270) >> 3 || i_1_ < 0 || i_1_ >= class257.getSizeY(-1872557951) >> 3)
+				method4072(class257.getSizeX(-848412942) >> 4, class257.getSizeY(-1591004572) >> 4, 0, -1860642378);
 			else
 				method4072(i_0_, i_1_, -234390203 * anInt2942, -1945601333);
 		}
@@ -183,8 +183,8 @@ public class Class239 {
 				i = (Class84.myPlayer.regionBaseX[0]) >> 3;
 				i_17_ = (Class84.myPlayer.regionBaseY[0]) >> 3;
 			}
-			if (i < 0 || i >= class257.method4424(-1066552159) >> 3 || i_17_ < 0 || i_17_ >= class257.method4451(-1514282256) >> 3)
-				method4072(class257.method4424(762572794) >> 4, class257.method4451(-749819506) >> 4, 0, -2134388598);
+			if (i < 0 || i >= class257.getSizeX(-1066552159) >> 3 || i_17_ < 0 || i_17_ >= class257.getSizeY(-1514282256) >> 3)
+				method4072(class257.getSizeX(762572794) >> 4, class257.getSizeY(-749819506) >> 4, 0, -2134388598);
 			else
 				method4072(i, i_17_, -234390203 * anInt2942, -2130629821);
 		}
@@ -204,8 +204,8 @@ public class Class239 {
 				i = (Class84.myPlayer.regionBaseX[0]) >> 3;
 				i_18_ = (Class84.myPlayer.regionBaseY[0]) >> 3;
 			}
-			if (i < 0 || i >= class257.method4424(-103338097) >> 3 || i_18_ < 0 || i_18_ >= class257.method4451(-2144456749) >> 3)
-				method4072(class257.method4424(-305951268) >> 4, class257.method4451(-1691483286) >> 4, 0, -2133166479);
+			if (i < 0 || i >= class257.getSizeX(-103338097) >> 3 || i_18_ < 0 || i_18_ >= class257.getSizeY(-2144456749) >> 3)
+				method4072(class257.getSizeX(-305951268) >> 4, class257.getSizeY(-1691483286) >> 4, 0, -2133166479);
 			else
 				method4072(i, i_18_, -234390203 * anInt2942, -1899763635);
 		}
@@ -229,8 +229,8 @@ public class Class239 {
 				i = (Class84.myPlayer.regionBaseX[0]) >> 3;
 				i_21_ = (Class84.myPlayer.regionBaseY[0]) >> 3;
 			}
-			if (i < 0 || i >= class257.method4424(-10335230) >> 3 || i_21_ < 0 || i_21_ >= class257.method4451(-408655960) >> 3)
-				method4072(class257.method4424(-2023934615) >> 4, class257.method4451(-1063099912) >> 4, 0, -2033757495);
+			if (i < 0 || i >= class257.getSizeX(-10335230) >> 3 || i_21_ < 0 || i_21_ >= class257.getSizeY(-408655960) >> 3)
+				method4072(class257.getSizeX(-2023934615) >> 4, class257.getSizeY(-1063099912) >> 4, 0, -2033757495);
 			else
 				method4072(i, i_21_, -234390203 * anInt2942, -1855467463);
 		}
@@ -343,8 +343,8 @@ public class Class239 {
 				i = (Class84.myPlayer.regionBaseX[0]) >> 3;
 				i_39_ = (Class84.myPlayer.regionBaseY[0]) >> 3;
 			}
-			if (i < 0 || i >= class257.method4424(1657103484) >> 3 || i_39_ < 0 || i_39_ >= class257.method4451(-1710669290) >> 3)
-				method4072(class257.method4424(-251111200) >> 4, class257.method4451(-1964037741) >> 4, 0, -1798457661);
+			if (i < 0 || i >= class257.getSizeX(1657103484) >> 3 || i_39_ < 0 || i_39_ >= class257.getSizeY(-1710669290) >> 3)
+				method4072(class257.getSizeX(-251111200) >> 4, class257.getSizeY(-1964037741) >> 4, 0, -1798457661);
 			else
 				method4072(i, i_39_, -234390203 * anInt2942, -2082529410);
 		}
@@ -522,8 +522,8 @@ public class Class239 {
 				i = (Class84.myPlayer.regionBaseX[0]) >> 3;
 				i_56_ = (Class84.myPlayer.regionBaseY[0]) >> 3;
 			}
-			if (i < 0 || i >= class257.method4424(-161764870) >> 3 || i_56_ < 0 || i_56_ >= class257.method4451(-599469964) >> 3)
-				method4072(class257.method4424(408352122) >> 4, class257.method4451(-1348015280) >> 4, 0, -1827881418);
+			if (i < 0 || i >= class257.getSizeX(-161764870) >> 3 || i_56_ < 0 || i_56_ >= class257.getSizeY(-599469964) >> 3)
+				method4072(class257.getSizeX(408352122) >> 4, class257.getSizeY(-1348015280) >> 4, 0, -1827881418);
 			else
 				method4072(i, i_56_, -234390203 * anInt2942, -1878748840);
 		}
@@ -549,12 +549,12 @@ public class Class239 {
 
 	static final void method4089(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		class527.anInt7012 -= 425673003;
-		int i_57_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_58_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_59_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 425673003;
+		int i_57_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_58_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_59_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
 		Class282_Sub20_Sub8.method15242(string, 1 == i_57_, i_58_, i_59_, 1920082068);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class415.anInt4985 * 560339485;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class415.anInt4985 * 560339485;
 	}
 
 	public static void method4090(int[] is, int[] is_60_, int i) {
@@ -572,6 +572,6 @@ public class Class239 {
 	}
 
 	static final void method4091(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class291.aClass282_Sub50_Sub6_3491 != null ? Class291.aClass282_Sub50_Sub6_3491.anInt9536 * 1864297169 : -1);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (Class291.aClass282_Sub50_Sub6_3491 != null ? Class291.aClass282_Sub50_Sub6_3491.anInt9536 * 1864297169 : -1);
 	}
 }

@@ -36,7 +36,7 @@ public class Class96_Sub4 extends Class96 {
 			int i_3_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9581 * 1575008129);
 			int i_4_ = (395156599 * ((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9582);
 			int i_5_ = (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225);
-			int i_6_ = (int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584));
+			int pid = (int) (-5876141066140255231L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584));
 			long l = (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584 * -5876141066140255231L);
 			if (i_5_ >= 2000)
 				i_5_ -= 2000;
@@ -63,17 +63,17 @@ public class Class96_Sub4 extends Class96 {
 			else if (i_5_ == 53)
 				class379 = OutgoingPacket.aClass379_4629;
 			if (null != class379) {
-				Player class521_sub1_sub1_sub2_sub1 = client.players[i_6_];
-				if (null != class521_sub1_sub1_sub2_sub1) {
+				Player player = client.players[pid];
+				if (null != player) {
 					client.anInt7293 = -1271587837 * i;
 					client.anInt7294 = 1614548531 * i_1_;
 					client.anInt7296 = -370989110;
 					client.anInt7295 = 0;
 					TCPMessage class282_sub23 = Class271.method4828(class379, (client.aClass184_7475.isaac), -38973320);
-					class282_sub23.buffer.writeShort(i_6_, 1417031095);
+					class282_sub23.buffer.writeShort(pid, 1417031095);
 					class282_sub23.buffer.write128Byte(Class84.method1465(-1893602887) ? 1 : 0, -1708065557);
 					client.aClass184_7475.method3049(class282_sub23, 67860298);
-					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], class521_sub1_sub1_sub2_sub1.method15805(828768449), class521_sub1_sub1_sub2_sub1.method15805(828768449), 0, 971339209)), 1593350845);
+					MapRegion.routeTo(player.regionBaseX[0], player.regionBaseY[0], true, (Class344.method6115(player.regionBaseX[0], player.regionBaseY[0], player.getSize(828768449), player.getSize(828768449), 0, 971339209)), 1593350845);
 				}
 			}
 			if (16 == i_5_) {
@@ -90,22 +90,22 @@ public class Class96_Sub4 extends Class96 {
 				client.aClass184_7475.method3049(class282_sub23, -436533109);
 			}
 			if (i_5_ == 57 || 1007 == i_5_)
-				Class96_Sub10.method14603(i_6_, i_4_, i_3_, ((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588, (byte) 9);
+				Class96_Sub10.method14603(pid, i_4_, i_3_, ((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588, (byte) 9);
 			if (i_5_ == 15) {
-				Player class521_sub1_sub1_sub2_sub1 = client.players[i_6_];
-				if (class521_sub1_sub1_sub2_sub1 != null) {
+				Player player = client.players[pid];
+				if (player != null) {
 					client.anInt7293 = i * -1271587837;
 					client.anInt7294 = i_1_ * 1614548531;
 					client.anInt7296 = -370989110;
 					client.anInt7295 = 0;
 					TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4540, (client.aClass184_7475.isaac), 2077499926);
 					class282_sub23.buffer.writeShort(-1673073865 * client.anInt7345, 1417031095);
-					class282_sub23.buffer.writeShortLE(i_6_, (short) -12854);
+					class282_sub23.buffer.writeShortLE(pid, (short) -12854);
 					class282_sub23.buffer.write128Byte(Class84.method1465(-1642883449) ? 1 : 0, -1169068214);
 					class282_sub23.buffer.writeIntV2(Class7.anInt56 * 728544879, (byte) 104);
 					class282_sub23.buffer.writeShortLE(client.anInt7346 * -1555739329, (short) -2375);
 					client.aClass184_7475.method3049(class282_sub23, -111115308);
-					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], class521_sub1_sub1_sub2_sub1.method15805(828768449), class521_sub1_sub1_sub2_sub1.method15805(828768449), 0, 971339209)), 1255775546);
+					MapRegion.routeTo(player.regionBaseX[0], player.regionBaseY[0], true, (Class344.method6115(player.regionBaseX[0], player.regionBaseY[0], player.getSize(828768449), player.getSize(828768449), 0, 971339209)), 1255775546);
 				}
 			}
 			if (i_5_ == 2) {
@@ -122,7 +122,7 @@ public class Class96_Sub4 extends Class96 {
 				class282_sub23.buffer.writeShort128(-1673073865 * client.anInt7345, -800257688);
 				class282_sub23.buffer.writeShortLE(i_4_ + -1002240017 * class219.y, (short) -19304);
 				client.aClass184_7475.method3049(class282_sub23, -886113840);
-				Class439.method7344(i_3_, i_4_, l);
+				Class439.routeToSceneObject(i_3_, i_4_, l);
 			}
 			OutgoingPacket class379_7_ = null;
 			if (i_5_ == 9)
@@ -138,7 +138,7 @@ public class Class96_Sub4 extends Class96 {
 			else if (1003 == i_5_)
 				class379_7_ = OutgoingPacket.aClass379_4530;
 			if (class379_7_ != null) {
-				Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) i_6_));
+				Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) pid));
 				if (null != class282_sub47) {
 					NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
 					client.anInt7293 = -1271587837 * i;
@@ -146,15 +146,15 @@ public class Class96_Sub4 extends Class96 {
 					client.anInt7296 = -370989110;
 					client.anInt7295 = 0;
 					TCPMessage class282_sub23 = Class271.method4828(class379_7_, (client.aClass184_7475.isaac), 1353629602);
-					class282_sub23.buffer.writeShort(i_6_, 1417031095);
+					class282_sub23.buffer.writeShort(pid, 1417031095);
 					class282_sub23.buffer.writeByte(Class84.method1465(-1762610857) ? 1 : 0);
 					client.aClass184_7475.method3049(class282_sub23, -688965453);
-					MapRegion.method4559(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], class521_sub1_sub1_sub2_sub2.method15805(828768449), class521_sub1_sub1_sub2_sub2.method15805(828768449), 0, 971339209)), 907331887);
+					MapRegion.routeTo(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, (Class344.method6115(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], class521_sub1_sub1_sub2_sub2.getSize(828768449), class521_sub1_sub1_sub2_sub2.getSize(828768449), 0, 971339209)), 907331887);
 				}
 			}
 			if (60 == i_5_) {
 				if (client.rights * -644057819 > 0 && Class96_Sub8.method14577(1203434505))
-					Class447.method7460(Class84.myPlayer.aByte7967, i_3_ + 1948093437 * class219.x, i_4_ + class219.y * -1002240017, -1797867076);
+					Class447.method7460(Class84.myPlayer.plane, i_3_ + 1948093437 * class219.x, i_4_ + class219.y * -1002240017, -1797867076);
 				else {
 					client.anInt7293 = i * -1271587837;
 					client.anInt7294 = 1614548531 * i_1_;
@@ -168,10 +168,10 @@ public class Class96_Sub4 extends Class96 {
 			}
 			if (i_5_ == 23) {
 				if (client.rights * -644057819 > 0 && Class96_Sub8.method14577(1203434505))
-					Class447.method7460(Class84.myPlayer.aByte7967, i_3_ + class219.x * 1948093437, i_4_ + class219.y * -1002240017, -1328310024);
+					Class447.method7460(Class84.myPlayer.plane, i_3_ + class219.x * 1948093437, i_4_ + class219.y * -1002240017, -1328310024);
 				else {
-					TCPMessage class282_sub23 = Class282_Sub2.method12078(i_3_, i_4_, i_6_, -1751804483);
-					if (1 == i_6_) {
+					TCPMessage class282_sub23 = Class282_Sub2.method12078(i_3_, i_4_, pid, -1751804483);
+					if (1 == pid) {
 						class282_sub23.buffer.writeByte(-1);
 						class282_sub23.buffer.writeByte(-1);
 						class282_sub23.buffer.writeShort((int) client.aFloat7365, 1417031095);
@@ -190,7 +190,7 @@ public class Class96_Sub4 extends Class96 {
 						client.anInt7295 = 0;
 					}
 					client.aClass184_7475.method3049(class282_sub23, -1144629676);
-					MapRegion.method4559(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, 1597401587), 1072484880);
+					MapRegion.routeTo(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, 1597401587), 1072484880);
 				}
 			}
 			if (17 == i_5_) {
@@ -201,7 +201,7 @@ public class Class96_Sub4 extends Class96 {
 				TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4583, client.aClass184_7475.isaac, -30824193);
 				class282_sub23.buffer.writeShort128(client.anInt7346 * -1555739329, -800257688);
 				class282_sub23.buffer.writeIntV2(728544879 * Class7.anInt56, (byte) 104);
-				class282_sub23.buffer.writeShort(i_6_, 1417031095);
+				class282_sub23.buffer.writeShort(pid, 1417031095);
 				class282_sub23.buffer.write128Byte(Class84.method1465(-2067403858) ? 1 : 0, 614309811);
 				class282_sub23.buffer.writeShortLE128(client.anInt7345 * -1673073865, -1183932171);
 				class282_sub23.buffer.writeShortLE128(class219.y * -1002240017 + i_4_, -1183932171);
@@ -221,7 +221,7 @@ public class Class96_Sub4 extends Class96 {
 				class282_sub23.buffer.writeShort128(-1673073865 * client.anInt7345, -800257688);
 				class282_sub23.buffer.writeShortLE(class219.x * 1948093437 + i_3_, (short) -8634);
 				client.aClass184_7475.method3049(class282_sub23, -311032746);
-				MapRegion.method4559(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, -795317623), 1870869554);
+				MapRegion.routeTo(i_3_, i_4_, true, Class38.method853(i_3_, i_4_, -795317623), 1870869554);
 			}
 			if (30 == i_5_ && null == client.aClass118_7352) {
 				Class158_Sub2.method14355(i_4_, i_3_, 382043562);
@@ -265,7 +265,7 @@ public class Class96_Sub4 extends Class96 {
 					client.anInt7296 = -370989110;
 					client.anInt7295 = 0;
 					TCPMessage class282_sub23 = Class271.method4828(class379_8_, (client.aClass184_7475.isaac), 934209488);
-					class282_sub23.buffer.writeShortLE128(i_6_, -1183932171);
+					class282_sub23.buffer.writeShortLE128(pid, -1183932171);
 					class282_sub23.buffer.writeByteC(Class84.method1465(-1708313818) ? 1 : 0, 1203558743);
 					class282_sub23.buffer.writeShort(class219.y * -1002240017 + i_4_, 1417031095);
 					class282_sub23.buffer.writeShort128(i_3_ + class219.x * 1948093437, -800257688);
@@ -273,7 +273,7 @@ public class Class96_Sub4 extends Class96 {
 					client.method12073(i_3_, i_4_, 633151820);
 				}
 				if (8 == i_5_) {
-					Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) i_6_));
+					Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) pid));
 					if (null != class282_sub47) {
 						NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class282_sub47.anObject8068);
 						client.anInt7293 = -1271587837 * i;
@@ -282,12 +282,12 @@ public class Class96_Sub4 extends Class96 {
 						client.anInt7295 = 0;
 						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4568, (client.aClass184_7475.isaac), -608363088);
 						class282_sub23.buffer.writeIntV2(728544879 * Class7.anInt56, (byte) 104);
-						class282_sub23.buffer.writeShortLE128(i_6_, -1183932171);
+						class282_sub23.buffer.writeShortLE128(pid, -1183932171);
 						class282_sub23.buffer.write128Byte(Class84.method1465(-1846955130) ? 1 : 0, 1376249266);
 						class282_sub23.buffer.writeShortLE128(client.anInt7346 * -1555739329, -1183932171);
 						class282_sub23.buffer.writeShort128(client.anInt7345 * -1673073865, -800257688);
 						client.aClass184_7475.method3049(class282_sub23, -86724265);
-						MapRegion.method4559(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub2.regionBaseX[0]), (class521_sub1_sub1_sub2_sub2.regionBaseY[0]), class521_sub1_sub1_sub2_sub2.method15805(828768449), class521_sub1_sub1_sub2_sub2.method15805(828768449), 0, 971339209), 1130929855);
+						MapRegion.routeTo(class521_sub1_sub1_sub2_sub2.regionBaseX[0], class521_sub1_sub1_sub2_sub2.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub2.regionBaseX[0]), (class521_sub1_sub1_sub2_sub2.regionBaseY[0]), class521_sub1_sub1_sub2_sub2.getSize(828768449), class521_sub1_sub1_sub2_sub2.getSize(828768449), 0, 971339209), 1130929855);
 					}
 				}
 				OutgoingPacket class379_9_ = null;
@@ -314,10 +314,10 @@ public class Class96_Sub4 extends Class96 {
 					class282_sub23.buffer.writeInt((int) (l >>> 32) & 0x7fffffff);
 					class282_sub23.buffer.writeByte128(Class84.method1465(-1734216598) ? 1 : 0, 784835211);
 					client.aClass184_7475.method3049(class282_sub23, -1242179380);
-					Class439.method7344(i_3_, i_4_, l);
+					Class439.routeToSceneObject(i_3_, i_4_, l);
 				}
 				if (1008 == i_5_ || 1009 == i_5_ || 1010 == i_5_ || 1011 == i_5_ || 1012 == i_5_)
-					Class6.method303(i_5_, i_6_, i_3_, -1949289541);
+					Class6.method303(i_5_, pid, i_3_, -1949289541);
 				if (client.aBool7344)
 					Class60.method1170(-609337146);
 				if (Class401.aClass118_4825 != null && -1694129533 * client.anInt7297 == 0)

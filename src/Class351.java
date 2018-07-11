@@ -39,9 +39,9 @@ public class Class351 implements Interface3 {
 			else if (string.charAt(i_0_ - 1) == '\u00a7')
 				objects[i_0_] = new Long(class527.aLongArray7003[(class527.anInt7001 -= -1188480575) * 1820448321]);
 			else
-				objects[i_0_] = new Integer(class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+				objects[i_0_] = new Integer(class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		}
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_1_ != -1)
 			objects[0] = new Integer(i_1_);
 		else
@@ -50,13 +50,13 @@ public class Class351 implements Interface3 {
 	}
 
 	static final void method6194(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		Class119.method2075(i_2_, string, (byte) 3);
 	}
 
 	static final void method6195(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1731892952);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-1731892952);
 	}
 
 	public static final void method6196(Class282_Sub44 class282_sub44, boolean bool, boolean bool_3_, int i) {

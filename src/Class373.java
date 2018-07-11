@@ -34,7 +34,7 @@ public class Class373 {
 
 	static final void method6363(CS2Executor class527, int i) {
 		int i_0_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.anIntArray26[i_0_];
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.anIntArray26[i_0_];
 	}
 
 	static final void method6364(CS2Executor class527, int i) {

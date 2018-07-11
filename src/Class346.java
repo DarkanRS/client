@@ -51,9 +51,9 @@ public class Class346 {
 	}
 
 	static final void method6151(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 7);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 198275475 * class118.anInt1428;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 198275475 * class118.anInt1428;
 	}
 
 	static final void method6152(CS2Executor class527, int i) {
@@ -62,7 +62,7 @@ public class Class346 {
 	}
 
 	static final void method6153(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13050(519629067);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13050(519629067);
 	}
 
 	public static byte[] method6154(Object object, boolean bool, byte i) {
@@ -113,8 +113,8 @@ public class Class346 {
 			player.aBool10571 = ((Class4) class4).aBool29;
 			player.aBool10550 = ((Class4) class4).aBool33;
 			player.aByteArray10365[0] = Class197.playerMovementTypes[i];
-			player.aByte7967 = player.aByte7968 = (byte) i_7_;
-			if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_10_, i_11_, 1509882915))
+			player.plane = player.aByte7968 = (byte) i_7_;
+			if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_10_, i_11_, 1509882915))
 				player.aByte7968++;
 			player.method16130(i_10_, i_11_, -2001556911);
 			player.aBool10568 = false;

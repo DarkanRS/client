@@ -65,7 +65,7 @@ public class Class175 {
 	static final void method2959(CS2Executor class527, int i) {
 		int i_0_ = ((class527.intOpValues[301123709 * class527.instrPtr]) >> 16);
 		int i_1_ = ((class527.intOpValues[class527.instrPtr * 301123709]) & 0xffff);
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_2_ < 0 || i_2_ > 5000)
 			throw new RuntimeException();
 		class527.globalArrayLengths[i_0_] = i_2_;
@@ -77,17 +77,17 @@ public class Class175 {
 	}
 
 	static final void method2960(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1363 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1363 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 9);
 		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999)
 			Class244.method4196(-1952846363 * class118.idHash, (byte) 0);
 	}
 
 	static final void method2961(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_6_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_5_ - i_6_;
+		class527.intStackPtr -= 283782002;
+		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_6_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_5_ - i_6_;
 	}
 
 	public static boolean method2962(char c, int i) {
@@ -105,12 +105,12 @@ public class Class175 {
 	}
 
 	static final void method2963(CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (Class291_Sub1.aClass465_8029 != null) {
 			Node class282 = Class291_Sub1.aClass465_8029.method7754((long) i_9_);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282 != null ? 1 : 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282 != null ? 1 : 0;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static void method2964(Class282_Sub48 class282_sub48, int i, int i_10_, int i_11_, int i_12_, int i_13_) {
@@ -149,7 +149,7 @@ public class Class175 {
 				int i_18_ = i_14_ - (((Class282_Sub48) class282_sub48).anInt8081 * 1464439541);
 				if (i_18_ > 0 && i_16_ > 0)
 					i_17_ = i_15_ * (i_16_ - i_18_) / i_16_;
-				Class84.myPlayer.method15805(828768449);
+				Class84.myPlayer.getSize(828768449);
 				int i_19_ = 8192;
 				int i_20_ = (((-2014043967 * ((Class282_Sub48) class282_sub48).anInt8107) + -9275899 * (((Class282_Sub48) class282_sub48).anInt8079)) / 2 - i_10_);
 				int i_21_ = (1548025077 * ((Class282_Sub48) class282_sub48).anInt8078 + 517331721 * (((Class282_Sub48) class282_sub48).anInt8077)) / 2 - i_11_;

@@ -98,7 +98,7 @@ public abstract class Class521_Sub1_Sub5 extends Class521_Sub1 {
 
 	Class521_Sub1_Sub5(SceneObjectManager class206, int i, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_) {
 		super(class206);
-		aByte7967 = (byte) i_9_;
+		plane = (byte) i_9_;
 		aByte7968 = (byte) i_10_;
 		aShort9615 = (short) i_11_;
 		method11171(new Vector3((float) i, (float) i_7_, (float) i_8_));

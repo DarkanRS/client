@@ -21,7 +21,7 @@ public class Class445 {
 
 	static final void method7428(CS2Executor class527, byte i) {
 		int i_0_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = ((Player) class527.animable).aClass155_10561.method2626(i_0_, (byte) 56);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = ((Player) class527.animable).aClass155_10561.method2626(i_0_, (byte) 56);
 	}
 
 	static final void method7429(IComponentDefinitions class118, int i, byte[] is, byte[] is_1_, CS2Executor class527, int i_2_) {

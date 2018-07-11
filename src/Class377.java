@@ -139,13 +139,13 @@ public class Class377 implements IndexLoader {
 	}
 
 	static final void method6396(CS2Executor class527, byte i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class282_Sub20_Sub38.method15430(i_9_, 16711935);
 	}
 
 	static final void method6397(CS2Executor class527, int i) {
 		int i_10_ = Class393.aClass282_Sub54_4783.aClass468_Sub27_8208.method12952((byte) 81);
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8209, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 0 : i_10_, 2046929998);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub27_8209, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) ? 0 : i_10_, 2046929998);
 		Class405.method6823(-734889653);
 	}
 
@@ -179,18 +179,18 @@ public class Class377 implements IndexLoader {
 	}
 
 	static final void method6399(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 0;
 	}
 
 	static final void method6400(CS2Executor class527, byte i) {
 		class527.anInt7000 -= -1341717846;
-		class527.anInt7012 -= 283782002;
+		class527.intStackPtr -= 283782002;
 		String string = (String) (class527.objectStack[1806726141 * class527.anInt7000]);
-		int i_17_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_18_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		int i_17_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_18_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		String string_19_ = (String) (class527.objectStack[1 + 1806726141 * class527.anInt7000]);
 		Class96_Sub19.method14666(string, i_17_ == 1, i_18_, string_19_, 720350555);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 560339485 * Class415.anInt4985;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 560339485 * Class415.anInt4985;
 	}
 
 	public static Class62 method6401(RsByteBuffer class282_sub35, byte i) {

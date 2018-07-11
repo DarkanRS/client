@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements SceneObject {
+public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObject {
 	Class282_Sub50_Sub17 aClass282_Sub50_Sub17_10491;
 	ObjectIndexLoader aClass474_10492;
 	boolean aBool10493;
@@ -66,7 +66,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 				class390_1_ = null;
 		}
 		Vector3 class385 = method11166().aClass385_3595;
-		return class478.method8010(class505, i, (1109376893 * Class458.aClass458_5480.anInt5481), ((Class521_Sub1_Sub3_Sub1) this).aByte10496, class390, class390_1_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, 219855525);
+		return class478.method8010(class505, i, (1109376893 * SceneObjectType.GROUND_DECORATION.type), ((Class521_Sub1_Sub3_Sub1) this).aByte10496, class390, class390_1_, (int) class385.x, (int) class385.y, (int) class385.z, bool, null, 219855525);
 	}
 
 	public Class200 method12992(GraphicalRenderer class505, byte i) {
@@ -182,11 +182,11 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	}
 
 	public int method73() {
-		return Class458.aClass458_5480.anInt5481 * 1109376893;
+		return SceneObjectType.GROUND_DECORATION.type * 1109376893;
 	}
 
 	public int method77() {
-		return Class458.aClass458_5480.anInt5481 * 1109376893;
+		return SceneObjectType.GROUND_DECORATION.type * 1109376893;
 	}
 
 	public boolean method86(int i) {
@@ -405,7 +405,7 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	}
 
 	public int method89(int i) {
-		return Class458.aClass458_5480.anInt5481 * 1109376893;
+		return SceneObjectType.GROUND_DECORATION.type * 1109376893;
 	}
 
 	void method13021() {
@@ -449,8 +449,8 @@ public class Class521_Sub1_Sub3_Sub1 extends Class521_Sub1_Sub3 implements Scene
 	}
 
 	static final void method16079(CS2Executor class527, short i) {
-		class527.anInt7012 -= 283782002;
-		Class12.method486((class527.intStack[class527.anInt7012 * 1942118537]), (class527.intStack[1 + class527.anInt7012 * 1942118537]), 0, 596260679);
+		class527.intStackPtr -= 283782002;
+		Class12.method486((class527.intStack[class527.intStackPtr * 1942118537]), (class527.intStack[1 + class527.intStackPtr * 1942118537]), 0, 596260679);
 	}
 
 	static Class282_Sub53_Sub2 method16080(int i, int i_22_, int i_23_, long l, int i_24_, int i_25_) {

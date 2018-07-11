@@ -15,11 +15,11 @@ public class Class105 {
 	}
 
 	static final void method1802(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.anInt632 * 1869493667;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass61_7010.anInt632 * 1869493667;
 	}
 
 	static final void method1803(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) != 0) ? 1 : 0, -564300666);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub17_8200, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) != 0) ? 1 : 0, -564300666);
 		Class190.method3148((byte) 98);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -119);
 	}
@@ -61,7 +61,7 @@ public class Class105 {
 				if (i == 1595512269 * client.anInt7315)
 					throw new RuntimeException();
 				Class4 class4 = Class197.aClass4Array2430[i] = new Class4();
-				((Class4) class4).anInt31 = (-1096995395 * (((class219.y * -1002240017 + player.regionBaseY[0]) >> 6) + ((player.aByte7967 << 28) + ((1948093437 * class219.x + (player.regionBaseX[0])) >> 6 << 14))));
+				((Class4) class4).anInt31 = (-1096995395 * (((class219.y * -1002240017 + player.regionBaseY[0]) >> 6) + ((player.plane << 28) + ((1948093437 * class219.x + (player.regionBaseX[0])) >> 6 << 14))));
 				if (-1 != 327043279 * player.faceDirection)
 					((Class4) class4).anInt30 = player.faceDirection * 20062537;
 				else
@@ -180,11 +180,11 @@ public class Class105 {
 					player.aBool10568 = true;
 				} else
 					player.method16129(i_23_, i_24_, (Class197.playerMovementTypes[i]), -1262996328);
-				player.aByte7967 = player.aByte7968 = (byte) (i_20_ + player.aByte7967 & 0x3);
-				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_23_, i_24_, 1753987250))
+				player.plane = player.aByte7968 = (byte) (i_20_ + player.plane & 0x3);
+				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_23_, i_24_, 1753987250))
 					player.aByte7968++;
-				if (i == 1595512269 * client.anInt7315 && (player.aByte7967 != Class4.anInt35 * 675588453))
-					Class4.anInt35 = player.aByte7967 * -647602067;
+				if (i == 1595512269 * client.anInt7315 && (player.plane != Class4.anInt35 * 675588453))
+					Class4.anInt35 = player.plane * -647602067;
 			} else {
 				int i_25_ = buffer.readBits(30, (byte) -84);
 				int i_26_ = i_25_ >> 28;
@@ -198,11 +198,11 @@ public class Class105 {
 					player.aBool10568 = true;
 				} else
 					player.method16129(i_29_, i_30_, (Class197.playerMovementTypes[i]), -106492270);
-				player.aByte7967 = player.aByte7968 = (byte) (i_26_ + player.aByte7967 & 0x3);
-				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_29_, i_30_, 1539369664))
+				player.plane = player.aByte7968 = (byte) (i_26_ + player.plane & 0x3);
+				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_29_, i_30_, 1539369664))
 					player.aByte7968++;
 				if (i == client.anInt7315 * 1595512269)
-					Class4.anInt35 = player.aByte7967 * -647602067;
+					Class4.anInt35 = player.plane * -647602067;
 			}
 		}
 	}

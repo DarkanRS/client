@@ -128,15 +128,15 @@ public class Class252 implements Interface43 {
 		if (integer == null) {
 			Class405 class405 = IndexLoaders.aClass394_5831.method6753(i_1_, 908110130);
 			if ('i' == class405.aChar4832 || '1' == class405.aChar4832)
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = 0;
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = 0;
 			else
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = integer.intValue();
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = integer.intValue();
 	}
 
 	static final void method4324(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -9);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub11_8217.method12699((byte) -9);
 	}
 
 	static int method4325(Class217_Sub1 class217_sub1, Class217_Sub1 class217_sub1_2_, int i, boolean bool, int i_3_, boolean bool_4_, int i_5_) {

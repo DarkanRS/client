@@ -209,9 +209,9 @@ public abstract class Class52 implements Interface2 {
 	}
 
 	static final void method1085(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_23_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_24_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_23_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_24_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		class527.aClass346_7009.anIntArray4046[i_23_] = i_24_;
 	}
 

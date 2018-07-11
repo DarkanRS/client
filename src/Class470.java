@@ -486,9 +486,9 @@ public class Class470 {
 	}
 
 	static final void method7826(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_40_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_41_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_40_, 1106724870).aCharArray9748[i_41_]);
+		class527.intStackPtr -= 283782002;
+		int i_40_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_41_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_40_, 1106724870).aCharArray9748[i_41_]);
 	}
 }

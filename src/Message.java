@@ -381,26 +381,26 @@ public class Message {
 	}
 
 	static final void method7274(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByte627;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByte627;
 	}
 
 	static void method7275(GraphicalRenderer class505, int i) {
-		if ((335283739 * Class187.anInt2351 != Class84.myPlayer.aByte7967) && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1864995825) != null) {
+		if ((335283739 * Class187.anInt2351 != Class84.myPlayer.plane) && IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1864995825) != null) {
 			Class169.method2869(1767772693);
-			if (Class289.method5097(class505, (Class84.myPlayer.aByte7967), 17547042))
-				Class187.anInt2351 = (1481335827 * Class84.myPlayer.aByte7967);
+			if (Class289.method5097(class505, (Class84.myPlayer.plane), 17547042))
+				Class187.anInt2351 = (1481335827 * Class84.myPlayer.plane);
 		}
 	}
 
 	static final void method7276(CS2Executor class527, byte i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5130(i_3_);
 		if (class282_sub50_sub6 == null) {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		} else {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub6.anInt9532 * 556833041 >> 14 & 0x3fff;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub6.anInt9532 * 556833041 & 0x3fff;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282_sub50_sub6.anInt9532 * 556833041 >> 14 & 0x3fff;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282_sub50_sub6.anInt9532 * 556833041 & 0x3fff;
 		}
 	}
 

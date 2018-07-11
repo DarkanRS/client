@@ -519,7 +519,7 @@ public class Class48_Sub2 extends Class48 {
 		for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 86)); null != class282_sub31; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-18046490)) {
 			if (!((Class282_Sub31) class282_sub31).aBool7774) {
 				((Class282_Sub31) class282_sub31).aBool7773 = true;
-				if (37618455 * class282_sub31.anInt7762 >= 0 && -322610393 * class282_sub31.anInt7763 >= 0 && (class282_sub31.anInt7762 * 37618455 < IndexLoaders.MAP_REGION_DECODER.method4424(111719128)) && (class282_sub31.anInt7763 * -322610393 < IndexLoaders.MAP_REGION_DECODER.method4451(-1330125890)))
+				if (37618455 * class282_sub31.anInt7762 >= 0 && -322610393 * class282_sub31.anInt7763 >= 0 && (class282_sub31.anInt7762 * 37618455 < IndexLoaders.MAP_REGION_DECODER.getSizeX(111719128)) && (class282_sub31.anInt7763 * -322610393 < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1330125890)))
 					Class275_Sub4.method12585(class282_sub31, -1279772486);
 			} else
 				class282_sub31.unlink(-371378792);

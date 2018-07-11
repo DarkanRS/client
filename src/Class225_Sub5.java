@@ -2,32 +2,32 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class225_Sub5 extends Class225 {
+public class Class225_Sub5 extends RouteStrategy {
 	int anInt7971;
-	Class458 aClass458_7972;
+	SceneObjectType aClass458_7972;
 
-	public boolean method3789(int i, int i_0_, int i_1_, Class336 class336) {
-		return class336.method5986(i_0_, i_1_, i, -1440558477 * anInt2779, 1732585867 * anInt2780, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -12218);
+	public boolean method3789(int i, int i_0_, int i_1_, ClipMap class336) {
+		return class336.method5986(i_0_, i_1_, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -12218);
 	}
 
-	public boolean method3787(int i, int i_2_, int i_3_, Class336 class336, byte i_4_) {
-		return class336.method5986(i_2_, i_3_, i, -1440558477 * anInt2779, 1732585867 * anInt2780, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -26880);
+	public boolean canExit(int i, int i_2_, int i_3_, ClipMap class336, byte i_4_) {
+		return class336.method5986(i_2_, i_3_, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -26880);
 	}
 
-	public boolean method3786(int i, int i_5_, int i_6_, Class336 class336) {
-		return class336.method5986(i_5_, i_6_, i, -1440558477 * anInt2779, 1732585867 * anInt2780, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -30854);
+	public boolean method3786(int i, int i_5_, int i_6_, ClipMap class336) {
+		return class336.method5986(i_5_, i_6_, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -30854);
 	}
 
-	public boolean method3788(int i, int i_7_, int i_8_, Class336 class336) {
-		return class336.method5986(i_7_, i_8_, i, -1440558477 * anInt2779, 1732585867 * anInt2780, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -23786);
+	public boolean method3788(int i, int i_7_, int i_8_, ClipMap class336) {
+		return class336.method5986(i_7_, i_8_, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -23786);
 	}
 
 	Class225_Sub5() {
 		/* empty */
 	}
 
-	public boolean method3785(int i, int i_9_, int i_10_, Class336 class336) {
-		return class336.method5986(i_9_, i_10_, i, -1440558477 * anInt2779, 1732585867 * anInt2780, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -29453);
+	public boolean method3785(int i, int i_9_, int i_10_, ClipMap class336) {
+		return class336.method5986(i_9_, i_10_, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, ((Class225_Sub5) this).aClass458_7972.method243((byte) 1), (((Class225_Sub5) this).anInt7971 * 1056438757), (short) -29453);
 	}
 
 	static void method13042(GraphicalRenderer class505, int i, int i_11_, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {
@@ -43,7 +43,7 @@ public class Class225_Sub5 extends Class225 {
 				int i_20_ = i_15_;
 				if (-348507379 * class478.anInt5652 > 0)
 					i_20_ = i_16_;
-				if (i_19_ == 1109376893 * Class458.aClass458_5470.anInt5481 || (1109376893 * Class458.aClass458_5472.anInt5481 == i_19_)) {
+				if (i_19_ == 1109376893 * SceneObjectType.WALL_STRAIGHT.type || (1109376893 * SceneObjectType.WALL_WHOLE_CORNER.type == i_19_)) {
 					if (0 == i_18_)
 						class505.method8428(i_13_, i_14_, 4, i_20_, -1796764807);
 					else if (i_18_ == 1)
@@ -53,7 +53,7 @@ public class Class225_Sub5 extends Class225 {
 					else if (3 == i_18_)
 						class505.method8659(i_13_, i_14_ + 3, 4, i_20_, -1272168357);
 				}
-				if (i_19_ == Class458.aClass458_5473.anInt5481 * 1109376893) {
+				if (i_19_ == SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893) {
 					if (i_18_ == 0)
 						class505.method8425(i_13_, i_14_, 1, 1, i_20_, (byte) -113);
 					else if (i_18_ == 1)
@@ -63,7 +63,7 @@ public class Class225_Sub5 extends Class225 {
 					else if (i_18_ == 3)
 						class505.method8425(i_13_, 3 + i_14_, 1, 1, i_20_, (byte) -29);
 				}
-				if (i_19_ == 1109376893 * Class458.aClass458_5472.anInt5481) {
+				if (i_19_ == 1109376893 * SceneObjectType.WALL_WHOLE_CORNER.type) {
 					if (i_18_ == 0)
 						class505.method8659(i_13_, i_14_, 4, i_20_, 1526236522);
 					else if (i_18_ == 1)
@@ -82,7 +82,7 @@ public class Class225_Sub5 extends Class225 {
 			int i_22_ = interface12.method89(1162036783);
 			if (-272332433 * class478.anInt5689 != -1)
 				Class415.method6997(class505, class478, i_21_, i_13_, i_14_, 1089913418);
-			else if (i_22_ == Class458.aClass458_5474.anInt5481 * 1109376893) {
+			else if (i_22_ == SceneObjectType.WALL_INTERACT.type * 1109376893) {
 				int i_23_ = -1118482;
 				if (class478.anInt5652 * -348507379 > 0)
 					i_23_ = -1179648;
@@ -130,10 +130,10 @@ public class Class225_Sub5 extends Class225 {
 
 	static final void method13046(CS2Executor class527, int i) {
 		if (null != Class113.aClass282_Sub4_1235) {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 			class527.aClass282_Sub4_7011 = Class113.aClass282_Sub4_1235;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static void method13047(int[] is, int[] is_31_, int i, int i_32_, byte i_33_) {

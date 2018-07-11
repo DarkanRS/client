@@ -130,13 +130,13 @@ public final class Class153 {
 	}
 
 	static final void method2620(CS2Executor class527, int i) {
-		int i_18_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_18_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		UnderlayDefinition class513;
 		if (class527.aBool7022)
 			class513 = class527.aClass513_6994;
 		else
 			class513 = class527.aClass513_7007;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8764(i_18_, -1, -1290054035) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class513.method8764(i_18_, -1, -1290054035) ? 1 : 0;
 	}
 
 	public static byte[] method2621(File file, int i) {

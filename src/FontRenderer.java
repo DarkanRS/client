@@ -475,7 +475,7 @@ public abstract class FontRenderer {
 	}
 
 	static final void method403(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1291 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1291 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 	}
 
 	public static GraphicalRenderer method404(Canvas canvas, Interface22 interface22, int i, int i_332_, int i_333_) {

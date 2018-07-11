@@ -72,8 +72,8 @@ public class Class366 implements Interface3 {
 	}
 
 	static final void method6304(CS2Executor class527, int i) {
-		int i_17_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_17_, -2138128366).method14916(-235375245);
+		int i_17_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_17_, -2138128366).method14916(-235375245);
 	}
 
 	static final void method6305(CS2Executor class527, int i) {

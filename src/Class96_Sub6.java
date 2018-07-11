@@ -33,15 +33,15 @@ public class Class96_Sub6 extends Class96 {
 	}
 
 	static final void method14503(CS2Executor class527, int i) {
-		class527.anInt7012 -= 425673003;
-		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_2_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
-		int i_3_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 425673003;
+		int i_1_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_2_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
+		int i_3_ = (class527.intStack[2 + class527.intStackPtr * 1942118537]);
 		if (i_2_ == -1)
 			throw new RuntimeException();
 		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_2_, (byte) 8);
 		if (i_1_ != class431.aChar5140)
 			throw new RuntimeException();
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class431.method7228(Integer.valueOf(i_3_), (byte) -68) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class431.method7228(Integer.valueOf(i_3_), (byte) -68) ? 1 : 0;
 	}
 }

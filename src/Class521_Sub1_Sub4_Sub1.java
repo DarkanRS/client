@@ -451,10 +451,10 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 					float f_31_ = f_28_ - f_25_;
 					int i_32_ = (int) (f_30_ * f_29_ + f_23_);
 					int i_33_ = (int) (f_29_ * f_31_ + f_25_);
-					i_20_ = i_32_ + (Class84.myPlayer.method15805(828768449) - 1 << 8) >> 9;
-					i_21_ = i_33_ + (Class84.myPlayer.method15805(828768449) - 1 << 8) >> 9;
-					int i_34_ = Class84.myPlayer.aByte7967;
-					if (i_34_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).aByteArrayArrayArray3638[1][i_32_ >> 9][i_33_ >> 9]) & 0x2) != 0)
+					i_20_ = i_32_ + (Class84.myPlayer.getSize(828768449) - 1 << 8) >> 9;
+					i_21_ = i_33_ + (Class84.myPlayer.getSize(828768449) - 1 << 8) >> 9;
+					int i_34_ = Class84.myPlayer.plane;
+					if (i_34_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).tileMasks[1][i_32_ >> 9][i_33_ >> 9]) & 0x2) != 0)
 						i_34_++;
 				}
 				if (-1 != i_20_ && i_21_ != -1) {
@@ -478,7 +478,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 			Iterator iterator = list.iterator();
 			while (iterator.hasNext()) {
 				Class285 class285 = (Class285) iterator.next();
-				if ((client.aBool7372 || (Class84.myPlayer.aByte7967 == class285.aClass521_Sub1_3391.aByte7967)) && class285.method5019(class505, i_35_, i_36_, 319168388)) {
+				if ((client.aBool7372 || (Class84.myPlayer.plane == class285.aClass521_Sub1_3391.plane)) && class285.method5019(class505, i_35_, i_36_, 319168388)) {
 					boolean bool = false;
 					boolean bool_37_ = false;
 					int i_38_;
@@ -493,11 +493,11 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 					}
 					if (class285.aClass521_Sub1_3391 instanceof Player) {
 						Player class521_sub1_sub1_sub2_sub1 = ((Player) class285.aClass521_Sub1_3391);
-						int i_40_ = class521_sub1_sub1_sub2_sub1.method15805(828768449);
+						int i_40_ = class521_sub1_sub1_sub2_sub1.getSize(828768449);
 						Vector3 class385 = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
 						if ((0 == (i_40_ & 0x1) && 0 == ((int) class385.x & 0x1ff) && 0 == ((int) class385.z & 0x1ff)) || (1 == (i_40_ & 0x1) && 256 == ((int) class385.x & 0x1ff) && (((int) class385.z & 0x1ff) == 256))) {
-							int i_41_ = ((int) class385.x - (class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1 << 8));
-							int i_42_ = ((int) class385.z - (class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1 << 8));
+							int i_41_ = ((int) class385.x - (class521_sub1_sub1_sub2_sub1.getSize(828768449) - 1 << 8));
+							int i_42_ = ((int) class385.z - (class521_sub1_sub1_sub2_sub1.getSize(828768449) - 1 << 8));
 							for (int i_43_ = 0; i_43_ < client.anInt7211 * -685729279; i_43_++) {
 								Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) client.anIntArray7212[i_43_])));
 								if (class282_sub47 != null) {
@@ -506,8 +506,8 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 										Vector3 class385_44_ = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
 										int i_45_ = ((int) class385_44_.x - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
 										int i_46_ = ((int) class385_44_.z - ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - 1 << 8));
-										if (i_45_ >= i_41_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_45_ - i_41_ >> 9))) && i_46_ >= i_42_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_46_ - i_42_ >> 9)))) {
-											WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1752430415);
+										if (i_45_ >= i_41_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.getSize(828768449) - (i_45_ - i_41_ >> 9))) && i_46_ >= i_42_ && (((class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858) * 1203434505) <= (class521_sub1_sub1_sub2_sub1.getSize(828768449) - (i_46_ - i_42_ >> 9)))) {
+											WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.plane) != (class285.aClass521_Sub1_3391.plane)), 1752430415);
 											class521_sub1_sub1_sub2_sub2.anInt10375 = (client.cycles * 1977662161);
 										}
 									}
@@ -519,10 +519,10 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 								Player class521_sub1_sub1_sub2_sub1_49_ = (client.players[is[i_48_]]);
 								if (class521_sub1_sub1_sub2_sub1_49_ != null && ((class521_sub1_sub1_sub2_sub1_49_.anInt10375) * 717008059 != -1809259861 * client.cycles) && (class521_sub1_sub1_sub2_sub1 != class521_sub1_sub1_sub2_sub1_49_) && (class521_sub1_sub1_sub2_sub1_49_.aBool10318)) {
 									Vector3 class385_50_ = (class521_sub1_sub1_sub2_sub1_49_.method11166().aClass385_3595);
-									int i_51_ = ((int) class385_50_.x - (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) - 1 << 8));
-									int i_52_ = ((int) class385_50_.z - (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) - 1 << 8));
-									if (i_51_ >= i_41_ && (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_51_ - i_41_ >> 9))) && i_52_ >= i_42_ && (class521_sub1_sub1_sub2_sub1_49_.method15805(828768449) <= (class521_sub1_sub1_sub2_sub1.method15805(828768449) - (i_52_ - i_42_ >> 9)))) {
-										Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1_49_, ((class285.aClass521_Sub1_3391.aByte7967) != (Class84.myPlayer.aByte7967)), 1557506355);
+									int i_51_ = ((int) class385_50_.x - (class521_sub1_sub1_sub2_sub1_49_.getSize(828768449) - 1 << 8));
+									int i_52_ = ((int) class385_50_.z - (class521_sub1_sub1_sub2_sub1_49_.getSize(828768449) - 1 << 8));
+									if (i_51_ >= i_41_ && (class521_sub1_sub1_sub2_sub1_49_.getSize(828768449) <= (class521_sub1_sub1_sub2_sub1.getSize(828768449) - (i_51_ - i_41_ >> 9))) && i_52_ >= i_42_ && (class521_sub1_sub1_sub2_sub1_49_.getSize(828768449) <= (class521_sub1_sub1_sub2_sub1.getSize(828768449) - (i_52_ - i_42_ >> 9)))) {
+										Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1_49_, ((class285.aClass521_Sub1_3391.plane) != (Class84.myPlayer.plane)), 1557506355);
 										class521_sub1_sub1_sub2_sub1_49_.anInt10375 = client.cycles * 1977662161;
 									}
 								}
@@ -530,7 +530,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 						}
 						if (717008059 * class521_sub1_sub1_sub2_sub1.anInt10375 == client.cycles * -1809259861)
 							continue;
-						Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, (class285.aClass521_Sub1_3391.aByte7967 != (Class84.myPlayer.aByte7967)), 1557506355);
+						Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, (class285.aClass521_Sub1_3391.plane != (Class84.myPlayer.plane)), 1557506355);
 						class521_sub1_sub1_sub2_sub1.anInt10375 = 1977662161 * client.cycles;
 					}
 					if (class285.aClass521_Sub1_3391 instanceof NPC) {
@@ -549,7 +549,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 											int i_58_ = ((int) (class385_57_.x) - ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) - 1 << 8));
 											int i_59_ = ((int) (class385_57_.z) - (((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505) - 1 << 8));
 											if (i_58_ >= i_53_ && ((1203434505 * (class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858)) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_58_ - i_53_ >> 9))) && i_59_ >= i_54_ && ((class521_sub1_sub1_sub2_sub2_56_.aClass409_10580.anInt4858) * 1203434505 <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_59_ - i_54_ >> 9)))) {
-												WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2_56_, ((Class84.myPlayer.aByte7967) != (class285.aClass521_Sub1_3391.aByte7967)), 1644654446);
+												WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2_56_, ((Class84.myPlayer.plane) != (class285.aClass521_Sub1_3391.plane)), 1644654446);
 												class521_sub1_sub1_sub2_sub2_56_.anInt10375 = (1977662161 * client.cycles);
 											}
 										}
@@ -561,10 +561,10 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 									Player class521_sub1_sub1_sub2_sub1 = (client.players[is[i_61_]]);
 									if (null != class521_sub1_sub1_sub2_sub1 && (-1809259861 * client.cycles != (717008059 * (class521_sub1_sub1_sub2_sub1.anInt10375))) && (class521_sub1_sub1_sub2_sub1.aBool10318)) {
 										Vector3 class385_62_ = (class521_sub1_sub1_sub2_sub1.method11166().aClass385_3595);
-										int i_63_ = ((int) class385_62_.x - ((class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1) << 8));
-										int i_64_ = ((int) class385_62_.z - ((class521_sub1_sub1_sub2_sub1.method15805(828768449) - 1) << 8));
-										if (i_63_ >= i_53_ && (class521_sub1_sub1_sub2_sub1.method15805(828768449) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_63_ - i_53_ >> 9))) && i_64_ >= i_54_ && (class521_sub1_sub1_sub2_sub1.method15805(828768449) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_64_ - i_54_ >> 9)))) {
-											Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, ((class285.aClass521_Sub1_3391.aByte7967) != (Class84.myPlayer.aByte7967)), 1557506355);
+										int i_63_ = ((int) class385_62_.x - ((class521_sub1_sub1_sub2_sub1.getSize(828768449) - 1) << 8));
+										int i_64_ = ((int) class385_62_.z - ((class521_sub1_sub1_sub2_sub1.getSize(828768449) - 1) << 8));
+										if (i_63_ >= i_53_ && (class521_sub1_sub1_sub2_sub1.getSize(828768449) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_63_ - i_53_ >> 9))) && i_64_ >= i_54_ && (class521_sub1_sub1_sub2_sub1.getSize(828768449) <= ((1203434505 * (class521_sub1_sub1_sub2_sub2.aClass409_10580.anInt4858)) - (i_64_ - i_54_ >> 9)))) {
+											Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, ((class285.aClass521_Sub1_3391.plane) != (Class84.myPlayer.plane)), 1557506355);
 											class521_sub1_sub1_sub2_sub1.anInt10375 = (client.cycles * 1977662161);
 										}
 									}
@@ -572,14 +572,14 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 							}
 							if ((class521_sub1_sub1_sub2_sub2.anInt10375 * 717008059) == -1809259861 * client.cycles)
 								continue;
-							WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.aByte7967) != class285.aClass521_Sub1_3391.aByte7967), 1776503457);
+							WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, ((Class84.myPlayer.plane) != class285.aClass521_Sub1_3391.plane), 1776503457);
 							class521_sub1_sub1_sub2_sub2.anInt10375 = client.cycles * 1977662161;
 						}
 					}
 					if (class285.aClass521_Sub1_3391 instanceof Class521_Sub1_Sub2_Sub1) {
 						int i_65_ = class219.x * 1948093437 + i_38_;
 						int i_66_ = i_39_ + class219.y * -1002240017;
-						Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) ((class285.aClass521_Sub1_3391.aByte7967) << 28 | i_66_ << 14 | i_65_))));
+						Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) ((class285.aClass521_Sub1_3391.plane) << 28 | i_66_ << 14 | i_65_))));
 						if (null != class282_sub29) {
 							int i_67_ = 0;
 							Class282_Sub34 class282_sub34 = ((Class282_Sub34) class282_sub29.aClass482_7708.method8065(-2081006953));
@@ -592,12 +592,12 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 									i_68_ = -1519092215 * (Class149_Sub2.DEFAULTS_LOADER_7.anInt5880);
 								else
 									i_68_ = 725268415 * (Class149_Sub2.DEFAULTS_LOADER_7.anInt5881);
-								if (client.aBool7344 && ((Class84.myPlayer.aByte7967) == (class285.aClass521_Sub1_3391.aByte7967))) {
+								if (client.aBool7344 && ((Class84.myPlayer.plane) == (class285.aClass521_Sub1_3391.plane))) {
 									AttributeDefault class437 = ((Class96_Sub12.anInt9319 * -1605351655) != -1 ? (IndexLoaders.ITEM_DEFAULTS.method7069((-1605351655 * Class96_Sub12.anInt9319), (byte) 0)) : null);
 									if ((Class506.anInt5858 * 1310510077 & 0x1) != 0 && (null == class437 || ((class425.method7099((Class96_Sub12.anInt9319 * -1605351655), (-1741480635 * class437.anInt5337), -1083542144)) != (class437.anInt5337 * -1741480635))))
 										PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(i_68_, 619010179)).append(class425.aString5043).toString(), Defaults8Loader.anInt5932 * -239192305, 17, -1, (long) (class282_sub34.anInt7853 * 1964309863), i_38_, i_39_, true, false, (long) i_67_, false, -1634636602);
 								}
-								if (class285.aClass521_Sub1_3391.aByte7967 == (Class84.myPlayer.aByte7967)) {
+								if (class285.aClass521_Sub1_3391.plane == (Class84.myPlayer.plane)) {
 									String[] strings = class425.groundOptions;
 									for (int i_69_ = strings.length - 1; i_69_ >= 0; i_69_--) {
 										if (null != strings[i_69_]) {
@@ -634,12 +634,12 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 						if (null != class478.anIntArray5650)
 							class478 = class478.method8013((Class158_Sub1.aClass3_8507), (byte) 107);
 						if (null != class478) {
-							if (client.aBool7344 && (class285.aClass521_Sub1_3391.aByte7967 == (Class84.myPlayer.aByte7967))) {
+							if (client.aBool7344 && (class285.aClass521_Sub1_3391.plane == (Class84.myPlayer.plane))) {
 								AttributeDefault class437 = (-1 != (-1605351655 * Class96_Sub12.anInt9319) ? (IndexLoaders.ITEM_DEFAULTS.method7069((Class96_Sub12.anInt9319 * -1605351655), (byte) 0)) : null);
 								if (0 != (1310510077 * Class506.anInt5858 & 0x4) && (class437 == null || ((class478.method7963((Class96_Sub12.anInt9319 * -1605351655), -1741480635 * class437.anInt5337, -2052450472)) != (-1741480635 * class437.anInt5337))))
 									PlayerAppearance.method4032(client.aString7275, new StringBuilder().append(client.aString7356).append(" ").append(Class2.aString17).append(" ").append(Class59.method1163(65535, 619010179)).append(class478.aString5638).toString(), Defaults8Loader.anInt5932 * -239192305, 2, -1, Class329.method5905(interface12, i_38_, i_39_, (byte) -79), i_38_, i_39_, true, false, (long) interface12.hashCode(), false, -2015227666);
 							}
-							if (class285.aClass521_Sub1_3391.aByte7967 == (Class84.myPlayer.aByte7967)) {
+							if (class285.aClass521_Sub1_3391.plane == (Class84.myPlayer.plane)) {
 								String[] strings = class478.options;
 								if (null != strings) {
 									for (int i_72_ = strings.length - 1; i_72_ >= 0; i_72_--) {

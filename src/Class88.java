@@ -106,8 +106,8 @@ public class Class88 {
 	}
 
 	static final void method1494(IComponentDefinitions class118, CS2Executor class527, byte i) {
-		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		int i_5_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
+		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		int i_5_ = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 2)
 			throw new RuntimeException("");
 		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(class118.anInt1330 * -402732635, (byte) -49);

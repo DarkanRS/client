@@ -471,6 +471,6 @@ public final class Class199_Sub1 extends Class199 implements KeyListener, FocusL
 				i_20_ = -1;
 		} else
 			i_20_ = integer.intValue();
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_20_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_20_;
 	}
 }

@@ -115,11 +115,11 @@ public final class Class328 implements Comparable {
 
 	static final void method5828(CS2Executor class527, int i) {
 		class527.anInt7000 -= 1476624725;
-		class527.anInt7012 -= 425673003;
+		class527.intStackPtr -= 425673003;
 		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
-		boolean bool = ((class527.intStack[class527.anInt7012 * 1942118537]) == 1);
-		boolean bool_7_ = ((class527.intStack[1 + class527.anInt7012 * 1942118537]) == 1);
-		boolean bool_8_ = ((class527.intStack[2 + 1942118537 * class527.anInt7012]) == 1);
+		boolean bool = ((class527.intStack[class527.intStackPtr * 1942118537]) == 1);
+		boolean bool_7_ = ((class527.intStack[1 + class527.intStackPtr * 1942118537]) == 1);
+		boolean bool_8_ = ((class527.intStack[2 + 1942118537 * class527.intStackPtr]) == 1);
 		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4619, client.aClass184_7218.isaac, -685598433);
 		class282_sub23.buffer.writeShort(ChatLine.getLength(string) + 1, 1417031095);
 		class282_sub23.buffer.writeString(string);
@@ -135,7 +135,7 @@ public final class Class328 implements Comparable {
 	}
 
 	static final void method5829(CS2Executor class527, int i) {
-		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_10_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		SharedConfigsType.method2094(i_10_, (byte) 1);
 	}
 
@@ -144,12 +144,12 @@ public final class Class328 implements Comparable {
 	}
 
 	static final void method5831(CS2Executor class527, int i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) (i_11_ + 1));
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) (i_11_ + 1));
 	}
 
 	static final void method5832(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7224 && !client.aBool7244 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7224 && !client.aBool7244 ? 1 : 0;
 	}
 
 	static final void method5833(CS2Executor class527, byte i) {

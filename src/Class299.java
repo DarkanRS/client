@@ -201,7 +201,7 @@ public class Class299 implements Interface27 {
 
 	static final void method5312(CS2Executor class527, int i) {
 		IterableNodeMap class465 = (class527.current.switchMaps[(class527.intOpValues[class527.instrPtr * 301123709])]);
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) class465.method7754((long) class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]));
+		Class282_Sub38 class282_sub38 = ((Class282_Sub38) class465.method7754((long) class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]));
 		if (null != class282_sub38)
 			class527.instrPtr += class282_sub38.anInt8002 * 750266701;
 	}
@@ -220,7 +220,7 @@ public class Class299 implements Interface27 {
 			((Class282_Sub31) class282_sub31).anInt7766 = 1143878291 * i_15_;
 			class282_sub31.anInt7762 = 1690395815 * i_13_;
 			class282_sub31.anInt7763 = i_14_ * 765748375;
-			if (i_13_ >= 0 && i_14_ >= 0 && i_13_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1083484093) && i_14_ < IndexLoaders.MAP_REGION_DECODER.method4451(-978246056))
+			if (i_13_ >= 0 && i_14_ >= 0 && i_13_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1083484093) && i_14_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-978246056))
 				Class275_Sub4.method12585(class282_sub31, -1988647724);
 			Class282_Sub31.aClass482_7775.append(class282_sub31, 1387539500);
 		}
@@ -254,12 +254,12 @@ public class Class299 implements Interface27 {
 		Object[] objects = new Object[1886892247 * class282_sub50_sub5.stringLocalsCount];
 		long[] ls = new long[-684160137 * class282_sub50_sub5.longLocalsCount];
 		for (int i_23_ = 0; i_23_ < -1312392163 * class282_sub50_sub5.intArgsCount; i_23_++)
-			is[i_23_] = (class527.intStack[i_23_ + (class527.anInt7012 * 1942118537 - class282_sub50_sub5.intArgsCount * -1312392163)]);
+			is[i_23_] = (class527.intStack[i_23_ + (class527.intStackPtr * 1942118537 - class282_sub50_sub5.intArgsCount * -1312392163)]);
 		for (int i_24_ = 0; i_24_ < class282_sub50_sub5.stringArgsCount * 1570560503; i_24_++)
 			objects[i_24_] = (class527.objectStack[i_24_ + (1806726141 * class527.anInt7000 - 1570560503 * class282_sub50_sub5.stringArgsCount)]);
 		for (int i_25_ = 0; i_25_ < -2105377515 * class282_sub50_sub5.longArgsCount; i_25_++)
 			ls[i_25_] = (class527.aLongArray7003[i_25_ + (1820448321 * class527.anInt7001 - -2105377515 * class282_sub50_sub5.longArgsCount)]);
-		class527.anInt7012 -= 1642009077 * class282_sub50_sub5.intArgsCount;
+		class527.intStackPtr -= 1642009077 * class282_sub50_sub5.intArgsCount;
 		class527.anInt7000 -= class282_sub50_sub5.stringArgsCount * -1798384125;
 		class527.anInt7001 -= class282_sub50_sub5.longArgsCount * -1483277867;
 		Class509 class509 = new Class509();

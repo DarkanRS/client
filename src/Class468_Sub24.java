@@ -92,6 +92,6 @@ public class Class468_Sub24 extends Class468 {
 	static final void method12925(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1627383873 * class118.anInt1385;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1627383873 * class118.anInt1385;
 	}
 }

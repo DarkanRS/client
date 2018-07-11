@@ -870,14 +870,14 @@ public class Class240 {
 	}
 
 	static final void method4137(CS2Executor class527, byte i) {
-		AnimationDefinitions.method11148((class527.aClass521_Sub1_Sub2_Sub1_7014), (class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1315599355);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];
+		AnimationDefinitions.method11148((class527.aClass521_Sub1_Sub2_Sub1_7014), (class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1315599355);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];
 	}
 
-	public static boolean method4138(int i, int i_105_) {
-		return (i >= Class458.aClass458_5486.anInt5481 * 1109376893 && i <= Class458.aClass458_5485.anInt5481 * 1109376893);
+	public static boolean isRoof(int i, int i_105_) {
+		return (i >= SceneObjectType.STRAIGHT_SLOPE_ROOF.type * 1109376893 && i <= SceneObjectType.STRAIGHT_FLAT_ROOF.type * 1109376893);
 	}
 
 	static void writeCRCs(RsBitsBuffer stream, int i) {

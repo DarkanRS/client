@@ -288,7 +288,7 @@ public class IndexLoaders {
 			Class117 class117 = new Class117(HUFFMAN_INDEX.method5626("huffman", "", (byte) 1));
 			InventoriesIndexLoader.method6740(class117, -1608458297);
 			Engine.aClass273_3244 = Class84.method1461(192179911);
-			Class11.aClass282_Sub51_124 = new Class282_Sub51(true);
+			Class11.SYSTEM_INFO = new SystemInfo(true);
 		}
 		if (LoadingStage.aClass387_4705 == LOADING_STAGE) {
 			int i_15_ = (Class59.method1159(SPRITES_INDEX, -1920163258) + Class487.aClass378_5752.method6405(true, 1940883220));
@@ -355,7 +355,7 @@ public class IndexLoaders {
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub25_8206), 1, -425362702);
 			if (client.aBool7465) {
 				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 0, 2109366156);
-			} else if ((Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.aBool7914) && -79546877 * Class11.aClass282_Sub51_124.anInt8167 < 512 && 0 != -79546877 * Class11.aClass282_Sub51_124.anInt8167) {
+			} else if ((Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.aBool7914) && -79546877 * Class11.SYSTEM_INFO.anInt8167 < 512 && 0 != -79546877 * Class11.SYSTEM_INFO.anInt8167) {
 				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub18_8214, 0, -28181047);
 			}
 			Class190.method3148((byte) 125);

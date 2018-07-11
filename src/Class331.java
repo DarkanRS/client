@@ -121,8 +121,8 @@ public class Class331 {
 	}
 
 	static final void method5926(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_12_, (byte) 108);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1293 * 1552292309;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1293 * 1552292309;
 	}
 }

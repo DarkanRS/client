@@ -37,7 +37,7 @@ public class ObjectDefinitions {
 	public int anInt5661;
 	int anInt5662;
 	int anInt5663;
-	public boolean aBool5664;
+	public boolean projectileClipped;
 	public int anInt5665;
 	public int anInt5666;
 	public int anInt5667;
@@ -50,7 +50,7 @@ public class ObjectDefinitions {
 	public boolean aBool5674;
 	int[] anIntArray5675;
 	int anInt5676;
-	public int anInt5677;
+	public int clipType;
 	int anInt5678;
 	int anInt5679;
 	short[] aShortArray5680;
@@ -59,7 +59,7 @@ public class ObjectDefinitions {
 	int anInt5683;
 	public int anInt5684;
 	public boolean aBool5685;
-	public boolean aBool5686;
+	public boolean ignoreClipOnAlternativeRoute;
 	public int anInt5687;
 	public int[] anIntArray5688;
 	public int anInt5689;
@@ -123,10 +123,10 @@ public class ObjectDefinitions {
 		else if (15 == opcode)
 			anInt5649 = stream.readUnsignedByte() * -390035927;
 		else if (17 == opcode) {
-			anInt5677 = 0;
-			aBool5664 = false;
+			clipType = 0;
+			projectileClipped = false;
 		} else if (18 == opcode)
-			aBool5664 = false;
+			projectileClipped = false;
 		else if (opcode == 19)
 			anInt5652 = stream.readUnsignedByte() * 133157829;
 		else if (21 == opcode)
@@ -140,7 +140,7 @@ public class ObjectDefinitions {
 			if (i_8_ != -1)
 				((ObjectDefinitions) this).anIntArray5659 = new int[] { i_8_ };
 		} else if (opcode == 27)
-			anInt5677 = -1129004249; //1
+			clipType = -1129004249; //1
 		else if (opcode == 28)
 			anInt5661 = (stream.readUnsignedByte() << 2) * -256480385;
 		else if (opcode == 29)
@@ -191,7 +191,7 @@ public class ObjectDefinitions {
 		else if (73 == opcode)
 			aBool5685 = true;
 		else if (opcode == 74)
-			aBool5686 = true;
+			ignoreClipOnAlternativeRoute = true;
 		else if (opcode == 75)
 			anInt5687 = stream.readUnsignedByte() * -1098527587;
 		else if (77 == opcode || 92 == opcode) {
@@ -336,7 +336,7 @@ public class ObjectDefinitions {
 	void method7966(int i) {
 		if (anInt5652 * -348507379 == -1) {
 			anInt5652 = 0;
-			if (null != aByteArray5636 && aByteArray5636.length == 1 && (aByteArray5636[0] == 1109376893 * Class458.aClass458_5490.anInt5481))
+			if (null != aByteArray5636 && aByteArray5636.length == 1 && (aByteArray5636[0] == 1109376893 * SceneObjectType.SCENERY_INTERACT.type))
 				anInt5652 = 133157829;
 			for (int i_30_ = 0; i_30_ < 5; i_30_++) {
 				if (options[i_30_] != null) {
@@ -346,7 +346,7 @@ public class ObjectDefinitions {
 			}
 		}
 		if (anInt5687 * -1062790731 == -1)
-			anInt5687 = -1098527587 * (0 != 647396503 * anInt5677 ? 1 : 0);
+			anInt5687 = -1098527587 * (0 != 647396503 * clipType ? 1 : 0);
 		if (method7967((byte) 39) || aBool5706 || anIntArray5650 != null)
 			aBool5699 = true;
 	}
@@ -372,7 +372,7 @@ public class ObjectDefinitions {
 		int i_38_ = 64 + 1821243153 * ((ObjectDefinitions) this).anInt5692;
 		int i_39_ = 850 + -1091753201 * ((ObjectDefinitions) this).anInt5663;
 		int i_40_ = i;
-		boolean bool = aBool5674 || i_35_ == (Class458.aClass458_5472.anInt5481 * 1109376893) && i_36_ > 3;
+		boolean bool = aBool5674 || i_35_ == (SceneObjectType.WALL_WHOLE_CORNER.type * 1109376893) && i_36_ > 3;
 		if (bool)
 			i |= 0x10;
 		if (0 == i_36_) {
@@ -454,7 +454,7 @@ public class ObjectDefinitions {
 			class528_48_.Q(i_39_);
 		if (bool)
 			class528_48_.wa();
-		if (Class458.aClass458_5475.anInt5481 * 1109376893 == i_35_ && i_36_ > 3) {
+		if (SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type * 1109376893 == i_35_ && i_36_ > 3) {
 			class528_48_.S(2048);
 			class528_48_.ia(180, 0, -180);
 		}
@@ -501,8 +501,8 @@ public class ObjectDefinitions {
 		((ObjectDefinitions) this).aByte5634 = (byte) 0;
 		anInt5648 = 63498699;
 		anInt5649 = -390035927;
-		anInt5677 = 2036958798;
-		aBool5664 = true;
+		clipType = 2036958798;
+		projectileClipped = true;
 		anInt5652 = -133157829;
 		((ObjectDefinitions) this).aByte5697 = (byte) 0;
 		((ObjectDefinitions) this).anInt5654 = 1833231597;
@@ -536,7 +536,7 @@ public class ObjectDefinitions {
 		((ObjectDefinitions) this).anInt5683 = 0;
 		((ObjectDefinitions) this).anInt5710 = 0;
 		aBool5685 = false;
-		aBool5686 = false;
+		ignoreClipOnAlternativeRoute = false;
 		anInt5687 = 1098527587;
 		anInt5704 = 0;
 		((ObjectDefinitions) this).anInt5690 = 1845719585;
@@ -635,7 +635,7 @@ public class ObjectDefinitions {
 
 	public final synchronized Class452 method8010(GraphicalRenderer class505, int i, int i_162_, int i_163_, Class390 class390, Class390 class390_164_, int i_165_, int i_166_, int i_167_, boolean bool, Class476 class476, int i_168_) {
 		if (Class485.method8201(i_162_, -159499065))
-			i_162_ = 1109376893 * Class458.aClass458_5475.anInt5481;
+			i_162_ = 1109376893 * SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type;
 		long l = (long) ((i_162_ << 3) + (id * -2132690865 << 10) + i_163_);
 		l |= (long) (class505.rendererId * -413843045 << 29);
 		if (class476 != null)
@@ -663,12 +663,12 @@ public class ObjectDefinitions {
 			if (raster != null)
 				i_169_ = class505.method8546(i_169_, raster.m());
 			int i_170_ = i_169_;
-			if (i_162_ == 1109376893 * Class458.aClass458_5490.anInt5481 && i_163_ > 3)
+			if (i_162_ == 1109376893 * SceneObjectType.SCENERY_INTERACT.type && i_163_ > 3)
 				i_170_ |= 0x5;
 			raster = method7971(class505, i_170_, i_162_, i_163_, class476, 1453950061);
 			if (null == raster)
 				return null;
-			if (i_162_ == Class458.aClass458_5490.anInt5481 * 1109376893 && i_163_ > 3)
+			if (i_162_ == SceneObjectType.SCENERY_INTERACT.type * 1109376893 && i_163_ > 3)
 				raster.f(2048);
 			if (bool)
 				class282_sub50_sub17 = raster.ga(null);
@@ -701,7 +701,7 @@ public class ObjectDefinitions {
 
 	public final synchronized MeshRasterizer method8012(GraphicalRenderer class505, int i, int i_173_, int i_174_, Class390 class390, Class390 class390_175_, int i_176_, int i_177_, int i_178_, Class456 class456, Class476 class476, int i_179_) {
 		if (Class485.method8201(i_173_, -159499065))
-			i_173_ = Class458.aClass458_5475.anInt5481 * 1109376893;
+			i_173_ = SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type * 1109376893;
 		long l = (long) (i_174_ + ((id * -2132690865 << 10) + (i_173_ << 3)));
 		int i_180_ = i;
 		l |= (long) (-413843045 * class505.rendererId << 29);
@@ -719,7 +719,7 @@ public class ObjectDefinitions {
 			if (0 != ((ObjectDefinitions) this).anInt5710 * 1789236723)
 				i |= 0x4;
 		}
-		if (i_173_ == 1109376893 * Class458.aClass458_5490.anInt5481 && i_174_ > 3)
+		if (i_173_ == 1109376893 * SceneObjectType.SCENERY_INTERACT.type && i_174_ > 3)
 			i |= 0x5;
 		MeshRasterizer class528;
 		synchronized (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass229_5619) {
@@ -741,7 +741,7 @@ public class ObjectDefinitions {
 			bool = true;
 			class456.method7577(class528, i_174_ & 0x3, 16711935);
 		}
-		if (i_173_ == Class458.aClass458_5490.anInt5481 * 1109376893 && i_174_ > 3) {
+		if (i_173_ == SceneObjectType.SCENERY_INTERACT.type * 1109376893 && i_174_ > 3) {
 			if (!bool) {
 				class528 = class528.method11289((byte) 3, i, true);
 				bool = true;
@@ -783,14 +783,14 @@ public class ObjectDefinitions {
 	}
 
 	static final void method8018(CS2Executor class527, int i) {
-		int i_186_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_186_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_186_, (byte) 74);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_186_ >> 16];
 		ItemDefinitions.method7142(class118, class98, class527, -1447710686);
 	}
 
 	static final void method8019(CS2Executor class527, short i) {
-		int i_187_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_187_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (1609086245 * client.anInt7434 != 0 && i_187_ < client.anInt7373 * -1754449153)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = client.aClass10Array7456[i_187_].aString115;
 		else
@@ -805,10 +805,10 @@ public class ObjectDefinitions {
 	}
 
 	static final void method8021(CS2Executor class527, short i) {
-		class527.anInt7012 -= 425673003;
-		int i_188_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_189_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		int i_190_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
+		class527.intStackPtr -= 425673003;
+		int i_188_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_189_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		int i_190_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
 		Class96_Sub10.method14603(5, i_188_ << 16 | i_189_, i_190_, "", (byte) 110);
 	}
 

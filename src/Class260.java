@@ -175,7 +175,7 @@ public class Class260 {
 	}
 
 	public static void method4587(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1) {
-		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
+		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.plane == Class84.myPlayer.plane)) {
 			int i_8_ = class518.anIntArrayArray5913[i][0];
 			int i_9_ = i_8_ >> 8;
 			int i_10_ = i_8_ >> 5 & 0x7;
@@ -205,14 +205,14 @@ public class Class260 {
 				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
 				int i_15_ = (int) class385.x - 256 >> 9;
 				int i_16_ = (int) class385.z - 256 >> 9;
-				int i_17_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_11_ + ((i_15_ << 16) + (class521_sub1.aByte7967 << 24) + (i_16_ << 8)));
+				int i_17_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_11_ + ((i_15_ << 16) + (class521_sub1.plane << 24) + (i_16_ << 8)));
 				aClass268Array3232[(anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_9_, i_10_, 0, i_14_, i_17_, i_13_, class521_sub1);
 			}
 		}
 	}
 
 	public static void method4588(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1) {
-		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
+		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.plane == Class84.myPlayer.plane)) {
 			int i_18_ = class518.anIntArrayArray5913[i][0];
 			int i_19_ = i_18_ >> 8;
 			int i_20_ = i_18_ >> 5 & 0x7;
@@ -242,7 +242,7 @@ public class Class260 {
 				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
 				int i_25_ = (int) class385.x - 256 >> 9;
 				int i_26_ = (int) class385.z - 256 >> 9;
-				int i_27_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_21_ + ((i_25_ << 16) + (class521_sub1.aByte7967 << 24) + (i_26_ << 8)));
+				int i_27_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_21_ + ((i_25_ << 16) + (class521_sub1.plane << 24) + (i_26_ << 8)));
 				aClass268Array3232[(anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_19_, i_20_, 0, i_24_, i_27_, i_23_, class521_sub1);
 			}
 		}
@@ -622,7 +622,7 @@ public class Class260 {
 	}
 
 	public static void method4624(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1) {
-		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
+		if (anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.plane == Class84.myPlayer.plane)) {
 			int i_125_ = class518.anIntArrayArray5913[i][0];
 			int i_126_ = i_125_ >> 8;
 			int i_127_ = i_125_ >> 5 & 0x7;
@@ -652,7 +652,7 @@ public class Class260 {
 				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
 				int i_132_ = (int) class385.x - 256 >> 9;
 				int i_133_ = (int) class385.z - 256 >> 9;
-				int i_134_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_128_ + ((i_132_ << 16) + (class521_sub1.aByte7967 << 24) + (i_133_ << 8)));
+				int i_134_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_128_ + ((i_132_ << 16) + (class521_sub1.plane << 24) + (i_133_ << 8)));
 				aClass268Array3232[(anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_126_, i_127_, 0, i_131_, i_134_, i_130_, class521_sub1);
 			}
 		}
@@ -687,29 +687,29 @@ public class Class260 {
 	}
 
 	static final void method4629(CS2Executor class527, int i) {
-		int i_135_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_135_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_135_, (byte) 40);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_135_ >> 16];
 		Class306.method5455(class118, class98, class527, 1919949252);
 	}
 
 	static final void method4630(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_136_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_137_ = ((class527.intStack[1942118537 * class527.anInt7012 + 1]) - 1);
+		class527.intStackPtr -= 283782002;
+		int i_136_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_137_ = ((class527.intStack[1942118537 * class527.intStackPtr + 1]) - 1);
 		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_136_, 1109098301);
 		if (-1330791315 * class425.anInt5061 == i_137_)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class425.anInt5062 * 439280359;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class425.anInt5062 * 439280359;
 		else if (i_137_ == -1576872607 * class425.anInt5030)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class425.anInt5031 * -1516146479;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class425.anInt5031 * -1516146479;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
 	}
 
 	static final void method4631(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_138_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_139_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_138_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_139_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		class527.aClass346_7009.anIntArray4046[i_138_] = i_139_;
 	}
 
@@ -721,7 +721,7 @@ public class Class260 {
 	}
 
 	static final void method4633(CS2Executor class527, byte i) {
-		int i_144_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_144_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_144_, (byte) 59);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_144_ >> 16];
 		Class204.method3369(class118, class98, class527, (byte) 0);

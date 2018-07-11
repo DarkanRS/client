@@ -91,16 +91,16 @@ public class Class468_Sub6 extends Class468 {
 	}
 
 	static final void method12660(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_4_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_3_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_4_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		int i_5_ = i_4_ >> 14 & 0x3fff;
 		int i_6_ = i_4_ & 0x3fff;
 		int i_7_ = Class468_Sub11.method12702(i_3_, i_5_, i_6_, -1885188952);
 		if (i_7_ < 0)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = i_7_;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = i_7_;
 	}
 
 	static boolean method12661(String string, int i, byte i_8_) {

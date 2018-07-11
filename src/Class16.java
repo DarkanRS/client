@@ -262,21 +262,21 @@ public class Class16 {
 	}
 
 	static final void method563(CS2Executor class527, int i) {
-		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_6_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 11);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		RsByteBuffer.method13292(class118, class98, class527, (byte) 60);
 	}
 
 	static final void method564(CS2Executor class527, byte i) {
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 53);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		NativeLibraryLoader.method4651(class118, class98, class527, (byte) 59);
 	}
 
 	static final void method565(CS2Executor class527, int i) {
-		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_8_, (byte) -1);
 		String string = "";
 		if (null != class108 && null != class108.nameSimple)

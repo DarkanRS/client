@@ -182,9 +182,9 @@ public class Class288 {
 	}
 
 	static final void method5082(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_7_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_8_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_7_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_8_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		Class282_Sub14.method12221(((UnderlayDefinition) class513).aClass118_5886, i_7_, i_8_, 1550850781);
 	}

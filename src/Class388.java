@@ -64,7 +64,7 @@ public class Class388 implements Interface41 {
 		UnderlayDefinition class513_0_ = class513;
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
-		Class336.method6010(class118, class98, class527, -1956215078);
+		ClipMap.method6010(class118, class98, class527, -1956215078);
 	}
 
 	static final void method6689(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
@@ -86,8 +86,8 @@ public class Class388 implements Interface41 {
 	}
 
 	static final void method6691(CS2Executor class527, int i) {
-		boolean bool = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) != 0);
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		boolean bool = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) != 0);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = Class202.method3342((long) i_1_, 0, bool, Class223.CURRENT_LANGUAGE, (byte) -28);
 	}
 

@@ -156,7 +156,7 @@ public class NodeIterator implements Iterator {
 	}
 
 	static final void method7699(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7151 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7151 ? 1 : 0;
 	}
 
 	static final void method7700(CS2Executor class527, int i) {
@@ -170,6 +170,6 @@ public class NodeIterator implements Iterator {
 			i_1_ = 0;
 		else
 			i_1_ = integer.intValue();
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_;
 	}
 }

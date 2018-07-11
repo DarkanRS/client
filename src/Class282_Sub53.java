@@ -67,6 +67,6 @@ public abstract class Class282_Sub53 extends Node {
 	static final void method13491(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 2110532063 * class118.anInt1305;
 	}
 }

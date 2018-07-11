@@ -118,14 +118,14 @@ public class Class52_Sub1 extends Class52 {
 	}
 
 	static final void method14491(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class48_Sub2.aByte9263;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class48_Sub2.aByte9263;
 	}
 
 	static final void method14492(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_13_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_14_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_13_, -1207119465).anIntArray9747[i_14_]);
+		class527.intStackPtr -= 283782002;
+		int i_13_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_14_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_13_, -1207119465).anIntArray9747[i_14_]);
 	}
 
 	static Class158_Sub2_Sub3 method14493(HardwareRenderer class505_sub3, Canvas canvas, int i, int i_15_, int i_16_) {

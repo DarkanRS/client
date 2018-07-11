@@ -57,7 +57,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Scene
 				class390_2_ = null;
 		}
 		Vector3 class385 = method11166().aClass385_3595;
-		return (class478.method8010(class505, i, ((Class458.aClass458_5492.anInt5481 * 1109376893 != ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) ((Class521_Sub1_Sub1_Sub6) this).aByte10539 : 1109376893 * Class458.aClass458_5490.anInt5481), ((1109376893 * Class458.aClass458_5492.anInt5481 == ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) (((Class521_Sub1_Sub1_Sub6) this).aByte10540 + 4) : ((Class521_Sub1_Sub1_Sub6) this).aByte10540), class390, class390_2_,
+		return (class478.method8010(class505, i, ((SceneObjectType.GROUND_INTERACT.type * 1109376893 != ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) ((Class521_Sub1_Sub1_Sub6) this).aByte10539 : 1109376893 * SceneObjectType.SCENERY_INTERACT.type), ((1109376893 * SceneObjectType.GROUND_INTERACT.type == ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) (((Class521_Sub1_Sub1_Sub6) this).aByte10540 + 4) : ((Class521_Sub1_Sub1_Sub6) this).aByte10540), class390, class390_2_,
 				(int) class385.x, (int) class385.y, (int) class385.z, bool, null, -333836235));
 	}
 
@@ -213,7 +213,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Scene
 				class390_19_ = null;
 		}
 		Vector3 class385 = method11166().aClass385_3595;
-		return (class478.method8010(class505, i, ((Class458.aClass458_5492.anInt5481 * 1109376893 != ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) ((Class521_Sub1_Sub1_Sub6) this).aByte10539 : 1109376893 * Class458.aClass458_5490.anInt5481), ((1109376893 * Class458.aClass458_5492.anInt5481 == ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) (((Class521_Sub1_Sub1_Sub6) this).aByte10540 + 4) : ((Class521_Sub1_Sub1_Sub6) this).aByte10540), class390, class390_19_,
+		return (class478.method8010(class505, i, ((SceneObjectType.GROUND_INTERACT.type * 1109376893 != ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) ((Class521_Sub1_Sub1_Sub6) this).aByte10539 : 1109376893 * SceneObjectType.SCENERY_INTERACT.type), ((1109376893 * SceneObjectType.GROUND_INTERACT.type == ((Class521_Sub1_Sub1_Sub6) this).aByte10539) ? (int) (((Class521_Sub1_Sub1_Sub6) this).aByte10540 + 4) : ((Class521_Sub1_Sub1_Sub6) this).aByte10540), class390, class390_19_,
 				(int) class385.x, (int) class385.y, (int) class385.z, bool, null, 1212209991));
 	}
 
@@ -254,7 +254,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Scene
 	}
 
 	static byte method16120(int i, int i_20_) {
-		if (Class458.aClass458_5474.anInt5481 * 1109376893 != i)
+		if (SceneObjectType.WALL_INTERACT.type * 1109376893 != i)
 			return (byte) 0;
 		if ((i_20_ & 0x1) == 0)
 			return (byte) 1;
@@ -493,7 +493,7 @@ public class Class521_Sub1_Sub1_Sub6 extends Class521_Sub1_Sub1 implements Scene
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (string.startsWith(Class76.getCrown(0)) || string.startsWith(Class76.getCrown(1)))
 			string = string.substring(7);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class280.method4975(string, (byte) -104) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class280.method4975(string, (byte) -104) ? 1 : 0;
 	}
 
 	public static int method16125(int i, int i_27_, boolean bool, int i_28_) {

@@ -35,10 +35,10 @@ public class Class335 {
 	}
 
 	static final void method5962(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 425673003;
-		int i_1_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_2_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		int i_3_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 425673003;
+		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_2_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		int i_3_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
 		Class117.method1981(i_1_, (byte) 55);
 		Class159.method2738(Class468_Sub8.aClass98Array7889[i_1_ >>> 16], i_1_ & 0xffff, i_2_, i_3_, class527.aBool7022, class527, -1306169472);
 	}

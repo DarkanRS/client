@@ -45,7 +45,7 @@ public class Class60 {
 	}
 
 	static final void method1167(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 23);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		FontRenderer.method403(class118, class98, class527, 2136495218);
@@ -87,7 +87,7 @@ public class Class60 {
 	}
 
 	static final void method1171(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 487511911 * class527.aClass61_7010.anInt641;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 487511911 * class527.aClass61_7010.anInt641;
 	}
 
 	static void method1172(int i) {
@@ -96,7 +96,7 @@ public class Class60 {
 	}
 
 	static final void method1173(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 1334854505 * client.anInt7422;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 1334854505 * client.anInt7422;
 	}
 
 	static final void method1174(int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {

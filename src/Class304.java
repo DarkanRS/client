@@ -721,12 +721,12 @@ public class Class304 implements Interface27 {
 	}
 
 	static final void method5408(CS2Executor class527, int i) {
-		int i_152_ = Class84.myPlayer.aByte7967;
+		int i_152_ = Class84.myPlayer.plane;
 		Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(165047864);
 		int i_153_ = (1948093437 * class219.x + ((int) class385.x >> 9));
 		int i_154_ = (((int) class385.z >> 9) + class219.y * -1002240017);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_154_ + ((i_152_ << 28) + (i_153_ << 14));
 	}
 
 	public static void method5409(IComponentDefinitions class118, int i, int i_155_, byte i_156_) {

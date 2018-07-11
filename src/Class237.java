@@ -67,9 +67,9 @@ final class Class237 implements Interface45 {
 
 	static final void method3988(CS2Executor class527, byte i) {
 		if (Class96_Sub21.aClass199_9438.method3236(86, -1402541861))
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static boolean method3989(int i, byte i_21_) {

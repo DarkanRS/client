@@ -49,7 +49,7 @@ public class Class182 {
 	}
 
 	static final void method3038(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_0_ == -1) {
 			int i_1_ = i_0_ >> 14 & 0x3fff;
 			int i_2_ = i_0_ & 0x3fff;
@@ -57,13 +57,13 @@ public class Class182 {
 			i_1_ -= class219.x * 1948093437;
 			if (i_1_ < 0)
 				i_1_ = 0;
-			else if (i_1_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-1010474219))
-				i_1_ = IndexLoaders.MAP_REGION_DECODER.method4424(-751193521);
+			else if (i_1_ >= IndexLoaders.MAP_REGION_DECODER.getSizeX(-1010474219))
+				i_1_ = IndexLoaders.MAP_REGION_DECODER.getSizeX(-751193521);
 			i_2_ -= class219.y * -1002240017;
 			if (i_2_ < 0)
 				i_2_ = 0;
-			else if (i_2_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-281530054))
-				i_2_ = IndexLoaders.MAP_REGION_DECODER.method4451(-206286214);
+			else if (i_2_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-281530054))
+				i_2_ = IndexLoaders.MAP_REGION_DECODER.getSizeY(-206286214);
 			Class508.anInt5864 = -987778595 * ((i_1_ << 9) + 256);
 			Class86.anInt833 = 1509271845 * (256 + (i_2_ << 9));
 		} else {
@@ -74,7 +74,7 @@ public class Class182 {
 
 	static final void method3039(CS2Executor class527, byte i) {
 		Class217_Sub1 class217_sub1 = IsaacCipher.method7266(2114553677);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = null == class217_sub1 ? 0 : 1203083985 * class217_sub1.anInt2700;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = null == class217_sub1 ? 0 : 1203083985 * class217_sub1.anInt2700;
 	}
 
 	public static Class472 method3040(int i, byte i_3_) {
@@ -95,9 +95,9 @@ public class Class182 {
 	}
 
 	static final void method3042(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_6_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_6_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_5_, 1029070809);
 		if (i_6_ >= 1 && i_6_ <= 5 && null != class425.groundOptions[i_6_ - 1])
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class425.groundOptions[i_6_ - 1];
@@ -106,7 +106,7 @@ public class Class182 {
 	}
 
 	static final void method3043(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.aClass282_Sub4_7011.method12098((String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]), 1952889687));
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class527.aClass282_Sub4_7011.method12098((String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]), 1952889687));
 	}
 
 	public static String method3044(String string, int i) {

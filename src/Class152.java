@@ -137,9 +137,9 @@ public abstract class Class152 {
 		if (i == -1)
 			i = -141702765 * client.anInt7340;
 		UnderlayIndexLoader.method8036(i, (byte) 4);
-		int i_3_ = (Class84.myPlayer.method15805(828768449) << 8);
+		int i_3_ = (Class84.myPlayer.getSize(828768449) << 8);
 		Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-		Class96_Sub21.method14675((Class84.myPlayer.aByte7967), (int) class385.x + i_3_, (int) class385.z + i_3_, -383924731 * client.anInt7261, 323581916);
+		Class96_Sub21.method14675((Class84.myPlayer.plane), (int) class385.x + i_3_, (int) class385.z + i_3_, -383924731 * client.anInt7261, 323581916);
 		client.anInt7261 = 0;
 	}
 
@@ -147,13 +147,13 @@ public abstract class Class152 {
 		int i_4_ = (class527.intOpValues[301123709 * class527.instrPtr]);
 		Class405 class405 = IndexLoaders.aClass394_5831.method6753(i_4_, -292141252);
 		if (class405.aChar4832 != '\001')
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		Integer integer = ((Integer) Class46.anObjectArray437[1135540345 * class405.anInt4833]);
 		if (integer == null)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		else {
 			int i_5_ = (-1524555999 * class405.anInt4835 == 31 ? -1 : (1 << class405.anInt4835 * -1524555999 + 1) - 1);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = ((integer.intValue() & i_5_) >>> class405.anInt4834 * 1015111697);
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = ((integer.intValue() & i_5_) >>> class405.anInt4834 * 1015111697);
 		}
 	}
 

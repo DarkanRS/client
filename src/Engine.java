@@ -855,11 +855,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 
 	static final void method4773(CS2Executor class527, int i) {
 		if (0 == client.anInt7434 * 1609086245)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -2;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -2;
 		else if (1 == client.anInt7434 * 1609086245)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = client.anInt7449 * 493536965;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = client.anInt7449 * 493536965;
 	}
 
 	static final void method4774(CS2Executor class527, int i) {
@@ -882,7 +882,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	}
 
 	static int method4777(int i, int i_168_, byte i_169_) {
-		if (Class458.aClass458_5493.anInt5481 * 1109376893 == i || i == Class458.aClass458_5473.anInt5481 * 1109376893)
+		if (SceneObjectType.WALL_DIAGONAL_CORNER.type * 1109376893 == i || i == SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893)
 			return Wall.anIntArray10533[i_168_ & 0x3];
 		return Wall.anIntArray10531[i_168_ & 0x3];
 	}

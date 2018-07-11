@@ -45,7 +45,7 @@ public class Player extends Animable {
 		Matrix44Var class294_0_ = method11168();
 		Class305 class305 = method11166();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_1_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_1_ / 10.0F) * -374848179;
@@ -222,9 +222,9 @@ public class Player extends Animable {
 			}
 		}
 		faceDirection = -1435090479;
-		if (i < 0 || i >= IndexLoaders.MAP_REGION_DECODER.method4424(-1727502065) || i_13_ < 0 || i_13_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-1374799853))
+		if (i < 0 || i >= IndexLoaders.MAP_REGION_DECODER.getSizeX(-1727502065) || i_13_ < 0 || i_13_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1374799853))
 			method16130(i, i_13_, -1637376735);
-		else if (regionBaseX[0] < 0 || (regionBaseX[0] >= IndexLoaders.MAP_REGION_DECODER.method4424(1713910486)) || regionBaseY[0] < 0 || (regionBaseY[0] >= IndexLoaders.MAP_REGION_DECODER.method4451(-499497479)))
+		else if (regionBaseX[0] < 0 || (regionBaseX[0] >= IndexLoaders.MAP_REGION_DECODER.getSizeX(1713910486)) || regionBaseY[0] < 0 || (regionBaseY[0] >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-499497479)))
 			method16130(i, i_13_, -1457263225);
 		else {
 			if (Class249.aClass249_3086.aByte3085 == i_14_)
@@ -239,7 +239,7 @@ public class Player extends Animable {
 		anInt10366 = 0;
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_17_;
-		int i_19_ = method15805(828768449);
+		int i_19_ = getSize(828768449);
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
 		class385.x = (float) (256 * i_19_ + 512 * regionBaseX[0]);
 		class385.z = (float) (i_19_ * 256 + 512 * regionBaseY[0]);
@@ -270,9 +270,9 @@ public class Player extends Animable {
 			}
 		}
 		faceDirection = -1435090479;
-		if (i < 0 || i >= IndexLoaders.MAP_REGION_DECODER.method4424(867439000) || i_20_ < 0 || i_20_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-1029319921))
+		if (i < 0 || i >= IndexLoaders.MAP_REGION_DECODER.getSizeX(867439000) || i_20_ < 0 || i_20_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1029319921))
 			method16130(i, i_20_, -1477093785);
-		else if (regionBaseX[0] < 0 || (regionBaseX[0] >= IndexLoaders.MAP_REGION_DECODER.method4424(-186585243)) || regionBaseY[0] < 0 || (regionBaseY[0] >= IndexLoaders.MAP_REGION_DECODER.method4451(-827756739)))
+		else if (regionBaseX[0] < 0 || (regionBaseX[0] >= IndexLoaders.MAP_REGION_DECODER.getSizeX(-186585243)) || regionBaseY[0] < 0 || (regionBaseY[0] >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-827756739)))
 			method16130(i, i_20_, -1115122773);
 		else {
 			if (Class249.aClass249_3086.aByte3085 == i_21_)
@@ -281,10 +281,10 @@ public class Player extends Animable {
 		}
 	}
 
-	public int method15805(int i) {
+	public int getSize(int i) {
 		if (null != playerAppearance && -977770149 * playerAppearance.anInt2928 != -1)
 			return ((IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(playerAppearance.anInt2928 * -977770149, (byte) -115).anInt4858) * 1203434505);
-		return super.method15805(828768449);
+		return super.getSize(828768449);
 	}
 
 	int method15808(int i) {
@@ -397,7 +397,7 @@ public class Player extends Animable {
 			if (0 != (((Player) this).anInt10363 * -628205413))
 				class528.ia(0, -628205413 * (((Player) this).anInt10363), 0);
 		} else
-			method15895(i_38_, method15805(828768449) << 9, method15805(828768449) << 9, 0, 0, (byte) 1);
+			method15895(i_38_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
 		if (bool)
 			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
 		if (!aBool10573)
@@ -420,7 +420,7 @@ public class Player extends Animable {
 		Matrix44Var class294_43_ = method11168();
 		Class305 class305 = method11166();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_44_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_44_ / 10.0F) * -374848179;
@@ -518,7 +518,7 @@ public class Player extends Animable {
 		Matrix44Var class294_55_ = method11168();
 		Class305 class305 = method11166();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_56_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_56_ / 10.0F) * -374848179;
@@ -728,13 +728,13 @@ public class Player extends Animable {
 		boolean bool = isTransformedNPC;
 		isTransformedNPC = 0 != (flag & 0x2);
 		boolean showingTotalLevel = (flag & 0x4) != 0;
-		int i_79_ = super.method15805(828768449);
+		int i_79_ = super.getSize(828768449);
 		method15836(1 + (flag >> 3 & 0x7), (byte) -78);
 		boolean prefixTitle = (flag & 0x40) != 0;
 		boolean postfixTitlle = (flag & 0x80) != 0;
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		class385.x += (float) (method15805(828768449) - i_79_ << 8);
-		class385.z += (float) (method15805(828768449) - i_79_ << 8);
+		class385.x += (float) (getSize(828768449) - i_79_ << 8);
+		class385.z += (float) (getSize(828768449) - i_79_ << 8);
 		method11171(class385);
 		class385.method6624();
 		if (prefixTitle)
@@ -841,8 +841,8 @@ public class Player extends Animable {
 		playerAppearance.method3992(method15808(635765286), is, itemEffects, colors, 1 == male, effectData, 1600934567);
 		if (effectData != i_100_) {
 			class385 = Vector3.method6623(method11166().aClass385_3595);
-			class385.x = (float) ((regionBaseX[0] << 9) + (method15805(828768449) << 8));
-			class385.z = (float) ((regionBaseY[0] << 9) + (method15805(828768449) << 8));
+			class385.x = (float) ((regionBaseX[0] << 9) + (getSize(828768449) << 8));
+			class385.z = (float) ((regionBaseY[0] << 9) + (getSize(828768449) << 8));
 			method11171(class385);
 			class385.method6624();
 		}
@@ -967,7 +967,7 @@ public class Player extends Animable {
 			if (0 != (((Player) this).anInt10363 * -628205413))
 				class528.ia(0, -628205413 * (((Player) this).anInt10363), 0);
 		} else
-			method15895(i_119_, method15805(828768449) << 9, method15805(828768449) << 9, 0, 0, (byte) 1);
+			method15895(i_119_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
 		if (bool)
 			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
 		if (!aBool10573)
@@ -1018,7 +1018,7 @@ public class Player extends Animable {
 			if (0 != (((Player) this).anInt10363 * -628205413))
 				class528.ia(0, -628205413 * (((Player) this).anInt10363), 0);
 		} else
-			method15895(i_125_, method15805(828768449) << 9, method15805(828768449) << 9, 0, 0, (byte) 1);
+			method15895(i_125_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
 		if (bool)
 			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
 		if (!aBool10573)
@@ -1051,9 +1051,9 @@ public class Player extends Animable {
 			}
 		}
 		faceDirection = -1435090479;
-		if (i < 0 || i >= IndexLoaders.MAP_REGION_DECODER.method4424(702601001) || i_128_ < 0 || i_128_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-953474424))
+		if (i < 0 || i >= IndexLoaders.MAP_REGION_DECODER.getSizeX(702601001) || i_128_ < 0 || i_128_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-953474424))
 			method16130(i, i_128_, -568584625);
-		else if (regionBaseX[0] < 0 || (regionBaseX[0] >= IndexLoaders.MAP_REGION_DECODER.method4424(-1187672790)) || regionBaseY[0] < 0 || (regionBaseY[0] >= IndexLoaders.MAP_REGION_DECODER.method4451(-369879048)))
+		else if (regionBaseX[0] < 0 || (regionBaseX[0] >= IndexLoaders.MAP_REGION_DECODER.getSizeX(-1187672790)) || regionBaseY[0] < 0 || (regionBaseY[0] >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-369879048)))
 			method16130(i, i_128_, -490270639);
 		else {
 			if (Class249.aClass249_3086.aByte3085 == i_129_)
@@ -1081,7 +1081,7 @@ public class Player extends Animable {
 		anInt10366 = 0;
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_136_;
-		int i_137_ = method15805(828768449);
+		int i_137_ = getSize(828768449);
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
 		class385.x = (float) (256 * i_137_ + 512 * regionBaseX[0]);
 		class385.z = (float) (i_137_ * 256 + 512 * regionBaseY[0]);
@@ -1099,7 +1099,7 @@ public class Player extends Animable {
 		anInt10366 = 0;
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_138_;
-		int i_139_ = method15805(828768449);
+		int i_139_ = getSize(828768449);
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
 		class385.x = (float) (256 * i_139_ + 512 * regionBaseX[0]);
 		class385.z = (float) (i_139_ * 256 + 512 * regionBaseY[0]);
@@ -1117,7 +1117,7 @@ public class Player extends Animable {
 		anInt10366 = 0;
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_140_;
-		int i_141_ = method15805(828768449);
+		int i_141_ = getSize(828768449);
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
 		class385.x = (float) (256 * i_141_ + 512 * regionBaseX[0]);
 		class385.z = (float) (i_141_ * 256 + 512 * regionBaseY[0]);
@@ -1135,7 +1135,7 @@ public class Player extends Animable {
 		anInt10366 = 0;
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_142_;
-		int i_143_ = method15805(828768449);
+		int i_143_ = getSize(828768449);
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
 		class385.x = (float) (256 * i_143_ + 512 * regionBaseX[0]);
 		class385.z = (float) (i_143_ * 256 + 512 * regionBaseY[0]);
@@ -1153,7 +1153,7 @@ public class Player extends Animable {
 		anInt10366 = 0;
 		regionBaseX[0] = i;
 		regionBaseY[0] = i_144_;
-		int i_145_ = method15805(828768449);
+		int i_145_ = getSize(828768449);
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
 		class385.x = (float) (256 * i_145_ + 512 * regionBaseX[0]);
 		class385.z = (float) (i_145_ * 256 + 512 * regionBaseY[0]);
@@ -1200,7 +1200,7 @@ public class Player extends Animable {
 		Matrix44Var class294_146_ = method11168();
 		Class305 class305 = method11166();
 		int i_147_ = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null) {
 			int i_148_ = ((-2023195771 * ((Player) this).anInt10325) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((Player) this).anInt10325 = (int) ((float) ((((Player) this).anInt10325) * -2023195771) - (float) i_148_ / 10.0F) * -374848179;
@@ -1296,7 +1296,7 @@ public class Player extends Animable {
 	public int method15853() {
 		if (null != playerAppearance && -977770149 * playerAppearance.anInt2928 != -1)
 			return ((IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(playerAppearance.anInt2928 * -977770149, (byte) 2).anInt4858) * 1203434505);
-		return super.method15805(828768449);
+		return super.getSize(828768449);
 	}
 
 	public Class163 method15811(int i) {

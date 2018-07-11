@@ -4,7 +4,7 @@
 
 public class Class92 {
 	int anInt962;
-	Class458 aClass458_963;
+	SceneObjectType aClass458_963;
 	int anInt964;
 	int anInt965;
 	int anInt966;
@@ -13,7 +13,7 @@ public class Class92 {
 	boolean method1557(int i) {
 		if (((Class92) this).anInt964 * -1727931981 >= 0) {
 			ObjectDefinitions class478 = IndexLoaders.OBJECT_INDEX_LOADER.getObjectDefinitions(((((Class92) this).anInt964) * -1727931981), 65280);
-			boolean bool = class478.method7987((((Class92) this).aClass458_963.anInt5481 * 1109376893), 792891536);
+			boolean bool = class478.method7987((((Class92) this).aClass458_963.type * 1109376893), 792891536);
 			int[] is = class478.method8008(-2118355158);
 			if (is != null) {
 				int[] is_0_ = is;
@@ -29,15 +29,15 @@ public class Class92 {
 
 	Class92(RsByteBuffer class282_sub35) {
 		((Class92) this).anInt964 = class282_sub35.readBigSmart() * 267419003;
-		((Class92) this).aClass458_963 = ((Class458) Class386.method6672(Class2.method262((byte) -1), class282_sub35.readUnsignedByte(), -859737548));
+		((Class92) this).aClass458_963 = ((SceneObjectType) Class386.method6672(Class2.method262((byte) -1), class282_sub35.readUnsignedByte(), -859737548));
 	}
 
 	void method1558(byte i) {
-		Class299.method5313(-1318859227 * ((Class92) this).anInt965, -76417803 * ((Class92) this).anInt962, -987984923 * ((Class92) this).anInt966, (480268417 * ((Class92) this).aClass458_963.anInt5494), -1, (1109376893 * ((Class92) this).aClass458_963.anInt5481), ((Class92) this).anInt967 * -71092145, 1736684675);
+		Class299.method5313(-1318859227 * ((Class92) this).anInt965, -76417803 * ((Class92) this).anInt962, -987984923 * ((Class92) this).anInt966, (480268417 * ((Class92) this).aClass458_963.anInt5494), -1, (1109376893 * ((Class92) this).aClass458_963.type), ((Class92) this).anInt967 * -71092145, 1736684675);
 	}
 
 	void method1559(int i, int i_3_, int i_4_, int i_5_, byte i_6_) {
-		Class299.method5313(i, i_3_, i_4_, (((Class92) this).aClass458_963.anInt5494 * 480268417), ((Class92) this).anInt964 * -1727931981, (1109376893 * ((Class92) this).aClass458_963.anInt5481), i_5_, 1736684675);
+		Class299.method5313(i, i_3_, i_4_, (((Class92) this).aClass458_963.anInt5494 * 480268417), ((Class92) this).anInt964 * -1727931981, (1109376893 * ((Class92) this).aClass458_963.type), i_5_, 1736684675);
 		((Class92) this).anInt965 = 1968020909 * i;
 		((Class92) this).anInt962 = i_3_ * 1631065949;
 		((Class92) this).anInt966 = -1041057299 * i_4_;
@@ -61,7 +61,7 @@ public class Class92 {
 	static final void method1562(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.method11633(class118).method12179(-394361694);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.method11633(class118).method12179(-394361694);
 	}
 
 	public static void method1563(int i, int i_10_) {

@@ -209,14 +209,14 @@ public class Class451 implements Iterator {
 	}
 
 	static final void method7520(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 58);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class282_Sub11.method12209(class118, class98, class527, 1467575804);
 	}
 
 	static final void method7521(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12920(308447312) == 2 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12920(308447312) == 2 ? 1 : 0;
 	}
 
 	static final void method7522(CS2Executor class527, int i) {

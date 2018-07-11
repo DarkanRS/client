@@ -210,7 +210,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static final void method14818(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0);
 	}
 
 	synchronized void method12240(int[] is, int i, int i_10_) {
@@ -412,7 +412,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static final void method14833(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -520818011 * TilestreamPacket.anInt4219;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -520818011 * TilestreamPacket.anInt4219;
 	}
 
 	synchronized void method14834() {
@@ -420,7 +420,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static final void method14835(CS2Executor class527, byte i) {
-		int i_21_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_21_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_21_, (byte) -1);
 		String string = "";
 		if (null != class108 && null != class108.name)
@@ -429,9 +429,9 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static final void method14836(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_22_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		boolean bool = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) == 1);
+		class527.intStackPtr -= 283782002;
+		int i_22_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		boolean bool = ((class527.intStack[1 + 1942118537 * class527.intStackPtr]) == 1);
 		if (null != Class291_Sub1.aClass465_8025) {
 			Node class282 = Class291_Sub1.aClass465_8025.method7754((long) i_22_);
 			if (class282 != null && !bool)
@@ -471,7 +471,7 @@ public class Class282_Sub15_Sub1 extends Class282_Sub15 {
 	}
 
 	static void method14841(CS2Executor class527, byte i) {
-		class527.intStack[class527.anInt7012 * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 2]), -1396181317).method4111(client.anIntArray7337, (class527.intStack[1942118537 * class527.anInt7012 - 1]), -1427910028)) ? 1 : 0;
-		class527.anInt7012 -= 141891001;
+		class527.intStack[class527.intStackPtr * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 2]), -1396181317).method4111(client.anIntArray7337, (class527.intStack[1942118537 * class527.intStackPtr - 1]), -1427910028)) ? 1 : 0;
+		class527.intStackPtr -= 141891001;
 	}
 }

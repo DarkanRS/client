@@ -154,7 +154,7 @@ public class Class536 {
 	}
 
 	static final void method11486(CS2Executor class527, byte i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7337[i_2_];
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.anIntArray7337[i_2_];
 	}
 }

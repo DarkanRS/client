@@ -79,9 +79,9 @@ public class Class348 {
 	}
 
 	static final void method6174(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 116);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1337 * -1009302201;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1337 * -1009302201;
 	}
 
 	public static void method6175(boolean bool, int i) {
@@ -110,9 +110,9 @@ public class Class348 {
 		client.anInt7427 = 434551523;
 		UnderlayIndexLoader.method8036(client.anInt7340 * -141702765, (byte) 4);
 		Class84.myPlayer = new Player(null);
-		Class84.myPlayer.method11172((float) (IndexLoaders.MAP_REGION_DECODER.method4424(1639359144) * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.method4451(-1549308154) * 512 / 2));
-		Class84.myPlayer.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.method4424(-1586336378) / 2;
-		Class84.myPlayer.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.method4451(-1038237242) / 2;
+		Class84.myPlayer.method11172((float) (IndexLoaders.MAP_REGION_DECODER.getSizeX(1639359144) * 512 / 2), 0.0F, (float) (IndexLoaders.MAP_REGION_DECODER.getSizeY(-1549308154) * 512 / 2));
+		Class84.myPlayer.regionBaseX[0] = IndexLoaders.MAP_REGION_DECODER.getSizeX(-1586336378) / 2;
+		Class84.myPlayer.regionBaseY[0] = IndexLoaders.MAP_REGION_DECODER.getSizeY(-1038237242) / 2;
 		Class246.anInt3029 = 0;
 		Class31.anInt361 = 0;
 		if (5 == NativeLibraryLoader.anInt3240 * -672443707) {

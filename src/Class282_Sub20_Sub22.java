@@ -219,10 +219,10 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 	}
 
 	static final void method15385(CS2Executor class527, short i) {
-		class527.anInt7012 -= 283782002;
-		int i_31_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_32_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_32_ * i_31_;
+		class527.intStackPtr -= 283782002;
+		int i_31_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_32_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_32_ * i_31_;
 	}
 
 	static final void method15386(int i) {
@@ -395,7 +395,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 							Class161.method2827(1342280577);
 						Class461.method7703(-1982488660);
 						if (client.rights * -644057819 > 0 && Class96_Sub21.aClass199_9438.method3236(82, -1802639112) && Class96_Sub21.aClass199_9438.method3236(81, -1439970687) && 0 != 1789395551 * client.anInt7191) {
-							int i_40_ = ((Class84.myPlayer.aByte7967) - 1789395551 * client.anInt7191);
+							int i_40_ = ((Class84.myPlayer.plane) - 1789395551 * client.anInt7191);
 							if (i_40_ < 0)
 								i_40_ = 0;
 							else if (i_40_ > 3)
@@ -477,10 +477,10 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 	}
 
 	static final void method15387(CS2Executor class527, int i) {
-		class527.anInt7012 -= 425673003;
-		int i_44_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_45_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		int i_46_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 425673003;
+		int i_44_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_45_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		int i_46_ = (class527.intStack[2 + class527.intStackPtr * 1942118537]);
 		Class96_Sub10.method14603(4, i_44_ << 16 | i_45_, i_46_, "", (byte) 73);
 	}
 

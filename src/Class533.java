@@ -456,7 +456,7 @@ public class Class533 {
 	}
 
 	static final void method11403(CS2Executor class527, short i) {
-		int i_107_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_107_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_107_, (byte) 25);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_107_ >> 16];
 		Class237.method3987(class118, class98, class527, -599656695);
@@ -481,13 +481,13 @@ public class Class533 {
 	}
 
 	static final void method11405(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		client.anInt7340 = 96844955 * (class527.intStack[class527.anInt7012 * 1942118537]);
-		client.anInt7342 = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) * 1244871605);
+		class527.intStackPtr -= 283782002;
+		client.anInt7340 = 96844955 * (class527.intStack[class527.intStackPtr * 1942118537]);
+		client.anInt7342 = ((class527.intStack[1 + 1942118537 * class527.intStackPtr]) * 1244871605);
 	}
 
 	static final void method11406(CS2Executor class527, int i) {
-		int i_112_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_112_, 1937289773).stackable * 318481945) == 1 ? 1 : 0;
+		int i_112_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_112_, 1937289773).stackable * 318481945) == 1 ? 1 : 0;
 	}
 }

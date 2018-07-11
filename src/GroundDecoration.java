@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject {
+public class GroundDecoration extends SceneObjectNode implements SceneObject {
 	Class200 aClass200_10505;
 	boolean aBool10506;
 	public Class123 aClass123_10507;
@@ -230,7 +230,7 @@ public class GroundDecoration extends Class521_Sub1_Sub3 implements SceneObject 
 
 	public GroundDecoration(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_12_, int i_13_, int i_14_, int i_15_, boolean bool, int i_16_, int i_17_) {
 		super(class206, i_13_, i_14_, i_15_, i, i_12_, 1338534295 * class478.anInt5704);
-		aClass123_10507 = new Class123(class505, class474, class478, Class458.aClass458_5480.anInt5481 * 1109376893, i_16_, i, i_12_, this, bool, i_17_);
+		aClass123_10507 = new Class123(class505, class474, class478, SceneObjectType.GROUND_DECORATION.type * 1109376893, i_16_, i, i_12_, this, bool, i_17_);
 		((GroundDecoration) this).aBool10506 = class478.anInt5652 * -348507379 != 0 && !bool;
 		method13008(1, (byte) -48);
 	}

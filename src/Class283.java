@@ -99,11 +99,11 @@ public class Class283 {
 	}
 
 	static final void method5010(CS2Executor class527, int i) {
-		int i_15_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_15_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (client.anInt7166 * -1741204137 != 0 || JS5CacheFile.method3360((byte) 17))
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = Class62.method1262(i_15_, string, (byte) 55) ? 1 : 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = Class62.method1262(i_15_, string, (byte) 55) ? 1 : 0;
 	}
 }

@@ -58,7 +58,7 @@ public class Class446 {
 	}
 
 	static void method7434(CS2Executor class527, short i) {
-		class527.intStack[1942118537 * class527.anInt7012 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 1]), -1396181317).anInt2960) * -1031162511;
+		class527.intStack[1942118537 * class527.intStackPtr - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 1]), -1396181317).anInt2960) * -1031162511;
 	}
 
 	public void method7435(Interface41 interface41, byte i) {
@@ -135,13 +135,13 @@ public class Class446 {
 	}
 
 	static final void method7444(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7338[i_2_];
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.anIntArray7338[i_2_];
 	}
 
 	static final void method7445(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_3_, 1828860210).anInt5047 * 1718037007);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_3_, 1828860210).anInt5047 * 1718037007);
 	}
 
 	public void method7446(int i) {
@@ -207,6 +207,6 @@ public class Class446 {
 	}
 
 	static final void method7448(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub5_8221.method12651(-1091175329);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub5_8221.method12651(-1091175329);
 	}
 }

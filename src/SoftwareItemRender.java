@@ -142,7 +142,7 @@ public class SoftwareItemRender implements Interface18 {
 	static final void method7032(CS2Executor class527, short i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1301 * 1506818197;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1301 * 1506818197;
 	}
 
 	static Class149_Sub4 method7033(RsByteBuffer class282_sub35, int i) {

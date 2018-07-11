@@ -163,7 +163,7 @@ public class Class188 {
 		boolean bool = true;
 		boolean bool_2_ = false;
 		boolean bool_3_ = false;
-		if (Class11.aClass282_Sub51_124.anInt8167 * -79546877 < 512 && -79546877 * Class11.aClass282_Sub51_124.anInt8167 != 0)
+		if (Class11.SYSTEM_INFO.anInt8167 * -79546877 < 512 && -79546877 * Class11.SYSTEM_INFO.anInt8167 != 0)
 			bool = false;
 		if (Class225_Sub6.aString8069.startsWith("win")) {
 			bool_3_ = true;
@@ -283,7 +283,7 @@ public class Class188 {
 		boolean bool = true;
 		boolean bool_6_ = false;
 		boolean bool_7_ = false;
-		if (Class11.aClass282_Sub51_124.anInt8167 * -79546877 < 512 && -79546877 * Class11.aClass282_Sub51_124.anInt8167 != 0)
+		if (Class11.SYSTEM_INFO.anInt8167 * -79546877 < 512 && -79546877 * Class11.SYSTEM_INFO.anInt8167 != 0)
 			bool = false;
 		if (Class225_Sub6.aString8069.startsWith("win")) {
 			bool_7_ = true;
@@ -512,7 +512,7 @@ public class Class188 {
 	}
 
 	static final void method3138(CS2Executor class527, int i) {
-		class527.intLocals[(class527.intOpValues[301123709 * class527.instrPtr])] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		class527.intLocals[(class527.intOpValues[301123709 * class527.instrPtr])] = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 	}
 
 	public static void method3139(GraphicalRenderer class505, Index class317, int i) {
@@ -578,7 +578,7 @@ public class Class188 {
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1837937091);
 			int i_22_ = (i_21_ & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
 			int i_23_ = i_22_ + class219.y * -1002240017;
-			int i_24_ = Class458.anInt5495 * -2109540951 + (i_21_ >> 4 & 0x7);
+			int i_24_ = SceneObjectType.anInt5495 * -2109540951 + (i_21_ >> 4 & 0x7);
 			int i_25_ = i_24_ + 1948093437 * class219.x;
 			int i_26_ = stream.readUnsignedShort();
 			int i_27_ = stream.readUnsignedShort();
@@ -594,7 +594,7 @@ public class Class188 {
 							break;
 						}
 					}
-					if (i_24_ >= 0 && i_22_ >= 0 && i_24_ < IndexLoaders.MAP_REGION_DECODER.method4424(1322428879) && (i_22_ < IndexLoaders.MAP_REGION_DECODER.method4451(-334647833)))
+					if (i_24_ >= 0 && i_22_ >= 0 && i_24_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1322428879) && (i_22_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-334647833)))
 						Class434_Sub1.method12760((-1258088735 * Class272.anInt3331), i_24_, i_22_, -1380263584);
 				}
 			}
@@ -604,7 +604,7 @@ public class Class188 {
 			IndexLoaders.MAP_REGION_DECODER.method4436(-1902226751).getObjectDefinitions(i_29_, 65280).method7987(i_30_, -588474817);
 		} else if (TilestreamPacket.aClass364_4218 == class364) {
 			int i_31_ = stream.readUnsignedByte();
-			int i_32_ = -2109540951 * Class458.anInt5495 + (i_31_ >> 4 & 0x7);
+			int i_32_ = -2109540951 * SceneObjectType.anInt5495 + (i_31_ >> 4 & 0x7);
 			int i_33_ = (i_31_ & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
 			int i_34_ = stream.readUnsignedShort();
 			if (i_34_ == 65535)
@@ -613,7 +613,7 @@ public class Class188 {
 			int i_36_ = stream.readUnsignedShort();
 			int i_37_ = stream.readUnsignedByte();
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-1960644512) != Class256.aClass256_3153) {
-				if (i_32_ >= 0 && i_33_ >= 0 && i_32_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1162153340) && i_33_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1140122689)) {
+				if (i_32_ >= 0 && i_33_ >= 0 && i_32_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1162153340) && i_33_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1140122689)) {
 					if (i_34_ == -1) {
 						Class282_Sub50_Sub10 class282_sub50_sub10 = ((Class282_Sub50_Sub10) client.aClass465_7334.method7754((long) (i_32_ << 16 | i_33_)));
 						if (null != class282_sub50_sub10) {
@@ -624,7 +624,7 @@ public class Class188 {
 						int i_38_ = 512 * i_32_ + 256;
 						int i_39_ = 256 + 512 * i_33_;
 						int i_40_ = -1258088735 * Class272.anInt3331;
-						if (i_40_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_32_, i_33_, 1736872012))
+						if (i_40_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_32_, i_33_, 1736872012))
 							i_40_++;
 						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1262511642), i_34_, i_36_, -1258088735 * Class272.anInt3331, i_40_, i_38_, Class504.method8389(i_38_, i_39_, (Class272.anInt3331 * -1258088735), (byte) 59) - i_35_, i_39_, i_32_, i_32_, i_33_, i_33_, i_37_, false));
 						client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4), (long) (i_32_ << 16 | i_33_));
@@ -634,7 +634,7 @@ public class Class188 {
 		} else if (class364 == TilestreamPacket.PROJECTILE) {
 			int i_41_ = stream.readUnsignedByte();
 			boolean bool = 0 != (i_41_ & 0x80);
-			int i_42_ = (i_41_ >> 3 & 0x7) + -2109540951 * Class458.anInt5495;
+			int i_42_ = (i_41_ >> 3 & 0x7) + -2109540951 * SceneObjectType.anInt5495;
 			int i_43_ = (i_41_ & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
 			int i_44_ = i_42_ + stream.readByte((short) -3334);
 			int i_45_ = i_43_ + stream.readByte((short) -2919);
@@ -649,7 +649,7 @@ public class Class188 {
 			if (i_52_ == 255)
 				i_52_ = -1;
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-1848311366) != Class256.aClass256_3153) {
-				if (i_42_ >= 0 && i_43_ >= 0 && i_42_ < IndexLoaders.MAP_REGION_DECODER.method4424(1333657203) && i_43_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1784224136) && i_44_ >= 0 && i_45_ >= 0 && i_44_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1429544528) && i_45_ < IndexLoaders.MAP_REGION_DECODER.method4451(-637602428) && 65535 != i_47_) {
+				if (i_42_ >= 0 && i_43_ >= 0 && i_42_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1333657203) && i_43_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1784224136) && i_44_ >= 0 && i_45_ >= 0 && i_44_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1429544528) && i_45_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-637602428) && 65535 != i_47_) {
 					i_42_ = 512 * i_42_ + 256;
 					i_43_ = 256 + i_43_ * 512;
 					i_44_ = 256 + i_44_ * 512;
@@ -664,7 +664,7 @@ public class Class188 {
 			}
 		} else if (TilestreamPacket.aClass364_4214 == class364) {
 			int i_54_ = stream.readUnsignedByte();
-			int i_55_ = -2109540951 * Class458.anInt5495 + (i_54_ >> 4 & 0x7);
+			int i_55_ = -2109540951 * SceneObjectType.anInt5495 + (i_54_ >> 4 & 0x7);
 			int i_56_ = 71472045 * Class158_Sub1_Sub2.anInt10131 + (i_54_ & 0x7);
 			int i_57_ = stream.readUnsignedShort();
 			if (65535 == i_57_)
@@ -676,7 +676,7 @@ public class Class188 {
 			int i_62_ = stream.readUnsignedByte();
 			int i_63_ = stream.readUnsignedShort();
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-1875813222) != Class256.aClass256_3153) {
-				if (i_55_ >= 0 && i_56_ >= 0 && i_55_ < IndexLoaders.MAP_REGION_DECODER.method4424(1714570873) && i_56_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1820425054)) {
+				if (i_55_ >= 0 && i_56_ >= 0 && i_55_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1714570873) && i_56_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1820425054)) {
 					int i_64_ = i_59_ + 1;
 					if ((Class84.myPlayer.regionBaseX[0]) >= i_55_ - i_64_ && (Class84.myPlayer.regionBaseX[0]) <= i_55_ + i_64_ && (Class84.myPlayer.regionBaseY[0]) >= i_56_ - i_64_ && (Class84.myPlayer.regionBaseY[0]) <= i_64_ + i_56_)
 						Class383.method6509(i_57_, i_60_, i_61_, i_62_, ((Class272.anInt3331 * -1258088735 << 24) + (i_55_ << 16) + (i_56_ << 8) + i_59_), i_63_, (byte) -99);
@@ -688,12 +688,12 @@ public class Class188 {
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1818214745);
 			int i_67_ = (i_66_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
 			int i_68_ = class219.y * -1002240017 + i_67_;
-			int i_69_ = Class458.anInt5495 * -2109540951 + (i_66_ >> 4 & 0x7);
+			int i_69_ = SceneObjectType.anInt5495 * -2109540951 + (i_66_ >> 4 & 0x7);
 			int i_70_ = i_69_ + class219.x * 1948093437;
 			int i_71_ = stream.readShortLE128();
 			int i_72_ = stream.readShortLE128();
 			if (i_65_ != 1595512269 * client.anInt7315) {
-				boolean bool = (i_69_ >= 0 && i_67_ >= 0 && i_69_ < IndexLoaders.MAP_REGION_DECODER.method4424(-550020806) && (i_67_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1767012747)));
+				boolean bool = (i_69_ >= 0 && i_67_ >= 0 && i_69_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-550020806) && (i_67_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1767012747)));
 				if (bool || IndexLoaders.MAP_REGION_DECODER.method4419(-1899363566).method4401(-557011908)) {
 					Class353.method6209(Class272.anInt3331 * -1258088735, i_70_, i_68_, new Class282_Sub34(i_72_, i_71_), 773061896);
 					if (bool)
@@ -706,16 +706,16 @@ public class Class188 {
 			int i_75_ = i_73_ & 0x3;
 			int i_76_ = client.anIntArray7230[i_74_];
 			int i_77_ = stream.readUnsignedByte();
-			int i_78_ = (i_77_ >> 4 & 0x7) + Class458.anInt5495 * -2109540951;
+			int i_78_ = (i_77_ >> 4 & 0x7) + SceneObjectType.anInt5495 * -2109540951;
 			int i_79_ = 71472045 * Class158_Sub1_Sub2.anInt10131 + (i_77_ & 0x7);
-			if (IndexLoaders.MAP_REGION_DECODER.method4419(-1974292488).method4401(-557011908) || (i_78_ >= 0 && i_79_ >= 0 && i_78_ < IndexLoaders.MAP_REGION_DECODER.method4424(1428692167) && i_79_ < IndexLoaders.MAP_REGION_DECODER.method4451(-2096834193)))
+			if (IndexLoaders.MAP_REGION_DECODER.method4419(-1974292488).method4401(-557011908) || (i_78_ >= 0 && i_79_ >= 0 && i_78_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1428692167) && i_79_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-2096834193)))
 				Class299.method5313(-1258088735 * Class272.anInt3331, i_78_, i_79_, i_76_, -1, i_74_, i_75_, 1736684675);
 		} else if (class364 == TilestreamPacket.aClass364_4207) {
 			int i_80_ = stream.readUnsignedByteC(-1607193362);
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1369508080);
 			int i_81_ = 71472045 * Class158_Sub1_Sub2.anInt10131 + (i_80_ & 0x7);
 			int i_82_ = i_81_ + -1002240017 * class219.y;
-			int i_83_ = (i_80_ >> 4 & 0x7) + Class458.anInt5495 * -2109540951;
+			int i_83_ = (i_80_ >> 4 & 0x7) + SceneObjectType.anInt5495 * -2109540951;
 			int i_84_ = class219.x * 1948093437 + i_83_;
 			int i_85_ = stream.readShortLE128();
 			Class282_Sub29 class282_sub29 = ((Class282_Sub29) (client.aClass465_7414.method7754((long) (Class272.anInt3331 * -1258088735 << 28 | i_82_ << 14 | i_84_))));
@@ -728,7 +728,7 @@ public class Class188 {
 				}
 				if (class282_sub29.aClass482_7708.hasNext(2087735245))
 					class282_sub29.unlink(-371378792);
-				if (i_83_ >= 0 && i_81_ >= 0 && i_83_ < IndexLoaders.MAP_REGION_DECODER.method4424(793956639) && i_81_ < IndexLoaders.MAP_REGION_DECODER.method4451(-539075068))
+				if (i_83_ >= 0 && i_81_ >= 0 && i_83_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(793956639) && i_81_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-539075068))
 					Class434_Sub1.method12760(-1258088735 * Class272.anInt3331, i_83_, i_81_, -1380263584);
 			}
 		} else if (TilestreamPacket.aClass364_4209 == class364) {
@@ -739,10 +739,10 @@ public class Class188 {
 			int i_89_ = client.anIntArray7230[i_88_];
 			int i_90_ = stream.readUnsignedByte();
 			int i_91_ = stream.readUnsignedByte128(-1833974634);
-			int i_92_ = (i_91_ >> 4 & 0x7) + -2109540951 * Class458.anInt5495;
+			int i_92_ = (i_91_ >> 4 & 0x7) + -2109540951 * SceneObjectType.anInt5495;
 			int i_93_ = 71472045 * Class158_Sub1_Sub2.anInt10131 + (i_91_ & 0x7);
-			if (i_88_ == Class458.aClass458_5492.anInt5481 * 1109376893)
-				i_88_ = Class458.aClass458_5490.anInt5481 * 1109376893;
+			if (i_88_ == SceneObjectType.GROUND_INTERACT.type * 1109376893)
+				i_88_ = SceneObjectType.SCENERY_INTERACT.type * 1109376893;
 			int i_94_ = 0;
 			if (null != class478.aByteArray5636) {
 				int i_95_ = -1;
@@ -787,7 +787,7 @@ public class Class188 {
 		} else if (TilestreamPacket.aClass364_4215 == class364) {
 			stream.readUnsignedByte();
 			int i_104_ = stream.readUnsignedByte();
-			int i_105_ = Class458.anInt5495 * -2109540951 + (i_104_ >> 4 & 0x7);
+			int i_105_ = SceneObjectType.anInt5495 * -2109540951 + (i_104_ >> 4 & 0x7);
 			int i_106_ = Class158_Sub1_Sub2.anInt10131 * 71472045 + (i_104_ & 0x7);
 			int i_107_ = stream.readUnsignedShort();
 			int i_108_ = stream.readUnsignedByte();
@@ -797,7 +797,7 @@ public class Class188 {
 				Class59.method1161(-1258088735 * Class272.anInt3331, i_105_, i_106_, i_108_, i_107_, i_109_, string, (short) 17078);
 		} else if (class364 == TilestreamPacket.aClass364_4217) {
 			int i_110_ = stream.readUnsignedByte();
-			int i_111_ = (i_110_ >> 4 & 0x7) + Class458.anInt5495 * -2109540951;
+			int i_111_ = (i_110_ >> 4 & 0x7) + SceneObjectType.anInt5495 * -2109540951;
 			int i_112_ = (i_110_ & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
 			int i_113_ = stream.readUnsignedShort();
 			if (i_113_ == 65535)
@@ -810,7 +810,7 @@ public class Class188 {
 			int i_119_ = stream.readUnsignedShort();
 			boolean bool = stream.readUnsignedByte() == 1;
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2004979271) != Class256.aClass256_3153) {
-				if (i_111_ >= 0 && i_112_ >= 0 && i_111_ < IndexLoaders.MAP_REGION_DECODER.method4424(-274697283) && (i_112_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1740682056))) {
+				if (i_111_ >= 0 && i_112_ >= 0 && i_111_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-274697283) && (i_112_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1740682056))) {
 					int i_120_ = i_115_ + 1;
 					if ((Class84.myPlayer.regionBaseX[0]) >= i_111_ - i_120_ && (Class84.myPlayer.regionBaseX[0]) <= i_111_ + i_120_ && (Class84.myPlayer.regionBaseY[0]) >= i_112_ - i_120_ && (Class84.myPlayer.regionBaseY[0]) <= i_120_ + i_112_)
 						Class256.method4414(i_113_, i_116_, i_117_, i_118_, i_115_ + ((i_111_ << 16) + ((Class272.anInt3331 * -1258088735) << 24) + (i_112_ << 8)), bool, i_119_, (byte) 99);
@@ -822,7 +822,7 @@ public class Class188 {
 			int i_123_ = i_121_ & 0x3;
 			int i_124_ = client.anIntArray7230[i_122_];
 			int i_125_ = stream.readUnsigned128Byte();
-			int i_126_ = (i_125_ >> 4 & 0x7) + -2109540951 * Class458.anInt5495;
+			int i_126_ = (i_125_ >> 4 & 0x7) + -2109540951 * SceneObjectType.anInt5495;
 			int i_127_ = (i_125_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
 			int i_128_ = stream.readIntLE();
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2057621455) != Class256.aClass256_3153)
@@ -834,9 +834,9 @@ public class Class188 {
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(171672593);
 			int i_132_ = (i_131_ & 0x7) + Class158_Sub1_Sub2.anInt10131 * 71472045;
 			int i_133_ = i_132_ + -1002240017 * class219.y;
-			int i_134_ = (i_131_ >> 4 & 0x7) + Class458.anInt5495 * -2109540951;
+			int i_134_ = (i_131_ >> 4 & 0x7) + SceneObjectType.anInt5495 * -2109540951;
 			int i_135_ = i_134_ + 1948093437 * class219.x;
-			boolean bool = (i_134_ >= 0 && i_132_ >= 0 && i_134_ < IndexLoaders.MAP_REGION_DECODER.method4424(1965458843) && i_132_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1811316937));
+			boolean bool = (i_134_ >= 0 && i_132_ >= 0 && i_134_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1965458843) && i_132_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1811316937));
 			if (bool || IndexLoaders.MAP_REGION_DECODER.method4419(-2008774639).method4401(-557011908)) {
 				Class353.method6209(Class272.anInt3331 * -1258088735, i_135_, i_133_, new Class282_Sub34(i_130_, i_129_), 1102559151);
 				if (bool)
@@ -844,7 +844,7 @@ public class Class188 {
 			}
 		} else if (class364 == TilestreamPacket.aClass364_4210) {
 			int i_136_ = stream.readUnsignedByte();
-			int i_137_ = Class458.anInt5495 * 75885394 + (i_136_ >> 4 & 0xf);
+			int i_137_ = SceneObjectType.anInt5495 * 75885394 + (i_136_ >> 4 & 0xf);
 			int i_138_ = 142944090 * Class158_Sub1_Sub2.anInt10131 + (i_136_ & 0xf);
 			int i_139_ = stream.readUnsignedByte();
 			boolean bool = (i_139_ & 0x1) != 0;
@@ -868,7 +868,7 @@ public class Class188 {
 			if (i_151_ == 255)
 				i_151_ = -1;
 			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2018534452) != Class256.aClass256_3153) {
-				if (i_137_ >= 0 && i_138_ >= 0 && (i_137_ < IndexLoaders.MAP_REGION_DECODER.method4424(1734176778) * 2) && (i_138_ < IndexLoaders.MAP_REGION_DECODER.method4424(1519408769) * 2) && i_142_ >= 0 && i_143_ >= 0 && (i_142_ < IndexLoaders.MAP_REGION_DECODER.method4451(-959037550) * 2) && (i_143_ < IndexLoaders.MAP_REGION_DECODER.method4451(-722556858) * 2) && i_146_ != 65535) {
+				if (i_137_ >= 0 && i_138_ >= 0 && (i_137_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1734176778) * 2) && (i_138_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1519408769) * 2) && i_142_ >= 0 && i_143_ >= 0 && (i_142_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-959037550) * 2) && (i_143_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-722556858) * 2) && i_146_ != 65535) {
 					i_137_ = 256 * i_137_;
 					i_138_ *= 256;
 					i_142_ *= 256;
@@ -882,13 +882,13 @@ public class Class188 {
 		} else if (TilestreamPacket.aClass364_4208 == class364) {
 			int i_153_ = stream.readInt();
 			int i_154_ = stream.readUnsigned128Byte();
-			int i_155_ = (i_154_ >> 4 & 0x7) + -2109540951 * Class458.anInt5495;
+			int i_155_ = (i_154_ >> 4 & 0x7) + -2109540951 * SceneObjectType.anInt5495;
 			int i_156_ = 71472045 * Class158_Sub1_Sub2.anInt10131 + (i_154_ & 0x7);
 			int i_157_ = stream.readUnsigned128Byte();
 			int i_158_ = i_157_ >> 2;
 			int i_159_ = i_157_ & 0x3;
 			int i_160_ = client.anIntArray7230[i_158_];
-			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2043341946).method4401(-557011908) || (i_155_ >= 0 && i_156_ >= 0 && i_155_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1768152965) && i_156_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1500234910)))
+			if (IndexLoaders.MAP_REGION_DECODER.method4419(-2043341946).method4401(-557011908) || (i_155_ >= 0 && i_156_ >= 0 && i_155_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1768152965) && i_156_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1500234910)))
 				Class299.method5313(Class272.anInt3331 * -1258088735, i_155_, i_156_, i_160_, i_153_, i_158_, i_159_, 1736684675);
 		} else {
 			Class151.method2594(new StringBuilder().append("").append(class364).toString(), new RuntimeException(), (byte) -3);

@@ -364,11 +364,11 @@ public abstract class Class96 {
 	}
 
 	static final void method1608(CS2Executor class527, byte i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (null != Class467.aClass173Array5575 && i_2_ < Class459.anInt5534 * -1772444859 && (Class467.aClass173Array5575[i_2_].aString2127.equalsIgnoreCase(Class84.myPlayer.displayName)))
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static final String method1609(String string, String string_3_, String string_4_, int i) {

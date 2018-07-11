@@ -145,11 +145,11 @@ public class Class43 implements Interface2 {
 	}
 
 	static final void method894(CS2Executor class527, int i) {
-		int i_29_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_29_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_29_, (byte) -1);
 		int i_30_ = -1;
 		if (null != class108)
 			i_30_ = -2005145885 * class108.anInt1084;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_30_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_30_;
 	}
 }

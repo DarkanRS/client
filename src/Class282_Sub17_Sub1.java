@@ -102,7 +102,7 @@ public class Class282_Sub17_Sub1 extends Class282_Sub17 {
 					if (Renderers.SOFTWARE_RENDERER.method8399()) {
 						boolean bool_1_ = true;
 						try {
-							bool_1_ = (Class11.aClass282_Sub51_124.anInt8167 * -79546877) > 256;
+							bool_1_ = (Class11.SYSTEM_INFO.anInt8167 * -79546877) > 256;
 						} catch (Throwable throwable) {
 							/* empty */
 						}

@@ -76,9 +76,9 @@ public class Class5 {
 	}
 
 	static final void method296(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_13_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_14_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_13_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_14_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		if (i_13_ >= 0 && i_13_ < 2)
 			client.anIntArrayArrayArray7302[i_13_] = new int[i_14_ << 1][4];
 	}

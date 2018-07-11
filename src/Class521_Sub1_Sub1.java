@@ -4,17 +4,17 @@
 
 public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	byte aByte9454;
-	public short aShort9455;
+	public short localX;
 	public short aShort9456;
-	public short aShort9457;
+	public short localY;
 	public short aShort9458;
 	public boolean aBool9459;
 
 	int method13024(Class282_Sub24[] class282_sub24s) {
 		int i = 0;
-		while_139_: for (int i_0_ = aShort9458; i_0_ <= aShort9455; i_0_++) {
-			for (int i_1_ = aShort9456; i_1_ <= aShort9457; i_1_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_0_][i_1_]);
+		while_139_: for (int i_0_ = aShort9458; i_0_ <= localX; i_0_++) {
+			for (int i_1_ = aShort9456; i_1_ <= localY; i_1_++) {
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_0_][i_1_]);
 				long l_2_ = 0L;
 				while_138_: while (l_2_ <= 48L) {
 					int i_3_ = (int) (l >>> (int) l_2_ & 0xffffL);
@@ -68,14 +68,14 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 			}
 			int i_12_ = 0;
 			while_141_: for (/**/; i_12_ < i; i_12_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_8_][i_9_]);
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_8_][i_9_]);
 				while (0L != l) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
 					if (class282_sub24s[i_12_] == class287.aClass282_Sub24_3425)
 						continue while_141_;
 				}
-				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_10_][i_11_]);
+				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_10_][i_11_]);
 				while (l != 0L) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
@@ -96,9 +96,9 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 
 	int method13036(Class282_Sub24[] class282_sub24s, int i) {
 		int i_14_ = 0;
-		while_143_: for (int i_15_ = aShort9458; i_15_ <= aShort9455; i_15_++) {
-			for (int i_16_ = aShort9456; i_16_ <= aShort9457; i_16_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_15_][i_16_]);
+		while_143_: for (int i_15_ = aShort9458; i_15_ <= localX; i_15_++) {
+			for (int i_16_ = aShort9456; i_16_ <= localY; i_16_++) {
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_15_][i_16_]);
 				long l_17_ = 0L;
 				while_142_: while (l_17_ <= 48L) {
 					int i_18_ = (int) (l >>> (int) l_17_ & 0xffffL);
@@ -152,14 +152,14 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 			}
 			int i_27_ = 0;
 			while_145_: for (/**/; i_27_ < i_14_; i_27_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_23_][i_24_]);
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_23_][i_24_]);
 				while (0L != l) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
 					if (class282_sub24s[i_27_] == class287.aClass282_Sub24_3425)
 						continue while_145_;
 				}
-				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_25_][i_26_]);
+				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_25_][i_26_]);
 				while (l != 0L) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
@@ -175,12 +175,12 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method13037(GraphicalRenderer class505, int i) {
-		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -128)));
+		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, localX, aShort9456, localY, method12992(class505, (byte) -128)));
 	}
 
 	boolean method13029(byte i) {
-		for (int i_29_ = aShort9458; i_29_ <= aShort9455; i_29_++) {
-			for (int i_30_ = aShort9456; i_30_ <= aShort9457; i_30_++) {
+		for (int i_29_ = aShort9458; i_29_ <= localX; i_29_++) {
+			for (int i_30_ = aShort9456; i_30_ <= localY; i_30_++) {
 				int i_31_ = (i_29_ - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 + ((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833);
 				if (i_31_ >= 0 && i_31_ < (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651).length) {
 					int i_32_ = (((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (i_30_ - 1580412859 * (((SceneObjectManager) aClass206_7970).anInt2629)));
@@ -202,9 +202,9 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 
 	int method13031(Class282_Sub24[] class282_sub24s) {
 		int i = 0;
-		while_147_: for (int i_33_ = aShort9458; i_33_ <= aShort9455; i_33_++) {
-			for (int i_34_ = aShort9456; i_34_ <= aShort9457; i_34_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_33_][i_34_]);
+		while_147_: for (int i_33_ = aShort9458; i_33_ <= localX; i_33_++) {
+			for (int i_34_ = aShort9456; i_34_ <= localY; i_34_++) {
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_33_][i_34_]);
 				long l_35_ = 0L;
 				while_146_: while (l_35_ <= 48L) {
 					int i_36_ = (int) (l >>> (int) l_35_ & 0xffffL);
@@ -258,14 +258,14 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 			}
 			int i_45_ = 0;
 			while_149_: for (/**/; i_45_ < i; i_45_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_41_][i_42_]);
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_41_][i_42_]);
 				while (0L != l) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
 					if (class282_sub24s[i_45_] == class287.aClass282_Sub24_3425)
 						continue while_149_;
 				}
-				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_43_][i_44_]);
+				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_43_][i_44_]);
 				while (l != 0L) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
@@ -281,12 +281,12 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method13022(GraphicalRenderer class505) {
-		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -106)));
+		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, localX, aShort9456, localY, method12992(class505, (byte) -106)));
 	}
 
 	boolean method13032() {
-		for (int i = aShort9458; i <= aShort9455; i++) {
-			for (int i_47_ = aShort9456; i_47_ <= aShort9457; i_47_++) {
+		for (int i = aShort9458; i <= localX; i++) {
+			for (int i_47_ = aShort9456; i_47_ <= localY; i_47_++) {
 				int i_48_ = (i - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 + ((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833);
 				if (i_48_ >= 0 && i_48_ < (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651).length) {
 					int i_49_ = (((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (i_47_ - 1580412859 * (((SceneObjectManager) aClass206_7970).anInt2629)));
@@ -300,9 +300,9 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 
 	int method12982(Class282_Sub24[] class282_sub24s) {
 		int i = 0;
-		while_151_: for (int i_50_ = aShort9458; i_50_ <= aShort9455; i_50_++) {
-			for (int i_51_ = aShort9456; i_51_ <= aShort9457; i_51_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_50_][i_51_]);
+		while_151_: for (int i_50_ = aShort9458; i_50_ <= localX; i_50_++) {
+			for (int i_51_ = aShort9456; i_51_ <= localY; i_51_++) {
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_50_][i_51_]);
 				long l_52_ = 0L;
 				while_150_: while (l_52_ <= 48L) {
 					int i_53_ = (int) (l >>> (int) l_52_ & 0xffffL);
@@ -356,14 +356,14 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 			}
 			int i_62_ = 0;
 			while_153_: for (/**/; i_62_ < i; i_62_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_58_][i_59_]);
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_58_][i_59_]);
 				while (0L != l) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
 					if (class282_sub24s[i_62_] == class287.aClass282_Sub24_3425)
 						continue while_153_;
 				}
-				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_60_][i_61_]);
+				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_60_][i_61_]);
 				while (l != 0L) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
@@ -379,18 +379,18 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method13030(GraphicalRenderer class505) {
-		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -58)));
+		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, localX, aShort9456, localY, method12992(class505, (byte) -58)));
 	}
 
 	boolean method12988(GraphicalRenderer class505) {
-		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -101)));
+		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, localX, aShort9456, localY, method12992(class505, (byte) -101)));
 	}
 
 	int method13025(Class282_Sub24[] class282_sub24s) {
 		int i = 0;
-		while_155_: for (int i_64_ = aShort9458; i_64_ <= aShort9455; i_64_++) {
-			for (int i_65_ = aShort9456; i_65_ <= aShort9457; i_65_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_64_][i_65_]);
+		while_155_: for (int i_64_ = aShort9458; i_64_ <= localX; i_64_++) {
+			for (int i_65_ = aShort9456; i_65_ <= localY; i_65_++) {
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_64_][i_65_]);
 				long l_66_ = 0L;
 				while_154_: while (l_66_ <= 48L) {
 					int i_67_ = (int) (l >>> (int) l_66_ & 0xffffL);
@@ -444,14 +444,14 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 			}
 			int i_76_ = 0;
 			while_157_: for (/**/; i_76_ < i; i_76_++) {
-				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_72_][i_73_]);
+				long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_72_][i_73_]);
 				while (0L != l) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
 					if (class282_sub24s[i_76_] == class287.aClass282_Sub24_3425)
 						continue while_157_;
 				}
-				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i_74_][i_75_]);
+				l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i_74_][i_75_]);
 				while (l != 0L) {
 					Class287 class287 = (((SceneObjectManager) aClass206_7970).aClass287Array2646[(int) ((l & 0xffffL) - 1L)]);
 					l >>>= 16;
@@ -467,12 +467,12 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 	}
 
 	boolean method12998(GraphicalRenderer class505) {
-		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, aShort9455, aShort9456, aShort9457, method12992(class505, (byte) -56)));
+		return (aClass206_7970.aClass201_2600.method3274(aByte7968, aShort9458, localX, aShort9456, localY, method12992(class505, (byte) -56)));
 	}
 
 	boolean method13033() {
-		for (int i = aShort9458; i <= aShort9455; i++) {
-			for (int i_78_ = aShort9456; i_78_ <= aShort9457; i_78_++) {
+		for (int i = aShort9458; i <= localX; i++) {
+			for (int i_78_ = aShort9456; i_78_ <= localY; i_78_++) {
 				int i_79_ = (i - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 + ((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833);
 				if (i_79_ >= 0 && i_79_ < (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651).length) {
 					int i_80_ = (((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (i_78_ - 1580412859 * (((SceneObjectManager) aClass206_7970).anInt2629)));
@@ -486,20 +486,20 @@ public abstract class Class521_Sub1_Sub1 extends Class521_Sub1 {
 
 	Class521_Sub1_Sub1(SceneObjectManager class206, int i, int i_81_, int i_82_, int i_83_, int i_84_, int i_85_, int i_86_, int i_87_, int i_88_, boolean bool, byte i_89_) {
 		super(class206);
-		aByte7967 = (byte) i;
+		plane = (byte) i;
 		aByte7968 = (byte) i_81_;
 		method11171(new Vector3((float) i_82_, (float) i_83_, (float) i_84_));
 		aShort9458 = (short) i_85_;
-		aShort9455 = (short) i_86_;
+		localX = (short) i_86_;
 		aShort9456 = (short) i_87_;
-		aShort9457 = (short) i_88_;
+		localY = (short) i_88_;
 		aBool9459 = bool;
 		((Class521_Sub1_Sub1) this).aByte9454 = i_89_;
 	}
 
 	boolean method13034() {
-		for (int i = aShort9458; i <= aShort9455; i++) {
-			for (int i_90_ = aShort9456; i_90_ <= aShort9457; i_90_++) {
+		for (int i = aShort9458; i <= localX; i++) {
+			for (int i_90_ = aShort9456; i_90_ <= localY; i_90_++) {
 				int i_91_ = (i - ((SceneObjectManager) aClass206_7970).anInt2628 * -527863643 + ((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833);
 				if (i_91_ >= 0 && i_91_ < (((SceneObjectManager) aClass206_7970).aBoolArrayArray2651).length) {
 					int i_92_ = (((SceneObjectManager) aClass206_7970).anInt2652 * 1459994833 + (i_90_ - 1580412859 * (((SceneObjectManager) aClass206_7970).anInt2629)));

@@ -32,17 +32,17 @@ public abstract class Class282_Sub17 extends Node {
 	}
 
 	static final void method12260(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		class118.anInt1297 = (class527.intStack[class527.anInt7012 * 1942118537]) * -81350191;
-		class118.anInt1298 = ((class527.intStack[class527.anInt7012 * 1942118537 + 1]) * 2017388241);
+		class527.intStackPtr -= 567564004;
+		class118.anInt1297 = (class527.intStack[class527.intStackPtr * 1942118537]) * -81350191;
+		class118.anInt1298 = ((class527.intStack[class527.intStackPtr * 1942118537 + 1]) * 2017388241);
 		class118.anInt1417 = 0;
 		class118.anInt1326 = 0;
-		int i_1_ = (class527.intStack[class527.anInt7012 * 1942118537 + 2]);
+		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537 + 2]);
 		if (i_1_ < 0)
 			i_1_ = 0;
 		else if (i_1_ > 4)
 			i_1_ = 4;
-		int i_2_ = (class527.intStack[3 + class527.anInt7012 * 1942118537]);
+		int i_2_ = (class527.intStack[3 + class527.intStackPtr * 1942118537]);
 		if (i_2_ < 0)
 			i_2_ = 0;
 		else if (i_2_ > 4)

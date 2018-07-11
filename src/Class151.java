@@ -10,17 +10,17 @@ public class Class151 {
 	public Class464 aClass464_1961 = new Class464();
 
 	static final void method2586(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub5_8221, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -2100114669);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub5_8221, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -2100114669);
 		Class190.method3148((byte) 44);
 	}
 
 	static final void method2587(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7436;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7437;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aShort7436;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aShort7437;
 	}
 
 	static final void method2588(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12923(-1002096865) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method12923(-1002096865) ? 1 : 0;
 	}
 
 	public static void method2589(boolean bool, byte[] is, int i) {
@@ -148,7 +148,7 @@ public class Class151 {
 	}
 
 	static final void method2595(CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 76);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_9_ >> 16];
 		Class380.method6453(class118, class98, class527, -1649840188);

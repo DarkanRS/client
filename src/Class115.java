@@ -146,9 +146,9 @@ public abstract class Class115 implements Interface7 {
 	}
 
 	static final void method1951(CS2Executor class527, byte i) {
-		int i_55_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_55_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		int i_56_ = client.aClass330Array7428[i_55_].method5908(-1286970996);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_56_ == 5 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_56_ == 5 ? 1 : 0;
 	}
 
 	public static boolean method1952(boolean bool, int i) {

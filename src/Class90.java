@@ -39,21 +39,21 @@ public class Class90 {
 	}
 
 	static final void method1508(CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_9_ < 0 || i_9_ > 1)
 			i_9_ = 0;
 		Class115.method1952(i_9_ == 1, -1838966944);
 	}
 
 	static final void method1509(CS2Executor class527, int i) {
-		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_10_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_10_, (byte) 110);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
 		Class242.method4159(class118, class98, class527, -710786215);
 	}
 
 	static final void method1510(CS2Executor class527, short i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_11_, (byte) 104);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
 		Class287.method5066(class118, class98, class527, 711806396);
@@ -67,8 +67,8 @@ public class Class90 {
 	}
 
 	static final void method1512(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_12_, (byte) 83);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (1 == class118.anInt1329 * 2131324949 ? class118.anInt1330 * -402732635 : -1);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (1 == class118.anInt1329 * 2131324949 ? class118.anInt1330 * -402732635 : -1);
 	}
 }

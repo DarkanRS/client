@@ -115,14 +115,14 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	static final void method12803(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -204242656);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub30_8194, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) ? 1 : 0, -204242656);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -96);
 		Class190.method3148((byte) 37);
 		client.aBool7175 = false;
 	}
 
 	static final void method12804(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.intOpValues[class527.instrPtr * 301123709]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class527.intOpValues[class527.instrPtr * 301123709]);
 	}
 
 	static short[][] method12805(float[][] fs, short[][] is, int i) {

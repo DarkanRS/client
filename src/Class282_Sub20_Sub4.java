@@ -587,8 +587,8 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 	}
 
 	static final void method15207(IComponentDefinitions class118, CS2Executor class527, int i) {
-		int i_158_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		int i_159_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
+		int i_158_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		int i_159_ = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) - 1);
 		if (class118.anInt1329 * 2131324949 != 6 && 2 != class118.anInt1329 * 2131324949)
 			throw new RuntimeException("");
 		NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(-402732635 * class118.anInt1330, (byte) 86);

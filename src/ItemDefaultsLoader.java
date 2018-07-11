@@ -186,11 +186,11 @@ public class ItemDefaultsLoader {
 	}
 
 	static final void method7082(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(-1233469498) == 1 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub10_8215.method12691(-1233469498) == 1 ? 1 : 0;
 	}
 
 	static void method7083(CS2Executor class527, int i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class240.anIntArray2964 == null ? 0 : class240.anIntArray2964.length);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class240.anIntArray2964 == null ? 0 : class240.anIntArray2964.length);
 	}
 }

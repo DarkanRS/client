@@ -262,8 +262,8 @@ public class Class174 {
 	}
 
 	static void method2953(CS2Executor class527, byte i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
 	}
 
 	static boolean method2954(int i) {
@@ -302,20 +302,20 @@ public class Class174 {
 	}
 
 	static final void method2955(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class118.anInt1309 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -511891533);
+		class118.anInt1309 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -511891533);
 	}
 
-	static final void animateObject(int i, int i_44_, int i_45_, int i_46_, int i_47_, int i_48_, int i_49_, int i_50_, int i_51_) {
-		if (i_45_ >= 1 && i_46_ >= 1 && i_45_ <= IndexLoaders.MAP_REGION_DECODER.method4424(607754892) - 2 && i_46_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1534289910) - 2) {
-			int i_52_ = i;
-			if (i_52_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_45_, i_46_, 2056160372))
+	static final void animateObject(int plane, int group, int localX, int localY, int objectId, int orientation, int type, int animation, int i_51_) {
+		if (localX >= 1 && localY >= 1 && localX <= IndexLoaders.MAP_REGION_DECODER.getSizeX(607754892) - 2 && localY <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1534289910) - 2) {
+			int i_52_ = plane;
+			if (i_52_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(localX, localY, 2056160372))
 				i_52_++;
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1735262041) != null) {
-				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, i, i_44_, i_45_, i_46_, IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645), -1251785888);
-				if (i_47_ >= 0) {
+				IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12475(Renderers.SOFTWARE_RENDERER, plane, group, localX, localY, IndexLoaders.MAP_REGION_DECODER.getClipMap(plane, 1801793645), -1251785888);
+				if (objectId >= 0) {
 					int i_53_ = Class393.aClass282_Sub54_4783.aClass468_Sub23_8202.method12897((byte) 28);
 					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, 1, -1662895154);
-					IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12459(Renderers.SOFTWARE_RENDERER, i_52_, i, i_45_, i_46_, i_47_, i_48_, i_49_, IndexLoaders.MAP_REGION_DECODER.method4552(i, 1801793645), i_50_, -1045787010);
+					IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12459(Renderers.SOFTWARE_RENDERER, i_52_, plane, localX, localY, objectId, orientation, type, IndexLoaders.MAP_REGION_DECODER.getClipMap(plane, 1801793645), animation, -1045787010);
 					Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, i_53_, -1533283163);
 				}
 			}
@@ -577,7 +577,7 @@ public class Class174 {
 			Class468_Sub20.method12802(executor, -1448690702);
 			break;
 		case 180:
-			Class458.method7675(executor, (byte) 110);
+			SceneObjectType.method7675(executor, (byte) 110);
 			break;
 		case 3:
 			Class258.method4565(executor, 1407413762);
@@ -1128,7 +1128,7 @@ public class Class174 {
 			Class535.method11473(executor, -77968139);
 			break;
 		case 253:
-			Class282_Sub51.method13467(executor, 1986428818);
+			SystemInfo.method13467(executor, 1986428818);
 			break;
 		case 616:
 			Class122.method2108(executor, -492399173);
@@ -1302,7 +1302,7 @@ public class Class174 {
 			Class287.method5065(executor, 1306185943);
 			break;
 		case 600:
-			Class225.method3791(executor, (byte) 37);
+			RouteStrategy.method3791(executor, (byte) 37);
 			break;
 		case 183:
 			Engine.method4773(executor, -2026809420);
@@ -1416,7 +1416,7 @@ public class Class174 {
 			Class489.method8220(executor, (byte) 0);
 			break;
 		case 981:
-			Class225.method3790(executor, -174996314);
+			RouteStrategy.method3790(executor, -174996314);
 			break;
 		case 100:
 			Class500.method8344(executor, (byte) -19);
@@ -1800,7 +1800,7 @@ public class Class174 {
 			Class153.method2620(executor, 2023133498);
 			break;
 		case 118:
-			Class336.method6005(executor, (byte) 5);
+			ClipMap.method6005(executor, (byte) 5);
 			break;
 		case 272:
 			Class43.method894(executor, -515879800);
@@ -2064,7 +2064,7 @@ public class Class174 {
 			Class122.method2112(executor, -743598106);
 			break;
 		case 243:
-			Class225.method3792(executor, (byte) 0);
+			RouteStrategy.method3792(executor, (byte) 0);
 			break;
 		case 681:
 			Class282_Sub50_Sub17.method15512(executor, 265164609);
@@ -2193,7 +2193,7 @@ public class Class174 {
 			Class276.method4902(executor, -466152026);
 			break;
 		case 654:
-			Class336.method6006(executor, -2023043481);
+			ClipMap.method6006(executor, -2023043481);
 			break;
 		case 693:
 			Class316.method5597(executor, -1887560863);
@@ -2463,7 +2463,7 @@ public class Class174 {
 			Class116.method1967(executor, 1449768589);
 			break;
 		case 287:
-			Class311.method5511(executor, -1504750167);
+			RegionMap.method5511(executor, -1504750167);
 			break;
 		case 871:
 			QuickChatDynamicValue.method4181(executor, (byte) -39);
@@ -3054,7 +3054,7 @@ public class Class174 {
 			Class279.method4967(executor, 1592761996);
 			break;
 		case 556:
-			Class225.method3793(executor, (byte) 8);
+			RouteStrategy.method3793(executor, (byte) 8);
 			break;
 		case 198:
 			Class532_Sub1.method12839(executor, -842587868);
@@ -3219,7 +3219,7 @@ public class Class174 {
 			Message.method7270(executor, -104209121);
 			break;
 		case 749:
-			Class311.method5512(executor, -837844602);
+			RegionMap.method5512(executor, -837844602);
 			break;
 		case 352:
 			Language.method8295(executor, 313566380);

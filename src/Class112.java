@@ -3,34 +3,9 @@
  */
 
 public final class Class112 {
-	static final String aString1233 = "#";
-
-	public static final boolean method1867(String string, String string_0_, String string_1_, String string_2_) {
-		if (string == null || string_1_ == null)
-			return false;
-		if (string.startsWith("#") || string_1_.startsWith("#"))
-			return string.equals(string_1_);
-		return string_0_.equals(string_2_);
-	}
-
-	public static final boolean method1868(String string, String string_3_, String string_4_, String string_5_) {
-		if (string == null || string_4_ == null)
-			return false;
-		if (string.startsWith("#") || string_4_.startsWith("#"))
-			return string.equals(string_4_);
-		return string_3_.equals(string_5_);
-	}
 
 	Class112() throws Throwable {
 		throw new Error();
-	}
-
-	public static final boolean method1869(String string, String string_6_, String string_7_, String string_8_) {
-		if (string == null || string_7_ == null)
-			return false;
-		if (string.startsWith("#") || string_7_.startsWith("#"))
-			return string.equals(string_7_);
-		return string_6_.equals(string_8_);
 	}
 
 	public static Class60[] method1870(int i) {
@@ -49,100 +24,100 @@ public final class Class112 {
 	}
 
 	static final void method1872(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_12_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_13_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class252.method4327(i_12_, i_13_, true, false, (byte) 32);
+		class527.intStackPtr -= 283782002;
+		int i_12_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_13_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class252.method4327(i_12_, i_13_, true, false, (byte) 32);
 	}
 
-	public static int method1873(int i, int i_14_, int i_15_, Class225 class225, Class336 class336, boolean bool, int[] is, int[] is_16_, int i_17_) {
-		for (int i_18_ = 0; i_18_ < 128; i_18_++) {
-			for (int i_19_ = 0; i_19_ < 128; i_19_++) {
-				Class251.anIntArrayArray3096[i_18_][i_19_] = 0;
-				Class251.anIntArrayArray3102[i_18_][i_19_] = 99999999;
+	public static int findRoute(int srcX, int srcY, int srcSizeXY, RouteStrategy strategy, ClipMap clipMap, boolean findAlternative, int[] bufferX, int[] bufferY, int i_17_) {
+		for (int x = 0; x < 128; x++) {
+			for (int y = 0; y < 128; y++) {
+				Class251.directions[x][y] = 0;
+				Class251.distances[x][y] = 99999999;
 			}
 		}
-		boolean bool_20_;
-		if (i_15_ == 1)
-			bool_20_ = Class96_Sub17.method14654(i, i_14_, class225, class336, -1231399529);
-		else if (i_15_ == 2)
-			bool_20_ = Class46.method929(i, i_14_, class225, class336, -46560095);
+		boolean found;
+		if (srcSizeXY == 1)
+			found = Class96_Sub17.performCalculationS1(srcX, srcY, strategy, clipMap, -1231399529);
+		else if (srcSizeXY == 2)
+			found = Class46.performCalculationS2(srcX, srcY, strategy, clipMap, -46560095);
 		else
-			bool_20_ = Class46.method930(i, i_14_, i_15_, class225, class336, (byte) 21);
-		int i_21_ = i - 64;
-		int i_22_ = i_14_ - 64;
-		int i_23_ = Class251.anInt3098 * -1659935235;
-		int i_24_ = Class251.anInt3095 * 1434452541;
-		if (!bool_20_) {
-			if (bool) {
-				int i_25_ = 2147483647;
-				int i_26_ = 2147483647;
-				int i_27_ = 10;
-				int i_28_ = -1440558477 * class225.anInt2779;
-				int i_29_ = class225.anInt2780 * 1732585867;
-				int i_30_ = -1384164183 * class225.anInt2781;
-				int i_31_ = class225.anInt2782 * 361960939;
-				for (int i_32_ = i_28_ - i_27_; i_32_ <= i_28_ + i_27_; i_32_++) {
-					for (int i_33_ = i_29_ - i_27_; i_33_ <= i_29_ + i_27_; i_33_++) {
-						int i_34_ = i_32_ - i_21_;
-						int i_35_ = i_33_ - i_22_;
-						if (i_34_ >= 0 && i_35_ >= 0 && i_34_ < 128 && i_35_ < 128 && (Class251.anIntArrayArray3102[i_34_][i_35_] < 100)) {
-							int i_36_ = 0;
-							if (i_32_ < i_28_)
-								i_36_ = i_28_ - i_32_;
-							else if (i_32_ > i_30_ + i_28_ - 1)
-								i_36_ = i_32_ - (i_28_ + i_30_ - 1);
-							int i_37_ = 0;
-							if (i_33_ < i_29_)
-								i_37_ = i_29_ - i_33_;
-							else if (i_33_ > i_31_ + i_29_ - 1)
-								i_37_ = i_33_ - (i_29_ + i_31_ - 1);
-							int i_38_ = i_36_ * i_36_ + i_37_ * i_37_;
-							if (i_38_ < i_25_ || (i_38_ == i_25_ && (Class251.anIntArrayArray3102[i_34_][i_35_]) < i_26_)) {
-								i_25_ = i_38_;
-								i_26_ = (Class251.anIntArrayArray3102[i_34_][i_35_]);
-								i_23_ = i_32_;
-								i_24_ = i_33_;
+			found = Class46.performCalculationSX(srcX, srcY, srcSizeXY, strategy, clipMap, (byte) 21);
+		int graphBaseX = srcX - 64;
+		int graphBaseY = srcY - 64;
+		int endX = Class251.exitX * -1659935235;
+		int endY = Class251.exitY * 1434452541;
+		if (!found) {
+			if (findAlternative) {
+				int lowestCost = Integer.MAX_VALUE;
+				int lowestDistance = Integer.MAX_VALUE;
+				int alternativeRouteRange = 10;
+				int approxDestX = -1440558477 * strategy.approxDestinationX;
+				int approxDestY = strategy.approxDestinationY * 1732585867;
+				int approxDestinationSizeX = -1384164183 * strategy.approxDestinationSizeX;
+				int approxDestinationSizeY = strategy.approxDestinationSizeY * 361960939;
+				for (int checkX = approxDestX - alternativeRouteRange; checkX <= approxDestX + alternativeRouteRange; checkX++) {
+					for (int checkY = approxDestY - alternativeRouteRange; checkY <= approxDestY + alternativeRouteRange; checkY++) {
+						int graphX = checkX - graphBaseX;
+						int graphY = checkY - graphBaseY;
+						if (graphX >= 0 && graphY >= 0 && graphX < 128 && graphY < 128 && (Class251.distances[graphX][graphY] < 100)) {
+							int deltaX = 0;
+							if (checkX < approxDestX)
+								deltaX = approxDestX - checkX;
+							else if (checkX > approxDestinationSizeX + approxDestX - 1)
+								deltaX = checkX - (approxDestX + approxDestinationSizeX - 1);
+							int deltaY = 0;
+							if (checkY < approxDestY)
+								deltaY = approxDestY - checkY;
+							else if (checkY > approxDestinationSizeY + approxDestY - 1)
+								deltaY = checkY - (approxDestY + approxDestinationSizeY - 1);
+							int cost = deltaX * deltaX + deltaY * deltaY;
+							if (cost < lowestCost || (cost == lowestCost && (Class251.distances[graphX][graphY]) < lowestDistance)) {
+								lowestCost = cost;
+								lowestDistance = (Class251.distances[graphX][graphY]);
+								endX = checkX;
+								endY = checkY;
 							}
 						}
 					}
 				}
-				if (i_25_ == 2147483647)
+				if (lowestCost == Integer.MAX_VALUE)
 					return -1;
 			} else
 				return -1;
 		}
-		if (i == i_23_ && i_14_ == i_24_)
+		if (srcX == endX && srcY == endY)
 			return 0;
-		int i_39_ = 0;
-		Class251.anIntArray3101[i_39_] = i_23_;
-		Class251.anIntArray3099[i_39_++] = i_24_;
-		int i_41_;
-		int i_40_ = (i_41_ = Class251.anIntArrayArray3096[i_23_ - i_21_][i_24_ - i_22_]);
-		while (i != i_23_ || i_24_ != i_14_) {
-			if (i_41_ != i_40_) {
-				i_41_ = i_40_;
-				Class251.anIntArray3101[i_39_] = i_23_;
-				Class251.anIntArray3099[i_39_++] = i_24_;
+		int steps = 0;
+		Class251.bufferX[steps] = endX;
+		Class251.bufferY[steps++] = endY;
+		int lastwritten;
+		int direction = (lastwritten = Class251.directions[endX - graphBaseX][endY - graphBaseY]);
+		while (srcX != endX || endY != srcY) {
+			if (lastwritten != direction) {
+				lastwritten = direction;
+				Class251.bufferX[steps] = endX;
+				Class251.bufferY[steps++] = endY;
 			}
-			if ((i_40_ & 0x2) != 0)
-				i_23_++;
-			else if ((i_40_ & 0x8) != 0)
-				i_23_--;
-			if ((i_40_ & 0x1) != 0)
-				i_24_++;
-			else if ((i_40_ & 0x4) != 0)
-				i_24_--;
-			i_40_ = Class251.anIntArrayArray3096[i_23_ - i_21_][i_24_ - i_22_];
+			if ((direction & 0x2) != 0)
+				endX++;
+			else if ((direction & 0x8) != 0)
+				endX--;
+			if ((direction & 0x1) != 0)
+				endY++;
+			else if ((direction & 0x4) != 0)
+				endY--;
+			direction = Class251.directions[endX - graphBaseX][endY - graphBaseY];
 		}
-		int i_42_ = 0;
+		int i = 0;
 		do {
-			if (i_39_-- <= 0)
+			if (steps-- <= 0)
 				break;
-			is[i_42_] = Class251.anIntArray3101[i_39_];
-			is_16_[i_42_++] = Class251.anIntArray3099[i_39_];
-		} while (i_42_ < is.length);
-		return i_42_;
+			bufferX[i] = Class251.bufferX[steps];
+			bufferY[i++] = Class251.bufferY[steps];
+		} while (i < bufferX.length);
+		return i;
 	}
 
 	static final void method1874(CS2Executor class527, int i) {

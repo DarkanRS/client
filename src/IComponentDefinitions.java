@@ -906,14 +906,14 @@ public class IComponentDefinitions {
 	}
 
 	static final void method2071(CS2Executor class527, int i) {
-		int i_147_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_147_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_147_, (byte) 54);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_147_ >> 16];
 		Class52.method1083(class118, class98, class527, -1250124563);
 	}
 
 	static final void method2072(CS2Executor class527, int i) {
-		int i_148_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_148_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4566, client.aClass184_7475.isaac, 1473230180);
 		class282_sub23.buffer.writeShort(i_148_, 1417031095);
 		client.aClass184_7475.method3049(class282_sub23, 1273734217);

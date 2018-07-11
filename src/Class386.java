@@ -29,26 +29,26 @@ public class Class386 {
 	}
 
 	static final void method6668(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_1_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		UnderlayDefinition class513;
 		if (class527.aBool7022)
 			class513 = class527.aClass513_6994;
 		else
 			class513 = class527.aClass513_7007;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (i_1_ != -1 && class513.method8764(i_0_, i_1_, -1290054035) ? 1 : 0);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (i_1_ != -1 && class513.method8764(i_0_, i_1_, -1290054035) ? 1 : 0);
 	}
 
 	static final void method6669(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_2_, (byte) 19);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class249.method4280(class118, class98, class527, (byte) 114);
 	}
 
 	static final void method6670(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 103);
 		Class96_Sub22.method14680(class118, class527, 434841982);
 	}
@@ -95,6 +95,6 @@ public class Class386 {
 	}
 
 	static final void method6675(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -45);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -45);
 	}
 }

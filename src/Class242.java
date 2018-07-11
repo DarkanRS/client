@@ -9,10 +9,6 @@ public class Class242 {
 	static Class91 aClass91_2981;
 	public static int anInt2982;
 
-	public Class240 method4153(int i) {
-		return ((Class242) this).aClass240Array2980[i];
-	}
-
 	int method4154(Interface42 interface42, int i) {
 		int i_0_ = 0;
 		for (int i_1_ = 0; i_1_ < ((Class242) this).anInt2978 * 526499893; i_1_++) {
@@ -21,10 +17,6 @@ public class Class242 {
 				i_0_ += 554241429 * class240.anInt2963;
 		}
 		return i_0_;
-	}
-
-	public Class240 method4155(int i) {
-		return ((Class242) this).aClass240Array2980[i];
 	}
 
 	public Class242(Game class486, Language class495, Index class317, boolean bool) {
@@ -54,36 +46,22 @@ public class Class242 {
 		return ((Class242) this).aClass240Array2980[i];
 	}
 
-	public Class240 method4157(int i) {
-		return ((Class242) this).aClass240Array2980[i];
-	}
-
-	int method4158(Interface42 interface42) {
-		int i = 0;
-		for (int i_3_ = 0; i_3_ < ((Class242) this).anInt2978 * 526499893; i_3_++) {
-			Class240 class240 = method4156(i_3_, -1396181317);
-			if (class240.method4099(interface42, -1427808591))
-				i += 554241429 * class240.anInt2963;
-		}
-		return i;
-	}
-
 	static final void method4159(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		class118.anInt1340 = 788815611 * (class527.intStack[class527.anInt7012 * 1942118537]);
-		class118.anInt1350 = (2093089603 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]));
-		class118.anInt1281 = (-875347675 * (class527.intStack[class527.anInt7012 * 1942118537 + 2]));
-		class118.anInt1354 = ((class527.intStack[class527.anInt7012 * 1942118537 + 3]) * -797924565);
+		class527.intStackPtr -= 567564004;
+		class118.anInt1340 = 788815611 * (class527.intStack[class527.intStackPtr * 1942118537]);
+		class118.anInt1350 = (2093089603 * (class527.intStack[class527.intStackPtr * 1942118537 + 1]));
+		class118.anInt1281 = (-875347675 * (class527.intStack[class527.intStackPtr * 1942118537 + 2]));
+		class118.anInt1354 = ((class527.intStack[class527.intStackPtr * 1942118537 + 3]) * -797924565);
 		Class109.method1858(class118, (byte) -26);
 	}
 
 	static final void method4160(IComponentDefinitions class118, Interface class98, CS2Executor class527, short i) {
-		class118.anInt1323 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -848451677);
+		class118.anInt1323 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -848451677);
 		Class109.method1858(class118, (byte) -6);
 	}
 
 	static final void method4161(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class152.method2598(1461837839).method243((byte) 1);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class152.method2598(1461837839).method243((byte) 1);
 	}
 
 	public static final int method4162(int i, int i_4_, byte i_5_) {
@@ -203,8 +181,8 @@ public class Class242 {
 					class282_sub23.buffer.writeIntV2(728544879 * Class7.anInt56, (byte) 104);
 					class282_sub23.buffer.writeShortLE(client.anInt7346 * -1555739329, (short) -16837);
 					client.aClass184_7475.method3049(class282_sub23, 2109181627);
-					int i_11_ = class521_sub1_sub1_sub2_sub1.method15805(828768449);
-					MapRegion.method4559(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), i_11_, i_11_, 0, 971339209), 1352975566);
+					int i_11_ = class521_sub1_sub1_sub2_sub1.getSize(828768449);
+					MapRegion.routeTo(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], true, Class344.method6115((class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), i_11_, i_11_, 0, 971339209), 1352975566);
 					bool = true;
 					break;
 				}
@@ -217,7 +195,7 @@ public class Class242 {
 	}
 
 	static final void method4168(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8187, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -1129391338);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8187, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -1129391338);
 		Class190.method3148((byte) 102);
 	}
 }

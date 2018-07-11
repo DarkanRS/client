@@ -138,8 +138,8 @@ public class Class191 implements Runnable {
 	}
 
 	static final void method3164(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aClass10Array7456[i_0_].aBool117 ? 1 : 0;
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aClass10Array7456[i_0_].aBool117 ? 1 : 0;
 	}
 
 	public static void method3166(int i) {
@@ -155,6 +155,6 @@ public class Class191 implements Runnable {
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
 		IComponentDefinitions class118_6_ = Class96_Sub23.method14682(class98, class118, -838454718);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.idHash * -1952846363;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.idHash * -1952846363;
 	}
 }

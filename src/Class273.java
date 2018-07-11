@@ -90,14 +90,14 @@ public abstract class Class273 {
 	abstract int method4862(long l);
 
 	static final void method4863(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 84);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		ReferenceTable.method5763(class118, class98, class527, 258036500);
 	}
 
 	static final void method4864(CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 65);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class282_Sub21_Sub1.method15474(class118, class98, class527, (byte) 126);
@@ -149,7 +149,7 @@ public abstract class Class273 {
 	}
 
 	static final void method4867(CS2Executor class527, int i) {
-		int i_23_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method7785(i_23_, -1905006369);
+		int i_23_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method7785(i_23_, -1905006369);
 	}
 }

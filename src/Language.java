@@ -151,7 +151,7 @@ public class Language implements Interface43 {
 	}
 
 	static final void method8295(CS2Executor class527, int i) {
-		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_5_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 65);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 0, class527, (byte) -3);
@@ -172,9 +172,9 @@ public class Language implements Interface43 {
 
 	static final void method8297(CS2Executor class527, byte i) {
 		if (Class96_Sub21.aClass199_9438.method3236(81, -2091776550))
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static final void method8298(CS2Executor class527, byte i) {

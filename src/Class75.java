@@ -39,10 +39,10 @@ public final class Class75 {
 			}
 		}
 		if (62352723 * anInt739 >= 0) {
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i_1_, i, i_0_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15805(828768449), -1440996136);
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i_1_, i, i_0_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -1440996136);
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15791(i_2_, true, (byte) -89);
 		} else {
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7967 = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i_1_;
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i_1_;
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.method16130(i, i_0_, 87845463);
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.method15791(i_2_, true, (byte) -27);
 		}
@@ -56,9 +56,9 @@ public final class Class75 {
 
 	void method1338(int i, int i_4_, int i_5_, int i_6_) {
 		if (null != ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741)
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_4_, i_5_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15805(828768449), -1226948828);
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_4_, i_5_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -1226948828);
 		else {
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7967 = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.method16130(i_4_, i_5_, -909985689);
 		}
 	}
@@ -83,9 +83,9 @@ public final class Class75 {
 
 	void method1340(int i, int i_9_, int i_10_) {
 		if (null != ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741)
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_9_, i_10_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15805(828768449), -1385564747);
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_9_, i_10_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -1385564747);
 		else {
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7967 = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.method16130(i_9_, i_10_, -464682481);
 		}
 	}
@@ -104,18 +104,18 @@ public final class Class75 {
 
 	void method1343(int i, int i_11_, int i_12_) {
 		if (null != ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741)
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_11_, i_12_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15805(828768449), -2031635469);
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_11_, i_12_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -2031635469);
 		else {
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7967 = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.method16130(i_11_, i_12_, -2032113554);
 		}
 	}
 
 	void method1344(int i, int i_13_, int i_14_) {
 		if (null != ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741)
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_13_, i_14_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method15805(828768449), -1016301929);
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.method16159(i, i_13_, i_14_, true, ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub2_741.getSize(828768449), -1016301929);
 		else {
-			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7967 = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
+			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.plane = ((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.aByte7968 = (byte) i;
 			((Class75) this).aClass521_Sub1_Sub1_Sub2_Sub1_744.method16130(i_13_, i_14_, -1484268247);
 		}
 	}
@@ -187,23 +187,23 @@ public final class Class75 {
 	}
 
 	static final void method1349(CS2Executor class527, int i) {
-		int i_18_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_18_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_18_, (byte) 104);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_18_ >> 16];
 		Class174.method2955(class118, class98, class527, (byte) 0);
 	}
 
 	static final void method1350(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -16) == 1 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -16) == 1 ? 1 : 0;
 	}
 
 	static final void method1351(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class469.aBool5585 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class469.aBool5585 ? 1 : 0;
 	}
 
 	static final void method1352(CS2Executor class527, int i) {
-		int i_19_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub17_8200.method7785(i_19_, -332063758);
+		int i_19_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub17_8200.method7785(i_19_, -332063758);
 	}
 
 	public static String method1353(String string, int i) {
@@ -253,9 +253,9 @@ public final class Class75 {
 	}
 
 	static final void method1355(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_24_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_25_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_24_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_25_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		Class31.method812(i_24_, new Class282_Sub44(i_25_, 3), null, true, (byte) 92);
 	}
 }

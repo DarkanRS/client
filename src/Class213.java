@@ -23,7 +23,7 @@ public class Class213 {
 	}
 
 	public static void method3662(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1, short i_2_) {
-		if (Class260.anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.aByte7967 == Class84.myPlayer.aByte7967)) {
+		if (Class260.anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.plane == Class84.myPlayer.plane)) {
 			int i_3_ = class518.anIntArrayArray5913[i][0];
 			int i_4_ = i_3_ >> 8;
 			int i_5_ = i_3_ >> 5 & 0x7;
@@ -53,7 +53,7 @@ public class Class213 {
 				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
 				int i_10_ = (int) class385.x - 256 >> 9;
 				int i_11_ = (int) class385.z - 256 >> 9;
-				int i_12_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_6_ + ((i_10_ << 16) + (class521_sub1.aByte7967 << 24) + (i_11_ << 8)));
+				int i_12_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_6_ + ((i_10_ << 16) + (class521_sub1.plane << 24) + (i_11_ << 8)));
 				Class260.aClass268Array3232[(Class260.anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_4_, i_5_, 0, i_9_, i_12_, i_8_, class521_sub1);
 			}
 		}

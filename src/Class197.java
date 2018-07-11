@@ -50,9 +50,9 @@ public class Class197 {
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1171197217);
 		class521_sub1_sub1_sub2_sub1.regionBaseX[0] = i_2_ - class219.x * 1948093437;
 		class521_sub1_sub1_sub2_sub1.regionBaseY[0] = i_3_ - -1002240017 * class219.y;
-		class521_sub1_sub1_sub2_sub1.method11172((class521_sub1_sub1_sub2_sub1.regionBaseX[0] << 9) + (class521_sub1_sub1_sub2_sub1.method15805(828768449) << 8), (class521_sub1_sub1_sub2_sub1.method11165().aClass385_3595.y), (class521_sub1_sub1_sub2_sub1.regionBaseY[0] << 9) + (class521_sub1_sub1_sub2_sub1.method15805(828768449) << 8));
-		Class4.anInt35 = (class521_sub1_sub1_sub2_sub1.aByte7967 = class521_sub1_sub1_sub2_sub1.aByte7968 = i_1_) * -647602067;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], 1641852873)) {
+		class521_sub1_sub1_sub2_sub1.method11172((class521_sub1_sub1_sub2_sub1.regionBaseX[0] << 9) + (class521_sub1_sub1_sub2_sub1.getSize(828768449) << 8), (class521_sub1_sub1_sub2_sub1.method11165().aClass385_3595.y), (class521_sub1_sub1_sub2_sub1.regionBaseY[0] << 9) + (class521_sub1_sub1_sub2_sub1.getSize(828768449) << 8));
+		Class4.anInt35 = (class521_sub1_sub1_sub2_sub1.plane = class521_sub1_sub1_sub2_sub1.aByte7968 = i_1_) * -647602067;
+		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], 1641852873)) {
 			class521_sub1_sub1_sub2_sub1.aByte7968++;
 		}
 		if (aClass282_Sub35Array2428[i] != null) {
@@ -333,7 +333,7 @@ public class Class197 {
 					throw new RuntimeException();
 				}
 				Class4 class4 = aClass4Array2430[i] = new Class4();
-				class4.anInt31 = (-1096995395 * (((class219.y * -1002240017 + class521_sub1_sub1_sub2_sub1.regionBaseY[0]) >> 6) + ((class521_sub1_sub1_sub2_sub1.aByte7967 << 28) + ((1948093437 * class219.x + (class521_sub1_sub1_sub2_sub1.regionBaseX[0])) >> 6 << 14))));
+				class4.anInt31 = (-1096995395 * (((class219.y * -1002240017 + class521_sub1_sub1_sub2_sub1.regionBaseY[0]) >> 6) + ((class521_sub1_sub1_sub2_sub1.plane << 28) + ((1948093437 * class219.x + (class521_sub1_sub1_sub2_sub1.regionBaseX[0])) >> 6 << 14))));
 				if (-1 != 327043279 * class521_sub1_sub1_sub2_sub1.faceDirection) {
 					class4.anInt30 = class521_sub1_sub1_sub2_sub1.faceDirection * 20062537;
 				} else {
@@ -460,12 +460,12 @@ public class Class197 {
 				} else {
 					class521_sub1_sub1_sub2_sub1.method16129(i_49_, i_50_, playerMovementTypes[i], 1625388888);
 				}
-				class521_sub1_sub1_sub2_sub1.aByte7967 = class521_sub1_sub1_sub2_sub1.aByte7968 = (byte) (i_46_ + class521_sub1_sub1_sub2_sub1.aByte7967 & 0x3);
-				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_49_, i_50_, 1715483217)) {
+				class521_sub1_sub1_sub2_sub1.plane = class521_sub1_sub1_sub2_sub1.aByte7968 = (byte) (i_46_ + class521_sub1_sub1_sub2_sub1.plane & 0x3);
+				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_49_, i_50_, 1715483217)) {
 					class521_sub1_sub1_sub2_sub1.aByte7968++;
 				}
-				if (i == 1595512269 * client.anInt7315 && (class521_sub1_sub1_sub2_sub1.aByte7967 != Class4.anInt35 * 675588453)) {
-					Class4.anInt35 = class521_sub1_sub1_sub2_sub1.aByte7967 * -647602067;
+				if (i == 1595512269 * client.anInt7315 && (class521_sub1_sub1_sub2_sub1.plane != Class4.anInt35 * 675588453)) {
+					Class4.anInt35 = class521_sub1_sub1_sub2_sub1.plane * -647602067;
 				}
 			} else {
 				int i_51_ = class282_sub35_sub2.readBits(30, (byte) -1);
@@ -481,12 +481,12 @@ public class Class197 {
 				} else {
 					class521_sub1_sub1_sub2_sub1.method16129(i_55_, i_56_, playerMovementTypes[i], -2068435898);
 				}
-				class521_sub1_sub1_sub2_sub1.aByte7967 = class521_sub1_sub1_sub2_sub1.aByte7968 = (byte) (i_52_ + class521_sub1_sub1_sub2_sub1.aByte7967 & 0x3);
-				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_55_, i_56_, 2133037824)) {
+				class521_sub1_sub1_sub2_sub1.plane = class521_sub1_sub1_sub2_sub1.aByte7968 = (byte) (i_52_ + class521_sub1_sub1_sub2_sub1.plane & 0x3);
+				if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_55_, i_56_, 2133037824)) {
 					class521_sub1_sub1_sub2_sub1.aByte7968++;
 				}
 				if (i == client.anInt7315 * 1595512269) {
-					Class4.anInt35 = class521_sub1_sub1_sub2_sub1.aByte7967 * -647602067;
+					Class4.anInt35 = class521_sub1_sub1_sub2_sub1.plane * -647602067;
 				}
 			}
 		}
@@ -525,8 +525,8 @@ public class Class197 {
 			class521_sub1_sub1_sub2_sub1.aBool10571 = class4.aBool29;
 			class521_sub1_sub1_sub2_sub1.aBool10550 = class4.aBool33;
 			class521_sub1_sub1_sub2_sub1.aByteArray10365[0] = playerMovementTypes[i];
-			class521_sub1_sub1_sub2_sub1.aByte7967 = class521_sub1_sub1_sub2_sub1.aByte7968 = (byte) i_61_;
-			if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_64_, i_65_, 1814280802)) {
+			class521_sub1_sub1_sub2_sub1.plane = class521_sub1_sub1_sub2_sub1.aByte7968 = (byte) i_61_;
+			if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_64_, i_65_, 1814280802)) {
 				class521_sub1_sub1_sub2_sub1.aByte7968++;
 			}
 			class521_sub1_sub1_sub2_sub1.method16130(i_64_, i_65_, -499751905);
@@ -1116,13 +1116,13 @@ public class Class197 {
 	}
 
 	static final void method3200(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8227, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), 62408516);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8227, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), 62408516);
 		Class190.method3148((byte) 24);
 		client.aBool7175 = false;
 	}
 
 	static final void method3201(CS2Executor class527, int i) {
-		int i_203_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_203_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_203_, (byte) 71);
 		Class282_Sub20_Sub4.method15207(class118, class527, 1765364986);
 	}
@@ -1136,7 +1136,7 @@ public class Class197 {
 			return Class97.method1614(class282_sub35, 1268954246);
 		}
 		if (class221 == Class221.aClass221_2760) {
-			return Class336.method6009(class282_sub35, -1710988237);
+			return ClipMap.method6009(class282_sub35, -1710988237);
 		}
 		return null;
 	}
@@ -1153,9 +1153,9 @@ public class Class197 {
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(331387961);
 		class521_sub1_sub1_sub2_sub1.regionBaseX[0] = i_207_ - class219.x * 1948093437;
 		class521_sub1_sub1_sub2_sub1.regionBaseY[0] = i_208_ - -1002240017 * class219.y;
-		class521_sub1_sub1_sub2_sub1.method11172((class521_sub1_sub1_sub2_sub1.regionBaseX[0] << 9) + (class521_sub1_sub1_sub2_sub1.method15805(828768449) << 8), (class521_sub1_sub1_sub2_sub1.method11165().aClass385_3595.y), (class521_sub1_sub1_sub2_sub1.regionBaseY[0] << 9) + (class521_sub1_sub1_sub2_sub1.method15805(828768449) << 8));
-		Class4.anInt35 = (class521_sub1_sub1_sub2_sub1.aByte7967 = class521_sub1_sub1_sub2_sub1.aByte7968 = i_206_) * -647602067;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], 1664929780)) {
+		class521_sub1_sub1_sub2_sub1.method11172((class521_sub1_sub1_sub2_sub1.regionBaseX[0] << 9) + (class521_sub1_sub1_sub2_sub1.getSize(828768449) << 8), (class521_sub1_sub1_sub2_sub1.method11165().aClass385_3595.y), (class521_sub1_sub1_sub2_sub1.regionBaseY[0] << 9) + (class521_sub1_sub1_sub2_sub1.getSize(828768449) << 8));
+		Class4.anInt35 = (class521_sub1_sub1_sub2_sub1.plane = class521_sub1_sub1_sub2_sub1.aByte7968 = i_206_) * -647602067;
+		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(class521_sub1_sub1_sub2_sub1.regionBaseX[0], class521_sub1_sub1_sub2_sub1.regionBaseY[0], 1664929780)) {
 			class521_sub1_sub1_sub2_sub1.aByte7968++;
 		}
 		if (aClass282_Sub35Array2428[i_204_] != null) {

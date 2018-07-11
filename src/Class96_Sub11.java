@@ -51,6 +51,6 @@ public class Class96_Sub11 extends Class96 {
 	}
 
 	static final void method14606(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == client.aClass118_7183 ? -1 : -1952846363 * client.aClass118_7183.idHash);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (null == client.aClass118_7183 ? -1 : -1952846363 * client.aClass118_7183.idHash);
 	}
 }

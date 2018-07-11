@@ -3,7 +3,7 @@
  */
 
 public class Class293 {
-	public Class521_Sub1_Sub3 aClass521_Sub1_Sub3_3499;
+	public SceneObjectNode aClass521_Sub1_Sub3_3499;
 	public Class521_Sub1_Sub4 aClass521_Sub1_Sub4_3500;
 	short aShort3501;
 	public Class521_Sub1_Sub5 aClass521_Sub1_Sub5_3502;
@@ -24,7 +24,7 @@ public class Class293 {
 
 	static final void method5202(CS2Executor class527, int i) {
 		int i_0_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.method241(i_0_, 161109114);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class158_Sub1.aClass3_8507.method241(i_0_, 161109114);
 	}
 
 	static final void method5203(CS2Executor class527, int i) {
@@ -35,13 +35,13 @@ public class Class293 {
 	}
 
 	static final void method5204(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		if ((class527.intStack[class527.anInt7012 * 1942118537]) <= (class527.intStack[class527.anInt7012 * 1942118537 + 1]))
+		class527.intStackPtr -= 283782002;
+		if ((class527.intStack[class527.intStackPtr * 1942118537]) <= (class527.intStack[class527.intStackPtr * 1942118537 + 1]))
 			class527.instrPtr += ((class527.intOpValues[301123709 * class527.instrPtr]) * -1051529003);
 	}
 
 	static final void method5205(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class87.method1489(1511873698).method243((byte) 1);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class87.method1489(1511873698).method243((byte) 1);
 	}
 
 	public static int method5206(int i) {

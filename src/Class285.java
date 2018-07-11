@@ -61,7 +61,7 @@ public class Class285 {
 	}
 
 	static final void method5024(CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 82);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class96_Sub18.method14664(class118, class98, false, 2, class527, (byte) 56);
@@ -79,8 +79,8 @@ public class Class285 {
 	}
 
 	static final void method5027(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		Class117.method1978((class527.intStack[class527.anInt7012 * 1942118537]), (class527.intStack[1 + (1942118537 * class527.anInt7012)]), 255, (byte) 1);
+		class527.intStackPtr -= 283782002;
+		Class117.method1978((class527.intStack[class527.intStackPtr * 1942118537]), (class527.intStack[1 + (1942118537 * class527.intStackPtr)]), 255, (byte) 1);
 	}
 
 	public static int method5028(byte[] is, int i, short i_6_) {

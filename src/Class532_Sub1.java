@@ -338,7 +338,7 @@ public class Class532_Sub1 extends Class532 {
 	}
 
 	static final void method12839(CS2Executor class527, int i) {
-		int i_191_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_191_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_191_, (byte) 105);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_191_ >> 16];
 		Class13.method505(class118, class98, class527, (byte) 1);
@@ -393,7 +393,7 @@ public class Class532_Sub1 extends Class532 {
 	}
 
 	static final void method12841(CS2Executor class527, int i) {
-		int i_192_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_192_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4544, client.aClass184_7475.isaac, 443775606);
 		class282_sub23.buffer.writeShort(i_192_, 1417031095);
 		client.aClass184_7475.method3049(class282_sub23, -1028777472);

@@ -121,14 +121,14 @@ public class Class210 {
 	}
 
 	static final void method3611(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -163458202);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub2_8205, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -163458202);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -4);
 		Class190.method3148((byte) 43);
 		client.aBool7175 = false;
 	}
 
 	static final void method3612(int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, byte i_7_) {
-		if (!bool && (i_3_ < 512 || i_4_ < 512 || i_3_ > (IndexLoaders.MAP_REGION_DECODER.method4424(112357923) - 2) * 512 || i_4_ > (IndexLoaders.MAP_REGION_DECODER.method4451(-200996261) - 2) * 512)) {
+		if (!bool && (i_3_ < 512 || i_4_ < 512 || i_3_ > (IndexLoaders.MAP_REGION_DECODER.getSizeX(112357923) - 2) * 512 || i_4_ > (IndexLoaders.MAP_REGION_DECODER.getSizeY(-200996261) - 2) * 512)) {
 			float[] fs = client.aFloatArray7292;
 			client.aFloatArray7292[1] = -1.0F;
 			fs[0] = -1.0F;

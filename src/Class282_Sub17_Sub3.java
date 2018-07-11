@@ -55,19 +55,19 @@ public class Class282_Sub17_Sub3 extends Class282_Sub17 {
 	}
 
 	static final void method15404(CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		client.aShort7276 = (short) (class527.intStack[class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 567564004;
+		client.aShort7276 = (short) (class527.intStack[class527.intStackPtr * 1942118537]);
 		if (client.aShort7276 <= 0)
 			client.aShort7276 = (short) 1;
-		client.aShort7441 = (short) (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		client.aShort7441 = (short) (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		if (client.aShort7441 <= 0)
 			client.aShort7441 = (short) 32767;
 		else if (client.aShort7441 < client.aShort7276)
 			client.aShort7441 = client.aShort7276;
-		client.aShort7214 = (short) (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		client.aShort7214 = (short) (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
 		if (client.aShort7214 <= 0)
 			client.aShort7214 = (short) 1;
-		client.aShort7474 = (short) (class527.intStack[3 + class527.anInt7012 * 1942118537]);
+		client.aShort7474 = (short) (class527.intStack[3 + class527.intStackPtr * 1942118537]);
 		if (client.aShort7474 <= 0)
 			client.aShort7474 = (short) 32767;
 		else if (client.aShort7474 < client.aShort7214)

@@ -63,12 +63,12 @@ public class Class2 {
 	}
 
 	static final void method261(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.animable.loadedInterfaceId * 226532721);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class527.animable.loadedInterfaceId * 226532721);
 	}
 
-	public static Class458[] method262(byte i) {
-		return (new Class458[] { Class458.aClass458_5475, Class458.aClass458_5486, Class458.aClass458_5492, Class458.aClass458_5484, Class458.aClass458_5471, Class458.aClass458_5488, Class458.aClass458_5474, Class458.aClass458_5476, Class458.aClass458_5489, Class458.aClass458_5478, Class458.aClass458_5493, Class458.aClass458_5473, Class458.aClass458_5479, Class458.aClass458_5472, Class458.aClass458_5490, Class458.aClass458_5487, Class458.aClass458_5477, Class458.aClass458_5480,
-				Class458.aClass458_5491, Class458.aClass458_5485, Class458.aClass458_5470, Class458.aClass458_5482, Class458.aClass458_5483 });
+	public static SceneObjectType[] method262(byte i) {
+		return (new SceneObjectType[] { SceneObjectType.STRAIGHT_INSIDE_WALL_DEC, SceneObjectType.STRAIGHT_SLOPE_ROOF, SceneObjectType.GROUND_INTERACT, SceneObjectType.STRAIGHT_SLOPE_CORNER_ROOF, SceneObjectType.STRAIGHT_BOTTOM_EDGE_ROOF, SceneObjectType.STRAIGHT_BOTTOM_EDGE_CONNECT_ROOF, SceneObjectType.WALL_INTERACT, SceneObjectType.STRAIGHT_OUSIDE_WALL_DEC, SceneObjectType.STRAIGHT_BOTTOM_EDGE_CONNECT_CORNER_ROOF, SceneObjectType.DIAGONAL_INSIDE_WALL_DEC, SceneObjectType.WALL_DIAGONAL_CORNER, SceneObjectType.WALL_STRAIGHT_CORNER, SceneObjectType.DIAGONAL_INWALL_DEC, SceneObjectType.WALL_WHOLE_CORNER, SceneObjectType.SCENERY_INTERACT, SceneObjectType.DIAGONAL_BOTTOM_EDGE_CONNECT_ROOF, SceneObjectType.DIAGONAL_OUTSIDE_WALL_DEC, SceneObjectType.GROUND_DECORATION,
+				SceneObjectType.DIAGONAL_SLOPE_ROOF, SceneObjectType.STRAIGHT_FLAT_ROOF, SceneObjectType.WALL_STRAIGHT, SceneObjectType.DIAGONAL_SLOPE_CONNECT_ROOF, SceneObjectType.STRAIGHT_SLOPE_CORNER_CONNECT_ROOF });
 	}
 
 	static void method263(Class282_Sub18 class282_sub18, byte i) {

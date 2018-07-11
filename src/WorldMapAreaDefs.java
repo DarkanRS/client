@@ -341,16 +341,16 @@ public class WorldMapAreaDefs {
 	}
 
 	static final void method3737(CS2Executor class527, short i) {
-		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 0) {
+		if ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 0) {
 			if (i < 2048)
 				class527.instrPtr += (-1051529003 * (class527.intOpValues[class527.instrPtr * 301123709]));
 		}
 	}
 
 	static final void method3738(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_73_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_74_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_73_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_74_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		if (-1 == i_73_ && i_74_ == -1)
 			class118.aClass118_1379 = null;
 		else
@@ -358,11 +358,11 @@ public class WorldMapAreaDefs {
 	}
 
 	static final void method3739(CS2Executor class527, int i) {
-		int i_75_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_75_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (client.anInt7434 * 1609086245 == 2 && i_75_ < 493536965 * client.anInt7449)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = client.aClass6Array7452[i_75_].aBool38 ? 1 : 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = client.aClass6Array7452[i_75_].aBool38 ? 1 : 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static final void method3740(CS2Executor class527, int i) {
@@ -370,7 +370,7 @@ public class WorldMapAreaDefs {
 		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
 		if (null != class409.anIntArray4886)
 			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class409 != null ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class409 != null ? 1 : 0;
 	}
 
 	public static String method3741(byte i) {
@@ -520,6 +520,6 @@ public class WorldMapAreaDefs {
 	}
 
 	static final void method3743(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7325 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7325 ? 1 : 0;
 	}
 }

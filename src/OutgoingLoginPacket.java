@@ -39,18 +39,18 @@ public class OutgoingLoginPacket {
 	}
 
 	static final void method6313(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		class118.anInt1404 = (class527.intStack[class527.anInt7012 * 1942118537]) * -619343517;
-		class118.anInt1432 = (class527.intStack[1 + class527.anInt7012 * 1942118537]) * 664420687;
-		class118.anInt1433 = (class527.intStack[2 + 1942118537 * class527.anInt7012]) * 656180565;
-		class118.anInt1434 = 265875707 * (class527.intStack[1942118537 * class527.anInt7012 + 3]);
+		class527.intStackPtr -= 567564004;
+		class118.anInt1404 = (class527.intStack[class527.intStackPtr * 1942118537]) * -619343517;
+		class118.anInt1432 = (class527.intStack[1 + class527.intStackPtr * 1942118537]) * 664420687;
+		class118.anInt1433 = (class527.intStack[2 + 1942118537 * class527.intStackPtr]) * 656180565;
+		class118.anInt1434 = 265875707 * (class527.intStack[1942118537 * class527.intStackPtr + 3]);
 		Class109.method1858(class118, (byte) 33);
 	}
 
 	static final void method6314(CS2Executor class527, short i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 985215637 * class118.anInt1320;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 985215637 * class118.anInt1320;
 	}
 
 	static final void method6315(CS2Executor class527, byte i) {
@@ -66,12 +66,12 @@ public class OutgoingLoginPacket {
 	}
 
 	static final void method6316(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1903324139 * client.aClass330Array7428[i_2_].anInt3863;
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1903324139 * client.aClass330Array7428[i_2_].anInt3863;
 	}
 
 	static final void method6317(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class169.method2875(client.anInt7166 * -1741204137, -2059083211) ? 1 : 0);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (Class169.method2875(client.anInt7166 * -1741204137, -2059083211) ? 1 : 0);
 	}
 
 	static final void method6318(CS2Executor class527, int i) {

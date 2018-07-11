@@ -26,12 +26,12 @@ public class Class363 {
 	}
 
 	static final void method6284(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 1383536878).anInt5051 * 15210351);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 1383536878).anInt5051 * 15210351);
 	}
 
 	static final void method6285(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 456793949 * Class9.anInt72;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 456793949 * Class9.anInt72;
 	}
 
 	static final void method6286(long l) {
@@ -83,12 +83,12 @@ public class Class363 {
 		else if (1277328401 * class521_sub1_sub1_sub2.anInt10345 >= -1809259861 * client.cycles)
 			Class463.method7727(class521_sub1_sub1_sub2, -1790074477);
 		else {
-			Class282_Sub51.method13466(class521_sub1_sub1_sub2, bool, 141891001);
+			SystemInfo.method13466(class521_sub1_sub1_sub2, bool, 141891001);
 			i_6_ = 1714233093 * Class44.anInt430;
 			i_7_ = Class8_Sub1.anInt8515 * -1293360775;
 		}
 		Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-		if ((int) class385.x < 512 || (int) class385.z < 512 || ((int) class385.x >= (IndexLoaders.MAP_REGION_DECODER.method4424(735172073) - 1) * 512) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-1048165287) - 1) * 512))) {
+		if ((int) class385.x < 512 || (int) class385.z < 512 || ((int) class385.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(735172073) - 1) * 512) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.getSizeY(-1048165287) - 1) * 512))) {
 			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
 			for (int i_8_ = 0; i_8_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_8_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_8_].anInt2012 = 1025302087;
@@ -99,10 +99,10 @@ public class Class363 {
 			class521_sub1_sub1_sub2.anInt10345 = 0;
 			i_6_ = Class249.aClass249_3083.aByte3085;
 			i_7_ = 0;
-			class521_sub1_sub1_sub2.method11172((float) (512 * class521_sub1_sub1_sub2.regionBaseX[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.y, (float) (class521_sub1_sub1_sub2.regionBaseY[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
+			class521_sub1_sub1_sub2.method11172((float) (512 * class521_sub1_sub1_sub2.regionBaseX[0] + (class521_sub1_sub1_sub2.getSize(828768449) * 256)), class385.y, (float) (class521_sub1_sub1_sub2.regionBaseY[0] * 512 + (class521_sub1_sub1_sub2.getSize(828768449) * 256)));
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
-		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.x < 6144 || (int) class385.z < 6144 || ((int) class385.x >= ((IndexLoaders.MAP_REGION_DECODER.method4424(723986373) - 12) * 512)) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.method4451(-806842262) - 12) * 512)))) {
+		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.x < 6144 || (int) class385.z < 6144 || ((int) class385.x >= ((IndexLoaders.MAP_REGION_DECODER.getSizeX(723986373) - 12) * 512)) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.getSizeY(-806842262) - 12) * 512)))) {
 			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
 			for (int i_9_ = 0; i_9_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_9_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_9_].anInt2012 = 1025302087;
@@ -113,7 +113,7 @@ public class Class363 {
 			class521_sub1_sub1_sub2.anInt10345 = 0;
 			i_6_ = Class249.aClass249_3083.aByte3085;
 			i_7_ = 0;
-			class521_sub1_sub1_sub2.method11172((float) (class521_sub1_sub1_sub2.regionBaseX[0] * 512 + (class521_sub1_sub1_sub2.method15805(828768449) * 256)), class385.y, (float) (512 * class521_sub1_sub1_sub2.regionBaseY[0] + (class521_sub1_sub1_sub2.method15805(828768449) * 256)));
+			class521_sub1_sub1_sub2.method11172((float) (class521_sub1_sub1_sub2.regionBaseX[0] * 512 + (class521_sub1_sub1_sub2.getSize(828768449) * 256)), class385.y, (float) (512 * class521_sub1_sub1_sub2.regionBaseY[0] + (class521_sub1_sub1_sub2.getSize(828768449) * 256)));
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
 		int i_10_ = Class427.method7188(class521_sub1_sub1_sub2, 1919547361);

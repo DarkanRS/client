@@ -22,8 +22,8 @@ public class Class85 {
 
 	static final void method1467(CS2Executor class527, int i) {
 		if (-1353302673 * client.anInt7319 >= 5 && -1353302673 * client.anInt7319 <= 9)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 }

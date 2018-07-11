@@ -228,12 +228,12 @@ public final class Class155 {
 	}
 
 	static final void method2639(CS2Executor class527, short i) {
-		int i_52_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_52_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class527.animable);
 		int i_53_ = class521_sub1_sub1_sub2_sub2.method16163(i_52_, -2060228859);
 		int i_54_ = class521_sub1_sub1_sub2_sub2.method16169(i_52_, (byte) -49);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_53_;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_54_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_53_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_54_;
 	}
 
 	static Animable method2640(int i, int i_55_, int i_56_, int i_57_) {
@@ -246,7 +246,7 @@ public final class Class155 {
 			Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 			if (class521_sub1_sub1 instanceof Animable) {
 				Animable class521_sub1_sub1_sub2_59_ = (Animable) class521_sub1_sub1;
-				int i_60_ = (class521_sub1_sub1_sub2_59_.method15805(828768449) - 1) * 256 + 252;
+				int i_60_ = (class521_sub1_sub1_sub2_59_.getSize(828768449) - 1) * 256 + 252;
 				Vector3 class385 = class521_sub1_sub1_sub2_59_.method11166().aClass385_3595;
 				int i_61_ = (int) class385.x - i_60_ >> 9;
 				int i_62_ = (int) class385.z - i_60_ >> 9;

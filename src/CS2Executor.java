@@ -21,7 +21,7 @@ public class CS2Executor {
 	Class346 aClass346_7009;
 	Class61 aClass61_7010;
 	Class282_Sub4 aClass282_Sub4_7011;
-	int anInt7012 = 0;
+	int intStackPtr = 0;
 	SceneObject anInterface12_7013;
 	Class521_Sub1_Sub2_Sub1 aClass521_Sub1_Sub2_Sub1_7014;
 	int anInt7015;
@@ -58,7 +58,7 @@ public class CS2Executor {
 	}
 
 	static final void method11252(CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_4_, (byte) 112);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_4_ >> 16];
 		Class159.method2741(class118, class98, class527, (byte) 59);

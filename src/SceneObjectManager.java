@@ -68,21 +68,21 @@ public class SceneObjectManager {
 	boolean[][] aBoolArrayArray2651;
 	int anInt2652;
 
-	public void method3377(int i, int i_0_, int i_1_, Class521_Sub1_Sub3 class521_sub1_sub3) {
+	public void method3377(int i, int i_0_, int i_1_, SceneObjectNode class521_sub1_sub3) {
 		Class293 class293 = method3459(i, i_0_, i_1_, -855868021);
 		if (class293 != null) {
 			class293.aClass521_Sub1_Sub3_3499 = class521_sub1_sub3;
 			int i_2_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-840829634)) {
 				if (class521_sub1_sub3.method12987(560630672)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_2_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_2_];
 					((SceneObjectManager) this).aClass521_Sub1Array2633[i_2_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_2_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_2_];
 					((SceneObjectManager) this).aClass521_Sub1Array2605[i_2_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_2_];
+				((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_2_];
 				((SceneObjectManager) this).aClass521_Sub1Array2649[i_2_] = class521_sub1_sub3;
 			}
 		}
@@ -122,18 +122,18 @@ public class SceneObjectManager {
 				for (Class208 class208 = class293_10_.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 					Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 					if (class521_sub1_sub1.aShort9458 == i && class521_sub1_sub1.aShort9456 == i_7_)
-						class521_sub1_sub1.aByte7967--;
+						class521_sub1_sub1.plane--;
 				}
 				if (null != class293_10_.aClass521_Sub1_Sub3_3499)
-					class293_10_.aClass521_Sub1_Sub3_3499.aByte7967--;
+					class293_10_.aClass521_Sub1_Sub3_3499.plane--;
 				if (null != class293_10_.aClass521_Sub1_Sub5_3505)
-					class293_10_.aClass521_Sub1_Sub5_3505.aByte7967--;
+					class293_10_.aClass521_Sub1_Sub5_3505.plane--;
 				if (null != class293_10_.aClass521_Sub1_Sub5_3502)
-					class293_10_.aClass521_Sub1_Sub5_3502.aByte7967--;
+					class293_10_.aClass521_Sub1_Sub5_3502.plane--;
 				if (class293_10_.aClass521_Sub1_Sub4_3503 != null)
-					class293_10_.aClass521_Sub1_Sub4_3503.aByte7967--;
+					class293_10_.aClass521_Sub1_Sub4_3503.plane--;
 				if (null != class293_10_.aClass521_Sub1_Sub4_3500)
-					class293_10_.aClass521_Sub1_Sub4_3500.aByte7967--;
+					class293_10_.aClass521_Sub1_Sub4_3500.plane--;
 			}
 		}
 		if (null == aClass293ArrayArrayArray2604[0][i][i_7_]) {
@@ -368,21 +368,21 @@ public class SceneObjectManager {
 			((SceneObjectManager) this).aByteArrayArray2620[i][i_72_] = (byte) i_78_;
 	}
 
-	public void method3393(int i, int i_80_, int i_81_, Class521_Sub1_Sub3 class521_sub1_sub3, int i_82_) {
+	public void method3393(int i, int i_80_, int i_81_, SceneObjectNode class521_sub1_sub3, int i_82_) {
 		Class293 class293 = method3459(i, i_80_, i_81_, -204527757);
 		if (class293 != null) {
 			class293.aClass521_Sub1_Sub3_3499 = class521_sub1_sub3;
 			int i_83_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-152076894)) {
 				if (class521_sub1_sub3.method12987(1864171775)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_83_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_83_];
 					((SceneObjectManager) this).aClass521_Sub1Array2633[i_83_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_83_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_83_];
 					((SceneObjectManager) this).aClass521_Sub1Array2605[i_83_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_83_];
+				((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_83_];
 				((SceneObjectManager) this).aClass521_Sub1Array2649[i_83_] = class521_sub1_sub3;
 			}
 		}
@@ -485,12 +485,12 @@ public class SceneObjectManager {
 		short i_101_ = 0;
 		byte i_102_ = 0;
 		class521_sub1_sub1.method14697((byte) 115);
-		if (class521_sub1_sub1.aShort9458 < 0 || class521_sub1_sub1.aShort9456 < 0 || class521_sub1_sub1.aShort9455 >= anInt2617 * -1912960305 || class521_sub1_sub1.aShort9457 >= -18177099 * anInt2603)
+		if (class521_sub1_sub1.aShort9458 < 0 || class521_sub1_sub1.aShort9456 < 0 || class521_sub1_sub1.localX >= anInt2617 * -1912960305 || class521_sub1_sub1.localY >= -18177099 * anInt2603)
 			return false;
 		short i_103_ = 0;
-		for (int i_104_ = class521_sub1_sub1.aShort9458; i_104_ <= class521_sub1_sub1.aShort9455; i_104_++) {
-			for (int i_105_ = class521_sub1_sub1.aShort9456; i_105_ <= class521_sub1_sub1.aShort9457; i_105_++) {
-				Class293 class293 = method3459(class521_sub1_sub1.aByte7967, i_104_, i_105_, 123590531);
+		for (int i_104_ = class521_sub1_sub1.aShort9458; i_104_ <= class521_sub1_sub1.localX; i_104_++) {
+			for (int i_105_ = class521_sub1_sub1.aShort9456; i_105_ <= class521_sub1_sub1.localY; i_105_++) {
+				Class293 class293 = method3459(class521_sub1_sub1.plane, i_104_, i_105_, 123590531);
 				if (class293 != null) {
 					Class208 class208 = Class153.method2622(class521_sub1_sub1, -2120940003);
 					Class208 class208_106_ = class293.aClass208_3504;
@@ -513,8 +513,8 @@ public class SceneObjectManager {
 			}
 		}
 		if (bool_99_ && (i_100_ & ~0xffffff) != 0) {
-			for (int i_107_ = class521_sub1_sub1.aShort9458; i_107_ <= class521_sub1_sub1.aShort9455; i_107_++) {
-				for (int i_108_ = class521_sub1_sub1.aShort9456; i_108_ <= class521_sub1_sub1.aShort9457; i_108_++) {
+			for (int i_107_ = class521_sub1_sub1.aShort9458; i_107_ <= class521_sub1_sub1.localX; i_107_++) {
+				for (int i_108_ = class521_sub1_sub1.aShort9456; i_108_ <= class521_sub1_sub1.localY; i_108_++) {
 					if (0 == ((((SceneObjectManager) this).anIntArrayArray2606[i_107_][i_108_]) & ~0xffffff)) {
 						((SceneObjectManager) this).anIntArrayArray2606[i_107_][i_108_] = i_100_;
 						((SceneObjectManager) this).aShortArrayArray2611[i_107_][i_108_] = i_101_;
@@ -597,11 +597,11 @@ public class SceneObjectManager {
 						for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 							Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 							if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-776427124)) {
-								method3452(class521_sub1_sub1, i, i_116_, i_117_, 1 + (class521_sub1_sub1.aShort9455 - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.aShort9457 - class521_sub1_sub1.aShort9456 + 1));
+								method3452(class521_sub1_sub1, i, i_116_, i_117_, 1 + (class521_sub1_sub1.localX - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.localY - class521_sub1_sub1.aShort9456 + 1));
 								class521_sub1_sub1.method12984(1378070205);
 							}
 						}
-						Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+						SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 						if (null != class521_sub1_sub3 && class521_sub1_sub3.method12985(-1912639539)) {
 							method3417(class521_sub1_sub3, i, i_116_, i_117_, 1236537030);
 							class521_sub1_sub3.method12984(107766505);
@@ -635,13 +635,13 @@ public class SceneObjectManager {
 		((Class521_Sub1) class521_sub1).anInt7969 = (int) ((SceneObjectManager) this).aFloatArray2639[2] * -721433345;
 	}
 
-	public Class521_Sub1_Sub3 method3404(int i, int i_123_, int i_124_, int i_125_) {
+	public SceneObjectNode method3404(int i, int i_123_, int i_124_, int i_125_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_123_][i_124_];
 		if (class293 == null)
 			return null;
 		method3408(class293.aClass521_Sub1_Sub3_3499, 2096802032);
 		if (null != class293.aClass521_Sub1_Sub3_3499) {
-			Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+			SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 			class293.aClass521_Sub1_Sub3_3499 = null;
 			return class521_sub1_sub3;
 		}
@@ -663,9 +663,9 @@ public class SceneObjectManager {
 	}
 
 	void method3407(Class521_Sub1_Sub1 class521_sub1_sub1, boolean bool, int i) {
-		for (int i_129_ = class521_sub1_sub1.aShort9458; i_129_ <= class521_sub1_sub1.aShort9455; i_129_++) {
-			for (int i_130_ = class521_sub1_sub1.aShort9456; i_130_ <= class521_sub1_sub1.aShort9457; i_130_++) {
-				Class293 class293 = (aClass293ArrayArrayArray2604[class521_sub1_sub1.aByte7967][i_129_][i_130_]);
+		for (int i_129_ = class521_sub1_sub1.aShort9458; i_129_ <= class521_sub1_sub1.localX; i_129_++) {
+			for (int i_130_ = class521_sub1_sub1.aShort9456; i_130_ <= class521_sub1_sub1.localY; i_130_++) {
+				Class293 class293 = (aClass293ArrayArrayArray2604[class521_sub1_sub1.plane][i_129_][i_130_]);
 				if (null != class293) {
 					Class208 class208 = class293.aClass208_3504;
 					Class208 class208_131_ = null;
@@ -736,18 +736,18 @@ public class SceneObjectManager {
 				for (Class208 class208 = class293_139_.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 					Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 					if (class521_sub1_sub1.aShort9458 == i && class521_sub1_sub1.aShort9456 == i_137_)
-						class521_sub1_sub1.aByte7967--;
+						class521_sub1_sub1.plane--;
 				}
 				if (null != class293_139_.aClass521_Sub1_Sub3_3499)
-					class293_139_.aClass521_Sub1_Sub3_3499.aByte7967--;
+					class293_139_.aClass521_Sub1_Sub3_3499.plane--;
 				if (null != class293_139_.aClass521_Sub1_Sub5_3505)
-					class293_139_.aClass521_Sub1_Sub5_3505.aByte7967--;
+					class293_139_.aClass521_Sub1_Sub5_3505.plane--;
 				if (null != class293_139_.aClass521_Sub1_Sub5_3502)
-					class293_139_.aClass521_Sub1_Sub5_3502.aByte7967--;
+					class293_139_.aClass521_Sub1_Sub5_3502.plane--;
 				if (class293_139_.aClass521_Sub1_Sub4_3503 != null)
-					class293_139_.aClass521_Sub1_Sub4_3503.aByte7967--;
+					class293_139_.aClass521_Sub1_Sub4_3503.plane--;
 				if (null != class293_139_.aClass521_Sub1_Sub4_3500)
-					class293_139_.aClass521_Sub1_Sub4_3500.aByte7967--;
+					class293_139_.aClass521_Sub1_Sub4_3500.plane--;
 			}
 		}
 		if (null == aClass293ArrayArrayArray2604[0][i][i_137_]) {
@@ -824,11 +824,11 @@ public class SceneObjectManager {
 						for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 							Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 							if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1113236390)) {
-								method3452(class521_sub1_sub1, i, i_149_, i_150_, 1 + (class521_sub1_sub1.aShort9455 - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.aShort9457 - class521_sub1_sub1.aShort9456 + 1));
+								method3452(class521_sub1_sub1, i, i_149_, i_150_, 1 + (class521_sub1_sub1.localX - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.localY - class521_sub1_sub1.aShort9456 + 1));
 								class521_sub1_sub1.method12984(-680352242);
 							}
 						}
-						Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+						SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 						if (null != class521_sub1_sub3 && class521_sub1_sub3.method12985(-1402022893)) {
 							method3417(class521_sub1_sub3, i, i_149_, i_150_, 1147445654);
 							class521_sub1_sub3.method12984(-423188382);
@@ -839,7 +839,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub3 getGroundDecoration(int plane, int x, int y, int i_154_) {
+	public SceneObjectNode getGroundDecoration(int plane, int x, int y, int i_154_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[plane][x][y];
 		if (null == class293 || class293.aClass521_Sub1_Sub3_3499 == null)
 			return null;
@@ -873,21 +873,21 @@ public class SceneObjectManager {
 		}
 	}
 
-	public void method3418(int i, int i_159_, int i_160_, Class521_Sub1_Sub3 class521_sub1_sub3) {
+	public void method3418(int i, int i_159_, int i_160_, SceneObjectNode class521_sub1_sub3) {
 		Class293 class293 = method3459(i, i_159_, i_160_, 1740144813);
 		if (class293 != null) {
 			class293.aClass521_Sub1_Sub3_3499 = class521_sub1_sub3;
 			int i_161_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-132760109)) {
 				if (class521_sub1_sub3.method12987(297507035)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_161_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_161_];
 					((SceneObjectManager) this).aClass521_Sub1Array2633[i_161_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_161_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_161_];
 					((SceneObjectManager) this).aClass521_Sub1Array2605[i_161_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_161_];
+				((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_161_];
 				((SceneObjectManager) this).aClass521_Sub1Array2649[i_161_] = class521_sub1_sub3;
 			}
 		}
@@ -949,14 +949,14 @@ public class SceneObjectManager {
 		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
-			int i_172_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
-			int i_173_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9457;
+			int i_172_ = ((Class521_Sub1_Sub1) class521_sub1).localX;
+			int i_173_ = ((Class521_Sub1_Sub1) class521_sub1).localY;
 			int i_174_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9458;
 			int i_175_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_176_ = i_174_; i_176_ <= i_172_; i_176_++) {
 				for (int i_177_ = i_175_; i_177_ <= i_173_; i_177_++) {
 					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_176_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_176_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_177_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_177_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_171_ == (is[class521_sub1.aByte7967][i_176_][i_177_])) || !class521_sub1.method13029((byte) 1) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 1922998214)) {
+						if ((null != is && class521_sub1.plane >= i && i_171_ == (is[class521_sub1.plane][i_176_][i_177_])) || !class521_sub1.method13029((byte) 1) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 1922998214)) {
 							if (!bool && i_176_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_176_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_177_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_177_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
 								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -1308770774);
 							return true;
@@ -971,7 +971,7 @@ public class SceneObjectManager {
 		int i_178_ = (int) class385.x >> -1928575293 * anInt2592;
 		int i_179_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_178_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_178_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_179_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_179_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_178_][i_179_] == i_171_) || !class521_sub1.method13029((byte) -39) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -53758878)) {
+			if ((null != is && class521_sub1.plane >= i && is[class521_sub1.plane][i_178_][i_179_] == i_171_) || !class521_sub1.method13029((byte) -39) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -53758878)) {
 				if (!bool && i_178_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_178_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_179_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_179_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
 					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -1131763435);
 				return true;
@@ -985,14 +985,14 @@ public class SceneObjectManager {
 		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
-			int i_181_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
-			int i_182_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9457;
+			int i_181_ = ((Class521_Sub1_Sub1) class521_sub1).localX;
+			int i_182_ = ((Class521_Sub1_Sub1) class521_sub1).localY;
 			int i_183_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9458;
 			int i_184_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_185_ = i_183_; i_185_ <= i_181_; i_185_++) {
 				for (int i_186_ = i_184_; i_186_ <= i_182_; i_186_++) {
 					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_185_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_185_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_186_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_186_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_180_ == (is[class521_sub1.aByte7967][i_185_][i_186_])) || !class521_sub1.method13029((byte) -82) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 1868678759)) {
+						if ((null != is && class521_sub1.plane >= i && i_180_ == (is[class521_sub1.plane][i_185_][i_186_])) || !class521_sub1.method13029((byte) -82) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 1868678759)) {
 							if (!bool && i_185_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_185_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_186_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_186_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
 								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -978759949);
 							return true;
@@ -1007,7 +1007,7 @@ public class SceneObjectManager {
 		int i_187_ = (int) class385.x >> -1928575293 * anInt2592;
 		int i_188_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_187_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_187_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_188_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_188_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_187_][i_188_] == i_180_) || !class521_sub1.method13029((byte) -71) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -843272103)) {
+			if ((null != is && class521_sub1.plane >= i && is[class521_sub1.plane][i_187_][i_188_] == i_180_) || !class521_sub1.method13029((byte) -71) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -843272103)) {
 				if (!bool && i_187_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_187_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_188_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_188_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
 					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -835940518);
 				return true;
@@ -1256,18 +1256,18 @@ public class SceneObjectManager {
 				for (Class208 class208 = class293_253_.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 					Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 					if (class521_sub1_sub1.aShort9458 == i && class521_sub1_sub1.aShort9456 == i_251_)
-						class521_sub1_sub1.aByte7967--;
+						class521_sub1_sub1.plane--;
 				}
 				if (null != class293_253_.aClass521_Sub1_Sub3_3499)
-					class293_253_.aClass521_Sub1_Sub3_3499.aByte7967--;
+					class293_253_.aClass521_Sub1_Sub3_3499.plane--;
 				if (null != class293_253_.aClass521_Sub1_Sub5_3505)
-					class293_253_.aClass521_Sub1_Sub5_3505.aByte7967--;
+					class293_253_.aClass521_Sub1_Sub5_3505.plane--;
 				if (null != class293_253_.aClass521_Sub1_Sub5_3502)
-					class293_253_.aClass521_Sub1_Sub5_3502.aByte7967--;
+					class293_253_.aClass521_Sub1_Sub5_3502.plane--;
 				if (class293_253_.aClass521_Sub1_Sub4_3503 != null)
-					class293_253_.aClass521_Sub1_Sub4_3503.aByte7967--;
+					class293_253_.aClass521_Sub1_Sub4_3503.plane--;
 				if (null != class293_253_.aClass521_Sub1_Sub4_3500)
-					class293_253_.aClass521_Sub1_Sub4_3500.aByte7967--;
+					class293_253_.aClass521_Sub1_Sub4_3500.plane--;
 			}
 		}
 		if (null == aClass293ArrayArrayArray2604[0][i][i_251_]) {
@@ -1687,8 +1687,8 @@ public class SceneObjectManager {
 									for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 										Class521_Sub1_Sub1 class521_sub1_sub1 = (class208.aClass521_Sub1_Sub1_2659);
 										if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1911399746) && ((class521_sub1_sub1.aShort9458 == i_342_) || i_337_ == i_342_) && ((class521_sub1_sub1.aShort9456 == i_343_) || i_339_ == i_343_)) {
-											int i_346_ = ((class521_sub1_sub1.aShort9455) - (class521_sub1_sub1.aShort9458) + 1);
-											int i_347_ = 1 + ((class521_sub1_sub1.aShort9457) - (class521_sub1_sub1.aShort9456));
+											int i_346_ = ((class521_sub1_sub1.localX) - (class521_sub1_sub1.aShort9458) + 1);
+											int i_347_ = 1 + ((class521_sub1_sub1.localY) - (class521_sub1_sub1.aShort9456));
 											class521_sub1.method13013((((SceneObjectManager) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((SceneObjectManager) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_333_)) + ((((SceneObjectManager) this).anInt2594) * -1428980483 * (i_346_ - i_335_))), i_344_, (((i_347_ - i_336_) * ((((SceneObjectManager) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_334_) * ((((SceneObjectManager) this).anInt2593) * 1885735347))), bool, -1732186752);
 										}
 									}
@@ -1764,21 +1764,21 @@ public class SceneObjectManager {
 		return null;
 	}
 
-	public void method3461(int i, int i_363_, int i_364_, Class521_Sub1_Sub3 class521_sub1_sub3) {
+	public void method3461(int i, int i_363_, int i_364_, SceneObjectNode class521_sub1_sub3) {
 		Class293 class293 = method3459(i, i_363_, i_364_, 1065789395);
 		if (class293 != null) {
 			class293.aClass521_Sub1_Sub3_3499 = class521_sub1_sub3;
 			int i_365_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-1673897900)) {
 				if (class521_sub1_sub3.method12987(1125733672)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_365_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_365_];
 					((SceneObjectManager) this).aClass521_Sub1Array2633[i_365_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_365_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_365_];
 					((SceneObjectManager) this).aClass521_Sub1Array2605[i_365_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_365_];
+				((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_365_];
 				((SceneObjectManager) this).aClass521_Sub1Array2649[i_365_] = class521_sub1_sub3;
 			}
 		}
@@ -1788,21 +1788,21 @@ public class SceneObjectManager {
 		return (((SceneObjectManager) this).aByteArrayArray2595 != null ? ((SceneObjectManager) this).aByteArrayArray2595[i][i_366_] & 0xff : 0);
 	}
 
-	public void method3463(int i, int i_367_, int i_368_, Class521_Sub1_Sub3 class521_sub1_sub3) {
+	public void method3463(int i, int i_367_, int i_368_, SceneObjectNode class521_sub1_sub3) {
 		Class293 class293 = method3459(i, i_367_, i_368_, -709223847);
 		if (class293 != null) {
 			class293.aClass521_Sub1_Sub3_3499 = class521_sub1_sub3;
 			int i_369_ = aClass390Array2591 == aClass390Array2614 ? 1 : 0;
 			if (class521_sub1_sub3.method12986(-1184376980)) {
 				if (class521_sub1_sub3.method12987(-140492741)) {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_369_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2633[i_369_];
 					((SceneObjectManager) this).aClass521_Sub1Array2633[i_369_] = class521_sub1_sub3;
 				} else {
-					((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_369_];
+					((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2605[i_369_];
 					((SceneObjectManager) this).aClass521_Sub1Array2605[i_369_] = class521_sub1_sub3;
 				}
 			} else {
-				((Class521_Sub1_Sub3) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_369_];
+				((SceneObjectNode) class521_sub1_sub3).aClass521_Sub1_7966 = ((SceneObjectManager) this).aClass521_Sub1Array2649[i_369_];
 				((SceneObjectManager) this).aClass521_Sub1Array2649[i_369_] = class521_sub1_sub3;
 			}
 		}
@@ -2057,12 +2057,12 @@ public class SceneObjectManager {
 		short i_407_ = 0;
 		byte i_408_ = 0;
 		class521_sub1_sub1.method14697((byte) 11);
-		if (class521_sub1_sub1.aShort9458 < 0 || class521_sub1_sub1.aShort9456 < 0 || class521_sub1_sub1.aShort9455 >= anInt2617 * -1912960305 || class521_sub1_sub1.aShort9457 >= -18177099 * anInt2603)
+		if (class521_sub1_sub1.aShort9458 < 0 || class521_sub1_sub1.aShort9456 < 0 || class521_sub1_sub1.localX >= anInt2617 * -1912960305 || class521_sub1_sub1.localY >= -18177099 * anInt2603)
 			return false;
 		short i_409_ = 0;
-		for (int i_410_ = class521_sub1_sub1.aShort9458; i_410_ <= class521_sub1_sub1.aShort9455; i_410_++) {
-			for (int i_411_ = class521_sub1_sub1.aShort9456; i_411_ <= class521_sub1_sub1.aShort9457; i_411_++) {
-				Class293 class293 = method3459(class521_sub1_sub1.aByte7967, i_410_, i_411_, 463648972);
+		for (int i_410_ = class521_sub1_sub1.aShort9458; i_410_ <= class521_sub1_sub1.localX; i_410_++) {
+			for (int i_411_ = class521_sub1_sub1.aShort9456; i_411_ <= class521_sub1_sub1.localY; i_411_++) {
+				Class293 class293 = method3459(class521_sub1_sub1.plane, i_410_, i_411_, 463648972);
 				if (class293 != null) {
 					Class208 class208 = Class153.method2622(class521_sub1_sub1, -1986379274);
 					Class208 class208_412_ = class293.aClass208_3504;
@@ -2085,8 +2085,8 @@ public class SceneObjectManager {
 			}
 		}
 		if (bool_406_ && (i & ~0xffffff) != 0) {
-			for (int i_413_ = class521_sub1_sub1.aShort9458; i_413_ <= class521_sub1_sub1.aShort9455; i_413_++) {
-				for (int i_414_ = class521_sub1_sub1.aShort9456; i_414_ <= class521_sub1_sub1.aShort9457; i_414_++) {
+			for (int i_413_ = class521_sub1_sub1.aShort9458; i_413_ <= class521_sub1_sub1.localX; i_413_++) {
+				for (int i_414_ = class521_sub1_sub1.aShort9456; i_414_ <= class521_sub1_sub1.localY; i_414_++) {
 					if (0 == ((((SceneObjectManager) this).anIntArrayArray2606[i_413_][i_414_]) & ~0xffffff)) {
 						((SceneObjectManager) this).anIntArrayArray2606[i_413_][i_414_] = i;
 						((SceneObjectManager) this).aShortArrayArray2611[i_413_][i_414_] = i_407_;
@@ -2128,12 +2128,12 @@ public class SceneObjectManager {
 		short i_417_ = 0;
 		byte i_418_ = 0;
 		class521_sub1_sub1.method14697((byte) 10);
-		if (class521_sub1_sub1.aShort9458 < 0 || class521_sub1_sub1.aShort9456 < 0 || class521_sub1_sub1.aShort9455 >= anInt2617 * -1912960305 || class521_sub1_sub1.aShort9457 >= -18177099 * anInt2603)
+		if (class521_sub1_sub1.aShort9458 < 0 || class521_sub1_sub1.aShort9456 < 0 || class521_sub1_sub1.localX >= anInt2617 * -1912960305 || class521_sub1_sub1.localY >= -18177099 * anInt2603)
 			return false;
 		short i_419_ = 0;
-		for (int i_420_ = class521_sub1_sub1.aShort9458; i_420_ <= class521_sub1_sub1.aShort9455; i_420_++) {
-			for (int i_421_ = class521_sub1_sub1.aShort9456; i_421_ <= class521_sub1_sub1.aShort9457; i_421_++) {
-				Class293 class293 = method3459(class521_sub1_sub1.aByte7967, i_420_, i_421_, 1565895691);
+		for (int i_420_ = class521_sub1_sub1.aShort9458; i_420_ <= class521_sub1_sub1.localX; i_420_++) {
+			for (int i_421_ = class521_sub1_sub1.aShort9456; i_421_ <= class521_sub1_sub1.localY; i_421_++) {
+				Class293 class293 = method3459(class521_sub1_sub1.plane, i_420_, i_421_, 1565895691);
 				if (class293 != null) {
 					Class208 class208 = Class153.method2622(class521_sub1_sub1, -735622954);
 					Class208 class208_422_ = class293.aClass208_3504;
@@ -2156,8 +2156,8 @@ public class SceneObjectManager {
 			}
 		}
 		if (bool_416_ && (i & ~0xffffff) != 0) {
-			for (int i_423_ = class521_sub1_sub1.aShort9458; i_423_ <= class521_sub1_sub1.aShort9455; i_423_++) {
-				for (int i_424_ = class521_sub1_sub1.aShort9456; i_424_ <= class521_sub1_sub1.aShort9457; i_424_++) {
+			for (int i_423_ = class521_sub1_sub1.aShort9458; i_423_ <= class521_sub1_sub1.localX; i_423_++) {
+				for (int i_424_ = class521_sub1_sub1.aShort9456; i_424_ <= class521_sub1_sub1.localY; i_424_++) {
 					if (0 == ((((SceneObjectManager) this).anIntArrayArray2606[i_423_][i_424_]) & ~0xffffff)) {
 						((SceneObjectManager) this).anIntArrayArray2606[i_423_][i_424_] = i;
 						((SceneObjectManager) this).aShortArrayArray2611[i_423_][i_424_] = i_417_;
@@ -2378,26 +2378,26 @@ public class SceneObjectManager {
 		return null;
 	}
 
-	public Class521_Sub1_Sub3 method3489(int i, int i_468_, int i_469_) {
+	public SceneObjectNode method3489(int i, int i_468_, int i_469_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_468_][i_469_];
 		if (class293 == null)
 			return null;
 		method3408(class293.aClass521_Sub1_Sub3_3499, 1733548178);
 		if (null != class293.aClass521_Sub1_Sub3_3499) {
-			Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+			SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 			class293.aClass521_Sub1_Sub3_3499 = null;
 			return class521_sub1_sub3;
 		}
 		return null;
 	}
 
-	public Class521_Sub1_Sub3 method3490(int i, int i_470_, int i_471_) {
+	public SceneObjectNode method3490(int i, int i_470_, int i_471_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_470_][i_471_];
 		if (class293 == null)
 			return null;
 		method3408(class293.aClass521_Sub1_Sub3_3499, 1021884097);
 		if (null != class293.aClass521_Sub1_Sub3_3499) {
-			Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+			SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 			class293.aClass521_Sub1_Sub3_3499 = null;
 			return class521_sub1_sub3;
 		}
@@ -2476,9 +2476,9 @@ public class SceneObjectManager {
 	}
 
 	void method3496(Class521_Sub1_Sub1 class521_sub1_sub1, boolean bool) {
-		for (int i = class521_sub1_sub1.aShort9458; i <= class521_sub1_sub1.aShort9455; i++) {
-			for (int i_484_ = class521_sub1_sub1.aShort9456; i_484_ <= class521_sub1_sub1.aShort9457; i_484_++) {
-				Class293 class293 = (aClass293ArrayArrayArray2604[class521_sub1_sub1.aByte7967][i][i_484_]);
+		for (int i = class521_sub1_sub1.aShort9458; i <= class521_sub1_sub1.localX; i++) {
+			for (int i_484_ = class521_sub1_sub1.aShort9456; i_484_ <= class521_sub1_sub1.localY; i_484_++) {
+				Class293 class293 = (aClass293ArrayArrayArray2604[class521_sub1_sub1.plane][i][i_484_]);
 				if (null != class293) {
 					Class208 class208 = class293.aClass208_3504;
 					Class208 class208_485_ = null;
@@ -2702,7 +2702,7 @@ public class SceneObjectManager {
 		}
 	}
 
-	public Class521_Sub1_Sub3 method3509(int i, int i_516_, int i_517_) {
+	public SceneObjectNode method3509(int i, int i_516_, int i_517_) {
 		Class293 class293 = aClass293ArrayArrayArray2604[i][i_516_][i_517_];
 		if (null == class293 || class293.aClass521_Sub1_Sub3_3499 == null)
 			return null;
@@ -2729,11 +2729,11 @@ public class SceneObjectManager {
 						for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 							Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 							if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1089672802)) {
-								method3452(class521_sub1_sub1, i, i_518_, i_519_, 1 + (class521_sub1_sub1.aShort9455 - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.aShort9457 - class521_sub1_sub1.aShort9456 + 1));
+								method3452(class521_sub1_sub1, i, i_518_, i_519_, 1 + (class521_sub1_sub1.localX - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.localY - class521_sub1_sub1.aShort9456 + 1));
 								class521_sub1_sub1.method12984(1847498492);
 							}
 						}
-						Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+						SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 						if (null != class521_sub1_sub3 && class521_sub1_sub3.method12985(-1372627430)) {
 							method3417(class521_sub1_sub3, i, i_518_, i_519_, 2139294126);
 							class521_sub1_sub3.method12984(1969618813);
@@ -2775,11 +2775,11 @@ public class SceneObjectManager {
 						for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 							Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
 							if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1830269089)) {
-								method3452(class521_sub1_sub1, i, i_524_, i_525_, 1 + (class521_sub1_sub1.aShort9455 - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.aShort9457 - class521_sub1_sub1.aShort9456 + 1));
+								method3452(class521_sub1_sub1, i, i_524_, i_525_, 1 + (class521_sub1_sub1.localX - (class521_sub1_sub1.aShort9458)), (class521_sub1_sub1.localY - class521_sub1_sub1.aShort9456 + 1));
 								class521_sub1_sub1.method12984(194418785);
 							}
 						}
-						Class521_Sub1_Sub3 class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
+						SceneObjectNode class521_sub1_sub3 = class293.aClass521_Sub1_Sub3_3499;
 						if (null != class521_sub1_sub3 && class521_sub1_sub3.method12985(-2143297831)) {
 							method3417(class521_sub1_sub3, i, i_524_, i_525_, 1099261163);
 							class521_sub1_sub3.method12984(-282004007);
@@ -2874,8 +2874,8 @@ public class SceneObjectManager {
 									for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 										Class521_Sub1_Sub1 class521_sub1_sub1 = (class208.aClass521_Sub1_Sub1_2659);
 										if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1526846111) && ((class521_sub1_sub1.aShort9458 == i_546_) || i_541_ == i_546_) && ((class521_sub1_sub1.aShort9456 == i_547_) || i_543_ == i_547_)) {
-											int i_550_ = ((class521_sub1_sub1.aShort9455) - (class521_sub1_sub1.aShort9458) + 1);
-											int i_551_ = 1 + ((class521_sub1_sub1.aShort9457) - (class521_sub1_sub1.aShort9456));
+											int i_550_ = ((class521_sub1_sub1.localX) - (class521_sub1_sub1.aShort9458) + 1);
+											int i_551_ = 1 + ((class521_sub1_sub1.localY) - (class521_sub1_sub1.aShort9456));
 											class521_sub1.method13013((((SceneObjectManager) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((SceneObjectManager) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_537_)) + ((((SceneObjectManager) this).anInt2594) * -1428980483 * (i_550_ - i_539_))), i_548_, (((i_551_ - i_540_) * ((((SceneObjectManager) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_538_) * ((((SceneObjectManager) this).anInt2593) * 1885735347))), bool, -2029114862);
 										}
 									}
@@ -3231,14 +3231,14 @@ public class SceneObjectManager {
 		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
-			int i_614_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
-			int i_615_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9457;
+			int i_614_ = ((Class521_Sub1_Sub1) class521_sub1).localX;
+			int i_615_ = ((Class521_Sub1_Sub1) class521_sub1).localY;
 			int i_616_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9458;
 			int i_617_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_618_ = i_616_; i_618_ <= i_614_; i_618_++) {
 				for (int i_619_ = i_617_; i_619_ <= i_615_; i_619_++) {
 					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_618_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_618_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_619_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_619_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_613_ == (is[class521_sub1.aByte7967][i_618_][i_619_])) || !class521_sub1.method13029((byte) -41) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), -1315565077)) {
+						if ((null != is && class521_sub1.plane >= i && i_613_ == (is[class521_sub1.plane][i_618_][i_619_])) || !class521_sub1.method13029((byte) -41) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), -1315565077)) {
 							if (!bool && i_618_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_618_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_619_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_619_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
 								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -219071901);
 							return true;
@@ -3253,7 +3253,7 @@ public class SceneObjectManager {
 		int i_620_ = (int) class385.x >> -1928575293 * anInt2592;
 		int i_621_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_620_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_620_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_621_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_621_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_620_][i_621_] == i_613_) || !class521_sub1.method13029((byte) -14) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -200390961)) {
+			if ((null != is && class521_sub1.plane >= i && is[class521_sub1.plane][i_620_][i_621_] == i_613_) || !class521_sub1.method13029((byte) -14) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, -200390961)) {
 				if (!bool && i_620_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_620_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_621_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_621_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
 					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -179855139);
 				return true;
@@ -3281,14 +3281,14 @@ public class SceneObjectManager {
 		if (!((SceneObjectManager) this).aBool2599)
 			return false;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1) {
-			int i_626_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9455;
-			int i_627_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9457;
+			int i_626_ = ((Class521_Sub1_Sub1) class521_sub1).localX;
+			int i_627_ = ((Class521_Sub1_Sub1) class521_sub1).localY;
 			int i_628_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9458;
 			int i_629_ = ((Class521_Sub1_Sub1) class521_sub1).aShort9456;
 			for (int i_630_ = i_628_; i_630_ <= i_626_; i_630_++) {
 				for (int i_631_ = i_629_; i_631_ <= i_627_; i_631_++) {
 					if (class521_sub1.aByte7968 < -1485737447 * anInt2601 && i_630_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_630_ < ((SceneObjectManager) this).anInt2638 * 170184033 && i_631_ >= ((SceneObjectManager) this).anInt2621 * -1955723827 && i_631_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-						if ((null != is && class521_sub1.aByte7967 >= i && i_625_ == (is[class521_sub1.aByte7967][i_630_][i_631_])) || !class521_sub1.method13029((byte) -19) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 146381757)) {
+						if ((null != is && class521_sub1.plane >= i && i_625_ == (is[class521_sub1.plane][i_630_][i_631_])) || !class521_sub1.method13029((byte) -19) || class521_sub1.method13037((((SceneObjectManager) this).aClass505_2596), 146381757)) {
 							if (!bool && i_630_ >= -527863643 * (((SceneObjectManager) this).anInt2628) - 16 && i_630_ <= 16 + -527863643 * ((SceneObjectManager) this).anInt2628 && i_631_ >= 1580412859 * (((SceneObjectManager) this).anInt2629) - 16 && i_631_ <= 16 + (((SceneObjectManager) this).anInt2629 * 1580412859))
 								class521_sub1.method12991((((SceneObjectManager) this).aClass505_2596), -1631650110);
 							return true;
@@ -3303,7 +3303,7 @@ public class SceneObjectManager {
 		int i_632_ = (int) class385.x >> -1928575293 * anInt2592;
 		int i_633_ = (int) class385.z >> -1928575293 * anInt2592;
 		if (class521_sub1.aByte7968 < anInt2601 * -1485737447 && i_632_ >= ((SceneObjectManager) this).anInt2637 * 260560053 && i_632_ < 170184033 * ((SceneObjectManager) this).anInt2638 && i_633_ >= -1955723827 * ((SceneObjectManager) this).anInt2621 && i_633_ < ((SceneObjectManager) this).anInt2640 * -887086501) {
-			if ((null != is && class521_sub1.aByte7967 >= i && is[class521_sub1.aByte7967][i_632_][i_633_] == i_625_) || !class521_sub1.method13029((byte) -122) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, 363865494)) {
+			if ((null != is && class521_sub1.plane >= i && is[class521_sub1.plane][i_632_][i_633_] == i_625_) || !class521_sub1.method13029((byte) -122) || class521_sub1.method13037(((SceneObjectManager) this).aClass505_2596, 363865494)) {
 				if (!bool && i_632_ >= -527863643 * ((SceneObjectManager) this).anInt2628 - 16 && i_632_ <= -527863643 * ((SceneObjectManager) this).anInt2628 + 16 && i_633_ >= ((SceneObjectManager) this).anInt2629 * 1580412859 - 16 && i_633_ <= 16 + ((SceneObjectManager) this).anInt2629 * 1580412859)
 					class521_sub1.method12991(((SceneObjectManager) this).aClass505_2596, -646183533);
 				return true;
@@ -3375,8 +3375,8 @@ public class SceneObjectManager {
 									for (Class208 class208 = class293.aClass208_3504; null != class208; class208 = class208.aClass208_2660) {
 										Class521_Sub1_Sub1 class521_sub1_sub1 = (class208.aClass521_Sub1_Sub1_2659);
 										if (class521_sub1_sub1 != null && class521_sub1_sub1.method12985(-1040604428) && ((class521_sub1_sub1.aShort9458 == i_645_) || i_640_ == i_645_) && ((class521_sub1_sub1.aShort9456 == i_646_) || i_642_ == i_646_)) {
-											int i_649_ = ((class521_sub1_sub1.aShort9455) - (class521_sub1_sub1.aShort9458) + 1);
-											int i_650_ = 1 + ((class521_sub1_sub1.aShort9457) - (class521_sub1_sub1.aShort9456));
+											int i_649_ = ((class521_sub1_sub1.localX) - (class521_sub1_sub1.aShort9458) + 1);
+											int i_650_ = 1 + ((class521_sub1_sub1.localY) - (class521_sub1_sub1.aShort9456));
 											class521_sub1.method13013((((SceneObjectManager) this).aClass505_2596), class521_sub1_sub1, ((1885735347 * (((SceneObjectManager) this).anInt2593) * ((class521_sub1_sub1.aShort9458) - i_636_)) + ((((SceneObjectManager) this).anInt2594) * -1428980483 * (i_649_ - i_638_))), i_647_, (((i_650_ - i_639_) * ((((SceneObjectManager) this).anInt2594) * -1428980483)) + (((class521_sub1_sub1.aShort9456) - i_637_) * ((((SceneObjectManager) this).anInt2593) * 1885735347))), bool, -1886773619);
 										}
 									}
@@ -3559,7 +3559,7 @@ public class SceneObjectManager {
 		class527.anInt7000 -= -1341717846;
 		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
 		String string_706_ = (String) (class527.objectStack[1806726141 * class527.anInt7000 + 1]);
-		int i_707_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = string.indexOf(string_706_, i_707_);
+		int i_707_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = string.indexOf(string_706_, i_707_);
 	}
 }

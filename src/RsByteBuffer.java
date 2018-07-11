@@ -617,9 +617,9 @@ public class RsByteBuffer extends Node {
 	}
 
 	static final void method13292(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		class118.anInt1441 = 304814545 * (class527.intStack[class527.anInt7012 * 1942118537]);
-		class118.anInt1263 = ((class527.intStack[1942118537 * class527.anInt7012 + 1]) * -1208146817);
+		class527.intStackPtr -= 283782002;
+		class118.anInt1441 = 304814545 * (class527.intStack[class527.intStackPtr * 1942118537]);
+		class118.anInt1263 = ((class527.intStack[1942118537 * class527.intStackPtr + 1]) * -1208146817);
 		Class109.method1858(class118, (byte) -27);
 	}
 }

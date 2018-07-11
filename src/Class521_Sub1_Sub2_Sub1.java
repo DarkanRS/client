@@ -101,8 +101,8 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 
 	Class285 method13009(GraphicalRenderer class505) {
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) -112);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
+		Class208 class208 = aClass206_7970.method3507(plane, (int) class385.x >> 9, (int) class385.z >> 9, (byte) -112);
+		SceneObjectNode class521_sub1_sub3 = aClass206_7970.getGroundDecoration(plane, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i = class208.aClass521_Sub1_Sub1_2659.method12995(21913800);
@@ -230,8 +230,8 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 
 	Class285 method13010(GraphicalRenderer class505) {
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) 62);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
+		Class208 class208 = aClass206_7970.method3507(plane, (int) class385.x >> 9, (int) class385.z >> 9, (byte) 62);
+		SceneObjectNode class521_sub1_sub3 = aClass206_7970.getGroundDecoration(plane, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i = class208.aClass521_Sub1_Sub1_2659.method12995(-2077263748);
@@ -319,8 +319,8 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 
 	Class285 method12989(GraphicalRenderer class505) {
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) 88);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
+		Class208 class208 = aClass206_7970.method3507(plane, (int) class385.x >> 9, (int) class385.z >> 9, (byte) 88);
+		SceneObjectNode class521_sub1_sub3 = aClass206_7970.getGroundDecoration(plane, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i = class208.aClass521_Sub1_Sub1_2659.method12995(-1830209037);
@@ -444,8 +444,8 @@ public class Class521_Sub1_Sub2_Sub1 extends Class521_Sub1_Sub2 {
 
 	Class285 method12990(GraphicalRenderer class505, int i) {
 		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		Class208 class208 = aClass206_7970.method3507(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, (byte) -92);
-		Class521_Sub1_Sub3 class521_sub1_sub3 = aClass206_7970.getGroundDecoration(aByte7967, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
+		Class208 class208 = aClass206_7970.method3507(plane, (int) class385.x >> 9, (int) class385.z >> 9, (byte) -92);
+		SceneObjectNode class521_sub1_sub3 = aClass206_7970.getGroundDecoration(plane, (int) class385.x >> 9, (int) class385.z >> 9, -387297653);
 		int i_82_ = 0;
 		if (class208 != null && class208.aClass521_Sub1_Sub1_2659.aBool9459)
 			i_82_ = class208.aClass521_Sub1_Sub1_2659.method12995(-1954899292);

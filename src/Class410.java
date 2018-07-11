@@ -10,7 +10,7 @@ public class Class410 {
 	}
 
 	static final void method6909(CS2Executor class527, int i) {
-		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1)
+		if ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1)
 			class527.instrPtr += (-1051529003 * (class527.intOpValues[301123709 * class527.instrPtr]));
 	}
 }

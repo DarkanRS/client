@@ -551,21 +551,21 @@ public class Class123 {
 	}
 
 	static final void method2150(CS2Executor class527, byte i) {
-		int i_28_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_28_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_28_, (byte) 53);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_28_ >> 16];
 		NamedFileReference.method869(class118, class98, class527, -1209481120);
 	}
 
 	static final void method2151(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_29_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_30_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_29_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_30_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_30_, (byte) 0);
 		if (class437.method7319(1555061388))
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.aClass421_2658.method7036(i_29_, -1979038944).method14751(i_30_, class437.aString5335, 1092559999);
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.aClass421_2658.method7036(i_29_, 1053782715).method14750(i_30_, -1741480635 * class437.anInt5337, (byte) 53));
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.aClass421_2658.method7036(i_29_, 1053782715).method14750(i_30_, -1741480635 * class437.anInt5337, (byte) 53));
 	}
 
 	public static void method2152(int i, int i_31_) {
@@ -577,6 +577,6 @@ public class Class123 {
 	}
 
 	static final void method2153(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt113 * -935355999;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class9.anInt113 * -935355999;
 	}
 }

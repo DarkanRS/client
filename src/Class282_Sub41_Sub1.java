@@ -35,7 +35,7 @@ public class Class282_Sub41_Sub1 extends Class282_Sub41 {
 	}
 
 	static final void method14700(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.anInt1277 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 204895771);
+		class118.anInt1277 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * 204895771);
 		Class109.method1858(class118, (byte) 21);
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
 			Game.method8207(-1952846363 * class118.idHash, -218557122);

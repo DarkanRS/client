@@ -313,16 +313,16 @@ public class Class345 {
 	}
 
 	static final void method6141(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_12_, (byte) 94);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_12_ >> 16];
 		Class453.method7547(class118, class98, class527, 1462639259);
 	}
 
 	static final void method6142(CS2Executor class527, int i) {
-		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_13_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_13_, (byte) 30);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 442725395 * class118.anInt1277;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 442725395 * class118.anInt1277;
 	}
 
 	static void method6143(int i, int i_14_) {

@@ -114,14 +114,14 @@ public class JS5Manager {
 	}
 
 	static final void method5488(CS2Executor class527, int i) {
-		int i_36_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_36_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_36_, (byte) 80);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_36_ >> 16];
 		Class282_Sub20_Sub9.method15256(class118, class98, class527, -1115547958);
 	}
 
 	static final void method5489(CS2Executor class527, int i) {
-		int i_37_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_37_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (0 != 1609086245 * client.anInt7434 && i_37_ < client.anInt7373 * -1754449153) {
 			Class10 class10 = client.aClass10Array7456[i_37_];
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class10.aString115;
@@ -137,10 +137,10 @@ public class JS5Manager {
 	}
 
 	static final void method5490(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_38_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_39_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class117.method1980(i_38_, i_39_, true, 1580023895);
+		class527.intStackPtr -= 283782002;
+		int i_38_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_39_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class117.method1980(i_38_, i_39_, true, 1580023895);
 	}
 
 	static final boolean method5491(char c, int i) {
@@ -173,8 +173,8 @@ public class JS5Manager {
 		if (is[Class4.anInt35 * 675588453][i_44_][i_45_] == i_47_) {
 			return false;
 		}
-		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		if (((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_44_][i_45_]) & 0x4) == 0) {
+		RegionMap class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		if (((class311.tileMasks[675588453 * Class4.anInt35][i_44_][i_45_]) & 0x4) == 0) {
 			return false;
 		}
 		int i_48_ = 0;
@@ -190,14 +190,14 @@ public class JS5Manager {
 			int i_54_ = client.anIntArray7425[i_49_] >> 16 & 0xff;
 			i_49_ = 1 + i_49_ & 0xfff;
 			boolean bool_55_ = false;
-			if (((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_50_][i_53_]) & 0x4) == 0) {
+			if (((class311.tileMasks[Class4.anInt35 * 675588453][i_50_][i_53_]) & 0x4) == 0) {
 				bool_55_ = true;
 			}
 			boolean bool_56_ = false;
 			if (class293s != null) {
 				int i_57_ = Class4.anInt35 * 675588453 + 1;
 				while_214_: for (/**/; i_57_ <= 3; i_57_++) {
-					if (null != class293s[i_57_] && ((class311.aByteArrayArrayArray3638[i_57_][i_50_][i_53_]) & 0x8) == 0) {
+					if (null != class293s[i_57_] && ((class311.tileMasks[i_57_][i_50_][i_53_]) & 0x8) == 0) {
 						if (bool_55_ && null != class293s[i_57_][i_50_][i_53_]) {
 							if ((class293s[i_57_][i_50_][i_53_].aClass521_Sub1_Sub5_3505) != null) {
 								int i_58_ = Class125.method2172(i_51_, 2134977651);
@@ -240,9 +240,9 @@ public class JS5Manager {
 						if (class293 != null && class293.aClass208_3504 != null) {
 							for (Class208 class208 = class293.aClass208_3504; class208 != null; class208 = class208.aClass208_2660) {
 								Class521_Sub1_Sub1 class521_sub1_sub1 = class208.aClass521_Sub1_Sub1_2659;
-								if ((class521_sub1_sub1.aShort9455 != class521_sub1_sub1.aShort9458) || (class521_sub1_sub1.aShort9457 != class521_sub1_sub1.aShort9456)) {
-									for (int i_64_ = class521_sub1_sub1.aShort9458; (i_64_ <= class521_sub1_sub1.aShort9455); i_64_++) {
-										for (int i_65_ = (class521_sub1_sub1.aShort9456); i_65_ <= (class521_sub1_sub1.aShort9457); i_65_++) {
+								if ((class521_sub1_sub1.localX != class521_sub1_sub1.aShort9458) || (class521_sub1_sub1.localY != class521_sub1_sub1.aShort9456)) {
+									for (int i_64_ = class521_sub1_sub1.aShort9458; (i_64_ <= class521_sub1_sub1.localX); i_64_++) {
+										for (int i_65_ = (class521_sub1_sub1.aShort9456); i_65_ <= (class521_sub1_sub1.localY); i_65_++) {
 											is[i_57_][i_64_][i_65_] = i_47_;
 										}
 									}
@@ -279,8 +279,8 @@ public class JS5Manager {
 					i_48_ = i_48_ + 1 & 0xfff;
 					is[Class4.anInt35 * 675588453][i_50_ - 1][i_53_] = i_47_;
 				}
-				if (++i_53_ < IndexLoaders.MAP_REGION_DECODER.method4451(-333277529)) {
-					if (i_50_ - 1 >= 0 && (is[Class4.anInt35 * 675588453][i_50_ - 1][i_53_] != i_47_) && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) == 0 && ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_50_ - 1][i_53_ - 1]) & 0x4) == 0) {
+				if (++i_53_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-333277529)) {
+					if (i_50_ - 1 >= 0 && (is[Class4.anInt35 * 675588453][i_50_ - 1][i_53_] != i_47_) && ((class311.tileMasks[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) == 0 && ((class311.tileMasks[Class4.anInt35 * 675588453][i_50_ - 1][i_53_ - 1]) & 0x4) == 0) {
 						client.anIntArray7243[i_48_] = i_50_ - 1 | 0x120000 | 0x52000000;
 						client.anIntArray7425[i_48_] = i_53_ | 0x130000;
 						i_48_ = i_48_ + 1 & 0xfff;
@@ -292,7 +292,7 @@ public class JS5Manager {
 						i_48_ = i_48_ + 1 & 0xfff;
 						is[675588453 * Class4.anInt35][i_50_][i_53_] = i_47_;
 					}
-					if ((1 + i_50_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1412257249)) && (is[Class4.anInt35 * 675588453][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][1 + i_50_][i_53_ - 1]) & 0x4) == 0) {
+					if ((1 + i_50_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1412257249)) && (is[Class4.anInt35 * 675588453][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.tileMasks[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) && ((class311.tileMasks[675588453 * Class4.anInt35][1 + i_50_][i_53_ - 1]) & 0x4) == 0) {
 						client.anIntArray7243[i_48_] = 1 + i_50_ | 0x520000 | ~0x6dffffff;
 						client.anIntArray7425[i_48_] = i_53_ | 0x530000;
 						i_48_ = i_48_ + 1 & 0xfff;
@@ -300,14 +300,14 @@ public class JS5Manager {
 					}
 				}
 				i_53_--;
-				if (i_50_ + 1 < IndexLoaders.MAP_REGION_DECODER.method4424(-1831553983) && (i_47_ != is[Class4.anInt35 * 675588453][i_50_ + 1][i_53_])) {
+				if (i_50_ + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1831553983) && (i_47_ != is[Class4.anInt35 * 675588453][i_50_ + 1][i_53_])) {
 					client.anIntArray7243[i_48_] = 1 + i_50_ | 0x920000 | 0x53000000;
 					client.anIntArray7425[i_48_] = i_53_ | 0x930000;
 					i_48_ = i_48_ + 1 & 0xfff;
 					is[Class4.anInt35 * 675588453][1 + i_50_][i_53_] = i_47_;
 				}
 				if (--i_53_ >= 0) {
-					if (i_50_ - 1 >= 0 && (is[675588453 * Class4.anInt35][i_50_ - 1][i_53_] != i_47_) && ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) == 0 && 0 == ((class311.aByteArrayArrayArray3638[675588453 * Class4.anInt35][i_50_ - 1][i_53_ + 1]) & 0x4)) {
+					if (i_50_ - 1 >= 0 && (is[675588453 * Class4.anInt35][i_50_ - 1][i_53_] != i_47_) && ((class311.tileMasks[675588453 * Class4.anInt35][i_50_][i_53_]) & 0x4) == 0 && 0 == ((class311.tileMasks[675588453 * Class4.anInt35][i_50_ - 1][i_53_ + 1]) & 0x4)) {
 						client.anIntArray7243[i_48_] = i_50_ - 1 | 0xd20000 | 0x12000000;
 						client.anIntArray7425[i_48_] = i_53_ | 0xd30000;
 						i_48_ = i_48_ + 1 & 0xfff;
@@ -319,7 +319,7 @@ public class JS5Manager {
 						i_48_ = 1 + i_48_ & 0xfff;
 						is[Class4.anInt35 * 675588453][i_50_][i_53_] = i_47_;
 					}
-					if ((i_50_ + 1 < IndexLoaders.MAP_REGION_DECODER.method4424(1761187382)) && (is[675588453 * Class4.anInt35][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][i_50_][i_53_]) & 0x4) && ((class311.aByteArrayArrayArray3638[Class4.anInt35 * 675588453][1 + i_50_][1 + i_53_]) & 0x4) == 0) {
+					if ((i_50_ + 1 < IndexLoaders.MAP_REGION_DECODER.getSizeX(1761187382)) && (is[675588453 * Class4.anInt35][1 + i_50_][i_53_] != i_47_) && 0 == ((class311.tileMasks[Class4.anInt35 * 675588453][i_50_][i_53_]) & 0x4) && ((class311.tileMasks[Class4.anInt35 * 675588453][1 + i_50_][1 + i_53_]) & 0x4) == 0) {
 						client.anIntArray7243[i_48_] = i_50_ + 1 | 0x920000 | ~0x2dffffff;
 						client.anIntArray7425[i_48_] = i_53_ | 0x930000;
 						i_48_ = 1 + i_48_ & 0xfff;

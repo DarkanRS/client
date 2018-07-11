@@ -50,8 +50,8 @@ public class Class231 {
 	}
 
 	static final void method3913(CS2Executor class527, int i) {
-		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anIntArray7336[i_13_];
+		int i_13_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.anIntArray7336[i_13_];
 	}
 
 	static void method3914(int i, String string, boolean bool, byte i_14_) {

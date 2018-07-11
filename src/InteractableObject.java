@@ -19,7 +19,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	void method13023(GraphicalRenderer class505) {
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null)
-			aClass123_10509.method2119(class505, class528, method11168(), aShort9458, aShort9455, aShort9456, aShort9457, false, 1109367296);
+			aClass123_10509.method2119(class505, class528, method11168(), aShort9458, localX, aShort9456, localY, false, 1109367296);
 	}
 
 	public int method12995(int i) {
@@ -40,7 +40,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			return null;
 		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -97);
-		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, -219339696);
+		aClass123_10509.method2119(class505, class528, class294, aShort9458, localX, aShort9456, localY, true, -219339696);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10509).aClass539_1538 != null) {
 			Class151 class151 = ((Class123) aClass123_10509).aClass539_1538.method11517();
@@ -58,7 +58,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	void method12991(GraphicalRenderer class505, int i) {
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null)
-			aClass123_10509.method2119(class505, class528, method11168(), aShort9458, aShort9455, aShort9456, aShort9457, false, 985528873);
+			aClass123_10509.method2119(class505, class528, method11168(), aShort9458, localX, aShort9456, localY, false, 985528873);
 	}
 
 	public void method16096(Class476 class476, int i) {
@@ -126,7 +126,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 
 	public InteractableObject(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_2_, int i_3_, int i_4_, int i_5_, boolean bool, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
 		super(class206, i, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_, -1062790731 * class478.anInt5687 == 1, Class461.method7705(i_10_, i_11_, (byte) -22));
-		aClass123_10509 = new Class123(class505, class474, class478, i_10_, i_11_, aByte7967, i_2_, this, bool, i_12_);
+		aClass123_10509 = new Class123(class505, class474, class478, i_10_, i_11_, plane, i_2_, this, bool, i_12_);
 		((InteractableObject) this).aBool10511 = 0 != class478.anInt5652 * -348507379 && !bool;
 		method13008(1, (byte) -22);
 	}
@@ -169,7 +169,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			return null;
 		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -2);
-		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, 915832914);
+		aClass123_10509.method2119(class505, class528, class294, aShort9458, localX, aShort9456, localY, true, 915832914);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10509).aClass539_1538 != null) {
 			Class151 class151 = ((Class123) aClass123_10509).aClass539_1538.method11517();
@@ -205,7 +205,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	static byte method16098(int i, int i_16_) {
-		if (i != Class458.aClass458_5474.anInt5481 * 1109376893)
+		if (i != SceneObjectType.WALL_INTERACT.type * 1109376893)
 			return (byte) 0;
 		if ((i_16_ & 0x1) == 0)
 			return (byte) 1;
@@ -242,7 +242,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			return null;
 		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -19);
-		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, 1469676287);
+		aClass123_10509.method2119(class505, class528, class294, aShort9458, localX, aShort9456, localY, true, 1469676287);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10509).aClass539_1538 != null) {
 			Class151 class151 = ((Class123) aClass123_10509).aClass539_1538.method11517();
@@ -267,7 +267,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 			return null;
 		Matrix44Var class294 = method11168();
 		Class285 class285 = Class470.method7824(((InteractableObject) this).aBool10511, (byte) -5);
-		aClass123_10509.method2119(class505, class528, class294, aShort9458, aShort9455, aShort9456, aShort9457, true, 1385050972);
+		aClass123_10509.method2119(class505, class528, class294, aShort9458, localX, aShort9456, localY, true, 1385050972);
 		class528.method11282(class294, aClass275_Sub5Array7965[0], 0);
 		if (((Class123) aClass123_10509).aClass539_1538 != null) {
 			Class151 class151 = ((Class123) aClass123_10509).aClass539_1538.method11517();
@@ -285,7 +285,7 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	void method13012(GraphicalRenderer class505) {
 		MeshRasterizer class528 = aClass123_10509.method2132(class505, 262144, true, true, -1384937123);
 		if (class528 != null)
-			aClass123_10509.method2119(class505, class528, method11168(), aShort9458, aShort9455, aShort9456, aShort9457, false, 1583997112);
+			aClass123_10509.method2119(class505, class528, method11168(), aShort9458, localX, aShort9456, localY, false, 1583997112);
 	}
 
 	public int method73() {
@@ -356,13 +356,13 @@ public class InteractableObject extends Class521_Sub1_Sub1 implements SceneObjec
 	}
 
 	static final void method16100(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_24_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_25_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_24_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_25_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_25_, (byte) 0);
 		if (class437.method7319(1555289189))
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) -99).method6882(i_25_, class437.aString5335, -1939123518);
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(i_24_, (byte) 20).method6876(i_25_, class437.anInt5337 * -1741480635, 1365877231));
 	}
 }

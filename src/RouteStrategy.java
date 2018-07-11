@@ -2,25 +2,25 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class225 {
-	public int anInt2779;
-	public int anInt2780;
-	public int anInt2781;
-	public int anInt2782;
+public abstract class RouteStrategy {
+	public int approxDestinationX;
+	public int approxDestinationY;
+	public int approxDestinationSizeX;
+	public int approxDestinationSizeY;
 
-	public abstract boolean method3785(int i, int i_0_, int i_1_, Class336 class336);
+	public abstract boolean method3785(int i, int i_0_, int i_1_, ClipMap class336);
 
-	public abstract boolean method3786(int i, int i_2_, int i_3_, Class336 class336);
+	public abstract boolean method3786(int i, int i_2_, int i_3_, ClipMap class336);
 
-	public abstract boolean method3787(int i, int i_4_, int i_5_, Class336 class336, byte i_6_);
+	public abstract boolean canExit(int i, int i_4_, int i_5_, ClipMap class336, byte i_6_);
 
-	public abstract boolean method3788(int i, int i_7_, int i_8_, Class336 class336);
+	public abstract boolean method3788(int i, int i_7_, int i_8_, ClipMap class336);
 
-	Class225() {
+	RouteStrategy() {
 		/* empty */
 	}
 
-	public abstract boolean method3789(int i, int i_9_, int i_10_, Class336 class336);
+	public abstract boolean method3789(int i, int i_9_, int i_10_, ClipMap class336);
 
 	static final void method3790(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
@@ -35,14 +35,14 @@ public abstract class Class225 {
 	}
 
 	static final void method3791(CS2Executor class527, byte i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_11_, (byte) 77);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
 		DefaultsFile.method11223(class118, class98, class527, 334837898);
 	}
 
 	static final void method3792(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class163.aClass209_2031.method3569(2029806925);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class163.aClass209_2031.method3569(2029806925);
 	}
 
 	static final void method3793(CS2Executor class527, byte i) {

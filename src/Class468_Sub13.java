@@ -76,7 +76,7 @@ public class Class468_Sub13 extends Class468 {
 	}
 
 	static final void method12718(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8193, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -1898562251);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub13_8193, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -1898562251);
 		Class190.method3148((byte) 49);
 		client.aBool7175 = false;
 	}

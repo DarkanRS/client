@@ -598,7 +598,7 @@ public class Whirlpool {
 	}
 
 	static final void method7420(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13049(426414688) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub29_8201.method13049(426414688) ? 1 : 0;
 	}
 
 	static void method7421(int i, int i_81_) {
@@ -663,7 +663,7 @@ public class Whirlpool {
 				Class209.method3598(new StringBuilder().append((int) class385.x >> 9).append(" ").append((int) class385.z >> 9).toString(), -1980423440);
 			} else if (2 == i) {
 				Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[(Class84.myPlayer.aByte7967)].method6722((int) class385.x >> 9, (int) class385.z >> 9, 65280)).toString(), -1193762995);
+				Class209.method3598(new StringBuilder().append("").append(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1116166565).aClass390Array2591[(Class84.myPlayer.plane)].method6722((int) class385.x >> 9, (int) class385.z >> 9, 65280)).toString(), -1193762995);
 			} else if (23 == i) {
 				Class209.method3598(new StringBuilder().append(IComponentDefinitions.aClass229_1280.method3861((byte) 1)).append(" ").append(IComponentDefinitions.aClass229_1280.method3860((byte) 53)).toString(), -622119201);
 				Class209.method3598(new StringBuilder().append(IComponentDefinitions.aClass229_1341.method3861((byte) 1)).append(" ").append(IComponentDefinitions.aClass229_1341.method3860((byte) 119)).toString(), -632491603);
@@ -690,8 +690,8 @@ public class Whirlpool {
 	}
 
 	static final void method7422(CS2Executor class527, int i) {
-		int i_87_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_87_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_87_, (byte) 68);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 276864765 * class118.anInt1311;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 276864765 * class118.anInt1311;
 	}
 }

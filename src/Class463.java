@@ -50,10 +50,10 @@ public class Class463 {
 		if (class521_sub1_sub1_sub2 instanceof NPC) {
 			NPC class521_sub1_sub1_sub2_sub2 = (NPC) class521_sub1_sub1_sub2;
 			if (class521_sub1_sub1_sub2_sub2.aClass409_10580 != null)
-				WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, (class521_sub1_sub1_sub2_sub2.aByte7967 != (Class84.myPlayer.aByte7967)), 2058310476);
+				WorldMapAreaDefs.method3736(class521_sub1_sub1_sub2_sub2, (class521_sub1_sub1_sub2_sub2.plane != (Class84.myPlayer.plane)), 2058310476);
 		} else if (class521_sub1_sub1_sub2 instanceof Player) {
 			Player class521_sub1_sub1_sub2_sub1 = (Player) class521_sub1_sub1_sub2;
-			Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, (class521_sub1_sub1_sub2_sub1.aByte7967 != (Class84.myPlayer.aByte7967)), 1557506355);
+			Class96_Sub22.method14678(class521_sub1_sub1_sub2_sub1, (class521_sub1_sub1_sub2_sub1.plane != (Class84.myPlayer.plane)), 1557506355);
 		}
 	}
 
@@ -76,11 +76,11 @@ public class Class463 {
 	}
 
 	static final void method7726(CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		int i_3_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		boolean bool = ((class527.intStack[class527.anInt7012 * 1942118537 + 1]) == 1);
-		int i_4_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
-		boolean bool_5_ = ((class527.intStack[3 + class527.anInt7012 * 1942118537]) == 1);
+		class527.intStackPtr -= 567564004;
+		int i_3_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		boolean bool = ((class527.intStack[class527.intStackPtr * 1942118537 + 1]) == 1);
+		int i_4_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
+		boolean bool_5_ = ((class527.intStack[3 + class527.intStackPtr * 1942118537]) == 1);
 		Class365.method6299(i_3_, bool, i_4_, bool_5_, (byte) 4);
 	}
 
@@ -89,10 +89,10 @@ public class Class463 {
 		if ((1277328401 * class521_sub1_sub1_sub2.anInt10345 == client.cycles * -1809259861) || !class456.method7564(-1584612884) || class456.method7585(1, -2087063879)) {
 			int i_6_ = (class521_sub1_sub1_sub2.anInt10345 * 1277328401 - class521_sub1_sub1_sub2.anInt10342 * 403949281);
 			int i_7_ = (-1809259861 * client.cycles - 403949281 * class521_sub1_sub1_sub2.anInt10342);
-			int i_8_ = (1204164096 * class521_sub1_sub1_sub2.anInt10326 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
-			int i_9_ = (-699068928 * class521_sub1_sub1_sub2.anInt10328 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
-			int i_10_ = (-1654454784 * class521_sub1_sub1_sub2.anInt10341 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
-			int i_11_ = (-737490432 * class521_sub1_sub1_sub2.anInt10343 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
+			int i_8_ = (1204164096 * class521_sub1_sub1_sub2.anInt10326 + class521_sub1_sub1_sub2.getSize(828768449) * 256);
+			int i_9_ = (-699068928 * class521_sub1_sub1_sub2.anInt10328 + class521_sub1_sub1_sub2.getSize(828768449) * 256);
+			int i_10_ = (-1654454784 * class521_sub1_sub1_sub2.anInt10341 + class521_sub1_sub1_sub2.getSize(828768449) * 256);
+			int i_11_ = (-737490432 * class521_sub1_sub1_sub2.anInt10343 + class521_sub1_sub1_sub2.getSize(828768449) * 256);
 			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 			class521_sub1_sub1_sub2.method11172((float) (((i_6_ - i_7_) * i_8_ + i_10_ * i_7_) / i_6_), (float) (int) class385.y, (float) (((i_6_ - i_7_) * i_9_ + i_7_ * i_11_) / i_6_));
 		}
@@ -110,9 +110,9 @@ public class Class463 {
 	}
 
 	static final void method7729(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		class118.anInt1430 = (class527.intStack[class527.anInt7012 * 1942118537]) * -1019275441;
-		class118.anInt1431 = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) * 1761303305);
+		class527.intStackPtr -= 283782002;
+		class118.anInt1430 = (class527.intStack[class527.intStackPtr * 1942118537]) * -1019275441;
+		class118.anInt1431 = ((class527.intStack[1 + 1942118537 * class527.intStackPtr]) * 1761303305);
 		Class109.method1858(class118, (byte) 64);
 	}
 

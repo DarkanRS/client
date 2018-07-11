@@ -40,7 +40,7 @@ final class Class15 implements Interface35 {
 	}
 
 	static final void method543(CS2Executor class527, int i) {
-		class527.animable.method15813((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 109);
+		class527.animable.method15813((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), (byte) 109);
 	}
 
 	static void method544(IComponentDefinitions class118, int i, int i_1_, int i_2_) {
@@ -50,14 +50,14 @@ final class Class15 implements Interface35 {
 	}
 
 	static final void method545(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_4_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_3_ | 1 << i_4_;
+		class527.intStackPtr -= 283782002;
+		int i_3_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_4_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_3_ | 1 << i_4_;
 	}
 
 	static final void method546(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aByte7458;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aByte7458;
 		if (client.aByte7458 != -1)
 			client.aByte7458 = (byte) -6;
 	}
@@ -87,10 +87,10 @@ final class Class15 implements Interface35 {
 	}
 
 	static final void method548(CS2Executor class527, int i) {
-		class527.anInt7012 -= 425673003;
-		int i_7_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_8_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_9_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
+		class527.intStackPtr -= 425673003;
+		int i_7_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_8_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_9_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
 		Class96_Sub10.method14603(9, i_7_ << 16 | i_8_, i_9_, "", (byte) 54);
 	}
 
@@ -102,7 +102,7 @@ final class Class15 implements Interface35 {
 	}
 
 	static final void method550(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class523.method11219((char) i_12_, -2126211908) ? 1 : 0;
+		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class523.method11219((char) i_12_, -2126211908) ? 1 : 0;
 	}
 }

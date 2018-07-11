@@ -4,29 +4,29 @@
  */
 import java.io.IOException;
 
-public class Class225_Sub1 extends Class225 {
-	public boolean method3787(int i, int i_0_, int i_1_, Class336 class336, byte i_2_) {
-		return (i_0_ == -1440558477 * anInt2779 && i_1_ == 1732585867 * anInt2780);
+public class Class225_Sub1 extends RouteStrategy {
+	public boolean canExit(int i, int i_0_, int i_1_, ClipMap class336, byte i_2_) {
+		return (i_0_ == -1440558477 * approxDestinationX && i_1_ == 1732585867 * approxDestinationY);
 	}
 
-	public boolean method3786(int i, int i_3_, int i_4_, Class336 class336) {
-		return (i_3_ == -1440558477 * anInt2779 && i_4_ == 1732585867 * anInt2780);
+	public boolean method3786(int i, int i_3_, int i_4_, ClipMap class336) {
+		return (i_3_ == -1440558477 * approxDestinationX && i_4_ == 1732585867 * approxDestinationY);
 	}
 
 	Class225_Sub1() {
 		/* empty */
 	}
 
-	public boolean method3785(int i, int i_5_, int i_6_, Class336 class336) {
-		return (i_5_ == -1440558477 * anInt2779 && i_6_ == 1732585867 * anInt2780);
+	public boolean method3785(int i, int i_5_, int i_6_, ClipMap class336) {
+		return (i_5_ == -1440558477 * approxDestinationX && i_6_ == 1732585867 * approxDestinationY);
 	}
 
-	public boolean method3788(int i, int i_7_, int i_8_, Class336 class336) {
-		return (i_7_ == -1440558477 * anInt2779 && i_8_ == 1732585867 * anInt2780);
+	public boolean method3788(int i, int i_7_, int i_8_, ClipMap class336) {
+		return (i_7_ == -1440558477 * approxDestinationX && i_8_ == 1732585867 * approxDestinationY);
 	}
 
-	public boolean method3789(int i, int i_9_, int i_10_, Class336 class336) {
-		return (i_9_ == -1440558477 * anInt2779 && i_10_ == 1732585867 * anInt2780);
+	public boolean method3789(int i, int i_9_, int i_10_, ClipMap class336) {
+		return (i_9_ == -1440558477 * approxDestinationX && i_10_ == 1732585867 * approxDestinationY);
 	}
 
 	static Class282_Sub54 method12791(int i) {

@@ -14,12 +14,12 @@ public class Class161 {
 	}
 
 	static final void method2823(CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		Class435.method7300((class527.intStack[1942118537 * class527.anInt7012]), (class527.intStack[1 + 1942118537 * class527.anInt7012]), (class527.intStack[2 + class527.anInt7012 * 1942118537]), (class527.intStack[3 + class527.anInt7012 * 1942118537]), false, 256, 1449989045);
+		class527.intStackPtr -= 567564004;
+		Class435.method7300((class527.intStack[1942118537 * class527.intStackPtr]), (class527.intStack[1 + 1942118537 * class527.intStackPtr]), (class527.intStack[2 + class527.intStackPtr * 1942118537]), (class527.intStack[3 + class527.intStackPtr * 1942118537]), false, 256, 1449989045);
 	}
 
 	static final void method2824(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_0_, (byte) -1);
 		String string = "";
 		if (class108 != null && null != class108.message)
@@ -30,13 +30,13 @@ public class Class161 {
 	static final void method2825(CS2Executor class527, byte i) {
 		if (client.aByteArray7152 != null) {
 			if (i < 1)
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = 1;
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = 1;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static final void method2826(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 25);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class282_Sub17.method12260(class118, class98, class527, 456705608);

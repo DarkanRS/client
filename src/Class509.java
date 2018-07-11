@@ -15,7 +15,7 @@ public class Class509 {
 	}
 
 	static final void method8738(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_0_ >= 1 && i_0_ <= 2) {
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub9_8226), i_0_, -296279259);
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub9_8218), i_0_, -2128693924);

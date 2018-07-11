@@ -99,9 +99,9 @@ public class Interface {
 						int i_4_;
 						if (0 != ((Class268) class268).anInt3298 * -19172361) {
 							int i_5_ = ((((Class268) class268).anInt3298 * -19172361 >> 24) & 0x3);
-							if ((Class84.myPlayer.aByte7967) == i_5_) {
+							if ((Class84.myPlayer.plane) == i_5_) {
 								int i_6_ = ((-19172361 * (((Class268) class268).anInt3298) & 0xff) << 9);
-								int i_7_ = Class84.myPlayer.method15805(828768449) << 8;
+								int i_7_ = Class84.myPlayer.getSize(828768449) << 8;
 								Vector3 class385 = Class84.myPlayer.method11166().aClass385_3595;
 								int i_8_ = ((((Class268) class268).anInt3298 * -19172361) >> 16 & 0xff);
 								int i_9_ = (256 + (i_8_ << 9) - (int) class385.x + i_7_);
@@ -176,18 +176,18 @@ public class Interface {
 	}
 
 	static final void method1624(CS2Executor class527, int i) {
-		int i_16_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_16_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_16_, (byte) 24);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_16_ >> 16];
 		Class17.method569(class118, class98, class527, -575655435);
 	}
 
 	static final void method1625(CS2Executor class527, int i) {
-		int i_17_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_17_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (2 == 1609086245 * client.anInt7434 && i_17_ >= 0 && i_17_ < client.anInt7449 * 493536965)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -315765031 * client.aClass6Array7452[i_17_].anInt42;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -315765031 * client.aClass6Array7452[i_17_].anInt42;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static AccountCreationResponseOpcodes[] method1626(int i) {

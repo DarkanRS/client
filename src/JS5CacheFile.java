@@ -332,11 +332,11 @@ public final class JS5CacheFile {
 			Class236.aClass534_Sub2_2911.method11410(class282_sub53, (byte) 24);
 	}
 
-	public static Class225 method3354(int i, int i_63_, int i_64_, int i_65_, Class458 class458, int i_66_, int i_67_) {
-		Class224.aClass225_Sub4_2777.anInt2779 = -726719813 * i;
-		Class224.aClass225_Sub4_2777.anInt2780 = i_63_ * 1767388707;
-		Class224.aClass225_Sub4_2777.anInt2781 = i_64_ * -12808295;
-		Class224.aClass225_Sub4_2777.anInt2782 = i_65_ * 1709796035;
+	public static RouteStrategy method3354(int i, int i_63_, int i_64_, int i_65_, SceneObjectType class458, int i_66_, int i_67_) {
+		Class224.aClass225_Sub4_2777.approxDestinationX = -726719813 * i;
+		Class224.aClass225_Sub4_2777.approxDestinationY = i_63_ * 1767388707;
+		Class224.aClass225_Sub4_2777.approxDestinationSizeX = i_64_ * -12808295;
+		Class224.aClass225_Sub4_2777.approxDestinationSizeY = i_65_ * 1709796035;
 		((Class225_Sub4) Class224.aClass225_Sub4_2777).aClass458_7934 = class458;
 		((Class225_Sub4) Class224.aClass225_Sub4_2777).anInt7933 = i_66_ * 657015239;
 		return Class224.aClass225_Sub4_2777;
@@ -359,14 +359,14 @@ public final class JS5CacheFile {
 	}
 
 	static final void method3357(CS2Executor class527, byte i) {
-		int i_69_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_69_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_69_, (byte) 111);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_69_ >> 16];
 		Class96_Sub9.method14586(class118, class98, class527, 909686877);
 	}
 
 	static final void method3358(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-317680305);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub9_8226.method12687(-317680305);
 	}
 
 	public static void method3359(int i) {
@@ -391,6 +391,6 @@ public final class JS5CacheFile {
 	}
 
 	static final void method3361(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.aClass61_7010.method1197((String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]), 1985834786));
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class527.aClass61_7010.method1197((String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]), 1985834786));
 	}
 }

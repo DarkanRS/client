@@ -578,27 +578,27 @@ public abstract class Class534 {
 	}
 
 	static final void method11438(CS2Executor class527, byte i) {
-		int i_42_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_42_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_42_, (byte) 76);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_42_ >> 16];
 		Class185.method3078(class118, class98, class527, -1906837964);
 	}
 
 	static final void method11439(CS2Executor class527, int i) {
-		int i_43_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_43_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		int i_44_ = i_43_ >> 14 & 0x3fff;
 		int i_45_ = i_43_ & 0x3fff;
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(2060657850);
 		i_44_ -= class219.x * 1948093437;
 		if (i_44_ < 0)
 			i_44_ = 0;
-		else if (i_44_ >= IndexLoaders.MAP_REGION_DECODER.method4424(1745707366))
-			i_44_ = IndexLoaders.MAP_REGION_DECODER.method4424(564190904);
+		else if (i_44_ >= IndexLoaders.MAP_REGION_DECODER.getSizeX(1745707366))
+			i_44_ = IndexLoaders.MAP_REGION_DECODER.getSizeX(564190904);
 		i_45_ -= class219.y * -1002240017;
 		if (i_45_ < 0)
 			i_45_ = 0;
-		else if (i_45_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-500504359))
-			i_45_ = IndexLoaders.MAP_REGION_DECODER.method4451(-160695726);
+		else if (i_45_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-500504359))
+			i_45_ = IndexLoaders.MAP_REGION_DECODER.getSizeY(-160695726);
 		client.anInt7262 = 2146249857 * (256 + (i_44_ << 9));
 		client.anInt7376 = (256 + (i_45_ << 9)) * -1818102377;
 		NativeLibraryLoader.anInt3240 = 1540976692;
@@ -607,10 +607,10 @@ public abstract class Class534 {
 	}
 
 	static final void method11440(CS2Executor class527, int i) {
-		class527.anInt7012 -= 425673003;
-		int i_46_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_47_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_48_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
+		class527.intStackPtr -= 425673003;
+		int i_46_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_47_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_48_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
 		Class96_Sub10.method14603(1, i_46_ << 16 | i_47_, i_48_, "", (byte) 25);
 	}
 

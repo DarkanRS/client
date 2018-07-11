@@ -253,16 +253,16 @@ public class Class107 {
 	}
 
 	static final void method1835(CS2Executor class527, short i) {
-		class527.anInt7012 -= 283782002;
-		int i_33_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_34_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_33_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_34_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		if (null != Class84.myPlayer.playerAppearance)
 			Class84.myPlayer.playerAppearance.method4029(i_33_, i_34_, (byte) -21);
 	}
 
 	static final void method1836(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		Class329_Sub1.method12491(Class84.myPlayer, (class527.intStack[(class527.anInt7012 * 1942118537)]), (class527.intStack[(1942118537 * class527.anInt7012) + 1]), (byte) -23);
+		class527.intStackPtr -= 283782002;
+		Class329_Sub1.method12491(Class84.myPlayer, (class527.intStack[(class527.intStackPtr * 1942118537)]), (class527.intStack[(1942118537 * class527.intStackPtr) + 1]), (byte) -23);
 	}
 
 	static final void method1837(CS2Executor class527, int i) {
@@ -270,7 +270,7 @@ public class Class107 {
 	}
 
 	static final void method1838(IComponentDefinitions class118, byte[] is, byte[] is_35_, CS2Executor class527, int i) {
-		int i_36_ = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) - 1);
+		int i_36_ = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) - 1);
 		if (i_36_ < 0 || i_36_ > 9)
 			throw new RuntimeException();
 		Class445.method7429(class118, i_36_, is, is_35_, class527, -1172279897);

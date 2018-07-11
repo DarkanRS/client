@@ -225,11 +225,11 @@ public class OutgoingPacket {
 	}
 
 	static final void method6439(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_1_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_2_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_1_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_2_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		int i_3_ = (IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_1_, -1579462583).method14918(i_2_, -1799645652).id * -1869685303);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_3_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_3_;
 	}
 
 	static final void method6440(CS2Executor class527, int i) {

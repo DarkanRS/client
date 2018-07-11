@@ -83,7 +83,7 @@ public class Class232 implements Interface17 {
 	}
 
 	static final void method3919(CS2Executor class527, int i) {
-		Class291_Sub1.aBool8027 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		Class291_Sub1.aBool8027 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 	}
 
 	static final void method3920(int i, int i_12_) {
@@ -105,7 +105,7 @@ public class Class232 implements Interface17 {
 			Class31.anInt361 = ((int) ((float) (Class186.anInt2349 * 494445359) + f * (float) (-360258135 * Class31.anInt361 - 494445359 * Class186.anInt2349)) * -2043310439);
 			Class109_Sub1.anInt9384 = (-126779709 * (int) ((float) (1322062263 * Class521_Sub1_Sub2.anInt9461) + f * (float) (1929945579 * Class109_Sub1.anInt9384 - (Class521_Sub1_Sub2.anInt9461 * 1322062263))));
 			Class246.anInt3029 = ((int) ((float) (413271601 * Class246.anInt3029 - (Class282_Sub15_Sub1.anInt9575 * 2036551173)) * f + (float) (2036551173 * Class282_Sub15_Sub1.anInt9575)) * 1442943697);
-			Class293.anInt3512 = (-647467135 * (int) ((float) (Class336.anInt3968 * -721404905) + f * (float) (726126721 * Class293.anInt3512 - (-721404905 * Class336.anInt3968))));
+			Class293.anInt3512 = (-647467135 * (int) ((float) (ClipMap.anInt3968 * -721404905) + f * (float) (726126721 * Class293.anInt3512 - (-721404905 * ClipMap.anInt3968))));
 			int i_16_ = (1236051449 * AnimationDefinitions.anInt5930 - -109692897 * ItemDefaultsLoader.anInt5029);
 			if (i_16_ > 8192)
 				i_16_ -= 16384;

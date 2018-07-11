@@ -378,14 +378,14 @@ public final class Class428 {
 	}
 
 	static final void method7208(CS2Executor class527, int i) {
-		int i_28_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_28_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_28_, (byte) 45);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_28_ >> 16];
 		Class282_Sub50_Sub17.method15511(class118, class98, class527, (byte) 126);
 	}
 
 	static final void method7209(CS2Executor class527, int i) {
-		Class20.anInt198 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 1670293651);
+		Class20.anInt198 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * 1670293651);
 	}
 
 	static final void method7210(CS2Executor class527, int i) {

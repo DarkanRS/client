@@ -94,7 +94,7 @@ public class Class450 {
 	}
 
 	static final void method7500(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -1848816059);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -1848816059);
 		Class190.method3148((byte) 103);
 		client.aBool7175 = false;
 	}

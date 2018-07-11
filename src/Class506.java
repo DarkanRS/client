@@ -357,15 +357,15 @@ public class Class506 {
 	}
 
 	static final void method8715(CS2Executor class527, int i) {
-		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_10_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_10_, (byte) 60);
 		Class199.method3251(class118, class527, 1146866687);
 	}
 
 	static final void method8716(CS2Executor class527, byte i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		int i_12_ = client.aClass330Array7428[i_11_].method5908(-12393301);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 2 == i_12_ ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 2 == i_12_ ? 1 : 0;
 	}
 
 	static final void method8717(CS2Executor class527, int i) {
@@ -383,19 +383,19 @@ public class Class506 {
 	}
 
 	static final void method8719(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 425673003;
-		long l = (long) (class527.intStack[1942118537 * class527.anInt7012]);
-		long l_13_ = (long) (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
-		long l_14_ = (long) (class527.intStack[1942118537 * class527.anInt7012 + 2]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) (l_14_ * l / l_13_);
+		class527.intStackPtr -= 425673003;
+		long l = (long) (class527.intStack[1942118537 * class527.intStackPtr]);
+		long l_13_ = (long) (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
+		long l_14_ = (long) (class527.intStack[1942118537 * class527.intStackPtr + 2]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) (l_14_ * l / l_13_);
 	}
 
 	static final void method8720(CS2Executor class527, int i) {
 		int i_15_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		int i_16_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_16_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_16_ < 0 || i_16_ >= class527.globalArrayLengths[i_15_])
 			throw new RuntimeException();
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.globalArrays[i_15_][i_16_];
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.globalArrays[i_15_][i_16_];
 	}
 
 	public static MeshModifier decodeItemEffects(ItemDefinitions class425, RsByteBuffer stream, int i) {

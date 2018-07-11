@@ -13,11 +13,11 @@ public class Class10 {
 	}
 
 	static final void method456(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.cycles * -1809259861;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.cycles * -1809259861;
 	}
 
 	static final void method457(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, 2089937040);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub23_8202, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) ? 1 : 0, 2089937040);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -3);
 		Class190.method3148((byte) 89);
 		client.aBool7175 = false;
@@ -38,7 +38,7 @@ public class Class10 {
 	}
 
 	static final void method460(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 25);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class496.method8310(class118, class98, class527, (byte) -108);

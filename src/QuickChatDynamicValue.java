@@ -45,45 +45,45 @@ public class QuickChatDynamicValue {
 	}
 
 	static final void method4173(CS2Executor class527, int i) {
-		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_5_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 117);
 		Class413.method6942(class118, class527, -839720836);
 	}
 
 	static final void method4174(CS2Executor class527, int i) {
-		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_6_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 10);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		Class457.method7667(class118, class98, class527, 668340664);
 	}
 
 	static final void method4175(CS2Executor class527, short i) {
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 17);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class125.method2170(class118, class98, class527, 809860903);
 	}
 
 	static final void method4176(CS2Executor class527, int i) {
-		int i_8_ = ((client.anIntArrayArrayArray7302[(class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)])]).length >> 1);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_8_;
+		int i_8_ = ((client.anIntArrayArrayArray7302[(class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)])]).length >> 1);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_8_;
 	}
 
 	static final void method4177(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 567564004;
-		int i_9_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_10_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		int i_11_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
-		int i_12_ = (class527.intStack[class527.anInt7012 * 1942118537 + 3]);
+		class527.intStackPtr -= 567564004;
+		int i_9_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_10_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		int i_11_ = (class527.intStack[2 + class527.intStackPtr * 1942118537]);
+		int i_12_ = (class527.intStack[class527.intStackPtr * 1942118537 + 3]);
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1537474699);
-		Class225.method3794(((i_9_ >> 14 & 0x3fff) - class219.x * 1948093437), (i_9_ & 0x3fff) - -1002240017 * class219.y, i_10_ << 2, i_11_, i_12_, false, (byte) -1);
+		RouteStrategy.method3794(((i_9_ >> 14 & 0x3fff) - class219.x * 1948093437), (i_9_ & 0x3fff) - -1002240017 * class219.y, i_10_ << 2, i_11_, i_12_, false, (byte) -1);
 	}
 
 	static final void method4178(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 425673003;
-		int i_13_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_14_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_15_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 425673003;
+		int i_13_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_14_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_15_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
 		long l = Class42.method891(0, 0, 12, i_13_, i_14_, i_15_, 1796735712);
 		int i_16_ = ObjectIndexLoader.method7914(l);
 		if (i_15_ < 1970) {
@@ -91,11 +91,11 @@ public class QuickChatDynamicValue {
 				return;
 			i_16_--;
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_16_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_16_;
 	}
 
 	static final void method4179(int i, int i_17_, int i_18_, int i_19_, Class476 class476, byte i_20_) {
-		if (i_18_ >= 1 && i_19_ >= 1 && i_18_ <= IndexLoaders.MAP_REGION_DECODER.method4424(1811223828) - 2 && i_19_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1564374011) - 2) {
+		if (i_18_ >= 1 && i_19_ >= 1 && i_18_ <= IndexLoaders.MAP_REGION_DECODER.getSizeX(1811223828) - 2 && i_19_ <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1564374011) - 2) {
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1940602014) != null) {
 				SceneObject interface12 = IndexLoaders.MAP_REGION_DECODER.method4441(1508379413).method12467(i, i_17_, i_18_, i_19_, 2009974413);
 				if (interface12 != null) {

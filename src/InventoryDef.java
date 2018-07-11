@@ -77,6 +77,6 @@ public class InventoryDef extends Class282_Sub50 implements Interface46 {
 	}
 
 	static final void method15696(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = ((Class84.myPlayer.playerAppearance != null) && (Class84.myPlayer.playerAppearance.aBool2929)) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = ((Class84.myPlayer.playerAppearance != null) && (Class84.myPlayer.playerAppearance.aBool2929)) ? 1 : 0;
 	}
 }

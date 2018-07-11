@@ -38,7 +38,7 @@ public class Class76 {
 	}
 
 	static final void method1357(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class96_Sub1.anInt8307 * -993852069;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class96_Sub1.anInt8307 * -993852069;
 	}
 
 	public static String getCrown(int id) {
@@ -85,9 +85,9 @@ public class Class76 {
 	}
 
 	static final void method1362(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_26_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_27_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_26_, -2012754494).anIntArray9624[i_27_]);
+		class527.intStackPtr -= 283782002;
+		int i_26_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_27_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_26_, -2012754494).anIntArray9624[i_27_]);
 	}
 }

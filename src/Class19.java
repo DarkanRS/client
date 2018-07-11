@@ -105,11 +105,11 @@ public class Class19 {
 	}
 
 	static final void method585(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub19_8204.method12786(-399420695) == 1 ? 1 : 0;
 	}
 
 	static final void method586(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 318997953 * Class504.anInt5832;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 318997953 * Class504.anInt5832;
 	}
 
 	static final void method587(CS2Executor class527, byte i) {

@@ -60,10 +60,10 @@ public class Class125 implements Interface8 {
 	}
 
 	static final void method2168(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 425673003;
-		class118.anInt1359 = (class527.intStack[1942118537 * class527.anInt7012]) * 1576498757;
-		class118.anInt1360 = (class527.intStack[1 + 1942118537 * class527.anInt7012]) * 361885101;
-		class118.anInt1358 = ((class527.intStack[2 + 1942118537 * class527.anInt7012]) * -1603580509);
+		class527.intStackPtr -= 425673003;
+		class118.anInt1359 = (class527.intStack[1942118537 * class527.intStackPtr]) * 1576498757;
+		class118.anInt1360 = (class527.intStack[1 + 1942118537 * class527.intStackPtr]) * 361885101;
+		class118.anInt1358 = ((class527.intStack[2 + 1942118537 * class527.intStackPtr]) * -1603580509);
 		Class109.method1858(class118, (byte) -42);
 	}
 

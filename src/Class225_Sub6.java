@@ -2,27 +2,27 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class225_Sub6 extends Class225 {
+public class Class225_Sub6 extends RouteStrategy {
 	public static String aString8069;
 
-	public boolean method3785(int i, int i_0_, int i_1_, Class336 class336) {
-		return Class325.method5790(i_0_, i_1_, i, i, -1440558477 * anInt2779, 1732585867 * anInt2780, anInt2781 * -1384164183, 361960939 * anInt2782, -1278426193);
+	public boolean method3785(int i, int i_0_, int i_1_, ClipMap class336) {
+		return Class325.method5790(i_0_, i_1_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1278426193);
 	}
 
-	public boolean method3787(int i, int i_2_, int i_3_, Class336 class336, byte i_4_) {
-		return Class325.method5790(i_2_, i_3_, i, i, -1440558477 * anInt2779, 1732585867 * anInt2780, anInt2781 * -1384164183, 361960939 * anInt2782, -1229597907);
+	public boolean canExit(int i, int i_2_, int i_3_, ClipMap class336, byte i_4_) {
+		return Class325.method5790(i_2_, i_3_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1229597907);
 	}
 
-	public boolean method3786(int i, int i_5_, int i_6_, Class336 class336) {
-		return Class325.method5790(i_5_, i_6_, i, i, -1440558477 * anInt2779, 1732585867 * anInt2780, anInt2781 * -1384164183, 361960939 * anInt2782, -1069558416);
+	public boolean method3786(int i, int i_5_, int i_6_, ClipMap class336) {
+		return Class325.method5790(i_5_, i_6_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1069558416);
 	}
 
-	public boolean method3789(int i, int i_7_, int i_8_, Class336 class336) {
-		return Class325.method5790(i_7_, i_8_, i, i, -1440558477 * anInt2779, 1732585867 * anInt2780, anInt2781 * -1384164183, 361960939 * anInt2782, -1327717790);
+	public boolean method3789(int i, int i_7_, int i_8_, ClipMap class336) {
+		return Class325.method5790(i_7_, i_8_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1327717790);
 	}
 
-	public boolean method3788(int i, int i_9_, int i_10_, Class336 class336) {
-		return Class325.method5790(i_9_, i_10_, i, i, -1440558477 * anInt2779, 1732585867 * anInt2780, anInt2781 * -1384164183, 361960939 * anInt2782, -232258627);
+	public boolean method3788(int i, int i_9_, int i_10_, ClipMap class336) {
+		return Class325.method5790(i_9_, i_10_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -232258627);
 	}
 
 	Class225_Sub6() {

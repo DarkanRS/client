@@ -44,26 +44,26 @@ public abstract class Class282_Sub50_Sub17 extends Class282_Sub50 {
 	}
 
 	static final void method15510(CS2Executor class527, int i) {
-		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_8_, (byte) 76);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
 		Class13.method506(class118, class98, class527, 73822298);
 	}
 
 	static final void method15511(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class118.anInt1343 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -807852535);
+		class118.anInt1343 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -807852535);
 		Class109.method1858(class118, (byte) 56);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999)
 			Class106.method1818(-1952846363 * class118.idHash, 438520847);
 	}
 
 	static final void method15512(CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_9_, (byte) -1);
 		int i_10_ = -1;
 		if (null != class108)
 			i_10_ = class108.type * 1608788053;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_10_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_10_;
 	}
 
 	static final void method15513(CS2Executor class527, int i) {
@@ -71,7 +71,7 @@ public abstract class Class282_Sub50_Sub17 extends Class282_Sub50 {
 	}
 
 	static final void method15514(CS2Executor class527, int i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_11_, (byte) 72);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
 		Class290.method5121(class118, class98, class527, (byte) 7);

@@ -92,13 +92,13 @@ public class Class149_Sub4 extends Class149 {
 	}
 
 	static final void method14659(CS2Executor class527, byte i) {
-		int i_49_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_49_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_49_, (byte) 45);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -37350919 * class118.anInt1314;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -37350919 * class118.anInt1314;
 	}
 
 	static final void method14660(CS2Executor class527, int i) {
-		int i_50_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_50_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_50_, (byte) 122);
 		Class88.method1494(class118, class527, (byte) -43);
 	}

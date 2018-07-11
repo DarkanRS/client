@@ -83,23 +83,23 @@ public class Class207 {
 	}
 
 	static void method3553(CS2Executor class527, byte i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 2]), -1396181317).aStringArray2971[(class527.intStack[class527.anInt7012 * 1942118537 - 1])]);
-		class527.anInt7012 -= 283782002;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.intStackPtr - 2]), -1396181317).aStringArray2971[(class527.intStack[class527.intStackPtr * 1942118537 - 1])]);
+		class527.intStackPtr -= 283782002;
 	}
 
 	static final void method3554(CS2Executor class527, int i) {
-		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_6_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 71);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		Defaults7Loader.method8754(class118, class98, class527, 1449946769);
 	}
 
 	static final void method3555(CS2Executor class527, int i) {
-		Class42.method890((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), 255, 50, (byte) 39);
+		Class42.method890((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), 255, 50, (byte) 39);
 	}
 
 	static final void method3556(CS2Executor class527, int i) {
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(1333145388);
 		if (class282_sub50_sub6 != null) {
 			boolean bool = class282_sub50_sub6.method14778(i_7_ >> 28 & 0x3, i_7_ >> 14 & 0x3fff, i_7_ & 0x3fff, CS2Runner.anIntArray5900, -1889413502);
@@ -109,12 +109,12 @@ public class Class207 {
 	}
 
 	static final void method3557(CS2Executor class527, byte i) {
-		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (null != Class291_Sub1.aClass465_8025) {
 			Node class282 = Class291_Sub1.aClass465_8025.method7754((long) i_8_);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282 != null ? 1 : 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282 != null ? 1 : 0;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static TCPMessage method3558(byte i) {

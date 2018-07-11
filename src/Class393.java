@@ -135,12 +135,12 @@ public class Class393 {
 	}
 
 	static final void method6750(CS2Executor class527, int i) {
-		if (1358864261 * Class11.aClass282_Sub51_124.anInt8147 < 6)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
-		else if (6 == Class11.aClass282_Sub51_124.anInt8147 * 1358864261 && -399173307 * Class11.aClass282_Sub51_124.anInt8149 < 10)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+		if (1358864261 * Class11.SYSTEM_INFO.javaRelease < 6)
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+		else if (6 == Class11.SYSTEM_INFO.javaRelease * 1358864261 && -399173307 * Class11.SYSTEM_INFO.javaUpdate < 10)
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 	}
 
 	static void method6751(int i, int i_1_, int i_2_) {

@@ -127,23 +127,23 @@ public class Class77 {
 	}
 
 	static final void method1366(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 851346006;
-		int i_21_ = (class527.intStack[class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 851346006;
+		int i_21_ = (class527.intStack[class527.intStackPtr * 1942118537]);
 		if (i_21_ >= 2)
 			throw new RuntimeException();
 		client.anInt7277 = -158788875 * i_21_;
-		int i_22_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		int i_22_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		if (1 + i_22_ >= (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123]).length >> 1)
 			throw new RuntimeException();
 		client.anInt7279 = i_22_ * -658404745;
 		client.anInt7256 = 0;
-		client.anInt7327 = 1423548691 * (class527.intStack[2 + (class527.anInt7012 * 1942118537)]);
-		client.anInt7182 = 784091025 * (class527.intStack[1942118537 * class527.anInt7012 + 3]);
-		int i_23_ = (class527.intStack[4 + 1942118537 * class527.anInt7012]);
+		client.anInt7327 = 1423548691 * (class527.intStack[2 + (class527.intStackPtr * 1942118537)]);
+		client.anInt7182 = 784091025 * (class527.intStack[1942118537 * class527.intStackPtr + 3]);
+		int i_23_ = (class527.intStack[4 + 1942118537 * class527.intStackPtr]);
 		if (i_23_ >= 2)
 			throw new RuntimeException();
 		client.anInt7448 = i_23_ * 1044733407;
-		int i_24_ = (class527.intStack[class527.anInt7012 * 1942118537 + 5]);
+		int i_24_ = (class527.intStack[class527.intStackPtr * 1942118537 + 5]);
 		if (i_24_ + 1 >= (client.anIntArrayArrayArray7302[-74015201 * client.anInt7448]).length >> 1)
 			throw new RuntimeException();
 		client.anInt7280 = 1872958459 * i_24_;
@@ -153,7 +153,7 @@ public class Class77 {
 	}
 
 	static final void method1367(CS2Executor class527, short i) {
-		int i_25_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_25_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_25_ < 0)
 			i_25_ = 0;
 		client.anInt7271 = 1364289201 * (-240868135 * client.anInt7270 + i_25_);
@@ -170,6 +170,6 @@ public class Class77 {
 	}
 
 	static final void method1370(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) client.aFloat7365 >> 3;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloat7365 >> 3;
 	}
 }

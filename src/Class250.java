@@ -172,7 +172,7 @@ public class Class250 {
 	}
 
 	static final void method4295(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1900875655 * class527.aClass61_7010.anInt636;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1900875655 * class527.aClass61_7010.anInt636;
 	}
 
 	public static void method4296(int i) {
@@ -228,7 +228,7 @@ public class Class250 {
 							continue;
 					}
 				}
-				if (1870758255 * class521_sub1_sub1_sub2.anInt10321 < 0 || ((48374445 * client.anInt7286 != -2009373393 * class521_sub1_sub1_sub2.anInt10349) && (Class84.myPlayer.aByte7967 != class521_sub1_sub1_sub2.aByte7967)))
+				if (1870758255 * class521_sub1_sub1_sub2.anInt10321 < 0 || ((48374445 * client.anInt7286 != -2009373393 * class521_sub1_sub1_sub2.anInt10349) && (Class84.myPlayer.plane != class521_sub1_sub1_sub2.plane)))
 					continue;
 			}
 			Class361.method6274(class521_sub1_sub1_sub2, class521_sub1_sub1_sub2.method12997(-218366287), -1607053853);
@@ -766,8 +766,8 @@ public class Class250 {
 	}
 
 	static final void method4299(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		if ((class527.intStack[class527.anInt7012 * 1942118537]) == (class527.intStack[1 + class527.anInt7012 * 1942118537]))
+		class527.intStackPtr -= 283782002;
+		if ((class527.intStack[class527.intStackPtr * 1942118537]) == (class527.intStack[1 + class527.intStackPtr * 1942118537]))
 			class527.instrPtr += (-1051529003 * (class527.intOpValues[class527.instrPtr * 301123709]));
 	}
 }

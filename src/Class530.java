@@ -53,7 +53,7 @@ public class Class530 {
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1217612419);
 		int i_3_ = (((Class530) this).aClass219_7048.x * 1948093437 - 1948093437 * class219.x);
 		int i_4_ = (-1002240017 * ((Class530) this).aClass219_7048.y - class219.y * -1002240017);
-		if (i_3_ < 0 || i_4_ < 0 || i_3_ >= IndexLoaders.MAP_REGION_DECODER.method4424(-444629403) || i_4_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-343963365))
+		if (i_3_ < 0 || i_4_ < 0 || i_3_ >= IndexLoaders.MAP_REGION_DECODER.getSizeX(-444629403) || i_4_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-343963365))
 			return null;
 		switch (method11343(-1790322453)) {
 		case 1:
@@ -74,7 +74,7 @@ public class Class530 {
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1833251508);
 		int i_5_ = (((Class530) this).aClass219_7048.x * 1948093437 - 1948093437 * class219.x);
 		int i_6_ = (-1002240017 * ((Class530) this).aClass219_7048.y - class219.y * -1002240017);
-		if (i_5_ < 0 || i_6_ < 0 || i_5_ >= IndexLoaders.MAP_REGION_DECODER.method4424(1337608146) || i_6_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-2076212393))
+		if (i_5_ < 0 || i_6_ < 0 || i_5_ >= IndexLoaders.MAP_REGION_DECODER.getSizeX(1337608146) || i_6_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-2076212393))
 			return null;
 		switch (method11343(-1790322453)) {
 		case 1:
@@ -93,12 +93,12 @@ public class Class530 {
 	static final void method11350(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 1552292309 * class118.anInt1293;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 1552292309 * class118.anInt1293;
 	}
 
 	static final void method11351(CS2Executor class527, int i) {
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method7785(i_7_, -1569082845);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method7785(i_7_, -1569082845);
 	}
 
 	static Class106[] method11352(int i) {
@@ -116,7 +116,7 @@ public class Class530 {
 	}
 
 	static final void method11355(CS2Executor class527, short i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (client.aString7426 != null && i_9_ < Class459.anInt5534 * -1772444859)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = Class467.aClass173Array5575[i_9_].aString2130;
 		else

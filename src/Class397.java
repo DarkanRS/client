@@ -105,8 +105,8 @@ public class Class397 implements Interface38 {
 			Class282_Sub48.aClass482_8074.append(class282_sub48, 1710217984);
 		} else if (null != class521_sub1_sub1_sub2_sub1) {
 			((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086 = class521_sub1_sub1_sub2_sub1;
-			((Class282_Sub48) class282_sub48).anInt8079 = (i_0_ + class521_sub1_sub1_sub2_sub1.method15805(828768449) << 9) * 1480845005;
-			((Class282_Sub48) class282_sub48).anInt8077 = (i_1_ + class521_sub1_sub1_sub2_sub1.method15805(828768449) << 9) * 1710236473;
+			((Class282_Sub48) class282_sub48).anInt8079 = (i_0_ + class521_sub1_sub1_sub2_sub1.getSize(828768449) << 9) * 1480845005;
+			((Class282_Sub48) class282_sub48).anInt8077 = (i_1_ + class521_sub1_sub1_sub2_sub1.getSize(828768449) << 9) * 1710236473;
 			((Class282_Sub48) class282_sub48).anInt8095 = Class149_Sub2.method14610(class521_sub1_sub1_sub2_sub1, 1888639983) * -569710251;
 			((Class282_Sub48) class282_sub48).aBool8098 = class521_sub1_sub1_sub2_sub1.isTransformedNPC;
 			((Class282_Sub48) class282_sub48).anInt8105 = (1837689437 * (1304574447 * class521_sub1_sub1_sub2_sub1.isNpc << 9));

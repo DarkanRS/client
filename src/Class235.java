@@ -144,10 +144,10 @@ public class Class235 {
 
 	static final void method3965(IComponentDefinitions class118, CS2Executor class527, int i) {
 		FontMetrics class414 = class118.method1989(Class487.aClass378_5752, client.anInterface35_7206, 1667104026);
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		int i_2_ = class414.method6956(class118.aString1391, 1506818197 * class118.anInt1301, -753644021 * class118.anInt1358, i_1_, i_0_, Class182.aClass160Array2261, 1449374266);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_2_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_2_;
 	}
 
 	static final void method3966(CS2Executor class527, int i) {
@@ -158,7 +158,7 @@ public class Class235 {
 	}
 
 	static int method3967(int i, int i_3_, int i_4_) {
-		if (1109376893 * Class458.aClass458_5493.anInt5481 == i || Class458.aClass458_5473.anInt5481 * 1109376893 == i)
+		if (1109376893 * SceneObjectType.WALL_DIAGONAL_CORNER.type == i || SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893 == i)
 			return Class521_Sub1_Sub5_Sub1.anIntArray10518[i_3_ & 0x3];
 		return Class521_Sub1_Sub5_Sub1.anIntArray10522[i_3_ & 0x3];
 	}

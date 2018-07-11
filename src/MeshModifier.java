@@ -114,15 +114,15 @@ public class MeshModifier {
 		if (null != class282_sub50_sub6) {
 			boolean bool = (class282_sub50_sub6.method14775(Class291.anInt3472 + Class427.anInt5123 * -861975801, Class291.anInt3473 + Class475.anInt5624 * 483850921, CS2Runner.anIntArray5900, -1687346032));
 			if (bool) {
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[1];
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[2];
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[1];
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = CS2Runner.anIntArray5900[2];
 			} else {
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1;
 			}
 		} else {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
 		}
 	}
 }

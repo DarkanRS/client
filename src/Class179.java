@@ -230,10 +230,10 @@ public class Class179 {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
 					CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(914377736);
-					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
-							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 126)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -1834471946);
-					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
-							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.aByte7967), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
+					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.plane).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.plane), (byte) 126)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -1834471946);
+					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.plane).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.plane), (byte) 42)) - 654473753 * Class121.anInt1527).toString(), -112329762);
 				}
 			} catch (Exception exception) {
 				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -515552037)), -1127364284);
@@ -883,10 +883,10 @@ public class Class179 {
 					if (!string.equalsIgnoreCase("getcamerapos"))
 						break;
 					CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1419754749);
-					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.aByte7967).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
-							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.aByte7967), (byte) 51)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -434108193);
-					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.aByte7967).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
-							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.aByte7967), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
+					Class209.method3598(new StringBuilder().append("Pos: ").append(Class84.myPlayer.plane).append(",").append(((Class31.anInt361 * -360258135 >> 9) + 1948093437 * class219.x) >> 6).append(",").append((-1002240017 * class219.y + (413271601 * Class246.anInt3029 >> 9)) >> 6).append(",").append(((Class31.anInt361 * -360258135 >> 9) + class219.x * 1948093437) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + (Class246.anInt3029 * 413271601 >> 9)) & 0x3f).append(" Height: ").append((Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, (Class84.myPlayer.plane), (byte) 51)) - Class109_Sub1.anInt9384 * 1929945579).toString(), -434108193);
+					Class209.method3598(new StringBuilder().append("Look: ").append(Class84.myPlayer.plane).append(",").append((721567303 * Class96_Sub13.anInt9368 + class219.x * 1948093437) >> 6).append(",").append((OutgoingLoginPacket.anInt4280 * 469662201 + class219.y * -1002240017) >> 6).append(",").append((class219.x * 1948093437 + Class96_Sub13.anInt9368 * 721567303) & 0x3f).append(",")
+							.append((class219.y * -1002240017 + 469662201 * OutgoingLoginPacket.anInt4280) & 0x3f).append(" Height: ").append((Class504.method8389(Class96_Sub13.anInt9368 * 721567303, 469662201 * OutgoingLoginPacket.anInt4280, (Class84.myPlayer.plane), (byte) 25)) - 654473753 * Class121.anInt1527).toString(), -773547759);
 				}
 			} catch (Exception exception) {
 				Class209.method3598((Message.ERROR_EXECUTING_COMMAND.translate(Class223.CURRENT_LANGUAGE, -1590942601)), -291693412);
@@ -1141,7 +1141,7 @@ public class Class179 {
 	}
 
 	static final void method3017(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class241.method4150(-536353301);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class241.method4150(-536353301);
 	}
 
 	public static String method3018(long l) {
@@ -1179,13 +1179,13 @@ public class Class179 {
 	}
 
 	static final void method3020(CS2Executor class527, int i) {
-		int i_60_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_60_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_60_, (byte) 40);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_60_ >> 16];
 		Class249.method4276(class118, class98, class527, -724687188);
 	}
 
 	static final void method3021(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass282_Sub4_7011.aByte7504;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass282_Sub4_7011.aByte7504;
 	}
 }

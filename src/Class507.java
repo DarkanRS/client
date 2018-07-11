@@ -21,13 +21,13 @@ public class Class507 {
 	}
 
 	static final void method8724(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_0_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_1_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_0_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_1_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		if (Class468_Sub8.aClass98Array7889[i_0_] == null)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1726519169 * (Class468_Sub8.aClass98Array7889[i_0_].components[i_1_].anInt1414);
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1726519169 * (Class468_Sub8.aClass98Array7889[i_0_].components[i_1_].anInt1414);
 	}
 
 	static void method8725(int i, int i_2_, int i_3_, int i_4_, boolean bool, int i_5_) {

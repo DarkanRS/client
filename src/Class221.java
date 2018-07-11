@@ -53,11 +53,11 @@ public class Class221 {
 	}
 
 	static final void method3749(CS2Executor class527, int i) {
-		class527.anInt7012 -= 141891001;
+		class527.intStackPtr -= 141891001;
 	}
 
 	static final void method3750(CS2Executor class527, byte i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), 1688733645);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), 1688733645);
 		Class190.method3148((byte) 79);
 	}
 
@@ -110,6 +110,6 @@ public class Class221 {
 	}
 
 	static final void method3752(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -762135173 * client.anInt7178;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -762135173 * client.anInt7178;
 	}
 }

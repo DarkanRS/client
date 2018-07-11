@@ -210,7 +210,7 @@ public class PacketsDecoder extends Class455 {
 			}
 			int[] is = { key1, key2, key3, key4 };
 			client.anInt7349 = 153305321 * id;
-			Class336.method6007(id, is, -1517468503);
+			ClipMap.method6007(id, is, -1517468503);
 			Class516.method8867(false, -905479502);
 			Class150.method2582(-1699899559 * client.anInt7349, is, -1390726584);
 			for (int i_26_ = 0; i_26_ < 107; i_26_++) {
@@ -264,7 +264,7 @@ public class PacketsDecoder extends Class455 {
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4416) {
 			Class158_Sub1_Sub2.anInt10131 = ((stream.read128Byte((short) 9583) << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte128(-1153285276) * 1822731553;
-			Class458.anInt5495 = ((stream.readByte((short) -31928) << 3) * 801275545);
+			SceneObjectType.anInt5495 = ((stream.readByte((short) -31928) << 3) * 801275545);
 			while (-1990677291 * stream.index < 715663393 * class184.anInt2287) {
 				TilestreamPacket class364 = (Class163.method2842(-332458150)[stream.readUnsignedByte()]);
 				Class188.decodeTilestreamPacket(class364, 1774288531);
@@ -376,7 +376,7 @@ public class PacketsDecoder extends Class455 {
 				int i_59_ = i_55_ >> 28 & 0x3;
 				int i_60_ = (i_55_ >> 14 & 0x3fff) - class219.x * 1948093437;
 				int i_61_ = (i_55_ & 0x3fff) - -1002240017 * class219.y;
-				if (i_60_ >= 0 && i_61_ >= 0 && i_60_ < IndexLoaders.MAP_REGION_DECODER.method4424(388459650) && i_61_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1824277921)) {
+				if (i_60_ >= 0 && i_61_ >= 0 && i_60_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(388459650) && i_61_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1824277921)) {
 					if (i_52_ == -1) {
 						Class282_Sub50_Sub10 class282_sub50_sub10 = ((Class282_Sub50_Sub10) client.aClass465_7334.method7754(i_60_ << 16 | i_61_));
 						if (class282_sub50_sub10 != null) {
@@ -387,7 +387,7 @@ public class PacketsDecoder extends Class455 {
 						int i_62_ = i_60_ * 512 + 256;
 						int i_63_ = i_61_ * 512 + 256;
 						int i_64_ = i_59_;
-						if (i_64_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_60_, i_61_, 1765906120)) {
+						if (i_64_ < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_60_, i_61_, 1765906120)) {
 							i_64_++;
 						}
 						Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1893689656), i_52_, i_54_, i_59_, i_64_, i_62_, Class504.method8389(i_62_, i_63_, i_59_, (byte) 74) - i_56_, i_63_, i_60_, i_60_, i_61_, i_61_, i_57_, bool));
@@ -947,14 +947,14 @@ public class PacketsDecoder extends Class455 {
 				i_146_ -= 1948093437 * class219.x;
 				if (i_146_ < 0) {
 					i_146_ = 0;
-				} else if (i_146_ >= IndexLoaders.MAP_REGION_DECODER.method4424(2001969663)) {
-					i_146_ = IndexLoaders.MAP_REGION_DECODER.method4424(1292734123);
+				} else if (i_146_ >= IndexLoaders.MAP_REGION_DECODER.getSizeX(2001969663)) {
+					i_146_ = IndexLoaders.MAP_REGION_DECODER.getSizeX(1292734123);
 				}
 				i_147_ -= class219.y * -1002240017;
 				if (i_147_ < 0) {
 					i_147_ = 0;
-				} else if (i_147_ >= IndexLoaders.MAP_REGION_DECODER.method4451(-446292147)) {
-					i_147_ = IndexLoaders.MAP_REGION_DECODER.method4451(-1249519564);
+				} else if (i_147_ >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-446292147)) {
+					i_147_ = IndexLoaders.MAP_REGION_DECODER.getSizeY(-1249519564);
 				}
 				Class508.anInt5864 = -987778595 * (256 + (i_146_ << 9));
 				Class86.anInt833 = 1509271845 * ((i_147_ << 9) + 256);
@@ -1091,7 +1091,7 @@ public class PacketsDecoder extends Class455 {
 		if (IncomingPacket.WORLD_TILE == class184.aClass375_2286) {
 			Class158_Sub1_Sub2.anInt10131 = ((stream.readByte128(2090412640) << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte128(-2083264480) * 1822731553;
-			Class458.anInt5495 = (stream.readByte128(1860551613) << 3) * 801275545;
+			SceneObjectType.anInt5495 = (stream.readByte128(1860551613) << 3) * 801275545;
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -1202,7 +1202,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4392) {
-			Class458.anInt5495 = ((stream.read128Byte((short) 15542) << 3) * 801275545);
+			SceneObjectType.anInt5495 = ((stream.read128Byte((short) 15542) << 3) * 801275545);
 			Class158_Sub1_Sub2.anInt10131 = ((stream.readByte((short) -16828) << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte() * 1822731553;
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(902676925);
@@ -1212,20 +1212,20 @@ public class PacketsDecoder extends Class455 {
 				int i_188_ = i_187_ - class219.x * 1948093437;
 				int i_189_ = (int) ((class282_sub29.data * -3442165056282524525L >> 14) & 0x3fffL);
 				int i_190_ = i_189_ - -1002240017 * class219.y;
-				if (i_186_ == Class272.anInt3331 * -1258088735 && i_188_ >= -2109540951 * Class458.anInt5495 && i_188_ < 8 + Class458.anInt5495 * -2109540951 && i_190_ >= 71472045 * Class158_Sub1_Sub2.anInt10131 && i_190_ < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) {
+				if (i_186_ == Class272.anInt3331 * -1258088735 && i_188_ >= -2109540951 * SceneObjectType.anInt5495 && i_188_ < 8 + SceneObjectType.anInt5495 * -2109540951 && i_190_ >= 71472045 * Class158_Sub1_Sub2.anInt10131 && i_190_ < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) {
 					class282_sub29.unlink(-371378792);
-					if (i_188_ >= 0 && i_190_ >= 0 && (i_188_ < IndexLoaders.MAP_REGION_DECODER.method4424(-359634463)) && (i_190_ < IndexLoaders.MAP_REGION_DECODER.method4451(-542957162))) {
+					if (i_188_ >= 0 && i_190_ >= 0 && (i_188_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-359634463)) && (i_190_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-542957162))) {
 						Class434_Sub1.method12760((Class272.anInt3331 * -1258088735), i_188_, i_190_, -1380263584);
 					}
 				}
 			}
 			for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7775.head((byte) 94)); null != class282_sub31; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7775.next(-766641666)) {
-				if ((37618455 * class282_sub31.anInt7762 >= -2109540951 * Class458.anInt5495) && (37618455 * class282_sub31.anInt7762 < 8 + -2109540951 * Class458.anInt5495) && (class282_sub31.anInt7763 * -322610393 >= Class158_Sub1_Sub2.anInt10131 * 71472045) && (-322610393 * class282_sub31.anInt7763 < 71472045 * Class158_Sub1_Sub2.anInt10131 + 8) && (-1258088735 * Class272.anInt3331 == (class282_sub31.anInt7764 * 1291499461))) {
+				if ((37618455 * class282_sub31.anInt7762 >= -2109540951 * SceneObjectType.anInt5495) && (37618455 * class282_sub31.anInt7762 < 8 + -2109540951 * SceneObjectType.anInt5495) && (class282_sub31.anInt7763 * -322610393 >= Class158_Sub1_Sub2.anInt10131 * 71472045) && (-322610393 * class282_sub31.anInt7763 < 71472045 * Class158_Sub1_Sub2.anInt10131 + 8) && (-1258088735 * Class272.anInt3331 == (class282_sub31.anInt7764 * 1291499461))) {
 					class282_sub31.aBool7774 = true;
 				}
 			}
 			for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 125)); null != class282_sub31; class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.next(804942724))) {
-				if ((class282_sub31.anInt7762 * 37618455 >= -2109540951 * Class458.anInt5495) && (class282_sub31.anInt7762 * 37618455 < 8 + Class458.anInt5495 * -2109540951) && (class282_sub31.anInt7763 * -322610393 >= 71472045 * Class158_Sub1_Sub2.anInt10131) && (class282_sub31.anInt7763 * -322610393 < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) && (Class272.anInt3331 * -1258088735 == (1291499461 * class282_sub31.anInt7764))) {
+				if ((class282_sub31.anInt7762 * 37618455 >= -2109540951 * SceneObjectType.anInt5495) && (class282_sub31.anInt7762 * 37618455 < 8 + SceneObjectType.anInt5495 * -2109540951) && (class282_sub31.anInt7763 * -322610393 >= 71472045 * Class158_Sub1_Sub2.anInt10131) && (class282_sub31.anInt7763 * -322610393 < Class158_Sub1_Sub2.anInt10131 * 71472045 + 8) && (Class272.anInt3331 * -1258088735 == (1291499461 * class282_sub31.anInt7764))) {
 					class282_sub31.aBool7774 = true;
 				}
 			}
@@ -1343,7 +1343,7 @@ public class PacketsDecoder extends Class455 {
 			int i_216_ = i_204_ - -2004480034 * class219.y;
 			i_209_ += i_215_;
 			i_210_ += i_216_;
-			if (i_215_ >= 0 && i_216_ >= 0 && i_215_ < IndexLoaders.MAP_REGION_DECODER.method4424(1885615957) * 2 && i_216_ < IndexLoaders.MAP_REGION_DECODER.method4424(1685736884) * 2 && i_209_ >= 0 && i_210_ >= 0 && i_209_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1422128606) * 2 && i_210_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1745798122) * 2 && i_207_ != 65535) {
+			if (i_215_ >= 0 && i_216_ >= 0 && i_215_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1885615957) * 2 && i_216_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(1685736884) * 2 && i_209_ >= 0 && i_210_ >= 0 && i_209_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1422128606) * 2 && i_210_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1745798122) * 2 && i_207_ != 65535) {
 				i_215_ = 256 * i_215_;
 				i_216_ = 256 * i_216_;
 				i_209_ = 256 * i_209_;
@@ -1999,7 +1999,7 @@ public class PacketsDecoder extends Class455 {
 			int i_332_ = stream.readShortLE((byte) -27) << 2;
 			int i_333_ = stream.readUnsignedByte128(-904691893);
 			Class470.method7825(-450255418);
-			Class225.method3794(i_330_, i_329_, i_332_, i_331_, i_333_, true, (byte) -1);
+			RouteStrategy.method3794(i_330_, i_329_, i_332_, i_331_, i_333_, true, (byte) -1);
 			class184.aClass375_2286 = null;
 			return true;
 		}
@@ -2483,6 +2483,6 @@ public class PacketsDecoder extends Class455 {
 
 	static final void method14434(CS2Executor class527, int i) {
 		class527.anInt7000 -= -1341717846;
-		Class533.method11404((String) (class527.objectStack[(1806726141 * class527.anInt7000)]), (String) (class527.objectStack[1 + (class527.anInt7000 * 1806726141)]), "", (class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]) == 1, false, -94301647);
+		Class533.method11404((String) (class527.objectStack[(1806726141 * class527.anInt7000)]), (String) (class527.objectStack[1 + (class527.anInt7000 * 1806726141)]), "", (class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]) == 1, false, -94301647);
 	}
 }

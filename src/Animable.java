@@ -263,7 +263,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		} else if (((Animable) this).aClass539_10369 != null)
 			((Animable) this).aClass539_10369.method11512((long) (client.cycles * -1809259861));
 		if (((Animable) this).aClass539_10369 != null)
-			((Animable) this).aClass539_10369.method11515(aByte7967, aShort9458, aShort9455, aShort9456, aShort9457);
+			((Animable) this).aClass539_10369.method11515(plane, aShort9458, localX, aShort9456, localY);
 	}
 
 	public final void sendGraphics(int i, int i_35_, int i_36_, int i_37_, boolean bool, int i_38_, int i_39_) {
@@ -417,8 +417,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Class305 class305 = method11166();
 		int i_72_ = (int) class305.aClass385_3595.x >> 9;
 		int i_73_ = (int) class305.aClass385_3595.z >> 9;
-		if (null != aClass206_7970 && i_72_ >= 1 && i_73_ >= 1 && i_72_ <= IndexLoaders.MAP_REGION_DECODER.method4424(2033491837) - 1 && i_73_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-2135239532) - 1) {
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][i_72_][i_73_]);
+		if (null != aClass206_7970 && i_72_ >= 1 && i_73_ >= 1 && i_72_ <= IndexLoaders.MAP_REGION_DECODER.getSizeX(2033491837) - 1 && i_73_ <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-2135239532) - 1) {
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][i_72_][i_73_]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				return class293.aClass521_Sub1_Sub3_3499.aShort9561 + i_71_;
 		}
@@ -427,7 +427,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public abstract int method15804();
 
-	public int method15805(int i) {
+	public int getSize(int i) {
 		return ((Animable) this).anInt10315 * 1959344547;
 	}
 
@@ -436,8 +436,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Vector3 class385 = method11166().aClass385_3595;
 		aShort9458 = (short) ((int) class385.x - i_74_ >> 9);
 		aShort9456 = (short) ((int) class385.z - i_74_ >> 9);
-		aShort9455 = (short) ((int) class385.x + i_74_ >> 9);
-		aShort9457 = (short) ((int) class385.z + i_74_ >> 9);
+		localX = (short) ((int) class385.x + i_74_ >> 9);
+		localY = (short) ((int) class385.z + i_74_ >> 9);
 	}
 
 	Animable(SceneObjectManager class206) {
@@ -459,8 +459,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Vector3 class385 = method11166().aClass385_3595;
 		aShort9458 = (short) ((int) class385.x - i >> 9);
 		aShort9456 = (short) ((int) class385.z - i >> 9);
-		aShort9455 = (short) ((int) class385.x + i >> 9);
-		aShort9457 = (short) ((int) class385.z + i >> 9);
+		localX = (short) ((int) class385.x + i >> 9);
+		localY = (short) ((int) class385.z + i >> 9);
 	}
 
 	public abstract Class163 method15811(int i);
@@ -560,8 +560,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Class305 class305 = method11166();
 		int i_118_ = (int) class305.aClass385_3595.x >> 9;
 		int i_119_ = (int) class305.aClass385_3595.z >> 9;
-		if (null != aClass206_7970 && i_118_ >= 1 && i_119_ >= 1 && i_118_ <= IndexLoaders.MAP_REGION_DECODER.method4424(1358683385) - 1 && i_119_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-947392385) - 1) {
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][i_118_][i_119_]);
+		if (null != aClass206_7970 && i_118_ >= 1 && i_119_ >= 1 && i_118_ <= IndexLoaders.MAP_REGION_DECODER.getSizeX(1358683385) - 1 && i_119_ <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-947392385) - 1) {
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][i_118_][i_119_]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				return class293.aClass521_Sub1_Sub3_3499.aShort9561 + i;
 		}
@@ -580,8 +580,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Class305 class305 = method11166();
 		int i_120_ = (int) class305.aClass385_3595.x >> 9;
 		int i_121_ = (int) class305.aClass385_3595.z >> 9;
-		if (null != aClass206_7970 && i_120_ >= 1 && i_121_ >= 1 && i_120_ <= IndexLoaders.MAP_REGION_DECODER.method4424(-1295672030) - 1 && i_121_ <= IndexLoaders.MAP_REGION_DECODER.method4451(-1381064515) - 1) {
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][i_120_][i_121_]);
+		if (null != aClass206_7970 && i_120_ >= 1 && i_121_ >= 1 && i_120_ <= IndexLoaders.MAP_REGION_DECODER.getSizeX(-1295672030) - 1 && i_121_ <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-1381064515) - 1) {
+			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][i_120_][i_121_]);
 			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
 				return class293.aClass521_Sub1_Sub3_3499.aShort9561 + i;
 		}
@@ -677,8 +677,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		Vector3 class385 = method11166().aClass385_3595;
 		aShort9458 = (short) ((int) class385.x - i >> 9);
 		aShort9456 = (short) ((int) class385.z - i >> 9);
-		aShort9455 = (short) ((int) class385.x + i >> 9);
-		aShort9457 = (short) ((int) class385.z + i >> 9);
+		localX = (short) ((int) class385.x + i >> 9);
+		localY = (short) ((int) class385.z + i >> 9);
 	}
 	
 	public Class227 method15855(byte i) {
@@ -794,30 +794,30 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	void method15895(int i, int i_417_, int i_418_, int i_419_, int i_420_, byte i_421_) {
 		Vector3 class385 = method11166().aClass385_3595;
-		int i_422_ = aShort9458 + aShort9455 >> 1;
-		int i_423_ = aShort9457 + aShort9456 >> 1;
+		int i_422_ = aShort9458 + localX >> 1;
+		int i_423_ = localY + aShort9456 >> 1;
 		int i_424_ = Class382.anIntArray4657[i];
 		int i_425_ = Class382.anIntArray4661[i];
 		int i_426_ = -i_417_ / 2;
 		int i_427_ = -i_418_ / 2;
 		int i_428_ = i_425_ * i_426_ + i_424_ * i_427_ >> 14;
 		int i_429_ = i_427_ * i_425_ - i_424_ * i_426_ >> 14;
-		int i_430_ = Class13.method507((int) class385.x + i_428_, i_429_ + (int) class385.z, i_422_, i_423_, aByte7967, (byte) -92);
+		int i_430_ = Class13.method507((int) class385.x + i_428_, i_429_ + (int) class385.z, i_422_, i_423_, plane, (byte) -92);
 		int i_431_ = i_417_ / 2;
 		int i_432_ = -i_418_ / 2;
 		int i_433_ = i_431_ * i_425_ + i_424_ * i_432_ >> 14;
 		int i_434_ = i_425_ * i_432_ - i_431_ * i_424_ >> 14;
-		int i_435_ = Class13.method507(i_433_ + (int) class385.x, (int) class385.z + i_434_, i_422_, i_423_, aByte7967, (byte) -75);
+		int i_435_ = Class13.method507(i_433_ + (int) class385.x, (int) class385.z + i_434_, i_422_, i_423_, plane, (byte) -75);
 		int i_436_ = -i_417_ / 2;
 		int i_437_ = i_418_ / 2;
 		int i_438_ = i_425_ * i_436_ + i_424_ * i_437_ >> 14;
 		int i_439_ = i_437_ * i_425_ - i_424_ * i_436_ >> 14;
-		int i_440_ = Class13.method507((int) class385.x + i_438_, (int) class385.z + i_439_, i_422_, i_423_, aByte7967, (byte) -66);
+		int i_440_ = Class13.method507((int) class385.x + i_438_, (int) class385.z + i_439_, i_422_, i_423_, plane, (byte) -66);
 		int i_441_ = i_417_ / 2;
 		int i_442_ = i_418_ / 2;
 		int i_443_ = i_425_ * i_441_ + i_442_ * i_424_ >> 14;
 		int i_444_ = i_442_ * i_425_ - i_424_ * i_441_ >> 14;
-		int i_445_ = Class13.method507((int) class385.x + i_443_, (int) class385.z + i_444_, i_422_, i_423_, aByte7967, (byte) -13);
+		int i_445_ = Class13.method507((int) class385.x + i_443_, (int) class385.z + i_444_, i_422_, i_423_, plane, (byte) -13);
 		int i_446_ = i_430_ < i_435_ ? i_430_ : i_435_;
 		int i_447_ = i_440_ < i_445_ ? i_440_ : i_445_;
 		int i_448_ = i_435_ < i_445_ ? i_435_ : i_445_;

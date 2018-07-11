@@ -621,7 +621,7 @@ public abstract class Class101 {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (string.startsWith(Class76.getCrown(0)) || string.startsWith(Class76.getCrown(1)))
 			string = string.substring(7);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class230.method3910(string, -555098945);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class230.method3910(string, -555098945);
 	}
 
 	public static int method1776(int i, boolean bool, int i_79_) {
@@ -640,7 +640,7 @@ public abstract class Class101 {
 	}
 
 	static final void method1777(CS2Executor class527, int i) {
-		int i_82_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_82_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_82_, (byte) 29);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_82_ >> 16];
 		Class282_Sub17_Sub4.method15409(class118, class98, class527, -1219012115);

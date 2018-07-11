@@ -253,23 +253,23 @@ public class Class320 {
 	}
 
 	static final void method5733(CS2Executor class527, short i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.membersWorld ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.membersWorld ? 1 : 0;
 	}
 
 	static final void method5734(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(1068541972);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8227.method12714(1068541972);
 	}
 
 	static final void method5735(CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		class527.anInt7012 -= 283782002;
-		int i_21_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_22_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_21_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_22_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_22_, 0, 1444002710);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class414.method6951(string, i_21_, Class182.aClass160Array2261, (byte) 76);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class414.method6951(string, i_21_, Class182.aClass160Array2261, (byte) 76);
 	}
 
 	static void method5736(CS2Executor class527, int i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317).aString2957);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317).aString2957);
 	}
 }

@@ -141,7 +141,7 @@ public class Class233 {
 	}
 
 	static final void method3938(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
+		class527.intStackPtr -= 283782002;
 	}
 
 	static final void method3939(CS2Executor class527, int i) {
@@ -149,7 +149,7 @@ public class Class233 {
 	}
 
 	static final void method3940(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 105);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
 		Class388.method6689(class118, class98, class527, -1054634282);
@@ -163,7 +163,7 @@ public class Class233 {
 	}
 
 	static final void method3942(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -989964873);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub10_8215, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) ? 1 : 0, -989964873);
 		Class282_Sub20_Sub36.method15418(668850119);
 		Class190.method3148((byte) 44);
 		client.aBool7175 = false;

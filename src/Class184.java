@@ -204,24 +204,24 @@ public class Class184 {
 	}
 
 	static final void method3064(CS2Executor class527, short i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 73);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class175.method2960(class118, class98, class527, 1289929299);
 	}
 
 	static final void method3065(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 93);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1423 * -169127141;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1423 * -169127141;
 	}
 
 	static final void method3066(CS2Executor class527, int i) {
 		if (Class475.aBool5623) {
 			Class467[] class467s = Class405.method6825((byte) -71);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class467s.length;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class467s.length;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static final void method3067(CS2Executor class527, int i) {
@@ -229,8 +229,8 @@ public class Class184 {
 	}
 
 	static final void method3068(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class60.method1169((char) i_2_, (byte) 65) ? 1 : 0;
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class60.method1169((char) i_2_, (byte) 65) ? 1 : 0;
 	}
 
 	static void method3069(int i, int i_3_, int i_4_) {

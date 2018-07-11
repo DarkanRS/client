@@ -123,7 +123,7 @@ public class Class30 implements Runnable {
 	}
 
 	static final void method797(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_4_ != class118.anInt1321 * 1241177935) {
 			if (i_4_ != -1) {
 				if (null == class118.aClass456_1437)

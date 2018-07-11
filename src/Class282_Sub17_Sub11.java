@@ -56,6 +56,6 @@ public class Class282_Sub17_Sub11 extends Class282_Sub17 {
 	}
 
 	static final void method15449(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method12706((byte) 21) == 1 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method12706((byte) 21) == 1 ? 1 : 0;
 	}
 }

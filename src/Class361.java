@@ -183,10 +183,10 @@ public class Class361 {
 	}
 
 	static final void method6272(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		int[] is = Class268.method4799(i_0_, 72550989);
-		Class503.method8362(is, 0, class527.intStack, class527.anInt7012 * 1942118537, 3);
-		class527.anInt7012 += 425673003;
+		Class503.method8362(is, 0, class527.intStack, class527.intStackPtr * 1942118537, 3);
+		class527.intStackPtr += 425673003;
 	}
 
 	public static byte[] method6273(byte[] is, int i, int i_1_, byte i_2_) {
@@ -210,7 +210,7 @@ public class Class361 {
 	}
 
 	static final void method6275(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7344 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7344 ? 1 : 0;
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = client.aString7356 == null ? "" : client.aString7356;
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = null == client.aString7275 ? "" : client.aString7275;
 	}

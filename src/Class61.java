@@ -1113,8 +1113,8 @@ public class Class61 {
 	}
 
 	static final void method1255(CS2Executor class527, int i) {
-		int i_97_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_97_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_97_, 676193293);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1248709255 * class220.anInt2719;
 	}
 }

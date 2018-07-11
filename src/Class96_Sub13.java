@@ -55,11 +55,11 @@ public class Class96_Sub13 extends Class96 {
 	}
 
 	static final void method14639(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = null != Class46.anObjectArray437 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = null != Class46.anObjectArray437 ? 1 : 0;
 	}
 
 	static final void method14640(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 36);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class215.method3672(class118, class98, class527, (short) 9324);

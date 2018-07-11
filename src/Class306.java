@@ -370,7 +370,7 @@ public class Class306 implements Runnable {
 	}
 
 	static final void method5453(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.anInt1453 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 542423029);
+		class118.anInt1453 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * 542423029);
 		Class109.method1858(class118, (byte) 38);
 	}
 
@@ -429,7 +429,7 @@ public class Class306 implements Runnable {
 	}
 
 	static final void method5459(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		int i_19_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_19_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_19_ != class118.anInt1435 * 602613369) {
 			class118.anInt1435 = -655465527 * i_19_;
 			Class109.method1858(class118, (byte) 77);

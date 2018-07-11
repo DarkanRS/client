@@ -74,7 +74,7 @@ public abstract class Class455 {
 
 	static final void method7555(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		class118.anInt1329 = 589750077;
-		class118.anInt1330 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -636815827);
+		class118.anInt1330 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -636815827);
 		Class109.method1858(class118, (byte) -15);
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
 			Class92.method1565(class118.idHash * -1952846363, -624586705);
@@ -84,7 +84,7 @@ public abstract class Class455 {
 		class527.anInt7000 -= -1341717846;
 		String string = (String) (class527.objectStack[1806726141 * class527.anInt7000]);
 		String string_8_ = (String) (class527.objectStack[class527.anInt7000 * 1806726141 + 1]);
-		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1)
+		if ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = string;
 		else
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = string_8_;
@@ -186,10 +186,10 @@ public abstract class Class455 {
 	}
 
 	static final void method7560(CS2Executor class527, int i) {
-		int i_31_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_31_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_31_, (byte) 59);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_31_ >> 16];
-		Class336.method6010(class118, class98, class527, -298020679);
+		ClipMap.method6010(class118, class98, class527, -298020679);
 	}
 
 	static final void method7561(CS2Executor class527, int i) {

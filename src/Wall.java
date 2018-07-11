@@ -180,7 +180,7 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 
 	public Wall(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_6_, int i_7_, int i_8_, int i_9_, boolean bool, int i_10_, int i_11_, int i_12_) {
 		super(class206, i_7_, i_8_, i_9_, i, i_6_, Engine.method4777(i_10_, i_11_, (byte) -17));
-		aClass123_10532 = new Class123(class505, class474, class478, i_10_, i_11_, aByte7967, i_6_, this, bool, i_12_);
+		aClass123_10532 = new Class123(class505, class474, class478, i_10_, i_11_, plane, i_6_, this, bool, i_12_);
 		((Wall) this).aBool10529 = 0 != class478.anInt5652 * -348507379 && !bool;
 		method13008(1, (byte) -77);
 	}
@@ -349,19 +349,19 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 	}
 
 	static int method16110(int i, int i_24_) {
-		if (Class458.aClass458_5493.anInt5481 * 1109376893 == i || i == Class458.aClass458_5473.anInt5481 * 1109376893)
+		if (SceneObjectType.WALL_DIAGONAL_CORNER.type * 1109376893 == i || i == SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893)
 			return anIntArray10533[i_24_ & 0x3];
 		return anIntArray10531[i_24_ & 0x3];
 	}
 
 	static int method16111(int i, int i_25_) {
-		if (Class458.aClass458_5493.anInt5481 * 1109376893 == i || i == Class458.aClass458_5473.anInt5481 * 1109376893)
+		if (SceneObjectType.WALL_DIAGONAL_CORNER.type * 1109376893 == i || i == SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893)
 			return anIntArray10533[i_25_ & 0x3];
 		return anIntArray10531[i_25_ & 0x3];
 	}
 
 	static int method16112(int i, int i_26_) {
-		if (Class458.aClass458_5493.anInt5481 * 1109376893 == i || i == Class458.aClass458_5473.anInt5481 * 1109376893)
+		if (SceneObjectType.WALL_DIAGONAL_CORNER.type * 1109376893 == i || i == SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893)
 			return anIntArray10533[i_26_ & 0x3];
 		return anIntArray10531[i_26_ & 0x3];
 	}

@@ -99,7 +99,7 @@ public abstract class Class504 {
 	}
 
 	static final void method8387(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.anInt1380 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1380100089);
+		class118.anInt1380 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -1380100089);
 	}
 
 	static boolean method8388(int i, byte i_2_) {
@@ -111,16 +111,16 @@ public abstract class Class504 {
 			return 0;
 		int i_6_ = i >> 9;
 		int i_7_ = i_3_ >> 9;
-		if (i_6_ < 0 || i_7_ < 0 || i_6_ > IndexLoaders.MAP_REGION_DECODER.method4424(-868401346) - 1 || i_7_ > IndexLoaders.MAP_REGION_DECODER.method4451(-1411185573) - 1)
+		if (i_6_ < 0 || i_7_ < 0 || i_6_ > IndexLoaders.MAP_REGION_DECODER.getSizeX(-868401346) - 1 || i_7_ > IndexLoaders.MAP_REGION_DECODER.getSizeY(-1411185573) - 1)
 			return 0;
 		int i_8_ = i_4_;
-		if (i_8_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).aByteArrayArrayArray3638[1][i_6_][i_7_]) & 0x2) != 0)
+		if (i_8_ < 3 && ((IndexLoaders.MAP_REGION_DECODER.method4433(33386298).tileMasks[1][i_6_][i_7_]) & 0x2) != 0)
 			i_8_++;
 		return IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1489528047).aClass390Array2591[i_8_].method6709(i, i_3_, 1879647652);
 	}
 
 	static final void method8390(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (class118.anInt1320 * 985215637 != i_9_) {
 			class118.anInt1320 = i_9_ * -1179842371;
 			Class109.method1858(class118, (byte) 22);

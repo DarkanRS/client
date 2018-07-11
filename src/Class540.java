@@ -840,12 +840,12 @@ public class Class540 {
 	}
 
 	static void method11592(CS2Executor class527, byte i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.anInt7012 * 1942118537 - 2]), -1396181317).aStringArray2975[(class527.intStack[class527.anInt7012 * 1942118537 - 1])]);
-		class527.anInt7012 -= 283782002;
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 2]), -1396181317).aStringArray2975[(class527.intStack[class527.intStackPtr * 1942118537 - 1])]);
+		class527.intStackPtr -= 283782002;
 	}
 
 	static final void method11593(CS2Executor class527, int i) {
-		int i_193_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_193_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_193_, (byte) 27);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_193_ >> 16];
 		Engine.method4772(class118, class98, class527, (byte) 88);

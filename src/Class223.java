@@ -126,12 +126,12 @@ public final class Class223 {
 	}
 
 	static final void method3768(CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class8_Sub2.method14263(i_4_ >> 14 & 0x3fff, i_4_ & 0x3fff, (byte) 0);
 	}
 
 	static final void method3769(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass521_Sub1_Sub2_Sub1_7014.method12997(-218366287);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass521_Sub1_Sub2_Sub1_7014.method12997(-218366287);
 	}
 
 	public static void method3770(byte i) {

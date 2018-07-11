@@ -849,8 +849,8 @@ public class Class8_Sub3 extends FontRenderer {
 		int i_334_;
 		if (class521_sub1 instanceof Class521_Sub1_Sub1 && class521_sub1 instanceof SceneObject) {
 			Class521_Sub1_Sub1 class521_sub1_sub1 = (Class521_Sub1_Sub1) class521_sub1;
-			int i_335_ = (1 + (class521_sub1_sub1.aShort9455 - class521_sub1_sub1.aShort9458) << 9);
-			int i_336_ = (1 + (class521_sub1_sub1.aShort9457 - class521_sub1_sub1.aShort9456) << 9);
+			int i_335_ = (1 + (class521_sub1_sub1.localX - class521_sub1_sub1.aShort9458) << 9);
+			int i_336_ = (1 + (class521_sub1_sub1.localY - class521_sub1_sub1.aShort9456) << 9);
 			i_333_ = (class521_sub1_sub1.aShort9458 << 9) + i_335_ / 2;
 			i_334_ = (class521_sub1_sub1.aShort9456 << 9) + i_336_ / 2;
 		} else {
@@ -858,7 +858,7 @@ public class Class8_Sub3 extends FontRenderer {
 			i_333_ = (int) class385.x;
 			i_334_ = (int) class385.z;
 		}
-		Class210.method3612(class521_sub1.aByte7967, i_333_, i_334_, 0, i, bool, (byte) 29);
+		Class210.method3612(class521_sub1.plane, i_333_, i_334_, 0, i, bool, (byte) 29);
 	}
 
 	public static int method14337(int i, int i_337_, int i_338_, int i_339_) {
@@ -916,7 +916,7 @@ public class Class8_Sub3 extends FontRenderer {
 	}
 
 	static final void method14342(CS2Executor class527, byte i) {
-		int i_343_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_343_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_343_, (byte) 90);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_343_ >> 16];
 		Class29.method789(class118, class98, class527, -19478635);

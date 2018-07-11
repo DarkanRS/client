@@ -486,7 +486,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 	}
 
 	static int method16105(int i, int i_19_) {
-		if (1109376893 * Class458.aClass458_5493.anInt5481 == i || Class458.aClass458_5473.anInt5481 * 1109376893 == i) {
+		if (1109376893 * SceneObjectType.WALL_DIAGONAL_CORNER.type == i || SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893 == i) {
 			return anIntArray10518[i_19_ & 0x3];
 		}
 		return anIntArray10522[i_19_ & 0x3];
@@ -615,7 +615,7 @@ public class Class521_Sub1_Sub5_Sub1 extends Class521_Sub1_Sub5 implements Scene
 					if (string != null) {
 						message.buffer.writeString(string);
 					}
-					Class11.aClass282_Sub51_124.writeMachineInformation(message.buffer, 419814551);
+					Class11.SYSTEM_INFO.writeMachineInformation(message.buffer, 419814551);
 					message.buffer.index += 781596523;
 					message.buffer.encryptWithXtea(Class14.LOGIN_XTEAS, i_25_, (message.buffer.index * -1990677291), 1645773158);
 					message.buffer.method13281((-1990677291 * (message.buffer.index) - i_24_), 1201423895);

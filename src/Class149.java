@@ -38,7 +38,7 @@ public abstract class Class149 {
 	}
 
 	static final void method2564(CS2Executor class527, byte i) {
-		int i_13_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_13_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_13_, (byte) 82);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_13_ >> 16];
 		Class44.method910(class118, class98, class527, 1996171820);
@@ -79,7 +79,7 @@ public abstract class Class149 {
 	}
 
 	static final void method2568(CS2Executor class527, byte i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub26_8224, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -2145743553);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub26_8224, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) ? 1 : 0, -2145743553);
 		Class190.method3148((byte) 49);
 		client.aBool7175 = false;
 	}

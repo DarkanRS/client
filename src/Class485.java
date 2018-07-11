@@ -12,6 +12,6 @@ public class Class485 {
 	}
 
 	static boolean method8201(int i, int i_0_) {
-		return (i >= 1109376893 * Class458.aClass458_5475.anInt5481 && i <= Class458.aClass458_5479.anInt5481 * 1109376893);
+		return (i >= 1109376893 * SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type && i <= SceneObjectType.DIAGONAL_INWALL_DEC.type * 1109376893);
 	}
 }

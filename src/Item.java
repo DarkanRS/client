@@ -45,7 +45,7 @@ public class Item extends Node {
 					i_9_ = 4096 - 234318736 * client.anInt7203;
 				}
 				int i_10_ = 48 + i_6_ / 128;
-				int i_11_ = (48 + IndexLoaders.MAP_REGION_DECODER.method4451(-1005893088) * 4 - i_7_ / 128);
+				int i_11_ = (48 + IndexLoaders.MAP_REGION_DECODER.getSizeY(-1005893088) * 4 - i_7_ / 128);
 				Class419.aClass160_5004.method2762(((float) i + (float) (class118.anInt1301 * 1506818197) / 2.0F), ((float) i_4_ + (float) (-492594917 * class118.anInt1429) / 2.0F), (float) i_10_, (float) i_11_, i_9_, i_8_ << 2, class455, i, i_4_);
 				Class283 class283 = IndexLoaders.MAP_REGION_DECODER.method4528((byte) 38);
 				for (Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.head((byte) 120)); null != class282_sub38; class282_sub38 = ((Class282_Sub38) Class187.aClass482_2350.next(1158642483))) {
@@ -82,8 +82,8 @@ public class Item extends Node {
 				Class190.method3151(i_6_, i_7_, class118, class119, i, i_4_, 848202629);
 				if (NativeLibraryLoader.anInt3240 * -672443707 != 4) {
 					if (895508675 * Class187.anInt2361 != 0) {
-						int i_25_ = (-712932596 * Class187.anInt2361 + 2 - i_6_ / 128 + (Class84.myPlayer.method15805(828768449) - 1) * 2);
-						int i_26_ = (2 + 20612540 * Class187.anInt2359 - i_7_ / 128 + (Class84.myPlayer.method15805(828768449) - 1) * 2);
+						int i_25_ = (-712932596 * Class187.anInt2361 + 2 - i_6_ / 128 + (Class84.myPlayer.getSize(828768449) - 1) * 2);
+						int i_26_ = (2 + 20612540 * Class187.anInt2359 - i_7_ / 128 + (Class84.myPlayer.getSize(828768449) - 1) * 2);
 						Class190.method3149(class118, class455, i, i_4_, i_25_, i_26_, (Class16.aClass160Array145[Class187.aBool2360 ? 1 : 0]), 1471010271);
 					}
 					if (!Class84.myPlayer.hidden)

@@ -9,15 +9,15 @@ public class Class403 {
 		throw new Error();
 	}
 
-	public static Class336 method6801(int i, int i_0_, byte i_1_) {
-		Class336 class336 = new Class336();
-		class336.anInt3931 = -892178839;
-		class336.anInt3964 = 1315713723;
-		((Class336) class336).anInt3965 = 260756261 * (5 + (1 + i));
-		((Class336) class336).anInt3966 = (5 + (i_0_ + 1)) * 2015661001;
-		class336.anIntArrayArray3922 = (new int[((Class336) class336).anInt3965 * -1208414035][((Class336) class336).anInt3966 * 117800569]);
-		class336.method5965((byte) 5);
-		return class336;
+	public static ClipMap createClipMap(int sizeX, int sizeZ, byte i_1_) {
+		ClipMap map = new ClipMap();
+		map.offsetX = -892178839;
+		map.offsetY = 1315713723;
+		((ClipMap) map).sizeX = 260756261 * (5 + (1 + sizeX));
+		((ClipMap) map).sizeY = (5 + (sizeZ + 1)) * 2015661001;
+		map.map = (new int[((ClipMap) map).sizeX * -1208414035][((ClipMap) map).sizeY * 117800569]);
+		map.method5965((byte) 5);
+		return map;
 	}
 
 	static final void method6802(CS2Executor class527, int i) {

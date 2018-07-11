@@ -34,19 +34,19 @@ public class Class121 {
 	}
 
 	static void method2101(CS2Executor class527, int i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317).aString2956);
+		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317).aString2956);
 	}
 
 	static final void method2102(CS2Executor class527, short i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByteArray640[i_0_];
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByteArray640[i_0_];
 	}
 
 	static final void method2103(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (-1524615769 * (((NPC) class527.animable).aClass409_10580.anInt4856));
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (-1524615769 * (((NPC) class527.animable).aClass409_10580.anInt4856));
 	}
 
 	static final void method2104(CS2Executor class527, short i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class320.anIntArray3724[(class527.intOpValues[301123709 * class527.instrPtr])]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (Class320.anIntArray3724[(class527.intOpValues[301123709 * class527.instrPtr])]);
 	}
 }

@@ -292,11 +292,11 @@ public class Class344 {
 		return i;
 	}
 
-	public static Class225 method6115(int i, int i_82_, int i_83_, int i_84_, int i_85_, int i_86_) {
-		Class224.aClass225_Sub3_2773.anInt2779 = i * -726719813;
-		Class224.aClass225_Sub3_2773.anInt2780 = 1767388707 * i_82_;
-		Class224.aClass225_Sub3_2773.anInt2781 = -12808295 * i_83_;
-		Class224.aClass225_Sub3_2773.anInt2782 = 1709796035 * i_84_;
+	public static RouteStrategy method6115(int i, int i_82_, int i_83_, int i_84_, int i_85_, int i_86_) {
+		Class224.aClass225_Sub3_2773.approxDestinationX = i * -726719813;
+		Class224.aClass225_Sub3_2773.approxDestinationY = 1767388707 * i_82_;
+		Class224.aClass225_Sub3_2773.approxDestinationSizeX = -12808295 * i_83_;
+		Class224.aClass225_Sub3_2773.approxDestinationSizeY = 1709796035 * i_84_;
 		((Class225_Sub3) Class224.aClass225_Sub3_2773).anInt7929 = i_85_ * 1507410871;
 		return Class224.aClass225_Sub3_2773;
 	}
@@ -317,7 +317,7 @@ public class Class344 {
 
 	static final void method6117(CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int i_88_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_88_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_88_ == -1)
 			throw new RuntimeException("");
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append((char) i_88_).toString();
@@ -359,8 +359,8 @@ public class Class344 {
 	}
 
 	static final void method6121(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 2144330291 * Class20.anInt169;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class20.anInt170 * 292682521;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 2144330291 * Class20.anInt169;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class20.anInt170 * 292682521;
 	}
 
 	static final void method6122(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {

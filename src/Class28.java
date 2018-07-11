@@ -155,15 +155,15 @@ public class Class28 implements Interface2 {
 	}
 
 	static final void method773(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_10_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_11_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_10_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_11_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		if (null != Class84.myPlayer.playerAppearance)
 			Class84.myPlayer.playerAppearance.method3995(i_10_, i_11_, IndexLoaders.ITEM_INDEX_LOADER, (byte) 57);
 	}
 
 	static final void method774(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1351 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1351 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 44);
 	}
 
@@ -195,8 +195,8 @@ public class Class28 implements Interface2 {
 	}
 
 	static void method777(CS2Executor class527, byte i) {
-		class527.intStack[1942118537 * class527.anInt7012 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 2]), -1396181317).anIntArray2968[(class527.intStack[1942118537 * class527.anInt7012 - 1])]);
-		class527.anInt7012 -= 141891001;
+		class527.intStack[1942118537 * class527.intStackPtr - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.intStackPtr - 2]), -1396181317).anIntArray2968[(class527.intStack[1942118537 * class527.intStackPtr - 1])]);
+		class527.intStackPtr -= 141891001;
 	}
 
 	static void method778(int i, int i_12_, int i_13_, int i_14_, byte i_15_) {
@@ -210,7 +210,7 @@ public class Class28 implements Interface2 {
 	static final void method779(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		int i_16_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_16_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		i_16_--;
 		if (class118.aStringArray1352 == null || i_16_ >= class118.aStringArray1352.length || class118.aStringArray1352[i_16_] == null)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";

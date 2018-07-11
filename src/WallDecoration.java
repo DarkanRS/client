@@ -159,7 +159,7 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 
 	public WallDecoration(SceneObjectManager class206, GraphicalRenderer class505, ObjectIndexLoader class474, ObjectDefinitions class478, int i, int i_8_, int i_9_, int i_10_, int i_11_, boolean bool, int i_12_, int i_13_, int i_14_, int i_15_, int i_16_) {
 		super(class206, i_9_, i_10_, i_11_, i, i_8_, i_12_, i_13_);
-		aClass123_10501 = new Class123(class505, class474, class478, i_14_, i_15_, aByte7967, i_8_, this, bool, i_16_);
+		aClass123_10501 = new Class123(class505, class474, class478, i_14_, i_15_, plane, i_8_, this, bool, i_16_);
 		((WallDecoration) this).aBool10502 = -348507379 * class478.anInt5652 != 0 && !bool;
 		method13008(1, (byte) -98);
 	}
@@ -412,9 +412,9 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 	}
 
 	static final void method16089(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		InventoryDef class282_sub50_sub18 = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef((class527.intStack[((class527.anInt7012) * 1942118537)]), (short) 24055);
-		int i_38_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		InventoryDef class282_sub50_sub18 = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef((class527.intStack[((class527.intStackPtr) * 1942118537)]), (short) 24055);
+		int i_38_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		int i_39_ = -1;
 		for (int i_40_ = 0; i_40_ < -1471207409 * class282_sub50_sub18.anInt10276; i_40_++) {
 			if (i_38_ == class282_sub50_sub18.anIntArray10274[i_40_]) {
@@ -422,6 +422,6 @@ public class WallDecoration extends Class521_Sub1_Sub4 implements SceneObject {
 				break;
 			}
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_39_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_39_;
 	}
 }

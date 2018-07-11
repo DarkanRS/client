@@ -213,7 +213,7 @@ public class Class290 {
 	}
 
 	static final void method5119(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class96_Sub20.method14668(1421797478).method243((byte) 1);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class96_Sub20.method14668(1421797478).method243((byte) 1);
 	}
 
 	public static String method5120(int i, boolean bool, int i_3_) {
@@ -223,14 +223,14 @@ public class Class290 {
 	}
 
 	static final void method5121(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class118.anInt1264 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1774983547);
+		class118.anInt1264 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -1774983547);
 		Class109.method1858(class118, (byte) 103);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999)
 			Class282_Sub14.method12223(class118.idHash * -1952846363, (byte) -48);
 	}
 
 	static final void method5122(CS2Executor class527, short i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub30_8194.method13417(-1771623069) == 1 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub30_8194.method13417(-1771623069) == 1 ? 1 : 0;
 	}
 
 	static final void method5123(CS2Executor class527, byte i) {
@@ -243,6 +243,6 @@ public class Class290 {
 			class513 = class527.aClass513_7007;
 		UnderlayDefinition class513_4_ = class513;
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513_4_).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1312 * 682782159;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1312 * 682782159;
 	}
 }

@@ -11,7 +11,7 @@ public final class Class510 {
 	}
 
 	static final void method8741(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 19);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_0_ >> 16];
 		Class30.method797(class118, class98, class527, 2057644852);
@@ -37,12 +37,12 @@ public final class Class510 {
 	static final void method8744(byte i, int i_1_) {
 		byte[][][] is = IndexLoaders.MAP_REGION_DECODER.method4532(1227540505);
 		if (is == null) {
-			is = (new byte[4][IndexLoaders.MAP_REGION_DECODER.method4424(1852995764)][IndexLoaders.MAP_REGION_DECODER.method4451(-533095676)]);
+			is = (new byte[4][IndexLoaders.MAP_REGION_DECODER.getSizeX(1852995764)][IndexLoaders.MAP_REGION_DECODER.getSizeY(-533095676)]);
 			IndexLoaders.MAP_REGION_DECODER.method4440(is, (byte) 2);
 		}
 		for (int i_2_ = 0; i_2_ < 4; i_2_++) {
-			for (int i_3_ = 0; i_3_ < IndexLoaders.MAP_REGION_DECODER.method4424(713986087); i_3_++) {
-				for (int i_4_ = 0; i_4_ < IndexLoaders.MAP_REGION_DECODER.method4451(-748380927); i_4_++)
+			for (int i_3_ = 0; i_3_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(713986087); i_3_++) {
+				for (int i_4_ = 0; i_4_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-748380927); i_4_++)
 					is[i_2_][i_3_][i_4_] = i;
 			}
 		}

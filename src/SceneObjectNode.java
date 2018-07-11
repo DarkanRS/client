@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class521_Sub1_Sub3 extends Class521_Sub1 {
+public abstract class SceneObjectNode extends Class521_Sub1 {
 	public short aShort9561;
 
 	int method13036(Class282_Sub24[] class282_sub24s, int i) {
@@ -35,9 +35,9 @@ public abstract class Class521_Sub1_Sub3 extends Class521_Sub1 {
 		return method13004(((int) class385.x >> -1928575293 * aClass206_7970.anInt2592), ((int) class385.z >> aClass206_7970.anInt2592 * -1928575293), class282_sub24s, 868144561);
 	}
 
-	Class521_Sub1_Sub3(SceneObjectManager class206, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
+	SceneObjectNode(SceneObjectManager class206, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_) {
 		super(class206);
-		aByte7967 = (byte) i_2_;
+		plane = (byte) i_2_;
 		aByte7968 = (byte) i_3_;
 		aShort9561 = (short) i_4_;
 		method11171(new Vector3((float) i, (float) i_0_, (float) i_1_));

@@ -141,9 +141,9 @@ public class Class211 {
 		class527.anInt7000 -= -1341717846;
 		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
 		String string_2_ = (String) (class527.objectStack[1806726141 * class527.anInt7000 + 1]);
-		class527.anInt7012 -= 283782002;
-		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_4_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_3_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_4_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		if (null == string_2_)
 			string_2_ = "";
 		if (string_2_.length() > 80)

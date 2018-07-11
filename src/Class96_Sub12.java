@@ -27,7 +27,7 @@ public class Class96_Sub12 extends Class96 {
 
 	static final void method14611(CS2Executor class527, short i) {
 		int[] is = class527.intStack;
-		int i_0_ = (class527.anInt7012 += 141891001) * 1942118537 - 1;
+		int i_0_ = (class527.intStackPtr += 141891001) * 1942118537 - 1;
 		int i_1_;
 		if (Class530.aBool7050) {
 			if (i <= 541)

@@ -317,7 +317,7 @@ public class Class44 implements Interface46 {
 	}
 
 	static final void method911(CS2Executor class527, int i) {
-		int i_33_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_33_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_33_, 1594974983);
 		int i_34_;
 		if (class425.aBool5101)
@@ -326,7 +326,7 @@ public class Class44 implements Interface46 {
 			i_34_ = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880 * -1519092215;
 		else
 			i_34_ = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881 * 725268415;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_34_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_34_;
 	}
 
 	static int method912(int i, int i_35_) {

@@ -33,7 +33,7 @@ public class Class96_Sub16 extends Class96 {
 	}
 
 	static final void method14647(CS2Executor class527, byte i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223, (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), -939446296);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -939446296);
 		Class538.method11500(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1329116825), false, (byte) 24);
 		Class190.method3148((byte) 38);
 	}
@@ -46,7 +46,7 @@ public class Class96_Sub16 extends Class96 {
 	}
 
 	static final void method14649(CS2Executor class527, byte i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method7785(i_3_, 364907736);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method7785(i_3_, 364907736);
 	}
 }

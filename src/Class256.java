@@ -92,11 +92,11 @@ public class Class256 {
 	}
 
 	static final void method4413(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (!Renderers.SOFTWARE_RENDERER.method8403())
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 3;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 3;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method7785(i_2_, -550763763);
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = Class393.aClass282_Sub54_4783.aClass468_Sub12_8195.method7785(i_2_, -550763763);
 	}
 
 	public static Class268 method4414(int i, int i_3_, int i_4_, int i_5_, int i_6_, boolean bool, int i_7_, byte i_8_) {
@@ -132,6 +132,6 @@ public class Class256 {
 	}
 
 	static final void method4417(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class9.anInt103 * 327149175;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class9.anInt103 * 327149175;
 	}
 }

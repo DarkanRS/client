@@ -21,12 +21,12 @@ public class Class96_Sub2 extends Class96 {
 	}
 
 	static final void method13756(CS2Executor class527, short i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5175(i_0_ >> 14 & 0x3fff, i_0_ & 0x3fff);
 		if (null == class282_sub50_sub6) {
 			if (i > 199)
-				class527.intStack[((class527.anInt7012 += 141891001) * 1942118537) - 1] = -1;
+				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub6.anInt9536 * 1864297169;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282_sub50_sub6.anInt9536 * 1864297169;
 	}
 }

@@ -72,12 +72,12 @@ public class LoadingStage {
 	}
 
 	static final void method6677(CS2Executor class527, int i) {
-		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (class527.aClass282_Sub4_7011.aClass57Array7499[i_8_].aByte525);
+		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class527.aClass282_Sub4_7011.aClass57Array7499[i_8_].aByte525);
 	}
 
 	static final void method6678(CS2Executor class527, byte i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_9_ < 0 || i_9_ > 5)
 			i_9_ = 2;
 		Class538.method11500(i_9_, false, (byte) 24);
@@ -179,9 +179,9 @@ public class LoadingStage {
 
 	static final void method6680(CS2Executor class527, int i) {
 		if (client.aString7426 != null)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1772444859 * Class459.anInt5534;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1772444859 * Class459.anInt5534;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static void method6681(int i, String string, byte i_24_) {
@@ -334,7 +334,7 @@ public class LoadingStage {
 	}
 
 	static final void method6685(CS2Executor class527, int i) {
-		int i_71_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_71_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_71_, (byte) 18);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_71_ >> 16];
 		Class13.method502(class118, class98, class527, 577432492);

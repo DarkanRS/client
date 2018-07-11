@@ -48,14 +48,14 @@ public class Class298 implements Interface41 {
 	}
 
 	static final void method5301(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 84);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class29.method786(class118, class98, class527, -1279446637);
 	}
 
 	static final void method5302(CS2Executor class527, byte i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_2_, (byte) 23);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
 		Class109.method1852(class118, class98, class527, 1050548242);

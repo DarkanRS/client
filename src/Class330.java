@@ -75,10 +75,10 @@ public class Class330 {
 
 	static final void method5915(CS2Executor class527, byte i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		class527.anInt7012 -= 283782002;
-		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_6_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = string.indexOf(i_5_, i_6_);
+		class527.intStackPtr -= 283782002;
+		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_6_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = string.indexOf(i_5_, i_6_);
 	}
 
 	static final void method5916(int i) {

@@ -8,7 +8,7 @@ public class Class11 {
 	static Class109 aClass109_121;
 	public static int anInt122;
 	static int anInt123;
-	public static Class282_Sub51 aClass282_Sub51_124;
+	public static SystemInfo SYSTEM_INFO;
 
 	static void method461(GraphicalRenderer class505, int i, int i_0_, IComponentDefinitions class118) {
 		int i_1_ = 63;
@@ -75,7 +75,7 @@ public class Class11 {
 	}
 
 	static void method466(CS2Executor class527, int i) {
-		class527.intStack[1942118537 * class527.anInt7012 - 1] = IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 1]), -1396181317).method4101(Class158_Sub1.aClass3_8507, (byte) -15) ? 1 : 0;
+		class527.intStack[1942118537 * class527.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.intStackPtr - 1]), -1396181317).method4101(Class158_Sub1.aClass3_8507, (byte) -15) ? 1 : 0;
 	}
 
 	static final void method467(CS2Executor class527, byte i) {
@@ -137,7 +137,7 @@ public class Class11 {
 	}
 
 	static final void method471(CS2Executor class527, byte i) {
-		class527.intStack[class527.anInt7012 * 1942118537 - 1] = (class527.aClass282_Sub4_7011.method12095(837376369)[(class527.intStack[class527.anInt7012 * 1942118537 - 1])]);
+		class527.intStack[class527.intStackPtr * 1942118537 - 1] = (class527.aClass282_Sub4_7011.method12095(837376369)[(class527.intStack[class527.intStackPtr * 1942118537 - 1])]);
 	}
 
 	public static void method13400(Index class317, int i, int i_0_, int i_1_, boolean bool, byte i_2_) {

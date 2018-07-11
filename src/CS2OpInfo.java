@@ -726,7 +726,7 @@ public class CS2OpInfo {
 	static CS2OpInfo aClass522_6666;
 	static CS2OpInfo aClass522_6667;
 	static CS2OpInfo aClass522_6668;
-	static CS2OpInfo aClass522_6669;
+	static CS2OpInfo CHECK_JAVA_VERSION;
 	static CS2OpInfo aClass522_6670;
 	static CS2OpInfo aClass522_6671;
 	static CS2OpInfo aClass522_6672;
@@ -1735,7 +1735,7 @@ public class CS2OpInfo {
 		aClass522_6780 = new CS2OpInfo(964);
 		aClass522_6667 = new CS2OpInfo(343);
 		aClass522_6668 = new CS2OpInfo(359);
-		aClass522_6669 = new CS2OpInfo(826);
+		CHECK_JAVA_VERSION = new CS2OpInfo(826);
 		aClass522_6044 = new CS2OpInfo(1004);
 		aClass522_6923 = new CS2OpInfo(973);
 		aClass522_6672 = new CS2OpInfo(400);
@@ -2073,7 +2073,7 @@ public class CS2OpInfo {
 				aClass522_6716, aClass522_6188, aClass522_6871, aClass522_6862, aClass522_6166, aClass522_6443, aClass522_6282, aClass522_6838, aClass522_6409, aClass522_6507, aClass522_6845, aClass522_6527, aClass522_6353, aClass522_6345, aClass522_6858, aClass522_6184, aClass522_6671, aClass522_6490, aClass522_6458,
 				aClass522_6826, aClass522_6433, aClass522_6619, aClass522_6373, aClass522_6938, aClass522_6201, aClass522_6330, aClass522_6639, aClass522_6229, aClass522_6019, aClass522_6616, aClass522_6189, aClass522_6223, aClass522_6089, aClass522_6562, aClass522_6799, aClass522_6925, aClass522_6594, aClass522_6125,
 				aClass522_6552, aClass522_6271, aClass522_6363, aClass522_6145, aClass522_6515, aClass522_6423, aClass522_6876, aClass522_6778, aClass522_6888, aClass522_6081, aClass522_6370, aClass522_6290, aClass522_6243, aClass522_6524, aClass522_5946, aClass522_6904, aClass522_6088, aClass522_6396, aClass522_6436,
-				aClass522_6164, aClass522_6752, aClass522_6645, aClass522_6350, aClass522_6819, aClass522_6885, aClass522_6538, aClass522_6685, aClass522_6174, aClass522_6163, aClass522_6669, aClass522_6117, aClass522_6766, aClass522_6134, aClass522_6613, aClass522_6692, aClass522_6771, aClass522_6434, aClass522_6070,
+				aClass522_6164, aClass522_6752, aClass522_6645, aClass522_6350, aClass522_6819, aClass522_6885, aClass522_6538, aClass522_6685, aClass522_6174, aClass522_6163, CHECK_JAVA_VERSION, aClass522_6117, aClass522_6766, aClass522_6134, aClass522_6613, aClass522_6692, aClass522_6771, aClass522_6434, aClass522_6070,
 				aClass522_6946, aClass522_5991, aClass522_6310, aClass522_6453, aClass522_6526, aClass522_6389, aClass522_6903, aClass522_6929, aClass522_6491, aClass522_6521, aClass522_6715, aClass522_6936, aClass522_6146, aClass522_6754, aClass522_6722, aClass522_6884, aClass522_6482, aClass522_6915, aClass522_5956,
 				aClass522_6417, aClass522_6480, aClass522_6935, aClass522_6200, aClass522_6241, aClass522_6530, aClass522_6746, aClass522_6447, aClass522_6377, aClass522_6371, aClass522_6159, aClass522_6894, aClass522_6358, aClass522_6577, aClass522_6108, aClass522_6718, aClass522_6287, aClass522_6407, aClass522_6475,
 				aClass522_6564, aClass522_6502, aClass522_6576, aClass522_6891, aClass522_6800, aClass522_6065, aClass522_6944, aClass522_6426, aClass522_6567, aClass522_6186, aClass522_6099, aClass522_6454, aClass522_6642, aClass522_6899, aClass522_6496, aClass522_6805, aClass522_6463, aClass522_6484, aClass522_6761,

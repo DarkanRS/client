@@ -32,15 +32,15 @@ public final class Class97 {
 	}
 
 	static final void method1613(CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		int i_1_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_2_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
-		int i_3_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
-		int i_4_ = (class527.intStack[class527.anInt7012 * 1942118537 + 3]);
+		class527.intStackPtr -= 567564004;
+		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_2_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
+		int i_3_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
+		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537 + 3]);
 		i_1_ += i_2_ << 14;
 		i_1_ += i_3_ << 28;
 		i_1_ += i_4_;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_;
 	}
 
 	static Class222 method1614(RsByteBuffer class282_sub35, int i) {

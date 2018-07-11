@@ -161,9 +161,9 @@ public class Class534_Sub1 extends Class534 {
 	}
 
 	static final void method12816(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_0_ % i_1_;
+		class527.intStackPtr -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_0_ % i_1_;
 	}
 }

@@ -58,7 +58,7 @@ public class Class282_Sub46 extends Node {
 	}
 
 	static final void method13408(CS2Executor class527, byte i) {
-		int i_15_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_15_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_15_, (byte) 113);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_15_ >> 16];
 		Class100.method1642(class118, class98, class527, -441010369);

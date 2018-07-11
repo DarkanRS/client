@@ -30,11 +30,11 @@ public class Class1 {
 	}
 
 	static final void method254(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_4_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_5_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_5_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		int[] is = class527.intStack;
-		int i_6_ = (class527.anInt7012 += 141891001) * 1942118537 - 1;
+		int i_6_ = (class527.intStackPtr += 141891001) * 1942118537 - 1;
 		int i_7_;
 		if (Class247.method4248(i_4_, i_5_, (short) 660)) {
 			if (i >= 7)

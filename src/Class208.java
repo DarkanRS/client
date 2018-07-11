@@ -43,10 +43,10 @@ public class Class208 {
 	}
 
 	static final void method3562(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 425673003;
-		int i_0_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_2_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 425673003;
+		int i_0_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_2_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
 		Class96_Sub10.method14603(3, i_0_ << 16 | i_1_, i_2_, "", (byte) 66);
 	}
 }

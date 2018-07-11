@@ -50,9 +50,9 @@ public class TilestreamPacket {
 	}
 
 	static final void method6290(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_1_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_1_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		if (i_0_ != -1) {
 			if (i_1_ > 255)
 				i_1_ = 255;

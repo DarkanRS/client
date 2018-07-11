@@ -357,37 +357,37 @@ public class IncomingPacket {
 	}
 
 	static final void method6372(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 52);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		Class15.method542(class118, class98, class527, -1893429225);
 	}
 
 	static final void method6373(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Character.toUpperCase((char) i_2_);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Character.toUpperCase((char) i_2_);
 	}
 
 	static final void method6374(CS2Executor class527, int i) {
 		Class217_Sub1 class217_sub1 = Class468_Sub2.method12629(-1660419525);
 		if (null != class217_sub1) {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 157132839 * class217_sub1.anInt7975;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt2700 * 1203083985;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 157132839 * class217_sub1.anInt7975;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class217_sub1.anInt2700 * 1203083985;
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class217_sub1.aString7977;
 			Class213 class213 = class217_sub1.method13055((short) -23628);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class213.anInt2680 * -216896281;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class213.anInt2680 * -216896281;
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class213.aString2679;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt2701 * 652811625;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class217_sub1.anInt7978 * -129507359;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class217_sub1.anInt2701 * 652811625;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class217_sub1.anInt7978 * -129507359;
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class217_sub1.aString7976;
 		} else {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		}
 	}
@@ -437,7 +437,7 @@ public class IncomingPacket {
 	public static void method6379(Player class521_sub1_sub1_sub2_sub1, int i) {
 		Class282_Sub48 class282_sub48 = ((Class282_Sub48) (Class282_Sub48.aClass465_8075.method7754(-1691508299 * class521_sub1_sub1_sub2_sub1.anInt10314)));
 		if (null == class282_sub48) {
-			Class397.method6775(class521_sub1_sub1_sub2_sub1.aByte7967, (class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), 0, null, null, class521_sub1_sub1_sub2_sub1, 77262483);
+			Class397.method6775(class521_sub1_sub1_sub2_sub1.plane, (class521_sub1_sub1_sub2_sub1.regionBaseX[0]), (class521_sub1_sub1_sub2_sub1.regionBaseY[0]), 0, null, null, class521_sub1_sub1_sub2_sub1, 77262483);
 		} else {
 			class282_sub48.method13426((byte) 1);
 		}
@@ -457,7 +457,7 @@ public class IncomingPacket {
 	}
 
 	static final void method6381(CS2Executor class527, byte i) {
-		int i_14_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_14_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_14_, (byte) 65);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_14_ >> 16];
 		Class96_Sub18.method14664(class118, class98, false, 0, class527, (byte) -19);

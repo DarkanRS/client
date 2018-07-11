@@ -47,7 +47,7 @@ public class Class417 {
 	}
 
 	static final void method7006(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (null == Class468_Sub8.aClass98Array7889[i_3_])
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
 		else {

@@ -216,7 +216,7 @@ public class Class301 implements Interface41 {
 	}
 
 	static final void method5335(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 709455005;
-		Class435.method7300((class527.intStack[class527.anInt7012 * 1942118537]), (class527.intStack[1 + 1942118537 * class527.anInt7012]), (class527.intStack[class527.anInt7012 * 1942118537 + 2]), (class527.intStack[3 + 1942118537 * class527.anInt7012]), false, (class527.intStack[4 + class527.anInt7012 * 1942118537]), 1449989045);
+		class527.intStackPtr -= 709455005;
+		Class435.method7300((class527.intStack[class527.intStackPtr * 1942118537]), (class527.intStack[1 + 1942118537 * class527.intStackPtr]), (class527.intStack[class527.intStackPtr * 1942118537 + 2]), (class527.intStack[3 + 1942118537 * class527.intStackPtr]), false, (class527.intStack[4 + class527.intStackPtr * 1942118537]), 1449989045);
 	}
 }

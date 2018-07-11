@@ -67,7 +67,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 
 	MeshRasterizer method15929(GraphicalRenderer class505, int i, int i_1_, short i_2_) {
 		Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_1_, (byte) -22);
-		Class390 class390 = aClass206_7970.aClass390Array2607[aByte7967];
+		Class390 class390 = aClass206_7970.aClass390Array2607[plane];
 		Class390 class390_3_ = (aByte7968 < 3 ? aClass206_7970.aClass390Array2607[aByte7968 + 1] : null);
 		Vector3 class385 = method11166().aClass385_3595;
 		return ((((Class521_Sub1_Sub1_Sub4) this).aClass456_10404 != null && !((Class521_Sub1_Sub1_Sub4) this).aClass456_10404.method7580(1923086864)) ? class525.method11238(class505, i, true, class390, class390_3_, (int) class385.x, (int) class385.y, (int) class385.z, (((Class521_Sub1_Sub1_Sub4) this).aClass456_10404), (byte) 2, -2029487974)
@@ -120,7 +120,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 = Class539.method11557(client.cycles * -1809259861, true);
 		if (((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 != null) {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11511(class505, (long) (client.cycles * -1809259861), class87s, class172s, false);
-			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(aByte7967, aShort9458, aShort9455, aShort9456, aShort9457);
+			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(plane, aShort9458, localX, aShort9456, localY);
 		}
 	}
 
@@ -182,7 +182,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 = Class539.method11557(client.cycles * -1809259861, true);
 		if (((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 != null) {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11511(class505, (long) (client.cycles * -1809259861), class87s, class172s, false);
-			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(aByte7967, aShort9458, aShort9455, aShort9456, aShort9457);
+			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(plane, aShort9458, localX, aShort9456, localY);
 		}
 	}
 
@@ -323,7 +323,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 
 	MeshRasterizer method15942(GraphicalRenderer class505, int i, int i_25_) {
 		Class525 class525 = IndexLoaders.aClass515_9416.method8845(i_25_, (byte) 25);
-		Class390 class390 = aClass206_7970.aClass390Array2607[aByte7967];
+		Class390 class390 = aClass206_7970.aClass390Array2607[plane];
 		Class390 class390_26_ = (aByte7968 < 3 ? aClass206_7970.aClass390Array2607[aByte7968 + 1] : null);
 		Vector3 class385 = method11166().aClass385_3595;
 		return ((((Class521_Sub1_Sub1_Sub4) this).aClass456_10404 != null && !((Class521_Sub1_Sub1_Sub4) this).aClass456_10404.method7580(1039380680)) ? class525.method11238(class505, i, true, class390, class390_26_, (int) class385.x, (int) class385.y, (int) class385.z, (((Class521_Sub1_Sub1_Sub4) this).aClass456_10404), (byte) 2, -1013943244)
@@ -338,7 +338,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 = Class539.method11557(client.cycles * -1809259861, true);
 		if (((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 != null) {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11511(class505, (long) (client.cycles * -1809259861), class87s, class172s, false);
-			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(aByte7967, aShort9458, aShort9455, aShort9456, aShort9457);
+			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(plane, aShort9458, localX, aShort9456, localY);
 		}
 	}
 
@@ -350,7 +350,7 @@ public class Class521_Sub1_Sub1_Sub4 extends Class521_Sub1_Sub1 {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 = Class539.method11557(client.cycles * -1809259861, true);
 		if (((Class521_Sub1_Sub1_Sub4) this).aClass539_10409 != null) {
 			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11511(class505, (long) (client.cycles * -1809259861), class87s, class172s, false);
-			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(aByte7967, aShort9458, aShort9455, aShort9456, aShort9457);
+			((Class521_Sub1_Sub1_Sub4) this).aClass539_10409.method11515(plane, aShort9458, localX, aShort9456, localY);
 		}
 	}
 

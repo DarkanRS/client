@@ -72,7 +72,7 @@ public class Class468_Sub9 extends Class468 {
 	}
 
 	static final void method12689(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2_, -2116649195).aString9744);
 	}
 }

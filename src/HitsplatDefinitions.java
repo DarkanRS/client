@@ -292,7 +292,7 @@ public class HitsplatDefinitions {
 	}
 
 	public static boolean method3849(int i, int i_4_) {
-		return (i >= Class458.aClass458_5471.anInt5481 * 1109376893 && i <= Class458.aClass458_5489.anInt5481 * 1109376893);
+		return (i >= SceneObjectType.STRAIGHT_BOTTOM_EDGE_ROOF.type * 1109376893 && i <= SceneObjectType.STRAIGHT_BOTTOM_EDGE_CONNECT_CORNER_ROOF.type * 1109376893);
 	}
 
 	static void method3850(Matrix44Arr class384, boolean bool, float f, float f_5_, float f_6_, float f_7_, int i, int i_8_, byte i_9_) {

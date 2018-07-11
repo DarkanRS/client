@@ -38,7 +38,7 @@ public class Class402 {
 	}
 
 	static final void method6799(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1543197399 * client.anInt7149;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1543197399 * client.anInt7149;
 	}
 
 	static final void method6800(CS2Executor class527, int i) {

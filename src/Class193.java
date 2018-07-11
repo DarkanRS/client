@@ -27,18 +27,18 @@ public class Class193 {
 		boolean bool = false;
 		if (client.aBool7310) {
 			try {
-				Object object = (Class361.aClass361_4178.method6254((new Object[] { Integer.valueOf(Class504.anInt5832 * 318997953), (Boolean.valueOf(1 == (Class84.myPlayer.male))), Integer.valueOf(class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) }), (byte) 69));
+				Object object = (Class361.aClass361_4178.method6254((new Object[] { Integer.valueOf(Class504.anInt5832 * 318997953), (Boolean.valueOf(1 == (Class84.myPlayer.male))), Integer.valueOf(class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) }), (byte) 69));
 				if (null != object)
 					bool = ((Boolean) object).booleanValue();
 			} catch (Throwable throwable) {
 				/* empty */
 			}
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static final void method3171(CS2Executor class527, byte i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_9_, (byte) 105);
 		Class209.method3601(class118, class527, -1995583516);
 	}

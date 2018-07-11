@@ -125,11 +125,11 @@ public class Class190 {
 		}
 	}
 
-	public static Class225 method3150(int i, int i_14_, int i_15_, int i_16_, int i_17_, byte i_18_) {
-		Class224.aClass225_Sub2_2778.anInt2779 = -726719813 * i;
-		Class224.aClass225_Sub2_2778.anInt2780 = i_14_ * 1767388707;
-		Class224.aClass225_Sub2_2778.anInt2781 = -12808295 * i_15_;
-		Class224.aClass225_Sub2_2778.anInt2782 = i_16_ * 1709796035;
+	public static RouteStrategy method3150(int i, int i_14_, int i_15_, int i_16_, int i_17_, byte i_18_) {
+		Class224.aClass225_Sub2_2778.approxDestinationX = -726719813 * i;
+		Class224.aClass225_Sub2_2778.approxDestinationY = i_14_ * 1767388707;
+		Class224.aClass225_Sub2_2778.approxDestinationSizeX = -12808295 * i_15_;
+		Class224.aClass225_Sub2_2778.approxDestinationSizeY = i_16_ * 1709796035;
 		Class224.aClass225_Sub2_2778.anInt7928 = i_17_ * -1398297429;
 		return Class224.aClass225_Sub2_2778;
 	}

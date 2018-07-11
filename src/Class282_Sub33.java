@@ -96,6 +96,6 @@ public class Class282_Sub33 extends Node {
 	}
 
 	static final void method12584(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class159.aClass450_2010.worldId * -87869981;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class159.aClass450_2010.worldId * -87869981;
 	}
 }

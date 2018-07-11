@@ -16,7 +16,7 @@ public class Class329 {
 	protected int anInt3784;
 	protected int anInt3785;
 	public boolean aBool3786;
-	protected Class311 aClass311_3787;
+	protected RegionMap regionMap;
 	public byte[][][] aByteArrayArrayArray3788;
 	UnderlayIndexLoader aClass479_3789;
 	byte[][][] aByteArrayArrayArray3790;
@@ -210,35 +210,35 @@ public class Class329 {
 		}
 	}
 
-	public final void method5839(RsByteBuffer class282_sub35, int i, int i_98_, int i_99_, int i_100_, Class336[] class336s, byte i_101_) {
+	public final void decodeTileMasks(RsByteBuffer class282_sub35, int xOffset, int yOffset, int i_99_, int i_100_, ClipMap[] class336s, byte i_101_) {
 		if (!aBool3786) {
 			for (int i_102_ = 0; i_102_ < 4; i_102_++) {
-				Class336 class336 = class336s[i_102_];
+				ClipMap clipMap = class336s[i_102_];
 				for (int i_103_ = 0; i_103_ < 64; i_103_++) {
 					for (int i_104_ = 0; i_104_ < 64; i_104_++) {
-						int i_105_ = i + i_103_;
-						int i_106_ = i_104_ + i_98_;
+						int i_105_ = xOffset + i_103_;
+						int i_106_ = i_104_ + yOffset;
 						if (i_105_ >= 0 && i_105_ < anInt3784 * -1230013231 && i_106_ >= 0 && i_106_ < anInt3785 * 2024737111)
-							class336.method5974(i_105_, i_106_, 1933302120);
+							clipMap.method5974(i_105_, i_106_, 1933302120);
 					}
 				}
 			}
 		}
-		int i_107_ = i_99_ + i;
-		int i_108_ = i_100_ + i_98_;
-		for (int i_109_ = 0; i_109_ < anInt3845 * 1599084401; i_109_++) {
-			for (int i_110_ = 0; i_110_ < 64; i_110_++) {
-				for (int i_111_ = 0; i_111_ < 64; i_111_++)
-					method5871(class282_sub35, i_109_, i_110_ + i, i_111_ + i_98_, 0, 0, i_107_ + i_110_, i_111_ + i_108_, 0, false, 116410177);
+		int i_107_ = i_99_ + xOffset;
+		int i_108_ = i_100_ + yOffset;
+		for (int plane = 0; plane < anInt3845 * 1599084401; plane++) {
+			for (int x = 0; x < 64; x++) {
+				for (int y = 0; y < 64; y++)
+					decodeTileMasks(class282_sub35, plane, x + xOffset, y + yOffset, 0, 0, i_107_ + x, y + i_108_, 0, false, 116410177);
 			}
 		}
 	}
 
-	public final void method5841(RsByteBuffer class282_sub35, int i, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, Class336[] class336s, int i_129_) {
+	public final void method5841(RsByteBuffer class282_sub35, int i, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, ClipMap[] class336s, int i_129_) {
 		int i_130_ = (i_126_ & 0x7) * 8;
 		int i_131_ = 8 * (i_127_ & 0x7);
 		if (!aBool3786) {
-			Class336 class336 = class336s[i];
+			ClipMap class336 = class336s[i];
 			for (int i_132_ = 0; i_132_ < 8; i_132_++) {
 				for (int i_133_ = 0; i_133_ < 8; i_133_++) {
 					int i_134_ = (i_123_ + Class112.method1871(i_132_ & 0x7, i_133_ & 0x7, i_128_, 1449989045));
@@ -279,11 +279,11 @@ public class Class329 {
 								i_143_ = 8 + i_123_ - (i_142_ - i_131_);
 								i_144_ = i_124_ + (i_141_ - i_130_);
 							}
-							method5871(class282_sub35, i, i_143_, i_144_, 0, 0, i_136_ + i_141_, i_137_ + i_142_, 0, true, 1122422835);
+							decodeTileMasks(class282_sub35, i, i_143_, i_144_, 0, 0, i_136_ + i_141_, i_137_ + i_142_, 0, true, 1122422835);
 						} else {
 							i_143_ = i_123_ + Class112.method1871(i_141_ & 0x7, i_142_ & 0x7, i_128_, 1449989045);
 							i_144_ = i_124_ + Class2.method259(i_141_ & 0x7, i_142_ & 0x7, i_128_, 656585016);
-							method5871(class282_sub35, i, i_143_, i_144_, i_138_, i_139_, i_136_ + i_141_, i_137_ + i_142_, i_128_, false, -310142187);
+							decodeTileMasks(class282_sub35, i, i_143_, i_144_, i_138_, i_139_, i_136_ + i_141_, i_137_ + i_142_, i_128_, false, -310142187);
 						}
 						if (i_141_ == 63 || 63 == i_142_) {
 							int i_145_ = 1;
@@ -319,23 +319,24 @@ public class Class329 {
 							}
 						}
 					} else
-						method5871(class282_sub35, 0, -1, -1, 0, 0, 0, 0, 0, false, 56162627);
+						decodeTileMasks(class282_sub35, 0, -1, -1, 0, 0, 0, 0, 0, false, 56162627);
 				}
 			}
 		}
 	}
 
-	public void method5843(GraphicalRenderer class505, int[][][] is, Class336[] class336s, byte i) {
+	public void initClipMap(GraphicalRenderer class505, int[][][] is, ClipMap[] clipMap, byte i) {
 		if (!aBool3786) {
-			for (int i_155_ = 0; i_155_ < 4; i_155_++) {
-				for (int i_156_ = 0; i_156_ < anInt3784 * -1230013231; i_156_++) {
-					for (int i_157_ = 0; i_157_ < 2024737111 * anInt3785; i_157_++) {
-						if (0 != ((aClass311_3787.aByteArrayArrayArray3638[i_155_][i_156_][i_157_]) & 0x1)) {
-							int i_158_ = i_155_;
-							if (0 != ((aClass311_3787.aByteArrayArrayArray3638[1][i_156_][i_157_]) & 0x2))
-								i_158_--;
-							if (i_158_ >= 0)
-								class336s[i_158_].method5972(i_156_, i_157_, 16711935);
+			for (int plane = 0; plane < 4; plane++) {
+				for (int x = 0; x < anInt3784 * -1230013231; x++) {
+					for (int y = 0; y < 2024737111 * anInt3785; y++) {
+						if (0 != ((regionMap.tileMasks[plane][x][y]) & 0x1)) {
+							int finalPlane = plane;
+							if (0 != ((regionMap.tileMasks[1][x][y]) & 0x2))
+								finalPlane--;
+							if (finalPlane >= 0) {
+								clipMap[finalPlane].addUnwalkable(x, y, 16711935);
+							}
 						}
 					}
 				}
@@ -469,7 +470,7 @@ public class Class329 {
 					int i_244_ = class390.method6722(1 + i_208_, i_209_, 65280);
 					int i_245_ = class390.method6722(i_208_ + 1, i_209_ + 1, 65280);
 					int i_246_ = class390.method6722(i_208_, 1 + i_209_, 65280);
-					boolean bool = aClass311_3787.method5497(i_208_, i_209_, 1772345202);
+					boolean bool = regionMap.is0x2(i_208_, i_209_, 1772345202);
 					if (bool && i > 1 || !bool && i > 0) {
 						boolean bool_247_ = true;
 						if (null != class481 && !class481.aBool5722)
@@ -1124,7 +1125,7 @@ public class Class329 {
 		int i_427_ = class390.method6722(i_421_, i_420_, 65280);
 		int i_428_ = class390.method6722(i_421_, i_422_, 65280);
 		int i_429_ = class390.method6722(i_419_, i_422_, 65280);
-		boolean bool = aClass311_3787.method5497(i_419_, i_420_, 1534116751);
+		boolean bool = regionMap.is0x2(i_419_, i_420_, 1534116751);
 		if (bool && i > 1 || !bool && i > 0) {
 			boolean bool_430_ = true;
 			if (null != class481 && !class481.aBool5722)
@@ -1175,7 +1176,7 @@ public class Class329 {
 		anIntArrayArray3836 = new int[][] { { 12, 12, 12, 12 }, { 12, 12, 12, 12, 12, 5 }, { 5, 5, 1, 1 }, { 5, 1, 1, 5 }, { 5, 5, 5 }, { 5, 5, 5 }, { 12, 12, 12, 12, 12, 12 }, { 1, 12, 12, 12, 12, 12 }, { 1, 1, 7, 1 }, { 8, 9, 9, 8, 8, 3, 1, 9 }, { 8, 8, 9, 8, 9, 9 }, { 10, 10, 11, 11, 11, 7, 3, 7 }, { 12, 12, 12, 12 } };
 	}
 
-	Class329(SceneObjectManager class206, int i, int i_435_, int i_436_, boolean bool, Class536 class536, UnderlayIndexLoader class479, Class311 class311) {
+	Class329(SceneObjectManager class206, int i, int i_435_, int i_436_, boolean bool, Class536 class536, UnderlayIndexLoader class479, RegionMap class311) {
 		aBool3780 = false;
 		aBool3820 = false;
 		aBool3782 = false;
@@ -1196,7 +1197,7 @@ public class Class329 {
 		aBool3786 = bool;
 		((Class329) this).aClass536_3834 = class536;
 		((Class329) this).aClass479_3789 = class479;
-		aClass311_3787 = class311;
+		regionMap = class311;
 		((Class329) this).aByteArrayArrayArray3808 = (new byte[anInt3845 * 1599084401][-1230013231 * anInt3784][anInt3785 * 2024737111]);
 		((Class329) this).aByteArrayArrayArray3825 = (new byte[1599084401 * anInt3845][anInt3784 * -1230013231][anInt3785 * 2024737111]);
 		((Class329) this).aByteArrayArrayArray3790 = (new byte[anInt3845 * 1599084401][anInt3784 * -1230013231][2024737111 * anInt3785]);
@@ -1323,7 +1324,7 @@ public class Class329 {
 		return ((Class329) this).anInt3781 * 1070348131;
 	}
 
-	final void method5871(RsByteBuffer class282_sub35, int i, int i_670_, int i_671_, int i_672_, int i_673_, int i_674_, int i_675_, int i_676_, boolean bool, int i_677_) {
+	final void decodeTileMasks(RsByteBuffer stream, int plane, int x, int y, int i_672_, int i_673_, int i_674_, int i_675_, int i_676_, boolean bool, int i_677_) {
 		if (1 == i_676_)
 			i_673_ = 1;
 		else if (2 == i_676_) {
@@ -1331,58 +1332,58 @@ public class Class329 {
 			i_673_ = 1;
 		} else if (i_676_ == 3)
 			i_672_ = 1;
-		if (i_670_ >= 0 && i_670_ < -1230013231 * anInt3784 && i_671_ >= 0 && i_671_ < 2024737111 * anInt3785) {
+		if (x >= 0 && x < -1230013231 * anInt3784 && y >= 0 && y < 2024737111 * anInt3785) {
 			if (!aBool3786 && !bool)
-				aClass311_3787.aByteArrayArrayArray3638[i][i_670_][i_671_] = (byte) 0;
+				regionMap.tileMasks[plane][x][y] = (byte) 0;
 			for (;;) {
-				int i_678_ = class282_sub35.readUnsignedByte();
-				if (i_678_ == 0) {
+				int value = stream.readUnsignedByte();
+				if (value == 0) {
 					if (aBool3786)
-						anIntArrayArrayArray3818[0][i_672_ + i_670_][i_673_ + i_671_] = 0;
-					else if (i == 0)
-						anIntArrayArrayArray3818[0][i_670_ + i_672_][i_673_ + i_671_] = (-Class92.method1560(i_674_ + 932731, i_675_ + 556238, 1995871883) * 8) << 2;
+						anIntArrayArrayArray3818[0][i_672_ + x][i_673_ + y] = 0;
+					else if (plane == 0)
+						anIntArrayArrayArray3818[0][x + i_672_][i_673_ + y] = (-Class92.method1560(i_674_ + 932731, i_675_ + 556238, 1995871883) * 8) << 2;
 					else
-						anIntArrayArrayArray3818[i][i_670_ + i_672_][i_673_ + i_671_] = (anIntArrayArrayArray3818[i - 1][i_672_ + i_670_][i_671_ + i_673_]) - 960;
+						anIntArrayArrayArray3818[plane][x + i_672_][i_673_ + y] = (anIntArrayArrayArray3818[plane - 1][i_672_ + x][y + i_673_]) - 960;
 					break;
 				}
-				if (i_678_ == 1) {
-					int i_679_ = class282_sub35.readUnsignedByte();
+				if (value == 1) {
+					int i_679_ = stream.readUnsignedByte();
 					if (!aBool3786) {
 						if (i_679_ == 1)
 							i_679_ = 0;
-						if (0 == i)
-							anIntArrayArrayArray3818[0][i_670_ + i_672_][i_671_ + i_673_] = 8 * -i_679_ << 2;
+						if (0 == plane)
+							anIntArrayArrayArray3818[0][x + i_672_][y + i_673_] = 8 * -i_679_ << 2;
 						else
-							anIntArrayArrayArray3818[i][i_670_ + i_672_][i_673_ + i_671_] = ((anIntArrayArrayArray3818[i - 1][i_670_ + i_672_][i_671_ + i_673_]) - (8 * i_679_ << 2));
+							anIntArrayArrayArray3818[plane][x + i_672_][i_673_ + y] = ((anIntArrayArrayArray3818[plane - 1][x + i_672_][y + i_673_]) - (8 * i_679_ << 2));
 					} else
-						anIntArrayArrayArray3818[0][i_672_ + i_670_][i_671_ + i_673_] = 8 * i_679_ << 2;
+						anIntArrayArrayArray3818[0][i_672_ + x][y + i_673_] = 8 * i_679_ << 2;
 					break;
 				}
-				if (i_678_ <= 49) {
+				if (value <= 49) {
 					if (bool)
-						class282_sub35.readUnsignedByte();
+						stream.readUnsignedByte();
 					else {
-						((Class329) this).aByteArrayArrayArray3825[i][i_670_][i_671_] = class282_sub35.readByte((short) -18637);
-						((Class329) this).aByteArrayArrayArray3790[i][i_670_][i_671_] = (byte) ((i_678_ - 2) / 4);
-						((Class329) this).aByteArrayArrayArray3791[i][i_670_][i_671_] = (byte) (i_676_ + (i_678_ - 2) & 0x3);
+						((Class329) this).aByteArrayArrayArray3825[plane][x][y] = stream.readByte((short) -18637);
+						((Class329) this).aByteArrayArrayArray3790[plane][x][y] = (byte) ((value - 2) / 4);
+						((Class329) this).aByteArrayArrayArray3791[plane][x][y] = (byte) (i_676_ + (value - 2) & 0x3);
 					}
-				} else if (i_678_ <= 81) {
+				} else if (value <= 81) {
 					if (!aBool3786 && !bool)
-						aClass311_3787.aByteArrayArrayArray3638[i][i_670_][i_671_] = (byte) (i_678_ - 49);
+						regionMap.tileMasks[plane][x][y] = (byte) (value - 49);
 				} else if (!bool)
-					((Class329) this).aByteArrayArrayArray3808[i][i_670_][i_671_] = (byte) (i_678_ - 81);
+					((Class329) this).aByteArrayArrayArray3808[plane][x][y] = (byte) (value - 81);
 			}
 		} else {
 			for (;;) {
-				int i_680_ = class282_sub35.readUnsignedByte();
+				int i_680_ = stream.readUnsignedByte();
 				if (0 == i_680_)
 					break;
 				if (i_680_ == 1) {
-					class282_sub35.readUnsignedByte();
+					stream.readUnsignedByte();
 					break;
 				}
 				if (i_680_ <= 49)
-					class282_sub35.readUnsignedByte();
+					stream.readUnsignedByte();
 			}
 		}
 	}
@@ -1402,22 +1403,22 @@ public class Class329 {
 	}
 
 	static final void method5901(CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		int i_1064_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_1065_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_1066_ = (class527.intStack[1942118537 * class527.anInt7012 + 2]);
-		int i_1067_ = (class527.intStack[3 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 567564004;
+		int i_1064_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_1065_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_1066_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
+		int i_1067_ = (class527.intStack[3 + class527.intStackPtr * 1942118537]);
 		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_1066_, (byte) 8);
 		if (class431.aChar5146 != i_1064_ || class431.aChar5140 != i_1065_)
 			throw new RuntimeException(new StringBuilder().append(i_1066_).append(" ").append(i_1067_).toString());
 		if (115 == i_1065_)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class431.method7226(i_1067_, 870483820);
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class431.method7232(i_1067_, -1848389937);
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class431.method7232(i_1067_, -1848389937);
 	}
 
 	static final void method5902(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByte619;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByte619;
 	}
 
 	public static void method5903(Class470 class470, Frame frame, int i) {
@@ -1427,11 +1428,11 @@ public class Class329 {
 	}
 
 	static final void method5904(CS2Executor class527, short i) {
-		int i_1068_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1068_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (null == Class468_Sub8.aClass98Array7889[i_1068_])
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (Class468_Sub8.aClass98Array7889[i_1068_].components).length;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (Class468_Sub8.aClass98Array7889[i_1068_].components).length;
 	}
 
 	static long method5905(SceneObject interface12, int i, int i_1069_, byte i_1070_) {

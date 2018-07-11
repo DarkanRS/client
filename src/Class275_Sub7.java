@@ -119,7 +119,7 @@ public class Class275_Sub7 extends Class275 {
 		Class186.anInt2349 = 1545481895 * Class31.anInt361;
 		Class521_Sub1_Sub2.anInt9461 = Class109_Sub1.anInt9384 * -1358126739;
 		Class282_Sub15_Sub1.anInt9575 = 1724048189 * Class246.anInt3029;
-		Class336.anInt3968 = Class293.anInt3512 * 39010087;
+		ClipMap.anInt3968 = Class293.anInt3512 * 39010087;
 		ItemDefaultsLoader.anInt5029 = -427311385 * AnimationDefinitions.anInt5930;
 	}
 }

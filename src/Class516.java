@@ -35,12 +35,12 @@ public class Class516 {
 	}
 
 	static final void method8865(CS2Executor class527, byte i) {
-		int i_5_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_5_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		QuickchatDefinitions class282_sub50_sub9 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_5_, -1707891446);
 		if (null == class282_sub50_sub9.anIntArray9624)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = class282_sub50_sub9.anIntArray9624.length;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282_sub50_sub9.anIntArray9624.length;
 	}
 
 	public static void method8866(Class275 class275, Class275 class275_6_, int i) {
@@ -75,11 +75,11 @@ public class Class516 {
 	}
 
 	static final void method8869(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 1775931893 * Class121.anInt1526;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 1775931893 * Class121.anInt1526;
 	}
 
 	static final void method8870(CS2Executor class527, byte i) {
-		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_10_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (client.aString7426 != null && i_10_ < Class459.anInt5534 * -1772444859)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = Class467.aClass173Array5575[i_10_].aString2129;
 		else

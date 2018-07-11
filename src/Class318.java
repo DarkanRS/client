@@ -14,7 +14,7 @@ public class Class318 {
 	}
 
 	static final void method5697(CS2Executor class527, short i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_0_, -2062673980).method14898(1863942043);
 	}
 }

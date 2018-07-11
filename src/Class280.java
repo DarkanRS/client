@@ -18,8 +18,8 @@ public class Class280 implements Interface25 {
 	}
 
 	static final void method4973(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7394;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aShort7324;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aShort7394;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aShort7324;
 	}
 
 	static final void method4974(long l) {

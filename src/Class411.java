@@ -145,6 +145,6 @@ public class Class411 {
 	}
 
 	static final void method6916(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (Class84.myPlayer.anInt10565 * -1880473919);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (Class84.myPlayer.anInt10565 * -1880473919);
 	}
 }

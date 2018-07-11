@@ -1237,7 +1237,7 @@ public abstract class GraphicalRenderer {
 	}
 
 	static final void method8694(CS2Executor class527, int i) {
-		int i_627_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_627_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_627_, (byte) 95);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_627_ >> 16];
 		Class388.method6690(class118, class98, class527, (byte) 95);
@@ -1265,10 +1265,10 @@ public abstract class GraphicalRenderer {
 
 	static final void method8698(CS2Executor class527, int i) {
 		if (Class282_Sub13.aClass61_7587 != null) {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 			class527.aClass61_7010 = Class282_Sub13.aClass61_7587;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static CS2Script method8699(byte[] is, int i) {
@@ -1276,10 +1276,10 @@ public abstract class GraphicalRenderer {
 	}
 
 	static void method8700(CS2Executor class527, byte i) {
-		int i_631_ = (class527.intStack[1942118537 * class527.anInt7012 - 3]);
-		int i_632_ = (class527.intStack[class527.anInt7012 * 1942118537 - 2]);
-		int i_633_ = (class527.intStack[1942118537 * class527.anInt7012 - 1]);
-		class527.anInt7012 -= 425673003;
+		int i_631_ = (class527.intStack[1942118537 * class527.intStackPtr - 3]);
+		int i_632_ = (class527.intStack[class527.intStackPtr * 1942118537 - 2]);
+		int i_633_ = (class527.intStack[1942118537 * class527.intStackPtr - 1]);
+		class527.intStackPtr -= 425673003;
 		if (i_631_ > class527.globalArrayLengths[i_632_])
 			throw new RuntimeException();
 		if (i_631_ > class527.globalArrayLengths[i_633_])
@@ -1290,6 +1290,6 @@ public abstract class GraphicalRenderer {
 	}
 
 	static final void method8701(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aBool624 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aBool624 ? 1 : 0;
 	}
 }

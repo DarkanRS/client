@@ -96,7 +96,7 @@ public class Class100 {
 
 	static final void method1641(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class404.method6809(string, i_8_, 1250092294);
 	}
 
@@ -109,11 +109,11 @@ public class Class100 {
 	}
 
 	static final void method1643(CS2Executor class527, short i) {
-		class527.anInt7012 -= 283782002;
-		client.aShort7436 = (short) (class527.intStack[class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		client.aShort7436 = (short) (class527.intStack[class527.intStackPtr * 1942118537]);
 		if (client.aShort7436 <= 0)
 			client.aShort7436 = (short) 256;
-		client.aShort7437 = (short) (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		client.aShort7437 = (short) (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		if (client.aShort7437 <= 0)
 			client.aShort7437 = (short) 205;
 	}

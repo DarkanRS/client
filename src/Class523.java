@@ -194,7 +194,7 @@ public class Class523 {
 	}
 
 	static final void method11218(CS2Executor class527, byte i) {
-		int i_8_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub20_8207), i_8_, 1266441439);
 		Class190.method3148((byte) 88);
 		client.aBool7175 = false;

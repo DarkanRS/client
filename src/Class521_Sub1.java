@@ -5,7 +5,7 @@
 public abstract class Class521_Sub1 extends Class521 {
 	public Class275_Sub5[] aClass275_Sub5Array7965;
 	Class521_Sub1 aClass521_Sub1_7966;
-	public byte aByte7967;
+	public byte plane;
 	public byte aByte7968;
 	int anInt7969;
 	public SceneObjectManager aClass206_7970;
@@ -66,7 +66,7 @@ public abstract class Class521_Sub1 extends Class521 {
 	public abstract int method13003();
 
 	int method13004(int i, int i_4_, Class282_Sub24[] class282_sub24s, int i_5_) {
-		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_4_]);
+		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i][i_4_]);
 		long l_6_ = 0L;
 		int i_7_ = 0;
 		for (/**/; l_6_ <= 48L; l_6_ += 16L) {
@@ -105,7 +105,7 @@ public abstract class Class521_Sub1 extends Class521 {
 	abstract void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1_12_, int i, int i_13_, int i_14_, boolean bool, int i_15_);
 
 	int method13014(int i, int i_16_, Class282_Sub24[] class282_sub24s) {
-		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_16_]);
+		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i][i_16_]);
 		long l_17_ = 0L;
 		int i_18_ = 0;
 		for (/**/; l_17_ <= 48L; l_17_ += 16L) {
@@ -164,7 +164,7 @@ public abstract class Class521_Sub1 extends Class521 {
 	abstract boolean method13034();
 
 	int method13035(int i, int i_25_, Class282_Sub24[] class282_sub24s) {
-		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[aByte7967][i][i_25_]);
+		long l = (((SceneObjectManager) aClass206_7970).aLongArrayArrayArray2645[plane][i][i_25_]);
 		long l_26_ = 0L;
 		int i_27_ = 0;
 		for (/**/; l_26_ <= 48L; l_26_ += 16L) {
@@ -194,12 +194,12 @@ public abstract class Class521_Sub1 extends Class521 {
 	}
 
 	static final void method13040(CS2Executor class527, byte i) {
-		int i_33_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_33_].anInt3866 * -1611209891;
+		int i_33_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_33_].anInt3866 * -1611209891;
 	}
 
 	static final void method13041(CS2Executor class527, int i) {
-		int i_34_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_34_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_34_, (byte) 107);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class118.aString1391;
 	}

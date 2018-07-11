@@ -244,7 +244,7 @@ public class Class13 {
 	}
 
 	static final void method501(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class118.aBool1322 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1322 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) -70);
 	}
 
@@ -273,11 +273,11 @@ public class Class13 {
 	}
 
 	static final void method504(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -1176728971 * CS2Runner.anInt5904;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1176728971 * CS2Runner.anInt5904;
 	}
 
 	static final void method505(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		int i_63_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_63_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_63_, (byte) 0);
 		if (!class437.aString5335.equals(string))
@@ -287,9 +287,9 @@ public class Class13 {
 	}
 
 	static final void method506(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		class118.anInt1376 = -280394239 * (class527.intStack[1942118537 * class527.anInt7012]);
-		class118.anInt1314 = (1004789833 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]));
+		class527.intStackPtr -= 283782002;
+		class118.anInt1376 = -280394239 * (class527.intStack[1942118537 * class527.intStackPtr]);
+		class118.anInt1314 = (1004789833 * (class527.intStack[class527.intStackPtr * 1942118537 + 1]));
 		Class109.method1858(class118, (byte) -10);
 		if (0 == -2131393857 * class118.anInt1268)
 			Class12.method483(class98, class118, false, -1735080264);
@@ -299,25 +299,25 @@ public class Class13 {
 		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-888508075) == null)
 			return 0;
 		if (i_67_ < 3) {
-			Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+			RegionMap class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 			int i_69_ = i >> 9;
 			int i_70_ = i_64_ >> 9;
-			if (i_65_ < 0 || i_66_ < 0 || i_65_ > IndexLoaders.MAP_REGION_DECODER.method4424(1440924603) - 1 || i_66_ > IndexLoaders.MAP_REGION_DECODER.method4451(-1516017407) - 1)
+			if (i_65_ < 0 || i_66_ < 0 || i_65_ > IndexLoaders.MAP_REGION_DECODER.getSizeX(1440924603) - 1 || i_66_ > IndexLoaders.MAP_REGION_DECODER.getSizeY(-1516017407) - 1)
 				return 0;
-			if (i_69_ < 1 || i_70_ < 1 || i_69_ > IndexLoaders.MAP_REGION_DECODER.method4424(645551626) - 1 || i_70_ > IndexLoaders.MAP_REGION_DECODER.method4451(-608520237) - 1)
+			if (i_69_ < 1 || i_70_ < 1 || i_69_ > IndexLoaders.MAP_REGION_DECODER.getSizeX(645551626) - 1 || i_70_ > IndexLoaders.MAP_REGION_DECODER.getSizeY(-608520237) - 1)
 				return 0;
-			boolean bool = (0 != (class311.aByteArrayArrayArray3638[1][i >> 9][i_64_ >> 9] & 0x2));
+			boolean bool = (0 != (class311.tileMasks[1][i >> 9][i_64_ >> 9] & 0x2));
 			if (0 == (i & 0x1ff)) {
-				boolean bool_71_ = 0 != ((class311.aByteArrayArrayArray3638[1][i_69_ - 1][i_64_ >> 9]) & 0x2);
-				boolean bool_72_ = ((class311.aByteArrayArrayArray3638[1][i_69_][i_64_ >> 9] & 0x2) != 0);
+				boolean bool_71_ = 0 != ((class311.tileMasks[1][i_69_ - 1][i_64_ >> 9]) & 0x2);
+				boolean bool_72_ = ((class311.tileMasks[1][i_69_][i_64_ >> 9] & 0x2) != 0);
 				if (bool_72_ != bool_71_)
-					bool = (class311.aByteArrayArrayArray3638[1][i_65_][i_66_] & 0x2) != 0;
+					bool = (class311.tileMasks[1][i_65_][i_66_] & 0x2) != 0;
 			}
 			if ((i_64_ & 0x1ff) == 0) {
-				boolean bool_73_ = 0 != ((class311.aByteArrayArrayArray3638[1][i >> 9][i_70_ - 1]) & 0x2);
-				boolean bool_74_ = ((class311.aByteArrayArrayArray3638[1][i >> 9][i_70_] & 0x2) != 0);
+				boolean bool_73_ = 0 != ((class311.tileMasks[1][i >> 9][i_70_ - 1]) & 0x2);
+				boolean bool_74_ = ((class311.tileMasks[1][i >> 9][i_70_] & 0x2) != 0);
 				if (bool_73_ != bool_74_)
-					bool = 0 != ((class311.aByteArrayArrayArray3638[1][i_65_][i_66_]) & 0x2);
+					bool = 0 != ((class311.tileMasks[1][i_65_][i_66_]) & 0x2);
 			}
 			if (bool)
 				i_67_++;

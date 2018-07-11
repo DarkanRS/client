@@ -157,9 +157,9 @@ public abstract class Class390 {
 	}
 
 	static final void method6729(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_140_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		boolean bool = 1 == (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_140_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		boolean bool = 1 == (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub18_8214), i_140_, 77442027);
 		if (!bool)
 			Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub6_8192), 0, -1019376772);
@@ -179,8 +179,8 @@ public abstract class Class390 {
 	}
 
 	static final void method6732(CS2Executor class527, byte i) {
-		int i_148_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_148_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_148_, (byte) 8);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class431.method7222(1242812938);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class431.method7222(1242812938);
 	}
 }

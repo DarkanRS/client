@@ -491,8 +491,8 @@ public class Class9 {
 							stream.writeByte((-1990677291 * (class282_sub35.index)));
 							stream.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 							client.aBool7175 = true;
-							RsByteBuffer class282_sub35_9_ = (new RsByteBuffer(Class11.aClass282_Sub51_124.method13454(1192849826)));
-							Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub35_9_, 419814551);
+							RsByteBuffer class282_sub35_9_ = (new RsByteBuffer(Class11.SYSTEM_INFO.method13454(1192849826)));
+							Class11.SYSTEM_INFO.writeMachineInformation(class282_sub35_9_, 419814551);
 							stream.writeBytes(class282_sub35_9_.buffer, 0, class282_sub35_9_.buffer.length);
 							stream.writeInt((588706901 * (client.anInt7221)));
 							stream.writeLong(client.aLong7153 * -8972807970865466165L);
@@ -500,7 +500,6 @@ public class Class9 {
 							stream.writeByte((client.aString7156 == null) ? 0 : 1);
 							if (client.aString7156 != null) {
 								stream.writeString((client.aString7156));
-								System.out.println(client.aString7165);
 							}
 							stream.writeByte((IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0));
 							stream.writeByte((client.aBool7310 ? 1 : 0));
@@ -508,7 +507,6 @@ public class Class9 {
 							stream.writeByte((-1439277437 * (Class227.anInt2831)));
 							stream.writeInt((204524791 * (client.anInt7163)));
 							stream.writeString(client.aString7164);
-							System.out.println(client.aString7164);
 							stream.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
 							Class240.writeCRCs(stream, 144261488);
 							stream.encryptWithXtea(Class500.anIntArray5827, i_8_, stream.index * -1990677291, 705394503);
@@ -544,8 +542,8 @@ public class Class9 {
 							RsByteBuffer class282_sub35 = Class393.aClass282_Sub54_4783.method13499(-1147561842);
 							stream.writeByte(((class282_sub35.index) * -1990677291));
 							stream.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
-							RsByteBuffer class282_sub35_12_ = (new RsByteBuffer(Class11.aClass282_Sub51_124.method13454(1580195504)));
-							Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub35_12_, 419814551);
+							RsByteBuffer class282_sub35_12_ = (new RsByteBuffer(Class11.SYSTEM_INFO.method13454(1580195504)));
+							Class11.SYSTEM_INFO.writeMachineInformation(class282_sub35_12_, 419814551);
 							stream.writeBytes(class282_sub35_12_.buffer, 0, class282_sub35_12_.buffer.length);
 							stream.writeString(Class464.aString5555);
 							stream.writeInt((client.anInt7149 * -1543197399));
@@ -691,7 +689,7 @@ public class Class9 {
 								client.aBool7316 = class282_sub35_sub2.readUnsignedByte() == 1;
 								Class504.anInt5832 = (class282_sub35_sub2.read24BitInteger(1339225855) * 1346472513);
 								client.membersWorld = class282_sub35_sub2.readUnsignedByte() == 1;
-								Class311.aString3643 = class282_sub35_sub2.readString();
+								RegionMap.aString3643 = class282_sub35_sub2.readString();
 								IndexLoaders.MAP_REGION_DECODER.method4436(-1655099132).method7912(client.membersWorld, 65280);
 								IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -22706).method4436(-1590000445).method7912(client.membersWorld, 65280);
 								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1535563485);
@@ -728,7 +726,7 @@ public class Class9 {
 								Class440.anInt5357 = (class282_sub35_sub2.readUnsignedShort() * 1616992353);
 								Class464.aBool5556 = class282_sub35_sub2.readUnsignedByte() == 1;
 								Class84.myPlayer.displayName = Class84.myPlayer.username = RuntimeException_Sub3.aString10458 = class282_sub35_sub2.readGJString(-760095166);
-								Class311.anInt3644 = class282_sub35_sub2.readUnsignedByte() * 1500703337;
+								RegionMap.anInt3644 = class282_sub35_sub2.readUnsignedByte() * 1500703337;
 								Class121.anInt1526 = (class282_sub35_sub2.readInt() * 1336332893);
 								client.aBool7323 = class282_sub35_sub2.readUnsignedByte() == 1;
 								Class448.aClass450_5421 = new Class450();
@@ -1155,8 +1153,8 @@ public class Class9 {
 							class282_sub35_sub2.writeByte((-1990677291 * (class282_sub35.index)));
 							class282_sub35_sub2.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 							client.aBool7175 = true;
-							RsByteBuffer class282_sub35_31_ = (new RsByteBuffer(Class11.aClass282_Sub51_124.method13454(1783766573)));
-							Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub35_31_, 419814551);
+							RsByteBuffer class282_sub35_31_ = (new RsByteBuffer(Class11.SYSTEM_INFO.method13454(1783766573)));
+							Class11.SYSTEM_INFO.writeMachineInformation(class282_sub35_31_, 419814551);
 							class282_sub35_sub2.writeBytes(class282_sub35_31_.buffer, 0, class282_sub35_31_.buffer.length);
 							class282_sub35_sub2.writeInt((588706901 * (client.anInt7221)));
 							class282_sub35_sub2.writeLong(client.aLong7153 * -8972807970865466165L);
@@ -1206,8 +1204,8 @@ public class Class9 {
 							RsByteBuffer class282_sub35 = Class393.aClass282_Sub54_4783.method13499(-1147561842);
 							class282_sub35_sub2.writeByte(((class282_sub35.index) * -1990677291));
 							class282_sub35_sub2.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
-							RsByteBuffer class282_sub35_34_ = (new RsByteBuffer(Class11.aClass282_Sub51_124.method13454(1423204662)));
-							Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub35_34_, 419814551);
+							RsByteBuffer class282_sub35_34_ = (new RsByteBuffer(Class11.SYSTEM_INFO.method13454(1423204662)));
+							Class11.SYSTEM_INFO.writeMachineInformation(class282_sub35_34_, 419814551);
 							class282_sub35_sub2.writeBytes(class282_sub35_34_.buffer, 0, class282_sub35_34_.buffer.length);
 							class282_sub35_sub2.writeString(Class464.aString5555);
 							class282_sub35_sub2.writeInt((client.anInt7149 * -1543197399));
@@ -1353,7 +1351,7 @@ public class Class9 {
 								client.aBool7316 = class282_sub35_sub2.readUnsignedByte() == 1;
 								Class504.anInt5832 = (class282_sub35_sub2.read24BitInteger(1148081891) * 1346472513);
 								client.membersWorld = class282_sub35_sub2.readUnsignedByte() == 1;
-								Class311.aString3643 = class282_sub35_sub2.readString();
+								RegionMap.aString3643 = class282_sub35_sub2.readString();
 								IndexLoaders.MAP_REGION_DECODER.method4436(-1921247578).method7912(client.membersWorld, 65280);
 								IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -4573).method4436(-1676268946).method7912(client.membersWorld, 65280);
 								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1631401679);
@@ -1390,7 +1388,7 @@ public class Class9 {
 								Class440.anInt5357 = (class282_sub35_sub2.readUnsignedShort() * 1616992353);
 								Class464.aBool5556 = class282_sub35_sub2.readUnsignedByte() == 1;
 								Class84.myPlayer.displayName = Class84.myPlayer.username = RuntimeException_Sub3.aString10458 = class282_sub35_sub2.readGJString(-1786245731);
-								Class311.anInt3644 = class282_sub35_sub2.readUnsignedByte() * 1500703337;
+								RegionMap.anInt3644 = class282_sub35_sub2.readUnsignedByte() * 1500703337;
 								Class121.anInt1526 = (class282_sub35_sub2.readInt() * 1336332893);
 								client.aBool7323 = class282_sub35_sub2.readUnsignedByte() == 1;
 								Class448.aClass450_5421 = new Class450();
@@ -1679,7 +1677,7 @@ public class Class9 {
 	}
 
 	static final void method451(CS2Executor class527, int i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub19_8204, ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) ? 1 : 0, -349576977);
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub19_8204, ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) ? 1 : 0, -349576977);
 		Class94.method1589((short) 255);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-407830274);
 		Class190.method3148((byte) 90);
@@ -1687,7 +1685,7 @@ public class Class9 {
 	}
 
 	static final void method452(CS2Executor class527, byte i) {
-		int i_43_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_43_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_43_ != Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644)) {
 			if (i != 13) {
 				Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub14_8211, i_43_, 1770678701);
@@ -1698,17 +1696,17 @@ public class Class9 {
 	}
 
 	static final void method453(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aBool7189 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7189 ? 1 : 0;
 	}
 
 	static final void method454(CS2Executor class527, short i) {
-		int i_44_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_44_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_44_, (byte) 4);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1264 * -795991475;
 	}
 
 	public static void animateObject(int plane, int localX, int localY, int group, int type, int orientation, int animation, byte i_51_) {
-		if (localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.method4424(-593501496) - 1 && localY < IndexLoaders.MAP_REGION_DECODER.method4451(-763762693) - 1) {
+		if (localX >= 0 && localY >= 0 && localX < IndexLoaders.MAP_REGION_DECODER.getSizeX(-593501496) - 1 && localY < IndexLoaders.MAP_REGION_DECODER.getSizeY(-763762693) - 1) {
 			if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-931426590) != null) {
 				if (0 == group) {
 					SceneObject object = ((SceneObject) IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2007440796).getWall(plane, localX, localY, (byte) -24));

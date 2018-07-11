@@ -20,16 +20,16 @@ public abstract class Class282_Sub11 extends Node {
 	abstract void method12208(RsByteBuffer class282_sub35);
 
 	static final void method12209(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
+		class527.intStackPtr -= 283782002;
 		int i_0_ = 10;
-		byte[] is = { (byte) class527.intStack[class527.anInt7012 * 1942118537] };
-		byte[] is_1_ = { (byte) class527.intStack[1942118537 * class527.anInt7012 + 1] };
+		byte[] is = { (byte) class527.intStack[class527.intStackPtr * 1942118537] };
+		byte[] is_1_ = { (byte) class527.intStack[1942118537 * class527.intStackPtr + 1] };
 		Class445.method7429(class118, i_0_, is, is_1_, class527, -2033836462);
 	}
 
 	static final void method12210(CS2Executor class527, byte i) {
 		class527.anInt7000 -= 134906879;
-		Class533.method11404((String) (class527.objectStack[class527.anInt7000 * 1806726141]), (String) (class527.objectStack[class527.anInt7000 * 1806726141 + 1]), (String) (class527.objectStack[2 + 1806726141 * class527.anInt7000]), ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1), true, -94301647);
+		Class533.method11404((String) (class527.objectStack[class527.anInt7000 * 1806726141]), (String) (class527.objectStack[class527.anInt7000 * 1806726141 + 1]), (String) (class527.objectStack[2 + 1806726141 * class527.anInt7000]), ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1), true, -94301647);
 	}
 
 	public static void method12211(int i) {

@@ -125,9 +125,9 @@ public class Class150 {
 	}
 
 	static final void method2584(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_9_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_10_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_9_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_10_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		Class515.method8862(i_9_, i_10_ >> 14 & 0x3fff, i_10_ & 0x3fff, false, -1732540658);
 	}
 

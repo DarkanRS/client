@@ -30,15 +30,15 @@ public abstract class JS5FileWorker {
 	abstract byte[] method5813(int i);
 
 	static final void method5814(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_3_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_4_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_3_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_4_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		UnderlayDefinition class513;
 		if (class527.aBool7022)
 			class513 = class527.aClass513_6994;
 		else
 			class513 = class527.aClass513_7007;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.inter), i_3_, i_4_, (byte) 1) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class513.method8766((class527.animable.inter), i_3_, i_4_, (byte) 1) ? 1 : 0;
 	}
 
 	static Class221[] method5815(int i) {

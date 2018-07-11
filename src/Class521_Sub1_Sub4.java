@@ -86,7 +86,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 
 	Class521_Sub1_Sub4(SceneObjectManager class206, int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_) {
 		super(class206);
-		aByte7967 = (byte) i_7_;
+		plane = (byte) i_7_;
 		aByte7968 = (byte) i_8_;
 		aShort9611 = (short) i_9_;
 		aShort9612 = (short) i_10_;
@@ -118,7 +118,7 @@ public abstract class Class521_Sub1_Sub4 extends Class521_Sub1 {
 	}
 
 	static final void method14892(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		class118.anInt1377 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * -1802729151);
+		class118.anInt1377 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * -1802729151);
 		Class109.method1858(class118, (byte) -21);
 	}
 }

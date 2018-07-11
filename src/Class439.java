@@ -10,64 +10,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public final class Class439 {
+	
 	Class439() throws Throwable {
 		throw new Error();
-	}
-
-	static byte[] method7336(File file, int i) {
-		byte[] is;
-		try {
-			byte[] is_0_ = new byte[i];
-			Class353.method6208(file, is_0_, i, 108704305);
-			is = is_0_;
-		} catch (IOException ioexception) {
-			return null;
-		}
-		return is;
-	}
-
-	public static byte[] method7337(File file) {
-		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
-	}
-
-	static void method7338(File file, byte[] is, int i) throws IOException {
-		DataInputStream datainputstream = (new DataInputStream(new BufferedInputStream(new FileInputStream(file))));
-		try {
-			datainputstream.readFully(is, 0, i);
-		} catch (EOFException eofexception) {
-			/* empty */
-		}
-		datainputstream.close();
-	}
-
-	static byte[] method7339(File file, int i) {
-		byte[] is;
-		try {
-			byte[] is_1_ = new byte[i];
-			Class353.method6208(file, is_1_, i, 108704305);
-			is = is_1_;
-		} catch (IOException ioexception) {
-			return null;
-		}
-		return is;
-	}
-
-	public static byte[] method7340(File file) {
-		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
-	}
-
-	static void method7341(File file, byte[] is, int i) throws IOException {
-		DataInputStream datainputstream = (new DataInputStream(new BufferedInputStream(new FileInputStream(file))));
-		try {
-			datainputstream.readFully(is, 0, i);
-		} catch (EOFException eofexception) {
-			/* empty */
-		}
-		datainputstream.close();
-	}
-
-	public static byte[] method7342(File file) {
-		return ObjectDefinitions.method8023(file, (int) file.length(), (byte) 0);
 	}
 
 	public static void method7343(int i, int i_2_) {
@@ -77,13 +22,13 @@ public final class Class439 {
 		IComponentDefinitions.aClass229_1282.method3858(i, (byte) -52);
 	}
 
-	static final void method7344(int i, int i_3_, long l) {
+	static final void routeToSceneObject(int i, int i_3_, long l) {
 		int i_4_ = (int) l >> 14 & 0x1f;
 		int i_5_ = (int) l >> 20 & 0x3;
 		int i_6_ = (int) (l >>> 32) & 0x7fffffff;
-		Class458 class458 = (Class458) Class386.method6672(Class2.method262((byte) -1), i_4_, -917234900);
-		Class225 class225;
-		if (class458 == Class458.aClass458_5490 || Class458.aClass458_5492 == class458 || class458 == Class458.aClass458_5480) {
+		SceneObjectType class458 = (SceneObjectType) Class386.method6672(Class2.method262((byte) -1), i_4_, -917234900);
+		RouteStrategy class225;
+		if (class458 == SceneObjectType.SCENERY_INTERACT || SceneObjectType.GROUND_INTERACT == class458 || class458 == SceneObjectType.GROUND_DECORATION) {
 			ObjectDefinitions class478 = IndexLoaders.MAP_REGION_DECODER.method4436(-1792559044).getObjectDefinitions(i_6_, 65280);
 			int i_7_;
 			int i_8_;
@@ -97,11 +42,11 @@ public final class Class439 {
 			if (i_5_ == 0) {
 				/* empty */
 			}
-			class225 = JS5CacheFile.method3354(i, i_3_, i_7_, i_8_, Class458.aClass458_5470, 0, 1608795477);
-		} else if (Class308.method5473(1109376893 * class458.anInt5481, 1861080465))
+			class225 = JS5CacheFile.method3354(i, i_3_, i_7_, i_8_, SceneObjectType.WALL_STRAIGHT, 0, 1608795477);
+		} else if (Class308.isWall(1109376893 * class458.type, 1861080465))
 			class225 = JS5CacheFile.method3354(i, i_3_, 0, 0, class458, i_5_, 1608795477);
 		else
 			class225 = Class148.method2551(i, i_3_, 0, 0, class458, i_5_, 960380494);
-		MapRegion.method4559(i, i_3_, true, class225, 2130368133);
+		MapRegion.routeTo(i, i_3_, true, class225, 2130368133);
 	}
 }

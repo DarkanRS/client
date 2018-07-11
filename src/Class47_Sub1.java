@@ -281,8 +281,8 @@ public final class Class47_Sub1 extends Class47 {
 	}
 
 	static final void method14482(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		int i_32_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		int i_33_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_32_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		int i_33_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (i_33_ >= 1 && i_33_ <= 10)
 			class118.method2039(i_33_ - 1, i_32_, 1711719581);
 	}

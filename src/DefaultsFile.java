@@ -37,14 +37,14 @@ public class DefaultsFile {
 	}
 
 	static final void method11222(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(1753438100))
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.MAP_REGION_DECODER.method4436(-2071995524).getObjectDefinitions(i_0_, 65280).method7973(i_1_, class437.aString5335, (byte) 97);
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.MAP_REGION_DECODER.method4436(-1502045991).getObjectDefinitions(i_0_, 65280).method7963(i_1_, -1741480635 * class437.anInt5337, 1059658238));
 	}
 
 	static final void method11223(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
@@ -56,9 +56,9 @@ public class DefaultsFile {
 	}
 
 	static final void method11224(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_2_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_3_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_2_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_3_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		if (null != Class84.myPlayer.playerAppearance) {
 			for (int i_4_ = 0; i_4_ < Class44.anIntArray428.length; i_4_++) {
 				if (Class44.anIntArray428[i_4_] == i_2_) {

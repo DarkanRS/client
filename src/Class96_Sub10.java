@@ -39,9 +39,9 @@ public abstract class Class96_Sub10 extends Class96 {
 	}
 
 	static final void method14602(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 123);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class118.anInt1277 * 442725395;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1277 * 442725395;
 	}
 
 	public static void method14603(int i, int i_1_, int i_2_, String string, byte i_3_) {
@@ -114,15 +114,15 @@ public abstract class Class96_Sub10 extends Class96 {
 	}
 
 	static final void method14604(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 283782002;
-		int i_4_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_4_ & i_5_;
+		class527.intStackPtr -= 283782002;
+		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_4_ & i_5_;
 	}
 
 	static final void method14605(IComponentDefinitions class118, CS2Executor class527, byte i) {
 		int i_6_ = 10;
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		Class274.method4883(class118, i_6_, i_7_, class527, -838566564);
 	}
 }

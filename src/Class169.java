@@ -58,7 +58,7 @@ public class Class169 {
 	}
 
 	static final void method2871(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (client.anInt7434 * 1609086245 == 2 && i_0_ < 493536965 * client.anInt7449)
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = client.aClass6Array7452[i_0_].aString40;
 		else
@@ -66,11 +66,11 @@ public class Class169 {
 	}
 
 	static final void method2872(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -574868913 * client.anInt7416;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -574868913 * client.anInt7416;
 	}
 
 	static final void method2873(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub14_8211.method12728(-1912429644);
 	}
 
 	static final void method2874(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {

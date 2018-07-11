@@ -69,7 +69,7 @@ public class Class104 {
 	}
 
 	static void method1799(CS2Executor class527, byte i) {
-		class527.intStack[class527.anInt7012 * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.anInt7012 - 1]), -1396181317).anInt2963) * 554241429;
+		class527.intStack[class527.intStackPtr * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.intStackPtr - 1]), -1396181317).anInt2963) * 554241429;
 	}
 
 	static final void method1800(CS2Executor class527, int i) {

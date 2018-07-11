@@ -269,7 +269,7 @@ public class Class282_Sub4 extends Node {
 	}
 
 	static final void method12115(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -672443707 * NativeLibraryLoader.anInt3240 == 2 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -672443707 * NativeLibraryLoader.anInt3240 == 2 ? 1 : 0;
 	}
 
 	static final void method12116(CS2Executor class527, byte i) {

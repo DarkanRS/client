@@ -626,7 +626,7 @@ public class Class117 {
 	}
 
 	static final void method1979(CS2Executor class527, int i) {
-		int i_97_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_97_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (class527.aClass282_Sub4_7011.aClass57Array7499[i_97_].aString524);
 	}
 

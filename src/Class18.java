@@ -36,7 +36,7 @@ public class Class18 {
 				/* empty */
 			}
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static void renderInformation(GraphicalRenderer renderer, NodeCollection areas, int i, int i_0_, byte i_1_) {

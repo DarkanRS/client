@@ -80,8 +80,8 @@ public final class Class459 {
 			i_0_ = class119.anInt1458 * -1125753931;
 			i_1_ = class119.anInt1454 * 2069222845;
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_0_;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_1_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_0_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_;
 	}
 
 	static final void decodeUpdate(boolean largeSceneView, int i) {
@@ -136,9 +136,9 @@ public final class Class459 {
 			npc.anInt10340 = -222526911 * ((npc.aClass409_10580.anInt4889) * 1913503455 << 3);
 			if (bool_3_)
 				npc.method15791(direction, true, (byte) -43);
-			npc.method16159(plane, (Class84.myPlayer.regionBaseX[0] + localX), (Class84.myPlayer.regionBaseY[0] + localY), hasTeleported == 1, npc.method15805(828768449), -1655892623);
+			npc.method16159(plane, (Class84.myPlayer.regionBaseX[0] + localX), (Class84.myPlayer.regionBaseY[0] + localY), hasTeleported == 1, npc.getSize(828768449), -1655892623);
 			if (npc.aClass409_10580.method6886(-1862040818))
-				Class397.method6775(npc.aByte7967, (npc.regionBaseX[0]), (npc.regionBaseY[0]), 0, null, npc, null, 386204149);
+				Class397.method6775(npc.plane, (npc.regionBaseX[0]), (npc.regionBaseY[0]), 0, null, npc, null, 386204149);
 		}
 		buffer.finishBitAccess((byte) 35);
 	}

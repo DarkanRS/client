@@ -57,7 +57,7 @@ public class Class234 {
 	}
 
 	static final void method3949(CS2Executor class527, int i) {
-		int i_6_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_6_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 82);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
 		Class389.method6697(class118, class98, class527, 1042468011);
@@ -68,8 +68,8 @@ public class Class234 {
 	}
 
 	static final void method3951(CS2Executor class527, int i) {
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Character.toLowerCase((char) i_7_);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Character.toLowerCase((char) i_7_);
 	}
 
 	public static int method3952(String string, int i) {

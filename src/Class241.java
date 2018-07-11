@@ -183,29 +183,29 @@ public final class Class241 {
 	}
 
 	static final void method4146(CS2Executor class527, int i) {
-		int i_26_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_26_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_26_, (byte) 59);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 597157617 * class118.anInt1299;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 597157617 * class118.anInt1299;
 	}
 
 	static final void method4147(CS2Executor class527, int i) {
-		int i_27_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_27_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_27_, (byte) 107);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -492594917 * class118.anInt1429;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -492594917 * class118.anInt1429;
 	}
 
 	static final void method4148(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_28_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_29_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_28_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_29_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		if (-1 == i_29_)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = -1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_28_, 230168792).method15211((char) i_29_, 1343010087);
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_28_, 230168792).method15211((char) i_29_, 1343010087);
 	}
 
 	static final void method4149(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.anInt1378 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) * 125067541);
+		class118.anInt1378 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * 125067541);
 	}
 
 	public static int method4150(int i) {

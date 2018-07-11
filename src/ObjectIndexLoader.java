@@ -35,9 +35,9 @@ public class ObjectIndexLoader {
 		if (data != null)
 			defs.method7964(new RsByteBuffer(data), (byte) 43);
 		defs.method7966(787748525);
-		if (defs.aBool5686) {
-			defs.anInt5677 = 0;
-			defs.aBool5664 = false;
+		if (defs.ignoreClipOnAlternativeRoute) {
+			defs.clipType = 0;
+			defs.projectileClipped = false;
 		}
 		if (!((ObjectIndexLoader) this).showOptions && defs.aBool5660) {
 			defs.options = null;
@@ -145,7 +145,7 @@ public class ObjectIndexLoader {
 	}
 
 	static final void method7915(CS2Executor class527, byte i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class417.anInt4994 * -385885769;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class417.anInt4994 * -385885769;
 	}
 
 	public static Class217_Sub1 method7916(int i, int i_5_) {

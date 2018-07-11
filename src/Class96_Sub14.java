@@ -51,7 +51,7 @@ public class Class96_Sub14 extends Class96 {
 		boolean bool = true;
 		boolean bool_3_ = false;
 		boolean bool_4_ = false;
-		if (Class11.aClass282_Sub51_124.anInt8167 * -79546877 < 512 && -79546877 * Class11.aClass282_Sub51_124.anInt8167 != 0)
+		if (Class11.SYSTEM_INFO.anInt8167 * -79546877 < 512 && -79546877 * Class11.SYSTEM_INFO.anInt8167 != 0)
 			bool = false;
 		if (Class225_Sub6.aString8069.startsWith("win")) {
 			bool_4_ = true;
@@ -116,11 +116,11 @@ public class Class96_Sub14 extends Class96 {
 	static final int[] method14642(String string, CS2Executor class527, int i) {
 		int[] is = null;
 		if (string.length() > 0 && string.charAt(string.length() - 1) == 'Y') {
-			int i_8_ = (class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]);
+			int i_8_ = (class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]);
 			if (i_8_ > 0) {
 				is = new int[i_8_];
 				while (i_8_-- > 0)
-					is[i_8_] = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+					is[i_8_] = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 			}
 		}
 		return is;
@@ -138,6 +138,6 @@ public class Class96_Sub14 extends Class96 {
 	}
 
 	static final void method14644(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = class527.aClass282_Sub4_7011.aByte7497;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass282_Sub4_7011.aByte7497;
 	}
 }

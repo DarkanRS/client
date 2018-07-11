@@ -11,14 +11,14 @@ public class Class96_Sub5 extends Class96 {
 
 	@Override
 	public void method1601() {
-		Class225.method3794(-1748191497 * this.anInt8845, this.anInt8846 * -808646567, -602355731 * this.anInt8847, 100, 100, false, (byte) -1);
+		RouteStrategy.method3794(-1748191497 * this.anInt8845, this.anInt8846 * -808646567, -602355731 * this.anInt8847, 100, 100, false, (byte) -1);
 		Class12.method486(-908637089 * this.anInt8848, this.anInt8849 * -1608889999, 0, 596260679);
 		client.aBool7321 = true;
 	}
 
 	@Override
 	public void method1592(int i) {
-		Class225.method3794(-1748191497 * this.anInt8845, this.anInt8846 * -808646567, -602355731 * this.anInt8847, 100, 100, false, (byte) -1);
+		RouteStrategy.method3794(-1748191497 * this.anInt8845, this.anInt8846 * -808646567, -602355731 * this.anInt8847, 100, 100, false, (byte) -1);
 		Class12.method486(-908637089 * this.anInt8848, this.anInt8849 * -1608889999, 0, 596260679);
 		client.aBool7321 = true;
 	}
@@ -57,6 +57,6 @@ public class Class96_Sub5 extends Class96 {
 				}
 			}
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_2_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_2_;
 	}
 }

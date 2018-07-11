@@ -47,6 +47,6 @@ public class Class291_Sub1 extends Class291 {
 	static final void method13359(CS2Executor class527, int i) {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		boolean bool = Class308.aclient3620.method4658(new File(string), -576964244);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 }

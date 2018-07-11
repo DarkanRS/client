@@ -96,7 +96,7 @@ public class NPC extends Animable {
 			if (-628205413 * ((NPC) this).anInt10363 != 0)
 				aClass528Array10372[0].ia(0, ((NPC) this).anInt10363 * -628205413, 0);
 		} else
-			method15895(i_4_, method15805(828768449) << 9, method15805(828768449) << 9, 0, 0, (byte) 1);
+			method15895(i_4_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
 		if (bool)
 			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
 		method15837(class505, class227, i_1_, i_2_, i_3_, i_4_, (byte) 1);
@@ -119,8 +119,8 @@ public class NPC extends Animable {
 	}
 
 	public void method16159(int i, int i_6_, int i_7_, boolean bool, int i_8_, int i_9_) {
-		aByte7967 = aByte7968 = (byte) i;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_6_, i_7_, 1670715577))
+		plane = aByte7968 = (byte) i;
+		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_6_, i_7_, 1670715577))
 			aByte7968++;
 		if (aClass456_10338.method7564(1626305328) && (aClass456_10338.method7565(-1632742162).anInt5921 * 113839939 == 1)) {
 			anIntArray10350 = null;
@@ -340,7 +340,7 @@ public class NPC extends Animable {
 		Class305 class305 = method11166();
 		Matrix44Var class294_30_ = class505.method8450();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
 			int i_31_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_31_ / 10.0F));
@@ -427,7 +427,7 @@ public class NPC extends Animable {
 		Class305 class305 = method11166();
 		Matrix44Var class294_37_ = class505.method8450();
 		int i_38_ = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
 			int i_39_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_39_ / 10.0F));
@@ -489,7 +489,7 @@ public class NPC extends Animable {
 		Class305 class305 = method11166();
 		Matrix44Var class294_42_ = class505.method8450();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
 			int i_43_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_43_ / 10.0F));
@@ -864,7 +864,7 @@ public class NPC extends Animable {
 			if (-628205413 * ((NPC) this).anInt10363 != 0)
 				aClass528Array10372[0].ia(0, ((NPC) this).anInt10363 * -628205413, 0);
 		} else
-			method15895(i_63_, method15805(828768449) << 9, method15805(828768449) << 9, 0, 0, (byte) 1);
+			method15895(i_63_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
 		if (bool)
 			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
 		method15837(class505, class227, i_60_, i_61_, i_62_, i_63_, (byte) 1);
@@ -872,8 +872,8 @@ public class NPC extends Animable {
 	}
 
 	public void method16182(int i, int i_64_, int i_65_, boolean bool, int i_66_) {
-		aByte7967 = aByte7968 = (byte) i;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_64_, i_65_, 1699221461))
+		plane = aByte7968 = (byte) i;
+		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_64_, i_65_, 1699221461))
 			aByte7968++;
 		if (aClass456_10338.method7564(303439181) && (aClass456_10338.method7565(-1632742162).anInt5921 * 113839939 == 1)) {
 			anIntArray10350 = null;
@@ -947,7 +947,7 @@ public class NPC extends Animable {
 		Class305 class305 = method11166();
 		Matrix44Var class294_71_ = class505.method8450();
 		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[aByte7967][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
+		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
 		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
 			int i_72_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
 			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_72_ / 10.0F));

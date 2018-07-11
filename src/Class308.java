@@ -172,16 +172,16 @@ public class Class308 {
 		return ((Class308) this).anIntArrayArrayArray3614;
 	}
 
-	public static boolean method5473(int i, int i_7_) {
-		return ((i >= 1109376893 * Class458.aClass458_5470.anInt5481 && i <= 1109376893 * Class458.aClass458_5473.anInt5481) || i == 1109376893 * Class458.aClass458_5474.anInt5481);
+	public static boolean isWall(int i, int i_7_) {
+		return ((i >= 1109376893 * SceneObjectType.WALL_STRAIGHT.type && i <= 1109376893 * SceneObjectType.WALL_STRAIGHT_CORNER.type) || i == 1109376893 * SceneObjectType.WALL_INTERACT.type);
 	}
 
 	static final void method5474(CS2Executor class527, int i) {
 		int i_8_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		class527.anInt7012 -= 283782002;
-		int i_9_ = (class527.intStack[1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_9_ = (class527.intStack[1942118537 * class527.intStackPtr]);
 		if (i_9_ < 0 || i_9_ >= class527.globalArrayLengths[i_8_])
 			throw new RuntimeException();
-		class527.globalArrays[i_8_][i_9_] = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.globalArrays[i_8_][i_9_] = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 	}
 }

@@ -120,8 +120,8 @@ public class Login {
 	}
 
 	static void method5016(CS2Executor class527, int i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1396181317);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
+		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
 	}
 
 	static final void method5017(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
@@ -310,8 +310,8 @@ public class Login {
 							out.writeByte((-1990677291 * (class282_sub35.index)));
 							out.writeBytes(class282_sub35.buffer, 0, -1990677291 * class282_sub35.index);
 							client.aBool7175 = true;
-							RsByteBuffer class282_sub35_12_ = (new RsByteBuffer(Class11.aClass282_Sub51_124.method13454(1537607861)));
-							Class11.aClass282_Sub51_124.writeMachineInformation(class282_sub35_12_, 419814551);
+							RsByteBuffer class282_sub35_12_ = (new RsByteBuffer(Class11.SYSTEM_INFO.method13454(1537607861)));
+							Class11.SYSTEM_INFO.writeMachineInformation(class282_sub35_12_, 419814551);
 							out.writeBytes(class282_sub35_12_.buffer, 0, class282_sub35_12_.buffer.length);
 							out.writeInt((588706901 * (client.anInt7221)));
 							out.writeLong(client.aLong7153 * -8972807970865466165L);
@@ -510,7 +510,7 @@ public class Login {
 								client.aBool7316 = stream.readUnsignedByte() == 1;
 								Class504.anInt5832 = (stream.read24BitInteger(1818887431) * 1346472513);
 								client.membersWorld = stream.readUnsignedByte() == 1;
-								Class311.aString3643 = stream.readString();
+								RegionMap.aString3643 = stream.readString();
 								IndexLoaders.MAP_REGION_DECODER.method4436(-1683757670).method7912(client.membersWorld, 65280);
 								IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) 2983).method4436(-1487690474).method7912(client.membersWorld, 65280);
 								IndexLoaders.ITEM_INDEX_LOADER.method7148(client.membersWorld, -1605655563);
@@ -547,7 +547,7 @@ public class Login {
 								Class440.anInt5357 = (stream.readUnsignedShort() * 1616992353);
 								Class464.aBool5556 = stream.readUnsignedByte() == 1;
 								Class84.myPlayer.displayName = Class84.myPlayer.username = RuntimeException_Sub3.aString10458 = stream.readGJString(540818903);
-								Class311.anInt3644 = stream.readUnsignedByte() * 1500703337;
+								RegionMap.anInt3644 = stream.readUnsignedByte() * 1500703337;
 								Class121.anInt1526 = (stream.readInt() * 1336332893);
 								client.aBool7323 = stream.readUnsignedByte() == 1;
 								Class448.aClass450_5421 = new Class450();

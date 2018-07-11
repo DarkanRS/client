@@ -10,10 +10,10 @@ public class Class14 {
 	}
 
 	static final void method536(CS2Executor class527, byte i) {
-		class527.anInt7012 -= 425673003;
-		int i_8_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_9_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
-		int i_10_ = (class527.intStack[2 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 425673003;
+		int i_8_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_9_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+		int i_10_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (-1 == i_9_) {
 			throw new RuntimeException();
@@ -29,7 +29,7 @@ public class Class14 {
 		if (i_10_ < 0 || null == is || is.length <= i_10_) {
 			throw new RuntimeException();
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = is[i_10_];
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = is[i_10_];
 	}
 
 	static void method537(int i) {
@@ -225,7 +225,7 @@ public class Class14 {
 				npc.method15836(1203434505 * (npc.aClass409_10580.anInt4858), (byte) -91);
 				npc.anInt10340 = -222526911 * ((npc.aClass409_10580.anInt4889) * 1913503455 << 3);
 				if (npc.aClass409_10580.method6886(-1928423029)) {
-					Class397.method6775(npc.aByte7967, (npc.regionBaseX[0]), (npc.regionBaseY[0]), 0, null, npc, null, 352984427);
+					Class397.method6775(npc.plane, (npc.regionBaseX[0]), (npc.regionBaseY[0]), 0, null, npc, null, 352984427);
 				}
 			}
 			if ((flags & 0x2000000) != 0) {

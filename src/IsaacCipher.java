@@ -770,7 +770,7 @@ public final class IsaacCipher {
 	}
 
 	static final void method7267(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1344 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1344 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 89);
 	}
 
@@ -787,17 +787,17 @@ public final class IsaacCipher {
 		for (/**/; client.aFloat7365 < 0.0F; client.aFloat7365 += 16384.0F) {
 			/* empty */
 		}
-		Class311 class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		RegionMap class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
 		SceneObjectManager class206 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1812615457);
 		int i_60_ = 1762352089 * Class11.anInt122 >> 9;
 		int i_61_ = 518160421 * Class266.anInt3289 >> 9;
 		int i_62_ = Class504.method8389(Class11.anInt122 * 1762352089, Class266.anInt3289 * 518160421, Class4.anInt35 * 675588453, (byte) 58);
 		int i_63_ = 0;
-		if (i_60_ > 3 && i_61_ > 3 && i_60_ < IndexLoaders.MAP_REGION_DECODER.method4424(-61399020) - 4 && i_61_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1849222129) - 4) {
+		if (i_60_ > 3 && i_61_ > 3 && i_60_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-61399020) - 4 && i_61_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1849222129) - 4) {
 			for (int i_64_ = i_60_ - 4; i_64_ <= i_60_ + 4; i_64_++) {
 				for (int i_65_ = i_61_ - 4; i_65_ <= 4 + i_61_; i_65_++) {
 					int i_66_ = Class4.anInt35 * 675588453;
-					if (i_66_ < 3 && class311.method5497(i_64_, i_65_, 1857186418)) {
+					if (i_66_ < 3 && class311.is0x2(i_64_, i_65_, 1857186418)) {
 						i_66_++;
 					}
 					int i_67_ = 0;

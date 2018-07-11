@@ -22,14 +22,14 @@ public class Class216 {
 	}
 
 	static final void method3674(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_0_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_1_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
+		class527.intStackPtr -= 283782002;
+		int i_0_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(1764887280))
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.aClass523_3868.method11205(i_0_, (byte) -22).method11129(i_1_, class437.aString5335, 803635154);
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.aClass523_3868.method11205(i_0_, (byte) -46).method11133(i_1_, -1741480635 * class437.anInt5337, 1720724957));
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.aClass523_3868.method11205(i_0_, (byte) -46).method11133(i_1_, -1741480635 * class437.anInt5337, 1720724957));
 	}
 
 	static void method3675(int i) {

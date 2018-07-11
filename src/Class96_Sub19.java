@@ -32,7 +32,7 @@ public class Class96_Sub19 extends Class96 {
 			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 			i_0_ = (int) class385.x;
 			i_1_ = (int) class385.z;
-			i_2_ = class521_sub1_sub1_sub2.aByte7967;
+			i_2_ = class521_sub1_sub1_sub2.plane;
 		}
 		int i_3_;
 		int i_4_;
@@ -45,7 +45,7 @@ public class Class96_Sub19 extends Class96 {
 			i_3_ = (int) class385.x;
 			i_4_ = (int) class385.z;
 			if (i_2_ < 0)
-				i_2_ = class521_sub1_sub1_sub2.aByte7967;
+				i_2_ = class521_sub1_sub1_sub2.plane;
 		}
 		int i_5_ = -716833811 * ((Class96_Sub19) this).anInt9399 << 2;
 		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1436448746), ((Class96_Sub19) this).anInt9410 * 899631601, i_2_, i_2_, i_0_, i_1_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_5_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
@@ -67,7 +67,7 @@ public class Class96_Sub19 extends Class96 {
 			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 			i = (int) class385.x;
 			i_6_ = (int) class385.z;
-			i_7_ = class521_sub1_sub1_sub2.aByte7967;
+			i_7_ = class521_sub1_sub1_sub2.plane;
 		}
 		int i_8_;
 		int i_9_;
@@ -80,7 +80,7 @@ public class Class96_Sub19 extends Class96 {
 			i_8_ = (int) class385.x;
 			i_9_ = (int) class385.z;
 			if (i_7_ < 0)
-				i_7_ = class521_sub1_sub1_sub2.aByte7967;
+				i_7_ = class521_sub1_sub1_sub2.plane;
 		}
 		int i_10_ = -716833811 * ((Class96_Sub19) this).anInt9399 << 2;
 		Class521_Sub1_Sub1_Sub3 class521_sub1_sub1_sub3 = (new Class521_Sub1_Sub1_Sub3(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2009786094), ((Class96_Sub19) this).anInt9410 * 899631601, i_7_, i_7_, i, i_6_, ((Class96_Sub19) this).anInt9405 * -1118504215 << 2, client.cycles * -1809259861, (-1809259861 * client.cycles + ((Class96_Sub19) this).anInt9409 * -511484631), ((Class96_Sub19) this).anInt9412 * 1829419495, i_10_, 1 + ((Class96_Sub19) this).anInt9402 * -772738915,
@@ -177,6 +177,6 @@ public class Class96_Sub19 extends Class96 {
 	}
 
 	static final void method14667(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.anInt7300 * 550395357;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.anInt7300 * 550395357;
 	}
 }

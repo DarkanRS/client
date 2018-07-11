@@ -29,11 +29,11 @@ public class Defaults7Loader {
 			else if (i == 4)
 				anInterface17_5882 = Class197.method3202(class282_sub35, 470106489);
 			else if (5 == i)
-				aClass232_5877 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5877 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 6)
-				aClass232_5873 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5873 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 7)
-				aClass232_5879 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5879 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 8)
 				Class197.method3202(class282_sub35, 470106489);
 			else if (9 == i)
@@ -68,11 +68,11 @@ public class Defaults7Loader {
 			else if (i_0_ == 4)
 				anInterface17_5882 = Class197.method3202(class282_sub35, 470106489);
 			else if (5 == i_0_)
-				aClass232_5877 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5877 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i_0_ == 6)
-				aClass232_5873 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5873 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i_0_ == 7)
-				aClass232_5879 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5879 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i_0_ == 8)
 				Class197.method3202(class282_sub35, 470106489);
 			else if (9 == i_0_)
@@ -102,11 +102,11 @@ public class Defaults7Loader {
 			else if (i == 4)
 				anInterface17_5882 = Class197.method3202(class282_sub35, 470106489);
 			else if (5 == i)
-				aClass232_5877 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5877 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 6)
-				aClass232_5873 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5873 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 7)
-				aClass232_5879 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5879 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 8)
 				Class197.method3202(class282_sub35, 470106489);
 			else if (9 == i)
@@ -136,11 +136,11 @@ public class Defaults7Loader {
 			else if (i == 4)
 				anInterface17_5882 = Class197.method3202(class282_sub35, 470106489);
 			else if (5 == i)
-				aClass232_5877 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5877 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 6)
-				aClass232_5873 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5873 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 7)
-				aClass232_5879 = Class336.method6009(class282_sub35, -1710988237);
+				aClass232_5879 = ClipMap.method6009(class282_sub35, -1710988237);
 			else if (i == 8)
 				Class197.method3202(class282_sub35, 470106489);
 			else if (9 == i)
@@ -157,13 +157,13 @@ public class Defaults7Loader {
 	}
 
 	static final void method8749(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		if ((class527.intStack[1942118537 * class527.anInt7012]) < (class527.intStack[1942118537 * class527.anInt7012 + 1]))
+		class527.intStackPtr -= 283782002;
+		if ((class527.intStack[1942118537 * class527.intStackPtr]) < (class527.intStack[1942118537 * class527.intStackPtr + 1]))
 			class527.instrPtr += ((class527.intOpValues[301123709 * class527.instrPtr]) * -1051529003);
 	}
 
 	static final void method8750(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 23);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
 		OutgoingLoginPacket.method6313(class118, class98, class527, 435475117);
@@ -206,9 +206,9 @@ public class Defaults7Loader {
 	static final void method8753(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.anInt7012 -= 283782002;
-		int i_9_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_10_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_9_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_10_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_9_, (byte) 0);
 		if (i_10_ != -1741480635 * class437.anInt5337)
 			class118.method1999(i_9_, i_10_, -76076232);
@@ -217,7 +217,7 @@ public class Defaults7Loader {
 	}
 
 	static final void method8754(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1316 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1316 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 19);
 	}
 
@@ -226,15 +226,15 @@ public class Defaults7Loader {
 	}
 
 	static final void method8756(CS2Executor class527, int i) {
-		int i_11_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		if (client.aString7426 != null && i_11_ < -1772444859 * Class459.anInt5534)
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = Class467.aClass173Array5575[i_11_].aByte2126;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = Class467.aClass173Array5575[i_11_].aByte2126;
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static final void method8757(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (i_12_ == -1)
 			throw new RuntimeException();
@@ -245,17 +245,17 @@ public class Defaults7Loader {
 		int i_13_ = 0;
 		if (null != is)
 			i_13_ = is.length;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_13_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_13_;
 	}
 
 	static final void method8758(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_14_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_15_ = (class527.intStack[1942118537 * class527.anInt7012 + 1]);
+		class527.intStackPtr -= 283782002;
+		int i_14_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_15_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_15_, (byte) 0);
 		if (class437.method7319(2036753920))
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_14_, 882562729).method3722(i_15_, class437.aString5335, -379285425);
 		else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = (IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_14_, 884887679).method3723(i_15_, -1741480635 * class437.anInt5337, 1942118537));
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_14_, 884887679).method3723(i_15_, -1741480635 * class437.anInt5337, 1942118537));
 	}
 }

@@ -441,7 +441,7 @@ public class Class434_Sub1 extends Class434 {
 		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(499129134);
 		int i_60_ = class219.x * 1948093437 + i_57_;
 		int i_61_ = i_58_ + class219.y * -1002240017;
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && (IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153) && i_57_ >= 0 && i_58_ >= 0 && i_57_ < IndexLoaders.MAP_REGION_DECODER.method4424(-1612887157) && i_58_ < IndexLoaders.MAP_REGION_DECODER.method4451(-1255966708)) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1713508909) != null && (IndexLoaders.MAP_REGION_DECODER.method4419(-1984228697) != Class256.aClass256_3153) && i_57_ >= 0 && i_58_ >= 0 && i_57_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(-1612887157) && i_58_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-1255966708)) {
 			long l = (long) (i << 28 | i_61_ << 14 | i_60_);
 			Class282_Sub29 class282_sub29 = (Class282_Sub29) client.aClass465_7414.method7754(l);
 			if (class282_sub29 == null)
@@ -484,9 +484,9 @@ public class Class434_Sub1 extends Class434 {
 					int i_65_ = Class504.method8389((i_57_ << 9) + 256, 256 + (i_58_ << 9), i, (byte) 85);
 					class521_sub1_sub2_sub1.method11172((float) (i_57_ << 265), (float) i_65_, (float) (i_58_ << 265));
 					class521_sub1_sub2_sub1.anInt10422 = 0;
-					class521_sub1_sub2_sub1.aByte7967 = (byte) i;
+					class521_sub1_sub2_sub1.plane = (byte) i;
 					class521_sub1_sub2_sub1.aByte7968 = (byte) i;
-					if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).method5497(i_57_, i_58_, 1619505196))
+					if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_57_, i_58_, 1619505196))
 						class521_sub1_sub2_sub1.aByte7968++;
 					IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1499506351).method3394(i, i_57_, i_58_, i_65_, class521_sub1_sub2_sub1, (byte) -119);
 				}

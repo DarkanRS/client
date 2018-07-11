@@ -404,14 +404,14 @@ public class Class291 {
 				i_107_ = i_96_ + i_98_ - 1;
 			for (int i_108_ = 0; i_108_ < is.length; i_108_++) {
 				int i_109_ = is_102_[i_108_] & 0x3f;
-				if (i_109_ == Class458.aClass458_5470.anInt5481 * 1109376893 || i_109_ == Class458.aClass458_5472.anInt5481 * 1109376893 || i_109_ == Class458.aClass458_5473.anInt5481 * 1109376893 || (i_109_ == Class458.aClass458_5474.anInt5481 * 1109376893)) {
+				if (i_109_ == SceneObjectType.WALL_STRAIGHT.type * 1109376893 || i_109_ == SceneObjectType.WALL_WHOLE_CORNER.type * 1109376893 || i_109_ == SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893 || (i_109_ == SceneObjectType.WALL_INTERACT.type * 1109376893)) {
 					ObjectDefinitions class478 = aClass474_3455.getObjectDefinitions(is[i_108_], 65280);
 					if (class478.anInt5689 * -272332433 == -1) {
 						int i_110_ = -3355444;
 						if (class478.anInt5652 * -348507379 == 1)
 							i_110_ = -3407872;
 						int i_111_ = is_102_[i_108_] >> 6 & 0x3;
-						if (i_109_ == (Class458.aClass458_5470.anInt5481 * 1109376893)) {
+						if (i_109_ == (SceneObjectType.WALL_STRAIGHT.type * 1109376893)) {
 							if (i_111_ == 0)
 								class505.G(i, i_96_, i_98_, i_110_, 0);
 							else if (i_111_ == 1)
@@ -420,7 +420,7 @@ public class Class291 {
 								class505.G(i_106_, i_96_, i_98_, i_110_, 0);
 							else
 								class505.XA(i, i_107_, i_97_, i_110_, 0);
-						} else if (i_109_ == (Class458.aClass458_5472.anInt5481 * 1109376893)) {
+						} else if (i_109_ == (SceneObjectType.WALL_WHOLE_CORNER.type * 1109376893)) {
 							if (i_111_ == 0) {
 								class505.G(i, i_96_, i_98_, -1, 0);
 								class505.XA(i, i_96_, i_97_, i_110_, 0);
@@ -434,7 +434,7 @@ public class Class291 {
 								class505.G(i, i_96_, i_98_, -1, 0);
 								class505.XA(i, i_107_, i_97_, i_110_, 0);
 							}
-						} else if (i_109_ == (Class458.aClass458_5473.anInt5481 * 1109376893)) {
+						} else if (i_109_ == (SceneObjectType.WALL_STRAIGHT_CORNER.type * 1109376893)) {
 							if (i_111_ == 0)
 								class505.XA(i, i_96_, 1, i_110_, 0);
 							else if (i_111_ == 1)
@@ -443,7 +443,7 @@ public class Class291 {
 								class505.XA(i_106_, i_107_, 1, i_110_, 0);
 							else
 								class505.XA(i, i_107_, 1, i_110_, 0);
-						} else if (i_109_ == (Class458.aClass458_5474.anInt5481 * 1109376893)) {
+						} else if (i_109_ == (SceneObjectType.WALL_INTERACT.type * 1109376893)) {
 							if (i_111_ == 0 || i_111_ == 2) {
 								for (int i_112_ = 0; i_112_ < i_98_; i_112_++)
 									class505.XA(i + i_112_, i_107_ - i_112_, 1, i_110_, 0);

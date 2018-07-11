@@ -202,19 +202,19 @@ public class Class457 {
 	}
 
 	static final void method7667(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 425673003;
-		int i_4_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		short i_5_ = (short) (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		short i_6_ = (short) (class527.intStack[1942118537 * class527.anInt7012 + 2]);
+		class527.intStackPtr -= 425673003;
+		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		short i_5_ = (short) (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		short i_6_ = (short) (class527.intStack[1942118537 * class527.intStackPtr + 2]);
 		if (i_4_ >= 0 && i_4_ < 5) {
 			class118.method2007(i_4_, i_5_, i_6_, -1261332787);
 			Class109.method1858(class118, (byte) -93);
 			if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-				Class311.method5513(class118.idHash * -1952846363, i_4_, (byte) -1);
+				RegionMap.method5513(class118.idHash * -1952846363, i_4_, (byte) -1);
 		}
 	}
 
 	static final void method7668(CS2Executor class527, int i) {
-		Class515.method8862((class527.intStack[((class527.anInt7012 -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
+		Class515.method8862((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
 	}
 }

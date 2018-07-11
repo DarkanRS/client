@@ -319,11 +319,11 @@ public class Class461 {
 	}
 
 	static final void method7704(CS2Executor class527, int i) {
-		WallDecoration.method16088((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]), (byte) 1);
+		WallDecoration.method16088((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), (byte) 1);
 	}
 
 	static byte method7705(int i, int i_39_, byte i_40_) {
-		if (i != Class458.aClass458_5474.anInt5481 * 1109376893)
+		if (i != SceneObjectType.WALL_INTERACT.type * 1109376893)
 			return (byte) 0;
 		if ((i_39_ & 0x1) == 0)
 			return (byte) 1;

@@ -46,13 +46,13 @@ public class Class89 {
 	static final void method1498(CS2Executor class527, int i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = 539377845 * class118.anInt1334;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 539377845 * class118.anInt1334;
 	}
 
 	static final void method1499(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) (-6750871795187943813L * Class116.aLong1259 / 60000L);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) ((Class116.aLong1259 * -6750871795187943813L - Class169.method2869(1705160163) - -1002288734586436517L * Class43.aLong420) / 60000L);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class509.aBool5870 ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) (-6750871795187943813L * Class116.aLong1259 / 60000L);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) ((Class116.aLong1259 * -6750871795187943813L - Class169.method2869(1705160163) - -1002288734586436517L * Class43.aLong420) / 60000L);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class509.aBool5870 ? 1 : 0;
 	}
 
 	static final void method1500(CS2Executor class527, int i) {
@@ -62,10 +62,10 @@ public class Class89 {
 
 	static final void method1501(CS2Executor class527, byte i) {
 		if (null != Class202_Sub1.aClass282_Sub4_8186) {
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 1;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
 			class527.aClass282_Sub4_7011 = Class202_Sub1.aClass282_Sub4_8186;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	static void method1502(int i) {

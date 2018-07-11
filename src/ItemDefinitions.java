@@ -864,7 +864,7 @@ public class ItemDefinitions implements Interface46 {
 				client.aClass229_7204.put(class160, (long) i_251_);
 			}
 			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			Class210.method3612(class521_sub1_sub1_sub2.aByte7967, (int) class385.x, (int) class385.z, (class521_sub1_sub1_sub2.method15805(828768449) * 256), 0, false, (byte) 2);
+			Class210.method3612(class521_sub1_sub1_sub2.plane, (int) class385.x, (int) class385.z, (class521_sub1_sub1_sub2.getSize(828768449) * 256), 0, false, (byte) 2);
 			int i_252_ = (int) ((float) i_244_ + client.aFloatArray7292[0] - 18.0F);
 			int i_253_ = (int) ((float) i_245_ + client.aFloatArray7292[1] - 16.0F - 54.0F);
 			i_252_ += 18 * (i / 4);
@@ -887,11 +887,11 @@ public class ItemDefinitions implements Interface46 {
 	}
 
 	static final void method7142(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1420 = ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1);
+		class118.aBool1420 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
 		Class109.method1858(class118, (byte) 53);
 	}
 
 	static final void method7143(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
 	}
 }

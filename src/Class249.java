@@ -69,13 +69,13 @@ public class Class249 implements Interface43 {
 	}
 
 	static final void method4276(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 851346006;
-		class118.anInt1293 = -1312401539 * (class527.intStack[1942118537 * class527.anInt7012]);
-		class118.anInt1334 = ((class527.intStack[1 + 1942118537 * class527.anInt7012]) * -2054115939);
-		class118.anInt1385 = ((class527.intStack[1942118537 * class527.anInt7012 + 2]) * 1229969471);
-		class118.anInt1336 = ((class527.intStack[3 + class527.anInt7012 * 1942118537]) * -140036259);
-		class118.anInt1337 = (-906963849 * (class527.intStack[4 + 1942118537 * class527.anInt7012]));
-		class118.anInt1343 = ((class527.intStack[5 + class527.anInt7012 * 1942118537]) * -807852535);
+		class527.intStackPtr -= 851346006;
+		class118.anInt1293 = -1312401539 * (class527.intStack[1942118537 * class527.intStackPtr]);
+		class118.anInt1334 = ((class527.intStack[1 + 1942118537 * class527.intStackPtr]) * -2054115939);
+		class118.anInt1385 = ((class527.intStack[1942118537 * class527.intStackPtr + 2]) * 1229969471);
+		class118.anInt1336 = ((class527.intStack[3 + class527.intStackPtr * 1942118537]) * -140036259);
+		class118.anInt1337 = (-906963849 * (class527.intStack[4 + 1942118537 * class527.intStackPtr]));
+		class118.anInt1343 = ((class527.intStack[5 + class527.intStackPtr * 1942118537]) * -807852535);
 		Class109.method1858(class118, (byte) 60);
 		if (-1 == 1924549737 * class118.anInt1288 && !class98.aBool999) {
 			Class106.method1818(-1952846363 * class118.idHash, -1101705065);
@@ -86,7 +86,7 @@ public class Class249 implements Interface43 {
 	static final void method4277(CS2Executor class527, byte i) {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -56249735 * class118.anInt1426;
 	}
 
 	static final void method4278(CS2Executor class527, int i) {
@@ -95,13 +95,13 @@ public class Class249 implements Interface43 {
 	}
 
 	static final void method4279(CS2Executor class527, int i) {
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = Class293.method5206(-2045199626);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class293.method5206(-2045199626);
 	}
 
 	static final void method4280(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
 		IComponentDefinitions class118_0_ = class118;
 		boolean bool;
-		if ((class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]) == 1) {
+		if ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1) {
 			if (i <= 32)
 				return;
 			bool = true;
@@ -113,8 +113,8 @@ public class Class249 implements Interface43 {
 
 	static final void method4281(Animable class521_sub1_sub1_sub2, int i) {
 		int i_1_ = (class521_sub1_sub1_sub2.anInt10342 * 403949281 - -1809259861 * client.cycles);
-		int i_2_ = (class521_sub1_sub1_sub2.anInt10326 * 1204164096 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
-		int i_3_ = (-699068928 * class521_sub1_sub1_sub2.anInt10328 + class521_sub1_sub1_sub2.method15805(828768449) * 256);
+		int i_2_ = (class521_sub1_sub1_sub2.anInt10326 * 1204164096 + class521_sub1_sub1_sub2.getSize(828768449) * 256);
+		int i_3_ = (-699068928 * class521_sub1_sub1_sub2.anInt10328 + class521_sub1_sub1_sub2.getSize(828768449) * 256);
 		Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 		class521_sub1_sub1_sub2.method11172((float) ((int) class385.x + (i_2_ - (int) class385.x) / i_1_), (float) (int) class385.y, (float) ((int) class385.z + (i_3_ - (int) class385.z) / i_1_));
 		class521_sub1_sub1_sub2.anInt10366 = 0;

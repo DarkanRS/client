@@ -440,7 +440,7 @@ public class Class435 {
 				int i_52_ = -1;
 				Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
 				CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1209620896);
-				if (Class291_Sub1.aClass282_Sub50_Sub6_3491.method14778(Class84.myPlayer.aByte7967, (class219.x * 1948093437 + ((int) class385.x >> 9)), (((int) class385.z >> 9) + class219.y * -1002240017), is, -1889386276)) {
+				if (Class291_Sub1.aClass282_Sub50_Sub6_3491.method14778(Class84.myPlayer.plane, (class219.x * 1948093437 + ((int) class385.x >> 9)), (((int) class385.z >> 9) + class219.y * -1002240017), is, -1889386276)) {
 					i_51_ = is[1] - Class291_Sub1.anInt3472;
 					i_52_ = is[2] - Class291_Sub1.anInt3473;
 				}

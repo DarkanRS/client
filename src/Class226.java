@@ -72,28 +72,28 @@ public class Class226 implements Interface46 {
 	}
 
 	static final void method3802(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = -705707341 * client.aClass330Array7428[i_2_].anInt3865;
+		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -705707341 * client.aClass330Array7428[i_2_].anInt3865;
 	}
 
 	static final void method3803(CS2Executor class527, short i) {
-		int i_3_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		ChatLine class108 = Class180.method3032(i_3_, (byte) -1);
 		int i_4_ = -1;
 		if (null != class108)
 			i_4_ = 840973581 * class108.anInt1085;
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = i_4_;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_4_;
 	}
 
 	static final void method3804(CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		int i_5_ = (class527.intStack[class527.anInt7012 * 1942118537]);
-		int i_6_ = (class527.intStack[1 + 1942118537 * class527.anInt7012]);
+		class527.intStackPtr -= 283782002;
+		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537]);
+		int i_6_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
 		if (Class475.aBool5623) {
 			//Class440.method7373(3, i_5_, i_6_, false, (byte) 114);
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
 		} else
-			class527.intStack[((class527.anInt7012 += 141891001) * 1942118537 - 1)] = 0;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
 	}
 
 	public static void method3805(int i) {
@@ -104,7 +104,7 @@ public class Class226 implements Interface46 {
 	}
 
 	static final void method3806(CS2Executor class527, int i) {
-		int i_7_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 114);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
 		Class96_Sub18.method14664(class118, class98, true, 1, class527, (byte) -9);

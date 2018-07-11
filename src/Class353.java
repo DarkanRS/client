@@ -80,17 +80,17 @@ public class Class353 {
 	}
 
 	static final void method6205(CS2Executor class527, byte i) {
-		class527.intStack[1942118537 * class527.anInt7012 - 1] = (class527.aClass61_7010.method1215((byte) 69)[(class527.intStack[1942118537 * class527.anInt7012 - 1])]);
+		class527.intStack[1942118537 * class527.intStackPtr - 1] = (class527.aClass61_7010.method1215((byte) 69)[(class527.intStack[1942118537 * class527.intStackPtr - 1])]);
 	}
 
 	static final void method6206(CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_9_].anInt3867 * 1545587551;
+		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aClass330Array7428[i_9_].anInt3867 * 1545587551;
 	}
 
 	static final void method6207(CS2Executor class527, byte i) {
-		int i_10_ = (class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) i_10_);
+		int i_10_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) (Math.random() * (double) i_10_);
 	}
 
 	static void method6208(File file, byte[] is, int i, int i_11_) throws IOException {

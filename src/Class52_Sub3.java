@@ -63,8 +63,8 @@ public class Class52_Sub3 extends Class52 {
 	}
 
 	static final void method14520(CS2Executor class527, int i) {
-		class527.anInt7012 -= 567564004;
-		Class153.method2618((class527.intStack[class527.anInt7012 * 1942118537]), (class527.intStack[1942118537 * class527.anInt7012 + 1]), (class527.intStack[2 + class527.anInt7012 * 1942118537]), (class527.intStack[3 + 1942118537 * class527.anInt7012]), 256, 1476817598);
+		class527.intStackPtr -= 567564004;
+		Class153.method2618((class527.intStack[class527.intStackPtr * 1942118537]), (class527.intStack[1942118537 * class527.intStackPtr + 1]), (class527.intStack[2 + class527.intStackPtr * 1942118537]), (class527.intStack[3 + 1942118537 * class527.intStackPtr]), 256, 1476817598);
 	}
 
 	static final void method14521(CS2Executor class527, byte i) {

@@ -65,7 +65,7 @@ public class Class472 {
 	}
 
 	static byte method7853(int i, int i_6_, int i_7_) {
-		if (Class458.aClass458_5474.anInt5481 * 1109376893 != i)
+		if (SceneObjectType.WALL_INTERACT.type * 1109376893 != i)
 			return (byte) 0;
 		if ((i_6_ & 0x1) == 0)
 			return (byte) 1;

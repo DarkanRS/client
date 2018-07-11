@@ -24,12 +24,12 @@ public class Class359 {
 	}
 
 	static final void method6242(CS2Executor class527, int i) {
-		class527.anInt7012 -= 709455005;
-		int i_3_ = (class527.intStack[1942118537 * class527.anInt7012]);
-		int i_4_ = (class527.intStack[1 + class527.anInt7012 * 1942118537]);
-		int i_5_ = (class527.intStack[2 + class527.anInt7012 * 1942118537]);
-		int i_6_ = (class527.intStack[3 + class527.anInt7012 * 1942118537]);
-		int i_7_ = (class527.intStack[1942118537 * class527.anInt7012 + 4]);
+		class527.intStackPtr -= 709455005;
+		int i_3_ = (class527.intStack[1942118537 * class527.intStackPtr]);
+		int i_4_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
+		int i_5_ = (class527.intStack[2 + class527.intStackPtr * 1942118537]);
+		int i_6_ = (class527.intStack[3 + class527.intStackPtr * 1942118537]);
+		int i_7_ = (class527.intStack[1942118537 * class527.intStackPtr + 4]);
 		if (i_5_ == -1)
 			throw new RuntimeException();
 		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_5_, (byte) 8);
@@ -40,7 +40,7 @@ public class Class359 {
 		int[] is = class431.method7251(Integer.valueOf(i_6_), 2099453599);
 		if (i_7_ < 0 || null == is || is.length <= i_7_)
 			throw new RuntimeException();
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = is[i_7_];
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = is[i_7_];
 	}
 
 	static final void method6243(CS2Executor class527, int i) {
@@ -54,9 +54,9 @@ public class Class359 {
 	}
 
 	static final void method6244(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.anInt7012 -= 283782002;
-		class118.anInt1289 = (class527.intStack[class527.anInt7012 * 1942118537]) * 1000406043;
-		class118.anInt1375 = 657648623 * (class527.intStack[class527.anInt7012 * 1942118537 + 1]);
+		class527.intStackPtr -= 283782002;
+		class118.anInt1289 = (class527.intStack[class527.intStackPtr * 1942118537]) * 1000406043;
+		class118.anInt1375 = 657648623 * (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
 		Class109.method1858(class118, (byte) 14);
 		Class44.method913(class98, class118, (byte) 1);
 		if (0 == -2131393857 * class118.anInt1268)

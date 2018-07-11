@@ -27,7 +27,7 @@ public class Class341 {
 	}
 
 	static final void method6073(CS2Executor class527, byte i) {
-		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5130(class527.intStack[(class527.anInt7012 -= 141891001) * 1942118537]);
+		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5130(class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		while_191_: do {
 			while_190_: do {
 				do {

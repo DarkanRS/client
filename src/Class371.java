@@ -83,7 +83,7 @@ public class Class371 {
 				/* empty */
 			}
 		}
-		class527.intStack[(class527.anInt7012 += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
 	}
 
 	static void method6351(int i) {
@@ -145,11 +145,11 @@ public class Class371 {
 		}
 	}
 
-	public static Class225 method6352(int i, int i_32_, int i_33_, int i_34_, int i_35_) {
-		Class224.aClass225_Sub6_2774.anInt2779 = i * -726719813;
-		Class224.aClass225_Sub6_2774.anInt2780 = 1767388707 * i_32_;
-		Class224.aClass225_Sub6_2774.anInt2781 = i_33_ * -12808295;
-		Class224.aClass225_Sub6_2774.anInt2782 = i_34_ * 1709796035;
+	public static RouteStrategy method6352(int i, int i_32_, int i_33_, int i_34_, int i_35_) {
+		Class224.aClass225_Sub6_2774.approxDestinationX = i * -726719813;
+		Class224.aClass225_Sub6_2774.approxDestinationY = 1767388707 * i_32_;
+		Class224.aClass225_Sub6_2774.approxDestinationSizeX = i_33_ * -12808295;
+		Class224.aClass225_Sub6_2774.approxDestinationSizeY = i_34_ * 1709796035;
 		return Class224.aClass225_Sub6_2774;
 	}
 
