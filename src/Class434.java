@@ -10,13 +10,6 @@ public abstract class Class434 {
 	String aString5330;
 	int anInt5331;
 
-	public static Class434 method7279(String string, int i) {
-		Class434_Sub1 class434_sub1 = new Class434_Sub1();
-		((Class434) class434_sub1).aString5330 = string;
-		((Class434) class434_sub1).anInt5331 = i * -432862573;
-		return class434_sub1;
-	}
-
 	public abstract Socket method7280(int i) throws IOException;
 
 	Class434() {
@@ -27,47 +20,7 @@ public abstract class Class434 {
 
 	public abstract Socket method7282() throws IOException;
 
-	public static Class434 method7283(String string, int i) {
-		Class434_Sub1 class434_sub1 = new Class434_Sub1();
-		((Class434) class434_sub1).aString5330 = string;
-		((Class434) class434_sub1).anInt5331 = i * -432862573;
-		return class434_sub1;
-	}
-
-	public static Class434 method7284(String string, int i) {
-		Class434_Sub1 class434_sub1 = new Class434_Sub1();
-		((Class434) class434_sub1).aString5330 = string;
-		((Class434) class434_sub1).anInt5331 = i * -432862573;
-		return class434_sub1;
-	}
-
-	Socket method7285() throws IOException {
-		return new Socket(Loader.IP_ADDRESS, Loader.LOBBY_PORT);
-	}
-
-	public static Class434 method7286(String string, int i) {
-		Class434_Sub1 class434_sub1 = new Class434_Sub1();
-		((Class434) class434_sub1).aString5330 = string;
-		((Class434) class434_sub1).anInt5331 = i * -432862573;
-		return class434_sub1;
-	}
-
 	public abstract Socket method7287() throws IOException;
-
-	public static Class434 method7288(String string, int i) {
-		Class434_Sub1 class434_sub1 = new Class434_Sub1();
-		((Class434) class434_sub1).aString5330 = string;
-		((Class434) class434_sub1).anInt5331 = i * -432862573;
-		return class434_sub1;
-	}
-
-	Socket method7289() throws IOException {
-		return new Socket(Loader.IP_ADDRESS, Loader.LOBBY_PORT);
-	}
-
-	Socket method7290() throws IOException {
-		return new Socket(Loader.IP_ADDRESS, Loader.LOBBY_PORT);
-	}
 
 	Socket method7291(int i) throws IOException {
 		return new Socket(Loader.IP_ADDRESS, Loader.LOBBY_PORT);

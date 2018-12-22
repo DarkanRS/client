@@ -10,10 +10,10 @@ import java.util.Calendar;
 public class Class450 {
 	boolean aBool5432;
 	public String aString5433;
-	public int anInt5434 = -190419398;
 	public int worldId;
-	boolean aBool5436;
 	public int anInt5437 = 1338051315;
+	public int anInt5434 = -190419398;
+	boolean aBool5436;
 	public static int anInt5438;
 
 	public boolean method7491(Class450 class450_0_, int i) {
@@ -21,17 +21,6 @@ public class Class450 {
 			return false;
 		}
 		return (class450_0_.worldId * -87869981 == -87869981 * worldId && aString5433.equals(class450_0_.aString5433));
-	}
-
-	public void method7492() {
-		if (!this.aBool5436) {
-			this.aBool5436 = true;
-			this.aBool5432 = true;
-		} else if (this.aBool5432) {
-			this.aBool5432 = false;
-		} else {
-			this.aBool5436 = false;
-		}
 	}
 
 	public void method7493(int i) {
@@ -46,34 +35,12 @@ public class Class450 {
 	}
 
 	public Socket method7494(byte i) throws IOException {
-		return new Socket(InetAddress.getByName(Loader.IP_ADDRESS), Loader.LOBBY_PORT);
-	}
-
-	public Socket method7495() throws IOException {
-		return new Socket(InetAddress.getByName(Loader.IP_ADDRESS), Loader.LOBBY_PORT);
-	}
-
-	public Socket method7496() throws IOException {
-		return new Socket(InetAddress.getByName(Loader.IP_ADDRESS), Loader.LOBBY_PORT);
+		return new Socket(aString5433, Loader.LOBBY_PORT);
 	}
 
 	public Class450() {
 		this.aBool5436 = true;
 		this.aBool5432 = false;
-	}
-
-	public boolean method7497(Class450 class450_1_) {
-		if (null == class450_1_) {
-			return false;
-		}
-		return (class450_1_.worldId * -87869981 == -87869981 * worldId && aString5433.equals(class450_1_.aString5433));
-	}
-
-	public boolean method7498(Class450 class450_2_) {
-		if (null == class450_2_) {
-			return false;
-		}
-		return (class450_2_.worldId * -87869981 == -87869981 * worldId && aString5433.equals(class450_2_.aString5433));
 	}
 
 	static String method7499(long l, int i, boolean bool, int i_3_) {

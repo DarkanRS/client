@@ -787,17 +787,17 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (IncomingPacket.aClass375_4506 == class184.aClass375_2286) {
-			int i_124_ = stream.readIntV2(-1343839559);
+			int windowId = stream.readIntV2(-1343839559);
 			int i_125_ = stream.readIntLE();
-			int i_126_ = stream.readShortLE((byte) -14);
+			int interfaceId = stream.readShortLE((byte) -14);
 			int i_127_ = stream.readInt();
 			int i_128_ = stream.readIntV1();
-			int i_129_ = stream.readUnsigned128Byte();
+			int overlay = stream.readUnsigned128Byte();
 			CoordGrid class219 = new CoordGrid(stream.readIntV1());
 			int i_130_ = stream.readIntV1();
-			int i_131_ = stream.readShortLE128();
+			int itemId = stream.readShortLE128();
 			Class470.method7825(881365038);
-			Class31.method812(i_124_, new Class282_Sub44_Sub3(i_126_, i_129_, new Class520(class219, i_131_)), new int[] { i_128_, i_130_, i_125_, i_127_ }, false, (byte) 121);
+			Class31.method812(windowId, new Class282_Sub44_Sub3(interfaceId, overlay, new Class520(class219, itemId)), new int[] { i_128_, i_130_, i_125_, i_127_ }, false, (byte) 121);
 			class184.aClass375_2286 = null;
 			return true;
 		}
