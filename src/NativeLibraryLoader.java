@@ -121,19 +121,16 @@ public class NativeLibraryLoader implements Interface36 {
 				boolean bool;
 				try {
 					file = new File(file.getCanonicalPath());
-					Class runtime = Class.forName("java.lang.Runtime");
-					Class accessibleObject = Class.forName("java.lang.reflect.AccessibleObject");
-					Method setAccessible = accessibleObject.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-					Method load = (runtime.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
-					setAccessible.invoke(load, new Object[] { Boolean.TRUE });
-					load.invoke(Runtime.getRuntime(), new Object[] { classToLoadFrom, file.getPath() });
-					setAccessible.invoke(load, new Object[] { Boolean.FALSE });
+//					Class runtime = Class.forName("java.lang.Runtime");
+//					Class accessibleObject = Class.forName("java.lang.reflect.AccessibleObject");
+//					Method setAccessible = accessibleObject.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
+//					Method load = (runtime.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
+//					setAccessible.invoke(load, new Object[] { Boolean.TRUE });
+//					load.invoke(Runtime.getRuntime(), new Object[] { classToLoadFrom, file.getPath() });
+//					setAccessible.invoke(load, new Object[] { Boolean.FALSE });
+					System.load(file.getPath());
 					((NativeLibraryLoader) this).linkedLibraries.put(libName, classToLoadFrom);
 					bool = true;
-				} catch (NoSuchMethodException nosuchmethodexception) {
-					System.load(file.getPath());
-					((NativeLibraryLoader) this).linkedLibraries.put(libName, Class266.class);
-					return true;
 				} catch (Throwable throwable) {
 					throwable.printStackTrace();
 					break;
