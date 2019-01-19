@@ -5,14 +5,14 @@
 public class Class242 {
 	int anInt2978;
 	Index aClass317_2979;
-	Class240[] aClass240Array2980;
+	QuestDefinitions[] aClass240Array2980;
 	static Class91 aClass91_2981;
 	public static int anInt2982;
 
 	int method4154(Interface42 interface42, int i) {
 		int i_0_ = 0;
 		for (int i_1_ = 0; i_1_ < ((Class242) this).anInt2978 * 526499893; i_1_++) {
-			Class240 class240 = method4156(i_1_, -1396181317);
+			QuestDefinitions class240 = method4156(i_1_, -1396181317);
 			if (class240.method4099(interface42, 490029588))
 				i_0_ += 554241429 * class240.anInt2963;
 		}
@@ -26,23 +26,23 @@ public class Class242 {
 		else
 			((Class242) this).anInt2978 = 0;
 		if (bool) {
-			((Class242) this).aClass240Array2980 = new Class240[((Class242) this).anInt2978 * 526499893];
+			((Class242) this).aClass240Array2980 = new QuestDefinitions[((Class242) this).anInt2978 * 526499893];
 			for (int i = 0; i < 526499893 * ((Class242) this).anInt2978; i++) {
 				byte[] is;
 				synchronized (((Class242) this).aClass317_2979) {
 					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.id, i, -1290272928));
 				}
-				Class240 class240 = new Class240();
+				QuestDefinitions class240 = new QuestDefinitions();
 				if (null != is)
 					class240.method4119(new RsByteBuffer(is), -1345439646);
 				class240.method4095((byte) 43);
 				((Class242) this).aClass240Array2980[i] = class240;
-				((Class240) ((Class242) this).aClass240Array2980[i]).aClass242_2976 = this;
+				((QuestDefinitions) ((Class242) this).aClass240Array2980[i]).aClass242_2976 = this;
 			}
 		}
 	}
 
-	public Class240 method4156(int i, int i_2_) {
+	public QuestDefinitions method4156(int i, int i_2_) {
 		return ((Class242) this).aClass240Array2980[i];
 	}
 

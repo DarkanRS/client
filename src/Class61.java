@@ -674,10 +674,10 @@ public class Class61 {
 		if (i_63_ >= 4)
 			class282_sub35.readInt();
 		aBool624 = class282_sub35.readUnsignedByte() == 1;
-		aByte619 = class282_sub35.readByte((short) -4382);
-		aByte626 = class282_sub35.readByte((short) -3823);
-		aByte627 = class282_sub35.readByte((short) -23283);
-		aByte628 = class282_sub35.readByte((short) -25367);
+		aByte619 = class282_sub35.readByte();
+		aByte626 = class282_sub35.readByte();
+		aByte627 = class282_sub35.readByte();
+		aByte628 = class282_sub35.readByte();
 		if (1869493667 * anInt632 > 0) {
 			if (((Class61) this).aBool618 && (null == ((Class61) this).aLongArray630 || (((Class61) this).aLongArray630.length < 1869493667 * anInt632)))
 				((Class61) this).aLongArray630 = new long[1869493667 * anInt632];
@@ -694,7 +694,7 @@ public class Class61 {
 					((Class61) this).aLongArray630[i_65_] = class282_sub35.readLong(1657847296);
 				if (((Class61) this).aBool620)
 					aStringArray639[i_65_] = class282_sub35.readNullString(2060010006);
-				aByteArray640[i_65_] = class282_sub35.readByte((short) -23950);
+				aByteArray640[i_65_] = class282_sub35.readByte();
 				if (i_63_ >= 2)
 					((Class61) this).anIntArray633[i_65_] = class282_sub35.readInt();
 				if (i_63_ >= 5)

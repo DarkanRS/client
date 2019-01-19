@@ -120,7 +120,7 @@ public class Login {
 	}
 
 	static void method5016(CS2Executor class527, int i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
+		QuestDefinitions class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (null == class240.anIntArray2968 ? 0 : class240.anIntArray2968.length);
 	}
 
@@ -329,7 +329,7 @@ public class Login {
 							out.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
 							int worldId = -87869981 * Class159.aClass450_2010.worldId;
 							out.writeInt(worldId);
-							Class240.writeCRCs(out, 1259367589);
+							QuestDefinitions.writeCRCs(out, 1259367589);
 							out.encryptWithXtea(Class500.anIntArray5827, i_11_, out.index * -1990677291, 1754334967);
 							out.method13281((-1990677291 * out.index - i_10_), 1201423895);
 						} else {
@@ -370,7 +370,7 @@ public class Login {
 							out.writeInt((client.anInt7149 * -1543197399));
 							out.writeInt((client.anInt7163 * 204524791));
 							out.writeString(client.aString7164);
-							Class240.writeCRCs(out, 860014211);
+							QuestDefinitions.writeCRCs(out, 860014211);
 							out.encryptWithXtea(Class500.anIntArray5827, i_14_, -1990677291 * out.index, 1203865118);
 							out.method13281((out.index * -1990677291 - i_13_), 1201423895);
 						}

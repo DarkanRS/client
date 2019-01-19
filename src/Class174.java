@@ -262,7 +262,7 @@ public class Class174 {
 	}
 
 	static void method2953(CS2Executor class527, byte i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
+		QuestDefinitions class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class240.anIntArrayArray2966 == null ? 0 : class240.anIntArrayArray2966.length);
 	}
 
@@ -846,7 +846,7 @@ public class Class174 {
 			Class258.method4567(executor, (short) 25929);
 			break;
 		case 450:
-			Class240.method4137(executor, (byte) 78);
+			QuestDefinitions.method4137(executor, (byte) 78);
 			break;
 		case 404:
 			Class216.method3674(executor, -496810681);
@@ -1269,7 +1269,7 @@ public class Class174 {
 			Class254.method4381(executor, (byte) -45);
 			break;
 		case 424:
-			Class531.method11371(executor, 293420205);
+			OverlayDef.method11371(executor, 293420205);
 			break;
 		case 509:
 			Class187.method3120(executor, (byte) -87);
@@ -1923,7 +1923,7 @@ public class Class174 {
 			Class282_Sub20_Sub22.method15387(executor, -1352958939);
 			break;
 		case 896:
-			Class531.method11373(executor, -2109366002);
+			OverlayDef.method11373(executor, -2109366002);
 			break;
 		case 172:
 			Class149.method2564(executor, (byte) 61);
@@ -2172,7 +2172,7 @@ public class Class174 {
 			Class506.method8718(executor, (byte) 16);
 			break;
 		case 532:
-			Class531.method11372(executor, -1660682202);
+			OverlayDef.method11372(executor, -1660682202);
 			break;
 		case 523:
 			Class401.method6796(executor, -2050698245);
@@ -2856,7 +2856,7 @@ public class Class174 {
 			Class388.method6688(executor, (byte) 63);
 			break;
 		case 562:
-			Class531.method11370(executor, 55275098);
+			OverlayDef.method11370(executor, 55275098);
 			break;
 		case 906:
 			Class230.method3911(executor, -2014304254);

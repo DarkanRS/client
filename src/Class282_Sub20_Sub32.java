@@ -136,10 +136,10 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 	void method12322(int i, RsByteBuffer class282_sub35, int i_29_) {
 		switch (i) {
 		case 1:
-			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte((short) -12324) << 12) / 100 * 55567499);
+			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte() << 12) / 100 * 55567499);
 			break;
 		case 2:
-			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte((short) -14943) << 12) / 100 * 1534074697);
+			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte() << 12) / 100 * 1534074697);
 			break;
 		case 0:
 			((Class282_Sub20_Sub32) this).anInt9918 = class282_sub35.readShort(2037252957) * 1050194235;
@@ -150,10 +150,10 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 	void method12332(int i, RsByteBuffer class282_sub35) {
 		switch (i) {
 		case 1:
-			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte((short) -22896) << 12) / 100 * 55567499);
+			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte() << 12) / 100 * 55567499);
 			break;
 		case 2:
-			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte((short) -14520) << 12) / 100 * 1534074697);
+			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte() << 12) / 100 * 1534074697);
 			break;
 		case 0:
 			((Class282_Sub20_Sub32) this).anInt9918 = class282_sub35.readShort(1616498821) * 1050194235;
@@ -164,10 +164,10 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 	void method12335(int i, RsByteBuffer class282_sub35) {
 		switch (i) {
 		case 1:
-			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte((short) -31784) << 12) / 100 * 55567499);
+			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte() << 12) / 100 * 55567499);
 			break;
 		case 2:
-			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte((short) -26352) << 12) / 100 * 1534074697);
+			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte() << 12) / 100 * 1534074697);
 			break;
 		case 0:
 			((Class282_Sub20_Sub32) this).anInt9918 = class282_sub35.readShort(2091282143) * 1050194235;
@@ -178,10 +178,10 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 	void method12334(int i, RsByteBuffer class282_sub35) {
 		switch (i) {
 		case 1:
-			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte((short) -26723) << 12) / 100 * 55567499);
+			((Class282_Sub20_Sub32) this).anInt9919 = ((class282_sub35.readByte() << 12) / 100 * 55567499);
 			break;
 		case 2:
-			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte((short) -10470) << 12) / 100 * 1534074697);
+			((Class282_Sub20_Sub32) this).anInt9923 = ((class282_sub35.readByte() << 12) / 100 * 1534074697);
 			break;
 		case 0:
 			((Class282_Sub20_Sub32) this).anInt9918 = class282_sub35.readShort(1837363752) * 1050194235;

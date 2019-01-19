@@ -8,26 +8,10 @@ public class UnderlayDef {
 	public int anInt5720;
 	public boolean aBool5721;
 	public boolean aBool5722;
-	int anInt5723 = 0;
+	int rgb = 0;
 	public int r;
 	public int b;
 	public int g;
-
-	void method8047(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).anInt5723 * -129287177, 876511716);
-		} else if (2 == i) {
-			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
-			if (anInt5719 * -1346987295 == 65535)
-				anInt5719 = -1470638369;
-		} else if (3 == i)
-			anInt5720 = (class282_sub35.readUnsignedShort() << 2) * -1489042801;
-		else if (4 == i)
-			aBool5721 = false;
-		else if (i == 5)
-			aBool5722 = false;
-	}
 
 	void method8048(int rgb, int i_0_) {
 		double redD = (double) (rgb >> 16 & 0xff) / 256.0;
@@ -80,8 +64,8 @@ public class UnderlayDef {
 
 	void method8049(RsByteBuffer class282_sub35, int i, byte i_8_) {
 		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).anInt5723 * -129287177, 1049430248);
+			((UnderlayDef) this).rgb = class282_sub35.read24BitUnsignedInteger() * 1504179655;
+			method8048(((UnderlayDef) this).rgb * -129287177, 1049430248);
 		} else if (2 == i) {
 			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
 			if (anInt5719 * -1346987295 == 65535)
@@ -103,92 +87,10 @@ public class UnderlayDef {
 		}
 	}
 
-	void method8051(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (0 == i)
-				break;
-			method8049(class282_sub35, i, (byte) 42);
-		}
-	}
-
-	void method8052(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (0 == i)
-				break;
-			method8049(class282_sub35, i, (byte) 49);
-		}
-	}
-
-	void method8053(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).anInt5723 * -129287177, 255699844);
-		} else if (2 == i) {
-			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
-			if (anInt5719 * -1346987295 == 65535)
-				anInt5719 = -1470638369;
-		} else if (3 == i)
-			anInt5720 = (class282_sub35.readUnsignedShort() << 2) * -1489042801;
-		else if (4 == i)
-			aBool5721 = false;
-		else if (i == 5)
-			aBool5722 = false;
-	}
-
 	UnderlayDef() {
 		anInt5719 = -1470638369;
 		anInt5720 = 2114264576;
 		aBool5721 = true;
 		aBool5722 = true;
-	}
-
-	void method8054(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).anInt5723 * -129287177, 515760809);
-		} else if (2 == i) {
-			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
-			if (anInt5719 * -1346987295 == 65535)
-				anInt5719 = -1470638369;
-		} else if (3 == i)
-			anInt5720 = (class282_sub35.readUnsignedShort() << 2) * -1489042801;
-		else if (4 == i)
-			aBool5721 = false;
-		else if (i == 5)
-			aBool5722 = false;
-	}
-
-	void method8055(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).anInt5723 * -129287177, -71891519);
-		} else if (2 == i) {
-			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
-			if (anInt5719 * -1346987295 == 65535)
-				anInt5719 = -1470638369;
-		} else if (3 == i)
-			anInt5720 = (class282_sub35.readUnsignedShort() << 2) * -1489042801;
-		else if (4 == i)
-			aBool5721 = false;
-		else if (i == 5)
-			aBool5722 = false;
-	}
-
-	void method8056(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			((UnderlayDef) this).anInt5723 = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).anInt5723 * -129287177, -1054865466);
-		} else if (2 == i) {
-			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
-			if (anInt5719 * -1346987295 == 65535)
-				anInt5719 = -1470638369;
-		} else if (3 == i)
-			anInt5720 = (class282_sub35.readUnsignedShort() << 2) * -1489042801;
-		else if (4 == i)
-			aBool5721 = false;
-		else if (i == 5)
-			aBool5722 = false;
 	}
 }

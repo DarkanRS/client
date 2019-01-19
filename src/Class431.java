@@ -33,9 +33,9 @@ public class Class431 {
 
 	void method7224(RsByteBuffer class282_sub35, int i, int i_0_) {
 		if (i == 1)
-			aChar5146 = Class11.method470(class282_sub35.readByte((short) -25760), -1589762239);
+			aChar5146 = Class11.method470(class282_sub35.readByte(), -1589762239);
 		else if (2 == i)
-			aChar5140 = Class11.method470(class282_sub35.readByte((short) -9162), -940945676);
+			aChar5140 = Class11.method470(class282_sub35.readByte(), -940945676);
 		else if (i == 3)
 			((Class431) this).aString5142 = class282_sub35.readString();
 		else if (4 == i)
@@ -103,9 +103,9 @@ public class Class431 {
 
 	void method7229(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar5146 = Class11.method470(class282_sub35.readByte((short) -4343), -1657829033);
+			aChar5146 = Class11.method470(class282_sub35.readByte(), -1657829033);
 		else if (2 == i)
-			aChar5140 = Class11.method470(class282_sub35.readByte((short) -22753), 1267007843);
+			aChar5140 = Class11.method470(class282_sub35.readByte(), 1267007843);
 		else if (i == 3)
 			((Class431) this).aString5142 = class282_sub35.readString();
 		else if (4 == i)
@@ -245,9 +245,9 @@ public class Class431 {
 
 	void method7234(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar5146 = Class11.method470(class282_sub35.readByte((short) -27224), -1874955458);
+			aChar5146 = Class11.method470(class282_sub35.readByte(), -1874955458);
 		else if (2 == i)
-			aChar5140 = Class11.method470(class282_sub35.readByte((short) -19143), 1492940801);
+			aChar5140 = Class11.method470(class282_sub35.readByte(), 1492940801);
 		else if (i == 3)
 			((Class431) this).aString5142 = class282_sub35.readString();
 		else if (4 == i)

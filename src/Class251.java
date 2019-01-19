@@ -268,12 +268,12 @@ public final class Class251 {
 							return;
 						}
 					}
-					if (Class282_Sub50_Sub3.aFileOutputStream9481 != null) {
-						Class282_Sub50_Sub3.aFileOutputStream9481.close();
-						Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+					if (TextureDefinition.aFileOutputStream9481 != null) {
+						TextureDefinition.aFileOutputStream9481.close();
+						TextureDefinition.aFileOutputStream9481 = null;
 					}
 					try {
-						Class282_Sub50_Sub3.aFileOutputStream9481 = new FileOutputStream(file);
+						TextureDefinition.aFileOutputStream9481 = new FileOutputStream(file);
 					} catch (FileNotFoundException filenotfoundexception) {
 						Class209.method3598(new StringBuilder().append("Could not create ").append(file.getName()).toString(), -1294344572);
 					} catch (SecurityException securityexception) {
@@ -282,9 +282,9 @@ public final class Class251 {
 					return;
 				}
 				if (string.equals("closeoutput")) {
-					if (Class282_Sub50_Sub3.aFileOutputStream9481 != null)
-						Class282_Sub50_Sub3.aFileOutputStream9481.close();
-					Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+					if (TextureDefinition.aFileOutputStream9481 != null)
+						TextureDefinition.aFileOutputStream9481.close();
+					TextureDefinition.aFileOutputStream9481 = null;
 					return;
 				}
 				if (string.startsWith("runscript ")) {

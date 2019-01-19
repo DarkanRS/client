@@ -636,8 +636,8 @@ public class Class188 {
 			boolean bool = 0 != (i_41_ & 0x80);
 			int i_42_ = (i_41_ >> 3 & 0x7) + -2109540951 * SceneObjectType.anInt5495;
 			int i_43_ = (i_41_ & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
-			int i_44_ = i_42_ + stream.readByte((short) -3334);
-			int i_45_ = i_43_ + stream.readByte((short) -2919);
+			int i_44_ = i_42_ + stream.readByte();
+			int i_45_ = i_43_ + stream.readByte();
 			int i_46_ = stream.readShort(1660336076);
 			int i_47_ = stream.readUnsignedShort();
 			int i_48_ = stream.readUnsignedByte() * 4;
@@ -850,8 +850,8 @@ public class Class188 {
 			boolean bool = (i_139_ & 0x1) != 0;
 			boolean bool_140_ = 0 != (i_139_ & 0x2);
 			int i_141_ = bool_140_ ? i_139_ >> 2 : -1;
-			int i_142_ = i_137_ + stream.readByte((short) -30399);
-			int i_143_ = i_138_ + stream.readByte((short) -11073);
+			int i_142_ = i_137_ + stream.readByte();
+			int i_143_ = i_138_ + stream.readByte();
 			int i_144_ = stream.readShort(2013896046);
 			int i_145_ = stream.readShort(1761702659);
 			int i_146_ = stream.readUnsignedShort();

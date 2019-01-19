@@ -13,7 +13,7 @@ public class Class383 implements Interface41 {
 		return Class445.aClass445_5380;
 	}
 
-	public int method84(int i) {
+	public int getCompletion(int i) {
 		if (((Class383) this).aClass317_4663.method5628(((Class383) this).aString4662, 433021340))
 			return 100;
 		return 0;

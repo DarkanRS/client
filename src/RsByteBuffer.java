@@ -557,7 +557,7 @@ public class RsByteBuffer extends Node {
 		buffer[(index += -1115476867) * -1990677291 - 1] = (byte) (i >> 24);
 	}
 
-	public byte readByte(short i) {
+	public byte readByte() {
 		return buffer[(index += -1115476867) * -1990677291 - 1];
 	}
 

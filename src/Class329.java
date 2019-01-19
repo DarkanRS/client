@@ -13,14 +13,14 @@ public class Class329 {
 	public boolean aBool3780;
 	int anInt3781;
 	public boolean aBool3782;
-	protected int anInt3784;
-	protected int anInt3785;
-	public boolean aBool3786;
+	protected int maxX;
+	protected int maxY;
+	public boolean overlayHidden;
 	protected RegionMap regionMap;
 	public byte[][][] aByteArrayArrayArray3788;
 	UnderlayIndexLoader aClass479_3789;
-	byte[][][] aByteArrayArrayArray3790;
-	byte[][][] aByteArrayArrayArray3791;
+	byte[][][] val49ArrDiv4;
+	byte[][][] val49ArrAnd0x3;
 	static boolean[][] aBoolArrayArray3793;
 	protected byte[][][] aByteArrayArrayArray3794;
 	int[] anIntArray3795;
@@ -29,7 +29,7 @@ public class Class329 {
 	int[] anIntArray3798;
 	int[] anIntArray3799;
 	static int[] anIntArray3800;
-	byte[][][] aByteArrayArrayArray3808;
+	byte[][][] underlayColors;
 	public int anInt3809 = 0;
 	boolean aBool3810;
 	static int[] anIntArray3811;
@@ -37,14 +37,14 @@ public class Class329 {
 	static int[] anIntArray3814 = { 2, 1, 1, 1, 2, 2, 2, 1, 3, 3, 3, 2, 0, 4, 0 };
 	static int[][] anIntArrayArray3815;
 	static boolean[][] aBoolArrayArray3816;
-	public int[][][] anIntArrayArrayArray3818;
+	public int[][][] unk0Data;
 	static int[] anIntArray3819;
 	public boolean aBool3820;
 	static int[][] anIntArrayArray3821;
 	static boolean[][] aBoolArrayArray3822;
 	static boolean[][] aBoolArrayArray3823;
 	static int[][] anIntArrayArray3824;
-	byte[][][] aByteArrayArrayArray3825;
+	byte[][][] overlayColors;
 	static int[] anIntArray3826;
 	int[] anIntArray3827;
 	static int[][] anIntArrayArray3828;
@@ -84,27 +84,27 @@ public class Class329 {
 	}
 
 	public final void method5837(GraphicalRenderer class505, Class390 class390, Class390 class390_71_, int i) {
-		int[][] is = new int[anInt3784 * -1230013231][anInt3785 * 2024737111];
-		if (null == ((Class329) this).anIntArray3795 || (((Class329) this).anIntArray3795.length != 2024737111 * anInt3785)) {
-			((Class329) this).anIntArray3795 = new int[2024737111 * anInt3785];
-			((Class329) this).anIntArray3796 = new int[anInt3785 * 2024737111];
-			((Class329) this).anIntArray3797 = new int[anInt3785 * 2024737111];
-			((Class329) this).anIntArray3798 = new int[2024737111 * anInt3785];
-			((Class329) this).anIntArray3799 = new int[2024737111 * anInt3785];
+		int[][] is = new int[maxX * -1230013231][maxY * 2024737111];
+		if (null == ((Class329) this).anIntArray3795 || (((Class329) this).anIntArray3795.length != 2024737111 * maxY)) {
+			((Class329) this).anIntArray3795 = new int[2024737111 * maxY];
+			((Class329) this).anIntArray3796 = new int[maxY * 2024737111];
+			((Class329) this).anIntArray3797 = new int[maxY * 2024737111];
+			((Class329) this).anIntArray3798 = new int[2024737111 * maxY];
+			((Class329) this).anIntArray3799 = new int[2024737111 * maxY];
 		}
 		for (int i_72_ = 0; i_72_ < anInt3845 * 1599084401; i_72_++) {
-			for (int i_73_ = 0; i_73_ < 2024737111 * anInt3785; i_73_++) {
+			for (int i_73_ = 0; i_73_ < 2024737111 * maxY; i_73_++) {
 				((Class329) this).anIntArray3795[i_73_] = 0;
 				((Class329) this).anIntArray3796[i_73_] = 0;
 				((Class329) this).anIntArray3797[i_73_] = 0;
 				((Class329) this).anIntArray3798[i_73_] = 0;
 				((Class329) this).anIntArray3799[i_73_] = 0;
 			}
-			for (int i_74_ = -5; i_74_ < -1230013231 * anInt3784; i_74_++) {
-				for (int i_75_ = 0; i_75_ < anInt3785 * 2024737111; i_75_++) {
+			for (int i_74_ = -5; i_74_ < -1230013231 * maxX; i_74_++) {
+				for (int i_75_ = 0; i_75_ < maxY * 2024737111; i_75_++) {
 					int i_76_ = i_74_ + 5;
-					if (i_76_ < anInt3784 * -1230013231) {
-						int i_77_ = (((Class329) this).aByteArrayArrayArray3808[i_72_][i_76_][i_75_]) & 0xff;
+					if (i_76_ < maxX * -1230013231) {
+						int i_77_ = (((Class329) this).underlayColors[i_72_][i_76_][i_75_]) & 0xff;
 						if (i_77_ > 0) {
 							UnderlayDef class481 = ((Class329) this).aClass479_3789.getUnderlayDef(i_77_ - 1, (byte) -26);
 							((Class329) this).anIntArray3795[i_75_] += class481.r * -520008741;
@@ -116,7 +116,7 @@ public class Class329 {
 					}
 					int i_78_ = i_74_ - 5;
 					if (i_78_ >= 0) {
-						int i_79_ = (((Class329) this).aByteArrayArrayArray3808[i_72_][i_78_][i_75_]) & 0xff;
+						int i_79_ = (((Class329) this).underlayColors[i_72_][i_78_][i_75_]) & 0xff;
 						if (i_79_ > 0) {
 							UnderlayDef class481 = ((Class329) this).aClass479_3789.getUnderlayDef(i_79_ - 1, (byte) -111);
 							((Class329) this).anIntArray3795[i_75_] -= -520008741 * class481.r;
@@ -133,9 +133,9 @@ public class Class329 {
 					int i_82_ = 0;
 					int i_83_ = 0;
 					int i_84_ = 0;
-					for (int i_85_ = -5; i_85_ < anInt3785 * 2024737111; i_85_++) {
+					for (int i_85_ = -5; i_85_ < maxY * 2024737111; i_85_++) {
 						int i_86_ = i_85_ + 5;
-						if (i_86_ < anInt3785 * 2024737111) {
+						if (i_86_ < maxY * 2024737111) {
 							i_80_ += ((Class329) this).anIntArray3795[i_86_];
 							i_81_ += ((Class329) this).anIntArray3796[i_86_];
 							i_82_ += ((Class329) this).anIntArray3797[i_86_];
@@ -159,12 +159,12 @@ public class Class329 {
 				method5846(class505, aClass206_3776.aClass390Array2591[i_72_], i_72_, is, 0 == i_72_ ? class390 : null, i_72_ == 0 ? class390_71_ : null, (byte) 4);
 			else
 				method5845(class505, aClass206_3776.aClass390Array2591[i_72_], i_72_, is, i_72_ == 0 ? class390 : null, i_72_ == 0 ? class390_71_ : null, (byte) 1);
-			((Class329) this).aByteArrayArrayArray3808[i_72_] = null;
-			((Class329) this).aByteArrayArrayArray3825[i_72_] = null;
-			((Class329) this).aByteArrayArrayArray3790[i_72_] = null;
-			((Class329) this).aByteArrayArrayArray3791[i_72_] = null;
+			((Class329) this).underlayColors[i_72_] = null;
+			((Class329) this).overlayColors[i_72_] = null;
+			((Class329) this).val49ArrDiv4[i_72_] = null;
+			((Class329) this).val49ArrAnd0x3[i_72_] = null;
 		}
-		if (!aBool3786) {
+		if (!overlayHidden) {
 			if (anInt3809 * 207676255 != 0)
 				aClass206_3776.method3429(1532483847);
 			if (aBool3780)
@@ -177,48 +177,48 @@ public class Class329 {
 	public final void method5838(int i, int i_89_, int i_90_, int i_91_, int i_92_, int i_93_) {
 		for (int i_94_ = i_90_; i_94_ < i_92_ + i_90_; i_94_++) {
 			for (int i_95_ = i_89_; i_95_ < i_91_ + i_89_; i_95_++) {
-				if (i_95_ >= 0 && i_95_ < anInt3784 * -1230013231 && i_94_ >= 0 && i_94_ < 2024737111 * anInt3785)
-					anIntArrayArrayArray3818[i][i_95_][i_94_] = i > 0 ? (anIntArrayArrayArray3818[i - 1][i_95_][i_94_]) - 960 : 0;
+				if (i_95_ >= 0 && i_95_ < maxX * -1230013231 && i_94_ >= 0 && i_94_ < 2024737111 * maxY)
+					unk0Data[i][i_95_][i_94_] = i > 0 ? (unk0Data[i - 1][i_95_][i_94_]) - 960 : 0;
 			}
 		}
-		if (i_89_ > 0 && i_89_ < -1230013231 * anInt3784) {
+		if (i_89_ > 0 && i_89_ < -1230013231 * maxX) {
 			for (int i_96_ = i_90_ + 1; i_96_ < i_90_ + i_92_; i_96_++) {
-				if (i_96_ >= 0 && i_96_ < 2024737111 * anInt3785)
-					anIntArrayArrayArray3818[i][i_89_][i_96_] = anIntArrayArrayArray3818[i][i_89_ - 1][i_96_];
+				if (i_96_ >= 0 && i_96_ < 2024737111 * maxY)
+					unk0Data[i][i_89_][i_96_] = unk0Data[i][i_89_ - 1][i_96_];
 			}
 		}
-		if (i_90_ > 0 && i_90_ < 2024737111 * anInt3785) {
+		if (i_90_ > 0 && i_90_ < 2024737111 * maxY) {
 			for (int i_97_ = i_89_ + 1; i_97_ < i_91_ + i_89_; i_97_++) {
-				if (i_97_ >= 0 && i_97_ < anInt3784 * -1230013231)
-					anIntArrayArrayArray3818[i][i_97_][i_90_] = anIntArrayArrayArray3818[i][i_97_][i_90_ - 1];
+				if (i_97_ >= 0 && i_97_ < maxX * -1230013231)
+					unk0Data[i][i_97_][i_90_] = unk0Data[i][i_97_][i_90_ - 1];
 			}
 		}
-		if (i_89_ >= 0 && i_90_ >= 0 && i_89_ < -1230013231 * anInt3784 && i_90_ < 2024737111 * anInt3785) {
+		if (i_89_ >= 0 && i_90_ >= 0 && i_89_ < -1230013231 * maxX && i_90_ < 2024737111 * maxY) {
 			if (0 == i) {
-				if (i_89_ > 0 && 0 != anIntArrayArrayArray3818[i][i_89_ - 1][i_90_])
-					anIntArrayArrayArray3818[i][i_89_][i_90_] = anIntArrayArrayArray3818[i][i_89_ - 1][i_90_];
-				else if (i_90_ > 0 && anIntArrayArrayArray3818[i][i_89_][i_90_ - 1] != 0)
-					anIntArrayArrayArray3818[i][i_89_][i_90_] = anIntArrayArrayArray3818[i][i_89_][i_90_ - 1];
-				else if (i_89_ > 0 && i_90_ > 0 && (anIntArrayArrayArray3818[i][i_89_ - 1][i_90_ - 1] != 0))
-					anIntArrayArrayArray3818[i][i_89_][i_90_] = anIntArrayArrayArray3818[i][i_89_ - 1][i_90_ - 1];
-			} else if (i_89_ > 0 && (anIntArrayArrayArray3818[i - 1][i_89_ - 1][i_90_] != anIntArrayArrayArray3818[i][i_89_ - 1][i_90_]))
-				anIntArrayArrayArray3818[i][i_89_][i_90_] = anIntArrayArrayArray3818[i][i_89_ - 1][i_90_];
-			else if (i_90_ > 0 && (anIntArrayArrayArray3818[i][i_89_][i_90_ - 1] != anIntArrayArrayArray3818[i - 1][i_89_][i_90_ - 1]))
-				anIntArrayArrayArray3818[i][i_89_][i_90_] = anIntArrayArrayArray3818[i][i_89_][i_90_ - 1];
-			else if (i_89_ > 0 && i_90_ > 0 && (anIntArrayArrayArray3818[i][i_89_ - 1][i_90_ - 1] != (anIntArrayArrayArray3818[i - 1][i_89_ - 1][i_90_ - 1])))
-				anIntArrayArrayArray3818[i][i_89_][i_90_] = anIntArrayArrayArray3818[i][i_89_ - 1][i_90_ - 1];
+				if (i_89_ > 0 && 0 != unk0Data[i][i_89_ - 1][i_90_])
+					unk0Data[i][i_89_][i_90_] = unk0Data[i][i_89_ - 1][i_90_];
+				else if (i_90_ > 0 && unk0Data[i][i_89_][i_90_ - 1] != 0)
+					unk0Data[i][i_89_][i_90_] = unk0Data[i][i_89_][i_90_ - 1];
+				else if (i_89_ > 0 && i_90_ > 0 && (unk0Data[i][i_89_ - 1][i_90_ - 1] != 0))
+					unk0Data[i][i_89_][i_90_] = unk0Data[i][i_89_ - 1][i_90_ - 1];
+			} else if (i_89_ > 0 && (unk0Data[i - 1][i_89_ - 1][i_90_] != unk0Data[i][i_89_ - 1][i_90_]))
+				unk0Data[i][i_89_][i_90_] = unk0Data[i][i_89_ - 1][i_90_];
+			else if (i_90_ > 0 && (unk0Data[i][i_89_][i_90_ - 1] != unk0Data[i - 1][i_89_][i_90_ - 1]))
+				unk0Data[i][i_89_][i_90_] = unk0Data[i][i_89_][i_90_ - 1];
+			else if (i_89_ > 0 && i_90_ > 0 && (unk0Data[i][i_89_ - 1][i_90_ - 1] != (unk0Data[i - 1][i_89_ - 1][i_90_ - 1])))
+				unk0Data[i][i_89_][i_90_] = unk0Data[i][i_89_ - 1][i_90_ - 1];
 		}
 	}
 
-	public final void decodeTileMasks(RsByteBuffer class282_sub35, int xOffset, int yOffset, int i_99_, int i_100_, ClipMap[] class336s, byte i_101_) {
-		if (!aBool3786) {
+	public final void decodeTileMasksUnderlay(RsByteBuffer class282_sub35, int xOffset, int yOffset, int i_99_, int i_100_, ClipMap[] class336s, byte i_101_) {
+		if (!overlayHidden) {
 			for (int i_102_ = 0; i_102_ < 4; i_102_++) {
 				ClipMap clipMap = class336s[i_102_];
 				for (int i_103_ = 0; i_103_ < 64; i_103_++) {
 					for (int i_104_ = 0; i_104_ < 64; i_104_++) {
 						int i_105_ = xOffset + i_103_;
 						int i_106_ = i_104_ + yOffset;
-						if (i_105_ >= 0 && i_105_ < anInt3784 * -1230013231 && i_106_ >= 0 && i_106_ < anInt3785 * 2024737111)
+						if (i_105_ >= 0 && i_105_ < maxX * -1230013231 && i_106_ >= 0 && i_106_ < maxY * 2024737111)
 							clipMap.method5974(i_105_, i_106_, 1933302120);
 					}
 				}
@@ -237,13 +237,13 @@ public class Class329 {
 	public final void method5841(RsByteBuffer class282_sub35, int i, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, int i_128_, ClipMap[] class336s, int i_129_) {
 		int i_130_ = (i_126_ & 0x7) * 8;
 		int i_131_ = 8 * (i_127_ & 0x7);
-		if (!aBool3786) {
+		if (!overlayHidden) {
 			ClipMap class336 = class336s[i];
 			for (int i_132_ = 0; i_132_ < 8; i_132_++) {
 				for (int i_133_ = 0; i_133_ < 8; i_133_++) {
 					int i_134_ = (i_123_ + Class112.method1871(i_132_ & 0x7, i_133_ & 0x7, i_128_, 1449989045));
 					int i_135_ = i_124_ + Class2.method259(i_132_ & 0x7, i_133_ & 0x7, i_128_, 97423682);
-					if (i_134_ > 0 && i_134_ < -1230013231 * anInt3784 - 1 && i_135_ > 0 && i_135_ < 2024737111 * anInt3785 - 1)
+					if (i_134_ > 0 && i_134_ < -1230013231 * maxX - 1 && i_135_ > 0 && i_135_ < 2024737111 * maxY - 1)
 						class336.method5974(i_134_, i_135_, 1933302120);
 				}
 			}
@@ -314,8 +314,8 @@ public class Class329 {
 									i_149_ = 8 + i_123_ - (i_148_ - i_131_);
 									i_150_ = i_147_ - i_130_ + i_124_;
 								}
-								if (i_149_ >= 0 && i_149_ < -1230013231 * anInt3784 && i_150_ >= 0 && i_150_ < anInt3785 * 2024737111)
-									anIntArrayArrayArray3818[i][i_149_][i_150_] = (anIntArrayArrayArray3818[i][i_143_ + i_138_][i_139_ + i_144_]);
+								if (i_149_ >= 0 && i_149_ < -1230013231 * maxX && i_150_ >= 0 && i_150_ < maxY * 2024737111)
+									unk0Data[i][i_149_][i_150_] = (unk0Data[i][i_143_ + i_138_][i_139_ + i_144_]);
 							}
 						}
 					} else
@@ -326,10 +326,10 @@ public class Class329 {
 	}
 
 	public void initClipMap(GraphicalRenderer class505, int[][][] is, ClipMap[] clipMap, byte i) {
-		if (!aBool3786) {
+		if (!overlayHidden) {
 			for (int plane = 0; plane < 4; plane++) {
-				for (int x = 0; x < anInt3784 * -1230013231; x++) {
-					for (int y = 0; y < 2024737111 * anInt3785; y++) {
+				for (int x = 0; x < maxX * -1230013231; x++) {
+					for (int y = 0; y < 2024737111 * maxY; y++) {
 						if (0 != ((regionMap.tileMasks[plane][x][y]) & 0x1)) {
 							int finalPlane = plane;
 							if (0 != ((regionMap.tileMasks[1][x][y]) & 0x2))
@@ -345,7 +345,7 @@ public class Class329 {
 		for (int i_159_ = 0; i_159_ < anInt3845 * 1599084401; i_159_++) {
 			int i_160_ = 0;
 			int i_161_ = 0;
-			if (!aBool3786) {
+			if (!overlayHidden) {
 				if (aBool3835)
 					i_161_ |= 0x8;
 				if (aBool3780)
@@ -359,66 +359,66 @@ public class Class329 {
 				i_161_ |= 0x7;
 			if (!aBool3782)
 				i_161_ |= 0x20;
-			int[][] is_162_ = (is != null && i_159_ < is.length ? is[i_159_] : anIntArrayArrayArray3818[i_159_]);
-			aClass206_3776.method3385(i_159_, class505.method8478(-1230013231 * anInt3784, anInt3785 * 2024737111, anIntArrayArrayArray3818[i_159_], is_162_, 512, i_160_, i_161_), 322492568);
+			int[][] is_162_ = (is != null && i_159_ < is.length ? is[i_159_] : unk0Data[i_159_]);
+			aClass206_3776.method3385(i_159_, class505.method8478(-1230013231 * maxX, maxY * 2024737111, unk0Data[i_159_], is_162_, 512, i_160_, i_161_), 322492568);
 		}
 	}
 
 	void method5845(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_205_, Class390 class390_206_, byte i_207_) {
-		for (int i_208_ = 0; i_208_ < -1230013231 * anInt3784; i_208_++) {
-			for (int i_209_ = 0; i_209_ < 2024737111 * anInt3785; i_209_++) {
-				byte i_210_ = (((Class329) this).aByteArrayArrayArray3790[i][i_208_][i_209_]);
-				byte i_211_ = (((Class329) this).aByteArrayArrayArray3791[i][i_208_][i_209_]);
-				int i_212_ = ((((Class329) this).aByteArrayArrayArray3825[i][i_208_][i_209_]) & 0xff);
-				int i_213_ = ((((Class329) this).aByteArrayArrayArray3808[i][i_208_][i_209_]) & 0xff);
-				Class531 class531 = (0 != i_212_ ? ((Class329) this).aClass536_3834.method11475(i_212_ - 1, (byte) 0) : null);
-				UnderlayDef class481 = (i_213_ != 0 ? ((Class329) this).aClass479_3789.getUnderlayDef(i_213_ - 1, (byte) -14) : null);
-				if (0 == i_210_ && class531 == null)
+		for (int i_208_ = 0; i_208_ < -1230013231 * maxX; i_208_++) {
+			for (int i_209_ = 0; i_209_ < 2024737111 * maxY; i_209_++) {
+				byte i_210_ = (((Class329) this).val49ArrDiv4[i][i_208_][i_209_]);
+				byte i_211_ = (((Class329) this).val49ArrAnd0x3[i][i_208_][i_209_]);
+				int overlayId = ((((Class329) this).overlayColors[i][i_208_][i_209_]) & 0xff);
+				int underlayId = ((((Class329) this).underlayColors[i][i_208_][i_209_]) & 0xff);
+				OverlayDef overlayDef = (0 != overlayId ? ((Class329) this).aClass536_3834.method11475(overlayId - 1, (byte) 0) : null);
+				UnderlayDef underlayDef = (underlayId != 0 ? ((Class329) this).aClass479_3789.getUnderlayDef(underlayId - 1, (byte) -14) : null);
+				if (0 == i_210_ && overlayDef == null)
 					i_210_ = (byte) 12;
-				Class531 class531_214_ = class531;
-				if (null != class531 && -1 == 1419498143 * class531.anInt7054 && -1 == -848345857 * class531.anInt7058) {
-					class531_214_ = class531;
-					class531 = null;
+				OverlayDef class531_214_ = overlayDef;
+				if (null != overlayDef && -1 == 1419498143 * overlayDef.col0 && -1 == -848345857 * overlayDef.col1) {
+					class531_214_ = overlayDef;
+					overlayDef = null;
 				}
-				if (class531 != null || class481 != null) {
+				if (overlayDef != null || underlayDef != null) {
 					((Class329) this).anInt3855 = anIntArray3829[i_210_] * -32442583;
 					((Class329) this).anInt3856 = anIntArray3814[i_210_] * 1732574483;
-					int i_215_ = ((null != class481 ? ((Class329) this).anInt3855 * -1657432807 : 0) + (class531 != null ? ((Class329) this).anInt3856 * -1916381925 : 0));
+					int i_215_ = ((null != underlayDef ? ((Class329) this).anInt3855 * -1657432807 : 0) + (overlayDef != null ? ((Class329) this).anInt3856 * -1916381925 : 0));
 					int i_216_ = 0;
 					((Class329) this).anInt3781 = 0;
-					((Class329) this).anInt3848 = (null != class531 ? 1717409107 * class531.anInt7066 : -1) * -1668530227;
-					int i_217_ = (class481 != null ? class481.anInt5719 * -1346987295 : -1);
+					((Class329) this).anInt3848 = (null != overlayDef ? 1717409107 * overlayDef.texture : -1) * -1668530227;
+					int i_217_ = (underlayDef != null ? underlayDef.anInt5719 * -1346987295 : -1);
 					int[] is_218_ = new int[i_215_];
 					int[] is_219_ = new int[i_215_];
 					int[] is_220_ = new int[i_215_];
 					int[] is_221_ = new int[i_215_];
 					int[] is_222_ = new int[i_215_];
 					int[] is_223_ = new int[i_215_];
-					int[] is_224_ = ((class531 != null && -1 != class531.anInt7058 * -848345857) ? new int[i_215_] : null);
-					if (class531 != null) {
+					int[] is_224_ = ((overlayDef != null && -1 != overlayDef.col1 * -848345857) ? new int[i_215_] : null);
+					if (overlayDef != null) {
 						for (int i_225_ = 0; (i_225_ < -1916381925 * ((Class329) this).anInt3856); i_225_++) {
 							is_218_[i_216_] = (anIntArrayArray3824[i_210_][((Class329) this).anInt3781 * 1070348131]);
 							is_219_[i_216_] = (anIntArrayArray3860[i_210_][((Class329) this).anInt3781 * 1070348131]);
 							is_220_[i_216_] = (anIntArrayArray3815[i_210_][1070348131 * ((Class329) this).anInt3781]);
 							is_222_[i_216_] = 1725089029 * ((Class329) this).anInt3848;
-							is_223_[i_216_] = -1065364389 * class531.anInt7057;
-							is_221_[i_216_] = class531.anInt7054 * 1419498143;
+							is_223_[i_216_] = -1065364389 * overlayDef.anInt7057;
+							is_221_[i_216_] = overlayDef.col0 * 1419498143;
 							if (is_224_ != null)
-								is_224_[i_216_] = class531.anInt7058 * -848345857;
+								is_224_[i_216_] = overlayDef.col1 * -848345857;
 							i_216_++;
 							((Class329) this).anInt3781 += 56558155;
 						}
-						if (!aBool3786 && i == 0)
-							aClass206_3776.method3392(i_208_, i_209_, class531.anInt7051 * 220189999, class531.anInt7063 * 442664952, class531.anInt7064 * -1036917025, 669977931 * class531.anInt7065, class531.anInt7055 * -1307230745, -335219819 * class531.anInt7067, (short) -10476);
+						if (!overlayHidden && i == 0)
+							aClass206_3776.method3392(i_208_, i_209_, overlayDef.anInt7051 * 220189999, overlayDef.anInt7063 * 442664952, overlayDef.anInt7064 * -1036917025, 669977931 * overlayDef.anInt7065, overlayDef.anInt7055 * -1307230745, -335219819 * overlayDef.anInt7067, (short) -10476);
 					} else
 						((Class329) this).anInt3781 += ((Class329) this).anInt3856 * -70638359;
-					if (class481 != null) {
+					if (underlayDef != null) {
 						for (int i_226_ = 0; (i_226_ < -1657432807 * ((Class329) this).anInt3855); i_226_++) {
 							is_218_[i_216_] = (anIntArrayArray3824[i_210_][((Class329) this).anInt3781 * 1070348131]);
 							is_219_[i_216_] = (anIntArrayArray3860[i_210_][1070348131 * ((Class329) this).anInt3781]);
 							is_220_[i_216_] = (anIntArrayArray3815[i_210_][((Class329) this).anInt3781 * 1070348131]);
 							is_222_[i_216_] = i_217_;
-							is_223_[i_216_] = -1001005969 * class481.anInt5720;
+							is_223_[i_216_] = -1001005969 * underlayDef.anInt5720;
 							is_221_[i_216_] = is[i_208_][i_209_];
 							if (is_224_ != null)
 								is_224_[i_216_] = is_221_[i_216_];
@@ -473,17 +473,17 @@ public class Class329 {
 					boolean bool = regionMap.is0x2(i_208_, i_209_, 1772345202);
 					if (bool && i > 1 || !bool && i > 0) {
 						boolean bool_247_ = true;
-						if (null != class481 && !class481.aBool5722)
+						if (null != underlayDef && !underlayDef.aBool5722)
 							bool_247_ = false;
-						else if (i_213_ == 0 && 0 != i_210_)
+						else if (underlayId == 0 && 0 != i_210_)
 							bool_247_ = false;
-						else if (i_212_ > 0 && class531_214_ != null && !class531_214_.aBool7056)
+						else if (overlayId > 0 && class531_214_ != null && !class531_214_.aBool7056)
 							bool_247_ = false;
 						if (bool_247_ && i_243_ == i_244_ && i_243_ == i_245_ && i_243_ == i_246_)
 							aByteArrayArrayArray3794[i][i_208_][i_209_] |= 0x4;
 					}
 					Class90 class90 = new Class90();
-					if (aBool3786) {
+					if (overlayHidden) {
 						class90.anInt946 = (aClass206_3776.method3387(i_208_, i_209_, (byte) 110) * -1856397433);
 						class90.anInt945 = (aClass206_3776.method3386(i_208_, i_209_, 2091764285) * 873459953);
 						class90.anInt947 = (aClass206_3776.method3538(i_208_, i_209_, -575094789) * -96197041);
@@ -499,21 +499,21 @@ public class Class329 {
 	}
 
 	void method5846(GraphicalRenderer class505, Class390 class390, int i, int[][] is, Class390 class390_248_, Class390 class390_249_, byte i_250_) {
-		byte[][] is_251_ = ((Class329) this).aByteArrayArrayArray3790[i];
-		byte[][] is_252_ = ((Class329) this).aByteArrayArrayArray3791[i];
-		byte[][] is_253_ = ((Class329) this).aByteArrayArrayArray3808[i];
-		byte[][] is_254_ = ((Class329) this).aByteArrayArrayArray3825[i];
+		byte[][] is_251_ = ((Class329) this).val49ArrDiv4[i];
+		byte[][] is_252_ = ((Class329) this).val49ArrAnd0x3[i];
+		byte[][] is_253_ = ((Class329) this).underlayColors[i];
+		byte[][] is_254_ = ((Class329) this).overlayColors[i];
 		boolean[] bools = new boolean[4];
-		for (int i_255_ = 0; i_255_ < anInt3784 * -1230013231; i_255_++) {
-			int i_256_ = i_255_ < anInt3784 * -1230013231 - 1 ? 1 + i_255_ : i_255_;
-			for (int i_257_ = 0; i_257_ < 2024737111 * anInt3785; i_257_++) {
-				int i_258_ = (i_257_ < anInt3785 * 2024737111 - 1 ? 1 + i_257_ : i_257_);
+		for (int i_255_ = 0; i_255_ < maxX * -1230013231; i_255_++) {
+			int i_256_ = i_255_ < maxX * -1230013231 - 1 ? 1 + i_255_ : i_255_;
+			for (int i_257_ = 0; i_257_ < 2024737111 * maxY; i_257_++) {
+				int i_258_ = (i_257_ < maxY * 2024737111 - 1 ? 1 + i_257_ : i_257_);
 				((Class329) this).anInt3844 = is_251_[i_255_][i_257_] * 1489820949;
 				((Class329) this).anInt3781 = is_252_[i_255_][i_257_] * 56558155;
 				int i_259_ = is_254_[i_255_][i_257_] & 0xff;
 				int i_260_ = is_253_[i_255_][i_257_] & 0xff;
 				if (i_259_ != 0 || i_260_ != 0) {
-					Class531 class531 = (i_259_ != 0 ? ((Class329) this).aClass536_3834.method11475(i_259_ - 1, (byte) 0) : null);
+					OverlayDef class531 = (i_259_ != 0 ? ((Class329) this).aClass536_3834.method11475(i_259_ - 1, (byte) 0) : null);
 					UnderlayDef class481 = (0 != i_260_ ? ((Class329) this).aClass479_3789.getUnderlayDef(i_260_ - 1, (byte) -6) : null);
 					if (0 == -595948995 * ((Class329) this).anInt3844 && null == class531)
 						((Class329) this).anInt3844 = 697982204;
@@ -526,9 +526,9 @@ public class Class329 {
 					bools_263_[2] = false;
 					bools_262_[1] = false;
 					bools_261_[0] = false;
-					Class531 class531_264_ = class531;
+					OverlayDef class531_264_ = class531;
 					if (null != class531) {
-						if (-1 == class531.anInt7054 * 1419498143 && -1 == class531.anInt7058 * -848345857) {
+						if (-1 == class531.col0 * 1419498143 && -1 == class531.col1 * -848345857) {
 							class531_264_ = class531;
 							class531 = null;
 						} else if (null != class481 && (-595948995 * ((Class329) this).anInt3844 != 0))
@@ -572,7 +572,7 @@ public class Class329 {
 						method5851(class505, i, i_255_, i_257_, i_256_, i_258_, class481, i_260_, i_276_, i_277_, i_278_, bools, is_268_, is_269_, is_270_, is_271_, is_272_, is_273_, is_274_, is_275_, is, class390, class390_249_, class390_248_, (byte) 2);
 						method5852(class390, class481, class531_264_, i, i_255_, i_257_, i_256_, i_258_, i_260_, i_259_, (short) 13205);
 						Class90 class90 = new Class90();
-						if (aBool3786) {
+						if (overlayHidden) {
 							class90.anInt946 = (aClass206_3776.method3387(i_255_, i_257_, (byte) 114) * -1856397433);
 							class90.anInt945 = (aClass206_3776.method3386(i_255_, i_257_, 1952003657) * 873459953);
 							class90.anInt947 = (aClass206_3776.method3538(i_255_, i_257_, -575094789) * -96197041);
@@ -588,21 +588,21 @@ public class Class329 {
 		}
 	}
 
-	final void method5848(GraphicalRenderer class505, Class531 class531, UnderlayDef class481, int i, int i_289_, int i_290_, int i_291_, byte[][] is, byte[][] is_292_, byte[][] is_293_, boolean[] bools, int i_294_) {
+	final void method5848(GraphicalRenderer class505, OverlayDef class531, UnderlayDef class481, int i, int i_289_, int i_290_, int i_291_, byte[][] is, byte[][] is_292_, byte[][] is_293_, boolean[] bools, int i_294_) {
 		boolean[] bools_295_ = (null != class531 && class531.aBool7061 ? aBoolArrayArray3793[-595948995 * ((Class329) this).anInt3844] : (aBoolArrayArray3816[((Class329) this).anInt3844 * -595948995]));
 		if (i_289_ > 0) {
 			if (i > 0) {
 				int i_296_ = is[i - 1][i_289_ - 1] & 0xff;
 				if (i_296_ > 0) {
-					Class531 class531_297_ = ((Class329) this).aClass536_3834.method11475(i_296_ - 1, (byte) 0);
-					if (-1 != 1419498143 * class531_297_.anInt7054 && class531_297_.aBool7061) {
+					OverlayDef class531_297_ = ((Class329) this).aClass536_3834.method11475(i_296_ - 1, (byte) 0);
+					if (-1 != 1419498143 * class531_297_.col0 && class531_297_.aBool7061) {
 						byte i_298_ = is_292_[i - 1][i_289_ - 1];
 						int i_299_ = 2 * is_293_[i - 1][i_289_ - 1] + 4 & 0x7;
 						int i_300_ = Class153.method2617(class505, class531_297_, (byte) -21);
 						if (aBoolArrayArray3822[i_298_][i_299_]) {
-							((Class329) this).anIntArray3838[0] = class531_297_.anInt7054 * 1419498143;
+							((Class329) this).anIntArray3838[0] = class531_297_.col0 * 1419498143;
 							((Class329) this).anIntArray3839[0] = i_300_;
-							((Class329) this).anIntArray3813[0] = 1717409107 * class531_297_.anInt7066;
+							((Class329) this).anIntArray3813[0] = 1717409107 * class531_297_.texture;
 							((Class329) this).anIntArray3827[0] = class531_297_.anInt7057 * -1065364389;
 							((Class329) this).anIntArray3842[0] = 1070524733 * class531_297_.anInt7052;
 							((Class329) this).anIntArray3843[0] = 256;
@@ -613,15 +613,15 @@ public class Class329 {
 			if (i < i_290_ - 1) {
 				int i_301_ = is[i + 1][i_289_ - 1] & 0xff;
 				if (i_301_ > 0) {
-					Class531 class531_302_ = ((Class329) this).aClass536_3834.method11475(i_301_ - 1, (byte) 0);
-					if (-1 != 1419498143 * class531_302_.anInt7054 && class531_302_.aBool7061) {
+					OverlayDef class531_302_ = ((Class329) this).aClass536_3834.method11475(i_301_ - 1, (byte) 0);
+					if (-1 != 1419498143 * class531_302_.col0 && class531_302_.aBool7061) {
 						byte i_303_ = is_292_[1 + i][i_289_ - 1];
 						int i_304_ = 6 + is_293_[1 + i][i_289_ - 1] * 2 & 0x7;
 						int i_305_ = Class153.method2617(class505, class531_302_, (byte) -18);
 						if (aBoolArrayArray3822[i_303_][i_304_]) {
-							((Class329) this).anIntArray3838[2] = 1419498143 * class531_302_.anInt7054;
+							((Class329) this).anIntArray3838[2] = 1419498143 * class531_302_.col0;
 							((Class329) this).anIntArray3839[2] = i_305_;
-							((Class329) this).anIntArray3813[2] = 1717409107 * class531_302_.anInt7066;
+							((Class329) this).anIntArray3813[2] = 1717409107 * class531_302_.texture;
 							((Class329) this).anIntArray3827[2] = -1065364389 * class531_302_.anInt7057;
 							((Class329) this).anIntArray3842[2] = class531_302_.anInt7052 * 1070524733;
 							((Class329) this).anIntArray3843[2] = 512;
@@ -634,15 +634,15 @@ public class Class329 {
 			if (i > 0) {
 				int i_306_ = is[i - 1][i_289_ + 1] & 0xff;
 				if (i_306_ > 0) {
-					Class531 class531_307_ = ((Class329) this).aClass536_3834.method11475(i_306_ - 1, (byte) 0);
-					if (class531_307_.anInt7054 * 1419498143 != -1 && class531_307_.aBool7061) {
+					OverlayDef class531_307_ = ((Class329) this).aClass536_3834.method11475(i_306_ - 1, (byte) 0);
+					if (class531_307_.col0 * 1419498143 != -1 && class531_307_.aBool7061) {
 						byte i_308_ = is_292_[i - 1][i_289_ + 1];
 						int i_309_ = is_293_[i - 1][1 + i_289_] * 2 + 2 & 0x7;
 						int i_310_ = Class153.method2617(class505, class531_307_, (byte) 12);
 						if (aBoolArrayArray3822[i_308_][i_309_]) {
-							((Class329) this).anIntArray3838[6] = class531_307_.anInt7054 * 1419498143;
+							((Class329) this).anIntArray3838[6] = class531_307_.col0 * 1419498143;
 							((Class329) this).anIntArray3839[6] = i_310_;
-							((Class329) this).anIntArray3813[6] = 1717409107 * class531_307_.anInt7066;
+							((Class329) this).anIntArray3813[6] = 1717409107 * class531_307_.texture;
 							((Class329) this).anIntArray3827[6] = class531_307_.anInt7057 * -1065364389;
 							((Class329) this).anIntArray3842[6] = class531_307_.anInt7052 * 1070524733;
 							((Class329) this).anIntArray3843[6] = 64;
@@ -653,15 +653,15 @@ public class Class329 {
 			if (i < i_290_ - 1) {
 				int i_311_ = is[1 + i][i_289_ + 1] & 0xff;
 				if (i_311_ > 0) {
-					Class531 class531_312_ = ((Class329) this).aClass536_3834.method11475(i_311_ - 1, (byte) 0);
-					if (1419498143 * class531_312_.anInt7054 != -1 && class531_312_.aBool7061) {
+					OverlayDef class531_312_ = ((Class329) this).aClass536_3834.method11475(i_311_ - 1, (byte) 0);
+					if (1419498143 * class531_312_.col0 != -1 && class531_312_.aBool7061) {
 						byte i_313_ = is_292_[i + 1][1 + i_289_];
 						int i_314_ = 2 * is_293_[i + 1][i_289_ + 1] + 0 & 0x7;
 						int i_315_ = Class153.method2617(class505, class531_312_, (byte) -16);
 						if (aBoolArrayArray3822[i_313_][i_314_]) {
-							((Class329) this).anIntArray3838[4] = class531_312_.anInt7054 * 1419498143;
+							((Class329) this).anIntArray3838[4] = class531_312_.col0 * 1419498143;
 							((Class329) this).anIntArray3839[4] = i_315_;
-							((Class329) this).anIntArray3813[4] = class531_312_.anInt7066 * 1717409107;
+							((Class329) this).anIntArray3813[4] = class531_312_.texture * 1717409107;
 							((Class329) this).anIntArray3827[4] = -1065364389 * class531_312_.anInt7057;
 							((Class329) this).anIntArray3842[4] = 1070524733 * class531_312_.anInt7052;
 							((Class329) this).anIntArray3843[4] = 128;
@@ -673,8 +673,8 @@ public class Class329 {
 		if (i_289_ > 0) {
 			int i_316_ = is[i][i_289_ - 1] & 0xff;
 			if (i_316_ > 0) {
-				Class531 class531_317_ = ((Class329) this).aClass536_3834.method11475(i_316_ - 1, (byte) 0);
-				if (1419498143 * class531_317_.anInt7054 != -1) {
+				OverlayDef class531_317_ = ((Class329) this).aClass536_3834.method11475(i_316_ - 1, (byte) 0);
+				if (1419498143 * class531_317_.col0 != -1) {
 					byte i_318_ = is_292_[i][i_289_ - 1];
 					int i_319_ = is_293_[i][i_289_ - 1];
 					if (class531_317_.aBool7061) {
@@ -685,9 +685,9 @@ public class Class329 {
 							i_321_ &= 0x7;
 							i_320_ &= 0x7;
 							if (aBoolArrayArray3822[i_318_][i_321_] && (((Class329) this).anIntArray3842[i_320_] <= class531_317_.anInt7052 * 1070524733)) {
-								((Class329) this).anIntArray3838[i_320_] = 1419498143 * class531_317_.anInt7054;
+								((Class329) this).anIntArray3838[i_320_] = 1419498143 * class531_317_.col0;
 								((Class329) this).anIntArray3839[i_320_] = i_322_;
-								((Class329) this).anIntArray3813[i_320_] = 1717409107 * class531_317_.anInt7066;
+								((Class329) this).anIntArray3813[i_320_] = 1717409107 * class531_317_.texture;
 								((Class329) this).anIntArray3827[i_320_] = -1065364389 * class531_317_.anInt7057;
 								if (((Class329) this).anIntArray3842[i_320_] == 1070524733 * class531_317_.anInt7052)
 									((Class329) this).anIntArray3843[i_320_] |= 0x20;
@@ -708,8 +708,8 @@ public class Class329 {
 		if (i_289_ < i_291_ - 1) {
 			int i_324_ = is[i][i_289_ + 1] & 0xff;
 			if (i_324_ > 0) {
-				Class531 class531_325_ = ((Class329) this).aClass536_3834.method11475(i_324_ - 1, (byte) 0);
-				if (-1 != 1419498143 * class531_325_.anInt7054) {
+				OverlayDef class531_325_ = ((Class329) this).aClass536_3834.method11475(i_324_ - 1, (byte) 0);
+				if (-1 != 1419498143 * class531_325_.col0) {
 					byte i_326_ = is_292_[i][i_289_ + 1];
 					int i_327_ = is_293_[i][i_289_ + 1];
 					if (class531_325_.aBool7061) {
@@ -720,9 +720,9 @@ public class Class329 {
 							i_329_ &= 0x7;
 							i_328_ &= 0x7;
 							if (aBoolArrayArray3822[i_326_][i_329_] && (((Class329) this).anIntArray3842[i_328_] <= 1070524733 * class531_325_.anInt7052)) {
-								((Class329) this).anIntArray3838[i_328_] = class531_325_.anInt7054 * 1419498143;
+								((Class329) this).anIntArray3838[i_328_] = class531_325_.col0 * 1419498143;
 								((Class329) this).anIntArray3839[i_328_] = i_330_;
-								((Class329) this).anIntArray3813[i_328_] = 1717409107 * class531_325_.anInt7066;
+								((Class329) this).anIntArray3813[i_328_] = 1717409107 * class531_325_.texture;
 								((Class329) this).anIntArray3827[i_328_] = class531_325_.anInt7057 * -1065364389;
 								if (((Class329) this).anIntArray3842[i_328_] == 1070524733 * class531_325_.anInt7052)
 									((Class329) this).anIntArray3843[i_328_] |= 0x10;
@@ -743,8 +743,8 @@ public class Class329 {
 		if (i > 0) {
 			int i_332_ = is[i - 1][i_289_] & 0xff;
 			if (i_332_ > 0) {
-				Class531 class531_333_ = ((Class329) this).aClass536_3834.method11475(i_332_ - 1, (byte) 0);
-				if (class531_333_.anInt7054 * 1419498143 != -1) {
+				OverlayDef class531_333_ = ((Class329) this).aClass536_3834.method11475(i_332_ - 1, (byte) 0);
+				if (class531_333_.col0 * 1419498143 != -1) {
 					byte i_334_ = is_292_[i - 1][i_289_];
 					int i_335_ = is_293_[i - 1][i_289_];
 					if (class531_333_.aBool7061) {
@@ -755,9 +755,9 @@ public class Class329 {
 							i_337_ &= 0x7;
 							i_336_ &= 0x7;
 							if (aBoolArrayArray3822[i_334_][i_337_] && (((Class329) this).anIntArray3842[i_336_] <= 1070524733 * class531_333_.anInt7052)) {
-								((Class329) this).anIntArray3838[i_336_] = 1419498143 * class531_333_.anInt7054;
+								((Class329) this).anIntArray3838[i_336_] = 1419498143 * class531_333_.col0;
 								((Class329) this).anIntArray3839[i_336_] = i_338_;
-								((Class329) this).anIntArray3813[i_336_] = class531_333_.anInt7066 * 1717409107;
+								((Class329) this).anIntArray3813[i_336_] = class531_333_.texture * 1717409107;
 								((Class329) this).anIntArray3827[i_336_] = -1065364389 * class531_333_.anInt7057;
 								if (1070524733 * class531_333_.anInt7052 == (((Class329) this).anIntArray3842[i_336_]))
 									((Class329) this).anIntArray3843[i_336_] |= 0x8;
@@ -778,8 +778,8 @@ public class Class329 {
 		if (i < i_290_ - 1) {
 			int i_340_ = is[i + 1][i_289_] & 0xff;
 			if (i_340_ > 0) {
-				Class531 class531_341_ = ((Class329) this).aClass536_3834.method11475(i_340_ - 1, (byte) 0);
-				if (1419498143 * class531_341_.anInt7054 != -1) {
+				OverlayDef class531_341_ = ((Class329) this).aClass536_3834.method11475(i_340_ - 1, (byte) 0);
+				if (1419498143 * class531_341_.col0 != -1) {
 					byte i_342_ = is_292_[1 + i][i_289_];
 					int i_343_ = is_293_[1 + i][i_289_];
 					if (class531_341_.aBool7061) {
@@ -790,9 +790,9 @@ public class Class329 {
 							i_345_ &= 0x7;
 							i_344_ &= 0x7;
 							if (aBoolArrayArray3822[i_342_][i_345_] && (((Class329) this).anIntArray3842[i_344_] <= class531_341_.anInt7052 * 1070524733)) {
-								((Class329) this).anIntArray3838[i_344_] = 1419498143 * class531_341_.anInt7054;
+								((Class329) this).anIntArray3838[i_344_] = 1419498143 * class531_341_.col0;
 								((Class329) this).anIntArray3839[i_344_] = i_346_;
-								((Class329) this).anIntArray3813[i_344_] = class531_341_.anInt7066 * 1717409107;
+								((Class329) this).anIntArray3813[i_344_] = class531_341_.texture * 1717409107;
 								((Class329) this).anIntArray3827[i_344_] = class531_341_.anInt7057 * -1065364389;
 								if (((Class329) this).anIntArray3842[i_344_] == class531_341_.anInt7052 * 1070524733)
 									((Class329) this).anIntArray3843[i_344_] |= 0x4;
@@ -815,9 +815,9 @@ public class Class329 {
 			for (int i_349_ = 0; i_349_ < 8; i_349_++) {
 				int i_350_ = i_349_ - 2140696262 * ((Class329) this).anInt3781 & 0x7;
 				if ((aBoolArrayArray3822[-595948995 * ((Class329) this).anInt3844][i_349_]) && (((Class329) this).anIntArray3842[i_350_] <= class531.anInt7052 * 1070524733)) {
-					((Class329) this).anIntArray3838[i_350_] = class531.anInt7054 * 1419498143;
+					((Class329) this).anIntArray3838[i_350_] = class531.col0 * 1419498143;
 					((Class329) this).anIntArray3839[i_350_] = i_348_;
-					((Class329) this).anIntArray3813[i_350_] = 1717409107 * class531.anInt7066;
+					((Class329) this).anIntArray3813[i_350_] = 1717409107 * class531.texture;
 					((Class329) this).anIntArray3827[i_350_] = class531.anInt7057 * -1065364389;
 					if (1070524733 * class531.anInt7052 == ((Class329) this).anIntArray3842[i_350_])
 						((Class329) this).anIntArray3843[i_350_] |= 0x2;
@@ -829,7 +829,7 @@ public class Class329 {
 		}
 	}
 
-	void method5849(Class531 class531, UnderlayDef class481, int i) {
+	void method5849(OverlayDef class531, UnderlayDef class481, int i) {
 		if (((Class329) this).aBool3853) {
 			((Class329) this).anIntArray3857 = (anIntArrayArray3824[((Class329) this).anInt3844 * -595948995]);
 			((Class329) this).anIntArray3858 = (anIntArrayArray3860[-595948995 * ((Class329) this).anInt3844]);
@@ -853,13 +853,13 @@ public class Class329 {
 		}
 	}
 
-	void method5850(GraphicalRenderer class505, int i, int i_351_, int i_352_, Class531 class531, boolean[] bools, int[] is, int[] is_353_, int[] is_354_, int[] is_355_, int[] is_356_, int[] is_357_, int[] is_358_, int[] is_359_, Class390 class390, Class390 class390_360_, Class390 class390_361_, int i_362_) {
+	void method5850(GraphicalRenderer class505, int i, int i_351_, int i_352_, OverlayDef class531, boolean[] bools, int[] is, int[] is_353_, int[] is_354_, int[] is_355_, int[] is_356_, int[] is_357_, int[] is_358_, int[] is_359_, Class390 class390, Class390 class390_360_, Class390 class390_361_, int i_362_) {
 		((Class329) this).anInt3850 = 1866422575;
 		((Class329) this).anInt3848 = 1668530227;
 		((Class329) this).anInt3849 = -566299392;
 		if (class531 != null) {
-			((Class329) this).anInt3850 = class531.anInt7054 * -2062938673;
-			((Class329) this).anInt3848 = class531.anInt7066 * 1041498231;
+			((Class329) this).anInt3850 = class531.col0 * -2062938673;
+			((Class329) this).anInt3848 = class531.texture * 1041498231;
 			((Class329) this).anInt3849 = -1129429737 * class531.anInt7057;
 			int i_363_ = Class153.method2617(class505, class531, (byte) 29);
 			for (int i_364_ = 0; i_364_ < -1916381925 * ((Class329) this).anInt3856; i_364_++) {
@@ -950,7 +950,7 @@ public class Class329 {
 					} else {
 						if (null != is)
 							is[((Class329) this).anInt3852 * -1626041195] = i_363_;
-						is_356_[-1626041195 * ((Class329) this).anInt3852] = class531.anInt7066 * 1717409107;
+						is_356_[-1626041195 * ((Class329) this).anInt3852] = class531.texture * 1717409107;
 						is_357_[-1626041195 * ((Class329) this).anInt3852] = class531.anInt7057 * -1065364389;
 						is_355_[((Class329) this).anInt3852 * -1626041195] = 1730638385 * ((Class329) this).anInt3850;
 					}
@@ -958,9 +958,9 @@ public class Class329 {
 				}
 				((Class329) this).anInt3846 += -193737745;
 			}
-			if (!aBool3786 && 0 == i)
+			if (!overlayHidden && 0 == i)
 				aClass206_3776.method3392(i_351_, i_352_, 220189999 * class531.anInt7051, 442664952 * class531.anInt7063, -1036917025 * class531.anInt7064, class531.anInt7065 * 669977931, -1307230745 * class531.anInt7055, class531.anInt7067 * -335219819, (short) -30684);
-			if (-595948995 * ((Class329) this).anInt3844 != 12 && 1419498143 * class531.anInt7054 != -1 && class531.aBool7059)
+			if (-595948995 * ((Class329) this).anInt3844 != 12 && 1419498143 * class531.col0 != -1 && class531.aBool7059)
 				((Class329) this).aBool3851 = true;
 		} else if (((Class329) this).aBool3853)
 			((Class329) this).anInt3846 += -193737745 * (anIntArray3814[-595948995 * ((Class329) this).anInt3844]);
@@ -1120,7 +1120,7 @@ public class Class329 {
 		}
 	}
 
-	void method5852(Class390 class390, UnderlayDef class481, Class531 class531, int i, int i_419_, int i_420_, int i_421_, int i_422_, int i_423_, int i_424_, short i_425_) {
+	void method5852(Class390 class390, UnderlayDef class481, OverlayDef class531, int i, int i_419_, int i_420_, int i_421_, int i_422_, int i_423_, int i_424_, short i_425_) {
 		int i_426_ = class390.method6722(i_419_, i_420_, 65280);
 		int i_427_ = class390.method6722(i_421_, i_420_, 65280);
 		int i_428_ = class390.method6722(i_421_, i_422_, 65280);
@@ -1140,9 +1140,9 @@ public class Class329 {
 	}
 
 	public final void method5853(int i, int[][] is, int i_431_) {
-		int[][] is_432_ = anIntArrayArrayArray3818[i];
-		for (int i_433_ = 0; i_433_ < anInt3784 * -1230013231 + 1; i_433_++) {
-			for (int i_434_ = 0; i_434_ < 1 + 2024737111 * anInt3785; i_434_++)
+		int[][] is_432_ = unk0Data[i];
+		for (int i_433_ = 0; i_433_ < maxX * -1230013231 + 1; i_433_++) {
+			for (int i_434_ = 0; i_434_ < 1 + 2024737111 * maxY; i_434_++)
 				is_432_[i_433_][i_434_] += is[i_433_][i_434_];
 		}
 	}
@@ -1192,24 +1192,24 @@ public class Class329 {
 		((Class329) this).anIntArray3832 = null;
 		aClass206_3776 = class206;
 		anInt3845 = i * 627820945;
-		anInt3784 = 1781423153 * i_435_;
-		anInt3785 = 1893331559 * i_436_;
-		aBool3786 = bool;
+		maxX = 1781423153 * i_435_;
+		maxY = 1893331559 * i_436_;
+		overlayHidden = bool;
 		((Class329) this).aClass536_3834 = class536;
 		((Class329) this).aClass479_3789 = class479;
 		regionMap = class311;
-		((Class329) this).aByteArrayArrayArray3808 = (new byte[anInt3845 * 1599084401][-1230013231 * anInt3784][anInt3785 * 2024737111]);
-		((Class329) this).aByteArrayArrayArray3825 = (new byte[1599084401 * anInt3845][anInt3784 * -1230013231][anInt3785 * 2024737111]);
-		((Class329) this).aByteArrayArrayArray3790 = (new byte[anInt3845 * 1599084401][anInt3784 * -1230013231][2024737111 * anInt3785]);
-		((Class329) this).aByteArrayArrayArray3791 = (new byte[1599084401 * anInt3845][anInt3784 * -1230013231][2024737111 * anInt3785]);
-		anIntArrayArrayArray3818 = (new int[anInt3845 * 1599084401][1 + -1230013231 * anInt3784][1 + 2024737111 * anInt3785]);
-		aByteArrayArrayArray3794 = (new byte[anInt3845 * 1599084401][-1230013231 * anInt3784 + 1][anInt3785 * 2024737111 + 1]);
+		((Class329) this).underlayColors = (new byte[anInt3845 * 1599084401][-1230013231 * maxX][maxY * 2024737111]);
+		((Class329) this).overlayColors = (new byte[1599084401 * anInt3845][maxX * -1230013231][maxY * 2024737111]);
+		((Class329) this).val49ArrDiv4 = (new byte[anInt3845 * 1599084401][maxX * -1230013231][2024737111 * maxY]);
+		((Class329) this).val49ArrAnd0x3 = (new byte[1599084401 * anInt3845][maxX * -1230013231][2024737111 * maxY]);
+		unk0Data = (new int[anInt3845 * 1599084401][1 + -1230013231 * maxX][1 + 2024737111 * maxY]);
+		aByteArrayArrayArray3794 = (new byte[anInt3845 * 1599084401][-1230013231 * maxX + 1][maxY * 2024737111 + 1]);
 	}
 
-	void method5859(GraphicalRenderer class505, Class531 class531, UnderlayDef class481, int i, int i_489_, byte[][] is, byte[][] is_490_, byte[][] is_491_, boolean[] bools, short i_492_) {
+	void method5859(GraphicalRenderer class505, OverlayDef class531, UnderlayDef class481, int i, int i_489_, byte[][] is, byte[][] is_490_, byte[][] is_491_, boolean[] bools, short i_492_) {
 		boolean[] bools_493_ = (class531 != null && class531.aBool7061 ? aBoolArrayArray3793[((Class329) this).anInt3844 * -595948995] : (aBoolArrayArray3816[-595948995 * ((Class329) this).anInt3844]));
-		method5848(class505, class531, class481, i, i_489_, anInt3784 * -1230013231, anInt3785 * 2024737111, is_491_, is, is_490_, bools, -1828708428);
-		((Class329) this).aBool3854 = null != class531 && (class531.anInt7054 * 1419498143 != -848345857 * class531.anInt7058);
+		method5848(class505, class531, class481, i, i_489_, maxX * -1230013231, maxY * 2024737111, is_491_, is, is_490_, bools, -1828708428);
+		((Class329) this).aBool3854 = null != class531 && (class531.col0 * 1419498143 != -848345857 * class531.col1);
 		if (!((Class329) this).aBool3854) {
 			for (int i_494_ = 0; i_494_ < 8; i_494_++) {
 				if (((Class329) this).anIntArray3842[i_494_] >= 0 && (((Class329) this).anIntArray3839[i_494_] != ((Class329) this).anIntArray3838[i_494_])) {
@@ -1268,7 +1268,7 @@ public class Class329 {
 	}
 
 	int method5870(int i, int i_659_, int i_660_, int i_661_, int i_662_, Class390 class390, byte[][] is, int i_663_) {
-		if ((-595948995 * ((Class329) this).anInt3844 == 0 || -595948995 * ((Class329) this).anInt3844 == 12) && i_659_ > 0 && i_660_ > 0 && i_659_ < -1230013231 * anInt3784 && i_660_ < anInt3785 * 2024737111) {
+		if ((-595948995 * ((Class329) this).anInt3844 == 0 || -595948995 * ((Class329) this).anInt3844 == 12) && i_659_ > 0 && i_660_ > 0 && i_659_ < -1230013231 * maxX && i_660_ < maxY * 2024737111) {
 			int i_664_ = 0;
 			int i_665_ = 0;
 			int i_666_ = 0;
@@ -1324,54 +1324,55 @@ public class Class329 {
 		return ((Class329) this).anInt3781 * 1070348131;
 	}
 
-	final void decodeTileMasks(RsByteBuffer stream, int plane, int x, int y, int i_672_, int i_673_, int i_674_, int i_675_, int i_676_, boolean bool, int i_677_) {
+	final void decodeTileMasks(RsByteBuffer stream, int plane, int x, int y, int xOffset, int yOffset, int i_674_, int i_675_, int i_676_, boolean overlay, int i_677_) {
 		if (1 == i_676_)
-			i_673_ = 1;
+			yOffset = 1;
 		else if (2 == i_676_) {
-			i_672_ = 1;
-			i_673_ = 1;
+			xOffset = 1;
+			yOffset = 1;
 		} else if (i_676_ == 3)
-			i_672_ = 1;
-		if (x >= 0 && x < -1230013231 * anInt3784 && y >= 0 && y < 2024737111 * anInt3785) {
-			if (!aBool3786 && !bool)
+			xOffset = 1;
+		if (x >= 0 && x < -1230013231 * maxX && y >= 0 && y < 2024737111 * maxY) {
+			if (!overlayHidden && !overlay)
 				regionMap.tileMasks[plane][x][y] = (byte) 0;
 			for (;;) {
 				int value = stream.readUnsignedByte();
 				if (value == 0) {
-					if (aBool3786)
-						anIntArrayArrayArray3818[0][i_672_ + x][i_673_ + y] = 0;
+					if (overlayHidden)
+						unk0Data[0][xOffset + x][yOffset + y] = 0;
 					else if (plane == 0)
-						anIntArrayArrayArray3818[0][x + i_672_][i_673_ + y] = (-Class92.method1560(i_674_ + 932731, i_675_ + 556238, 1995871883) * 8) << 2;
+						unk0Data[0][x + xOffset][yOffset + y] = (-Class92.method1560(i_674_ + 932731, i_675_ + 556238, 1995871883) * 8) << 2;
 					else
-						anIntArrayArrayArray3818[plane][x + i_672_][i_673_ + y] = (anIntArrayArrayArray3818[plane - 1][i_672_ + x][y + i_673_]) - 960;
+						unk0Data[plane][x + xOffset][yOffset + y] = (unk0Data[plane - 1][xOffset + x][y + yOffset]) - 960;
 					break;
 				}
 				if (value == 1) {
-					int i_679_ = stream.readUnsignedByte();
-					if (!aBool3786) {
-						if (i_679_ == 1)
-							i_679_ = 0;
+					int val1Hash = stream.readUnsignedByte();
+					if (!overlayHidden) {
+						if (val1Hash == 1)
+							val1Hash = 0;
 						if (0 == plane)
-							anIntArrayArrayArray3818[0][x + i_672_][y + i_673_] = 8 * -i_679_ << 2;
+							unk0Data[0][x + xOffset][y + yOffset] = 8 * -val1Hash << 2;
 						else
-							anIntArrayArrayArray3818[plane][x + i_672_][i_673_ + y] = ((anIntArrayArrayArray3818[plane - 1][x + i_672_][y + i_673_]) - (8 * i_679_ << 2));
+							unk0Data[plane][x + xOffset][yOffset + y] = ((unk0Data[plane - 1][x + xOffset][y + yOffset]) - (8 * val1Hash << 2));
 					} else
-						anIntArrayArrayArray3818[0][i_672_ + x][y + i_673_] = 8 * i_679_ << 2;
+						unk0Data[0][xOffset + x][y + yOffset] = 8 * val1Hash << 2;
 					break;
 				}
 				if (value <= 49) {
-					if (bool)
+					if (overlay)
 						stream.readUnsignedByte();
 					else {
-						((Class329) this).aByteArrayArrayArray3825[plane][x][y] = stream.readByte((short) -18637);
-						((Class329) this).aByteArrayArrayArray3790[plane][x][y] = (byte) ((value - 2) / 4);
-						((Class329) this).aByteArrayArrayArray3791[plane][x][y] = (byte) (i_676_ + (value - 2) & 0x3);
+						((Class329) this).overlayColors[plane][x][y] = stream.readByte();
+						((Class329) this).val49ArrDiv4[plane][x][y] = (byte) ((value - 2) / 4);
+						((Class329) this).val49ArrAnd0x3[plane][x][y] = (byte) (i_676_ + (value - 2) & 0x3);
 					}
 				} else if (value <= 81) {
-					if (!aBool3786 && !bool)
+					if (!overlayHidden && !overlay)
 						regionMap.tileMasks[plane][x][y] = (byte) (value - 49);
-				} else if (!bool)
-					((Class329) this).aByteArrayArrayArray3808[plane][x][y] = (byte) (value - 81);
+				} 
+				else if (!overlay)
+					((Class329) this).underlayColors[plane][x][y] = (byte) (value - 81);
 			}
 		} else {
 			for (;;) {

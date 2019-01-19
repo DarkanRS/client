@@ -26,8 +26,8 @@ public class Class461 {
 
 	public static int method7702(int i) {
 		if (0 == Class296.anInt3532 * 1164388509) {
-			Class446.aClass446_5412.method7435(new Class301("jaclib"), (byte) -15);
-			if (Class446.aClass446_5412.method7443(1803519499).method84(-477828346) != 100)
+			Class446.aClass446_5412.initializeIndexLoader(new Class301("jaclib"), (byte) -15);
+			if (Class446.aClass446_5412.method7443(1803519499).getCompletion(-477828346) != 100)
 				return 1;
 			if (!((Class301) Class446.aClass446_5412.method7443(954726291)).method5328((byte) -93)) {
 				Class308.aclient3620.method4681((byte) 1);
@@ -42,32 +42,32 @@ public class Class461 {
 		}
 		if (1 == Class296.anInt3532 * 1164388509) {
 			Class296.aClass446Array3531 = Class446.method7436((byte) 24);
-			Class446.aClass446_5386.method7435(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -56);
-			Class446.aClass446_5387.method7435(new Class301("jaggl"), (byte) 11);
-			Class446.aClass446_5388.method7435(new Class301("jagdx"), (byte) -60);
-			Class446.aClass446_5389.method7435(new Class301("sw3d"), (byte) 6);
-			Class446.aClass446_5415.method7435(new Class301("hw3d"), (byte) 11);
-			Class446.aClass446_5385.method7435(new Class301("jagtheora"), (byte) -30);
-			Class446.aClass446_5392.method7435(new Class298(IndexLoaders.SHADER_INDEX), (byte) 101);
-			Class446.aClass446_5390.method7435(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) 65);
-			Class446.aClass446_5394.method7435(new Class298(IndexLoaders.CONFIG_INDEX), (byte) -20);
-			Class446.aClass446_5395.method7435(new Class298(IndexLoaders.OBJECT_INDEX), (byte) 17);
-			Class446.aClass446_5397.method7435(new Class298(IndexLoaders.ENUM_INDEX), (byte) -64);
-			Class446.aClass446_5393.method7435(new Class298(IndexLoaders.NPC_INDEX), (byte) 7);
-			Class446.aClass446_5413.method7435(new Class298(IndexLoaders.ITEM_INDEX), (byte) 16);
-			Class446.aClass446_5399.method7435(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) 16);
-			Class446.aClass446_5400.method7435(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 4);
-			Class446.aClass446_5401.method7435(new Class298(IndexLoaders.VARBIT_INDEX), (byte) -28);
-			Class446.aClass446_5402.method7435(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) 9);
-			Class446.aClass446_5403.method7435(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) -25);
-			Class446.aClass446_5404.method7435(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) 75);
-			Class446.aClass446_5405.method7435(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 60);
-			Class446.aClass446_5410.method7435(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -44);
-			Class446.aClass446_5407.method7435(new Class383((IndexLoaders.HUFFMAN_INDEX), "huffman"), (byte) -27);
-			Class446.aClass446_5391.method7435(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) -5);
-			Class446.aClass446_5409.method7435(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) -83);
-			Class446.aClass446_5398.method7435(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -104);
-			Class446.aClass446_5411.method7435(new Class388((IndexLoaders.WORLD_MAP_INDEX), "details"), (byte) -79);
+			Class446.aClass446_5386.initializeIndexLoader(new Class298(IndexLoaders.DEFAULTS_INDEX), (byte) -56);
+			Class446.aClass446_5387.initializeIndexLoader(new Class301("jaggl"), (byte) 11);
+			Class446.aClass446_5388.initializeIndexLoader(new Class301("jagdx"), (byte) -60);
+			Class446.aClass446_5389.initializeIndexLoader(new Class301("sw3d"), (byte) 6);
+			Class446.aClass446_5415.initializeIndexLoader(new Class301("hw3d"), (byte) 11);
+			Class446.aClass446_5385.initializeIndexLoader(new Class301("jagtheora"), (byte) -30);
+			Class446.aClass446_5392.initializeIndexLoader(new Class298(IndexLoaders.SHADER_INDEX), (byte) 101);
+			Class446.aClass446_5390.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_DEFINITION_INDEX), (byte) 65);
+			Class446.aClass446_5394.initializeIndexLoader(new Class298(IndexLoaders.CONFIG_INDEX), (byte) -20);
+			Class446.aClass446_5395.initializeIndexLoader(new Class298(IndexLoaders.OBJECT_INDEX), (byte) 17);
+			Class446.aClass446_5397.initializeIndexLoader(new Class298(IndexLoaders.ENUM_INDEX), (byte) -64);
+			Class446.aClass446_5393.initializeIndexLoader(new Class298(IndexLoaders.NPC_INDEX), (byte) 7);
+			Class446.aClass446_5413.initializeIndexLoader(new Class298(IndexLoaders.ITEM_INDEX), (byte) 16);
+			Class446.aClass446_5399.initializeIndexLoader(new Class298(IndexLoaders.SEQUENCES_INDEX), (byte) 16);
+			Class446.aClass446_5400.initializeIndexLoader(new Class298(IndexLoaders.SPOTANIM_INDEX), (byte) 4);
+			Class446.aClass446_5401.initializeIndexLoader(new Class298(IndexLoaders.VARBIT_INDEX), (byte) -28);
+			Class446.aClass446_5402.initializeIndexLoader(new Class298(IndexLoaders.QC_MESSAGES_INDEX), (byte) 9);
+			Class446.aClass446_5403.initializeIndexLoader(new Class298(IndexLoaders.QC_MENU_INDEX), (byte) -25);
+			Class446.TEXTURE_INDEX_LOADER.initializeIndexLoader(new Class298(IndexLoaders.TEXTURE_INDEX), (byte) 75);
+			Class446.aClass446_5405.initializeIndexLoader(new Class298(IndexLoaders.PARTICLE_INDEX), (byte) 60);
+			Class446.aClass446_5410.initializeIndexLoader(new Class298(IndexLoaders.BILLBOARD_INDEX), (byte) -44);
+			Class446.aClass446_5407.initializeIndexLoader(new Class383((IndexLoaders.HUFFMAN_INDEX), "huffman"), (byte) -27);
+			Class446.aClass446_5391.initializeIndexLoader(new Class298(IndexLoaders.INTERFACE_INDEX), (byte) -5);
+			Class446.aClass446_5409.initializeIndexLoader(new Class298(IndexLoaders.CS2_SCRIPTS_INDEX), (byte) -83);
+			Class446.aClass446_5398.initializeIndexLoader(new Class298(IndexLoaders.FONT_METRICS_INDEX), (byte) -104);
+			Class446.aClass446_5411.initializeIndexLoader(new Class388((IndexLoaders.WORLD_MAP_INDEX), "details"), (byte) -79);
 			for (int i_1_ = 0; i_1_ < Class296.aClass446Array3531.length; i_1_++) {
 				if (Class296.aClass446Array3531[i_1_].method7443(-1578202194) == null)
 					throw new RuntimeException();
@@ -77,7 +77,7 @@ public class Class461 {
 			for (int i_3_ = 0; i_3_ < class446s.length; i_3_++) {
 				Class446 class446 = class446s[i_3_];
 				int i_4_ = class446.method7432((byte) 66);
-				int i_5_ = class446.method7443(1059684891).method84(-477828346);
+				int i_5_ = class446.method7443(1059684891).getCompletion(-477828346);
 				i_2_ += i_5_ * i_4_ / 100;
 			}
 			Class296.anInt3533 = i_2_ * -621298115;
@@ -92,7 +92,7 @@ public class Class461 {
 		for (int i_8_ = 0; i_8_ < class446s.length; i_8_++) {
 			Class446 class446 = class446s[i_8_];
 			int i_9_ = class446.method7432((byte) 66);
-			int i_10_ = class446.method7443(-673812975).method84(-477828346);
+			int i_10_ = class446.method7443(-673812975).getCompletion(-477828346);
 			if (i_10_ < 100)
 				bool = false;
 			i_6_ += i_9_;

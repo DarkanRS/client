@@ -166,7 +166,7 @@ public class MapRegion {
 					int i_42_ = (this.anIntArrayArrayArray3205[i_39_][i_40_][i_41_]);
 					if (-1 != i_42_) {
 						int i_43_ = i_42_ >> 24 & 0x3;
-						if (!class329_sub1.aBool3786 || 0 == i_43_) {
+						if (!class329_sub1.overlayHidden || 0 == i_43_) {
 							int i_44_ = i_42_ >> 1 & 0x3;
 							int i_45_ = i_42_ >> 14 & 0x3ff;
 							int i_46_ = i_42_ >> 3 & 0x7ff;
@@ -388,6 +388,7 @@ public class MapRegion {
 		if (underLay) {
 			string = new StringBuilder().append('u').append(string).toString();
 		}
+		System.out.println(string);
 		return string;
 	}
 
@@ -800,14 +801,14 @@ public class MapRegion {
 					Exception_Sub3.method15619(true, -466489103);
 				}
 			}
-			this.aClass329_Sub1_3166.method5853(0, (this.aClass329_Sub1_3167.anIntArrayArrayArray3818[0]), -1156911590);
+			this.aClass329_Sub1_3166.method5853(0, (this.aClass329_Sub1_3167.unk0Data[0]), -1156911590);
 			this.aClass329_Sub1_3166.initClipMap(Renderers.SOFTWARE_RENDERER, null, null, (byte) 11);
 			this.sceneObjectManager.method3380(false, -914334995);
 			if (this.aBool3171) {
 				method4462(50, (byte) -1);
 			}
 		}
-		this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, (bool ? this.aClass329_Sub1_3166.anIntArrayArrayArray3818 : null), this.clipMaps, (byte) 44);
+		this.aClass329_Sub1_3167.initClipMap(Renderers.SOFTWARE_RENDERER, (bool ? this.aClass329_Sub1_3166.unk0Data : null), this.clipMaps, (byte) 44);
 		if (!this.aClass256_3163.method4410((byte) -39)) {
 			if (!this.aBool3171) {
 				Exception_Sub3.method15619(true, -1924347583);
@@ -978,7 +979,7 @@ public class MapRegion {
 				if (!this.aBool3171) {
 					Class282_Sub20_Sub24.method15391(-1503224937);
 				}
-				class329_sub1.decodeTileMasks(class282_sub35, x, y, 1948093437 * this.coordGrid.x, -1002240017 * this.coordGrid.y, this.clipMaps, (byte) -77);
+				class329_sub1.decodeTileMasksUnderlay(class282_sub35, x, y, 1948093437 * this.coordGrid.x, -1002240017 * this.coordGrid.y, this.clipMaps, (byte) -77);
 				class329_sub1.method12471(Renderers.SOFTWARE_RENDERER, class282_sub35, x, y, -885428044);
 			}
 		}
@@ -1005,7 +1006,7 @@ public class MapRegion {
 					int i_163_ = (this.anIntArrayArrayArray3205[i_160_][i_161_][i_162_]);
 					if (-1 != i_163_) {
 						int i_164_ = i_163_ >> 24 & 0x3;
-						if (!class329_sub1.aBool3786 || i_164_ == 0) {
+						if (!class329_sub1.overlayHidden || i_164_ == 0) {
 							int i_165_ = i_163_ >> 1 & 0x3;
 							int i_166_ = i_163_ >> 14 & 0x3ff;
 							int i_167_ = i_163_ >> 3 & 0x7ff;

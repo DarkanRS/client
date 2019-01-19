@@ -23,7 +23,7 @@ public class Class537 {
 
 	void method11488(RsByteBuffer class282_sub35, int i, int i_1_) {
 		if (1 == i)
-			aChar7096 = Class11.method470(class282_sub35.readByte((short) -12787), 276039281);
+			aChar7096 = Class11.method470(class282_sub35.readByte(), 276039281);
 		else if (i == 2) {
 			anInt7097 = class282_sub35.readUnsignedShort() * 1698820121;
 			anInt7098 = class282_sub35.readUnsignedByte() * -565030971;
@@ -51,7 +51,7 @@ public class Class537 {
 
 	void method11491(RsByteBuffer class282_sub35, int i) {
 		if (1 == i)
-			aChar7096 = Class11.method470(class282_sub35.readByte((short) -13983), 1713020466);
+			aChar7096 = Class11.method470(class282_sub35.readByte(), 1713020466);
 		else if (i == 2) {
 			anInt7097 = class282_sub35.readUnsignedShort() * 1698820121;
 			anInt7098 = class282_sub35.readUnsignedByte() * -565030971;

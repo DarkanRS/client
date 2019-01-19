@@ -85,7 +85,7 @@ public class Class282_Sub14 extends Node {
 		}
 		byte[] is_7_ = new byte[i];
 		for (int i_8_ = 0; i_8_ < i; i_8_++)
-			is_7_[i_8_] = class282_sub35.readByte((short) -13939);
+			is_7_[i_8_] = class282_sub35.readByte();
 		class282_sub35.index += -1115476867;
 		i++;
 		int i_9_ = class282_sub35.index * -1990677291;
@@ -96,7 +96,7 @@ public class Class282_Sub14 extends Node {
 		}
 		byte[] is_11_ = new byte[i_10_];
 		for (int i_12_ = 0; i_12_ < i_10_; i_12_++)
-			is_11_[i_12_] = class282_sub35.readByte((short) -32520);
+			is_11_[i_12_] = class282_sub35.readByte();
 		class282_sub35.index += -1115476867;
 		i_10_++;
 		int i_13_ = -1990677291 * class282_sub35.index;
@@ -107,7 +107,7 @@ public class Class282_Sub14 extends Node {
 		}
 		byte[] is_15_ = new byte[i_14_];
 		for (int i_16_ = 0; i_16_ < i_14_; i_16_++)
-			is_15_[i_16_] = class282_sub35.readByte((short) -20480);
+			is_15_[i_16_] = class282_sub35.readByte();
 		class282_sub35.index += -1115476867;
 		byte[] is_17_ = new byte[++i_14_];
 		int i_18_;
@@ -150,7 +150,7 @@ public class Class282_Sub14 extends Node {
 		}
 		byte[] is_28_ = new byte[i_27_];
 		for (int i_29_ = 0; i_29_ < i_27_; i_29_++)
-			is_28_[i_29_] = class282_sub35.readByte((short) -2803);
+			is_28_[i_29_] = class282_sub35.readByte();
 		class282_sub35.index += -1115476867;
 		i_27_++;
 		int i_30_ = 0;
@@ -246,20 +246,20 @@ public class Class282_Sub14 extends Node {
 			Class110 class110_45_ = class110s[i_44_];
 			if (null != ((Class110) class110_45_).aByteArray1097) {
 				for (int i_46_ = 1; i_46_ < ((Class110) class110_45_).aByteArray1097.length; i_46_ += 2)
-					((Class110) class110_45_).aByteArray1097[i_46_] = class282_sub35.readByte((short) -27725);
+					((Class110) class110_45_).aByteArray1097[i_46_] = class282_sub35.readByte();
 			}
 			if (null != ((Class110) class110_45_).aByteArray1094) {
 				for (int i_47_ = 3; (i_47_ < ((Class110) class110_45_).aByteArray1094.length - 2); i_47_ += 2)
-					((Class110) class110_45_).aByteArray1094[i_47_] = class282_sub35.readByte((short) -15460);
+					((Class110) class110_45_).aByteArray1094[i_47_] = class282_sub35.readByte();
 			}
 		}
 		if (null != is_25_) {
 			for (int i_48_ = 1; i_48_ < is_25_.length; i_48_ += 2)
-				is_25_[i_48_] = class282_sub35.readByte((short) -23798);
+				is_25_[i_48_] = class282_sub35.readByte();
 		}
 		if (is_26_ != null) {
 			for (int i_49_ = 1; i_49_ < is_26_.length; i_49_ += 2)
-				is_26_[i_49_] = class282_sub35.readByte((short) -28504);
+				is_26_[i_49_] = class282_sub35.readByte();
 		}
 		for (int i_50_ = 0; i_50_ < i_18_; i_50_++) {
 			Class110 class110_51_ = class110s[i_50_];

@@ -85,25 +85,25 @@ public class Class179 {
 	}
 
 	static void method2985() {
-		if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+		if (null != TextureDefinition.aFileOutputStream9481) {
 			try {
-				Class282_Sub50_Sub3.aFileOutputStream9481.close();
+				TextureDefinition.aFileOutputStream9481.close();
 			} catch (IOException ioexception) {
 				/* empty */
 			}
 		}
-		Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+		TextureDefinition.aFileOutputStream9481 = null;
 	}
 
 	static void method2986() {
-		if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+		if (null != TextureDefinition.aFileOutputStream9481) {
 			try {
-				Class282_Sub50_Sub3.aFileOutputStream9481.close();
+				TextureDefinition.aFileOutputStream9481.close();
 			} catch (IOException ioexception) {
 				/* empty */
 			}
 		}
-		Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+		TextureDefinition.aFileOutputStream9481 = null;
 	}
 
 	static void method2987() {
@@ -394,12 +394,12 @@ public class Class179 {
 							return;
 						}
 					}
-					if (Class282_Sub50_Sub3.aFileOutputStream9481 != null) {
-						Class282_Sub50_Sub3.aFileOutputStream9481.close();
-						Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+					if (TextureDefinition.aFileOutputStream9481 != null) {
+						TextureDefinition.aFileOutputStream9481.close();
+						TextureDefinition.aFileOutputStream9481 = null;
 					}
 					try {
-						Class282_Sub50_Sub3.aFileOutputStream9481 = new FileOutputStream(file);
+						TextureDefinition.aFileOutputStream9481 = new FileOutputStream(file);
 					} catch (FileNotFoundException filenotfoundexception) {
 						Class209.method3598(new StringBuilder().append("Could not create ").append(file.getName()).toString(), -1319963999);
 					} catch (SecurityException securityexception) {
@@ -408,9 +408,9 @@ public class Class179 {
 					return;
 				}
 				if (string.equals("closeoutput")) {
-					if (Class282_Sub50_Sub3.aFileOutputStream9481 != null)
-						Class282_Sub50_Sub3.aFileOutputStream9481.close();
-					Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+					if (TextureDefinition.aFileOutputStream9481 != null)
+						TextureDefinition.aFileOutputStream9481.close();
+					TextureDefinition.aFileOutputStream9481 = null;
 					return;
 				}
 				if (string.startsWith("runscript ")) {
@@ -708,9 +708,9 @@ public class Class179 {
 			for (int i_33_ = -1647152403 * anInt2227; i_33_ > 0; i_33_--)
 				Class13.aStringArray129[i_33_] = Class13.aStringArray129[i_33_ - 1];
 			Class13.aStringArray129[0] = new StringBuilder().append(string_31_).append(": ").append(strings[i_32_]).toString();
-			if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					Class282_Sub50_Sub3.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -94));
+					TextureDefinition.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -94));
 				} catch (IOException ioexception) {
 					/* empty */
 				}
@@ -736,9 +736,9 @@ public class Class179 {
 			for (int i_38_ = -1647152403 * anInt2227; i_38_ > 0; i_38_--)
 				Class13.aStringArray129[i_38_] = Class13.aStringArray129[i_38_ - 1];
 			Class13.aStringArray129[0] = new StringBuilder().append(string_36_).append(": ").append(strings[i_37_]).toString();
-			if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					Class282_Sub50_Sub3.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -117));
+					TextureDefinition.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -117));
 				} catch (IOException ioexception) {
 					/* empty */
 				}
@@ -764,9 +764,9 @@ public class Class179 {
 			for (int i_43_ = -1647152403 * anInt2227; i_43_ > 0; i_43_--)
 				Class13.aStringArray129[i_43_] = Class13.aStringArray129[i_43_ - 1];
 			Class13.aStringArray129[0] = new StringBuilder().append(string_41_).append(": ").append(strings[i_42_]).toString();
-			if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					Class282_Sub50_Sub3.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -102));
+					TextureDefinition.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -102));
 				} catch (IOException ioexception) {
 					/* empty */
 				}
@@ -815,14 +815,14 @@ public class Class179 {
 	}
 
 	static void method3006() {
-		if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+		if (null != TextureDefinition.aFileOutputStream9481) {
 			try {
-				Class282_Sub50_Sub3.aFileOutputStream9481.close();
+				TextureDefinition.aFileOutputStream9481.close();
 			} catch (IOException ioexception) {
 				/* empty */
 			}
 		}
-		Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+		TextureDefinition.aFileOutputStream9481 = null;
 	}
 
 	static void method3007(String[] strings) {
@@ -1047,12 +1047,12 @@ public class Class179 {
 							return;
 						}
 					}
-					if (Class282_Sub50_Sub3.aFileOutputStream9481 != null) {
-						Class282_Sub50_Sub3.aFileOutputStream9481.close();
-						Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+					if (TextureDefinition.aFileOutputStream9481 != null) {
+						TextureDefinition.aFileOutputStream9481.close();
+						TextureDefinition.aFileOutputStream9481 = null;
 					}
 					try {
-						Class282_Sub50_Sub3.aFileOutputStream9481 = new FileOutputStream(file);
+						TextureDefinition.aFileOutputStream9481 = new FileOutputStream(file);
 					} catch (FileNotFoundException filenotfoundexception) {
 						Class209.method3598(new StringBuilder().append("Could not create ").append(file.getName()).toString(), -1108968707);
 					} catch (SecurityException securityexception) {
@@ -1061,9 +1061,9 @@ public class Class179 {
 					return;
 				}
 				if (string.equals("closeoutput")) {
-					if (Class282_Sub50_Sub3.aFileOutputStream9481 != null)
-						Class282_Sub50_Sub3.aFileOutputStream9481.close();
-					Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+					if (TextureDefinition.aFileOutputStream9481 != null)
+						TextureDefinition.aFileOutputStream9481.close();
+					TextureDefinition.aFileOutputStream9481 = null;
 					return;
 				}
 				if (string.startsWith("runscript ")) {

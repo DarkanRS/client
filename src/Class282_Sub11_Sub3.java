@@ -11,7 +11,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 
 	void method12206(RsByteBuffer class282_sub35) {
 		((Class282_Sub11_Sub3) this).anInt10061 = class282_sub35.readUnsignedShort() * -800503111;
-		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -17571);
+		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte();
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(1060653483);
 		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
@@ -19,7 +19,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 
 	void method12208(RsByteBuffer class282_sub35) {
 		((Class282_Sub11_Sub3) this).anInt10061 = class282_sub35.readUnsignedShort() * -800503111;
-		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -25078);
+		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte();
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(1948051444);
 		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
@@ -39,7 +39,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 
 	void method12203(RsByteBuffer class282_sub35, int i) {
 		((Class282_Sub11_Sub3) this).anInt10061 = class282_sub35.readUnsignedShort() * -800503111;
-		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -30046);
+		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte();
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(-3036577);
 		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();
@@ -47,7 +47,7 @@ public class Class282_Sub11_Sub3 extends Class282_Sub11 {
 
 	void method12207(RsByteBuffer class282_sub35) {
 		((Class282_Sub11_Sub3) this).anInt10061 = class282_sub35.readUnsignedShort() * -800503111;
-		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte((short) -300);
+		((Class282_Sub11_Sub3) this).aByte10062 = class282_sub35.readByte();
 		((Class282_Sub11_Sub3) this).anInt10063 = class282_sub35.readUnsignedShort() * 1544248451;
 		class282_sub35.readLong(270516625);
 		((Class282_Sub11_Sub3) this).aString10064 = class282_sub35.readString();

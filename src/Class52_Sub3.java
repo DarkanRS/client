@@ -71,7 +71,7 @@ public class Class52_Sub3 extends Class52 {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class240.method4136(class118, class98, class527, (byte) 55);
+		QuestDefinitions.method4136(class118, class98, class527, (byte) 55);
 	}
 
 	public static int[] method14522(int i) {

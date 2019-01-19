@@ -31,7 +31,7 @@ public class Class291 {
 	static byte[] aByteArray3475;
 	protected static int anInt3476;
 	static byte[] underlayData;
-	static byte[] aByteArray3478;
+	static byte[] rgbColors;
 	static short[] aShortArray3479;
 	protected static int anInt3480;
 	static int[] anIntArray3481;
@@ -135,7 +135,7 @@ public class Class291 {
 							int i_28_ = 0;
 							Object object = null;
 							if (i_25_ >= 0 && i_25_ < yLength) {
-								i_27_ = ((aByteArray3478[i_26_] & 0xff) << 16 | aShortArray3479[i_26_] & 0xffff);
+								i_27_ = ((rgbColors[i_26_] & 0xff) << 16 | aShortArray3479[i_26_] & 0xffff);
 								if (i_27_ != 0)
 									i_27_ |= ~0xffffff;
 								i_28_ = aByteArray3453[i_26_] & 0xff;
@@ -354,7 +354,7 @@ public class Class291 {
 
 	static void method5137() {
 		underlayData = null;
-		aByteArray3478 = null;
+		rgbColors = null;
 		aShortArray3479 = null;
 		aByteArray3453 = null;
 		aByteArray3487 = null;
@@ -561,7 +561,7 @@ public class Class291 {
 				} else {
 					aByteArray3453[i_207_ + i_208_ * xLength] = (byte) i_211_;
 					aByteArray3487[i_207_ + i_208_ * xLength] = (byte) 0;
-					underlayData[i_207_ + i_208_ * xLength] = class282_sub35.readByte((short) -21653);
+					underlayData[i_207_ + i_208_ * xLength] = class282_sub35.readByte();
 				}
 			}
 		} else {
@@ -585,13 +585,13 @@ public class Class291 {
 					aByteArray3487[i_207_ + i_208_ * xLength] = (byte) i_217_;
 					if (i_218_ == 1) {
 						anObjectArray3488[i_207_ + i_208_ * xLength] = new Integer(class282_sub35.readBigSmart());
-						aByteArray3475[i_207_ + i_208_ * xLength] = class282_sub35.readByte((short) -132);
+						aByteArray3475[i_207_ + i_208_ * xLength] = class282_sub35.readByte();
 					} else if (i_218_ > 1) {
 						int[] is_219_ = new int[i_218_];
 						byte[] is_220_ = new byte[i_218_];
 						for (int i_221_ = 0; i_221_ < i_218_; i_221_++) {
 							is_219_[i_221_] = class282_sub35.readBigSmart();
-							is_220_[i_221_] = class282_sub35.readByte((short) -2494);
+							is_220_[i_221_] = class282_sub35.readByte();
 						}
 						anObjectArray3488[i_207_ + i_208_ * xLength] = new Class282_Sub49(is_219_, is_220_);
 					}
@@ -603,7 +603,7 @@ public class Class291 {
 						is_223_ = new byte[i_218_];
 						for (int i_224_ = 0; i_224_ < i_218_; i_224_++) {
 							is_222_[i_224_] = class282_sub35.readBigSmart();
-							is_223_[i_224_] = class282_sub35.readByte((short) -2920);
+							is_223_[i_224_] = class282_sub35.readByte();
 						}
 					}
 					if ((anArrayListArrayArrayArray3484[i_214_ - 1][i - (anInt3472 >> 6)][i_206_ - (anInt3473 >> 6)]) == null)
@@ -616,15 +616,15 @@ public class Class291 {
 	}
 	
 	static int method5164(Interface22 interface22, int i, int i_252_, int i_253_) {
-		Class531 class531 = aClass536_3482.method11475(i, (byte) 0);
+		OverlayDef class531 = aClass536_3482.method11475(i, (byte) 0);
 		if (class531 == null)
 			return 0;
-		int i_254_ = class531.anInt7066 * 1717409107;
+		int i_254_ = class531.texture * 1717409107;
 		if (i_254_ >= 0 && interface22.method144(i_254_, -1948706533).aBool2056)
 			i_254_ = -1;
 		int i_255_;
-		if (class531.anInt7058 * -848345857 >= 0) {
-			int i_256_ = class531.anInt7058 * -848345857;
+		if (class531.col1 * -848345857 >= 0) {
+			int i_256_ = class531.col1 * -848345857;
 			int i_257_ = (i_256_ & 0x7f) + i_253_;
 			if (i_257_ < 0)
 				i_257_ = 0;
@@ -634,10 +634,10 @@ public class Class291 {
 			i_255_ = (~0xffffff | (Class335.anIntArray3916[Class372.method6362(Class242.method4162(i_258_, 96, (byte) -73), 475535484) & 0xffff]));
 		} else if (i_254_ >= 0)
 			i_255_ = (~0xffffff | (Class335.anIntArray3916[Class372.method6362(Class242.method4162((interface22.method144(i_254_, -1979012450).aShort2073), 96, (byte) -53), 390293203) & 0xffff]));
-		else if (class531.anInt7054 * 1419498143 == -1)
+		else if (class531.col0 * 1419498143 == -1)
 			i_255_ = 0;
 		else {
-			int i_259_ = class531.anInt7054 * 1419498143;
+			int i_259_ = class531.col0 * 1419498143;
 			int i_260_ = (i_259_ & 0x7f) + i_253_;
 			if (i_260_ < 0)
 				i_260_ = 0;
@@ -741,10 +741,10 @@ public class Class291 {
 			}
 		}
 		Object object = null;
-		aByteArray3478 = new byte[xLength * yLength];
+		rgbColors = new byte[xLength * yLength];
 		aShortArray3479 = new short[xLength * yLength];
 		for (int i_547_ = 0; i_547_ < 3; i_547_++) {
-			byte[] is_548_ = new byte[xLength * yLength];
+			byte[] underlayData = new byte[xLength * yLength];
 			for (int i_549_ = 0; i_549_ < anArrayListArrayArrayArray3484[i_547_].length; i_549_++) {
 				for (int i_550_ = 0; i_550_ < anArrayListArrayArrayArray3484[i_547_][0].length; i_550_++) {
 					ArrayList arraylist = (anArrayListArrayArrayArray3484[i_547_][i_549_][i_550_]);
@@ -752,12 +752,12 @@ public class Class291 {
 						Iterator iterator = arraylist.iterator();
 						while (iterator.hasNext()) {
 							Class269 class269 = (Class269) iterator.next();
-							is_548_[(i_549_ * 64 + ((Class269) class269).aByte3311 + ((i_550_ * 64 + ((Class269) class269).aByte3309) * xLength))] = (byte) ((Class269) class269).anInt3310;
+							underlayData[(i_549_ * 64 + ((Class269) class269).aByte3311 + ((i_550_ * 64 + ((Class269) class269).aByte3309) * xLength))] = (byte) ((Class269) class269).anInt3310;
 						}
 					}
 				}
 			}
-			decodeUnderlayColors(is_548_, aByteArray3478, aShortArray3479, i, i_527_);
+			decodeUnderlayColors(underlayData, rgbColors, aShortArray3479, i, i_527_);
 			for (int i_551_ = 0; i_551_ < anArrayListArrayArrayArray3484[i_547_].length; i_551_++) {
 				for (int i_552_ = 0; i_552_ < anArrayListArrayArrayArray3484[i_547_][0].length; i_552_++) {
 					ArrayList arraylist = (anArrayListArrayArrayArray3484[i_547_][i_551_][i_552_]);
@@ -766,7 +766,7 @@ public class Class291 {
 						while (iterator.hasNext()) {
 							Class269 class269 = (Class269) iterator.next();
 							int i_553_ = (i_551_ * 64 + ((Class269) class269).aByte3311 + ((i_552_ * 64 + ((Class269) class269).aByte3309) * xLength));
-							((Class269) class269).anInt3310 = ((aByteArray3478[i_553_] & 0xff) << 16 | aShortArray3479[i_553_] & 0xffff);
+							((Class269) class269).anInt3310 = ((rgbColors[i_553_] & 0xff) << 16 | aShortArray3479[i_553_] & 0xffff);
 							if (((Class269) class269).anInt3310 != 0)
 								((Class269) class269).anInt3310 |= ~0xffffff;
 						}
@@ -774,12 +774,12 @@ public class Class291 {
 				}
 			}
 		}
-		decodeUnderlayColors(underlayData, aByteArray3478, aShortArray3479, i, i_527_);
+		decodeUnderlayColors(underlayData, rgbColors, aShortArray3479, i, i_527_);
 		underlayData = null;
 		method5136();
 	}
 
-	static void decodeUnderlayColors(byte[] underlayData, byte[] is_677_, short[] is_678_, int i, int i_679_) {
+	static void decodeUnderlayColors(byte[] underlayData, byte[] finalColors, short[] is_678_, int i, int i_679_) {
 		int[] a1 = new int[yLength];
 		int[] a2 = new int[yLength];
 		int[] a3 = new int[yLength];
@@ -840,7 +840,7 @@ public class Class291 {
 					if (y >= 0 && r3 > 0) {
 						if ((underlayData[x + y * xLength] & 0xff) == 0) {
 							int i_699_ = x + y * xLength;
-							is_677_[i_699_] = (byte) 0;
+							finalColors[i_699_] = (byte) 0;
 							is_678_[i_699_] = (short) 0;
 						} else {
 							int i_700_ = (r2 == 0 ? 0 : Class371.method6348(c1 * 256 / r2, c2 / r3, c3 / r3, -517505406));
@@ -852,7 +852,7 @@ public class Class291 {
 							int i_702_ = ((i_700_ + i & 0xfc00) + (i_700_ & 0x380) + i_701_);
 							int tile = x + y * xLength;
 							int i_704_ = (Class335.anIntArray3916[(Class372.method6362(Class96_Sub21.method14677(i_702_, 96, -74258659), 880885246)) & 0xffff]);
-							is_677_[tile] = (byte) (i_704_ >> 16 & 0xff);
+							finalColors[tile] = (byte) (i_704_ >> 16 & 0xff);
 							is_678_[tile] = (short) (i_704_ & 0xffff);
 						}
 					}

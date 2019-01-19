@@ -745,9 +745,9 @@ public class Player extends Animable {
 			((Player) this).postfixTitle = buffer.readGJString(-1660604826);
 		else
 			((Player) this).postfixTitle = null;
-		skullId = buffer.readByte((short) -6126) * -451636825;
-		headIconId = buffer.readByte((short) -7122) * 719121349;
-		hidden = buffer.readByte((short) -24079) == 1;
+		skullId = buffer.readByte() * -451636825;
+		headIconId = buffer.readByte() * 719121349;
+		hidden = buffer.readByte() == 1;
 		if (Class496.aClass496_5813 == Class90.aClass496_952 && client.rights * -644057819 >= 2)
 			hidden = false;
 		int effectData = -1;

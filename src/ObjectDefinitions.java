@@ -110,7 +110,7 @@ public class ObjectDefinitions {
 			aByteArray5636 = new byte[i_4_];
 			anIntArrayArray5637 = new int[i_4_][];
 			for (int i_5_ = 0; i_5_ < i_4_; i_5_++) {
-				aByteArray5636[i_5_] = stream.readByte((short) -16663);
+				aByteArray5636[i_5_] = stream.readByte();
 				int i_6_ = stream.readUnsignedByte();
 				anIntArrayArray5637[i_5_] = new int[i_6_];
 				for (int i_7_ = 0; i_7_ < i_6_; i_7_++)
@@ -144,9 +144,9 @@ public class ObjectDefinitions {
 		else if (opcode == 28)
 			anInt5661 = (stream.readUnsignedByte() << 2) * -256480385;
 		else if (opcode == 29)
-			((ObjectDefinitions) this).anInt5692 = stream.readByte((short) -31310) * -887236111;
+			((ObjectDefinitions) this).anInt5692 = stream.readByte() * -887236111;
 		else if (39 == opcode)
-			((ObjectDefinitions) this).anInt5663 = stream.readByte((short) -24295) * -520358997;
+			((ObjectDefinitions) this).anInt5663 = stream.readByte() * -520358997;
 		else if (opcode >= 30 && opcode < 35)
 			options[opcode - 30] = stream.readString();
 		else if (40 == opcode) {
@@ -169,7 +169,7 @@ public class ObjectDefinitions {
 			int i_13_ = stream.readUnsignedByte();
 			((ObjectDefinitions) this).aByteArray5641 = new byte[i_13_];
 			for (int i_14_ = 0; i_14_ < i_13_; i_14_++)
-				((ObjectDefinitions) this).aByteArray5641[i_14_] = stream.readByte((short) -18578);
+				((ObjectDefinitions) this).aByteArray5641[i_14_] = stream.readByte();
 		} else if (opcode == 62)
 			aBool5674 = true;
 		else if (opcode == 64)
@@ -285,10 +285,10 @@ public class ObjectDefinitions {
 			((ObjectDefinitions) this).aByte5697 = (byte) 3;
 			((ObjectDefinitions) this).anInt5654 = stream.readInt() * -1833231597;
 		} else if (163 == opcode) {
-			((ObjectDefinitions) this).aByte5644 = stream.readByte((short) -5428);
-			((ObjectDefinitions) this).aByte5642 = stream.readByte((short) -3687);
-			((ObjectDefinitions) this).aByte5646 = stream.readByte((short) -32207);
-			((ObjectDefinitions) this).aByte5634 = stream.readByte((short) -12177);
+			((ObjectDefinitions) this).aByte5644 = stream.readByte();
+			((ObjectDefinitions) this).aByte5642 = stream.readByte();
+			((ObjectDefinitions) this).aByte5646 = stream.readByte();
+			((ObjectDefinitions) this).aByte5634 = stream.readByte();
 		} else if (164 == opcode)
 			((ObjectDefinitions) this).anInt5682 = stream.readShort(1834354367) * -2137677977;
 		else if (165 == opcode)

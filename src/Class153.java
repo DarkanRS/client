@@ -104,15 +104,15 @@ public final class Class153 {
 			((Class153) this).aClass465_1963.method7749(-1479031717);
 	}
 
-	static final int method2617(GraphicalRenderer class505, Class531 class531, byte i) {
-		if (-848345857 * class531.anInt7058 != -1)
-			return -848345857 * class531.anInt7058;
-		if (-1 != class531.anInt7066 * 1717409107) {
-			Class169 class169 = class505.anInterface22_5834.method144(1717409107 * class531.anInt7066, -2032882535);
+	static final int method2617(GraphicalRenderer class505, OverlayDef class531, byte i) {
+		if (-848345857 * class531.col1 != -1)
+			return -848345857 * class531.col1;
+		if (-1 != class531.texture * 1717409107) {
+			Class169 class169 = class505.anInterface22_5834.method144(1717409107 * class531.texture, -2032882535);
 			if (!class169.aBool2056)
 				return class169.aShort2073;
 		}
-		return 1419498143 * class531.anInt7054;
+		return 1419498143 * class531.col0;
 	}
 
 	public static Class268 method2618(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_) {

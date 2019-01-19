@@ -3710,7 +3710,7 @@ public final class client extends Engine {
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.aClass375_4416) {
 			Class158_Sub1_Sub2.anInt10131 = ((class282_sub35_sub2.read128Byte((short) -4478) << 3) * 657999909);
 			Class272.anInt3331 = class282_sub35_sub2.readUnsignedByte128(-1318725993) * 1822731553;
-			SceneObjectType.anInt5495 = ((class282_sub35_sub2.readByte((short) -8664) << 3) * 801275545);
+			SceneObjectType.anInt5495 = ((class282_sub35_sub2.readByte() << 3) * 801275545);
 			while (-1990677291 * class282_sub35_sub2.index < 715663393 * ((Class184) class184).anInt2287) {
 				TilestreamPacket class364 = (Class163.method2842(-332458150)[class282_sub35_sub2.readUnsignedByte()]);
 				Class188.decodeTilestreamPacket(class364, 129183279);
@@ -3969,7 +3969,7 @@ public final class client extends Engine {
 			if (99 == i)
 				Class209.method3598(string_267_, -1570248548);
 			else if (i == 98)
-				Class240.method4140(string_267_, -383881056);
+				QuestDefinitions.method4140(string_267_, -383881056);
 			else {
 				if (!string_266_.equals("") && Class280.method4975(string_266_, (byte) -22)) {
 					((Class184) class184).aClass375_2286 = null;
@@ -4106,7 +4106,7 @@ public final class client extends Engine {
 			return false;
 		}
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.aClass375_4499) {
-			aByte7458 = class282_sub35_sub2.readByte((short) -16800);
+			aByte7458 = class282_sub35_sub2.readByte();
 			if (0 == aByte7458 || aByte7458 == 1)
 				aBool7323 = true;
 			((Class184) class184).aClass375_2286 = null;
@@ -4225,7 +4225,7 @@ public final class client extends Engine {
 				class282_sub35_sub2.readString();
 			long l = class282_sub35_sub2.readLong(107300434);
 			aString7426 = Class306.method5457(l);
-			Class412.aByte4963 = class282_sub35_sub2.readByte((short) -29269);
+			Class412.aByte4963 = class282_sub35_sub2.readByte();
 			int i = class282_sub35_sub2.readUnsignedByte();
 			if (i == 255) {
 				((Class184) class184).aClass375_2286 = null;
@@ -4243,7 +4243,7 @@ public final class client extends Engine {
 					class173s[i_299_].aString2127 = class173s[i_299_].aString2129;
 				((Class173) class173s[i_299_]).aString2128 = Class383.method6515(class173s[i_299_].aString2127, 1942118537);
 				class173s[i_299_].anInt2131 = class282_sub35_sub2.readUnsignedShort() * 1704138443;
-				class173s[i_299_].aByte2126 = class282_sub35_sub2.readByte((short) -220);
+				class173s[i_299_].aByte2126 = class282_sub35_sub2.readByte();
 				class173s[i_299_].aString2130 = class282_sub35_sub2.readString();
 				if (class173s[i_299_].aString2127.equals(Class84.myPlayer.displayName))
 					Class48_Sub2.aByte9263 = class173s[i_299_].aByte2126;
@@ -4552,7 +4552,7 @@ public final class client extends Engine {
 		}
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.aClass375_4474) {
 			int i = class282_sub35_sub2.readUnsignedShort();
-			byte i_333_ = class282_sub35_sub2.readByte((short) -19126);
+			byte i_333_ = class282_sub35_sub2.readByte();
 			if (null == Class46.anObjectArray437)
 				Class46.anObjectArray437 = (new Object[117597627 * IndexLoaders.aClass394_5831.anInt4785]);
 			Class46.anObjectArray437[i] = new Integer(i_333_);
@@ -4590,7 +4590,7 @@ public final class client extends Engine {
 		}
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.aClass375_4392) {
 			SceneObjectType.anInt5495 = (class282_sub35_sub2.read128Byte((short) 4785) << 3) * 801275545;
-			Class158_Sub1_Sub2.anInt10131 = ((class282_sub35_sub2.readByte((short) -7169) << 3) * 657999909);
+			Class158_Sub1_Sub2.anInt10131 = ((class282_sub35_sub2.readByte() << 3) * 657999909);
 			Class272.anInt3331 = class282_sub35_sub2.readUnsignedByte() * 1822731553;
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1453531757);
 			for (Class282_Sub29 class282_sub29 = (Class282_Sub29) aClass465_7414.method7750(-930090367); null != class282_sub29; class282_sub29 = (Class282_Sub29) aClass465_7414.method7751((byte) 74)) {
@@ -4807,7 +4807,7 @@ public final class client extends Engine {
 			return false;
 		}
 		if (((Class184) class184).aClass375_2286 == IncomingPacket.CONFIG_1) {
-			byte i = class282_sub35_sub2.readByte((short) -27596);
+			byte i = class282_sub35_sub2.readByte();
 			int i_367_ = class282_sub35_sub2.readShortLE128();
 			Class158_Sub1.aClass3_8507.method281(i_367_, i, (byte) 93);
 			((Class184) class184).aClass375_2286 = null;
@@ -4841,7 +4841,7 @@ public final class client extends Engine {
 			else
 				string_375_ = string;
 			int i = class282_sub35_sub2.readUnsignedShort();
-			byte i_376_ = class282_sub35_sub2.readByte((short) -30863);
+			byte i_376_ = class282_sub35_sub2.readByte();
 			boolean bool_377_ = false;
 			if (-128 == i_376_)
 				bool_377_ = true;
@@ -5018,7 +5018,7 @@ public final class client extends Engine {
 			return true;
 		}
 		if (IncomingPacket.aClass375_4453 == ((Class184) class184).aClass375_2286) {
-			byte i = class282_sub35_sub2.readByte((short) -6019);
+			byte i = class282_sub35_sub2.readByte();
 			int i_397_ = class282_sub35_sub2.readUnsignedByteC(683856118);
 			Class470.method7825(331907383);
 			Class52_Sub2.method14501(i, i_397_, -167198036);
@@ -19529,8 +19529,8 @@ public final class client extends Engine {
 			boolean bool = 0 != (i & 0x80);
 			int i_2352_ = (i >> 3 & 0x7) + -2109540951 * SceneObjectType.anInt5495;
 			int i_2353_ = (i & 0x7) + 71472045 * Class158_Sub1_Sub2.anInt10131;
-			int i_2354_ = i_2352_ + class282_sub35_sub2.readByte((short) -10717);
-			int i_2355_ = i_2353_ + class282_sub35_sub2.readByte((short) -11755);
+			int i_2354_ = i_2352_ + class282_sub35_sub2.readByte();
+			int i_2355_ = i_2353_ + class282_sub35_sub2.readByte();
 			int i_2356_ = class282_sub35_sub2.readShort(1645165014);
 			int i_2357_ = class282_sub35_sub2.readUnsignedShort();
 			int i_2358_ = class282_sub35_sub2.readUnsignedByte() * 4;
@@ -19743,8 +19743,8 @@ public final class client extends Engine {
 			boolean bool = (i_2439_ & 0x1) != 0;
 			boolean bool_2440_ = 0 != (i_2439_ & 0x2);
 			int i_2441_ = bool_2440_ ? i_2439_ >> 2 : -1;
-			int i_2442_ = i_2437_ + class282_sub35_sub2.readByte((short) -224);
-			int i_2443_ = i_2438_ + class282_sub35_sub2.readByte((short) -32306);
+			int i_2442_ = i_2437_ + class282_sub35_sub2.readByte();
+			int i_2443_ = i_2438_ + class282_sub35_sub2.readByte();
 			int i_2444_ = class282_sub35_sub2.readShort(1641501837);
 			int i_2445_ = class282_sub35_sub2.readShort(1857049612);
 			int i_2446_ = class282_sub35_sub2.readUnsignedShort();

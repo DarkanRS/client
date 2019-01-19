@@ -5,7 +5,7 @@
 public interface Interface41 {
 	public Class445 method230();
 
-	public int method84(int i);
+	public int getCompletion(int i);
 
 	public int method231();
 

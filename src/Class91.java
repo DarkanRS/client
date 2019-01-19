@@ -69,11 +69,11 @@ public class Class91 {
 			if ((i_33_ & 0x2) == 0) {
 				if ((i_33_ & 0x1) == 0) {
 					for (int i_34_ = 0; i_34_ < i_32_; i_34_++)
-						class91.aByteArray960[i_34_] = class282_sub35.readByte((short) -19464);
+						class91.aByteArray960[i_34_] = class282_sub35.readByte();
 				} else {
 					for (int i_35_ = 0; i_35_ < class91.anInt957; i_35_++) {
 						for (int i_36_ = 0; i_36_ < class91.anInt954; i_36_++)
-							class91.aByteArray960[(i_35_ + i_36_ * class91.anInt957)] = class282_sub35.readByte((short) -9979);
+							class91.aByteArray960[(i_35_ + i_36_ * class91.anInt957)] = class282_sub35.readByte();
 					}
 				}
 			} else {
@@ -81,19 +81,19 @@ public class Class91 {
 				class91.aByteArray961 = new byte[i_32_];
 				if ((i_33_ & 0x1) == 0) {
 					for (int i_37_ = 0; i_37_ < i_32_; i_37_++)
-						class91.aByteArray960[i_37_] = class282_sub35.readByte((short) -11258);
+						class91.aByteArray960[i_37_] = class282_sub35.readByte();
 					for (int i_38_ = 0; i_38_ < i_32_; i_38_++) {
-						byte i_39_ = (class91.aByteArray961[i_38_] = class282_sub35.readByte((short) -29337));
+						byte i_39_ = (class91.aByteArray961[i_38_] = class282_sub35.readByte());
 						bool = bool | i_39_ != -1;
 					}
 				} else {
 					for (int i_40_ = 0; i_40_ < class91.anInt957; i_40_++) {
 						for (int i_41_ = 0; i_41_ < class91.anInt954; i_41_++)
-							class91.aByteArray960[(i_40_ + i_41_ * class91.anInt957)] = class282_sub35.readByte((short) -5480);
+							class91.aByteArray960[(i_40_ + i_41_ * class91.anInt957)] = class282_sub35.readByte();
 					}
 					for (int i_42_ = 0; i_42_ < class91.anInt957; i_42_++) {
 						for (int i_43_ = 0; i_43_ < class91.anInt954; i_43_++) {
-							byte i_44_ = (class91.aByteArray961[i_42_ + i_43_ * class91.anInt957] = class282_sub35.readByte((short) -2518));
+							byte i_44_ = (class91.aByteArray961[i_42_ + i_43_ * class91.anInt957] = class282_sub35.readByte());
 							bool = bool | i_44_ != -1;
 						}
 					}

@@ -24,7 +24,7 @@ public class AttributeDefault {
 
 	void method7316(RsByteBuffer class282_sub35, int i, byte i_1_) {
 		if (i == 1)
-			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -15275), 1486768413);
+			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte(), 1486768413);
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
@@ -35,7 +35,7 @@ public class AttributeDefault {
 
 	void method7317(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -9046), 1244571207);
+			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte(), 1244571207);
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)
@@ -63,7 +63,7 @@ public class AttributeDefault {
 
 	void method7320(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte((short) -6827), -1180390377);
+			((AttributeDefault) this).aChar5336 = Class11.method470(class282_sub35.readByte(), -1180390377);
 		else if (2 == i)
 			anInt5337 = class282_sub35.readInt() * -1363087987;
 		else if (4 == i)

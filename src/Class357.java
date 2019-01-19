@@ -42,7 +42,7 @@ public class Class357 implements Interface3 {
 		if (i_4_ == 99)
 			Class209.method3598(string, -914132655);
 		else if (98 == i_4_)
-			Class240.method4140(string, 2053399101);
+			QuestDefinitions.method4140(string, 2053399101);
 		else
 			Class191.method3167(i_4_, i_5_, "", "", "", string, 30910415);
 	}

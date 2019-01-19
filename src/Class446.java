@@ -22,7 +22,7 @@ public class Class446 {
 	public static Class446 aClass446_5401;
 	public static Class446 aClass446_5402;
 	public static Class446 aClass446_5403;
-	public static Class446 aClass446_5404;
+	public static Class446 TEXTURE_INDEX_LOADER;
 	public static Class446 aClass446_5405;
 	Class445 aClass445_5406;
 	public static Class446 aClass446_5407;
@@ -54,14 +54,14 @@ public class Class446 {
 	}
 
 	public static Class446[] method7433() {
-		return (new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, aClass446_5404, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 });
+		return (new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, TEXTURE_INDEX_LOADER, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 });
 	}
 
 	static void method7434(CS2Executor class527, short i) {
 		class527.intStack[1942118537 * class527.intStackPtr - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 1]), -1396181317).anInt2960) * -1031162511;
 	}
 
-	public void method7435(Interface41 interface41, byte i) {
+	public void initializeIndexLoader(Interface41 interface41, byte i) {
 		if (interface41.method232((byte) -115) != ((Class446) this).aClass445_5406)
 			throw new IllegalArgumentException();
 		((Class446) this).anInterface41_5414 = interface41;
@@ -85,7 +85,7 @@ public class Class446 {
 		aClass446_5401 = new Class446(Class445.aClass445_5381);
 		aClass446_5402 = new Class446(Class445.aClass445_5381);
 		aClass446_5403 = new Class446(Class445.aClass445_5381);
-		aClass446_5404 = new Class446(Class445.aClass445_5381);
+		TEXTURE_INDEX_LOADER = new Class446(Class445.aClass445_5381);
 		aClass446_5405 = new Class446(Class445.aClass445_5381);
 		aClass446_5410 = new Class446(Class445.aClass445_5381);
 		aClass446_5407 = new Class446(Class445.aClass445_5380);
@@ -96,11 +96,11 @@ public class Class446 {
 	}
 
 	public static Class446[] method7436(byte i) {
-		return (new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, aClass446_5404, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 });
+		return (new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, TEXTURE_INDEX_LOADER, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 });
 	}
 
 	public static Class446[] method7437() {
-		return (new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, aClass446_5404, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 });
+		return (new Class446[] { aClass446_5386, aClass446_5412, aClass446_5387, aClass446_5388, aClass446_5389, aClass446_5415, aClass446_5385, aClass446_5392, aClass446_5390, aClass446_5394, aClass446_5395, aClass446_5397, aClass446_5393, aClass446_5413, aClass446_5399, aClass446_5400, aClass446_5401, aClass446_5402, aClass446_5403, TEXTURE_INDEX_LOADER, aClass446_5405, aClass446_5410, aClass446_5407, aClass446_5391, aClass446_5409, aClass446_5398, aClass446_5411 });
 	}
 
 	public int method7438() {

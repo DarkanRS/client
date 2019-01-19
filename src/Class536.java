@@ -8,20 +8,20 @@ public class Class536 {
 	public int anInt7094;
 	Index aClass317_7095;
 
-	public Class531 method11474(int i) {
-		Class531 class531;
+	public OverlayDef method11474(int i) {
+		OverlayDef class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
+			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1972523322));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1972523322));
 		}
-		class531 = new Class531();
-		((Class531) class531).aClass536_7062 = this;
-		((Class531) class531).anInt7053 = -609380743 * i;
+		class531 = new OverlayDef();
+		((OverlayDef) class531).aClass536_7062 = this;
+		((OverlayDef) class531).anInt7053 = -609380743 * i;
 		if (null != is)
 			class531.method11357(new RsByteBuffer(is), -279483513);
 		class531.method11356((byte) -125);
@@ -31,20 +31,20 @@ public class Class536 {
 		return class531;
 	}
 
-	public Class531 method11475(int i, byte i_0_) {
-		Class531 class531;
+	public OverlayDef method11475(int i, byte i_0_) {
+		OverlayDef class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
+			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1901150108));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1901150108));
 		}
-		class531 = new Class531();
-		((Class531) class531).aClass536_7062 = this;
-		((Class531) class531).anInt7053 = -609380743 * i;
+		class531 = new OverlayDef();
+		((OverlayDef) class531).aClass536_7062 = this;
+		((OverlayDef) class531).anInt7053 = -609380743 * i;
 		if (null != is)
 			class531.method11357(new RsByteBuffer(is), 1338105221);
 		class531.method11356((byte) -46);
@@ -72,20 +72,20 @@ public class Class536 {
 		}
 	}
 
-	public Class531 method11479(int i) {
-		Class531 class531;
+	public OverlayDef method11479(int i) {
+		OverlayDef class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
+			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1679639365));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1679639365));
 		}
-		class531 = new Class531();
-		((Class531) class531).aClass536_7062 = this;
-		((Class531) class531).anInt7053 = -609380743 * i;
+		class531 = new OverlayDef();
+		((OverlayDef) class531).aClass536_7062 = this;
+		((OverlayDef) class531).anInt7053 = -609380743 * i;
 		if (null != is)
 			class531.method11357(new RsByteBuffer(is), 1704529585);
 		class531.method11356((byte) -52);
@@ -101,20 +101,20 @@ public class Class536 {
 		}
 	}
 
-	public Class531 method11481(int i) {
-		Class531 class531;
+	public OverlayDef method11481(int i) {
+		OverlayDef class531;
 		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((Class531) ((Class536) this).aClass229_7092.get((long) i));
+			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
 		}
 		if (class531 != null)
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.aClass120_1514.id, i, -1865732659));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1865732659));
 		}
-		class531 = new Class531();
-		((Class531) class531).aClass536_7062 = this;
-		((Class531) class531).anInt7053 = -609380743 * i;
+		class531 = new OverlayDef();
+		((OverlayDef) class531).aClass536_7062 = this;
+		((OverlayDef) class531).anInt7053 = -609380743 * i;
 		if (null != is)
 			class531.method11357(new RsByteBuffer(is), -541895478);
 		class531.method11356((byte) -88);
@@ -150,7 +150,7 @@ public class Class536 {
 
 	public Class536(Game class486, Language class495, Index class317) {
 		((Class536) this).aClass317_7095 = class317;
-		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (SharedConfigsType.aClass120_1514.id)), -2042690113) * -919202315);
+		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (SharedConfigsType.FLO2.id)), -2042690113) * -919202315);
 	}
 
 	static final void method11486(CS2Executor class527, byte i) {

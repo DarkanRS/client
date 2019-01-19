@@ -60,14 +60,14 @@ public class Class277 {
 	}
 
 	static void method4907(int i) {
-		if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+		if (null != TextureDefinition.aFileOutputStream9481) {
 			try {
-				Class282_Sub50_Sub3.aFileOutputStream9481.close();
+				TextureDefinition.aFileOutputStream9481.close();
 			} catch (IOException ioexception) {
 				/* empty */
 			}
 		}
-		Class282_Sub50_Sub3.aFileOutputStream9481 = null;
+		TextureDefinition.aFileOutputStream9481 = null;
 	}
 
 	static void method4908(GraphicalRenderer class505, int i) {

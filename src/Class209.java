@@ -124,9 +124,9 @@ public abstract class Class209 {
 			for (int i_7_ = -1647152403 * Class179.anInt2227; i_7_ > 0; i_7_--)
 				Class13.aStringArray129[i_7_] = Class13.aStringArray129[i_7_ - 1];
 			Class13.aStringArray129[0] = new StringBuilder().append(string_5_).append(": ").append(strings[i_6_]).toString();
-			if (null != Class282_Sub50_Sub3.aFileOutputStream9481) {
+			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					Class282_Sub50_Sub3.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -108));
+					TextureDefinition.aFileOutputStream9481.write(Class473.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -108));
 				} catch (IOException ioexception) {
 					/* empty */
 				}

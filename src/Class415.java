@@ -24,7 +24,7 @@ public class Class415 {
 
 	void method6991(RsByteBuffer class282_sub35, int i, int i_1_) {
 		if (1 == i)
-			aChar4984 = Class11.method470(class282_sub35.readByte((short) -32359), -792484929);
+			aChar4984 = Class11.method470(class282_sub35.readByte(), -792484929);
 		else if (2 == i)
 			anInt4983 = 0;
 	}

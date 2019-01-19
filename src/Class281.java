@@ -154,8 +154,8 @@ public class Class281 {
 		int i_15_ = class282_sub35.readUnsignedShort();
 		int i_16_ = class282_sub35.readUnsignedShort();
 		for (int i_17_ = 0; i_17_ < ((Class281) this).anInt3374 * 1443022381; i_17_++) {
-			((Class281) this).anIntArray3375[i_17_] = i_15_ + class282_sub35.readByte((short) -12275);
-			((Class281) this).anIntArray3373[i_17_] = i_16_ + class282_sub35.readByte((short) -23566);
+			((Class281) this).anIntArray3375[i_17_] = i_15_ + class282_sub35.readByte();
+			((Class281) this).anIntArray3373[i_17_] = i_16_ + class282_sub35.readByte();
 		}
 		method4977(class505, 546105467);
 	}

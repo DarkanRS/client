@@ -529,7 +529,7 @@ public class NPCDefinitions {
 			int i_186_ = class282_sub35.readUnsignedByte();
 			((NPCDefinitions) this).aByteArray4865 = new byte[i_186_];
 			for (int i_187_ = 0; i_187_ < i_186_; i_187_++)
-				((NPCDefinitions) this).aByteArray4865[i_187_] = class282_sub35.readByte((short) -25558);
+				((NPCDefinitions) this).aByteArray4865[i_187_] = class282_sub35.readByte();
 		} else if (60 == i) {
 			int i_188_ = class282_sub35.readUnsignedByte();
 			anIntArray4860 = new int[i_188_];
@@ -546,9 +546,9 @@ public class NPCDefinitions {
 		else if (i == 99)
 			aBool4904 = true;
 		else if (i == 100)
-			((NPCDefinitions) this).anInt4885 = class282_sub35.readByte((short) -2860) * -2106403981;
+			((NPCDefinitions) this).anInt4885 = class282_sub35.readByte() * -2106403981;
 		else if (i == 101)
-			((NPCDefinitions) this).anInt4888 = class282_sub35.readByte((short) -13831) * -618226703;
+			((NPCDefinitions) this).anInt4888 = class282_sub35.readByte() * -618226703;
 		else if (102 == i)
 			anInt4887 = class282_sub35.readUnsignedShort() * -655354985;
 		else if (i == 103)
@@ -584,24 +584,24 @@ public class NPCDefinitions {
 			aShort4874 = (short) class282_sub35.readUnsignedShort();
 			aShort4897 = (short) class282_sub35.readUnsignedShort();
 		} else if (114 == i) {
-			aByte4883 = class282_sub35.readByte((short) -31587);
-			aByte4899 = class282_sub35.readByte((short) -25259);
+			aByte4883 = class282_sub35.readByte();
+			aByte4899 = class282_sub35.readByte();
 		} else if (i == 119)
-			aByte4900 = class282_sub35.readByte((short) -23373);
+			aByte4900 = class282_sub35.readByte();
 		else if (121 == i) {
 			((NPCDefinitions) this).anIntArrayArray4895 = new int[anIntArray4859.length][];
 			int i_193_ = class282_sub35.readUnsignedByte();
 			for (int i_194_ = 0; i_194_ < i_193_; i_194_++) {
 				int i_195_ = class282_sub35.readUnsignedByte();
 				int[] is = (((NPCDefinitions) this).anIntArrayArray4895[i_195_] = new int[3]);
-				is[0] = class282_sub35.readByte((short) -3914);
-				is[1] = class282_sub35.readByte((short) -31533);
-				is[2] = class282_sub35.readByte((short) -32204);
+				is[0] = class282_sub35.readByte();
+				is[1] = class282_sub35.readByte();
+				is[2] = class282_sub35.readByte();
 			}
 		} else if (123 == i)
 			anInt4902 = class282_sub35.readUnsignedShort() * -1013929977;
 		else if (i == 125)
-			aClass252_4910 = ((Class252) Class386.method6672(Class46.method931(-1178887780), class282_sub35.readByte((short) -25767), -1522622422));
+			aClass252_4910 = ((Class252) Class386.method6672(Class46.method931(-1178887780), class282_sub35.readByte(), -1522622422));
 		else if (i == 127)
 			anInt4898 = class282_sub35.readUnsignedShort() * -318852007;
 		else if (i == 128)
@@ -643,10 +643,10 @@ public class NPCDefinitions {
 			if (!((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aBool4838)
 				aStringArray4882[i - 150] = null;
 		} else if (155 == i) {
-			((NPCDefinitions) this).aByte4868 = class282_sub35.readByte((short) 203);
-			((NPCDefinitions) this).aByte4869 = class282_sub35.readByte((short) -28906);
-			((NPCDefinitions) this).aByte4905 = class282_sub35.readByte((short) -25047);
-			((NPCDefinitions) this).aByte4871 = class282_sub35.readByte((short) -14406);
+			((NPCDefinitions) this).aByte4868 = class282_sub35.readByte();
+			((NPCDefinitions) this).aByte4869 = class282_sub35.readByte();
+			((NPCDefinitions) this).aByte4905 = class282_sub35.readByte();
+			((NPCDefinitions) this).aByte4871 = class282_sub35.readByte();
 		} else if (i == 158)
 			aByte4916 = (byte) 1;
 		else if (159 == i)

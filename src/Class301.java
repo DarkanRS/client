@@ -58,7 +58,7 @@ public class Class301 implements Interface41 {
 		return ((Class301) this).aBool3554;
 	}
 
-	public int method84(int i) {
+	public int getCompletion(int i) {
 		if (((Class301) this).aBool3554)
 			return 100;
 		int i_0_ = IndexLoaders.NATIVE_LIBRARY_LOADER.method4648(((Class301) this).aString3553, -419242357);

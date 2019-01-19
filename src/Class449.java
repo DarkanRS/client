@@ -8,7 +8,7 @@ public class Class449 {
 	void method7485(RsByteBuffer class282_sub35, int i, byte i_0_) {
 		if (1 == i) {
 			if (i_0_ > 1)
-				aChar5431 = Class11.method470(class282_sub35.readByte((short) -574), -232268203);
+				aChar5431 = Class11.method470(class282_sub35.readByte(), -232268203);
 		}
 	}
 
@@ -45,7 +45,7 @@ public class Class449 {
 
 	void method7489(RsByteBuffer class282_sub35, int i) {
 		if (1 == i)
-			aChar5431 = Class11.method470(class282_sub35.readByte((short) -18443), -1692769021);
+			aChar5431 = Class11.method470(class282_sub35.readByte(), -1692769021);
 	}
 
 	public static void method7490(byte i) {

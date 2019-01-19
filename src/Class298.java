@@ -3,16 +3,16 @@
  */
 
 public class Class298 implements Interface41 {
-	Index aClass317_3538;
+	Index index;
 
 	public Class445 method232(byte i) {
 		return Class445.aClass445_5381;
 	}
 
-	public int method84(int i) {
-		if (((Class298) this).aClass317_3538.method5612((byte) 19))
+	public int getCompletion(int i) {
+		if (((Class298) this).index.isValid((byte) 19))
 			return 100;
-		return ((Class298) this).aClass317_3538.method5614(830407420);
+		return ((Class298) this).index.getCompletion(830407420);
 	}
 
 	public Class445 method234() {
@@ -20,9 +20,9 @@ public class Class298 implements Interface41 {
 	}
 
 	public int method231() {
-		if (((Class298) this).aClass317_3538.method5612((byte) 126))
+		if (((Class298) this).index.isValid((byte) 126))
 			return 100;
-		return ((Class298) this).aClass317_3538.method5614(1024263649);
+		return ((Class298) this).index.getCompletion(1024263649);
 	}
 
 	public Class445 method230() {
@@ -38,7 +38,7 @@ public class Class298 implements Interface41 {
 	}
 
 	Class298(Index class317) {
-		((Class298) this).aClass317_3538 = class317;
+		((Class298) this).index = class317;
 	}
 
 	static final void method5300(CS2Executor class527, int i) {

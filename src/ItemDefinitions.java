@@ -298,7 +298,7 @@ public class ItemDefinitions implements Interface46 {
 			int i_25_ = class282_sub35.readUnsignedByte();
 			this.spriteRecolorIndices = new byte[i_25_];
 			for (int i_26_ = 0; i_26_ < i_25_; i_26_++)
-				this.spriteRecolorIndices[i_26_] = class282_sub35.readByte((short) -8308);
+				this.spriteRecolorIndices[i_26_] = class282_sub35.readByte();
 		} else if (i == 43) {
 			anInt5102 = class282_sub35.readInt() * -796858641;
 			aBool5101 = true;
@@ -338,9 +338,9 @@ public class ItemDefinitions implements Interface46 {
 		else if (i == 112)
 			this.resizeZ = class282_sub35.readUnsignedShort() * 1983536873;
 		else if (i == 113)
-			this.ambient = class282_sub35.readByte((short) -25769) * 259622629;
+			this.ambient = class282_sub35.readByte() * 259622629;
 		else if (i == 114)
-			this.contrast = class282_sub35.readByte((short) -9734) * 1423227043;
+			this.contrast = class282_sub35.readByte() * 1423227043;
 		else if (i == 115)
 			team = class282_sub35.readUnsignedByte() * 1901746537;
 		else if (121 == i)
@@ -348,13 +348,13 @@ public class ItemDefinitions implements Interface46 {
 		else if (122 == i)
 			landTemplateId = class282_sub35.readUnsignedShort() * -1862010471;
 		else if (125 == i) {
-			this.maleWearXOffset = ((class282_sub35.readByte((short) -30156) << 2) * 1904059659);
-			this.maleWearYOffset = ((class282_sub35.readByte((short) -23127) << 2) * -547377553);
-			this.maleWearZOffset = ((class282_sub35.readByte((short) -22740) << 2) * 1878832413);
+			this.maleWearXOffset = ((class282_sub35.readByte() << 2) * 1904059659);
+			this.maleWearYOffset = ((class282_sub35.readByte() << 2) * -547377553);
+			this.maleWearZOffset = ((class282_sub35.readByte() << 2) * 1878832413);
 		} else if (i == 126) {
-			this.femaleWearXOffset = ((class282_sub35.readByte((short) -11885) << 2) * 1252496961);
-			this.femaleWearYOffset = ((class282_sub35.readByte((short) -8708) << 2) * -377946013);
-			this.femaleWearZOffset = ((class282_sub35.readByte((short) -26470) << 2) * 1444840851);
+			this.femaleWearXOffset = ((class282_sub35.readByte() << 2) * 1252496961);
+			this.femaleWearYOffset = ((class282_sub35.readByte() << 2) * -377946013);
+			this.femaleWearZOffset = ((class282_sub35.readByte() << 2) * 1444840851);
 		} else if (127 == i) {
 			anInt5059 = class282_sub35.readUnsignedByte() * 1898017081;
 			anInt5055 = class282_sub35.readUnsignedShort() * -1370939175;

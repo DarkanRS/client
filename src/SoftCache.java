@@ -472,12 +472,12 @@ public final class SoftCache {
 	}
 
 	static void method3895(double d) {
-		if (d != Class282_Sub50_Sub3.aDouble9479) {
+		if (d != TextureDefinition.aDouble9479) {
 			for (int i = 0; i < 256; i++) {
 				int i_12_ = (int) (Math.pow((double) i / 255.0, d) * 255.0);
-				Class282_Sub50_Sub3.anIntArray9474[i] = i_12_ > 255 ? 255 : i_12_;
+				TextureDefinition.anIntArray9474[i] = i_12_ > 255 ? 255 : i_12_;
 			}
-			Class282_Sub50_Sub3.aDouble9479 = d;
+			TextureDefinition.aDouble9479 = d;
 		}
 	}
 }

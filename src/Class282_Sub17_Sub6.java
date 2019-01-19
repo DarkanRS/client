@@ -13,10 +13,10 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 	@Override
 	void method12253(RsByteBuffer class282_sub35) {
 		this.aBool10016 = class282_sub35.readUnsignedByte() == 1;
-		this.aByte10015 = class282_sub35.readByte((short) -5586);
-		this.aByte10014 = class282_sub35.readByte((short) -28852);
-		this.aByte10017 = class282_sub35.readByte((short) -13098);
-		this.aByte10018 = class282_sub35.readByte((short) -31496);
+		this.aByte10015 = class282_sub35.readByte();
+		this.aByte10014 = class282_sub35.readByte();
+		this.aByte10017 = class282_sub35.readByte();
+		this.aByte10018 = class282_sub35.readByte();
 	}
 
 	@Override
@@ -40,28 +40,28 @@ public class Class282_Sub17_Sub6 extends Class282_Sub17 {
 	@Override
 	void method12249(RsByteBuffer class282_sub35) {
 		this.aBool10016 = class282_sub35.readUnsignedByte() == 1;
-		this.aByte10015 = class282_sub35.readByte((short) -9718);
-		this.aByte10014 = class282_sub35.readByte((short) -23829);
-		this.aByte10017 = class282_sub35.readByte((short) -5385);
-		this.aByte10018 = class282_sub35.readByte((short) -18225);
+		this.aByte10015 = class282_sub35.readByte();
+		this.aByte10014 = class282_sub35.readByte();
+		this.aByte10017 = class282_sub35.readByte();
+		this.aByte10018 = class282_sub35.readByte();
 	}
 
 	@Override
 	void method12257(RsByteBuffer class282_sub35) {
 		this.aBool10016 = class282_sub35.readUnsignedByte() == 1;
-		this.aByte10015 = class282_sub35.readByte((short) -25112);
-		this.aByte10014 = class282_sub35.readByte((short) -24330);
-		this.aByte10017 = class282_sub35.readByte((short) -7752);
-		this.aByte10018 = class282_sub35.readByte((short) -25951);
+		this.aByte10015 = class282_sub35.readByte();
+		this.aByte10014 = class282_sub35.readByte();
+		this.aByte10017 = class282_sub35.readByte();
+		this.aByte10018 = class282_sub35.readByte();
 	}
 
 	@Override
 	void method12250(RsByteBuffer class282_sub35, int i) {
 		this.aBool10016 = class282_sub35.readUnsignedByte() == 1;
-		this.aByte10015 = class282_sub35.readByte((short) -6640);
-		this.aByte10014 = class282_sub35.readByte((short) -23637);
-		this.aByte10017 = class282_sub35.readByte((short) -2756);
-		this.aByte10018 = class282_sub35.readByte((short) -28934);
+		this.aByte10015 = class282_sub35.readByte();
+		this.aByte10014 = class282_sub35.readByte();
+		this.aByte10017 = class282_sub35.readByte();
+		this.aByte10018 = class282_sub35.readByte();
 	}
 
 	@Override

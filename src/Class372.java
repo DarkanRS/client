@@ -26,14 +26,14 @@ public class Class372 implements Interface46 {
 
 	void method6357(RsByteBuffer class282_sub35, int i, byte i_1_) {
 		if (1 == i)
-			aChar4328 = Class11.method470(class282_sub35.readByte((short) -23224), -385178071);
+			aChar4328 = Class11.method470(class282_sub35.readByte(), -385178071);
 		else if (i == 5)
 			anInt4327 = class282_sub35.readUnsignedShort() * 116823705;
 	}
 
 	void method6358(RsByteBuffer class282_sub35, int i) {
 		if (1 == i)
-			aChar4328 = Class11.method470(class282_sub35.readByte((short) -13238), 387102529);
+			aChar4328 = Class11.method470(class282_sub35.readByte(), 387102529);
 		else if (i == 5)
 			anInt4327 = class282_sub35.readUnsignedShort() * 116823705;
 	}
@@ -58,7 +58,7 @@ public class Class372 implements Interface46 {
 
 	void method6361(RsByteBuffer class282_sub35, int i) {
 		if (1 == i)
-			aChar4328 = Class11.method470(class282_sub35.readByte((short) -13306), -1931599914);
+			aChar4328 = Class11.method470(class282_sub35.readByte(), -1931599914);
 		else if (i == 5)
 			anInt4327 = class282_sub35.readUnsignedShort() * 116823705;
 	}

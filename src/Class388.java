@@ -36,7 +36,7 @@ public class Class388 implements Interface41 {
 		return Class445.aClass445_5382;
 	}
 
-	public int method84(int i) {
+	public int getCompletion(int i) {
 		if (((Class388) this).aClass317_4720.method5629(((Class388) this).aString4719, 71472045))
 			return 100;
 		return ((Class388) this).aClass317_4720.method5631(((Class388) this).aString4719, (byte) 25);

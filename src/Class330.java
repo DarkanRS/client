@@ -35,7 +35,7 @@ public class Class330 {
 	}
 
 	public Class330(RsByteBuffer class282_sub35) {
-		((Class330) this).aByte3864 = class282_sub35.readByte((short) -10980);
+		((Class330) this).aByte3864 = class282_sub35.readByte();
 		anInt3863 = class282_sub35.readUnsignedShort() * -789603523;
 		anInt3866 = class282_sub35.readInt() * -1480881931;
 		anInt3865 = class282_sub35.readInt() * -219759493;

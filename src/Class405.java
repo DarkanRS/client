@@ -28,7 +28,7 @@ public class Class405 {
 
 	void method6814(RsByteBuffer class282_sub35, int i, int i_0_) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -20839), 1372393939);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), 1372393939);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;
@@ -60,7 +60,7 @@ public class Class405 {
 
 	void method6817(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -16959), 310252785);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), 310252785);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;
@@ -70,7 +70,7 @@ public class Class405 {
 
 	void method6818(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -343), -522685697);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), -522685697);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;
@@ -80,7 +80,7 @@ public class Class405 {
 
 	void method6819(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -30059), -537574707);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), -537574707);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;
@@ -90,7 +90,7 @@ public class Class405 {
 
 	void method6820(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -22515), -1959371639);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), -1959371639);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;
@@ -100,7 +100,7 @@ public class Class405 {
 
 	void method6821(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -29417), -116444694);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), -116444694);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;
@@ -110,7 +110,7 @@ public class Class405 {
 
 	void method6822(RsByteBuffer class282_sub35, int i) {
 		if (i == 1)
-			aChar4832 = Class11.method470(class282_sub35.readByte((short) -4801), -1575919734);
+			aChar4832 = Class11.method470(class282_sub35.readByte(), -1575919734);
 		else if (3 == i) {
 			anInt4833 = class282_sub35.readUnsignedShort() * 1847456201;
 			anInt4834 = class282_sub35.readUnsignedByte() * 1551601905;

@@ -23,7 +23,7 @@ public class UnderlayIndexLoader {
 			return def;
 		byte[] is;
 		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.UNDERLAY.id, i, -1999870087));
+			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1999870087));
 		}
 		def = new UnderlayDef();
 		if (null != is)
@@ -42,7 +42,7 @@ public class UnderlayIndexLoader {
 
 	public UnderlayIndexLoader(Game class486, Language class495, Index class317) {
 		((UnderlayIndexLoader) this).configIndex = class317;
-		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.UNDERLAY.id) * -71319279, 345702944);
+		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.FLO1.id) * -71319279, 345702944);
 	}
 
 	public void method8027() {
@@ -60,7 +60,7 @@ public class UnderlayIndexLoader {
 			return class481;
 		byte[] is;
 		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.UNDERLAY.id, i, -1393062609));
+			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1393062609));
 		}
 		class481 = new UnderlayDef();
 		if (null != is)
@@ -80,7 +80,7 @@ public class UnderlayIndexLoader {
 			return class481;
 		byte[] is;
 		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.UNDERLAY.id, i, -1675981481));
+			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1675981481));
 		}
 		class481 = new UnderlayDef();
 		if (null != is)
@@ -130,7 +130,7 @@ public class UnderlayIndexLoader {
 			return class481;
 		byte[] is;
 		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.UNDERLAY.id, i, -1932524788));
+			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1932524788));
 		}
 		class481 = new UnderlayDef();
 		if (null != is)

@@ -154,7 +154,7 @@ public class RSMesh {
 			aByteArray1995 = new byte[anInt1979];
 			class282_sub35.index = 0;
 			for (int i_45_ = 0; i_45_ < anInt1979; i_45_++) {
-				byte i_46_ = (aByteArray1995[i_45_] = class282_sub35.readByte((short) -19196));
+				byte i_46_ = (aByteArray1995[i_45_] = class282_sub35.readByte());
 				if (i_46_ == 0)
 					i_42_++;
 				if (i_46_ >= 1 && i_46_ <= 3)
@@ -294,11 +294,11 @@ public class RSMesh {
 		for (int i_78_ = 0; i_78_ < anInt1973; i_78_++) {
 			aShortArray2006[i_78_] = (short) class282_sub35.readUnsignedShort();
 			if (bool)
-				aByteArray1985[i_78_] = class282_sub35_23_.readByte((short) -4073);
+				aByteArray1985[i_78_] = class282_sub35_23_.readByte();
 			if (i_32_ == 255)
-				aByteArray1977[i_78_] = class282_sub35_24_.readByte((short) -5201);
+				aByteArray1977[i_78_] = class282_sub35_24_.readByte();
 			if (i_33_ == 1)
-				aByteArray1975[i_78_] = class282_sub35_25_.readByte((short) -29993);
+				aByteArray1975[i_78_] = class282_sub35_25_.readByte();
 			if (i_34_ == 1)
 				anIntArray1991[i_78_] = class282_sub35_26_.readUnsignedByte();
 			if (i_35_ == 1)
@@ -355,7 +355,7 @@ public class RSMesh {
 					int i_90_ = class282_sub35.readUnsignedShort();
 					int i_91_ = class282_sub35.readUnsignedShort();
 					int i_92_ = class282_sub35.readUnsignedByte();
-					byte i_93_ = class282_sub35.readByte((short) -24740);
+					byte i_93_ = class282_sub35.readByte();
 					aClass84Array2009[i_89_] = new Class84(i_90_, i_91_, i_92_, i_93_);
 				}
 			}
@@ -446,9 +446,9 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_102_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_102_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_103_.readByte((short) -14249);
-				aByteArray1990[i] = class282_sub35_104_.readByte((short) -4875);
-				anIntArray1992[i] = class282_sub35_105_.readByte((short) -25152);
+				aByteArray2005[i] = class282_sub35_103_.readByte();
+				aByteArray1990[i] = class282_sub35_104_.readByte();
+				anIntArray1992[i] = class282_sub35_105_.readByte();
 			}
 			if (i_106_ == 2) {
 				aShortArray1996[i] = (short) class282_sub35_101_.readUnsignedShort();
@@ -466,11 +466,11 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_102_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_102_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_103_.readByte((short) -5366);
-				aByteArray1990[i] = class282_sub35_104_.readByte((short) -3093);
-				anIntArray1992[i] = class282_sub35_105_.readByte((short) -9390);
-				anIntArray1997[i] = class282_sub35_105_.readByte((short) -10740);
-				anIntArray2004[i] = class282_sub35_105_.readByte((short) -31886);
+				aByteArray2005[i] = class282_sub35_103_.readByte();
+				aByteArray1990[i] = class282_sub35_104_.readByte();
+				anIntArray1992[i] = class282_sub35_105_.readByte();
+				anIntArray1997[i] = class282_sub35_105_.readByte();
+				anIntArray2004[i] = class282_sub35_105_.readByte();
 			}
 			if (i_106_ == 3) {
 				aShortArray1996[i] = (short) class282_sub35_101_.readUnsignedShort();
@@ -488,9 +488,9 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_102_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_102_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_103_.readByte((short) -7615);
-				aByteArray1990[i] = class282_sub35_104_.readByte((short) -15141);
-				anIntArray1992[i] = class282_sub35_105_.readByte((short) -1897);
+				aByteArray2005[i] = class282_sub35_103_.readByte();
+				aByteArray1990[i] = class282_sub35_104_.readByte();
+				anIntArray1992[i] = class282_sub35_105_.readByte();
 			}
 		}
 	}
@@ -630,9 +630,9 @@ public class RSMesh {
 				}
 			}
 			if (i_112_ == 255)
-				aByteArray1977[i_142_] = class282_sub35_109_.readByte((short) -8215);
+				aByteArray1977[i_142_] = class282_sub35_109_.readByte();
 			if (i_113_ == 1)
-				aByteArray1975[i_142_] = class282_sub35_110_.readByte((short) -26832);
+				aByteArray1975[i_142_] = class282_sub35_110_.readByte();
 			if (i_114_ == 1)
 				anIntArray1991[i_142_] = class282_sub35_111_.readUnsignedByte();
 		}
@@ -1043,9 +1043,9 @@ public class RSMesh {
 				}
 			}
 			if (i_220_ == 255)
-				aByteArray1977[i_250_] = class282_sub35_217_.readByte((short) -15374);
+				aByteArray1977[i_250_] = class282_sub35_217_.readByte();
 			if (i_221_ == 1)
-				aByteArray1975[i_250_] = class282_sub35_218_.readByte((short) -6657);
+				aByteArray1975[i_250_] = class282_sub35_218_.readByte();
 			if (i_222_ == 1)
 				anIntArray1991[i_250_] = class282_sub35_219_.readUnsignedByte();
 		}
@@ -1211,7 +1211,7 @@ public class RSMesh {
 			aByteArray1995 = new byte[anInt1979];
 			class282_sub35.index = 0;
 			for (int i_297_ = 0; i_297_ < anInt1979; i_297_++) {
-				byte i_298_ = (aByteArray1995[i_297_] = class282_sub35.readByte((short) -17040));
+				byte i_298_ = (aByteArray1995[i_297_] = class282_sub35.readByte());
 				if (i_298_ == 0)
 					i_294_++;
 				if (i_298_ >= 1 && i_298_ <= 3)
@@ -1351,11 +1351,11 @@ public class RSMesh {
 		for (int i_330_ = 0; i_330_ < anInt1973; i_330_++) {
 			aShortArray2006[i_330_] = (short) class282_sub35.readUnsignedShort();
 			if (bool)
-				aByteArray1985[i_330_] = class282_sub35_275_.readByte((short) -22377);
+				aByteArray1985[i_330_] = class282_sub35_275_.readByte();
 			if (i_284_ == 255)
-				aByteArray1977[i_330_] = class282_sub35_276_.readByte((short) -29270);
+				aByteArray1977[i_330_] = class282_sub35_276_.readByte();
 			if (i_285_ == 1)
-				aByteArray1975[i_330_] = class282_sub35_277_.readByte((short) -4323);
+				aByteArray1975[i_330_] = class282_sub35_277_.readByte();
 			if (i_286_ == 1)
 				anIntArray1991[i_330_] = class282_sub35_278_.readUnsignedByte();
 			if (i_287_ == 1)
@@ -1412,7 +1412,7 @@ public class RSMesh {
 					int i_342_ = class282_sub35.readUnsignedShort();
 					int i_343_ = class282_sub35.readUnsignedShort();
 					int i_344_ = class282_sub35.readUnsignedByte();
-					byte i_345_ = class282_sub35.readByte((short) -17540);
+					byte i_345_ = class282_sub35.readByte();
 					aClass84Array2009[i_341_] = new Class84(i_342_, i_343_, i_344_, i_345_);
 				}
 			}
@@ -1458,7 +1458,7 @@ public class RSMesh {
 			aByteArray1995 = new byte[anInt1979];
 			class282_sub35.index = 0;
 			for (int i_368_ = 0; i_368_ < anInt1979; i_368_++) {
-				byte i_369_ = (aByteArray1995[i_368_] = class282_sub35.readByte((short) -28002));
+				byte i_369_ = (aByteArray1995[i_368_] = class282_sub35.readByte());
 				if (i_369_ == 0)
 					i_365_++;
 				if (i_369_ >= 1 && i_369_ <= 3)
@@ -1598,11 +1598,11 @@ public class RSMesh {
 		for (int i_401_ = 0; i_401_ < anInt1973; i_401_++) {
 			aShortArray2006[i_401_] = (short) class282_sub35.readUnsignedShort();
 			if (bool)
-				aByteArray1985[i_401_] = class282_sub35_346_.readByte((short) -24948);
+				aByteArray1985[i_401_] = class282_sub35_346_.readByte();
 			if (i_355_ == 255)
-				aByteArray1977[i_401_] = class282_sub35_347_.readByte((short) -2291);
+				aByteArray1977[i_401_] = class282_sub35_347_.readByte();
 			if (i_356_ == 1)
-				aByteArray1975[i_401_] = class282_sub35_348_.readByte((short) -7136);
+				aByteArray1975[i_401_] = class282_sub35_348_.readByte();
 			if (i_357_ == 1)
 				anIntArray1991[i_401_] = class282_sub35_349_.readUnsignedByte();
 			if (i_358_ == 1)
@@ -1659,7 +1659,7 @@ public class RSMesh {
 					int i_413_ = class282_sub35.readUnsignedShort();
 					int i_414_ = class282_sub35.readUnsignedShort();
 					int i_415_ = class282_sub35.readUnsignedByte();
-					byte i_416_ = class282_sub35.readByte((short) -27406);
+					byte i_416_ = class282_sub35.readByte();
 					aClass84Array2009[i_412_] = new Class84(i_413_, i_414_, i_415_, i_416_);
 				}
 			}
@@ -1937,9 +1937,9 @@ public class RSMesh {
 				}
 			}
 			if (i_438_ == 255)
-				aByteArray1977[i_468_] = class282_sub35_435_.readByte((short) -16715);
+				aByteArray1977[i_468_] = class282_sub35_435_.readByte();
 			if (i_439_ == 1)
-				aByteArray1975[i_468_] = class282_sub35_436_.readByte((short) -1515);
+				aByteArray1975[i_468_] = class282_sub35_436_.readByte();
 			if (i_440_ == 1)
 				anIntArray1991[i_468_] = class282_sub35_437_.readUnsignedByte();
 		}
@@ -2070,9 +2070,9 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_490_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_490_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_491_.readByte((short) -26139);
-				aByteArray1990[i] = class282_sub35_492_.readByte((short) -19718);
-				anIntArray1992[i] = class282_sub35_493_.readByte((short) -3821);
+				aByteArray2005[i] = class282_sub35_491_.readByte();
+				aByteArray1990[i] = class282_sub35_492_.readByte();
+				anIntArray1992[i] = class282_sub35_493_.readByte();
 			}
 			if (i_494_ == 2) {
 				aShortArray1996[i] = (short) class282_sub35_489_.readUnsignedShort();
@@ -2090,11 +2090,11 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_490_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_490_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_491_.readByte((short) -13550);
-				aByteArray1990[i] = class282_sub35_492_.readByte((short) -30615);
-				anIntArray1992[i] = class282_sub35_493_.readByte((short) -26200);
-				anIntArray1997[i] = class282_sub35_493_.readByte((short) -30268);
-				anIntArray2004[i] = class282_sub35_493_.readByte((short) -23507);
+				aByteArray2005[i] = class282_sub35_491_.readByte();
+				aByteArray1990[i] = class282_sub35_492_.readByte();
+				anIntArray1992[i] = class282_sub35_493_.readByte();
+				anIntArray1997[i] = class282_sub35_493_.readByte();
+				anIntArray2004[i] = class282_sub35_493_.readByte();
 			}
 			if (i_494_ == 3) {
 				aShortArray1996[i] = (short) class282_sub35_489_.readUnsignedShort();
@@ -2112,9 +2112,9 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_490_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_490_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_491_.readByte((short) -5083);
-				aByteArray1990[i] = class282_sub35_492_.readByte((short) -22701);
-				anIntArray1992[i] = class282_sub35_493_.readByte((short) -32278);
+				aByteArray2005[i] = class282_sub35_491_.readByte();
+				aByteArray1990[i] = class282_sub35_492_.readByte();
+				anIntArray1992[i] = class282_sub35_493_.readByte();
 			}
 		}
 	}
@@ -2254,9 +2254,9 @@ public class RSMesh {
 				}
 			}
 			if (i_500_ == 255)
-				aByteArray1977[i_530_] = class282_sub35_497_.readByte((short) -15910);
+				aByteArray1977[i_530_] = class282_sub35_497_.readByte();
 			if (i_501_ == 1)
-				aByteArray1975[i_530_] = class282_sub35_498_.readByte((short) -6541);
+				aByteArray1975[i_530_] = class282_sub35_498_.readByte();
 			if (i_502_ == 1)
 				anIntArray1991[i_530_] = class282_sub35_499_.readUnsignedByte();
 		}
@@ -2489,9 +2489,9 @@ public class RSMesh {
 				}
 			}
 			if (i_550_ == 255)
-				aByteArray1977[i_580_] = class282_sub35_547_.readByte((short) -4422);
+				aByteArray1977[i_580_] = class282_sub35_547_.readByte();
 			if (i_551_ == 1)
-				aByteArray1975[i_580_] = class282_sub35_548_.readByte((short) -26447);
+				aByteArray1975[i_580_] = class282_sub35_548_.readByte();
 			if (i_552_ == 1)
 				anIntArray1991[i_580_] = class282_sub35_549_.readUnsignedByte();
 		}
@@ -3131,9 +3131,9 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_723_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_723_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_724_.readByte((short) -3917);
-				aByteArray1990[i] = class282_sub35_725_.readByte((short) -23467);
-				anIntArray1992[i] = class282_sub35_726_.readByte((short) -20709);
+				aByteArray2005[i] = class282_sub35_724_.readByte();
+				aByteArray1990[i] = class282_sub35_725_.readByte();
+				anIntArray1992[i] = class282_sub35_726_.readByte();
 			}
 			if (i_727_ == 2) {
 				aShortArray1996[i] = (short) class282_sub35_722_.readUnsignedShort();
@@ -3151,11 +3151,11 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_723_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_723_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_724_.readByte((short) -14926);
-				aByteArray1990[i] = class282_sub35_725_.readByte((short) -10804);
-				anIntArray1992[i] = class282_sub35_726_.readByte((short) -7348);
-				anIntArray1997[i] = class282_sub35_726_.readByte((short) -32751);
-				anIntArray2004[i] = class282_sub35_726_.readByte((short) -28109);
+				aByteArray2005[i] = class282_sub35_724_.readByte();
+				aByteArray1990[i] = class282_sub35_725_.readByte();
+				anIntArray1992[i] = class282_sub35_726_.readByte();
+				anIntArray1997[i] = class282_sub35_726_.readByte();
+				anIntArray2004[i] = class282_sub35_726_.readByte();
 			}
 			if (i_727_ == 3) {
 				aShortArray1996[i] = (short) class282_sub35_722_.readUnsignedShort();
@@ -3173,9 +3173,9 @@ public class RSMesh {
 					anIntArray2000[i] = class282_sub35_723_.read24BitUnsignedInteger();
 					anIntArray2001[i] = class282_sub35_723_.read24BitUnsignedInteger();
 				}
-				aByteArray2005[i] = class282_sub35_724_.readByte((short) -22065);
-				aByteArray1990[i] = class282_sub35_725_.readByte((short) -3685);
-				anIntArray1992[i] = class282_sub35_726_.readByte((short) -20262);
+				aByteArray2005[i] = class282_sub35_724_.readByte();
+				aByteArray1990[i] = class282_sub35_725_.readByte();
+				anIntArray1992[i] = class282_sub35_726_.readByte();
 			}
 		}
 	}

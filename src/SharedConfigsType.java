@@ -43,7 +43,7 @@ public class SharedConfigsType {
 	static SharedConfigsType aClass120_1501;
 	static SharedConfigsType aClass120_1502;
 	static SharedConfigsType aClass120_1503;
-	public static SharedConfigsType UNDERLAY = new SharedConfigsType(1);
+	public static SharedConfigsType FLO1 = new SharedConfigsType(1);
 	static SharedConfigsType aClass120_1505;
 	static SharedConfigsType aClass120_1506;
 	static SharedConfigsType aClass120_1507;
@@ -53,7 +53,7 @@ public class SharedConfigsType {
 	public static SharedConfigsType aClass120_1511;
 	public static SharedConfigsType HITBARS;
 	static SharedConfigsType aClass120_1513;
-	public static SharedConfigsType aClass120_1514;
+	public static SharedConfigsType FLO2;
 	static SharedConfigsType aClass120_1515;
 	static SharedConfigsType aClass120_1516;
 	static SharedConfigsType aClass120_1517;
@@ -99,7 +99,7 @@ public class SharedConfigsType {
 	static {
 		aClass120_1465 = new SharedConfigsType(2);
 		aClass120_1466 = new SharedConfigsType(3);
-		aClass120_1514 = new SharedConfigsType(4);
+		FLO2 = new SharedConfigsType(4);
 		INVENTORIES = new SharedConfigsType(5);
 		OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
 		aClass120_1470 = new SharedConfigsType(7);

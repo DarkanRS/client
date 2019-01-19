@@ -310,8 +310,8 @@ public class Class14 {
 			}
 			if ((flags & 0x20000) != 0) {
 				npc.aByte10371 = buffer.read128Byte((short) 2463);
-				npc.aByte10327 = buffer.readByte((short) -14611);
-				npc.aByte10364 = buffer.readByte((short) -22344);
+				npc.aByte10327 = buffer.readByte();
+				npc.aByte10364 = buffer.readByte();
 				npc.aByte10352 = (byte) buffer.readUnsigned128Byte();
 				npc.anInt10347 = ((client.cycles * -1809259861 + buffer.readShortLE((byte) -97)) * -245378127);
 				npc.anInt10348 = ((-1809259861 * client.cycles + buffer.readUnsignedShort()) * 485671023);

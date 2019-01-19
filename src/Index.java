@@ -76,7 +76,7 @@ public final class Index {
 		return i_12_;
 	}
 
-	public synchronized boolean method5612(byte i) {
+	public synchronized boolean isValid(byte i) {
 		if (!referenceTableLoaded((byte) 1))
 			return false;
 		boolean bool = true;
@@ -99,7 +99,7 @@ public final class Index {
 		return this.aClass327_3690.method5806(i, (byte) 49);
 	}
 
-	public synchronized int method5614(int i) {
+	public synchronized int getCompletion(int i) {
 		if (!referenceTableLoaded((byte) 1))
 			return 0;
 		int i_16_ = 0;

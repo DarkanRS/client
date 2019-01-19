@@ -23,7 +23,7 @@ public class Class347 {
 			anInt4054 = (class282_sub35.readUnsignedShort() + 1) * -930910623;
 			anInt4050 = (class282_sub35.readUnsignedShort() + 1) * 133206121;
 		} else if (i == 3)
-			class282_sub35.readByte((short) -22486);
+			class282_sub35.readByte();
 		else if (4 == i)
 			anInt4051 = class282_sub35.readUnsignedByte() * -742532921;
 		else if (5 == i)
@@ -52,7 +52,7 @@ public class Class347 {
 			anInt4054 = (class282_sub35.readUnsignedShort() + 1) * -930910623;
 			anInt4050 = (class282_sub35.readUnsignedShort() + 1) * 133206121;
 		} else if (i == 3)
-			class282_sub35.readByte((short) -3807);
+			class282_sub35.readByte();
 		else if (4 == i)
 			anInt4051 = class282_sub35.readUnsignedByte() * -742532921;
 		else if (5 == i)

@@ -264,7 +264,7 @@ public class PacketsDecoder extends Class455 {
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4416) {
 			Class158_Sub1_Sub2.anInt10131 = ((stream.read128Byte((short) 9583) << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte128(-1153285276) * 1822731553;
-			SceneObjectType.anInt5495 = ((stream.readByte((short) -31928) << 3) * 801275545);
+			SceneObjectType.anInt5495 = ((stream.readByte() << 3) * 801275545);
 			while (-1990677291 * stream.index < 715663393 * class184.anInt2287) {
 				TilestreamPacket class364 = (Class163.method2842(-332458150)[stream.readUnsignedByte()]);
 				Class188.decodeTilestreamPacket(class364, 1774288531);
@@ -542,7 +542,7 @@ public class PacketsDecoder extends Class455 {
 			if (99 == i_86_) {
 				Class209.method3598(string_90_, -1476632772);
 			} else if (i_86_ == 98) {
-				Class240.method4140(string_90_, -2007576372);
+				QuestDefinitions.method4140(string_90_, -2007576372);
 			} else {
 				if (!string_89_.equals("") && Class280.method4975(string_89_, (byte) -48)) {
 					class184.aClass375_2286 = null;
@@ -692,7 +692,7 @@ public class PacketsDecoder extends Class455 {
 			return false;
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4499) {
-			client.aByte7458 = stream.readByte((short) -693);
+			client.aByte7458 = stream.readByte();
 			if (0 == client.aByte7458 || client.aByte7458 == 1) {
 				client.aBool7323 = true;
 			}
@@ -818,7 +818,7 @@ public class PacketsDecoder extends Class455 {
 			}
 			long l = stream.readLong(1393893108);
 			client.aString7426 = Class306.method5457(l);
-			Class412.aByte4963 = stream.readByte((short) -17911);
+			Class412.aByte4963 = stream.readByte();
 			int i_132_ = stream.readUnsignedByte();
 			if (i_132_ == 255) {
 				class184.aClass375_2286 = null;
@@ -837,7 +837,7 @@ public class PacketsDecoder extends Class455 {
 				}
 				class173s[i_133_].aString2128 = Class383.method6515(class173s[i_133_].aString2127, 1942118537);
 				class173s[i_133_].anInt2131 = stream.readUnsignedShort() * 1704138443;
-				class173s[i_133_].aByte2126 = stream.readByte((short) -7231);
+				class173s[i_133_].aByte2126 = stream.readByte();
 				class173s[i_133_].aString2130 = stream.readString();
 				if (class173s[i_133_].aString2127.equals(Class84.myPlayer.displayName)) {
 					Class48_Sub2.aByte9263 = class173s[i_133_].aByte2126;
@@ -1163,7 +1163,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4474) {
 			int i_182_ = stream.readUnsignedShort();
-			byte i_183_ = stream.readByte((short) -15680);
+			byte i_183_ = stream.readByte();
 			if (null == Class46.anObjectArray437) {
 				Class46.anObjectArray437 = (new Object[117597627 * IndexLoaders.aClass394_5831.anInt4785]);
 			}
@@ -1203,7 +1203,7 @@ public class PacketsDecoder extends Class455 {
 		}
 		if (class184.aClass375_2286 == IncomingPacket.aClass375_4392) {
 			SceneObjectType.anInt5495 = ((stream.read128Byte((short) 15542) << 3) * 801275545);
-			Class158_Sub1_Sub2.anInt10131 = ((stream.readByte((short) -16828) << 3) * 657999909);
+			Class158_Sub1_Sub2.anInt10131 = ((stream.readByte() << 3) * 657999909);
 			Class272.anInt3331 = stream.readUnsignedByte() * 1822731553;
 			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(902676925);
 			for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-1866877180)); null != class282_sub29; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 48))) {
@@ -1430,7 +1430,7 @@ public class PacketsDecoder extends Class455 {
 			return false;
 		}
 		if (class184.aClass375_2286 == IncomingPacket.CONFIG_1) {
-			byte i_226_ = stream.readByte((short) -12957);
+			byte i_226_ = stream.readByte();
 			int i_227_ = stream.readShortLE128();
 			Class158_Sub1.aClass3_8507.method281(i_227_, i_226_, (byte) 16);
 			class184.aClass375_2286 = null;
@@ -1466,7 +1466,7 @@ public class PacketsDecoder extends Class455 {
 				string_236_ = string;
 			}
 			int i_237_ = stream.readUnsignedShort();
-			byte i_238_ = stream.readByte((short) -18288);
+			byte i_238_ = stream.readByte();
 			boolean bool_239_ = false;
 			if (-128 == i_238_) {
 				bool_239_ = true;
@@ -1657,7 +1657,7 @@ public class PacketsDecoder extends Class455 {
 			return true;
 		}
 		if (IncomingPacket.aClass375_4453 == class184.aClass375_2286) {
-			byte i_265_ = stream.readByte((short) -5973);
+			byte i_265_ = stream.readByte();
 			int i_266_ = stream.readUnsignedByteC(-1202169109);
 			Class470.method7825(-603286899);
 			Class52_Sub2.method14501(i_265_, i_266_, 1624203213);

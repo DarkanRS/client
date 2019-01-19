@@ -209,10 +209,10 @@ public class IComponentDefinitions {
 		anInt1296 = buffer.readShort(1818130440) * -1965685901;
 		anInt1297 = buffer.readUnsignedShort() * -81350191;
 		anInt1298 = buffer.readUnsignedShort() * 2017388241;
-		aByte1368 = buffer.readByte((short) -11041);
-		aByte1294 = buffer.readByte((short) -16707);
-		aByte1333 = buffer.readByte((short) -13884);
-		aByte1355 = buffer.readByte((short) -13485);
+		aByte1368 = buffer.readByte();
+		aByte1294 = buffer.readByte();
+		aByte1333 = buffer.readByte();
+		aByte1355 = buffer.readByte();
 		anInt1305 = buffer.readUnsignedShort() * 802345503;
 		if (65535 == anInt1305 * 2110532063)
 			anInt1305 = -802345503;
@@ -315,10 +315,10 @@ public class IComponentDefinitions {
 				i_8_ &= 0xfff;
 				if (i_8_ == 4095)
 					i_8_ = -1;
-				byte i_10_ = buffer.readByte((short) -25373);
+				byte i_10_ = buffer.readByte();
 				if (0 != i_10_)
 					aBool1424 = true;
-				byte i_11_ = buffer.readByte((short) -10509);
+				byte i_11_ = buffer.readByte();
 				anIntArray1395[i_9_] = i_8_;
 				aByteArrayArray1366[i_9_] = new byte[] { i_10_ };
 				aByteArrayArray1367[i_9_] = new byte[] { i_11_ };

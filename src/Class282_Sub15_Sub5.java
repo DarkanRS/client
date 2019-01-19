@@ -1095,7 +1095,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	static final void decodeMasks(RsBitsBuffer buffer, int i, Player player, int flag, int i_76_) {
 		byte movementType = Class249.aClass249_3083.aByte3085;
 		if ((flag & 0x20000) != 0) {
-			player.aByte10371 = buffer.readByte((short) -13092);
+			player.aByte10371 = buffer.readByte();
 			player.aByte10327 = buffer.readByteC(-1984309750);
 			player.aByte10364 = buffer.read128Byte((short) -22365);
 			player.aByte10352 = (byte) buffer.readUnsigned128Byte();

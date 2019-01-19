@@ -609,7 +609,7 @@ public class Class197 {
 	static final void method3197(RsBitsBuffer class282_sub35_sub2, int i, Player class521_sub1_sub1_sub2_sub1, int i_85_) {
 		byte i_86_ = Class249.aClass249_3083.aByte3085;
 		if ((i_85_ & 0x20000) != 0) {
-			class521_sub1_sub1_sub2_sub1.aByte10371 = class282_sub35_sub2.readByte((short) -9035);
+			class521_sub1_sub1_sub2_sub1.aByte10371 = class282_sub35_sub2.readByte();
 			class521_sub1_sub1_sub2_sub1.aByte10327 = class282_sub35_sub2.readByteC(1915533742);
 			class521_sub1_sub1_sub2_sub1.aByte10364 = class282_sub35_sub2.read128Byte((short) 23222);
 			class521_sub1_sub1_sub2_sub1.aByte10352 = (byte) class282_sub35_sub2.readUnsigned128Byte();
@@ -859,7 +859,7 @@ public class Class197 {
 	static final void method3198(RsBitsBuffer class282_sub35_sub2, int i, Player class521_sub1_sub1_sub2_sub1, int i_144_) {
 		byte i_145_ = Class249.aClass249_3083.aByte3085;
 		if ((i_144_ & 0x20000) != 0) {
-			class521_sub1_sub1_sub2_sub1.aByte10371 = class282_sub35_sub2.readByte((short) -14091);
+			class521_sub1_sub1_sub2_sub1.aByte10371 = class282_sub35_sub2.readByte();
 			class521_sub1_sub1_sub2_sub1.aByte10327 = class282_sub35_sub2.readByteC(774353542);
 			class521_sub1_sub1_sub2_sub1.aByte10364 = class282_sub35_sub2.read128Byte((short) 17193);
 			class521_sub1_sub1_sub2_sub1.aByte10352 = (byte) class282_sub35_sub2.readUnsigned128Byte();

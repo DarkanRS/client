@@ -304,7 +304,7 @@ public class FontMetrics {
 				is_109_[i_110_] = new byte[is_105_[i_110_]];
 				byte i_111_ = 0;
 				for (int i_112_ = 0; i_112_ < is_109_[i_110_].length; i_112_++) {
-					i_111_ += class282_sub35.readByte((short) -6571);
+					i_111_ += class282_sub35.readByte();
 					is_109_[i_110_][i_112_] = i_111_;
 				}
 			}
@@ -313,7 +313,7 @@ public class FontMetrics {
 				is_113_[i_114_] = new byte[is_105_[i_114_]];
 				byte i_115_ = 0;
 				for (int i_116_ = 0; i_116_ < is_113_[i_114_].length; i_116_++) {
-					i_115_ += class282_sub35.readByte((short) -26376);
+					i_115_ += class282_sub35.readByte();
 					is_113_[i_114_][i_116_] = i_115_;
 				}
 			}

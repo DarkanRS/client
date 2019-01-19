@@ -508,7 +508,7 @@ public class Class9 {
 							stream.writeInt((204524791 * (client.anInt7163)));
 							stream.writeString(client.aString7164);
 							stream.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
-							Class240.writeCRCs(stream, 144261488);
+							QuestDefinitions.writeCRCs(stream, 144261488);
 							stream.encryptWithXtea(Class500.anIntArray5827, i_8_, stream.index * -1990677291, 705394503);
 							stream.method13281((-1990677291 * stream.index - i_7_), 1201423895);
 						} else {
@@ -549,7 +549,7 @@ public class Class9 {
 							stream.writeInt((client.anInt7149 * -1543197399));
 							stream.writeInt((client.anInt7163 * 204524791));
 							stream.writeString(client.aString7164);
-							Class240.writeCRCs(stream, -231634376);
+							QuestDefinitions.writeCRCs(stream, -231634376);
 							stream.encryptWithXtea(Class500.anIntArray5827, i_11_, -1990677291 * stream.index, 516922321);
 							stream.method13281((stream.index * -1990677291 - i_10_), 1201423895);
 						}
@@ -1170,7 +1170,7 @@ public class Class9 {
 							class282_sub35_sub2.writeInt((204524791 * (client.anInt7163)));
 							class282_sub35_sub2.writeString(client.aString7164);
 							class282_sub35_sub2.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
-							Class240.writeCRCs(class282_sub35_sub2, 2084683894);
+							QuestDefinitions.writeCRCs(class282_sub35_sub2, 2084683894);
 							class282_sub35_sub2.encryptWithXtea(Class500.anIntArray5827, i_30_, class282_sub35_sub2.index * -1990677291, 1807823276);
 							class282_sub35_sub2.method13281((-1990677291 * class282_sub35_sub2.index - i_29_), 1201423895);
 						} else {
@@ -1211,7 +1211,7 @@ public class Class9 {
 							class282_sub35_sub2.writeInt((client.anInt7149 * -1543197399));
 							class282_sub35_sub2.writeInt((client.anInt7163 * 204524791));
 							class282_sub35_sub2.writeString(client.aString7164);
-							Class240.writeCRCs(class282_sub35_sub2, 1971599880);
+							QuestDefinitions.writeCRCs(class282_sub35_sub2, 1971599880);
 							class282_sub35_sub2.encryptWithXtea(Class500.anIntArray5827, i_33_, -1990677291 * class282_sub35_sub2.index, 1499562936);
 							class282_sub35_sub2.method13281((class282_sub35_sub2.index * -1990677291 - i_32_), 1201423895);
 						}

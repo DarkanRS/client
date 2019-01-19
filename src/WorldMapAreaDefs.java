@@ -99,7 +99,7 @@ public class WorldMapAreaDefs {
 				anIntArray2738[i_7_] = stream.readInt();
 			aByteArray2754 = new byte[i_4_];
 			for (int i_8_ = 0; i_8_ < i_4_; i_8_++)
-				aByteArray2754[i_8_] = stream.readByte((short) -27001);
+				aByteArray2754[i_8_] = stream.readByte();
 		} else if (i == 16)
 			aBool2742 = false;
 		else if (17 == i)

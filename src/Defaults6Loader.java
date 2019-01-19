@@ -53,7 +53,7 @@ public class Defaults6Loader {
 		int i_5_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 99);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_5_ >> 16];
-		Class240.method4136(class118, class98, class527, (byte) 78);
+		QuestDefinitions.method4136(class118, class98, class527, (byte) 78);
 	}
 
 	static final void method11247(CS2Executor class527, int i) {

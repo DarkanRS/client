@@ -28,7 +28,7 @@ public class Class282_Sub50_Sub14 extends Class282_Sub50 {
 				aCharArray9745 = new char[i_8_];
 				for (int i_9_ = 0; i_9_ < i_8_; i_9_++) {
 					anIntArray9746[i_9_] = class282_sub35.readUnsignedShort();
-					byte i_10_ = class282_sub35.readByte((short) -8016);
+					byte i_10_ = class282_sub35.readByte();
 					aCharArray9745[i_9_] = i_10_ == 0 ? '\0' : Class11.method470(i_10_, 1677278079);
 				}
 			} else if (3 == i) {
@@ -37,7 +37,7 @@ public class Class282_Sub50_Sub14 extends Class282_Sub50 {
 				aCharArray9748 = new char[i_11_];
 				for (int i_12_ = 0; i_12_ < i_11_; i_12_++) {
 					anIntArray9747[i_12_] = class282_sub35.readUnsignedShort();
-					byte i_13_ = class282_sub35.readByte((short) -32039);
+					byte i_13_ = class282_sub35.readByte();
 					aCharArray9748[i_12_] = i_13_ == 0 ? '\0' : Class11.method470(i_13_, -1266805306);
 				}
 			} else if (i == 4)

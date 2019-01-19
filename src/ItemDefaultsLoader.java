@@ -190,7 +190,7 @@ public class ItemDefaultsLoader {
 	}
 
 	static void method7083(CS2Executor class527, int i) {
-		Class240 class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
+		QuestDefinitions class240 = IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317);
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class240.anIntArray2964 == null ? 0 : class240.anIntArray2964.length);
 	}
 }
