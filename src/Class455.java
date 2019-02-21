@@ -177,12 +177,12 @@ public abstract class Class455 {
 		}
 	}
 
-	static int method7559(byte[] is, int i, int i_27_, int i_28_) {
-		int i_29_ = -1;
-		for (int i_30_ = i; i_30_ < i_27_; i_30_++)
-			i_29_ = i_29_ >>> 8 ^ (RsByteBuffer.anIntArray7986[(i_29_ ^ is[i_30_]) & 0xff]);
-		i_29_ ^= 0xffffffff;
-		return i_29_;
+	static int getCRC(byte[] data, int start, int end) {
+		int crc = -1;
+		for (int i = start; i < end; i++)
+			crc = crc >>> 8 ^ (RsByteBuffer.anIntArray7986[(crc ^ data[i]) & 0xff]);
+		crc ^= 0xffffffff;
+		return crc;
 	}
 
 	static final void method7560(CS2Executor class527, int i) {

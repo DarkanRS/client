@@ -103,7 +103,7 @@ public class RenderAnimIndexLoader {
 
 	public RenderAnimIndexLoader(Game class486, Language class495, Index class317, Defaults6Loader class526) {
 		((RenderAnimIndexLoader) this).aClass317_2671 = class317;
-		((RenderAnimIndexLoader) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.RENDER_ANIMS.id)), 357148056);
+		((RenderAnimIndexLoader) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.RENDER_ANIMS.id)));
 		((RenderAnimIndexLoader) this).aClass526_2672 = class526;
 	}
 

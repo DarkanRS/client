@@ -43,9 +43,9 @@ public class AnimationIndexLoader {
 		((AnimationIndexLoader) this).cache = new SoftCache(100);
 		((AnimationIndexLoader) this).sequenceIndex = sequencesIndex;
 		if (null != ((AnimationIndexLoader) this).sequenceIndex) {
-			int i = ((AnimationIndexLoader) this).sequenceIndex.containersCount(-738745647) - 1;
+			int i = ((AnimationIndexLoader) this).sequenceIndex.containersCount() - 1;
 			SharedConfigsType.SEQUENCES.filesPerContainer(-1584727313);
-			((AnimationIndexLoader) this).sequenceIndex.filesCount(i, -812236501);
+			((AnimationIndexLoader) this).sequenceIndex.filesCount(i);
 		}
 		Class96_Sub10_Sub1.setAnimationIndices(animSkeletonIndex, animSkinIndex, 2, -1736051925);
 	}

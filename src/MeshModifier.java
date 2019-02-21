@@ -94,8 +94,8 @@ public class MeshModifier {
 	}
 
 	public static void method7041(byte i) {
-		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount(-989265149)];
-		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount(-1315651594)];
+		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount()];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount()];
 	}
 
 	public static void method7042(byte i) {

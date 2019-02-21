@@ -189,19 +189,19 @@ public class Class361 {
 		class527.intStackPtr += 425673003;
 	}
 
-	public static byte[] method6273(byte[] is, int i, int i_1_, byte i_2_) {
+	public static byte[] method6273(byte[] data, int start, int end) {
 		byte[] is_3_;
-		if (i > 0) {
-			is_3_ = new byte[i_1_];
-			for (int i_4_ = 0; i_4_ < i_1_; i_4_++)
-				is_3_[i_4_] = is[i_4_ + i];
+		if (start > 0) {
+			is_3_ = new byte[end];
+			for (int i_4_ = 0; i_4_ < end; i_4_++)
+				is_3_[i_4_] = data[i_4_ + start];
 		} else
-			is_3_ = is;
-		Whirlpool class443 = new Whirlpool();
-		class443.method7406(1953997400);
-		class443.method7407(is_3_, (long) (i_1_ * 8));
+			is_3_ = data;
+		Whirlpool whirlpool = new Whirlpool();
+		whirlpool.method7406(1953997400);
+		whirlpool.method7407(is_3_, (long) (end * 8));
 		byte[] is_5_ = new byte[64];
-		class443.method7408(is_5_, 0, -979792487);
+		whirlpool.method7408(is_5_, 0, -979792487);
 		return is_5_;
 	}
 

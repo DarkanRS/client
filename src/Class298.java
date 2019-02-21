@@ -10,9 +10,9 @@ public class Class298 implements Interface41 {
 	}
 
 	public int getCompletion(int i) {
-		if (((Class298) this).index.isValid((byte) 19))
+		if (((Class298) this).index.isValid())
 			return 100;
-		return ((Class298) this).index.getCompletion(830407420);
+		return ((Class298) this).index.getCompletion();
 	}
 
 	public Class445 method234() {
@@ -20,9 +20,9 @@ public class Class298 implements Interface41 {
 	}
 
 	public int method231() {
-		if (((Class298) this).index.isValid((byte) 126))
+		if (((Class298) this).index.isValid())
 			return 100;
-		return ((Class298) this).index.getCompletion(1024263649);
+		return ((Class298) this).index.getCompletion();
 	}
 
 	public Class445 method230() {

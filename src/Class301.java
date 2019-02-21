@@ -77,10 +77,10 @@ public class Class301 implements Interface41 {
 	}
 
 	public static Class283 method5331(Index class317, String string, boolean bool, int i) {
-		int i_1_ = class317.getArchiveId(string, -1729894285);
+		int i_1_ = class317.getArchiveId(string);
 		if (-1 == i_1_)
 			return new Class283(0);
-		int[] is = class317.getValidFileIds(i_1_, -710345524);
+		int[] is = class317.getValidFileIds(i_1_);
 		Class283 class283 = new Class283(is.length);
 		int i_2_ = 0;
 		int i_3_ = 0;

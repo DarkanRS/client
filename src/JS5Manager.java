@@ -45,7 +45,7 @@ public class JS5Manager {
 		if (crcData.length != 64 && crcData.length != 65) {
 			throw new RuntimeException();
 		}
-		byte[] is_4_ = Class361.method6273(stream.buffer, 5, (-1990677291 * stream.index - localCrcData.length - 5), (byte) 56);
+		byte[] is_4_ = Class361.method6273(stream.buffer, 5, (-1990677291 * stream.index - localCrcData.length - 5));
 		for (int i_5_ = 0; i_5_ < 64; i_5_++) {
 			/*
 			 * if (is_2_[1 + i_5_] != is_4_[i_5_]) { throw new

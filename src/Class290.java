@@ -53,7 +53,7 @@ public class Class290 {
 		((Class290) this).aClass229_3447 = new SoftCache(20);
 		((Class290) this).aClass317_3448 = class317_1_;
 		((Class290) this).aClass317_3450 = class317;
-		((Class290) this).aClass317_3450.filesCount((-71319279 * (SharedConfigsType.HITBARS.id)), -732818997);
+		((Class290) this).aClass317_3450.filesCount((-71319279 * (SharedConfigsType.HITBARS.id)));
 	}
 
 	public void method5104() {

@@ -17,7 +17,7 @@ public class Class233 {
 	public Class233(Game class486, Language class495, Index class317) {
 		((Class233) this).aClass317_2882 = class317;
 		if (null != ((Class233) this).aClass317_2882)
-			((Class233) this).aClass317_2882.filesCount(-71319279 * SharedConfigsType.aClass120_1464.id, -494038872);
+			((Class233) this).aClass317_2882.filesCount(-71319279 * SharedConfigsType.aClass120_1464.id);
 	}
 
 	public void method3924(int i) {

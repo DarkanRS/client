@@ -11,29 +11,29 @@ public final class Index {
 	static int anInt3689;
 	JS5FileWorker aClass327_3690;
 	static boolean aBool3692 = false;
-	ReferenceTable referencetable = null;
+	ReferenceTable referenceTable = null;
 
 	public int getCrc() {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			throw new IllegalStateException("");
-		return (-2006273977 * ((ReferenceTable) this.referencetable).crc);
+		return (-2006273977 * referenceTable.crc);
 	}
 
-	synchronized boolean fileExists(int i, int i_4_) {
-		if (!referenceTableLoaded((byte) 1))
+	synchronized boolean fileExists(int fileId) {
+		if (!referenceTableLoaded())
 			return false;
-		if (i < 0 || i >= (((ReferenceTable) this.referencetable).fileLengths).length || 0 == (((ReferenceTable) this.referencetable).fileLengths[i])) {
+		if (fileId < 0 || fileId >= (referenceTable.fileCounts).length || 0 == (referenceTable.fileCounts[fileId])) {
 			if (aBool3692)
-				throw new IllegalArgumentException(Integer.toString(i));
+				throw new IllegalArgumentException(Integer.toString(fileId));
 			return false;
 		}
 		return true;
 	}
 
-	synchronized boolean fileExists(int fileId, int archiveId, int i_6_) {
-		if (!referenceTableLoaded((byte) 1))
+	synchronized boolean fileExists(int fileId, int archiveId) {
+		if (!referenceTableLoaded())
 			return false;
-		if (fileId < 0 || archiveId < 0 || fileId >= (((ReferenceTable) this.referencetable).fileLengths).length || archiveId >= (((ReferenceTable) this.referencetable).fileLengths[fileId])) {
+		if (fileId < 0 || archiveId < 0 || fileId >= (referenceTable.fileCounts).length || archiveId >= (referenceTable.fileCounts[fileId])) {
 			if (aBool3692)
 				throw new IllegalArgumentException(new StringBuilder().append(fileId).append(" ").append(archiveId).toString());
 			return false;
@@ -56,35 +56,35 @@ public final class Index {
 		return getFile(archiveId, fileId, null);
 	}
 
-	public boolean validFile(String string, int i) {
-		if (!referenceTableLoaded((byte) 1))
+	public boolean validFile(String string) {
+		if (!referenceTableLoaded())
 			return false;
 		string = string.toLowerCase();
-		int i_11_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -746218156), -1797692054));
+		int i_11_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -746218156), -1797692054));
 		if (i_11_ < 0)
 			return false;
 		return true;
 	}
 
-	public int getArchiveId(String string, int i) {
-		if (!referenceTableLoaded((byte) 1))
+	public int getArchiveId(String string) {
+		if (!referenceTableLoaded())
 			return -1;
 		string = string.toLowerCase();
-		int i_12_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -221631935), -1537354695));
-		if (!fileExists(i_12_, 16711680))
+		int i_12_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -221631935), -1537354695));
+		if (!fileExists(i_12_))
 			return -1;
 		return i_12_;
 	}
 
-	public synchronized boolean isValid(byte i) {
-		if (!referenceTableLoaded((byte) 1))
+	public synchronized boolean isValid() {
+		if (!referenceTableLoaded())
 			return false;
 		boolean bool = true;
-		for (int i_13_ = 0; i_13_ < (((ReferenceTable) this.referencetable).validArchiveIds).length; i_13_++) {
-			int i_14_ = (((ReferenceTable) this.referencetable).validArchiveIds[i_13_]);
-			if (null == this.anObjectArray3682[i_14_]) {
-				method5605(i_14_, (byte) 0);
-				if (null == this.anObjectArray3682[i_14_])
+		for (int i = 0; i < (referenceTable.validArchiveIds).length; i++) {
+			int archiveId = (referenceTable.validArchiveIds[i]);
+			if (null == this.anObjectArray3682[archiveId]) {
+				method5605(archiveId, (byte) 0);
+				if (null == this.anObjectArray3682[archiveId])
 					bool = false;
 			}
 		}
@@ -92,20 +92,20 @@ public final class Index {
 	}
 
 	synchronized int method5613(int i, byte i_15_) {
-		if (!fileExists(i, 16711680))
+		if (!fileExists(i))
 			return 0;
 		if (this.anObjectArray3682[i] != null)
 			return 100;
 		return this.aClass327_3690.method5806(i, (byte) 49);
 	}
 
-	public synchronized int getCompletion(int i) {
-		if (!referenceTableLoaded((byte) 1))
+	public synchronized int getCompletion() {
+		if (!referenceTableLoaded())
 			return 0;
 		int i_16_ = 0;
 		int i_17_ = 0;
 		for (int i_18_ = 0; i_18_ < this.anObjectArray3682.length; i_18_++) {
-			if ((((ReferenceTable) this.referencetable).validFileIdSizes[i_18_]) > 0) {
+			if ((referenceTable.validFileIdSizes[i_18_]) > 0) {
 				i_16_ += 100;
 				i_17_ += method5613(i_18_, (byte) -93);
 			}
@@ -117,123 +117,123 @@ public final class Index {
 	}
 
 	public synchronized byte[] getFile(int fileId) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return null;
-		if (((ReferenceTable) this.referencetable).fileLengths.length == 1)
+		if (referenceTable.fileCounts.length == 1)
 			return getFile(0, fileId);
-		if (!fileExists(fileId, 16711680))
+		if (!fileExists(fileId))
 			return null;
-		if (1 == ((ReferenceTable) this.referencetable).fileLengths[fileId])
+		if (1 == referenceTable.fileCounts[fileId])
 			return getFile(fileId, 0);
 		throw new RuntimeException();
 	}
 
-	public synchronized int[] getValidFileIds(int archiveId, int i_21_) {
-		if (!fileExists(archiveId, 16711680))
+	public synchronized int[] getValidFileIds(int archiveId) {
+		if (!fileExists(archiveId))
 			return null;
-		int[] counts = (((ReferenceTable) this.referencetable).validFileIds[archiveId]);
+		int[] counts = (referenceTable.validFileIds[archiveId]);
 		if (null == counts) {
-			counts = new int[(((ReferenceTable) this.referencetable).validFileIdSizes[archiveId])];
+			counts = new int[(referenceTable.validFileIdSizes[archiveId])];
 			for (int i = 0; i < counts.length; i++)
 				counts[i] = i;
 		}
 		return counts;
 	}
 
-	public int containersCount(int i) {
-		if (!referenceTableLoaded((byte) 1))
+	public int containersCount() {
+		if (!referenceTableLoaded())
 			return -1;
-		return (((ReferenceTable) this.referencetable).fileLengths).length;
+		return (referenceTable.fileCounts).length;
 	}
 
-	public synchronized void method5619(int i, int i_23_) {
-		if (fileExists(i, 16711680)) {
+	public synchronized void method5619(int fileId, int i_23_) {
+		if (fileExists(fileId)) {
 			if (null != this.files)
-				this.files[i] = null;
+				this.files[fileId] = null;
 		}
 	}
 
 	public int method5623(int i, byte i_26_) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return -1;
-		int i_27_ = ((ReferenceTable) this.referencetable).archiveName.method865(i, -1675109701);
-		if (!fileExists(i_27_, 16711680))
+		int i_27_ = referenceTable.archiveName.method865(i, -1675109701);
+		if (!fileExists(i_27_))
 			return -1;
 		return i_27_;
 	}
 
-	public int filesCount(int i, int i_28_) {
-		if (!fileExists(i, 16711680))
+	public int filesCount(int archiveId) {
+		if (!fileExists(archiveId))
 			return 0;
-		return ((ReferenceTable) this.referencetable).fileLengths[i];
+		return referenceTable.fileCounts[archiveId];
 	}
 
 	public boolean method5625(String string, String string_29_, byte i) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return false;
 		string = string.toLowerCase();
 		string_29_ = string_29_.toLowerCase();
-		int i_30_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -1816008366), -1883190493));
+		int i_30_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1816008366), -1883190493));
 		if (i_30_ < 0)
 			return false;
-		int i_31_ = (((ReferenceTable) this.referencetable).namedFiles[i_30_].method865(GraphicalRenderer.method8696(string_29_, -92083175), -1658700496));
+		int i_31_ = (referenceTable.namedFiles[i_30_].method865(GraphicalRenderer.method8696(string_29_, -92083175), -1658700496));
 		if (i_31_ < 0)
 			return false;
 		return true;
 	}
 
 	public synchronized byte[] method5626(String string, String string_32_, byte i) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return null;
 		string = string.toLowerCase();
 		string_32_ = string_32_.toLowerCase();
-		int i_33_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -1702952082), -1918848832));
-		if (!fileExists(i_33_, 16711680))
+		int i_33_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1702952082), -1918848832));
+		if (!fileExists(i_33_))
 			return null;
-		int i_34_ = (((ReferenceTable) this.referencetable).namedFiles[i_33_].method865(GraphicalRenderer.method8696(string_32_, -1819598468), -1926581994));
+		int i_34_ = (referenceTable.namedFiles[i_33_].method865(GraphicalRenderer.method8696(string_32_, -1819598468), -1926581994));
 		return getFile(i_33_, i_34_);
 	}
 
 	boolean method5627(String string, String string_35_, byte i) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return false;
 		string = string.toLowerCase();
 		string_35_ = string_35_.toLowerCase();
-		int i_36_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, 639316649), -1994003594));
-		if (!fileExists(i_36_, 16711680))
+		int i_36_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, 639316649), -1994003594));
+		if (!fileExists(i_36_))
 			return false;
-		int i_37_ = (((ReferenceTable) this.referencetable).namedFiles[i_36_].method865(GraphicalRenderer.method8696(string_35_, -316679725), -1542672707));
+		int i_37_ = (referenceTable.namedFiles[i_36_].method865(GraphicalRenderer.method8696(string_35_, -316679725), -1542672707));
 		return load(i_36_, i_37_, 16711935);
 	}
 
 	public boolean method5628(String string, int i) {
-		int i_38_ = getArchiveId("", -200916633);
+		int i_38_ = getArchiveId("");
 		if (-1 != i_38_)
 			return method5627("", string, (byte) -29);
 		return method5627(string, "", (byte) 31);
 	}
 
 	public boolean method5629(String string, int i) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return false;
 		string = string.toLowerCase();
-		int i_39_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -1032103959), -2031296285));
+		int i_39_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1032103959), -2031296285));
 		return loadFile(i_39_, -2119577317);
 	}
 
 	public void method5630(String string, int i) {
-		if (referenceTableLoaded((byte) 1)) {
+		if (referenceTableLoaded()) {
 			string = string.toLowerCase();
-			int i_40_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, 320473901), -2076023188));
+			int i_40_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, 320473901), -2076023188));
 			method5606(i_40_, 831904871);
 		}
 	}
 
 	public int method5631(String string, byte i) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return 0;
 		string = string.toLowerCase();
-		int i_41_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -1627018596), -1645709178));
+		int i_41_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1627018596), -1645709178));
 		return method5613(i_41_, (byte) -6);
 	}
 
@@ -241,26 +241,26 @@ public final class Index {
 		anInt3689 = 0;
 	}
 
-	synchronized boolean referenceTableLoaded(byte i) {
-		if (this.referencetable == null) {
-			this.referencetable = this.aClass327_3690.getReferenceTable(-860118856);
-			if (this.referencetable == null)
+	synchronized boolean referenceTableLoaded() {
+		if (this.referenceTable == null) {
+			this.referenceTable = this.aClass327_3690.getReferenceTable(-860118856);
+			if (this.referenceTable == null)
 				return false;
-			this.anObjectArray3682 = new Object[(((ReferenceTable) this.referencetable).archiveCount) * 1563136279];
-			this.files = new Object[(((ReferenceTable) this.referencetable).archiveCount) * 1563136279][];
+			this.anObjectArray3682 = new Object[(referenceTable.archiveCount) * 1563136279];
+			this.files = new Object[(referenceTable.archiveCount) * 1563136279][];
 		}
 		return true;
 	}
 	
 	synchronized boolean method5638(int i, int i_45_, int[] is, int i_46_) {
-		if (!fileExists(i, 16711680))
+		if (!fileExists(i))
 			return false;
 		if (this.anObjectArray3682[i] == null)
 			return false;
-		int i_47_ = ((ReferenceTable) this.referencetable).validFileIdSizes[i];
-		int[] is_48_ = (((ReferenceTable) this.referencetable).validFileIds[i]);
+		int i_47_ = referenceTable.validFileIdSizes[i];
+		int[] is_48_ = (referenceTable.validFileIds[i]);
 		if (null == this.files[i])
-			this.files[i] = new Object[(((ReferenceTable) this.referencetable).fileLengths[i])];
+			this.files[i] = new Object[(referenceTable.fileCounts[i])];
 		Object[] objects = this.files[i];
 		boolean bool = true;
 		for (int i_49_ = 0; i_49_ < i_47_; i_49_++) {
@@ -287,7 +287,7 @@ public final class Index {
 		try {
 			is_52_ = Class282_Sub17_Sub6.method15438(is_51_, (byte) 43);
 		} catch (RuntimeException runtimeexception) {
-			throw Class150.method2585(runtimeexception, new StringBuilder().append(null != is).append(" ").append(i).append(" ").append(is_51_.length).append(" ").append(Class285.method5028(is_51_, is_51_.length, (short) 255)).append(" ").append(Class285.method5028(is_51_, is_51_.length - 2, (short) 255)).append(" ").append(((ReferenceTable) this.referencetable).unknown[i]).append(" ").append(-2006273977 * (((ReferenceTable) this.referencetable).crc)).toString());
+			throw Class150.method2585(runtimeexception, new StringBuilder().append(null != is).append(" ").append(i).append(" ").append(is_51_.length).append(" ").append(Class285.getCRC(is_51_, is_51_.length)).append(" ").append(Class285.getCRC(is_51_, is_51_.length - 2)).append(" ").append(referenceTable.unknown[i]).append(" ").append(-2006273977 * (referenceTable.crc)).toString());
 		}
 		if (this.aBool3685)
 			this.anObjectArray3682[i] = null;
@@ -395,7 +395,7 @@ public final class Index {
 	}
 
 	public synchronized byte[] getFile(int archiveId, int fileId, int[] xteas) {
-		if (!fileExists(archiveId, fileId, -1834383347))
+		if (!fileExists(archiveId, fileId))
 			return null;
 		byte[] is_86_ = null;
 		if (this.files[archiveId] == null || null == this.files[archiveId][fileId]) {
@@ -417,7 +417,7 @@ public final class Index {
 		if (is_86_ != null) {
 			if (1 == this.anInt3683 * 1067739717) {
 				this.files[archiveId][fileId] = null;
-				if (1 == (((ReferenceTable) this.referencetable).fileLengths[archiveId]))
+				if (1 == (referenceTable.fileCounts[archiveId]))
 					this.files[archiveId] = null;
 			} else if (this.anInt3683 * 1067739717 == 2)
 				this.files[archiveId] = null;
@@ -426,7 +426,7 @@ public final class Index {
 	}
 
 	public synchronized boolean loadFile(int i, int i_127_) {
-		if (!fileExists(i, 16711680))
+		if (!fileExists(i))
 			return false;
 		if (null != this.anObjectArray3682[i])
 			return true;
@@ -437,13 +437,13 @@ public final class Index {
 	}
 
 	public synchronized boolean method5661(int i, int i_136_) {
-		if (!referenceTableLoaded((byte) 1))
+		if (!referenceTableLoaded())
 			return false;
-		if (1 == (((ReferenceTable) this.referencetable).fileLengths).length)
+		if (1 == (referenceTable.fileCounts).length)
 			return load(0, i, 16711935);
-		if (!fileExists(i, 16711680))
+		if (!fileExists(i))
 			return false;
-		if (((ReferenceTable) this.referencetable).fileLengths[i] == 1)
+		if (referenceTable.fileCounts[i] == 1)
 			return load(i, 0, 16711935);
 		throw new RuntimeException();
 	}
@@ -457,20 +457,20 @@ public final class Index {
 	}
 
 	public void method5676(boolean bool, boolean bool_148_, byte i) {
-		if (referenceTableLoaded((byte) 1)) {
+		if (referenceTableLoaded()) {
 			if (bool) {
-				((ReferenceTable) this.referencetable).nameHashes = null;
-				((ReferenceTable) this.referencetable).archiveName = null;
+				referenceTable.nameHashes = null;
+				referenceTable.archiveName = null;
 			}
 			if (bool_148_) {
-				((ReferenceTable) this.referencetable).fileNameHashes = null;
-				((ReferenceTable) this.referencetable).namedFiles = null;
+				referenceTable.fileNameHashes = null;
+				referenceTable.namedFiles = null;
 			}
 		}
 	}
 
 	public synchronized boolean load(int i, int i_154_, int i_155_) {
-		if (!fileExists(i, i_154_, -1834383347))
+		if (!fileExists(i, i_154_))
 			return false;
 		if (this.files[i] != null && this.files[i][i_154_] != null)
 			return true;

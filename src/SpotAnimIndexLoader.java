@@ -16,9 +16,9 @@ public class SpotAnimIndexLoader {
 		((SpotAnimIndexLoader) this).aClass229_5890 = new SoftCache(60);
 		((SpotAnimIndexLoader) this).aClass317_5888 = class317;
 		((SpotAnimIndexLoader) this).aClass317_5889 = class317_0_;
-		int i = ((SpotAnimIndexLoader) this).aClass317_5888.containersCount(-1503644160) - 1;
+		int i = ((SpotAnimIndexLoader) this).aClass317_5888.containersCount() - 1;
 		SharedConfigsType.SPOT_ANIMS.filesPerContainer(-397238873);
-		((SpotAnimIndexLoader) this).aClass317_5888.filesCount(i, -1544265999);
+		((SpotAnimIndexLoader) this).aClass317_5888.filesCount(i);
 	}
 
 	public SpotAnimDefinitions getSpotAnimDefs(int spotAnimId, byte i_1_) {

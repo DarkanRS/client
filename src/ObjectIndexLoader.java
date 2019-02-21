@@ -119,9 +119,9 @@ public class ObjectIndexLoader {
 		((ObjectIndexLoader) this).objectIndex = class317;
 		((ObjectIndexLoader) this).meshIndex = class317_3_;
 		if (null != ((ObjectIndexLoader) this).objectIndex) {
-			int i = ((ObjectIndexLoader) this).objectIndex.containersCount(-1925709864) - 1;
+			int i = ((ObjectIndexLoader) this).objectIndex.containersCount() - 1;
 			SharedConfigsType.OBJECT_DEFINITIONS.filesPerContainer(-1090472574);
-			((ObjectIndexLoader) this).objectIndex.filesCount(i, -1510124116);
+			((ObjectIndexLoader) this).objectIndex.filesCount(i);
 		}
 		if (((ObjectIndexLoader) this).game == Game.darkan)
 			((ObjectIndexLoader) this).defaultOptions = (new String[] { null, null, null, null, null, Message.EXAMINE.translate((((ObjectIndexLoader) this).aClass495_5608), -952366759) });

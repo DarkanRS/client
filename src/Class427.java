@@ -44,7 +44,7 @@ public class Class427 {
 	public Class427(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class427) this).aClass317_5120 = class317;
 		((Class427) this).aClass317_5118 = class317_2_;
-		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.id) * -71319279, 1541409828);
+		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.id) * -71319279);
 		Math.random();
 		Math.random();
 		Math.random();

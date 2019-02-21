@@ -90,7 +90,7 @@ public class Class210 {
 	public Class210(Game class486, Language class495, Index class317, Index class317_2_) {
 		((Class210) this).aClass317_2666 = class317_2_;
 		((Class210) this).aClass317_2665 = class317;
-		((Class210) this).aClass317_2665.filesCount((-71319279 * (SharedConfigsType.aClass120_1509.id)), -512720264);
+		((Class210) this).aClass317_2665.filesCount((-71319279 * (SharedConfigsType.aClass120_1509.id)));
 	}
 
 	public void method3608(int i) {

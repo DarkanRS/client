@@ -9,10 +9,10 @@ public class Class283 {
 	public static int anInt3384;
 
 	public static Class283 method5005(Index class317, String string, boolean bool) {
-		int i = class317.getArchiveId(string, 1601632799);
+		int i = class317.getArchiveId(string);
 		if (-1 == i)
 			return new Class283(0);
-		int[] is = class317.getValidFileIds(i, -1665281400);
+		int[] is = class317.getValidFileIds(i);
 		Class283 class283 = new Class283(is.length);
 		int i_0_ = 0;
 		int i_1_ = 0;
@@ -32,10 +32,10 @@ public class Class283 {
 	}
 
 	public static Class283 method5006(Index class317, String string, boolean bool) {
-		int i = class317.getArchiveId(string, -1721859945);
+		int i = class317.getArchiveId(string);
 		if (-1 == i)
 			return new Class283(0);
-		int[] is = class317.getValidFileIds(i, -1814676381);
+		int[] is = class317.getValidFileIds(i);
 		Class283 class283 = new Class283(is.length);
 		int i_5_ = 0;
 		int i_6_ = 0;
@@ -61,10 +61,10 @@ public class Class283 {
 	}
 
 	public static Class283 method5007(Index class317, String string, boolean bool) {
-		int i = class317.getArchiveId(string, 1416579061);
+		int i = class317.getArchiveId(string);
 		if (-1 == i)
 			return new Class283(0);
-		int[] is = class317.getValidFileIds(i, -731838186);
+		int[] is = class317.getValidFileIds(i);
 		Class283 class283 = new Class283(is.length);
 		int i_10_ = 0;
 		int i_11_ = 0;

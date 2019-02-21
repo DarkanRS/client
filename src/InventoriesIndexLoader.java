@@ -9,7 +9,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 
 	public InventoriesIndexLoader(Game class486, Language class495, Index class317) {
 		((InventoriesIndexLoader) this).configIndex = class317;
-		((InventoriesIndexLoader) this).configIndex.filesCount((SharedConfigsType.INVENTORIES.id) * -71319279, -2082829167);
+		((InventoriesIndexLoader) this).configIndex.filesCount((SharedConfigsType.INVENTORIES.id) * -71319279);
 	}
 
 	public InventoryDef getInventoryDef(int i, short i_0_) {

@@ -36,7 +36,7 @@ public class UnderlayIndexLoader {
 
 	public UnderlayIndexLoader(Game class486, Language class495, Index class317) {
 		((UnderlayIndexLoader) this).configIndex = class317;
-		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.FLO1.id) * -71319279, 345702944);
+		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.FLO1.id) * -71319279);
 	}
 
 	public void method8030(int i, int i_1_) {

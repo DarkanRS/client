@@ -166,8 +166,8 @@ public class ItemIndexLoader implements IndexLoader {
 		((ItemIndexLoader) this).fs19 = fs19;
 		((ItemIndexLoader) this).meshIndex = meshIndex;
 		if (((ItemIndexLoader) this).fs19 != null) {
-			int i = ((ItemIndexLoader) this).fs19.containersCount(-1865229040) - 1;
-			maxItemsCount = (i * SharedConfigsType.ITEM_DEFINITIONS.filesPerContainer(-1077198554) + ((ItemIndexLoader) this).fs19.filesCount(i, -1891673686)) * -230207835;
+			int i = ((ItemIndexLoader) this).fs19.containersCount() - 1;
+			maxItemsCount = (i * SharedConfigsType.ITEM_DEFINITIONS.filesPerContainer(-1077198554) + ((ItemIndexLoader) this).fs19.filesCount(i)) * -230207835;
 		} else
 			maxItemsCount = 0;
 		if (Game.darkan == ((ItemIndexLoader) this).game)

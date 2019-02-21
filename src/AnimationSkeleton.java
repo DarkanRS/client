@@ -33,7 +33,7 @@ public class AnimationSkeleton extends CacheableNode {
 				if (!ANIMATION_SKELETON_INDEX.loadFile((this.animSkeletonId) * 2091314053, -2119577317)) {
 					return false;
 				}
-				int[] fileIds = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053, -751611807);
+				int[] fileIds = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053);
 				this.skeletonData = new byte[fileIds.length][];
 				for (int i = 0; i < fileIds.length; i++)
 					this.skeletonData[i] = ANIMATION_SKELETON_INDEX.getFile((this.animSkeletonId * 2091314053), fileIds[i]);
@@ -54,9 +54,9 @@ public class AnimationSkeleton extends CacheableNode {
 		LinkedNodeList skinList = new LinkedNodeList();
 		int[] validFiles;
 		synchronized (ANIMATION_SKELETON_INDEX) {
-			int fileSize = ANIMATION_SKELETON_INDEX.filesCount((this.animSkeletonId) * 2091314053, -35753208);
+			int fileSize = ANIMATION_SKELETON_INDEX.filesCount((this.animSkeletonId) * 2091314053);
 			this.animationSkins = new AnimationSkin[fileSize];
-			validFiles = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053, -1900755589);
+			validFiles = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053);
 		}
 		for (int i = 0; i < validFiles.length; i++) {
 			byte[] skeletonData = this.skeletonData[i];

@@ -27,9 +27,9 @@ public class EnumIndexLoader {
 	public EnumIndexLoader(Game class486, Language class495, Index class317) {
 		((EnumIndexLoader) this).aClass317_5378 = class317;
 		if (null != ((EnumIndexLoader) this).aClass317_5378) {
-			int i = ((EnumIndexLoader) this).aClass317_5378.containersCount(-1259843972) - 1;
+			int i = ((EnumIndexLoader) this).aClass317_5378.containersCount() - 1;
 			SharedConfigsType.aClass120_1471.filesPerContainer(-613744571);
-			((EnumIndexLoader) this).aClass317_5378.filesCount(i, -826629788);
+			((EnumIndexLoader) this).aClass317_5378.filesCount(i);
 		}
 	}
 

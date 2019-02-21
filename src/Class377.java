@@ -11,7 +11,7 @@ public class Class377 implements IndexLoader {
 	public Class377(Game class486, Language class495, Index class317) {
 		((Class377) this).aClass317_4518 = class317;
 		if (((Class377) this).aClass317_4518 != null)
-			anInt4519 = (((Class377) this).aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.id * -71319279, -1550492065)) * -517376561;
+			anInt4519 = (((Class377) this).aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.id * -71319279)) * -517376561;
 		else
 			anInt4519 = 0;
 	}
@@ -36,35 +36,9 @@ public class Class377 implements IndexLoader {
 		return class372;
 	}
 
-	public Class372 method6385(int i) {
-		Class372 class372;
-		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
-		}
-		if (class372 != null)
-			return class372;
-		byte[] is;
-		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i);
-		}
-		class372 = new Class372();
-		if (is != null)
-			class372.method6356(new RsByteBuffer(is), 471213324);
-		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.put(class372, (long) i);
-		}
-		return class372;
-	}
-
 	public void method6386(int i, byte i_1_) {
 		synchronized (((Class377) this).aClass229_4517) {
 			((Class377) this).aClass229_4517.method3858(i, (byte) -47);
-		}
-	}
-
-	public void method6387(int i) {
-		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3858(i, (byte) -2);
 		}
 	}
 
@@ -74,47 +48,9 @@ public class Class377 implements IndexLoader {
 		}
 	}
 
-	public Class372 method6389(int i) {
-		Class372 class372;
-		synchronized (((Class377) this).aClass229_4517) {
-			class372 = ((Class372) ((Class377) this).aClass229_4517.get((long) i));
-		}
-		if (class372 != null)
-			return class372;
-		byte[] is;
-		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i);
-		}
-		class372 = new Class372();
-		if (is != null)
-			class372.method6356(new RsByteBuffer(is), 1597587859);
-		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.put(class372, (long) i);
-		}
-		return class372;
-	}
-
 	public void method6390(int i) {
 		synchronized (((Class377) this).aClass229_4517) {
 			((Class377) this).aClass229_4517.method3863(2135815187);
-		}
-	}
-
-	public void method6391() {
-		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3863(2137902118);
-		}
-	}
-
-	public void method6392() {
-		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3863(1588803028);
-		}
-	}
-
-	public void method6393() {
-		synchronized (((Class377) this).aClass229_4517) {
-			((Class377) this).aClass229_4517.method3863(2033533486);
 		}
 	}
 

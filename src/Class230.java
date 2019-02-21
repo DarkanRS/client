@@ -29,9 +29,9 @@ public class Class230 implements IndexLoader {
 	public Class230(Game class486, Language class495, Index class317) {
 		((Class230) this).aClass317_2858 = class317;
 		if (((Class230) this).aClass317_2858 != null) {
-			int i = ((Class230) this).aClass317_2858.containersCount(-1585425152) - 1;
+			int i = ((Class230) this).aClass317_2858.containersCount() - 1;
 			SharedConfigsType.aClass120_1477.filesPerContainer(-689743414);
-			((Class230) this).aClass317_2858.filesCount(i, -1063022229);
+			((Class230) this).aClass317_2858.filesCount(i);
 		}
 	}
 

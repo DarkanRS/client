@@ -103,11 +103,11 @@ public class MapRegion {
 			for (int regionY = (i_4_ - (this.sizeY * 315871463 >> 4)) / 8; regionY <= ((315871463 * this.sizeY >> 4) + i_4_) / 8; regionY++) {
 				int regionId = (regionX << 8) + regionY;
 				this.regionIds[regionsLoaded] = regionId;
-				this.mapDataArchiveIds[regionsLoaded] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, regionX, regionY, -286852871), -1088666299));
-				this.landscapeDataArchiveIds[regionsLoaded] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, regionX, regionY, 1453665209), -524022891));
-				this.npcSpawnArchiveIds[regionsLoaded] = IndexLoaders.MAP_INDEX.getArchiveId(new StringBuilder().append("n").append(regionX).append('_').append(regionY).toString(), 247066516);
-				this.mapDataUnderlayArchiveIds[regionsLoaded] = IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, regionX, regionY, 300279978), 319811182);
-				this.landscapeDataUnderlayArchiveIds[regionsLoaded] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, regionX, regionY, -101880645), 599535507));
+				this.mapDataArchiveIds[regionsLoaded] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, regionX, regionY)));
+				this.landscapeDataArchiveIds[regionsLoaded] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, regionX, regionY)));
+				this.npcSpawnArchiveIds[regionsLoaded] = IndexLoaders.MAP_INDEX.getArchiveId(new StringBuilder().append("n").append(regionX).append('_').append(regionY).toString());
+				this.mapDataUnderlayArchiveIds[regionsLoaded] = IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, regionX, regionY));
+				this.landscapeDataUnderlayArchiveIds[regionsLoaded] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, regionX, regionY)));
 				if (this.npcSpawnArchiveIds[regionsLoaded] == -1) {
 					this.mapDataArchiveIds[regionsLoaded] = -1;
 					this.landscapeDataArchiveIds[regionsLoaded] = -1;
@@ -278,10 +278,10 @@ public class MapRegion {
 							this.regionIds[i_58_] = i_67_;
 							int i_69_ = i_67_ >> 8 & 0xff;
 							int i_70_ = i_67_ & 0xff;
-							this.mapDataArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, i_69_, i_70_, 1790890938), 1374310784));
-							this.landscapeDataArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, i_69_, i_70_, 1151902743), 1638287218));
-							this.mapDataUnderlayArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, i_69_, i_70_, -111942668), -1393791426));
-							this.landscapeDataUnderlayArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, i_69_, i_70_, -1970990697), 1691526385));
+							this.mapDataArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, i_69_, i_70_)));
+							this.landscapeDataArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, i_69_, i_70_)));
+							this.mapDataUnderlayArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, i_69_, i_70_)));
+							this.landscapeDataUnderlayArchiveIds[i_58_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, i_69_, i_70_)));
 							i_58_++;
 						}
 					}
@@ -365,20 +365,20 @@ public class MapRegion {
 		this.mapDataUnderlayBuffer = new byte[i_84_][];
 		this.landscapeDataUnderlayBuffer = new byte[i_84_][];
 		i_84_ = 0;
-		for (int i_87_ = (chunkX - (-2082656295 * this.sizeX >> 4)) / 8; i_87_ <= ((-2082656295 * this.sizeX >> 4) + chunkX) / 8; i_87_++) {
-			for (int i_88_ = (chunkY - (this.sizeY * 315871463 >> 4)) / 8; i_88_ <= (chunkY + (this.sizeY * 315871463 >> 4)) / 8; i_88_++) {
-				this.regionIds[i_84_] = i_88_ + (i_87_ << 8);
-				this.mapDataArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, i_87_, i_88_, -615462383), -254692349));
-				this.landscapeDataArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, i_87_, i_88_, -1193360263), -153507048));
-				this.mapDataUnderlayArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, i_87_, i_88_, 1995328827), -2019708282));
-				this.landscapeDataUnderlayArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, i_87_, i_88_, -1407849075), -1217650768));
+		for (int regionX = (chunkX - (-2082656295 * this.sizeX >> 4)) / 8; regionX <= ((-2082656295 * this.sizeX >> 4) + chunkX) / 8; regionX++) {
+			for (int regionY = (chunkY - (this.sizeY * 315871463 >> 4)) / 8; regionY <= (chunkY + (this.sizeY * 315871463 >> 4)) / 8; regionY++) {
+				this.regionIds[i_84_] = regionY + (regionX << 8);
+				this.mapDataArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, regionX, regionY)));
+				this.landscapeDataArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, regionX, regionY)));
+				this.mapDataUnderlayArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, regionX, regionY)));
+				this.landscapeDataUnderlayArchiveIds[i_84_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, regionX, regionY)));
 				i_84_++;
 			}
 		}
 		method4458(chunkX, chunkY, 18, bool, 1473478915);
 	}
 
-	String getArchiveName(boolean settingsData, boolean underLay, int regionX, int regionY, int i_99_) {
+	String getArchiveName(boolean settingsData, boolean underLay, int regionX, int regionY) {
 		String string = "";
 		if (settingsData) {
 			string = new StringBuilder().append(string).append("m").append(regionX).append('_').append(regionY).toString();
@@ -659,7 +659,7 @@ public class MapRegion {
 			}
 		}
 		if (this.aClass283_3180 == null) {
-			if (null != this.aClass282_Sub50_Sub6_3176 && (IndexLoaders.WORLD_MAP_INDEX.validFile(new StringBuilder().append(this.aClass282_Sub50_Sub6_3176.aString9533).append("_staticelements").toString(), 1280235556))) {
+			if (null != this.aClass282_Sub50_Sub6_3176 && (IndexLoaders.WORLD_MAP_INDEX.validFile(new StringBuilder().append(this.aClass282_Sub50_Sub6_3176.aString9533).append("_staticelements").toString()))) {
 				if (!IndexLoaders.WORLD_MAP_INDEX.method5629(new StringBuilder().append(this.aClass282_Sub50_Sub6_3176.aString9533).append("_staticelements").toString(), 71472045)) {
 					this.missingMapCount += -1145558933;
 				} else {
@@ -922,10 +922,10 @@ public class MapRegion {
 			for (int i_146_ = i_142_ - 1; i_146_ <= 1 + i_143_; i_146_++) {
 				for (int i_147_ = i_144_ - 1; i_147_ <= i_145_ + 1; i_147_++) {
 					if (i_146_ < i_142_ || i_146_ > i_143_ || i_147_ < i_144_ || i_147_ > i_145_) {
-						IndexLoaders.MAP_INDEX.method5630(getArchiveName(true, false, i_146_, i_147_, 407877919), -1674080210);
-						IndexLoaders.MAP_INDEX.method5630(getArchiveName(false, false, i_146_, i_147_, 205123425), 1691833527);
-						IndexLoaders.MAP_INDEX.method5630(getArchiveName(true, true, i_146_, i_147_, -174543641), 761921723);
-						IndexLoaders.MAP_INDEX.method5630(getArchiveName(false, true, i_146_, i_147_, -346179473), -994629113);
+						IndexLoaders.MAP_INDEX.method5630(getArchiveName(true, false, i_146_, i_147_), -1674080210);
+						IndexLoaders.MAP_INDEX.method5630(getArchiveName(false, false, i_146_, i_147_), 1691833527);
+						IndexLoaders.MAP_INDEX.method5630(getArchiveName(true, true, i_146_, i_147_), 761921723);
+						IndexLoaders.MAP_INDEX.method5630(getArchiveName(false, true, i_146_, i_147_), -994629113);
 					}
 				}
 			}
@@ -1199,10 +1199,10 @@ public class MapRegion {
 						}
 					}
 					this.regionIds[i_257_] = i_264_;
-					this.mapDataArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, i_262_, i_263_, 522813814), 1557648612));
-					this.landscapeDataArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, i_262_, i_263_, -511040069), -1519841497));
-					this.mapDataUnderlayArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, i_262_, i_263_, -350569917), -115943179));
-					this.landscapeDataUnderlayArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, i_262_, i_263_, 484092973), -402307347));
+					this.mapDataArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, false, i_262_, i_263_)));
+					this.landscapeDataArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, false, i_262_, i_263_)));
+					this.mapDataUnderlayArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(true, true, i_262_, i_263_)));
+					this.landscapeDataUnderlayArchiveIds[i_257_] = (IndexLoaders.MAP_INDEX.getArchiveId(getArchiveName(false, true, i_262_, i_263_)));
 					i_257_++;
 				}
 			}

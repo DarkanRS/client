@@ -51,7 +51,7 @@ public class Class536 {
 
 	public Class536(Game class486, Language class495, Index class317) {
 		((Class536) this).aClass317_7095 = class317;
-		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (SharedConfigsType.FLO2.id)), -2042690113) * -919202315);
+		anInt7094 = (((Class536) this).aClass317_7095.filesCount((-71319279 * (SharedConfigsType.FLO2.id))) * -919202315);
 	}
 
 	static final void method11486(CS2Executor class527, byte i) {

@@ -10,7 +10,7 @@ public class Class401 {
 	public Class401(Game class486, Language class495, Index class317) {
 		new SoftCache(64);
 		((Class401) this).aClass317_4824 = class317;
-		anInt4823 = (((Class401) this).aClass317_4824.filesCount(((SharedConfigsType.aClass120_1478.id) * -71319279), 1857735004) * -1443669577);
+		anInt4823 = (((Class401) this).aClass317_4824.filesCount(((SharedConfigsType.aClass120_1478.id) * -71319279)) * -1443669577);
 	}
 
 	static final void method6796(CS2Executor class527, int i) {

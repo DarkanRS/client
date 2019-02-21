@@ -47,9 +47,9 @@ public class Class331 {
 		((Class331) this).aClass317_3872 = class317;
 		((Class331) this).aClass317_3870 = class317_1_;
 		if (null != ((Class331) this).aClass317_3872)
-			((Class331) this).aClass317_3872.filesCount(0, -998395379);
+			((Class331) this).aClass317_3872.filesCount(0);
 		if (((Class331) this).aClass317_3870 != null)
-			((Class331) this).aClass317_3870.filesCount(0, -1184061863);
+			((Class331) this).aClass317_3870.filesCount(0);
 	}
 
 	static void method5921(byte i) {

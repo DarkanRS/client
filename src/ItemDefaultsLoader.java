@@ -22,7 +22,7 @@ public class ItemDefaultsLoader {
 	public ItemDefaultsLoader(Game class486, Language class495, Index class317) {
 		((ItemDefaultsLoader) this).aClass317_5027 = class317;
 		if (((ItemDefaultsLoader) this).aClass317_5027 != null)
-			((ItemDefaultsLoader) this).aClass317_5027.filesCount(SharedConfigsType.aClass120_1474.id * -71319279, -1867131018);
+			((ItemDefaultsLoader) this).aClass317_5027.filesCount(SharedConfigsType.aClass120_1474.id * -71319279);
 	}
 
 	public AttributeDefault method7069(int i, byte i_1_) {

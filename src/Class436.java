@@ -92,7 +92,7 @@ public class Class436 {
 
 	public Class436(Game class486, Language class495, Index class317) {
 		((Class436) this).aClass317_5333 = class317;
-		((Class436) this).aClass317_5333.filesCount((SharedConfigsType.aClass120_1494.id) * -71319279, 974737476);
+		((Class436) this).aClass317_5333.filesCount((SharedConfigsType.aClass120_1494.id) * -71319279);
 	}
 
 	public void method7311() {

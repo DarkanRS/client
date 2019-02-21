@@ -23,7 +23,7 @@ public class Class288 {
 
 	public Class288(Game class486, Language class495, Index class317) {
 		((Class288) this).aClass317_3436 = class317;
-		((Class288) this).aClass317_3436.filesCount((-71319279 * (SharedConfigsType.aClass120_1469.id)), -1821241871);
+		((Class288) this).aClass317_3436.filesCount((-71319279 * (SharedConfigsType.aClass120_1469.id)));
 	}
 
 	public void method5071(int i) {
@@ -80,7 +80,7 @@ public class Class288 {
 	public static Interface getInterface(int interfaceId, int[] xteas, Interface inter, boolean bool, byte i_9_) {
 		if (!Class388.INTERFACE_INDEX.loadFile(interfaceId, -2119577317))
 			return null;
-		int numComponents = Class388.INTERFACE_INDEX.filesCount(interfaceId, 1474003408);
+		int numComponents = Class388.INTERFACE_INDEX.filesCount(interfaceId);
 		IComponentDefinitions[] componentDefs;
 		if (numComponents == 0)
 			componentDefs = new IComponentDefinitions[0];

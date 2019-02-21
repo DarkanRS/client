@@ -31,7 +31,7 @@ public class Class403 {
 		Class388.INTERFACE_INDEX = interfaceIdx;
 		Class488.MESH_INDEX = meshIdx;
 		Class463.SPRITES_INDEX = spritesIdx;
-		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount(-1686951777)];
-		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount(-1593209723)];
+		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount()];
+		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount()];
 	}
 }

@@ -28,9 +28,9 @@ public class QuickchatDefinitionsLoader {
 		((QuickchatDefinitionsLoader) this).aClass317_5128 = class317_0_;
 		((QuickchatDefinitionsLoader) this).anInterface19_5134 = interface19;
 		if (((QuickchatDefinitionsLoader) this).aClass317_5129 != null)
-			anInt5130 = (((QuickchatDefinitionsLoader) this).aClass317_5129.filesCount(1, -1204926435) * 867652259);
+			anInt5130 = (((QuickchatDefinitionsLoader) this).aClass317_5129.filesCount(1) * 867652259);
 		if (((QuickchatDefinitionsLoader) this).aClass317_5128 != null)
-			anInt5133 = (((QuickchatDefinitionsLoader) this).aClass317_5128.filesCount(1, 1956053164) * 767103791);
+			anInt5133 = (((QuickchatDefinitionsLoader) this).aClass317_5128.filesCount(1) * 767103791);
 	}
 
 	String method7212(QuickChatDynamicValue class243, int[] is, long l) {

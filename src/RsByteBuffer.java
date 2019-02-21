@@ -253,7 +253,7 @@ public class RsByteBuffer extends Node {
 		return i_40_;
 	}
 
-	public int readBigSmart(byte i) {
+	public int readUnsignedBigSmart() {
 		if (buffer[index * -1990677291] < 0) {
 			return readInt() & 0x7fffffff;
 		}
@@ -325,14 +325,14 @@ public class RsByteBuffer extends Node {
 	}
 
 	public int method13104(int i, int i_66_) {
-		int i_67_ = Class455.method7559(buffer, i, -1990677291 * index, -1209894190);
+		int i_67_ = Class455.getCRC(buffer, i, -1990677291 * index);
 		writeInt(i_67_);
 		return i_67_;
 	}
 
 	public boolean method13105(byte i) {
 		index -= -166940172;
-		int i_68_ = Class455.method7559(buffer, 0, -1990677291 * index, -1770060686);
+		int i_68_ = Class455.getCRC(buffer, 0, -1990677291 * index);
 		int i_69_ = readInt();
 		if (i_68_ == i_69_) {
 			return true;

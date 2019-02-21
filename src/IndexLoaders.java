@@ -110,11 +110,11 @@ public class IndexLoaders {
 			FONT_METRICS_INDEX = loadIndex(IndexReference.INDEX_13, false, 1, true);
 		}
 		if (LoadingStage.aClass387_4695 == LOADING_STAGE) {
-			boolean bool = GAME_TIPS_INDEX.isValid((byte) 25);
+			boolean bool = GAME_TIPS_INDEX.isValid();
 			int i_7_ = Class492.aClass327_Sub1Array5777[IndexReference.INDEX_33.method1781(-1788134814)].method12543(-1386827058);
 			i_7_ = (i_7_ + Class492.aClass327_Sub1Array5777[(USING_JAGEX_IMAGE_FORMAT ? IndexReference.INDEX_34.method1781(-1812792223) : IndexReference.INDEX_32.method1781(-1188170232))].method12543(-1418980679));
 			i_7_ += Class492.aClass327_Sub1Array5777[IndexReference.INDEX_13.method1781(308835858)].method12543(-1132280394);
-			i_7_ = i_7_ + (bool ? 100 : GAME_TIPS_INDEX.getCompletion(-1834183892));
+			i_7_ = i_7_ + (bool ? 100 : GAME_TIPS_INDEX.getCompletion());
 			if (i_7_ != 400) {
 				return i_7_ / 4;
 			}

@@ -3,15 +3,15 @@
  */
 
 public class Class242 {
-	int anInt2978;
+	int size;
 	Index aClass317_2979;
-	QuestDefinitions[] aClass240Array2980;
+	QuestDefinitions[] questDefinitions;
 	static Class91 aClass91_2981;
 	public static int anInt2982;
 
 	int method4154(Interface42 interface42, int i) {
 		int i_0_ = 0;
-		for (int i_1_ = 0; i_1_ < ((Class242) this).anInt2978 * 526499893; i_1_++) {
+		for (int i_1_ = 0; i_1_ < ((Class242) this).size * 526499893; i_1_++) {
 			QuestDefinitions class240 = method4156(i_1_, -1396181317);
 			if (class240.method4099(interface42, 490029588))
 				i_0_ += 554241429 * class240.anInt2963;
@@ -22,12 +22,12 @@ public class Class242 {
 	public Class242(Game class486, Language class495, Index class317, boolean bool) {
 		((Class242) this).aClass317_2979 = class317;
 		if (((Class242) this).aClass317_2979 != null)
-			((Class242) this).anInt2978 = (((Class242) this).aClass317_2979.filesCount(-71319279 * SharedConfigsType.aClass120_1498.id, -1883638938)) * 1089704477;
+			((Class242) this).size = (((Class242) this).aClass317_2979.filesCount(-71319279 * SharedConfigsType.aClass120_1498.id)) * 1089704477;
 		else
-			((Class242) this).anInt2978 = 0;
+			((Class242) this).size = 0;
 		if (bool) {
-			((Class242) this).aClass240Array2980 = new QuestDefinitions[((Class242) this).anInt2978 * 526499893];
-			for (int i = 0; i < 526499893 * ((Class242) this).anInt2978; i++) {
+			((Class242) this).questDefinitions = new QuestDefinitions[((Class242) this).size * 526499893];
+			for (int i = 0; i < 526499893 * ((Class242) this).size; i++) {
 				byte[] is;
 				synchronized (((Class242) this).aClass317_2979) {
 					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.id, i));
@@ -36,14 +36,14 @@ public class Class242 {
 				if (null != is)
 					class240.method4119(new RsByteBuffer(is), -1345439646);
 				class240.method4095((byte) 43);
-				((Class242) this).aClass240Array2980[i] = class240;
-				((QuestDefinitions) ((Class242) this).aClass240Array2980[i]).aClass242_2976 = this;
+				((Class242) this).questDefinitions[i] = class240;
+				((QuestDefinitions) ((Class242) this).questDefinitions[i]).aClass242_2976 = this;
 			}
 		}
 	}
 
 	public QuestDefinitions method4156(int i, int i_2_) {
-		return ((Class242) this).aClass240Array2980[i];
+		return ((Class242) this).questDefinitions[i];
 	}
 
 	static final void method4159(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {

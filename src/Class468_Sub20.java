@@ -134,18 +134,18 @@ public class Class468_Sub20 extends Class468 {
 	}
 
 	public static void method12806(Index class317, byte i) {
-		Class165.anInt2035 = class317.getArchiveId("headicons_pk", 1525500729) * -821889283;
-		Class475.anInt5622 = class317.getArchiveId("headicons_prayer", -270805148) * -2055869675;
-		Class16.anInt135 = class317.getArchiveId("hint_headicons", 1408398760) * -1041729095;
-		Class16.anInt142 = class317.getArchiveId("hint_mapmarkers", -351887994) * 850992921;
-		Class16.anInt137 = class317.getArchiveId("mapflag", 1460718602) * 1055165697;
-		Class468_Sub12.anInt7899 = class317.getArchiveId("cross", -1941091457) * 395125199;
-		Class13.anInt130 = class317.getArchiveId("mapdots", 7471751) * 453785251;
-		Class16.anInt143 = class317.getArchiveId("name_icons", -134716230) * -715854365;
-		Class400.anInt4821 = class317.getArchiveId("floorshadows", -1977448379) * 237532063;
-		Class16.anInt141 = class317.getArchiveId("compass", -1914692488) * 1354470119;
-		Class165.anInt2037 = class317.getArchiveId("otherlevel", -2135564190) * -1341930679;
-		Class271.anInt3330 = class317.getArchiveId("hint_mapedge", -1418586709) * 1834682789;
+		Class165.anInt2035 = class317.getArchiveId("headicons_pk") * -821889283;
+		Class475.anInt5622 = class317.getArchiveId("headicons_prayer") * -2055869675;
+		Class16.anInt135 = class317.getArchiveId("hint_headicons") * -1041729095;
+		Class16.anInt142 = class317.getArchiveId("hint_mapmarkers") * 850992921;
+		Class16.anInt137 = class317.getArchiveId("mapflag") * 1055165697;
+		Class468_Sub12.anInt7899 = class317.getArchiveId("cross") * 395125199;
+		Class13.anInt130 = class317.getArchiveId("mapdots") * 453785251;
+		Class16.anInt143 = class317.getArchiveId("name_icons") * -715854365;
+		Class400.anInt4821 = class317.getArchiveId("floorshadows") * 237532063;
+		Class16.anInt141 = class317.getArchiveId("compass") * 1354470119;
+		Class165.anInt2037 = class317.getArchiveId("otherlevel") * -1341930679;
+		Class271.anInt3330 = class317.getArchiveId("hint_mapedge") * 1834682789;
 	}
 
 	public static Class184 method12807(int i) {

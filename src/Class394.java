@@ -48,7 +48,7 @@ public class Class394 {
 	public Class394(Game class486, Language class495, Index class317) {
 		((Class394) this).aClass317_4784 = class317;
 		if (null != ((Class394) this).aClass317_4784)
-			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.id, -774524494)) * -476997773;
+			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.id)) * -476997773;
 		else
 			anInt4785 = 0;
 	}

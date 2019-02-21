@@ -16,7 +16,7 @@ public class Class421 {
 
 	public Class421(Game class486, Language class495, Index class317, boolean bool) {
 		((Class421) this).aClass317_5014 = class317;
-		((Class421) this).anInt5013 = (((Class421) this).aClass317_5014.filesCount(((SharedConfigsType.aClass120_1473.id) * -71319279), 1779903880) * 268916055);
+		((Class421) this).anInt5013 = (((Class421) this).aClass317_5014.filesCount(((SharedConfigsType.aClass120_1473.id) * -71319279)) * 268916055);
 		if (bool) {
 			((Class421) this).aClass282_Sub50_Sub4Array5012 = (new Class282_Sub50_Sub4[-1814796697 * ((Class421) this).anInt5013]);
 			for (int i = 0; i < ((Class421) this).anInt5013 * -1814796697; i++) {

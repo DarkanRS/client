@@ -62,7 +62,7 @@ public class Class438 {
 		((Class438) this).aClass229_5342 = new SoftCache(2);
 		((Class438) this).aClass317_5343 = class317;
 		((Class438) this).aClass317_5341 = class317_2_;
-		((Class438) this).aClass317_5343.filesCount((SharedConfigsType.aClass120_1496.id) * -71319279, 46053667);
+		((Class438) this).aClass317_5343.filesCount((SharedConfigsType.aClass120_1496.id) * -71319279);
 	}
 
 	public Class419 method7328(int i) {

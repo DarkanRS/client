@@ -83,8 +83,8 @@ public class Class285 {
 		Class117.method1978((class527.intStack[class527.intStackPtr * 1942118537]), (class527.intStack[1 + (1942118537 * class527.intStackPtr)]), 255, (byte) 1);
 	}
 
-	public static int method5028(byte[] is, int i, short i_6_) {
-		return Class455.method7559(is, 0, i, -788702725);
+	public static int getCRC(byte[] data, int end) {
+		return Class455.getCRC(data, 0, end);
 	}
 
 	static final void method5029(CS2Executor class527, short i) {

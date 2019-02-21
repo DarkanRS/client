@@ -34,45 +34,45 @@ public class Class16 {
 	}
 
 	public static void method552(Index class317) {
-		anInt140 = class317.getArchiveId("p11_full", 1424101193) * 1669464149;
-		anInt136 = class317.getArchiveId("p12_full", -1601885459) * 1957167017;
-		Class395.anInt4788 = class317.getArchiveId("b12_full", 977480910) * 2033224767;
+		anInt140 = class317.getArchiveId("p11_full") * 1669464149;
+		anInt136 = class317.getArchiveId("p12_full") * 1957167017;
+		Class395.anInt4788 = class317.getArchiveId("b12_full") * 2033224767;
 	}
 
 	public static void method553(Index class317) {
-		anInt140 = class317.getArchiveId("p11_full", -3590070) * 1669464149;
-		anInt136 = class317.getArchiveId("p12_full", -672134768) * 1957167017;
-		Class395.anInt4788 = class317.getArchiveId("b12_full", 1362144243) * 2033224767;
+		anInt140 = class317.getArchiveId("p11_full") * 1669464149;
+		anInt136 = class317.getArchiveId("p12_full") * 1957167017;
+		Class395.anInt4788 = class317.getArchiveId("b12_full") * 2033224767;
 	}
 
 	public static void method554(Index class317) {
-		Class165.anInt2035 = class317.getArchiveId("headicons_pk", -256479951) * -821889283;
-		Class475.anInt5622 = class317.getArchiveId("headicons_prayer", -4006419) * -2055869675;
-		anInt135 = class317.getArchiveId("hint_headicons", -1105434129) * -1041729095;
-		anInt142 = class317.getArchiveId("hint_mapmarkers", -1281941584) * 850992921;
-		anInt137 = class317.getArchiveId("mapflag", -884587844) * 1055165697;
-		Class468_Sub12.anInt7899 = class317.getArchiveId("cross", 1623210615) * 395125199;
-		Class13.anInt130 = class317.getArchiveId("mapdots", -1181828372) * 453785251;
-		anInt143 = class317.getArchiveId("name_icons", -748362572) * -715854365;
-		Class400.anInt4821 = class317.getArchiveId("floorshadows", 150016034) * 237532063;
-		anInt141 = class317.getArchiveId("compass", -1908315760) * 1354470119;
-		Class165.anInt2037 = class317.getArchiveId("otherlevel", 334034203) * -1341930679;
-		Class271.anInt3330 = class317.getArchiveId("hint_mapedge", -1117715217) * 1834682789;
+		Class165.anInt2035 = class317.getArchiveId("headicons_pk") * -821889283;
+		Class475.anInt5622 = class317.getArchiveId("headicons_prayer") * -2055869675;
+		anInt135 = class317.getArchiveId("hint_headicons") * -1041729095;
+		anInt142 = class317.getArchiveId("hint_mapmarkers") * 850992921;
+		anInt137 = class317.getArchiveId("mapflag") * 1055165697;
+		Class468_Sub12.anInt7899 = class317.getArchiveId("cross") * 395125199;
+		Class13.anInt130 = class317.getArchiveId("mapdots") * 453785251;
+		anInt143 = class317.getArchiveId("name_icons") * -715854365;
+		Class400.anInt4821 = class317.getArchiveId("floorshadows") * 237532063;
+		anInt141 = class317.getArchiveId("compass") * 1354470119;
+		Class165.anInt2037 = class317.getArchiveId("otherlevel") * -1341930679;
+		Class271.anInt3330 = class317.getArchiveId("hint_mapedge") * 1834682789;
 	}
 
 	public static void method555(Index class317) {
-		Class165.anInt2035 = class317.getArchiveId("headicons_pk", -446486826) * -821889283;
-		Class475.anInt5622 = class317.getArchiveId("headicons_prayer", -1005116812) * -2055869675;
-		anInt135 = class317.getArchiveId("hint_headicons", -275215677) * -1041729095;
-		anInt142 = class317.getArchiveId("hint_mapmarkers", -1074565286) * 850992921;
-		anInt137 = class317.getArchiveId("mapflag", 1353344209) * 1055165697;
-		Class468_Sub12.anInt7899 = class317.getArchiveId("cross", 60241021) * 395125199;
-		Class13.anInt130 = class317.getArchiveId("mapdots", 723928588) * 453785251;
-		anInt143 = class317.getArchiveId("name_icons", -2032050644) * -715854365;
-		Class400.anInt4821 = class317.getArchiveId("floorshadows", -1312465905) * 237532063;
-		anInt141 = class317.getArchiveId("compass", -1239782843) * 1354470119;
-		Class165.anInt2037 = class317.getArchiveId("otherlevel", -841677680) * -1341930679;
-		Class271.anInt3330 = class317.getArchiveId("hint_mapedge", 552476645) * 1834682789;
+		Class165.anInt2035 = class317.getArchiveId("headicons_pk") * -821889283;
+		Class475.anInt5622 = class317.getArchiveId("headicons_prayer") * -2055869675;
+		anInt135 = class317.getArchiveId("hint_headicons") * -1041729095;
+		anInt142 = class317.getArchiveId("hint_mapmarkers") * 850992921;
+		anInt137 = class317.getArchiveId("mapflag") * 1055165697;
+		Class468_Sub12.anInt7899 = class317.getArchiveId("cross") * 395125199;
+		Class13.anInt130 = class317.getArchiveId("mapdots") * 453785251;
+		anInt143 = class317.getArchiveId("name_icons") * -715854365;
+		Class400.anInt4821 = class317.getArchiveId("floorshadows") * 237532063;
+		anInt141 = class317.getArchiveId("compass") * 1354470119;
+		Class165.anInt2037 = class317.getArchiveId("otherlevel") * -1341930679;
+		Class271.anInt3330 = class317.getArchiveId("hint_mapedge") * 1834682789;
 	}
 
 	public static int[] method556() {

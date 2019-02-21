@@ -102,9 +102,9 @@ public class NPCIndexLoader {
 		((NPCIndexLoader) this).aClass317_4839 = class317;
 		((NPCIndexLoader) this).aClass317_4842 = class317_3_;
 		if (null != ((NPCIndexLoader) this).aClass317_4839) {
-			int i = ((NPCIndexLoader) this).aClass317_4839.containersCount(-941048817) - 1;
+			int i = ((NPCIndexLoader) this).aClass317_4839.containersCount() - 1;
 			SharedConfigsType.aClass120_1467.filesPerContainer(-443341258);
-			((NPCIndexLoader) this).aClass317_4839.filesCount(i, 1971095578);
+			((NPCIndexLoader) this).aClass317_4839.filesCount(i);
 		}
 		if (((NPCIndexLoader) this).aClass486_4844 == Game.darkan)
 			((NPCIndexLoader) this).aStringArray4840 = (new String[] { null, null, null, null, null, Message.EXAMINE.translate((((NPCIndexLoader) this).aClass495_4837), -1623078066) });

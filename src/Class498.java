@@ -39,7 +39,7 @@ public class Class498 {
 	public Class498(Game class486, Language class495, Index class317) {
 		((Class498) this).aClass317_5823 = class317;
 		if (((Class498) this).aClass317_5823 != null)
-			((Class498) this).aClass317_5823.filesCount(-71319279 * SharedConfigsType.aClass120_1479.id, 2039893772);
+			((Class498) this).aClass317_5823.filesCount(-71319279 * SharedConfigsType.aClass120_1479.id);
 	}
 
 	public Class489 method8322(int i, short i_1_) {

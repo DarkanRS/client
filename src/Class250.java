@@ -13,9 +13,9 @@ public class Class250 {
 	static NativeSprite[] aClass160Array3092;
 	
 	public Class282_Sub26_Sub1_Sub2 method4284(int i, int[] is) {
-		if (((Class250) this).aClass317_3091.containersCount(-1640431967) == 1)
+		if (((Class250) this).aClass317_3091.containersCount() == 1)
 			return method4285(0, i, is, -24629164);
-		if (((Class250) this).aClass317_3091.filesCount(i, 1431854135) == 1)
+		if (((Class250) this).aClass317_3091.filesCount(i) == 1)
 			return method4285(i, 0, is, 342107882);
 		throw new RuntimeException();
 	}
@@ -70,9 +70,9 @@ public class Class250 {
 	}
 
 	public Class282_Sub26_Sub1_Sub1 method4287(int i, int[] is, int i_7_) {
-		if (((Class250) this).aClass317_3088.containersCount(-2129658875) == 1)
+		if (((Class250) this).aClass317_3088.containersCount() == 1)
 			return method4286(0, i, is, (byte) 114);
-		if (((Class250) this).aClass317_3088.filesCount(i, 445586663) == 1)
+		if (((Class250) this).aClass317_3088.filesCount(i) == 1)
 			return method4286(i, 0, is, (byte) 119);
 		throw new RuntimeException();
 	}
@@ -121,9 +121,9 @@ public class Class250 {
 	}
 
 	public Class282_Sub26_Sub1_Sub2 method4290(int i, int[] is, byte i_12_) {
-		if (((Class250) this).aClass317_3091.containersCount(-1613280035) == 1)
+		if (((Class250) this).aClass317_3091.containersCount() == 1)
 			return method4285(0, i, is, 980716221);
-		if (((Class250) this).aClass317_3091.filesCount(i, -1126653706) == 1)
+		if (((Class250) this).aClass317_3091.filesCount(i) == 1)
 			return method4285(i, 0, is, -350826880);
 		throw new RuntimeException();
 	}
@@ -148,25 +148,25 @@ public class Class250 {
 	}
 
 	public Class282_Sub26_Sub1_Sub2 method4292(int i, int[] is) {
-		if (((Class250) this).aClass317_3091.containersCount(-1311168858) == 1)
+		if (((Class250) this).aClass317_3091.containersCount() == 1)
 			return method4285(0, i, is, -1031932159);
-		if (((Class250) this).aClass317_3091.filesCount(i, 750562123) == 1)
+		if (((Class250) this).aClass317_3091.filesCount(i) == 1)
 			return method4285(i, 0, is, 841642747);
 		throw new RuntimeException();
 	}
 
 	public Class282_Sub26_Sub1_Sub2 method4293(int i, int[] is) {
-		if (((Class250) this).aClass317_3091.containersCount(-2006298879) == 1)
+		if (((Class250) this).aClass317_3091.containersCount() == 1)
 			return method4285(0, i, is, -309734030);
-		if (((Class250) this).aClass317_3091.filesCount(i, -2017582612) == 1)
+		if (((Class250) this).aClass317_3091.filesCount(i) == 1)
 			return method4285(i, 0, is, -205382253);
 		throw new RuntimeException();
 	}
 
 	public Class282_Sub26_Sub1_Sub1 method4294(int i, int[] is) {
-		if (((Class250) this).aClass317_3088.containersCount(-2035626476) == 1)
+		if (((Class250) this).aClass317_3088.containersCount() == 1)
 			return method4286(0, i, is, (byte) 104);
-		if (((Class250) this).aClass317_3088.filesCount(i, -2008876266) == 1)
+		if (((Class250) this).aClass317_3088.filesCount(i) == 1)
 			return method4286(i, 0, is, (byte) 82);
 		throw new RuntimeException();
 	}

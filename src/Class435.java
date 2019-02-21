@@ -510,7 +510,7 @@ public class Class435 {
 				Exception_Sub3.method15619(true, 771628468);
 				Class282_Sub15_Sub1.method14840((byte) -59);
 			} else if (60 == Class291_Sub1.anInt8015 * -8084891) {
-				if (Class291_Sub1.aClass317_3460.validFile(new StringBuilder().append(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533).append("_staticelements").toString(), 1399536954)) {
+				if (Class291_Sub1.aClass317_3460.validFile(new StringBuilder().append(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533).append("_staticelements").toString())) {
 					if (!Class291_Sub1.aClass317_3460.method5629(new StringBuilder().append(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533).append("_staticelements").toString(), 71472045))
 						return;
 					Class291_Sub1.aClass283_3470 = Class301.method5331(Class291_Sub1.aClass317_3460, new StringBuilder().append(Class291_Sub1.aClass282_Sub50_Sub6_3491.aString9533).append("_staticelements").toString(), client.membersWorld, 874508557);

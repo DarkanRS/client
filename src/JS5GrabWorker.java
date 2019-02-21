@@ -209,7 +209,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 					throw new RuntimeException();
 				if (null != (((ReferenceTable) this.table).whirlpool) && (null != (((ReferenceTable) this.table).whirlpool[i]))) {
 					byte[] is_30_ = (((ReferenceTable) this.table).whirlpool[i]);
-					byte[] is_31_ = Class361.method6273(is, 0, is.length - 2, (byte) 21);
+					byte[] is_31_ = Class361.method6273(is, 0, is.length - 2);
 					for (int i_32_ = 0; i_32_ < 64; i_32_++) {
 						if (is_31_[i_32_] != is_30_[i_32_])
 							throw new RuntimeException();
@@ -249,7 +249,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 				throw new RuntimeException();
 			if ((((ReferenceTable) this.table).whirlpool) != null && (((ReferenceTable) this.table).whirlpool[i]) != null) {
 				byte[] is_35_ = (((ReferenceTable) this.table).whirlpool[i]);
-				byte[] is_36_ = Class361.method6273(is, 0, is.length - 2, (byte) 12);
+				byte[] is_36_ = Class361.method6273(is, 0, is.length - 2);
 				for (int i_37_ = 0; i_37_ < 64; i_37_++) {
 					if (is_36_[i_37_] != is_35_[i_37_])
 						throw new RuntimeException();
