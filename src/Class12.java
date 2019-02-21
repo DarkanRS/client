@@ -49,10 +49,10 @@ public class Class12 implements Runnable {
 		return ((Class12) this).aString126;
 	}
 
-	public static void method480(int i, int i_0_) {
-		if (i != -1 && !WorldMapIndexLoader.aBoolArray2709[i]) {
-			Class388.INTERFACE_INDEX.method5619(i, -566159763);
-			Class468_Sub8.aClass98Array7889[i] = null;
+	public static void clearComponents(int interfaceId, int i_0_) {
+		if (interfaceId != -1 && !WorldMapIndexLoader.aBoolArray2709[interfaceId]) {
+			Class388.INTERFACE_INDEX.clearFiles(interfaceId);
+			Class468_Sub8.aClass98Array7889[interfaceId] = null;
 		}
 	}
 

@@ -3,11 +3,11 @@
  */
 
 public final class Index {
-	Object[] anObjectArray3682;
+	Object[] archives;
 	int anInt3683;
 	static Class395 aClass395_3684 = new Class395();
 	boolean aBool3685;
-	Object[][] files;
+	Object[][] archiveFiles;
 	static int anInt3689;
 	JS5FileWorker aClass327_3690;
 	static boolean aBool3692 = false;
@@ -19,12 +19,12 @@ public final class Index {
 		return (-2006273977 * referenceTable.crc);
 	}
 
-	synchronized boolean fileExists(int fileId) {
+	synchronized boolean archiveExists(int archiveId) {
 		if (!referenceTableLoaded())
 			return false;
-		if (fileId < 0 || fileId >= (referenceTable.fileCounts).length || 0 == (referenceTable.fileCounts[fileId])) {
+		if (archiveId < 0 || archiveId >= (referenceTable.fileCounts).length || 0 == (referenceTable.fileCounts[archiveId])) {
 			if (aBool3692)
-				throw new IllegalArgumentException(Integer.toString(fileId));
+				throw new IllegalArgumentException(Integer.toString(archiveId));
 			return false;
 		}
 		return true;
@@ -41,11 +41,11 @@ public final class Index {
 		return true;
 	}
 
-	synchronized void method5605(int i, byte i_7_) {
+	synchronized void requestArchive(int archiveId) {
 		if (this.aBool3685)
-			this.anObjectArray3682[i] = this.aClass327_3690.method5804(i, 1942118537);
+			this.archives[archiveId] = this.aClass327_3690.method5804(archiveId, 1942118537);
 		else
-			this.anObjectArray3682[i] = JS5Manager.method5493(this.aClass327_3690.method5804(i, 1942118537), false, (byte) 47);
+			this.archives[archiveId] = JS5Manager.method5493(this.aClass327_3690.method5804(archiveId, 1942118537), false, (byte) 47);
 	}
 
 	void method5606(int i, int i_8_) {
@@ -71,7 +71,7 @@ public final class Index {
 			return -1;
 		string = string.toLowerCase();
 		int i_12_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -221631935), -1537354695));
-		if (!fileExists(i_12_))
+		if (!archiveExists(i_12_))
 			return -1;
 		return i_12_;
 	}
@@ -82,9 +82,9 @@ public final class Index {
 		boolean bool = true;
 		for (int i = 0; i < (referenceTable.validArchiveIds).length; i++) {
 			int archiveId = (referenceTable.validArchiveIds[i]);
-			if (null == this.anObjectArray3682[archiveId]) {
-				method5605(archiveId, (byte) 0);
-				if (null == this.anObjectArray3682[archiveId])
+			if (null == this.archives[archiveId]) {
+				requestArchive(archiveId);
+				if (null == this.archives[archiveId])
 					bool = false;
 			}
 		}
@@ -92,9 +92,9 @@ public final class Index {
 	}
 
 	synchronized int method5613(int i, byte i_15_) {
-		if (!fileExists(i))
+		if (!archiveExists(i))
 			return 0;
-		if (this.anObjectArray3682[i] != null)
+		if (this.archives[i] != null)
 			return 100;
 		return this.aClass327_3690.method5806(i, (byte) 49);
 	}
@@ -104,7 +104,7 @@ public final class Index {
 			return 0;
 		int i_16_ = 0;
 		int i_17_ = 0;
-		for (int i_18_ = 0; i_18_ < this.anObjectArray3682.length; i_18_++) {
+		for (int i_18_ = 0; i_18_ < this.archives.length; i_18_++) {
 			if ((referenceTable.validFileIdSizes[i_18_]) > 0) {
 				i_16_ += 100;
 				i_17_ += method5613(i_18_, (byte) -93);
@@ -121,7 +121,7 @@ public final class Index {
 			return null;
 		if (referenceTable.fileCounts.length == 1)
 			return getFile(0, fileId);
-		if (!fileExists(fileId))
+		if (!archiveExists(fileId))
 			return null;
 		if (1 == referenceTable.fileCounts[fileId])
 			return getFile(fileId, 0);
@@ -129,7 +129,7 @@ public final class Index {
 	}
 
 	public synchronized int[] getValidFileIds(int archiveId) {
-		if (!fileExists(archiveId))
+		if (!archiveExists(archiveId))
 			return null;
 		int[] counts = (referenceTable.validFileIds[archiveId]);
 		if (null == counts) {
@@ -146,10 +146,10 @@ public final class Index {
 		return (referenceTable.fileCounts).length;
 	}
 
-	public synchronized void method5619(int fileId, int i_23_) {
-		if (fileExists(fileId)) {
-			if (null != this.files)
-				this.files[fileId] = null;
+	public synchronized void clearFiles(int archiveId) {
+		if (archiveExists(archiveId)) {
+			if (null != this.archiveFiles)
+				this.archiveFiles[archiveId] = null;
 		}
 	}
 
@@ -157,13 +157,13 @@ public final class Index {
 		if (!referenceTableLoaded())
 			return -1;
 		int i_27_ = referenceTable.archiveName.method865(i, -1675109701);
-		if (!fileExists(i_27_))
+		if (!archiveExists(i_27_))
 			return -1;
 		return i_27_;
 	}
 
 	public int filesCount(int archiveId) {
-		if (!fileExists(archiveId))
+		if (!archiveExists(archiveId))
 			return 0;
 		return referenceTable.fileCounts[archiveId];
 	}
@@ -188,7 +188,7 @@ public final class Index {
 		string = string.toLowerCase();
 		string_32_ = string_32_.toLowerCase();
 		int i_33_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1702952082), -1918848832));
-		if (!fileExists(i_33_))
+		if (!archiveExists(i_33_))
 			return null;
 		int i_34_ = (referenceTable.namedFiles[i_33_].method865(GraphicalRenderer.method8696(string_32_, -1819598468), -1926581994));
 		return getFile(i_33_, i_34_);
@@ -200,10 +200,10 @@ public final class Index {
 		string = string.toLowerCase();
 		string_35_ = string_35_.toLowerCase();
 		int i_36_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, 639316649), -1994003594));
-		if (!fileExists(i_36_))
+		if (!archiveExists(i_36_))
 			return false;
 		int i_37_ = (referenceTable.namedFiles[i_36_].method865(GraphicalRenderer.method8696(string_35_, -316679725), -1542672707));
-		return load(i_36_, i_37_, 16711935);
+		return load(i_36_, i_37_);
 	}
 
 	public boolean method5628(String string, int i) {
@@ -218,7 +218,7 @@ public final class Index {
 			return false;
 		string = string.toLowerCase();
 		int i_39_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1032103959), -2031296285));
-		return loadFile(i_39_, -2119577317);
+		return loadArchive(i_39_);
 	}
 
 	public void method5630(String string, int i) {
@@ -246,22 +246,22 @@ public final class Index {
 			this.referenceTable = this.aClass327_3690.getReferenceTable(-860118856);
 			if (this.referenceTable == null)
 				return false;
-			this.anObjectArray3682 = new Object[(referenceTable.archiveCount) * 1563136279];
-			this.files = new Object[(referenceTable.archiveCount) * 1563136279][];
+			this.archives = new Object[(referenceTable.archiveCount) * 1563136279];
+			this.archiveFiles = new Object[(referenceTable.archiveCount) * 1563136279][];
 		}
 		return true;
 	}
 	
 	synchronized boolean method5638(int i, int i_45_, int[] is, int i_46_) {
-		if (!fileExists(i))
+		if (!archiveExists(i))
 			return false;
-		if (this.anObjectArray3682[i] == null)
+		if (this.archives[i] == null)
 			return false;
 		int i_47_ = referenceTable.validFileIdSizes[i];
 		int[] is_48_ = (referenceTable.validFileIds[i]);
-		if (null == this.files[i])
-			this.files[i] = new Object[(referenceTable.fileCounts[i])];
-		Object[] objects = this.files[i];
+		if (null == this.archiveFiles[i])
+			this.archiveFiles[i] = new Object[(referenceTable.fileCounts[i])];
+		Object[] objects = this.archiveFiles[i];
 		boolean bool = true;
 		for (int i_49_ = 0; i_49_ < i_47_; i_49_++) {
 			int i_50_;
@@ -278,11 +278,11 @@ public final class Index {
 			return true;
 		byte[] is_51_;
 		if (null != is && (is[0] != 0 || 0 != is[1] || 0 != is[2] || is[3] != 0)) {
-			is_51_ = Class346.method6154(this.anObjectArray3682[i], true, (byte) 1);
+			is_51_ = Class346.method6154(this.archives[i], true, (byte) 1);
 			RsByteBuffer class282_sub35 = new RsByteBuffer(is_51_);
 			class282_sub35.method13249(is, 5, class282_sub35.buffer.length, -429400691);
 		} else
-			is_51_ = Class346.method6154(this.anObjectArray3682[i], false, (byte) 1);
+			is_51_ = Class346.method6154(this.archives[i], false, (byte) 1);
 		byte[] is_52_;
 		try {
 			is_52_ = Class282_Sub17_Sub6.method15438(is_51_, (byte) 43);
@@ -290,7 +290,7 @@ public final class Index {
 			throw Class150.method2585(runtimeexception, new StringBuilder().append(null != is).append(" ").append(i).append(" ").append(is_51_.length).append(" ").append(Class285.getCRC(is_51_, is_51_.length)).append(" ").append(Class285.getCRC(is_51_, is_51_.length - 2)).append(" ").append(referenceTable.unknown[i]).append(" ").append(-2006273977 * (referenceTable.crc)).toString());
 		}
 		if (this.aBool3685)
-			this.anObjectArray3682[i] = null;
+			this.archives[i] = null;
 		if (i_47_ > 1) {
 			if (1067739717 * this.anInt3683 != 2) {
 				int i_53_ = is_52_.length;
@@ -398,40 +398,40 @@ public final class Index {
 		if (!fileExists(archiveId, fileId))
 			return null;
 		byte[] is_86_ = null;
-		if (this.files[archiveId] == null || null == this.files[archiveId][fileId]) {
+		if (this.archiveFiles[archiveId] == null || null == this.archiveFiles[archiveId][fileId]) {
 			boolean bool = method5638(archiveId, fileId, xteas, 2068142986);
 			if (!bool) {
-				method5605(archiveId, (byte) 0);
+				requestArchive(archiveId);
 				bool = method5638(archiveId, fileId, xteas, 382040238);
 				if (!bool)
 					return null;
 			}
 		}
-		if (null == this.files[archiveId])
+		if (null == this.archiveFiles[archiveId])
 			throw new RuntimeException("");
-		if (null != this.files[archiveId][fileId]) {
-			is_86_ = Class346.method6154((this.files[archiveId][fileId]), false, (byte) 1);
+		if (null != this.archiveFiles[archiveId][fileId]) {
+			is_86_ = Class346.method6154((this.archiveFiles[archiveId][fileId]), false, (byte) 1);
 			if (is_86_ == null)
 				throw new RuntimeException("");
 		}
 		if (is_86_ != null) {
 			if (1 == this.anInt3683 * 1067739717) {
-				this.files[archiveId][fileId] = null;
+				this.archiveFiles[archiveId][fileId] = null;
 				if (1 == (referenceTable.fileCounts[archiveId]))
-					this.files[archiveId] = null;
+					this.archiveFiles[archiveId] = null;
 			} else if (this.anInt3683 * 1067739717 == 2)
-				this.files[archiveId] = null;
+				this.archiveFiles[archiveId] = null;
 		}
 		return is_86_;
 	}
 
-	public synchronized boolean loadFile(int i, int i_127_) {
-		if (!fileExists(i))
+	public synchronized boolean loadArchive(int archiveId) {
+		if (!archiveExists(archiveId))
 			return false;
-		if (null != this.anObjectArray3682[i])
+		if (null != this.archives[archiveId])
 			return true;
-		method5605(i, (byte) 0);
-		if (null != this.anObjectArray3682[i])
+		requestArchive(archiveId);
+		if (null != this.archives[archiveId])
 			return true;
 		return false;
 	}
@@ -440,11 +440,11 @@ public final class Index {
 		if (!referenceTableLoaded())
 			return false;
 		if (1 == (referenceTable.fileCounts).length)
-			return load(0, i, 16711935);
-		if (!fileExists(i))
+			return load(0, i);
+		if (!archiveExists(i))
 			return false;
 		if (referenceTable.fileCounts[i] == 1)
-			return load(i, 0, 16711935);
+			return load(i, 0);
 		throw new RuntimeException();
 	}
 
@@ -469,15 +469,15 @@ public final class Index {
 		}
 	}
 
-	public synchronized boolean load(int i, int i_154_, int i_155_) {
-		if (!fileExists(i, i_154_))
+	public synchronized boolean load(int archiveId, int fileId) {
+		if (!fileExists(archiveId, fileId))
 			return false;
-		if (this.files[i] != null && this.files[i][i_154_] != null)
+		if (this.archiveFiles[archiveId] != null && this.archiveFiles[archiveId][fileId] != null)
 			return true;
-		if (this.anObjectArray3682[i] != null)
+		if (this.archives[archiveId] != null)
 			return true;
-		method5605(i, (byte) 0);
-		if (null != this.anObjectArray3682[i])
+		requestArchive(archiveId);
+		if (null != this.archives[archiveId])
 			return true;
 		return false;
 	}

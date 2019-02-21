@@ -548,11 +548,11 @@ public class ItemDefinitions implements Interface46 {
 		if (body1 == -1)
 			return true;
 		boolean hasMesh = true;
-		if (!((ItemIndexLoader) this.loader).meshIndex.load(body1, 0, 16711935))
+		if (!((ItemIndexLoader) this.loader).meshIndex.load(body1, 0))
 			hasMesh = false;
-		if (body2 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body2, 0, 16711935))
+		if (body2 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body2, 0))
 			hasMesh = false;
-		if (body3 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body3, 0, 16711935))
+		if (body3 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body3, 0))
 			hasMesh = false;
 		return hasMesh;
 	}
@@ -648,9 +648,9 @@ public class ItemDefinitions implements Interface46 {
 		if (head1 == -1)
 			return true;
 		boolean hasMesh = true;
-		if (!((ItemIndexLoader) this.loader).meshIndex.load(head1, 0, 16711935))
+		if (!((ItemIndexLoader) this.loader).meshIndex.load(head1, 0))
 			hasMesh = false;
-		if (-1 != head2 && !((ItemIndexLoader) this.loader).meshIndex.load(head2, 0, 16711935))
+		if (-1 != head2 && !((ItemIndexLoader) this.loader).meshIndex.load(head2, 0))
 			hasMesh = false;
 		return hasMesh;
 	}

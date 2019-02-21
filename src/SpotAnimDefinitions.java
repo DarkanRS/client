@@ -102,7 +102,7 @@ public class SpotAnimDefinitions {
 	public final boolean method11230(int i) {
 		if (-2110999235 * defaultModel == -1)
 			return true;
-		return (((SpotAnimIndexLoader) aClass515_6973).aClass317_5889.load(-2110999235 * defaultModel, 0, 16711935));
+		return (((SpotAnimIndexLoader) aClass515_6973).aClass317_5889.load(-2110999235 * defaultModel, 0));
 	}
 
 	public final MeshRasterizer method11238(GraphicalRenderer class505, int i, boolean bool, Class390 class390, Class390 class390_42_, int i_43_, int i_44_, int i_45_, Animation class456, byte i_46_, int i_47_) {

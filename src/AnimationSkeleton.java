@@ -30,7 +30,7 @@ public class AnimationSkeleton extends CacheableNode {
 			return true;
 		if (this.skeletonData == null) {
 			synchronized (ANIMATION_SKELETON_INDEX) {
-				if (!ANIMATION_SKELETON_INDEX.loadFile((this.animSkeletonId) * 2091314053, -2119577317)) {
+				if (!ANIMATION_SKELETON_INDEX.loadArchive((this.animSkeletonId) * 2091314053)) {
 					return false;
 				}
 				int[] fileIds = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053);

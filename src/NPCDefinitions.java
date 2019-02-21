@@ -157,7 +157,7 @@ public class NPCDefinitions {
 			boolean bool_19_ = false;
 			synchronized (((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842) {
 				for (int i_20_ = 0; i_20_ < is_18_.length; i_20_++) {
-					if (-1 != is_18_[i_20_] && !((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842.load(is_18_[i_20_], 0, 16711935))
+					if (-1 != is_18_[i_20_] && !((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842.load(is_18_[i_20_], 0))
 						bool_19_ = true;
 				}
 			}
@@ -325,7 +325,7 @@ public class NPCDefinitions {
 			boolean bool = false;
 			synchronized (((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842) {
 				for (int i_43_ = 0; i_43_ < is.length; i_43_++) {
-					if (!((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842.load(is[i_43_], 0, 16711935))
+					if (!((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842.load(is[i_43_], 0))
 						bool = true;
 				}
 			}
@@ -390,7 +390,7 @@ public class NPCDefinitions {
 		int[] is = anIntArray4859;
 		for (int i_50_ = 0; i_50_ < is.length; i_50_++) {
 			int i_51_ = is[i_50_];
-			if (!((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842.load(i_51_, 0, 16711935))
+			if (!((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass317_4842.load(i_51_, 0))
 				bool = false;
 		}
 		return bool;

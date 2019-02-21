@@ -1,49 +1,8 @@
 
-/* Class337 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Class337 {
 	static LinkedList aLinkedList3969 = new LinkedList();
-
-	public static void method6011() {
-		int i = aLinkedList3969.size();
-		Iterator iterator = aLinkedList3969.iterator();
-		while (iterator.hasNext()) {
-			Class282_Sub18 class282_sub18 = (Class282_Sub18) iterator.next();
-			class282_sub18.method12296(class282_sub18.method12275() + class282_sub18.method12277() / (2 * i));
-			if (!class282_sub18.method12276())
-				iterator.remove();
-		}
-	}
-
-	static void method6012(Class282_Sub18 class282_sub18) {
-		if (!aLinkedList3969.contains(class282_sub18))
-			aLinkedList3969.add(class282_sub18);
-	}
-
-	public static void method6013() {
-		int i = aLinkedList3969.size();
-		Iterator iterator = aLinkedList3969.iterator();
-		while (iterator.hasNext()) {
-			Class282_Sub18 class282_sub18 = (Class282_Sub18) iterator.next();
-			class282_sub18.method12296(class282_sub18.method12275() + class282_sub18.method12277() / (2 * i));
-			if (!class282_sub18.method12276())
-				iterator.remove();
-		}
-	}
-
-	static void method6014(Class282_Sub18 class282_sub18) {
-		if (!aLinkedList3969.contains(class282_sub18))
-			aLinkedList3969.add(class282_sub18);
-	}
-
-	static void method6015(Class282_Sub18 class282_sub18) {
-		if (!aLinkedList3969.contains(class282_sub18))
-			aLinkedList3969.add(class282_sub18);
-	}
 
 	Class337() throws Throwable {
 		throw new Error();
@@ -56,9 +15,9 @@ public class Class337 {
 		Class521_Sub1_Sub4.method14892(class118, class98, class527, (byte) 79);
 	}
 
-	public static void method6017(int i, int i_1_) {
-		WorldMapIndexLoader.aBoolArray2709[i] = false;
-		Class12.method480(i, -1495607995);
+	public static void unloadInterface(int interfaceId, int i_1_) {
+		WorldMapIndexLoader.aBoolArray2709[interfaceId] = false;
+		Class12.clearComponents(interfaceId, -1495607995);
 	}
 
 	static final void method6018(Class521_Sub1 class521_sub1, CS2Executor class527, int i) {

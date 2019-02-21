@@ -437,7 +437,7 @@ public class Class282_Sub18 extends Node {
 
 	static Class282_Sub18 method12271(Index class317, int i, int i_107_) {
 		if (!method12268(class317)) {
-			class317.load(i, i_107_, 16711935);
+			class317.load(i, i_107_);
 			return null;
 		}
 		byte[] is = class317.getFile(i, i_107_);

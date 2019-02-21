@@ -240,7 +240,7 @@ public class IndexLoaders {
 			Class282_Sub13.DEFAULTS_LOADER_8 = new Defaults8Loader(DEFAULTS_INDEX);
 		}
 		if (LoadingStage.aClass387_4704 == LOADING_STAGE) {
-			if (-1878247413 * Class58.aClass529_527.anInt7034 != -1 && !MESH_INDEX.load((-1878247413 * (Class58.aClass529_527.anInt7034)), 0, 16711935)) {
+			if (-1878247413 * Class58.aClass529_527.anInt7034 != -1 && !MESH_INDEX.load((-1878247413 * (Class58.aClass529_527.anInt7034)), 0)) {
 				return 99;
 			}
 			IMAGE_LOADER = new Class323(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
@@ -326,7 +326,7 @@ public class IndexLoaders {
 			boolean bool = true;
 			for (int i_18_ = 0; i_18_ < (Class468_Sub8.aClass98Array7889[Class58.aClass529_527.anInt7036 * 376713291].components).length; i_18_++) {
 				IComponentDefinitions class118 = (Class468_Sub8.aClass98Array7889[376713291 * Class58.aClass529_527.anInt7036].components[i_18_]);
-				if (-2131393857 * class118.anInt1268 == 5 && 985215637 * class118.anInt1320 != -1 && !SPRITES_INDEX.load((class118.anInt1320 * 985215637), 0, 16711935)) {
+				if (-2131393857 * class118.anInt1268 == 5 && 985215637 * class118.anInt1320 != -1 && !SPRITES_INDEX.load((class118.anInt1320 * 985215637), 0)) {
 					bool = false;
 				}
 			}

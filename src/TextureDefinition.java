@@ -18,7 +18,7 @@ public class TextureDefinition extends CacheableNode {
 	boolean method14717(Index class317, Interface22 interface22, int i) {
 		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
 			for (int i_0_ = 0; i_0_ < ((TextureDefinition) this).anIntArray9475.length; i_0_++) {
-				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((TextureDefinition) this).anIntArray9475[i_0_]), 16711935))
+				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((TextureDefinition) this).anIntArray9475[i_0_])))
 					return false;
 			}
 		} else {

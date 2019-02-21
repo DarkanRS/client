@@ -11,27 +11,6 @@ public class Class346 {
 	public int anInt4048;
 	static NodeCollection aClass482_4049;
 
-	public static Class346 method6146(RsByteBuffer class282_sub35) {
-		Class346 class346 = new Class346();
-		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1934243316);
-		return class346;
-	}
-
-	public static Class346 method6147(RsByteBuffer class282_sub35) {
-		Class346 class346 = new Class346();
-		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1564761464);
-		return class346;
-	}
-
-	public static Class346 method6148(RsByteBuffer class282_sub35) {
-		Class346 class346 = new Class346();
-		class346.anInt4048 = class282_sub35.readUnsignedShort() * -1506067503;
-		class346.aClass282_Sub50_Sub9_4047 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(-624100047 * class346.anInt4048, -1849534305);
-		return class346;
-	}
-
 	static final void method6149(CS2Executor class527, byte i) {
 		class527.anInt7001 -= -1188480575;
 	}
@@ -274,7 +253,7 @@ public class Class346 {
 	static void method6161(boolean bool, int i) {
 		if (bool) {
 			if (-1699899559 * client.anInt7349 != -1)
-				Class337.method6017(-1699899559 * client.anInt7349, -650534239);
+				Class337.unloadInterface(-1699899559 * client.anInt7349, -650534239);
 			for (Class282_Sub44 class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7750(-649341183)); class282_sub44 != null; class282_sub44 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 6)) {
 				if (!class282_sub44.method4994(-2135855077)) {
 					class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7750(439080271));

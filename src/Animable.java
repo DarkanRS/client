@@ -494,7 +494,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	void method15816(byte i) {
 		if (loadedInterfaceId * 226532721 != -1) {
-			Class12.method480(226532721 * loadedInterfaceId, -1658723672);
+			Class12.clearComponents(226532721 * loadedInterfaceId, -1658723672);
 			inter = null;
 			loadedInterfaceId = 1342798959;
 		}

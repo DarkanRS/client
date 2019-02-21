@@ -4,21 +4,8 @@
 
 public class Class348 {
 	int anInt4060 = 809353231;
-	static final int anInt4061 = 1;
 	NodeCollection aClass482_4062 = new NodeCollection();
-	static final int anInt4063 = 6;
-	static final int anInt4064 = 2;
-	static final int anInt4065 = 11;
-	static final int anInt4066 = 4;
-	static final int anInt4067 = 5;
-	static final int anInt4068 = 10;
-	static final int anInt4069 = 7;
-	static final int anInt4070 = 8;
-	static final int anInt4071 = 9;
-	static final int anInt4072 = 3;
 	long aLong4073;
-	static final int anInt4074 = 12;
-	static final int anInt4075 = 13;
 
 	void method6171(RsByteBuffer class282_sub35, byte i) {
 		((Class348) this).aLong4073 = class282_sub35.readLong(1262555059) * -8302090460667771417L;
@@ -87,7 +74,7 @@ public class Class348 {
 	public static void method6175(boolean bool, int i) {
 		if (bool) {
 			if (-1 != client.anInt7349 * -1699899559)
-				Class337.method6017(-1699899559 * client.anInt7349, -1669420859);
+				Class337.unloadInterface(-1699899559 * client.anInt7349, -1669420859);
 			for (Class282_Sub44 class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7750(1087054250)); class282_sub44 != null; class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7751((byte) 11))) {
 				if (!class282_sub44.method4994(1167502204)) {
 					class282_sub44 = ((Class282_Sub44) client.aClass465_7442.method7750(-848491079));

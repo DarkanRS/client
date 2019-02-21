@@ -64,7 +64,7 @@ public class Class351 implements Interface3 {
 		int i_5_ = (int) (-3442165056282524525L * class282_sub44.data);
 		class282_sub44.remove();
 		if (bool)
-			Class337.method6017(i_4_, -775991491);
+			Class337.unloadInterface(i_4_, -775991491);
 		Class109_Sub1.method14650(i_4_, 185452428);
 		IComponentDefinitions class118 = Class117.method1981(i_5_, (byte) 49);
 		if (null != class118)

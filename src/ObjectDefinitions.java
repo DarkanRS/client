@@ -362,7 +362,7 @@ public class ObjectDefinitions {
 		synchronized (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).meshIndex) {
 			for (int i_31_ = 0; i_31_ < anIntArrayArray5637.length; i_31_++) {
 				for (int i_32_ = 0; i_32_ < anIntArrayArray5637[i_31_].length; i_32_++)
-					bool &= (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).meshIndex.load(anIntArrayArray5637[i_31_][i_32_], 0, 16711935));
+					bool &= (((ObjectIndexLoader) ((ObjectDefinitions) this).loader).meshIndex.load(anIntArrayArray5637[i_31_][i_32_], 0));
 			}
 		}
 		return bool;
@@ -620,7 +620,7 @@ public class ObjectDefinitions {
 			for (int i_113_ = 0; i_113_ < aByteArray5636.length; i_113_++) {
 				if (i == aByteArray5636[i_113_]) {
 					for (int i_114_ = 0; i_114_ < anIntArrayArray5637[i_113_].length; i_114_++) {
-						if (!((ObjectIndexLoader) ((ObjectDefinitions) this).loader).meshIndex.load(anIntArrayArray5637[i_113_][i_114_], 0, 16711935))
+						if (!((ObjectIndexLoader) ((ObjectDefinitions) this).loader).meshIndex.load(anIntArrayArray5637[i_113_][i_114_], 0))
 							bool = false;
 					}
 				}

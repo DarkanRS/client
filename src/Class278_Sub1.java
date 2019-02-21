@@ -15,7 +15,7 @@ public class Class278_Sub1 extends Class278 {
 
 	int method4925(byte[] is) throws IOException {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
-			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
+			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0))
 				return 0;
 			byte[] is_0_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0));
 			if (null == is_0_)
@@ -71,7 +71,7 @@ public class Class278_Sub1 extends Class278 {
 
 	int method4951(byte[] is, int i) throws IOException {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
-			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
+			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0))
 				return 0;
 			byte[] is_5_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0));
 			if (null == is_5_)
@@ -122,7 +122,7 @@ public class Class278_Sub1 extends Class278 {
 	public void method13447(int i) {
 		if (null != ((Class278_Sub1) this).anIntArray8114) {
 			for (int i_11_ = 0; (i_11_ < 10 && (i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449 < ((Class278_Sub1) this).anIntArray8114.length)); i_11_++) {
-				if (((Class278_Sub1) this).aByteArrayArray8111[i_11_] == null && (((Class278_Sub1) this).aClass317_8117.load((((Class278_Sub1) this).anIntArray8114[(i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449)]), 0, 16711935)))
+				if (((Class278_Sub1) this).aByteArrayArray8111[i_11_] == null && (((Class278_Sub1) this).aClass317_8117.load((((Class278_Sub1) this).anIntArray8114[(i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449)]), 0)))
 					((Class278_Sub1) this).aByteArrayArray8111[i_11_] = (((Class278_Sub1) this).aClass317_8117.getFile((((Class278_Sub1) this).anIntArray8114[(-285637449 * ((Class278_Sub1) this).anInt8115 + i_11_)]), 0));
 			}
 		}
