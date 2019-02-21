@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class456_Sub2 extends Class456 {
+public class Class456_Sub2 extends Animation {
 	Class521_Sub1 aClass521_Sub1_7890;
 
 	void method7592(AnimationDefinitions class518, int i) {

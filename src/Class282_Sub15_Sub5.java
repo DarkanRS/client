@@ -91,7 +91,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 					((Class282_Sub15_Sub5) this).anInt9850 = 0;
 					((Class282_Sub15_Sub5) this).anInt9845 = 0;
 					((Class282_Sub15_Sub5) this).anInt9848 = 0;
-					unlink(-371378792);
+					remove();
 					i = ((Class282_Sub15_Sub5) this).anInt9858 * 1008956447;
 				}
 				((Class282_Sub15_Sub5) this).anInt9858 = 0;
@@ -114,7 +114,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				((Class282_Sub15_Sub5) this).anInt9853 = 0;
 			else {
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 				return;
 			}
 		}
@@ -123,7 +123,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				((Class282_Sub15_Sub5) this).anInt9853 = (i_11_ - 1) * -834443097;
 			else {
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 				return;
 			}
 		}
@@ -203,12 +203,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				if (-354697449 * ((Class282_Sub15_Sub5) this).anInt9853 < 0) {
 					((Class282_Sub15_Sub5) this).anInt9853 = 834443097;
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 				}
 			} else if (((Class282_Sub15_Sub5) this).anInt9853 * -354697449 >= i_11_) {
 				((Class282_Sub15_Sub5) this).anInt9853 = -834443097 * i_11_;
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 			}
 		}
 	}
@@ -283,12 +283,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	public final synchronized void method15322(int i, byte i_25_) {
 		if (0 == i) {
 			method15326(0, (byte) -36);
-			unlink(-371378792);
+			remove();
 		} else if (0 == 1784001117 * ((Class282_Sub15_Sub5) this).anInt9845 && 0 == (((Class282_Sub15_Sub5) this).anInt9850 * 2085185173)) {
 			((Class282_Sub15_Sub5) this).anInt9858 = 0;
 			((Class282_Sub15_Sub5) this).anInt9846 = 0;
 			((Class282_Sub15_Sub5) this).anInt9848 = 0;
-			unlink(-371378792);
+			remove();
 		} else {
 			int i_26_ = -(((Class282_Sub15_Sub5) this).anInt9848 * -217803069);
 			if (((Class282_Sub15_Sub5) this).anInt9848 * -217803069 > i_26_)
@@ -375,7 +375,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			((Class282_Sub15_Sub5) this).anInt9850 = 0;
 			((Class282_Sub15_Sub5) this).anInt9845 = 0;
 			((Class282_Sub15_Sub5) this).anInt9848 = 0;
-			unlink(-371378792);
+			remove();
 			return true;
 		}
 		method15332((byte) -51);
@@ -390,7 +390,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 					((Class282_Sub15_Sub5) this).anInt9850 = 0;
 					((Class282_Sub15_Sub5) this).anInt9845 = 0;
 					((Class282_Sub15_Sub5) this).anInt9848 = 0;
-					unlink(-371378792);
+					remove();
 					i = ((Class282_Sub15_Sub5) this).anInt9858 * 1008956447;
 				}
 				((Class282_Sub15_Sub5) this).anInt9858 = 0;
@@ -413,7 +413,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				((Class282_Sub15_Sub5) this).anInt9853 = 0;
 			else {
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 				return;
 			}
 		}
@@ -422,7 +422,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				((Class282_Sub15_Sub5) this).anInt9853 = (i_32_ - 1) * -834443097;
 			else {
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 				return;
 			}
 		}
@@ -502,12 +502,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				if (-354697449 * ((Class282_Sub15_Sub5) this).anInt9853 < 0) {
 					((Class282_Sub15_Sub5) this).anInt9853 = 834443097;
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 				}
 			} else if (((Class282_Sub15_Sub5) this).anInt9853 * -354697449 >= i_32_) {
 				((Class282_Sub15_Sub5) this).anInt9853 = -834443097 * i_32_;
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 			}
 		}
 	}
@@ -540,7 +540,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 					((Class282_Sub15_Sub5) this).anInt9850 = 0;
 					((Class282_Sub15_Sub5) this).anInt9845 = 0;
 					((Class282_Sub15_Sub5) this).anInt9848 = 0;
-					unlink(-371378792);
+					remove();
 					i = ((Class282_Sub15_Sub5) this).anInt9858 * 1008956447;
 				}
 				((Class282_Sub15_Sub5) this).anInt9858 = 0;
@@ -563,7 +563,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				((Class282_Sub15_Sub5) this).anInt9853 = 0;
 			else {
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 				return;
 			}
 		}
@@ -572,7 +572,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				((Class282_Sub15_Sub5) this).anInt9853 = (i_40_ - 1) * -834443097;
 			else {
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 				return;
 			}
 		}
@@ -652,12 +652,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 				if (-354697449 * ((Class282_Sub15_Sub5) this).anInt9853 < 0) {
 					((Class282_Sub15_Sub5) this).anInt9853 = 834443097;
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 				}
 			} else if (((Class282_Sub15_Sub5) this).anInt9853 * -354697449 >= i_40_) {
 				((Class282_Sub15_Sub5) this).anInt9853 = -834443097 * i_40_;
 				method15354(-859024475);
-				unlink(-371378792);
+				remove();
 			}
 		}
 	}
@@ -1018,12 +1018,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	public final synchronized void method15365(int i) {
 		if (0 == i) {
 			method15326(0, (byte) -24);
-			unlink(-371378792);
+			remove();
 		} else if (0 == 1784001117 * ((Class282_Sub15_Sub5) this).anInt9845 && 0 == (((Class282_Sub15_Sub5) this).anInt9850 * 2085185173)) {
 			((Class282_Sub15_Sub5) this).anInt9858 = 0;
 			((Class282_Sub15_Sub5) this).anInt9846 = 0;
 			((Class282_Sub15_Sub5) this).anInt9848 = 0;
-			unlink(-371378792);
+			remove();
 		} else {
 			int i_73_ = -(((Class282_Sub15_Sub5) this).anInt9848 * -217803069);
 			if (((Class282_Sub15_Sub5) this).anInt9848 * -217803069 > i_73_)
@@ -1049,12 +1049,12 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 	public final synchronized void method15366(int i) {
 		if (0 == i) {
 			method15326(0, (byte) 30);
-			unlink(-371378792);
+			remove();
 		} else if (0 == 1784001117 * ((Class282_Sub15_Sub5) this).anInt9845 && 0 == (((Class282_Sub15_Sub5) this).anInt9850 * 2085185173)) {
 			((Class282_Sub15_Sub5) this).anInt9858 = 0;
 			((Class282_Sub15_Sub5) this).anInt9846 = 0;
 			((Class282_Sub15_Sub5) this).anInt9848 = 0;
-			unlink(-371378792);
+			remove();
 		} else {
 			int i_74_ = -(((Class282_Sub15_Sub5) this).anInt9848 * -217803069);
 			if (((Class282_Sub15_Sub5) this).anInt9848 * -217803069 > i_74_)
@@ -1121,7 +1121,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (i_86_ == 15)
 				i_86_ = -1;
 			boolean bool = (i_84_ >> 7 & 0x1) == 1;
-			player.sendGraphics(i_82_, i_83_, i_85_, i_86_, bool, 1, 1574977032);
+			player.sendSpotAnim(i_82_, i_83_, i_85_, i_86_, bool, 1, 1574977032);
 		}
 		if ((flag & 0x20) != 0) {
 			player.faceDirection = buffer.readUnsignedShort128() * 1435090479;
@@ -1180,7 +1180,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (15 == i_101_)
 				i_101_ = -1;
 			boolean bool = (i_99_ >> 7 & 0x1) == 1;
-			player.sendGraphics(i_97_, i_98_, i_100_, i_101_, bool, 2, -986175675);
+			player.sendSpotAnim(i_97_, i_98_, i_100_, i_101_, bool, 2, -986175675);
 		}
 		if ((flag & 0x8000) != 0)
 			player.aBool10571 = buffer.readUnsigned128Byte() == 1;
@@ -1271,7 +1271,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (i_128_ == 15)
 				i_128_ = -1;
 			boolean bool = (i_126_ >> 7 & 0x1) == 1;
-			player.sendGraphics(i_124_, i_125_, i_127_, i_128_, bool, 3, -795624313);
+			player.sendSpotAnim(i_124_, i_125_, i_127_, i_128_, bool, 3, -795624313);
 		}
 		if (0 != (flag & 0x800)) {
 			player.anInt10326 = buffer.readByteC(1259464740) * 830034083;
@@ -1307,7 +1307,7 @@ public abstract class Class282_Sub15_Sub5 extends Class282_Sub15 {
 			if (15 == i_133_)
 				i_133_ = -1;
 			boolean bool = (i_131_ >> 7 & 0x1) == 1;
-			player.sendGraphics(i_129_, i_130_, i_132_, i_133_, bool, 0, 114463464);
+			player.sendSpotAnim(i_129_, i_130_, i_132_, i_133_, bool, 0, 114463464);
 		}
 		if (player.aBool10568) {
 			if (movementType == 127)

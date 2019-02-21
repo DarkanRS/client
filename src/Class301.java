@@ -80,7 +80,7 @@ public class Class301 implements Interface41 {
 		int i_1_ = class317.getArchiveId(string, -1729894285);
 		if (-1 == i_1_)
 			return new Class283(0);
-		int[] is = class317.method5616(i_1_, -710345524);
+		int[] is = class317.getValidFileIds(i_1_, -710345524);
 		Class283 class283 = new Class283(is.length);
 		int i_2_ = 0;
 		int i_3_ = 0;

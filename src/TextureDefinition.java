@@ -4,7 +4,7 @@
  */
 import java.io.FileOutputStream;
 
-public class TextureDefinition extends Class282_Sub50 {
+public class TextureDefinition extends CacheableNode {
 	int[] anIntArray9473;
 	static int[] anIntArray9474;
 	int[] anIntArray9475;

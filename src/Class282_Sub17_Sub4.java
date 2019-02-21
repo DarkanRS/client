@@ -87,7 +87,7 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 
 	static final void method15408(CS2Executor class527, int i) {
 		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class227 class227 = IndexLoaders.aClass211_9383.method3616(i_1_, (byte) 12);
+		RenderAnimDefs class227 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_1_, (byte) 12);
 		if (null != class227.anIntArray2814 && class227.anIntArray2814.length > 0) {
 			int i_2_ = 0;
 			int i_3_ = class227.anIntArray2789[0];
@@ -99,7 +99,7 @@ public class Class282_Sub17_Sub4 extends Class282_Sub17 {
 			}
 			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class227.anIntArray2814[i_2_];
 		} else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -243982531 * class227.anInt2819;
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -243982531 * class227.defaultStandAnimation;
 	}
 
 	static final void method15409(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {

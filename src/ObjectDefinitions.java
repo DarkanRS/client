@@ -699,7 +699,7 @@ public class ObjectDefinitions {
 		return ((ObjectIndexLoader) ((ObjectDefinitions) this).loader).aClass452_5620;
 	}
 
-	public final synchronized MeshRasterizer method8012(GraphicalRenderer class505, int i, int i_173_, int i_174_, Class390 class390, Class390 class390_175_, int i_176_, int i_177_, int i_178_, Class456 class456, Class476 class476, int i_179_) {
+	public final synchronized MeshRasterizer method8012(GraphicalRenderer class505, int i, int i_173_, int i_174_, Class390 class390, Class390 class390_175_, int i_176_, int i_177_, int i_178_, Animation class456, Class476 class476, int i_179_) {
 		if (Class485.method8201(i_173_, -159499065))
 			i_173_ = SceneObjectType.STRAIGHT_INSIDE_WALL_DEC.type * 1109376893;
 		long l = (long) (i_174_ + ((id * -2132690865 << 10) + (i_173_ << 3)));
@@ -815,8 +815,8 @@ public class ObjectDefinitions {
 	static Class282_Sub50_Sub12 method8022(int i) {
 		Class282_Sub50_Sub12 class282_sub50_sub12 = ((Class282_Sub50_Sub12) Class282_Sub50_Sub12.aClass477_9666.method7941((byte) 4));
 		if (null != class282_sub50_sub12) {
-			class282_sub50_sub12.unlink(-371378792);
-			class282_sub50_sub12.method13452((byte) -5);
+			class282_sub50_sub12.remove();
+			class282_sub50_sub12.method13452();
 			return class282_sub50_sub12;
 		}
 		for (;;) {
@@ -825,9 +825,9 @@ public class ObjectDefinitions {
 				return null;
 			if (class282_sub50_sub12.method14955(31148025) > Class169.method2869(1956971878))
 				return null;
-			class282_sub50_sub12.unlink(-371378792);
-			class282_sub50_sub12.method13452((byte) -5);
-			if ((class282_sub50_sub12.aLong8120 * -7883876913471066125L & ~0x7fffffffffffffffL) != 0L)
+			class282_sub50_sub12.remove();
+			class282_sub50_sub12.method13452();
+			if ((class282_sub50_sub12.key * -7883876913471066125L & ~0x7fffffffffffffffL) != 0L)
 				return class282_sub50_sub12;
 		}
 	}

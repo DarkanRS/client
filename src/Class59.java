@@ -687,7 +687,7 @@ public class Class59 {
 
 	public static void method1160(int i) {
 		if (-1 != Class51.anInt488 * -1437926185) {
-			Class515.method8862(Class51.anInt488 * -1437926185, -1, -1, false, -1732540658);
+			SpotAnimIndexLoader.method8862(Class51.anInt488 * -1437926185, -1, -1, false, -1732540658);
 			Class51.anInt488 = 562841881;
 		}
 	}

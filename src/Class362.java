@@ -25,7 +25,7 @@ public class Class362 {
 
 	public static final void method6276(int i) {
 		OutputStream_Sub1.anImage7953 = null;
-		Class515.aFont5893 = null;
+		SpotAnimIndexLoader.aFont5893 = null;
 	}
 
 	static final String[] method6277(String[] strings, short i) {

@@ -199,7 +199,7 @@ public class Class247 {
 	
 	void method4229(GraphicalRenderer class505, byte i) {
 		try {
-			boolean bool = (Class282_Sub50_Sub11_Sub1.aClass317_10379.method5647(565265759 * ((Class247) this).anInt3047, -2119577317));
+			boolean bool = (Class282_Sub50_Sub11_Sub1.aClass317_10379.loadFile(565265759 * ((Class247) this).anInt3047, -2119577317));
 			if (bool) {
 				class505.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
 				RSMesh class157 = RSMesh.decodeMesh((Class282_Sub50_Sub11_Sub1.aClass317_10379), (((Class247) this).anInt3047 * 565265759), 0);

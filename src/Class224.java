@@ -114,13 +114,13 @@ public final class Class224 {
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub18_8214.method12774((byte) -14) ? 1 : 0;
 	}
 
-	public static void method3782(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_32_, int i) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_32_;
+	public static void method3782(CacheableNode class282_sub50, CacheableNode class282_sub50_32_, int i) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_32_;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_32_.aClass282_Sub50_8119;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
 	static final void method3783(CS2Executor class527, int i) {

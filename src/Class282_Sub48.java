@@ -50,7 +50,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 		if (bool) {
 			for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 33); null != class282_sub48; class282_sub48 = (Class282_Sub48) aClass482_8074.next(404069961)) {
@@ -58,14 +58,14 @@ public class Class282_Sub48 extends Node {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 			for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(378870532); class282_sub48 != null; class282_sub48 = ((Class282_Sub48) aClass465_8075.method7751((byte) 101))) {
 				if (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 != null) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 		}
 	}
@@ -77,7 +77,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 	}
 
@@ -91,7 +91,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 		if (bool) {
 			for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 52); null != class282_sub48; class282_sub48 = ((Class282_Sub48) aClass482_8074.next(-614816819))) {
@@ -99,14 +99,14 @@ public class Class282_Sub48 extends Node {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 			for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(-381668995); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass465_8075.method7751((byte) 53)) {
 				if (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 != null) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 		}
 	}
@@ -188,11 +188,11 @@ public class Class282_Sub48 extends Node {
 				return -1;
 		}
 		int i = -1955311273 * class409.anInt4876;
-		Class227 class227 = class521_sub1_sub1_sub2_sub2.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2_sub2.getRenderAnimDefs((byte) -17);
 		int i_2_ = class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.method7597(-951708059);
 		if (-1 == i_2_ || class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.aBool7891)
 			i = -1910117775 * class409.anInt4903;
-		else if (class227.anInt2797 * -474675041 == i_2_ || i_2_ == 486149589 * class227.anInt2817 || class227.anInt2800 * -833477781 == i_2_ || 1642803439 * class227.anInt2799 == i_2_)
+		else if (class227.anInt2797 * -474675041 == i_2_ || i_2_ == 486149589 * class227.walkDir6 || class227.anInt2800 * -833477781 == i_2_ || 1642803439 * class227.anInt2799 == i_2_)
 			i = class409.anInt4906 * -1427347049;
 		else if (2055956425 * class227.anInt2801 == i_2_ || class227.anInt2828 * 1053306035 == i_2_ || 1489597113 * class227.anInt2812 == i_2_ || 1879075923 * class227.anInt2803 == i_2_)
 			i = 1863998163 * class409.anInt4921;
@@ -346,7 +346,7 @@ public class Class282_Sub48 extends Node {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 				break;
 			}
 		}
@@ -363,7 +363,7 @@ public class Class282_Sub48 extends Node {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 				break;
 			}
 		}
@@ -376,7 +376,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 	}
 
@@ -387,7 +387,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 	}
 
@@ -398,7 +398,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 	}
 
@@ -410,11 +410,11 @@ public class Class282_Sub48 extends Node {
 				return -1;
 		}
 		int i = -1955311273 * class409.anInt4876;
-		Class227 class227 = class521_sub1_sub1_sub2_sub2.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2_sub2.getRenderAnimDefs((byte) -17);
 		int i_13_ = class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.method7597(-1531664002);
 		if (-1 == i_13_ || class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.aBool7891)
 			i = -1910117775 * class409.anInt4903;
-		else if (class227.anInt2797 * -474675041 == i_13_ || i_13_ == 486149589 * class227.anInt2817 || class227.anInt2800 * -833477781 == i_13_ || 1642803439 * class227.anInt2799 == i_13_)
+		else if (class227.anInt2797 * -474675041 == i_13_ || i_13_ == 486149589 * class227.walkDir6 || class227.anInt2800 * -833477781 == i_13_ || 1642803439 * class227.anInt2799 == i_13_)
 			i = class409.anInt4906 * -1427347049;
 		else if (2055956425 * class227.anInt2801 == i_13_ || class227.anInt2828 * 1053306035 == i_13_ || 1489597113 * class227.anInt2812 == i_13_ || 1879075923 * class227.anInt2803 == i_13_)
 			i = 1863998163 * class409.anInt4921;
@@ -428,7 +428,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 	}
 
@@ -448,11 +448,11 @@ public class Class282_Sub48 extends Node {
 				return -1;
 		}
 		int i = -1955311273 * class409.anInt4876;
-		Class227 class227 = class521_sub1_sub1_sub2_sub2.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2_sub2.getRenderAnimDefs((byte) -17);
 		int i_14_ = class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.method7597(-1142631244);
 		if (-1 == i_14_ || class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.aBool7891)
 			i = -1910117775 * class409.anInt4903;
-		else if (class227.anInt2797 * -474675041 == i_14_ || i_14_ == 486149589 * class227.anInt2817 || class227.anInt2800 * -833477781 == i_14_ || 1642803439 * class227.anInt2799 == i_14_)
+		else if (class227.anInt2797 * -474675041 == i_14_ || i_14_ == 486149589 * class227.walkDir6 || class227.anInt2800 * -833477781 == i_14_ || 1642803439 * class227.anInt2799 == i_14_)
 			i = class409.anInt4906 * -1427347049;
 		else if (2055956425 * class227.anInt2801 == i_14_ || class227.anInt2828 * 1053306035 == i_14_ || 1489597113 * class227.anInt2812 == i_14_ || 1879075923 * class227.anInt2803 == i_14_)
 			i = 1863998163 * class409.anInt4921;
@@ -473,7 +473,7 @@ public class Class282_Sub48 extends Node {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 		if (bool) {
 			for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 61); null != class282_sub48; class282_sub48 = (Class282_Sub48) aClass482_8074.next(264655265)) {
@@ -481,14 +481,14 @@ public class Class282_Sub48 extends Node {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 			for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(-121213585); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass465_8075.method7751((byte) 34)) {
 				if (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 != null) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 		}
 	}
@@ -501,11 +501,11 @@ public class Class282_Sub48 extends Node {
 				return -1;
 		}
 		int i = -1955311273 * class409.anInt4876;
-		Class227 class227 = class521_sub1_sub1_sub2_sub2.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2_sub2.getRenderAnimDefs((byte) -17);
 		int i_15_ = class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.method7597(-909681611);
 		if (-1 == i_15_ || class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.aBool7891)
 			i = -1910117775 * class409.anInt4903;
-		else if (class227.anInt2797 * -474675041 == i_15_ || i_15_ == 486149589 * class227.anInt2817 || class227.anInt2800 * -833477781 == i_15_ || 1642803439 * class227.anInt2799 == i_15_)
+		else if (class227.anInt2797 * -474675041 == i_15_ || i_15_ == 486149589 * class227.walkDir6 || class227.anInt2800 * -833477781 == i_15_ || 1642803439 * class227.anInt2799 == i_15_)
 			i = class409.anInt4906 * -1427347049;
 		else if (2055956425 * class227.anInt2801 == i_15_ || class227.anInt2828 * 1053306035 == i_15_ || 1489597113 * class227.anInt2812 == i_15_ || 1879075923 * class227.anInt2803 == i_15_)
 			i = 1863998163 * class409.anInt4921;
@@ -517,11 +517,11 @@ public class Class282_Sub48 extends Node {
 			Class175.method2964(class282_sub48, i, i_16_, i_17_, i_18_, -1331651831);
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 25); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass482_8074.next(-69095060)) {
 			int i_19_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs((byte) -17);
 			int i_20_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597(-947728005);
 			if (i_20_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.aBool7891))
 				i_19_ = 0;
-			else if (i_20_ == class227.anInt2797 * -474675041 || i_20_ == 486149589 * class227.anInt2817 || -833477781 * class227.anInt2800 == i_20_ || 1642803439 * class227.anInt2799 == i_20_)
+			else if (i_20_ == class227.anInt2797 * -474675041 || i_20_ == 486149589 * class227.walkDir6 || -833477781 * class227.anInt2800 == i_20_ || 1642803439 * class227.anInt2799 == i_20_)
 				i_19_ = 2;
 			else if (class227.anInt2801 * 2055956425 == i_20_ || i_20_ == class227.anInt2828 * 1053306035 || class227.anInt2812 * 1489597113 == i_20_ || i_20_ == 1879075923 * class227.anInt2803)
 				i_19_ = 3;
@@ -568,11 +568,11 @@ public class Class282_Sub48 extends Node {
 		}
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(-1385496462); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass465_8075.method7751((byte) 11)) {
 			int i_22_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs((byte) -17);
 			int i_23_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.method7597(-1521111844);
 			if (i_23_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.aBool7891))
 				i_22_ = 0;
-			else if (class227.anInt2797 * -474675041 == i_23_ || i_23_ == 486149589 * class227.anInt2817 || i_23_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_23_)
+			else if (class227.anInt2797 * -474675041 == i_23_ || i_23_ == 486149589 * class227.walkDir6 || i_23_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_23_)
 				i_22_ = 2;
 			else if (i_23_ == class227.anInt2801 * 2055956425 || class227.anInt2828 * 1053306035 == i_23_ || 1489597113 * class227.anInt2812 == i_23_ || i_23_ == 1879075923 * class227.anInt2803)
 				i_22_ = 3;
@@ -617,11 +617,11 @@ public class Class282_Sub48 extends Node {
 			Class175.method2964(class282_sub48, i, i_25_, i_26_, i_27_, -1001943374);
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 34); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass482_8074.next(1887963284)) {
 			int i_28_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs((byte) -17);
 			int i_29_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597(-968468450);
 			if (i_29_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.aBool7891))
 				i_28_ = 0;
-			else if (i_29_ == class227.anInt2797 * -474675041 || i_29_ == 486149589 * class227.anInt2817 || -833477781 * class227.anInt2800 == i_29_ || 1642803439 * class227.anInt2799 == i_29_)
+			else if (i_29_ == class227.anInt2797 * -474675041 || i_29_ == 486149589 * class227.walkDir6 || -833477781 * class227.anInt2800 == i_29_ || 1642803439 * class227.anInt2799 == i_29_)
 				i_28_ = 2;
 			else if (class227.anInt2801 * 2055956425 == i_29_ || i_29_ == class227.anInt2828 * 1053306035 || class227.anInt2812 * 1489597113 == i_29_ || i_29_ == 1879075923 * class227.anInt2803)
 				i_28_ = 3;
@@ -668,11 +668,11 @@ public class Class282_Sub48 extends Node {
 		}
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(1452029025); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass465_8075.method7751((byte) 14)) {
 			int i_31_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs((byte) -17);
 			int i_32_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.method7597(-1347124338);
 			if (i_32_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.aBool7891))
 				i_31_ = 0;
-			else if (class227.anInt2797 * -474675041 == i_32_ || i_32_ == 486149589 * class227.anInt2817 || i_32_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_32_)
+			else if (class227.anInt2797 * -474675041 == i_32_ || i_32_ == 486149589 * class227.walkDir6 || i_32_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_32_)
 				i_31_ = 2;
 			else if (i_32_ == class227.anInt2801 * 2055956425 || class227.anInt2828 * 1053306035 == i_32_ || 1489597113 * class227.anInt2812 == i_32_ || i_32_ == 1879075923 * class227.anInt2803)
 				i_31_ = 3;
@@ -717,11 +717,11 @@ public class Class282_Sub48 extends Node {
 			Class175.method2964(class282_sub48, i, i_34_, i_35_, i_36_, -1937339058);
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 16); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass482_8074.next(32501752)) {
 			int i_37_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs((byte) -17);
 			int i_38_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597(-893659153);
 			if (i_38_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.aBool7891))
 				i_37_ = 0;
-			else if (i_38_ == class227.anInt2797 * -474675041 || i_38_ == 486149589 * class227.anInt2817 || -833477781 * class227.anInt2800 == i_38_ || 1642803439 * class227.anInt2799 == i_38_)
+			else if (i_38_ == class227.anInt2797 * -474675041 || i_38_ == 486149589 * class227.walkDir6 || -833477781 * class227.anInt2800 == i_38_ || 1642803439 * class227.anInt2799 == i_38_)
 				i_37_ = 2;
 			else if (class227.anInt2801 * 2055956425 == i_38_ || i_38_ == class227.anInt2828 * 1053306035 || class227.anInt2812 * 1489597113 == i_38_ || i_38_ == 1879075923 * class227.anInt2803)
 				i_37_ = 3;
@@ -768,11 +768,11 @@ public class Class282_Sub48 extends Node {
 		}
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(-1655872839); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass465_8075.method7751((byte) 80)) {
 			int i_40_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs((byte) -17);
 			int i_41_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.method7597(-2074622430);
 			if (i_41_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.aBool7891))
 				i_40_ = 0;
-			else if (class227.anInt2797 * -474675041 == i_41_ || i_41_ == 486149589 * class227.anInt2817 || i_41_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_41_)
+			else if (class227.anInt2797 * -474675041 == i_41_ || i_41_ == 486149589 * class227.walkDir6 || i_41_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_41_)
 				i_40_ = 2;
 			else if (i_41_ == class227.anInt2801 * 2055956425 || class227.anInt2828 * 1053306035 == i_41_ || 1489597113 * class227.anInt2812 == i_41_ || i_41_ == 1879075923 * class227.anInt2803)
 				i_40_ = 3;
@@ -817,11 +817,11 @@ public class Class282_Sub48 extends Node {
 			Class175.method2964(class282_sub48, i, i_43_, i_44_, i_45_, -2124717343);
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass482_8074.head((byte) 30); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass482_8074.next(203519697)) {
 			int i_46_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.getRenderAnimDefs((byte) -17);
 			int i_47_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.method7597(-1019960407);
 			if (i_47_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub2_8085.aClass456_Sub3_10337.aBool7891))
 				i_46_ = 0;
-			else if (i_47_ == class227.anInt2797 * -474675041 || i_47_ == 486149589 * class227.anInt2817 || -833477781 * class227.anInt2800 == i_47_ || 1642803439 * class227.anInt2799 == i_47_)
+			else if (i_47_ == class227.anInt2797 * -474675041 || i_47_ == 486149589 * class227.walkDir6 || -833477781 * class227.anInt2800 == i_47_ || 1642803439 * class227.anInt2799 == i_47_)
 				i_46_ = 2;
 			else if (class227.anInt2801 * 2055956425 == i_47_ || i_47_ == class227.anInt2828 * 1053306035 || class227.anInt2812 * 1489597113 == i_47_ || i_47_ == 1879075923 * class227.anInt2803)
 				i_46_ = 3;
@@ -868,11 +868,11 @@ public class Class282_Sub48 extends Node {
 		}
 		for (Class282_Sub48 class282_sub48 = (Class282_Sub48) aClass465_8075.method7750(1762842587); class282_sub48 != null; class282_sub48 = (Class282_Sub48) aClass465_8075.method7751((byte) 126)) {
 			int i_49_ = 1;
-			Class227 class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.method15855((byte) -17);
+			RenderAnimDefs class227 = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.getRenderAnimDefs((byte) -17);
 			int i_50_ = ((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.method7597(-1863836788);
 			if (i_50_ == -1 || (((Class282_Sub48) class282_sub48).aClass521_Sub1_Sub1_Sub2_Sub1_8086.aClass456_Sub3_10337.aBool7891))
 				i_49_ = 0;
-			else if (class227.anInt2797 * -474675041 == i_50_ || i_50_ == 486149589 * class227.anInt2817 || i_50_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_50_)
+			else if (class227.anInt2797 * -474675041 == i_50_ || i_50_ == 486149589 * class227.walkDir6 || i_50_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_50_)
 				i_49_ = 2;
 			else if (i_50_ == class227.anInt2801 * 2055956425 || class227.anInt2828 * 1053306035 == i_50_ || 1489597113 * class227.anInt2812 == i_50_ || i_50_ == 1879075923 * class227.anInt2803)
 				i_49_ = 3;

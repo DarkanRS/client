@@ -538,7 +538,7 @@ public class Class174 {
 			Class214.method3667(executor, (byte) 125);
 			break;
 		case 257:
-			Class211.sendReportAbusePacket(executor, -1952929458);
+			RenderAnimIndexLoader.sendReportAbusePacket(executor, -1952929458);
 			break;
 		case 153:
 			IncomingPacket.method6373(executor, 676845986);
@@ -891,7 +891,7 @@ public class Class174 {
 			Class293.method5203(executor, -1859060063);
 			break;
 		case 797:
-			Class515.method8863(executor, 1642166574);
+			SpotAnimIndexLoader.method8863(executor, 1642166574);
 			break;
 		case 264:
 			Class377.method6400(executor, (byte) 0);
@@ -1212,7 +1212,7 @@ public class Class174 {
 			NPCDefinitions.method6908(executor, 102188294);
 			break;
 		case 346:
-			Class227.method3829(executor, -123607634);
+			RenderAnimDefs.method3829(executor, -123607634);
 			break;
 		case 888:
 			Class172.method2914(executor, (byte) 18);
@@ -1341,7 +1341,7 @@ public class Class174 {
 			Class386.method6670(executor, 749111645);
 			break;
 		case 142:
-			Class473.method7888(executor, -355473345);
+			LinkedNodeList.method7888(executor, -355473345);
 			break;
 		case 18:
 			NamedFileReference.method870(executor, 1718249177);
@@ -1584,7 +1584,7 @@ public class Class174 {
 			Class282_Sub11_Sub4.method15616(executor, -2127027018);
 			break;
 		case 703:
-			Class523.method11218(executor, (byte) 117);
+			AnimationIndexLoader.method11218(executor, (byte) 117);
 			break;
 		case 16:
 			Class489.method8219(executor, 454655223);
@@ -2019,7 +2019,7 @@ public class Class174 {
 			ObjectDefinitions.method8019(executor, (short) 1088);
 			break;
 		case 707:
-			Class515.method8859(executor, (byte) -59);
+			SpotAnimIndexLoader.method8859(executor, (byte) -59);
 			break;
 		case 50:
 			Class344.method6121(executor, (byte) -81);
@@ -2340,7 +2340,7 @@ public class Class174 {
 			Class207.method3553(executor, (byte) -49);
 			break;
 		case 339:
-			Class227.method3830(executor, (byte) 24);
+			RenderAnimDefs.method3830(executor, (byte) 24);
 			break;
 		case 164:
 			Class480.method8045(executor, (byte) 95);
@@ -2604,7 +2604,7 @@ public class Class174 {
 			Class532_Sub2.method12859(executor, (byte) 8);
 			break;
 		case 997:
-			Class456.method7643(executor, (byte) -110);
+			Animation.method7643(executor, (byte) -110);
 			break;
 		case 878:
 			OutgoingLoginPacket.method6318(executor, 1973091635);
@@ -2760,7 +2760,7 @@ public class Class174 {
 			Class301.method5335(executor, (byte) 3);
 			break;
 		case 915:
-			Class525.method11244(executor, -783443053);
+			SpotAnimDefinitions.method11244(executor, -783443053);
 			break;
 		case 125:
 			Class111.method1864(executor, -2034294635);

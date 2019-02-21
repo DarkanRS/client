@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub50_Sub2 extends Class282_Sub50 {
+public class Class282_Sub50_Sub2 extends CacheableNode {
 	static int anInt9471;
 	byte[] aByteArray9472;
 

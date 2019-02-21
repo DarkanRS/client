@@ -730,7 +730,7 @@ public class ClipMap {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8096 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 		if (bool) {
 			for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass482_8074.head((byte) 121)); null != class282_sub48; class282_sub48 = (Class282_Sub48) Class282_Sub48.aClass482_8074.next(-938773769)) {
@@ -738,14 +738,14 @@ public class ClipMap {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 			for (Class282_Sub48 class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass465_8075.method7750(856415350)); class282_sub48 != null; class282_sub48 = ((Class282_Sub48) Class282_Sub48.aClass465_8075.method7751((byte) 62))) {
 				if (((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 != null) {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 			}
 		}
 	}

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class CS2Script extends Class282_Sub50 {
+public class CS2Script extends CacheableNode {
 	public Object[] stringOpValues;
 	public String scriptName;
 	public CS2OpInfo[] operations;

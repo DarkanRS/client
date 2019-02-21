@@ -102,7 +102,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		if (class282_sub50_sub11 == null)
 			return null;
 		byte[] is = class282_sub50_sub11.getData(-2100194534);
-		class282_sub50_sub11.unlink(-371378792);
+		class282_sub50_sub11.remove();
 		return is;
 	}
 
@@ -110,15 +110,15 @@ public class JS5GrabWorker extends JS5FileWorker {
 		if (null != this.coll && getReferenceTable(-2030640343) != null) {
 			for (Node node = this.aClass482_7807.head((byte) 69); null != node; node = this.aClass482_7807.next(-235017563)) {
 				int i_13_ = (int) (node.data * -3442165056282524525L);
-				if (i_13_ < 0 || (i_13_ >= (((ReferenceTable) this.table).archiveCount) * 1563136279) || 0 == (((ReferenceTable) this.table).fileCounts[i_13_]))
-					node.unlink(-371378792);
+				if (i_13_ < 0 || (i_13_ >= (((ReferenceTable) this.table).archiveCount) * 1563136279) || 0 == (((ReferenceTable) this.table).validFileIdSizes[i_13_]))
+					node.remove();
 				else {
 					if (this.aByteArray7792[i_13_] == 0)
 						method12546(i_13_, 1, -43813469);
 					if (this.aByteArray7792[i_13_] == -1)
 						method12546(i_13_, 2, -461658168);
 					if (1 == this.aByteArray7792[i_13_])
-						node.unlink(-371378792);
+						node.remove();
 				}
 			}
 		}
@@ -166,7 +166,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 	JS5CacheRequest method12546(int i, int i_26_, int i_27_) {
 		JS5CacheRequest class282_sub50_sub11 = ((JS5CacheRequest) this.aClass465_7796.method7754((long) i));
 		if (null != class282_sub50_sub11 && 0 == i_26_ && !((JS5CacheRequest) class282_sub50_sub11).aBool9637 && ((JS5CacheRequest) class282_sub50_sub11).incomplete) {
-			class282_sub50_sub11.unlink(-371378792);
+			class282_sub50_sub11.remove();
 			class282_sub50_sub11 = null;
 		}
 		if (class282_sub50_sub11 == null) {
@@ -226,11 +226,11 @@ public class JS5GrabWorker extends JS5FileWorker {
 					this.aByteArray7792[i] = (byte) 1;
 				}
 				if (!((JS5CacheRequest) class282_sub50_sub11).aBool9637)
-					class282_sub50_sub11.unlink(-371378792);
+					class282_sub50_sub11.remove();
 				class282_sub50_sub11_28_ = class282_sub50_sub11;
 			} catch (Exception exception) {
 				this.aByteArray7792[i] = (byte) -1;
-				class282_sub50_sub11.unlink(-371378792);
+				class282_sub50_sub11.remove();
 				if (((JS5CacheRequest) class282_sub50_sub11).aBool9637 && !this.standardRequester.method5517(-439719120)) {
 					Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (this.standardRequester.method5515(this.indexId * 737076305, i, (byte) 2, true, (byte) -66));
 					this.aClass465_7796.method7765(class282_sub50_sub11_sub1, (long) i);
@@ -259,7 +259,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			this.standardRequester.anInt3650 = 0;
 		} catch (RuntimeException runtimeexception) {
 			this.standardRequester.method5520((byte) 0);
-			class282_sub50_sub11.unlink(-371378792);
+			class282_sub50_sub11.remove();
 			if (((JS5CacheRequest) class282_sub50_sub11).aBool9637 && !this.standardRequester.method5517(-1089916342)) {
 				Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (this.standardRequester.method5515(this.indexId * 737076305, i, (byte) 2, true, (byte) -35));
 				this.aClass465_7796.method7765(class282_sub50_sub11_sub1, (long) i);
@@ -276,7 +276,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 			}
 		}
 		if (!((JS5CacheRequest) class282_sub50_sub11).aBool9637)
-			class282_sub50_sub11.unlink(-371378792);
+			class282_sub50_sub11.remove();
 		return class282_sub50_sub11;
 	}
 
@@ -357,7 +357,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		if (class282_sub50_sub11 == null)
 			return null;
 		byte[] is = class282_sub50_sub11.getData(1414497884);
-		class282_sub50_sub11.unlink(-371378792);
+		class282_sub50_sub11.remove();
 		return is;
 	}
 
@@ -373,7 +373,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		if (class282_sub50_sub11 == null)
 			return null;
 		byte[] is = class282_sub50_sub11.getData(1816584795);
-		class282_sub50_sub11.unlink(-371378792);
+		class282_sub50_sub11.remove();
 		return is;
 	}
 
@@ -394,7 +394,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 		if (class282_sub50_sub11 == null)
 			return null;
 		byte[] is = class282_sub50_sub11.getData(737831388);
-		class282_sub50_sub11.unlink(-371378792);
+		class282_sub50_sub11.remove();
 		return is;
 	}
 
@@ -409,12 +409,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 					if (this.aByteArray7792[i_52_] == 0)
 						method12546(i_52_, 1, -1048339107);
 					if (this.aByteArray7792[i_52_] != 0)
-						class282.unlink(-371378792);
+						class282.remove();
 					else
 						bool = false;
 				}
-				while (1482915297 * this.anInt7797 < (((ReferenceTable) this.table).fileCounts).length) {
-					if ((((ReferenceTable) this.table).fileCounts[this.anInt7797 * 1482915297]) == 0)
+				while (1482915297 * this.anInt7797 < (((ReferenceTable) this.table).validFileIdSizes).length) {
+					if ((((ReferenceTable) this.table).validFileIdSizes[this.anInt7797 * 1482915297]) == 0)
 						this.anInt7797 += -1503033823;
 					else {
 						if ((((JS5LocalRequester) this.localRequester).anInt3662) * 3183863 >= 250) {
@@ -443,12 +443,12 @@ public class JS5GrabWorker extends JS5FileWorker {
 					if (1 != this.aByteArray7792[i_53_])
 						method12546(i_53_, 2, -1651626518);
 					if (1 == this.aByteArray7792[i_53_])
-						class282.unlink(-371378792);
+						class282.remove();
 					else
 						bool = false;
 				}
-				while (1482915297 * this.anInt7797 < (((ReferenceTable) this.table).fileCounts).length) {
-					if ((((ReferenceTable) this.table).fileCounts[1482915297 * this.anInt7797]) == 0)
+				while (1482915297 * this.anInt7797 < (((ReferenceTable) this.table).validFileIdSizes).length) {
+					if ((((ReferenceTable) this.table).validFileIdSizes[1482915297 * this.anInt7797]) == 0)
 						this.anInt7797 += -1503033823;
 					else {
 						if (this.standardRequester.method5516(-619518274)) {
@@ -479,7 +479,7 @@ public class JS5GrabWorker extends JS5FileWorker {
 					if (((JS5CacheRequest) class282_sub50_sub11).aBool9638) {
 						if (!((JS5CacheRequest) class282_sub50_sub11).aBool9637)
 							throw new RuntimeException();
-						class282_sub50_sub11.unlink(-371378792);
+						class282_sub50_sub11.remove();
 					} else
 						((JS5CacheRequest) class282_sub50_sub11).aBool9638 = true;
 				}

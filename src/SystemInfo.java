@@ -284,14 +284,14 @@ public class SystemInfo extends Node {
 	}
 
 	static final void method13466(Animable class521_sub1_sub1_sub2, boolean bool, int i) {
-		Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 		if (0 == 1871221471 * class521_sub1_sub1_sub2.anInt10355) {
 			class521_sub1_sub1_sub2.anInt10366 = 0;
 			Class44.anInt430 = Class249.aClass249_3083.aByte3085 * 235132365;
 			Class8_Sub1.anInt8515 = 0;
 		} else {
-			if (class521_sub1_sub1_sub2.aClass456_10338.method7564(436554671) && !class521_sub1_sub1_sub2.aClass456_10338.method7573(584514311)) {
-				AnimationDefinitions class518 = class521_sub1_sub1_sub2.aClass456_10338.method7565(-1632742162);
+			if (class521_sub1_sub1_sub2.currentAnimation.hasDefs() && !class521_sub1_sub1_sub2.currentAnimation.hasSpeed(584514311)) {
+				AnimationDefinitions class518 = class521_sub1_sub1_sub2.currentAnimation.getDefs();
 				if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0 && 0 == class518.anInt5920 * -1113882773) {
 					class521_sub1_sub1_sub2.anInt10366 += 1951902055;
 					Class44.anInt430 = 235132365 * Class249.aClass249_3083.aByte3085;
@@ -306,10 +306,10 @@ public class SystemInfo extends Node {
 				}
 			}
 			for (int i_25_ = 0; i_25_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_25_++) {
-				if (-1 != (class521_sub1_sub1_sub2.aClass161Array10339[i_25_].anInt2012) * 378836105 && class521_sub1_sub1_sub2.aClass161Array10339[i_25_].aClass456_2014.method7573(-606649252)) {
-					Class525 class525 = (IndexLoaders.aClass515_9416.method8845((class521_sub1_sub1_sub2.aClass161Array10339[i_25_].anInt2012) * 378836105, (byte) 43));
-					if (class525.aBool6968 && -1 != class525.anInt6977 * -364555849) {
-						AnimationDefinitions class518 = (IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) -10));
+				if (-1 != (class521_sub1_sub1_sub2.aClass161Array10339[i_25_].anInt2012) * 378836105 && class521_sub1_sub1_sub2.aClass161Array10339[i_25_].aClass456_2014.hasSpeed(-606649252)) {
+					SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((class521_sub1_sub1_sub2.aClass161Array10339[i_25_].anInt2012) * 378836105, (byte) 43));
+					if (class525.aBool6968 && -1 != class525.animationId * -364555849) {
+						AnimationDefinitions class518 = (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(class525.animationId * -364555849, (byte) -10));
 						if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0 && 0 == class518.anInt5920 * -1113882773) {
 							class521_sub1_sub1_sub2.anInt10366 += 1951902055;
 							Class44.anInt430 = (Class249.aClass249_3083.aByte3085 * 235132365);

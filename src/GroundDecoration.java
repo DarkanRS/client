@@ -486,7 +486,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								method16094(class118.aClass118Array1439, -1952846363 * class118.idHash, i_38_, i_39_, i_40_, i_41_, (i_33_ - class118.anInt1311 * 276864765), (i_34_ - 682782159 * class118.anInt1312), i_32_, bool, (byte) 6);
 							Class282_Sub44 class282_sub44 = ((Class282_Sub44) (client.aClass465_7442.method7754((long) (-1952846363 * class118.idHash))));
 							if (null != class282_sub44)
-								Class211.method3629((class282_sub44.anInt8063 * 587626901), i_38_, i_39_, i_40_, i_41_, i_33_, i_34_, i_32_, -1473886497);
+								RenderAnimIndexLoader.method3629((class282_sub44.anInt8063 * 587626901), i_38_, i_39_, i_40_, i_41_, i_33_, i_34_, i_32_, -1473886497);
 							if (1718905043 * IComponentDefinitions.anInt1275 == class118.anInt1290 * 1449989045) {
 								if (Renderers.SOFTWARE_RENDERER.method8471())
 									Renderers.SOFTWARE_RENDERER.method8474();
@@ -562,7 +562,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 										PlayerAppearance class238 = (class118.aBool1388 ? (Class84.myPlayer.playerAppearance) : null);
 										class160 = (IndexLoaders.ITEM_INDEX_LOADER.softwareRender(Renderers.SOFTWARE_RENDERER, class118.anInt1426 * -56249735, class118.anInt1427 * 6040081, (class118.anInt1323 * -346307573), (~0xffffff | (1279397863 * class118.anInt1324)), 71935343 * class118.anInt1335, class238, 206421629));
 									} else if (-1 != (602613369 * class118.anInt1435))
-										class160 = (Class515.method8858(Renderers.SOFTWARE_RENDERER, class118.anInt1435 * 602613369, 1570194813));
+										class160 = (SpotAnimIndexLoader.method8858(Renderers.SOFTWARE_RENDERER, class118.anInt1435 * 602613369, 1570194813));
 									else
 										class160 = (class118.method2048(Renderers.SOFTWARE_RENDERER, 1499865683));
 									if (null != class160) {
@@ -625,7 +625,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									if (i_58_ >= 0 && i_58_ < 2048) {
 										Player class521_sub1_sub1_sub2_sub1 = (client.players[i_58_]);
 										if ((null != class521_sub1_sub1_sub2_sub1) && ((client.anInt7315 * 1595512269 == i_58_) || ((Class272.method4840((class521_sub1_sub1_sub2_sub1.displayName), (byte) 111)) == (class118.anInt1339 * 1871217945)))) {
-											class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.aClass211_9383), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class118.aClass456_1437, (class521_sub1_sub1_sub2_sub1.playerAppearance), -1254103030));
+											class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.RENDER_ANIMS), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class118.aClass456_1437, (class521_sub1_sub1_sub2_sub1.playerAppearance), -1254103030));
 											if (null == class528 && IComponentDefinitions.aBool1399)
 												Class109.method1858(class118, (byte) -76);
 										}
@@ -635,18 +635,18 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									if (i_59_ >= 0 && i_59_ < 2048) {
 										Player class521_sub1_sub1_sub2_sub1 = (client.players[i_59_]);
 										if ((null != class521_sub1_sub1_sub2_sub1) && (i_59_ == (1595512269 * client.anInt7315) || ((Class272.method4840((class521_sub1_sub1_sub2_sub1.displayName), (byte) 17)) == (1871217945 * (class118.anInt1339)))))
-											class528 = (class521_sub1_sub1_sub2_sub1.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.aClass211_9383), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class118.aClass456_1437, null, null, null, 0, true, Class473.DEFAULTS_LOADER_6, (short) -10357));
+											class528 = (class521_sub1_sub1_sub2_sub1.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.RENDER_ANIMS), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class118.aClass456_1437, null, null, null, 0, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357));
 									}
 								} else if (2131324949 * class118.anInt1329 == 8 || 9 == (class118.anInt1329 * 2131324949)) {
 									Class282_Sub30 class282_sub30 = CS2Runner.method11127(((class118.anInt1330) * -402732635), false, 1899477275);
 									if (null != class282_sub30)
 										class528 = (class282_sub30.method12429(Renderers.SOFTWARE_RENDERER, i_56_, class118.aClass456_1437, (1871217945 * class118.anInt1339), (2131324949 * class118.anInt1329) == 9, (class118.aBool1388 ? (Class84.myPlayer.playerAppearance) : null), -1983093950));
-								} else if (class118.aClass456_1437 == null || !class118.aClass456_1437.method7564(1507425525)) {
-									class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, null, (Class84.myPlayer.playerAppearance), -1254103030));
+								} else if (class118.aClass456_1437 == null || !class118.aClass456_1437.hasDefs()) {
+									class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, null, (Class84.myPlayer.playerAppearance), -1254103030));
 									if (null == class528 && IComponentDefinitions.aBool1399)
 										Class109.method1858(class118, (byte) -35);
 								} else {
-									class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class118.aClass456_1437, (Class84.myPlayer.playerAppearance), -1254103030));
+									class528 = (class118.method2002(Renderers.SOFTWARE_RENDERER, i_56_, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class118.aClass456_1437, (Class84.myPlayer.playerAppearance), -1254103030));
 									if (class528 == null && IComponentDefinitions.aBool1399)
 										Class109.method1858(class118, (byte) -7);
 								}

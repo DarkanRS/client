@@ -145,7 +145,7 @@ public class Class233 {
 	}
 
 	static final void method3939(CS2Executor class527, int i) {
-		Class473.method7886(true, 1516035825);
+		LinkedNodeList.method7886(true, 1516035825);
 	}
 
 	static final void method3940(CS2Executor class527, int i) {

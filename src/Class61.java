@@ -127,7 +127,7 @@ public class Class61 {
 					(class282_sub38_13_ = class282_sub38).anInt8002 = ((-570797415 * class282_sub38_13_.anInt8002 | i_6_) * 1270866345);
 					return true;
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -314,7 +314,7 @@ public class Class61 {
 					(class282_sub38_39_ = class282_sub38).anInt8002 = ((-570797415 * class282_sub38_39_.anInt8002 | i_31_) * 1270866345);
 					return true;
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -333,7 +333,7 @@ public class Class61 {
 					class282_sub45.aLong8066 = 1350258240038399479L * l;
 					return true;
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -483,7 +483,7 @@ public class Class61 {
 					class282_sub38.anInt8002 = i_45_ * 1270866345;
 					return true;
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -513,13 +513,13 @@ public class Class61 {
 					if (class282_sub47.anObject8068 instanceof String) {
 						if (string.equals(class282_sub47.anObject8068))
 							return false;
-						class282_sub47.unlink(-371378792);
-						class282_sub47.unlink(-371378792);
+						class282_sub47.remove();
+						class282_sub47.remove();
 						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.data * -3442165056282524525L);
 						return true;
 					}
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -1030,7 +1030,7 @@ public class Class61 {
 					(class282_sub38_96_ = class282_sub38).anInt8002 = ((-570797415 * class282_sub38_96_.anInt8002 | i_89_) * 1270866345);
 					return true;
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -1067,13 +1067,13 @@ public class Class61 {
 					if (class282_sub47.anObject8068 instanceof String) {
 						if (string.equals(class282_sub47.anObject8068))
 							return false;
-						class282_sub47.unlink(-371378792);
-						class282_sub47.unlink(-371378792);
+						class282_sub47.remove();
+						class282_sub47.remove();
 						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.data * -3442165056282524525L);
 						return true;
 					}
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);
@@ -1094,13 +1094,13 @@ public class Class61 {
 					if (class282_sub47.anObject8068 instanceof String) {
 						if (string.equals(class282_sub47.anObject8068))
 							return false;
-						class282_sub47.unlink(-371378792);
-						class282_sub47.unlink(-371378792);
+						class282_sub47.remove();
+						class282_sub47.remove();
 						((Class61) this).aClass465_629.method7765(new Class282_Sub47(string), class282_sub47.data * -3442165056282524525L);
 						return true;
 					}
 				}
-				class282.unlink(-371378792);
+				class282.remove();
 			}
 		} else
 			((Class61) this).aClass465_629 = new IterableNodeMap(4);

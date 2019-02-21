@@ -18,7 +18,7 @@ public class Class13 {
 		}
 	}
 
-	public static MeshRasterizer method490(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, MeshRasterizer class528, int i_4_, int i_5_, int i_6_, int i_7_, Class456 class456) {
+	public static MeshRasterizer method490(GraphicalRenderer class505, int i, int i_0_, int i_1_, int i_2_, int i_3_, MeshRasterizer class528, int i_4_, int i_5_, int i_6_, int i_7_, Animation class456) {
 		if (null == class528)
 			return null;
 		int i_8_ = 2055;
@@ -102,7 +102,7 @@ public class Class13 {
 		return class528_9_;
 	}
 
-	public static MeshRasterizer method491(GraphicalRenderer class505, int i, int i_31_, int i_32_, int i_33_, int i_34_, MeshRasterizer class528, int i_35_, int i_36_, int i_37_, int i_38_, Class456 class456) {
+	public static MeshRasterizer method491(GraphicalRenderer class505, int i, int i_31_, int i_32_, int i_33_, int i_34_, MeshRasterizer class528, int i_35_, int i_36_, int i_37_, int i_38_, Animation class456) {
 		if (null == class528)
 			return null;
 		int i_39_ = 2055;
@@ -260,7 +260,7 @@ public class Class13 {
 
 	static void method503(Class282_Sub50_Sub15 class282_sub50_sub15, int i) {
 		boolean bool = false;
-		class282_sub50_sub15.method13452((byte) -5);
+		class282_sub50_sub15.method13452();
 		for (Class282_Sub50_Sub15 class282_sub50_sub15_62_ = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4)); null != class282_sub50_sub15_62_; class282_sub50_sub15_62_ = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1642244739))) {
 			if (Class301.method5334(class282_sub50_sub15.method15244((byte) 107), class282_sub50_sub15_62_.method15244((byte) 59), 993157847)) {
 				Class224.method3782(class282_sub50_sub15, class282_sub50_sub15_62_, -1979656463);

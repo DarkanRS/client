@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class QuickchatDefinitions extends Class282_Sub50 {
+public class QuickchatDefinitions extends CacheableNode {
 	QuickchatDefinitionsLoader aClass429_9623;
 	public int[] anIntArray9624;
 	int[] dynamicValueTypes;

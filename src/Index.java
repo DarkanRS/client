@@ -105,7 +105,7 @@ public final class Index {
 		int i_16_ = 0;
 		int i_17_ = 0;
 		for (int i_18_ = 0; i_18_ < this.anObjectArray3682.length; i_18_++) {
-			if ((((ReferenceTable) this.referencetable).fileCounts[i_18_]) > 0) {
+			if ((((ReferenceTable) this.referencetable).validFileIdSizes[i_18_]) > 0) {
 				i_16_ += 100;
 				i_17_ += method5613(i_18_, (byte) -93);
 			}
@@ -128,16 +128,16 @@ public final class Index {
 		throw new RuntimeException();
 	}
 
-	public synchronized int[] method5616(int i, int i_21_) {
-		if (!fileExists(i, 16711680))
+	public synchronized int[] getValidFileIds(int archiveId, int i_21_) {
+		if (!fileExists(archiveId, 16711680))
 			return null;
-		int[] is = (((ReferenceTable) this.referencetable).archiveFiles[i]);
-		if (null == is) {
-			is = new int[(((ReferenceTable) this.referencetable).fileCounts[i])];
-			for (int i_22_ = 0; i_22_ < is.length; i_22_++)
-				is[i_22_] = i_22_;
+		int[] counts = (((ReferenceTable) this.referencetable).validFileIds[archiveId]);
+		if (null == counts) {
+			counts = new int[(((ReferenceTable) this.referencetable).validFileIdSizes[archiveId])];
+			for (int i = 0; i < counts.length; i++)
+				counts[i] = i;
 		}
-		return is;
+		return counts;
 	}
 
 	public int containersCount(int i) {
@@ -218,7 +218,7 @@ public final class Index {
 			return false;
 		string = string.toLowerCase();
 		int i_39_ = (((ReferenceTable) this.referencetable).archiveName.method865(GraphicalRenderer.method8696(string, -1032103959), -2031296285));
-		return method5647(i_39_, -2119577317);
+		return loadFile(i_39_, -2119577317);
 	}
 
 	public void method5630(String string, int i) {
@@ -257,8 +257,8 @@ public final class Index {
 			return false;
 		if (this.anObjectArray3682[i] == null)
 			return false;
-		int i_47_ = ((ReferenceTable) this.referencetable).fileCounts[i];
-		int[] is_48_ = (((ReferenceTable) this.referencetable).archiveFiles[i]);
+		int i_47_ = ((ReferenceTable) this.referencetable).validFileIdSizes[i];
+		int[] is_48_ = (((ReferenceTable) this.referencetable).validFileIds[i]);
 		if (null == this.files[i])
 			this.files[i] = new Object[(((ReferenceTable) this.referencetable).fileLengths[i])];
 		Object[] objects = this.files[i];
@@ -425,7 +425,7 @@ public final class Index {
 		return is_86_;
 	}
 
-	public synchronized boolean method5647(int i, int i_127_) {
+	public synchronized boolean loadFile(int i, int i_127_) {
 		if (!fileExists(i, 16711680))
 			return false;
 		if (null != this.anObjectArray3682[i])

@@ -72,11 +72,11 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 				return -1;
 		}
 		int i_0_ = -1955311273 * class409.anInt4876;
-		Class227 class227 = class521_sub1_sub1_sub2_sub2.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2_sub2.getRenderAnimDefs((byte) -17);
 		int i_1_ = class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.method7597(-693790395);
 		if (-1 == i_1_ || class521_sub1_sub1_sub2_sub2.aClass456_Sub3_10337.aBool7891)
 			i_0_ = -1910117775 * class409.anInt4903;
-		else if (class227.anInt2797 * -474675041 == i_1_ || i_1_ == 486149589 * class227.anInt2817 || class227.anInt2800 * -833477781 == i_1_ || 1642803439 * class227.anInt2799 == i_1_)
+		else if (class227.anInt2797 * -474675041 == i_1_ || i_1_ == 486149589 * class227.walkDir6 || class227.anInt2800 * -833477781 == i_1_ || 1642803439 * class227.anInt2799 == i_1_)
 			i_0_ = class409.anInt4906 * -1427347049;
 		else if (2055956425 * class227.anInt2801 == i_1_ || class227.anInt2828 * 1053306035 == i_1_ || 1489597113 * class227.anInt2812 == i_1_ || 1879075923 * class227.anInt2803 == i_1_)
 			i_0_ = 1863998163 * class409.anInt4921;

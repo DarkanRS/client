@@ -14,7 +14,7 @@ public class Class444 {
 		}
 		if (class431 != null)
 			return class431;
-		byte[] is = (((Class444) this).aClass317_5378.getFile(SharedConfigsType.aClass120_1471.containerId(i, 374972545), SharedConfigsType.aClass120_1471.fileId(i, -2000339976), -1809807646));
+		byte[] is = (((Class444) this).aClass317_5378.getFile(SharedConfigsType.aClass120_1471.containerId(i), SharedConfigsType.aClass120_1471.fileId(i), -1809807646));
 		class431 = new Class431();
 		if (null != is)
 			class431.method7227(new RsByteBuffer(is), (byte) 35);
@@ -31,7 +31,7 @@ public class Class444 {
 		}
 		if (class431 != null)
 			return class431;
-		byte[] is = (((Class444) this).aClass317_5378.getFile(SharedConfigsType.aClass120_1471.containerId(i, 1042477341), SharedConfigsType.aClass120_1471.fileId(i, -1854324369), -2133256826));
+		byte[] is = (((Class444) this).aClass317_5378.getFile(SharedConfigsType.aClass120_1471.containerId(i), SharedConfigsType.aClass120_1471.fileId(i), -2133256826));
 		class431 = new Class431();
 		if (null != is)
 			class431.method7227(new RsByteBuffer(is), (byte) 104);
@@ -57,7 +57,7 @@ public class Class444 {
 		}
 		if (class431 != null)
 			return class431;
-		byte[] is = (((Class444) this).aClass317_5378.getFile(SharedConfigsType.aClass120_1471.containerId(i, 1267824598), SharedConfigsType.aClass120_1471.fileId(i, -2031984543), -1609304948));
+		byte[] is = (((Class444) this).aClass317_5378.getFile(SharedConfigsType.aClass120_1471.containerId(i), SharedConfigsType.aClass120_1471.fileId(i), -1609304948));
 		class431 = new Class431();
 		if (null != is)
 			class431.method7227(new RsByteBuffer(is), (byte) 77);

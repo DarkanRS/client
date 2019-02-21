@@ -20,7 +20,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	double aDouble10396;
 	double aDouble10397;
 	boolean aBool10398 = false;
-	Class456 aClass456_10399;
+	Animation aClass456_10399;
 	boolean aBool10400;
 	boolean aBool10401;
 	Class539 aClass539_10402;
@@ -55,7 +55,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 					method11172(class385.x, (float) ((Class504.method8389((int) class385.x, (int) class385.z, plane, (byte) 115)) - (-100801035 * (((Class521_Sub1_Sub1_Sub3) this).anInt10383))), class385.z);
 					if ((((Class521_Sub1_Sub1_Sub3) this).anInt10391 * 1480934371) >= 0) {
-						Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+						RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 						int i = 0;
 						int i_0_ = 0;
 						if (class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[(1480934371 * (((Class521_Sub1_Sub1_Sub3) this).anInt10391))])) {
@@ -111,7 +111,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 					method11172(class385.x, (float) ((Class504.method8389((int) class385.x, (int) class385.z, plane, (byte) 26)) - (-100801035 * (((Class521_Sub1_Sub1_Sub3) this).anInt10383))), class385.z);
 					if ((((Class521_Sub1_Sub1_Sub3) this).anInt10391 * 1480934371) >= 0) {
-						Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+						RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 						int i_10_ = 0;
 						int i_11_ = 0;
 						if (class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[(1480934371 * (((Class521_Sub1_Sub1_Sub3) this).anInt10391))])) {
@@ -252,7 +252,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15907(GraphicalRenderer class505, int i, int i_30_) {
-		Class525 class525 = (IndexLoaders.aClass515_9416.method8845(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -54));
+		SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -54));
 		return class525.method11228(class505, i, (((Class521_Sub1_Sub1_Sub3) this).aClass456_10399), (byte) 2, (byte) 57);
 	}
 
@@ -298,7 +298,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 					method11172(class385.x, (float) ((Class504.method8389((int) class385.x, (int) class385.z, plane, (byte) 71)) - (-100801035 * (((Class521_Sub1_Sub1_Sub3) this).anInt10383))), class385.z);
 					if ((((Class521_Sub1_Sub1_Sub3) this).anInt10391 * 1480934371) >= 0) {
-						Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+						RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 						int i = 0;
 						int i_31_ = 0;
 						if (class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[(1480934371 * (((Class521_Sub1_Sub1_Sub3) this).anInt10391))])) {
@@ -400,7 +400,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 		((Class521_Sub1_Sub1_Sub3) this).aBool10400 = bool;
 		((Class521_Sub1_Sub1_Sub3) this).aBool10398 = false;
 		((Class521_Sub1_Sub1_Sub3) this).anInt10391 = -614065717 * i_51_;
-		int i_52_ = ((IndexLoaders.aClass515_9416.method8845(867621295 * ((Class521_Sub1_Sub1_Sub3) this).anInt10386, (byte) -8).anInt6977) * -364555849);
+		int i_52_ = ((IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(867621295 * ((Class521_Sub1_Sub1_Sub3) this).anInt10386, (byte) -8).animationId) * -364555849);
 		((Class521_Sub1_Sub1_Sub3) this).aClass456_10399 = new Class456_Sub2(this, false);
 		((Class521_Sub1_Sub1_Sub3) this).aClass456_10399.method7567(i_52_, (short) 8960);
 		method13008(1, (byte) -89);
@@ -586,7 +586,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 					method11172(class385.x, (float) ((Class504.method8389((int) class385.x, (int) class385.z, plane, (byte) 38)) - (-100801035 * (((Class521_Sub1_Sub1_Sub3) this).anInt10383))), class385.z);
 					if ((((Class521_Sub1_Sub1_Sub3) this).anInt10391 * 1480934371) >= 0) {
-						Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+						RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 						int i = 0;
 						int i_65_ = 0;
 						if (class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[(1480934371 * (((Class521_Sub1_Sub1_Sub3) this).anInt10391))])) {
@@ -664,7 +664,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 					Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 					method11172(class385.x, (float) ((Class504.method8389((int) class385.x, (int) class385.z, plane, (byte) 58)) - (-100801035 * (((Class521_Sub1_Sub1_Sub3) this).anInt10383))), class385.z);
 					if ((((Class521_Sub1_Sub1_Sub3) this).anInt10391 * 1480934371) >= 0) {
-						Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+						RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 						int i = 0;
 						int i_73_ = 0;
 						if (class227.anIntArrayArray2802 != null && null != (class227.anIntArrayArray2802[(1480934371 * (((Class521_Sub1_Sub1_Sub3) this).anInt10391))])) {
@@ -791,7 +791,7 @@ public class Class521_Sub1_Sub1_Sub3 extends Class521_Sub1_Sub1 {
 	}
 
 	MeshRasterizer method15920(GraphicalRenderer class505, int i) {
-		Class525 class525 = (IndexLoaders.aClass515_9416.method8845(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -21));
+		SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(((Class521_Sub1_Sub1_Sub3) this).anInt10386 * 867621295, (byte) -21));
 		return class525.method11228(class505, i, (((Class521_Sub1_Sub1_Sub3) this).aClass456_10399), (byte) 2, (byte) 2);
 	}
 

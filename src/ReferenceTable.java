@@ -3,7 +3,7 @@
  */
 
 public class ReferenceTable {
-	int[][] archiveFiles;
+	int[][] validFileIds;
 	int crc;
 	byte[] aByteArray3734;
 	int revision;
@@ -15,7 +15,7 @@ public class ReferenceTable {
 	NamedFileReference[] namedFiles;
 	byte[][] whirlpool;
 	int[] crcs;
-	int[] fileCounts;
+	int[] validFileIdSizes;
 	int[] unknown;
 	int[][] fileNameHashes;
 	int[] fileLengths;
@@ -57,8 +57,8 @@ public class ReferenceTable {
 		if (usesWhirlpool)
 			whirlpool = new byte[archiveCount * 1563136279][];
 		crcs = new int[1563136279 * archiveCount];
-		fileCounts = new int[archiveCount * 1563136279];
-		archiveFiles = new int[archiveCount * 1563136279][];
+		validFileIdSizes = new int[archiveCount * 1563136279];
+		validFileIds = new int[archiveCount * 1563136279][];
 		fileLengths = new int[archiveCount * 1563136279];
 		if (named) {
 			nameHashes = new int[archiveCount * 1563136279];
@@ -81,39 +81,39 @@ public class ReferenceTable {
 			crcs[(validArchiveIds[i_44_])] = buffer.readInt();
 		if (protocol >= 7) {
 			for (int i_45_ = 0; i_45_ < numValidArchives * 1006899347; i_45_++)
-				fileCounts[(validArchiveIds[i_45_])] = buffer.readBigSmart((byte) 1);
+				validFileIdSizes[(validArchiveIds[i_45_])] = buffer.readBigSmart((byte) 1);
 			for (int i_46_ = 0; i_46_ < 1006899347 * numValidArchives; i_46_++) {
 				int i_47_ = validArchiveIds[i_46_];
-				int i_48_ = fileCounts[i_47_];
+				int i_48_ = validFileIdSizes[i_47_];
 				lArchiveCount = 0;
 				int i_49_ = -1;
-				archiveFiles[i_47_] = new int[i_48_];
+				validFileIds[i_47_] = new int[i_48_];
 				for (int i_50_ = 0; i_50_ < i_48_; i_50_++) {
-					int i_51_ = (archiveFiles[i_47_][i_50_] = lArchiveCount += buffer.readBigSmart((byte) 1));
+					int i_51_ = (validFileIds[i_47_][i_50_] = lArchiveCount += buffer.readBigSmart((byte) 1));
 					if (i_51_ > i_49_)
 						i_49_ = i_51_;
 				}
 				fileLengths[i_47_] = i_49_ + 1;
 				if (i_48_ == i_49_ + 1)
-					archiveFiles[i_47_] = null;
+					validFileIds[i_47_] = null;
 			}
 		} else {
 			for (int i_52_ = 0; i_52_ < numValidArchives * 1006899347; i_52_++)
-				fileCounts[(validArchiveIds[i_52_])] = buffer.readUnsignedShort();
+				validFileIdSizes[(validArchiveIds[i_52_])] = buffer.readUnsignedShort();
 			for (int i_53_ = 0; i_53_ < 1006899347 * numValidArchives; i_53_++) {
 				int i_54_ = validArchiveIds[i_53_];
-				int i_55_ = fileCounts[i_54_];
+				int i_55_ = validFileIdSizes[i_54_];
 				lArchiveCount = 0;
 				int i_56_ = -1;
-				archiveFiles[i_54_] = new int[i_55_];
+				validFileIds[i_54_] = new int[i_55_];
 				for (int i_57_ = 0; i_57_ < i_55_; i_57_++) {
-					int i_58_ = (archiveFiles[i_54_][i_57_] = lArchiveCount += buffer.readUnsignedShort());
+					int i_58_ = (validFileIds[i_54_][i_57_] = lArchiveCount += buffer.readUnsignedShort());
 					if (i_58_ > i_56_)
 						i_56_ = i_58_;
 				}
 				fileLengths[i_54_] = 1 + i_56_;
 				if (i_55_ == i_56_ + 1)
-					archiveFiles[i_54_] = null;
+					validFileIds[i_54_] = null;
 			}
 		}
 		if (named) {
@@ -121,14 +121,14 @@ public class ReferenceTable {
 			namedFiles = new NamedFileReference[lLastArchiveId + 1];
 			for (int i_59_ = 0; i_59_ < numValidArchives * 1006899347; i_59_++) {
 				int i_60_ = validArchiveIds[i_59_];
-				int i_61_ = fileCounts[i_60_];
+				int i_61_ = validFileIdSizes[i_60_];
 				fileNameHashes[i_60_] = new int[fileLengths[i_60_]];
 				for (int i_62_ = 0; i_62_ < fileLengths[i_60_]; i_62_++)
 					fileNameHashes[i_60_][i_62_] = -1;
 				for (int i_63_ = 0; i_63_ < i_61_; i_63_++) {
 					int i_64_;
-					if (null != archiveFiles[i_60_])
-						i_64_ = (archiveFiles[i_60_][i_63_]);
+					if (null != validFileIds[i_60_])
+						i_64_ = (validFileIds[i_60_][i_63_]);
 					else
 						i_64_ = i_63_;
 					fileNameHashes[i_60_][i_64_] = buffer.readInt();

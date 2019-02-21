@@ -28,7 +28,7 @@ public class Class390_Sub1 extends Class390 {
 	int[][][] anIntArrayArrayArray8543;
 	float aFloat8544 = -3.4028235E38F;
 	Class74 aClass74_8545;
-	Class473 aClass473_8546 = new Class473();
+	LinkedNodeList aClass473_8546 = new LinkedNodeList();
 	Node[] aClass282Array8547;
 	Interface4 anInterface4_8548;
 	float[][] aFloatArrayArray8549;
@@ -492,7 +492,7 @@ public class Class390_Sub1 extends Class390 {
 	}
 
 	public void method6711(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub1) this).aClass473_8546.method7877(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is), 961726999);
+		((Class390_Sub1) this).aClass473_8546.insertBack(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is));
 	}
 
 	public void d(Class282_Sub50_Sub17 class282_sub50_sub17, int i, int i_103_, int i_104_, int i_105_, boolean bool) {
@@ -1542,7 +1542,7 @@ public class Class390_Sub1 extends Class390 {
 	}
 
 	public void method6720(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub1) this).aClass473_8546.method7877(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is), 381670108);
+		((Class390_Sub1) this).aClass473_8546.insertBack(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is));
 	}
 
 	public void u(Class282_Sub50_Sub17 class282_sub50_sub17, int i, int i_395_, int i_396_, int i_397_, boolean bool) {
@@ -1853,11 +1853,11 @@ public class Class390_Sub1 extends Class390 {
 	}
 
 	public void method6713(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub1) this).aClass473_8546.method7877(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is), 246185889);
+		((Class390_Sub1) this).aClass473_8546.insertBack(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is));
 	}
 
 	public void method6721(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub1) this).aClass473_8546.method7877(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is), 468694400);
+		((Class390_Sub1) this).aClass473_8546.insertBack(new Class282_Sub8(((Class390_Sub1) this).aClass505_Sub2_8528, this, class282_sub24, is));
 	}
 
 	public void UA(Class282_Sub50_Sub17 class282_sub50_sub17, int i, int i_471_, int i_472_, int i_473_, boolean bool) {

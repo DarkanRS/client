@@ -68,13 +68,13 @@ public final class Class75 {
 			NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) 53);
 			boolean bool = class409.method6881(-1593262415);
 			if (null == ((Class75) this).anIntArray745) {
-				Class227 class227 = IndexLoaders.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) -42);
+				RenderAnimDefs class227 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs((-490908695 * (class409.anInt4898)), (byte) -42);
 				((Class75) this).anIntArray745 = class227.method3828(163665015);
 			}
 			int[] is = ((Class75) this).anIntArray745;
 			for (int i_7_ = 0; i_7_ < is.length; i_7_++) {
 				int i_8_ = is[i_7_];
-				bool &= IndexLoaders.aClass523_3868.method11205(i_8_, (byte) 91).method11132(2032064128);
+				bool &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_8_, (byte) 91).loadSkeletons();
 			}
 			return bool;
 		}
@@ -125,13 +125,13 @@ public final class Class75 {
 			NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) 3);
 			boolean bool = class409.method6881(-1593262415);
 			if (null == ((Class75) this).anIntArray745) {
-				Class227 class227 = IndexLoaders.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) 74);
+				RenderAnimDefs class227 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs((-490908695 * (class409.anInt4898)), (byte) 74);
 				((Class75) this).anIntArray745 = class227.method3828(1387373100);
 			}
 			int[] is = ((Class75) this).anIntArray745;
 			for (int i = 0; i < is.length; i++) {
 				int i_15_ = is[i];
-				bool &= IndexLoaders.aClass523_3868.method11205(i_15_, (byte) 36).method11132(2014877096);
+				bool &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_15_, (byte) 36).loadSkeletons();
 			}
 			return bool;
 		}
@@ -173,13 +173,13 @@ public final class Class75 {
 			NPCDefinitions class409 = IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(anInt739 * 62352723, (byte) -33);
 			boolean bool = class409.method6881(-1593262415);
 			if (null == ((Class75) this).anIntArray745) {
-				Class227 class227 = IndexLoaders.aClass211_9383.method3616((-490908695 * (class409.anInt4898)), (byte) -106);
+				RenderAnimDefs class227 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs((-490908695 * (class409.anInt4898)), (byte) -106);
 				((Class75) this).anIntArray745 = class227.method3828(1137772138);
 			}
 			int[] is = ((Class75) this).anIntArray745;
 			for (int i = 0; i < is.length; i++) {
 				int i_17_ = is[i];
-				bool &= IndexLoaders.aClass523_3868.method11205(i_17_, (byte) 39).method11132(1898468081);
+				bool &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_17_, (byte) 39).loadSkeletons();
 			}
 			return bool;
 		}

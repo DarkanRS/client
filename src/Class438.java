@@ -185,7 +185,7 @@ public class Class438 {
 					class521_sub1_sub1_sub2 = ((Animable) class282_sub47.anObject8068);
 			}
 			if (class521_sub1_sub1_sub2 != null) {
-				Class227 class227 = class521_sub1_sub1_sub2.method15855((byte) -17);
+				RenderAnimDefs class227 = class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17);
 				if (class227.anIntArrayArray2802 != null && class227.anIntArrayArray2802[i_6_] != null)
 					i_7_ -= class227.anIntArrayArray2802[i_6_][1];
 				if (class227.anIntArrayArray2791 != null && null != class227.anIntArrayArray2791[i_6_])

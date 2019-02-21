@@ -79,7 +79,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6875(GraphicalRenderer class505, int i, Class211 class211, Interface42 interface42, Class456 class456, Class456 class456_1_, Class456[] class456s, int[] is, int i_2_, Class417 class417, int i_3_) {
+	public final MeshRasterizer method6875(GraphicalRenderer class505, int i, RenderAnimIndexLoader class211, Interface42 interface42, Animation class456, Animation class456_1_, Animation[] class456s, int[] is, int i_2_, Class417 class417, int i_3_) {
 		return method6879(class505, i, class211, interface42, class456, class456_1_, class456s, is, i_2_, class417, -490908695 * anInt4898, true, 1493042037);
 	}
 
@@ -103,7 +103,7 @@ public class NPCDefinitions {
 		}
 	}
 
-	public final MeshRasterizer method6879(GraphicalRenderer class505, int i, Class211 class211, Interface42 interface42, Class456 class456, Class456 class456_8_, Class456[] class456s, int[] is, int i_9_, Class417 class417, int i_10_, boolean bool, int i_11_) {
+	public final MeshRasterizer method6879(GraphicalRenderer class505, int i, RenderAnimIndexLoader class211, Interface42 interface42, Animation class456, Animation class456_8_, Animation[] class456s, int[] is, int i_9_, Class417 class417, int i_10_, boolean bool, int i_11_) {
 		if (anIntArray4886 != null) {
 			NPCDefinitions class409_12_ = method6884(interface42, 265881693);
 			if (null == class409_12_)
@@ -138,11 +138,11 @@ public class NPCDefinitions {
 		synchronized (((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass229_4836) {
 			class528 = (MeshRasterizer) ((NPCIndexLoader) ((NPCDefinitions) this).aClass406_4855).aClass229_4836.get(l);
 		}
-		Class227 class227 = null;
+		RenderAnimDefs class227 = null;
 		if (!bool && -1 != i_10_)
-			class227 = class211.method3616(i_10_, (byte) 22);
+			class227 = class211.getRenderAnimDefs(i_10_, (byte) 22);
 		else if (-1 != -490908695 * anInt4898)
-			class227 = class211.method3616(anInt4898 * -490908695, (byte) 85);
+			class227 = class211.getRenderAnimDefs(anInt4898 * -490908695, (byte) 85);
 		if (class528 == null || (class528.m() & i_13_) != i_13_) {
 			if (class528 != null)
 				i_13_ |= class528.m();
@@ -292,7 +292,7 @@ public class NPCDefinitions {
 		return class528_33_;
 	}
 
-	public final MeshRasterizer method6880(GraphicalRenderer class505, int i, Interface42 interface42, Class456 class456, Class417 class417, int i_39_) {
+	public final MeshRasterizer method6880(GraphicalRenderer class505, int i, Interface42 interface42, Animation class456, Class417 class417, int i_39_) {
 		if (null != anIntArray4886) {
 			NPCDefinitions class409_40_ = method6884(interface42, 265881693);
 			if (null == class409_40_)

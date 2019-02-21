@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub50_Sub1 extends Class282_Sub50 {
+public abstract class Class282_Sub50_Sub1 extends CacheableNode {
 	int anInt9451;
 
 	abstract boolean method14691(int i);

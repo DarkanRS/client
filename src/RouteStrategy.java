@@ -53,7 +53,7 @@ public abstract class RouteStrategy {
 	public static final void method3794(int i, int i_12_, int i_13_, int i_14_, int i_15_, boolean bool, byte i_16_) {
 		Class296.anInt3534 = 39297289 * i;
 		Class282_Sub44.anInt8064 = -1587752955 * i_12_;
-		Class525.anInt6985 = i_13_ * -1905375393;
+		SpotAnimDefinitions.anInt6985 = i_13_ * -1905375393;
 		Class454.anInt5451 = i_14_ * 1048053695;
 		Class115.anInt1249 = 1032825985 * i_15_;
 		if (bool) {
@@ -66,7 +66,7 @@ public abstract class RouteStrategy {
 				}
 				Class31.anInt361 = Class296.anInt3534 * -899014144 + 898537728;
 				Class246.anInt3029 = 26398976 + Class282_Sub44.anInt8064 * 2107292160;
-				Class109_Sub1.anInt9384 = (Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, 675588453 * Class4.anInt35, (byte) 10) - 368694431 * Class525.anInt6985) * -126779709;
+				Class109_Sub1.anInt9384 = (Class504.method8389(Class31.anInt361 * -360258135, 413271601 * Class246.anInt3029, 675588453 * Class4.anInt35, (byte) 10) - 368694431 * SpotAnimDefinitions.anInt6985) * -126779709;
 			}
 		}
 		NativeLibraryLoader.anInt3240 = 1926220865;

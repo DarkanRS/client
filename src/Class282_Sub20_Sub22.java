@@ -264,7 +264,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 					if (5 == NativeLibraryLoader.anInt3240 * -672443707)
 						Wall.method16113(70521151);
 					else if (-672443707 * NativeLibraryLoader.anInt3240 == 3)
-						Class515.method8860((byte) -76);
+						SpotAnimIndexLoader.method8860((byte) -76);
 				}
 				if (client.aBool7331)
 					client.aBool7331 = false;

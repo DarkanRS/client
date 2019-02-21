@@ -438,12 +438,12 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		return null;
 	}
 
-	public static final void method16078(MeshRasterizer class528, Class456 class456, Class456 class456_20_, int i) {
+	public static final void method16078(MeshRasterizer class528, Animation class456, Animation class456_20_, int i) {
 		if (class456.method7562(1986884672) && class456_20_.method7562(1815488454)) {
-			AnimationDefinitions class518 = ((Class456) class456).aClass518_5453;
-			AnimationDefinitions class518_21_ = ((Class456) class456_20_).aClass518_5453;
-			class528.method11264((((Class462) ((Class456) class456).aClass462_5464).aClass282_Sub50_Sub13_5545), -104209121 * ((Class462) ((Class456) class456).aClass462_5464).anInt5542, (((Class462) ((Class456) class456).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Class456) class456).aClass462_5464).anInt5547 * -775231561), ((Class456) class456).anInt5457 * -706748429, (class518.anIntArray5912[643220577 * ((Class456) class456).anInt5460]),
-					(((Class462) ((Class456) class456_20_).aClass462_5464).aClass282_Sub50_Sub13_5545), -104209121 * ((Class462) (((Class456) class456_20_).aClass462_5464)).anInt5542, (((Class462) ((Class456) class456_20_).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Class456) class456_20_).aClass462_5464).anInt5547) * -775231561, ((Class456) class456_20_).anInt5457 * -706748429, (class518_21_.anIntArray5912[643220577 * ((Class456) class456_20_).anInt5460]),
+			AnimationDefinitions class518 = ((Animation) class456).defs;
+			AnimationDefinitions class518_21_ = ((Animation) class456_20_).defs;
+			class528.method11264((((Class462) ((Animation) class456).aClass462_5464).aClass282_Sub50_Sub13_5545), -104209121 * ((Class462) ((Animation) class456).aClass462_5464).anInt5542, (((Class462) ((Animation) class456).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Animation) class456).aClass462_5464).anInt5547 * -775231561), ((Animation) class456).anInt5457 * -706748429, (class518.animationStepLengths[643220577 * ((Animation) class456).anInt5460]),
+					(((Class462) ((Animation) class456_20_).aClass462_5464).aClass282_Sub50_Sub13_5545), -104209121 * ((Class462) (((Animation) class456_20_).aClass462_5464)).anInt5542, (((Class462) ((Animation) class456_20_).aClass462_5464).aClass282_Sub50_Sub13_5546), (((Class462) ((Animation) class456_20_).aClass462_5464).anInt5547) * -775231561, ((Animation) class456_20_).anInt5457 * -706748429, (class518_21_.animationStepLengths[643220577 * ((Animation) class456_20_).anInt5460]),
 					class518.aBoolArray5915, class518.aBool5923 | class518_21_.aBool5923);
 		}
 	}

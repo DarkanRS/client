@@ -12,7 +12,7 @@ public class Class123 {
 	int anInt1542;
 	boolean aBool1543 = false;
 	MeshRasterizer aClass528_1544;
-	Class456 aClass456_1545;
+	Animation aClass456_1545;
 	boolean aBool1546;
 	int anInt1547 = 709399509;
 	int anInt1548;
@@ -89,7 +89,7 @@ public class Class123 {
 	}
 
 	void method2123(Class521_Sub1 class521_sub1) {
-		if (((Class123) this).aClass456_1545.method7564(1708173248)) {
+		if (((Class123) this).aClass456_1545.hasDefs()) {
 			if (((Class123) this).aClass456_1545.method7627((client.cycles * -1809259861 - ((Class123) this).anInt1548 * -692862065), 348397659)) {
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -33) == 2)
 					((Class123) this).aBool1552 = false;
@@ -117,7 +117,7 @@ public class Class123 {
 			if (class478_9_ == class478)
 				class478_9_ = null;
 			if (class478.method7967((byte) 82)) {
-				if (bool && ((Class123) this).aClass456_1545.method7564(-1739979372) && class478.method7979(((Class123) this).aClass456_1545.method7597(-2131313079), -1433895387))
+				if (bool && ((Class123) this).aClass456_1545.hasDefs() && class478.method7979(((Class123) this).aClass456_1545.method7597(-2131313079), -1433895387))
 					return;
 				if (class478.id * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
 					bool_8_ = class478.aBool5702;
@@ -127,7 +127,7 @@ public class Class123 {
 				else
 					i_5_ = 1;
 			} else if (null != class478_9_ && class478_9_.method7967((byte) 72)) {
-				if (bool && ((Class123) this).aClass456_1545.method7564(1842147975) && class478_9_.method7979(((Class123) this).aClass456_1545.method7597(-693467586), 512535535))
+				if (bool && ((Class123) this).aClass456_1545.hasDefs() && class478_9_.method7979(((Class123) this).aClass456_1545.method7597(-693467586), 512535535))
 					return;
 				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.id)
 					bool_8_ = class478_9_.aBool5702;
@@ -230,7 +230,7 @@ public class Class123 {
 		else
 			class390_16_ = (((Class123) this).aByte1549 < 3 ? (class206.aClass390Array2591[1 + ((Class123) this).aByte1549]) : null);
 		MeshRasterizer class528 = null;
-		if (((Class123) this).aClass456_1545.method7564(204760796)) {
+		if (((Class123) this).aClass456_1545.hasDefs()) {
 			if (bool_14_)
 				i |= 0x40000;
 			class528 = (class478.method8012(class505, i, (11 != 845010167 * ((Class123) this).anInt1555 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == ((Class123) this).anInt1555 * 845010167 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_16_, (int) class385.x, class390.method6709((int) class385.x, (int) class385.z, -2124588555), (int) class385.z, ((Class123) this).aClass456_1545,
@@ -279,7 +279,7 @@ public class Class123 {
 	}
 
 	void method2133(Class521_Sub1 class521_sub1, int i) {
-		if (((Class123) this).aClass456_1545.method7564(1068891376)) {
+		if (((Class123) this).aClass456_1545.hasDefs()) {
 			if (((Class123) this).aClass456_1545.method7627((client.cycles * -1809259861 - ((Class123) this).anInt1548 * -692862065), -1604815652)) {
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -127) == 2)
 					((Class123) this).aBool1552 = false;
@@ -328,7 +328,7 @@ public class Class123 {
 		else
 			class390_18_ = (((Class123) this).aByte1549 < 3 ? (class206.aClass390Array2591[1 + ((Class123) this).aByte1549]) : null);
 		MeshRasterizer class528 = null;
-		if (((Class123) this).aClass456_1545.method7564(311181349)) {
+		if (((Class123) this).aClass456_1545.hasDefs()) {
 			if (bool_17_)
 				i |= 0x40000;
 			class528 = (class478.method8012(class505, i, (11 != 845010167 * ((Class123) this).anInt1555 ? 845010167 * ((Class123) this).anInt1555 : 10), (11 == ((Class123) this).anInt1555 * 845010167 ? 4 + ((Class123) this).anInt1542 * -515017769 : -515017769 * ((Class123) this).anInt1542), class390, class390_18_, (int) class385.x, class390.method6709((int) class385.x, (int) class385.z, -213074968), (int) class385.z, ((Class123) this).aClass456_1545,
@@ -413,7 +413,7 @@ public class Class123 {
 	}
 
 	void method2144(Class521_Sub1 class521_sub1) {
-		if (((Class123) this).aClass456_1545.method7564(-1550049127)) {
+		if (((Class123) this).aClass456_1545.hasDefs()) {
 			if (((Class123) this).aClass456_1545.method7627((client.cycles * -1809259861 - ((Class123) this).anInt1548 * -692862065), -857224704)) {
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -98) == 2)
 					((Class123) this).aBool1552 = false;
@@ -429,7 +429,7 @@ public class Class123 {
 	}
 
 	void method2145(Class521_Sub1 class521_sub1) {
-		if (((Class123) this).aClass456_1545.method7564(-235748061)) {
+		if (((Class123) this).aClass456_1545.hasDefs()) {
 			if (((Class123) this).aClass456_1545.method7627((client.cycles * -1809259861 - ((Class123) this).anInt1548 * -692862065), 797375566)) {
 				if (Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12624((byte) -116) == 2)
 					((Class123) this).aBool1552 = false;
@@ -462,7 +462,7 @@ public class Class123 {
 			if (class478_22_ == class478)
 				class478_22_ = null;
 			if (class478.method7967((byte) 31)) {
-				if (bool && ((Class123) this).aClass456_1545.method7564(2012022989) && class478.method7979(((Class123) this).aClass456_1545.method7597(-701221617), 2128002880))
+				if (bool && ((Class123) this).aClass456_1545.hasDefs() && class478.method7979(((Class123) this).aClass456_1545.method7597(-701221617), 2128002880))
 					return;
 				if (class478.id * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
 					bool_21_ = class478.aBool5702;
@@ -472,7 +472,7 @@ public class Class123 {
 				else
 					i_19_ = 1;
 			} else if (null != class478_22_ && class478_22_.method7967((byte) 21)) {
-				if (bool && ((Class123) this).aClass456_1545.method7564(1863527525) && class478_22_.method7979(((Class123) this).aClass456_1545.method7597(-2143509474), 1385894342))
+				if (bool && ((Class123) this).aClass456_1545.hasDefs() && class478_22_.method7979(((Class123) this).aClass456_1545.method7597(-2143509474), 1385894342))
 					return;
 				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.id)
 					bool_21_ = class478_22_.aBool5702;
@@ -506,7 +506,7 @@ public class Class123 {
 			if (class478_26_ == class478)
 				class478_26_ = null;
 			if (class478.method7967((byte) 28)) {
-				if (bool && ((Class123) this).aClass456_1545.method7564(199577751) && class478.method7979(((Class123) this).aClass456_1545.method7597(-1593904440), -135069339))
+				if (bool && ((Class123) this).aClass456_1545.hasDefs() && class478.method7979(((Class123) this).aClass456_1545.method7597(-1593904440), -135069339))
 					return;
 				if (class478.id * -2132690865 != -1003883901 * ((Class123) this).anInt1547)
 					bool_25_ = class478.aBool5702;
@@ -516,7 +516,7 @@ public class Class123 {
 				else
 					i_23_ = 1;
 			} else if (null != class478_26_ && class478_26_.method7967((byte) 86)) {
-				if (bool && ((Class123) this).aClass456_1545.method7564(344604134) && class478_26_.method7979(((Class123) this).aClass456_1545.method7597(-2088814679), 1568056205))
+				if (bool && ((Class123) this).aClass456_1545.hasDefs() && class478_26_.method7979(((Class123) this).aClass456_1545.method7597(-2088814679), 1568056205))
 					return;
 				if (-1003883901 * ((Class123) this).anInt1547 != -2132690865 * class478.id)
 					bool_25_ = class478_26_.aBool5702;

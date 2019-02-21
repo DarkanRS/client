@@ -125,15 +125,15 @@ public class Class356 {
 			IndexLoaders.MAP_REGION_DECODER.method4436(-1471749977).method7895((byte) 113);
 			IndexLoaders.NPC_INDEX_LOADER.method6836((byte) -66);
 			IndexLoaders.ITEM_INDEX_LOADER.method7150(-1855693683);
-			IndexLoaders.aClass523_3868.method11204(-2125784469);
-			IndexLoaders.aClass515_9416.method8848(-1321298853);
+			IndexLoaders.ANIMATION_INDEX_LOADER.method11204(-2125784469);
+			IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8848(-1321298853);
 			IndexLoaders.aClass230_147.method3903((byte) -72);
 			IndexLoaders.aClass377_1065.method6388((byte) -38);
 			IndexLoaders.aClass447_435.method7458(1914523860);
 			IndexLoaders.aClass498_3001.method8319(-835963973);
 			IndexLoaders.aClass394_5831.method6754(-1473374430);
 			IndexLoaders.aClass233_5822.method3924(-1007220233);
-			IndexLoaders.aClass211_9383.method3617(-1794100621);
+			IndexLoaders.RENDER_ANIMS.method3617(-1794100621);
 			IndexLoaders.aClass427_995.method7174(-504359816);
 			IndexLoaders.WORLD_MAP_INDEX_LOADER.method3699((byte) 1);
 			IndexLoaders.ITEM_DEFAULTS.method7070(1503444365);

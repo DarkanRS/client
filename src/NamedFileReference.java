@@ -4,7 +4,7 @@
 
 public class NamedFileReference {
 	int[] anIntArray410;
-	static Class523 aClass523_411;
+	static AnimationIndexLoader aClass523_411;
 	
 	public int method864(int i) {
 		int i_0_ = (((NamedFileReference) this).anIntArray410.length >> 1) - 1;

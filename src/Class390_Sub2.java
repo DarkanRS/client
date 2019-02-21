@@ -35,7 +35,7 @@ public class Class390_Sub2 extends Class390 {
 	Class143 aClass143_8670;
 	Class143 aClass143_8671;
 	int anInt8672;
-	Class473 aClass473_8673 = new Class473();
+	LinkedNodeList aClass473_8673 = new LinkedNodeList();
 	byte[][] aByteArrayArray8674;
 	float[][] aFloatArrayArray8675;
 	static final int anInt8676 = 74;
@@ -208,7 +208,7 @@ public class Class390_Sub2 extends Class390 {
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13717(8448, 7681);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13595(0, 34166, 770);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13616(0, 34167, 770);
-				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.method7859(1440341177); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -69)) {
+				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.getBack(); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.getPrevious()) {
 					Class282_Sub19 class282_sub19 = (Class282_Sub19) class282;
 					class282_sub19.method12311(i, i_56_, i_57_, bools);
 				}
@@ -697,7 +697,7 @@ public class Class390_Sub2 extends Class390 {
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13717(8448, 7681);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13595(0, 34166, 770);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13616(0, 34167, 770);
-				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.method7859(1571141272); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -33)) {
+				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.getBack(); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.getPrevious()) {
 					Class282_Sub19 class282_sub19 = (Class282_Sub19) class282;
 					class282_sub19.method12311(i, i_178_, i_179_, bools);
 				}
@@ -725,7 +725,7 @@ public class Class390_Sub2 extends Class390 {
 	}
 
 	public void method6713(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub2) this).aClass473_8673.method7877(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is), 1191296451);
+		((Class390_Sub2) this).aClass473_8673.insertBack(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is));
 	}
 
 	public void method6707(int i, int i_200_, int[] is, int[] is_201_, int[] is_202_, int[] is_203_, int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, Class90 class90, boolean bool) {
@@ -1690,11 +1690,11 @@ public class Class390_Sub2 extends Class390 {
 	}
 
 	public void method6720(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub2) this).aClass473_8673.method7877(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is), 1561726619);
+		((Class390_Sub2) this).aClass473_8673.insertBack(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is));
 	}
 
 	public void method6711(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub2) this).aClass473_8673.method7877(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is), 856404726);
+		((Class390_Sub2) this).aClass473_8673.insertBack(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is));
 	}
 
 	void method13883(int i, int i_469_, int i_470_, boolean[][] bools, boolean bool, int i_471_) {
@@ -1744,7 +1744,7 @@ public class Class390_Sub2 extends Class390 {
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13717(8448, 7681);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13595(0, 34166, 770);
 				((Class390_Sub2) this).aClass505_Sub1_8648.method13616(0, 34167, 770);
-				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.method7859(896412511); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.method7857((byte) -43)) {
+				for (Node class282 = ((Class390_Sub2) this).aClass473_8673.getBack(); class282 != null; class282 = ((Class390_Sub2) this).aClass473_8673.getPrevious()) {
 					Class282_Sub19 class282_sub19 = (Class282_Sub19) class282;
 					class282_sub19.method12311(i, i_469_, i_470_, bools);
 				}
@@ -1887,6 +1887,6 @@ public class Class390_Sub2 extends Class390 {
 	}
 
 	public void method6721(Class282_Sub24 class282_sub24, int[] is) {
-		((Class390_Sub2) this).aClass473_8673.method7877(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is), 60973485);
+		((Class390_Sub2) this).aClass473_8673.insertBack(new Class282_Sub19(((Class390_Sub2) this).aClass505_Sub1_8648, this, class282_sub24, is));
 	}
 }

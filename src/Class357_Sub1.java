@@ -37,15 +37,15 @@ public class Class357_Sub1 extends Class357 {
 		IndexLoaders.MAP_REGION_DECODER.method4436(-1616362848).method7897(-1635357050);
 		IndexLoaders.NPC_INDEX_LOADER.method6833(-1071145131);
 		IndexLoaders.ITEM_INDEX_LOADER.method7166(-1983890359);
-		IndexLoaders.aClass523_3868.method11208(225048469);
-		IndexLoaders.aClass515_9416.method8849((short) -8136);
+		IndexLoaders.ANIMATION_INDEX_LOADER.method11208(225048469);
+		IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8849((short) -8136);
 		IndexLoaders.aClass230_147.method3899((short) -16305);
 		IndexLoaders.aClass377_1065.method6390(-555567449);
 		IndexLoaders.aClass447_435.method7453((byte) 12);
 		IndexLoaders.aClass498_3001.method8321(1853718430);
 		IndexLoaders.aClass394_5831.method6756(856917319);
 		IndexLoaders.aClass233_5822.method3926((byte) -18);
-		IndexLoaders.aClass211_9383.method3618((byte) 8);
+		IndexLoaders.RENDER_ANIMS.method3618((byte) 8);
 		IndexLoaders.aClass427_995.method7177((short) -20960);
 		IndexLoaders.WORLD_MAP_INDEX_LOADER.method3696((byte) -44);
 		IndexLoaders.ITEM_DEFAULTS.method7067(-323997342);

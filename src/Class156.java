@@ -78,7 +78,7 @@ public class Class156 {
 			if (null == class282_sub47)
 				break;
 			((Interface40) class282_sub47.anObject8068).ma(true);
-			class282_sub47.unlink(-371378792);
+			class282_sub47.remove();
 		}
 	}
 
@@ -98,7 +98,7 @@ public class Class156 {
 			if (null == class282_sub47)
 				break;
 			((Interface40) class282_sub47.anObject8068).ma(true);
-			class282_sub47.unlink(-371378792);
+			class282_sub47.remove();
 		}
 	}
 

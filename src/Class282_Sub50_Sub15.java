@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub50_Sub15 extends Class282_Sub50 {
+public class Class282_Sub50_Sub15 extends CacheableNode {
 	int anInt9769;
 	Class477 aClass477_9770;
 	String aString9771;
@@ -26,7 +26,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15245(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
 		boolean bool = true;
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		Class282_Sub50_Sub7 class282_sub50_sub7_0_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_0_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_0_).anInt9587), 82678317)) {
@@ -50,7 +50,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15247(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		boolean bool = true;
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		Class282_Sub50_Sub7 class282_sub50_sub7_1_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_1_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_1_).anInt9587), 2131301227)) {
@@ -68,7 +68,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15248(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		boolean bool = true;
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		Class282_Sub50_Sub7 class282_sub50_sub7_2_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_2_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_2_).anInt9587), 2086789843)) {
@@ -86,11 +86,11 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15249(Class282_Sub50_Sub7 class282_sub50_sub7, byte i) {
 		int i_3_ = method15244((byte) 112);
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		((Class282_Sub50_Sub15) this).anInt9769 -= 1874748669;
 		if (0 == 2026887253 * ((Class282_Sub50_Sub15) this).anInt9769) {
-			unlink(-371378792);
-			method13452((byte) -5);
+			remove();
+			method13452();
 			Class20.anInt170 -= 1980182825;
 			Class20.aClass229_164.put(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
 			return false;
@@ -100,7 +100,7 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15250(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		boolean bool = true;
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		Class282_Sub50_Sub7 class282_sub50_sub7_4_ = (Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) this).aClass477_9770.method7941((byte) 4);
 		while (class282_sub50_sub7_4_ != null) {
 			if (Class301.method5334((((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587 * -1441507225), -1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7_4_).anInt9587), 1207997785)) {
@@ -118,11 +118,11 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15251(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		int i = method15244((byte) 86);
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		((Class282_Sub50_Sub15) this).anInt9769 -= 1874748669;
 		if (0 == 2026887253 * ((Class282_Sub50_Sub15) this).anInt9769) {
-			unlink(-371378792);
-			method13452((byte) -5);
+			remove();
+			method13452();
 			Class20.anInt170 -= 1980182825;
 			Class20.aClass229_164.put(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
 			return false;
@@ -132,11 +132,11 @@ public class Class282_Sub50_Sub15 extends Class282_Sub50 {
 
 	boolean method15252(Class282_Sub50_Sub7 class282_sub50_sub7) {
 		int i = method15244((byte) 34);
-		class282_sub50_sub7.method13452((byte) -5);
+		class282_sub50_sub7.method13452();
 		((Class282_Sub50_Sub15) this).anInt9769 -= 1874748669;
 		if (0 == 2026887253 * ((Class282_Sub50_Sub15) this).anInt9769) {
-			unlink(-371378792);
-			method13452((byte) -5);
+			remove();
+			method13452();
 			Class20.anInt170 -= 1980182825;
 			Class20.aClass229_164.put(this, (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580)));
 			return false;

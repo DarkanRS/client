@@ -504,7 +504,7 @@ public class Class9 {
 							stream.writeByte((IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0));
 							stream.writeByte((client.aBool7310 ? 1 : 0));
 							stream.writeByte((client.aBool7160 ? 1 : 0));
-							stream.writeByte((-1439277437 * (Class227.anInt2831)));
+							stream.writeByte((-1439277437 * (RenderAnimDefs.anInt2831)));
 							stream.writeInt((204524791 * (client.anInt7163)));
 							stream.writeString(client.aString7164);
 							stream.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);
@@ -1166,7 +1166,7 @@ public class Class9 {
 							class282_sub35_sub2.writeByte((IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0));
 							class282_sub35_sub2.writeByte((client.aBool7310 ? 1 : 0));
 							class282_sub35_sub2.writeByte((client.aBool7160 ? 1 : 0));
-							class282_sub35_sub2.writeByte((-1439277437 * (Class227.anInt2831)));
+							class282_sub35_sub2.writeByte((-1439277437 * (RenderAnimDefs.anInt2831)));
 							class282_sub35_sub2.writeInt((204524791 * (client.anInt7163)));
 							class282_sub35_sub2.writeString(client.aString7164);
 							class282_sub35_sub2.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);

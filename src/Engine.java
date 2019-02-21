@@ -732,7 +732,7 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				}
 				if (string_155_.startsWith("1.6.0_")) {
 					int i_156_;
-					for (i_156_ = 6; (i_156_ < string_155_.length() && Class523.method11219(string_155_.charAt(i_156_), -2094159875)); i_156_++) {
+					for (i_156_ = 6; (i_156_ < string_155_.length() && AnimationIndexLoader.method11219(string_155_.charAt(i_156_), -2094159875)); i_156_++) {
 						/* empty */
 					}
 					String string_157_ = string_155_.substring(6, i_156_);
@@ -779,8 +779,8 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 	public static final void method4763(int i, String string, Color color, Color color_161_, Color color_162_) {
 		try {
 			Graphics graphics = Class351.gameCanvas.getGraphics();
-			if (null == Class515.aFont5893)
-				Class515.aFont5893 = new Font("Helvetica", 1, 13);
+			if (null == SpotAnimIndexLoader.aFont5893)
+				SpotAnimIndexLoader.aFont5893 = new Font("Helvetica", 1, 13);
 			if (color == null)
 				color = new Color(140, 17, 17);
 			if (color_161_ == null)
@@ -802,11 +802,11 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				graphics_163_.setColor(Color.black);
 				graphics_163_.drawRect(i_164_ + 1, i_165_ + 1, 301, 31);
 				graphics_163_.fillRect(i * 3 + (i_164_ + 2), i_165_ + 2, 300 - 3 * i, 30);
-				graphics_163_.setFont(Class515.aFont5893);
+				graphics_163_.setFont(SpotAnimIndexLoader.aFont5893);
 				graphics_163_.setColor(color_162_);
 				graphics_163_.drawString(string, (i_164_ + (304 - string.length() * 6) / 2), 22 + i_165_);
 				if (aString3252 != null) {
-					graphics_163_.setFont(Class515.aFont5893);
+					graphics_163_.setFont(SpotAnimIndexLoader.aFont5893);
 					graphics_163_.setColor(color_162_);
 					graphics_163_.drawString(aString3252, ((Class349.anInt4083 * -418109423 / 2) - aString3252.length() * 6 / 2), anInt3243 * -969250379 / 2 - 26);
 				}
@@ -823,10 +823,10 @@ public abstract class Engine implements Interface24, Runnable, FocusListener, Wi
 				graphics.setColor(Color.black);
 				graphics.drawRect(i_166_ + 1, i_167_ + 1, 301, 31);
 				graphics.fillRect(3 * i + (i_166_ + 2), i_167_ + 2, 300 - 3 * i, 30);
-				graphics.setFont(Class515.aFont5893);
+				graphics.setFont(SpotAnimIndexLoader.aFont5893);
 				graphics.setColor(color_162_);
 				if (aString3252 != null) {
-					graphics.setFont(Class515.aFont5893);
+					graphics.setFont(SpotAnimIndexLoader.aFont5893);
 					graphics.setColor(color_162_);
 					graphics.drawString(aString3252, (-418109423 * Class349.anInt4083 / 2 - aString3252.length() * 6 / 2), -969250379 * anInt3243 / 2 - 26);
 				}

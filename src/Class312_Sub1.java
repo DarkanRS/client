@@ -221,14 +221,14 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7941((byte) 4); null != class282_sub50_sub11_sub1; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7955(-301602175))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(1);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -2053652444);
 				((Class312_Sub1) this).aClass477_3645.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7941((byte) 4); class282_sub50_sub11_sub1 != null; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7955(1146835721))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(0);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -1058968042);
 				((Class312_Sub1) this).aClass477_3654.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
@@ -267,11 +267,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							Object object = null;
 							Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1;
 							if (bool_9_) {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(-261946030))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.key * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(-261946030))) {
 									/* empty */
 								}
 							} else {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.aLong8120)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-43331753))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.key)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-43331753))) {
 									/* empty */
 								}
 							}
@@ -308,7 +308,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).aClass282_Sub35_10378.index += i_12_ * -1115476867;
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_12_ * -442668975;
 					if (i_11_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
-						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
+						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452();
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
@@ -359,14 +359,14 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7941((byte) 4); null != class282_sub50_sub11_sub1; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7955(572445941))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(1);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, 1134264052);
 				((Class312_Sub1) this).aClass477_3645.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7941((byte) 4); class282_sub50_sub11_sub1 != null; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7955(-792632663))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(0);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -2080680995);
 				((Class312_Sub1) this).aClass477_3654.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
@@ -405,11 +405,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							Object object = null;
 							Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1;
 							if (bool_23_) {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(464344065))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.key * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(464344065))) {
 									/* empty */
 								}
 							} else {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.aLong8120)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-1933263300))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.key)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-1933263300))) {
 									/* empty */
 								}
 							}
@@ -446,7 +446,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).aClass282_Sub35_10378.index += i_26_ * -1115476867;
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_26_ * -442668975;
 					if (i_25_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
-						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
+						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452();
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
@@ -614,14 +614,14 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7941((byte) 4); null != class282_sub50_sub11_sub1; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7955(-302687935))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(1);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -1323919760);
 				((Class312_Sub1) this).aClass477_3645.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7941((byte) 4); class282_sub50_sub11_sub1 != null; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7955(-1021577303))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(0);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, 5845484);
 				((Class312_Sub1) this).aClass477_3654.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
@@ -660,11 +660,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							Object object = null;
 							Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1;
 							if (bool_39_) {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(-257563362))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.key * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(-257563362))) {
 									/* empty */
 								}
 							} else {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.aLong8120)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-691952599))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.key)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-691952599))) {
 									/* empty */
 								}
 							}
@@ -701,7 +701,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).aClass282_Sub35_10378.index += i_42_ * -1115476867;
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_42_ * -442668975;
 					if (i_41_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
-						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
+						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452();
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)
@@ -757,14 +757,14 @@ public class Class312_Sub1 extends JS5StandardRequester {
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7941((byte) 4); null != class282_sub50_sub11_sub1; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3652.method7955(-1980128000))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(1);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -943163618);
 				((Class312_Sub1) this).aClass477_3645.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
 			for (Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = (Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7941((byte) 4); class282_sub50_sub11_sub1 != null; class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3651.method7955(-676569028))) {
 				((Class312_Sub1) this).aClass282_Sub35_3655.index = 0;
 				((Class312_Sub1) this).aClass282_Sub35_3655.writeByte(0);
-				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L);
+				((Class312_Sub1) this).aClass282_Sub35_3655.method13204(class282_sub50_sub11_sub1.key * -7883876913471066125L);
 				((Class312_Sub1) this).aClass202_7778.method3311((((Class312_Sub1) this).aClass282_Sub35_3655.buffer), 0, (((Class312_Sub1) this).aClass282_Sub35_3655.buffer).length, -477727140);
 				((Class312_Sub1) this).aClass477_3654.method7936(class282_sub50_sub11_sub1, -1738910950);
 			}
@@ -803,11 +803,11 @@ public class Class312_Sub1 extends JS5StandardRequester {
 							Object object = null;
 							Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1;
 							if (bool_53_) {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.aLong8120 * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(-693904973))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (class282_sub50_sub11_sub1.key * -7883876913471066125L) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3654.method7955(-693904973))) {
 									/* empty */
 								}
 							} else {
-								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.aLong8120)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-1904114468))) {
+								for (class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7941((byte) 4)); (class282_sub50_sub11_sub1 != null && (-7883876913471066125L * (class282_sub50_sub11_sub1.key)) != l); class282_sub50_sub11_sub1 = ((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass477_3645.method7955(-1904114468))) {
 									/* empty */
 								}
 							}
@@ -844,7 +844,7 @@ public class Class312_Sub1 extends JS5StandardRequester {
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).aClass282_Sub35_10378.index += i_56_ * -1115476867;
 					((Class282_Sub50_Sub11_Sub1) ((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660).anInt10377 += i_56_ * -442668975;
 					if (i_55_ == -1990677291 * (((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).aClass282_Sub35_10378.index)) {
-						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452((byte) -5);
+						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660.method13452();
 						((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).incomplete = false;
 						((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660 = null;
 					} else if ((((Class282_Sub50_Sub11_Sub1) (((Class312_Sub1) this).aClass282_Sub50_Sub11_Sub1_3660)).anInt10377 * -5971791) == 512)

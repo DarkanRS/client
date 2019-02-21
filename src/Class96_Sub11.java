@@ -21,7 +21,7 @@ public class Class96_Sub11 extends Class96 {
 		client.anInt7448 = 1044733407;
 		client.anInt7280 = ((Class96_Sub11) this).anInt9302 * 1496611753;
 		NativeLibraryLoader.anInt3240 = 1155732519;
-		Class515.method8860((byte) -29);
+		SpotAnimIndexLoader.method8860((byte) -29);
 		client.aBool7321 = true;
 	}
 
@@ -46,7 +46,7 @@ public class Class96_Sub11 extends Class96 {
 		client.anInt7448 = 1044733407;
 		client.anInt7280 = ((Class96_Sub11) this).anInt9302 * 1496611753;
 		NativeLibraryLoader.anInt3240 = 1155732519;
-		Class515.method8860((byte) -117);
+		SpotAnimIndexLoader.method8860((byte) -117);
 		client.aBool7321 = true;
 	}
 

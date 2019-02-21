@@ -156,7 +156,7 @@ public class PlayerAppearance {
 		}
 	}
 
-	public MeshRasterizer method3996(GraphicalRenderer class505, int i, Class31 class31, Class523 class523, Class456 class456, int i_21_, int i_22_, int i_23_) {
+	public MeshRasterizer method3996(GraphicalRenderer class505, int i, Class31 class31, AnimationIndexLoader class523, Animation class456, int i_21_, int i_22_, int i_23_) {
 		int i_24_ = class456 != null ? i | class456.method7640(-1572860046) : i;
 		long l = (long) i_23_ << 32 | (long) (i_22_ << 16) | (long) i_21_;
 		MeshRasterizer class528;
@@ -202,7 +202,7 @@ public class PlayerAppearance {
 		return class528;
 	}
 
-	public MeshRasterizer method3997(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method3997(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 100).method6880(class505, i, interface42, class456, null, 1737411260));
 		int i_29_ = null != class456 ? i | class456.method7640(-1639744740) : i;
@@ -266,7 +266,7 @@ public class PlayerAppearance {
 		return class528_38_;
 	}
 
-	public MeshRasterizer method3998(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_39_, Class456[] class456s, int[] is, int i_40_, boolean bool, Defaults6Loader class526, short i_41_) {
+	public MeshRasterizer method3998(GraphicalRenderer class505, int i, RenderAnimIndexLoader class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456, Animation class456_39_, Animation[] class456s, int[] is, int i_40_, boolean bool, Defaults6Loader class526, short i_41_) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) -32).method6875(class505, i, class211, interface42, class456, class456_39_, class456s, is, i_40_, null, 2039422694));
 		int i_42_ = i;
@@ -275,34 +275,34 @@ public class PlayerAppearance {
 		boolean bool_44_ = false;
 		boolean bool_45_ = false;
 		if (null != class456) {
-			AnimationDefinitions class518 = class456.method7565(-1632742162);
-			if (class518 != null && (class518.anInt5917 * -516792901 >= 0 || class518.anInt5918 * -1325291837 >= 0)) {
+			AnimationDefinitions class518 = class456.getDefs();
+			if (class518 != null && (class518.leftHandItem * -516792901 >= 0 || class518.rightHandItem * -1325291837 >= 0)) {
 				is_43_ = new int[((PlayerAppearance) this).anIntArray2921.length];
 				for (int i_46_ = 0; i_46_ < is_43_.length; i_46_++)
 					is_43_[i_46_] = ((PlayerAppearance) this).anIntArray2921[i_46_];
-				if (-516792901 * class518.anInt5917 >= 0 && -1 != -333243893 * class526.anInt6990) {
+				if (-516792901 * class518.leftHandItem >= 0 && -1 != -333243893 * class526.anInt6990) {
 					bool_44_ = true;
-					if (65535 == class518.anInt5917 * -516792901) {
+					if (65535 == class518.leftHandItem * -516792901) {
 						is_43_[-333243893 * class526.anInt6990] = 0;
 						for (int i_47_ = 0; i_47_ < class526.anIntArray6992.length; i_47_++)
 							is_43_[class526.anIntArray6992[i_47_]] = 0;
 						l ^= ~0xffffffffL;
 					} else {
-						is_43_[class526.anInt6990 * -333243893] = -516792901 * class518.anInt5917 | 0x40000000;
+						is_43_[class526.anInt6990 * -333243893] = -516792901 * class518.leftHandItem | 0x40000000;
 						for (int i_48_ = 0; i_48_ < class526.anIntArray6992.length; i_48_++)
 							is_43_[class526.anIntArray6992[i_48_]] = 0;
 						l ^= ((long) is_43_[class526.anInt6990 * -333243893] << 32);
 					}
 				}
-				if (-1325291837 * class518.anInt5918 >= 0 && -1 != class526.anInt6991 * 847181775) {
+				if (-1325291837 * class518.rightHandItem >= 0 && -1 != class526.anInt6991 * 847181775) {
 					bool_45_ = true;
-					if (class518.anInt5918 * -1325291837 == 65535) {
+					if (class518.rightHandItem * -1325291837 == 65535) {
 						is_43_[847181775 * class526.anInt6991] = 0;
 						for (int i_49_ = 0; i_49_ < class526.anIntArray6993.length; i_49_++)
 							is_43_[class526.anIntArray6993[i_49_]] = 0;
 						l ^= 0xffffffffL;
 					} else {
-						is_43_[847181775 * class526.anInt6991] = -1325291837 * class518.anInt5918 | 0x40000000;
+						is_43_[847181775 * class526.anInt6991] = -1325291837 * class518.rightHandItem | 0x40000000;
 						for (int i_50_ = 0; i_50_ < class526.anIntArray6993.length; i_50_++)
 							is_43_[class526.anIntArray6993[i_50_]] = 0;
 						l ^= (long) is_43_[class526.anInt6991 * 847181775];
@@ -339,9 +339,9 @@ public class PlayerAppearance {
 		synchronized (aClass229_2920) {
 			class528 = (MeshRasterizer) aClass229_2920.get(l);
 		}
-		Class227 class227 = null;
+		RenderAnimDefs class227 = null;
 		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
-			class227 = class211.method3616((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) 62);
+			class227 = class211.getRenderAnimDefs((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) 62);
 		if (null == class528 || class505.method8452(class528.m(), i_42_) != 0) {
 			if (class528 != null)
 				i_42_ = class505.method8546(i_42_, class528.m());
@@ -497,7 +497,7 @@ public class PlayerAppearance {
 		return class528_75_;
 	}
 
-	public MeshRasterizer method3999(GraphicalRenderer class505, int i, Class31 class31, Class523 class523, Class456 class456, int i_79_, int i_80_, int i_81_, int i_82_) {
+	public MeshRasterizer method3999(GraphicalRenderer class505, int i, Class31 class31, AnimationIndexLoader class523, Animation class456, int i_79_, int i_80_, int i_81_, int i_82_) {
 		int i_83_ = class456 != null ? i | class456.method7640(-1959438084) : i;
 		long l = (long) i_81_ << 32 | (long) (i_80_ << 16) | (long) i_79_;
 		MeshRasterizer class528;
@@ -603,7 +603,7 @@ public class PlayerAppearance {
 		method3991((byte) 3);
 	}
 
-	public MeshRasterizer method4008(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method4008(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 42).method6880(class505, i, interface42, class456, null, 1842006915));
 		int i_98_ = null != class456 ? i | class456.method7640(-1637762744) : i;
@@ -814,7 +814,7 @@ public class PlayerAppearance {
 		((PlayerAppearance) this).aLong2926 = (-9195927454341211745L * (((PlayerAppearance) this).aLong2926 * -6800555520516554145L >>> 8 ^ ls[(int) (((((PlayerAppearance) this).aLong2926 * -6800555520516554145L) ^ (long) (aBool2929 ? 1 : 0)) & 0xffL)]));
 	}
 
-	public MeshRasterizer method4016(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_120_, Class456[] class456s, int[] is, int i_121_, boolean bool, Defaults6Loader class526) {
+	public MeshRasterizer method4016(GraphicalRenderer class505, int i, RenderAnimIndexLoader class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456, Animation class456_120_, Animation[] class456s, int[] is, int i_121_, boolean bool, Defaults6Loader class526) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 29).method6875(class505, i, class211, interface42, class456, class456_120_, class456s, is, i_121_, null, 1850728903));
 		int i_122_ = i;
@@ -823,34 +823,34 @@ public class PlayerAppearance {
 		boolean bool_124_ = false;
 		boolean bool_125_ = false;
 		if (null != class456) {
-			AnimationDefinitions class518 = class456.method7565(-1632742162);
-			if (class518 != null && (class518.anInt5917 * -516792901 >= 0 || class518.anInt5918 * -1325291837 >= 0)) {
+			AnimationDefinitions class518 = class456.getDefs();
+			if (class518 != null && (class518.leftHandItem * -516792901 >= 0 || class518.rightHandItem * -1325291837 >= 0)) {
 				is_123_ = new int[((PlayerAppearance) this).anIntArray2921.length];
 				for (int i_126_ = 0; i_126_ < is_123_.length; i_126_++)
 					is_123_[i_126_] = ((PlayerAppearance) this).anIntArray2921[i_126_];
-				if (-516792901 * class518.anInt5917 >= 0 && -1 != -333243893 * class526.anInt6990) {
+				if (-516792901 * class518.leftHandItem >= 0 && -1 != -333243893 * class526.anInt6990) {
 					bool_124_ = true;
-					if (65535 == class518.anInt5917 * -516792901) {
+					if (65535 == class518.leftHandItem * -516792901) {
 						is_123_[-333243893 * class526.anInt6990] = 0;
 						for (int i_127_ = 0; i_127_ < class526.anIntArray6992.length; i_127_++)
 							is_123_[class526.anIntArray6992[i_127_]] = 0;
 						l ^= ~0xffffffffL;
 					} else {
-						is_123_[class526.anInt6990 * -333243893] = -516792901 * class518.anInt5917 | 0x40000000;
+						is_123_[class526.anInt6990 * -333243893] = -516792901 * class518.leftHandItem | 0x40000000;
 						for (int i_128_ = 0; i_128_ < class526.anIntArray6992.length; i_128_++)
 							is_123_[class526.anIntArray6992[i_128_]] = 0;
 						l ^= ((long) is_123_[class526.anInt6990 * -333243893] << 32);
 					}
 				}
-				if (-1325291837 * class518.anInt5918 >= 0 && -1 != class526.anInt6991 * 847181775) {
+				if (-1325291837 * class518.rightHandItem >= 0 && -1 != class526.anInt6991 * 847181775) {
 					bool_125_ = true;
-					if (class518.anInt5918 * -1325291837 == 65535) {
+					if (class518.rightHandItem * -1325291837 == 65535) {
 						is_123_[847181775 * class526.anInt6991] = 0;
 						for (int i_129_ = 0; i_129_ < class526.anIntArray6993.length; i_129_++)
 							is_123_[class526.anIntArray6993[i_129_]] = 0;
 						l ^= 0xffffffffL;
 					} else {
-						is_123_[847181775 * class526.anInt6991] = -1325291837 * class518.anInt5918 | 0x40000000;
+						is_123_[847181775 * class526.anInt6991] = -1325291837 * class518.rightHandItem | 0x40000000;
 						for (int i_130_ = 0; i_130_ < class526.anIntArray6993.length; i_130_++)
 							is_123_[class526.anIntArray6993[i_130_]] = 0;
 						l ^= (long) is_123_[class526.anInt6991 * 847181775];
@@ -887,9 +887,9 @@ public class PlayerAppearance {
 		synchronized (aClass229_2920) {
 			class528 = (MeshRasterizer) aClass229_2920.get(l);
 		}
-		Class227 class227 = null;
+		RenderAnimDefs class227 = null;
 		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
-			class227 = class211.method3616((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) -87);
+			class227 = class211.getRenderAnimDefs((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) -87);
 		if (null == class528 || class505.method8452(class528.m(), i_122_) != 0) {
 			if (class528 != null)
 				i_122_ = class505.method8546(i_122_, class528.m());
@@ -1045,7 +1045,7 @@ public class PlayerAppearance {
 		return class528_155_;
 	}
 
-	public MeshRasterizer method4017(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, Class456 class456_159_, Class456[] class456s, int[] is, int i_160_, boolean bool, Defaults6Loader class526) {
+	public MeshRasterizer method4017(GraphicalRenderer class505, int i, RenderAnimIndexLoader class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456, Animation class456_159_, Animation[] class456s, int[] is, int i_160_, boolean bool, Defaults6Loader class526) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 91).method6875(class505, i, class211, interface42, class456, class456_159_, class456s, is, i_160_, null, 1456552905));
 		int i_161_ = i;
@@ -1054,34 +1054,34 @@ public class PlayerAppearance {
 		boolean bool_163_ = false;
 		boolean bool_164_ = false;
 		if (null != class456) {
-			AnimationDefinitions class518 = class456.method7565(-1632742162);
-			if (class518 != null && (class518.anInt5917 * -516792901 >= 0 || class518.anInt5918 * -1325291837 >= 0)) {
+			AnimationDefinitions class518 = class456.getDefs();
+			if (class518 != null && (class518.leftHandItem * -516792901 >= 0 || class518.rightHandItem * -1325291837 >= 0)) {
 				is_162_ = new int[((PlayerAppearance) this).anIntArray2921.length];
 				for (int i_165_ = 0; i_165_ < is_162_.length; i_165_++)
 					is_162_[i_165_] = ((PlayerAppearance) this).anIntArray2921[i_165_];
-				if (-516792901 * class518.anInt5917 >= 0 && -1 != -333243893 * class526.anInt6990) {
+				if (-516792901 * class518.leftHandItem >= 0 && -1 != -333243893 * class526.anInt6990) {
 					bool_163_ = true;
-					if (65535 == class518.anInt5917 * -516792901) {
+					if (65535 == class518.leftHandItem * -516792901) {
 						is_162_[-333243893 * class526.anInt6990] = 0;
 						for (int i_166_ = 0; i_166_ < class526.anIntArray6992.length; i_166_++)
 							is_162_[class526.anIntArray6992[i_166_]] = 0;
 						l ^= ~0xffffffffL;
 					} else {
-						is_162_[class526.anInt6990 * -333243893] = -516792901 * class518.anInt5917 | 0x40000000;
+						is_162_[class526.anInt6990 * -333243893] = -516792901 * class518.leftHandItem | 0x40000000;
 						for (int i_167_ = 0; i_167_ < class526.anIntArray6992.length; i_167_++)
 							is_162_[class526.anIntArray6992[i_167_]] = 0;
 						l ^= ((long) is_162_[class526.anInt6990 * -333243893] << 32);
 					}
 				}
-				if (-1325291837 * class518.anInt5918 >= 0 && -1 != class526.anInt6991 * 847181775) {
+				if (-1325291837 * class518.rightHandItem >= 0 && -1 != class526.anInt6991 * 847181775) {
 					bool_164_ = true;
-					if (class518.anInt5918 * -1325291837 == 65535) {
+					if (class518.rightHandItem * -1325291837 == 65535) {
 						is_162_[847181775 * class526.anInt6991] = 0;
 						for (int i_168_ = 0; i_168_ < class526.anIntArray6993.length; i_168_++)
 							is_162_[class526.anIntArray6993[i_168_]] = 0;
 						l ^= 0xffffffffL;
 					} else {
-						is_162_[847181775 * class526.anInt6991] = -1325291837 * class518.anInt5918 | 0x40000000;
+						is_162_[847181775 * class526.anInt6991] = -1325291837 * class518.rightHandItem | 0x40000000;
 						for (int i_169_ = 0; i_169_ < class526.anIntArray6993.length; i_169_++)
 							is_162_[class526.anIntArray6993[i_169_]] = 0;
 						l ^= (long) is_162_[class526.anInt6991 * 847181775];
@@ -1118,9 +1118,9 @@ public class PlayerAppearance {
 		synchronized (aClass229_2920) {
 			class528 = (MeshRasterizer) aClass229_2920.get(l);
 		}
-		Class227 class227 = null;
+		RenderAnimDefs class227 = null;
 		if (-1 != -1483086815 * ((PlayerAppearance) this).anInt2925)
-			class227 = class211.method3616((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) 61);
+			class227 = class211.getRenderAnimDefs((((PlayerAppearance) this).anInt2925 * -1483086815), (byte) 61);
 		if (null == class528 || class505.method8452(class528.m(), i_161_) != 0) {
 			if (class528 != null)
 				i_161_ = class505.method8546(i_161_, class528.m());
@@ -1292,7 +1292,7 @@ public class PlayerAppearance {
 		method3991((byte) 3);
 	}
 
-	public MeshRasterizer method4020(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456) {
+	public MeshRasterizer method4020(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) -22).method6880(class505, i, interface42, class456, null, 1531880788));
 		int i_201_ = null != class456 ? i | class456.method7640(-921112046) : i;
@@ -1356,7 +1356,7 @@ public class PlayerAppearance {
 		return class528_210_;
 	}
 
-	public MeshRasterizer method4021(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, int i_211_) {
+	public MeshRasterizer method4021(GraphicalRenderer class505, int i, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456, int i_211_) {
 		if (-977770149 * anInt2928 != -1)
 			return (class406.getNPCDefinitions(anInt2928 * -977770149, (byte) 14).method6880(class505, i, interface42, class456, null, 1135826867));
 		int i_212_ = null != class456 ? i | class456.method7640(-1790467862) : i;

@@ -48,7 +48,7 @@ public class Class184 {
 					break;
 				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.buffer.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
-				class282_sub23.unlink(-371378792);
+				class282_sub23.remove();
 				class282_sub23.buffer.method13059(1420319429);
 				class282_sub23.method12360(-923048057);
 			}
@@ -110,7 +110,7 @@ public class Class184 {
 					break;
 				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.buffer.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
-				class282_sub23.unlink(-371378792);
+				class282_sub23.remove();
 				class282_sub23.buffer.method13059(1701861837);
 				class282_sub23.method12360(-1158414947);
 			}
@@ -129,7 +129,7 @@ public class Class184 {
 					break;
 				((Class184) this).aClass282_Sub35_2282.writeBytes(class282_sub23.buffer.buffer, 0, class282_sub23.anInt7680 * -766688357);
 				((Class184) this).anInt2279 -= 2072817543 * class282_sub23.anInt7680;
-				class282_sub23.unlink(-371378792);
+				class282_sub23.remove();
 				class282_sub23.buffer.method13059(1721372976);
 				class282_sub23.method12360(-1410304456);
 			}

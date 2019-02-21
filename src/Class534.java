@@ -23,7 +23,7 @@ public abstract class Class534 {
 				Class282_Sub53 class282_sub53 = (Class282_Sub53) iterator.next();
 				if (class282_sub23 != null && (-1990677291 * (class282_sub23.buffer.index) - i >= 252 - (6 + method11412(-384248029))))
 					break;
-				class282_sub53.unlink(-371378792);
+				class282_sub53.remove();
 				int i_2_ = class282_sub53.method13469(857056097);
 				if (i_2_ < -1)
 					i_2_ = -1;
@@ -155,7 +155,7 @@ public abstract class Class534 {
 				Class282_Sub53 class282_sub53 = (Class282_Sub53) iterator.next();
 				if (class282_sub23 != null && (-1990677291 * (class282_sub23.buffer.index) - i_9_ >= 252 - (6 + method11412(919512464))))
 					break;
-				class282_sub53.unlink(-371378792);
+				class282_sub53.remove();
 				int i_12_ = class282_sub53.method13469(1360106336);
 				if (i_12_ < -1)
 					i_12_ = -1;
@@ -246,7 +246,7 @@ public abstract class Class534 {
 				Class282_Sub53 class282_sub53 = (Class282_Sub53) iterator.next();
 				if (class282_sub23 != null && (-1990677291 * (class282_sub23.buffer.index) - i >= 252 - (6 + method11412(-1667494729))))
 					break;
-				class282_sub53.unlink(-371378792);
+				class282_sub53.remove();
 				int i_20_ = class282_sub53.method13469(-114444026);
 				if (i_20_ < -1)
 					i_20_ = -1;
@@ -360,7 +360,7 @@ public abstract class Class534 {
 				Class282_Sub53 class282_sub53 = (Class282_Sub53) iterator.next();
 				if (class282_sub23 != null && (-1990677291 * (class282_sub23.buffer.index) - i >= 252 - (6 + method11412(-1870142111))))
 					break;
-				class282_sub53.unlink(-371378792);
+				class282_sub53.remove();
 				int i_28_ = class282_sub53.method13469(154136423);
 				if (i_28_ < -1)
 					i_28_ = -1;
@@ -449,7 +449,7 @@ public abstract class Class534 {
 				Class282_Sub53 class282_sub53 = (Class282_Sub53) iterator.next();
 				if (class282_sub23 != null && (-1990677291 * (class282_sub23.buffer.index) - i >= 252 - (6 + method11412(-1260784789))))
 					break;
-				class282_sub53.unlink(-371378792);
+				class282_sub53.remove();
 				int i_36_ = class282_sub53.method13469(2034837568);
 				if (i_36_ < -1)
 					i_36_ = -1;

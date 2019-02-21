@@ -40,7 +40,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 0;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -49,7 +49,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = (i_9_ - 1) * -834443097;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -152,14 +152,14 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) < 0) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				} else {
 					method15990(is, i_11_, i_9_, i_6_, 0);
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) >= i_9_) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = i_9_ * -834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				}
 			}
@@ -724,7 +724,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 0;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -733,7 +733,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = (i_182_ - 1) * -834443097;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -836,14 +836,14 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) < 0) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				} else {
 					method15990(is, i_184_, i_182_, i_179_, 0);
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) >= i_182_) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = i_182_ * -834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				}
 			}
@@ -867,7 +867,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 0;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -876,7 +876,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = (i_190_ - 1) * -834443097;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -979,14 +979,14 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) < 0) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				} else {
 					method15990(is, i_192_, i_190_, i_187_, 0);
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) >= i_190_) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = i_190_ * -834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				}
 			}
@@ -1930,7 +1930,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 0;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -1939,7 +1939,7 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					((Class282_Sub15_Sub5_Sub2) this).anInt9853 = (i_455_ - 1) * -834443097;
 				else {
 					method15354(-859024475);
-					unlink(-371378792);
+					remove();
 					return;
 				}
 			}
@@ -2042,14 +2042,14 @@ public class Class282_Sub15_Sub5_Sub2 extends Class282_Sub15_Sub5 {
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) < 0) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = 834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				} else {
 					method15990(is, i_457_, i_455_, i_452_, 0);
 					if ((((Class282_Sub15_Sub5_Sub2) this).anInt9853 * -354697449) >= i_455_) {
 						((Class282_Sub15_Sub5_Sub2) this).anInt9853 = i_455_ * -834443097;
 						method15354(-859024475);
-						unlink(-371378792);
+						remove();
 					}
 				}
 			}

@@ -46,19 +46,19 @@ public class Class150 {
 
 	static final void method2581(Animable class521_sub1_sub1_sub2, int i) {
 		Class456_Sub3 class456_sub3 = class521_sub1_sub1_sub2.aClass456_Sub3_10337;
-		if (class456_sub3.method7564(2139660919) && class456_sub3.method7627(1, -1365163818) && class456_sub3.method7580(952228354)) {
+		if (class456_sub3.hasDefs() && class456_sub3.method7627(1, -1365163818) && class456_sub3.method7580(952228354)) {
 			if (class456_sub3.aBool7891) {
-				class456_sub3.method7570(class521_sub1_sub1_sub2.method15855((byte) -17).method3809(386342083), false, true, -321228583);
-				class456_sub3.aBool7891 = class456_sub3.method7564(-269374987);
+				class456_sub3.method7570(class521_sub1_sub1_sub2.getRenderAnimDefs((byte) -17).method3809(386342083), false, true, -321228583);
+				class456_sub3.aBool7891 = class456_sub3.hasDefs();
 			}
 			class456_sub3.method7582((byte) -126);
 		}
 		for (int i_4_ = 0; i_4_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_4_++) {
 			if (-1 != (class521_sub1_sub1_sub2.aClass161Array10339[i_4_].anInt2012 * 378836105)) {
-				Class456 class456 = (class521_sub1_sub1_sub2.aClass161Array10339[i_4_].aClass456_2014);
-				if (class456.method7573(1176831971)) {
-					Class525 class525 = (IndexLoaders.aClass515_9416.method8845((class521_sub1_sub1_sub2.aClass161Array10339[i_4_].anInt2012) * 378836105, (byte) 52));
-					AnimationDefinitions class518 = class456.method7565(-1632742162);
+				Animation class456 = (class521_sub1_sub1_sub2.aClass161Array10339[i_4_].aClass456_2014);
+				if (class456.hasSpeed(1176831971)) {
+					SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((class521_sub1_sub1_sub2.aClass161Array10339[i_4_].anInt2012) * 378836105, (byte) 52));
+					AnimationDefinitions class518 = class456.getDefs();
 					if (class525.aBool6968) {
 						if (3 == -1113882773 * class518.anInt5920) {
 							if ((class521_sub1_sub1_sub2.anInt10367 * 41504957 > 0) && ((class521_sub1_sub1_sub2.anInt10342 * 403949281) <= client.cycles * -1809259861) && ((class521_sub1_sub1_sub2.anInt10345 * 1277328401) < client.cycles * -1809259861)) {
@@ -76,25 +76,25 @@ public class Class150 {
 				}
 			}
 		}
-		Class456 class456 = class521_sub1_sub1_sub2.aClass456_10338;
+		Animation class456 = class521_sub1_sub1_sub2.currentAnimation;
 		do {
-			if (class456.method7564(1060677875)) {
-				AnimationDefinitions class518 = class456.method7565(-1632742162);
+			if (class456.hasDefs()) {
+				AnimationDefinitions class518 = class456.getDefs();
 				if (3 == -1113882773 * class518.anInt5920) {
 					if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0 && (403949281 * class521_sub1_sub1_sub2.anInt10342 <= client.cycles * -1809259861) && (class521_sub1_sub1_sub2.anInt10345 * 1277328401 < -1809259861 * client.cycles)) {
-						class521_sub1_sub1_sub2.anIntArray10350 = null;
+						class521_sub1_sub1_sub2.currentAnimations = null;
 						class456.method7567(-1, (short) 8960);
 						break;
 					}
 				} else if (-1113882773 * class518.anInt5920 == 1) {
 					if (41504957 * class521_sub1_sub1_sub2.anInt10367 > 0 && (class521_sub1_sub1_sub2.anInt10342 * 403949281 <= client.cycles * -1809259861) && (1277328401 * class521_sub1_sub1_sub2.anInt10345 < -1809259861 * client.cycles)) {
-						class456.method7575(1, 667125413);
+						class456.setSpeed(1);
 						break;
 					}
-					class456.method7575(0, -1023349234);
+					class456.setSpeed(0);
 				}
 				if (class456.method7627(1, 1985078512) && class456.method7580(1773255286)) {
-					class521_sub1_sub1_sub2.anIntArray10350 = null;
+					class521_sub1_sub1_sub2.currentAnimations = null;
 					class456.method7567(-1, (short) 8960);
 				}
 			}
@@ -128,7 +128,7 @@ public class Class150 {
 		class527.intStackPtr -= 283782002;
 		int i_9_ = (class527.intStack[class527.intStackPtr * 1942118537]);
 		int i_10_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		Class515.method8862(i_9_, i_10_ >> 14 & 0x3fff, i_10_ & 0x3fff, false, -1732540658);
+		SpotAnimIndexLoader.method8862(i_9_, i_10_ >> 14 & 0x3fff, i_10_ & 0x3fff, false, -1732540658);
 	}
 
 	public static RuntimeException_Sub3 method2585(Throwable throwable, String string) {

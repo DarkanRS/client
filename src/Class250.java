@@ -58,7 +58,7 @@ public class Class250 {
 		class282_sub26_sub1_sub1 = class282_sub18.method12272();
 		if (class282_sub26_sub1_sub1 == null)
 			return null;
-		class282_sub18.unlink(-371378792);
+		class282_sub18.remove();
 		((Class250) this).aClass465_3090.method7765(class282_sub26_sub1_sub1, l);
 		return class282_sub26_sub1_sub1;
 	}
@@ -115,7 +115,7 @@ public class Class250 {
 		class282_sub26_sub1_sub1 = class282_sub18.method12272();
 		if (class282_sub26_sub1_sub1 == null)
 			return null;
-		class282_sub18.unlink(-371378792);
+		class282_sub18.remove();
 		((Class250) this).aClass465_3090.method7765(class282_sub26_sub1_sub1, l);
 		return class282_sub26_sub1_sub1;
 	}

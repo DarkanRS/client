@@ -4,7 +4,7 @@
  */
 import java.awt.Font;
 
-public class Class515 {
+public class SpotAnimIndexLoader {
 	Index aClass317_5888;
 	Index aClass317_5889;
 	SoftCache aClass229_5890;
@@ -12,173 +12,68 @@ public class Class515 {
 	int anInt5892;
 	static Font aFont5893;
 
-	public Class515(Game class486, Language class495, Index class317, Index class317_0_) {
-		((Class515) this).aClass229_5890 = new SoftCache(60);
-		((Class515) this).aClass317_5888 = class317;
-		((Class515) this).aClass317_5889 = class317_0_;
-		int i = ((Class515) this).aClass317_5888.containersCount(-1503644160) - 1;
-		SharedConfigsType.aClass120_1476.filesPerContainer(-397238873);
-		((Class515) this).aClass317_5888.filesCount(i, -1544265999);
+	public SpotAnimIndexLoader(Game class486, Language class495, Index class317, Index class317_0_) {
+		((SpotAnimIndexLoader) this).aClass229_5890 = new SoftCache(60);
+		((SpotAnimIndexLoader) this).aClass317_5888 = class317;
+		((SpotAnimIndexLoader) this).aClass317_5889 = class317_0_;
+		int i = ((SpotAnimIndexLoader) this).aClass317_5888.containersCount(-1503644160) - 1;
+		SharedConfigsType.SPOT_ANIMS.filesPerContainer(-397238873);
+		((SpotAnimIndexLoader) this).aClass317_5888.filesCount(i, -1544265999);
 	}
 
-	public Class525 method8845(int i, byte i_1_) {
-		Class525 class525;
-		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
+	public SpotAnimDefinitions getSpotAnimDefs(int spotAnimId, byte i_1_) {
+		SpotAnimDefinitions class525;
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
+			class525 = ((SpotAnimDefinitions) ((SpotAnimIndexLoader) this).aClass229_5891.get((long) spotAnimId));
 		}
 		if (null != class525)
 			return class525;
 		byte[] is;
-		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 1680181373), SharedConfigsType.aClass120_1476.fileId(i, -1956342306), -2016707377));
+		synchronized (((SpotAnimIndexLoader) this).aClass317_5888) {
+			is = (((SpotAnimIndexLoader) this).aClass317_5888.getFile(SharedConfigsType.SPOT_ANIMS.containerId(spotAnimId), SharedConfigsType.SPOT_ANIMS.fileId(spotAnimId), -2016707377));
 		}
-		class525 = new Class525();
-		((Class525) class525).aClass515_6973 = this;
-		((Class525) class525).anInt6969 = -195085151 * i;
+		class525 = new SpotAnimDefinitions();
+		((SpotAnimDefinitions) class525).aClass515_6973 = this;
+		((SpotAnimDefinitions) class525).anInt6969 = -195085151 * spotAnimId;
 		if (null != is)
 			class525.method11226(new RsByteBuffer(is), 91916290);
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.put(class525, (long) i);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
+			((SpotAnimIndexLoader) this).aClass229_5891.put(class525, (long) spotAnimId);
 		}
 		return class525;
 	}
 
 	public void method8846(int i, byte i_2_) {
-		((Class515) this).anInt5892 = 2093543805 * i;
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3859(1433473768);
+		((SpotAnimIndexLoader) this).anInt5892 = 2093543805 * i;
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
+			((SpotAnimIndexLoader) this).aClass229_5890.method3859(1433473768);
 		}
 	}
 
 	public void method8847(int i, int i_3_) {
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3858(i, (byte) 28);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
+			((SpotAnimIndexLoader) this).aClass229_5891.method3858(i, (byte) 28);
 		}
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3858(i, (byte) 23);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
+			((SpotAnimIndexLoader) this).aClass229_5890.method3858(i, (byte) 23);
 		}
 	}
 
 	public void method8848(int i) {
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3859(128096981);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
+			((SpotAnimIndexLoader) this).aClass229_5891.method3859(128096981);
 		}
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3859(-1366287850);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
+			((SpotAnimIndexLoader) this).aClass229_5890.method3859(-1366287850);
 		}
 	}
 
 	public void method8849(short i) {
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3863(1832676736);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
+			((SpotAnimIndexLoader) this).aClass229_5891.method3863(1832676736);
 		}
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3863(1443039032);
-		}
-	}
-
-	public Class525 method8850(int i) {
-		Class525 class525;
-		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
-		}
-		if (null != class525)
-			return class525;
-		byte[] is;
-		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 1920394682), SharedConfigsType.aClass120_1476.fileId(i, -1985592077), -1473089875));
-		}
-		class525 = new Class525();
-		((Class525) class525).aClass515_6973 = this;
-		((Class525) class525).anInt6969 = -195085151 * i;
-		if (null != is)
-			class525.method11226(new RsByteBuffer(is), 1412893995);
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.put(class525, (long) i);
-		}
-		return class525;
-	}
-
-	public Class525 method8851(int i) {
-		Class525 class525;
-		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
-		}
-		if (null != class525)
-			return class525;
-		byte[] is;
-		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 812185949), SharedConfigsType.aClass120_1476.fileId(i, -1835326623), -1380117977));
-		}
-		class525 = new Class525();
-		((Class525) class525).aClass515_6973 = this;
-		((Class525) class525).anInt6969 = -195085151 * i;
-		if (null != is)
-			class525.method11226(new RsByteBuffer(is), 1709092472);
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.put(class525, (long) i);
-		}
-		return class525;
-	}
-
-	public Class525 method8852(int i) {
-		Class525 class525;
-		synchronized (((Class515) this).aClass229_5891) {
-			class525 = ((Class525) ((Class515) this).aClass229_5891.get((long) i));
-		}
-		if (null != class525)
-			return class525;
-		byte[] is;
-		synchronized (((Class515) this).aClass317_5888) {
-			is = (((Class515) this).aClass317_5888.getFile(SharedConfigsType.aClass120_1476.containerId(i, 261335376), SharedConfigsType.aClass120_1476.fileId(i, -2058400457), -1305945625));
-		}
-		class525 = new Class525();
-		((Class525) class525).aClass515_6973 = this;
-		((Class525) class525).anInt6969 = -195085151 * i;
-		if (null != is)
-			class525.method11226(new RsByteBuffer(is), 1391740058);
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.put(class525, (long) i);
-		}
-		return class525;
-	}
-
-	public void method8853(int i) {
-		((Class515) this).anInt5892 = 2093543805 * i;
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3859(-1186397462);
-		}
-	}
-
-	public void method8854(int i) {
-		((Class515) this).anInt5892 = 2093543805 * i;
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3859(-1131986209);
-		}
-	}
-
-	public void method8855(int i) {
-		((Class515) this).anInt5892 = 2093543805 * i;
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3859(2027607840);
-		}
-	}
-
-	public void method8856() {
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3863(1647371679);
-		}
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3863(1334510758);
-		}
-	}
-
-	public void method8857() {
-		synchronized (((Class515) this).aClass229_5891) {
-			((Class515) this).aClass229_5891.method3863(1716987398);
-		}
-		synchronized (((Class515) this).aClass229_5890) {
-			((Class515) this).aClass229_5890.method3863(884024890);
+		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
+			((SpotAnimIndexLoader) this).aClass229_5890.method3863(1443039032);
 		}
 	}
 

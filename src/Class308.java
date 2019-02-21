@@ -4,7 +4,7 @@
 
 public class Class308 {
 	int anInt3611;
-	Class473 aClass473_3612;
+	LinkedNodeList aClass473_3612;
 	int anInt3613;
 	int[][][] anIntArrayArrayArray3614;
 	Class282_Sub16[] aClass282_Sub16Array3615;
@@ -24,7 +24,7 @@ public class Class308 {
 		}
 		((Class308) this).aClass282_Sub16Array3615 = null;
 		((Class308) this).anIntArrayArrayArray3614 = null;
-		((Class308) this).aClass473_3612.method7855((byte) 4);
+		((Class308) this).aClass473_3612.clear();
 		((Class308) this).aClass473_3612 = null;
 	}
 
@@ -35,10 +35,10 @@ public class Class308 {
 				if (null == class282_sub16) {
 					aBool3619 = true;
 					if (-719606331 * ((Class308) this).anInt3617 >= ((Class308) this).anInt3613 * -68706765) {
-						Class282_Sub16 class282_sub16_2_ = (Class282_Sub16) ((Class308) this).aClass473_3612.method7869(-417377867);
+						Class282_Sub16 class282_sub16_2_ = (Class282_Sub16) ((Class308) this).aClass473_3612.getNext();
 						class282_sub16 = new Class282_Sub16(i, (((Class282_Sub16) class282_sub16_2_).anInt7602) * 1598441707);
 						((Class308) this).aClass282_Sub16Array3615[(((Class282_Sub16) class282_sub16_2_).anInt7603 * 1516507657)] = null;
-						class282_sub16_2_.unlink(-371378792);
+						class282_sub16_2_.remove();
 					} else {
 						class282_sub16 = new Class282_Sub16(i, (((Class308) this).anInt3617 * -719606331));
 						((Class308) this).anInt3617 += -661698291;
@@ -46,7 +46,7 @@ public class Class308 {
 					((Class308) this).aClass282_Sub16Array3615[i] = class282_sub16;
 				} else
 					aBool3619 = false;
-				((Class308) this).aClass473_3612.method7873(class282_sub16, (byte) -49);
+				((Class308) this).aClass473_3612.insertFront(class282_sub16);
 				return (((Class308) this).anIntArrayArrayArray3614[(((Class282_Sub16) class282_sub16).anInt7602 * 1598441707)]);
 			}
 			aBool3619 = ((Class308) this).anInt3616 * -280749065 != i;
@@ -76,7 +76,7 @@ public class Class308 {
 
 	Class308(int i, int i_4_, int i_5_) {
 		((Class308) this).anInt3616 = 1013639737;
-		((Class308) this).aClass473_3612 = new Class473();
+		((Class308) this).aClass473_3612 = new LinkedNodeList();
 		aBool3619 = false;
 		((Class308) this).anInt3611 = -1423143035 * i_4_;
 		((Class308) this).anInt3613 = i * 1426885883;
@@ -93,7 +93,7 @@ public class Class308 {
 		}
 		((Class308) this).aClass282_Sub16Array3615 = null;
 		((Class308) this).anIntArrayArrayArray3614 = null;
-		((Class308) this).aClass473_3612.method7855((byte) 4);
+		((Class308) this).aClass473_3612.clear();
 		((Class308) this).aClass473_3612 = null;
 	}
 
@@ -104,10 +104,10 @@ public class Class308 {
 				if (null == class282_sub16) {
 					aBool3619 = true;
 					if (-719606331 * ((Class308) this).anInt3617 >= ((Class308) this).anInt3613 * -68706765) {
-						Class282_Sub16 class282_sub16_6_ = (Class282_Sub16) ((Class308) this).aClass473_3612.method7869(-417377867);
+						Class282_Sub16 class282_sub16_6_ = (Class282_Sub16) ((Class308) this).aClass473_3612.getNext();
 						class282_sub16 = new Class282_Sub16(i, (((Class282_Sub16) class282_sub16_6_).anInt7602) * 1598441707);
 						((Class308) this).aClass282_Sub16Array3615[(((Class282_Sub16) class282_sub16_6_).anInt7603 * 1516507657)] = null;
-						class282_sub16_6_.unlink(-371378792);
+						class282_sub16_6_.remove();
 					} else {
 						class282_sub16 = new Class282_Sub16(i, (((Class308) this).anInt3617 * -719606331));
 						((Class308) this).anInt3617 += -661698291;
@@ -115,7 +115,7 @@ public class Class308 {
 					((Class308) this).aClass282_Sub16Array3615[i] = class282_sub16;
 				} else
 					aBool3619 = false;
-				((Class308) this).aClass473_3612.method7873(class282_sub16, (byte) -55);
+				((Class308) this).aClass473_3612.insertFront(class282_sub16);
 				return (((Class308) this).anIntArrayArrayArray3614[(((Class282_Sub16) class282_sub16).anInt7602 * 1598441707)]);
 			}
 			aBool3619 = ((Class308) this).anInt3616 * -280749065 != i;
@@ -144,7 +144,7 @@ public class Class308 {
 		}
 		((Class308) this).aClass282_Sub16Array3615 = null;
 		((Class308) this).anIntArrayArrayArray3614 = null;
-		((Class308) this).aClass473_3612.method7855((byte) 4);
+		((Class308) this).aClass473_3612.clear();
 		((Class308) this).aClass473_3612 = null;
 	}
 

@@ -12,7 +12,7 @@ public class Class283 {
 		int i = class317.getArchiveId(string, 1601632799);
 		if (-1 == i)
 			return new Class283(0);
-		int[] is = class317.method5616(i, -1665281400);
+		int[] is = class317.getValidFileIds(i, -1665281400);
 		Class283 class283 = new Class283(is.length);
 		int i_0_ = 0;
 		int i_1_ = 0;
@@ -35,7 +35,7 @@ public class Class283 {
 		int i = class317.getArchiveId(string, -1721859945);
 		if (-1 == i)
 			return new Class283(0);
-		int[] is = class317.method5616(i, -1814676381);
+		int[] is = class317.getValidFileIds(i, -1814676381);
 		Class283 class283 = new Class283(is.length);
 		int i_5_ = 0;
 		int i_6_ = 0;
@@ -64,7 +64,7 @@ public class Class283 {
 		int i = class317.getArchiveId(string, 1416579061);
 		if (-1 == i)
 			return new Class283(0);
-		int[] is = class317.method5616(i, -731838186);
+		int[] is = class317.getValidFileIds(i, -731838186);
 		Class283 class283 = new Class283(is.length);
 		int i_10_ = 0;
 		int i_11_ = 0;

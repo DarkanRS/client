@@ -201,7 +201,7 @@ public class Class427 {
 
 	public static int method7189(RsByteBuffer class282_sub35, String string, int i) {
 		int i_14_ = -1990677291 * class282_sub35.index;
-		byte[] is = Class473.method7885(string, (byte) -70);
+		byte[] is = LinkedNodeList.method7885(string, (byte) -70);
 		class282_sub35.method13076(is.length, 2140409411);
 		class282_sub35.index += Class113.aClass117_1234.method1971(is, 0, is.length, (class282_sub35.buffer), (class282_sub35.index * -1990677291), -130174544) * -1115476867;
 		return class282_sub35.index * -1990677291 - i_14_;

@@ -169,13 +169,13 @@ public class Defaults7Loader {
 		OutgoingLoginPacket.method6313(class118, class98, class527, 435475117);
 	}
 
-	public static void method8751(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_2_, int i) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_2_.aClass282_Sub50_8118;
+	public static void method8751(CacheableNode class282_sub50, CacheableNode class282_sub50_2_, int i) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_2_.current;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_2_;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
 	public static MeshRasterizer method8752(GraphicalRenderer class505, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {

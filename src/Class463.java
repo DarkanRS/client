@@ -85,8 +85,8 @@ public class Class463 {
 	}
 
 	static final void method7727(Animable class521_sub1_sub1_sub2, int i) {
-		Class456 class456 = class521_sub1_sub1_sub2.aClass456_10338;
-		if ((1277328401 * class521_sub1_sub1_sub2.anInt10345 == client.cycles * -1809259861) || !class456.method7564(-1584612884) || class456.method7585(1, -2087063879)) {
+		Animation class456 = class521_sub1_sub1_sub2.currentAnimation;
+		if ((1277328401 * class521_sub1_sub1_sub2.anInt10345 == client.cycles * -1809259861) || !class456.hasDefs() || class456.method7585(1, -2087063879)) {
 			int i_6_ = (class521_sub1_sub1_sub2.anInt10345 * 1277328401 - class521_sub1_sub1_sub2.anInt10342 * 403949281);
 			int i_7_ = (-1809259861 * client.cycles - 403949281 * class521_sub1_sub1_sub2.anInt10342);
 			int i_8_ = (1204164096 * class521_sub1_sub1_sub2.anInt10326 + class521_sub1_sub1_sub2.getSize(828768449) * 256);

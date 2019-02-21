@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class InventoryDef extends Class282_Sub50 implements Interface46 {
+public class InventoryDef extends CacheableNode implements Interface46 {
 	public int[] anIntArray10274;
 	public int[] anIntArray10275;
 	public int anInt10276 = 0;

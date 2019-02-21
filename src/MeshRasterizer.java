@@ -230,18 +230,18 @@ public abstract class MeshRasterizer {
 
 	public abstract void ia(int i, int i_64_, int i_65_);
 
-	public final void method11258(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_, boolean bool, int[] is) {
+	public final void method11258(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_66_, int i_67_, int i_68_, int i_69_, int i_70_, int i_71_, boolean bool, int[] is) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				Class95 class95_72_ = null;
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				AnimationSkin class95_72_ = null;
 				if (class282_sub50_sub13_66_ != null) {
-					class95_72_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_66_).aClass95Array9689[i_67_]);
-					if (((Class95) class95_72_).aClass282_Sub12_978 != class282_sub12)
+					class95_72_ = (((AnimationSkeleton) class282_sub50_sub13_66_).animationSkins[i_67_]);
+					if (((AnimationSkin) class95_72_).skinNodeList != class282_sub12)
 						class95_72_ = null;
 				}
 				method11266(class282_sub12, class95, class95_72_, i_68_, i_69_, i_70_, null, false, bool, i_71_, is);
@@ -277,18 +277,18 @@ public abstract class MeshRasterizer {
 
 	abstract void method11261();
 
-	public final void method11262(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_83_, int i_84_, int i_85_, int i_86_, int i_87_, boolean bool) {
+	public final void method11262(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_83_, int i_84_, int i_85_, int i_86_, int i_87_, boolean bool) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				Class95 class95_88_ = null;
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				AnimationSkin class95_88_ = null;
 				if (class282_sub50_sub13_83_ != null) {
-					class95_88_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_83_).aClass95Array9689[i_84_]);
-					if (((Class95) class95_88_).aClass282_Sub12_978 != class282_sub12)
+					class95_88_ = (((AnimationSkeleton) class282_sub50_sub13_83_).animationSkins[i_84_]);
+					if (((AnimationSkin) class95_88_).skinNodeList != class282_sub12)
 						class95_88_ = null;
 				}
 				method11266(class282_sub12, class95, class95_88_, i_85_, i_86_, i_87_, null, false, bool, 65535, null);
@@ -300,7 +300,7 @@ public abstract class MeshRasterizer {
 
 	public abstract void method11263(Matrix44Var class294, int i, boolean bool);
 
-	public final void method11264(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_89_, int i_90_, int i_91_, int i_92_, Class282_Sub50_Sub13 class282_sub50_sub13_93_, int i_94_, Class282_Sub50_Sub13 class282_sub50_sub13_95_, int i_96_, int i_97_, int i_98_, boolean[] bools, boolean bool) {
+	public final void method11264(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_89_, int i_90_, int i_91_, int i_92_, AnimationSkeleton class282_sub50_sub13_93_, int i_94_, AnimationSkeleton class282_sub50_sub13_95_, int i_96_, int i_97_, int i_98_, boolean[] bools, boolean bool) {
 		if (i != -1) {
 			if (bools == null || i_94_ == -1)
 				method11262(class282_sub50_sub13, i, class282_sub50_sub13_89_, i_90_, i_91_, i_92_, 0, bool);
@@ -309,24 +309,24 @@ public abstract class MeshRasterizer {
 				if (!ea())
 					method11261();
 				else {
-					Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-					Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-					Class95 class95_99_ = null;
+					AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+					AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+					AnimationSkin class95_99_ = null;
 					if (class282_sub50_sub13_89_ != null) {
-						class95_99_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_89_).aClass95Array9689[i_90_]);
-						if (((Class95) class95_99_).aClass282_Sub12_978 != class282_sub12)
+						class95_99_ = (((AnimationSkeleton) class282_sub50_sub13_89_).animationSkins[i_90_]);
+						if (((AnimationSkin) class95_99_).skinNodeList != class282_sub12)
 							class95_99_ = null;
 					}
 					method11266(class282_sub12, class95, class95_99_, i_91_, i_92_, 0, bools, false, bool, 65535, null);
-					Class95 class95_100_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_93_).aClass95Array9689[i_94_]);
-					Class95 class95_101_ = null;
+					AnimationSkin class95_100_ = (((AnimationSkeleton) class282_sub50_sub13_93_).animationSkins[i_94_]);
+					AnimationSkin class95_101_ = null;
 					if (class282_sub50_sub13_95_ != null) {
-						class95_101_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_95_).aClass95Array9689[i_96_]);
-						if (((Class95) class95_101_).aClass282_Sub12_978 != class282_sub12)
+						class95_101_ = (((AnimationSkeleton) class282_sub50_sub13_95_).animationSkins[i_96_]);
+						if (((AnimationSkin) class95_101_).skinNodeList != class282_sub12)
 							class95_101_ = null;
 					}
 					method11268(0, new int[0], 0, 0, 0, 0, bool);
-					method11266(((Class95) class95_100_).aClass282_Sub12_978, class95_100_, class95_101_, i_97_, i_98_, 0, bools, true, bool, 65535, null);
+					method11266(((AnimationSkin) class95_100_).skinNodeList, class95_100_, class95_101_, i_97_, i_98_, 0, bools, true, bool, 65535, null);
 					ka();
 					method11261();
 				}
@@ -378,36 +378,36 @@ public abstract class MeshRasterizer {
 			method11268(i, is, i_102_, i_103_, i_104_, i_105_, bool);
 	}
 
-	void method11266(Class282_Sub12 class282_sub12, Class95 class95, Class95 class95_114_, int i, int i_115_, int i_116_, boolean[] bools, boolean bool, boolean bool_117_, int i_118_, int[] is) {
+	void method11266(AnimationSkinNode class282_sub12, AnimationSkin class95, AnimationSkin class95_114_, int i, int i_115_, int i_116_, boolean[] bools, boolean bool, boolean bool_117_, int i_118_, int[] is) {
 		if (class95_114_ == null || i == 0) {
-			for (int i_119_ = 0; i_119_ < ((Class95) class95).anInt980; i_119_++) {
-				short i_120_ = ((Class95) class95).aShortArray987[i_119_];
-				if (bools == null || bools[i_120_] == bool || (((Class282_Sub12) class282_sub12).anIntArray7562[i_120_]) == 0) {
-					short i_121_ = ((Class95) class95).aShortArray984[i_119_];
+			for (int i_119_ = 0; i_119_ < ((AnimationSkin) class95).anInt980; i_119_++) {
+				short i_120_ = ((AnimationSkin) class95).aShortArray987[i_119_];
+				if (bools == null || bools[i_120_] == bool || (((AnimationSkinNode) class282_sub12).anIntArray7562[i_120_]) == 0) {
+					short i_121_ = ((AnimationSkin) class95).aShortArray984[i_119_];
 					if (i_121_ != -1)
-						method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_121_]), 0, 0, 0, i_116_, bool_117_, i_118_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_121_]), is);
-					method11267((((Class282_Sub12) class282_sub12).anIntArray7562[i_120_]), (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_120_]), ((Class95) class95).aShortArray981[i_119_], ((Class95) class95).aShortArray982[i_119_], ((Class95) class95).aShortArray983[i_119_], i_116_, bool_117_, i_118_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_120_]), is);
+						method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_121_]), 0, 0, 0, i_116_, bool_117_, i_118_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_121_]), is);
+					method11267((((AnimationSkinNode) class282_sub12).anIntArray7562[i_120_]), (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_120_]), ((AnimationSkin) class95).aShortArray981[i_119_], ((AnimationSkin) class95).aShortArray982[i_119_], ((AnimationSkin) class95).aShortArray983[i_119_], i_116_, bool_117_, i_118_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_120_]), is);
 				}
 			}
 		} else {
 			int i_122_ = 0;
 			int i_123_ = 0;
-			for (int i_124_ = 0; (i_124_ < ((Class282_Sub12) class282_sub12).anInt7564 * 1693890341); i_124_++) {
+			for (int i_124_ = 0; (i_124_ < ((AnimationSkinNode) class282_sub12).anInt7564 * 1693890341); i_124_++) {
 				boolean bool_125_ = false;
-				if (i_122_ < ((Class95) class95).anInt980 && ((Class95) class95).aShortArray987[i_122_] == i_124_)
+				if (i_122_ < ((AnimationSkin) class95).anInt980 && ((AnimationSkin) class95).aShortArray987[i_122_] == i_124_)
 					bool_125_ = true;
 				boolean bool_126_ = false;
-				if (i_123_ < ((Class95) class95_114_).anInt980 && (((Class95) class95_114_).aShortArray987[i_123_] == i_124_))
+				if (i_123_ < ((AnimationSkin) class95_114_).anInt980 && (((AnimationSkin) class95_114_).aShortArray987[i_123_] == i_124_))
 					bool_126_ = true;
 				if (bool_125_ || bool_126_) {
-					if (bools != null && bools[i_124_] != bool && (((Class282_Sub12) class282_sub12).anIntArray7562[i_124_]) != 0) {
+					if (bools != null && bools[i_124_] != bool && (((AnimationSkinNode) class282_sub12).anIntArray7562[i_124_]) != 0) {
 						if (bool_125_)
 							i_122_++;
 						if (bool_126_)
 							i_123_++;
 					} else {
 						int i_127_ = 0;
-						int i_128_ = (((Class282_Sub12) class282_sub12).anIntArray7562[i_124_]);
+						int i_128_ = (((AnimationSkinNode) class282_sub12).anIntArray7562[i_124_]);
 						if (i_128_ == 3 || i_128_ == 10)
 							i_127_ = 128;
 						int i_129_;
@@ -416,11 +416,11 @@ public abstract class MeshRasterizer {
 						short i_132_;
 						byte i_133_;
 						if (bool_125_) {
-							i_129_ = ((Class95) class95).aShortArray981[i_122_];
-							i_130_ = ((Class95) class95).aShortArray982[i_122_];
-							i_131_ = ((Class95) class95).aShortArray983[i_122_];
-							i_132_ = ((Class95) class95).aShortArray984[i_122_];
-							i_133_ = ((Class95) class95).aByteArray985[i_122_];
+							i_129_ = ((AnimationSkin) class95).aShortArray981[i_122_];
+							i_130_ = ((AnimationSkin) class95).aShortArray982[i_122_];
+							i_131_ = ((AnimationSkin) class95).aShortArray983[i_122_];
+							i_132_ = ((AnimationSkin) class95).aShortArray984[i_122_];
+							i_133_ = ((AnimationSkin) class95).aByteArray985[i_122_];
 							i_122_++;
 						} else {
 							i_129_ = i_127_;
@@ -435,11 +435,11 @@ public abstract class MeshRasterizer {
 						short i_137_;
 						byte i_138_;
 						if (bool_126_) {
-							i_134_ = (((Class95) class95_114_).aShortArray981[i_123_]);
-							i_135_ = (((Class95) class95_114_).aShortArray982[i_123_]);
-							i_136_ = (((Class95) class95_114_).aShortArray983[i_123_]);
-							i_137_ = (((Class95) class95_114_).aShortArray984[i_123_]);
-							i_138_ = (((Class95) class95_114_).aByteArray985[i_123_]);
+							i_134_ = (((AnimationSkin) class95_114_).aShortArray981[i_123_]);
+							i_135_ = (((AnimationSkin) class95_114_).aShortArray982[i_123_]);
+							i_136_ = (((AnimationSkin) class95_114_).aShortArray983[i_123_]);
+							i_137_ = (((AnimationSkin) class95_114_).aShortArray984[i_123_]);
+							i_138_ = (((AnimationSkin) class95_114_).aByteArray985[i_123_]);
 							i_123_++;
 						} else {
 							i_134_ = i_127_;
@@ -488,10 +488,10 @@ public abstract class MeshRasterizer {
 							i_141_ = i_131_ + (i_136_ - i_131_) * i / i_115_;
 						}
 						if (i_132_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_132_]), 0, 0, 0, i_116_, bool_117_, (i_118_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_132_])), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_132_]), 0, 0, 0, i_116_, bool_117_, (i_118_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_132_])), is);
 						else if (i_137_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_137_]), 0, 0, 0, i_116_, bool_117_, (i_118_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_137_])), is);
-						method11267(i_128_, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_124_]), i_139_, i_140_, i_141_, i_116_, bool_117_, i_118_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_124_]), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_137_]), 0, 0, 0, i_116_, bool_117_, (i_118_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_137_])), is);
+						method11267(i_128_, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_124_]), i_139_, i_140_, i_141_, i_116_, bool_117_, i_118_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_124_]), is);
 					}
 				}
 			}
@@ -755,20 +755,20 @@ public abstract class MeshRasterizer {
 
 	public abstract void be();
 
-	public final void method11284(Class282_Sub50_Sub13 class282_sub50_sub13, int i) {
+	public final void method11284(AnimationSkeleton class282_sub50_sub13, int i) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				for (int i_248_ = 0; i_248_ < ((Class95) class95).anInt980; i_248_++) {
-					short i_249_ = ((Class95) class95).aShortArray987[i_248_];
-					if (((Class282_Sub12) class282_sub12).aBoolArray7563[i_249_]) {
-						if (((Class95) class95).aShortArray984[i_248_] != -1)
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				for (int i_248_ = 0; i_248_ < ((AnimationSkin) class95).anInt980; i_248_++) {
+					short i_249_ = ((AnimationSkin) class95).aShortArray987[i_248_];
+					if (((AnimationSkinNode) class282_sub12).aBoolArray7563[i_249_]) {
+						if (((AnimationSkin) class95).aShortArray984[i_248_] != -1)
 							w(0, 0, 0, 0);
-						w((((Class282_Sub12) class282_sub12).anIntArray7562[i_249_]), ((Class95) class95).aShortArray981[i_248_], ((Class95) class95).aShortArray982[i_248_], ((Class95) class95).aShortArray983[i_248_]);
+						w((((AnimationSkinNode) class282_sub12).anIntArray7562[i_249_]), ((AnimationSkin) class95).aShortArray981[i_248_], ((AnimationSkin) class95).aShortArray982[i_248_], ((AnimationSkin) class95).aShortArray983[i_248_]);
 					}
 				}
 				ka();
@@ -1647,18 +1647,18 @@ public abstract class MeshRasterizer {
 
 	public abstract void by();
 
-	public final void method11322(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_510_, int i_511_, int i_512_, int i_513_, int i_514_, boolean bool) {
+	public final void method11322(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_510_, int i_511_, int i_512_, int i_513_, int i_514_, boolean bool) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				Class95 class95_515_ = null;
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				AnimationSkin class95_515_ = null;
 				if (class282_sub50_sub13_510_ != null) {
-					class95_515_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_510_).aClass95Array9689[i_511_]);
-					if (((Class95) class95_515_).aClass282_Sub12_978 != class282_sub12)
+					class95_515_ = (((AnimationSkeleton) class282_sub50_sub13_510_).animationSkins[i_511_]);
+					if (((AnimationSkin) class95_515_).skinNodeList != class282_sub12)
 						class95_515_ = null;
 				}
 				method11266(class282_sub12, class95, class95_515_, i_512_, i_513_, i_514_, null, false, bool, 65535, null);
@@ -1668,18 +1668,18 @@ public abstract class MeshRasterizer {
 		}
 	}
 
-	public final void method11323(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_516_, int i_517_, int i_518_, int i_519_, int i_520_, int i_521_, boolean bool, int[] is) {
+	public final void method11323(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_516_, int i_517_, int i_518_, int i_519_, int i_520_, int i_521_, boolean bool, int[] is) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				Class95 class95_522_ = null;
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				AnimationSkin class95_522_ = null;
 				if (class282_sub50_sub13_516_ != null) {
-					class95_522_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_516_).aClass95Array9689[i_517_]);
-					if (((Class95) class95_522_).aClass282_Sub12_978 != class282_sub12)
+					class95_522_ = (((AnimationSkeleton) class282_sub50_sub13_516_).animationSkins[i_517_]);
+					if (((AnimationSkin) class95_522_).skinNodeList != class282_sub12)
 						class95_522_ = null;
 				}
 				method11266(class282_sub12, class95, class95_522_, i_518_, i_519_, i_520_, null, false, bool, i_521_, is);
@@ -1689,18 +1689,18 @@ public abstract class MeshRasterizer {
 		}
 	}
 
-	public final void method11324(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_523_, int i_524_, int i_525_, int i_526_, int i_527_, int i_528_, boolean bool, int[] is) {
+	public final void method11324(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_523_, int i_524_, int i_525_, int i_526_, int i_527_, int i_528_, boolean bool, int[] is) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				Class95 class95_529_ = null;
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				AnimationSkin class95_529_ = null;
 				if (class282_sub50_sub13_523_ != null) {
-					class95_529_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_523_).aClass95Array9689[i_524_]);
-					if (((Class95) class95_529_).aClass282_Sub12_978 != class282_sub12)
+					class95_529_ = (((AnimationSkeleton) class282_sub50_sub13_523_).animationSkins[i_524_]);
+					if (((AnimationSkin) class95_529_).skinNodeList != class282_sub12)
 						class95_529_ = null;
 				}
 				method11266(class282_sub12, class95, class95_529_, i_525_, i_526_, i_527_, null, false, bool, i_528_, is);
@@ -1710,7 +1710,7 @@ public abstract class MeshRasterizer {
 		}
 	}
 
-	public final void method11325(Class282_Sub50_Sub13 class282_sub50_sub13, int i, Class282_Sub50_Sub13 class282_sub50_sub13_530_, int i_531_, int i_532_, int i_533_, Class282_Sub50_Sub13 class282_sub50_sub13_534_, int i_535_, Class282_Sub50_Sub13 class282_sub50_sub13_536_, int i_537_, int i_538_, int i_539_, boolean[] bools, boolean bool) {
+	public final void method11325(AnimationSkeleton class282_sub50_sub13, int i, AnimationSkeleton class282_sub50_sub13_530_, int i_531_, int i_532_, int i_533_, AnimationSkeleton class282_sub50_sub13_534_, int i_535_, AnimationSkeleton class282_sub50_sub13_536_, int i_537_, int i_538_, int i_539_, boolean[] bools, boolean bool) {
 		if (i != -1) {
 			if (bools == null || i_535_ == -1)
 				method11262(class282_sub50_sub13, i, class282_sub50_sub13_530_, i_531_, i_532_, i_533_, 0, bool);
@@ -1719,24 +1719,24 @@ public abstract class MeshRasterizer {
 				if (!ea())
 					method11261();
 				else {
-					Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-					Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-					Class95 class95_540_ = null;
+					AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+					AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+					AnimationSkin class95_540_ = null;
 					if (class282_sub50_sub13_530_ != null) {
-						class95_540_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_530_).aClass95Array9689[i_531_]);
-						if (((Class95) class95_540_).aClass282_Sub12_978 != class282_sub12)
+						class95_540_ = (((AnimationSkeleton) class282_sub50_sub13_530_).animationSkins[i_531_]);
+						if (((AnimationSkin) class95_540_).skinNodeList != class282_sub12)
 							class95_540_ = null;
 					}
 					method11266(class282_sub12, class95, class95_540_, i_532_, i_533_, 0, bools, false, bool, 65535, null);
-					Class95 class95_541_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_534_).aClass95Array9689[i_535_]);
-					Class95 class95_542_ = null;
+					AnimationSkin class95_541_ = (((AnimationSkeleton) class282_sub50_sub13_534_).animationSkins[i_535_]);
+					AnimationSkin class95_542_ = null;
 					if (class282_sub50_sub13_536_ != null) {
-						class95_542_ = (((Class282_Sub50_Sub13) class282_sub50_sub13_536_).aClass95Array9689[i_537_]);
-						if (((Class95) class95_542_).aClass282_Sub12_978 != class282_sub12)
+						class95_542_ = (((AnimationSkeleton) class282_sub50_sub13_536_).animationSkins[i_537_]);
+						if (((AnimationSkin) class95_542_).skinNodeList != class282_sub12)
 							class95_542_ = null;
 					}
 					method11268(0, new int[0], 0, 0, 0, 0, bool);
-					method11266(((Class95) class95_541_).aClass282_Sub12_978, class95_541_, class95_542_, i_538_, i_539_, 0, bools, true, bool, 65535, null);
+					method11266(((AnimationSkin) class95_541_).skinNodeList, class95_541_, class95_542_, i_538_, i_539_, 0, bools, true, bool, 65535, null);
 					ka();
 					method11261();
 				}
@@ -1744,20 +1744,20 @@ public abstract class MeshRasterizer {
 		}
 	}
 
-	public final void method11326(Class282_Sub50_Sub13 class282_sub50_sub13, int i) {
+	public final void method11326(AnimationSkeleton class282_sub50_sub13, int i) {
 		if (i != -1) {
 			method11260();
 			if (!ea())
 				method11261();
 			else {
-				Class95 class95 = (((Class282_Sub50_Sub13) class282_sub50_sub13).aClass95Array9689[i]);
-				Class282_Sub12 class282_sub12 = ((Class95) class95).aClass282_Sub12_978;
-				for (int i_543_ = 0; i_543_ < ((Class95) class95).anInt980; i_543_++) {
-					short i_544_ = ((Class95) class95).aShortArray987[i_543_];
-					if (((Class282_Sub12) class282_sub12).aBoolArray7563[i_544_]) {
-						if (((Class95) class95).aShortArray984[i_543_] != -1)
+				AnimationSkin class95 = (((AnimationSkeleton) class282_sub50_sub13).animationSkins[i]);
+				AnimationSkinNode class282_sub12 = ((AnimationSkin) class95).skinNodeList;
+				for (int i_543_ = 0; i_543_ < ((AnimationSkin) class95).anInt980; i_543_++) {
+					short i_544_ = ((AnimationSkin) class95).aShortArray987[i_543_];
+					if (((AnimationSkinNode) class282_sub12).aBoolArray7563[i_544_]) {
+						if (((AnimationSkin) class95).aShortArray984[i_543_] != -1)
 							w(0, 0, 0, 0);
-						w((((Class282_Sub12) class282_sub12).anIntArray7562[i_544_]), ((Class95) class95).aShortArray981[i_543_], ((Class95) class95).aShortArray982[i_543_], ((Class95) class95).aShortArray983[i_543_]);
+						w((((AnimationSkinNode) class282_sub12).anIntArray7562[i_544_]), ((AnimationSkin) class95).aShortArray981[i_543_], ((AnimationSkin) class95).aShortArray982[i_543_], ((AnimationSkin) class95).aShortArray983[i_543_]);
 					}
 				}
 				ka();
@@ -1766,36 +1766,36 @@ public abstract class MeshRasterizer {
 		}
 	}
 
-	void method11327(Class282_Sub12 class282_sub12, Class95 class95, Class95 class95_545_, int i, int i_546_, int i_547_, boolean[] bools, boolean bool, boolean bool_548_, int i_549_, int[] is) {
+	void method11327(AnimationSkinNode class282_sub12, AnimationSkin class95, AnimationSkin class95_545_, int i, int i_546_, int i_547_, boolean[] bools, boolean bool, boolean bool_548_, int i_549_, int[] is) {
 		if (class95_545_ == null || i == 0) {
-			for (int i_550_ = 0; i_550_ < ((Class95) class95).anInt980; i_550_++) {
-				short i_551_ = ((Class95) class95).aShortArray987[i_550_];
-				if (bools == null || bools[i_551_] == bool || (((Class282_Sub12) class282_sub12).anIntArray7562[i_551_]) == 0) {
-					short i_552_ = ((Class95) class95).aShortArray984[i_550_];
+			for (int i_550_ = 0; i_550_ < ((AnimationSkin) class95).anInt980; i_550_++) {
+				short i_551_ = ((AnimationSkin) class95).aShortArray987[i_550_];
+				if (bools == null || bools[i_551_] == bool || (((AnimationSkinNode) class282_sub12).anIntArray7562[i_551_]) == 0) {
+					short i_552_ = ((AnimationSkin) class95).aShortArray984[i_550_];
 					if (i_552_ != -1)
-						method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_552_]), 0, 0, 0, i_547_, bool_548_, i_549_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_552_]), is);
-					method11267((((Class282_Sub12) class282_sub12).anIntArray7562[i_551_]), (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_551_]), ((Class95) class95).aShortArray981[i_550_], ((Class95) class95).aShortArray982[i_550_], ((Class95) class95).aShortArray983[i_550_], i_547_, bool_548_, i_549_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_551_]), is);
+						method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_552_]), 0, 0, 0, i_547_, bool_548_, i_549_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_552_]), is);
+					method11267((((AnimationSkinNode) class282_sub12).anIntArray7562[i_551_]), (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_551_]), ((AnimationSkin) class95).aShortArray981[i_550_], ((AnimationSkin) class95).aShortArray982[i_550_], ((AnimationSkin) class95).aShortArray983[i_550_], i_547_, bool_548_, i_549_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_551_]), is);
 				}
 			}
 		} else {
 			int i_553_ = 0;
 			int i_554_ = 0;
-			for (int i_555_ = 0; (i_555_ < ((Class282_Sub12) class282_sub12).anInt7564 * 1693890341); i_555_++) {
+			for (int i_555_ = 0; (i_555_ < ((AnimationSkinNode) class282_sub12).anInt7564 * 1693890341); i_555_++) {
 				boolean bool_556_ = false;
-				if (i_553_ < ((Class95) class95).anInt980 && ((Class95) class95).aShortArray987[i_553_] == i_555_)
+				if (i_553_ < ((AnimationSkin) class95).anInt980 && ((AnimationSkin) class95).aShortArray987[i_553_] == i_555_)
 					bool_556_ = true;
 				boolean bool_557_ = false;
-				if (i_554_ < ((Class95) class95_545_).anInt980 && (((Class95) class95_545_).aShortArray987[i_554_] == i_555_))
+				if (i_554_ < ((AnimationSkin) class95_545_).anInt980 && (((AnimationSkin) class95_545_).aShortArray987[i_554_] == i_555_))
 					bool_557_ = true;
 				if (bool_556_ || bool_557_) {
-					if (bools != null && bools[i_555_] != bool && (((Class282_Sub12) class282_sub12).anIntArray7562[i_555_]) != 0) {
+					if (bools != null && bools[i_555_] != bool && (((AnimationSkinNode) class282_sub12).anIntArray7562[i_555_]) != 0) {
 						if (bool_556_)
 							i_553_++;
 						if (bool_557_)
 							i_554_++;
 					} else {
 						int i_558_ = 0;
-						int i_559_ = (((Class282_Sub12) class282_sub12).anIntArray7562[i_555_]);
+						int i_559_ = (((AnimationSkinNode) class282_sub12).anIntArray7562[i_555_]);
 						if (i_559_ == 3 || i_559_ == 10)
 							i_558_ = 128;
 						int i_560_;
@@ -1804,11 +1804,11 @@ public abstract class MeshRasterizer {
 						short i_563_;
 						byte i_564_;
 						if (bool_556_) {
-							i_560_ = ((Class95) class95).aShortArray981[i_553_];
-							i_561_ = ((Class95) class95).aShortArray982[i_553_];
-							i_562_ = ((Class95) class95).aShortArray983[i_553_];
-							i_563_ = ((Class95) class95).aShortArray984[i_553_];
-							i_564_ = ((Class95) class95).aByteArray985[i_553_];
+							i_560_ = ((AnimationSkin) class95).aShortArray981[i_553_];
+							i_561_ = ((AnimationSkin) class95).aShortArray982[i_553_];
+							i_562_ = ((AnimationSkin) class95).aShortArray983[i_553_];
+							i_563_ = ((AnimationSkin) class95).aShortArray984[i_553_];
+							i_564_ = ((AnimationSkin) class95).aByteArray985[i_553_];
 							i_553_++;
 						} else {
 							i_560_ = i_558_;
@@ -1823,11 +1823,11 @@ public abstract class MeshRasterizer {
 						short i_568_;
 						byte i_569_;
 						if (bool_557_) {
-							i_565_ = (((Class95) class95_545_).aShortArray981[i_554_]);
-							i_566_ = (((Class95) class95_545_).aShortArray982[i_554_]);
-							i_567_ = (((Class95) class95_545_).aShortArray983[i_554_]);
-							i_568_ = (((Class95) class95_545_).aShortArray984[i_554_]);
-							i_569_ = (((Class95) class95_545_).aByteArray985[i_554_]);
+							i_565_ = (((AnimationSkin) class95_545_).aShortArray981[i_554_]);
+							i_566_ = (((AnimationSkin) class95_545_).aShortArray982[i_554_]);
+							i_567_ = (((AnimationSkin) class95_545_).aShortArray983[i_554_]);
+							i_568_ = (((AnimationSkin) class95_545_).aShortArray984[i_554_]);
+							i_569_ = (((AnimationSkin) class95_545_).aByteArray985[i_554_]);
 							i_554_++;
 						} else {
 							i_565_ = i_558_;
@@ -1876,46 +1876,46 @@ public abstract class MeshRasterizer {
 							i_572_ = i_562_ + (i_567_ - i_562_) * i / i_546_;
 						}
 						if (i_563_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_563_]), 0, 0, 0, i_547_, bool_548_, (i_549_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_563_])), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_563_]), 0, 0, 0, i_547_, bool_548_, (i_549_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_563_])), is);
 						else if (i_568_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_568_]), 0, 0, 0, i_547_, bool_548_, (i_549_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_568_])), is);
-						method11267(i_559_, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_555_]), i_570_, i_571_, i_572_, i_547_, bool_548_, i_549_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_555_]), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_568_]), 0, 0, 0, i_547_, bool_548_, (i_549_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_568_])), is);
+						method11267(i_559_, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_555_]), i_570_, i_571_, i_572_, i_547_, bool_548_, i_549_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_555_]), is);
 					}
 				}
 			}
 		}
 	}
 
-	void method11328(Class282_Sub12 class282_sub12, Class95 class95, Class95 class95_578_, int i, int i_579_, int i_580_, boolean[] bools, boolean bool, boolean bool_581_, int i_582_, int[] is) {
+	void method11328(AnimationSkinNode class282_sub12, AnimationSkin class95, AnimationSkin class95_578_, int i, int i_579_, int i_580_, boolean[] bools, boolean bool, boolean bool_581_, int i_582_, int[] is) {
 		if (class95_578_ == null || i == 0) {
-			for (int i_583_ = 0; i_583_ < ((Class95) class95).anInt980; i_583_++) {
-				short i_584_ = ((Class95) class95).aShortArray987[i_583_];
-				if (bools == null || bools[i_584_] == bool || (((Class282_Sub12) class282_sub12).anIntArray7562[i_584_]) == 0) {
-					short i_585_ = ((Class95) class95).aShortArray984[i_583_];
+			for (int i_583_ = 0; i_583_ < ((AnimationSkin) class95).anInt980; i_583_++) {
+				short i_584_ = ((AnimationSkin) class95).aShortArray987[i_583_];
+				if (bools == null || bools[i_584_] == bool || (((AnimationSkinNode) class282_sub12).anIntArray7562[i_584_]) == 0) {
+					short i_585_ = ((AnimationSkin) class95).aShortArray984[i_583_];
 					if (i_585_ != -1)
-						method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_585_]), 0, 0, 0, i_580_, bool_581_, i_582_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_585_]), is);
-					method11267((((Class282_Sub12) class282_sub12).anIntArray7562[i_584_]), (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_584_]), ((Class95) class95).aShortArray981[i_583_], ((Class95) class95).aShortArray982[i_583_], ((Class95) class95).aShortArray983[i_583_], i_580_, bool_581_, i_582_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_584_]), is);
+						method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_585_]), 0, 0, 0, i_580_, bool_581_, i_582_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_585_]), is);
+					method11267((((AnimationSkinNode) class282_sub12).anIntArray7562[i_584_]), (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_584_]), ((AnimationSkin) class95).aShortArray981[i_583_], ((AnimationSkin) class95).aShortArray982[i_583_], ((AnimationSkin) class95).aShortArray983[i_583_], i_580_, bool_581_, i_582_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_584_]), is);
 				}
 			}
 		} else {
 			int i_586_ = 0;
 			int i_587_ = 0;
-			for (int i_588_ = 0; (i_588_ < ((Class282_Sub12) class282_sub12).anInt7564 * 1693890341); i_588_++) {
+			for (int i_588_ = 0; (i_588_ < ((AnimationSkinNode) class282_sub12).anInt7564 * 1693890341); i_588_++) {
 				boolean bool_589_ = false;
-				if (i_586_ < ((Class95) class95).anInt980 && ((Class95) class95).aShortArray987[i_586_] == i_588_)
+				if (i_586_ < ((AnimationSkin) class95).anInt980 && ((AnimationSkin) class95).aShortArray987[i_586_] == i_588_)
 					bool_589_ = true;
 				boolean bool_590_ = false;
-				if (i_587_ < ((Class95) class95_578_).anInt980 && (((Class95) class95_578_).aShortArray987[i_587_] == i_588_))
+				if (i_587_ < ((AnimationSkin) class95_578_).anInt980 && (((AnimationSkin) class95_578_).aShortArray987[i_587_] == i_588_))
 					bool_590_ = true;
 				if (bool_589_ || bool_590_) {
-					if (bools != null && bools[i_588_] != bool && (((Class282_Sub12) class282_sub12).anIntArray7562[i_588_]) != 0) {
+					if (bools != null && bools[i_588_] != bool && (((AnimationSkinNode) class282_sub12).anIntArray7562[i_588_]) != 0) {
 						if (bool_589_)
 							i_586_++;
 						if (bool_590_)
 							i_587_++;
 					} else {
 						int i_591_ = 0;
-						int i_592_ = (((Class282_Sub12) class282_sub12).anIntArray7562[i_588_]);
+						int i_592_ = (((AnimationSkinNode) class282_sub12).anIntArray7562[i_588_]);
 						if (i_592_ == 3 || i_592_ == 10)
 							i_591_ = 128;
 						int i_593_;
@@ -1924,11 +1924,11 @@ public abstract class MeshRasterizer {
 						short i_596_;
 						byte i_597_;
 						if (bool_589_) {
-							i_593_ = ((Class95) class95).aShortArray981[i_586_];
-							i_594_ = ((Class95) class95).aShortArray982[i_586_];
-							i_595_ = ((Class95) class95).aShortArray983[i_586_];
-							i_596_ = ((Class95) class95).aShortArray984[i_586_];
-							i_597_ = ((Class95) class95).aByteArray985[i_586_];
+							i_593_ = ((AnimationSkin) class95).aShortArray981[i_586_];
+							i_594_ = ((AnimationSkin) class95).aShortArray982[i_586_];
+							i_595_ = ((AnimationSkin) class95).aShortArray983[i_586_];
+							i_596_ = ((AnimationSkin) class95).aShortArray984[i_586_];
+							i_597_ = ((AnimationSkin) class95).aByteArray985[i_586_];
 							i_586_++;
 						} else {
 							i_593_ = i_591_;
@@ -1943,11 +1943,11 @@ public abstract class MeshRasterizer {
 						short i_601_;
 						byte i_602_;
 						if (bool_590_) {
-							i_598_ = (((Class95) class95_578_).aShortArray981[i_587_]);
-							i_599_ = (((Class95) class95_578_).aShortArray982[i_587_]);
-							i_600_ = (((Class95) class95_578_).aShortArray983[i_587_]);
-							i_601_ = (((Class95) class95_578_).aShortArray984[i_587_]);
-							i_602_ = (((Class95) class95_578_).aByteArray985[i_587_]);
+							i_598_ = (((AnimationSkin) class95_578_).aShortArray981[i_587_]);
+							i_599_ = (((AnimationSkin) class95_578_).aShortArray982[i_587_]);
+							i_600_ = (((AnimationSkin) class95_578_).aShortArray983[i_587_]);
+							i_601_ = (((AnimationSkin) class95_578_).aShortArray984[i_587_]);
+							i_602_ = (((AnimationSkin) class95_578_).aByteArray985[i_587_]);
 							i_587_++;
 						} else {
 							i_598_ = i_591_;
@@ -1996,46 +1996,46 @@ public abstract class MeshRasterizer {
 							i_605_ = i_595_ + (i_600_ - i_595_) * i / i_579_;
 						}
 						if (i_596_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_596_]), 0, 0, 0, i_580_, bool_581_, (i_582_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_596_])), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_596_]), 0, 0, 0, i_580_, bool_581_, (i_582_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_596_])), is);
 						else if (i_601_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_601_]), 0, 0, 0, i_580_, bool_581_, (i_582_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_601_])), is);
-						method11267(i_592_, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_588_]), i_603_, i_604_, i_605_, i_580_, bool_581_, i_582_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_588_]), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_601_]), 0, 0, 0, i_580_, bool_581_, (i_582_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_601_])), is);
+						method11267(i_592_, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_588_]), i_603_, i_604_, i_605_, i_580_, bool_581_, i_582_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_588_]), is);
 					}
 				}
 			}
 		}
 	}
 
-	void method11329(Class282_Sub12 class282_sub12, Class95 class95, Class95 class95_611_, int i, int i_612_, int i_613_, boolean[] bools, boolean bool, boolean bool_614_, int i_615_, int[] is) {
+	void method11329(AnimationSkinNode class282_sub12, AnimationSkin class95, AnimationSkin class95_611_, int i, int i_612_, int i_613_, boolean[] bools, boolean bool, boolean bool_614_, int i_615_, int[] is) {
 		if (class95_611_ == null || i == 0) {
-			for (int i_616_ = 0; i_616_ < ((Class95) class95).anInt980; i_616_++) {
-				short i_617_ = ((Class95) class95).aShortArray987[i_616_];
-				if (bools == null || bools[i_617_] == bool || (((Class282_Sub12) class282_sub12).anIntArray7562[i_617_]) == 0) {
-					short i_618_ = ((Class95) class95).aShortArray984[i_616_];
+			for (int i_616_ = 0; i_616_ < ((AnimationSkin) class95).anInt980; i_616_++) {
+				short i_617_ = ((AnimationSkin) class95).aShortArray987[i_616_];
+				if (bools == null || bools[i_617_] == bool || (((AnimationSkinNode) class282_sub12).anIntArray7562[i_617_]) == 0) {
+					short i_618_ = ((AnimationSkin) class95).aShortArray984[i_616_];
 					if (i_618_ != -1)
-						method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_618_]), 0, 0, 0, i_613_, bool_614_, i_615_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_618_]), is);
-					method11267((((Class282_Sub12) class282_sub12).anIntArray7562[i_617_]), (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_617_]), ((Class95) class95).aShortArray981[i_616_], ((Class95) class95).aShortArray982[i_616_], ((Class95) class95).aShortArray983[i_616_], i_613_, bool_614_, i_615_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_617_]), is);
+						method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_618_]), 0, 0, 0, i_613_, bool_614_, i_615_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_618_]), is);
+					method11267((((AnimationSkinNode) class282_sub12).anIntArray7562[i_617_]), (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_617_]), ((AnimationSkin) class95).aShortArray981[i_616_], ((AnimationSkin) class95).aShortArray982[i_616_], ((AnimationSkin) class95).aShortArray983[i_616_], i_613_, bool_614_, i_615_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_617_]), is);
 				}
 			}
 		} else {
 			int i_619_ = 0;
 			int i_620_ = 0;
-			for (int i_621_ = 0; (i_621_ < ((Class282_Sub12) class282_sub12).anInt7564 * 1693890341); i_621_++) {
+			for (int i_621_ = 0; (i_621_ < ((AnimationSkinNode) class282_sub12).anInt7564 * 1693890341); i_621_++) {
 				boolean bool_622_ = false;
-				if (i_619_ < ((Class95) class95).anInt980 && ((Class95) class95).aShortArray987[i_619_] == i_621_)
+				if (i_619_ < ((AnimationSkin) class95).anInt980 && ((AnimationSkin) class95).aShortArray987[i_619_] == i_621_)
 					bool_622_ = true;
 				boolean bool_623_ = false;
-				if (i_620_ < ((Class95) class95_611_).anInt980 && (((Class95) class95_611_).aShortArray987[i_620_] == i_621_))
+				if (i_620_ < ((AnimationSkin) class95_611_).anInt980 && (((AnimationSkin) class95_611_).aShortArray987[i_620_] == i_621_))
 					bool_623_ = true;
 				if (bool_622_ || bool_623_) {
-					if (bools != null && bools[i_621_] != bool && (((Class282_Sub12) class282_sub12).anIntArray7562[i_621_]) != 0) {
+					if (bools != null && bools[i_621_] != bool && (((AnimationSkinNode) class282_sub12).anIntArray7562[i_621_]) != 0) {
 						if (bool_622_)
 							i_619_++;
 						if (bool_623_)
 							i_620_++;
 					} else {
 						int i_624_ = 0;
-						int i_625_ = (((Class282_Sub12) class282_sub12).anIntArray7562[i_621_]);
+						int i_625_ = (((AnimationSkinNode) class282_sub12).anIntArray7562[i_621_]);
 						if (i_625_ == 3 || i_625_ == 10)
 							i_624_ = 128;
 						int i_626_;
@@ -2044,11 +2044,11 @@ public abstract class MeshRasterizer {
 						short i_629_;
 						byte i_630_;
 						if (bool_622_) {
-							i_626_ = ((Class95) class95).aShortArray981[i_619_];
-							i_627_ = ((Class95) class95).aShortArray982[i_619_];
-							i_628_ = ((Class95) class95).aShortArray983[i_619_];
-							i_629_ = ((Class95) class95).aShortArray984[i_619_];
-							i_630_ = ((Class95) class95).aByteArray985[i_619_];
+							i_626_ = ((AnimationSkin) class95).aShortArray981[i_619_];
+							i_627_ = ((AnimationSkin) class95).aShortArray982[i_619_];
+							i_628_ = ((AnimationSkin) class95).aShortArray983[i_619_];
+							i_629_ = ((AnimationSkin) class95).aShortArray984[i_619_];
+							i_630_ = ((AnimationSkin) class95).aByteArray985[i_619_];
 							i_619_++;
 						} else {
 							i_626_ = i_624_;
@@ -2063,11 +2063,11 @@ public abstract class MeshRasterizer {
 						short i_634_;
 						byte i_635_;
 						if (bool_623_) {
-							i_631_ = (((Class95) class95_611_).aShortArray981[i_620_]);
-							i_632_ = (((Class95) class95_611_).aShortArray982[i_620_]);
-							i_633_ = (((Class95) class95_611_).aShortArray983[i_620_]);
-							i_634_ = (((Class95) class95_611_).aShortArray984[i_620_]);
-							i_635_ = (((Class95) class95_611_).aByteArray985[i_620_]);
+							i_631_ = (((AnimationSkin) class95_611_).aShortArray981[i_620_]);
+							i_632_ = (((AnimationSkin) class95_611_).aShortArray982[i_620_]);
+							i_633_ = (((AnimationSkin) class95_611_).aShortArray983[i_620_]);
+							i_634_ = (((AnimationSkin) class95_611_).aShortArray984[i_620_]);
+							i_635_ = (((AnimationSkin) class95_611_).aByteArray985[i_620_]);
 							i_620_++;
 						} else {
 							i_631_ = i_624_;
@@ -2116,10 +2116,10 @@ public abstract class MeshRasterizer {
 							i_638_ = i_628_ + (i_633_ - i_628_) * i / i_612_;
 						}
 						if (i_629_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_629_]), 0, 0, 0, i_613_, bool_614_, (i_615_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_629_])), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_629_]), 0, 0, 0, i_613_, bool_614_, (i_615_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_629_])), is);
 						else if (i_634_ != -1)
-							method11267(0, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_634_]), 0, 0, 0, i_613_, bool_614_, (i_615_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_634_])), is);
-						method11267(i_625_, (((Class282_Sub12) class282_sub12).anIntArrayArray7560[i_621_]), i_636_, i_637_, i_638_, i_613_, bool_614_, i_615_ & (((Class282_Sub12) class282_sub12).anIntArray7561[i_621_]), is);
+							method11267(0, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_634_]), 0, 0, 0, i_613_, bool_614_, (i_615_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_634_])), is);
+						method11267(i_625_, (((AnimationSkinNode) class282_sub12).anIntArrayArray7560[i_621_]), i_636_, i_637_, i_638_, i_613_, bool_614_, i_615_ & (((AnimationSkinNode) class282_sub12).anIntArray7561[i_621_]), is);
 					}
 				}
 			}

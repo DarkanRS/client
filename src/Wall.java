@@ -373,11 +373,11 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 	static final void method16113(int i) {
 		int i_27_ = 1551528448 * Class296.anInt3534 + 256;
 		int i_28_ = 256 + Class282_Sub44.anInt8064 * 1593416192;
-		int i_29_ = (Class504.method8389(i_27_, i_28_, Class4.anInt35 * 675588453, (byte) 102) - Class525.anInt6985 * 368694431);
+		int i_29_ = (Class504.method8389(i_27_, i_28_, Class4.anInt35 * 675588453, (byte) 102) - SpotAnimDefinitions.anInt6985 * 368694431);
 		if (Class115.anInt1249 * 613192577 >= 100) {
 			Class31.anInt361 = Class296.anInt3534 * -899014144 + 898537728;
 			Class246.anInt3029 = 2107292160 * Class282_Sub44.anInt8064 + 26398976;
-			Class109_Sub1.anInt9384 = (Class504.method8389(-360258135 * Class31.anInt361, Class246.anInt3029 * 413271601, 675588453 * Class4.anInt35, (byte) 84) - Class525.anInt6985 * 368694431) * -126779709;
+			Class109_Sub1.anInt9384 = (Class504.method8389(-360258135 * Class31.anInt361, Class246.anInt3029 * 413271601, 675588453 * Class4.anInt35, (byte) 84) - SpotAnimDefinitions.anInt6985 * 368694431) * -126779709;
 		} else {
 			if (Class31.anInt361 * -360258135 < i_27_) {
 				Class31.anInt361 += ((-355473345 * Class454.anInt5451 + (Class115.anInt1249 * 613192577 * (i_27_ - -360258135 * Class31.anInt361) / 1000)) * -2043310439);
@@ -424,12 +424,12 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 		if (i_34_ > 3072)
 			i_34_ = 3072;
 		if (Class293.anInt3512 * 726126721 < i_34_) {
-			Class293.anInt3512 += ((692693311 * Class473.anInt5606 + ((i_34_ - Class293.anInt3512 * 726126721 >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3) * -647467135;
+			Class293.anInt3512 += ((692693311 * LinkedNodeList.anInt5606 + ((i_34_ - Class293.anInt3512 * 726126721 >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3) * -647467135;
 			if (726126721 * Class293.anInt3512 > i_34_)
 				Class293.anInt3512 = i_34_ * -647467135;
 		}
 		if (Class293.anInt3512 * 726126721 > i_34_) {
-			Class293.anInt3512 -= (-647467135 * ((692693311 * Class473.anInt5606 + ((726126721 * Class293.anInt3512 - i_34_ >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3));
+			Class293.anInt3512 -= (-647467135 * ((692693311 * LinkedNodeList.anInt5606 + ((726126721 * Class293.anInt3512 - i_34_ >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3));
 			if (726126721 * Class293.anInt3512 < i_34_)
 				Class293.anInt3512 = i_34_ * -647467135;
 		}
@@ -440,11 +440,11 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			i_36_ += 16384;
 		i_36_ >>= 3;
 		if (i_36_ > 0) {
-			AnimationDefinitions.anInt5930 += (1898253385 * ((692693311 * Class473.anInt5606 + 1123046983 * Class501.anInt5828 * i_36_ / 1000) << 3));
+			AnimationDefinitions.anInt5930 += (1898253385 * ((692693311 * LinkedNodeList.anInt5606 + 1123046983 * Class501.anInt5828 * i_36_ / 1000) << 3));
 			AnimationDefinitions.anInt5930 = (1236051449 * AnimationDefinitions.anInt5930 & 0x3fff) * 1898253385;
 		}
 		if (i_36_ < 0) {
-			AnimationDefinitions.anInt5930 -= (1898253385 * ((692693311 * Class473.anInt5606 + Class501.anInt5828 * 1123046983 * -i_36_ / 1000) << 3));
+			AnimationDefinitions.anInt5930 -= (1898253385 * ((692693311 * LinkedNodeList.anInt5606 + Class501.anInt5828 * 1123046983 * -i_36_ / 1000) << 3));
 			AnimationDefinitions.anInt5930 = (1236051449 * AnimationDefinitions.anInt5930 & 0x3fff) * 1898253385;
 		}
 		int i_37_ = i_35_ - 1236051449 * AnimationDefinitions.anInt5930;

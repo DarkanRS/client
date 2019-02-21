@@ -44,7 +44,7 @@ public class NPCIndexLoader {
 			return class409;
 		byte[] is;
 		synchronized (((NPCIndexLoader) this).aClass317_4839) {
-			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i, -391005566), SharedConfigsType.aClass120_1467.fileId(i, -2083039735), -1310077438));
+			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i), -1310077438));
 		}
 		class409 = new NPCDefinitions();
 		class409.anInt4856 = i * -1165155817;
@@ -118,7 +118,7 @@ public class NPCIndexLoader {
 			return class409;
 		byte[] is;
 		synchronized (((NPCIndexLoader) this).aClass317_4839) {
-			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i, 123668197), SharedConfigsType.aClass120_1467.fileId(i, -1898923068), -1845264085));
+			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i), -1845264085));
 		}
 		class409 = new NPCDefinitions();
 		class409.anInt4856 = i * -1165155817;
@@ -142,7 +142,7 @@ public class NPCIndexLoader {
 			return class409;
 		byte[] is;
 		synchronized (((NPCIndexLoader) this).aClass317_4839) {
-			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i, 1099243946), SharedConfigsType.aClass120_1467.fileId(i, -1970709943), -1827585715));
+			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i), -1827585715));
 		}
 		class409 = new NPCDefinitions();
 		class409.anInt4856 = i * -1165155817;

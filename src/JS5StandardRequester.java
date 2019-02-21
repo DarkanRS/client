@@ -28,7 +28,7 @@ public abstract class JS5StandardRequester {
 	Class282_Sub50_Sub11_Sub1 method5515(int i, int i_0_, byte i_1_, boolean bool, byte i_2_) {
 		long l = ((long) i << 32) + (long) i_0_;
 		Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = new Class282_Sub50_Sub11_Sub1();
-		class282_sub50_sub11_sub1.aLong8120 = 5418180015864004923L * l;
+		class282_sub50_sub11_sub1.key = 5418180015864004923L * l;
 		((Class282_Sub50_Sub11_Sub1) class282_sub50_sub11_sub1).aByte10376 = i_1_;
 		((Class282_Sub50_Sub11_Sub1) class282_sub50_sub11_sub1).aBool9637 = bool;
 		if (bool) {
@@ -161,7 +161,7 @@ public abstract class JS5StandardRequester {
 	Class282_Sub50_Sub11_Sub1 method5555(int i, int i_3_, byte i_4_, boolean bool) {
 		long l = ((long) i << 32) + (long) i_3_;
 		Class282_Sub50_Sub11_Sub1 class282_sub50_sub11_sub1 = new Class282_Sub50_Sub11_Sub1();
-		class282_sub50_sub11_sub1.aLong8120 = 5418180015864004923L * l;
+		class282_sub50_sub11_sub1.key = 5418180015864004923L * l;
 		((Class282_Sub50_Sub11_Sub1) class282_sub50_sub11_sub1).aByte10376 = i_4_;
 		((Class282_Sub50_Sub11_Sub1) class282_sub50_sub11_sub1).aBool9637 = bool;
 		if (bool) {

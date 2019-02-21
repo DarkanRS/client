@@ -323,7 +323,7 @@ public class Login {
 							out.writeByte((IndexLoaders.NATIVE_LIBRARY_LOADER.method4639("jagtheora", (short) 255) ? 1 : 0));
 							out.writeByte((client.aBool7310 ? 1 : 0));
 							out.writeByte((client.aBool7160 ? 1 : 0));
-							out.writeByte((-1439277437 * (Class227.anInt2831)));
+							out.writeByte((-1439277437 * (RenderAnimDefs.anInt2831)));
 							out.writeInt((204524791 * (client.anInt7163)));
 							out.writeString(client.aString7164);
 							out.writeByte((null == Class448.aClass450_5421 || ((-87869981 * Class159.aClass450_2010.worldId) != (Class448.aClass450_5421.worldId * -87869981))) ? 1 : 0);

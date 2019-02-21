@@ -253,7 +253,7 @@ public class Class346 {
 				i_43_ = -348932735 * Class532_Sub2.anInt7068;
 				i_44_ = ((Class532_Sub2.anInt7068 * -348932735 - i_40_ << 12) / i_39_);
 			}
-			Class523.method11220(i_42_, i_41_, i_44_, i_43_, i_35_, (byte) 12);
+			AnimationIndexLoader.method11220(i_42_, i_41_, i_44_, i_43_, i_35_, (byte) 12);
 		}
 	}
 

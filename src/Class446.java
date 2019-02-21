@@ -37,12 +37,12 @@ public class Class446 {
 	static Class194 aClass194_5416;
 
 	public static void method7430(Node class282, Node class282_0_, int i) {
-		if (class282.prev != null)
-			class282.unlink(-371378792);
-		class282.prev = class282_0_.prev;
-		class282.next = class282_0_;
-		class282.prev.next = class282;
+		if (class282.next != null)
+			class282.remove();
+		class282.next = class282_0_.next;
+		class282.prev = class282_0_;
 		class282.next.prev = class282;
+		class282.prev.next = class282;
 	}
 
 	public void method7431(int i) {

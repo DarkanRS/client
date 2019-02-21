@@ -26,7 +26,7 @@ public class ObjectIndexLoader {
 			return defs;
 		byte[] data;
 		synchronized (((ObjectIndexLoader) this).objectIndex) {
-			data = (((ObjectIndexLoader) this).objectIndex.getFile(SharedConfigsType.OBJECT_DEFINITIONS.containerId(i, -1163305846), SharedConfigsType.OBJECT_DEFINITIONS.fileId(i, -2086943964), -1721086771));
+			data = (((ObjectIndexLoader) this).objectIndex.getFile(SharedConfigsType.OBJECT_DEFINITIONS.containerId(i), SharedConfigsType.OBJECT_DEFINITIONS.fileId(i), -1721086771));
 		}
 		defs = new ObjectDefinitions();
 		defs.id = -199598417 * i;

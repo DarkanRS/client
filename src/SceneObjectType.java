@@ -101,6 +101,6 @@ public class SceneObjectType implements Interface43 {
 		class527.intStackPtr -= 283782002;
 		int i_1_ = (class527.intStack[1942118537 * class527.intStackPtr]);
 		int i_2_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class515.method8861(i_1_, i_2_, false, 946854305);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = SpotAnimIndexLoader.method8861(i_1_, i_2_, false, 946854305);
 	}
 }

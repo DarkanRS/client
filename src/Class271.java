@@ -121,7 +121,7 @@ public class Class271 {
 		class527.intStackPtr -= 283782002;
 		int i_11_ = (class527.intStack[class527.intStackPtr * 1942118537]);
 		int i_12_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class515.method8861(i_11_, i_12_, true, 113694446);
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = SpotAnimIndexLoader.method8861(i_11_, i_12_, true, 113694446);
 	}
 
 	static final void method4826(CS2Executor class527, int i) {

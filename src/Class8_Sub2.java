@@ -539,7 +539,7 @@ public class Class8_Sub2 extends FontRenderer {
 				}
 			}
 			class282_sub35_sub2.method13104(i_178_, -419087977);
-			class282_sub42.unlink(-371378792);
+			class282_sub42.remove();
 		}
 	}
 }

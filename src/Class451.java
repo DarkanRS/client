@@ -24,8 +24,8 @@ public class Class451 implements Iterator {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]))
 			return true;
 		while (-965471089 * ((Class451) this).anInt5442 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
-				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].next);
+			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
+				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].prev);
 				return true;
 			}
 			((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]);
@@ -36,14 +36,14 @@ public class Class451 implements Iterator {
 	public Object method7505() {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1])) {
 			Node class282 = ((Class451) this).aClass282_5440;
-			((Class451) this).aClass282_5440 = class282.next;
+			((Class451) this).aClass282_5440 = class282.prev;
 			((Class451) this).aClass282_5441 = class282;
 			return class282;
 		}
 		while (((Class451) this).anInt5442 * -965471089 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next);
+			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev);
 			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1]) != class282) {
-				((Class451) this).aClass282_5440 = class282.next;
+				((Class451) this).aClass282_5440 = class282.prev;
 				((Class451) this).aClass282_5441 = class282;
 				return class282;
 			}
@@ -55,8 +55,8 @@ public class Class451 implements Iterator {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]))
 			return true;
 		while (-965471089 * ((Class451) this).anInt5442 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
-				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].next);
+			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
+				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].prev);
 				return true;
 			}
 			((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]);
@@ -67,7 +67,7 @@ public class Class451 implements Iterator {
 	public void remove() {
 		if (null == ((Class451) this).aClass282_5441)
 			throw new IllegalStateException();
-		((Class451) this).aClass282_5441.unlink(-371378792);
+		((Class451) this).aClass282_5441.remove();
 		((Class451) this).aClass282_5441 = null;
 	}
 
@@ -75,8 +75,8 @@ public class Class451 implements Iterator {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]))
 			return true;
 		while (-965471089 * ((Class451) this).anInt5442 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
-				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].next);
+			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
+				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].prev);
 				return true;
 			}
 			((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]);
@@ -87,14 +87,14 @@ public class Class451 implements Iterator {
 	public Object next() {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1])) {
 			Node class282 = ((Class451) this).aClass282_5440;
-			((Class451) this).aClass282_5440 = class282.next;
+			((Class451) this).aClass282_5440 = class282.prev;
 			((Class451) this).aClass282_5441 = class282;
 			return class282;
 		}
 		while (((Class451) this).anInt5442 * -965471089 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next);
+			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev);
 			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1]) != class282) {
-				((Class451) this).aClass282_5440 = class282.next;
+				((Class451) this).aClass282_5440 = class282.prev;
 				((Class451) this).aClass282_5441 = class282;
 				return class282;
 			}
@@ -105,7 +105,7 @@ public class Class451 implements Iterator {
 	public void method7507() {
 		if (null == ((Class451) this).aClass282_5441)
 			throw new IllegalStateException();
-		((Class451) this).aClass282_5441.unlink(-371378792);
+		((Class451) this).aClass282_5441.remove();
 		((Class451) this).aClass282_5441 = null;
 	}
 
@@ -113,8 +113,8 @@ public class Class451 implements Iterator {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]))
 			return true;
 		while (-965471089 * ((Class451) this).anInt5442 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
-				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].next);
+			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev) != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1])) {
+				((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1].prev);
 				return true;
 			}
 			((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1]);
@@ -125,14 +125,14 @@ public class Class451 implements Iterator {
 	public Object method7509() {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1])) {
 			Node class282 = ((Class451) this).aClass282_5440;
-			((Class451) this).aClass282_5440 = class282.next;
+			((Class451) this).aClass282_5440 = class282.prev;
 			((Class451) this).aClass282_5441 = class282;
 			return class282;
 		}
 		while (((Class451) this).anInt5442 * -965471089 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next);
+			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev);
 			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1]) != class282) {
-				((Class451) this).aClass282_5440 = class282.next;
+				((Class451) this).aClass282_5440 = class282.prev;
 				((Class451) this).aClass282_5441 = class282;
 				return class282;
 			}
@@ -143,14 +143,14 @@ public class Class451 implements Iterator {
 	public Object method7510() {
 		if (((Class451) this).aClass282_5440 != (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[-965471089 * ((Class451) this).anInt5442 - 1])) {
 			Node class282 = ((Class451) this).aClass282_5440;
-			((Class451) this).aClass282_5440 = class282.next;
+			((Class451) this).aClass282_5440 = class282.prev;
 			((Class451) this).aClass282_5441 = class282;
 			return class282;
 		}
 		while (((Class451) this).anInt5442 * -965471089 < (((IterableNodeMap) ((Class451) this).aClass465_5439).anInt5560 * 25900449)) {
-			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].next);
+			Node class282 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((((Class451) this).anInt5442 += -1123382673) * -965471089 - 1)].prev);
 			if ((((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[((Class451) this).anInt5442 * -965471089 - 1]) != class282) {
-				((Class451) this).aClass282_5440 = class282.next;
+				((Class451) this).aClass282_5440 = class282.prev;
 				((Class451) this).aClass282_5441 = class282;
 				return class282;
 			}
@@ -161,18 +161,18 @@ public class Class451 implements Iterator {
 	public void method7511() {
 		if (null == ((Class451) this).aClass282_5441)
 			throw new IllegalStateException();
-		((Class451) this).aClass282_5441.unlink(-371378792);
+		((Class451) this).aClass282_5441.remove();
 		((Class451) this).aClass282_5441 = null;
 	}
 
 	void method7512(int i) {
-		((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[0].next);
+		((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[0].prev);
 		((Class451) this).anInt5442 = -1123382673;
 		((Class451) this).aClass282_5441 = null;
 	}
 
 	void method7513() {
-		((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[0].next);
+		((Class451) this).aClass282_5440 = (((IterableNodeMap) ((Class451) this).aClass465_5439).aClass282Array5558[0].prev);
 		((Class451) this).anInt5442 = -1123382673;
 		((Class451) this).aClass282_5441 = null;
 	}

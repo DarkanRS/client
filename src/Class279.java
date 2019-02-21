@@ -78,7 +78,7 @@ public class Class279 {
 			if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1853603888) == 0) {
 				for (Item item = ((Item) Class182.ITEMS.head((byte) 98)); item != null; item = ((Item) Class182.ITEMS.next(471077510))) {
 					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(softwareRenderer, softwareRenderer, (item.id * 1343343281), (item.amount * -1956508275), (item.outlineSize * 1172052973), (item.shadowColor * 1379786857), false, false, (item.anInt7819 * 660031547), Renderers.FONT_RENDERER, (item.hasPlayerAppearance ? (Class84.myPlayer.playerAppearance) : null), (byte) 77);
-					item.unlink(-371378792);
+					item.remove();
 				}
 				IncomingPacket.method6378(-1538407760);
 			} else {
@@ -91,7 +91,7 @@ public class Class279 {
 				for (Item class282_sub32 = ((Item) Class182.ITEMS.head((byte) 59)); class282_sub32 != null; class282_sub32 = ((Item) Class182.ITEMS.next(-468135531))) {
 					IndexLoaders.ITEM_INDEX_LOADER.renderItemSprite(Class182.HARDWARE_RENDERER, softwareRenderer, (((Item) class282_sub32).id * 1343343281), (((Item) class282_sub32).amount * -1956508275), (((Item) class282_sub32).outlineSize * 1172052973), (1379786857 * ((Item) class282_sub32).shadowColor), false, false, (660031547 * ((Item) class282_sub32).anInt7819), Class182.aClass8_2259,
 							(((Item) class282_sub32).hasPlayerAppearance ? (Class84.myPlayer.playerAppearance) : null), (byte) 0);
-					class282_sub32.unlink(-371378792);
+					class282_sub32.remove();
 				}
 			}
 		}

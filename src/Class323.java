@@ -10,7 +10,7 @@ public class Class323 implements Interface22 {
 	Class223 aClass223_3754 = new Class223(256);
 
 	TextureDefinition method5770(int i, int i_0_) {
-		Class282_Sub50 class282_sub50 = ((Class323) this).aClass223_3754.method3758((long) i);
+		CacheableNode class282_sub50 = ((Class323) this).aClass223_3754.method3758((long) i);
 		if (class282_sub50 != null)
 			return (TextureDefinition) class282_sub50;
 		byte[] is = ((Class323) this).textureIndex.getFile(i, -130547352);

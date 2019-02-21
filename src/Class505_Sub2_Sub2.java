@@ -21,7 +21,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	long aLong10246 = 0L;
 	boolean aBool10247;
 	D3DPRESENT_PARAMETERS aD3DPRESENT_PARAMETERS10248;
-	Class473 aClass473_10249;
+	LinkedNodeList aClass473_10249;
 	long aLong10250;
 	Class115_Sub1 aClass115_Sub1_10251;
 	long aLong10252 = 0L;
@@ -124,7 +124,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 
 	Class505_Sub2_Sub2(int i, int i_4_, long l, long l_5_, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, Interface22 interface22, Index class317, int i_6_) {
 		super(interface22, class317, i_6_, 0);
-		((Class505_Sub2_Sub2) this).aClass473_10249 = new Class473();
+		((Class505_Sub2_Sub2) this).aClass473_10249 = new LinkedNodeList();
 		((Class505_Sub2_Sub2) this).anInt10262 = 0;
 		((Class505_Sub2_Sub2) this).aLong10259 = 0L;
 		((Class505_Sub2_Sub2) this).aLong10250 = 0L;
@@ -176,7 +176,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method13900() {
-		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(425316532); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -37)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getBack(); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getPrevious()) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method212();
@@ -313,7 +313,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	Class282_Sub9 method15641(Interface33 interface33) {
-		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(978719918); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -58)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getBack(); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getPrevious()) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			if (((Class282_Sub9) class282_sub9).anInterface33_7538 == interface33)
 				return class282_sub9;
@@ -323,13 +323,13 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 
 	void method15642(Interface33 interface33) {
 		if (method15641(interface33) == null)
-			((Class505_Sub2_Sub2) this).aClass473_10249.method7877(new Class282_Sub9(interface33), 968649327);
+			((Class505_Sub2_Sub2) this).aClass473_10249.insertBack(new Class282_Sub9(interface33));
 	}
 
 	void method15643(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.unlink(-371378792);
+			class282_sub9.remove();
 	}
 
 	void method13951() {
@@ -512,7 +512,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 
 	void method15646(Interface33 interface33) {
 		if (method15641(interface33) == null)
-			((Class505_Sub2_Sub2) this).aClass473_10249.method7877(new Class282_Sub9(interface33), 2118289464);
+			((Class505_Sub2_Sub2) this).aClass473_10249.insertBack(new Class282_Sub9(interface33));
 	}
 
 	Interface6 method13961(Class150 class150, int i, int i_37_, boolean bool, float[] fs, int i_38_, int i_39_) {
@@ -1301,7 +1301,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method14089() {
-		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1708563028); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -65)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getBack(); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getPrevious()) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method212();
@@ -1445,7 +1445,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	void method15665(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.unlink(-371378792);
+			class282_sub9.remove();
 	}
 
 	void method13913() {
@@ -1558,7 +1558,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method13899() {
-		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1831958057); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -3)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getBack(); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getPrevious()) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method210();
@@ -1972,7 +1972,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	}
 
 	void method14069() {
-		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7859(1428199779); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.method7857((byte) -53)) {
+		for (Node class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getBack(); class282 != null; class282 = ((Class505_Sub2_Sub2) this).aClass473_10249.getPrevious()) {
 			Class282_Sub9 class282_sub9 = (Class282_Sub9) class282;
 			Interface33 interface33 = ((Class282_Sub9) class282_sub9).anInterface33_7538;
 			interface33.method210();
@@ -2047,12 +2047,12 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 
 	void method15670(Interface33 interface33) {
 		if (method15641(interface33) == null)
-			((Class505_Sub2_Sub2) this).aClass473_10249.method7877(new Class282_Sub9(interface33), -97072883);
+			((Class505_Sub2_Sub2) this).aClass473_10249.insertBack(new Class282_Sub9(interface33));
 	}
 
 	void method15671(Interface33 interface33) {
 		if (method15641(interface33) == null)
-			((Class505_Sub2_Sub2) this).aClass473_10249.method7877(new Class282_Sub9(interface33), 533407894);
+			((Class505_Sub2_Sub2) this).aClass473_10249.insertBack(new Class282_Sub9(interface33));
 	}
 
 	synchronized void method15672(long l) {
@@ -2069,13 +2069,13 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	void method15673(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.unlink(-371378792);
+			class282_sub9.remove();
 	}
 
 	void method15674(Interface33 interface33) {
 		Class282_Sub9 class282_sub9 = method15641(interface33);
 		if (class282_sub9 != null)
-			class282_sub9.unlink(-371378792);
+			class282_sub9.remove();
 	}
 
 	final void method15675(long l) {

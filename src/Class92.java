@@ -19,7 +19,7 @@ public class Class92 {
 				int[] is_0_ = is;
 				for (int i_1_ = 0; i_1_ < is_0_.length; i_1_++) {
 					int i_2_ = is_0_[i_1_];
-					bool &= IndexLoaders.aClass523_3868.method11205(i_2_, (byte) 92).method11132(2061456452);
+					bool &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_2_, (byte) 92).loadSkeletons();
 				}
 			}
 			return bool;
@@ -69,7 +69,7 @@ public class Class92 {
 		if (null != class282_sub37) {
 			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 44);
 			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, 1656056599);
-			class282_sub37.unlink(-371378792);
+			class282_sub37.remove();
 		}
 	}
 

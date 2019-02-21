@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub50_Sub7 extends Class282_Sub50 {
+public class Class282_Sub50_Sub7 extends CacheableNode {
 	String aString9576;
 	boolean aBool9577;
 	int anInt9578;

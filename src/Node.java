@@ -5,21 +5,21 @@
 import java.awt.Point;
 
 public class Node {
-	public Node next;
-	public long data;
 	public Node prev;
+	public long data;
+	public Node next;
 
-	public void unlink(int i) {
-		if (null != prev) {
-			prev.next = next;
+	public void remove() {
+		if (null != next) {
 			next.prev = prev;
-			next = null;
+			prev.next = next;
 			prev = null;
+			next = null;
 		}
 	}
 
 	public boolean method4994(int i) {
-		if (null == prev)
+		if (null == next)
 			return false;
 		return true;
 	}

@@ -56,11 +56,11 @@ public class Player extends Animable {
 		Class285 class285 = null;
 		((Player) this).aBool10312 = false;
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -110) == 1) {
-			Class227 class227 = method15855((byte) -17);
+			RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
 			if (class227.aBool2787 && (-977770149 * playerAppearance.anInt2928 == -1 || (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(playerAppearance.anInt2928 * -977770149, (byte) -104).aBool4912))) {
-				Class456 class456 = ((aClass456_10338.method7564(67909937) && aClass456_10338.method7573(-563768008)) ? aClass456_10338 : null);
-				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(343060235) && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
-				MeshRasterizer class528 = (Class116.method1969(class505, i, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Class456) class456_sub3 : class456), 16711935));
+				Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(-563768008)) ? currentAnimation : null);
+				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
+				MeshRasterizer class528 = (Class116.method1969(class505, i, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935));
 				if (null != class528) {
 					if (aClass275_Sub5Array7965 == null || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
 						method13008(aClass528Array10372.length + 1, (byte) -124);
@@ -208,14 +208,14 @@ public class Player extends Animable {
 	}
 
 	public final void method16129(int i, int i_13_, byte i_14_, int i_15_) {
-		if (aClass456_10338.method7564(1696606115) && (aClass456_10338.method7565(-1632742162).anInt5921 * 113839939 == 1)) {
-			anIntArray10350 = null;
-			aClass456_10338.method7567(-1, (short) 8960);
+		if (currentAnimation.hasDefs() && (currentAnimation.getDefs().anInt5921 * 113839939 == 1)) {
+			currentAnimations = null;
+			currentAnimation.method7567(-1, (short) 8960);
 		}
 		for (int i_16_ = 0; i_16_ < aClass161Array10339.length; i_16_++) {
 			if (aClass161Array10339[i_16_].anInt2012 * 378836105 != -1) {
-				Class525 class525 = (IndexLoaders.aClass515_9416.method8845(aClass161Array10339[i_16_].anInt2012 * 378836105, (byte) 55));
-				if (class525.aBool6968 && class525.anInt6977 * -364555849 != -1 && (IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) -26).anInt5921) * 113839939 == 1) {
+				SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(aClass161Array10339[i_16_].anInt2012 * 378836105, (byte) 55));
+				if (class525.aBool6968 && class525.animationId * -364555849 != -1 && (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) -26).anInt5921) * 113839939 == 1) {
 					aClass161Array10339[i_16_].aClass456_2014.method7567(-1, (short) 8960);
 					aClass161Array10339[i_16_].anInt2012 = 1025302087;
 				}
@@ -256,14 +256,14 @@ public class Player extends Animable {
 	}
 
 	public final void method16131(int i, int i_20_, byte i_21_) {
-		if (aClass456_10338.method7564(-1570330208) && (aClass456_10338.method7565(-1632742162).anInt5921 * 113839939 == 1)) {
-			anIntArray10350 = null;
-			aClass456_10338.method7567(-1, (short) 8960);
+		if (currentAnimation.hasDefs() && (currentAnimation.getDefs().anInt5921 * 113839939 == 1)) {
+			currentAnimations = null;
+			currentAnimation.method7567(-1, (short) 8960);
 		}
 		for (int i_22_ = 0; i_22_ < aClass161Array10339.length; i_22_++) {
 			if (aClass161Array10339[i_22_].anInt2012 * 378836105 != -1) {
-				Class525 class525 = (IndexLoaders.aClass515_9416.method8845(aClass161Array10339[i_22_].anInt2012 * 378836105, (byte) -1));
-				if (class525.aBool6968 && class525.anInt6977 * -364555849 != -1 && (IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 34).anInt5921) * 113839939 == 1) {
+				SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(aClass161Array10339[i_22_].anInt2012 * 378836105, (byte) -1));
+				if (class525.aBool6968 && class525.animationId * -364555849 != -1 && (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) 34).anInt5921) * 113839939 == 1) {
 					aClass161Array10339[i_22_].aClass456_2014.method7567(-1, (short) 8960);
 					aClass161Array10339[i_22_].anInt2012 = 1025302087;
 				}
@@ -287,7 +287,7 @@ public class Player extends Animable {
 		return super.getSize(828768449);
 	}
 
-	int method15808(int i) {
+	int getRenderAnimation(int i) {
 		return ((Player) this).anInt10545 * 1628597657;
 	}
 
@@ -356,9 +356,9 @@ public class Player extends Animable {
 
 	boolean method16133(GraphicalRenderer class505, int i, int i_34_) {
 		int i_35_ = i;
-		Class227 class227 = method15855((byte) -17);
-		Class456 class456 = ((aClass456_10338.method7564(-1342840788) && !aClass456_10338.method7573(-509247548)) ? aClass456_10338 : null);
-		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(2138994963) && !aBool10573 && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
+		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
+		Animation class456 = ((currentAnimation.hasDefs() && !currentAnimation.hasSpeed(-509247548)) ? currentAnimation : null);
+		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && !aBool10573 && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
 		int i_36_ = class227.anInt2786 * -983752529;
 		int i_37_ = -209978553 * class227.anInt2829;
 		if (0 != i_36_ || 0 != i_37_ || -1949451929 * class227.anInt2824 != 0 || 0 != -373642049 * class227.anInt2827)
@@ -367,7 +367,7 @@ public class Player extends Animable {
 		boolean bool = (aByte10352 != 0 && -1809259861 * client.cycles >= anInt10347 * -134703791 && -1809259861 * client.cycles < -444686705 * anInt10348);
 		if (bool)
 			i |= 0x80000;
-		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_38_, true, Class473.DEFAULTS_LOADER_6, (short) -9437));
+		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_38_, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437));
 		int i_39_ = Class46.method932(-708293505);
 		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_39_ > 50)
 			JS5CacheFile.method3359(-1275511493);
@@ -431,11 +431,11 @@ public class Player extends Animable {
 		Class285 class285 = null;
 		((Player) this).aBool10312 = false;
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -42) == 1) {
-			Class227 class227 = method15855((byte) -17);
+			RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
 			if (class227.aBool2787 && (-977770149 * playerAppearance.anInt2928 == -1 || (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(playerAppearance.anInt2928 * -977770149, (byte) -47).aBool4912))) {
-				Class456 class456 = ((aClass456_10338.method7564(-1628442322) && aClass456_10338.method7573(-305064415)) ? aClass456_10338 : null);
-				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(1443215927) && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
-				MeshRasterizer class528 = (Class116.method1969(class505, i, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Class456) class456_sub3 : class456), 16711935));
+				Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(-305064415)) ? currentAnimation : null);
+				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
+				MeshRasterizer class528 = (Class116.method1969(class505, i, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935));
 				if (null != class528) {
 					if (aClass275_Sub5Array7965 == null || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
 						method13008(aClass528Array10372.length + 1, (byte) -105);
@@ -529,11 +529,11 @@ public class Player extends Animable {
 		Class285 class285 = null;
 		((Player) this).aBool10312 = false;
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -32) == 1) {
-			Class227 class227 = method15855((byte) -17);
+			RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
 			if (class227.aBool2787 && (-977770149 * playerAppearance.anInt2928 == -1 || (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(playerAppearance.anInt2928 * -977770149, (byte) -84).aBool4912))) {
-				Class456 class456 = ((aClass456_10338.method7564(-1120099750) && aClass456_10338.method7573(871780846)) ? aClass456_10338 : null);
-				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(-1403309054) && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
-				MeshRasterizer class528 = (Class116.method1969(class505, i, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Class456) class456_sub3 : class456), 16711935));
+				Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(871780846)) ? currentAnimation : null);
+				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
+				MeshRasterizer class528 = (Class116.method1969(class505, i, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935));
 				if (null != class528) {
 					if (aClass275_Sub5Array7965 == null || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
 						method13008(aClass528Array10372.length + 1, (byte) -105);
@@ -752,11 +752,11 @@ public class Player extends Animable {
 			hidden = false;
 		int effectData = -1;
 		anInt10559 = 0;
-		int[] is = new int[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
-		MeshModifier[] itemEffects = new MeshModifier[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
-		ItemDefinitions[] itemDefinitions = new ItemDefinitions[Class473.DEFAULTS_LOADER_6.equipmentSlots.length];
-		for (int equipSlot = 0; equipSlot < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
-			if (1 != Class473.DEFAULTS_LOADER_6.equipmentSlots[equipSlot]) {
+		int[] is = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		MeshModifier[] itemEffects = new MeshModifier[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		ItemDefinitions[] itemDefinitions = new ItemDefinitions[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		for (int equipSlot = 0; equipSlot < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
+			if (1 != LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[equipSlot]) {
 				int firstByte = buffer.readUnsignedByte();
 				if (0 == firstByte)
 					is[equipSlot] = 0;
@@ -783,8 +783,8 @@ public class Player extends Animable {
 		if (effectData == -1) {
 			int i_88_ = buffer.readUnsignedShort();
 			int i_89_ = 0;
-			for (int equipSlot = 0; equipSlot < Class473.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
-				if (Class473.DEFAULTS_LOADER_6.equipmentSlots[equipSlot] == 0) {
+			for (int equipSlot = 0; equipSlot < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
+				if (LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[equipSlot] == 0) {
 					if ((i_88_ & 1 << i_89_) != 0)
 						itemEffects[equipSlot] = Class506.decodeItemEffects(itemDefinitions[equipSlot], buffer, 1637937706);
 					i_89_++;
@@ -838,7 +838,7 @@ public class Player extends Animable {
 			playerAppearance = new PlayerAppearance();
 		int i_100_ = -977770149 * playerAppearance.anInt2928;
 		int[] is_101_ = playerAppearance.colors;
-		playerAppearance.method3992(method15808(635765286), is, itemEffects, colors, 1 == male, effectData, 1600934567);
+		playerAppearance.method3992(getRenderAnimation(635765286), is, itemEffects, colors, 1 == male, effectData, 1600934567);
 		if (effectData != i_100_) {
 			class385 = Vector3.method6623(method11166().aClass385_3595);
 			class385.x = (float) ((regionBaseX[0] << 9) + (getSize(828768449) << 8));
@@ -856,8 +856,8 @@ public class Player extends Animable {
 		}
 		if (((Player) this).aClass539_10369 != null)
 			((Player) this).aClass539_10369.method11505();
-		if (aClass456_Sub3_10337.method7564(2061974418) && aClass456_Sub3_10337.aBool7891) {
-			Class227 class227 = method15855((byte) -17);
+		if (aClass456_Sub3_10337.hasDefs() && aClass456_Sub3_10337.aBool7891) {
+			RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
 			if (!class227.method3810(aClass456_Sub3_10337.method7597(-859961134), -1546960795)) {
 				aClass456_Sub3_10337.method7567(-1, (short) 8960);
 				aClass456_Sub3_10337.aBool7891 = false;
@@ -926,9 +926,9 @@ public class Player extends Animable {
 
 	boolean method16142(GraphicalRenderer class505, int i) {
 		int i_116_ = i;
-		Class227 class227 = method15855((byte) -17);
-		Class456 class456 = ((aClass456_10338.method7564(1572434818) && !aClass456_10338.method7573(-510181887)) ? aClass456_10338 : null);
-		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(549134737) && !aBool10573 && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
+		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
+		Animation class456 = ((currentAnimation.hasDefs() && !currentAnimation.hasSpeed(-510181887)) ? currentAnimation : null);
+		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && !aBool10573 && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
 		int i_117_ = class227.anInt2786 * -983752529;
 		int i_118_ = -209978553 * class227.anInt2829;
 		if (0 != i_117_ || 0 != i_118_ || -1949451929 * class227.anInt2824 != 0 || 0 != -373642049 * class227.anInt2827)
@@ -937,7 +937,7 @@ public class Player extends Animable {
 		boolean bool = (aByte10352 != 0 && -1809259861 * client.cycles >= anInt10347 * -134703791 && -1809259861 * client.cycles < -444686705 * anInt10348);
 		if (bool)
 			i |= 0x80000;
-		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_119_, true, Class473.DEFAULTS_LOADER_6, (short) -8674));
+		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_119_, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -8674));
 		int i_120_ = Class46.method932(-1668934621);
 		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_120_ > 50)
 			JS5CacheFile.method3359(-1275511493);
@@ -977,9 +977,9 @@ public class Player extends Animable {
 
 	boolean method16143(GraphicalRenderer class505, int i) {
 		int i_122_ = i;
-		Class227 class227 = method15855((byte) -17);
-		Class456 class456 = ((aClass456_10338.method7564(882176487) && !aClass456_10338.method7573(-506806837)) ? aClass456_10338 : null);
-		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(-1796907289) && !aBool10573 && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
+		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
+		Animation class456 = ((currentAnimation.hasDefs() && !currentAnimation.hasSpeed(-506806837)) ? currentAnimation : null);
+		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && !aBool10573 && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
 		int i_123_ = class227.anInt2786 * -983752529;
 		int i_124_ = -209978553 * class227.anInt2829;
 		if (0 != i_123_ || 0 != i_124_ || -1949451929 * class227.anInt2824 != 0 || 0 != -373642049 * class227.anInt2827)
@@ -988,7 +988,7 @@ public class Player extends Animable {
 		boolean bool = (aByte10352 != 0 && -1809259861 * client.cycles >= anInt10347 * -134703791 && -1809259861 * client.cycles < -444686705 * anInt10348);
 		if (bool)
 			i |= 0x80000;
-		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.aClass211_9383, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.aClass523_3868, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_125_, true, Class473.DEFAULTS_LOADER_6, (short) -4743));
+		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_125_, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -4743));
 		int i_126_ = Class46.method932(-1966796916);
 		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_126_ > 50)
 			JS5CacheFile.method3359(-1275511493);
@@ -1037,14 +1037,14 @@ public class Player extends Animable {
 	}
 
 	public final void method16145(int i, int i_128_, byte i_129_) {
-		if (aClass456_10338.method7564(-125657992) && (aClass456_10338.method7565(-1632742162).anInt5921 * 113839939 == 1)) {
-			anIntArray10350 = null;
-			aClass456_10338.method7567(-1, (short) 8960);
+		if (currentAnimation.hasDefs() && (currentAnimation.getDefs().anInt5921 * 113839939 == 1)) {
+			currentAnimations = null;
+			currentAnimation.method7567(-1, (short) 8960);
 		}
 		for (int i_130_ = 0; i_130_ < aClass161Array10339.length; i_130_++) {
 			if (aClass161Array10339[i_130_].anInt2012 * 378836105 != -1) {
-				Class525 class525 = (IndexLoaders.aClass515_9416.method8845(aClass161Array10339[i_130_].anInt2012 * 378836105, (byte) 90));
-				if (class525.aBool6968 && class525.anInt6977 * -364555849 != -1 && (IndexLoaders.aClass523_3868.method11205(-364555849 * class525.anInt6977, (byte) 14).anInt5921) * 113839939 == 1) {
+				SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(aClass161Array10339[i_130_].anInt2012 * 378836105, (byte) 90));
+				if (class525.aBool6968 && class525.animationId * -364555849 != -1 && (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) 14).anInt5921) * 113839939 == 1) {
 					aClass161Array10339[i_130_].aClass456_2014.method7567(-1, (short) 8960);
 					aClass161Array10339[i_130_].anInt2012 = 1025302087;
 				}
@@ -1211,11 +1211,11 @@ public class Player extends Animable {
 		Class285 class285 = null;
 		((Player) this).aBool10312 = false;
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -35) == 1) {
-			Class227 class227 = method15855((byte) -17);
+			RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
 			if (class227.aBool2787 && (-977770149 * playerAppearance.anInt2928 == -1 || (IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(playerAppearance.anInt2928 * -977770149, (byte) 90).aBool4912))) {
-				Class456 class456 = ((aClass456_10338.method7564(546395340) && aClass456_10338.method7573(-1045482299)) ? aClass456_10338 : null);
-				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.method7564(-32112903) && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
-				MeshRasterizer class528 = (Class116.method1969(class505, i_147_, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Class456) class456_sub3 : class456), 16711935));
+				Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(-1045482299)) ? currentAnimation : null);
+				Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || class456 == null)) ? aClass456_Sub3_10337 : null);
+				MeshRasterizer class528 = (Class116.method1969(class505, i_147_, (-35614997 * ((Player) this).anInt10322), (((Player) this).anInt10323 * -1768311789), (-628205413 * ((Player) this).anInt10363), 1, aClass528Array10372[0], 0, 0, 160, 240, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935));
 				if (null != class528) {
 					if (aClass275_Sub5Array7965 == null || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
 						method13008(aClass528Array10372.length + 1, (byte) -9);

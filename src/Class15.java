@@ -103,6 +103,6 @@ final class Class15 implements Interface35 {
 
 	static final void method550(CS2Executor class527, int i) {
 		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class523.method11219((char) i_12_, -2126211908) ? 1 : 0;
+		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = AnimationIndexLoader.method11219((char) i_12_, -2126211908) ? 1 : 0;
 	}
 }

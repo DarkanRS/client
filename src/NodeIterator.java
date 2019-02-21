@@ -20,7 +20,7 @@ public class NodeIterator implements Iterator {
 			class282 = null;
 			((NodeIterator) this).aClass282_5536 = null;
 		} else
-			((NodeIterator) this).aClass282_5536 = class282.next;
+			((NodeIterator) this).aClass282_5536 = class282.prev;
 		((NodeIterator) this).aClass282_5537 = class282;
 		return class282;
 	}
@@ -41,7 +41,7 @@ public class NodeIterator implements Iterator {
 			class282 = null;
 			((NodeIterator) this).aClass282_5536 = null;
 		} else
-			((NodeIterator) this).aClass282_5536 = class282.next;
+			((NodeIterator) this).aClass282_5536 = class282.prev;
 		((NodeIterator) this).aClass282_5537 = class282;
 		return class282;
 	}
@@ -52,7 +52,7 @@ public class NodeIterator implements Iterator {
 
 	public void method7684(NodeCollection class482, byte i) {
 		((NodeIterator) this).collection = class482;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
@@ -70,7 +70,7 @@ public class NodeIterator implements Iterator {
 
 	public NodeIterator(NodeCollection collection) {
 		((NodeIterator) this).collection = collection;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
@@ -80,7 +80,7 @@ public class NodeIterator implements Iterator {
 			class282 = null;
 			((NodeIterator) this).aClass282_5536 = null;
 		} else
-			((NodeIterator) this).aClass282_5536 = class282.next;
+			((NodeIterator) this).aClass282_5536 = class282.prev;
 		((NodeIterator) this).aClass282_5537 = class282;
 		return class282;
 	}
@@ -91,7 +91,7 @@ public class NodeIterator implements Iterator {
 			class282 = null;
 			((NodeIterator) this).aClass282_5536 = null;
 		} else
-			((NodeIterator) this).aClass282_5536 = class282.next;
+			((NodeIterator) this).aClass282_5536 = class282.prev;
 		((NodeIterator) this).aClass282_5537 = class282;
 		return class282;
 	}
@@ -99,54 +99,54 @@ public class NodeIterator implements Iterator {
 	public void remove() {
 		if (((NodeIterator) this).aClass282_5537 == null)
 			throw new IllegalStateException();
-		((NodeIterator) this).aClass282_5537.unlink(-371378792);
+		((NodeIterator) this).aClass282_5537.remove();
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	public void method7690() {
 		if (((NodeIterator) this).aClass282_5537 == null)
 			throw new IllegalStateException();
-		((NodeIterator) this).aClass282_5537.unlink(-371378792);
+		((NodeIterator) this).aClass282_5537.remove();
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	public void method7691(NodeCollection class482) {
 		((NodeIterator) this).collection = class482;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	public void method7692(NodeCollection class482) {
 		((NodeIterator) this).collection = class482;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	void method7693() {
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	public void method7694() {
 		if (((NodeIterator) this).aClass282_5537 == null)
 			throw new IllegalStateException();
-		((NodeIterator) this).aClass282_5537.unlink(-371378792);
+		((NodeIterator) this).aClass282_5537.remove();
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	void method7695() {
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	public void method7696(NodeCollection class482) {
 		((NodeIterator) this).collection = class482;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 
 	void method7697(short i) {
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.next;
+		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
 		((NodeIterator) this).aClass282_5537 = null;
 	}
 

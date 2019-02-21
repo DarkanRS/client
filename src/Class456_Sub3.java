@@ -2,27 +2,27 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class456_Sub3 extends Class456 {
+public class Class456_Sub3 extends Animation {
 	public boolean aBool7891 = false;
 	Animable aClass521_Sub1_Sub1_Sub2_7892;
 
 	void method7594(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(1272009199) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(1318562485))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(1318562485))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 
 	void method7586(AnimationDefinitions class518, int i, int i_0_) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(-1618819978) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(801437187))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 
 	void method7626(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(1000836234) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(-549565826))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-549565826))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 
 	void method7590(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(1096922104) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(-725189738))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-725189738))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 
@@ -32,17 +32,17 @@ public class Class456_Sub3 extends Class456 {
 	}
 
 	void method7592(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(2146617063) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(-1145488982))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-1145488982))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 
 	void method7616(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(477929542) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(-490019953))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-490019953))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 
 	void method7591(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7564(1197361181) || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.aClass456_10338.method7573(1770445904))
+		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(1770445904))
 			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
 	}
 

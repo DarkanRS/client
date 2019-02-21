@@ -99,17 +99,17 @@ public class Class149_Sub2 extends Class149 {
 				Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 				((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 			}
-			class282_sub48.unlink(-371378792);
+			class282_sub48.remove();
 		}
 	}
 
 	static int method14610(Player class521_sub1_sub1_sub2_sub1, int i) {
 		int i_44_ = -1104078683 * class521_sub1_sub1_sub2_sub1.anInt10572;
-		Class227 class227 = class521_sub1_sub1_sub2_sub1.method15855((byte) -17);
+		RenderAnimDefs class227 = class521_sub1_sub1_sub2_sub1.getRenderAnimDefs((byte) -17);
 		int i_45_ = class521_sub1_sub1_sub2_sub1.aClass456_Sub3_10337.method7597(-1192629729);
 		if (-1 == i_45_ || class521_sub1_sub1_sub2_sub1.aClass456_Sub3_10337.aBool7891)
 			i_44_ = 921552681 * class521_sub1_sub1_sub2_sub1.anInt10560;
-		else if (i_45_ == class227.anInt2797 * -474675041 || i_45_ == 486149589 * class227.anInt2817 || i_45_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_45_)
+		else if (i_45_ == class227.anInt2797 * -474675041 || i_45_ == 486149589 * class227.walkDir6 || i_45_ == class227.anInt2800 * -833477781 || 1642803439 * class227.anInt2799 == i_45_)
 			i_44_ = class521_sub1_sub1_sub2_sub1.anInt10574 * -1965967729;
 		else if (i_45_ == 2055956425 * class227.anInt2801 || i_45_ == 1053306035 * class227.anInt2828 || class227.anInt2812 * 1489597113 == i_45_ || 1879075923 * class227.anInt2803 == i_45_)
 			i_44_ = -1465525213 * class521_sub1_sub1_sub2_sub1.anInt10547;

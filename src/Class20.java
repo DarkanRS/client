@@ -118,39 +118,39 @@ public class Class20 {
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7155 ? 1 : 0;
 	}
 
-	public static void animate(Animable animable, int[] is, int i, boolean bool, byte i_579_) {
-		if (null != animable.anIntArray10350) {
-			boolean bool_580_ = true;
-			for (int i_581_ = 0; i_581_ < animable.anIntArray10350.length; i_581_++) {
-				if (is[i_581_] != animable.anIntArray10350[i_581_]) {
-					bool_580_ = false;
+	public static void animate(Animable animable, int[] animationIds, int speed, boolean bool, byte i_579_) {
+		if (null != animable.currentAnimations) {
+			boolean noNewAnimations = true;
+			for (int i = 0; i < animable.currentAnimations.length; i++) {
+				if (animationIds[i] != animable.currentAnimations[i]) {
+					noNewAnimations = false;
 					break;
 				}
 			}
-			Class456 class456 = animable.aClass456_10338;
-			if (bool_580_ && class456.method7564(-1655113782)) {
-				AnimationDefinitions class518 = animable.aClass456_10338.method7565(-1632742162);
-				int i_582_ = 554947543 * class518.anInt5907;
-				if (i_582_ == 1)
-					class456.method7583(i, (byte) 0);
-				if (2 == i_582_)
-					class456.method7584(-272427166);
+			Animation currentAnim = animable.currentAnimation;
+			if (noNewAnimations && currentAnim.hasDefs()) {
+				AnimationDefinitions class518 = animable.currentAnimation.getDefs();
+				int speedType = 554947543 * class518.anInt5907;
+				if (speedType == 1)
+					currentAnim.method7583(speed, (byte) 0);
+				if (2 == speedType)
+					currentAnim.method7584(-272427166);
 			}
 		}
-		boolean bool_583_ = true;
-		for (int i_584_ = 0; i_584_ < is.length; i_584_++) {
-			if (-1 != is[i_584_])
-				bool_583_ = false;
-			if (null == animable.anIntArray10350 || -1 == animable.anIntArray10350[i_584_] || ((IndexLoaders.aClass523_3868.method11205(is[i_584_], (byte) -52).anInt5916) * -1834317435 >= (IndexLoaders.aClass523_3868.method11205(animable.anIntArray10350[i_584_], (byte) -23).anInt5916) * -1834317435)) {
-				animable.anIntArray10350 = is;
-				animable.aClass456_10338.method7575(i, 1547741706);
+		boolean finishAnimation = true;
+		for (int i = 0; i < animationIds.length; i++) {
+			if (-1 != animationIds[i])
+				finishAnimation = false;
+			if (null == animable.currentAnimations || -1 == animable.currentAnimations[i] || ((IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animationIds[i], (byte) -52).priority) * -1834317435 >= (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animable.currentAnimations[i], (byte) -23).priority) * -1834317435)) {
+				animable.currentAnimations = animationIds;
+				animable.currentAnimation.setSpeed(speed);
 				if (bool)
 					animable.anInt10367 = 485298635 * animable.anInt10355;
 			}
 		}
-		if (bool_583_) {
-			animable.anIntArray10350 = is;
-			animable.aClass456_10338.method7575(i, 1956173638);
+		if (finishAnimation) {
+			animable.currentAnimations = animationIds;
+			animable.currentAnimation.setSpeed(speed);
 			if (bool)
 				animable.anInt10367 = 485298635 * animable.anInt10355;
 		}

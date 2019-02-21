@@ -110,7 +110,7 @@ public class Class275_Sub7 extends Class275 {
 			client.aBoolArray7431[i_15_] = false;
 		client.anInt7277 = 158788875;
 		client.anInt7448 = -1044733407;
-		Class473.anInt5606 = 0;
+		LinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;
 		NativeLibraryLoader.anInt3240 = 385244173;
 		Class86.anInt833 = -1509271845;

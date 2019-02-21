@@ -5,14 +5,14 @@
 import java.util.Iterator;
 
 public class Class469 implements Iterator {
-	Class282_Sub50 aClass282_Sub50_5582 = null;
-	Class282_Sub50 aClass282_Sub50_5583;
+	CacheableNode aClass282_Sub50_5582 = null;
+	CacheableNode aClass282_Sub50_5583;
 	Class477 aClass477_5584;
 	public static boolean aBool5585;
 
-	public Class282_Sub50 method7790(int i) {
+	public CacheableNode method7790(int i) {
 		method7800((short) 255);
-		return (Class282_Sub50) next();
+		return (CacheableNode) next();
 	}
 
 	public Class469(Class477 class477) {
@@ -22,7 +22,7 @@ public class Class469 implements Iterator {
 	}
 
 	public Object method7791() {
-		Class282_Sub50 class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
+		CacheableNode class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
 		if (class282_sub50 == ((Class469) this).aClass477_5584.aClass282_Sub50_5629) {
 			class282_sub50 = null;
 			((Class469) this).aClass282_Sub50_5583 = null;
@@ -33,7 +33,7 @@ public class Class469 implements Iterator {
 	}
 
 	public Object next() {
-		Class282_Sub50 class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
+		CacheableNode class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
 		if (class282_sub50 == ((Class469) this).aClass477_5584.aClass282_Sub50_5629) {
 			class282_sub50 = null;
 			((Class469) this).aClass282_Sub50_5583 = null;
@@ -50,7 +50,7 @@ public class Class469 implements Iterator {
 	public void remove() {
 		if (null == ((Class469) this).aClass282_Sub50_5582)
 			throw new IllegalStateException();
-		((Class469) this).aClass282_Sub50_5582.method13452((byte) -5);
+		((Class469) this).aClass282_Sub50_5582.method13452();
 		((Class469) this).aClass282_Sub50_5582 = null;
 	}
 
@@ -67,7 +67,7 @@ public class Class469 implements Iterator {
 	}
 
 	public Object method7795() {
-		Class282_Sub50 class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
+		CacheableNode class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
 		if (class282_sub50 == ((Class469) this).aClass477_5584.aClass282_Sub50_5629) {
 			class282_sub50 = null;
 			((Class469) this).aClass282_Sub50_5583 = null;
@@ -90,14 +90,14 @@ public class Class469 implements Iterator {
 	public void method7798() {
 		if (null == ((Class469) this).aClass282_Sub50_5582)
 			throw new IllegalStateException();
-		((Class469) this).aClass282_Sub50_5582.method13452((byte) -5);
+		((Class469) this).aClass282_Sub50_5582.method13452();
 		((Class469) this).aClass282_Sub50_5582 = null;
 	}
 
 	public void method7799() {
 		if (null == ((Class469) this).aClass282_Sub50_5582)
 			throw new IllegalStateException();
-		((Class469) this).aClass282_Sub50_5582.method13452((byte) -5);
+		((Class469) this).aClass282_Sub50_5582.method13452();
 		((Class469) this).aClass282_Sub50_5582 = null;
 	}
 
@@ -106,23 +106,23 @@ public class Class469 implements Iterator {
 		((Class469) this).aClass282_Sub50_5582 = null;
 	}
 
-	public Class282_Sub50 method7801() {
+	public CacheableNode method7801() {
 		method7800((short) 255);
-		return (Class282_Sub50) next();
+		return (CacheableNode) next();
 	}
 
-	public Class282_Sub50 method7802() {
+	public CacheableNode method7802() {
 		method7800((short) 255);
-		return (Class282_Sub50) next();
+		return (CacheableNode) next();
 	}
 
-	public Class282_Sub50 method7803() {
+	public CacheableNode method7803() {
 		method7800((short) 255);
-		return (Class282_Sub50) next();
+		return (CacheableNode) next();
 	}
 
 	public Object method7804() {
-		Class282_Sub50 class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
+		CacheableNode class282_sub50 = ((Class469) this).aClass282_Sub50_5583;
 		if (class282_sub50 == ((Class469) this).aClass477_5584.aClass282_Sub50_5629) {
 			class282_sub50 = null;
 			((Class469) this).aClass282_Sub50_5583 = null;

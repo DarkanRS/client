@@ -14,8 +14,8 @@ public class Class96_Sub3 extends Class96 {
 	static int anInt8518;
 
 	boolean method1596() {
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) -33);
-		return class518.method11132(1948514804);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((((Class96_Sub3) this).anInt8517) * -45034787, (byte) -33);
+		return class518.loadSkeletons();
 	}
 
 	public void method1592(int i) {
@@ -24,8 +24,8 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	boolean method1599(int i) {
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 45);
-		return class518.method11132(1971931825);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 45);
+		return class518.loadSkeletons();
 	}
 
 	public void method1601() {
@@ -34,8 +34,8 @@ public class Class96_Sub3 extends Class96 {
 	}
 
 	boolean method1591() {
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 59);
-		return class518.method11132(2115233018);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((((Class96_Sub3) this).anInt8517) * -45034787, (byte) 59);
+		return class518.loadSkeletons();
 	}
 
 	Class96_Sub3(RsByteBuffer class282_sub35) {

@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class JS5CacheRequest extends Class282_Sub50 {
+public abstract class JS5CacheRequest extends CacheableNode {
 	boolean aBool9637;
 	boolean aBool9638;
 	volatile boolean incomplete = true;

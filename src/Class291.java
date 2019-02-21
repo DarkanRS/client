@@ -57,7 +57,7 @@ public class Class291 {
 		anInterface42_3458 = interface42;
 		aClass465_3461.method7749(1876923510);
 		int i = aClass317_3460.getArchiveId("details", -1007791865);
-		int[] is = aClass317_3460.method5616(i, -1005488286);
+		int[] is = aClass317_3460.getValidFileIds(i, -1005488286);
 		if (is != null) {
 			for (int i_3_ = 0; i_3_ < is.length; i_3_++) {
 				Class282_Sub50_Sub6 class282_sub50_sub6 = Class52.method1087(aClass317_3460, i, is[i_3_], 1237767362);

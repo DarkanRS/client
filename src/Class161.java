@@ -6,7 +6,7 @@ public class Class161 {
 	public int anInt2011;
 	public int anInt2012 = 1025302087;
 	public int anInt2013;
-	public Class456 aClass456_2014;
+	public Animation aClass456_2014;
 	public int anInt2015;
 
 	Class161(Animable class521_sub1_sub1_sub2) {

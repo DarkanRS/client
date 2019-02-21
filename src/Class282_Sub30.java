@@ -30,12 +30,12 @@ public class Class282_Sub30 extends Node {
 		return i_2_;
 	}
 
-	final MeshRasterizer method12429(GraphicalRenderer class505, int i, Class456 class456, int i_5_, boolean bool, PlayerAppearance class238, int i_6_) {
+	final MeshRasterizer method12429(GraphicalRenderer class505, int i, Animation class456, int i_5_, boolean bool, PlayerAppearance class238, int i_6_) {
 		MeshRasterizer class528 = null;
 		int i_7_ = i;
-		Class227 class227 = null;
+		RenderAnimDefs class227 = null;
 		if (-1 != i_5_)
-			class227 = IndexLoaders.aClass211_9383.method3616(i_5_, (byte) 66);
+			class227 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_5_, (byte) 66);
 		int[] is = ((Class282_Sub30) this).anIntArray7710;
 		if (null != class227 && class227.anIntArray2811 != null) {
 			is = new int[class227.anIntArray2811.length];
@@ -111,13 +111,13 @@ public class Class282_Sub30 extends Node {
 	static void method12430(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 355510515);
 		if (class282_sub30 != null)
-			class282_sub30.unlink(-371378792);
+			class282_sub30.remove();
 	}
 
 	static void method12431(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, -1064510317);
 		if (class282_sub30 != null)
-			class282_sub30.unlink(-371378792);
+			class282_sub30.remove();
 	}
 
 	public static int method12432(int i, int i_24_, boolean bool) {
@@ -188,13 +188,13 @@ public class Class282_Sub30 extends Node {
 	static void method12438(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 638529549);
 		if (class282_sub30 != null)
-			class282_sub30.unlink(-371378792);
+			class282_sub30.remove();
 	}
 
 	static void method12439(int i, boolean bool) {
 		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, -1515589512);
 		if (class282_sub30 != null)
-			class282_sub30.unlink(-371378792);
+			class282_sub30.remove();
 	}
 
 	public static int method12440(int i, int i_34_, boolean bool) {
@@ -389,12 +389,12 @@ public class Class282_Sub30 extends Node {
 		return ((Class282_Sub30) class282_sub30).anIntArray7710[i_64_];
 	}
 
-	final MeshRasterizer method12454(GraphicalRenderer class505, int i, Class456 class456, int i_65_, boolean bool, PlayerAppearance class238) {
+	final MeshRasterizer method12454(GraphicalRenderer class505, int i, Animation class456, int i_65_, boolean bool, PlayerAppearance class238) {
 		MeshRasterizer class528 = null;
 		int i_66_ = i;
-		Class227 class227 = null;
+		RenderAnimDefs class227 = null;
 		if (-1 != i_65_)
-			class227 = IndexLoaders.aClass211_9383.method3616(i_65_, (byte) -18);
+			class227 = IndexLoaders.RENDER_ANIMS.getRenderAnimDefs(i_65_, (byte) -18);
 		int[] is = ((Class282_Sub30) this).anIntArray7710;
 		if (null != class227 && class227.anIntArray2811 != null) {
 			is = new int[class227.anIntArray2811.length];

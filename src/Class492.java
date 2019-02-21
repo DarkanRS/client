@@ -13,7 +13,7 @@ public class Class492 {
 		if (null != class282_sub37) {
 			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 19);
 			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, -93907801);
-			class282_sub37.unlink(-371378792);
+			class282_sub37.remove();
 		}
 	}
 
@@ -70,7 +70,7 @@ public class Class492 {
 		if (null != class282_sub37) {
 			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 121);
 			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, -402888978);
-			class282_sub37.unlink(-371378792);
+			class282_sub37.remove();
 		}
 	}
 

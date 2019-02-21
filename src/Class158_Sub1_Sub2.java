@@ -245,8 +245,8 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 	public static final void method15535(int i, String string, Color color, Color color_0_, Color color_1_, int i_2_) {
 		try {
 			Graphics graphics = Class351.gameCanvas.getGraphics();
-			if (null == Class515.aFont5893)
-				Class515.aFont5893 = new Font("Helvetica", 1, 13);
+			if (null == SpotAnimIndexLoader.aFont5893)
+				SpotAnimIndexLoader.aFont5893 = new Font("Helvetica", 1, 13);
 			if (color == null)
 				color = new Color(140, 17, 17);
 			if (color_0_ == null)
@@ -268,11 +268,11 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				graphics_3_.setColor(Color.black);
 				graphics_3_.drawRect(i_4_ + 1, i_5_ + 1, 301, 31);
 				graphics_3_.fillRect(i * 3 + (i_4_ + 2), i_5_ + 2, 300 - 3 * i, 30);
-				graphics_3_.setFont(Class515.aFont5893);
+				graphics_3_.setFont(SpotAnimIndexLoader.aFont5893);
 				graphics_3_.setColor(color_1_);
 				graphics_3_.drawString(string, i_4_ + (304 - string.length() * 6) / 2, 22 + i_5_);
 				if (Engine.aString3252 != null) {
-					graphics_3_.setFont(Class515.aFont5893);
+					graphics_3_.setFont(SpotAnimIndexLoader.aFont5893);
 					graphics_3_.setColor(color_1_);
 					graphics_3_.drawString(Engine.aString3252, (Class349.anInt4083 * -418109423 / 2 - (Engine.aString3252.length() * 6 / 2)), (Engine.anInt3243 * -969250379 / 2 - 26));
 				}
@@ -289,10 +289,10 @@ public class Class158_Sub1_Sub2 extends Class158_Sub1 {
 				graphics.setColor(Color.black);
 				graphics.drawRect(i_6_ + 1, i_7_ + 1, 301, 31);
 				graphics.fillRect(3 * i + (i_6_ + 2), i_7_ + 2, 300 - 3 * i, 30);
-				graphics.setFont(Class515.aFont5893);
+				graphics.setFont(SpotAnimIndexLoader.aFont5893);
 				graphics.setColor(color_1_);
 				if (Engine.aString3252 != null) {
-					graphics.setFont(Class515.aFont5893);
+					graphics.setFont(SpotAnimIndexLoader.aFont5893);
 					graphics.setColor(color_1_);
 					graphics.drawString(Engine.aString3252, (-418109423 * Class349.anInt4083 / 2 - (Engine.aString3252.length() * 6 / 2)), (-969250379 * Engine.anInt3243 / 2 - 26));
 				}

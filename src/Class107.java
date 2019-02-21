@@ -39,7 +39,7 @@ public class Class107 {
 	void method1821(int i, short i_1_) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1887501575);
 		if (null != class282_sub21) {
-			class282_sub21.unlink(-371378792);
+			class282_sub21.remove();
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -95,7 +95,7 @@ public class Class107 {
 	void method1826(int i) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1913214087);
 		if (null != class282_sub21) {
-			class282_sub21.unlink(-371378792);
+			class282_sub21.remove();
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -109,7 +109,7 @@ public class Class107 {
 	void method1828(int i) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1989060357);
 		if (null != class282_sub21) {
-			class282_sub21.unlink(-371378792);
+			class282_sub21.remove();
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}
@@ -117,7 +117,7 @@ public class Class107 {
 	void method1829(int i) {
 		Class282_Sub21 class282_sub21 = method1823(i, 1705037884);
 		if (null != class282_sub21) {
-			class282_sub21.unlink(-371378792);
+			class282_sub21.remove();
 			((Class107) this).aClass282_Sub21Array1079[((Class282_Sub21) class282_sub21).anInt7675 * 1401548631] = null;
 		}
 	}

@@ -206,13 +206,13 @@ public class Class190 {
 		Class8_Sub3.method14341(1480679080);
 		Class296.anInt3534 = 0;
 		Class282_Sub44.anInt8064 = 0;
-		Class525.anInt6985 = 0;
+		SpotAnimDefinitions.anInt6985 = 0;
 		Class454.anInt5451 = 0;
 		Class115.anInt1249 = 0;
 		Class96_Sub13.anInt9368 = 0;
 		OutgoingLoginPacket.anInt4280 = 0;
 		Class121.anInt1527 = 0;
-		Class473.anInt5606 = 0;
+		LinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;
 		for (int i_32_ = 0; i_32_ < Class320.anIntArray3724.length; i_32_++) {
 			if (!Class282_Sub17_Sub2.aBoolArray9934[i_32_]) {

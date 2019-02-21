@@ -27,9 +27,9 @@ public class Class216 {
 		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
 		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
 		if (class437.method7319(1764887280))
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.aClass523_3868.method11205(i_0_, (byte) -22).method11129(i_1_, class437.aString5335, 803635154);
+			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_0_, (byte) -22).method11129(i_1_, class437.aString5335, 803635154);
 		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.aClass523_3868.method11205(i_0_, (byte) -46).method11133(i_1_, -1741480635 * class437.anInt5337, 1720724957));
+			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_0_, (byte) -46).method11133(i_1_, -1741480635 * class437.anInt5337, 1720724957));
 	}
 
 	static void method3675(int i) {
@@ -44,7 +44,7 @@ public class Class216 {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class473.method7889(class118, class98, class527, 1072784051);
+		LinkedNodeList.method7889(class118, class98, class527, 1072784051);
 	}
 
 	static boolean method3677(int i) {

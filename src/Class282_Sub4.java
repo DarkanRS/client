@@ -306,12 +306,12 @@ public class Class282_Sub4 extends Node {
 				int i_40_ = i_32_ * i_31_;
 				int i_41_ = i + (i_37_ + i_35_ + i_39_ >> 12);
 				int i_42_ = (i_36_ + i_38_ + i_40_ >> 12) + i_9_;
-				Class523.method11220(i_18_, i_19_, i_41_, i_42_, i_16_, (byte) 85);
+				AnimationIndexLoader.method11220(i_18_, i_19_, i_41_, i_42_, i_16_, (byte) 85);
 				i_18_ = i_41_;
 				i_19_ = i_42_;
 			}
 		} else
-			Class523.method11220(i, i_9_, i_14_, i_15_, i_16_, (byte) 47);
+			AnimationIndexLoader.method11220(i, i_9_, i_14_, i_15_, i_16_, (byte) 47);
 	}
 
 	static final void method12118(CS2Executor class527, int i) {

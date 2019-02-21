@@ -23,7 +23,7 @@ public class Class230 implements IndexLoader {
 			return class226;
 		byte[] is;
 		synchronized (((Class230) this).aClass317_2858) {
-			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i, 87190961), SharedConfigsType.aClass120_1477.fileId(i, -2017027234), -1643082761));
+			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i), SharedConfigsType.aClass120_1477.fileId(i), -1643082761));
 		}
 		class226 = new Class226();
 		if (null != is)
@@ -70,7 +70,7 @@ public class Class230 implements IndexLoader {
 			return class226;
 		byte[] is;
 		synchronized (((Class230) this).aClass317_2858) {
-			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i, -1228358151), SharedConfigsType.aClass120_1477.fileId(i, -1768503924), -1630119547));
+			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i), SharedConfigsType.aClass120_1477.fileId(i), -1630119547));
 		}
 		class226 = new Class226();
 		if (null != is)

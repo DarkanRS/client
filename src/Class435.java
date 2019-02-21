@@ -116,7 +116,7 @@ public class Class435 {
 				}
 			}
 			class282_sub35_sub2.method13104(i, 1491760652);
-			class282_sub42.unlink(-371378792);
+			class282_sub42.remove();
 		}
 	}
 
@@ -377,7 +377,7 @@ public class Class435 {
 				}
 			}
 			class282_sub35_sub2.method13104(i, -1139639151);
-			class282_sub42.unlink(-371378792);
+			class282_sub42.remove();
 		}
 	}
 

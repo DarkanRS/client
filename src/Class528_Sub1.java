@@ -1447,14 +1447,14 @@ public class Class528_Sub1 extends MeshRasterizer {
 												is_265_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aShortArray2038 = (Class512.method8761((((Class528_Sub1) this).aShortArray8255), 1163073804));
 												is_266_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aShortArray2039 = (Class512.method8761((((Class528_Sub1) this).aShortArray8270), 756820826));
 												is_267_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aShortArray2041 = (Class512.method8761((((Class528_Sub1) this).aShortArray8261), 330065192));
-												is_268_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aByteArray2040 = (Class282_Sub50_Sub13.method15090((((Class528_Sub1) this).aByteArray8264), -2131769524));
+												is_268_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aByteArray2040 = (AnimationSkeleton.method15090((((Class528_Sub1) this).aByteArray8264), -2131769524));
 											}
 											if (is_269_ == null) {
 												Class166 class166 = (((Class528_Sub1) class528_sub1_257_).aClass166_8259 = new Class166());
 												is_269_ = ((Class166) class166).aShortArray2038 = (Class512.method8761(is_261_, 288283736));
 												is_270_ = ((Class166) class166).aShortArray2039 = (Class512.method8761(is_262_, 1683067635));
 												is_271_ = ((Class166) class166).aShortArray2041 = (Class512.method8761(is_263_, 22410603));
-												is_272_ = ((Class166) class166).aByteArray2040 = (Class282_Sub50_Sub13.method15090(is_264_, -2141806379));
+												is_272_ = ((Class166) class166).aByteArray2040 = (AnimationSkeleton.method15090(is_264_, -2141806379));
 											}
 											short i_292_ = (((Class528_Sub1) this).aShortArray8255[i_285_]);
 											short i_293_ = (((Class528_Sub1) this).aShortArray8270[i_285_]);
@@ -3710,14 +3710,14 @@ public class Class528_Sub1 extends MeshRasterizer {
 												is_898_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aShortArray2038 = (Class512.method8761((((Class528_Sub1) this).aShortArray8255), 386966088));
 												is_899_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aShortArray2039 = (Class512.method8761((((Class528_Sub1) this).aShortArray8270), -249618007));
 												is_900_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aShortArray2041 = (Class512.method8761((((Class528_Sub1) this).aShortArray8261), -40836126));
-												is_901_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aByteArray2040 = (Class282_Sub50_Sub13.method15090((((Class528_Sub1) this).aByteArray8264), -2143389284));
+												is_901_ = ((Class166) (((Class528_Sub1) this).aClass166_8259)).aByteArray2040 = (AnimationSkeleton.method15090((((Class528_Sub1) this).aByteArray8264), -2143389284));
 											}
 											if (is_902_ == null) {
 												Class166 class166 = (((Class528_Sub1) class528_sub1_890_).aClass166_8259 = new Class166());
 												is_902_ = ((Class166) class166).aShortArray2038 = (Class512.method8761(is_894_, 1222177846));
 												is_903_ = ((Class166) class166).aShortArray2039 = (Class512.method8761(is_895_, 22499234));
 												is_904_ = ((Class166) class166).aShortArray2041 = (Class512.method8761(is_896_, -556022346));
-												is_905_ = ((Class166) class166).aByteArray2040 = (Class282_Sub50_Sub13.method15090(is_897_, -2141733620));
+												is_905_ = ((Class166) class166).aByteArray2040 = (AnimationSkeleton.method15090(is_897_, -2141733620));
 											}
 											short i_925_ = (((Class528_Sub1) this).aShortArray8255[i_918_]);
 											short i_926_ = (((Class528_Sub1) this).aShortArray8270[i_918_]);

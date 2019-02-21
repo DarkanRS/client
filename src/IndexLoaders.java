@@ -53,7 +53,7 @@ public class IndexLoaders {
 	public static ItemIndexLoader ITEM_INDEX_LOADER;
 	public static Interface22 IMAGE_LOADER;
 	public static ItemDefaultsLoader ITEM_DEFAULTS;
-	public static Class211 aClass211_9383;
+	public static RenderAnimIndexLoader RENDER_ANIMS;
 	public static Class438 aClass438_7932;
 	public static Class31 aClass31_204;
 	public static Class290 HITBAR_INDEX;
@@ -70,10 +70,10 @@ public class IndexLoaders {
 	public static Class427 aClass427_995;
 	public static NPCIndexLoader NPC_INDEX_LOADER;
 	public static Class242 aClass242_4922;
-	public static Class523 aClass523_3868;
+	public static AnimationIndexLoader ANIMATION_INDEX_LOADER;
 	public static Class288 aClass288_1746;
 	public static Class45 aClass45_5759;
-	public static Class515 aClass515_9416;
+	public static SpotAnimIndexLoader SPOT_ANIM_INDEX_LOADER;
 	public static Class421 aClass421_2658;
 	public static Class401 aClass401_4791;
 	public static Class408 aClass408_7207;
@@ -235,7 +235,7 @@ public class IndexLoaders {
 				client.anInt7439 = -406576707 * Class58.aClass529_527.anInt7045;
 				client.anInt7312 = 981526077 * Class58.aClass529_527.anInt7046;
 			}
-			Class473.DEFAULTS_LOADER_6 = new Defaults6Loader(DEFAULTS_INDEX);
+			LinkedNodeList.DEFAULTS_LOADER_6 = new Defaults6Loader(DEFAULTS_INDEX);
 			Class149_Sub2.DEFAULTS_LOADER_7 = new Defaults7Loader(DEFAULTS_INDEX);
 			Class282_Sub13.DEFAULTS_LOADER_8 = new Defaults8Loader(DEFAULTS_INDEX);
 		}
@@ -245,7 +245,7 @@ public class IndexLoaders {
 			}
 			IMAGE_LOADER = new Class323(TEXTURE_DEFINITION_INDEX, TEXTURE_INDEX, SPRITES_INDEX);
 			ITEM_DEFAULTS = new ItemDefaultsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			aClass211_9383 = new Class211(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, Class473.DEFAULTS_LOADER_6);
+			RENDER_ANIMS = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.DEFAULTS_LOADER_6);
 			aClass438_7932 = new Class438(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
 			aClass444_5570 = new Class444(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
 			aClass536_1535 = new Class536(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
@@ -263,10 +263,10 @@ public class IndexLoaders {
 			NPC_INDEX_LOADER = new NPCIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, true, NPC_INDEX, MESH_INDEX);
 			ITEM_INDEX_LOADER = new ItemIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, true, ITEM_DEFAULTS, ITEM_INDEX, MESH_INDEX);
 			aClass242_4922 = new Class242(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, true);
-			aClass523_3868 = new Class523(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SEQUENCES_INDEX, ANIMATION_SKELETON_INDEX, ANIMATION_SKIN_INDEX);
+			ANIMATION_INDEX_LOADER = new AnimationIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SEQUENCES_INDEX, ANIMATION_SKELETON_INDEX, ANIMATION_SKIN_INDEX);
 			aClass288_1746 = new Class288(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass45_5759 = new Class45(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
-			aClass515_9416 = new Class515(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SPOTANIM_INDEX, MESH_INDEX);
+			SPOT_ANIM_INDEX_LOADER = new SpotAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, SPOTANIM_INDEX, MESH_INDEX);
 			aClass421_2658 = new Class421(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, true);
 			aClass401_4791 = new Class401(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			aClass408_7207 = new Class408(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
@@ -282,7 +282,7 @@ public class IndexLoaders {
 			QUICK_CHAT_INDEX_LOADER2 = new QuickchatDefinitionsLoader(Class223.CURRENT_LANGUAGE, QC_MESSAGES_INDEX, QC_MENU_INDEX, new Class58());
 			Class158_Sub1.aClass3_8507 = new Class3();
 			Class94.method1589((short) 255);
-			Class77.method1369(aClass523_3868, 1486901897);
+			Class77.method1369(ANIMATION_INDEX_LOADER, 1486901897);
 			Class62.method1261(PARTICLE_INDEX, (byte) -73);
 			Class173.method2943(MESH_INDEX, IMAGE_LOADER, 16711680);
 			Class117 class117 = new Class117(HUFFMAN_INDEX.method5626("huffman", "", (byte) 1));

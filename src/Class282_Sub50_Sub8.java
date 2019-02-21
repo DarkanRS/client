@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public abstract class Class282_Sub50_Sub8 extends Class282_Sub50 {
+public abstract class Class282_Sub50_Sub8 extends CacheableNode {
 	int anInt9606;
 	Interface18 anInterface18_9607;
 

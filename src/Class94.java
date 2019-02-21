@@ -118,7 +118,7 @@ public class Class94 {
 		IndexLoaders.MAP_REGION_LOADER_THREAD.method6052((short) -5779).method4436(-1603453217).method7893(i_3_, -79480655);
 		IndexLoaders.ITEM_INDEX_LOADER.method7153(i_3_, -933999728);
 		IndexLoaders.NPC_INDEX_LOADER.method6829(i_3_, 989063479);
-		IndexLoaders.aClass515_9416.method8846(i_3_, (byte) -61);
+		IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8846(i_3_, (byte) -61);
 		Class38.method851(i_3_, 1008680186);
 		Game.method8204(i_3_, -2137670841);
 		Class117.method1982(i_3_, -1202059650);

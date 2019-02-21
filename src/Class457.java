@@ -215,6 +215,6 @@ public class Class457 {
 	}
 
 	static final void method7668(CS2Executor class527, int i) {
-		Class515.method8862((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
+		SpotAnimIndexLoader.method8862((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
 	}
 }

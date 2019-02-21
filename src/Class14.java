@@ -54,12 +54,12 @@ public class Class14 {
 				flags += buffer.readUnsignedByte() << 24;
 			}
 			if (0 != (flags & 0x10)) {
-				int[] is = new int[Class8_Sub3.method14339(195444347).length];
+				int[] animIds = new int[Class8_Sub3.method14339(195444347).length];
 				for (int i_14_ = 0; i_14_ < Class8_Sub3.method14339(1841907826).length; i_14_++) {
-					is[i_14_] = buffer.readBigSmart();
+					animIds[i_14_] = buffer.readBigSmart();
 				}
-				int i_15_ = buffer.readUnsignedByte();
-				Class20.animate(npc, is, i_15_, true, (byte) 23);
+				int speed = buffer.readUnsignedByte();
+				Class20.animate(npc, animIds, speed, true, (byte) 23);
 			}
 			if (0 != (flags & 0x100)) {
 				int i_16_ = (npc.aClass409_10580.anIntArray4859).length;
@@ -142,7 +142,7 @@ public class Class14 {
 					i_33_ = -1;
 				}
 				boolean bool = (i_31_ >> 7 & 0x1) == 1;
-				npc.sendGraphics(i_29_, i_30_, i_32_, i_33_, bool, 3, -770849102);
+				npc.sendSpotAnim(i_29_, i_30_, i_32_, i_33_, bool, 3, -770849102);
 			}
 			if (0 != (flags & 0x80)) {
 				npc.faceEntity = (buffer.readShortLE((byte) -44) * -2059452093);
@@ -176,7 +176,7 @@ public class Class14 {
 					i_43_ = -1;
 				}
 				boolean bool = (i_41_ >> 7 & 0x1) == 1;
-				npc.sendGraphics(i_39_, i_40_, i_42_, i_43_, bool, 1, 733349032);
+				npc.sendSpotAnim(i_39_, i_40_, i_42_, i_43_, bool, 1, 733349032);
 			}
 			if ((flags & 0x1) != 0) {
 				int i_44_ = buffer.readUnsignedByte128(-1043197231);
@@ -241,7 +241,7 @@ public class Class14 {
 					i_62_ = -1;
 				}
 				boolean bool = (i_60_ >> 7 & 0x1) == 1;
-				npc.sendGraphics(i_58_, i_59_, i_61_, i_62_, bool, 2, -195417019);
+				npc.sendSpotAnim(i_58_, i_59_, i_61_, i_62_, bool, 2, -195417019);
 			}
 			if ((flags & 0x80000) != 0) {
 				int i_63_ = ((buffer.buffer[((buffer.index += -1115476867) * -1990677291) - 1]) & 0xff);
@@ -354,7 +354,7 @@ public class Class14 {
 					i_90_ = -1;
 				}
 				boolean bool = 1 == (i_88_ >> 7 & 0x1);
-				npc.sendGraphics(i_86_, i_87_, i_89_, i_90_, bool, 0, 1997289787);
+				npc.sendSpotAnim(i_86_, i_87_, i_89_, i_90_, bool, 0, 1997289787);
 			}
 		}
 	}

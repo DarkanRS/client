@@ -90,10 +90,10 @@ public class Class96_Sub19 extends Class96 {
 	}
 
 	boolean method1599(int i) {
-		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) 46);
+		SpotAnimDefinitions class525 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((((Class96_Sub19) this).anInt9410) * 899631601, (byte) 46);
 		boolean bool = class525.method11230(-583697397);
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 7);
-		bool &= class518.method11132(1967469985);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(class525.animationId * -364555849, (byte) 7);
+		bool &= class518.loadSkeletons();
 		return bool;
 	}
 
@@ -132,18 +132,18 @@ public class Class96_Sub19 extends Class96 {
 	}
 
 	boolean method1596() {
-		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -24);
+		SpotAnimDefinitions class525 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -24);
 		boolean bool = class525.method11230(-524786959);
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 12);
-		bool &= class518.method11132(2022792810);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(class525.animationId * -364555849, (byte) 12);
+		bool &= class518.loadSkeletons();
 		return bool;
 	}
 
 	boolean method1591() {
-		Class525 class525 = IndexLoaders.aClass515_9416.method8845((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -73);
+		SpotAnimDefinitions class525 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((((Class96_Sub19) this).anInt9410) * 899631601, (byte) -73);
 		boolean bool = class525.method11230(74376582);
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205(class525.anInt6977 * -364555849, (byte) 58);
-		bool &= class518.method11132(2116421018);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(class525.animationId * -364555849, (byte) 58);
+		bool &= class518.loadSkeletons();
 		return bool;
 	}
 

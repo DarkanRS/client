@@ -28,10 +28,10 @@ public class Class3 implements Interface42 {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
 					int i_4_ = (int) (-3442165056282524525L * class282_sub45.data);
 					anIntArray26[i_4_] = ((Class3) this).anIntArray25[i_4_];
-					class282_sub45.unlink(-371378792);
+					class282_sub45.remove();
 					return i_4_;
 				}
-				class282_sub45.unlink(-371378792);
+				class282_sub45.remove();
 			}
 		}
 		return -1;
@@ -111,10 +111,10 @@ public class Class3 implements Interface42 {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
 					int i = (int) (-3442165056282524525L * class282_sub45.data);
 					anIntArray26[i] = ((Class3) this).anIntArray25[i];
-					class282_sub45.unlink(-371378792);
+					class282_sub45.remove();
 					return i;
 				}
-				class282_sub45.unlink(-371378792);
+				class282_sub45.remove();
 			}
 		}
 		return -1;
@@ -127,10 +127,10 @@ public class Class3 implements Interface42 {
 				if (0L != (class282_sub45.aLong8066 * 3367138086658270151L & 0x4000000000000000L)) {
 					int i = (int) (-3442165056282524525L * class282_sub45.data);
 					anIntArray26[i] = ((Class3) this).anIntArray25[i];
-					class282_sub45.unlink(-371378792);
+					class282_sub45.remove();
 					return i;
 				}
-				class282_sub45.unlink(-371378792);
+				class282_sub45.remove();
 			}
 		}
 		return -1;

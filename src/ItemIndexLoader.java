@@ -27,7 +27,7 @@ public class ItemIndexLoader implements IndexLoader {
 			return defs;
 		byte[] data;
 		synchronized (((ItemIndexLoader) this).fs19) {
-			data = (((ItemIndexLoader) this).fs19.getFile(SharedConfigsType.ITEM_DEFINITIONS.containerId(itemId, 548952968), SharedConfigsType.ITEM_DEFINITIONS.fileId(itemId, -1930948292), -1500146511));
+			data = (((ItemIndexLoader) this).fs19.getFile(SharedConfigsType.ITEM_DEFINITIONS.containerId(itemId), SharedConfigsType.ITEM_DEFINITIONS.fileId(itemId), -1500146511));
 		}
 		defs = new ItemDefinitions();
 		defs.loader = this;
@@ -54,7 +54,7 @@ public class ItemIndexLoader implements IndexLoader {
 				for (Node class282 = defs.cs2Map.method7750(-778830741); class282 != null; class282 = defs.cs2Map.method7751((byte) 57)) {
 					AttributeDefault class437 = (((ItemIndexLoader) this).attrDefaults.method7069((int) (class282.data * -3442165056282524525L), (byte) 0));
 					if (class437.autoDisable)
-						class282.unlink(-371378792);
+						class282.remove();
 					else
 						bool = true;
 				}

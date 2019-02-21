@@ -46,7 +46,7 @@ public class Class421 {
 
 	static final void method7039(byte i) {
 		Class328.aClass118Array3772 = null;
-		Class211.method3629(client.anInt7349 * -1699899559, 0, 0, Class349.anInt4083 * -418109423, -969250379 * client.anInt3243, 0, 0, -1, -1848011733);
+		RenderAnimIndexLoader.method3629(client.anInt7349 * -1699899559, 0, 0, Class349.anInt4083 * -418109423, -969250379 * client.anInt3243, 0, 0, -1, -1848011733);
 		if (null != Class328.aClass118Array3772) {
 			if (i <= -1) {
 				/* empty */

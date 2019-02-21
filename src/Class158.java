@@ -165,6 +165,6 @@ public abstract class Class158 {
 			Class109.method1858(class118, (byte) 79);
 		}
 		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-			Class211.method3631(class118.idHash * -1952846363, -1844455774);
+			RenderAnimIndexLoader.method3631(class118.idHash * -1952846363, -1844455774);
 	}
 }

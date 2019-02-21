@@ -25,7 +25,7 @@ final class Class109_Sub1 extends Class109 {
 	static void method14650(int i, int i_0_) {
 		for (Node class282 = client.aClass465_7405.method7750(1412707931); class282 != null; class282 = client.aClass465_7405.method7751((byte) 92)) {
 			if ((long) i == (-3442165056282524525L * class282.data >> 48 & 0xffffL))
-				class282.unlink(-371378792);
+				class282.remove();
 		}
 	}
 

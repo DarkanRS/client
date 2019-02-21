@@ -119,7 +119,7 @@ public class Class348 {
 			Class31.anInt361 = (Class296.anInt3534 * 1034829113 << 9) * -2043310439;
 			Class246.anInt3029 = (Class282_Sub44.anInt8064 * -2026930995 << 9) * 1442943697;
 		} else
-			Class515.method8860((byte) -92);
+			SpotAnimIndexLoader.method8860((byte) -92);
 		IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4048(-367591790);
 	}
 

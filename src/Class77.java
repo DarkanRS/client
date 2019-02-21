@@ -165,7 +165,7 @@ public class Class77 {
 		return null;
 	}
 
-	public static void method1369(Class523 class523, int i) {
+	public static void method1369(AnimationIndexLoader class523, int i) {
 		NamedFileReference.aClass523_411 = class523;
 	}
 

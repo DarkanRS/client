@@ -89,12 +89,12 @@ public class Class363 {
 		}
 		Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
 		if ((int) class385.x < 512 || (int) class385.z < 512 || ((int) class385.x >= (IndexLoaders.MAP_REGION_DECODER.getSizeX(735172073) - 1) * 512) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.getSizeY(-1048165287) - 1) * 512))) {
-			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
+			class521_sub1_sub1_sub2.currentAnimation.method7567(-1, (short) 8960);
 			for (int i_8_ = 0; i_8_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_8_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_8_].anInt2012 = 1025302087;
 				class521_sub1_sub1_sub2.aClass161Array10339[i_8_].aClass456_2014.method7567(-1, (short) 8960);
 			}
-			class521_sub1_sub1_sub2.anIntArray10350 = null;
+			class521_sub1_sub1_sub2.currentAnimations = null;
 			class521_sub1_sub1_sub2.anInt10342 = 0;
 			class521_sub1_sub1_sub2.anInt10345 = 0;
 			i_6_ = Class249.aClass249_3083.aByte3085;
@@ -103,12 +103,12 @@ public class Class363 {
 			class521_sub1_sub1_sub2.method15801(-1972620165);
 		}
 		if ((class521_sub1_sub1_sub2 == Class84.myPlayer) && ((int) class385.x < 6144 || (int) class385.z < 6144 || ((int) class385.x >= ((IndexLoaders.MAP_REGION_DECODER.getSizeX(723986373) - 12) * 512)) || ((int) class385.z >= ((IndexLoaders.MAP_REGION_DECODER.getSizeY(-806842262) - 12) * 512)))) {
-			class521_sub1_sub1_sub2.aClass456_10338.method7567(-1, (short) 8960);
+			class521_sub1_sub1_sub2.currentAnimation.method7567(-1, (short) 8960);
 			for (int i_9_ = 0; i_9_ < class521_sub1_sub1_sub2.aClass161Array10339.length; i_9_++) {
 				class521_sub1_sub1_sub2.aClass161Array10339[i_9_].anInt2012 = 1025302087;
 				class521_sub1_sub1_sub2.aClass161Array10339[i_9_].aClass456_2014.method7567(-1, (short) 8960);
 			}
-			class521_sub1_sub1_sub2.anIntArray10350 = null;
+			class521_sub1_sub1_sub2.currentAnimations = null;
 			class521_sub1_sub1_sub2.anInt10342 = 0;
 			class521_sub1_sub1_sub2.anInt10345 = 0;
 			i_6_ = Class249.aClass249_3083.aByte3085;

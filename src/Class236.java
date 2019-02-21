@@ -319,11 +319,11 @@ public class Class236 {
 	}
 
 	static void method3985(Animable class521_sub1_sub1_sub2, int i, byte i_3_) {
-		if (class521_sub1_sub1_sub2.anIntArray10350 != null) {
+		if (class521_sub1_sub1_sub2.currentAnimations != null) {
 			Class249 class249 = ((Class249) Class386.method6672(Class8_Sub3.method14339(2013063034), i, -1950936431));
-			int i_4_ = (class521_sub1_sub1_sub2.anIntArray10350[class249.method4268(306106666)]);
-			if (i_4_ != class521_sub1_sub1_sub2.aClass456_10338.method7597(-886146530)) {
-				class521_sub1_sub1_sub2.aClass456_10338.method7615(i_4_, class521_sub1_sub1_sub2.aClass456_10338.method7574(-752424125), 405438357);
+			int i_4_ = (class521_sub1_sub1_sub2.currentAnimations[class249.method4268(306106666)]);
+			if (i_4_ != class521_sub1_sub1_sub2.currentAnimation.method7597(-886146530)) {
+				class521_sub1_sub1_sub2.currentAnimation.method7615(i_4_, class521_sub1_sub1_sub2.currentAnimation.getSpeed(), 405438357);
 				class521_sub1_sub1_sub2.anInt10367 = class521_sub1_sub1_sub2.anInt10355 * 485298635;
 			}
 		}

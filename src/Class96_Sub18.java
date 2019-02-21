@@ -28,8 +28,8 @@ public class Class96_Sub18 extends Class96 {
 	}
 
 	boolean method1599(int i) {
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) -29);
-		return class518.method11132(1999507141);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) -29);
+		return class518.loadSkeletons();
 	}
 
 	public void method1601() {
@@ -41,13 +41,13 @@ public class Class96_Sub18 extends Class96 {
 	}
 
 	boolean method1596() {
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 4);
-		return class518.method11132(2038902723);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 4);
+		return class518.loadSkeletons();
 	}
 
 	boolean method1591() {
-		AnimationDefinitions class518 = IndexLoaders.aClass523_3868.method11205((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 23);
-		return class518.method11132(1964744017);
+		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 23);
+		return class518.loadSkeletons();
 	}
 
 	static final void method14664(IComponentDefinitions class118, Interface class98, boolean bool, int i, CS2Executor class527, byte i_0_) {

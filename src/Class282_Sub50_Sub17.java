@@ -5,7 +5,7 @@
 import java.awt.EventQueue;
 import java.io.File;
 
-public abstract class Class282_Sub50_Sub17 extends Class282_Sub50 {
+public abstract class Class282_Sub50_Sub17 extends CacheableNode {
 	static EventQueue anEventQueue10074;
 
 	Class282_Sub50_Sub17() {

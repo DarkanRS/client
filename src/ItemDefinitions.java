@@ -79,7 +79,7 @@ public class ItemDefinitions implements Interface46 {
 	public boolean aBool5101;
 	public int anInt5102;
 
-	public final MeshRasterizer method7084(GraphicalRenderer class505, int i, int i_0_, PlayerAppearance class238, Class456 class456, int i_1_, int i_2_, int i_3_, int i_4_, byte i_5_) {
+	public final MeshRasterizer method7084(GraphicalRenderer class505, int i, int i_0_, PlayerAppearance class238, Animation class456, int i_1_, int i_2_, int i_3_, int i_4_, byte i_5_) {
 		if (this.stackIds != null && i_0_ > 1) {
 			int i_6_ = -1;
 			for (int i_7_ = 0; i_7_ < 10; i_7_++) {

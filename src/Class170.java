@@ -21,7 +21,7 @@ public class Class170 {
 	boolean aBool2105;
 	Class137_Sub1[] aClass137_Sub1Array2106;
 	Class282_Sub50_Sub19 aClass282_Sub50_Sub19_2107;
-	Class473 aClass473_2108 = new Class473();
+	LinkedNodeList aClass473_2108 = new LinkedNodeList();
 	boolean aBool2109;
 	boolean aBool2110;
 	int anInt2111;
@@ -33,7 +33,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_1_ || ((Class170) this).anInt2099 != i_2_) {
 			((Class170) this).anInt2098 = i_1_;
 			((Class170) this).anInt2099 = i_2_;
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1727282478); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -67,8 +67,8 @@ public class Class170 {
 			int i = 0;
 			int i_3_ = 1;
 			Class282_Sub5 class282_sub5;
-			for (Class282_Sub5 class282_sub5_4_ = (Class282_Sub5) ((Class170) this).aClass473_2108.method7859(782845351); class282_sub5_4_ != null; class282_sub5_4_ = class282_sub5) {
-				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.method7857((byte) -96);
+			for (Class282_Sub5 class282_sub5_4_ = (Class282_Sub5) ((Class170) this).aClass473_2108.getBack(); class282_sub5_4_ != null; class282_sub5_4_ = class282_sub5) {
+				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.getPrevious();
 				int i_5_ = class282_sub5_4_.method12125();
 				for (int i_6_ = 0; i_6_ < i_5_; i_6_++) {
 					class282_sub5_4_.method12119(i_6_, (((Class170) this).aClass137_Sub1Array2106[i]), (((Class170) this).aClass137_Sub1_2104));
@@ -118,7 +118,7 @@ public class Class170 {
 	boolean method2880(Class282_Sub5 class282_sub5) {
 		if (((Class170) this).aClass158_Sub1_Sub4_2095 != null) {
 			if (class282_sub5.method12141() || class282_sub5.method12136()) {
-				((Class170) this).aClass473_2108.method7877(class282_sub5, 1208340082);
+				((Class170) this).aClass473_2108.insertBack(class282_sub5);
 				method2886();
 				if (method2881()) {
 					if (((Class170) this).anInt2098 != -1 && ((Class170) this).anInt2099 != -1)
@@ -224,7 +224,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_8_ || ((Class170) this).anInt2099 != i_9_) {
 			((Class170) this).anInt2098 = i_8_;
 			((Class170) this).anInt2099 = i_9_;
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(982266916); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -258,8 +258,8 @@ public class Class170 {
 			int i = 0;
 			int i_10_ = 1;
 			Class282_Sub5 class282_sub5;
-			for (Class282_Sub5 class282_sub5_11_ = (Class282_Sub5) ((Class170) this).aClass473_2108.method7859(1222970052); class282_sub5_11_ != null; class282_sub5_11_ = class282_sub5) {
-				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.method7857((byte) -118);
+			for (Class282_Sub5 class282_sub5_11_ = (Class282_Sub5) ((Class170) this).aClass473_2108.getBack(); class282_sub5_11_ != null; class282_sub5_11_ = class282_sub5) {
+				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.getPrevious();
 				int i_12_ = class282_sub5_11_.method12125();
 				for (int i_13_ = 0; i_13_ < i_12_; i_13_++) {
 					class282_sub5_11_.method12119(i_13_, ((Class170) this).aClass137_Sub1Array2106[i], ((Class170) this).aClass137_Sub1_2104);
@@ -312,7 +312,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_15_ || ((Class170) this).anInt2099 != i_16_) {
 			((Class170) this).anInt2098 = i_15_;
 			((Class170) this).anInt2099 = i_16_;
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(708316685); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -334,7 +334,7 @@ public class Class170 {
 	void method2885(Class282_Sub5 class282_sub5) {
 		((Class282_Sub5) class282_sub5).aBool7506 = false;
 		class282_sub5.method12120();
-		class282_sub5.unlink(-371378792);
+		class282_sub5.remove();
 		method2886();
 	}
 
@@ -342,7 +342,7 @@ public class Class170 {
 		int i = 0;
 		boolean bool = false;
 		Class76 class76 = Class76.aClass76_751;
-		for (Class282_Sub5 class282_sub5 = ((Class282_Sub5) ((Class170) this).aClass473_2108.method7859(765484279)); class282_sub5 != null; class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.method7857((byte) -40)) {
+		for (Class282_Sub5 class282_sub5 = ((Class282_Sub5) ((Class170) this).aClass473_2108.getBack()); class282_sub5 != null; class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.getPrevious()) {
 			Class76 class76_17_ = class282_sub5.method12127();
 			if (class76_17_.anInt748 * 971905895 > class76.anInt748 * 971905895)
 				class76 = class76_17_;
@@ -375,7 +375,7 @@ public class Class170 {
 		((Class170) this).aClass137_Sub1Array2106 = null;
 		((Class170) this).aClass282_Sub50_Sub19_2107 = null;
 		if (!((Class170) this).aClass473_2108.method7861(141891001)) {
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1825691275); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12120();
 		}
 		((Class170) this).anInt2099 = 1;
@@ -391,7 +391,7 @@ public class Class170 {
 		((Class170) this).aClass137_Sub1Array2106 = null;
 		((Class170) this).aClass282_Sub50_Sub19_2107 = null;
 		if (!((Class170) this).aClass473_2108.method7861(141891001)) {
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(934182416); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12120();
 		}
 		((Class170) this).anInt2099 = 1;
@@ -779,7 +779,7 @@ public class Class170 {
 		int i = 0;
 		boolean bool = false;
 		Class76 class76 = Class76.aClass76_751;
-		for (Class282_Sub5 class282_sub5 = ((Class282_Sub5) ((Class170) this).aClass473_2108.method7859(509749516)); class282_sub5 != null; class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.method7857((byte) -17)) {
+		for (Class282_Sub5 class282_sub5 = ((Class282_Sub5) ((Class170) this).aClass473_2108.getBack()); class282_sub5 != null; class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.getPrevious()) {
 			Class76 class76_20_ = class282_sub5.method12127();
 			if (class76_20_.anInt748 * 971905895 > class76.anInt748 * 971905895)
 				class76 = class76_20_;
@@ -812,7 +812,7 @@ public class Class170 {
 		((Class170) this).aClass137_Sub1Array2106 = null;
 		((Class170) this).aClass282_Sub50_Sub19_2107 = null;
 		if (!((Class170) this).aClass473_2108.method7861(141891001)) {
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(659744196); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12120();
 		}
 		((Class170) this).anInt2099 = 1;
@@ -825,7 +825,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_24_ || ((Class170) this).anInt2099 != i_25_) {
 			((Class170) this).anInt2098 = i_24_;
 			((Class170) this).anInt2099 = i_25_;
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1133601034); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -847,7 +847,7 @@ public class Class170 {
 	boolean method2900(Class282_Sub5 class282_sub5) {
 		if (((Class170) this).aClass158_Sub1_Sub4_2095 != null) {
 			if (class282_sub5.method12141() || class282_sub5.method12136()) {
-				((Class170) this).aClass473_2108.method7877(class282_sub5, 1896451818);
+				((Class170) this).aClass473_2108.insertBack(class282_sub5);
 				method2886();
 				if (method2881()) {
 					if (((Class170) this).anInt2098 != -1 && ((Class170) this).anInt2099 != -1)
@@ -876,8 +876,8 @@ public class Class170 {
 			int i = 0;
 			int i_26_ = 1;
 			Class282_Sub5 class282_sub5;
-			for (Class282_Sub5 class282_sub5_27_ = (Class282_Sub5) ((Class170) this).aClass473_2108.method7859(1622388917); class282_sub5_27_ != null; class282_sub5_27_ = class282_sub5) {
-				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.method7857((byte) -103);
+			for (Class282_Sub5 class282_sub5_27_ = (Class282_Sub5) ((Class170) this).aClass473_2108.getBack(); class282_sub5_27_ != null; class282_sub5_27_ = class282_sub5) {
+				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.getPrevious();
 				int i_28_ = class282_sub5_27_.method12125();
 				for (int i_29_ = 0; i_29_ < i_28_; i_29_++) {
 					class282_sub5_27_.method12119(i_29_, ((Class170) this).aClass137_Sub1Array2106[i], ((Class170) this).aClass137_Sub1_2104);
@@ -939,8 +939,8 @@ public class Class170 {
 			int i = 0;
 			int i_30_ = 1;
 			Class282_Sub5 class282_sub5;
-			for (Class282_Sub5 class282_sub5_31_ = (Class282_Sub5) ((Class170) this).aClass473_2108.method7859(1245716997); class282_sub5_31_ != null; class282_sub5_31_ = class282_sub5) {
-				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.method7857((byte) -72);
+			for (Class282_Sub5 class282_sub5_31_ = (Class282_Sub5) ((Class170) this).aClass473_2108.getBack(); class282_sub5_31_ != null; class282_sub5_31_ = class282_sub5) {
+				class282_sub5 = (Class282_Sub5) ((Class170) this).aClass473_2108.getPrevious();
 				int i_32_ = class282_sub5_31_.method12125();
 				for (int i_33_ = 0; i_33_ < i_32_; i_33_++) {
 					class282_sub5_31_.method12119(i_33_, ((Class170) this).aClass137_Sub1Array2106[i], ((Class170) this).aClass137_Sub1_2104);
@@ -990,7 +990,7 @@ public class Class170 {
 	boolean method2903(Class282_Sub5 class282_sub5) {
 		if (((Class170) this).aClass158_Sub1_Sub4_2095 != null) {
 			if (class282_sub5.method12141() || class282_sub5.method12136()) {
-				((Class170) this).aClass473_2108.method7877(class282_sub5, 990840249);
+				((Class170) this).aClass473_2108.insertBack(class282_sub5);
 				method2886();
 				if (method2881()) {
 					if (((Class170) this).anInt2098 != -1 && ((Class170) this).anInt2099 != -1)
@@ -1007,7 +1007,7 @@ public class Class170 {
 	boolean method2904(Class282_Sub5 class282_sub5) {
 		if (((Class170) this).aClass158_Sub1_Sub4_2095 != null) {
 			if (class282_sub5.method12141() || class282_sub5.method12136()) {
-				((Class170) this).aClass473_2108.method7877(class282_sub5, 280873562);
+				((Class170) this).aClass473_2108.insertBack(class282_sub5);
 				method2886();
 				if (method2881()) {
 					if (((Class170) this).anInt2098 != -1 && ((Class170) this).anInt2099 != -1)
@@ -1027,7 +1027,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_35_ || ((Class170) this).anInt2099 != i_36_) {
 			((Class170) this).anInt2098 = i_35_;
 			((Class170) this).anInt2099 = i_36_;
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1057147905); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;
@@ -1049,7 +1049,7 @@ public class Class170 {
 	boolean method2906(Class282_Sub5 class282_sub5) {
 		if (((Class170) this).aClass158_Sub1_Sub4_2095 != null) {
 			if (class282_sub5.method12141() || class282_sub5.method12136()) {
-				((Class170) this).aClass473_2108.method7877(class282_sub5, 1473462273);
+				((Class170) this).aClass473_2108.insertBack(class282_sub5);
 				method2886();
 				if (method2881()) {
 					if (((Class170) this).anInt2098 != -1 && ((Class170) this).anInt2099 != -1)
@@ -1066,7 +1066,7 @@ public class Class170 {
 	void method2907(Class282_Sub5 class282_sub5) {
 		((Class282_Sub5) class282_sub5).aBool7506 = false;
 		class282_sub5.method12120();
-		class282_sub5.unlink(-371378792);
+		class282_sub5.remove();
 		method2886();
 	}
 
@@ -1076,7 +1076,7 @@ public class Class170 {
 		if (((Class170) this).anInt2098 != i_38_ || ((Class170) this).anInt2099 != i_39_) {
 			((Class170) this).anInt2098 = i_38_;
 			((Class170) this).anInt2099 = i_39_;
-			for (Node class282 = ((Class170) this).aClass473_2108.method7859(1396380065); class282 != ((Class170) this).aClass473_2108.aClass282_5604; class282 = class282.next)
+			for (Node class282 = ((Class170) this).aClass473_2108.getBack(); class282 != ((Class170) this).aClass473_2108.head; class282 = class282.prev)
 				((Class282_Sub5) class282).method12122((((Class170) this).anInt2098), (((Class170) this).anInt2099));
 			((Class170) this).aBool2094 = true;
 			((Class170) this).aBool2103 = true;

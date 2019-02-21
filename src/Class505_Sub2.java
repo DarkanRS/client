@@ -36,7 +36,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	protected float aFloat8697;
 	Class47 aClass47_8698;
 	NativeHeap aNativeHeap8699;
-	Class473 aClass473_8700;
+	LinkedNodeList aClass473_8700;
 	public int anInt8701;
 	public int anInt8702;
 	int anInt8703;
@@ -237,7 +237,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	Class505_Sub2(Interface22 interface22, Index class317, int i, int i_2_) {
 		super(interface22);
 		((Class505_Sub2) this).anInt8696 = 4194304;
-		((Class505_Sub2) this).aClass473_8700 = new Class473();
+		((Class505_Sub2) this).aClass473_8700 = new LinkedNodeList();
 		((Class505_Sub2) this).aClass294_8704 = new Matrix44Var();
 		((Class505_Sub2) this).aClass384_8705 = new Matrix44Arr();
 		((Class505_Sub2) this).aClass294_8706 = new Matrix44Var();
@@ -483,7 +483,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(1582659351); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -126))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.getBack(); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.getPrevious())
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, 254704194);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -676,7 +676,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public final Class282_Sub1 method8438(int i) {
 		Class282_Sub1_Sub2 class282_sub1_sub2 = new Class282_Sub1_Sub2(i);
-		((Class505_Sub2) this).aClass473_8700.method7877(class282_sub1_sub2, 2122832173);
+		((Class505_Sub2) this).aClass473_8700.insertBack(class282_sub1_sub2);
 		return class282_sub1_sub2;
 	}
 
@@ -895,7 +895,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(484146027); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -21))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.getBack(); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.getPrevious())
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, 1160906359);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -1847,7 +1847,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(648505294); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -94))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.getBack(); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.getPrevious())
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, -1983988311);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -1880,7 +1880,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 		if (!((Class505_Sub2) this).aBool8681) {
 			method13900();
 			((Class505_Sub2) this).aClass66_8787.method1279();
-			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.method7859(1197266143); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.method7857((byte) -117))
+			for (Node class282 = ((Class505_Sub2) this).aClass473_8700.getBack(); class282 != null; class282 = ((Class505_Sub2) this).aClass473_8700.getPrevious())
 				((Class282_Sub1_Sub2) class282).method15609();
 			Class13.method508(false, true, 116257248);
 			for (int i = 0; i < ((Class505_Sub2) this).aClass41Array8793.length; i++) {
@@ -2559,13 +2559,13 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 
 	public final Class282_Sub1 method8570(int i) {
 		Class282_Sub1_Sub2 class282_sub1_sub2 = new Class282_Sub1_Sub2(i);
-		((Class505_Sub2) this).aClass473_8700.method7877(class282_sub1_sub2, 993854822);
+		((Class505_Sub2) this).aClass473_8700.insertBack(class282_sub1_sub2);
 		return class282_sub1_sub2;
 	}
 
 	public final Class282_Sub1 method8541(int i) {
 		Class282_Sub1_Sub2 class282_sub1_sub2 = new Class282_Sub1_Sub2(i);
-		((Class505_Sub2) this).aClass473_8700.method7877(class282_sub1_sub2, 1136818441);
+		((Class505_Sub2) this).aClass473_8700.insertBack(class282_sub1_sub2);
 		return class282_sub1_sub2;
 	}
 

@@ -323,7 +323,7 @@ public final class Class514 {
 			client.aBoolArray7431[i_4_] = false;
 		client.anInt7277 = 158788875;
 		client.anInt7448 = -1044733407;
-		Class473.anInt5606 = 0;
+		LinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;
 		NativeLibraryLoader.anInt3240 = 770488346;
 		Class86.anInt833 = -1509271845;

@@ -637,7 +637,7 @@ public class Class197 {
 				i_95_ = -1;
 			}
 			boolean bool = (i_93_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_91_, i_92_, i_94_, i_95_, bool, 1, 1515305540);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_91_, i_92_, i_94_, i_95_, bool, 1, 1515305540);
 		}
 		if ((i_85_ & 0x20) != 0) {
 			class521_sub1_sub1_sub2_sub1.faceDirection = class282_sub35_sub2.readUnsignedShort128() * 1435090479;
@@ -702,7 +702,7 @@ public class Class197 {
 				i_110_ = -1;
 			}
 			boolean bool = (i_108_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_106_, i_107_, i_109_, i_110_, bool, 2, 185008599);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_106_, i_107_, i_109_, i_110_, bool, 2, 185008599);
 		}
 		if ((i_85_ & 0x8000) != 0) {
 			class521_sub1_sub1_sub2_sub1.aBool10571 = class282_sub35_sub2.readUnsigned128Byte() == 1;
@@ -800,7 +800,7 @@ public class Class197 {
 				i_137_ = -1;
 			}
 			boolean bool = (i_135_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_133_, i_134_, i_136_, i_137_, bool, 3, 1934522338);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_133_, i_134_, i_136_, i_137_, bool, 3, 1934522338);
 		}
 		if (0 != (i_85_ & 0x800)) {
 			class521_sub1_sub1_sub2_sub1.anInt10326 = class282_sub35_sub2.readByteC(658414351) * 830034083;
@@ -838,7 +838,7 @@ public class Class197 {
 				i_142_ = -1;
 			}
 			boolean bool = (i_140_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_138_, i_139_, i_141_, i_142_, bool, 0, -6273545);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_138_, i_139_, i_141_, i_142_, bool, 0, -6273545);
 		}
 		if (class521_sub1_sub1_sub2_sub1.aBool10568) {
 			if (i_86_ == 127) {
@@ -887,7 +887,7 @@ public class Class197 {
 				i_154_ = -1;
 			}
 			boolean bool = (i_152_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_150_, i_151_, i_153_, i_154_, bool, 1, -525142902);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_150_, i_151_, i_153_, i_154_, bool, 1, -525142902);
 		}
 		if ((i_144_ & 0x20) != 0) {
 			class521_sub1_sub1_sub2_sub1.faceDirection = class282_sub35_sub2.readUnsignedShort128() * 1435090479;
@@ -952,7 +952,7 @@ public class Class197 {
 				i_169_ = -1;
 			}
 			boolean bool = (i_167_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_165_, i_166_, i_168_, i_169_, bool, 2, -107171490);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_165_, i_166_, i_168_, i_169_, bool, 2, -107171490);
 		}
 		if ((i_144_ & 0x8000) != 0) {
 			class521_sub1_sub1_sub2_sub1.aBool10571 = class282_sub35_sub2.readUnsigned128Byte() == 1;
@@ -1050,7 +1050,7 @@ public class Class197 {
 				i_196_ = -1;
 			}
 			boolean bool = (i_194_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_192_, i_193_, i_195_, i_196_, bool, 3, -987124351);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_192_, i_193_, i_195_, i_196_, bool, 3, -987124351);
 		}
 		if (0 != (i_144_ & 0x800)) {
 			class521_sub1_sub1_sub2_sub1.anInt10326 = class282_sub35_sub2.readByteC(98099387) * 830034083;
@@ -1088,7 +1088,7 @@ public class Class197 {
 				i_201_ = -1;
 			}
 			boolean bool = (i_199_ >> 7 & 0x1) == 1;
-			class521_sub1_sub1_sub2_sub1.sendGraphics(i_197_, i_198_, i_200_, i_201_, bool, 0, 1415858274);
+			class521_sub1_sub1_sub2_sub1.sendSpotAnim(i_197_, i_198_, i_200_, i_201_, bool, 0, 1415858274);
 		}
 		if (class521_sub1_sub1_sub2_sub1.aBool10568) {
 			if (i_145_ == 127) {

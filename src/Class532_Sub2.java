@@ -93,7 +93,7 @@ public class Class532_Sub2 extends Class532 {
 				i_24_ = -348932735 * anInt7068;
 				i_25_ = (anInt7068 * -348932735 - i_21_ << 12) / i_20_;
 			}
-			Class523.method11220(i_23_, i_22_, i_25_, i_24_, i_17_, (byte) 86);
+			AnimationIndexLoader.method11220(i_23_, i_22_, i_25_, i_24_, i_17_, (byte) 86);
 		}
 	}
 
@@ -161,7 +161,7 @@ public class Class532_Sub2 extends Class532 {
 				i_42_ = -348932735 * anInt7068;
 				i_43_ = (anInt7068 * -348932735 - i_39_ << 12) / i_38_;
 			}
-			Class523.method11220(i_41_, i_40_, i_43_, i_42_, i_35_, (byte) 127);
+			AnimationIndexLoader.method11220(i_41_, i_40_, i_43_, i_42_, i_35_, (byte) 127);
 		}
 	}
 

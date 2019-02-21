@@ -5,9 +5,9 @@
 import java.util.Iterator;
 
 public class Class477 implements Iterable {
-	public Class282_Sub50 aClass282_Sub50_5629 = new Class282_Sub50();
+	public CacheableNode aClass282_Sub50_5629 = new CacheableNode();
 	static int anInt5630;
-	Class282_Sub50 aClass282_Sub50_5631;
+	CacheableNode aClass282_Sub50_5631;
 	static Class539[] aClass539Array5632;
 
 	public Iterator method7934() {
@@ -16,51 +16,51 @@ public class Class477 implements Iterable {
 
 	public void method7935(byte i) {
 		while (aClass282_Sub50_5629.aClass282_Sub50_8119 != aClass282_Sub50_5629)
-			aClass282_Sub50_5629.aClass282_Sub50_8119.method13452((byte) -5);
+			aClass282_Sub50_5629.aClass282_Sub50_8119.method13452();
 	}
 
-	public void method7936(Class282_Sub50 class282_sub50, int i) {
-		if (class282_sub50.aClass282_Sub50_8118 != null)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = aClass282_Sub50_5629.aClass282_Sub50_8118;
+	public void method7936(CacheableNode class282_sub50, int i) {
+		if (class282_sub50.current != null)
+			class282_sub50.method13452();
+		class282_sub50.current = aClass282_Sub50_5629.current;
 		class282_sub50.aClass282_Sub50_8119 = aClass282_Sub50_5629;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
-	public Class282_Sub50 method7937(int i) {
-		Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119;
+	public CacheableNode method7937(int i) {
+		CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119;
 		if (class282_sub50 == aClass282_Sub50_5629)
 			return null;
-		class282_sub50.method13452((byte) -5);
+		class282_sub50.method13452();
 		return class282_sub50;
 	}
 
-	public Class282_Sub50 method7938() {
+	public CacheableNode method7938() {
 		return method7946(null, -508721714);
 	}
 
 	public int method7939(int i) {
 		int i_0_ = 0;
-		for (Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
+		for (CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
 			i_0_++;
 		return i_0_;
 	}
 
-	public Class282_Sub50 method7940() {
-		Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119;
+	public CacheableNode method7940() {
+		CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119;
 		if (class282_sub50 == aClass282_Sub50_5629)
 			return null;
-		class282_sub50.method13452((byte) -5);
+		class282_sub50.method13452();
 		return class282_sub50;
 	}
 
 	public Class477() {
 		aClass282_Sub50_5629.aClass282_Sub50_8119 = aClass282_Sub50_5629;
-		aClass282_Sub50_5629.aClass282_Sub50_8118 = aClass282_Sub50_5629;
+		aClass282_Sub50_5629.current = aClass282_Sub50_5629;
 	}
 
-	public Class282_Sub50 method7941(byte i) {
+	public CacheableNode method7941(byte i) {
 		return method7946(null, -2037217557);
 	}
 
@@ -68,35 +68,35 @@ public class Class477 implements Iterable {
 		return new Class469(this);
 	}
 
-	public static void method7943(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_1_) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_1_.aClass282_Sub50_8118;
+	public static void method7943(CacheableNode class282_sub50, CacheableNode class282_sub50_1_) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_1_.current;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_1_;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
-	public static void method7944(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_2_) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_2_.aClass282_Sub50_8118;
+	public static void method7944(CacheableNode class282_sub50, CacheableNode class282_sub50_2_) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_2_.current;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_2_;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
-	public static void method7945(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_3_) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_3_.aClass282_Sub50_8118;
+	public static void method7945(CacheableNode class282_sub50, CacheableNode class282_sub50_3_) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_3_.current;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_3_;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
-	Class282_Sub50 method7946(Class282_Sub50 class282_sub50, int i) {
-		Class282_Sub50 class282_sub50_4_;
+	CacheableNode method7946(CacheableNode class282_sub50, int i) {
+		CacheableNode class282_sub50_4_;
 		if (class282_sub50 == null)
 			class282_sub50_4_ = aClass282_Sub50_5629.aClass282_Sub50_8119;
 		else
@@ -109,26 +109,26 @@ public class Class477 implements Iterable {
 		return class282_sub50_4_;
 	}
 
-	public static void method7947(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_5_) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_5_;
+	public static void method7947(CacheableNode class282_sub50, CacheableNode class282_sub50_5_) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_5_;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_5_.aClass282_Sub50_8119;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
-	public static void method7948(Class282_Sub50 class282_sub50, Class282_Sub50 class282_sub50_6_) {
-		if (null != class282_sub50.aClass282_Sub50_8118)
-			class282_sub50.method13452((byte) -5);
-		class282_sub50.aClass282_Sub50_8118 = class282_sub50_6_;
+	public static void method7948(CacheableNode class282_sub50, CacheableNode class282_sub50_6_) {
+		if (null != class282_sub50.current)
+			class282_sub50.method13452();
+		class282_sub50.current = class282_sub50_6_;
 		class282_sub50.aClass282_Sub50_8119 = class282_sub50_6_.aClass282_Sub50_8119;
-		class282_sub50.aClass282_Sub50_8118.aClass282_Sub50_8119 = class282_sub50;
-		class282_sub50.aClass282_Sub50_8119.aClass282_Sub50_8118 = class282_sub50;
+		class282_sub50.current.aClass282_Sub50_8119 = class282_sub50;
+		class282_sub50.aClass282_Sub50_8119.current = class282_sub50;
 	}
 
-	public Class282_Sub50 method7949() {
-		Class282_Sub50 class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
+	public CacheableNode method7949() {
+		CacheableNode class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
 		if (aClass282_Sub50_5629 == class282_sub50) {
 			((Class477) this).aClass282_Sub50_5631 = null;
 			return null;
@@ -137,23 +137,23 @@ public class Class477 implements Iterable {
 		return class282_sub50;
 	}
 
-	public Class282_Sub50 method7950() {
-		Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119;
+	public CacheableNode method7950() {
+		CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119;
 		if (class282_sub50 == aClass282_Sub50_5629)
 			return null;
-		class282_sub50.method13452((byte) -5);
+		class282_sub50.method13452();
 		return class282_sub50;
 	}
 
 	public int method7951() {
 		int i = 0;
-		for (Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
+		for (CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
 			i++;
 		return i;
 	}
 
-	Class282_Sub50 method7952(Class282_Sub50 class282_sub50) {
-		Class282_Sub50 class282_sub50_7_;
+	CacheableNode method7952(CacheableNode class282_sub50) {
+		CacheableNode class282_sub50_7_;
 		if (class282_sub50 == null)
 			class282_sub50_7_ = aClass282_Sub50_5629.aClass282_Sub50_8119;
 		else
@@ -166,8 +166,8 @@ public class Class477 implements Iterable {
 		return class282_sub50_7_;
 	}
 
-	public Class282_Sub50 method7953() {
-		Class282_Sub50 class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
+	public CacheableNode method7953() {
+		CacheableNode class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
 		if (aClass282_Sub50_5629 == class282_sub50) {
 			((Class477) this).aClass282_Sub50_5631 = null;
 			return null;
@@ -176,8 +176,8 @@ public class Class477 implements Iterable {
 		return class282_sub50;
 	}
 
-	public Class282_Sub50 method7954() {
-		Class282_Sub50 class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
+	public CacheableNode method7954() {
+		CacheableNode class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
 		if (aClass282_Sub50_5629 == class282_sub50) {
 			((Class477) this).aClass282_Sub50_5631 = null;
 			return null;
@@ -186,8 +186,8 @@ public class Class477 implements Iterable {
 		return class282_sub50;
 	}
 
-	public Class282_Sub50 method7955(int i) {
-		Class282_Sub50 class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
+	public CacheableNode method7955(int i) {
+		CacheableNode class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
 		if (aClass282_Sub50_5629 == class282_sub50) {
 			((Class477) this).aClass282_Sub50_5631 = null;
 			return null;
@@ -196,8 +196,8 @@ public class Class477 implements Iterable {
 		return class282_sub50;
 	}
 
-	public Class282_Sub50 method7956() {
-		Class282_Sub50 class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
+	public CacheableNode method7956() {
+		CacheableNode class282_sub50 = ((Class477) this).aClass282_Sub50_5631;
 		if (aClass282_Sub50_5629 == class282_sub50) {
 			((Class477) this).aClass282_Sub50_5631 = null;
 			return null;
@@ -208,21 +208,21 @@ public class Class477 implements Iterable {
 
 	public int method7957() {
 		int i = 0;
-		for (Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
+		for (CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
 			i++;
 		return i;
 	}
 
 	public int method7958() {
 		int i = 0;
-		for (Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
+		for (CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
 			i++;
 		return i;
 	}
 
 	public int method7959() {
 		int i = 0;
-		for (Class282_Sub50 class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
+		for (CacheableNode class282_sub50 = aClass282_Sub50_5629.aClass282_Sub50_8119; aClass282_Sub50_5629 != class282_sub50; class282_sub50 = class282_sub50.aClass282_Sub50_8119)
 			i++;
 		return i;
 	}

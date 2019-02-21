@@ -9,11 +9,11 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 	static int anInt10159;
 
 	public void method1601() {
-		Class82.aClass75Array804[-2052083567 * ((Class96_Sub10_Sub1) this).anInt10157].method1342((byte) 68).sendGraphics(((Class96_Sub10_Sub1) this).anInt9296 * 660169595, 277206935 * ((Class96_Sub10_Sub1) this).anInt9295 << 16, ((Class96_Sub10_Sub1) this).anInt9297 * 1009489391, -1634196889 * ((Class96_Sub10_Sub1) this).anInt10156, false, -2011621393 * ((Class96_Sub10_Sub1) this).anInt10158, -1087821934);
+		Class82.aClass75Array804[-2052083567 * ((Class96_Sub10_Sub1) this).anInt10157].method1342((byte) 68).sendSpotAnim(((Class96_Sub10_Sub1) this).anInt9296 * 660169595, 277206935 * ((Class96_Sub10_Sub1) this).anInt9295 << 16, ((Class96_Sub10_Sub1) this).anInt9297 * 1009489391, -1634196889 * ((Class96_Sub10_Sub1) this).anInt10156, false, -2011621393 * ((Class96_Sub10_Sub1) this).anInt10158, -1087821934);
 	}
 
 	public void method1592(int i) {
-		Class82.aClass75Array804[-2052083567 * ((Class96_Sub10_Sub1) this).anInt10157].method1342((byte) 72).sendGraphics(((Class96_Sub10_Sub1) this).anInt9296 * 660169595, 277206935 * ((Class96_Sub10_Sub1) this).anInt9295 << 16, ((Class96_Sub10_Sub1) this).anInt9297 * 1009489391, -1634196889 * ((Class96_Sub10_Sub1) this).anInt10156, false, -2011621393 * ((Class96_Sub10_Sub1) this).anInt10158, 1119829285);
+		Class82.aClass75Array804[-2052083567 * ((Class96_Sub10_Sub1) this).anInt10157].method1342((byte) 72).sendSpotAnim(((Class96_Sub10_Sub1) this).anInt9296 * 660169595, 277206935 * ((Class96_Sub10_Sub1) this).anInt9295 << 16, ((Class96_Sub10_Sub1) this).anInt9297 * 1009489391, -1634196889 * ((Class96_Sub10_Sub1) this).anInt10156, false, -2011621393 * ((Class96_Sub10_Sub1) this).anInt10158, 1119829285);
 	}
 
 	Class96_Sub10_Sub1(RsByteBuffer class282_sub35) {
@@ -40,9 +40,9 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 			WorldMapIndexLoader.method3710(class98, class118, 983481657);
 	}
 
-	public static void method15554(Index class317, Index class317_1_, int i, int i_2_) {
-		Class282_Sub50_Sub13.aClass317_9686 = class317;
-		Class282_Sub50_Sub13.aClass317_9685 = class317_1_;
+	public static void setAnimationIndices(Index animSkeletonIndex, Index animSkinIndex, int i, int i_2_) {
+		AnimationSkeleton.ANIMATION_SKELETON_INDEX = animSkeletonIndex;
+		AnimationSkeleton.ANIMATION_SKIN_INDEX = animSkinIndex;
 	}
 
 	static final void method15555(CS2Executor class527, byte i) {

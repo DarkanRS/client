@@ -11,37 +11,37 @@ public class NodeCollection implements Iterable, Collection {
 	public Node head = new Node();
 
 	public void append(Node node, int i) {
-		if (null != node.prev)
-			node.unlink(-371378792);
-		node.prev = head.prev;
-		node.next = head;
-		node.prev.next = node;
+		if (null != node.next)
+			node.remove();
+		node.next = head.next;
+		node.prev = head;
 		node.next.prev = node;
+		node.prev.next = node;
 	}
 
 	public Node method8061(byte i) {
-		Node class282 = head.next;
+		Node class282 = head.prev;
 		if (head == class282)
 			return null;
-		class282.unlink(-371378792);
+		class282.remove();
 		return class282;
 	}
 
 	void method8062(NodeCollection class482_0_, Node class282, int i) {
-		Node class282_1_ = head.prev;
-		head.prev = class282.prev;
-		class282.prev.next = head;
+		Node class282_1_ = head.next;
+		head.next = class282.next;
+		class282.next.prev = head;
 		if (class282 != head) {
-			class282.prev = class482_0_.head.prev;
-			class282.prev.next = class282;
-			class282_1_.next = class482_0_.head;
-			class482_0_.head.prev = class282_1_;
+			class282.next = class482_0_.head.next;
+			class282.next.prev = class282;
+			class282_1_.prev = class482_0_.head;
+			class482_0_.head.next = class282_1_;
 		}
 	}
 
 	public void method8063(NodeCollection class482_2_, int i) {
-		if (head.next != head)
-			method8062(class482_2_, head.next, -1691020971);
+		if (head.prev != head)
+			method8062(class482_2_, head.prev, -1691020971);
 	}
 
 	public Iterator iterator() {
@@ -55,14 +55,14 @@ public class NodeCollection implements Iterable, Collection {
 	Node method8066(Node class282, byte i) {
 		Node class282_4_;
 		if (class282 == null)
-			class282_4_ = head.prev;
+			class282_4_ = head.next;
 		else
 			class282_4_ = class282;
 		if (head == class282_4_) {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282_4_.prev;
+		((NodeCollection) this).aClass282_5727 = class282_4_.next;
 		return class282_4_;
 	}
 
@@ -72,7 +72,7 @@ public class NodeCollection implements Iterable, Collection {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282.next;
+		((NodeCollection) this).aClass282_5727 = class282.prev;
 		return class282;
 	}
 
@@ -82,13 +82,13 @@ public class NodeCollection implements Iterable, Collection {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282.prev;
+		((NodeCollection) this).aClass282_5727 = class282.next;
 		return class282;
 	}
 
 	public int size(int i) {
 		int amount = 0;
-		for (Node n = head.next; head != n; n = n.next)
+		for (Node n = head.prev; head != n; n = n.prev)
 			amount++;
 		return amount;
 	}
@@ -100,7 +100,7 @@ public class NodeCollection implements Iterable, Collection {
 	Node[] method8070(int i) {
 		Node[] class282s = new Node[size(-1374254477)];
 		int i_6_ = 0;
-		for (Node class282 = head.next; class282 != head; class282 = class282.next)
+		for (Node class282 = head.prev; class282 != head; class282 = class282.prev)
 			class282s[i_6_++] = class282;
 		return class282s;
 	}
@@ -123,7 +123,7 @@ public class NodeCollection implements Iterable, Collection {
 
 	public Object[] toArray(Object[] objects) {
 		int i = 0;
-		for (Node class282 = head.next; class282 != head; class282 = class282.next)
+		for (Node class282 = head.prev; class282 != head; class282 = class282.prev)
 			objects[i++] = class282;
 		return objects;
 	}
@@ -160,19 +160,19 @@ public class NodeCollection implements Iterable, Collection {
 	Node method8076(Node class282, int i) {
 		Node class282_7_;
 		if (null == class282)
-			class282_7_ = head.next;
+			class282_7_ = head.prev;
 		else
 			class282_7_ = class282;
 		if (head == class282_7_) {
 			((NodeCollection) this).aClass282_5727 = null;
 			return null;
 		}
-		((NodeCollection) this).aClass282_5727 = class282_7_.next;
+		((NodeCollection) this).aClass282_5727 = class282_7_.prev;
 		return class282_7_;
 	}
 
 	public boolean hasNext(int i) {
-		return head.next == head;
+		return head.prev == head;
 	}
 
 	public Node head(byte i) {
@@ -180,22 +180,22 @@ public class NodeCollection implements Iterable, Collection {
 	}
 
 	public void method8098(Node class282, byte i) {
-		if (class282.prev != null)
-			class282.unlink(-371378792);
-		class282.prev = head;
-		class282.next = head.next;
-		class282.prev.next = class282;
+		if (class282.next != null)
+			class282.remove();
+		class282.next = head;
+		class282.prev = head.prev;
 		class282.next.prev = class282;
+		class282.prev.next = class282;
 	}
 
 	public NodeCollection() {
-		head.next = head;
 		head.prev = head;
+		head.next = head;
 	}
 
 	public void method8118(int i) {
-		while (head.next != head)
-			head.next.unlink(-371378792);
+		while (head.prev != head)
+			head.prev.remove();
 	}
 
 	public int size() {

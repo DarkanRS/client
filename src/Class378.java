@@ -380,15 +380,15 @@ public class Class378 {
 		IndexLoaders.MAP_REGION_DECODER.method4436(-1981388866).method7896(5, (byte) -88);
 		IndexLoaders.NPC_INDEX_LOADER.method6832(5, 1789161968);
 		IndexLoaders.ITEM_INDEX_LOADER.method7156(5, (byte) 44);
-		IndexLoaders.aClass523_3868.method11210(5, (byte) -68);
-		IndexLoaders.aClass515_9416.method8847(5, 1748344729);
+		IndexLoaders.ANIMATION_INDEX_LOADER.method11210(5, (byte) -68);
+		IndexLoaders.SPOT_ANIM_INDEX_LOADER.method8847(5, 1748344729);
 		IndexLoaders.aClass230_147.method3898(5, 1935231941);
 		IndexLoaders.aClass377_1065.method6386(5, (byte) 31);
 		IndexLoaders.aClass447_435.method7452(5, (byte) 17);
 		IndexLoaders.aClass498_3001.method8320(5, 1532833912);
 		IndexLoaders.aClass394_5831.method6755(5, (byte) -16);
 		IndexLoaders.aClass233_5822.method3923(5, -1373028288);
-		IndexLoaders.aClass211_9383.method3615(5, -1820135458);
+		IndexLoaders.RENDER_ANIMS.method3615(5, -1820135458);
 		IndexLoaders.WORLD_MAP_INDEX_LOADER.method3695(5, -103071229);
 		IndexLoaders.aClass427_995.method7173(5, 1756821991);
 		IndexLoaders.ITEM_DEFAULTS.method7068(5, -549869828);

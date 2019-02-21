@@ -113,7 +113,7 @@ public class OverlayDef {
 		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_3_, (byte) 14);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_3_ >> 16];
-		Class473.method7889(class118, class98, class527, 1072784051);
+		LinkedNodeList.method7889(class118, class98, class527, 1072784051);
 	}
 
 	static final void method11373(CS2Executor class527, int i) {

@@ -71,7 +71,7 @@ public class Class275_Sub2 extends Class275 {
 		if (Class291_Sub1.aClass465_8029 != null) {
 			Node class282 = Class291_Sub1.aClass465_8029.method7754((long) i_3_);
 			if (null != class282 && !bool)
-				class282.unlink(-371378792);
+				class282.remove();
 			else if (null == class282 && bool) {
 				class282 = new Node();
 				Class291_Sub1.aClass465_8029.method7765(class282, (long) i_3_);

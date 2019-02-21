@@ -194,7 +194,7 @@ public class Class288 {
 	}
 
 	public static Interface getInterface(int interfaceId, int[] xteas, Interface inter, boolean bool, byte i_9_) {
-		if (!Class388.INTERFACE_INDEX.method5647(interfaceId, -2119577317))
+		if (!Class388.INTERFACE_INDEX.loadFile(interfaceId, -2119577317))
 			return null;
 		int numComponents = Class388.INTERFACE_INDEX.filesCount(interfaceId, 1474003408);
 		IComponentDefinitions[] componentDefs;

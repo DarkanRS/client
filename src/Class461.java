@@ -121,7 +121,7 @@ public class Class461 {
 			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 53)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1807139429))) {
 				int i_12_ = (-1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587));
 				if (i_12_ < 1000) {
-					class282_sub50_sub7.unlink(-371378792);
+					class282_sub50_sub7.remove();
 					if (59 == i_12_ || 2 == i_12_ || 8 == i_12_ || 17 == i_12_ || 15 == i_12_ || i_12_ == 16 || i_12_ == 58)
 						Class20.aClass482_175.append(class282_sub50_sub7, 1626236688);
 					else
@@ -132,12 +132,12 @@ public class Class461 {
 			Class20.aClass482_175.method8063(Class20.aClass482_171, -1553248551);
 			if (Class20.anInt169 * 2144330291 > 1) {
 				if (Class468_Sub1.method12619(694674525) && 2144330291 * Class20.anInt169 > 2)
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.head.prev.prev);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.head.next.next);
 				else
-					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.head.prev);
-				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head.prev);
+					Class96_Sub23.aClass282_Sub50_Sub7_9445 = (Class282_Sub50_Sub7) (Class20.aClass482_171.head.next);
+				Class1.aClass282_Sub50_Sub7_12 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head.next);
 				if (Class20.anInt169 * 2144330291 > 2)
-					Class20.aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.prev);
+					Class20.aClass282_Sub50_Sub7_168 = ((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12.next);
 				else
 					Class20.aClass282_Sub50_Sub7_168 = null;
 			} else {
@@ -276,7 +276,7 @@ public class Class461 {
 								for (Class282_Sub50_Sub15 class282_sub50_sub15 = ((Class282_Sub50_Sub15) class469.method7790(1832486278)); class282_sub50_sub15 != null; class282_sub50_sub15 = ((Class282_Sub50_Sub15) class469.next())) {
 									if (i_30_ == i_35_) {
 										if ((2026887253 * (((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769)) > 1)
-											Class282_Sub12.method12212(class282_sub50_sub15, i_31_, -67980547);
+											AnimationSkinNode.method12212(class282_sub50_sub15, i_31_, -67980547);
 										break;
 									}
 									i_35_++;

@@ -14,8 +14,8 @@ public class SharedConfigsType {
 	static SharedConfigsType aClass120_1472;
 	public static SharedConfigsType aClass120_1473;
 	public static SharedConfigsType aClass120_1474;
-	public static SharedConfigsType aClass120_1475;
-	public static SharedConfigsType aClass120_1476;
+	public static SharedConfigsType SEQUENCES;
+	public static SharedConfigsType SPOT_ANIMS;
 	public static SharedConfigsType aClass120_1477;
 	public static SharedConfigsType aClass120_1478;
 	public static SharedConfigsType aClass120_1479;
@@ -50,7 +50,7 @@ public class SharedConfigsType {
 	static SharedConfigsType aClass120_1508;
 	public static SharedConfigsType aClass120_1509;
 	public static SharedConfigsType aClass120_1510;
-	public static SharedConfigsType aClass120_1511;
+	public static SharedConfigsType RENDER_ANIMS;
 	public static SharedConfigsType HITBARS;
 	static SharedConfigsType aClass120_1513;
 	public static SharedConfigsType FLO2;
@@ -76,11 +76,11 @@ public class SharedConfigsType {
 		return 1 << 854326337 * ((SharedConfigsType) this).fileIdBitShift;
 	}
 
-	public int containerId(int i, int i_1_) {
+	public int containerId(int i) {
 		return i >>> 854326337 * ((SharedConfigsType) this).fileIdBitShift;
 	}
 
-	public int fileId(int i, int i_2_) {
+	public int fileId(int i) {
 		return i & (1 << ((SharedConfigsType) this).fileIdBitShift * 854326337) - 1;
 	}
 
@@ -107,8 +107,8 @@ public class SharedConfigsType {
 		aClass120_1467 = new SharedConfigsType(9, 7);
 		ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
 		aClass120_1474 = new SharedConfigsType(11);
-		aClass120_1475 = new SharedConfigsType(12, 7);
-		aClass120_1476 = new SharedConfigsType(13, 8);
+		SEQUENCES = new SharedConfigsType(12, 7);
+		SPOT_ANIMS = new SharedConfigsType(13, 8);
 		aClass120_1477 = new SharedConfigsType(14, 10);
 		aClass120_1478 = new SharedConfigsType(15);
 		aClass120_1487 = new SharedConfigsType(16);
@@ -127,7 +127,7 @@ public class SharedConfigsType {
 		aClass120_1469 = new SharedConfigsType(29);
 		aClass120_1489 = new SharedConfigsType(30);
 		aClass120_1494 = new SharedConfigsType(31);
-		aClass120_1511 = new SharedConfigsType(32);
+		RENDER_ANIMS = new SharedConfigsType(32);
 		aClass120_1496 = new SharedConfigsType(33);
 		aClass120_1497 = new SharedConfigsType(34);
 		aClass120_1498 = new SharedConfigsType(35);
@@ -188,7 +188,7 @@ public class SharedConfigsType {
 
 	static void method2095(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
 		if (!Class20.aBool161) {
-			class282_sub50_sub7.unlink(-371378792);
+			class282_sub50_sub7.remove();
 			Class20.anInt169 -= 1410722043;
 			if (!((Class282_Sub50_Sub7) class282_sub50_sub7).aBool9586) {
 				long l = (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580 * 820033947929891191L);

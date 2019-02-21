@@ -159,7 +159,7 @@ public class Class29 {
 	static void method788(int i, boolean bool, int i_2_) {
 		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1384603359);
 		if (class282_sub30 != null)
-			class282_sub30.unlink(-371378792);
+			class282_sub30.remove();
 	}
 
 	static final void method789(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {

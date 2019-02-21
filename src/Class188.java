@@ -588,7 +588,7 @@ public class Class188 {
 				if (null != class282_sub29) {
 					for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 55); null != class282_sub34; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.next(1296718058)) {
 						if (((i_26_ & 0x7fff) == 1964309863 * class282_sub34.anInt7853) && i_27_ == (((Class282_Sub34) class282_sub34).anInt7852) * -1727049729) {
-							class282_sub34.unlink(-371378792);
+							class282_sub34.remove();
 							((Class282_Sub34) class282_sub34).anInt7852 = -302993409 * i_28_;
 							Class353.method6209((-1258088735 * Class272.anInt3331), i_25_, i_23_, class282_sub34, 1242216050);
 							break;
@@ -618,7 +618,7 @@ public class Class188 {
 						Class282_Sub50_Sub10 class282_sub50_sub10 = ((Class282_Sub50_Sub10) client.aClass465_7334.method7754((long) (i_32_ << 16 | i_33_)));
 						if (null != class282_sub50_sub10) {
 							((Class282_Sub50_Sub10) class282_sub50_sub10).aClass521_Sub1_Sub1_Sub4_9636.method15931(-2141216299);
-							class282_sub50_sub10.unlink(-371378792);
+							class282_sub50_sub10.remove();
 						}
 					} else {
 						int i_38_ = 512 * i_32_ + 256;
@@ -722,12 +722,12 @@ public class Class188 {
 			if (null != class282_sub29) {
 				for (Class282_Sub34 class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.head((byte) 19); class282_sub34 != null; class282_sub34 = (Class282_Sub34) class282_sub29.aClass482_7708.next(715558625)) {
 					if ((i_85_ & 0x7fff) == 1964309863 * class282_sub34.anInt7853) {
-						class282_sub34.unlink(-371378792);
+						class282_sub34.remove();
 						break;
 					}
 				}
 				if (class282_sub29.aClass482_7708.hasNext(2087735245))
-					class282_sub29.unlink(-371378792);
+					class282_sub29.remove();
 				if (i_83_ >= 0 && i_81_ >= 0 && i_83_ < IndexLoaders.MAP_REGION_DECODER.getSizeX(793956639) && i_81_ < IndexLoaders.MAP_REGION_DECODER.getSizeY(-539075068))
 					Class434_Sub1.method12760(-1258088735 * Class272.anInt3331, i_83_, i_81_, -1380263584);
 			}

@@ -110,7 +110,7 @@ public class Class149_Sub4 extends Class149 {
 			Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (((Class282_Sub50_Sub10) class282_sub50_sub10).aClass521_Sub1_Sub1_Sub4_9636);
 			class521_sub1_sub1_sub4.method15926(1, (byte) 16);
 			if (class521_sub1_sub1_sub4.method15928((short) 11184)) {
-				class282_sub50_sub10.unlink(-371378792);
+				class282_sub50_sub10.remove();
 				class521_sub1_sub1_sub4.method15931(-2018214290);
 			}
 		}

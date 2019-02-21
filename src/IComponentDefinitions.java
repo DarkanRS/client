@@ -177,7 +177,7 @@ public class IComponentDefinitions {
 	public int anInt1434;
 	public int anInt1435;
 	public static int anInt1436;
-	public Class456 aClass456_1437;
+	public Animation aClass456_1437;
 	public IComponentDefinitions[] aClass118Array1438;
 	public IComponentDefinitions[] aClass118Array1439;
 	public boolean aBool1440;
@@ -516,7 +516,7 @@ public class IComponentDefinitions {
 		if (((IComponentDefinitions) this).aClass465_1365 != null) {
 			Node class282 = ((IComponentDefinitions) this).aClass465_1365.method7754((long) i);
 			if (class282 != null)
-				class282.unlink(-371378792);
+				class282.remove();
 		}
 	}
 
@@ -558,12 +558,12 @@ public class IComponentDefinitions {
 		} else {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((IComponentDefinitions) this).aClass465_1365.method7754((long) i));
 			if (null != class282_sub47)
-				class282_sub47.unlink(-371378792);
+				class282_sub47.remove();
 			((IComponentDefinitions) this).aClass465_1365.method7765(new Class282_Sub47(string), (long) i);
 		}
 	}
 
-	public MeshRasterizer method2002(GraphicalRenderer class505, int i, Class211 class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, Class523 class523, Interface42 interface42, Class456 class456, PlayerAppearance class238, int i_44_) {
+	public MeshRasterizer method2002(GraphicalRenderer class505, int i, RenderAnimIndexLoader class211, Class31 class31, NPCIndexLoader class406, ItemIndexLoader class426, AnimationIndexLoader class523, Interface42 interface42, Animation class456, PlayerAppearance class238, int i_44_) {
 		aBool1399 = false;
 		if (anInt1329 * 2131324949 == 0)
 			return null;

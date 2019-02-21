@@ -4,7 +4,7 @@
  */
 import jaggl.OpenGL;
 
-public class Class282_Sub50_Sub19 extends Class282_Sub50 implements Interface13 {
+public class Class282_Sub50_Sub19 extends CacheableNode implements Interface13 {
 	int anInt10278;
 	Class76 aClass76_10279;
 	int anInt10280;

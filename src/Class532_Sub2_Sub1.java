@@ -30,12 +30,12 @@ public class Class532_Sub2_Sub1 extends Class532_Sub2 {
 				int i_30_ = i_22_ * i_21_;
 				int i_31_ = i + (i_27_ + i_25_ + i_29_ >> 12);
 				int i_32_ = (i_26_ + i_28_ + i_30_ >> 12) + i_0_;
-				Class523.method11220(i_8_, i_9_, i_31_, i_32_, i_7_, (byte) 94);
+				AnimationIndexLoader.method11220(i_8_, i_9_, i_31_, i_32_, i_7_, (byte) 94);
 				i_8_ = i_31_;
 				i_9_ = i_32_;
 			}
 		} else
-			Class523.method11220(i, i_0_, i_5_, i_6_, i_7_, (byte) 2);
+			AnimationIndexLoader.method11220(i, i_0_, i_5_, i_6_, i_7_, (byte) 2);
 	}
 
 	public static void method14762(int i, int i_33_, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_, int i_40_) {
@@ -116,12 +116,12 @@ public class Class532_Sub2_Sub1 extends Class532_Sub2 {
 				int i_112_ = i_104_ * i_103_;
 				int i_113_ = i + (i_109_ + i_107_ + i_111_ >> 12);
 				int i_114_ = (i_108_ + i_110_ + i_112_ >> 12) + i_82_;
-				Class523.method11220(i_90_, i_91_, i_113_, i_114_, i_89_, (byte) 89);
+				AnimationIndexLoader.method11220(i_90_, i_91_, i_113_, i_114_, i_89_, (byte) 89);
 				i_90_ = i_113_;
 				i_91_ = i_114_;
 			}
 		} else
-			Class523.method11220(i, i_82_, i_87_, i_88_, i_89_, (byte) 91);
+			AnimationIndexLoader.method11220(i, i_82_, i_87_, i_88_, i_89_, (byte) 91);
 	}
 
 	static void method14766(int i, int i_115_, int i_116_, int i_117_, int i_118_, int i_119_, int i_120_, int i_121_, int i_122_) {
@@ -151,12 +151,12 @@ public class Class532_Sub2_Sub1 extends Class532_Sub2 {
 				int i_145_ = i_137_ * i_136_;
 				int i_146_ = i + (i_142_ + i_140_ + i_144_ >> 12);
 				int i_147_ = (i_141_ + i_143_ + i_145_ >> 12) + i_115_;
-				Class523.method11220(i_123_, i_124_, i_146_, i_147_, i_122_, (byte) 28);
+				AnimationIndexLoader.method11220(i_123_, i_124_, i_146_, i_147_, i_122_, (byte) 28);
 				i_123_ = i_146_;
 				i_124_ = i_147_;
 			}
 		} else
-			Class523.method11220(i, i_115_, i_120_, i_121_, i_122_, (byte) 61);
+			AnimationIndexLoader.method11220(i, i_115_, i_120_, i_121_, i_122_, (byte) 61);
 	}
 
 	static void method14767(int i, int i_148_, int i_149_, int i_150_, int i_151_, int i_152_, int i_153_, int i_154_, int i_155_) {
@@ -186,12 +186,12 @@ public class Class532_Sub2_Sub1 extends Class532_Sub2 {
 				int i_178_ = i_170_ * i_169_;
 				int i_179_ = i + (i_175_ + i_173_ + i_177_ >> 12);
 				int i_180_ = (i_174_ + i_176_ + i_178_ >> 12) + i_148_;
-				Class523.method11220(i_156_, i_157_, i_179_, i_180_, i_155_, (byte) 102);
+				AnimationIndexLoader.method11220(i_156_, i_157_, i_179_, i_180_, i_155_, (byte) 102);
 				i_156_ = i_179_;
 				i_157_ = i_180_;
 			}
 		} else
-			Class523.method11220(i, i_148_, i_153_, i_154_, i_155_, (byte) 122);
+			AnimationIndexLoader.method11220(i, i_148_, i_153_, i_154_, i_155_, (byte) 122);
 	}
 
 	Class532_Sub2_Sub1() throws Throwable {

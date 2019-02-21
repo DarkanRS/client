@@ -482,7 +482,7 @@ public class MapRegion {
 					class521_sub1_sub1_sub2_sub2.method11171(class385);
 					if ((int) class385.x < 0 || (int) class385.x > i_109_ || (int) class385.z < 0 || (int) class385.z > i_110_) {
 						class521_sub1_sub1_sub2_sub2.method16166(null, -1796042830);
-						class282_sub47.unlink(-371378792);
+						class282_sub47.remove();
 						bool = true;
 					} else {
 						boolean bool_112_ = true;
@@ -497,7 +497,7 @@ public class MapRegion {
 							client.anIntArray7212[((client.anInt7211 += 1568892417) * -685729279 - 1)] = (class521_sub1_sub1_sub2_sub2.anInt10314 * -1691508299);
 						} else {
 							class521_sub1_sub1_sub2_sub2.method16166(null, -163238630);
-							class282_sub47.unlink(-371378792);
+							class282_sub47.remove();
 							bool = true;
 						}
 					}
@@ -540,14 +540,14 @@ public class MapRegion {
 			class282_sub31.anInt7762 -= 1690395815 * i_105_;
 			class282_sub31.anInt7763 -= 765748375 * i_106_;
 			if (Class256.aClass256_3161 != this.aClass256_3163 && (class282_sub31.anInt7762 * 37618455 < 0 || -322610393 * class282_sub31.anInt7763 < 0 || (class282_sub31.anInt7762 * 37618455 >= this.sizeX * -2082656295) || (-322610393 * class282_sub31.anInt7763 >= 315871463 * this.sizeY))) {
-				class282_sub31.unlink(-371378792);
+				class282_sub31.remove();
 			}
 		}
 		for (Class282_Sub31 class282_sub31 = ((Class282_Sub31) Class282_Sub31.aClass482_7776.head((byte) 67)); null != class282_sub31; class282_sub31 = (Class282_Sub31) Class282_Sub31.aClass482_7776.next(270479135)) {
 			class282_sub31.anInt7762 -= i_105_ * 1690395815;
 			class282_sub31.anInt7763 -= i_106_ * 765748375;
 			if (Class256.aClass256_3161 != this.aClass256_3163 && (class282_sub31.anInt7762 * 37618455 < 0 || -322610393 * class282_sub31.anInt7763 < 0 || (class282_sub31.anInt7762 * 37618455 >= -2082656295 * this.sizeX) || (-322610393 * class282_sub31.anInt7763 >= 315871463 * this.sizeY))) {
-				class282_sub31.unlink(-371378792);
+				class282_sub31.remove();
 			}
 		}
 		for (Class282_Sub29 class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7750(-1570433820)); null != class282_sub29; class282_sub29 = ((Class282_Sub29) client.aClass465_7414.method7751((byte) 4))) {
@@ -559,7 +559,7 @@ public class MapRegion {
 			if (null != this.sceneObjectManager) {
 				if (i_120_ < 0 || i_122_ < 0 || i_120_ >= -2082656295 * this.sizeX || i_122_ >= this.sizeY * 315871463 || i_120_ >= (this.sceneObjectManager.anInt2617 * -1912960305) || i_122_ >= -18177099 * (this.sceneObjectManager.anInt2603)) {
 					if (this.aClass256_3163 != Class256.aClass256_3161) {
-						class282_sub29.unlink(-371378792);
+						class282_sub29.remove();
 					}
 				} else if ((this.sceneObjectManager.aClass293ArrayArrayArray2604) != null) {
 					this.sceneObjectManager.method3405(i_118_, i_120_, i_122_, -1311217260);

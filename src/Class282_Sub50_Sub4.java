@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class Class282_Sub50_Sub4 extends Class282_Sub50 {
+public class Class282_Sub50_Sub4 extends CacheableNode {
 	IterableNodeMap aClass465_9518;
 
 	void method14747(RsByteBuffer class282_sub35, int i, byte i_0_) {

@@ -92,7 +92,7 @@ public class Class169 {
 					Class79.aClass282_Sub15_Sub4_783.method15276(((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099);
 					((Class282_Sub48) class282_sub48).aClass282_Sub15_Sub5_8099 = null;
 				}
-				class282_sub48.unlink(-371378792);
+				class282_sub48.remove();
 				break;
 			}
 		}
