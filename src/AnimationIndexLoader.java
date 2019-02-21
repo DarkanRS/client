@@ -25,7 +25,7 @@ public class AnimationIndexLoader {
 			return class518;
 		byte[] is;
 		synchronized (((AnimationIndexLoader) this).sequenceIndex) {
-			is = (((AnimationIndexLoader) this).sequenceIndex.getFile(SharedConfigsType.SEQUENCES.containerId(i), SharedConfigsType.SEQUENCES.fileId(i), -1610742451));
+			is = (((AnimationIndexLoader) this).sequenceIndex.getFile(SharedConfigsType.SEQUENCES.containerId(i), SharedConfigsType.SEQUENCES.fileId(i)));
 		}
 		class518 = new AnimationDefinitions();
 		class518.anInt5909 = i * 919942973;

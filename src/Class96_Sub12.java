@@ -64,7 +64,7 @@ public class Class96_Sub12 extends Class96 {
 			return 1;
 		if (Class38.method859(i_11_, -1682057624))
 			return 2;
-		if (Class431.method7252(i_11_, (byte) 0))
+		if (EnumDefinitions.method7252(i_11_, (byte) 0))
 			return 3;
 		if (Class237.method3989(i_11_, (byte) 0))
 			return 4;

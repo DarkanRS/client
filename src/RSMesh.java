@@ -853,7 +853,7 @@ public class RSMesh {
 	}
 
 	public static RSMesh method2670(Index class317, int i, int i_196_) {
-		byte[] is = class317.getFile(i, i_196_, -1300672958);
+		byte[] is = class317.getFile(i, i_196_);
 		if (is == null)
 			return null;
 		return new RSMesh(is);
@@ -902,7 +902,7 @@ public class RSMesh {
 	}
 
 	public static RSMesh method2673(Index class317, int i, int i_214_) {
-		byte[] is = class317.getFile(i, i_214_, -1283529200);
+		byte[] is = class317.getFile(i, i_214_);
 		if (is == null)
 			return null;
 		return new RSMesh(is);
@@ -2643,7 +2643,7 @@ public class RSMesh {
 	}
 
 	public static RSMesh decodeMesh(Index class317, int i, int i_600_) {
-		byte[] is = class317.getFile(i, i_600_, -1774438474);
+		byte[] is = class317.getFile(i, i_600_);
 		if (is == null)
 			return null;
 		return new RSMesh(is);

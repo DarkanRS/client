@@ -13,7 +13,7 @@ public class Class323 implements Interface22 {
 		CacheableNode class282_sub50 = ((Class323) this).aClass223_3754.method3758((long) i);
 		if (class282_sub50 != null)
 			return (TextureDefinition) class282_sub50;
-		byte[] is = ((Class323) this).textureIndex.getFile(i, -130547352);
+		byte[] is = ((Class323) this).textureIndex.getFile(i);
 		if (is == null)
 			return null;
 		TextureDefinition class282_sub50_sub3 = new TextureDefinition(new RsByteBuffer(is));
@@ -40,7 +40,7 @@ public class Class323 implements Interface22 {
 	public Class323(Index textureDefinitionIndex, Index textureIndex, Index spriteIndex) {
 		((Class323) this).textureIndex = textureIndex;
 		((Class323) this).spriteIndex = spriteIndex;
-		RsByteBuffer stream = new RsByteBuffer(textureDefinitionIndex.getFile(0, 0, -1917534237));
+		RsByteBuffer stream = new RsByteBuffer(textureDefinitionIndex.getFile(0, 0));
 		((Class323) this).textureDefSize = stream.readUnsignedShort() * 309531567;
 		((Class323) this).aClass169Array3753 = new Class169[821306191 * ((Class323) this).textureDefSize];
 		for (int i = 0; i < 821306191 * ((Class323) this).textureDefSize; i++) {
@@ -260,7 +260,7 @@ public class Class323 implements Interface22 {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (-1 == i_36_)
 			throw new RuntimeException();
-		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_36_, (byte) 8);
+		EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(i_36_, (byte) 8);
 		if (class431.aChar5140 != 's')
 			throw new RuntimeException();
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class431.method7228(string, (byte) -23) ? 1 : 0;

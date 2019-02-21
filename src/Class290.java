@@ -28,7 +28,7 @@ public class Class290 {
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.HITBARS.id) * -71319279), i, -1577143133);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.HITBARS.id) * -71319279), i);
 		}
 		class198 = new HitbarDefinitions();
 		((HitbarDefinitions) class198).aClass290_2437 = this;
@@ -83,7 +83,7 @@ public class Class290 {
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.HITBARS.id) * -71319279), i, -1579560172);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.HITBARS.id) * -71319279), i);
 		}
 		class198 = new HitbarDefinitions();
 		((HitbarDefinitions) class198).aClass290_2437 = this;
@@ -140,7 +140,7 @@ public class Class290 {
 			return class198;
 		byte[] is;
 		synchronized (((Class290) this).aClass317_3450) {
-			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.HITBARS.id) * -71319279), i, -1811756886);
+			is = ((Class290) this).aClass317_3450.getFile(((SharedConfigsType.HITBARS.id) * -71319279), i);
 		}
 		class198 = new HitbarDefinitions();
 		((HitbarDefinitions) class198).aClass290_2437 = this;

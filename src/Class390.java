@@ -180,7 +180,7 @@ public abstract class Class390 {
 
 	static final void method6732(CS2Executor class527, byte i) {
 		int i_148_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_148_, (byte) 8);
+		EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(i_148_, (byte) 8);
 		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class431.method7222(1242812938);
 	}
 }

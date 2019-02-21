@@ -20,7 +20,7 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i, -1171405866);
+			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;
@@ -139,7 +139,7 @@ public class Class427 {
 			return class418;
 		byte[] is;
 		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i, -1952476258);
+			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i);
 		}
 		class418 = new Class418();
 		((Class418) class418).aClass427_4998 = this;

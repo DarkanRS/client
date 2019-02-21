@@ -1,39 +1,31 @@
 import java.applet.Applet;
 import java.applet.AppletStub;
 import java.awt.BorderLayout;
-import java.awt.Container;
 import java.awt.Dimension;
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
-import javax.swing.BorderFactory;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.border.Border;
 
 public class Loader extends Applet implements AppletStub {
 
 	private static final long serialVersionUID = 1L;
 
-	public static final int CLIENT_REVISON = 727;
-	public static final int SUB_REVISION = 1;
+	public static final int MAJOR_BUILD = 727;
+	public static final int SUB_BUILD = 1;
+	public static final int CLIENT_BUILD = 6;
 
-	public static final String IP_ADDRESS = "127.0.0.1";
-	//public static final String IP_ADDRESS = "axios.trentonkress.com";
+	//public static final String IP_ADDRESS = "127.0.0.1";
+	public static final String IP_ADDRESS = "axios.trentonkress.com";
 	
 	public static final int LOBBY_PORT = 5555;
 
 	public static final boolean USING_ISAAC = false;
 	public static final boolean LOBBY_ENABLED = true;
 	public static final boolean DISABLE_XTEA_CRASH = true;
-	
-	public static int clientRevision = 6;
-	public static int newClientRevision = clientRevision+1;
-	
+		
 	public static final String clientLink = "http://darkan.org/assets/uploads/files/darkanclient.jar";
 
 	public static Properties clientParams = new Properties();
@@ -42,39 +34,6 @@ public class Loader extends Applet implements AppletStub {
 
 	public static void main(String[] arg0) {
 		new Loader().doFrame();
-	}
-	
-	public static Downloader jarDownloader;
-
-	public static void handleNewJarDownload() {
-		try {
-			jarDownloader = new Downloader(new URL(clientLink), new File("./Darkan v" + newClientRevision + ".jar"));
-			Thread t = new Thread(jarDownloader);
-			t.setPriority(Thread.MAX_PRIORITY);
-			t.setDaemon(true);
-			t.start();
-
-			JFrame f = new JFrame("Darkan Client Updater");
-			f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			Container content = f.getContentPane();
-			JProgressBar progressBar = new JProgressBar();
-			progressBar.setStringPainted(true);
-			Border border = BorderFactory.createTitledBorder("Downloading...");
-			progressBar.setBorder(border);
-			content.add(progressBar, BorderLayout.NORTH);
-			f.setSize(300, 100);
-			f.setVisible(true);
-
-			while (!jarDownloader.isCompleted()) {
-				progressBar.setValue(jarDownloader.getProgressPercent());
-			}
-			f.dispose();
-			JOptionPane.showMessageDialog(f, "Update successful! Run the newly downloaded: Darkan v" + newClientRevision + ".jar");
-			System.exit(0);
-		} catch (MalformedURLException e) {
-			System.out.print("Downloader error.");
-			return;
-		}
 	}
 
 	@Override

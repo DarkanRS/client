@@ -85,7 +85,7 @@ public class Class301 implements Interface41 {
 		int i_2_ = 0;
 		int i_3_ = 0;
 		while (i_2_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i_1_, is[i_3_++], -1846070100));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i_1_, is[i_3_++]));
 			int i_4_ = class282_sub35.readInt();
 			int i_5_ = class282_sub35.readUnsignedShort();
 			int i_6_ = class282_sub35.readUnsignedByte();

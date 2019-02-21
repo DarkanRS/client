@@ -96,7 +96,7 @@ public class Class94 {
 	}
 
 	public static FontMetrics method1588(Index class317, int i, int i_1_, int i_2_) {
-		byte[] is = class317.getFile(i, i_1_, -1787886103);
+		byte[] is = class317.getFile(i, i_1_);
 		if (is == null)
 			return null;
 		return new FontMetrics(is);

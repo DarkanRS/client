@@ -27,7 +27,7 @@ public class ItemIndexLoader implements IndexLoader {
 			return defs;
 		byte[] data;
 		synchronized (((ItemIndexLoader) this).fs19) {
-			data = (((ItemIndexLoader) this).fs19.getFile(SharedConfigsType.ITEM_DEFINITIONS.containerId(itemId), SharedConfigsType.ITEM_DEFINITIONS.fileId(itemId), -1500146511));
+			data = (((ItemIndexLoader) this).fs19.getFile(SharedConfigsType.ITEM_DEFINITIONS.containerId(itemId), SharedConfigsType.ITEM_DEFINITIONS.fileId(itemId)));
 		}
 		defs = new ItemDefinitions();
 		defs.loader = this;

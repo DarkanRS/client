@@ -2058,7 +2058,7 @@ public class Class174 {
 			Class165.method2854(executor, (byte) 46);
 			break;
 		case 298:
-			Class444.method7427(executor, 1378397507);
+			EnumIndexLoader.method7427(executor, 1378397507);
 			break;
 		case 46:
 			Class122.method2112(executor, -743598106);

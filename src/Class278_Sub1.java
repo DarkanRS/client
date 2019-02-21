@@ -5,7 +5,6 @@
 import java.io.IOException;
 
 public class Class278_Sub1 extends Class278 {
-	static final int anInt8110 = 10;
 	byte[][] aByteArrayArray8111 = new byte[10][];
 	RsByteBuffer aClass282_Sub35_8112 = new RsByteBuffer(null);
 	int anInt8113;
@@ -18,7 +17,7 @@ public class Class278_Sub1 extends Class278 {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
 			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
 				return 0;
-			byte[] is_0_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0, -2056397853));
+			byte[] is_0_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0));
 			if (null == is_0_)
 				throw new IllegalStateException("");
 			((Class278_Sub1) this).aClass282_Sub35_8116.buffer = is_0_;
@@ -74,7 +73,7 @@ public class Class278_Sub1 extends Class278 {
 		if (((Class278_Sub1) this).anIntArray8114 == null) {
 			if (!((Class278_Sub1) this).aClass317_8117.load(((Class278_Sub1) this).anInt8113 * 735121369, 0, 16711935))
 				return 0;
-			byte[] is_5_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0, -1220217893));
+			byte[] is_5_ = (((Class278_Sub1) this).aClass317_8117.getFile(735121369 * ((Class278_Sub1) this).anInt8113, 0));
 			if (null == is_5_)
 				throw new IllegalStateException("");
 			((Class278_Sub1) this).aClass282_Sub35_8116.buffer = is_5_;
@@ -124,7 +123,7 @@ public class Class278_Sub1 extends Class278 {
 		if (null != ((Class278_Sub1) this).anIntArray8114) {
 			for (int i_11_ = 0; (i_11_ < 10 && (i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449 < ((Class278_Sub1) this).anIntArray8114.length)); i_11_++) {
 				if (((Class278_Sub1) this).aByteArrayArray8111[i_11_] == null && (((Class278_Sub1) this).aClass317_8117.load((((Class278_Sub1) this).anIntArray8114[(i_11_ + ((Class278_Sub1) this).anInt8115 * -285637449)]), 0, 16711935)))
-					((Class278_Sub1) this).aByteArrayArray8111[i_11_] = (((Class278_Sub1) this).aClass317_8117.getFile((((Class278_Sub1) this).anIntArray8114[(-285637449 * ((Class278_Sub1) this).anInt8115 + i_11_)]), 0, -1550945086));
+					((Class278_Sub1) this).aByteArrayArray8111[i_11_] = (((Class278_Sub1) this).aClass317_8117.getFile((((Class278_Sub1) this).anIntArray8114[(-285637449 * ((Class278_Sub1) this).anInt8115 + i_11_)]), 0));
 			}
 		}
 	}

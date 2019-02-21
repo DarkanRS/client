@@ -22,7 +22,7 @@ public class Class421 {
 			for (int i = 0; i < ((Class421) this).anInt5013 * -1814796697; i++) {
 				byte[] is;
 				synchronized (((Class421) this).aClass317_5014) {
-					is = (((Class421) this).aClass317_5014.getFile(SharedConfigsType.aClass120_1473.id * -71319279, i, -1758012491));
+					is = (((Class421) this).aClass317_5014.getFile(SharedConfigsType.aClass120_1473.id * -71319279, i));
 				}
 				Class282_Sub50_Sub4 class282_sub50_sub4 = new Class282_Sub50_Sub4();
 				if (is != null)
@@ -30,18 +30,6 @@ public class Class421 {
 				((Class421) this).aClass282_Sub50_Sub4Array5012[i] = class282_sub50_sub4;
 			}
 		}
-	}
-
-	public Class282_Sub50_Sub4 method7037(int i) {
-		if (i < 0)
-			return new Class282_Sub50_Sub4();
-		return ((Class421) this).aClass282_Sub50_Sub4Array5012[i];
-	}
-
-	public Class282_Sub50_Sub4 method7038(int i) {
-		if (i < 0)
-			return new Class282_Sub50_Sub4();
-		return ((Class421) this).aClass282_Sub50_Sub4Array5012[i];
 	}
 
 	static final void method7039(byte i) {

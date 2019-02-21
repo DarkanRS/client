@@ -9,21 +9,9 @@ public class Class288 {
 	SoftCache aClass229_3437 = new SoftCache(16);
 	static FontMetrics aClass414_3438;
 
-	public void method5067() {
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3859(-407856533);
-		}
-	}
-
 	public void method5068(int i, byte i_0_) {
 		synchronized (((Class288) this).aClass229_3437) {
 			((Class288) this).aClass229_3437.method3858(i, (byte) -51);
-		}
-	}
-
-	public void method5069() {
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3859(-1832638503);
 		}
 	}
 
@@ -53,91 +41,11 @@ public class Class288 {
 			return class207;
 		byte[] is;
 		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1168931806));
+			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i));
 		}
 		class207 = new Class207();
 		if (is != null)
 			class207.method3549(new RsByteBuffer(is), -2145124357);
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.put(class207, (long) i);
-		}
-		return class207;
-	}
-
-	Class207 method5073(int i) {
-		Class207 class207;
-		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
-		}
-		if (class207 != null)
-			return class207;
-		byte[] is;
-		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1884209588));
-		}
-		class207 = new Class207();
-		if (is != null)
-			class207.method3549(new RsByteBuffer(is), -2107395661);
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.put(class207, (long) i);
-		}
-		return class207;
-	}
-
-	Class207 method5074(int i) {
-		Class207 class207;
-		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
-		}
-		if (class207 != null)
-			return class207;
-		byte[] is;
-		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1684955859));
-		}
-		class207 = new Class207();
-		if (is != null)
-			class207.method3549(new RsByteBuffer(is), -2034753155);
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.put(class207, (long) i);
-		}
-		return class207;
-	}
-
-	Class207 method5075(int i) {
-		Class207 class207;
-		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
-		}
-		if (class207 != null)
-			return class207;
-		byte[] is;
-		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1465415322));
-		}
-		class207 = new Class207();
-		if (is != null)
-			class207.method3549(new RsByteBuffer(is), -2089272706);
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.put(class207, (long) i);
-		}
-		return class207;
-	}
-
-	Class207 method5076(int i) {
-		Class207 class207;
-		synchronized (((Class288) this).aClass229_3437) {
-			class207 = ((Class207) ((Class288) this).aClass229_3437.get((long) i));
-		}
-		if (class207 != null)
-			return class207;
-		byte[] is;
-		synchronized (((Class288) this).aClass317_3436) {
-			is = (((Class288) this).aClass317_3436.getFile(-71319279 * SharedConfigsType.aClass120_1469.id, i, -1597785812));
-		}
-		class207 = new Class207();
-		if (is != null)
-			class207.method3549(new RsByteBuffer(is), -2117988400);
 		synchronized (((Class288) this).aClass229_3437) {
 			((Class288) this).aClass229_3437.put(class207, (long) i);
 		}
@@ -155,30 +63,6 @@ public class Class288 {
 			}
 		}
 		return new Class247(-1089853695 * ((Class207) class207).anInt2653, class334s, ((Class207) class207).anInt2654 * -1639521939, i_2_, i_3_, i_4_, ((Class207) class207).aClass204_2656, 1502700951 * ((Class207) class207).anInt2657);
-	}
-
-	public void method5078(int i) {
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3858(i, (byte) 27);
-		}
-	}
-
-	public void method5079() {
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3863(749667589);
-		}
-	}
-
-	public void method5080() {
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3863(775505015);
-		}
-	}
-
-	public void method5081() {
-		synchronized (((Class288) this).aClass229_3437) {
-			((Class288) this).aClass229_3437.method3863(1652102955);
-		}
 	}
 
 	static final void method5082(CS2Executor class527, int i) {
@@ -212,7 +96,7 @@ public class Class288 {
 		}
 		for (int componentId = 0; componentId < numComponents; componentId++) {
 			if (inter.components[componentId] == null) {
-				byte[] data = Class388.INTERFACE_INDEX.getFile(interfaceId, componentId, xteas, -440613598);
+				byte[] data = Class388.INTERFACE_INDEX.getFile(interfaceId, componentId, xteas);
 				if (null != data) {
 					IComponentDefinitions defs = inter.components[componentId] = new IComponentDefinitions();
 					defs.idHash = ((interfaceId << 16) + componentId) * -1255176211;

@@ -59,7 +59,7 @@ public class Class225_Sub1 extends RouteStrategy {
 		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4), -1763175184));
+		byte[] is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4)));
 		if (is != null) {
 			if (is.length <= 1)
 				return null;
@@ -76,7 +76,7 @@ public class Class225_Sub1 extends RouteStrategy {
 		class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4), -1500320283));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4)));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;
@@ -93,7 +93,7 @@ public class Class225_Sub1 extends RouteStrategy {
 		class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i_15_ << 16));
 		if (null != class282_sub50_sub5)
 			return class282_sub50_sub5;
-		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4), -962480706));
+		is = (IndexLoaders.CS2_SCRIPTS_INDEX.getFile(IndexLoaders.CS2_SCRIPTS_INDEX.method5623(i_15_, (byte) 4)));
 		if (null != is) {
 			if (is.length <= 1)
 				return null;

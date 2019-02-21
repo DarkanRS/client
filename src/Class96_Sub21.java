@@ -122,7 +122,7 @@ public class Class96_Sub21 extends Class96 {
 	}
 
 	static Class282_Sub14 method14676(Index class317, int i, int i_10_) {
-		byte[] is = class317.getFile(i, -2092539323);
+		byte[] is = class317.getFile(i);
 		if (is == null)
 			return null;
 		return new Class282_Sub14(is);

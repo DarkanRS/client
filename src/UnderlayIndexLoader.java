@@ -8,12 +8,6 @@ public class UnderlayIndexLoader {
 	Index configIndex;
 	SoftCache cache = new SoftCache(128);
 
-	public void method8024(int i) {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3858(i, (byte) 97);
-		}
-	}
-
 	public UnderlayDef getUnderlayDef(int i, byte i_0_) {
 		UnderlayDef def;
 		synchronized (((UnderlayIndexLoader) this).cache) {
@@ -23,7 +17,7 @@ public class UnderlayIndexLoader {
 			return def;
 		byte[] is;
 		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1999870087));
+			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i));
 		}
 		def = new UnderlayDef();
 		if (null != is)
@@ -45,61 +39,9 @@ public class UnderlayIndexLoader {
 		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.FLO1.id) * -71319279, 345702944);
 	}
 
-	public void method8027() {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3859(-438351749);
-		}
-	}
-
-	public UnderlayDef method8028(int i) {
-		UnderlayDef class481;
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			class481 = ((UnderlayDef) ((UnderlayIndexLoader) this).cache.get((long) i));
-		}
-		if (class481 != null)
-			return class481;
-		byte[] is;
-		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1393062609));
-		}
-		class481 = new UnderlayDef();
-		if (null != is)
-			class481.method8050(new RsByteBuffer(is), 2009630074);
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.put(class481, (long) i);
-		}
-		return class481;
-	}
-
-	public UnderlayDef method8029(int i) {
-		UnderlayDef class481;
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			class481 = ((UnderlayDef) ((UnderlayIndexLoader) this).cache.get((long) i));
-		}
-		if (class481 != null)
-			return class481;
-		byte[] is;
-		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1675981481));
-		}
-		class481 = new UnderlayDef();
-		if (null != is)
-			class481.method8050(new RsByteBuffer(is), -979770743);
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.put(class481, (long) i);
-		}
-		return class481;
-	}
-
 	public void method8030(int i, int i_1_) {
 		synchronized (((UnderlayIndexLoader) this).cache) {
 			((UnderlayIndexLoader) this).cache.method3858(i, (byte) -26);
-		}
-	}
-
-	public void method8031() {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3859(-2074436659);
 		}
 	}
 
@@ -107,38 +49,6 @@ public class UnderlayIndexLoader {
 		synchronized (((UnderlayIndexLoader) this).cache) {
 			((UnderlayIndexLoader) this).cache.method3863(977235767);
 		}
-	}
-
-	public void method8033() {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3859(-1304573321);
-		}
-	}
-
-	public void method8034(int i) {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3858(i, (byte) -6);
-		}
-	}
-
-	public UnderlayDef method8035(int i) {
-		UnderlayDef class481;
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			class481 = ((UnderlayDef) ((UnderlayIndexLoader) this).cache.get((long) i));
-		}
-		if (class481 != null)
-			return class481;
-		byte[] is;
-		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i, -1932524788));
-		}
-		class481 = new UnderlayDef();
-		if (null != is)
-			class481.method8050(new RsByteBuffer(is), 68816610);
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.put(class481, (long) i);
-		}
-		return class481;
 	}
 
 	static void method8036(int i, byte i_2_) {

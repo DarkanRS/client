@@ -28,7 +28,7 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i, -1235181846);
+			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
@@ -74,7 +74,7 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i, -1766506937);
+			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;
@@ -95,7 +95,7 @@ public class Class438 {
 			return class419;
 		byte[] is;
 		synchronized (((Class438) this).aClass317_5343) {
-			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i, -1914067254);
+			is = ((Class438) this).aClass317_5343.getFile(((SharedConfigsType.aClass120_1496.id) * -71319279), i);
 		}
 		class419 = new Class419();
 		((Class419) class419).aClass438_5001 = this;

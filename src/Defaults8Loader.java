@@ -9,7 +9,7 @@ public class Defaults8Loader {
 	static int anInt5932;
 
 	public Defaults8Loader(Index class317) {
-		byte[] is = class317.getFile((DefaultsFile.FILE_8.anInt6966 * -1719912253), -1967379724);
+		byte[] is = class317.getFile((DefaultsFile.FILE_8.fileId * -1719912253));
 		method11149(new RsByteBuffer(is), 1856651955);
 	}
 

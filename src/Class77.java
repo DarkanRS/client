@@ -64,7 +64,7 @@ public class Class77 {
 	static void method1365(int i) {
 		if (Class540.anIntArray7136 == null) {
 			Class540.anIntArray7136 = new int[65536];
-			Class444.anIntArray5379 = new int[65536];
+			EnumIndexLoader.anIntArray5379 = new int[65536];
 			double d = 0.7 + (Math.random() * 0.03 - 0.015);
 			for (int i_4_ = 0; i_4_ < 65536; i_4_++) {
 				double d_5_ = (double) (i_4_ >> 10 & 0x3f) / 64.0 + 0.0078125;
@@ -121,7 +121,7 @@ public class Class77 {
 				int i_19_ = i_18_ + ((i_17_ << 8) + (i_16_ << 16));
 				Class540.anIntArray7136[i_4_] = i_19_ & 0xffffff;
 				int i_20_ = (i_18_ << 16) + (i_17_ << 8) + i_16_;
-				Class444.anIntArray5379[i_4_] = i_20_;
+				EnumIndexLoader.anIntArray5379[i_4_] = i_20_;
 			}
 		}
 	}

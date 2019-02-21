@@ -17,7 +17,7 @@ public class Class283 {
 		int i_0_ = 0;
 		int i_1_ = 0;
 		while (i_0_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_1_++], -1862037821));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_1_++]));
 			int i_2_ = class282_sub35.readInt();
 			int i_3_ = class282_sub35.readUnsignedShort();
 			int i_4_ = class282_sub35.readUnsignedByte();
@@ -40,7 +40,7 @@ public class Class283 {
 		int i_5_ = 0;
 		int i_6_ = 0;
 		while (i_5_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_6_++], -1511396395));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_6_++]));
 			int i_7_ = class282_sub35.readInt();
 			int i_8_ = class282_sub35.readUnsignedShort();
 			int i_9_ = class282_sub35.readUnsignedByte();
@@ -69,7 +69,7 @@ public class Class283 {
 		int i_10_ = 0;
 		int i_11_ = 0;
 		while (i_10_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_11_++], -2095255905));
+			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_11_++]));
 			int i_12_ = class282_sub35.readInt();
 			int i_13_ = class282_sub35.readUnsignedShort();
 			int i_14_ = class282_sub35.readUnsignedByte();

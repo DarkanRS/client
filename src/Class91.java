@@ -14,14 +14,14 @@ public class Class91 {
 	public byte[] aByteArray961;
 
 	public static Class91[] method1514(Index class317, int i, int i_0_) {
-		byte[] is = class317.getFile(i, i_0_, -1211833322);
+		byte[] is = class317.getFile(i, i_0_);
 		if (is == null)
 			return null;
 		return method1517(is);
 	}
 
 	public static Class91 method1515(Index class317, int i) {
-		byte[] is = class317.getFile(i, -560964409);
+		byte[] is = class317.getFile(i);
 		if (is == null)
 			return null;
 		return method1517(is)[0];
@@ -114,7 +114,7 @@ public class Class91 {
 	}
 
 	public static Class91 method1522(Index class317, int i, int i_60_) {
-		byte[] is = class317.getFile(i, i_60_, -2041689556);
+		byte[] is = class317.getFile(i, i_60_);
 		if (is == null)
 			return null;
 		return method1517(is)[0];
@@ -358,7 +358,7 @@ public class Class91 {
 	}
 
 	public static Class91[] method1534(Index class317, int i) {
-		byte[] is = class317.getFile(i, -415130062);
+		byte[] is = class317.getFile(i);
 		if (is == null)
 			return null;
 		return method1517(is);

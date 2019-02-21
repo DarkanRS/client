@@ -57,9 +57,9 @@ public class QuickchatDefinitionsLoader {
 			return class282_sub50_sub9;
 		byte[] is;
 		if (i >= 32768)
-			is = ((QuickchatDefinitionsLoader) this).aClass317_5128.getFile(1, i & 0x7fff, -2004185096);
+			is = ((QuickchatDefinitionsLoader) this).aClass317_5128.getFile(1, i & 0x7fff);
 		else
-			is = ((QuickchatDefinitionsLoader) this).aClass317_5129.getFile(1, i, -1853926128);
+			is = ((QuickchatDefinitionsLoader) this).aClass317_5129.getFile(1, i);
 		class282_sub50_sub9 = new QuickchatDefinitions();
 		((QuickchatDefinitions) class282_sub50_sub9).aClass429_9623 = this;
 		if (null != is)

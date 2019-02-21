@@ -385,7 +385,7 @@ public class Class282_Sub18 extends Node {
 
 	static boolean method12268(Index class317) {
 		if (!aBool7611) {
-			byte[] is = class317.getFile(0, 0, -1801910444);
+			byte[] is = class317.getFile(0, 0);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -423,7 +423,7 @@ public class Class282_Sub18 extends Node {
 			class317.method5661(i, -1193230374);
 			return null;
 		}
-		byte[] is = class317.getFile(i, -913973555);
+		byte[] is = class317.getFile(i);
 		if (is == null)
 			return null;
 		Class282_Sub18 class282_sub18 = null;
@@ -440,7 +440,7 @@ public class Class282_Sub18 extends Node {
 			class317.load(i, i_107_, 16711935);
 			return null;
 		}
-		byte[] is = class317.getFile(i, i_107_, -1847317701);
+		byte[] is = class317.getFile(i, i_107_);
 		if (is == null)
 			return null;
 		Class282_Sub18 class282_sub18 = null;
@@ -489,7 +489,7 @@ public class Class282_Sub18 extends Node {
 			class317.method5661(i, 1504778998);
 			return null;
 		}
-		byte[] is = class317.getFile(i, -947146036);
+		byte[] is = class317.getFile(i);
 		if (is == null)
 			return null;
 		Class282_Sub18 class282_sub18 = null;
@@ -542,7 +542,7 @@ public class Class282_Sub18 extends Node {
 
 	static boolean method12282(Index class317) {
 		if (!aBool7611) {
-			byte[] is = class317.getFile(0, 0, -1215752135);
+			byte[] is = class317.getFile(0, 0);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -891,7 +891,7 @@ public class Class282_Sub18 extends Node {
 
 	static boolean method12289(Index class317) {
 		if (!aBool7611) {
-			byte[] is = class317.getFile(0, 0, -1791895913);
+			byte[] is = class317.getFile(0, 0);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -901,7 +901,7 @@ public class Class282_Sub18 extends Node {
 
 	static boolean method12290(Index class317) {
 		if (!aBool7611) {
-			byte[] is = class317.getFile(0, 0, -1650152767);
+			byte[] is = class317.getFile(0, 0);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -911,7 +911,7 @@ public class Class282_Sub18 extends Node {
 
 	static boolean method12291(Index class317) {
 		if (!aBool7611) {
-			byte[] is = class317.getFile(0, 0, -1271862093);
+			byte[] is = class317.getFile(0, 0);
 			if (is == null)
 				return false;
 			method12261(is);
@@ -946,7 +946,7 @@ public class Class282_Sub18 extends Node {
 
 	static boolean method12293(Index class317) {
 		if (!aBool7611) {
-			byte[] is = class317.getFile(0, 0, -1454828949);
+			byte[] is = class317.getFile(0, 0);
 			if (is == null)
 				return false;
 			method12261(is);

@@ -13,9 +13,9 @@ public class Class331 {
 			return class282_sub50_sub14;
 		byte[] is;
 		if (i >= 32768)
-			is = ((Class331) this).aClass317_3870.getFile(0, i & 0x7fff, -2051884154);
+			is = ((Class331) this).aClass317_3870.getFile(0, i & 0x7fff);
 		else
-			is = ((Class331) this).aClass317_3872.getFile(0, i, -1995501795);
+			is = ((Class331) this).aClass317_3872.getFile(0, i);
 		class282_sub50_sub14 = new Class282_Sub50_Sub14();
 		if (null != is)
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), -514314699);
@@ -31,9 +31,9 @@ public class Class331 {
 			return class282_sub50_sub14;
 		byte[] is;
 		if (i >= 32768)
-			is = ((Class331) this).aClass317_3870.getFile(0, i & 0x7fff, -2001151071);
+			is = ((Class331) this).aClass317_3870.getFile(0, i & 0x7fff);
 		else
-			is = ((Class331) this).aClass317_3872.getFile(0, i, -2070203520);
+			is = ((Class331) this).aClass317_3872.getFile(0, i);
 		class282_sub50_sub14 = new Class282_Sub50_Sub14();
 		if (null != is)
 			class282_sub50_sub14.method15209(new RsByteBuffer(is), 625561470);

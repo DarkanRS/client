@@ -424,7 +424,7 @@ public class Class286 implements Runnable {
 		CS2Script class282_sub50_sub5 = ((CS2Script) Class506.aClass223_5857.method3758((long) i));
 		if (class282_sub50_sub5 != null)
 			return class282_sub50_sub5;
-		byte[] is = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(i, 0, -1501459483);
+		byte[] is = IndexLoaders.CS2_SCRIPTS_INDEX.getFile(i, 0);
 		if (is == null || is.length <= 1)
 			return null;
 		try {

@@ -34,7 +34,7 @@ public class ItemDefaultsLoader {
 			return class437;
 		byte[] is;
 		synchronized (((ItemDefaultsLoader) this).aClass317_5027) {
-			is = (((ItemDefaultsLoader) this).aClass317_5027.getFile(-71319279 * SharedConfigsType.aClass120_1474.id, i, -1430082721));
+			is = (((ItemDefaultsLoader) this).aClass317_5027.getFile(-71319279 * SharedConfigsType.aClass120_1474.id, i));
 		}
 		class437 = new AttributeDefault();
 		if (null != is)
@@ -48,60 +48,6 @@ public class ItemDefaultsLoader {
 	public void method7070(int i) {
 		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
 			((ItemDefaultsLoader) this).aClass229_5028.method3859(-299334668);
-		}
-	}
-
-	public void method7071() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3863(1001807600);
-		}
-	}
-
-	public void method7072() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3859(-826915308);
-		}
-	}
-
-	public void method7073() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3859(1356982144);
-		}
-	}
-
-	public void method7074() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3859(605689747);
-		}
-	}
-
-	public void method7075(int i) {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3858(i, (byte) 60);
-		}
-	}
-
-	public void method7076() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3859(2040712126);
-		}
-	}
-
-	public void method7077() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3863(1462549727);
-		}
-	}
-
-	public void method7078() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3863(1794669600);
-		}
-	}
-
-	public void method7079() {
-		synchronized (((ItemDefaultsLoader) this).aClass229_5028) {
-			((ItemDefaultsLoader) this).aClass229_5028.method3863(1515403340);
 		}
 	}
 

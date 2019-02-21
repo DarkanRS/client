@@ -14,27 +14,6 @@ public class NPCIndexLoader {
 	Game aClass486_4844;
 	int anInt4845;
 
-	public void method6826() {
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.method3863(1328152952);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3863(1475110041);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3863(2104995668);
-		}
-	}
-
-	public void method6827() {
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(-1081944978);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(-584824692);
-		}
-	}
-
 	public NPCDefinitions getNPCDefinitions(int i, byte i_0_) {
 		NPCDefinitions class409;
 		synchronized (((NPCIndexLoader) this).aClass229_4841) {
@@ -44,7 +23,7 @@ public class NPCIndexLoader {
 			return class409;
 		byte[] is;
 		synchronized (((NPCIndexLoader) this).aClass317_4839) {
-			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i), -1310077438));
+			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i)));
 		}
 		class409 = new NPCDefinitions();
 		class409.anInt4856 = i * -1165155817;
@@ -66,13 +45,6 @@ public class NPCIndexLoader {
 		}
 		synchronized (((NPCIndexLoader) this).aClass229_4843) {
 			((NPCIndexLoader) this).aClass229_4843.method3859(21107724);
-		}
-	}
-
-	public void method6830(boolean bool) {
-		if (bool != ((NPCIndexLoader) this).aBool4838) {
-			((NPCIndexLoader) this).aBool4838 = bool;
-			method6836((byte) -80);
 		}
 	}
 
@@ -109,54 +81,6 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public NPCDefinitions method6834(int i) {
-		NPCDefinitions class409;
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			class409 = ((NPCDefinitions) ((NPCIndexLoader) this).aClass229_4841.get((long) i));
-		}
-		if (null != class409)
-			return class409;
-		byte[] is;
-		synchronized (((NPCIndexLoader) this).aClass317_4839) {
-			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i), -1845264085));
-		}
-		class409 = new NPCDefinitions();
-		class409.anInt4856 = i * -1165155817;
-		((NPCDefinitions) class409).aClass406_4855 = this;
-		class409.aStringArray4882 = (String[]) ((NPCIndexLoader) this).aStringArray4840.clone();
-		if (null != is)
-			class409.method6874(new RsByteBuffer(is), 1705465056);
-		class409.method6877(-2031468830);
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.put(class409, (long) i);
-		}
-		return class409;
-	}
-
-	public NPCDefinitions method6835(int i) {
-		NPCDefinitions class409;
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			class409 = ((NPCDefinitions) ((NPCIndexLoader) this).aClass229_4841.get((long) i));
-		}
-		if (null != class409)
-			return class409;
-		byte[] is;
-		synchronized (((NPCIndexLoader) this).aClass317_4839) {
-			is = (((NPCIndexLoader) this).aClass317_4839.getFile(SharedConfigsType.aClass120_1467.containerId(i), SharedConfigsType.aClass120_1467.fileId(i), -1827585715));
-		}
-		class409 = new NPCDefinitions();
-		class409.anInt4856 = i * -1165155817;
-		((NPCDefinitions) class409).aClass406_4855 = this;
-		class409.aStringArray4882 = (String[]) ((NPCIndexLoader) this).aStringArray4840.clone();
-		if (null != is)
-			class409.method6874(new RsByteBuffer(is), 1944835693);
-		class409.method6877(-918646775);
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.put(class409, (long) i);
-		}
-		return class409;
-	}
-
 	public void method6836(byte i) {
 		synchronized (((NPCIndexLoader) this).aClass229_4841) {
 			((NPCIndexLoader) this).aClass229_4841.method3859(-986318596);
@@ -166,44 +90,6 @@ public class NPCIndexLoader {
 		}
 		synchronized (((NPCIndexLoader) this).aClass229_4843) {
 			((NPCIndexLoader) this).aClass229_4843.method3859(-1428350726);
-		}
-	}
-
-	public void method6837() {
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.method3859(-1742586497);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(2050188538);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(1423489668);
-		}
-	}
-
-	public void method6838() {
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.method3863(1028894437);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3863(862479537);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3863(701397936);
-		}
-	}
-
-	public void method6839(boolean bool) {
-		if (bool != ((NPCIndexLoader) this).aBool4838) {
-			((NPCIndexLoader) this).aBool4838 = bool;
-			method6836((byte) -44);
-		}
-	}
-
-	public void method6840(boolean bool) {
-		if (bool != ((NPCIndexLoader) this).aBool4838) {
-			((NPCIndexLoader) this).aBool4838 = bool;
-			method6836((byte) -119);
 		}
 	}
 
@@ -226,98 +112,10 @@ public class NPCIndexLoader {
 			((NPCIndexLoader) this).aStringArray4840 = new String[] { null, null, null, null, null, null };
 	}
 
-	public void method6841(int i) {
-		((NPCIndexLoader) this).anInt4845 = 3014821 * i;
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(368531001);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(-656158176);
-		}
-	}
-
-	public void method6842(int i) {
-		((NPCIndexLoader) this).anInt4845 = 3014821 * i;
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(-328318674);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(-340921547);
-		}
-	}
-
-	public void method6843(int i) {
-		((NPCIndexLoader) this).anInt4845 = 3014821 * i;
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(-498760218);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(1894996656);
-		}
-	}
-
-	public void method6844(int i) {
-		((NPCIndexLoader) this).anInt4845 = 3014821 * i;
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(-1373861067);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(1887932518);
-		}
-	}
-
-	public void method6845(int i) {
-		((NPCIndexLoader) this).anInt4845 = 3014821 * i;
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(-1450879763);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(-937097949);
-		}
-	}
-
-	public void method6846() {
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.method3859(-1297315269);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3859(1620437552);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3859(-280207255);
-		}
-	}
-
 	public void method6847(boolean bool, byte i) {
 		if (bool != ((NPCIndexLoader) this).aBool4838) {
 			((NPCIndexLoader) this).aBool4838 = bool;
 			method6836((byte) -17);
-		}
-	}
-
-	public void method6848(boolean bool) {
-		if (bool != ((NPCIndexLoader) this).aBool4838) {
-			((NPCIndexLoader) this).aBool4838 = bool;
-			method6836((byte) -56);
-		}
-	}
-
-	public void method6849(boolean bool) {
-		if (bool != ((NPCIndexLoader) this).aBool4838) {
-			((NPCIndexLoader) this).aBool4838 = bool;
-			method6836((byte) -106);
-		}
-	}
-
-	public void method6850() {
-		synchronized (((NPCIndexLoader) this).aClass229_4841) {
-			((NPCIndexLoader) this).aClass229_4841.method3863(1423816465);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4836) {
-			((NPCIndexLoader) this).aClass229_4836.method3863(1498972850);
-		}
-		synchronized (((NPCIndexLoader) this).aClass229_4843) {
-			((NPCIndexLoader) this).aClass229_4843.method3863(2100259311);
 		}
 	}
 

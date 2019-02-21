@@ -50,7 +50,7 @@ public class Defaults7Loader {
 	}
 
 	public Defaults7Loader(Index class317) {
-		byte[] is = class317.getFile((-1719912253 * DefaultsFile.FILE_7.anInt6966), -1307124908);
+		byte[] is = class317.getFile((-1719912253 * DefaultsFile.FILE_7.fileId));
 		method8746(new RsByteBuffer(is), -525270939);
 	}
 
@@ -238,7 +238,7 @@ public class Defaults7Loader {
 		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
 		if (i_12_ == -1)
 			throw new RuntimeException();
-		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_12_, (byte) 8);
+		EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(i_12_, (byte) 8);
 		if ('s' != class431.aChar5140)
 			throw new RuntimeException();
 		int[] is = class431.method7251(string, 1883860951);

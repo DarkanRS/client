@@ -11,11 +11,11 @@ public class DefaultsFile {
 	static DefaultsFile FILE_6;
 	static DefaultsFile FILE_7;
 	static DefaultsFile FILE_8;
-	public int anInt6966;
+	public int fileId;
 	static Class194 aClass194_6967;
 
 	DefaultsFile(int i) {
-		anInt6966 = i * -1916651541;
+		fileId = i * -1916651541;
 	}
 
 	static {

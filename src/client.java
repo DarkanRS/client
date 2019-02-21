@@ -870,15 +870,15 @@ public final class client extends Engine {
 				}
 				if (1 == 2137302489 * anInt7201) {
 					Class47_Sub1.aClass202_9142 = Class38.method852(Class282_Sub20_Sub10.aSocket9802, 125000, 165252847);
-					int i_37_ = 13 + aString7164.length();
-					RsByteBuffer class282_sub35 = new RsByteBuffer(i_37_ + 4);
-					class282_sub35.writeByte(1627920319 * (OutgoingLoginPacket.INIT_JS5REMOTE_CONNECTION.id));
-					class282_sub35.writeByte(i_37_);
-					class282_sub35.writeInt(Loader.clientRevision);
-					class282_sub35.writeInt(727);
-					class282_sub35.writeInt(1);
-					class282_sub35.writeString(aString7164);
-					Class47_Sub1.aClass202_9142.method3311((class282_sub35.buffer), 0, i_37_ + 2, -2102703988);
+					int length = 13 + aString7164.length();
+					RsByteBuffer buffer = new RsByteBuffer(length + 4);
+					buffer.writeByte(1627920319 * (OutgoingLoginPacket.INIT_JS5REMOTE_CONNECTION.id));
+					buffer.writeByte(length);
+					buffer.writeInt(Loader.CLIENT_BUILD);
+					buffer.writeInt(Loader.MAJOR_BUILD);
+					buffer.writeInt(Loader.SUB_BUILD);
+					buffer.writeString(aString7164);
+					Class47_Sub1.aClass202_9142.method3311((buffer.buffer), 0, length + 2, -2102703988);
 					anInt7201 += 2033814121;
 					JS5CacheFile.aLong2577 = (Class169.method2869(1650526502) * -453947708628580327L);
 				}
@@ -887,7 +887,7 @@ public final class client extends Engine {
 						byte[] is = new byte[1];
 						int i_38_ = Class47_Sub1.aClass202_9142.method3327(is, 0, 1, -1159358495);
 						if (is[0] == 25) {
-							Loader.handleNewJarDownload();
+							//Loader.handleNewJarDownload();
 							return;
 						}
 						if (is[0] != 0) {

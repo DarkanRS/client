@@ -49,7 +49,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16157(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) -44))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -44))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {
@@ -554,7 +554,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16165(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) -122))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -122))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {
@@ -576,7 +576,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16166(NPCDefinitions class409, int i) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) -83))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -83))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {
@@ -633,7 +633,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16167(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) -112))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -112))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {
@@ -782,7 +782,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16176(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) -85))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -85))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {
@@ -794,7 +794,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16177(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) -69))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -69))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {
@@ -806,7 +806,7 @@ public class NPC extends Animable {
 	}
 
 	public void method16178(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && Class444.method7426(anInt10314 * -1691508299, (byte) 38))
+		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) 38))
 			Class316.method5594(-559600711);
 		aClass409_10580 = class409;
 		if (aClass409_10580 != null) {

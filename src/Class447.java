@@ -19,7 +19,7 @@ public class Class447 {
 		}
 		if (class449 != null)
 			return class449;
-		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.id) * -71319279), i, -1401240120);
+		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.id) * -71319279), i);
 		class449 = new Class449();
 		if (null != is)
 			class449.method7487(new RsByteBuffer(is), -267873948);
@@ -90,7 +90,7 @@ public class Class447 {
 		}
 		if (class449 != null)
 			return class449;
-		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.id) * -71319279), i, -1764756902);
+		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.id) * -71319279), i);
 		class449 = new Class449();
 		if (null != is)
 			class449.method7487(new RsByteBuffer(is), -267873948);

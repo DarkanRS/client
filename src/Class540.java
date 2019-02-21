@@ -61,7 +61,7 @@ public class Class540 {
 			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) i_196_));
 			NPC class521_sub1_sub1_sub2_sub2 = (NPC) class282_sub47.anObject8068;
 			if (class521_sub1_sub1_sub2_sub2.anInt10353 * 2123576997 != -609621829 * client.anInt7332) {
-				if (Class20.aBool161 && Class444.method7426(i_196_, (byte) -86))
+				if (Class20.aBool161 && EnumIndexLoader.method7426(i_196_, (byte) -86))
 					Class316.method5594(-559600711);
 				if (class521_sub1_sub1_sub2_sub2.aClass409_10580.method6886(-1089073917))
 					Class169.method2876(class521_sub1_sub1_sub2_sub2, 1280406765);

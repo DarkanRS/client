@@ -1,7 +1,4 @@
-import java.awt.image.BufferedImage;
-import java.io.File;
 
-import javax.imageio.ImageIO;
 
 /* Class425 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
@@ -854,7 +851,6 @@ public class ItemDefinitions implements Interface46 {
 	static final void method7140(Animable class521_sub1_sub1_sub2, Animable class521_sub1_sub1_sub2_243_, int i, int i_244_, int i_245_, int i_246_, int i_247_, int i_248_, int i_249_, byte i_250_) {
 		int i_251_ = class521_sub1_sub1_sub2_243_.method15899(-525246876);
 		if (-1 != i_251_) {
-			Object object = null;
 			NativeSprite class160 = (NativeSprite) client.aClass229_7204.get((long) i_251_);
 			if (class160 == null) {
 				Class91[] class91s = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_251_, 0);

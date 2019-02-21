@@ -101,7 +101,7 @@ public class Class163 {
 	}
 
 	public static FontMetrics method2845(Index class317, int i, byte i_12_) {
-		byte[] is = class317.getFile(i, -48187812);
+		byte[] is = class317.getFile(i);
 		if (is == null)
 			return null;
 		return new FontMetrics(is);

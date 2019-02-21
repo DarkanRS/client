@@ -7,12 +7,6 @@ public class Class394 {
 	public int anInt4785;
 	SoftCache aClass229_4786 = new SoftCache(64);
 
-	public void method6752(int i) {
-		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3858(i, (byte) 109);
-		}
-	}
-
 	public Class405 method6753(int i, int i_0_) {
 		Class405 class405;
 		synchronized (((Class394) this).aClass229_4786) {
@@ -22,7 +16,7 @@ public class Class394 {
 			return class405;
 		byte[] is;
 		synchronized (((Class394) this).aClass317_4784) {
-			is = (((Class394) this).aClass317_4784.getFile(-71319279 * SharedConfigsType.aClass120_1510.id, i, -1270537898));
+			is = (((Class394) this).aClass317_4784.getFile(-71319279 * SharedConfigsType.aClass120_1510.id, i));
 		}
 		class405 = new Class405();
 		if (null != is)
@@ -57,36 +51,6 @@ public class Class394 {
 			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.id, -774524494)) * -476997773;
 		else
 			anInt4785 = 0;
-	}
-
-	public void method6757() {
-		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3859(-2033684084);
-		}
-	}
-
-	public void method6758(int i) {
-		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3858(i, (byte) -62);
-		}
-	}
-
-	public void method6759() {
-		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3859(851512939);
-		}
-	}
-
-	public void method6760() {
-		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3863(1421982124);
-		}
-	}
-
-	public void method6761() {
-		synchronized (((Class394) this).aClass229_4786) {
-			((Class394) this).aClass229_4786.method3863(1116239355);
-		}
 	}
 
 	static final void method6762(CS2Executor class527, int i) {

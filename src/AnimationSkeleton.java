@@ -36,7 +36,7 @@ public class AnimationSkeleton extends CacheableNode {
 				int[] fileIds = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053, -751611807);
 				this.skeletonData = new byte[fileIds.length][];
 				for (int i = 0; i < fileIds.length; i++)
-					this.skeletonData[i] = ANIMATION_SKELETON_INDEX.getFile((this.animSkeletonId * 2091314053), fileIds[i], -1677831078);
+					this.skeletonData[i] = ANIMATION_SKELETON_INDEX.getFile((this.animSkeletonId * 2091314053), fileIds[i]);
 			}
 		}
 		boolean bool = true;
@@ -72,7 +72,7 @@ public class AnimationSkeleton extends CacheableNode {
 			}
 			if (skins == null) {
 				synchronized (ANIMATION_SKIN_INDEX) {
-					skins = new AnimationSkinNode(skinId, (ANIMATION_SKIN_INDEX.getFile(skinId, -601020019)));
+					skins = new AnimationSkinNode(skinId, ANIMATION_SKIN_INDEX.getFile(skinId));
 				}
 				skinList.insertBack(skins);
 			}

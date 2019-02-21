@@ -26,65 +26,9 @@ public class Class233 {
 		}
 	}
 
-	public void method3925(int i) {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3858(i, (byte) 35);
-		}
-	}
-
 	public void method3926(byte i) {
 		synchronized (((Class233) this).aClass229_2881) {
 			((Class233) this).aClass229_2881.method3863(733385638);
-		}
-	}
-
-	public Class537 method3927(int i) {
-		Class537 class537;
-		synchronized (((Class233) this).aClass229_2881) {
-			class537 = ((Class537) ((Class233) this).aClass229_2881.get((long) i));
-		}
-		if (null != class537)
-			return class537;
-		byte[] is;
-		synchronized (((Class233) this).aClass317_2882) {
-			is = (((Class233) this).aClass317_2882.getFile(-71319279 * SharedConfigsType.aClass120_1464.id, i, -1218686172));
-		}
-		class537 = new Class537();
-		if (is != null)
-			class537.method11487(new RsByteBuffer(is), (byte) -121);
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.put(class537, (long) i);
-		}
-		return class537;
-	}
-
-	public void method3928() {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3859(-1510529878);
-		}
-	}
-
-	public void method3929() {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3859(1996614438);
-		}
-	}
-
-	public void method3930() {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3859(633838114);
-		}
-	}
-
-	public void method3931(int i) {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3858(i, (byte) 79);
-		}
-	}
-
-	public void method3932(int i) {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3858(i, (byte) 86);
 		}
 	}
 
@@ -97,7 +41,7 @@ public class Class233 {
 			return class537;
 		byte[] is;
 		synchronized (((Class233) this).aClass317_2882) {
-			is = (((Class233) this).aClass317_2882.getFile(-71319279 * SharedConfigsType.aClass120_1464.id, i, -1461146634));
+			is = (((Class233) this).aClass317_2882.getFile(-71319279 * SharedConfigsType.aClass120_1464.id, i));
 		}
 		class537 = new Class537();
 		if (is != null)
@@ -106,18 +50,6 @@ public class Class233 {
 			((Class233) this).aClass229_2881.put(class537, (long) i);
 		}
 		return class537;
-	}
-
-	public void method3934() {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3863(1790886237);
-		}
-	}
-
-	public void method3935() {
-		synchronized (((Class233) this).aClass229_2881) {
-			((Class233) this).aClass229_2881.method3863(720034853);
-		}
 	}
 
 	public static void method3936(int[][] is, int i) {

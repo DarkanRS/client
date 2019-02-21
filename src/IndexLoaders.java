@@ -60,7 +60,7 @@ public class IndexLoaders {
 	public static Class210 HITSPLAT_INDEX_LOADER;
 	public static UnderlayIndexLoader UNDERLAY_INDEX_LOADER;
 	public static Class536 aClass536_1535;
-	public static Class444 aClass444_5570;
+	public static EnumIndexLoader ENUM_LOADER;
 	public static InventoriesIndexLoader INVENTORY_INDEX_LOADER;
 	public static Class436 aClass436_7683;
 	public static ObjectIndexLoader OBJECT_INDEX_LOADER;
@@ -210,7 +210,7 @@ public class IndexLoaders {
 			Class487.aClass378_5752 = new Class378(SPRITES_INDEX, FONT_METRICS_INDEX, Class52_Sub3.method14522(-388253830));
 		}
 		if (LoadingStage.aClass387_4717 == LOADING_STAGE) {
-			byte[] is = DEFAULTS_INDEX.getFile(((DefaultsFile.FILE_4.anInt6966) * -1719912253), -176752755);
+			byte[] is = DEFAULTS_INDEX.getFile(((DefaultsFile.FILE_4.fileId) * -1719912253));
 			if (is == null) {
 				return 0;
 			}
@@ -227,7 +227,7 @@ public class IndexLoaders {
 			if (i_14_ < 100) {
 				return i_14_;
 			}
-			Class358.method6235((DEFAULTS_INDEX.getFile((-1719912253 * DefaultsFile.FILE_1.anInt6966), -1241129078)), (byte) -81);
+			Class358.method6235((DEFAULTS_INDEX.getFile(-1719912253 * DefaultsFile.FILE_1.fileId)), (byte) -81);
 			Class58.aClass529_527 = new Class529(DEFAULTS_INDEX);
 			AbstractQueue_Sub1.SKIN_COLORS = Class58.aClass529_527.aShortArrayArray7039;
 			Class366.SKIN_COLORS = Class58.aClass529_527.aShortArrayArrayArray7040;
@@ -247,7 +247,7 @@ public class IndexLoaders {
 			ITEM_DEFAULTS = new ItemDefaultsLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			RENDER_ANIMS = new RenderAnimIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, LinkedNodeList.DEFAULTS_LOADER_6);
 			aClass438_7932 = new Class438(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);
-			aClass444_5570 = new Class444(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
+			ENUM_LOADER = new EnumIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, ENUM_INDEX);
 			aClass536_1535 = new Class536(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			UNDERLAY_INDEX_LOADER = new UnderlayIndexLoader(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX);
 			HITSPLAT_INDEX_LOADER = new Class210(client.CURRENT_GAME, Class223.CURRENT_LANGUAGE, CONFIG_INDEX, SPRITES_INDEX);

@@ -39,7 +39,7 @@ public class Class400 {
 	}
 
 	public Class393 method6785(int i, int i_5_) {
-		byte[] is = ((Class400) this).aClass317_4817.getFile(i, 0, -1978812291);
+		byte[] is = ((Class400) this).aClass317_4817.getFile(i, 0);
 		Class393 class393 = new Class393();
 		class393.method6743(new RsByteBuffer(is), -1754311806);
 		return class393;
@@ -123,7 +123,7 @@ public class Class400 {
 
 	public Class400(Game class486, Language class495, Index class317) {
 		((Class400) this).aClass317_4817 = class317;
-		RsByteBuffer class282_sub35 = new RsByteBuffer(((Class400) this).aClass317_4817.getFile(0, 0, -1323254674));
+		RsByteBuffer class282_sub35 = new RsByteBuffer(((Class400) this).aClass317_4817.getFile(0, 0));
 		int i = ((class282_sub35.buffer == null || class282_sub35.buffer.length < 1) ? -1 : class282_sub35.readUnsignedByte());
 		if (i < 4) {
 			((Class400) this).aClass402Array4818 = new Class402[0];

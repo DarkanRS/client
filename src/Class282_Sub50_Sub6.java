@@ -173,7 +173,7 @@ public class Class282_Sub50_Sub6 extends CacheableNode {
 	}
 
 	static Class282_Sub50_Sub6 method14787(Index class317, int i, int i_19_) {
-		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_19_, -1290013407));
+		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_19_));
 		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_19_, class282_sub35.readString(), class282_sub35.readString(), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_20_ = class282_sub35.readUnsignedByte();
 		for (int i_21_ = 0; i_21_ < i_20_; i_21_++)

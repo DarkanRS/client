@@ -103,7 +103,7 @@ public abstract class Class152 {
 			if (IndexLoaders.USING_JAGEX_IMAGE_FORMAT)
 				class160 = Renderers.SOFTWARE_RENDERER.method8444(Class91.method1515(class317, i), true);
 			else
-				class160 = (Class103_Sub1.method14490(class317.getFile(i, -1112597366), (byte) -40));
+				class160 = (Class103_Sub1.method14490(class317.getFile(i), (byte) -40));
 			Class299.aClass229_3545.put(class160, (long) i);
 		}
 		return class160;

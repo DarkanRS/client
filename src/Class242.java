@@ -30,7 +30,7 @@ public class Class242 {
 			for (int i = 0; i < 526499893 * ((Class242) this).anInt2978; i++) {
 				byte[] is;
 				synchronized (((Class242) this).aClass317_2979) {
-					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.id, i, -1290272928));
+					is = (((Class242) this).aClass317_2979.getFile(-71319279 * SharedConfigsType.aClass120_1498.id, i));
 				}
 				QuestDefinitions class240 = new QuestDefinitions();
 				if (null != is)

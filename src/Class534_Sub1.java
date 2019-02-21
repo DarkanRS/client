@@ -150,7 +150,7 @@ public class Class534_Sub1 extends Class534 {
 				if (class409 != null)
 					is = class409.anIntArray4915;
 			}
-		} else if (Class431.method7252(-1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587), (byte) 0)) {
+		} else if (EnumDefinitions.method7252(-1441507225 * (((Class282_Sub50_Sub7) class282_sub50_sub7).anInt9587), (byte) 0)) {
 			ObjectDefinitions class478 = (IndexLoaders.MAP_REGION_DECODER.method4436(-1943524543).getObjectDefinitions((int) ((((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9584) * -5876141066140255231L >>> 32 & 0x7fffffffL), 65280));
 			if (class478.anIntArray5650 != null)
 				class478 = class478.method8013(Class158_Sub1.aClass3_8507, (byte) 45);

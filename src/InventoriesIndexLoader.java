@@ -21,7 +21,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 			return def;
 		byte[] is;
 		synchronized (((InventoriesIndexLoader) this).configIndex) {
-			is = (((InventoriesIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.INVENTORIES.id, i, -1196710306));
+			is = (((InventoriesIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.INVENTORIES.id, i));
 		}
 		def = new InventoryDef();
 		if (null != is)

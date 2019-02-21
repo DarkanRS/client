@@ -197,7 +197,7 @@ public class Class529 {
 		anInt7043 = -778366891;
 		anInt7045 = 955205249;
 		anInt7046 = -1663314619;
-		byte[] is = class317.getFile((DefaultsFile.FILE_3.anInt6966 * -1719912253), -1790761104);
+		byte[] is = class317.getFile((DefaultsFile.FILE_3.fileId * -1719912253));
 		method11335(new RsByteBuffer(is), (byte) 63);
 	}
 

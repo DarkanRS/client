@@ -25,7 +25,7 @@ public class Class377 implements IndexLoader {
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i, -1881668825);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i);
 		}
 		class372 = new Class372();
 		if (is != null)
@@ -45,7 +45,7 @@ public class Class377 implements IndexLoader {
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i, -1550617517);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i);
 		}
 		class372 = new Class372();
 		if (is != null)
@@ -83,7 +83,7 @@ public class Class377 implements IndexLoader {
 			return class372;
 		byte[] is;
 		synchronized (((Class377) this).aClass317_4518) {
-			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i, -1766902086);
+			is = ((Class377) this).aClass317_4518.getFile(((SharedConfigsType.aClass120_1487.id) * -71319279), i);
 		}
 		class372 = new Class372();
 		if (is != null)

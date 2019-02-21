@@ -35,7 +35,7 @@ public class Class279 {
 		class527.intStackPtr -= 283782002;
 		int i_0_ = (class527.intStack[1942118537 * class527.intStackPtr]);
 		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_0_, (byte) 8);
+		EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(i_0_, (byte) 8);
 		if ('s' == class431.aChar5140) {
 			/* empty */
 		}

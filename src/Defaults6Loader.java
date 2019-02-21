@@ -43,7 +43,7 @@ public class Defaults6Loader {
 	}
 
 	public Defaults6Loader(Index class317) {
-		byte[] is = class317.getFile((-1719912253 * DefaultsFile.FILE_6.anInt6966), -345118787);
+		byte[] is = class317.getFile((-1719912253 * DefaultsFile.FILE_6.fileId));
 		method11245(new RsByteBuffer(is), -672057910);
 		if (equipmentSlots == null)
 			throw new RuntimeException("");

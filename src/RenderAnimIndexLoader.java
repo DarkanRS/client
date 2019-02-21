@@ -23,7 +23,7 @@ public class RenderAnimIndexLoader {
 			return class227;
 		byte[] is;
 		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
-			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i, -1690915964);
+			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
 		}
 		class227 = new RenderAnimDefs();
 		((RenderAnimDefs) class227).aClass211_2788 = this;
@@ -62,7 +62,7 @@ public class RenderAnimIndexLoader {
 			return class227;
 		byte[] is;
 		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
-			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i, -2114490634);
+			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
 		}
 		class227 = new RenderAnimDefs();
 		((RenderAnimDefs) class227).aClass211_2788 = this;
@@ -83,7 +83,7 @@ public class RenderAnimIndexLoader {
 			return class227;
 		byte[] is;
 		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
-			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i, -2082817514);
+			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
 		}
 		class227 = new RenderAnimDefs();
 		((RenderAnimDefs) class227).aClass211_2788 = this;

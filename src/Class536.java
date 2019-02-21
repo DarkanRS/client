@@ -8,29 +8,6 @@ public class Class536 {
 	public int anInt7094;
 	Index aClass317_7095;
 
-	public OverlayDef method11474(int i) {
-		OverlayDef class531;
-		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
-		}
-		if (class531 != null)
-			return class531;
-		byte[] is;
-		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1972523322));
-		}
-		class531 = new OverlayDef();
-		((OverlayDef) class531).aClass536_7062 = this;
-		((OverlayDef) class531).anInt7053 = -609380743 * i;
-		if (null != is)
-			class531.method11357(new RsByteBuffer(is), -279483513);
-		class531.method11356((byte) -125);
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.put(class531, (long) i);
-		}
-		return class531;
-	}
-
 	public OverlayDef method11475(int i, byte i_0_) {
 		OverlayDef class531;
 		synchronized (((Class536) this).aClass229_7092) {
@@ -40,7 +17,7 @@ public class Class536 {
 			return class531;
 		byte[] is;
 		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1901150108));
+			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i));
 		}
 		class531 = new OverlayDef();
 		((OverlayDef) class531).aClass536_7062 = this;
@@ -69,82 +46,6 @@ public class Class536 {
 	public void method11478(int i) {
 		synchronized (((Class536) this).aClass229_7092) {
 			((Class536) this).aClass229_7092.method3863(1398711796);
-		}
-	}
-
-	public OverlayDef method11479(int i) {
-		OverlayDef class531;
-		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
-		}
-		if (class531 != null)
-			return class531;
-		byte[] is;
-		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1679639365));
-		}
-		class531 = new OverlayDef();
-		((OverlayDef) class531).aClass536_7062 = this;
-		((OverlayDef) class531).anInt7053 = -609380743 * i;
-		if (null != is)
-			class531.method11357(new RsByteBuffer(is), 1704529585);
-		class531.method11356((byte) -52);
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.put(class531, (long) i);
-		}
-		return class531;
-	}
-
-	public void method11480() {
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.method3859(-2069097146);
-		}
-	}
-
-	public OverlayDef method11481(int i) {
-		OverlayDef class531;
-		synchronized (((Class536) this).aClass229_7092) {
-			class531 = ((OverlayDef) ((Class536) this).aClass229_7092.get((long) i));
-		}
-		if (class531 != null)
-			return class531;
-		byte[] is;
-		synchronized (((Class536) this).aClass317_7095) {
-			is = (((Class536) this).aClass317_7095.getFile(-71319279 * SharedConfigsType.FLO2.id, i, -1865732659));
-		}
-		class531 = new OverlayDef();
-		((OverlayDef) class531).aClass536_7062 = this;
-		((OverlayDef) class531).anInt7053 = -609380743 * i;
-		if (null != is)
-			class531.method11357(new RsByteBuffer(is), -541895478);
-		class531.method11356((byte) -88);
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.put(class531, (long) i);
-		}
-		return class531;
-	}
-
-	public void method11482() {
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.method3863(951955760);
-		}
-	}
-
-	public void method11483() {
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.method3859(205402084);
-		}
-	}
-
-	public void method11484(int i) {
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.method3858(i, (byte) -1);
-		}
-	}
-
-	public void method11485(int i) {
-		synchronized (((Class536) this).aClass229_7092) {
-			((Class536) this).aClass229_7092.method3858(i, (byte) 8);
 		}
 	}
 

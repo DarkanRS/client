@@ -507,7 +507,7 @@ public class MapRegion {
 			if (bool) {
 				client.anInt7210 = (client.aClass465_7208.method7748((short) 292) * -1228117803);
 				int i_114_ = 0;
-				Iterator iterator = client.aClass465_7208.iterator();
+				Iterator<?> iterator = client.aClass465_7208.iterator();
 				while (iterator.hasNext()) {
 					Class282_Sub47 class282_sub47 = (Class282_Sub47) iterator.next();
 					client.aClass282_Sub47Array7209[i_114_++] = class282_sub47;
@@ -628,31 +628,31 @@ public class MapRegion {
 		this.missingMapCount = 0;
 		for (int i_124_ = 0; i_124_ < this.mapDataBuffer.length; i_124_++) {
 			if (-1 != this.mapDataArchiveIds[i_124_] && null == this.mapDataBuffer[i_124_]) {
-				this.mapDataBuffer[i_124_] = IndexLoaders.MAP_INDEX.getFile((this.mapDataArchiveIds[i_124_]), 0, -1737111035);
+				this.mapDataBuffer[i_124_] = IndexLoaders.MAP_INDEX.getFile((this.mapDataArchiveIds[i_124_]), 0);
 				if (null == this.mapDataBuffer[i_124_]) {
 					this.missingMapCount += -1145558933;
 				}
 			}
 			if (-1 != this.landscapeDataArchiveIds[i_124_] && null == this.landscapeDataBuffer[i_124_]) {
-				this.landscapeDataBuffer[i_124_] = (IndexLoaders.MAP_INDEX.getFile(this.landscapeDataArchiveIds[i_124_], 0, this.xteas[i_124_], -1821547334));
+				this.landscapeDataBuffer[i_124_] = (IndexLoaders.MAP_INDEX.getFile(this.landscapeDataArchiveIds[i_124_], 0, this.xteas[i_124_]));
 				if (null == this.landscapeDataBuffer[i_124_]) {
 					this.missingMapCount += -1145558933;
 				}
 			}
 			if (this.mapDataUnderlayArchiveIds[i_124_] != -1 && this.mapDataUnderlayBuffer[i_124_] == null) {
-				this.mapDataUnderlayBuffer[i_124_] = IndexLoaders.MAP_INDEX.getFile((this.mapDataUnderlayArchiveIds[i_124_]), 0, -1629073645);
+				this.mapDataUnderlayBuffer[i_124_] = IndexLoaders.MAP_INDEX.getFile((this.mapDataUnderlayArchiveIds[i_124_]), 0);
 				if (null == this.mapDataUnderlayBuffer[i_124_]) {
 					this.missingMapCount += -1145558933;
 				}
 			}
 			if (-1 != this.landscapeDataUnderlayArchiveIds[i_124_] && this.landscapeDataUnderlayBuffer[i_124_] == null) {
-				this.landscapeDataUnderlayBuffer[i_124_] = IndexLoaders.MAP_INDEX.getFile((this.landscapeDataUnderlayArchiveIds[i_124_]), 0, -1660643984);
+				this.landscapeDataUnderlayBuffer[i_124_] = IndexLoaders.MAP_INDEX.getFile((this.landscapeDataUnderlayArchiveIds[i_124_]), 0);
 				if (null == this.landscapeDataUnderlayBuffer[i_124_]) {
 					this.missingMapCount += -1145558933;
 				}
 			}
 			if (this.npcSpawnArchiveIds != null && this.npcSpawnBuffer[i_124_] == null && -1 != this.npcSpawnArchiveIds[i_124_]) {
-				this.npcSpawnBuffer[i_124_] = (IndexLoaders.MAP_INDEX.getFile(this.npcSpawnArchiveIds[i_124_], 0, this.xteas[i_124_], -1355054839));
+				this.npcSpawnBuffer[i_124_] = (IndexLoaders.MAP_INDEX.getFile(this.npcSpawnArchiveIds[i_124_], 0, this.xteas[i_124_]));
 				if (this.npcSpawnBuffer[i_124_] == null) {
 					this.missingMapCount += -1145558933;
 				}

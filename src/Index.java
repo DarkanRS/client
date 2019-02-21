@@ -52,8 +52,8 @@ public final class Index {
 		this.aClass327_3690.method5805(i, 1941193995);
 	}
 
-	public byte[] getFile(int i, int i_9_, int i_10_) {
-		return getFile(i, i_9_, null, -1098430914);
+	public byte[] getFile(int archiveId, int fileId) {
+		return getFile(archiveId, fileId, null);
 	}
 
 	public boolean validFile(String string, int i) {
@@ -116,15 +116,15 @@ public final class Index {
 		return i_19_;
 	}
 
-	public synchronized byte[] getFile(int i, int i_20_) {
+	public synchronized byte[] getFile(int fileId) {
 		if (!referenceTableLoaded((byte) 1))
 			return null;
 		if (((ReferenceTable) this.referencetable).fileLengths.length == 1)
-			return getFile(0, i, -1610063782);
-		if (!fileExists(i, 16711680))
+			return getFile(0, fileId);
+		if (!fileExists(fileId, 16711680))
 			return null;
-		if (1 == ((ReferenceTable) this.referencetable).fileLengths[i])
-			return getFile(i, 0, -2077891857);
+		if (1 == ((ReferenceTable) this.referencetable).fileLengths[fileId])
+			return getFile(fileId, 0);
 		throw new RuntimeException();
 	}
 
@@ -191,7 +191,7 @@ public final class Index {
 		if (!fileExists(i_33_, 16711680))
 			return null;
 		int i_34_ = (((ReferenceTable) this.referencetable).namedFiles[i_33_].method865(GraphicalRenderer.method8696(string_32_, -1819598468), -1926581994));
-		return getFile(i_33_, i_34_, -1552378572);
+		return getFile(i_33_, i_34_);
 	}
 
 	boolean method5627(String string, String string_35_, byte i) {
@@ -394,33 +394,33 @@ public final class Index {
 		return true;
 	}
 
-	public synchronized byte[] getFile(int i, int i_84_, int[] xteas, int i_85_) {
-		if (!fileExists(i, i_84_, -1834383347))
+	public synchronized byte[] getFile(int archiveId, int fileId, int[] xteas) {
+		if (!fileExists(archiveId, fileId, -1834383347))
 			return null;
 		byte[] is_86_ = null;
-		if (this.files[i] == null || null == this.files[i][i_84_]) {
-			boolean bool = method5638(i, i_84_, xteas, 2068142986);
+		if (this.files[archiveId] == null || null == this.files[archiveId][fileId]) {
+			boolean bool = method5638(archiveId, fileId, xteas, 2068142986);
 			if (!bool) {
-				method5605(i, (byte) 0);
-				bool = method5638(i, i_84_, xteas, 382040238);
+				method5605(archiveId, (byte) 0);
+				bool = method5638(archiveId, fileId, xteas, 382040238);
 				if (!bool)
 					return null;
 			}
 		}
-		if (null == this.files[i])
+		if (null == this.files[archiveId])
 			throw new RuntimeException("");
-		if (null != this.files[i][i_84_]) {
-			is_86_ = Class346.method6154((this.files[i][i_84_]), false, (byte) 1);
+		if (null != this.files[archiveId][fileId]) {
+			is_86_ = Class346.method6154((this.files[archiveId][fileId]), false, (byte) 1);
 			if (is_86_ == null)
 				throw new RuntimeException("");
 		}
 		if (is_86_ != null) {
 			if (1 == this.anInt3683 * 1067739717) {
-				this.files[i][i_84_] = null;
-				if (1 == (((ReferenceTable) this.referencetable).fileLengths[i]))
-					this.files[i] = null;
+				this.files[archiveId][fileId] = null;
+				if (1 == (((ReferenceTable) this.referencetable).fileLengths[archiveId]))
+					this.files[archiveId] = null;
 			} else if (this.anInt3683 * 1067739717 == 2)
-				this.files[i] = null;
+				this.files[archiveId] = null;
 		}
 		return is_86_;
 	}

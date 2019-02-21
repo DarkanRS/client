@@ -152,7 +152,7 @@ public class Class345 {
 		if (class345 != null) {
 			return class345;
 		}
-		byte[] is = aClass317_4021.getFile(1, i, -1783914740);
+		byte[] is = aClass317_4021.getFile(1, i);
 		class345 = new Class345();
 		class345.anInt4032 = i * -113116309;
 		if (is != null) {

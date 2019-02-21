@@ -61,7 +61,7 @@ public class WorldMapIndexLoader {
 			return class220;
 		byte[] is;
 		synchronized (((WorldMapIndexLoader) this).aClass317_2705) {
-			is = ((WorldMapIndexLoader) this).aClass317_2705.getFile(((SharedConfigsType.WORLD_MAP_DEFS.id) * -71319279), i, -1668017415);
+			is = ((WorldMapIndexLoader) this).aClass317_2705.getFile(((SharedConfigsType.WORLD_MAP_DEFS.id) * -71319279), i);
 		}
 		class220 = new WorldMapAreaDefs();
 		class220.anInt2753 = 443844459 * i;
@@ -84,7 +84,7 @@ public class WorldMapIndexLoader {
 			return class220;
 		byte[] is;
 		synchronized (((WorldMapIndexLoader) this).aClass317_2705) {
-			is = ((WorldMapIndexLoader) this).aClass317_2705.getFile(((SharedConfigsType.WORLD_MAP_DEFS.id) * -71319279), i, -1362506596);
+			is = ((WorldMapIndexLoader) this).aClass317_2705.getFile(((SharedConfigsType.WORLD_MAP_DEFS.id) * -71319279), i);
 		}
 		class220 = new WorldMapAreaDefs();
 		class220.anInt2753 = 443844459 * i;

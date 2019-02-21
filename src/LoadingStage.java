@@ -276,7 +276,7 @@ public class LoadingStage {
 			Class86.anInt831 = i * 1539001787;
 		}
 		if (Class282_Sub42.aClass85_8039 == Class85.aClass85_815) {
-			byte[] is = IndexLoaders.CUTSCENE_INDEX.getFile(i, -130725112);
+			byte[] is = IndexLoaders.CUTSCENE_INDEX.getFile(i);
 			if (null == is)
 				return false;
 			RsByteBuffer class282_sub35 = new RsByteBuffer(is);

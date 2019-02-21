@@ -237,7 +237,7 @@ public abstract class Class52 implements Interface2 {
 	}
 
 	static Class282_Sub50_Sub6 method1087(Index class317, int i, int i_34_, int i_35_) {
-		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_34_, -1701555254));
+		RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, i_34_));
 		Class282_Sub50_Sub6 class282_sub50_sub6 = new Class282_Sub50_Sub6(i_34_, class282_sub35.readString(), class282_sub35.readString(), class282_sub35.readInt(), class282_sub35.readInt(), (class282_sub35.readUnsignedByte() == 1), class282_sub35.readUnsignedByte(), class282_sub35.readUnsignedByte());
 		int i_36_ = class282_sub35.readUnsignedByte();
 		for (int i_37_ = 0; i_37_ < i_36_; i_37_++)

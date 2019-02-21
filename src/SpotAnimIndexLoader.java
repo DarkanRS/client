@@ -30,7 +30,7 @@ public class SpotAnimIndexLoader {
 			return class525;
 		byte[] is;
 		synchronized (((SpotAnimIndexLoader) this).aClass317_5888) {
-			is = (((SpotAnimIndexLoader) this).aClass317_5888.getFile(SharedConfigsType.SPOT_ANIMS.containerId(spotAnimId), SharedConfigsType.SPOT_ANIMS.fileId(spotAnimId), -2016707377));
+			is = (((SpotAnimIndexLoader) this).aClass317_5888.getFile(SharedConfigsType.SPOT_ANIMS.containerId(spotAnimId), SharedConfigsType.SPOT_ANIMS.fileId(spotAnimId)));
 		}
 		class525 = new SpotAnimDefinitions();
 		((SpotAnimDefinitions) class525).aClass515_6973 = this;

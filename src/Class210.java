@@ -27,7 +27,7 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498386951));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i));
 		}
 		class228 = new HitsplatDefinitions();
 		((HitsplatDefinitions) class228).aClass210_2850 = this;
@@ -75,7 +75,7 @@ public class Class210 {
 			return class228;
 		byte[] is;
 		synchronized (((Class210) this).aClass317_2665) {
-			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i, -1498305941));
+			is = (((Class210) this).aClass317_2665.getFile(-71319279 * SharedConfigsType.aClass120_1509.id, i));
 		}
 		class228 = new HitsplatDefinitions();
 		((HitsplatDefinitions) class228).aClass210_2850 = this;

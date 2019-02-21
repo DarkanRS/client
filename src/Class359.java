@@ -32,7 +32,7 @@ public class Class359 {
 		int i_7_ = (class527.intStack[1942118537 * class527.intStackPtr + 4]);
 		if (i_5_ == -1)
 			throw new RuntimeException();
-		Class431 class431 = IndexLoaders.aClass444_5570.method7424(i_5_, (byte) 8);
+		EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(i_5_, (byte) 8);
 		if (i_4_ != class431.aChar5146)
 			throw new RuntimeException();
 		if (i_3_ != class431.aChar5140)

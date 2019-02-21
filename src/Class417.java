@@ -38,7 +38,7 @@ public class Class417 {
 		Class347 class347 = (Class347) Class347.aClass229_4052.get((long) i);
 		if (null != class347)
 			return class347;
-		byte[] is = Class347.aClass317_4053.getFile(0, i, -2049012023);
+		byte[] is = Class347.aClass317_4053.getFile(0, i);
 		class347 = new Class347();
 		if (null != is)
 			class347.method6163(new RsByteBuffer(is), i, (short) 257);

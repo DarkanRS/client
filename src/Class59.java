@@ -375,7 +375,7 @@ public class Class59 {
 		Class59 class59 = (Class59) aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
-		byte[] is = CoordGrid.aClass317_2710.getFile(0, i, -1194205238);
+		byte[] is = CoordGrid.aClass317_2710.getFile(0, i);
 		class59 = new Class59();
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -613926670);
@@ -634,7 +634,7 @@ public class Class59 {
 		Class59 class59 = (Class59) aClass229_533.get((long) i);
 		if (class59 != null)
 			return class59;
-		byte[] is = CoordGrid.aClass317_2710.getFile(0, i, -1943902052);
+		byte[] is = CoordGrid.aClass317_2710.getFile(0, i);
 		class59 = new Class59();
 		if (null != is)
 			class59.method1150(new RsByteBuffer(is), -1658973926);

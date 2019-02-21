@@ -25,7 +25,7 @@ public class Class31 implements IndexLoader {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i, -1429017309);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -70,7 +70,7 @@ public class Class31 implements IndexLoader {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i, -1720300705);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;
@@ -103,7 +103,7 @@ public class Class31 implements IndexLoader {
 			return class44;
 		byte[] is;
 		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i, -1398702478);
+			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i);
 		}
 		class44 = new Class44();
 		((Class44) class44).aClass31_429 = this;

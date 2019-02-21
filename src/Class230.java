@@ -4,15 +4,7 @@
 
 public class Class230 implements IndexLoader {
 	SoftCache aClass229_2856 = new SoftCache(64);
-	public static final int anInt2857 = 64;
 	Index aClass317_2858;
-
-	public void method3896(int i) {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3859(-1688169863);
-			((Class230) this).aClass229_2856 = new SoftCache(i);
-		}
-	}
 
 	public Class226 method3897(int i, byte i_0_) {
 		Class226 class226;
@@ -23,7 +15,7 @@ public class Class230 implements IndexLoader {
 			return class226;
 		byte[] is;
 		synchronized (((Class230) this).aClass317_2858) {
-			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i), SharedConfigsType.aClass120_1477.fileId(i), -1643082761));
+			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i), SharedConfigsType.aClass120_1477.fileId(i)));
 		}
 		class226 = new Class226();
 		if (null != is)
@@ -55,53 +47,9 @@ public class Class230 implements IndexLoader {
 		}
 	}
 
-	public void method3900() {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3863(1110189881);
-		}
-	}
-
-	public Class226 method3901(int i) {
-		Class226 class226;
-		synchronized (((Class230) this).aClass229_2856) {
-			class226 = ((Class226) ((Class230) this).aClass229_2856.get((long) i));
-		}
-		if (null != class226)
-			return class226;
-		byte[] is;
-		synchronized (((Class230) this).aClass317_2858) {
-			is = (((Class230) this).aClass317_2858.getFile(SharedConfigsType.aClass120_1477.containerId(i), SharedConfigsType.aClass120_1477.fileId(i), -1630119547));
-		}
-		class226 = new Class226();
-		if (null != is)
-			class226.method3795(new RsByteBuffer(is), 684621272);
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.put(class226, (long) i);
-		}
-		return class226;
-	}
-
-	public void method3902() {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3859(1593564954);
-		}
-	}
-
 	public void method3903(byte i) {
 		synchronized (((Class230) this).aClass229_2856) {
 			((Class230) this).aClass229_2856.method3859(891629452);
-		}
-	}
-
-	public void method3904(int i) {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3858(i, (byte) -40);
-		}
-	}
-
-	public void method3905() {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3863(2032200660);
 		}
 	}
 
@@ -109,18 +57,6 @@ public class Class230 implements IndexLoader {
 		synchronized (((Class230) this).aClass229_2856) {
 			((Class230) this).aClass229_2856.method3859(1117502683);
 			((Class230) this).aClass229_2856 = new SoftCache(i);
-		}
-	}
-
-	public void method3907() {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3863(1716771940);
-		}
-	}
-
-	public void method3908() {
-		synchronized (((Class230) this).aClass229_2856) {
-			((Class230) this).aClass229_2856.method3859(-944165676);
 		}
 	}
 

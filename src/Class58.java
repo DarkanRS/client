@@ -8,7 +8,7 @@ public class Class58 implements Interface19 {
 
 	public String method135(QuickChatDynamicValue class243, int[] is, long l) {
 		if (class243 == QuickChatDynamicValue.LISTDIALOG) {
-			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
+			EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, -64424168);
 		}
 		if (class243 == QuickChatDynamicValue.OBJDIALOG || class243 == QuickChatDynamicValue.OBJTRADEDIALOG) {
@@ -16,13 +16,13 @@ public class Class58 implements Interface19 {
 			return class425.aString5043;
 		}
 		if (class243 == QuickChatDynamicValue.ENUM_STRING || class243 == QuickChatDynamicValue.ENUM_STRING_CLAN || QuickChatDynamicValue.ENUM_STRING_STATBASE == class243)
-			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 2106456977);
+			return IndexLoaders.ENUM_LOADER.method7424(is[0], (byte) 8).method7226((int) l, 2106456977);
 		return null;
 	}
 
 	public String method136(QuickChatDynamicValue class243, int[] is, long l) {
 		if (class243 == QuickChatDynamicValue.LISTDIALOG) {
-			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
+			EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, -451172927);
 		}
 		if (class243 == QuickChatDynamicValue.OBJDIALOG || class243 == QuickChatDynamicValue.OBJTRADEDIALOG) {
@@ -30,13 +30,13 @@ public class Class58 implements Interface19 {
 			return class425.aString5043;
 		}
 		if (class243 == QuickChatDynamicValue.ENUM_STRING || class243 == QuickChatDynamicValue.ENUM_STRING_CLAN || QuickChatDynamicValue.ENUM_STRING_STATBASE == class243)
-			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 579863966);
+			return IndexLoaders.ENUM_LOADER.method7424(is[0], (byte) 8).method7226((int) l, 579863966);
 		return null;
 	}
 
 	public String method137(QuickChatDynamicValue class243, int[] is, long l) {
 		if (class243 == QuickChatDynamicValue.LISTDIALOG) {
-			Class431 class431 = IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8);
+			EnumDefinitions class431 = IndexLoaders.ENUM_LOADER.method7424(is[0], (byte) 8);
 			return class431.method7226((int) l, 1807301402);
 		}
 		if (class243 == QuickChatDynamicValue.OBJDIALOG || class243 == QuickChatDynamicValue.OBJTRADEDIALOG) {
@@ -44,7 +44,7 @@ public class Class58 implements Interface19 {
 			return class425.aString5043;
 		}
 		if (class243 == QuickChatDynamicValue.ENUM_STRING || class243 == QuickChatDynamicValue.ENUM_STRING_CLAN || QuickChatDynamicValue.ENUM_STRING_STATBASE == class243)
-			return IndexLoaders.aClass444_5570.method7424(is[0], (byte) 8).method7226((int) l, 870502499);
+			return IndexLoaders.ENUM_LOADER.method7424(is[0], (byte) 8).method7226((int) l, 870502499);
 		return null;
 	}
 

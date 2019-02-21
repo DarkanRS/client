@@ -335,7 +335,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 			if (((Class505_Sub2) this).anInt8824 == 0)
 				((Class505_Sub2) this).anIntArray8803 = Class540.anIntArray7136;
 			else
-				((Class505_Sub2) this).anIntArray8803 = Class444.anIntArray5379;
+				((Class505_Sub2) this).anIntArray8803 = EnumIndexLoader.anIntArray5379;
 			try {
 				Field field = sun.misc.Unsafe.class.getDeclaredField("theUnsafe");
 				field.setAccessible(true);
