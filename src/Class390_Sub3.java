@@ -37,7 +37,7 @@ public class Class390_Sub3 extends Class390 {
 	static final boolean aBool9358 = true;
 	static final boolean aBool9359 = false;
 
-	void method14615(int i, int i_0_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_1_, float[] fs_2_, float[] fs_3_, float[] fs_4_, int i_5_) {
+	void method14615(int i, int i_0_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_1_, float[] fs_2_, float[] fs_3_, float[] fs_4_, int i_5_) {
 		Class177 class177 = ((Class390_Sub3) this).aClass177ArrayArray9336[i][i_0_];
 		if (class177 != null) {
 			if ((((Class177) class177).aByte2210 & 0x2) == 0) {
@@ -92,10 +92,10 @@ public class Class390_Sub3 extends Class390 {
 					f_16_ = (((Class390_Sub3) this).aFloat9354 + (((Class390_Sub3) this).aFloat9342 * (float) i_6_ + f_31_ + (((Class390_Sub3) this).aFloat9350 * (float) i_9_)));
 					if (f_35_ < -f_16_)
 						return;
-					f_17_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_32_ / f_13_);
-					f_18_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_33_ / f_14_);
-					f_19_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_34_ / f_15_);
-					f_20_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_35_ / f_16_);
+					f_17_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_32_ / f_13_);
+					f_18_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_33_ / f_14_);
+					f_19_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_34_ / f_15_);
+					f_20_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_35_ / f_16_);
 					if (((Class185) class185).aBool2304) {
 						float f_36_ = f_32_ - ((Class185) class185).aFloat2305;
 						if (f_36_ > 0.0F) {
@@ -125,21 +125,21 @@ public class Class390_Sub3 extends Class390 {
 					float f_37_ = ((Class390_Sub3) this).aFloat9343 * (float) i_29_;
 					float f_38_ = ((Class390_Sub3) this).aFloat9344 * (float) i_29_;
 					float f_39_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_6_ + f_37_ + (((Class390_Sub3) this).aFloat9339 * (float) i_8_)));
-					f_21_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_39_ / f_13_);
+					f_21_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_39_ / f_13_);
 					float f_40_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_6_ + f_38_ + (((Class390_Sub3) this).aFloat9327 * (float) i_8_)));
-					f_22_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_40_ / f_13_);
+					f_22_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_40_ / f_13_);
 					float f_41_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_7_ + f_37_ + (((Class390_Sub3) this).aFloat9339 * (float) i_8_)));
-					f_23_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_41_ / f_14_);
+					f_23_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_41_ / f_14_);
 					float f_42_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_7_ + f_38_ + (((Class390_Sub3) this).aFloat9327 * (float) i_8_)));
-					f_24_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_42_ / f_14_);
+					f_24_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_42_ / f_14_);
 					float f_43_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_7_ + f_37_ + (((Class390_Sub3) this).aFloat9339 * (float) i_9_)));
-					f_25_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_43_ / f_15_);
+					f_25_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_43_ / f_15_);
 					float f_44_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_7_ + f_38_ + (((Class390_Sub3) this).aFloat9327 * (float) i_9_)));
-					f_26_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_44_ / f_15_);
+					f_26_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_44_ / f_15_);
 					float f_45_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_6_ + f_37_ + (((Class390_Sub3) this).aFloat9339 * (float) i_9_)));
-					f_27_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_45_ / f_16_);
+					f_27_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_45_ / f_16_);
 					float f_46_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_6_ + f_38_ + (((Class390_Sub3) this).aFloat9327 * (float) i_9_)));
-					f_28_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_46_ / f_16_);
+					f_28_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_46_ / f_16_);
 				} else {
 					int i_47_ = anIntArrayArray4772[i][i_0_];
 					int i_48_ = anIntArrayArray4772[i + 1][i_0_];
@@ -161,10 +161,10 @@ public class Class390_Sub3 extends Class390 {
 					f_16_ = (((Class390_Sub3) this).aFloat9354 + (((Class390_Sub3) this).aFloat9342 * (float) i_6_ + (((Class390_Sub3) this).aFloat9346 * (float) i_50_) + (((Class390_Sub3) this).aFloat9350 * (float) i_9_)));
 					if (f_54_ < -f_16_)
 						return;
-					f_17_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_51_ / f_13_);
-					f_18_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_52_ / f_14_);
-					f_19_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_53_ / f_15_);
-					f_20_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_54_ / f_16_);
+					f_17_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_51_ / f_13_);
+					f_18_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_52_ / f_14_);
+					f_19_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_53_ / f_15_);
+					f_20_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_54_ / f_16_);
 					if (bool) {
 						float f_55_ = f_51_ - ((Class185) class185).aFloat2305;
 						if (f_55_ > 0.0F) {
@@ -233,26 +233,26 @@ public class Class390_Sub3 extends Class390 {
 						}
 					}
 					float f_61_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_6_ + (((Class390_Sub3) this).aFloat9343 * (float) i_47_) + (((Class390_Sub3) this).aFloat9339 * (float) i_8_)));
-					f_21_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_61_ / f_13_);
+					f_21_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_61_ / f_13_);
 					float f_62_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_6_ + (((Class390_Sub3) this).aFloat9344 * (float) i_47_) + (((Class390_Sub3) this).aFloat9327 * (float) i_8_)));
-					f_22_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_62_ / f_13_);
+					f_22_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_62_ / f_13_);
 					float f_63_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_7_ + (((Class390_Sub3) this).aFloat9343 * (float) i_48_) + (((Class390_Sub3) this).aFloat9339 * (float) i_8_)));
-					f_23_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_63_ / f_14_);
+					f_23_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_63_ / f_14_);
 					float f_64_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_7_ + (((Class390_Sub3) this).aFloat9344 * (float) i_48_) + (((Class390_Sub3) this).aFloat9327 * (float) i_8_)));
-					f_24_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_64_ / f_14_);
+					f_24_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_64_ / f_14_);
 					float f_65_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_7_ + (((Class390_Sub3) this).aFloat9343 * (float) i_49_) + (((Class390_Sub3) this).aFloat9339 * (float) i_9_)));
-					f_25_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_65_ / f_15_);
+					f_25_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_65_ / f_15_);
 					float f_66_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_7_ + (((Class390_Sub3) this).aFloat9344 * (float) i_49_) + (((Class390_Sub3) this).aFloat9327 * (float) i_9_)));
-					f_26_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_66_ / f_15_);
+					f_26_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_66_ / f_15_);
 					float f_67_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_6_ + (((Class390_Sub3) this).aFloat9343 * (float) i_50_) + (((Class390_Sub3) this).aFloat9339 * (float) i_9_)));
-					f_27_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_67_ / f_16_);
+					f_27_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_67_ / f_16_);
 					float f_68_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_6_ + (((Class390_Sub3) this).aFloat9344 * (float) i_50_) + (((Class390_Sub3) this).aFloat9327 * (float) i_9_)));
-					f_28_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_68_ / f_16_);
+					f_28_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_68_ / f_16_);
 				}
 				boolean bool_69_ = (((Class177) class177).aShort2212 != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(((Class177) class177).aShort2212, -1752076649).aByte2064));
 				float f_70_ = f_10_ + f_11_ + f_12_;
 				if (((f_25_ - f_27_) * (f_24_ - f_28_) - (f_26_ - f_28_) * (f_23_ - f_27_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_25_ < 0.0F || f_27_ < 0.0F || f_23_ < 0.0F || f_25_ > (float) ((Class144) class144).anInt1684 || f_27_ > (float) ((Class144) class144).anInt1684 || f_23_ > (float) ((Class144) class144).anInt1684);
+					((ChoppyItemFixClass) class144).aBool1708 = (f_25_ < 0.0F || f_27_ < 0.0F || f_23_ < 0.0F || f_25_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_27_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_23_ > (float) ((ChoppyItemFixClass) class144).anInt1684);
 					if (f_70_ < 3.0F) {
 						if (f_70_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
@@ -262,10 +262,10 @@ public class Class390_Sub3 extends Class390 {
 								class144.method2424(true, true, false, f_26_, f_28_, f_24_, f_25_, f_27_, f_23_, f_19_, f_20_, f_18_, f_15_, f_16_, f_14_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_71_ | (((Class177) class177).anInt2211 & 0xffffff), i_71_ | (((Class177) class177).anInt2206 & 0xffffff), i_71_ | (((Class177) class177).anInt2204 & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), f_11_ * 255.0F, f_12_ * 255.0F, f_10_ * 255.0F, ((Class177) class177).aShort2212);
 							} else {
 								if (bool_69_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_26_, f_28_, f_24_, f_25_, f_27_, f_23_, f_19_, f_20_, f_18_, (Class323.method5773(((Class177) class177).anInt2211, ((int) (f_11_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) 0)), (Class323.method5773(((Class177) class177).anInt2206, ((int) (f_12_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) 3)),
 										(Class323.method5773(((Class177) class177).anInt2204, ((int) (f_10_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -46)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_72_ = -16777216;
@@ -274,19 +274,19 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_26_, f_28_, f_24_, f_25_, f_27_, f_23_, f_19_, f_20_, f_18_, f_15_, f_16_, f_14_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_72_ | (((Class177) class177).anInt2211 & 0xffffff), i_72_ | (((Class177) class177).anInt2206 & 0xffffff), i_72_ | (((Class177) class177).anInt2204 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_69_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_26_, f_28_, f_24_, f_25_, f_27_, f_23_, f_19_, f_20_, f_18_, ((Class177) class177).anInt2211, ((Class177) class177).anInt2206, ((Class177) class177).anInt2204);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_26_, f_28_, f_24_, f_25_, f_27_, f_23_, f_19_, f_20_, f_18_, (((Class185) class185).anInt2307 * 1402414887));
 				}
 				f_70_ = f + f_10_ + f_12_;
 				if (((f_21_ - f_23_) * (f_28_ - f_24_) - (f_22_ - f_24_) * (f_27_ - f_23_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_21_ < 0.0F || f_23_ < 0.0F || f_27_ < 0.0F || f_21_ > (float) ((Class144) class144).anInt1684 || f_23_ > (float) ((Class144) class144).anInt1684 || f_27_ > (float) ((Class144) class144).anInt1684);
+					((ChoppyItemFixClass) class144).aBool1708 = (f_21_ < 0.0F || f_23_ < 0.0F || f_27_ < 0.0F || f_21_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_23_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_27_ > (float) ((ChoppyItemFixClass) class144).anInt1684);
 					if (f_70_ < 3.0F) {
 						if (bool_69_)
-							((Class144) class144).anInt1674 = -1694498816;
+							((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 						if (f_70_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
 								int i_73_ = -16777216;
@@ -295,10 +295,10 @@ public class Class390_Sub3 extends Class390 {
 								class144.method2424(true, true, false, f_22_, f_24_, f_28_, f_21_, f_23_, f_27_, f_17_, f_18_, f_20_, f_13_, f_14_, f_16_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_73_ | (((Class177) class177).anInt2209 & 0xffffff), i_73_ | (((Class177) class177).anInt2204 & 0xffffff), i_73_ | (((Class177) class177).anInt2206 & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), f * 255.0F, f_10_ * 255.0F, f_12_ * 255.0F, ((Class177) class177).aShort2212);
 							} else {
 								if (bool_69_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_22_, f_24_, f_28_, f_21_, f_23_, f_27_, f_17_, f_18_, f_20_, (Class323.method5773(((Class177) class177).anInt2209, ((int) (f * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -15)), (Class323.method5773(((Class177) class177).anInt2204, ((int) (f_10_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -67)),
 										(Class323.method5773(((Class177) class177).anInt2206, ((int) (f_12_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -21)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_74_ = -16777216;
@@ -307,9 +307,9 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_22_, f_24_, f_28_, f_21_, f_23_, f_27_, f_17_, f_18_, f_20_, f_13_, f_14_, f_16_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_74_ | (((Class177) class177).anInt2209 & 0xffffff), i_74_ | (((Class177) class177).anInt2204 & 0xffffff), i_74_ | (((Class177) class177).anInt2206 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_69_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_22_, f_24_, f_28_, f_21_, f_23_, f_27_, f_17_, f_18_, f_20_, ((Class177) class177).anInt2209, ((Class177) class177).anInt2204, ((Class177) class177).anInt2206);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_22_, f_24_, f_28_, f_21_, f_23_, f_27_, f_17_, f_18_, f_20_, (((Class185) class185).anInt2307 * 1402414887));
@@ -333,7 +333,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_79_ = (((Class390_Sub3) this).aFloat9354 + (((Class390_Sub3) this).aFloat9342 * (float) i_76_ + (((Class390_Sub3) this).aFloat9346 * (float) i_77_) + (((Class390_Sub3) this).aFloat9350 * (float) i_78_)));
 					if (f < -f_79_)
 						return;
-					float f_80_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_79_);
+					float f_80_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_79_);
 					fs_4_[i_75_] = 0.0F;
 					if (bool) {
 						float f_81_ = f - ((Class185) class185).aFloat2305;
@@ -356,8 +356,8 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_84_ = (((Class390_Sub3) this).aFloat9351 + (((Class390_Sub3) this).aFloat9338 * (float) i_76_ + (((Class390_Sub3) this).aFloat9343 * (float) i_77_) + (((Class390_Sub3) this).aFloat9339 * (float) i_78_)));
 					float f_85_ = (((Class390_Sub3) this).aFloat9328 + (((Class390_Sub3) this).aFloat9340 * (float) i_76_ + (((Class390_Sub3) this).aFloat9344 * (float) i_77_) + (((Class390_Sub3) this).aFloat9327 * (float) i_78_)));
-					fs[i_75_] = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_84_ / f_79_);
-					fs_1_[i_75_] = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_85_ / f_79_);
+					fs[i_75_] = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_84_ / f_79_);
+					fs_1_[i_75_] = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_85_ / f_79_);
 					fs_2_[i_75_] = f_80_;
 					fs_3_[i_75_] = f_79_;
 				}
@@ -374,7 +374,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_94_ = fs_1_[i_89_];
 						float f_95_ = fs_4_[i_87_] + fs_4_[i_88_] + fs_4_[i_89_];
 						if (((f - f_90_) * (f_94_ - f_93_) - (f_92_ - f_93_) * (f_91_ - f_90_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_90_ < 0.0F || f_91_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_90_ > (float) (((Class144) class144).anInt1684) || f_91_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_90_ < 0.0F || f_91_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_90_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_91_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							short i_96_ = ((Class196) class196).aShortArray2413[i_86_];
 							if (f_95_ < 3.0F) {
 								if (f_95_ > 0.0F) {
@@ -387,10 +387,10 @@ public class Class390_Sub3 extends Class390 {
 												i_97_ | ((((Class196) class196).anIntArray2420[i_89_]) & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), fs_4_[i_87_] * 255.0F, fs_4_[i_88_] * 255.0F, fs_4_[i_89_] * 255.0F, i_96_);
 									} else if (((((Class196) class196).anIntArray2420[i_87_]) & 0xffffff) != 0) {
 										if (i_96_ != -1 && (method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_96_, -1847341948).aByte2064)))
-											((Class144) class144).anInt1674 = -1694498816;
+											((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 										class144.method2425(true, true, false, f_92_, f_93_, f_94_, f, f_90_, f_91_, fs_2_[i_87_], fs_2_[i_88_], fs_2_[i_89_], (Class323.method5773((((Class196) class196).anIntArray2420[i_87_]), (((int) (fs_4_[i_87_] * 255.0F) << 24) | (((Class185) class185).anInt2307) * 1402414887), (byte) -88)),
 												(Class323.method5773((((Class196) class196).anIntArray2420[i_88_]), (((int) (fs_4_[i_88_] * 255.0F) << 24) | (((Class185) class185).anInt2307) * 1402414887), (byte) -78)), (Class323.method5773((((Class196) class196).anIntArray2420[i_89_]), (((int) (fs_4_[i_89_] * 255.0F) << 24) | (((Class185) class185).anInt2307) * 1402414887), (byte) -114)));
-										((Class144) class144).anInt1674 = 0;
+										((ChoppyItemFixClass) class144).anInt1674 = 0;
 									}
 								} else if (i_96_ != -1) {
 									int i_98_ = -16777216;
@@ -401,9 +401,9 @@ public class Class390_Sub3 extends Class390 {
 											i_98_ | ((((Class196) class196).anIntArray2420[i_89_]) & 0xffffff), 0, 0.0F, 0.0F, 0.0F, i_96_);
 								} else if (((((Class196) class196).anIntArray2420[i_87_]) & 0xffffff) != 0) {
 									if (i_96_ != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_96_, -1936792090).aByte2064))
-										((Class144) class144).anInt1674 = -1694498816;
+										((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 									class144.method2425(true, true, false, f_92_, f_93_, f_94_, f, f_90_, f_91_, fs_2_[i_87_], fs_2_[i_88_], fs_2_[i_89_], (((Class196) class196).anIntArray2420[i_87_]), (((Class196) class196).anIntArray2420[i_88_]), (((Class196) class196).anIntArray2420[i_89_]));
-									((Class144) class144).anInt1674 = 0;
+									((ChoppyItemFixClass) class144).anInt1674 = 0;
 								}
 							} else
 								class144.method2428(true, true, false, f_92_, f_93_, f_94_, f, f_90_, f_91_, fs_2_[i_87_], fs_2_[i_88_], fs_2_[i_89_], (((Class185) class185).anInt2307) * 1402414887);
@@ -422,7 +422,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_107_ = fs_1_[i_102_];
 						float f_108_ = fs_4_[i_100_] + fs_4_[i_101_] + fs_4_[i_102_];
 						if (((f - f_103_) * (f_107_ - f_106_) - (f_105_ - f_106_) * (f_104_ - f_103_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_103_ < 0.0F || f_104_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_103_ > (float) (((Class144) class144).anInt1684) || f_104_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_103_ < 0.0F || f_104_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_103_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_104_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							if (f_108_ < 3.0F) {
 								if (f_108_ > 0.0F) {
 									if (((((Class196) class196).anIntArray2420[i_100_]) & 0xffffff) != 0)
@@ -989,7 +989,7 @@ public class Class390_Sub3 extends Class390 {
 		((Class390_Sub3) this).aByteArrayArray9356 = null;
 	}
 
-	void method14617(int i, int i_204_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_205_, float[] fs_206_, float[] fs_207_, float[] fs_208_, int i_209_) {
+	void method14617(int i, int i_204_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_205_, float[] fs_206_, float[] fs_207_, float[] fs_208_, int i_209_) {
 		Class177 class177 = ((Class390_Sub3) this).aClass177ArrayArray9336[i][i_204_];
 		if (class177 != null) {
 			if ((((Class177) class177).aByte2210 & 0x2) == 0) {
@@ -1044,10 +1044,10 @@ public class Class390_Sub3 extends Class390 {
 					f_220_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_210_) + f_235_ + (((Class390_Sub3) this).aFloat9350 * (float) i_213_)));
 					if (f_239_ < -f_220_)
 						return;
-					f_221_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_236_ / f_217_));
-					f_222_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_237_ / f_218_));
-					f_223_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_238_ / f_219_));
-					f_224_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_239_ / f_220_));
+					f_221_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_236_ / f_217_));
+					f_222_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_237_ / f_218_));
+					f_223_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_238_ / f_219_));
+					f_224_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_239_ / f_220_));
 					if (((Class185) class185).aBool2304) {
 						float f_240_ = f_236_ - ((Class185) class185).aFloat2305;
 						if (f_240_ > 0.0F) {
@@ -1077,21 +1077,21 @@ public class Class390_Sub3 extends Class390 {
 					float f_241_ = ((Class390_Sub3) this).aFloat9343 * (float) i_233_;
 					float f_242_ = ((Class390_Sub3) this).aFloat9344 * (float) i_233_;
 					float f_243_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_210_) + f_241_ + (((Class390_Sub3) this).aFloat9339 * (float) i_212_)));
-					f_225_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_243_ / f_217_));
+					f_225_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_243_ / f_217_));
 					float f_244_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_210_) + f_242_ + (((Class390_Sub3) this).aFloat9327 * (float) i_212_)));
-					f_226_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_244_ / f_217_));
+					f_226_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_244_ / f_217_));
 					float f_245_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_211_) + f_241_ + (((Class390_Sub3) this).aFloat9339 * (float) i_212_)));
-					f_227_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_245_ / f_218_));
+					f_227_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_245_ / f_218_));
 					float f_246_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_211_) + f_242_ + (((Class390_Sub3) this).aFloat9327 * (float) i_212_)));
-					f_228_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_246_ / f_218_));
+					f_228_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_246_ / f_218_));
 					float f_247_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_211_) + f_241_ + (((Class390_Sub3) this).aFloat9339 * (float) i_213_)));
-					f_229_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_247_ / f_219_));
+					f_229_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_247_ / f_219_));
 					float f_248_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_211_) + f_242_ + (((Class390_Sub3) this).aFloat9327 * (float) i_213_)));
-					f_230_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_248_ / f_219_));
+					f_230_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_248_ / f_219_));
 					float f_249_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_210_) + f_241_ + (((Class390_Sub3) this).aFloat9339 * (float) i_213_)));
-					f_231_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_249_ / f_220_));
+					f_231_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_249_ / f_220_));
 					float f_250_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_210_) + f_242_ + (((Class390_Sub3) this).aFloat9327 * (float) i_213_)));
-					f_232_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_250_ / f_220_));
+					f_232_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_250_ / f_220_));
 				} else {
 					int i_251_ = anIntArrayArray4772[i][i_204_];
 					int i_252_ = anIntArrayArray4772[i + 1][i_204_];
@@ -1113,10 +1113,10 @@ public class Class390_Sub3 extends Class390 {
 					f_220_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_210_) + (((Class390_Sub3) this).aFloat9346 * (float) i_254_) + (((Class390_Sub3) this).aFloat9350 * (float) i_213_)));
 					if (f_258_ < -f_220_)
 						return;
-					f_221_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_255_ / f_217_));
-					f_222_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_256_ / f_218_));
-					f_223_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_257_ / f_219_));
-					f_224_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_258_ / f_220_));
+					f_221_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_255_ / f_217_));
+					f_222_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_256_ / f_218_));
+					f_223_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_257_ / f_219_));
+					f_224_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_258_ / f_220_));
 					if (bool) {
 						float f_259_ = f_255_ - ((Class185) class185).aFloat2305;
 						if (f_259_ > 0.0F) {
@@ -1185,26 +1185,26 @@ public class Class390_Sub3 extends Class390 {
 						}
 					}
 					float f_265_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_210_) + (((Class390_Sub3) this).aFloat9343 * (float) i_251_) + (((Class390_Sub3) this).aFloat9339 * (float) i_212_)));
-					f_225_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_265_ / f_217_));
+					f_225_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_265_ / f_217_));
 					float f_266_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_210_) + (((Class390_Sub3) this).aFloat9344 * (float) i_251_) + (((Class390_Sub3) this).aFloat9327 * (float) i_212_)));
-					f_226_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_266_ / f_217_));
+					f_226_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_266_ / f_217_));
 					float f_267_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_211_) + (((Class390_Sub3) this).aFloat9343 * (float) i_252_) + (((Class390_Sub3) this).aFloat9339 * (float) i_212_)));
-					f_227_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_267_ / f_218_));
+					f_227_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_267_ / f_218_));
 					float f_268_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_211_) + (((Class390_Sub3) this).aFloat9344 * (float) i_252_) + (((Class390_Sub3) this).aFloat9327 * (float) i_212_)));
-					f_228_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_268_ / f_218_));
+					f_228_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_268_ / f_218_));
 					float f_269_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_211_) + (((Class390_Sub3) this).aFloat9343 * (float) i_253_) + (((Class390_Sub3) this).aFloat9339 * (float) i_213_)));
-					f_229_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_269_ / f_219_));
+					f_229_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_269_ / f_219_));
 					float f_270_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_211_) + (((Class390_Sub3) this).aFloat9344 * (float) i_253_) + (((Class390_Sub3) this).aFloat9327 * (float) i_213_)));
-					f_230_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_270_ / f_219_));
+					f_230_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_270_ / f_219_));
 					float f_271_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_210_) + (((Class390_Sub3) this).aFloat9343 * (float) i_254_) + (((Class390_Sub3) this).aFloat9339 * (float) i_213_)));
-					f_231_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_271_ / f_220_));
+					f_231_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_271_ / f_220_));
 					float f_272_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_210_) + (((Class390_Sub3) this).aFloat9344 * (float) i_254_) + (((Class390_Sub3) this).aFloat9327 * (float) i_213_)));
-					f_232_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_272_ / f_220_));
+					f_232_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_272_ / f_220_));
 				}
 				boolean bool_273_ = (((Class177) class177).aShort2212 != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(((Class177) class177).aShort2212, -1802866112).aByte2064));
 				float f_274_ = f_214_ + f_215_ + f_216_;
 				if (((f_229_ - f_231_) * (f_228_ - f_232_) - (f_230_ - f_232_) * (f_227_ - f_231_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_229_ < 0.0F || f_231_ < 0.0F || f_227_ < 0.0F || f_229_ > (float) ((Class144) class144).anInt1684 || f_231_ > (float) ((Class144) class144).anInt1684 || (f_227_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_229_ < 0.0F || f_231_ < 0.0F || f_227_ < 0.0F || f_229_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_231_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_227_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_274_ < 3.0F) {
 						if (f_274_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
@@ -1215,10 +1215,10 @@ public class Class390_Sub3 extends Class390 {
 										((Class177) class177).aShort2212);
 							} else {
 								if (bool_273_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_230_, f_232_, f_228_, f_229_, f_231_, f_227_, f_223_, f_224_, f_222_, (Class323.method5773(((Class177) class177).anInt2211, ((int) (f_215_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -102)), (Class323.method5773(((Class177) class177).anInt2206, ((int) (f_216_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -111)),
 										(Class323.method5773(((Class177) class177).anInt2204, ((int) (f_214_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -88)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_276_ = -16777216;
@@ -1227,19 +1227,19 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_230_, f_232_, f_228_, f_229_, f_231_, f_227_, f_223_, f_224_, f_222_, f_219_, f_220_, f_218_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_276_ | (((Class177) class177).anInt2211 & 0xffffff), i_276_ | (((Class177) class177).anInt2206 & 0xffffff), i_276_ | (((Class177) class177).anInt2204 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_273_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_230_, f_232_, f_228_, f_229_, f_231_, f_227_, f_223_, f_224_, f_222_, ((Class177) class177).anInt2211, ((Class177) class177).anInt2206, ((Class177) class177).anInt2204);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_230_, f_232_, f_228_, f_229_, f_231_, f_227_, f_223_, f_224_, f_222_, (((Class185) class185).anInt2307 * 1402414887));
 				}
 				f_274_ = f + f_214_ + f_216_;
 				if (((f_225_ - f_227_) * (f_232_ - f_228_) - (f_226_ - f_228_) * (f_231_ - f_227_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_225_ < 0.0F || f_227_ < 0.0F || f_231_ < 0.0F || f_225_ > (float) ((Class144) class144).anInt1684 || f_227_ > (float) ((Class144) class144).anInt1684 || (f_231_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_225_ < 0.0F || f_227_ < 0.0F || f_231_ < 0.0F || f_225_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_227_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_231_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_274_ < 3.0F) {
 						if (bool_273_)
-							((Class144) class144).anInt1674 = -1694498816;
+							((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 						if (f_274_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
 								int i_277_ = -16777216;
@@ -1248,10 +1248,10 @@ public class Class390_Sub3 extends Class390 {
 								class144.method2424(true, true, false, f_226_, f_228_, f_232_, f_225_, f_227_, f_231_, f_221_, f_222_, f_224_, f_217_, f_218_, f_220_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_277_ | (((Class177) class177).anInt2209 & 0xffffff), i_277_ | (((Class177) class177).anInt2204 & 0xffffff), i_277_ | (((Class177) class177).anInt2206 & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), f * 255.0F, f_214_ * 255.0F, f_216_ * 255.0F, ((Class177) class177).aShort2212);
 							} else {
 								if (bool_273_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_226_, f_228_, f_232_, f_225_, f_227_, f_231_, f_221_, f_222_, f_224_, (Class323.method5773(((Class177) class177).anInt2209, ((int) (f * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -124)), (Class323.method5773(((Class177) class177).anInt2204, ((int) (f_214_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -78)),
 										(Class323.method5773(((Class177) class177).anInt2206, ((int) (f_216_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -113)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_278_ = -16777216;
@@ -1260,9 +1260,9 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_226_, f_228_, f_232_, f_225_, f_227_, f_231_, f_221_, f_222_, f_224_, f_217_, f_218_, f_220_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_278_ | (((Class177) class177).anInt2209 & 0xffffff), i_278_ | (((Class177) class177).anInt2204 & 0xffffff), i_278_ | (((Class177) class177).anInt2206 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_273_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_226_, f_228_, f_232_, f_225_, f_227_, f_231_, f_221_, f_222_, f_224_, ((Class177) class177).anInt2209, ((Class177) class177).anInt2204, ((Class177) class177).anInt2206);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_226_, f_228_, f_232_, f_225_, f_227_, f_231_, f_221_, f_222_, f_224_, (((Class185) class185).anInt2307 * 1402414887));
@@ -1286,7 +1286,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_283_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_280_) + (((Class390_Sub3) this).aFloat9346 * (float) i_281_) + (((Class390_Sub3) this).aFloat9350 * (float) i_282_)));
 					if (f < -f_283_)
 						return;
-					float f_284_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_283_);
+					float f_284_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_283_);
 					fs_208_[i_279_] = 0.0F;
 					if (bool) {
 						float f_285_ = f - ((Class185) class185).aFloat2305;
@@ -1309,8 +1309,8 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_288_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_280_) + (((Class390_Sub3) this).aFloat9343 * (float) i_281_) + (((Class390_Sub3) this).aFloat9339 * (float) i_282_)));
 					float f_289_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_280_) + (((Class390_Sub3) this).aFloat9344 * (float) i_281_) + (((Class390_Sub3) this).aFloat9327 * (float) i_282_)));
-					fs[i_279_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_288_ / f_283_));
-					fs_205_[i_279_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_289_ / f_283_));
+					fs[i_279_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_288_ / f_283_));
+					fs_205_[i_279_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_289_ / f_283_));
 					fs_206_[i_279_] = f_284_;
 					fs_207_[i_279_] = f_283_;
 				}
@@ -1327,7 +1327,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_298_ = fs_205_[i_293_];
 						float f_299_ = (fs_208_[i_291_] + fs_208_[i_292_] + fs_208_[i_293_]);
 						if (((f - f_294_) * (f_298_ - f_297_) - (f_296_ - f_297_) * (f_295_ - f_294_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_294_ < 0.0F || f_295_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_294_ > (float) (((Class144) class144).anInt1684) || f_295_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_294_ < 0.0F || f_295_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_294_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_295_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							short i_300_ = (((Class196) class196).aShortArray2413[i_290_]);
 							if (f_299_ < 3.0F) {
 								if (f_299_ > 0.0F) {
@@ -1340,10 +1340,10 @@ public class Class390_Sub3 extends Class390 {
 												i_301_ | (((Class196) class196).anIntArray2420[i_292_]) & 0xffffff, i_301_ | (((Class196) class196).anIntArray2420[i_293_]) & 0xffffff, (((Class185) class185).anInt2307 * 1402414887), fs_208_[i_291_] * 255.0F, fs_208_[i_292_] * 255.0F, fs_208_[i_293_] * 255.0F, i_300_);
 									} else if (((((Class196) class196).anIntArray2420[i_291_]) & 0xffffff) != 0) {
 										if (i_300_ != -1 && (method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_300_, -1754108994).aByte2064)))
-											((Class144) class144).anInt1674 = -1694498816;
+											((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 										class144.method2425(true, true, false, f_296_, f_297_, f_298_, f, f_294_, f_295_, fs_206_[i_291_], fs_206_[i_292_], fs_206_[i_293_], (Class323.method5773((((Class196) class196).anIntArray2420[i_291_]), ((int) (fs_208_[i_291_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -96)),
 												(Class323.method5773((((Class196) class196).anIntArray2420[i_292_]), ((int) (fs_208_[i_292_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -18)), (Class323.method5773((((Class196) class196).anIntArray2420[i_293_]), ((int) (fs_208_[i_293_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -1)));
-										((Class144) class144).anInt1674 = 0;
+										((ChoppyItemFixClass) class144).anInt1674 = 0;
 									}
 								} else if (i_300_ != -1) {
 									int i_302_ = -16777216;
@@ -1354,9 +1354,9 @@ public class Class390_Sub3 extends Class390 {
 											i_302_ | ((((Class196) class196).anIntArray2420[i_293_]) & 0xffffff), 0, 0.0F, 0.0F, 0.0F, i_300_);
 								} else if (((((Class196) class196).anIntArray2420[i_291_]) & 0xffffff) != 0) {
 									if (i_300_ != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_300_, -1995458323).aByte2064))
-										((Class144) class144).anInt1674 = -1694498816;
+										((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 									class144.method2425(true, true, false, f_296_, f_297_, f_298_, f, f_294_, f_295_, fs_206_[i_291_], fs_206_[i_292_], fs_206_[i_293_], (((Class196) class196).anIntArray2420[i_291_]), (((Class196) class196).anIntArray2420[i_292_]), (((Class196) class196).anIntArray2420[i_293_]));
-									((Class144) class144).anInt1674 = 0;
+									((ChoppyItemFixClass) class144).anInt1674 = 0;
 								}
 							} else
 								class144.method2428(true, true, false, f_296_, f_297_, f_298_, f, f_294_, f_295_, fs_206_[i_291_], fs_206_[i_292_], fs_206_[i_293_], (((Class185) class185).anInt2307) * 1402414887);
@@ -1375,7 +1375,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_311_ = fs_205_[i_306_];
 						float f_312_ = (fs_208_[i_304_] + fs_208_[i_305_] + fs_208_[i_306_]);
 						if (((f - f_307_) * (f_311_ - f_310_) - (f_309_ - f_310_) * (f_308_ - f_307_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_307_ < 0.0F || f_308_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_307_ > (float) (((Class144) class144).anInt1684) || f_308_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_307_ < 0.0F || f_308_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_307_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_308_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							if (f_312_ < 3.0F) {
 								if (f_312_ > 0.0F) {
 									if (((((Class196) class196).anIntArray2420[i_304_]) & 0xffffff) != 0)
@@ -1428,13 +1428,13 @@ public class Class390_Sub3 extends Class390 {
 		}
 	}
 
-	void method14618(int i, int i_323_, int i_324_, int i_325_, int i_326_, int i_327_, int i_328_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_329_) {
+	void method14618(int i, int i_323_, int i_324_, int i_325_, int i_326_, int i_327_, int i_328_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_329_) {
 		int i_330_ = (i_328_ - i_326_) * i_324_ / 256;
 		int i_331_ = i_324_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_332_ = i;
 		int i_333_ = i_323_ + i_330_;
 		for (int i_334_ = i_325_; i_334_ < i_327_; i_334_++) {
@@ -1512,11 +1512,11 @@ public class Class390_Sub3 extends Class390 {
 			i_333_ = i_323_ + i_330_;
 			i_332_ += i_331_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
-	void method14619(int i, int i_361_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_362_, float[] fs_363_, float[] fs_364_, float[] fs_365_, int i_366_) {
+	void method14619(int i, int i_361_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_362_, float[] fs_363_, float[] fs_364_, float[] fs_365_, int i_366_) {
 		Class181 class181 = ((Class390_Sub3) this).aClass181ArrayArray9335[i][i_361_];
 		if (i_366_ == 0 || (i_366_ & 0x2) == 0) {
 			if (class181 != null) {
@@ -1550,9 +1550,9 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_375_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_368_) + (((Class390_Sub3) this).aFloat9343 * (float) i_369_) + (((Class390_Sub3) this).aFloat9339 * (float) i_370_)));
 					float f_376_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_368_) + (((Class390_Sub3) this).aFloat9344 * (float) i_369_) + (((Class390_Sub3) this).aFloat9327 * (float) i_370_)));
-					fs[i_367_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_375_ / f_371_));
-					fs_362_[i_367_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_376_ / f_371_));
-					fs_363_[i_367_] = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_371_);
+					fs[i_367_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_375_ / f_371_));
+					fs_362_[i_367_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_376_ / f_371_));
+					fs_363_[i_367_] = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_371_);
 					fs_364_[i_367_] = f_371_;
 				}
 				float f = (float) (anInt4774 * 750971439);
@@ -1567,7 +1567,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_385_ = fs_362_[i_379_];
 					float f_386_ = fs_362_[i_380_];
 					if (((f_381_ - f_382_) * (f_386_ - f_385_) - (f_384_ - f_385_) * (f_383_ - f_382_)) > 0.0F) {
-						((Class144) class144).aBool1708 = (f_381_ < 0.0F || f_382_ < 0.0F || f_383_ < 0.0F || (f_381_ > (float) ((Class144) class144).anInt1684) || (f_382_ > (float) ((Class144) class144).anInt1684) || (f_383_ > (float) ((Class144) class144).anInt1684));
+						((ChoppyItemFixClass) class144).aBool1708 = (f_381_ < 0.0F || f_382_ < 0.0F || f_383_ < 0.0F || (f_381_ > (float) ((ChoppyItemFixClass) class144).anInt1684) || (f_382_ > (float) ((ChoppyItemFixClass) class144).anInt1684) || (f_383_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 						if (fs_365_[i_378_] + fs_365_[i_379_] + fs_365_[i_380_] < 3.0F) {
 							int i_387_ = i << anInt4775 * 1856651955;
 							int i_388_ = i_361_ << anInt4775 * 1856651955;
@@ -1603,7 +1603,7 @@ public class Class390_Sub3 extends Class390 {
 
 	void method14621(int i, int i_389_, int i_390_) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		((Class144) ((Class185) class185).aClass144_2310).anInt1674 = 0;
+		((ChoppyItemFixClass) ((Class185) class185).aClass144_2310).anInt1674 = 0;
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null)
 			method14617(i, i_389_, ((Class185) class185).aBool2309, class185, ((Class185) class185).aClass144_2310, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342, ((Class185) class185).aFloatArray2330, ((Class185) class185).aFloatArray2344, ((Class185) class185).aFloatArray2345, i_390_);
 		else if (((Class390_Sub3) this).aClass178ArrayArray9352 != null)
@@ -1612,13 +1612,13 @@ public class Class390_Sub3 extends Class390 {
 			method14619(i, i_389_, ((Class185) class185).aBool2309, class185, ((Class185) class185).aClass144_2310, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342, ((Class185) class185).aFloatArray2330, ((Class185) class185).aFloatArray2344, ((Class185) class185).aFloatArray2345, i_390_);
 	}
 
-	void method14622(int i, int i_391_, int i_392_, int i_393_, int i_394_, int i_395_, int i_396_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_397_) {
+	void method14622(int i, int i_391_, int i_392_, int i_393_, int i_394_, int i_395_, int i_396_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_397_) {
 		int i_398_ = (i_396_ - i_394_) * i_392_ / 256;
 		int i_399_ = i_392_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_400_ = i;
 		int i_401_ = i_391_ + i_398_;
 		for (int i_402_ = i_393_; i_402_ < i_395_; i_402_++) {
@@ -1674,7 +1674,7 @@ public class Class390_Sub3 extends Class390 {
 			i_401_ = i_391_ + i_398_;
 			i_400_ += i_399_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
@@ -1735,13 +1735,13 @@ public class Class390_Sub3 extends Class390 {
 			((Class390_Sub3) this).aByteArrayArray9356[i][i_434_] = (byte) i_435_;
 	}
 
-	void method14623(int i, int i_436_, int i_437_, int i_438_, int i_439_, int i_440_, int i_441_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_442_) {
+	void method14623(int i, int i_436_, int i_437_, int i_438_, int i_439_, int i_440_, int i_441_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_442_) {
 		int i_443_ = (i_441_ - i_439_) * i_437_ / 256;
 		int i_444_ = i_437_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_445_ = i;
 		int i_446_ = i_436_ + i_443_;
 		for (int i_447_ = i_438_; i_447_ < i_440_; i_447_++) {
@@ -1797,7 +1797,7 @@ public class Class390_Sub3 extends Class390 {
 			i_446_ = i_436_ + i_443_;
 			i_445_ += i_444_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
@@ -2221,9 +2221,9 @@ public class Class390_Sub3 extends Class390 {
 
 	public void method6710(int i, int i_525_, int i_526_, int i_527_, int i_528_, int i_529_, int i_530_, boolean[][] bools) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		Class144 class144 = ((Class185) class185).aClass144_2310;
-		((Class144) class144).anInt1674 = 0;
-		((Class144) class144).aBool1708 = true;
+		ChoppyItemFixClass class144 = ((Class185) class185).aClass144_2310;
+		((ChoppyItemFixClass) class144).anInt1674 = 0;
+		((ChoppyItemFixClass) class144).aBool1708 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.method14410();
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null || ((Class390_Sub3) this).aClass181ArrayArray9335 != null)
 			method14618(i, i_525_, i_526_, i_527_, i_528_, i_529_, i_530_, bools, class185, class144, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342);
@@ -2233,9 +2233,9 @@ public class Class390_Sub3 extends Class390 {
 
 	public void method6715(int i, int i_531_, int i_532_, int i_533_, int i_534_, int i_535_, int i_536_, boolean[][] bools) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		Class144 class144 = ((Class185) class185).aClass144_2310;
-		((Class144) class144).anInt1674 = 0;
-		((Class144) class144).aBool1708 = true;
+		ChoppyItemFixClass class144 = ((Class185) class185).aClass144_2310;
+		((ChoppyItemFixClass) class144).anInt1674 = 0;
+		((ChoppyItemFixClass) class144).aBool1708 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.method14410();
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null || ((Class390_Sub3) this).aClass181ArrayArray9335 != null)
 			method14618(i, i_531_, i_532_, i_533_, i_534_, i_535_, i_536_, bools, class185, class144, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342);
@@ -2245,7 +2245,7 @@ public class Class390_Sub3 extends Class390 {
 
 	void method14625(int i, int i_537_, int i_538_) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		((Class144) ((Class185) class185).aClass144_2310).anInt1674 = 0;
+		((ChoppyItemFixClass) ((Class185) class185).aClass144_2310).anInt1674 = 0;
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null)
 			method14617(i, i_537_, ((Class185) class185).aBool2309, class185, ((Class185) class185).aClass144_2310, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342, ((Class185) class185).aFloatArray2330, ((Class185) class185).aFloatArray2344, ((Class185) class185).aFloatArray2345, i_538_);
 		else if (((Class390_Sub3) this).aClass178ArrayArray9352 != null)
@@ -2256,7 +2256,7 @@ public class Class390_Sub3 extends Class390 {
 
 	void method14626(int i, int i_539_, int i_540_) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		((Class144) ((Class185) class185).aClass144_2310).anInt1674 = 0;
+		((ChoppyItemFixClass) ((Class185) class185).aClass144_2310).anInt1674 = 0;
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null)
 			method14617(i, i_539_, ((Class185) class185).aBool2309, class185, ((Class185) class185).aClass144_2310, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342, ((Class185) class185).aFloatArray2330, ((Class185) class185).aFloatArray2344, ((Class185) class185).aFloatArray2345, i_540_);
 		else if (((Class390_Sub3) this).aClass178ArrayArray9352 != null)
@@ -2265,7 +2265,7 @@ public class Class390_Sub3 extends Class390 {
 			method14619(i, i_539_, ((Class185) class185).aBool2309, class185, ((Class185) class185).aClass144_2310, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342, ((Class185) class185).aFloatArray2330, ((Class185) class185).aFloatArray2344, ((Class185) class185).aFloatArray2345, i_540_);
 	}
 
-	void method14627(int i, int i_541_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_542_, float[] fs_543_, float[] fs_544_, float[] fs_545_, int i_546_) {
+	void method14627(int i, int i_541_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_542_, float[] fs_543_, float[] fs_544_, float[] fs_545_, int i_546_) {
 		Class177 class177 = ((Class390_Sub3) this).aClass177ArrayArray9336[i][i_541_];
 		if (class177 != null) {
 			if ((((Class177) class177).aByte2210 & 0x2) == 0) {
@@ -2320,10 +2320,10 @@ public class Class390_Sub3 extends Class390 {
 					f_557_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_547_) + f_572_ + (((Class390_Sub3) this).aFloat9350 * (float) i_550_)));
 					if (f_576_ < -f_557_)
 						return;
-					f_558_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_573_ / f_554_));
-					f_559_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_574_ / f_555_));
-					f_560_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_575_ / f_556_));
-					f_561_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_576_ / f_557_));
+					f_558_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_573_ / f_554_));
+					f_559_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_574_ / f_555_));
+					f_560_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_575_ / f_556_));
+					f_561_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_576_ / f_557_));
 					if (((Class185) class185).aBool2304) {
 						float f_577_ = f_573_ - ((Class185) class185).aFloat2305;
 						if (f_577_ > 0.0F) {
@@ -2353,21 +2353,21 @@ public class Class390_Sub3 extends Class390 {
 					float f_578_ = ((Class390_Sub3) this).aFloat9343 * (float) i_570_;
 					float f_579_ = ((Class390_Sub3) this).aFloat9344 * (float) i_570_;
 					float f_580_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_547_) + f_578_ + (((Class390_Sub3) this).aFloat9339 * (float) i_549_)));
-					f_562_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_580_ / f_554_));
+					f_562_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_580_ / f_554_));
 					float f_581_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_547_) + f_579_ + (((Class390_Sub3) this).aFloat9327 * (float) i_549_)));
-					f_563_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_581_ / f_554_));
+					f_563_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_581_ / f_554_));
 					float f_582_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_548_) + f_578_ + (((Class390_Sub3) this).aFloat9339 * (float) i_549_)));
-					f_564_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_582_ / f_555_));
+					f_564_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_582_ / f_555_));
 					float f_583_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_548_) + f_579_ + (((Class390_Sub3) this).aFloat9327 * (float) i_549_)));
-					f_565_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_583_ / f_555_));
+					f_565_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_583_ / f_555_));
 					float f_584_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_548_) + f_578_ + (((Class390_Sub3) this).aFloat9339 * (float) i_550_)));
-					f_566_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_584_ / f_556_));
+					f_566_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_584_ / f_556_));
 					float f_585_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_548_) + f_579_ + (((Class390_Sub3) this).aFloat9327 * (float) i_550_)));
-					f_567_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_585_ / f_556_));
+					f_567_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_585_ / f_556_));
 					float f_586_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_547_) + f_578_ + (((Class390_Sub3) this).aFloat9339 * (float) i_550_)));
-					f_568_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_586_ / f_557_));
+					f_568_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_586_ / f_557_));
 					float f_587_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_547_) + f_579_ + (((Class390_Sub3) this).aFloat9327 * (float) i_550_)));
-					f_569_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_587_ / f_557_));
+					f_569_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_587_ / f_557_));
 				} else {
 					int i_588_ = anIntArrayArray4772[i][i_541_];
 					int i_589_ = anIntArrayArray4772[i + 1][i_541_];
@@ -2389,10 +2389,10 @@ public class Class390_Sub3 extends Class390 {
 					f_557_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_547_) + (((Class390_Sub3) this).aFloat9346 * (float) i_591_) + (((Class390_Sub3) this).aFloat9350 * (float) i_550_)));
 					if (f_595_ < -f_557_)
 						return;
-					f_558_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_592_ / f_554_));
-					f_559_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_593_ / f_555_));
-					f_560_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_594_ / f_556_));
-					f_561_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_595_ / f_557_));
+					f_558_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_592_ / f_554_));
+					f_559_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_593_ / f_555_));
+					f_560_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_594_ / f_556_));
+					f_561_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_595_ / f_557_));
 					if (bool) {
 						float f_596_ = f_592_ - ((Class185) class185).aFloat2305;
 						if (f_596_ > 0.0F) {
@@ -2461,26 +2461,26 @@ public class Class390_Sub3 extends Class390 {
 						}
 					}
 					float f_602_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_547_) + (((Class390_Sub3) this).aFloat9343 * (float) i_588_) + (((Class390_Sub3) this).aFloat9339 * (float) i_549_)));
-					f_562_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_602_ / f_554_));
+					f_562_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_602_ / f_554_));
 					float f_603_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_547_) + (((Class390_Sub3) this).aFloat9344 * (float) i_588_) + (((Class390_Sub3) this).aFloat9327 * (float) i_549_)));
-					f_563_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_603_ / f_554_));
+					f_563_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_603_ / f_554_));
 					float f_604_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_548_) + (((Class390_Sub3) this).aFloat9343 * (float) i_589_) + (((Class390_Sub3) this).aFloat9339 * (float) i_549_)));
-					f_564_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_604_ / f_555_));
+					f_564_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_604_ / f_555_));
 					float f_605_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_548_) + (((Class390_Sub3) this).aFloat9344 * (float) i_589_) + (((Class390_Sub3) this).aFloat9327 * (float) i_549_)));
-					f_565_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_605_ / f_555_));
+					f_565_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_605_ / f_555_));
 					float f_606_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_548_) + (((Class390_Sub3) this).aFloat9343 * (float) i_590_) + (((Class390_Sub3) this).aFloat9339 * (float) i_550_)));
-					f_566_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_606_ / f_556_));
+					f_566_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_606_ / f_556_));
 					float f_607_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_548_) + (((Class390_Sub3) this).aFloat9344 * (float) i_590_) + (((Class390_Sub3) this).aFloat9327 * (float) i_550_)));
-					f_567_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_607_ / f_556_));
+					f_567_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_607_ / f_556_));
 					float f_608_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_547_) + (((Class390_Sub3) this).aFloat9343 * (float) i_591_) + (((Class390_Sub3) this).aFloat9339 * (float) i_550_)));
-					f_568_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_608_ / f_557_));
+					f_568_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_608_ / f_557_));
 					float f_609_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_547_) + (((Class390_Sub3) this).aFloat9344 * (float) i_591_) + (((Class390_Sub3) this).aFloat9327 * (float) i_550_)));
-					f_569_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_609_ / f_557_));
+					f_569_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_609_ / f_557_));
 				}
 				boolean bool_610_ = (((Class177) class177).aShort2212 != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(((Class177) class177).aShort2212, -1855279147).aByte2064));
 				float f_611_ = f_551_ + f_552_ + f_553_;
 				if (((f_566_ - f_568_) * (f_565_ - f_569_) - (f_567_ - f_569_) * (f_564_ - f_568_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_566_ < 0.0F || f_568_ < 0.0F || f_564_ < 0.0F || f_566_ > (float) ((Class144) class144).anInt1684 || f_568_ > (float) ((Class144) class144).anInt1684 || (f_564_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_566_ < 0.0F || f_568_ < 0.0F || f_564_ < 0.0F || f_566_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_568_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_564_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_611_ < 3.0F) {
 						if (f_611_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
@@ -2491,10 +2491,10 @@ public class Class390_Sub3 extends Class390 {
 										((Class177) class177).aShort2212);
 							} else {
 								if (bool_610_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_567_, f_569_, f_565_, f_566_, f_568_, f_564_, f_560_, f_561_, f_559_, (Class323.method5773(((Class177) class177).anInt2211, ((int) (f_552_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -89)), (Class323.method5773(((Class177) class177).anInt2206, ((int) (f_553_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -51)),
 										(Class323.method5773(((Class177) class177).anInt2204, ((int) (f_551_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) 4)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_613_ = -16777216;
@@ -2503,19 +2503,19 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_567_, f_569_, f_565_, f_566_, f_568_, f_564_, f_560_, f_561_, f_559_, f_556_, f_557_, f_555_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_613_ | (((Class177) class177).anInt2211 & 0xffffff), i_613_ | (((Class177) class177).anInt2206 & 0xffffff), i_613_ | (((Class177) class177).anInt2204 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_610_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_567_, f_569_, f_565_, f_566_, f_568_, f_564_, f_560_, f_561_, f_559_, ((Class177) class177).anInt2211, ((Class177) class177).anInt2206, ((Class177) class177).anInt2204);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_567_, f_569_, f_565_, f_566_, f_568_, f_564_, f_560_, f_561_, f_559_, (((Class185) class185).anInt2307 * 1402414887));
 				}
 				f_611_ = f + f_551_ + f_553_;
 				if (((f_562_ - f_564_) * (f_569_ - f_565_) - (f_563_ - f_565_) * (f_568_ - f_564_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_562_ < 0.0F || f_564_ < 0.0F || f_568_ < 0.0F || f_562_ > (float) ((Class144) class144).anInt1684 || f_564_ > (float) ((Class144) class144).anInt1684 || (f_568_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_562_ < 0.0F || f_564_ < 0.0F || f_568_ < 0.0F || f_562_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_564_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_568_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_611_ < 3.0F) {
 						if (bool_610_)
-							((Class144) class144).anInt1674 = -1694498816;
+							((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 						if (f_611_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
 								int i_614_ = -16777216;
@@ -2524,10 +2524,10 @@ public class Class390_Sub3 extends Class390 {
 								class144.method2424(true, true, false, f_563_, f_565_, f_569_, f_562_, f_564_, f_568_, f_558_, f_559_, f_561_, f_554_, f_555_, f_557_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_614_ | (((Class177) class177).anInt2209 & 0xffffff), i_614_ | (((Class177) class177).anInt2204 & 0xffffff), i_614_ | (((Class177) class177).anInt2206 & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), f * 255.0F, f_551_ * 255.0F, f_553_ * 255.0F, ((Class177) class177).aShort2212);
 							} else {
 								if (bool_610_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_563_, f_565_, f_569_, f_562_, f_564_, f_568_, f_558_, f_559_, f_561_, (Class323.method5773(((Class177) class177).anInt2209, ((int) (f * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -99)), (Class323.method5773(((Class177) class177).anInt2204, ((int) (f_551_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -5)),
 										(Class323.method5773(((Class177) class177).anInt2206, ((int) (f_553_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -61)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_615_ = -16777216;
@@ -2536,9 +2536,9 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_563_, f_565_, f_569_, f_562_, f_564_, f_568_, f_558_, f_559_, f_561_, f_554_, f_555_, f_557_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_615_ | (((Class177) class177).anInt2209 & 0xffffff), i_615_ | (((Class177) class177).anInt2204 & 0xffffff), i_615_ | (((Class177) class177).anInt2206 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_610_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_563_, f_565_, f_569_, f_562_, f_564_, f_568_, f_558_, f_559_, f_561_, ((Class177) class177).anInt2209, ((Class177) class177).anInt2204, ((Class177) class177).anInt2206);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_563_, f_565_, f_569_, f_562_, f_564_, f_568_, f_558_, f_559_, f_561_, (((Class185) class185).anInt2307 * 1402414887));
@@ -2562,7 +2562,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_620_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_617_) + (((Class390_Sub3) this).aFloat9346 * (float) i_618_) + (((Class390_Sub3) this).aFloat9350 * (float) i_619_)));
 					if (f < -f_620_)
 						return;
-					float f_621_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_620_);
+					float f_621_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_620_);
 					fs_545_[i_616_] = 0.0F;
 					if (bool) {
 						float f_622_ = f - ((Class185) class185).aFloat2305;
@@ -2585,8 +2585,8 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_625_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_617_) + (((Class390_Sub3) this).aFloat9343 * (float) i_618_) + (((Class390_Sub3) this).aFloat9339 * (float) i_619_)));
 					float f_626_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_617_) + (((Class390_Sub3) this).aFloat9344 * (float) i_618_) + (((Class390_Sub3) this).aFloat9327 * (float) i_619_)));
-					fs[i_616_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_625_ / f_620_));
-					fs_542_[i_616_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_626_ / f_620_));
+					fs[i_616_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_625_ / f_620_));
+					fs_542_[i_616_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_626_ / f_620_));
 					fs_543_[i_616_] = f_621_;
 					fs_544_[i_616_] = f_620_;
 				}
@@ -2603,7 +2603,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_635_ = fs_542_[i_630_];
 						float f_636_ = (fs_545_[i_628_] + fs_545_[i_629_] + fs_545_[i_630_]);
 						if (((f - f_631_) * (f_635_ - f_634_) - (f_633_ - f_634_) * (f_632_ - f_631_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_631_ < 0.0F || f_632_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_631_ > (float) (((Class144) class144).anInt1684) || f_632_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_631_ < 0.0F || f_632_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_631_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_632_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							short i_637_ = (((Class196) class196).aShortArray2413[i_627_]);
 							if (f_636_ < 3.0F) {
 								if (f_636_ > 0.0F) {
@@ -2616,10 +2616,10 @@ public class Class390_Sub3 extends Class390 {
 												i_638_ | (((Class196) class196).anIntArray2420[i_629_]) & 0xffffff, i_638_ | (((Class196) class196).anIntArray2420[i_630_]) & 0xffffff, (((Class185) class185).anInt2307 * 1402414887), fs_545_[i_628_] * 255.0F, fs_545_[i_629_] * 255.0F, fs_545_[i_630_] * 255.0F, i_637_);
 									} else if (((((Class196) class196).anIntArray2420[i_628_]) & 0xffffff) != 0) {
 										if (i_637_ != -1 && (method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_637_, -2098559247).aByte2064)))
-											((Class144) class144).anInt1674 = -1694498816;
+											((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 										class144.method2425(true, true, false, f_633_, f_634_, f_635_, f, f_631_, f_632_, fs_543_[i_628_], fs_543_[i_629_], fs_543_[i_630_], (Class323.method5773((((Class196) class196).anIntArray2420[i_628_]), ((int) (fs_545_[i_628_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -115)),
 												(Class323.method5773((((Class196) class196).anIntArray2420[i_629_]), ((int) (fs_545_[i_629_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -14)), (Class323.method5773((((Class196) class196).anIntArray2420[i_630_]), ((int) (fs_545_[i_630_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -89)));
-										((Class144) class144).anInt1674 = 0;
+										((ChoppyItemFixClass) class144).anInt1674 = 0;
 									}
 								} else if (i_637_ != -1) {
 									int i_639_ = -16777216;
@@ -2630,9 +2630,9 @@ public class Class390_Sub3 extends Class390 {
 											i_639_ | ((((Class196) class196).anIntArray2420[i_630_]) & 0xffffff), 0, 0.0F, 0.0F, 0.0F, i_637_);
 								} else if (((((Class196) class196).anIntArray2420[i_628_]) & 0xffffff) != 0) {
 									if (i_637_ != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_637_, -1884038768).aByte2064))
-										((Class144) class144).anInt1674 = -1694498816;
+										((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 									class144.method2425(true, true, false, f_633_, f_634_, f_635_, f, f_631_, f_632_, fs_543_[i_628_], fs_543_[i_629_], fs_543_[i_630_], (((Class196) class196).anIntArray2420[i_628_]), (((Class196) class196).anIntArray2420[i_629_]), (((Class196) class196).anIntArray2420[i_630_]));
-									((Class144) class144).anInt1674 = 0;
+									((ChoppyItemFixClass) class144).anInt1674 = 0;
 								}
 							} else
 								class144.method2428(true, true, false, f_633_, f_634_, f_635_, f, f_631_, f_632_, fs_543_[i_628_], fs_543_[i_629_], fs_543_[i_630_], (((Class185) class185).anInt2307) * 1402414887);
@@ -2651,7 +2651,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_648_ = fs_542_[i_643_];
 						float f_649_ = (fs_545_[i_641_] + fs_545_[i_642_] + fs_545_[i_643_]);
 						if (((f - f_644_) * (f_648_ - f_647_) - (f_646_ - f_647_) * (f_645_ - f_644_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_644_ < 0.0F || f_645_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_644_ > (float) (((Class144) class144).anInt1684) || f_645_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_644_ < 0.0F || f_645_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_644_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_645_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							if (f_649_ < 3.0F) {
 								if (f_649_ > 0.0F) {
 									if (((((Class196) class196).anIntArray2420[i_641_]) & 0xffffff) != 0)
@@ -2668,7 +2668,7 @@ public class Class390_Sub3 extends Class390 {
 		}
 	}
 
-	void method14628(int i, int i_650_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_651_, float[] fs_652_, float[] fs_653_, float[] fs_654_, int i_655_) {
+	void method14628(int i, int i_650_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_651_, float[] fs_652_, float[] fs_653_, float[] fs_654_, int i_655_) {
 		Class177 class177 = ((Class390_Sub3) this).aClass177ArrayArray9336[i][i_650_];
 		if (class177 != null) {
 			if ((((Class177) class177).aByte2210 & 0x2) == 0) {
@@ -2723,10 +2723,10 @@ public class Class390_Sub3 extends Class390 {
 					f_666_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_656_) + f_681_ + (((Class390_Sub3) this).aFloat9350 * (float) i_659_)));
 					if (f_685_ < -f_666_)
 						return;
-					f_667_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_682_ / f_663_));
-					f_668_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_683_ / f_664_));
-					f_669_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_684_ / f_665_));
-					f_670_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_685_ / f_666_));
+					f_667_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_682_ / f_663_));
+					f_668_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_683_ / f_664_));
+					f_669_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_684_ / f_665_));
+					f_670_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_685_ / f_666_));
 					if (((Class185) class185).aBool2304) {
 						float f_686_ = f_682_ - ((Class185) class185).aFloat2305;
 						if (f_686_ > 0.0F) {
@@ -2756,21 +2756,21 @@ public class Class390_Sub3 extends Class390 {
 					float f_687_ = ((Class390_Sub3) this).aFloat9343 * (float) i_679_;
 					float f_688_ = ((Class390_Sub3) this).aFloat9344 * (float) i_679_;
 					float f_689_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_656_) + f_687_ + (((Class390_Sub3) this).aFloat9339 * (float) i_658_)));
-					f_671_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_689_ / f_663_));
+					f_671_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_689_ / f_663_));
 					float f_690_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_656_) + f_688_ + (((Class390_Sub3) this).aFloat9327 * (float) i_658_)));
-					f_672_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_690_ / f_663_));
+					f_672_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_690_ / f_663_));
 					float f_691_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_657_) + f_687_ + (((Class390_Sub3) this).aFloat9339 * (float) i_658_)));
-					f_673_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_691_ / f_664_));
+					f_673_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_691_ / f_664_));
 					float f_692_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_657_) + f_688_ + (((Class390_Sub3) this).aFloat9327 * (float) i_658_)));
-					f_674_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_692_ / f_664_));
+					f_674_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_692_ / f_664_));
 					float f_693_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_657_) + f_687_ + (((Class390_Sub3) this).aFloat9339 * (float) i_659_)));
-					f_675_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_693_ / f_665_));
+					f_675_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_693_ / f_665_));
 					float f_694_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_657_) + f_688_ + (((Class390_Sub3) this).aFloat9327 * (float) i_659_)));
-					f_676_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_694_ / f_665_));
+					f_676_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_694_ / f_665_));
 					float f_695_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_656_) + f_687_ + (((Class390_Sub3) this).aFloat9339 * (float) i_659_)));
-					f_677_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_695_ / f_666_));
+					f_677_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_695_ / f_666_));
 					float f_696_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_656_) + f_688_ + (((Class390_Sub3) this).aFloat9327 * (float) i_659_)));
-					f_678_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_696_ / f_666_));
+					f_678_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_696_ / f_666_));
 				} else {
 					int i_697_ = anIntArrayArray4772[i][i_650_];
 					int i_698_ = anIntArrayArray4772[i + 1][i_650_];
@@ -2792,10 +2792,10 @@ public class Class390_Sub3 extends Class390 {
 					f_666_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_656_) + (((Class390_Sub3) this).aFloat9346 * (float) i_700_) + (((Class390_Sub3) this).aFloat9350 * (float) i_659_)));
 					if (f_704_ < -f_666_)
 						return;
-					f_667_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_701_ / f_663_));
-					f_668_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_702_ / f_664_));
-					f_669_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_703_ / f_665_));
-					f_670_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_704_ / f_666_));
+					f_667_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_701_ / f_663_));
+					f_668_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_702_ / f_664_));
+					f_669_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_703_ / f_665_));
+					f_670_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_704_ / f_666_));
 					if (bool) {
 						float f_705_ = f_701_ - ((Class185) class185).aFloat2305;
 						if (f_705_ > 0.0F) {
@@ -2864,26 +2864,26 @@ public class Class390_Sub3 extends Class390 {
 						}
 					}
 					float f_711_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_656_) + (((Class390_Sub3) this).aFloat9343 * (float) i_697_) + (((Class390_Sub3) this).aFloat9339 * (float) i_658_)));
-					f_671_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_711_ / f_663_));
+					f_671_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_711_ / f_663_));
 					float f_712_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_656_) + (((Class390_Sub3) this).aFloat9344 * (float) i_697_) + (((Class390_Sub3) this).aFloat9327 * (float) i_658_)));
-					f_672_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_712_ / f_663_));
+					f_672_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_712_ / f_663_));
 					float f_713_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_657_) + (((Class390_Sub3) this).aFloat9343 * (float) i_698_) + (((Class390_Sub3) this).aFloat9339 * (float) i_658_)));
-					f_673_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_713_ / f_664_));
+					f_673_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_713_ / f_664_));
 					float f_714_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_657_) + (((Class390_Sub3) this).aFloat9344 * (float) i_698_) + (((Class390_Sub3) this).aFloat9327 * (float) i_658_)));
-					f_674_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_714_ / f_664_));
+					f_674_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_714_ / f_664_));
 					float f_715_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_657_) + (((Class390_Sub3) this).aFloat9343 * (float) i_699_) + (((Class390_Sub3) this).aFloat9339 * (float) i_659_)));
-					f_675_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_715_ / f_665_));
+					f_675_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_715_ / f_665_));
 					float f_716_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_657_) + (((Class390_Sub3) this).aFloat9344 * (float) i_699_) + (((Class390_Sub3) this).aFloat9327 * (float) i_659_)));
-					f_676_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_716_ / f_665_));
+					f_676_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_716_ / f_665_));
 					float f_717_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_656_) + (((Class390_Sub3) this).aFloat9343 * (float) i_700_) + (((Class390_Sub3) this).aFloat9339 * (float) i_659_)));
-					f_677_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_717_ / f_666_));
+					f_677_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_717_ / f_666_));
 					float f_718_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_656_) + (((Class390_Sub3) this).aFloat9344 * (float) i_700_) + (((Class390_Sub3) this).aFloat9327 * (float) i_659_)));
-					f_678_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_718_ / f_666_));
+					f_678_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_718_ / f_666_));
 				}
 				boolean bool_719_ = (((Class177) class177).aShort2212 != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(((Class177) class177).aShort2212, -2048506019).aByte2064));
 				float f_720_ = f_660_ + f_661_ + f_662_;
 				if (((f_675_ - f_677_) * (f_674_ - f_678_) - (f_676_ - f_678_) * (f_673_ - f_677_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_675_ < 0.0F || f_677_ < 0.0F || f_673_ < 0.0F || f_675_ > (float) ((Class144) class144).anInt1684 || f_677_ > (float) ((Class144) class144).anInt1684 || (f_673_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_675_ < 0.0F || f_677_ < 0.0F || f_673_ < 0.0F || f_675_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_677_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_673_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_720_ < 3.0F) {
 						if (f_720_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
@@ -2894,10 +2894,10 @@ public class Class390_Sub3 extends Class390 {
 										((Class177) class177).aShort2212);
 							} else {
 								if (bool_719_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_676_, f_678_, f_674_, f_675_, f_677_, f_673_, f_669_, f_670_, f_668_, (Class323.method5773(((Class177) class177).anInt2211, ((int) (f_661_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -83)), (Class323.method5773(((Class177) class177).anInt2206, ((int) (f_662_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -58)),
 										(Class323.method5773(((Class177) class177).anInt2204, ((int) (f_660_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -83)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_722_ = -16777216;
@@ -2906,19 +2906,19 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_676_, f_678_, f_674_, f_675_, f_677_, f_673_, f_669_, f_670_, f_668_, f_665_, f_666_, f_664_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_722_ | (((Class177) class177).anInt2211 & 0xffffff), i_722_ | (((Class177) class177).anInt2206 & 0xffffff), i_722_ | (((Class177) class177).anInt2204 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_719_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_676_, f_678_, f_674_, f_675_, f_677_, f_673_, f_669_, f_670_, f_668_, ((Class177) class177).anInt2211, ((Class177) class177).anInt2206, ((Class177) class177).anInt2204);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_676_, f_678_, f_674_, f_675_, f_677_, f_673_, f_669_, f_670_, f_668_, (((Class185) class185).anInt2307 * 1402414887));
 				}
 				f_720_ = f + f_660_ + f_662_;
 				if (((f_671_ - f_673_) * (f_678_ - f_674_) - (f_672_ - f_674_) * (f_677_ - f_673_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_671_ < 0.0F || f_673_ < 0.0F || f_677_ < 0.0F || f_671_ > (float) ((Class144) class144).anInt1684 || f_673_ > (float) ((Class144) class144).anInt1684 || (f_677_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_671_ < 0.0F || f_673_ < 0.0F || f_677_ < 0.0F || f_671_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_673_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_677_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_720_ < 3.0F) {
 						if (bool_719_)
-							((Class144) class144).anInt1674 = -1694498816;
+							((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 						if (f_720_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
 								int i_723_ = -16777216;
@@ -2927,10 +2927,10 @@ public class Class390_Sub3 extends Class390 {
 								class144.method2424(true, true, false, f_672_, f_674_, f_678_, f_671_, f_673_, f_677_, f_667_, f_668_, f_670_, f_663_, f_664_, f_666_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_723_ | (((Class177) class177).anInt2209 & 0xffffff), i_723_ | (((Class177) class177).anInt2204 & 0xffffff), i_723_ | (((Class177) class177).anInt2206 & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), f * 255.0F, f_660_ * 255.0F, f_662_ * 255.0F, ((Class177) class177).aShort2212);
 							} else {
 								if (bool_719_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_672_, f_674_, f_678_, f_671_, f_673_, f_677_, f_667_, f_668_, f_670_, (Class323.method5773(((Class177) class177).anInt2209, ((int) (f * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -18)), (Class323.method5773(((Class177) class177).anInt2204, ((int) (f_660_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -36)),
 										(Class323.method5773(((Class177) class177).anInt2206, ((int) (f_662_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -83)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_724_ = -16777216;
@@ -2939,9 +2939,9 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_672_, f_674_, f_678_, f_671_, f_673_, f_677_, f_667_, f_668_, f_670_, f_663_, f_664_, f_666_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_724_ | (((Class177) class177).anInt2209 & 0xffffff), i_724_ | (((Class177) class177).anInt2204 & 0xffffff), i_724_ | (((Class177) class177).anInt2206 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_719_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_672_, f_674_, f_678_, f_671_, f_673_, f_677_, f_667_, f_668_, f_670_, ((Class177) class177).anInt2209, ((Class177) class177).anInt2204, ((Class177) class177).anInt2206);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_672_, f_674_, f_678_, f_671_, f_673_, f_677_, f_667_, f_668_, f_670_, (((Class185) class185).anInt2307 * 1402414887));
@@ -2965,7 +2965,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_729_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_726_) + (((Class390_Sub3) this).aFloat9346 * (float) i_727_) + (((Class390_Sub3) this).aFloat9350 * (float) i_728_)));
 					if (f < -f_729_)
 						return;
-					float f_730_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_729_);
+					float f_730_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_729_);
 					fs_654_[i_725_] = 0.0F;
 					if (bool) {
 						float f_731_ = f - ((Class185) class185).aFloat2305;
@@ -2988,8 +2988,8 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_734_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_726_) + (((Class390_Sub3) this).aFloat9343 * (float) i_727_) + (((Class390_Sub3) this).aFloat9339 * (float) i_728_)));
 					float f_735_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_726_) + (((Class390_Sub3) this).aFloat9344 * (float) i_727_) + (((Class390_Sub3) this).aFloat9327 * (float) i_728_)));
-					fs[i_725_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_734_ / f_729_));
-					fs_651_[i_725_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_735_ / f_729_));
+					fs[i_725_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_734_ / f_729_));
+					fs_651_[i_725_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_735_ / f_729_));
 					fs_652_[i_725_] = f_730_;
 					fs_653_[i_725_] = f_729_;
 				}
@@ -3006,7 +3006,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_744_ = fs_651_[i_739_];
 						float f_745_ = (fs_654_[i_737_] + fs_654_[i_738_] + fs_654_[i_739_]);
 						if (((f - f_740_) * (f_744_ - f_743_) - (f_742_ - f_743_) * (f_741_ - f_740_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_740_ < 0.0F || f_741_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_740_ > (float) (((Class144) class144).anInt1684) || f_741_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_740_ < 0.0F || f_741_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_740_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_741_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							short i_746_ = (((Class196) class196).aShortArray2413[i_736_]);
 							if (f_745_ < 3.0F) {
 								if (f_745_ > 0.0F) {
@@ -3019,10 +3019,10 @@ public class Class390_Sub3 extends Class390 {
 												i_747_ | (((Class196) class196).anIntArray2420[i_738_]) & 0xffffff, i_747_ | (((Class196) class196).anIntArray2420[i_739_]) & 0xffffff, (((Class185) class185).anInt2307 * 1402414887), fs_654_[i_737_] * 255.0F, fs_654_[i_738_] * 255.0F, fs_654_[i_739_] * 255.0F, i_746_);
 									} else if (((((Class196) class196).anIntArray2420[i_737_]) & 0xffffff) != 0) {
 										if (i_746_ != -1 && (method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_746_, -2004855127).aByte2064)))
-											((Class144) class144).anInt1674 = -1694498816;
+											((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 										class144.method2425(true, true, false, f_742_, f_743_, f_744_, f, f_740_, f_741_, fs_652_[i_737_], fs_652_[i_738_], fs_652_[i_739_], (Class323.method5773((((Class196) class196).anIntArray2420[i_737_]), ((int) (fs_654_[i_737_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -19)),
 												(Class323.method5773((((Class196) class196).anIntArray2420[i_738_]), ((int) (fs_654_[i_738_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -87)), (Class323.method5773((((Class196) class196).anIntArray2420[i_739_]), ((int) (fs_654_[i_739_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -72)));
-										((Class144) class144).anInt1674 = 0;
+										((ChoppyItemFixClass) class144).anInt1674 = 0;
 									}
 								} else if (i_746_ != -1) {
 									int i_748_ = -16777216;
@@ -3033,9 +3033,9 @@ public class Class390_Sub3 extends Class390 {
 											i_748_ | ((((Class196) class196).anIntArray2420[i_739_]) & 0xffffff), 0, 0.0F, 0.0F, 0.0F, i_746_);
 								} else if (((((Class196) class196).anIntArray2420[i_737_]) & 0xffffff) != 0) {
 									if (i_746_ != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_746_, -1987674831).aByte2064))
-										((Class144) class144).anInt1674 = -1694498816;
+										((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 									class144.method2425(true, true, false, f_742_, f_743_, f_744_, f, f_740_, f_741_, fs_652_[i_737_], fs_652_[i_738_], fs_652_[i_739_], (((Class196) class196).anIntArray2420[i_737_]), (((Class196) class196).anIntArray2420[i_738_]), (((Class196) class196).anIntArray2420[i_739_]));
-									((Class144) class144).anInt1674 = 0;
+									((ChoppyItemFixClass) class144).anInt1674 = 0;
 								}
 							} else
 								class144.method2428(true, true, false, f_742_, f_743_, f_744_, f, f_740_, f_741_, fs_652_[i_737_], fs_652_[i_738_], fs_652_[i_739_], (((Class185) class185).anInt2307) * 1402414887);
@@ -3054,7 +3054,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_757_ = fs_651_[i_752_];
 						float f_758_ = (fs_654_[i_750_] + fs_654_[i_751_] + fs_654_[i_752_]);
 						if (((f - f_753_) * (f_757_ - f_756_) - (f_755_ - f_756_) * (f_754_ - f_753_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_753_ < 0.0F || f_754_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_753_ > (float) (((Class144) class144).anInt1684) || f_754_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_753_ < 0.0F || f_754_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_753_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_754_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							if (f_758_ < 3.0F) {
 								if (f_758_ > 0.0F) {
 									if (((((Class196) class196).anIntArray2420[i_750_]) & 0xffffff) != 0)
@@ -3075,7 +3075,7 @@ public class Class390_Sub3 extends Class390 {
 		return false;
 	}
 
-	void method14629(int i, int i_762_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_763_, float[] fs_764_, float[] fs_765_, float[] fs_766_, int i_767_) {
+	void method14629(int i, int i_762_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_763_, float[] fs_764_, float[] fs_765_, float[] fs_766_, int i_767_) {
 		Class177 class177 = ((Class390_Sub3) this).aClass177ArrayArray9336[i][i_762_];
 		if (class177 != null) {
 			if ((((Class177) class177).aByte2210 & 0x2) == 0) {
@@ -3130,10 +3130,10 @@ public class Class390_Sub3 extends Class390 {
 					f_778_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_768_) + f_793_ + (((Class390_Sub3) this).aFloat9350 * (float) i_771_)));
 					if (f_797_ < -f_778_)
 						return;
-					f_779_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_794_ / f_775_));
-					f_780_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_795_ / f_776_));
-					f_781_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_796_ / f_777_));
-					f_782_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_797_ / f_778_));
+					f_779_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_794_ / f_775_));
+					f_780_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_795_ / f_776_));
+					f_781_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_796_ / f_777_));
+					f_782_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_797_ / f_778_));
 					if (((Class185) class185).aBool2304) {
 						float f_798_ = f_794_ - ((Class185) class185).aFloat2305;
 						if (f_798_ > 0.0F) {
@@ -3163,21 +3163,21 @@ public class Class390_Sub3 extends Class390 {
 					float f_799_ = ((Class390_Sub3) this).aFloat9343 * (float) i_791_;
 					float f_800_ = ((Class390_Sub3) this).aFloat9344 * (float) i_791_;
 					float f_801_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_768_) + f_799_ + (((Class390_Sub3) this).aFloat9339 * (float) i_770_)));
-					f_783_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_801_ / f_775_));
+					f_783_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_801_ / f_775_));
 					float f_802_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_768_) + f_800_ + (((Class390_Sub3) this).aFloat9327 * (float) i_770_)));
-					f_784_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_802_ / f_775_));
+					f_784_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_802_ / f_775_));
 					float f_803_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_769_) + f_799_ + (((Class390_Sub3) this).aFloat9339 * (float) i_770_)));
-					f_785_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_803_ / f_776_));
+					f_785_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_803_ / f_776_));
 					float f_804_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_769_) + f_800_ + (((Class390_Sub3) this).aFloat9327 * (float) i_770_)));
-					f_786_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_804_ / f_776_));
+					f_786_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_804_ / f_776_));
 					float f_805_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_769_) + f_799_ + (((Class390_Sub3) this).aFloat9339 * (float) i_771_)));
-					f_787_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_805_ / f_777_));
+					f_787_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_805_ / f_777_));
 					float f_806_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_769_) + f_800_ + (((Class390_Sub3) this).aFloat9327 * (float) i_771_)));
-					f_788_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_806_ / f_777_));
+					f_788_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_806_ / f_777_));
 					float f_807_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_768_) + f_799_ + (((Class390_Sub3) this).aFloat9339 * (float) i_771_)));
-					f_789_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_807_ / f_778_));
+					f_789_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_807_ / f_778_));
 					float f_808_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_768_) + f_800_ + (((Class390_Sub3) this).aFloat9327 * (float) i_771_)));
-					f_790_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_808_ / f_778_));
+					f_790_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_808_ / f_778_));
 				} else {
 					int i_809_ = anIntArrayArray4772[i][i_762_];
 					int i_810_ = anIntArrayArray4772[i + 1][i_762_];
@@ -3199,10 +3199,10 @@ public class Class390_Sub3 extends Class390 {
 					f_778_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_768_) + (((Class390_Sub3) this).aFloat9346 * (float) i_812_) + (((Class390_Sub3) this).aFloat9350 * (float) i_771_)));
 					if (f_816_ < -f_778_)
 						return;
-					f_779_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_813_ / f_775_));
-					f_780_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_814_ / f_776_));
-					f_781_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_815_ / f_777_));
-					f_782_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_816_ / f_778_));
+					f_779_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_813_ / f_775_));
+					f_780_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_814_ / f_776_));
+					f_781_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_815_ / f_777_));
+					f_782_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_816_ / f_778_));
 					if (bool) {
 						float f_817_ = f_813_ - ((Class185) class185).aFloat2305;
 						if (f_817_ > 0.0F) {
@@ -3271,26 +3271,26 @@ public class Class390_Sub3 extends Class390 {
 						}
 					}
 					float f_823_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_768_) + (((Class390_Sub3) this).aFloat9343 * (float) i_809_) + (((Class390_Sub3) this).aFloat9339 * (float) i_770_)));
-					f_783_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_823_ / f_775_));
+					f_783_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_823_ / f_775_));
 					float f_824_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_768_) + (((Class390_Sub3) this).aFloat9344 * (float) i_809_) + (((Class390_Sub3) this).aFloat9327 * (float) i_770_)));
-					f_784_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_824_ / f_775_));
+					f_784_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_824_ / f_775_));
 					float f_825_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_769_) + (((Class390_Sub3) this).aFloat9343 * (float) i_810_) + (((Class390_Sub3) this).aFloat9339 * (float) i_770_)));
-					f_785_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_825_ / f_776_));
+					f_785_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_825_ / f_776_));
 					float f_826_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_769_) + (((Class390_Sub3) this).aFloat9344 * (float) i_810_) + (((Class390_Sub3) this).aFloat9327 * (float) i_770_)));
-					f_786_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_826_ / f_776_));
+					f_786_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_826_ / f_776_));
 					float f_827_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_769_) + (((Class390_Sub3) this).aFloat9343 * (float) i_811_) + (((Class390_Sub3) this).aFloat9339 * (float) i_771_)));
-					f_787_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_827_ / f_777_));
+					f_787_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_827_ / f_777_));
 					float f_828_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_769_) + (((Class390_Sub3) this).aFloat9344 * (float) i_811_) + (((Class390_Sub3) this).aFloat9327 * (float) i_771_)));
-					f_788_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_828_ / f_777_));
+					f_788_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_828_ / f_777_));
 					float f_829_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_768_) + (((Class390_Sub3) this).aFloat9343 * (float) i_812_) + (((Class390_Sub3) this).aFloat9339 * (float) i_771_)));
-					f_789_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_829_ / f_778_));
+					f_789_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_829_ / f_778_));
 					float f_830_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_768_) + (((Class390_Sub3) this).aFloat9344 * (float) i_812_) + (((Class390_Sub3) this).aFloat9327 * (float) i_771_)));
-					f_790_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_830_ / f_778_));
+					f_790_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_830_ / f_778_));
 				}
 				boolean bool_831_ = (((Class177) class177).aShort2212 != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(((Class177) class177).aShort2212, -2032112997).aByte2064));
 				float f_832_ = f_772_ + f_773_ + f_774_;
 				if (((f_787_ - f_789_) * (f_786_ - f_790_) - (f_788_ - f_790_) * (f_785_ - f_789_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_787_ < 0.0F || f_789_ < 0.0F || f_785_ < 0.0F || f_787_ > (float) ((Class144) class144).anInt1684 || f_789_ > (float) ((Class144) class144).anInt1684 || (f_785_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_787_ < 0.0F || f_789_ < 0.0F || f_785_ < 0.0F || f_787_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_789_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_785_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_832_ < 3.0F) {
 						if (f_832_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
@@ -3301,10 +3301,10 @@ public class Class390_Sub3 extends Class390 {
 										((Class177) class177).aShort2212);
 							} else {
 								if (bool_831_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_788_, f_790_, f_786_, f_787_, f_789_, f_785_, f_781_, f_782_, f_780_, (Class323.method5773(((Class177) class177).anInt2211, ((int) (f_773_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -86)), (Class323.method5773(((Class177) class177).anInt2206, ((int) (f_774_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -73)),
 										(Class323.method5773(((Class177) class177).anInt2204, ((int) (f_772_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -81)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_834_ = -16777216;
@@ -3313,19 +3313,19 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_788_, f_790_, f_786_, f_787_, f_789_, f_785_, f_781_, f_782_, f_780_, f_777_, f_778_, f_776_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, i_834_ | (((Class177) class177).anInt2211 & 0xffffff), i_834_ | (((Class177) class177).anInt2206 & 0xffffff), i_834_ | (((Class177) class177).anInt2204 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_831_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_788_, f_790_, f_786_, f_787_, f_789_, f_785_, f_781_, f_782_, f_780_, ((Class177) class177).anInt2211, ((Class177) class177).anInt2206, ((Class177) class177).anInt2204);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_788_, f_790_, f_786_, f_787_, f_789_, f_785_, f_781_, f_782_, f_780_, (((Class185) class185).anInt2307 * 1402414887));
 				}
 				f_832_ = f + f_772_ + f_774_;
 				if (((f_783_ - f_785_) * (f_790_ - f_786_) - (f_784_ - f_786_) * (f_789_ - f_785_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_783_ < 0.0F || f_785_ < 0.0F || f_789_ < 0.0F || f_783_ > (float) ((Class144) class144).anInt1684 || f_785_ > (float) ((Class144) class144).anInt1684 || (f_789_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_783_ < 0.0F || f_785_ < 0.0F || f_789_ < 0.0F || f_783_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_785_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_789_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (f_832_ < 3.0F) {
 						if (bool_831_)
-							((Class144) class144).anInt1674 = -1694498816;
+							((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 						if (f_832_ > 0.0F) {
 							if (((Class177) class177).aShort2212 >= 0) {
 								int i_835_ = -16777216;
@@ -3334,10 +3334,10 @@ public class Class390_Sub3 extends Class390 {
 								class144.method2424(true, true, false, f_784_, f_786_, f_790_, f_783_, f_785_, f_789_, f_779_, f_780_, f_782_, f_775_, f_776_, f_778_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_835_ | (((Class177) class177).anInt2209 & 0xffffff), i_835_ | (((Class177) class177).anInt2204 & 0xffffff), i_835_ | (((Class177) class177).anInt2206 & 0xffffff), (((Class185) class185).anInt2307 * 1402414887), f * 255.0F, f_772_ * 255.0F, f_774_ * 255.0F, ((Class177) class177).aShort2212);
 							} else {
 								if (bool_831_)
-									((Class144) class144).anInt1674 = 100;
+									((ChoppyItemFixClass) class144).anInt1674 = 100;
 								class144.method2425(true, true, false, f_784_, f_786_, f_790_, f_783_, f_785_, f_789_, f_779_, f_780_, f_782_, (Class323.method5773(((Class177) class177).anInt2209, ((int) (f * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -68)), (Class323.method5773(((Class177) class177).anInt2204, ((int) (f_772_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -90)),
 										(Class323.method5773(((Class177) class177).anInt2206, ((int) (f_774_ * 255.0F) << 24 | (((Class185) class185).anInt2307 * 1402414887)), (byte) -55)));
-								((Class144) class144).anInt1674 = 0;
+								((ChoppyItemFixClass) class144).anInt1674 = 0;
 							}
 						} else if (((Class177) class177).aShort2212 >= 0) {
 							int i_836_ = -16777216;
@@ -3346,9 +3346,9 @@ public class Class390_Sub3 extends Class390 {
 							class144.method2424(true, true, false, f_784_, f_786_, f_790_, f_783_, f_785_, f_789_, f_779_, f_780_, f_782_, f_775_, f_776_, f_778_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, i_836_ | (((Class177) class177).anInt2209 & 0xffffff), i_836_ | (((Class177) class177).anInt2204 & 0xffffff), i_836_ | (((Class177) class177).anInt2206 & 0xffffff), 0, 0.0F, 0.0F, 0.0F, ((Class177) class177).aShort2212);
 						} else {
 							if (bool_831_)
-								((Class144) class144).anInt1674 = 100;
+								((ChoppyItemFixClass) class144).anInt1674 = 100;
 							class144.method2425(true, true, false, f_784_, f_786_, f_790_, f_783_, f_785_, f_789_, f_779_, f_780_, f_782_, ((Class177) class177).anInt2209, ((Class177) class177).anInt2204, ((Class177) class177).anInt2206);
-							((Class144) class144).anInt1674 = 0;
+							((ChoppyItemFixClass) class144).anInt1674 = 0;
 						}
 					} else
 						class144.method2428(true, true, false, f_784_, f_786_, f_790_, f_783_, f_785_, f_789_, f_779_, f_780_, f_782_, (((Class185) class185).anInt2307 * 1402414887));
@@ -3372,7 +3372,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_841_ = (((Class390_Sub3) this).aFloat9354 + ((((Class390_Sub3) this).aFloat9342 * (float) i_838_) + (((Class390_Sub3) this).aFloat9346 * (float) i_839_) + (((Class390_Sub3) this).aFloat9350 * (float) i_840_)));
 					if (f < -f_841_)
 						return;
-					float f_842_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_841_);
+					float f_842_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_841_);
 					fs_766_[i_837_] = 0.0F;
 					if (bool) {
 						float f_843_ = f - ((Class185) class185).aFloat2305;
@@ -3395,8 +3395,8 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_846_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_838_) + (((Class390_Sub3) this).aFloat9343 * (float) i_839_) + (((Class390_Sub3) this).aFloat9339 * (float) i_840_)));
 					float f_847_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_838_) + (((Class390_Sub3) this).aFloat9344 * (float) i_839_) + (((Class390_Sub3) this).aFloat9327 * (float) i_840_)));
-					fs[i_837_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_846_ / f_841_));
-					fs_763_[i_837_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_847_ / f_841_));
+					fs[i_837_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_846_ / f_841_));
+					fs_763_[i_837_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_847_ / f_841_));
 					fs_764_[i_837_] = f_842_;
 					fs_765_[i_837_] = f_841_;
 				}
@@ -3413,7 +3413,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_856_ = fs_763_[i_851_];
 						float f_857_ = (fs_766_[i_849_] + fs_766_[i_850_] + fs_766_[i_851_]);
 						if (((f - f_852_) * (f_856_ - f_855_) - (f_854_ - f_855_) * (f_853_ - f_852_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_852_ < 0.0F || f_853_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_852_ > (float) (((Class144) class144).anInt1684) || f_853_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_852_ < 0.0F || f_853_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_852_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_853_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							short i_858_ = (((Class196) class196).aShortArray2413[i_848_]);
 							if (f_857_ < 3.0F) {
 								if (f_857_ > 0.0F) {
@@ -3426,10 +3426,10 @@ public class Class390_Sub3 extends Class390 {
 												i_859_ | (((Class196) class196).anIntArray2420[i_850_]) & 0xffffff, i_859_ | (((Class196) class196).anIntArray2420[i_851_]) & 0xffffff, (((Class185) class185).anInt2307 * 1402414887), fs_766_[i_849_] * 255.0F, fs_766_[i_850_] * 255.0F, fs_766_[i_851_] * 255.0F, i_858_);
 									} else if (((((Class196) class196).anIntArray2420[i_849_]) & 0xffffff) != 0) {
 										if (i_858_ != -1 && (method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_858_, -2101307436).aByte2064)))
-											((Class144) class144).anInt1674 = -1694498816;
+											((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 										class144.method2425(true, true, false, f_854_, f_855_, f_856_, f, f_852_, f_853_, fs_764_[i_849_], fs_764_[i_850_], fs_764_[i_851_], (Class323.method5773((((Class196) class196).anIntArray2420[i_849_]), ((int) (fs_766_[i_849_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -21)),
 												(Class323.method5773((((Class196) class196).anIntArray2420[i_850_]), ((int) (fs_766_[i_850_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -42)), (Class323.method5773((((Class196) class196).anIntArray2420[i_851_]), ((int) (fs_766_[i_851_] * 255.0F) << 24 | (((Class185) class185).anInt2307) * 1402414887), (byte) -9)));
-										((Class144) class144).anInt1674 = 0;
+										((ChoppyItemFixClass) class144).anInt1674 = 0;
 									}
 								} else if (i_858_ != -1) {
 									int i_860_ = -16777216;
@@ -3440,9 +3440,9 @@ public class Class390_Sub3 extends Class390 {
 											i_860_ | ((((Class196) class196).anIntArray2420[i_851_]) & 0xffffff), 0, 0.0F, 0.0F, 0.0F, i_858_);
 								} else if (((((Class196) class196).anIntArray2420[i_849_]) & 0xffffff) != 0) {
 									if (i_858_ != -1 && method14620(((Class390_Sub3) this).aClass505_Sub3_9353.anInterface22_5834.method144(i_858_, -2113188613).aByte2064))
-										((Class144) class144).anInt1674 = -1694498816;
+										((ChoppyItemFixClass) class144).anInt1674 = -1694498816;
 									class144.method2425(true, true, false, f_854_, f_855_, f_856_, f, f_852_, f_853_, fs_764_[i_849_], fs_764_[i_850_], fs_764_[i_851_], (((Class196) class196).anIntArray2420[i_849_]), (((Class196) class196).anIntArray2420[i_850_]), (((Class196) class196).anIntArray2420[i_851_]));
-									((Class144) class144).anInt1674 = 0;
+									((ChoppyItemFixClass) class144).anInt1674 = 0;
 								}
 							} else
 								class144.method2428(true, true, false, f_854_, f_855_, f_856_, f, f_852_, f_853_, fs_764_[i_849_], fs_764_[i_850_], fs_764_[i_851_], (((Class185) class185).anInt2307) * 1402414887);
@@ -3461,7 +3461,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_869_ = fs_763_[i_864_];
 						float f_870_ = (fs_766_[i_862_] + fs_766_[i_863_] + fs_766_[i_864_]);
 						if (((f - f_865_) * (f_869_ - f_868_) - (f_867_ - f_868_) * (f_866_ - f_865_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_865_ < 0.0F || f_866_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_865_ > (float) (((Class144) class144).anInt1684) || f_866_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_865_ < 0.0F || f_866_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_865_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_866_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							if (f_870_ < 3.0F) {
 								if (f_870_ > 0.0F) {
 									if (((((Class196) class196).anIntArray2420[i_862_]) & 0xffffff) != 0)
@@ -3478,7 +3478,7 @@ public class Class390_Sub3 extends Class390 {
 		}
 	}
 
-	void method14630(int i, int i_871_, boolean bool, Class185 class185, Class144 class144, float[] fs, float[] fs_872_, float[] fs_873_, float[] fs_874_, float[] fs_875_, int i_876_) {
+	void method14630(int i, int i_871_, boolean bool, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_872_, float[] fs_873_, float[] fs_874_, float[] fs_875_, int i_876_) {
 		Class181 class181 = ((Class390_Sub3) this).aClass181ArrayArray9335[i][i_871_];
 		if (i_876_ == 0 || (i_876_ & 0x2) == 0) {
 			if (class181 != null) {
@@ -3512,9 +3512,9 @@ public class Class390_Sub3 extends Class390 {
 					}
 					float f_885_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_878_) + (((Class390_Sub3) this).aFloat9343 * (float) i_879_) + (((Class390_Sub3) this).aFloat9339 * (float) i_880_)));
 					float f_886_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_878_) + (((Class390_Sub3) this).aFloat9344 * (float) i_879_) + (((Class390_Sub3) this).aFloat9327 * (float) i_880_)));
-					fs[i_877_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_885_ / f_881_));
-					fs_872_[i_877_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_886_ / f_881_));
-					fs_873_[i_877_] = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_881_);
+					fs[i_877_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_885_ / f_881_));
+					fs_872_[i_877_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_886_ / f_881_));
+					fs_873_[i_877_] = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_881_);
 					fs_874_[i_877_] = f_881_;
 				}
 				float f = (float) (anInt4774 * 750971439);
@@ -3529,7 +3529,7 @@ public class Class390_Sub3 extends Class390 {
 					float f_895_ = fs_872_[i_889_];
 					float f_896_ = fs_872_[i_890_];
 					if (((f_891_ - f_892_) * (f_896_ - f_895_) - (f_894_ - f_895_) * (f_893_ - f_892_)) > 0.0F) {
-						((Class144) class144).aBool1708 = (f_891_ < 0.0F || f_892_ < 0.0F || f_893_ < 0.0F || (f_891_ > (float) ((Class144) class144).anInt1684) || (f_892_ > (float) ((Class144) class144).anInt1684) || (f_893_ > (float) ((Class144) class144).anInt1684));
+						((ChoppyItemFixClass) class144).aBool1708 = (f_891_ < 0.0F || f_892_ < 0.0F || f_893_ < 0.0F || (f_891_ > (float) ((ChoppyItemFixClass) class144).anInt1684) || (f_892_ > (float) ((ChoppyItemFixClass) class144).anInt1684) || (f_893_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 						if (fs_875_[i_888_] + fs_875_[i_889_] + fs_875_[i_890_] < 3.0F) {
 							int i_897_ = i << anInt4775 * 1856651955;
 							int i_898_ = i_871_ << anInt4775 * 1856651955;
@@ -3567,13 +3567,13 @@ public class Class390_Sub3 extends Class390 {
 		/* empty */
 	}
 
-	void method14632(int i, int i_902_, int i_903_, int i_904_, int i_905_, int i_906_, int i_907_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_908_) {
+	void method14632(int i, int i_902_, int i_903_, int i_904_, int i_905_, int i_906_, int i_907_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_908_) {
 		int i_909_ = (i_907_ - i_905_) * i_903_ / 256;
 		int i_910_ = i_903_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_911_ = i;
 		int i_912_ = i_902_ + i_909_;
 		for (int i_913_ = i_904_; i_913_ < i_906_; i_913_++) {
@@ -3629,17 +3629,17 @@ public class Class390_Sub3 extends Class390 {
 			i_912_ = i_902_ + i_909_;
 			i_911_ += i_910_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
-	void method14633(int i, int i_930_, int i_931_, int i_932_, int i_933_, int i_934_, int i_935_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_936_) {
+	void method14633(int i, int i_930_, int i_931_, int i_932_, int i_933_, int i_934_, int i_935_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_936_) {
 		int i_937_ = (i_935_ - i_933_) * i_931_ / 256;
 		int i_938_ = i_931_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_939_ = i;
 		int i_940_ = i_930_ + i_937_;
 		for (int i_941_ = i_932_; i_941_ < i_934_; i_941_++) {
@@ -3695,17 +3695,17 @@ public class Class390_Sub3 extends Class390 {
 			i_940_ = i_930_ + i_937_;
 			i_939_ += i_938_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
-	void method14634(int i, int i_958_, int i_959_, int i_960_, int i_961_, int i_962_, int i_963_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_964_) {
+	void method14634(int i, int i_958_, int i_959_, int i_960_, int i_961_, int i_962_, int i_963_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_964_) {
 		int i_965_ = (i_963_ - i_961_) * i_959_ / 256;
 		int i_966_ = i_959_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_967_ = i;
 		int i_968_ = i_958_ + i_965_;
 		for (int i_969_ = i_960_; i_969_ < i_962_; i_969_++) {
@@ -3783,17 +3783,17 @@ public class Class390_Sub3 extends Class390 {
 			i_968_ = i_958_ + i_965_;
 			i_967_ += i_966_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
-	void method14635(int i, int i_996_, int i_997_, int i_998_, int i_999_, int i_1000_, int i_1001_, boolean[][] bools, Class185 class185, Class144 class144, float[] fs, float[] fs_1002_) {
+	void method14635(int i, int i_996_, int i_997_, int i_998_, int i_999_, int i_1000_, int i_1001_, boolean[][] bools, Class185 class185, ChoppyItemFixClass class144, float[] fs, float[] fs_1002_) {
 		int i_1003_ = (i_1001_ - i_999_) * i_997_ / 256;
 		int i_1004_ = i_997_ >> 8;
 		boolean bool = ((Class185) class185).aBool2334;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(false);
-		((Class144) class144).aBool1675 = false;
-		((Class144) class144).aBool1672 = false;
+		((ChoppyItemFixClass) class144).aBool1675 = false;
+		((ChoppyItemFixClass) class144).aBool1672 = false;
 		int i_1005_ = i;
 		int i_1006_ = i_996_ + i_1003_;
 		for (int i_1007_ = i_998_; i_1007_ < i_1000_; i_1007_++) {
@@ -3873,7 +3873,7 @@ public class Class390_Sub3 extends Class390 {
 			i_1006_ = i_996_ + i_1003_;
 			i_1005_ += i_1004_;
 		}
-		((Class144) class144).aBool1675 = true;
+		((ChoppyItemFixClass) class144).aBool1675 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.RA(bool);
 	}
 
@@ -4021,7 +4021,7 @@ public class Class390_Sub3 extends Class390 {
 		return false;
 	}
 
-	void method14636(int i, int i_1072_, Class144 class144, float[] fs, float[] fs_1073_, float[] fs_1074_, float[] fs_1075_, float[] fs_1076_, int i_1077_) {
+	void method14636(int i, int i_1072_, ChoppyItemFixClass class144, float[] fs, float[] fs_1073_, float[] fs_1074_, float[] fs_1075_, float[] fs_1076_, int i_1077_) {
 		Class178 class178 = ((Class390_Sub3) this).aClass178ArrayArray9352[i][i_1072_];
 		if (class178 != null) {
 			if ((((Class178) class178).aByte2219 & 0x2) == 0) {
@@ -4075,25 +4075,25 @@ public class Class390_Sub3 extends Class390 {
 					float f_1104_ = ((Class390_Sub3) this).aFloat9343 * (float) i_1097_;
 					float f_1105_ = ((Class390_Sub3) this).aFloat9344 * (float) i_1097_;
 					float f_1106_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1078_) + f_1104_ + (((Class390_Sub3) this).aFloat9339 * (float) i_1080_)));
-					f_1085_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_1106_ / f);
+					f_1085_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_1106_ / f);
 					float f_1107_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1078_) + f_1105_ + (((Class390_Sub3) this).aFloat9327 * (float) i_1080_)));
-					f_1086_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_1107_ / f);
-					f_1087_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_1100_ / f);
+					f_1086_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_1107_ / f);
+					f_1087_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_1100_ / f);
 					float f_1108_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1079_) + f_1104_ + (((Class390_Sub3) this).aFloat9339 * (float) i_1080_)));
-					f_1088_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1108_ / f_1082_));
+					f_1088_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1108_ / f_1082_));
 					float f_1109_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1079_) + f_1105_ + (((Class390_Sub3) this).aFloat9327 * (float) i_1080_)));
-					f_1089_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1109_ / f_1082_));
-					f_1090_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_1101_ / f_1082_));
+					f_1089_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1109_ / f_1082_));
+					f_1090_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_1101_ / f_1082_));
 					float f_1110_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1079_) + f_1104_ + (((Class390_Sub3) this).aFloat9339 * (float) i_1081_)));
-					f_1091_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1110_ / f_1083_));
+					f_1091_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1110_ / f_1083_));
 					float f_1111_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1079_) + f_1105_ + (((Class390_Sub3) this).aFloat9327 * (float) i_1081_)));
-					f_1092_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1111_ / f_1083_));
-					f_1093_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_1102_ / f_1083_));
+					f_1092_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1111_ / f_1083_));
+					f_1093_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_1102_ / f_1083_));
 					float f_1112_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1078_) + f_1104_ + (((Class390_Sub3) this).aFloat9339 * (float) i_1081_)));
-					f_1094_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1112_ / f_1084_));
+					f_1094_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1112_ / f_1084_));
 					float f_1113_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1078_) + f_1105_ + (((Class390_Sub3) this).aFloat9327 * (float) i_1081_)));
-					f_1095_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1113_ / f_1084_));
-					f_1096_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_1103_ / f_1084_));
+					f_1095_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1113_ / f_1084_));
+					f_1096_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_1103_ / f_1084_));
 				} else {
 					int i_1114_ = anIntArrayArray4772[i][i_1072_];
 					int i_1115_ = anIntArrayArray4772[i + 1][i_1072_];
@@ -4116,28 +4116,28 @@ public class Class390_Sub3 extends Class390 {
 					if (f_1121_ < -f_1084_)
 						return;
 					float f_1122_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1078_) + (((Class390_Sub3) this).aFloat9343 * (float) i_1114_) + (((Class390_Sub3) this).aFloat9339 * (float) i_1080_)));
-					f_1085_ = (((Class144) class144).aFloat1678 + ((Class144) class144).aFloat1679 * f_1122_ / f);
+					f_1085_ = (((ChoppyItemFixClass) class144).aFloat1678 + ((ChoppyItemFixClass) class144).aFloat1679 * f_1122_ / f);
 					float f_1123_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1078_) + (((Class390_Sub3) this).aFloat9344 * (float) i_1114_) + (((Class390_Sub3) this).aFloat9327 * (float) i_1080_)));
-					f_1086_ = (((Class144) class144).aFloat1680 + ((Class144) class144).aFloat1702 * f_1123_ / f);
-					f_1087_ = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f_1118_ / f);
+					f_1086_ = (((ChoppyItemFixClass) class144).aFloat1680 + ((ChoppyItemFixClass) class144).aFloat1702 * f_1123_ / f);
+					f_1087_ = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f_1118_ / f);
 					float f_1124_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1079_) + (((Class390_Sub3) this).aFloat9343 * (float) i_1115_) + (((Class390_Sub3) this).aFloat9339 * (float) i_1080_)));
-					f_1088_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1124_ / f_1082_));
+					f_1088_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1124_ / f_1082_));
 					float f_1125_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1079_) + (((Class390_Sub3) this).aFloat9344 * (float) i_1115_) + (((Class390_Sub3) this).aFloat9327 * (float) i_1080_)));
-					f_1089_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1125_ / f_1082_));
-					f_1090_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_1119_ / f_1082_));
+					f_1089_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1125_ / f_1082_));
+					f_1090_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_1119_ / f_1082_));
 					float f_1126_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1079_) + (((Class390_Sub3) this).aFloat9343 * (float) i_1116_) + (((Class390_Sub3) this).aFloat9339 * (float) i_1081_)));
-					f_1091_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1126_ / f_1083_));
+					f_1091_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1126_ / f_1083_));
 					float f_1127_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1079_) + (((Class390_Sub3) this).aFloat9344 * (float) i_1116_) + (((Class390_Sub3) this).aFloat9327 * (float) i_1081_)));
-					f_1092_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1127_ / f_1083_));
-					f_1093_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_1120_ / f_1083_));
+					f_1092_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1127_ / f_1083_));
+					f_1093_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_1120_ / f_1083_));
 					float f_1128_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1078_) + (((Class390_Sub3) this).aFloat9343 * (float) i_1117_) + (((Class390_Sub3) this).aFloat9339 * (float) i_1081_)));
-					f_1094_ = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1128_ / f_1084_));
+					f_1094_ = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1128_ / f_1084_));
 					float f_1129_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1078_) + (((Class390_Sub3) this).aFloat9344 * (float) i_1117_) + (((Class390_Sub3) this).aFloat9327 * (float) i_1081_)));
-					f_1095_ = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1129_ / f_1084_));
-					f_1096_ = (((Class144) class144).aFloat1682 + (((Class144) class144).aFloat1683 * f_1121_ / f_1084_));
+					f_1095_ = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1129_ / f_1084_));
+					f_1096_ = (((ChoppyItemFixClass) class144).aFloat1682 + (((ChoppyItemFixClass) class144).aFloat1683 * f_1121_ / f_1084_));
 				}
 				if (((f_1091_ - f_1094_) * (f_1089_ - f_1095_) - (f_1092_ - f_1095_) * (f_1088_ - f_1094_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_1091_ < 0.0F || f_1094_ < 0.0F || f_1088_ < 0.0F || f_1091_ > (float) ((Class144) class144).anInt1684 || f_1094_ > (float) ((Class144) class144).anInt1684 || (f_1088_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_1091_ < 0.0F || f_1094_ < 0.0F || f_1088_ < 0.0F || f_1091_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_1094_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_1088_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (((Class178) class178).aShort2215 >= 0)
 						class144.method2424(true, true, false, f_1092_, f_1095_, f_1089_, f_1091_, f_1094_, f_1088_, f_1093_, f_1096_, f_1090_, f_1083_, f_1084_, f_1082_, 1.0F, 0.0F, 1.0F, 1.0F, 1.0F, 0.0F, ~0xffffff | (Class335.anIntArray3916[(((Class178) class178).aShort2216 & 0xffff)]) & 0xffffff, ~0xffffff | (Class335.anIntArray3916[(((Class178) class178).aShort2218 & 0xffff)]) & 0xffffff, ~0xffffff | (Class335.anIntArray3916[(((Class178) class178).aShort2217 & 0xffff)]) & 0xffffff, 0, 0.0F,
 								0.0F, 0.0F, ((Class178) class178).aShort2215);
@@ -4145,7 +4145,7 @@ public class Class390_Sub3 extends Class390 {
 						class144.method2426(true, true, false, f_1092_, f_1095_, f_1089_, f_1091_, f_1094_, f_1088_, f_1093_, f_1096_, f_1090_, (float) (((Class178) class178).aShort2216 & 0xffff), (float) (((Class178) class178).aShort2218 & 0xffff), (float) (((Class178) class178).aShort2217 & 0xffff));
 				}
 				if (((f_1085_ - f_1088_) * (f_1095_ - f_1089_) - (f_1086_ - f_1089_) * (f_1094_ - f_1088_)) > 0.0F) {
-					((Class144) class144).aBool1708 = (f_1085_ < 0.0F || f_1088_ < 0.0F || f_1094_ < 0.0F || f_1085_ > (float) ((Class144) class144).anInt1684 || f_1088_ > (float) ((Class144) class144).anInt1684 || (f_1094_ > (float) ((Class144) class144).anInt1684));
+					((ChoppyItemFixClass) class144).aBool1708 = (f_1085_ < 0.0F || f_1088_ < 0.0F || f_1094_ < 0.0F || f_1085_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || f_1088_ > (float) ((ChoppyItemFixClass) class144).anInt1684 || (f_1094_ > (float) ((ChoppyItemFixClass) class144).anInt1684));
 					if (((Class178) class178).aShort2215 >= 0)
 						class144.method2424(true, true, false, f_1086_, f_1089_, f_1095_, f_1085_, f_1088_, f_1094_, f_1087_, f_1090_, f_1096_, f, f_1082_, f_1084_, 0.0F, 1.0F, 1.0F, 0.0F, 0.0F, 1.0F, ~0xffffff | (Class335.anIntArray3916[(((Class178) class178).aShort2214 & 0xffff)]) & 0xffffff, ~0xffffff | (Class335.anIntArray3916[(((Class178) class178).aShort2217 & 0xffff)]) & 0xffffff, ~0xffffff | (Class335.anIntArray3916[(((Class178) class178).aShort2218 & 0xffff)]) & 0xffffff, 0, 0.0F, 0.0F,
 								0.0F, ((Class178) class178).aShort2215);
@@ -4173,9 +4173,9 @@ public class Class390_Sub3 extends Class390 {
 						return;
 					float f_1135_ = (((Class390_Sub3) this).aFloat9351 + ((((Class390_Sub3) this).aFloat9338 * (float) i_1131_) + (((Class390_Sub3) this).aFloat9343 * (float) i_1132_) + (((Class390_Sub3) this).aFloat9339 * (float) i_1133_)));
 					float f_1136_ = (((Class390_Sub3) this).aFloat9328 + ((((Class390_Sub3) this).aFloat9340 * (float) i_1131_) + (((Class390_Sub3) this).aFloat9344 * (float) i_1132_) + (((Class390_Sub3) this).aFloat9327 * (float) i_1133_)));
-					fs[i_1130_] = (((Class144) class144).aFloat1678 + (((Class144) class144).aFloat1679 * f_1135_ / f_1134_));
-					fs_1073_[i_1130_] = (((Class144) class144).aFloat1680 + (((Class144) class144).aFloat1702 * f_1136_ / f_1134_));
-					fs_1074_[i_1130_] = (((Class144) class144).aFloat1682 + ((Class144) class144).aFloat1683 * f / f_1134_);
+					fs[i_1130_] = (((ChoppyItemFixClass) class144).aFloat1678 + (((ChoppyItemFixClass) class144).aFloat1679 * f_1135_ / f_1134_));
+					fs_1073_[i_1130_] = (((ChoppyItemFixClass) class144).aFloat1680 + (((ChoppyItemFixClass) class144).aFloat1702 * f_1136_ / f_1134_));
+					fs_1074_[i_1130_] = (((ChoppyItemFixClass) class144).aFloat1682 + ((ChoppyItemFixClass) class144).aFloat1683 * f / f_1134_);
 					fs_1075_[i_1130_] = f_1134_;
 				}
 				if (((Class183) class183).aShortArray2270 != null) {
@@ -4190,7 +4190,7 @@ public class Class390_Sub3 extends Class390 {
 						float f_1144_ = fs_1073_[i_1139_];
 						float f_1145_ = fs_1073_[i_1140_];
 						if (((f - f_1141_) * (f_1145_ - f_1144_) - (f_1143_ - f_1144_) * (f_1142_ - f_1141_)) > 0.0F) {
-							((Class144) class144).aBool1708 = (f < 0.0F || f_1141_ < 0.0F || f_1142_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || f_1141_ > (float) (((Class144) class144).anInt1684) || f_1142_ > (float) (((Class144) class144).anInt1684));
+							((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_1141_ < 0.0F || f_1142_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_1141_ > (float) (((ChoppyItemFixClass) class144).anInt1684) || f_1142_ > (float) (((ChoppyItemFixClass) class144).anInt1684));
 							short i_1146_ = (((Class183) class183).aShortArray2270[i_1137_]);
 							if (i_1146_ != -1)
 								class144.method2424(true, true, false, f_1143_, f_1144_, f_1145_, f, f_1141_, f_1142_, fs_1074_[i_1138_], fs_1074_[i_1139_], fs_1074_[i_1140_], fs_1075_[i_1138_], fs_1075_[i_1139_], fs_1075_[i_1140_], ((float) (((Class183) class183).aShortArray2267[i_1138_]) / (float) (anInt4774 * 750971439)), ((float) (((Class183) class183).aShortArray2267[i_1139_]) / (float) (anInt4774 * 750971439)),
@@ -4218,7 +4218,7 @@ public class Class390_Sub3 extends Class390 {
 						if (((f - f_1152_) * (f_1156_ - f_1155_) - (f_1154_ - f_1155_) * (f_1153_ - f_1152_)) > 0.0F) {
 							int i_1157_ = (((Class183) class183).anIntArray2272[i_1148_]);
 							if (i_1157_ != -1) {
-								((Class144) class144).aBool1708 = (f < 0.0F || f_1152_ < 0.0F || f_1153_ < 0.0F || f > (float) (((Class144) class144).anInt1684) || (f_1152_ > (float) (((Class144) class144).anInt1684)) || (f_1153_ > (float) (((Class144) class144).anInt1684)));
+								((ChoppyItemFixClass) class144).aBool1708 = (f < 0.0F || f_1152_ < 0.0F || f_1153_ < 0.0F || f > (float) (((ChoppyItemFixClass) class144).anInt1684) || (f_1152_ > (float) (((ChoppyItemFixClass) class144).anInt1684)) || (f_1153_ > (float) (((ChoppyItemFixClass) class144).anInt1684)));
 								class144.method2426(true, true, false, f_1154_, f_1155_, f_1156_, f, f_1152_, f_1153_, fs_1074_[i_1149_], fs_1074_[i_1150_], fs_1074_[i_1151_], (float) (Class282_Sub20_Sub2.method15076(i_1157_, (((Class183) class183).aShortArray2274[i_1149_]), -1918290292)), (float) (Class282_Sub20_Sub2.method15076(i_1157_, (((Class183) class183).aShortArray2274[i_1150_]), -1603828878)),
 										(float) (Class282_Sub20_Sub2.method15076(i_1157_, (((Class183) class183).aShortArray2274[i_1151_]), -2059468671)));
 							}
@@ -4258,7 +4258,7 @@ public class Class390_Sub3 extends Class390 {
 
 	void method14638(int i, int i_1168_, int i_1169_) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		((Class144) ((Class185) class185).aClass144_2310).anInt1674 = 0;
+		((ChoppyItemFixClass) ((Class185) class185).aClass144_2310).anInt1674 = 0;
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null)
 			method14617(i, i_1168_, ((Class185) class185).aBool2309, class185, ((Class185) class185).aClass144_2310, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342, ((Class185) class185).aFloatArray2330, ((Class185) class185).aFloatArray2344, ((Class185) class185).aFloatArray2345, i_1169_);
 		else if (((Class390_Sub3) this).aClass178ArrayArray9352 != null)
@@ -4281,9 +4281,9 @@ public class Class390_Sub3 extends Class390 {
 
 	public void method6723(int i, int i_1173_, int i_1174_, int i_1175_, int i_1176_, int i_1177_, int i_1178_, boolean[][] bools) {
 		Class185 class185 = ((Class390_Sub3) this).aClass505_Sub3_9353.method14370(Thread.currentThread());
-		Class144 class144 = ((Class185) class185).aClass144_2310;
-		((Class144) class144).anInt1674 = 0;
-		((Class144) class144).aBool1708 = true;
+		ChoppyItemFixClass class144 = ((Class185) class185).aClass144_2310;
+		((ChoppyItemFixClass) class144).anInt1674 = 0;
+		((ChoppyItemFixClass) class144).aBool1708 = true;
 		((Class390_Sub3) this).aClass505_Sub3_9353.method14410();
 		if (((Class390_Sub3) this).aClass177ArrayArray9336 != null || ((Class390_Sub3) this).aClass181ArrayArray9335 != null)
 			method14618(i, i_1173_, i_1174_, i_1175_, i_1176_, i_1177_, i_1178_, bools, class185, class144, ((Class185) class185).aFloatArray2315, ((Class185) class185).aFloatArray2342);

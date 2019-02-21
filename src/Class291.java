@@ -623,8 +623,8 @@ public class Class291 {
 		if (i_254_ >= 0 && interface22.method144(i_254_, -1948706533).aBool2056)
 			i_254_ = -1;
 		int i_255_;
-		if (class531.col1 * -848345857 >= 0) {
-			int i_256_ = class531.col1 * -848345857;
+		if (class531.secondaryRGB * -848345857 >= 0) {
+			int i_256_ = class531.secondaryRGB * -848345857;
 			int i_257_ = (i_256_ & 0x7f) + i_253_;
 			if (i_257_ < 0)
 				i_257_ = 0;
@@ -634,10 +634,10 @@ public class Class291 {
 			i_255_ = (~0xffffff | (Class335.anIntArray3916[Class372.method6362(Class242.method4162(i_258_, 96, (byte) -73), 475535484) & 0xffff]));
 		} else if (i_254_ >= 0)
 			i_255_ = (~0xffffff | (Class335.anIntArray3916[Class372.method6362(Class242.method4162((interface22.method144(i_254_, -1979012450).aShort2073), 96, (byte) -53), 390293203) & 0xffff]));
-		else if (class531.col0 * 1419498143 == -1)
+		else if (class531.primaryRGB * 1419498143 == -1)
 			i_255_ = 0;
 		else {
-			int i_259_ = class531.col0 * 1419498143;
+			int i_259_ = class531.primaryRGB * 1419498143;
 			int i_260_ = (i_259_ & 0x7f) + i_253_;
 			if (i_260_ < 0)
 				i_260_ = 0;

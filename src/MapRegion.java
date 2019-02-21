@@ -388,7 +388,7 @@ public class MapRegion {
 		if (underLay) {
 			string = new StringBuilder().append('u').append(string).toString();
 		}
-		System.out.println(string);
+		//System.out.println(string);
 		return string;
 	}
 

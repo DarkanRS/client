@@ -3,7 +3,6 @@
  */
 
 public class Class185 {
-	static final float aFloat2301 = 255.0F;
 	float[] aFloatArray2302;
 	float aFloat2303;
 	boolean aBool2304;
@@ -12,7 +11,7 @@ public class Class185 {
 	int anInt2307;
 	float aFloat2308;
 	boolean aBool2309;
-	Class144 aClass144_2310;
+	ChoppyItemFixClass aClass144_2310;
 	float aFloat2311;
 	int[] anIntArray2312;
 	int anInt2313;
@@ -55,23 +54,7 @@ public class Class185 {
 	}
 
 	void method3071(int i) {
-		((Class185) this).aClass144_2310 = new Class144(((Class185) this).aClass505_Sub3_2320, this);
-	}
-
-	void method3072(Runnable runnable) {
-		((Class185) this).aRunnable2343 = runnable;
-	}
-
-	void method3073() {
-		((Class185) this).aClass144_2310 = new Class144(((Class185) this).aClass505_Sub3_2320, this);
-	}
-
-	void method3074(Runnable runnable) {
-		((Class185) this).aRunnable2343 = runnable;
-	}
-
-	void method3075(Runnable runnable) {
-		((Class185) this).aRunnable2343 = runnable;
+		((Class185) this).aClass144_2310 = new ChoppyItemFixClass(((Class185) this).aClass505_Sub3_2320, this);
 	}
 
 	Class185(HardwareRenderer class505_sub3) {
@@ -110,7 +93,7 @@ public class Class185 {
 		((Class185) this).aFloatArray2345 = new float[64];
 		((Class185) this).aFloatArray2324 = new float[3];
 		((Class185) this).aClass505_Sub3_2320 = class505_sub3;
-		((Class185) this).aClass144_2310 = new Class144(class505_sub3, this);
+		((Class185) this).aClass144_2310 = new ChoppyItemFixClass(class505_sub3, this);
 		for (int i = 0; i < 7; i++) {
 			((Class185) this).aClass528_Sub2Array2339[i] = new Class528_Sub2(((Class185) this).aClass505_Sub3_2320);
 			((Class185) this).aClass528_Sub2Array2340[i] = new Class528_Sub2(((Class185) this).aClass505_Sub3_2320);
@@ -118,10 +101,6 @@ public class Class185 {
 		((Class185) this).anIntArray2329 = new int[Class528_Sub2.anInt8562];
 		for (int i = 0; i < Class528_Sub2.anInt8562; i++)
 			((Class185) this).anIntArray2329[i] = -1;
-	}
-
-	void method3076(Runnable runnable) {
-		((Class185) this).aRunnable2343 = runnable;
 	}
 
 	public static void method3077(int i) {

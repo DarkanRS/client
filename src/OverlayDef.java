@@ -6,13 +6,12 @@ public class OverlayDef {
 	public int anInt7051;
 	public int anInt7052;
 	int anInt7053;
-	public int col0 = 0;
+	public int primaryRGB = 0;
 	public int anInt7055;
 	public boolean aBool7056;
 	public int anInt7057;
-	public int col1;
+	public int secondaryRGB;
 	public boolean aBool7059;
-	static final int anInt7060 = 1190717;
 	public boolean aBool7061;
 	Class536 aClass536_7062;
 	public int anInt7063;
@@ -36,7 +35,7 @@ public class OverlayDef {
 
 	void method11364(RsByteBuffer class282_sub35, int i, byte i_1_) {
 		if (i == 1)
-			col0 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 695388511;
+			primaryRGB = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 695388511;
 		else if (i == 2)
 			texture = class282_sub35.readUnsignedByte() * -1613793573;
 		else if (3 == i) {
@@ -46,7 +45,7 @@ public class OverlayDef {
 		} else if (i == 5)
 			aBool7056 = false;
 		else if (i == 7)
-			col1 = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 217561855;
+			secondaryRGB = Class44.method912(class282_sub35.read24BitUnsignedInteger(), 2117926535) * 217561855;
 		else if (8 == i)
 			((OverlayDef) this).aClass536_7062.anInt7093 = ((OverlayDef) this).anInt7053 * 1866199091;
 		else if (9 == i)
@@ -73,7 +72,7 @@ public class OverlayDef {
 
 	OverlayDef() {
 		aBool7056 = true;
-		col1 = -217561855;
+		secondaryRGB = -217561855;
 		anInt7057 = 309831168;
 		aBool7059 = true;
 		anInt7052 = -81678168;
