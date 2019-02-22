@@ -360,7 +360,7 @@ public final class client extends Engine {
 						aString7164 = string_2_;
 						break;
 					case 31:
-						Class223.CURRENT_LANGUAGE = Language.method8278(Integer.parseInt(string_2_), 1916155090);
+						Class223.CURRENT_LANGUAGE = XLanguage.method8278(Integer.parseInt(string_2_), 1916155090);
 						break;
 					case 2:
 						if (string_2_.equalsIgnoreCase(Class2.aString13))
@@ -584,16 +584,16 @@ public final class client extends Engine {
 			if (Class97.method1612(anInt7166 * -1741204137, 1908805257) && !Class464.method7742(anInt7166 * -1741204137, (byte) 101)) {
 				method12044((short) 3630);
 				Class521_Sub1_Sub5_Sub1.handleAccountCreationStart(-1548261686);
-				Login.method5018((byte) -128);
+				XLogin.method5018((byte) -128);
 			} else if (Class282_Sub17.method12259(anInt7166 * -1741204137, -1507650612) && !Class464.method7742(anInt7166 * -1741204137, (byte) 25)) {
 				method12044((short) 3677);
-				Login.method5018((byte) -128);
+				XLogin.method5018((byte) -128);
 			} else if (12 == -1741204137 * anInt7166)
-				Login.method5018((byte) -128);
+				XLogin.method5018((byte) -128);
 			else if (Class169.method2875(anInt7166 * -1741204137, -1980250019) && !Class464.method7742(anInt7166 * -1741204137, (byte) 45))
 				Class282_Sub20_Sub22.method15386(1134821376);
 			else if (10 == anInt7166 * -1741204137 || anInt7166 * -1741204137 == 17) {
-				Login.method5018((byte) -128);
+				XLogin.method5018((byte) -128);
 				if (-3 != -1378127363 * Class9.anInt106 && -1378127363 * Class9.anInt106 != 2 && 15 != Class9.anInt106 * -1378127363) {
 					if (-1741204137 * anInt7166 == 17) {
 						Class9.anInt109 = Class9.anInt112 * 1549085435;
@@ -2407,7 +2407,7 @@ public final class client extends Engine {
 						aString7164 = string_1158_;
 						break;
 					case 31:
-						Class223.CURRENT_LANGUAGE = Language.method8278(Integer.parseInt(string_1158_), 922881218);
+						Class223.CURRENT_LANGUAGE = XLanguage.method8278(Integer.parseInt(string_1158_), 922881218);
 						break;
 					case 2:
 						if (string_1158_.equalsIgnoreCase(Class2.aString13))
@@ -2866,7 +2866,7 @@ public final class client extends Engine {
 						aString7164 = string_2650_;
 						break;
 					case 31:
-						Class223.CURRENT_LANGUAGE = Language.method8278(Integer.parseInt(string_2650_), -1464008019);
+						Class223.CURRENT_LANGUAGE = XLanguage.method8278(Integer.parseInt(string_2650_), -1464008019);
 						break;
 					case 2:
 						if (string_2650_.equalsIgnoreCase(Class2.aString13))

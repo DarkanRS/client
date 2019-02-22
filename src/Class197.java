@@ -19,7 +19,7 @@ public class Class197 {
 
 	static final void method3188(RsBitsBuffer class282_sub35_sub2, int i) {
 		anInt2434 = 0;
-		LoadingStage.decodeUpdate(class282_sub35_sub2, 2052929414);
+		XLoadingStage.decodeUpdate(class282_sub35_sub2, 2052929414);
 		Class508.decodeMasks(class282_sub35_sub2, 344959860);
 		if (i != class282_sub35_sub2.index * -1990677291) {
 			throw new RuntimeException(new StringBuilder().append(-1990677291 * class282_sub35_sub2.index).append(" ").append(i).toString());

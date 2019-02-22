@@ -2,73 +2,73 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class LoadingStage {
+public class XLoadingStage {
 	boolean aBool4694;
-	static LoadingStage aClass387_4695;
-	static LoadingStage aClass387_4696;
-	static LoadingStage aClass387_4697 = new LoadingStage(0, Message.CHECKING_FOR_UPDATES, 2);
-	static LoadingStage aClass387_4698;
-	static LoadingStage aClass387_4699;
-	static LoadingStage aClass387_4700;
-	static LoadingStage aClass387_4701;
-	static LoadingStage aClass387_4702;
+	static XLoadingStage aClass387_4695;
+	static XLoadingStage aClass387_4696;
+	static XLoadingStage aClass387_4697 = new XLoadingStage(0, Message.CHECKING_FOR_UPDATES, 2);
+	static XLoadingStage aClass387_4698;
+	static XLoadingStage aClass387_4699;
+	static XLoadingStage aClass387_4700;
+	static XLoadingStage aClass387_4701;
+	static XLoadingStage aClass387_4702;
 	int anInt4703;
-	static LoadingStage aClass387_4704;
-	static LoadingStage aClass387_4705;
-	static LoadingStage aClass387_4706;
-	static LoadingStage aClass387_4707;
-	static LoadingStage aClass387_4708;
-	static LoadingStage aClass387_4709;
-	static LoadingStage aClass387_4710;
+	static XLoadingStage aClass387_4704;
+	static XLoadingStage aClass387_4705;
+	static XLoadingStage aClass387_4706;
+	static XLoadingStage aClass387_4707;
+	static XLoadingStage aClass387_4708;
+	static XLoadingStage aClass387_4709;
+	static XLoadingStage aClass387_4710;
 	Message aClass433_4711;
 	public int anInt4712;
-	static LoadingStage aClass387_4713;
+	static XLoadingStage aClass387_4713;
 	Message aClass433_4714;
 	int anInt4715;
-	static LoadingStage aClass387_4716;
-	static LoadingStage aClass387_4717;
+	static XLoadingStage aClass387_4716;
+	static XLoadingStage aClass387_4717;
 	boolean aBool4718;
 
-	LoadingStage(int i, Message class433, Message class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
+	XLoadingStage(int i, Message class433, Message class433_0_, int i_1_, int i_2_, boolean bool, boolean bool_3_) {
 		anInt4712 = 2061403819 * i;
-		((LoadingStage) this).aClass433_4711 = class433;
-		((LoadingStage) this).aClass433_4714 = class433_0_;
-		((LoadingStage) this).anInt4715 = -786455353 * i_1_;
-		((LoadingStage) this).anInt4703 = -1800347625 * i_2_;
-		((LoadingStage) this).aBool4694 = bool;
-		((LoadingStage) this).aBool4718 = bool_3_;
+		((XLoadingStage) this).aClass433_4711 = class433;
+		((XLoadingStage) this).aClass433_4714 = class433_0_;
+		((XLoadingStage) this).anInt4715 = -786455353 * i_1_;
+		((XLoadingStage) this).anInt4703 = -1800347625 * i_2_;
+		((XLoadingStage) this).aBool4694 = bool;
+		((XLoadingStage) this).aBool4718 = bool_3_;
 	}
 
-	LoadingStage(int i, Message class433, int i_4_) {
+	XLoadingStage(int i, Message class433, int i_4_) {
 		this(i, class433, class433, i_4_, i_4_, true, false);
 	}
 
-	LoadingStage(int i, Message class433, Message class433_5_, int i_6_, int i_7_) {
+	XLoadingStage(int i, Message class433, Message class433_5_, int i_6_, int i_7_) {
 		this(i, class433, class433_5_, i_6_, i_7_, true, false);
 	}
 
 	static {
-		aClass387_4695 = new LoadingStage(1, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 2, 3);
-		aClass387_4696 = new LoadingStage(2, Message.CHECKING_FOR_UPDATES, 3);
-		aClass387_4702 = new LoadingStage(3, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 3, 4);
-		aClass387_4708 = new LoadingStage(4, Message.CHECKING_FOR_UPDATES, 4);
-		aClass387_4699 = new LoadingStage(5, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 4, 5);
-		aClass387_4700 = new LoadingStage(6, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 5, 98, true, true);
-		aClass387_4717 = new LoadingStage(7, Message.CHECKING_FOR_UPDATES, 99);
-		aClass387_4709 = new LoadingStage(8, Message.CHECKING_FOR_UPDATES, 100);
-		aClass387_4716 = new LoadingStage(9, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 0, 92, true, true);
-		aClass387_4704 = new LoadingStage(10, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 92, 93);
-		aClass387_4705 = new LoadingStage(11, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 94, 95);
-		aClass387_4706 = new LoadingStage(12, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 96, 97);
-		aClass387_4707 = new LoadingStage(13, Message.FETCHING_UPDATES, 97);
-		aClass387_4713 = new LoadingStage(14, Message.FETCHING_UPDATES, 97);
-		aClass387_4698 = new LoadingStage(15, Message.FETCHING_UPDATES, 100);
-		aClass387_4710 = new LoadingStage(16, Message.FETCHING_UPDATES, 100);
-		aClass387_4701 = new LoadingStage(17, Message.FETCHING_UPDATES, 100);
+		aClass387_4695 = new XLoadingStage(1, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 2, 3);
+		aClass387_4696 = new XLoadingStage(2, Message.CHECKING_FOR_UPDATES, 3);
+		aClass387_4702 = new XLoadingStage(3, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 3, 4);
+		aClass387_4708 = new XLoadingStage(4, Message.CHECKING_FOR_UPDATES, 4);
+		aClass387_4699 = new XLoadingStage(5, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 4, 5);
+		aClass387_4700 = new XLoadingStage(6, Message.CHECKING_FOR_UPDATES, Message.CHECKING_FOR_UPDATES, 5, 98, true, true);
+		aClass387_4717 = new XLoadingStage(7, Message.CHECKING_FOR_UPDATES, 99);
+		aClass387_4709 = new XLoadingStage(8, Message.CHECKING_FOR_UPDATES, 100);
+		aClass387_4716 = new XLoadingStage(9, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 0, 92, true, true);
+		aClass387_4704 = new XLoadingStage(10, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 92, 93);
+		aClass387_4705 = new XLoadingStage(11, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 94, 95);
+		aClass387_4706 = new XLoadingStage(12, Message.FETCHING_UPDATES, Message.FETCHING_UPDATES, 96, 97);
+		aClass387_4707 = new XLoadingStage(13, Message.FETCHING_UPDATES, 97);
+		aClass387_4713 = new XLoadingStage(14, Message.FETCHING_UPDATES, 97);
+		aClass387_4698 = new XLoadingStage(15, Message.FETCHING_UPDATES, 100);
+		aClass387_4710 = new XLoadingStage(16, Message.FETCHING_UPDATES, 100);
+		aClass387_4701 = new XLoadingStage(17, Message.FETCHING_UPDATES, 100);
 	}
 
-	static LoadingStage[] method6676(int i) {
-		return (new LoadingStage[] { aClass387_4697, aClass387_4695, aClass387_4696, aClass387_4702, aClass387_4708, aClass387_4699, aClass387_4700, aClass387_4717, aClass387_4709, aClass387_4716, aClass387_4704, aClass387_4705, aClass387_4706, aClass387_4707, aClass387_4713, aClass387_4698, aClass387_4710, aClass387_4701 });
+	static XLoadingStage[] method6676(int i) {
+		return (new XLoadingStage[] { aClass387_4697, aClass387_4695, aClass387_4696, aClass387_4702, aClass387_4708, aClass387_4699, aClass387_4700, aClass387_4717, aClass387_4709, aClass387_4716, aClass387_4704, aClass387_4705, aClass387_4706, aClass387_4707, aClass387_4713, aClass387_4698, aClass387_4710, aClass387_4701 });
 	}
 
 	static final void method6677(CS2Executor class527, int i) {

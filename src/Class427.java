@@ -41,7 +41,7 @@ public class Class427 {
 		}
 	}
 
-	public Class427(Game class486, Language class495, Index class317, Index class317_2_) {
+	public Class427(Game class486, XLanguage class495, Index class317, Index class317_2_) {
 		((Class427) this).aClass317_5120 = class317;
 		((Class427) this).aClass317_5118 = class317_2_;
 		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.id) * -71319279);
@@ -201,7 +201,7 @@ public class Class427 {
 
 	public static int method7189(RsByteBuffer class282_sub35, String string, int i) {
 		int i_14_ = -1990677291 * class282_sub35.index;
-		byte[] is = LinkedNodeList.method7885(string, (byte) -70);
+		byte[] is = XLinkedNodeList.method7885(string, (byte) -70);
 		class282_sub35.method13076(is.length, 2140409411);
 		class282_sub35.index += Class113.aClass117_1234.method1971(is, 0, is.length, (class282_sub35.buffer), (class282_sub35.index * -1990677291), -130174544) * -1115476867;
 		return class282_sub35.index * -1990677291 - i_14_;

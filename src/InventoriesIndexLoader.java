@@ -7,7 +7,7 @@ public class InventoriesIndexLoader implements IndexLoader {
 	SoftCache cached = new SoftCache(64);
 	public static int anInt4781;
 
-	public InventoriesIndexLoader(Game class486, Language class495, Index class317) {
+	public InventoriesIndexLoader(Game class486, XLanguage class495, Index class317) {
 		((InventoriesIndexLoader) this).configIndex = class317;
 		((InventoriesIndexLoader) this).configIndex.filesCount((SharedConfigsType.INVENTORIES.id) * -71319279);
 	}

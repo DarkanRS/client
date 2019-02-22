@@ -100,7 +100,7 @@ public class Class232 implements Interface17 {
 				i_14_ = 128 + client.anIntArray7433[4];
 			int i_15_ = ((int) client.aFloat7365 + -297983899 * client.anInt7343 & 0x3fff);
 			Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-			LoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389((int) class385.x, (int) class385.z, Class4.anInt35 * 675588453, (byte) 51) - 200, Class266.anInt3289 * 518160421, i_14_, i_15_, (i_14_ >> 3) * 3 + 600 << 2, i, 1500551332);
+			XLoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389((int) class385.x, (int) class385.z, Class4.anInt35 * 675588453, (byte) 51) - 200, Class266.anInt3289 * 518160421, i_14_, i_15_, (i_14_ >> 3) * 3 + 600 << 2, i, 1500551332);
 			float f = 1.0F - ((float) ((100 - i_13_) * ((100 - i_13_) * (100 - i_13_))) / 1000000.0F);
 			Class31.anInt361 = ((int) ((float) (Class186.anInt2349 * 494445359) + f * (float) (-360258135 * Class31.anInt361 - 494445359 * Class186.anInt2349)) * -2043310439);
 			Class109_Sub1.anInt9384 = (-126779709 * (int) ((float) (1322062263 * Class521_Sub1_Sub2.anInt9461) + f * (float) (1929945579 * Class109_Sub1.anInt9384 - (Class521_Sub1_Sub2.anInt9461 * 1322062263))));

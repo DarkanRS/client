@@ -8,7 +8,7 @@ public final class Class223 {
 	int anInt2769;
 	CacheableNode aClass282_Sub50_2770 = new CacheableNode();
 	IterableNodeMap aClass465_2771;
-	public static Language CURRENT_LANGUAGE;
+	public static XLanguage CURRENT_LANGUAGE;
 
 	public void method3757() {
 		((Class223) this).aClass477_2767.method7935((byte) 40);

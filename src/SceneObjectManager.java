@@ -62,7 +62,7 @@ public class SceneObjectManager {
 	long[][][] aLongArrayArrayArray2645;
 	Class287[] aClass287Array2646;
 	boolean[] aBoolArray2647;
-	public Login aClass284_2648;
+	public XLogin aClass284_2648;
 	Class521_Sub1[] aClass521_Sub1Array2649;
 	int anInt2650;
 	boolean[][] aBoolArrayArray2651;
@@ -227,7 +227,7 @@ public class SceneObjectManager {
 			((Class201) aClass201_2600).aBool2542 = false;
 		}
 		ChatLine.method1848(this, ((SceneObjectManager) this).aClass505_2596, 1003653340);
-		if (!((Login) aClass284_2648).aBool3386) {
+		if (!((XLogin) aClass284_2648).aBool3386) {
 			Iterator iterator = aClass284_2648.aList3388.iterator();
 			while (iterator.hasNext()) {
 				Class285 class285 = (Class285) iterator.next();
@@ -1607,7 +1607,7 @@ public class SceneObjectManager {
 			((Class201) aClass201_2600).aBool2542 = false;
 		}
 		ChatLine.method1848(this, ((SceneObjectManager) this).aClass505_2596, 437446404);
-		if (!((Login) aClass284_2648).aBool3386) {
+		if (!((XLogin) aClass284_2648).aBool3386) {
 			Iterator iterator = aClass284_2648.aList3388.iterator();
 			while (iterator.hasNext()) {
 				Class285 class285 = (Class285) iterator.next();
@@ -3072,7 +3072,7 @@ public class SceneObjectManager {
 		((SceneObjectManager) this).aBoolArrayArray2651 = (new boolean[1 + (1459994833 * ((SceneObjectManager) this).anInt2652 + 1459994833 * ((SceneObjectManager) this).anInt2652)][(((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652 + 1)]);
 		((SceneObjectManager) this).aBoolArrayArray2635 = (new boolean[2 + (((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652)][(((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652 + 2)]);
 		((SceneObjectManager) this).anIntArray2641 = new int[(((SceneObjectManager) this).anInt2652 * 1459994833 + 1459994833 * ((SceneObjectManager) this).anInt2652 + 2)];
-		aClass284_2648 = new Login(false);
+		aClass284_2648 = new XLogin(false);
 	}
 
 	void method3521(Class521_Sub1 class521_sub1) {
@@ -3552,7 +3552,7 @@ public class SceneObjectManager {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Login.method5017(class118, class98, class527, -974856399);
+		XLogin.method5017(class118, class98, class527, -974856399);
 	}
 
 	static final void method3547(CS2Executor class527, int i) {

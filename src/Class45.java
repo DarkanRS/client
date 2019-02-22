@@ -109,7 +109,7 @@ public class Class45 {
 		}
 	}
 
-	public Class45(Game class486, Language class495, Index class317) {
+	public Class45(Game class486, XLanguage class495, Index class317) {
 		((Class45) this).aClass317_433 = class317;
 		((Class45) this).aClass317_433.filesCount((SharedConfigsType.aClass120_1489.id) * -71319279);
 	}

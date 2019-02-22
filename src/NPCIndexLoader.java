@@ -4,7 +4,7 @@
 
 public class NPCIndexLoader {
 	SoftCache aClass229_4836;
-	Language aClass495_4837;
+	XLanguage aClass495_4837;
 	boolean aBool4838;
 	Index aClass317_4839;
 	String[] aStringArray4840;
@@ -93,7 +93,7 @@ public class NPCIndexLoader {
 		}
 	}
 
-	public NPCIndexLoader(Game class486, Language class495, boolean bool, Index class317, Index class317_3_) {
+	public NPCIndexLoader(Game class486, XLanguage class495, boolean bool, Index class317, Index class317_3_) {
 		((NPCIndexLoader) this).aClass229_4836 = new SoftCache(50);
 		((NPCIndexLoader) this).aClass229_4843 = new SoftCache(5);
 		((NPCIndexLoader) this).aClass486_4844 = class486;

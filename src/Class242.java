@@ -19,7 +19,7 @@ public class Class242 {
 		return i_0_;
 	}
 
-	public Class242(Game class486, Language class495, Index class317, boolean bool) {
+	public Class242(Game class486, XLanguage class495, Index class317, boolean bool) {
 		((Class242) this).aClass317_2979 = class317;
 		if (((Class242) this).aClass317_2979 != null)
 			((Class242) this).size = (((Class242) this).aClass317_2979.filesCount(-71319279 * SharedConfigsType.aClass120_1498.id)) * 1089704477;
@@ -188,7 +188,7 @@ public class Class242 {
 				}
 			}
 			if (!bool)
-				LoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -1621273158)).append(string).toString(), (byte) -49);
+				XLoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -1621273158)).append(string).toString(), (byte) -49);
 			if (client.aBool7344)
 				Class60.method1170(-609337146);
 		}

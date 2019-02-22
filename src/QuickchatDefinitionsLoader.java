@@ -21,7 +21,7 @@ public class QuickchatDefinitionsLoader {
 		return Long.toString(l);
 	}
 
-	public QuickchatDefinitionsLoader(Language class495, Index class317, Index class317_0_, Interface19 interface19) {
+	public QuickchatDefinitionsLoader(XLanguage class495, Index class317, Index class317_0_, Interface19 interface19) {
 		((QuickchatDefinitionsLoader) this).aClass229_5131 = new SoftCache(64);
 		((QuickchatDefinitionsLoader) this).anInterface19_5134 = null;
 		((QuickchatDefinitionsLoader) this).aClass317_5129 = class317;

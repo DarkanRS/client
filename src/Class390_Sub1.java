@@ -28,7 +28,7 @@ public class Class390_Sub1 extends Class390 {
 	int[][][] anIntArrayArrayArray8543;
 	float aFloat8544 = -3.4028235E38F;
 	Class74 aClass74_8545;
-	LinkedNodeList aClass473_8546 = new LinkedNodeList();
+	XLinkedNodeList aClass473_8546 = new XLinkedNodeList();
 	Node[] aClass282Array8547;
 	Interface4 anInterface4_8548;
 	float[][] aFloatArrayArray8549;

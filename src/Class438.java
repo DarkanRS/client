@@ -58,7 +58,7 @@ public class Class438 {
 		}
 	}
 
-	public Class438(Game class486, Language class495, Index class317, Index class317_2_) {
+	public Class438(Game class486, XLanguage class495, Index class317, Index class317_2_) {
 		((Class438) this).aClass229_5342 = new SoftCache(2);
 		((Class438) this).aClass317_5343 = class317;
 		((Class438) this).aClass317_5341 = class317_2_;

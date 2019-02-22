@@ -20,7 +20,7 @@ public class Class165 {
 	static void method2852(int i) {
 		if (null != IndexLoaders.LOADING_STAGE) {
 			Class328.aClass306_3771 = new Class306();
-			Class328.aClass306_3771.method5422(5158573110282126937L * Class302.aLong3562, ((LoadingStage) IndexLoaders.LOADING_STAGE).aClass433_4711.translate(Class223.CURRENT_LANGUAGE, -1960746007), ((LoadingStage) IndexLoaders.LOADING_STAGE).anInt4715 * 2033966327, IndexLoaders.LOADING_STAGE, 2034622208);
+			Class328.aClass306_3771.method5422(5158573110282126937L * Class302.aLong3562, ((XLoadingStage) IndexLoaders.LOADING_STAGE).aClass433_4711.translate(Class223.CURRENT_LANGUAGE, -1960746007), ((XLoadingStage) IndexLoaders.LOADING_STAGE).anInt4715 * 2033966327, IndexLoaders.LOADING_STAGE, 2034622208);
 			Class377.aThread4520 = new Thread(Class328.aClass306_3771, "");
 			Class377.aThread4520.start();
 		}
@@ -48,7 +48,7 @@ public class Class165 {
 		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
 		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 59);
 		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
-		Login.method5017(class118, class98, class527, -974856399);
+		XLogin.method5017(class118, class98, class527, -974856399);
 	}
 
 	static final void method2856(CS2Executor class527, int i) {

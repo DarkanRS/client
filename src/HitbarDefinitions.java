@@ -429,7 +429,7 @@ public class HitbarDefinitions {
 					if (client.aBoolArray7431[4] && 128 + client.anIntArray7433[4] > i_24_)
 						i_24_ = 128 + client.anIntArray7433[4];
 					int i_25_ = ((client.anInt7343 * -297983899 + (int) client.aFloat7365) & 0x3fff);
-					LoadingStage.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.x, (int) class385.z, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, CAMERA_ZOOM + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
+					XLoadingStage.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.x, (int) class385.z, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, CAMERA_ZOOM + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
 				} else if (4 == -672443707 * NativeLibraryLoader.anInt3240) {
 					int i_26_ = (int) client.aFloat7146;
 					if (client.anInt7273 * 1661251369 >> 8 > i_26_)
@@ -437,7 +437,7 @@ public class HitbarDefinitions {
 					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_26_)
 						i_26_ = 128 + client.anIntArray7433[4];
 					int i_27_ = (int) client.aFloat7365 & 0x3fff;
-					LoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389(61805441 * client.anInt7262, client.anInt7376 * -1032332761, Class4.anInt35 * 675588453, (byte) 101) - 200, Class266.anInt3289 * 518160421, i_26_, i_27_, CAMERA_ZOOM + (i_26_ >> 3) * 3 << 2, i_21_, 1318646026);
+					XLoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389(61805441 * client.anInt7262, client.anInt7376 * -1032332761, Class4.anInt35 * 675588453, (byte) 101) - 200, Class266.anInt3289 * 518160421, i_26_, i_27_, CAMERA_ZOOM + (i_26_ >> 3) * 3 << 2, i_21_, 1318646026);
 				} else if (1 == -672443707 * NativeLibraryLoader.anInt3240)
 					Class232.method3920(i_21_, -491570614);
 				int i_28_ = Class31.anInt361 * -360258135;

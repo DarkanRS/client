@@ -11,13 +11,13 @@ import jaggl.OpenGL;
 
 public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	float[] aFloatArray10172;
-	LinkedNodeList aClass473_10173 = new LinkedNodeList();
-	LinkedNodeList aClass473_10174 = new LinkedNodeList();
-	LinkedNodeList aClass473_10175 = new LinkedNodeList();
-	LinkedNodeList aClass473_10176 = new LinkedNodeList();
+	XLinkedNodeList aClass473_10173 = new XLinkedNodeList();
+	XLinkedNodeList aClass473_10174 = new XLinkedNodeList();
+	XLinkedNodeList aClass473_10175 = new XLinkedNodeList();
+	XLinkedNodeList aClass473_10176 = new XLinkedNodeList();
 	boolean aBool10177;
-	LinkedNodeList aClass473_10178;
-	LinkedNodeList aClass473_10179;
+	XLinkedNodeList aClass473_10178;
+	XLinkedNodeList aClass473_10179;
 	boolean aBool10180;
 	int anInt10181;
 	float[] aFloatArray10182;
@@ -33,7 +33,7 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 	boolean aBool10192;
 	boolean aBool10193;
 	boolean aBool10194;
-	LinkedNodeList aClass473_10195 = new LinkedNodeList();
+	XLinkedNodeList aClass473_10195 = new XLinkedNodeList();
 	int anInt10196;
 	boolean aBool10197;
 	int anInt10198;
@@ -62,8 +62,8 @@ public final class Class505_Sub2_Sub1 extends Class505_Sub2 {
 
 	Class505_Sub2_Sub1(OpenGL opengl, Canvas canvas, long l, Interface22 interface22, Index class317, int i) {
 		super(interface22, class317, i, 1);
-		((Class505_Sub2_Sub1) this).aClass473_10178 = new LinkedNodeList();
-		((Class505_Sub2_Sub1) this).aClass473_10179 = new LinkedNodeList();
+		((Class505_Sub2_Sub1) this).aClass473_10178 = new XLinkedNodeList();
+		((Class505_Sub2_Sub1) this).aClass473_10179 = new XLinkedNodeList();
 		((Class505_Sub2_Sub1) this).anIntArray10184 = new int[1000];
 		((Class505_Sub2_Sub1) this).aClass326_Sub1Array10186 = new Class326_Sub1[16];
 		new MapBuffer();

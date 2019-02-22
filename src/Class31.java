@@ -82,7 +82,7 @@ public class Class31 implements IndexLoader {
 		return class44;
 	}
 
-	public Class31(Game class486, Language class495, Index class317, Index class317_2_) {
+	public Class31(Game class486, XLanguage class495, Index class317, Index class317_2_) {
 		((Class31) this).aClass317_358 = class317;
 		((Class31) this).aClass317_359 = class317_2_;
 		((Class31) this).aClass317_358.filesCount(-71319279 * (SharedConfigsType.aClass120_1466.id));

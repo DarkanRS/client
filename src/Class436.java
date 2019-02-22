@@ -90,7 +90,7 @@ public class Class436 {
 		return class416;
 	}
 
-	public Class436(Game class486, Language class495, Index class317) {
+	public Class436(Game class486, XLanguage class495, Index class317) {
 		((Class436) this).aClass317_5333 = class317;
 		((Class436) this).aClass317_5333.filesCount((SharedConfigsType.aClass120_1494.id) * -71319279);
 	}

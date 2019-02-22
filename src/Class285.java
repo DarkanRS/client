@@ -8,7 +8,7 @@ public class Class285 {
 	static Stack aStack3390 = new Stack();
 	public Class521_Sub1 aClass521_Sub1_3391;
 	boolean aBool3392;
-	Login aClass284_3393;
+	XLogin aClass284_3393;
 	public static FontRenderer aClass8_3394;
 
 	public boolean method5019(GraphicalRenderer class505, int i, int i_0_, int i_1_) {
@@ -16,7 +16,7 @@ public class Class285 {
 		if (aClass521_Sub1_3391.aClass275_Sub5Array7965 != null) {
 			for (int i_3_ = 0; i_3_ < aClass521_Sub1_3391.aClass275_Sub5Array7965.length; i_3_++) {
 				aClass521_Sub1_3391.aClass275_Sub5Array7965[i_3_].anInt7851 <<= i_2_;
-				if ((aClass521_Sub1_3391.aClass275_Sub5Array7965[i_3_].method12594((((Login) ((Class285) this).aClass284_3393).anInt3387 * -478180631) + i, i_0_ + (((Login) ((Class285) this).aClass284_3393).anInt3385) * 1607801345)) && aClass521_Sub1_3391.method12983(class505, i, i_0_, -1469833306)) {
+				if ((aClass521_Sub1_3391.aClass275_Sub5Array7965[i_3_].method12594((((XLogin) ((Class285) this).aClass284_3393).anInt3387 * -478180631) + i, i_0_ + (((XLogin) ((Class285) this).aClass284_3393).anInt3385) * 1607801345)) && aClass521_Sub1_3391.method12983(class505, i, i_0_, -1469833306)) {
 					aClass521_Sub1_3391.aClass275_Sub5Array7965[i_3_].anInt7851 >>= i_2_;
 					return true;
 				}

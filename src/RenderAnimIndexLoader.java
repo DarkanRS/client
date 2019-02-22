@@ -4,137 +4,56 @@
 
 public class RenderAnimIndexLoader {
 	public static RenderAnimDefs aClass227_2669 = new RenderAnimDefs();
-	SoftCache aClass229_2670 = new SoftCache(64);
+	SoftCache renderAnimCache = new SoftCache(64);
 	Index aClass317_2671;
 	Defaults6Loader aClass526_2672;
 	
 	public void method3615(int i, int i_0_) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3858(i, (byte) 19);
+		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
+			((RenderAnimIndexLoader) this).renderAnimCache.method3858(i, (byte) 19);
 		}
 	}
 
 	public RenderAnimDefs getRenderAnimDefs(int i, byte i_1_) {
-		RenderAnimDefs class227;
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			class227 = ((RenderAnimDefs) ((RenderAnimIndexLoader) this).aClass229_2670.get((long) i));
+		RenderAnimDefs animDefs;
+		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
+			animDefs = ((RenderAnimDefs) ((RenderAnimIndexLoader) this).renderAnimCache.get((long) i));
 		}
-		if (class227 != null)
-			return class227;
+		if (animDefs != null) {
+			animDefs.renderAnimId = i;
+			return animDefs;
+		}
 		byte[] is;
 		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
 			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
 		}
-		class227 = new RenderAnimDefs();
-		((RenderAnimDefs) class227).aClass211_2788 = this;
+		animDefs = new RenderAnimDefs();
+		animDefs.renderAnimId = i;
+		((RenderAnimDefs) animDefs).aClass211_2788 = this;
 		if (null != is)
-			class227.method3821(new RsByteBuffer(is), -1552501501);
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.put(class227, (long) i);
+			animDefs.method3821(new RsByteBuffer(is), -1552501501);
+		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
+			((RenderAnimIndexLoader) this).renderAnimCache.put(animDefs, (long) i);
 		}
-		return class227;
+		return animDefs;
 	}
 
 	public void method3617(int i) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3859(-2032720796);
+		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
+			((RenderAnimIndexLoader) this).renderAnimCache.method3859(-2032720796);
 		}
 	}
 
 	public void method3618(byte i) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3863(1249794319);
+		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
+			((RenderAnimIndexLoader) this).renderAnimCache.method3863(1249794319);
 		}
 	}
 
-	public void method3619() {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3859(-667955858);
-		}
-	}
-
-	public RenderAnimDefs method3620(int i) {
-		RenderAnimDefs class227;
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			class227 = ((RenderAnimDefs) ((RenderAnimIndexLoader) this).aClass229_2670.get((long) i));
-		}
-		if (class227 != null)
-			return class227;
-		byte[] is;
-		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
-			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
-		}
-		class227 = new RenderAnimDefs();
-		((RenderAnimDefs) class227).aClass211_2788 = this;
-		if (null != is)
-			class227.method3821(new RsByteBuffer(is), -260429185);
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.put(class227, (long) i);
-		}
-		return class227;
-	}
-
-	public RenderAnimDefs method3621(int i) {
-		RenderAnimDefs class227;
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			class227 = ((RenderAnimDefs) ((RenderAnimIndexLoader) this).aClass229_2670.get((long) i));
-		}
-		if (class227 != null)
-			return class227;
-		byte[] is;
-		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
-			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
-		}
-		class227 = new RenderAnimDefs();
-		((RenderAnimDefs) class227).aClass211_2788 = this;
-		if (null != is)
-			class227.method3821(new RsByteBuffer(is), -882227492);
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.put(class227, (long) i);
-		}
-		return class227;
-	}
-
-	public void method3622(int i) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3858(i, (byte) 52);
-		}
-	}
-
-	public RenderAnimIndexLoader(Game class486, Language class495, Index class317, Defaults6Loader class526) {
+	public RenderAnimIndexLoader(Game class486, XLanguage class495, Index class317, Defaults6Loader class526) {
 		((RenderAnimIndexLoader) this).aClass317_2671 = class317;
 		((RenderAnimIndexLoader) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.RENDER_ANIMS.id)));
 		((RenderAnimIndexLoader) this).aClass526_2672 = class526;
-	}
-
-	public void method3623() {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3859(696350698);
-		}
-	}
-
-	public void method3624(int i) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3858(i, (byte) 14);
-		}
-	}
-
-	public void method3625(int i) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3858(i, (byte) -36);
-		}
-	}
-
-	public void method3626(int i) {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3858(i, (byte) 106);
-		}
-	}
-
-	public void method3627() {
-		synchronized (((RenderAnimIndexLoader) this).aClass229_2670) {
-			((RenderAnimIndexLoader) this).aClass229_2670.method3863(1229247103);
-		}
 	}
 
 	static final void sendReportAbusePacket(CS2Executor class527, int i) {

@@ -65,7 +65,7 @@ public class Class447 {
 		}
 	}
 
-	public Class447(Game class486, Language class495, Index class317) {
+	public Class447(Game class486, XLanguage class495, Index class317) {
 		((Class447) this).aClass317_5418 = class317;
 		if (((Class447) this).aClass317_5418 != null)
 			((Class447) this).aClass317_5418.filesCount(-71319279 * SharedConfigsType.aClass120_1522.id);

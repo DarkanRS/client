@@ -16,11 +16,11 @@ public final class Class78 {
 	static HashMap aHashMap768 = new HashMap();
 
 	public static String method1371(Date date, String string) {
-		return method1382(date, string, method1373(-2116466592), Language.aClass495_5795, (short) 25671);
+		return method1382(date, string, method1373(-2116466592), XLanguage.aClass495_5795, (short) 25671);
 	}
 
 	public static String method1372(Date date, String string, int i) {
-		return method1382(date, string, method1373(-1860849890), Language.aClass495_5795, (short) 16433);
+		return method1382(date, string, method1373(-1860849890), XLanguage.aClass495_5795, (short) 16433);
 	}
 
 	static {
@@ -31,12 +31,12 @@ public final class Class78 {
 		return method1375("Europe/London", -669580467);
 	}
 
-	static String method1374(Date date, String string, TimeZone timezone, Language class495) {
+	static String method1374(Date date, String string, TimeZone timezone, XLanguage class495) {
 		if (null == aMap766) {
 			aMap766 = new HashMap(6);
-			Language[] class495s = Language.method8294(2118646344);
+			XLanguage[] class495s = XLanguage.method8294(2118646344);
 			for (int i = 0; i < class495s.length; i++) {
-				Language class495_0_ = class495s[i];
+				XLanguage class495_0_ = class495s[i];
 				aMap766.put(class495_0_, new ConcurrentLinkedQueue());
 			}
 		}
@@ -69,7 +69,7 @@ public final class Class78 {
 	}
 
 	public static String method1376(Date date, String string) {
-		return method1382(date, string, method1373(-2033816243), Language.aClass495_5795, (short) 20032);
+		return method1382(date, string, method1373(-2033816243), XLanguage.aClass495_5795, (short) 20032);
 	}
 
 	static TimeZone method1377(String string) {
@@ -124,12 +124,12 @@ public final class Class78 {
 		}
 	}
 
-	static String method1382(Date date, String string, TimeZone timezone, Language class495, short i) {
+	static String method1382(Date date, String string, TimeZone timezone, XLanguage class495, short i) {
 		if (null == aMap766) {
 			aMap766 = new HashMap(6);
-			Language[] class495s = Language.method8294(-15971239);
+			XLanguage[] class495s = XLanguage.method8294(-15971239);
 			for (int i_7_ = 0; i_7_ < class495s.length; i_7_++) {
-				Language class495_8_ = class495s[i_7_];
+				XLanguage class495_8_ = class495s[i_7_];
 				aMap766.put(class495_8_, new ConcurrentLinkedQueue());
 			}
 		}

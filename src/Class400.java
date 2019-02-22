@@ -121,7 +121,7 @@ public class Class400 {
 		return ((Class400) this).anInt4820 * 162347205 != -1;
 	}
 
-	public Class400(Game class486, Language class495, Index class317) {
+	public Class400(Game class486, XLanguage class495, Index class317) {
 		((Class400) this).aClass317_4817 = class317;
 		RsByteBuffer class282_sub35 = new RsByteBuffer(((Class400) this).aClass317_4817.getFile(0, 0));
 		int i = ((class282_sub35.buffer == null || class282_sub35.buffer.length < 1) ? -1 : class282_sub35.readUnsignedByte());

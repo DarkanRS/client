@@ -290,7 +290,7 @@ public class Class282_Sub20_Sub22 extends Class282_Sub20 {
 						} else if (Class282_Sub13.DEFAULTS_LOADER_8.anInterface17_5931.method127(class282_sub53, client.anInterface16Array7298, -809233249 * client.anInt7196, Class96_Sub21.aClass199_9438, (byte) 81))
 							Class468_Sub21.method12869(false, -200546110);
 						else {
-							if (3 == client.anInt7341 * -891719545 && LoadingStage.method6684((client.anInt7231 * -1638311881), (byte) 27)) {
+							if (3 == client.anInt7341 * -891719545 && XLoadingStage.method6684((client.anInt7231 * -1638311881), (byte) 27)) {
 								IndexLoaders.MAP_REGION_DECODER.method4499(new Class335(Class256.aClass256_3153, null), 218907808);
 								client.anInt7341 = 0;
 							}

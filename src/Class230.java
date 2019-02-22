@@ -26,7 +26,7 @@ public class Class230 implements IndexLoader {
 		return class226;
 	}
 
-	public Class230(Game class486, Language class495, Index class317) {
+	public Class230(Game class486, XLanguage class495, Index class317) {
 		((Class230) this).aClass317_2858 = class317;
 		if (((Class230) this).aClass317_2858 != null) {
 			int i = ((Class230) this).aClass317_2858.containersCount() - 1;

@@ -21,7 +21,7 @@ public class Class288 {
 		}
 	}
 
-	public Class288(Game class486, Language class495, Index class317) {
+	public Class288(Game class486, XLanguage class495, Index class317) {
 		((Class288) this).aClass317_3436 = class317;
 		((Class288) this).aClass317_3436.filesCount((-71319279 * (SharedConfigsType.aClass120_1469.id)));
 	}

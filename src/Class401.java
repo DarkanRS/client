@@ -7,7 +7,7 @@ public class Class401 {
 	Index aClass317_4824;
 	static IComponentDefinitions aClass118_4825;
 
-	public Class401(Game class486, Language class495, Index class317) {
+	public Class401(Game class486, XLanguage class495, Index class317) {
 		new SoftCache(64);
 		((Class401) this).aClass317_4824 = class317;
 		anInt4823 = (((Class401) this).aClass317_4824.filesCount(((SharedConfigsType.aClass120_1478.id) * -71319279)) * -1443669577);

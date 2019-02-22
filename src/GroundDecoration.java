@@ -465,7 +465,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								continue;
 							}
 							if (IComponentDefinitions.anInt1272 * -1417910959 == 1449989045 * class118.anInt1290) {
-								LoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, i_33_, i_34_, (class118.anInt1301 * 1506818197), (-492594917 * class118.anInt1429), (short) 20938);
+								XLoadingStage.renderMiniMiniMap(Renderers.SOFTWARE_RENDERER, i_33_, i_34_, (class118.anInt1301 * 1506818197), (-492594917 * class118.anInt1429), (short) 20938);
 								client.aBoolArray7443[i_32_] = true;
 								Renderers.SOFTWARE_RENDERER.r(i_23_, i_24_, i_25_, i_26_);
 								continue;
@@ -635,7 +635,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 									if (i_59_ >= 0 && i_59_ < 2048) {
 										Player class521_sub1_sub1_sub2_sub1 = (client.players[i_59_]);
 										if ((null != class521_sub1_sub1_sub2_sub1) && (i_59_ == (1595512269 * client.anInt7315) || ((Class272.method4840((class521_sub1_sub1_sub2_sub1.displayName), (byte) 17)) == (1871217945 * (class118.anInt1339)))))
-											class528 = (class521_sub1_sub1_sub2_sub1.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.RENDER_ANIMS), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class118.aClass456_1437, null, null, null, 0, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -10357));
+											class528 = (class521_sub1_sub1_sub2_sub1.playerAppearance.method3998(Renderers.SOFTWARE_RENDERER, i_56_, (IndexLoaders.RENDER_ANIMS), IndexLoaders.aClass31_204, (IndexLoaders.NPC_INDEX_LOADER), IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class118.aClass456_1437, null, null, null, 0, true, XLinkedNodeList.DEFAULTS_LOADER_6, (short) -10357));
 									}
 								} else if (2131324949 * class118.anInt1329 == 8 || 9 == (class118.anInt1329 * 2131324949)) {
 									Class282_Sub30 class282_sub30 = CS2Runner.method11127(((class118.anInt1330) * -402732635), false, 1899477275);

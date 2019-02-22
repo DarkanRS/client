@@ -471,7 +471,7 @@ public class Class521_Sub1_Sub4_Sub1 extends Class521_Sub1_Sub4 implements Scene
 					}
 				}
 			}
-			Login class284 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1644964406).aClass284_2648;
+			XLogin class284 = IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1644964406).aClass284_2648;
 			int i_35_ = i;
 			int i_36_ = i_16_;
 			List list = class284.aList3388;

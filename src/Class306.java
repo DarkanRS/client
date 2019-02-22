@@ -12,7 +12,7 @@ public class Class306 implements Runnable {
 	long aLong3602;
 	String aString3603;
 	Interface27 anInterface27_3604 = null;
-	LoadingStage aClass387_3605;
+	XLoadingStage aClass387_3605;
 
 	synchronized boolean method5417() {
 		return (((Class306) this).anInterface27_3598.method189(-3323946835697055613L * ((Class306) this).aLong3601));
@@ -34,7 +34,7 @@ public class Class306 implements Runnable {
 		return 137107041 * ((Class306) this).anInt3600;
 	}
 
-	synchronized void method5422(long l, String string, int i, LoadingStage class387, int i_0_) {
+	synchronized void method5422(long l, String string, int i, XLoadingStage class387, int i_0_) {
 		((Class306) this).aLong3602 = -4939654261418088205L * l;
 		((Class306) this).aString3603 = string;
 		((Class306) this).anInt3596 = -2130001021 * i;
@@ -45,13 +45,13 @@ public class Class306 implements Runnable {
 		if (((Class306) this).aClass387_3605 == null)
 			return 0;
 		int i_1_ = -1763884029 * ((Class306) this).aClass387_3605.anInt4712;
-		if (((LoadingStage) ((Class306) this).aClass387_3605).aBool4718 && (-1935875285 * ((Class306) this).anInt3596 < (((LoadingStage) ((Class306) this).aClass387_3605).anInt4703 * 586831783)))
+		if (((XLoadingStage) ((Class306) this).aClass387_3605).aBool4718 && (-1935875285 * ((Class306) this).anInt3596 < (((XLoadingStage) ((Class306) this).aClass387_3605).anInt4703 * 586831783)))
 			return 1 + ((Class306) this).anInt3596 * -1935875285;
 		if (i_1_ < 0 || i_1_ >= Class302.aClass387Array3557.length - 1)
 			return 100;
-		if (-1935875285 * ((Class306) this).anInt3596 == (2033966327 * ((LoadingStage) ((Class306) this).aClass387_3605).anInt4715))
-			return (((LoadingStage) ((Class306) this).aClass387_3605).anInt4703 * 586831783);
-		return (((LoadingStage) ((Class306) this).aClass387_3605).anInt4715 * 2033966327);
+		if (-1935875285 * ((Class306) this).anInt3596 == (2033966327 * ((XLoadingStage) ((Class306) this).aClass387_3605).anInt4715))
+			return (((XLoadingStage) ((Class306) this).aClass387_3605).anInt4703 * 586831783);
+		return (((XLoadingStage) ((Class306) this).aClass387_3605).anInt4715 * 2033966327);
 	}
 
 	public int method5424(byte i) {
@@ -66,7 +66,7 @@ public class Class306 implements Runnable {
 		return 137107041 * ((Class306) this).anInt3600;
 	}
 
-	public LoadingStage method5427(int i) {
+	public XLoadingStage method5427(int i) {
 		return ((Class306) this).aClass387_3605;
 	}
 
@@ -125,7 +125,7 @@ public class Class306 implements Runnable {
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < LoadingStage.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < XLoadingStage.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(2100341141);
 				} catch (Exception exception) {
 					continue;
@@ -189,7 +189,7 @@ public class Class306 implements Runnable {
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < LoadingStage.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < XLoadingStage.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(2013949561);
 				} catch (Exception exception) {
 					continue;
@@ -253,7 +253,7 @@ public class Class306 implements Runnable {
 						}
 					}
 					((Class306) this).aBool3597 = false;
-					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < LoadingStage.aClass387_4698.anInt4712 * -1763884029))
+					if (Renderers.SOFTWARE_RENDERER != null && !(((Class306) this).anInterface27_3598 instanceof Class304) && ((-1763884029 * ((Class306) this).aClass387_3605.anInt4712) < XLoadingStage.aClass387_4698.anInt4712 * -1763884029))
 						Class532_Sub1.method12840(1434548492);
 				} catch (Exception exception) {
 					continue;
@@ -324,7 +324,7 @@ public class Class306 implements Runnable {
 		((Class306) this).aLong3601 = Class169.method2869(1876195097) * 1167380479424480811L;
 	}
 
-	synchronized void method5443(long l, String string, int i, LoadingStage class387) {
+	synchronized void method5443(long l, String string, int i, XLoadingStage class387) {
 		((Class306) this).aLong3602 = -4939654261418088205L * l;
 		((Class306) this).aString3603 = string;
 		((Class306) this).anInt3596 = -2130001021 * i;
@@ -349,11 +349,11 @@ public class Class306 implements Runnable {
 		return 5901517445831929915L * ((Class306) this).aLong3602;
 	}
 
-	public LoadingStage method5448() {
+	public XLoadingStage method5448() {
 		return ((Class306) this).aClass387_3605;
 	}
 
-	public LoadingStage method5449() {
+	public XLoadingStage method5449() {
 		return ((Class306) this).aClass387_3605;
 	}
 
@@ -361,11 +361,11 @@ public class Class306 implements Runnable {
 		return (((Class306) this).anInterface27_3598.method189(-3323946835697055613L * ((Class306) this).aLong3601));
 	}
 
-	public LoadingStage method5451() {
+	public XLoadingStage method5451() {
 		return ((Class306) this).aClass387_3605;
 	}
 
-	public LoadingStage method5452() {
+	public XLoadingStage method5452() {
 		return ((Class306) this).aClass387_3605;
 	}
 

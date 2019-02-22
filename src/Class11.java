@@ -100,7 +100,7 @@ public class Class11 {
 		Class96_Sub13.anInt9368 = -2005398665 * i;
 		OutgoingLoginPacket.anInt4280 = i_31_ * -772343735;
 		Class121.anInt1527 = -366984663 * i_32_;
-		LinkedNodeList.anInt5606 = 2044511935 * i_33_;
+		XLinkedNodeList.anInt5606 = 2044511935 * i_33_;
 		Class501.anInt5828 = -1387629705 * i_34_;
 		if (1123046983 * Class501.anInt5828 >= 100) {
 			int i_36_ = 75271680 * Class96_Sub13.anInt9368 + 256;

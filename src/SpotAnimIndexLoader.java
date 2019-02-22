@@ -12,7 +12,7 @@ public class SpotAnimIndexLoader {
 	int anInt5892;
 	static Font aFont5893;
 
-	public SpotAnimIndexLoader(Game class486, Language class495, Index class317, Index class317_0_) {
+	public SpotAnimIndexLoader(Game class486, XLanguage class495, Index class317, Index class317_0_) {
 		((SpotAnimIndexLoader) this).aClass229_5890 = new SoftCache(60);
 		((SpotAnimIndexLoader) this).aClass317_5888 = class317;
 		((SpotAnimIndexLoader) this).aClass317_5889 = class317_0_;

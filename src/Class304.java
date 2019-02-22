@@ -712,7 +712,7 @@ public class Class304 implements Interface27 {
 		return 0;
 	}
 
-	static String method5407(int i, Language class495, byte i_151_) {
+	static String method5407(int i, XLanguage class495, byte i_151_) {
 		if (i < 100000)
 			return new StringBuilder().append("<col=ffff00>").append(i).append("</col>").toString();
 		if (i < 10000000)

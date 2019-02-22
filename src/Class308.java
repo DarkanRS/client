@@ -4,7 +4,7 @@
 
 public class Class308 {
 	int anInt3611;
-	LinkedNodeList aClass473_3612;
+	XLinkedNodeList aClass473_3612;
 	int anInt3613;
 	int[][][] anIntArrayArrayArray3614;
 	Class282_Sub16[] aClass282_Sub16Array3615;
@@ -76,7 +76,7 @@ public class Class308 {
 
 	Class308(int i, int i_4_, int i_5_) {
 		((Class308) this).anInt3616 = 1013639737;
-		((Class308) this).aClass473_3612 = new LinkedNodeList();
+		((Class308) this).aClass473_3612 = new XLinkedNodeList();
 		aBool3619 = false;
 		((Class308) this).anInt3611 = -1423143035 * i_4_;
 		((Class308) this).anInt3613 = i * 1426885883;

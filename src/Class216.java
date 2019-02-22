@@ -44,7 +44,7 @@ public class Class216 {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		LinkedNodeList.method7889(class118, class98, class527, 1072784051);
+		XLinkedNodeList.method7889(class118, class98, class527, 1072784051);
 	}
 
 	static boolean method3677(int i) {

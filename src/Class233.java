@@ -14,7 +14,7 @@ public class Class233 {
 		}
 	}
 
-	public Class233(Game class486, Language class495, Index class317) {
+	public Class233(Game class486, XLanguage class495, Index class317) {
 		((Class233) this).aClass317_2882 = class317;
 		if (null != ((Class233) this).aClass317_2882)
 			((Class233) this).aClass317_2882.filesCount(-71319279 * SharedConfigsType.aClass120_1464.id);
@@ -77,7 +77,7 @@ public class Class233 {
 	}
 
 	static final void method3939(CS2Executor class527, int i) {
-		LinkedNodeList.method7886(true, 1516035825);
+		XLinkedNodeList.method7886(true, 1516035825);
 	}
 
 	static final void method3940(CS2Executor class527, int i) {

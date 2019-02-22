@@ -24,7 +24,7 @@ public class EnumIndexLoader {
 		return class431;
 	}
 
-	public EnumIndexLoader(Game class486, Language class495, Index class317) {
+	public EnumIndexLoader(Game class486, XLanguage class495, Index class317) {
 		((EnumIndexLoader) this).aClass317_5378 = class317;
 		if (null != ((EnumIndexLoader) this).aClass317_5378) {
 			int i = ((EnumIndexLoader) this).aClass317_5378.containersCount() - 1;

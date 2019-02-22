@@ -39,7 +39,7 @@ public class AnimationIndexLoader {
 		return class518;
 	}
 
-	public AnimationIndexLoader(Game class486, Language class495, Index sequencesIndex, Index animSkeletonIndex, Index animSkinIndex) {
+	public AnimationIndexLoader(Game class486, XLanguage class495, Index sequencesIndex, Index animSkeletonIndex, Index animSkinIndex) {
 		((AnimationIndexLoader) this).cache = new SoftCache(100);
 		((AnimationIndexLoader) this).sequenceIndex = sequencesIndex;
 		if (null != ((AnimationIndexLoader) this).sequenceIndex) {

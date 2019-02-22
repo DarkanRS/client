@@ -2,9 +2,11 @@
 /* Class227 - Decompiled by JODE
  * Visit http://jode.sourceforge.net/
  */
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class RenderAnimDefs {
+	public int renderAnimId;
 	public int anInt2786;
 	public boolean aBool2787;
 	RenderAnimIndexLoader aClass211_2788;
@@ -38,7 +40,7 @@ public class RenderAnimDefs {
 	public int anInt2816;
 	public int walkDir6;
 	public int[] anIntArray2818;
-	public int defaultStandAnimation = -1;
+	public int defaultStandAnimation = 1841483755;
 	public int anInt2820;
 	public int walkDir1;
 	int anInt2822;
@@ -207,8 +209,8 @@ public class RenderAnimDefs {
 		aBool2787 = true;
 	}
 
-	public int method3809(int i) {
-		if (-1 != defaultStandAnimation * -243982531)
+	public int method3809(int d) {
+		if (-1 != (defaultStandAnimation * -243982531))
 			return -243982531 * defaultStandAnimation;
 		if (anIntArray2814 != null) {
 			int i_11_ = (int) (Math.random() * (double) (1953362957 * ((RenderAnimDefs) this).anInt2822));
@@ -223,7 +225,7 @@ public class RenderAnimDefs {
 	public boolean method3810(int i, int i_13_) {
 		if (i == -1)
 			return false;
-		if (i == -243982531 * defaultStandAnimation)
+		if (i == (-243982531 * defaultStandAnimation))
 			return true;
 		if (null != anIntArray2814) {
 			for (int i_14_ = 0; i_14_ < anIntArray2814.length; i_14_++) {

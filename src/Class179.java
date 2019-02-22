@@ -710,7 +710,7 @@ public class Class179 {
 			Class13.aStringArray129[0] = new StringBuilder().append(string_31_).append(": ").append(strings[i_32_]).toString();
 			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					TextureDefinition.aFileOutputStream9481.write(LinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -94));
+					TextureDefinition.aFileOutputStream9481.write(XLinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -94));
 				} catch (IOException ioexception) {
 					/* empty */
 				}
@@ -738,7 +738,7 @@ public class Class179 {
 			Class13.aStringArray129[0] = new StringBuilder().append(string_36_).append(": ").append(strings[i_37_]).toString();
 			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					TextureDefinition.aFileOutputStream9481.write(LinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -117));
+					TextureDefinition.aFileOutputStream9481.write(XLinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -117));
 				} catch (IOException ioexception) {
 					/* empty */
 				}
@@ -766,7 +766,7 @@ public class Class179 {
 			Class13.aStringArray129[0] = new StringBuilder().append(string_41_).append(": ").append(strings[i_42_]).toString();
 			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					TextureDefinition.aFileOutputStream9481.write(LinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -102));
+					TextureDefinition.aFileOutputStream9481.write(XLinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -102));
 				} catch (IOException ioexception) {
 					/* empty */
 				}

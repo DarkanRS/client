@@ -51,7 +51,7 @@ public class AnimationSkeleton extends CacheableNode {
 		}
 		if (!bool)
 			return false;
-		LinkedNodeList skinList = new LinkedNodeList();
+		XLinkedNodeList skinList = new XLinkedNodeList();
 		int[] validFiles;
 		synchronized (ANIMATION_SKELETON_INDEX) {
 			int fileSize = ANIMATION_SKELETON_INDEX.filesCount((this.animSkeletonId) * 2091314053);

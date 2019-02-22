@@ -132,7 +132,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	public void method15797(int[] is, int[] is_6_, int i) {
 		if (anIntArray10335 == null && is != null)
-			anIntArray10335 = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+			anIntArray10335 = new int[XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
 		else if (is == null) {
 			anIntArray10335 = null;
 			return;
@@ -155,8 +155,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		if (anIntArray10362 == null) {
 			if (-1 == i_11_)
 				return true;
-			anIntArray10362 = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
-			for (int i_13_ = 0; i_13_ < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_13_++)
+			anIntArray10362 = new int[XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+			for (int i_13_ = 0; i_13_ < XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_13_++)
 				anIntArray10362[i_13_] = -1;
 		}
 		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
@@ -171,7 +171,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			int i_17_ = i_15_ - i_16_;
 			if (i_17_ >= -i_14_ && i_17_ <= i_14_) {
 				anIntArray10362[i] = -1;
-				for (int i_18_ = 0; i_18_ < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_18_++) {
+				for (int i_18_ = 0; i_18_ < XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; i_18_++) {
 					if (-1 != anIntArray10362[i_18_])
 						return true;
 				}
@@ -753,7 +753,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		aClass161Array10339 = new Class161[4];
 		for (int i_343_ = 0; i_343_ < 4; i_343_++)
 			aClass161Array10339[i_343_] = new Class161(this);
-		aClass456_Sub2_Sub1Array10354 = (new Class456_Sub2_Sub1[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length]);
+		aClass456_Sub2_Sub1Array10354 = (new Class456_Sub2_Sub1[XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length]);
 	}
 
 	public abstract boolean method15871();

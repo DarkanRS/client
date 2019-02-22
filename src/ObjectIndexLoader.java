@@ -4,7 +4,7 @@
 
 public class ObjectIndexLoader {
 	SoftCache softCache = new SoftCache(256);
-	Language aClass495_5608;
+	XLanguage aClass495_5608;
 	boolean showOptions;
 	Index objectIndex;
 	Index meshIndex;
@@ -110,7 +110,7 @@ public class ObjectIndexLoader {
 		}
 	}
 
-	public ObjectIndexLoader(Game class486, Language class495, boolean bool, Index class317, Index class317_3_) {
+	public ObjectIndexLoader(Game class486, XLanguage class495, boolean bool, Index class317, Index class317_3_) {
 		((ObjectIndexLoader) this).aClass157Array5616 = new RSMesh[4];
 		((ObjectIndexLoader) this).aClass452_5620 = new Class452(null, null);
 		((ObjectIndexLoader) this).game = class486;

@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Login {
+public class XLogin {
 	int anInt3385;
 	boolean aBool3386;
 	int anInt3387;
@@ -68,7 +68,7 @@ public class Login {
 		}
 	}
 
-	Login(boolean bool) {
+	XLogin(boolean bool) {
 		this.aBool3386 = false;
 		this.anInt3387 = 0;
 		this.anInt3385 = 0;

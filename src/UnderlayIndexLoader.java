@@ -34,7 +34,7 @@ public class UnderlayIndexLoader {
 		}
 	}
 
-	public UnderlayIndexLoader(Game class486, Language class495, Index class317) {
+	public UnderlayIndexLoader(Game class486, XLanguage class495, Index class317) {
 		((UnderlayIndexLoader) this).configIndex = class317;
 		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.FLO1.id) * -71319279);
 	}

@@ -14,7 +14,7 @@ public class Class421 {
 		return ((Class421) this).aClass282_Sub50_Sub4Array5012[i];
 	}
 
-	public Class421(Game class486, Language class495, Index class317, boolean bool) {
+	public Class421(Game class486, XLanguage class495, Index class317, boolean bool) {
 		((Class421) this).aClass317_5014 = class317;
 		((Class421) this).anInt5013 = (((Class421) this).aClass317_5014.filesCount(((SharedConfigsType.aClass120_1473.id) * -71319279)) * 268916055);
 		if (bool) {

@@ -19,7 +19,7 @@ public class ItemDefaultsLoader {
 		}
 	}
 
-	public ItemDefaultsLoader(Game class486, Language class495, Index class317) {
+	public ItemDefaultsLoader(Game class486, XLanguage class495, Index class317) {
 		((ItemDefaultsLoader) this).aClass317_5027 = class317;
 		if (((ItemDefaultsLoader) this).aClass317_5027 != null)
 			((ItemDefaultsLoader) this).aClass317_5027.filesCount(SharedConfigsType.aClass120_1474.id * -71319279);

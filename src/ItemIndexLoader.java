@@ -4,7 +4,7 @@
 
 public class ItemIndexLoader implements IndexLoader {
 	Game game;
-	Language language;
+	XLanguage language;
 	boolean membersOnly;
 	Index fs19;
 	String[] defaultInventoryOptions;
@@ -156,7 +156,7 @@ public class ItemIndexLoader implements IndexLoader {
 		}
 	}
 
-	public ItemIndexLoader(Game game, Language language, boolean bool, ItemDefaultsLoader attrDefaults, Index fs19, Index meshIndex) {
+	public ItemIndexLoader(Game game, XLanguage language, boolean bool, ItemDefaultsLoader attrDefaults, Index fs19, Index meshIndex) {
 		aClass212_5114 = new Class212(250);
 		((ItemIndexLoader) this).softwareItemRender = new SoftwareItemRender();
 		((ItemIndexLoader) this).game = game;

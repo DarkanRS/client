@@ -2,7 +2,7 @@
  * Visit http://jode.sourceforge.net/
  */
 
-public class LinkedNodeList {
+public class XLinkedNodeList {
 	Node current;
 	public Node head = new Node();
 	public static Defaults6Loader DEFAULTS_LOADER_6;
@@ -15,16 +15,16 @@ public class LinkedNodeList {
 				break;
 			node.remove();
 		}
-		((LinkedNodeList) this).current = null;
+		((XLinkedNodeList) this).current = null;
 	}
 
 	public Node getPrevious() {
-		Node node = ((LinkedNodeList) this).current;
+		Node node = ((XLinkedNodeList) this).current;
 		if (node == head) {
-			((LinkedNodeList) this).current = null;
+			((XLinkedNodeList) this).current = null;
 			return null;
 		}
-		((LinkedNodeList) this).current = node.prev;
+		((XLinkedNodeList) this).current = node.prev;
 		return node;
 	}
 
@@ -39,14 +39,14 @@ public class LinkedNodeList {
 	public Node getBack() {
 		Node node = head.prev;
 		if (head == node) {
-			((LinkedNodeList) this).current = null;
+			((XLinkedNodeList) this).current = null;
 			return null;
 		}
-		((LinkedNodeList) this).current = node.prev;
+		((XLinkedNodeList) this).current = node.prev;
 		return node;
 	}
 
-	public LinkedNodeList() {
+	public XLinkedNodeList() {
 		head.prev = head;
 		head.next = head;
 	}
@@ -58,10 +58,10 @@ public class LinkedNodeList {
 	public Node getNext() {
 		Node node = head.next;
 		if (head == node) {
-			((LinkedNodeList) this).current = null;
+			((XLinkedNodeList) this).current = null;
 			return null;
 		}
-		((LinkedNodeList) this).current = node.next;
+		((XLinkedNodeList) this).current = node.next;
 		return node;
 	}
 

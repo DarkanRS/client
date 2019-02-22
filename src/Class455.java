@@ -90,7 +90,7 @@ public abstract class Class455 {
 			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = string_8_;
 	}
 
-	public static int method7557(CharSequence charsequence, CharSequence charsequence_9_, Language class495, int i) {
+	public static int method7557(CharSequence charsequence, CharSequence charsequence_9_, XLanguage class495, int i) {
 		int i_10_ = charsequence.length();
 		int i_11_ = charsequence_9_.length();
 		int i_12_ = 0;
@@ -127,7 +127,7 @@ public abstract class Class455 {
 		}
 		int i_17_ = Math.min(i_10_, i_11_);
 		for (int i_18_ = 0; i_18_ < i_17_; i_18_++) {
-			if (class495 == Language.aClass495_5801) {
+			if (class495 == XLanguage.aClass495_5801) {
 				i_12_ = i_10_ - 1 - i_18_;
 				i_13_ = i_11_ - 1 - i_18_;
 			} else

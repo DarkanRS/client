@@ -118,14 +118,14 @@ public abstract class Class202 {
 		}
 	}
 
-	public static String method3342(long l, int i, boolean bool, Language class495, byte i_11_) {
+	public static String method3342(long l, int i, boolean bool, XLanguage class495, byte i_11_) {
 		char c = ',';
 		char c_12_ = '.';
-		if (Language.aClass495_5795 == class495) {
+		if (XLanguage.aClass495_5795 == class495) {
 			c = '.';
 			c_12_ = ',';
 		}
-		if (class495 == Language.aClass495_5801)
+		if (class495 == XLanguage.aClass495_5801)
 			c_12_ = '\u00a0';
 		boolean bool_13_ = false;
 		if (l < 0L) {

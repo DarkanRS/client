@@ -83,7 +83,7 @@ public class Class119 {
 			}
 		}
 		if (!bool)
-			LoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111)).append(string).toString(), (byte) -65);
+			XLoadingStage.method6681(4, new StringBuilder().append(Message.UNABLE_TO_FIND.translate(Class223.CURRENT_LANGUAGE, -774222111)).append(string).toString(), (byte) -65);
 	}
 
 	static void method2076(IComponentDefinitions class118, IComponentDefinitions class118_12_, int i) {

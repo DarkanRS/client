@@ -103,7 +103,7 @@ public class WorldMapIndexLoader {
 		((WorldMapIndexLoader) this).aClass229_2708 = new SoftCache(i_4_);
 	}
 
-	public WorldMapIndexLoader(Game class486, Language class495, Index class317, Index class317_5_) {
+	public WorldMapIndexLoader(Game class486, XLanguage class495, Index class317, Index class317_5_) {
 		((WorldMapIndexLoader) this).aClass317_2705 = class317;
 		((WorldMapIndexLoader) this).aClass317_2703 = class317_5_;
 		((WorldMapIndexLoader) this).aClass317_2705.filesCount((-71319279 * (SharedConfigsType.WORLD_MAP_DEFS.id)));

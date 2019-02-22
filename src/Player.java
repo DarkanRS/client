@@ -367,7 +367,7 @@ public class Player extends Animable {
 		boolean bool = (aByte10352 != 0 && -1809259861 * client.cycles >= anInt10347 * -134703791 && -1809259861 * client.cycles < -444686705 * anInt10348);
 		if (bool)
 			i |= 0x80000;
-		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_38_, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -9437));
+		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_38_, true, XLinkedNodeList.DEFAULTS_LOADER_6, (short) -9437));
 		int i_39_ = Class46.method932(-708293505);
 		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_39_ > 50)
 			JS5CacheFile.method3359(-1275511493);
@@ -752,11 +752,11 @@ public class Player extends Animable {
 			hidden = false;
 		int effectData = -1;
 		anInt10559 = 0;
-		int[] is = new int[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
-		MeshModifier[] itemEffects = new MeshModifier[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
-		ItemDefinitions[] itemDefinitions = new ItemDefinitions[LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
-		for (int equipSlot = 0; equipSlot < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
-			if (1 != LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[equipSlot]) {
+		int[] is = new int[XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		MeshModifier[] itemEffects = new MeshModifier[XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		ItemDefinitions[] itemDefinitions = new ItemDefinitions[XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length];
+		for (int equipSlot = 0; equipSlot < XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
+			if (1 != XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[equipSlot]) {
 				int firstByte = buffer.readUnsignedByte();
 				if (0 == firstByte)
 					is[equipSlot] = 0;
@@ -783,8 +783,8 @@ public class Player extends Animable {
 		if (effectData == -1) {
 			int i_88_ = buffer.readUnsignedShort();
 			int i_89_ = 0;
-			for (int equipSlot = 0; equipSlot < LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
-				if (LinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[equipSlot] == 0) {
+			for (int equipSlot = 0; equipSlot < XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots.length; equipSlot++) {
+				if (XLinkedNodeList.DEFAULTS_LOADER_6.equipmentSlots[equipSlot] == 0) {
 					if ((i_88_ & 1 << i_89_) != 0)
 						itemEffects[equipSlot] = Class506.decodeItemEffects(itemDefinitions[equipSlot], buffer, 1637937706);
 					i_89_++;
@@ -937,7 +937,7 @@ public class Player extends Animable {
 		boolean bool = (aByte10352 != 0 && -1809259861 * client.cycles >= anInt10347 * -134703791 && -1809259861 * client.cycles < -444686705 * anInt10348);
 		if (bool)
 			i |= 0x80000;
-		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_119_, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -8674));
+		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_119_, true, XLinkedNodeList.DEFAULTS_LOADER_6, (short) -8674));
 		int i_120_ = Class46.method932(-1668934621);
 		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_120_ > 50)
 			JS5CacheFile.method3359(-1275511493);
@@ -988,7 +988,7 @@ public class Player extends Animable {
 		boolean bool = (aByte10352 != 0 && -1809259861 * client.cycles >= anInt10347 * -134703791 && -1809259861 * client.cycles < -444686705 * anInt10348);
 		if (bool)
 			i |= 0x80000;
-		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_125_, true, LinkedNodeList.DEFAULTS_LOADER_6, (short) -4743));
+		MeshRasterizer class528 = (aClass528Array10372[0] = playerAppearance.method3998(class505, i, IndexLoaders.RENDER_ANIMS, IndexLoaders.aClass31_204, IndexLoaders.NPC_INDEX_LOADER, IndexLoaders.ITEM_INDEX_LOADER, IndexLoaders.ANIMATION_INDEX_LOADER, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_125_, true, XLinkedNodeList.DEFAULTS_LOADER_6, (short) -4743));
 		int i_126_ = Class46.method932(-1966796916);
 		if (Engine.MAX_MEMORY * -1346844585 < 96 && i_126_ > 50)
 			JS5CacheFile.method3359(-1275511493);

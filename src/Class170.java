@@ -21,7 +21,7 @@ public class Class170 {
 	boolean aBool2105;
 	Class137_Sub1[] aClass137_Sub1Array2106;
 	Class282_Sub50_Sub19 aClass282_Sub50_Sub19_2107;
-	LinkedNodeList aClass473_2108 = new LinkedNodeList();
+	XLinkedNodeList aClass473_2108 = new XLinkedNodeList();
 	boolean aBool2109;
 	boolean aBool2110;
 	int anInt2111;

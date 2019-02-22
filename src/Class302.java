@@ -1,6 +1,6 @@
 
 public class Class302 {
-	static LoadingStage[] aClass387Array3557;
+	static XLoadingStage[] aClass387Array3557;
 	static int[] anIntArray3558 = { 4, 4, 1, 2, 6, 4, 2, 44, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1 };
 	static Interface27[] anInterface27Array3559;
 	static int anInt3560 = -432660167;

@@ -45,7 +45,7 @@ public class Class394 {
 		}
 	}
 
-	public Class394(Game class486, Language class495, Index class317) {
+	public Class394(Game class486, XLanguage class495, Index class317) {
 		((Class394) this).aClass317_4784 = class317;
 		if (null != ((Class394) this).aClass317_4784)
 			anInt4785 = (((Class394) this).aClass317_4784.filesCount(-71319279 * SharedConfigsType.aClass120_1510.id)) * -476997773;

@@ -387,7 +387,7 @@ public class Class291 {
 						class505.B(i, i_96_, i_97_, i_98_, i_104_, 0);
 				} else {
 					int i_105_ = bool ? 0 : 1;
-					LoadingStage.method6686(class505, aByteArrayArrayArray3464, anInt3469, i, i_96_, i_99_, anIntArray3481[i_100_], i_97_, i_98_, i_103_, i_101_ >> 6 & 0x3, i_105_, -778426083);
+					XLoadingStage.method6686(class505, aByteArrayArrayArray3464, anInt3469, i, i_96_, i_99_, anIntArray3481[i_100_], i_97_, i_98_, i_103_, i_101_ >> 6 & 0x3, i_105_, -778426083);
 				}
 			}
 		}

@@ -59,7 +59,7 @@ public class Class2 {
 		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
 		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
 		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Language.method8277(class118, class98, class527, 1708366546);
+		XLanguage.method8277(class118, class98, class527, 1708366546);
 	}
 
 	static final void method261(CS2Executor class527, byte i) {

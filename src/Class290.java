@@ -49,7 +49,7 @@ public class Class290 {
 		}
 	}
 
-	public Class290(Game class486, Language class495, Index class317, Index class317_1_) {
+	public Class290(Game class486, XLanguage class495, Index class317, Index class317_1_) {
 		((Class290) this).aClass229_3447 = new SoftCache(20);
 		((Class290) this).aClass317_3448 = class317_1_;
 		((Class290) this).aClass317_3450 = class317;

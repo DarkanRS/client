@@ -36,7 +36,7 @@ public class Class113 {
 
 	public static int method1879(RsByteBuffer class282_sub35, String string) {
 		int i = -1990677291 * class282_sub35.index;
-		byte[] is = LinkedNodeList.method7885(string, (byte) -109);
+		byte[] is = XLinkedNodeList.method7885(string, (byte) -109);
 		class282_sub35.method13076(is.length, 1870267049);
 		class282_sub35.index += aClass117_1234.method1971(is, 0, is.length, class282_sub35.buffer, (class282_sub35.index * -1990677291), -130174544) * -1115476867;
 		return class282_sub35.index * -1990677291 - i;
@@ -64,7 +64,7 @@ public class Class113 {
 
 	public static int method1881(RsByteBuffer class282_sub35, String string) {
 		int i = -1990677291 * class282_sub35.index;
-		byte[] is = LinkedNodeList.method7885(string, (byte) -85);
+		byte[] is = XLinkedNodeList.method7885(string, (byte) -85);
 		class282_sub35.method13076(is.length, -216579307);
 		class282_sub35.index += aClass117_1234.method1971(is, 0, is.length, class282_sub35.buffer, (class282_sub35.index * -1990677291), -130174544) * -1115476867;
 		return class282_sub35.index * -1990677291 - i;

@@ -36,7 +36,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	protected float aFloat8697;
 	Class47 aClass47_8698;
 	NativeHeap aNativeHeap8699;
-	LinkedNodeList aClass473_8700;
+	XLinkedNodeList aClass473_8700;
 	public int anInt8701;
 	public int anInt8702;
 	int anInt8703;
@@ -237,7 +237,7 @@ public abstract class Class505_Sub2 extends GraphicalRenderer {
 	Class505_Sub2(Interface22 interface22, Index class317, int i, int i_2_) {
 		super(interface22);
 		((Class505_Sub2) this).anInt8696 = 4194304;
-		((Class505_Sub2) this).aClass473_8700 = new LinkedNodeList();
+		((Class505_Sub2) this).aClass473_8700 = new XLinkedNodeList();
 		((Class505_Sub2) this).aClass294_8704 = new Matrix44Var();
 		((Class505_Sub2) this).aClass384_8705 = new Matrix44Arr();
 		((Class505_Sub2) this).aClass294_8706 = new Matrix44Var();

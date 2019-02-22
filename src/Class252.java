@@ -204,7 +204,7 @@ public class Class252 implements Interface43 {
 			}
 			int i_23_ = i_21_ * 100 / i_19_;
 			int i_24_ = 10000 * i_20_ / i_19_;
-			String string_25_ = new StringBuilder().append("Cache:").append(Class202.method3342((long) i_24_, 2, true, Language.aClass495_5795, (byte) 28)).append("% (").append(i_23_).append("%)").toString();
+			String string_25_ = new StringBuilder().append("Cache:").append(Class202.method3342((long) i_24_, 2, true, XLanguage.aClass495_5795, (byte) 28)).append("% (").append(i_23_).append("%)").toString();
 			Renderers.FONT_RENDERER.method359(string_25_, i_10_, i_11_, -256, -1, 1878721557);
 			i_11_ += 12;
 		}

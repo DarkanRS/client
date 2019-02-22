@@ -43,7 +43,7 @@ public class Class331 {
 		return class282_sub50_sub14;
 	}
 
-	public Class331(Language class495, Index class317, Index class317_1_) {
+	public Class331(XLanguage class495, Index class317, Index class317_1_) {
 		((Class331) this).aClass317_3872 = class317;
 		((Class331) this).aClass317_3870 = class317_1_;
 		if (null != ((Class331) this).aClass317_3872)

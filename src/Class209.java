@@ -126,7 +126,7 @@ public abstract class Class209 {
 			Class13.aStringArray129[0] = new StringBuilder().append(string_5_).append(": ").append(strings[i_6_]).toString();
 			if (null != TextureDefinition.aFileOutputStream9481) {
 				try {
-					TextureDefinition.aFileOutputStream9481.write(LinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -108));
+					TextureDefinition.aFileOutputStream9481.write(XLinkedNodeList.method7885(new StringBuilder().append(Class13.aStringArray129[0]).append("\n").toString(), (byte) -108));
 				} catch (IOException ioexception) {
 					/* empty */
 				}

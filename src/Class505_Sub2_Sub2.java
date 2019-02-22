@@ -21,7 +21,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 	long aLong10246 = 0L;
 	boolean aBool10247;
 	D3DPRESENT_PARAMETERS aD3DPRESENT_PARAMETERS10248;
-	LinkedNodeList aClass473_10249;
+	XLinkedNodeList aClass473_10249;
 	long aLong10250;
 	Class115_Sub1 aClass115_Sub1_10251;
 	long aLong10252 = 0L;
@@ -124,7 +124,7 @@ public class Class505_Sub2_Sub2 extends Class505_Sub2 {
 
 	Class505_Sub2_Sub2(int i, int i_4_, long l, long l_5_, D3DPRESENT_PARAMETERS d3dpresent_parameters, D3DCAPS d3dcaps, Interface22 interface22, Index class317, int i_6_) {
 		super(interface22, class317, i_6_, 0);
-		((Class505_Sub2_Sub2) this).aClass473_10249 = new LinkedNodeList();
+		((Class505_Sub2_Sub2) this).aClass473_10249 = new XLinkedNodeList();
 		((Class505_Sub2_Sub2) this).anInt10262 = 0;
 		((Class505_Sub2_Sub2) this).aLong10259 = 0L;
 		((Class505_Sub2_Sub2) this).aLong10250 = 0L;

@@ -424,12 +424,12 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 		if (i_34_ > 3072)
 			i_34_ = 3072;
 		if (Class293.anInt3512 * 726126721 < i_34_) {
-			Class293.anInt3512 += ((692693311 * LinkedNodeList.anInt5606 + ((i_34_ - Class293.anInt3512 * 726126721 >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3) * -647467135;
+			Class293.anInt3512 += ((692693311 * XLinkedNodeList.anInt5606 + ((i_34_ - Class293.anInt3512 * 726126721 >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3) * -647467135;
 			if (726126721 * Class293.anInt3512 > i_34_)
 				Class293.anInt3512 = i_34_ * -647467135;
 		}
 		if (Class293.anInt3512 * 726126721 > i_34_) {
-			Class293.anInt3512 -= (-647467135 * ((692693311 * LinkedNodeList.anInt5606 + ((726126721 * Class293.anInt3512 - i_34_ >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3));
+			Class293.anInt3512 -= (-647467135 * ((692693311 * XLinkedNodeList.anInt5606 + ((726126721 * Class293.anInt3512 - i_34_ >> 3) * (Class501.anInt5828 * 1123046983) / 1000)) << 3));
 			if (726126721 * Class293.anInt3512 < i_34_)
 				Class293.anInt3512 = i_34_ * -647467135;
 		}
@@ -440,11 +440,11 @@ public class Wall extends Class521_Sub1_Sub5 implements SceneObject {
 			i_36_ += 16384;
 		i_36_ >>= 3;
 		if (i_36_ > 0) {
-			AnimationDefinitions.anInt5930 += (1898253385 * ((692693311 * LinkedNodeList.anInt5606 + 1123046983 * Class501.anInt5828 * i_36_ / 1000) << 3));
+			AnimationDefinitions.anInt5930 += (1898253385 * ((692693311 * XLinkedNodeList.anInt5606 + 1123046983 * Class501.anInt5828 * i_36_ / 1000) << 3));
 			AnimationDefinitions.anInt5930 = (1236051449 * AnimationDefinitions.anInt5930 & 0x3fff) * 1898253385;
 		}
 		if (i_36_ < 0) {
-			AnimationDefinitions.anInt5930 -= (1898253385 * ((692693311 * LinkedNodeList.anInt5606 + Class501.anInt5828 * 1123046983 * -i_36_ / 1000) << 3));
+			AnimationDefinitions.anInt5930 -= (1898253385 * ((692693311 * XLinkedNodeList.anInt5606 + Class501.anInt5828 * 1123046983 * -i_36_ / 1000) << 3));
 			AnimationDefinitions.anInt5930 = (1236051449 * AnimationDefinitions.anInt5930 & 0x3fff) * 1898253385;
 		}
 		int i_37_ = i_35_ - 1236051449 * AnimationDefinitions.anInt5930;

@@ -13,7 +13,7 @@ public class Class320 {
 	int anInt3718 = -1723974065;
 	static Class282_Sub25 aClass282_Sub25_3719 = new Class282_Sub25(0, 0);
 	Class282_Sub25[] aClass282_Sub25Array3720;
-	LinkedNodeList aClass473_3721 = new LinkedNodeList();
+	XLinkedNodeList aClass473_3721 = new XLinkedNodeList();
 	public boolean aBool3722 = false;
 	public static Class253 aClass253_3723;
 	public static int[] anIntArray3724;

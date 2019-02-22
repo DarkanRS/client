@@ -777,7 +777,7 @@ public class Class174 {
 			Engine.method4776(executor, -1764845485);
 			break;
 		case 348:
-			LoadingStage.method6678(executor, (byte) 1);
+			XLoadingStage.method6678(executor, (byte) 1);
 			break;
 		case 661:
 			Class76.method1362(executor, 1736509021);
@@ -1140,7 +1140,7 @@ public class Class174 {
 			Class350_Sub2.method12573(executor, (short) 255);
 			break;
 		case 611:
-			Language.method8298(executor, (byte) -1);
+			XLanguage.method8298(executor, (byte) -1);
 			break;
 		case 124:
 			Class388.method6687(executor, 841786428);
@@ -1341,7 +1341,7 @@ public class Class174 {
 			Class386.method6670(executor, 749111645);
 			break;
 		case 142:
-			LinkedNodeList.method7888(executor, -355473345);
+			XLinkedNodeList.method7888(executor, -355473345);
 			break;
 		case 18:
 			NamedFileReference.method870(executor, 1718249177);
@@ -1452,7 +1452,7 @@ public class Class174 {
 			Class288.method5082(executor, -199853817);
 			break;
 		case 673:
-			LoadingStage.method6677(executor, -1272408202);
+			XLoadingStage.method6677(executor, -1272408202);
 			break;
 		case 360:
 			Class75.method1355(executor, 1158012743);
@@ -1833,7 +1833,7 @@ public class Class174 {
 			Class282_Sub48.method13446(executor, 814107150);
 			break;
 		case 1:
-			Language.method8285(executor, -1206071745);
+			XLanguage.method8285(executor, -1206071745);
 			break;
 		case 984:
 			Class115.method1951(executor, (byte) 41);
@@ -1974,7 +1974,7 @@ public class Class174 {
 			Class285.method5029(executor, (short) 658);
 			break;
 		case 909:
-			Language.method8296(executor, (byte) 25);
+			XLanguage.method8296(executor, (byte) 25);
 			break;
 		case 464:
 			Class105.method1803(executor, -1693230634);
@@ -2034,7 +2034,7 @@ public class Class174 {
 			Class275_Sub4.method12586(executor, (short) 24471);
 			break;
 		case 189:
-			LoadingStage.method6685(executor, 1119021125);
+			XLoadingStage.method6685(executor, 1119021125);
 			break;
 		case 203:
 			Defaults7Loader.method8750(executor, 1840991775);
@@ -2715,7 +2715,7 @@ public class Class174 {
 			Interface.method1627(executor, -1274376736);
 			break;
 		case 1002:
-			LoadingStage.method6680(executor, -1814887621);
+			XLoadingStage.method6680(executor, -1814887621);
 			break;
 		case 179:
 			QuickChatDynamicValue.method4175(executor, (short) 14459);
@@ -2925,7 +2925,7 @@ public class Class174 {
 			QuickChatDynamicValue.method4174(executor, -1364305642);
 			break;
 		case 14:
-			Login.method5016(executor, -1796150682);
+			XLogin.method5016(executor, -1796150682);
 			break;
 		case 882:
 			Class197.method3201(executor, -1383408514);
@@ -3003,7 +3003,7 @@ public class Class174 {
 			Class44.method911(executor, 1598874470);
 			break;
 		case 334:
-			Language.method8297(executor, (byte) 13);
+			XLanguage.method8297(executor, (byte) 13);
 			break;
 		case 564:
 			Class90.method1508(executor, 384852083);
@@ -3222,7 +3222,7 @@ public class Class174 {
 			RegionMap.method5512(executor, -837844602);
 			break;
 		case 352:
-			Language.method8295(executor, 313566380);
+			XLanguage.method8295(executor, 313566380);
 			break;
 		case 126:
 			Class10.method459(executor, 1762286892);

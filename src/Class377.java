@@ -8,7 +8,7 @@ public class Class377 implements IndexLoader {
 	public int anInt4519;
 	static Thread aThread4520;
 
-	public Class377(Game class486, Language class495, Index class317) {
+	public Class377(Game class486, XLanguage class495, Index class317) {
 		((Class377) this).aClass317_4518 = class317;
 		if (((Class377) this).aClass317_4518 != null)
 			anInt4519 = (((Class377) this).aClass317_4518.filesCount(SharedConfigsType.aClass120_1487.id * -71319279)) * -517376561;

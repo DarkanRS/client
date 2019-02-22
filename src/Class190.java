@@ -138,7 +138,7 @@ public class Class190 {
 		Class96_Sub13.anInt9368 = 0;
 		OutgoingLoginPacket.anInt4280 = 0;
 		Class121.anInt1527 = 0;
-		LinkedNodeList.anInt5606 = 0;
+		XLinkedNodeList.anInt5606 = 0;
 		Class501.anInt5828 = 0;
 		for (int i_32_ = 0; i_32_ < Class320.anIntArray3724.length; i_32_++) {
 			if (!Class282_Sub17_Sub2.aBoolArray9934[i_32_]) {

@@ -178,7 +178,7 @@ public class Message {
 	static Message aClass433_5327;
 	static Message aClass433_5328;
 
-	public String method7269(Language class495) {
+	public String method7269(XLanguage class495) {
 		return (String) ((Message) this).aMap5279.get(class495);
 	}
 
@@ -361,22 +361,22 @@ public class Message {
 		aClass433_5327 = new Message("Friend", "Freund", "Ami", "Amigo");
 	}
 
-	public String method7271(Language class495) {
+	public String method7271(XLanguage class495) {
 		return (String) ((Message) this).aMap5279.get(class495);
 	}
 
 	Message(String string, String string_0_, String string_1_, String string_2_) {
-		((Message) this).aMap5279.put(Language.aClass495_5795, string);
-		((Message) this).aMap5279.put(Language.aClass495_5802, string_0_);
-		((Message) this).aMap5279.put(Language.aClass495_5801, string_1_);
-		((Message) this).aMap5279.put(Language.aClass495_5797, string_2_);
+		((Message) this).aMap5279.put(XLanguage.aClass495_5795, string);
+		((Message) this).aMap5279.put(XLanguage.aClass495_5802, string_0_);
+		((Message) this).aMap5279.put(XLanguage.aClass495_5801, string_1_);
+		((Message) this).aMap5279.put(XLanguage.aClass495_5797, string_2_);
 	}
 
 	public static Class282_Sub15_Sub2 method7272(byte i) {
 		return Class148.aClass282_Sub15_Sub2_1735;
 	}
 
-	public String translate(Language class495, int i) {
+	public String translate(XLanguage class495, int i) {
 		return (String) ((Message) this).aMap5279.get(class495);
 	}
 

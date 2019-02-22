@@ -35,7 +35,7 @@ public class Class390_Sub2 extends Class390 {
 	Class143 aClass143_8670;
 	Class143 aClass143_8671;
 	int anInt8672;
-	LinkedNodeList aClass473_8673 = new LinkedNodeList();
+	XLinkedNodeList aClass473_8673 = new XLinkedNodeList();
 	byte[][] aByteArrayArray8674;
 	float[][] aFloatArrayArray8675;
 	static final int anInt8676 = 74;
