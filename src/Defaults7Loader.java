@@ -158,7 +158,7 @@ public class Defaults7Loader {
 		if (i_2 == -1) {
 			throw new RuntimeException();
 		} else {
-			EnumDefinitions enumdefinitions_4 = IndexLoaders.ENUM_LOADER.method7424(i_2, (byte) 8);
+			EnumDefinitions enumdefinitions_4 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_2, (byte) 8);
 			if (enumdefinitions_4.aChar5140 != 115) {
 				throw new RuntimeException();
 			} else {

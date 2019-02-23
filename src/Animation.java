@@ -332,7 +332,7 @@ public class Animation {
 	}
 
 	static Class149_Sub1 method7644(RsByteBuffer rsbytebuffer_0, int i_1) {
-		return new Class149_Sub1(rsbytebuffer_0.readShort(2106402099), rsbytebuffer_0.readShort(1584223282), rsbytebuffer_0.readShort(1636690940), rsbytebuffer_0.readShort(1585273759), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
+		return new Class149_Sub1(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 
 }

@@ -35,37 +35,37 @@ public class CS2Script extends CacheableNode {
 		}
 	}
 
-	int decodeHeader(RsByteBuffer rsbytebuffer_1) {
-		rsbytebuffer_1.index = rsbytebuffer_1.buffer.length - 2;
-		int i_2 = rsbytebuffer_1.readUnsignedShort();
-		int i_3 = rsbytebuffer_1.buffer.length - 2 - i_2 - 16;
-		rsbytebuffer_1.index = i_3;
-		int i_4 = rsbytebuffer_1.readInt();
-		this.intLocalsCount = rsbytebuffer_1.readUnsignedShort();
-		this.stringLocalsCount = rsbytebuffer_1.readUnsignedShort();
-		this.longLocalsCount = rsbytebuffer_1.readUnsignedShort();
-		this.intArgsCount = rsbytebuffer_1.readUnsignedShort();
-		this.stringArgsCount = rsbytebuffer_1.readUnsignedShort();
-		this.longArgsCount = rsbytebuffer_1.readUnsignedShort();
-		int i_5 = rsbytebuffer_1.readUnsignedByte();
+	int decodeHeader(RsByteBuffer stream) {
+		stream.index = stream.buffer.length - 2;
+		int i_2 = stream.readUnsignedShort();
+		int i_3 = stream.buffer.length - 2 - i_2 - 16;
+		stream.index = i_3;
+		int i_4 = stream.readInt();
+		this.intLocalsCount = stream.readUnsignedShort();
+		this.stringLocalsCount = stream.readUnsignedShort();
+		this.longLocalsCount = stream.readUnsignedShort();
+		this.intArgsCount = stream.readUnsignedShort();
+		this.stringArgsCount = stream.readUnsignedShort();
+		this.longArgsCount = stream.readUnsignedShort();
+		int i_5 = stream.readUnsignedByte();
 		if (i_5 > 0) {
 			this.switchMaps = new IterableNodeMap[i_5];
 
 			for (int i_6 = 0; i_6 < i_5; i_6++) {
-				int i_7 = rsbytebuffer_1.readUnsignedShort();
+				int i_7 = stream.readUnsignedShort();
 				IterableNodeMap iterablenodemap_8 = new IterableNodeMap(Class323.nextPowerOfTwo(i_7, -234379644));
 				this.switchMaps[i_6] = iterablenodemap_8;
 
 				while (i_7-- > 0) {
-					int i_9 = rsbytebuffer_1.readInt();
-					int i_10 = rsbytebuffer_1.readInt();
+					int i_9 = stream.readInt();
+					int i_10 = stream.readInt();
 					iterablenodemap_8.method7765(new Class282_Sub38(i_10), (long) i_9);
 				}
 			}
 		}
 
-		rsbytebuffer_1.index = 0;
-		this.scriptName = rsbytebuffer_1.readNullString(198990051);
+		stream.index = 0;
+		this.scriptName = stream.readNullString();
 		this.operations = new CS2OpInfo[i_4];
 		return i_3;
 	}

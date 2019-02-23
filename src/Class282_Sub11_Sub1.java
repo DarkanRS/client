@@ -15,7 +15,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	}
 
 	void method12203(RsByteBuffer rsbytebuffer_1, int i_2) {
-		this.aString10001 = rsbytebuffer_1.readNullString(1586002738);
+		this.aString10001 = rsbytebuffer_1.readNullString();
 		if (this.aString10001 != null) {
 			rsbytebuffer_1.readUnsignedByte();
 			this.aByte9999 = rsbytebuffer_1.readByte();
@@ -25,7 +25,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	}
 
 	void method12206(RsByteBuffer rsbytebuffer_1) {
-		this.aString10001 = rsbytebuffer_1.readNullString(744034489);
+		this.aString10001 = rsbytebuffer_1.readNullString();
 		if (this.aString10001 != null) {
 			rsbytebuffer_1.readUnsignedByte();
 			this.aByte9999 = rsbytebuffer_1.readByte();
@@ -44,7 +44,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	}
 
 	void method12208(RsByteBuffer rsbytebuffer_1) {
-		this.aString10001 = rsbytebuffer_1.readNullString(844690587);
+		this.aString10001 = rsbytebuffer_1.readNullString();
 		if (this.aString10001 != null) {
 			rsbytebuffer_1.readUnsignedByte();
 			this.aByte9999 = rsbytebuffer_1.readByte();
@@ -54,7 +54,7 @@ public class Class282_Sub11_Sub1 extends Class282_Sub11 {
 	}
 
 	void method12207(RsByteBuffer rsbytebuffer_1) {
-		this.aString10001 = rsbytebuffer_1.readNullString(1889442687);
+		this.aString10001 = rsbytebuffer_1.readNullString();
 		if (this.aString10001 != null) {
 			rsbytebuffer_1.readUnsignedByte();
 			this.aByte9999 = rsbytebuffer_1.readByte();

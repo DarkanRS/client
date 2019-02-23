@@ -41,7 +41,7 @@ public abstract class Class109 {
 		if (i_3 == -1) {
 			throw new RuntimeException();
 		} else {
-			EnumDefinitions enumdefinitions_5 = IndexLoaders.ENUM_LOADER.method7424(i_3, (byte) 8);
+			EnumDefinitions enumdefinitions_5 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_3, (byte) 8);
 			if (i_2 != enumdefinitions_5.aChar5140) {
 				throw new RuntimeException();
 			} else {

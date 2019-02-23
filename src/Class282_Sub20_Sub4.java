@@ -199,12 +199,12 @@ public class Class282_Sub20_Sub4 extends Class282_Sub20 {
 			this.anInt9736 = rsbytebuffer_2.readUnsignedByte();
 			break;
 		case 2:
-			this.anInt9737 = rsbytebuffer_2.readShort(1710562574);
+			this.anInt9737 = rsbytebuffer_2.readShort();
 			if (this.anInt9737 < 0) {
 				this.aShortArray9730 = new short[this.anInt9736];
 
 				for (int i_4 = 0; i_4 < this.anInt9736; i_4++) {
-					this.aShortArray9730[i_4] = (short) rsbytebuffer_2.readShort(2030279685);
+					this.aShortArray9730[i_4] = (short) rsbytebuffer_2.readShort();
 				}
 			}
 			break;

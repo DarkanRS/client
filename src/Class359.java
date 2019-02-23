@@ -31,7 +31,7 @@ public class Class359 {
 		if (i_4 == -1) {
 			throw new RuntimeException();
 		} else {
-			EnumDefinitions enumdefinitions_7 = IndexLoaders.ENUM_LOADER.method7424(i_4, (byte) 8);
+			EnumDefinitions enumdefinitions_7 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_4, (byte) 8);
 			if (i_3 != enumdefinitions_7.aChar5146) {
 				throw new RuntimeException();
 			} else if (i_2 != enumdefinitions_7.aChar5140) {

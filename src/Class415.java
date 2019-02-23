@@ -17,7 +17,7 @@ public class Class415 {
 
 	void method6991(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
 		if (i_2 == 1) {
-			this.aChar4984 = Class11.method470(rsbytebuffer_1.readByte(), -792484929);
+			this.aChar4984 = Class11.getChar(rsbytebuffer_1.readByte(), -792484929);
 		} else if (i_2 == 2) {
 			this.anInt4983 = 0;
 		}

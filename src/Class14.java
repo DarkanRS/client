@@ -17,7 +17,7 @@ public class Class14 {
 		if (i_3 == -1) {
 			throw new RuntimeException();
 		} else {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.method7424(i_3, (byte) 8);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_3, (byte) 8);
 			if (i_2 != enumdefinitions_6.aChar5146) {
 				throw new RuntimeException();
 			} else if (enumdefinitions_6.aChar5140 != 115) {

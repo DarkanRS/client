@@ -85,7 +85,7 @@ public class RenderAnimDefs {
 				this.anIntArrayArray2802[i_4] = new int[6];
 
 				for (i_5 = 0; i_5 < 6; i_5++) {
-					this.anIntArrayArray2802[i_4][i_5] = rsbytebuffer_1.readShort(1960954063);
+					this.anIntArrayArray2802[i_4][i_5] = rsbytebuffer_1.readShort();
 				}
 			} else if (i_2 == 28) {
 				i_4 = rsbytebuffer_1.readUnsignedByte();
@@ -106,13 +106,13 @@ public class RenderAnimDefs {
 			} else if (i_2 == 32) {
 				this.anInt2823 = rsbytebuffer_1.readUnsignedShort();
 			} else if (i_2 == 33) {
-				this.anInt2824 = rsbytebuffer_1.readShort(1858209964);
+				this.anInt2824 = rsbytebuffer_1.readShort();
 			} else if (i_2 == 34) {
 				this.anInt2816 = rsbytebuffer_1.readUnsignedByte();
 			} else if (i_2 == 35) {
 				this.anInt2815 = rsbytebuffer_1.readUnsignedShort();
 			} else if (i_2 == 36) {
-				this.anInt2827 = rsbytebuffer_1.readShort(1666231467);
+				this.anInt2827 = rsbytebuffer_1.readShort();
 			} else if (i_2 == 37) {
 				this.anInt2826 = rsbytebuffer_1.readUnsignedByte();
 			} else if (i_2 == 38) {
@@ -175,7 +175,7 @@ public class RenderAnimDefs {
 				this.anIntArrayArray2791[i_4] = new int[3];
 
 				for (i_5 = 0; i_5 < 3; i_5++) {
-					this.anIntArrayArray2791[i_4][i_5] = rsbytebuffer_1.readShort(2037322066);
+					this.anIntArrayArray2791[i_4][i_5] = rsbytebuffer_1.readShort();
 				}
 			}
 		}

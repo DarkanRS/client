@@ -143,7 +143,7 @@ public class Class535 {
 		}
 
 		if ((i_4 & 0x10) != 0) {
-			this.aClass385_7084 = Vector3.method6639((float) rsbytebuffer_1.readShort(1605613449), (float) rsbytebuffer_1.readShort(1992590834), (float) rsbytebuffer_1.readShort(1784943938));
+			this.aClass385_7084 = Vector3.method6639((float) rsbytebuffer_1.readShort(), (float) rsbytebuffer_1.readShort(), (float) rsbytebuffer_1.readShort());
 		} else {
 			this.aClass385_7084 = Vector3.method6639(-50.0F, -60.0F, -50.0F);
 		}
@@ -182,9 +182,9 @@ public class Class535 {
 
 	public void method11472(RsByteBuffer rsbytebuffer_1, Class239 class239_2, int i_3) {
 		int i_4 = rsbytebuffer_1.readUnsignedShort();
-		int i_5 = rsbytebuffer_1.readShort(1691992902);
-		int i_6 = rsbytebuffer_1.readShort(2108682700);
-		int i_7 = rsbytebuffer_1.readShort(1800641429);
+		int i_5 = rsbytebuffer_1.readShort();
+		int i_6 = rsbytebuffer_1.readShort();
+		int i_7 = rsbytebuffer_1.readShort();
 		int i_8 = rsbytebuffer_1.readUnsignedShort();
 		Class388.anInt4723 = i_8;
 		this.aClass247_7091 = class239_2.method4050(i_4, i_5, i_6, i_7, (byte) 15);

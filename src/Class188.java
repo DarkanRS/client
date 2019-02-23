@@ -184,7 +184,7 @@ public class Class188 {
 						i_6 = (i_3 & 0x7) + Class158_Sub1_Sub2.anInt10131;
 						i_7 = i_5 + rsbitsbuffer_2.readByte();
 						i_8 = i_6 + rsbitsbuffer_2.readByte();
-						i_9 = rsbitsbuffer_2.readShort(1660336076);
+						i_9 = rsbitsbuffer_2.readShort();
 						i_10 = rsbitsbuffer_2.readUnsignedShort();
 						i_11 = rsbitsbuffer_2.readUnsignedByte() * 4;
 						i_23 = rsbitsbuffer_2.readUnsignedByte() * 4;
@@ -430,8 +430,8 @@ public class Class188 {
 							i_9 = bool_34 ? i_6 >> 2 : -1;
 							i_10 = i_21 + rsbitsbuffer_2.readByte();
 							i_11 = i_5 + rsbitsbuffer_2.readByte();
-							i_23 = rsbitsbuffer_2.readShort(2013896046);
-							i_24 = rsbitsbuffer_2.readShort(1761702659);
+							i_23 = rsbitsbuffer_2.readShort();
+							i_24 = rsbitsbuffer_2.readShort();
 							i_14 = rsbitsbuffer_2.readUnsignedShort();
 							i_15 = rsbitsbuffer_2.readUnsignedByte();
 							if (bool_34) {

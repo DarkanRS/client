@@ -32,7 +32,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			rsbytebuffer_1.readLong(1727926612);
 		}
 
-		this.aString10218 = rsbytebuffer_1.readNullString(422828400);
+		this.aString10218 = rsbytebuffer_1.readNullString();
 		this.anInt10216 = rsbytebuffer_1.readUnsignedShort();
 		this.aByte10217 = rsbytebuffer_1.readByte();
 		rsbytebuffer_1.readLong(2047516343);
@@ -44,7 +44,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			rsbytebuffer_1.readLong(2073241783);
 		}
 
-		this.aString10218 = rsbytebuffer_1.readNullString(-145183646);
+		this.aString10218 = rsbytebuffer_1.readNullString();
 		this.anInt10216 = rsbytebuffer_1.readUnsignedShort() * 1097857565 * -1282369483;
 		this.aByte10217 = rsbytebuffer_1.readByte();
 		rsbytebuffer_1.readLong(732799323);
@@ -56,7 +56,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			rsbytebuffer_1.readLong(1508093198);
 		}
 
-		this.aString10218 = rsbytebuffer_1.readNullString(1154304204);
+		this.aString10218 = rsbytebuffer_1.readNullString();
 		this.anInt10216 = rsbytebuffer_1.readUnsignedShort() * 1097857565 * -1282369483;
 		this.aByte10217 = rsbytebuffer_1.readByte();
 		rsbytebuffer_1.readLong(573713222);
@@ -68,7 +68,7 @@ public class Class282_Sub11_Sub4 extends Class282_Sub11 {
 			rsbytebuffer_1.readLong(-130957944);
 		}
 
-		this.aString10218 = rsbytebuffer_1.readNullString(2004842633);
+		this.aString10218 = rsbytebuffer_1.readNullString();
 		this.anInt10216 = rsbytebuffer_1.readUnsignedShort() * 1097857565 * -1282369483;
 		this.aByte10217 = rsbytebuffer_1.readByte();
 		rsbytebuffer_1.readLong(511730374);

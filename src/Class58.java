@@ -5,10 +5,10 @@ public class Class58 implements Interface19 {
 
 	public String method135(QuickChatDynamicValue quickchatdynamicvalue_1, int[] ints_2, long long_3) {
 		if (quickchatdynamicvalue_1 == QuickChatDynamicValue.LISTDIALOG) {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.method7424(ints_2[0], (byte) 8);
-			return enumdefinitions_6.method7226((int) long_3, -64424168);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8);
+			return enumdefinitions_6.getStringValue((int) long_3, -64424168);
 		} else if (quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJDIALOG && quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJTRADEDIALOG) {
-			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_STATBASE ? null : IndexLoaders.ENUM_LOADER.method7424(ints_2[0], (byte) 8).method7226((int) long_3, 2106456977);
+			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_STATBASE ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 2106456977);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 1575511012);
 			return itemdefinitions_5.aString5043;
@@ -17,10 +17,10 @@ public class Class58 implements Interface19 {
 
 	public String method136(QuickChatDynamicValue quickchatdynamicvalue_1, int[] ints_2, long long_3) {
 		if (quickchatdynamicvalue_1 == QuickChatDynamicValue.LISTDIALOG) {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.method7424(ints_2[0], (byte) 8);
-			return enumdefinitions_6.method7226((int) long_3, -451172927);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8);
+			return enumdefinitions_6.getStringValue((int) long_3, -451172927);
 		} else if (quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJDIALOG && quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJTRADEDIALOG) {
-			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.method7424(ints_2[0], (byte) 8).method7226((int) long_3, 579863966);
+			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 579863966);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 1001383169);
 			return itemdefinitions_5.aString5043;
@@ -29,10 +29,10 @@ public class Class58 implements Interface19 {
 
 	public String method137(QuickChatDynamicValue quickchatdynamicvalue_1, int[] ints_2, long long_3) {
 		if (quickchatdynamicvalue_1 == QuickChatDynamicValue.LISTDIALOG) {
-			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.method7424(ints_2[0], (byte) 8);
-			return enumdefinitions_6.method7226((int) long_3, 1807301402);
+			EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8);
+			return enumdefinitions_6.getStringValue((int) long_3, 1807301402);
 		} else if (quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJDIALOG && quickchatdynamicvalue_1 != QuickChatDynamicValue.OBJTRADEDIALOG) {
-			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.method7424(ints_2[0], (byte) 8).method7226((int) long_3, 870502499);
+			return quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING && quickchatdynamicvalue_1 != QuickChatDynamicValue.ENUM_STRING_CLAN && QuickChatDynamicValue.ENUM_STRING_STATBASE != quickchatdynamicvalue_1 ? null : IndexLoaders.ENUM_LOADER.getEnumDefinitions(ints_2[0], (byte) 8).getStringValue((int) long_3, 870502499);
 		} else {
 			ItemDefinitions itemdefinitions_5 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions((int) long_3, 980580063);
 			return itemdefinitions_5.aString5043;
@@ -57,8 +57,8 @@ public class Class58 implements Interface19 {
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
 		IComponentDefinitions icomponentdefinitions_5 = Index.method5694(i_2 << 16 | i_3, i_4, -1458346299);
 		Class60.method1170(-609337146);
-		Class282_Sub10 class282_sub10_6 = client.method11633(icomponentdefinitions_5);
-		Class304.method5409(icomponentdefinitions_5, class282_sub10_6.method12179(-995475092), class282_sub10_6.anInt7541, (byte) -101);
+		IComponentSettings class282_sub10_6 = client.method11633(icomponentdefinitions_5);
+		Class304.method5409(icomponentdefinitions_5, class282_sub10_6.getUseOptionFlags(), class282_sub10_6.interfaceId, (byte) -101);
 	}
 
 	public static void method1139(int i_0) {

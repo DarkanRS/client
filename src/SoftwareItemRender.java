@@ -91,7 +91,7 @@ public class SoftwareItemRender implements Interface18 {
 	}
 
 	static Class149_Sub4 method7033(RsByteBuffer rsbytebuffer_0, int i_1) {
-		return new Class149_Sub4(rsbytebuffer_0.readShort(1848939200), rsbytebuffer_0.readShort(1780715141), rsbytebuffer_0.readShort(1644491611), rsbytebuffer_0.readShort(1586203891), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
+		return new Class149_Sub4(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 
 	public static void method7034(AnimationDefinitions animationdefinitions_0, int i_1, int i_2) {

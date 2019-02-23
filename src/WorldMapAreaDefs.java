@@ -100,7 +100,7 @@ public class WorldMapAreaDefs {
 					this.anIntArray2717 = new int[i_4 * 2];
 
 					for (i_5 = 0; i_5 < i_4 * 2; i_5++) {
-						this.anIntArray2717[i_5] = rsbytebuffer_1.readShort(1931014548);
+						this.anIntArray2717[i_5] = rsbytebuffer_1.readShort();
 					}
 
 					this.anInt2715 = rsbytebuffer_1.readInt();
@@ -147,8 +147,8 @@ public class WorldMapAreaDefs {
 					this.anInt2749 = rsbytebuffer_1.readUnsignedByte();
 					this.anInt2756 = rsbytebuffer_1.readUnsignedByte();
 				} else if (i_2 == 24) {
-					this.anInt2750 = rsbytebuffer_1.readShort(2027508262);
-					this.anInt2752 = rsbytebuffer_1.readShort(2043715799);
+					this.anInt2750 = rsbytebuffer_1.readShort();
+					this.anInt2752 = rsbytebuffer_1.readShort();
 				} else if (i_2 == 249) {
 					i_4 = rsbytebuffer_1.readUnsignedByte();
 					if (this.aClass465_2737 == null) {

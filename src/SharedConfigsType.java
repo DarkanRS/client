@@ -7,7 +7,7 @@ public class SharedConfigsType {
 	public static SharedConfigsType INVENTORIES = new SharedConfigsType(5);
 	public static SharedConfigsType OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
 	static SharedConfigsType aClass120_1470 = new SharedConfigsType(7);
-	public static SharedConfigsType aClass120_1471 = new SharedConfigsType(8, 8);
+	public static SharedConfigsType ENUMS = new SharedConfigsType(8, 8);
 	public static SharedConfigsType aClass120_1467 = new SharedConfigsType(9, 7);
 	public static SharedConfigsType ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
 	public static SharedConfigsType aClass120_1474 = new SharedConfigsType(11);

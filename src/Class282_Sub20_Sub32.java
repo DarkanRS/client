@@ -149,7 +149,7 @@ public class Class282_Sub20_Sub32 extends Class282_Sub20 {
 	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
 		switch (i_1) {
 		case 0:
-			this.anInt9918 = rsbytebuffer_2.readShort(2037252957);
+			this.anInt9918 = rsbytebuffer_2.readShort();
 			break;
 		case 1:
 			this.anInt9919 = (rsbytebuffer_2.readByte() << 12) / 100;

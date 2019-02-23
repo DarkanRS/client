@@ -45,19 +45,19 @@ public class HitsplatDefinitions {
 		} else if (i_2 == 6) {
 			this.anInt2845 = rsbytebuffer_1.readBigSmart();
 		} else if (i_2 == 7) {
-			this.anInt2846 = rsbytebuffer_1.readShort(2005060480);
+			this.anInt2846 = rsbytebuffer_1.readShort();
 		} else if (i_2 == 8) {
 			this.aString2840 = rsbytebuffer_1.readGJString(-474041225);
 		} else if (i_2 == 9) {
 			this.anInt2841 = rsbytebuffer_1.readUnsignedShort();
 		} else if (i_2 == 10) {
-			this.anInt2833 = rsbytebuffer_1.readShort(1971568647);
+			this.anInt2833 = rsbytebuffer_1.readShort();
 		} else if (i_2 == 11) {
 			this.anInt2847 = 0;
 		} else if (i_2 == 12) {
 			this.anInt2839 = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 13) {
-			this.anInt2832 = rsbytebuffer_1.readShort(1645619084);
+			this.anInt2832 = rsbytebuffer_1.readShort();
 		} else if (i_2 == 14) {
 			this.anInt2847 = rsbytebuffer_1.readUnsignedShort();
 		}

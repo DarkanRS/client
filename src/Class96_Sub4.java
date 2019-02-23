@@ -262,8 +262,8 @@ public class Class96_Sub4 extends Class96 {
 				icomponentdefinitions_23 = Index.method5694(i_5, i_4, 1215515572);
 				if (icomponentdefinitions_23 != null) {
 					Class60.method1170(-609337146);
-					Class282_Sub10 class282_sub10_21 = client.method11633(icomponentdefinitions_23);
-					Class304.method5409(icomponentdefinitions_23, class282_sub10_21.method12179(-127585296), class282_sub10_21.anInt7541, (byte) -114);
+					IComponentSettings class282_sub10_21 = client.method11633(icomponentdefinitions_23);
+					Class304.method5409(icomponentdefinitions_23, class282_sub10_21.getUseOptionFlags(), class282_sub10_21.interfaceId, (byte) -114);
 					client.aString7275 = Class346.method6157(icomponentdefinitions_23, -252673863);
 					if (client.aString7275 == null) {
 						client.aString7275 = "Null";

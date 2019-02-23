@@ -33,7 +33,7 @@ public final class Class514 {
 	}
 
 	static Class149_Sub2 method8842(RsByteBuffer rsbytebuffer_0, byte b_1) {
-		return new Class149_Sub2(rsbytebuffer_0.readShort(2062480698), rsbytebuffer_0.readShort(1765551436), rsbytebuffer_0.readShort(2011697499), rsbytebuffer_0.readShort(1939860033), rsbytebuffer_0.readShort(1983367129), rsbytebuffer_0.readShort(1921374932), rsbytebuffer_0.readShort(1913492569), rsbytebuffer_0.readShort(1761029580), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
+		return new Class149_Sub2(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 
 	static final void method8843(CS2Executor cs2executor_0, byte b_1) {

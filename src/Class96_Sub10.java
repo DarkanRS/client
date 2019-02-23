@@ -37,7 +37,7 @@ public abstract class Class96_Sub10 extends Class96 {
 				Class96_Sub4.executeHookInner200k(hookrequest_6, 156165111);
 			}
 
-			if (client.method11633(icomponentdefinitions_5).method12178(i_0 - 1, (short) -2626)) {
+			if (client.method11633(icomponentdefinitions_5).clickOptionEnabled(i_0 - 1)) {
 				Class184 class184_8 = Class468_Sub20.method12807(870102038);
 				if (client.anInt7166 == 0 || client.anInt7166 == 13) {
 					TCPMessage tcpmessage_7;

@@ -97,7 +97,7 @@ public class Class246 {
 			icomponentdefinitions_0.anInt1428 = i_2 - icomponentdefinitions_0.anInt1429 - (i_2 * icomponentdefinitions_0.anInt1296 >> 14);
 		}
 
-		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).anInt7547 != 0 || icomponentdefinitions_0.anInt1268 == 0)) {
+		if (client.aBool7168 && (client.method11633(icomponentdefinitions_0).settings != 0 || icomponentdefinitions_0.anInt1268 == 0)) {
 			if (icomponentdefinitions_0.anInt1299 < 0) {
 				icomponentdefinitions_0.anInt1299 = 0;
 			} else if (icomponentdefinitions_0.anInt1299 + icomponentdefinitions_0.anInt1301 > i_1) {

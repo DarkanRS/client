@@ -172,7 +172,7 @@ public class Class242 {
 	}
 
 	static Class149_Sub3 method4165(RsByteBuffer rsbytebuffer_0, int i_1) {
-		return new Class149_Sub3(rsbytebuffer_0.readShort(1658104919), rsbytebuffer_0.readShort(1705227576), rsbytebuffer_0.readShort(1944156439), rsbytebuffer_0.readShort(1826689073), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
+		return new Class149_Sub3(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 
 	public static final void method4166(int i_0) {

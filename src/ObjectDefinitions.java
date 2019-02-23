@@ -194,11 +194,11 @@ public class ObjectDefinitions {
 		} else if (i_2 == 69) {
 			rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 70) {
-			this.anInt5679 = rsbytebuffer_1.readShort(1685514622) << 2;
+			this.anInt5679 = rsbytebuffer_1.readShort() << 2;
 		} else if (i_2 == 71) {
-			this.anInt5635 = rsbytebuffer_1.readShort(1579109585) << 2;
+			this.anInt5635 = rsbytebuffer_1.readShort() << 2;
 		} else if (i_2 == 72) {
-			this.anInt5681 = rsbytebuffer_1.readShort(1620608715) << 2;
+			this.anInt5681 = rsbytebuffer_1.readShort() << 2;
 		} else if (i_2 == 73) {
 			this.aBool5685 = true;
 		} else if (i_2 == 74) {
@@ -237,7 +237,7 @@ public class ObjectDefinitions {
 				this.aByte5697 = 4;
 			} else if (i_2 == 95) {
 				this.aByte5697 = 5;
-				this.anInt5654 = rsbytebuffer_1.readShort(1937595123);
+				this.anInt5654 = rsbytebuffer_1.readShort();
 			} else if (i_2 == 97) {
 				this.aBool5671 = true;
 			} else if (i_2 == 98) {
@@ -295,11 +295,11 @@ public class ObjectDefinitions {
 				this.aByte5646 = rsbytebuffer_1.readByte();
 				this.aByte5634 = rsbytebuffer_1.readByte();
 			} else if (i_2 == 164) {
-				this.anInt5682 = rsbytebuffer_1.readShort(1834354367);
+				this.anInt5682 = rsbytebuffer_1.readShort();
 			} else if (i_2 == 165) {
-				this.anInt5683 = rsbytebuffer_1.readShort(1806623177);
+				this.anInt5683 = rsbytebuffer_1.readShort();
 			} else if (i_2 == 166) {
-				this.anInt5710 = rsbytebuffer_1.readShort(2108159773);
+				this.anInt5710 = rsbytebuffer_1.readShort();
 			} else if (i_2 == 167) {
 				this.anInt5704 = rsbytebuffer_1.readUnsignedShort();
 			} else if (i_2 == 168) {

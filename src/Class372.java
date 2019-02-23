@@ -16,7 +16,7 @@ public class Class372 implements Interface46 {
 
 	void method6357(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
 		if (i_2 == 1) {
-			this.aChar4328 = Class11.method470(rsbytebuffer_1.readByte(), -385178071);
+			this.aChar4328 = Class11.getChar(rsbytebuffer_1.readByte(), -385178071);
 		} else if (i_2 == 5) {
 			this.anInt4327 = rsbytebuffer_1.readUnsignedShort();
 		}

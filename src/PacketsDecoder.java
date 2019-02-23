@@ -1016,7 +1016,7 @@ public class PacketsDecoder extends Class455 {
 																	class184_0.aClass375_2286 = null;
 																	return true;
 																} else if (class184_0.aClass375_2286 == IncomingPacket.aClass375_4473) {
-																	client.anInt7354 = rsbitsbuffer_3.readShort(2042981264);
+																	client.anInt7354 = rsbitsbuffer_3.readShort();
 																	client.anInt7397 = client.anInt7347;
 																	class184_0.aClass375_2286 = null;
 																	return true;
@@ -1204,8 +1204,8 @@ public class PacketsDecoder extends Class455 {
 																			class184_0.aClass375_2286 = null;
 																			return true;
 																		} else {
-																			Class282_Sub10 class282_sub10_45;
-																			Class282_Sub10 class282_sub10_46;
+																			IComponentSettings class282_sub10_45;
+																			IComponentSettings class282_sub10_46;
 																			if (class184_0.aClass375_2286 == IncomingPacket.ICOMPONENT_SETTINGS) {
 																				i_24 = rsbitsbuffer_3.readShortLE128();
 																				if (i_24 == 65535) {
@@ -1223,15 +1223,15 @@ public class PacketsDecoder extends Class455 {
 
 																				for (i_8 = i_6; i_8 <= i_24; i_8++) {
 																					long_30 = (long) i_8 + ((long) i_5 << 32);
-																					class282_sub10_46 = (Class282_Sub10) client.aClass465_7405.method7754(long_30);
+																					class282_sub10_46 = (IComponentSettings) client.aClass465_7405.method7754(long_30);
 																					if (class282_sub10_46 == null) {
 																						if (i_8 == -1) {
-																							class282_sub10_45 = new Class282_Sub10(i_7, Class117.method1981(i_5, (byte) 67).aClass282_Sub10_1364.anInt7541);
+																							class282_sub10_45 = new IComponentSettings(i_7, Class117.method1981(i_5, (byte) 67).aClass282_Sub10_1364.interfaceId);
 																						} else {
-																							class282_sub10_45 = new Class282_Sub10(i_7, -1);
+																							class282_sub10_45 = new IComponentSettings(i_7, -1);
 																						}
 																					} else {
-																						class282_sub10_45 = new Class282_Sub10(i_7, class282_sub10_46.anInt7541);
+																						class282_sub10_45 = new IComponentSettings(i_7, class282_sub10_46.interfaceId);
 																						class282_sub10_46.remove();
 																					}
 
@@ -1437,7 +1437,7 @@ public class PacketsDecoder extends Class455 {
 																				i_24 = rsbitsbuffer_3.readUnsignedByte128(-1139286912) * 4;
 																				i_5 = rsbitsbuffer_3.readUnsignedShortLE128(-1358044133);
 																				i_6 = rsbitsbuffer_3.readShortLE((byte) -25);
-																				i_7 = rsbitsbuffer_3.readShort(1661284878);
+																				i_7 = rsbitsbuffer_3.readShort();
 																				i_8 = rsbitsbuffer_3.readUnsignedByte128(-850673914);
 																				i_9 = rsbitsbuffer_3.readUnsignedShort128();
 																				i_10 = rsbitsbuffer_3.readUnsignedShort();
@@ -1682,15 +1682,15 @@ public class PacketsDecoder extends Class455 {
 
 																					for (i_8 = i_7; i_8 <= i_6; i_8++) {
 																						long_30 = (long) i_8 + ((long) i_24 << 32);
-																						class282_sub10_46 = (Class282_Sub10) client.aClass465_7405.method7754(long_30);
+																						class282_sub10_46 = (IComponentSettings) client.aClass465_7405.method7754(long_30);
 																						if (class282_sub10_46 == null) {
 																							if (i_8 == -1) {
-																								class282_sub10_45 = new Class282_Sub10(Class117.method1981(i_24, (byte) 100).aClass282_Sub10_1364.anInt7547, i_5);
+																								class282_sub10_45 = new IComponentSettings(Class117.method1981(i_24, (byte) 100).aClass282_Sub10_1364.settings, i_5);
 																							} else {
-																								class282_sub10_45 = new Class282_Sub10(0, i_5);
+																								class282_sub10_45 = new IComponentSettings(0, i_5);
 																							}
 																						} else {
-																							class282_sub10_45 = new Class282_Sub10(class282_sub10_46.anInt7547, i_5);
+																							class282_sub10_45 = new IComponentSettings(class282_sub10_46.settings, i_5);
 																							class282_sub10_46.remove();
 																						}
 

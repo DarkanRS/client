@@ -198,7 +198,7 @@ public class RsByteBuffer extends Node {
 		return (this.buffer[this.index - 1] & 0xff) + ((this.buffer[this.index - 2] & 0xff) << 8);
 	}
 
-	public int readShort(int i_1) {
+	public int readShort() {
 		this.index += 2;
 		int i_2 = (this.buffer[this.index - 1] & 0xff) + ((this.buffer[this.index - 2] & 0xff) << 8);
 		if (i_2 > 32767) {
@@ -255,7 +255,7 @@ public class RsByteBuffer extends Node {
 		}
 	}
 
-	public String readNullString(int i_1) {
+	public String readNullString() {
 		if (this.buffer[this.index] == 0) {
 			++this.index;
 			return null;

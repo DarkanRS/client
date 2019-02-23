@@ -59,8 +59,8 @@ public class Class366 implements Interface3 {
 		int i_2 = rsbytebuffer_0.readUnsignedByte();
 		Class356 class356_3 = Class350_Sub3_Sub1.method15558(-41327107)[rsbytebuffer_0.readUnsignedByte()];
 		Class353 class353_4 = AccountCreationResponseOpcodes.method8155(152314627)[rsbytebuffer_0.readUnsignedByte()];
-		int i_5 = rsbytebuffer_0.readShort(1637042593);
-		int i_6 = rsbytebuffer_0.readShort(1591872384);
+		int i_5 = rsbytebuffer_0.readShort();
+		int i_6 = rsbytebuffer_0.readShort();
 		int i_7 = rsbytebuffer_0.readUnsignedShort();
 		int i_8 = rsbytebuffer_0.readUnsignedShort();
 		int i_9 = rsbytebuffer_0.readInt();

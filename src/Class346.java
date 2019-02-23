@@ -193,7 +193,7 @@ public class Class346 {
 	}
 
 	static String method6157(IComponentDefinitions icomponentdefinitions_0, int i_1) {
-		return client.method11633(icomponentdefinitions_0).method12179(-461437925) == 0 ? null : (icomponentdefinitions_0.aString1338 != null && icomponentdefinitions_0.aString1338.trim().length() != 0 ? icomponentdefinitions_0.aString1338 : (client.aBool7168 ? "Hidden-use" : null));
+		return client.method11633(icomponentdefinitions_0).getUseOptionFlags() == 0 ? null : (icomponentdefinitions_0.aString1338 != null && icomponentdefinitions_0.aString1338.trim().length() != 0 ? icomponentdefinitions_0.aString1338 : (client.aBool7168 ? "Hidden-use" : null));
 	}
 
 	static final void method6158(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {

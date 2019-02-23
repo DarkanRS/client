@@ -70,11 +70,11 @@ public class Class383 implements Interface41 {
 	static Class350 method6512(RsByteBuffer rsbytebuffer_0, int i_1) {
 		Class356 class356_2 = Class350_Sub3_Sub1.method15558(-535190719)[rsbytebuffer_0.readUnsignedByte()];
 		Class353 class353_3 = AccountCreationResponseOpcodes.method8155(152314627)[rsbytebuffer_0.readUnsignedByte()];
-		int i_4 = rsbytebuffer_0.readShort(1882805883);
-		int i_5 = rsbytebuffer_0.readShort(1909994135);
+		int i_4 = rsbytebuffer_0.readShort();
+		int i_5 = rsbytebuffer_0.readShort();
 		int i_6 = rsbytebuffer_0.readUnsignedShort();
 		int i_7 = rsbytebuffer_0.readUnsignedShort();
-		int i_8 = rsbytebuffer_0.readShort(2095051682);
+		int i_8 = rsbytebuffer_0.readShort();
 		int i_9 = rsbytebuffer_0.readBigSmart();
 		int i_10 = rsbytebuffer_0.readInt();
 		return new Class350(class356_2, class353_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10);

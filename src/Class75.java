@@ -158,7 +158,7 @@ public final class Class75 {
 				}
 
 				if (i_7 != 0 && Class209.method3600((byte) i_7, 1053306035)) {
-					stringbuilder_2.append(Class11.method470((byte) i_7, -847887616));
+					stringbuilder_2.append(Class11.getChar((byte) i_7, -847887616));
 				}
 
 				i_4 += 2;

@@ -22,7 +22,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			this.aLong10047 = rsbytebuffer_1.readLong(458416353) * 4560744686503677239L * 5650566354848839815L;
 		}
 
-		this.aString10048 = rsbytebuffer_1.readNullString(1816318177);
+		this.aString10048 = rsbytebuffer_1.readNullString();
 	}
 
 	void method12257(RsByteBuffer rsbytebuffer_1) {
@@ -31,7 +31,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			this.aLong10047 = rsbytebuffer_1.readLong(1035607167) * 4560744686503677239L * 5650566354848839815L;
 		}
 
-		this.aString10048 = rsbytebuffer_1.readNullString(685128027);
+		this.aString10048 = rsbytebuffer_1.readNullString();
 	}
 
 	void method12253(RsByteBuffer rsbytebuffer_1) {
@@ -40,7 +40,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			this.aLong10047 = rsbytebuffer_1.readLong(1888880253) * 4560744686503677239L * 5650566354848839815L;
 		}
 
-		this.aString10048 = rsbytebuffer_1.readNullString(166224488);
+		this.aString10048 = rsbytebuffer_1.readNullString();
 	}
 
 	void method12254(Class61 class61_1) {
@@ -67,7 +67,7 @@ public class Class282_Sub17_Sub10 extends Class282_Sub17 {
 			this.aLong10047 = rsbytebuffer_1.readLong(1163222855);
 		}
 
-		this.aString10048 = rsbytebuffer_1.readNullString(1037096667);
+		this.aString10048 = rsbytebuffer_1.readNullString();
 	}
 
 }

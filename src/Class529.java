@@ -56,8 +56,8 @@ public class Class529 {
 					}
 
 					for (i_5 = 0; i_5 < this.anIntArray7042.length; i_5++) {
-						this.anIntArray7042[i_5] = rsbytebuffer_1.readShort(1800477422);
-						this.anIntArray7029[i_5] = rsbytebuffer_1.readShort(1645691065);
+						this.anIntArray7042[i_5] = rsbytebuffer_1.readShort();
+						this.anIntArray7029[i_5] = rsbytebuffer_1.readShort();
 					}
 
 					bool_3 = true;

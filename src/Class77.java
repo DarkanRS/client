@@ -38,11 +38,11 @@ public class Class77 {
 		for (int i_3 = 0; i_3 < i_2; i_3++) {
 			this.anIntArray763[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
 			this.anIntArray762[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
-			this.anIntArray760[i_3] = rsbytebuffer_1.readShort(1941897532);
+			this.anIntArray760[i_3] = rsbytebuffer_1.readShort();
 			this.anIntArray761[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
 			this.anIntArray765[i_3] = rsbytebuffer_1.readUnsignedShort() - 5120;
-			this.anIntArray764[i_3] = rsbytebuffer_1.readShort(2115880943);
-			this.anIntArray759[i_3] = rsbytebuffer_1.readShort(1760163828);
+			this.anIntArray764[i_3] = rsbytebuffer_1.readShort();
+			this.anIntArray759[i_3] = rsbytebuffer_1.readShort();
 		}
 
 	}

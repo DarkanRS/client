@@ -4,7 +4,7 @@ public class Class449 {
 
 	void method7485(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
 		if (i_2 == 1) {
-			this.aChar5431 = Class11.method470(rsbytebuffer_1.readByte(), -232268203);
+			this.aChar5431 = Class11.getChar(rsbytebuffer_1.readByte(), -232268203);
 		}
 
 	}

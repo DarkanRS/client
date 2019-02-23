@@ -16,7 +16,7 @@ public class Class339 {
 	static final void method6041(CS2Executor cs2executor_0, short s_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
 		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 43);
-		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.method11633(icomponentdefinitions_3).method12179(-499025220);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.method11633(icomponentdefinitions_3).getUseOptionFlags();
 	}
 
 	static final void method6042(CS2Executor cs2executor_0, byte b_1) {

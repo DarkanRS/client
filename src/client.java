@@ -1584,17 +1584,17 @@ public final class client extends Engine {
 
 	}
 
-	public static Class282_Sub10 method11633(IComponentDefinitions icomponentdefinitions_0) {
-		Class282_Sub10 class282_sub10_1 = (Class282_Sub10) aClass465_7405.method7754(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
+	public static IComponentSettings method11633(IComponentDefinitions icomponentdefinitions_0) {
+		IComponentSettings class282_sub10_1 = (IComponentSettings) aClass465_7405.method7754(((long) icomponentdefinitions_0.idHash << 32) + (long) icomponentdefinitions_0.anInt1288);
 		return class282_sub10_1 != null ? class282_sub10_1 : icomponentdefinitions_0.aClass282_Sub10_1364;
 	}
 
 	static IComponentDefinitions method11634(IComponentDefinitions icomponentdefinitions_0) {
-		Class282_Sub10 class282_sub10_1 = method11633(icomponentdefinitions_0);
-		if (class282_sub10_1.method12196(-1498084889)) {
+		IComponentSettings class282_sub10_1 = method11633(icomponentdefinitions_0);
+		if (class282_sub10_1.bit23Enabled()) {
 			return Class221.aClass118_2763;
 		} else {
-			int i_2 = class282_sub10_1.method12180((byte) 95);
+			int i_2 = class282_sub10_1.depthFlags();
 			if (i_2 == 0) {
 				return null;
 			} else {
@@ -1709,7 +1709,7 @@ public final class client extends Engine {
 
 	static boolean method11651(IComponentDefinitions icomponentdefinitions_0) {
 		if (aBool7168) {
-			if (method11633(icomponentdefinitions_0).anInt7547 != 0) {
+			if (method11633(icomponentdefinitions_0).settings != 0) {
 				return false;
 			}
 
@@ -1865,7 +1865,7 @@ public final class client extends Engine {
 					i_18 = i_20 < i_6 ? i_20 : i_6;
 				}
 
-				if (icomponentdefinitions_12.anInt1268 != 0 && !icomponentdefinitions_12.aBool1384 && method11633(icomponentdefinitions_12).anInt7547 == 0 && icomponentdefinitions_12 != aClass118_7247 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1269 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1374 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1372 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1436) {
+				if (icomponentdefinitions_12.anInt1268 != 0 && !icomponentdefinitions_12.aBool1384 && method11633(icomponentdefinitions_12).settings == 0 && icomponentdefinitions_12 != aClass118_7247 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1269 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1374 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1372 && icomponentdefinitions_12.anInt1290 != IComponentDefinitions.anInt1436) {
 					if (i_15 < i_17 && i_16 < i_18) {
 						Class86.method1482(icomponentdefinitions_12, (byte) 35);
 					}
@@ -2002,8 +2002,8 @@ public final class client extends Engine {
 										Class96_Sub10.method14603(i_24 + 1, icomponentdefinitions_12.idHash, icomponentdefinitions_12.anInt1288, "", (byte) 124);
 									} else if (i_24 == 10) {
 										Class60.method1170(-609337146);
-										Class282_Sub10 class282_sub10_41 = method11633(icomponentdefinitions_12);
-										Class304.method5409(icomponentdefinitions_12, class282_sub10_41.method12179(852440372), class282_sub10_41.anInt7541, (byte) -33);
+										IComponentSettings class282_sub10_41 = method11633(icomponentdefinitions_12);
+										Class304.method5409(icomponentdefinitions_12, class282_sub10_41.getUseOptionFlags(), class282_sub10_41.interfaceId, (byte) -33);
 										aString7275 = Class346.method6157(icomponentdefinitions_12, 1492565193);
 										if (aString7275 == null) {
 											aString7275 = "Null";
@@ -2034,7 +2034,7 @@ public final class client extends Engine {
 							Class282_Sub14.method12221(icomponentdefinitions_12, class282_sub53_39.method13481(1900714400) - i_13, class282_sub53_39.method13469(-380403758) - i_14, 983477136);
 						}
 
-						if (aClass118_7257 != null && icomponentdefinitions_12 != aClass118_7257 && bool_48 && method11633(icomponentdefinitions_12).method12177(437818173)) {
+						if (aClass118_7257 != null && icomponentdefinitions_12 != aClass118_7257 && bool_48 && method11633(icomponentdefinitions_12).dragEnabled()) {
 							aClass118_7370 = icomponentdefinitions_12;
 						}
 

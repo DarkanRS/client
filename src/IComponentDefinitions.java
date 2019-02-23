@@ -104,7 +104,7 @@ public class IComponentDefinitions {
 	public int anInt1321;
 	public int anInt1307 = -1;
 	public int anInt1309 = -1;
-	public Class282_Sub10 aClass282_Sub10_1364;
+	public IComponentSettings aClass282_Sub10_1364;
 	public int anInt1417 = 0;
 	public int anInt1310 = -1;
 	public Object[] scriptParams;
@@ -199,8 +199,8 @@ public class IComponentDefinitions {
 		}
 
 		this.anInt1290 = rsbytebuffer_1.readUnsignedShort();
-		this.anInt1295 = rsbytebuffer_1.readShort(2037728736);
-		this.anInt1296 = rsbytebuffer_1.readShort(1818130440);
+		this.anInt1295 = rsbytebuffer_1.readShort();
+		this.anInt1296 = rsbytebuffer_1.readShort();
 		this.anInt1297 = rsbytebuffer_1.readUnsignedShort();
 		this.anInt1298 = rsbytebuffer_1.readUnsignedShort();
 		this.aByte1368 = rsbytebuffer_1.readByte();
@@ -255,20 +255,20 @@ public class IComponentDefinitions {
 			this.aBool1344 = (i_5 & 0x4) == 4;
 			this.aBool1345 = (i_5 & 0x8) == 8;
 			if (bool_6) {
-				this.anInt1441 = rsbytebuffer_1.readShort(1994199659);
-				this.anInt1263 = rsbytebuffer_1.readShort(2058193743);
+				this.anInt1441 = rsbytebuffer_1.readShort();
+				this.anInt1263 = rsbytebuffer_1.readShort();
 				this.anInt1385 = rsbytebuffer_1.readUnsignedShort();
 				this.anInt1336 = rsbytebuffer_1.readUnsignedShort();
 				this.anInt1337 = rsbytebuffer_1.readUnsignedShort();
 				this.anInt1343 = rsbytebuffer_1.readUnsignedShort();
 			} else if (this.aBool1332) {
-				this.anInt1441 = rsbytebuffer_1.readShort(2112650056);
-				this.anInt1263 = rsbytebuffer_1.readShort(2006881425);
-				this.anInt1304 = rsbytebuffer_1.readShort(1610618567);
+				this.anInt1441 = rsbytebuffer_1.readShort();
+				this.anInt1263 = rsbytebuffer_1.readShort();
+				this.anInt1304 = rsbytebuffer_1.readShort();
 				this.anInt1385 = rsbytebuffer_1.readUnsignedShort();
 				this.anInt1336 = rsbytebuffer_1.readUnsignedShort();
 				this.anInt1337 = rsbytebuffer_1.readUnsignedShort();
-				this.anInt1343 = rsbytebuffer_1.readShort(1816488415);
+				this.anInt1343 = rsbytebuffer_1.readShort();
 			}
 
 			this.anInt1321 = rsbytebuffer_1.readBigSmart();
@@ -385,7 +385,7 @@ public class IComponentDefinitions {
 		this.anInt1382 = rsbytebuffer_1.readUnsignedByte();
 		this.aString1338 = rsbytebuffer_1.readString();
 		i_10 = -1;
-		if (Class96_Sub6.method14502(i_5, 2089806956) != 0) {
+		if (Class96_Sub6.getUseOptionFlags(i_5) != 0) {
 			i_10 = rsbytebuffer_1.readUnsignedShort();
 			if (i_10 == 65535) {
 				i_10 = -1;
@@ -409,7 +409,7 @@ public class IComponentDefinitions {
 			}
 		}
 
-		this.aClass282_Sub10_1364 = new Class282_Sub10(i_5, i_10);
+		this.aClass282_Sub10_1364 = new IComponentSettings(i_5, i_10);
 		if (i_3 >= 0) {
 			i_11 = rsbytebuffer_1.readUnsignedByte();
 
@@ -775,7 +775,7 @@ public class IComponentDefinitions {
 	}
 
 	public IComponentDefinitions() {
-		this.aClass282_Sub10_1364 = Class282_Sub10.aClass282_Sub10_7546;
+		this.aClass282_Sub10_1364 = IComponentSettings.aClass282_Sub10_7546;
 		this.aBool1424 = false;
 		this.aString1369 = "";
 		this.anInt1378 = -1;

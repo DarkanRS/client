@@ -5,7 +5,7 @@ public abstract class Class455 {
 	static void method7553(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
 		if (client.aBool7344) {
 			AttributeDefault attributedefault_4 = Class96_Sub12.anInt9319 != -1 ? IndexLoaders.ITEM_DEFAULTS.method7069(Class96_Sub12.anInt9319, (byte) 0) : null;
-			if (client.method11633(icomponentdefinitions_0).method12181(2135995178) && (Class506.anInt5858 & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.anInt9319, attributedefault_4.anInt5337, 1315662275) != attributedefault_4.anInt5337)) {
+			if (client.method11633(icomponentdefinitions_0).bit22Enabled() && (Class506.anInt5858 & 0x20) != 0 && (attributedefault_4 == null || icomponentdefinitions_0.method1997(Class96_Sub12.anInt9319, attributedefault_4.anInt5337, 1315662275) != attributedefault_4.anInt5337)) {
 				PlayerAppearance.method4032(client.aString7275, client.aString7356 + " " + "->" + " " + icomponentdefinitions_0.aString1369, Defaults8Loader.anInt5932, 58, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1704442537);
 			}
 		}
@@ -29,7 +29,7 @@ public abstract class Class455 {
 			}
 		}
 
-		if (client.method11633(icomponentdefinitions_0).method12182(-1173401009)) {
+		if (client.method11633(icomponentdefinitions_0).continueOptionEnabled()) {
 			if (icomponentdefinitions_0.aString1348 != null) {
 				PlayerAppearance.method4032(icomponentdefinitions_0.aString1348, "", -1, 30, icomponentdefinitions_0.anInt1426, 0L, icomponentdefinitions_0.anInt1288, icomponentdefinitions_0.idHash, true, false, (long) (icomponentdefinitions_0.anInt1288 << 32 | icomponentdefinitions_0.idHash), false, -1336342241);
 			} else {

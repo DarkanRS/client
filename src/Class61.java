@@ -517,7 +517,7 @@ public class Class61 {
 					}
 
 					if (this.aBool620) {
-						this.aStringArray639[i_5] = rsbytebuffer_1.readNullString(2060010006);
+						this.aStringArray639[i_5] = rsbytebuffer_1.readNullString();
 					}
 
 					this.aByteArray640[i_5] = rsbytebuffer_1.readByte();
@@ -550,7 +550,7 @@ public class Class61 {
 					}
 
 					if (this.aBool620) {
-						this.aStringArray617[i_5] = rsbytebuffer_1.readNullString(1621296132);
+						this.aStringArray617[i_5] = rsbytebuffer_1.readNullString();
 					}
 				}
 			}

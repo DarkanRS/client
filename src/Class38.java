@@ -21,9 +21,9 @@ public class Class38 {
 		} else if (i_2 == 2) {
 			this.aBool400 = true;
 		} else if (i_2 == 3) {
-			this.anInt401 = rsbytebuffer_1.readShort(2039701434);
-			this.anInt397 = rsbytebuffer_1.readShort(1948246025);
-			this.anInt399 = rsbytebuffer_1.readShort(1762274670);
+			this.anInt401 = rsbytebuffer_1.readShort();
+			this.anInt397 = rsbytebuffer_1.readShort();
+			this.anInt399 = rsbytebuffer_1.readShort();
 		} else if (i_2 == 4) {
 			this.anInt395 = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 5) {
@@ -31,9 +31,9 @@ public class Class38 {
 		} else if (i_2 == 6) {
 			this.anInt404 = rsbytebuffer_1.read24BitUnsignedInteger();
 		} else if (i_2 == 7) {
-			this.anInt403 = rsbytebuffer_1.readShort(1729052508);
-			this.anInt398 = rsbytebuffer_1.readShort(2077020068);
-			this.anInt405 = rsbytebuffer_1.readShort(2000498721);
+			this.anInt403 = rsbytebuffer_1.readShort();
+			this.anInt398 = rsbytebuffer_1.readShort();
+			this.anInt405 = rsbytebuffer_1.readShort();
 		}
 
 	}

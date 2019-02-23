@@ -167,7 +167,7 @@ public abstract class Class390 {
 
 	static final void method6732(CS2Executor cs2executor_0, byte b_1) {
 		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
-		EnumDefinitions enumdefinitions_3 = IndexLoaders.ENUM_LOADER.method7424(i_2, (byte) 8);
+		EnumDefinitions enumdefinitions_3 = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_2, (byte) 8);
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = enumdefinitions_3.method7222(1242812938);
 	}
 

@@ -24,7 +24,7 @@ public class Class416 {
 		} else if (i_2 == 3) {
 			this.anInt4988 = rsbytebuffer_1.readUnsignedShort();
 		} else if (i_2 == 4) {
-			this.anInt4987 = rsbytebuffer_1.readShort(1989822501);
+			this.anInt4987 = rsbytebuffer_1.readShort();
 		}
 
 	}

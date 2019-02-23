@@ -371,14 +371,14 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 					int i_14 = icomponentdefinitions_12.anInt1299 + i_6;
 					int i_15 = i_7 + icomponentdefinitions_12.anInt1428;
 					int i_16 = icomponentdefinitions_12.anInt1453;
-					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).anInt7547 != 0 || icomponentdefinitions_12.anInt1268 == 0) && i_16 > 127) {
+					if (client.aBool7168 && (client.method11633(icomponentdefinitions_12).settings != 0 || icomponentdefinitions_12.anInt1268 == 0) && i_16 > 127) {
 						i_16 = 127;
 					}
 
 					int i_17;
 					int i_18;
 					if (icomponentdefinitions_12 == client.aClass118_7257) {
-						if (i_1 != -1412584499 && (icomponentdefinitions_12.anInt1382 == IComponentDefinitions.anInt1265 || icomponentdefinitions_12.anInt1382 == IComponentDefinitions.anInt1283 || client.method11633(icomponentdefinitions_12).method12196(-28031909))) {
+						if (i_1 != -1412584499 && (icomponentdefinitions_12.anInt1382 == IComponentDefinitions.anInt1265 || icomponentdefinitions_12.anInt1382 == IComponentDefinitions.anInt1283 || client.method11633(icomponentdefinitions_12).bit23Enabled())) {
 							Class328.aClass118Array3772 = arr_0;
 							Class400.anInt4822 = i_6;
 							IsaacCipher.anInt5157 = i_7;
@@ -406,7 +406,7 @@ public class GroundDecoration extends SceneObjectNode implements SceneObject {
 								i_18 = client.anInt7476 + client.anInt7265 - icomponentdefinitions_12.anInt1429;
 							}
 
-							if (client.method11633(icomponentdefinitions_12).method12196(1554582083)) {
+							if (client.method11633(icomponentdefinitions_12).bit23Enabled()) {
 								Class292.method5201(i_17, i_18, icomponentdefinitions_12.anInt1301, icomponentdefinitions_12.anInt1429, (byte) 12);
 							}
 

@@ -158,7 +158,7 @@ public class Class59 {
 			} else if (i_2 == 28) {
 				this.anInt589 = rsbytebuffer_1.readUnsignedByte();
 			} else if (i_2 == 29) {
-				rsbytebuffer_1.readShort(1689772952);
+				rsbytebuffer_1.readShort();
 			} else if (i_2 == 30) {
 				this.aBool574 = true;
 			} else if (i_2 == 31) {

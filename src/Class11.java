@@ -64,7 +64,7 @@ public class Class11 {
 		Class508.anInt5864 = -1;
 	}
 
-	public static char method470(byte b_0, int i_1) {
+	public static char getChar(byte b_0, int i_1) {
 		int i_2 = b_0 & 0xff;
 		if (i_2 == 0) {
 			throw new IllegalArgumentException("" + Integer.toString(i_2, 16));

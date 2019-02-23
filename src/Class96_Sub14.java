@@ -140,8 +140,8 @@ public class Class96_Sub14 extends Class96 {
 	}
 
 	static boolean method14643(IComponentDefinitions icomponentdefinitions_0, int i_1) {
-		Class282_Sub10 class282_sub10_2 = client.method11633(icomponentdefinitions_0);
-		return class282_sub10_2.method12180((byte) 102) > 0 ? true : (class282_sub10_2.method12196(1802223164) ? true : icomponentdefinitions_0.aClass118_1379 != null);
+		IComponentSettings class282_sub10_2 = client.method11633(icomponentdefinitions_0);
+		return class282_sub10_2.depthFlags() > 0 ? true : (class282_sub10_2.bit23Enabled() ? true : icomponentdefinitions_0.aClass118_1379 != null);
 	}
 
 	static final void method14644(CS2Executor cs2executor_0, int i_1) {

@@ -148,8 +148,8 @@ public class Class377 implements IndexLoader {
 		String string_2 = rsbytebuffer_0.readString();
 		Class356 class356_3 = Class350_Sub3_Sub1.method15558(180670091)[rsbytebuffer_0.readUnsignedByte()];
 		Class353 class353_4 = AccountCreationResponseOpcodes.method8155(152314627)[rsbytebuffer_0.readUnsignedByte()];
-		int i_5 = rsbytebuffer_0.readShort(1978619926);
-		int i_6 = rsbytebuffer_0.readShort(1827949740);
+		int i_5 = rsbytebuffer_0.readShort();
+		int i_6 = rsbytebuffer_0.readShort();
 		int i_7 = rsbytebuffer_0.readUnsignedByte();
 		int i_8 = rsbytebuffer_0.readUnsignedByte();
 		int i_9 = rsbytebuffer_0.readUnsignedByte();

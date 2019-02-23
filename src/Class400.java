@@ -84,7 +84,7 @@ public class Class400 {
 				int i_11;
 				int i_12;
 				if (i_5 > 2) {
-					this.anInt4820 = rsbytebuffer_4.readShort(2041179357);
+					this.anInt4820 = rsbytebuffer_4.readShort();
 					i_11 = rsbytebuffer_4.read24BitUnsignedInteger();
 					i_12 = rsbytebuffer_4.readUnsignedShort();
 				} else {

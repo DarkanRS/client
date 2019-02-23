@@ -1614,12 +1614,12 @@ public class Class329 {
 		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
 		int i_5 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 3];
-		EnumDefinitions enumdefinitions_6 = IndexLoaders.ENUM_LOADER.method7424(i_4, (byte) 8);
-		if (i_2 == enumdefinitions_6.aChar5146 && i_3 == enumdefinitions_6.aChar5140) {
+		EnumDefinitions enumDefinitions = IndexLoaders.ENUM_LOADER.getEnumDefinitions(i_4, (byte) 8);
+		if (i_2 == enumDefinitions.aChar5146 && i_3 == enumDefinitions.aChar5140) {
 			if (i_3 == 115) {
-				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = enumdefinitions_6.method7226(i_5, 870483820);
+				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = enumDefinitions.getStringValue(i_5, 870483820);
 			} else {
-				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = enumdefinitions_6.method7232(i_5, -1848389937);
+				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = enumDefinitions.getIntValue(i_5, -1848389937);
 			}
 
 		} else {

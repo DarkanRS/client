@@ -14,7 +14,7 @@ public class Class332 {
 
 	public static Class350 method5928(RsByteBuffer rsbytebuffer_0, int i_1) {
 		Class350_Sub3 class350_sub3_2 = (Class350_Sub3) Class163.method2843(rsbytebuffer_0, 653185943);
-		int i_3 = rsbytebuffer_0.readShort(2118082241);
+		int i_3 = rsbytebuffer_0.readShort();
 		return new Class350_Sub3_Sub1(class350_sub3_2.aClass356_4094, class350_sub3_2.aClass353_4087, class350_sub3_2.anInt4090, class350_sub3_2.anInt4089, class350_sub3_2.anInt4093, class350_sub3_2.anInt4088, class350_sub3_2.anInt4092, class350_sub3_2.anInt4086, class350_sub3_2.anInt4091, class350_sub3_2.anInt7844, class350_sub3_2.anInt7840, class350_sub3_2.anInt7842, class350_sub3_2.anInt7843, class350_sub3_2.anInt7841, class350_sub3_2.anInt7845, i_3);
 	}
 

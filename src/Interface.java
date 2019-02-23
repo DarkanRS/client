@@ -1,21 +1,21 @@
 public class Interface {
 
-	IComponentDefinitions[] aClass118Array997;
+	IComponentDefinitions[] iComponentDefinitions;
 	public IComponentDefinitions[] components;
 	public boolean aBool999;
 
 	public IComponentDefinitions[] method1616(int i_1) {
-		return this.aClass118Array997 == null ? this.components : this.aClass118Array997;
+		return this.iComponentDefinitions == null ? this.components : this.iComponentDefinitions;
 	}
 
 	public IComponentDefinitions[] method1617(int i_1) {
-		if (this.aClass118Array997 == null) {
+		if (this.iComponentDefinitions == null) {
 			int i_2 = this.components.length;
-			this.aClass118Array997 = new IComponentDefinitions[i_2];
-			System.arraycopy(this.components, 0, this.aClass118Array997, 0, this.components.length);
+			this.iComponentDefinitions = new IComponentDefinitions[i_2];
+			System.arraycopy(this.components, 0, this.iComponentDefinitions, 0, this.components.length);
 		}
 
-		return this.aClass118Array997;
+		return this.iComponentDefinitions;
 	}
 
 	public IComponentDefinitions method1618(int i_1, byte b_2) {

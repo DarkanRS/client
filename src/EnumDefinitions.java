@@ -21,44 +21,44 @@ public class EnumDefinitions {
 		return this.anInt5141;
 	}
 
-	void method7224(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
-		if (i_2 == 1) {
-			this.aChar5146 = Class11.method470(rsbytebuffer_1.readByte(), -1589762239);
-		} else if (i_2 == 2) {
-			this.aChar5140 = Class11.method470(rsbytebuffer_1.readByte(), -940945676);
-		} else if (i_2 == 3) {
-			this.aString5142 = rsbytebuffer_1.readString();
-		} else if (i_2 == 4) {
-			this.anInt5143 = rsbytebuffer_1.readInt();
+	void method7224(RsByteBuffer stream, int opcode, int i_3) {
+		if (opcode == 1) {
+			this.aChar5146 = Class11.getChar(stream.readByte(), -1589762239);
+		} else if (opcode == 2) {
+			this.aChar5140 = Class11.getChar(stream.readByte(), -940945676);
+		} else if (opcode == 3) {
+			this.aString5142 = stream.readString();
+		} else if (opcode == 4) {
+			this.anInt5143 = stream.readInt();
 		} else {
 			int i_4;
 			int i_5;
-			if (i_2 != 5 && i_2 != 6) {
-				if (i_2 == 7 || i_2 == 8) {
-					i_4 = rsbytebuffer_1.readUnsignedShort();
-					this.anInt5141 = rsbytebuffer_1.readUnsignedShort();
+			if (opcode != 5 && opcode != 6) {
+				if (opcode == 7 || opcode == 8) {
+					i_4 = stream.readUnsignedShort();
+					this.anInt5141 = stream.readUnsignedShort();
 					this.anObjectArray5145 = new Object[i_4];
 
 					for (i_5 = 0; i_5 < this.anInt5141; i_5++) {
-						int i_7 = rsbytebuffer_1.readUnsignedShort();
-						if (i_2 == 7) {
-							this.anObjectArray5145[i_7] = rsbytebuffer_1.readString();
+						int i_7 = stream.readUnsignedShort();
+						if (opcode == 7) {
+							this.anObjectArray5145[i_7] = stream.readString();
 						} else {
-							this.anObjectArray5145[i_7] = new Integer(rsbytebuffer_1.readInt());
+							this.anObjectArray5145[i_7] = new Integer(stream.readInt());
 						}
 					}
 				}
 			} else {
-				this.anInt5141 = rsbytebuffer_1.readUnsignedShort();
+				this.anInt5141 = stream.readUnsignedShort();
 				this.aMap5144 = new HashMap(this.anInt5141);
 
 				for (i_4 = 0; i_4 < this.anInt5141; i_4++) {
-					i_5 = rsbytebuffer_1.readInt();
+					i_5 = stream.readInt();
 					Object obj_6;
-					if (i_2 == 5) {
-						obj_6 = rsbytebuffer_1.readString();
+					if (opcode == 5) {
+						obj_6 = stream.readString();
 					} else {
-						obj_6 = new Integer(rsbytebuffer_1.readInt());
+						obj_6 = new Integer(stream.readInt());
 					}
 
 					this.aMap5144.put(new Integer(i_5), obj_6);
@@ -68,12 +68,12 @@ public class EnumDefinitions {
 
 	}
 
-	Object method7225(int i_1, byte b_2) {
-		return this.anObjectArray5145 != null ? (i_1 >= 0 && i_1 < this.anObjectArray5145.length ? this.anObjectArray5145[i_1] : null) : (this.aMap5144 != null ? this.aMap5144.get(new Integer(i_1)) : null);
+	Object getValue(int key, byte b_2) {
+		return this.anObjectArray5145 != null ? (key >= 0 && key < this.anObjectArray5145.length ? this.anObjectArray5145[key] : null) : (this.aMap5144 != null ? this.aMap5144.get(new Integer(key)) : null);
 	}
 
-	public String method7226(int i_1, int i_2) {
-		Object object_3 = this.method7225(i_1, (byte) 1);
+	public String getStringValue(int i_1, int i_2) {
+		Object object_3 = this.getValue(i_1, (byte) 1);
 		return object_3 == null ? this.aString5142 : (String) object_3;
 	}
 
@@ -100,8 +100,8 @@ public class EnumDefinitions {
 		}
 	}
 
-	public int method7232(int i_1, int i_2) {
-		Object object_3 = this.method7225(i_1, (byte) 1);
+	public int getIntValue(int i_1, int i_2) {
+		Object object_3 = this.getValue(i_1, (byte) 1);
 		return object_3 == null ? this.anInt5143 : ((Integer) object_3).intValue();
 	}
 
