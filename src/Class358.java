@@ -1,141 +1,108 @@
-/* Class358 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class358 {
-	static Class358 aClass358_4125;
-	static Class358 aClass358_4126;
-	static Class358 aClass358_4127;
-	static Class358 aClass358_4128;
-	static Class358 aClass358_4129;
-	static Class358 aClass358_4130;
-	static Class358 aClass358_4131;
-	static Class358 aClass358_4132;
-	static Class358 aClass358_4133;
-	static Class358 aClass358_4134;
-	static Class358 aClass358_4135;
+
 	static Class358 aClass358_4136 = new Class358("9", "9");
-	static Class358 aClass358_4137;
-	static Class358 aClass358_4138;
-	static Class358 aClass358_4139;
-	static Class358 aClass358_4140;
-	static Class358 aClass358_4141;
-	static Class358 aClass358_4142;
-	static Class358 aClass358_4143;
-	public static Class358 aClass358_4144;
-	static Class358 aClass358_4145;
-	static Class358 aClass358_4146;
-	static Class358 aClass358_4147;
-	static Class358 aClass358_4148;
-	static Class358 aClass358_4149;
-	static Class358 aClass358_4150;
-	static Class358 aClass358_4151;
-	static Class358 aClass358_4152;
-	static Class358 aClass358_4153;
-	static Class358 aClass358_4154;
-	static Class358 aClass358_4155;
-	static Class358 aClass358_4156;
-	static Class358 aClass358_4157;
-	public static Class358 aClass358_4158;
+	static Class358 aClass358_4126 = new Class358("24", "24");
+	static Class358 aClass358_4127 = new Class358("15", "15");
+	static Class358 aClass358_4140 = new Class358("8", "8");
+	static Class358 aClass358_4129 = new Class358("18", "18");
+	static Class358 aClass358_4125 = new Class358("16", "16");
+	static Class358 aClass358_4142 = new Class358("6", "6");
+	static Class358 aClass358_4150 = new Class358("35", "35");
+	static Class358 aClass358_4133 = new Class358("14", "14");
+	static Class358 aClass358_4156 = new Class358("5", "5");
+	static Class358 aClass358_4137 = new Class358("31", "31");
+	static Class358 aClass358_4128 = new Class358("23", "23");
+	static Class358 aClass358_4151 = new Class358("10", "10");
+	static Class358 aClass358_4138 = new Class358("34", "34");
+	static Class358 aClass358_4139 = new Class358("33", "33");
+	static Class358 aClass358_4135 = new Class358("2", "2");
+	static Class358 aClass358_4141 = new Class358("25", "25");
+	static Class358 aClass358_4134 = new Class358("11", "11");
+	public static Class358 aClass358_4158 = new Class358("12", "12");
+	public static Class358 aClass358_4144 = new Class358("21", "21");
+	static Class358 aClass358_4145 = new Class358("29", "29");
+	static Class358 aClass358_4146 = new Class358("1", "1");
+	static Class358 aClass358_4147 = new Class358("26", "26");
+	static Class358 aClass358_4148 = new Class358("4", "4");
+	static Class358 aClass358_4143 = new Class358("28", "28");
+	static Class358 aClass358_4131 = new Class358("20", "20");
+	static Class358 aClass358_4149 = new Class358("32", "32");
+	static Class358 aClass358_4152 = new Class358("22", "22");
+	static Class358 aClass358_4153 = new Class358("27", "27");
+	static Class358 aClass358_4154 = new Class358("17", "17");
+	static Class358 aClass358_4155 = new Class358("3", "3");
+	static Class358 aClass358_4130 = new Class358("30", "30");
+	static Class358 aClass358_4157 = new Class358("13", "13");
+	static Class358 aClass358_4132 = new Class358("7", "7");
 	public String aString4159;
 
-	static {
-		aClass358_4126 = new Class358("24", "24");
-		aClass358_4127 = new Class358("15", "15");
-		aClass358_4140 = new Class358("8", "8");
-		aClass358_4129 = new Class358("18", "18");
-		aClass358_4125 = new Class358("16", "16");
-		aClass358_4142 = new Class358("6", "6");
-		aClass358_4150 = new Class358("35", "35");
-		aClass358_4133 = new Class358("14", "14");
-		aClass358_4156 = new Class358("5", "5");
-		aClass358_4137 = new Class358("31", "31");
-		aClass358_4128 = new Class358("23", "23");
-		aClass358_4151 = new Class358("10", "10");
-		aClass358_4138 = new Class358("34", "34");
-		aClass358_4139 = new Class358("33", "33");
-		aClass358_4135 = new Class358("2", "2");
-		aClass358_4141 = new Class358("25", "25");
-		aClass358_4134 = new Class358("11", "11");
-		aClass358_4158 = new Class358("12", "12");
-		aClass358_4144 = new Class358("21", "21");
-		aClass358_4145 = new Class358("29", "29");
-		aClass358_4146 = new Class358("1", "1");
-		aClass358_4147 = new Class358("26", "26");
-		aClass358_4148 = new Class358("4", "4");
-		aClass358_4143 = new Class358("28", "28");
-		aClass358_4131 = new Class358("20", "20");
-		aClass358_4149 = new Class358("32", "32");
-		aClass358_4152 = new Class358("22", "22");
-		aClass358_4153 = new Class358("27", "27");
-		aClass358_4154 = new Class358("17", "17");
-		aClass358_4155 = new Class358("3", "3");
-		aClass358_4130 = new Class358("30", "30");
-		aClass358_4157 = new Class358("13", "13");
-		aClass358_4132 = new Class358("7", "7");
+	Class358(String string_1, String string_2) {
+		this.aString4159 = string_2;
 	}
 
-	Class358(String string, String string_0_) {
-		aString4159 = string_0_;
-	}
-
-	static void method6234(byte i) {
+	static void method6234(byte b_0) {
 		Class299.aClass229_3545.method3859(-1558417289);
 	}
 
-	static void method6235(byte[] is, byte i) {
-		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
-		for (;;) {
-			int i_1_ = class282_sub35.readUnsignedByte();
-			if (i_1_ == 0)
-				break;
-			if (i_1_ == 1) {
-				int[] is_2_ = Class210.anIntArray2668 = new int[6];
-				is_2_[0] = class282_sub35.readUnsignedShort();
-				is_2_[1] = class282_sub35.readUnsignedShort();
-				is_2_[2] = class282_sub35.readUnsignedShort();
-				is_2_[3] = class282_sub35.readUnsignedShort();
-				is_2_[4] = class282_sub35.readUnsignedShort();
-				is_2_[5] = class282_sub35.readUnsignedShort();
+	static void method6235(byte[] bytes_0, byte b_1) {
+		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
+
+		while (true) {
+			int i_3 = rsbytebuffer_2.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			if (i_3 == 1) {
+				int[] ints_4 = Class210.anIntArray2668 = new int[6];
+				ints_4[0] = rsbytebuffer_2.readUnsignedShort();
+				ints_4[1] = rsbytebuffer_2.readUnsignedShort();
+				ints_4[2] = rsbytebuffer_2.readUnsignedShort();
+				ints_4[3] = rsbytebuffer_2.readUnsignedShort();
+				ints_4[4] = rsbytebuffer_2.readUnsignedShort();
+				ints_4[5] = rsbytebuffer_2.readUnsignedShort();
 			}
 		}
 	}
 
-	static final void method6236(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 682349813 * class118.anInt1336;
+	static final void method6236(CS2Executor cs2executor_0, byte b_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1336;
 	}
 
-	static final void method6237(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		ChatLine class108 = Class180.method3032(i_3_, (byte) -1);
-		String string = "";
-		if (class108 != null && null != class108.crownedName)
-			string = class108.crownedName;
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
+	static final void method6237(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		ChatLine chatline_3 = Class180.method3032(i_2, (byte) -1);
+		String str_4 = "";
+		if (chatline_3 != null && chatline_3.crownedName != null) {
+			str_4 = chatline_3.crownedName;
+		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
 	}
 
-	static final void method6238(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7465 ? 1 : 0;
+	static final void method6238(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7465 ? 1 : 0;
 	}
 
-	static final void method6239(CS2Executor class527, int i) {
+	static final void method6239(CS2Executor cs2executor_0, int i_1) {
 		Class282_Sub20_Sub25.method15393(true, 1862489719);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -87);
 		Class190.method3148((byte) 74);
 		client.aBool7175 = false;
 	}
 
-	public static void method6240(int i, int i_4_) {
-		Class148.anInt1730 = 800770715;
+	public static void method6240(int i_0, int i_1) {
+		Class148.anInt1730 = 1;
 		Class75.aClass317_746 = null;
-		Class6.anInt46 = 26560111;
-		Class148.anInt1738 = -275076647;
+		Class6.anInt46 = -1;
+		Class148.anInt1738 = -1;
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 		Class158_Sub2_Sub3.anInt10243 = 0;
 		Class152.aBool1962 = false;
-		Class96_Sub22.anInt9440 = -465842921 * i;
+		Class96_Sub22.anInt9440 = i_0;
 		Class11.aClass109_121 = null;
 	}
+
 }

@@ -1,127 +1,91 @@
-/* Class207 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class207 {
-	int anInt2653 = 1679369983;
-	int anInt2654 = -244535397;
+
+	int anInt2653 = -1;
+	int anInt2654 = -1;
+	Class204 aClass204_2656;
+	int anInt2657;
 	int[] anIntArray2655;
-	Class204 aClass204_2656 = Class204.aClass204_2579;
-	int anInt2657 = -580872743;
-	
-	void method3548(RsByteBuffer class282_sub35, int i) {
-		if (i == 1)
-			((Class207) this).anInt2653 = class282_sub35.readUnsignedShort() * -1679369983;
-		else if (2 == i) {
-			((Class207) this).anIntArray2655 = new int[class282_sub35.readUnsignedByte()];
-			for (int i_0_ = 0; i_0_ < ((Class207) this).anIntArray2655.length; i_0_++)
-				((Class207) this).anIntArray2655[i_0_] = class282_sub35.readUnsignedShort();
-		} else if (i == 3)
-			((Class207) this).anInt2654 = class282_sub35.readUnsignedByte() * 244535397;
-		else if (i == 4)
-			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-987111968), class282_sub35.readUnsignedByte(), -1655373565));
-		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
-	}
 
-	void method3549(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_1_ = class282_sub35.readUnsignedByte();
-			if (i_1_ == 0)
-				break;
-			method3552(class282_sub35, i_1_, (byte) 127);
+	void method3549(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method3552(rsbytebuffer_1, i_3, (byte) 127);
 		}
-	}
-
-	void method3550(RsByteBuffer class282_sub35, int i) {
-		if (i == 1)
-			((Class207) this).anInt2653 = class282_sub35.readUnsignedShort() * -1679369983;
-		else if (2 == i) {
-			((Class207) this).anIntArray2655 = new int[class282_sub35.readUnsignedByte()];
-			for (int i_2_ = 0; i_2_ < ((Class207) this).anIntArray2655.length; i_2_++)
-				((Class207) this).anIntArray2655[i_2_] = class282_sub35.readUnsignedShort();
-		} else if (i == 3)
-			((Class207) this).anInt2654 = class282_sub35.readUnsignedByte() * 244535397;
-		else if (i == 4)
-			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-973471054), class282_sub35.readUnsignedByte(), -2111624137));
-		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
 	}
 
 	Class207() {
-		/* empty */
+		this.aClass204_2656 = Class204.aClass204_2579;
+		this.anInt2657 = -1;
 	}
 
-	void method3551(RsByteBuffer class282_sub35, int i) {
-		if (i == 1)
-			((Class207) this).anInt2653 = class282_sub35.readUnsignedShort() * -1679369983;
-		else if (2 == i) {
-			((Class207) this).anIntArray2655 = new int[class282_sub35.readUnsignedByte()];
-			for (int i_3_ = 0; i_3_ < ((Class207) this).anIntArray2655.length; i_3_++)
-				((Class207) this).anIntArray2655[i_3_] = class282_sub35.readUnsignedShort();
-		} else if (i == 3)
-			((Class207) this).anInt2654 = class282_sub35.readUnsignedByte() * 244535397;
-		else if (i == 4)
-			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-970645072), class282_sub35.readUnsignedByte(), -888813501));
-		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
-	}
+	void method3552(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+		if (i_2 == 1) {
+			this.anInt2653 = rsbytebuffer_1.readUnsignedShort();
+		} else if (i_2 == 2) {
+			this.anIntArray2655 = new int[rsbytebuffer_1.readUnsignedByte()];
 
-	void method3552(RsByteBuffer class282_sub35, int i, byte i_4_) {
-		if (i == 1)
-			((Class207) this).anInt2653 = class282_sub35.readUnsignedShort() * -1679369983;
-		else if (2 == i) {
-			((Class207) this).anIntArray2655 = new int[class282_sub35.readUnsignedByte()];
-			for (int i_5_ = 0; i_5_ < ((Class207) this).anIntArray2655.length; i_5_++)
-				((Class207) this).anIntArray2655[i_5_] = class282_sub35.readUnsignedShort();
-		} else if (i == 3)
-			((Class207) this).anInt2654 = class282_sub35.readUnsignedByte() * 244535397;
-		else if (i == 4)
-			((Class207) this).aClass204_2656 = ((Class204) Class386.method6672(Class530.method11353(-430210137), class282_sub35.readUnsignedByte(), -1538541275));
-		else if (5 == i)
-			((Class207) this).anInt2657 = class282_sub35.readBigSmart() * 580872743;
-	}
-
-	static void method3553(CS2Executor class527, byte i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[1942118537 * class527.intStackPtr - 2]), -1396181317).aStringArray2971[(class527.intStack[class527.intStackPtr * 1942118537 - 1])]);
-		class527.intStackPtr -= 283782002;
-	}
-
-	static final void method3554(CS2Executor class527, int i) {
-		int i_6_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 71);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
-		Defaults7Loader.method8754(class118, class98, class527, 1449946769);
-	}
-
-	static final void method3555(CS2Executor class527, int i) {
-		Class42.method890((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), 255, 50, (byte) 39);
-	}
-
-	static final void method3556(CS2Executor class527, int i) {
-		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub6 class282_sub50_sub6 = Class125.method2173(1333145388);
-		if (class282_sub50_sub6 != null) {
-			boolean bool = class282_sub50_sub6.method14778(i_7_ >> 28 & 0x3, i_7_ >> 14 & 0x3fff, i_7_ & 0x3fff, CS2Runner.anIntArray5900, -1889413502);
-			if (bool)
-				Class8_Sub2.method14263(CS2Runner.anIntArray5900[1], CS2Runner.anIntArray5900[2], (byte) 0);
+			for (int i_4 = 0; i_4 < this.anIntArray2655.length; i_4++) {
+				this.anIntArray2655[i_4] = rsbytebuffer_1.readUnsignedShort();
+			}
+		} else if (i_2 == 3) {
+			this.anInt2654 = rsbytebuffer_1.readUnsignedByte();
+		} else if (i_2 == 4) {
+			this.aClass204_2656 = (Class204) Class386.method6672(Class530.method11353(-430210137), rsbytebuffer_1.readUnsignedByte(), -1538541275);
+		} else if (i_2 == 5) {
+			this.anInt2657 = rsbytebuffer_1.readBigSmart();
 		}
+
 	}
 
-	static final void method3557(CS2Executor class527, byte i) {
-		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (null != Class291_Sub1.aClass465_8025) {
-			Node class282 = Class291_Sub1.aClass465_8025.method7754((long) i_8_);
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282 != null ? 1 : 0;
-		} else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+	static void method3553(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).aStringArray2971[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]];
+		cs2executor_0.intStackPtr -= 2;
 	}
 
-	public static TCPMessage method3558(byte i) {
-		TCPMessage class282_sub23 = Class158_Sub2.method14356((short) 2048);
-		((TCPMessage) class282_sub23).packet = null;
-		((TCPMessage) class282_sub23).anInt7678 = 0;
-		class282_sub23.buffer = new RsBitsBuffer(5000);
-		return class282_sub23;
+	static final void method3554(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 71);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Defaults7Loader.method8754(icomponentdefinitions_3, interface_4, cs2executor_0, 1449946769);
 	}
+
+	static final void method3555(CS2Executor cs2executor_0, int i_1) {
+		Class42.method890(cs2executor_0.intStack[--cs2executor_0.intStackPtr], 255, 50, (byte) 39);
+	}
+
+	static final void method3556(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		Class282_Sub50_Sub6 class282_sub50_sub6_3 = Class125.method2173(1333145388);
+		if (class282_sub50_sub6_3 != null) {
+			boolean bool_4 = class282_sub50_sub6_3.method14778(i_2 >> 28 & 0x3, i_2 >> 14 & 0x3fff, i_2 & 0x3fff, CS2Runner.anIntArray5900, -1889413502);
+			if (bool_4) {
+				Class8_Sub2.method14263(CS2Runner.anIntArray5900[1], CS2Runner.anIntArray5900[2], (byte) 0);
+			}
+		}
+
+	}
+
+	static final void method3557(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		if (Class291_Sub1.aClass465_8025 != null) {
+			Node node_3 = Class291_Sub1.aClass465_8025.method7754((long) i_2);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = node_3 != null ? 1 : 0;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		}
+
+	}
+
+	public static TCPMessage method3558(byte b_0) {
+		TCPMessage tcpmessage_1 = Class158_Sub2.method14356((short) 2048);
+		tcpmessage_1.packet = null;
+		tcpmessage_1.anInt7678 = 0;
+		tcpmessage_1.buffer = new RsBitsBuffer(5000);
+		return tcpmessage_1;
+	}
+
 }

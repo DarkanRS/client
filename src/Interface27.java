@@ -1,45 +1,43 @@
-/* Interface27 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface27 {
-	public void method186();
 
-	public void method161(int i);
+	void method186();
 
-	public void method187(boolean bool, int i);
+	void method161(int var1);
 
-	public void method188(byte i);
+	void method187(boolean var1, int var2);
 
-	public boolean method189(long l);
+	void method188(byte var1);
 
-	public int method190(int i);
+	boolean method189(long var1);
 
-	public void x(boolean bool);
+	int method190(int var1);
 
-	public int method191(int i);
+	void x(boolean var1);
 
-	public void method192(boolean bool);
+	int method191(int var1);
 
-	public boolean method193(long l);
+	void method192(boolean var1);
 
-	public void method194(boolean bool);
+	boolean method193(long var1);
 
-	public int method71();
+	void method194(boolean var1);
 
-	public void method159();
+	int method71();
 
-	public void method195();
+	void method159();
 
-	public int method196();
+	void method195();
 
-	public void method158();
+	int method196();
 
-	public int method197();
+	void method158();
 
-	public int method198();
+	int method197();
 
-	public void method157();
+	int method198();
 
-	public int method72();
+	void method157();
+
+	int method72();
+
 }

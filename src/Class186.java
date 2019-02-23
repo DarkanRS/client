@@ -1,87 +1,80 @@
-
-/* Class186 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-import java.awt.Canvas;
 import java.net.URL;
 
 public class Class186 {
+
 	static FontRenderer aClass8_2348;
 	static int anInt2349;
-
-	public static GraphicalRenderer method3081(Canvas canvas, Interface22 interface22, int i, int i_0_) {
-		return new HardwareRenderer(canvas, interface22, i, i_0_);
-	}
 
 	Class186() throws Throwable {
 		throw new Error();
 	}
 
-	public static boolean method3082(String string, int i, String string_1_, int i_2_) {
-		if (0 == i) {
-			boolean bool;
+	public static boolean method3082(String string_0, int i_1, String string_2, int i_3) {
+		boolean bool_4;
+		if (i_1 == 0) {
 			try {
-				if (!Class225_Sub6.aString8069.startsWith("win"))
+				if (!Class225_Sub6.aString8069.startsWith("win")) {
 					throw new Exception();
-				if (!string.startsWith("http://") && !string.startsWith("https://"))
+				} else if (!string_0.startsWith("http://") && !string_0.startsWith("https://")) {
 					throw new Exception();
-				String string_3_ = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-				for (int i_4_ = 0; i_4_ < string.length(); i_4_++) {
-					if (string_3_.indexOf(string.charAt(i_4_)) == -1)
-						throw new Exception();
+				} else {
+					String str_13 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
+
+					for (int i_6 = 0; i_6 < string_0.length(); i_6++) {
+						if (str_13.indexOf(string_0.charAt(i_6)) == -1) {
+							throw new Exception();
+						}
+					}
+
+					Runtime.getRuntime().exec("cmd /c start \"j\" \"" + string_0 + "\"");
+					bool_4 = true;
+					return bool_4;
 				}
-				Runtime.getRuntime().exec(new StringBuilder().append("cmd /c start \"j\" \"").append(string).append("\"").toString());
-				bool = true;
-			} catch (Throwable throwable) {
+			} catch (Throwable throwable_12) {
 				return false;
 			}
-			return bool;
-		}
-		if (i == 1) {
-			boolean bool;
+		} else if (i_1 == 1) {
 			try {
-				Object object = Class441.method7375(Class282_Sub44.anApplet8065, string_1_, (new Object[] { new URL(Class282_Sub44.anApplet8065.getCodeBase(), string).toString() }), 161008971);
-				bool = object != null;
-			} catch (Throwable throwable) {
+				Object object_5 = Class441.method7375(Class282_Sub44.anApplet8065, string_2, new Object[] { (new URL(Class282_Sub44.anApplet8065.getCodeBase(), string_0)).toString() }, 161008971);
+				bool_4 = object_5 != null;
+				return bool_4;
+			} catch (Throwable throwable_8) {
 				return false;
 			}
-			return bool;
-		}
-		if (i == 2) {
-			boolean bool;
+		} else if (i_1 == 2) {
 			try {
-				Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), string), "_blank");
-				bool = true;
-			} catch (Exception exception) {
+				Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), string_0), "_blank");
+				bool_4 = true;
+				return bool_4;
+			} catch (Exception exception_9) {
 				return false;
 			}
-			return bool;
-		}
-		if (i == 3) {
+		} else if (i_1 == 3) {
 			try {
 				Class441.method7377(Class282_Sub44.anApplet8065, "loggedout", 1762272883);
-			} catch (Throwable throwable) {
-				/* empty */
+			} catch (Throwable throwable_11) {
+				;
 			}
-			boolean bool;
+
 			try {
-				Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), string), "_top");
-				bool = true;
-			} catch (Exception exception) {
+				Class282_Sub44.anApplet8065.getAppletContext().showDocument(new URL(Class282_Sub44.anApplet8065.getCodeBase(), string_0), "_top");
+				bool_4 = true;
+				return bool_4;
+			} catch (Exception exception_10) {
 				return false;
 			}
-			return bool;
+		} else {
+			throw new IllegalArgumentException();
 		}
-		throw new IllegalArgumentException();
 	}
 
-	static void method3083(int i) {
+	static void method3083(int i_0) {
 		Class9.aClass184_73.method3054((short) 18699);
-		((Class184) Class9.aClass184_73).recievedBuffer.index = 0;
-		((Class184) Class9.aClass184_73).aClass375_2278 = null;
-		((Class184) Class9.aClass184_73).aClass375_2296 = null;
-		((Class184) Class9.aClass184_73).aClass375_2291 = null;
-		((Class184) Class9.aClass184_73).anInt2289 = 0;
+		Class9.aClass184_73.recievedBuffer.index = 0;
+		Class9.aClass184_73.aClass375_2278 = null;
+		Class9.aClass184_73.aClass375_2296 = null;
+		Class9.aClass184_73.aClass375_2291 = null;
+		Class9.aClass184_73.anInt2289 = 0;
 		client.anInt7178 = 0;
 		Class209_Sub1.method12916((byte) 16);
 		client.anInt7434 = 0;
@@ -92,28 +85,24 @@ public class Class186 {
 		Class282_Sub13.aClass61_7587 = null;
 		Class58.aClass61_528 = null;
 		Class237.method3990(1060559975);
-		for (int i_5_ = 0; i_5_ < 25; i_5_++) {
-			client.anIntArray7336[i_5_] = 0;
-			client.anIntArray7337[i_5_] = 0;
-			client.anIntArray7338[i_5_] = 0;
+
+		for (int i_1 = 0; i_1 < 25; i_1++) {
+			client.anIntArray7336[i_1] = 0;
+			client.anIntArray7337[i_1] = 0;
+			client.anIntArray7338[i_1] = 0;
 		}
+
 	}
 
-	static void method3084(short i) {
+	static void method3084(short s_0) {
 		Class197.NUM_PLAYER_INDICES = 0;
-		for (int i_6_ = 0; i_6_ < 2048; i_6_++) {
-			if (i == 229)
-				break;
-			Class197.aClass282_Sub35Array2428[i_6_] = null;
-			Class197.playerMovementTypes[i_6_] = Class249.aClass249_3084.aByte3085;
-			Class197.aClass4Array2430[i_6_] = null;
+
+		for (int i_1 = 0; i_1 < 2048; i_1++) {
+			Class197.aClass282_Sub35Array2428[i_1] = null;
+			Class197.playerMovementTypes[i_1] = Class249.aClass249_3084.aByte3085;
+			Class197.aClass4Array2430[i_1] = null;
 		}
+
 	}
 
-	public static Class434 method3085(String string, int i, int i_7_) {
-		Class434_Sub1 class434_sub1 = new Class434_Sub1();
-		((Class434) class434_sub1).aString5330 = string;
-		((Class434) class434_sub1).anInt5331 = i * -432862573;
-		return class434_sub1;
-	}
 }

@@ -1,235 +1,187 @@
-/* Class120 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class SharedConfigsType {
-	public static SharedConfigsType aClass120_1464;
-	static SharedConfigsType aClass120_1465;
-	public static SharedConfigsType aClass120_1466;
-	public static SharedConfigsType aClass120_1467;
-	static SharedConfigsType aClass120_1468;
-	public static SharedConfigsType aClass120_1469;
-	static SharedConfigsType aClass120_1470;
-	public static SharedConfigsType aClass120_1471;
-	static SharedConfigsType aClass120_1472;
-	public static SharedConfigsType aClass120_1473;
-	public static SharedConfigsType aClass120_1474;
-	public static SharedConfigsType SEQUENCES;
-	public static SharedConfigsType SPOT_ANIMS;
-	public static SharedConfigsType aClass120_1477;
-	public static SharedConfigsType aClass120_1478;
-	public static SharedConfigsType aClass120_1479;
-	static SharedConfigsType aClass120_1480;
-	static SharedConfigsType aClass120_1481;
-	public static SharedConfigsType aClass120_1482;
-	public static SharedConfigsType WORLD_MAP_DEFS;
-	static SharedConfigsType aClass120_1484;
-	static SharedConfigsType aClass120_1485;
-	static SharedConfigsType aClass120_1486;
-	public static SharedConfigsType aClass120_1487;
-	public static SharedConfigsType OBJECT_DEFINITIONS;
-	public static SharedConfigsType aClass120_1489;
-	static SharedConfigsType aClass120_1490;
-	static SharedConfigsType aClass120_1491;
-	public static SharedConfigsType INVENTORIES;
-	public static SharedConfigsType ITEM_DEFINITIONS;
-	public static SharedConfigsType aClass120_1494;
-	int fileIdBitShift;
-	public static SharedConfigsType aClass120_1496;
-	public static SharedConfigsType aClass120_1497;
-	public static SharedConfigsType aClass120_1498;
-	static SharedConfigsType aClass120_1499;
-	static SharedConfigsType aClass120_1500;
-	static SharedConfigsType aClass120_1501;
-	static SharedConfigsType aClass120_1502;
-	static SharedConfigsType aClass120_1503;
+
 	public static SharedConfigsType FLO1 = new SharedConfigsType(1);
-	static SharedConfigsType aClass120_1505;
-	static SharedConfigsType aClass120_1506;
-	static SharedConfigsType aClass120_1507;
-	static SharedConfigsType aClass120_1508;
-	public static SharedConfigsType aClass120_1509;
-	public static SharedConfigsType aClass120_1510;
-	public static SharedConfigsType RENDER_ANIMS;
-	public static SharedConfigsType HITBARS;
-	static SharedConfigsType aClass120_1513;
-	public static SharedConfigsType FLO2;
-	static SharedConfigsType aClass120_1515;
-	static SharedConfigsType aClass120_1516;
-	static SharedConfigsType aClass120_1517;
-	static SharedConfigsType aClass120_1518;
-	static SharedConfigsType aClass120_1519;
-	static SharedConfigsType aClass120_1520;
+	static SharedConfigsType aClass120_1465 = new SharedConfigsType(2);
+	public static SharedConfigsType aClass120_1466 = new SharedConfigsType(3);
+	public static SharedConfigsType FLO2 = new SharedConfigsType(4);
+	public static SharedConfigsType INVENTORIES = new SharedConfigsType(5);
+	public static SharedConfigsType OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
+	static SharedConfigsType aClass120_1470 = new SharedConfigsType(7);
+	public static SharedConfigsType aClass120_1471 = new SharedConfigsType(8, 8);
+	public static SharedConfigsType aClass120_1467 = new SharedConfigsType(9, 7);
+	public static SharedConfigsType ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
+	public static SharedConfigsType aClass120_1474 = new SharedConfigsType(11);
+	public static SharedConfigsType SEQUENCES = new SharedConfigsType(12, 7);
+	public static SharedConfigsType SPOT_ANIMS = new SharedConfigsType(13, 8);
+	public static SharedConfigsType aClass120_1477 = new SharedConfigsType(14, 10);
+	public static SharedConfigsType aClass120_1478 = new SharedConfigsType(15);
+	public static SharedConfigsType aClass120_1487 = new SharedConfigsType(16);
+	static SharedConfigsType aClass120_1480 = new SharedConfigsType(17);
+	static SharedConfigsType aClass120_1481 = new SharedConfigsType(18);
+	public static SharedConfigsType aClass120_1482 = new SharedConfigsType(19);
+	static SharedConfigsType aClass120_1472 = new SharedConfigsType(20);
+	static SharedConfigsType aClass120_1484 = new SharedConfigsType(21);
+	static SharedConfigsType aClass120_1485 = new SharedConfigsType(22);
+	static SharedConfigsType aClass120_1486 = new SharedConfigsType(23);
+	public static SharedConfigsType aClass120_1522 = new SharedConfigsType(24);
+	public static SharedConfigsType aClass120_1479 = new SharedConfigsType(25);
+	public static SharedConfigsType aClass120_1473 = new SharedConfigsType(26);
+	static SharedConfigsType aClass120_1490 = new SharedConfigsType(27);
+	static SharedConfigsType aClass120_1491 = new SharedConfigsType(28);
+	public static SharedConfigsType aClass120_1469 = new SharedConfigsType(29);
+	public static SharedConfigsType aClass120_1489 = new SharedConfigsType(30);
+	public static SharedConfigsType aClass120_1494 = new SharedConfigsType(31);
+	public static SharedConfigsType RENDER_ANIMS = new SharedConfigsType(32);
+	public static SharedConfigsType aClass120_1496 = new SharedConfigsType(33);
+	public static SharedConfigsType aClass120_1497 = new SharedConfigsType(34);
+	public static SharedConfigsType aClass120_1498 = new SharedConfigsType(35);
+	public static SharedConfigsType WORLD_MAP_DEFS = new SharedConfigsType(36);
+	static SharedConfigsType aClass120_1500 = new SharedConfigsType(37);
+	static SharedConfigsType aClass120_1501 = new SharedConfigsType(38);
+	static SharedConfigsType aClass120_1502 = new SharedConfigsType(39);
+	static SharedConfigsType aClass120_1503 = new SharedConfigsType(40);
+	static SharedConfigsType aClass120_1468 = new SharedConfigsType(41);
+	static SharedConfigsType aClass120_1505 = new SharedConfigsType(42);
+	static SharedConfigsType aClass120_1506 = new SharedConfigsType(43);
+	static SharedConfigsType aClass120_1507 = new SharedConfigsType(44);
+	static SharedConfigsType aClass120_1508 = new SharedConfigsType(45);
+	public static SharedConfigsType aClass120_1509 = new SharedConfigsType(46);
+	public static SharedConfigsType aClass120_1510 = new SharedConfigsType(47);
+	static SharedConfigsType aClass120_1518 = new SharedConfigsType(48);
+	static SharedConfigsType aClass120_1499 = new SharedConfigsType(49);
+	static SharedConfigsType aClass120_1513 = new SharedConfigsType(50);
+	static SharedConfigsType aClass120_1516 = new SharedConfigsType(51);
+	static SharedConfigsType aClass120_1515 = new SharedConfigsType(53);
+	public static SharedConfigsType aClass120_1464 = new SharedConfigsType(54);
+	static SharedConfigsType aClass120_1517 = new SharedConfigsType(70);
+	public static SharedConfigsType HITBARS = new SharedConfigsType(72);
+	static SharedConfigsType aClass120_1519 = new SharedConfigsType(73);
+	static SharedConfigsType aClass120_1520 = new SharedConfigsType(74);
 	public int id;
-	public static SharedConfigsType aClass120_1522;
+	int fileIdBitShift;
 
-	SharedConfigsType(int i) {
-		this(i, 0);
+	SharedConfigsType(int i_1) {
+		this(i_1, 0);
 	}
 
-	SharedConfigsType(int i, int i_0_) {
-		id = -982036495 * i;
-		((SharedConfigsType) this).fileIdBitShift = 1490949057 * i_0_;
+	SharedConfigsType(int i_1, int i_2) {
+		this.id = i_1;
+		this.fileIdBitShift = i_2;
 	}
 
-	public int filesPerContainer(int i) {
-		return 1 << 854326337 * ((SharedConfigsType) this).fileIdBitShift;
+	public int filesPerContainer(int i_1) {
+		return 1 << this.fileIdBitShift;
 	}
 
-	public int containerId(int i) {
-		return i >>> 854326337 * ((SharedConfigsType) this).fileIdBitShift;
+	public int containerId(int i_1) {
+		return i_1 >>> this.fileIdBitShift;
 	}
 
-	public int fileId(int i) {
-		return i & (1 << ((SharedConfigsType) this).fileIdBitShift * 854326337) - 1;
+	public int fileId(int i_1) {
+		return i_1 & (1 << this.fileIdBitShift) - 1;
 	}
 
-	public static boolean method2084(Index class317, Index class317_3_, Index class317_4_, Class282_Sub15_Sub2 class282_sub15_sub2, Class253 class253, int i) {
-		Class148.aClass317_1737 = class317;
-		Class148.aClass317_1731 = class317_3_;
-		Class148.aClass317_1732 = class317_4_;
-		Class148.aClass282_Sub15_Sub2_1735 = class282_sub15_sub2;
-		Class502.aClass253_5830 = class253;
+	public static boolean method2084(Index index_0, Index index_1, Index index_2, Class282_Sub15_Sub2 class282_sub15_sub2_3, Class253 class253_4, int i_5) {
+		Class148.aClass317_1737 = index_0;
+		Class148.aClass317_1731 = index_1;
+		Class148.aClass317_1732 = index_2;
+		Class148.aClass282_Sub15_Sub2_1735 = class282_sub15_sub2_3;
+		Class502.aClass253_5830 = class253_4;
 		Class453.anIntArray5449 = new int[16];
-		for (int i_5_ = 0; i_5_ < 16; i_5_++)
-			Class453.anIntArray5449[i_5_] = 255;
+
+		for (int i_6 = 0; i_6 < 16; i_6++) {
+			Class453.anIntArray5449[i_6] = 255;
+		}
+
 		return true;
 	}
 
-	static {
-		aClass120_1465 = new SharedConfigsType(2);
-		aClass120_1466 = new SharedConfigsType(3);
-		FLO2 = new SharedConfigsType(4);
-		INVENTORIES = new SharedConfigsType(5);
-		OBJECT_DEFINITIONS = new SharedConfigsType(6, 8);
-		aClass120_1470 = new SharedConfigsType(7);
-		aClass120_1471 = new SharedConfigsType(8, 8);
-		aClass120_1467 = new SharedConfigsType(9, 7);
-		ITEM_DEFINITIONS = new SharedConfigsType(10, 8);
-		aClass120_1474 = new SharedConfigsType(11);
-		SEQUENCES = new SharedConfigsType(12, 7);
-		SPOT_ANIMS = new SharedConfigsType(13, 8);
-		aClass120_1477 = new SharedConfigsType(14, 10);
-		aClass120_1478 = new SharedConfigsType(15);
-		aClass120_1487 = new SharedConfigsType(16);
-		aClass120_1480 = new SharedConfigsType(17);
-		aClass120_1481 = new SharedConfigsType(18);
-		aClass120_1482 = new SharedConfigsType(19);
-		aClass120_1472 = new SharedConfigsType(20);
-		aClass120_1484 = new SharedConfigsType(21);
-		aClass120_1485 = new SharedConfigsType(22);
-		aClass120_1486 = new SharedConfigsType(23);
-		aClass120_1522 = new SharedConfigsType(24);
-		aClass120_1479 = new SharedConfigsType(25);
-		aClass120_1473 = new SharedConfigsType(26);
-		aClass120_1490 = new SharedConfigsType(27);
-		aClass120_1491 = new SharedConfigsType(28);
-		aClass120_1469 = new SharedConfigsType(29);
-		aClass120_1489 = new SharedConfigsType(30);
-		aClass120_1494 = new SharedConfigsType(31);
-		RENDER_ANIMS = new SharedConfigsType(32);
-		aClass120_1496 = new SharedConfigsType(33);
-		aClass120_1497 = new SharedConfigsType(34);
-		aClass120_1498 = new SharedConfigsType(35);
-		WORLD_MAP_DEFS = new SharedConfigsType(36);
-		aClass120_1500 = new SharedConfigsType(37);
-		aClass120_1501 = new SharedConfigsType(38);
-		aClass120_1502 = new SharedConfigsType(39);
-		aClass120_1503 = new SharedConfigsType(40);
-		aClass120_1468 = new SharedConfigsType(41);
-		aClass120_1505 = new SharedConfigsType(42);
-		aClass120_1506 = new SharedConfigsType(43);
-		aClass120_1507 = new SharedConfigsType(44);
-		aClass120_1508 = new SharedConfigsType(45);
-		aClass120_1509 = new SharedConfigsType(46);
-		aClass120_1510 = new SharedConfigsType(47);
-		aClass120_1518 = new SharedConfigsType(48);
-		aClass120_1499 = new SharedConfigsType(49);
-		aClass120_1513 = new SharedConfigsType(50);
-		aClass120_1516 = new SharedConfigsType(51);
-		aClass120_1515 = new SharedConfigsType(53);
-		aClass120_1464 = new SharedConfigsType(54);
-		aClass120_1517 = new SharedConfigsType(70);
-		HITBARS = new SharedConfigsType(72);
-		aClass120_1519 = new SharedConfigsType(73);
-		aClass120_1520 = new SharedConfigsType(74);
-	}
-
-	static final void method2091(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 425673003;
-		int i_6_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_7_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
-		int i_8_ = (class527.intStack[2 + class527.intStackPtr * 1942118537]);
-		QuickchatDefinitions class282_sub50_sub9 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_6_, -1670488027);
-		if ((class282_sub50_sub9.method14918(i_7_, -1596809459).id * -1869685303) != 0) {
-			if (i >= 1)
-				return;
+	static final void method2091(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 3;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
+		QuickchatDefinitions quickchatdefinitions_5 = IndexLoaders.QUICK_CHAT_INDEX_LOADER2.getMessageDefinitions(i_2, -1670488027);
+		if (quickchatdefinitions_5.method14918(i_3, -1596809459).id != 0) {
 			throw new RuntimeException("");
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = quickchatdefinitions_5.method14901(i_3, i_4, 1954102872);
 		}
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class282_sub50_sub9.method14901(i_7_, i_8_, 1954102872);
 	}
 
-	static void method2092(CS2Executor class527, byte i) {
-		class527.intStack[class527.intStackPtr * 1942118537 - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 2]), -1396181317).anIntArrayArray2966[(class527.intStack[1942118537 * class527.intStackPtr - 1])][0]);
-		class527.intStackPtr -= 141891001;
+	static void method2092(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).anIntArrayArray2966[cs2executor_0.intStack[cs2executor_0.intStackPtr - 1]][0];
+		--cs2executor_0.intStackPtr;
 	}
 
-	static final void method2093(CS2Executor class527, byte i) {
-		int i_9_ = (class527.intOpValues[class527.instrPtr * 301123709]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = ((NPC) class527.animable).aClass153_10579.method2610(i_9_, (short) 25901);
+	static final void method2093(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = ((NPC) cs2executor_0.animable).aClass153_10579.method2610(i_2, (short) 25901);
 	}
 
-	public static void method2094(int i, byte i_10_) {
-		Class291_Sub1.anInt8018 = 428705471;
-		Class291_Sub1.anInt8026 = i * 194319891;
-		Class361.anInt4185 = 413638675;
-		Class96_Sub9.anInt9282 = -1386689828;
+	public static void method2094(int i_0, byte b_1) {
+		Class291_Sub1.anInt8018 = -1;
+		Class291_Sub1.anInt8026 = i_0;
+		Class361.anInt4185 = 3;
+		Class96_Sub9.anInt9282 = 100;
 	}
 
-	static void method2095(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
+	static void method2095(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1) {
 		if (!Class20.aBool161) {
-			class282_sub50_sub7.remove();
-			Class20.anInt169 -= 1410722043;
-			if (!((Class282_Sub50_Sub7) class282_sub50_sub7).aBool9586) {
-				long l = (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580 * 820033947929891191L);
-				Class282_Sub50_Sub15 class282_sub50_sub15;
-				for (class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass465_172.method7754(l)); (class282_sub50_sub15 != null && !(((Class282_Sub50_Sub15) class282_sub50_sub15).aString9771.equals(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588))); class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-1584347554))) {
-					/* empty */
+			class282_sub50_sub7_0.remove();
+			--Class20.anInt169;
+			if (!class282_sub50_sub7_0.aBool9586) {
+				long long_2 = class282_sub50_sub7_0.aLong9580;
+
+				Class282_Sub50_Sub15 class282_sub50_sub15_4;
+				for (class282_sub50_sub15_4 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7754(long_2); class282_sub50_sub15_4 != null && !class282_sub50_sub15_4.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_4 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-1584347554)) {
+					;
 				}
-				if (null != class282_sub50_sub15 && class282_sub50_sub15.method15249(class282_sub50_sub7, (byte) 17))
-					Class13.method503(class282_sub50_sub15, 1715883578);
+
+				if (class282_sub50_sub15_4 != null && class282_sub50_sub15_4.method15249(class282_sub50_sub7_0, (byte) 17)) {
+					Class13.method503(class282_sub50_sub15_4, 1715883578);
+				}
 			} else {
-				for (Class282_Sub50_Sub15 class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4)); class282_sub50_sub15 != null; class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7955(194809254))) {
-					if (((Class282_Sub50_Sub15) class282_sub50_sub15).aString9771.equals(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588)) {
-						boolean bool = false;
-						for (Class282_Sub50_Sub7 class282_sub50_sub7_11_ = ((Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7941((byte) 4)); null != class282_sub50_sub7_11_; class282_sub50_sub7_11_ = ((Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7955(444396099))) {
-							if (class282_sub50_sub7_11_ == class282_sub50_sub7) {
-								if (class282_sub50_sub15.method15249(class282_sub50_sub7, (byte) 111))
-									Class13.method503(class282_sub50_sub15, 1035797942);
-								bool = true;
+				for (Class282_Sub50_Sub15 class282_sub50_sub15_5 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_5 != null; class282_sub50_sub15_5 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(194809254)) {
+					if (class282_sub50_sub15_5.aString9771.equals(class282_sub50_sub7_0.aString9588)) {
+						boolean bool_3 = false;
+
+						for (Class282_Sub50_Sub7 class282_sub50_sub7_6 = (Class282_Sub50_Sub7) class282_sub50_sub15_5.aClass477_9770.method7941((byte) 4); class282_sub50_sub7_6 != null; class282_sub50_sub7_6 = (Class282_Sub50_Sub7) class282_sub50_sub15_5.aClass477_9770.method7955(444396099)) {
+							if (class282_sub50_sub7_6 == class282_sub50_sub7_0) {
+								if (class282_sub50_sub15_5.method15249(class282_sub50_sub7_0, (byte) 111)) {
+									Class13.method503(class282_sub50_sub15_5, 1035797942);
+								}
+
+								bool_3 = true;
 								break;
 							}
 						}
-						if (bool)
+
+						if (bool_3) {
 							break;
+						}
 					}
 				}
 			}
 		}
+
 	}
 
-	static final void method2096(CS2Executor class527, byte i) {
-		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (2 == client.anInt7434 * 1609086245 && i_12_ < client.anInt7449 * 493536965) {
-			Class6 class6 = client.aClass6Array7452[i_12_];
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = class6.aString37;
-			if (class6.aString43 != null)
-				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = class6.aString43;
-			else
-				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
+	static final void method2096(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
+			Class6 class6_3 = client.aClass6Array7452[i_2];
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class6_3.aString37;
+			if (class6_3.aString43 != null) {
+				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = class6_3.aString43;
+			} else {
+				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			}
 		} else {
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
 		}
+
 	}
+
 }

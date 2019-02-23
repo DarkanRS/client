@@ -1,185 +1,239 @@
-/* Class44 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class44 implements Interface46 {
-	int[] anIntArray421 = { -1, -1, -1, -1, -1 };
-	public static int[] anIntArray422;
+
+	Class31 aClass31_429;
+	static int anInt430;
+	static int anInt431;
+	public static int[] anIntArray428 = new int[] { 0, 1, 2, 3, 4, 5, 6, 14 };
+	public static int[] anIntArray422 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
+	int[] anIntArray427;
 	short[] aShortArray423;
 	short[] aShortArray424;
 	short[] aShortArray425;
 	short[] aShortArray426;
-	int[] anIntArray427;
-	public static int[] anIntArray428 = { 0, 1, 2, 3, 4, 5, 6, 14 };
-	Class31 aClass31_429;
-	static int anInt430;
-	static int anInt431;
+	int[] anIntArray421 = new int[] { -1, -1, -1, -1, -1 };
 
-	public RSMesh method895(int i) {
-		RSMesh[] class157s = new RSMesh[5];
-		int i_0_ = 0;
-		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
-			for (int i_1_ = 0; i_1_ < 5; i_1_++) {
-				if (((Class44) this).anIntArray421[i_1_] != -1)
-					class157s[i_0_++] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray421[i_1_]), 0);
-			}
-		}
-		for (int i_2_ = 0; i_2_ < 5; i_2_++) {
-			if (null != class157s[i_2_] && class157s[i_2_].zoom < 13)
-				class157s[i_2_].upscale(2);
-		}
-		RSMesh class157 = new RSMesh(class157s, i_0_);
-		if (((Class44) this).aShortArray423 != null) {
-			for (int i_3_ = 0; i_3_ < ((Class44) this).aShortArray423.length; i_3_++)
-				class157.recolor(((Class44) this).aShortArray423[i_3_], ((Class44) this).aShortArray424[i_3_]);
-		}
-		if (((Class44) this).aShortArray425 != null) {
-			for (int i_4_ = 0; i_4_ < ((Class44) this).aShortArray425.length; i_4_++)
-				class157.retexture(((Class44) this).aShortArray425[i_4_], ((Class44) this).aShortArray426[i_4_]);
-		}
-		return class157;
-	}
+	public RSMesh method895(int i_1) {
+		RSMesh[] arr_2 = new RSMesh[5];
+		int i_3 = 0;
+		Index index_4 = this.aClass31_429.aClass317_359;
+		int i_5;
+		synchronized (this.aClass31_429.aClass317_359) {
+			i_5 = 0;
 
-	void method897(RsByteBuffer class282_sub35, int i, int i_5_) {
-		if (1 == i)
-			class282_sub35.readUnsignedByte();
-		else if (2 == i) {
-			int i_6_ = class282_sub35.readUnsignedByte();
-			((Class44) this).anIntArray427 = new int[i_6_];
-			for (int i_7_ = 0; i_7_ < i_6_; i_7_++)
-				((Class44) this).anIntArray427[i_7_] = class282_sub35.readBigSmart();
-		} else if (i != 3) {
-			if (i == 40) {
-				int i_8_ = class282_sub35.readUnsignedByte();
-				((Class44) this).aShortArray423 = new short[i_8_];
-				((Class44) this).aShortArray424 = new short[i_8_];
-				for (int i_9_ = 0; i_9_ < i_8_; i_9_++) {
-					((Class44) this).aShortArray423[i_9_] = (short) class282_sub35.readUnsignedShort();
-					((Class44) this).aShortArray424[i_9_] = (short) class282_sub35.readUnsignedShort();
+			while (true) {
+				if (i_5 >= 5) {
+					break;
 				}
-			} else if (41 == i) {
-				int i_10_ = class282_sub35.readUnsignedByte();
-				((Class44) this).aShortArray425 = new short[i_10_];
-				((Class44) this).aShortArray426 = new short[i_10_];
-				for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
-					((Class44) this).aShortArray425[i_11_] = (short) class282_sub35.readUnsignedShort();
-					((Class44) this).aShortArray426[i_11_] = (short) class282_sub35.readUnsignedShort();
+
+				if (this.anIntArray421[i_5] != -1) {
+					arr_2[i_3++] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.anIntArray421[i_5], 0);
 				}
-			} else if (i >= 60 && i < 70)
-				((Class44) this).anIntArray421[i - 60] = class282_sub35.readBigSmart();
-		}
-	}
 
-	public boolean method898(int i) {
-		if (((Class44) this).anIntArray427 == null)
-			return true;
-		boolean bool = true;
-		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
-			for (int i_12_ = 0; i_12_ < ((Class44) this).anIntArray427.length; i_12_++) {
-				if (!((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray427[i_12_], 0))
-					bool = false;
+				++i_5;
 			}
 		}
-		return bool;
-	}
 
-	public RSMesh method899(int i) {
-		if (null == ((Class44) this).anIntArray427)
-			return null;
-		RSMesh[] class157s = new RSMesh[((Class44) this).anIntArray427.length];
-		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
-			for (int i_13_ = 0; i_13_ < ((Class44) this).anIntArray427.length; i_13_++)
-				class157s[i_13_] = RSMesh.decodeMesh((((Class31) ((Class44) this).aClass31_429).aClass317_359), (((Class44) this).anIntArray427[i_13_]), 0);
-		}
-		for (int i_14_ = 0; i_14_ < ((Class44) this).anIntArray427.length; i_14_++) {
-			if (class157s[i_14_].zoom < 13)
-				class157s[i_14_].upscale(2);
-		}
-		RSMesh class157;
-		if (class157s.length == 1)
-			class157 = class157s[0];
-		else
-			class157 = new RSMesh(class157s, class157s.length);
-		if (null == class157)
-			return null;
-		if (null != ((Class44) this).aShortArray423) {
-			for (int i_15_ = 0; i_15_ < ((Class44) this).aShortArray423.length; i_15_++)
-				class157.recolor(((Class44) this).aShortArray423[i_15_], ((Class44) this).aShortArray424[i_15_]);
-		}
-		if (((Class44) this).aShortArray425 != null) {
-			for (int i_16_ = 0; i_16_ < ((Class44) this).aShortArray425.length; i_16_++)
-				class157.retexture(((Class44) this).aShortArray425[i_16_], ((Class44) this).aShortArray426[i_16_]);
-		}
-		return class157;
-	}
-
-	public boolean method900(int i) {
-		boolean bool = true;
-		synchronized (((Class31) ((Class44) this).aClass31_429).aClass317_359) {
-			for (int i_17_ = 0; i_17_ < 5; i_17_++) {
-				if (((Class44) this).anIntArray421[i_17_] != -1 && !(((Class31) ((Class44) this).aClass31_429).aClass317_359.load(((Class44) this).anIntArray421[i_17_], 0)))
-					bool = false;
+		for (int i_6 = 0; i_6 < 5; i_6++) {
+			if (arr_2[i_6] != null && arr_2[i_6].zoom < 13) {
+				arr_2[i_6].upscale(2);
 			}
 		}
-		return bool;
-	}
 
-	static {
-		anIntArray422 = new int[] { 7, 8, 9, 10, 11, 12, 13, 15 };
-	}
-
-	Class44() {
-		/* empty */
-	}
-
-	void method909(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_32_ = class282_sub35.readUnsignedByte();
-			if (i_32_ == 0)
-				break;
-			method897(class282_sub35, i_32_, -2093049019);
+		RSMesh rsmesh_8 = new RSMesh(arr_2, i_3);
+		if (this.aShortArray423 != null) {
+			for (i_5 = 0; i_5 < this.aShortArray423.length; i_5++) {
+				rsmesh_8.recolor(this.aShortArray423[i_5], this.aShortArray424[i_5]);
+			}
 		}
+
+		if (this.aShortArray425 != null) {
+			for (i_5 = 0; i_5 < this.aShortArray425.length; i_5++) {
+				rsmesh_8.retexture(this.aShortArray425[i_5], this.aShortArray426[i_5]);
+			}
+		}
+
+		return rsmesh_8;
 	}
 
-	static final void method910(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, 513538858) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.params = Class351.method6193(string, class527, 240682174);
-		class118.aBool1384 = true;
-	}
-
-	static final void method911(CS2Executor class527, int i) {
-		int i_33_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_33_, 1594974983);
-		int i_34_;
-		if (class425.aBool5101)
-			i_34_ = class425.anInt5102 * 712312847;
-		else if (class425.members)
-			i_34_ = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880 * -1519092215;
-		else
-			i_34_ = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881 * 725268415;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_34_;
-	}
-
-	static int method912(int i, int i_35_) {
-		if (16711935 == i)
-			return -1;
-		return Class5.method294(i, (byte) -81);
-	}
-
-	public static void method913(Interface class98, IComponentDefinitions class118, byte i) {
-		IComponentDefinitions class118_36_ = Class96_Sub23.method14682(class98, class118, -838454718);
-		int i_37_;
-		int i_38_;
-		if (class118_36_ == null) {
-			i_37_ = Class349.anInt4083 * -418109423;
-			i_38_ = client.anInt3243 * -969250379;
+	void method897(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+		if (i_2 == 1) {
+			rsbytebuffer_1.readUnsignedByte();
 		} else {
-			i_37_ = 1506818197 * class118_36_.anInt1301;
-			i_38_ = -492594917 * class118_36_.anInt1429;
+			int i_4;
+			int i_5;
+			if (i_2 == 2) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.anIntArray427 = new int[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.anIntArray427[i_5] = rsbytebuffer_1.readBigSmart();
+				}
+			} else if (i_2 != 3) {
+				if (i_2 == 40) {
+					i_4 = rsbytebuffer_1.readUnsignedByte();
+					this.aShortArray423 = new short[i_4];
+					this.aShortArray424 = new short[i_4];
+
+					for (i_5 = 0; i_5 < i_4; i_5++) {
+						this.aShortArray423[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+						this.aShortArray424[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+					}
+				} else if (i_2 == 41) {
+					i_4 = rsbytebuffer_1.readUnsignedByte();
+					this.aShortArray425 = new short[i_4];
+					this.aShortArray426 = new short[i_4];
+
+					for (i_5 = 0; i_5 < i_4; i_5++) {
+						this.aShortArray425[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+						this.aShortArray426[i_5] = (short) rsbytebuffer_1.readUnsignedShort();
+					}
+				} else if (i_2 >= 60 && i_2 < 70) {
+					this.anIntArray421[i_2 - 60] = rsbytebuffer_1.readBigSmart();
+				}
+			}
 		}
-		Class484.method8200(class118, i_37_, i_38_, false, -342639292);
-		Class246.method4204(class118, i_37_, i_38_, 354709557);
+
 	}
+
+	public boolean method898(int i_1) {
+		if (this.anIntArray427 == null) {
+			return true;
+		} else {
+			boolean bool_2 = true;
+			Index index_3 = this.aClass31_429.aClass317_359;
+			synchronized (this.aClass31_429.aClass317_359) {
+				for (int i_4 = 0; i_4 < this.anIntArray427.length; i_4++) {
+					if (!this.aClass31_429.aClass317_359.load(this.anIntArray427[i_4], 0)) {
+						bool_2 = false;
+					}
+				}
+
+				return bool_2;
+			}
+		}
+	}
+
+	public RSMesh method899(int i_1) {
+		if (this.anIntArray427 == null) {
+			return null;
+		} else {
+			RSMesh[] arr_2 = new RSMesh[this.anIntArray427.length];
+			Index index_3 = this.aClass31_429.aClass317_359;
+			int i_4;
+			synchronized (this.aClass31_429.aClass317_359) {
+				i_4 = 0;
+
+				while (true) {
+					if (i_4 >= this.anIntArray427.length) {
+						break;
+					}
+
+					arr_2[i_4] = RSMesh.decodeMesh(this.aClass31_429.aClass317_359, this.anIntArray427[i_4], 0);
+					++i_4;
+				}
+			}
+
+			for (int i_5 = 0; i_5 < this.anIntArray427.length; i_5++) {
+				if (arr_2[i_5].zoom < 13) {
+					arr_2[i_5].upscale(2);
+				}
+			}
+
+			RSMesh rsmesh_7;
+			if (arr_2.length == 1) {
+				rsmesh_7 = arr_2[0];
+			} else {
+				rsmesh_7 = new RSMesh(arr_2, arr_2.length);
+			}
+
+			if (rsmesh_7 == null) {
+				return null;
+			} else {
+				if (this.aShortArray423 != null) {
+					for (i_4 = 0; i_4 < this.aShortArray423.length; i_4++) {
+						rsmesh_7.recolor(this.aShortArray423[i_4], this.aShortArray424[i_4]);
+					}
+				}
+
+				if (this.aShortArray425 != null) {
+					for (i_4 = 0; i_4 < this.aShortArray425.length; i_4++) {
+						rsmesh_7.retexture(this.aShortArray425[i_4], this.aShortArray426[i_4]);
+					}
+				}
+
+				return rsmesh_7;
+			}
+		}
+	}
+
+	public boolean method900(int i_1) {
+		boolean bool_2 = true;
+		Index index_3 = this.aClass31_429.aClass317_359;
+		synchronized (this.aClass31_429.aClass317_359) {
+			for (int i_4 = 0; i_4 < 5; i_4++) {
+				if (this.anIntArray421[i_4] != -1 && !this.aClass31_429.aClass317_359.load(this.anIntArray421[i_4], 0)) {
+					bool_2 = false;
+				}
+			}
+
+			return bool_2;
+		}
+	}
+
+	void method909(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method897(rsbytebuffer_1, i_3, -2093049019);
+		}
+	}
+
+	static final void method910(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, 513538858) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.params = Class351.method6193(string_4, cs2executor_2, 240682174);
+		icomponentdefinitions_0.aBool1384 = true;
+	}
+
+	static final void method911(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		ItemDefinitions itemdefinitions_3 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1594974983);
+		int i_4;
+		if (itemdefinitions_3.aBool5101) {
+			i_4 = itemdefinitions_3.anInt5102;
+		} else if (itemdefinitions_3.members) {
+			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5880;
+		} else {
+			i_4 = Class149_Sub2.DEFAULTS_LOADER_7.anInt5881;
+		}
+
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_4;
+	}
+
+	static int method912(int i_0, int i_1) {
+		return i_0 == 16711935 ? -1 : Class5.method294(i_0, (byte) -81);
+	}
+
+	public static void method913(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, byte b_2) {
+		IComponentDefinitions icomponentdefinitions_3 = Class96_Sub23.method14682(interface_0, icomponentdefinitions_1, -838454718);
+		int i_4;
+		int i_5;
+		if (icomponentdefinitions_3 == null) {
+			i_4 = Class349.anInt4083;
+			i_5 = client.anInt3243 * -969250379;
+		} else {
+			i_4 = icomponentdefinitions_3.anInt1301;
+			i_5 = icomponentdefinitions_3.anInt1429;
+		}
+
+		Class484.method8200(icomponentdefinitions_1, i_4, i_5, false, -342639292);
+		Class246.method4204(icomponentdefinitions_1, i_4, i_5, 354709557);
+	}
+
 }

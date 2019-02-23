@@ -1,82 +1,39 @@
-/* Class282_Sub50_Sub18 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class InventoryDef extends CacheableNode implements Interface46 {
-	public int[] anIntArray10274;
-	public int[] anIntArray10275;
+
 	public int anInt10276 = 0;
 	public int anInt10277 = 0;
+	public int[] anIntArray10274;
+	public int[] anIntArray10275;
 
-	InventoryDef() {
-		/* empty */
-	}
+	void method15690(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
 
-	void method15690(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_0_ = class282_sub35.readUnsignedByte();
-			if (i_0_ == 0)
-				break;
-			method15691(class282_sub35, i_0_, -1602172632);
+			this.method15691(rsbytebuffer_1, i_3, -1602172632);
 		}
 	}
 
-	void method15691(RsByteBuffer class282_sub35, int i, int i_1_) {
-		if (2 == i)
-			anInt10277 = class282_sub35.readUnsignedShort() * 1760265307;
-		else if (4 == i) {
-			anInt10276 = class282_sub35.readUnsignedByte() * 1526908655;
-			anIntArray10274 = new int[anInt10276 * -1471207409];
-			anIntArray10275 = new int[-1471207409 * anInt10276];
-			for (int i_2_ = 0; i_2_ < anInt10276 * -1471207409; i_2_++) {
-				anIntArray10274[i_2_] = class282_sub35.readUnsignedShort();
-				anIntArray10275[i_2_] = class282_sub35.readUnsignedShort();
+	void method15691(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+		if (i_2 == 2) {
+			this.anInt10277 = rsbytebuffer_1.readUnsignedShort();
+		} else if (i_2 == 4) {
+			this.anInt10276 = rsbytebuffer_1.readUnsignedByte();
+			this.anIntArray10274 = new int[this.anInt10276];
+			this.anIntArray10275 = new int[this.anInt10276];
+
+			for (int i_4 = 0; i_4 < this.anInt10276; i_4++) {
+				this.anIntArray10274[i_4] = rsbytebuffer_1.readUnsignedShort();
+				this.anIntArray10275[i_4] = rsbytebuffer_1.readUnsignedShort();
 			}
 		}
+
 	}
 
-	void method15692(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (i == 0)
-				break;
-			method15691(class282_sub35, i, -1484721786);
-		}
+	static final void method15696(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class84.myPlayer.playerAppearance != null && Class84.myPlayer.playerAppearance.aBool2929 ? 1 : 0;
 	}
 
-	void method15693(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (i == 0)
-				break;
-			method15691(class282_sub35, i, -573337814);
-		}
-	}
-
-	void method15694(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (i == 0)
-				break;
-			method15691(class282_sub35, i, 1950560649);
-		}
-	}
-
-	void method15695(RsByteBuffer class282_sub35, int i) {
-		if (2 == i)
-			anInt10277 = class282_sub35.readUnsignedShort() * 1760265307;
-		else if (4 == i) {
-			anInt10276 = class282_sub35.readUnsignedByte() * 1526908655;
-			anIntArray10274 = new int[anInt10276 * -1471207409];
-			anIntArray10275 = new int[-1471207409 * anInt10276];
-			for (int i_3_ = 0; i_3_ < anInt10276 * -1471207409; i_3_++) {
-				anIntArray10274[i_3_] = class282_sub35.readUnsignedShort();
-				anIntArray10275[i_3_] = class282_sub35.readUnsignedShort();
-			}
-		}
-	}
-
-	static final void method15696(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = ((Class84.myPlayer.playerAppearance != null) && (Class84.myPlayer.playerAppearance.aBool2929)) ? 1 : 0;
-	}
 }

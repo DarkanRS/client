@@ -1,31 +1,26 @@
-/* Class388 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class388 implements Interface41 {
-	String aString4719;
-	Index aClass317_4720;
+
 	static Index INTERFACE_INDEX;
 	public static int anInt4722;
 	public static int anInt4723;
+	Index aClass317_4720;
+	String aString4719;
 
 	public Class445 method234() {
 		return Class445.aClass445_5382;
 	}
 
-	public Class445 method232(byte i) {
+	public Class445 method232(byte b_1) {
 		return Class445.aClass445_5382;
 	}
 
-	Class388(Index class317, String string) {
-		((Class388) this).aClass317_4720 = class317;
-		((Class388) this).aString4719 = string;
+	Class388(Index index_1, String string_2) {
+		this.aClass317_4720 = index_1;
+		this.aString4719 = string_2;
 	}
 
 	public int method231() {
-		if (((Class388) this).aClass317_4720.method5629(((Class388) this).aString4719, 71472045))
-			return 100;
-		return ((Class388) this).aClass317_4720.method5631(((Class388) this).aString4719, (byte) 58);
+		return this.aClass317_4720.method5629(this.aString4719, 71472045) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 58);
 	}
 
 	public Class445 method230() {
@@ -36,84 +31,84 @@ public class Class388 implements Interface41 {
 		return Class445.aClass445_5382;
 	}
 
-	public int getCompletion(int i) {
-		if (((Class388) this).aClass317_4720.method5629(((Class388) this).aString4719, 71472045))
-			return 100;
-		return ((Class388) this).aClass317_4720.method5631(((Class388) this).aString4719, (byte) 25);
+	public int getCompletion(int i_1) {
+		return this.aClass317_4720.method5629(this.aString4719, 71472045) ? 100 : this.aClass317_4720.method5631(this.aString4719, (byte) 25);
 	}
 
 	public Class445 method235() {
 		return Class445.aClass445_5382;
 	}
 
-	static final void method6687(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class521_Sub1_Sub4.method14892(class118, class98, class527, (byte) 121);
+	static final void method6687(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class521_Sub1_Sub4.method14892(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 121);
 	}
 
-	static final void method6688(CS2Executor class527, byte i) {
-		UnderlayDefinition class513;
-		if (class527.aBool7022) {
-			if (i != 63)
-				return;
-			class513 = class527.aClass513_6994;
-		} else
-			class513 = class527.aClass513_7007;
-		UnderlayDefinition class513_0_ = class513;
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513_0_).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513_0_).aClass98_5885;
-		ClipMap.method6010(class118, class98, class527, -1956215078);
+	static final void method6688(CS2Executor cs2executor_0, byte b_1) {
+		UnderlayDefinition underlaydefinition_2;
+		if (cs2executor_0.aBool7022) {
+			underlaydefinition_2 = cs2executor_0.aClass513_6994;
+		} else {
+			underlaydefinition_2 = cs2executor_0.aClass513_7007;
+		}
+
+		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
+		Interface interface_5 = underlaydefinition_2.aClass98_5885;
+		ClipMap.method6010(icomponentdefinitions_4, interface_5, cs2executor_0, -1956215078);
 	}
 
-	static final void method6689(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int[] is = Class96_Sub14.method14642(string, class527, 1724948075);
-		if (is != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1397 = Class351.method6193(string, class527, 116060778);
-		class118.anIntArray1401 = is;
-		class118.aBool1384 = true;
+	static final void method6689(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		int[] ints_5 = Class96_Sub14.method14642(string_4, cs2executor_2, 1724948075);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1397 = Class351.method6193(string_4, cs2executor_2, 116060778);
+		icomponentdefinitions_0.anIntArray1401 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method6690(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, 41262162) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1361 = Class351.method6193(string, class527, -295691698);
-		class118.aBool1384 = true;
+	static final void method6690(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, 41262162) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1361 = Class351.method6193(string_4, cs2executor_2, -295691698);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method6691(CS2Executor class527, int i) {
-		boolean bool = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) != 0);
-		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = Class202.method3342((long) i_1_, 0, bool, Class223.CURRENT_LANGUAGE, (byte) -28);
+	static final void method6691(CS2Executor cs2executor_0, int i_1) {
+		boolean bool_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] != 0;
+		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = Class202.method3342((long) i_3, 0, bool_2, Class223.CURRENT_LANGUAGE, (byte) -28);
 	}
 
-	static void method6692(int i) {
-		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
-		class282_sub23.buffer.writeByte(Class158.method2730((short) -245));
-		class282_sub23.buffer.writeShort(-418109423 * Class349.anInt4083, 1417031095);
-		class282_sub23.buffer.writeShort(client.anInt3243 * -969250379, 1417031095);
-		class282_sub23.buffer.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-965992195));
-		client.aClass184_7475.method3049(class282_sub23, 664640946);
+	static void method6692(int i_0) {
+		TCPMessage tcpmessage_1 = Class271.method4828(OutgoingPacket.aClass379_4627, client.aClass184_7475.isaac, 1965593342);
+		tcpmessage_1.buffer.writeByte(Class158.method2730((short) -245));
+		tcpmessage_1.buffer.writeShort(Class349.anInt4083, 1417031095);
+		tcpmessage_1.buffer.writeShort(client.anInt3243 * -969250379, 1417031095);
+		tcpmessage_1.buffer.writeByte(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223.method12641(-965992195));
+		client.aClass184_7475.method3049(tcpmessage_1, 664640946);
 	}
 
-	static boolean method6693(int i) {
-		if (-1741204137 * client.anInt7166 != 5)
-			return false;
-		if (JS5CacheFile.method3360((byte) 103) || Class85.method1466(-611019435))
-			return false;
-		return true;
+	static boolean method6693(int i_0) {
+		return client.anInt7166 != 5 ? false : !JS5CacheFile.method3360((byte) 103) && !Class85.method1466(-611019435);
 	}
 
-	static void method6694(Class200 class200, int i, int i_2_, int i_3_, MeshRasterizer class528, int i_4_) {
-		if (null != class528)
-			class200.method3253(i, i_2_, i_3_, class528.N(), class528.RA(), class528.ya(), class528.YA(), class528.o(), class528.AA(), class528.ha());
+	static void method6694(Class200 class200_0, int i_1, int i_2, int i_3, MeshRasterizer meshrasterizer_4, int i_5) {
+		if (meshrasterizer_4 != null) {
+			class200_0.method3253(i_1, i_2, i_3, meshrasterizer_4.N(), meshrasterizer_4.RA(), meshrasterizer_4.ya(), meshrasterizer_4.YA(), meshrasterizer_4.o(), meshrasterizer_4.AA(), meshrasterizer_4.ha());
+		}
+
 	}
 
-	static final void method6695(CS2Executor class527, int i) {
+	static final void method6695(CS2Executor cs2executor_0, int i_1) {
 		Class101.method1774((byte) -107);
 	}
+
 }

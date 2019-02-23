@@ -1,145 +1,151 @@
-/* Class385 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Vector3 {
-	static int anInt4668;
+
 	static Vector3[] aClass385Array4669;
-	static int anInt4670;
+	static int anInt4668;
 	public float x;
 	public float y;
 	public float z;
-
-	public static Vector3 method6623(Vector3 class385) {
-		synchronized (aClass385Array4669) {
-			if (anInt4668 == 0) {
-				Vector3 class385_3_ = new Vector3(class385);
-				return class385_3_;
-			}
-			aClass385Array4669[--anInt4668].copy(class385);
-			Vector3 class385_4_ = aClass385Array4669[anInt4668];
-			return class385_4_;
-		}
-	}
-
-	public void method6624() {
-		synchronized (aClass385Array4669) {
-			if (anInt4668 < anInt4670 - 1)
-				aClass385Array4669[anInt4668++] = this;
-		}
-	}
-
-	public Vector3() {
-		/* empty */
-	}
-
-	Vector3(Vector3 class385_7_) {
-		x = class385_7_.x;
-		y = class385_7_.y;
-		z = class385_7_.z;
-	}
-
-	public void set(float f, float f_8_, float f_9_) {
-		x = f;
-		y = f_8_;
-		z = f_9_;
-	}
-
-	public void copy(Vector3 class385_10_) {
-		set(class385_10_.x, class385_10_.y, class385_10_.z);
-	}
-
-	final void negate() {
-		x = -x;
-		y = -y;
-		z = -z;
-	}
-
-	public final void subtract(float f, float f_14_, float f_15_) {
-		x -= f;
-		y -= f_14_;
-		z -= f_15_;
-	}
-
-	public static final Vector3 method6632(Vector3 class385, Vector3 class385_16_) {
-		Vector3 class385_17_ = method6623(class385);
-		class385_17_.subtract(class385_16_);
-		return class385_17_;
-	}
-
-	public final float magnitude() {
-		return (float) Math.sqrt((double) (x * x + y * y + z * z));
-	}
-
-	final void method6634(Quaternion class381) {
-		Quaternion class381_18_ = Quaternion.method6485(x, y, z, 0.0F);
-		Quaternion class381_19_ = Quaternion.method6465(class381);
-		Quaternion class381_20_ = Quaternion.method6497(class381_19_, class381_18_);
-		class381_20_.multiply(class381);
-		set(((Quaternion) class381_20_).i, ((Quaternion) class381_20_).j, ((Quaternion) class381_20_).k);
-		class381_18_.cache();
-		class381_19_.cache();
-		class381_20_.cache();
-	}
-
-	final void add(Vector3 class385_23_) {
-		x += class385_23_.x;
-		y += class385_23_.y;
-		z += class385_23_.z;
-	}
-
-	public String toString() {
-		return new StringBuilder().append(x).append(", ").append(y).append(", ").append(z).toString();
-	}
-
-	public static Vector3 method6639(float f, float f_24_, float f_25_) {
-		synchronized (aClass385Array4669) {
-			if (anInt4668 == 0) {
-				Vector3 class385 = new Vector3(f, f_24_, f_25_);
-				return class385;
-			}
-			aClass385Array4669[--anInt4668].set(f, f_24_, f_25_);
-			Vector3 class385 = aClass385Array4669[anInt4668];
-			return class385;
-		}
-	}
-
-	public static void method6643(int i) {
-		anInt4670 = i;
-		aClass385Array4669 = new Vector3[i];
-		anInt4668 = 0;
-	}
-
-	public final void method6649(Matrix44Var class294) {
-		float f = x;
-		float f_37_ = y;
-		x = (((Matrix44Var) class294).aFloat3519 * f + ((Matrix44Var) class294).aFloat3517 * f_37_ + ((Matrix44Var) class294).aFloat3520 * z);
-		y = (((Matrix44Var) class294).aFloat3514 * f + ((Matrix44Var) class294).aFloat3523 * f_37_ + ((Matrix44Var) class294).aFloat3513 * z);
-		z = (((Matrix44Var) class294).aFloat3516 * f + ((Matrix44Var) class294).aFloat3522 * f_37_ + ((Matrix44Var) class294).aFloat3521 * z);
-	}
-
-	public final void method6651(Matrix44Var class294) {
-		float f = x;
-		float f_39_ = y;
-		x = (((Matrix44Var) class294).aFloat3519 * f + ((Matrix44Var) class294).aFloat3517 * f_39_ + ((Matrix44Var) class294).aFloat3520 * z + ((Matrix44Var) class294).aFloat3515);
-		y = (((Matrix44Var) class294).aFloat3514 * f + ((Matrix44Var) class294).aFloat3523 * f_39_ + ((Matrix44Var) class294).aFloat3513 * z + ((Matrix44Var) class294).aFloat3524);
-		z = (((Matrix44Var) class294).aFloat3516 * f + ((Matrix44Var) class294).aFloat3522 * f_39_ + ((Matrix44Var) class294).aFloat3521 * z + ((Matrix44Var) class294).aFloat3525);
-	}
-
-	public Vector3(float f, float f_41_, float f_42_) {
-		x = f;
-		y = f_41_;
-		z = f_42_;
-	}
+	static int anInt4670;
 
 	static {
 		new Vector3(0.0F, 0.0F, 0.0F);
 		aClass385Array4669 = new Vector3[0];
 	}
 
-	final void subtract(Vector3 class385_65_) {
-		x -= class385_65_.x;
-		y -= class385_65_.y;
-		z -= class385_65_.z;
+	public static Vector3 method6623(Vector3 vector3_0) {
+		Vector3[] arr_1 = aClass385Array4669;
+		synchronized (aClass385Array4669) {
+			Vector3 vector3_2;
+			if (anInt4668 == 0) {
+				vector3_2 = new Vector3(vector3_0);
+				return vector3_2;
+			} else {
+				aClass385Array4669[--anInt4668].copy(vector3_0);
+				vector3_2 = aClass385Array4669[anInt4668];
+				return vector3_2;
+			}
+		}
 	}
+
+	public void method6624() {
+		Vector3[] arr_1 = aClass385Array4669;
+		synchronized (aClass385Array4669) {
+			if (anInt4668 < anInt4670 - 1) {
+				aClass385Array4669[anInt4668++] = this;
+			}
+
+		}
+	}
+
+	public Vector3() {
+	}
+
+	Vector3(Vector3 vector3_1) {
+		this.x = vector3_1.x;
+		this.y = vector3_1.y;
+		this.z = vector3_1.z;
+	}
+
+	public void set(float f_1, float f_2, float f_3) {
+		this.x = f_1;
+		this.y = f_2;
+		this.z = f_3;
+	}
+
+	public void copy(Vector3 vector3_1) {
+		this.set(vector3_1.x, vector3_1.y, vector3_1.z);
+	}
+
+	final void negate() {
+		this.x = -this.x;
+		this.y = -this.y;
+		this.z = -this.z;
+	}
+
+	public final void subtract(float f_1, float f_2, float f_3) {
+		this.x -= f_1;
+		this.y -= f_2;
+		this.z -= f_3;
+	}
+
+	public static final Vector3 method6632(Vector3 vector3_0, Vector3 vector3_1) {
+		Vector3 vector3_2 = method6623(vector3_0);
+		vector3_2.subtract(vector3_1);
+		return vector3_2;
+	}
+
+	public final float magnitude() {
+		return (float) Math.sqrt((double) (this.x * this.x + this.y * this.y + this.z * this.z));
+	}
+
+	final void method6634(Quaternion quaternion_1) {
+		Quaternion quaternion_2 = Quaternion.method6485(this.x, this.y, this.z, 0.0F);
+		Quaternion quaternion_3 = Quaternion.method6465(quaternion_1);
+		Quaternion quaternion_4 = Quaternion.method6497(quaternion_3, quaternion_2);
+		quaternion_4.multiply(quaternion_1);
+		this.set(quaternion_4.i, quaternion_4.j, quaternion_4.k);
+		quaternion_2.cache();
+		quaternion_3.cache();
+		quaternion_4.cache();
+	}
+
+	final void add(Vector3 vector3_1) {
+		this.x += vector3_1.x;
+		this.y += vector3_1.y;
+		this.z += vector3_1.z;
+	}
+
+	public String toString() {
+		return this.x + ", " + this.y + ", " + this.z;
+	}
+
+	public static Vector3 method6639(float f_0, float f_1, float f_2) {
+		Vector3[] arr_3 = aClass385Array4669;
+		synchronized (aClass385Array4669) {
+			Vector3 vector3_4;
+			if (anInt4668 == 0) {
+				vector3_4 = new Vector3(f_0, f_1, f_2);
+				return vector3_4;
+			} else {
+				aClass385Array4669[--anInt4668].set(f_0, f_1, f_2);
+				vector3_4 = aClass385Array4669[anInt4668];
+				return vector3_4;
+			}
+		}
+	}
+
+	public static void method6643(int i_0) {
+		anInt4670 = i_0;
+		aClass385Array4669 = new Vector3[i_0];
+		anInt4668 = 0;
+	}
+
+	public final void method6649(Matrix44Var matrix44var_1) {
+		float f_2 = this.x;
+		float f_3 = this.y;
+		this.x = matrix44var_1.aFloat3519 * f_2 + matrix44var_1.aFloat3517 * f_3 + matrix44var_1.aFloat3520 * this.z;
+		this.y = matrix44var_1.aFloat3514 * f_2 + matrix44var_1.aFloat3523 * f_3 + matrix44var_1.aFloat3513 * this.z;
+		this.z = matrix44var_1.aFloat3516 * f_2 + matrix44var_1.aFloat3522 * f_3 + matrix44var_1.aFloat3521 * this.z;
+	}
+
+	public final void method6651(Matrix44Var matrix44var_1) {
+		float f_2 = this.x;
+		float f_3 = this.y;
+		this.x = matrix44var_1.aFloat3519 * f_2 + matrix44var_1.aFloat3517 * f_3 + matrix44var_1.aFloat3520 * this.z + matrix44var_1.aFloat3515;
+		this.y = matrix44var_1.aFloat3514 * f_2 + matrix44var_1.aFloat3523 * f_3 + matrix44var_1.aFloat3513 * this.z + matrix44var_1.aFloat3524;
+		this.z = matrix44var_1.aFloat3516 * f_2 + matrix44var_1.aFloat3522 * f_3 + matrix44var_1.aFloat3521 * this.z + matrix44var_1.aFloat3525;
+	}
+
+	public Vector3(float f_1, float f_2, float f_3) {
+		this.x = f_1;
+		this.y = f_2;
+		this.z = f_3;
+	}
+
+	final void subtract(Vector3 vector3_1) {
+		this.x -= vector3_1.x;
+		this.y -= vector3_1.y;
+		this.z -= vector3_1.z;
+	}
+
 }

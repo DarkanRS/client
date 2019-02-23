@@ -1,68 +1,78 @@
-
-/* Class396 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.io.File;
 
 public class Class396 {
-	public static String OS_ARCHITECTURE;
+
 	public static String OS_NAME;
-	
+	public static String OS_ARCHITECTURE;
+
 	static {
-		String string = "Unknown";
+		String str_0 = "Unknown";
+
 		try {
-			string = System.getProperty("java.vendor").toLowerCase();
-		} catch (Exception exception) {
-			/* empty */
+			str_0 = System.getProperty("java.vendor").toLowerCase();
+		} catch (Exception exception_7) {
+			;
 		}
-		string.toLowerCase();
-		string = "Unknown";
+
+		str_0.toLowerCase();
+		str_0 = "Unknown";
+
 		try {
-			string = System.getProperty("java.version").toLowerCase();
-		} catch (Exception exception) {
-			/* empty */
+			str_0 = System.getProperty("java.version").toLowerCase();
+		} catch (Exception exception_6) {
+			;
 		}
-		string.toLowerCase();
-		string = "Unknown";
+
+		str_0.toLowerCase();
+		str_0 = "Unknown";
+
 		try {
-			string = System.getProperty("os.name").toLowerCase();
-		} catch (Exception exception) {
-			/* empty */
+			str_0 = System.getProperty("os.name").toLowerCase();
+		} catch (Exception exception_5) {
+			;
 		}
-		OS_NAME = string.toLowerCase();
-		string = "Unknown";
+
+		OS_NAME = str_0.toLowerCase();
+		str_0 = "Unknown";
+
 		try {
-			string = System.getProperty("os.arch").toLowerCase();
-		} catch (Exception exception) {
-			/* empty */
+			str_0 = System.getProperty("os.arch").toLowerCase();
+		} catch (Exception exception_4) {
+			;
 		}
-		OS_ARCHITECTURE = string.toLowerCase();
-		string = "Unknown";
+
+		OS_ARCHITECTURE = str_0.toLowerCase();
+		str_0 = "Unknown";
+
 		try {
-			string = System.getProperty("os.version").toLowerCase();
-		} catch (Exception exception) {
-			/* empty */
+			str_0 = System.getProperty("os.version").toLowerCase();
+		} catch (Exception exception_3) {
+			;
 		}
-		string.toLowerCase();
-		string = "~/";
+
+		str_0.toLowerCase();
+		str_0 = "~/";
+
 		try {
-			string = System.getProperty("user.home").toLowerCase();
-		} catch (Exception exception) {
-			/* empty */
+			str_0 = System.getProperty("user.home").toLowerCase();
+		} catch (Exception exception_2) {
+			;
 		}
-		new File(string);
+
+		new File(str_0);
 	}
 
 	Class396() throws Throwable {
 		throw new Error();
 	}
 
-	static final void method6773(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub15_8203.method12739(-118386335);
+	static final void method6773(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub15_8203.method12739(-118386335);
 	}
 
-	public static void method6774(int i, byte i_0_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(11, (long) i);
-		class282_sub50_sub12.method14965((byte) 58);
+	public static void method6774(int i_0, byte b_1) {
+		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(11, (long) i_0);
+		class282_sub50_sub12_2.method14965((byte) 58);
 	}
+
 }

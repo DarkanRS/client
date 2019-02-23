@@ -1,61 +1,66 @@
-/* Class213 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class213 {
+
 	public String aString2679;
 	public int anInt2680;
 
-	Class213() {
-		/* empty */
-	}
-
-	public static void method3661(int i, String string, int i_0_, byte i_1_) {
-		CS2Script class282_sub50_sub5 = Class225_Sub1.method12792(Class397.aClass397_4792, i, -1, 856735933);
-		if (null != class282_sub50_sub5) {
-			CS2Executor class527 = Class125.getNextScriptExecutor(2125481004);
-			class527.intLocals = new int[class282_sub50_sub5.intLocalsCount * 693687803];
-			class527.objectLocals = new String[1886892247 * class282_sub50_sub5.stringLocalsCount];
-			class527.objectLocals[0] = string;
-			class527.intLocals[0] = i_0_;
-			Class51.method1068(class282_sub50_sub5, 200000, class527, -625116466);
+	public static void method3661(int i_0, String string_1, int i_2, byte b_3) {
+		CS2Script cs2script_4 = Class225_Sub1.method12792(Class397.aClass397_4792, i_0, -1, 856735933);
+		if (cs2script_4 != null) {
+			CS2Executor cs2executor_5 = Class125.getNextScriptExecutor(2125481004);
+			cs2executor_5.intLocals = new int[cs2script_4.intLocalsCount];
+			cs2executor_5.objectLocals = new String[cs2script_4.stringLocalsCount];
+			cs2executor_5.objectLocals[0] = string_1;
+			cs2executor_5.intLocals[0] = i_2;
+			Class51.method1068(cs2script_4, 200000, cs2executor_5, -625116466);
 		}
+
 	}
 
-	public static void method3662(AnimationDefinitions class518, int i, Class521_Sub1 class521_sub1, short i_2_) {
-		if (Class260.anInt3219 * -458827259 < 50 && (class518 != null && class518.anIntArrayArray5913 != null && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i]) && (class521_sub1.plane == Class84.myPlayer.plane)) {
-			int i_3_ = class518.anIntArrayArray5913[i][0];
-			int i_4_ = i_3_ >> 8;
-			int i_5_ = i_3_ >> 5 & 0x7;
-			int i_6_ = i_3_ & 0x1f;
-			if (class518.anIntArrayArray5913[i].length > 1) {
-				int i_7_ = (int) (Math.random() * (double) (class518.anIntArrayArray5913[i]).length);
-				if (i_7_ > 0)
-					i_4_ = class518.anIntArrayArray5913[i][i_7_];
+	public static void method3662(AnimationDefinitions animationdefinitions_0, int i_1, Class521_Sub1 class521_sub1_2, short s_3) {
+		if (Class260.anInt3219 < 50 && animationdefinitions_0 != null && animationdefinitions_0.anIntArrayArray5913 != null && i_1 < animationdefinitions_0.anIntArrayArray5913.length && animationdefinitions_0.anIntArrayArray5913[i_1] != null && class521_sub1_2.plane == Class84.myPlayer.plane) {
+			int i_4 = animationdefinitions_0.anIntArrayArray5913[i_1][0];
+			int i_5 = i_4 >> 8;
+			int i_6 = i_4 >> 5 & 0x7;
+			int i_7 = i_4 & 0x1f;
+			int i_8;
+			if (animationdefinitions_0.anIntArrayArray5913[i_1].length > 1) {
+				i_8 = (int) (Math.random() * (double) animationdefinitions_0.anIntArrayArray5913[i_1].length);
+				if (i_8 > 0) {
+					i_5 = animationdefinitions_0.anIntArrayArray5913[i_1][i_8];
+				}
 			}
-			int i_8_ = 256;
-			if (null != class518.anIntArray5927 && null != class518.anIntArray5919)
-				i_8_ = ((int) (Math.random() * (double) (class518.anIntArray5919[i] - class518.anIntArray5927[i])) + class518.anIntArray5927[i]);
-			int i_9_ = (null == class518.anIntArray5926 ? 255 : class518.anIntArray5926[i]);
-			if (i_6_ == 0) {
-				if (Class84.myPlayer == class521_sub1) {
-					if (class518.aBool5928)
-						Class435.method7300(i_4_, i_5_, 0, i_9_, false, i_8_, 1449989045);
-					else
-						Class153.method2618(i_4_, i_5_, 0, i_9_, i_8_, 1889559384);
+
+			i_8 = 256;
+			if (animationdefinitions_0.anIntArray5927 != null && animationdefinitions_0.anIntArray5919 != null) {
+				i_8 = (int) (Math.random() * (double) (animationdefinitions_0.anIntArray5919[i_1] - animationdefinitions_0.anIntArray5927[i_1])) + animationdefinitions_0.anIntArray5927[i_1];
+			}
+
+			int i_9 = animationdefinitions_0.anIntArray5926 == null ? 255 : animationdefinitions_0.anIntArray5926[i_1];
+			if (i_7 == 0) {
+				if (class521_sub1_2 == Class84.myPlayer) {
+					if (animationdefinitions_0.aBool5928) {
+						Class435.method7300(i_5, i_6, 0, i_9, false, i_8, 1449989045);
+					} else {
+						Class153.method2618(i_5, i_6, 0, i_9, i_8, 1889559384);
+					}
 				}
 			} else {
-				if (Class84.myPlayer == class521_sub1) {
-					if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(-1858915479) == 0)
+				if (class521_sub1_2 == Class84.myPlayer) {
+					if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8225.method12714(-1858915479) == 0) {
 						return;
-				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(70703320) == 0)
+					}
+				} else if (Class393.aClass282_Sub54_4783.aClass468_Sub13_8193.method12714(70703320) == 0) {
 					return;
-				Vector3 class385 = class521_sub1.method11166().aClass385_3595;
-				int i_10_ = (int) class385.x - 256 >> 9;
-				int i_11_ = (int) class385.z - 256 >> 9;
-				int i_12_ = ((class521_sub1 == Class84.myPlayer) ? 0 : i_6_ + ((i_10_ << 16) + (class521_sub1.plane << 24) + (i_11_ << 8)));
-				Class260.aClass268Array3232[(Class260.anInt3219 += -1221598515) * -458827259 - 1] = new Class268(class518.aBool5928 ? (byte) 2 : (byte) 1, i_4_, i_5_, 0, i_9_, i_12_, i_8_, class521_sub1);
+				}
+
+				Vector3 vector3_10 = class521_sub1_2.method11166().aClass385_3595;
+				int i_11 = (int) vector3_10.x - 256 >> 9;
+				int i_12 = (int) vector3_10.z - 256 >> 9;
+				int i_13 = class521_sub1_2 == Class84.myPlayer ? 0 : i_7 + (i_12 << 8) + (class521_sub1_2.plane << 24) + (i_11 << 16);
+				Class260.aClass268Array3232[++Class260.anInt3219 - 1] = new Class268((byte) (animationdefinitions_0.aBool5928 ? 2 : 1), i_5, i_6, 0, i_9, i_13, i_8, class521_sub1_2);
 			}
 		}
+
 	}
+
 }

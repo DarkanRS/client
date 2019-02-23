@@ -1,15 +1,13 @@
-
-/* Class171 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Canvas;
 
 public class Class171 {
-	public static GraphicalRenderer method2909(Canvas canvas, Interface22 interface22, int i) {
-		return new Class505_Sub1(canvas, interface22, i);
+
+	public static GraphicalRenderer method2909(Canvas canvas_0, Interface22 interface22_1, int i_2) {
+		return new Class505_Sub1(canvas_0, interface22_1, i_2);
 	}
 
 	Class171() throws Throwable {
 		throw new Error();
 	}
+
 }

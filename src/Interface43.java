@@ -1,11 +1,9 @@
-/* Interface43 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface43 {
-	public int method243(byte i);
 
-	public int method75();
+	int method243(byte var1);
 
-	public int method76();
+	int method75();
+
+	int method76();
+
 }

@@ -1,275 +1,373 @@
-
-/* Class282_Sub50_Sub3 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.io.FileOutputStream;
 
 public class TextureDefinition extends CacheableNode {
-	int[] anIntArray9473;
-	static int[] anIntArray9474;
+
+	static FileOutputStream aFileOutputStream9481;
+	static double aDouble9479 = -1.0D;
+	static int[] anIntArray9474 = new int[256];
+	Class282_Sub20[] aClass282_Sub20Array9478;
 	int[] anIntArray9475;
+	int[] anIntArray9473;
 	Class282_Sub20 aClass282_Sub20_9476;
 	Class282_Sub20 aClass282_Sub20_9477;
-	Class282_Sub20[] aClass282_Sub20Array9478;
-	static double aDouble9479 = -1.0;
 	Class282_Sub20 aClass282_Sub20_9480;
-	static FileOutputStream aFileOutputStream9481;
 
-	boolean method14717(Index class317, Interface22 interface22, int i) {
-		if (-890139849 * Class282_Sub20_Sub29.anInt9913 >= 0) {
-			for (int i_0_ = 0; i_0_ < ((TextureDefinition) this).anIntArray9475.length; i_0_++) {
-				if (!class317.load((Class282_Sub20_Sub29.anInt9913 * -890139849), (((TextureDefinition) this).anIntArray9475[i_0_])))
+	boolean method14717(Index index_1, Interface22 interface22_2, int i_3) {
+		int i_4;
+		if (Class282_Sub20_Sub29.anInt9913 >= 0) {
+			for (i_4 = 0; i_4 < this.anIntArray9475.length; i_4++) {
+				if (!index_1.load(Class282_Sub20_Sub29.anInt9913, this.anIntArray9475[i_4])) {
 					return false;
+				}
 			}
 		} else {
-			for (int i_1_ = 0; i_1_ < ((TextureDefinition) this).anIntArray9475.length; i_1_++) {
-				if (!class317.method5661((((TextureDefinition) this).anIntArray9475[i_1_]), 1546931007))
+			for (i_4 = 0; i_4 < this.anIntArray9475.length; i_4++) {
+				if (!index_1.method5661(this.anIntArray9475[i_4], 1546931007)) {
 					return false;
+				}
 			}
 		}
-		for (int i_2_ = 0; i_2_ < ((TextureDefinition) this).anIntArray9473.length; i_2_++) {
-			if (!interface22.method139((((TextureDefinition) this).anIntArray9473[i_2_]), -324994004))
+
+		for (i_4 = 0; i_4 < this.anIntArray9473.length; i_4++) {
+			if (!interface22_2.method139(this.anIntArray9473[i_4], -324994004)) {
 				return false;
+			}
 		}
+
 		return true;
 	}
 
-	int[] method14718(Index class317, Interface22 interface22, double d, int i, int i_3_, boolean bool, boolean bool_4_, int i_5_) {
-		Class532_Sub2.aClass317_7925 = class317;
-		Class532_Sub1.anInterface22_7922 = interface22;
-		for (int i_6_ = 0; (i_6_ < ((TextureDefinition) this).aClass282_Sub20Array9478.length); i_6_++)
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_6_].method12315(i, i_3_, (byte) 60);
-		SoftCache.method3895(d);
-		Class316.method5593(i, i_3_, 1422267205);
-		int[] is = new int[i_3_ * i];
-		int i_7_;
-		int i_8_;
-		int i_9_;
-		if (bool) {
-			i_7_ = i - 1;
-			i_8_ = -1;
-			i_9_ = -1;
+	int[] method14718(Index index_1, Interface22 interface22_2, double d_3, int i_5, int i_6, boolean bool_7, boolean bool_8, int i_9) {
+		Class532_Sub2.aClass317_7925 = index_1;
+		Class532_Sub1.anInterface22_7922 = interface22_2;
+
+		for (int i_10 = 0; i_10 < this.aClass282_Sub20Array9478.length; i_10++) {
+			this.aClass282_Sub20Array9478[i_10].method12315(i_5, i_6, (byte) 60);
+		}
+
+		SoftCache.method3895(d_3);
+		Class316.method5593(i_5, i_6, 1422267205);
+		int[] ints_24 = new int[i_5 * i_6];
+		int i_11;
+		int i_12;
+		byte b_13;
+		if (bool_7) {
+			i_11 = i_5 - 1;
+			i_12 = -1;
+			b_13 = -1;
 		} else {
-			i_7_ = 0;
-			i_8_ = i;
-			i_9_ = 1;
+			i_11 = 0;
+			i_12 = i_5;
+			b_13 = 1;
 		}
-		int i_10_ = 0;
-		for (int i_11_ = 0; i_11_ < i_3_; i_11_++) {
-			int[] is_12_;
-			int[] is_13_;
-			int[] is_14_;
-			if (((TextureDefinition) this).aClass282_Sub20_9476.aBool7669) {
-				int[] is_15_ = ((TextureDefinition) this).aClass282_Sub20_9476.method12319(i_11_, 752457538);
-				is_12_ = is_15_;
-				is_13_ = is_15_;
-				is_14_ = is_15_;
+
+		int i_14 = 0;
+
+		int i_15;
+		for (i_15 = 0; i_15 < i_6; i_15++) {
+			int[] ints_16;
+			int[] ints_17;
+			int[] ints_18;
+			if (this.aClass282_Sub20_9476.aBool7669) {
+				int[] ints_19 = this.aClass282_Sub20_9476.method12319(i_15, 752457538);
+				ints_16 = ints_19;
+				ints_17 = ints_19;
+				ints_18 = ints_19;
 			} else {
-				int[][] is_16_ = ((TextureDefinition) this).aClass282_Sub20_9476.method12320(i_11_, 1981543466);
-				is_12_ = is_16_[0];
-				is_13_ = is_16_[1];
-				is_14_ = is_16_[2];
+				int[][] ints_26 = this.aClass282_Sub20_9476.method12320(i_15, 1981543466);
+				ints_16 = ints_26[0];
+				ints_17 = ints_26[1];
+				ints_18 = ints_26[2];
 			}
-			if (bool_4_)
-				i_10_ = i_11_;
-			for (int i_17_ = i_7_; i_17_ != i_8_; i_17_ += i_9_) {
-				int i_18_ = is_12_[i_17_] >> 4;
-				if (i_18_ > 255)
-					i_18_ = 255;
-				if (i_18_ < 0)
-					i_18_ = 0;
-				int i_19_ = is_13_[i_17_] >> 4;
-				if (i_19_ > 255)
-					i_19_ = 255;
-				if (i_19_ < 0)
-					i_19_ = 0;
-				int i_20_ = is_14_[i_17_] >> 4;
-				if (i_20_ > 255)
-					i_20_ = 255;
-				if (i_20_ < 0)
-					i_20_ = 0;
-				i_18_ = anIntArray9474[i_18_];
-				i_19_ = anIntArray9474[i_19_];
-				i_20_ = anIntArray9474[i_20_];
-				int i_21_ = (i_18_ << 16) + (i_19_ << 8) + i_20_;
-				if (i_21_ != 0)
-					i_21_ |= ~0xffffff;
-				is[i_10_++] = i_21_;
-				if (bool_4_)
-					i_10_ += i - 1;
+
+			if (bool_8) {
+				i_14 = i_15;
+			}
+
+			for (int i_25 = i_11; i_25 != i_12; i_25 += b_13) {
+				int i_20 = ints_16[i_25] >> 4;
+				if (i_20 > 255) {
+					i_20 = 255;
+				}
+
+				if (i_20 < 0) {
+					i_20 = 0;
+				}
+
+				int i_21 = ints_17[i_25] >> 4;
+				if (i_21 > 255) {
+					i_21 = 255;
+				}
+
+				if (i_21 < 0) {
+					i_21 = 0;
+				}
+
+				int i_22 = ints_18[i_25] >> 4;
+				if (i_22 > 255) {
+					i_22 = 255;
+				}
+
+				if (i_22 < 0) {
+					i_22 = 0;
+				}
+
+				i_20 = anIntArray9474[i_20];
+				i_21 = anIntArray9474[i_21];
+				i_22 = anIntArray9474[i_22];
+				int i_23 = i_22 + (i_21 << 8) + (i_20 << 16);
+				if (i_23 != 0) {
+					i_23 |= ~0xffffff;
+				}
+
+				ints_24[i_14++] = i_23;
+				if (bool_8) {
+					i_14 += i_5 - 1;
+				}
 			}
 		}
-		for (int i_22_ = 0; (i_22_ < ((TextureDefinition) this).aClass282_Sub20Array9478.length); i_22_++)
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_22_].method12326(984017845);
-		return is;
+
+		for (i_15 = 0; i_15 < this.aClass282_Sub20Array9478.length; i_15++) {
+			this.aClass282_Sub20Array9478[i_15].method12326(984017845);
+		}
+
+		return ints_24;
 	}
 
-	int[] method14719(Index class317, Interface22 interface22, double d, int i, int i_23_, boolean bool, byte i_24_) {
-		Class532_Sub2.aClass317_7925 = class317;
-		Class532_Sub1.anInterface22_7922 = interface22;
-		for (int i_25_ = 0; (i_25_ < ((TextureDefinition) this).aClass282_Sub20Array9478.length); i_25_++)
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_25_].method12315(i, i_23_, (byte) 116);
-		SoftCache.method3895(d);
-		Class316.method5593(i, i_23_, 1384434405);
-		int[] is = new int[i * i_23_];
-		int i_26_ = 0;
-		for (int i_27_ = 0; i_27_ < i_23_; i_27_++) {
-			int[] is_28_;
-			int[] is_29_;
-			int[] is_30_;
-			if (((TextureDefinition) this).aClass282_Sub20_9476.aBool7669) {
-				int[] is_31_ = ((TextureDefinition) this).aClass282_Sub20_9476.method12319(i_27_, 752457538);
-				is_28_ = is_31_;
-				is_29_ = is_31_;
-				is_30_ = is_31_;
+	int[] method14719(Index index_1, Interface22 interface22_2, double d_3, int i_5, int i_6, boolean bool_7, byte b_8) {
+		Class532_Sub2.aClass317_7925 = index_1;
+		Class532_Sub1.anInterface22_7922 = interface22_2;
+
+		for (int i_9 = 0; i_9 < this.aClass282_Sub20Array9478.length; i_9++) {
+			this.aClass282_Sub20Array9478[i_9].method12315(i_5, i_6, (byte) 116);
+		}
+
+		SoftCache.method3895(d_3);
+		Class316.method5593(i_5, i_6, 1384434405);
+		int[] ints_21 = new int[i_5 * i_6];
+		int i_10 = 0;
+
+		int i_11;
+		for (i_11 = 0; i_11 < i_6; i_11++) {
+			int[] ints_12;
+			int[] ints_13;
+			int[] ints_14;
+			int[] ints_15;
+			if (this.aClass282_Sub20_9476.aBool7669) {
+				ints_15 = this.aClass282_Sub20_9476.method12319(i_11, 752457538);
+				ints_12 = ints_15;
+				ints_13 = ints_15;
+				ints_14 = ints_15;
 			} else {
-				int[][] is_32_ = ((TextureDefinition) this).aClass282_Sub20_9476.method12320(i_27_, -1291616356);
-				is_28_ = is_32_[0];
-				is_29_ = is_32_[1];
-				is_30_ = is_32_[2];
+				int[][] ints_22 = this.aClass282_Sub20_9476.method12320(i_11, -1291616356);
+				ints_12 = ints_22[0];
+				ints_13 = ints_22[1];
+				ints_14 = ints_22[2];
 			}
-			int[] is_33_;
-			if (((TextureDefinition) this).aClass282_Sub20_9477.aBool7669)
-				is_33_ = ((TextureDefinition) this).aClass282_Sub20_9477.method12319(i_27_, 752457538);
-			else
-				is_33_ = ((TextureDefinition) this).aClass282_Sub20_9477.method12320(i_27_, 1766478944)[0];
-			if (bool)
-				i_26_ = i_27_;
-			for (int i_34_ = i - 1; i_34_ >= 0; i_34_--) {
-				int i_35_ = is_28_[i_34_] >> 4;
-				if (i_35_ > 255)
-					i_35_ = 255;
-				if (i_35_ < 0)
-					i_35_ = 0;
-				int i_36_ = is_29_[i_34_] >> 4;
-				if (i_36_ > 255)
-					i_36_ = 255;
-				if (i_36_ < 0)
-					i_36_ = 0;
-				int i_37_ = is_30_[i_34_] >> 4;
-				if (i_37_ > 255)
-					i_37_ = 255;
-				if (i_37_ < 0)
-					i_37_ = 0;
-				i_35_ = anIntArray9474[i_35_];
-				i_36_ = anIntArray9474[i_36_];
-				i_37_ = anIntArray9474[i_37_];
-				int i_38_;
-				if (i_35_ != 0 || 0 != i_36_ || i_37_ != 0) {
-					i_38_ = is_33_[i_34_] >> 4;
-					if (i_38_ > 255)
-						i_38_ = 255;
-					if (i_38_ < 0)
-						i_38_ = 0;
-				} else
-					i_38_ = 0;
-				is[i_26_++] = (i_36_ << 8) + ((i_35_ << 16) + (i_38_ << 24)) + i_37_;
-				if (bool)
-					i_26_ += i - 1;
-			}
-		}
-		for (int i_39_ = 0; (i_39_ < ((TextureDefinition) this).aClass282_Sub20Array9478.length); i_39_++)
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_39_].method12326(984017845);
-		return is;
-	}
 
-	static {
-		anIntArray9474 = new int[256];
-	}
-
-	TextureDefinition(RsByteBuffer stream) {
-		int size1 = stream.readUnsignedByte();
-		int i_40_ = 0;
-		int i_41_ = 0;
-		int[][] is = new int[size1][];
-		((TextureDefinition) this).aClass282_Sub20Array9478 = new Class282_Sub20[size1];
-		for (int i_42_ = 0; i_42_ < size1; i_42_++) {
-			Class282_Sub20 class282_sub20 = Class278.method4963(stream, (byte) -7);
-			if (class282_sub20.method12323(1338991452) >= 0)
-				i_40_++;
-			if (class282_sub20.method12324((byte) 44) >= 0)
-				i_41_++;
-			int i_43_ = (((Class282_Sub20) class282_sub20).aClass282_Sub20Array7671).length;
-			is[i_42_] = new int[i_43_];
-			for (int i_44_ = 0; i_44_ < i_43_; i_44_++)
-				is[i_42_][i_44_] = stream.readUnsignedByte();
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_42_] = class282_sub20;
-		}
-		((TextureDefinition) this).anIntArray9475 = new int[i_40_];
-		i_40_ = 0;
-		((TextureDefinition) this).anIntArray9473 = new int[i_41_];
-		i_41_ = 0;
-		for (int i_45_ = 0; i_45_ < size1; i_45_++) {
-			Class282_Sub20 class282_sub20 = ((TextureDefinition) this).aClass282_Sub20Array9478[i_45_];
-			int i_46_ = (((Class282_Sub20) class282_sub20).aClass282_Sub20Array7671).length;
-			for (int i_47_ = 0; i_47_ < i_46_; i_47_++)
-				((Class282_Sub20) class282_sub20).aClass282_Sub20Array7671[i_47_] = (((TextureDefinition) this).aClass282_Sub20Array9478[is[i_45_][i_47_]]);
-			int i_48_ = class282_sub20.method12323(1338991452);
-			int i_49_ = class282_sub20.method12324((byte) 117);
-			if (i_48_ > 0)
-				((TextureDefinition) this).anIntArray9475[i_40_++] = i_48_;
-			if (i_49_ > 0)
-				((TextureDefinition) this).anIntArray9473[i_41_++] = i_49_;
-			is[i_45_] = null;
-		}
-		((TextureDefinition) this).aClass282_Sub20_9476 = (((TextureDefinition) this).aClass282_Sub20Array9478[stream.readUnsignedByte()]);
-		((TextureDefinition) this).aClass282_Sub20_9477 = (((TextureDefinition) this).aClass282_Sub20Array9478[stream.readUnsignedByte()]);
-		((TextureDefinition) this).aClass282_Sub20_9480 = (((TextureDefinition) this).aClass282_Sub20Array9478[stream.readUnsignedByte()]);
-		is = null;
-	}
-
-	float[] method14723(Index class317, Interface22 interface22, int i, int i_50_, boolean bool, int i_51_) {
-		Class532_Sub2.aClass317_7925 = class317;
-		Class532_Sub1.anInterface22_7922 = interface22;
-		for (int i_52_ = 0; (i_52_ < ((TextureDefinition) this).aClass282_Sub20Array9478.length); i_52_++)
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_52_].method12315(i, i_50_, (byte) 59);
-		Class316.method5593(i, i_50_, -315322197);
-		float[] fs = new float[i_50_ * i * 4];
-		int i_53_ = 0;
-		for (int i_54_ = 0; i_54_ < i_50_; i_54_++) {
-			int[] is;
-			int[] is_55_;
-			int[] is_56_;
-			if (((TextureDefinition) this).aClass282_Sub20_9476.aBool7669) {
-				int[] is_57_ = ((TextureDefinition) this).aClass282_Sub20_9476.method12319(i_54_, 752457538);
-				is = is_57_;
-				is_55_ = is_57_;
-				is_56_ = is_57_;
+			if (this.aClass282_Sub20_9477.aBool7669) {
+				ints_15 = this.aClass282_Sub20_9477.method12319(i_11, 752457538);
 			} else {
-				int[][] is_58_ = ((TextureDefinition) this).aClass282_Sub20_9476.method12320(i_54_, 1271694305);
-				is = is_58_[0];
-				is_55_ = is_58_[1];
-				is_56_ = is_58_[2];
+				ints_15 = this.aClass282_Sub20_9477.method12320(i_11, 1766478944)[0];
 			}
-			int[] is_59_;
-			if (((TextureDefinition) this).aClass282_Sub20_9477.aBool7669)
-				is_59_ = ((TextureDefinition) this).aClass282_Sub20_9477.method12319(i_54_, 752457538);
-			else
-				is_59_ = ((TextureDefinition) this).aClass282_Sub20_9477.method12320(i_54_, -1071831227)[0];
-			int[] is_60_;
-			if (((TextureDefinition) this).aClass282_Sub20_9480.aBool7669)
-				is_60_ = ((TextureDefinition) this).aClass282_Sub20_9480.method12319(i_54_, 752457538);
-			else
-				is_60_ = ((TextureDefinition) this).aClass282_Sub20_9480.method12320(i_54_, -1302016809)[0];
-			if (bool)
-				i_53_ = i_54_ << 2;
-			for (int i_61_ = i - 1; i_61_ >= 0; i_61_--) {
-				float f = (float) is_59_[i_61_] / 4096.0F;
-				float f_62_ = ((1.0F + (float) is_60_[i_61_] * 31.0F / 4096.0F) / 4096.0F);
-				if (f < 0.0F)
-					f = 0.0F;
-				else if (f > 1.0F)
-					f = 1.0F;
-				fs[i_53_++] = (float) is[i_61_] * f_62_;
-				fs[i_53_++] = f_62_ * (float) is_55_[i_61_];
-				fs[i_53_++] = (float) is_56_[i_61_] * f_62_;
-				fs[i_53_++] = f;
-				if (bool)
-					i_53_ += (i << 2) - 4;
+
+			if (bool_7) {
+				i_10 = i_11;
+			}
+
+			for (int i_16 = i_5 - 1; i_16 >= 0; --i_16) {
+				int i_17 = ints_12[i_16] >> 4;
+				if (i_17 > 255) {
+					i_17 = 255;
+				}
+
+				if (i_17 < 0) {
+					i_17 = 0;
+				}
+
+				int i_18 = ints_13[i_16] >> 4;
+				if (i_18 > 255) {
+					i_18 = 255;
+				}
+
+				if (i_18 < 0) {
+					i_18 = 0;
+				}
+
+				int i_19 = ints_14[i_16] >> 4;
+				if (i_19 > 255) {
+					i_19 = 255;
+				}
+
+				if (i_19 < 0) {
+					i_19 = 0;
+				}
+
+				i_17 = anIntArray9474[i_17];
+				i_18 = anIntArray9474[i_18];
+				i_19 = anIntArray9474[i_19];
+				int i_20;
+				if (i_17 == 0 && i_18 == 0 && i_19 == 0) {
+					i_20 = 0;
+				} else {
+					i_20 = ints_15[i_16] >> 4;
+					if (i_20 > 255) {
+						i_20 = 255;
+					}
+
+					if (i_20 < 0) {
+						i_20 = 0;
+					}
+				}
+
+				ints_21[i_10++] = i_19 + (i_18 << 8) + (i_20 << 24) + (i_17 << 16);
+				if (bool_7) {
+					i_10 += i_5 - 1;
+				}
 			}
 		}
-		for (int i_63_ = 0; (i_63_ < ((TextureDefinition) this).aClass282_Sub20Array9478.length); i_63_++)
-			((TextureDefinition) this).aClass282_Sub20Array9478[i_63_].method12326(984017845);
-		return fs;
+
+		for (i_11 = 0; i_11 < this.aClass282_Sub20Array9478.length; i_11++) {
+			this.aClass282_Sub20Array9478[i_11].method12326(984017845);
+		}
+
+		return ints_21;
 	}
+
+	TextureDefinition(RsByteBuffer rsbytebuffer_1) {
+		int i_2 = rsbytebuffer_1.readUnsignedByte();
+		int i_3 = 0;
+		int i_4 = 0;
+		int[][] ints_5 = new int[i_2][];
+		this.aClass282_Sub20Array9478 = new Class282_Sub20[i_2];
+
+		int i_6;
+		Class282_Sub20 class282_sub20_7;
+		int i_8;
+		int i_9;
+		for (i_6 = 0; i_6 < i_2; i_6++) {
+			class282_sub20_7 = Class278.method4963(rsbytebuffer_1, (byte) -7);
+			if (class282_sub20_7.method12323(1338991452) >= 0) {
+				++i_3;
+			}
+
+			if (class282_sub20_7.method12324((byte) 44) >= 0) {
+				++i_4;
+			}
+
+			i_8 = class282_sub20_7.aClass282_Sub20Array7671.length;
+			ints_5[i_6] = new int[i_8];
+
+			for (i_9 = 0; i_9 < i_8; i_9++) {
+				ints_5[i_6][i_9] = rsbytebuffer_1.readUnsignedByte();
+			}
+
+			this.aClass282_Sub20Array9478[i_6] = class282_sub20_7;
+		}
+
+		this.anIntArray9475 = new int[i_3];
+		i_3 = 0;
+		this.anIntArray9473 = new int[i_4];
+		i_4 = 0;
+
+		for (i_6 = 0; i_6 < i_2; i_6++) {
+			class282_sub20_7 = this.aClass282_Sub20Array9478[i_6];
+			i_8 = class282_sub20_7.aClass282_Sub20Array7671.length;
+
+			for (i_9 = 0; i_9 < i_8; i_9++) {
+				class282_sub20_7.aClass282_Sub20Array7671[i_9] = this.aClass282_Sub20Array9478[ints_5[i_6][i_9]];
+			}
+
+			i_9 = class282_sub20_7.method12323(1338991452);
+			int i_10 = class282_sub20_7.method12324((byte) 117);
+			if (i_9 > 0) {
+				this.anIntArray9475[i_3++] = i_9;
+			}
+
+			if (i_10 > 0) {
+				this.anIntArray9473[i_4++] = i_10;
+			}
+
+			ints_5[i_6] = null;
+		}
+
+		this.aClass282_Sub20_9476 = this.aClass282_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
+		this.aClass282_Sub20_9477 = this.aClass282_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
+		this.aClass282_Sub20_9480 = this.aClass282_Sub20Array9478[rsbytebuffer_1.readUnsignedByte()];
+		Object obj_11 = null;
+	}
+
+	float[] method14723(Index index_1, Interface22 interface22_2, int i_3, int i_4, boolean bool_5, int i_6) {
+		Class532_Sub2.aClass317_7925 = index_1;
+		Class532_Sub1.anInterface22_7922 = interface22_2;
+
+		for (int i_7 = 0; i_7 < this.aClass282_Sub20Array9478.length; i_7++) {
+			this.aClass282_Sub20Array9478[i_7].method12315(i_3, i_4, (byte) 59);
+		}
+
+		Class316.method5593(i_3, i_4, -315322197);
+		float[] floats_18 = new float[i_3 * i_4 * 4];
+		int i_8 = 0;
+
+		int i_9;
+		for (i_9 = 0; i_9 < i_4; i_9++) {
+			int[] ints_10;
+			int[] ints_11;
+			int[] ints_12;
+			int[] ints_13;
+			if (this.aClass282_Sub20_9476.aBool7669) {
+				ints_13 = this.aClass282_Sub20_9476.method12319(i_9, 752457538);
+				ints_10 = ints_13;
+				ints_11 = ints_13;
+				ints_12 = ints_13;
+			} else {
+				int[][] ints_19 = this.aClass282_Sub20_9476.method12320(i_9, 1271694305);
+				ints_10 = ints_19[0];
+				ints_11 = ints_19[1];
+				ints_12 = ints_19[2];
+			}
+
+			if (this.aClass282_Sub20_9477.aBool7669) {
+				ints_13 = this.aClass282_Sub20_9477.method12319(i_9, 752457538);
+			} else {
+				ints_13 = this.aClass282_Sub20_9477.method12320(i_9, -1071831227)[0];
+			}
+
+			int[] ints_14;
+			if (this.aClass282_Sub20_9480.aBool7669) {
+				ints_14 = this.aClass282_Sub20_9480.method12319(i_9, 752457538);
+			} else {
+				ints_14 = this.aClass282_Sub20_9480.method12320(i_9, -1302016809)[0];
+			}
+
+			if (bool_5) {
+				i_8 = i_9 << 2;
+			}
+
+			for (int i_15 = i_3 - 1; i_15 >= 0; --i_15) {
+				float f_16 = (float) ints_13[i_15] / 4096.0F;
+				float f_17 = (1.0F + (float) ints_14[i_15] * 31.0F / 4096.0F) / 4096.0F;
+				if (f_16 < 0.0F) {
+					f_16 = 0.0F;
+				} else if (f_16 > 1.0F) {
+					f_16 = 1.0F;
+				}
+
+				floats_18[i_8++] = (float) ints_10[i_15] * f_17;
+				floats_18[i_8++] = f_17 * (float) ints_11[i_15];
+				floats_18[i_8++] = (float) ints_12[i_15] * f_17;
+				floats_18[i_8++] = f_16;
+				if (bool_5) {
+					i_8 += (i_3 << 2) - 4;
+				}
+			}
+		}
+
+		for (i_9 = 0; i_9 < this.aClass282_Sub20Array9478.length; i_9++) {
+			this.aClass282_Sub20Array9478[i_9].method12326(984017845);
+		}
+
+		return floats_18;
+	}
+
 }

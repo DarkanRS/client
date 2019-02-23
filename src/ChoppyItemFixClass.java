@@ -1,43 +1,43 @@
 public class ChoppyItemFixClass {
 
-	boolean aBool1671 = false;
-	boolean aBool1672 = false;
-	int[] anIntArray1673 = null;
-	int anInt1674 = 0;
-	boolean aBool1675 = true;
-	boolean aBool1676 = false;
-	int anInt1677;
 	float aFloat1678;
 	float aFloat1679;
 	float aFloat1680;
-	float aFloat1681 = 0.0F;
-	float aFloat1682 = 0.0F;
-	float aFloat1683 = 1.0F;
 	int anInt1684;
-	int[] anIntArray1685 = new int[4096];
-	HardwareRenderer aClass505_Sub3_1686;
-	Class185 aClass185_1687;
-	int anInt1688 = -1;
-	int[] anIntArray1689;
-	float[] aFloatArray1690;
-	int anInt1691 = 0;
-	int anInt1692 = -1;
-	int[] anIntArray1693 = null;
-	int anInt1694 = 0;
-	float aFloat1695 = 0.0F;
-	float aFloat1696 = 0.0F;
-	int anInt1697 = 0;
-	int[] anIntArray1698 = null;
-	int anInt1699 = 0;
 	int anInt1700;
-	int anInt1701 = 0;
 	float aFloat1702;
-	boolean aBool1703 = true;
-	int anInt1704 = -1;
-	int anInt1705;
+	boolean aBool1671 = false;
+	int anInt1677;
+	int[] anIntArray1693 = null;
+	float aFloat1696 = 0.0F;
+	int anInt1674 = 0;
+	int[] anIntArray1698 = null;
+	float aFloat1695 = 0.0F;
+	int[] anIntArray1673 = null;
+	float aFloat1681 = 0.0F;
+	int anInt1694 = 0;
+	int anInt1691 = 0;
+	int anInt1697 = 0;
+	int anInt1701 = 0;
+	int anInt1699 = 0;
 	int anInt1706 = 0;
 	int anInt1707 = 0;
+	boolean aBool1672 = false;
+	boolean aBool1675 = true;
+	boolean aBool1676 = false;
+	float aFloat1682 = 0.0F;
+	float aFloat1683 = 1.0F;
+	int[] anIntArray1685 = new int[4096];
+	int anInt1688 = -1;
+	int anInt1692 = -1;
+	boolean aBool1703 = true;
+	int anInt1704 = -1;
 	boolean aBool1708 = false;
+	HardwareRenderer aClass505_Sub3_1686;
+	Class185 aClass185_1687;
+	int anInt1705;
+	int[] anIntArray1689;
+	float[] aFloatArray1690;
 
 	int method2416() {
 		return this.anIntArray1685[0] % this.anInt1705;
@@ -47,4373 +47,4341 @@ public class ChoppyItemFixClass {
 		return this.anIntArray1685[0] / this.anInt1705;
 	}
 
-	final void method2418(boolean var1) {
-		this.aBool1671 = var1;
+	final void method2418(boolean bool_1) {
+		this.aBool1671 = bool_1;
 	}
 
-	final void method2419(boolean var1, boolean var2, boolean var3, int[] var4, int var5, int var6, int var7, int var8, int var9, float var10, float var11) {
+	final void method2419(boolean bool_1, boolean bool_2, boolean bool_3, int[] ints_4, int i_5, int i_6, int i_7, int i_8, int i_9, float f_10, float f_11) {
 		if (this.aBool1708) {
-			if (var9 > this.anInt1684) {
-				var9 = this.anInt1684;
+			if (i_9 > this.anInt1684) {
+				i_9 = this.anInt1684;
 			}
 
-			if (var8 < 0) {
-				var8 = 0;
+			if (i_8 < 0) {
+				i_8 = 0;
 			}
 		}
 
-		if (var8 < var9) {
-			var5 += var8 - 1;
-			var7 = var9 - var8 >> 2;
-			var10 += var11 * var8;
-			int var12;
-			int var13;
-			int var14;
+		if (i_8 < i_9) {
+			i_5 += i_8 - 1;
+			i_7 = i_9 - i_8 >> 2;
+			f_10 += f_11 * (float) i_8;
+			int i_12;
+			int i_13;
+			int i_14;
 			if (this.aClass185_1687.aBool2334) {
 				if (this.anInt1674 == 0) {
 					while (true) {
-						--var7;
-						if (var7 < 0) {
-							var7 = var9 - var8 & 3;
+						--i_7;
+						if (i_7 < 0) {
+							i_7 = i_9 - i_8 & 0x3;
 
 							while (true) {
-								--var7;
-								if (var7 < 0) {
+								--i_7;
+								if (i_7 < 0) {
 									return;
 								}
 
-								++var5;
-								if (!var2 || var10 < this.aFloatArray1690[var5]) {
-									if (var1) {
-										var4[var5] = var6;
+								++i_5;
+								if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+									if (bool_1) {
+										ints_4[i_5] = i_6;
 									}
 
-									if (var2) {
-										this.aFloatArray1690[var5] = var10;
+									if (bool_2) {
+										this.aFloatArray1690[i_5] = f_10;
 									}
 								}
 
-								var10 += var11;
+								f_10 += f_11;
 							}
 						}
 
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var4[var5] = var6;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								ints_4[i_5] = i_6;
 							}
 
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
-							}
-						}
-
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var4[var5] = var6;
-							}
-
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var4[var5] = var6;
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								ints_4[i_5] = i_6;
 							}
 
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
-							}
-						}
-
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var4[var5] = var6;
-							}
-
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
 							}
 						}
 
-						var10 += var11;
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								ints_4[i_5] = i_6;
+							}
+
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
+							}
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								ints_4[i_5] = i_6;
+							}
+
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
+							}
+						}
+
+						f_10 += f_11;
 					}
-				} else if (this.anInt1674 == 254) {
-					if (var8 != 0 && var9 <= this.anInt1684 - 1) {
-						while (true) {
-							--var7;
-							if (var7 < 0) {
-								var7 = var9 - var8 & 3;
+				}
 
-								while (true) {
-									--var7;
-									if (var7 < 0) {
-										return;
-									}
-
-									++var5;
-									if ((!var2 || var10 < this.aFloatArray1690[var5]) && var1) {
-										var4[var5 - 1] = var4[var5];
-									}
-
-									var10 += var11;
-								}
-							}
-
-							++var5;
-							if ((!var2 || var10 < this.aFloatArray1690[var5]) && var1) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-							++var5;
-							if ((!var2 || var10 < this.aFloatArray1690[var5]) && var1) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-							++var5;
-							if ((!var2 || var10 < this.aFloatArray1690[var5]) && var1) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-							++var5;
-							if ((!var2 || var10 < this.aFloatArray1690[var5]) && var1) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-						}
-					}
-				} else {
-					var12 = this.anInt1674;
-					var13 = 256 - this.anInt1674;
-					var6 = ((var6 & 16711935) * var13 >> 8 & 16711935) + ((var6 & '\uff00') * var13 >> 8 & '\uff00');
+				if (this.anInt1674 != 254) {
+					i_12 = this.anInt1674;
+					i_13 = 256 - this.anInt1674;
+					i_6 = ((i_6 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_6 & 0xff00) >> 8 & 0xff00);
 
 					while (true) {
-						--var7;
-						if (var7 < 0) {
-							var7 = var9 - var8 & 3;
+						--i_7;
+						if (i_7 < 0) {
+							i_7 = i_9 - i_8 & 0x3;
 
 							while (true) {
-								--var7;
-								if (var7 < 0) {
+								--i_7;
+								if (i_7 < 0) {
 									return;
 								}
 
-								++var5;
-								if (!var2 || var10 < this.aFloatArray1690[var5]) {
-									if (var1) {
-										var14 = var4[var5];
-										if (var3) {
-											var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+								++i_5;
+								if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+									if (bool_1) {
+										i_14 = ints_4[i_5];
+										if (bool_3) {
+											ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 										} else {
-											var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+											ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 										}
 									}
 
-									if (var2) {
-										this.aFloatArray1690[var5] = var10;
+									if (bool_2) {
+										this.aFloatArray1690[i_5] = f_10;
 									}
 								}
 
-								var10 += var11;
+								f_10 += f_11;
 							}
 						}
 
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var14 = var4[var5];
-								if (var3) {
-									var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								i_14 = ints_4[i_5];
+								if (bool_3) {
+									ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								} else {
-									var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+									ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								}
 							}
 
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var14 = var4[var5];
-								if (var3) {
-									var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								i_14 = ints_4[i_5];
+								if (bool_3) {
+									ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								} else {
-									var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+									ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								}
 							}
 
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var14 = var4[var5];
-								if (var3) {
-									var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								i_14 = ints_4[i_5];
+								if (bool_3) {
+									ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								} else {
-									var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+									ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								}
 							}
 
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							if (var1) {
-								var14 = var4[var5];
-								if (var3) {
-									var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							if (bool_1) {
+								i_14 = ints_4[i_5];
+								if (bool_3) {
+									ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								} else {
-									var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+									ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 								}
 							}
 
-							if (var2) {
-								this.aFloatArray1690[var5] = var10;
+							if (bool_2) {
+								this.aFloatArray1690[i_5] = f_10;
 							}
 						}
 
-						var10 += var11;
+						f_10 += f_11;
 					}
 				}
-			} else if (var1) {
+
+				if (i_8 != 0 && i_9 <= this.anInt1684 - 1) {
+					while (true) {
+						--i_7;
+						if (i_7 < 0) {
+							i_7 = i_9 - i_8 & 0x3;
+
+							while (true) {
+								--i_7;
+								if (i_7 < 0) {
+									return;
+								}
+
+								++i_5;
+								if ((!bool_2 || f_10 < this.aFloatArray1690[i_5]) && bool_1) {
+									ints_4[i_5 - 1] = ints_4[i_5];
+								}
+
+								f_10 += f_11;
+							}
+						}
+
+						++i_5;
+						if ((!bool_2 || f_10 < this.aFloatArray1690[i_5]) && bool_1) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if ((!bool_2 || f_10 < this.aFloatArray1690[i_5]) && bool_1) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if ((!bool_2 || f_10 < this.aFloatArray1690[i_5]) && bool_1) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if ((!bool_2 || f_10 < this.aFloatArray1690[i_5]) && bool_1) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+					}
+				}
+			} else if (bool_1) {
 				if (this.anInt1674 == 0) {
 					while (true) {
-						--var7;
-						if (var7 < 0) {
-							var7 = var9 - var8 & 3;
+						--i_7;
+						if (i_7 < 0) {
+							i_7 = i_9 - i_8 & 0x3;
 
 							while (true) {
-								--var7;
-								if (var7 < 0) {
+								--i_7;
+								if (i_7 < 0) {
 									return;
 								}
 
-								++var5;
-								if (!var2 || var10 < this.aFloatArray1690[var5]) {
-									var4[var5] = var6;
+								++i_5;
+								if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+									ints_4[i_5] = i_6;
 								}
 
-								var10 += var11;
+								f_10 += f_11;
 							}
 						}
 
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var4[var5] = var6;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5] = i_6;
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var4[var5] = var6;
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5] = i_6;
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var4[var5] = var6;
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5] = i_6;
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var4[var5] = var6;
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5] = i_6;
 						}
 
-						var10 += var11;
+						f_10 += f_11;
 					}
-				} else if (this.anInt1674 == 254) {
-					if (var8 != 0 && var9 <= this.anInt1684 - 1) {
-						while (true) {
-							--var7;
-							if (var7 < 0) {
-								var7 = var9 - var8 & 3;
+				}
 
-								while (true) {
-									--var7;
-									if (var7 < 0) {
-										return;
-									}
-
-									++var5;
-									if (!var2 || var10 < this.aFloatArray1690[var5]) {
-										var4[var5 - 1] = var4[var5];
-									}
-
-									var10 += var11;
-								}
-							}
-
-							++var5;
-							if (!var2 || var10 < this.aFloatArray1690[var5]) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-							++var5;
-							if (!var2 || var10 < this.aFloatArray1690[var5]) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-							++var5;
-							if (!var2 || var10 < this.aFloatArray1690[var5]) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-							++var5;
-							if (!var2 || var10 < this.aFloatArray1690[var5]) {
-								var4[var5 - 1] = var4[var5];
-							}
-
-							var10 += var11;
-						}
-					}
-				} else {
-					var12 = this.anInt1674;
-					var13 = 256 - this.anInt1674;
-					var6 = ((var6 & 16711935) * var13 >> 8 & 16711935) + ((var6 & '\uff00') * var13 >> 8 & '\uff00');
+				if (this.anInt1674 != 254) {
+					i_12 = this.anInt1674;
+					i_13 = 256 - this.anInt1674;
+					i_6 = ((i_6 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_6 & 0xff00) >> 8 & 0xff00);
 
 					while (true) {
-						--var7;
-						if (var7 < 0) {
-							var7 = var9 - var8 & 3;
+						--i_7;
+						if (i_7 < 0) {
+							i_7 = i_9 - i_8 & 0x3;
 
 							while (true) {
-								--var7;
-								if (var7 < 0) {
+								--i_7;
+								if (i_7 < 0) {
 									return;
 								}
 
-								++var5;
-								if (!var2 || var10 < this.aFloatArray1690[var5]) {
-									var14 = var4[var5];
-									if (var3) {
-										var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+								++i_5;
+								if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+									i_14 = ints_4[i_5];
+									if (bool_3) {
+										ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 									} else {
-										var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+										ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 									}
 								}
 
-								var10 += var11;
+								f_10 += f_11;
 							}
 						}
 
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var14 = var4[var5];
-							if (var3) {
-								var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							i_14 = ints_4[i_5];
+							if (bool_3) {
+								ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							} else {
-								var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+								ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var14 = var4[var5];
-							if (var3) {
-								var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							i_14 = ints_4[i_5];
+							if (bool_3) {
+								ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							} else {
-								var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+								ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var14 = var4[var5];
-							if (var3) {
-								var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							i_14 = ints_4[i_5];
+							if (bool_3) {
+								ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							} else {
-								var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+								ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							}
 						}
 
-						var10 += var11;
-						++var5;
-						if (!var2 || var10 < this.aFloatArray1690[var5]) {
-							var14 = var4[var5];
-							if (var3) {
-								var4[var5] = (var13 | var14 >> 24) << 24 | var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							i_14 = ints_4[i_5];
+							if (bool_3) {
+								ints_4[i_5] = (i_13 | i_14 >> 24) << 24 | ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							} else {
-								var4[var5] = var6 + ((var14 & 16711935) * var12 >> 8 & 16711935) + ((var14 & '\uff00') * var12 >> 8 & '\uff00');
+								ints_4[i_5] = ((i_14 & 0xff00ff) * i_12 >> 8 & 0xff00ff) + (i_12 * (i_14 & 0xff00) >> 8 & 0xff00) + i_6;
 							}
 						}
 
-						var10 += var11;
-					}
-				}
-			}
-		}
-	}
-
-	final void method2421(boolean var1, boolean var2, boolean var3, float var4, float var5, float var6, float var7, float var8, float var9, float var10, float var11, float var12, float var13, float var14, float var15, float var16, float var17, float var18, float var19, float var20, float var21, int var22, int var23, int var24, int var25, float var26, float var27, float var28, int var29, float var30, int var31, float var32, int var33, float var34) {
-		if (!var1) {
-			this.method2428(false, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, 0);
-		} else {
-			this.anInt1677 = var25;
-			float var35;
-			int var36;
-			if (var4 > var5 || var4 > var6) {
-				if (var5 <= var6) {
-					var35 = var7;
-					var7 = var8;
-					var8 = var35;
-					var35 = var4;
-					var4 = var5;
-					var5 = var35;
-					var35 = var10;
-					var10 = var11;
-					var11 = var35;
-					var35 = var16;
-					var16 = var17;
-					var17 = var35;
-					var35 = var19;
-					var19 = var20;
-					var20 = var35;
-					var35 = var13;
-					var13 = var14;
-					var14 = var35;
-					var35 = var26;
-					var26 = var27;
-					var27 = var35;
-					var35 = var30;
-					var30 = var32;
-					var32 = var35;
-					var36 = var22;
-					var22 = var23;
-					var23 = var36;
-					var36 = var29;
-					var29 = var31;
-					var31 = var36;
-				} else {
-					var35 = var7;
-					var7 = var9;
-					var9 = var35;
-					var35 = var4;
-					var4 = var6;
-					var6 = var35;
-					var35 = var10;
-					var10 = var12;
-					var12 = var35;
-					var35 = var16;
-					var16 = var18;
-					var18 = var35;
-					var35 = var19;
-					var19 = var21;
-					var21 = var35;
-					var35 = var13;
-					var13 = var15;
-					var15 = var35;
-					var35 = var26;
-					var26 = var28;
-					var28 = var35;
-					var35 = var30;
-					var30 = var34;
-					var34 = var35;
-					var36 = var22;
-					var22 = var24;
-					var24 = var36;
-					var36 = var29;
-					var29 = var33;
-					var33 = var36;
-				}
-			}
-
-			int var91;
-			if (var29 != this.anInt1692) {
-				this.anIntArray1693 = this.aClass505_Sub3_1686.method14359(var29);
-				if (this.anIntArray1693 == null) {
-					this.anInt1674 = 255 - (var22 >> 24 & 255);
-					var91 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(var29), 266546494) & '\uffff'];
-					var36 = -16777216 | (var22 >> 16 & 255) * (var91 >> 16 & 255) << 8 & 16711680 | (var22 >> 8 & 255) * (var91 >> 8 & 255) & '\uff00' | (var22 & 255) * (var91 & 255) >> 8;
-					this.method2425(true, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, Class302.method5364(var36, var25, var26, 833509259), Class302.method5364(var36, var25, var27, 833509259), Class302.method5364(var36, var25, var28, 833509259));
-					return;
-				}
-
-				this.anInt1694 = this.aClass505_Sub3_1686.method14377(var29) ? 64 : this.aClass505_Sub3_1686.anInt9005 * -1392111239;
-				this.anInt1691 = this.anInt1694 - 1;
-				this.anInt1697 = this.aClass505_Sub3_1686.method14361(var29);
-			}
-
-			this.aFloat1696 = var30;
-			if (var31 != this.anInt1688) {
-				this.anIntArray1698 = this.aClass505_Sub3_1686.method14359(var31);
-				if (this.anIntArray1698 == null) {
-					this.anInt1674 = 255 - (var22 >> 24 & 255);
-					var91 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(var31), 1213792412) & '\uffff'];
-					var36 = -16777216 | (var22 >> 16 & 255) * (var91 >> 16 & 255) << 8 & 16711680 | (var22 >> 8 & 255) * (var91 >> 8 & 255) & '\uff00' | (var22 & 255) * (var91 & 255) >> 8;
-					this.method2425(true, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, Class302.method5364(var36, var25, var26, 833509259), Class302.method5364(var36, var25, var27, 833509259), Class302.method5364(var36, var25, var28, 833509259));
-					return;
-				}
-
-				this.anInt1701 = this.aClass505_Sub3_1686.method14377(var31) ? 64 : this.aClass505_Sub3_1686.anInt9005 * -1392111239;
-				this.anInt1699 = this.anInt1701 - 1;
-			}
-
-			this.aFloat1695 = var32;
-			if (var33 != this.anInt1704) {
-				this.anIntArray1673 = this.aClass505_Sub3_1686.method14359(var33);
-				if (this.anIntArray1673 == null) {
-					this.anInt1674 = 255 - (var22 >> 24 & 255);
-					var91 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(var33), 1237545137) & '\uffff'];
-					var36 = -16777216 | (var22 >> 16 & 255) * (var91 >> 16 & 255) << 8 & 16711680 | (var22 >> 8 & 255) * (var91 >> 8 & 255) & '\uff00' | (var22 & 255) * (var91 & 255) >> 8;
-					this.method2425(true, var2, var3, ((int) var4), ((int) var5), ((int) var6), ((int) var7), ((int) var8), ((int) var9), ((int) var10), ((int) var11), ((int) var12), Class302.method5364(var36, var25, var26, 833509259), Class302.method5364(var36, var25, var27, 833509259), Class302.method5364(var36, var25, var28, 833509259));
-					return;
-				}
-
-				this.anInt1706 = this.aClass505_Sub3_1686.method14377(var33) ? 64 : this.aClass505_Sub3_1686.anInt9005 * -1392111239;
-				this.anInt1707 = this.anInt1706 - 1;
-			}
-
-			this.aFloat1681 = var34;
-			var16 /= var13;
-			var17 /= var14;
-			var18 /= var15;
-			var19 /= var13;
-			var20 /= var14;
-			var21 /= var15;
-			var10 = 1.0F / var10;
-			var11 = 1.0F / var11;
-			var12 = 1.0F / var12;
-			var13 = 1.0F / var13;
-			var14 = 1.0F / var14;
-			var15 = 1.0F / var15;
-			var35 = var22 >> 24 & 255;
-			float var90 = var23 >> 24 & 255;
-			float var37 = var24 >> 24 & 255;
-			float var38 = var22 >> 16 & 255;
-			float var39 = var23 >> 16 & 255;
-			float var40 = var24 >> 16 & 255;
-			float var41 = var22 >> 8 & 255;
-			float var42 = var23 >> 8 & 255;
-			float var43 = var24 >> 8 & 255;
-			float var44 = var22 & 255;
-			float var45 = var23 & 255;
-			float var46 = var24 & 255;
-			float var47 = 1.0F;
-			float var48 = 0.0F;
-			float var49 = 0.0F;
-			float var50 = 0.0F;
-			float var51 = 1.0F;
-			float var52 = 0.0F;
-			float var53 = 0.0F;
-			float var54 = 0.0F;
-			float var55 = 0.0F;
-			float var56 = 0.0F;
-			float var57 = 0.0F;
-			float var58 = 0.0F;
-			float var59 = 0.0F;
-			float var60 = 0.0F;
-			float var61 = 0.0F;
-			float var62 = 0.0F;
-			float var63 = 0.0F;
-			float var64 = 0.0F;
-			float var65;
-			if (var5 != var4) {
-				var65 = var5 - var4;
-				var53 = (var8 - var7) / var65;
-				var54 = (var11 - var10) / var65;
-				var55 = (var14 - var13) / var65;
-				var56 = (var17 - var16) / var65;
-				var57 = (var20 - var19) / var65;
-				var58 = (var27 - var26) / var65;
-				var59 = (var90 - var35) / var65;
-				var60 = (var39 - var38) / var65;
-				var61 = (var42 - var41) / var65;
-				var62 = (var45 - var44) / var65;
-				var63 = (var48 - var47) / var65;
-				var64 = (var51 - var50) / var65;
-			}
-
-			var65 = 0.0F;
-			float var66 = 0.0F;
-			float var67 = 0.0F;
-			float var68 = 0.0F;
-			float var69 = 0.0F;
-			float var70 = 0.0F;
-			float var71 = 0.0F;
-			float var72 = 0.0F;
-			float var73 = 0.0F;
-			float var74 = 0.0F;
-			float var75 = 0.0F;
-			float var76 = 0.0F;
-			float var77;
-			if (var6 != var5) {
-				var77 = var6 - var5;
-				var65 = (var9 - var8) / var77;
-				var66 = (var12 - var11) / var77;
-				var67 = (var15 - var14) / var77;
-				var68 = (var18 - var17) / var77;
-				var69 = (var21 - var20) / var77;
-				var70 = (var28 - var27) / var77;
-				var71 = (var37 - var90) / var77;
-				var72 = (var40 - var39) / var77;
-				var73 = (var43 - var42) / var77;
-				var74 = (var46 - var45) / var77;
-				var75 = (var49 - var48) / var77;
-				var76 = (var52 - var51) / var77;
-			}
-
-			var77 = 0.0F;
-			float var78 = 0.0F;
-			float var79 = 0.0F;
-			float var80 = 0.0F;
-			float var81 = 0.0F;
-			float var82 = 0.0F;
-			float var83 = 0.0F;
-			float var84 = 0.0F;
-			float var85 = 0.0F;
-			float var86 = 0.0F;
-			float var87 = 0.0F;
-			float var88 = 0.0F;
-			if (var4 != var6) {
-				float var89 = var4 - var6;
-				var77 = (var7 - var9) / var89;
-				var78 = (var10 - var12) / var89;
-				var79 = (var13 - var15) / var89;
-				var80 = (var16 - var18) / var89;
-				var81 = (var19 - var21) / var89;
-				var82 = (var26 - var28) / var89;
-				var83 = (var35 - var37) / var89;
-				var84 = (var38 - var40) / var89;
-				var85 = (var41 - var43) / var89;
-				var86 = (var44 - var46) / var89;
-				var87 = (var47 - var49) / var89;
-				var88 = (var50 - var52) / var89;
-			}
-
-			if (var4 < this.anInt1700) {
-				if (var5 > this.anInt1700) {
-					var5 = this.anInt1700;
-				}
-
-				if (var6 > this.anInt1700) {
-					var6 = this.anInt1700;
-				}
-
-				if (var5 < var6) {
-					var9 = var7;
-					var12 = var10;
-					var15 = var13;
-					var18 = var16;
-					var21 = var19;
-					var28 = var26;
-					var37 = var35;
-					var40 = var38;
-					var43 = var41;
-					var46 = var44;
-					var49 = var47;
-					var52 = var50;
-					if (var4 < 0.0F) {
-						var7 -= var53 * var4;
-						var9 -= var77 * var4;
-						var10 -= var54 * var4;
-						var12 -= var78 * var4;
-						var13 -= var55 * var4;
-						var15 -= var79 * var4;
-						var16 -= var56 * var4;
-						var18 -= var80 * var4;
-						var19 -= var57 * var4;
-						var21 -= var81 * var4;
-						var26 -= var58 * var4;
-						var28 -= var82 * var4;
-						var35 -= var59 * var4;
-						var37 -= var83 * var4;
-						var38 -= var60 * var4;
-						var40 -= var84 * var4;
-						var41 -= var61 * var4;
-						var43 -= var85 * var4;
-						var44 -= var62 * var4;
-						var46 -= var86 * var4;
-						var47 -= var63 * var4;
-						var49 -= var87 * var4;
-						var50 -= var64 * var4;
-						var52 -= var88 * var4;
-						var4 = 0.0F;
-					}
-
-					if (var5 < 0.0F) {
-						var8 -= var65 * var5;
-						var11 -= var66 * var5;
-						var14 -= var67 * var5;
-						var17 -= var68 * var5;
-						var20 -= var69 * var5;
-						var27 -= var70 * var5;
-						var90 -= var71 * var5;
-						var39 -= var72 * var5;
-						var42 -= var73 * var5;
-						var45 -= var74 * var5;
-						var48 -= var75 * var5;
-						var51 -= var76 * var5;
-						var5 = 0.0F;
-					}
-
-					if ((var4 == var5 || var77 >= var53) && (var4 != var5 || var77 <= var65)) {
-						var4 = ((int) (var4 + 0.5F));
-						var5 = ((int) (var5 + 0.5F));
-						var6 = ((int) (var6 + 0.5F)) - var5;
-						var5 -= var4;
-
-						for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var7, (int) var9, var10, var12, var13, var15, var16, var18, var19, var21, var26, var28, var35, var37, var38, var40, var41, var43, var44, var46, var47, var49, var50, var52);
-							var7 += var53;
-							var9 += var77;
-							var10 += var54;
-							var12 += var78;
-							var13 += var55;
-							var15 += var79;
-							var16 += var56;
-							var18 += var80;
-							var19 += var57;
-							var21 += var81;
-							var26 += var58;
-							var28 += var82;
-							var35 += var59;
-							var37 += var83;
-							var38 += var60;
-							var40 += var84;
-							var41 += var61;
-							var43 += var85;
-							var44 += var62;
-							var46 += var86;
-							var47 += var63;
-							var49 += var87;
-							var50 += var64;
-							var52 += var88;
-						}
-
-						while (--var6 >= 0.0F) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var8, (int) var9, var11, var12, var14, var15, var17, var18, var20, var21, var27, var28, var90, var37, var39, var40, var42, var43, var45, var46, var48, var49, var51, var52);
-							var8 += var65;
-							var9 += var77;
-							var11 += var66;
-							var12 += var78;
-							var14 += var67;
-							var15 += var79;
-							var17 += var68;
-							var18 += var80;
-							var20 += var69;
-							var21 += var81;
-							var27 += var70;
-							var28 += var82;
-							var90 += var71;
-							var37 += var83;
-							var39 += var72;
-							var40 += var84;
-							var42 += var73;
-							var43 += var85;
-							var45 += var74;
-							var46 += var86;
-							var48 += var75;
-							var49 += var87;
-							var51 += var76;
-							var52 += var88;
-							var4 += this.anInt1705;
-						}
-					} else {
-						var4 = ((int) (var4 + 0.5F));
-						var5 = ((int) (var5 + 0.5F));
-						var6 = ((int) (var6 + 0.5F)) - var5;
-						var5 -= var4;
-
-						for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var9, (int) var7, var12, var10, var15, var13, var18, var16, var21, var19, var28, var26, var37, var35, var40, var38, var43, var41, var46, var44, var49, var47, var52, var50);
-							var7 += var53;
-							var9 += var77;
-							var10 += var54;
-							var12 += var78;
-							var13 += var55;
-							var15 += var79;
-							var16 += var56;
-							var18 += var80;
-							var19 += var57;
-							var21 += var81;
-							var26 += var58;
-							var28 += var82;
-							var35 += var59;
-							var37 += var83;
-							var38 += var60;
-							var40 += var84;
-							var41 += var61;
-							var43 += var85;
-							var44 += var62;
-							var46 += var86;
-							var47 += var63;
-							var49 += var87;
-							var50 += var64;
-							var52 += var88;
-						}
-
-						while (--var6 >= 0.0F) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var9, (int) var8, var12, var11, var15, var14, var18, var17, var21, var20, var28, var27, var37, var90, var40, var39, var43, var42, var46, var45, var49, var48, var52, var51);
-							var8 += var65;
-							var9 += var77;
-							var11 += var66;
-							var12 += var78;
-							var14 += var67;
-							var15 += var79;
-							var17 += var68;
-							var18 += var80;
-							var20 += var69;
-							var21 += var81;
-							var27 += var70;
-							var28 += var82;
-							var90 += var71;
-							var37 += var83;
-							var39 += var72;
-							var40 += var84;
-							var42 += var73;
-							var43 += var85;
-							var45 += var74;
-							var46 += var86;
-							var48 += var75;
-							var49 += var87;
-							var51 += var76;
-							var52 += var88;
-							var4 += this.anInt1705;
-						}
-					}
-				} else {
-					var8 = var7;
-					var11 = var10;
-					var14 = var13;
-					var17 = var16;
-					var20 = var19;
-					var27 = var26;
-					var90 = var35;
-					var39 = var38;
-					var42 = var41;
-					var45 = var44;
-					var48 = var47;
-					var51 = var50;
-					if (var4 < 0.0F) {
-						var7 -= var53 * var4;
-						var8 -= var77 * var4;
-						var10 -= var54 * var4;
-						var11 -= var78 * var4;
-						var13 -= var55 * var4;
-						var14 -= var79 * var4;
-						var16 -= var56 * var4;
-						var17 -= var80 * var4;
-						var19 -= var57 * var4;
-						var20 -= var81 * var4;
-						var26 -= var58 * var4;
-						var27 -= var82 * var4;
-						var35 -= var59 * var4;
-						var90 -= var83 * var4;
-						var38 -= var60 * var4;
-						var39 -= var84 * var4;
-						var41 -= var61 * var4;
-						var42 -= var85 * var4;
-						var44 -= var62 * var4;
-						var45 -= var86 * var4;
-						var47 -= var63 * var4;
-						var48 -= var87 * var4;
-						var50 -= var64 * var4;
-						var51 -= var88 * var4;
-						var4 = 0.0F;
-					}
-
-					if (var6 < 0.0F) {
-						var9 -= var65 * var6;
-						var12 -= var66 * var6;
-						var15 -= var67 * var6;
-						var18 -= var68 * var6;
-						var21 -= var69 * var6;
-						var28 -= var70 * var6;
-						var37 -= var71 * var6;
-						var40 -= var72 * var6;
-						var43 -= var73 * var6;
-						var46 -= var74 * var6;
-						var49 -= var75 * var6;
-						var52 -= var76 * var6;
-						var6 = 0.0F;
-					}
-
-					if ((var4 == var6 || var77 >= var53) && (var4 != var6 || var65 <= var53)) {
-						var4 = ((int) (var4 + 0.5F));
-						var6 = ((int) (var6 + 0.5F));
-						var5 = ((int) (var5 + 0.5F)) - var6;
-						var6 -= var4;
-
-						for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var7, (int) var8, var10, var11, var13, var14, var16, var17, var19, var20, var26, var27, var35, var90, var38, var39, var41, var42, var44, var45, var47, var48, var50, var51);
-							var8 += var77;
-							var7 += var53;
-							var11 += var78;
-							var10 += var54;
-							var14 += var79;
-							var13 += var55;
-							var17 += var80;
-							var16 += var56;
-							var20 += var81;
-							var19 += var57;
-							var27 += var82;
-							var26 += var58;
-							var90 += var83;
-							var35 += var59;
-							var39 += var84;
-							var38 += var60;
-							var42 += var85;
-							var41 += var61;
-							var45 += var86;
-							var44 += var62;
-							var48 += var87;
-							var47 += var63;
-							var51 += var88;
-							var50 += var64;
-						}
-
-						while (--var5 >= 0.0F) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var7, (int) var9, var10, var12, var13, var15, var16, var18, var19, var21, var26, var28, var35, var37, var38, var40, var41, var43, var44, var46, var47, var49, var50, var52);
-							var7 += var53;
-							var9 += var65;
-							var10 += var54;
-							var12 += var66;
-							var13 += var55;
-							var15 += var67;
-							var16 += var56;
-							var18 += var68;
-							var19 += var57;
-							var21 += var69;
-							var26 += var58;
-							var28 += var70;
-							var35 += var59;
-							var37 += var71;
-							var38 += var60;
-							var40 += var72;
-							var41 += var61;
-							var43 += var73;
-							var44 += var62;
-							var46 += var74;
-							var47 += var63;
-							var49 += var75;
-							var50 += var64;
-							var52 += var76;
-							var4 += this.anInt1705;
-						}
-					} else {
-						var4 = ((int) (var4 + 0.5F));
-						var6 = ((int) (var6 + 0.5F));
-						var5 = ((int) (var5 + 0.5F)) - var6;
-						var6 -= var4;
-
-						for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var8, (int) var7, var11, var10, var14, var13, var17, var16, var20, var19, var27, var26, var90, var35, var39, var38, var42, var41, var45, var44, var48, var47, var51, var50);
-							var7 += var53;
-							var8 += var77;
-							var10 += var54;
-							var11 += var78;
-							var13 += var55;
-							var14 += var79;
-							var16 += var56;
-							var17 += var80;
-							var19 += var57;
-							var20 += var81;
-							var26 += var58;
-							var27 += var82;
-							var35 += var59;
-							var90 += var83;
-							var38 += var60;
-							var39 += var84;
-							var41 += var61;
-							var42 += var85;
-							var44 += var62;
-							var45 += var86;
-							var47 += var63;
-							var48 += var87;
-							var50 += var64;
-							var51 += var88;
-						}
-
-						while (--var5 >= 0.0F) {
-							this.method2427(var2, var3, this.anIntArray1689, (int) var4, (int) var9, (int) var7, var12, var10, var15, var13, var18, var16, var21, var19, var28, var26, var37, var35, var40, var38, var43, var41, var46, var44, var49, var47, var52, var50);
-							var9 += var65;
-							var7 += var53;
-							var12 += var66;
-							var10 += var54;
-							var15 += var67;
-							var13 += var55;
-							var18 += var68;
-							var16 += var56;
-							var21 += var69;
-							var19 += var57;
-							var28 += var70;
-							var26 += var58;
-							var37 += var71;
-							var35 += var59;
-							var40 += var72;
-							var38 += var60;
-							var43 += var73;
-							var41 += var61;
-							var46 += var74;
-							var44 += var62;
-							var49 += var75;
-							var47 += var63;
-							var52 += var76;
-							var50 += var64;
-							var4 += this.anInt1705;
-						}
+						f_10 += f_11;
 					}
 				}
 
-			}
-		}
-	}
+				if (i_8 != 0 && i_9 <= this.anInt1684 - 1) {
+					while (true) {
+						--i_7;
+						if (i_7 < 0) {
+							i_7 = i_9 - i_8 & 0x3;
 
-	final void method2422(boolean var1, boolean var2, int[] var3, int var4, int var5, int var6, int var7, int var8, float var9, float var10, float var11, float var12, float var13, float var14, float var15, float var16) {
-		if (this.aBool1708) {
-			if (var8 > this.anInt1684) {
-				var8 = this.anInt1684;
-			}
-
-			if (var7 < 0) {
-				var7 = 0;
-			}
-		}
-
-		if (var7 < var8) {
-			int var17;
-			int var19;
-			int var18;
-			int var21;
-			int var20;
-			int var22;
-			if (this.aBool1676) {
-				var4 += var7;
-				var11 += var12 * var7;
-				var13 += var14 * var7;
-				var15 += var16 * var7;
-				if (this.aBool1675) {
-					var6 = var8 - var7 >> 2;
-					var12 *= 4.0F;
-					var14 *= 4.0F;
-					var16 *= 4.0F;
-					if (this.anInt1674 == 0) {
-						if (var6 > 0) {
-							do {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								var3[var4++] = var5;
-								var3[var4++] = var5;
-								var3[var4++] = var5;
-								var3[var4++] = var5;
-								--var6;
-							} while (var6 > 0);
-						}
-
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-
-							do {
-								var3[var4++] = var5;
-								--var6;
-							} while (var6 > 0);
-						}
-					} else if (!this.aBool1672) {
-						var17 = this.anInt1674;
-						var18 = 256 - this.anInt1674;
-						if (var6 > 0) {
-							do {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-								var19 = var3[var4];
-								if (var2) {
-									var3[var4++] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									var19 = var3[var4];
-									var3[var4++] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									var19 = var3[var4];
-									var3[var4++] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									var19 = var3[var4];
-									var3[var4++] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-								} else {
-									var3[var4++] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									var19 = var3[var4];
-									var3[var4++] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									var19 = var3[var4];
-									var3[var4++] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									var19 = var3[var4];
-									var3[var4++] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+							while (true) {
+								--i_7;
+								if (i_7 < 0) {
+									return;
 								}
 
-								--var6;
-							} while (var6 > 0);
-						}
-
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-							var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-
-							do {
-								var19 = var3[var4];
-								if (var2) {
-									var3[var4++] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-								} else {
-									var3[var4++] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								++i_5;
+								if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+									ints_4[i_5 - 1] = ints_4[i_5];
 								}
 
-								--var6;
-							} while (var6 > 0);
-						}
-					} else {
-						if (var6 > 0) {
-							do {
-								var5 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								var18 = var4++;
-								var20 = var3[var18];
-								var21 = var5 + var20;
-								var22 = (var5 & 16711935) + (var20 & 16711935);
-								var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-								var3[var18] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-								var21 = var4++;
-								int var23 = var3[var21];
-								int var24 = var5 + var23;
-								int var25 = (var5 & 16711935) + (var23 & 16711935);
-								var23 = (var25 & 16777472) + (var24 - var25 & 65536);
-								var3[var21] = -16777216 | var24 - var23 | var23 - (var23 >>> 8);
-								var24 = var4++;
-								int var26 = var3[var24];
-								int var27 = var5 + var26;
-								int var28 = (var5 & 16711935) + (var26 & 16711935);
-								var26 = (var28 & 16777472) + (var27 - var28 & 65536);
-								var3[var24] = -16777216 | var27 - var26 | var26 - (var26 >>> 8);
-								var27 = var4++;
-								int var29 = var3[var27];
-								int var30 = var5 + var29;
-								int var31 = (var5 & 16711935) + (var29 & 16711935);
-								var29 = (var31 & 16777472) + (var30 - var31 & 65536);
-								var3[var27] = -16777216 | var30 - var29 | var29 - (var29 >>> 8);
-								--var6;
-							} while (var6 > 0);
-						}
-
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-
-							do {
-								var18 = var4++;
-								var20 = var3[var18];
-								var21 = var5 + var20;
-								var22 = (var5 & 16711935) + (var20 & 16711935);
-								var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-								var3[var18] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-								--var6;
-							} while (var6 > 0);
-						}
-					}
-				} else {
-					var6 = var8 - var7;
-					if (this.anInt1674 == 0) {
-						do {
-							var3[var4++] = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-							var11 += var12;
-							var13 += var14;
-							var15 += var16;
-							--var6;
-						} while (var6 > 0);
-					} else if (!this.aBool1672) {
-						var17 = this.anInt1674;
-						var18 = 256 - this.anInt1674;
-
-						do {
-							var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-							var11 += var12;
-							var13 += var14;
-							var15 += var16;
-							var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-							var19 = var3[var4];
-							if (var2) {
-								var3[var4++] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-							} else {
-								var3[var4++] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								f_10 += f_11;
 							}
+						}
 
-							--var6;
-						} while (var6 > 0);
-					} else {
-						do {
-							var18 = var4++;
-							var19 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-							var20 = var3[var18];
-							var21 = var19 + var20;
-							var22 = (var19 & 16711935) + (var20 & 16711935);
-							var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-							var3[var18] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-							var11 += var12;
-							var13 += var14;
-							var15 += var16;
-							--var6;
-						} while (var6 > 0);
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
+						++i_5;
+						if (!bool_2 || f_10 < this.aFloatArray1690[i_5]) {
+							ints_4[i_5 - 1] = ints_4[i_5];
+						}
+
+						f_10 += f_11;
 					}
 				}
+			}
+		}
 
+	}
+
+	final void method2421(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, int i_22, int i_23, int i_24, int i_25, float f_26, float f_27, float f_28, int i_29, float f_30, int i_31, float f_32, int i_33, float f_34) {
+		this.anInt1677 = i_25;
+		float f_35;
+		int i_36;
+		if (f_4 > f_5 || f_4 > f_6) {
+			if (f_5 <= f_6) {
+				f_35 = f_7;
+				f_7 = f_8;
+				f_8 = f_35;
+				f_35 = f_4;
+				f_4 = f_5;
+				f_5 = f_35;
+				f_35 = f_10;
+				f_10 = f_11;
+				f_11 = f_35;
+				f_35 = f_16;
+				f_16 = f_17;
+				f_17 = f_35;
+				f_35 = f_19;
+				f_19 = f_20;
+				f_20 = f_35;
+				f_35 = f_13;
+				f_13 = f_14;
+				f_14 = f_35;
+				f_35 = f_26;
+				f_26 = f_27;
+				f_27 = f_35;
+				f_35 = f_30;
+				f_30 = f_32;
+				f_32 = f_35;
+				i_36 = i_22;
+				i_22 = i_23;
+				i_23 = i_36;
+				i_36 = i_29;
+				i_29 = i_31;
+				i_31 = i_36;
 			} else {
-				var4 += var7 - 1;
-				var9 += var10 * var7;
-				var11 += var12 * var7;
-				var13 += var14 * var7;
-				var15 += var16 * var7;
+				f_35 = f_7;
+				f_7 = f_9;
+				f_9 = f_35;
+				f_35 = f_4;
+				f_4 = f_6;
+				f_6 = f_35;
+				f_35 = f_10;
+				f_10 = f_12;
+				f_12 = f_35;
+				f_35 = f_16;
+				f_16 = f_18;
+				f_18 = f_35;
+				f_35 = f_19;
+				f_19 = f_21;
+				f_21 = f_35;
+				f_35 = f_13;
+				f_13 = f_15;
+				f_15 = f_35;
+				f_35 = f_26;
+				f_26 = f_28;
+				f_28 = f_35;
+				f_35 = f_30;
+				f_30 = f_34;
+				f_34 = f_35;
+				i_36 = i_22;
+				i_22 = i_24;
+				i_24 = i_36;
+				i_36 = i_29;
+				i_29 = i_33;
+				i_33 = i_36;
+			}
+		}
+
+		int i_37;
+		if (i_29 != this.anInt1692) {
+			this.anIntArray1693 = this.aClass505_Sub3_1686.method14359(i_29);
+			if (this.anIntArray1693 == null) {
+				this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
+				i_37 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_29), 266546494) & 0xffff];
+				i_36 = ~0xffffff | (i_37 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_37 >> 8 & 0xff) & 0xff00 | (i_37 & 0xff) * (i_22 & 0xff) >> 8;
+				this.method2425(true, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, Class302.method5364(i_36, i_25, f_26, 833509259), Class302.method5364(i_36, i_25, f_27, 833509259), Class302.method5364(i_36, i_25, f_28, 833509259));
+				return;
+			}
+
+			this.anInt1694 = this.aClass505_Sub3_1686.method14377(i_29) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+			this.anInt1691 = this.anInt1694 - 1;
+			this.anInt1697 = this.aClass505_Sub3_1686.method14361(i_29);
+		}
+
+		this.aFloat1696 = f_30;
+		if (this.anInt1688 != i_31) {
+			this.anIntArray1698 = this.aClass505_Sub3_1686.method14359(i_31);
+			if (this.anIntArray1698 == null) {
+				this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
+				i_37 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_31), 1213792412) & 0xffff];
+				i_36 = ~0xffffff | (i_37 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_37 >> 8 & 0xff) & 0xff00 | (i_37 & 0xff) * (i_22 & 0xff) >> 8;
+				this.method2425(true, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, Class302.method5364(i_36, i_25, f_26, 833509259), Class302.method5364(i_36, i_25, f_27, 833509259), Class302.method5364(i_36, i_25, f_28, 833509259));
+				return;
+			}
+
+			this.anInt1701 = this.aClass505_Sub3_1686.method14377(i_31) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+			this.anInt1699 = this.anInt1701 - 1;
+		}
+
+		this.aFloat1695 = f_32;
+		if (i_33 != this.anInt1704) {
+			this.anIntArray1673 = this.aClass505_Sub3_1686.method14359(i_33);
+			if (this.anIntArray1673 == null) {
+				this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
+				i_37 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_33), 1237545137) & 0xffff];
+				i_36 = ~0xffffff | (i_37 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_37 >> 8 & 0xff) & 0xff00 | (i_37 & 0xff) * (i_22 & 0xff) >> 8;
+				this.method2425(true, bool_2, bool_3, (float) ((int) f_4), (float) ((int) f_5), (float) ((int) f_6), (float) ((int) f_7), (float) ((int) f_8), (float) ((int) f_9), (float) ((int) f_10), (float) ((int) f_11), (float) ((int) f_12), Class302.method5364(i_36, i_25, f_26, 833509259), Class302.method5364(i_36, i_25, f_27, 833509259), Class302.method5364(i_36, i_25, f_28, 833509259));
+				return;
+			}
+
+			this.anInt1706 = this.aClass505_Sub3_1686.method14377(i_33) ? 64 : this.aClass505_Sub3_1686.anInt9005;
+			this.anInt1707 = this.anInt1706 - 1;
+		}
+
+		this.aFloat1681 = f_34;
+		f_16 /= f_13;
+		f_17 /= f_14;
+		f_18 /= f_15;
+		f_19 /= f_13;
+		f_20 /= f_14;
+		f_21 /= f_15;
+		f_10 = 1.0F / f_10;
+		f_11 = 1.0F / f_11;
+		f_12 = 1.0F / f_12;
+		f_13 = 1.0F / f_13;
+		f_14 = 1.0F / f_14;
+		f_15 = 1.0F / f_15;
+		f_35 = (float) (i_22 >> 24 & 0xff);
+		float f_38 = (float) (i_23 >> 24 & 0xff);
+		float f_39 = (float) (i_24 >> 24 & 0xff);
+		float f_40 = (float) (i_22 >> 16 & 0xff);
+		float f_41 = (float) (i_23 >> 16 & 0xff);
+		float f_42 = (float) (i_24 >> 16 & 0xff);
+		float f_43 = (float) (i_22 >> 8 & 0xff);
+		float f_44 = (float) (i_23 >> 8 & 0xff);
+		float f_45 = (float) (i_24 >> 8 & 0xff);
+		float f_46 = (float) (i_22 & 0xff);
+		float f_47 = (float) (i_23 & 0xff);
+		float f_48 = (float) (i_24 & 0xff);
+		float f_49 = 1.0F;
+		float f_50 = 0.0F;
+		float f_51 = 0.0F;
+		float f_52 = 0.0F;
+		float f_53 = 1.0F;
+		float f_54 = 0.0F;
+		float f_55 = 0.0F;
+		float f_56 = 0.0F;
+		float f_57 = 0.0F;
+		float f_58 = 0.0F;
+		float f_59 = 0.0F;
+		float f_60 = 0.0F;
+		float f_61 = 0.0F;
+		float f_62 = 0.0F;
+		float f_63 = 0.0F;
+		float f_64 = 0.0F;
+		float f_65 = 0.0F;
+		float f_66 = 0.0F;
+		float f_67;
+		if (f_5 != f_4) {
+			f_67 = f_5 - f_4;
+			f_55 = (f_8 - f_7) / f_67;
+			f_56 = (f_11 - f_10) / f_67;
+			f_57 = (f_14 - f_13) / f_67;
+			f_58 = (f_17 - f_16) / f_67;
+			f_59 = (f_20 - f_19) / f_67;
+			f_60 = (f_27 - f_26) / f_67;
+			f_61 = (f_38 - f_35) / f_67;
+			f_62 = (f_41 - f_40) / f_67;
+			f_63 = (f_44 - f_43) / f_67;
+			f_64 = (f_47 - f_46) / f_67;
+			f_65 = (f_50 - f_49) / f_67;
+			f_66 = (f_53 - f_52) / f_67;
+		}
+
+		f_67 = 0.0F;
+		float f_68 = 0.0F;
+		float f_69 = 0.0F;
+		float f_70 = 0.0F;
+		float f_71 = 0.0F;
+		float f_72 = 0.0F;
+		float f_73 = 0.0F;
+		float f_74 = 0.0F;
+		float f_75 = 0.0F;
+		float f_76 = 0.0F;
+		float f_77 = 0.0F;
+		float f_78 = 0.0F;
+		float f_79;
+		if (f_6 != f_5) {
+			f_79 = f_6 - f_5;
+			f_67 = (f_9 - f_8) / f_79;
+			f_68 = (f_12 - f_11) / f_79;
+			f_69 = (f_15 - f_14) / f_79;
+			f_70 = (f_18 - f_17) / f_79;
+			f_71 = (f_21 - f_20) / f_79;
+			f_72 = (f_28 - f_27) / f_79;
+			f_73 = (f_39 - f_38) / f_79;
+			f_74 = (f_42 - f_41) / f_79;
+			f_75 = (f_45 - f_44) / f_79;
+			f_76 = (f_48 - f_47) / f_79;
+			f_77 = (f_51 - f_50) / f_79;
+			f_78 = (f_54 - f_53) / f_79;
+		}
+
+		f_79 = 0.0F;
+		float f_80 = 0.0F;
+		float f_81 = 0.0F;
+		float f_82 = 0.0F;
+		float f_83 = 0.0F;
+		float f_84 = 0.0F;
+		float f_85 = 0.0F;
+		float f_86 = 0.0F;
+		float f_87 = 0.0F;
+		float f_88 = 0.0F;
+		float f_89 = 0.0F;
+		float f_90 = 0.0F;
+		if (f_4 != f_6) {
+			float f_91 = f_4 - f_6;
+			f_79 = (f_7 - f_9) / f_91;
+			f_80 = (f_10 - f_12) / f_91;
+			f_81 = (f_13 - f_15) / f_91;
+			f_82 = (f_16 - f_18) / f_91;
+			f_83 = (f_19 - f_21) / f_91;
+			f_84 = (f_26 - f_28) / f_91;
+			f_85 = (f_35 - f_39) / f_91;
+			f_86 = (f_40 - f_42) / f_91;
+			f_87 = (f_43 - f_45) / f_91;
+			f_88 = (f_46 - f_48) / f_91;
+			f_89 = (f_49 - f_51) / f_91;
+			f_90 = (f_52 - f_54) / f_91;
+		}
+
+		if (f_4 < (float) this.anInt1700) {
+			if (f_5 > (float) this.anInt1700) {
+				f_5 = (float) this.anInt1700;
+			}
+
+			if (f_6 > (float) this.anInt1700) {
+				f_6 = (float) this.anInt1700;
+			}
+
+			if (f_5 < f_6) {
+				f_9 = f_7;
+				f_12 = f_10;
+				f_15 = f_13;
+				f_18 = f_16;
+				f_21 = f_19;
+				f_28 = f_26;
+				f_39 = f_35;
+				f_42 = f_40;
+				f_45 = f_43;
+				f_48 = f_46;
+				f_51 = f_49;
+				f_54 = f_52;
+				if (f_4 < 0.0F) {
+					f_7 -= f_55 * f_4;
+					f_9 -= f_79 * f_4;
+					f_10 -= f_56 * f_4;
+					f_12 -= f_80 * f_4;
+					f_13 -= f_57 * f_4;
+					f_15 -= f_81 * f_4;
+					f_16 -= f_58 * f_4;
+					f_18 -= f_82 * f_4;
+					f_19 -= f_59 * f_4;
+					f_21 -= f_83 * f_4;
+					f_26 -= f_60 * f_4;
+					f_28 -= f_84 * f_4;
+					f_35 -= f_61 * f_4;
+					f_39 -= f_85 * f_4;
+					f_40 -= f_62 * f_4;
+					f_42 -= f_86 * f_4;
+					f_43 -= f_63 * f_4;
+					f_45 -= f_87 * f_4;
+					f_46 -= f_64 * f_4;
+					f_48 -= f_88 * f_4;
+					f_49 -= f_65 * f_4;
+					f_51 -= f_89 * f_4;
+					f_52 -= f_66 * f_4;
+					f_54 -= f_90 * f_4;
+					f_4 = 0.0F;
+				}
+
+				if (f_5 < 0.0F) {
+					f_8 -= f_67 * f_5;
+					f_11 -= f_68 * f_5;
+					f_14 -= f_69 * f_5;
+					f_17 -= f_70 * f_5;
+					f_20 -= f_71 * f_5;
+					f_27 -= f_72 * f_5;
+					f_38 -= f_73 * f_5;
+					f_41 -= f_74 * f_5;
+					f_44 -= f_75 * f_5;
+					f_47 -= f_76 * f_5;
+					f_50 -= f_77 * f_5;
+					f_53 -= f_78 * f_5;
+					f_5 = 0.0F;
+				}
+
+				if ((f_4 == f_5 || f_79 >= f_55) && (f_4 != f_5 || f_79 <= f_67)) {
+					f_4 = (float) ((int) (f_4 + 0.5F));
+					f_5 = (float) ((int) (f_5 + 0.5F));
+					f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+					f_5 -= f_4;
+
+					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_35, f_39, f_40, f_42, f_43, f_45, f_46, f_48, f_49, f_51, f_52, f_54);
+						f_7 += f_55;
+						f_9 += f_79;
+						f_10 += f_56;
+						f_12 += f_80;
+						f_13 += f_57;
+						f_15 += f_81;
+						f_16 += f_58;
+						f_18 += f_82;
+						f_19 += f_59;
+						f_21 += f_83;
+						f_26 += f_60;
+						f_28 += f_84;
+						f_35 += f_61;
+						f_39 += f_85;
+						f_40 += f_62;
+						f_42 += f_86;
+						f_43 += f_63;
+						f_45 += f_87;
+						f_46 += f_64;
+						f_48 += f_88;
+						f_49 += f_65;
+						f_51 += f_89;
+						f_52 += f_66;
+						f_54 += f_90;
+					}
+
+					while (--f_6 >= 0.0F) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_8, (int) f_9, f_11, f_12, f_14, f_15, f_17, f_18, f_20, f_21, f_27, f_28, f_38, f_39, f_41, f_42, f_44, f_45, f_47, f_48, f_50, f_51, f_53, f_54);
+						f_8 += f_67;
+						f_9 += f_79;
+						f_11 += f_68;
+						f_12 += f_80;
+						f_14 += f_69;
+						f_15 += f_81;
+						f_17 += f_70;
+						f_18 += f_82;
+						f_20 += f_71;
+						f_21 += f_83;
+						f_27 += f_72;
+						f_28 += f_84;
+						f_38 += f_73;
+						f_39 += f_85;
+						f_41 += f_74;
+						f_42 += f_86;
+						f_44 += f_75;
+						f_45 += f_87;
+						f_47 += f_76;
+						f_48 += f_88;
+						f_50 += f_77;
+						f_51 += f_89;
+						f_53 += f_78;
+						f_54 += f_90;
+						f_4 += (float) this.anInt1705;
+					}
+				} else {
+					f_4 = (float) ((int) (f_4 + 0.5F));
+					f_5 = (float) ((int) (f_5 + 0.5F));
+					f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+					f_5 -= f_4;
+
+					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_39, f_35, f_42, f_40, f_45, f_43, f_48, f_46, f_51, f_49, f_54, f_52);
+						f_7 += f_55;
+						f_9 += f_79;
+						f_10 += f_56;
+						f_12 += f_80;
+						f_13 += f_57;
+						f_15 += f_81;
+						f_16 += f_58;
+						f_18 += f_82;
+						f_19 += f_59;
+						f_21 += f_83;
+						f_26 += f_60;
+						f_28 += f_84;
+						f_35 += f_61;
+						f_39 += f_85;
+						f_40 += f_62;
+						f_42 += f_86;
+						f_43 += f_63;
+						f_45 += f_87;
+						f_46 += f_64;
+						f_48 += f_88;
+						f_49 += f_65;
+						f_51 += f_89;
+						f_52 += f_66;
+						f_54 += f_90;
+					}
+
+					while (--f_6 >= 0.0F) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_9, (int) f_8, f_12, f_11, f_15, f_14, f_18, f_17, f_21, f_20, f_28, f_27, f_39, f_38, f_42, f_41, f_45, f_44, f_48, f_47, f_51, f_50, f_54, f_53);
+						f_8 += f_67;
+						f_9 += f_79;
+						f_11 += f_68;
+						f_12 += f_80;
+						f_14 += f_69;
+						f_15 += f_81;
+						f_17 += f_70;
+						f_18 += f_82;
+						f_20 += f_71;
+						f_21 += f_83;
+						f_27 += f_72;
+						f_28 += f_84;
+						f_38 += f_73;
+						f_39 += f_85;
+						f_41 += f_74;
+						f_42 += f_86;
+						f_44 += f_75;
+						f_45 += f_87;
+						f_47 += f_76;
+						f_48 += f_88;
+						f_50 += f_77;
+						f_51 += f_89;
+						f_53 += f_78;
+						f_54 += f_90;
+						f_4 += (float) this.anInt1705;
+					}
+				}
+			} else {
+				f_8 = f_7;
+				f_11 = f_10;
+				f_14 = f_13;
+				f_17 = f_16;
+				f_20 = f_19;
+				f_27 = f_26;
+				f_38 = f_35;
+				f_41 = f_40;
+				f_44 = f_43;
+				f_47 = f_46;
+				f_50 = f_49;
+				f_53 = f_52;
+				if (f_4 < 0.0F) {
+					f_7 -= f_55 * f_4;
+					f_8 -= f_79 * f_4;
+					f_10 -= f_56 * f_4;
+					f_11 -= f_80 * f_4;
+					f_13 -= f_57 * f_4;
+					f_14 -= f_81 * f_4;
+					f_16 -= f_58 * f_4;
+					f_17 -= f_82 * f_4;
+					f_19 -= f_59 * f_4;
+					f_20 -= f_83 * f_4;
+					f_26 -= f_60 * f_4;
+					f_27 -= f_84 * f_4;
+					f_35 -= f_61 * f_4;
+					f_38 -= f_85 * f_4;
+					f_40 -= f_62 * f_4;
+					f_41 -= f_86 * f_4;
+					f_43 -= f_63 * f_4;
+					f_44 -= f_87 * f_4;
+					f_46 -= f_64 * f_4;
+					f_47 -= f_88 * f_4;
+					f_49 -= f_65 * f_4;
+					f_50 -= f_89 * f_4;
+					f_52 -= f_66 * f_4;
+					f_53 -= f_90 * f_4;
+					f_4 = 0.0F;
+				}
+
+				if (f_6 < 0.0F) {
+					f_9 -= f_67 * f_6;
+					f_12 -= f_68 * f_6;
+					f_15 -= f_69 * f_6;
+					f_18 -= f_70 * f_6;
+					f_21 -= f_71 * f_6;
+					f_28 -= f_72 * f_6;
+					f_39 -= f_73 * f_6;
+					f_42 -= f_74 * f_6;
+					f_45 -= f_75 * f_6;
+					f_48 -= f_76 * f_6;
+					f_51 -= f_77 * f_6;
+					f_54 -= f_78 * f_6;
+					f_6 = 0.0F;
+				}
+
+				if (f_4 != f_6 && f_79 < f_55 || f_4 == f_6 && f_67 > f_55) {
+					f_4 = (float) ((int) (f_4 + 0.5F));
+					f_6 = (float) ((int) (f_6 + 0.5F));
+					f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+					f_6 -= f_4;
+
+					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_8, (int) f_7, f_11, f_10, f_14, f_13, f_17, f_16, f_20, f_19, f_27, f_26, f_38, f_35, f_41, f_40, f_44, f_43, f_47, f_46, f_50, f_49, f_53, f_52);
+						f_7 += f_55;
+						f_8 += f_79;
+						f_10 += f_56;
+						f_11 += f_80;
+						f_13 += f_57;
+						f_14 += f_81;
+						f_16 += f_58;
+						f_17 += f_82;
+						f_19 += f_59;
+						f_20 += f_83;
+						f_26 += f_60;
+						f_27 += f_84;
+						f_35 += f_61;
+						f_38 += f_85;
+						f_40 += f_62;
+						f_41 += f_86;
+						f_43 += f_63;
+						f_44 += f_87;
+						f_46 += f_64;
+						f_47 += f_88;
+						f_49 += f_65;
+						f_50 += f_89;
+						f_52 += f_66;
+						f_53 += f_90;
+					}
+
+					while (--f_5 >= 0.0F) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_39, f_35, f_42, f_40, f_45, f_43, f_48, f_46, f_51, f_49, f_54, f_52);
+						f_9 += f_67;
+						f_7 += f_55;
+						f_12 += f_68;
+						f_10 += f_56;
+						f_15 += f_69;
+						f_13 += f_57;
+						f_18 += f_70;
+						f_16 += f_58;
+						f_21 += f_71;
+						f_19 += f_59;
+						f_28 += f_72;
+						f_26 += f_60;
+						f_39 += f_73;
+						f_35 += f_61;
+						f_42 += f_74;
+						f_40 += f_62;
+						f_45 += f_75;
+						f_43 += f_63;
+						f_48 += f_76;
+						f_46 += f_64;
+						f_51 += f_77;
+						f_49 += f_65;
+						f_54 += f_78;
+						f_52 += f_66;
+						f_4 += (float) this.anInt1705;
+					}
+				} else {
+					f_4 = (float) ((int) (f_4 + 0.5F));
+					f_6 = (float) ((int) (f_6 + 0.5F));
+					f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+					f_6 -= f_4;
+
+					for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_7, (int) f_8, f_10, f_11, f_13, f_14, f_16, f_17, f_19, f_20, f_26, f_27, f_35, f_38, f_40, f_41, f_43, f_44, f_46, f_47, f_49, f_50, f_52, f_53);
+						f_8 += f_79;
+						f_7 += f_55;
+						f_11 += f_80;
+						f_10 += f_56;
+						f_14 += f_81;
+						f_13 += f_57;
+						f_17 += f_82;
+						f_16 += f_58;
+						f_20 += f_83;
+						f_19 += f_59;
+						f_27 += f_84;
+						f_26 += f_60;
+						f_38 += f_85;
+						f_35 += f_61;
+						f_41 += f_86;
+						f_40 += f_62;
+						f_44 += f_87;
+						f_43 += f_63;
+						f_47 += f_88;
+						f_46 += f_64;
+						f_50 += f_89;
+						f_49 += f_65;
+						f_53 += f_90;
+						f_52 += f_66;
+					}
+
+					while (--f_5 >= 0.0F) {
+						this.method2427(bool_2, bool_3, this.anIntArray1689, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_35, f_39, f_40, f_42, f_43, f_45, f_46, f_48, f_49, f_51, f_52, f_54);
+						f_7 += f_55;
+						f_9 += f_67;
+						f_10 += f_56;
+						f_12 += f_68;
+						f_13 += f_57;
+						f_15 += f_69;
+						f_16 += f_58;
+						f_18 += f_70;
+						f_19 += f_59;
+						f_21 += f_71;
+						f_26 += f_60;
+						f_28 += f_72;
+						f_35 += f_61;
+						f_39 += f_73;
+						f_40 += f_62;
+						f_42 += f_74;
+						f_43 += f_63;
+						f_45 += f_75;
+						f_46 += f_64;
+						f_48 += f_76;
+						f_49 += f_65;
+						f_51 += f_77;
+						f_52 += f_66;
+						f_54 += f_78;
+						f_4 += (float) this.anInt1705;
+					}
+				}
+			}
+		}
+
+	}
+
+	final void method2422(boolean bool_1, boolean bool_2, int[] ints_3, int i_4, int i_5, int i_6, int i_7, int i_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16) {
+		if (this.aBool1708) {
+			if (i_8 > this.anInt1684) {
+				i_8 = this.anInt1684;
+			}
+
+			if (i_7 < 0) {
+				i_7 = 0;
+			}
+		}
+
+		if (i_7 < i_8) {
+			int i_17;
+			int i_18;
+			int i_19;
+			int i_20;
+			int i_21;
+			int i_22;
+			if (this.aBool1676) {
+				i_4 += i_7;
+				f_11 += f_12 * (float) i_7;
+				f_13 += f_14 * (float) i_7;
+				f_15 += f_16 * (float) i_7;
+				if (this.aBool1675) {
+					i_6 = i_8 - i_7 >> 2;
+					f_12 *= 4.0F;
+					f_14 *= 4.0F;
+					f_16 *= 4.0F;
+					if (this.anInt1674 == 0) {
+						if (i_6 > 0) {
+							do {
+								i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								ints_3[i_4++] = i_5;
+								ints_3[i_4++] = i_5;
+								ints_3[i_4++] = i_5;
+								ints_3[i_4++] = i_5;
+								--i_6;
+							} while (i_6 > 0);
+						}
+
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+
+							do {
+								ints_3[i_4++] = i_5;
+								--i_6;
+							} while (i_6 > 0);
+						}
+					} else if (!this.aBool1672) {
+						i_17 = this.anInt1674;
+						i_19 = 256 - this.anInt1674;
+						if (i_6 > 0) {
+							do {
+								i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+								i_18 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4++] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									ints_3[i_4++] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									ints_3[i_4++] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									ints_3[i_4++] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+								} else {
+									ints_3[i_4++] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									ints_3[i_4++] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									ints_3[i_4++] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									ints_3[i_4++] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+								}
+
+								--i_6;
+							} while (i_6 > 0);
+						}
+
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+							i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+
+							do {
+								i_18 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4++] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+								} else {
+									ints_3[i_4++] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+								}
+
+								--i_6;
+							} while (i_6 > 0);
+						}
+					} else {
+						if (i_6 > 0) {
+							do {
+								i_5 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								i_19 = i_4++;
+								i_21 = ints_3[i_19];
+								i_20 = i_5 + i_21;
+								i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+								i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+								ints_3[i_19] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+								i_20 = i_4++;
+								int i_23 = ints_3[i_20];
+								int i_24 = i_5 + i_23;
+								int i_25 = (i_23 & 0xff00ff) + (i_5 & 0xff00ff);
+								i_23 = (i_25 & 0x1000100) + (i_24 - i_25 & 0x10000);
+								ints_3[i_20] = ~0xffffff | i_24 - i_23 | i_23 - (i_23 >>> 8);
+								i_24 = i_4++;
+								int i_26 = ints_3[i_24];
+								int i_27 = i_5 + i_26;
+								int i_28 = (i_26 & 0xff00ff) + (i_5 & 0xff00ff);
+								i_26 = (i_28 & 0x1000100) + (i_27 - i_28 & 0x10000);
+								ints_3[i_24] = ~0xffffff | i_27 - i_26 | i_26 - (i_26 >>> 8);
+								i_27 = i_4++;
+								int i_29 = ints_3[i_27];
+								int i_30 = i_5 + i_29;
+								int i_31 = (i_29 & 0xff00ff) + (i_5 & 0xff00ff);
+								i_29 = (i_31 & 0x1000100) + (i_30 - i_31 & 0x10000);
+								ints_3[i_27] = ~0xffffff | i_30 - i_29 | i_29 - (i_29 >>> 8);
+								--i_6;
+							} while (i_6 > 0);
+						}
+
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+
+							do {
+								i_19 = i_4++;
+								i_21 = ints_3[i_19];
+								i_20 = i_5 + i_21;
+								i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+								i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+								ints_3[i_19] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+								--i_6;
+							} while (i_6 > 0);
+						}
+					}
+				} else {
+					i_6 = i_8 - i_7;
+					if (this.anInt1674 == 0) {
+						do {
+							ints_3[i_4++] = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+							f_11 += f_12;
+							f_13 += f_14;
+							f_15 += f_16;
+							--i_6;
+						} while (i_6 > 0);
+					} else if (!this.aBool1672) {
+						i_17 = this.anInt1674;
+						i_19 = 256 - this.anInt1674;
+
+						do {
+							i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+							f_11 += f_12;
+							f_13 += f_14;
+							f_15 += f_16;
+							i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+							i_18 = ints_3[i_4];
+							if (bool_2) {
+								ints_3[i_4++] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+							} else {
+								ints_3[i_4++] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+							}
+
+							--i_6;
+						} while (i_6 > 0);
+					} else {
+						do {
+							i_19 = i_4++;
+							i_18 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+							i_21 = ints_3[i_19];
+							i_20 = i_18 + i_21;
+							i_22 = (i_18 & 0xff00ff) + (i_21 & 0xff00ff);
+							i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+							ints_3[i_19] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+							f_11 += f_12;
+							f_13 += f_14;
+							f_15 += f_16;
+							--i_6;
+						} while (i_6 > 0);
+					}
+				}
+			} else {
+				i_4 += i_7 - 1;
+				f_9 += f_10 * (float) i_7;
+				f_11 += f_12 * (float) i_7;
+				f_13 += f_14 * (float) i_7;
+				f_15 += f_16 * (float) i_7;
 				if (this.aClass185_1687.aBool2334) {
 					if (this.aBool1675) {
-						var6 = var8 - var7 >> 2;
-						var12 *= 4.0F;
-						var14 *= 4.0F;
-						var16 *= 4.0F;
+						i_6 = i_8 - i_7 >> 2;
+						f_12 *= 4.0F;
+						f_14 *= 4.0F;
+						f_16 *= 4.0F;
 						if (this.anInt1674 == 0) {
-							if (var6 > 0) {
+							if (i_6 > 0) {
 								do {
-									var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-									var11 += var12;
-									var13 += var14;
-									var15 += var16;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var3[var4] = var5;
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+									f_11 += f_12;
+									f_13 += f_14;
+									f_15 += f_16;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										ints_3[i_4] = i_5;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var3[var4] = var5;
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										ints_3[i_4] = i_5;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var3[var4] = var5;
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										ints_3[i_4] = i_5;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var3[var4] = var5;
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										ints_3[i_4] = i_5;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									--var6;
-								} while (var6 > 0);
+									f_9 += f_10;
+									--i_6;
+								} while (i_6 > 0);
 							}
 
-							var6 = var8 - var7 & 3;
-							if (var6 > 0) {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
+							i_6 = i_8 - i_7 & 0x3;
+							if (i_6 > 0) {
+								i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
 
 								do {
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var3[var4] = var5;
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										ints_3[i_4] = i_5;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									--var6;
-								} while (var6 > 0);
+									f_9 += f_10;
+									--i_6;
+								} while (i_6 > 0);
 							}
 						} else if (!this.aBool1672) {
-							var17 = this.anInt1674;
-							var18 = 256 - this.anInt1674;
-							if (var6 > 0) {
+							i_17 = this.anInt1674;
+							i_19 = 256 - this.anInt1674;
+							if (i_6 > 0) {
 								do {
-									var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-									var11 += var12;
-									var13 += var14;
-									var15 += var16;
-									var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var19 = var3[var4];
-										if (var2) {
-											var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+									i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+									f_11 += f_12;
+									f_13 += f_14;
+									f_15 += f_16;
+									i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_18 = ints_3[i_4];
+										if (bool_2) {
+											ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										} else {
-											var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+											ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										}
 
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var19 = var3[var4];
-										if (var2) {
-											var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_18 = ints_3[i_4];
+										if (bool_2) {
+											ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										} else {
-											var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+											ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										}
 
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var19 = var3[var4];
-										if (var2) {
-											var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_18 = ints_3[i_4];
+										if (bool_2) {
+											ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										} else {
-											var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+											ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										}
 
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var19 = var3[var4];
-										if (var2) {
-											var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_18 = ints_3[i_4];
+										if (bool_2) {
+											ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										} else {
-											var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+											ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										}
 
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									--var6;
-								} while (var6 > 0);
+									f_9 += f_10;
+									--i_6;
+								} while (i_6 > 0);
 							}
 
-							var6 = var8 - var7 & 3;
-							if (var6 > 0) {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
+							i_6 = i_8 - i_7 & 0x3;
+							if (i_6 > 0) {
+								i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
 
 								do {
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var19 = var3[var4];
-										if (var2) {
-											var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_18 = ints_3[i_4];
+										if (bool_2) {
+											ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										} else {
-											var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+											ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 										}
 
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									--var6;
-								} while (var6 > 0);
+									f_9 += f_10;
+									--i_6;
+								} while (i_6 > 0);
 							}
 						} else {
-							if (var6 > 0) {
+							if (i_6 > 0) {
 								do {
-									var5 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-									var11 += var12;
-									var13 += var14;
-									var15 += var16;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var20 = var3[var4];
-										var21 = var5 + var20;
-										var22 = (var5 & 16711935) + (var20 & 16711935);
-										var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-										var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									i_5 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+									f_11 += f_12;
+									f_13 += f_14;
+									f_15 += f_16;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_21 = ints_3[i_4];
+										i_20 = i_5 + i_21;
+										i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+										i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+										ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var20 = var3[var4];
-										var21 = var5 + var20;
-										var22 = (var5 & 16711935) + (var20 & 16711935);
-										var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-										var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_21 = ints_3[i_4];
+										i_20 = i_5 + i_21;
+										i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+										i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+										ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var20 = var3[var4];
-										var21 = var5 + var20;
-										var22 = (var5 & 16711935) + (var20 & 16711935);
-										var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-										var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_21 = ints_3[i_4];
+										i_20 = i_5 + i_21;
+										i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+										i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+										ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var20 = var3[var4];
-										var21 = var5 + var20;
-										var22 = (var5 & 16711935) + (var20 & 16711935);
-										var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-										var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									f_9 += f_10;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_21 = ints_3[i_4];
+										i_20 = i_5 + i_21;
+										i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+										i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+										ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									--var6;
-								} while (var6 > 0);
+									f_9 += f_10;
+									--i_6;
+								} while (i_6 > 0);
 							}
 
-							var6 = var8 - var7 & 3;
-							if (var6 > 0) {
-								var5 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
+							i_6 = i_8 - i_7 & 0x3;
+							if (i_6 > 0) {
+								i_5 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
 
 								do {
-									++var4;
-									if (!var1 || var9 < this.aFloatArray1690[var4]) {
-										var20 = var3[var4];
-										var21 = var5 + var20;
-										var22 = (var5 & 16711935) + (var20 & 16711935);
-										var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-										var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-										if (var1) {
-											this.aFloatArray1690[var4] = var9;
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_21 = ints_3[i_4];
+										i_20 = i_5 + i_21;
+										i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+										i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+										ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
 										}
 									}
 
-									var9 += var10;
-									--var6;
-								} while (var6 > 0);
+									f_9 += f_10;
+									--i_6;
+								} while (i_6 > 0);
 							}
 						}
-
 					} else {
-						var6 = var8 - var7;
-						if (this.anInt1674 == 0) {
-							do {
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var3[var4] = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-									if (var1) {
-										this.aFloatArray1690[var4] = var9;
-									}
-								}
-
-								var9 += var10;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								--var6;
-							} while (var6 > 0);
-						} else if (!this.aBool1672) {
-							var17 = this.anInt1674;
-							var18 = 256 - this.anInt1674;
-
-							do {
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-									var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-									var19 = var3[var4];
-									if (var2) {
-										var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-									} else {
-										var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+						i_6 = i_8 - i_7;
+						if (this.anInt1674 != 0) {
+							if (this.aBool1672) {
+								do {
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_18 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+										i_21 = ints_3[i_4];
+										i_20 = i_18 + i_21;
+										i_22 = (i_18 & 0xff00ff) + (i_21 & 0xff00ff);
+										i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+										ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
+										}
 									}
 
-									if (var1) {
-										this.aFloatArray1690[var4] = var9;
-									}
-								}
+									f_9 += f_10;
+									f_11 += f_12;
+									f_13 += f_14;
+									f_15 += f_16;
+									--i_6;
+								} while (i_6 > 0);
+							} else {
+								i_17 = this.anInt1674;
+								i_19 = 256 - this.anInt1674;
 
-								var9 += var10;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								--var6;
-							} while (var6 > 0);
+								do {
+									++i_4;
+									if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+										i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+										i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+										i_18 = ints_3[i_4];
+										if (bool_2) {
+											ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+										} else {
+											ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+										}
+
+										if (bool_1) {
+											this.aFloatArray1690[i_4] = f_9;
+										}
+									}
+
+									f_9 += f_10;
+									f_11 += f_12;
+									f_13 += f_14;
+									f_15 += f_16;
+									--i_6;
+								} while (i_6 > 0);
+							}
 						} else {
 							do {
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var19 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-									var20 = var3[var4];
-									var21 = var19 + var20;
-									var22 = (var19 & 16711935) + (var20 & 16711935);
-									var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-									var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
-									if (var1) {
-										this.aFloatArray1690[var4] = var9;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_9;
 									}
 								}
 
-								var9 += var10;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								--i_6;
+							} while (i_6 > 0);
 						}
-
 					}
 				} else if (this.aBool1675) {
-					var6 = var8 - var7 >> 2;
-					var12 *= 4.0F;
-					var14 *= 4.0F;
-					var16 *= 4.0F;
+					i_6 = i_8 - i_7 >> 2;
+					f_12 *= 4.0F;
+					f_14 *= 4.0F;
+					f_16 *= 4.0F;
 					if (this.anInt1674 == 0) {
-						if (var6 > 0) {
+						if (i_6 > 0) {
 							do {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
+								i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
 								}
 
-								var9 += var10;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								--i_6;
+							} while (i_6 > 0);
 						}
 
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
 
 							do {
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
 								}
 
-								var9 += var10;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								--i_6;
+							} while (i_6 > 0);
 						}
 					} else if (!this.aBool1672) {
-						var17 = this.anInt1674;
-						var18 = 256 - this.anInt1674;
-						if (var6 > 0) {
+						i_17 = this.anInt1674;
+						i_19 = 256 - this.anInt1674;
+						if (i_6 > 0) {
 							do {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var19 = var3[var4];
-									if (var2) {
-										var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_18 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									}
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var19 = var3[var4];
-									if (var2) {
-										var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_18 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									}
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var19 = var3[var4];
-									if (var2) {
-										var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_18 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									}
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var19 = var3[var4];
-									if (var2) {
-										var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_18 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									}
 								}
 
-								var9 += var10;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								--i_6;
+							} while (i_6 > 0);
 						}
 
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-							var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+							i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
 
 							do {
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var19 = var3[var4];
-									if (var2) {
-										var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_18 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
 									}
 								}
 
-								var9 += var10;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								--i_6;
+							} while (i_6 > 0);
 						}
 					} else {
-						if (var6 > 0) {
+						if (i_6 > 0) {
 							do {
-								var5 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var11 += var12;
-								var13 += var14;
-								var15 += var16;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var20 = var3[var4];
-									var21 = var5 + var20;
-									var22 = (var5 & 16711935) + (var20 & 16711935);
-									var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-									var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
+								i_5 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_21 = ints_3[i_4];
+									i_20 = i_5 + i_21;
+									i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+									i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+									ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var20 = var3[var4];
-									var21 = var5 + var20;
-									var22 = (var5 & 16711935) + (var20 & 16711935);
-									var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-									var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_21 = ints_3[i_4];
+									i_20 = i_5 + i_21;
+									i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+									i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+									ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var20 = var3[var4];
-									var21 = var5 + var20;
-									var22 = (var5 & 16711935) + (var20 & 16711935);
-									var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-									var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_21 = ints_3[i_4];
+									i_20 = i_5 + i_21;
+									i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+									i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+									ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
 								}
 
-								var9 += var10;
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var20 = var3[var4];
-									var21 = var5 + var20;
-									var22 = (var5 & 16711935) + (var20 & 16711935);
-									var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-									var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_21 = ints_3[i_4];
+									i_20 = i_5 + i_21;
+									i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+									i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+									ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
 								}
 
-								var9 += var10;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								--i_6;
+							} while (i_6 > 0);
 						}
 
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
 
 							do {
-								++var4;
-								if (!var1 || var9 < this.aFloatArray1690[var4]) {
-									var20 = var3[var4];
-									var21 = var5 + var20;
-									var22 = (var5 & 16711935) + (var20 & 16711935);
-									var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-									var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_21 = ints_3[i_4];
+									i_20 = i_5 + i_21;
+									i_22 = (i_21 & 0xff00ff) + (i_5 & 0xff00ff);
+									i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+									ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
 								}
 
-								var9 += var10;
-								--var6;
-							} while (var6 > 0);
+								f_9 += f_10;
+								--i_6;
+							} while (i_6 > 0);
 						}
 					}
-
 				} else {
-					var6 = var8 - var7;
-					if (this.anInt1674 == 0) {
-						do {
-							++var4;
-							if (!var1 || var9 < this.aFloatArray1690[var4]) {
-								var3[var4] = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-							}
-
-							var9 += var10;
-							var11 += var12;
-							var13 += var14;
-							var15 += var16;
-							--var6;
-						} while (var6 > 0);
-					} else if (!this.aBool1672) {
-						var17 = this.anInt1674;
-						var18 = 256 - this.anInt1674;
-
-						do {
-							++var4;
-							if (!var1 || var9 < this.aFloatArray1690[var4]) {
-								var5 = -16777216 | (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var5 = ((var5 & 16711935) * var18 >> 8 & 16711935) + ((var5 & '\uff00') * var18 >> 8 & '\uff00');
-								var19 = var3[var4];
-								if (var2) {
-									var3[var4] = (var18 | var19 >> 24) << 24 | var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
-								} else {
-									var3[var4] = var5 + ((var19 & 16711935) * var17 >> 8 & 16711935) + ((var19 & '\uff00') * var17 >> 8 & '\uff00');
+					i_6 = i_8 - i_7;
+					if (this.anInt1674 != 0) {
+						if (this.aBool1672) {
+							do {
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_18 = (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+									i_21 = ints_3[i_4];
+									i_20 = i_18 + i_21;
+									i_22 = (i_18 & 0xff00ff) + (i_21 & 0xff00ff);
+									i_21 = (i_22 & 0x1000100) + (i_20 - i_22 & 0x10000);
+									ints_3[i_4] = ~0xffffff | i_20 - i_21 | i_21 - (i_21 >>> 8);
 								}
-							}
 
-							var9 += var10;
-							var11 += var12;
-							var13 += var14;
-							var15 += var16;
-							--var6;
-						} while (var6 > 0);
+								f_9 += f_10;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								--i_6;
+							} while (i_6 > 0);
+						} else {
+							i_17 = this.anInt1674;
+							i_19 = 256 - this.anInt1674;
+
+							do {
+								++i_4;
+								if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+									i_5 = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
+									i_5 = (i_19 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_19 * (i_5 & 0xff00) >> 8 & 0xff00);
+									i_18 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_19 | i_18 >> 24) << 24 | i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									} else {
+										ints_3[i_4] = i_5 + ((i_18 & 0xff00ff) * i_17 >> 8 & 0xff00ff) + (i_17 * (i_18 & 0xff00) >> 8 & 0xff00);
+									}
+								}
+
+								f_9 += f_10;
+								f_11 += f_12;
+								f_13 += f_14;
+								f_15 += f_16;
+								--i_6;
+							} while (i_6 > 0);
+						}
 					} else {
 						do {
-							++var4;
-							if (!var1 || var9 < this.aFloatArray1690[var4]) {
-								var19 = (int) var11 & 16711680 | (int) var13 & '\uff00' | (int) var15 & 255;
-								var20 = var3[var4];
-								var21 = var19 + var20;
-								var22 = (var19 & 16711935) + (var20 & 16711935);
-								var20 = (var22 & 16777472) + (var21 - var22 & 65536);
-								var3[var4] = -16777216 | var21 - var20 | var20 - (var20 >>> 8);
+							++i_4;
+							if (!bool_1 || f_9 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = ~0xffffff | (int) f_11 & 0xff0000 | (int) f_13 & 0xff00 | (int) f_15 & 0xff;
 							}
 
-							var9 += var10;
-							var11 += var12;
-							var13 += var14;
-							var15 += var16;
-							--var6;
-						} while (var6 > 0);
+							f_9 += f_10;
+							f_11 += f_12;
+							f_13 += f_14;
+							f_15 += f_16;
+							--i_6;
+						} while (i_6 > 0);
 					}
-
 				}
 			}
 		}
+
 	}
 
-	ChoppyItemFixClass(HardwareRenderer var1, Class185 var2) {
-		this.aClass505_Sub3_1686 = var1;
-		this.aClass185_1687 = var2;
-		this.anInt1705 = this.aClass505_Sub3_1686.anInt8980 * 444800403;
+	ChoppyItemFixClass(HardwareRenderer hardwarerenderer_1, Class185 class185_2) {
+		this.aClass505_Sub3_1686 = hardwarerenderer_1;
+		this.aClass185_1687 = class185_2;
+		this.anInt1705 = this.aClass505_Sub3_1686.anInt8980;
 		this.anIntArray1689 = this.aClass505_Sub3_1686.anIntArray8979;
 		this.aFloatArray1690 = this.aClass505_Sub3_1686.aFloatArray9010;
 	}
 
-	final void method2424(boolean var1, boolean var2, boolean var3, float var4, float var5, float var6, float var7, float var8, float var9, float var10, float var11, float var12, float var13, float var14, float var15, float var16, float var17, float var18, float var19, float var20, float var21, int var22, int var23, int var24, int var25, float var26, float var27, float var28, int var29) {
-		if (!var1) {
-			this.method2428(false, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, 0);
+	final void method2424(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, int i_22, int i_23, int i_24, int i_25, float f_26, float f_27, float f_28, int i_29) {
+		if (!bool_1) {
+			this.method2428(false, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, 0);
 		} else {
-			int var31;
-			if (var29 != this.anInt1692) {
-				this.anIntArray1693 = this.aClass505_Sub3_1686.method14359(var29);
+			int i_30;
+			if (i_29 != this.anInt1692) {
+				this.anIntArray1693 = this.aClass505_Sub3_1686.method14359(i_29);
 				if (this.anIntArray1693 == null) {
-					this.anInt1674 = 255 - (var22 >> 24 & 255);
-					int var74 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(var29), 638838203) & '\uffff'];
-					var31 = -16777216 | (var22 >> 16 & 255) * (var74 >> 16 & 255) << 8 & 16711680 | (var22 >> 8 & 255) * (var74 >> 8 & 255) & '\uff00' | (var22 & 255) * (var74 & 255) >> 8;
-					this.method2425(true, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, Class302.method5364(var31, var25, var26, 833509259), Class302.method5364(var31, var25, var27, 833509259), Class302.method5364(var31, var25, var28, 833509259));
+					this.anInt1674 = 255 - (i_22 >> 24 & 0xff);
+					int i_74 = Class335.anIntArray3916[Class372.method6362(this.aClass505_Sub3_1686.method14362(i_29), 638838203) & 0xffff];
+					i_30 = ~0xffffff | (i_74 >> 16 & 0xff) * (i_22 >> 16 & 0xff) << 8 & 0xff0000 | (i_22 >> 8 & 0xff) * (i_74 >> 8 & 0xff) & 0xff00 | (i_74 & 0xff) * (i_22 & 0xff) >> 8;
+					this.method2425(true, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, Class302.method5364(i_30, i_25, f_26, 833509259), Class302.method5364(i_30, i_25, f_27, 833509259), Class302.method5364(i_30, i_25, f_28, 833509259));
 					return;
 				}
 
-				this.anInt1694 = this.aClass505_Sub3_1686.method14377(var29) ? 64 : this.aClass505_Sub3_1686.anInt9005 * -1392111239;
+				this.anInt1694 = this.aClass505_Sub3_1686.method14377(i_29) ? 64 : this.aClass505_Sub3_1686.anInt9005;
 				this.anInt1691 = this.anInt1694 - 1;
-				this.anInt1697 = this.aClass505_Sub3_1686.method14361(var29);
-				this.aBool1703 = this.aClass505_Sub3_1686.method14403(var29);
+				this.anInt1697 = this.aClass505_Sub3_1686.method14361(i_29);
+				this.aBool1703 = this.aClass505_Sub3_1686.method14403(i_29);
 			}
 
-			this.anInt1677 = var25;
-			float var30;
-			if (var4 > var5 || var4 > var6) {
-				if (var5 <= var6) {
-					var30 = var7;
-					var7 = var8;
-					var8 = var30;
-					var30 = var4;
-					var4 = var5;
-					var5 = var30;
-					var30 = var10;
-					var10 = var11;
-					var11 = var30;
-					var30 = var16;
-					var16 = var17;
-					var17 = var30;
-					var30 = var19;
-					var19 = var20;
-					var20 = var30;
-					var30 = var13;
-					var13 = var14;
-					var14 = var30;
-					var30 = var26;
-					var26 = var27;
-					var27 = var30;
-					var31 = var22;
-					var22 = var23;
-					var23 = var31;
+			this.anInt1677 = i_25;
+			float f_31;
+			if (f_4 > f_5 || f_4 > f_6) {
+				if (f_5 <= f_6) {
+					f_31 = f_7;
+					f_7 = f_8;
+					f_8 = f_31;
+					f_31 = f_4;
+					f_4 = f_5;
+					f_5 = f_31;
+					f_31 = f_10;
+					f_10 = f_11;
+					f_11 = f_31;
+					f_31 = f_16;
+					f_16 = f_17;
+					f_17 = f_31;
+					f_31 = f_19;
+					f_19 = f_20;
+					f_20 = f_31;
+					f_31 = f_13;
+					f_13 = f_14;
+					f_14 = f_31;
+					f_31 = f_26;
+					f_26 = f_27;
+					f_27 = f_31;
+					i_30 = i_22;
+					i_22 = i_23;
+					i_23 = i_30;
 				} else {
-					var30 = var7;
-					var7 = var9;
-					var9 = var30;
-					var30 = var4;
-					var4 = var6;
-					var6 = var30;
-					var30 = var10;
-					var10 = var12;
-					var12 = var30;
-					var30 = var16;
-					var16 = var18;
-					var18 = var30;
-					var30 = var19;
-					var19 = var21;
-					var21 = var30;
-					var30 = var13;
-					var13 = var15;
-					var15 = var30;
-					var30 = var26;
-					var26 = var28;
-					var28 = var30;
-					var31 = var22;
-					var22 = var24;
-					var24 = var31;
+					f_31 = f_7;
+					f_7 = f_9;
+					f_9 = f_31;
+					f_31 = f_4;
+					f_4 = f_6;
+					f_6 = f_31;
+					f_31 = f_10;
+					f_10 = f_12;
+					f_12 = f_31;
+					f_31 = f_16;
+					f_16 = f_18;
+					f_18 = f_31;
+					f_31 = f_19;
+					f_19 = f_21;
+					f_21 = f_31;
+					f_31 = f_13;
+					f_13 = f_15;
+					f_15 = f_31;
+					f_31 = f_26;
+					f_26 = f_28;
+					f_28 = f_31;
+					i_30 = i_22;
+					i_22 = i_24;
+					i_24 = i_30;
 				}
 			}
 
-			var16 /= var13;
-			var17 /= var14;
-			var18 /= var15;
-			var19 /= var13;
-			var20 /= var14;
-			var21 /= var15;
-			var10 = 1.0F / var10;
-			var11 = 1.0F / var11;
-			var12 = 1.0F / var12;
-			var13 = 1.0F / var13;
-			var14 = 1.0F / var14;
-			var15 = 1.0F / var15;
-			var30 = var22 >> 24 & 255;
-			float var73 = var23 >> 24 & 255;
-			float var32 = var24 >> 24 & 255;
-			float var33 = var22 >> 16 & 255;
-			float var34 = var23 >> 16 & 255;
-			float var35 = var24 >> 16 & 255;
-			float var36 = var22 >> 8 & 255;
-			float var37 = var23 >> 8 & 255;
-			float var38 = var24 >> 8 & 255;
-			float var39 = var22 & 255;
-			float var40 = var23 & 255;
-			float var41 = var24 & 255;
-			float var42 = 0.0F;
-			float var43 = 0.0F;
-			float var44 = 0.0F;
-			float var45 = 0.0F;
-			float var46 = 0.0F;
-			float var47 = 0.0F;
-			float var48 = 0.0F;
-			float var49 = 0.0F;
-			float var50 = 0.0F;
-			float var51 = 0.0F;
-			float var52;
-			if (var5 != var4) {
-				var52 = var5 - var4;
-				var42 = (var8 - var7) / var52;
-				var43 = (var11 - var10) / var52;
-				var44 = (var14 - var13) / var52;
-				var45 = (var17 - var16) / var52;
-				var46 = (var20 - var19) / var52;
-				var47 = (var27 - var26) / var52;
-				var48 = (var73 - var30) / var52;
-				var49 = (var34 - var33) / var52;
-				var50 = (var37 - var36) / var52;
-				var51 = (var40 - var39) / var52;
+			f_16 /= f_13;
+			f_17 /= f_14;
+			f_18 /= f_15;
+			f_19 /= f_13;
+			f_20 /= f_14;
+			f_21 /= f_15;
+			f_10 = 1.0F / f_10;
+			f_11 = 1.0F / f_11;
+			f_12 = 1.0F / f_12;
+			f_13 = 1.0F / f_13;
+			f_14 = 1.0F / f_14;
+			f_15 = 1.0F / f_15;
+			f_31 = (float) (i_22 >> 24 & 0xff);
+			float f_32 = (float) (i_23 >> 24 & 0xff);
+			float f_33 = (float) (i_24 >> 24 & 0xff);
+			float f_34 = (float) (i_22 >> 16 & 0xff);
+			float f_35 = (float) (i_23 >> 16 & 0xff);
+			float f_36 = (float) (i_24 >> 16 & 0xff);
+			float f_37 = (float) (i_22 >> 8 & 0xff);
+			float f_38 = (float) (i_23 >> 8 & 0xff);
+			float f_39 = (float) (i_24 >> 8 & 0xff);
+			float f_40 = (float) (i_22 & 0xff);
+			float f_41 = (float) (i_23 & 0xff);
+			float f_42 = (float) (i_24 & 0xff);
+			float f_43 = 0.0F;
+			float f_44 = 0.0F;
+			float f_45 = 0.0F;
+			float f_46 = 0.0F;
+			float f_47 = 0.0F;
+			float f_48 = 0.0F;
+			float f_49 = 0.0F;
+			float f_50 = 0.0F;
+			float f_51 = 0.0F;
+			float f_52 = 0.0F;
+			float f_53;
+			if (f_5 != f_4) {
+				f_53 = f_5 - f_4;
+				f_43 = (f_8 - f_7) / f_53;
+				f_44 = (f_11 - f_10) / f_53;
+				f_45 = (f_14 - f_13) / f_53;
+				f_46 = (f_17 - f_16) / f_53;
+				f_47 = (f_20 - f_19) / f_53;
+				f_48 = (f_27 - f_26) / f_53;
+				f_49 = (f_32 - f_31) / f_53;
+				f_50 = (f_35 - f_34) / f_53;
+				f_51 = (f_38 - f_37) / f_53;
+				f_52 = (f_41 - f_40) / f_53;
 			}
 
-			var52 = 0.0F;
-			float var53 = 0.0F;
-			float var54 = 0.0F;
-			float var55 = 0.0F;
-			float var56 = 0.0F;
-			float var57 = 0.0F;
-			float var58 = 0.0F;
-			float var59 = 0.0F;
-			float var60 = 0.0F;
-			float var61 = 0.0F;
-			float var62;
-			if (var6 != var5) {
-				var62 = var6 - var5;
-				var52 = (var9 - var8) / var62;
-				var53 = (var12 - var11) / var62;
-				var54 = (var15 - var14) / var62;
-				var55 = (var18 - var17) / var62;
-				var56 = (var21 - var20) / var62;
-				var57 = (var28 - var27) / var62;
-				var58 = (var32 - var73) / var62;
-				var59 = (var35 - var34) / var62;
-				var60 = (var38 - var37) / var62;
-				var61 = (var41 - var40) / var62;
+			f_53 = 0.0F;
+			float f_54 = 0.0F;
+			float f_55 = 0.0F;
+			float f_56 = 0.0F;
+			float f_57 = 0.0F;
+			float f_58 = 0.0F;
+			float f_59 = 0.0F;
+			float f_60 = 0.0F;
+			float f_61 = 0.0F;
+			float f_62 = 0.0F;
+			float f_63;
+			if (f_6 != f_5) {
+				f_63 = f_6 - f_5;
+				f_53 = (f_9 - f_8) / f_63;
+				f_54 = (f_12 - f_11) / f_63;
+				f_55 = (f_15 - f_14) / f_63;
+				f_56 = (f_18 - f_17) / f_63;
+				f_57 = (f_21 - f_20) / f_63;
+				f_58 = (f_28 - f_27) / f_63;
+				f_59 = (f_33 - f_32) / f_63;
+				f_60 = (f_36 - f_35) / f_63;
+				f_61 = (f_39 - f_38) / f_63;
+				f_62 = (f_42 - f_41) / f_63;
 			}
 
-			var62 = 0.0F;
-			float var63 = 0.0F;
-			float var64 = 0.0F;
-			float var65 = 0.0F;
-			float var66 = 0.0F;
-			float var67 = 0.0F;
-			float var68 = 0.0F;
-			float var69 = 0.0F;
-			float var70 = 0.0F;
-			float var71 = 0.0F;
-			if (var4 != var6) {
-				float var72 = var4 - var6;
-				var62 = (var7 - var9) / var72;
-				var63 = (var10 - var12) / var72;
-				var64 = (var13 - var15) / var72;
-				var65 = (var16 - var18) / var72;
-				var66 = (var19 - var21) / var72;
-				var67 = (var26 - var28) / var72;
-				var68 = (var30 - var32) / var72;
-				var69 = (var33 - var35) / var72;
-				var70 = (var36 - var38) / var72;
-				var71 = (var39 - var41) / var72;
+			f_63 = 0.0F;
+			float f_64 = 0.0F;
+			float f_65 = 0.0F;
+			float f_66 = 0.0F;
+			float f_67 = 0.0F;
+			float f_68 = 0.0F;
+			float f_69 = 0.0F;
+			float f_70 = 0.0F;
+			float f_71 = 0.0F;
+			float f_72 = 0.0F;
+			if (f_4 != f_6) {
+				float f_73 = f_4 - f_6;
+				f_63 = (f_7 - f_9) / f_73;
+				f_64 = (f_10 - f_12) / f_73;
+				f_65 = (f_13 - f_15) / f_73;
+				f_66 = (f_16 - f_18) / f_73;
+				f_67 = (f_19 - f_21) / f_73;
+				f_68 = (f_26 - f_28) / f_73;
+				f_69 = (f_31 - f_33) / f_73;
+				f_70 = (f_34 - f_36) / f_73;
+				f_71 = (f_37 - f_39) / f_73;
+				f_72 = (f_40 - f_42) / f_73;
 			}
 
-			if (var4 < this.anInt1700) {
-				if (var5 > this.anInt1700) {
-					var5 = this.anInt1700;
+			if (f_4 < (float) this.anInt1700) {
+				if (f_5 > (float) this.anInt1700) {
+					f_5 = (float) this.anInt1700;
 				}
 
-				if (var6 > this.anInt1700) {
-					var6 = this.anInt1700;
+				if (f_6 > (float) this.anInt1700) {
+					f_6 = (float) this.anInt1700;
 				}
 
-				if (var5 < var6) {
-					var9 = var7;
-					var12 = var10;
-					var15 = var13;
-					var18 = var16;
-					var21 = var19;
-					var28 = var26;
-					var32 = var30;
-					var35 = var33;
-					var38 = var36;
-					var41 = var39;
-					if (var4 < 0.0F) {
-						var7 -= var42 * var4;
-						var9 -= var62 * var4;
-						var10 -= var43 * var4;
-						var12 -= var63 * var4;
-						var13 -= var44 * var4;
-						var15 -= var64 * var4;
-						var16 -= var45 * var4;
-						var18 -= var65 * var4;
-						var19 -= var46 * var4;
-						var21 -= var66 * var4;
-						var26 -= var47 * var4;
-						var28 -= var67 * var4;
-						var30 -= var48 * var4;
-						var32 -= var68 * var4;
-						var33 -= var48 * var4;
-						var35 -= var68 * var4;
-						var36 -= var48 * var4;
-						var38 -= var68 * var4;
-						var39 -= var48 * var4;
-						var41 -= var68 * var4;
-						var4 = 0.0F;
+				if (f_5 < f_6) {
+					f_9 = f_7;
+					f_12 = f_10;
+					f_15 = f_13;
+					f_18 = f_16;
+					f_21 = f_19;
+					f_28 = f_26;
+					f_33 = f_31;
+					f_36 = f_34;
+					f_39 = f_37;
+					f_42 = f_40;
+					if (f_4 < 0.0F) {
+						f_7 -= f_43 * f_4;
+						f_9 -= f_63 * f_4;
+						f_10 -= f_44 * f_4;
+						f_12 -= f_64 * f_4;
+						f_13 -= f_45 * f_4;
+						f_15 -= f_65 * f_4;
+						f_16 -= f_46 * f_4;
+						f_18 -= f_66 * f_4;
+						f_19 -= f_47 * f_4;
+						f_21 -= f_67 * f_4;
+						f_26 -= f_48 * f_4;
+						f_28 -= f_68 * f_4;
+						f_31 -= f_49 * f_4;
+						f_33 -= f_69 * f_4;
+						f_34 -= f_49 * f_4;
+						f_36 -= f_69 * f_4;
+						f_37 -= f_49 * f_4;
+						f_39 -= f_69 * f_4;
+						f_40 -= f_49 * f_4;
+						f_42 -= f_69 * f_4;
+						f_4 = 0.0F;
 					}
 
-					if (var5 < 0.0F) {
-						var8 -= var52 * var5;
-						var11 -= var53 * var5;
-						var14 -= var54 * var5;
-						var17 -= var55 * var5;
-						var20 -= var56 * var5;
-						var27 -= var57 * var5;
-						var73 -= var58 * var5;
-						var34 -= var59 * var5;
-						var37 -= var60 * var5;
-						var40 -= var61 * var5;
-						var5 = 0.0F;
+					if (f_5 < 0.0F) {
+						f_8 -= f_53 * f_5;
+						f_11 -= f_54 * f_5;
+						f_14 -= f_55 * f_5;
+						f_17 -= f_56 * f_5;
+						f_20 -= f_57 * f_5;
+						f_27 -= f_58 * f_5;
+						f_32 -= f_59 * f_5;
+						f_35 -= f_60 * f_5;
+						f_38 -= f_61 * f_5;
+						f_41 -= f_62 * f_5;
+						f_5 = 0.0F;
 					}
 
-					if ((var4 == var5 || var62 >= var42) && (var4 != var5 || var62 <= var52)) {
-						var4 = ((int) (var4 + 0.5F));
-						var5 = ((int) (var5 + 0.5F));
-						var6 = ((int) (var6 + 0.5F)) - var5;
-						var5 -= var4;
+					if (f_4 != f_5 && f_63 < f_43 || f_4 == f_5 && f_63 > f_53) {
+						f_4 = (float) ((int) (f_4 + 0.5F));
+						f_5 = (float) ((int) (f_5 + 0.5F));
+						f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+						f_5 -= f_4;
 
-						for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var7, (int) var9, var10, var12, var13, var15, var16, var18, var19, var21, var26, var28, var30, var32, var33, var35, var36, var38, var39, var41);
-							var7 += var42;
-							var9 += var62;
-							var10 += var43;
-							var12 += var63;
-							var13 += var44;
-							var15 += var64;
-							var16 += var45;
-							var18 += var65;
-							var19 += var46;
-							var21 += var66;
-							var26 += var47;
-							var28 += var67;
-							var30 += var48;
-							var32 += var68;
-							var33 += var49;
-							var35 += var69;
-							var36 += var50;
-							var38 += var70;
-							var39 += var51;
-							var41 += var71;
+						for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_33, f_31, f_36, f_34, f_39, f_37, f_42, f_40);
+							f_7 += f_43;
+							f_9 += f_63;
+							f_10 += f_44;
+							f_12 += f_64;
+							f_13 += f_45;
+							f_15 += f_65;
+							f_16 += f_46;
+							f_18 += f_66;
+							f_19 += f_47;
+							f_21 += f_67;
+							f_26 += f_48;
+							f_28 += f_68;
+							f_31 += f_49;
+							f_33 += f_69;
+							f_34 += f_50;
+							f_36 += f_70;
+							f_37 += f_51;
+							f_39 += f_71;
+							f_40 += f_52;
+							f_42 += f_72;
 						}
 
-						while (--var6 >= 0.0F) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var8, (int) var9, var11, var12, var14, var15, var17, var18, var20, var21, var27, var28, var73, var32, var34, var35, var37, var38, var40, var41);
-							var8 += var52;
-							var9 += var62;
-							var11 += var53;
-							var12 += var63;
-							var14 += var54;
-							var15 += var64;
-							var17 += var55;
-							var18 += var65;
-							var20 += var56;
-							var21 += var66;
-							var27 += var57;
-							var28 += var67;
-							var73 += var58;
-							var32 += var68;
-							var34 += var59;
-							var35 += var69;
-							var37 += var60;
-							var38 += var70;
-							var40 += var61;
-							var41 += var71;
-							var4 += this.anInt1705;
+						while (--f_6 >= 0.0F) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_9, (int) f_8, f_12, f_11, f_15, f_14, f_18, f_17, f_21, f_20, f_28, f_27, f_33, f_32, f_36, f_35, f_39, f_38, f_42, f_41);
+							f_8 += f_53;
+							f_9 += f_63;
+							f_11 += f_54;
+							f_12 += f_64;
+							f_14 += f_55;
+							f_15 += f_65;
+							f_17 += f_56;
+							f_18 += f_66;
+							f_20 += f_57;
+							f_21 += f_67;
+							f_27 += f_58;
+							f_28 += f_68;
+							f_32 += f_59;
+							f_33 += f_69;
+							f_35 += f_60;
+							f_36 += f_70;
+							f_38 += f_61;
+							f_39 += f_71;
+							f_41 += f_62;
+							f_42 += f_72;
+							f_4 += (float) this.anInt1705;
 						}
 					} else {
-						var4 = ((int) (var4 + 0.5F));
-						var5 = ((int) (var5 + 0.5F));
-						var6 = ((int) (var6 + 0.5F)) - var5;
-						var5 -= var4;
+						f_4 = (float) ((int) (f_4 + 0.5F));
+						f_5 = (float) ((int) (f_5 + 0.5F));
+						f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+						f_5 -= f_4;
 
-						for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var9, (int) var7, var12, var10, var15, var13, var18, var16, var21, var19, var28, var26, var32, var30, var35, var33, var38, var36, var41, var39);
-							var7 += var42;
-							var9 += var62;
-							var10 += var43;
-							var12 += var63;
-							var13 += var44;
-							var15 += var64;
-							var16 += var45;
-							var18 += var65;
-							var19 += var46;
-							var21 += var66;
-							var26 += var47;
-							var28 += var67;
-							var30 += var48;
-							var32 += var68;
-							var33 += var49;
-							var35 += var69;
-							var36 += var50;
-							var38 += var70;
-							var39 += var51;
-							var41 += var71;
+						for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_31, f_33, f_34, f_36, f_37, f_39, f_40, f_42);
+							f_7 += f_43;
+							f_9 += f_63;
+							f_10 += f_44;
+							f_12 += f_64;
+							f_13 += f_45;
+							f_15 += f_65;
+							f_16 += f_46;
+							f_18 += f_66;
+							f_19 += f_47;
+							f_21 += f_67;
+							f_26 += f_48;
+							f_28 += f_68;
+							f_31 += f_49;
+							f_33 += f_69;
+							f_34 += f_50;
+							f_36 += f_70;
+							f_37 += f_51;
+							f_39 += f_71;
+							f_40 += f_52;
+							f_42 += f_72;
 						}
 
-						while (--var6 >= 0.0F) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var9, (int) var8, var12, var11, var15, var14, var18, var17, var21, var20, var28, var27, var32, var73, var35, var34, var38, var37, var41, var40);
-							var8 += var52;
-							var9 += var62;
-							var11 += var53;
-							var12 += var63;
-							var14 += var54;
-							var15 += var64;
-							var17 += var55;
-							var18 += var65;
-							var20 += var56;
-							var21 += var66;
-							var27 += var57;
-							var28 += var67;
-							var73 += var58;
-							var32 += var68;
-							var34 += var59;
-							var35 += var69;
-							var37 += var60;
-							var38 += var70;
-							var40 += var61;
-							var41 += var71;
-							var4 += this.anInt1705;
+						while (--f_6 >= 0.0F) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_8, (int) f_9, f_11, f_12, f_14, f_15, f_17, f_18, f_20, f_21, f_27, f_28, f_32, f_33, f_35, f_36, f_38, f_39, f_41, f_42);
+							f_8 += f_53;
+							f_9 += f_63;
+							f_11 += f_54;
+							f_12 += f_64;
+							f_14 += f_55;
+							f_15 += f_65;
+							f_17 += f_56;
+							f_18 += f_66;
+							f_20 += f_57;
+							f_21 += f_67;
+							f_27 += f_58;
+							f_28 += f_68;
+							f_32 += f_59;
+							f_33 += f_69;
+							f_35 += f_60;
+							f_36 += f_70;
+							f_38 += f_61;
+							f_39 += f_71;
+							f_41 += f_62;
+							f_42 += f_72;
+							f_4 += (float) this.anInt1705;
 						}
 					}
 				} else {
-					var8 = var7;
-					var11 = var10;
-					var14 = var13;
-					var17 = var16;
-					var20 = var19;
-					var27 = var26;
-					var73 = var30;
-					var34 = var33;
-					var37 = var36;
-					var40 = var39;
-					if (var4 < 0.0F) {
-						var7 -= var42 * var4;
-						var8 -= var62 * var4;
-						var10 -= var43 * var4;
-						var11 -= var63 * var4;
-						var13 -= var44 * var4;
-						var14 -= var64 * var4;
-						var16 -= var45 * var4;
-						var17 -= var65 * var4;
-						var19 -= var46 * var4;
-						var20 -= var66 * var4;
-						var26 -= var47 * var4;
-						var27 -= var67 * var4;
-						var30 -= var48 * var4;
-						var73 -= var68 * var4;
-						var33 -= var48 * var4;
-						var34 -= var68 * var4;
-						var36 -= var48 * var4;
-						var37 -= var68 * var4;
-						var39 -= var48 * var4;
-						var40 -= var68 * var4;
-						var4 = 0.0F;
+					f_8 = f_7;
+					f_11 = f_10;
+					f_14 = f_13;
+					f_17 = f_16;
+					f_20 = f_19;
+					f_27 = f_26;
+					f_32 = f_31;
+					f_35 = f_34;
+					f_38 = f_37;
+					f_41 = f_40;
+					if (f_4 < 0.0F) {
+						f_7 -= f_43 * f_4;
+						f_8 -= f_63 * f_4;
+						f_10 -= f_44 * f_4;
+						f_11 -= f_64 * f_4;
+						f_13 -= f_45 * f_4;
+						f_14 -= f_65 * f_4;
+						f_16 -= f_46 * f_4;
+						f_17 -= f_66 * f_4;
+						f_19 -= f_47 * f_4;
+						f_20 -= f_67 * f_4;
+						f_26 -= f_48 * f_4;
+						f_27 -= f_68 * f_4;
+						f_31 -= f_49 * f_4;
+						f_32 -= f_69 * f_4;
+						f_34 -= f_49 * f_4;
+						f_35 -= f_69 * f_4;
+						f_37 -= f_49 * f_4;
+						f_38 -= f_69 * f_4;
+						f_40 -= f_49 * f_4;
+						f_41 -= f_69 * f_4;
+						f_4 = 0.0F;
 					}
 
-					if (var6 < 0.0F) {
-						var9 -= var52 * var6;
-						var12 -= var53 * var6;
-						var15 -= var54 * var6;
-						var18 -= var55 * var6;
-						var21 -= var56 * var6;
-						var28 -= var57 * var6;
-						var32 -= var58 * var6;
-						var35 -= var59 * var6;
-						var38 -= var60 * var6;
-						var41 -= var61 * var6;
-						var6 = 0.0F;
+					if (f_6 < 0.0F) {
+						f_9 -= f_53 * f_6;
+						f_12 -= f_54 * f_6;
+						f_15 -= f_55 * f_6;
+						f_18 -= f_56 * f_6;
+						f_21 -= f_57 * f_6;
+						f_28 -= f_58 * f_6;
+						f_33 -= f_59 * f_6;
+						f_36 -= f_60 * f_6;
+						f_39 -= f_61 * f_6;
+						f_42 -= f_62 * f_6;
+						f_6 = 0.0F;
 					}
 
-					if ((var4 == var6 || var62 >= var42) && (var4 != var6 || var52 <= var42)) {
-						var4 = ((int) (var4 + 0.5F));
-						var6 = ((int) (var6 + 0.5F));
-						var5 = ((int) (var5 + 0.5F)) - var6;
-						var6 -= var4;
+					if ((f_4 == f_6 || f_63 >= f_43) && (f_4 != f_6 || f_53 <= f_43)) {
+						f_4 = (float) ((int) (f_4 + 0.5F));
+						f_6 = (float) ((int) (f_6 + 0.5F));
+						f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+						f_6 -= f_4;
 
-						for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var7, (int) var8, var10, var11, var13, var14, var16, var17, var19, var20, var26, var27, var30, var73, var33, var34, var36, var37, var39, var40);
-							var8 += var62;
-							var7 += var42;
-							var11 += var63;
-							var10 += var43;
-							var14 += var64;
-							var13 += var44;
-							var17 += var65;
-							var16 += var45;
-							var20 += var66;
-							var19 += var46;
-							var27 += var67;
-							var26 += var47;
-							var73 += var68;
-							var30 += var48;
-							var34 += var69;
-							var33 += var49;
-							var37 += var70;
-							var36 += var50;
-							var40 += var71;
-							var39 += var51;
+						for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_7, (int) f_8, f_10, f_11, f_13, f_14, f_16, f_17, f_19, f_20, f_26, f_27, f_31, f_32, f_34, f_35, f_37, f_38, f_40, f_41);
+							f_8 += f_63;
+							f_7 += f_43;
+							f_11 += f_64;
+							f_10 += f_44;
+							f_14 += f_65;
+							f_13 += f_45;
+							f_17 += f_66;
+							f_16 += f_46;
+							f_20 += f_67;
+							f_19 += f_47;
+							f_27 += f_68;
+							f_26 += f_48;
+							f_32 += f_69;
+							f_31 += f_49;
+							f_35 += f_70;
+							f_34 += f_50;
+							f_38 += f_71;
+							f_37 += f_51;
+							f_41 += f_72;
+							f_40 += f_52;
 						}
 
-						while (--var5 >= 0.0F) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var7, (int) var9, var10, var12, var13, var15, var16, var18, var19, var21, var26, var28, var30, var32, var33, var35, var36, var38, var39, var41);
-							var7 += var42;
-							var9 += var52;
-							var10 += var43;
-							var12 += var53;
-							var13 += var44;
-							var15 += var54;
-							var16 += var45;
-							var18 += var55;
-							var19 += var46;
-							var21 += var56;
-							var26 += var47;
-							var28 += var57;
-							var30 += var48;
-							var32 += var58;
-							var33 += var49;
-							var35 += var59;
-							var36 += var50;
-							var38 += var60;
-							var39 += var51;
-							var41 += var61;
-							var4 += this.anInt1705;
+						while (--f_5 >= 0.0F) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_7, (int) f_9, f_10, f_12, f_13, f_15, f_16, f_18, f_19, f_21, f_26, f_28, f_31, f_33, f_34, f_36, f_37, f_39, f_40, f_42);
+							f_7 += f_43;
+							f_9 += f_53;
+							f_10 += f_44;
+							f_12 += f_54;
+							f_13 += f_45;
+							f_15 += f_55;
+							f_16 += f_46;
+							f_18 += f_56;
+							f_19 += f_47;
+							f_21 += f_57;
+							f_26 += f_48;
+							f_28 += f_58;
+							f_31 += f_49;
+							f_33 += f_59;
+							f_34 += f_50;
+							f_36 += f_60;
+							f_37 += f_51;
+							f_39 += f_61;
+							f_40 += f_52;
+							f_42 += f_62;
+							f_4 += (float) this.anInt1705;
 						}
 					} else {
-						var4 = ((int) (var4 + 0.5F));
-						var6 = ((int) (var6 + 0.5F));
-						var5 = ((int) (var5 + 0.5F)) - var6;
-						var6 -= var4;
+						f_4 = (float) ((int) (f_4 + 0.5F));
+						f_6 = (float) ((int) (f_6 + 0.5F));
+						f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+						f_6 -= f_4;
 
-						for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var8, (int) var7, var11, var10, var14, var13, var17, var16, var20, var19, var27, var26, var73, var30, var34, var33, var37, var36, var40, var39);
-							var7 += var42;
-							var8 += var62;
-							var10 += var43;
-							var11 += var63;
-							var13 += var44;
-							var14 += var64;
-							var16 += var45;
-							var17 += var65;
-							var19 += var46;
-							var20 += var66;
-							var26 += var47;
-							var27 += var67;
-							var30 += var48;
-							var73 += var68;
-							var33 += var49;
-							var34 += var69;
-							var36 += var50;
-							var37 += var70;
-							var39 += var51;
-							var40 += var71;
+						for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_8, (int) f_7, f_11, f_10, f_14, f_13, f_17, f_16, f_20, f_19, f_27, f_26, f_32, f_31, f_35, f_34, f_38, f_37, f_41, f_40);
+							f_7 += f_43;
+							f_8 += f_63;
+							f_10 += f_44;
+							f_11 += f_64;
+							f_13 += f_45;
+							f_14 += f_65;
+							f_16 += f_46;
+							f_17 += f_66;
+							f_19 += f_47;
+							f_20 += f_67;
+							f_26 += f_48;
+							f_27 += f_68;
+							f_31 += f_49;
+							f_32 += f_69;
+							f_34 += f_50;
+							f_35 += f_70;
+							f_37 += f_51;
+							f_38 += f_71;
+							f_40 += f_52;
+							f_41 += f_72;
 						}
 
-						while (--var5 >= 0.0F) {
-							this.method2434(var2, var3, this.anIntArray1689, this.anIntArray1693, (int) var4, (int) var9, (int) var7, var12, var10, var15, var13, var18, var16, var21, var19, var28, var26, var32, var30, var35, var33, var38, var36, var41, var39);
-							var9 += var52;
-							var7 += var42;
-							var12 += var53;
-							var10 += var43;
-							var15 += var54;
-							var13 += var44;
-							var18 += var55;
-							var16 += var45;
-							var21 += var56;
-							var19 += var46;
-							var28 += var57;
-							var26 += var47;
-							var32 += var58;
-							var30 += var48;
-							var35 += var59;
-							var33 += var49;
-							var38 += var60;
-							var36 += var50;
-							var41 += var61;
-							var39 += var51;
-							var4 += this.anInt1705;
+						while (--f_5 >= 0.0F) {
+							this.method2434(bool_2, bool_3, this.anIntArray1689, this.anIntArray1693, (int) f_4, (int) f_9, (int) f_7, f_12, f_10, f_15, f_13, f_18, f_16, f_21, f_19, f_28, f_26, f_33, f_31, f_36, f_34, f_39, f_37, f_42, f_40);
+							f_9 += f_53;
+							f_7 += f_43;
+							f_12 += f_54;
+							f_10 += f_44;
+							f_15 += f_55;
+							f_13 += f_45;
+							f_18 += f_56;
+							f_16 += f_46;
+							f_21 += f_57;
+							f_19 += f_47;
+							f_28 += f_58;
+							f_26 += f_48;
+							f_33 += f_59;
+							f_31 += f_49;
+							f_36 += f_60;
+							f_34 += f_50;
+							f_39 += f_61;
+							f_37 += f_51;
+							f_42 += f_62;
+							f_40 += f_52;
+							f_4 += (float) this.anInt1705;
 						}
 					}
 				}
-
 			}
 		}
+
 	}
 
-	final void method2425(boolean var1, boolean var2, boolean var3, float var4, float var5, float var6, float var7, float var8, float var9, float var10, float var11, float var12, int var13, int var14, int var15) {
-		if (!var1) {
-			this.method2428(false, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, 0);
+	final void method2425(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, int i_13, int i_14, int i_15) {
+		if (!bool_1) {
+			this.method2428(false, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, 0);
 		} else if (this.aBool1671) {
-			this.aClass505_Sub3_1686.method8429((int) var7, (int) var4, (int) var8, (int) var5, -16777216 | var13, (byte) 9);
-			this.aClass505_Sub3_1686.method8429((int) var8, (int) var5, (int) var9, (int) var6, -16777216 | var13, (byte) -29);
-			this.aClass505_Sub3_1686.method8429((int) var9, (int) var6, (int) var7, (int) var4, -16777216 | var13, (byte) -6);
+			this.aClass505_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, ~0xffffff | i_13, (byte) 9);
+			this.aClass505_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, ~0xffffff | i_13, (byte) -29);
+			this.aClass505_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, ~0xffffff | i_13, (byte) -6);
 		} else {
-			float var16 = var8 - var7;
-			float var17 = var5 - var4;
-			float var18 = var9 - var7;
-			float var19 = var6 - var4;
-			float var20 = var11 - var10;
-			float var21 = var12 - var10;
-			float var22 = (var14 & 16711680) - (var13 & 16711680);
-			float var23 = (var15 & 16711680) - (var13 & 16711680);
-			float var24 = (var14 & '\uff00') - (var13 & '\uff00');
-			float var25 = (var15 & '\uff00') - (var13 & '\uff00');
-			float var26 = (var14 & 255) - (var13 & 255);
-			float var27 = (var15 & 255) - (var13 & 255);
-			float var28;
-			if (var6 != var5) {
-				var28 = (var9 - var8) / (var6 - var5);
+			float f_16 = f_8 - f_7;
+			float f_17 = f_5 - f_4;
+			float f_18 = f_9 - f_7;
+			float f_19 = f_6 - f_4;
+			float f_20 = f_11 - f_10;
+			float f_21 = f_12 - f_10;
+			float f_22 = (float) ((i_14 & 0xff0000) - (i_13 & 0xff0000));
+			float f_23 = (float) ((i_15 & 0xff0000) - (i_13 & 0xff0000));
+			float f_24 = (float) ((i_14 & 0xff00) - (i_13 & 0xff00));
+			float f_25 = (float) ((i_15 & 0xff00) - (i_13 & 0xff00));
+			float f_26 = (float) ((i_14 & 0xff) - (i_13 & 0xff));
+			float f_27 = (float) ((i_15 & 0xff) - (i_13 & 0xff));
+			float f_28;
+			if (f_6 != f_5) {
+				f_28 = (f_9 - f_8) / (f_6 - f_5);
 			} else {
-				var28 = 0.0F;
+				f_28 = 0.0F;
 			}
 
-			float var29;
-			if (var5 != var4) {
-				var29 = var16 / var17;
+			float f_29;
+			if (f_5 != f_4) {
+				f_29 = f_16 / f_17;
 			} else {
-				var29 = 0.0F;
+				f_29 = 0.0F;
 			}
 
-			float var30;
-			if (var6 != var4) {
-				var30 = var18 / var19;
+			float f_30;
+			if (f_6 != f_4) {
+				f_30 = f_18 / f_19;
 			} else {
-				var30 = 0.0F;
+				f_30 = 0.0F;
 			}
 
-			float var31 = var16 * var19 - var18 * var17;
-			if (var31 != 0.0F) {
-				float var32 = (var20 * var19 - var21 * var17) / var31;
-				float var33 = (var21 * var16 - var20 * var18) / var31;
-				float var34 = (var22 * var19 - var23 * var17) / var31;
-				float var35 = (var23 * var16 - var22 * var18) / var31;
-				float var36 = (var24 * var19 - var25 * var17) / var31;
-				float var37 = (var25 * var16 - var24 * var18) / var31;
-				float var38 = (var26 * var19 - var27 * var17) / var31;
-				float var39 = (var27 * var16 - var26 * var18) / var31;
-				float var42;
-				float var40;
-				float var41;
-				if (var4 <= var5 && var4 <= var6) {
-					if (var4 < this.anInt1700) {
-						if (var5 > this.anInt1700) {
-							var5 = this.anInt1700;
+			float f_31 = f_16 * f_19 - f_18 * f_17;
+			if (f_31 != 0.0F) {
+				float f_32 = (f_20 * f_19 - f_21 * f_17) / f_31;
+				float f_33 = (f_21 * f_16 - f_20 * f_18) / f_31;
+				float f_34 = (f_22 * f_19 - f_23 * f_17) / f_31;
+				float f_35 = (f_23 * f_16 - f_22 * f_18) / f_31;
+				float f_36 = (f_24 * f_19 - f_25 * f_17) / f_31;
+				float f_37 = (f_25 * f_16 - f_24 * f_18) / f_31;
+				float f_38 = (f_26 * f_19 - f_27 * f_17) / f_31;
+				float f_39 = (f_27 * f_16 - f_26 * f_18) / f_31;
+				float f_40;
+				float f_41;
+				float f_42;
+				if (f_4 <= f_5 && f_4 <= f_6) {
+					if (f_4 < (float) this.anInt1700) {
+						if (f_5 > (float) this.anInt1700) {
+							f_5 = (float) this.anInt1700;
 						}
 
-						if (var6 > this.anInt1700) {
-							var6 = this.anInt1700;
+						if (f_6 > (float) this.anInt1700) {
+							f_6 = (float) this.anInt1700;
 						}
 
-						var10 = var10 - var32 * var7 + var32;
-						var40 = (var13 & 16711680) - var34 * var7 + var34;
-						var41 = (var13 & '\uff00') - var36 * var7 + var36;
-						var42 = (var13 & 255) - var38 * var7 + var38;
-						if (var5 < var6) {
-							var9 = var7;
-							if (var4 < 0.0F) {
-								var9 = var7 - var30 * var4;
-								var7 -= var29 * var4;
-								var10 -= var33 * var4;
-								var40 -= var35 * var4;
-								var41 -= var37 * var4;
-								var42 -= var39 * var4;
-								var4 = 0.0F;
+						f_10 = f_10 - f_32 * f_7 + f_32;
+						f_41 = (float) (i_13 & 0xff0000) - f_34 * f_7 + f_34;
+						f_42 = (float) (i_13 & 0xff00) - f_36 * f_7 + f_36;
+						f_40 = (float) (i_13 & 0xff) - f_38 * f_7 + f_38;
+						if (f_5 < f_6) {
+							f_9 = f_7;
+							if (f_4 < 0.0F) {
+								f_9 = f_7 - f_30 * f_4;
+								f_7 -= f_29 * f_4;
+								f_10 -= f_33 * f_4;
+								f_41 -= f_35 * f_4;
+								f_42 -= f_37 * f_4;
+								f_40 -= f_39 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var5 < 0.0F) {
-								var8 -= var28 * var5;
-								var5 = 0.0F;
+							if (f_5 < 0.0F) {
+								f_8 -= f_28 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if ((var4 == var5 || var30 >= var29) && (var4 != var5 || var30 <= var28)) {
-								var4 = ((int) (var4 + 0.5F));
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var5;
-								var5 -= var4;
+							if ((f_4 == f_5 || f_30 >= f_29) && (f_4 != f_5 || f_30 <= f_28)) {
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+								f_5 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var7, (int) var9, var10, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var30;
-									var7 += var29;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_7, (int) f_9, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_30;
+									f_7 += f_29;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var8, (int) var9, var10, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var30;
-									var8 += var28;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var4 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_8, (int) f_9, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_30;
+									f_8 += f_28;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_4 += (float) this.anInt1705;
 								}
-
 							} else {
-								var4 = ((int) (var4 + 0.5F));
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var5;
-								var5 -= var4;
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+								f_5 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var9, (int) var7, var10, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var30;
-									var7 += var29;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_9, (int) f_7, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_30;
+									f_7 += f_29;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var9, (int) var8, var10, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var30;
-									var8 += var28;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var4 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_9, (int) f_8, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_30;
+									f_8 += f_28;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_4 += (float) this.anInt1705;
 								}
-
 							}
 						} else {
-							var8 = var7;
-							if (var4 < 0.0F) {
-								var8 = var7 - var30 * var4;
-								var7 -= var29 * var4;
-								var10 -= var33 * var4;
-								var40 -= var35 * var4;
-								var41 -= var37 * var4;
-								var42 -= var39 * var4;
-								var4 = 0.0F;
+							f_8 = f_7;
+							if (f_4 < 0.0F) {
+								f_8 = f_7 - f_30 * f_4;
+								f_7 -= f_29 * f_4;
+								f_10 -= f_33 * f_4;
+								f_41 -= f_35 * f_4;
+								f_42 -= f_37 * f_4;
+								f_40 -= f_39 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var6 < 0.0F) {
-								var9 -= var28 * var6;
-								var6 = 0.0F;
+							if (f_6 < 0.0F) {
+								f_9 -= f_28 * f_6;
+								f_6 = 0.0F;
 							}
 
-							if ((var4 == var6 || var30 >= var29) && (var4 != var6 || var28 <= var29)) {
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var5 = ((int) (var5 + 0.5F)) - var6;
-								var6 -= var4;
+							if (f_4 != f_6 && f_30 < f_29 || f_4 == f_6 && f_28 > f_29) {
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+								f_6 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var7, (int) var8, var10, var32, var40, var34, var41, var36, var42, var38);
-									var8 += var30;
-									var7 += var29;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_8, (int) f_7, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_8 += f_30;
+									f_7 += f_29;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var5 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var7, (int) var9, var10, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var28;
-									var7 += var29;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var4 += this.anInt1705;
+								while (--f_5 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_9, (int) f_7, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_28;
+									f_7 += f_29;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_4 += (float) this.anInt1705;
 								}
-
 							} else {
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var5 = ((int) (var5 + 0.5F)) - var6;
-								var6 -= var4;
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+								f_6 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var8, (int) var7, var10, var32, var40, var34, var41, var36, var42, var38);
-									var8 += var30;
-									var7 += var29;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_7, (int) f_8, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_8 += f_30;
+									f_7 += f_29;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var5 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var9, (int) var7, var10, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var28;
-									var7 += var29;
-									var10 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var4 += this.anInt1705;
+								while (--f_5 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_7, (int) f_9, f_10, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_28;
+									f_7 += f_29;
+									f_10 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_4 += (float) this.anInt1705;
 								}
-
 							}
 						}
 					}
-				} else if (var5 <= var6) {
-					if (var5 < this.anInt1700) {
-						if (var6 > this.anInt1700) {
-							var6 = this.anInt1700;
+				} else if (f_5 <= f_6) {
+					if (f_5 < (float) this.anInt1700) {
+						if (f_6 > (float) this.anInt1700) {
+							f_6 = (float) this.anInt1700;
 						}
 
-						if (var4 > this.anInt1700) {
-							var4 = this.anInt1700;
+						if (f_4 > (float) this.anInt1700) {
+							f_4 = (float) this.anInt1700;
 						}
 
-						var11 = var11 - var32 * var8 + var32;
-						var40 = (var14 & 16711680) - var34 * var8 + var34;
-						var41 = (var14 & '\uff00') - var36 * var8 + var36;
-						var42 = (var14 & 255) - var38 * var8 + var38;
-						if (var6 < var4) {
-							var7 = var8;
-							if (var5 < 0.0F) {
-								var7 = var8 - var29 * var5;
-								var8 -= var28 * var5;
-								var11 -= var33 * var5;
-								var40 -= var35 * var5;
-								var41 -= var37 * var5;
-								var42 -= var39 * var5;
-								var5 = 0.0F;
+						f_11 = f_11 - f_32 * f_8 + f_32;
+						f_41 = (float) (i_14 & 0xff0000) - f_34 * f_8 + f_34;
+						f_42 = (float) (i_14 & 0xff00) - f_36 * f_8 + f_36;
+						f_40 = (float) (i_14 & 0xff) - f_38 * f_8 + f_38;
+						if (f_6 < f_4) {
+							f_7 = f_8;
+							if (f_5 < 0.0F) {
+								f_7 = f_8 - f_29 * f_5;
+								f_8 -= f_28 * f_5;
+								f_11 -= f_33 * f_5;
+								f_41 -= f_35 * f_5;
+								f_42 -= f_37 * f_5;
+								f_40 -= f_39 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if (var6 < 0.0F) {
-								var9 -= var30 * var6;
-								var6 = 0.0F;
+							if (f_6 < 0.0F) {
+								f_9 -= f_30 * f_6;
+								f_6 = 0.0F;
 							}
 
-							if ((var5 == var6 || var29 >= var28) && (var5 != var6 || var29 <= var30)) {
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var4 = ((int) (var4 + 0.5F)) - var6;
-								var6 -= var5;
+							if ((f_5 == f_6 || f_29 >= f_28) && (f_5 != f_6 || f_29 <= f_30)) {
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F)) - f_6;
+								f_6 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var6 >= 0.0F; var5 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var8, (int) var7, var11, var32, var40, var34, var41, var36, var42, var38);
-									var7 += var29;
-									var8 += var28;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_6 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_8, (int) f_7, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_7 += f_29;
+									f_8 += f_28;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var4 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var9, (int) var7, var11, var32, var40, var34, var41, var36, var42, var38);
-									var7 += var29;
-									var9 += var30;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var5 += this.anInt1705;
+								while (--f_4 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_9, (int) f_7, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_7 += f_29;
+									f_9 += f_30;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_5 += (float) this.anInt1705;
 								}
-
 							} else {
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var4 = ((int) (var4 + 0.5F)) - var6;
-								var6 -= var5;
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F)) - f_6;
+								f_6 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var6 >= 0.0F; var5 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var7, (int) var8, var11, var32, var40, var34, var41, var36, var42, var38);
-									var7 += var29;
-									var8 += var28;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_6 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_7, (int) f_8, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_7 += f_29;
+									f_8 += f_28;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var4 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var7, (int) var9, var11, var32, var40, var34, var41, var36, var42, var38);
-									var7 += var29;
-									var9 += var30;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var5 += this.anInt1705;
+								while (--f_4 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_7, (int) f_9, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_7 += f_29;
+									f_9 += f_30;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_5 += (float) this.anInt1705;
 								}
-
 							}
 						} else {
-							var9 = var8;
-							if (var5 < 0.0F) {
-								var9 = var8 - var29 * var5;
-								var8 -= var28 * var5;
-								var11 -= var33 * var5;
-								var40 -= var35 * var5;
-								var41 -= var37 * var5;
-								var42 -= var39 * var5;
-								var5 = 0.0F;
+							f_9 = f_8;
+							if (f_5 < 0.0F) {
+								f_9 = f_8 - f_29 * f_5;
+								f_8 -= f_28 * f_5;
+								f_11 -= f_33 * f_5;
+								f_41 -= f_35 * f_5;
+								f_42 -= f_37 * f_5;
+								f_40 -= f_39 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if (var4 < 0.0F) {
-								var7 -= var30 * var4;
-								var4 = 0.0F;
+							if (f_4 < 0.0F) {
+								f_7 -= f_30 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var29 < var28) {
-								var5 = ((int) (var5 + 0.5F));
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var4;
-								var4 -= var5;
+							if (f_29 < f_28) {
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_4;
+								f_4 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var4 >= 0.0F; var5 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var9, (int) var8, var11, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var29;
-									var8 += var28;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_4 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_9, (int) f_8, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_29;
+									f_8 += f_28;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var7, (int) var8, var11, var32, var40, var34, var41, var36, var42, var38);
-									var7 += var30;
-									var8 += var28;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var5 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_7, (int) f_8, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_7 += f_30;
+									f_8 += f_28;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_5 += (float) this.anInt1705;
 								}
-
 							} else {
-								var5 = ((int) (var5 + 0.5F));
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var4;
-								var4 -= var5;
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_4;
+								f_4 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var4 >= 0.0F; var5 += this.anInt1705) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var8, (int) var9, var11, var32, var40, var34, var41, var36, var42, var38);
-									var9 += var29;
-									var8 += var28;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_4 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_8, (int) f_9, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_9 += f_29;
+									f_8 += f_28;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2422(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var8, (int) var7, var11, var32, var40, var34, var41, var36, var42, var38);
-									var7 += var30;
-									var8 += var28;
-									var11 += var33;
-									var40 += var35;
-									var41 += var37;
-									var42 += var39;
-									var5 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_8, (int) f_7, f_11, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+									f_7 += f_30;
+									f_8 += f_28;
+									f_11 += f_33;
+									f_41 += f_35;
+									f_42 += f_37;
+									f_40 += f_39;
+									f_5 += (float) this.anInt1705;
 								}
-
 							}
 						}
 					}
-				} else if (var6 < this.anInt1700) {
-					if (var4 > this.anInt1700) {
-						var4 = this.anInt1700;
+				} else if (f_6 < (float) this.anInt1700) {
+					if (f_4 > (float) this.anInt1700) {
+						f_4 = (float) this.anInt1700;
 					}
 
-					if (var5 > this.anInt1700) {
-						var5 = this.anInt1700;
+					if (f_5 > (float) this.anInt1700) {
+						f_5 = (float) this.anInt1700;
 					}
 
-					var12 = var12 - var32 * var9 + var32;
-					var40 = (var15 & 16711680) - var34 * var9 + var34;
-					var41 = (var15 & '\uff00') - var36 * var9 + var36;
-					var42 = (var15 & 255) - var38 * var9 + var38;
-					if (var4 < var5) {
-						var8 = var9;
-						if (var6 < 0.0F) {
-							var8 = var9 - var28 * var6;
-							var9 -= var30 * var6;
-							var12 -= var33 * var6;
-							var40 -= var35 * var6;
-							var41 -= var37 * var6;
-							var42 -= var39 * var6;
-							var6 = 0.0F;
+					f_12 = f_12 - f_32 * f_9 + f_32;
+					f_41 = (float) (i_15 & 0xff0000) - f_34 * f_9 + f_34;
+					f_42 = (float) (i_15 & 0xff00) - f_36 * f_9 + f_36;
+					f_40 = (float) (i_15 & 0xff) - f_38 * f_9 + f_38;
+					if (f_4 < f_5) {
+						f_8 = f_9;
+						if (f_6 < 0.0F) {
+							f_8 = f_9 - f_28 * f_6;
+							f_9 -= f_30 * f_6;
+							f_12 -= f_33 * f_6;
+							f_41 -= f_35 * f_6;
+							f_42 -= f_37 * f_6;
+							f_40 -= f_39 * f_6;
+							f_6 = 0.0F;
 						}
 
-						if (var4 < 0.0F) {
-							var7 -= var29 * var4;
-							var4 = 0.0F;
+						if (f_4 < 0.0F) {
+							f_7 -= f_29 * f_4;
+							f_4 = 0.0F;
 						}
 
-						if (var28 < var30) {
-							var6 = ((int) (var6 + 0.5F));
-							var4 = ((int) (var4 + 0.5F));
-							var5 = ((int) (var5 + 0.5F)) - var4;
-							var4 -= var6;
+						if (f_28 < f_30) {
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F)) - f_4;
+							f_4 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var4 >= 0.0F; var6 += this.anInt1705) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var8, (int) var9, var12, var32, var40, var34, var41, var36, var42, var38);
-								var8 += var28;
-								var9 += var30;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_4 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_8, (int) f_9, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_8 += f_28;
+								f_9 += f_30;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
 							}
 
-							while (--var5 >= 0.0F) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var8, (int) var7, var12, var32, var40, var34, var41, var36, var42, var38);
-								var8 += var28;
-								var7 += var29;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
-								var6 += this.anInt1705;
+							while (--f_5 >= 0.0F) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_8, (int) f_7, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_8 += f_28;
+								f_7 += f_29;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
+								f_6 += (float) this.anInt1705;
 							}
-
 						} else {
-							var6 = ((int) (var6 + 0.5F));
-							var4 = ((int) (var4 + 0.5F));
-							var5 = ((int) (var5 + 0.5F)) - var4;
-							var4 -= var6;
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F)) - f_4;
+							f_4 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var4 >= 0.0F; var6 += this.anInt1705) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var9, (int) var8, var12, var32, var40, var34, var41, var36, var42, var38);
-								var8 += var28;
-								var9 += var30;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_4 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_9, (int) f_8, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_8 += f_28;
+								f_9 += f_30;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
 							}
 
-							while (--var5 >= 0.0F) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var7, (int) var8, var12, var32, var40, var34, var41, var36, var42, var38);
-								var8 += var28;
-								var7 += var29;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
-								var6 += this.anInt1705;
+							while (--f_5 >= 0.0F) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_7, (int) f_8, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_8 += f_28;
+								f_7 += f_29;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
+								f_6 += (float) this.anInt1705;
 							}
-
 						}
 					} else {
-						var7 = var9;
-						if (var6 < 0.0F) {
-							var7 = var9 - var28 * var6;
-							var9 -= var30 * var6;
-							var12 -= var33 * var6;
-							var40 -= var35 * var6;
-							var41 -= var37 * var6;
-							var42 -= var39 * var6;
-							var6 = 0.0F;
+						f_7 = f_9;
+						if (f_6 < 0.0F) {
+							f_7 = f_9 - f_28 * f_6;
+							f_9 -= f_30 * f_6;
+							f_12 -= f_33 * f_6;
+							f_41 -= f_35 * f_6;
+							f_42 -= f_37 * f_6;
+							f_40 -= f_39 * f_6;
+							f_6 = 0.0F;
 						}
 
-						if (var5 < 0.0F) {
-							var8 -= var29 * var5;
-							var5 = 0.0F;
+						if (f_5 < 0.0F) {
+							f_8 -= f_29 * f_5;
+							f_5 = 0.0F;
 						}
 
-						if (var28 < var30) {
-							var6 = ((int) (var6 + 0.5F));
-							var5 = ((int) (var5 + 0.5F));
-							var4 = ((int) (var4 + 0.5F)) - var5;
-							var5 -= var6;
+						if (f_28 < f_30) {
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F)) - f_5;
+							f_5 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var5 >= 0.0F; var6 += this.anInt1705) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var7, (int) var9, var12, var32, var40, var34, var41, var36, var42, var38);
-								var7 += var28;
-								var9 += var30;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_5 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_7, (int) f_9, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_7 += f_28;
+								f_9 += f_30;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
 							}
 
-							while (--var4 >= 0.0F) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var8, (int) var9, var12, var32, var40, var34, var41, var36, var42, var38);
-								var8 += var29;
-								var9 += var30;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
-								var6 += this.anInt1705;
+							while (--f_4 >= 0.0F) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_8, (int) f_9, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_8 += f_29;
+								f_9 += f_30;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
+								f_6 += (float) this.anInt1705;
 							}
-
 						} else {
-							var6 = ((int) (var6 + 0.5F));
-							var5 = ((int) (var5 + 0.5F));
-							var4 = ((int) (var4 + 0.5F)) - var5;
-							var5 -= var6;
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F)) - f_5;
+							f_5 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var5 >= 0.0F; var6 += this.anInt1705) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var9, (int) var7, var12, var32, var40, var34, var41, var36, var42, var38);
-								var7 += var28;
-								var9 += var30;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_5 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_9, (int) f_7, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_7 += f_28;
+								f_9 += f_30;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
 							}
 
-							while (--var4 >= 0.0F) {
-								this.method2422(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var9, (int) var8, var12, var32, var40, var34, var41, var36, var42, var38);
-								var8 += var29;
-								var9 += var30;
-								var12 += var33;
-								var40 += var35;
-								var41 += var37;
-								var42 += var39;
-								var6 += this.anInt1705;
+							while (--f_4 >= 0.0F) {
+								this.method2422(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_9, (int) f_8, f_12, f_32, f_41, f_34, f_42, f_36, f_40, f_38);
+								f_8 += f_29;
+								f_9 += f_30;
+								f_12 += f_33;
+								f_41 += f_35;
+								f_42 += f_37;
+								f_40 += f_39;
+								f_6 += (float) this.anInt1705;
 							}
-
 						}
 					}
 				}
 			}
 		}
+
 	}
 
-	final void method2426(boolean var1, boolean var2, boolean var3, float var4, float var5, float var6, float var7, float var8, float var9, float var10, float var11, float var12, float var13, float var14, float var15) {
-		if (!var1) {
-			this.method2428(false, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, 0);
+	final void method2426(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15) {
+		if (!bool_1) {
+			this.method2428(false, bool_2, bool_3, f_4, f_5, f_6, f_7, f_8, f_9, f_10, f_11, f_12, 0);
 		} else if (this.aBool1671) {
-			this.aClass505_Sub3_1686.method8429((int) var7, (int) var4, (int) var8, (int) var5, Class335.anIntArray3916[(int) var13 & '\uffff'], (byte) -26);
-			this.aClass505_Sub3_1686.method8429((int) var8, (int) var5, (int) var9, (int) var6, Class335.anIntArray3916[(int) var13 & '\uffff'], (byte) -7);
-			this.aClass505_Sub3_1686.method8429((int) var9, (int) var6, (int) var7, (int) var4, Class335.anIntArray3916[(int) var13 & '\uffff'], (byte) 19);
+			this.aClass505_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) -26);
+			this.aClass505_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) -7);
+			this.aClass505_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, Class335.anIntArray3916[(int) f_13 & 0xffff], (byte) 19);
 		} else {
-			float var16 = var8 - var7;
-			float var17 = var5 - var4;
-			float var18 = var9 - var7;
-			float var19 = var6 - var4;
-			float var20 = var14 - var13;
-			float var21 = var15 - var13;
-			float var22 = var11 - var10;
-			float var23 = var12 - var10;
-			float var24;
-			if (var6 != var5) {
-				var24 = (var9 - var8) / (var6 - var5);
+			float f_16 = f_8 - f_7;
+			float f_17 = f_5 - f_4;
+			float f_18 = f_9 - f_7;
+			float f_19 = f_6 - f_4;
+			float f_20 = f_14 - f_13;
+			float f_21 = f_15 - f_13;
+			float f_22 = f_11 - f_10;
+			float f_23 = f_12 - f_10;
+			float f_24;
+			if (f_6 != f_5) {
+				f_24 = (f_9 - f_8) / (f_6 - f_5);
 			} else {
-				var24 = 0.0F;
+				f_24 = 0.0F;
 			}
 
-			float var25;
-			if (var5 != var4) {
-				var25 = var16 / var17;
+			float f_25;
+			if (f_5 != f_4) {
+				f_25 = f_16 / f_17;
 			} else {
-				var25 = 0.0F;
+				f_25 = 0.0F;
 			}
 
-			float var26;
-			if (var6 != var4) {
-				var26 = var18 / var19;
+			float f_26;
+			if (f_6 != f_4) {
+				f_26 = f_18 / f_19;
 			} else {
-				var26 = 0.0F;
+				f_26 = 0.0F;
 			}
 
-			float var27 = var16 * var19 - var18 * var17;
-			if (var27 != 0.0F) {
-				float var28 = (var20 * var19 - var21 * var17) / var27;
-				float var29 = (var21 * var16 - var20 * var18) / var27;
-				float var30 = (var22 * var19 - var23 * var17) / var27;
-				float var31 = (var23 * var16 - var22 * var18) / var27;
-				if (var4 <= var5 && var4 <= var6) {
-					if (var4 < this.anInt1700) {
-						if (var5 > this.anInt1700) {
-							var5 = this.anInt1700;
+			float f_27 = f_16 * f_19 - f_18 * f_17;
+			if (f_27 != 0.0F) {
+				float f_28 = (f_20 * f_19 - f_21 * f_17) / f_27;
+				float f_29 = (f_21 * f_16 - f_20 * f_18) / f_27;
+				float f_30 = (f_22 * f_19 - f_23 * f_17) / f_27;
+				float f_31 = (f_23 * f_16 - f_22 * f_18) / f_27;
+				if (f_4 <= f_5 && f_4 <= f_6) {
+					if (f_4 < (float) this.anInt1700) {
+						if (f_5 > (float) this.anInt1700) {
+							f_5 = (float) this.anInt1700;
 						}
 
-						if (var6 > this.anInt1700) {
-							var6 = this.anInt1700;
+						if (f_6 > (float) this.anInt1700) {
+							f_6 = (float) this.anInt1700;
 						}
 
-						var13 = var13 - var28 * var7 + var28;
-						var10 = var10 - var30 * var7 + var30;
-						if (var5 < var6) {
-							var9 = var7;
-							if (var4 < 0.0F) {
-								var9 = var7 - var26 * var4;
-								var7 -= var25 * var4;
-								var13 -= var29 * var4;
-								var10 -= var31 * var4;
-								var4 = 0.0F;
+						f_13 = f_13 - f_28 * f_7 + f_28;
+						f_10 = f_10 - f_30 * f_7 + f_30;
+						if (f_5 < f_6) {
+							f_9 = f_7;
+							if (f_4 < 0.0F) {
+								f_9 = f_7 - f_26 * f_4;
+								f_7 -= f_25 * f_4;
+								f_13 -= f_29 * f_4;
+								f_10 -= f_31 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var5 < 0.0F) {
-								var8 -= var24 * var5;
-								var5 = 0.0F;
+							if (f_5 < 0.0F) {
+								f_8 -= f_24 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if ((var4 == var5 || var26 >= var25) && (var4 != var5 || var26 <= var24)) {
-								var4 = ((int) (var4 + 0.5F));
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var5;
-								var5 -= var4;
+							if (f_4 != f_5 && f_26 < f_25 || f_4 == f_5 && f_26 > f_24) {
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+								f_5 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var7, (int) var9, var13, var28, var10, var30);
-									var9 += var26;
-									var7 += var25;
-									var13 += var29;
-									var10 += var31;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_9, (int) f_7, f_13, f_28, f_10, f_30);
+									f_9 += f_26;
+									f_7 += f_25;
+									f_13 += f_29;
+									f_10 += f_31;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var8, (int) var9, var13, var28, var10, var30);
-									var9 += var26;
-									var8 += var24;
-									var13 += var29;
-									var10 += var31;
-									var4 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_9, (int) f_8, f_13, f_28, f_10, f_30);
+									f_9 += f_26;
+									f_8 += f_24;
+									f_13 += f_29;
+									f_10 += f_31;
+									f_4 += (float) this.anInt1705;
 								}
-
 							} else {
-								var4 = ((int) (var4 + 0.5F));
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var5;
-								var5 -= var4;
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+								f_5 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var9, (int) var7, var13, var28, var10, var30);
-									var9 += var26;
-									var7 += var25;
-									var13 += var29;
-									var10 += var31;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_7, (int) f_9, f_13, f_28, f_10, f_30);
+									f_9 += f_26;
+									f_7 += f_25;
+									f_13 += f_29;
+									f_10 += f_31;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var9, (int) var8, var13, var28, var10, var30);
-									var9 += var26;
-									var8 += var24;
-									var13 += var29;
-									var10 += var31;
-									var4 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_8, (int) f_9, f_13, f_28, f_10, f_30);
+									f_9 += f_26;
+									f_8 += f_24;
+									f_13 += f_29;
+									f_10 += f_31;
+									f_4 += (float) this.anInt1705;
 								}
-
 							}
 						} else {
-							var8 = var7;
-							if (var4 < 0.0F) {
-								var8 = var7 - var26 * var4;
-								var7 -= var25 * var4;
-								var13 -= var29 * var4;
-								var10 -= var31 * var4;
-								var4 = 0.0F;
+							f_8 = f_7;
+							if (f_4 < 0.0F) {
+								f_8 = f_7 - f_26 * f_4;
+								f_7 -= f_25 * f_4;
+								f_13 -= f_29 * f_4;
+								f_10 -= f_31 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var6 < 0.0F) {
-								var9 -= var24 * var6;
-								var6 = 0.0F;
+							if (f_6 < 0.0F) {
+								f_9 -= f_24 * f_6;
+								f_6 = 0.0F;
 							}
 
-							if ((var4 == var6 || var26 >= var25) && (var4 != var6 || var24 <= var25)) {
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var5 = ((int) (var5 + 0.5F)) - var6;
-								var6 -= var4;
+							if ((f_4 == f_6 || f_26 >= f_25) && (f_4 != f_6 || f_24 <= f_25)) {
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+								f_6 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var7, (int) var8, var13, var28, var10, var30);
-									var8 += var26;
-									var7 += var25;
-									var13 += var29;
-									var10 += var31;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_7, (int) f_8, f_13, f_28, f_10, f_30);
+									f_8 += f_26;
+									f_7 += f_25;
+									f_13 += f_29;
+									f_10 += f_31;
 								}
 
-								while (--var5 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var7, (int) var9, var13, var28, var10, var30);
-									var9 += var24;
-									var7 += var25;
-									var13 += var29;
-									var10 += var31;
-									var4 += this.anInt1705;
+								while (--f_5 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_7, (int) f_9, f_13, f_28, f_10, f_30);
+									f_9 += f_24;
+									f_7 += f_25;
+									f_13 += f_29;
+									f_10 += f_31;
+									f_4 += (float) this.anInt1705;
 								}
-
 							} else {
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var5 = ((int) (var5 + 0.5F)) - var6;
-								var6 -= var4;
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+								f_6 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var8, (int) var7, var13, var28, var10, var30);
-									var8 += var26;
-									var7 += var25;
-									var13 += var29;
-									var10 += var31;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_8, (int) f_7, f_13, f_28, f_10, f_30);
+									f_8 += f_26;
+									f_7 += f_25;
+									f_13 += f_29;
+									f_10 += f_31;
 								}
 
-								while (--var5 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var4, 0, 0, (int) var9, (int) var7, var13, var28, var10, var30);
-									var9 += var24;
-									var7 += var25;
-									var13 += var29;
-									var10 += var31;
-									var4 += this.anInt1705;
+								while (--f_5 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_4, 0, 0, (int) f_9, (int) f_7, f_13, f_28, f_10, f_30);
+									f_9 += f_24;
+									f_7 += f_25;
+									f_13 += f_29;
+									f_10 += f_31;
+									f_4 += (float) this.anInt1705;
 								}
-
 							}
 						}
 					}
-				} else if (var5 <= var6) {
-					if (var5 < this.anInt1700) {
-						if (var6 > this.anInt1700) {
-							var6 = this.anInt1700;
+				} else if (f_5 <= f_6) {
+					if (f_5 < (float) this.anInt1700) {
+						if (f_6 > (float) this.anInt1700) {
+							f_6 = (float) this.anInt1700;
 						}
 
-						if (var4 > this.anInt1700) {
-							var4 = this.anInt1700;
+						if (f_4 > (float) this.anInt1700) {
+							f_4 = (float) this.anInt1700;
 						}
 
-						var14 = var14 - var28 * var8 + var28;
-						var11 = var11 - var30 * var8 + var30;
-						if (var6 < var4) {
-							var7 = var8;
-							if (var5 < 0.0F) {
-								var7 = var8 - var25 * var5;
-								var8 -= var24 * var5;
-								var14 -= var29 * var5;
-								var11 -= var31 * var5;
-								var5 = 0.0F;
+						f_14 = f_14 - f_28 * f_8 + f_28;
+						f_11 = f_11 - f_30 * f_8 + f_30;
+						if (f_6 < f_4) {
+							f_7 = f_8;
+							if (f_5 < 0.0F) {
+								f_7 = f_8 - f_25 * f_5;
+								f_8 -= f_24 * f_5;
+								f_14 -= f_29 * f_5;
+								f_11 -= f_31 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if (var6 < 0.0F) {
-								var9 -= var26 * var6;
-								var6 = 0.0F;
+							if (f_6 < 0.0F) {
+								f_9 -= f_26 * f_6;
+								f_6 = 0.0F;
 							}
 
-							if ((var5 == var6 || var25 >= var24) && (var5 != var6 || var25 <= var26)) {
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var4 = ((int) (var4 + 0.5F)) - var6;
-								var6 -= var5;
+							if (f_5 != f_6 && f_25 < f_24 || f_5 == f_6 && f_25 > f_26) {
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F)) - f_6;
+								f_6 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var6 >= 0.0F; var5 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var8, (int) var7, var14, var28, var11, var30);
-									var7 += var25;
-									var8 += var24;
-									var14 += var29;
-									var11 += var31;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_6 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_7, (int) f_8, f_14, f_28, f_11, f_30);
+									f_7 += f_25;
+									f_8 += f_24;
+									f_14 += f_29;
+									f_11 += f_31;
 								}
 
-								while (--var4 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var9, (int) var7, var14, var28, var11, var30);
-									var7 += var25;
-									var9 += var26;
-									var14 += var29;
-									var11 += var31;
-									var5 += this.anInt1705;
+								while (--f_4 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_7, (int) f_9, f_14, f_28, f_11, f_30);
+									f_7 += f_25;
+									f_9 += f_26;
+									f_14 += f_29;
+									f_11 += f_31;
+									f_5 += (float) this.anInt1705;
 								}
-
 							} else {
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var4 = ((int) (var4 + 0.5F)) - var6;
-								var6 -= var5;
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F)) - f_6;
+								f_6 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var6 >= 0.0F; var5 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var7, (int) var8, var14, var28, var11, var30);
-									var7 += var25;
-									var8 += var24;
-									var14 += var29;
-									var11 += var31;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_6 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_8, (int) f_7, f_14, f_28, f_11, f_30);
+									f_7 += f_25;
+									f_8 += f_24;
+									f_14 += f_29;
+									f_11 += f_31;
 								}
 
-								while (--var4 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var7, (int) var9, var14, var28, var11, var30);
-									var7 += var25;
-									var9 += var26;
-									var14 += var29;
-									var11 += var31;
-									var5 += this.anInt1705;
+								while (--f_4 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_9, (int) f_7, f_14, f_28, f_11, f_30);
+									f_7 += f_25;
+									f_9 += f_26;
+									f_14 += f_29;
+									f_11 += f_31;
+									f_5 += (float) this.anInt1705;
 								}
-
 							}
 						} else {
-							var9 = var8;
-							if (var5 < 0.0F) {
-								var9 = var8 - var25 * var5;
-								var8 -= var24 * var5;
-								var14 -= var29 * var5;
-								var11 -= var31 * var5;
-								var5 = 0.0F;
+							f_9 = f_8;
+							if (f_5 < 0.0F) {
+								f_9 = f_8 - f_25 * f_5;
+								f_8 -= f_24 * f_5;
+								f_14 -= f_29 * f_5;
+								f_11 -= f_31 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if (var4 < 0.0F) {
-								var7 -= var26 * var4;
-								var4 = 0.0F;
+							if (f_4 < 0.0F) {
+								f_7 -= f_26 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var25 < var24) {
-								var5 = ((int) (var5 + 0.5F));
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var4;
-								var4 -= var5;
+							if (f_25 < f_24) {
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_4;
+								f_4 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var4 >= 0.0F; var5 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var9, (int) var8, var14, var28, var11, var30);
-									var9 += var25;
-									var8 += var24;
-									var14 += var29;
-									var11 += var31;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_4 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_9, (int) f_8, f_14, f_28, f_11, f_30);
+									f_9 += f_25;
+									f_8 += f_24;
+									f_14 += f_29;
+									f_11 += f_31;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var7, (int) var8, var14, var28, var11, var30);
-									var7 += var26;
-									var8 += var24;
-									var14 += var29;
-									var11 += var31;
-									var5 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_7, (int) f_8, f_14, f_28, f_11, f_30);
+									f_7 += f_26;
+									f_8 += f_24;
+									f_14 += f_29;
+									f_11 += f_31;
+									f_5 += (float) this.anInt1705;
 								}
-
 							} else {
-								var5 = ((int) (var5 + 0.5F));
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var4;
-								var4 -= var5;
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_4;
+								f_4 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var4 >= 0.0F; var5 += this.anInt1705) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var8, (int) var9, var14, var28, var11, var30);
-									var9 += var25;
-									var8 += var24;
-									var14 += var29;
-									var11 += var31;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_4 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_8, (int) f_9, f_14, f_28, f_11, f_30);
+									f_9 += f_25;
+									f_8 += f_24;
+									f_14 += f_29;
+									f_11 += f_31;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2443(var2, var3, this.anIntArray1689, (int) var5, 0, 0, (int) var8, (int) var7, var14, var28, var11, var30);
-									var7 += var26;
-									var8 += var24;
-									var14 += var29;
-									var11 += var31;
-									var5 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_5, 0, 0, (int) f_8, (int) f_7, f_14, f_28, f_11, f_30);
+									f_7 += f_26;
+									f_8 += f_24;
+									f_14 += f_29;
+									f_11 += f_31;
+									f_5 += (float) this.anInt1705;
 								}
-
 							}
 						}
 					}
-				} else if (var6 < this.anInt1700) {
-					if (var4 > this.anInt1700) {
-						var4 = this.anInt1700;
+				} else if (f_6 < (float) this.anInt1700) {
+					if (f_4 > (float) this.anInt1700) {
+						f_4 = (float) this.anInt1700;
 					}
 
-					if (var5 > this.anInt1700) {
-						var5 = this.anInt1700;
+					if (f_5 > (float) this.anInt1700) {
+						f_5 = (float) this.anInt1700;
 					}
 
-					var15 = var15 - var28 * var9 + var28;
-					var12 = var12 - var30 * var9 + var30;
-					if (var4 < var5) {
-						var8 = var9;
-						if (var6 < 0.0F) {
-							var8 = var9 - var24 * var6;
-							var9 -= var26 * var6;
-							var15 -= var29 * var6;
-							var12 -= var31 * var6;
-							var6 = 0.0F;
+					f_15 = f_15 - f_28 * f_9 + f_28;
+					f_12 = f_12 - f_30 * f_9 + f_30;
+					if (f_4 < f_5) {
+						f_8 = f_9;
+						if (f_6 < 0.0F) {
+							f_8 = f_9 - f_24 * f_6;
+							f_9 -= f_26 * f_6;
+							f_15 -= f_29 * f_6;
+							f_12 -= f_31 * f_6;
+							f_6 = 0.0F;
 						}
 
-						if (var4 < 0.0F) {
-							var7 -= var25 * var4;
-							var4 = 0.0F;
+						if (f_4 < 0.0F) {
+							f_7 -= f_25 * f_4;
+							f_4 = 0.0F;
 						}
 
-						if (var24 < var26) {
-							var6 = ((int) (var6 + 0.5F));
-							var4 = ((int) (var4 + 0.5F));
-							var5 = ((int) (var5 + 0.5F)) - var4;
-							var4 -= var6;
+						if (f_24 < f_26) {
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F)) - f_4;
+							f_4 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var4 >= 0.0F; var6 += this.anInt1705) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var8, (int) var9, var15, var28, var12, var30);
-								var8 += var24;
-								var9 += var26;
-								var15 += var29;
-								var12 += var31;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_4 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_8, (int) f_9, f_15, f_28, f_12, f_30);
+								f_8 += f_24;
+								f_9 += f_26;
+								f_15 += f_29;
+								f_12 += f_31;
 							}
 
-							while (--var5 >= 0.0F) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var8, (int) var7, var15, var28, var12, var30);
-								var8 += var24;
-								var7 += var25;
-								var15 += var29;
-								var12 += var31;
-								var6 += this.anInt1705;
+							while (--f_5 >= 0.0F) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_8, (int) f_7, f_15, f_28, f_12, f_30);
+								f_8 += f_24;
+								f_7 += f_25;
+								f_15 += f_29;
+								f_12 += f_31;
+								f_6 += (float) this.anInt1705;
 							}
-
 						} else {
-							var6 = ((int) (var6 + 0.5F));
-							var4 = ((int) (var4 + 0.5F));
-							var5 = ((int) (var5 + 0.5F)) - var4;
-							var4 -= var6;
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F)) - f_4;
+							f_4 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var4 >= 0.0F; var6 += this.anInt1705) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var9, (int) var8, var15, var28, var12, var30);
-								var8 += var24;
-								var9 += var26;
-								var15 += var29;
-								var12 += var31;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_4 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_9, (int) f_8, f_15, f_28, f_12, f_30);
+								f_8 += f_24;
+								f_9 += f_26;
+								f_15 += f_29;
+								f_12 += f_31;
 							}
 
-							while (--var5 >= 0.0F) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var7, (int) var8, var15, var28, var12, var30);
-								var8 += var24;
-								var7 += var25;
-								var15 += var29;
-								var12 += var31;
-								var6 += this.anInt1705;
+							while (--f_5 >= 0.0F) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_7, (int) f_8, f_15, f_28, f_12, f_30);
+								f_8 += f_24;
+								f_7 += f_25;
+								f_15 += f_29;
+								f_12 += f_31;
+								f_6 += (float) this.anInt1705;
 							}
-
 						}
 					} else {
-						var7 = var9;
-						if (var6 < 0.0F) {
-							var7 = var9 - var24 * var6;
-							var9 -= var26 * var6;
-							var15 -= var29 * var6;
-							var12 -= var31 * var6;
-							var6 = 0.0F;
+						f_7 = f_9;
+						if (f_6 < 0.0F) {
+							f_7 = f_9 - f_24 * f_6;
+							f_9 -= f_26 * f_6;
+							f_15 -= f_29 * f_6;
+							f_12 -= f_31 * f_6;
+							f_6 = 0.0F;
 						}
 
-						if (var5 < 0.0F) {
-							var8 -= var25 * var5;
-							var5 = 0.0F;
+						if (f_5 < 0.0F) {
+							f_8 -= f_25 * f_5;
+							f_5 = 0.0F;
 						}
 
-						if (var24 < var26) {
-							var6 = ((int) (var6 + 0.5F));
-							var5 = ((int) (var5 + 0.5F));
-							var4 = ((int) (var4 + 0.5F)) - var5;
-							var5 -= var6;
+						if (f_24 < f_26) {
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F)) - f_5;
+							f_5 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var5 >= 0.0F; var6 += this.anInt1705) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var7, (int) var9, var15, var28, var12, var30);
-								var7 += var24;
-								var9 += var26;
-								var15 += var29;
-								var12 += var31;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_5 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_7, (int) f_9, f_15, f_28, f_12, f_30);
+								f_7 += f_24;
+								f_9 += f_26;
+								f_15 += f_29;
+								f_12 += f_31;
 							}
 
-							while (--var4 >= 0.0F) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var8, (int) var9, var15, var28, var12, var30);
-								var8 += var25;
-								var9 += var26;
-								var15 += var29;
-								var12 += var31;
-								var6 += this.anInt1705;
+							while (--f_4 >= 0.0F) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_8, (int) f_9, f_15, f_28, f_12, f_30);
+								f_8 += f_25;
+								f_9 += f_26;
+								f_15 += f_29;
+								f_12 += f_31;
+								f_6 += (float) this.anInt1705;
 							}
-
 						} else {
-							var6 = ((int) (var6 + 0.5F));
-							var5 = ((int) (var5 + 0.5F));
-							var4 = ((int) (var4 + 0.5F)) - var5;
-							var5 -= var6;
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F)) - f_5;
+							f_5 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var5 >= 0.0F; var6 += this.anInt1705) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var9, (int) var7, var15, var28, var12, var30);
-								var7 += var24;
-								var9 += var26;
-								var15 += var29;
-								var12 += var31;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_5 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_9, (int) f_7, f_15, f_28, f_12, f_30);
+								f_7 += f_24;
+								f_9 += f_26;
+								f_15 += f_29;
+								f_12 += f_31;
 							}
 
-							while (--var4 >= 0.0F) {
-								this.method2443(var2, var3, this.anIntArray1689, (int) var6, 0, 0, (int) var9, (int) var8, var15, var28, var12, var30);
-								var8 += var25;
-								var9 += var26;
-								var15 += var29;
-								var12 += var31;
-								var6 += this.anInt1705;
+							while (--f_4 >= 0.0F) {
+								this.method2443(bool_2, bool_3, this.anIntArray1689, (int) f_6, 0, 0, (int) f_9, (int) f_8, f_15, f_28, f_12, f_30);
+								f_8 += f_25;
+								f_9 += f_26;
+								f_15 += f_29;
+								f_12 += f_31;
+								f_6 += (float) this.anInt1705;
 							}
-
 						}
 					}
 				}
 			}
 		}
+
 	}
 
-	final void method2427(boolean var1, boolean var2, int[] var3, int var4, int var5, int var6, float var7, float var8, float var9, float var10, float var11, float var12, float var13, float var14, float var15, float var16, float var17, float var18, float var19, float var20, float var21, float var22, float var23, float var24, float var25, float var26, float var27, float var28) {
-		int var29 = var6 - var5;
-		float var30 = 1.0F / var29;
-		float var31 = (var8 - var7) * var30;
-		float var32 = (var10 - var9) * var30;
-		float var33 = (var12 - var11) * var30;
-		float var34 = (var14 - var13) * var30;
-		float var35 = (var16 - var15) * var30;
-		float var36 = (var18 - var17) * var30;
-		float var37 = (var20 - var19) * var30;
-		float var38 = (var22 - var21) * var30;
-		float var39 = (var24 - var23) * var30;
-		float var40 = (var26 - var25) * var30;
-		float var41 = (var28 - var27) * var30;
+	final void method2427(boolean bool_1, boolean bool_2, int[] ints_3, int i_4, int i_5, int i_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, float f_22, float f_23, float f_24, float f_25, float f_26, float f_27, float f_28) {
+		int i_29 = i_6 - i_5;
+		float f_30 = 1.0F / (float) i_29;
+		float f_31 = (f_8 - f_7) * f_30;
+		float f_32 = (f_10 - f_9) * f_30;
+		float f_33 = (f_12 - f_11) * f_30;
+		float f_34 = (f_14 - f_13) * f_30;
+		float f_35 = (f_16 - f_15) * f_30;
+		float f_36 = (f_18 - f_17) * f_30;
+		float f_37 = (f_20 - f_19) * f_30;
+		float f_38 = (f_22 - f_21) * f_30;
+		float f_39 = (f_24 - f_23) * f_30;
+		float f_40 = (f_26 - f_25) * f_30;
+		float f_41 = (f_28 - f_27) * f_30;
 		if (this.aBool1708) {
-			if (var6 > this.anInt1684) {
-				var6 = this.anInt1684;
+			if (i_6 > this.anInt1684) {
+				i_6 = this.anInt1684;
 			}
 
-			if (var5 < 0) {
-				var7 -= var31 * var5;
-				var9 -= var32 * var5;
-				var11 -= var33 * var5;
-				var13 -= var34 * var5;
-				var15 -= var35 * var5;
-				var17 -= var36 * var5;
-				var19 -= var37 * var5;
-				var21 -= var38 * var5;
-				var23 -= var39 * var5;
-				var25 -= var40 * var5;
-				var27 -= var41 * var5;
-				var5 = 0;
+			if (i_5 < 0) {
+				f_7 -= f_31 * (float) i_5;
+				f_9 -= f_32 * (float) i_5;
+				f_11 -= f_33 * (float) i_5;
+				f_13 -= f_34 * (float) i_5;
+				f_15 -= f_35 * (float) i_5;
+				f_17 -= f_36 * (float) i_5;
+				f_19 -= f_37 * (float) i_5;
+				f_21 -= f_38 * (float) i_5;
+				f_23 -= f_39 * (float) i_5;
+				f_25 -= f_40 * (float) i_5;
+				f_27 -= f_41 * (float) i_5;
+				i_5 = 0;
 			}
 		}
 
-		if (var5 < var6) {
-			var29 = var6 - var5;
+		if (i_5 < i_6) {
+			i_29 = i_6 - i_5;
 
-			for (var4 += var5; var29-- > 0; var27 += var41) {
-				float var42 = 1.0F / var7;
-				float var43 = 1.0F / var9;
-				if (!var1 || var42 < this.aFloatArray1690[var4]) {
-					float var44 = var11 * var43;
-					float var45 = var13 * var43;
-					int var46 = (int) (var44 * this.anInt1694 * this.aFloat1696) & this.anInt1691;
-					int var47 = (int) (var45 * this.anInt1694 * this.aFloat1696) & this.anInt1691;
-					int var48 = this.anIntArray1693[var47 * this.anInt1694 + var46];
-					var46 = (int) (var44 * this.anInt1701 * this.aFloat1695) & this.anInt1699;
-					var47 = (int) (var45 * this.anInt1701 * this.aFloat1695) & this.anInt1699;
-					int var49 = this.anIntArray1698[var47 * this.anInt1701 + var46];
-					var46 = (int) (var44 * this.anInt1706 * this.aFloat1681) & this.anInt1707;
-					var47 = (int) (var45 * this.anInt1706 * this.aFloat1681) & this.anInt1707;
-					int var50 = this.anIntArray1673[var47 * this.anInt1706 + var46];
-					float var51 = 1.0F - (var25 + var27);
-					var48 = -16777216 | (int) (var25 * (var48 >> 16 & 255)) << 16 | (int) (var25 * (var48 >> 8 & 255)) << 8 | (int) (var25 * (var48 & 255));
-					var49 = -16777216 | (int) (var27 * (var49 >> 16 & 255)) << 16 | (int) (var27 * (var49 >> 8 & 255)) << 8 | (int) (var27 * (var49 & 255));
-					var50 = -16777216 | (int) (var51 * (var50 >> 16 & 255)) << 16 | (int) (var51 * (var50 >> 8 & 255)) << 8 | (int) (var51 * (var50 & 255));
-					int var52 = var48 + var49 + var50;
-					int var53 = -16777216 | (int) (var19 * (var52 >> 16 & 255)) << 8 & 16711680 | (int) (var21 * (var52 >> 8 & 255)) & '\uff00' | (int) (var23 * (var52 & 255)) >> 8;
-					if (var15 != 0.0F) {
-						int var54 = (int) (255.0F - var15);
-						int var55 = ((this.anInt1677 & 16711935) * (int) var15 & -16711936 | (this.anInt1677 & '\uff00') * (int) var15 & 16711680) >>> 8;
-						var53 = (((var53 & 16711935) * var54 & -16711936 | (var53 & '\uff00') * var54 & 16711680) >>> 8) + var55;
+			for (i_4 += i_5; i_29-- > 0; f_27 += f_41) {
+				float f_42 = 1.0F / f_7;
+				float f_43 = 1.0F / f_9;
+				if (!bool_1 || f_42 < this.aFloatArray1690[i_4]) {
+					float f_44 = f_11 * f_43;
+					float f_45 = f_13 * f_43;
+					int i_46 = (int) (f_44 * (float) this.anInt1694 * this.aFloat1696) & this.anInt1691;
+					int i_47 = (int) (f_45 * (float) this.anInt1694 * this.aFloat1696) & this.anInt1691;
+					int i_48 = this.anIntArray1693[i_46 + i_47 * this.anInt1694];
+					i_46 = (int) (f_44 * (float) this.anInt1701 * this.aFloat1695) & this.anInt1699;
+					i_47 = (int) (f_45 * (float) this.anInt1701 * this.aFloat1695) & this.anInt1699;
+					int i_49 = this.anIntArray1698[i_46 + i_47 * this.anInt1701];
+					i_46 = (int) (f_44 * (float) this.anInt1706 * this.aFloat1681) & this.anInt1707;
+					i_47 = (int) (f_45 * (float) this.anInt1706 * this.aFloat1681) & this.anInt1707;
+					int i_50 = this.anIntArray1673[i_46 + i_47 * this.anInt1706];
+					float f_51 = 1.0F - (f_25 + f_27);
+					i_48 = ~0xffffff | (int) (f_25 * (float) (i_48 >> 16 & 0xff)) << 16 | (int) (f_25 * (float) (i_48 >> 8 & 0xff)) << 8 | (int) (f_25 * (float) (i_48 & 0xff));
+					i_49 = ~0xffffff | (int) (f_27 * (float) (i_49 >> 16 & 0xff)) << 16 | (int) (f_27 * (float) (i_49 >> 8 & 0xff)) << 8 | (int) (f_27 * (float) (i_49 & 0xff));
+					i_50 = ~0xffffff | (int) (f_51 * (float) (i_50 >> 16 & 0xff)) << 16 | (int) (f_51 * (float) (i_50 >> 8 & 0xff)) << 8 | (int) (f_51 * (float) (i_50 & 0xff));
+					int i_52 = i_48 + i_49 + i_50;
+					int i_53 = ~0xffffff | (int) (f_19 * (float) (i_52 >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_21 * (float) (i_52 >> 8 & 0xff)) & 0xff00 | (int) (f_23 * (float) (i_52 & 0xff)) >> 8;
+					if (f_15 != 0.0F) {
+						int i_54 = (int) (255.0F - f_15);
+						int i_55 = ((this.anInt1677 & 0xff00ff) * (int) f_15 & ~0xff00ff | (int) f_15 * (this.anInt1677 & 0xff00) & 0xff0000) >>> 8;
+						i_53 = i_55 + (((i_53 & 0xff00ff) * i_54 & ~0xff00ff | i_54 * (i_53 & 0xff00) & 0xff0000) >>> 8);
 					}
 
-					if (var2) {
-						var3[var4] = ((int) var17 | var3[var4] >> 24) << 24 | var53;
+					if (bool_2) {
+						ints_3[i_4] = ((int) f_17 | ints_3[i_4] >> 24) << 24 | i_53;
 					} else {
-						var3[var4] = var53;
+						ints_3[i_4] = i_53;
 					}
 
-					if (var1) {
-						this.aFloatArray1690[var4] = var42;
+					if (bool_1) {
+						this.aFloatArray1690[i_4] = f_42;
 					}
 				}
 
-				++var4;
-				var7 += var31;
-				var9 += var32;
-				var11 += var33;
-				var13 += var34;
-				var15 += var35;
-				var17 += var36;
-				var19 += var37;
-				var21 += var38;
-				var23 += var39;
-				var25 += var40;
+				++i_4;
+				f_7 += f_31;
+				f_9 += f_32;
+				f_11 += f_33;
+				f_13 += f_34;
+				f_15 += f_35;
+				f_17 += f_36;
+				f_19 += f_37;
+				f_21 += f_38;
+				f_23 += f_39;
+				f_25 += f_40;
 			}
-
 		}
+
 	}
 
-	final void method2428(boolean var1, boolean var2, boolean var3, float var4, float var5, float var6, float var7, float var8, float var9, float var10, float var11, float var12, int var13) {
+	final void method2428(boolean bool_1, boolean bool_2, boolean bool_3, float f_4, float f_5, float f_6, float f_7, float f_8, float f_9, float f_10, float f_11, float f_12, int i_13) {
 		if (this.aBool1671) {
-			this.aClass505_Sub3_1686.method8429((int) var7, (int) var4, (int) var8, (int) var5, var13, (byte) 39);
-			this.aClass505_Sub3_1686.method8429((int) var8, (int) var5, (int) var9, (int) var6, var13, (byte) -65);
-			this.aClass505_Sub3_1686.method8429((int) var9, (int) var6, (int) var7, (int) var4, var13, (byte) 63);
+			this.aClass505_Sub3_1686.method8429((int) f_7, (int) f_4, (int) f_8, (int) f_5, i_13, (byte) 39);
+			this.aClass505_Sub3_1686.method8429((int) f_8, (int) f_5, (int) f_9, (int) f_6, i_13, (byte) -65);
+			this.aClass505_Sub3_1686.method8429((int) f_9, (int) f_6, (int) f_7, (int) f_4, i_13, (byte) 63);
 		} else {
-			float var14 = var8 - var7;
-			float var15 = var5 - var4;
-			float var16 = var9 - var7;
-			float var17 = var6 - var4;
-			float var18 = var11 - var10;
-			float var19 = var12 - var10;
-			float var20 = 0.0F;
-			if (var5 != var4) {
-				var20 = (var8 - var7) / (var5 - var4);
+			float f_14 = f_8 - f_7;
+			float f_15 = f_5 - f_4;
+			float f_16 = f_9 - f_7;
+			float f_17 = f_6 - f_4;
+			float f_18 = f_11 - f_10;
+			float f_19 = f_12 - f_10;
+			float f_20 = 0.0F;
+			if (f_5 != f_4) {
+				f_20 = (f_8 - f_7) / (f_5 - f_4);
 			}
 
-			float var21 = 0.0F;
-			if (var6 != var5) {
-				var21 = (var9 - var8) / (var6 - var5);
+			float f_21 = 0.0F;
+			if (f_6 != f_5) {
+				f_21 = (f_9 - f_8) / (f_6 - f_5);
 			}
 
-			float var22 = 0.0F;
-			if (var6 != var4) {
-				var22 = (var7 - var9) / (var4 - var6);
+			float f_22 = 0.0F;
+			if (f_6 != f_4) {
+				f_22 = (f_7 - f_9) / (f_4 - f_6);
 			}
 
-			float var23 = var14 * var17 - var16 * var15;
-			if (var23 != 0.0F) {
-				float var24 = (var18 * var17 - var19 * var15) / var23;
-				float var25 = (var19 * var14 - var18 * var16) / var23;
-				if (var4 <= var5 && var4 <= var6) {
-					if (var4 < this.anInt1700) {
-						if (var5 > this.anInt1700) {
-							var5 = this.anInt1700;
+			float f_23 = f_14 * f_17 - f_16 * f_15;
+			if (f_23 != 0.0F) {
+				float f_24 = (f_18 * f_17 - f_19 * f_15) / f_23;
+				float f_25 = (f_19 * f_14 - f_18 * f_16) / f_23;
+				if (f_4 <= f_5 && f_4 <= f_6) {
+					if (f_4 < (float) this.anInt1700) {
+						if (f_5 > (float) this.anInt1700) {
+							f_5 = (float) this.anInt1700;
 						}
 
-						if (var6 > this.anInt1700) {
-							var6 = this.anInt1700;
+						if (f_6 > (float) this.anInt1700) {
+							f_6 = (float) this.anInt1700;
 						}
 
-						var10 = var10 - var24 * var7 + var24;
-						if (var5 < var6) {
-							var9 = var7;
-							if (var4 < 0.0F) {
-								var9 = var7 - var22 * var4;
-								var7 -= var20 * var4;
-								var10 -= var25 * var4;
-								var4 = 0.0F;
+						f_10 = f_10 - f_24 * f_7 + f_24;
+						if (f_5 < f_6) {
+							f_9 = f_7;
+							if (f_4 < 0.0F) {
+								f_9 = f_7 - f_22 * f_4;
+								f_7 -= f_20 * f_4;
+								f_10 -= f_25 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var5 < 0.0F) {
-								var8 -= var21 * var5;
-								var5 = 0.0F;
+							if (f_5 < 0.0F) {
+								f_8 -= f_21 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if ((var4 == var5 || var22 >= var20) && (var4 != var5 || var22 <= var21)) {
-								var4 = ((int) (var4 + 0.5F));
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var5;
-								var5 -= var4;
+							if (f_4 != f_5 && f_22 < f_20 || f_4 == f_5 && f_22 > f_21) {
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+								f_5 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var7, (int) var9, var10, var24);
-									var9 += var22;
-									var7 += var20;
-									var10 += var25;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_9, (int) f_7, f_10, f_24);
+									f_9 += f_22;
+									f_7 += f_20;
+									f_10 += f_25;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var8, (int) var9, var10, var24);
-									var9 += var22;
-									var8 += var21;
-									var10 += var25;
-									var4 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_9, (int) f_8, f_10, f_24);
+									f_9 += f_22;
+									f_8 += f_21;
+									f_10 += f_25;
+									f_4 += (float) this.anInt1705;
 								}
-
 							} else {
-								var4 = ((int) (var4 + 0.5F));
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var5;
-								var5 -= var4;
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_5;
+								f_5 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var5 >= 0.0F; var4 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var9, (int) var7, var10, var24);
-									var9 += var22;
-									var7 += var20;
-									var10 += var25;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_5 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_7, (int) f_9, f_10, f_24);
+									f_9 += f_22;
+									f_7 += f_20;
+									f_10 += f_25;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var9, (int) var8, var10, var24);
-									var9 += var22;
-									var8 += var21;
-									var10 += var25;
-									var4 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_8, (int) f_9, f_10, f_24);
+									f_9 += f_22;
+									f_8 += f_21;
+									f_10 += f_25;
+									f_4 += (float) this.anInt1705;
 								}
-
 							}
 						} else {
-							var8 = var7;
-							if (var4 < 0.0F) {
-								var8 = var7 - var22 * var4;
-								var7 -= var20 * var4;
-								var10 -= var25 * var4;
-								var4 = 0.0F;
+							f_8 = f_7;
+							if (f_4 < 0.0F) {
+								f_8 = f_7 - f_22 * f_4;
+								f_7 -= f_20 * f_4;
+								f_10 -= f_25 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var6 < 0.0F) {
-								var9 -= var21 * var6;
-								var6 = 0.0F;
+							if (f_6 < 0.0F) {
+								f_9 -= f_21 * f_6;
+								f_6 = 0.0F;
 							}
 
-							if ((var4 == var6 || var22 >= var20) && (var4 != var6 || var21 <= var20)) {
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var5 = ((int) (var5 + 0.5F)) - var6;
-								var6 -= var4;
+							if ((f_4 == f_6 || f_22 >= f_20) && (f_4 != f_6 || f_21 <= f_20)) {
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+								f_6 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var7, (int) var8, var10, var24);
-									var8 += var22;
-									var7 += var20;
-									var10 += var25;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_7, (int) f_8, f_10, f_24);
+									f_8 += f_22;
+									f_7 += f_20;
+									f_10 += f_25;
 								}
 
-								while (--var5 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var7, (int) var9, var10, var24);
-									var9 += var21;
-									var7 += var20;
-									var10 += var25;
-									var4 += this.anInt1705;
+								while (--f_5 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_7, (int) f_9, f_10, f_24);
+									f_9 += f_21;
+									f_7 += f_20;
+									f_10 += f_25;
+									f_4 += (float) this.anInt1705;
 								}
-
 							} else {
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var5 = ((int) (var5 + 0.5F)) - var6;
-								var6 -= var4;
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_5 = (float) ((int) (f_5 + 0.5F)) - f_6;
+								f_6 -= f_4;
 
-								for (var4 = this.anIntArray1685[(int) var4]; --var6 >= 0.0F; var4 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var8, (int) var7, var10, var24);
-									var8 += var22;
-									var7 += var20;
-									var10 += var25;
+								for (f_4 = (float) this.anIntArray1685[(int) f_4]; --f_6 >= 0.0F; f_4 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_8, (int) f_7, f_10, f_24);
+									f_8 += f_22;
+									f_7 += f_20;
+									f_10 += f_25;
 								}
 
-								while (--var5 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var4, var13, 0, (int) var9, (int) var7, var10, var24);
-									var9 += var21;
-									var7 += var20;
-									var10 += var25;
-									var4 += this.anInt1705;
+								while (--f_5 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_4, i_13, 0, (int) f_9, (int) f_7, f_10, f_24);
+									f_9 += f_21;
+									f_7 += f_20;
+									f_10 += f_25;
+									f_4 += (float) this.anInt1705;
 								}
-
 							}
 						}
 					}
-				} else if (var5 <= var6) {
-					if (var5 < this.anInt1700) {
-						if (var6 > this.anInt1700) {
-							var6 = this.anInt1700;
+				} else if (f_5 <= f_6) {
+					if (f_5 < (float) this.anInt1700) {
+						if (f_6 > (float) this.anInt1700) {
+							f_6 = (float) this.anInt1700;
 						}
 
-						if (var4 > this.anInt1700) {
-							var4 = this.anInt1700;
+						if (f_4 > (float) this.anInt1700) {
+							f_4 = (float) this.anInt1700;
 						}
 
-						var11 = var11 - var24 * var8 + var24;
-						if (var6 < var4) {
-							var7 = var8;
-							if (var5 < 0.0F) {
-								var7 = var8 - var20 * var5;
-								var8 -= var21 * var5;
-								var11 -= var25 * var5;
-								var5 = 0.0F;
+						f_11 = f_11 - f_24 * f_8 + f_24;
+						if (f_6 < f_4) {
+							f_7 = f_8;
+							if (f_5 < 0.0F) {
+								f_7 = f_8 - f_20 * f_5;
+								f_8 -= f_21 * f_5;
+								f_11 -= f_25 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if (var6 < 0.0F) {
-								var9 -= var22 * var6;
-								var6 = 0.0F;
+							if (f_6 < 0.0F) {
+								f_9 -= f_22 * f_6;
+								f_6 = 0.0F;
 							}
 
-							if ((var5 == var6 || var20 >= var21) && (var5 != var6 || var20 <= var22)) {
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var4 = ((int) (var4 + 0.5F)) - var6;
-								var6 -= var5;
+							if ((f_5 == f_6 || f_20 >= f_21) && (f_5 != f_6 || f_20 <= f_22)) {
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F)) - f_6;
+								f_6 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var6 >= 0.0F; var5 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var8, (int) var7, var11, var24);
-									var7 += var20;
-									var8 += var21;
-									var11 += var25;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_6 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_8, (int) f_7, f_11, f_24);
+									f_7 += f_20;
+									f_8 += f_21;
+									f_11 += f_25;
 								}
 
-								while (--var4 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var9, (int) var7, var11, var24);
-									var7 += var20;
-									var9 += var22;
-									var11 += var25;
-									var5 += this.anInt1705;
+								while (--f_4 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_9, (int) f_7, f_11, f_24);
+									f_7 += f_20;
+									f_9 += f_22;
+									f_11 += f_25;
+									f_5 += (float) this.anInt1705;
 								}
-
 							} else {
-								var5 = ((int) (var5 + 0.5F));
-								var6 = ((int) (var6 + 0.5F));
-								var4 = ((int) (var4 + 0.5F)) - var6;
-								var6 -= var5;
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F)) - f_6;
+								f_6 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var6 >= 0.0F; var5 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var7, (int) var8, var11, var24);
-									var7 += var20;
-									var8 += var21;
-									var11 += var25;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_6 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_7, (int) f_8, f_11, f_24);
+									f_7 += f_20;
+									f_8 += f_21;
+									f_11 += f_25;
 								}
 
-								while (--var4 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var7, (int) var9, var11, var24);
-									var7 += var20;
-									var9 += var22;
-									var11 += var25;
-									var5 += this.anInt1705;
+								while (--f_4 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_7, (int) f_9, f_11, f_24);
+									f_7 += f_20;
+									f_9 += f_22;
+									f_11 += f_25;
+									f_5 += (float) this.anInt1705;
 								}
-
 							}
 						} else {
-							var9 = var8;
-							if (var5 < 0.0F) {
-								var9 = var8 - var20 * var5;
-								var8 -= var21 * var5;
-								var11 -= var25 * var5;
-								var5 = 0.0F;
+							f_9 = f_8;
+							if (f_5 < 0.0F) {
+								f_9 = f_8 - f_20 * f_5;
+								f_8 -= f_21 * f_5;
+								f_11 -= f_25 * f_5;
+								f_5 = 0.0F;
 							}
 
-							if (var4 < 0.0F) {
-								var7 -= var22 * var4;
-								var4 = 0.0F;
+							if (f_4 < 0.0F) {
+								f_7 -= f_22 * f_4;
+								f_4 = 0.0F;
 							}
 
-							if (var20 < var21) {
-								var5 = ((int) (var5 + 0.5F));
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var4;
-								var4 -= var5;
+							if (f_20 < f_21) {
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_4;
+								f_4 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var4 >= 0.0F; var5 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var9, (int) var8, var11, var24);
-									var9 += var20;
-									var8 += var21;
-									var11 += var25;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_4 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_9, (int) f_8, f_11, f_24);
+									f_9 += f_20;
+									f_8 += f_21;
+									f_11 += f_25;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var7, (int) var8, var11, var24);
-									var7 += var22;
-									var8 += var21;
-									var11 += var25;
-									var5 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_7, (int) f_8, f_11, f_24);
+									f_7 += f_22;
+									f_8 += f_21;
+									f_11 += f_25;
+									f_5 += (float) this.anInt1705;
 								}
-
 							} else {
-								var5 = ((int) (var5 + 0.5F));
-								var4 = ((int) (var4 + 0.5F));
-								var6 = ((int) (var6 + 0.5F)) - var4;
-								var4 -= var5;
+								f_5 = (float) ((int) (f_5 + 0.5F));
+								f_4 = (float) ((int) (f_4 + 0.5F));
+								f_6 = (float) ((int) (f_6 + 0.5F)) - f_4;
+								f_4 -= f_5;
 
-								for (var5 = this.anIntArray1685[(int) var5]; --var4 >= 0.0F; var5 += this.anInt1705) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var8, (int) var9, var11, var24);
-									var9 += var20;
-									var8 += var21;
-									var11 += var25;
+								for (f_5 = (float) this.anIntArray1685[(int) f_5]; --f_4 >= 0.0F; f_5 += (float) this.anInt1705) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_8, (int) f_9, f_11, f_24);
+									f_9 += f_20;
+									f_8 += f_21;
+									f_11 += f_25;
 								}
 
-								while (--var6 >= 0.0F) {
-									this.method2419(var1, var2, var3, this.anIntArray1689, (int) var5, var13, 0, (int) var8, (int) var7, var11, var24);
-									var7 += var22;
-									var8 += var21;
-									var11 += var25;
-									var5 += this.anInt1705;
+								while (--f_6 >= 0.0F) {
+									this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_5, i_13, 0, (int) f_8, (int) f_7, f_11, f_24);
+									f_7 += f_22;
+									f_8 += f_21;
+									f_11 += f_25;
+									f_5 += (float) this.anInt1705;
 								}
-
 							}
 						}
 					}
-				} else if (var6 < this.anInt1700) {
-					if (var4 > this.anInt1700) {
-						var4 = this.anInt1700;
+				} else if (f_6 < (float) this.anInt1700) {
+					if (f_4 > (float) this.anInt1700) {
+						f_4 = (float) this.anInt1700;
 					}
 
-					if (var5 > this.anInt1700) {
-						var5 = this.anInt1700;
+					if (f_5 > (float) this.anInt1700) {
+						f_5 = (float) this.anInt1700;
 					}
 
-					var12 = var12 - var24 * var9 + var24;
-					if (var4 < var5) {
-						var8 = var9;
-						if (var6 < 0.0F) {
-							var8 = var9 - var21 * var6;
-							var9 -= var22 * var6;
-							var12 -= var25 * var6;
-							var6 = 0.0F;
+					f_12 = f_12 - f_24 * f_9 + f_24;
+					if (f_4 < f_5) {
+						f_8 = f_9;
+						if (f_6 < 0.0F) {
+							f_8 = f_9 - f_21 * f_6;
+							f_9 -= f_22 * f_6;
+							f_12 -= f_25 * f_6;
+							f_6 = 0.0F;
 						}
 
-						if (var4 < 0.0F) {
-							var7 -= var20 * var4;
-							var4 = 0.0F;
+						if (f_4 < 0.0F) {
+							f_7 -= f_20 * f_4;
+							f_4 = 0.0F;
 						}
 
-						if (var21 < var22) {
-							var6 = ((int) (var6 + 0.5F));
-							var4 = ((int) (var4 + 0.5F));
-							var5 = ((int) (var5 + 0.5F)) - var4;
-							var4 -= var6;
+						if (f_21 < f_22) {
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F)) - f_4;
+							f_4 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var4 >= 0.0F; var6 += this.anInt1705) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var8, (int) var9, var12, var24);
-								var8 += var21;
-								var9 += var22;
-								var12 += var25;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_4 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_8, (int) f_9, f_12, f_24);
+								f_8 += f_21;
+								f_9 += f_22;
+								f_12 += f_25;
 							}
 
-							while (--var5 >= 0.0F) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var8, (int) var7, var12, var24);
-								var8 += var21;
-								var7 += var20;
-								var12 += var25;
-								var6 += this.anInt1705;
+							while (--f_5 >= 0.0F) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_8, (int) f_7, f_12, f_24);
+								f_8 += f_21;
+								f_7 += f_20;
+								f_12 += f_25;
+								f_6 += (float) this.anInt1705;
 							}
-
 						} else {
-							var6 = ((int) (var6 + 0.5F));
-							var4 = ((int) (var4 + 0.5F));
-							var5 = ((int) (var5 + 0.5F)) - var4;
-							var4 -= var6;
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F)) - f_4;
+							f_4 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var4 >= 0.0F; var6 += this.anInt1705) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var9, (int) var8, var12, var24);
-								var8 += var21;
-								var9 += var22;
-								var12 += var25;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_4 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_9, (int) f_8, f_12, f_24);
+								f_8 += f_21;
+								f_9 += f_22;
+								f_12 += f_25;
 							}
 
-							while (--var5 >= 0.0F) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var7, (int) var8, var12, var24);
-								var8 += var21;
-								var7 += var20;
-								var12 += var25;
-								var6 += this.anInt1705;
+							while (--f_5 >= 0.0F) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_7, (int) f_8, f_12, f_24);
+								f_8 += f_21;
+								f_7 += f_20;
+								f_12 += f_25;
+								f_6 += (float) this.anInt1705;
 							}
-
 						}
 					} else {
-						var7 = var9;
-						if (var6 < 0.0F) {
-							var7 = var9 - var21 * var6;
-							var9 -= var22 * var6;
-							var12 -= var25 * var6;
-							var6 = 0.0F;
+						f_7 = f_9;
+						if (f_6 < 0.0F) {
+							f_7 = f_9 - f_21 * f_6;
+							f_9 -= f_22 * f_6;
+							f_12 -= f_25 * f_6;
+							f_6 = 0.0F;
 						}
 
-						if (var5 < 0.0F) {
-							var8 -= var20 * var5;
-							var5 = 0.0F;
+						if (f_5 < 0.0F) {
+							f_8 -= f_20 * f_5;
+							f_5 = 0.0F;
 						}
 
-						if (var21 < var22) {
-							var6 = ((int) (var6 + 0.5F));
-							var5 = ((int) (var5 + 0.5F));
-							var4 = ((int) (var4 + 0.5F)) - var5;
-							var5 -= var6;
+						if (f_21 < f_22) {
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F)) - f_5;
+							f_5 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var5 >= 0.0F; var6 += this.anInt1705) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var7, (int) var9, var12, var24);
-								var7 += var21;
-								var9 += var22;
-								var12 += var25;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_5 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_7, (int) f_9, f_12, f_24);
+								f_7 += f_21;
+								f_9 += f_22;
+								f_12 += f_25;
 							}
 
-							while (--var4 >= 0.0F) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var8, (int) var9, var12, var24);
-								var8 += var20;
-								var9 += var22;
-								var12 += var25;
-								var6 += this.anInt1705;
+							while (--f_4 >= 0.0F) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_8, (int) f_9, f_12, f_24);
+								f_8 += f_20;
+								f_9 += f_22;
+								f_12 += f_25;
+								f_6 += (float) this.anInt1705;
 							}
-
 						} else {
-							var6 = ((int) (var6 + 0.5F));
-							var5 = ((int) (var5 + 0.5F));
-							var4 = ((int) (var4 + 0.5F)) - var5;
-							var5 -= var6;
+							f_6 = (float) ((int) (f_6 + 0.5F));
+							f_5 = (float) ((int) (f_5 + 0.5F));
+							f_4 = (float) ((int) (f_4 + 0.5F)) - f_5;
+							f_5 -= f_6;
 
-							for (var6 = this.anIntArray1685[(int) var6]; --var5 >= 0.0F; var6 += this.anInt1705) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var9, (int) var7, var12, var24);
-								var7 += var21;
-								var9 += var22;
-								var12 += var25;
+							for (f_6 = (float) this.anIntArray1685[(int) f_6]; --f_5 >= 0.0F; f_6 += (float) this.anInt1705) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_9, (int) f_7, f_12, f_24);
+								f_7 += f_21;
+								f_9 += f_22;
+								f_12 += f_25;
 							}
 
-							while (--var4 >= 0.0F) {
-								this.method2419(var1, var2, var3, this.anIntArray1689, (int) var6, var13, 0, (int) var9, (int) var8, var12, var24);
-								var8 += var20;
-								var9 += var22;
-								var12 += var25;
-								var6 += this.anInt1705;
+							while (--f_4 >= 0.0F) {
+								this.method2419(bool_1, bool_2, bool_3, this.anIntArray1689, (int) f_6, i_13, 0, (int) f_9, (int) f_8, f_12, f_24);
+								f_8 += f_20;
+								f_9 += f_22;
+								f_12 += f_25;
+								f_6 += (float) this.anInt1705;
 							}
-
 						}
 					}
 				}
 			}
 		}
+
 	}
 
-	final void method2434(boolean var1, boolean var2, int[] var3, int[] var4, int var5, int var6, int var7, float var8, float var9, float var10, float var11, float var12, float var13, float var14, float var15, float var16, float var17, float var18, float var19, float var20, float var21, float var22, float var23, float var24, float var25) {
-		int var26 = var7 - var6;
-		float var27 = 1.0F / var26;
-		float var28 = (var9 - var8) * var27;
-		float var29 = (var11 - var10) * var27;
-		float var30 = (var13 - var12) * var27;
-		float var31 = (var15 - var14) * var27;
-		float var32 = (var17 - var16) * var27;
-		float var33 = (var19 - var18) * var27;
-		float var34 = (var21 - var20) * var27;
-		float var35 = (var23 - var22) * var27;
-		float var36 = (var25 - var24) * var27;
+	final void method2434(boolean bool_1, boolean bool_2, int[] ints_3, int[] ints_4, int i_5, int i_6, int i_7, float f_8, float f_9, float f_10, float f_11, float f_12, float f_13, float f_14, float f_15, float f_16, float f_17, float f_18, float f_19, float f_20, float f_21, float f_22, float f_23, float f_24, float f_25) {
+		int i_26 = i_7 - i_6;
+		float f_27 = 1.0F / (float) i_26;
+		float f_28 = (f_9 - f_8) * f_27;
+		float f_29 = (f_11 - f_10) * f_27;
+		float f_30 = (f_13 - f_12) * f_27;
+		float f_31 = (f_15 - f_14) * f_27;
+		float f_32 = (f_17 - f_16) * f_27;
+		float f_33 = (f_19 - f_18) * f_27;
+		float f_34 = (f_21 - f_20) * f_27;
+		float f_35 = (f_23 - f_22) * f_27;
+		float f_36 = (f_25 - f_24) * f_27;
 		if (this.aBool1708) {
-			if (var7 > this.anInt1684) {
-				var7 = this.anInt1684;
+			if (i_7 > this.anInt1684) {
+				i_7 = this.anInt1684;
 			}
 
-			if (var6 < 0) {
-				var8 -= var28 * var6;
-				var10 -= var29 * var6;
-				var12 -= var30 * var6;
-				var14 -= var31 * var6;
-				var16 -= var32 * var6;
-				var18 -= var33 * var6;
-				var20 -= var34 * var6;
-				var22 -= var35 * var6;
-				var24 -= var36 * var6;
-				var6 = 0;
+			if (i_6 < 0) {
+				f_8 -= f_28 * (float) i_6;
+				f_10 -= f_29 * (float) i_6;
+				f_12 -= f_30 * (float) i_6;
+				f_14 -= f_31 * (float) i_6;
+				f_16 -= f_32 * (float) i_6;
+				f_18 -= f_33 * (float) i_6;
+				f_20 -= f_34 * (float) i_6;
+				f_22 -= f_35 * (float) i_6;
+				f_24 -= f_36 * (float) i_6;
+				i_6 = 0;
 			}
 		}
 
-		if (var6 < var7) {
-			var26 = var7 - var6;
+		if (i_6 < i_7) {
+			i_26 = i_7 - i_6;
 
-			for (var5 += var6; var26-- > 0; var24 += var36) {
-				float var37 = 1.0F / var8;
-				float var38 = 1.0F / var10;
-				if (!var1 || var37 < this.aFloatArray1690[var5]) {
-					int var39 = (int) (var12 * var38 * this.anInt1694);
+			for (i_5 += i_6; i_26-- > 0; f_24 += f_36) {
+				float f_37 = 1.0F / f_8;
+				float f_38 = 1.0F / f_10;
+				if (!bool_1 || f_37 < this.aFloatArray1690[i_5]) {
+					int i_39 = (int) (f_12 * f_38 * (float) this.anInt1694);
 					if (this.aBool1703) {
-						var39 &= this.anInt1691;
-					} else if (var39 < 0) {
-						var39 = 0;
-					} else if (var39 > this.anInt1691) {
-						var39 = this.anInt1691;
+						i_39 &= this.anInt1691;
+					} else if (i_39 < 0) {
+						i_39 = 0;
+					} else if (i_39 > this.anInt1691) {
+						i_39 = this.anInt1691;
 					}
 
-					int var40 = (int) (var14 * var38 * this.anInt1694);
+					int i_40 = (int) (f_14 * f_38 * (float) this.anInt1694);
 					if (this.aBool1703) {
-						var40 &= this.anInt1691;
-					} else if (var40 < 0) {
-						var40 = 0;
-					} else if (var40 > this.anInt1691) {
-						var40 = this.anInt1691;
+						i_40 &= this.anInt1691;
+					} else if (i_40 < 0) {
+						i_40 = 0;
+					} else if (i_40 > this.anInt1691) {
+						i_40 = this.anInt1691;
 					}
 
-					int var41 = this.anIntArray1693[var40 * this.anInt1694 + var39];
-					int var46;
+					int i_41 = this.anIntArray1693[i_39 + i_40 * this.anInt1694];
+					int i_42;
 					if (this.anInt1697 == 2) {
-						var46 = var41 >> 24 & 255;
+						i_42 = i_41 >> 24 & 0xff;
 					} else if (this.anInt1697 == 1) {
-						var46 = var41 == 0 ? 0 : 255;
+						i_42 = i_41 == 0 ? 0 : 255;
 					} else {
-						var46 = (int) var18;
+						i_42 = (int) f_18;
 					}
 
-					if (var46 != 0) {
-						int var43;
-						int var44;
-						int var45;
-						if (var46 != 255) {
-							var43 = -16777216 | (int) (var20 * (var41 >> 16 & 255)) << 8 & 16711680 | (int) (var22 * (var41 >> 8 & 255)) & '\uff00' | (int) (var24 * (var41 & 255)) >> 8;
-							if (var16 != 0.0F) {
-								var44 = (int) (255.0F - var16);
-								var45 = ((this.anInt1677 & 16711935) * (int) var16 & -16711936 | (this.anInt1677 & '\uff00') * (int) var16 & 16711680) >>> 8;
-								var43 = (((var43 & 16711935) * var44 & -16711936 | (var43 & '\uff00') * var44 & 16711680) >>> 8) + var45;
+					if (i_42 != 0) {
+						int i_43;
+						int i_44;
+						int i_45;
+						if (i_42 != 255) {
+							i_43 = ~0xffffff | (int) (f_20 * (float) (i_41 >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_22 * (float) (i_41 >> 8 & 0xff)) & 0xff00 | (int) (f_24 * (float) (i_41 & 0xff)) >> 8;
+							if (f_16 != 0.0F) {
+								i_44 = (int) (255.0F - f_16);
+								i_45 = ((this.anInt1677 & 0xff00ff) * (int) f_16 & ~0xff00ff | (this.anInt1677 & 0xff00) * (int) f_16 & 0xff0000) >>> 8;
+								i_43 = i_45 + (((i_43 & 0xff00ff) * i_44 & ~0xff00ff | i_44 * (i_43 & 0xff00) & 0xff0000) >>> 8);
 							}
 
-							var44 = var3[var5];
-							var45 = 255 - var46;
-							var43 = ((var44 & 16711935) * var45 + (var43 & 16711935) * var46 & -16711936) + ((var44 & '\uff00') * var45 + (var43 & '\uff00') * var46 & 16711680) >> 8;
-							if (var2) {
-								var3[var5] = (var46 | var3[var5] >> 24) << 24 | var43;
+							i_44 = ints_3[i_5];
+							i_45 = 255 - i_42;
+							i_43 = ((i_44 & 0xff00ff) * i_45 + (i_43 & 0xff00ff) * i_42 & ~0xff00ff) + (i_45 * (i_44 & 0xff00) + i_42 * (i_43 & 0xff00) & 0xff0000) >> 8;
+							if (bool_2) {
+								ints_3[i_5] = (i_42 | ints_3[i_5] >> 24) << 24 | i_43;
 							} else {
-								var3[var5] = var43;
+								ints_3[i_5] = i_43;
 							}
 
-							if (var1) {
-								this.aFloatArray1690[var5] = var37;
+							if (bool_1) {
+								this.aFloatArray1690[i_5] = f_37;
 							}
 						} else {
-							var43 = -16777216 | (int) (var20 * (var41 >> 16 & 255)) << 8 & 16711680 | (int) (var22 * (var41 >> 8 & 255)) & '\uff00' | (int) (var24 * (var41 & 255)) >> 8;
-							if (var16 != 0.0F) {
-								var44 = (int) (255.0F - var16);
-								var45 = ((this.anInt1677 & 16711935) * (int) var16 & -16711936 | (this.anInt1677 & '\uff00') * (int) var16 & 16711680) >>> 8;
-								var43 = (((var43 & 16711935) * var44 & -16711936 | (var43 & '\uff00') * var44 & 16711680) >>> 8) + var45;
+							i_43 = ~0xffffff | (int) (f_20 * (float) (i_41 >> 16 & 0xff)) << 8 & 0xff0000 | (int) (f_22 * (float) (i_41 >> 8 & 0xff)) & 0xff00 | (int) (f_24 * (float) (i_41 & 0xff)) >> 8;
+							if (f_16 != 0.0F) {
+								i_44 = (int) (255.0F - f_16);
+								i_45 = ((this.anInt1677 & 0xff00ff) * (int) f_16 & ~0xff00ff | (this.anInt1677 & 0xff00) * (int) f_16 & 0xff0000) >>> 8;
+								i_43 = i_45 + (((i_43 & 0xff00ff) * i_44 & ~0xff00ff | i_44 * (i_43 & 0xff00) & 0xff0000) >>> 8);
 							}
 
-							if (var2) {
-								var3[var5] = var46 << 24 | var43;
+							if (bool_2) {
+								ints_3[i_5] = i_42 << 24 | i_43;
 							} else {
-								var3[var5] = var43;
+								ints_3[i_5] = i_43;
 							}
 
-							if (var1) {
-								this.aFloatArray1690[var5] = var37;
+							if (bool_1) {
+								this.aFloatArray1690[i_5] = f_37;
 							}
 						}
 					}
 				}
 
-				++var5;
-				var8 += var28;
-				var10 += var29;
-				var12 += var30;
-				var14 += var31;
-				var16 += var32;
-				var18 += var33;
-				var20 += var34;
-				var22 += var35;
+				++i_5;
+				f_8 += f_28;
+				f_10 += f_29;
+				f_12 += f_30;
+				f_14 += f_31;
+				f_16 += f_32;
+				f_18 += f_33;
+				f_20 += f_34;
+				f_22 += f_35;
 			}
-
 		}
+
 	}
 
-	final void method2443(boolean var1, boolean var2, int[] var3, int var4, int var5, int var6, int var7, int var8, float var9, float var10, float var11, float var12) {
+	final void method2443(boolean bool_1, boolean bool_2, int[] ints_3, int i_4, int i_5, int i_6, int i_7, int i_8, float f_9, float f_10, float f_11, float f_12) {
 		if (this.aBool1708) {
-			if (var8 > this.anInt1684) {
-				var8 = this.anInt1684;
+			if (i_8 > this.anInt1684) {
+				i_8 = this.anInt1684;
 			}
 
-			if (var7 < 0) {
-				var7 = 0;
+			if (i_7 < 0) {
+				i_7 = 0;
 			}
 		}
 
-		if (var7 < var8) {
-			var4 += var7 - 1;
-			var9 += var10 * var7;
-			var11 += var12 * var7;
-			int var13;
-			int var14;
-			int var15;
+		if (i_7 < i_8) {
+			i_4 += i_7 - 1;
+			f_9 += f_10 * (float) i_7;
+			f_11 += f_12 * (float) i_7;
+			int i_13;
+			int i_14;
+			int i_15;
 			if (this.aClass185_1687.aBool2334) {
 				if (this.aBool1675) {
-					var6 = var8 - var7 >> 2;
-					var10 *= 4.0F;
+					i_6 = i_8 - i_7 >> 2;
+					f_10 *= 4.0F;
 					if (this.anInt1674 == 0) {
-						if (var6 > 0) {
+						if (i_6 > 0) {
 							do {
-								var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-								var9 += var10;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+								i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+								f_9 += f_10;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+								f_11 += f_12;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+								f_11 += f_12;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+								f_11 += f_12;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								--var6;
-							} while (var6 > 0);
+								f_11 += f_12;
+								--i_6;
+							} while (i_6 > 0);
 						}
 
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
 
 							do {
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var3[var4] = var5;
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									ints_3[i_4] = i_5;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								--var6;
-							} while (var6 > 0);
+								f_11 += f_12;
+								--i_6;
+							} while (i_6 > 0);
 						}
 					} else {
-						var13 = this.anInt1674;
-						var14 = 256 - this.anInt1674;
-						if (var6 > 0) {
+						i_13 = this.anInt1674;
+						i_14 = 256 - this.anInt1674;
+						if (i_6 > 0) {
 							do {
-								var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-								var9 += var10;
-								var5 = ((var5 & 16711935) * var14 >> 8 & 16711935) + ((var5 & '\uff00') * var14 >> 8 & '\uff00');
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var15 = var3[var4];
-									if (var2) {
-										var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+								i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+								f_9 += f_10;
+								i_5 = (i_14 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_5 & 0xff00) >> 8 & 0xff00);
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									i_15 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									}
 
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var15 = var3[var4];
-									if (var2) {
-										var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+								f_11 += f_12;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									i_15 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									}
 
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var15 = var3[var4];
-									if (var2) {
-										var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+								f_11 += f_12;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									i_15 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									}
 
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var15 = var3[var4];
-									if (var2) {
-										var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+								f_11 += f_12;
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									i_15 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									}
 
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								--var6;
-							} while (var6 > 0);
+								f_11 += f_12;
+								--i_6;
+							} while (i_6 > 0);
 						}
 
-						var6 = var8 - var7 & 3;
-						if (var6 > 0) {
-							var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-							var5 = ((var5 & 16711935) * var14 >> 8 & 16711935) + ((var5 & '\uff00') * var14 >> 8 & '\uff00');
+						i_6 = i_8 - i_7 & 0x3;
+						if (i_6 > 0) {
+							i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+							i_5 = (i_14 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_5 & 0xff00) >> 8 & 0xff00);
 
 							do {
-								++var4;
-								if (!var1 || var11 < this.aFloatArray1690[var4]) {
-									var15 = var3[var4];
-									if (var2) {
-										var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+								++i_4;
+								if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+									i_15 = ints_3[i_4];
+									if (bool_2) {
+										ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									} else {
-										var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+										ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 									}
 
-									if (var1) {
-										this.aFloatArray1690[var4] = var11;
+									if (bool_1) {
+										this.aFloatArray1690[i_4] = f_11;
 									}
 								}
 
-								var11 += var12;
-								--var6;
-							} while (var6 > 0);
+								f_11 += f_12;
+								--i_6;
+							} while (i_6 > 0);
 						}
 					}
 				} else {
-					var6 = var8 - var7;
-					if (this.anInt1674 == 0) {
-						do {
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var3[var4] = Class335.anIntArray3916[(int) var9 & '\uffff'];
-								if (var1) {
-									this.aFloatArray1690[var4] = var11;
-								}
-							}
-
-							var11 += var12;
-							var9 += var10;
-							--var6;
-						} while (var6 > 0);
-					} else {
-						var13 = this.anInt1674;
-						var14 = 256 - this.anInt1674;
+					i_6 = i_8 - i_7;
+					if (this.anInt1674 != 0) {
+						i_13 = this.anInt1674;
+						i_14 = 256 - this.anInt1674;
 
 						do {
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-								var5 = ((var5 & 16711935) * var14 >> 8 & 16711935) + ((var5 & '\uff00') * var14 >> 8 & '\uff00');
-								var15 = var3[var4];
-								if (var2) {
-									var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+								i_5 = (i_14 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_5 & 0xff00) >> 8 & 0xff00);
+								i_15 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								} else {
-									var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+									ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								}
 
-								if (var1) {
-									this.aFloatArray1690[var4] = var11;
+								if (bool_1) {
+									this.aFloatArray1690[i_4] = f_11;
 								}
 							}
 
-							var9 += var10;
-							var11 += var12;
-							--var6;
-						} while (var6 > 0);
+							f_9 += f_10;
+							f_11 += f_12;
+							--i_6;
+						} while (i_6 > 0);
+					} else {
+						do {
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = Class335.anIntArray3916[(int) f_9 & 0xffff];
+								if (bool_1) {
+									this.aFloatArray1690[i_4] = f_11;
+								}
+							}
+
+							f_11 += f_12;
+							f_9 += f_10;
+							--i_6;
+						} while (i_6 > 0);
 					}
 				}
 			} else if (this.aBool1675) {
-				var6 = var8 - var7 >> 2;
-				var10 *= 4.0F;
+				i_6 = i_8 - i_7 >> 2;
+				f_10 *= 4.0F;
 				if (this.anInt1674 == 0) {
-					if (var6 > 0) {
+					if (i_6 > 0) {
 						do {
-							var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-							var9 += var10;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var3[var4] = var5;
+							i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+							f_9 += f_10;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = i_5;
 							}
 
-							var11 += var12;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var3[var4] = var5;
+							f_11 += f_12;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = i_5;
 							}
 
-							var11 += var12;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var3[var4] = var5;
+							f_11 += f_12;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = i_5;
 							}
 
-							var11 += var12;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var3[var4] = var5;
+							f_11 += f_12;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = i_5;
 							}
 
-							var11 += var12;
-							--var6;
-						} while (var6 > 0);
+							f_11 += f_12;
+							--i_6;
+						} while (i_6 > 0);
 					}
 
-					var6 = var8 - var7 & 3;
-					if (var6 > 0) {
-						var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
+					i_6 = i_8 - i_7 & 0x3;
+					if (i_6 > 0) {
+						i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
 
 						do {
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var3[var4] = var5;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								ints_3[i_4] = i_5;
 							}
 
-							var11 += var12;
-							--var6;
-						} while (var6 > 0);
+							f_11 += f_12;
+							--i_6;
+						} while (i_6 > 0);
 					}
 				} else {
-					var13 = this.anInt1674;
-					var14 = 256 - this.anInt1674;
-					if (var6 > 0) {
+					i_13 = this.anInt1674;
+					i_14 = 256 - this.anInt1674;
+					if (i_6 > 0) {
 						do {
-							var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-							var9 += var10;
-							var5 = ((var5 & 16711935) * var14 >> 8 & 16711935) + ((var5 & '\uff00') * var14 >> 8 & '\uff00');
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var15 = var3[var4];
-								if (var2) {
-									var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+							i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+							f_9 += f_10;
+							i_5 = (i_14 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_5 & 0xff00) >> 8 & 0xff00);
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								i_15 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								} else {
-									var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+									ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								}
 							}
 
-							var11 += var12;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var15 = var3[var4];
-								if (var2) {
-									var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+							f_11 += f_12;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								i_15 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								} else {
-									var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+									ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								}
 							}
 
-							var11 += var12;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var15 = var3[var4];
-								if (var2) {
-									var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+							f_11 += f_12;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								i_15 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								} else {
-									var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+									ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								}
 							}
 
-							var11 += var12;
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var15 = var3[var4];
-								if (var2) {
-									var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+							f_11 += f_12;
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								i_15 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								} else {
-									var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+									ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								}
 							}
 
-							var11 += var12;
-							--var6;
-						} while (var6 > 0);
+							f_11 += f_12;
+							--i_6;
+						} while (i_6 > 0);
 					}
 
-					var6 = var8 - var7 & 3;
-					if (var6 > 0) {
-						var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-						var5 = ((var5 & 16711935) * var14 >> 8 & 16711935) + ((var5 & '\uff00') * var14 >> 8 & '\uff00');
+					i_6 = i_8 - i_7 & 0x3;
+					if (i_6 > 0) {
+						i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+						i_5 = (i_14 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_5 & 0xff00) >> 8 & 0xff00);
 
 						do {
-							++var4;
-							if (!var1 || var11 < this.aFloatArray1690[var4]) {
-								var15 = var3[var4];
-								if (var2) {
-									var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+							++i_4;
+							if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+								i_15 = ints_3[i_4];
+								if (bool_2) {
+									ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								} else {
-									var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+									ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 								}
 							}
 
-							var11 += var12;
-							--var6;
-						} while (var6 > 0);
+							f_11 += f_12;
+							--i_6;
+						} while (i_6 > 0);
 					}
 				}
 			} else {
-				var6 = var8 - var7;
-				if (this.anInt1674 == 0) {
-					do {
-						++var4;
-						if (!var1 || var11 < this.aFloatArray1690[var4]) {
-							var3[var4] = Class335.anIntArray3916[(int) var9 & '\uffff'];
-						}
-
-						var11 += var12;
-						var9 += var10;
-						--var6;
-					} while (var6 > 0);
-				} else {
-					var13 = this.anInt1674;
-					var14 = 256 - this.anInt1674;
+				i_6 = i_8 - i_7;
+				if (this.anInt1674 != 0) {
+					i_13 = this.anInt1674;
+					i_14 = 256 - this.anInt1674;
 
 					do {
-						++var4;
-						if (!var1 || var11 < this.aFloatArray1690[var4]) {
-							var5 = Class335.anIntArray3916[(int) var9 & '\uffff'];
-							var5 = ((var5 & 16711935) * var14 >> 8 & 16711935) + ((var5 & '\uff00') * var14 >> 8 & '\uff00');
-							var15 = var3[var4];
-							if (var2) {
-								var3[var4] = (var14 | var15 >> 24) << 24 | var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+						++i_4;
+						if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+							i_5 = Class335.anIntArray3916[(int) f_9 & 0xffff];
+							i_5 = (i_14 * (i_5 & 0xff00ff) >> 8 & 0xff00ff) + (i_14 * (i_5 & 0xff00) >> 8 & 0xff00);
+							i_15 = ints_3[i_4];
+							if (bool_2) {
+								ints_3[i_4] = (i_14 | i_15 >> 24) << 24 | i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 							} else {
-								var3[var4] = var5 + ((var15 & 16711935) * var13 >> 8 & 16711935) + ((var15 & '\uff00') * var13 >> 8 & '\uff00');
+								ints_3[i_4] = i_5 + ((i_15 & 0xff00ff) * i_13 >> 8 & 0xff00ff) + (i_13 * (i_15 & 0xff00) >> 8 & 0xff00);
 							}
 						}
 
-						var9 += var10;
-						var11 += var12;
-						--var6;
-					} while (var6 > 0);
+						f_9 += f_10;
+						f_11 += f_12;
+						--i_6;
+					} while (i_6 > 0);
+				} else {
+					do {
+						++i_4;
+						if (!bool_1 || f_11 < this.aFloatArray1690[i_4]) {
+							ints_3[i_4] = Class335.anIntArray3916[(int) f_9 & 0xffff];
+						}
+
+						f_11 += f_12;
+						f_9 += f_10;
+						--i_6;
+					} while (i_6 > 0);
 				}
 			}
-
 		}
+
 	}
 
 }

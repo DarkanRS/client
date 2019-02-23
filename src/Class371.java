@@ -1,170 +1,138 @@
-
-/* Class371 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Container;
 
 public class Class371 {
-	public static final int anInt4292 = 18;
-	public static final int anInt4293 = 14;
-	public static final int anInt4294 = 17;
-	public static final int anInt4295 = 15;
-	public static final int anInt4296 = 8;
-	public static final int anInt4297 = 22;
-	public static final int anInt4298 = 23;
-	public static final int anInt4299 = 34;
-	public static final int anInt4300 = 20;
-	public static final int anInt4301 = 33;
-	public static final int anInt4302 = 6;
-	public static final int anInt4303 = 2;
-	public static final int anInt4304 = 25;
-	public static final int anInt4305 = 11;
-	public static final int anInt4306 = 31;
-	public static final int anInt4307 = 21;
-	public static final int anInt4308 = 10;
-	public static final int anInt4309 = 1;
-	public static final int anInt4310 = 26;
-	public static final int anInt4311 = 4;
-	public static final int anInt4312 = 28;
-	public static final int anInt4313 = 32;
-	public static final int anInt4314 = 27;
-	public static final int anInt4315 = 24;
-	public static final int anInt4316 = 9;
-	public static final int anInt4317 = 29;
-	public static final int anInt4318 = 12;
-	public static final int anInt4319 = 16;
-	public static final int anInt4320 = 35;
-	public static final int anInt4321 = 5;
-	public static final int anInt4322 = 3;
-	public static final int anInt4323 = 30;
-	public static final int anInt4324 = 13;
-	public static final int anInt4325 = 7;
-	
+
 	Class371() throws Throwable {
 		throw new Error();
 	}
 
-	static final int method6347(int i, int i_0_, int i_1_, int i_2_) {
-		if (i_0_ == i)
-			return i;
-		int i_3_ = 128 - i_1_;
-		int i_4_ = i_1_ * (i_0_ & 0x7f) + (i & 0x7f) * i_3_ >> 7;
-		int i_5_ = (i & 0x380) * i_3_ + (i_0_ & 0x380) * i_1_ >> 7;
-		int i_6_ = i_3_ * (i & 0xfc00) + i_1_ * (i_0_ & 0xfc00) >> 7;
-		return i_6_ & 0xfc00 | i_5_ & 0x380 | i_4_ & 0x7f;
+	static final int method6347(int i_0, int i_1, int i_2, int i_3) {
+		if (i_0 == i_1) {
+			return i_0;
+		} else {
+			int i_4 = 128 - i_2;
+			int i_5 = i_4 * (i_0 & 0x7f) + (i_1 & 0x7f) * i_2 >> 7;
+			int i_6 = i_4 * (i_0 & 0x380) + i_2 * (i_1 & 0x380) >> 7;
+			int i_7 = (i_1 & 0xfc00) * i_2 + i_4 * (i_0 & 0xfc00) >> 7;
+			return i_7 & 0xfc00 | i_6 & 0x380 | i_5 & 0x7f;
+		}
 	}
 
-	public static final int method6348(int i, int i_7_, int i_8_, int i_9_) {
-		if (i_8_ > 243)
-			i_7_ >>= 4;
-		else if (i_8_ > 217)
-			i_7_ >>= 3;
-		else if (i_8_ > 192)
-			i_7_ >>= 2;
-		else if (i_8_ > 179)
-			i_7_ >>= 1;
-		return (i_8_ >> 1) + (((i & 0xff) >> 2 << 10) + (i_7_ >> 5 << 7));
+	public static final int method6348(int i_0, int i_1, int i_2, int i_3) {
+		if (i_2 > 243) {
+			i_1 >>= 4;
+		} else if (i_2 > 217) {
+			i_1 >>= 3;
+		} else if (i_2 > 192) {
+			i_1 >>= 2;
+		} else if (i_2 > 179) {
+			i_1 >>= 1;
+		}
+
+		return ((i_0 & 0xff) >> 2 << 10) + (i_2 >> 1) + (i_1 >> 5 << 7);
 	}
 
-	public static int method6349(int i, int i_10_, int i_11_) {
-		int i_12_ = i >>> 31;
-		return (i_12_ + i) / i_10_ - i_12_;
+	public static int method6349(int i_0, int i_1, int i_2) {
+		int i_3 = i_0 >>> 31;
+		return (i_0 + i_3) / i_1 - i_3;
 	}
 
-	static final void method6350(CS2Executor class527, byte i) {
-		boolean bool = false;
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
+	static final void method6350(CS2Executor cs2executor_0, byte b_1) {
+		boolean bool_2 = false;
+		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
 		if (client.aBool7310) {
 			try {
-				Object object = Class361.aClass361_4172.method6254(new Object[] { string }, (byte) -29);
-				if (null != object)
-					bool = ((Boolean) object).booleanValue();
-			} catch (Throwable throwable) {
-				/* empty */
-			}
-		}
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = bool ? 1 : 0;
-	}
-
-	static void method6351(int i) {
-		if (null == Class335.anIntArray3916)
-			Class335.anIntArray3916 = new int[65536];
-		else
-			return;
-		double d = 0.7 + (Math.random() * 0.03 - 0.015);
-		int i_13_ = 0;
-		for (int i_14_ = 0; i_14_ < 512; i_14_++) {
-			float f = 360.0F * ((float) (i_14_ >> 3) / 64.0F + 0.0078125F);
-			float f_15_ = (float) (i_14_ & 0x7) / 8.0F + 0.0625F;
-			for (int i_16_ = 0; i_16_ < 128; i_16_++) {
-				float f_17_ = (float) i_16_ / 128.0F;
-				float f_18_ = 0.0F;
-				float f_19_ = 0.0F;
-				float f_20_ = 0.0F;
-				float f_21_ = f / 60.0F;
-				int i_22_ = (int) f_21_;
-				int i_23_ = i_22_ % 6;
-				float f_24_ = f_21_ - (float) i_22_;
-				float f_25_ = f_17_ * (1.0F - f_15_);
-				float f_26_ = f_17_ * (1.0F - f_15_ * f_24_);
-				float f_27_ = (1.0F - f_15_ * (1.0F - f_24_)) * f_17_;
-				if (0 == i_23_) {
-					f_18_ = f_17_;
-					f_19_ = f_27_;
-					f_20_ = f_25_;
-				} else if (i_23_ == 1) {
-					f_18_ = f_26_;
-					f_19_ = f_17_;
-					f_20_ = f_25_;
-				} else if (2 == i_23_) {
-					f_18_ = f_25_;
-					f_19_ = f_17_;
-					f_20_ = f_27_;
-				} else if (i_23_ == 3) {
-					f_18_ = f_25_;
-					f_19_ = f_26_;
-					f_20_ = f_17_;
-				} else if (i_23_ == 4) {
-					f_18_ = f_27_;
-					f_19_ = f_25_;
-					f_20_ = f_17_;
-				} else if (5 == i_23_) {
-					f_18_ = f_17_;
-					f_19_ = f_25_;
-					f_20_ = f_26_;
+				Object object_4 = Class361.aClass361_4172.method6254(new Object[] { string_3 }, (byte) -29);
+				if (object_4 != null) {
+					bool_2 = ((Boolean) object_4).booleanValue();
 				}
-				f_18_ = (float) Math.pow((double) f_18_, d);
-				f_19_ = (float) Math.pow((double) f_19_, d);
-				f_20_ = (float) Math.pow((double) f_20_, d);
-				int i_28_ = (int) (f_18_ * 256.0F);
-				int i_29_ = (int) (256.0F * f_19_);
-				int i_30_ = (int) (256.0F * f_20_);
-				int i_31_ = -16777216 + (i_28_ << 16) + (i_29_ << 8) + i_30_;
-				Class335.anIntArray3916[i_13_++] = i_31_;
+			} catch (Throwable throwable_5) {
+				;
 			}
+		}
+
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = bool_2 ? 1 : 0;
+	}
+
+	static void method6351(int i_0) {
+		if (Class335.anIntArray3916 == null) {
+			Class335.anIntArray3916 = new int[65536];
+			double d_1 = 0.7D + (Math.random() * 0.03D - 0.015D);
+			int i_3 = 0;
+
+			for (int i_4 = 0; i_4 < 512; i_4++) {
+				float f_5 = 360.0F * ((float) (i_4 >> 3) / 64.0F + 0.0078125F);
+				float f_6 = (float) (i_4 & 0x7) / 8.0F + 0.0625F;
+
+				for (int i_7 = 0; i_7 < 128; i_7++) {
+					float f_8 = (float) i_7 / 128.0F;
+					float f_9 = 0.0F;
+					float f_10 = 0.0F;
+					float f_11 = 0.0F;
+					float f_12 = f_5 / 60.0F;
+					int i_13 = (int) f_12;
+					int i_14 = i_13 % 6;
+					float f_15 = f_12 - (float) i_13;
+					float f_16 = f_8 * (1.0F - f_6);
+					float f_17 = f_8 * (1.0F - f_6 * f_15);
+					float f_18 = (1.0F - f_6 * (1.0F - f_15)) * f_8;
+					if (i_14 == 0) {
+						f_9 = f_8;
+						f_10 = f_18;
+						f_11 = f_16;
+					} else if (i_14 == 1) {
+						f_9 = f_17;
+						f_10 = f_8;
+						f_11 = f_16;
+					} else if (i_14 == 2) {
+						f_9 = f_16;
+						f_10 = f_8;
+						f_11 = f_18;
+					} else if (i_14 == 3) {
+						f_9 = f_16;
+						f_10 = f_17;
+						f_11 = f_8;
+					} else if (i_14 == 4) {
+						f_9 = f_18;
+						f_10 = f_16;
+						f_11 = f_8;
+					} else if (i_14 == 5) {
+						f_9 = f_8;
+						f_10 = f_16;
+						f_11 = f_17;
+					}
+
+					f_9 = (float) Math.pow((double) f_9, d_1);
+					f_10 = (float) Math.pow((double) f_10, d_1);
+					f_11 = (float) Math.pow((double) f_11, d_1);
+					int i_19 = (int) (f_9 * 256.0F);
+					int i_20 = (int) (256.0F * f_10);
+					int i_21 = (int) (256.0F * f_11);
+					int i_22 = i_21 + (i_20 << 8) + (i_19 << 16) + -16777216;
+					Class335.anIntArray3916[i_3++] = i_22;
+				}
+			}
+
 		}
 	}
 
-	public static RouteStrategy method6352(int i, int i_32_, int i_33_, int i_34_, int i_35_) {
-		Class224.aClass225_Sub6_2774.approxDestinationX = i * -726719813;
-		Class224.aClass225_Sub6_2774.approxDestinationY = 1767388707 * i_32_;
-		Class224.aClass225_Sub6_2774.approxDestinationSizeX = i_33_ * -12808295;
-		Class224.aClass225_Sub6_2774.approxDestinationSizeY = i_34_ * 1709796035;
+	public static RouteStrategy method6352(int i_0, int i_1, int i_2, int i_3, int i_4) {
+		Class224.aClass225_Sub6_2774.approxDestinationX = i_0;
+		Class224.aClass225_Sub6_2774.approxDestinationY = i_1;
+		Class224.aClass225_Sub6_2774.approxDestinationSizeX = i_2;
+		Class224.aClass225_Sub6_2774.approxDestinationSizeY = i_3;
 		return Class224.aClass225_Sub6_2774;
 	}
 
-	public static final void method6353(short i) {
-		Class184 class184 = Class468_Sub20.method12807(2071524191);
-		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4598, class184.isaac, -585449353);
-		class282_sub23.buffer.writeByte(0);
-		class184.method3049(class282_sub23, 963665082);
+	public static final void method6353(short s_0) {
+		Class184 class184_1 = Class468_Sub20.method12807(2071524191);
+		TCPMessage tcpmessage_2 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_1.isaac, -585449353);
+		tcpmessage_2.buffer.writeByte(0);
+		class184_1.method3049(tcpmessage_2, 963665082);
 	}
 
-	public static Container method6354(byte i) {
-		if (null != Engine.aFrame3260)
-			return Engine.aFrame3260;
-		if (null != Engine.aFrame3261)
-			return Engine.aFrame3261;
-		return Class282_Sub44.anApplet8065;
+	public static Container method6354(byte b_0) {
+		return (Container) (Engine.aFrame3260 != null ? Engine.aFrame3260 : (Engine.aFrame3261 != null ? Engine.aFrame3261 : Class282_Sub44.anApplet8065));
 	}
+
 }

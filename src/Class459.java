@@ -1,163 +1,183 @@
-
-/* Class459 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Canvas;
 import java.lang.reflect.Method;
 
 public final class Class459 {
+
 	int anInt5496;
-	boolean[] aBoolArray5497;
-	int anInt5498 = 6;
 	int anInt5499;
-	int anInt5500 = 50;
-	int anInt5501 = 18002;
 	byte[] aByteArray5502;
-	int anInt5503;
-	byte[] aByteArray5504;
 	int anInt5505;
-	int anInt5506;
 	int anInt5507;
 	int anInt5508;
 	byte aByte5509;
-	boolean[] aBoolArray5510;
 	int anInt5511;
-	int anInt5512 = 258;
 	int anInt5513;
 	int anInt5514;
 	int anInt5515;
 	int anInt5516;
-	int[] anIntArray5517;
 	int anInt5518;
-	int[] anIntArray5519;
 	int anInt5520;
+	byte[] aByteArray5526;
+	int anInt5532;
+	public static int anInt5534;
+	int anInt5498 = 6;
+	int anInt5500 = 50;
+	int anInt5501 = 18002;
+	int anInt5512 = 258;
 	int anInt5521 = 16;
 	int anInt5522 = 4096;
+	int anInt5503;
+	int anInt5506;
+	int[] anIntArray5517;
+	int[] anIntArray5519;
+	boolean[] aBoolArray5497;
+	boolean[] aBoolArray5510;
 	byte[] aByteArray5523;
 	byte[] aByteArray5524;
 	int[] anIntArray5525;
-	byte[] aByteArray5526;
+	byte[] aByteArray5504;
 	byte[] aByteArray5527;
 	byte[][] aByteArrayArray5528;
 	int[][] anIntArrayArray5529;
 	int[][] anIntArrayArray5530;
 	int[][] anIntArrayArray5531;
-	int anInt5532;
 	int[] anIntArray5533;
-	public static int anInt5534;
 
 	Class459() {
-		((Class459) this).anInt5521 = 16;
-		((Class459) this).anInt5512 = 258;
-		((Class459) this).anInt5498 = 6;
-		((Class459) this).anInt5500 = 50;
-		((Class459) this).anInt5501 = 18002;
-		((Class459) this).anInt5503 = 0;
-		((Class459) this).anInt5506 = 0;
-		((Class459) this).anIntArray5517 = new int[256];
-		((Class459) this).anIntArray5519 = new int[257];
-		((Class459) this).aBoolArray5497 = new boolean[256];
-		((Class459) this).aBoolArray5510 = new boolean[16];
-		((Class459) this).aByteArray5523 = new byte[256];
-		((Class459) this).aByteArray5524 = new byte[4096];
-		((Class459) this).anIntArray5525 = new int[16];
-		((Class459) this).aByteArray5504 = new byte[18002];
-		((Class459) this).aByteArray5527 = new byte[18002];
-		((Class459) this).aByteArrayArray5528 = new byte[6][258];
-		((Class459) this).anIntArrayArray5529 = new int[6][258];
-		((Class459) this).anIntArrayArray5530 = new int[6][258];
-		((Class459) this).anIntArrayArray5531 = new int[6][258];
-		((Class459) this).anIntArray5533 = new int[6];
+		this.anInt5521 = 16;
+		this.anInt5512 = 258;
+		this.anInt5498 = 6;
+		this.anInt5500 = 50;
+		this.anInt5501 = 18002;
+		this.anInt5503 = 0;
+		this.anInt5506 = 0;
+		this.anIntArray5517 = new int[256];
+		this.anIntArray5519 = new int[257];
+		this.aBoolArray5497 = new boolean[256];
+		this.aBoolArray5510 = new boolean[16];
+		this.aByteArray5523 = new byte[256];
+		this.aByteArray5524 = new byte[4096];
+		this.anIntArray5525 = new int[16];
+		this.aByteArray5504 = new byte[18002];
+		this.aByteArray5527 = new byte[18002];
+		this.aByteArrayArray5528 = new byte[6][258];
+		this.anIntArrayArray5529 = new int[6][258];
+		this.anIntArrayArray5530 = new int[6][258];
+		this.anIntArrayArray5531 = new int[6][258];
+		this.anIntArray5533 = new int[6];
 	}
 
-	static final void method7676(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		int i_0_ = -1;
-		int i_1_ = -1;
-		Class119 class119 = class118.method2046(Renderers.SOFTWARE_RENDERER, 1887351094);
-		if (class119 != null) {
-			i_0_ = class119.anInt1458 * -1125753931;
-			i_1_ = class119.anInt1454 * 2069222845;
+	static final void method7676(CS2Executor cs2executor_0, byte b_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		int i_4 = -1;
+		int i_5 = -1;
+		Class119 class119_6 = icomponentdefinitions_3.method2046(Renderers.SOFTWARE_RENDERER, 1887351094);
+		if (class119_6 != null) {
+			i_4 = class119_6.anInt1458;
+			i_5 = class119_6.anInt1454;
 		}
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_0_;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_;
+
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_4;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_5;
 	}
 
-	static final void decodeUpdate(boolean largeSceneView, int i) {
-		RsBitsBuffer buffer = ((Class184) client.aClass184_7475).recievedBuffer;
-		while (buffer.readableBits((715663393 * (((Class184) client.aClass184_7475).anInt2287)), 816213370) >= 15) {
-			int npcIndex = buffer.readBits(15, (byte) -53);
-			if (32767 == npcIndex)
+	static final void decodeUpdate(boolean bool_0, int i_1) {
+		RsBitsBuffer rsbitsbuffer_2 = client.aClass184_7475.recievedBuffer;
+
+		while (rsbitsbuffer_2.readableBits(client.aClass184_7475.anInt2287, 816213370) >= 15) {
+			int i_3 = rsbitsbuffer_2.readBits(15, (byte) -53);
+			if (i_3 == 32767) {
 				break;
-			boolean bool_3_ = false;
-			Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) npcIndex));
-			if (class282_sub47 == null) {
-				NPC npc = (new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1073098599)));
-				npc.anInt10314 = npcIndex * -1498872675;
-				class282_sub47 = new Class282_Sub47(npc);
-				client.aClass465_7208.method7765(class282_sub47, (long) npcIndex);
-				client.aClass282_Sub47Array7209[(client.anInt7210 += -1228117803) * 1658163325 - 1] = class282_sub47;
-				bool_3_ = true;
 			}
-			NPC npc = (NPC) class282_sub47.anObject8068;
-			client.anIntArray7212[(client.anInt7211 += 1568892417) * -685729279 - 1] = npcIndex;
-			npc.anInt10353 = -2017074209 * client.anInt7332;
-			if (null != npc.aClass409_10580 && npc.aClass409_10580.method6886(-1639112398))
-				Class169.method2876(npc, 1280406765);
-			int needsUpdate = buffer.readBits(1, (byte) -14);
-			if (1 == needsUpdate)
-				client.NPC_INDICES[(client.npcListSize += -1510626643) * -1300281051 - 1] = npcIndex;
-			int localY;
-			if (largeSceneView) {
-				localY = buffer.readBits(8, (byte) 53);
-				if (localY > 127)
-					localY -= 256;
+
+			boolean bool_4 = false;
+			Class282_Sub47 class282_sub47_5 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_3);
+			NPC npc_6;
+			if (class282_sub47_5 == null) {
+				npc_6 = new NPC(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1073098599));
+				npc_6.anInt10314 = i_3;
+				class282_sub47_5 = new Class282_Sub47(npc_6);
+				client.aClass465_7208.method7765(class282_sub47_5, (long) i_3);
+				client.aClass282_Sub47Array7209[++client.anInt7210 - 1] = class282_sub47_5;
+				bool_4 = true;
+			}
+
+			npc_6 = (NPC) class282_sub47_5.anObject8068;
+			client.anIntArray7212[++client.anInt7211 - 1] = i_3;
+			npc_6.anInt10353 = client.anInt7332;
+			if (npc_6.aClass409_10580 != null && npc_6.aClass409_10580.method6886(-1639112398)) {
+				Class169.method2876(npc_6, 1280406765);
+			}
+
+			int i_7 = rsbitsbuffer_2.readBits(1, (byte) -14);
+			if (i_7 == 1) {
+				client.NPC_INDICES[++client.npcListSize - 1] = i_3;
+			}
+
+			int i_8;
+			if (bool_0) {
+				i_8 = rsbitsbuffer_2.readBits(8, (byte) 53);
+				if (i_8 > 127) {
+					i_8 -= 256;
+				}
 			} else {
-				localY = buffer.readBits(5, (byte) -4);
-				if (localY > 15)
-					localY -= 32;
+				i_8 = rsbitsbuffer_2.readBits(5, (byte) -4);
+				if (i_8 > 15) {
+					i_8 -= 32;
+				}
 			}
-			int direction = (buffer.readBits(3, (byte) -25) + 4 << 11 & 0x3fff);
-			npc.method16166((IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(buffer.readBits(15, (byte) 78), (byte) -40)), -1917205540);
-			int localX;
-			if (largeSceneView) {
-				localX = buffer.readBits(8, (byte) -6);
-				if (localX > 127)
-					localX -= 256;
+
+			int i_9 = rsbitsbuffer_2.readBits(3, (byte) -25) + 4 << 11 & 0x3fff;
+			npc_6.method16166(IndexLoaders.NPC_INDEX_LOADER.getNPCDefinitions(rsbitsbuffer_2.readBits(15, (byte) 78), (byte) -40), -1917205540);
+			int i_10;
+			if (bool_0) {
+				i_10 = rsbitsbuffer_2.readBits(8, (byte) -6);
+				if (i_10 > 127) {
+					i_10 -= 256;
+				}
 			} else {
-				localX = buffer.readBits(5, (byte) 32);
-				if (localX > 15)
-					localX -= 32;
+				i_10 = rsbitsbuffer_2.readBits(5, (byte) 32);
+				if (i_10 > 15) {
+					i_10 -= 32;
+				}
 			}
-			int hasTeleported = buffer.readBits(1, (byte) 80);
-			int plane = buffer.readBits(2, (byte) 49);
-			npc.method15836((1203434505 * npc.aClass409_10580.anInt4858), (byte) -107);
-			npc.anInt10340 = -222526911 * ((npc.aClass409_10580.anInt4889) * 1913503455 << 3);
-			if (bool_3_)
-				npc.method15791(direction, true, (byte) -43);
-			npc.method16159(plane, (Class84.myPlayer.regionBaseX[0] + localX), (Class84.myPlayer.regionBaseY[0] + localY), hasTeleported == 1, npc.getSize(828768449), -1655892623);
-			if (npc.aClass409_10580.method6886(-1862040818))
-				Class397.method6775(npc.plane, (npc.regionBaseX[0]), (npc.regionBaseY[0]), 0, null, npc, null, 386204149);
+
+			int i_11 = rsbitsbuffer_2.readBits(1, (byte) 80);
+			int i_12 = rsbitsbuffer_2.readBits(2, (byte) 49);
+			npc_6.method15836(npc_6.aClass409_10580.anInt4858, (byte) -107);
+			npc_6.anInt10340 = npc_6.aClass409_10580.anInt4889 << 3;
+			if (bool_4) {
+				npc_6.method15791(i_9, true, (byte) -43);
+			}
+
+			npc_6.method16159(i_12, Class84.myPlayer.regionBaseX[0] + i_10, Class84.myPlayer.regionBaseY[0] + i_8, i_11 == 1, npc_6.getSize(828768449), -1655892623);
+			if (npc_6.aClass409_10580.method6886(-1862040818)) {
+				Class397.method6775(npc_6.plane, npc_6.regionBaseX[0], npc_6.regionBaseY[0], 0, (ObjectDefinitions) null, npc_6, (Player) null, 386204149);
+			}
 		}
-		buffer.finishBitAccess((byte) 35);
+
+		rsbitsbuffer_2.finishBitAccess((byte) 35);
 	}
 
-	static void method7678(int i) {
+	static void method7678(int i_0) {
 		Class122.method2111(false, 662490589);
-		if (Class291_Sub1.anInt8021 * 1337065231 >= 0 && 0 != 1337065231 * Class291_Sub1.anInt8021) {
-			Class538.method11500(Class291_Sub1.anInt8021 * 1337065231, false, (byte) 24);
-			Class291_Sub1.anInt8021 = -923733999;
+		if (Class291_Sub1.anInt8021 >= 0 && Class291_Sub1.anInt8021 != 0) {
+			Class538.method11500(Class291_Sub1.anInt8021, false, (byte) 24);
+			Class291_Sub1.anInt8021 = -1;
 		}
+
 	}
 
-	public static void method7679(Canvas canvas, int i) {
+	public static void method7679(Canvas canvas_0, int i_1) {
 		try {
-			Class var_class = Class.forName("java.awt.Canvas");
-			Method method = var_class.getMethod("setIgnoreRepaint", new Class[] { Boolean.TYPE });
-			method.invoke(canvas, new Object[] { Boolean.TRUE });
-		} catch (Exception exception) {
-			/* empty */
+			Class class_2 = Class.forName("java.awt.Canvas");
+			Method method_3 = class_2.getMethod("setIgnoreRepaint", new Class[] { Boolean.TYPE });
+			method_3.invoke(canvas_0, new Object[] { Boolean.TRUE });
+		} catch (Exception exception_4) {
+			;
 		}
+
 	}
+
 }

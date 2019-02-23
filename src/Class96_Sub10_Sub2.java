@@ -1,39 +1,39 @@
-/* Class96_Sub10_Sub2 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class96_Sub10_Sub2 extends Class96_Sub10 {
-	int anInt10222;
+
 	int anInt10223;
+	int anInt10222;
 	int anInt10224;
 
 	public void method1601() {
-		int i = 256 + ((Class96_Sub10_Sub2) this).anInt10223 * 611538432;
-		int i_0_ = 256 + ((Class96_Sub10_Sub2) this).anInt10222 * -55350784;
-		int i_1_ = -387189251 * ((Class96_Sub10_Sub2) this).anInt10224;
-		if (i_1_ < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(((Class96_Sub10_Sub2) this).anInt10223 * 563231147, ((Class96_Sub10_Sub2) this).anInt10222 * -344041035, 1522246231)))
-			i_1_++;
-		Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1619106347), 660169595 * ((Class96_Sub10_Sub2) this).anInt9296, 0, -387189251 * ((Class96_Sub10_Sub2) this).anInt10224, i_1_, i, (Class504.method8389(i, i_0_, (((Class96_Sub10_Sub2) this).anInt10224 * -387189251), (byte) 7) - ((Class96_Sub10_Sub2) this).anInt9295 * 277206935), i_0_, 563231147 * ((Class96_Sub10_Sub2) this).anInt10223,
-				((Class96_Sub10_Sub2) this).anInt10223 * 563231147, -344041035 * ((Class96_Sub10_Sub2) this).anInt10222, -344041035 * ((Class96_Sub10_Sub2) this).anInt10222, ((Class96_Sub10_Sub2) this).anInt9297 * 1009489391, false));
-		client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4), (long) (((Class96_Sub10_Sub2) this).anInt10223 * 563231147 << 16 | -344041035 * ((Class96_Sub10_Sub2) this).anInt10222));
+		int i_1 = 256 + this.anInt10223 * -979961597 * 611538432;
+		int i_2 = 256 + this.anInt10222 * -1994093411 * -55350784;
+		int i_3 = -387189251 * this.anInt10224 * -51671211;
+		if (i_3 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(this.anInt10223 * -979961597 * 563231147, this.anInt10222 * -1994093411 * -344041035, 1522246231)) {
+			++i_3;
+		}
+
+		Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_4 = new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1619106347), 660169595 * this.anInt9296 * -1972436045, 0, -387189251 * this.anInt10224 * -51671211, i_3, i_1, Class504.method8389(i_1, i_2, this.anInt10224 * -51671211 * -387189251, (byte) 7) - this.anInt9295 * 143267879 * 277206935, i_2, 563231147 * this.anInt10223 * -979961597, this.anInt10223 * -979961597 * 563231147, -344041035 * this.anInt10222 * -1994093411, -344041035 * this.anInt10222 * -1994093411, this.anInt9297 * 468728079 * 1009489391, false);
+		client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4_4), (long) (this.anInt10223 * -979961597 * 563231147 << 16 | -344041035 * this.anInt10222 * -1994093411));
 	}
 
-	public void method1592(int i) {
-		int i_2_ = 256 + ((Class96_Sub10_Sub2) this).anInt10223 * 611538432;
-		int i_3_ = 256 + ((Class96_Sub10_Sub2) this).anInt10222 * -55350784;
-		int i_4_ = -387189251 * ((Class96_Sub10_Sub2) this).anInt10224;
-		if (i_4_ < 3 && (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(((Class96_Sub10_Sub2) this).anInt10223 * 563231147, ((Class96_Sub10_Sub2) this).anInt10222 * -344041035, 1968806525)))
-			i_4_++;
-		Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4 = (new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1995024088), 660169595 * ((Class96_Sub10_Sub2) this).anInt9296, 0, -387189251 * ((Class96_Sub10_Sub2) this).anInt10224, i_4_, i_2_, (Class504.method8389(i_2_, i_3_, (((Class96_Sub10_Sub2) this).anInt10224 * -387189251), (byte) 34) - ((Class96_Sub10_Sub2) this).anInt9295 * 277206935), i_3_, 563231147 * ((Class96_Sub10_Sub2) this).anInt10223,
-				((Class96_Sub10_Sub2) this).anInt10223 * 563231147, -344041035 * ((Class96_Sub10_Sub2) this).anInt10222, -344041035 * ((Class96_Sub10_Sub2) this).anInt10222, ((Class96_Sub10_Sub2) this).anInt9297 * 1009489391, false));
-		client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4), (long) (((Class96_Sub10_Sub2) this).anInt10223 * 563231147 << 16 | -344041035 * ((Class96_Sub10_Sub2) this).anInt10222));
+	public void method1592(int i_1) {
+		int i_2 = this.anInt10223 * 512 + 256;
+		int i_3 = this.anInt10222 * 512 + 256;
+		int i_4 = this.anInt10224;
+		if (i_4 < 3 && IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(this.anInt10223, this.anInt10222, 1968806525)) {
+			++i_4;
+		}
+
+		Class521_Sub1_Sub1_Sub4 class521_sub1_sub1_sub4_5 = new Class521_Sub1_Sub1_Sub4(IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1995024088), this.anInt9296, 0, this.anInt10224, i_4, i_2, Class504.method8389(i_2, i_3, this.anInt10224, (byte) 34) - this.anInt9295, i_3, this.anInt10223, this.anInt10223, this.anInt10222, this.anInt10222, this.anInt9297, false);
+		client.aClass465_7334.method7765(new Class282_Sub50_Sub10(class521_sub1_sub1_sub4_5), (long) (this.anInt10223 << 16 | this.anInt10222));
 	}
 
-	Class96_Sub10_Sub2(RsByteBuffer class282_sub35) {
-		super(class282_sub35);
-		int i = class282_sub35.readInt();
-		((Class96_Sub10_Sub2) this).anInt10223 = -979961597 * (i >>> 16);
-		((Class96_Sub10_Sub2) this).anInt10222 = (i & 0xffff) * -1994093411;
-		((Class96_Sub10_Sub2) this).anInt10224 = class282_sub35.readUnsignedByte() * -51671211;
+	Class96_Sub10_Sub2(RsByteBuffer rsbytebuffer_1) {
+		super(rsbytebuffer_1);
+		int i_2 = rsbytebuffer_1.readInt();
+		this.anInt10223 = i_2 >>> 16;
+		this.anInt10222 = i_2 & 0xffff;
+		this.anInt10224 = rsbytebuffer_1.readUnsignedByte();
 	}
+
 }

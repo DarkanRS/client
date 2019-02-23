@@ -1,62 +1,52 @@
-/* Class96_Sub9 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class96_Sub9 extends Class96 {
+
 	static AccountCreationResponseOpcodes RECIEVED_RESPONSE;
-	int anInt9279;
-	int anInt9280;
-	Class116 aClass116_9281;
 	static int anInt9282;
+	int anInt9280;
+	int anInt9279;
+	Class116 aClass116_9281;
 
-	boolean method1591() {
-		if (null == ((Class96_Sub9) this).aClass116_9281)
-			((Class96_Sub9) this).aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, -1480555825 * ((Class96_Sub9) this).anInt9280);
-		return ((Class96_Sub9) this).aClass116_9281.method1963(1418683997);
+	Class96_Sub9(RsByteBuffer rsbytebuffer_1) {
+		super(rsbytebuffer_1);
+		this.anInt9280 = rsbytebuffer_1.readUnsignedShort();
+		this.anInt9279 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	Class96_Sub9(RsByteBuffer class282_sub35) {
-		super(class282_sub35);
-		((Class96_Sub9) this).anInt9280 = class282_sub35.readUnsignedShort() * -20495313;
-		((Class96_Sub9) this).anInt9279 = class282_sub35.readUnsignedByte() * -321392735;
-	}
+	boolean method1599(int i_1) {
+		if (this.aClass116_9281 == null) {
+			this.aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, this.anInt9280);
+		}
 
-	boolean method1599(int i) {
-		if (null == ((Class96_Sub9) this).aClass116_9281)
-			((Class96_Sub9) this).aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, -1480555825 * ((Class96_Sub9) this).anInt9280);
-		return ((Class96_Sub9) this).aClass116_9281.method1963(1418683997);
+		return this.aClass116_9281.method1963(1418683997);
 	}
 
 	public void method1601() {
-		Class256.method4412(((Class96_Sub9) this).aClass116_9281, 68269153 * ((Class96_Sub9) this).anInt9279, 1541193543);
+		Class256.method4412(this.aClass116_9281, 68269153 * this.anInt9279 * -321392735, 1541193543);
 	}
 
-	boolean method1596() {
-		if (null == ((Class96_Sub9) this).aClass116_9281)
-			((Class96_Sub9) this).aClass116_9281 = new Class116(IndexLoaders.MUSIC_INDEX, -1480555825 * ((Class96_Sub9) this).anInt9280);
-		return ((Class96_Sub9) this).aClass116_9281.method1963(1418683997);
+	public void method1592(int i_1) {
+		Class256.method4412(this.aClass116_9281, this.anInt9279, 1212110524);
 	}
 
-	public void method1592(int i) {
-		Class256.method4412(((Class96_Sub9) this).aClass116_9281, 68269153 * ((Class96_Sub9) this).anInt9279, 1212110524);
+	public static boolean method14585(int i_0, int i_1) {
+		return i_0 == (i_0 & -i_0);
 	}
 
-	public static boolean method14585(int i, int i_0_) {
-		return (i & -i) == i;
+	static final void method14586(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, -159099843) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1396 = Class351.method6193(string_4, cs2executor_2, -448612500);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method14586(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, -159099843) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1396 = Class351.method6193(string, class527, -448612500);
-		class118.aBool1384 = true;
+	static void method14587(int i_0, int i_1, int i_2, short s_3) {
+		Class282_Sub50_Sub12 class282_sub50_sub12_4 = Engine.getIComponentVar(9, (long) i_0);
+		class282_sub50_sub12_4.method14995(1698715246);
+		class282_sub50_sub12_4.anInt9668 = i_1;
+		class282_sub50_sub12_4.anInt9641 = i_2;
 	}
 
-	static void method14587(int i, int i_1_, int i_2_, short i_3_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(9, (long) i);
-		class282_sub50_sub12.method14995(1698715246);
-		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = -1773141545 * i_1_;
-		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_2_;
-	}
 }

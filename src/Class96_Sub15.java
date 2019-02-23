@@ -1,34 +1,35 @@
-/* Class96_Sub15 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class96_Sub15 extends Class96 {
+
 	int anInt9374;
 
 	public void method1601() {
-		Class86.aClass92Array820[1690922955 * ((Class96_Sub15) this).anInt9374].method1558((byte) -79);
+		Class86.aClass92Array820[1690922955 * this.anInt9374 * -1871987229].method1558((byte) -79);
 	}
 
-	public void method1592(int i) {
-		Class86.aClass92Array820[1690922955 * ((Class96_Sub15) this).anInt9374].method1558((byte) -21);
+	public void method1592(int i_1) {
+		Class86.aClass92Array820[this.anInt9374].method1558((byte) -21);
 	}
 
-	Class96_Sub15(RsByteBuffer class282_sub35) {
-		super(class282_sub35);
-		((Class96_Sub15) this).anInt9374 = class282_sub35.readUnsignedShort() * -1871987229;
+	Class96_Sub15(RsByteBuffer rsbytebuffer_1) {
+		super(rsbytebuffer_1);
+		this.anInt9374 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	public static int method14645(int i, int i_0_, int i_1_) {
-		if (i_0_ > i) {
-			int i_2_ = i;
-			i = i_0_;
-			i_0_ = i_2_;
+	public static int method14645(int i_0, int i_1, int i_2) {
+		int i_3;
+		if (i_1 > i_0) {
+			i_3 = i_0;
+			i_0 = i_1;
+			i_1 = i_3;
 		}
-		int i_3_;
-		for (/**/; i_0_ != 0; i_0_ = i_3_) {
-			i_3_ = i % i_0_;
-			i = i_0_;
+
+		while (i_1 != 0) {
+			i_3 = i_0 % i_1;
+			i_0 = i_1;
+			i_1 = i_3;
 		}
-		return i;
+
+		return i_0;
 	}
+
 }

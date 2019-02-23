@@ -1,95 +1,85 @@
-/* Class468_Sub10 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class468_Sub10 extends Class468 {
-	public static final int anInt7897 = 1;
-	public static final int anInt7898 = 0;
 
-	public int method12690() {
-		return -859024475 * anInt5578;
+	public Class468_Sub10(int i_1, Class282_Sub54 class282_sub54_2) {
+		super(i_1, class282_sub54_2);
 	}
 
-	public Class468_Sub10(int i, Class282_Sub54 class282_sub54) {
-		super(i, class282_sub54);
+	public int method12691(int i_1) {
+		return this.anInt5578;
 	}
 
-	public int method12691(int i) {
-		return -859024475 * anInt5578;
+	public Class468_Sub10(Class282_Sub54 class282_sub54_1) {
+		super(class282_sub54_1);
 	}
 
-	public Class468_Sub10(Class282_Sub54 class282_sub54) {
-		super(class282_sub54);
+	public void method12692(int i_1) {
+		if (this.anInt5578 != 1 && this.anInt5578 != 0) {
+			this.anInt5578 = this.method7781(2089221504);
+		}
+
 	}
 
-	public void method12692(int i) {
-		if (anInt5578 * -859024475 != 1 && -859024475 * anInt5578 != 0)
-			anInt5578 = method7781(2089221504) * -754033619;
-	}
-
-	void method7783(int i, int i_0_) {
-		anInt5578 = -754033619 * i;
+	void method7783(int i_1, int i_2) {
+		this.anInt5578 = i_1;
 	}
 
 	int method7787() {
 		return 1;
 	}
 
-	int method7784(int i) {
+	int method7784(int i_1) {
 		return 1;
 	}
 
-	void method7780(int i) {
-		anInt5578 = -754033619 * i;
+	void method7780(int i_1) {
+		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
 	int method7786() {
 		return 1;
 	}
 
-	public int method12693() {
-		return -859024475 * anInt5578;
-	}
-
-	public void method12694() {
-		if (anInt5578 * -859024475 != 1 && -859024475 * anInt5578 != 0)
-			anInt5578 = method7781(2142304494) * -754033619;
-	}
-
-	int method7781(int i) {
+	int method7781(int i_1) {
 		return 1;
 	}
 
-	int method7785(int i, int i_1_) {
+	int method7785(int i_1, int i_2) {
 		return 1;
 	}
 
-	public static boolean method12695(byte[] is, byte i) {
-		RsByteBuffer class282_sub35 = new RsByteBuffer(is);
-		int i_2_ = class282_sub35.readUnsignedByte();
-		if (i_2_ != 2)
+	public static boolean method12695(byte[] bytes_0, byte b_1) {
+		RsByteBuffer rsbytebuffer_2 = new RsByteBuffer(bytes_0);
+		int i_3 = rsbytebuffer_2.readUnsignedByte();
+		if (i_3 != 2) {
 			return false;
-		boolean bool = class282_sub35.readUnsignedByte() == 1;
-		if (bool)
-			Class411.method6912(class282_sub35, 1288904902);
-		Class359.method6241(class282_sub35, 587524029);
-		return true;
+		} else {
+			boolean bool_4 = rsbytebuffer_2.readUnsignedByte() == 1;
+			if (bool_4) {
+				Class411.method6912(rsbytebuffer_2, 1288904902);
+			}
+
+			Class359.method6241(rsbytebuffer_2, 587524029);
+			return true;
+		}
 	}
 
-	static void method12696(RsByteBuffer class282_sub35, int i) {
-		if ((class282_sub35.buffer.length - -1990677291 * class282_sub35.index) >= 1) {
-			int i_3_ = class282_sub35.readUnsignedByte();
-			if (i_3_ >= 0 && i_3_ <= 1 && (class282_sub35.buffer.length - -1990677291 * class282_sub35.index) >= 2) {
-				int i_4_ = class282_sub35.readUnsignedShort();
-				if ((class282_sub35.buffer.length - -1990677291 * class282_sub35.index) >= 6 * i_4_) {
-					for (int i_5_ = 0; i_5_ < i_4_; i_5_++) {
-						int i_6_ = class282_sub35.readUnsignedShort();
-						int i_7_ = class282_sub35.readInt();
-						if (i_6_ < Class320.anIntArray3724.length && Class282_Sub17_Sub2.aBoolArray9934[i_6_] && ((IndexLoaders.aClass408_7207.method6873(i_6_, (byte) 37).aChar4984) != '1' || i_7_ >= -1 && i_7_ <= 1))
-							Class320.anIntArray3724[i_6_] = i_7_;
+	static void method12696(RsByteBuffer rsbytebuffer_0, int i_1) {
+		if (rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 1) {
+			int i_2 = rsbytebuffer_0.readUnsignedByte();
+			if (i_2 >= 0 && i_2 <= 1 && rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= 2) {
+				int i_3 = rsbytebuffer_0.readUnsignedShort();
+				if (rsbytebuffer_0.buffer.length - rsbytebuffer_0.index >= i_3 * 6) {
+					for (int i_4 = 0; i_4 < i_3; i_4++) {
+						int i_5 = rsbytebuffer_0.readUnsignedShort();
+						int i_6 = rsbytebuffer_0.readInt();
+						if (i_5 < Class320.anIntArray3724.length && Class282_Sub17_Sub2.aBoolArray9934[i_5] && (IndexLoaders.aClass408_7207.method6873(i_5, (byte) 37).aChar4984 != 49 || i_6 >= -1 && i_6 <= 1)) {
+							Class320.anIntArray3724[i_5] = i_6;
+						}
 					}
 				}
 			}
 		}
+
 	}
+
 }

@@ -1,15 +1,13 @@
-/* Interface39 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Sprite {
-	public int method225();
 
-	public int method226();
+	int method225();
 
-	public int method227();
+	int method226();
 
-	public int method228();
+	int method227();
 
-	public int method229();
+	int method228();
+
+	int method229();
+
 }

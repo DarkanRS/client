@@ -1,19 +1,17 @@
-/* Interface33 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface33 {
-	public boolean method54();
 
-	public void method210();
+	boolean method54();
 
-	public void method96();
+	void method210();
 
-	public boolean method211();
+	void method96();
 
-	public void method212();
+	boolean method211();
 
-	public void method186();
+	void method212();
 
-	public boolean method213();
+	void method186();
+
+	boolean method213();
+
 }

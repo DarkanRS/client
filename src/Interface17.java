@@ -1,13 +1,11 @@
-/* Interface17 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface17 {
-	public boolean method126(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199);
 
-	public boolean method127(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199, byte i_0_);
+	boolean method126(Class282_Sub53 var1, Interface16[] var2, int var3, Class199 var4);
 
-	public boolean method128(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199);
+	boolean method127(Class282_Sub53 var1, Interface16[] var2, int var3, Class199 var4, byte var5);
 
-	public boolean method129(Class282_Sub53 class282_sub53, Interface16[] interface16s, int i, Class199 class199);
+	boolean method128(Class282_Sub53 var1, Interface16[] var2, int var3, Class199 var4);
+
+	boolean method129(Class282_Sub53 var1, Interface16[] var2, int var3, Class199 var4);
+
 }

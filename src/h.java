@@ -1,186 +1,196 @@
-/* h - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class h extends MeshRasterizer implements Interface40 {
-	Class87[] aClass87Array7139;
+
+	long nativeid;
 	ja aja7140;
 	ba aba7141;
+	Class87[] aClass87Array7139;
 	Class172[] aClass172Array7142;
-	long nativeid;
 
-	public void method11299(MeshRasterizer class528, int i, int i_0_, int i_1_, boolean bool) {
-		((h) this).aja7140.nx().method313(this, class528, i, i_0_, i_1_, bool);
+	public void method11299(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4, boolean bool_5) {
+		this.aja7140.nx().method313(this, meshrasterizer_1, i_2, i_3, i_4, bool_5);
 	}
 
-	public native void aq(int i);
+	public native void aq(int var1);
 
-	native void U(ja var_ja, ba var_ba, int i, int i_2_, int[] is, int[] is_3_, int[] is_4_, int[] is_5_, short[] is_6_, int i_7_, short[] is_8_, short[] is_9_, short[] is_10_, byte[] is_11_, byte[] is_12_, byte[] is_13_, byte[] is_14_, short[] is_15_, short[] is_16_, int[] is_17_, byte i_18_, short[] is_19_, int i_20_, byte[] is_21_, short[] is_22_, short[] is_23_, short[] is_24_, int[] is_25_, int[] is_26_, int[] is_27_, byte[] is_28_, byte[] is_29_, int[] is_30_, int[] is_31_, int[] is_32_,
-			int[] is_33_, int i_34_, int i_35_, int i_36_, int i_37_, int i_38_, int i_39_, int[] is_40_);
+	native void U(ja var1, ba var2, int var3, int var4, int[] var5, int[] var6, int[] var7, int[] var8, short[] var9, int var10, short[] var11, short[] var12, short[] var13, byte[] var14, byte[] var15, byte[] var16, byte[] var17, short[] var18, short[] var19, int[] var20, byte var21, short[] var22, int var23, byte[] var24, short[] var25, short[] var26, short[] var27, int[] var28, int[] var29, int[] var30, byte[] var31, byte[] var32, int[] var33, int[] var34, int[] var35, int[] var36, int var37, int var38, int var39, int var40, int var41, int var42, int[] var43);
 
-	native void ba(ja var_ja);
+	native void ba(ja var1);
 
 	public void finalize() {
-		if (((h) this).nativeid != 0L)
+		if (this.nativeid != 0L) {
 			Class156.method2642(this, (byte) 111);
+		}
+
 	}
 
-	public native void ma(boolean bool);
+	public native void ma(boolean var1);
 
-	public void method11273(Matrix44Var class294) {
-		method11604(ja.aa, class294);
-		int i = 0;
-		if (((h) this).aClass87Array7139 != null) {
-			for (int i_41_ = 0; i_41_ < ((h) this).aClass87Array7139.length; i_41_++) {
-				Class87 class87 = ((h) this).aClass87Array7139[i_41_];
-				class87.anInt844 = ja.aa[i++] * -1929058355;
-				class87.anInt841 = ja.aa[i++] * 996785411;
-				class87.anInt847 = ja.aa[i++] * 976806429;
-				class87.anInt834 = ja.aa[i++] * -458323579;
-				class87.anInt843 = ja.aa[i++] * 543149547;
-				class87.anInt845 = ja.aa[i++] * 1054448197;
-				class87.anInt846 = ja.aa[i++] * 1348028043;
-				class87.anInt840 = ja.aa[i++] * -1652520905;
-				class87.anInt848 = ja.aa[i++] * 1757672349;
+	public void method11273(Matrix44Var matrix44var_1) {
+		this.method11604(ja.aa, matrix44var_1);
+		int i_2 = 0;
+		int i_3;
+		if (this.aClass87Array7139 != null) {
+			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
+				Class87 class87_4 = this.aClass87Array7139[i_3];
+				class87_4.anInt844 = ja.aa[i_2++];
+				class87_4.anInt841 = ja.aa[i_2++];
+				class87_4.anInt847 = ja.aa[i_2++];
+				class87_4.anInt834 = ja.aa[i_2++];
+				class87_4.anInt843 = ja.aa[i_2++];
+				class87_4.anInt845 = ja.aa[i_2++];
+				class87_4.anInt846 = ja.aa[i_2++];
+				class87_4.anInt840 = ja.aa[i_2++];
+				class87_4.anInt848 = ja.aa[i_2++];
 			}
 		}
-		if (((h) this).aClass172Array7142 != null) {
-			for (int i_42_ = 0; i_42_ < ((h) this).aClass172Array7142.length; i_42_++) {
-				Class172 class172 = ((h) this).aClass172Array7142[i_42_];
-				Class172 class172_43_ = class172;
-				if (class172.aClass172_2114 != null)
-					class172_43_ = class172.aClass172_2114;
-				if (class172.aClass384_2116 == null)
-					class172.aClass384_2116 = new Matrix44Arr();
-				class172.aClass384_2116.method6522(class294);
-				class172_43_.anInt2113 = ja.aa[i++] * 959663283;
-				class172_43_.anInt2117 = ja.aa[i++] * -1084180847;
-				class172_43_.anInt2118 = ja.aa[i++] * -1221574613;
+
+		if (this.aClass172Array7142 != null) {
+			for (i_3 = 0; i_3 < this.aClass172Array7142.length; i_3++) {
+				Class172 class172_6 = this.aClass172Array7142[i_3];
+				Class172 class172_5 = class172_6;
+				if (class172_6.aClass172_2114 != null) {
+					class172_5 = class172_6.aClass172_2114;
+				}
+
+				if (class172_6.aClass384_2116 == null) {
+					class172_6.aClass384_2116 = new Matrix44Arr();
+				}
+
+				class172_6.aClass384_2116.fromVarMatrix44(matrix44var_1);
+				class172_5.anInt2113 = ja.aa[i_2++];
+				class172_5.anInt2117 = ja.aa[i_2++];
+				class172_5.anInt2118 = ja.aa[i_2++];
 			}
 		}
+
 	}
 
-	native void bo(int i, int i_44_, int i_45_, int i_46_);
+	native void bo(int var1, int var2, int var3, int var4);
 
-	final void method11275(int i, int[] is, int i_47_, int i_48_, int i_49_, int i_50_, boolean bool) {
-		J(((h) this).nativeid, i, is, i_47_, i_48_, i_49_, i_50_, bool);
+	final void method11275(int i_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
+		this.J(this.nativeid, i_1, ints_2, i_3, i_4, i_5, i_6, bool_7);
 	}
 
-	native void BA(h var_h_51_, h var_h_52_, int i, boolean bool, boolean bool_53_);
+	native void BA(h var1, h var2, int var3, boolean var4, boolean var5);
 
-	public native void KA(int i);
+	public native void KA(int var1);
 
 	public native int m();
 
 	public void method11259() {
-		/* empty */
 	}
 
 	public native int n();
 
-	public native void bj(int i);
+	public native void bj(int var1);
 
-	public native Class282_Sub50_Sub17 da(Class282_Sub50_Sub17 class282_sub50_sub17);
+	public native Class282_Sub50_Sub17 da(Class282_Sub50_Sub17 var1);
 
-	public native void EA(int i);
+	public native void EA(int var1);
 
-	public native void ia(int i, int i_54_, int i_55_);
+	public native void ia(int var1, int var2, int var3);
 
 	public native void wa();
 
-	public native void oa(int i, int i_56_, int i_57_);
+	public native void oa(int var1, int var2, int var3);
 
-	public MeshRasterizer method11279(byte i, int i_58_, boolean bool) {
-		return ((h) this).aja7140.nx().method325(this, i, i_58_, bool);
+	public MeshRasterizer method11279(byte b_1, int i_2, boolean bool_3) {
+		return this.aja7140.nx().method325(this, b_1, i_2, bool_3);
 	}
 
 	void method11260() {
-		if (((ja) ((h) this).aja7140).as > 1) {
+		if (this.aja7140.as > 1) {
 			synchronized (this) {
-				while (aBool7023) {
+				while (this.aBool7023) {
 					try {
 						this.wait();
-					} catch (InterruptedException interruptedexception) {
-						/* empty */
+					} catch (InterruptedException interruptedexception_3) {
+						;
 					}
 				}
-				aBool7023 = true;
+
+				this.aBool7023 = true;
 			}
 		}
+
 	}
 
 	public native int ha();
 
 	native boolean ea();
 
-	h(ja var_ja, ba var_ba, RSMesh class157, int i, int i_59_, int i_60_, int i_61_) {
-		((h) this).aja7140 = var_ja;
-		((h) this).aba7141 = var_ba;
-		((h) this).aClass87Array7139 = class157.aClass87Array2007;
-		((h) this).aClass172Array7142 = class157.aClass172Array2008;
-		int i_62_ = (class157.aClass87Array2007 == null ? 0 : class157.aClass87Array2007.length);
-		int i_63_ = (class157.aClass172Array2008 == null ? 0 : class157.aClass172Array2008.length);
-		int i_64_ = 0;
-		int[] is = new int[i_62_ * 3 + i_63_];
-		for (int i_65_ = 0; i_65_ < i_62_; i_65_++) {
-			is[i_64_++] = ((h) this).aClass87Array7139[i_65_].anInt836 * -1572033967;
-			is[i_64_++] = ((h) this).aClass87Array7139[i_65_].anInt837 * -1955014451;
-			is[i_64_++] = ((h) this).aClass87Array7139[i_65_].anInt838 * -2135413869;
+	h(ja ja_1, ba ba_2, RSMesh rsmesh_3, int i_4, int i_5, int i_6, int i_7) {
+		this.aja7140 = ja_1;
+		this.aba7141 = ba_2;
+		this.aClass87Array7139 = rsmesh_3.aClass87Array2007;
+		this.aClass172Array7142 = rsmesh_3.aClass172Array2008;
+		int i_8 = rsmesh_3.aClass87Array2007 == null ? 0 : rsmesh_3.aClass87Array2007.length;
+		int i_9 = rsmesh_3.aClass172Array2008 == null ? 0 : rsmesh_3.aClass172Array2008.length;
+		int i_10 = 0;
+		int[] ints_11 = new int[i_9 + i_8 * 3];
+
+		int i_12;
+		for (i_12 = 0; i_12 < i_8; i_12++) {
+			ints_11[i_10++] = this.aClass87Array7139[i_12].anInt836;
+			ints_11[i_10++] = this.aClass87Array7139[i_12].anInt837;
+			ints_11[i_10++] = this.aClass87Array7139[i_12].anInt838;
 		}
-		for (int i_66_ = 0; i_66_ < i_63_; i_66_++)
-			is[i_64_++] = ((h) this).aClass172Array7142[i_66_].anInt2119 * -1382123871;
-		int i_67_ = (class157.aClass84Array2009 == null ? 0 : class157.aClass84Array2009.length);
-		int[] is_68_ = new int[i_67_ * 8];
-		int i_69_ = 0;
-		for (int i_70_ = 0; i_70_ < i_67_; i_70_++) {
-			Class84 class84 = class157.aClass84Array2009[i_70_];
-			Class347 class347 = Class417.method7005(class84.anInt812 * -221586257, -1672643937);
-			is_68_[i_69_++] = class84.anInt809 * 2110152423;
-			is_68_[i_69_++] = class347.anInt4054 * -1720863327;
-			is_68_[i_69_++] = class347.anInt4050 * -743047207;
-			is_68_[i_69_++] = class347.anInt4055 * 117872423;
-			is_68_[i_69_++] = class347.anInt4057 * 1007428267;
-			is_68_[i_69_++] = class347.anInt4051 * -920295177;
-			is_68_[i_69_++] = class347.aBool4059 ? -1 : 0;
+
+		for (i_12 = 0; i_12 < i_9; i_12++) {
+			ints_11[i_10++] = this.aClass172Array7142[i_12].anInt2119;
 		}
-		for (int i_71_ = 0; i_71_ < i_67_; i_71_++) {
-			Class84 class84 = class157.aClass84Array2009[i_71_];
-			is_68_[i_69_++] = class84.anInt811 * 1852505231;
+
+		i_12 = rsmesh_3.aClass84Array2009 == null ? 0 : rsmesh_3.aClass84Array2009.length;
+		int[] ints_13 = new int[i_12 * 8];
+		int i_14 = 0;
+
+		int i_15;
+		Class84 class84_16;
+		for (i_15 = 0; i_15 < i_12; i_15++) {
+			class84_16 = rsmesh_3.aClass84Array2009[i_15];
+			Class347 class347_17 = Class417.method7005(class84_16.anInt812, -1672643937);
+			ints_13[i_14++] = class84_16.anInt809;
+			ints_13[i_14++] = class347_17.anInt4054;
+			ints_13[i_14++] = class347_17.anInt4050;
+			ints_13[i_14++] = class347_17.anInt4055;
+			ints_13[i_14++] = class347_17.anInt4057;
+			ints_13[i_14++] = class347_17.anInt4051;
+			ints_13[i_14++] = class347_17.aBool4059 ? -1 : 0;
 		}
-		U(((h) this).aja7140, ((h) this).aba7141, class157.anInt1974, class157.anInt1999, class157.anIntArray1976, class157.anIntArray2003, class157.anIntArray1978, class157.anIntArray2002, class157.aShortArray1980, class157.anInt1973, class157.aShortArray1982, class157.aShortArray1983, class157.aShortArray1984, class157.aByteArray1985, class157.aByteArray1977, class157.aByteArray1975, class157.aByteArray1988, class157.aShortArray2006, class157.aShortArray1993, class157.anIntArray1991,
-				class157.aByte1994, class157.aShortArray1981, class157.anInt1979, class157.aByteArray1995, class157.aShortArray1996, class157.aShortArray1987, class157.aShortArray1998, class157.anIntArray1989, class157.anIntArray2000, class157.anIntArray2001, class157.aByteArray2005, class157.aByteArray1990, class157.anIntArray1992, class157.anIntArray1997, class157.anIntArray2004, is, i_62_, i_63_, i, i_59_, i_60_, i_61_, is_68_);
+
+		for (i_15 = 0; i_15 < i_12; i_15++) {
+			class84_16 = rsmesh_3.aClass84Array2009[i_15];
+			ints_13[i_14++] = class84_16.anInt811;
+		}
+
+		this.U(this.aja7140, this.aba7141, rsmesh_3.anInt1974, rsmesh_3.anInt1999, rsmesh_3.anIntArray1976, rsmesh_3.anIntArray2003, rsmesh_3.anIntArray1978, rsmesh_3.anIntArray2002, rsmesh_3.aShortArray1980, rsmesh_3.anInt1973, rsmesh_3.aShortArray1982, rsmesh_3.aShortArray1983, rsmesh_3.aShortArray1984, rsmesh_3.aByteArray1985, rsmesh_3.aByteArray1977, rsmesh_3.aByteArray1975, rsmesh_3.aByteArray1988, rsmesh_3.aShortArray2006, rsmesh_3.aShortArray1993, rsmesh_3.anIntArray1991, rsmesh_3.aByte1994, rsmesh_3.aShortArray1981, rsmesh_3.anInt1979, rsmesh_3.aByteArray1995, rsmesh_3.aShortArray1996, rsmesh_3.aShortArray1987, rsmesh_3.aShortArray1998, rsmesh_3.anIntArray1989, rsmesh_3.anIntArray2000, rsmesh_3.anIntArray2001, rsmesh_3.aByteArray2005, rsmesh_3.aByteArray1990, rsmesh_3.anIntArray1992, rsmesh_3.anIntArray1997, rsmesh_3.anIntArray2004, ints_11, i_8, i_9, i_4, i_5, i_6, i_7, ints_13);
 	}
 
-	native void J(long l, int i, int[] is, int i_72_, int i_73_, int i_74_, int i_75_, boolean bool);
+	native void J(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
 
-	native void e(int i, int[] is, int i_76_, int i_77_, int i_78_, boolean bool, int i_79_, int[] is_80_);
+	native void e(int var1, int[] var2, int var3, int var4, int var5, boolean var6, int var7, int[] var8);
 
 	public native void be();
 
 	native void ka();
 
-	public void method11263(Matrix44Var class294, int i, boolean bool) {
-		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
-		class384.method6522(class294);
-		aa(class384.buf, i, bool);
+	public void method11263(Matrix44Var matrix44var_1, int i_2, boolean bool_3) {
+		Matrix44Arr matrix44arr_4 = this.aja7140.nx().aClass384_51;
+		matrix44arr_4.fromVarMatrix44(matrix44var_1);
+		this.aa(matrix44arr_4.buf, i_2, bool_3);
 	}
 
-	native void aa(float[] fs, int i, boolean bool);
+	native void aa(float[] var1, int var2, boolean var3);
 
 	public native int co();
 
-	public boolean method11270(int i, int i_81_, Matrix44Var class294, boolean bool, int i_82_) {
-		return ((h) this).aja7140.nx().method335(this, i, i_81_, class294, bool);
+	public boolean method11270(int i_1, int i_2, Matrix44Var matrix44var_3, boolean bool_4, int i_5) {
+		return this.aja7140.nx().method335(this, i_1, i_2, matrix44var_3, bool_4);
 	}
 
-	public native void PA(int i, int i_83_, int i_84_, int i_85_);
+	public native void PA(int var1, int var2, int var3, int var4);
 
-	native void ft(ja var_ja);
-
-	void method11603() {
-		if (((h) this).nativeid != 0L)
-			Class156.method2642(this, (byte) 7);
-	}
+	native void ft(ja var1);
 
 	public native int cm();
 
@@ -193,42 +203,43 @@ public class h extends MeshRasterizer implements Interface40 {
 	public native int AA();
 
 	public Class172[] method11331() {
-		return ((h) this).aClass172Array7142;
+		return this.aClass172Array7142;
 	}
 
-	native void IA(byte i, byte[] is);
+	native void IA(byte var1, byte[] var2);
 
-	public native void Q(int i);
+	public native void Q(int var1);
 
 	void method11261() {
-		if (((ja) ((h) this).aja7140).as > 1) {
+		if (this.aja7140.as > 1) {
 			synchronized (this) {
-				aBool7023 = false;
+				this.aBool7023 = false;
 				this.notifyAll();
 			}
 		}
+
 	}
 
-	public void method11307(byte i, byte[] is) {
-		IA(i, is);
+	public void method11307(byte b_1, byte[] bytes_2) {
+		this.IA(b_1, bytes_2);
 	}
 
 	public native byte[] aw();
 
-	public native void X(short i, short i_86_);
+	public native void X(short var1, short var2);
 
-	public void method11312(byte i, byte[] is) {
-		IA(i, is);
+	public void method11312(byte b_1, byte[] bytes_2) {
+		this.IA(b_1, bytes_2);
 	}
 
 	public native byte[] cz();
 
-	public native void W(short i, short i_87_);
+	public native void W(short var1, short var2);
 
-	public void method11298(Matrix44Var class294, int i, boolean bool) {
-		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
-		class384.method6522(class294);
-		aa(class384.buf, i, bool);
+	public void method11298(Matrix44Var matrix44var_1, int i_2, boolean bool_3) {
+		Matrix44Arr matrix44arr_4 = this.aja7140.nx().aClass384_51;
+		matrix44arr_4.fromVarMatrix44(matrix44var_1);
+		this.aa(matrix44arr_4.buf, i_2, bool_3);
 	}
 
 	public native int du();
@@ -238,79 +249,79 @@ public class h extends MeshRasterizer implements Interface40 {
 	public native boolean u();
 
 	public Class87[] method11253() {
-		return ((h) this).aClass87Array7139;
+		return this.aClass87Array7139;
 	}
 
 	public Class172[] method11274() {
-		return ((h) this).aClass172Array7142;
+		return this.aClass172Array7142;
 	}
 
 	native boolean bv();
 
 	public Class172[] method11302() {
-		return ((h) this).aClass172Array7142;
+		return this.aClass172Array7142;
 	}
 
-	public MeshRasterizer method11276(byte i, int i_88_, boolean bool) {
-		return ((h) this).aja7140.nx().method325(this, i, i_88_, bool);
+	public MeshRasterizer method11276(byte b_1, int i_2, boolean bool_3) {
+		return this.aja7140.nx().method325(this, b_1, i_2, bool_3);
 	}
 
-	public MeshRasterizer method11277(byte i, int i_89_, boolean bool) {
-		return ((h) this).aja7140.nx().method325(this, i, i_89_, bool);
+	public MeshRasterizer method11277(byte b_1, int i_2, boolean bool_3) {
+		return this.aja7140.nx().method325(this, b_1, i_2, bool_3);
 	}
 
-	public MeshRasterizer method11278(byte i, int i_90_, boolean bool) {
-		return ((h) this).aja7140.nx().method325(this, i, i_90_, bool);
+	public MeshRasterizer method11278(byte b_1, int i_2, boolean bool_3) {
+		return this.aja7140.nx().method325(this, b_1, i_2, bool_3);
 	}
 
 	public native int cb();
 
-	public MeshRasterizer method11296(byte i, int i_91_, boolean bool) {
-		return ((h) this).aja7140.nx().method325(this, i, i_91_, bool);
+	public MeshRasterizer method11296(byte b_1, int i_2, boolean bool_3) {
+		return this.aja7140.nx().method325(this, b_1, i_2, bool_3);
 	}
 
 	public native int ar();
 
 	public native int ae();
 
-	public void method11282(Matrix44Var class294, Class275_Sub5 class275_sub5, int i) {
-		if (class275_sub5 == null)
-			((h) this).aja7140.nx().method314(this, class294, null, i);
-		else {
+	public void method11282(Matrix44Var matrix44var_1, Class275_Sub5 class275_sub5_2, int i_3) {
+		if (class275_sub5_2 == null) {
+			this.aja7140.nx().method314(this, matrix44var_1, (int[]) null, i_3);
+		} else {
 			ja.ae[5] = 0;
-			((h) this).aja7140.nx().method314(this, class294, ja.ae, i);
-			class275_sub5.anInt7847 = ja.ae[0];
-			class275_sub5.anInt7848 = ja.ae[1];
-			class275_sub5.anInt7850 = ja.ae[2];
-			class275_sub5.anInt7846 = ja.ae[3];
-			class275_sub5.anInt7851 = ja.ae[4];
-			class275_sub5.aBool7849 = ja.ae[5] != 0;
+			this.aja7140.nx().method314(this, matrix44var_1, ja.ae, i_3);
+			class275_sub5_2.anInt7847 = ja.ae[0];
+			class275_sub5_2.anInt7848 = ja.ae[1];
+			class275_sub5_2.anInt7850 = ja.ae[2];
+			class275_sub5_2.anInt7846 = ja.ae[3];
+			class275_sub5_2.anInt7851 = ja.ae[4];
+			class275_sub5_2.aBool7849 = ja.ae[5] != 0;
 		}
+
 	}
 
 	public void method11295() {
-		/* empty */
 	}
 
-	public native void bi(int i);
+	public native void bi(int var1);
 
-	public native void bw(int i);
+	public native void bw(int var1);
 
-	public native void bx(int i);
+	public native void bx(int var1);
 
-	public native void bz(int i);
+	public native void bz(int var1);
 
-	public native void p(int i);
+	public native void p(int var1);
 
-	public native void bm(int i);
+	public native void bm(int var1);
 
-	public native void bs(int i);
+	public native void bs(int var1);
 
-	public native void bk(int i);
+	public native void bk(int var1);
 
 	native void bp();
 
-	public native void bn(int i);
+	public native void bn(int var1);
 
 	public native int c();
 
@@ -318,110 +329,119 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native void bq();
 
-	public native void y(boolean bool);
+	public native void y(boolean var1);
 
 	void method11288() {
-		if (((ja) ((h) this).aja7140).as > 1) {
+		if (this.aja7140.as > 1) {
 			synchronized (this) {
-				aBool7023 = false;
+				this.aBool7023 = false;
 				this.notifyAll();
 			}
 		}
+
 	}
 
-	void method11604(int[] is, Matrix44Var class294) {
-		((h) this).aja7140.nx().method331(this, is, class294);
+	void method11604(int[] ints_1, Matrix44Var matrix44var_2) {
+		this.aja7140.nx().method331(this, ints_1, matrix44var_2);
 	}
 
-	public native Class282_Sub50_Sub17 ga(Class282_Sub50_Sub17 class282_sub50_sub17);
+	public native Class282_Sub50_Sub17 ga(Class282_Sub50_Sub17 var1);
 
 	native boolean bh();
 
-	final void method11268(int i, int[] is, int i_92_, int i_93_, int i_94_, int i_95_, boolean bool) {
-		J(((h) this).nativeid, i, is, i_92_, i_93_, i_94_, i_95_, bool);
+	final void method11268(int i_1, int[] ints_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7) {
+		this.J(this.nativeid, i_1, ints_2, i_3, i_4, i_5, i_6, bool_7);
 	}
 
-	public native void t(int i);
+	public native void t(int var1);
 
-	native void bl(int i, int[] is, int i_96_, int i_97_, int i_98_, boolean bool, int i_99_, int[] is_100_);
+	native void bl(int var1, int[] var2, int var3, int var4, int var5, boolean var6, int var7, int[] var8);
 
-	native void bb(int i, int i_101_, int i_102_, int i_103_);
+	native void bb(int var1, int var2, int var3, int var4);
 
 	public native void by();
 
-	public native void S(int i);
+	public native void S(int var1);
 
-	public void method11290(Matrix44Var class294, int i, boolean bool) {
-		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
-		class384.method6522(class294);
-		aa(class384.buf, i, bool);
+	public void method11290(Matrix44Var matrix44var_1, int i_2, boolean bool_3) {
+		Matrix44Arr matrix44arr_4 = this.aja7140.nx().aClass384_51;
+		matrix44arr_4.fromVarMatrix44(matrix44var_1);
+		this.aa(matrix44arr_4.buf, i_2, bool_3);
 	}
 
-	public void method11291(Matrix44Var class294, int i, boolean bool) {
-		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
-		class384.method6522(class294);
-		aa(class384.buf, i, bool);
+	public void method11291(Matrix44Var matrix44var_1, int i_2, boolean bool_3) {
+		Matrix44Arr matrix44arr_4 = this.aja7140.nx().aClass384_51;
+		matrix44arr_4.fromVarMatrix44(matrix44var_1);
+		this.aa(matrix44arr_4.buf, i_2, bool_3);
 	}
 
-	h(ja var_ja) {
-		((h) this).aja7140 = var_ja;
-		((h) this).aba7141 = null;
-		ba(var_ja);
+	h(ja ja_1) {
+		this.aja7140 = ja_1;
+		this.aba7141 = null;
+		this.ba(ja_1);
 	}
 
-	public void method11293(Matrix44Var class294, Class275_Sub5 class275_sub5, int i) {
-		if (class275_sub5 == null)
-			((h) this).aja7140.nx().method314(this, class294, null, i);
-		else {
+	public void method11293(Matrix44Var matrix44var_1, Class275_Sub5 class275_sub5_2, int i_3) {
+		if (class275_sub5_2 == null) {
+			this.aja7140.nx().method314(this, matrix44var_1, (int[]) null, i_3);
+		} else {
 			ja.ae[5] = 0;
-			((h) this).aja7140.nx().method314(this, class294, ja.ae, i);
-			class275_sub5.anInt7847 = ja.ae[0];
-			class275_sub5.anInt7848 = ja.ae[1];
-			class275_sub5.anInt7850 = ja.ae[2];
-			class275_sub5.anInt7846 = ja.ae[3];
-			class275_sub5.anInt7851 = ja.ae[4];
-			class275_sub5.aBool7849 = ja.ae[5] != 0;
+			this.aja7140.nx().method314(this, matrix44var_1, ja.ae, i_3);
+			class275_sub5_2.anInt7847 = ja.ae[0];
+			class275_sub5_2.anInt7848 = ja.ae[1];
+			class275_sub5_2.anInt7850 = ja.ae[2];
+			class275_sub5_2.anInt7846 = ja.ae[3];
+			class275_sub5_2.anInt7851 = ja.ae[4];
+			class275_sub5_2.aBool7849 = ja.ae[5] != 0;
 		}
+
 	}
 
-	public void method11315(Matrix44Var class294) {
-		method11604(ja.aa, class294);
-		int i = 0;
-		if (((h) this).aClass87Array7139 != null) {
-			for (int i_104_ = 0; i_104_ < ((h) this).aClass87Array7139.length; i_104_++) {
-				Class87 class87 = ((h) this).aClass87Array7139[i_104_];
-				class87.anInt844 = ja.aa[i++] * -1929058355;
-				class87.anInt841 = ja.aa[i++] * 996785411;
-				class87.anInt847 = ja.aa[i++] * 976806429;
-				class87.anInt834 = ja.aa[i++] * -458323579;
-				class87.anInt843 = ja.aa[i++] * 543149547;
-				class87.anInt845 = ja.aa[i++] * 1054448197;
-				class87.anInt846 = ja.aa[i++] * 1348028043;
-				class87.anInt840 = ja.aa[i++] * -1652520905;
-				class87.anInt848 = ja.aa[i++] * 1757672349;
+	public void method11315(Matrix44Var matrix44var_1) {
+		this.method11604(ja.aa, matrix44var_1);
+		int i_2 = 0;
+		int i_3;
+		if (this.aClass87Array7139 != null) {
+			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
+				Class87 class87_4 = this.aClass87Array7139[i_3];
+				class87_4.anInt844 = ja.aa[i_2++] * -1929058355 * -75866875;
+				class87_4.anInt841 = ja.aa[i_2++] * 996785411 * 1618253227;
+				class87_4.anInt847 = ja.aa[i_2++] * 976806429 * -489230283;
+				class87_4.anInt834 = ja.aa[i_2++] * -458323579 * 1747322701;
+				class87_4.anInt843 = ja.aa[i_2++] * 543149547 * -174394685;
+				class87_4.anInt845 = ja.aa[i_2++] * 1054448197 * 305293453;
+				class87_4.anInt846 = ja.aa[i_2++] * 1348028043 * 1878552867;
+				class87_4.anInt840 = ja.aa[i_2++] * -1652520905 * 950906247;
+				class87_4.anInt848 = ja.aa[i_2++] * 1757672349 * -1923011915;
 			}
 		}
-		if (((h) this).aClass172Array7142 != null) {
-			for (int i_105_ = 0; i_105_ < ((h) this).aClass172Array7142.length; i_105_++) {
-				Class172 class172 = ((h) this).aClass172Array7142[i_105_];
-				Class172 class172_106_ = class172;
-				if (class172.aClass172_2114 != null)
-					class172_106_ = class172.aClass172_2114;
-				if (class172.aClass384_2116 == null)
-					class172.aClass384_2116 = new Matrix44Arr();
-				class172.aClass384_2116.method6522(class294);
-				class172_106_.anInt2113 = ja.aa[i++] * 959663283;
-				class172_106_.anInt2117 = ja.aa[i++] * -1084180847;
-				class172_106_.anInt2118 = ja.aa[i++] * -1221574613;
+
+		if (this.aClass172Array7142 != null) {
+			for (i_3 = 0; i_3 < this.aClass172Array7142.length; i_3++) {
+				Class172 class172_6 = this.aClass172Array7142[i_3];
+				Class172 class172_5 = class172_6;
+				if (class172_6.aClass172_2114 != null) {
+					class172_5 = class172_6.aClass172_2114;
+				}
+
+				if (class172_6.aClass384_2116 == null) {
+					class172_6.aClass384_2116 = new Matrix44Arr();
+				}
+
+				class172_6.aClass384_2116.fromVarMatrix44(matrix44var_1);
+				class172_5.anInt2113 = ja.aa[i_2++] * 959663283 * -48479621;
+				class172_5.anInt2117 = ja.aa[i_2++] * -1084180847 * 1018284657;
+				class172_5.anInt2118 = ja.aa[i_2++] * -1221574613 * 1898872451;
 			}
 		}
+
 	}
 
 	public native int RA();
 
 	public native int cv();
 
-	native void w(int i, int i_107_, int i_108_, int i_109_);
+	native void w(int var1, int var2, int var3, int var4);
 
 	public native int cc();
 
@@ -432,18 +452,20 @@ public class h extends MeshRasterizer implements Interface40 {
 	public native int cu();
 
 	void method11308() {
-		if (((ja) ((h) this).aja7140).as > 1) {
+		if (this.aja7140.as > 1) {
 			synchronized (this) {
-				while (aBool7023) {
+				while (this.aBool7023) {
 					try {
 						this.wait();
-					} catch (InterruptedException interruptedexception) {
-						/* empty */
+					} catch (InterruptedException interruptedexception_3) {
+						;
 					}
 				}
-				aBool7023 = true;
+
+				this.aBool7023 = true;
 			}
 		}
+
 	}
 
 	public native int cw();
@@ -454,60 +476,55 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native int ca();
 
-	public MeshRasterizer method11289(byte i, int i_110_, boolean bool) {
-		return ((h) this).aja7140.nx().method325(this, i, i_110_, bool);
+	public MeshRasterizer method11289(byte b_1, int i_2, boolean bool_3) {
+		return this.aja7140.nx().method325(this, b_1, i_2, bool_3);
 	}
 
-	public boolean method11286(int i, int i_111_, Matrix44Var class294, boolean bool, int i_112_) {
-		return ((h) this).aja7140.nx().method335(this, i, i_111_, class294, bool);
+	public boolean method11286(int i_1, int i_2, Matrix44Var matrix44var_3, boolean bool_4, int i_5) {
+		return this.aja7140.nx().method335(this, i_1, i_2, matrix44var_3, bool_4);
 	}
 
 	public native int cd();
 
-	public native void f(int i);
+	public native void f(int var1);
 
-	public native void cr(int i);
+	public native void cr(int var1);
 
-	public native void bc(int i, int i_113_, Class390 class390, Class390 class390_114_, int i_115_, int i_116_, int i_117_);
+	public native void bc(int var1, int var2, Class390 var3, Class390 var4, int var5, int var6, int var7);
 
 	public native int ch();
 
-	public native void cq(short i, short i_118_);
+	public native void cq(short var1, short var2);
 
-	public void method11269(MeshRasterizer class528, int i, int i_119_, int i_120_, boolean bool) {
-		((h) this).aja7140.nx().method313(this, class528, i, i_119_, i_120_, bool);
+	public void method11269(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4, boolean bool_5) {
+		this.aja7140.nx().method313(this, meshrasterizer_1, i_2, i_3, i_4, bool_5);
 	}
 
-	public native void cy(int i, int i_121_, int i_122_, int i_123_);
+	public native void cy(int var1, int var2, int var3, int var4);
 
 	public Class87[] method11300() {
-		return ((h) this).aClass87Array7139;
+		return this.aClass87Array7139;
 	}
 
-	public native void bf(int i);
+	public native void bf(int var1);
 
 	public Class172[] method11283() {
-		return ((h) this).aClass172Array7142;
+		return this.aClass172Array7142;
 	}
 
 	public boolean method11303() {
 		return true;
 	}
 
-	public native void dl(int i);
+	public native void dl(int var1);
 
 	public native boolean dh();
-
-	void method11605() {
-		if (((h) this).nativeid != 0L)
-			Class156.method2642(this, (byte) 103);
-	}
 
 	public native int ck();
 
 	public native int N();
 
-	public native void dk(int i, int i_124_, int i_125_);
+	public native void dk(int var1, int var2, int var3);
 
 	public native int dy();
 
@@ -515,138 +532,131 @@ public class h extends MeshRasterizer implements Interface40 {
 
 	public native int dp();
 
-	public native void ep(int i, int i_126_, int i_127_);
+	public native void ep(int var1, int var2, int var3);
 
 	public native int dg();
 
 	public native int dd();
 
-	public native void di(short i, short i_128_);
+	public native void di(short var1, short var2);
 
-	public native void df(short i, short i_129_);
+	public native void df(short var1, short var2);
 
 	public native boolean dv();
 
 	public native int Z();
 
 	void method11301() {
-		if (((ja) ((h) this).aja7140).as > 1) {
+		if (this.aja7140.as > 1) {
 			synchronized (this) {
-				while (aBool7023) {
+				while (this.aBool7023) {
 					try {
 						this.wait();
-					} catch (InterruptedException interruptedexception) {
-						/* empty */
+					} catch (InterruptedException interruptedexception_3) {
+						;
 					}
 				}
-				aBool7023 = true;
+
+				this.aBool7023 = true;
 			}
 		}
+
 	}
 
-	public boolean method11309(int i, int i_130_, Matrix44Var class294, boolean bool, int i_131_) {
-		return ((h) this).aja7140.nx().method335(this, i, i_130_, class294, bool);
+	public boolean method11309(int i_1, int i_2, Matrix44Var matrix44var_3, boolean bool_4, int i_5) {
+		return this.aja7140.nx().method335(this, i_1, i_2, matrix44var_3, bool_4);
 	}
 
 	void method11285() {
-		if (((ja) ((h) this).aja7140).as > 1) {
+		if (this.aja7140.as > 1) {
 			synchronized (this) {
-				aBool7023 = false;
+				this.aBool7023 = false;
 				this.notifyAll();
 			}
 		}
+
 	}
 
-	public native Class282_Sub50_Sub17 dn(Class282_Sub50_Sub17 class282_sub50_sub17);
+	public native Class282_Sub50_Sub17 dn(Class282_Sub50_Sub17 var1);
 
-	public native void pa(int i, int i_132_, Class390 class390, Class390 class390_133_, int i_134_, int i_135_, int i_136_);
+	public native void pa(int var1, int var2, Class390 var3, Class390 var4, int var5, int var6, int var7);
 
-	public native Class282_Sub50_Sub17 dw(Class282_Sub50_Sub17 class282_sub50_sub17);
+	public native Class282_Sub50_Sub17 dw(Class282_Sub50_Sub17 var1);
 
-	public native Class282_Sub50_Sub17 dr(Class282_Sub50_Sub17 class282_sub50_sub17);
+	public native Class282_Sub50_Sub17 dr(Class282_Sub50_Sub17 var1);
 
-	public native void ce(int i);
+	public native void ce(int var1);
 
-	public native void x(boolean bool);
+	public native void x(boolean var1);
 
-	native void fe(ja var_ja, ba var_ba, int i, int i_137_, int[] is, int[] is_138_, int[] is_139_, int[] is_140_, short[] is_141_, int i_142_, short[] is_143_, short[] is_144_, short[] is_145_, byte[] is_146_, byte[] is_147_, byte[] is_148_, byte[] is_149_, short[] is_150_, short[] is_151_, int[] is_152_, byte i_153_, short[] is_154_, int i_155_, byte[] is_156_, short[] is_157_, short[] is_158_, short[] is_159_, int[] is_160_, int[] is_161_, int[] is_162_, byte[] is_163_, byte[] is_164_,
-			int[] is_165_, int[] is_166_, int[] is_167_, int[] is_168_, int i_169_, int i_170_, int i_171_, int i_172_, int i_173_, int i_174_, int[] is_175_);
+	native void fe(ja var1, ba var2, int var3, int var4, int[] var5, int[] var6, int[] var7, int[] var8, short[] var9, int var10, short[] var11, short[] var12, short[] var13, byte[] var14, byte[] var15, byte[] var16, byte[] var17, short[] var18, short[] var19, int[] var20, byte var21, short[] var22, int var23, byte[] var24, short[] var25, short[] var26, short[] var27, int[] var28, int[] var29, int[] var30, byte[] var31, byte[] var32, int[] var33, int[] var34, int[] var35, int[] var36, int var37, int var38, int var39, int var40, int var41, int var42, int[] var43);
 
-	native void fk(ja var_ja, ba var_ba, int i, int i_176_, int[] is, int[] is_177_, int[] is_178_, int[] is_179_, short[] is_180_, int i_181_, short[] is_182_, short[] is_183_, short[] is_184_, byte[] is_185_, byte[] is_186_, byte[] is_187_, byte[] is_188_, short[] is_189_, short[] is_190_, int[] is_191_, byte i_192_, short[] is_193_, int i_194_, byte[] is_195_, short[] is_196_, short[] is_197_, short[] is_198_, int[] is_199_, int[] is_200_, int[] is_201_, byte[] is_202_, byte[] is_203_,
-			int[] is_204_, int[] is_205_, int[] is_206_, int[] is_207_, int i_208_, int i_209_, int i_210_, int i_211_, int i_212_, int i_213_, int[] is_214_);
+	native void fk(ja var1, ba var2, int var3, int var4, int[] var5, int[] var6, int[] var7, int[] var8, short[] var9, int var10, short[] var11, short[] var12, short[] var13, byte[] var14, byte[] var15, byte[] var16, byte[] var17, short[] var18, short[] var19, int[] var20, byte var21, short[] var22, int var23, byte[] var24, short[] var25, short[] var26, short[] var27, int[] var28, int[] var29, int[] var30, byte[] var31, byte[] var32, int[] var33, int[] var34, int[] var35, int[] var36, int var37, int var38, int var39, int var40, int var41, int var42, int[] var43);
 
-	native void fh(ja var_ja);
+	native void fh(ja var1);
 
-	public void method11294(Matrix44Var class294) {
-		method11604(ja.aa, class294);
-		int i = 0;
-		if (((h) this).aClass87Array7139 != null) {
-			for (int i_215_ = 0; i_215_ < ((h) this).aClass87Array7139.length; i_215_++) {
-				Class87 class87 = ((h) this).aClass87Array7139[i_215_];
-				class87.anInt844 = ja.aa[i++] * -1929058355;
-				class87.anInt841 = ja.aa[i++] * 996785411;
-				class87.anInt847 = ja.aa[i++] * 976806429;
-				class87.anInt834 = ja.aa[i++] * -458323579;
-				class87.anInt843 = ja.aa[i++] * 543149547;
-				class87.anInt845 = ja.aa[i++] * 1054448197;
-				class87.anInt846 = ja.aa[i++] * 1348028043;
-				class87.anInt840 = ja.aa[i++] * -1652520905;
-				class87.anInt848 = ja.aa[i++] * 1757672349;
+	public void method11294(Matrix44Var matrix44var_1) {
+		this.method11604(ja.aa, matrix44var_1);
+		int i_2 = 0;
+		int i_3;
+		if (this.aClass87Array7139 != null) {
+			for (i_3 = 0; i_3 < this.aClass87Array7139.length; i_3++) {
+				Class87 class87_4 = this.aClass87Array7139[i_3];
+				class87_4.anInt844 = ja.aa[i_2++] * -1929058355 * -75866875;
+				class87_4.anInt841 = ja.aa[i_2++] * 996785411 * 1618253227;
+				class87_4.anInt847 = ja.aa[i_2++] * 976806429 * -489230283;
+				class87_4.anInt834 = ja.aa[i_2++] * -458323579 * 1747322701;
+				class87_4.anInt843 = ja.aa[i_2++] * 543149547 * -174394685;
+				class87_4.anInt845 = ja.aa[i_2++] * 1054448197 * 305293453;
+				class87_4.anInt846 = ja.aa[i_2++] * 1348028043 * 1878552867;
+				class87_4.anInt840 = ja.aa[i_2++] * -1652520905 * 950906247;
+				class87_4.anInt848 = ja.aa[i_2++] * 1757672349 * -1923011915;
 			}
 		}
-		if (((h) this).aClass172Array7142 != null) {
-			for (int i_216_ = 0; i_216_ < ((h) this).aClass172Array7142.length; i_216_++) {
-				Class172 class172 = ((h) this).aClass172Array7142[i_216_];
-				Class172 class172_217_ = class172;
-				if (class172.aClass172_2114 != null)
-					class172_217_ = class172.aClass172_2114;
-				if (class172.aClass384_2116 == null)
-					class172.aClass384_2116 = new Matrix44Arr();
-				class172.aClass384_2116.method6522(class294);
-				class172_217_.anInt2113 = ja.aa[i++] * 959663283;
-				class172_217_.anInt2117 = ja.aa[i++] * -1084180847;
-				class172_217_.anInt2118 = ja.aa[i++] * -1221574613;
+
+		if (this.aClass172Array7142 != null) {
+			for (i_3 = 0; i_3 < this.aClass172Array7142.length; i_3++) {
+				Class172 class172_6 = this.aClass172Array7142[i_3];
+				Class172 class172_5 = class172_6;
+				if (class172_6.aClass172_2114 != null) {
+					class172_5 = class172_6.aClass172_2114;
+				}
+
+				if (class172_6.aClass384_2116 == null) {
+					class172_6.aClass384_2116 = new Matrix44Arr();
+				}
+
+				class172_6.aClass384_2116.fromVarMatrix44(matrix44var_1);
+				class172_5.anInt2113 = ja.aa[i_2++] * 959663283 * -48479621;
+				class172_5.anInt2117 = ja.aa[i_2++] * -1084180847 * 1018284657;
+				class172_5.anInt2118 = ja.aa[i_2++] * -1221574613 * 1898872451;
 			}
 		}
+
 	}
 
-	void method11606(int[] is, Matrix44Var class294) {
-		((h) this).aja7140.nx().method331(this, is, class294);
-	}
+	native void fg(h var1, h var2, int var3, boolean var4, boolean var5);
 
-	void method11607(int[] is, Matrix44Var class294) {
-		((h) this).aja7140.nx().method331(this, is, class294);
-	}
+	native void fz(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
 
-	void method11608(int[] is, Matrix44Var class294) {
-		((h) this).aja7140.nx().method331(this, is, class294);
-	}
+	native void fp(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
 
-	void method11609(int[] is, Matrix44Var class294) {
-		((h) this).aja7140.nx().method331(this, is, class294);
-	}
+	native void fb(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
 
-	native void fg(h var_h_218_, h var_h_219_, int i, boolean bool, boolean bool_220_);
-
-	native void fz(long l, int i, int[] is, int i_221_, int i_222_, int i_223_, int i_224_, boolean bool);
-
-	native void fp(long l, int i, int[] is, int i_225_, int i_226_, int i_227_, int i_228_, boolean bool);
-
-	native void fb(long l, int i, int[] is, int i_229_, int i_230_, int i_231_, int i_232_, boolean bool);
-
-	native void fv(long l, int i, int[] is, int i_233_, int i_234_, int i_235_, int i_236_, boolean bool);
+	native void fv(long var1, int var3, int[] var4, int var5, int var6, int var7, int var8, boolean var9);
 
 	public native int dq();
 
-	native void ff(byte i, byte[] is);
+	native void ff(byte var1, byte[] var2);
 
-	native void fr(byte i, byte[] is);
+	native void fr(byte var1, byte[] var2);
 
-	native void fw(byte i, byte[] is);
+	native void fw(byte var1, byte[] var2);
 
-	public void method11292(Matrix44Var class294, int i, boolean bool) {
-		Matrix44Arr class384 = ((a) ((h) this).aja7140.nx()).aClass384_51;
-		class384.method6522(class294);
-		aa(class384.buf, i, bool);
+	public void method11292(Matrix44Var matrix44var_1, int i_2, boolean bool_3) {
+		Matrix44Arr matrix44arr_4 = this.aja7140.nx().aClass384_51;
+		matrix44arr_4.fromVarMatrix44(matrix44var_1);
+		this.aa(matrix44arr_4.buf, i_2, bool_3);
 	}
+
 }

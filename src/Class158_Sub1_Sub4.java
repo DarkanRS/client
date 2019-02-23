@@ -1,114 +1,110 @@
-
-/* Class158_Sub1_Sub4 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import jaggl.OpenGL;
 
 public class Class158_Sub1_Sub4 extends Class158_Sub1 {
-	int anInt10226;
-	Class505_Sub1 aClass505_Sub1_10227;
+
 	int anInt10228;
-	int anInt10229;
-	int anInt10230;
+	int anInt10226;
 	int anInt10231;
-	Interface13 anInterface13_10232;
+	int anInt10230;
+	int anInt10229;
 	Interface13[] anInterface13Array10233 = new Interface13[4];
-	static final int anInt10234 = 16;
+	Class505_Sub1 aClass505_Sub1_10227;
+	Interface13 anInterface13_10232;
 
 	public void method186() {
-		if (((Class158_Sub1_Sub4) this).anInt10228 != 0) {
-			((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13678(((Class158_Sub1_Sub4) this).anInt10228);
-			((Class158_Sub1_Sub4) this).anInt10228 = 0;
+		if (this.anInt10228 != 0) {
+			this.aClass505_Sub1_10227.method13678(this.anInt10228);
+			this.anInt10228 = 0;
 		}
-	}
 
-	void method15620() {
-		if (((Class158_Sub1_Sub4) this).anInterface13_10232 == null)
-			OpenGL.glFramebufferRenderbufferEXT(36160, 36096, 36161, 0);
-		else
-			((Class158_Sub1_Sub4) this).anInterface13_10232.method99(36096);
 	}
 
 	boolean method213() {
-		OpenGL.glBindFramebufferEXT(36160, ((Class158_Sub1_Sub4) this).anInt10228);
-		for (int i = 0; i < 4; i++) {
-			if ((((Class158_Sub1_Sub4) this).anInt10226 & 1 << i) != 0)
-				method15622(i);
+		OpenGL.glBindFramebufferEXT(36160, this.anInt10228);
+
+		for (int i_1 = 0; i_1 < 4; i_1++) {
+			if ((this.anInt10226 & 1 << i_1) != 0) {
+				this.method15622(i_1);
+			}
 		}
-		if ((((Class158_Sub1_Sub4) this).anInt10226 & 0x10) != 0)
-			method15625();
-		((Class158_Sub1_Sub4) this).anInt10226 = 0;
-		((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13578();
+
+		if ((this.anInt10226 & 0x10) != 0) {
+			this.method15625();
+		}
+
+		this.anInt10226 = 0;
+		this.aClass505_Sub1_10227.method13578();
 		return true;
 	}
 
-	public void method13759(int i, Interface9 interface9) {
-		int i_0_ = 1 << i;
-		Interface13 interface13 = (Interface13) interface9;
-		if (interface9 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | i_0_) != i_0_) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 126))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13759(int i_1, Interface9 interface9_2) {
+		int i_3 = 1 << i_1;
+		Interface13 interface13_4 = (Interface13) interface9_2;
+		if (interface9_2 == null) {
+			this.anInt10231 &= ~i_3;
+			this.anInterface13Array10233[i_1] = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= i_0_;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= i_0_ ^ 0xffffffff;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if (i_3 != (this.anInt10231 | i_3)) {
+				if (this.anInt10229 != interface13_4.method1() || this.anInt10230 != interface13_4.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_4.method74();
+				this.anInt10229 = interface13_4.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 126)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= i_3;
+			this.anInterface13Array10233[i_1] = interface13_4;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 120))
-			method15622(i);
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= i_0_;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 120)) {
+			this.method15622(i_1);
+		} else {
+			this.anInt10226 |= i_3;
+		}
+
 	}
 
-	void method15621() throws Throwable {
-		super.finalize();
-		method212();
-	}
+	void method15622(int i_1) {
+		Interface13 interface13_2 = this.anInterface13Array10233[i_1];
+		if (interface13_2 == null) {
+			OpenGL.glFramebufferRenderbufferEXT(36160, i_1 + 36064, 36161, 0);
+		} else {
+			interface13_2.method99(i_1 + 36064);
+		}
 
-	void method15622(int i) {
-		Interface13 interface13 = ((Class158_Sub1_Sub4) this).anInterface13Array10233[i];
-		if (interface13 == null)
-			OpenGL.glFramebufferRenderbufferEXT(36160, 36064 + i, 36161, 0);
-		else
-			interface13.method99(36064 + i);
-	}
-
-	void method15623() throws Throwable {
-		super.finalize();
-		method212();
 	}
 
 	public boolean method13764() {
-		int i = OpenGL.glCheckFramebufferStatusEXT(36160);
-		if (i != 36053)
-			return false;
-		return true;
+		int i_1 = OpenGL.glCheckFramebufferStatusEXT(36160);
+		return i_1 == 36053;
 	}
 
-	void method15624(int i, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, boolean bool, boolean bool_6_) {
-		if (bool | bool_6_) {
-			int i_7_ = ((Class158_Sub1_Sub4) this).anInt10230;
-			int i_8_ = ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 123).method2716();
-			int i_9_ = 0;
-			if (bool_6_)
-				i_9_ |= 0x100;
-			if (bool)
-				i_9_ |= 0x4000;
-			OpenGL.glBindFramebufferEXT(36008, (((Class158_Sub1_Sub4) this).anInt10228));
-			OpenGL.glBlitFramebufferEXT(i, i_7_ - i_1_ - i_3_, i + i_2_, i_7_ - i_1_, i_4_, i_8_ - i_5_ - i_3_, i_4_ + i_2_, i_8_ - i_5_, i_9_, 9728);
+	void method15624(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, boolean bool_7, boolean bool_8) {
+		if (bool_7 | bool_8) {
+			int i_9 = this.anInt10230;
+			int i_10 = this.aClass505_Sub1_10227.method8523((byte) 123).method2716();
+			int i_11 = 0;
+			if (bool_8) {
+				i_11 |= 0x100;
+			}
+
+			if (bool_7) {
+				i_11 |= 0x4000;
+			}
+
+			OpenGL.glBindFramebufferEXT(36008, this.anInt10228);
+			OpenGL.glBlitFramebufferEXT(i_1, i_9 - i_2 - i_4, i_3 + i_1, i_9 - i_2, i_5, i_10 - i_6 - i_4, i_3 + i_5, i_10 - i_6, i_11, 9728);
 			OpenGL.glBindFramebufferEXT(36008, 0);
 		}
+
 	}
 
 	boolean method2718() {
@@ -116,271 +112,326 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 		return true;
 	}
 
-	public void method13761(int i, Interface9 interface9) {
-		int i_10_ = 1 << i;
-		Interface13 interface13 = (Interface13) interface9;
-		if (interface9 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | i_10_) != i_10_) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 126))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13761(int i_1, Interface9 interface9_2) {
+		int i_3 = 1 << i_1;
+		Interface13 interface13_4 = (Interface13) interface9_2;
+		if (interface9_2 == null) {
+			this.anInt10231 &= ~i_3;
+			this.anInterface13Array10233[i_1] = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= i_10_;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= i_10_ ^ 0xffffffff;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | i_3) != i_3) {
+				if (this.anInt10229 != interface13_4.method1() || this.anInt10230 != interface13_4.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_4.method74();
+				this.anInt10229 = interface13_4.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 126)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= i_3;
+			this.anInterface13Array10233[i_1] = interface13_4;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 111))
-			method15622(i);
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= i_10_;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 111)) {
+			this.method15622(i_1);
+		} else {
+			this.anInt10226 |= i_3;
+		}
+
 	}
 
-	Class158_Sub1_Sub4(Class505_Sub1 class505_sub1) {
-		if (!((Class505_Sub1) class505_sub1).aBool8472)
+	Class158_Sub1_Sub4(Class505_Sub1 class505_sub1_1) {
+		if (!class505_sub1_1.aBool8472) {
 			throw new IllegalStateException("");
-		((Class158_Sub1_Sub4) this).aClass505_Sub1_10227 = class505_sub1;
-		int[] is = new int[1];
-		OpenGL.glGenFramebuffersEXT(1, is, 0);
-		((Class158_Sub1_Sub4) this).anInt10228 = is[0];
+		} else {
+			this.aClass505_Sub1_10227 = class505_sub1_1;
+			int[] ints_2 = new int[1];
+			OpenGL.glGenFramebuffersEXT(1, ints_2, 0);
+			this.anInt10228 = ints_2[0];
+		}
 	}
 
 	public void method212() {
-		if (((Class158_Sub1_Sub4) this).anInt10228 != 0) {
-			((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13678(((Class158_Sub1_Sub4) this).anInt10228);
-			((Class158_Sub1_Sub4) this).anInt10228 = 0;
+		if (this.anInt10228 != 0) {
+			this.aClass505_Sub1_10227.method13678(this.anInt10228);
+			this.anInt10228 = 0;
 		}
+
 	}
 
 	public int method2719() {
-		return ((Class158_Sub1_Sub4) this).anInt10229;
+		return this.anInt10229;
 	}
 
 	void method15625() {
-		if (((Class158_Sub1_Sub4) this).anInterface13_10232 == null)
+		if (this.anInterface13_10232 == null) {
 			OpenGL.glFramebufferRenderbufferEXT(36160, 36096, 36161, 0);
-		else
-			((Class158_Sub1_Sub4) this).anInterface13_10232.method99(36096);
+		} else {
+			this.anInterface13_10232.method99(36096);
+		}
+
 	}
 
 	public int method2720() {
-		return ((Class158_Sub1_Sub4) this).anInt10229;
+		return this.anInt10229;
 	}
 
 	public int method2716() {
-		return ((Class158_Sub1_Sub4) this).anInt10230;
+		return this.anInt10230;
 	}
 
-	public void method13760(int i, Interface9 interface9) {
-		int i_11_ = 1 << i;
-		Interface13 interface13 = (Interface13) interface9;
-		if (interface9 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | i_11_) != i_11_) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 105))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13760(int i_1, Interface9 interface9_2) {
+		int i_3 = 1 << i_1;
+		Interface13 interface13_4 = (Interface13) interface9_2;
+		if (interface9_2 == null) {
+			this.anInt10231 &= ~i_3;
+			this.anInterface13Array10233[i_1] = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= i_11_;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= i_11_ ^ 0xffffffff;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | i_3) != i_3) {
+				if (this.anInt10229 != interface13_4.method1() || this.anInt10230 != interface13_4.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_4.method74();
+				this.anInt10229 = interface13_4.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 105)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= i_3;
+			this.anInterface13Array10233[i_1] = interface13_4;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 117))
-			method15622(i);
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= i_11_;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 117)) {
+			this.method15622(i_1);
+		} else {
+			this.anInt10226 |= i_3;
+		}
+
 	}
 
 	boolean method211() {
-		OpenGL.glBindFramebufferEXT(36160, ((Class158_Sub1_Sub4) this).anInt10228);
-		for (int i = 0; i < 4; i++) {
-			if ((((Class158_Sub1_Sub4) this).anInt10226 & 1 << i) != 0)
-				method15622(i);
+		OpenGL.glBindFramebufferEXT(36160, this.anInt10228);
+
+		for (int i_1 = 0; i_1 < 4; i_1++) {
+			if ((this.anInt10226 & 1 << i_1) != 0) {
+				this.method15622(i_1);
+			}
 		}
-		if ((((Class158_Sub1_Sub4) this).anInt10226 & 0x10) != 0)
-			method15625();
-		((Class158_Sub1_Sub4) this).anInt10226 = 0;
-		((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13578();
+
+		if ((this.anInt10226 & 0x10) != 0) {
+			this.method15625();
+		}
+
+		this.anInt10226 = 0;
+		this.aClass505_Sub1_10227.method13578();
 		return true;
 	}
 
-	public void method13762(int i, Interface9 interface9) {
-		int i_12_ = 1 << i;
-		Interface13 interface13 = (Interface13) interface9;
-		if (interface9 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | i_12_) != i_12_) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 116))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13762(int i_1, Interface9 interface9_2) {
+		int i_3 = 1 << i_1;
+		Interface13 interface13_4 = (Interface13) interface9_2;
+		if (interface9_2 == null) {
+			this.anInt10231 &= ~i_3;
+			this.anInterface13Array10233[i_1] = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= i_12_;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= i_12_ ^ 0xffffffff;
-			((Class158_Sub1_Sub4) this).anInterface13Array10233[i] = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | i_3) != i_3) {
+				if (this.anInt10229 != interface13_4.method1() || this.anInt10230 != interface13_4.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_4.method74();
+				this.anInt10229 = interface13_4.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 116)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= i_3;
+			this.anInterface13Array10233[i_1] = interface13_4;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 116))
-			method15622(i);
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= i_12_;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 116)) {
+			this.method15622(i_1);
+		} else {
+			this.anInt10226 |= i_3;
+		}
+
 	}
 
-	public void method13763(Interface8 interface8) {
-		Interface13 interface13 = (Interface13) interface8;
-		if (interface8 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | 0x10) != 16) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 113))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13763(Interface8 interface8_1) {
+		Interface13 interface13_2 = (Interface13) interface8_1;
+		if (interface8_1 == null) {
+			this.anInt10231 &= ~0x10;
+			this.anInterface13_10232 = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= 0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= ~0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | 0x10) != 16) {
+				if (this.anInt10229 != interface13_2.method1() || this.anInt10230 != interface13_2.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_2.method74();
+				this.anInt10229 = interface13_2.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 113)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= 0x10;
+			this.anInterface13_10232 = interface13_2;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 104))
-			method15625();
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= 0x10;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 104)) {
+			this.method15625();
+		} else {
+			this.anInt10226 |= 0x10;
+		}
+
 	}
 
-	public void method13765(Interface8 interface8) {
-		Interface13 interface13 = (Interface13) interface8;
-		if (interface8 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | 0x10) != 16) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 109))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13765(Interface8 interface8_1) {
+		Interface13 interface13_2 = (Interface13) interface8_1;
+		if (interface8_1 == null) {
+			this.anInt10231 &= ~0x10;
+			this.anInterface13_10232 = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= 0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= ~0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | 0x10) != 16) {
+				if (this.anInt10229 != interface13_2.method1() || this.anInt10230 != interface13_2.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_2.method74();
+				this.anInt10229 = interface13_2.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 109)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= 0x10;
+			this.anInterface13_10232 = interface13_2;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 124))
-			method15625();
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= 0x10;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 124)) {
+			this.method15625();
+		} else {
+			this.anInt10226 |= 0x10;
+		}
+
 	}
 
-	public void method13758(Interface8 interface8) {
-		Interface13 interface13 = (Interface13) interface8;
-		if (interface8 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | 0x10) != 16) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 112))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13758(Interface8 interface8_1) {
+		Interface13 interface13_2 = (Interface13) interface8_1;
+		if (interface8_1 == null) {
+			this.anInt10231 &= ~0x10;
+			this.anInterface13_10232 = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= 0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= ~0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | 0x10) != 16) {
+				if (this.anInt10229 != interface13_2.method1() || this.anInt10230 != interface13_2.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_2.method74();
+				this.anInt10229 = interface13_2.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 112)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= 0x10;
+			this.anInterface13_10232 = interface13_2;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 107))
-			method15625();
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= 0x10;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 107)) {
+			this.method15625();
+		} else {
+			this.anInt10226 |= 0x10;
+		}
+
 	}
 
 	public boolean method13766() {
-		int i = OpenGL.glCheckFramebufferStatusEXT(36160);
-		if (i != 36053)
-			return false;
-		return true;
+		int i_1 = OpenGL.glCheckFramebufferStatusEXT(36160);
+		return i_1 == 36053;
 	}
 
 	boolean method54() {
-		OpenGL.glBindFramebufferEXT(36160, ((Class158_Sub1_Sub4) this).anInt10228);
-		for (int i = 0; i < 4; i++) {
-			if ((((Class158_Sub1_Sub4) this).anInt10226 & 1 << i) != 0)
-				method15622(i);
+		OpenGL.glBindFramebufferEXT(36160, this.anInt10228);
+
+		for (int i_1 = 0; i_1 < 4; i_1++) {
+			if ((this.anInt10226 & 1 << i_1) != 0) {
+				this.method15622(i_1);
+			}
 		}
-		if ((((Class158_Sub1_Sub4) this).anInt10226 & 0x10) != 0)
-			method15625();
-		((Class158_Sub1_Sub4) this).anInt10226 = 0;
-		((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13578();
+
+		if ((this.anInt10226 & 0x10) != 0) {
+			this.method15625();
+		}
+
+		this.anInt10226 = 0;
+		this.aClass505_Sub1_10227.method13578();
 		return true;
 	}
 
-	public void method13757(Interface8 interface8) {
-		Interface13 interface13 = (Interface13) interface8;
-		if (interface8 != null) {
-			if ((((Class158_Sub1_Sub4) this).anInt10231 | 0x10) != 16) {
-				if ((((Class158_Sub1_Sub4) this).anInt10229 != interface13.method1()) || (((Class158_Sub1_Sub4) this).anInt10230 != interface13.method74()))
-					throw new RuntimeException();
-			} else {
-				((Class158_Sub1_Sub4) this).anInt10230 = interface13.method74();
-				((Class158_Sub1_Sub4) this).anInt10229 = interface13.method1();
-				if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 124))
-					((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method13639();
+	public void method13757(Interface8 interface8_1) {
+		Interface13 interface13_2 = (Interface13) interface8_1;
+		if (interface8_1 == null) {
+			this.anInt10231 &= ~0x10;
+			this.anInterface13_10232 = null;
+			if (this.anInt10231 == 0) {
+				this.anInt10230 = 0;
+				this.anInt10229 = 0;
 			}
-			((Class158_Sub1_Sub4) this).anInt10231 |= 0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = interface13;
 		} else {
-			((Class158_Sub1_Sub4) this).anInt10231 &= ~0x10;
-			((Class158_Sub1_Sub4) this).anInterface13_10232 = null;
-			if (((Class158_Sub1_Sub4) this).anInt10231 == 0) {
-				((Class158_Sub1_Sub4) this).anInt10230 = 0;
-				((Class158_Sub1_Sub4) this).anInt10229 = 0;
+			if ((this.anInt10231 | 0x10) != 16) {
+				if (this.anInt10229 != interface13_2.method1() || this.anInt10230 != interface13_2.method74()) {
+					throw new RuntimeException();
+				}
+			} else {
+				this.anInt10230 = interface13_2.method74();
+				this.anInt10229 = interface13_2.method1();
+				if (this == this.aClass505_Sub1_10227.method8523((byte) 124)) {
+					this.aClass505_Sub1_10227.method13639();
+				}
 			}
+
+			this.anInt10231 |= 0x10;
+			this.anInterface13_10232 = interface13_2;
 		}
-		if (this == ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 127))
-			method15625();
-		else
-			((Class158_Sub1_Sub4) this).anInt10226 |= 0x10;
+
+		if (this == this.aClass505_Sub1_10227.method8523((byte) 127)) {
+			this.method15625();
+		} else {
+			this.anInt10226 |= 0x10;
+		}
+
 	}
 
 	boolean method2723() {
@@ -414,61 +465,28 @@ public class Class158_Sub1_Sub4 extends Class158_Sub1 {
 	}
 
 	public int method2721() {
-		return ((Class158_Sub1_Sub4) this).anInt10230;
+		return this.anInt10230;
 	}
 
 	public int method2727() {
-		return ((Class158_Sub1_Sub4) this).anInt10230;
-	}
-
-	void method15626() {
-		if (((Class158_Sub1_Sub4) this).anInterface13_10232 == null)
-			OpenGL.glFramebufferRenderbufferEXT(36160, 36096, 36161, 0);
-		else
-			((Class158_Sub1_Sub4) this).anInterface13_10232.method99(36096);
+		return this.anInt10230;
 	}
 
 	public int method2714() {
-		return ((Class158_Sub1_Sub4) this).anInt10229;
+		return this.anInt10229;
 	}
 
 	public int method2726() {
-		return ((Class158_Sub1_Sub4) this).anInt10229;
+		return this.anInt10229;
 	}
 
-	void method15627(int i) {
-		Interface13 interface13 = ((Class158_Sub1_Sub4) this).anInterface13Array10233[i];
-		if (interface13 == null)
-			OpenGL.glFramebufferRenderbufferEXT(36160, 36064 + i, 36161, 0);
-		else
-			interface13.method99(36064 + i);
-	}
-
-	void method15628(int i) {
-		OpenGL.glDrawBuffer(36064 + i);
+	void method15628(int i_1) {
+		OpenGL.glDrawBuffer(i_1 + 36064);
 	}
 
 	public void finalize() throws Throwable {
 		super.finalize();
-		method212();
+		this.method212();
 	}
 
-	void method15629(int i) {
-		OpenGL.glDrawBuffer(36064 + i);
-	}
-
-	void method15630(int i, int i_13_, int i_14_, int i_15_, int i_16_, int i_17_, boolean bool, boolean bool_18_) {
-		if (bool | bool_18_) {
-			int i_19_ = ((Class158_Sub1_Sub4) this).anInt10230;
-			int i_20_ = ((Class158_Sub1_Sub4) this).aClass505_Sub1_10227.method8523((byte) 118).method2716();
-			int i_21_ = 0;
-			if (bool_18_)
-				i_21_ |= 0x100;
-			if (bool)
-				i_21_ |= 0x4000;
-			OpenGL.glBindFramebufferEXT(36008, (((Class158_Sub1_Sub4) this).anInt10228));
-			OpenGL.glBlitFramebufferEXT(i, i_19_ - i_13_ - i_15_, i + i_14_, i_19_ - i_13_, i_16_, i_20_ - i_17_ - i_15_, i_16_ + i_14_, i_20_ - i_17_, i_21_, 9728);
-			OpenGL.glBindFramebufferEXT(36008, 0);
-		}
-	}
 }

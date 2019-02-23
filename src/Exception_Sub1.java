@@ -1,13 +1,11 @@
-/* Exception_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Exception_Sub1 extends Exception {
-	Class114 this$0;
-	static NativeSprite aClass160_10075;
 
-	Exception_Sub1(Class114 class114, int i, int i_0_) {
+	static NativeSprite aClass160_10075;
+	Class114 this$0;
+
+	Exception_Sub1(Class114 class114_1, int i_2, int i_3) {
 		super("");
-		((Exception_Sub1) this).this$0 = class114;
+		this.this$0 = class114_1;
 	}
+
 }

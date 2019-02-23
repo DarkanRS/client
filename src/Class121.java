@@ -1,52 +1,31 @@
-/* Class121 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class121 {
-	public String aString1523;
-	public String aString1524;
+
 	static int anInt1525;
 	public static int anInt1526;
 	static int anInt1527;
+	public String aString1524;
+	public String aString1523;
 
-	Class121() {
-		/* empty */
+	void method2097(Class100 class100_1, byte b_2) {
+		this.aString1524 = class100_1.method1633(16711935);
+		this.aString1523 = class100_1.method1633(16711935);
 	}
 
-	void method2097(Class100 class100, byte i) {
-		aString1524 = class100.method1633(16711935);
-		aString1523 = class100.method1633(16711935);
+	static void method2101(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1396181317).name;
 	}
 
-	void method2098(Class100 class100) {
-		aString1524 = class100.method1633(16711935);
-		aString1523 = class100.method1633(16711935);
+	static final void method2102(CS2Executor cs2executor_0, short s_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass61_7010.aByteArray640[i_2];
 	}
 
-	void method2099(Class100 class100) {
-		aString1524 = class100.method1633(16711935);
-		aString1523 = class100.method1633(16711935);
+	static final void method2103(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = ((NPC) cs2executor_0.animable).aClass409_10580.anInt4856;
 	}
 
-	void method2100(Class100 class100) {
-		aString1524 = class100.method1633(16711935);
-		aString1523 = class100.method1633(16711935);
+	static final void method2104(CS2Executor cs2executor_0, short s_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class320.anIntArray3724[cs2executor_0.intOpValues[cs2executor_0.instrPtr]];
 	}
 
-	static void method2101(CS2Executor class527, int i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1396181317).name);
-	}
-
-	static final void method2102(CS2Executor class527, short i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class527.aClass61_7010.aByteArray640[i_0_];
-	}
-
-	static final void method2103(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (-1524615769 * (((NPC) class527.animable).aClass409_10580.anInt4856));
-	}
-
-	static final void method2104(CS2Executor class527, short i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (Class320.anIntArray3724[(class527.intOpValues[301123709 * class527.instrPtr])]);
-	}
 }

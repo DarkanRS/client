@@ -1,28 +1,24 @@
-/* Class39 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class39 {
-	boolean aBool406;
+
 	Interface32 anInterface32_407;
-	boolean aBool408;
 	Interface32 anInterface32_409;
+	boolean aBool408;
+	boolean aBool406;
 
 	boolean method861() {
-		return ((Class39) this).aBool408 && !((Class39) this).aBool406;
-	}
-
-	boolean method862() {
-		return ((Class39) this).aBool408 && !((Class39) this).aBool406;
+		return this.aBool408 && !this.aBool406;
 	}
 
 	void method863() {
-		if (((Class39) this).anInterface32_409 != null)
-			((Class39) this).anInterface32_409.method26();
-		((Class39) this).aBool408 = false;
+		if (this.anInterface32_409 != null) {
+			this.anInterface32_409.method26();
+		}
+
+		this.aBool408 = false;
 	}
 
-	Class39(boolean bool) {
-		((Class39) this).aBool406 = bool;
+	Class39(boolean bool_1) {
+		this.aBool406 = bool_1;
 	}
+
 }

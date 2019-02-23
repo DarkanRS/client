@@ -1,160 +1,92 @@
-
-/* Class191 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Container;
 import java.awt.Frame;
 import java.io.File;
-
 import javax.swing.JFileChooser;
 
 public class Class191 implements Runnable {
-	String aString2384;
-	File aFile2385 = null;
-	boolean aBool2386;
-	boolean aBool2387 = false;
 
-	public boolean method3153() {
-		return ((Class191) this).aBool2387;
-	}
+	File aFile2385 = null;
+	boolean aBool2387 = false;
+	String aString2384;
+	boolean aBool2386;
 
 	public void run() {
-		Container container = Class371.method6354((byte) 1);
-		Frame frame = null;
-		if (null != Engine.aFrame3261)
-			frame = Engine.aFrame3261;
-		else {
-			for (/**/; container != null; container = container.getParent()) {
-				if (container instanceof Frame) {
-					frame = (Frame) container;
+		Container container_1 = Class371.method6354((byte) 1);
+		Frame frame_2 = null;
+		if (Engine.aFrame3261 != null) {
+			frame_2 = Engine.aFrame3261;
+		} else {
+			while (container_1 != null) {
+				if (container_1 instanceof Frame) {
+					frame_2 = (Frame) container_1;
 					break;
 				}
+
+				container_1 = container_1.getParent();
 			}
 		}
-		if (frame == null)
+
+		if (frame_2 == null) {
 			throw new RuntimeException("");
-		JFileChooser jfilechooser = new JFileChooser("");
-		jfilechooser.setDialogTitle(((Class191) this).aString2384);
-		jfilechooser.setFileFilter(new FileFilter_Sub1(this, this));
-		jfilechooser.setFileSelectionMode(1);
-		jfilechooser.setAcceptAllFileFilterUsed(false);
-		int i = jfilechooser.showOpenDialog(frame);
-		if (0 == i)
-			((Class191) this).aFile2385 = jfilechooser.getSelectedFile();
-		((Class191) this).aBool2387 = true;
-	}
-
-	public Class191(String string, boolean bool) {
-		((Class191) this).aString2384 = string;
-		((Class191) this).aBool2386 = bool;
-		new Thread(this).start();
-	}
-
-	public boolean method3154(byte i) {
-		return ((Class191) this).aBool2387;
-	}
-
-	boolean method3155() {
-		return ((Class191) this).aBool2386;
-	}
-
-	boolean method3156(int i) {
-		return ((Class191) this).aBool2386;
-	}
-
-	public void method3157() {
-		Container container = Class371.method6354((byte) 1);
-		Frame frame = null;
-		if (null != Engine.aFrame3261)
-			frame = Engine.aFrame3261;
-		else {
-			for (/**/; container != null; container = container.getParent()) {
-				if (container instanceof Frame) {
-					frame = (Frame) container;
-					break;
-				}
+		} else {
+			JFileChooser jfilechooser_3 = new JFileChooser("");
+			jfilechooser_3.setDialogTitle(this.aString2384);
+			jfilechooser_3.setFileFilter(new FileFilter_Sub1(this, this));
+			jfilechooser_3.setFileSelectionMode(1);
+			jfilechooser_3.setAcceptAllFileFilterUsed(false);
+			int i_4 = jfilechooser_3.showOpenDialog(frame_2);
+			if (i_4 == 0) {
+				this.aFile2385 = jfilechooser_3.getSelectedFile();
 			}
+
+			this.aBool2387 = true;
 		}
-		if (frame == null)
-			throw new RuntimeException("");
-		JFileChooser jfilechooser = new JFileChooser("");
-		jfilechooser.setDialogTitle(((Class191) this).aString2384);
-		jfilechooser.setFileFilter(new FileFilter_Sub1(this, this));
-		jfilechooser.setFileSelectionMode(1);
-		jfilechooser.setAcceptAllFileFilterUsed(false);
-		int i = jfilechooser.showOpenDialog(frame);
-		if (0 == i)
-			((Class191) this).aFile2385 = jfilechooser.getSelectedFile();
-		((Class191) this).aBool2387 = true;
 	}
 
-	public File method3158() {
-		return ((Class191) this).aFile2385;
+	public Class191(String string_1, boolean bool_2) {
+		this.aString2384 = string_1;
+		this.aBool2386 = bool_2;
+		(new Thread(this)).start();
 	}
 
-	public File method3159() {
-		return ((Class191) this).aFile2385;
+	public boolean method3154(byte b_1) {
+		return this.aBool2387;
 	}
 
-	public void method3160() {
-		Container container = Class371.method6354((byte) 1);
-		Frame frame = null;
-		if (null != Engine.aFrame3261)
-			frame = Engine.aFrame3261;
-		else {
-			for (/**/; container != null; container = container.getParent()) {
-				if (container instanceof Frame) {
-					frame = (Frame) container;
-					break;
-				}
-			}
-		}
-		if (frame == null)
-			throw new RuntimeException("");
-		JFileChooser jfilechooser = new JFileChooser("");
-		jfilechooser.setDialogTitle(((Class191) this).aString2384);
-		jfilechooser.setFileFilter(new FileFilter_Sub1(this, this));
-		jfilechooser.setFileSelectionMode(1);
-		jfilechooser.setAcceptAllFileFilterUsed(false);
-		int i = jfilechooser.showOpenDialog(frame);
-		if (0 == i)
-			((Class191) this).aFile2385 = jfilechooser.getSelectedFile();
-		((Class191) this).aBool2387 = true;
+	boolean method3156(int i_1) {
+		return this.aBool2386;
 	}
 
-	public File method3161(int i) {
-		return ((Class191) this).aFile2385;
+	public File method3161(int i_1) {
+		return this.aFile2385;
 	}
 
-	boolean method3162() {
-		return ((Class191) this).aBool2386;
+	static final void method3163(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		FontRenderer.method403(icomponentdefinitions_3, interface_4, cs2executor_0, 1299404618);
 	}
 
-	static final void method3163(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		FontRenderer.method403(class118, class98, class527, 1299404618);
+	static final void method3164(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aClass10Array7456[i_2].aBool117 ? 1 : 0;
 	}
 
-	static final void method3164(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aClass10Array7456[i_0_].aBool117 ? 1 : 0;
-	}
-
-	public static void method3166(int i) {
+	public static void method3166(int i_0) {
 		Class59.aClass229_533.method3859(1570831832);
 	}
 
-	public static void method3167(int i, int i_1_, String string, String string_2_, String string_3_, String string_4_, int i_5_) {
-		MapRegionLoaderTask.appendMessage(i, i_1_, string, string_2_, string_3_, string_4_, null, -1);
+	public static void method3167(int i_0, int i_1, String string_2, String string_3, String string_4, String string_5, int i_6) {
+		MapRegionLoaderTask.appendMessage(i_0, i_1, string_2, string_3, string_4, string_5, (String) null, -1);
 	}
 
-	static final void method3168(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		IComponentDefinitions class118_6_ = Class96_Sub23.method14682(class98, class118, -838454718);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = null == class118_6_ ? -1 : class118_6_.idHash * -1952846363;
+	static final void method3168(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		IComponentDefinitions icomponentdefinitions_5 = Class96_Sub23.method14682(interface_4, icomponentdefinitions_3, -838454718);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_5 == null ? -1 : icomponentdefinitions_5.idHash;
 	}
+
 }

@@ -1,10 +1,6 @@
-/* Class177 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class177 {
+
 	short aShort2202;
-	int anInt2203 = 0;
 	int anInt2204;
 	short aShort2205;
 	int anInt2206;
@@ -14,8 +10,6 @@ public class Class177 {
 	byte aByte2210;
 	int anInt2211;
 	short aShort2212;
+	int anInt2203 = 0;
 
-	Class177() {
-		/* empty */
-	}
 }

@@ -1,96 +1,114 @@
-/* Class481 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class UnderlayDef {
-	public int a;
-	public int anInt5719;
-	public int anInt5720;
-	public boolean aBool5721;
-	public boolean aBool5722;
-	int rgb = 0;
-	public int r;
-	public int b;
+
 	public int g;
+	public int b;
+	public int a;
+	public int r;
+	int rgb = 0;
+	public int anInt5719 = -1;
+	public int anInt5720 = 512;
+	public boolean aBool5721 = true;
+	public boolean aBool5722 = true;
 
-	void method8048(int rgb, int i_0_) {
-		double redD = (double) (rgb >> 16 & 0xff) / 256.0;
-		double greenD = (double) (rgb >> 8 & 0xff) / 256.0;
-		double blueD = (double) (rgb & 0xff) / 256.0;
-		double minorC = redD;
-		if (greenD < minorC)
-			minorC = greenD;
-		if (blueD < minorC)
-			minorC = blueD;
-		double majorC = redD;
-		if (greenD > majorC)
-			majorC = greenD;
-		if (blueD > majorC)
-			majorC = blueD;
-		double d_5_ = 0.0;
-		double d_6_ = 0.0;
-		double d_7_ = (majorC + minorC) / 2.0;
-		if (majorC != minorC) {
-			if (d_7_ < 0.5)
-				d_6_ = (majorC - minorC) / (majorC + minorC);
-			if (d_7_ >= 0.5)
-				d_6_ = (majorC - minorC) / (2.0 - majorC - minorC);
-			if (redD == majorC)
-				d_5_ = (greenD - blueD) / (majorC - minorC);
-			else if (majorC == greenD)
-				d_5_ = 2.0 + (blueD - redD) / (majorC - minorC);
-			else if (majorC == blueD)
-				d_5_ = (redD - greenD) / (majorC - minorC) + 4.0;
+	void method8048(int i_1, int i_2) {
+		double d_3 = (double) (i_1 >> 16 & 0xff) / 256.0D;
+		double d_5 = (double) (i_1 >> 8 & 0xff) / 256.0D;
+		double d_7 = (double) (i_1 & 0xff) / 256.0D;
+		double d_9 = d_3;
+		if (d_5 < d_3) {
+			d_9 = d_5;
 		}
-		d_5_ /= 6.0;
-		g = 129547103 * (int) (d_6_ * 256.0);
-		b = (int) (256.0 * d_7_) * 1365217939;
-		if (-771727201 * g < 0)
-			g = 0;
-		else if (g * -771727201 > 255)
-			g = -1325227103;
-		if (b * 1389910939 < 0)
-			b = 0;
-		else if (1389910939 * b > 255)
-			b = 238223469;
-		if (d_7_ > 0.5)
-			a = (int) (d_6_ * (1.0 - d_7_) * 512.0) * -812457911;
-		else
-			a = (int) (d_6_ * d_7_ * 512.0) * -812457911;
-		if (a * -45673991 < 1)
-			a = -812457911;
-		r = (int) (d_5_ * (double) (-45673991 * a)) * -2032289709;
+
+		if (d_7 < d_9) {
+			d_9 = d_7;
+		}
+
+		double d_11 = d_3;
+		if (d_5 > d_3) {
+			d_11 = d_5;
+		}
+
+		if (d_7 > d_11) {
+			d_11 = d_7;
+		}
+
+		double d_13 = 0.0D;
+		double d_15 = 0.0D;
+		double d_17 = (d_11 + d_9) / 2.0D;
+		if (d_11 != d_9) {
+			if (d_17 < 0.5D) {
+				d_15 = (d_11 - d_9) / (d_11 + d_9);
+			}
+
+			if (d_17 >= 0.5D) {
+				d_15 = (d_11 - d_9) / (2.0D - d_11 - d_9);
+			}
+
+			if (d_3 == d_11) {
+				d_13 = (d_5 - d_7) / (d_11 - d_9);
+			} else if (d_11 == d_5) {
+				d_13 = 2.0D + (d_7 - d_3) / (d_11 - d_9);
+			} else if (d_11 == d_7) {
+				d_13 = (d_3 - d_5) / (d_11 - d_9) + 4.0D;
+			}
+		}
+
+		d_13 /= 6.0D;
+		this.g = (int) (d_15 * 256.0D);
+		this.b = (int) (256.0D * d_17);
+		if (this.g < 0) {
+			this.g = 0;
+		} else if (this.g > 255) {
+			this.g = 255;
+		}
+
+		if (this.b < 0) {
+			this.b = 0;
+		} else if (this.b > 255) {
+			this.b = 255;
+		}
+
+		if (d_17 > 0.5D) {
+			this.a = (int) (d_15 * (1.0D - d_17) * 512.0D);
+		} else {
+			this.a = (int) (d_15 * d_17 * 512.0D);
+		}
+
+		if (this.a < 1) {
+			this.a = 1;
+		}
+
+		this.r = (int) (d_13 * (double) this.a);
 	}
 
-	void method8049(RsByteBuffer class282_sub35, int i, byte i_8_) {
-		if (i == 1) {
-			((UnderlayDef) this).rgb = class282_sub35.read24BitUnsignedInteger() * 1504179655;
-			method8048(((UnderlayDef) this).rgb * -129287177, 1049430248);
-		} else if (2 == i) {
-			anInt5719 = class282_sub35.readUnsignedShort() * 1470638369;
-			if (anInt5719 * -1346987295 == 65535)
-				anInt5719 = -1470638369;
-		} else if (3 == i)
-			anInt5720 = (class282_sub35.readUnsignedShort() << 2) * -1489042801;
-		else if (4 == i)
-			aBool5721 = false;
-		else if (i == 5)
-			aBool5722 = false;
+	void method8049(RsByteBuffer rsbytebuffer_1, int i_2, byte b_3) {
+		if (i_2 == 1) {
+			this.rgb = rsbytebuffer_1.read24BitUnsignedInteger();
+			this.method8048(this.rgb, 1049430248);
+		} else if (i_2 == 2) {
+			this.anInt5719 = rsbytebuffer_1.readUnsignedShort();
+			if (this.anInt5719 == 65535) {
+				this.anInt5719 = -1;
+			}
+		} else if (i_2 == 3) {
+			this.anInt5720 = rsbytebuffer_1.readUnsignedShort() << 2;
+		} else if (i_2 == 4) {
+			this.aBool5721 = false;
+		} else if (i_2 == 5) {
+			this.aBool5722 = false;
+		}
+
 	}
 
-	void method8050(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_9_ = class282_sub35.readUnsignedByte();
-			if (0 == i_9_)
-				break;
-			method8049(class282_sub35, i_9_, (byte) 87);
+	void method8050(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method8049(rsbytebuffer_1, i_3, (byte) 87);
 		}
 	}
 
-	UnderlayDef() {
-		anInt5719 = -1470638369;
-		anInt5720 = 2114264576;
-		aBool5721 = true;
-		aBool5722 = true;
-	}
 }

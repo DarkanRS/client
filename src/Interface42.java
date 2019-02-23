@@ -1,19 +1,17 @@
-/* Interface42 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface42 {
-	public int method236(int i);
 
-	public int method237(int i);
+	int method236(int var1);
 
-	public int method238(int i);
+	int method237(int var1);
 
-	public int method239(int i);
+	int method238(int var1);
 
-	public int method240(int i, int i_0_);
+	int method239(int var1);
 
-	public int method241(int i, int i_1_);
+	int method240(int var1, int var2);
 
-	public int method242(int i);
+	int method241(int var1, int var2);
+
+	int method242(int var1);
+
 }

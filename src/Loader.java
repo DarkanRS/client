@@ -14,7 +14,7 @@ public class Loader extends Applet implements AppletStub {
 	private static final long serialVersionUID = 1L;
 
 	public static final int MAJOR_BUILD = 727;
-	public static final int SUB_BUILD = 1;
+	public static final int MINOR_BUILD = 1;
 	public static final int CLIENT_BUILD = 6;
 
 	//public static final String IP_ADDRESS = "127.0.0.1";
@@ -26,8 +26,6 @@ public class Loader extends Applet implements AppletStub {
 	public static final boolean LOBBY_ENABLED = true;
 	public static final boolean DISABLE_XTEA_CRASH = true;
 		
-	public static final String clientLink = "http://darkan.org/assets/uploads/files/darkanclient.jar";
-
 	public static Properties clientParams = new Properties();
 
 	public JFrame clientFrame = null;

@@ -1,17 +1,15 @@
-/* Interface34 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface34 extends Interface8 {
-	public void method184();
 
-	public long method2();
+	void method184();
 
-	public void method185();
+	long method2();
 
-	public void method32();
+	void method185();
 
-	public void method26();
+	void method32();
 
-	public long method123();
+	void method26();
+
+	long method123();
+
 }

@@ -1,169 +1,70 @@
-/* Class29 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class29 {
+
+	Class30 aClass30_354;
 	Index aClass317_352;
 	Index aClass317_353;
-	Class30 aClass30_354;
 
-	Class30 method780() {
-		if (null == ((Class29) this).aClass30_354)
-			((Class29) this).aClass30_354 = new Class30();
-		return ((Class29) this).aClass30_354;
-	}
-
-	public Interface2 method781(Interface3 interface3, int i) {
-		if (null == interface3)
+	public Interface2 method781(Interface3 interface3_1, int i_2) {
+		if (interface3_1 == null) {
 			return null;
-		Class60 class60 = interface3.method24(-2039586573);
-		if (class60 == Class60.aClass60_609)
-			return new Class46((Class366) interface3);
-		if (class60 == Class60.aClass60_605)
-			return new Class28(method782(-472205430), (Class365) interface3);
-		if (Class60.aClass60_606 == class60)
-			return new Class42(((Class29) this).aClass317_352, (Class357) interface3);
-		if (Class60.aClass60_607 == class60)
-			return new Class42_Sub1(((Class29) this).aClass317_352, (Class357_Sub1) interface3);
-		if (class60 == Class60.aClass60_602)
-			return new Class52_Sub3(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub2) interface3);
-		if (Class60.aClass60_603 == class60)
-			return new Class52_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub1) interface3);
-		if (class60 == Class60.aClass60_608)
-			return new Class52_Sub2(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3) interface3);
-		if (Class60.aClass60_604 == class60)
-			return new Class51(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class62) interface3);
-		if (Class60.aClass60_601 == class60)
-			return new Class43(((Class29) this).aClass317_352, (Class351) interface3);
-		if (Class60.aClass60_610 == class60)
-			return new Class52_Sub2_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3_Sub1) interface3);
-		return null;
-	}
-
-	Class30 method782(int i) {
-		if (null == ((Class29) this).aClass30_354)
-			((Class29) this).aClass30_354 = new Class30();
-		return ((Class29) this).aClass30_354;
-	}
-
-	public Class29(Index class317, Index class317_0_) {
-		((Class29) this).aClass317_352 = class317;
-		((Class29) this).aClass317_353 = class317_0_;
-	}
-
-	public Interface2 method783(Interface3 interface3) {
-		if (null == interface3)
-			return null;
-		Class60 class60 = interface3.method24(-2039586573);
-		if (class60 == Class60.aClass60_609)
-			return new Class46((Class366) interface3);
-		if (class60 == Class60.aClass60_605)
-			return new Class28(method782(1435380564), (Class365) interface3);
-		if (Class60.aClass60_606 == class60)
-			return new Class42(((Class29) this).aClass317_352, (Class357) interface3);
-		if (Class60.aClass60_607 == class60)
-			return new Class42_Sub1(((Class29) this).aClass317_352, (Class357_Sub1) interface3);
-		if (class60 == Class60.aClass60_602)
-			return new Class52_Sub3(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub2) interface3);
-		if (Class60.aClass60_603 == class60)
-			return new Class52_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub1) interface3);
-		if (class60 == Class60.aClass60_608)
-			return new Class52_Sub2(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3) interface3);
-		if (Class60.aClass60_604 == class60)
-			return new Class51(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class62) interface3);
-		if (Class60.aClass60_601 == class60)
-			return new Class43(((Class29) this).aClass317_352, (Class351) interface3);
-		if (Class60.aClass60_610 == class60)
-			return new Class52_Sub2_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3_Sub1) interface3);
-		return null;
-	}
-
-	public Interface2 method784(Interface3 interface3) {
-		if (null == interface3)
-			return null;
-		Class60 class60 = interface3.method24(-2039586573);
-		if (class60 == Class60.aClass60_609)
-			return new Class46((Class366) interface3);
-		if (class60 == Class60.aClass60_605)
-			return new Class28(method782(-1296341907), (Class365) interface3);
-		if (Class60.aClass60_606 == class60)
-			return new Class42(((Class29) this).aClass317_352, (Class357) interface3);
-		if (Class60.aClass60_607 == class60)
-			return new Class42_Sub1(((Class29) this).aClass317_352, (Class357_Sub1) interface3);
-		if (class60 == Class60.aClass60_602)
-			return new Class52_Sub3(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub2) interface3);
-		if (Class60.aClass60_603 == class60)
-			return new Class52_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub1) interface3);
-		if (class60 == Class60.aClass60_608)
-			return new Class52_Sub2(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3) interface3);
-		if (Class60.aClass60_604 == class60)
-			return new Class51(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class62) interface3);
-		if (Class60.aClass60_601 == class60)
-			return new Class43(((Class29) this).aClass317_352, (Class351) interface3);
-		if (Class60.aClass60_610 == class60)
-			return new Class52_Sub2_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3_Sub1) interface3);
-		return null;
-	}
-
-	public Interface2 method785(Interface3 interface3) {
-		if (null == interface3)
-			return null;
-		Class60 class60 = interface3.method24(-2039586573);
-		if (class60 == Class60.aClass60_609)
-			return new Class46((Class366) interface3);
-		if (class60 == Class60.aClass60_605)
-			return new Class28(method782(-1024272750), (Class365) interface3);
-		if (Class60.aClass60_606 == class60)
-			return new Class42(((Class29) this).aClass317_352, (Class357) interface3);
-		if (Class60.aClass60_607 == class60)
-			return new Class42_Sub1(((Class29) this).aClass317_352, (Class357_Sub1) interface3);
-		if (class60 == Class60.aClass60_602)
-			return new Class52_Sub3(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub2) interface3);
-		if (Class60.aClass60_603 == class60)
-			return new Class52_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub1) interface3);
-		if (class60 == Class60.aClass60_608)
-			return new Class52_Sub2(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3) interface3);
-		if (Class60.aClass60_604 == class60)
-			return new Class51(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class62) interface3);
-		if (Class60.aClass60_601 == class60)
-			return new Class43(((Class29) this).aClass317_352, (Class351) interface3);
-		if (Class60.aClass60_610 == class60)
-			return new Class52_Sub2_Sub1(((Class29) this).aClass317_352, ((Class29) this).aClass317_353, (Class350_Sub3_Sub1) interface3);
-		return null;
-	}
-
-	static final void method786(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		boolean bool = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
-		if (bool != class118.aBool1306) {
-			class118.aBool1306 = bool;
-			Class109.method1858(class118, (byte) -3);
-		}
-		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			Class78.method1389(class118.idHash * -1952846363, -626903266);
-	}
-
-	static final void method787(CS2Executor class527, byte i) {
-		Class282_Sub36 class282_sub36 = Class540.method11595(-1576243923);
-		if (class282_sub36 == null) {
-			if (i == 65) {
-				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1;
-				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1;
-			}
 		} else {
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = -1798678621 * class282_sub36.anInt7991;
-			int i_1_ = (-1967986419 * class282_sub36.anInt7988 << 28 | (Class291.anInt3472 + class282_sub36.anInt7987 * -1306535747) << 14 | (Class291.anInt3473 + class282_sub36.anInt7993 * 1012301095));
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = i_1_;
+			Class60 class60_3 = interface3_1.method24(-2039586573);
+			return (Interface2) (class60_3 == Class60.aClass60_609 ? new Class46((Class366) interface3_1) : (class60_3 == Class60.aClass60_605 ? new Class28(this.method782(-472205430), (Class365) interface3_1) : (class60_3 == Class60.aClass60_606 ? new Class42(this.aClass317_352, (Class357) interface3_1) : (class60_3 == Class60.aClass60_607 ? new Class42_Sub1(this.aClass317_352, (Class357_Sub1) interface3_1) : (class60_3 == Class60.aClass60_602 ? new Class52_Sub3(this.aClass317_352, this.aClass317_353, (Class350_Sub2) interface3_1) : (class60_3 == Class60.aClass60_603 ? new Class52_Sub1(this.aClass317_352, this.aClass317_353, (Class350_Sub1) interface3_1) : (class60_3 == Class60.aClass60_608 ? new Class52_Sub2(this.aClass317_352, this.aClass317_353, (Class350_Sub3) interface3_1) : (class60_3 == Class60.aClass60_604 ? new Class51(this.aClass317_352, this.aClass317_353, (Class62) interface3_1) : (class60_3 == Class60.aClass60_601 ? new Class43(this.aClass317_352, (Class351) interface3_1) : (class60_3 == Class60.aClass60_610 ? new Class52_Sub2_Sub1(this.aClass317_352, this.aClass317_353, (Class350_Sub3_Sub1) interface3_1) : null))))))))));
 		}
 	}
 
-	static void method788(int i, boolean bool, int i_2_) {
-		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1384603359);
-		if (class282_sub30 != null)
-			class282_sub30.remove();
+	Class30 method782(int i_1) {
+		if (this.aClass30_354 == null) {
+			this.aClass30_354 = new Class30();
+		}
+
+		return this.aClass30_354;
 	}
 
-	static final void method789(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		if (5 == -2131393857 * class118.anInt1268)
-			Class306.method5459(class118, class98, class527, -1486072931);
+	public Class29(Index index_1, Index index_2) {
+		this.aClass317_352 = index_1;
+		this.aClass317_353 = index_2;
 	}
+
+	static final void method786(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		boolean bool_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		if (bool_4 != icomponentdefinitions_0.aBool1306) {
+			icomponentdefinitions_0.aBool1306 = bool_4;
+			Class109.method1858(icomponentdefinitions_0, (byte) -3);
+		}
+
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class78.method1389(icomponentdefinitions_0.idHash, -626903266);
+		}
+
+	}
+
+	static final void method787(CS2Executor cs2executor_0, byte b_1) {
+		Class282_Sub36 class282_sub36_2 = Class540.method11595(-1576243923);
+		if (class282_sub36_2 == null) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = -1;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class282_sub36_2.anInt7991;
+			int i_3 = class282_sub36_2.anInt7988 << 28 | class282_sub36_2.anInt7987 + Class291.anInt3472 << 14 | class282_sub36_2.anInt7993 + Class291.anInt3473;
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_3;
+		}
+
+	}
+
+	static void method788(int i_0, boolean bool_1, int i_2) {
+		Class282_Sub30 class282_sub30_3 = CS2Runner.method11127(i_0, bool_1, 1384603359);
+		if (class282_sub30_3 != null) {
+			class282_sub30_3.remove();
+		}
+
+	}
+
+	static final void method789(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		if (icomponentdefinitions_0.anInt1268 == 5) {
+			Class306.method5459(icomponentdefinitions_0, interface_1, cs2executor_2, -1486072931);
+		}
+
+	}
+
 }

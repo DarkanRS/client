@@ -1,47 +1,46 @@
-/* Class219 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class CoordGrid {
+
 	static Index aClass317_2710;
+	public int level;
 	public int x;
 	public int y;
-	public int level;
 
 	public String toString() {
-		return new StringBuilder().append(298538453 * level).append(",").append(1948093437 * x >> 6).append(",").append(-1002240017 * y >> 6).append(",").append(1948093437 * x & 0x3f).append(",").append(y * -1002240017 & 0x3f).toString();
+		return this.level + "," + (this.x >> 6) + "," + (this.y >> 6) + "," + (this.x & 0x3f) + "," + (this.y & 0x3f);
 	}
 
-	public CoordGrid(int i) {
-		if (-1 == i)
-			level = -867384189;
-		else {
-			level = (i >> 28 & 0x3) * 867384189;
-			x = (i >> 14 & 0x3fff) * 1013524821;
-			y = -2816241 * (i & 0x3fff);
+	public CoordGrid(int i_1) {
+		if (i_1 == -1) {
+			this.level = -1;
+		} else {
+			this.level = i_1 >> 28 & 0x3;
+			this.x = i_1 >> 14 & 0x3fff;
+			this.y = i_1 & 0x3fff;
 		}
+
 	}
 
 	public CoordGrid() {
-		level = -867384189;
+		this.level = -1;
 	}
 
-	public CoordGrid(int i, int i_0_, int i_1_) {
-		level = i * 867384189;
-		x = 1013524821 * i_0_;
-		y = i_1_ * -2816241;
+	public CoordGrid(int i_1, int i_2, int i_3) {
+		this.level = i_1;
+		this.x = i_2;
+		this.y = i_3;
 	}
 
-	static final void method3713(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method7785(i_2_, 618850580);
+	static final void method3713(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub24_8216.method7785(i_2, 618850580);
 	}
 
-	static final void method3714(CS2Executor class527, int i) {
-		class527.intStackPtr -= 425673003;
-		int i_3_ = (class527.intStack[1942118537 * class527.intStackPtr]);
-		int i_4_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		int i_5_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
-		Class96_Sub10.method14603(8, i_3_ << 16 | i_4_, i_5_, "", (byte) 81);
+	static final void method3714(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 3;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
+		Class96_Sub10.method14603(8, i_2 << 16 | i_3, i_4, "", (byte) 81);
 	}
+
 }

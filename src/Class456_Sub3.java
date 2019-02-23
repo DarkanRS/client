@@ -1,75 +1,52 @@
-/* Class456_Sub3 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class456_Sub3 extends Animation {
+
 	public boolean aBool7891 = false;
 	Animable aClass521_Sub1_Sub1_Sub2_7892;
 
-	void method7594(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(1318562485))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	void method7586(AnimationDefinitions class518, int i, int i_0_) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	void method7626(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-549565826))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	void method7590(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-725189738))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	Class456_Sub3(Animable class521_sub1_sub1_sub2, boolean bool) {
-		super(bool);
-		((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892 = class521_sub1_sub1_sub2;
-	}
-
-	void method7592(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-1145488982))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	void method7616(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(-490019953))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	void method7591(AnimationDefinitions class518, int i) {
-		if (!aBool7891 || !((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || ((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(1770445904))
-			Class213.method3662(class518, i, (((Class456_Sub3) this).aClass521_Sub1_Sub1_Sub2_7892), (short) 255);
-	}
-
-	public static String[] method12681(String string, char c, int i) {
-		int i_1_ = Class149.method2565(string, c, -2112641652);
-		String[] strings = new String[i_1_ + 1];
-		int i_2_ = 0;
-		int i_3_ = 0;
-		for (int i_4_ = 0; i_4_ < i_1_; i_4_++) {
-			int i_5_;
-			for (i_5_ = i_3_; string.charAt(i_5_) != c; i_5_++) {
-				/* empty */
-			}
-			strings[i_2_++] = string.substring(i_3_, i_5_);
-			i_3_ = i_5_ + 1;
+	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
+		if (!this.aBool7891 || !this.aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasDefs() || this.aClass521_Sub1_Sub1_Sub2_7892.currentAnimation.hasSpeed(801437187)) {
+			Class213.method3662(animationdefinitions_1, i_2, this.aClass521_Sub1_Sub1_Sub2_7892, (short) 255);
 		}
-		strings[i_1_] = string.substring(i_3_);
-		return strings;
+
 	}
 
-	public static boolean method12682(int i, int[] is, int i_6_) {
-		if (WorldMapIndexLoader.aBoolArray2709[i])
-			return true;
-		Class468_Sub8.aClass98Array7889[i] = Class288.getInterface(i, is, Class468_Sub8.aClass98Array7889[i], false, (byte) -15);
-		if (null == Class468_Sub8.aClass98Array7889[i])
-			return false;
-		WorldMapIndexLoader.aBoolArray2709[i] = true;
-		return true;
+	Class456_Sub3(Animable animable_1, boolean bool_2) {
+		super(bool_2);
+		this.aClass521_Sub1_Sub1_Sub2_7892 = animable_1;
 	}
+
+	public static String[] method12681(String string_0, char var_1, int i_2) {
+		int i_3 = Class149.method2565(string_0, var_1, -2112641652);
+		String[] arr_4 = new String[i_3 + 1];
+		int i_5 = 0;
+		int i_6 = 0;
+
+		for (int i_7 = 0; i_7 < i_3; i_7++) {
+			int i_8;
+			for (i_8 = i_6; string_0.charAt(i_8) != var_1; i_8++) {
+				;
+			}
+
+			arr_4[i_5++] = string_0.substring(i_6, i_8);
+			i_6 = i_8 + 1;
+		}
+
+		arr_4[i_3] = string_0.substring(i_6);
+		return arr_4;
+	}
+
+	public static boolean method12682(int i_0, int[] ints_1, int i_2) {
+		if (WorldMapIndexLoader.aBoolArray2709[i_0]) {
+			return true;
+		} else {
+			Class468_Sub8.aClass98Array7889[i_0] = Class288.getInterface(i_0, ints_1, Class468_Sub8.aClass98Array7889[i_0], false, (byte) -15);
+			if (Class468_Sub8.aClass98Array7889[i_0] == null) {
+				return false;
+			} else {
+				WorldMapIndexLoader.aBoolArray2709[i_0] = true;
+				return true;
+			}
+		}
+	}
+
 }

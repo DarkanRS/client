@@ -1,7 +1,3 @@
-
-/* Class262 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -11,352 +7,402 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Vector;
 
-@SuppressWarnings({"rawtypes", "unchecked"})
 public class NativeLibraryLoader implements Interface36 {
-	Index nativeLibraryIndex;
-	String OS_AND_ARCHITECTURE;
-	Hashtable aHashtable3237 = new Hashtable();
-	Hashtable linkedLibraries = new Hashtable();
+
 	public static int[][] anIntArrayArray3239;
 	public static int anInt3240;
+	Hashtable linkedLibraries = new Hashtable();
+	Hashtable aHashtable3237 = new Hashtable();
+	Index nativeLibraryIndex;
+	String OS_AND_ARCHITECTURE;
 
-	void method4637(String string, File file, byte i) {
-		((NativeLibraryLoader) this).aHashtable3237.put(string, file);
+	void method4637(String string_1, File file_2, byte b_3) {
+		this.aHashtable3237.put(string_1, file_2);
 	}
 
-	public boolean method4639(String string, short i) {
-		return ((NativeLibraryLoader) this).linkedLibraries.containsKey(string);
+	public boolean method4639(String string_1, short s_2) {
+		return this.linkedLibraries.containsKey(string_1);
 	}
 
-	public boolean loadLibrary(String dllName, int i) {
-		return loadLibrary(dllName, Class266.class, (byte) 2);
+	public boolean loadLibrary(String string_1, int i_2) {
+		return this.loadLibrary(string_1, Class266.class, (byte) 2);
 	}
 
-	public boolean method219(int i) {
-		Hashtable hashtable = new Hashtable();
-		Enumeration enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
-		while (enumeration.hasMoreElements()) {
-			String string = (String) enumeration.nextElement();
-			hashtable.put(string, ((NativeLibraryLoader) this).linkedLibraries.get(string));
+	public boolean method219(int i_1) {
+		Hashtable hashtable_2 = new Hashtable();
+		Enumeration enumeration_3 = this.linkedLibraries.keys();
+
+		while (enumeration_3.hasMoreElements()) {
+			String string_4 = (String) enumeration_3.nextElement();
+			hashtable_2.put(string_4, this.linkedLibraries.get(string_4));
 		}
+
 		try {
-			Class var_class = Class.forName("java.lang.reflect.AccessibleObject");
-			Class var_class_4_ = Class.forName("java.lang.ClassLoader");
-			Field field = var_class_4_.getDeclaredField("nativeLibraries");
-			Method method = var_class.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
-			method.invoke(field, new Object[] { Boolean.TRUE });
+			Class class_25 = Class.forName("java.lang.reflect.AccessibleObject");
+			Class class_5 = Class.forName("java.lang.ClassLoader");
+			Field field_6 = class_5.getDeclaredField("nativeLibraries");
+			Method method_7 = class_25.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
+			method_7.invoke(field_6, new Object[] { Boolean.TRUE });
+
 			try {
-				enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
-				while (enumeration.hasMoreElements()) {
-					String string = (String) enumeration.nextElement();
+				enumeration_3 = this.linkedLibraries.keys();
+
+				while (enumeration_3.hasMoreElements()) {
+					String string_8 = (String) enumeration_3.nextElement();
+
 					try {
-						File file = ((File) ((NativeLibraryLoader) this).aHashtable3237.get(string));
-						Class var_class_5_ = ((Class) ((NativeLibraryLoader) this).linkedLibraries.get(string));
-						Vector vector = ((Vector) field.get(var_class_5_.getClassLoader()));
-						for (int i_6_ = 0; i_6_ < vector.size(); i_6_++) {
+						File file_9 = (File) this.aHashtable3237.get(string_8);
+						Class class_10 = (Class) this.linkedLibraries.get(string_8);
+						Vector vector_11 = (Vector) field_6.get(class_10.getClassLoader());
+
+						for (int i_12 = 0; i_12 < vector_11.size(); i_12++) {
 							try {
-								Object object = vector.elementAt(i_6_);
-								Field field_7_ = object.getClass().getDeclaredField("name");
-								method.invoke(field_7_, new Object[] { Boolean.TRUE });
+								Object object_13 = vector_11.elementAt(i_12);
+								Field field_14 = object_13.getClass().getDeclaredField("name");
+								method_7.invoke(field_14, new Object[] { Boolean.TRUE });
+
 								try {
-									String string_8_ = (String) field_7_.get(object);
-									if (string_8_ != null && (string_8_.equalsIgnoreCase(file.getCanonicalPath()))) {
-										Field field_9_ = object.getClass().getDeclaredField("handle");
-										Method method_10_ = (object.getClass().getDeclaredMethod("finalize", new Class[0]));
-										method.invoke(field_9_, (new Object[] { Boolean.TRUE }));
-										method.invoke(method_10_, (new Object[] { Boolean.TRUE }));
+									String string_15 = (String) field_14.get(object_13);
+									if (string_15 != null && string_15.equalsIgnoreCase(file_9.getCanonicalPath())) {
+										Field field_16 = object_13.getClass().getDeclaredField("handle");
+										Method method_17 = object_13.getClass().getDeclaredMethod("finalize", new Class[0]);
+										method_7.invoke(field_16, new Object[] { Boolean.TRUE });
+										method_7.invoke(method_17, new Object[] { Boolean.TRUE });
+
 										try {
-											method_10_.invoke(object, new Object[0]);
-											field_9_.set(object, new Integer(0));
-											hashtable.remove(string);
-										} catch (Throwable throwable) {
-											/* empty */
+											method_17.invoke(object_13, new Object[0]);
+											field_16.set(object_13, new Integer(0));
+											hashtable_2.remove(string_8);
+										} catch (Throwable throwable_19) {
+											;
 										}
-										method.invoke(method_10_, (new Object[] { Boolean.FALSE }));
-										method.invoke(field_9_, (new Object[] { Boolean.FALSE }));
+
+										method_7.invoke(method_17, new Object[] { Boolean.FALSE });
+										method_7.invoke(field_16, new Object[] { Boolean.FALSE });
 									}
-								} catch (Throwable throwable) {
-									/* empty */
+								} catch (Throwable throwable_20) {
+									;
 								}
-								method.invoke(field_7_, new Object[] { Boolean.FALSE });
-							} catch (Throwable throwable) {
-								/* empty */
+
+								method_7.invoke(field_14, new Object[] { Boolean.FALSE });
+							} catch (Throwable throwable_21) {
+								;
 							}
 						}
-					} catch (Throwable throwable) {
-						/* empty */
+					} catch (Throwable throwable_22) {
+						;
 					}
 				}
-			} catch (Throwable throwable) {
-				/* empty */
+			} catch (Throwable throwable_23) {
+				;
 			}
-			method.invoke(field, new Object[] { Boolean.FALSE });
-		} catch (Throwable throwable) {
-			/* empty */
+
+			method_7.invoke(field_6, new Object[] { Boolean.FALSE });
+		} catch (Throwable throwable_24) {
+			;
 		}
-		((NativeLibraryLoader) this).linkedLibraries = hashtable;
-		return ((NativeLibraryLoader) this).linkedLibraries.isEmpty();
+
+		this.linkedLibraries = hashtable_2;
+		return this.linkedLibraries.isEmpty();
 	}
 
-	public boolean method224(String string) {
-		return loadLibrary(string, Class266.class, (byte) 2);
+	public boolean method224(String string_1) {
+		return this.loadLibrary(string_1, Class266.class, (byte) 2);
 	}
 
-	public boolean method218(String string, int i) {
-		return ((NativeLibraryLoader) this).aHashtable3237.containsKey(string);
+	public boolean method218(String string_1, int i_2) {
+		return this.aHashtable3237.containsKey(string_1);
 	}
 
-	boolean loadLibrary(String libName, Class classToLoadFrom, byte i) {
-		Class clazz = (Class) ((NativeLibraryLoader) this).linkedLibraries.get(libName);
-		if (clazz != null) {
-			if (clazz.getClassLoader() != classToLoadFrom.getClassLoader())
-				return false;
-			return true;
-		}
-		File file = null;
-		if (file == null)
-			file = (File) ((NativeLibraryLoader) this).aHashtable3237.get(libName);
-		do {
-			if (null != file) {
-				boolean bool;
+	boolean loadLibrary(String string_1, Class class_2, byte b_3) {
+		Class class_4 = (Class) this.linkedLibraries.get(string_1);
+		if (class_4 != null) {
+			return class_4.getClassLoader() == class_2.getClassLoader();
+		} else {
+			File file_5 = null;
+			if (file_5 == null) {
+				file_5 = (File) this.aHashtable3237.get(string_1);
+			}
+
+			if (file_5 != null) {
 				try {
-					file = new File(file.getCanonicalPath());
-//					Class runtime = Class.forName("java.lang.Runtime");
-//					Class accessibleObject = Class.forName("java.lang.reflect.AccessibleObject");
-//					Method setAccessible = accessibleObject.getDeclaredMethod("setAccessible", (new Class[] { Boolean.TYPE }));
-//					Method load = (runtime.getDeclaredMethod("load0", (new Class[] { Class.forName("java.lang.Class"), Class.forName("java.lang.String") })));
-//					setAccessible.invoke(load, new Object[] { Boolean.TRUE });
-//					load.invoke(Runtime.getRuntime(), new Object[] { classToLoadFrom, file.getPath() });
-//					setAccessible.invoke(load, new Object[] { Boolean.FALSE });
-					System.load(file.getPath());
-					((NativeLibraryLoader) this).linkedLibraries.put(libName, classToLoadFrom);
-					bool = true;
-				} catch (Throwable throwable) {
-					throwable.printStackTrace();
-					break;
+					file_5 = new File(file_5.getCanonicalPath());
+					System.load(file_5.getPath());
+					this.linkedLibraries.put(string_1, class_2);
+					boolean bool_6 = true;
+					return bool_6;
+				} catch (Throwable throwable_8) {
+					throwable_8.printStackTrace();
 				}
-				return bool;
 			}
-		} while (false);
-		return false;
+
+			return false;
+		}
 	}
 
-	public boolean method223(String string) {
-		return ((NativeLibraryLoader) this).aHashtable3237.containsKey(string);
+	public boolean method223(String string_1) {
+		return this.aHashtable3237.containsKey(string_1);
 	}
 
-	public NativeLibraryLoader(Index nativeLibraryIndex) {
-		((NativeLibraryLoader) this).nativeLibraryIndex = nativeLibraryIndex;
-		String string = "";
-		if (Class396.OS_NAME.startsWith("win") || Class396.OS_NAME.startsWith("windows 7"))
-			string = new StringBuilder().append(string).append("windows/").toString();
-		else if (Class396.OS_NAME.startsWith("linux"))
-			string = new StringBuilder().append(string).append("linux/").toString();
-		else if (Class396.OS_NAME.startsWith("mac"))
-			string = new StringBuilder().append(string).append("macos/").toString();
-		if (Class396.OS_ARCHITECTURE.startsWith("amd64") || Class396.OS_ARCHITECTURE.startsWith("x86_64"))
-			string = new StringBuilder().append(string).append("x86_64/").toString();
-		else if (Class396.OS_ARCHITECTURE.startsWith("i386") || Class396.OS_ARCHITECTURE.startsWith("i486") || Class396.OS_ARCHITECTURE.startsWith("i586") || Class396.OS_ARCHITECTURE.startsWith("x86"))
-			string = new StringBuilder().append(string).append("x86/").toString();
-		else if (Class396.OS_ARCHITECTURE.startsWith("ppc"))
-			string = new StringBuilder().append(string).append("ppc/").toString();
-		else
-			string = new StringBuilder().append(string).append("universal/").toString();
-		((NativeLibraryLoader) this).OS_AND_ARCHITECTURE = string;
+	public NativeLibraryLoader(Index index_1) {
+		this.nativeLibraryIndex = index_1;
+		String str_2 = "";
+		if (!Class396.OS_NAME.startsWith("win") && !Class396.OS_NAME.startsWith("windows 7")) {
+			if (Class396.OS_NAME.startsWith("linux")) {
+				str_2 = str_2 + "linux/";
+			} else if (Class396.OS_NAME.startsWith("mac")) {
+				str_2 = str_2 + "macos/";
+			}
+		} else {
+			str_2 = str_2 + "windows/";
+		}
+
+		if (!Class396.OS_ARCHITECTURE.startsWith("amd64") && !Class396.OS_ARCHITECTURE.startsWith("x86_64")) {
+			if (!Class396.OS_ARCHITECTURE.startsWith("i386") && !Class396.OS_ARCHITECTURE.startsWith("i486") && !Class396.OS_ARCHITECTURE.startsWith("i586") && !Class396.OS_ARCHITECTURE.startsWith("x86")) {
+				if (Class396.OS_ARCHITECTURE.startsWith("ppc")) {
+					str_2 = str_2 + "ppc/";
+				} else {
+					str_2 = str_2 + "universal/";
+				}
+			} else {
+				str_2 = str_2 + "x86/";
+			}
+		} else {
+			str_2 = str_2 + "x86_64/";
+		}
+
+		this.OS_AND_ARCHITECTURE = str_2;
 	}
 
-	public int method4648(String fileName, int i) {
-		if (((NativeLibraryLoader) this).aHashtable3237.containsKey(fileName))
+	public int method4648(String string_1, int i_2) {
+		if (this.aHashtable3237.containsKey(string_1)) {
 			return 100;
-		String libraryName = Class94.prependOS(fileName, (byte) 70);
-		if (libraryName == null)
-			return -1;
-		String fullLibName = null;
-		if (fullLibName == null) {
-			fullLibName = new StringBuilder().append(((NativeLibraryLoader) this).OS_AND_ARCHITECTURE).append(libraryName).toString();
-			if (!((NativeLibraryLoader) this).nativeLibraryIndex.method5625(fullLibName, "", (byte) -91))
+		} else {
+			String string_3 = Class94.prependOS(string_1, (byte) 70);
+			if (string_3 == null) {
 				return -1;
-		}
-		if (!((NativeLibraryLoader) this).nativeLibraryIndex.method5629(fullLibName, 71472045))
-			return ((NativeLibraryLoader) this).nativeLibraryIndex.method5631(fullLibName, (byte) 113);
-		byte[] is = ((NativeLibraryLoader) this).nativeLibraryIndex.method5626(fullLibName, "", (byte) 1);
-		Object object = null;
-		File file;
-		try {
-			file = Class96_Sub23.method14681(libraryName, 827415998);
-		} catch (RuntimeException runtimeexception) {
-			return -1;
-		}
-		if (null != is && file != null) {
-			boolean bool = true;
-			byte[] is_21_ = Class153.method2621(file, -1379715433);
-			if (null != is_21_ && is_21_.length == is.length) {
-				for (int i_22_ = 0; i_22_ < is_21_.length; i_22_++) {
-					if (is_21_[i_22_] != is[i_22_]) {
-						bool = false;
-						break;
+			} else {
+				String string_4 = null;
+				if (string_4 == null) {
+					string_4 = this.OS_AND_ARCHITECTURE + string_3;
+					if (!this.nativeLibraryIndex.method5625(string_4, "", (byte) -91)) {
+						return -1;
 					}
 				}
-			} else
-				bool = false;
-			try {
-				if (!bool) {
-					try {
-						FileOutputStream fileoutputstream = new FileOutputStream(file);
-						fileoutputstream.write(is, 0, is.length);
-						fileoutputstream.close();
-					} catch (IOException ioexception) {
-						throw new RuntimeException();
+
+				if (!this.nativeLibraryIndex.method5629(string_4, 71472045)) {
+					return this.nativeLibraryIndex.method5631(string_4, (byte) 113);
+				} else {
+					byte[] bytes_5 = this.nativeLibraryIndex.method5626(string_4, "", (byte) 1);
+					Object obj_6 = null;
+					File file_7 = Class96_Sub23.method14681(string_3, 827415998);
+					if (bytes_5 != null && file_7 != null) {
+						boolean bool_11 = true;
+						byte[] bytes_9 = Class153.method2621(file_7, -1379715433);
+						if (bytes_9 != null && bytes_9.length == bytes_5.length) {
+							for (int i_10 = 0; i_10 < bytes_9.length; i_10++) {
+								if (bytes_9[i_10] != bytes_5[i_10]) {
+									bool_11 = false;
+									break;
+								}
+							}
+						} else {
+							bool_11 = false;
+						}
+
+						try {
+							if (!bool_11) {
+								try {
+									FileOutputStream fileoutputstream_12 = new FileOutputStream(file_7);
+									fileoutputstream_12.write(bytes_5, 0, bytes_5.length);
+									fileoutputstream_12.close();
+								} catch (IOException ioexception_13) {
+									throw new RuntimeException();
+								}
+							}
+						} catch (Throwable throwable_14) {
+							return -1;
+						}
+
+						this.method4637(string_1, file_7, (byte) -88);
+						return 100;
+					} else {
+						return -1;
 					}
 				}
-			} catch (Throwable throwable) {
-				return -1;
 			}
-			method4637(fileName, file, (byte) -88);
-			return 100;
 		}
-		return -1;
 	}
 
-	public boolean method221(String string) {
-		return loadLibrary(string, Class266.class, (byte) 2);
+	public boolean method221(String string_1) {
+		return this.loadLibrary(string_1, Class266.class, (byte) 2);
 	}
 
-	public boolean method217(String string) {
-		return loadLibrary(string, Class266.class, (byte) 2);
+	public boolean method217(String string_1) {
+		return this.loadLibrary(string_1, Class266.class, (byte) 2);
 	}
 
 	public boolean method220() {
-		Hashtable hashtable = new Hashtable();
-		Enumeration enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
-		while (enumeration.hasMoreElements()) {
-			String string = (String) enumeration.nextElement();
-			hashtable.put(string, ((NativeLibraryLoader) this).linkedLibraries.get(string));
+		Hashtable hashtable_1 = new Hashtable();
+		Enumeration enumeration_2 = this.linkedLibraries.keys();
+
+		while (enumeration_2.hasMoreElements()) {
+			String string_3 = (String) enumeration_2.nextElement();
+			hashtable_1.put(string_3, this.linkedLibraries.get(string_3));
 		}
+
 		try {
-			Class var_class = Class.forName("java.lang.reflect.AccessibleObject");
-			Class var_class_23_ = Class.forName("java.lang.ClassLoader");
-			Field field = var_class_23_.getDeclaredField("nativeLibraries");
-			Method method = var_class.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
-			method.invoke(field, new Object[] { Boolean.TRUE });
+			Class class_24 = Class.forName("java.lang.reflect.AccessibleObject");
+			Class class_4 = Class.forName("java.lang.ClassLoader");
+			Field field_5 = class_4.getDeclaredField("nativeLibraries");
+			Method method_6 = class_24.getDeclaredMethod("setAccessible", new Class[] { Boolean.TYPE });
+			method_6.invoke(field_5, new Object[] { Boolean.TRUE });
+
 			try {
-				enumeration = ((NativeLibraryLoader) this).linkedLibraries.keys();
-				while (enumeration.hasMoreElements()) {
-					String string = (String) enumeration.nextElement();
+				enumeration_2 = this.linkedLibraries.keys();
+
+				while (enumeration_2.hasMoreElements()) {
+					String string_7 = (String) enumeration_2.nextElement();
+
 					try {
-						File file = ((File) ((NativeLibraryLoader) this).aHashtable3237.get(string));
-						Class var_class_24_ = ((Class) ((NativeLibraryLoader) this).linkedLibraries.get(string));
-						Vector vector = ((Vector) field.get(var_class_24_.getClassLoader()));
-						for (int i = 0; i < vector.size(); i++) {
+						File file_8 = (File) this.aHashtable3237.get(string_7);
+						Class class_9 = (Class) this.linkedLibraries.get(string_7);
+						Vector vector_10 = (Vector) field_5.get(class_9.getClassLoader());
+
+						for (int i_11 = 0; i_11 < vector_10.size(); i_11++) {
 							try {
-								Object object = vector.elementAt(i);
-								Field field_25_ = object.getClass().getDeclaredField("name");
-								method.invoke(field_25_, new Object[] { Boolean.TRUE });
+								Object object_12 = vector_10.elementAt(i_11);
+								Field field_13 = object_12.getClass().getDeclaredField("name");
+								method_6.invoke(field_13, new Object[] { Boolean.TRUE });
+
 								try {
-									String string_26_ = (String) field_25_.get(object);
-									if (string_26_ != null && (string_26_.equalsIgnoreCase(file.getCanonicalPath()))) {
-										Field field_27_ = object.getClass().getDeclaredField("handle");
-										Method method_28_ = (object.getClass().getDeclaredMethod("finalize", new Class[0]));
-										method.invoke(field_27_, (new Object[] { Boolean.TRUE }));
-										method.invoke(method_28_, (new Object[] { Boolean.TRUE }));
+									String string_14 = (String) field_13.get(object_12);
+									if (string_14 != null && string_14.equalsIgnoreCase(file_8.getCanonicalPath())) {
+										Field field_15 = object_12.getClass().getDeclaredField("handle");
+										Method method_16 = object_12.getClass().getDeclaredMethod("finalize", new Class[0]);
+										method_6.invoke(field_15, new Object[] { Boolean.TRUE });
+										method_6.invoke(method_16, new Object[] { Boolean.TRUE });
+
 										try {
-											method_28_.invoke(object, new Object[0]);
-											field_27_.set(object, new Integer(0));
-											hashtable.remove(string);
-										} catch (Throwable throwable) {
-											/* empty */
+											method_16.invoke(object_12, new Object[0]);
+											field_15.set(object_12, new Integer(0));
+											hashtable_1.remove(string_7);
+										} catch (Throwable throwable_18) {
+											;
 										}
-										method.invoke(method_28_, (new Object[] { Boolean.FALSE }));
-										method.invoke(field_27_, (new Object[] { Boolean.FALSE }));
+
+										method_6.invoke(method_16, new Object[] { Boolean.FALSE });
+										method_6.invoke(field_15, new Object[] { Boolean.FALSE });
 									}
-								} catch (Throwable throwable) {
-									/* empty */
+								} catch (Throwable throwable_19) {
+									;
 								}
-								method.invoke(field_25_, new Object[] { Boolean.FALSE });
-							} catch (Throwable throwable) {
-								/* empty */
+
+								method_6.invoke(field_13, new Object[] { Boolean.FALSE });
+							} catch (Throwable throwable_20) {
+								;
 							}
 						}
-					} catch (Throwable throwable) {
-						/* empty */
+					} catch (Throwable throwable_21) {
+						;
 					}
 				}
-			} catch (Throwable throwable) {
-				/* empty */
+			} catch (Throwable throwable_22) {
+				;
 			}
-			method.invoke(field, new Object[] { Boolean.FALSE });
-		} catch (Throwable throwable) {
-			/* empty */
+
+			method_6.invoke(field_5, new Object[] { Boolean.FALSE });
+		} catch (Throwable throwable_23) {
+			;
 		}
-		((NativeLibraryLoader) this).linkedLibraries = hashtable;
-		return ((NativeLibraryLoader) this).linkedLibraries.isEmpty();
+
+		this.linkedLibraries = hashtable_1;
+		return this.linkedLibraries.isEmpty();
 	}
 
-	static final void method4651(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, 1522252372) != null) {
-			if (i <= 0)
-				return;
-			string = string.substring(0, string.length() - 1);
+	static final void method4651(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1522252372) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		class118.anObjectArray1292 = Class351.method6193(string, class527, 1736342439);
-		class118.aBool1384 = true;
+
+		icomponentdefinitions_0.anObjectArray1292 = Class351.method6193(string_4, cs2executor_2, 1736342439);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method4652(CS2Executor class527, int i) {
-		class527.intStackPtr -= 283782002;
-		int i_29_ = (class527.intStack[1942118537 * class527.intStackPtr]);
-		int i_30_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		if (0 == i_29_)
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (int) Math.pow((double) i_29_, (double) i_30_);
+	static final void method4652(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		if (i_2 == 0) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) Math.pow((double) i_2, (double) i_3);
+		}
+
 	}
 
-	static void method4653(int i, int i_31_, int i_32_) {
-		if (Class58.aClass529_527.aBool7044 || (1 != 2144330291 * Class20.anInt169 && (!Class96_Sub6.aBool9173 || 2 != 2144330291 * Class20.anInt169 || !(((Class282_Sub50_Sub7) Class1.aClass282_Sub50_Sub7_12).aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1649910920)))))) {
-			FontMetrics class414 = Class114.method1887(2016134923);
-			int i_33_ = (class414.getWidthNoSprites(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -2018972202), -1967833701));
-			int i_34_;
+	static void method4653(int i_0, int i_1, int i_2) {
+		if (Class58.aClass529_527.aBool7044 || Class20.anInt169 != 1 && (!Class96_Sub6.aBool9173 || Class20.anInt169 != 2 || !Class1.aClass282_Sub50_Sub7_12.aString9576.equals(Message.FACE_HERE.translate(Class223.CURRENT_LANGUAGE, -1649910920)))) {
+			FontMetrics fontmetrics_3 = Class114.method1887(2016134923);
+			int i_4 = fontmetrics_3.getWidthNoSprites(Message.CHOOSE_OPTION.translate(Class223.CURRENT_LANGUAGE, -2018972202), -1967833701);
+			int i_5;
+			int i_7;
 			if (!Class20.aBool162) {
-				for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95)); null != class282_sub50_sub7; class282_sub50_sub7 = ((Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361))) {
-					int i_35_ = Class282_Sub50_Sub17.method15507(class282_sub50_sub7, class414, 943671530);
-					if (i_35_ > i_33_)
-						i_33_ = i_35_;
+				for (Class282_Sub50_Sub7 class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.head((byte) 95); class282_sub50_sub7_9 != null; class282_sub50_sub7_9 = (Class282_Sub50_Sub7) Class20.aClass482_171.next(1149283361)) {
+					i_7 = Class282_Sub50_Sub17.method15507(class282_sub50_sub7_9, fontmetrics_3, 943671530);
+					if (i_7 > i_4) {
+						i_4 = i_7;
+					}
 				}
-				i_33_ += 8;
-				i_34_ = 21 + 2144330291 * Class20.anInt169 * (Class20.anInt178 * 997766473);
-				Class110.anInt1104 = -1149880001 * ((Class20.aBool187 ? 26 : 22) + (2144330291 * Class20.anInt169 * (Class20.anInt178 * 997766473)));
+
+				i_4 += 8;
+				i_5 = Class20.anInt169 * Class20.anInt178 + 21;
+				Class110.anInt1104 = (Class20.aBool187 ? 26 : 22) + Class20.anInt169 * Class20.anInt178;
 			} else {
-				for (Class282_Sub50_Sub15 class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4)); class282_sub50_sub15 != null; class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1603156921))) {
-					int i_36_;
-					if (1 == (((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769) * 2026887253)
-						i_36_ = (Class282_Sub50_Sub17.method15507(((Class282_Sub50_Sub7) (((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119)), class414, 943671530));
-					else
-						i_36_ = Class163.method2840(class282_sub50_sub15, class414, 444800403);
-					if (i_36_ > i_33_)
-						i_33_ = i_36_;
+				for (Class282_Sub50_Sub15 class282_sub50_sub15_6 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7941((byte) 4); class282_sub50_sub15_6 != null; class282_sub50_sub15_6 = (Class282_Sub50_Sub15) Class20.aClass477_182.method7955(-1603156921)) {
+					if (class282_sub50_sub15_6.anInt9769 == 1) {
+						i_7 = Class282_Sub50_Sub17.method15507((Class282_Sub50_Sub7) class282_sub50_sub15_6.aClass477_9770.aClass282_Sub50_5629.aClass282_Sub50_8119, fontmetrics_3, 943671530);
+					} else {
+						i_7 = Class163.method2840(class282_sub50_sub15_6, fontmetrics_3, 444800403);
+					}
+
+					if (i_7 > i_4) {
+						i_4 = i_7;
+					}
 				}
-				i_33_ += 8;
-				i_34_ = 21 + 997766473 * Class20.anInt178 * (Class20.anInt170 * 292682521);
-				Class110.anInt1104 = (Class20.anInt178 * 997766473 * (Class20.anInt170 * 292682521) + (Class20.aBool187 ? 26 : 22)) * -1149880001;
+
+				i_4 += 8;
+				i_5 = Class20.anInt178 * Class20.anInt170 + 21;
+				Class110.anInt1104 = Class20.anInt178 * Class20.anInt170 + (Class20.aBool187 ? 26 : 22);
 			}
-			i_33_ += 10;
-			int i_37_ = i - i_33_ / 2;
-			if (i_37_ + i_33_ > -418109423 * Class349.anInt4083)
-				i_37_ = Class349.anInt4083 * -418109423 - i_33_;
-			if (i_37_ < 0)
-				i_37_ = 0;
-			int i_38_ = i_31_;
-			if (i_38_ + i_34_ > Engine.anInt3243 * -969250379)
-				i_38_ = Engine.anInt3243 * -969250379 - i_34_;
-			if (i_38_ < 0)
-				i_38_ = 0;
-			Class301.anInt3555 = i_37_ * 1699362117;
-			Class184.anInt2300 = -1865657955 * i_38_;
-			Class158_Sub2.anInt8975 = 363510355 * i_33_;
-			Class20.anInt156 = (int) (Math.random() * 24.0) * -2033238375;
+
+			i_4 += 10;
+			int i_8 = i_0 - i_4 / 2;
+			if (i_8 + i_4 > Class349.anInt4083) {
+				i_8 = Class349.anInt4083 - i_4;
+			}
+
+			if (i_8 < 0) {
+				i_8 = 0;
+			}
+
+			i_7 = i_1;
+			if (i_1 + i_5 > Engine.anInt3243 * -969250379) {
+				i_7 = Engine.anInt3243 * -969250379 - i_5;
+			}
+
+			if (i_7 < 0) {
+				i_7 = 0;
+			}
+
+			Class301.anInt3555 = i_8;
+			Class184.anInt2300 = i_7;
+			Class158_Sub2.anInt8975 = i_4;
+			Class20.anInt156 = (int) (Math.random() * 24.0D);
 			Class20.aBool161 = true;
 		}
+
 	}
+
 }

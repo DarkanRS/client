@@ -1,250 +1,99 @@
-/* Class453 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public final class Class453 {
-	int anInt5445;
-	Node[] aClass282Array5446;
+
+	static int[] anIntArray5449;
 	long aLong5447;
 	Node aClass282_5448;
-	static int[] anIntArray5449;
+	int anInt5445;
+	Node[] aClass282Array5446;
 
-	public Node method7529() {
-		if (null == ((Class453) this).aClass282_5448)
+	public Node method7530(long long_1) {
+		this.aLong5447 = long_1;
+		Node node_3 = this.aClass282Array5446[(int) (long_1 & (long) (this.anInt5445 - 1))];
+
+		for (this.aClass282_5448 = node_3.prev; node_3 != this.aClass282_5448; this.aClass282_5448 = this.aClass282_5448.prev) {
+			if (long_1 == this.aClass282_5448.data) {
+				Node node_4 = this.aClass282_5448;
+				this.aClass282_5448 = this.aClass282_5448.prev;
+				return node_4;
+			}
+		}
+
+		this.aClass282_5448 = null;
+		return null;
+	}
+
+	public int method7532(Node[] arr_1, byte b_2) {
+		int i_3 = 0;
+
+		for (int i_4 = 0; i_4 < this.anInt5445; i_4++) {
+			Node node_5 = this.aClass282Array5446[i_4];
+
+			for (Node node_6 = node_5.prev; node_5 != node_6; node_6 = node_6.prev) {
+				arr_1[i_3++] = node_6;
+			}
+		}
+
+		return i_3;
+	}
+
+	public void method7534(Node node_1, long long_2) {
+		if (node_1.next != null) {
+			node_1.remove();
+		}
+
+		Node node_4 = this.aClass282Array5446[(int) (long_2 & (long) (this.anInt5445 - 1))];
+		node_1.next = node_4.next;
+		node_1.prev = node_4;
+		node_1.next.prev = node_1;
+		node_1.prev.next = node_1;
+		node_1.data = long_2;
+	}
+
+	public int method7540(int i_1) {
+		int i_2 = 0;
+
+		for (int i_3 = 0; i_3 < this.anInt5445; i_3++) {
+			Node node_4 = this.aClass282Array5446[i_3];
+
+			for (Node node_5 = node_4.prev; node_4 != node_5; node_5 = node_5.prev) {
+				++i_2;
+			}
+		}
+
+		return i_2;
+	}
+
+	public Class453(int i_1) {
+		this.anInt5445 = i_1;
+		this.aClass282Array5446 = new Node[i_1];
+
+		for (int i_2 = 0; i_2 < i_1; i_2++) {
+			Node node_3 = this.aClass282Array5446[i_2] = new Node();
+			node_3.prev = node_3;
+			node_3.next = node_3;
+		}
+
+	}
+
+	public Node method7544(int i_1) {
+		if (this.aClass282_5448 == null) {
 			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_0_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_0_;
+		} else {
+			for (Node node_2 = this.aClass282Array5446[(int) (this.aLong5447 & (long) (this.anInt5445 - 1))]; node_2 != this.aClass282_5448; this.aClass282_5448 = this.aClass282_5448.prev) {
+				if (this.aClass282_5448.data == this.aLong5447) {
+					Node node_3 = this.aClass282_5448;
+					this.aClass282_5448 = this.aClass282_5448.prev;
+					return node_3;
+				}
 			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
 
-	public Node method7530(long l) {
-		((Class453) this).aLong5447 = -3885405380164673631L * l;
-		Node class282 = (((Class453) this).aClass282Array5446[(int) (l & (long) (948624889 * ((Class453) this).anInt5445 - 1))]);
-		for (((Class453) this).aClass282_5448 = class282.prev; ((Class453) this).aClass282_5448 != class282; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if (l == (((Class453) this).aClass282_5448.data * -3442165056282524525L)) {
-				Node class282_1_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_1_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public Node method7531() {
-		if (null == ((Class453) this).aClass282_5448)
+			this.aClass282_5448 = null;
 			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_2_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_2_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public int method7532(Node[] class282s, byte i) {
-		int i_3_ = 0;
-		for (int i_4_ = 0; i_4_ < ((Class453) this).anInt5445 * 948624889; i_4_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_4_];
-			for (Node class282_5_ = class282.prev; class282 != class282_5_; class282_5_ = class282_5_.prev)
-				class282s[i_3_++] = class282_5_;
-		}
-		return i_3_;
-	}
-
-	public Node method7533() {
-		if (null == ((Class453) this).aClass282_5448)
-			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_6_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_6_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public void method7534(Node class282, long l) {
-		if (null != class282.next)
-			class282.remove();
-		Node class282_7_ = (((Class453) this).aClass282Array5446[(int) (l & (long) (948624889 * ((Class453) this).anInt5445 - 1))]);
-		class282.next = class282_7_.next;
-		class282.prev = class282_7_;
-		class282.next.prev = class282;
-		class282.prev.next = class282;
-		class282.data = l * -1253863389874800229L;
-	}
-
-	public Node method7535(long l) {
-		((Class453) this).aLong5447 = -3885405380164673631L * l;
-		Node class282 = (((Class453) this).aClass282Array5446[(int) (l & (long) (948624889 * ((Class453) this).anInt5445 - 1))]);
-		for (((Class453) this).aClass282_5448 = class282.prev; ((Class453) this).aClass282_5448 != class282; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if (l == (((Class453) this).aClass282_5448.data * -3442165056282524525L)) {
-				Node class282_8_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_8_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public Node method7536(long l) {
-		((Class453) this).aLong5447 = -3885405380164673631L * l;
-		Node class282 = (((Class453) this).aClass282Array5446[(int) (l & (long) (948624889 * ((Class453) this).anInt5445 - 1))]);
-		for (((Class453) this).aClass282_5448 = class282.prev; ((Class453) this).aClass282_5448 != class282; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if (l == (((Class453) this).aClass282_5448.data * -3442165056282524525L)) {
-				Node class282_9_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_9_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public Node method7537() {
-		if (null == ((Class453) this).aClass282_5448)
-			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_10_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_10_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public Node method7538() {
-		if (null == ((Class453) this).aClass282_5448)
-			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_11_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_11_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public Node method7539() {
-		if (null == ((Class453) this).aClass282_5448)
-			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_12_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_12_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public int method7540(int i) {
-		int i_13_ = 0;
-		for (int i_14_ = 0; i_14_ < ((Class453) this).anInt5445 * 948624889; i_14_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_14_];
-			for (Node class282_15_ = class282.prev; class282 != class282_15_; class282_15_ = class282_15_.prev)
-				i_13_++;
-		}
-		return i_13_;
-	}
-
-	public Class453(int i) {
-		((Class453) this).anInt5445 = 1146704969 * i;
-		((Class453) this).aClass282Array5446 = new Node[i];
-		for (int i_16_ = 0; i_16_ < i; i_16_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_16_] = new Node();
-			class282.prev = class282;
-			class282.next = class282;
 		}
 	}
 
-	public Node method7541() {
-		if (null == ((Class453) this).aClass282_5448)
-			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_17_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_17_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
+	static final void method7547(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aString1348 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
 	}
 
-	public int method7542(Node[] class282s) {
-		int i = 0;
-		for (int i_18_ = 0; i_18_ < ((Class453) this).anInt5445 * 948624889; i_18_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_18_];
-			for (Node class282_19_ = class282.prev; class282 != class282_19_; class282_19_ = class282_19_.prev)
-				class282s[i++] = class282_19_;
-		}
-		return i;
-	}
-
-	public int method7543(Node[] class282s) {
-		int i = 0;
-		for (int i_20_ = 0; i_20_ < ((Class453) this).anInt5445 * 948624889; i_20_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_20_];
-			for (Node class282_21_ = class282.prev; class282 != class282_21_; class282_21_ = class282_21_.prev)
-				class282s[i++] = class282_21_;
-		}
-		return i;
-	}
-
-	public Node method7544(int i) {
-		if (null == ((Class453) this).aClass282_5448)
-			return null;
-		for (Node class282 = (((Class453) this).aClass282Array5446[(int) (((Class453) this).aLong5447 * -1090233634234760095L & (long) (948624889 * ((Class453) this).anInt5445 - 1))]); class282 != ((Class453) this).aClass282_5448; ((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev) {
-			if ((((Class453) this).aClass282_5448.data * -3442165056282524525L) == ((Class453) this).aLong5447 * -1090233634234760095L) {
-				Node class282_22_ = ((Class453) this).aClass282_5448;
-				((Class453) this).aClass282_5448 = ((Class453) this).aClass282_5448.prev;
-				return class282_22_;
-			}
-		}
-		((Class453) this).aClass282_5448 = null;
-		return null;
-	}
-
-	public int method7545() {
-		int i = 0;
-		for (int i_23_ = 0; i_23_ < ((Class453) this).anInt5445 * 948624889; i_23_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_23_];
-			for (Node class282_24_ = class282.prev; class282 != class282_24_; class282_24_ = class282_24_.prev)
-				i++;
-		}
-		return i;
-	}
-
-	public int method7546() {
-		int i = 0;
-		for (int i_25_ = 0; i_25_ < ((Class453) this).anInt5445 * 948624889; i_25_++) {
-			Node class282 = ((Class453) this).aClass282Array5446[i_25_];
-			for (Node class282_26_ = class282.prev; class282 != class282_26_; class282_26_ = class282_26_.prev)
-				i++;
-		}
-		return i;
-	}
-
-	static final void method7547(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aString1348 = (String) (class527.objectStack[((class527.anInt7000 -= 1476624725) * 1806726141)]);
-	}
 }

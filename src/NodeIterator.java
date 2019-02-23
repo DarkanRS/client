@@ -1,73 +1,79 @@
-
-/* Class460 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.util.Iterator;
 
-public class NodeIterator implements Iterator<Object> {
-	NodeCollection collection;
+public class NodeIterator implements Iterator {
+
 	Node aClass282_5536;
 	Node aClass282_5537 = null;
+	NodeCollection collection;
 
-	public Node method7683(int i) {
-		method7697((short) -14367);
-		return (Node) next();
+	public Node method7683(int i_1) {
+		this.method7697((short) -14367);
+		return (Node) this.next();
 	}
 
 	public Object next() {
-		Node class282 = ((NodeIterator) this).aClass282_5536;
-		if (class282 == ((NodeIterator) this).collection.head) {
-			class282 = null;
-			((NodeIterator) this).aClass282_5536 = null;
-		} else
-			((NodeIterator) this).aClass282_5536 = class282.prev;
-		((NodeIterator) this).aClass282_5537 = class282;
-		return class282;
+		Node node_1 = this.aClass282_5536;
+		if (node_1 == this.collection.head) {
+			node_1 = null;
+			this.aClass282_5536 = null;
+		} else {
+			this.aClass282_5536 = node_1.prev;
+		}
+
+		this.aClass282_5537 = node_1;
+		return node_1;
 	}
 
 	public boolean hasNext() {
-		return (((NodeIterator) this).collection.head != ((NodeIterator) this).aClass282_5536);
+		return this.collection.head != this.aClass282_5536;
 	}
 
-	public void method7684(NodeCollection class482, byte i) {
-		((NodeIterator) this).collection = class482;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
-		((NodeIterator) this).aClass282_5537 = null;
+	public void method7684(NodeCollection nodecollection_1, byte b_2) {
+		this.collection = nodecollection_1;
+		this.aClass282_5536 = this.collection.head.prev;
+		this.aClass282_5537 = null;
 	}
 
-	public NodeIterator(NodeCollection collection) {
-		((NodeIterator) this).collection = collection;
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
-		((NodeIterator) this).aClass282_5537 = null;
+	public NodeIterator(NodeCollection nodecollection_1) {
+		this.collection = nodecollection_1;
+		this.aClass282_5536 = this.collection.head.prev;
+		this.aClass282_5537 = null;
 	}
 
 	public void remove() {
-		if (((NodeIterator) this).aClass282_5537 == null)
+		if (this.aClass282_5537 == null) {
 			throw new IllegalStateException();
-		((NodeIterator) this).aClass282_5537.remove();
-		((NodeIterator) this).aClass282_5537 = null;
+		} else {
+			this.aClass282_5537.remove();
+			this.aClass282_5537 = null;
+		}
 	}
 
-	void method7697(short i) {
-		((NodeIterator) this).aClass282_5536 = ((NodeIterator) this).collection.head.prev;
-		((NodeIterator) this).aClass282_5537 = null;
+	void method7697(short s_1) {
+		this.aClass282_5536 = this.collection.head.prev;
+		this.aClass282_5537 = null;
 	}
 
-	static final void method7699(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7151 ? 1 : 0;
+	static final void method7699(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7151 ? 1 : 0;
 	}
 
-	static final void method7700(CS2Executor class527, int i) {
-		int i_0_ = (class527.intOpValues[class527.instrPtr * 301123709]);
-		Class537 class537 = IndexLoaders.aClass233_5822.method3933(i_0_, 1537794608);
-		if (null == class537)
+	static final void method7700(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		Class537 class537_3 = IndexLoaders.aClass233_5822.method3933(i_2, 1537794608);
+		if (class537_3 == null) {
 			throw new RuntimeException();
-		Integer integer = (class527.aClass61_7010.method1225((1648080491 * client.CURRENT_GAME.anInt5746 << 16 | -1659474903 * class537.anInt7097), class537.anInt7098 * 1866356493, -47997093 * class537.anInt7099, (byte) 116));
-		int i_1_;
-		if (null == integer)
-			i_1_ = 0;
-		else
-			i_1_ = integer.intValue();
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_;
+		} else {
+			Integer integer_4 = cs2executor_0.aClass61_7010.method1225(client.CURRENT_GAME.anInt5746 << 16 | class537_3.anInt7097, class537_3.anInt7098, class537_3.anInt7099, (byte) 116);
+			int i_5;
+			if (integer_4 == null) {
+				i_5 = 0;
+			} else {
+				i_5 = integer_4.intValue();
+			}
+
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_5;
+		}
 	}
+
 }

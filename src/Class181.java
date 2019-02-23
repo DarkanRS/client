@@ -1,8 +1,5 @@
-/* Class181 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class181 {
+
 	short[] aShortArray2247;
 	short aShort2248;
 	short[] aShortArray2249;
@@ -15,7 +12,4 @@ public class Class181 {
 	byte[] aByteArray2256;
 	int[] anIntArray2257;
 
-	Class181() {
-		/* empty */
-	}
 }

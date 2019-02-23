@@ -1,88 +1,91 @@
-/* Class92 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class92 {
-	int anInt962;
-	SceneObjectType aClass458_963;
+
 	int anInt964;
+	SceneObjectType aClass458_963;
 	int anInt965;
+	int anInt962;
 	int anInt966;
 	int anInt967;
 
-	boolean method1557(int i) {
-		if (((Class92) this).anInt964 * -1727931981 >= 0) {
-			ObjectDefinitions class478 = IndexLoaders.OBJECT_INDEX_LOADER.getObjectDefinitions(((((Class92) this).anInt964) * -1727931981), 65280);
-			boolean bool = class478.method7987((((Class92) this).aClass458_963.type * 1109376893), 792891536);
-			int[] is = class478.method8008(-2118355158);
-			if (is != null) {
-				int[] is_0_ = is;
-				for (int i_1_ = 0; i_1_ < is_0_.length; i_1_++) {
-					int i_2_ = is_0_[i_1_];
-					bool &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_2_, (byte) 92).loadSkeletons();
+	boolean method1557(int i_1) {
+		if (this.anInt964 < 0) {
+			return true;
+		} else {
+			ObjectDefinitions objectdefinitions_2 = IndexLoaders.OBJECT_INDEX_LOADER.getObjectDefinitions(this.anInt964, 65280);
+			boolean bool_3 = objectdefinitions_2.method7987(this.aClass458_963.type, 792891536);
+			int[] ints_4 = objectdefinitions_2.method8008(-2118355158);
+			if (ints_4 != null) {
+				int[] ints_5 = ints_4;
+
+				for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
+					int i_7 = ints_5[i_6];
+					bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_7, (byte) 92).loadSkeletons();
 				}
 			}
-			return bool;
-		}
-		return true;
-	}
 
-	Class92(RsByteBuffer class282_sub35) {
-		((Class92) this).anInt964 = class282_sub35.readBigSmart() * 267419003;
-		((Class92) this).aClass458_963 = ((SceneObjectType) Class386.method6672(Class2.method262((byte) -1), class282_sub35.readUnsignedByte(), -859737548));
-	}
-
-	void method1558(byte i) {
-		Class299.method5313(-1318859227 * ((Class92) this).anInt965, -76417803 * ((Class92) this).anInt962, -987984923 * ((Class92) this).anInt966, (480268417 * ((Class92) this).aClass458_963.anInt5494), -1, (1109376893 * ((Class92) this).aClass458_963.type), ((Class92) this).anInt967 * -71092145, 1736684675);
-	}
-
-	void method1559(int i, int i_3_, int i_4_, int i_5_, byte i_6_) {
-		Class299.method5313(i, i_3_, i_4_, (((Class92) this).aClass458_963.anInt5494 * 480268417), ((Class92) this).anInt964 * -1727931981, (1109376893 * ((Class92) this).aClass458_963.type), i_5_, 1736684675);
-		((Class92) this).anInt965 = 1968020909 * i;
-		((Class92) this).anInt962 = i_3_ * 1631065949;
-		((Class92) this).anInt966 = -1041057299 * i_4_;
-		((Class92) this).anInt967 = i_5_ * 1405673135;
-	}
-
-	static final int method1560(int i, int i_7_, int i_8_) {
-		int i_9_ = (Class159.method2735(45365 + i, i_7_ + 91923, 4, -726719813) - 128 + ((Class159.method2735(i + 10294, 37821 + i_7_, 2, -726719813) - 128) >> 1) + (Class159.method2735(i, i_7_, 1, -726719813) - 128 >> 2));
-		i_9_ = 35 + (int) ((double) i_9_ * 0.3);
-		if (i_9_ < 10)
-			i_9_ = 10;
-		else if (i_9_ > 60)
-			i_9_ = 60;
-		return i_9_;
-	}
-
-	static QuickChatDynamicValue[] getQuickChatDynamicValueTypes(short i) {
-		return (new QuickChatDynamicValue[] { QuickChatDynamicValue.ENUM_STRING, QuickChatDynamicValue.ACC_GETCOUNT_WORLD, QuickChatDynamicValue.STAT_BASE, QuickChatDynamicValue.ACTIVECOMBATLEVEL, QuickChatDynamicValue.OBJTRADEDIALOG, QuickChatDynamicValue.ENUM_STRING_CLAN, QuickChatDynamicValue.COUNTDIALOG, QuickChatDynamicValue.TOSTRING_VARBIT, QuickChatDynamicValue.TOSTRING_VARP, QuickChatDynamicValue.LISTDIALOG, QuickChatDynamicValue.ACC_GETMEANCOMBATLEVEL, QuickChatDynamicValue.TOSTRING_SHARED, QuickChatDynamicValue.OBJDIALOG, QuickChatDynamicValue.ENUM_STRING_STATBASE });
-	}
-
-	static final void method1562(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.method11633(class118).method12179(-394361694);
-	}
-
-	public static void method1563(int i, int i_10_) {
-		Class282_Sub37 class282_sub37 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i);
-		if (null != class282_sub37) {
-			((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4947((byte) 44);
-			Class62.method1260((((Class282_Sub37) class282_sub37).anInt7999 * 1729403683), ((Class282_Sub37) class282_sub37).aBool7998, 1656056599);
-			class282_sub37.remove();
+			return bool_3;
 		}
 	}
 
-	static void method1564(int i, int i_11_, int i_12_, int i_13_, int i_14_, byte i_15_) {
-		for (int i_16_ = i_12_; i_16_ <= i_13_; i_16_++) {
-			if (i_15_ >= 0)
-				break;
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_16_], i, i_11_, i_14_, (byte) -105);
-		}
+	Class92(RsByteBuffer rsbytebuffer_1) {
+		this.anInt964 = rsbytebuffer_1.readBigSmart();
+		this.aClass458_963 = (SceneObjectType) Class386.method6672(Class2.method262((byte) -1), rsbytebuffer_1.readUnsignedByte(), -859737548);
 	}
 
-	public static void method1565(int i, int i_17_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(4, (long) i);
-		class282_sub50_sub12.method14965((byte) -28);
+	void method1558(byte b_1) {
+		Class299.method5313(this.anInt965, this.anInt962, this.anInt966, this.aClass458_963.anInt5494, -1, this.aClass458_963.type, this.anInt967, 1736684675);
 	}
+
+	void method1559(int i_1, int i_2, int i_3, int i_4, byte b_5) {
+		Class299.method5313(i_1, i_2, i_3, this.aClass458_963.anInt5494, this.anInt964, this.aClass458_963.type, i_4, 1736684675);
+		this.anInt965 = i_1;
+		this.anInt962 = i_2;
+		this.anInt966 = i_3;
+		this.anInt967 = i_4;
+	}
+
+	static final int method1560(int i_0, int i_1, int i_2) {
+		int i_3 = Class159.method2735(45365 + i_0, i_1 + 91923, 4, -726719813) - 128 + (Class159.method2735(i_0 + 10294, 37821 + i_1, 2, -726719813) - 128 >> 1) + (Class159.method2735(i_0, i_1, 1, -726719813) - 128 >> 2);
+		i_3 = (int) ((double) i_3 * 0.3D) + 35;
+		if (i_3 < 10) {
+			i_3 = 10;
+		} else if (i_3 > 60) {
+			i_3 = 60;
+		}
+
+		return i_3;
+	}
+
+	static QuickChatDynamicValue[] getQuickChatDynamicValueTypes(short s_0) {
+		return new QuickChatDynamicValue[] { QuickChatDynamicValue.ENUM_STRING, QuickChatDynamicValue.ACC_GETCOUNT_WORLD, QuickChatDynamicValue.STAT_BASE, QuickChatDynamicValue.ACTIVECOMBATLEVEL, QuickChatDynamicValue.OBJTRADEDIALOG, QuickChatDynamicValue.ENUM_STRING_CLAN, QuickChatDynamicValue.COUNTDIALOG, QuickChatDynamicValue.TOSTRING_VARBIT, QuickChatDynamicValue.TOSTRING_VARP, QuickChatDynamicValue.LISTDIALOG, QuickChatDynamicValue.ACC_GETMEANCOMBATLEVEL, QuickChatDynamicValue.TOSTRING_SHARED, QuickChatDynamicValue.OBJDIALOG, QuickChatDynamicValue.ENUM_STRING_STATBASE };
+	}
+
+	static final void method1562(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.method11633(icomponentdefinitions_3).method12179(-394361694);
+	}
+
+	public static void method1563(int i_0, int i_1) {
+		Class282_Sub37 class282_sub37_2 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i_0);
+		if (class282_sub37_2 != null) {
+			class282_sub37_2.aClass278_Sub1_8001.method4947((byte) 44);
+			Class62.method1260(class282_sub37_2.anInt7999, class282_sub37_2.aBool7998, 1656056599);
+			class282_sub37_2.remove();
+		}
+
+	}
+
+	static void method1564(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+		for (int i_6 = i_2; i_6 <= i_3; i_6++) {
+			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_6], i_0, i_1, i_4, (byte) -105);
+		}
+
+	}
+
+	public static void method1565(int i_0, int i_1) {
+		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(4, (long) i_0);
+		class282_sub50_sub12_2.method14965((byte) -28);
+	}
+
 }

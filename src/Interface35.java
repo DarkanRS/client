@@ -1,11 +1,9 @@
-/* Interface35 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface35 {
-	public Object method214(byte[] is, FontMetrics class414, boolean bool);
 
-	public Object method215(byte[] is, FontMetrics class414, boolean bool);
+	Object method214(byte[] var1, FontMetrics var2, boolean var3);
 
-	public Object method216(byte[] is, FontMetrics class414, boolean bool, int i);
+	Object method215(byte[] var1, FontMetrics var2, boolean var3);
+
+	Object method216(byte[] var1, FontMetrics var2, boolean var3, int var4);
+
 }

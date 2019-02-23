@@ -1,7 +1,3 @@
-
-/* Class30 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -11,134 +7,98 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Class30 implements Runnable {
+
 	Thread aThread355;
 	volatile boolean aBool356;
 	Class105[] aClass105Array357;
 
-	boolean method790() {
-		if (((Class30) this).aBool356)
-			return true;
-		if (null == ((Class30) this).aThread355) {
-			((Class30) this).aThread355 = new Thread(this);
-			((Class30) this).aThread355.start();
-		}
-		return ((Class30) this).aBool356;
+	Class105 method791(int i_1, byte b_2) {
+		return this.aClass105Array357 != null && i_1 >= 0 && i_1 < this.aClass105Array357.length ? this.aClass105Array357[i_1] : null;
 	}
 
-	Class105 method791(int i, byte i_0_) {
-		if (((Class30) this).aClass105Array357 == null || i < 0 || i >= ((Class30) this).aClass105Array357.length)
-			return null;
-		return ((Class30) this).aClass105Array357[i];
-	}
-
-	boolean method792(int i) {
-		if (((Class30) this).aBool356)
+	boolean method792(int i_1) {
+		if (this.aBool356) {
 			return true;
-		if (null == ((Class30) this).aThread355) {
-			((Class30) this).aThread355 = new Thread(this);
-			((Class30) this).aThread355.start();
+		} else {
+			if (this.aThread355 == null) {
+				this.aThread355 = new Thread(this);
+				this.aThread355.start();
+			}
+
+			return this.aBool356;
 		}
-		return ((Class30) this).aBool356;
 	}
 
 	public void run() {
 		try {
-			int i = (Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId * -87869981 + 7000);
-			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.CURRENT_GAME.anInt5746 * 1648080491).toString()).openStream()))));
-			String string = bufferedreader.readLine();
-			ArrayList arraylist = new ArrayList();
-			for (/**/; string != null; string = bufferedreader.readLine())
-				arraylist.add(string);
-			String[] strings = new String[arraylist.size()];
-			arraylist.toArray(strings);
-			if (0 != strings.length % 3)
+			int i_1 = Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId + 7000;
+			BufferedReader bufferedreader_2 = new BufferedReader(new InputStreamReader(new DataInputStream((new URL("http://" + Class448.aClass450_5420.aString5433 + ":" + i_1 + "/news.ws?game=" + client.CURRENT_GAME.anInt5746)).openStream())));
+			String string_3 = bufferedreader_2.readLine();
+
+			ArrayList arraylist_4;
+			for (arraylist_4 = new ArrayList(); string_3 != null; string_3 = bufferedreader_2.readLine()) {
+				arraylist_4.add(string_3);
+			}
+
+			String[] arr_5 = new String[arraylist_4.size()];
+			arraylist_4.toArray(arr_5);
+			if (arr_5.length % 3 != 0) {
 				return;
-			((Class30) this).aClass105Array357 = new Class105[strings.length / 3];
-			for (int i_1_ = 0; i_1_ < strings.length; i_1_ += 3)
-				((Class30) this).aClass105Array357[i_1_ / 3] = new Class105(strings[i_1_], strings[i_1_ + 1], strings[i_1_ + 2]);
-		} catch (IOException ioexception) {
-			/* empty */
+			}
+
+			this.aClass105Array357 = new Class105[arr_5.length / 3];
+
+			for (int i_6 = 0; i_6 < arr_5.length; i_6 += 3) {
+				this.aClass105Array357[i_6 / 3] = new Class105(arr_5[i_6], arr_5[i_6 + 1], arr_5[i_6 + 2]);
+			}
+		} catch (IOException ioexception_8) {
+			;
 		}
-		((Class30) this).aBool356 = true;
+
+		this.aBool356 = true;
 	}
 
-	Class30() {
-		/* empty */
-	}
-
-	public void method793() {
-		try {
-			int i = (Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId * -87869981 + 7000);
-			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.CURRENT_GAME.anInt5746 * 1648080491).toString()).openStream()))));
-			String string = bufferedreader.readLine();
-			ArrayList arraylist = new ArrayList();
-			for (/**/; string != null; string = bufferedreader.readLine())
-				arraylist.add(string);
-			String[] strings = new String[arraylist.size()];
-			arraylist.toArray(strings);
-			if (0 != strings.length % 3)
-				return;
-			((Class30) this).aClass105Array357 = new Class105[strings.length / 3];
-			for (int i_2_ = 0; i_2_ < strings.length; i_2_ += 3)
-				((Class30) this).aClass105Array357[i_2_ / 3] = new Class105(strings[i_2_], strings[i_2_ + 1], strings[i_2_ + 2]);
-		} catch (IOException ioexception) {
-			/* empty */
-		}
-		((Class30) this).aBool356 = true;
-	}
-
-	public void method794() {
-		try {
-			int i = (Class90.aClass496_952 == Class496.aClass496_5813 ? 80 : Class448.aClass450_5420.worldId * -87869981 + 7000);
-			BufferedReader bufferedreader = (new BufferedReader(new InputStreamReader(new DataInputStream(new URL(new StringBuilder().append("http://").append(Class448.aClass450_5420.aString5433).append(":").append(i).append("/news.ws?game=").append(client.CURRENT_GAME.anInt5746 * 1648080491).toString()).openStream()))));
-			String string = bufferedreader.readLine();
-			ArrayList arraylist = new ArrayList();
-			for (/**/; string != null; string = bufferedreader.readLine())
-				arraylist.add(string);
-			String[] strings = new String[arraylist.size()];
-			arraylist.toArray(strings);
-			if (0 != strings.length % 3)
-				return;
-			((Class30) this).aClass105Array357 = new Class105[strings.length / 3];
-			for (int i_3_ = 0; i_3_ < strings.length; i_3_ += 3)
-				((Class30) this).aClass105Array357[i_3_ / 3] = new Class105(strings[i_3_], strings[i_3_ + 1], strings[i_3_ + 2]);
-		} catch (IOException ioexception) {
-			/* empty */
-		}
-		((Class30) this).aBool356 = true;
-	}
-
-	public static void method795(byte i) {
+	public static void method795(byte b_0) {
 		Class235.aClass465_2904 = new IterableNodeMap(8);
 		Class235.anInt2898 = 0;
-		Iterator iterator = Class235.aList2896.iterator();
-		while (iterator.hasNext()) {
-			Class539 class539 = (Class539) iterator.next();
-			class539.method11506();
+		Iterator iterator_1 = Class235.aList2896.iterator();
+
+		while (iterator_1.hasNext()) {
+			Class539 class539_2 = (Class539) iterator_1.next();
+			class539_2.method11506();
 		}
+
 	}
 
-	public static void method796(int[] is, Object[] objects, int i) {
-		Class51.method1074(is, objects, 0, is.length - 1, -990491051);
+	public static void method796(int[] ints_0, Object[] arr_1, int i_2) {
+		Class51.method1074(ints_0, arr_1, 0, ints_0.length - 1, -990491051);
 	}
 
-	static final void method797(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (i_4_ != class118.anInt1321 * 1241177935) {
-			if (i_4_ != -1) {
-				if (null == class118.aClass456_1437)
-					class118.aClass456_1437 = new Class456_Sub1();
-				class118.aClass456_1437.method7567(i_4_, (short) 8960);
-			} else
-				class118.aClass456_1437 = null;
-			class118.anInt1321 = 388683695 * i_4_;
-			Class109.method1858(class118, (byte) 39);
+	static final void method797(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		int i_4 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		if (i_4 != icomponentdefinitions_0.anInt1321) {
+			if (i_4 != -1) {
+				if (icomponentdefinitions_0.aClass456_1437 == null) {
+					icomponentdefinitions_0.aClass456_1437 = new Class456_Sub1();
+				}
+
+				icomponentdefinitions_0.aClass456_1437.method7567(i_4, (short) 8960);
+			} else {
+				icomponentdefinitions_0.aClass456_1437 = null;
+			}
+
+			icomponentdefinitions_0.anInt1321 = i_4;
+			Class109.method1858(icomponentdefinitions_0, (byte) 39);
 		}
-		if (class118.anInt1288 * 1924549737 == -1 && !class98.aBool999)
-			Class149_Sub1.method14582(-1952846363 * class118.idHash, -370064085);
+
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class149_Sub1.method14582(icomponentdefinitions_0.idHash, -370064085);
+		}
+
 	}
 
-	static final void method798(CS2Executor class527, int i) {
-		Class337.method6018((class527.aClass521_Sub1_Sub2_Sub1_7014), class527, 1907071092);
+	static final void method798(CS2Executor cs2executor_0, int i_1) {
+		Class337.method6018(cs2executor_0.aClass521_Sub1_Sub2_Sub1_7014, cs2executor_0, 1907071092);
 	}
+
 }

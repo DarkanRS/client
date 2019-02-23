@@ -1,59 +1,57 @@
-/* Interface22 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface22 {
-	public int[] method138(int i, float f, int i_0_, int i_1_, boolean bool);
 
-	public boolean method139(int i, int i_2_);
+	int[] method138(int var1, float var2, int var3, int var4, boolean var5);
 
-	public int[] method140(int i, float f, int i_3_, int i_4_, boolean bool, byte i_5_);
+	boolean method139(int var1, int var2);
 
-	public int[] method141(int i, float f, int i_6_, int i_7_, boolean bool, int i_8_);
+	int[] method140(int var1, float var2, int var3, int var4, boolean var5, byte var6);
 
-	public int[] method142(int i, float f, int i_9_, int i_10_, boolean bool);
+	int[] method141(int var1, float var2, int var3, int var4, boolean var5, int var6);
 
-	public float[] method143(int i, float f, int i_11_, int i_12_, boolean bool);
+	int[] method142(int var1, float var2, int var3, int var4, boolean var5);
 
-	public int method84(int i);
+	float[] method143(int var1, float var2, int var3, int var4, boolean var5);
 
-	public int method76();
+	int method84(int var1);
 
-	public Class169 method144(int i, int i_13_);
+	int method76();
 
-	public float[] method145(int i, float f, int i_14_, int i_15_, boolean bool, int i_16_);
+	Class169 method144(int var1, int var2);
 
-	public boolean method146(int i);
+	float[] method145(int var1, float var2, int var3, int var4, boolean var5, int var6);
 
-	public boolean method147(int i);
+	boolean method146(int var1);
 
-	public boolean method148(int i);
+	boolean method147(int var1);
 
-	public int[] method149(int i, float f, int i_17_, int i_18_, boolean bool);
+	boolean method148(int var1);
 
-	public boolean method150(int i);
+	int[] method149(int var1, float var2, int var3, int var4, boolean var5);
 
-	public int method39();
+	boolean method150(int var1);
 
-	public int[] method151(int i, float f, int i_19_, int i_20_, boolean bool);
+	int method39();
 
-	public float[] method152(int i, float f, int i_21_, int i_22_, boolean bool);
+	int[] method151(int var1, float var2, int var3, int var4, boolean var5);
 
-	public float[] method153(int i, float f, int i_23_, int i_24_, boolean bool);
+	float[] method152(int var1, float var2, int var3, int var4, boolean var5);
 
-	public float[] method154(int i, float f, int i_25_, int i_26_, boolean bool);
+	float[] method153(int var1, float var2, int var3, int var4, boolean var5);
 
-	public float[] method155(int i, float f, int i_27_, int i_28_, boolean bool);
+	float[] method154(int var1, float var2, int var3, int var4, boolean var5);
 
-	public Class169 method156(int i);
+	float[] method155(int var1, float var2, int var3, int var4, boolean var5);
 
-	public void method157();
+	Class169 method156(int var1);
 
-	public void method158();
+	void method157();
 
-	public void method159();
+	void method158();
 
-	public Class169 method160(int i);
+	void method159();
 
-	public void method161(int i);
+	Class169 method160(int var1);
+
+	void method161(int var1);
+
 }

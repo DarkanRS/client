@@ -1,21 +1,19 @@
-/* Interface36 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface36 {
-	public boolean method217(String string);
 
-	public boolean method218(String string, int i);
+	boolean method217(String var1);
 
-	public boolean method219(int i);
+	boolean method218(String var1, int var2);
 
-	public boolean method220();
+	boolean method219(int var1);
 
-	public boolean method221(String string);
+	boolean method220();
 
-	public boolean loadLibrary(String string, int i);
+	boolean method221(String var1);
 
-	public boolean method223(String string);
+	boolean loadLibrary(String var1, int var2);
 
-	public boolean method224(String string);
+	boolean method223(String var1);
+
+	boolean method224(String var1);
+
 }

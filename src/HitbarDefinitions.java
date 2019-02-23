@@ -1,539 +1,360 @@
-/* Class198 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class HitbarDefinitions {
+
 	Class290 aClass290_2437;
-	static final int anInt2438 = 70;
-	public int anInt2439;
-	public int anInt2440;
-	int anInt2441;
-	public int anInt2442;
-	public int anInt2443;
-	int anInt2444;
-	int anInt2445;
-	public int anInt2446 = 2013284631;
-	int anInt2447;
 	public static int CAMERA_ZOOM = 600;
+	public int anInt2446 = 255;
+	public int anInt2440 = 255;
+	public int anInt2439 = -1;
+	public int anInt2443 = 70;
+	int anInt2444 = -1;
+	int anInt2445 = -1;
+	int anInt2441 = -1;
+	int anInt2447 = -1;
+	public int anInt2442 = 1;
 
-	public NativeSprite method3204(GraphicalRenderer class505) {
-		if (-940773669 * ((HitbarDefinitions) this).anInt2441 < 0)
-			return method3207(class505, -976132451);
-		NativeSprite class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441)));
-		if (class160 == null) {
-			method3211(class505, (byte) 57);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441)));
+	void method3206(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+		if (i_2 == 1) {
+			rsbytebuffer_1.readUnsignedShort();
+		} else if (i_2 == 2) {
+			this.anInt2446 = rsbytebuffer_1.readUnsignedByte();
+		} else if (i_2 == 3) {
+			this.anInt2440 = rsbytebuffer_1.readUnsignedByte();
+		} else if (i_2 == 4) {
+			this.anInt2439 = 0;
+		} else if (i_2 == 5) {
+			this.anInt2443 = rsbytebuffer_1.readUnsignedShort();
+		} else if (i_2 == 6) {
+			rsbytebuffer_1.readUnsignedByte();
+		} else if (i_2 == 7) {
+			this.anInt2444 = rsbytebuffer_1.readBigSmart();
+		} else if (i_2 == 8) {
+			this.anInt2445 = rsbytebuffer_1.readBigSmart();
+		} else if (i_2 == 9) {
+			this.anInt2441 = rsbytebuffer_1.readBigSmart();
+		} else if (i_2 == 10) {
+			this.anInt2447 = rsbytebuffer_1.readBigSmart();
+		} else if (i_2 == 11) {
+			this.anInt2439 = rsbytebuffer_1.readUnsignedShort();
 		}
-		return class160;
+
 	}
 
-	public NativeSprite method3205(GraphicalRenderer class505) {
-		if (-1811392407 * ((HitbarDefinitions) this).anInt2445 < 0)
+	public NativeSprite method3207(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.anInt2444 < 0) {
 			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))));
-		if (class160 == null) {
-			method3211(class505, (byte) 46);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((HitbarDefinitions) this).anInt2445)));
+		} else {
+			NativeSprite nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2444);
+			if (nativesprite_3 == null) {
+				this.method3211(graphicalrenderer_1, (byte) 74);
+				nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2444);
+			}
+
+			return nativesprite_3;
 		}
-		return class160;
 	}
 
-	void method3206(RsByteBuffer class282_sub35, int i, int i_0_) {
-		if (1 == i)
-			class282_sub35.readUnsignedShort();
-		else if (i == 2)
-			anInt2446 = class282_sub35.readUnsignedByte() * 664772585;
-		else if (3 == i)
-			anInt2440 = class282_sub35.readUnsignedByte() * -722509891;
-		else if (i == 4)
-			anInt2439 = 0;
-		else if (5 == i)
-			anInt2443 = class282_sub35.readUnsignedShort() * 514692599;
-		else if (i == 6)
-			class282_sub35.readUnsignedByte();
-		else if (7 == i)
-			((HitbarDefinitions) this).anInt2444 = class282_sub35.readBigSmart() * 558441445;
-		else if (i == 8)
-			((HitbarDefinitions) this).anInt2445 = class282_sub35.readBigSmart() * 413841369;
-		else if (9 == i)
-			((HitbarDefinitions) this).anInt2441 = class282_sub35.readBigSmart() * 134962515;
-		else if (10 == i)
-			((HitbarDefinitions) this).anInt2447 = class282_sub35.readBigSmart() * 1272096869;
-		else if (i == 11)
-			anInt2439 = class282_sub35.readUnsignedShort() * -1198621823;
-	}
-
-	public NativeSprite method3207(GraphicalRenderer class505, int i) {
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 < 0)
+	public NativeSprite method3208(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.anInt2445 < 0) {
 			return null;
-		NativeSprite class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605)));
-		if (class160 == null) {
-			method3211(class505, (byte) 74);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605)));
-		}
-		return class160;
-	}
+		} else {
+			NativeSprite nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2445);
+			if (nativesprite_3 == null) {
+				this.method3211(graphicalrenderer_1, (byte) 2);
+				nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2445);
+			}
 
-	public NativeSprite method3208(GraphicalRenderer class505, int i) {
-		if (-1811392407 * ((HitbarDefinitions) this).anInt2445 < 0)
-			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))));
-		if (class160 == null) {
-			method3211(class505, (byte) 2);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((HitbarDefinitions) this).anInt2445)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3209(GraphicalRenderer class505) {
-		if (((HitbarDefinitions) this).anInt2447 * -1781806739 < 0)
-			return method3208(class505, 549654584);
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((HitbarDefinitions) this).anInt2447))));
-		if (null == class160) {
-			method3211(class505, (byte) 32);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((HitbarDefinitions) this).anInt2447)));
-		}
-		return class160;
-	}
-
-	void method3210(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_1_ = class282_sub35.readUnsignedByte();
-			if (0 == i_1_)
-				break;
-			method3206(class282_sub35, i_1_, -1413100161);
+			return nativesprite_3;
 		}
 	}
 
-	void method3211(GraphicalRenderer class505, byte i) {
-		Index class317 = ((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass317_3448;
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605))) == null && class317.method5661(((HitbarDefinitions) this).anInt2444 * 1794138605, -1437687942)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2444 * 1794138605);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((HitbarDefinitions) this).anInt2444));
-		}
-		if (((HitbarDefinitions) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))) == null && class317.method5661(((HitbarDefinitions) this).anInt2445 * -1811392407, 2010871682)) {
-			Class91 class91 = Class91.method1515(class317, -1811392407 * (((HitbarDefinitions) this).anInt2445));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((HitbarDefinitions) this).anInt2445));
-		}
-		if (-940773669 * ((HitbarDefinitions) this).anInt2441 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441))) == null && class317.method5661(-940773669 * ((HitbarDefinitions) this).anInt2441, 121971957)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2441 * -940773669);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((HitbarDefinitions) this).anInt2441 * -940773669));
-		}
-		if (-1781806739 * ((HitbarDefinitions) this).anInt2447 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2447 * -1781806739))) == null && class317.method5661(((HitbarDefinitions) this).anInt2447 * -1781806739, -11371692)) {
-			Class91 class91 = Class91.method1515(class317, (((HitbarDefinitions) this).anInt2447 * -1781806739));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((HitbarDefinitions) this).anInt2447));
+	void method3210(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method3206(rsbytebuffer_1, i_3, -1413100161);
 		}
 	}
 
-	void method3212(GraphicalRenderer class505) {
-		Index class317 = ((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass317_3448;
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605))) == null && class317.method5661(((HitbarDefinitions) this).anInt2444 * 1794138605, 276215187)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2444 * 1794138605);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((HitbarDefinitions) this).anInt2444));
+	void method3211(GraphicalRenderer graphicalrenderer_1, byte b_2) {
+		Index index_3 = this.aClass290_2437.aClass317_3448;
+		Class91 class91_4;
+		if (this.anInt2444 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2444) == null && index_3.method5661(this.anInt2444, -1437687942)) {
+			class91_4 = Class91.method1515(index_3, this.anInt2444);
+			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2444);
 		}
-		if (((HitbarDefinitions) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))) == null && class317.method5661(((HitbarDefinitions) this).anInt2445 * -1811392407, -1081835064)) {
-			Class91 class91 = Class91.method1515(class317, -1811392407 * (((HitbarDefinitions) this).anInt2445));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((HitbarDefinitions) this).anInt2445));
+
+		if (this.anInt2445 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2445) == null && index_3.method5661(this.anInt2445, 2010871682)) {
+			class91_4 = Class91.method1515(index_3, this.anInt2445);
+			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2445);
 		}
-		if (-940773669 * ((HitbarDefinitions) this).anInt2441 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441))) == null && class317.method5661(-940773669 * ((HitbarDefinitions) this).anInt2441, 151049182)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2441 * -940773669);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((HitbarDefinitions) this).anInt2441 * -940773669));
+
+		if (this.anInt2441 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2441) == null && index_3.method5661(this.anInt2441, 121971957)) {
+			class91_4 = Class91.method1515(index_3, this.anInt2441);
+			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2441);
 		}
-		if (-1781806739 * ((HitbarDefinitions) this).anInt2447 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2447 * -1781806739))) == null && class317.method5661(((HitbarDefinitions) this).anInt2447 * -1781806739, 1110755666)) {
-			Class91 class91 = Class91.method1515(class317, (((HitbarDefinitions) this).anInt2447 * -1781806739));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((HitbarDefinitions) this).anInt2447));
+
+		if (this.anInt2447 >= 0 && this.aClass290_2437.aClass229_3447.get((long) this.anInt2447) == null && index_3.method5661(this.anInt2447, -11371692)) {
+			class91_4 = Class91.method1515(index_3, this.anInt2447);
+			this.aClass290_2437.aClass229_3447.put(graphicalrenderer_1.method8444(class91_4, true), (long) this.anInt2447);
+		}
+
+	}
+
+	public NativeSprite method3222(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.anInt2441 < 0) {
+			return this.method3207(graphicalrenderer_1, -1561879417);
+		} else {
+			NativeSprite nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2441);
+			if (nativesprite_3 == null) {
+				this.method3211(graphicalrenderer_1, (byte) 15);
+				nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2441);
+			}
+
+			return nativesprite_3;
 		}
 	}
 
-	void method3213(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (0 == i)
-				break;
-			method3206(class282_sub35, i, -1301053652);
+	public NativeSprite method3224(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.anInt2447 < 0) {
+			return this.method3208(graphicalrenderer_1, 549654584);
+		} else {
+			NativeSprite nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2447);
+			if (nativesprite_3 == null) {
+				this.method3211(graphicalrenderer_1, (byte) -2);
+				nativesprite_3 = (NativeSprite) this.aClass290_2437.aClass229_3447.get((long) this.anInt2447);
+			}
+
+			return nativesprite_3;
 		}
 	}
 
-	HitbarDefinitions() {
-		anInt2440 = 443571523;
-		anInt2439 = 1198621823;
-		anInt2442 = -16828887;
-		anInt2443 = 1668743562;
-		((HitbarDefinitions) this).anInt2444 = -558441445;
-		((HitbarDefinitions) this).anInt2445 = -413841369;
-		((HitbarDefinitions) this).anInt2441 = -134962515;
-		((HitbarDefinitions) this).anInt2447 = -1272096869;
+	static final void method3228(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class252.method4327(i_2, i_3, false, false, (byte) -108);
 	}
 
-	void method3214(RsByteBuffer class282_sub35, int i) {
-		if (1 == i)
-			class282_sub35.readUnsignedShort();
-		else if (i == 2)
-			anInt2446 = class282_sub35.readUnsignedByte() * 664772585;
-		else if (3 == i)
-			anInt2440 = class282_sub35.readUnsignedByte() * -722509891;
-		else if (i == 4)
-			anInt2439 = 0;
-		else if (5 == i)
-			anInt2443 = class282_sub35.readUnsignedShort() * 514692599;
-		else if (i == 6)
-			class282_sub35.readUnsignedByte();
-		else if (7 == i)
-			((HitbarDefinitions) this).anInt2444 = class282_sub35.readBigSmart() * 558441445;
-		else if (i == 8)
-			((HitbarDefinitions) this).anInt2445 = class282_sub35.readBigSmart() * 413841369;
-		else if (9 == i)
-			((HitbarDefinitions) this).anInt2441 = class282_sub35.readBigSmart() * 134962515;
-		else if (10 == i)
-			((HitbarDefinitions) this).anInt2447 = class282_sub35.readBigSmart() * 1272096869;
-		else if (i == 11)
-			anInt2439 = class282_sub35.readUnsignedShort() * -1198621823;
+	static final void method3229(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1626966641).anInt5050;
 	}
 
-	public NativeSprite method3215(GraphicalRenderer class505) {
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 < 0)
-			return null;
-		NativeSprite class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605)));
-		if (class160 == null) {
-			method3211(class505, (byte) 36);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605)));
+	static void method3230(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte b_7) {
+		int i_8 = i_2 + i_6;
+		int i_9 = i_3 - i_6;
+
+		int i_10;
+		for (i_10 = i_2; i_10 < i_8; i_10++) {
+			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_0, i_1, i_5, (byte) 42);
 		}
-		return class160;
+
+		for (i_10 = i_3; i_10 > i_9; --i_10) {
+			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_10], i_0, i_1, i_5, (byte) 20);
+		}
+
+		i_10 = i_0 + i_6;
+		int i_11 = i_1 - i_6;
+
+		for (int i_12 = i_8; i_12 <= i_9; i_12++) {
+			int[] ints_13 = Class532_Sub1.anIntArrayArray7072[i_12];
+			Class232.method3922(ints_13, i_0, i_10, i_5, (byte) -24);
+			Class232.method3922(ints_13, i_10, i_11, i_4, (byte) -35);
+			Class232.method3922(ints_13, i_11, i_1, i_5, (byte) -33);
+		}
+
 	}
 
-	void method3216(RsByteBuffer class282_sub35, int i) {
-		if (1 == i)
-			class282_sub35.readUnsignedShort();
-		else if (i == 2)
-			anInt2446 = class282_sub35.readUnsignedByte() * 664772585;
-		else if (3 == i)
-			anInt2440 = class282_sub35.readUnsignedByte() * -722509891;
-		else if (i == 4)
-			anInt2439 = 0;
-		else if (5 == i)
-			anInt2443 = class282_sub35.readUnsignedShort() * 514692599;
-		else if (i == 6)
-			class282_sub35.readUnsignedByte();
-		else if (7 == i)
-			((HitbarDefinitions) this).anInt2444 = class282_sub35.readBigSmart() * 558441445;
-		else if (i == 8)
-			((HitbarDefinitions) this).anInt2445 = class282_sub35.readBigSmart() * 413841369;
-		else if (9 == i)
-			((HitbarDefinitions) this).anInt2441 = class282_sub35.readBigSmart() * 134962515;
-		else if (10 == i)
-			((HitbarDefinitions) this).anInt2447 = class282_sub35.readBigSmart() * 1272096869;
-		else if (i == 11)
-			anInt2439 = class282_sub35.readUnsignedShort() * -1198621823;
-	}
+	static final void method3231(int i_0, int i_1, int i_2, int i_3, boolean bool_4, int i_5) {
+		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2133910723) == null) {
+			Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_2, i_3, -16777216, (byte) -114);
+		} else {
+			Vector3 vector3_6 = Class84.myPlayer.method11166().aClass385_3595;
+			boolean bool_7 = false;
+			if (client.anInt7341 != 1) {
+				if (!client.aBool7321) {
+					bool_7 = true;
+				}
+			} else if ((int) vector3_6.x < 0 || (int) vector3_6.x >= IndexLoaders.MAP_REGION_DECODER.getSizeX(56329418) * 512 || (int) vector3_6.z < 0 || (int) vector3_6.z >= IndexLoaders.MAP_REGION_DECODER.getSizeY(-639715489) * 512) {
+				bool_7 = true;
+			}
 
-	public NativeSprite method3217(GraphicalRenderer class505) {
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 < 0)
-			return null;
-		NativeSprite class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605)));
-		if (class160 == null) {
-			method3211(class505, (byte) -14);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3218(GraphicalRenderer class505) {
-		if (-1811392407 * ((HitbarDefinitions) this).anInt2445 < 0)
-			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))));
-		if (class160 == null) {
-			method3211(class505, (byte) 56);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((HitbarDefinitions) this).anInt2445)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3219(GraphicalRenderer class505) {
-		if (-1811392407 * ((HitbarDefinitions) this).anInt2445 < 0)
-			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))));
-		if (class160 == null) {
-			method3211(class505, (byte) 105);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((HitbarDefinitions) this).anInt2445)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3220(GraphicalRenderer class505) {
-		if (-1811392407 * ((HitbarDefinitions) this).anInt2445 < 0)
-			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))));
-		if (class160 == null) {
-			method3211(class505, (byte) 13);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((HitbarDefinitions) this).anInt2445)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3221(GraphicalRenderer class505) {
-		if (-1811392407 * ((HitbarDefinitions) this).anInt2445 < 0)
-			return null;
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))));
-		if (class160 == null) {
-			method3211(class505, (byte) 77);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1811392407 * ((HitbarDefinitions) this).anInt2445)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3222(GraphicalRenderer class505, int i) {
-		if (-940773669 * ((HitbarDefinitions) this).anInt2441 < 0)
-			return method3207(class505, -1561879417);
-		NativeSprite class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441)));
-		if (class160 == null) {
-			method3211(class505, (byte) 15);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3223(GraphicalRenderer class505) {
-		if (((HitbarDefinitions) this).anInt2447 * -1781806739 < 0)
-			return method3208(class505, 549654584);
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((HitbarDefinitions) this).anInt2447))));
-		if (null == class160) {
-			method3211(class505, (byte) -12);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((HitbarDefinitions) this).anInt2447)));
-		}
-		return class160;
-	}
-
-	public NativeSprite method3224(GraphicalRenderer class505, int i) {
-		if (((HitbarDefinitions) this).anInt2447 * -1781806739 < 0)
-			return method3208(class505, 549654584);
-		NativeSprite class160 = ((NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((HitbarDefinitions) this).anInt2447))));
-		if (null == class160) {
-			method3211(class505, (byte) -2);
-			class160 = (NativeSprite) (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-1781806739 * ((HitbarDefinitions) this).anInt2447)));
-		}
-		return class160;
-	}
-
-	void method3225(GraphicalRenderer class505) {
-		Index class317 = ((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass317_3448;
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605))) == null && class317.method5661(((HitbarDefinitions) this).anInt2444 * 1794138605, -1156578481)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2444 * 1794138605);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((HitbarDefinitions) this).anInt2444));
-		}
-		if (((HitbarDefinitions) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))) == null && class317.method5661(((HitbarDefinitions) this).anInt2445 * -1811392407, -815565742)) {
-			Class91 class91 = Class91.method1515(class317, -1811392407 * (((HitbarDefinitions) this).anInt2445));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((HitbarDefinitions) this).anInt2445));
-		}
-		if (-940773669 * ((HitbarDefinitions) this).anInt2441 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441))) == null && class317.method5661(-940773669 * ((HitbarDefinitions) this).anInt2441, -168293336)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2441 * -940773669);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((HitbarDefinitions) this).anInt2441 * -940773669));
-		}
-		if (-1781806739 * ((HitbarDefinitions) this).anInt2447 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2447 * -1781806739))) == null && class317.method5661(((HitbarDefinitions) this).anInt2447 * -1781806739, 1506460876)) {
-			Class91 class91 = Class91.method1515(class317, (((HitbarDefinitions) this).anInt2447 * -1781806739));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((HitbarDefinitions) this).anInt2447));
-		}
-	}
-
-	void method3226(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (0 == i)
-				break;
-			method3206(class282_sub35, i, -1271919401);
-		}
-	}
-
-	void method3227(GraphicalRenderer class505) {
-		Index class317 = ((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass317_3448;
-		if (((HitbarDefinitions) this).anInt2444 * 1794138605 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2444 * 1794138605))) == null && class317.method5661(((HitbarDefinitions) this).anInt2444 * 1794138605, -1187962781)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2444 * 1794138605);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (1794138605 * ((HitbarDefinitions) this).anInt2444));
-		}
-		if (((HitbarDefinitions) this).anInt2445 * -1811392407 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2445 * -1811392407))) == null && class317.method5661(((HitbarDefinitions) this).anInt2445 * -1811392407, -1981993531)) {
-			Class91 class91 = Class91.method1515(class317, -1811392407 * (((HitbarDefinitions) this).anInt2445));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1811392407 * ((HitbarDefinitions) this).anInt2445));
-		}
-		if (-940773669 * ((HitbarDefinitions) this).anInt2441 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (-940773669 * ((HitbarDefinitions) this).anInt2441))) == null && class317.method5661(-940773669 * ((HitbarDefinitions) this).anInt2441, 23223642)) {
-			Class91 class91 = Class91.method1515(class317, ((HitbarDefinitions) this).anInt2441 * -940773669);
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (((HitbarDefinitions) this).anInt2441 * -940773669));
-		}
-		if (-1781806739 * ((HitbarDefinitions) this).anInt2447 >= 0 && (((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.get((long) (((HitbarDefinitions) this).anInt2447 * -1781806739))) == null && class317.method5661(((HitbarDefinitions) this).anInt2447 * -1781806739, 981173802)) {
-			Class91 class91 = Class91.method1515(class317, (((HitbarDefinitions) this).anInt2447 * -1781806739));
-			((Class290) ((HitbarDefinitions) this).aClass290_2437).aClass229_3447.put(class505.method8444(class91, true), (long) (-1781806739 * ((HitbarDefinitions) this).anInt2447));
-		}
-	}
-
-	static final void method3228(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 283782002;
-		int i_2_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_3_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class252.method4327(i_2_, i_3_, false, false, (byte) -108);
-	}
-
-	static final void method3229(CS2Executor class527, int i) {
-		int i_4_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_4_, 1626966641).anInt5050 * -1728731771);
-	}
-
-	static void method3230(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, byte i_11_) {
-		int i_12_ = i_10_ + i_6_;
-		int i_13_ = i_7_ - i_10_;
-		for (int i_14_ = i_6_; i_14_ < i_12_; i_14_++)
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_14_], i, i_5_, i_9_, (byte) 42);
-		for (int i_15_ = i_7_; i_15_ > i_13_; i_15_--)
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_15_], i, i_5_, i_9_, (byte) 20);
-		int i_16_ = i + i_10_;
-		int i_17_ = i_5_ - i_10_;
-		for (int i_18_ = i_12_; i_18_ <= i_13_; i_18_++) {
-			int[] is = Class532_Sub1.anIntArrayArray7072[i_18_];
-			Class232.method3922(is, i, i_16_, i_9_, (byte) -24);
-			Class232.method3922(is, i_16_, i_17_, i_8_, (byte) -35);
-			Class232.method3922(is, i_17_, i_5_, i_9_, (byte) -33);
-		}
-	}
-
-	static final void method3231(int i, int i_19_, int i_20_, int i_21_, boolean bool, int i_22_) {
-		if (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2133910723) == null)
-			Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -114);
-		else {
-			Vector3 class385 = (Class84.myPlayer.method11166().aClass385_3595);
-			boolean bool_23_ = false;
-			if (1 != -891719545 * client.anInt7341) {
-				if (!client.aBool7321)
-					bool_23_ = true;
-			} else if ((int) class385.x < 0 || ((int) class385.x >= IndexLoaders.MAP_REGION_DECODER.getSizeX(56329418) * 512) || (int) class385.z < 0 || ((int) class385.z >= (IndexLoaders.MAP_REGION_DECODER.getSizeY(-639715489) * 512)))
-				bool_23_ = true;
-			if (bool_23_)
-				Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -104);
-			else {
-				client.anInt7286 += 1895928101;
-				if (null != Class84.myPlayer && ((int) class385.x - (Class84.myPlayer.getSize(828768449) - 1) * 256) >> 9 == Class187.anInt2361 * 895508675 && (((int) class385.z - (Class84.myPlayer.getSize(828768449) - 1) * 256) >> 9 == Class187.anInt2359 * -1068588689)) {
-					Class187.anInt2361 = 134656021;
-					Class187.anInt2359 = 818291313;
+			if (bool_7) {
+				Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_2, i_3, -16777216, (byte) -104);
+			} else {
+				++client.anInt7286;
+				if (Class84.myPlayer != null && (int) vector3_6.x - (Class84.myPlayer.getSize(828768449) - 1) * 256 >> 9 == Class187.anInt2361 && (int) vector3_6.z - (Class84.myPlayer.getSize(828768449) - 1) * 256 >> 9 == Class187.anInt2359) {
+					Class187.anInt2361 = -1;
+					Class187.anInt2359 = -1;
 					Class282_Sub20_Sub9.method15255((short) -25188);
 				}
+
 				Class52_Sub3.method14519((short) -3339);
-				if (!bool)
+				if (!bool_4) {
 					Class113.method1883(-782258901);
+				}
+
 				Class258.method4569(2030083664);
-				Class492.method8265(i, i_19_, i_20_, i_21_, true, (byte) 63);
-				i = client.anInt7444 * -1007294471;
-				i_19_ = client.anInt7445 * 915815265;
-				i_20_ = 1064588657 * client.anInt7188;
-				i_21_ = 292041583 * client.anInt7440;
-				Class380.method6451(i, i_19_, -1689058679);
-				if (NativeLibraryLoader.anInt3240 * -672443707 == 2) {
-					int i_24_ = (int) client.aFloat7146;
-					if (client.anInt7273 * 1661251369 >> 8 > i_24_)
-						i_24_ = client.anInt7273 * 1661251369 >> 8;
-					if (client.aBoolArray7431[4] && 128 + client.anIntArray7433[4] > i_24_)
-						i_24_ = 128 + client.anIntArray7433[4];
-					int i_25_ = ((client.anInt7343 * -297983899 + (int) client.aFloat7365) & 0x3fff);
-					XLoadingStage.method6683(1762352089 * Class11.anInt122, Class504.method8389((int) class385.x, (int) class385.z, 675588453 * Class4.anInt35, (byte) 13) - 200, 518160421 * Class266.anInt3289, i_24_, i_25_, CAMERA_ZOOM + (i_24_ >> 3) * 3 << 2, i_21_, 1262873702);
-				} else if (4 == -672443707 * NativeLibraryLoader.anInt3240) {
-					int i_26_ = (int) client.aFloat7146;
-					if (client.anInt7273 * 1661251369 >> 8 > i_26_)
-						i_26_ = 1661251369 * client.anInt7273 >> 8;
-					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_26_)
-						i_26_ = 128 + client.anIntArray7433[4];
-					int i_27_ = (int) client.aFloat7365 & 0x3fff;
-					XLoadingStage.method6683(Class11.anInt122 * 1762352089, Class504.method8389(61805441 * client.anInt7262, client.anInt7376 * -1032332761, Class4.anInt35 * 675588453, (byte) 101) - 200, Class266.anInt3289 * 518160421, i_26_, i_27_, CAMERA_ZOOM + (i_26_ >> 3) * 3 << 2, i_21_, 1318646026);
-				} else if (1 == -672443707 * NativeLibraryLoader.anInt3240)
-					Class232.method3920(i_21_, -491570614);
-				int i_28_ = Class31.anInt361 * -360258135;
-				int i_29_ = Class109_Sub1.anInt9384 * 1929945579;
-				int i_30_ = 413271601 * Class246.anInt3029;
-				int i_31_ = Class293.anInt3512 * 726126721;
-				int i_32_ = 1236051449 * AnimationDefinitions.anInt5930;
-				for (int i_33_ = 0; i_33_ < 5; i_33_++) {
-					if (client.aBoolArray7431[i_33_]) {
-						int i_34_ = (int) ((Math.random() * (double) (1 + (client.anIntArray7268[i_33_]) * 2)) - (double) client.anIntArray7268[i_33_] + (Math.sin((double) (client.anIntArray7435[i_33_]) * ((double) (client.anIntArray7462[i_33_]) / 100.0)) * (double) (client.anIntArray7433[i_33_])));
-						if (i_33_ == 0)
-							Class31.anInt361 += (i_34_ << 2) * -2043310439;
-						if (1 == i_33_)
-							Class109_Sub1.anInt9384 += -126779709 * (i_34_ << 2);
-						if (i_33_ == 2)
-							Class246.anInt3029 += (i_34_ << 2) * 1442943697;
-						if (3 == i_33_)
-							AnimationDefinitions.anInt5930 = (1898253385 * (i_34_ + 1236051449 * AnimationDefinitions.anInt5930 & 0x3fff));
-						if (4 == i_33_) {
-							Class293.anInt3512 += -647467135 * i_34_;
-							if (Class293.anInt3512 * 726126721 < 1024)
-								Class293.anInt3512 = -1581382656;
-							else if (726126721 * Class293.anInt3512 > 3072)
-								Class293.anInt3512 = -449180672;
+				Class492.method8265(i_0, i_1, i_2, i_3, true, (byte) 63);
+				i_0 = client.anInt7444;
+				i_1 = client.anInt7445;
+				i_2 = client.anInt7188;
+				i_3 = client.anInt7440;
+				Class380.method6451(i_0, i_1, -1689058679);
+				int i_8;
+				int i_9;
+				if (NativeLibraryLoader.anInt3240 == 2) {
+					i_8 = (int) client.aFloat7146;
+					if (client.anInt7273 >> 8 > i_8) {
+						i_8 = client.anInt7273 >> 8;
+					}
+
+					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_8) {
+						i_8 = client.anIntArray7433[4] + 128;
+					}
+
+					i_9 = (int) client.aFloat7365 + client.anInt7343 & 0x3fff;
+					LoadingStage.method6683(Class11.anInt122, Class504.method8389((int) vector3_6.x, (int) vector3_6.z, Class4.anInt35, (byte) 13) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1262873702);
+				} else if (NativeLibraryLoader.anInt3240 == 4) {
+					i_8 = (int) client.aFloat7146;
+					if (client.anInt7273 >> 8 > i_8) {
+						i_8 = client.anInt7273 >> 8;
+					}
+
+					if (client.aBoolArray7431[4] && client.anIntArray7433[4] + 128 > i_8) {
+						i_8 = client.anIntArray7433[4] + 128;
+					}
+
+					i_9 = (int) client.aFloat7365 & 0x3fff;
+					LoadingStage.method6683(Class11.anInt122, Class504.method8389(client.anInt7262, client.anInt7376, Class4.anInt35, (byte) 101) - 200, Class266.anInt3289, i_8, i_9, (i_8 >> 3) * 3 + CAMERA_ZOOM << 2, i_3, 1318646026);
+				} else if (NativeLibraryLoader.anInt3240 == 1) {
+					Class232.method3920(i_3, -491570614);
+				}
+
+				i_8 = Class31.anInt361;
+				i_9 = Class109_Sub1.anInt9384;
+				int i_10 = Class246.anInt3029;
+				int i_11 = Class293.anInt3512;
+				int i_12 = AnimationDefinitions.anInt5930;
+
+				int i_14;
+				for (int i_13 = 0; i_13 < 5; i_13++) {
+					if (client.aBoolArray7431[i_13]) {
+						i_14 = (int) (Math.random() * (double) (client.anIntArray7268[i_13] * 2 + 1) - (double) client.anIntArray7268[i_13] + Math.sin((double) client.anIntArray7435[i_13] * ((double) client.anIntArray7462[i_13] / 100.0D)) * (double) client.anIntArray7433[i_13]);
+						if (i_13 == 0) {
+							Class31.anInt361 += i_14 << 2;
+						}
+
+						if (i_13 == 1) {
+							Class109_Sub1.anInt9384 += i_14 << 2;
+						}
+
+						if (i_13 == 2) {
+							Class246.anInt3029 += i_14 << 2;
+						}
+
+						if (i_13 == 3) {
+							AnimationDefinitions.anInt5930 = i_14 + AnimationDefinitions.anInt5930 & 0x3fff;
+						}
+
+						if (i_13 == 4) {
+							Class293.anInt3512 += i_14;
+							if (Class293.anInt3512 < 1024) {
+								Class293.anInt3512 = 1024;
+							} else if (Class293.anInt3512 > 3072) {
+								Class293.anInt3512 = 3072;
+							}
 						}
 					}
 				}
-				if (Class31.anInt361 * -360258135 < 0)
+
+				if (Class31.anInt361 < 0) {
 					Class31.anInt361 = 0;
-				if (-360258135 * Class31.anInt361 > ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2044226179).anInt2617 * -1912960305) << 9) - 1)
-					Class31.anInt361 = (((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1540309436).anInt2617) * -1912960305 << 9) - 1) * -2043310439;
-				if (413271601 * Class246.anInt3029 < 0)
+				}
+
+				if (Class31.anInt361 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-2044226179).anInt2617 << 9) - 1) {
+					Class31.anInt361 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1540309436).anInt2617 << 9) - 1;
+				}
+
+				if (Class246.anInt3029 < 0) {
 					Class246.anInt3029 = 0;
-				if (413271601 * Class246.anInt3029 > ((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1972336821).anInt2603 * -18177099) << 9) - 1)
-					Class246.anInt3029 = (((IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1780427901).anInt2603) * -18177099 << 9) - 1) * 1442943697;
+				}
+
+				if (Class246.anInt3029 > (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1972336821).anInt2603 << 9) - 1) {
+					Class246.anInt3029 = (IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1780427901).anInt2603 << 9) - 1;
+				}
+
 				QuickchatDefinitionsLoader.method7215((byte) 2);
-				Renderers.SOFTWARE_RENDERER.method8617(i, i_19_, i_20_, i_21_);
-				Renderers.SOFTWARE_RENDERER.r(i, i_19_, i + i_20_, i_21_ + i_19_);
-				Class535 class535 = IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4038((short) 4699);
-				int i_35_ = class535.method11450(522743760);
-				client.aClass294_7457.method5223((float) -(-360258135 * Class31.anInt361), (float) -(Class109_Sub1.anInt9384 * 1929945579), (float) -(413271601 * Class246.anInt3029));
-				client.aClass294_7457.method5220(0.0F, -1.0F, 0.0F, Class382.method6508(-(1236051449 * AnimationDefinitions.anInt5930) & 0x3fff));
-				client.aClass294_7457.method5220(-1.0F, 0.0F, 0.0F, Class382.method6508(-(Class293.anInt3512 * 726126721) & 0x3fff));
-				client.aClass294_7457.method5220(0.0F, 0.0F, -1.0F, Class382.method6508(-(Class121.anInt1525 * -370288779) & 0x3fff));
+				Renderers.SOFTWARE_RENDERER.method8617(i_0, i_1, i_2, i_3);
+				Renderers.SOFTWARE_RENDERER.r(i_0, i_1, i_0 + i_2, i_3 + i_1);
+				Class535 class535_16 = IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4038((short) 4699);
+				i_14 = class535_16.method11450(522743760);
+				client.aClass294_7457.method5223((float) (-Class31.anInt361), (float) (-Class109_Sub1.anInt9384), (float) (-Class246.anInt3029));
+				client.aClass294_7457.method5220(0.0F, -1.0F, 0.0F, Class382.method6508(-AnimationDefinitions.anInt5930 & 0x3fff));
+				client.aClass294_7457.method5220(-1.0F, 0.0F, 0.0F, Class382.method6508(-Class293.anInt3512 & 0x3fff));
+				client.aClass294_7457.method5220(0.0F, 0.0F, -1.0F, Class382.method6508(-Class121.anInt1525 & 0x3fff));
 				Renderers.SOFTWARE_RENDERER.method8457(client.aClass294_7457);
-				HitsplatDefinitions.method3850(client.aClass384_7167, true, (float) (i_20_ / 2), (float) (i_21_ / 2), (float) (client.anInt7451 * 1010147487 << 1), (float) (client.anInt7451 * 1010147487 << 1), i_20_, i_21_, (byte) 116);
+				HitsplatDefinitions.method3850(client.aClass384_7167, true, (float) (i_2 / 2), (float) (i_3 / 2), (float) (client.anInt7451 << 1), (float) (client.anInt7451 << 1), i_2, i_3, (byte) 116);
 				Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);
-				if (class535.method11451(1476624725) != null) {
+				if (class535_16.method11451(1476624725) != null) {
 					Renderers.SOFTWARE_RENDERER.IA(1.0F);
 					Renderers.SOFTWARE_RENDERER.m(16777215, 0.0F, 0.0F, 1.0F, 0.0F, 0.0F);
-					class535.method11451(1476624725).method4215(Renderers.SOFTWARE_RENDERER, -1528395687 * Class388.anInt4723 << 3, i, i_19_, i_20_, i_21_, 726126721 * Class293.anInt3512, AnimationDefinitions.anInt5930 * 1236051449, Class121.anInt1525 * -370288779, i_35_, true, false, (byte) 14);
-				} else
-					Renderers.SOFTWARE_RENDERER.ba(3, i_35_);
-				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_20_, i_21_, (byte) -77);
-				IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
-				byte i_36_ = (Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) (48374445 * client.anInt7286) : (byte) 1);
-				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(-1809259861 * client.cycles, Class31.anInt361 * -360258135, 1929945579 * Class109_Sub1.anInt9384, Class246.anInt3029 * 413271601, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.plane + 1, i_36_, (int) class385.x >> 9, (int) class385.z >> 9,
-						Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(619789577) == 0, true, 0, true);
-				client.anInt7396 += -752140529;
-				Class282_Sub20_Sub24.method15391(-1221353280);
-				if (13 == client.anInt7166 * -1741204137) {
-					Class423.method7066(i, i_19_, i_20_, i_21_, 256, 256, (byte) -11);
-					Class250.method4298(i, i_19_, i_20_, i_21_, 256, 256, (byte) -90);
-					Class96_Sub12.method14612(i, i_19_, i_20_, i_21_, 256, 256, -927883680);
-					Class163.method2844(i, i_19_, i_20_, i_21_, -869018249);
+					class535_16.method11451(1476624725).method4215(Renderers.SOFTWARE_RENDERER, Class388.anInt4723 << 3, i_0, i_1, i_2, i_3, Class293.anInt3512, AnimationDefinitions.anInt5930, Class121.anInt1525, i_14, true, false, (byte) 14);
+				} else {
+					Renderers.SOFTWARE_RENDERER.ba(3, i_14);
 				}
+
+				Class412.method6934(client.aClass294_7457, client.aClass384_7167, i_2, i_3, (byte) -77);
+				IndexLoaders.MAP_REGION_DECODER.method4435((byte) 1).method4037(IndexLoaders.MAP_REGION_DECODER, (byte) 57);
+				byte b_15 = Class393.aClass282_Sub54_4783.aClass468_Sub27_8209.method12952((byte) 83) == 2 ? (byte) client.anInt7286 : 1;
+				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1029746106).method3447(client.cycles, Class31.anInt361, Class109_Sub1.anInt9384, Class246.anInt3029, IndexLoaders.MAP_REGION_DECODER.method4532(1227540505), client.anIntArray7198, client.anIntArray7303, client.anIntArray7194, client.anIntArray7305, client.anIntArray7306, Class84.myPlayer.plane + 1, b_15, (int) vector3_6.x >> 9, (int) vector3_6.z >> 9, Class393.aClass282_Sub54_4783.aClass468_Sub26_8224.method12943(619789577) == 0, true, 0, true);
+				++client.anInt7396;
+				Class282_Sub20_Sub24.method15391(-1221353280);
+				if (client.anInt7166 == 13) {
+					Class423.method7066(i_0, i_1, i_2, i_3, 256, 256, (byte) -11);
+					Class250.method4298(i_0, i_1, i_2, i_3, 256, 256, (byte) -90);
+					Class96_Sub12.method14612(i_0, i_1, i_2, i_3, 256, 256, -927883680);
+					Class163.method2844(i_0, i_1, i_2, i_3, -869018249);
+				}
+
 				IndexLoaders.MAP_REGION_DECODER.getSceneObjectManager(-1467332289).method3399((byte) 19);
-				Class31.anInt361 = i_28_ * -2043310439;
-				Class109_Sub1.anInt9384 = i_29_ * -126779709;
-				Class246.anInt3029 = 1442943697 * i_30_;
-				Class293.anInt3512 = i_31_ * -647467135;
-				AnimationDefinitions.anInt5930 = i_32_ * 1898253385;
-				if (client.aBool7172 && Class119.JS5_STANDARD_REQUESTER.method5553((short) 26280) == 0)
+				Class31.anInt361 = i_8;
+				Class109_Sub1.anInt9384 = i_9;
+				Class246.anInt3029 = i_10;
+				Class293.anInt3512 = i_11;
+				AnimationDefinitions.anInt5930 = i_12;
+				if (client.aBool7172 && Class119.JS5_STANDARD_REQUESTER.method5553((short) 26280) == 0) {
 					client.aBool7172 = false;
+				}
+
 				if (client.aBool7172) {
-					Renderers.SOFTWARE_RENDERER.method8425(i, i_19_, i_20_, i_21_, -16777216, (byte) -43);
+					Renderers.SOFTWARE_RENDERER.method8425(i_0, i_1, i_2, i_3, -16777216, (byte) -43);
 					Class446.method7447(Message.LOADING_PLEASE_WAIT.translate(Class223.CURRENT_LANGUAGE, -1334063717), false, Renderers.SOFTWARE_RENDERER, Class16.aClass8_144, Class16.aClass414_139, (byte) -94);
 				}
-				HitsplatDefinitions.method3850(client.aClass384_7167, false, (float) (i + i_20_ / 2), (float) (i_21_ / 2 + i_19_), (float) (client.anInt7451 * 1010147487 << 1), (float) (client.anInt7451 * 1010147487 << 1), i_20_, i_21_, (byte) 55);
+
+				HitsplatDefinitions.method3850(client.aClass384_7167, false, (float) (i_0 + i_2 / 2), (float) (i_3 / 2 + i_1), (float) (client.anInt7451 << 1), (float) (client.anInt7451 << 1), i_2, i_3, (byte) 55);
 				Renderers.SOFTWARE_RENDERER.method8424(client.aClass384_7167);
 				Class282_Sub39.method13296(client.aClass384_7167, 1454907005);
 			}
 		}
+
 	}
 
-	static final void method3232(CS2Executor class527, int i) {
-		int i_37_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_37_, (byte) 92);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_37_ >> 16];
-		Class282_Sub41_Sub1.method14700(class118, class98, class527, -442383470);
+	static final void method3232(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 92);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Class282_Sub41_Sub1.method14700(icomponentdefinitions_3, interface_4, cs2executor_0, -442383470);
 	}
 
-	static final void method3233(CS2Executor class527, int i) {
+	static final void method3233(CS2Executor cs2executor_0, int i_1) {
 		Defaults6Loader.method11248(2004309168);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -90);
 		Class190.method3148((byte) 38);
 		client.aBool7175 = false;
 	}
+
 }

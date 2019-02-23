@@ -1,211 +1,180 @@
-/* Class273_Sub2 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class273_Sub2 extends Class273 {
-	long[] aLongArray7733;
-	long aLong7734;
-	long aLong7735;
-	int anInt7736;
-	int anInt7737;
+
+	long aLong7735 = 0L;
 	long aLong7738 = 0L;
+	long aLong7734 = 0L;
+	int anInt7737 = 0;
+	int anInt7736 = 1;
+	long[] aLongArray7733 = new long[10];
 
 	void method4849() {
-		((Class273_Sub2) this).aLong7735 = 0L;
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L > 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - 1L * ((Class273_Sub2) this).aLong7738);
+		this.aLong7735 = 0L * 8551596073145250171L;
+		if (this.aLong7734 * 6386115007194650521L * 4090131977032338601L > 7583209133476053025L * this.aLong7738 * 5078792902668780513L) {
+			this.aLong7738 = (this.aLong7738 * 5078792902668780513L + (-3466426661587870839L * this.aLong7734 * 6386115007194650521L - 1L * this.aLong7738 * 5078792902668780513L)) * 7583209133476053025L;
+		}
+
 	}
 
-	long method4852(int i) {
-		return 7583209133476053025L * ((Class273_Sub2) this).aLong7738;
+	long method4852(int i_1) {
+		return this.aLong7738;
 	}
 
-	long method4844(int i) {
-		((Class273_Sub2) this).aLong7738 += method12495((byte) -18) * 5078792902668780513L;
-		if (4090131977032338601L * ((Class273_Sub2) this).aLong7734 > ((Class273_Sub2) this).aLong7738 * 7583209133476053025L)
-			return ((4090131977032338601L * ((Class273_Sub2) this).aLong7734 - ((Class273_Sub2) this).aLong7738 * 7583209133476053025L) / 1000000L);
-		return 0L;
+	long method4844(int i_1) {
+		this.aLong7738 += this.method12495((byte) -18);
+		return this.aLong7734 > this.aLong7738 ? (this.aLong7734 - this.aLong7738) / 1000000L : 0L;
 	}
 
-	int method4845(long l) {
-		if (4090131977032338601L * ((Class273_Sub2) this).aLong7734 > ((Class273_Sub2) this).aLong7738 * 7583209133476053025L) {
-			((Class273_Sub2) this).aLong7735 += (((Class273_Sub2) this).aLong7734 * 3289928719522015019L - ((Class273_Sub2) this).aLong7738 * 648117299666467859L);
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - ((Class273_Sub2) this).aLong7738 * 1L);
-			((Class273_Sub2) this).aLong7734 += l * 6386115007194650521L;
+	int method4845(long long_1) {
+		if (this.aLong7734 > this.aLong7738) {
+			this.aLong7735 += this.aLong7734 - this.aLong7738;
+			this.aLong7738 += this.aLong7734 - this.aLong7738;
+			this.aLong7734 += long_1;
 			return 1;
+		} else {
+			int i_3 = 0;
+
+			do {
+				++i_3;
+				this.aLong7734 += long_1;
+			} while (i_3 < 10 && this.aLong7734 < this.aLong7738);
+
+			if (this.aLong7734 < this.aLong7738) {
+				this.aLong7734 = this.aLong7738;
+			}
+
+			return i_3;
 		}
-		int i = 0;
-		do {
-			i++;
-			((Class273_Sub2) this).aLong7734 += 6386115007194650521L * l;
-		} while (i < 10 && (4090131977032338601L * ((Class273_Sub2) this).aLong7734 < (((Class273_Sub2) this).aLong7738 * 7583209133476053025L)));
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L < 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7734 = ((Class273_Sub2) this).aLong7738 * 8517965755372686009L;
-		return i;
 	}
 
-	void method4853(int i) {
-		((Class273_Sub2) this).aLong7735 = 0L;
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L > 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - 1L * ((Class273_Sub2) this).aLong7738);
+	void method4853(int i_1) {
+		this.aLong7735 = 0L;
+		if (this.aLong7734 > this.aLong7738) {
+			this.aLong7738 += this.aLong7734 - this.aLong7738;
+		}
+
 	}
 
-	long method12495(byte i) {
-		long l = System.nanoTime();
-		long l_0_ = l - 8551596073145250171L * ((Class273_Sub2) this).aLong7735;
-		((Class273_Sub2) this).aLong7735 = l * -8335677826573564493L;
-		if (l_0_ > -5000000000L && l_0_ < 5000000000L) {
-			((Class273_Sub2) this).aLongArray7733[((Class273_Sub2) this).anInt7737 * -995522099] = l_0_;
-			((Class273_Sub2) this).anInt7737 = (274107141 * ((1 + -995522099 * ((Class273_Sub2) this).anInt7737) % 10));
-			if (((Class273_Sub2) this).anInt7736 * -1416641941 < 1)
-				((Class273_Sub2) this).anInt7736 += 2008275523;
+	long method12495(byte b_1) {
+		long long_2 = System.nanoTime();
+		long long_4 = long_2 - this.aLong7735;
+		this.aLong7735 = long_2;
+		if (long_4 > -5000000000L && long_4 < 5000000000L) {
+			this.aLongArray7733[this.anInt7737] = long_4;
+			this.anInt7737 = (this.anInt7737 + 1) % 10;
+			if (this.anInt7736 < 1) {
+				++this.anInt7736;
+			}
 		}
-		long l_1_ = 0L;
-		for (int i_2_ = 1; i_2_ <= ((Class273_Sub2) this).anInt7736 * -1416641941; i_2_++)
-			l_1_ += (((Class273_Sub2) this).aLongArray7733[(10 + (((Class273_Sub2) this).anInt7737 * -995522099 - i_2_)) % 10]);
-		return l_1_ / (long) (((Class273_Sub2) this).anInt7736 * -1416641941);
+
+		long long_6 = 0L;
+
+		for (int i_8 = 1; i_8 <= this.anInt7736; i_8++) {
+			long_6 += this.aLongArray7733[(this.anInt7737 - i_8 + 10) % 10];
+		}
+
+		return long_6 / (long) this.anInt7736;
 	}
 
 	void method4847() {
-		((Class273_Sub2) this).aLong7735 = 0L;
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L > 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - 1L * ((Class273_Sub2) this).aLong7738);
+		this.aLong7735 = 0L * 8551596073145250171L;
+		if (this.aLong7734 * 6386115007194650521L * 4090131977032338601L > 7583209133476053025L * this.aLong7738 * 5078792902668780513L) {
+			this.aLong7738 = (this.aLong7738 * 5078792902668780513L + (-3466426661587870839L * this.aLong7734 * 6386115007194650521L - 1L * this.aLong7738 * 5078792902668780513L)) * 7583209133476053025L;
+		}
+
 	}
 
 	void method4848() {
-		((Class273_Sub2) this).aLong7735 = 0L;
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L > 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - 1L * ((Class273_Sub2) this).aLong7738);
+		this.aLong7735 = 0L * 8551596073145250171L;
+		if (this.aLong7734 * 6386115007194650521L * 4090131977032338601L > 7583209133476053025L * this.aLong7738 * 5078792902668780513L) {
+			this.aLong7738 = (this.aLong7738 * 5078792902668780513L + (-3466426661587870839L * this.aLong7734 * 6386115007194650521L - 1L * this.aLong7738 * 5078792902668780513L)) * 7583209133476053025L;
+		}
+
 	}
 
 	Class273_Sub2() {
-		((Class273_Sub2) this).aLong7734 = 0L;
-		((Class273_Sub2) this).aLong7735 = 0L;
-		((Class273_Sub2) this).aLongArray7733 = new long[10];
-		((Class273_Sub2) this).anInt7737 = 0;
-		((Class273_Sub2) this).anInt7736 = 2008275523;
-		((Class273_Sub2) this).aLong7738 = System.nanoTime() * 5078792902668780513L;
-		((Class273_Sub2) this).aLong7734 = System.nanoTime() * 6386115007194650521L;
+		this.aLong7738 = System.nanoTime();
+		this.aLong7734 = System.nanoTime();
 	}
 
 	void method4855() {
-		((Class273_Sub2) this).aLong7735 = 0L;
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L > 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - 1L * ((Class273_Sub2) this).aLong7738);
+		this.aLong7735 = 0L * 8551596073145250171L;
+		if (this.aLong7734 * 6386115007194650521L * 4090131977032338601L > 7583209133476053025L * this.aLong7738 * 5078792902668780513L) {
+			this.aLong7738 = (this.aLong7738 * 5078792902668780513L + (-3466426661587870839L * this.aLong7734 * 6386115007194650521L - 1L * this.aLong7738 * 5078792902668780513L)) * 7583209133476053025L;
+		}
+
 	}
 
 	long method4851() {
-		((Class273_Sub2) this).aLong7738 += method12495((byte) -80) * 5078792902668780513L;
-		if (4090131977032338601L * ((Class273_Sub2) this).aLong7734 > ((Class273_Sub2) this).aLong7738 * 7583209133476053025L)
-			return ((4090131977032338601L * ((Class273_Sub2) this).aLong7734 - ((Class273_Sub2) this).aLong7738 * 7583209133476053025L) / 1000000L);
-		return 0L;
+		this.aLong7738 = (this.aLong7738 * 5078792902668780513L + this.method12495((byte) -80) * 5078792902668780513L) * 7583209133476053025L;
+		return 4090131977032338601L * this.aLong7734 * 6386115007194650521L > this.aLong7738 * 5078792902668780513L * 7583209133476053025L ? (4090131977032338601L * this.aLong7734 * 6386115007194650521L - this.aLong7738 * 5078792902668780513L * 7583209133476053025L) / 1000000L : 0L;
 	}
 
 	long method4846() {
-		((Class273_Sub2) this).aLong7738 += method12495((byte) -8) * 5078792902668780513L;
-		if (4090131977032338601L * ((Class273_Sub2) this).aLong7734 > ((Class273_Sub2) this).aLong7738 * 7583209133476053025L)
-			return ((4090131977032338601L * ((Class273_Sub2) this).aLong7734 - ((Class273_Sub2) this).aLong7738 * 7583209133476053025L) / 1000000L);
-		return 0L;
+		this.aLong7738 = (this.aLong7738 * 5078792902668780513L + this.method12495((byte) -8) * 5078792902668780513L) * 7583209133476053025L;
+		return 4090131977032338601L * this.aLong7734 * 6386115007194650521L > this.aLong7738 * 5078792902668780513L * 7583209133476053025L ? (4090131977032338601L * this.aLong7734 * 6386115007194650521L - this.aLong7738 * 5078792902668780513L * 7583209133476053025L) / 1000000L : 0L;
 	}
 
-	int method4862(long l) {
-		if (4090131977032338601L * ((Class273_Sub2) this).aLong7734 > ((Class273_Sub2) this).aLong7738 * 7583209133476053025L) {
-			((Class273_Sub2) this).aLong7735 += (((Class273_Sub2) this).aLong7734 * 3289928719522015019L - ((Class273_Sub2) this).aLong7738 * 648117299666467859L);
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - ((Class273_Sub2) this).aLong7738 * 1L);
-			((Class273_Sub2) this).aLong7734 += l * 6386115007194650521L;
+	int method4862(long long_1) {
+		if (4090131977032338601L * this.aLong7734 * 6386115007194650521L > this.aLong7738 * 5078792902668780513L * 7583209133476053025L) {
+			this.aLong7735 = (this.aLong7735 * -8335677826573564493L + (this.aLong7734 * 6386115007194650521L * 3289928719522015019L - this.aLong7738 * 5078792902668780513L * 648117299666467859L)) * 8551596073145250171L;
+			this.aLong7738 = (this.aLong7738 * 5078792902668780513L + (-3466426661587870839L * this.aLong7734 * 6386115007194650521L - this.aLong7738 * 5078792902668780513L * 1L)) * 7583209133476053025L;
+			this.aLong7734 = (this.aLong7734 * 6386115007194650521L + long_1 * 6386115007194650521L) * 4090131977032338601L;
 			return 1;
+		} else {
+			int i_3 = 0;
+
+			do {
+				++i_3;
+				this.aLong7734 = (this.aLong7734 * 6386115007194650521L + 6386115007194650521L * long_1) * 4090131977032338601L;
+			} while (i_3 < 10 && 4090131977032338601L * this.aLong7734 * 6386115007194650521L < this.aLong7738 * 5078792902668780513L * 7583209133476053025L);
+
+			if (this.aLong7734 * 6386115007194650521L * 4090131977032338601L < 7583209133476053025L * this.aLong7738 * 5078792902668780513L) {
+				this.aLong7734 = this.aLong7738 * 5078792902668780513L * 8517965755372686009L * 4090131977032338601L;
+			}
+
+			return i_3;
 		}
-		int i = 0;
-		do {
-			i++;
-			((Class273_Sub2) this).aLong7734 += 6386115007194650521L * l;
-		} while (i < 10 && (4090131977032338601L * ((Class273_Sub2) this).aLong7734 < (((Class273_Sub2) this).aLong7738 * 7583209133476053025L)));
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L < 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7734 = ((Class273_Sub2) this).aLong7738 * 8517965755372686009L;
-		return i;
 	}
 
-	int method4854(long l) {
-		if (4090131977032338601L * ((Class273_Sub2) this).aLong7734 > ((Class273_Sub2) this).aLong7738 * 7583209133476053025L) {
-			((Class273_Sub2) this).aLong7735 += (((Class273_Sub2) this).aLong7734 * 3289928719522015019L - ((Class273_Sub2) this).aLong7738 * 648117299666467859L);
-			((Class273_Sub2) this).aLong7738 += (-3466426661587870839L * ((Class273_Sub2) this).aLong7734 - ((Class273_Sub2) this).aLong7738 * 1L);
-			((Class273_Sub2) this).aLong7734 += l * 6386115007194650521L;
+	int method4854(long long_1) {
+		if (4090131977032338601L * this.aLong7734 * 6386115007194650521L > this.aLong7738 * 5078792902668780513L * 7583209133476053025L) {
+			this.aLong7735 = (this.aLong7735 * -8335677826573564493L + (this.aLong7734 * 6386115007194650521L * 3289928719522015019L - this.aLong7738 * 5078792902668780513L * 648117299666467859L)) * 8551596073145250171L;
+			this.aLong7738 = (this.aLong7738 * 5078792902668780513L + (-3466426661587870839L * this.aLong7734 * 6386115007194650521L - this.aLong7738 * 5078792902668780513L * 1L)) * 7583209133476053025L;
+			this.aLong7734 = (this.aLong7734 * 6386115007194650521L + long_1 * 6386115007194650521L) * 4090131977032338601L;
 			return 1;
+		} else {
+			int i_3 = 0;
+
+			do {
+				++i_3;
+				this.aLong7734 = (this.aLong7734 * 6386115007194650521L + 6386115007194650521L * long_1) * 4090131977032338601L;
+			} while (i_3 < 10 && 4090131977032338601L * this.aLong7734 * 6386115007194650521L < this.aLong7738 * 5078792902668780513L * 7583209133476053025L);
+
+			if (this.aLong7734 * 6386115007194650521L * 4090131977032338601L < 7583209133476053025L * this.aLong7738 * 5078792902668780513L) {
+				this.aLong7734 = this.aLong7738 * 5078792902668780513L * 8517965755372686009L * 4090131977032338601L;
+			}
+
+			return i_3;
 		}
-		int i = 0;
-		do {
-			i++;
-			((Class273_Sub2) this).aLong7734 += 6386115007194650521L * l;
-		} while (i < 10 && (4090131977032338601L * ((Class273_Sub2) this).aLong7734 < (((Class273_Sub2) this).aLong7738 * 7583209133476053025L)));
-		if (((Class273_Sub2) this).aLong7734 * 4090131977032338601L < 7583209133476053025L * ((Class273_Sub2) this).aLong7738)
-			((Class273_Sub2) this).aLong7734 = ((Class273_Sub2) this).aLong7738 * 8517965755372686009L;
-		return i;
 	}
 
 	long method4857() {
-		return 7583209133476053025L * ((Class273_Sub2) this).aLong7738;
+		return 7583209133476053025L * this.aLong7738 * 5078792902668780513L;
 	}
 
 	long method4861() {
-		return 7583209133476053025L * ((Class273_Sub2) this).aLong7738;
-	}
-
-	long method12496() {
-		long l = System.nanoTime();
-		long l_3_ = l - 8551596073145250171L * ((Class273_Sub2) this).aLong7735;
-		((Class273_Sub2) this).aLong7735 = l * -8335677826573564493L;
-		if (l_3_ > -5000000000L && l_3_ < 5000000000L) {
-			((Class273_Sub2) this).aLongArray7733[((Class273_Sub2) this).anInt7737 * -995522099] = l_3_;
-			((Class273_Sub2) this).anInt7737 = (274107141 * ((1 + -995522099 * ((Class273_Sub2) this).anInt7737) % 10));
-			if (((Class273_Sub2) this).anInt7736 * -1416641941 < 1)
-				((Class273_Sub2) this).anInt7736 += 2008275523;
-		}
-		long l_4_ = 0L;
-		for (int i = 1; i <= ((Class273_Sub2) this).anInt7736 * -1416641941; i++)
-			l_4_ += (((Class273_Sub2) this).aLongArray7733[(10 + (((Class273_Sub2) this).anInt7737 * -995522099 - i)) % 10]);
-		return l_4_ / (long) (((Class273_Sub2) this).anInt7736 * -1416641941);
-	}
-
-	long method12497() {
-		long l = System.nanoTime();
-		long l_5_ = l - 8551596073145250171L * ((Class273_Sub2) this).aLong7735;
-		((Class273_Sub2) this).aLong7735 = l * -8335677826573564493L;
-		if (l_5_ > -5000000000L && l_5_ < 5000000000L) {
-			((Class273_Sub2) this).aLongArray7733[((Class273_Sub2) this).anInt7737 * -995522099] = l_5_;
-			((Class273_Sub2) this).anInt7737 = (274107141 * ((1 + -995522099 * ((Class273_Sub2) this).anInt7737) % 10));
-			if (((Class273_Sub2) this).anInt7736 * -1416641941 < 1)
-				((Class273_Sub2) this).anInt7736 += 2008275523;
-		}
-		long l_6_ = 0L;
-		for (int i = 1; i <= ((Class273_Sub2) this).anInt7736 * -1416641941; i++)
-			l_6_ += (((Class273_Sub2) this).aLongArray7733[(10 + (((Class273_Sub2) this).anInt7737 * -995522099 - i)) % 10]);
-		return l_6_ / (long) (((Class273_Sub2) this).anInt7736 * -1416641941);
+		return 7583209133476053025L * this.aLong7738 * 5078792902668780513L;
 	}
 
 	long method4856() {
-		return 7583209133476053025L * ((Class273_Sub2) this).aLong7738;
+		return 7583209133476053025L * this.aLong7738 * 5078792902668780513L;
 	}
 
-	long method12498() {
-		long l = System.nanoTime();
-		long l_7_ = l - 8551596073145250171L * ((Class273_Sub2) this).aLong7735;
-		((Class273_Sub2) this).aLong7735 = l * -8335677826573564493L;
-		if (l_7_ > -5000000000L && l_7_ < 5000000000L) {
-			((Class273_Sub2) this).aLongArray7733[((Class273_Sub2) this).anInt7737 * -995522099] = l_7_;
-			((Class273_Sub2) this).anInt7737 = (274107141 * ((1 + -995522099 * ((Class273_Sub2) this).anInt7737) % 10));
-			if (((Class273_Sub2) this).anInt7736 * -1416641941 < 1)
-				((Class273_Sub2) this).anInt7736 += 2008275523;
-		}
-		long l_8_ = 0L;
-		for (int i = 1; i <= ((Class273_Sub2) this).anInt7736 * -1416641941; i++)
-			l_8_ += (((Class273_Sub2) this).aLongArray7733[(10 + (((Class273_Sub2) this).anInt7737 * -995522099 - i)) % 10]);
-		return l_8_ / (long) (((Class273_Sub2) this).anInt7736 * -1416641941);
+	static final void method12499(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class215.method3672(icomponentdefinitions_3, interface_4, cs2executor_0, (short) 10267);
 	}
 
-	static final void method12499(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class215.method3672(class118, class98, class527, (short) 10267);
-	}
 }

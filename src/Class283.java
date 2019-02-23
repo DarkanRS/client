@@ -1,109 +1,42 @@
-/* Class283 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class283 {
-	public int[] anIntArray3381;
-	public int anInt3382;
-	public int[] anIntArray3383;
+
 	public static int anInt3384;
+	public int anInt3382;
+	public int[] anIntArray3381;
+	public int[] anIntArray3383;
 
-	public static Class283 method5005(Index class317, String string, boolean bool) {
-		int i = class317.getArchiveId(string);
-		if (-1 == i)
-			return new Class283(0);
-		int[] is = class317.getValidFileIds(i);
-		Class283 class283 = new Class283(is.length);
-		int i_0_ = 0;
-		int i_1_ = 0;
-		while (i_0_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_1_++]));
-			int i_2_ = class282_sub35.readInt();
-			int i_3_ = class282_sub35.readUnsignedShort();
-			int i_4_ = class282_sub35.readUnsignedByte();
-			if (bool || 1 != i_4_) {
-				class283.anIntArray3381[i_0_] = i_2_;
-				class283.anIntArray3383[i_0_] = i_3_;
-				i_0_++;
-			} else
-				class283.anInt3382 -= -1982528247;
+	public Class283(int i_1) {
+		this.anInt3382 = i_1;
+		this.anIntArray3381 = new int[this.anInt3382];
+		this.anIntArray3383 = new int[this.anInt3382];
+	}
+
+	static final void method5008(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		DefaultsFile.method11223(icomponentdefinitions_3, interface_4, cs2executor_0, 4317906);
+	}
+
+	static final void method5009(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, 1962956605) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
 		}
-		return class283;
+
+		icomponentdefinitions_0.anObjectArray1413 = Class351.method6193(string_4, cs2executor_2, 1097556379);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	public static Class283 method5006(Index class317, String string, boolean bool) {
-		int i = class317.getArchiveId(string);
-		if (-1 == i)
-			return new Class283(0);
-		int[] is = class317.getValidFileIds(i);
-		Class283 class283 = new Class283(is.length);
-		int i_5_ = 0;
-		int i_6_ = 0;
-		while (i_5_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_6_++]));
-			int i_7_ = class282_sub35.readInt();
-			int i_8_ = class282_sub35.readUnsignedShort();
-			int i_9_ = class282_sub35.readUnsignedByte();
-			if (bool || 1 != i_9_) {
-				class283.anIntArray3381[i_5_] = i_7_;
-				class283.anIntArray3383[i_5_] = i_8_;
-				i_5_++;
-			} else
-				class283.anInt3382 -= -1982528247;
+	static final void method5010(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		String string_3 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		if (client.anInt7166 == 0 && !JS5CacheFile.method3360((byte) 17)) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class62.method1262(i_2, string_3, (byte) 55) ? 1 : 0;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 		}
-		return class283;
+
 	}
 
-	public Class283(int i) {
-		anInt3382 = -1982528247 * i;
-		anIntArray3381 = new int[anInt3382 * -361490119];
-		anIntArray3383 = new int[-361490119 * anInt3382];
-	}
-
-	public static Class283 method5007(Index class317, String string, boolean bool) {
-		int i = class317.getArchiveId(string);
-		if (-1 == i)
-			return new Class283(0);
-		int[] is = class317.getValidFileIds(i);
-		Class283 class283 = new Class283(is.length);
-		int i_10_ = 0;
-		int i_11_ = 0;
-		while (i_10_ < -361490119 * class283.anInt3382) {
-			RsByteBuffer class282_sub35 = new RsByteBuffer(class317.getFile(i, is[i_11_++]));
-			int i_12_ = class282_sub35.readInt();
-			int i_13_ = class282_sub35.readUnsignedShort();
-			int i_14_ = class282_sub35.readUnsignedByte();
-			if (bool || 1 != i_14_) {
-				class283.anIntArray3381[i_10_] = i_12_;
-				class283.anIntArray3383[i_10_] = i_13_;
-				i_10_++;
-			} else
-				class283.anInt3382 -= -1982528247;
-		}
-		return class283;
-	}
-
-	static final void method5008(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		DefaultsFile.method11223(class118, class98, class527, 4317906);
-	}
-
-	static final void method5009(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, 1962956605) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1413 = Class351.method6193(string, class527, 1097556379);
-		class118.aBool1384 = true;
-	}
-
-	static final void method5010(CS2Executor class527, int i) {
-		int i_15_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (client.anInt7166 * -1741204137 != 0 || JS5CacheFile.method3360((byte) 17))
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = Class62.method1262(i_15_, string, (byte) 55) ? 1 : 0;
-	}
 }

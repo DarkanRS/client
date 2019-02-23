@@ -1,39 +1,41 @@
-/* Class158_Sub1_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class158_Sub1_Sub1 extends Class158_Sub1 {
-	int anInt9446;
-	fa afa9447 = null;
+
 	oa anoa9448 = null;
+	int anInt9446 = 0;
+	int anInt9450 = 0;
+	fa afa9447 = null;
 	ja aja9449;
-	int anInt9450;
 
 	boolean method2725() {
 		return true;
 	}
 
-	public void method13757(Interface8 interface8) {
-		if (((Class158_Sub1_Sub1) this).afa9447 != null && interface8 != null && ((((Class158_Sub1_Sub1) this).afa9447.method1() != interface8.method1()) || (((Class158_Sub1_Sub1) this).afa9447.method74() != interface8.method74())))
+	public void method13757(Interface8 interface8_1) {
+		if (this.afa9447 != null && interface8_1 != null && (this.afa9447.method1() != interface8_1.method1() || this.afa9447.method74() != interface8_1.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).anoa9448 = (oa) interface8;
-		if (interface8 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface8.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface8.method74();
-		} else if (((Class158_Sub1_Sub1) this).afa9447 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.anoa9448 = (oa) interface8_1;
+			if (interface8_1 != null) {
+				this.anInt9446 = interface8_1.method1();
+				this.anInt9450 = interface8_1.method74();
+			} else if (this.afa9447 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 117) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 117) == this)
-			method213();
 	}
 
 	public int method2716() {
-		return ((Class158_Sub1_Sub1) this).anInt9450;
+		return this.anInt9450;
 	}
 
 	boolean method213() {
-		((Class158_Sub1_Sub1) this).aja9449.d((((Class158_Sub1_Sub1) this).afa9447 == null ? 0L : ((fa) ((Class158_Sub1_Sub1) this).afa9447).nativeid), (((Class158_Sub1_Sub1) this).anoa9448 == null ? 0L : ((oa) ((Class158_Sub1_Sub1) this).anoa9448).nativeid));
+		this.aja9449.d(this.afa9447 == null ? 0L : this.afa9447.nativeid, this.anoa9448 == null ? 0L : this.anoa9448.nativeid);
 		return true;
 	}
 
@@ -41,96 +43,113 @@ public class Class158_Sub1_Sub1 extends Class158_Sub1 {
 		return true;
 	}
 
-	public void method13759(int i, Interface9 interface9) {
-		if (i != 0)
+	public void method13759(int i_1, Interface9 interface9_2) {
+		if (i_1 != 0) {
 			throw new RuntimeException();
-		if (((Class158_Sub1_Sub1) this).anoa9448 != null && interface9 != null && ((((Class158_Sub1_Sub1) this).anoa9448.method1() != interface9.method1()) || (((Class158_Sub1_Sub1) this).anoa9448.method74() != interface9.method74())))
+		} else if (this.anoa9448 != null && interface9_2 != null && (this.anoa9448.method1() != interface9_2.method1() || this.anoa9448.method74() != interface9_2.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).afa9447 = (fa) interface9;
-		if (interface9 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface9.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface9.method74();
-		} else if (((Class158_Sub1_Sub1) this).anoa9448 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.afa9447 = (fa) interface9_2;
+			if (interface9_2 != null) {
+				this.anInt9446 = interface9_2.method1();
+				this.anInt9450 = interface9_2.method74();
+			} else if (this.anoa9448 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 110) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 110) == this)
-			method213();
 	}
 
 	boolean method2718() {
 		return true;
 	}
 
-	public void method13763(Interface8 interface8) {
-		if (((Class158_Sub1_Sub1) this).afa9447 != null && interface8 != null && ((((Class158_Sub1_Sub1) this).afa9447.method1() != interface8.method1()) || (((Class158_Sub1_Sub1) this).afa9447.method74() != interface8.method74())))
+	public void method13763(Interface8 interface8_1) {
+		if (this.afa9447 != null && interface8_1 != null && (this.afa9447.method1() != interface8_1.method1() || this.afa9447.method74() != interface8_1.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).anoa9448 = (oa) interface8;
-		if (interface8 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface8.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface8.method74();
-		} else if (((Class158_Sub1_Sub1) this).afa9447 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.anoa9448 = (oa) interface8_1;
+			if (interface8_1 != null) {
+				this.anInt9446 = interface8_1.method1();
+				this.anInt9450 = interface8_1.method74();
+			} else if (this.afa9447 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 103) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 103) == this)
-			method213();
 	}
 
 	public void method212() {
-		/* empty */
 	}
 
 	public int method2719() {
-		return ((Class158_Sub1_Sub1) this).anInt9446;
+		return this.anInt9446;
 	}
 
 	public int method2720() {
-		return ((Class158_Sub1_Sub1) this).anInt9446;
+		return this.anInt9446;
 	}
 
 	public int method2726() {
-		return ((Class158_Sub1_Sub1) this).anInt9446;
+		return this.anInt9446;
 	}
 
-	public void method13760(int i, Interface9 interface9) {
-		if (i != 0)
+	public void method13760(int i_1, Interface9 interface9_2) {
+		if (i_1 != 0) {
 			throw new RuntimeException();
-		if (((Class158_Sub1_Sub1) this).anoa9448 != null && interface9 != null && ((((Class158_Sub1_Sub1) this).anoa9448.method1() != interface9.method1()) || (((Class158_Sub1_Sub1) this).anoa9448.method74() != interface9.method74())))
+		} else if (this.anoa9448 != null && interface9_2 != null && (this.anoa9448.method1() != interface9_2.method1() || this.anoa9448.method74() != interface9_2.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).afa9447 = (fa) interface9;
-		if (interface9 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface9.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface9.method74();
-		} else if (((Class158_Sub1_Sub1) this).anoa9448 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.afa9447 = (fa) interface9_2;
+			if (interface9_2 != null) {
+				this.anInt9446 = interface9_2.method1();
+				this.anInt9450 = interface9_2.method74();
+			} else if (this.anoa9448 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 115) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 115) == this)
-			method213();
 	}
 
-	public void method13761(int i, Interface9 interface9) {
-		if (i != 0)
+	public void method13761(int i_1, Interface9 interface9_2) {
+		if (i_1 != 0) {
 			throw new RuntimeException();
-		if (((Class158_Sub1_Sub1) this).anoa9448 != null && interface9 != null && ((((Class158_Sub1_Sub1) this).anoa9448.method1() != interface9.method1()) || (((Class158_Sub1_Sub1) this).anoa9448.method74() != interface9.method74())))
+		} else if (this.anoa9448 != null && interface9_2 != null && (this.anoa9448.method1() != interface9_2.method1() || this.anoa9448.method74() != interface9_2.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).afa9447 = (fa) interface9;
-		if (interface9 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface9.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface9.method74();
-		} else if (((Class158_Sub1_Sub1) this).anoa9448 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.afa9447 = (fa) interface9_2;
+			if (interface9_2 != null) {
+				this.anInt9446 = interface9_2.method1();
+				this.anInt9450 = interface9_2.method74();
+			} else if (this.anoa9448 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 104) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 104) == this)
-			method213();
 	}
 
-	Class158_Sub1_Sub1(ja var_ja) {
-		((Class158_Sub1_Sub1) this).anInt9446 = 0;
-		((Class158_Sub1_Sub1) this).anInt9450 = 0;
-		((Class158_Sub1_Sub1) this).aja9449 = var_ja;
+	Class158_Sub1_Sub1(ja ja_1) {
+		this.aja9449 = ja_1;
 	}
 
 	boolean method2724() {
@@ -138,22 +157,26 @@ public class Class158_Sub1_Sub1 extends Class158_Sub1 {
 	}
 
 	public void method186() {
-		/* empty */
 	}
 
-	public void method13758(Interface8 interface8) {
-		if (((Class158_Sub1_Sub1) this).afa9447 != null && interface8 != null && ((((Class158_Sub1_Sub1) this).afa9447.method1() != interface8.method1()) || (((Class158_Sub1_Sub1) this).afa9447.method74() != interface8.method74())))
+	public void method13758(Interface8 interface8_1) {
+		if (this.afa9447 != null && interface8_1 != null && (this.afa9447.method1() != interface8_1.method1() || this.afa9447.method74() != interface8_1.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).anoa9448 = (oa) interface8;
-		if (interface8 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface8.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface8.method74();
-		} else if (((Class158_Sub1_Sub1) this).afa9447 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.anoa9448 = (oa) interface8_1;
+			if (interface8_1 != null) {
+				this.anInt9446 = interface8_1.method1();
+				this.anInt9450 = interface8_1.method74();
+			} else if (this.afa9447 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 126) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 126) == this)
-			method213();
 	}
 
 	public boolean method13766() {
@@ -161,12 +184,12 @@ public class Class158_Sub1_Sub1 extends Class158_Sub1 {
 	}
 
 	boolean method211() {
-		((Class158_Sub1_Sub1) this).aja9449.d((((Class158_Sub1_Sub1) this).afa9447 == null ? 0L : ((fa) ((Class158_Sub1_Sub1) this).afa9447).nativeid), (((Class158_Sub1_Sub1) this).anoa9448 == null ? 0L : ((oa) ((Class158_Sub1_Sub1) this).anoa9448).nativeid));
+		this.aja9449.d(this.afa9447 == null ? 0L : this.afa9447.nativeid, this.anoa9448 == null ? 0L : this.anoa9448.nativeid);
 		return true;
 	}
 
 	boolean method54() {
-		((Class158_Sub1_Sub1) this).aja9449.d((((Class158_Sub1_Sub1) this).afa9447 == null ? 0L : ((fa) ((Class158_Sub1_Sub1) this).afa9447).nativeid), (((Class158_Sub1_Sub1) this).anoa9448 == null ? 0L : ((oa) ((Class158_Sub1_Sub1) this).anoa9448).nativeid));
+		this.aja9449.d(this.afa9447 == null ? 0L : this.afa9447.nativeid, this.anoa9448 == null ? 0L : this.anoa9448.nativeid);
 		return true;
 	}
 
@@ -178,36 +201,46 @@ public class Class158_Sub1_Sub1 extends Class158_Sub1 {
 		return true;
 	}
 
-	public void method13762(int i, Interface9 interface9) {
-		if (i != 0)
+	public void method13762(int i_1, Interface9 interface9_2) {
+		if (i_1 != 0) {
 			throw new RuntimeException();
-		if (((Class158_Sub1_Sub1) this).anoa9448 != null && interface9 != null && ((((Class158_Sub1_Sub1) this).anoa9448.method1() != interface9.method1()) || (((Class158_Sub1_Sub1) this).anoa9448.method74() != interface9.method74())))
+		} else if (this.anoa9448 != null && interface9_2 != null && (this.anoa9448.method1() != interface9_2.method1() || this.anoa9448.method74() != interface9_2.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).afa9447 = (fa) interface9;
-		if (interface9 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface9.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface9.method74();
-		} else if (((Class158_Sub1_Sub1) this).anoa9448 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.afa9447 = (fa) interface9_2;
+			if (interface9_2 != null) {
+				this.anInt9446 = interface9_2.method1();
+				this.anInt9450 = interface9_2.method74();
+			} else if (this.anoa9448 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 108) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 108) == this)
-			method213();
 	}
 
-	public void method13765(Interface8 interface8) {
-		if (((Class158_Sub1_Sub1) this).afa9447 != null && interface8 != null && ((((Class158_Sub1_Sub1) this).afa9447.method1() != interface8.method1()) || (((Class158_Sub1_Sub1) this).afa9447.method74() != interface8.method74())))
+	public void method13765(Interface8 interface8_1) {
+		if (this.afa9447 != null && interface8_1 != null && (this.afa9447.method1() != interface8_1.method1() || this.afa9447.method74() != interface8_1.method74())) {
 			throw new RuntimeException();
-		((Class158_Sub1_Sub1) this).anoa9448 = (oa) interface8;
-		if (interface8 != null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = interface8.method1();
-			((Class158_Sub1_Sub1) this).anInt9450 = interface8.method74();
-		} else if (((Class158_Sub1_Sub1) this).afa9447 == null) {
-			((Class158_Sub1_Sub1) this).anInt9446 = 0;
-			((Class158_Sub1_Sub1) this).anInt9450 = 0;
+		} else {
+			this.anoa9448 = (oa) interface8_1;
+			if (interface8_1 != null) {
+				this.anInt9446 = interface8_1.method1();
+				this.anInt9450 = interface8_1.method74();
+			} else if (this.afa9447 == null) {
+				this.anInt9446 = 0;
+				this.anInt9450 = 0;
+			}
+
+			if (this.aja9449.method8523((byte) 124) == this) {
+				this.method213();
+			}
+
 		}
-		if (((Class158_Sub1_Sub1) this).aja9449.method8523((byte) 124) == this)
-			method213();
 	}
 
 	public boolean method13764() {
@@ -219,14 +252,15 @@ public class Class158_Sub1_Sub1 extends Class158_Sub1 {
 	}
 
 	public int method2721() {
-		return ((Class158_Sub1_Sub1) this).anInt9450;
+		return this.anInt9450;
 	}
 
 	public int method2727() {
-		return ((Class158_Sub1_Sub1) this).anInt9450;
+		return this.anInt9450;
 	}
 
 	public int method2714() {
-		return ((Class158_Sub1_Sub1) this).anInt9446;
+		return this.anInt9446;
 	}
+
 }

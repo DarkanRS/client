@@ -1,151 +1,148 @@
-/* Class521_Sub1_Sub1_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
+
 	MeshRasterizer aClass528_10310;
 	Class281 aClass281_10311;
 
-	boolean method13020(GraphicalRenderer class505, int i, int i_0_) {
+	boolean method13020(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
 		return false;
 	}
 
-	boolean method12983(GraphicalRenderer class505, int i, int i_1_, int i_2_) {
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
 		return false;
 	}
 
-	boolean method12985(int i) {
+	boolean method12985(int i_1) {
 		return false;
 	}
 
-	boolean method12986(int i) {
-		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
-			return !((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.u();
-		return true;
+	boolean method12986(int i_1) {
+		return this.aClass528_10310 != null ? !this.aClass528_10310.u() : true;
 	}
 
-	boolean method12987(int i) {
-		if (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null)
-			return ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.i();
-		return false;
+	boolean method12987(int i_1) {
+		return this.aClass528_10310 != null ? this.aClass528_10310.i() : false;
 	}
 
-	void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_3_, int i_4_, boolean bool, int i_5_) {
-		/* empty */
+	void method13013(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6, int i_7) {
 	}
 
-	void method12984(int i) {
-		/* empty */
+	void method12984(int i_1) {
 	}
 
-	Class285 method12990(GraphicalRenderer class505, int i) {
-		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
-		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Matrix44Var class294 = class505.method8450();
-			Matrix44Var class294_6_ = method11168();
-			Class305 class305 = method11166();
-			class294.method5209(class294_6_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
-				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.aClass528_10310 == null) {
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
 		}
+
+		if (this.aClass528_10310 != null) {
+			Matrix44Var matrix44var_3 = graphicalrenderer_1.method8450();
+			Matrix44Var matrix44var_4 = this.method11168();
+			Class305 class305_5 = this.method11166();
+			matrix44var_3.method5209(matrix44var_4);
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_5.aClass385_3595.x >> 9][(int) class305_5.aClass385_3595.z >> 9];
+			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null) {
+				matrix44var_3.method5219(0.0F, (float) (-class293_6.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
+			}
+
+			this.aClass528_10310.method11282(matrix44var_3, (Class275_Sub5) null, 0);
+		}
+
 		return null;
 	}
 
 	boolean method13001() {
-		if (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null)
-			return ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.i();
-		return false;
+		return this.aClass528_10310 != null ? this.aClass528_10310.i() : false;
 	}
 
-	public Class200 method13019(GraphicalRenderer class505) {
+	public Class200 method13019(GraphicalRenderer graphicalrenderer_1) {
 		return null;
 	}
 
-	public int method12995(int i) {
-		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
+	public int method12995(int i_1) {
+		return this.aClass528_10310 != null ? this.aClass528_10310.YA() : 0;
 	}
 
 	boolean method12999() {
-		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
-			return !((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.u();
-		return true;
+		return this.aClass528_10310 != null ? !this.aClass528_10310.u() : true;
 	}
 
-	void method12991(GraphicalRenderer class505, int i) {
-		/* empty */
+	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
 	}
 
-	void method13023(GraphicalRenderer class505) {
-		/* empty */
+	void method13023(GraphicalRenderer graphicalrenderer_1) {
 	}
 
 	boolean method13002() {
-		if (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null)
-			return ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.i();
-		return false;
+		return this.aClass528_10310 != null ? this.aClass528_10310.i() : false;
 	}
 
 	public int method13003() {
-		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
+		return this.aClass528_10310 != null ? this.aClass528_10310.YA() : 0;
 	}
 
 	public int method13017() {
-		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
+		return this.aClass528_10310 != null ? this.aClass528_10310.YA() : 0;
 	}
 
-	public Class200 method12992(GraphicalRenderer class505, byte i) {
+	public Class200 method12992(GraphicalRenderer graphicalrenderer_1, byte b_2) {
 		return null;
 	}
 
 	public int method13006() {
-		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
+		return this.aClass528_10310 != null ? this.aClass528_10310.YA() : 0;
 	}
 
-	Class285 method13009(GraphicalRenderer class505) {
-		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
-		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Matrix44Var class294 = class505.method8450();
-			Matrix44Var class294_7_ = method11168();
-			Class305 class305 = method11166();
-			class294.method5209(class294_7_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
-				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
+	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass528_10310 == null) {
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
 		}
-		return null;
-	}
 
-	public Class200 method12993(GraphicalRenderer class505) {
-		return null;
-	}
+		if (this.aClass528_10310 != null) {
+			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
+			Matrix44Var matrix44var_3 = this.method11168();
+			Class305 class305_4 = this.method11166();
+			matrix44var_2.method5209(matrix44var_3);
+			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			if (class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null) {
+				matrix44var_2.method5219(0.0F, (float) (-class293_5.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
+			}
 
-	Class285 method12989(GraphicalRenderer class505) {
-		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
-		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Matrix44Var class294 = class505.method8450();
-			Matrix44Var class294_8_ = method11168();
-			Class305 class305 = method11166();
-			class294.method5209(class294_8_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
-				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
+			this.aClass528_10310.method11282(matrix44var_2, (Class275_Sub5) null, 0);
 		}
+
 		return null;
 	}
 
-	void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_9_, int i_10_, boolean bool) {
-		/* empty */
+	public Class200 method12993(GraphicalRenderer graphicalrenderer_1) {
+		return null;
+	}
+
+	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass528_10310 == null) {
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
+		}
+
+		if (this.aClass528_10310 != null) {
+			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
+			Matrix44Var matrix44var_3 = this.method11168();
+			Class305 class305_4 = this.method11166();
+			matrix44var_2.method5209(matrix44var_3);
+			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			if (class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null) {
+				matrix44var_2.method5219(0.0F, (float) (-class293_5.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
+			}
+
+			this.aClass528_10310.method11282(matrix44var_2, (Class275_Sub5) null, 0);
+		}
+
+		return null;
+	}
+
+	void method13016(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
 	}
 
 	public int method13005() {
-		return (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null ? ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.YA() : 0);
+		return this.aClass528_10310 != null ? this.aClass528_10310.YA() : 0;
 	}
 
 	boolean method13026() {
@@ -156,46 +153,47 @@ public class Class521_Sub1_Sub1_Sub1 extends Class521_Sub1_Sub1 {
 		return false;
 	}
 
-	Class285 method13010(GraphicalRenderer class505) {
-		if (null == ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310)
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 = ((Class521_Sub1_Sub1_Sub1) this).aClass281_10311.method4977(class505, 546105467);
-		if (null != ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310) {
-			Matrix44Var class294 = class505.method8450();
-			Matrix44Var class294_11_ = method11168();
-			Class305 class305 = method11166();
-			class294.method5209(class294_11_);
-			Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-			if (class293 != null && class293.aClass521_Sub1_Sub3_3499 != null)
-				class294.method5219(0.0F, (float) -(class293.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
-			((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.method11282(class294, null, 0);
+	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass528_10310 == null) {
+			this.aClass528_10310 = this.aClass281_10311.method4977(graphicalrenderer_1, 546105467);
 		}
+
+		if (this.aClass528_10310 != null) {
+			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
+			Matrix44Var matrix44var_3 = this.method11168();
+			Class305 class305_4 = this.method11166();
+			matrix44var_2.method5209(matrix44var_3);
+			Class293 class293_5 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			if (class293_5 != null && class293_5.aClass521_Sub1_Sub3_3499 != null) {
+				matrix44var_2.method5219(0.0F, (float) (-class293_5.aClass521_Sub1_Sub3_3499.aShort9561), 0.0F);
+			}
+
+			this.aClass528_10310.method11282(matrix44var_2, (Class275_Sub5) null, 0);
+		}
+
 		return null;
 	}
 
-	void method13012(GraphicalRenderer class505) {
-		/* empty */
+	void method13012(GraphicalRenderer graphicalrenderer_1) {
 	}
 
-	public Class200 method13018(GraphicalRenderer class505) {
+	public Class200 method13018(GraphicalRenderer graphicalrenderer_1) {
 		return null;
 	}
 
 	boolean method13000() {
-		if (((Class521_Sub1_Sub1_Sub1) this).aClass528_10310 != null)
-			return ((Class521_Sub1_Sub1_Sub1) this).aClass528_10310.i();
-		return false;
+		return this.aClass528_10310 != null ? this.aClass528_10310.i() : false;
 	}
 
-	Class521_Sub1_Sub1_Sub1(SceneObjectManager class206, Class281 class281, int i, int i_12_, int i_13_, int i_14_, int i_15_) {
-		super(class206, i, i_12_, i_13_, i_14_, i_15_, i_13_ >> 9, i_13_ >> 9, i_15_ >> 9, i_15_ >> 9, false, (byte) 0);
-		((Class521_Sub1_Sub1_Sub1) this).aClass281_10311 = class281;
+	Class521_Sub1_Sub1_Sub1(SceneObjectManager sceneobjectmanager_1, Class281 class281_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+		super(sceneobjectmanager_1, i_3, i_4, i_5, i_6, i_7, i_5 >> 9, i_5 >> 9, i_7 >> 9, i_7 >> 9, false, (byte) 0);
+		this.aClass281_10311 = class281_2;
 	}
 
 	void method13021() {
-		/* empty */
 	}
 
 	void method13015() {
-		/* empty */
 	}
+
 }

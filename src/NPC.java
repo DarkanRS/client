@@ -1,601 +1,671 @@
-/* Class521_Sub1_Sub1_Sub2_Sub2 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class NPC extends Animable {
-	public int anInt10575;
-	public int anInt10576;
-	public int anInt10577;
-	public int anInt10578 = -119874337;
-	public Class153 aClass153_10579;
-	public NPCDefinitions aClass409_10580;
+
 	public Class417 aClass417_10581;
-	public int anInt10582;
-	public int anInt10583;
-	public String aString10584;
-	int[] anIntArray10585;
-	int[] anIntArray10586;
+	public int anInt10578 = -1;
+	public int anInt10577 = -1;
+	public int anInt10583 = 1;
+	public int anInt10576 = 1;
+	public int anInt10575 = -1;
+	public Class153 aClass153_10579 = new Class153(32);
+	int[] anIntArray10585 = new int[6];
+	int[] anIntArray10586 = new int[6];
 	int anInt10587;
 	int anInt10588;
 	int anInt10589;
 	int anInt10590;
+	public NPCDefinitions aClass409_10580;
+	public String aString10584;
+	public int anInt10582;
 
-	int method12996(int i) {
-		if (aClass409_10580 == null)
-			return 0;
-		return aClass409_10580.anInt4913 * -1894935519;
+	int method12996(int i_1) {
+		return this.aClass409_10580 == null ? 0 : this.aClass409_10580.anInt4913;
 	}
 
-	public NPC(SceneObjectManager class206, int i) {
-		super(class206, i);
-		anInt10577 = 1084745433;
-		anInt10583 = -371839573;
-		anInt10576 = -1761803989;
-		anInt10575 = 1914841399;
-		aClass153_10579 = new Class153(32);
-		((NPC) this).anIntArray10585 = new int[6];
-		((NPC) this).anIntArray10586 = new int[6];
-		method16156((byte) 15);
+	public NPC(SceneObjectManager sceneobjectmanager_1, int i_2) {
+		super(sceneobjectmanager_1, i_2);
+		this.method16156((byte) 15);
 	}
 
-	void method16156(byte i) {
-		((NPC) this).anInt10587 = (32 + (int) (Math.random() * 4.0)) * 1113755543;
-		((NPC) this).anInt10588 = (3 + (int) (Math.random() * 2.0)) * -1912819721;
-		((NPC) this).anInt10589 = (16 + (int) (Math.random() * 3.0)) * -62352365;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-255909442) == 1)
-			((NPC) this).anInt10590 = (int) (Math.random() * 6.0) * -331447001;
-		else
-			((NPC) this).anInt10590 = (int) (Math.random() * 12.0) * -331447001;
-	}
-
-	public void method16157(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -44))
-			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
+	void method16156(byte b_1) {
+		this.anInt10587 = 32 + (int) (Math.random() * 4.0D);
+		this.anInt10588 = 3 + (int) (Math.random() * 2.0D);
+		this.anInt10589 = 16 + (int) (Math.random() * 3.0D);
+		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-255909442) == 1) {
+			this.anInt10590 = (int) (Math.random() * 6.0D);
+		} else {
+			this.anInt10590 = (int) (Math.random() * 12.0D);
 		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
+
 	}
 
-	public Class200 method12992(GraphicalRenderer class505, byte i) {
+	public Class200 method12992(GraphicalRenderer graphicalrenderer_1, byte b_2) {
 		return null;
 	}
 
-	public Class200 method13018(GraphicalRenderer class505) {
+	public Class200 method13018(GraphicalRenderer graphicalrenderer_1) {
 		return null;
 	}
 
-	boolean method16158(GraphicalRenderer class505, int i, byte i_0_) {
-		int i_1_ = i;
-		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
-		Animation class456 = ((currentAnimation.hasDefs() && !currentAnimation.hasSpeed(-1119795377)) ? currentAnimation : null);
-		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
-		int i_2_ = -983752529 * class227.anInt2786;
-		int i_3_ = -209978553 * class227.anInt2829;
-		if (0 != i_2_ || i_3_ != 0 || 0 != class227.anInt2824 * -1949451929 || 0 != -373642049 * class227.anInt2827)
-			i |= 0x7;
-		boolean bool = (0 != aByte10352 && -1809259861 * client.cycles >= -134703791 * anInt10347 && -1809259861 * client.cycles < -444686705 * anInt10348);
-		if (bool)
-			i |= 0x80000;
-		int i_4_ = aClass19_10359.method578((byte) 2);
-		MeshRasterizer class528 = (aClass528Array10372[0] = aClass409_10580.method6879(class505, i, IndexLoaders.RENDER_ANIMS, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_4_, aClass417_10581, getRenderAnimation(635765286), false, -1676394010));
-		if (null == class528)
+	boolean method16158(GraphicalRenderer graphicalrenderer_1, int i_2, byte b_3) {
+		int i_4 = i_2;
+		RenderAnimDefs renderanimdefs_5 = this.getRenderAnimDefs((byte) -17);
+		Animation animation_6 = this.currentAnimation.hasDefs() && !this.currentAnimation.hasSpeed(-1119795377) ? this.currentAnimation : null;
+		Class456_Sub3 class456_sub3_7 = this.aClass456_Sub3_10337.hasDefs() && (!this.aClass456_Sub3_10337.aBool7891 || animation_6 == null) ? this.aClass456_Sub3_10337 : null;
+		int i_8 = renderanimdefs_5.anInt2786;
+		int i_9 = renderanimdefs_5.anInt2829;
+		if (i_8 != 0 || i_9 != 0 || renderanimdefs_5.anInt2824 != 0 || renderanimdefs_5.anInt2827 != 0) {
+			i_2 |= 0x7;
+		}
+
+		boolean bool_10 = this.aByte10352 != 0 && client.cycles >= this.anInt10347 && client.cycles < this.anInt10348;
+		if (bool_10) {
+			i_2 |= 0x80000;
+		}
+
+		int i_11 = this.aClass19_10359.method578((byte) 2);
+		MeshRasterizer meshrasterizer_12 = this.aClass528Array10372[0] = this.aClass409_10580.method6879(graphicalrenderer_1, i_2, IndexLoaders.RENDER_ANIMS, Class158_Sub1.aClass3_8507, animation_6, class456_sub3_7, this.aClass456_Sub2_Sub1Array10354, this.anIntArray10362, i_11, this.aClass417_10581, this.getRenderAnimation(635765286), false, -1676394010);
+		if (meshrasterizer_12 == null) {
 			return false;
-		((NPC) this).anInt10317 = class528.YA() * -358839357;
-		class528.n();
-		method15819(class528, 2019976245);
-		if (0 != i_2_ || i_3_ != 0) {
-			method15895(i_4_, i_2_, i_3_, -1269540851 * class227.anInt2813, -1319342263 * class227.anInt2790, (byte) 1);
-			if (0 != (-35614997 * ((NPC) this).anInt10322))
-				aClass528Array10372[0].t(-35614997 * ((NPC) this).anInt10322);
-			if (0 != (((NPC) this).anInt10323 * -1768311789))
-				aClass528Array10372[0].EA(((NPC) this).anInt10323 * -1768311789);
-			if (-628205413 * ((NPC) this).anInt10363 != 0)
-				aClass528Array10372[0].ia(0, ((NPC) this).anInt10363 * -628205413, 0);
-		} else
-			method15895(i_4_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
-		if (bool)
-			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
-		method15837(class505, class227, i_1_, i_2_, i_3_, i_4_, (byte) 1);
-		return true;
-	}
+		} else {
+			this.anInt10317 = meshrasterizer_12.YA();
+			meshrasterizer_12.n();
+			this.method15819(meshrasterizer_12, 2019976245);
+			if (i_8 == 0 && i_9 == 0) {
+				this.method15895(i_11, this.getSize(828768449) << 9, this.getSize(828768449) << 9, 0, 0, (byte) 1);
+			} else {
+				this.method15895(i_11, i_8, i_9, renderanimdefs_5.anInt2813, renderanimdefs_5.anInt2790, (byte) 1);
+				if (this.anInt10322 != 0) {
+					this.aClass528Array10372[0].t(this.anInt10322);
+				}
 
-	void method12991(GraphicalRenderer class505, int i) {
-		if (null != aClass409_10580 && (((NPC) this).aBool10370 || method16158(class505, 0, (byte) 23))) {
-			Matrix44Var class294 = class505.method8450();
-			class294.method5209(method11168());
-			class294.method5219(0.0F, -5.0F, 0.0F);
-			method15799(class505, aClass528Array10372, class294, ((NPC) this).aBool10370, (byte) -31);
-			for (int i_5_ = 0; i_5_ < aClass528Array10372.length; i_5_++)
-				aClass528Array10372[i_5_] = null;
+				if (this.anInt10323 != 0) {
+					this.aClass528Array10372[0].EA(this.anInt10323);
+				}
+
+				if (this.anInt10363 != 0) {
+					this.aClass528Array10372[0].ia(0, this.anInt10363, 0);
+				}
+			}
+
+			if (bool_10) {
+				meshrasterizer_12.PA(this.aByte10371, this.aByte10327, this.aByte10364, this.aByte10352 & 0xff);
+			}
+
+			this.method15837(graphicalrenderer_1, renderanimdefs_5, i_4, i_8, i_9, i_11, (byte) 1);
+			return true;
 		}
 	}
 
-	public int method15794(int i) {
-		return 1 + anInt10314 * -1691508299;
+	void method12991(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.aClass409_10580 != null && (this.aBool10370 || this.method16158(graphicalrenderer_1, 0, (byte) 23))) {
+			Matrix44Var matrix44var_3 = graphicalrenderer_1.method8450();
+			matrix44var_3.method5209(this.method11168());
+			matrix44var_3.method5219(0.0F, -5.0F, 0.0F);
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_3, this.aBool10370, (byte) -31);
+
+			for (int i_4 = 0; i_4 < this.aClass528Array10372.length; i_4++) {
+				this.aClass528Array10372[i_4] = null;
+			}
+		}
+
 	}
 
-	public void method16159(int i, int i_6_, int i_7_, boolean bool, int i_8_, int i_9_) {
-		plane = aByte7968 = (byte) i;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_6_, i_7_, 1670715577))
-			aByte7968++;
-		if (currentAnimation.hasDefs() && (currentAnimation.getDefs().anInt5921 * 113839939 == 1)) {
-			currentAnimations = null;
-			currentAnimation.method7567(-1, (short) 8960);
+	public int method15794(int i_1) {
+		return this.anInt10314 + 1;
+	}
+
+	public void method16159(int i_1, int i_2, int i_3, boolean bool_4, int i_5, int i_6) {
+		this.plane = this.aByte7968 = (byte) i_1;
+		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_2, i_3, 1670715577)) {
+			++this.aByte7968;
 		}
-		for (int i_10_ = 0; i_10_ < aClass161Array10339.length; i_10_++) {
-			if (-1 != 378836105 * aClass161Array10339[i_10_].anInt2012) {
-				SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(aClass161Array10339[i_10_].anInt2012 * 378836105, (byte) -95));
-				if (class525.aBool6968 && -1 != -364555849 * class525.animationId && ((IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(class525.animationId * -364555849, (byte) 7).anInt5921) * 113839939) == 1) {
-					aClass161Array10339[i_10_].aClass456_2014.method7567(-1, (short) 8960);
-					aClass161Array10339[i_10_].anInt2012 = 1025302087;
+
+		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().anInt5921 == 1) {
+			this.currentAnimations = null;
+			this.currentAnimation.method7567(-1, (short) 8960);
+		}
+
+		int i_7;
+		for (i_7 = 0; i_7 < this.aClass161Array10339.length; i_7++) {
+			if (this.aClass161Array10339[i_7].anInt2012 != -1) {
+				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_7].anInt2012, (byte) -95);
+				if (spotanimdefinitions_11.aBool6968 && spotanimdefinitions_11.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_11.animationId, (byte) 7).anInt5921 == 1) {
+					this.aClass161Array10339[i_7].aClass456_2014.method7567(-1, (short) 8960);
+					this.aClass161Array10339[i_7].anInt2012 = -1;
 				}
 			}
 		}
-		if (!bool) {
-			int i_11_ = i_6_ - regionBaseX[0];
-			int i_12_ = i_7_ - regionBaseY[0];
-			if (i_11_ >= -8 && i_11_ <= 8 && i_12_ >= -8 && i_12_ <= 8) {
-				if (1871221471 * anInt10355 < regionBaseX.length - 1)
-					anInt10355 += -2086688481;
-				for (int i_13_ = anInt10355 * 1871221471; i_13_ > 0; i_13_--) {
-					regionBaseX[i_13_] = regionBaseX[i_13_ - 1];
-					regionBaseY[i_13_] = regionBaseY[i_13_ - 1];
-					aByteArray10365[i_13_] = aByteArray10365[i_13_ - 1];
+
+		if (!bool_4) {
+			i_7 = i_2 - this.regionBaseX[0];
+			int i_8 = i_3 - this.regionBaseY[0];
+			if (i_7 >= -8 && i_7 <= 8 && i_8 >= -8 && i_8 <= 8) {
+				if (this.anInt10355 < this.regionBaseX.length - 1) {
+					++this.anInt10355;
 				}
-				regionBaseX[0] = i_6_;
-				regionBaseY[0] = i_7_;
-				aByteArray10365[0] = Class249.aClass249_3084.aByte3085;
+
+				for (int i_9 = this.anInt10355; i_9 > 0; --i_9) {
+					this.regionBaseX[i_9] = this.regionBaseX[i_9 - 1];
+					this.regionBaseY[i_9] = this.regionBaseY[i_9 - 1];
+					this.aByteArray10365[i_9] = this.aByteArray10365[i_9 - 1];
+				}
+
+				this.regionBaseX[0] = i_2;
+				this.regionBaseY[0] = i_3;
+				this.aByteArray10365[0] = Class249.aClass249_3084.aByte3085;
 				return;
 			}
 		}
-		anInt10355 = 0;
-		anInt10367 = 0;
-		anInt10366 = 0;
-		regionBaseX[0] = i_6_;
-		regionBaseY[0] = i_7_;
-		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		class385.x = (float) ((i_8_ << 8) + (regionBaseX[0] << 9));
-		class385.z = (float) ((regionBaseY[0] << 9) + (i_8_ << 8));
-		method11171(class385);
-		class385.method6624();
-		if (((NPC) this).aClass539_10369 != null)
-			((NPC) this).aClass539_10369.method11505();
-	}
 
-	public final boolean method16160(int i) {
-		if (aClass409_10580 == null)
-			return false;
-		return true;
-	}
-
-	int getRenderAnimation(int i) {
-		if (-1 != -343399559 * anInt10575)
-			return anInt10575 * -343399559;
-		if (aClass409_10580.anIntArray4886 != null) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != class409.anInt4898 * -490908695)
-				return -490908695 * class409.anInt4898;
+		this.anInt10355 = 0;
+		this.anInt10367 = 0;
+		this.anInt10366 = 0;
+		this.regionBaseX[0] = i_2;
+		this.regionBaseY[0] = i_3;
+		Vector3 vector3_10 = Vector3.method6623(this.method11166().aClass385_3595);
+		vector3_10.x = (float) ((i_5 << 8) + (this.regionBaseX[0] << 9));
+		vector3_10.z = (float) ((i_5 << 8) + (this.regionBaseY[0] << 9));
+		this.method11171(vector3_10);
+		vector3_10.method6624();
+		if (this.aClass539_10369 != null) {
+			this.aClass539_10369.method11505();
 		}
-		return aClass409_10580.anInt4898 * -490908695;
+
 	}
 
-	public final void method16161(Class252 class252, int i, int i_14_) {
-		int i_15_ = regionBaseX[0];
-		int i_16_ = regionBaseY[0];
-		switch (class252.anInt3104 * 1583741993) {
-		case 3:
-			i_15_++;
-			break;
-		case 5:
-			i_15_--;
-			break;
-		case 2:
-			i_15_++;
-			i_16_++;
-			break;
-		case 4:
-			i_15_--;
-			i_16_--;
-			break;
-		case 7:
-			i_15_++;
-			i_16_--;
+	public final boolean method16160(int i_1) {
+		return this.aClass409_10580 != null;
+	}
+
+	int getRenderAnimation(int i_1) {
+		if (this.anInt10575 != -1) {
+			return this.anInt10575;
+		} else {
+			if (this.aClass409_10580.anIntArray4886 != null) {
+				NPCDefinitions npcdefinitions_2 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+				if (npcdefinitions_2 != null && npcdefinitions_2.anInt4898 != -1) {
+					return npcdefinitions_2.anInt4898;
+				}
+			}
+
+			return this.aClass409_10580.anInt4898;
+		}
+	}
+
+	public final void method16161(Class252 class252_1, int i_2, int i_3) {
+		int i_4 = this.regionBaseX[0];
+		int i_5 = this.regionBaseY[0];
+		switch (class252_1.anInt3104) {
+		case 0:
+			++i_5;
 			break;
 		case 1:
-			i_15_--;
-			i_16_++;
+			--i_4;
+			++i_5;
 			break;
-		case 0:
-			i_16_++;
+		case 2:
+			++i_4;
+			++i_5;
+			break;
+		case 3:
+			++i_4;
+			break;
+		case 4:
+			--i_4;
+			--i_5;
+			break;
+		case 5:
+			--i_4;
 			break;
 		case 6:
-			i_16_--;
+			--i_5;
 			break;
+		case 7:
+			++i_4;
+			--i_5;
 		}
-		if (currentAnimation.hasDefs() && (currentAnimation.getDefs().anInt5921 * 113839939 == 1)) {
-			currentAnimations = null;
-			currentAnimation.method7567(-1, (short) 8960);
+
+		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().anInt5921 == 1) {
+			this.currentAnimations = null;
+			this.currentAnimation.method7567(-1, (short) 8960);
 		}
-		for (int i_17_ = 0; i_17_ < aClass161Array10339.length; i_17_++) {
-			if (-1 != 378836105 * aClass161Array10339[i_17_].anInt2012) {
-				SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(378836105 * aClass161Array10339[i_17_].anInt2012, (byte) -12));
-				if (class525.aBool6968 && -1 != class525.animationId * -364555849 && (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) -9).anInt5921) * 113839939 == 1) {
-					aClass161Array10339[i_17_].aClass456_2014.method7567(-1, (short) 8960);
-					aClass161Array10339[i_17_].anInt2012 = 1025302087;
+
+		int i_6;
+		for (i_6 = 0; i_6 < this.aClass161Array10339.length; i_6++) {
+			if (this.aClass161Array10339[i_6].anInt2012 != -1) {
+				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_6].anInt2012, (byte) -12);
+				if (spotanimdefinitions_7.aBool6968 && spotanimdefinitions_7.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_7.animationId, (byte) -9).anInt5921 == 1) {
+					this.aClass161Array10339[i_6].aClass456_2014.method7567(-1, (short) 8960);
+					this.aClass161Array10339[i_6].anInt2012 = -1;
 				}
 			}
 		}
-		if (anInt10355 * 1871221471 < regionBaseX.length - 1)
-			anInt10355 += -2086688481;
-		for (int i_18_ = anInt10355 * 1871221471; i_18_ > 0; i_18_--) {
-			regionBaseX[i_18_] = regionBaseX[i_18_ - 1];
-			regionBaseY[i_18_] = regionBaseY[i_18_ - 1];
-			aByteArray10365[i_18_] = aByteArray10365[i_18_ - 1];
+
+		if (this.anInt10355 < this.regionBaseX.length - 1) {
+			++this.anInt10355;
 		}
-		regionBaseX[0] = i_15_;
-		regionBaseY[0] = i_16_;
-		aByteArray10365[0] = (byte) i;
+
+		for (i_6 = this.anInt10355; i_6 > 0; --i_6) {
+			this.regionBaseX[i_6] = this.regionBaseX[i_6 - 1];
+			this.regionBaseY[i_6] = this.regionBaseY[i_6 - 1];
+			this.aByteArray10365[i_6] = this.aByteArray10365[i_6 - 1];
+		}
+
+		this.regionBaseX[0] = i_4;
+		this.regionBaseY[0] = i_5;
+		this.aByteArray10365[0] = (byte) i_2;
 	}
 
-	public int method12997(int i) {
-		if (aClass409_10580.anIntArray4886 != null) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != class409.anInt4902 * -675134025)
-				return -675134025 * class409.anInt4902;
+	public int method12997(int i_1) {
+		if (this.aClass409_10580.anIntArray4886 != null) {
+			NPCDefinitions npcdefinitions_2 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			if (npcdefinitions_2 != null && npcdefinitions_2.anInt4902 != -1) {
+				return npcdefinitions_2.anInt4902;
+			}
 		}
-		return (-675134025 * aClass409_10580.anInt4902 != -1 ? aClass409_10580.anInt4902 * -675134025 : super.method12997(-218366287));
+
+		return this.aClass409_10580.anInt4902 != -1 ? this.aClass409_10580.anInt4902 : super.method12997(-218366287);
 	}
 
-	boolean method16162(int i) {
-		return aClass409_10580.aBool4893;
+	boolean method16162(int i_1) {
+		return this.aClass409_10580.aBool4893;
 	}
 
 	public int method15898() {
-		if (null != aClass409_10580.anIntArray4886) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != 327817917 * class409.anInt4918)
-				return class409.anInt4918 * 327817917;
+		if (this.aClass409_10580.anIntArray4886 != null) {
+			NPCDefinitions npcdefinitions_1 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
+				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
+			}
 		}
-		return 327817917 * aClass409_10580.anInt4918;
+
+		return 327817917 * this.aClass409_10580.anInt4918 * 1094135957;
 	}
 
-	void method13023(GraphicalRenderer class505) {
-		if (null != aClass409_10580 && (((NPC) this).aBool10370 || method16158(class505, 0, (byte) -5))) {
-			Matrix44Var class294 = class505.method8450();
-			class294.method5209(method11168());
-			class294.method5219(0.0F, -5.0F, 0.0F);
-			method15799(class505, aClass528Array10372, class294, ((NPC) this).aBool10370, (byte) 9);
-			for (int i = 0; i < aClass528Array10372.length; i++)
-				aClass528Array10372[i] = null;
+	void method13023(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass409_10580 != null && (this.aBool10370 || this.method16158(graphicalrenderer_1, 0, (byte) -5))) {
+			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
+			matrix44var_2.method5209(this.method11168());
+			matrix44var_2.method5219(0.0F, -5.0F, 0.0F);
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_2, this.aBool10370, (byte) 9);
+
+			for (int i_3 = 0; i_3 < this.aClass528Array10372.length; i_3++) {
+				this.aClass528Array10372[i_3] = null;
+			}
 		}
+
 	}
 
-	final boolean method12985(int i) {
+	final boolean method12985(int i_1) {
 		return false;
 	}
 
-	final void method13013(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_19_, int i_20_, boolean bool, int i_21_) {
+	final void method13013(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6, int i_7) {
 		throw new IllegalStateException();
 	}
 
-	final void method12984(int i) {
+	final void method12984(int i_1) {
 		throw new IllegalStateException();
 	}
 
-	public int method16163(int i, int i_22_) {
-		return ((NPC) this).anIntArray10585[i];
+	public int method16163(int i_1, int i_2) {
+		return this.anIntArray10585[i_1];
 	}
 
 	public boolean method15871() {
 		return Class58.aClass529_527.aBool7041;
 	}
 
-	boolean method12983(GraphicalRenderer class505, int i, int i_23_, int i_24_) {
-		if (aClass409_10580 == null || !method16158(class505, 131072, (byte) 19))
-			return false;
-		Matrix44Var class294 = method11168();
-		boolean bool = false;
-		for (int i_25_ = 0; i_25_ < aClass528Array10372.length; i_25_++) {
-			if (aClass528Array10372[i_25_] != null) {
-				boolean bool_26_;
-				while_46_: do {
-					do {
-						if (-1894935519 * aClass409_10580.anInt4913 <= 0) {
-							if (1419481733 * aClass409_10580.anInt4917 == -1) {
-								if (1 != aClass409_10580.anInt4858 * 1203434505)
-									break;
-							} else if (1 != (aClass409_10580.anInt4917 * 1419481733))
-								break;
+	boolean method12983(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, int i_4) {
+		if (this.aClass409_10580 != null && this.method16158(graphicalrenderer_1, 131072, (byte) 19)) {
+			Matrix44Var matrix44var_5 = this.method11168();
+			boolean bool_6 = false;
+
+			int i_7;
+			for (i_7 = 0; i_7 < this.aClass528Array10372.length; i_7++) {
+				if (this.aClass528Array10372[i_7] != null) {
+					boolean bool_8;
+					label57: {
+						if (this.aClass409_10580.anInt4913 <= 0) {
+							label56: {
+								if (this.aClass409_10580.anInt4917 == -1) {
+									if (this.aClass409_10580.anInt4858 == 1) {
+										break label56;
+									}
+								} else if (this.aClass409_10580.anInt4917 == 1) {
+									break label56;
+								}
+
+								bool_8 = false;
+								break label57;
+							}
 						}
-						bool_26_ = true;
-						break while_46_;
-					} while (false);
-					bool_26_ = false;
-				} while (false);
-				boolean bool_27_ = bool_26_;
-				boolean bool_28_ = (aClass528Array10372[i_25_].method11270(i, i_23_, class294, bool_27_, aClass409_10580.anInt4913 * -1894935519));
-				if (bool_28_) {
-					bool = true;
-					break;
+
+						bool_8 = true;
+					}
+
+					boolean bool_10 = this.aClass528Array10372[i_7].method11270(i_2, i_3, matrix44var_5, bool_8, this.aClass409_10580.anInt4913);
+					if (bool_10) {
+						bool_6 = true;
+						break;
+					}
 				}
 			}
+
+			for (i_7 = 0; i_7 < this.aClass528Array10372.length; i_7++) {
+				this.aClass528Array10372[i_7] = null;
+			}
+
+			return bool_6;
+		} else {
+			return false;
 		}
-		for (int i_29_ = 0; i_29_ < aClass528Array10372.length; i_29_++)
-			aClass528Array10372[i_29_] = null;
-		return bool;
 	}
 
-	public Class200 method12993(GraphicalRenderer class505) {
+	public Class200 method12993(GraphicalRenderer graphicalrenderer_1) {
 		return null;
 	}
 
-	Class285 method13009(GraphicalRenderer class505) {
-		if (aClass409_10580 == null || !method16158(class505, 526336, (byte) -27))
+	Class285 method13009(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass409_10580 != null && this.method16158(graphicalrenderer_1, 526336, (byte) -27)) {
+			Matrix44Var matrix44var_2 = this.method11168();
+			Class305 class305_3 = this.method11166();
+			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
+			int i_5 = this.aClass19_10359.method578((byte) 2);
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
+			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null) {
+				int i_7 = this.anInt10325 * -374848179 * -2023195771 - class293_6.aClass521_Sub1_Sub3_3499.aShort9561;
+				this.anInt10325 = -374848179 * (int) ((float) (-2023195771 * this.anInt10325 * -374848179) - (float) i_7 / 10.0F) * -2023195771;
+			} else {
+				this.anInt10325 = -374848179 * (int) ((float) (this.anInt10325 * -374848179 * -2023195771) - (float) (-2023195771 * this.anInt10325 * -374848179) / 10.0F) * -2023195771;
+			}
+
+			matrix44var_4.method5209(matrix44var_2);
+			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
+			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs((byte) -17);
+			NPCDefinitions npcdefinitions_8 = this.aClass409_10580.anIntArray4886 != null ? this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : this.aClass409_10580;
+			this.aBool10312 = false;
+			Class285 class285_9 = null;
+			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -105) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1080298347) ? this.currentAnimation : null;
+				Class456_Sub3 class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
+				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.aClass409_10580.anInt4858 * -1156523463, this.aClass528Array10372[0], this.aClass409_10580.aShort4874 & 0xffff, this.aClass409_10580.aShort4897 & 0xffff, this.aClass409_10580.aByte4883 & 0xff, this.aClass409_10580.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10), 16711935);
+				if (meshrasterizer_12 != null) {
+					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
+						this.method13008(this.aClass528Array10372.length + 1, (byte) -19);
+					}
+
+					class285_9 = Class470.method7824(this.method16162(1548602767), (byte) -37);
+					this.aBool10312 = true;
+					graphicalrenderer_1.RA(false);
+					meshrasterizer_12.method11282(matrix44var_4, this.aClass275_Sub5Array7965[this.aClass528Array10372.length], 0);
+					graphicalrenderer_1.RA(true);
+				}
+			}
+
+			if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length) {
+				this.method13008(this.aClass528Array10372.length, (byte) -90);
+			}
+
+			if (class285_9 == null) {
+				class285_9 = Class470.method7824(this.method16162(759364370), (byte) -74);
+			}
+
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_4, false, (byte) 0);
+
+			int i_14;
+			for (i_14 = 0; i_14 < this.aClass528Array10372.length; i_14++) {
+				if (this.aClass528Array10372[i_14] != null) {
+					if (this.aClass409_10580.aBool4920) {
+						this.aClass528Array10372[i_14].PA(this.anInt10587 * 1113755543 * 812179495, 954646983 * this.anInt10588 * -1431655765 * 3 * -1912819721, 37639707 * this.anInt10589 * -62352365, 478845591 * this.anInt10590 * -331447001);
+					}
+
+					this.aClass528Array10372[i_14].method11282(matrix44var_4, this.aClass275_Sub5Array7965[i_14], 0);
+				}
+			}
+
+			if (this.aClass539_10369 != null) {
+				Class151 class151_15 = this.aClass539_10369.method11517();
+				graphicalrenderer_1.method8456(class151_15);
+			}
+
+			for (i_14 = 0; i_14 < this.aClass528Array10372.length; i_14++) {
+				if (this.aClass528Array10372[i_14] != null) {
+					this.aBool10312 |= this.aClass528Array10372[i_14].i();
+				}
+
+				this.aClass528Array10372[i_14] = null;
+			}
+
+			this.anInt10349 = client.anInt7286 * 1895928101 * 1178121955 * -2009373393;
+			return class285_9;
+		} else {
 			return null;
-		Matrix44Var class294 = method11168();
-		Class305 class305 = method11166();
-		Matrix44Var class294_30_ = class505.method8450();
-		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
-			int i_31_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_31_ / 10.0F));
-		} else
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) ((((NPC) this).anInt10325) * -2023195771) - (float) (-2023195771 * (((NPC) this).anInt10325)) / 10.0F));
-		class294_30_.method5209(class294);
-		class294_30_.method5219(0.0F, (float) (-20 - ((NPC) this).anInt10325 * -2023195771), 0.0F);
-		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
-		NPCDefinitions class409 = (aClass409_10580.anIntArray4886 != null ? aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : aClass409_10580);
-		((NPC) this).aBool10312 = false;
-		Class285 class285 = null;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -105) == 1 && class409.aBool4912 && class227.aBool2787) {
-			Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(-1080298347)) ? currentAnimation : null);
-			Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
-			MeshRasterizer class528 = Class116.method1969(class505, i, (((NPC) this).anInt10322) * -35614997, (-1768311789 * (((NPC) this).anInt10323)), (-628205413 * (((NPC) this).anInt10363)), 1203434505 * aClass409_10580.anInt4858, aClass528Array10372[0], aClass409_10580.aShort4874 & 0xffff, aClass409_10580.aShort4897 & 0xffff, aClass409_10580.aByte4883 & 0xff, aClass409_10580.aByte4899 & 0xff, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935);
-			if (null != class528) {
-				if (null == aClass275_Sub5Array7965 || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
-					method13008(aClass528Array10372.length + 1, (byte) -19);
-				class285 = Class470.method7824(method16162(1548602767), (byte) -37);
-				((NPC) this).aBool10312 = true;
-				class505.RA(false);
-				class528.method11282(class294_30_, (aClass275_Sub5Array7965[aClass528Array10372.length]), 0);
-				class505.RA(true);
-			}
 		}
-		if (aClass275_Sub5Array7965 == null || aClass275_Sub5Array7965.length < aClass528Array10372.length)
-			method13008(aClass528Array10372.length, (byte) -90);
-		if (class285 == null)
-			class285 = Class470.method7824(method16162(759364370), (byte) -74);
-		method15799(class505, aClass528Array10372, class294_30_, false, (byte) 0);
-		for (int i_32_ = 0; i_32_ < aClass528Array10372.length; i_32_++) {
-			if (null != aClass528Array10372[i_32_]) {
-				if (aClass409_10580.aBool4920)
-					aClass528Array10372[i_32_].PA((((NPC) this).anInt10587 * 812179495), (954646983 * ((NPC) this).anInt10588), (37639707 * ((NPC) this).anInt10589), (478845591 * ((NPC) this).anInt10590));
-				aClass528Array10372[i_32_].method11282(class294_30_, (aClass275_Sub5Array7965[i_32_]), 0);
-			}
-		}
-		if (((NPC) this).aClass539_10369 != null) {
-			Class151 class151 = ((NPC) this).aClass539_10369.method11517();
-			class505.method8456(class151);
-		}
-		for (int i_33_ = 0; i_33_ < aClass528Array10372.length; i_33_++) {
-			if (aClass528Array10372[i_33_] != null)
-				((NPC) this).aBool10312 |= aClass528Array10372[i_33_].i();
-			aClass528Array10372[i_33_] = null;
-		}
-		anInt10349 = client.anInt7286 * 1178121955;
-		return class285;
 	}
 
-	public void method16164(String string, int i, int i_34_, byte i_35_) {
-		int i_36_ = (Class204.method3363(1027745545) * (-936082597 * Class58.aClass529_527.anInt7038));
-		method15875(string, i, i_34_, i_36_, 1930642006);
+	public void method16164(String string_1, int i_2, int i_3, byte b_4) {
+		int i_5 = Class204.method3363(1027745545) * Class58.aClass529_527.anInt7038;
+		this.method15875(string_1, i_2, i_3, i_5, 1930642006);
 	}
 
 	public Class163 method15852() {
-		if (((NPC) this).aClass163_10334 != null && null == ((Class163) (((NPC) this).aClass163_10334)).aString2028)
-			return null;
-		return ((NPC) this).aClass163_10334;
+		return this.aClass163_10334 != null && this.aClass163_10334.aString2028 == null ? null : this.aClass163_10334;
 	}
 
-	public int method13007() {
-		if (aClass409_10580.anIntArray4886 != null) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != class409.anInt4902 * -675134025)
-				return -675134025 * class409.anInt4902;
-		}
-		return (-675134025 * aClass409_10580.anInt4902 != -1 ? aClass409_10580.anInt4902 * -675134025 : super.method12997(-218366287));
-	}
-
-	public int method13028() {
-		if (aClass409_10580.anIntArray4886 != null) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != class409.anInt4902 * -675134025)
-				return -675134025 * class409.anInt4902;
-		}
-		return (-675134025 * aClass409_10580.anInt4902 != -1 ? aClass409_10580.anInt4902 * -675134025 : super.method12997(-218366287));
-	}
-
-	Class285 method12990(GraphicalRenderer class505, int i) {
-		if (aClass409_10580 == null || !method16158(class505, 526336, (byte) 26))
-			return null;
-		Matrix44Var class294 = method11168();
-		Class305 class305 = method11166();
-		Matrix44Var class294_37_ = class505.method8450();
-		int i_38_ = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
-			int i_39_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_39_ / 10.0F));
-		} else
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) ((((NPC) this).anInt10325) * -2023195771) - (float) (-2023195771 * (((NPC) this).anInt10325)) / 10.0F));
-		class294_37_.method5209(class294);
-		class294_37_.method5219(0.0F, (float) (-20 - ((NPC) this).anInt10325 * -2023195771), 0.0F);
-		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
-		NPCDefinitions class409 = (aClass409_10580.anIntArray4886 != null ? aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : aClass409_10580);
-		((NPC) this).aBool10312 = false;
-		Class285 class285 = null;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -38) == 1 && class409.aBool4912 && class227.aBool2787) {
-			Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(-539713016)) ? currentAnimation : null);
-			Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
-			MeshRasterizer class528 = Class116.method1969(class505, i_38_, (((NPC) this).anInt10322) * -35614997, (-1768311789 * (((NPC) this).anInt10323)), (-628205413 * (((NPC) this).anInt10363)), 1203434505 * aClass409_10580.anInt4858, aClass528Array10372[0], aClass409_10580.aShort4874 & 0xffff, aClass409_10580.aShort4897 & 0xffff, aClass409_10580.aByte4883 & 0xff, aClass409_10580.aByte4899 & 0xff, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935);
-			if (null != class528) {
-				if (null == aClass275_Sub5Array7965 || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
-					method13008(aClass528Array10372.length + 1, (byte) -107);
-				class285 = Class470.method7824(method16162(425151398), (byte) -117);
-				((NPC) this).aBool10312 = true;
-				class505.RA(false);
-				class528.method11282(class294_37_, (aClass275_Sub5Array7965[aClass528Array10372.length]), 0);
-				class505.RA(true);
+	Class285 method12990(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		if (this.aClass409_10580 != null && this.method16158(graphicalrenderer_1, 526336, (byte) 26)) {
+			Matrix44Var matrix44var_3 = this.method11168();
+			Class305 class305_4 = this.method11166();
+			Matrix44Var matrix44var_5 = graphicalrenderer_1.method8450();
+			int i_6 = this.aClass19_10359.method578((byte) 2);
+			Class293 class293_7 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_4.aClass385_3595.x >> 9][(int) class305_4.aClass385_3595.z >> 9];
+			if (class293_7 != null && class293_7.aClass521_Sub1_Sub3_3499 != null) {
+				int i_8 = this.anInt10325 - class293_7.aClass521_Sub1_Sub3_3499.aShort9561;
+				this.anInt10325 = (int) ((float) this.anInt10325 - (float) i_8 / 10.0F);
+			} else {
+				this.anInt10325 = (int) ((float) this.anInt10325 - (float) this.anInt10325 / 10.0F);
 			}
-		}
-		if (aClass275_Sub5Array7965 == null || aClass275_Sub5Array7965.length < aClass528Array10372.length)
-			method13008(aClass528Array10372.length, (byte) -9);
-		if (class285 == null)
-			class285 = Class470.method7824(method16162(1979469596), (byte) -108);
-		method15799(class505, aClass528Array10372, class294_37_, false, (byte) -6);
-		for (int i_40_ = 0; i_40_ < aClass528Array10372.length; i_40_++) {
-			if (null != aClass528Array10372[i_40_]) {
-				if (aClass409_10580.aBool4920)
-					aClass528Array10372[i_40_].PA((((NPC) this).anInt10587 * 812179495), (954646983 * ((NPC) this).anInt10588), (37639707 * ((NPC) this).anInt10589), (478845591 * ((NPC) this).anInt10590));
-				aClass528Array10372[i_40_].method11282(class294_37_, (aClass275_Sub5Array7965[i_40_]), 0);
+
+			matrix44var_5.method5209(matrix44var_3);
+			matrix44var_5.method5219(0.0F, (float) (-20 - this.anInt10325), 0.0F);
+			RenderAnimDefs renderanimdefs_14 = this.getRenderAnimDefs((byte) -17);
+			NPCDefinitions npcdefinitions_9 = this.aClass409_10580.anIntArray4886 != null ? this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : this.aClass409_10580;
+			this.aBool10312 = false;
+			Class285 class285_10 = null;
+			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -38) == 1 && npcdefinitions_9.aBool4912 && renderanimdefs_14.aBool2787) {
+				Animation animation_11 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-539713016) ? this.currentAnimation : null;
+				Class456_Sub3 class456_sub3_12 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_11 != null ? null : this.aClass456_Sub3_10337;
+				MeshRasterizer meshrasterizer_13 = Class116.method1969(graphicalrenderer_1, i_6, this.anInt10322, this.anInt10323, this.anInt10363, this.aClass409_10580.anInt4858, this.aClass528Array10372[0], this.aClass409_10580.aShort4874 & 0xffff, this.aClass409_10580.aShort4897 & 0xffff, this.aClass409_10580.aByte4883 & 0xff, this.aClass409_10580.aByte4899 & 0xff, (Animation) (class456_sub3_12 != null ? class456_sub3_12 : animation_11), 16711935);
+				if (meshrasterizer_13 != null) {
+					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length + 1) {
+						this.method13008(this.aClass528Array10372.length + 1, (byte) -107);
+					}
+
+					class285_10 = Class470.method7824(this.method16162(425151398), (byte) -117);
+					this.aBool10312 = true;
+					graphicalrenderer_1.RA(false);
+					meshrasterizer_13.method11282(matrix44var_5, this.aClass275_Sub5Array7965[this.aClass528Array10372.length], 0);
+					graphicalrenderer_1.RA(true);
+				}
 			}
+
+			if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length) {
+				this.method13008(this.aClass528Array10372.length, (byte) -9);
+			}
+
+			if (class285_10 == null) {
+				class285_10 = Class470.method7824(this.method16162(1979469596), (byte) -108);
+			}
+
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_5, false, (byte) -6);
+
+			int i_15;
+			for (i_15 = 0; i_15 < this.aClass528Array10372.length; i_15++) {
+				if (this.aClass528Array10372[i_15] != null) {
+					if (this.aClass409_10580.aBool4920) {
+						this.aClass528Array10372[i_15].PA(this.anInt10587, this.anInt10588, this.anInt10589, this.anInt10590);
+					}
+
+					this.aClass528Array10372[i_15].method11282(matrix44var_5, this.aClass275_Sub5Array7965[i_15], 0);
+				}
+			}
+
+			if (this.aClass539_10369 != null) {
+				Class151 class151_16 = this.aClass539_10369.method11517();
+				graphicalrenderer_1.method8456(class151_16);
+			}
+
+			for (i_15 = 0; i_15 < this.aClass528Array10372.length; i_15++) {
+				if (this.aClass528Array10372[i_15] != null) {
+					this.aBool10312 |= this.aClass528Array10372[i_15].i();
+				}
+
+				this.aClass528Array10372[i_15] = null;
+			}
+
+			this.anInt10349 = client.anInt7286;
+			return class285_10;
+		} else {
+			return null;
 		}
-		if (((NPC) this).aClass539_10369 != null) {
-			Class151 class151 = ((NPC) this).aClass539_10369.method11517();
-			class505.method8456(class151);
-		}
-		for (int i_41_ = 0; i_41_ < aClass528Array10372.length; i_41_++) {
-			if (aClass528Array10372[i_41_] != null)
-				((NPC) this).aBool10312 |= aClass528Array10372[i_41_].i();
-			aClass528Array10372[i_41_] = null;
-		}
-		anInt10349 = client.anInt7286 * 1178121955;
-		return class285;
 	}
 
 	final void method13021() {
 		throw new IllegalStateException();
 	}
 
-	Class285 method12989(GraphicalRenderer class505) {
-		if (aClass409_10580 == null || !method16158(class505, 526336, (byte) -14))
+	Class285 method12989(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass409_10580 != null && this.method16158(graphicalrenderer_1, 526336, (byte) -14)) {
+			Matrix44Var matrix44var_2 = this.method11168();
+			Class305 class305_3 = this.method11166();
+			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
+			int i_5 = this.aClass19_10359.method578((byte) 2);
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
+			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null) {
+				int i_7 = this.anInt10325 * -374848179 * -2023195771 - class293_6.aClass521_Sub1_Sub3_3499.aShort9561;
+				this.anInt10325 = -374848179 * (int) ((float) (-2023195771 * this.anInt10325 * -374848179) - (float) i_7 / 10.0F) * -2023195771;
+			} else {
+				this.anInt10325 = -374848179 * (int) ((float) (this.anInt10325 * -374848179 * -2023195771) - (float) (-2023195771 * this.anInt10325 * -374848179) / 10.0F) * -2023195771;
+			}
+
+			matrix44var_4.method5209(matrix44var_2);
+			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
+			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs((byte) -17);
+			NPCDefinitions npcdefinitions_8 = this.aClass409_10580.anIntArray4886 != null ? this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : this.aClass409_10580;
+			this.aBool10312 = false;
+			Class285 class285_9 = null;
+			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -85) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(-1093777602) ? this.currentAnimation : null;
+				Class456_Sub3 class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
+				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.aClass409_10580.anInt4858 * -1156523463, this.aClass528Array10372[0], this.aClass409_10580.aShort4874 & 0xffff, this.aClass409_10580.aShort4897 & 0xffff, this.aClass409_10580.aByte4883 & 0xff, this.aClass409_10580.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10), 16711935);
+				if (meshrasterizer_12 != null) {
+					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
+						this.method13008(this.aClass528Array10372.length + 1, (byte) -114);
+					}
+
+					class285_9 = Class470.method7824(this.method16162(673687659), (byte) -118);
+					this.aBool10312 = true;
+					graphicalrenderer_1.RA(false);
+					meshrasterizer_12.method11282(matrix44var_4, this.aClass275_Sub5Array7965[this.aClass528Array10372.length], 0);
+					graphicalrenderer_1.RA(true);
+				}
+			}
+
+			if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length) {
+				this.method13008(this.aClass528Array10372.length, (byte) -3);
+			}
+
+			if (class285_9 == null) {
+				class285_9 = Class470.method7824(this.method16162(1870859445), (byte) -84);
+			}
+
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_4, false, (byte) -22);
+
+			int i_14;
+			for (i_14 = 0; i_14 < this.aClass528Array10372.length; i_14++) {
+				if (this.aClass528Array10372[i_14] != null) {
+					if (this.aClass409_10580.aBool4920) {
+						this.aClass528Array10372[i_14].PA(this.anInt10587 * 1113755543 * 812179495, 954646983 * this.anInt10588 * -1431655765 * 3 * -1912819721, 37639707 * this.anInt10589 * -62352365, 478845591 * this.anInt10590 * -331447001);
+					}
+
+					this.aClass528Array10372[i_14].method11282(matrix44var_4, this.aClass275_Sub5Array7965[i_14], 0);
+				}
+			}
+
+			if (this.aClass539_10369 != null) {
+				Class151 class151_15 = this.aClass539_10369.method11517();
+				graphicalrenderer_1.method8456(class151_15);
+			}
+
+			for (i_14 = 0; i_14 < this.aClass528Array10372.length; i_14++) {
+				if (this.aClass528Array10372[i_14] != null) {
+					this.aBool10312 |= this.aClass528Array10372[i_14].i();
+				}
+
+				this.aClass528Array10372[i_14] = null;
+			}
+
+			this.anInt10349 = client.anInt7286 * 1895928101 * 1178121955 * -2009373393;
+			return class285_9;
+		} else {
 			return null;
-		Matrix44Var class294 = method11168();
-		Class305 class305 = method11166();
-		Matrix44Var class294_42_ = class505.method8450();
-		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
-			int i_43_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_43_ / 10.0F));
-		} else
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) ((((NPC) this).anInt10325) * -2023195771) - (float) (-2023195771 * (((NPC) this).anInt10325)) / 10.0F));
-		class294_42_.method5209(class294);
-		class294_42_.method5219(0.0F, (float) (-20 - ((NPC) this).anInt10325 * -2023195771), 0.0F);
-		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
-		NPCDefinitions class409 = (aClass409_10580.anIntArray4886 != null ? aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : aClass409_10580);
-		((NPC) this).aBool10312 = false;
-		Class285 class285 = null;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -85) == 1 && class409.aBool4912 && class227.aBool2787) {
-			Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(-1093777602)) ? currentAnimation : null);
-			Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
-			MeshRasterizer class528 = Class116.method1969(class505, i, (((NPC) this).anInt10322) * -35614997, (-1768311789 * (((NPC) this).anInt10323)), (-628205413 * (((NPC) this).anInt10363)), 1203434505 * aClass409_10580.anInt4858, aClass528Array10372[0], aClass409_10580.aShort4874 & 0xffff, aClass409_10580.aShort4897 & 0xffff, aClass409_10580.aByte4883 & 0xff, aClass409_10580.aByte4899 & 0xff, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935);
-			if (null != class528) {
-				if (null == aClass275_Sub5Array7965 || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
-					method13008(aClass528Array10372.length + 1, (byte) -114);
-				class285 = Class470.method7824(method16162(673687659), (byte) -118);
-				((NPC) this).aBool10312 = true;
-				class505.RA(false);
-				class528.method11282(class294_42_, (aClass275_Sub5Array7965[aClass528Array10372.length]), 0);
-				class505.RA(true);
-			}
 		}
-		if (aClass275_Sub5Array7965 == null || aClass275_Sub5Array7965.length < aClass528Array10372.length)
-			method13008(aClass528Array10372.length, (byte) -3);
-		if (class285 == null)
-			class285 = Class470.method7824(method16162(1870859445), (byte) -84);
-		method15799(class505, aClass528Array10372, class294_42_, false, (byte) -22);
-		for (int i_44_ = 0; i_44_ < aClass528Array10372.length; i_44_++) {
-			if (null != aClass528Array10372[i_44_]) {
-				if (aClass409_10580.aBool4920)
-					aClass528Array10372[i_44_].PA((((NPC) this).anInt10587 * 812179495), (954646983 * ((NPC) this).anInt10588), (37639707 * ((NPC) this).anInt10589), (478845591 * ((NPC) this).anInt10590));
-				aClass528Array10372[i_44_].method11282(class294_42_, (aClass275_Sub5Array7965[i_44_]), 0);
-			}
-		}
-		if (((NPC) this).aClass539_10369 != null) {
-			Class151 class151 = ((NPC) this).aClass539_10369.method11517();
-			class505.method8456(class151);
-		}
-		for (int i_45_ = 0; i_45_ < aClass528Array10372.length; i_45_++) {
-			if (aClass528Array10372[i_45_] != null)
-				((NPC) this).aBool10312 |= aClass528Array10372[i_45_].i();
-			aClass528Array10372[i_45_] = null;
-		}
-		anInt10349 = client.anInt7286 * 1178121955;
-		return class285;
 	}
 
 	public int method15897() {
-		if (null != aClass409_10580.anIntArray4886) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != 327817917 * class409.anInt4918)
-				return class409.anInt4918 * 327817917;
+		if (this.aClass409_10580.anIntArray4886 != null) {
+			NPCDefinitions npcdefinitions_1 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
+				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
+			}
 		}
-		return 327817917 * aClass409_10580.anInt4918;
+
+		return 327817917 * this.aClass409_10580.anInt4918 * 1094135957;
 	}
 
-	public boolean method15887(int i) {
+	public boolean method15887(int i_1) {
 		return Class58.aClass529_527.aBool7041;
 	}
 
-	public void method16165(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -122))
-			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
-		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
+	public Class163 method15811(int i_1) {
+		return this.aClass163_10334 != null && this.aClass163_10334.aString2028 == null ? null : this.aClass163_10334;
 	}
 
-	public Class163 method15811(int i) {
-		if (((NPC) this).aClass163_10334 != null && null == ((Class163) (((NPC) this).aClass163_10334)).aString2028)
-			return null;
-		return ((NPC) this).aClass163_10334;
-	}
-
-	final void method13016(GraphicalRenderer class505, Class521_Sub1 class521_sub1, int i, int i_46_, int i_47_, boolean bool) {
+	final void method13016(GraphicalRenderer graphicalrenderer_1, Class521_Sub1 class521_sub1_2, int i_3, int i_4, int i_5, boolean bool_6) {
 		throw new IllegalStateException();
 	}
 
-	public void method16166(NPCDefinitions class409, int i) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -83))
+	public void method16166(NPCDefinitions npcdefinitions_1, int i_2) {
+		if (npcdefinitions_1 != this.aClass409_10580 && Class20.aBool161 && EnumIndexLoader.method7426(this.anInt10314, (byte) -83)) {
 			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
 		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
+
+		this.aClass409_10580 = npcdefinitions_1;
+		if (this.aClass409_10580 != null) {
+			this.aString10584 = this.aClass409_10580.aString4857;
+			this.anInt10582 = this.aClass409_10580.anInt4879;
+		}
+
+		if (this.aClass539_10369 != null) {
+			this.aClass539_10369.method11505();
+		}
+
 	}
 
 	int method15868() {
-		if (-1 != -343399559 * anInt10575)
-			return anInt10575 * -343399559;
-		if (aClass409_10580.anIntArray4886 != null) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != class409.anInt4898 * -490908695)
-				return -490908695 * class409.anInt4898;
+		if (-343399559 * this.anInt10575 * -1914841399 != -1) {
+			return this.anInt10575 * -1914841399 * -343399559;
+		} else {
+			if (this.aClass409_10580.anIntArray4886 != null) {
+				NPCDefinitions npcdefinitions_1 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+				if (npcdefinitions_1 != null && npcdefinitions_1.anInt4898 * -318852007 * -490908695 != -1) {
+					return -490908695 * npcdefinitions_1.anInt4898 * -318852007;
+				}
+			}
+
+			return this.aClass409_10580.anInt4898 * -318852007 * -490908695;
 		}
-		return aClass409_10580.anInt4898 * -490908695;
 	}
 
 	final boolean method13011() {
@@ -615,438 +685,228 @@ public class NPC extends Animable {
 	}
 
 	public Class163 method15809() {
-		if (((NPC) this).aClass163_10334 != null && null == ((Class163) (((NPC) this).aClass163_10334)).aString2028)
-			return null;
-		return ((NPC) this).aClass163_10334;
+		return this.aClass163_10334 != null && this.aClass163_10334.aString2028 == null ? null : this.aClass163_10334;
 	}
 
 	public Class163 method15876() {
-		if (((NPC) this).aClass163_10334 != null && null == ((Class163) (((NPC) this).aClass163_10334)).aString2028)
-			return null;
-		return ((NPC) this).aClass163_10334;
+		return this.aClass163_10334 != null && this.aClass163_10334.aString2028 == null ? null : this.aClass163_10334;
 	}
 
 	public Class163 method15877() {
-		if (((NPC) this).aClass163_10334 != null && null == ((Class163) (((NPC) this).aClass163_10334)).aString2028)
-			return null;
-		return ((NPC) this).aClass163_10334;
+		return this.aClass163_10334 != null && this.aClass163_10334.aString2028 == null ? null : this.aClass163_10334;
 	}
 
-	public void method16167(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -112))
-			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
-		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
-	}
-
-	public Class200 method13019(GraphicalRenderer class505) {
+	public Class200 method13019(GraphicalRenderer graphicalrenderer_1) {
 		return null;
 	}
 
-	public int method16168(int i) {
-		return ((NPC) this).anIntArray10585[i];
-	}
-
 	int method15867() {
-		if (-1 != -343399559 * anInt10575)
-			return anInt10575 * -343399559;
-		if (aClass409_10580.anIntArray4886 != null) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != class409.anInt4898 * -490908695)
-				return -490908695 * class409.anInt4898;
-		}
-		return aClass409_10580.anInt4898 * -490908695;
-	}
-
-	boolean method13020(GraphicalRenderer class505, int i, int i_48_) {
-		if (aClass409_10580 == null || !method16158(class505, 131072, (byte) -19))
-			return false;
-		Matrix44Var class294 = method11168();
-		boolean bool = false;
-		for (int i_49_ = 0; i_49_ < aClass528Array10372.length; i_49_++) {
-			if (aClass528Array10372[i_49_] != null) {
-				boolean bool_50_;
-				while_47_: do {
-					do {
-						if (-1894935519 * aClass409_10580.anInt4913 <= 0) {
-							if (1419481733 * aClass409_10580.anInt4917 == -1) {
-								if (1 != aClass409_10580.anInt4858 * 1203434505)
-									break;
-							} else if (1 != (aClass409_10580.anInt4917 * 1419481733))
-								break;
-						}
-						bool_50_ = true;
-						break while_47_;
-					} while (false);
-					bool_50_ = false;
-				} while (false);
-				boolean bool_51_ = bool_50_;
-				boolean bool_52_ = (aClass528Array10372[i_49_].method11270(i, i_48_, class294, bool_51_, aClass409_10580.anInt4913 * -1894935519));
-				if (bool_52_) {
-					bool = true;
-					break;
+		if (-343399559 * this.anInt10575 * -1914841399 != -1) {
+			return this.anInt10575 * -1914841399 * -343399559;
+		} else {
+			if (this.aClass409_10580.anIntArray4886 != null) {
+				NPCDefinitions npcdefinitions_1 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+				if (npcdefinitions_1 != null && npcdefinitions_1.anInt4898 * -318852007 * -490908695 != -1) {
+					return -490908695 * npcdefinitions_1.anInt4898 * -318852007;
 				}
 			}
+
+			return this.aClass409_10580.anInt4898 * -318852007 * -490908695;
 		}
-		for (int i_53_ = 0; i_53_ < aClass528Array10372.length; i_53_++)
-			aClass528Array10372[i_53_] = null;
-		return bool;
 	}
 
-	public int method16169(int i, byte i_54_) {
-		return ((NPC) this).anIntArray10586[i];
+	boolean method13020(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3) {
+		if (this.aClass409_10580 != null && this.method16158(graphicalrenderer_1, 131072, (byte) -19)) {
+			Matrix44Var matrix44var_4 = this.method11168();
+			boolean bool_5 = false;
+
+			int i_6;
+			for (i_6 = 0; i_6 < this.aClass528Array10372.length; i_6++) {
+				if (this.aClass528Array10372[i_6] != null) {
+					boolean bool_7;
+					label57: {
+						if (-1894935519 * this.aClass409_10580.anInt4913 * 1057419233 <= 0) {
+							label56: {
+								if (1419481733 * this.aClass409_10580.anInt4917 * -832596403 == -1) {
+									if (this.aClass409_10580.anInt4858 * -1156523463 * 1203434505 == 1) {
+										break label56;
+									}
+								} else if (this.aClass409_10580.anInt4917 * -832596403 * 1419481733 == 1) {
+									break label56;
+								}
+
+								bool_7 = false;
+								break label57;
+							}
+						}
+
+						bool_7 = true;
+					}
+
+					boolean bool_9 = this.aClass528Array10372[i_6].method11270(i_2, i_3, matrix44var_4, bool_7, this.aClass409_10580.anInt4913 * 1057419233 * -1894935519);
+					if (bool_9) {
+						bool_5 = true;
+						break;
+					}
+				}
+			}
+
+			for (i_6 = 0; i_6 < this.aClass528Array10372.length; i_6++) {
+				this.aClass528Array10372[i_6] = null;
+			}
+
+			return bool_5;
+		} else {
+			return false;
+		}
+	}
+
+	public int method16169(int i_1, byte b_2) {
+		return this.anIntArray10586[i_1];
 	}
 
 	final void method13015() {
 		throw new IllegalStateException();
 	}
 
-	int method13027() {
-		if (aClass409_10580 == null)
-			return 0;
-		return aClass409_10580.anInt4913 * -1894935519;
-	}
-
-	public int method16170(int i) {
-		return ((NPC) this).anIntArray10585[i];
-	}
-
-	boolean method16171() {
-		return aClass409_10580.aBool4893;
-	}
-
 	public int method15804() {
-		if (null != aClass409_10580.anIntArray4886) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != 327817917 * class409.anInt4918)
-				return class409.anInt4918 * 327817917;
+		if (this.aClass409_10580.anIntArray4886 != null) {
+			NPCDefinitions npcdefinitions_1 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			if (npcdefinitions_1 != null && 327817917 * npcdefinitions_1.anInt4918 * 1094135957 != -1) {
+				return npcdefinitions_1.anInt4918 * 1094135957 * 327817917;
+			}
 		}
-		return 327817917 * aClass409_10580.anInt4918;
+
+		return 327817917 * this.aClass409_10580.anInt4918 * 1094135957;
 	}
 
 	public int method15874() {
-		return 1 + anInt10314 * -1691508299;
+		return 1 + this.anInt10314 * -1498872675 * -1691508299;
 	}
 
 	public int method15892() {
-		return 1 + anInt10314 * -1691508299;
+		return 1 + this.anInt10314 * -1498872675 * -1691508299;
 	}
 
 	final boolean method13026() {
 		return false;
 	}
 
-	void method16172() {
-		((NPC) this).anInt10587 = (32 + (int) (Math.random() * 4.0)) * 1113755543;
-		((NPC) this).anInt10588 = (3 + (int) (Math.random() * 2.0)) * -1912819721;
-		((NPC) this).anInt10589 = (16 + (int) (Math.random() * 3.0)) * -62352365;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-51981151) == 1)
-			((NPC) this).anInt10590 = (int) (Math.random() * 6.0) * -331447001;
-		else
-			((NPC) this).anInt10590 = (int) (Math.random() * 12.0) * -331447001;
+	public void method16179(int i_1, int i_2, int i_3, byte b_4) {
+		this.anIntArray10585[i_1] = i_2;
+		this.anIntArray10586[i_1] = i_3;
 	}
 
-	void method16173() {
-		((NPC) this).anInt10587 = (32 + (int) (Math.random() * 4.0)) * 1113755543;
-		((NPC) this).anInt10588 = (3 + (int) (Math.random() * 2.0)) * -1912819721;
-		((NPC) this).anInt10589 = (16 + (int) (Math.random() * 3.0)) * -62352365;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(2126679923) == 1)
-			((NPC) this).anInt10590 = (int) (Math.random() * 6.0) * -331447001;
-		else
-			((NPC) this).anInt10590 = (int) (Math.random() * 12.0) * -331447001;
-	}
-
-	void method16174() {
-		((NPC) this).anInt10587 = (32 + (int) (Math.random() * 4.0)) * 1113755543;
-		((NPC) this).anInt10588 = (3 + (int) (Math.random() * 2.0)) * -1912819721;
-		((NPC) this).anInt10589 = (16 + (int) (Math.random() * 3.0)) * -62352365;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(1366489423) == 1)
-			((NPC) this).anInt10590 = (int) (Math.random() * 6.0) * -331447001;
-		else
-			((NPC) this).anInt10590 = (int) (Math.random() * 12.0) * -331447001;
-	}
-
-	void method16175() {
-		((NPC) this).anInt10587 = (32 + (int) (Math.random() * 4.0)) * 1113755543;
-		((NPC) this).anInt10588 = (3 + (int) (Math.random() * 2.0)) * -1912819721;
-		((NPC) this).anInt10589 = (16 + (int) (Math.random() * 3.0)) * -62352365;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12873(-306444908) == 1)
-			((NPC) this).anInt10590 = (int) (Math.random() * 6.0) * -331447001;
-		else
-			((NPC) this).anInt10590 = (int) (Math.random() * 12.0) * -331447001;
-	}
-
-	public void method16176(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -85))
-			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
-		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
-	}
-
-	public void method16177(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) -69))
-			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
-		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
-	}
-
-	public void method16178(NPCDefinitions class409) {
-		if (aClass409_10580 != class409 && Class20.aBool161 && EnumIndexLoader.method7426(anInt10314 * -1691508299, (byte) 38))
-			Class316.method5594(-559600711);
-		aClass409_10580 = class409;
-		if (aClass409_10580 != null) {
-			aString10584 = aClass409_10580.aString4857;
-			anInt10582 = 466211499 * aClass409_10580.anInt4879;
-		}
-		if (null != ((NPC) this).aClass539_10369)
-			((NPC) this).aClass539_10369.method11505();
-	}
-
-	public void method16179(int i, int i_55_, int i_56_, byte i_57_) {
-		((NPC) this).anIntArray10585[i] = i_55_;
-		((NPC) this).anIntArray10586[i] = i_56_;
-	}
-
-	public int method15899(int i) {
-		if (null != aClass409_10580.anIntArray4886) {
-			NPCDefinitions class409 = aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null != class409 && -1 != 327817917 * class409.anInt4918)
-				return class409.anInt4918 * 327817917;
-		}
-		return 327817917 * aClass409_10580.anInt4918;
-	}
-
-	public void method16180(String string, int i, int i_58_) {
-		int i_59_ = (Class204.method3363(2026859155) * (-936082597 * Class58.aClass529_527.anInt7038));
-		method15875(string, i, i_58_, i_59_, -1032476785);
-	}
-
-	boolean method16181(GraphicalRenderer class505, int i) {
-		int i_60_ = i;
-		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
-		Animation class456 = ((currentAnimation.hasDefs() && !currentAnimation.hasSpeed(-964739095)) ? currentAnimation : null);
-		Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
-		int i_61_ = -983752529 * class227.anInt2786;
-		int i_62_ = -209978553 * class227.anInt2829;
-		if (0 != i_61_ || i_62_ != 0 || 0 != class227.anInt2824 * -1949451929 || 0 != -373642049 * class227.anInt2827)
-			i |= 0x7;
-		boolean bool = (0 != aByte10352 && -1809259861 * client.cycles >= -134703791 * anInt10347 && -1809259861 * client.cycles < -444686705 * anInt10348);
-		if (bool)
-			i |= 0x80000;
-		int i_63_ = aClass19_10359.method578((byte) 2);
-		MeshRasterizer class528 = (aClass528Array10372[0] = aClass409_10580.method6879(class505, i, IndexLoaders.RENDER_ANIMS, Class158_Sub1.aClass3_8507, class456, class456_sub3, aClass456_Sub2_Sub1Array10354, anIntArray10362, i_63_, aClass417_10581, getRenderAnimation(635765286), false, 339814141));
-		if (null == class528)
-			return false;
-		((NPC) this).anInt10317 = class528.YA() * -358839357;
-		class528.n();
-		method15819(class528, 2019976245);
-		if (0 != i_61_ || i_62_ != 0) {
-			method15895(i_63_, i_61_, i_62_, -1269540851 * class227.anInt2813, -1319342263 * class227.anInt2790, (byte) 1);
-			if (0 != (-35614997 * ((NPC) this).anInt10322))
-				aClass528Array10372[0].t(-35614997 * ((NPC) this).anInt10322);
-			if (0 != (((NPC) this).anInt10323 * -1768311789))
-				aClass528Array10372[0].EA(((NPC) this).anInt10323 * -1768311789);
-			if (-628205413 * ((NPC) this).anInt10363 != 0)
-				aClass528Array10372[0].ia(0, ((NPC) this).anInt10363 * -628205413, 0);
-		} else
-			method15895(i_63_, getSize(828768449) << 9, getSize(828768449) << 9, 0, 0, (byte) 1);
-		if (bool)
-			class528.PA(aByte10371, aByte10327, aByte10364, aByte10352 & 0xff);
-		method15837(class505, class227, i_60_, i_61_, i_62_, i_63_, (byte) 1);
-		return true;
-	}
-
-	public void method16182(int i, int i_64_, int i_65_, boolean bool, int i_66_) {
-		plane = aByte7968 = (byte) i;
-		if (IndexLoaders.MAP_REGION_DECODER.method4433(33386298).is0x2(i_64_, i_65_, 1699221461))
-			aByte7968++;
-		if (currentAnimation.hasDefs() && (currentAnimation.getDefs().anInt5921 * 113839939 == 1)) {
-			currentAnimations = null;
-			currentAnimation.method7567(-1, (short) 8960);
-		}
-		for (int i_67_ = 0; i_67_ < aClass161Array10339.length; i_67_++) {
-			if (-1 != 378836105 * aClass161Array10339[i_67_].anInt2012) {
-				SpotAnimDefinitions class525 = (IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(aClass161Array10339[i_67_].anInt2012 * 378836105, (byte) -30));
-				if (class525.aBool6968 && -1 != -364555849 * class525.animationId && (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(class525.animationId * -364555849, (byte) -80).anInt5921) * 113839939 == 1) {
-					aClass161Array10339[i_67_].aClass456_2014.method7567(-1, (short) 8960);
-					aClass161Array10339[i_67_].anInt2012 = 1025302087;
-				}
+	public int method15899(int i_1) {
+		if (this.aClass409_10580.anIntArray4886 != null) {
+			NPCDefinitions npcdefinitions_2 = this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			if (npcdefinitions_2 != null && npcdefinitions_2.anInt4918 != -1) {
+				return npcdefinitions_2.anInt4918;
 			}
 		}
-		if (!bool) {
-			int i_68_ = i_64_ - regionBaseX[0];
-			int i_69_ = i_65_ - regionBaseY[0];
-			if (i_68_ >= -8 && i_68_ <= 8 && i_69_ >= -8 && i_69_ <= 8) {
-				if (1871221471 * anInt10355 < regionBaseX.length - 1)
-					anInt10355 += -2086688481;
-				for (int i_70_ = anInt10355 * 1871221471; i_70_ > 0; i_70_--) {
-					regionBaseX[i_70_] = regionBaseX[i_70_ - 1];
-					regionBaseY[i_70_] = regionBaseY[i_70_ - 1];
-					aByteArray10365[i_70_] = aByteArray10365[i_70_ - 1];
-				}
-				regionBaseX[0] = i_64_;
-				regionBaseY[0] = i_65_;
-				aByteArray10365[0] = Class249.aClass249_3084.aByte3085;
-				return;
+
+		return this.aClass409_10580.anInt4918;
+	}
+
+	void method13012(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass409_10580 != null && (this.aBool10370 || this.method16158(graphicalrenderer_1, 0, (byte) 29))) {
+			Matrix44Var matrix44var_2 = graphicalrenderer_1.method8450();
+			matrix44var_2.method5209(this.method11168());
+			matrix44var_2.method5219(0.0F, -5.0F, 0.0F);
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_2, this.aBool10370, (byte) 87);
+
+			for (int i_3 = 0; i_3 < this.aClass528Array10372.length; i_3++) {
+				this.aClass528Array10372[i_3] = null;
 			}
 		}
-		anInt10355 = 0;
-		anInt10367 = 0;
-		anInt10366 = 0;
-		regionBaseX[0] = i_64_;
-		regionBaseY[0] = i_65_;
-		Vector3 class385 = Vector3.method6623(method11166().aClass385_3595);
-		class385.x = (float) ((i_66_ << 8) + (regionBaseX[0] << 9));
-		class385.z = (float) ((regionBaseY[0] << 9) + (i_66_ << 8));
-		method11171(class385);
-		class385.method6624();
-		if (((NPC) this).aClass539_10369 != null)
-			((NPC) this).aClass539_10369.method11505();
+
 	}
 
-	public final boolean method16183() {
-		if (aClass409_10580 == null)
-			return false;
-		return true;
-	}
+	Class285 method13010(GraphicalRenderer graphicalrenderer_1) {
+		if (this.aClass409_10580 != null && this.method16158(graphicalrenderer_1, 526336, (byte) 37)) {
+			Matrix44Var matrix44var_2 = this.method11168();
+			Class305 class305_3 = this.method11166();
+			Matrix44Var matrix44var_4 = graphicalrenderer_1.method8450();
+			int i_5 = this.aClass19_10359.method578((byte) 2);
+			Class293 class293_6 = this.aClass206_7970.aClass293ArrayArrayArray2604[this.plane][(int) class305_3.aClass385_3595.x >> 9][(int) class305_3.aClass385_3595.z >> 9];
+			if (class293_6 != null && class293_6.aClass521_Sub1_Sub3_3499 != null) {
+				int i_7 = this.anInt10325 * -374848179 * -2023195771 - class293_6.aClass521_Sub1_Sub3_3499.aShort9561;
+				this.anInt10325 = -374848179 * (int) ((float) (-2023195771 * this.anInt10325 * -374848179) - (float) i_7 / 10.0F) * -2023195771;
+			} else {
+				this.anInt10325 = -374848179 * (int) ((float) (this.anInt10325 * -374848179 * -2023195771) - (float) (-2023195771 * this.anInt10325 * -374848179) / 10.0F) * -2023195771;
+			}
 
-	boolean method16184() {
-		return aClass409_10580.aBool4893;
-	}
+			matrix44var_4.method5209(matrix44var_2);
+			matrix44var_4.method5219(0.0F, (float) (-20 - this.anInt10325 * -374848179 * -2023195771), 0.0F);
+			RenderAnimDefs renderanimdefs_13 = this.getRenderAnimDefs((byte) -17);
+			NPCDefinitions npcdefinitions_8 = this.aClass409_10580.anIntArray4886 != null ? this.aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : this.aClass409_10580;
+			this.aBool10312 = false;
+			Class285 class285_9 = null;
+			if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -99) == 1 && npcdefinitions_8.aBool4912 && renderanimdefs_13.aBool2787) {
+				Animation animation_10 = this.currentAnimation.hasDefs() && this.currentAnimation.hasSpeed(2108774285) ? this.currentAnimation : null;
+				Class456_Sub3 class456_sub3_11 = !this.aClass456_Sub3_10337.hasDefs() || this.aClass456_Sub3_10337.aBool7891 && animation_10 != null ? null : this.aClass456_Sub3_10337;
+				MeshRasterizer meshrasterizer_12 = Class116.method1969(graphicalrenderer_1, i_5, this.anInt10322 * 2085530051 * -35614997, -1768311789 * this.anInt10323 * 884618779, -628205413 * this.anInt10363 * -1453470317, 1203434505 * this.aClass409_10580.anInt4858 * -1156523463, this.aClass528Array10372[0], this.aClass409_10580.aShort4874 & 0xffff, this.aClass409_10580.aShort4897 & 0xffff, this.aClass409_10580.aByte4883 & 0xff, this.aClass409_10580.aByte4899 & 0xff, (Animation) (class456_sub3_11 != null ? class456_sub3_11 : animation_10), 16711935);
+				if (meshrasterizer_12 != null) {
+					if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < 1 + this.aClass528Array10372.length) {
+						this.method13008(this.aClass528Array10372.length + 1, (byte) -124);
+					}
 
-	void method13012(GraphicalRenderer class505) {
-		if (null != aClass409_10580 && (((NPC) this).aBool10370 || method16158(class505, 0, (byte) 29))) {
-			Matrix44Var class294 = class505.method8450();
-			class294.method5209(method11168());
-			class294.method5219(0.0F, -5.0F, 0.0F);
-			method15799(class505, aClass528Array10372, class294, ((NPC) this).aBool10370, (byte) 87);
-			for (int i = 0; i < aClass528Array10372.length; i++)
-				aClass528Array10372[i] = null;
-		}
-	}
+					class285_9 = Class470.method7824(this.method16162(1927143783), (byte) -100);
+					this.aBool10312 = true;
+					graphicalrenderer_1.RA(false);
+					meshrasterizer_12.method11282(matrix44var_4, this.aClass275_Sub5Array7965[this.aClass528Array10372.length], 0);
+					graphicalrenderer_1.RA(true);
+				}
+			}
 
-	Class285 method13010(GraphicalRenderer class505) {
-		if (aClass409_10580 == null || !method16158(class505, 526336, (byte) 37))
+			if (this.aClass275_Sub5Array7965 == null || this.aClass275_Sub5Array7965.length < this.aClass528Array10372.length) {
+				this.method13008(this.aClass528Array10372.length, (byte) -10);
+			}
+
+			if (class285_9 == null) {
+				class285_9 = Class470.method7824(this.method16162(574364280), (byte) -55);
+			}
+
+			this.method15799(graphicalrenderer_1, this.aClass528Array10372, matrix44var_4, false, (byte) -36);
+
+			int i_14;
+			for (i_14 = 0; i_14 < this.aClass528Array10372.length; i_14++) {
+				if (this.aClass528Array10372[i_14] != null) {
+					if (this.aClass409_10580.aBool4920) {
+						this.aClass528Array10372[i_14].PA(this.anInt10587 * 1113755543 * 812179495, 954646983 * this.anInt10588 * -1431655765 * 3 * -1912819721, 37639707 * this.anInt10589 * -62352365, 478845591 * this.anInt10590 * -331447001);
+					}
+
+					this.aClass528Array10372[i_14].method11282(matrix44var_4, this.aClass275_Sub5Array7965[i_14], 0);
+				}
+			}
+
+			if (this.aClass539_10369 != null) {
+				Class151 class151_15 = this.aClass539_10369.method11517();
+				graphicalrenderer_1.method8456(class151_15);
+			}
+
+			for (i_14 = 0; i_14 < this.aClass528Array10372.length; i_14++) {
+				if (this.aClass528Array10372[i_14] != null) {
+					this.aBool10312 |= this.aClass528Array10372[i_14].i();
+				}
+
+				this.aClass528Array10372[i_14] = null;
+			}
+
+			this.anInt10349 = client.anInt7286 * 1895928101 * 1178121955 * -2009373393;
+			return class285_9;
+		} else {
 			return null;
-		Matrix44Var class294 = method11168();
-		Class305 class305 = method11166();
-		Matrix44Var class294_71_ = class505.method8450();
-		int i = aClass19_10359.method578((byte) 2);
-		Class293 class293 = (aClass206_7970.aClass293ArrayArrayArray2604[plane][(int) class305.aClass385_3595.x >> 9][(int) class305.aClass385_3595.z >> 9]);
-		if (null != class293 && null != class293.aClass521_Sub1_Sub3_3499) {
-			int i_72_ = ((((NPC) this).anInt10325 * -2023195771) - class293.aClass521_Sub1_Sub3_3499.aShort9561);
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) (-2023195771 * (((NPC) this).anInt10325)) - (float) i_72_ / 10.0F));
-		} else
-			((NPC) this).anInt10325 = (-374848179 * (int) ((float) ((((NPC) this).anInt10325) * -2023195771) - (float) (-2023195771 * (((NPC) this).anInt10325)) / 10.0F));
-		class294_71_.method5209(class294);
-		class294_71_.method5219(0.0F, (float) (-20 - ((NPC) this).anInt10325 * -2023195771), 0.0F);
-		RenderAnimDefs class227 = getRenderAnimDefs((byte) -17);
-		NPCDefinitions class409 = (aClass409_10580.anIntArray4886 != null ? aClass409_10580.method6884(Class158_Sub1.aClass3_8507, 265881693) : aClass409_10580);
-		((NPC) this).aBool10312 = false;
-		Class285 class285 = null;
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12966((byte) -99) == 1 && class409.aBool4912 && class227.aBool2787) {
-			Animation class456 = ((currentAnimation.hasDefs() && currentAnimation.hasSpeed(2108774285)) ? currentAnimation : null);
-			Class456_Sub3 class456_sub3 = ((aClass456_Sub3_10337.hasDefs() && (!aClass456_Sub3_10337.aBool7891 || null == class456)) ? aClass456_Sub3_10337 : null);
-			MeshRasterizer class528 = Class116.method1969(class505, i, (((NPC) this).anInt10322) * -35614997, (-1768311789 * (((NPC) this).anInt10323)), (-628205413 * (((NPC) this).anInt10363)), 1203434505 * aClass409_10580.anInt4858, aClass528Array10372[0], aClass409_10580.aShort4874 & 0xffff, aClass409_10580.aShort4897 & 0xffff, aClass409_10580.aByte4883 & 0xff, aClass409_10580.aByte4899 & 0xff, (null != class456_sub3 ? (Animation) class456_sub3 : class456), 16711935);
-			if (null != class528) {
-				if (null == aClass275_Sub5Array7965 || (aClass275_Sub5Array7965.length < 1 + aClass528Array10372.length))
-					method13008(aClass528Array10372.length + 1, (byte) -124);
-				class285 = Class470.method7824(method16162(1927143783), (byte) -100);
-				((NPC) this).aBool10312 = true;
-				class505.RA(false);
-				class528.method11282(class294_71_, (aClass275_Sub5Array7965[aClass528Array10372.length]), 0);
-				class505.RA(true);
-			}
 		}
-		if (aClass275_Sub5Array7965 == null || aClass275_Sub5Array7965.length < aClass528Array10372.length)
-			method13008(aClass528Array10372.length, (byte) -10);
-		if (class285 == null)
-			class285 = Class470.method7824(method16162(574364280), (byte) -55);
-		method15799(class505, aClass528Array10372, class294_71_, false, (byte) -36);
-		for (int i_73_ = 0; i_73_ < aClass528Array10372.length; i_73_++) {
-			if (null != aClass528Array10372[i_73_]) {
-				if (aClass409_10580.aBool4920)
-					aClass528Array10372[i_73_].PA((((NPC) this).anInt10587 * 812179495), (954646983 * ((NPC) this).anInt10588), (37639707 * ((NPC) this).anInt10589), (478845591 * ((NPC) this).anInt10590));
-				aClass528Array10372[i_73_].method11282(class294_71_, (aClass275_Sub5Array7965[i_73_]), 0);
-			}
-		}
-		if (((NPC) this).aClass539_10369 != null) {
-			Class151 class151 = ((NPC) this).aClass539_10369.method11517();
-			class505.method8456(class151);
-		}
-		for (int i_74_ = 0; i_74_ < aClass528Array10372.length; i_74_++) {
-			if (aClass528Array10372[i_74_] != null)
-				((NPC) this).aBool10312 |= aClass528Array10372[i_74_].i();
-			aClass528Array10372[i_74_] = null;
-		}
-		anInt10349 = client.anInt7286 * 1178121955;
-		return class285;
-	}
-
-	public void method16185(String string, int i, int i_75_) {
-		int i_76_ = (Class204.method3363(1862480607) * (-936082597 * Class58.aClass529_527.anInt7038));
-		method15875(string, i, i_75_, i_76_, 820561633);
-	}
-
-	public int method16186(int i) {
-		return ((NPC) this).anIntArray10585[i];
-	}
-
-	public int method16187(int i) {
-		return ((NPC) this).anIntArray10585[i];
-	}
-
-	public int method16188(int i) {
-		return ((NPC) this).anIntArray10585[i];
-	}
-
-	public int method16189(int i) {
-		return ((NPC) this).anIntArray10586[i];
-	}
-
-	public void method16190(int i, int i_77_, int i_78_) {
-		((NPC) this).anIntArray10585[i] = i_77_;
-		((NPC) this).anIntArray10586[i] = i_78_;
-	}
-
-	public void method16191(int i, int i_79_, int i_80_) {
-		((NPC) this).anIntArray10585[i] = i_79_;
-		((NPC) this).anIntArray10586[i] = i_80_;
-	}
-
-	public void method16192(int i, int i_81_, int i_82_) {
-		((NPC) this).anIntArray10585[i] = i_81_;
-		((NPC) this).anIntArray10586[i] = i_82_;
 	}
 
 	public int method15806() {
-		return 1 + anInt10314 * -1691508299;
+		return 1 + this.anInt10314 * -1498872675 * -1691508299;
 	}
 
-	public NPC(SceneObjectManager class206) {
-		super(class206);
-		anInt10577 = 1084745433;
-		anInt10583 = -371839573;
-		anInt10576 = -1761803989;
-		anInt10575 = 1914841399;
-		aClass153_10579 = new Class153(32);
-		((NPC) this).anIntArray10585 = new int[6];
-		((NPC) this).anIntArray10586 = new int[6];
-		method16156((byte) 15);
+	public NPC(SceneObjectManager sceneobjectmanager_1) {
+		super(sceneobjectmanager_1);
+		this.method16156((byte) 15);
 	}
+
 }

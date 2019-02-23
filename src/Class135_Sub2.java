@@ -1,28 +1,25 @@
-
-/* Class135_Sub2 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import jaclib.memory.Buffer;
 
 public class Class135_Sub2 extends Class135 implements Interface14 {
+
 	int anInt9085;
 
 	public long method6() {
 		return 0L;
 	}
 
-	Class135_Sub2(Class505_Sub1 class505_sub1, int i, byte[] is, int i_0_, boolean bool) {
-		super(class505_sub1, 34962, is, i_0_, bool);
-		((Class135_Sub2) this).anInt9085 = i;
+	Class135_Sub2(Class505_Sub1 class505_sub1_1, int i_2, byte[] bytes_3, int i_4, boolean bool_5) {
+		super(class505_sub1_1, 34962, bytes_3, i_4, bool_5);
+		this.anInt9085 = i_2;
 	}
 
-	public void method106(int i, byte[] is, int i_1_) {
-		method2342(is, i_1_);
-		((Class135_Sub2) this).anInt9085 = i;
+	public void method106(int i_1, byte[] bytes_2, int i_3) {
+		this.method2342(bytes_2, i_3);
+		this.anInt9085 = i_1;
 	}
 
 	public int method59() {
-		return ((Class135_Sub2) this).anInt9085;
+		return this.anInt9085;
 	}
 
 	public long method109() {
@@ -30,45 +27,46 @@ public class Class135_Sub2 extends Class135 implements Interface14 {
 	}
 
 	void method2341() {
-		((Class135_Sub2) this).aClass505_Sub1_1620.method13601(this);
+		this.aClass505_Sub1_1620.method13601(this);
 	}
 
 	public int method1() {
-		return ((Class135_Sub2) this).anInt1622;
+		return this.anInt1622;
 	}
 
 	public int method3() {
-		return ((Class135_Sub2) this).anInt1622;
+		return this.anInt1622;
 	}
 
 	public int method4() {
-		return ((Class135_Sub2) this).anInt1622;
+		return this.anInt1622;
 	}
 
 	public int method75() {
-		return ((Class135_Sub2) this).anInt9085;
+		return this.anInt9085;
 	}
 
 	void method2345() {
-		((Class135_Sub2) this).aClass505_Sub1_1620.method13601(this);
+		this.aClass505_Sub1_1620.method13601(this);
 	}
 
-	public void method107(int i, byte[] is, int i_2_) {
-		method2342(is, i_2_);
-		((Class135_Sub2) this).anInt9085 = i;
+	public void method107(int i_1, byte[] bytes_2, int i_3) {
+		this.method2342(bytes_2, i_3);
+		this.anInt9085 = i_1;
 	}
 
-	public void method108(int i, byte[] is, int i_3_) {
-		method2342(is, i_3_);
-		((Class135_Sub2) this).anInt9085 = i;
+	public void method108(int i_1, byte[] bytes_2, int i_3) {
+		this.method2342(bytes_2, i_3);
+		this.anInt9085 = i_1;
 	}
 
-	Class135_Sub2(Class505_Sub1 class505_sub1, int i, Buffer buffer, int i_4_, boolean bool) {
-		super(class505_sub1, 34962, buffer, i_4_, bool);
-		((Class135_Sub2) this).anInt9085 = i;
+	Class135_Sub2(Class505_Sub1 class505_sub1_1, int i_2, Buffer buffer_3, int i_4, boolean bool_5) {
+		super(class505_sub1_1, 34962, buffer_3, i_4, bool_5);
+		this.anInt9085 = i_2;
 	}
 
 	void method2346() {
-		((Class135_Sub2) this).aClass505_Sub1_1620.method13601(this);
+		this.aClass505_Sub1_1620.method13601(this);
 	}
+
 }

@@ -1,893 +1,1005 @@
-
-
-/* Class425 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class ItemDefinitions implements Interface46 {
-	public int anInt5030;
-	public int anInt5031;
-	int resizeY;
+
 	ItemIndexLoader loader;
 	int id;
+	public static short[] staticColorArr256 = new short[256];
+	public int anInt5051 = 1;
 	int modelId;
-	byte[] spriteRecolorIndices;
+	public int modelZoom = 2000;
+	public int anInt5058 = 0;
+	public int anInt5045 = 0;
+	public int anInt5074 = 0;
+	public int anInt5063 = 0;
+	public int anInt5044 = 0;
 	short[] originalColors;
 	short[] modifiedColors;
-	IterableNodeMap cs2Map;
+	byte[] spriteRecolorIndices;
 	short[] originalTextures;
-	public int modelZoom;
-	public String aString5043 = "null";
-	public int anInt5044;
-	public int anInt5045;
-	public int bindTemplateId;
-	public int anInt5047;
-	int lendId;
-	public int stackable;
-	public int anInt5050;
-	public int anInt5051;
-	public boolean members;
-	public String[] groundOptions;
-	public String[] inventoryOptions;
-	public int anInt5055;
-	public int anInt5056;
-	public int anInt5058;
-	public int anInt5059;
-	public int anInt5060;
-	public int anInt5061;
-	public int anInt5062;
-	public int anInt5063;
-	public int anInt5064;
-	public int anInt5065;
-	int maleBody1;
-	int ambient;
-	public int landTemplateId;
-	int femaleBody2;
-	int maleBody3;
-	int femaleBody3;
-	int[] stackAmounts;
-	int femaleWearXOffset;
-	public int anInt5074;
-	int femaleBody1;
-	int maleWearZOffset;
-	int femaleWearZOffset;
-	public int certTemplateId;
-	int maleHead2;
-	int femaleHead1;
-	int femaleHead2;
-	int[] stackIds;
 	short[] modifiedTextures;
-	public int certId;
-	public boolean grandExchange;
-	public static short[] staticColorArr256 = new short[256];
-	int resizeX;
-	int maleWearXOffset;
-	int resizeZ;
-	int femaleWearYOffset;
-	int contrast;
-	public int team;
-	int maleWearYOffset;
-	public int anInt5095;
-	int maleHead1;
-	public int[] quests;
-	public int anInt5098;
-	int bindId;
-	int maleBody2;
-	public boolean aBool5101;
+	public String aString5043 = "null";
+	public boolean members = false;
+	public int anInt5047 = -1;
+	public int anInt5064 = -1;
+	public int anInt5065 = -1;
+	int maleBody1 = -1;
+	int maleBody2 = -1;
+	int maleBody3 = -1;
+	int femaleBody1 = -1;
+	int femaleBody2 = -1;
+	int femaleBody3 = -1;
+	int maleWearXOffset = 0;
+	int femaleWearXOffset = 0;
+	int maleWearYOffset = 0;
+	int femaleWearYOffset = 0;
+	int maleWearZOffset = 0;
+	int femaleWearZOffset = 0;
+	int maleHead1 = -1;
+	int maleHead2 = -1;
+	int femaleHead1 = -1;
+	int femaleHead2 = -1;
+	public int team = 0;
+	public String[] groundOptions;
+	IterableNodeMap cs2Map;
+	public int stackable = 0;
+	public String[] inventoryOptions;
+	public int anInt5050 = -1;
 	public int anInt5102;
+	public boolean aBool5101 = false;
+	public boolean grandExchange = false;
+	public int anInt5095 = 0;
+	public int certId = -1;
+	public int certTemplateId = -1;
+	int resizeX = 128;
+	int[] stackIds;
+	int[] stackAmounts;
+	int resizeY = 128;
+	int resizeZ = 128;
+	int ambient = 0;
+	int contrast = 0;
+	int lendId = -1;
+	public int landTemplateId = -1;
+	public int anInt5059 = -1;
+	public int anInt5055 = -1;
+	public int anInt5060 = -1;
+	public int anInt5056 = -1;
+	public int anInt5061 = -1;
+	public int anInt5062 = -1;
+	public int anInt5030 = -1;
+	public int anInt5031 = -1;
+	public int[] quests;
+	public int anInt5098 = 0;
+	int bindId = -1;
+	public int bindTemplateId = -1;
 
-	public final MeshRasterizer method7084(GraphicalRenderer class505, int i, int i_0_, PlayerAppearance class238, Animation class456, int i_1_, int i_2_, int i_3_, int i_4_, byte i_5_) {
-		if (this.stackIds != null && i_0_ > 1) {
-			int i_6_ = -1;
-			for (int i_7_ = 0; i_7_ < 10; i_7_++) {
-				if (i_0_ >= this.stackAmounts[i_7_] && 0 != this.stackAmounts[i_7_])
-					i_6_ = this.stackIds[i_7_];
-			}
-			if (i_6_ != -1)
-				return (this.loader.getItemDefinitions(i_6_, 1094056584).method7084(class505, i, 1, class238, class456, i_1_, i_2_, i_3_, i_4_, (byte) 0));
-		}
-		int i_8_ = i;
-		if (class456 != null)
-			i_8_ |= class456.method7640(-1206237088);
-		MeshRasterizer class528;
-		synchronized (((ItemIndexLoader) this.loader).aClass229_5115) {
-			class528 = ((MeshRasterizer) (((ItemIndexLoader) this.loader).aClass229_5115.get((long) (1116898509 * this.id | class505.rendererId * -413843045 << 29))));
-		}
-		if (null == class528 || class505.method8452(class528.m(), i_8_) != 0) {
-			if (null != class528)
-				i_8_ = class505.method8546(i_8_, class528.m());
-			int i_9_ = i_8_;
-			if (this.originalTextures != null)
-				i_9_ |= 0x8000;
-			if (this.originalColors != null || class238 != null)
-				i_9_ |= 0x4000;
-			if (128 != this.resizeX * -1149583549)
-				i_9_ |= 0x1;
-			if (-1149583549 * this.resizeX != 128)
-				i_9_ |= 0x2;
-			if (this.resizeX * -1149583549 != 128)
-				i_9_ |= 0x4;
-			RSMesh class157 = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), (-1002877901 * this.modelId), 0);
-			if (class157 == null)
-				return null;
-			if (class157.zoom < 13)
-				class157.upscale(2);
-			class528 = (class505.createMeshRasterizer(class157, i_9_, 924631903 * (((ItemIndexLoader) this.loader).anInt5116), 64 + this.ambient * -235550995, 850 + 1381934903 * this.contrast));
-			if (128 != -1149583549 * this.resizeX || 128 != this.resizeY * -1507136321 || 128 != this.resizeZ * 256268633)
-				class528.oa(this.resizeX * -1149583549, this.resizeY * -1507136321, this.resizeZ * 256268633);
-			if (null != this.originalColors) {
-				for (int i_10_ = 0; i_10_ < this.originalColors.length; i_10_++) {
-					if (this.spriteRecolorIndices != null && i_10_ < this.spriteRecolorIndices.length)
-						class528.X(this.originalColors[i_10_], (staticColorArr256[(this.spriteRecolorIndices[i_10_] & 0xff)]));
-					else
-						class528.X(this.originalColors[i_10_], this.modifiedColors[i_10_]);
+	public final MeshRasterizer method7084(GraphicalRenderer graphicalrenderer_1, int i_2, int i_3, PlayerAppearance playerappearance_4, Animation animation_5, int i_6, int i_7, int i_8, int i_9, byte b_10) {
+		int i_11;
+		if (this.stackIds != null && i_3 > 1) {
+			i_11 = -1;
+
+			for (int i_12 = 0; i_12 < 10; i_12++) {
+				if (i_3 >= this.stackAmounts[i_12] && this.stackAmounts[i_12] != 0) {
+					i_11 = this.stackIds[i_12];
 				}
 			}
-			if (this.originalTextures != null) {
-				for (int i_11_ = 0; i_11_ < this.originalTextures.length; i_11_++)
-					class528.W(this.originalTextures[i_11_], this.modifiedTextures[i_11_]);
+
+			if (i_11 != -1) {
+				return this.loader.getItemDefinitions(i_11, 1094056584).method7084(graphicalrenderer_1, i_2, 1, playerappearance_4, animation_5, i_6, i_7, i_8, i_9, (byte) 0);
 			}
-			if (null != class238) {
-				for (int i_12_ = 0; i_12_ < 10; i_12_++) {
-					for (int i_13_ = 0; i_13_ < (AbstractQueue_Sub1.SKIN_COLORS[i_12_]).length; i_13_++) {
-						if (class238.colors[i_12_] < (Class366.SKIN_COLORS[i_12_][i_13_]).length)
-							class528.X((AbstractQueue_Sub1.SKIN_COLORS[i_12_][i_13_]), (Class366.SKIN_COLORS[i_12_][i_13_][class238.colors[i_12_]]));
+		}
+
+		i_11 = i_2;
+		if (animation_5 != null) {
+			i_11 = i_2 | animation_5.method7640(-1206237088);
+		}
+
+		SoftCache softcache_13 = this.loader.aClass229_5115;
+		MeshRasterizer meshrasterizer_17;
+		synchronized (this.loader.aClass229_5115) {
+			meshrasterizer_17 = (MeshRasterizer) this.loader.aClass229_5115.get((long) (this.id | graphicalrenderer_1.rendererId << 29));
+		}
+
+		if (meshrasterizer_17 == null || graphicalrenderer_1.method8452(meshrasterizer_17.m(), i_11) != 0) {
+			if (meshrasterizer_17 != null) {
+				i_11 = graphicalrenderer_1.method8546(i_11, meshrasterizer_17.m());
+			}
+
+			int i_18 = i_11;
+			if (this.originalTextures != null) {
+				i_18 = i_11 | 0x8000;
+			}
+
+			if (this.originalColors != null || playerappearance_4 != null) {
+				i_18 |= 0x4000;
+			}
+
+			if (this.resizeX != 128) {
+				i_18 |= 0x1;
+			}
+
+			if (this.resizeX != 128) {
+				i_18 |= 0x2;
+			}
+
+			if (this.resizeX != 128) {
+				i_18 |= 0x4;
+			}
+
+			RSMesh rsmesh_14 = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId, 0);
+			if (rsmesh_14 == null) {
+				return null;
+			}
+
+			if (rsmesh_14.zoom < 13) {
+				rsmesh_14.upscale(2);
+			}
+
+			meshrasterizer_17 = graphicalrenderer_1.createMeshRasterizer(rsmesh_14, i_18, this.loader.anInt5116, this.ambient + 64, this.contrast * 5 + 850);
+			if (this.resizeX != 128 || this.resizeY != 128 || this.resizeZ != 128) {
+				meshrasterizer_17.oa(this.resizeX, this.resizeY, this.resizeZ);
+			}
+
+			int i_15;
+			if (this.originalColors != null) {
+				for (i_15 = 0; i_15 < this.originalColors.length; i_15++) {
+					if (this.spriteRecolorIndices != null && i_15 < this.spriteRecolorIndices.length) {
+						meshrasterizer_17.X(this.originalColors[i_15], staticColorArr256[this.spriteRecolorIndices[i_15] & 0xff]);
+					} else {
+						meshrasterizer_17.X(this.originalColors[i_15], this.modifiedColors[i_15]);
 					}
 				}
 			}
-			class528.KA(i_8_);
-			synchronized (((ItemIndexLoader) this.loader).aClass229_5115) {
-				((ItemIndexLoader) this.loader).aClass229_5115.put(class528, (long) (this.id * 1116898509 | class505.rendererId * -413843045 << 29));
+
+			if (this.originalTextures != null) {
+				for (i_15 = 0; i_15 < this.originalTextures.length; i_15++) {
+					meshrasterizer_17.W(this.originalTextures[i_15], this.modifiedTextures[i_15]);
+				}
+			}
+
+			if (playerappearance_4 != null) {
+				for (i_15 = 0; i_15 < 10; i_15++) {
+					for (int i_16 = 0; i_16 < AbstractQueue_Sub1.SKIN_COLORS[i_15].length; i_16++) {
+						if (playerappearance_4.colors[i_15] < Class366.SKIN_COLORS[i_15][i_16].length) {
+							meshrasterizer_17.X(AbstractQueue_Sub1.SKIN_COLORS[i_15][i_16], Class366.SKIN_COLORS[i_15][i_16][playerappearance_4.colors[i_15]]);
+						}
+					}
+				}
+			}
+
+			meshrasterizer_17.KA(i_11);
+			SoftCache softcache_19 = this.loader.aClass229_5115;
+			synchronized (this.loader.aClass229_5115) {
+				this.loader.aClass229_5115.put(meshrasterizer_17, (long) (this.id | graphicalrenderer_1.rendererId << 29));
 			}
 		}
-		if (null != class456 || 0 != i_4_) {
-			class528 = class528.method11289((byte) 1, i_8_, true);
-			if (class456 != null)
-				class456.method7577(class528, 0, 16711935);
-			if (i_4_ != 0)
-				class528.PA(i_1_, i_2_, i_3_, i_4_);
+
+		if (animation_5 != null || i_9 != 0) {
+			meshrasterizer_17 = meshrasterizer_17.method11289((byte) 1, i_11, true);
+			if (animation_5 != null) {
+				animation_5.method7577(meshrasterizer_17, 0, 16711935);
+			}
+
+			if (i_9 != 0) {
+				meshrasterizer_17.PA(i_6, i_7, i_8, i_9);
+			}
 		}
-		class528.KA(i);
-		return class528;
+
+		meshrasterizer_17.KA(i_2);
+		return meshrasterizer_17;
 	}
 
-	void postDecode(int i) {
-		/* empty */
+	void postDecode(int i_1) {
 	}
 
-	void decode(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_14_ = class282_sub35.readUnsignedByte();
-			if (0 == i_14_)
-				break;
-			method7089(class282_sub35, i_14_, 1695857075);
-		}
-	}
+	void decode(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
 
-	void generateBind(ItemDefinitions class425_15_, ItemDefinitions class425_16_, int i) {
-		anInt5051 = 0;
-		this.modelId = ((ItemDefinitions) class425_15_).modelId * 1;
-		modelZoom = 1 * class425_15_.modelZoom;
-		anInt5058 = 1 * class425_15_.anInt5058;
-		anInt5045 = class425_15_.anInt5045 * 1;
-		anInt5074 = 1 * class425_15_.anInt5074;
-		anInt5063 = class425_15_.anInt5063 * 1;
-		anInt5044 = 1 * class425_15_.anInt5044;
-		this.originalColors = ((ItemDefinitions) class425_16_).originalColors;
-		this.modifiedColors = ((ItemDefinitions) class425_16_).modifiedColors;
-		this.spriteRecolorIndices = ((ItemDefinitions) class425_16_).spriteRecolorIndices;
-		this.originalTextures = ((ItemDefinitions) class425_16_).originalTextures;
-		this.modifiedTextures = ((ItemDefinitions) class425_16_).modifiedTextures;
-		aString5043 = class425_16_.aString5043;
-		members = class425_16_.members;
-		anInt5047 = 1 * class425_16_.anInt5047;
-		anInt5064 = 1 * class425_16_.anInt5064;
-		anInt5065 = class425_16_.anInt5065 * 1;
-		this.maleBody1 = 1 * ((ItemDefinitions) class425_16_).maleBody1;
-		this.maleBody2 = 1 * ((ItemDefinitions) class425_16_).maleBody2;
-		this.maleBody3 = ((ItemDefinitions) class425_16_).maleBody3 * 1;
-		this.femaleBody1 = ((ItemDefinitions) class425_16_).femaleBody1 * 1;
-		this.femaleBody2 = ((ItemDefinitions) class425_16_).femaleBody2 * 1;
-		this.femaleBody3 = ((ItemDefinitions) class425_16_).femaleBody3 * 1;
-		this.maleWearXOffset = 1 * ((ItemDefinitions) class425_16_).maleWearXOffset;
-		this.femaleWearXOffset = ((ItemDefinitions) class425_16_).femaleWearXOffset * 1;
-		this.maleWearYOffset = ((ItemDefinitions) class425_16_).maleWearYOffset * 1;
-		this.femaleWearYOffset = 1 * ((ItemDefinitions) class425_16_).femaleWearYOffset;
-		this.maleWearZOffset = 1 * ((ItemDefinitions) class425_16_).maleWearZOffset;
-		this.femaleWearZOffset = ((ItemDefinitions) class425_16_).femaleWearZOffset * 1;
-		this.maleHead1 = ((ItemDefinitions) class425_16_).maleHead1 * 1;
-		this.maleHead2 = ((ItemDefinitions) class425_16_).maleHead2 * 1;
-		this.femaleHead1 = ((ItemDefinitions) class425_16_).femaleHead1 * 1;
-		this.femaleHead2 = ((ItemDefinitions) class425_16_).femaleHead2 * 1;
-		team = class425_16_.team * 1;
-		groundOptions = class425_16_.groundOptions;
-		this.cs2Map = ((ItemDefinitions) class425_16_).cs2Map;
-		stackable = 1 * class425_16_.stackable;
-		inventoryOptions = new String[5];
-		if (null != class425_16_.inventoryOptions) {
-			for (int i_17_ = 0; i_17_ < 4; i_17_++)
-				inventoryOptions[i_17_] = class425_16_.inventoryOptions[i_17_];
-		}
-		inventoryOptions[4] = Message.DISCARD_2.translate((((ItemIndexLoader) (this.loader)).language), -2102685104);
-	}
-
-	void generateCert(ItemDefinitions class425_18_, ItemDefinitions class425_19_, int i) {
-		this.modelId = 1 * ((ItemDefinitions) class425_18_).modelId;
-		modelZoom = 1 * class425_18_.modelZoom;
-		anInt5058 = 1 * class425_18_.anInt5058;
-		anInt5045 = class425_18_.anInt5045 * 1;
-		anInt5074 = class425_18_.anInt5074 * 1;
-		anInt5063 = 1 * class425_18_.anInt5063;
-		anInt5044 = class425_18_.anInt5044 * 1;
-		this.originalColors = ((ItemDefinitions) class425_18_).originalColors;
-		this.modifiedColors = ((ItemDefinitions) class425_18_).modifiedColors;
-		this.spriteRecolorIndices = ((ItemDefinitions) class425_18_).spriteRecolorIndices;
-		this.originalTextures = ((ItemDefinitions) class425_18_).originalTextures;
-		this.modifiedTextures = ((ItemDefinitions) class425_18_).modifiedTextures;
-		aString5043 = class425_19_.aString5043;
-		members = class425_19_.members;
-		anInt5051 = 1 * class425_19_.anInt5051;
-		stackable = -1948887511;
-	}
-
-	void method7089(RsByteBuffer class282_sub35, int i, int i_20_) {
-		if (1 == i)
-			this.modelId = class282_sub35.readBigSmart() * 809144059;
-		else if (i == 2)
-			aString5043 = class282_sub35.readString();
-		else if (i == 4)
-			modelZoom = class282_sub35.readUnsignedShort() * 292917833;
-		else if (i == 5)
-			anInt5058 = class282_sub35.readUnsignedShort() * 492453963;
-		else if (6 == i)
-			anInt5045 = class282_sub35.readUnsignedShort() * 619430641;
-		else if (i == 7) {
-			anInt5063 = class282_sub35.readUnsignedShort() * 834650329;
-			if (406372201 * anInt5063 > 32767)
-				anInt5063 -= -1059520512;
-		} else if (8 == i) {
-			anInt5044 = class282_sub35.readUnsignedShort() * 870855977;
-			if (-1316014311 * anInt5044 > 32767)
-				anInt5044 -= 891879424;
-		} else if (11 == i)
-			stackable = -1948887511;
-		else if (i == 12)
-			anInt5051 = class282_sub35.readInt() * 222766991;
-		else if (i == 13)
-			anInt5047 = class282_sub35.readUnsignedByte() * -1946123025;
-		else if (14 == i)
-			anInt5064 = class282_sub35.readUnsignedByte() * -247957423;
-		else if (i == 16)
-			members = true;
-		else if (i == 18)
-			anInt5050 = class282_sub35.readUnsignedShort() * -173634739;
-		else if (23 == i)
-			this.maleBody1 = class282_sub35.readBigSmart() * -342249107;
-		else if (24 == i)
-			this.maleBody2 = class282_sub35.readBigSmart() * 178028511;
-		else if (i == 25)
-			this.femaleBody1 = class282_sub35.readBigSmart() * -1963342619;
-		else if (26 == i)
-			this.femaleBody2 = class282_sub35.readBigSmart() * -691157025;
-		else if (i == 27)
-			anInt5065 = class282_sub35.readUnsignedByte() * -1540246871;
-		else if (i >= 30 && i < 35)
-			groundOptions[i - 30] = class282_sub35.readString();
-		else if (i >= 35 && i < 40)
-			inventoryOptions[i - 35] = class282_sub35.readString();
-		else if (i == 40) {
-			int i_21_ = class282_sub35.readUnsignedByte();
-			this.originalColors = new short[i_21_];
-			this.modifiedColors = new short[i_21_];
-			for (int i_22_ = 0; i_22_ < i_21_; i_22_++) {
-				this.originalColors[i_22_] = (short) class282_sub35.readUnsignedShort();
-				this.modifiedColors[i_22_] = (short) class282_sub35.readUnsignedShort();
-			}
-		} else if (41 == i) {
-			int i_23_ = class282_sub35.readUnsignedByte();
-			this.originalTextures = new short[i_23_];
-			this.modifiedTextures = new short[i_23_];
-			for (int i_24_ = 0; i_24_ < i_23_; i_24_++) {
-				this.originalTextures[i_24_] = (short) class282_sub35.readUnsignedShort();
-				this.modifiedTextures[i_24_] = (short) class282_sub35.readUnsignedShort();
-			}
-		} else if (i == 42) {
-			int i_25_ = class282_sub35.readUnsignedByte();
-			this.spriteRecolorIndices = new byte[i_25_];
-			for (int i_26_ = 0; i_26_ < i_25_; i_26_++)
-				this.spriteRecolorIndices[i_26_] = class282_sub35.readByte();
-		} else if (i == 43) {
-			anInt5102 = class282_sub35.readInt() * -796858641;
-			aBool5101 = true;
-		} else if (i == 65)
-			grandExchange = true;
-		else if (78 == i)
-			this.maleBody3 = class282_sub35.readBigSmart() * -2110709183;
-		else if (79 == i)
-			this.femaleBody3 = class282_sub35.readBigSmart() * 1292119991;
-		else if (90 == i)
-			this.maleHead1 = class282_sub35.readBigSmart() * -582979729;
-		else if (91 == i)
-			this.femaleHead1 = class282_sub35.readBigSmart() * -1176241203;
-		else if (i == 92)
-			this.maleHead2 = class282_sub35.readBigSmart() * -18677607;
-		else if (i == 93)
-			this.femaleHead2 = class282_sub35.readBigSmart() * 1320781975;
-		else if (i == 95)
-			anInt5074 = class282_sub35.readUnsignedShort() * -1869642735;
-		else if (96 == i)
-			anInt5095 = class282_sub35.readUnsignedByte() * -676128457;
-		else if (i == 97)
-			certId = class282_sub35.readUnsignedShort() * 2048174935;
-		else if (i == 98)
-			certTemplateId = class282_sub35.readUnsignedShort() * 185661005;
-		else if (i >= 100 && i < 110) {
-			if (null == this.stackIds) {
-				this.stackIds = new int[10];
-				this.stackAmounts = new int[10];
-			}
-			this.stackIds[i - 100] = class282_sub35.readUnsignedShort();
-			this.stackAmounts[i - 100] = class282_sub35.readUnsignedShort();
-		} else if (i == 110)
-			this.resizeX = class282_sub35.readUnsignedShort() * 1651983723;
-		else if (i == 111)
-			this.resizeY = class282_sub35.readUnsignedShort() * -868842689;
-		else if (i == 112)
-			this.resizeZ = class282_sub35.readUnsignedShort() * 1983536873;
-		else if (i == 113)
-			this.ambient = class282_sub35.readByte() * 259622629;
-		else if (i == 114)
-			this.contrast = class282_sub35.readByte() * 1423227043;
-		else if (i == 115)
-			team = class282_sub35.readUnsignedByte() * 1901746537;
-		else if (121 == i)
-			this.lendId = class282_sub35.readUnsignedShort() * -68529475;
-		else if (122 == i)
-			landTemplateId = class282_sub35.readUnsignedShort() * -1862010471;
-		else if (125 == i) {
-			this.maleWearXOffset = ((class282_sub35.readByte() << 2) * 1904059659);
-			this.maleWearYOffset = ((class282_sub35.readByte() << 2) * -547377553);
-			this.maleWearZOffset = ((class282_sub35.readByte() << 2) * 1878832413);
-		} else if (i == 126) {
-			this.femaleWearXOffset = ((class282_sub35.readByte() << 2) * 1252496961);
-			this.femaleWearYOffset = ((class282_sub35.readByte() << 2) * -377946013);
-			this.femaleWearZOffset = ((class282_sub35.readByte() << 2) * 1444840851);
-		} else if (127 == i) {
-			anInt5059 = class282_sub35.readUnsignedByte() * 1898017081;
-			anInt5055 = class282_sub35.readUnsignedShort() * -1370939175;
-		} else if (i == 128) {
-			anInt5060 = class282_sub35.readUnsignedByte() * 930264291;
-			anInt5056 = class282_sub35.readUnsignedShort() * 2036382095;
-		} else if (i == 129) {
-			anInt5061 = class282_sub35.readUnsignedByte() * -1908691611;
-			anInt5062 = class282_sub35.readUnsignedShort() * 988221655;
-		} else if (i == 130) {
-			anInt5030 = class282_sub35.readUnsignedByte() * -1151562079;
-			anInt5031 = class282_sub35.readUnsignedShort() * -149100495;
-		} else if (132 == i) {
-			int i_27_ = class282_sub35.readUnsignedByte();
-			quests = new int[i_27_];
-			for (int i_28_ = 0; i_28_ < i_27_; i_28_++)
-				quests[i_28_] = class282_sub35.readUnsignedShort();
-		} else if (i == 134)
-			anInt5098 = class282_sub35.readUnsignedByte() * -179097779;
-		else if (i == 139)
-			this.bindId = class282_sub35.readUnsignedShort() * 1174980021;
-		else if (i == 140)
-			bindTemplateId = class282_sub35.readUnsignedShort() * 1638301585;
-		else if (249 == i) {
-			int i_29_ = class282_sub35.readUnsignedByte();
-			if (null == this.cs2Map) {
-				int i_30_ = Class323.nextPowerOfTwo(i_29_, -1837166011);
-				this.cs2Map = new IterableNodeMap(i_30_);
-			}
-			for (int i_31_ = 0; i_31_ < i_29_; i_31_++) {
-				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_32_ = class282_sub35.read24BitUnsignedInteger();
-				Node class282;
-				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString());
-				else
-					class282 = new Class282_Sub38(class282_sub35.readInt());
-				this.cs2Map.method7765(class282, (long) i_32_);
-			}
+			this.decode(rsbytebuffer_1, i_3, 1695857075);
 		}
 	}
 
-	public ItemDefinitions method7090(int i, byte i_33_) {
-		if (this.stackIds != null && i > 1) {
-			int i_34_ = -1;
-			for (int i_35_ = 0; i_35_ < 10; i_35_++) {
-				if (i >= this.stackAmounts[i_35_] && this.stackAmounts[i_35_] != 0)
-					i_34_ = this.stackIds[i_35_];
+	void generateBind(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
+		this.anInt5051 = 0;
+		this.modelId = itemdefinitions_1.modelId;
+		this.modelZoom = itemdefinitions_1.modelZoom;
+		this.anInt5058 = itemdefinitions_1.anInt5058;
+		this.anInt5045 = itemdefinitions_1.anInt5045;
+		this.anInt5074 = itemdefinitions_1.anInt5074;
+		this.anInt5063 = itemdefinitions_1.anInt5063;
+		this.anInt5044 = itemdefinitions_1.anInt5044;
+		this.originalColors = itemdefinitions_2.originalColors;
+		this.modifiedColors = itemdefinitions_2.modifiedColors;
+		this.spriteRecolorIndices = itemdefinitions_2.spriteRecolorIndices;
+		this.originalTextures = itemdefinitions_2.originalTextures;
+		this.modifiedTextures = itemdefinitions_2.modifiedTextures;
+		this.aString5043 = itemdefinitions_2.aString5043;
+		this.members = itemdefinitions_2.members;
+		this.anInt5047 = itemdefinitions_2.anInt5047;
+		this.anInt5064 = itemdefinitions_2.anInt5064;
+		this.anInt5065 = itemdefinitions_2.anInt5065;
+		this.maleBody1 = itemdefinitions_2.maleBody1;
+		this.maleBody2 = itemdefinitions_2.maleBody2;
+		this.maleBody3 = itemdefinitions_2.maleBody3;
+		this.femaleBody1 = itemdefinitions_2.femaleBody1;
+		this.femaleBody2 = itemdefinitions_2.femaleBody2;
+		this.femaleBody3 = itemdefinitions_2.femaleBody3;
+		this.maleWearXOffset = itemdefinitions_2.maleWearXOffset;
+		this.femaleWearXOffset = itemdefinitions_2.femaleWearXOffset;
+		this.maleWearYOffset = itemdefinitions_2.maleWearYOffset;
+		this.femaleWearYOffset = itemdefinitions_2.femaleWearYOffset;
+		this.maleWearZOffset = itemdefinitions_2.maleWearZOffset;
+		this.femaleWearZOffset = itemdefinitions_2.femaleWearZOffset;
+		this.maleHead1 = itemdefinitions_2.maleHead1;
+		this.maleHead2 = itemdefinitions_2.maleHead2;
+		this.femaleHead1 = itemdefinitions_2.femaleHead1;
+		this.femaleHead2 = itemdefinitions_2.femaleHead2;
+		this.team = itemdefinitions_2.team;
+		this.groundOptions = itemdefinitions_2.groundOptions;
+		this.cs2Map = itemdefinitions_2.cs2Map;
+		this.stackable = itemdefinitions_2.stackable;
+		this.inventoryOptions = new String[5];
+		if (itemdefinitions_2.inventoryOptions != null) {
+			for (int i_4 = 0; i_4 < 4; i_4++) {
+				this.inventoryOptions[i_4] = itemdefinitions_2.inventoryOptions[i_4];
 			}
-			if (-1 != i_34_)
-				return this.loader.getItemDefinitions(i_34_, 1397135456);
 		}
+
+		this.inventoryOptions[4] = Message.DISCARD_2.translate(this.loader.language, -2102685104);
+	}
+
+	void generateCert(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
+		this.modelId = itemdefinitions_1.modelId;
+		this.modelZoom = itemdefinitions_1.modelZoom;
+		this.anInt5058 = itemdefinitions_1.anInt5058;
+		this.anInt5045 = itemdefinitions_1.anInt5045;
+		this.anInt5074 = itemdefinitions_1.anInt5074;
+		this.anInt5063 = itemdefinitions_1.anInt5063;
+		this.anInt5044 = itemdefinitions_1.anInt5044;
+		this.originalColors = itemdefinitions_1.originalColors;
+		this.modifiedColors = itemdefinitions_1.modifiedColors;
+		this.spriteRecolorIndices = itemdefinitions_1.spriteRecolorIndices;
+		this.originalTextures = itemdefinitions_1.originalTextures;
+		this.modifiedTextures = itemdefinitions_1.modifiedTextures;
+		this.aString5043 = itemdefinitions_2.aString5043;
+		this.members = itemdefinitions_2.members;
+		this.anInt5051 = itemdefinitions_2.anInt5051;
+		this.stackable = 1;
+	}
+
+	void decode(RsByteBuffer stream, int opcode, int i_3) {
+		if (opcode == 1) {
+			this.modelId = stream.readBigSmart();
+		} else if (opcode == 2) {
+			this.aString5043 = stream.readString();
+		} else if (opcode == 4) {
+			this.modelZoom = stream.readUnsignedShort();
+		} else if (opcode == 5) {
+			this.anInt5058 = stream.readUnsignedShort();
+		} else if (opcode == 6) {
+			this.anInt5045 = stream.readUnsignedShort();
+		} else if (opcode == 7) {
+			this.anInt5063 = stream.readUnsignedShort();
+			if (this.anInt5063 > 32767) {
+				this.anInt5063 -= 65536;
+			}
+		} else if (opcode == 8) {
+			this.anInt5044 = stream.readUnsignedShort();
+			if (this.anInt5044 > 32767) {
+				this.anInt5044 -= 65536;
+			}
+		} else if (opcode == 11) {
+			this.stackable = 1;
+		} else if (opcode == 12) {
+			this.anInt5051 = stream.readInt();
+		} else if (opcode == 13) {
+			this.anInt5047 = stream.readUnsignedByte();
+		} else if (opcode == 14) {
+			this.anInt5064 = stream.readUnsignedByte();
+		} else if (opcode == 16) {
+			this.members = true;
+		} else if (opcode == 18) {
+			this.anInt5050 = stream.readUnsignedShort();
+		} else if (opcode == 23) {
+			this.maleBody1 = stream.readBigSmart();
+		} else if (opcode == 24) {
+			this.maleBody2 = stream.readBigSmart();
+		} else if (opcode == 25) {
+			this.femaleBody1 = stream.readBigSmart();
+		} else if (opcode == 26) {
+			this.femaleBody2 = stream.readBigSmart();
+		} else if (opcode == 27) {
+			this.anInt5065 = stream.readUnsignedByte();
+		} else if (opcode >= 30 && opcode < 35) {
+			this.groundOptions[opcode - 30] = stream.readString();
+		} else if (opcode >= 35 && opcode < 40) {
+			this.inventoryOptions[opcode - 35] = stream.readString();
+		} else {
+			int i_4;
+			int i_5;
+			if (opcode == 40) {
+				i_4 = stream.readUnsignedByte();
+				this.originalColors = new short[i_4];
+				this.modifiedColors = new short[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.originalColors[i_5] = (short) stream.readUnsignedShort();
+					this.modifiedColors[i_5] = (short) stream.readUnsignedShort();
+				}
+			} else if (opcode == 41) {
+				i_4 = stream.readUnsignedByte();
+				this.originalTextures = new short[i_4];
+				this.modifiedTextures = new short[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.originalTextures[i_5] = (short) stream.readUnsignedShort();
+					this.modifiedTextures[i_5] = (short) stream.readUnsignedShort();
+				}
+			} else if (opcode == 42) {
+				i_4 = stream.readUnsignedByte();
+				this.spriteRecolorIndices = new byte[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.spriteRecolorIndices[i_5] = stream.readByte();
+				}
+			} else if (opcode == 43) {
+				this.anInt5102 = stream.readInt();
+				this.aBool5101 = true;
+			} else if (opcode == 65) {
+				this.grandExchange = true;
+			} else if (opcode == 78) {
+				this.maleBody3 = stream.readBigSmart();
+			} else if (opcode == 79) {
+				this.femaleBody3 = stream.readBigSmart();
+			} else if (opcode == 90) {
+				this.maleHead1 = stream.readBigSmart();
+			} else if (opcode == 91) {
+				this.femaleHead1 = stream.readBigSmart();
+			} else if (opcode == 92) {
+				this.maleHead2 = stream.readBigSmart();
+			} else if (opcode == 93) {
+				this.femaleHead2 = stream.readBigSmart();
+			} else if (opcode == 95) {
+				this.anInt5074 = stream.readUnsignedShort();
+			} else if (opcode == 96) {
+				this.anInt5095 = stream.readUnsignedByte();
+			} else if (opcode == 97) {
+				this.certId = stream.readUnsignedShort();
+			} else if (opcode == 98) {
+				this.certTemplateId = stream.readUnsignedShort();
+			} else if (opcode >= 100 && opcode < 110) {
+				if (this.stackIds == null) {
+					this.stackIds = new int[10];
+					this.stackAmounts = new int[10];
+				}
+
+				this.stackIds[opcode - 100] = stream.readUnsignedShort();
+				this.stackAmounts[opcode - 100] = stream.readUnsignedShort();
+			} else if (opcode == 110) {
+				this.resizeX = stream.readUnsignedShort();
+			} else if (opcode == 111) {
+				this.resizeY = stream.readUnsignedShort();
+			} else if (opcode == 112) {
+				this.resizeZ = stream.readUnsignedShort();
+			} else if (opcode == 113) {
+				this.ambient = stream.readByte();
+			} else if (opcode == 114) {
+				this.contrast = stream.readByte();
+			} else if (opcode == 115) {
+				this.team = stream.readUnsignedByte();
+			} else if (opcode == 121) {
+				this.lendId = stream.readUnsignedShort();
+			} else if (opcode == 122) {
+				this.landTemplateId = stream.readUnsignedShort();
+			} else if (opcode == 125) {
+				this.maleWearXOffset = stream.readByte() << 2;
+				this.maleWearYOffset = stream.readByte() << 2;
+				this.maleWearZOffset = stream.readByte() << 2;
+			} else if (opcode == 126) {
+				this.femaleWearXOffset = stream.readByte() << 2;
+				this.femaleWearYOffset = stream.readByte() << 2;
+				this.femaleWearZOffset = stream.readByte() << 2;
+			} else if (opcode == 127) {
+				this.anInt5059 = stream.readUnsignedByte();
+				this.anInt5055 = stream.readUnsignedShort();
+			} else if (opcode == 128) {
+				this.anInt5060 = stream.readUnsignedByte();
+				this.anInt5056 = stream.readUnsignedShort();
+			} else if (opcode == 129) {
+				this.anInt5061 = stream.readUnsignedByte();
+				this.anInt5062 = stream.readUnsignedShort();
+			} else if (opcode == 130) {
+				this.anInt5030 = stream.readUnsignedByte();
+				this.anInt5031 = stream.readUnsignedShort();
+			} else if (opcode == 132) {
+				i_4 = stream.readUnsignedByte();
+				this.quests = new int[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.quests[i_5] = stream.readUnsignedShort();
+				}
+			} else if (opcode == 134) {
+				this.anInt5098 = stream.readUnsignedByte();
+			} else if (opcode == 139) {
+				this.bindId = stream.readUnsignedShort();
+			} else if (opcode == 140) {
+				this.bindTemplateId = stream.readUnsignedShort();
+			} else if (opcode == 249) {
+				i_4 = stream.readUnsignedByte();
+				if (this.cs2Map == null) {
+					i_5 = Class323.nextPowerOfTwo(i_4, -1837166011);
+					this.cs2Map = new IterableNodeMap(i_5);
+				}
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					boolean bool_6 = stream.readUnsignedByte() == 1;
+					int i_7 = stream.read24BitUnsignedInteger();
+					Object obj_8;
+					if (bool_6) {
+						obj_8 = new Class282_Sub47(stream.readString());
+					} else {
+						obj_8 = new Class282_Sub38(stream.readInt());
+					}
+
+					this.cs2Map.method7765((Node) obj_8, (long) i_7);
+				}
+			}
+		}
+
+	}
+
+	public ItemDefinitions method7090(int i_1, byte b_2) {
+		if (this.stackIds != null && i_1 > 1) {
+			int i_3 = -1;
+
+			for (int i_4 = 0; i_4 < 10; i_4++) {
+				if (i_1 >= this.stackAmounts[i_4] && this.stackAmounts[i_4] != 0) {
+					i_3 = this.stackIds[i_4];
+				}
+			}
+
+			if (i_3 != -1) {
+				return this.loader.getItemDefinitions(i_3, 1397135456);
+			}
+		}
+
 		return this;
 	}
 
-	int[] renderToSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int renderAmounts, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short i_48_) {
-		RSMesh inventoryMesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), -1002877901 * this.modelId, 0);
-		if (inventoryMesh == null)
+	int[] renderToSprite(GraphicalRenderer hardwareRenderer, GraphicalRenderer softwareRenderer, int amount, int outlineSize, int shadowColor, boolean zoomedIn, int renderAmounts, FontRenderer fontRenderer, PlayerAppearance playerAppearance, short s_10) {
+		RSMesh inventoryMesh = RSMesh.decodeMesh(this.loader.meshIndex, this.modelId, 0);
+		if (inventoryMesh == null) {
 			return null;
-		if (inventoryMesh.zoom < 13)
-			inventoryMesh.upscale(2);
-		if (null != this.originalColors) {
-			for (int i = 0; i < this.originalColors.length; i++) {
-				if (null != this.spriteRecolorIndices && i < this.spriteRecolorIndices.length)
-					inventoryMesh.recolor((this.originalColors[i]), staticColorArr256[(this.spriteRecolorIndices[i]) & 0xff]);
-				else
-					inventoryMesh.recolor((this.originalColors[i]), (this.modifiedColors[i]));
+		} else {
+			if (inventoryMesh.zoom < 13) {
+				inventoryMesh.upscale(2);
+			}
+
+			int i;
+			if (this.originalColors != null) {
+				for (i = 0; i < this.originalColors.length; i++) {
+					if (this.spriteRecolorIndices != null && i < this.spriteRecolorIndices.length) {
+						inventoryMesh.recolor(this.originalColors[i], staticColorArr256[this.spriteRecolorIndices[i] & 0xff]);
+					} else {
+						inventoryMesh.recolor(this.originalColors[i], this.modifiedColors[i]);
+					}
+				}
+			}
+
+			if (this.originalTextures != null) {
+				for (i = 0; i < this.originalTextures.length; i++) {
+					inventoryMesh.retexture(this.originalTextures[i], this.modifiedTextures[i]);
+				}
+			}
+
+			if (playerAppearance != null) {
+				for (i = 0; i < 10; i++) {
+					for (int i_13 = 0; i_13 < AbstractQueue_Sub1.SKIN_COLORS[i].length; i_13++) {
+						if (playerAppearance.colors[i] < Class366.SKIN_COLORS[i][i_13].length) {
+							inventoryMesh.recolor(AbstractQueue_Sub1.SKIN_COLORS[i][i_13], Class366.SKIN_COLORS[i][i_13][playerAppearance.colors[i]]);
+						}
+					}
+				}
+			}
+
+			i = 2048;
+			boolean needsResize = false;
+			if (this.resizeX != 128 || this.resizeY != 128 || this.resizeZ != 128) {
+				needsResize = true;
+				i |= 0x7;
+			}
+
+			MeshRasterizer meshRasterizer = hardwareRenderer.createMeshRasterizer(inventoryMesh, i, 64, this.ambient + 64, this.contrast * 5 + 768);
+			if (!meshRasterizer.successful()) {
+				return null;
+			} else {
+				if (needsResize) {
+					meshRasterizer.oa(this.resizeX, this.resizeY, this.resizeZ);
+				}
+
+				NativeSprite sprite = null;
+				if (this.certTemplateId != -1) {
+					sprite = this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, this.certId, 10, 1, 0, true, true, 0, fontRenderer, playerAppearance, (byte) -12);
+					if (sprite == null) {
+						return null;
+					}
+				} else if (this.landTemplateId != -1) {
+					sprite = this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, this.lendId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 63);
+					if (sprite == null) {
+						return null;
+					}
+				} else if (this.bindTemplateId != -1) {
+					sprite = this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, this.bindId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 12);
+					if (sprite == null) {
+						return null;
+					}
+				}
+
+				int zoom;
+				if (zoomedIn) {
+					zoom = (int) (1.5D * (double) this.modelZoom) << 2;
+				} else if (outlineSize == 2) {
+					zoom = (int) ((double) this.modelZoom * 1.04D) << 2;
+				} else {
+					zoom = this.modelZoom << 2;
+				}
+
+				Matrix44Arr matrix44arr_17 = hardwareRenderer.method8453();
+				Matrix44Arr matrix44arr_18 = hardwareRenderer.method8449();
+				matrix44arr_18.method6531(16.0F, 16.0F, 512.0F, 512.0F, 50.0F, 2.14748365E9F, (float) hardwareRenderer.method8523((byte) 121).method2714(), (float) hardwareRenderer.method8523((byte) 111).method2716());
+				hardwareRenderer.method8424(matrix44arr_18);
+				hardwareRenderer.method8617(0, 0, hardwareRenderer.method8523((byte) 122).method2714(), hardwareRenderer.method8523((byte) 122).method2716());
+				Matrix44Var matrix44var_19 = new Matrix44Var();
+				hardwareRenderer.method8457(matrix44var_19);
+				hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0D));
+				hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0D), 0.95F + (float) (Math.random() / 10.0D), -50.0F, -10.0F, -50.0F);
+				Matrix44Var matrix44var_20 = hardwareRenderer.method8450();
+				matrix44var_20.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-this.anInt5074 << 3));
+				matrix44var_20.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(this.anInt5045 << 3));
+				matrix44var_20.method5219((float) (this.anInt5063 << 2), (float) ((zoom * Class382.anIntArray4657[this.anInt5058 << 3] >> 14) - meshRasterizer.YA() / 2 + (this.anInt5044 << 2)), (float) ((zoom * Class382.anIntArray4661[this.anInt5058 << 3] >> 14) + (this.anInt5044 << 2)));
+				matrix44var_20.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(this.anInt5058 << 3));
+				hardwareRenderer.r(0, 0, 36, 32);
+				hardwareRenderer.ba(2, 0);
+				hardwareRenderer.B(0, 0, 36, 32, 0, 0);
+				hardwareRenderer.c(0, -1, 0);
+				meshRasterizer.method11282(matrix44var_20, (Class275_Sub5) null, 1);
+				hardwareRenderer.method8424(matrix44arr_17);
+				int[] ints_21 = hardwareRenderer.ab(0, 0, 36, 32);
+				if (outlineSize >= 1) {
+					ints_21 = addOutlines(ints_21, -16777214, (byte) -98);
+					if (outlineSize >= 2) {
+						ints_21 = addOutlines(ints_21, -1, (byte) -71);
+					}
+				}
+
+				if (shadowColor != 0) {
+					this.addShadow(ints_21, shadowColor, (byte) -34);
+				}
+
+				if (this.landTemplateId != -1) {
+					sprite.method2752(0, 0);
+				} else if (this.bindTemplateId != -1) {
+					sprite.method2752(0, 0);
+				}
+
+				hardwareRenderer.createNativeSprite(ints_21, 0, 36, 36, 32, 1982525260).method2752(0, 0);
+				if (this.certTemplateId != -1) {
+					sprite.method2752(0, 0);
+				}
+
+				if (renderAmounts == 1 || renderAmounts == 2 && (this.stackable == 1 || amount != 1) && amount != -1) {
+					fontRenderer.renderText(Class304.method5407(amount, this.loader.language, (byte) 47), 0, 9, -256, -16777215, -418109423);
+				}
+
+				ints_21 = hardwareRenderer.ab(0, 0, 36, 32);
+
+				for (int i_22 = 0; i_22 < ints_21.length; i_22++) {
+					if ((ints_21[i_22] & 0xffffff) == 0) {
+						ints_21[i_22] = 0;
+					} else {
+						ints_21[i_22] |= ~0xffffff;
+					}
+				}
+
+				return ints_21;
 			}
 		}
-		if (null != this.originalTextures) {
-			for (int i = 0; i < this.originalTextures.length; i++)
-				inventoryMesh.retexture(this.originalTextures[i], this.modifiedTextures[i]);
-		}
-		if (null != playerAppearance) {
-			for (int i = 0; i < 10; i++) {
-				for (int i_52_ = 0; i_52_ < (AbstractQueue_Sub1.SKIN_COLORS[i]).length; i_52_++) {
-					if (playerAppearance.colors[i] < (Class366.SKIN_COLORS[i][i_52_]).length)
-						inventoryMesh.recolor((AbstractQueue_Sub1.SKIN_COLORS[i][i_52_]), (Class366.SKIN_COLORS[i][i_52_][(playerAppearance.colors[i])]));
+	}
+
+	void addShadow(int[] ints_1, int i_2, byte b_3) {
+		for (int i_4 = 31; i_4 > 0; --i_4) {
+			int i_5 = i_4 * 36;
+
+			for (int i_6 = 35; i_6 > 0; --i_6) {
+				if (ints_1[i_6 + i_5] == 0 && ints_1[i_6 + i_5 - 1 - 36] != 0) {
+					ints_1[i_5 + i_6] = i_2;
 				}
 			}
 		}
-		int mask = 2048;
-		boolean needsResize = false;
-		if (128 != this.resizeX * -1149583549 || this.resizeY * -1507136321 != 128 || 128 != 256268633 * this.resizeZ) {
-			needsResize = true;
-			mask |= 0x7;
-		}
-		MeshRasterizer meshRasterizer = hardwareRenderer.createMeshRasterizer(inventoryMesh, mask, 64, (this.ambient * -235550995 + 64), (this.contrast * 1381934903 + 768));
-		if (!meshRasterizer.successful())
-			return null;
-		if (needsResize)
-			meshRasterizer.oa(-1149583549 * this.resizeX, this.resizeY * -1507136321, 256268633 * this.resizeZ);
-		NativeSprite sprite = null;
-		if (-1 != certTemplateId * -722914683) {
-			sprite = (this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, certId * 1416589415, 10, 1, 0, true, true, 0, fontRenderer, playerAppearance, (byte) -12));
-			if (sprite == null)
-				return null;
-		} else if (-1203090775 * landTemplateId != -1) {
-			sprite = (this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, -14763883 * this.lendId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 63));
-			if (sprite == null)
-				return null;
-		} else if (-1 != 370155889 * bindTemplateId) {
-			sprite = (this.loader.renderItemSprite(hardwareRenderer, softwareRenderer, 224116893 * this.bindId, amount, outlineSize, shadowColor, false, true, 0, fontRenderer, playerAppearance, (byte) 12));
-			if (null == sprite)
-				return null;
-		}
-		int zoom;
-		if (zoomedIn)
-			zoom = (int) (1.5 * (double) (modelZoom * -1468071943)) << 2;
-		else if (outlineSize == 2)
-			zoom = (int) ((double) (modelZoom * -1468071943) * 1.04) << 2;
-		else
-			zoom = modelZoom * -1468071943 << 2;
-		Matrix44Arr class384 = hardwareRenderer.method8453();
-		Matrix44Arr class384_56_ = hardwareRenderer.method8449();
-		class384_56_.method6531(16.0F, 16.0F, 512.0F, 512.0F, 50.0F, 2.14748365E9F, (float) hardwareRenderer.method8523((byte) 121).method2714(), (float) hardwareRenderer.method8523((byte) 111).method2716());
-		hardwareRenderer.method8424(class384_56_);
-		hardwareRenderer.method8617(0, 0, hardwareRenderer.method8523((byte) 122).method2714(), hardwareRenderer.method8523((byte) 122).method2716());
-		Matrix44Var class294 = new Matrix44Var();
-		hardwareRenderer.method8457(class294);
-		hardwareRenderer.IA(0.95F + (float) (Math.random() / 10.0));
-		hardwareRenderer.m(16777215, 0.95F + (float) (Math.random() / 10.0), 0.95F + (float) (Math.random() / 10.0), -50.0F, -10.0F, -50.0F);
-		Matrix44Var class294_57_ = hardwareRenderer.method8450();
-		class294_57_.method5217(0.0F, 0.0F, 1.0F, Class382.method6508(-(anInt5074 * 701885681) << 3));
-		class294_57_.method5220(0.0F, 1.0F, 0.0F, Class382.method6508(920448529 * anInt5045 << 3));
-		class294_57_.method5219((float) (406372201 * anInt5063 << 2), (float) (((zoom * (Class382.anIntArray4657[1752402275 * anInt5058 << 3])) >> 14) - meshRasterizer.YA() / 2 + (-1316014311 * anInt5044 << 2)), (float) ((((Class382.anIntArray4661[anInt5058 * 1752402275 << 3]) * zoom) >> 14) + (-1316014311 * anInt5044 << 2)));
-		class294_57_.method5220(1.0F, 0.0F, 0.0F, Class382.method6508(1752402275 * anInt5058 << 3));
-		hardwareRenderer.r(0, 0, 36, 32);
-		hardwareRenderer.ba(2, 0);
-		hardwareRenderer.B(0, 0, 36, 32, 0, 0);
-		hardwareRenderer.c(0, -1, 0);
-		meshRasterizer.method11282(class294_57_, null, 1);
-		hardwareRenderer.method8424(class384);
-		int[] pixels = hardwareRenderer.ab(0, 0, 36, 32);
-		if (outlineSize >= 1) {
-			pixels = addOutlines(pixels, -16777214, (byte) -98);
-			if (outlineSize >= 2)
-				pixels = addOutlines(pixels, -1, (byte) -71);
-		}
-		if (shadowColor != 0)
-			addShadow(pixels, shadowColor, (byte) -34);
-		if (-1 != landTemplateId * -1203090775)
-			sprite.method2752(0, 0);
-		else if (bindTemplateId * 370155889 != -1)
-			sprite.method2752(0, 0);
-		hardwareRenderer.createNativeSprite(pixels, 0, 36, 36, 32, 1982525260).method2752(0, 0);
-		if (certTemplateId * -722914683 != -1)
-			sprite.method2752(0, 0);
-		if (1 == renderAmounts || 2 == renderAmounts && (1 == stackable * 318481945 || 1 != amount) && amount != -1)
-			fontRenderer.renderText(Class304.method5407(amount, (((ItemIndexLoader) (this.loader)).language), (byte) 47), 0, 9, -256, -16777215, -418109423);
-		pixels = hardwareRenderer.ab(0, 0, 36, 32);
-		for (int i = 0; i < pixels.length; i++) {
-			if ((pixels[i] & 0xffffff) == 0)
-				pixels[i] = 0;
-			else
-				pixels[i] |= ~0xffffff;
-		}
-		return pixels;
+
 	}
 
-	void addShadow(int[] is, int i, byte i_63_) {
-		for (int i_64_ = 31; i_64_ > 0; i_64_--) {
-			int i_65_ = i_64_ * 36;
-			for (int i_66_ = 35; i_66_ > 0; i_66_--) {
-				if (0 == is[i_66_ + i_65_] && is[i_66_ + i_65_ - 1 - 36] != 0)
-					is[i_65_ + i_66_] = i;
-			}
-		}
-	}
-
-	public final boolean bodyMeshesReady(boolean female, MeshModifier modifier, int i) {
-		int body1;
-		int body2;
-		int body3;
-		if (female) {
-			if (null != modifier && null != modifier.femaleBody) {
-				body1 = modifier.femaleBody[0];
-				body2 = modifier.femaleBody[1];
-				body3 = modifier.femaleBody[2];
+	public final boolean bodyMeshesReady(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+		int i_4;
+		int i_5;
+		int i_6;
+		if (bool_1) {
+			if (meshmodifier_2 != null && meshmodifier_2.femaleBody != null) {
+				i_4 = meshmodifier_2.femaleBody[0];
+				i_5 = meshmodifier_2.femaleBody[1];
+				i_6 = meshmodifier_2.femaleBody[2];
 			} else {
-				body1 = this.femaleBody1 * -2090968851;
-				body2 = -1259031521 * this.femaleBody2;
-				body3 = -1802576377 * this.femaleBody3;
+				i_4 = this.femaleBody1;
+				i_5 = this.femaleBody2;
+				i_6 = this.femaleBody3;
 			}
-		} else if (modifier != null && null != modifier.maleBody) {
-			body1 = modifier.maleBody[0];
-			body2 = modifier.maleBody[1];
-			body3 = modifier.maleBody[2];
+		} else if (meshmodifier_2 != null && meshmodifier_2.maleBody != null) {
+			i_4 = meshmodifier_2.maleBody[0];
+			i_5 = meshmodifier_2.maleBody[1];
+			i_6 = meshmodifier_2.maleBody[2];
 		} else {
-			body1 = -525270939 * this.maleBody1;
-			body2 = -931922913 * this.maleBody2;
-			body3 = this.maleBody3 * -562041407;
+			i_4 = this.maleBody1;
+			i_5 = this.maleBody2;
+			i_6 = this.maleBody3;
 		}
-		if (body1 == -1)
+
+		if (i_4 == -1) {
 			return true;
-		boolean hasMesh = true;
-		if (!((ItemIndexLoader) this.loader).meshIndex.load(body1, 0))
-			hasMesh = false;
-		if (body2 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body2, 0))
-			hasMesh = false;
-		if (body3 != -1 && !((ItemIndexLoader) this.loader).meshIndex.load(body3, 0))
-			hasMesh = false;
-		return hasMesh;
-	}
-
-	public final RSMesh getBodyMesh(boolean female, MeshModifier modifier, int i) {
-		int body1;
-		int body2;
-		int body3;
-		if (female) {
-			if (modifier != null && modifier.femaleBody != null) {
-				body1 = modifier.femaleBody[0];
-				body2 = modifier.femaleBody[1];
-				body3 = modifier.femaleBody[2];
-			} else {
-				body1 = this.femaleBody1 * -2090968851;
-				body2 = this.femaleBody2 * -1259031521;
-				body3 = this.femaleBody3 * -1802576377;
-			}
-		} else if (modifier != null && null != modifier.maleBody) {
-			body1 = modifier.maleBody[0];
-			body2 = modifier.maleBody[1];
-			body3 = modifier.maleBody[2];
 		} else {
-			body1 = -525270939 * this.maleBody1;
-			body2 = -931922913 * this.maleBody2;
-			body3 = -562041407 * this.maleBody3;
-		}
-		if (-1 == body1)
-			return null;
-		RSMesh bodyMesh = RSMesh.decodeMesh((((ItemIndexLoader) (this.loader)).meshIndex), body1, 0);
-		if (bodyMesh == null)
-			return null;
-		if (bodyMesh.zoom < 13)
-			bodyMesh.upscale(2);
-		if (body2 != -1) {
-			RSMesh body2Mesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), body2, 0);
-			if (body2Mesh.zoom < 13)
-				body2Mesh.upscale(2);
-			if (body3 != -1) {
-				RSMesh body3Mesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), body3, 0);
-				if (body3Mesh.zoom < 13)
-					body3Mesh.upscale(2);
-				RSMesh[] meshes = { bodyMesh, body2Mesh, body3Mesh };
-				bodyMesh = new RSMesh(meshes, 3);
-			} else {
-				RSMesh[] meshes = { bodyMesh, body2Mesh };
-				bodyMesh = new RSMesh(meshes, 2);
+			boolean bool_7 = true;
+			if (!this.loader.meshIndex.load(i_4, 0)) {
+				bool_7 = false;
 			}
+
+			if (i_5 != -1 && !this.loader.meshIndex.load(i_5, 0)) {
+				bool_7 = false;
+			}
+
+			if (i_6 != -1 && !this.loader.meshIndex.load(i_6, 0)) {
+				bool_7 = false;
+			}
+
+			return bool_7;
 		}
-		if (!female && (0 != -1021444445 * this.maleWearXOffset || -988581745 * this.maleWearYOffset != 0 || this.maleWearZOffset * 1784001845 != 0))
-			bodyMesh.method2712(this.maleWearXOffset * -1021444445, -988581745 * this.maleWearYOffset, this.maleWearZOffset * 1784001845);
-		if (female && (0 != -958170687 * this.femaleWearXOffset || this.femaleWearYOffset * -710311605 != 0 || 362438811 * this.femaleWearZOffset != 0))
-			bodyMesh.method2712(this.femaleWearXOffset * -958170687, -710311605 * this.femaleWearYOffset, this.femaleWearZOffset * 362438811);
-		if (this.originalColors != null) {
-			short[] colMod;
-			if (null != modifier && modifier.modifiedColors != null)
-				colMod = modifier.modifiedColors;
-			else
-				colMod = this.modifiedColors;
-			for (int i_76_ = 0; i_76_ < this.originalColors.length; i_76_++)
-				bodyMesh.recolor(this.originalColors[i_76_], colMod[i_76_]);
-		}
-		if (this.originalTextures != null) {
-			short[] texMod;
-			if (null != modifier && null != modifier.modifiedTextures)
-				texMod = modifier.modifiedTextures;
-			else
-				texMod = this.modifiedTextures;
-			for (int i_77_ = 0; i_77_ < this.originalTextures.length; i_77_++)
-				bodyMesh.retexture(this.originalTextures[i_77_], texMod[i_77_]);
-		}
-		return bodyMesh;
 	}
 
-	public final boolean headMeshesReady(boolean female, MeshModifier modifier, int i) {
-		int head1;
-		int head2;
-		if (female) {
-			if (modifier != null && null != modifier.femaleHeads) {
-				head1 = modifier.femaleHeads[0];
-				head2 = modifier.femaleHeads[1];
+	public final RSMesh getBodyMesh(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+		int i_4;
+		int i_5;
+		int i_6;
+		if (bool_1) {
+			if (meshmodifier_2 != null && meshmodifier_2.femaleBody != null) {
+				i_4 = meshmodifier_2.femaleBody[0];
+				i_5 = meshmodifier_2.femaleBody[1];
+				i_6 = meshmodifier_2.femaleBody[2];
 			} else {
-				head1 = -1705416443 * this.femaleHead1;
-				head2 = this.femaleHead2 * -1871546585;
+				i_4 = this.femaleBody1;
+				i_5 = this.femaleBody2;
+				i_6 = this.femaleBody3;
 			}
-		} else if (null != modifier && null != modifier.maleHeads) {
-			head1 = modifier.maleHeads[0];
-			head2 = modifier.maleHeads[1];
+		} else if (meshmodifier_2 != null && meshmodifier_2.maleBody != null) {
+			i_4 = meshmodifier_2.maleBody[0];
+			i_5 = meshmodifier_2.maleBody[1];
+			i_6 = meshmodifier_2.maleBody[2];
 		} else {
-			head1 = this.maleHead1 * -603336817;
-			head2 = this.maleHead2 * -613723223;
+			i_4 = this.maleBody1;
+			i_5 = this.maleBody2;
+			i_6 = this.maleBody3;
 		}
-		if (head1 == -1)
-			return true;
-		boolean hasMesh = true;
-		if (!((ItemIndexLoader) this.loader).meshIndex.load(head1, 0))
-			hasMesh = false;
-		if (-1 != head2 && !((ItemIndexLoader) this.loader).meshIndex.load(head2, 0))
-			hasMesh = false;
-		return hasMesh;
-	}
 
-	public int method7099(int i, int i_81_, int i_82_) {
-		if (this.cs2Map == null)
-			return i_81_;
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) this.cs2Map.method7754((long) i));
-		if (null == class282_sub38)
-			return i_81_;
-		return -570797415 * class282_sub38.anInt8002;
-	}
-
-	public String method7101(int i, String string, int i_83_) {
-		if (null == this.cs2Map)
-			return string;
-		Class282_Sub47 class282_sub47 = ((Class282_Sub47) this.cs2Map.method7754((long) i));
-		if (class282_sub47 == null)
-			return string;
-		return (String) class282_sub47.anObject8068;
-	}
-
-	static int[] addOutlines(int[] pixels, int color, byte i_163_) {
-		int[] outlinedPixels = new int[1152];
-		int index = 0;
-		for (int x = 0; x < 32; x++) {
-			for (int y = 0; y < 36; y++) {
-				int pixel = pixels[index];
-				if (0 == pixel) {
-					if (y > 0 && pixels[index - 1] != 0)
-						pixel = color;
-					else if (x > 0 && 0 != pixels[index - 36])
-						pixel = color;
-					else if (y < 35 && pixels[index + 1] != 0)
-						pixel = color;
-					else if (x < 31 && pixels[index + 36] != 0)
-						pixel = color;
+		if (i_4 == -1) {
+			return null;
+		} else {
+			RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_4, 0);
+			if (rsmesh_7 == null) {
+				return null;
+			} else {
+				if (rsmesh_7.zoom < 13) {
+					rsmesh_7.upscale(2);
 				}
-				outlinedPixels[index++] = pixel;
+
+				if (i_5 != -1) {
+					RSMesh rsmesh_8 = RSMesh.decodeMesh(this.loader.meshIndex, i_5, 0);
+					if (rsmesh_8.zoom < 13) {
+						rsmesh_8.upscale(2);
+					}
+
+					if (i_6 != -1) {
+						RSMesh rsmesh_9 = RSMesh.decodeMesh(this.loader.meshIndex, i_6, 0);
+						if (rsmesh_9.zoom < 13) {
+							rsmesh_9.upscale(2);
+						}
+
+						RSMesh[] arr_10 = new RSMesh[] { rsmesh_7, rsmesh_8, rsmesh_9 };
+						rsmesh_7 = new RSMesh(arr_10, 3);
+					} else {
+						RSMesh[] arr_13 = new RSMesh[] { rsmesh_7, rsmesh_8 };
+						rsmesh_7 = new RSMesh(arr_13, 2);
+					}
+				}
+
+				if (!bool_1 && (this.maleWearXOffset != 0 || this.maleWearYOffset != 0 || this.maleWearZOffset != 0)) {
+					rsmesh_7.method2712(this.maleWearXOffset, this.maleWearYOffset, this.maleWearZOffset);
+				}
+
+				if (bool_1 && (this.femaleWearXOffset != 0 || this.femaleWearYOffset != 0 || this.femaleWearZOffset != 0)) {
+					rsmesh_7.method2712(this.femaleWearXOffset, this.femaleWearYOffset, this.femaleWearZOffset);
+				}
+
+				int i_11;
+				short[] shorts_12;
+				if (this.originalColors != null) {
+					if (meshmodifier_2 != null && meshmodifier_2.modifiedColors != null) {
+						shorts_12 = meshmodifier_2.modifiedColors;
+					} else {
+						shorts_12 = this.modifiedColors;
+					}
+
+					for (i_11 = 0; i_11 < this.originalColors.length; i_11++) {
+						rsmesh_7.recolor(this.originalColors[i_11], shorts_12[i_11]);
+					}
+				}
+
+				if (this.originalTextures != null) {
+					if (meshmodifier_2 != null && meshmodifier_2.modifiedTextures != null) {
+						shorts_12 = meshmodifier_2.modifiedTextures;
+					} else {
+						shorts_12 = this.modifiedTextures;
+					}
+
+					for (i_11 = 0; i_11 < this.originalTextures.length; i_11++) {
+						rsmesh_7.retexture(this.originalTextures[i_11], shorts_12[i_11]);
+					}
+				}
+
+				return rsmesh_7;
 			}
 		}
-		return outlinedPixels;
 	}
 
-	ItemDefinitions() {
-		modelZoom = 1720113744;
-		anInt5058 = 0;
-		anInt5045 = 0;
-		anInt5074 = 0;
-		anInt5063 = 0;
-		anInt5044 = 0;
-		stackable = 0;
-		anInt5050 = 173634739;
-		anInt5051 = 222766991;
-		members = false;
-		anInt5055 = 1370939175;
-		anInt5056 = -2036382095;
-		anInt5062 = -988221655;
-		anInt5031 = 149100495;
-		anInt5059 = -1898017081;
-		anInt5060 = -930264291;
-		anInt5061 = 1908691611;
-		anInt5030 = 1151562079;
-		anInt5047 = 1946123025;
-		anInt5064 = 247957423;
-		anInt5065 = 1540246871;
-		this.maleBody1 = 342249107;
-		this.maleBody2 = -178028511;
-		this.femaleBody1 = 1963342619;
-		this.femaleBody2 = 691157025;
-		this.maleBody3 = 2110709183;
-		this.femaleBody3 = -1292119991;
-		this.maleWearXOffset = 0;
-		this.femaleWearXOffset = 0;
-		this.maleWearYOffset = 0;
-		this.femaleWearYOffset = 0;
-		this.maleWearZOffset = 0;
-		this.femaleWearZOffset = 0;
-		this.maleHead1 = 582979729;
-		this.maleHead2 = 18677607;
-		this.femaleHead1 = 1176241203;
-		this.femaleHead2 = -1320781975;
-		certId = -2048174935;
-		certTemplateId = -185661005;
-		this.lendId = 68529475;
-		landTemplateId = 1862010471;
-		this.resizeX = 1000519040;
-		this.resizeY = 457285504;
-		this.resizeZ = 489649280;
-		this.ambient = 0;
-		this.contrast = 0;
-		team = 0;
-		grandExchange = false;
-		anInt5095 = 0;
-		anInt5098 = 0;
-		this.bindId = -1174980021;
-		bindTemplateId = -1638301585;
-		aBool5101 = false;
-	}
-
-	public final RSMesh getHeadMesh(boolean female, MeshModifier modifier, int i) {
-		int head1;
-		int head2;
-		if (female) {
-			if (null != modifier && modifier.femaleHeads != null) {
-				head1 = modifier.femaleHeads[0];
-				head2 = modifier.femaleHeads[1];
+	public final boolean headMeshesReady(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+		int i_4;
+		int i_5;
+		if (bool_1) {
+			if (meshmodifier_2 != null && meshmodifier_2.femaleHeads != null) {
+				i_4 = meshmodifier_2.femaleHeads[0];
+				i_5 = meshmodifier_2.femaleHeads[1];
 			} else {
-				head1 = this.femaleHead1 * -1705416443;
-				head2 = this.femaleHead2 * -1871546585;
+				i_4 = this.femaleHead1;
+				i_5 = this.femaleHead2;
 			}
-		} else if (modifier != null && null != modifier.maleHeads) {
-			head1 = modifier.maleHeads[0];
-			head2 = modifier.maleHeads[1];
+		} else if (meshmodifier_2 != null && meshmodifier_2.maleHeads != null) {
+			i_4 = meshmodifier_2.maleHeads[0];
+			i_5 = meshmodifier_2.maleHeads[1];
 		} else {
-			head1 = -603336817 * this.maleHead1;
-			head2 = this.maleHead2 * -613723223;
+			i_4 = this.maleHead1;
+			i_5 = this.maleHead2;
 		}
-		if (head1 == -1)
+
+		if (i_4 == -1) {
+			return true;
+		} else {
+			boolean bool_6 = true;
+			if (!this.loader.meshIndex.load(i_4, 0)) {
+				bool_6 = false;
+			}
+
+			if (i_5 != -1 && !this.loader.meshIndex.load(i_5, 0)) {
+				bool_6 = false;
+			}
+
+			return bool_6;
+		}
+	}
+
+	public int method7099(int i_1, int i_2, int i_3) {
+		if (this.cs2Map == null) {
+			return i_2;
+		} else {
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.cs2Map.method7754((long) i_1);
+			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
+		}
+	}
+
+	public String method7101(int i_1, String string_2, int i_3) {
+		if (this.cs2Map == null) {
+			return string_2;
+		} else {
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.cs2Map.method7754((long) i_1);
+			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
+		}
+	}
+
+	static int[] addOutlines(int[] ints_0, int i_1, byte b_2) {
+		int[] ints_3 = new int[1152];
+		int i_4 = 0;
+
+		for (int i_5 = 0; i_5 < 32; i_5++) {
+			for (int i_6 = 0; i_6 < 36; i_6++) {
+				int i_7 = ints_0[i_4];
+				if (i_7 == 0) {
+					if (i_6 > 0 && ints_0[i_4 - 1] != 0) {
+						i_7 = i_1;
+					} else if (i_5 > 0 && ints_0[i_4 - 36] != 0) {
+						i_7 = i_1;
+					} else if (i_6 < 35 && ints_0[i_4 + 1] != 0) {
+						i_7 = i_1;
+					} else if (i_5 < 31 && ints_0[i_4 + 36] != 0) {
+						i_7 = i_1;
+					}
+				}
+
+				ints_3[i_4++] = i_7;
+			}
+		}
+
+		return ints_3;
+	}
+
+	public final RSMesh getHeadMesh(boolean bool_1, MeshModifier meshmodifier_2, int i_3) {
+		int i_4;
+		int i_5;
+		if (bool_1) {
+			if (meshmodifier_2 != null && meshmodifier_2.femaleHeads != null) {
+				i_4 = meshmodifier_2.femaleHeads[0];
+				i_5 = meshmodifier_2.femaleHeads[1];
+			} else {
+				i_4 = this.femaleHead1;
+				i_5 = this.femaleHead2;
+			}
+		} else if (meshmodifier_2 != null && meshmodifier_2.maleHeads != null) {
+			i_4 = meshmodifier_2.maleHeads[0];
+			i_5 = meshmodifier_2.maleHeads[1];
+		} else {
+			i_4 = this.maleHead1;
+			i_5 = this.maleHead2;
+		}
+
+		if (i_4 == -1) {
 			return null;
-		RSMesh head1Mesh = RSMesh.decodeMesh((((ItemIndexLoader) (this.loader)).meshIndex), head1, 0);
-		if (head1Mesh.zoom < 13)
-			head1Mesh.upscale(2);
-		if (-1 != head2) {
-			RSMesh head2Mesh = RSMesh.decodeMesh((((ItemIndexLoader) this.loader).meshIndex), head2, 0);
-			if (head2Mesh.zoom < 13)
-				head2Mesh.upscale(2);
-			RSMesh[] meshes = { head1Mesh, head2Mesh };
-			head1Mesh = new RSMesh(meshes, 2);
+		} else {
+			RSMesh rsmesh_6 = RSMesh.decodeMesh(this.loader.meshIndex, i_4, 0);
+			if (rsmesh_6.zoom < 13) {
+				rsmesh_6.upscale(2);
+			}
+
+			if (i_5 != -1) {
+				RSMesh rsmesh_7 = RSMesh.decodeMesh(this.loader.meshIndex, i_5, 0);
+				if (rsmesh_7.zoom < 13) {
+					rsmesh_7.upscale(2);
+				}
+
+				RSMesh[] arr_8 = new RSMesh[] { rsmesh_6, rsmesh_7 };
+				rsmesh_6 = new RSMesh(arr_8, 2);
+			}
+
+			int i_9;
+			short[] shorts_10;
+			if (this.originalColors != null) {
+				if (meshmodifier_2 != null && meshmodifier_2.modifiedColors != null) {
+					shorts_10 = meshmodifier_2.modifiedColors;
+				} else {
+					shorts_10 = this.modifiedColors;
+				}
+
+				for (i_9 = 0; i_9 < this.originalColors.length; i_9++) {
+					rsmesh_6.recolor(this.originalColors[i_9], shorts_10[i_9]);
+				}
+			}
+
+			if (this.originalTextures != null) {
+				if (meshmodifier_2 != null && meshmodifier_2.modifiedTextures != null) {
+					shorts_10 = meshmodifier_2.modifiedTextures;
+				} else {
+					shorts_10 = this.modifiedTextures;
+				}
+
+				for (i_9 = 0; i_9 < this.originalTextures.length; i_9++) {
+					rsmesh_6.retexture(this.originalTextures[i_9], shorts_10[i_9]);
+				}
+			}
+
+			return rsmesh_6;
 		}
-		if (null != this.originalColors) {
-			short[] colMod;
-			if (null != modifier && modifier.modifiedColors != null)
-				colMod = modifier.modifiedColors;
-			else
-				colMod = this.modifiedColors;
-			for (int i_209_ = 0; i_209_ < this.originalColors.length; i_209_++)
-				head1Mesh.recolor(this.originalColors[i_209_], colMod[i_209_]);
-		}
-		if (this.originalTextures != null) {
-			short[] texMod;
-			if (modifier != null && null != modifier.modifiedTextures)
-				texMod = modifier.modifiedTextures;
-			else
-				texMod = this.modifiedTextures;
-			for (int i_210_ = 0; i_210_ < this.originalTextures.length; i_210_++)
-				head1Mesh.retexture(this.originalTextures[i_210_], texMod[i_210_]);
-		}
-		return head1Mesh;
 	}
 
-	void generateLend(ItemDefinitions class425_217_, ItemDefinitions class425_218_, int i) {
-		anInt5051 = 0;
-		this.modelId = 1 * ((ItemDefinitions) class425_217_).modelId;
-		modelZoom = class425_217_.modelZoom * 1;
-		anInt5058 = 1 * class425_217_.anInt5058;
-		anInt5045 = 1 * class425_217_.anInt5045;
-		anInt5074 = 1 * class425_217_.anInt5074;
-		anInt5063 = class425_217_.anInt5063 * 1;
-		anInt5044 = 1 * class425_217_.anInt5044;
-		this.originalColors = ((ItemDefinitions) class425_218_).originalColors;
-		this.modifiedColors = ((ItemDefinitions) class425_218_).modifiedColors;
-		this.spriteRecolorIndices = ((ItemDefinitions) class425_218_).spriteRecolorIndices;
-		this.originalTextures = ((ItemDefinitions) class425_218_).originalTextures;
-		this.modifiedTextures = ((ItemDefinitions) class425_218_).modifiedTextures;
-		aString5043 = class425_218_.aString5043;
-		members = class425_218_.members;
-		anInt5047 = 1 * class425_218_.anInt5047;
-		anInt5064 = 1 * class425_218_.anInt5064;
-		anInt5065 = class425_218_.anInt5065 * 1;
-		this.maleBody1 = 1 * ((ItemDefinitions) class425_218_).maleBody1;
-		this.maleBody2 = 1 * ((ItemDefinitions) class425_218_).maleBody2;
-		this.maleBody3 = ((ItemDefinitions) class425_218_).maleBody3 * 1;
-		this.femaleBody1 = 1 * ((ItemDefinitions) class425_218_).femaleBody1;
-		this.femaleBody2 = 1 * ((ItemDefinitions) class425_218_).femaleBody2;
-		this.femaleBody3 = 1 * ((ItemDefinitions) class425_218_).femaleBody3;
-		this.maleWearXOffset = 1 * ((ItemDefinitions) class425_218_).maleWearXOffset;
-		this.femaleWearXOffset = ((ItemDefinitions) class425_218_).femaleWearXOffset * 1;
-		this.maleWearYOffset = 1 * ((ItemDefinitions) class425_218_).maleWearYOffset;
-		this.femaleWearYOffset = ((ItemDefinitions) class425_218_).femaleWearYOffset * 1;
-		this.maleWearZOffset = ((ItemDefinitions) class425_218_).maleWearZOffset * 1;
-		this.femaleWearZOffset = 1 * ((ItemDefinitions) class425_218_).femaleWearZOffset;
-		this.maleHead1 = ((ItemDefinitions) class425_218_).maleHead1 * 1;
-		this.maleHead2 = ((ItemDefinitions) class425_218_).maleHead2 * 1;
-		this.femaleHead1 = ((ItemDefinitions) class425_218_).femaleHead1 * 1;
-		this.femaleHead2 = 1 * ((ItemDefinitions) class425_218_).femaleHead2;
-		team = class425_218_.team * 1;
-		groundOptions = class425_218_.groundOptions;
-		this.cs2Map = ((ItemDefinitions) class425_218_).cs2Map;
-		inventoryOptions = new String[5];
-		if (null != class425_218_.inventoryOptions) {
-			for (int i_219_ = 0; i_219_ < 4; i_219_++)
-				inventoryOptions[i_219_] = class425_218_.inventoryOptions[i_219_];
+	void generateLend(ItemDefinitions itemdefinitions_1, ItemDefinitions itemdefinitions_2, int i_3) {
+		this.anInt5051 = 0;
+		this.modelId = itemdefinitions_1.modelId;
+		this.modelZoom = itemdefinitions_1.modelZoom;
+		this.anInt5058 = itemdefinitions_1.anInt5058;
+		this.anInt5045 = itemdefinitions_1.anInt5045;
+		this.anInt5074 = itemdefinitions_1.anInt5074;
+		this.anInt5063 = itemdefinitions_1.anInt5063;
+		this.anInt5044 = itemdefinitions_1.anInt5044;
+		this.originalColors = itemdefinitions_2.originalColors;
+		this.modifiedColors = itemdefinitions_2.modifiedColors;
+		this.spriteRecolorIndices = itemdefinitions_2.spriteRecolorIndices;
+		this.originalTextures = itemdefinitions_2.originalTextures;
+		this.modifiedTextures = itemdefinitions_2.modifiedTextures;
+		this.aString5043 = itemdefinitions_2.aString5043;
+		this.members = itemdefinitions_2.members;
+		this.anInt5047 = itemdefinitions_2.anInt5047;
+		this.anInt5064 = itemdefinitions_2.anInt5064;
+		this.anInt5065 = itemdefinitions_2.anInt5065;
+		this.maleBody1 = itemdefinitions_2.maleBody1;
+		this.maleBody2 = itemdefinitions_2.maleBody2;
+		this.maleBody3 = itemdefinitions_2.maleBody3;
+		this.femaleBody1 = itemdefinitions_2.femaleBody1;
+		this.femaleBody2 = itemdefinitions_2.femaleBody2;
+		this.femaleBody3 = itemdefinitions_2.femaleBody3;
+		this.maleWearXOffset = itemdefinitions_2.maleWearXOffset;
+		this.femaleWearXOffset = itemdefinitions_2.femaleWearXOffset;
+		this.maleWearYOffset = itemdefinitions_2.maleWearYOffset;
+		this.femaleWearYOffset = itemdefinitions_2.femaleWearYOffset;
+		this.maleWearZOffset = itemdefinitions_2.maleWearZOffset;
+		this.femaleWearZOffset = itemdefinitions_2.femaleWearZOffset;
+		this.maleHead1 = itemdefinitions_2.maleHead1;
+		this.maleHead2 = itemdefinitions_2.maleHead2;
+		this.femaleHead1 = itemdefinitions_2.femaleHead1;
+		this.femaleHead2 = itemdefinitions_2.femaleHead2;
+		this.team = itemdefinitions_2.team;
+		this.groundOptions = itemdefinitions_2.groundOptions;
+		this.cs2Map = itemdefinitions_2.cs2Map;
+		this.inventoryOptions = new String[5];
+		if (itemdefinitions_2.inventoryOptions != null) {
+			for (int i_4 = 0; i_4 < 4; i_4++) {
+				this.inventoryOptions[i_4] = itemdefinitions_2.inventoryOptions[i_4];
+			}
 		}
-		inventoryOptions[4] = Message.DISCARD.translate((((ItemIndexLoader) (this.loader)).language), -898798531);
+
+		this.inventoryOptions[4] = Message.DISCARD.translate(this.loader.language, -898798531);
 	}
 
-	static final void method7140(Animable class521_sub1_sub1_sub2, Animable class521_sub1_sub1_sub2_243_, int i, int i_244_, int i_245_, int i_246_, int i_247_, int i_248_, int i_249_, byte i_250_) {
-		int i_251_ = class521_sub1_sub1_sub2_243_.method15899(-525246876);
-		if (-1 != i_251_) {
-			NativeSprite class160 = (NativeSprite) client.aClass229_7204.get((long) i_251_);
-			if (class160 == null) {
-				Class91[] class91s = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_251_, 0);
-				if (null == class91s)
+	static final void method7140(Animable animable_0, Animable animable_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, byte b_9) {
+		int i_10 = animable_1.method15899(-525246876);
+		if (i_10 != -1) {
+			NativeSprite nativesprite_11 = (NativeSprite) client.aClass229_7204.get((long) i_10);
+			if (nativesprite_11 == null) {
+				Class91[] arr_12 = Class91.method1514(IndexLoaders.SPRITES_INDEX, i_10, 0);
+				if (arr_12 == null) {
 					return;
-				class160 = Renderers.SOFTWARE_RENDERER.method8444(class91s[0], true);
-				client.aClass229_7204.put(class160, (long) i_251_);
+				}
+
+				nativesprite_11 = Renderers.SOFTWARE_RENDERER.method8444(arr_12[0], true);
+				client.aClass229_7204.put(nativesprite_11, (long) i_10);
 			}
-			Vector3 class385 = class521_sub1_sub1_sub2.method11166().aClass385_3595;
-			Class210.method3612(class521_sub1_sub1_sub2.plane, (int) class385.x, (int) class385.z, (class521_sub1_sub1_sub2.getSize(828768449) * 256), 0, false, (byte) 2);
-			int i_252_ = (int) ((float) i_244_ + client.aFloatArray7292[0] - 18.0F);
-			int i_253_ = (int) ((float) i_245_ + client.aFloatArray7292[1] - 16.0F - 54.0F);
-			i_252_ += 18 * (i / 4);
-			i_253_ += i % 4 * 18;
-			class160.method2752(i_252_, i_253_);
-			if (class521_sub1_sub1_sub2 == class521_sub1_sub1_sub2_243_)
-				Renderers.SOFTWARE_RENDERER.method8562(i_252_ - 1, i_253_ - 1, 18, 18, -256, (byte) 4);
-			Class275_Sub2 class275_sub2 = Class3.method286(2086923872);
-			((Class275_Sub2) class275_sub2).aClass521_Sub1_Sub1_Sub2_7739 = class521_sub1_sub1_sub2_243_;
-			((Class275_Sub2) class275_sub2).anInt7742 = -945313559 * i_252_;
-			((Class275_Sub2) class275_sub2).anInt7743 = -1731479375 * i_253_;
-			((Class275_Sub2) class275_sub2).anInt7744 = (16 + i_252_) * 164907185;
-			((Class275_Sub2) class275_sub2).anInt7740 = 1753364739 * (16 + i_253_);
-			client.aClass457_7290.method7649(class275_sub2, 1174204485);
+
+			Vector3 vector3_16 = animable_0.method11166().aClass385_3595;
+			Class210.method3612(animable_0.plane, (int) vector3_16.x, (int) vector3_16.z, animable_0.getSize(828768449) * 256, 0, false, (byte) 2);
+			int i_13 = (int) ((float) i_3 + client.aFloatArray7292[0] - 18.0F);
+			int i_14 = (int) ((float) i_4 + client.aFloatArray7292[1] - 16.0F - 54.0F);
+			i_13 += i_2 / 4 * 18;
+			i_14 += i_2 % 4 * 18;
+			nativesprite_11.method2752(i_13, i_14);
+			if (animable_1 == animable_0) {
+				Renderers.SOFTWARE_RENDERER.method8562(i_13 - 1, i_14 - 1, 18, 18, -256, (byte) 4);
+			}
+
+			Class275_Sub2 class275_sub2_15 = Class3.method286(2086923872);
+			class275_sub2_15.aClass521_Sub1_Sub1_Sub2_7739 = animable_1;
+			class275_sub2_15.anInt7742 = i_13;
+			class275_sub2_15.anInt7743 = i_14;
+			class275_sub2_15.anInt7744 = i_13 + 16;
+			class275_sub2_15.anInt7740 = i_14 + 16;
+			client.aClass457_7290.method7649(class275_sub2_15, 1174204485);
 		}
+
 	}
 
-	public static void method7141(int i, byte i_254_) {
-		Class329.method5906(i, -464275916);
+	public static void method7141(int i_0, byte b_1) {
+		Class329.method5906(i_0, -464275916);
 	}
 
-	static final void method7142(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1420 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
-		Class109.method1858(class118, (byte) 53);
+	static final void method7142(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aBool1420 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
+		Class109.method1858(icomponentdefinitions_0, (byte) 53);
 	}
 
-	static final void method7143(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
+	static final void method7143(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub13_8229.method12714(-988664751);
 	}
+
 }

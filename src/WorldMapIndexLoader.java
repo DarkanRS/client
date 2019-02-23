@@ -1,198 +1,141 @@
-/* Class218 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class WorldMapIndexLoader {
-	Index aClass317_2703;
-	public static final int anInt2704 = 64;
-	Index aClass317_2705;
-	public static final int anInt2706 = 128;
+
+	static boolean[] aBoolArray2709;
 	SoftCache aClass229_2707 = new SoftCache(128);
 	SoftCache aClass229_2708 = new SoftCache(64);
-	static boolean[] aBoolArray2709;
+	Index aClass317_2705;
+	Index aClass317_2703;
 
-	public void method3695(int i, int i_0_) {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3858(i, (byte) 71);
+	public void method3695(int i_1, int i_2) {
+		SoftCache softcache_3 = this.aClass229_2707;
+		synchronized (this.aClass229_2707) {
+			this.aClass229_2707.method3858(i_1, (byte) 71);
 		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3858(i, (byte) -60);
+
+		softcache_3 = this.aClass229_2708;
+		synchronized (this.aClass229_2708) {
+			this.aClass229_2708.method3858(i_1, (byte) -60);
 		}
 	}
 
-	public void method3696(byte i) {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3863(2127164020);
+	public void method3696(byte b_1) {
+		SoftCache softcache_2 = this.aClass229_2707;
+		synchronized (this.aClass229_2707) {
+			this.aClass229_2707.method3863(2127164020);
 		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3863(1611491782);
+
+		softcache_2 = this.aClass229_2708;
+		synchronized (this.aClass229_2708) {
+			this.aClass229_2708.method3863(1611491782);
 		}
 	}
 
-	public void method3697(int i, int i_1_, int i_2_) {
-		((WorldMapIndexLoader) this).aClass229_2707 = new SoftCache(i);
-		((WorldMapIndexLoader) this).aClass229_2708 = new SoftCache(i_1_);
+	public void method3697(int i_1, int i_2, int i_3) {
+		this.aClass229_2707 = new SoftCache(i_1);
+		this.aClass229_2708 = new SoftCache(i_2);
 	}
 
-	public void method3698(int i) {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3858(i, (byte) 11);
+	public void method3699(byte b_1) {
+		SoftCache softcache_2 = this.aClass229_2707;
+		synchronized (this.aClass229_2707) {
+			this.aClass229_2707.method3859(-1557275586);
 		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3858(i, (byte) -18);
-		}
-	}
 
-	public void method3699(byte i) {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3859(-1557275586);
-		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3859(-1044931706);
+		softcache_2 = this.aClass229_2708;
+		synchronized (this.aClass229_2708) {
+			this.aClass229_2708.method3859(-1044931706);
 		}
 	}
 
-	public WorldMapAreaDefs getWorldMapDefs(int i, int i_3_) {
-		WorldMapAreaDefs class220;
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			class220 = ((WorldMapAreaDefs) ((WorldMapIndexLoader) this).aClass229_2707.get((long) i));
+	public WorldMapAreaDefs getWorldMapDefs(int i_1, int i_2) {
+		SoftCache softcache_4 = this.aClass229_2707;
+		WorldMapAreaDefs worldmapareadefs_3;
+		synchronized (this.aClass229_2707) {
+			worldmapareadefs_3 = (WorldMapAreaDefs) this.aClass229_2707.get((long) i_1);
 		}
-		if (null != class220)
-			return class220;
-		byte[] is;
-		synchronized (((WorldMapIndexLoader) this).aClass317_2705) {
-			is = ((WorldMapIndexLoader) this).aClass317_2705.getFile(((SharedConfigsType.WORLD_MAP_DEFS.id) * -71319279), i);
-		}
-		class220 = new WorldMapAreaDefs();
-		class220.anInt2753 = 443844459 * i;
-		((WorldMapAreaDefs) class220).aClass218_2716 = this;
-		if (is != null)
-			class220.method3716(new RsByteBuffer(is), -141546823);
-		class220.method3718(-1915876048);
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.put(class220, (long) i);
-		}
-		return class220;
-	}
 
-	public WorldMapAreaDefs method3701(int i) {
-		WorldMapAreaDefs class220;
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			class220 = ((WorldMapAreaDefs) ((WorldMapIndexLoader) this).aClass229_2707.get((long) i));
-		}
-		if (null != class220)
-			return class220;
-		byte[] is;
-		synchronized (((WorldMapIndexLoader) this).aClass317_2705) {
-			is = ((WorldMapIndexLoader) this).aClass317_2705.getFile(((SharedConfigsType.WORLD_MAP_DEFS.id) * -71319279), i);
-		}
-		class220 = new WorldMapAreaDefs();
-		class220.anInt2753 = 443844459 * i;
-		((WorldMapAreaDefs) class220).aClass218_2716 = this;
-		if (is != null)
-			class220.method3716(new RsByteBuffer(is), -141546823);
-		class220.method3718(-275295059);
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.put(class220, (long) i);
-		}
-		return class220;
-	}
+		if (worldmapareadefs_3 != null) {
+			return worldmapareadefs_3;
+		} else {
+			Index index_5 = this.aClass317_2705;
+			byte[] bytes_10;
+			synchronized (this.aClass317_2705) {
+				bytes_10 = this.aClass317_2705.getFile(SharedConfigsType.WORLD_MAP_DEFS.id, i_1);
+			}
 
-	public void method3702(int i, int i_4_) {
-		((WorldMapIndexLoader) this).aClass229_2707 = new SoftCache(i);
-		((WorldMapIndexLoader) this).aClass229_2708 = new SoftCache(i_4_);
-	}
+			worldmapareadefs_3 = new WorldMapAreaDefs();
+			worldmapareadefs_3.anInt2753 = i_1;
+			worldmapareadefs_3.aClass218_2716 = this;
+			if (bytes_10 != null) {
+				worldmapareadefs_3.method3716(new RsByteBuffer(bytes_10), -141546823);
+			}
 
-	public WorldMapIndexLoader(Game class486, XLanguage class495, Index class317, Index class317_5_) {
-		((WorldMapIndexLoader) this).aClass317_2705 = class317;
-		((WorldMapIndexLoader) this).aClass317_2703 = class317_5_;
-		((WorldMapIndexLoader) this).aClass317_2705.filesCount((-71319279 * (SharedConfigsType.WORLD_MAP_DEFS.id)));
-	}
-
-	public void method3703(int i, int i_6_) {
-		((WorldMapIndexLoader) this).aClass229_2707 = new SoftCache(i);
-		((WorldMapIndexLoader) this).aClass229_2708 = new SoftCache(i_6_);
-	}
-
-	public void method3704(int i, int i_7_) {
-		((WorldMapIndexLoader) this).aClass229_2707 = new SoftCache(i);
-		((WorldMapIndexLoader) this).aClass229_2708 = new SoftCache(i_7_);
-	}
-
-	public void method3705(int i) {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3858(i, (byte) -68);
-		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3858(i, (byte) 11);
+			worldmapareadefs_3.method3718(-1915876048);
+			SoftCache softcache_9 = this.aClass229_2707;
+			synchronized (this.aClass229_2707) {
+				this.aClass229_2707.put(worldmapareadefs_3, (long) i_1);
+				return worldmapareadefs_3;
+			}
 		}
 	}
 
-	public void method3706(int i, int i_8_) {
-		((WorldMapIndexLoader) this).aClass229_2707 = new SoftCache(i);
-		((WorldMapIndexLoader) this).aClass229_2708 = new SoftCache(i_8_);
+	public WorldMapIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+		this.aClass317_2705 = index_3;
+		this.aClass317_2703 = index_4;
+		this.aClass317_2705.filesCount(SharedConfigsType.WORLD_MAP_DEFS.id);
 	}
 
-	public void method3707() {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3863(1498884219);
-		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3863(1582058157);
-		}
-	}
-
-	public void method3708() {
-		synchronized (((WorldMapIndexLoader) this).aClass229_2707) {
-			((WorldMapIndexLoader) this).aClass229_2707.method3863(1396736779);
-		}
-		synchronized (((WorldMapIndexLoader) this).aClass229_2708) {
-			((WorldMapIndexLoader) this).aClass229_2708.method3863(1448169082);
-		}
-	}
-
-	public static void method3709(int i, short i_9_) {
+	public static void method3709(int i_0, short s_1) {
+		SoftCache softcache_2 = PlayerAppearance.aClass229_2920;
 		synchronized (PlayerAppearance.aClass229_2920) {
-			PlayerAppearance.aClass229_2920.method3858(i, (byte) 86);
+			PlayerAppearance.aClass229_2920.method3858(i_0, (byte) 86);
 		}
+
+		softcache_2 = PlayerAppearance.aClass229_2930;
 		synchronized (PlayerAppearance.aClass229_2930) {
-			PlayerAppearance.aClass229_2930.method3858(i, (byte) 15);
+			PlayerAppearance.aClass229_2930.method3858(i_0, (byte) 15);
 		}
 	}
 
-	static void method3710(Interface class98, IComponentDefinitions class118, int i) {
-		if (null != class118) {
-			if (class118.anInt1288 * 1924549737 != -1) {
-				IComponentDefinitions class118_10_ = (class98.components[class118.anInt1305 * 2110532063 & 0xffff]);
-				if (null != class118_10_) {
-					if (class118_10_.aClass118Array1438 == class118_10_.aClass118Array1439) {
-						class118_10_.aClass118Array1439 = (new IComponentDefinitions[class118_10_.aClass118Array1438.length]);
-						class118_10_.aClass118Array1439[0] = class118;
-						Class503.method8359(class118_10_.aClass118Array1438, 0, class118_10_.aClass118Array1439, 1, 1924549737 * class118.anInt1288);
-						Class503.method8359(class118_10_.aClass118Array1438, 1 + 1924549737 * class118.anInt1288, class118_10_.aClass118Array1439, 1924549737 * class118.anInt1288 + 1, (class118_10_.aClass118Array1438.length - 1924549737 * class118.anInt1288 - 1));
+	static void method3710(Interface interface_0, IComponentDefinitions icomponentdefinitions_1, int i_2) {
+		if (icomponentdefinitions_1 != null) {
+			int i_4;
+			if (icomponentdefinitions_1.anInt1288 != -1) {
+				IComponentDefinitions icomponentdefinitions_3 = interface_0.components[icomponentdefinitions_1.anInt1305 & 0xffff];
+				if (icomponentdefinitions_3 != null) {
+					if (icomponentdefinitions_3.aClass118Array1438 == icomponentdefinitions_3.aClass118Array1439) {
+						icomponentdefinitions_3.aClass118Array1439 = new IComponentDefinitions[icomponentdefinitions_3.aClass118Array1438.length];
+						icomponentdefinitions_3.aClass118Array1439[0] = icomponentdefinitions_1;
+						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, 0, icomponentdefinitions_3.aClass118Array1439, 1, icomponentdefinitions_1.anInt1288);
+						Class503.method8359(icomponentdefinitions_3.aClass118Array1438, icomponentdefinitions_1.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1439, icomponentdefinitions_1.anInt1288 + 1, icomponentdefinitions_3.aClass118Array1438.length - icomponentdefinitions_1.anInt1288 - 1);
 					} else {
-						int i_11_ = 0;
-						IComponentDefinitions[] class118s;
-						for (class118s = class118_10_.aClass118Array1439; (i_11_ < class118s.length && class118s[i_11_] != class118); i_11_++) {
-							/* empty */
+						i_4 = 0;
+
+						IComponentDefinitions[] arr_5;
+						for (arr_5 = icomponentdefinitions_3.aClass118Array1439; i_4 < arr_5.length && arr_5[i_4] != icomponentdefinitions_1; i_4++) {
+							;
 						}
-						if (i_11_ < class118s.length) {
-							Class503.method8359(class118s, 0, class118s, 1, i_11_);
-							class118s[0] = class118;
+
+						if (i_4 < arr_5.length) {
+							Class503.method8359(arr_5, 0, arr_5, 1, i_4);
+							arr_5[0] = icomponentdefinitions_1;
 						}
 					}
 				}
 			} else {
-				IComponentDefinitions[] class118s = class98.method1617(-1207733107);
-				int i_12_;
-				for (i_12_ = 0; i_12_ < class118s.length && class118 != class118s[i_12_]; i_12_++) {
-					/* empty */
+				IComponentDefinitions[] arr_6 = interface_0.method1617(-1207733107);
+
+				for (i_4 = 0; i_4 < arr_6.length && arr_6[i_4] != icomponentdefinitions_1; i_4++) {
+					;
 				}
-				if (i_12_ < class118s.length) {
-					Class503.method8359(class118s, 0, class118s, 1, i_12_);
-					class118s[0] = class118;
+
+				if (i_4 < arr_6.length) {
+					Class503.method8359(arr_6, 0, arr_6, 1, i_4);
+					arr_6[0] = icomponentdefinitions_1;
 				}
 			}
 		}
+
 	}
+
 }

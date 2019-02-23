@@ -1,96 +1,79 @@
-
-/* Class275 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Insets;
 
 public class Class275 {
+
 	public Class275 aClass275_3339;
 	public Class275 aClass275_3340;
 
-	public void method4885() {
-		if (null != aClass275_3340) {
-			aClass275_3340.aClass275_3339 = aClass275_3339;
-			aClass275_3339.aClass275_3340 = aClass275_3340;
-			aClass275_3339 = null;
-			aClass275_3340 = null;
+	public void method4887(byte b_1) {
+		if (this.aClass275_3340 != null) {
+			this.aClass275_3340.aClass275_3339 = this.aClass275_3339;
+			this.aClass275_3339.aClass275_3340 = this.aClass275_3340;
+			this.aClass275_3339 = null;
+			this.aClass275_3340 = null;
 		}
+
 	}
 
-	public void method4886() {
-		if (null != aClass275_3340) {
-			aClass275_3340.aClass275_3339 = aClass275_3339;
-			aClass275_3339.aClass275_3340 = aClass275_3340;
-			aClass275_3339 = null;
-			aClass275_3340 = null;
+	static final void method4889(CS2Executor cs2executor_0, int i_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		int i_3 = 0;
+		if (Class115.method1950(string_2, -1586612370)) {
+			i_3 = Class328.parseInt(string_2, 1827486792);
 		}
+
+		TCPMessage tcpmessage_4 = Class271.method4828(OutgoingPacket.aClass379_4585, client.aClass184_7475.isaac, 1022314002);
+		tcpmessage_4.buffer.writeInt(i_3);
+		client.aClass184_7475.method3049(tcpmessage_4, -492560470);
 	}
 
-	public void method4887(byte i) {
-		if (null != aClass275_3340) {
-			aClass275_3340.aClass275_3339 = aClass275_3339;
-			aClass275_3339.aClass275_3340 = aClass275_3340;
-			aClass275_3339 = null;
-			aClass275_3340 = null;
-		}
+	static final int method4890(int i_0, int i_1, int i_2, int i_3) {
+		return i_0 < i_1 ? i_1 : (i_0 > i_2 ? i_2 : i_0);
 	}
 
-	public void method4888() {
-		if (null != aClass275_3340) {
-			aClass275_3340.aClass275_3339 = aClass275_3339;
-			aClass275_3339.aClass275_3340 = aClass275_3340;
-			aClass275_3339 = null;
-			aClass275_3340 = null;
-		}
-	}
-
-	static final void method4889(CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int i_0_ = 0;
-		if (Class115.method1950(string, -1586612370))
-			i_0_ = Class328.parseInt(string, 1827486792);
-		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4585, client.aClass184_7475.isaac, 1022314002);
-		class282_sub23.buffer.writeInt(i_0_);
-		client.aClass184_7475.method3049(class282_sub23, -492560470);
-	}
-
-	static final int method4890(int i, int i_1_, int i_2_, int i_3_) {
-		return i < i_1_ ? i_1_ : i > i_2_ ? i_2_ : i;
-	}
-
-	public static void method4891(byte i) {
-		if (null == client.aFrame3260) {
-			int i_4_ = -1911940837 * client.anInt3250;
-			int i_5_ = 698621615 * client.anInt3251;
-			int i_6_ = (-1016911135 * Class45.anInt434 - Class349.anInt4083 * -418109423 - i_4_);
-			int i_7_ = (Class107.anInt1082 * -499509193 - -969250379 * client.anInt3243 - i_5_);
-			if (i_4_ > 0 || i_6_ > 0 || i_5_ > 0 || i_7_ > 0) {
+	public static void method4891(byte b_0) {
+		if (client.aFrame3260 == null) {
+			int i_1 = client.anInt3250;
+			int i_2 = client.anInt3251;
+			int i_3 = Class45.anInt434 - Class349.anInt4083 - i_1;
+			int i_4 = Class107.anInt1082 - client.anInt3243 * -969250379 - i_2;
+			if (i_1 > 0 || i_3 > 0 || i_2 > 0 || i_4 > 0) {
 				try {
-					Container container = Class371.method6354((byte) 1);
-					int i_8_ = 0;
-					int i_9_ = 0;
-					if (client.aFrame3261 == container) {
-						Insets insets = client.aFrame3261.getInsets();
-						i_8_ = insets.left;
-						i_9_ = insets.top;
+					Container container_5 = Class371.method6354((byte) 1);
+					int i_6 = 0;
+					int i_7 = 0;
+					if (container_5 == client.aFrame3261) {
+						Insets insets_8 = client.aFrame3261.getInsets();
+						i_6 = insets_8.left;
+						i_7 = insets_8.top;
 					}
-					Graphics graphics = container.getGraphics();
-					graphics.setColor(Color.black);
-					if (i_4_ > 0)
-						graphics.fillRect(i_8_, i_9_, i_4_, Class107.anInt1082 * -499509193);
-					if (i_5_ > 0)
-						graphics.fillRect(i_8_, i_9_, -1016911135 * Class45.anInt434, i_5_);
-					if (i_6_ > 0)
-						graphics.fillRect((Class45.anInt434 * -1016911135 + i_8_ - i_6_), i_9_, i_6_, Class107.anInt1082 * -499509193);
-					if (i_7_ > 0)
-						graphics.fillRect(i_8_, (i_9_ + -499509193 * Class107.anInt1082 - i_7_), Class45.anInt434 * -1016911135, i_7_);
-				} catch (Exception exception) {
-					/* empty */
+
+					Graphics graphics_10 = container_5.getGraphics();
+					graphics_10.setColor(Color.black);
+					if (i_1 > 0) {
+						graphics_10.fillRect(i_6, i_7, i_1, Class107.anInt1082);
+					}
+
+					if (i_2 > 0) {
+						graphics_10.fillRect(i_6, i_7, Class45.anInt434, i_2);
+					}
+
+					if (i_3 > 0) {
+						graphics_10.fillRect(i_6 + Class45.anInt434 - i_3, i_7, i_3, Class107.anInt1082);
+					}
+
+					if (i_4 > 0) {
+						graphics_10.fillRect(i_6, i_7 + Class107.anInt1082 - i_4, Class45.anInt434, i_4);
+					}
+				} catch (Exception exception_9) {
+					;
 				}
 			}
 		}
+
 	}
+
 }

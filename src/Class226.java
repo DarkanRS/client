@@ -1,112 +1,69 @@
-/* Class226 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class226 implements Interface46 {
-	public int anInt2783;
+
 	public int anInt2784;
 	public int anInt2785;
+	public int anInt2783;
 
-	void method3795(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_0_ = class282_sub35.readUnsignedByte();
-			if (i_0_ == 0)
-				break;
-			method3796(class282_sub35, i_0_, 767185341);
+	void method3795(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method3796(rsbytebuffer_1, i_3, 767185341);
 		}
 	}
 
-	Class226() {
-		/* empty */
-	}
-
-	void method3796(RsByteBuffer class282_sub35, int i, int i_1_) {
-		if (i == 1) {
-			anInt2784 = class282_sub35.readUnsignedShort() * -1882165671;
-			anInt2785 = class282_sub35.readUnsignedByte() * -1187004859;
-			anInt2783 = class282_sub35.readUnsignedByte() * -1434404187;
+	void method3796(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+		if (i_2 == 1) {
+			this.anInt2784 = rsbytebuffer_1.readUnsignedShort();
+			this.anInt2785 = rsbytebuffer_1.readUnsignedByte();
+			this.anInt2783 = rsbytebuffer_1.readUnsignedByte();
 		}
+
 	}
 
-	void method3797(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (i == 0)
-				break;
-			method3796(class282_sub35, i, -545015864);
+	static final void method3802(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aClass330Array7428[i_2].anInt3865;
+	}
+
+	static final void method3803(CS2Executor cs2executor_0, short s_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		ChatLine chatline_3 = Class180.method3032(i_2, (byte) -1);
+		int i_4 = -1;
+		if (chatline_3 != null) {
+			i_4 = chatline_3.anInt1085;
 		}
+
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_4;
 	}
 
-	void method3798(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (i == 0)
-				break;
-			method3796(class282_sub35, i, 245403690);
-		}
-	}
-
-	void method3799(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (i == 0)
-				break;
-			method3796(class282_sub35, i, 2099062464);
-		}
-	}
-
-	void method3800(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			anInt2784 = class282_sub35.readUnsignedShort() * -1882165671;
-			anInt2785 = class282_sub35.readUnsignedByte() * -1187004859;
-			anInt2783 = class282_sub35.readUnsignedByte() * -1434404187;
-		}
-	}
-
-	void method3801(RsByteBuffer class282_sub35, int i) {
-		if (i == 1) {
-			anInt2784 = class282_sub35.readUnsignedShort() * -1882165671;
-			anInt2785 = class282_sub35.readUnsignedByte() * -1187004859;
-			anInt2783 = class282_sub35.readUnsignedByte() * -1434404187;
-		}
-	}
-
-	static final void method3802(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -705707341 * client.aClass330Array7428[i_2_].anInt3865;
-	}
-
-	static final void method3803(CS2Executor class527, short i) {
-		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		ChatLine class108 = Class180.method3032(i_3_, (byte) -1);
-		int i_4_ = -1;
-		if (null != class108)
-			i_4_ = 840973581 * class108.anInt1085;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_4_;
-	}
-
-	static final void method3804(CS2Executor class527, int i) {
-		class527.intStackPtr -= 283782002;
-		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_6_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
+	static final void method3804(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_10000 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		i_10000 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
 		if (Class475.aBool5623) {
-			//Class440.method7373(3, i_5_, i_6_, false, (byte) 114);
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = null != Engine.aFrame3260 ? 1 : 0;
-		} else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Engine.aFrame3260 != null ? 1 : 0;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		}
+
 	}
 
-	public static void method3805(int i) {
+	public static void method3805(int i_0) {
 		Class148.aClass282_Sub15_Sub2_1735.method15101((short) -11220);
-		Class148.anInt1730 = 800770715;
+		Class148.anInt1730 = 1;
 		Class75.aClass317_746 = null;
 		Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
 	}
 
-	static final void method3806(CS2Executor class527, int i) {
-		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 114);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
-		Class96_Sub18.method14664(class118, class98, true, 1, class527, (byte) -9);
+	static final void method3806(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 114);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Class96_Sub18.method14664(icomponentdefinitions_3, interface_4, true, 1, cs2executor_0, (byte) -9);
 	}
+
 }

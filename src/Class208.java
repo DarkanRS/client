@@ -1,52 +1,33 @@
-/* Class208 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class208 {
+
+	static int anInt2662;
+	static int anInt2661 = 0;
 	public Class521_Sub1_Sub1 aClass521_Sub1_Sub1_2659;
 	public Class208 aClass208_2660;
-	static int anInt2661 = 0;
-	static int anInt2662;
 
-	static Class208 method3559(Class521_Sub1_Sub1 class521_sub1_sub1) {
-		Class208 class208;
-		if (null == Class507.aClass208_5860)
-			class208 = new Class208();
-		else {
-			class208 = Class507.aClass208_5860;
-			Class507.aClass208_5860 = Class507.aClass208_5860.aClass208_2660;
-			class208.aClass208_2660 = null;
-			anInt2661 -= -257363711;
-		}
-		class208.aClass521_Sub1_Sub1_2659 = class521_sub1_sub1;
-		return class208;
-	}
-
-	void method3560(int i) {
-		if (anInt2661 * 1899499265 < 500) {
-			aClass521_Sub1_Sub1_2659 = null;
-			aClass208_2660 = Class507.aClass208_5860;
+	void method3560(int i_1) {
+		if (anInt2661 < 500) {
+			this.aClass521_Sub1_Sub1_2659 = null;
+			this.aClass208_2660 = Class507.aClass208_5860;
 			Class507.aClass208_5860 = this;
-			anInt2661 += -257363711;
+			++anInt2661;
 		}
+
 	}
 
-	Class208() {
-		/* empty */
+	static final void method3561(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class125.method2170(icomponentdefinitions_3, interface_4, cs2executor_0, 809860903);
 	}
 
-	static final void method3561(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class125.method2170(class118, class98, class527, 809860903);
+	static final void method3562(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 3;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
+		Class96_Sub10.method14603(3, i_2 << 16 | i_3, i_4, "", (byte) 66);
 	}
 
-	static final void method3562(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 425673003;
-		int i_0_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		int i_2_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
-		Class96_Sub10.method14603(3, i_0_ << 16 | i_1_, i_2_, "", (byte) 66);
-	}
 }

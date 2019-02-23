@@ -1,39 +1,41 @@
-/* Class282_Sub23 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class TCPMessage extends Node {
-	static TCPMessage[] OUTGOING_PACKETS = new TCPMessage[300];
+
 	int anInt7678;
-	static int index = 0;
 	public int anInt7680;
 	OutgoingPacket packet;
 	public RsBitsBuffer buffer;
+	static TCPMessage[] OUTGOING_PACKETS = new TCPMessage[300];
+	static int index = 0;
 
-	public void method12360(int i) {
-		if (index * -918638833 < OUTGOING_PACKETS.length)
-			OUTGOING_PACKETS[((index += -331587601) * -918638833 - 1)] = this;
+	public void method12360(int i_1) {
+		if (index < OUTGOING_PACKETS.length) {
+			OUTGOING_PACKETS[++index - 1] = this;
+		}
+
 	}
 
-	TCPMessage() {
-		/* empty */
-	}
-	
-	static final void method12366(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_) {
-		if (1 == client.anInt7341 * -891719545) {
-			int i_7_ = -963499271 * Class197.NUM_PLAYER_INDICES;
-			int[] is = Class197.PLAYER_INDICES;
-			for (int i_8_ = 0; i_8_ < i_7_; i_8_++) {
-				Player class521_sub1_sub1_sub2_sub1 = client.players[is[i_8_]];
-				if (class521_sub1_sub1_sub2_sub1 != null)
-					class521_sub1_sub1_sub2_sub1.method15818(i, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, 331033522);
+	static final void method12366(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+		if (client.anInt7341 == 1) {
+			int i_8 = Class197.NUM_PLAYER_INDICES;
+			int[] ints_9 = Class197.PLAYER_INDICES;
+
+			int i_10;
+			for (i_10 = 0; i_10 < i_8; i_10++) {
+				Player player_13 = client.players[ints_9[i_10]];
+				if (player_13 != null) {
+					player_13.method15818(i_0, i_1, i_2, i_3, i_4, i_5, i_6, 331033522);
+				}
 			}
-			for (int i_9_ = 0; i_9_ < -685729279 * client.anInt7211; i_9_++) {
-				int i_10_ = client.anIntArray7212[i_9_];
-				Class282_Sub47 class282_sub47 = ((Class282_Sub47) client.aClass465_7208.method7754((long) i_10_));
-				if (null != class282_sub47)
-					((Animable) class282_sub47.anObject8068).method15818(i, i_0_, i_1_, i_2_, i_3_, i_4_, i_5_, 1391480104);
+
+			for (i_10 = 0; i_10 < client.anInt7211; i_10++) {
+				int i_11 = client.anIntArray7212[i_10];
+				Class282_Sub47 class282_sub47_12 = (Class282_Sub47) client.aClass465_7208.method7754((long) i_11);
+				if (class282_sub47_12 != null) {
+					((Animable) class282_sub47_12.anObject8068).method15818(i_0, i_1, i_2, i_3, i_4, i_5, i_6, 1391480104);
+				}
 			}
 		}
+
 	}
+
 }

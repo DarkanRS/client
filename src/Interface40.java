@@ -1,11 +1,9 @@
-/* Interface40 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface40 {
-	public void x(boolean bool);
 
-	public void y(boolean bool);
+	void x(boolean var1);
 
-	public void ma(boolean bool);
+	void y(boolean var1);
+
+	void ma(boolean var1);
+
 }

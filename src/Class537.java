@@ -1,68 +1,37 @@
-/* Class537 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class537 {
+
 	public char aChar7096;
 	public int anInt7097;
 	public int anInt7098;
 	public int anInt7099;
 
-	void method11487(RsByteBuffer class282_sub35, byte i) {
-		for (;;) {
-			int i_0_ = class282_sub35.readUnsignedByte();
-			if (0 == i_0_)
-				break;
-			method11488(class282_sub35, i_0_, 1650259972);
+	void method11487(RsByteBuffer rsbytebuffer_1, byte b_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method11488(rsbytebuffer_1, i_3, 1650259972);
 		}
 	}
 
-	Class537() {
-		/* empty */
-	}
-
-	void method11488(RsByteBuffer class282_sub35, int i, int i_1_) {
-		if (1 == i)
-			aChar7096 = Class11.method470(class282_sub35.readByte(), 276039281);
-		else if (i == 2) {
-			anInt7097 = class282_sub35.readUnsignedShort() * 1698820121;
-			anInt7098 = class282_sub35.readUnsignedByte() * -565030971;
-			anInt7099 = class282_sub35.readUnsignedByte() * 916682963;
+	void method11488(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+		if (i_2 == 1) {
+			this.aChar7096 = Class11.method470(rsbytebuffer_1.readByte(), 276039281);
+		} else if (i_2 == 2) {
+			this.anInt7097 = rsbytebuffer_1.readUnsignedShort();
+			this.anInt7098 = rsbytebuffer_1.readUnsignedByte();
+			this.anInt7099 = rsbytebuffer_1.readUnsignedByte();
 		}
+
 	}
 
-	void method11489(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (0 == i)
-				break;
-			method11488(class282_sub35, i, 1650259972);
-		}
+	static final void method11492(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 98);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		IsaacCipher.method7267(icomponentdefinitions_3, interface_4, cs2executor_0, 1465963300);
 	}
 
-	void method11490(RsByteBuffer class282_sub35) {
-		for (;;) {
-			int i = class282_sub35.readUnsignedByte();
-			if (0 == i)
-				break;
-			method11488(class282_sub35, i, 1650259972);
-		}
-	}
-
-	void method11491(RsByteBuffer class282_sub35, int i) {
-		if (1 == i)
-			aChar7096 = Class11.method470(class282_sub35.readByte(), 1713020466);
-		else if (i == 2) {
-			anInt7097 = class282_sub35.readUnsignedShort() * 1698820121;
-			anInt7098 = class282_sub35.readUnsignedByte() * -565030971;
-			anInt7099 = class282_sub35.readUnsignedByte() * 916682963;
-		}
-	}
-
-	static final void method11492(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_2_, (byte) 98);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_2_ >> 16];
-		IsaacCipher.method7267(class118, class98, class527, 1465963300);
-	}
 }

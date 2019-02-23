@@ -1,17 +1,15 @@
-/* Interface26 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface26 extends Interface9 {
-	public void method184();
 
-	public long method2();
+	void method184();
 
-	public void method26();
+	long method2();
 
-	public void method32();
+	void method26();
 
-	public void method185();
+	void method32();
 
-	public long method123();
+	void method185();
+
+	long method123();
+
 }

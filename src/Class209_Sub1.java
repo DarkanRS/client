@@ -1,7 +1,3 @@
-
-/* Class209_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -10,280 +6,290 @@ import java.awt.event.MouseWheelEvent;
 import java.awt.event.MouseWheelListener;
 
 public class Class209_Sub1 extends Class209 implements MouseListener, MouseMotionListener, MouseWheelListener {
-	Component aComponent7935;
-	static final int anInt7936 = 2;
-	static final int anInt7937 = 4;
+
+	int anInt7944;
+	NodeCollection aClass482_7941 = new NodeCollection();
+	NodeCollection aClass482_7945 = new NodeCollection();
+	boolean aBool7946;
 	int anInt7938;
 	int anInt7939;
 	int anInt7940;
-	NodeCollection aClass482_7941 = new NodeCollection();
 	int anInt7942;
 	int anInt7943;
-	int anInt7944;
-	NodeCollection aClass482_7945 = new NodeCollection();
-	boolean aBool7946;
-	static final int anInt7947 = 1;
+	Component aComponent7935;
 
-	public synchronized void mouseReleased(MouseEvent mouseevent) {
-		int i = method12908(mouseevent, 1117707265);
-		if ((((Class209_Sub1) this).anInt7944 * 1646603351 & i) == 0)
-			i = 1646603351 * ((Class209_Sub1) this).anInt7944;
-		if (0 != (i & 0x1))
-			method12909(3, mouseevent.getX(), mouseevent.getY(), mouseevent.getClickCount(), -1931505233);
-		if (0 != (i & 0x4))
-			method12909(5, mouseevent.getX(), mouseevent.getY(), mouseevent.getClickCount(), -1931505233);
-		if ((i & 0x2) != 0)
-			method12909(4, mouseevent.getX(), mouseevent.getY(), mouseevent.getClickCount(), -1931505233);
-		((Class209_Sub1) this).anInt7944 = 919895911 * (((Class209_Sub1) this).anInt7944 * 1646603351 & (i ^ 0xffffffff));
-		if (mouseevent.isPopupTrigger())
-			mouseevent.consume();
+	public synchronized void mouseReleased(MouseEvent mouseevent_1) {
+		int i_2 = this.method12908(mouseevent_1, 1117707265);
+		if ((this.anInt7944 & i_2) == 0) {
+			i_2 = this.anInt7944;
+		}
+
+		if ((i_2 & 0x1) != 0) {
+			this.method12909(3, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+		}
+
+		if ((i_2 & 0x4) != 0) {
+			this.method12909(5, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+		}
+
+		if ((i_2 & 0x2) != 0) {
+			this.method12909(4, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+		}
+
+		this.anInt7944 &= ~i_2;
+		if (mouseevent_1.isPopupTrigger()) {
+			mouseevent_1.consume();
+		}
+
 	}
 
-	public synchronized void mouseClicked(MouseEvent mouseevent) {
-		if (mouseevent.isPopupTrigger())
-			mouseevent.consume();
+	public synchronized void mouseClicked(MouseEvent mouseevent_1) {
+		if (mouseevent_1.isPopupTrigger()) {
+			mouseevent_1.consume();
+		}
+
 	}
 
-	Class209_Sub1(Component component, boolean bool) {
-		method12906(component, 1883441347);
-		((Class209_Sub1) this).aBool7946 = bool;
+	Class209_Sub1(Component component_1, boolean bool_2) {
+		this.method12906(component_1, 1883441347);
+		this.aBool7946 = bool_2;
 	}
 
-	public synchronized void method3589(byte i) {
-		((Class209_Sub1) this).anInt7938 = ((Class209_Sub1) this).anInt7942 * 1630671813;
-		((Class209_Sub1) this).anInt7939 = ((Class209_Sub1) this).anInt7943 * 1370759671;
-		((Class209_Sub1) this).anInt7940 = ((Class209_Sub1) this).anInt7944 * -714190199;
-		NodeCollection class482 = ((Class209_Sub1) this).aClass482_7941;
-		((Class209_Sub1) this).aClass482_7941 = ((Class209_Sub1) this).aClass482_7945;
-		((Class209_Sub1) this).aClass482_7945 = class482;
-		((Class209_Sub1) this).aClass482_7945.method8118(-2108421155);
+	public synchronized void method3589(byte b_1) {
+		this.anInt7938 = this.anInt7942;
+		this.anInt7939 = this.anInt7943;
+		this.anInt7940 = this.anInt7944;
+		NodeCollection nodecollection_2 = this.aClass482_7941;
+		this.aClass482_7941 = this.aClass482_7945;
+		this.aClass482_7945 = nodecollection_2;
+		this.aClass482_7945.method8118(-2108421155);
 	}
 
-	void method12905(int i, int i_0_, int i_1_) {
-		((Class209_Sub1) this).anInt7942 = 1679338381 * i;
-		((Class209_Sub1) this).anInt7943 = 1672782407 * i_0_;
-		if (((Class209_Sub1) this).aBool7946)
-			method12909(-1, i, i_0_, 0, -1931505233);
+	void method12905(int i_1, int i_2, int i_3) {
+		this.anInt7942 = i_1;
+		this.anInt7943 = i_2;
+		if (this.aBool7946) {
+			this.method12909(-1, i_1, i_2, 0, -1931505233);
+		}
+
 	}
 
-	public boolean method3566(int i) {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x2);
+	public boolean method3566(int i_1) {
+		return (this.anInt7940 & 0x2) != 0;
 	}
 
 	public int method3573() {
-		return 954893953 * ((Class209_Sub1) this).anInt7939;
+		return 954893953 * this.anInt7939 * 220182913;
 	}
 
-	public boolean method3565(byte i) {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x1);
+	public boolean method3565(byte b_1) {
+		return (this.anInt7940 & 0x1) != 0;
 	}
 
-	public synchronized void mouseMoved(MouseEvent mouseevent) {
-		method12905(mouseevent.getX(), mouseevent.getY(), -2109256124);
+	public synchronized void mouseMoved(MouseEvent mouseevent_1) {
+		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -2109256124);
 	}
 
-	public boolean method3567(byte i) {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x4);
+	public boolean method3567(byte b_1) {
+		return (this.anInt7940 & 0x4) != 0;
 	}
 
-	void method12906(Component component, int i) {
-		method12907((short) 12335);
-		((Class209_Sub1) this).aComponent7935 = component;
-		((Class209_Sub1) this).aComponent7935.addMouseListener(this);
-		((Class209_Sub1) this).aComponent7935.addMouseMotionListener(this);
-		((Class209_Sub1) this).aComponent7935.addMouseWheelListener(this);
+	void method12906(Component component_1, int i_2) {
+		this.method12907((short) 12335);
+		this.aComponent7935 = component_1;
+		this.aComponent7935.addMouseListener(this);
+		this.aComponent7935.addMouseMotionListener(this);
+		this.aComponent7935.addMouseWheelListener(this);
 	}
 
-	public int method3569(int i) {
-		return 1002227073 * ((Class209_Sub1) this).anInt7938;
+	public int method3569(int i_1) {
+		return this.anInt7938;
 	}
 
-	public void method3584(int i) {
-		method12907((short) 14669);
+	public void method3584(int i_1) {
+		this.method12907((short) 14669);
 	}
 
-	void method12907(short i) {
-		if (((Class209_Sub1) this).aComponent7935 != null) {
-			((Class209_Sub1) this).aComponent7935.removeMouseWheelListener(this);
-			((Class209_Sub1) this).aComponent7935.removeMouseMotionListener(this);
-			((Class209_Sub1) this).aComponent7935.removeMouseListener(this);
-			((Class209_Sub1) this).aComponent7935 = null;
-			((Class209_Sub1) this).anInt7940 = 0;
-			((Class209_Sub1) this).anInt7939 = 0;
-			((Class209_Sub1) this).anInt7938 = 0;
-			((Class209_Sub1) this).anInt7944 = 0;
-			((Class209_Sub1) this).anInt7943 = 0;
-			((Class209_Sub1) this).anInt7942 = 0;
-			((Class209_Sub1) this).aClass482_7941 = null;
-			((Class209_Sub1) this).aClass482_7945 = null;
+	void method12907(short s_1) {
+		if (this.aComponent7935 != null) {
+			this.aComponent7935.removeMouseWheelListener(this);
+			this.aComponent7935.removeMouseMotionListener(this);
+			this.aComponent7935.removeMouseListener(this);
+			this.aComponent7935 = null;
+			this.anInt7940 = 0;
+			this.anInt7939 = 0;
+			this.anInt7938 = 0;
+			this.anInt7944 = 0;
+			this.anInt7943 = 0;
+			this.anInt7942 = 0;
+			this.aClass482_7941 = null;
+			this.aClass482_7945 = null;
 		}
+
 	}
 
-	public synchronized void mouseEntered(MouseEvent mouseevent) {
-		method12905(mouseevent.getX(), mouseevent.getY(), -119743031);
+	public synchronized void mouseEntered(MouseEvent mouseevent_1) {
+		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -119743031);
 	}
 
-	public Class282_Sub53 method3571(byte i) {
-		return ((Class282_Sub53) ((Class209_Sub1) this).aClass482_7941.method8061((byte) -121));
+	public Class282_Sub53 method3571(byte b_1) {
+		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -121);
 	}
 
-	int method12908(MouseEvent mouseevent, int i) {
-		if (mouseevent.getButton() == 1) {
-			if (mouseevent.isMetaDown())
-				return 4;
-			return 1;
+	int method12908(MouseEvent mouseevent_1, int i_2) {
+		return mouseevent_1.getButton() == 1 ? (mouseevent_1.isMetaDown() ? 4 : 1) : (mouseevent_1.getButton() == 2 ? 2 : (mouseevent_1.getButton() == 3 ? 4 : 0));
+	}
+
+	public synchronized void mousePressed(MouseEvent mouseevent_1) {
+		int i_2 = this.method12908(mouseevent_1, -1413980906);
+		if (i_2 == 1) {
+			this.method12909(0, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+		} else if (i_2 == 4) {
+			this.method12909(2, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
+		} else if (i_2 == 2) {
+			this.method12909(1, mouseevent_1.getX(), mouseevent_1.getY(), mouseevent_1.getClickCount(), -1931505233);
 		}
-		if (mouseevent.getButton() == 2)
-			return 2;
-		if (mouseevent.getButton() == 3)
-			return 4;
-		return 0;
+
+		this.anInt7944 |= i_2;
+		if (mouseevent_1.isPopupTrigger()) {
+			mouseevent_1.consume();
+		}
+
 	}
 
-	public synchronized void mousePressed(MouseEvent mouseevent) {
-		int i = method12908(mouseevent, -1413980906);
-		if (i == 1)
-			method12909(0, mouseevent.getX(), mouseevent.getY(), mouseevent.getClickCount(), -1931505233);
-		else if (i == 4)
-			method12909(2, mouseevent.getX(), mouseevent.getY(), mouseevent.getClickCount(), -1931505233);
-		else if (i == 2)
-			method12909(1, mouseevent.getX(), mouseevent.getY(), mouseevent.getClickCount(), -1931505233);
-		((Class209_Sub1) this).anInt7944 = 919895911 * (1646603351 * ((Class209_Sub1) this).anInt7944 | i);
-		if (mouseevent.isPopupTrigger())
-			mouseevent.consume();
-	}
-
-	void method12909(int i, int i_2_, int i_3_, int i_4_, int i_5_) {
-		Class282_Sub53_Sub2 class282_sub53_sub2 = Class521_Sub1_Sub3_Sub1.method16080(i, i_2_, i_3_, Class169.method2869(1557164427), i_4_, 1660805972);
-		((Class209_Sub1) this).aClass482_7945.append(class282_sub53_sub2, 335888371);
+	void method12909(int i_1, int i_2, int i_3, int i_4, int i_5) {
+		Class282_Sub53_Sub2 class282_sub53_sub2_6 = Class521_Sub1_Sub3_Sub1.method16080(i_1, i_2, i_3, Class169.method2869(1557164427), i_4, 1660805972);
+		this.aClass482_7945.append(class282_sub53_sub2_6, 335888371);
 	}
 
 	public synchronized void method3578() {
-		((Class209_Sub1) this).anInt7938 = ((Class209_Sub1) this).anInt7942 * 1630671813;
-		((Class209_Sub1) this).anInt7939 = ((Class209_Sub1) this).anInt7943 * 1370759671;
-		((Class209_Sub1) this).anInt7940 = ((Class209_Sub1) this).anInt7944 * -714190199;
-		NodeCollection class482 = ((Class209_Sub1) this).aClass482_7941;
-		((Class209_Sub1) this).aClass482_7941 = ((Class209_Sub1) this).aClass482_7945;
-		((Class209_Sub1) this).aClass482_7945 = class482;
-		((Class209_Sub1) this).aClass482_7945.method8118(237232495);
+		this.anInt7938 = this.anInt7942 * 1679338381 * 1630671813 * 1002227073;
+		this.anInt7939 = this.anInt7943 * 1672782407 * 1370759671 * 954893953;
+		this.anInt7940 = this.anInt7944 * 919895911 * -714190199 * -1237626913;
+		NodeCollection nodecollection_1 = this.aClass482_7941;
+		this.aClass482_7941 = this.aClass482_7945;
+		this.aClass482_7945 = nodecollection_1;
+		this.aClass482_7945.method8118(237232495);
 	}
 
 	public Class282_Sub53 method3590() {
-		return ((Class282_Sub53) ((Class209_Sub1) this).aClass482_7941.method8061((byte) -90));
+		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -90);
 	}
 
-	public synchronized void mouseWheelMoved(MouseWheelEvent mousewheelevent) {
-		int i = mousewheelevent.getX();
-		int i_6_ = mousewheelevent.getY();
-		int i_7_ = mousewheelevent.getWheelRotation();
-		if (mousewheelevent.isControlDown()) {
-			if (mousewheelevent.getWheelRotation() == -1) {
-				if (HitbarDefinitions.CAMERA_ZOOM >= -50) {
-					HitbarDefinitions.CAMERA_ZOOM -= 30;
-				}
+	public synchronized void mouseWheelMoved(MouseWheelEvent mousewheelevent_1) {
+		int i_2 = mousewheelevent_1.getX();
+		int i_3 = mousewheelevent_1.getY();
+		int i_4 = mousewheelevent_1.getWheelRotation();
+		if (mousewheelevent_1.isControlDown()) {
+			if (mousewheelevent_1.getWheelRotation() == -1 && HitbarDefinitions.CAMERA_ZOOM >= -50) {
+				HitbarDefinitions.CAMERA_ZOOM -= 30;
 			}
-			if (mousewheelevent.getWheelRotation() == 1) {
-				if (HitbarDefinitions.CAMERA_ZOOM < 1700) {
-					HitbarDefinitions.CAMERA_ZOOM += 30;
-				}
+
+			if (mousewheelevent_1.getWheelRotation() == 1 && HitbarDefinitions.CAMERA_ZOOM < 1700) {
+				HitbarDefinitions.CAMERA_ZOOM += 30;
 			}
 		}
-		method12909(6, i, i_6_, i_7_, -1931505233);
-		mousewheelevent.consume();
+
+		this.method12909(6, i_2, i_3, i_4, -1931505233);
+		mousewheelevent_1.consume();
 	}
 
 	public synchronized void method3581() {
-		((Class209_Sub1) this).anInt7938 = ((Class209_Sub1) this).anInt7942 * 1630671813;
-		((Class209_Sub1) this).anInt7939 = ((Class209_Sub1) this).anInt7943 * 1370759671;
-		((Class209_Sub1) this).anInt7940 = ((Class209_Sub1) this).anInt7944 * -714190199;
-		NodeCollection class482 = ((Class209_Sub1) this).aClass482_7941;
-		((Class209_Sub1) this).aClass482_7941 = ((Class209_Sub1) this).aClass482_7945;
-		((Class209_Sub1) this).aClass482_7945 = class482;
-		((Class209_Sub1) this).aClass482_7945.method8118(-461780594);
+		this.anInt7938 = this.anInt7942 * 1679338381 * 1630671813 * 1002227073;
+		this.anInt7939 = this.anInt7943 * 1672782407 * 1370759671 * 954893953;
+		this.anInt7940 = this.anInt7944 * 919895911 * -714190199 * -1237626913;
+		NodeCollection nodecollection_1 = this.aClass482_7941;
+		this.aClass482_7941 = this.aClass482_7945;
+		this.aClass482_7945 = nodecollection_1;
+		this.aClass482_7945.method8118(-461780594);
 	}
 
 	public Class282_Sub53 method3591() {
-		return ((Class282_Sub53) ((Class209_Sub1) this).aClass482_7941.method8061((byte) -123));
+		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -123);
 	}
 
 	public boolean method3583() {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x1);
+		return (this.anInt7940 * -641127393 * -1237626913 & 0x1) != 0;
 	}
 
 	public boolean method3580() {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x2);
+		return (this.anInt7940 * -641127393 * -1237626913 & 0x2) != 0;
 	}
 
 	public boolean method3593() {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x2);
+		return (this.anInt7940 * -641127393 * -1237626913 & 0x2) != 0;
 	}
 
 	public boolean method3582() {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x4);
+		return (this.anInt7940 * -641127393 * -1237626913 & 0x4) != 0;
 	}
 
 	public boolean method3579() {
-		return 0 != (((Class209_Sub1) this).anInt7940 * -1237626913 & 0x4);
+		return (this.anInt7940 * -641127393 * -1237626913 & 0x4) != 0;
 	}
 
 	public int method3585() {
-		return 1002227073 * ((Class209_Sub1) this).anInt7938;
+		return 1002227073 * this.anInt7938 * -901678463;
 	}
 
-	public int method3570(int i) {
-		return 954893953 * ((Class209_Sub1) this).anInt7939;
+	public int method3570(int i_1) {
+		return this.anInt7939;
 	}
 
 	public int method3564() {
-		return 954893953 * ((Class209_Sub1) this).anInt7939;
+		return 954893953 * this.anInt7939 * 220182913;
 	}
 
 	public Class282_Sub53 method3592() {
-		return ((Class282_Sub53) ((Class209_Sub1) this).aClass482_7941.method8061((byte) -101));
+		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -101);
 	}
 
-	public synchronized void mouseExited(MouseEvent mouseevent) {
-		method12905(mouseevent.getX(), mouseevent.getY(), -1606107629);
+	public synchronized void mouseExited(MouseEvent mouseevent_1) {
+		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -1606107629);
 	}
 
-	public synchronized void mouseDragged(MouseEvent mouseevent) {
-		method12905(mouseevent.getX(), mouseevent.getY(), -641824056);
+	public synchronized void mouseDragged(MouseEvent mouseevent_1) {
+		this.method12905(mouseevent_1.getX(), mouseevent_1.getY(), -641824056);
 	}
 
 	public Class282_Sub53 method3588() {
-		return ((Class282_Sub53) ((Class209_Sub1) this).aClass482_7941.method8061((byte) -37));
+		return (Class282_Sub53) this.aClass482_7941.method8061((byte) -37);
 	}
 
 	public void method3594() {
-		method12907((short) 11484);
+		this.method12907((short) 11484);
 	}
 
 	public void method3595() {
-		method12907((short) 31873);
+		this.method12907((short) 31873);
 	}
 
-	static final void method12915(CS2Executor class527, int i) {
-		NPC class521_sub1_sub1_sub2_sub2 = ((NPC) class527.animable);
-		String string = class521_sub1_sub1_sub2_sub2.aString10584;
-		NPCDefinitions class409 = class521_sub1_sub1_sub2_sub2.aClass409_10580;
-		if (null != class409.anIntArray4886) {
-			class409 = class409.method6884(Class158_Sub1.aClass3_8507, 265881693);
-			if (null == class409)
-				string = "";
-			else
-				string = class409.aString4857;
+	static final void method12915(CS2Executor cs2executor_0, int i_1) {
+		NPC npc_2 = (NPC) cs2executor_0.animable;
+		String string_3 = npc_2.aString10584;
+		NPCDefinitions npcdefinitions_4 = npc_2.aClass409_10580;
+		if (npcdefinitions_4.anIntArray4886 != null) {
+			npcdefinitions_4 = npcdefinitions_4.method6884(Class158_Sub1.aClass3_8507, 265881693);
+			if (npcdefinitions_4 == null) {
+				string_3 = "";
+			} else {
+				string_3 = npcdefinitions_4.aString4857;
+			}
 		}
-		if (null == string)
-			string = "";
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
+
+		if (string_3 == null) {
+			string_3 = "";
+		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_3;
 	}
 
-	public static void method12916(byte i) {
-		for (int i_15_ = 0; i_15_ < 100; i_15_++) {
-			if (i != 16)
-				return;
-			Class81.CHAT_LINES[i_15_] = null;
+	public static void method12916(byte b_0) {
+		for (int i_1 = 0; i_1 < 100; i_1++) {
+			Class81.CHAT_LINES[i_1] = null;
 		}
+
 		Class81.NUM_CHAT_LINES = 0;
 	}
+
 }

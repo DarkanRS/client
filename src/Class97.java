@@ -1,51 +1,33 @@
-/* Class97 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public final class Class97 {
+
 	static long aLong993;
 	static long aLong994;
 	protected static Class440[] aClass440Array996;
-
-	public static final synchronized long method1610() {
-		long l = System.currentTimeMillis();
-		if (l < 6289562171134420055L * aLong993)
-			aLong994 += -8305020634878961101L * (6289562171134420055L * aLong993 - l);
-		aLong993 = l * -3280623870577899673L;
-		return l + -3197815037203812101L * aLong994;
-	}
-
-	public static final synchronized long method1611() {
-		long l = System.currentTimeMillis();
-		if (l < 6289562171134420055L * aLong993)
-			aLong994 += -8305020634878961101L * (6289562171134420055L * aLong993 - l);
-		aLong993 = l * -3280623870577899673L;
-		return l + -3197815037203812101L * aLong994;
-	}
 
 	Class97() throws Throwable {
 		throw new Error();
 	}
 
-	public static boolean method1612(int i, int i_0_) {
-		return (i == 5 || 11 == i || i == 14 || i == 19 || 3 == i || i == 8 || 9 == i);
+	public static boolean method1612(int i_0, int i_1) {
+		return i_0 == 5 || i_0 == 11 || i_0 == 14 || i_0 == 19 || i_0 == 3 || i_0 == 8 || i_0 == 9;
 	}
 
-	static final void method1613(CS2Executor class527, int i) {
-		class527.intStackPtr -= 567564004;
-		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_2_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
-		int i_3_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
-		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537 + 3]);
-		i_1_ += i_2_ << 14;
-		i_1_ += i_3_ << 28;
-		i_1_ += i_4_;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_;
+	static final void method1613(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 4;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
+		int i_5 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 3];
+		i_2 += i_3 << 14;
+		i_2 += i_4 << 28;
+		i_2 += i_5;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_2;
 	}
 
-	static Class222 method1614(RsByteBuffer class282_sub35, int i) {
-		int i_5_ = class282_sub35.readUnsignedByte();
-		int i_6_ = class282_sub35.readUnsignedByte();
-		return new Class222(i_5_, i_6_);
+	static Class222 method1614(RsByteBuffer rsbytebuffer_0, int i_1) {
+		int i_2 = rsbytebuffer_0.readUnsignedByte();
+		int i_3 = rsbytebuffer_0.readUnsignedByte();
+		return new Class222(i_2, i_3);
 	}
+
 }

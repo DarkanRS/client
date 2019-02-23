@@ -1,47 +1,45 @@
-/* Interface12 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface SceneObject {
-	public void method38();
 
-	public void method83(GraphicalRenderer class505);
+	void method38();
 
-	public int getId(int i);
+	void method83(GraphicalRenderer var1);
 
-	public void method85(byte i);
+	int getId(int var1);
 
-	public boolean method86(int i);
+	void method85(byte var1);
 
-	public void method87(GraphicalRenderer class505, int i);
+	boolean method86(int var1);
 
-	public void method88(GraphicalRenderer class505, int i);
+	void method87(GraphicalRenderer var1, int var2);
 
-	public int method76();
+	void method88(GraphicalRenderer var1, int var2);
 
-	public int method89(int i);
+	int method76();
 
-	public void method90();
+	int method89(int var1);
 
-	public int method77();
+	void method90();
 
-	public int method91();
+	int method77();
 
-	public int method92(int i);
+	int method91();
 
-	public int method39();
+	int method92(int var1);
 
-	public void method93(GraphicalRenderer class505);
+	int method39();
 
-	public boolean method94();
+	void method93(GraphicalRenderer var1);
 
-	public boolean method95();
+	boolean method94();
 
-	public int method73();
+	boolean method95();
 
-	public void method96();
+	int method73();
 
-	public void method97(GraphicalRenderer class505);
+	void method96();
 
-	public void method98(GraphicalRenderer class505);
+	void method97(GraphicalRenderer var1);
+
+	void method98(GraphicalRenderer var1);
+
 }

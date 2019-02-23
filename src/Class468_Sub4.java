@@ -1,58 +1,42 @@
-/* Class468_Sub4 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class468_Sub4 extends Class468 {
-	static final int anInt7871 = 2;
-	public static final int anInt7872 = 0;
 
-	public Class468_Sub4(int i, Class282_Sub54 class282_sub54) {
-		super(i, class282_sub54);
+	public Class468_Sub4(int i_1, Class282_Sub54 class282_sub54_2) {
+		super(i_1, class282_sub54_2);
 	}
 
-	public int method7785(int i, int i_0_) {
-		if (!Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-1381198903), -2081713291))
-			return 3;
-		return 1;
+	public int method7785(int i_1, int i_2) {
+		return !Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-1381198903), -2081713291) ? 3 : 1;
 	}
 
-	public void method12639(byte i) {
-		if (aClass282_Sub54_5581.aClass468_Sub18_8230.method12777(284817815) && !Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(61504612), 166435291))
-			anInt5578 = 0;
-		if (-859024475 * anInt5578 < 0 || -859024475 * anInt5578 > 2)
-			anInt5578 = method7781(1915744773) * -754033619;
+	public void method12639(byte b_1) {
+		if (this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12777(284817815) && !Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(61504612), 166435291)) {
+			this.anInt5578 = 0;
+		}
+
+		if (this.anInt5578 < 0 || this.anInt5578 > 2) {
+			this.anInt5578 = this.method7781(1915744773);
+		}
+
 	}
 
-	int method7781(int i) {
+	int method7781(int i_1) {
 		return 0;
 	}
 
-	public int method7784(int i) {
-		if (!Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(340724503), -757986233))
-			return 3;
-		return 1;
+	public int method7784(int i_1) {
+		return !Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(340724503), -757986233) ? 3 : 1;
 	}
 
-	public int method12640() {
-		return anInt5578 * -859024475;
+	void method7783(int i_1, int i_2) {
+		this.anInt5578 = i_1;
 	}
 
-	void method7783(int i, int i_1_) {
-		anInt5578 = -754033619 * i;
+	public int method12641(int i_1) {
+		return this.anInt5578;
 	}
 
-	public int method12641(int i) {
-		return anInt5578 * -859024475;
-	}
-
-	void method7780(int i) {
-		anInt5578 = -754033619 * i;
-	}
-
-	public boolean method12642() {
-		if (!Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(209283172), -860741872))
-			return false;
-		return true;
+	void method7780(int i_1) {
+		this.anInt5578 = -754033619 * i_1 * -859024475;
 	}
 
 	int method7786() {
@@ -63,40 +47,12 @@ public class Class468_Sub4 extends Class468 {
 		return 0;
 	}
 
-	public void method12643() {
-		if (aClass282_Sub54_5581.aClass468_Sub18_8230.method12777(284817815) && !Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-1121230079), -595138673))
-			anInt5578 = 0;
-		if (-859024475 * anInt5578 < 0 || -859024475 * anInt5578 > 2)
-			anInt5578 = method7781(1933182309) * -754033619;
+	public boolean method12646(int i_1) {
+		return Class60.method1166(this.aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-655051522), -271241654);
 	}
 
-	public void method12644() {
-		if (aClass282_Sub54_5581.aClass468_Sub18_8230.method12777(284817815) && !Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(683535134), -176070405))
-			anInt5578 = 0;
-		if (-859024475 * anInt5578 < 0 || -859024475 * anInt5578 > 2)
-			anInt5578 = method7781(2066033848) * -754033619;
+	public Class468_Sub4(Class282_Sub54 class282_sub54_1) {
+		super(class282_sub54_1);
 	}
 
-	public void method12645() {
-		if (aClass282_Sub54_5581.aClass468_Sub18_8230.method12777(284817815) && !Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-410785141), -1921747681))
-			anInt5578 = 0;
-		if (-859024475 * anInt5578 < 0 || -859024475 * anInt5578 > 2)
-			anInt5578 = method7781(2006748157) * -754033619;
-	}
-
-	public boolean method12646(int i) {
-		if (!Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-655051522), -271241654))
-			return false;
-		return true;
-	}
-
-	public boolean method12647() {
-		if (!Class60.method1166(aClass282_Sub54_5581.aClass468_Sub18_8230.method12776(-986364962), -1761992912))
-			return false;
-		return true;
-	}
-
-	public Class468_Sub4(Class282_Sub54 class282_sub54) {
-		super(class282_sub54);
-	}
 }

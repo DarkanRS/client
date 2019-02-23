@@ -1,217 +1,154 @@
-/* Class361 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class361 {
-	public static Class361 aClass361_4169;
-	public static Class361 aClass361_4170;
-	public static Class361 aClass361_4171;
-	public static Class361 aClass361_4172;
-	public static Class361 aClass361_4173;
-	public static Class361 aClass361_4174 = new Class361(9);
-	public static Class361 aClass361_4175;
-	public static Class361 aClass361_4176;
-	public static Class361 aClass361_4177;
-	public static Class361 aClass361_4178;
-	public static Class361 aClass361_4179;
-	public static Class361 aClass361_4180;
-	public static Class361 aClass361_4181;
-	public static Class361 aClass361_4182;
-	public static Class361 aClass361_4183;
-	int anInt4184;
+
 	static int anInt4185;
+	public static Class361 aClass361_4174 = new Class361(9);
+	public static Class361 aClass361_4170 = new Class361(3);
+	public static Class361 aClass361_4171 = new Class361(7);
+	public static Class361 aClass361_4182 = new Class361(8);
+	public static Class361 aClass361_4173 = new Class361(10);
+	public static Class361 aClass361_4178 = new Class361(4);
+	public static Class361 aClass361_4175 = new Class361(15);
+	public static Class361 aClass361_4177 = new Class361(1);
+	public static Class361 aClass361_4169 = new Class361(5);
+	public static Class361 aClass361_4176 = new Class361(11);
+	public static Class361 aClass361_4179 = new Class361(13);
+	public static Class361 aClass361_4180 = new Class361(6);
+	public static Class361 aClass361_4181 = new Class361(2);
+	public static Class361 aClass361_4172 = new Class361(12);
+	public static Class361 aClass361_4183 = new Class361(14);
+	int anInt4184;
 
-	public void method6252(Object[] objects) {
+	public String method6253(byte b_1) {
+		return "_" + this.anInt4184;
+	}
+
+	public Object method6254(Object[] arr_1, byte b_2) throws Throwable {
+		return Class441.method7375(Class282_Sub44.anApplet8065, this.method6253((byte) -103), arr_1, -864782771);
+	}
+
+	public Object method6255(short s_1) throws Throwable {
+		return Class441.method7377(Class282_Sub44.anApplet8065, this.method6253((byte) -29), 2107704152);
+	}
+
+	public void method6256(Object[] arr_1, int i_2) {
 		try {
-			method6254(objects, (byte) 2);
-		} catch (Throwable throwable) {
-			/* empty */
+			this.method6254(arr_1, (byte) 14);
+		} catch (Throwable throwable_4) {
+			;
 		}
+
 	}
 
-	public String method6253(byte i) {
-		return new StringBuilder().append("_").append(((Class361) this).anInt4184 * 1367059563).toString();
-	}
-
-	public Object method6254(Object[] objects, byte i) throws Throwable {
-		return Class441.method7375(Class282_Sub44.anApplet8065, method6253((byte) -103), objects, -864782771);
-	}
-
-	public Object method6255(short i) throws Throwable {
-		return Class441.method7377(Class282_Sub44.anApplet8065, method6253((byte) -29), 2107704152);
-	}
-
-	public void method6256(Object[] objects, int i) {
+	public void method6257(int i_1) {
 		try {
-			method6254(objects, (byte) 14);
-		} catch (Throwable throwable) {
-			/* empty */
+			this.method6255((short) 7681);
+		} catch (Throwable throwable_3) {
+			;
 		}
+
 	}
 
-	public void method6257(int i) {
-		try {
-			method6255((short) 7681);
-		} catch (Throwable throwable) {
-			/* empty */
-		}
+	Class361(int i_1) {
+		this.anInt4184 = i_1;
 	}
 
-	Class361(int i) {
-		((Class361) this).anInt4184 = -1168269245 * i;
-	}
+	static void method6269(Class282_Sub50_Sub7 class282_sub50_sub7_0, int i_1) {
+		if (class282_sub50_sub7_0 != null) {
+			Class20.aClass482_171.append(class282_sub50_sub7_0, 1886689844);
+			++Class20.anInt169;
+			Object obj_2 = null;
+			Class282_Sub50_Sub15 class282_sub50_sub15_3;
+			if (!class282_sub50_sub7_0.aBool9586 && !"".equals(class282_sub50_sub7_0.aString9588)) {
+				long long_4 = class282_sub50_sub7_0.aLong9580;
 
-	public String method6258() {
-		return new StringBuilder().append("_").append(((Class361) this).anInt4184 * 1367059563).toString();
-	}
-
-	public Object method6259() throws Throwable {
-		return Class441.method7377(Class282_Sub44.anApplet8065, method6253((byte) -29), 1132251204);
-	}
-
-	public String method6260() {
-		return new StringBuilder().append("_").append(((Class361) this).anInt4184 * 1367059563).toString();
-	}
-
-	public Object method6261(Object[] objects) throws Throwable {
-		return Class441.method7375(Class282_Sub44.anApplet8065, method6253((byte) -51), objects, -1185211651);
-	}
-
-	public Object method6262(Object[] objects) throws Throwable {
-		return Class441.method7375(Class282_Sub44.anApplet8065, method6253((byte) -72), objects, 332291572);
-	}
-
-	public Object method6263() throws Throwable {
-		return Class441.method7377(Class282_Sub44.anApplet8065, method6253((byte) -121), 1103943298);
-	}
-
-	public Object method6264() throws Throwable {
-		return Class441.method7377(Class282_Sub44.anApplet8065, method6253((byte) -13), 1427945266);
-	}
-
-	static {
-		aClass361_4170 = new Class361(3);
-		aClass361_4171 = new Class361(7);
-		aClass361_4182 = new Class361(8);
-		aClass361_4173 = new Class361(10);
-		aClass361_4178 = new Class361(4);
-		aClass361_4175 = new Class361(15);
-		aClass361_4177 = new Class361(1);
-		aClass361_4169 = new Class361(5);
-		aClass361_4176 = new Class361(11);
-		aClass361_4179 = new Class361(13);
-		aClass361_4180 = new Class361(6);
-		aClass361_4181 = new Class361(2);
-		aClass361_4172 = new Class361(12);
-		aClass361_4183 = new Class361(14);
-	}
-
-	public void method6265(Object[] objects) {
-		try {
-			method6254(objects, (byte) 22);
-		} catch (Throwable throwable) {
-			/* empty */
-		}
-	}
-
-	public void method6266(Object[] objects) {
-		try {
-			method6254(objects, (byte) -93);
-		} catch (Throwable throwable) {
-			/* empty */
-		}
-	}
-
-	public String method6267() {
-		return new StringBuilder().append("_").append(((Class361) this).anInt4184 * 1367059563).toString();
-	}
-
-	public void method6268() {
-		try {
-			method6255((short) 7681);
-		} catch (Throwable throwable) {
-			/* empty */
-		}
-	}
-
-	static void method6269(Class282_Sub50_Sub7 class282_sub50_sub7, int i) {
-		if (null != class282_sub50_sub7) {
-			Class20.aClass482_171.append(class282_sub50_sub7, 1886689844);
-			Class20.anInt169 += 1410722043;
-			Object object = null;
-			Class282_Sub50_Sub15 class282_sub50_sub15;
-			if (!((Class282_Sub50_Sub7) class282_sub50_sub7).aBool9586 && !"".equals(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588)) {
-				long l = (820033947929891191L * (((Class282_Sub50_Sub7) class282_sub50_sub7).aLong9580));
-				for (class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass465_172.method7754(l)); (null != class282_sub50_sub15 && !(((Class282_Sub50_Sub15) class282_sub50_sub15).aString9771.equals(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588))); class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-2120595653))) {
-					/* empty */
+				for (class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7754(long_4); class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588); class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass465_172.method7747(-2120595653)) {
+					;
 				}
-				if (class282_sub50_sub15 == null) {
-					class282_sub50_sub15 = ((Class282_Sub50_Sub15) Class20.aClass229_164.get(l));
-					if (null != class282_sub50_sub15 && !(((Class282_Sub50_Sub15) class282_sub50_sub15).aString9771.equals(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588)))
-						class282_sub50_sub15 = null;
-					if (null == class282_sub50_sub15)
-						class282_sub50_sub15 = new Class282_Sub50_Sub15(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588);
-					Class20.aClass465_172.method7765(class282_sub50_sub15, l);
-					Class20.anInt170 += 1980182825;
+
+				if (class282_sub50_sub15_3 == null) {
+					class282_sub50_sub15_3 = (Class282_Sub50_Sub15) Class20.aClass229_164.get(long_4);
+					if (class282_sub50_sub15_3 != null && !class282_sub50_sub15_3.aString9771.equals(class282_sub50_sub7_0.aString9588)) {
+						class282_sub50_sub15_3 = null;
+					}
+
+					if (class282_sub50_sub15_3 == null) {
+						class282_sub50_sub15_3 = new Class282_Sub50_Sub15(class282_sub50_sub7_0.aString9588);
+					}
+
+					Class20.aClass465_172.method7765(class282_sub50_sub15_3, long_4);
+					++Class20.anInt170;
 				}
 			} else {
-				class282_sub50_sub15 = new Class282_Sub50_Sub15(((Class282_Sub50_Sub7) class282_sub50_sub7).aString9588);
-				Class20.anInt170 += 1980182825;
+				class282_sub50_sub15_3 = new Class282_Sub50_Sub15(class282_sub50_sub7_0.aString9588);
+				++Class20.anInt170;
 			}
-			if (class282_sub50_sub15.method15245(class282_sub50_sub7, -792005966))
-				Class13.method503(class282_sub50_sub15, 1768390484);
+
+			if (class282_sub50_sub15_3.method15245(class282_sub50_sub7_0, -792005966)) {
+				Class13.method503(class282_sub50_sub15_3, 1768390484);
+			}
 		}
+
 	}
 
-	static void method6270(byte i) {
-		if (QuickChatDynamicValue.method4180(client.anInt7166 * -1741204137, (byte) -11)) {
-			if (client.aClass184_7218.method3053((byte) -30) == null)
+	static void method6270(byte b_0) {
+		if (QuickChatDynamicValue.method4180(client.anInt7166, (byte) -11)) {
+			if (client.aClass184_7218.method3053((byte) -30) == null) {
 				Class365.setGameState(14, 1288084460);
-			else
+			} else {
 				Class365.setGameState(0, 2055282492);
-		} else if (-1741204137 * client.anInt7166 == 14 || 19 == -1741204137 * client.anInt7166)
+			}
+		} else if (client.anInt7166 != 14 && client.anInt7166 != 19) {
+			if (client.anInt7166 == 12) {
+				Class365.setGameState(5, 2013882728);
+			}
+		} else {
 			Class365.setGameState(5, 1099298467);
-		else if (12 == client.anInt7166 * -1741204137)
-			Class365.setGameState(5, 2013882728);
+		}
+
 	}
 
-	static final void method6271(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class125.method2168(class118, class98, class527, 539000010);
+	static final void method6271(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class125.method2168(icomponentdefinitions_3, interface_4, cs2executor_0, 539000010);
 	}
 
-	static final void method6272(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		int[] is = Class268.method4799(i_0_, 72550989);
-		Class503.method8362(is, 0, class527.intStack, class527.intStackPtr * 1942118537, 3);
-		class527.intStackPtr += 425673003;
+	static final void method6272(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		int[] ints_3 = Class268.method4799(i_2, 72550989);
+		Class503.method8362(ints_3, 0, cs2executor_0.intStack, cs2executor_0.intStackPtr, 3);
+		cs2executor_0.intStackPtr += 3;
 	}
 
-	public static byte[] method6273(byte[] data, int start, int end) {
-		byte[] is_3_;
-		if (start > 0) {
-			is_3_ = new byte[end];
-			for (int i_4_ = 0; i_4_ < end; i_4_++)
-				is_3_[i_4_] = data[i_4_ + start];
-		} else
-			is_3_ = data;
-		Whirlpool whirlpool = new Whirlpool();
-		whirlpool.method7406(1953997400);
-		whirlpool.method7407(is_3_, (long) (end * 8));
-		byte[] is_5_ = new byte[64];
-		whirlpool.method7408(is_5_, 0, -979792487);
-		return is_5_;
+	public static byte[] method6273(byte[] bytes_0, int i_1, int i_2) {
+		byte[] bytes_3;
+		if (i_1 > 0) {
+			bytes_3 = new byte[i_2];
+
+			for (int i_4 = 0; i_4 < i_2; i_4++) {
+				bytes_3[i_4] = bytes_0[i_4 + i_1];
+			}
+		} else {
+			bytes_3 = bytes_0;
+		}
+
+		Whirlpool whirlpool_6 = new Whirlpool();
+		whirlpool_6.method7406(1953997400);
+		whirlpool_6.method7407(bytes_3, (long) (i_2 * 8));
+		byte[] bytes_5 = new byte[64];
+		whirlpool_6.method7408(bytes_5, 0, -979792487);
+		return bytes_5;
 	}
 
-	static final void method6274(Class521_Sub1 class521_sub1, int i, int i_6_) {
-		Class8_Sub3.method14336(class521_sub1, i, false, 1466733584);
+	static final void method6274(Class521_Sub1 class521_sub1_0, int i_1, int i_2) {
+		Class8_Sub3.method14336(class521_sub1_0, i_1, false, 1466733584);
 	}
 
-	static final void method6275(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7344 ? 1 : 0;
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = client.aString7356 == null ? "" : client.aString7356;
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = null == client.aString7275 ? "" : client.aString7275;
+	static final void method6275(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7344 ? 1 : 0;
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7356 == null ? "" : client.aString7356;
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7275 == null ? "" : client.aString7275;
 	}
+
 }

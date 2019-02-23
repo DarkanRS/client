@@ -1,58 +1,64 @@
-/* Class282_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class Class282_Sub1 extends Node {
-	Class282_Sub1() {
-		/* empty */
+
+	static final void method11612(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 3;
+		Class117.method1978(cs2executor_0.intStack[cs2executor_0.intStackPtr], cs2executor_0.intStack[cs2executor_0.intStackPtr + 1], cs2executor_0.intStack[cs2executor_0.intStackPtr + 2], (byte) 1);
 	}
 
-	static final void method11612(CS2Executor class527, int i) {
-		class527.intStackPtr -= 425673003;
-		Class117.method1978((class527.intStack[class527.intStackPtr * 1942118537]), (class527.intStack[1 + (1942118537 * class527.intStackPtr)]), (class527.intStack[(1942118537 * class527.intStackPtr + 2)]), (byte) 1);
-	}
-
-	static final void method11613(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (-1 != -1699899559 * client.anInt7349) {
-			if (0 == i_0_) {
-				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = -1699899559 * client.anInt7349;
+	static final void method11613(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		if (client.anInt7349 != -1) {
+			if (i_2 == 0) {
+				cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7349;
 				return;
 			}
-			i_0_--;
+
+			--i_2;
 		}
-		Class282_Sub44 class282_sub44 = (Class282_Sub44) client.aClass465_7442.method7750(-1846591050);
-		while (i_0_-- > 0)
-			class282_sub44 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 5);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 587626901 * class282_sub44.anInt8063;
+
+		Class282_Sub44 class282_sub44_3;
+		for (class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7750(-1846591050); i_2-- > 0; class282_sub44_3 = (Class282_Sub44) client.aClass465_7442.method7751((byte) 5)) {
+			;
+		}
+
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class282_sub44_3.anInt8063;
 	}
 
-	public static void method11614(int i, int i_1_) {
+	public static void method11614(int i_0, int i_1) {
 		if (Class388.method6693(2080572135)) {
-			if (Class9.anInt76 * 1051306693 != i)
-				Class9.aLong77 = -2087908126908168589L;
-			Class9.anInt76 = i * 1481524237;
+			if (i_0 != Class9.anInt76) {
+				Class9.aLong77 = -1L;
+			}
+
+			Class9.anInt76 = i_0;
 			Class365.setGameState(19, 1363938860);
 		}
+
 	}
 
-	public static void method11615(int i, Index class317, int i_2_, int i_3_, int i_4_, boolean bool, Class109 class109, int i_5_) {
-		if (i > 0) {
-			Class148.anInt1730 = 800770715;
-			Class75.aClass317_746 = class317;
-			Class6.anInt46 = i_2_ * -26560111;
-			Class148.anInt1738 = i_3_ * 275076647;
+	public static void method11615(int i_0, Index index_1, int i_2, int i_3, int i_4, boolean bool_5, Class109 class109_6, int i_7) {
+		if (i_0 > 0) {
+			Class148.anInt1730 = 1;
+			Class75.aClass317_746 = index_1;
+			Class6.anInt46 = i_2;
+			Class148.anInt1738 = i_3;
 			Class282_Sub33.aClass282_Sub15_Sub2_7836 = null;
-			Class158_Sub2_Sub3.anInt10243 = i_4_ * 965667275;
-			Class152.aBool1962 = bool;
-			Class96_Sub22.anInt9440 = (Class148.aClass282_Sub15_Sub2_1735.method15123(-1727708848) / i * -465842921);
-			if (Class96_Sub22.anInt9440 * -1553319257 < 1)
-				Class96_Sub22.anInt9440 = -465842921;
-			Class11.aClass109_121 = class109;
+			Class158_Sub2_Sub3.anInt10243 = i_4;
+			Class152.aBool1962 = bool_5;
+			Class96_Sub22.anInt9440 = Class148.aClass282_Sub15_Sub2_1735.method15123(-1727708848) / i_0;
+			if (Class96_Sub22.anInt9440 < 1) {
+				Class96_Sub22.anInt9440 = 1;
+			}
+
+			Class11.aClass109_121 = class109_6;
 		} else {
-			if (null != class109)
-				class109.method1849((byte) -109);
-			Class11.method13400(class317, i_2_, i_3_, i_4_, bool, (byte) -106);
+			if (class109_6 != null) {
+				class109_6.method1849((byte) -109);
+			}
+
+			Class11.method13400(index_1, i_2, i_3, i_4, bool_5, (byte) -106);
 		}
+
 	}
+
 }

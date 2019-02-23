@@ -1,82 +1,97 @@
-
-/* Class479 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Point;
 
 public class UnderlayIndexLoader {
-	Index configIndex;
+
 	SoftCache cache = new SoftCache(128);
+	Index configIndex;
 
-	public UnderlayDef getUnderlayDef(int i, byte i_0_) {
-		UnderlayDef def;
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			def = ((UnderlayDef) ((UnderlayIndexLoader) this).cache.get((long) i));
+	public UnderlayDef getUnderlayDef(int i_1, byte b_2) {
+		SoftCache softcache_4 = this.cache;
+		UnderlayDef underlaydef_3;
+		synchronized (this.cache) {
+			underlaydef_3 = (UnderlayDef) this.cache.get((long) i_1);
 		}
-		if (def != null)
-			return def;
-		byte[] is;
-		synchronized (((UnderlayIndexLoader) this).configIndex) {
-			is = (((UnderlayIndexLoader) this).configIndex.getFile(-71319279 * SharedConfigsType.FLO1.id, i));
-		}
-		def = new UnderlayDef();
-		if (null != is)
-			def.method8050(new RsByteBuffer(is), -341633442);
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.put(def, (long) i);
-		}
-		return def;
-	}
 
-	public void method8026(int i) {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3859(-62537234);
-		}
-	}
-
-	public UnderlayIndexLoader(Game class486, XLanguage class495, Index class317) {
-		((UnderlayIndexLoader) this).configIndex = class317;
-		((UnderlayIndexLoader) this).configIndex.filesCount((SharedConfigsType.FLO1.id) * -71319279);
-	}
-
-	public void method8030(int i, int i_1_) {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3858(i, (byte) -26);
-		}
-	}
-
-	public void method8032(int i) {
-		synchronized (((UnderlayIndexLoader) this).cache) {
-			((UnderlayIndexLoader) this).cache.method3863(977235767);
-		}
-	}
-
-	static void method8036(int i, byte i_2_) {
-		if (Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 0)
-			i = -1;
-		if (i != client.anInt7190 * -1474737961) {
-			if (i != -1) {
-				Class419 class419 = IndexLoaders.aClass438_7932.method7325(i, -962986657);
-				Class91 class91 = class419.method7026(-890527904);
-				if (null != class91) {
-					MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, class91.method1528(), class91.method1519(), class91.method1520(), new Point(class419.anInt5002 * 1805382875, class419.anInt5000 * -683952919));
-					client.anInt7190 = i * -618386713;
-				} else
-					i = -1;
+		if (underlaydef_3 != null) {
+			return underlaydef_3;
+		} else {
+			Index index_5 = this.configIndex;
+			byte[] bytes_10;
+			synchronized (this.configIndex) {
+				bytes_10 = this.configIndex.getFile(SharedConfigsType.FLO1.id, i_1);
 			}
-			if (-1 == i && -1 != client.anInt7190 * -1474737961) {
-				MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, null, -1, -1, new Point());
-				client.anInt7190 = 618386713;
+
+			underlaydef_3 = new UnderlayDef();
+			if (bytes_10 != null) {
+				underlaydef_3.method8050(new RsByteBuffer(bytes_10), -341633442);
+			}
+
+			SoftCache softcache_9 = this.cache;
+			synchronized (this.cache) {
+				this.cache.put(underlaydef_3, (long) i_1);
+				return underlaydef_3;
 			}
 		}
 	}
 
-	static final void method8037(CS2Executor class527, int i) {
-		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class527.aClass61_7010.aStringArray639[i_3_];
+	public void method8026(int i_1) {
+		SoftCache softcache_2 = this.cache;
+		synchronized (this.cache) {
+			this.cache.method3859(-62537234);
+		}
 	}
 
-	public static Class494[] method8038(byte i) {
-		return (new Class494[] { Class494.aClass494_5784, Class494.aClass494_5792, Class494.aClass494_5787, Class494.aClass494_5789, Class494.aClass494_5786, Class494.aClass494_5782, Class494.aClass494_5788, Class494.aClass494_5779, Class494.aClass494_5790, Class494.aClass494_5783, Class494.aClass494_5791, Class494.aClass494_5781, Class494.aClass494_5785, Class494.aClass494_5780 });
+	public UnderlayIndexLoader(Game game_1, Language xlanguage_2, Index index_3) {
+		this.configIndex = index_3;
+		this.configIndex.filesCount(SharedConfigsType.FLO1.id);
 	}
+
+	public void method8030(int i_1, int i_2) {
+		SoftCache softcache_3 = this.cache;
+		synchronized (this.cache) {
+			this.cache.method3858(i_1, (byte) -26);
+		}
+	}
+
+	public void method8032(int i_1) {
+		SoftCache softcache_2 = this.cache;
+		synchronized (this.cache) {
+			this.cache.method3863(977235767);
+		}
+	}
+
+	static void method8036(int i_0, byte b_1) {
+		if (Class393.aClass282_Sub54_4783.aClass468_Sub8_8219.method12675(-1589433086) == 0) {
+			i_0 = -1;
+		}
+
+		if (i_0 != client.anInt7190) {
+			if (i_0 != -1) {
+				Class419 class419_2 = IndexLoaders.aClass438_7932.method7325(i_0, -962986657);
+				Class91 class91_3 = class419_2.method7026(-890527904);
+				if (class91_3 != null) {
+					MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, class91_3.method1528(), class91_3.method1519(), class91_3.method1520(), new Point(class419_2.anInt5002, class419_2.anInt5000));
+					client.anInt7190 = i_0;
+				} else {
+					i_0 = -1;
+				}
+			}
+
+			if (i_0 == -1 && client.anInt7190 != -1) {
+				MeshModifier.aClass267_5026.setcustomcursor(Class351.gameCanvas, (int[]) null, -1, -1, new Point());
+				client.anInt7190 = -1;
+			}
+		}
+
+	}
+
+	static final void method8037(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.aClass61_7010.aStringArray639[i_2];
+	}
+
+	public static Class494[] method8038(byte b_0) {
+		return new Class494[] { Class494.aClass494_5784, Class494.aClass494_5792, Class494.aClass494_5787, Class494.aClass494_5789, Class494.aClass494_5786, Class494.aClass494_5782, Class494.aClass494_5788, Class494.aClass494_5779, Class494.aClass494_5790, Class494.aClass494_5783, Class494.aClass494_5791, Class494.aClass494_5781, Class494.aClass494_5785, Class494.aClass494_5780 };
+	}
+
 }

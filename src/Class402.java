@@ -1,50 +1,52 @@
-/* Class402 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class402 {
+
+	public static String aString4828;
 	boolean aBool4826;
 	Class399[] aClass399Array4827;
-	public static String aString4828;
 
-	Class402(boolean bool, Class399[] class399s) {
-		((Class402) this).aBool4826 = bool;
-		((Class402) this).aClass399Array4827 = class399s;
+	Class402(boolean bool_1, Class399[] arr_2) {
+		this.aBool4826 = bool_1;
+		this.aClass399Array4827 = arr_2;
 	}
 
-	public static final void method6798(String string, short i) {
-		if (null != string) {
-			String string_0_ = Class383.method6515(string, 1942118537);
-			if (null != string_0_) {
-				for (int i_1_ = 0; i_1_ < client.anInt7449 * 493536965; i_1_++) {
-					Class6 class6 = client.aClass6Array7452[i_1_];
-					String string_2_ = class6.aString37;
-					String string_3_ = Class383.method6515(string_2_, 1942118537);
-					if (Class159.method2734(string, string_0_, string_2_, string_3_, (byte) -79)) {
-						client.anInt7449 -= -238893043;
-						for (int i_4_ = i_1_; i_4_ < client.anInt7449 * 493536965; i_4_++)
-							client.aClass6Array7452[i_4_] = client.aClass6Array7452[1 + i_4_];
-						client.anInt7386 = client.anInt7347 * 23579151;
-						Class184 class184 = Class468_Sub20.method12807(222304163);
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4551, class184.isaac, 1980188569);
-						class282_sub23.buffer.writeByte(ChatLine.getLength(string));
-						class282_sub23.buffer.writeString(string);
-						class184.method3049(class282_sub23, -234662582);
+	public static final void method6798(String string_0, short s_1) {
+		if (string_0 != null) {
+			String string_2 = Class383.method6515(string_0, 1942118537);
+			if (string_2 != null) {
+				for (int i_3 = 0; i_3 < client.anInt7449; i_3++) {
+					Class6 class6_4 = client.aClass6Array7452[i_3];
+					String string_5 = class6_4.aString37;
+					String string_6 = Class383.method6515(string_5, 1942118537);
+					if (Class159.method2734(string_0, string_2, string_5, string_6, (byte) -79)) {
+						--client.anInt7449;
+
+						for (int i_7 = i_3; i_7 < client.anInt7449; i_7++) {
+							client.aClass6Array7452[i_7] = client.aClass6Array7452[i_7 + 1];
+						}
+
+						client.anInt7386 = client.anInt7347;
+						Class184 class184_9 = Class468_Sub20.method12807(222304163);
+						TCPMessage tcpmessage_8 = Class271.method4828(OutgoingPacket.aClass379_4551, class184_9.isaac, 1980188569);
+						tcpmessage_8.buffer.writeByte(ChatLine.getLength(string_0));
+						tcpmessage_8.buffer.writeString(string_0);
+						class184_9.method3049(tcpmessage_8, -234662582);
 						break;
 					}
 				}
 			}
 		}
+
 	}
 
-	static final void method6799(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1543197399 * client.anInt7149;
+	static final void method6799(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7149;
 	}
 
-	static final void method6800(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class468_Sub2.method12630(class118, class98, class527, 1465627737);
+	static final void method6800(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class468_Sub2.method12630(icomponentdefinitions_3, interface_4, cs2executor_0, 1465627737);
 	}
+
 }

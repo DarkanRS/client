@@ -1,37 +1,33 @@
-/* Class403 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class403 {
-	public static final long aLong4829 = 94608000L;
 
 	Class403() throws Throwable {
 		throw new Error();
 	}
 
-	public static ClipMap createClipMap(int sizeX, int sizeZ, byte i_1_) {
-		ClipMap map = new ClipMap();
-		map.offsetX = -892178839;
-		map.offsetY = 1315713723;
-		((ClipMap) map).sizeX = 260756261 * (5 + (1 + sizeX));
-		((ClipMap) map).sizeY = (5 + (sizeZ + 1)) * 2015661001;
-		map.map = (new int[((ClipMap) map).sizeX * -1208414035][((ClipMap) map).sizeY * 117800569]);
-		map.method5965((byte) 5);
-		return map;
+	public static ClipMap createClipMap(int i_0, int i_1, byte b_2) {
+		ClipMap clipmap_3 = new ClipMap();
+		clipmap_3.offsetX = -1;
+		clipmap_3.offsetY = -1;
+		clipmap_3.sizeX = i_0 + 1 + 5;
+		clipmap_3.sizeY = i_1 + 1 + 5;
+		clipmap_3.map = new int[clipmap_3.sizeX][clipmap_3.sizeY];
+		clipmap_3.method5965((byte) 5);
+		return clipmap_3;
 	}
 
-	static final void method6802(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class237.method3987(class118, class98, class527, -669419549);
+	static final void method6802(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class237.method3987(icomponentdefinitions_3, interface_4, cs2executor_0, -669419549);
 	}
 
-	public static void method6803(Index interfaceIdx, Index meshIdx, Index spritesIdx, Index fontIdx, int i) {
-		Class388.INTERFACE_INDEX = interfaceIdx;
-		Class488.MESH_INDEX = meshIdx;
-		Class463.SPRITES_INDEX = spritesIdx;
+	public static void method6803(Index index_0, Index index_1, Index index_2, Index index_3, int i_4) {
+		Class388.INTERFACE_INDEX = index_0;
+		Class488.MESH_INDEX = index_1;
+		Class463.SPRITES_INDEX = index_2;
 		Class468_Sub8.aClass98Array7889 = new Interface[Class388.INTERFACE_INDEX.containersCount()];
 		WorldMapIndexLoader.aBoolArray2709 = new boolean[Class388.INTERFACE_INDEX.containersCount()];
 	}
+
 }

@@ -1,240 +1,273 @@
-/* Class51 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class51 implements Interface2 {
-	FontRenderer aClass8_484;
-	Class62 aClass62_485;
-	Index aClass317_486;
-	Index aClass317_487;
+
 	static int anInt488;
+	Class62 aClass62_485;
+	Index aClass317_487;
+	Index aClass317_486;
+	FontRenderer aClass8_484;
 
-	public void method11(boolean bool) {
-		if (bool) {
-			int i = ((((Class51) this).aClass62_485.aClass356_650.method6221(2056525513 * ((Class51) this).aClass62_485.anInt652, 150480619 * client.anInt7439, 1034015325)) + -906350423 * ((Class51) this).aClass62_485.anInt651);
-			int i_0_ = ((((Class51) this).aClass62_485.aClass353_654.method6198(38429607 * ((Class51) this).aClass62_485.anInt648, 1176039023 * client.anInt7312, 1192108582)) + ((Class51) this).aClass62_485.anInt655 * -601422611);
-			((Class51) this).aClass8_484.method378(((Class51) this).aClass62_485.aString649, i, i_0_, 2056525513 * ((Class51) this).aClass62_485.anInt652, 38429607 * ((Class51) this).aClass62_485.anInt648, -1179509109 * ((Class51) this).aClass62_485.anInt659, ((Class51) this).aClass62_485.anInt660 * 1958427123, -533570239 * ((Class51) this).aClass62_485.anInt653, 1391502107 * ((Class51) this).aClass62_485.anInt656, -1240305753 * ((Class51) this).aClass62_485.anInt657, null, null, null, 0, 0,
-					(byte) 60);
+	public void method11(boolean bool_1) {
+		if (bool_1) {
+			int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1034015325) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
+			int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1192108582) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
+			this.aClass8_484.method378(this.aClass62_485.aString649, i_2, i_3, 2056525513 * this.aClass62_485.anInt652 * 1860559737, 38429607 * this.aClass62_485.anInt648 * 959976471, -1179509109 * this.aClass62_485.anInt659 * 1820776739, this.aClass62_485.anInt660 * -1985214661 * 1958427123, -533570239 * this.aClass62_485.anInt653 * -762236223, 1391502107 * this.aClass62_485.anInt656 * 533004051, -1240305753 * this.aClass62_485.anInt657 * 1235699735, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 60);
 		}
+
 	}
 
-	Class51(Index class317, Index class317_1_, Class62 class62) {
-		((Class51) this).aClass62_485 = class62;
-		((Class51) this).aClass317_487 = class317;
-		((Class51) this).aClass317_486 = class317_1_;
+	Class51(Index index_1, Index index_2, Class62 class62_3) {
+		this.aClass62_485 = class62_3;
+		this.aClass317_487 = index_1;
+		this.aClass317_486 = index_2;
 	}
 
-	public void method20(boolean bool, int i) {
-		if (bool) {
-			int i_2_ = ((((Class51) this).aClass62_485.aClass356_650.method6221(2056525513 * ((Class51) this).aClass62_485.anInt652, 150480619 * client.anInt7439, 1847576923)) + -906350423 * ((Class51) this).aClass62_485.anInt651);
-			int i_3_ = ((((Class51) this).aClass62_485.aClass353_654.method6198(38429607 * ((Class51) this).aClass62_485.anInt648, 1176039023 * client.anInt7312, 1796559558)) + ((Class51) this).aClass62_485.anInt655 * -601422611);
-			((Class51) this).aClass8_484.method378(((Class51) this).aClass62_485.aString649, i_2_, i_3_, 2056525513 * ((Class51) this).aClass62_485.anInt652, 38429607 * ((Class51) this).aClass62_485.anInt648, -1179509109 * ((Class51) this).aClass62_485.anInt659, ((Class51) this).aClass62_485.anInt660 * 1958427123, -533570239 * ((Class51) this).aClass62_485.anInt653, 1391502107 * ((Class51) this).aClass62_485.anInt656, -1240305753 * ((Class51) this).aClass62_485.anInt657, null, null, null, 0, 0,
-					(byte) 28);
+	public void method20(boolean bool_1, int i_2) {
+		if (bool_1) {
+			int i_3 = this.aClass62_485.aClass356_650.method6221(this.aClass62_485.anInt652, client.anInt7439, 1847576923) + this.aClass62_485.anInt651;
+			int i_4 = this.aClass62_485.aClass353_654.method6198(this.aClass62_485.anInt648, client.anInt7312, 1796559558) + this.aClass62_485.anInt655;
+			this.aClass8_484.method378(this.aClass62_485.aString649, i_3, i_4, this.aClass62_485.anInt652, this.aClass62_485.anInt648, this.aClass62_485.anInt659, this.aClass62_485.anInt660, this.aClass62_485.anInt653, this.aClass62_485.anInt656, this.aClass62_485.anInt657, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 28);
 		}
+
 	}
 
 	public boolean method21() {
-		boolean bool = true;
-		if (!((Class51) this).aClass317_487.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -1933108469))
-			bool = false;
-		if (!((Class51) this).aClass317_486.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -1620849369))
-			bool = false;
-		return bool;
+		boolean bool_1 = true;
+		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -1933108469)) {
+			bool_1 = false;
+		}
+
+		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -1620849369)) {
+			bool_1 = false;
+		}
+
+		return bool_1;
 	}
 
-	public void method12(boolean bool) {
-		if (bool) {
-			int i = ((((Class51) this).aClass62_485.aClass356_650.method6221(2056525513 * ((Class51) this).aClass62_485.anInt652, 150480619 * client.anInt7439, 825441624)) + -906350423 * ((Class51) this).aClass62_485.anInt651);
-			int i_4_ = ((((Class51) this).aClass62_485.aClass353_654.method6198(38429607 * ((Class51) this).aClass62_485.anInt648, 1176039023 * client.anInt7312, 2097685186)) + ((Class51) this).aClass62_485.anInt655 * -601422611);
-			((Class51) this).aClass8_484.method378(((Class51) this).aClass62_485.aString649, i, i_4_, 2056525513 * ((Class51) this).aClass62_485.anInt652, 38429607 * ((Class51) this).aClass62_485.anInt648, -1179509109 * ((Class51) this).aClass62_485.anInt659, ((Class51) this).aClass62_485.anInt660 * 1958427123, -533570239 * ((Class51) this).aClass62_485.anInt653, 1391502107 * ((Class51) this).aClass62_485.anInt656, -1240305753 * ((Class51) this).aClass62_485.anInt657, null, null, null, 0, 0,
-					(byte) 10);
+	public void method12(boolean bool_1) {
+		if (bool_1) {
+			int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 825441624) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
+			int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 2097685186) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
+			this.aClass8_484.method378(this.aClass62_485.aString649, i_2, i_3, 2056525513 * this.aClass62_485.anInt652 * 1860559737, 38429607 * this.aClass62_485.anInt648 * 959976471, -1179509109 * this.aClass62_485.anInt659 * 1820776739, this.aClass62_485.anInt660 * -1985214661 * 1958427123, -533570239 * this.aClass62_485.anInt653 * -762236223, 1391502107 * this.aClass62_485.anInt656 * 533004051, -1240305753 * this.aClass62_485.anInt657 * 1235699735, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 10);
 		}
+
 	}
 
 	public void method16() {
-		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 20);
-		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 20);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
-	public boolean method10(int i) {
-		boolean bool = true;
-		if (!((Class51) this).aClass317_487.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -1926337814))
-			bool = false;
-		if (!((Class51) this).aClass317_486.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), 1793873759))
-			bool = false;
-		return bool;
+	public boolean method10(int i_1) {
+		boolean bool_2 = true;
+		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658, -1926337814)) {
+			bool_2 = false;
+		}
+
+		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658, 1793873759)) {
+			bool_2 = false;
+		}
+
+		return bool_2;
 	}
 
 	public void method15() {
-		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 108);
-		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 108);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
-	public void method22(int i) {
-		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 81);
-		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+	public void method22(int i_1) {
+		FontMetrics fontmetrics_2 = Class163.method2845(this.aClass317_486, this.aClass62_485.anInt658, (byte) 81);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1534(this.aClass317_487, this.aClass62_485.anInt658), true);
 	}
 
 	public void method23() {
-		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 60);
-		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 60);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public void method18() {
-		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 122);
-		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 122);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public void method19() {
-		FontMetrics class414 = Class163.method2845(((Class51) this).aClass317_486, (-1949174501 * ((Class51) this).aClass62_485.anInt658), (byte) 65);
-		((Class51) this).aClass8_484 = (Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1534(((Class51) this).aClass317_487, (-1949174501 * ((Class51) this).aClass62_485.anInt658)), true));
+		FontMetrics fontmetrics_1 = Class163.method2845(this.aClass317_486, -1949174501 * this.aClass62_485.anInt658 * -2111808237, (byte) 65);
+		this.aClass8_484 = Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_1, Class91.method1534(this.aClass317_487, -1949174501 * this.aClass62_485.anInt658 * -2111808237), true);
 	}
 
 	public boolean method13() {
-		boolean bool = true;
-		if (!((Class51) this).aClass317_487.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -871751794))
-			bool = false;
-		if (!((Class51) this).aClass317_486.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -194229407))
-			bool = false;
-		return bool;
+		boolean bool_1 = true;
+		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -871751794)) {
+			bool_1 = false;
+		}
+
+		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -194229407)) {
+			bool_1 = false;
+		}
+
+		return bool_1;
 	}
 
 	public boolean method9() {
-		boolean bool = true;
-		if (!((Class51) this).aClass317_487.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -335910971))
-			bool = false;
-		if (!((Class51) this).aClass317_486.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -1623629823))
-			bool = false;
-		return bool;
+		boolean bool_1 = true;
+		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -335910971)) {
+			bool_1 = false;
+		}
+
+		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -1623629823)) {
+			bool_1 = false;
+		}
+
+		return bool_1;
 	}
 
-	public void method14(boolean bool) {
-		if (bool) {
-			int i = ((((Class51) this).aClass62_485.aClass356_650.method6221(2056525513 * ((Class51) this).aClass62_485.anInt652, 150480619 * client.anInt7439, 2080844430)) + -906350423 * ((Class51) this).aClass62_485.anInt651);
-			int i_5_ = ((((Class51) this).aClass62_485.aClass353_654.method6198(38429607 * ((Class51) this).aClass62_485.anInt648, 1176039023 * client.anInt7312, 879742369)) + ((Class51) this).aClass62_485.anInt655 * -601422611);
-			((Class51) this).aClass8_484.method378(((Class51) this).aClass62_485.aString649, i, i_5_, 2056525513 * ((Class51) this).aClass62_485.anInt652, 38429607 * ((Class51) this).aClass62_485.anInt648, -1179509109 * ((Class51) this).aClass62_485.anInt659, ((Class51) this).aClass62_485.anInt660 * 1958427123, -533570239 * ((Class51) this).aClass62_485.anInt653, 1391502107 * ((Class51) this).aClass62_485.anInt656, -1240305753 * ((Class51) this).aClass62_485.anInt657, null, null, null, 0, 0,
-					(byte) 30);
+	public void method14(boolean bool_1) {
+		if (bool_1) {
+			int i_2 = this.aClass62_485.aClass356_650.method6221(2056525513 * this.aClass62_485.anInt652 * 1860559737, 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 2080844430) + -906350423 * this.aClass62_485.anInt651 * -1042975847;
+			int i_3 = this.aClass62_485.aClass353_654.method6198(38429607 * this.aClass62_485.anInt648 * 959976471, 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 879742369) + this.aClass62_485.anInt655 * -2042627867 * -601422611;
+			this.aClass8_484.method378(this.aClass62_485.aString649, i_2, i_3, 2056525513 * this.aClass62_485.anInt652 * 1860559737, 38429607 * this.aClass62_485.anInt648 * 959976471, -1179509109 * this.aClass62_485.anInt659 * 1820776739, this.aClass62_485.anInt660 * -1985214661 * 1958427123, -533570239 * this.aClass62_485.anInt653 * -762236223, 1391502107 * this.aClass62_485.anInt656 * 533004051, -1240305753 * this.aClass62_485.anInt657 * 1235699735, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 30);
 		}
+
 	}
 
 	public boolean method17() {
-		boolean bool = true;
-		if (!((Class51) this).aClass317_487.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), -89900344))
-			bool = false;
-		if (!((Class51) this).aClass317_486.method5661(((((Class51) this).aClass62_485.anInt658) * -1949174501), 2010922736))
-			bool = false;
-		return bool;
+		boolean bool_1 = true;
+		if (!this.aClass317_487.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, -89900344)) {
+			bool_1 = false;
+		}
+
+		if (!this.aClass317_486.method5661(this.aClass62_485.anInt658 * -2111808237 * -1949174501, 2010922736)) {
+			bool_1 = false;
+		}
+
+		return bool_1;
 	}
 
-	static void method1067(CS2Executor class527, int i) {
-		class527.intStack[1942118537 * class527.intStackPtr - 2] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 2]), -1396181317).method4104(Class158_Sub1.aClass3_8507, (class527.intStack[1942118537 * class527.intStackPtr - 1]), (short) 32683)) ? 1 : 0;
-		class527.intStackPtr -= 141891001;
+	static void method1067(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 2] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 2], -1396181317).method4104(Class158_Sub1.aClass3_8507, cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], (short) 32683) ? 1 : 0;
+		--cs2executor_0.intStackPtr;
 	}
 
-	static void method1068(CS2Script script, int i, CS2Executor executor, int i_6_) {
-		((CS2Executor) executor).intStackPtr = 0;
-		((CS2Executor) executor).anInt7000 = 0;
-		((CS2Executor) executor).instrPtr = 1051529003;
-		((CS2Executor) executor).current = script;
-		((CS2Executor) executor).operations = (((CS2Executor) executor).current.operations);
-		((CS2Executor) executor).intOpValues = ((CS2Executor) executor).current.intOpValues;
-		CS2OpInfo operation = null;
-		((CS2Executor) executor).anInt7002 = 0;
+	static void method1068(CS2Script cs2script_0, int i_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr = 0;
+		cs2executor_2.anInt7000 = 0;
+		cs2executor_2.instrPtr = -1;
+		cs2executor_2.current = cs2script_0;
+		cs2executor_2.operations = cs2executor_2.current.operations;
+		cs2executor_2.intOpValues = cs2executor_2.current.intOpValues;
+		CS2OpInfo cs2opinfo_4 = null;
+		cs2executor_2.anInt7002 = 0;
+
 		try {
 			try {
 				CS2Runner.anInt5904 = 0;
-				for (;;) {
-					CS2Runner.anInt5904 += -1084131875;
-					if (CS2Runner.anInt5904 * -1176728971 > i)
+
+				while (true) {
+					++CS2Runner.anInt5904;
+					if (CS2Runner.anInt5904 > i_1) {
 						throw new RuntimeException("");
-					operation = (((CS2Executor) executor).operations[(((CS2Executor) executor).instrPtr += -1051529003) * 301123709]);
-					if (CS2Runner.aBool5898 && (null == CS2Runner.aString5897 || (((((CS2Executor) executor).current.scriptName) != null) && ((CS2Executor) executor).current.scriptName.indexOf(CS2Runner.aString5897) != -1)))
-						System.out.println(new StringBuilder().append(((CS2Executor) executor).current.scriptName).append(": ").append(operation).toString());
-					if (1 == (((CS2Executor) executor).intOpValues[301123709 * ((CS2Executor) executor).instrPtr]))
-						((CS2Executor) executor).aBool7022 = true;
-					else
-						((CS2Executor) executor).aBool7022 = false;
-					if (CS2OpInfo.aClass522_5959 == operation && 0 == (((CS2Executor) executor).anInt7002 * -1837903909)) {
+					}
+
+					cs2opinfo_4 = cs2executor_2.operations[++cs2executor_2.instrPtr];
+					if (CS2Runner.aBool5898 && (CS2Runner.aString5897 == null || cs2executor_2.current.scriptName != null && cs2executor_2.current.scriptName.indexOf(CS2Runner.aString5897) != -1)) {
+						System.out.println(cs2executor_2.current.scriptName + ": " + cs2opinfo_4);
+					}
+
+					if (cs2executor_2.intOpValues[cs2executor_2.instrPtr] == 1) {
+						cs2executor_2.aBool7022 = true;
+					} else {
+						cs2executor_2.aBool7022 = false;
+					}
+
+					if (cs2opinfo_4 == CS2OpInfo.aClass522_5959 && cs2executor_2.anInt7002 == 0) {
 						Class282_Sub50_Sub17.method15509(1969627147);
 						break;
 					}
-					Class174.executeOperation(operation, executor, -1241831264);
+
+					Class174.executeOperation(cs2opinfo_4, cs2executor_2, -1241831264);
 				}
-			} catch (Exception exception) {
-				StringBuilder stringbuilder = new StringBuilder(30);
-				stringbuilder.append("").append(-3442165056282524525L * (((CS2Executor) executor).current.data)).append(" ");
-				for (int i_7_ = ((CS2Executor) executor).anInt7002 * -1837903909 - 1; i_7_ >= 0; i_7_--)
-					stringbuilder.append("").append(-3442165056282524525L * (((Class509) ((CS2Executor) executor).aClass509Array7016[i_7_]).aClass282_Sub50_Sub5_5869.data)).append(" ");
-				stringbuilder.append("").append(Integer.valueOf(-2026890351 * operation.opcode));
-				Class151.method2594(stringbuilder.toString(), exception, (byte) -32);
+			} catch (Exception exception_8) {
+				StringBuilder stringbuilder_6 = new StringBuilder(30);
+				stringbuilder_6.append("").append(cs2executor_2.current.data).append(" ");
+
+				for (int i_7 = cs2executor_2.anInt7002 - 1; i_7 >= 0; --i_7) {
+					stringbuilder_6.append("").append(cs2executor_2.aClass509Array7016[i_7].aClass282_Sub50_Sub5_5869.data).append(" ");
+				}
+
+				stringbuilder_6.append("").append(Integer.valueOf(cs2opinfo_4.opcode));
+				Class151.method2594(stringbuilder_6.toString(), exception_8, (byte) -32);
 				Class282_Sub50_Sub17.method15509(1831526496);
 			}
-		} catch (Exception object) {
+		} catch (Exception exception_9) {
 			Class282_Sub50_Sub17.method15509(105300500);
-			//throw object;
 		}
+
 	}
 
-	static final void method1069(CS2Executor class527, int i) {
-		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_8_, (byte) 52);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_8_ >> 16];
-		Class282_Sub52.method13468(class118, class98, class527, 769396750);
+	static final void method1069(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 52);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Class282_Sub52.method13468(icomponentdefinitions_3, interface_4, cs2executor_0, 769396750);
 	}
 
-	static final void method1070(CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		boolean bool = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
-		Class76.method1360(string, bool, (byte) 1);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 560339485 * Class415.anInt4985;
+	static final void method1070(CS2Executor cs2executor_0, byte b_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		boolean bool_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr] == 1;
+		Class76.method1360(string_2, bool_3, (byte) 1);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class415.anInt4985;
 	}
 
-	static final void method1071(CS2Executor class527, int i) {
+	static final void method1071(CS2Executor cs2executor_0, int i_1) {
 		Class244.method4195(-1158616482);
 	}
 
-	public static int method1072(int i, int i_9_) {
-		int i_10_ = i >>> 1;
-		i_10_ |= i_10_ >>> 1;
-		i_10_ |= i_10_ >>> 2;
-		i_10_ |= i_10_ >>> 4;
-		i_10_ |= i_10_ >>> 8;
-		i_10_ |= i_10_ >>> 16;
-		return i & (i_10_ ^ 0xffffffff);
+	public static int method1072(int i_0, int i_1) {
+		int i_2 = i_0 >>> 1;
+		i_2 |= i_2 >>> 1;
+		i_2 |= i_2 >>> 2;
+		i_2 |= i_2 >>> 4;
+		i_2 |= i_2 >>> 8;
+		i_2 |= i_2 >>> 16;
+		return i_0 & ~i_2;
 	}
 
-	static final void method1073(CS2Executor class527, byte i) {
-		int i_11_ = (class527.intOpValues[class527.instrPtr * 301123709]);
-		Class158_Sub1.aClass3_8507.method266(i_11_, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -1744724277);
+	static final void method1073(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		Class158_Sub1.aClass3_8507.method266(i_2, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1744724277);
 	}
 
-	public static void method1074(int[] is, Object[] objects, int i, int i_12_, int i_13_) {
-		if (i < i_12_) {
-			int i_14_ = (i + i_12_) / 2;
-			int i_15_ = i;
-			int i_16_ = is[i_14_];
-			is[i_14_] = is[i_12_];
-			is[i_12_] = i_16_;
-			Object object = objects[i_14_];
-			objects[i_14_] = objects[i_12_];
-			objects[i_12_] = object;
-			int i_17_ = i_16_ == 2147483647 ? 0 : 1;
-			for (int i_18_ = i; i_18_ < i_12_; i_18_++) {
-				if (is[i_18_] < (i_18_ & i_17_) + i_16_) {
-					int i_19_ = is[i_18_];
-					is[i_18_] = is[i_15_];
-					is[i_15_] = i_19_;
-					Object object_20_ = objects[i_18_];
-					objects[i_18_] = objects[i_15_];
-					objects[i_15_++] = object_20_;
+	public static void method1074(int[] ints_0, Object[] arr_1, int i_2, int i_3, int i_4) {
+		if (i_2 < i_3) {
+			int i_5 = (i_3 + i_2) / 2;
+			int i_6 = i_2;
+			int i_7 = ints_0[i_5];
+			ints_0[i_5] = ints_0[i_3];
+			ints_0[i_3] = i_7;
+			Object object_8 = arr_1[i_5];
+			arr_1[i_5] = arr_1[i_3];
+			arr_1[i_3] = object_8;
+			int i_9 = i_7 == Integer.MAX_VALUE ? 0 : 1;
+
+			for (int i_10 = i_2; i_10 < i_3; i_10++) {
+				if (ints_0[i_10] < (i_10 & i_9) + i_7) {
+					int i_11 = ints_0[i_10];
+					ints_0[i_10] = ints_0[i_6];
+					ints_0[i_6] = i_11;
+					Object object_12 = arr_1[i_10];
+					arr_1[i_10] = arr_1[i_6];
+					arr_1[i_6++] = object_12;
 				}
 			}
-			is[i_12_] = is[i_15_];
-			is[i_15_] = i_16_;
-			objects[i_12_] = objects[i_15_];
-			objects[i_15_] = object;
-			method1074(is, objects, i, i_15_ - 1, 1230718276);
-			method1074(is, objects, 1 + i_15_, i_12_, -1167576845);
+
+			ints_0[i_3] = ints_0[i_6];
+			ints_0[i_6] = i_7;
+			arr_1[i_3] = arr_1[i_6];
+			arr_1[i_6] = object_8;
+			method1074(ints_0, arr_1, i_2, i_6 - 1, 1230718276);
+			method1074(ints_0, arr_1, i_6 + 1, i_3, -1167576845);
 		}
+
 	}
+
 }

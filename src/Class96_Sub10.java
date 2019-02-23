@@ -1,128 +1,122 @@
-/* Class96_Sub10 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class Class96_Sub10 extends Class96 {
-	int anInt9295;
+
 	int anInt9296;
 	int anInt9297;
-	
-	Class96_Sub10(RsByteBuffer class282_sub35) {
-		super(class282_sub35);
-		((Class96_Sub10) this).anInt9296 = class282_sub35.readUnsignedShort() * -1972436045;
-		((Class96_Sub10) this).anInt9297 = class282_sub35.readUnsignedShort() * 468728079;
-		((Class96_Sub10) this).anInt9295 = class282_sub35.readUnsignedByte() * 143267879;
+	int anInt9295;
+
+	Class96_Sub10(RsByteBuffer rsbytebuffer_1) {
+		super(rsbytebuffer_1);
+		this.anInt9296 = rsbytebuffer_1.readUnsignedShort();
+		this.anInt9297 = rsbytebuffer_1.readUnsignedShort();
+		this.anInt9295 = rsbytebuffer_1.readUnsignedByte();
 	}
 
-	boolean method1599(int i) {
-		SpotAnimDefinitions class525 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((((Class96_Sub10) this).anInt9296) * 660169595, (byte) 90);
-		boolean bool = class525.method11230(-1104094093);
-		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) -39);
-		bool &= class518.loadSkeletons();
-		return bool;
+	boolean method1599(int i_1) {
+		SpotAnimDefinitions spotanimdefinitions_2 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt9296, (byte) 90);
+		boolean bool_3 = spotanimdefinitions_2.method11230(-1104094093);
+		AnimationDefinitions animationdefinitions_4 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_2.animationId, (byte) -39);
+		bool_3 &= animationdefinitions_4.loadSkeletons();
+		return bool_3;
 	}
 
-	boolean method1596() {
-		SpotAnimDefinitions class525 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((((Class96_Sub10) this).anInt9296) * 660169595, (byte) -26);
-		boolean bool = class525.method11230(-621133924);
-		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) 58);
-		bool &= class518.loadSkeletons();
-		return bool;
+	static final void method14602(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 123);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1277;
 	}
 
-	boolean method1591() {
-		SpotAnimDefinitions class525 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs((((Class96_Sub10) this).anInt9296) * 660169595, (byte) -2);
-		boolean bool = class525.method11230(-1374537529);
-		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(-364555849 * class525.animationId, (byte) -63);
-		bool &= class518.loadSkeletons();
-		return bool;
-	}
-
-	static final void method14602(CS2Executor class527, int i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 123);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1277 * 442725395;
-	}
-
-	public static void method14603(int i, int i_1_, int i_2_, String string, byte i_3_) {
-		IComponentDefinitions class118 = Index.method5694(i_1_, i_2_, -1959607972);
-		if (null != class118) {
-			if (class118.params != null) {
-				HookRequest request = new HookRequest();
-				request.iComponentDefs = class118;
-				request.anInt8051 = i * 161833325;
-				request.opName = string;
-				request.params = class118.params;
-				Class96_Sub4.executeHookInner200k(request, 156165111);
+	public static void method14603(int i_0, int i_1, int i_2, String string_3, byte b_4) {
+		IComponentDefinitions icomponentdefinitions_5 = Index.method5694(i_1, i_2, -1959607972);
+		if (icomponentdefinitions_5 != null) {
+			if (icomponentdefinitions_5.params != null) {
+				HookRequest hookrequest_6 = new HookRequest();
+				hookrequest_6.iComponentDefs = icomponentdefinitions_5;
+				hookrequest_6.anInt8051 = i_0;
+				hookrequest_6.opName = string_3;
+				hookrequest_6.params = icomponentdefinitions_5.params;
+				Class96_Sub4.executeHookInner200k(hookrequest_6, 156165111);
 			}
-			if (client.method11633(class118).method12178(i - 1, (short) -2626)) {
-				Class184 class184 = Class468_Sub20.method12807(870102038);
-				if (-1741204137 * client.anInt7166 == 0 || 13 == client.anInt7166 * -1741204137) {
-					if (1 == i) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4574, class184.isaac, 440245011);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, 1677489806);
+
+			if (client.method11633(icomponentdefinitions_5).method12178(i_0 - 1, (short) -2626)) {
+				Class184 class184_8 = Class468_Sub20.method12807(870102038);
+				if (client.anInt7166 == 0 || client.anInt7166 == 13) {
+					TCPMessage tcpmessage_7;
+					if (i_0 == 1) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4574, class184_8.isaac, 440245011);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, 1677489806);
 					}
-					if (i == 2) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4554, class184.isaac, -209568629);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, -641320368);
+
+					if (i_0 == 2) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4554, class184_8.isaac, -209568629);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, -641320368);
 					}
-					if (3 == i) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4527, class184.isaac, 67534413);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, 34641642);
+
+					if (i_0 == 3) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4527, class184_8.isaac, 67534413);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, 34641642);
 					}
-					if (i == 4) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4536, class184.isaac, 941336151);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (class118.anInt1426 * -56249735), -1836374495);
-						class184.method3049(class282_sub23, 1717133549);
+
+					if (i_0 == 4) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4536, class184_8.isaac, 941336151);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, 1717133549);
 					}
-					if (i == 5) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4562, class184.isaac, -519873323);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, 1443340985);
+
+					if (i_0 == 5) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4562, class184_8.isaac, -519873323);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, 1443340985);
 					}
-					if (6 == i) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4546, class184.isaac, 516854951);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, 1118744569);
+
+					if (i_0 == 6) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4546, class184_8.isaac, 516854951);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, 1118744569);
 					}
-					if (i == 7) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4550, class184.isaac, 216995585);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, 1074910390);
+
+					if (i_0 == 7) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4550, class184_8.isaac, 216995585);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, 1074910390);
 					}
-					if (i == 8) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4605, class184.isaac, 1816324678);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (class118.anInt1426 * -56249735), -1836374495);
-						class184.method3049(class282_sub23, -358596995);
+
+					if (i_0 == 8) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4605, class184_8.isaac, 1816324678);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, -358596995);
 					}
-					if (i == 9) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4604, class184.isaac, 868991635);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, -986323584);
+
+					if (i_0 == 9) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4604, class184_8.isaac, 868991635);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, -986323584);
 					}
-					if (i == 10) {
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4608, class184.isaac, 486801259);
-						Class350_Sub3.method12590(class282_sub23, i_1_, i_2_, (-56249735 * class118.anInt1426), -1836374495);
-						class184.method3049(class282_sub23, -28228352);
+
+					if (i_0 == 10) {
+						tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4608, class184_8.isaac, 486801259);
+						Class350_Sub3.method12590(tcpmessage_7, i_1, i_2, icomponentdefinitions_5.anInt1426, -1836374495);
+						class184_8.method3049(tcpmessage_7, -28228352);
 					}
 				}
 			}
 		}
+
 	}
 
-	static final void method14604(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 283782002;
-		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_4_ & i_5_;
+	static final void method14604(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_2 & i_3;
 	}
 
-	static final void method14605(IComponentDefinitions class118, CS2Executor class527, byte i) {
-		int i_6_ = 10;
-		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class274.method4883(class118, i_6_, i_7_, class527, -838566564);
+	static final void method14605(IComponentDefinitions icomponentdefinitions_0, CS2Executor cs2executor_1, byte b_2) {
+		byte b_3 = 10;
+		int i_4 = cs2executor_1.intStack[--cs2executor_1.intStackPtr];
+		Class274.method4883(icomponentdefinitions_0, b_3, i_4, cs2executor_1, -838566564);
 	}
+
 }

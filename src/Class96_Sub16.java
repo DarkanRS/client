@@ -1,52 +1,56 @@
-/* Class96_Sub16 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class96_Sub16 extends Class96 {
-	int anInt9381;
+
 	long aLong9382;
-	
+	int anInt9381;
+
 	public void method1601() {
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class86.aClass465_823.method7754(-6193626509720689219L * (((Class96_Sub16) this).aLong9382)));
-		if (class282_sub38 != null)
-			class282_sub38.anInt8002 = -1352622247 * ((Class96_Sub16) this).anInt9381;
-		else
-			Class86.aClass465_823.method7765(new Class282_Sub38(900972081 * ((Class96_Sub16) this).anInt9381), -6193626509720689219L * ((Class96_Sub16) this).aLong9382);
+		Class282_Sub38 class282_sub38_1 = (Class282_Sub38) Class86.aClass465_823.method7754(-6193626509720689219L * this.aLong9382 * -8460157808910631531L);
+		if (class282_sub38_1 != null) {
+			class282_sub38_1.anInt8002 = -1352622247 * this.anInt9381 * -1911760175 * -570797415;
+		} else {
+			Class86.aClass465_823.method7765(new Class282_Sub38(900972081 * this.anInt9381 * -1911760175), -6193626509720689219L * this.aLong9382 * -8460157808910631531L);
+		}
+
 	}
 
-	public void method1592(int i) {
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) Class86.aClass465_823.method7754(-6193626509720689219L * (((Class96_Sub16) this).aLong9382)));
-		if (class282_sub38 != null)
-			class282_sub38.anInt8002 = -1352622247 * ((Class96_Sub16) this).anInt9381;
-		else
-			Class86.aClass465_823.method7765(new Class282_Sub38(900972081 * ((Class96_Sub16) this).anInt9381), -6193626509720689219L * ((Class96_Sub16) this).aLong9382);
+	public void method1592(int i_1) {
+		Class282_Sub38 class282_sub38_2 = (Class282_Sub38) Class86.aClass465_823.method7754(this.aLong9382);
+		if (class282_sub38_2 != null) {
+			class282_sub38_2.anInt8002 = this.anInt9381;
+		} else {
+			Class86.aClass465_823.method7765(new Class282_Sub38(this.anInt9381), this.aLong9382);
+		}
+
 	}
 
-	Class96_Sub16(RsByteBuffer class282_sub35, boolean bool) {
-		super(class282_sub35);
-		int i = class282_sub35.readUnsignedShort();
-		if (bool)
-			((Class96_Sub16) this).aLong9382 = (0x100000000L | (long) i) * -8460157808910631531L;
-		else
-			((Class96_Sub16) this).aLong9382 = -8460157808910631531L * (long) i;
-		((Class96_Sub16) this).anInt9381 = class282_sub35.readInt() * -1911760175;
+	Class96_Sub16(RsByteBuffer rsbytebuffer_1, boolean bool_2) {
+		super(rsbytebuffer_1);
+		int i_3 = rsbytebuffer_1.readUnsignedShort();
+		if (bool_2) {
+			this.aLong9382 = 0x100000000L | (long) i_3;
+		} else {
+			this.aLong9382 = (long) i_3;
+		}
+
+		this.anInt9381 = rsbytebuffer_1.readInt();
 	}
 
-	static final void method14647(CS2Executor class527, byte i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), -939446296);
+	static final void method14647(CS2Executor cs2executor_0, byte b_1) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub4_8223, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -939446296);
 		Class538.method11500(Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-1329116825), false, (byte) 24);
 		Class190.method3148((byte) 38);
 	}
 
-	static void method14648(int i, int i_0_, int i_1_, byte i_2_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(11, (long) i);
-		class282_sub50_sub12.method14995(467467668);
-		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9668 = i_0_ * -1773141545;
-		((Class282_Sub50_Sub12) class282_sub50_sub12).anInt9641 = 717659479 * i_1_;
+	static void method14648(int i_0, int i_1, int i_2, byte b_3) {
+		Class282_Sub50_Sub12 class282_sub50_sub12_4 = Engine.getIComponentVar(11, (long) i_0);
+		class282_sub50_sub12_4.method14995(467467668);
+		class282_sub50_sub12_4.anInt9668 = i_1;
+		class282_sub50_sub12_4.anInt9641 = i_2;
 	}
 
-	static final void method14649(CS2Executor class527, byte i) {
-		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method7785(i_3_, 364907736);
+	static final void method14649(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub1_8197.method7785(i_2, 364907736);
 	}
+
 }

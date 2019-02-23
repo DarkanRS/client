@@ -1,329 +1,358 @@
-/* Class240 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class QuestDefinitions {
-	int[] anIntArray2955;
+
+	Class242 aClass242_2976;
 	public String name;
 	public String altName;
-	public int anInt2958 = 0;
+	int[][] varValues;
 	int[][] varbitValues;
+	public int anInt2958 = 0;
 	public int anInt2960 = 0;
-	public int[] anIntArray2961;
 	public boolean aBool2962 = false;
 	public int anInt2963;
-	public int[] anIntArray2964;
-	int[][] varValues;
-	public int[][] anIntArrayArray2966;
-	int[] anIntArray2967;
+	int[] anIntArray2955;
 	public int[] anIntArray2968;
+	public int[][] anIntArrayArray2966;
+	public int anInt2973;
+	public int anInt2977 = -1;
+	public int[] anIntArray2961;
 	int[] anIntArray2969;
 	int[] anIntArray2970;
 	public String[] aStringArray2971;
-	IterableNodeMap aClass465_2972;
-	public int anInt2973;
+	public int[] anIntArray2964;
+	int[] anIntArray2967;
 	int[] anIntArray2974;
 	public String[] aStringArray2975;
-	Class242 aClass242_2976;
-	public int anInt2977 = 467515775;
+	IterableNodeMap aClass465_2972;
 
-	public boolean method4093(Interface42 interface42, int[] is, int i) {
-		if (((QuestDefinitions) this).aClass242_2976.method4154(interface42, 1765999661) < anInt2973 * -985547275)
+	public boolean method4093(Interface42 interface42_1, int[] ints_2, int i_3) {
+		if (this.aClass242_2976.method4154(interface42_1, 1765999661) < this.anInt2973) {
 			return false;
-		if (null != anIntArrayArray2966) {
-			for (int i_1_ = 0; i_1_ < anIntArrayArray2966.length; i_1_++) {
-				if (is[anIntArrayArray2966[i_1_][0]] < anIntArrayArray2966[i_1_][1])
-					return false;
+		} else {
+			int i_4;
+			if (this.anIntArrayArray2966 != null) {
+				for (i_4 = 0; i_4 < this.anIntArrayArray2966.length; i_4++) {
+					if (ints_2[this.anIntArrayArray2966[i_4][0]] < this.anIntArrayArray2966[i_4][1]) {
+						return false;
+					}
+				}
 			}
-		}
-		if (null != anIntArray2968) {
-			for (int i_2_ = 0; i_2_ < anIntArray2968.length; i_2_++) {
-				if (!((QuestDefinitions) this).aClass242_2976.method4156(anIntArray2968[i_2_], -1396181317).method4099(interface42, -2060810176))
-					return false;
-			}
-		}
-		if (anIntArray2961 != null) {
-			for (int i_3_ = 0; i_3_ < anIntArray2961.length; i_3_++) {
-				int i_4_ = interface42.method240(anIntArray2961[i_3_], -853289836);
-				if (i_4_ < ((QuestDefinitions) this).anIntArray2969[i_3_] || i_4_ > ((QuestDefinitions) this).anIntArray2970[i_3_])
-					return false;
-			}
-		}
-		if (anIntArray2964 != null) {
-			for (int i_5_ = 0; i_5_ < anIntArray2964.length; i_5_++) {
-				int i_6_ = interface42.method241(anIntArray2964[i_5_], -520349475);
-				if (i_6_ < ((QuestDefinitions) this).anIntArray2967[i_5_] || i_6_ > ((QuestDefinitions) this).anIntArray2974[i_5_])
-					return false;
-			}
-		}
-		return true;
-	}
 
-	void method4094(RsByteBuffer class282_sub35, int i, int i_7_) {
-		if (i == 1)
-			name = class282_sub35.readGJString(-1054894786);
-		else if (i == 2)
-			altName = class282_sub35.readGJString(-1501893281);
-		else if (3 == i) {
-			int i_8_ = class282_sub35.readUnsignedByte();
-			((QuestDefinitions) this).varValues = new int[i_8_][3];
-			for (int i_9_ = 0; i_9_ < i_8_; i_9_++) {
-				((QuestDefinitions) this).varValues[i_9_][0] = class282_sub35.readUnsignedShort();
-				((QuestDefinitions) this).varValues[i_9_][1] = class282_sub35.readInt();
-				((QuestDefinitions) this).varValues[i_9_][2] = class282_sub35.readInt();
+			if (this.anIntArray2968 != null) {
+				for (i_4 = 0; i_4 < this.anIntArray2968.length; i_4++) {
+					if (!this.aClass242_2976.method4156(this.anIntArray2968[i_4], -1396181317).method4099(interface42_1, -2060810176)) {
+						return false;
+					}
+				}
 			}
-		} else if (i == 4) {
-			int i_10_ = class282_sub35.readUnsignedByte();
-			((QuestDefinitions) this).varbitValues = new int[i_10_][3];
-			for (int i_11_ = 0; i_11_ < i_10_; i_11_++) {
-				((QuestDefinitions) this).varbitValues[i_11_][0] = class282_sub35.readUnsignedShort();
-				((QuestDefinitions) this).varbitValues[i_11_][1] = class282_sub35.readInt();
-				((QuestDefinitions) this).varbitValues[i_11_][2] = class282_sub35.readInt();
+
+			int i_5;
+			if (this.anIntArray2961 != null) {
+				for (i_4 = 0; i_4 < this.anIntArray2961.length; i_4++) {
+					i_5 = interface42_1.method240(this.anIntArray2961[i_4], -853289836);
+					if (i_5 < this.anIntArray2969[i_4] || i_5 > this.anIntArray2970[i_4]) {
+						return false;
+					}
+				}
 			}
-		} else if (i == 5)
-			class282_sub35.readUnsignedShort();
-		else if (6 == i)
-			anInt2958 = class282_sub35.readUnsignedByte() * -1467263871;
-		else if (7 == i)
-			anInt2960 = class282_sub35.readUnsignedByte() * 1992977297;
-		else if (i == 8)
-			aBool2962 = true;
-		else if (9 == i)
-			anInt2963 = class282_sub35.readUnsignedByte() * 452253117;
-		else if (i == 10) {
-			int i_12_ = class282_sub35.readUnsignedByte();
-			((QuestDefinitions) this).anIntArray2955 = new int[i_12_];
-			for (int i_13_ = 0; i_13_ < i_12_; i_13_++)
-				((QuestDefinitions) this).anIntArray2955[i_13_] = class282_sub35.readInt();
-		} else if (i == 12)
-			class282_sub35.readInt();
-		else if (13 == i) {
-			int i_14_ = class282_sub35.readUnsignedByte();
-			anIntArray2968 = new int[i_14_];
-			for (int i_15_ = 0; i_15_ < i_14_; i_15_++)
-				anIntArray2968[i_15_] = class282_sub35.readUnsignedShort();
-		} else if (i == 14) {
-			int i_16_ = class282_sub35.readUnsignedByte();
-			anIntArrayArray2966 = new int[i_16_][2];
-			for (int i_17_ = 0; i_17_ < i_16_; i_17_++) {
-				anIntArrayArray2966[i_17_][0] = class282_sub35.readUnsignedByte();
-				anIntArrayArray2966[i_17_][1] = class282_sub35.readUnsignedByte();
+
+			if (this.anIntArray2964 != null) {
+				for (i_4 = 0; i_4 < this.anIntArray2964.length; i_4++) {
+					i_5 = interface42_1.method241(this.anIntArray2964[i_4], -520349475);
+					if (i_5 < this.anIntArray2967[i_4] || i_5 > this.anIntArray2974[i_4]) {
+						return false;
+					}
+				}
 			}
-		} else if (i == 15)
-			anInt2973 = class282_sub35.readUnsignedShort() * 660162141;
-		else if (i == 17)
-			anInt2977 = class282_sub35.readBigSmart() * -467515775;
-		else if (i == 18) {
-			int i_18_ = class282_sub35.readUnsignedByte();
-			anIntArray2961 = new int[i_18_];
-			((QuestDefinitions) this).anIntArray2969 = new int[i_18_];
-			((QuestDefinitions) this).anIntArray2970 = new int[i_18_];
-			aStringArray2971 = new String[i_18_];
-			for (int i_19_ = 0; i_19_ < i_18_; i_19_++) {
-				anIntArray2961[i_19_] = class282_sub35.readInt();
-				((QuestDefinitions) this).anIntArray2969[i_19_] = class282_sub35.readInt();
-				((QuestDefinitions) this).anIntArray2970[i_19_] = class282_sub35.readInt();
-				aStringArray2971[i_19_] = class282_sub35.readString();
-			}
-		} else if (i == 19) {
-			int i_20_ = class282_sub35.readUnsignedByte();
-			anIntArray2964 = new int[i_20_];
-			((QuestDefinitions) this).anIntArray2967 = new int[i_20_];
-			((QuestDefinitions) this).anIntArray2974 = new int[i_20_];
-			aStringArray2975 = new String[i_20_];
-			for (int i_21_ = 0; i_21_ < i_20_; i_21_++) {
-				anIntArray2964[i_21_] = class282_sub35.readInt();
-				((QuestDefinitions) this).anIntArray2967[i_21_] = class282_sub35.readInt();
-				((QuestDefinitions) this).anIntArray2974[i_21_] = class282_sub35.readInt();
-				aStringArray2975[i_21_] = class282_sub35.readString();
-			}
-		} else if (i == 249) {
-			int i_22_ = class282_sub35.readUnsignedByte();
-			if (((QuestDefinitions) this).aClass465_2972 == null) {
-				int i_23_ = Class323.nextPowerOfTwo(i_22_, -265127005);
-				((QuestDefinitions) this).aClass465_2972 = new IterableNodeMap(i_23_);
-			}
-			for (int i_24_ = 0; i_24_ < i_22_; i_24_++) {
-				boolean bool = class282_sub35.readUnsignedByte() == 1;
-				int i_25_ = class282_sub35.read24BitUnsignedInteger();
-				Node class282;
-				if (bool)
-					class282 = new Class282_Sub47(class282_sub35.readString());
-				else
-					class282 = new Class282_Sub38(class282_sub35.readInt());
-				((QuestDefinitions) this).aClass465_2972.method7765(class282, (long) i_25_);
-			}
+
+			return true;
 		}
 	}
 
-	void method4095(byte i) {
-		if (altName == null)
-			altName = name;
+	void method4094(RsByteBuffer rsbytebuffer_1, int i_2, int i_3) {
+		if (i_2 == 1) {
+			this.name = rsbytebuffer_1.readGJString(-1054894786);
+		} else if (i_2 == 2) {
+			this.altName = rsbytebuffer_1.readGJString(-1501893281);
+		} else {
+			int i_4;
+			int i_5;
+			if (i_2 == 3) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.varValues = new int[i_4][3];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.varValues[i_5][0] = rsbytebuffer_1.readUnsignedShort();
+					this.varValues[i_5][1] = rsbytebuffer_1.readInt();
+					this.varValues[i_5][2] = rsbytebuffer_1.readInt();
+				}
+			} else if (i_2 == 4) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.varbitValues = new int[i_4][3];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.varbitValues[i_5][0] = rsbytebuffer_1.readUnsignedShort();
+					this.varbitValues[i_5][1] = rsbytebuffer_1.readInt();
+					this.varbitValues[i_5][2] = rsbytebuffer_1.readInt();
+				}
+			} else if (i_2 == 5) {
+				rsbytebuffer_1.readUnsignedShort();
+			} else if (i_2 == 6) {
+				this.anInt2958 = rsbytebuffer_1.readUnsignedByte();
+			} else if (i_2 == 7) {
+				this.anInt2960 = rsbytebuffer_1.readUnsignedByte();
+			} else if (i_2 == 8) {
+				this.aBool2962 = true;
+			} else if (i_2 == 9) {
+				this.anInt2963 = rsbytebuffer_1.readUnsignedByte();
+			} else if (i_2 == 10) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.anIntArray2955 = new int[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.anIntArray2955[i_5] = rsbytebuffer_1.readInt();
+				}
+			} else if (i_2 == 12) {
+				rsbytebuffer_1.readInt();
+			} else if (i_2 == 13) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.anIntArray2968 = new int[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.anIntArray2968[i_5] = rsbytebuffer_1.readUnsignedShort();
+				}
+			} else if (i_2 == 14) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.anIntArrayArray2966 = new int[i_4][2];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.anIntArrayArray2966[i_5][0] = rsbytebuffer_1.readUnsignedByte();
+					this.anIntArrayArray2966[i_5][1] = rsbytebuffer_1.readUnsignedByte();
+				}
+			} else if (i_2 == 15) {
+				this.anInt2973 = rsbytebuffer_1.readUnsignedShort();
+			} else if (i_2 == 17) {
+				this.anInt2977 = rsbytebuffer_1.readBigSmart();
+			} else if (i_2 == 18) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.anIntArray2961 = new int[i_4];
+				this.anIntArray2969 = new int[i_4];
+				this.anIntArray2970 = new int[i_4];
+				this.aStringArray2971 = new String[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.anIntArray2961[i_5] = rsbytebuffer_1.readInt();
+					this.anIntArray2969[i_5] = rsbytebuffer_1.readInt();
+					this.anIntArray2970[i_5] = rsbytebuffer_1.readInt();
+					this.aStringArray2971[i_5] = rsbytebuffer_1.readString();
+				}
+			} else if (i_2 == 19) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				this.anIntArray2964 = new int[i_4];
+				this.anIntArray2967 = new int[i_4];
+				this.anIntArray2974 = new int[i_4];
+				this.aStringArray2975 = new String[i_4];
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					this.anIntArray2964[i_5] = rsbytebuffer_1.readInt();
+					this.anIntArray2967[i_5] = rsbytebuffer_1.readInt();
+					this.anIntArray2974[i_5] = rsbytebuffer_1.readInt();
+					this.aStringArray2975[i_5] = rsbytebuffer_1.readString();
+				}
+			} else if (i_2 == 249) {
+				i_4 = rsbytebuffer_1.readUnsignedByte();
+				if (this.aClass465_2972 == null) {
+					i_5 = Class323.nextPowerOfTwo(i_4, -265127005);
+					this.aClass465_2972 = new IterableNodeMap(i_5);
+				}
+
+				for (i_5 = 0; i_5 < i_4; i_5++) {
+					boolean bool_6 = rsbytebuffer_1.readUnsignedByte() == 1;
+					int i_7 = rsbytebuffer_1.read24BitUnsignedInteger();
+					Object obj_8;
+					if (bool_6) {
+						obj_8 = new Class282_Sub47(rsbytebuffer_1.readString());
+					} else {
+						obj_8 = new Class282_Sub38(rsbytebuffer_1.readInt());
+					}
+
+					this.aClass465_2972.method7765((Node) obj_8, (long) i_7);
+				}
+			}
+		}
+
 	}
 
-	public boolean method4098(Interface42 interface42, byte i) {
-		if (((QuestDefinitions) this).varValues != null) {
-			for (int i_28_ = 0; i_28_ < ((QuestDefinitions) this).varValues.length; i_28_++) {
-				if (interface42.method240((((QuestDefinitions) this).varValues[i_28_][0]), -409569082) >= ((QuestDefinitions) this).varValues[i_28_][1])
+	void method4095(byte b_1) {
+		if (this.altName == null) {
+			this.altName = this.name;
+		}
+
+	}
+
+	public boolean method4098(Interface42 interface42_1, byte b_2) {
+		int i_3;
+		if (this.varValues != null) {
+			for (i_3 = 0; i_3 < this.varValues.length; i_3++) {
+				if (interface42_1.method240(this.varValues[i_3][0], -409569082) >= this.varValues[i_3][1]) {
 					return true;
+				}
 			}
 		}
-		if (((QuestDefinitions) this).varbitValues != null) {
-			for (int i_29_ = 0; i_29_ < ((QuestDefinitions) this).varbitValues.length; i_29_++) {
-				if (interface42.method241((((QuestDefinitions) this).varbitValues[i_29_][0]), -1489106913) >= ((QuestDefinitions) this).varbitValues[i_29_][1])
+
+		if (this.varbitValues != null) {
+			for (i_3 = 0; i_3 < this.varbitValues.length; i_3++) {
+				if (interface42_1.method241(this.varbitValues[i_3][0], -1489106913) >= this.varbitValues[i_3][1]) {
 					return true;
+				}
 			}
 		}
+
 		return false;
 	}
 
-	public boolean method4099(Interface42 interface42, int i) {
-		if (((QuestDefinitions) this).varValues != null) {
-			for (int i_30_ = 0; i_30_ < ((QuestDefinitions) this).varValues.length; i_30_++) {
-				if (interface42.method240((((QuestDefinitions) this).varValues[i_30_][0]), -585739390) >= ((QuestDefinitions) this).varValues[i_30_][2])
+	public boolean method4099(Interface42 interface42_1, int i_2) {
+		int i_3;
+		if (this.varValues != null) {
+			for (i_3 = 0; i_3 < this.varValues.length; i_3++) {
+				if (interface42_1.method240(this.varValues[i_3][0], -585739390) >= this.varValues[i_3][2]) {
 					return true;
+				}
 			}
 		}
-		if (((QuestDefinitions) this).varbitValues != null) {
-			for (int i_31_ = 0; i_31_ < ((QuestDefinitions) this).varbitValues.length; i_31_++) {
-				if (interface42.method241((((QuestDefinitions) this).varbitValues[i_31_][0]), -598279654) >= ((QuestDefinitions) this).varbitValues[i_31_][2])
+
+		if (this.varbitValues != null) {
+			for (i_3 = 0; i_3 < this.varbitValues.length; i_3++) {
+				if (interface42_1.method241(this.varbitValues[i_3][0], -598279654) >= this.varbitValues[i_3][2]) {
 					return true;
+				}
 			}
 		}
+
 		return false;
 	}
 
-	public boolean method4101(Interface42 interface42, byte i) {
-		if (((QuestDefinitions) this).aClass242_2976.method4154(interface42, 2095145584) < anInt2973 * -985547275)
-			return false;
-		return true;
+	public boolean method4101(Interface42 interface42_1, byte b_2) {
+		return this.aClass242_2976.method4154(interface42_1, 2095145584) >= this.anInt2973;
 	}
 
-	public boolean method4103(Interface42 interface42, int i, int i_50_) {
-		if (null == anIntArray2968 || i < 0 || i >= anIntArray2968.length)
-			return false;
-		if (!((QuestDefinitions) this).aClass242_2976.method4156(anIntArray2968[i], -1396181317).method4099(interface42, 1001789983))
-			return false;
-		return true;
+	public boolean method4103(Interface42 interface42_1, int i_2, int i_3) {
+		return this.anIntArray2968 != null && i_2 >= 0 && i_2 < this.anIntArray2968.length ? this.aClass242_2976.method4156(this.anIntArray2968[i_2], -1396181317).method4099(interface42_1, 1001789983) : false;
 	}
 
-	public boolean method4104(Interface42 interface42, int i, short i_51_) {
-		if (null == anIntArray2961 || i < 0 || i >= anIntArray2961.length)
+	public boolean method4104(Interface42 interface42_1, int i_2, short s_3) {
+		if (this.anIntArray2961 != null && i_2 >= 0 && i_2 < this.anIntArray2961.length) {
+			int i_4 = interface42_1.method240(this.anIntArray2961[i_2], 1497520500);
+			return i_4 >= this.anIntArray2969[i_2] && i_4 <= this.anIntArray2970[i_2];
+		} else {
 			return false;
-		int i_52_ = interface42.method240(anIntArray2961[i], 1497520500);
-		if (i_52_ < ((QuestDefinitions) this).anIntArray2969[i] || i_52_ > ((QuestDefinitions) this).anIntArray2970[i])
-			return false;
-		return true;
-	}
-
-	public boolean method4105(Interface42 interface42, int i, int i_53_) {
-		if (anIntArray2964 == null || i < 0 || i >= anIntArray2964.length)
-			return false;
-		int i_54_ = interface42.method241(anIntArray2964[i], 1488898797);
-		if (i_54_ < ((QuestDefinitions) this).anIntArray2967[i] || i_54_ > ((QuestDefinitions) this).anIntArray2974[i])
-			return false;
-		return true;
-	}
-
-	public String method4110(int i, String string, byte i_74_) {
-		if (null == ((QuestDefinitions) this).aClass465_2972)
-			return string;
-		Class282_Sub47 class282_sub47 = ((Class282_Sub47) ((QuestDefinitions) this).aClass465_2972.method7754((long) i));
-		if (class282_sub47 == null)
-			return string;
-		return (String) class282_sub47.anObject8068;
-	}
-
-	public boolean method4111(int[] is, int i, int i_75_) {
-		if (null == anIntArrayArray2966 || i < 0 || i >= anIntArrayArray2966.length)
-			return false;
-		if (is[anIntArrayArray2966[i][0]] < anIntArrayArray2966[i][1])
-			return false;
-		return true;
-	}
-
-	void method4119(RsByteBuffer class282_sub35, int i) {
-		for (;;) {
-			int i_96_ = class282_sub35.readUnsignedByte();
-			if (0 == i_96_)
-				break;
-			method4094(class282_sub35, i_96_, -379084068);
 		}
 	}
 
-	QuestDefinitions() {
-		/* empty */
+	public boolean method4105(Interface42 interface42_1, int i_2, int i_3) {
+		if (this.anIntArray2964 != null && i_2 >= 0 && i_2 < this.anIntArray2964.length) {
+			int i_4 = interface42_1.method241(this.anIntArray2964[i_2], 1488898797);
+			return i_4 >= this.anIntArray2967[i_2] && i_4 <= this.anIntArray2974[i_2];
+		} else {
+			return false;
+		}
 	}
 
-	public int method4135(int i, int i_103_, byte i_104_) {
-		if (((QuestDefinitions) this).aClass465_2972 == null)
-			return i_103_;
-		Class282_Sub38 class282_sub38 = ((Class282_Sub38) ((QuestDefinitions) this).aClass465_2972.method7754((long) i));
-		if (class282_sub38 == null)
-			return i_103_;
-		return class282_sub38.anInt8002 * -570797415;
+	public String method4110(int i_1, String string_2, byte b_3) {
+		if (this.aClass465_2972 == null) {
+			return string_2;
+		} else {
+			Class282_Sub47 class282_sub47_4 = (Class282_Sub47) this.aClass465_2972.method7754((long) i_1);
+			return class282_sub47_4 == null ? string_2 : (String) class282_sub47_4.anObject8068;
+		}
 	}
 
-	static final void method4136(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, 718441711) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1409 = Class351.method6193(string, class527, 1509347670);
-		class118.aBool1384 = true;
+	public boolean method4111(int[] ints_1, int i_2, int i_3) {
+		return this.anIntArrayArray2966 != null && i_2 >= 0 && i_2 < this.anIntArrayArray2966.length ? ints_1[this.anIntArrayArray2966[i_2][0]] >= this.anIntArrayArray2966[i_2][1] : false;
 	}
 
-	static final void method4137(CS2Executor class527, byte i) {
-		AnimationDefinitions.method11148((class527.aClass521_Sub1_Sub2_Sub1_7014), (class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1315599355);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];
+	void method4119(RsByteBuffer rsbytebuffer_1, int i_2) {
+		while (true) {
+			int i_3 = rsbytebuffer_1.readUnsignedByte();
+			if (i_3 == 0) {
+				return;
+			}
+
+			this.method4094(rsbytebuffer_1, i_3, -379084068);
+		}
 	}
 
-	public static boolean isRoof(int i, int i_105_) {
-		return (i >= SceneObjectType.STRAIGHT_SLOPE_ROOF.type * 1109376893 && i <= SceneObjectType.STRAIGHT_FLAT_ROOF.type * 1109376893);
+	public int method4135(int i_1, int i_2, byte b_3) {
+		if (this.aClass465_2972 == null) {
+			return i_2;
+		} else {
+			Class282_Sub38 class282_sub38_4 = (Class282_Sub38) this.aClass465_2972.method7754((long) i_1);
+			return class282_sub38_4 == null ? i_2 : class282_sub38_4.anInt8002;
+		}
 	}
 
-	static void writeCRCs(RsBitsBuffer stream, int i) {
-		stream.writeInt(IndexLoaders.ANIMATION_SKELETON_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.ANIMATION_SKIN_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.CONFIG_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.INTERFACE_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.SOUND_EFFECT_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.MAP_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.MUSIC_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.MESH_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.SPRITES_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.TEXTURE_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.HUFFMAN_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.INDEX_11.getCrc());
-		stream.writeInt(IndexLoaders.CS2_SCRIPTS_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.FONT_METRICS_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.MIDI_INSTRUMENT_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.INDEX_15.getCrc());
-		stream.writeInt(IndexLoaders.OBJECT_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.ENUM_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.NPC_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.ITEM_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.SEQUENCES_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.SPOTANIM_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.VARBIT_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.WORLD_MAP_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.QC_MESSAGES_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.QC_MENU_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.TEXTURE_DEFINITION_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.PARTICLE_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.DEFAULTS_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.BILLBOARD_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.NATIVE_LIBRARY_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.SHADER_INDEX.getCrc());
-		stream.writeInt(Class378.method6435(-1443123937));
-		stream.writeInt(Class468_Sub7.method12672((byte) 0));
-		stream.writeInt(IndexLoaders.CUTSCENE_INDEX.getCrc());
-		stream.writeInt(IndexLoaders.aClass317_2663.getCrc());
+	static final void method4136(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, 718441711) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1409 = Class351.method6193(string_4, cs2executor_2, 1509347670);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	public static void method4140(String string, int i) {
-		Class179.aString2225 = string;
-		Class179.anInt2220 = Class179.aString2225.length() * -1996461669;
+	static final void method4137(CS2Executor cs2executor_0, byte b_1) {
+		AnimationDefinitions.method11148(cs2executor_0.aClass521_Sub1_Sub2_Sub1_7014, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1315599355);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) client.aFloatArray7292[0];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) client.aFloatArray7292[1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) client.aFloatArray7292[2];
 	}
+
+	public static boolean isRoof(int i_0, int i_1) {
+		return i_0 >= SceneObjectType.STRAIGHT_SLOPE_ROOF.type && i_0 <= SceneObjectType.STRAIGHT_FLAT_ROOF.type;
+	}
+
+	static void writeCRCs(RsBitsBuffer rsbitsbuffer_0, int i_1) {
+		rsbitsbuffer_0.writeInt(IndexLoaders.ANIMATION_SKELETON_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.ANIMATION_SKIN_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.CONFIG_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.INTERFACE_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.SOUND_EFFECT_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.MAP_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.MUSIC_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.MESH_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.SPRITES_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.TEXTURE_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.HUFFMAN_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.INDEX_11.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.CS2_SCRIPTS_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.FONT_METRICS_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.MIDI_INSTRUMENT_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.INDEX_15.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.OBJECT_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.ENUM_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.NPC_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.ITEM_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.SEQUENCES_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.SPOTANIM_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.VARBIT_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.WORLD_MAP_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.QC_MESSAGES_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.QC_MENU_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.TEXTURE_DEFINITION_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.PARTICLE_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.DEFAULTS_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.BILLBOARD_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.NATIVE_LIBRARY_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.SHADER_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(Class378.method6435(-1443123937));
+		rsbitsbuffer_0.writeInt(Class468_Sub7.method12672((byte) 0));
+		rsbitsbuffer_0.writeInt(IndexLoaders.CUTSCENE_INDEX.getCrc());
+		rsbitsbuffer_0.writeInt(IndexLoaders.aClass317_2663.getCrc());
+	}
+
+	public static void method4140(String string_0, int i_1) {
+		Class179.aString2225 = string_0;
+		Class179.anInt2220 = Class179.aString2225.length();
+	}
+
 }

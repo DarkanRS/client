@@ -1,379 +1,175 @@
-
-/* Class378 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.util.HashMap;
 import java.util.Map;
 
 public class Class378 {
-	int[] anIntArray4521;
+
+	Map aMap4525 = null;
+	SoftCache aClass229_4524 = new SoftCache(20);
 	Index aClass317_4522;
 	Index aClass317_4523;
-	SoftCache aClass229_4524 = new SoftCache(20);
-	Map aMap4525 = null;
-	
-	public int method6402() {
-		if (((Class378) this).anIntArray4521 == null)
-			return 0;
-		return 2 * ((Class378) this).anIntArray4521.length;
-	}
+	int[] anIntArray4521;
 
-	public void method6403(Interface35 interface35, short i) {
-		((Class378) this).aMap4525 = new HashMap(((Class378) this).anIntArray4521.length);
-		for (int i_0_ = 0; i_0_ < ((Class378) this).anIntArray4521.length; i_0_++) {
-			int i_1_ = ((Class378) this).anIntArray4521[i_0_];
-			FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i_1_, (byte) 31);
-			byte[] is = ((Class378) this).aClass317_4522.getFile(i_1_);
-			Object object = interface35.method216(is, class414, true, 1942118537);
-			((Class378) this).aMap4525.put(Integer.valueOf(i_0_), new Class452(object, class414));
+	public void method6403(Interface35 interface35_1, short s_2) {
+		this.aMap4525 = new HashMap(this.anIntArray4521.length);
+
+		for (int i_3 = 0; i_3 < this.anIntArray4521.length; i_3++) {
+			int i_4 = this.anIntArray4521[i_3];
+			FontMetrics fontmetrics_5 = Class163.method2845(this.aClass317_4523, i_4, (byte) 31);
+			byte[] bytes_6 = this.aClass317_4522.getFile(i_4);
+			Object object_7 = interface35_1.method216(bytes_6, fontmetrics_5, true, 1942118537);
+			this.aMap4525.put(Integer.valueOf(i_3), new Class452(object_7, fontmetrics_5));
 		}
+
 	}
 
-	public Class378(Index class317, Index class317_2_, int[] is) {
-		((Class378) this).aClass317_4522 = class317;
-		((Class378) this).aClass317_4523 = class317_2_;
-		if (null != is)
-			((Class378) this).anIntArray4521 = is;
-		else
-			((Class378) this).anIntArray4521 = null;
-	}
-
-	public int method6404(int i) {
-		return method6405(false, 1676950204);
-	}
-
-	public int method6405(boolean bool, int i) {
-		if (null == ((Class378) this).anIntArray4521)
-			return 0;
-		if (!bool && ((Class378) this).aMap4525 != null)
-			return 2 * ((Class378) this).anIntArray4521.length;
-		int i_3_ = 0;
-		for (int i_4_ = 0; i_4_ < ((Class378) this).anIntArray4521.length; i_4_++) {
-			int i_5_ = ((Class378) this).anIntArray4521[i_4_];
-			if (((Class378) this).aClass317_4522.method5661(i_5_, 2017428513))
-				i_3_++;
-			if (((Class378) this).aClass317_4523.method5661(i_5_, -810105857))
-				i_3_++;
+	public Class378(Index index_1, Index index_2, int[] ints_3) {
+		this.aClass317_4522 = index_1;
+		this.aClass317_4523 = index_2;
+		if (ints_3 != null) {
+			this.anIntArray4521 = ints_3;
+		} else {
+			this.anIntArray4521 = null;
 		}
-		return i_3_;
+
 	}
 
-	Class452 method6406(Interface35 interface35, int i, boolean bool, boolean bool_6_) {
-		if (-1 == i)
-			return null;
-		if (((Class378) this).anIntArray4521 != null) {
-			for (int i_7_ = 0; i_7_ < ((Class378) this).anIntArray4521.length; i_7_++) {
-				if (i == ((Class378) this).anIntArray4521[i_7_])
-					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_7_));
+	public int method6404(int i_1) {
+		return this.method6405(false, 1676950204);
+	}
+
+	public int method6405(boolean bool_1, int i_2) {
+		if (this.anIntArray4521 == null) {
+			return 0;
+		} else if (!bool_1 && this.aMap4525 != null) {
+			return this.anIntArray4521.length * 2;
+		} else {
+			int i_3 = 0;
+
+			for (int i_4 = 0; i_4 < this.anIntArray4521.length; i_4++) {
+				int i_5 = this.anIntArray4521[i_4];
+				if (this.aClass317_4522.method5661(i_5, 2017428513)) {
+					++i_3;
+				}
+
+				if (this.aClass317_4523.method5661(i_5, -810105857)) {
+					++i_3;
+				}
 			}
+
+			return i_3;
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_6_ ? 1 : 0)));
-		if (null != class452) {
-			if (bool && null == class452.anObject5444) {
-				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 102);
-				if (class414 == null)
+	}
+
+	Class452 method6409(Interface35 interface35_1, int i_2, boolean bool_3, boolean bool_4, byte b_5) {
+		if (i_2 == -1) {
+			return null;
+		} else {
+			if (this.anIntArray4521 != null) {
+				for (int i_6 = 0; i_6 < this.anIntArray4521.length; i_6++) {
+					if (i_2 == this.anIntArray4521[i_6]) {
+						return (Class452) this.aMap4525.get(Integer.valueOf(i_6));
+					}
+				}
+			}
+
+			Class452 class452_9 = (Class452) this.aClass229_4524.get((long) (i_2 << 1 | (bool_4 ? 1 : 0)));
+			if (class452_9 != null) {
+				if (bool_3 && class452_9.anObject5444 == null) {
+					FontMetrics fontmetrics_10 = Class163.method2845(this.aClass317_4523, i_2, (byte) 119);
+					if (fontmetrics_10 == null) {
+						return null;
+					}
+
+					class452_9.anObject5444 = fontmetrics_10;
+				}
+
+				return class452_9;
+			} else {
+				byte[] bytes_7 = this.aClass317_4522.getFile(i_2);
+				if (bytes_7 == null) {
 					return null;
-				class452.anObject5444 = class414;
-			}
-			return class452;
-		}
-		byte[] is = ((Class378) this).aClass317_4522.getFile(i);
-		if (is == null)
-			return null;
-		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 94);
-		if (null == class414)
-			return null;
-		if (bool)
-			class452 = new Class452(interface35.method216(is, class414, bool_6_, 1942118537), class414);
-		else
-			class452 = new Class452(interface35.method216(is, class414, bool_6_, 1942118537), null);
-		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_6_ ? 1 : 0)));
-		return class452;
-	}
+				} else {
+					FontMetrics fontmetrics_8 = Class163.method2845(this.aClass317_4523, i_2, (byte) 90);
+					if (fontmetrics_8 == null) {
+						return null;
+					} else {
+						if (bool_3) {
+							class452_9 = new Class452(interface35_1.method216(bytes_7, fontmetrics_8, bool_4, 1942118537), fontmetrics_8);
+						} else {
+							class452_9 = new Class452(interface35_1.method216(bytes_7, fontmetrics_8, bool_4, 1942118537), (Object) null);
+						}
 
-	public int method6407() {
-		if (((Class378) this).anIntArray4521 == null)
-			return 0;
-		return 2 * ((Class378) this).anIntArray4521.length;
-	}
-
-	public int method6408() {
-		if (((Class378) this).anIntArray4521 == null)
-			return 0;
-		return 2 * ((Class378) this).anIntArray4521.length;
-	}
-
-	Class452 method6409(Interface35 interface35, int i, boolean bool, boolean bool_8_, byte i_9_) {
-		if (-1 == i)
-			return null;
-		if (((Class378) this).anIntArray4521 != null) {
-			for (int i_10_ = 0; i_10_ < ((Class378) this).anIntArray4521.length; i_10_++) {
-				if (i == ((Class378) this).anIntArray4521[i_10_])
-					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_10_));
+						this.aClass229_4524.put(class452_9, (long) (i_2 << 1 | (bool_4 ? 1 : 0)));
+						return class452_9;
+					}
+				}
 			}
 		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_8_ ? 1 : 0)));
-		if (null != class452) {
-			if (bool && null == class452.anObject5444) {
-				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 119);
-				if (class414 == null)
-					return null;
-				class452.anObject5444 = class414;
-			}
-			return class452;
-		}
-		byte[] is = ((Class378) this).aClass317_4522.getFile(i);
-		if (is == null)
-			return null;
-		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 90);
-		if (null == class414)
-			return null;
-		if (bool)
-			class452 = new Class452(interface35.method216(is, class414, bool_8_, 1942118537), class414);
-		else
-			class452 = new Class452(interface35.method216(is, class414, bool_8_, 1942118537), null);
-		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_8_ ? 1 : 0)));
-		return class452;
 	}
 
-	public void method6410(short i) {
-		((Class378) this).aClass229_4524.method3859(-1705560469);
+	public void method6410(short s_1) {
+		this.aClass229_4524.method3859(-1705560469);
 	}
 
-	public void method6411(int i, int i_11_) {
-		((Class378) this).aClass229_4524.method3858(i, (byte) -27);
+	public void method6411(int i_1, int i_2) {
+		this.aClass229_4524.method3858(i_1, (byte) -27);
 	}
 
-	public void method6412(int i) {
-		((Class378) this).aClass229_4524.method3863(1703943609);
+	public void method6412(int i_1) {
+		this.aClass229_4524.method3863(1703943609);
 	}
 
-	public void method6413(Interface35 interface35) {
-		((Class378) this).aMap4525 = new HashMap(((Class378) this).anIntArray4521.length);
-		for (int i = 0; i < ((Class378) this).anIntArray4521.length; i++) {
-			int i_12_ = ((Class378) this).anIntArray4521[i];
-			FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i_12_, (byte) 123);
-			byte[] is = ((Class378) this).aClass317_4522.getFile(i_12_);
-			Object object = interface35.method216(is, class414, true, 1942118537);
-			((Class378) this).aMap4525.put(Integer.valueOf(i), new Class452(object, class414));
-		}
+	public FontMetrics method6415(Interface35 interface35_1, int i_2, int i_3) {
+		Class452 class452_4 = this.method6409(interface35_1, i_2, true, true, (byte) 1);
+		return class452_4 == null ? null : (FontMetrics) class452_4.anObject5444;
 	}
 
-	public void method6414(Interface35 interface35) {
-		((Class378) this).aMap4525 = new HashMap(((Class378) this).anIntArray4521.length);
-		for (int i = 0; i < ((Class378) this).anIntArray4521.length; i++) {
-			int i_13_ = ((Class378) this).anIntArray4521[i];
-			FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i_13_, (byte) 90);
-			byte[] is = ((Class378) this).aClass317_4522.getFile(i_13_);
-			Object object = interface35.method216(is, class414, true, 1942118537);
-			((Class378) this).aMap4525.put(Integer.valueOf(i), new Class452(object, class414));
-		}
+	public int method6422(int i_1) {
+		return this.anIntArray4521 == null ? 0 : this.anIntArray4521.length * 2;
 	}
 
-	public FontMetrics method6415(Interface35 interface35, int i, int i_14_) {
-		Class452 class452 = method6409(interface35, i, true, true, (byte) 1);
-		if (class452 == null)
-			return null;
-		return (FontMetrics) class452.anObject5444;
+	public Object method6426(Interface35 interface35_1, int i_2, boolean bool_3, boolean bool_4, int i_5) {
+		Class452 class452_6 = this.method6409(interface35_1, i_2, bool_3, bool_4, (byte) 1);
+		return class452_6 == null ? null : class452_6.anObject5443;
 	}
 
-	public void method6416() {
-		((Class378) this).aMap4525 = null;
+	public void method6433(int i_1) {
+		this.aMap4525 = null;
 	}
 
-	public int method6417() {
-		return method6405(false, 1585974752);
+	public static int method6435(int i_0) {
+		return Class96_Sub10_Sub1.anInt10159;
 	}
 
-	public int method6418(boolean bool) {
-		if (null == ((Class378) this).anIntArray4521)
-			return 0;
-		if (!bool && ((Class378) this).aMap4525 != null)
-			return 2 * ((Class378) this).anIntArray4521.length;
-		int i = 0;
-		for (int i_15_ = 0; i_15_ < ((Class378) this).anIntArray4521.length; i_15_++) {
-			int i_16_ = ((Class378) this).anIntArray4521[i_15_];
-			if (((Class378) this).aClass317_4522.method5661(i_16_, -226275637))
-				i++;
-			if (((Class378) this).aClass317_4523.method5661(i_16_, -1748217652))
-				i++;
-		}
-		return i;
-	}
-
-	public int method6419(boolean bool) {
-		if (null == ((Class378) this).anIntArray4521)
-			return 0;
-		if (!bool && ((Class378) this).aMap4525 != null)
-			return 2 * ((Class378) this).anIntArray4521.length;
-		int i = 0;
-		for (int i_17_ = 0; i_17_ < ((Class378) this).anIntArray4521.length; i_17_++) {
-			int i_18_ = ((Class378) this).anIntArray4521[i_17_];
-			if (((Class378) this).aClass317_4522.method5661(i_18_, 1022789844))
-				i++;
-			if (((Class378) this).aClass317_4523.method5661(i_18_, 1005529073))
-				i++;
-		}
-		return i;
-	}
-
-	public void method6420() {
-		((Class378) this).aClass229_4524.method3859(-830725297);
-	}
-
-	Class452 method6421(Interface35 interface35, int i, boolean bool, boolean bool_19_) {
-		if (-1 == i)
-			return null;
-		if (((Class378) this).anIntArray4521 != null) {
-			for (int i_20_ = 0; i_20_ < ((Class378) this).anIntArray4521.length; i_20_++) {
-				if (i == ((Class378) this).anIntArray4521[i_20_])
-					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_20_));
-			}
-		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_19_ ? 1 : 0)));
-		if (null != class452) {
-			if (bool && null == class452.anObject5444) {
-				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 89);
-				if (class414 == null)
-					return null;
-				class452.anObject5444 = class414;
-			}
-			return class452;
-		}
-		byte[] is = ((Class378) this).aClass317_4522.getFile(i);
-		if (is == null)
-			return null;
-		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 88);
-		if (null == class414)
-			return null;
-		if (bool)
-			class452 = new Class452(interface35.method216(is, class414, bool_19_, 1942118537), class414);
-		else
-			class452 = new Class452(interface35.method216(is, class414, bool_19_, 1942118537), null);
-		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_19_ ? 1 : 0)));
-		return class452;
-	}
-
-	public int method6422(int i) {
-		if (((Class378) this).anIntArray4521 == null)
-			return 0;
-		return 2 * ((Class378) this).anIntArray4521.length;
-	}
-
-	public int method6423() {
-		if (((Class378) this).anIntArray4521 == null)
-			return 0;
-		return 2 * ((Class378) this).anIntArray4521.length;
-	}
-
-	public void method6424(int i) {
-		((Class378) this).aClass229_4524.method3858(i, (byte) 11);
-	}
-
-	public FontMetrics method6425(Interface35 interface35, int i) {
-		Class452 class452 = method6409(interface35, i, true, true, (byte) 1);
-		if (class452 == null)
-			return null;
-		return (FontMetrics) class452.anObject5444;
-	}
-
-	public Object method6426(Interface35 interface35, int i, boolean bool, boolean bool_21_, int i_22_) {
-		Class452 class452 = method6409(interface35, i, bool, bool_21_, (byte) 1);
-		if (null == class452)
-			return null;
-		return class452.anObject5443;
-	}
-
-	Class452 method6427(Interface35 interface35, int i, boolean bool, boolean bool_23_) {
-		if (-1 == i)
-			return null;
-		if (((Class378) this).anIntArray4521 != null) {
-			for (int i_24_ = 0; i_24_ < ((Class378) this).anIntArray4521.length; i_24_++) {
-				if (i == ((Class378) this).anIntArray4521[i_24_])
-					return (Class452) ((Class378) this).aMap4525.get(Integer.valueOf(i_24_));
-			}
-		}
-		Class452 class452 = (Class452) ((Class378) this).aClass229_4524.get((long) (i << 1 | (bool_23_ ? 1 : 0)));
-		if (null != class452) {
-			if (bool && null == class452.anObject5444) {
-				FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 69);
-				if (class414 == null)
-					return null;
-				class452.anObject5444 = class414;
-			}
-			return class452;
-		}
-		byte[] is = ((Class378) this).aClass317_4522.getFile(i);
-		if (is == null)
-			return null;
-		FontMetrics class414 = Class163.method2845(((Class378) this).aClass317_4523, i, (byte) 52);
-		if (null == class414)
-			return null;
-		if (bool)
-			class452 = new Class452(interface35.method216(is, class414, bool_23_, 1942118537), class414);
-		else
-			class452 = new Class452(interface35.method216(is, class414, bool_23_, 1942118537), null);
-		((Class378) this).aClass229_4524.put(class452, (long) (i << 1 | (bool_23_ ? 1 : 0)));
-		return class452;
-	}
-
-	public int method6428() {
-		if (((Class378) this).anIntArray4521 == null)
-			return 0;
-		return 2 * ((Class378) this).anIntArray4521.length;
-	}
-
-	public void method6429() {
-		((Class378) this).aClass229_4524.method3859(1653159735);
-	}
-
-	public void method6430() {
-		((Class378) this).aMap4525 = null;
-	}
-
-	public void method6431() {
-		((Class378) this).aClass229_4524.method3859(1179481786);
-	}
-
-	public void method6432() {
-		((Class378) this).aClass229_4524.method3859(534913569);
-	}
-
-	public void method6433(int i) {
-		((Class378) this).aMap4525 = null;
-	}
-
-	public void method6434() {
-		((Class378) this).aClass229_4524.method3863(926195982);
-	}
-
-	public static int method6435(int i) {
-		return Class96_Sub10_Sub1.anInt10159 * 1439648847;
-	}
-
-	public static byte[] method6436(String string, int i) {
-		int i_25_ = string.length();
-		if (0 == i_25_)
+	public static byte[] method6436(String string_0, int i_1) {
+		int i_2 = string_0.length();
+		if (i_2 == 0) {
 			return new byte[0];
-		int i_26_ = i_25_ + 3 & ~0x3;
-		int i_27_ = i_26_ / 4 * 3;
-		if (i_26_ - 2 >= i_25_ || Class514.method8840(string.charAt(i_26_ - 2), -1434281035) == -1)
-			i_27_ -= 2;
-		else if (i_26_ - 1 >= i_25_ || (Class514.method8840(string.charAt(i_26_ - 1), -1329801870) == -1))
-			i_27_--;
-		byte[] is = new byte[i_27_];
-		IncomingPacket.method6375(string, is, 0, -692534854);
-		return is;
+		} else {
+			int i_3 = i_2 + 3 & ~0x3;
+			int i_4 = i_3 / 4 * 3;
+			if (i_3 - 2 < i_2 && Class514.method8840(string_0.charAt(i_3 - 2), -1434281035) != -1) {
+				if (i_3 - 1 >= i_2 || Class514.method8840(string_0.charAt(i_3 - 1), -1329801870) == -1) {
+					--i_4;
+				}
+			} else {
+				i_4 -= 2;
+			}
+
+			byte[] bytes_5 = new byte[i_4];
+			IncomingPacket.method6375(string_0, bytes_5, 0, -692534854);
+			return bytes_5;
+		}
 	}
 
-	static final void method6437(CS2Executor class527, int i) {
-		class527.intStackPtr -= 283782002;
-		long l = (long) (class527.intStack[1942118537 * class527.intStackPtr]);
-		long l_28_ = (long) (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) (l + l * l_28_ / 100L);
+	static final void method6437(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 2;
+		long long_2 = (long) cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		long long_4 = (long) cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) (long_2 + long_2 * long_4 / 100L);
 	}
 
-	static final void method6438(byte i) {
+	static final void method6438(byte b_0) {
 		IndexLoaders.aClass536_1535.method11477(5, (byte) 1);
 		IndexLoaders.UNDERLAY_INDEX_LOADER.method8030(5, 1440443465);
 		IndexLoaders.aClass31_204.method802(5, -957587210);
@@ -407,4 +203,5 @@ public class Class378 {
 		Class20.aClass229_191.method3858(5, (byte) 15);
 		CS2Runner.aClass229_5901.method3858(5, (byte) -83);
 	}
+
 }

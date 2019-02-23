@@ -1,113 +1,129 @@
-/* Class161 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class161 {
+
 	public int anInt2011;
-	public int anInt2012 = 1025302087;
 	public int anInt2013;
-	public Animation aClass456_2014;
 	public int anInt2015;
+	public int anInt2012 = -1;
+	public Animation aClass456_2014;
 
-	Class161(Animable class521_sub1_sub1_sub2) {
-		aClass456_2014 = new Class456_Sub2(class521_sub1_sub1_sub2, false);
+	Class161(Animable animable_1) {
+		this.aClass456_2014 = new Class456_Sub2(animable_1, false);
 	}
 
-	static final void method2823(CS2Executor class527, int i) {
-		class527.intStackPtr -= 567564004;
-		Class435.method7300((class527.intStack[1942118537 * class527.intStackPtr]), (class527.intStack[1 + 1942118537 * class527.intStackPtr]), (class527.intStack[2 + class527.intStackPtr * 1942118537]), (class527.intStack[3 + class527.intStackPtr * 1942118537]), false, 256, 1449989045);
+	static final void method2823(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 4;
+		Class435.method7300(cs2executor_0.intStack[cs2executor_0.intStackPtr], cs2executor_0.intStack[cs2executor_0.intStackPtr + 1], cs2executor_0.intStack[cs2executor_0.intStackPtr + 2], cs2executor_0.intStack[cs2executor_0.intStackPtr + 3], false, 256, 1449989045);
 	}
 
-	static final void method2824(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		ChatLine class108 = Class180.method3032(i_0_, (byte) -1);
-		String string = "";
-		if (class108 != null && null != class108.message)
-			string = class108.message;
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
+	static final void method2824(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		ChatLine chatline_3 = Class180.method3032(i_2, (byte) -1);
+		String str_4 = "";
+		if (chatline_3 != null && chatline_3.message != null) {
+			str_4 = chatline_3.message;
+		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
 	}
 
-	static final void method2825(CS2Executor class527, byte i) {
+	static final void method2825(CS2Executor cs2executor_0, byte b_1) {
 		if (client.aByteArray7152 != null) {
-			if (i < 1)
-				class527.intStack[((class527.intStackPtr += 141891001) * 1942118537) - 1] = 1;
-		} else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-	}
-
-	static final void method2826(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_1_, (byte) 25);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_1_ >> 16];
-		Class282_Sub17.method12260(class118, class98, class527, 456705608);
-	}
-
-	static final void method2827(int i) {
-		Class109.method1858(client.aClass118_7257, (byte) -8);
-		Class96_Sub1.anInt8308 += -1463498693;
-		if (!client.aBool7369 || !client.aBool7403) {
-			if (2100482291 * Class96_Sub1.anInt8308 > 1) {
-				client.aClass118_7257 = null;
-				client.aClass118_7247 = null;
-			}
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
 		} else {
-			int i_2_ = Class163.aClass209_2031.method3569(2003806769);
-			int i_3_ = Class163.aClass209_2031.method3570(756095591);
-			i_2_ -= 290868651 * client.anInt7361;
-			i_3_ -= -554256717 * client.anInt7362;
-			if (i_2_ < client.anInt7432 * 1326654489)
-				i_2_ = 1326654489 * client.anInt7432;
-			if (i_2_ + client.aClass118_7257.anInt1301 * 1506818197 > (1831433281 * client.anInt7367 + client.anInt7432 * 1326654489))
-				i_2_ = (1831433281 * client.anInt7367 + 1326654489 * client.anInt7432 - client.aClass118_7257.anInt1301 * 1506818197);
-			if (i_3_ < -2042382973 * client.anInt7265)
-				i_3_ = -2042382973 * client.anInt7265;
-			if (i_3_ + client.aClass118_7257.anInt1429 * -492594917 > (-2042382973 * client.anInt7265 + client.anInt7476 * -1128803311))
-				i_3_ = (-1128803311 * client.anInt7476 + client.anInt7265 * -2042382973 - -492594917 * client.aClass118_7257.anInt1429);
-			int i_4_;
-			int i_5_;
-			if (client.aClass118_7247 == Class221.aClass118_2763) {
-				i_4_ = i_2_;
-				i_5_ = i_3_;
-			} else {
-				i_4_ = (i_2_ - client.anInt7432 * 1326654489 + 276864765 * client.aClass118_7247.anInt1311);
-				i_5_ = (client.aClass118_7247.anInt1312 * 682782159 + (i_3_ - client.anInt7265 * -2042382973));
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		}
+
+	}
+
+	static final void method2826(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 25);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Class282_Sub17.method12260(icomponentdefinitions_3, interface_4, cs2executor_0, 456705608);
+	}
+
+	static final void method2827(int i_0) {
+		Class109.method1858(client.aClass118_7257, (byte) -8);
+		++Class96_Sub1.anInt8308;
+		if (client.aBool7369 && client.aBool7403) {
+			int i_1 = Class163.aClass209_2031.method3569(2003806769);
+			int i_2 = Class163.aClass209_2031.method3570(756095591);
+			i_1 -= client.anInt7361;
+			i_2 -= client.anInt7362;
+			if (i_1 < client.anInt7432) {
+				i_1 = client.anInt7432;
 			}
+
+			if (i_1 + client.aClass118_7257.anInt1301 > client.anInt7367 + client.anInt7432) {
+				i_1 = client.anInt7367 + client.anInt7432 - client.aClass118_7257.anInt1301;
+			}
+
+			if (i_2 < client.anInt7265) {
+				i_2 = client.anInt7265;
+			}
+
+			if (i_2 + client.aClass118_7257.anInt1429 > client.anInt7265 + client.anInt7476) {
+				i_2 = client.anInt7476 + client.anInt7265 - client.aClass118_7257.anInt1429;
+			}
+
+			int i_3;
+			int i_4;
+			if (client.aClass118_7247 == Class221.aClass118_2763) {
+				i_3 = i_1;
+				i_4 = i_2;
+			} else {
+				i_3 = i_1 - client.anInt7432 + client.aClass118_7247.anInt1311;
+				i_4 = i_2 - client.anInt7265 + client.aClass118_7247.anInt1312;
+			}
+
+			HookRequest hookrequest_5;
 			if (!Class163.aClass209_2031.method3568((short) -19628)) {
 				if (client.aBool7364) {
 					Class60.method1170(-609337146);
-					if (null != client.aClass118_7257.anObjectArray1394) {
-						HookRequest class282_sub43 = new HookRequest();
-						class282_sub43.iComponentDefs = client.aClass118_7257;
-						class282_sub43.anInt8059 = i_4_ * 610593631;
-						class282_sub43.anInt8055 = -916586071 * i_5_;
-						class282_sub43.aClass118_8057 = client.aClass118_7370;
-						class282_sub43.params = client.aClass118_7257.anObjectArray1394;
-						Class96_Sub4.executeHookInner200k(class282_sub43, 79466209);
+					if (client.aClass118_7257.anObjectArray1394 != null) {
+						hookrequest_5 = new HookRequest();
+						hookrequest_5.iComponentDefs = client.aClass118_7257;
+						hookrequest_5.anInt8059 = i_3;
+						hookrequest_5.anInt8055 = i_4;
+						hookrequest_5.aClass118_8057 = client.aClass118_7370;
+						hookrequest_5.params = client.aClass118_7257.anObjectArray1394;
+						Class96_Sub4.executeHookInner200k(hookrequest_5, 79466209);
 					}
-					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null)
+
+					if (client.aClass118_7370 != null && client.method11634(client.aClass118_7257) != null) {
 						Class119.method2076(client.aClass118_7257, client.aClass118_7370, 1527549411);
-				} else if ((1 == -1718417173 * client.anInt7339 || JS5GrabWorker.method12562(-285174833)) && 2144330291 * Class20.anInt169 > 2)
-					Class242.method4164((client.anInt7361 * 290868651 + client.anInt7252 * -1609719385), (-833040991 * client.anInt7215 + -554256717 * client.anInt7362), -85284222);
-				else if (Class216.method3677(575398960))
-					Class242.method4164((client.anInt7252 * -1609719385 + client.anInt7361 * 290868651), (client.anInt7215 * -833040991 + client.anInt7362 * -554256717), 405616760);
+					}
+				} else if ((client.anInt7339 == 1 || JS5GrabWorker.method12562(-285174833)) && Class20.anInt169 > 2) {
+					Class242.method4164(client.anInt7361 + client.anInt7252, client.anInt7215 + client.anInt7362, -85284222);
+				} else if (Class216.method3677(575398960)) {
+					Class242.method4164(client.anInt7252 + client.anInt7361, client.anInt7215 + client.anInt7362, 405616760);
+				}
+
 				client.aClass118_7257 = null;
 				client.aClass118_7247 = null;
 			} else {
-				if (Class96_Sub1.anInt8308 * 2100482291 > -2056717997 * client.aClass118_7257.anInt1381) {
-					int i_6_ = i_2_ - -1609719385 * client.anInt7252;
-					int i_7_ = i_3_ - client.anInt7215 * -833040991;
-					if (i_6_ > 1556518327 * client.aClass118_7257.anInt1380 || i_6_ < -(client.aClass118_7257.anInt1380 * 1556518327) || i_7_ > client.aClass118_7257.anInt1380 * 1556518327 || i_7_ < -(client.aClass118_7257.anInt1380 * 1556518327))
+				if (Class96_Sub1.anInt8308 > client.aClass118_7257.anInt1381) {
+					int i_7 = i_1 - client.anInt7252;
+					int i_6 = i_2 - client.anInt7215;
+					if (i_7 > client.aClass118_7257.anInt1380 || i_7 < -client.aClass118_7257.anInt1380 || i_6 > client.aClass118_7257.anInt1380 || i_6 < -client.aClass118_7257.anInt1380) {
 						client.aBool7364 = true;
+					}
 				}
-				if (null != client.aClass118_7257.anObjectArray1451 && client.aBool7364) {
-					HookRequest class282_sub43 = new HookRequest();
-					class282_sub43.iComponentDefs = client.aClass118_7257;
-					class282_sub43.anInt8059 = 610593631 * i_4_;
-					class282_sub43.anInt8055 = i_5_ * -916586071;
-					class282_sub43.params = client.aClass118_7257.anObjectArray1451;
-					Class96_Sub4.executeHookInner200k(class282_sub43, 814557204);
+
+				if (client.aClass118_7257.anObjectArray1451 != null && client.aBool7364) {
+					hookrequest_5 = new HookRequest();
+					hookrequest_5.iComponentDefs = client.aClass118_7257;
+					hookrequest_5.anInt8059 = i_3;
+					hookrequest_5.anInt8055 = i_4;
+					hookrequest_5.params = client.aClass118_7257.anObjectArray1451;
+					Class96_Sub4.executeHookInner200k(hookrequest_5, 814557204);
 				}
 			}
+		} else if (Class96_Sub1.anInt8308 > 1) {
+			client.aClass118_7257 = null;
+			client.aClass118_7247 = null;
 		}
+
 	}
+
 }

@@ -1,19 +1,17 @@
-/* Interface41 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface41 {
-	public Class445 method230();
 
-	public int getCompletion(int i);
+	Class445 method230();
 
-	public int method231();
+	int getCompletion(int var1);
 
-	public Class445 method232(byte i);
+	int method231();
 
-	public Class445 method233();
+	Class445 method232(byte var1);
 
-	public Class445 method234();
+	Class445 method233();
 
-	public Class445 method235();
+	Class445 method234();
+
+	Class445 method235();
+
 }

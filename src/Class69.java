@@ -1,102 +1,26 @@
-/* Class69 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class69 {
-	static Class69 aClass69_688;
+
+	public static Class69 aClass69_695;
 	public static Class69 aClass69_689;
 	public static Class69 aClass69_690;
 	public static Class69 aClass69_691;
 	public static Class69 aClass69_692;
 	public static Class69 aClass69_693;
 	public static Class69 aClass69_694;
-	public static Class69 aClass69_695 = new Class69(7, 0, 3, Class76.aClass76_758);
 	static Class69 aClass69_696;
-	static Class69 aClass69_697;
-	public int anInt698;
-	static Class69 aClass69_699;
 	static Class69 aClass69_700;
-	static final int anInt701 = 16;
+	static Class69 aClass69_699;
+	static Class69 aClass69_688;
+	static Class69 aClass69_697;
 	static int anInt702;
+	public int anInt698;
 	int anInt703;
-	public int anInt704;
 	int anInt705;
 	Class76 aClass76_706;
-
-	static Class69 method1284(int i) {
-		switch (i) {
-		case 1:
-			return aClass69_689;
-		case 0:
-			return aClass69_695;
-		case 3:
-			return aClass69_691;
-		case 6:
-			return aClass69_694;
-		case 4:
-			return aClass69_692;
-		case 5:
-			return aClass69_693;
-		case 2:
-			return aClass69_690;
-		default:
-			return null;
-		}
-	}
-
-	static Class69 method1285(int i) {
-		switch (i) {
-		case 1:
-			return aClass69_689;
-		case 0:
-			return aClass69_695;
-		case 3:
-			return aClass69_691;
-		case 6:
-			return aClass69_694;
-		case 4:
-			return aClass69_692;
-		case 5:
-			return aClass69_693;
-		case 2:
-			return aClass69_690;
-		default:
-			return null;
-		}
-	}
-
-	Class69(int i, int i_0_, int i_1_, Class76 class76) {
-		anInt698 = i;
-		((Class69) this).anInt703 = i_0_;
-		((Class69) this).anInt705 = i_1_;
-		((Class69) this).aClass76_706 = class76;
-		anInt704 = (((Class69) this).anInt705 * (((Class69) this).aClass76_706.anInt748 * 971905895));
-		if (((Class69) this).anInt703 >= 16)
-			throw new RuntimeException();
-	}
-
-	static Class69 method1286(int i) {
-		switch (i) {
-		case 1:
-			return aClass69_689;
-		case 0:
-			return aClass69_695;
-		case 3:
-			return aClass69_691;
-		case 6:
-			return aClass69_694;
-		case 4:
-			return aClass69_692;
-		case 5:
-			return aClass69_693;
-		case 2:
-			return aClass69_690;
-		default:
-			return null;
-		}
-	}
+	public int anInt704;
 
 	static {
+		aClass69_695 = new Class69(7, 0, 3, Class76.aClass76_758);
 		aClass69_689 = new Class69(0, 1, 3, Class76.aClass76_758);
 		aClass69_690 = new Class69(10, 2, 4, Class76.aClass76_751);
 		aClass69_691 = new Class69(8, 3, 1, Class76.aClass76_758);
@@ -110,4 +34,37 @@ public class Class69 {
 		aClass69_697 = new Class69(6, 11, 3, Class76.aClass76_758);
 		anInt702 = Class159.method2739(16, -561677665);
 	}
+
+	static Class69 method1285(int i_0) {
+		switch (i_0) {
+		case 0:
+			return aClass69_695;
+		case 1:
+			return aClass69_689;
+		case 2:
+			return aClass69_690;
+		case 3:
+			return aClass69_691;
+		case 4:
+			return aClass69_692;
+		case 5:
+			return aClass69_693;
+		case 6:
+			return aClass69_694;
+		default:
+			return null;
+		}
+	}
+
+	Class69(int i_1, int i_2, int i_3, Class76 class76_4) {
+		this.anInt698 = i_1;
+		this.anInt703 = i_2;
+		this.anInt705 = i_3;
+		this.aClass76_706 = class76_4;
+		this.anInt704 = this.aClass76_706.anInt748 * this.anInt705;
+		if (this.anInt703 >= 16) {
+			throw new RuntimeException();
+		}
+	}
+
 }

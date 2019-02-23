@@ -1,108 +1,115 @@
-/* Class15 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 final class Class15 implements Interface35 {
-	public Object method216(byte[] is, FontMetrics class414, boolean bool, int i) {
-		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
+
+	public Object method216(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3, int i_4) {
+		return Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
-	public Object method215(byte[] is, FontMetrics class414, boolean bool) {
-		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
+	public Object method215(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
+		return Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
-	public Object method214(byte[] is, FontMetrics class414, boolean bool) {
-		return Renderers.SOFTWARE_RENDERER.method8448(class414, Class91.method1517(is), bool);
+	public Object method214(byte[] bytes_1, FontMetrics fontmetrics_2, boolean bool_3) {
+		return Renderers.SOFTWARE_RENDERER.method8448(fontmetrics_2, Class91.method1517(bytes_1), bool_3);
 	}
 
-	public static void method540(int i, byte i_0_) {
-		if (i < 0 || i > 2)
-			i = 0;
-		Class235.anInt2906 = 1285272397 * i;
-		Class477.aClass539Array5632 = (new Class539[1 + Class89.anIntArray931[-391332475 * Class235.anInt2906]]);
+	public static void method540(int i_0, byte b_1) {
+		if (i_0 < 0 || i_0 > 2) {
+			i_0 = 0;
+		}
+
+		Class235.anInt2906 = i_0;
+		Class477.aClass539Array5632 = new Class539[Class89.anIntArray931[Class235.anInt2906] + 1];
 		Class235.anInt2899 = 0;
 		Class235.anInt2901 = 0;
 	}
 
-	static final void method541(CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class453.method7547(class118, class98, class527, -996229805);
+	static final void method541(CS2Executor cs2executor_0, byte b_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class453.method7547(icomponentdefinitions_3, interface_4, cs2executor_0, -996229805);
 	}
 
-	static final void method542(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, 876649685) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1407 = Class351.method6193(string, class527, -479801764);
-		class118.aBool1384 = true;
+	static final void method542(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, 876649685) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1407 = Class351.method6193(string_4, cs2executor_2, -479801764);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final void method543(CS2Executor class527, int i) {
-		class527.animable.method15813((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), (byte) 109);
+	static final void method543(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.animable.method15813(cs2executor_0.intStack[--cs2executor_0.intStackPtr], (byte) 109);
 	}
 
-	static void method544(IComponentDefinitions class118, int i, int i_1_, int i_2_) {
-		Class20.aClass118_183 = class118;
-		Class20.anInt195 = i * 1511257025;
-		Class20.anInt179 = -248935111 * i_1_;
+	static void method544(IComponentDefinitions icomponentdefinitions_0, int i_1, int i_2, int i_3) {
+		Class20.aClass118_183 = icomponentdefinitions_0;
+		Class20.anInt195 = i_1;
+		Class20.anInt179 = i_2;
 	}
 
-	static final void method545(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 283782002;
-		int i_3_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_4_ = (class527.intStack[1942118537 * class527.intStackPtr + 1]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_3_ | 1 << i_4_;
+	static final void method545(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_2 | 1 << i_3;
 	}
 
-	static final void method546(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aByte7458;
-		if (client.aByte7458 != -1)
-			client.aByte7458 = (byte) -6;
+	static final void method546(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aByte7458;
+		if (client.aByte7458 != -1) {
+			client.aByte7458 = -6;
+		}
+
 	}
 
-	static String method547(int[] is, int i) {
-		StringBuilder stringbuilder = new StringBuilder();
-		int i_5_ = 1104058571 * Class20.anInt186;
-		for (int i_6_ = 0; i_6_ < is.length; i_6_++) {
-			QuestDefinitions class240 = IndexLoaders.aClass242_4922.method4156(is[i_6_], -1396181317);
-			if (-1230505599 * class240.anInt2977 != -1) {
-				NativeSprite class160 = (NativeSprite) (Class20.aClass229_191.get((long) (-1230505599 * class240.anInt2977)));
-				if (null == class160) {
-					Class91 class91 = Class91.method1522(IndexLoaders.SPRITES_INDEX, class240.anInt2977 * -1230505599, 0);
-					if (class91 != null) {
-						class160 = Renderers.SOFTWARE_RENDERER.method8444(class91, true);
-						Class20.aClass229_191.put(class160, (long) (-1230505599 * class240.anInt2977));
+	static String method547(int[] ints_0, int i_1) {
+		StringBuilder stringbuilder_2 = new StringBuilder();
+		int i_3 = Class20.anInt186;
+
+		for (int i_4 = 0; i_4 < ints_0.length; i_4++) {
+			QuestDefinitions questdefinitions_5 = IndexLoaders.aClass242_4922.method4156(ints_0[i_4], -1396181317);
+			if (questdefinitions_5.anInt2977 != -1) {
+				NativeSprite nativesprite_6 = (NativeSprite) Class20.aClass229_191.get((long) questdefinitions_5.anInt2977);
+				if (nativesprite_6 == null) {
+					Class91 class91_7 = Class91.method1522(IndexLoaders.SPRITES_INDEX, questdefinitions_5.anInt2977, 0);
+					if (class91_7 != null) {
+						nativesprite_6 = Renderers.SOFTWARE_RENDERER.method8444(class91_7, true);
+						Class20.aClass229_191.put(nativesprite_6, (long) questdefinitions_5.anInt2977);
 					}
 				}
-				if (class160 != null) {
-					Class115.aClass160Array1248[i_5_] = class160;
-					stringbuilder.append(" <img=").append(i_5_).append(">");
-					i_5_++;
+
+				if (nativesprite_6 != null) {
+					Class115.aClass160Array1248[i_3] = nativesprite_6;
+					stringbuilder_2.append(" <img=").append(i_3).append(">");
+					++i_3;
 				}
 			}
 		}
-		return stringbuilder.toString();
+
+		return stringbuilder_2.toString();
 	}
 
-	static final void method548(CS2Executor class527, int i) {
-		class527.intStackPtr -= 425673003;
-		int i_7_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_8_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		int i_9_ = (class527.intStack[1942118537 * class527.intStackPtr + 2]);
-		Class96_Sub10.method14603(9, i_7_ << 16 | i_8_, i_9_, "", (byte) 54);
+	static final void method548(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 3;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
+		Class96_Sub10.method14603(9, i_2 << 16 | i_3, i_4, "", (byte) 54);
 	}
 
-	public static void method549(Class397 class397, int i, int i_10_, SceneObject interface12, int i_11_) {
-		CS2Executor class527 = Class125.getNextScriptExecutor(1408358423);
-		class527.anInterface12_7013 = interface12;
-		Class107.method1834(class397, i, i_10_, class527, (byte) 23);
-		class527.anInterface12_7013 = null;
+	public static void method549(Class397 class397_0, int i_1, int i_2, SceneObject sceneobject_3, int i_4) {
+		CS2Executor cs2executor_5 = Class125.getNextScriptExecutor(1408358423);
+		cs2executor_5.anInterface12_7013 = sceneobject_3;
+		Class107.method1834(class397_0, i_1, i_2, cs2executor_5, (byte) 23);
+		cs2executor_5.anInterface12_7013 = null;
 	}
 
-	static final void method550(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = AnimationIndexLoader.method11219((char) i_12_, -2126211908) ? 1 : 0;
+	static final void method550(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = AnimationIndexLoader.method11219((char) i_2, -2126211908) ? 1 : 0;
 	}
+
 }

@@ -1,135 +1,147 @@
-/* Class96_Sub17 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class96_Sub17 extends Class96 {
+
 	int anInt9385;
 	int anInt9386;
 	String aString9387;
 	int anInt9388;
 	int anInt9389;
 
-	Class96_Sub17(RsByteBuffer class282_sub35) {
-		super(class282_sub35);
-		((Class96_Sub17) this).anInt9385 = class282_sub35.readUnsignedShort() * -1930592711;
-		((Class96_Sub17) this).anInt9386 = class282_sub35.readUnsignedShort() * -621881623;
-		((Class96_Sub17) this).aString9387 = class282_sub35.readString();
-		((Class96_Sub17) this).anInt9388 = class282_sub35.readInt() * -1475639137;
-		((Class96_Sub17) this).anInt9389 = class282_sub35.readUnsignedShort() * -159499065;
+	Class96_Sub17(RsByteBuffer rsbytebuffer_1) {
+		super(rsbytebuffer_1);
+		this.anInt9385 = rsbytebuffer_1.readUnsignedShort();
+		this.anInt9386 = rsbytebuffer_1.readUnsignedShort();
+		this.aString9387 = rsbytebuffer_1.readString();
+		this.anInt9388 = rsbytebuffer_1.readInt();
+		this.anInt9389 = rsbytebuffer_1.readUnsignedShort();
 	}
 
-	public void method1592(int i) {
-		Class59.method1161(Class4.anInt35 * 675588453, 31133705 * ((Class96_Sub17) this).anInt9385, ((Class96_Sub17) this).anInt9386 * -2086575783, (Class504.method8389(31133705 * ((Class96_Sub17) this).anInt9385, -2086575783 * ((Class96_Sub17) this).anInt9386, 675588453 * Class4.anInt35, (byte) 47)), ((Class96_Sub17) this).anInt9389 * -469908233, ((Class96_Sub17) this).anInt9388 * 882611039, ((Class96_Sub17) this).aString9387, (short) 12244);
+	public void method1592(int i_1) {
+		Class59.method1161(Class4.anInt35, this.anInt9385, this.anInt9386, Class504.method8389(this.anInt9385, this.anInt9386, Class4.anInt35, (byte) 47), this.anInt9389, this.anInt9388, this.aString9387, (short) 12244);
 	}
 
 	public void method1601() {
-		Class59.method1161(Class4.anInt35 * 675588453, 31133705 * ((Class96_Sub17) this).anInt9385, ((Class96_Sub17) this).anInt9386 * -2086575783, (Class504.method8389(31133705 * ((Class96_Sub17) this).anInt9385, -2086575783 * ((Class96_Sub17) this).anInt9386, 675588453 * Class4.anInt35, (byte) 93)), ((Class96_Sub17) this).anInt9389 * -469908233, ((Class96_Sub17) this).anInt9388 * 882611039, ((Class96_Sub17) this).aString9387, (short) 20309);
+		Class59.method1161(Class4.anInt35 * -647602067 * 675588453, 31133705 * this.anInt9385 * -1930592711, this.anInt9386 * -621881623 * -2086575783, Class504.method8389(31133705 * this.anInt9385 * -1930592711, -2086575783 * this.anInt9386 * -621881623, 675588453 * Class4.anInt35 * -647602067, (byte) 93), this.anInt9389 * -159499065 * -469908233, this.anInt9388 * -1475639137 * 882611039, this.aString9387, (short) 20309);
 	}
 
-	static final void method14653(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (Class96_Sub14.method14642(string, class527, -271288407) != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1353 = Class351.method6193(string, class527, 1245386660);
-		class118.aBool1384 = true;
+	static final void method14653(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (Class96_Sub14.method14642(string_4, cs2executor_2, -271288407) != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1353 = Class351.method6193(string_4, cs2executor_2, 1245386660);
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	static final boolean performCalculationS1(int srcX, int srcY, RouteStrategy strategy, ClipMap clipMap, int i_1_) {
-		int currentX = srcX;
-		int currentY = srcY;
-		int halfGraphSizeX = 64;
-		int halfGraphSizeY = 64;
-		int graphBaseX = srcX - halfGraphSizeX;
-		int graphBaseY = srcY - halfGraphSizeY;
-		Class251.directions[halfGraphSizeX][halfGraphSizeY] = 99;
-		Class251.distances[halfGraphSizeX][halfGraphSizeY] = 0;
-		int write = 0;
-		int read = 0;
-		Class251.bufferX[write] = currentX;
-		Class251.bufferY[write++] = currentY;
-		int[][] clip = clipMap.map;
-		while (read != write) {
-			currentX = Class251.bufferX[read];
-			currentY = Class251.bufferY[read];
-			read = 1 + read & 0xfff;
-			halfGraphSizeX = currentX - graphBaseX;
-			halfGraphSizeY = currentY - graphBaseY;
-			int cX = currentX - -1969357273 * clipMap.offsetX;
-			int cY = currentY - 1503444365 * clipMap.offsetY;
-			if (strategy.canExit(1, currentX, currentY, clipMap, (byte) -1)) {
-				Class251.exitX = currentX * -1071145131;
-				Class251.exitY = -1330567915 * currentY;
+	static final boolean performCalculationS1(int i_0, int i_1, RouteStrategy routestrategy_2, ClipMap clipmap_3, int i_4) {
+		int i_5 = i_0;
+		int i_6 = i_1;
+		byte b_7 = 64;
+		byte b_8 = 64;
+		int i_9 = i_0 - b_7;
+		int i_10 = i_1 - b_8;
+		Class251.directions[b_7][b_8] = 99;
+		Class251.distances[b_7][b_8] = 0;
+		byte b_11 = 0;
+		int i_12 = 0;
+		Class251.bufferX[b_11] = i_0;
+		byte b_10001 = b_11;
+		int i_19 = b_11 + 1;
+		Class251.bufferY[b_10001] = i_1;
+		int[][] ints_13 = clipmap_3.map;
+
+		while (i_12 != i_19) {
+			i_5 = Class251.bufferX[i_12];
+			i_6 = Class251.bufferY[i_12];
+			i_12 = i_12 + 1 & 0xfff;
+			int i_17 = i_5 - i_9;
+			int i_18 = i_6 - i_10;
+			int i_14 = i_5 - clipmap_3.offsetX;
+			int i_15 = i_6 - clipmap_3.offsetY;
+			if (routestrategy_2.canExit(1, i_5, i_6, clipmap_3, (byte) -1)) {
+				Class251.exitX = i_5;
+				Class251.exitY = i_6;
 				return true;
 			}
-			int nextDistance = Class251.distances[halfGraphSizeX][halfGraphSizeY] + 1;
-			if (halfGraphSizeX > 0 && Class251.directions[halfGraphSizeX - 1][halfGraphSizeY] == 0 && (clip[cX - 1][cY] & 0x42240000) == 0) {
-				Class251.bufferX[write] = currentX - 1;
-				Class251.bufferY[write] = currentY;
-				write = write + 1 & 0xfff;
-				Class251.directions[halfGraphSizeX - 1][halfGraphSizeY] = 2;
-				Class251.distances[halfGraphSizeX - 1][halfGraphSizeY] = nextDistance;
+
+			int i_16 = Class251.distances[i_17][i_18] + 1;
+			if (i_17 > 0 && Class251.directions[i_17 - 1][i_18] == 0 && (ints_13[i_14 - 1][i_15] & 0x42240000) == 0) {
+				Class251.bufferX[i_19] = i_5 - 1;
+				Class251.bufferY[i_19] = i_6;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17 - 1][i_18] = 2;
+				Class251.distances[i_17 - 1][i_18] = i_16;
 			}
-			if (halfGraphSizeX < 127 && Class251.directions[halfGraphSizeX + 1][halfGraphSizeY] == 0 && 0 == (clip[1 + cX][cY] & 0x60240000)) {
-				Class251.bufferX[write] = 1 + currentX;
-				Class251.bufferY[write] = currentY;
-				write = 1 + write & 0xfff;
-				Class251.directions[1 + halfGraphSizeX][halfGraphSizeY] = 8;
-				Class251.distances[halfGraphSizeX + 1][halfGraphSizeY] = nextDistance;
+
+			if (i_17 < 127 && Class251.directions[i_17 + 1][i_18] == 0 && (ints_13[i_14 + 1][i_15] & 0x60240000) == 0) {
+				Class251.bufferX[i_19] = i_5 + 1;
+				Class251.bufferY[i_19] = i_6;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17 + 1][i_18] = 8;
+				Class251.distances[i_17 + 1][i_18] = i_16;
 			}
-			if (halfGraphSizeY > 0 && 0 == Class251.directions[halfGraphSizeX][halfGraphSizeY - 1] && 0 == (clip[cX][cY - 1] & 0x40a40000)) {
-				Class251.bufferX[write] = currentX;
-				Class251.bufferY[write] = currentY - 1;
-				write = write + 1 & 0xfff;
-				Class251.directions[halfGraphSizeX][halfGraphSizeY - 1] = 1;
-				Class251.distances[halfGraphSizeX][halfGraphSizeY - 1] = nextDistance;
+
+			if (i_18 > 0 && Class251.directions[i_17][i_18 - 1] == 0 && (ints_13[i_14][i_15 - 1] & 0x40a40000) == 0) {
+				Class251.bufferX[i_19] = i_5;
+				Class251.bufferY[i_19] = i_6 - 1;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17][i_18 - 1] = 1;
+				Class251.distances[i_17][i_18 - 1] = i_16;
 			}
-			if (halfGraphSizeY < 127 && 0 == Class251.directions[halfGraphSizeX][halfGraphSizeY + 1] && (clip[cX][cY + 1] & 0x48240000) == 0) {
-				Class251.bufferX[write] = currentX;
-				Class251.bufferY[write] = currentY + 1;
-				write = write + 1 & 0xfff;
-				Class251.directions[halfGraphSizeX][1 + halfGraphSizeY] = 4;
-				Class251.distances[halfGraphSizeX][1 + halfGraphSizeY] = nextDistance;
+
+			if (i_18 < 127 && Class251.directions[i_17][i_18 + 1] == 0 && (ints_13[i_14][i_15 + 1] & 0x48240000) == 0) {
+				Class251.bufferX[i_19] = i_5;
+				Class251.bufferY[i_19] = i_6 + 1;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17][i_18 + 1] = 4;
+				Class251.distances[i_17][i_18 + 1] = i_16;
 			}
-			if (halfGraphSizeX > 0 && halfGraphSizeY > 0 && Class251.directions[halfGraphSizeX - 1][halfGraphSizeY - 1] == 0 && 0 == (clip[cX - 1][cY - 1] & 0x43a40000) && (clip[cX - 1][cY] & 0x42240000) == 0 && 0 == (clip[cX][cY - 1] & 0x40a40000)) {
-				Class251.bufferX[write] = currentX - 1;
-				Class251.bufferY[write] = currentY - 1;
-				write = 1 + write & 0xfff;
-				Class251.directions[halfGraphSizeX - 1][halfGraphSizeY - 1] = 3;
-				Class251.distances[halfGraphSizeX - 1][halfGraphSizeY - 1] = nextDistance;
+
+			if (i_17 > 0 && i_18 > 0 && Class251.directions[i_17 - 1][i_18 - 1] == 0 && (ints_13[i_14 - 1][i_15 - 1] & 0x43a40000) == 0 && (ints_13[i_14 - 1][i_15] & 0x42240000) == 0 && (ints_13[i_14][i_15 - 1] & 0x40a40000) == 0) {
+				Class251.bufferX[i_19] = i_5 - 1;
+				Class251.bufferY[i_19] = i_6 - 1;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17 - 1][i_18 - 1] = 3;
+				Class251.distances[i_17 - 1][i_18 - 1] = i_16;
 			}
-			if (halfGraphSizeX < 127 && halfGraphSizeY > 0 && 0 == Class251.directions[halfGraphSizeX + 1][halfGraphSizeY - 1] && (clip[1 + cX][cY - 1] & 0x60e40000) == 0 && 0 == (clip[1 + cX][cY] & 0x60240000) && (clip[cX][cY - 1] & 0x40a40000) == 0) {
-				Class251.bufferX[write] = currentX + 1;
-				Class251.bufferY[write] = currentY - 1;
-				write = write + 1 & 0xfff;
-				Class251.directions[1 + halfGraphSizeX][halfGraphSizeY - 1] = 9;
-				Class251.distances[1 + halfGraphSizeX][halfGraphSizeY - 1] = nextDistance;
+
+			if (i_17 < 127 && i_18 > 0 && Class251.directions[i_17 + 1][i_18 - 1] == 0 && (ints_13[i_14 + 1][i_15 - 1] & 0x60e40000) == 0 && (ints_13[i_14 + 1][i_15] & 0x60240000) == 0 && (ints_13[i_14][i_15 - 1] & 0x40a40000) == 0) {
+				Class251.bufferX[i_19] = i_5 + 1;
+				Class251.bufferY[i_19] = i_6 - 1;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17 + 1][i_18 - 1] = 9;
+				Class251.distances[i_17 + 1][i_18 - 1] = i_16;
 			}
-			if (halfGraphSizeX > 0 && halfGraphSizeY < 127 && Class251.directions[halfGraphSizeX - 1][1 + halfGraphSizeY] == 0 && 0 == (clip[cX - 1][1 + cY] & 0x4e240000) && (clip[cX - 1][cY] & 0x42240000) == 0 && 0 == (clip[cX][1 + cY] & 0x48240000)) {
-				Class251.bufferX[write] = currentX - 1;
-				Class251.bufferY[write] = currentY + 1;
-				write = write + 1 & 0xfff;
-				Class251.directions[halfGraphSizeX - 1][halfGraphSizeY + 1] = 6;
-				Class251.distances[halfGraphSizeX - 1][1 + halfGraphSizeY] = nextDistance;
+
+			if (i_17 > 0 && i_18 < 127 && Class251.directions[i_17 - 1][i_18 + 1] == 0 && (ints_13[i_14 - 1][i_15 + 1] & 0x4e240000) == 0 && (ints_13[i_14 - 1][i_15] & 0x42240000) == 0 && (ints_13[i_14][i_15 + 1] & 0x48240000) == 0) {
+				Class251.bufferX[i_19] = i_5 - 1;
+				Class251.bufferY[i_19] = i_6 + 1;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17 - 1][i_18 + 1] = 6;
+				Class251.distances[i_17 - 1][i_18 + 1] = i_16;
 			}
-			if (halfGraphSizeX < 127 && halfGraphSizeY < 127 && 0 == Class251.directions[1 + halfGraphSizeX][1 + halfGraphSizeY] && (clip[cX + 1][1 + cY] & 0x78240000) == 0 && (clip[1 + cX][cY] & 0x60240000) == 0 && (clip[cX][1 + cY] & 0x48240000) == 0) {
-				Class251.bufferX[write] = 1 + currentX;
-				Class251.bufferY[write] = 1 + currentY;
-				write = write + 1 & 0xfff;
-				Class251.directions[1 + halfGraphSizeX][1 + halfGraphSizeY] = 12;
-				Class251.distances[halfGraphSizeX + 1][1 + halfGraphSizeY] = nextDistance;
+
+			if (i_17 < 127 && i_18 < 127 && Class251.directions[i_17 + 1][i_18 + 1] == 0 && (ints_13[i_14 + 1][i_15 + 1] & 0x78240000) == 0 && (ints_13[i_14 + 1][i_15] & 0x60240000) == 0 && (ints_13[i_14][i_15 + 1] & 0x48240000) == 0) {
+				Class251.bufferX[i_19] = i_5 + 1;
+				Class251.bufferY[i_19] = i_6 + 1;
+				i_19 = i_19 + 1 & 0xfff;
+				Class251.directions[i_17 + 1][i_18 + 1] = 12;
+				Class251.distances[i_17 + 1][i_18 + 1] = i_16;
 			}
 		}
-		Class251.exitX = currentX * -1071145131;
-		Class251.exitY = currentY * -1330567915;
+
+		Class251.exitX = i_5;
+		Class251.exitY = i_6;
 		return false;
 	}
 
-	static final void method14655(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class115.anInt1247 * 842593263;
+	static final void method14655(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class115.anInt1247;
 	}
 
-	public static void method14656(int i, int i_13_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(20, (long) i);
-		class282_sub50_sub12.method14965((byte) 40);
+	public static void method14656(int i_0, int i_1) {
+		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(20, (long) i_0);
+		class282_sub50_sub12_2.method14965((byte) 40);
 	}
+
 }

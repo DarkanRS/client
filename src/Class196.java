@@ -1,8 +1,5 @@
-/* Class196 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class196 {
+
 	short[] aShortArray2413;
 	byte aByte2414;
 	short aShort2415;
@@ -15,7 +12,4 @@ public class Class196 {
 	short[] aShortArray2422;
 	int[] anIntArray2423;
 
-	Class196() {
-		/* empty */
-	}
 }

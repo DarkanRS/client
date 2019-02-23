@@ -1,8 +1,5 @@
-/* Class173 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class173 {
+
 	public byte aByte2126;
 	public String aString2127;
 	String aString2128;
@@ -10,23 +7,20 @@ public class Class173 {
 	public String aString2130;
 	public int anInt2131;
 
-	Class173() {
-		/* empty */
+	public static void method2943(Index index_0, Interface22 interface22_1, int i_2) {
+		Class282_Sub50_Sub11_Sub1.aClass317_10379 = index_0;
+		Class247.anInterface22_3046 = interface22_1;
 	}
 
-	public static void method2943(Index class317, Interface22 interface22, int i) {
-		Class282_Sub50_Sub11_Sub1.aClass317_10379 = class317;
-		Class247.anInterface22_3046 = interface22;
-	}
-
-	static void method2944(int i) {
+	static void method2944(int i_0) {
 		Class179.aBool2229 = false;
 		IncomingPacket.method6378(-1538407760);
 	}
 
-	static final void method2945(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_0_, (byte) 124);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1385 * -1627383873;
+	static final void method2945(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 124);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1385;
 	}
+
 }

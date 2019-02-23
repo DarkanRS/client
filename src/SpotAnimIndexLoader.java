@@ -1,186 +1,214 @@
-
-/* Class515 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Font;
 
 public class SpotAnimIndexLoader {
+
+	static Font aFont5893;
+	SoftCache aClass229_5891 = new SoftCache(64);
+	SoftCache aClass229_5890 = new SoftCache(60);
 	Index aClass317_5888;
 	Index aClass317_5889;
-	SoftCache aClass229_5890;
-	SoftCache aClass229_5891 = new SoftCache(64);
 	int anInt5892;
-	static Font aFont5893;
 
-	public SpotAnimIndexLoader(Game class486, XLanguage class495, Index class317, Index class317_0_) {
-		((SpotAnimIndexLoader) this).aClass229_5890 = new SoftCache(60);
-		((SpotAnimIndexLoader) this).aClass317_5888 = class317;
-		((SpotAnimIndexLoader) this).aClass317_5889 = class317_0_;
-		int i = ((SpotAnimIndexLoader) this).aClass317_5888.containersCount() - 1;
+	public SpotAnimIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+		this.aClass317_5888 = index_3;
+		this.aClass317_5889 = index_4;
+		int i_5 = this.aClass317_5888.containersCount() - 1;
 		SharedConfigsType.SPOT_ANIMS.filesPerContainer(-397238873);
-		((SpotAnimIndexLoader) this).aClass317_5888.filesCount(i);
+		this.aClass317_5888.filesCount(i_5);
 	}
 
-	public SpotAnimDefinitions getSpotAnimDefs(int spotAnimId, byte i_1_) {
-		SpotAnimDefinitions class525;
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
-			class525 = ((SpotAnimDefinitions) ((SpotAnimIndexLoader) this).aClass229_5891.get((long) spotAnimId));
+	public SpotAnimDefinitions getSpotAnimDefs(int i_1, byte b_2) {
+		SoftCache softcache_4 = this.aClass229_5891;
+		SpotAnimDefinitions spotanimdefinitions_3;
+		synchronized (this.aClass229_5891) {
+			spotanimdefinitions_3 = (SpotAnimDefinitions) this.aClass229_5891.get((long) i_1);
 		}
-		if (null != class525)
-			return class525;
-		byte[] is;
-		synchronized (((SpotAnimIndexLoader) this).aClass317_5888) {
-			is = (((SpotAnimIndexLoader) this).aClass317_5888.getFile(SharedConfigsType.SPOT_ANIMS.containerId(spotAnimId), SharedConfigsType.SPOT_ANIMS.fileId(spotAnimId)));
-		}
-		class525 = new SpotAnimDefinitions();
-		((SpotAnimDefinitions) class525).aClass515_6973 = this;
-		((SpotAnimDefinitions) class525).anInt6969 = -195085151 * spotAnimId;
-		if (null != is)
-			class525.method11226(new RsByteBuffer(is), 91916290);
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
-			((SpotAnimIndexLoader) this).aClass229_5891.put(class525, (long) spotAnimId);
-		}
-		return class525;
-	}
 
-	public void method8846(int i, byte i_2_) {
-		((SpotAnimIndexLoader) this).anInt5892 = 2093543805 * i;
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
-			((SpotAnimIndexLoader) this).aClass229_5890.method3859(1433473768);
-		}
-	}
+		if (spotanimdefinitions_3 != null) {
+			return spotanimdefinitions_3;
+		} else {
+			Index index_5 = this.aClass317_5888;
+			byte[] bytes_10;
+			synchronized (this.aClass317_5888) {
+				bytes_10 = this.aClass317_5888.getFile(SharedConfigsType.SPOT_ANIMS.containerId(i_1), SharedConfigsType.SPOT_ANIMS.fileId(i_1));
+			}
 
-	public void method8847(int i, int i_3_) {
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
-			((SpotAnimIndexLoader) this).aClass229_5891.method3858(i, (byte) 28);
-		}
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
-			((SpotAnimIndexLoader) this).aClass229_5890.method3858(i, (byte) 23);
-		}
-	}
+			spotanimdefinitions_3 = new SpotAnimDefinitions();
+			spotanimdefinitions_3.aClass515_6973 = this;
+			spotanimdefinitions_3.anInt6969 = i_1;
+			if (bytes_10 != null) {
+				spotanimdefinitions_3.method11226(new RsByteBuffer(bytes_10), 91916290);
+			}
 
-	public void method8848(int i) {
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
-			((SpotAnimIndexLoader) this).aClass229_5891.method3859(128096981);
-		}
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
-			((SpotAnimIndexLoader) this).aClass229_5890.method3859(-1366287850);
-		}
-	}
-
-	public void method8849(short i) {
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5891) {
-			((SpotAnimIndexLoader) this).aClass229_5891.method3863(1832676736);
-		}
-		synchronized (((SpotAnimIndexLoader) this).aClass229_5890) {
-			((SpotAnimIndexLoader) this).aClass229_5890.method3863(1443039032);
-		}
-	}
-
-	public static NativeSprite method8858(GraphicalRenderer class505, int i, int i_4_) {
-		Class282_Sub37 class282_sub37 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i);
-		if (null != class282_sub37) {
-			Class282_Sub41_Sub3 class282_sub41_sub3 = ((Class282_Sub37) class282_sub37).aClass278_Sub1_8001.method4918(1179079332);
-			((Class282_Sub37) class282_sub37).aBool7996 = true;
-			if (null != class282_sub41_sub3) {
-				((Class502) Class492.aClass502_5776).aClass505_5829 = class505;
-				return ((NativeSprite) class282_sub41_sub3.method14795((Class492.aClass502_5776), -1234291023));
+			SoftCache softcache_9 = this.aClass229_5891;
+			synchronized (this.aClass229_5891) {
+				this.aClass229_5891.put(spotanimdefinitions_3, (long) i_1);
+				return spotanimdefinitions_3;
 			}
 		}
+	}
+
+	public void method8846(int i_1, byte b_2) {
+		this.anInt5892 = i_1;
+		SoftCache softcache_3 = this.aClass229_5890;
+		synchronized (this.aClass229_5890) {
+			this.aClass229_5890.method3859(1433473768);
+		}
+	}
+
+	public void method8847(int i_1, int i_2) {
+		SoftCache softcache_3 = this.aClass229_5891;
+		synchronized (this.aClass229_5891) {
+			this.aClass229_5891.method3858(i_1, (byte) 28);
+		}
+
+		softcache_3 = this.aClass229_5890;
+		synchronized (this.aClass229_5890) {
+			this.aClass229_5890.method3858(i_1, (byte) 23);
+		}
+	}
+
+	public void method8848(int i_1) {
+		SoftCache softcache_2 = this.aClass229_5891;
+		synchronized (this.aClass229_5891) {
+			this.aClass229_5891.method3859(128096981);
+		}
+
+		softcache_2 = this.aClass229_5890;
+		synchronized (this.aClass229_5890) {
+			this.aClass229_5890.method3859(-1366287850);
+		}
+	}
+
+	public void method8849(short s_1) {
+		SoftCache softcache_2 = this.aClass229_5891;
+		synchronized (this.aClass229_5891) {
+			this.aClass229_5891.method3863(1832676736);
+		}
+
+		softcache_2 = this.aClass229_5890;
+		synchronized (this.aClass229_5890) {
+			this.aClass229_5890.method3863(1443039032);
+		}
+	}
+
+	public static NativeSprite method8858(GraphicalRenderer graphicalrenderer_0, int i_1, int i_2) {
+		Class282_Sub37 class282_sub37_3 = (Class282_Sub37) Class492.aClass465_5774.method7754((long) i_1);
+		if (class282_sub37_3 != null) {
+			Class282_Sub41_Sub3 class282_sub41_sub3_4 = class282_sub37_3.aClass278_Sub1_8001.method4918(1179079332);
+			class282_sub37_3.aBool7996 = true;
+			if (class282_sub41_sub3_4 != null) {
+				Class492.aClass502_5776.aClass505_5829 = graphicalrenderer_0;
+				return (NativeSprite) class282_sub41_sub3_4.method14795(Class492.aClass502_5776, -1234291023);
+			}
+		}
+
 		return null;
 	}
 
-	static final void method8859(CS2Executor class527, byte i) {
-		UnderlayDefinition class513;
-		if (class527.aBool7022) {
-			if (i == 1)
-				return;
-			class513 = class527.aClass513_6994;
-		} else
-			class513 = class527.aClass513_7007;
-		UnderlayDefinition class513_5_ = class513;
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513_5_).aClass118_5886;
-		Class235.method3965(class118, class527, -757819357);
+	static final void method8859(CS2Executor cs2executor_0, byte b_1) {
+		UnderlayDefinition underlaydefinition_2;
+		if (cs2executor_0.aBool7022) {
+			underlaydefinition_2 = cs2executor_0.aClass513_6994;
+		} else {
+			underlaydefinition_2 = cs2executor_0.aClass513_7007;
+		}
+
+		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
+		Class235.method3965(icomponentdefinitions_4, cs2executor_0, -757819357);
 	}
 
-	public static final void method8860(byte i) {
-		if (-1384937123 * client.anInt7277 != -1 && -1 != -74015201 * client.anInt7448) {
-			int i_6_ = (-768126693 * client.anInt7327 + (((1448302961 * client.anInt7182 - -768126693 * client.anInt7327) * (client.anInt7256 * -1409864719)) >> 16));
-			client.anInt7256 += 1413506321 * i_6_;
-			if (client.anInt7256 * -1409864719 >= 65535) {
-				client.anInt7256 = 282106607;
-				if (!client.aBool7285)
+	public static final void method8860(byte b_0) {
+		if (client.anInt7277 != -1 && client.anInt7448 != -1) {
+			int i_1 = ((client.anInt7182 - client.anInt7327) * client.anInt7256 >> 16) + client.anInt7327;
+			client.anInt7256 += i_1;
+			if (client.anInt7256 >= 65535) {
+				client.anInt7256 = 65535;
+				if (!client.aBool7285) {
 					client.aBool7355 = true;
-				else
+				} else {
 					client.aBool7355 = false;
+				}
+
 				client.aBool7285 = true;
 			} else {
 				client.aBool7355 = false;
 				client.aBool7285 = false;
 			}
-			float f = (float) (-1409864719 * client.anInt7256) / 65535.0F;
-			float[] fs = new float[3];
-			int i_7_ = client.anInt7279 * 2021580430;
-			for (int i_8_ = 0; i_8_ < 3; i_8_++) {
-				int i_9_ = 3 * (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_][i_8_]);
-				int i_10_ = 3 * (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][1 + i_7_][i_8_]);
-				int i_11_ = (((client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][2 + i_7_][i_8_]) - ((client.anIntArrayArrayArray7302[-1384937123 * client.anInt7277][i_7_ + 3][i_8_]) - (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][2 + i_7_][i_8_]))) * 3);
-				int i_12_ = (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_][i_8_]);
-				int i_13_ = i_10_ - i_9_;
-				int i_14_ = i_9_ - 2 * i_10_ + i_11_;
-				int i_15_ = i_10_ + ((client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_ + 2][i_8_]) - i_12_) - i_11_;
-				fs[i_8_] = (float) i_12_ + (((float) i_15_ * f + (float) i_14_) * f + (float) i_13_) * f;
+
+			float f_2 = (float) client.anInt7256 / 65535.0F;
+			float[] floats_3 = new float[3];
+			int i_4 = client.anInt7279 * 2;
+
+			int i_7;
+			int i_8;
+			int i_9;
+			int i_10;
+			int i_12;
+			int i_18;
+			for (int i_5 = 0; i_5 < 3; i_5++) {
+				int i_17 = client.anIntArrayArrayArray7302[client.anInt7277][i_4][i_5] * 3;
+				i_7 = client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 1][i_5] * 3;
+				i_8 = (client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 2][i_5] - (client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 3][i_5] - client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 2][i_5])) * 3;
+				i_9 = client.anIntArrayArrayArray7302[client.anInt7277][i_4][i_5];
+				i_10 = i_7 - i_17;
+				i_18 = i_17 - i_7 * 2 + i_8;
+				i_12 = client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 2][i_5] - i_9 + i_7 - i_8;
+				floats_3[i_5] = (float) i_9 + (((float) i_12 * f_2 + (float) i_18) * f_2 + (float) i_10) * f_2;
 			}
-			CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1394522751);
-			Class31.anInt361 = ((int) fs[0] - 991427072 * class219.x) * -2043310439;
-			Class109_Sub1.anInt9384 = 126779709 * (int) fs[1];
-			Class246.anInt3029 = (((int) fs[2] - class219.y * -2045780480) * 1442943697);
-			float[] fs_16_ = new float[3];
-			int i_17_ = client.anInt7280 * 1277820518;
-			for (int i_18_ = 0; i_18_ < 3; i_18_++) {
-				int i_19_ = 3 * (client.anIntArrayArrayArray7302[client.anInt7448 * -74015201][i_17_][i_18_]);
-				int i_20_ = 3 * (client.anIntArrayArrayArray7302[-74015201 * client.anInt7448][i_17_ + 1][i_18_]);
-				int i_21_ = (((client.anIntArrayArrayArray7302[client.anInt7448 * -74015201][2 + i_17_][i_18_]) - ((client.anIntArrayArrayArray7302[client.anInt7448 * -74015201][i_17_ + 3][i_18_]) - (client.anIntArrayArrayArray7302[-74015201 * client.anInt7448][i_17_ + 2][i_18_]))) * 3);
-				int i_22_ = (client.anIntArrayArrayArray7302[-74015201 * client.anInt7448][i_17_][i_18_]);
-				int i_23_ = i_20_ - i_19_;
-				int i_24_ = i_19_ - 2 * i_20_ + i_21_;
-				int i_25_ = ((client.anIntArrayArrayArray7302[client.anInt7448 * -74015201][2 + i_17_][i_18_]) - i_22_ + i_20_ - i_21_);
-				fs_16_[i_18_] = f * (((float) i_24_ + f * (float) i_25_) * f + (float) i_23_) + (float) i_22_;
+
+			CoordGrid coordgrid_16 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1394522751);
+			Class31.anInt361 = (int) floats_3[0] - coordgrid_16.x * 512;
+			Class109_Sub1.anInt9384 = (int) floats_3[1] * -1;
+			Class246.anInt3029 = (int) floats_3[2] - coordgrid_16.y * 512;
+			float[] floats_6 = new float[3];
+			i_7 = client.anInt7280 * 2;
+
+			for (i_8 = 0; i_8 < 3; i_8++) {
+				i_9 = client.anIntArrayArrayArray7302[client.anInt7448][i_7][i_8] * 3;
+				i_10 = client.anIntArrayArrayArray7302[client.anInt7448][i_7 + 1][i_8] * 3;
+				i_18 = (client.anIntArrayArrayArray7302[client.anInt7448][i_7 + 2][i_8] - (client.anIntArrayArrayArray7302[client.anInt7448][i_7 + 3][i_8] - client.anIntArrayArrayArray7302[client.anInt7448][i_7 + 2][i_8])) * 3;
+				i_12 = client.anIntArrayArrayArray7302[client.anInt7448][i_7][i_8];
+				int i_13 = i_10 - i_9;
+				int i_14 = i_9 - i_10 * 2 + i_18;
+				int i_15 = i_10 + (client.anIntArrayArrayArray7302[client.anInt7448][i_7 + 2][i_8] - i_12) - i_18;
+				floats_6[i_8] = f_2 * (((float) i_14 + f_2 * (float) i_15) * f_2 + (float) i_13) + (float) i_12;
 			}
-			float f_26_ = fs_16_[0] - fs[0];
-			float f_27_ = -1.0F * (fs_16_[1] - fs[1]);
-			float f_28_ = fs_16_[2] - fs[2];
-			double d = Math.sqrt((double) (f_28_ * f_28_ + f_26_ * f_26_));
-			Class293.anInt3512 = ((int) (Math.atan2((double) f_27_, d) * 2607.5945876176133) & 0x3fff) * -647467135;
-			AnimationDefinitions.anInt5930 = ((int) (-Math.atan2((double) f_26_, (double) f_28_) * 2607.5945876176133) & 0x3fff) * 1898253385;
-			Class121.anInt1525 = (((-1409864719 * client.anInt7256 * ((client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_ + 2][3]) - (client.anIntArrayArrayArray7302[-1384937123 * client.anInt7277][i_7_][3]))) >> 16) + (client.anIntArrayArrayArray7302[client.anInt7277 * -1384937123][i_7_][3])) * -833027875;
+
+			float f_19 = floats_6[0] - floats_3[0];
+			float f_20 = -1.0F * (floats_6[1] - floats_3[1]);
+			float f_21 = floats_6[2] - floats_3[2];
+			double d_11 = Math.sqrt((double) (f_21 * f_21 + f_19 * f_19));
+			Class293.anInt3512 = (int) (Math.atan2((double) f_20, d_11) * 2607.5945876176133D) & 0x3fff;
+			AnimationDefinitions.anInt5930 = (int) (-Math.atan2((double) f_19, (double) f_21) * 2607.5945876176133D) & 0x3fff;
+			Class121.anInt1525 = ((client.anIntArrayArrayArray7302[client.anInt7277][i_4 + 2][3] - client.anIntArrayArrayArray7302[client.anInt7277][i_4][3]) * client.anInt7256 >> 16) + client.anIntArrayArrayArray7302[client.anInt7277][i_4][3];
 		}
+
 	}
 
-	public static int method8861(int i, int i_29_, boolean bool, int i_30_) {
-		Class282_Sub30 class282_sub30 = CS2Runner.method11127(i, bool, 1815831231);
-		if (null == class282_sub30)
-			return -1;
-		if (i_29_ < 0 || i_29_ >= (((Class282_Sub30) class282_sub30).anIntArray7710).length)
-			return -1;
-		return ((Class282_Sub30) class282_sub30).anIntArray7710[i_29_];
+	public static int method8861(int i_0, int i_1, boolean bool_2, int i_3) {
+		Class282_Sub30 class282_sub30_4 = CS2Runner.method11127(i_0, bool_2, 1815831231);
+		return class282_sub30_4 == null ? -1 : (i_1 >= 0 && i_1 < class282_sub30_4.anIntArray7710.length ? class282_sub30_4.anIntArray7710[i_1] : -1);
 	}
 
-	public static void method8862(int i, int i_31_, int i_32_, boolean bool, int i_33_) {
+	public static void method8862(int i_0, int i_1, int i_2, boolean bool_3, int i_4) {
 		if (Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(1767720477) != 0) {
-			Class291_Sub1.anInt8021 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-124335836) * 923733999;
+			Class291_Sub1.anInt8021 = Class393.aClass282_Sub54_4783.aClass468_Sub18_8230.method12776(-124335836);
 			Class538.method11500(0, true, (byte) 24);
-		} else
+		} else {
 			Class122.method2111(false, 662490589);
-		Class291_Sub1.anInt8019 = 776800459 * i_31_;
-		Class291_Sub1.anInt8020 = i_32_ * 611890095;
-		Class291_Sub1.aBool8028 = bool;
-		Class291_Sub1.method5128(i);
+		}
+
+		Class291_Sub1.anInt8019 = i_1;
+		Class291_Sub1.anInt8020 = i_2;
+		Class291_Sub1.aBool8028 = bool_3;
+		Class291_Sub1.method5128(i_0);
 	}
 
-	static final void method8863(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1299 * 597157617;
+	static final void method8863(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1299;
 	}
+
 }

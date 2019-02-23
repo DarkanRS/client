@@ -1,11 +1,8 @@
-/* Class282_Sub22 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class Class282_Sub22 extends Node {
+
 	int anInt7676;
 
-	abstract int method12354(Class282_Sub15_Sub4 class282_sub15_sub4);
+	abstract int method12354(Class282_Sub15_Sub4 var1);
 
 	abstract void method12355();
 
@@ -17,5 +14,6 @@ public abstract class Class282_Sub22 extends Node {
 
 	abstract void method12357();
 
-	abstract int method12358(Class282_Sub15_Sub4 class282_sub15_sub4);
+	abstract int method12358(Class282_Sub15_Sub4 var1);
+
 }

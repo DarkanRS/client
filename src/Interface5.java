@@ -1,25 +1,23 @@
-/* Interface5 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface5 {
-	public boolean method35(int i, int i_0_, long l);
 
-	public int method36();
+	boolean method35(int var1, int var2, long var3);
 
-	public long method37(int i, int i_1_);
+	int method36();
 
-	public void method38();
+	long method37(int var1, int var2);
 
-	public int method39();
+	void method38();
 
-	public long method40(int i, int i_2_);
+	int method39();
 
-	public long method41(int i, int i_3_);
+	long method40(int var1, int var2);
 
-	public boolean method42(int i, int i_4_, long l);
+	long method41(int var1, int var2);
 
-	public void method43();
+	boolean method42(int var1, int var2, long var3);
 
-	public void method44();
+	void method43();
+
+	void method44();
+
 }

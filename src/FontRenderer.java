@@ -1,484 +1,582 @@
-
-/* Class8 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Canvas;
 import java.awt.Component;
 import java.util.Random;
 
 public abstract class FontRenderer {
-	static int anInt57;
-	FontMetrics fontMetrics;
-	GraphicalRenderer renderer;
-	static int anInt61 = 1633983007;
-	static int anInt62 = 1566690511;
+
+	static int anInt61 = -1;
+	static int anInt62 = -1;
 	static int anInt63 = 0;
 	static int anInt64 = 0;
 	static int anInt65 = 0;
-	static int anInt67;
-	static int anInt68;
-	static String[] aStringArray69;
+	static int anInt57 = 0;
+	static int anInt67 = 0;
+	static int anInt68 = 0;
+	static String[] aStringArray69 = new String[100];
+	GraphicalRenderer renderer;
+	FontMetrics fontMetrics;
 
-	public void renderText(String string, int i, int i_6_, int i_7_, int i_8_, int i_9_) {
-		if (string != null) {
-			method365(i_7_, i_8_, -52680990);
-			method371(string, i, i_6_, null, null, null, 0, 0, (byte) 3);
+	public void renderText(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+		if (string_1 != null) {
+			this.method365(i_4, i_5, -52680990);
+			this.method371(string_1, i_2, i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 3);
 		}
+
 	}
 
-	public void method359(String string, int i, int i_10_, int i_11_, int i_12_, int i_13_) {
-		if (null != string) {
-			method365(i_11_, i_12_, 248909725);
-			method371(string, i - ((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701), i_10_, null, null, null, 0, 0, (byte) 3);
+	public void method359(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+		if (string_1 != null) {
+			this.method365(i_4, i_5, 248909725);
+			this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1, -1967833701), i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 3);
 		}
+
 	}
 
-	public void method360(String string, int i, int i_14_, int i_15_, int i_16_, int i_17_) {
-		if (string != null) {
-			method365(i_15_, i_16_, 289850430);
-			method371(string, i - (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) / 2), i_14_, null, null, null, 0, 0, (byte) 3);
+	public void method360(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+		if (string_1 != null) {
+			this.method365(i_4, i_5, 289850430);
+			this.method371(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1, -1967833701) / 2, i_3, (NativeSprite[]) null, (int[]) null, (Class455) null, 0, 0, (byte) 3);
 		}
+
 	}
 
-	abstract void method362(char c, int i, int i_34_, int i_35_, boolean bool, Class455 class455, int i_36_, int i_37_);
-	
-	void method365(int i, int i_56_, int i_57_) {
-		anInt61 = 1633983007;
-		anInt62 = 1566690511;
-		anInt64 = (anInt63 = -532119615 * i) * 1595129311;
+	abstract void method362(char var1, int var2, int var3, int var4, boolean var5, Class455 var6, int var7, int var8);
+
+	void method365(int i_1, int i_2, int i_3) {
+		anInt61 = -1;
+		anInt62 = -1;
+		anInt63 = i_1;
+		anInt64 = i_1;
 		anInt67 = 0;
 		anInt68 = 0;
-		if (i_56_ == -1)
-			i_56_ = 0;
-		anInt57 = (anInt65 = i_56_ * -335287863) * 1432053993;
+		if (i_2 == -1) {
+			i_2 = 0;
+		}
+
+		anInt65 = i_2;
+		anInt57 = i_2;
 	}
 
-	public int method367(String string, int i, int i_59_, int i_60_, int i_61_, int i_62_, int i_63_, int i_64_, int i_65_, Random random, int i_66_, int[] is, NativeSprite[] class160s, int[] is_67_, int i_68_) {
-		if (string == null)
+	public int method367(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, Random random_10, int i_11, int[] ints_12, NativeSprite[] arr_13, int[] ints_14, int i_15) {
+		if (string_1 == null) {
 			return 0;
-		random.setSeed((long) i_66_);
-		int i_69_ = 192 + (random.nextInt() & 0x1f);
-		method365(i_69_ << 24 | i_62_ & 0xffffff, -1 == i_63_ ? 0 : i_69_ << 24 | i_63_ & 0xffffff, 1360524651);
-		int i_70_ = string.length();
-		int[] is_71_ = new int[i_70_];
-		int i_72_ = 0;
-		for (int i_73_ = 0; i_73_ < i_70_; i_73_++) {
-			is_71_[i_73_] = i_72_;
-			if ((random.nextInt() & 0x3) == 0)
-				i_72_++;
-		}
-		int i_74_ = i;
-		int i_75_ = ((FontRenderer) this).fontMetrics.anInt4978 * 397683159 + i_59_;
-		int i_76_ = -1;
-		if (i_65_ == 1)
-			i_75_ += ((i_61_ - 397683159 * ((FontRenderer) this).fontMetrics.anInt4978 - ((FontRenderer) this).fontMetrics.anInt4979 * -1518951631) / 2);
-		else if (2 == i_65_)
-			i_75_ = (i_61_ + i_59_ - -1518951631 * ((FontRenderer) this).fontMetrics.anInt4979);
-		if (i_64_ == 1) {
-			i_76_ = (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) + i_72_);
-			i_74_ += (i_60_ - i_76_) / 2;
-		} else if (2 == i_64_) {
-			i_76_ = (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) + i_72_);
-			i_74_ += i_60_ - i_76_;
-		}
-		method372(string, i_74_, i_75_, class160s, is_67_, is_71_, null, 1660900204);
-		if (is != null) {
-			if (-1 == i_76_)
-				i_76_ = (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) + i_72_);
-			is[0] = i_74_;
-			is[1] = i_75_ - ((FontRenderer) this).fontMetrics.anInt4978 * 397683159;
-			is[2] = i_76_;
-			is[3] = (-1518951631 * ((FontRenderer) this).fontMetrics.anInt4979 + 397683159 * ((FontRenderer) this).fontMetrics.anInt4978);
-		}
-		return i_72_;
-	}
+		} else {
+			random_10.setSeed((long) i_11);
+			int i_16 = 192 + (random_10.nextInt() & 0x1f);
+			this.method365(i_16 << 24 | i_6 & 0xffffff, i_7 == -1 ? 0 : i_16 << 24 | i_7 & 0xffffff, 1360524651);
+			int i_17 = string_1.length();
+			int[] ints_18 = new int[i_17];
+			int i_19 = 0;
 
-	public void method368(String string, int i, int i_77_, int i_78_, int i_79_, int i_80_, byte i_81_) {
-		if (string != null) {
-			method365(i_78_, i_79_, 1182633518);
-			int i_82_ = string.length();
-			int[] is = new int[i_82_];
-			int[] is_83_ = new int[i_82_];
-			for (int i_84_ = 0; i_84_ < i_82_; i_84_++) {
-				is[i_84_] = (int) (Math.sin((double) i_80_ / 5.0 + (double) i_84_ / 5.0) * 5.0);
-				is_83_[i_84_] = (int) (Math.sin((double) i_80_ / 5.0 + (double) i_84_ / 3.0) * 5.0);
+			int i_20;
+			for (i_20 = 0; i_20 < i_17; i_20++) {
+				ints_18[i_20] = i_19;
+				if ((random_10.nextInt() & 0x3) == 0) {
+					++i_19;
+				}
 			}
-			method372(string, i - (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) / 2), i_77_, null, null, is, is_83_, 1888974579);
+
+			i_20 = i_2;
+			int i_21 = i_3 + this.fontMetrics.anInt4978;
+			int i_22 = -1;
+			if (i_9 == 1) {
+				i_21 += (i_5 - this.fontMetrics.anInt4978 - this.fontMetrics.anInt4979) / 2;
+			} else if (i_9 == 2) {
+				i_21 = i_3 + i_5 - this.fontMetrics.anInt4979;
+			}
+
+			if (i_8 == 1) {
+				i_22 = this.fontMetrics.getWidthNoSprites(string_1, -1967833701) + i_19;
+				i_20 = (i_4 - i_22) / 2 + i_2;
+			} else if (i_8 == 2) {
+				i_22 = this.fontMetrics.getWidthNoSprites(string_1, -1967833701) + i_19;
+				i_20 = i_2 + (i_4 - i_22);
+			}
+
+			this.method372(string_1, i_20, i_21, arr_13, ints_14, ints_18, (int[]) null, 1660900204);
+			if (ints_12 != null) {
+				if (i_22 == -1) {
+					i_22 = this.fontMetrics.getWidthNoSprites(string_1, -1967833701) + i_19;
+				}
+
+				ints_12[0] = i_20;
+				ints_12[1] = i_21 - this.fontMetrics.anInt4978;
+				ints_12[2] = i_22;
+				ints_12[3] = this.fontMetrics.anInt4979 + this.fontMetrics.anInt4978;
+			}
+
+			return i_19;
 		}
 	}
 
-	void method369(String string, byte i) {
+	public void method368(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte b_7) {
+		if (string_1 != null) {
+			this.method365(i_4, i_5, 1182633518);
+			int i_8 = string_1.length();
+			int[] ints_9 = new int[i_8];
+			int[] ints_10 = new int[i_8];
+
+			for (int i_11 = 0; i_11 < i_8; i_11++) {
+				ints_9[i_11] = (int) (Math.sin((double) i_6 / 5.0D + (double) i_11 / 5.0D) * 5.0D);
+				ints_10[i_11] = (int) (Math.sin((double) i_6 / 5.0D + (double) i_11 / 3.0D) * 5.0D);
+			}
+
+			this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1, -1967833701) / 2, i_3, (NativeSprite[]) null, (int[]) null, ints_9, ints_10, 1888974579);
+		}
+
+	}
+
+	void method369(String string_1, byte b_2) {
 		try {
-			if (string.startsWith("col="))
-				anInt64 = (anInt64 * 256259551 & ~0xffffff | Class285.method5026(string.substring(4), 16, (byte) 40) & 0xffffff) * -3422689;
-			else if (string.equals("/col"))
-				anInt64 = (256259551 * anInt64 & ~0xffffff | -461664191 * anInt63 & 0xffffff) * -3422689;
-			if (string.startsWith("argb="))
-				anInt64 = Class285.method5026(string.substring(5), 16, (byte) -59) * -3422689;
-			else if (string.equals("/argb"))
-				anInt64 = anInt63 * 1595129311;
-			else if (string.startsWith("str="))
-				anInt61 = (anInt64 * 256259551 & ~0xffffff | Class285.method5026(string.substring(4), 16, (byte) 1)) * -1633983007;
-			else if (string.equals("str"))
-				anInt61 = -1633983007 * (256259551 * anInt64 & ~0xffffff | 0x800000);
-			else if (string.equals("/str"))
-				anInt61 = 1633983007;
-			else if (string.startsWith("u="))
-				anInt62 = (256259551 * anInt64 & ~0xffffff | Class285.method5026(string.substring(2), 16, (byte) 7)) * -1566690511;
-			else if (string.equals("u"))
-				anInt62 = (anInt64 * 256259551 & ~0xffffff) * -1566690511;
-			else if (string.equals("/u"))
-				anInt62 = 1566690511;
-			else if (string.equalsIgnoreCase("shad=-1"))
+			if (string_1.startsWith("col=")) {
+				anInt64 = anInt64 & ~0xffffff | Class285.method5026(string_1.substring(4), 16, (byte) 40) & 0xffffff;
+			} else if (string_1.equals("/col")) {
+				anInt64 = anInt64 & ~0xffffff | anInt63 & 0xffffff;
+			}
+
+			if (string_1.startsWith("argb=")) {
+				anInt64 = Class285.method5026(string_1.substring(5), 16, (byte) -59);
+			} else if (string_1.equals("/argb")) {
+				anInt64 = anInt63;
+			} else if (string_1.startsWith("str=")) {
+				anInt61 = anInt64 & ~0xffffff | Class285.method5026(string_1.substring(4), 16, (byte) 1);
+			} else if (string_1.equals("str")) {
+				anInt61 = anInt64 & ~0xffffff | 0x800000;
+			} else if (string_1.equals("/str")) {
+				anInt61 = -1;
+			} else if (string_1.startsWith("u=")) {
+				anInt62 = anInt64 & ~0xffffff | Class285.method5026(string_1.substring(2), 16, (byte) 7);
+			} else if (string_1.equals("u")) {
+				anInt62 = anInt64 & ~0xffffff;
+			} else if (string_1.equals("/u")) {
+				anInt62 = -1;
+			} else if (string_1.equalsIgnoreCase("shad=-1")) {
 				anInt57 = 0;
-			else if (string.startsWith("shad="))
-				anInt57 = (anInt64 * 256259551 & ~0xffffff | Class285.method5026(string.substring(5), 16, (byte) 100)) * 1039953905;
-			else if (string.equals("shad"))
-				anInt57 = 1039953905 * (256259551 * anInt64 & ~0xffffff);
-			else if (string.equals("/shad"))
-				anInt57 = anInt65 * 1432053993;
-			else if (string.equals("br"))
-				method365(anInt63 * -461664191, 875724921 * anInt65, -571655303);
-		} catch (Exception exception) {
-			/* empty */
+			} else if (string_1.startsWith("shad=")) {
+				anInt57 = anInt64 & ~0xffffff | Class285.method5026(string_1.substring(5), 16, (byte) 100);
+			} else if (string_1.equals("shad")) {
+				anInt57 = anInt64 & ~0xffffff;
+			} else if (string_1.equals("/shad")) {
+				anInt57 = anInt65;
+			} else if (string_1.equals("br")) {
+				this.method365(anInt63, anInt65, -571655303);
+			}
+		} catch (Exception exception_4) {
+			;
 		}
+
 	}
 
-	void method370(String string, int i, int i_85_) {
-		int i_86_ = 0;
-		boolean bool = false;
-		for (int i_87_ = 0; i_87_ < string.length(); i_87_++) {
-			char c = string.charAt(i_87_);
-			if (c == '<')
-				bool = true;
-			else if ('>' == c)
-				bool = false;
-			else if (!bool && c == ' ')
-				i_86_++;
+	void method370(String string_1, int i_2, int i_3) {
+		int i_4 = 0;
+		boolean bool_5 = false;
+
+		for (int i_6 = 0; i_6 < string_1.length(); i_6++) {
+			char var_7 = string_1.charAt(i_6);
+			if (var_7 == 60) {
+				bool_5 = true;
+			} else if (var_7 == 62) {
+				bool_5 = false;
+			} else if (!bool_5 && var_7 == 32) {
+				++i_4;
+			}
 		}
-		if (i_86_ > 0)
-			anInt67 = (i - ((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) << 8) / i_86_ * 1038679493;
+
+		if (i_4 > 0) {
+			anInt67 = (i_2 - this.fontMetrics.getWidthNoSprites(string_1, -1967833701) << 8) / i_4;
+		}
+
 	}
 
-	void method371(String string, int i, int i_88_, NativeSprite[] class160s, int[] is, Class455 class455, int i_89_, int i_90_, byte i_91_) {
-		i_88_ -= 1200654985 * ((FontRenderer) this).fontMetrics.anInt4975;
-		int i_92_ = -1;
-		int i_93_ = -1;
-		int i_94_ = string.length();
-		for (int i_95_ = 0; i_95_ < i_94_; i_95_++) {
-			char c = (char) (Class242.getByteForChar(string.charAt(i_95_)) & 0xff);
-			if (60 == c)
-				i_92_ = i_95_;
-			else {
-				if (c == 62 && i_92_ != -1) {
-					String string_96_ = string.substring(1 + i_92_, i_95_);
-					i_92_ = -1;
-					if (string_96_.equals("lt"))
-						c = '<';
-					else if (string_96_.equals("gt"))
-						c = '>';
-					else if (string_96_.equals("nbsp"))
-						c = '\u00a0';
-					else if (string_96_.equals("shy"))
-						c = '\u00ad';
-					else if (string_96_.equals("times"))
-						c = '\u00d7';
-					else if (string_96_.equals("euro"))
-						c = '\u20ac';
-					else if (string_96_.equals("copy"))
-						c = '\u00a9';
-					else if (string_96_.equals("reg"))
-						c = '\u00ae';
-					else {
-						if (string_96_.startsWith("img=")) {
-							try {
-								int i_97_ = Class328.parseInt(string_96_.substring(4), -1416049939);
-								NativeSprite class160 = class160s[i_97_];
-								int i_98_ = (is != null ? is[i_97_] : class160.method2748());
-								if ((256259551 * anInt64 & ~0xffffff) == -16777216)
-									class160.method2742(i, (((((FontRenderer) this).fontMetrics.anInt4975) * 1200654985) + i_88_ - i_98_), 1, 0, 1);
-								else
-									class160.method2742(i, (i_88_ + (1200654985 * (((FontRenderer) this).fontMetrics.anInt4975)) - i_98_), 0, ((anInt64 * 256259551 & ~0xffffff) | 0xffffff), 1);
-								i += class160s[i_97_].method228();
-								i_93_ = -1;
-							} catch (Exception exception) {
-								/* empty */
+	void method371(String string_1, int i_2, int i_3, NativeSprite[] arr_4, int[] ints_5, Class455 class455_6, int i_7, int i_8, byte b_9) {
+		i_3 -= this.fontMetrics.anInt4975;
+		int i_10 = -1;
+		int i_11 = -1;
+		int i_12 = string_1.length();
+
+		for (int i_13 = 0; i_13 < i_12; i_13++) {
+			char var_14 = (char) (Class242.getByteForChar(string_1.charAt(i_13)) & 0xff);
+			if (var_14 == 60) {
+				i_10 = i_13;
+			} else {
+				if (var_14 == 62 && i_10 != -1) {
+					String string_15 = string_1.substring(i_10 + 1, i_13);
+					i_10 = -1;
+					if (string_15.equals("lt")) {
+						var_14 = 60;
+					} else if (string_15.equals("gt")) {
+						var_14 = 62;
+					} else if (string_15.equals("nbsp")) {
+						var_14 = 160;
+					} else if (string_15.equals("shy")) {
+						var_14 = 173;
+					} else if (string_15.equals("times")) {
+						var_14 = 215;
+					} else if (string_15.equals("euro")) {
+						var_14 = 8364;
+					} else if (string_15.equals("copy")) {
+						var_14 = 169;
+					} else {
+						if (!string_15.equals("reg")) {
+							if (string_15.startsWith("img=")) {
+								try {
+									int i_16 = Class328.parseInt(string_15.substring(4), -1416049939);
+									NativeSprite nativesprite_17 = arr_4[i_16];
+									int i_18 = ints_5 != null ? ints_5[i_16] : nativesprite_17.method2748();
+									if ((anInt64 & ~0xffffff) == -16777216) {
+										nativesprite_17.method2742(i_2, i_3 + this.fontMetrics.anInt4975 - i_18, 1, 0, 1);
+									} else {
+										nativesprite_17.method2742(i_2, i_3 + this.fontMetrics.anInt4975 - i_18, 0, anInt64 & ~0xffffff | 0xffffff, 1);
+									}
+
+									i_2 += arr_4[i_16].method228();
+									i_11 = -1;
+								} catch (Exception exception_21) {
+									;
+								}
+							} else {
+								this.method369(string_15, (byte) 85);
 							}
-						} else
-							method369(string_96_, (byte) 85);
-						continue;
-					}
-				}
-				if (-1 == i_92_) {
-					if (i_93_ != -1)
-						i += ((FontRenderer) this).fontMetrics.getKerning(i_93_, c, 202656295);
-					if (c != 32) {
-						if (null == class455) {
-							if ((-1288265455 * anInt57 & ~0xffffff) != 0)
-								UA(c, 1 + i, 1 + i_88_, -1288265455 * anInt57, true);
-							UA(c, i, i_88_, anInt64 * 256259551, false);
-						} else {
-							if ((-1288265455 * anInt57 & ~0xffffff) != 0)
-								method374(c, 1 + i, 1 + i_88_, -1288265455 * anInt57, true, class455, i_89_, i_90_);
-							method374(c, i, i_88_, anInt64 * 256259551, false, class455, i_89_, i_90_);
+							continue;
 						}
-					} else if (1927641357 * anInt67 > 0) {
-						anInt68 += anInt67 * 1035215791;
-						i += anInt68 * -1223339517 >> 8;
-						anInt68 = -1938069333 * (-1223339517 * anInt68 & 0xff);
-					}
-					int i_99_ = ((FontRenderer) this).fontMetrics.method6945(c, (byte) -117);
-					if (2046271009 * anInt61 != -1)
-						((FontRenderer) this).renderer.method8659(i, i_88_ + (int) (0.7 * (double) ((((FontRenderer) this).fontMetrics.anInt4975) * 1200654985)), i_99_, anInt61 * 2046271009, -1221933071);
-					if (-1 != anInt62 * 785139153)
-						((FontRenderer) this).renderer.method8659(i, 1 + (i_88_ + (((FontRenderer) this).fontMetrics.anInt4975 * 1200654985)), i_99_, 785139153 * anInt62, 435318936);
-					i += i_99_;
-					i_93_ = c;
-				}
-			}
-		}
-	}
 
-	void method372(String string, int i, int i_100_, NativeSprite[] class160s, int[] is, int[] is_101_, int[] is_102_, int i_103_) {
-		i_100_ -= ((FontRenderer) this).fontMetrics.anInt4975 * 1200654985;
-		int i_104_ = -1;
-		int i_105_ = -1;
-		int i_106_ = 0;
-		int i_107_ = string.length();
-		for (int i_108_ = 0; i_108_ < i_107_; i_108_++) {
-			char c = (char) (Class242.getByteForChar(string.charAt(i_108_)) & 0xff);
-			if (c == 60)
-				i_104_ = i_108_;
-			else {
-				if (62 == c && -1 != i_104_) {
-					String string_109_ = string.substring(i_104_ + 1, i_108_);
-					i_104_ = -1;
-					if (string_109_.equals("lt"))
-						c = '<';
-					else if (string_109_.equals("gt"))
-						c = '>';
-					else if (string_109_.equals("nbsp"))
-						c = '\u00a0';
-					else if (string_109_.equals("shy"))
-						c = '\u00ad';
-					else if (string_109_.equals("times"))
-						c = '\u00d7';
-					else if (string_109_.equals("euro"))
-						c = '\u20ac';
-					else if (string_109_.equals("copy"))
-						c = '\u00a9';
-					else if (string_109_.equals("reg"))
-						c = '\u00ae';
-					else {
-						if (string_109_.startsWith("img=")) {
-							try {
-								int i_110_;
-								if (null != is_101_)
-									i_110_ = is_101_[i_106_];
-								else
-									i_110_ = 0;
-								int i_111_;
-								if (null != is_102_)
-									i_111_ = is_102_[i_106_];
-								else
-									i_111_ = 0;
-								i_106_++;
-								int i_112_ = Class328.parseInt(string_109_.substring(4), 1488511496);
-								NativeSprite class160 = class160s[i_112_];
-								int i_113_ = (null != is ? is[i_112_] : class160.method2748());
-								class160.method2742(i_110_ + i, (((((FontRenderer) this).fontMetrics.anInt4975) * 1200654985) + i_100_ - i_113_ + i_111_), 1, 0, 1);
-								i += class160s[i_112_].method228();
-								i_105_ = -1;
-							} catch (Exception exception) {
-								/* empty */
+						var_14 = 174;
+					}
+				}
+
+				if (i_10 == -1) {
+					if (i_11 != -1) {
+						i_2 += this.fontMetrics.getKerning(i_11, var_14, 202656295);
+					}
+
+					if (var_14 != 32) {
+						if (class455_6 == null) {
+							if ((anInt57 & ~0xffffff) != 0) {
+								this.UA(var_14, i_2 + 1, i_3 + 1, anInt57, true);
 							}
-						} else
-							method369(string_109_, (byte) 115);
-						continue;
+
+							this.UA(var_14, i_2, i_3, anInt64, false);
+						} else {
+							if ((anInt57 & ~0xffffff) != 0) {
+								this.method374(var_14, i_2 + 1, i_3 + 1, anInt57, true, class455_6, i_7, i_8);
+							}
+
+							this.method374(var_14, i_2, i_3, anInt64, false, class455_6, i_7, i_8);
+						}
+					} else if (anInt67 > 0) {
+						anInt68 += anInt67;
+						i_2 += anInt68 >> 8;
+						anInt68 &= 0xff;
 					}
-				}
-				if (-1 == i_104_) {
-					if (i_105_ != -1)
-						i += ((FontRenderer) this).fontMetrics.getKerning(i_105_, c, -646964881);
-					int i_114_;
-					if (null != is_101_)
-						i_114_ = is_101_[i_106_];
-					else
-						i_114_ = 0;
-					int i_115_;
-					if (is_102_ != null)
-						i_115_ = is_102_[i_106_];
-					else
-						i_115_ = 0;
-					i_106_++;
-					if (c != 32) {
-						if (0 != (-1288265455 * anInt57 & ~0xffffff))
-							UA(c, i_114_ + (1 + i), i_115_ + (i_100_ + 1), -1288265455 * anInt57, true);
-						UA(c, i + i_114_, i_100_ + i_115_, anInt64 * 256259551, false);
-					} else if (1927641357 * anInt67 > 0) {
-						anInt68 += anInt67 * 1035215791;
-						i += -1223339517 * anInt68 >> 8;
-						anInt68 = -1938069333 * (-1223339517 * anInt68 & 0xff);
+
+					int i_20 = this.fontMetrics.method6945(var_14, (byte) -117);
+					if (anInt61 != -1) {
+						this.renderer.method8659(i_2, i_3 + (int) (0.7D * (double) this.fontMetrics.anInt4975), i_20, anInt61, -1221933071);
 					}
-					int i_116_ = ((FontRenderer) this).fontMetrics.method6945(c, (byte) -20);
-					if (2046271009 * anInt61 != -1)
-						((FontRenderer) this).renderer.method8659(i, (int) ((double) (1200654985 * (((FontRenderer) this).fontMetrics.anInt4975)) * 0.7) + i_100_, i_116_, anInt61 * 2046271009, -645910355);
-					if (-1 != anInt62 * 785139153)
-						((FontRenderer) this).renderer.method8659(i, i_100_ + (((FontRenderer) this).fontMetrics.anInt4975 * 1200654985), i_116_, 785139153 * anInt62, -510924109);
-					i += i_116_;
-					i_105_ = c;
+
+					if (anInt62 != -1) {
+						this.renderer.method8659(i_2, i_3 + this.fontMetrics.anInt4975 + 1, i_20, anInt62, 435318936);
+					}
+
+					i_2 += i_20;
+					i_11 = var_14;
 				}
 			}
 		}
+
 	}
 
-	abstract void UA(char c, int i, int i_117_, int i_118_, boolean bool);
+	void method372(String string_1, int i_2, int i_3, NativeSprite[] arr_4, int[] ints_5, int[] ints_6, int[] ints_7, int i_8) {
+		i_3 -= this.fontMetrics.anInt4975;
+		int i_9 = -1;
+		int i_10 = -1;
+		int i_11 = 0;
+		int i_12 = string_1.length();
 
-	public int method373(String string, int i, int i_119_, int i_120_, int i_121_, int i_122_, int i_123_, int i_124_, int i_125_, int i_126_, int i_127_, NativeSprite[] class160s, int[] is, Class455 class455, int i_128_, int i_129_, byte i_130_) {
-		if (string == null)
-			return 0;
-		method365(i_122_, i_123_, 745766148);
-		if (0 == i_126_)
-			i_126_ = ((FontRenderer) this).fontMetrics.anInt4975 * 1200654985;
-		int[] is_131_;
-		if (i_121_ < (((FontRenderer) this).fontMetrics.anInt4979 * -1518951631 + 397683159 * ((FontRenderer) this).fontMetrics.anInt4978 + i_126_) && i_121_ < i_126_ + i_126_)
-			is_131_ = null;
-		else
-			is_131_ = new int[] { i_120_ };
-		int i_132_ = ((FontRenderer) this).fontMetrics.method6987(string, is_131_, aStringArray69, class160s, (byte) 0);
-		if (i_127_ == -1) {
-			i_127_ = i_121_ / i_126_;
-			if (i_127_ <= 0)
-				i_127_ = 1;
-		}
-		if (i_127_ > 0 && i_132_ >= i_127_) {
-			aStringArray69[i_127_ - 1] = ((FontRenderer) this).fontMetrics.method6959((aStringArray69[i_127_ - 1]), i_120_, class160s, 1987203414);
-			i_132_ = i_127_;
-		}
-		if (3 == i_125_ && 1 == i_132_)
-			i_125_ = 1;
-		int i_133_;
-		if (0 == i_125_)
-			i_133_ = ((FontRenderer) this).fontMetrics.anInt4978 * 397683159 + i_119_;
-		else if (1 == i_125_)
-			i_133_ = ((i_121_ - 397683159 * ((FontRenderer) this).fontMetrics.anInt4978 - ((FontRenderer) this).fontMetrics.anInt4979 * -1518951631 - i_126_ * (i_132_ - 1)) / 2 + (i_119_ + 397683159 * ((FontRenderer) this).fontMetrics.anInt4978));
-		else if (2 == i_125_)
-			i_133_ = (i_121_ + i_119_ - -1518951631 * ((FontRenderer) this).fontMetrics.anInt4979 - (i_132_ - 1) * i_126_);
-		else {
-			int i_134_ = ((i_121_ - 397683159 * ((FontRenderer) this).fontMetrics.anInt4978 - ((FontRenderer) this).fontMetrics.anInt4979 * -1518951631 - i_126_ * (i_132_ - 1)) / (1 + i_132_));
-			if (i_134_ < 0)
-				i_134_ = 0;
-			i_133_ = (397683159 * ((FontRenderer) this).fontMetrics.anInt4978 + i_119_ + i_134_);
-			i_126_ += i_134_;
-		}
-		for (int i_135_ = 0; i_135_ < i_132_; i_135_++) {
-			if (i_124_ == 0)
-				method371(aStringArray69[i_135_], i, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
-			else if (1 == i_124_)
-				method371(aStringArray69[i_135_], i + (i_120_ - (((FontRenderer) this).fontMetrics.getWidthNoSprites(aStringArray69[i_135_], -1967833701))) / 2, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
-			else if (2 == i_124_)
-				method371(aStringArray69[i_135_], i + i_120_ - (((FontRenderer) this).fontMetrics.getWidthNoSprites(aStringArray69[i_135_], -1967833701)), i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
-			else if (i_135_ == i_132_ - 1)
-				method371(aStringArray69[i_135_], i, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
-			else {
-				method370(aStringArray69[i_135_], i_120_, 946973547);
-				method371(aStringArray69[i_135_], i, i_133_, class160s, is, class455, i_128_, i_129_, (byte) 3);
-				anInt67 = 0;
+		for (int i_13 = 0; i_13 < i_12; i_13++) {
+			char var_14 = (char) (Class242.getByteForChar(string_1.charAt(i_13)) & 0xff);
+			if (var_14 == 60) {
+				i_9 = i_13;
+			} else {
+				int i_16;
+				int i_17;
+				if (var_14 == 62 && i_9 != -1) {
+					String string_15 = string_1.substring(i_9 + 1, i_13);
+					i_9 = -1;
+					if (string_15.equals("lt")) {
+						var_14 = 60;
+					} else if (string_15.equals("gt")) {
+						var_14 = 62;
+					} else if (string_15.equals("nbsp")) {
+						var_14 = 160;
+					} else if (string_15.equals("shy")) {
+						var_14 = 173;
+					} else if (string_15.equals("times")) {
+						var_14 = 215;
+					} else if (string_15.equals("euro")) {
+						var_14 = 8364;
+					} else if (string_15.equals("copy")) {
+						var_14 = 169;
+					} else {
+						if (!string_15.equals("reg")) {
+							if (string_15.startsWith("img=")) {
+								try {
+									if (ints_6 != null) {
+										i_16 = ints_6[i_11];
+									} else {
+										i_16 = 0;
+									}
+
+									if (ints_7 != null) {
+										i_17 = ints_7[i_11];
+									} else {
+										i_17 = 0;
+									}
+
+									++i_11;
+									int i_18 = Class328.parseInt(string_15.substring(4), 1488511496);
+									NativeSprite nativesprite_19 = arr_4[i_18];
+									int i_20 = ints_5 != null ? ints_5[i_18] : nativesprite_19.method2748();
+									nativesprite_19.method2742(i_16 + i_2, i_3 + this.fontMetrics.anInt4975 - i_20 + i_17, 1, 0, 1);
+									i_2 += arr_4[i_18].method228();
+									i_10 = -1;
+								} catch (Exception exception_23) {
+									;
+								}
+							} else {
+								this.method369(string_15, (byte) 115);
+							}
+							continue;
+						}
+
+						var_14 = 174;
+					}
+				}
+
+				if (i_9 == -1) {
+					if (i_10 != -1) {
+						i_2 += this.fontMetrics.getKerning(i_10, var_14, -646964881);
+					}
+
+					int i_22;
+					if (ints_6 != null) {
+						i_22 = ints_6[i_11];
+					} else {
+						i_22 = 0;
+					}
+
+					if (ints_7 != null) {
+						i_16 = ints_7[i_11];
+					} else {
+						i_16 = 0;
+					}
+
+					++i_11;
+					if (var_14 != 32) {
+						if ((anInt57 & ~0xffffff) != 0) {
+							this.UA(var_14, i_22 + i_2 + 1, i_3 + i_16 + 1, anInt57, true);
+						}
+
+						this.UA(var_14, i_22 + i_2, i_3 + i_16, anInt64, false);
+					} else if (anInt67 > 0) {
+						anInt68 += anInt67;
+						i_2 += anInt68 >> 8;
+						anInt68 &= 0xff;
+					}
+
+					i_17 = this.fontMetrics.method6945(var_14, (byte) -20);
+					if (anInt61 != -1) {
+						this.renderer.method8659(i_2, i_3 + (int) ((double) this.fontMetrics.anInt4975 * 0.7D), i_17, anInt61, -645910355);
+					}
+
+					if (anInt62 != -1) {
+						this.renderer.method8659(i_2, i_3 + this.fontMetrics.anInt4975, i_17, anInt62, -510924109);
+					}
+
+					i_2 += i_17;
+					i_10 = var_14;
+				}
 			}
-			i_133_ += i_126_;
 		}
-		return i_132_;
+
 	}
 
-	static {
-		anInt57 = 0;
-		anInt67 = 0;
-		anInt68 = 0;
-		aStringArray69 = new String[100];
-	}
+	abstract void UA(char var1, int var2, int var3, int var4, boolean var5);
 
-	abstract void method374(char c, int i, int i_136_, int i_137_, boolean bool, Class455 class455, int i_138_, int i_139_);
-
-	abstract void c(char c, int i, int i_140_, int i_141_, boolean bool);
-
-	abstract void t(char c, int i, int i_142_, int i_143_, boolean bool);
-
-	public int method378(String string, int i, int i_153_, int i_154_, int i_155_, int i_156_, int i_157_, int i_158_, int i_159_, int i_160_, NativeSprite[] class160s, int[] is, Class455 class455, int i_161_, int i_162_, byte i_163_) {
-		return method373(string, i, i_153_, i_154_, i_155_, i_156_, i_157_, i_158_, i_159_, i_160_, 0, class160s, is, class455, i_161_, i_162_, (byte) 0);
-	}
-
-	public void method381(String string, int i, int i_184_, int i_185_, int i_186_, int i_187_, int i_188_, int i_189_) {
-		if (string != null) {
-			method365(i_185_, i_186_, -813864617);
-			double d = 7.0 - (double) i_188_ / 8.0;
-			if (d < 0.0)
-				d = 0.0;
-			int i_190_ = string.length();
-			int[] is = new int[i_190_];
-			for (int i_191_ = 0; i_191_ < i_190_; i_191_++)
-				is[i_191_] = (int) (Math.sin((double) i_187_ / 1.0 + (double) i_191_ / 1.5) * d);
-			method372(string, i - (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) / 2), i_184_, null, null, null, is, 1742290741);
-		}
-	}
-
-	public int method386(String string, int i, int i_210_, int i_211_, int i_212_, Random random, int i_213_, NativeSprite[] class160s, int[] is, int i_214_) {
-		if (string == null)
+	public int method373(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, NativeSprite[] arr_12, int[] ints_13, Class455 class455_14, int i_15, int i_16, byte b_17) {
+		if (string_1 == null) {
 			return 0;
-		random.setSeed((long) i_213_);
-		int i_215_ = 192 + (random.nextInt() & 0x1f);
-		method365(i_215_ << 24 | i_211_ & 0xffffff, i_215_ << 24 | i_212_ & 0xffffff, -761696495);
-		int i_216_ = string.length();
-		int[] is_217_ = new int[i_216_];
-		int i_218_ = 0;
-		for (int i_219_ = 0; i_219_ < i_216_; i_219_++) {
-			is_217_[i_219_] = i_218_;
-			if ((random.nextInt() & 0x3) == 0)
-				i_218_++;
+		} else {
+			this.method365(i_6, i_7, 745766148);
+			if (i_10 == 0) {
+				i_10 = this.fontMetrics.anInt4975;
+			}
+
+			int[] ints_18;
+			if (i_5 < i_10 + this.fontMetrics.anInt4979 + this.fontMetrics.anInt4978 && i_5 < i_10 + i_10) {
+				ints_18 = null;
+			} else {
+				ints_18 = new int[] { i_4 };
+			}
+
+			int i_19 = this.fontMetrics.method6987(string_1, ints_18, aStringArray69, arr_12, (byte) 0);
+			if (i_11 == -1) {
+				i_11 = i_5 / i_10;
+				if (i_11 <= 0) {
+					i_11 = 1;
+				}
+			}
+
+			if (i_11 > 0 && i_19 >= i_11) {
+				aStringArray69[i_11 - 1] = this.fontMetrics.method6959(aStringArray69[i_11 - 1], i_4, arr_12, 1987203414);
+				i_19 = i_11;
+			}
+
+			if (i_9 == 3 && i_19 == 1) {
+				i_9 = 1;
+			}
+
+			int i_20;
+			int i_21;
+			if (i_9 == 0) {
+				i_20 = i_3 + this.fontMetrics.anInt4978;
+			} else if (i_9 == 1) {
+				i_20 = (i_5 - this.fontMetrics.anInt4978 - this.fontMetrics.anInt4979 - i_10 * (i_19 - 1)) / 2 + i_3 + this.fontMetrics.anInt4978;
+			} else if (i_9 == 2) {
+				i_20 = i_3 + i_5 - this.fontMetrics.anInt4979 - i_10 * (i_19 - 1);
+			} else {
+				i_21 = (i_5 - this.fontMetrics.anInt4978 - this.fontMetrics.anInt4979 - i_10 * (i_19 - 1)) / (i_19 + 1);
+				if (i_21 < 0) {
+					i_21 = 0;
+				}
+
+				i_20 = i_3 + this.fontMetrics.anInt4978 + i_21;
+				i_10 += i_21;
+			}
+
+			for (i_21 = 0; i_21 < i_19; i_21++) {
+				if (i_8 == 0) {
+					this.method371(aStringArray69[i_21], i_2, i_20, arr_12, ints_13, class455_14, i_15, i_16, (byte) 3);
+				} else if (i_8 == 1) {
+					this.method371(aStringArray69[i_21], i_2 + (i_4 - this.fontMetrics.getWidthNoSprites(aStringArray69[i_21], -1967833701)) / 2, i_20, arr_12, ints_13, class455_14, i_15, i_16, (byte) 3);
+				} else if (i_8 == 2) {
+					this.method371(aStringArray69[i_21], i_2 + i_4 - this.fontMetrics.getWidthNoSprites(aStringArray69[i_21], -1967833701), i_20, arr_12, ints_13, class455_14, i_15, i_16, (byte) 3);
+				} else if (i_21 == i_19 - 1) {
+					this.method371(aStringArray69[i_21], i_2, i_20, arr_12, ints_13, class455_14, i_15, i_16, (byte) 3);
+				} else {
+					this.method370(aStringArray69[i_21], i_4, 946973547);
+					this.method371(aStringArray69[i_21], i_2, i_20, arr_12, ints_13, class455_14, i_15, i_16, (byte) 3);
+					anInt67 = 0;
+				}
+
+				i_20 += i_10;
+			}
+
+			return i_19;
 		}
-		method372(string, i, i_210_, class160s, is, is_217_, null, 1983305186);
-		return i_218_;
 	}
 
-	public void method387(String string, int i, int i_220_, int i_221_, int i_222_, int i_223_, int i_224_) {
-		if (null != string) {
-			method365(i_221_, i_222_, 347132916);
-			int i_225_ = string.length();
-			int[] is = new int[i_225_];
-			for (int i_226_ = 0; i_226_ < i_225_; i_226_++)
-				is[i_226_] = (int) (Math.sin((double) i_223_ / 5.0 + (double) i_226_ / 2.0) * 5.0);
-			method372(string, i - (((FontRenderer) this).fontMetrics.getWidthNoSprites(string, -1967833701) / 2), i_220_, null, null, null, is, 1737737512);
+	abstract void method374(char var1, int var2, int var3, int var4, boolean var5, Class455 var6, int var7, int var8);
+
+	abstract void c(char var1, int var2, int var3, int var4, boolean var5);
+
+	abstract void t(char var1, int var2, int var3, int var4, boolean var5);
+
+	public int method378(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, NativeSprite[] arr_11, int[] ints_12, Class455 class455_13, int i_14, int i_15, byte b_16) {
+		return this.method373(string_1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9, i_10, 0, arr_11, ints_12, class455_13, i_14, i_15, (byte) 0);
+	}
+
+	public void method381(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+		if (string_1 != null) {
+			this.method365(i_4, i_5, -813864617);
+			double d_9 = 7.0D - (double) i_7 / 8.0D;
+			if (d_9 < 0.0D) {
+				d_9 = 0.0D;
+			}
+
+			int i_11 = string_1.length();
+			int[] ints_12 = new int[i_11];
+
+			for (int i_13 = 0; i_13 < i_11; i_13++) {
+				ints_12[i_13] = (int) (Math.sin((double) i_6 / 1.0D + (double) i_13 / 1.5D) * d_9);
+			}
+
+			this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1, -1967833701) / 2, i_3, (NativeSprite[]) null, (int[]) null, (int[]) null, ints_12, 1742290741);
+		}
+
+	}
+
+	public int method386(String string_1, int i_2, int i_3, int i_4, int i_5, Random random_6, int i_7, NativeSprite[] arr_8, int[] ints_9, int i_10) {
+		if (string_1 == null) {
+			return 0;
+		} else {
+			random_6.setSeed((long) i_7);
+			int i_11 = 192 + (random_6.nextInt() & 0x1f);
+			this.method365(i_11 << 24 | i_4 & 0xffffff, i_11 << 24 | i_5 & 0xffffff, -761696495);
+			int i_12 = string_1.length();
+			int[] ints_13 = new int[i_12];
+			int i_14 = 0;
+
+			for (int i_15 = 0; i_15 < i_12; i_15++) {
+				ints_13[i_15] = i_14;
+				if ((random_6.nextInt() & 0x3) == 0) {
+					++i_14;
+				}
+			}
+
+			this.method372(string_1, i_2, i_3, arr_8, ints_9, ints_13, (int[]) null, 1983305186);
+			return i_14;
 		}
 	}
 
-	FontRenderer(GraphicalRenderer class505, FontMetrics class414) {
-		((FontRenderer) this).renderer = class505;
-		((FontRenderer) this).fontMetrics = class414;
+	public void method387(String string_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+		if (string_1 != null) {
+			this.method365(i_4, i_5, 347132916);
+			int i_8 = string_1.length();
+			int[] ints_9 = new int[i_8];
+
+			for (int i_10 = 0; i_10 < i_8; i_10++) {
+				ints_9[i_10] = (int) (Math.sin((double) i_6 / 5.0D + (double) i_10 / 2.0D) * 5.0D);
+			}
+
+			this.method372(string_1, i_2 - this.fontMetrics.getWidthNoSprites(string_1, -1967833701) / 2, i_3, (NativeSprite[]) null, (int[]) null, (int[]) null, ints_9, 1737737512);
+		}
+
 	}
 
-	public static Class209 method400(Component component, boolean bool, byte i) {
-		return new Class209_Sub1(component, bool);
+	FontRenderer(GraphicalRenderer graphicalrenderer_1, FontMetrics fontmetrics_2) {
+		this.renderer = graphicalrenderer_1;
+		this.fontMetrics = fontmetrics_2;
 	}
 
-	static final void method401(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class199.method3251(class118, class527, 1310130121);
+	public static Class209 method400(Component component_0, boolean bool_1, byte b_2) {
+		return new Class209_Sub1(component_0, bool_1);
 	}
 
-	static void method402(int i) {
-		Class179.anInt2230 = -2050700174 + (Class288.aClass414_3438.anInt4978 * 1838611167 + -810427415 * Class288.aClass414_3438.anInt4979);
-		Class179.anInt2222 = 681447330 + (2090076551 * Class16.aClass414_139.anInt4978 + Class16.aClass414_139.anInt4979 * 74486273);
+	static final void method401(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Class199.method3251(icomponentdefinitions_3, cs2executor_0, 1310130121);
+	}
+
+	static void method402(int i_0) {
+		Class179.anInt2230 = Class288.aClass414_3438.anInt4978 + Class288.aClass414_3438.anInt4979 + 2;
+		Class179.anInt2222 = Class16.aClass414_139.anInt4978 + Class16.aClass414_139.anInt4979 + 2;
 		Class13.aStringArray129 = new String[500];
-		for (int i_331_ = 0; i_331_ < Class13.aStringArray129.length; i_331_++)
-			Class13.aStringArray129[i_331_] = "";
+
+		for (int i_1 = 0; i_1 < Class13.aStringArray129.length; i_1++) {
+			Class13.aStringArray129[i_1] = "";
+		}
+
 		Class209.method3598(Message.DEVELOPER_CONSOLE_INTRO.translate(Class223.CURRENT_LANGUAGE, -1940277002), -1694092142);
 	}
 
-	static final void method403(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.aBool1291 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) == 1);
+	static final void method403(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.aBool1291 = cs2executor_2.intStack[--cs2executor_2.intStackPtr] == 1;
 	}
 
-	public static GraphicalRenderer method404(Canvas canvas, Interface22 interface22, int i, int i_332_, int i_333_) {
-		return new ja(canvas, interface22, i, i_332_);
+	public static GraphicalRenderer method404(Canvas canvas_0, Interface22 interface22_1, int i_2, int i_3, int i_4) {
+		return new ja(canvas_0, interface22_1, i_2, i_3);
 	}
+
 }

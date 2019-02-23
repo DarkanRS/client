@@ -1,21 +1,19 @@
-/* Interface45 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface45 {
-	public void method244(int i, int i_0_, int i_1_);
 
-	public void method245(int i, int i_2_, int i_3_, int i_4_);
+	void method244(int var1, int var2, int var3);
 
-	public void method246(int i, int i_5_, int i_6_);
+	void method245(int var1, int var2, int var3, int var4);
 
-	public void method247(int i, int i_7_, int i_8_);
+	void method246(int var1, int var2, int var3);
 
-	public void method248(boolean bool, int i);
+	void method247(int var1, int var2, int var3);
 
-	public void method249(boolean bool);
+	void method248(boolean var1, int var2);
 
-	public void method250(boolean bool);
+	void method249(boolean var1);
 
-	public void method251(int i, int i_9_, int i_10_);
+	void method250(boolean var1);
+
+	void method251(int var1, int var2, int var3);
+
 }

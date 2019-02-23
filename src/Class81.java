@@ -1,30 +1,30 @@
-/* Class81 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class81 {
-	static ChatLine[] CHAT_LINES = new ChatLine[100];
+
 	static int NUM_CHAT_LINES;
-	static int anInt801 = 0;
 	static Class152 aClass152_802;
 	static int anInt803;
+	static ChatLine[] CHAT_LINES = new ChatLine[100];
+	static int anInt801 = 0;
 
 	Class81() throws Throwable {
 		throw new Error();
 	}
-	
-	static final void method1452(CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		Class16.method567(string, false, (byte) -20);
+
+	static final void method1452(CS2Executor cs2executor_0, int i_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		Class16.method567(string_2, false, (byte) -20);
 	}
 
-	static final boolean method1453(int[][] is, int[][] is_11_, int i, int i_12_, int i_13_, int i_14_, int i_15_, byte i_16_) {
-		for (int i_17_ = i_12_; i_17_ <= i_14_; i_17_++) {
-			for (int i_18_ = i_13_; i_18_ <= i_15_; i_18_++) {
-				if (i == is[i_17_][i_18_] && is_11_[i_17_][i_18_] <= 1)
+	static final boolean method1453(int[][] ints_0, int[][] ints_1, int i_2, int i_3, int i_4, int i_5, int i_6, byte b_7) {
+		for (int i_8 = i_3; i_8 <= i_5; i_8++) {
+			for (int i_9 = i_4; i_9 <= i_6; i_9++) {
+				if (i_2 == ints_0[i_8][i_9] && ints_1[i_8][i_9] <= 1) {
 					return true;
+				}
 			}
 		}
+
 		return false;
 	}
+
 }

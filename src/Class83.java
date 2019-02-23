@@ -1,19 +1,17 @@
-/* Class83 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class83 {
-	public int[] anIntArray805;
-	public float[][] aFloatArrayArray806;
-	public int[] anIntArray807;
-	public int[] anIntArray808;
-	MeshRasterizer this$0;
 
-	Class83(MeshRasterizer class528, int[] is, int[] is_0_, int[] is_1_, float[][] fs) {
-		((Class83) this).this$0 = class528;
-		anIntArray808 = is;
-		anIntArray805 = is_0_;
-		anIntArray807 = is_1_;
-		aFloatArrayArray806 = fs;
+	MeshRasterizer this$0;
+	public int[] anIntArray808;
+	public int[] anIntArray805;
+	public int[] anIntArray807;
+	public float[][] aFloatArrayArray806;
+
+	Class83(MeshRasterizer meshrasterizer_1, int[] ints_2, int[] ints_3, int[] ints_4, float[][] floats_5) {
+		this.this$0 = meshrasterizer_1;
+		this.anIntArray808 = ints_2;
+		this.anIntArray805 = ints_3;
+		this.anIntArray807 = ints_4;
+		this.aFloatArrayArray806 = floats_5;
 	}
+
 }

@@ -1,22 +1,14 @@
-/* ba - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class ba extends Class282_Sub1 implements Interface40 {
+
 	long nativeid;
 
-	native void sa(ja var_ja, int i);
+	native void sa(ja var1, int var2);
 
-	void method15477() {
-		if (((ba) this).nativeid != 0L)
-			Class156.method2642(this, (byte) 19);
+	ba(ja ja_1, int i_2) {
+		this.sa(ja_1, i_2);
 	}
 
-	ba(ja var_ja, int i) {
-		sa(var_ja, i);
-	}
-
-	public native void ma(boolean bool);
+	public native void ma(boolean var1);
 
 	native void ha();
 
@@ -24,23 +16,21 @@ public class ba extends Class282_Sub1 implements Interface40 {
 
 	native void v();
 
-	void method15478() {
-		if (((ba) this).nativeid != 0L)
-			Class156.method2642(this, (byte) 20);
-	}
-
-	public native void y(boolean bool);
+	public native void y(boolean var1);
 
 	native void j();
 
-	native void n(ja var_ja, int i);
+	native void n(ja var1, int var2);
 
-	native void g(ja var_ja, int i);
+	native void g(ja var1, int var2);
 
-	public native void x(boolean bool);
+	public native void x(boolean var1);
 
 	public void finalize() {
-		if (((ba) this).nativeid != 0L)
+		if (this.nativeid != 0L) {
 			Class156.method2642(this, (byte) 120);
+		}
+
 	}
+
 }

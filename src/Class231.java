@@ -1,64 +1,56 @@
-/* Class231 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class231 {
-	int[] anIntArray2859;
-	public static final int anInt2860 = 2;
-	public static final int anInt2861 = 8;
-	short[] aShortArray2862;
+
+	public static String aString2876;
 	byte aByte2863;
-	int[] anIntArray2864;
 	byte aByte2865;
+	int[] anIntArray2859;
+	int[] anIntArray2871;
+	int[] anIntArray2864;
 	short aShort2866;
 	short aShort2867;
 	short aShort2868;
 	short aShort2869;
-	public static final int anInt2870 = 1;
-	int[] anIntArray2871;
-	public static final int anInt2872 = 16;
 	short[] aShortArray2873;
-	public static final int anInt2874 = 4;
+	short[] aShortArray2862;
 	short[] aShortArray2875;
-	public static String aString2876;
 
-	Class231(SceneObjectManager class206, int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
-		((Class231) this).aByte2863 = (byte) i;
-		((Class231) this).aByte2865 = (byte) i_0_;
-		((Class231) this).anIntArray2859 = new int[4];
-		((Class231) this).anIntArray2871 = new int[4];
-		((Class231) this).anIntArray2864 = new int[4];
-		((Class231) this).anIntArray2859[0] = i_1_;
-		((Class231) this).anIntArray2859[1] = i_2_;
-		((Class231) this).anIntArray2859[2] = i_3_;
-		((Class231) this).anIntArray2859[3] = i_4_;
-		((Class231) this).anIntArray2871[0] = i_5_;
-		((Class231) this).anIntArray2871[1] = i_6_;
-		((Class231) this).anIntArray2871[2] = i_7_;
-		((Class231) this).anIntArray2871[3] = i_8_;
-		((Class231) this).anIntArray2864[0] = i_9_;
-		((Class231) this).anIntArray2864[1] = i_10_;
-		((Class231) this).anIntArray2864[2] = i_11_;
-		((Class231) this).anIntArray2864[3] = i_12_;
-		((Class231) this).aShort2866 = (short) (i_1_ >> -1928575293 * class206.anInt2592);
-		((Class231) this).aShort2867 = (short) (i_3_ >> class206.anInt2592 * -1928575293);
-		((Class231) this).aShort2868 = (short) (i_9_ >> -1928575293 * class206.anInt2592);
-		((Class231) this).aShort2869 = (short) (i_11_ >> class206.anInt2592 * -1928575293);
-		((Class231) this).aShortArray2873 = new short[4];
-		((Class231) this).aShortArray2862 = new short[4];
-		((Class231) this).aShortArray2875 = new short[4];
+	Class231(SceneObjectManager sceneobjectmanager_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, int i_10, int i_11, int i_12, int i_13, int i_14, int i_15) {
+		this.aByte2863 = (byte) i_2;
+		this.aByte2865 = (byte) i_3;
+		this.anIntArray2859 = new int[4];
+		this.anIntArray2871 = new int[4];
+		this.anIntArray2864 = new int[4];
+		this.anIntArray2859[0] = i_4;
+		this.anIntArray2859[1] = i_5;
+		this.anIntArray2859[2] = i_6;
+		this.anIntArray2859[3] = i_7;
+		this.anIntArray2871[0] = i_8;
+		this.anIntArray2871[1] = i_9;
+		this.anIntArray2871[2] = i_10;
+		this.anIntArray2871[3] = i_11;
+		this.anIntArray2864[0] = i_12;
+		this.anIntArray2864[1] = i_13;
+		this.anIntArray2864[2] = i_14;
+		this.anIntArray2864[3] = i_15;
+		this.aShort2866 = (short) (i_4 >> sceneobjectmanager_1.anInt2592);
+		this.aShort2867 = (short) (i_6 >> sceneobjectmanager_1.anInt2592);
+		this.aShort2868 = (short) (i_12 >> sceneobjectmanager_1.anInt2592);
+		this.aShort2869 = (short) (i_14 >> sceneobjectmanager_1.anInt2592);
+		this.aShortArray2873 = new short[4];
+		this.aShortArray2862 = new short[4];
+		this.aShortArray2875 = new short[4];
 	}
 
-	static final void method3913(CS2Executor class527, int i) {
-		int i_13_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.anIntArray7336[i_13_];
+	static final void method3913(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anIntArray7336[i_2];
 	}
 
-	static void method3914(int i, String string, boolean bool, byte i_14_) {
+	static void method3914(int i_0, String string_1, boolean bool_2, byte b_3) {
 		Class28.method772((byte) 14);
 		AttributeDefault.method7323((byte) -45);
 		Class250.method4297(620530459);
-		Class282_Sub17_Sub1.method15402(i, string, bool, 1568129445);
+		Class282_Sub17_Sub1.method15402(i_0, string_1, bool_2, 1568129445);
 		Class487.aClass378_5752.method6433(-1648322777);
 		Class487.aClass378_5752.method6403(client.anInterface35_7206, (short) 255);
 		Class282_Sub11_Sub3.method15476(Renderers.SOFTWARE_RENDERER, 2105795024);
@@ -67,17 +59,22 @@ public class Class231 {
 		Class122.method2109(Class182.aClass160Array2261, (byte) 8);
 		IncomingPacket.method6378(-1538407760);
 		Class94.method1589((short) 255);
-		if (5 == -1741204137 * client.anInt7166)
+		if (client.anInt7166 == 5) {
 			Class365.setGameState(11, 2080039213);
-		else if (0 == -1741204137 * client.anInt7166)
+		} else if (client.anInt7166 == 0) {
 			Class365.setGameState(2, 2028461626);
-		else if (client.anInt7166 * -1741204137 == 7)
+		} else if (client.anInt7166 == 7) {
 			Class365.setGameState(6, 1241604185);
-		else if (13 == -1741204137 * client.anInt7166)
+		} else if (client.anInt7166 == 13) {
 			Class365.setGameState(18, 1354384204);
-		else if (15 == -1741204137 * client.anInt7166 || client.anInt7166 * -1741204137 == 1)
+		} else if (client.anInt7166 != 15 && client.anInt7166 != 1) {
+			if (client.anInt7166 == 3) {
+				Class365.setGameState(9, 703598448);
+			}
+		} else {
 			Class386.method6673(1101279462);
-		else if (client.anInt7166 * -1741204137 == 3)
-			Class365.setGameState(9, 703598448);
+		}
+
 	}
+
 }

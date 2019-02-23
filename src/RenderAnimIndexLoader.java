@@ -1,107 +1,128 @@
-/* Class211 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
+import java.util.Queue;
 
 public class RenderAnimIndexLoader {
+
 	public static RenderAnimDefs aClass227_2669 = new RenderAnimDefs();
 	SoftCache renderAnimCache = new SoftCache(64);
 	Index aClass317_2671;
 	Defaults6Loader aClass526_2672;
-	
-	public void method3615(int i, int i_0_) {
-		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
-			((RenderAnimIndexLoader) this).renderAnimCache.method3858(i, (byte) 19);
+
+	public void method3615(int i_1, int i_2) {
+		SoftCache softcache_3 = this.renderAnimCache;
+		synchronized (this.renderAnimCache) {
+			this.renderAnimCache.method3858(i_1, (byte) 19);
 		}
 	}
 
-	public RenderAnimDefs getRenderAnimDefs(int i, byte i_1_) {
-		RenderAnimDefs animDefs;
-		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
-			animDefs = ((RenderAnimDefs) ((RenderAnimIndexLoader) this).renderAnimCache.get((long) i));
+	public RenderAnimDefs getRenderAnimDefs(int i_1, byte b_2) {
+		SoftCache softcache_4 = this.renderAnimCache;
+		RenderAnimDefs renderanimdefs_3;
+		synchronized (this.renderAnimCache) {
+			renderanimdefs_3 = (RenderAnimDefs) this.renderAnimCache.get((long) i_1);
 		}
-		if (animDefs != null) {
-			animDefs.renderAnimId = i;
-			return animDefs;
-		}
-		byte[] is;
-		synchronized (((RenderAnimIndexLoader) this).aClass317_2671) {
-			is = ((RenderAnimIndexLoader) this).aClass317_2671.getFile(((SharedConfigsType.RENDER_ANIMS.id) * -71319279), i);
-		}
-		animDefs = new RenderAnimDefs();
-		animDefs.renderAnimId = i;
-		((RenderAnimDefs) animDefs).aClass211_2788 = this;
-		if (null != is)
-			animDefs.method3821(new RsByteBuffer(is), -1552501501);
-		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
-			((RenderAnimIndexLoader) this).renderAnimCache.put(animDefs, (long) i);
-		}
-		return animDefs;
-	}
 
-	public void method3617(int i) {
-		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
-			((RenderAnimIndexLoader) this).renderAnimCache.method3859(-2032720796);
-		}
-	}
-
-	public void method3618(byte i) {
-		synchronized (((RenderAnimIndexLoader) this).renderAnimCache) {
-			((RenderAnimIndexLoader) this).renderAnimCache.method3863(1249794319);
-		}
-	}
-
-	public RenderAnimIndexLoader(Game class486, XLanguage class495, Index class317, Defaults6Loader class526) {
-		((RenderAnimIndexLoader) this).aClass317_2671 = class317;
-		((RenderAnimIndexLoader) this).aClass317_2671.filesCount((-71319279 * (SharedConfigsType.RENDER_ANIMS.id)));
-		((RenderAnimIndexLoader) this).aClass526_2672 = class526;
-	}
-
-	static final void sendReportAbusePacket(CS2Executor class527, int i) {
-		class527.anInt7000 -= -1341717846;
-		String string = (String) (class527.objectStack[class527.anInt7000 * 1806726141]);
-		String string_2_ = (String) (class527.objectStack[1806726141 * class527.anInt7000 + 1]);
-		class527.intStackPtr -= 283782002;
-		int i_3_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_4_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
-		if (null == string_2_)
-			string_2_ = "";
-		if (string_2_.length() > 80)
-			string_2_ = string_2_.substring(0, 80);
-		Class184 class184 = Class468_Sub20.method12807(-837831842);
-		TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4611, class184.isaac, -589637310);
-		class282_sub23.buffer.writeByte((ChatLine.getLength(string) + 2 + ChatLine.getLength(string_2_)));
-		class282_sub23.buffer.writeString(string);
-		class282_sub23.buffer.writeByte(i_3_ - 1);
-		class282_sub23.buffer.writeByte(i_4_);
-		class282_sub23.buffer.writeString(string_2_);
-		class184.method3049(class282_sub23, -187330762);
-	}
-
-	static final void method3629(int i, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, int i_10_, int i_11_, int i_12_) {
-		if (!Class456_Sub3.method12682(i, null, -1707980188)) {
-			if (-1 != i_11_)
-				client.aBoolArray7443[i_11_] = true;
-			else {
-				for (int i_13_ = 0; i_13_ < 107; i_13_++)
-					client.aBoolArray7443[i_13_] = true;
+		if (renderanimdefs_3 != null) {
+			renderanimdefs_3.renderAnimId = i_1;
+			return renderanimdefs_3;
+		} else {
+			Index index_5 = this.aClass317_2671;
+			byte[] bytes_10;
+			synchronized (this.aClass317_2671) {
+				bytes_10 = this.aClass317_2671.getFile(SharedConfigsType.RENDER_ANIMS.id, i_1);
 			}
-		} else
-			GroundDecoration.method16094(Class468_Sub8.aClass98Array7889[i].method1616(2127300382), -1, i_5_, i_6_, i_7_, i_8_, i_9_, i_10_, i_11_, i_11_ < 0, (byte) 6);
+
+			renderanimdefs_3 = new RenderAnimDefs();
+			renderanimdefs_3.renderAnimId = i_1;
+			renderanimdefs_3.aClass211_2788 = this;
+			if (bytes_10 != null) {
+				renderanimdefs_3.method3821(new RsByteBuffer(bytes_10), -1552501501);
+			}
+
+			SoftCache softcache_9 = this.renderAnimCache;
+			synchronized (this.renderAnimCache) {
+				this.renderAnimCache.put(renderanimdefs_3, (long) i_1);
+				return renderanimdefs_3;
+			}
+		}
 	}
 
-	public static void method3630(int i) {
+	public void method3617(int i_1) {
+		SoftCache softcache_2 = this.renderAnimCache;
+		synchronized (this.renderAnimCache) {
+			this.renderAnimCache.method3859(-2032720796);
+		}
+	}
+
+	public void method3618(byte b_1) {
+		SoftCache softcache_2 = this.renderAnimCache;
+		synchronized (this.renderAnimCache) {
+			this.renderAnimCache.method3863(1249794319);
+		}
+	}
+
+	public RenderAnimIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Defaults6Loader defaults6loader_4) {
+		this.aClass317_2671 = index_3;
+		this.aClass317_2671.filesCount(SharedConfigsType.RENDER_ANIMS.id);
+		this.aClass526_2672 = defaults6loader_4;
+	}
+
+	static final void sendReportAbusePacket(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.anInt7000 -= 2;
+		String string_2 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000];
+		String string_3 = (String) cs2executor_0.objectStack[cs2executor_0.anInt7000 + 1];
+		cs2executor_0.intStackPtr -= 2;
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_5 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		if (string_3 == null) {
+			string_3 = "";
+		}
+
+		if (string_3.length() > 80) {
+			string_3 = string_3.substring(0, 80);
+		}
+
+		Class184 class184_6 = Class468_Sub20.method12807(-837831842);
+		TCPMessage tcpmessage_7 = Class271.method4828(OutgoingPacket.aClass379_4611, class184_6.isaac, -589637310);
+		tcpmessage_7.buffer.writeByte(ChatLine.getLength(string_2) + 2 + ChatLine.getLength(string_3));
+		tcpmessage_7.buffer.writeString(string_2);
+		tcpmessage_7.buffer.writeByte(i_4 - 1);
+		tcpmessage_7.buffer.writeByte(i_5);
+		tcpmessage_7.buffer.writeString(string_3);
+		class184_6.method3049(tcpmessage_7, -187330762);
+	}
+
+	static final void method3629(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+		if (!Class456_Sub3.method12682(i_0, (int[]) null, -1707980188)) {
+			if (i_7 != -1) {
+				client.aBoolArray7443[i_7] = true;
+			} else {
+				for (int i_9 = 0; i_9 < 107; i_9++) {
+					client.aBoolArray7443[i_9] = true;
+				}
+			}
+		} else {
+			GroundDecoration.method16094(Class468_Sub8.aClass98Array7889[i_0].method1616(2127300382), -1, i_1, i_2, i_3, i_4, i_5, i_6, i_7, i_7 < 0, (byte) 6);
+		}
+
+	}
+
+	public static void method3630(int i_0) {
+		Queue queue_1 = Class236.aQueue2914;
 		synchronized (Class236.aQueue2914) {
-			for (;;) {
-				Class282_Sub53_Sub1 class282_sub53_sub1 = (Class282_Sub53_Sub1) Class236.aQueue2914.poll();
-				if (class282_sub53_sub1 == null)
-					break;
-				class282_sub53_sub1.method13475(-1123290307);
+			while (true) {
+				Class282_Sub53_Sub1 class282_sub53_sub1_2 = (Class282_Sub53_Sub1) Class236.aQueue2914.poll();
+				if (class282_sub53_sub1_2 == null) {
+					return;
+				}
+
+				class282_sub53_sub1_2.method13475(-1123290307);
 			}
 		}
 	}
 
-	public static void method3631(int i, int i_14_) {
-		Class282_Sub50_Sub12 class282_sub50_sub12 = Engine.getIComponentVar(3, (long) i);
-		class282_sub50_sub12.method14965((byte) -28);
+	public static void method3631(int i_0, int i_1) {
+		Class282_Sub50_Sub12 class282_sub50_sub12_2 = Engine.getIComponentVar(3, (long) i_0);
+		class282_sub50_sub12_2.method14965((byte) -28);
 	}
+
 }

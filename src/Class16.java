@@ -1,8 +1,5 @@
-/* Class16 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class16 {
+
 	static int anInt135;
 	static int anInt136;
 	static int anInt137;
@@ -15,336 +12,205 @@ public class Class16 {
 	public static FontRenderer aClass8_144;
 	static NativeSprite[] aClass160Array145;
 	static NativeSprite aClass160_146;
-	
-	static void method551() {
-		Renderers.FONT_RENDERER = null;
-		aClass8_144 = null;
-		Class285.aClass8_3394 = null;
-		Class282_Sub21.aClass160Array7673 = null;
-		aClass160Array138 = null;
-		Class391.aClass160Array4778 = null;
-		Class282_Sub20_Sub15.aClass160Array9838 = null;
-		aClass160Array145 = null;
-		Class282_Sub36.aClass160Array7994 = null;
-		Class250.aClass160Array3092 = null;
-		Class182.aClass160Array2261 = null;
-		aClass160_146 = null;
-		Exception_Sub1.aClass160_10075 = null;
-		Class245.aClass160Array3027 = null;
-	}
-
-	public static void method552(Index class317) {
-		anInt140 = class317.getArchiveId("p11_full") * 1669464149;
-		anInt136 = class317.getArchiveId("p12_full") * 1957167017;
-		Class395.anInt4788 = class317.getArchiveId("b12_full") * 2033224767;
-	}
-
-	public static void method553(Index class317) {
-		anInt140 = class317.getArchiveId("p11_full") * 1669464149;
-		anInt136 = class317.getArchiveId("p12_full") * 1957167017;
-		Class395.anInt4788 = class317.getArchiveId("b12_full") * 2033224767;
-	}
-
-	public static void method554(Index class317) {
-		Class165.anInt2035 = class317.getArchiveId("headicons_pk") * -821889283;
-		Class475.anInt5622 = class317.getArchiveId("headicons_prayer") * -2055869675;
-		anInt135 = class317.getArchiveId("hint_headicons") * -1041729095;
-		anInt142 = class317.getArchiveId("hint_mapmarkers") * 850992921;
-		anInt137 = class317.getArchiveId("mapflag") * 1055165697;
-		Class468_Sub12.anInt7899 = class317.getArchiveId("cross") * 395125199;
-		Class13.anInt130 = class317.getArchiveId("mapdots") * 453785251;
-		anInt143 = class317.getArchiveId("name_icons") * -715854365;
-		Class400.anInt4821 = class317.getArchiveId("floorshadows") * 237532063;
-		anInt141 = class317.getArchiveId("compass") * 1354470119;
-		Class165.anInt2037 = class317.getArchiveId("otherlevel") * -1341930679;
-		Class271.anInt3330 = class317.getArchiveId("hint_mapedge") * 1834682789;
-	}
-
-	public static void method555(Index class317) {
-		Class165.anInt2035 = class317.getArchiveId("headicons_pk") * -821889283;
-		Class475.anInt5622 = class317.getArchiveId("headicons_prayer") * -2055869675;
-		anInt135 = class317.getArchiveId("hint_headicons") * -1041729095;
-		anInt142 = class317.getArchiveId("hint_mapmarkers") * 850992921;
-		anInt137 = class317.getArchiveId("mapflag") * 1055165697;
-		Class468_Sub12.anInt7899 = class317.getArchiveId("cross") * 395125199;
-		Class13.anInt130 = class317.getArchiveId("mapdots") * 453785251;
-		anInt143 = class317.getArchiveId("name_icons") * -715854365;
-		Class400.anInt4821 = class317.getArchiveId("floorshadows") * 237532063;
-		anInt141 = class317.getArchiveId("compass") * 1354470119;
-		Class165.anInt2037 = class317.getArchiveId("otherlevel") * -1341930679;
-		Class271.anInt3330 = class317.getArchiveId("hint_mapedge") * 1834682789;
-	}
-
-	public static int[] method556() {
-		return new int[] { anInt140 * 1500183805, 436671641 * anInt136, -625646657 * Class395.anInt4788 };
-	}
-
-	public static int[] method557() {
-		return new int[] { anInt140 * 1500183805, 436671641 * anInt136, -625646657 * Class395.anInt4788 };
-	}
 
 	Class16() throws Throwable {
 		throw new Error();
 	}
 
-	public static int method558() {
-		return 12;
-	}
-
-	public static void method559(GraphicalRenderer class505) {
-		Renderers.FONT_RENDERER = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, anInt140 * 1500183805, true, true, -2065156362));
-		Class282_Sub17_Sub2.aClass414_9933 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 1500183805 * anInt140, 138214263);
-		aClass8_144 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, 436671641 * anInt136, true, true, -2080739477));
-		aClass414_139 = Class487.aClass378_5752.method6415(client.anInterface35_7206, 436671641 * anInt136, 930529751);
-		Class285.aClass8_3394 = ((FontRenderer) Class487.aClass378_5752.method6426(client.anInterface35_7206, (Class395.anInt4788 * -625646657), true, true, -2130229994));
-		Class288.aClass414_3438 = Class487.aClass378_5752.method6415(client.anInterface35_7206, (Class395.anInt4788 * -625646657), -271839107);
-	}
-
-	static void method560() {
-		Renderers.FONT_RENDERER = null;
-		aClass8_144 = null;
-		Class285.aClass8_3394 = null;
-		Class282_Sub21.aClass160Array7673 = null;
-		aClass160Array138 = null;
-		Class391.aClass160Array4778 = null;
-		Class282_Sub20_Sub15.aClass160Array9838 = null;
-		aClass160Array145 = null;
-		Class282_Sub36.aClass160Array7994 = null;
-		Class250.aClass160Array3092 = null;
-		Class182.aClass160Array2261 = null;
-		aClass160_146 = null;
-		Exception_Sub1.aClass160_10075 = null;
-		Class245.aClass160Array3027 = null;
-	}
-
-	public static void method561(GraphicalRenderer class505, Index class317) {
-		Class91[] class91s = Class91.method1514(class317, Class165.anInt2035 * -1633200555, 0);
-		Class282_Sub21.aClass160Array7673 = new NativeSprite[class91s.length];
-		for (int i = 0; i < class91s.length; i++)
-			Class282_Sub21.aClass160Array7673[i] = class505.method8444(class91s[i], true);
-		class91s = Class91.method1514(class317, -1931867075 * Class475.anInt5622, 0);
-		aClass160Array138 = new NativeSprite[class91s.length];
-		for (int i = 0; i < class91s.length; i++)
-			aClass160Array138[i] = class505.method8444(class91s[i], true);
-		class91s = Class91.method1514(class317, anInt135 * -1739866999, 0);
-		Class391.aClass160Array4778 = new NativeSprite[class91s.length];
-		for (int i = 0; i < class91s.length; i++)
-			Class391.aClass160Array4778[i] = class505.method8444(class91s[i], true);
-		class91s = Class91.method1514(class317, anInt142 * 460049705, 0);
-		Class282_Sub20_Sub15.aClass160Array9838 = new NativeSprite[class91s.length];
-		for (int i = 0; i < class91s.length; i++)
-			Class282_Sub20_Sub15.aClass160Array9838[i] = class505.method8444(class91s[i], true);
-		class91s = Class91.method1514(class317, anInt137 * 566522625, 0);
-		aClass160Array145 = new NativeSprite[class91s.length];
-		int i = 25;
-		for (int i_0_ = 0; i_0_ < class91s.length; i_0_++) {
-			class91s[i_0_].method1529(-i + (int) (Math.random() * (double) i * 2.0), -i + (int) (Math.random() * (double) i * 2.0), -i + (int) (Math.random() * (double) i * 2.0));
-			aClass160Array145[i_0_] = class505.method8444(class91s[i_0_], true);
-		}
-		class91s = Class91.method1514(class317, 1306936623 * Class468_Sub12.anInt7899, 0);
-		Class282_Sub36.aClass160Array7994 = new NativeSprite[class91s.length];
-		for (int i_1_ = 0; i_1_ < class91s.length; i_1_++)
-			Class282_Sub36.aClass160Array7994[i_1_] = class505.method8444(class91s[i_1_], true);
-		class91s = Class91.method1514(class317, -862638837 * Class13.anInt130, 0);
-		Class250.aClass160Array3092 = new NativeSprite[class91s.length];
-		i = 12;
-		for (int i_2_ = 0; i_2_ < class91s.length; i_2_++) {
-			class91s[i_2_].method1529(-i + (int) (Math.random() * (double) i * 2.0), -i + (int) (Math.random() * (double) i * 2.0), -i + (int) (Math.random() * (double) i * 2.0));
-			Class250.aClass160Array3092[i_2_] = class505.method8444(class91s[i_2_], true);
-		}
-		class91s = Class91.method1514(class317, anInt143 * 1595523019, 0);
-		Class182.aClass160Array2261 = new NativeSprite[class91s.length];
-		i = 12;
-		for (int i_3_ = 0; i_3_ < class91s.length; i_3_++) {
-			class91s[i_3_].method1529(-i + (int) (Math.random() * (double) i * 2.0), -i + (int) (Math.random() * (double) i * 2.0), -i + (int) (Math.random() * (double) i * 2.0));
-			Class182.aClass160Array2261[i_3_] = class505.method8444(class91s[i_3_], true);
-		}
-		aClass160_146 = class505.method8444(Class91.method1522(class317, -1636343593 * anInt141, 0), true);
-		Exception_Sub1.aClass160_10075 = class505.method8444(Class91.method1522(class317, (-615473415 * Class165.anInt2037), 0), true);
-		class91s = Class91.method1514(class317, 341095981 * Class271.anInt3330, 0);
-		Class245.aClass160Array3027 = new NativeSprite[class91s.length];
-		for (int i_4_ = 0; i_4_ < class91s.length; i_4_++)
-			Class245.aClass160Array3027[i_4_] = class505.method8444(class91s[i_4_], true);
-	}
-
-	static Class96 method562(RsByteBuffer class282_sub35, int i) {
-		int i_5_ = class282_sub35.readUnsignedByte();
-		Class411 class411 = Class346.method6156(i_5_, 2101068179);
-		Class96 class96 = null;
-		switch (class411.anInt4956 * -385427245) {
-		case 13:
-			class96 = new Class96_Sub3(class282_sub35);
-			break;
-		case 25:
-			class96 = new Class96_Sub10_Sub1(class282_sub35);
-			break;
-		case 15:
-			class96 = new Class96_Sub19(class282_sub35, 0, 0);
-			break;
-		case 5:
-			class96 = new Class96_Sub21(class282_sub35);
-			break;
-		case 11:
-			class96 = new Class96_Sub11(class282_sub35);
-			break;
-		case 14:
-			class96 = new Class96_Sub10_Sub2(class282_sub35);
-			break;
-		case 16:
-			class96 = new Class96_Sub1(class282_sub35);
-			break;
-		case 29:
-			class96 = new Class96_Sub2(class282_sub35);
-			break;
-		default:
-			break;
-		case 2:
-			class96 = new Class96_Sub14(class282_sub35);
-			break;
-		case 8:
-			class96 = new Class96_Sub5(class282_sub35);
-			break;
-		case 19:
-			class96 = new Class96_Sub19(class282_sub35, 1, 0);
-			break;
-		case 28:
-			class96 = new Class96_Sub19(class282_sub35, 1, 1);
-			break;
-		case 20:
-			class96 = new Class96_Sub6(class282_sub35);
-			break;
-		case 24:
-			class96 = new Class96_Sub19(class282_sub35, 0, 1);
-			break;
-		case 9:
-			class96 = new Class96_Sub22(class282_sub35);
-			break;
-		case 4:
-			class96 = new Class96_Sub4(class282_sub35);
-			break;
-		case 26:
-			class96 = new Class96_Sub18(class282_sub35);
-			break;
-		case 22:
-			class96 = new Class96_Sub12(class282_sub35);
-			break;
-		case 23:
-			class96 = new Class96_Sub13(class282_sub35);
-			break;
+	static Class96 method562(RsByteBuffer rsbytebuffer_0, int i_1) {
+		int i_2 = rsbytebuffer_0.readUnsignedByte();
+		Class411 class411_3 = Class346.method6156(i_2, 2101068179);
+		Object obj_4 = null;
+		switch (class411_3.anInt4956) {
 		case 0:
-			class96 = new Class96_Sub15(class282_sub35);
-			break;
-		case 27:
-			class96 = new Class96_Sub16(class282_sub35, true);
-			break;
-		case 10:
-			class96 = new Class96_Sub16(class282_sub35, false);
-			break;
-		case 17:
-			class96 = new Class96_Sub17(class282_sub35);
-			break;
-		case 6:
-			class96 = new Class96_Sub8(class282_sub35);
-			break;
-		case 12:
-			class96 = new Class96_Sub7(class282_sub35);
-			break;
-		case 30:
-			class96 = new Class96_Sub23(class282_sub35);
-			break;
-		case 18:
-			class96 = new Class96_Sub9(class282_sub35);
+			obj_4 = new Class96_Sub15(rsbytebuffer_0);
 			break;
 		case 1:
-			class96 = new Class96_Sub20(class282_sub35);
+			obj_4 = new Class96_Sub20(rsbytebuffer_0);
+			break;
+		case 2:
+			obj_4 = new Class96_Sub14(rsbytebuffer_0);
+		case 3:
+		case 7:
+		case 21:
+		default:
+			break;
+		case 4:
+			obj_4 = new Class96_Sub4(rsbytebuffer_0);
+			break;
+		case 5:
+			obj_4 = new Class96_Sub21(rsbytebuffer_0);
+			break;
+		case 6:
+			obj_4 = new Class96_Sub8(rsbytebuffer_0);
+			break;
+		case 8:
+			obj_4 = new Class96_Sub5(rsbytebuffer_0);
+			break;
+		case 9:
+			obj_4 = new Class96_Sub22(rsbytebuffer_0);
+			break;
+		case 10:
+			obj_4 = new Class96_Sub16(rsbytebuffer_0, false);
+			break;
+		case 11:
+			obj_4 = new Class96_Sub11(rsbytebuffer_0);
+			break;
+		case 12:
+			obj_4 = new Class96_Sub7(rsbytebuffer_0);
+			break;
+		case 13:
+			obj_4 = new Class96_Sub3(rsbytebuffer_0);
+			break;
+		case 14:
+			obj_4 = new Class96_Sub10_Sub2(rsbytebuffer_0);
+			break;
+		case 15:
+			obj_4 = new Class96_Sub19(rsbytebuffer_0, 0, 0);
+			break;
+		case 16:
+			obj_4 = new Class96_Sub1(rsbytebuffer_0);
+			break;
+		case 17:
+			obj_4 = new Class96_Sub17(rsbytebuffer_0);
+			break;
+		case 18:
+			obj_4 = new Class96_Sub9(rsbytebuffer_0);
+			break;
+		case 19:
+			obj_4 = new Class96_Sub19(rsbytebuffer_0, 1, 0);
+			break;
+		case 20:
+			obj_4 = new Class96_Sub6(rsbytebuffer_0);
+			break;
+		case 22:
+			obj_4 = new Class96_Sub12(rsbytebuffer_0);
+			break;
+		case 23:
+			obj_4 = new Class96_Sub13(rsbytebuffer_0);
+			break;
+		case 24:
+			obj_4 = new Class96_Sub19(rsbytebuffer_0, 0, 1);
+			break;
+		case 25:
+			obj_4 = new Class96_Sub10_Sub1(rsbytebuffer_0);
+			break;
+		case 26:
+			obj_4 = new Class96_Sub18(rsbytebuffer_0);
+			break;
+		case 27:
+			obj_4 = new Class96_Sub16(rsbytebuffer_0, true);
+			break;
+		case 28:
+			obj_4 = new Class96_Sub19(rsbytebuffer_0, 1, 1);
+			break;
+		case 29:
+			obj_4 = new Class96_Sub2(rsbytebuffer_0);
+			break;
+		case 30:
+			obj_4 = new Class96_Sub23(rsbytebuffer_0);
 		}
-		return class96;
+
+		return (Class96) obj_4;
 	}
 
-	static final void method563(CS2Executor class527, int i) {
-		int i_6_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_6_, (byte) 11);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_6_ >> 16];
-		RsByteBuffer.method13292(class118, class98, class527, (byte) 60);
+	static final void method563(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 11);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		RsByteBuffer.method13292(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 60);
 	}
 
-	static final void method564(CS2Executor class527, byte i) {
-		int i_7_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_7_, (byte) 53);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_7_ >> 16];
-		NativeLibraryLoader.method4651(class118, class98, class527, (byte) 59);
+	static final void method564(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 53);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		NativeLibraryLoader.method4651(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 59);
 	}
 
-	static final void method565(CS2Executor class527, int i) {
-		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		ChatLine class108 = Class180.method3032(i_8_, (byte) -1);
-		String string = "";
-		if (null != class108 && null != class108.nameSimple)
-			string = class108.nameSimple;
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
+	static final void method565(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		ChatLine chatline_3 = Class180.method3032(i_2, (byte) -1);
+		String str_4 = "";
+		if (chatline_3 != null && chatline_3.nameSimple != null) {
+			str_4 = chatline_3.nameSimple;
+		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = str_4;
 	}
 
-	public static void method566(int i) {
+	public static void method566(int i_0) {
 		Class260.aClass268Array3232 = new Class268[50];
 		Class260.anInt3219 = 0;
 	}
 
-	public static final void method567(String string, boolean bool, byte i) {
-		if (string != null) {
-			if (client.anInt7373 * -1754449153 >= 100)
-				XLoadingStage.method6681(4, (Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE, -927458536)), (byte) 0);
-			else {
-				String string_9_ = Class383.method6515(string, 1942118537);
-				if (null != string_9_) {
-					for (int i_10_ = 0; i_10_ < client.anInt7373 * -1754449153; i_10_++) {
-						Class10 class10 = client.aClass10Array7456[i_10_];
-						String string_11_ = Class383.method6515(class10.aString115, 1942118537);
-						if (string_11_ != null && string_11_.equals(string_9_)) {
-							XLoadingStage.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -794034411)).toString(), (byte) 6);
+	public static final void method567(String string_0, boolean bool_1, byte b_2) {
+		if (string_0 != null) {
+			if (client.anInt7373 >= 100) {
+				LoadingStage.method6681(4, Message.aClass433_5289.translate(Class223.CURRENT_LANGUAGE, -927458536), (byte) 0);
+			} else {
+				String string_3 = Class383.method6515(string_0, 1942118537);
+				if (string_3 != null) {
+					int i_4;
+					String string_6;
+					String string_7;
+					for (i_4 = 0; i_4 < client.anInt7373; i_4++) {
+						Class10 class10_5 = client.aClass10Array7456[i_4];
+						string_6 = Class383.method6515(class10_5.aString115, 1942118537);
+						if (string_6 != null && string_6.equals(string_3)) {
+							LoadingStage.method6681(4, string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -794034411), (byte) 6);
 							return;
 						}
-						if (class10.aString116 != null) {
-							String string_12_ = Class383.method6515(class10.aString116, 1942118537);
-							if (null != string_12_ && string_12_.equals(string_9_)) {
-								XLoadingStage.method6681(4, new StringBuilder().append(string).append(Message.aClass433_5302.translate((Class223.CURRENT_LANGUAGE), -1228902826)).toString(), (byte) 24);
+
+						if (class10_5.aString116 != null) {
+							string_7 = Class383.method6515(class10_5.aString116, 1942118537);
+							if (string_7 != null && string_7.equals(string_3)) {
+								LoadingStage.method6681(4, string_0 + Message.aClass433_5302.translate(Class223.CURRENT_LANGUAGE, -1228902826), (byte) 24);
 								return;
 							}
 						}
 					}
-					for (int i_13_ = 0; i_13_ < client.anInt7449 * 493536965; i_13_++) {
-						Class6 class6 = client.aClass6Array7452[i_13_];
-						String string_14_ = Class383.method6515(class6.aString37, 1942118537);
-						if (null != string_14_ && string_14_.equals(string_9_)) {
-							XLoadingStage.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1154046234)).append(string).append(Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -627858057)).toString(), (byte) 53);
+
+					for (i_4 = 0; i_4 < client.anInt7449; i_4++) {
+						Class6 class6_9 = client.aClass6Array7452[i_4];
+						string_6 = Class383.method6515(class6_9.aString37, 1942118537);
+						if (string_6 != null && string_6.equals(string_3)) {
+							LoadingStage.method6681(4, Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1154046234) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -627858057), (byte) 53);
 							return;
 						}
-						if (null != class6.aString43) {
-							String string_15_ = Class383.method6515(class6.aString43, 1942118537);
-							if (string_15_ != null && string_15_.equals(string_9_)) {
-								XLoadingStage.method6681(4, new StringBuilder().append(Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1770440532)).append(string).append(Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -695950851)).toString(), (byte) 47);
+
+						if (class6_9.aString43 != null) {
+							string_7 = Class383.method6515(class6_9.aString43, 1942118537);
+							if (string_7 != null && string_7.equals(string_3)) {
+								LoadingStage.method6681(4, Message.aClass433_5308.translate(Class223.CURRENT_LANGUAGE, -1770440532) + string_0 + Message.aClass433_5192.translate(Class223.CURRENT_LANGUAGE, -695950851), (byte) 47);
 								return;
 							}
 						}
 					}
-					if (Class383.method6515((Class84.myPlayer.displayName), 1942118537).equals(string_9_))
-						XLoadingStage.method6681(4, (Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410)), (byte) -31);
-					else {
-						Class184 class184 = Class468_Sub20.method12807(1039135585);
-						TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4578, class184.isaac, 732263274);
-						class282_sub23.buffer.writeByte(ChatLine.getLength(string) + 1);
-						class282_sub23.buffer.writeString(string);
-						class282_sub23.buffer.writeByte(bool ? 1 : 0);
-						class184.method3049(class282_sub23, -1139033433);
+
+					if (Class383.method6515(Class84.myPlayer.displayName, 1942118537).equals(string_3)) {
+						LoadingStage.method6681(4, Message.aClass433_5238.translate(Class223.CURRENT_LANGUAGE, -1399059410), (byte) -31);
+					} else {
+						Class184 class184_8 = Class468_Sub20.method12807(1039135585);
+						TCPMessage tcpmessage_10 = Class271.method4828(OutgoingPacket.aClass379_4578, class184_8.isaac, 732263274);
+						tcpmessage_10.buffer.writeByte(ChatLine.getLength(string_0) + 1);
+						tcpmessage_10.buffer.writeString(string_0);
+						tcpmessage_10.buffer.writeByte(bool_1 ? 1 : 0);
+						class184_8.method3049(tcpmessage_10, -1139033433);
 					}
 				}
 			}
 		}
+
 	}
 
-	static final void method568(int i, int i_16_, int i_17_, int i_18_, short i_19_) {
-		if (i > i_16_)
-			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_17_], i_16_, i, i_18_, (byte) -16);
-		else
-			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_17_], i, i_16_, i_18_, (byte) 7);
+	static final void method568(int i_0, int i_1, int i_2, int i_3, short s_4) {
+		if (i_0 > i_1) {
+			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_1, i_0, i_3, (byte) -16);
+		} else {
+			Class232.method3922(Class532_Sub2.anIntArrayArray7072[i_2], i_0, i_1, i_3, (byte) 7);
+		}
+
 	}
+
 }

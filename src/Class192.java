@@ -1,57 +1,53 @@
-/* Class192 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class192 implements Interface9 {
+
+	static Class1 ACCOUNT_CREATION_STAGE;
 	int anInt2388;
 	int anInt2389;
 	int[] anIntArray2390;
-	static Class1 ACCOUNT_CREATION_STAGE;
-	
+
 	public int method77() {
-		return ((Class192) this).anInt2389 * 248625969;
+		return this.anInt2389 * 1040432593 * 248625969;
 	}
 
 	public int method1() {
-		return 240028587 * ((Class192) this).anInt2388;
+		return this.anInt2388;
 	}
 
 	public int method74() {
-		return ((Class192) this).anInt2389 * 248625969;
+		return this.anInt2389;
 	}
 
 	public void method26() {
-		/* empty */
 	}
 
 	public int method39() {
-		return ((Class192) this).anInt2389 * 248625969;
+		return this.anInt2389 * 1040432593 * 248625969;
 	}
 
-	Class192(int i, int i_0_, int[] is) {
-		((Class192) this).anInt2388 = i * -1952966909;
-		((Class192) this).anInt2389 = i_0_ * 1040432593;
-		((Class192) this).anIntArray2390 = is;
+	Class192(int i_1, int i_2, int[] ints_3) {
+		this.anInt2388 = i_1;
+		this.anInt2389 = i_2;
+		this.anIntArray2390 = ints_3;
 	}
 
 	public int method75() {
-		return 240028587 * ((Class192) this).anInt2388;
+		return 240028587 * this.anInt2388 * -1952966909;
 	}
 
 	public int method73() {
-		return ((Class192) this).anInt2389 * 248625969;
+		return this.anInt2389 * 1040432593 * 248625969;
 	}
 
 	public int method76() {
-		return 240028587 * ((Class192) this).anInt2388;
+		return 240028587 * this.anInt2388 * -1952966909;
 	}
 
 	public void method32() {
-		/* empty */
 	}
 
-	static final void method3169(CS2Executor class527, int i) {
-		int i_1_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (class527.aClass282_Sub4_7011.aClass57Array7499[i_1_].anInt526) * -1097296133;
+	static final void method3169(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = cs2executor_0.aClass282_Sub4_7011.aClass57Array7499[i_2].anInt526;
 	}
+
 }

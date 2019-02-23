@@ -1,57 +1,57 @@
-/* Class282_Sub17 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class Class282_Sub17 extends Node {
-	abstract void method12249(RsByteBuffer class282_sub35);
 
-	abstract void method12250(RsByteBuffer class282_sub35, int i);
+	abstract void method12249(RsByteBuffer var1);
 
-	abstract void method12251(Class61 class61, int i);
+	abstract void method12250(RsByteBuffer var1, int var2);
 
-	abstract void method12252(Class61 class61);
+	abstract void method12251(Class61 var1, int var2);
 
-	Class282_Sub17() {
-		/* empty */
+	abstract void method12252(Class61 var1);
+
+	abstract void method12253(RsByteBuffer var1);
+
+	abstract void method12254(Class61 var1);
+
+	abstract void method12255(Class61 var1);
+
+	abstract void method12256(Class61 var1);
+
+	abstract void method12257(RsByteBuffer var1);
+
+	abstract void method12258(Class61 var1);
+
+	public static boolean method12259(int i_0, int i_1) {
+		return i_0 == 0 || i_0 == 2 || i_0 == 7 || i_0 == 6;
 	}
 
-	abstract void method12253(RsByteBuffer class282_sub35);
+	static final void method12260(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 4;
+		icomponentdefinitions_0.anInt1297 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		icomponentdefinitions_0.anInt1298 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		icomponentdefinitions_0.anInt1417 = 0;
+		icomponentdefinitions_0.anInt1326 = 0;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		if (i_4 < 0) {
+			i_4 = 0;
+		} else if (i_4 > 4) {
+			i_4 = 4;
+		}
 
-	abstract void method12254(Class61 class61);
+		int i_5 = cs2executor_2.intStack[cs2executor_2.intStackPtr + 3];
+		if (i_5 < 0) {
+			i_5 = 0;
+		} else if (i_5 > 4) {
+			i_5 = 4;
+		}
 
-	abstract void method12255(Class61 class61);
+		icomponentdefinitions_0.aByte1368 = (byte) i_4;
+		icomponentdefinitions_0.aByte1294 = (byte) i_5;
+		Class109.method1858(icomponentdefinitions_0, (byte) -29);
+		Class44.method913(interface_1, icomponentdefinitions_0, (byte) 1);
+		if (icomponentdefinitions_0.anInt1268 == 0) {
+			Class12.method483(interface_1, icomponentdefinitions_0, false, -610252618);
+		}
 
-	abstract void method12256(Class61 class61);
-
-	abstract void method12257(RsByteBuffer class282_sub35);
-
-	abstract void method12258(Class61 class61);
-
-	public static boolean method12259(int i, int i_0_) {
-		return 0 == i || i == 2 || i == 7 || 6 == i;
 	}
 
-	static final void method12260(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.intStackPtr -= 567564004;
-		class118.anInt1297 = (class527.intStack[class527.intStackPtr * 1942118537]) * -81350191;
-		class118.anInt1298 = ((class527.intStack[class527.intStackPtr * 1942118537 + 1]) * 2017388241);
-		class118.anInt1417 = 0;
-		class118.anInt1326 = 0;
-		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537 + 2]);
-		if (i_1_ < 0)
-			i_1_ = 0;
-		else if (i_1_ > 4)
-			i_1_ = 4;
-		int i_2_ = (class527.intStack[3 + class527.intStackPtr * 1942118537]);
-		if (i_2_ < 0)
-			i_2_ = 0;
-		else if (i_2_ > 4)
-			i_2_ = 4;
-		class118.aByte1368 = (byte) i_1_;
-		class118.aByte1294 = (byte) i_2_;
-		Class109.method1858(class118, (byte) -29);
-		Class44.method913(class98, class118, (byte) 1);
-		if (class118.anInt1268 * -2131393857 == 0)
-			Class12.method483(class98, class118, false, -610252618);
-	}
 }

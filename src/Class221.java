@@ -1,115 +1,99 @@
-/* Class221 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class221 {
-	int anInt2758;
-	static Class221 aClass221_2759 = new Class221(0);
-	static Class221 aClass221_2760;
-	static Class221 aClass221_2761 = new Class221(1);
+
 	public static int anInt2762;
 	static IComponentDefinitions aClass118_2763;
+	static Class221 aClass221_2759 = new Class221(0);
+	static Class221 aClass221_2761 = new Class221(1);
+	static Class221 aClass221_2760 = new Class221(2);
+	int anInt2758;
 
-	static Class221 method3744(int i) {
-		Class221[] class221s = JS5FileWorker.method5815(288844894);
-		for (int i_0_ = 0; i_0_ < class221s.length; i_0_++) {
-			Class221 class221 = class221s[i_0_];
-			if (i == ((Class221) class221).anInt2758 * 692352953)
-				return class221;
+	Class221(int i_1) {
+		this.anInt2758 = i_1;
+	}
+
+	static final void method3747(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		Long long_3 = (Long) Class46.anObjectArray437[i_2];
+		if (long_3 == null) {
+			cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = -1L;
+		} else {
+			cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = long_3.longValue();
 		}
-		return null;
+
 	}
 
-	static {
-		aClass221_2760 = new Class221(2);
+	static final void method3748(CS2Executor cs2executor_0, int i_1) {
+		if (client.aString7165 != null) {
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = client.aString7165;
+		} else {
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+		}
+
 	}
 
-	Class221(int i) {
-		((Class221) this).anInt2758 = i * -1600758135;
+	static final void method3749(CS2Executor cs2executor_0, int i_1) {
+		--cs2executor_0.intStackPtr;
 	}
 
-	static Class221[] method3745() {
-		return (new Class221[] { aClass221_2760, aClass221_2761, aClass221_2759 });
-	}
-
-	static Class221[] method3746() {
-		return (new Class221[] { aClass221_2760, aClass221_2761, aClass221_2759 });
-	}
-
-	static final void method3747(CS2Executor class527, int i) {
-		int i_1_ = (class527.intOpValues[class527.instrPtr * 301123709]);
-		Long var_long = (Long) Class46.anObjectArray437[i_1_];
-		if (var_long == null)
-			class527.aLongArray7003[((class527.anInt7001 += -1188480575) * 1820448321 - 1)] = -1L;
-		else
-			class527.aLongArray7003[((class527.anInt7001 += -1188480575) * 1820448321 - 1)] = var_long.longValue();
-	}
-
-	static final void method3748(CS2Executor class527, int i) {
-		if (client.aString7165 != null)
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = client.aString7165;
-		else
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-	}
-
-	static final void method3749(CS2Executor class527, int i) {
-		class527.intStackPtr -= 141891001;
-	}
-
-	static final void method3750(CS2Executor class527, byte i) {
-		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]), 1688733645);
+	static final void method3750(CS2Executor cs2executor_0, byte b_1) {
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub15_8203, cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1688733645);
 		Class190.method3148((byte) 79);
 	}
 
-	static void method3751(int i, int i_2_, int i_3_, int i_4_, int i_5_, byte i_6_) {
-		int i_7_ = 0;
-		int i_8_ = i_4_;
-		int i_9_ = i_3_ * i_3_;
-		int i_10_ = i_4_ * i_4_;
-		int i_11_ = i_10_ << 1;
-		int i_12_ = i_9_ << 1;
-		int i_13_ = i_4_ << 1;
-		int i_14_ = (1 - i_13_) * i_9_ + i_11_;
-		int i_15_ = i_10_ - i_12_ * (i_13_ - 1);
-		int i_16_ = i_9_ << 2;
-		int i_17_ = i_10_ << 2;
-		int i_18_ = i_11_ * (3 + (i_7_ << 1));
-		int i_19_ = i_12_ * ((i_8_ << 1) - 3);
-		int i_20_ = i_17_ * (1 + i_7_);
-		int i_21_ = i_16_ * (i_8_ - 1);
-		Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_2_], i - i_3_, i_3_ + i, i_5_, (byte) 72);
-		while (i_8_ > 0) {
-			if (i_14_ < 0) {
-				while (i_14_ < 0) {
-					i_14_ += i_18_;
-					i_15_ += i_20_;
-					i_18_ += i_17_;
-					i_20_ += i_17_;
-					i_7_++;
+	static void method3751(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+		int i_6 = 0;
+		int i_7 = i_3;
+		int i_8 = i_2 * i_2;
+		int i_9 = i_3 * i_3;
+		int i_10 = i_9 << 1;
+		int i_11 = i_8 << 1;
+		int i_12 = i_3 << 1;
+		int i_13 = i_10 + (1 - i_12) * i_8;
+		int i_14 = i_9 - i_11 * (i_12 - 1);
+		int i_15 = i_8 << 2;
+		int i_16 = i_9 << 2;
+		int i_17 = ((i_6 << 1) + 3) * i_10;
+		int i_18 = ((i_3 << 1) - 3) * i_11;
+		int i_19 = i_16 * (i_6 + 1);
+		int i_20 = i_15 * (i_3 - 1);
+		Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_4, (byte) 72);
+
+		while (i_7 > 0) {
+			if (i_13 < 0) {
+				while (i_13 < 0) {
+					i_13 += i_17;
+					i_14 += i_19;
+					i_17 += i_16;
+					i_19 += i_16;
+					++i_6;
 				}
 			}
-			if (i_15_ < 0) {
-				i_14_ += i_18_;
-				i_15_ += i_20_;
-				i_18_ += i_17_;
-				i_20_ += i_17_;
-				i_7_++;
+
+			if (i_14 < 0) {
+				i_13 += i_17;
+				i_14 += i_19;
+				i_17 += i_16;
+				i_19 += i_16;
+				++i_6;
 			}
-			i_14_ += -i_21_;
-			i_15_ += -i_19_;
-			i_19_ -= i_16_;
-			i_21_ -= i_16_;
-			i_8_--;
-			int i_22_ = i_2_ - i_8_;
-			int i_23_ = i_2_ + i_8_;
-			int i_24_ = i + i_7_;
-			int i_25_ = i - i_7_;
-			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22_], i_25_, i_24_, i_5_, (byte) 0);
-			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_23_], i_25_, i_24_, i_5_, (byte) 13);
+
+			i_13 += -i_20;
+			i_14 += -i_18;
+			i_18 -= i_15;
+			i_20 -= i_15;
+			--i_7;
+			int i_21 = i_1 - i_7;
+			int i_22 = i_7 + i_1;
+			int i_23 = i_0 + i_6;
+			int i_24 = i_0 - i_6;
+			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_21], i_24, i_23, i_4, (byte) 0);
+			Class232.method3922(Class532_Sub3_Sub1.anIntArrayArray7072[i_22], i_24, i_23, i_4, (byte) 13);
 		}
+
 	}
 
-	static final void method3752(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -762135173 * client.anInt7178;
+	static final void method3752(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7178;
 	}
+
 }

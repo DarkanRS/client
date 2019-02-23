@@ -1,27 +1,25 @@
-/* Class401 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class401 {
-	public int anInt4823;
-	Index aClass317_4824;
+
 	static IComponentDefinitions aClass118_4825;
+	Index aClass317_4824;
+	public int anInt4823;
 
-	public Class401(Game class486, XLanguage class495, Index class317) {
+	public Class401(Game game_1, Language xlanguage_2, Index index_3) {
 		new SoftCache(64);
-		((Class401) this).aClass317_4824 = class317;
-		anInt4823 = (((Class401) this).aClass317_4824.filesCount(((SharedConfigsType.aClass120_1478.id) * -71319279)) * -1443669577);
+		this.aClass317_4824 = index_3;
+		this.anInt4823 = this.aClass317_4824.filesCount(SharedConfigsType.aClass120_1478.id);
 	}
 
-	static final void method6796(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1428 * 198275475;
+	static final void method6796(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1428;
 	}
 
-	static final void method6797(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		int i_1_ = client.aClass330Array7428[i_0_].method5908(-1939537694);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_1_ == 0 ? 1 : 0;
+	static final void method6797(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		int i_3 = client.aClass330Array7428[i_2].method5908(-1939537694);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_3 == 0 ? 1 : 0;
 	}
+
 }

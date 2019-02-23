@@ -1,43 +1,37 @@
-
-/* Class282_Sub41_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import jagtheora.ogg.OggPacket;
 import jagtheora.ogg.OggStreamState;
 
 public class Class282_Sub41_Sub1 extends Class282_Sub41 {
+
 	void method13365() {
-		/* empty */
 	}
 
-	void method13362(OggPacket oggpacket, int i) {
-		/* empty */
+	void method13362(OggPacket oggpacket_1, int i_2) {
 	}
 
-	void method13360(int i) {
-		/* empty */
+	void method13360(int i_1) {
 	}
 
-	void method13363(OggPacket oggpacket) {
-		/* empty */
+	void method13363(OggPacket oggpacket_1) {
 	}
 
-	Class282_Sub41_Sub1(OggStreamState oggstreamstate) {
-		super(oggstreamstate);
+	Class282_Sub41_Sub1(OggStreamState oggstreamstate_1) {
+		super(oggstreamstate_1);
 	}
 
-	void method13366(OggPacket oggpacket) {
-		/* empty */
+	void method13366(OggPacket oggpacket_1) {
 	}
 
 	void method13364() {
-		/* empty */
 	}
 
-	static final void method14700(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class118.anInt1277 = ((class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]) * 204895771);
-		Class109.method1858(class118, (byte) 21);
-		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-			Game.method8207(-1952846363 * class118.idHash, -218557122);
+	static final void method14700(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		icomponentdefinitions_0.anInt1277 = cs2executor_2.intStack[--cs2executor_2.intStackPtr];
+		Class109.method1858(icomponentdefinitions_0, (byte) 21);
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Game.method8207(icomponentdefinitions_0.idHash, -218557122);
+		}
+
 	}
+
 }

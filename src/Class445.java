@@ -1,51 +1,43 @@
-/* Class445 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class445 {
-	public static Class445 aClass445_5380;
-	public static Class445 aClass445_5381 = new Class445();
-	public static Class445 aClass445_5382;
-	public static Class445 aClass445_5383;
+
 	static String aString5384;
+	public static Class445 aClass445_5381 = new Class445();
+	public static Class445 aClass445_5380 = new Class445();
+	public static Class445 aClass445_5382 = new Class445();
+	public static Class445 aClass445_5383 = new Class445();
 
-	Class445() {
-		/* empty */
+	static final void method7428(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = ((Player) cs2executor_0.animable).aClass155_10561.method2626(i_2, (byte) 56);
 	}
 
-	static {
-		aClass445_5380 = new Class445();
-		aClass445_5382 = new Class445();
-		aClass445_5383 = new Class445();
-	}
-
-	static final void method7428(CS2Executor class527, byte i) {
-		int i_0_ = (class527.intOpValues[301123709 * class527.instrPtr]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = ((Player) class527.animable).aClass155_10561.method2626(i_0_, (byte) 56);
-	}
-
-	static final void method7429(IComponentDefinitions class118, int i, byte[] is, byte[] is_1_, CS2Executor class527, int i_2_) {
-		if (class118.aByteArrayArray1366 == null) {
-			if (null != is) {
-				class118.aByteArrayArray1366 = new byte[11][];
-				class118.aByteArrayArray1367 = new byte[11][];
-				class118.anIntArray1395 = new int[11];
-				class118.anIntArray1267 = new int[11];
-			} else
+	static final void method7429(IComponentDefinitions icomponentdefinitions_0, int i_1, byte[] bytes_2, byte[] bytes_3, CS2Executor cs2executor_4, int i_5) {
+		if (icomponentdefinitions_0.aByteArrayArray1366 == null) {
+			if (bytes_2 == null) {
 				return;
+			}
+
+			icomponentdefinitions_0.aByteArrayArray1366 = new byte[11][];
+			icomponentdefinitions_0.aByteArrayArray1367 = new byte[11][];
+			icomponentdefinitions_0.anIntArray1395 = new int[11];
+			icomponentdefinitions_0.anIntArray1267 = new int[11];
 		}
-		class118.aByteArrayArray1366[i] = is;
-		if (null != is)
-			class118.aBool1424 = true;
-		else {
-			class118.aBool1424 = false;
-			for (int i_3_ = 0; i_3_ < class118.aByteArrayArray1366.length; i_3_++) {
-				if (class118.aByteArrayArray1366[i_3_] != null || class118.anIntArray1267[i_3_] > 0) {
-					class118.aBool1424 = true;
+
+		icomponentdefinitions_0.aByteArrayArray1366[i_1] = bytes_2;
+		if (bytes_2 != null) {
+			icomponentdefinitions_0.aBool1424 = true;
+		} else {
+			icomponentdefinitions_0.aBool1424 = false;
+
+			for (int i_6 = 0; i_6 < icomponentdefinitions_0.aByteArrayArray1366.length; i_6++) {
+				if (icomponentdefinitions_0.aByteArrayArray1366[i_6] != null || icomponentdefinitions_0.anIntArray1267[i_6] > 0) {
+					icomponentdefinitions_0.aBool1424 = true;
 					break;
 				}
 			}
 		}
-		class118.aByteArrayArray1367[i] = is_1_;
+
+		icomponentdefinitions_0.aByteArrayArray1367[i_1] = bytes_3;
 	}
+
 }

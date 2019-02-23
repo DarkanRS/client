@@ -1,8 +1,5 @@
-/* Class282_Sub43 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class HookRequest extends Node {
+
 	public int anInt8051;
 	public boolean aBool8052;
 	public IComponentDefinitions iComponentDefs;
@@ -14,4 +11,5 @@ public class HookRequest extends Node {
 	public int anInt8059;
 	public String opName;
 	int anInt8061;
+
 }

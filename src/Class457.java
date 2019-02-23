@@ -1,220 +1,100 @@
-/* Class457 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class457 {
+
 	Class275 aClass275_5468 = new Class275();
 	Class275 aClass275_5469;
 
 	public Class457() {
-		((Class457) this).aClass275_5468.aClass275_3339 = ((Class457) this).aClass275_5468;
-		((Class457) this).aClass275_5468.aClass275_3340 = ((Class457) this).aClass275_5468;
+		this.aClass275_5468.aClass275_3339 = this.aClass275_5468;
+		this.aClass275_5468.aClass275_3340 = this.aClass275_5468;
 	}
 
-	public boolean method7645() {
-		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
+	public void method7647(Class275 class275_1, int i_2) {
+		if (class275_1.aClass275_3340 != null) {
+			class275_1.method4887((byte) -87);
+		}
+
+		class275_1.aClass275_3340 = this.aClass275_5468;
+		class275_1.aClass275_3339 = this.aClass275_5468.aClass275_3339;
+		class275_1.aClass275_3340.aClass275_3339 = class275_1;
+		class275_1.aClass275_3339.aClass275_3340 = class275_1;
 	}
 
-	public void method7646(Class275 class275) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -99);
-		class275.aClass275_3340 = ((Class457) this).aClass275_5468.aClass275_3340;
-		class275.aClass275_3339 = ((Class457) this).aClass275_5468;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public void method7647(Class275 class275, int i) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -87);
-		class275.aClass275_3340 = ((Class457) this).aClass275_5468;
-		class275.aClass275_3339 = ((Class457) this).aClass275_5468.aClass275_3339;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public Class275 method7648(int i) {
-		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-		if (((Class457) this).aClass275_5468 == class275)
+	public Class275 method7648(int i_1) {
+		Class275 class275_2 = this.aClass275_5468.aClass275_3339;
+		if (class275_2 == this.aClass275_5468) {
 			return null;
-		class275.method4887((byte) -116);
-		return class275;
+		} else {
+			class275_2.method4887((byte) -116);
+			return class275_2;
+		}
 	}
 
-	public void method7649(Class275 class275, int i) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -24);
-		class275.aClass275_3340 = ((Class457) this).aClass275_5468.aClass275_3340;
-		class275.aClass275_3339 = ((Class457) this).aClass275_5468;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
+	public void method7649(Class275 class275_1, int i_2) {
+		if (class275_1.aClass275_3340 != null) {
+			class275_1.method4887((byte) -24);
+		}
+
+		class275_1.aClass275_3340 = this.aClass275_5468.aClass275_3340;
+		class275_1.aClass275_3339 = this.aClass275_5468;
+		class275_1.aClass275_3340.aClass275_3339 = class275_1;
+		class275_1.aClass275_3339.aClass275_3340 = class275_1;
 	}
 
-	public Class275 method7650(byte i) {
-		Class275 class275 = ((Class457) this).aClass275_5469;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
+	public Class275 method7650(byte b_1) {
+		Class275 class275_2 = this.aClass275_5469;
+		if (class275_2 == this.aClass275_5468) {
+			this.aClass275_5469 = null;
 			return null;
+		} else {
+			this.aClass275_5469 = class275_2.aClass275_3339;
+			return class275_2;
 		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
 	}
 
-	public void method7651(byte i) {
-		for (;;) {
-			Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-			if (class275 == ((Class457) this).aClass275_5468)
-				break;
-			class275.method4887((byte) -18);
+	public void method7651(byte b_1) {
+		while (true) {
+			Class275 class275_2 = this.aClass275_5468.aClass275_3339;
+			if (class275_2 == this.aClass275_5468) {
+				this.aClass275_5469 = null;
+				return;
+			}
+
+			class275_2.method4887((byte) -18);
 		}
-		((Class457) this).aClass275_5469 = null;
 	}
 
-	public void method7652() {
-		for (;;) {
-			Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-			if (class275 == ((Class457) this).aClass275_5468)
-				break;
-			class275.method4887((byte) -71);
-		}
-		((Class457) this).aClass275_5469 = null;
-	}
-
-	public Class275 method7653() {
-		Class275 class275 = ((Class457) this).aClass275_5469;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
+	public Class275 method7659(int i_1) {
+		Class275 class275_2 = this.aClass275_5468.aClass275_3339;
+		if (class275_2 == this.aClass275_5468) {
+			this.aClass275_5469 = null;
 			return null;
-		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
-	}
-
-	public void method7654(Class275 class275) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -82);
-		class275.aClass275_3340 = ((Class457) this).aClass275_5468;
-		class275.aClass275_3339 = ((Class457) this).aClass275_5468.aClass275_3339;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public static void method7655(Class275 class275, Class275 class275_0_) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -32);
-		class275.aClass275_3340 = class275_0_;
-		class275.aClass275_3339 = class275_0_.aClass275_3339;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public static void method7656(Class275 class275, Class275 class275_1_) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -51);
-		class275.aClass275_3340 = class275_1_;
-		class275.aClass275_3339 = class275_1_.aClass275_3339;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public static void method7657(Class275 class275, Class275 class275_2_) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -108);
-		class275.aClass275_3340 = class275_2_;
-		class275.aClass275_3339 = class275_2_.aClass275_3339;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public static void method7658(Class275 class275, Class275 class275_3_) {
-		if (class275.aClass275_3340 != null)
-			class275.method4887((byte) -90);
-		class275.aClass275_3340 = class275_3_;
-		class275.aClass275_3339 = class275_3_.aClass275_3339;
-		class275.aClass275_3340.aClass275_3339 = class275;
-		class275.aClass275_3339.aClass275_3340 = class275;
-	}
-
-	public Class275 method7659(int i) {
-		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
-			return null;
-		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
-	}
-
-	public Class275 method7660() {
-		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
-			return null;
-		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
-	}
-
-	public Class275 method7661() {
-		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
-			return null;
-		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
-	}
-
-	public Class275 method7662() {
-		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-		if (((Class457) this).aClass275_5468 == class275)
-			return null;
-		class275.method4887((byte) -87);
-		return class275;
-	}
-
-	public Class275 method7663() {
-		Class275 class275 = ((Class457) this).aClass275_5468.aClass275_3339;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
-			return null;
-		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
-	}
-
-	public Class275 method7664() {
-		Class275 class275 = ((Class457) this).aClass275_5469;
-		if (((Class457) this).aClass275_5468 == class275) {
-			((Class457) this).aClass275_5469 = null;
-			return null;
-		}
-		((Class457) this).aClass275_5469 = class275.aClass275_3339;
-		return class275;
-	}
-
-	public boolean method7665() {
-		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
-	}
-
-	public boolean method7666(int i) {
-		return (((Class457) this).aClass275_5468.aClass275_3339 == ((Class457) this).aClass275_5468);
-	}
-
-	static final void method7667(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		class527.intStackPtr -= 425673003;
-		int i_4_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		short i_5_ = (short) (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		short i_6_ = (short) (class527.intStack[1942118537 * class527.intStackPtr + 2]);
-		if (i_4_ >= 0 && i_4_ < 5) {
-			class118.method2007(i_4_, i_5_, i_6_, -1261332787);
-			Class109.method1858(class118, (byte) -93);
-			if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-				RegionMap.method5513(class118.idHash * -1952846363, i_4_, (byte) -1);
+		} else {
+			this.aClass275_5469 = class275_2.aClass275_3339;
+			return class275_2;
 		}
 	}
 
-	static final void method7668(CS2Executor class527, int i) {
-		SpotAnimIndexLoader.method8862((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -1, -1, false, -1732540658);
+	public boolean method7666(int i_1) {
+		return this.aClass275_5468.aClass275_3339 == this.aClass275_5468;
 	}
+
+	static final void method7667(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		cs2executor_2.intStackPtr -= 3;
+		int i_4 = cs2executor_2.intStack[cs2executor_2.intStackPtr];
+		short s_5 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 1];
+		short s_6 = (short) cs2executor_2.intStack[cs2executor_2.intStackPtr + 2];
+		if (i_4 >= 0 && i_4 < 5) {
+			icomponentdefinitions_0.method2007(i_4, s_5, s_6, -1261332787);
+			Class109.method1858(icomponentdefinitions_0, (byte) -93);
+			if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+				RegionMap.method5513(icomponentdefinitions_0.idHash, i_4, (byte) -1);
+			}
+		}
+
+	}
+
+	static final void method7668(CS2Executor cs2executor_0, int i_1) {
+		SpotAnimIndexLoader.method8862(cs2executor_0.intStack[--cs2executor_0.intStackPtr], -1, -1, false, -1732540658);
+	}
+
 }

@@ -1,42 +1,34 @@
-/* Class468_Sub11 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class468_Sub11 extends Class468 {
-	public void method12697() {
-		/* empty */
+
+	void method7783(int i_1, int i_2) {
+		this.anInt5578 = i_1;
 	}
 
-	void method7783(int i, int i_0_) {
-		anInt5578 = i * -754033619;
-	}
-
-	int method7784(int i) {
+	int method7784(int i_1) {
 		return 1;
 	}
 
-	int method7781(int i) {
+	int method7781(int i_1) {
 		return 0;
 	}
 
-	int method7785(int i, int i_1_) {
+	int method7785(int i_1, int i_2) {
 		return 1;
 	}
 
-	public Class468_Sub11(int i, Class282_Sub54 class282_sub54) {
-		super(i, class282_sub54);
+	public Class468_Sub11(int i_1, Class282_Sub54 class282_sub54_2) {
+		super(i_1, class282_sub54_2);
 	}
 
-	public void method12698(byte i) {
-		/* empty */
+	public void method12698(byte b_1) {
 	}
 
-	public int method12699(byte i) {
-		return anInt5578 * -859024475;
+	public int method12699(byte b_1) {
+		return this.anInt5578;
 	}
 
-	void method7780(int i) {
-		anInt5578 = i * -754033619;
+	void method7780(int i_1) {
+		this.anInt5578 = i_1 * -754033619 * -859024475;
 	}
 
 	int method7786() {
@@ -47,37 +39,34 @@ public class Class468_Sub11 extends Class468 {
 		return 0;
 	}
 
-	public Class468_Sub11(Class282_Sub54 class282_sub54) {
-		super(class282_sub54);
+	public Class468_Sub11(Class282_Sub54 class282_sub54_1) {
+		super(class282_sub54_1);
 	}
 
-	public void method12700() {
-		/* empty */
-	}
-
-	public int method12701() {
-		return anInt5578 * -859024475;
-	}
-
-	public static int method12702(int i, int i_2_, int i_3_, int i_4_) {
-		if (Class291_Sub1.anInt8015 * -8084891 < 100)
+	public static int method12702(int i_0, int i_1, int i_2, int i_3) {
+		if (Class291_Sub1.anInt8015 < 100) {
 			return -2;
-		int i_5_ = -2;
-		int i_6_ = 2147483647;
-		int i_7_ = i_2_ - Class291_Sub1.anInt3472;
-		int i_8_ = i_3_ - Class291_Sub1.anInt3473;
-		for (Class282_Sub36 class282_sub36 = ((Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 56)); class282_sub36 != null; class282_sub36 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(317938751)) {
-			if (i == class282_sub36.anInt7991 * -1798678621) {
-				int i_9_ = class282_sub36.anInt7987 * -1306535747;
-				int i_10_ = 1012301095 * class282_sub36.anInt7993;
-				int i_11_ = (Class291_Sub1.anInt3472 + i_9_ << 14 | Class291_Sub1.anInt3473 + i_10_);
-				int i_12_ = ((i_7_ - i_9_) * (i_7_ - i_9_) + (i_8_ - i_10_) * (i_8_ - i_10_));
-				if (i_5_ < 0 || i_12_ < i_6_) {
-					i_5_ = i_11_;
-					i_6_ = i_12_;
+		} else {
+			int i_4 = -2;
+			int i_5 = Integer.MAX_VALUE;
+			int i_6 = i_1 - Class291_Sub1.anInt3472;
+			int i_7 = i_2 - Class291_Sub1.anInt3473;
+
+			for (Class282_Sub36 class282_sub36_8 = (Class282_Sub36) Class291_Sub1.aClass482_3459.head((byte) 56); class282_sub36_8 != null; class282_sub36_8 = (Class282_Sub36) Class291_Sub1.aClass482_3459.next(317938751)) {
+				if (i_0 == class282_sub36_8.anInt7991) {
+					int i_9 = class282_sub36_8.anInt7987;
+					int i_10 = class282_sub36_8.anInt7993;
+					int i_11 = i_9 + Class291_Sub1.anInt3472 << 14 | i_10 + Class291_Sub1.anInt3473;
+					int i_12 = (i_6 - i_9) * (i_6 - i_9) + (i_7 - i_10) * (i_7 - i_10);
+					if (i_4 < 0 || i_12 < i_5) {
+						i_4 = i_11;
+						i_5 = i_12;
+					}
 				}
 			}
+
+			return i_4;
 		}
-		return i_5_;
 	}
+
 }

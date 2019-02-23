@@ -1,19 +1,17 @@
-/* Interface13 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface13 extends Interface9, Interface8 {
-	public void method99(int i);
 
-	public void method100(int i);
+	void method99(int var1);
 
-	public void method101(int i);
+	void method100(int var1);
 
-	public void method102(int i);
+	void method101(int var1);
 
-	public void method103(int i);
+	void method102(int var1);
 
-	public void method104(int i);
+	void method103(int var1);
 
-	public void method105(int i);
+	void method104(int var1);
+
+	void method105(int var1);
+
 }

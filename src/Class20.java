@@ -1,158 +1,148 @@
-
-/* Class20 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-import java.util.Iterator;
-import java.util.List;
-
 public class Class20 {
-	static Matrix44Var aClass294_155;
-	static int anInt156;
-	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_157;
-	static Matrix44Arr aClass384_158;
-	public static boolean aBool161;
-	static boolean aBool162;
-	static Class282_Sub50_Sub15 aClass282_Sub50_Sub15_163;
-	static SoftCache aClass229_164;
-	static int anInt167;
-	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_168;
-	public static int anInt169;
-	public static int anInt170;
-	static NodeCollection aClass482_171;
-	static IterableNodeMap aClass465_172;
-	static NodeCollection aClass482_174;
-	static NodeCollection aClass482_175;
-	static int anInt176;
-	static int[] anIntArray177;
-	static int anInt178 = 426037136;
-	static int anInt179;
-	static int anInt180;
-	static int anInt181;
-	static Class477 aClass477_182;
-	static IComponentDefinitions aClass118_183;
-	static int anInt184;
-	static Matrix44Arr aClass384_185;
-	static int anInt186;
-	public static boolean aBool187;
-	public static int anInt188;
-	static SoftCache aClass229_191;
-	static float[] aFloatArray194;
-	static int anInt195;
-	public static int anInt198;
 
-	static {
-		aBool161 = false;
-		aBool162 = false;
-		aClass282_Sub50_Sub15_163 = null;
-		anInt167 = 0;
-		anInt169 = 0;
-		anInt170 = 0;
-		aClass482_171 = new NodeCollection();
-		aClass465_172 = new IterableNodeMap(16);
-		aClass477_182 = new Class477();
-		aClass482_174 = new NodeCollection();
-		aClass482_175 = new NodeCollection();
-		aClass229_164 = new SoftCache(30);
-		aClass118_183 = null;
-		anInt195 = -1511257025;
-		anInt179 = 248935111;
-		anInt180 = -797571487;
-		anInt181 = 2139368457;
-		anInt176 = 0;
-		anInt184 = 0;
-		aClass384_158 = null;
-		aClass384_185 = new Matrix44Arr();
-		aClass294_155 = new Matrix44Var();
-		aBool187 = false;
-		anInt156 = 0;
-		anInt198 = -1670293651;
-		aClass229_191 = new SoftCache(8);
-		aFloatArray194 = new float[4];
-	}
+	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_157;
+	static Class282_Sub50_Sub7 aClass282_Sub50_Sub7_168;
+	static int[] anIntArray177;
+	static int anInt186;
+	public static int anInt188;
+	static int anInt178 = 16;
+	public static boolean aBool161 = false;
+	static boolean aBool162 = false;
+	static Class282_Sub50_Sub15 aClass282_Sub50_Sub15_163 = null;
+	static int anInt167 = 0;
+	public static int anInt169 = 0;
+	public static int anInt170 = 0;
+	static NodeCollection aClass482_171 = new NodeCollection();
+	static IterableNodeMap aClass465_172 = new IterableNodeMap(16);
+	static Class477 aClass477_182 = new Class477();
+	static NodeCollection aClass482_174 = new NodeCollection();
+	static NodeCollection aClass482_175 = new NodeCollection();
+	static SoftCache aClass229_164 = new SoftCache(30);
+	static IComponentDefinitions aClass118_183 = null;
+	static int anInt195 = -1;
+	static int anInt179 = -1;
+	static int anInt180 = -1;
+	static int anInt181 = -1;
+	static int anInt176 = 0;
+	static int anInt184 = 0;
+	static Matrix44Arr aClass384_158 = null;
+	static Matrix44Arr aClass384_185 = new Matrix44Arr();
+	static Matrix44Var aClass294_155 = new Matrix44Var();
+	public static boolean aBool187 = false;
+	static int anInt156 = 0;
+	public static int anInt198 = -1;
+	static SoftCache aClass229_191 = new SoftCache(8);
+	static float[] aFloatArray194 = new float[4];
 
 	Class20() throws Throwable {
 		throw new Error();
 	}
 
-	static final void method741(CS2Executor class527, short i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class306.method5455(class118, class98, class527, -869216999);
+	static final void method741(CS2Executor cs2executor_0, short s_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class306.method5455(icomponentdefinitions_3, interface_4, cs2executor_0, -869216999);
 	}
 
-	static final void method742(CS2Executor class527, int i) {
-		int i_561_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_561_, -572656458);
-		if (class282_sub50_sub14.anIntArray9746 == null)
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282_sub50_sub14.anIntArray9746.length;
-	}
-
-	static final void method743(CS2Executor class527, byte i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
-	}
-
-	static void method744(int i, int i_562_, int i_563_, int i_564_, int i_565_, int i_566_, int i_567_) {
-		int i_568_ = Class275.method4890(i_563_, 324226563 * Class532_Sub1.anInt7070, Class532_Sub1.anInt7068 * -348932735, -109837866);
-		int i_569_ = Class275.method4890(i_564_, 324226563 * Class532_Sub1.anInt7070, -348932735 * Class532_Sub1.anInt7068, -766812485);
-		int i_570_ = Class275.method4890(i, -612590951 * Class532_Sub1.anInt7071, -1345107225 * Class532_Sub1.anInt7069, -1790568603);
-		int i_571_ = Class275.method4890(i_562_, -612590951 * Class532_Sub1.anInt7071, -1345107225 * Class532_Sub1.anInt7069, -1159028771);
-		int i_572_ = Class275.method4890(i_566_ + i_563_, Class532_Sub1.anInt7070 * 324226563, Class532_Sub1.anInt7068 * -348932735, -1317034828);
-		int i_573_ = Class275.method4890(i_564_ - i_566_, 324226563 * Class532_Sub1.anInt7070, Class532_Sub1.anInt7068 * -348932735, -1696179527);
-		for (int i_574_ = i_568_; i_574_ < i_572_; i_574_++)
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_574_], i_570_, i_571_, i_565_, (byte) 31);
-		for (int i_575_ = i_569_; i_575_ > i_573_; i_575_--)
-			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_575_], i_570_, i_571_, i_565_, (byte) 46);
-		int i_576_ = Class275.method4890(i_566_ + i, Class532_Sub1.anInt7071 * -612590951, Class532_Sub1.anInt7069 * -1345107225, 2146581760);
-		int i_577_ = Class275.method4890(i_562_ - i_566_, -612590951 * Class532_Sub1.anInt7071, -1345107225 * Class532_Sub1.anInt7069, 167924575);
-		for (int i_578_ = i_572_; i_578_ <= i_573_; i_578_++) {
-			int[] is = Class532_Sub1.anIntArrayArray7072[i_578_];
-			Class232.method3922(is, i_570_, i_576_, i_565_, (byte) -7);
-			Class232.method3922(is, i_577_, i_571_, i_565_, (byte) -37);
+	static final void method742(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		Class282_Sub50_Sub14 class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, -572656458);
+		if (class282_sub50_sub14_3.anIntArray9746 == null) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class282_sub50_sub14_3.anIntArray9746.length;
 		}
+
 	}
 
-	static final void method745(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.aBool7155 ? 1 : 0;
+	static final void method743(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub22_8213.method12872(-257053432) ? 1 : 0;
 	}
 
-	public static void animate(Animable animable, int[] animationIds, int speed, boolean bool, byte i_579_) {
-		if (null != animable.currentAnimations) {
-			boolean noNewAnimations = true;
-			for (int i = 0; i < animable.currentAnimations.length; i++) {
-				if (animationIds[i] != animable.currentAnimations[i]) {
-					noNewAnimations = false;
+	static void method744(int i_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6) {
+		int i_7 = Class275.method4890(i_2, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -109837866);
+		int i_8 = Class275.method4890(i_3, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -766812485);
+		int i_9 = Class275.method4890(i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1790568603);
+		int i_10 = Class275.method4890(i_1, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, -1159028771);
+		int i_11 = Class275.method4890(i_5 + i_2, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -1317034828);
+		int i_12 = Class275.method4890(i_3 - i_5, Class532_Sub1.anInt7070, Class532_Sub1.anInt7068, -1696179527);
+
+		int i_13;
+		for (i_13 = i_7; i_13 < i_11; i_13++) {
+			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_13], i_9, i_10, i_4, (byte) 31);
+		}
+
+		for (i_13 = i_8; i_13 > i_12; --i_13) {
+			Class232.method3922(Class532_Sub1.anIntArrayArray7072[i_13], i_9, i_10, i_4, (byte) 46);
+		}
+
+		i_13 = Class275.method4890(i_5 + i_0, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 2146581760);
+		int i_14 = Class275.method4890(i_1 - i_5, Class532_Sub1.anInt7071, Class532_Sub1.anInt7069, 167924575);
+
+		for (int i_15 = i_11; i_15 <= i_12; i_15++) {
+			int[] ints_16 = Class532_Sub1.anIntArrayArray7072[i_15];
+			Class232.method3922(ints_16, i_9, i_13, i_4, (byte) -7);
+			Class232.method3922(ints_16, i_14, i_10, i_4, (byte) -37);
+		}
+
+	}
+
+	static final void method745(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7155 ? 1 : 0;
+	}
+
+	public static void animate(Animable animable_0, int[] ints_1, int i_2, boolean bool_3, byte b_4) {
+		boolean bool_5;
+		int i_6;
+		if (animable_0.currentAnimations != null) {
+			bool_5 = true;
+
+			for (i_6 = 0; i_6 < animable_0.currentAnimations.length; i_6++) {
+				if (animable_0.currentAnimations[i_6] != ints_1[i_6]) {
+					bool_5 = false;
 					break;
 				}
 			}
-			Animation currentAnim = animable.currentAnimation;
-			if (noNewAnimations && currentAnim.hasDefs()) {
-				AnimationDefinitions class518 = animable.currentAnimation.getDefs();
-				int speedType = 554947543 * class518.anInt5907;
-				if (speedType == 1)
-					currentAnim.method7583(speed, (byte) 0);
-				if (2 == speedType)
-					currentAnim.method7584(-272427166);
+
+			Animation animation_9 = animable_0.currentAnimation;
+			if (bool_5 && animation_9.hasDefs()) {
+				AnimationDefinitions animationdefinitions_7 = animable_0.currentAnimation.getDefs();
+				int i_8 = animationdefinitions_7.anInt5907;
+				if (i_8 == 1) {
+					animation_9.method7583(i_2, (byte) 0);
+				}
+
+				if (i_8 == 2) {
+					animation_9.method7584(-272427166);
+				}
 			}
 		}
-		boolean finishAnimation = true;
-		for (int i = 0; i < animationIds.length; i++) {
-			if (-1 != animationIds[i])
-				finishAnimation = false;
-			if (null == animable.currentAnimations || -1 == animable.currentAnimations[i] || ((IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animationIds[i], (byte) -52).priority) * -1834317435 >= (IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animable.currentAnimations[i], (byte) -23).priority) * -1834317435)) {
-				animable.currentAnimations = animationIds;
-				animable.currentAnimation.setSpeed(speed);
-				if (bool)
-					animable.anInt10367 = 485298635 * animable.anInt10355;
+
+		bool_5 = true;
+
+		for (i_6 = 0; i_6 < ints_1.length; i_6++) {
+			if (ints_1[i_6] != -1) {
+				bool_5 = false;
+			}
+
+			if (animable_0.currentAnimations == null || animable_0.currentAnimations[i_6] == -1 || IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(ints_1[i_6], (byte) -52).priority >= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animable_0.currentAnimations[i_6], (byte) -23).priority) {
+				animable_0.currentAnimations = ints_1;
+				animable_0.currentAnimation.setSpeed(i_2);
+				if (bool_3) {
+					animable_0.anInt10367 = animable_0.anInt10355;
+				}
 			}
 		}
-		if (finishAnimation) {
-			animable.currentAnimations = animationIds;
-			animable.currentAnimation.setSpeed(speed);
-			if (bool)
-				animable.anInt10367 = 485298635 * animable.anInt10355;
+
+		if (bool_5) {
+			animable_0.currentAnimations = ints_1;
+			animable_0.currentAnimation.setSpeed(i_2);
+			if (bool_3) {
+				animable_0.anInt10367 = animable_0.anInt10355;
+			}
 		}
+
 	}
+
 }

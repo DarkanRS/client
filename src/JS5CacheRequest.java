@@ -1,17 +1,14 @@
-/* Class282_Sub50_Sub11 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class JS5CacheRequest extends CacheableNode {
+
 	boolean aBool9637;
 	boolean aBool9638;
 	volatile boolean incomplete = true;
 
 	abstract byte[] method14941();
 
-	abstract byte[] getData(int i);
+	abstract byte[] getData(int var1);
 
-	abstract int getCompletion(int i);
+	abstract int getCompletion(int var1);
 
 	abstract byte[] method14944();
 
@@ -21,13 +18,10 @@ public abstract class JS5CacheRequest extends CacheableNode {
 
 	abstract int method14947();
 
-	JS5CacheRequest() {
-		/* empty */
-	}
-
 	abstract int method14948();
 
-	static void method14949(Class466 class466, int i) {
-		Class404.aClass466_4831 = class466;
+	static void method14949(Class466 class466_0, int i_1) {
+		Class404.aClass466_4831 = class466_0;
 	}
+
 }

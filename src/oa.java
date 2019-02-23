@@ -1,94 +1,84 @@
-/* oa - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class oa implements Interface8, Interface40 {
-	int anInt2681;
+
 	long nativeid = 0L;
+	int anInt2681;
 	int anInt2682;
 
-	native void e(long l, boolean bool);
+	native void e(long var1, boolean var3);
 
-	native void g(int i, int i_0_);
+	native void g(int var1, int var2);
 
 	public int method1() {
-		return ((oa) this).anInt2681;
+		return this.anInt2681;
 	}
 
 	public void finalize() {
-		if (((oa) this).nativeid != 0L)
+		if (this.nativeid != 0L) {
 			Class156.method2642(this, (byte) 60);
+		}
+
 	}
 
-	oa(int i, int i_1_) {
-		((oa) this).anInt2681 = i;
-		((oa) this).anInt2682 = i_1_;
-		g(i, i_1_);
+	oa(int i_1, int i_2) {
+		this.anInt2681 = i_1;
+		this.anInt2682 = i_2;
+		this.g(i_1, i_2);
 	}
 
-	public void y(boolean bool) {
-		za(((oa) this).nativeid, bool);
+	public void y(boolean bool_1) {
+		this.za(this.nativeid, bool_1);
 	}
 
-	native void za(long l, boolean bool);
+	native void za(long var1, boolean var3);
 
 	public int method73() {
-		return ((oa) this).anInt2682;
+		return this.anInt2682;
 	}
 
 	public int method75() {
-		return ((oa) this).anInt2681;
+		return this.anInt2681;
 	}
 
-	native void w(long l, boolean bool);
+	native void w(long var1, boolean var3);
 
 	public int method77() {
-		return ((oa) this).anInt2682;
+		return this.anInt2682;
 	}
 
 	public int method76() {
-		return ((oa) this).anInt2681;
+		return this.anInt2681;
 	}
 
-	public void ma(boolean bool) {
-		za(((oa) this).nativeid, bool);
+	public void ma(boolean bool_1) {
+		this.za(this.nativeid, bool_1);
 	}
 
 	public void method32() {
-		ma(false);
-	}
-
-	void method3663() {
-		if (((oa) this).nativeid != 0L)
-			Class156.method2642(this, (byte) 77);
-	}
-
-	void method3664() {
-		if (((oa) this).nativeid != 0L)
-			Class156.method2642(this, (byte) 76);
+		this.ma(false);
 	}
 
 	public int method39() {
-		return ((oa) this).anInt2682;
+		return this.anInt2682;
 	}
 
-	public void x(boolean bool) {
-		za(((oa) this).nativeid, bool);
+	public void x(boolean bool_1) {
+		this.za(this.nativeid, bool_1);
 	}
 
-	native void j(int i, int i_2_);
+	native void j(int var1, int var2);
 
-	native void o(int i, int i_3_);
+	native void o(int var1, int var2);
 
-	native void l(long l, boolean bool);
+	native void l(long var1, boolean var3);
 
 	public int method74() {
-		return ((oa) this).anInt2682;
+		return this.anInt2682;
 	}
 
 	public void method26() {
-		ma(false);
+		this.ma(false);
 	}
 
-	native void s(long l, boolean bool);
+	native void s(long var1, boolean var3);
+
 }

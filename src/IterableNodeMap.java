@@ -1,359 +1,183 @@
-
-/* Class465 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.util.Iterator;
 
 public final class IterableNodeMap implements Iterable {
-	long aLong5557;
-	Node[] aClass282Array5558;
-	Node aClass282_5559;
-	int anInt5560;
+
 	Node aClass282_5561;
+	Node aClass282_5559;
 	int anInt5562 = 0;
+	long aLong5557;
+	int anInt5560;
+	Node[] aClass282Array5558;
 
-	public Node method7745() {
-		if (null == ((IterableNodeMap) this).aClass282_5561)
+	public Node method7747(int i_1) {
+		if (this.aClass282_5561 == null) {
 			return null;
-		for (Node class282 = (((IterableNodeMap) this).aClass282Array5558[(int) (4504069746288158699L * ((IterableNodeMap) this).aLong5557 & (long) (((IterableNodeMap) this).anInt5560 * 25900449 - 1))]); class282 != ((IterableNodeMap) this).aClass282_5561; ((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev) {
-			if ((((IterableNodeMap) this).aClass282_5561.data * -3442165056282524525L) == ((IterableNodeMap) this).aLong5557 * 4504069746288158699L) {
-				Node class282_0_ = ((IterableNodeMap) this).aClass282_5561;
-				((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev;
-				return class282_0_;
+		} else {
+			for (Node node_2 = this.aClass282Array5558[(int) (this.aLong5557 & (long) (this.anInt5560 - 1))]; node_2 != this.aClass282_5561; this.aClass282_5561 = this.aClass282_5561.prev) {
+				if (this.aClass282_5561.data == this.aLong5557) {
+					Node node_3 = this.aClass282_5561;
+					this.aClass282_5561 = this.aClass282_5561.prev;
+					return node_3;
+				}
 			}
-		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		return null;
-	}
 
-	public void method7746() {
-		for (int i = 0; i < ((IterableNodeMap) this).anInt5560 * 25900449; i++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i];
-			for (;;) {
-				Node class282_1_ = class282.prev;
-				if (class282 == class282_1_)
-					break;
-				class282_1_.remove();
-			}
-		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		((IterableNodeMap) this).aClass282_5559 = null;
-	}
-
-	public Node method7747(int i) {
-		if (null == ((IterableNodeMap) this).aClass282_5561)
+			this.aClass282_5561 = null;
 			return null;
-		for (Node class282 = (((IterableNodeMap) this).aClass282Array5558[(int) (4504069746288158699L * ((IterableNodeMap) this).aLong5557 & (long) (((IterableNodeMap) this).anInt5560 * 25900449 - 1))]); class282 != ((IterableNodeMap) this).aClass282_5561; ((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev) {
-			if ((((IterableNodeMap) this).aClass282_5561.data * -3442165056282524525L) == ((IterableNodeMap) this).aLong5557 * 4504069746288158699L) {
-				Node class282_2_ = ((IterableNodeMap) this).aClass282_5561;
-				((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev;
-				return class282_2_;
-			}
 		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		return null;
 	}
 
-	public int method7748(short i) {
-		int i_3_ = 0;
-		for (int i_4_ = 0; i_4_ < 25900449 * ((IterableNodeMap) this).anInt5560; i_4_++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i_4_];
-			for (Node class282_5_ = class282.prev; class282 != class282_5_; class282_5_ = class282_5_.prev)
-				i_3_++;
+	public int method7748(short s_1) {
+		int i_2 = 0;
+
+		for (int i_3 = 0; i_3 < this.anInt5560; i_3++) {
+			Node node_4 = this.aClass282Array5558[i_3];
+
+			for (Node node_5 = node_4.prev; node_4 != node_5; node_5 = node_5.prev) {
+				++i_2;
+			}
 		}
-		return i_3_;
+
+		return i_2;
 	}
 
 	public Iterator iterator() {
 		return new Class451(this);
 	}
 
-	public void method7749(int i) {
-		for (int i_6_ = 0; i_6_ < ((IterableNodeMap) this).anInt5560 * 25900449; i_6_++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i_6_];
-			for (;;) {
-				Node class282_7_ = class282.prev;
-				if (class282 == class282_7_)
+	public void method7749(int i_1) {
+		for (int i_2 = 0; i_2 < this.anInt5560; i_2++) {
+			Node node_3 = this.aClass282Array5558[i_2];
+
+			while (true) {
+				Node node_4 = node_3.prev;
+				if (node_3 == node_4) {
 					break;
-				class282_7_.remove();
+				}
+
+				node_4.remove();
 			}
 		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		((IterableNodeMap) this).aClass282_5559 = null;
+
+		this.aClass282_5561 = null;
+		this.aClass282_5559 = null;
 	}
 
-	public Node method7750(int i) {
-		((IterableNodeMap) this).anInt5562 = 0;
-		return method7751((byte) 63);
+	public Node method7750(int i_1) {
+		this.anInt5562 = 0;
+		return this.method7751((byte) 63);
 	}
 
-	public Node method7751(byte i) {
-		if (((IterableNodeMap) this).anInt5562 * 620631441 > 0 && ((((IterableNodeMap) this).aClass282Array5558[((IterableNodeMap) this).anInt5562 * 620631441 - 1]) != ((IterableNodeMap) this).aClass282_5559)) {
-			Node class282 = ((IterableNodeMap) this).aClass282_5559;
-			((IterableNodeMap) this).aClass282_5559 = class282.prev;
-			return class282;
-		}
-		while (((IterableNodeMap) this).anInt5562 * 620631441 < 25900449 * ((IterableNodeMap) this).anInt5560) {
-			Node class282 = (((IterableNodeMap) this).aClass282Array5558[((((IterableNodeMap) this).anInt5562 += -745059471) * 620631441 - 1)].prev);
-			if ((((IterableNodeMap) this).aClass282Array5558[620631441 * ((IterableNodeMap) this).anInt5562 - 1]) != class282) {
-				((IterableNodeMap) this).aClass282_5559 = class282.prev;
-				return class282;
+	public Node method7751(byte b_1) {
+		Node node_2;
+		if (this.anInt5562 > 0 && this.aClass282Array5558[this.anInt5562 - 1] != this.aClass282_5559) {
+			node_2 = this.aClass282_5559;
+			this.aClass282_5559 = node_2.prev;
+			return node_2;
+		} else {
+			while (this.anInt5562 < this.anInt5560) {
+				node_2 = this.aClass282Array5558[++this.anInt5562 - 1].prev;
+				if (node_2 != this.aClass282Array5558[this.anInt5562 - 1]) {
+					this.aClass282_5559 = node_2.prev;
+					return node_2;
+				}
 			}
-		}
-		return null;
-	}
 
-	public Node method7752(long l) {
-		((IterableNodeMap) this).aLong5557 = l * 7471503269310367939L;
-		Node class282 = (((IterableNodeMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((IterableNodeMap) this).anInt5560 - 1))]);
-		for (((IterableNodeMap) this).aClass282_5561 = class282.prev; class282 != ((IterableNodeMap) this).aClass282_5561; ((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev) {
-			if (l == (((IterableNodeMap) this).aClass282_5561.data * -3442165056282524525L)) {
-				Node class282_8_ = ((IterableNodeMap) this).aClass282_5561;
-				((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev;
-				return class282_8_;
-			}
-		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		return null;
-	}
-
-	public Node method7753() {
-		if (((IterableNodeMap) this).anInt5562 * 620631441 > 0 && ((((IterableNodeMap) this).aClass282Array5558[((IterableNodeMap) this).anInt5562 * 620631441 - 1]) != ((IterableNodeMap) this).aClass282_5559)) {
-			Node class282 = ((IterableNodeMap) this).aClass282_5559;
-			((IterableNodeMap) this).aClass282_5559 = class282.prev;
-			return class282;
-		}
-		while (((IterableNodeMap) this).anInt5562 * 620631441 < 25900449 * ((IterableNodeMap) this).anInt5560) {
-			Node class282 = (((IterableNodeMap) this).aClass282Array5558[((((IterableNodeMap) this).anInt5562 += -745059471) * 620631441 - 1)].prev);
-			if ((((IterableNodeMap) this).aClass282Array5558[620631441 * ((IterableNodeMap) this).anInt5562 - 1]) != class282) {
-				((IterableNodeMap) this).aClass282_5559 = class282.prev;
-				return class282;
-			}
-		}
-		return null;
-	}
-
-	public Node method7754(long l) {
-		((IterableNodeMap) this).aLong5557 = l * 7471503269310367939L;
-		Node class282 = (((IterableNodeMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((IterableNodeMap) this).anInt5560 - 1))]);
-		for (((IterableNodeMap) this).aClass282_5561 = class282.prev; class282 != ((IterableNodeMap) this).aClass282_5561; ((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev) {
-			if (l == (((IterableNodeMap) this).aClass282_5561.data * -3442165056282524525L)) {
-				Node class282_9_ = ((IterableNodeMap) this).aClass282_5561;
-				((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev;
-				return class282_9_;
-			}
-		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		return null;
-	}
-
-	public void method7755() {
-		for (int i = 0; i < ((IterableNodeMap) this).anInt5560 * 25900449; i++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i];
-			for (;;) {
-				Node class282_10_ = class282.prev;
-				if (class282 == class282_10_)
-					break;
-				class282_10_.remove();
-			}
-		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		((IterableNodeMap) this).aClass282_5559 = null;
-	}
-
-	public void method7756() {
-		for (int i = 0; i < ((IterableNodeMap) this).anInt5560 * 25900449; i++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i];
-			for (;;) {
-				Node class282_11_ = class282.prev;
-				if (class282 == class282_11_)
-					break;
-				class282_11_.remove();
-			}
-		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		((IterableNodeMap) this).aClass282_5559 = null;
-	}
-
-	public Node method7757() {
-		if (null == ((IterableNodeMap) this).aClass282_5561)
 			return null;
-		for (Node class282 = (((IterableNodeMap) this).aClass282Array5558[(int) (4504069746288158699L * ((IterableNodeMap) this).aLong5557 & (long) (((IterableNodeMap) this).anInt5560 * 25900449 - 1))]); class282 != ((IterableNodeMap) this).aClass282_5561; ((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev) {
-			if ((((IterableNodeMap) this).aClass282_5561.data * -3442165056282524525L) == ((IterableNodeMap) this).aLong5557 * 4504069746288158699L) {
-				Node class282_12_ = ((IterableNodeMap) this).aClass282_5561;
-				((IterableNodeMap) this).aClass282_5561 = ((IterableNodeMap) this).aClass282_5561.prev;
-				return class282_12_;
+		}
+	}
+
+	public Node method7754(long long_1) {
+		this.aLong5557 = long_1;
+		Node node_3 = this.aClass282Array5558[(int) (long_1 & (long) (this.anInt5560 - 1))];
+
+		for (this.aClass282_5561 = node_3.prev; node_3 != this.aClass282_5561; this.aClass282_5561 = this.aClass282_5561.prev) {
+			if (long_1 == this.aClass282_5561.data) {
+				Node node_4 = this.aClass282_5561;
+				this.aClass282_5561 = this.aClass282_5561.prev;
+				return node_4;
 			}
 		}
-		((IterableNodeMap) this).aClass282_5561 = null;
+
+		this.aClass282_5561 = null;
 		return null;
 	}
 
-	public int method7758() {
-		int i = 0;
-		for (int i_13_ = 0; i_13_ < 25900449 * ((IterableNodeMap) this).anInt5560; i_13_++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i_13_];
-			for (Node class282_14_ = class282.prev; class282 != class282_14_; class282_14_ = class282_14_.prev)
-				i++;
+	public void method7765(Node node_1, long long_2) {
+		if (node_1.next != null) {
+			node_1.remove();
 		}
-		return i;
+
+		Node node_4 = this.aClass282Array5558[(int) (long_2 & (long) (this.anInt5560 - 1))];
+		node_1.next = node_4.next;
+		node_1.prev = node_4;
+		node_1.next.prev = node_1;
+		node_1.prev.next = node_1;
+		node_1.data = long_2;
 	}
 
-	public void method7759(Node class282, long l) {
-		if (class282.next != null)
-			class282.remove();
-		Node class282_15_ = (((IterableNodeMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((IterableNodeMap) this).anInt5560 - 1))]);
-		class282.next = class282_15_.next;
-		class282.prev = class282_15_;
-		class282.next.prev = class282;
-		class282.prev.next = class282;
-		class282.data = -1253863389874800229L * l;
+	public IterableNodeMap(int i_1) {
+		this.anInt5560 = i_1;
+		this.aClass282Array5558 = new Node[i_1];
+
+		for (int i_2 = 0; i_2 < i_1; i_2++) {
+			Node node_3 = this.aClass282Array5558[i_2] = new Node();
+			node_3.prev = node_3;
+			node_3.next = node_3;
+		}
+
 	}
 
-	public void method7760(Node class282, long l) {
-		if (class282.next != null)
-			class282.remove();
-		Node class282_16_ = (((IterableNodeMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((IterableNodeMap) this).anInt5560 - 1))]);
-		class282.next = class282_16_.next;
-		class282.prev = class282_16_;
-		class282.next.prev = class282;
-		class282.prev.next = class282;
-		class282.data = -1253863389874800229L * l;
+	static final void method7771(CS2Executor cs2executor_0, int i_1) {
+		String string_2;
+		if (Class84.myPlayer != null && Class84.myPlayer.username != null) {
+			string_2 = Class84.myPlayer.method16128(false, 1912893547);
+		} else {
+			string_2 = "";
+		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
 	}
 
-	public void method7761(Node class282, long l) {
-		if (class282.next != null)
-			class282.remove();
-		Node class282_17_ = (((IterableNodeMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((IterableNodeMap) this).anInt5560 - 1))]);
-		class282.next = class282_17_.next;
-		class282.prev = class282_17_;
-		class282.next.prev = class282;
-		class282.prev.next = class282;
-		class282.data = -1253863389874800229L * l;
-	}
+	static final void method7772(Class282_Sub31 class282_sub31_0, boolean bool_1, int i_2) {
+		if (class282_sub31_0.aBool7774) {
+			if (class282_sub31_0.anInt7765 < 0 || Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1617066319), class282_sub31_0.anInt7765, class282_sub31_0.anInt7770, 1942118537)) {
+				if (!bool_1) {
+					Class174.animateObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7766, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, class282_sub31_0.anInt7765, class282_sub31_0.anInt7767, class282_sub31_0.anInt7770, -1, -1133711870);
+				} else {
+					QuickChatDynamicValue.method4179(class282_sub31_0.anInt7764, class282_sub31_0.anInt7766, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, (Class476) null, (byte) 30);
+				}
 
-	public Iterator method7762() {
-		return new Class451(this);
-	}
+				class282_sub31_0.remove();
+			}
+		} else if (class282_sub31_0.aBool7773 && class282_sub31_0.anInt7762 >= 1 && class282_sub31_0.anInt7763 >= 1 && class282_sub31_0.anInt7762 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(800318016) - 2 && class282_sub31_0.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-349859539) - 2 && (class282_sub31_0.anInt7769 < 0 || Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1528257548), class282_sub31_0.anInt7769, class282_sub31_0.anInt7771, 1942118537))) {
+			if (!bool_1) {
+				Class174.animateObject(class282_sub31_0.anInt7764, class282_sub31_0.anInt7766, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, class282_sub31_0.anInt7769, class282_sub31_0.anInt7772, class282_sub31_0.anInt7771, -1, -1118636715);
+			} else {
+				QuickChatDynamicValue.method4179(class282_sub31_0.anInt7764, class282_sub31_0.anInt7766, class282_sub31_0.anInt7762, class282_sub31_0.anInt7763, class282_sub31_0.aClass476_7768, (byte) 127);
+			}
 
-	public Iterator method7763() {
-		return new Class451(this);
-	}
-
-	public void method7764() {
-		for (int i = 0; i < ((IterableNodeMap) this).anInt5560 * 25900449; i++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i];
-			for (;;) {
-				Node class282_18_ = class282.prev;
-				if (class282 == class282_18_)
-					break;
-				class282_18_.remove();
+			class282_sub31_0.aBool7773 = false;
+			if (!bool_1 && class282_sub31_0.anInt7765 == class282_sub31_0.anInt7769 && class282_sub31_0.anInt7765 == -1) {
+				class282_sub31_0.remove();
+			} else if (!bool_1 && class282_sub31_0.anInt7765 == class282_sub31_0.anInt7769 && class282_sub31_0.anInt7767 == class282_sub31_0.anInt7772 && class282_sub31_0.anInt7771 == class282_sub31_0.anInt7770) {
+				class282_sub31_0.remove();
 			}
 		}
-		((IterableNodeMap) this).aClass282_5561 = null;
-		((IterableNodeMap) this).aClass282_5559 = null;
+
 	}
 
-	public void method7765(Node class282, long l) {
-		if (class282.next != null)
-			class282.remove();
-		Node class282_19_ = (((IterableNodeMap) this).aClass282Array5558[(int) (l & (long) (25900449 * ((IterableNodeMap) this).anInt5560 - 1))]);
-		class282.next = class282_19_.next;
-		class282.prev = class282_19_;
-		class282.next.prev = class282;
-		class282.prev.next = class282;
-		class282.data = -1253863389874800229L * l;
-	}
-
-	public Node method7766() {
-		((IterableNodeMap) this).anInt5562 = 0;
-		return method7751((byte) 101);
-	}
-
-	public Node method7767() {
-		((IterableNodeMap) this).anInt5562 = 0;
-		return method7751((byte) 6);
-	}
-
-	public Node method7768() {
-		((IterableNodeMap) this).anInt5562 = 0;
-		return method7751((byte) 110);
-	}
-
-	public Node method7769() {
-		((IterableNodeMap) this).anInt5562 = 0;
-		return method7751((byte) 14);
-	}
-
-	public IterableNodeMap(int i) {
-		((IterableNodeMap) this).anInt5560 = i * 1246096993;
-		((IterableNodeMap) this).aClass282Array5558 = new Node[i];
-		for (int i_20_ = 0; i_20_ < i; i_20_++) {
-			Node class282 = ((IterableNodeMap) this).aClass282Array5558[i_20_] = new Node();
-			class282.prev = class282;
-			class282.next = class282;
-		}
-	}
-
-	public Node method7770() {
-		if (((IterableNodeMap) this).anInt5562 * 620631441 > 0 && ((((IterableNodeMap) this).aClass282Array5558[((IterableNodeMap) this).anInt5562 * 620631441 - 1]) != ((IterableNodeMap) this).aClass282_5559)) {
-			Node class282 = ((IterableNodeMap) this).aClass282_5559;
-			((IterableNodeMap) this).aClass282_5559 = class282.prev;
-			return class282;
-		}
-		while (((IterableNodeMap) this).anInt5562 * 620631441 < 25900449 * ((IterableNodeMap) this).anInt5560) {
-			Node class282 = (((IterableNodeMap) this).aClass282Array5558[((((IterableNodeMap) this).anInt5562 += -745059471) * 620631441 - 1)].prev);
-			if ((((IterableNodeMap) this).aClass282Array5558[620631441 * ((IterableNodeMap) this).anInt5562 - 1]) != class282) {
-				((IterableNodeMap) this).aClass282_5559 = class282.prev;
-				return class282;
-			}
-		}
-		return null;
-	}
-
-	static final void method7771(CS2Executor class527, int i) {
-		String string;
-		if (null != Class84.myPlayer && null != Class84.myPlayer.username)
-			string = Class84.myPlayer.method16128(false, 1912893547);
-		else
-			string = "";
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
-	}
-
-	static final void method7772(Class282_Sub31 class282_sub31, boolean bool, int i) {
-		if (((Class282_Sub31) class282_sub31).aBool7774) {
-			if (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1617066319), ((Class282_Sub31) class282_sub31).anInt7765 * -1369039751, -1307943861 * ((Class282_Sub31) class282_sub31).anInt7770, 1942118537))) {
-				if (!bool)
-					Class174.animateObject((((Class282_Sub31) class282_sub31).anInt7764 * 1291499461), (((Class282_Sub31) class282_sub31).anInt7766 * -497894501), 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, (((Class282_Sub31) class282_sub31).anInt7765 * -1369039751), (1421843241 * ((Class282_Sub31) class282_sub31).anInt7767), (-1307943861 * ((Class282_Sub31) class282_sub31).anInt7770), -1, -1133711870);
-				else
-					QuickChatDynamicValue.method4179((1291499461 * (((Class282_Sub31) class282_sub31).anInt7764)), (((Class282_Sub31) class282_sub31).anInt7766) * -497894501, class282_sub31.anInt7762 * 37618455, class282_sub31.anInt7763 * -322610393, null, (byte) 30);
-				class282_sub31.remove();
-			}
-		} else if (((Class282_Sub31) class282_sub31).aBool7773 && 37618455 * class282_sub31.anInt7762 >= 1 && class282_sub31.anInt7763 * -322610393 >= 1 && (class282_sub31.anInt7762 * 37618455 <= IndexLoaders.MAP_REGION_DECODER.getSizeX(800318016) - 2) && (-322610393 * class282_sub31.anInt7763 <= IndexLoaders.MAP_REGION_DECODER.getSizeY(-349859539) - 2)
-				&& ((-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769) < 0 || (Class492.method8264(IndexLoaders.MAP_REGION_DECODER.method4436(-1528257548), (-1809279077 * ((Class282_Sub31) class282_sub31).anInt7769), (((Class282_Sub31) class282_sub31).anInt7771 * 965123467), 1942118537)))) {
-			if (!bool)
-				Class174.animateObject(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, 37618455 * class282_sub31.anInt7762, class282_sub31.anInt7763 * -322610393, -1809279077 * ((Class282_Sub31) class282_sub31).anInt7769, ((Class282_Sub31) class282_sub31).anInt7772 * -818262241, 965123467 * ((Class282_Sub31) class282_sub31).anInt7771, -1, -1118636715);
-			else
-				QuickChatDynamicValue.method4179(1291499461 * ((Class282_Sub31) class282_sub31).anInt7764, ((Class282_Sub31) class282_sub31).anInt7766 * -497894501, class282_sub31.anInt7762 * 37618455, -322610393 * class282_sub31.anInt7763, ((Class282_Sub31) class282_sub31).aClass476_7768, (byte) 127);
-			((Class282_Sub31) class282_sub31).aBool7773 = false;
-			if (!bool && (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 == (((Class282_Sub31) class282_sub31).anInt7769 * -1809279077)) && (-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765 == -1))
-				class282_sub31.remove();
-			else if (!bool && ((-1369039751 * ((Class282_Sub31) class282_sub31).anInt7765) == (((Class282_Sub31) class282_sub31).anInt7769 * -1809279077)) && ((1421843241 * ((Class282_Sub31) class282_sub31).anInt7767) == (-818262241 * ((Class282_Sub31) class282_sub31).anInt7772)) && ((((Class282_Sub31) class282_sub31).anInt7771 * 965123467) == (((Class282_Sub31) class282_sub31).anInt7770 * -1307943861)))
-				class282_sub31.remove();
-		}
-	}
-
-	static final void method7773(CS2Executor class527, int i) {
+	static final void method7773(CS2Executor cs2executor_0, int i_1) {
 		Class282_Sub40.method13300(-1273704391);
 		IndexLoaders.MAP_REGION_DECODER.method4547((byte) -42);
 		Class190.method3148((byte) 53);
 		client.aBool7175 = false;
 	}
 
-	static final void method7774(CS2Executor class527, int i) {
-		class527.intStackPtr -= 283782002;
-		int i_21_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_22_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		SpotAnimIndexLoader.method8862(i_21_, i_22_ >> 14 & 0x3fff, i_22_ & 0x3fff, true, -1732540658);
+	static final void method7774(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		SpotAnimIndexLoader.method8862(i_2, i_3 >> 14 & 0x3fff, i_3 & 0x3fff, true, -1732540658);
 	}
+
 }

@@ -1,52 +1,49 @@
-/* Class225_Sub6 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class225_Sub6 extends RouteStrategy {
+
 	public static String aString8069;
 
-	public boolean method3785(int i, int i_0_, int i_1_, ClipMap class336) {
-		return Class325.method5790(i_0_, i_1_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1278426193);
+	public boolean method3785(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+		return Class325.method5790(i_2, i_3, i_1, i_1, -1440558477 * this.approxDestinationX * -726719813, 1732585867 * this.approxDestinationY * 1767388707, this.approxDestinationSizeX * -12808295 * -1384164183, 361960939 * this.approxDestinationSizeY * 1709796035, -1278426193);
 	}
 
-	public boolean canExit(int i, int i_2_, int i_3_, ClipMap class336, byte i_4_) {
-		return Class325.method5790(i_2_, i_3_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1229597907);
+	public boolean canExit(int i_1, int i_2, int i_3, ClipMap clipmap_4, byte b_5) {
+		return Class325.method5790(i_2, i_3, i_1, i_1, this.approxDestinationX, this.approxDestinationY, this.approxDestinationSizeX, this.approxDestinationSizeY, -1229597907);
 	}
 
-	public boolean method3786(int i, int i_5_, int i_6_, ClipMap class336) {
-		return Class325.method5790(i_5_, i_6_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1069558416);
+	public boolean method3786(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+		return Class325.method5790(i_2, i_3, i_1, i_1, -1440558477 * this.approxDestinationX * -726719813, 1732585867 * this.approxDestinationY * 1767388707, this.approxDestinationSizeX * -12808295 * -1384164183, 361960939 * this.approxDestinationSizeY * 1709796035, -1069558416);
 	}
 
-	public boolean method3789(int i, int i_7_, int i_8_, ClipMap class336) {
-		return Class325.method5790(i_7_, i_8_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -1327717790);
+	public boolean method3789(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+		return Class325.method5790(i_2, i_3, i_1, i_1, -1440558477 * this.approxDestinationX * -726719813, 1732585867 * this.approxDestinationY * 1767388707, this.approxDestinationSizeX * -12808295 * -1384164183, 361960939 * this.approxDestinationSizeY * 1709796035, -1327717790);
 	}
 
-	public boolean method3788(int i, int i_9_, int i_10_, ClipMap class336) {
-		return Class325.method5790(i_9_, i_10_, i, i, -1440558477 * approxDestinationX, 1732585867 * approxDestinationY, approxDestinationSizeX * -1384164183, 361960939 * approxDestinationSizeY, -232258627);
+	public boolean method3788(int i_1, int i_2, int i_3, ClipMap clipmap_4) {
+		return Class325.method5790(i_2, i_3, i_1, i_1, -1440558477 * this.approxDestinationX * -726719813, 1732585867 * this.approxDestinationY * 1767388707, this.approxDestinationSizeX * -12808295 * -1384164183, 361960939 * this.approxDestinationSizeY * 1709796035, -232258627);
 	}
 
-	Class225_Sub6() {
-		/* empty */
-	}
-
-	static final void method13411(int i, int i_11_, int i_12_, int i_13_, byte i_14_) {
-		if (i_11_ > i_12_) {
-			for (int i_15_ = i_12_; i_15_ < i_11_; i_15_++)
-				Class532_Sub2.anIntArrayArray7072[i_15_][i] = i_13_;
+	static final void method13411(int i_0, int i_1, int i_2, int i_3, byte b_4) {
+		int i_5;
+		if (i_1 > i_2) {
+			for (i_5 = i_2; i_5 < i_1; i_5++) {
+				Class532_Sub2.anIntArrayArray7072[i_5][i_0] = i_3;
+			}
 		} else {
-			for (int i_16_ = i_11_; i_16_ < i_12_; i_16_++)
-				Class532_Sub2.anIntArrayArray7072[i_16_][i] = i_13_;
+			for (i_5 = i_1; i_5 < i_2; i_5++) {
+				Class532_Sub2.anIntArrayArray7072[i_5][i_0] = i_3;
+			}
 		}
+
 	}
 
-	static final void method13412(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class282_Sub41_Sub1.method14700(class118, class98, class527, 1949391932);
+	static final void method13412(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class282_Sub41_Sub1.method14700(icomponentdefinitions_3, interface_4, cs2executor_0, 1949391932);
 	}
 
-	static void method13413(int i) {
+	static void method13413(int i_0) {
 		Renderers.FONT_RENDERER = null;
 		Class16.aClass8_144 = null;
 		Class285.aClass8_3394 = null;
@@ -62,4 +59,5 @@ public class Class225_Sub6 extends RouteStrategy {
 		Exception_Sub1.aClass160_10075 = null;
 		Class245.aClass160Array3027 = null;
 	}
+
 }

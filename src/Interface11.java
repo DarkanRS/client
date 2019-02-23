@@ -1,15 +1,13 @@
-/* Interface11 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public interface Interface11 {
-	public long method78(String string);
 
-	public long method79(String string, int i);
+	long method78(String var1);
 
-	public long method80(String string);
+	long method79(String var1, int var2);
 
-	public long method81(String string);
+	long method80(String var1);
 
-	public long method82(String string);
+	long method81(String var1);
+
+	long method82(String var1);
+
 }

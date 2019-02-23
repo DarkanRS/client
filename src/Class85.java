@@ -1,29 +1,21 @@
-/* Class85 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class85 {
-	static Class85 aClass85_814;
+
+	static String aString817;
 	static Class85 aClass85_815 = new Class85();
 	static Class85 aClass85_816 = new Class85();
-	static String aString817;
+	static Class85 aClass85_814 = new Class85();
 
-	static {
-		aClass85_814 = new Class85();
-	}
-
-	static boolean method1466(int i) {
+	static boolean method1466(int i_0) {
 		return Class192.ACCOUNT_CREATION_STAGE != null;
 	}
 
-	Class85() {
-		/* empty */
+	static final void method1467(CS2Executor cs2executor_0, int i_1) {
+		if (client.anInt7319 >= 5 && client.anInt7319 <= 9) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 1;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		}
+
 	}
 
-	static final void method1467(CS2Executor class527, int i) {
-		if (-1353302673 * client.anInt7319 >= 5 && -1353302673 * client.anInt7319 <= 9)
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1;
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-	}
 }

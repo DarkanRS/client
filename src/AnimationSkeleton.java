@@ -1,92 +1,109 @@
-/* Class282_Sub50_Sub13 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class AnimationSkeleton extends CacheableNode {
+
 	static Index ANIMATION_SKIN_INDEX;
 	static Index ANIMATION_SKELETON_INDEX;
 	int animSkeletonId;
 	byte[][] skeletonData;
 	AnimationSkin[] animationSkins;
 
-	public boolean method15079(int i, int i_4_) {
-		return (((AnimationSkin) this.animationSkins[i]).aBool986);
+	public boolean method15079(int i_1, int i_2) {
+		return this.animationSkins[i_1].aBool986;
 	}
 
-	public boolean method15080(int i, int i_5_) {
-		return (((AnimationSkin) this.animationSkins[i]).aBool972);
+	public boolean method15080(int i_1, int i_2) {
+		return this.animationSkins[i_1].aBool972;
 	}
 
-	public boolean method15081(int i, int i_6_) {
-		return (((AnimationSkin) this.animationSkins[i]).aBool988);
+	public boolean method15081(int i_1, int i_2) {
+		return this.animationSkins[i_1].aBool988;
 	}
 
-	public AnimationSkeleton(int animSkeletonId) {
-		this.animSkeletonId = animSkeletonId * -155691699;
+	public AnimationSkeleton(int i_1) {
+		this.animSkeletonId = i_1;
 	}
 
 	public boolean decodeAnimSkeletonData() {
-		if (null != this.animationSkins)
+		if (this.animationSkins != null) {
 			return true;
-		if (this.skeletonData == null) {
-			synchronized (ANIMATION_SKELETON_INDEX) {
-				if (!ANIMATION_SKELETON_INDEX.loadArchive((this.animSkeletonId) * 2091314053)) {
-					return false;
-				}
-				int[] fileIds = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053);
-				this.skeletonData = new byte[fileIds.length][];
-				for (int i = 0; i < fileIds.length; i++)
-					this.skeletonData[i] = ANIMATION_SKELETON_INDEX.getFile((this.animSkeletonId * 2091314053), fileIds[i]);
-			}
-		}
-		boolean bool = true;
-		for (int i = 0; i < this.skeletonData.length; i++) {
-			byte[] data = this.skeletonData[i];
-			RsByteBuffer buffer = new RsByteBuffer(data);
-			buffer.index = -1115476867;
-			int skinId = buffer.readUnsignedShort();
-			synchronized (ANIMATION_SKIN_INDEX) {
-				bool &= ANIMATION_SKIN_INDEX.method5661(skinId, 518523792);
-			}
-		}
-		if (!bool)
-			return false;
-		XLinkedNodeList skinList = new XLinkedNodeList();
-		int[] validFiles;
-		synchronized (ANIMATION_SKELETON_INDEX) {
-			int fileSize = ANIMATION_SKELETON_INDEX.filesCount((this.animSkeletonId) * 2091314053);
-			this.animationSkins = new AnimationSkin[fileSize];
-			validFiles = ANIMATION_SKELETON_INDEX.getValidFileIds((this.animSkeletonId) * 2091314053);
-		}
-		for (int i = 0; i < validFiles.length; i++) {
-			byte[] skeletonData = this.skeletonData[i];
-			RsByteBuffer buffer = new RsByteBuffer(skeletonData);
-			buffer.index = -1115476867;
-			int skinId = buffer.readUnsignedShort();
-			AnimationSkinNode skins = null;
-			for (AnimationSkinNode iter = (AnimationSkinNode) skinList.getBack(); iter != null; iter = (AnimationSkinNode) skinList.getPrevious()) {
-				if (skinId == (((AnimationSkinNode) iter).skinId * -2041542071)) {
-					skins = iter;
-					break;
+		} else {
+			if (this.skeletonData == null) {
+				synchronized (ANIMATION_SKELETON_INDEX) {
+					if (!ANIMATION_SKELETON_INDEX.loadArchive(this.animSkeletonId)) {
+						return false;
+					}
+
+					int[] ints_2 = ANIMATION_SKELETON_INDEX.getValidFileIds(this.animSkeletonId);
+					this.skeletonData = new byte[ints_2.length][];
+
+					for (int i_3 = 0; i_3 < ints_2.length; i_3++) {
+						this.skeletonData[i_3] = ANIMATION_SKELETON_INDEX.getFile(this.animSkeletonId, ints_2[i_3]);
+					}
 				}
 			}
-			if (skins == null) {
+
+			boolean bool_10 = true;
+
+			int i_5;
+			for (int i_11 = 0; i_11 < this.skeletonData.length; i_11++) {
+				byte[] bytes_12 = this.skeletonData[i_11];
+				RsByteBuffer rsbytebuffer_4 = new RsByteBuffer(bytes_12);
+				rsbytebuffer_4.index = 1;
+				i_5 = rsbytebuffer_4.readUnsignedShort();
 				synchronized (ANIMATION_SKIN_INDEX) {
-					skins = new AnimationSkinNode(skinId, ANIMATION_SKIN_INDEX.getFile(skinId));
+					bool_10 &= ANIMATION_SKIN_INDEX.method5661(i_5, 518523792);
 				}
-				skinList.insertBack(skins);
 			}
-			this.animationSkins[validFiles[i]] = new AnimationSkin(skeletonData, skins);
+
+			if (!bool_10) {
+				return false;
+			} else {
+				LinkedNodeList xlinkednodelist_19 = new LinkedNodeList();
+				int[] ints_23;
+				synchronized (ANIMATION_SKELETON_INDEX) {
+					i_5 = ANIMATION_SKELETON_INDEX.filesCount(this.animSkeletonId);
+					this.animationSkins = new AnimationSkin[i_5];
+					ints_23 = ANIMATION_SKELETON_INDEX.getValidFileIds(this.animSkeletonId);
+				}
+
+				for (int i_13 = 0; i_13 < ints_23.length; i_13++) {
+					byte[] bytes_14 = this.skeletonData[i_13];
+					RsByteBuffer rsbytebuffer_21 = new RsByteBuffer(bytes_14);
+					rsbytebuffer_21.index = 1;
+					int i_7 = rsbytebuffer_21.readUnsignedShort();
+					AnimationSkinNode animationskinnode_8 = null;
+
+					for (AnimationSkinNode animationskinnode_9 = (AnimationSkinNode) xlinkednodelist_19.getBack(); animationskinnode_9 != null; animationskinnode_9 = (AnimationSkinNode) xlinkednodelist_19.getPrevious()) {
+						if (i_7 == animationskinnode_9.skinId) {
+							animationskinnode_8 = animationskinnode_9;
+							break;
+						}
+					}
+
+					if (animationskinnode_8 == null) {
+						synchronized (ANIMATION_SKIN_INDEX) {
+							animationskinnode_8 = new AnimationSkinNode(i_7, ANIMATION_SKIN_INDEX.getFile(i_7));
+						}
+
+						xlinkednodelist_19.insertBack(animationskinnode_8);
+					}
+
+					this.animationSkins[ints_23[i_13]] = new AnimationSkin(bytes_14, animationskinnode_8);
+				}
+
+				this.skeletonData = null;
+				return true;
+			}
 		}
-		this.skeletonData = null;
-		return true;
 	}
 
-	public static byte[] method15090(byte[] is, int i) {
-		if (is == null)
+	public static byte[] method15090(byte[] bytes_0, int i_1) {
+		if (bytes_0 == null) {
 			return null;
-		byte[] is_15_ = new byte[is.length];
-		System.arraycopy(is, 0, is_15_, 0, is.length);
-		return is_15_;
+		} else {
+			byte[] bytes_2 = new byte[bytes_0.length];
+			System.arraycopy(bytes_0, 0, bytes_2, 0, bytes_0.length);
+			return bytes_2;
+		}
 	}
+
 }

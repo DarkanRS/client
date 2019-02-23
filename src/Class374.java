@@ -1,79 +1,25 @@
-
-/* Class374 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Canvas;
 
 public class Class374 {
-	public static GraphicalRenderer method6366(Canvas canvas, Interface22 interface22, Index class317, int i) {
-		GraphicalRenderer class505;
-		try {
-			boolean bool = Class505_Sub2.method13893();
-			if (!bool)
-				throw new RuntimeException("");
-			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1413533168))
-				throw new RuntimeException("");
-			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
-			throw new RuntimeException("");
-		}
-		return class505;
-	}
 
-	public static GraphicalRenderer getDirectXRenderer(Canvas canvas, Interface22 interface22, Index class317, int i) {
-		GraphicalRenderer class505;
+	public static GraphicalRenderer getDirectXRenderer(Canvas canvas_0, Interface22 interface22_1, Index index_2, int i_3) {
 		try {
-			boolean bool = Class505_Sub2.method13893();
-			if (!bool)
+			boolean bool_5 = Class505_Sub2.method13893();
+			if (!bool_5) {
 				throw new RuntimeException("");
-			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1240220089))
+			} else if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1240220089)) {
 				throw new RuntimeException("");
-			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
+			} else {
+				GraphicalRenderer graphicalrenderer_4 = Class505_Sub2_Sub2.method15638(canvas_0, interface22_1, index_2, Integer.valueOf(i_3));
+				return graphicalrenderer_4;
+			}
+		} catch (Throwable throwable_7) {
 			throw new RuntimeException("");
 		}
-		return class505;
-	}
-
-	public static GraphicalRenderer method6368(Canvas canvas, Interface22 interface22, Index class317, int i) {
-		GraphicalRenderer class505;
-		try {
-			boolean bool = Class505_Sub2.method13893();
-			if (!bool)
-				throw new RuntimeException("");
-			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -2058830414))
-				throw new RuntimeException("");
-			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
-			throw new RuntimeException("");
-		}
-		return class505;
 	}
 
 	Class374() throws Throwable {
 		throw new Error();
 	}
 
-	public static GraphicalRenderer method6369(Canvas canvas, Interface22 interface22, Index class317, int i) {
-		GraphicalRenderer class505;
-		try {
-			boolean bool = Class505_Sub2.method13893();
-			if (!bool)
-				throw new RuntimeException("");
-			if (!Class362.getNativeLibraryLoader(616047582).loadLibrary("jagdx", -1912806589))
-				throw new RuntimeException("");
-			class505 = Class505_Sub2_Sub2.method15638(canvas, interface22, class317, Integer.valueOf(i));
-		} catch (RuntimeException runtimeexception) {
-			throw runtimeexception;
-		} catch (Throwable throwable) {
-			throw new RuntimeException("");
-		}
-		return class505;
-	}
 }

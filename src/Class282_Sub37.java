@@ -1,20 +1,18 @@
-/* Class282_Sub37 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class282_Sub37 extends Node {
+
 	boolean aBool7995;
 	boolean aBool7996;
+	boolean aBool8000;
+	int anInt7999;
+	Class278_Sub1 aClass278_Sub1_8001;
 	int anInt7997;
 	boolean aBool7998;
-	int anInt7999;
-	boolean aBool8000;
-	Class278_Sub1 aClass278_Sub1_8001;
 
-	Class282_Sub37(int i, Class278_Sub1 class278_sub1, int i_0_, boolean bool) {
-		((Class282_Sub37) this).anInt7999 = i * 545221771;
-		((Class282_Sub37) this).aClass278_Sub1_8001 = class278_sub1;
-		((Class282_Sub37) this).anInt7997 = i_0_ * -415645997;
-		((Class282_Sub37) this).aBool7998 = bool;
+	Class282_Sub37(int i_1, Class278_Sub1 class278_sub1_2, int i_3, boolean bool_4) {
+		this.anInt7999 = i_1;
+		this.aClass278_Sub1_8001 = class278_sub1_2;
+		this.anInt7997 = i_3;
+		this.aBool7998 = bool_4;
 	}
+
 }

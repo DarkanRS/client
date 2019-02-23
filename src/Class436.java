@@ -1,120 +1,73 @@
-/* Class436 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class436 {
-	Index aClass317_5333;
+
 	SoftCache aClass229_5334 = new SoftCache(64);
+	Index aClass317_5333;
 
-	public Class416 method7304(int i, byte i_0_) {
-		Class416 class416;
-		synchronized (((Class436) this).aClass229_5334) {
-			class416 = ((Class416) ((Class436) this).aClass229_5334.get((long) i));
+	public Class416 method7304(int i_1, byte b_2) {
+		SoftCache softcache_4 = this.aClass229_5334;
+		Class416 class416_3;
+		synchronized (this.aClass229_5334) {
+			class416_3 = (Class416) this.aClass229_5334.get((long) i_1);
 		}
-		if (class416 != null)
-			return class416;
-		byte[] is;
-		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.getFile(((SharedConfigsType.aClass120_1494.id) * -71319279), i);
-		}
-		class416 = new Class416();
-		if (null != is)
-			class416.method6999(new RsByteBuffer(is), -1640531527);
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.put(class416, (long) i);
-		}
-		return class416;
-	}
 
-	public void method7305() {
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3859(-369187613);
-		}
-	}
+		if (class416_3 != null) {
+			return class416_3;
+		} else {
+			Index index_5 = this.aClass317_5333;
+			byte[] bytes_10;
+			synchronized (this.aClass317_5333) {
+				bytes_10 = this.aClass317_5333.getFile(SharedConfigsType.aClass120_1494.id, i_1);
+			}
 
-	public void method7306(int i) {
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3859(1100969051);
-		}
-	}
+			class416_3 = new Class416();
+			if (bytes_10 != null) {
+				class416_3.method6999(new RsByteBuffer(bytes_10), -1640531527);
+			}
 
-	public void method7307(int i, int i_1_) {
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3858(i, (byte) 12);
-		}
-	}
-
-	public void method7308(byte i) {
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3863(1784570586);
-		}
-	}
-
-	public Class416 method7309(int i) {
-		Class416 class416;
-		synchronized (((Class436) this).aClass229_5334) {
-			class416 = ((Class416) ((Class436) this).aClass229_5334.get((long) i));
-		}
-		if (class416 != null)
-			return class416;
-		byte[] is;
-		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.getFile(((SharedConfigsType.aClass120_1494.id) * -71319279), i);
-		}
-		class416 = new Class416();
-		if (null != is)
-			class416.method6999(new RsByteBuffer(is), -1640531527);
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.put(class416, (long) i);
-		}
-		return class416;
-	}
-
-	public Class416 method7310(int i) {
-		Class416 class416;
-		synchronized (((Class436) this).aClass229_5334) {
-			class416 = ((Class416) ((Class436) this).aClass229_5334.get((long) i));
-		}
-		if (class416 != null)
-			return class416;
-		byte[] is;
-		synchronized (((Class436) this).aClass317_5333) {
-			is = ((Class436) this).aClass317_5333.getFile(((SharedConfigsType.aClass120_1494.id) * -71319279), i);
-		}
-		class416 = new Class416();
-		if (null != is)
-			class416.method6999(new RsByteBuffer(is), -1640531527);
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.put(class416, (long) i);
-		}
-		return class416;
-	}
-
-	public Class436(Game class486, XLanguage class495, Index class317) {
-		((Class436) this).aClass317_5333 = class317;
-		((Class436) this).aClass317_5333.filesCount((SharedConfigsType.aClass120_1494.id) * -71319279);
-	}
-
-	public void method7311() {
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3863(1548455431);
-		}
-	}
-
-	public void method7312() {
-		synchronized (((Class436) this).aClass229_5334) {
-			((Class436) this).aClass229_5334.method3863(1145102903);
-		}
-	}
-
-	static final void method7313(Class282_Sub44 class282_sub44, int i, int i_2_, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_, int i_8_, int i_9_, byte i_10_) {
-		if (Class456_Sub3.method12682(i, null, -149079200)) {
-			if (class282_sub44 != null && !class282_sub44.method13401((byte) -110))
-				Class351.method6196(class282_sub44, true, false, -1434411886);
-			else {
-				Interface class98 = Class468_Sub8.aClass98Array7889[i];
-				client.method11768(class98, class98.method1616(2121969346), -1, i_2_, i_3_, i_4_, i_5_, i_6_, i_7_, i_8_, i_9_);
+			SoftCache softcache_9 = this.aClass229_5334;
+			synchronized (this.aClass229_5334) {
+				this.aClass229_5334.put(class416_3, (long) i_1);
+				return class416_3;
 			}
 		}
 	}
+
+	public void method7306(int i_1) {
+		SoftCache softcache_2 = this.aClass229_5334;
+		synchronized (this.aClass229_5334) {
+			this.aClass229_5334.method3859(1100969051);
+		}
+	}
+
+	public void method7307(int i_1, int i_2) {
+		SoftCache softcache_3 = this.aClass229_5334;
+		synchronized (this.aClass229_5334) {
+			this.aClass229_5334.method3858(i_1, (byte) 12);
+		}
+	}
+
+	public void method7308(byte b_1) {
+		SoftCache softcache_2 = this.aClass229_5334;
+		synchronized (this.aClass229_5334) {
+			this.aClass229_5334.method3863(1784570586);
+		}
+	}
+
+	public Class436(Game game_1, Language xlanguage_2, Index index_3) {
+		this.aClass317_5333 = index_3;
+		this.aClass317_5333.filesCount(SharedConfigsType.aClass120_1494.id);
+	}
+
+	static final void method7313(Class282_Sub44 class282_sub44_0, int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8, int i_9, byte b_10) {
+		if (Class456_Sub3.method12682(i_1, (int[]) null, -149079200)) {
+			if (class282_sub44_0 != null && !class282_sub44_0.method13401((byte) -110)) {
+				Class351.method6196(class282_sub44_0, true, false, -1434411886);
+			} else {
+				Interface interface_11 = Class468_Sub8.aClass98Array7889[i_1];
+				client.method11768(interface_11, interface_11.method1616(2121969346), -1, i_2, i_3, i_4, i_5, i_6, i_7, i_8, i_9);
+			}
+		}
+
+	}
+
 }

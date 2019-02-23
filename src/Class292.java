@@ -1,54 +1,51 @@
-
-/* Class292 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.awt.Rectangle;
 
 public class Class292 {
-	static final int anInt3493 = 8;
-	static final int anInt3494 = 1;
-	static final int anInt3495 = 2;
-	static final int anInt3496 = 16;
-	static final int anInt3497 = 62;
-	static final int anInt3498 = 63;
 
 	Class292() throws Throwable {
 		throw new Error();
 	}
 
-	static final void method5197(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 283782002;
-		int i_0_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_1_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class521_Sub1_Sub1_Sub6.method16125(i_0_, i_1_, false, 1986479665);
+	static final void method5197(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class521_Sub1_Sub1_Sub6.method16125(i_2, i_3, false, 1986479665);
 	}
 
-	static final void method5198(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2_, 1980153420).members ? 1 : 0);
+	static final void method5198(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 1980153420).members ? 1 : 0;
 	}
 
-	static final void method5199(CS2Executor class527, byte i) {
-		int i_3_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (i_3_ != -1)
-			Class123.method2152(i_3_, 1279989197);
-	}
-
-	static final void method5200(boolean bool, CS2Executor class527, byte i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		if (bool)
-			Class455.method7554(class98, class118, 658695956);
-		else
-			WorldMapIndexLoader.method3710(class98, class118, 983481657);
-	}
-
-	static final void method5201(int i, int i_4_, int i_5_, int i_6_, byte i_7_) {
-		for (int i_8_ = 0; i_8_ < client.anInt7407 * 1858642375; i_8_++) {
-			Rectangle rectangle = client.aRectangleArray7411[i_8_];
-			if (rectangle.x + rectangle.width > i && rectangle.x < i + i_5_ && rectangle.height + rectangle.y > i_4_ && rectangle.y < i_4_ + i_6_)
-				client.aBoolArray7443[i_8_] = true;
+	static final void method5199(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		if (i_2 != -1) {
+			Class123.method2152(i_2, 1279989197);
 		}
+
 	}
+
+	static final void method5200(boolean bool_0, CS2Executor cs2executor_1, byte b_2) {
+		UnderlayDefinition underlaydefinition_3 = cs2executor_1.aBool7022 ? cs2executor_1.aClass513_6994 : cs2executor_1.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_3.aClass118_5886;
+		Interface interface_5 = underlaydefinition_3.aClass98_5885;
+		if (bool_0) {
+			Class455.method7554(interface_5, icomponentdefinitions_4, 658695956);
+		} else {
+			WorldMapIndexLoader.method3710(interface_5, icomponentdefinitions_4, 983481657);
+		}
+
+	}
+
+	static final void method5201(int i_0, int i_1, int i_2, int i_3, byte b_4) {
+		for (int i_5 = 0; i_5 < client.anInt7407; i_5++) {
+			Rectangle rectangle_6 = client.aRectangleArray7411[i_5];
+			if (rectangle_6.x + rectangle_6.width > i_0 && rectangle_6.x < i_0 + i_2 && rectangle_6.height + rectangle_6.y > i_1 && rectangle_6.y < i_3 + i_1) {
+				client.aBoolArray7443[i_5] = true;
+			}
+		}
+
+	}
+
 }

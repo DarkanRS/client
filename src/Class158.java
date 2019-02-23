@@ -1,8 +1,5 @@
-/* Class158 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class Class158 {
+
 	public abstract int method2714();
 
 	abstract boolean method2715();
@@ -27,10 +24,6 @@ public abstract class Class158 {
 
 	abstract boolean method2723();
 
-	Class158() {
-		/* empty */
-	}
-
 	abstract boolean method213();
 
 	abstract boolean method2724();
@@ -45,126 +38,156 @@ public abstract class Class158 {
 
 	abstract boolean method54();
 
-	static final void method2728(CS2Executor class527, int i) {
-		class527.intStackPtr -= 283782002;
-		int i_0_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_1_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		AttributeDefault class437 = IndexLoaders.ITEM_DEFAULTS.method7069(i_1_, (byte) 0);
-		if (class437.method7319(2069262708))
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 156724259).method7101(i_1_, class437.aString5335, -1662195407);
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_0_, 221320768).method7099(i_1_, class437.anInt5337 * -1741480635, -1410109564));
+	static final void method2728(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		AttributeDefault attributedefault_4 = IndexLoaders.ITEM_DEFAULTS.method7069(i_3, (byte) 0);
+		if (attributedefault_4.method7319(2069262708)) {
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 156724259).method7101(i_3, attributedefault_4.aString5335, -1662195407);
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_2, 221320768).method7099(i_3, attributedefault_4.anInt5337, -1410109564);
+		}
+
 	}
 
-	static final void method2729(CS2Executor class527, int i) {
-		int i_2_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2_, (short) 9738).anInt10277) * 875957203;
+	static final void method2729(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = IndexLoaders.INVENTORY_INDEX_LOADER.getInventoryDef(i_2, (short) 9738).anInt10277;
 	}
 
-	public static int method2730(short i) {
-		if (Class475.aBool5623 && client.aFrame3260 != null)
-			return 3;
-		return client.aBool7301 ? 2 : 1;
+	public static int method2730(short s_0) {
+		return Class475.aBool5623 && client.aFrame3260 != null ? 3 : (client.aBool7301 ? 2 : 1);
 	}
 
-	static void method2731(GraphicalRenderer class505, Class455 class455, IComponentDefinitions class118, int i, int i_3_, int i_4_, int i_5_, int i_6_, int i_7_) {
-		WorldMapAreaDefs class220 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_6_, 2092552415);
-		if (class220 != null && class220.aBool2729 && class220.method3719(Class158_Sub1.aClass3_8507, -1138810540)) {
-			if (null != class220.anIntArray2717) {
-				int[] is = new int[class220.anIntArray2717.length];
-				for (int i_8_ = 0; i_8_ < is.length / 2; i_8_++) {
-					int i_9_;
-					if (-672443707 * NativeLibraryLoader.anInt3240 == 4)
-						i_9_ = (int) client.aFloat7365 & 0x3fff;
-					else
-						i_9_ = (client.anInt7255 * -1790074477 + (int) client.aFloat7365) & 0x3fff;
-					int i_10_ = Class382.anIntArray4657[i_9_];
-					int i_11_ = Class382.anIntArray4661[i_9_];
-					if (4 != -672443707 * NativeLibraryLoader.anInt3240) {
-						i_10_ = i_10_ * 256 / (client.anInt7203 * -1864403271 + 256);
-						i_11_ = 256 * i_11_ / (-1864403271 * client.anInt7203 + 256);
+	static void method2731(GraphicalRenderer graphicalrenderer_0, Class455 class455_1, IComponentDefinitions icomponentdefinitions_2, int i_3, int i_4, int i_5, int i_6, int i_7, int i_8) {
+		WorldMapAreaDefs worldmapareadefs_9 = IndexLoaders.WORLD_MAP_INDEX_LOADER.getWorldMapDefs(i_7, 2092552415);
+		if (worldmapareadefs_9 != null && worldmapareadefs_9.aBool2729 && worldmapareadefs_9.method3719(Class158_Sub1.aClass3_8507, -1138810540)) {
+			int i_11;
+			if (worldmapareadefs_9.anIntArray2717 != null) {
+				int[] ints_10 = new int[worldmapareadefs_9.anIntArray2717.length];
+
+				int i_12;
+				int i_13;
+				int i_14;
+				for (i_11 = 0; i_11 < ints_10.length / 2; i_11++) {
+					if (NativeLibraryLoader.anInt3240 == 4) {
+						i_12 = (int) client.aFloat7365 & 0x3fff;
+					} else {
+						i_12 = (int) client.aFloat7365 + client.anInt7255 & 0x3fff;
 					}
-					is[i_8_ * 2] = ((i_10_ * (i_5_ + 4 * (class220.anIntArray2717[2 * i_8_ + 1])) + ((i_4_ + 4 * class220.anIntArray2717[i_8_ * 2]) * i_11_)) >> 14) + (1506818197 * class118.anInt1301 / 2 + i);
-					is[i_8_ * 2 + 1] = (-492594917 * class118.anInt1429 / 2 + i_3_ - ((((i_5_ + 4 * class220.anIntArray2717[1 + i_8_ * 2]) * i_11_) - ((i_4_ + 4 * class220.anIntArray2717[i_8_ * 2]) * i_10_)) >> 14));
+
+					i_13 = Class382.anIntArray4657[i_12];
+					i_14 = Class382.anIntArray4661[i_12];
+					if (NativeLibraryLoader.anInt3240 != 4) {
+						i_13 = i_13 * 256 / (client.anInt7203 + 256);
+						i_14 = i_14 * 256 / (client.anInt7203 + 256);
+					}
+
+					ints_10[i_11 * 2] = i_3 + icomponentdefinitions_2.anInt1301 / 2 + ((worldmapareadefs_9.anIntArray2717[i_11 * 2 + 1] * 4 + i_6) * i_13 + i_14 * (i_5 + worldmapareadefs_9.anIntArray2717[i_11 * 2] * 4) >> 14);
+					ints_10[i_11 * 2 + 1] = icomponentdefinitions_2.anInt1429 / 2 + i_4 - ((worldmapareadefs_9.anIntArray2717[i_11 * 2 + 1] * 4 + i_6) * i_14 - i_13 * (i_5 + worldmapareadefs_9.anIntArray2717[i_11 * 2] * 4) >> 14);
 				}
-				Class119 class119 = class118.method2046(class505, -907269302);
-				if (null != class119)
-					Class147.method2505(class505, is, class220.anInt2715 * 152819427, class119.anIntArray1457, class119.anIntArray1455);
-				if (-1216326857 * class220.anInt2748 > 0) {
-					for (int i_12_ = 0; i_12_ < is.length / 2 - 1; i_12_++) {
-						int i_13_ = is[i_12_ * 2];
-						int i_14_ = is[i_12_ * 2 + 1];
-						int i_15_ = is[2 * (i_12_ + 1)];
-						int i_16_ = is[1 + 2 * (i_12_ + 1)];
-						if (i_15_ < i_13_) {
-							int i_17_ = i_13_;
-							int i_18_ = i_14_;
-							i_13_ = i_15_;
-							i_14_ = i_16_;
-							i_15_ = i_17_;
-							i_16_ = i_18_;
-						} else if (i_13_ == i_15_ && i_16_ < i_14_) {
-							int i_19_ = i_14_;
-							i_14_ = i_16_;
-							i_16_ = i_19_;
+
+				Class119 class119_19 = icomponentdefinitions_2.method2046(graphicalrenderer_0, -907269302);
+				if (class119_19 != null) {
+					Class147.method2505(graphicalrenderer_0, ints_10, worldmapareadefs_9.anInt2715, class119_19.anIntArray1457, class119_19.anIntArray1455);
+				}
+
+				if (worldmapareadefs_9.anInt2748 > 0) {
+					int i_15;
+					int i_16;
+					int i_17;
+					for (i_12 = 0; i_12 < ints_10.length / 2 - 1; i_12++) {
+						i_13 = ints_10[i_12 * 2];
+						i_14 = ints_10[i_12 * 2 + 1];
+						i_15 = ints_10[(i_12 + 1) * 2];
+						i_16 = ints_10[(i_12 + 1) * 2 + 1];
+						if (i_15 < i_13) {
+							i_17 = i_13;
+							int i_18 = i_14;
+							i_13 = i_15;
+							i_14 = i_16;
+							i_15 = i_17;
+							i_16 = i_18;
+						} else if (i_13 == i_15 && i_16 < i_14) {
+							i_17 = i_14;
+							i_14 = i_16;
+							i_16 = i_17;
 						}
-						class505.method8563(i_13_, i_14_, i_15_, i_16_, (class220.anIntArray2738[(class220.aByteArray2754[i_12_] & 0xff)]), 1, class455, i, i_3_, -1216326857 * class220.anInt2748, 1940337227 * class220.anInt2749, -155138445 * class220.anInt2756);
+
+						graphicalrenderer_0.method8563(i_13, i_14, i_15, i_16, worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[i_12] & 0xff], 1, class455_1, i_3, i_4, worldmapareadefs_9.anInt2748, worldmapareadefs_9.anInt2749, worldmapareadefs_9.anInt2756);
 					}
-					int i_20_ = is[is.length - 2];
-					int i_21_ = is[is.length - 1];
-					int i_22_ = is[0];
-					int i_23_ = is[1];
-					if (i_22_ < i_20_) {
-						int i_24_ = i_20_;
-						int i_25_ = i_21_;
-						i_20_ = i_22_;
-						i_21_ = i_23_;
-						i_22_ = i_24_;
-						i_23_ = i_25_;
-					} else if (i_22_ == i_20_ && i_23_ < i_21_) {
-						int i_26_ = i_21_;
-						i_21_ = i_23_;
-						i_23_ = i_26_;
+
+					i_12 = ints_10[ints_10.length - 2];
+					i_13 = ints_10[ints_10.length - 1];
+					i_14 = ints_10[0];
+					i_15 = ints_10[1];
+					if (i_14 < i_12) {
+						i_16 = i_12;
+						i_17 = i_13;
+						i_12 = i_14;
+						i_13 = i_15;
+						i_14 = i_16;
+						i_15 = i_17;
+					} else if (i_14 == i_12 && i_15 < i_13) {
+						i_16 = i_13;
+						i_13 = i_15;
+						i_15 = i_16;
 					}
-					class505.method8563(i_20_, i_21_, i_22_, i_23_, (class220.anIntArray2738[(class220.aByteArray2754[(class220.aByteArray2754.length - 1)]) & 0xff]), 1, class455, i, i_3_, -1216326857 * class220.anInt2748, 1940337227 * class220.anInt2749, class220.anInt2756 * -155138445);
+
+					graphicalrenderer_0.method8563(i_12, i_13, i_14, i_15, worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[worldmapareadefs_9.aByteArray2754.length - 1] & 0xff], 1, class455_1, i_3, i_4, worldmapareadefs_9.anInt2748, worldmapareadefs_9.anInt2749, worldmapareadefs_9.anInt2756);
 				} else {
-					for (int i_27_ = 0; i_27_ < is.length / 2 - 1; i_27_++)
-						class505.method8669(is[2 * i_27_], is[1 + i_27_ * 2], is[(i_27_ + 1) * 2], is[1 + (i_27_ + 1) * 2], (class220.anIntArray2738[(class220.aByteArray2754[i_27_] & 0xff)]), 1, class455, i, i_3_);
-					class505.method8669(is[is.length - 2], is[is.length - 1], is[0], is[1], (class220.anIntArray2738[(class220.aByteArray2754[(class220.aByteArray2754.length - 1)]) & 0xff]), 1, class455, i, i_3_);
+					for (i_12 = 0; i_12 < ints_10.length / 2 - 1; i_12++) {
+						graphicalrenderer_0.method8669(ints_10[i_12 * 2], ints_10[i_12 * 2 + 1], ints_10[(i_12 + 1) * 2], ints_10[(i_12 + 1) * 2 + 1], worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[i_12] & 0xff], 1, class455_1, i_3, i_4);
+					}
+
+					graphicalrenderer_0.method8669(ints_10[ints_10.length - 2], ints_10[ints_10.length - 1], ints_10[0], ints_10[1], worldmapareadefs_9.anIntArray2738[worldmapareadefs_9.aByteArray2754[worldmapareadefs_9.aByteArray2754.length - 1] & 0xff], 1, class455_1, i_3, i_4);
 				}
 			}
-			NativeSprite sprites = null;
-			if (-1 != class220.anInt2719 * -1248709255) {
-				sprites = class220.renderIcons(class505, false, (byte) 8);
-				if (sprites != null)
-					Class190.method3149(class118, class455, i, i_3_, i_4_, i_5_, sprites, -1909602202);
+
+			NativeSprite nativesprite_22 = null;
+			if (worldmapareadefs_9.anInt2719 != -1) {
+				nativesprite_22 = worldmapareadefs_9.renderIcons(graphicalrenderer_0, false, (byte) 8);
+				if (nativesprite_22 != null) {
+					Class190.method3149(icomponentdefinitions_2, class455_1, i_3, i_4, i_5, i_6, nativesprite_22, -1909602202);
+				}
 			}
-			if (null != class220.areaName) {
-				int i_28_ = 0;
-				if (sprites != null)
-					i_28_ = sprites.method2793();
-				FontRenderer fontRenderer = Renderers.FONT_RENDERER;
-				FontMetrics class414 = Class282_Sub17_Sub2.aClass414_9933;
-				if (1 == class220.anInt2722 * 1172439539) {
-					fontRenderer = Class16.aClass8_144;
-					class414 = Class16.aClass414_139;
+
+			if (worldmapareadefs_9.areaName != null) {
+				i_11 = 0;
+				if (nativesprite_22 != null) {
+					i_11 = nativesprite_22.method2793();
 				}
-				if (class220.anInt2722 * 1172439539 == 2) {
-					fontRenderer = Class285.aClass8_3394;
-					class414 = Class288.aClass414_3438;
+
+				FontRenderer fontrenderer_20 = Renderers.FONT_RENDERER;
+				FontMetrics fontmetrics_21 = Class282_Sub17_Sub2.aClass414_9933;
+				if (worldmapareadefs_9.anInt2722 == 1) {
+					fontrenderer_20 = Class16.aClass8_144;
+					fontmetrics_21 = Class16.aClass414_139;
 				}
-				Class241.method4152(class118, class455, i, i_3_, i_4_, i_5_, i_28_, class220.areaName, fontRenderer, class414, class220.anInt2720 * -2116785903, -1590332940);
+
+				if (worldmapareadefs_9.anInt2722 == 2) {
+					fontrenderer_20 = Class285.aClass8_3394;
+					fontmetrics_21 = Class288.aClass414_3438;
+				}
+
+				Class241.method4152(icomponentdefinitions_2, class455_1, i_3, i_4, i_5, i_6, i_11, worldmapareadefs_9.areaName, fontrenderer_20, fontmetrics_21, worldmapareadefs_9.anInt2720, -1590332940);
 			}
 		}
+
 	}
 
-	static final void method2732(IComponentDefinitions class118, Interface class98, CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		if (!string.equals(class118.aString1391)) {
-			class118.aString1391 = string;
-			Class109.method1858(class118, (byte) 79);
+	static final void method2732(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, int i_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		if (!string_4.equals(icomponentdefinitions_0.aString1391)) {
+			icomponentdefinitions_0.aString1391 = string_4;
+			Class109.method1858(icomponentdefinitions_0, (byte) 79);
 		}
-		if (1924549737 * class118.anInt1288 == -1 && !class98.aBool999)
-			RenderAnimIndexLoader.method3631(class118.idHash * -1952846363, -1844455774);
+
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			RenderAnimIndexLoader.method3631(icomponentdefinitions_0.idHash, -1844455774);
+		}
+
 	}
+
 }

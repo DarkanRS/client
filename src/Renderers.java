@@ -1,4 +1,3 @@
-
 public class Renderers {
 
 	public static GraphicalRenderer SOFTWARE_RENDERER;

@@ -1,97 +1,109 @@
-/* Class282_Sub50_Sub5 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class CS2Script extends CacheableNode {
-	public Object[] stringOpValues;
-	public String scriptName;
-	public CS2OpInfo[] operations;
-	public int[] intOpValues;
-	public long[] longOpValues;
-	public int longArgsCount;
+
+	public Class397 aClass397_9527;
 	public int intLocalsCount;
 	public int stringLocalsCount;
-	public Class397 aClass397_9527;
+	public int longLocalsCount;
 	public int intArgsCount;
 	public int stringArgsCount;
-	public int longLocalsCount;
+	public int longArgsCount;
 	public IterableNodeMap[] switchMaps;
+	public String scriptName;
+	public CS2OpInfo[] operations;
+	public Object[] stringOpValues;
+	public int[] intOpValues;
+	public long[] longOpValues;
 
-	public CS2Script(RsByteBuffer buffer) {
-		int instructionLength = decodeHeader(buffer);
-		int opCount = 0;
-		CS2OpInfo[] operations = CS2OpInfo.getCS2Operations();
-		while (-1990677291 * buffer.index < instructionLength) {
-			CS2OpInfo op = getOpcode(buffer, operations);
-			decodeInstruction(buffer, opCount, op);
-			opCount++;
+	public CS2Script(RsByteBuffer rsbytebuffer_1) {
+		int i_2 = this.decodeHeader(rsbytebuffer_1);
+		int i_3 = 0;
+
+		for (CS2OpInfo[] arr_4 = CS2OpInfo.getCS2Operations(); rsbytebuffer_1.index < i_2; i_3++) {
+			CS2OpInfo cs2opinfo_5 = this.getOpcode(rsbytebuffer_1, arr_4);
+			this.decodeInstruction(rsbytebuffer_1, i_3, cs2opinfo_5);
+		}
+
+	}
+
+	CS2OpInfo getOpcode(RsByteBuffer rsbytebuffer_1, CS2OpInfo[] arr_2) {
+		int i_3 = rsbytebuffer_1.readUnsignedShort();
+		if (i_3 >= 0 && i_3 < arr_2.length) {
+			CS2OpInfo cs2opinfo_4 = arr_2[i_3];
+			return cs2opinfo_4;
+		} else {
+			throw new RuntimeException("");
 		}
 	}
 
-	CS2OpInfo getOpcode(RsByteBuffer buffer, CS2OpInfo[] operations) {
-		int opcode = buffer.readUnsignedShort();
-		if (opcode < 0 || opcode >= operations.length)
-			throw new RuntimeException("");
-		CS2OpInfo op = operations[opcode];
-		return op;
-	}
+	int decodeHeader(RsByteBuffer rsbytebuffer_1) {
+		rsbytebuffer_1.index = rsbytebuffer_1.buffer.length - 2;
+		int i_2 = rsbytebuffer_1.readUnsignedShort();
+		int i_3 = rsbytebuffer_1.buffer.length - 2 - i_2 - 16;
+		rsbytebuffer_1.index = i_3;
+		int i_4 = rsbytebuffer_1.readInt();
+		this.intLocalsCount = rsbytebuffer_1.readUnsignedShort();
+		this.stringLocalsCount = rsbytebuffer_1.readUnsignedShort();
+		this.longLocalsCount = rsbytebuffer_1.readUnsignedShort();
+		this.intArgsCount = rsbytebuffer_1.readUnsignedShort();
+		this.stringArgsCount = rsbytebuffer_1.readUnsignedShort();
+		this.longArgsCount = rsbytebuffer_1.readUnsignedShort();
+		int i_5 = rsbytebuffer_1.readUnsignedByte();
+		if (i_5 > 0) {
+			this.switchMaps = new IterableNodeMap[i_5];
 
-	int decodeHeader(RsByteBuffer buffer) {
-		buffer.index = (buffer.buffer.length - 2) * -1115476867;
-		int switchBlockSize = buffer.readUnsignedShort();
-		int instructionLength = buffer.buffer.length - 2 - switchBlockSize - 16;
-		buffer.index = -1115476867 * instructionLength;
-		int codeSize = buffer.readInt();
-		intLocalsCount = buffer.readUnsignedShort() * -1386418893;
-		stringLocalsCount = buffer.readUnsignedShort() * -975682841;
-		longLocalsCount = buffer.readUnsignedShort() * -60178873;
-		intArgsCount = buffer.readUnsignedShort() * 950806069;
-		stringArgsCount = buffer.readUnsignedShort() * 370522055;
-		longArgsCount = buffer.readUnsignedShort() * -1593316803;
-		int switchesCount = buffer.readUnsignedByte();
-		if (switchesCount > 0) {
-			switchMaps = new IterableNodeMap[switchesCount];
-			for (int idx = 0; idx < switchesCount; idx++) {
-				int numCases = buffer.readUnsignedShort();
-				IterableNodeMap class465 = new IterableNodeMap(Class323.nextPowerOfTwo(numCases, -234379644));
-				switchMaps[idx] = class465;
-				while (numCases-- > 0) {
-					int key = buffer.readInt();
-					int value = buffer.readInt();
-					class465.method7765(new Class282_Sub38(value), (long) key);
+			for (int i_6 = 0; i_6 < i_5; i_6++) {
+				int i_7 = rsbytebuffer_1.readUnsignedShort();
+				IterableNodeMap iterablenodemap_8 = new IterableNodeMap(Class323.nextPowerOfTwo(i_7, -234379644));
+				this.switchMaps[i_6] = iterablenodemap_8;
+
+				while (i_7-- > 0) {
+					int i_9 = rsbytebuffer_1.readInt();
+					int i_10 = rsbytebuffer_1.readInt();
+					iterablenodemap_8.method7765(new Class282_Sub38(i_10), (long) i_9);
 				}
 			}
 		}
-		buffer.index = 0;
-		scriptName = buffer.readNullString(198990051);
-		operations = new CS2OpInfo[codeSize];
-		return instructionLength;
+
+		rsbytebuffer_1.index = 0;
+		this.scriptName = rsbytebuffer_1.readNullString(198990051);
+		this.operations = new CS2OpInfo[i_4];
+		return i_3;
 	}
 
-	void decodeInstruction(RsByteBuffer buffer, int opIndex, CS2OpInfo operation) {
-		int opLength = operations.length;
-		if (operation == CS2OpInfo.PUSH_STRING) {
-			if (stringOpValues == null)
-				stringOpValues = new String[opLength];
-			String string = buffer.readString();
-			if (string.toLowerCase().contains("runescape")) {
-				string = string.replace("runescape", "Darkan");
-				string = string.replace("RuneScape", "Darkan");
-				string = string.replace("Runescape", "Darkan");
+	void decodeInstruction(RsByteBuffer rsbytebuffer_1, int i_2, CS2OpInfo cs2opinfo_3) {
+		int i_4 = this.operations.length;
+		if (cs2opinfo_3 == CS2OpInfo.PUSH_STRING) {
+			if (this.stringOpValues == null) {
+				this.stringOpValues = new String[i_4];
 			}
-			stringOpValues[opIndex] = string.intern();
-		} else if (CS2OpInfo.PUSH_LONG == operation) {
-			if (null == longOpValues)
-				longOpValues = new long[opLength];
-			longOpValues[opIndex] = buffer.readLong(1461379326);
+
+			String string_5 = rsbytebuffer_1.readString();
+			if (string_5.toLowerCase().contains("runescape")) {
+				string_5 = string_5.replace("runescape", "Darkan");
+				string_5 = string_5.replace("RuneScape", "Darkan");
+				string_5 = string_5.replace("Runescape", "Darkan");
+			}
+
+			this.stringOpValues[i_2] = string_5.intern();
+		} else if (cs2opinfo_3 == CS2OpInfo.PUSH_LONG) {
+			if (this.longOpValues == null) {
+				this.longOpValues = new long[i_4];
+			}
+
+			this.longOpValues[i_2] = rsbytebuffer_1.readLong(1461379326);
 		} else {
-			if (null == intOpValues)
-				intOpValues = new int[opLength];
-			if (operation.hasIntConstant)
-				intOpValues[opIndex] = buffer.readInt();
-			else
-				intOpValues[opIndex] = buffer.readUnsignedByte();
+			if (this.intOpValues == null) {
+				this.intOpValues = new int[i_4];
+			}
+
+			if (cs2opinfo_3.hasIntConstant) {
+				this.intOpValues[i_2] = rsbytebuffer_1.readInt();
+			} else {
+				this.intOpValues[i_2] = rsbytebuffer_1.readUnsignedByte();
+			}
 		}
-		operations[opIndex] = operation;
+
+		this.operations[i_2] = cs2opinfo_3;
 	}
+
 }

@@ -1,8 +1,5 @@
-/* Class420 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class SoftwareItemRender implements Interface18 {
+
 	int outlineSize;
 	int itemAmount;
 	int itemId;
@@ -11,166 +8,122 @@ public class SoftwareItemRender implements Interface18 {
 	int renderStack;
 	boolean hasPlayerAppearance;
 
-	public boolean method132(Interface18 interface18) {
-		if (!(interface18 instanceof SoftwareItemRender))
+	public boolean method132(Interface18 interface18_1) {
+		if (!(interface18_1 instanceof SoftwareItemRender)) {
 			return false;
-		SoftwareItemRender class420_0_ = (SoftwareItemRender) interface18;
-		if (((SoftwareItemRender) class420_0_).rendererId * 362003861 != ((SoftwareItemRender) this).rendererId * 362003861)
-			return false;
-		if (-2122717931 * ((SoftwareItemRender) class420_0_).itemId != -2122717931 * ((SoftwareItemRender) this).itemId)
-			return false;
-		if (((SoftwareItemRender) class420_0_).itemAmount * 716754807 != 716754807 * ((SoftwareItemRender) this).itemAmount)
-			return false;
-		if (((SoftwareItemRender) this).outlineSize * -1886226917 != -1886226917 * ((SoftwareItemRender) class420_0_).outlineSize)
-			return false;
-		if (442868743 * ((SoftwareItemRender) class420_0_).shadowColor != ((SoftwareItemRender) this).shadowColor * 442868743)
-			return false;
-		if (((SoftwareItemRender) class420_0_).renderStack * -1317952433 != -1317952433 * ((SoftwareItemRender) this).renderStack)
-			return false;
-		if (((SoftwareItemRender) class420_0_).hasPlayerAppearance != ((SoftwareItemRender) this).hasPlayerAppearance)
-			return false;
-		return true;
-	}
-
-	SoftwareItemRender() {
-		/* empty */
-	}
-
-	public boolean method131(Interface18 interface18) {
-		if (!(interface18 instanceof SoftwareItemRender))
-			return false;
-		SoftwareItemRender class420_1_ = (SoftwareItemRender) interface18;
-		if (((SoftwareItemRender) class420_1_).rendererId * 362003861 != ((SoftwareItemRender) this).rendererId * 362003861)
-			return false;
-		if (-2122717931 * ((SoftwareItemRender) class420_1_).itemId != -2122717931 * ((SoftwareItemRender) this).itemId)
-			return false;
-		if (((SoftwareItemRender) class420_1_).itemAmount * 716754807 != 716754807 * ((SoftwareItemRender) this).itemAmount)
-			return false;
-		if (((SoftwareItemRender) this).outlineSize * -1886226917 != -1886226917 * ((SoftwareItemRender) class420_1_).outlineSize)
-			return false;
-		if (442868743 * ((SoftwareItemRender) class420_1_).shadowColor != ((SoftwareItemRender) this).shadowColor * 442868743)
-			return false;
-		if (((SoftwareItemRender) class420_1_).renderStack * -1317952433 != -1317952433 * ((SoftwareItemRender) this).renderStack)
-			return false;
-		if (((SoftwareItemRender) class420_1_).hasPlayerAppearance != ((SoftwareItemRender) this).hasPlayerAppearance)
-			return false;
-		return true;
-	}
-
-	public long method109() {
-		long[] ls = RsByteBuffer.aLongArray7979;
-		long l = -1L;
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (362003861 * ((SoftwareItemRender) this).rendererId)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (-2122717931 * ((SoftwareItemRender) this).itemId >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-2122717931 * ((SoftwareItemRender) this).itemId)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (716754807 * ((SoftwareItemRender) this).itemAmount >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (716754807 * ((SoftwareItemRender) this).itemAmount >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (716754807 * ((SoftwareItemRender) this).itemAmount >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((SoftwareItemRender) this).itemAmount * 716754807)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1886226917 * ((SoftwareItemRender) this).outlineSize)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (442868743 * ((SoftwareItemRender) this).shadowColor >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (((SoftwareItemRender) this).shadowColor * 442868743 >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (442868743 * ((SoftwareItemRender) this).shadowColor >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (442868743 * ((SoftwareItemRender) this).shadowColor)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1317952433 * ((SoftwareItemRender) this).renderStack)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((SoftwareItemRender) this).hasPlayerAppearance ? 1 : 0)) & 0xffL)];
-		return l;
-	}
-
-	public long method130() {
-		long[] ls = RsByteBuffer.aLongArray7979;
-		long l = -1L;
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (362003861 * ((SoftwareItemRender) this).rendererId)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (-2122717931 * ((SoftwareItemRender) this).itemId >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-2122717931 * ((SoftwareItemRender) this).itemId)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (716754807 * ((SoftwareItemRender) this).itemAmount >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (716754807 * ((SoftwareItemRender) this).itemAmount >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (716754807 * ((SoftwareItemRender) this).itemAmount >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((SoftwareItemRender) this).itemAmount * 716754807)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1886226917 * ((SoftwareItemRender) this).outlineSize)) & 0xffL)];
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (442868743 * ((SoftwareItemRender) this).shadowColor >> 24)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (((SoftwareItemRender) this).shadowColor * 442868743 >> 16)) & 0xffL)]);
-		l = (l >>> 8 ^ ls[(int) ((l ^ (long) (442868743 * ((SoftwareItemRender) this).shadowColor >> 8)) & 0xffL)]);
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (442868743 * ((SoftwareItemRender) this).shadowColor)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (-1317952433 * ((SoftwareItemRender) this).renderStack)) & 0xffL)];
-		l = l >>> 8 ^ ls[(int) ((l ^ (long) (((SoftwareItemRender) this).hasPlayerAppearance ? 1 : 0)) & 0xffL)];
-		return l;
-	}
-
-	public boolean method133(Interface18 interface18) {
-		if (!(interface18 instanceof SoftwareItemRender))
-			return false;
-		SoftwareItemRender class420_2_ = (SoftwareItemRender) interface18;
-		if (((SoftwareItemRender) class420_2_).rendererId * 362003861 != ((SoftwareItemRender) this).rendererId * 362003861)
-			return false;
-		if (-2122717931 * ((SoftwareItemRender) class420_2_).itemId != -2122717931 * ((SoftwareItemRender) this).itemId)
-			return false;
-		if (((SoftwareItemRender) class420_2_).itemAmount * 716754807 != 716754807 * ((SoftwareItemRender) this).itemAmount)
-			return false;
-		if (((SoftwareItemRender) this).outlineSize * -1886226917 != -1886226917 * ((SoftwareItemRender) class420_2_).outlineSize)
-			return false;
-		if (442868743 * ((SoftwareItemRender) class420_2_).shadowColor != ((SoftwareItemRender) this).shadowColor * 442868743)
-			return false;
-		if (((SoftwareItemRender) class420_2_).renderStack * -1317952433 != -1317952433 * ((SoftwareItemRender) this).renderStack)
-			return false;
-		if (((SoftwareItemRender) class420_2_).hasPlayerAppearance != ((SoftwareItemRender) this).hasPlayerAppearance)
-			return false;
-		return true;
-	}
-
-	public boolean method134(Interface18 interface18) {
-		if (!(interface18 instanceof SoftwareItemRender))
-			return false;
-		SoftwareItemRender class420_3_ = (SoftwareItemRender) interface18;
-		if (((SoftwareItemRender) class420_3_).rendererId * 362003861 != ((SoftwareItemRender) this).rendererId * 362003861)
-			return false;
-		if (-2122717931 * ((SoftwareItemRender) class420_3_).itemId != -2122717931 * ((SoftwareItemRender) this).itemId)
-			return false;
-		if (((SoftwareItemRender) class420_3_).itemAmount * 716754807 != 716754807 * ((SoftwareItemRender) this).itemAmount)
-			return false;
-		if (((SoftwareItemRender) this).outlineSize * -1886226917 != -1886226917 * ((SoftwareItemRender) class420_3_).outlineSize)
-			return false;
-		if (442868743 * ((SoftwareItemRender) class420_3_).shadowColor != ((SoftwareItemRender) this).shadowColor * 442868743)
-			return false;
-		if (((SoftwareItemRender) class420_3_).renderStack * -1317952433 != -1317952433 * ((SoftwareItemRender) this).renderStack)
-			return false;
-		if (((SoftwareItemRender) class420_3_).hasPlayerAppearance != ((SoftwareItemRender) this).hasPlayerAppearance)
-			return false;
-		return true;
-	}
-
-	static final void method7032(CS2Executor class527, short i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class118.anInt1301 * 1506818197;
-	}
-
-	static Class149_Sub4 method7033(RsByteBuffer class282_sub35, int i) {
-		return new Class149_Sub4(class282_sub35.readShort(1848939200), class282_sub35.readShort(1780715141), class282_sub35.readShort(1644491611), class282_sub35.readShort(1586203891), class282_sub35.read24BitUnsignedInteger(), class282_sub35.read24BitUnsignedInteger(), class282_sub35.readUnsignedByte());
-	}
-
-	public static void method7034(AnimationDefinitions class518, int i, int i_4_) {
-		if (-458827259 * Class260.anInt3219 < 50 && (class518 != null && null != class518.anIntArrayArray5913 && i < class518.anIntArrayArray5913.length && null != class518.anIntArrayArray5913[i])) {
-			int i_5_ = class518.anIntArrayArray5913[i][0];
-			int i_6_ = i_5_ >> 8;
-			int i_7_ = i_5_ >> 5 & 0x7;
-			if (class518.anIntArrayArray5913[i].length > 1) {
-				int i_8_ = (int) (Math.random() * (double) (class518.anIntArrayArray5913[i]).length);
-				if (i_8_ > 0)
-					i_6_ = class518.anIntArrayArray5913[i][i_8_];
-			}
-			int i_9_ = 256;
-			if (class518.anIntArray5927 != null && null != class518.anIntArray5919)
-				i_9_ = Class76.method1356(class518.anIntArray5927[i], class518.anIntArray5919[i], -1021175029);
-			int i_10_ = (class518.anIntArray5926 == null ? 255 : class518.anIntArray5926[i]);
-			if (class518.aBool5928)
-				Class435.method7300(i_6_, i_7_, 0, i_10_, false, i_9_, 1449989045);
-			else
-				Class153.method2618(i_6_, i_7_, 0, i_10_, i_9_, 1648413322);
+		} else {
+			SoftwareItemRender softwareitemrender_2 = (SoftwareItemRender) interface18_1;
+			return softwareitemrender_2.rendererId * 785163709 * 362003861 != this.rendererId * 785163709 * 362003861 ? false : (-2122717931 * softwareitemrender_2.itemId * 412172861 != -2122717931 * this.itemId * 412172861 ? false : (softwareitemrender_2.itemAmount * -1802585529 * 716754807 != 716754807 * this.itemAmount * -1802585529 ? false : (this.outlineSize * -1113099245 * -1886226917 != -1886226917 * softwareitemrender_2.outlineSize * -1113099245 ? false : (442868743 * softwareitemrender_2.shadowColor * -621770313 != this.shadowColor * -621770313 * 442868743 ? false : (softwareitemrender_2.renderStack * -190647633 * -1317952433 != -1317952433 * this.renderStack * -190647633 ? false : softwareitemrender_2.hasPlayerAppearance == this.hasPlayerAppearance)))));
 		}
 	}
 
-	static final boolean method7035(char c, int i) {
-		return '\u00a0' == c || c == ' ' || '_' == c || c == '-';
+	public boolean method131(Interface18 interface18_1) {
+		if (!(interface18_1 instanceof SoftwareItemRender)) {
+			return false;
+		} else {
+			SoftwareItemRender softwareitemrender_2 = (SoftwareItemRender) interface18_1;
+			return softwareitemrender_2.rendererId != this.rendererId ? false : (softwareitemrender_2.itemId != this.itemId ? false : (softwareitemrender_2.itemAmount != this.itemAmount ? false : (this.outlineSize != softwareitemrender_2.outlineSize ? false : (softwareitemrender_2.shadowColor != this.shadowColor ? false : (softwareitemrender_2.renderStack != this.renderStack ? false : softwareitemrender_2.hasPlayerAppearance == this.hasPlayerAppearance)))));
+		}
 	}
+
+	public long method109() {
+		long[] longs_1 = RsByteBuffer.aLongArray7979;
+		long long_2 = -1L;
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (362003861 * this.rendererId * 785163709)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (-2122717931 * this.itemId * 412172861 >> 8)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (-2122717931 * this.itemId * 412172861)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (716754807 * this.itemAmount * -1802585529 >> 24)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (716754807 * this.itemAmount * -1802585529 >> 16)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (716754807 * this.itemAmount * -1802585529 >> 8)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.itemAmount * -1802585529 * 716754807)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (-1886226917 * this.outlineSize * -1113099245)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (442868743 * this.shadowColor * -621770313 >> 24)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.shadowColor * -621770313 * 442868743 >> 16)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (442868743 * this.shadowColor * -621770313 >> 8)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (442868743 * this.shadowColor * -621770313)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (-1317952433 * this.renderStack * -190647633)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.hasPlayerAppearance ? 1 : 0)) & 0xffL)];
+		return long_2;
+	}
+
+	public long method130() {
+		long[] longs_1 = RsByteBuffer.aLongArray7979;
+		long long_2 = -1L;
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) this.rendererId) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.itemId >> 8)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) this.itemId) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.itemAmount >> 24)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.itemAmount >> 16)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.itemAmount >> 8)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) this.itemAmount) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) this.outlineSize) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.shadowColor >> 24)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.shadowColor >> 16)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.shadowColor >> 8)) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) this.shadowColor) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) this.renderStack) & 0xffL)];
+		long_2 = long_2 >>> 8 ^ longs_1[(int) ((long_2 ^ (long) (this.hasPlayerAppearance ? 1 : 0)) & 0xffL)];
+		return long_2;
+	}
+
+	public boolean method133(Interface18 interface18_1) {
+		if (!(interface18_1 instanceof SoftwareItemRender)) {
+			return false;
+		} else {
+			SoftwareItemRender softwareitemrender_2 = (SoftwareItemRender) interface18_1;
+			return softwareitemrender_2.rendererId * 785163709 * 362003861 != this.rendererId * 785163709 * 362003861 ? false : (-2122717931 * softwareitemrender_2.itemId * 412172861 != -2122717931 * this.itemId * 412172861 ? false : (softwareitemrender_2.itemAmount * -1802585529 * 716754807 != 716754807 * this.itemAmount * -1802585529 ? false : (this.outlineSize * -1113099245 * -1886226917 != -1886226917 * softwareitemrender_2.outlineSize * -1113099245 ? false : (442868743 * softwareitemrender_2.shadowColor * -621770313 != this.shadowColor * -621770313 * 442868743 ? false : (softwareitemrender_2.renderStack * -190647633 * -1317952433 != -1317952433 * this.renderStack * -190647633 ? false : softwareitemrender_2.hasPlayerAppearance == this.hasPlayerAppearance)))));
+		}
+	}
+
+	public boolean method134(Interface18 interface18_1) {
+		if (!(interface18_1 instanceof SoftwareItemRender)) {
+			return false;
+		} else {
+			SoftwareItemRender softwareitemrender_2 = (SoftwareItemRender) interface18_1;
+			return softwareitemrender_2.rendererId * 785163709 * 362003861 != this.rendererId * 785163709 * 362003861 ? false : (-2122717931 * softwareitemrender_2.itemId * 412172861 != -2122717931 * this.itemId * 412172861 ? false : (softwareitemrender_2.itemAmount * -1802585529 * 716754807 != 716754807 * this.itemAmount * -1802585529 ? false : (this.outlineSize * -1113099245 * -1886226917 != -1886226917 * softwareitemrender_2.outlineSize * -1113099245 ? false : (442868743 * softwareitemrender_2.shadowColor * -621770313 != this.shadowColor * -621770313 * 442868743 ? false : (softwareitemrender_2.renderStack * -190647633 * -1317952433 != -1317952433 * this.renderStack * -190647633 ? false : softwareitemrender_2.hasPlayerAppearance == this.hasPlayerAppearance)))));
+		}
+	}
+
+	static final void method7032(CS2Executor cs2executor_0, short s_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1301;
+	}
+
+	static Class149_Sub4 method7033(RsByteBuffer rsbytebuffer_0, int i_1) {
+		return new Class149_Sub4(rsbytebuffer_0.readShort(1848939200), rsbytebuffer_0.readShort(1780715141), rsbytebuffer_0.readShort(1644491611), rsbytebuffer_0.readShort(1586203891), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
+	}
+
+	public static void method7034(AnimationDefinitions animationdefinitions_0, int i_1, int i_2) {
+		if (Class260.anInt3219 < 50 && animationdefinitions_0 != null && animationdefinitions_0.anIntArrayArray5913 != null && i_1 < animationdefinitions_0.anIntArrayArray5913.length && animationdefinitions_0.anIntArrayArray5913[i_1] != null) {
+			int i_3 = animationdefinitions_0.anIntArrayArray5913[i_1][0];
+			int i_4 = i_3 >> 8;
+			int i_5 = i_3 >> 5 & 0x7;
+			int i_6;
+			if (animationdefinitions_0.anIntArrayArray5913[i_1].length > 1) {
+				i_6 = (int) (Math.random() * (double) animationdefinitions_0.anIntArrayArray5913[i_1].length);
+				if (i_6 > 0) {
+					i_4 = animationdefinitions_0.anIntArrayArray5913[i_1][i_6];
+				}
+			}
+
+			i_6 = 256;
+			if (animationdefinitions_0.anIntArray5927 != null && animationdefinitions_0.anIntArray5919 != null) {
+				i_6 = Class76.method1356(animationdefinitions_0.anIntArray5927[i_1], animationdefinitions_0.anIntArray5919[i_1], -1021175029);
+			}
+
+			int i_7 = animationdefinitions_0.anIntArray5926 == null ? 255 : animationdefinitions_0.anIntArray5926[i_1];
+			if (animationdefinitions_0.aBool5928) {
+				Class435.method7300(i_4, i_5, 0, i_7, false, i_6, 1449989045);
+			} else {
+				Class153.method2618(i_4, i_5, 0, i_7, i_6, 1648413322);
+			}
+		}
+
+	}
+
+	static final boolean method7035(char var_0, int i_1) {
+		return var_0 == 160 || var_0 == 32 || var_0 == 95 || var_0 == 45;
+	}
+
 }

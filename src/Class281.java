@@ -1,197 +1,139 @@
-
-/* Class281 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Class281 {
-	int anInt3372;
-	int[] anIntArray3373;
-	int anInt3374;
-	int[] anIntArray3375;
+
 	static int anInt3376 = 0;
 	LinkedList aLinkedList3377;
+	int anInt3372;
+	int anInt3374;
+	int[] anIntArray3375;
+	int[] anIntArray3373;
 
-	void method4976(SceneObjectManager class206) {
-		((Class281) this).aLinkedList3377 = new LinkedList();
-		RegionMap class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1448463599);
-		CoordGrid class219_0_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
-		for (int i = 1; i < 1443022381 * ((Class281) this).anInt3374; i++) {
-			CoordGrid class219_1_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i], ((Class281) this).anIntArray3373[i]);
-			while ((class219_0_.x * 1948093437 != 1948093437 * class219_1_.x) || (-1002240017 * class219_0_.y != -1002240017 * class219_1_.y)) {
-				if (class219_0_.x * 1948093437 < class219_1_.x * 1948093437)
-					class219_0_.x += 1013524821;
-				else if (1948093437 * class219_0_.x > 1948093437 * class219_1_.x)
-					class219_0_.x -= 1013524821;
-				if (class219_0_.y * -1002240017 < class219_1_.y * -1002240017)
-					class219_0_.y += -2816241;
-				else if (-1002240017 * class219_0_.y > -1002240017 * class219_1_.y)
-					class219_0_.y -= -2816241;
-				int i_2_ = 675588453 * Class4.anInt35;
-				int i_3_ = (1948093437 * class219_0_.x - class219.x * 1948093437);
-				int i_4_ = (-1002240017 * class219_0_.y - -1002240017 * class219.y);
-				if (i_3_ >= 0 && i_3_ < class206.anInt2617 * -1912960305 && i_4_ >= 0 && i_4_ < class206.anInt2603 * -18177099) {
-					int i_5_ = (i_3_ << 9) + 256;
-					int i_6_ = (i_4_ << 9) + 256;
-					if (class311.is0x2(i_3_, i_4_, 1443895157))
-						i_2_++;
-					((Class281) this).aLinkedList3377.add(new Class521_Sub1_Sub1_Sub1(class206, this, 675588453 * Class4.anInt35, i_2_, i_5_, Class504.method8389(i_5_, i_6_, Class4.anInt35 * 675588453, (byte) 48), i_6_));
-				}
+	MeshRasterizer method4977(GraphicalRenderer graphicalrenderer_1, int i_2) {
+		RSMesh rsmesh_3 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, this.anInt3372, 0);
+		if (rsmesh_3 == null) {
+			return null;
+		} else {
+			if (rsmesh_3.zoom < 13) {
+				rsmesh_3.upscale(2);
 			}
-			class219_0_ = class219_1_;
+
+			return graphicalrenderer_1.createMeshRasterizer(rsmesh_3, 2048, anInt3376, 64, 768);
 		}
 	}
 
-	MeshRasterizer method4977(GraphicalRenderer class505, int i) {
-		RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, ((Class281) this).anInt3372 * 68563351, 0);
-		if (null == class157)
-			return null;
-		if (class157.zoom < 13)
-			class157.upscale(2);
-		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
-	}
+	public void method4978(SceneObjectManager sceneobjectmanager_1, byte b_2) {
+		if (sceneobjectmanager_1 != null) {
+			if (b_2 != -1)
+				if (this.anInt3374 > 0 && b_2 == -1) {
+					this.method4983(sceneobjectmanager_1, -199147692);
+					Iterator iterator_3 = this.aLinkedList3377.iterator();
 
-	public void method4978(SceneObjectManager class206, byte i) {
-		if (class206 != null) {
-			if (i != -1) {
-				for (;;) {
-					/* empty */
-				}
-			}
-			if (((Class281) this).anInt3374 * 1443022381 > 0) {
-				if (i == -1) {
-					method4983(class206, -199147692);
-					Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
-					while (iterator.hasNext()) {
-						if (i != -1)
-							break;
-						Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1 = (Class521_Sub1_Sub1_Sub1) iterator.next();
-						class206.method3397(class521_sub1_sub1_sub1, false, 1630649491);
+					while (iterator_3.hasNext() && b_2 == -1) {
+						Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Class521_Sub1_Sub1_Sub1) iterator_3.next();
+						sceneobjectmanager_1.method3397(class521_sub1_sub1_sub1_4, false, 1630649491);
 					}
 				}
+		}
+
+	}
+
+	public void method4979(SceneObjectManager sceneobjectmanager_1, int i_2) {
+		if (sceneobjectmanager_1 != null && this.aLinkedList3377 != null) {
+			Iterator iterator_3 = this.aLinkedList3377.iterator();
+
+			while (iterator_3.hasNext()) {
+				Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1_4 = (Class521_Sub1_Sub1_Sub1) iterator_3.next();
+				sceneobjectmanager_1.method3530(class521_sub1_sub1_sub1_4.plane, class521_sub1_sub1_sub1_4.aShort9458, class521_sub1_sub1_sub1_4.aShort9456, new Class280(class521_sub1_sub1_sub1_4), -1561298110);
 			}
 		}
+
 	}
 
-	public void method4979(SceneObjectManager class206, int i) {
-		if (null != class206 && null != ((Class281) this).aLinkedList3377) {
-			Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
-			while (iterator.hasNext()) {
-				Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1 = (Class521_Sub1_Sub1_Sub1) iterator.next();
-				class206.method3530(class521_sub1_sub1_sub1.plane, class521_sub1_sub1_sub1.aShort9458, class521_sub1_sub1_sub1.aShort9456, new Class280(class521_sub1_sub1_sub1), -1561298110);
-			}
-		}
-	}
+	void method4983(SceneObjectManager sceneobjectmanager_1, int i_2) {
+		this.aLinkedList3377 = new LinkedList();
+		RegionMap regionmap_3 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
+		CoordGrid coordgrid_4 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(309280433);
+		CoordGrid coordgrid_5 = new CoordGrid(Class4.anInt35, this.anIntArray3375[0], this.anIntArray3373[0]);
 
-	public void method4980(SceneObjectManager class206) {
-		if (null != class206 && null != ((Class281) this).aLinkedList3377) {
-			Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
-			while (iterator.hasNext()) {
-				Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1 = (Class521_Sub1_Sub1_Sub1) iterator.next();
-				class206.method3530(class521_sub1_sub1_sub1.plane, class521_sub1_sub1_sub1.aShort9458, class521_sub1_sub1_sub1.aShort9456, new Class280(class521_sub1_sub1_sub1), -454434245);
-			}
-		}
-	}
+		for (int i_6 = 1; i_6 < this.anInt3374; i_6++) {
+			CoordGrid coordgrid_7 = new CoordGrid(Class4.anInt35, this.anIntArray3375[i_6], this.anIntArray3373[i_6]);
 
-	MeshRasterizer method4981(GraphicalRenderer class505) {
-		RSMesh class157 = RSMesh.decodeMesh(IndexLoaders.MESH_INDEX, ((Class281) this).anInt3372 * 68563351, 0);
-		if (null == class157)
-			return null;
-		if (class157.zoom < 13)
-			class157.upscale(2);
-		return class505.createMeshRasterizer(class157, 2048, anInt3376 * 44398085, 64, 768);
-	}
+			while (coordgrid_5.x != coordgrid_7.x || coordgrid_5.y != coordgrid_7.y) {
+				if (coordgrid_5.x < coordgrid_7.x) {
+					++coordgrid_5.x;
+				} else if (coordgrid_5.x > coordgrid_7.x) {
+					--coordgrid_5.x;
+				}
 
-	public void method4982(SceneObjectManager class206) {
-		if (class206 != null && ((Class281) this).anInt3374 * 1443022381 > 0) {
-			method4983(class206, -199147692);
-			Iterator iterator = ((Class281) this).aLinkedList3377.iterator();
-			while (iterator.hasNext()) {
-				Class521_Sub1_Sub1_Sub1 class521_sub1_sub1_sub1 = (Class521_Sub1_Sub1_Sub1) iterator.next();
-				class206.method3397(class521_sub1_sub1_sub1, false, -767760037);
-			}
-		}
-	}
+				if (coordgrid_5.y < coordgrid_7.y) {
+					++coordgrid_5.y;
+				} else if (coordgrid_5.y > coordgrid_7.y) {
+					--coordgrid_5.y;
+				}
 
-	void method4983(SceneObjectManager class206, int i) {
-		((Class281) this).aLinkedList3377 = new LinkedList();
-		RegionMap class311 = IndexLoaders.MAP_REGION_DECODER.method4433(33386298);
-		CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(309280433);
-		CoordGrid class219_7_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[0], ((Class281) this).anIntArray3373[0]);
-		for (int i_8_ = 1; i_8_ < 1443022381 * ((Class281) this).anInt3374; i_8_++) {
-			CoordGrid class219_9_ = new CoordGrid(675588453 * Class4.anInt35, ((Class281) this).anIntArray3375[i_8_], ((Class281) this).anIntArray3373[i_8_]);
-			while ((class219_7_.x * 1948093437 != 1948093437 * class219_9_.x) || (-1002240017 * class219_7_.y != -1002240017 * class219_9_.y)) {
-				if (class219_7_.x * 1948093437 < class219_9_.x * 1948093437)
-					class219_7_.x += 1013524821;
-				else if (1948093437 * class219_7_.x > 1948093437 * class219_9_.x)
-					class219_7_.x -= 1013524821;
-				if (class219_7_.y * -1002240017 < class219_9_.y * -1002240017)
-					class219_7_.y += -2816241;
-				else if (-1002240017 * class219_7_.y > -1002240017 * class219_9_.y)
-					class219_7_.y -= -2816241;
-				int i_10_ = 675588453 * Class4.anInt35;
-				int i_11_ = (1948093437 * class219_7_.x - class219.x * 1948093437);
-				int i_12_ = (-1002240017 * class219_7_.y - -1002240017 * class219.y);
-				if (i_11_ >= 0 && i_11_ < class206.anInt2617 * -1912960305 && i_12_ >= 0 && i_12_ < class206.anInt2603 * -18177099) {
-					int i_13_ = (i_11_ << 9) + 256;
-					int i_14_ = (i_12_ << 9) + 256;
-					if (class311.is0x2(i_11_, i_12_, 1872595412))
-						i_10_++;
-					((Class281) this).aLinkedList3377.add(new Class521_Sub1_Sub1_Sub1(class206, this, 675588453 * Class4.anInt35, i_10_, i_13_, Class504.method8389(i_13_, i_14_, Class4.anInt35 * 675588453, (byte) 91), i_14_));
+				int i_8 = Class4.anInt35;
+				int i_9 = coordgrid_5.x - coordgrid_4.x;
+				int i_10 = coordgrid_5.y - coordgrid_4.y;
+				if (i_9 >= 0 && i_9 < sceneobjectmanager_1.anInt2617 && i_10 >= 0 && i_10 < sceneobjectmanager_1.anInt2603) {
+					int i_11 = (i_9 << 9) + 256;
+					int i_12 = (i_10 << 9) + 256;
+					if (regionmap_3.is0x2(i_9, i_10, 1872595412)) {
+						++i_8;
+					}
+
+					this.aLinkedList3377.add(new Class521_Sub1_Sub1_Sub1(sceneobjectmanager_1, this, Class4.anInt35, i_8, i_11, Class504.method8389(i_11, i_12, Class4.anInt35, (byte) 91), i_12));
 				}
 			}
-			class219_7_ = class219_9_;
+
+			coordgrid_5 = coordgrid_7;
 		}
+
 	}
 
-	public Class281(GraphicalRenderer class505, RsByteBuffer class282_sub35, int i) {
-		((Class281) this).anInt3372 = i * 1946115623;
-		((Class281) this).anInt3374 = class282_sub35.method13094(1207140670) * 1284995493;
-		((Class281) this).anIntArray3375 = new int[1443022381 * ((Class281) this).anInt3374];
-		((Class281) this).anIntArray3373 = new int[((Class281) this).anInt3374 * 1443022381];
-		int i_15_ = class282_sub35.readUnsignedShort();
-		int i_16_ = class282_sub35.readUnsignedShort();
-		for (int i_17_ = 0; i_17_ < ((Class281) this).anInt3374 * 1443022381; i_17_++) {
-			((Class281) this).anIntArray3375[i_17_] = i_15_ + class282_sub35.readByte();
-			((Class281) this).anIntArray3373[i_17_] = i_16_ + class282_sub35.readByte();
+	public Class281(GraphicalRenderer graphicalrenderer_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+		this.anInt3372 = i_3;
+		this.anInt3374 = rsbytebuffer_2.method13094(1207140670);
+		this.anIntArray3375 = new int[this.anInt3374];
+		this.anIntArray3373 = new int[this.anInt3374];
+		int i_4 = rsbytebuffer_2.readUnsignedShort();
+		int i_5 = rsbytebuffer_2.readUnsignedShort();
+
+		for (int i_6 = 0; i_6 < this.anInt3374; i_6++) {
+			this.anIntArray3375[i_6] = i_4 + rsbytebuffer_2.readByte();
+			this.anIntArray3373[i_6] = i_5 + rsbytebuffer_2.readByte();
 		}
-		method4977(class505, 546105467);
+
+		this.method4977(graphicalrenderer_1, 546105467);
 	}
 
-	public static void method4984(int i) {
-		anInt3376 = -719788339 * i;
+	static final void method4986(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intOpValues[cs2executor_0.instrPtr];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = ((Player) cs2executor_0.animable).aClass155_10561.method2627(i_2, -1165969492);
 	}
 
-	public static void method4985(int i) {
-		anInt3376 = -719788339 * i;
+	static final void method4987(CS2Executor cs2executor_0, int i_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2 + i_3;
 	}
 
-	static final void method4986(CS2Executor class527, int i) {
-		int i_18_ = (class527.intOpValues[class527.instrPtr * 301123709]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = ((Player) class527.animable).aClass155_10561.method2627(i_18_, -1165969492);
-	}
-
-	static final void method4987(CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int i_19_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = new StringBuilder().append(string).append(i_19_).toString();
-	}
-
-	static final void method4988(CS2Executor class527, int i) {
-		int i_20_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub6 class282_sub50_sub6 = Class291.method5130(i_20_);
-		if (class282_sub50_sub6 == null) {
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+	static final void method4988(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		Class282_Sub50_Sub6 class282_sub50_sub6_3 = Class291.method5130(i_2);
+		if (class282_sub50_sub6_3 == null) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
 		} else {
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (235539227 * class282_sub50_sub6.anInt9540 - -742910705 * class282_sub50_sub6.anInt9539);
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = (1097246003 * class282_sub50_sub6.anInt9535 - class282_sub50_sub6.anInt9541 * 458255425);
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class282_sub50_sub6_3.anInt9540 - class282_sub50_sub6_3.anInt9539;
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class282_sub50_sub6_3.anInt9535 - class282_sub50_sub6_3.anInt9541;
 		}
+
 	}
 
-	static final void method4989(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12622(531406560) ? 1 : 0;
+	static final void method4989(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub2_8205.method12622(531406560) ? 1 : 0;
 	}
+
 }

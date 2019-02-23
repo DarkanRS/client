@@ -1,586 +1,673 @@
-/* Class317 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public final class Index {
-	Object[] archives;
-	int anInt3683;
+
 	static Class395 aClass395_3684 = new Class395();
-	boolean aBool3685;
-	Object[][] archiveFiles;
-	static int anInt3689;
-	JS5FileWorker aClass327_3690;
 	static boolean aBool3692 = false;
+	static int anInt3689 = 0;
 	ReferenceTable referenceTable = null;
+	Object[] archives;
+	Object[][] archiveFiles;
+	JS5FileWorker aClass327_3690;
+	boolean aBool3685;
+	int anInt3683;
 
 	public int getCrc() {
-		if (!referenceTableLoaded())
+		if (!this.referenceTableLoaded()) {
 			throw new IllegalStateException("");
-		return (-2006273977 * referenceTable.crc);
+		} else {
+			return this.referenceTable.crc;
+		}
 	}
 
-	synchronized boolean archiveExists(int archiveId) {
-		if (!referenceTableLoaded())
+	synchronized boolean archiveExists(int i_1) {
+		if (!this.referenceTableLoaded()) {
 			return false;
-		if (archiveId < 0 || archiveId >= (referenceTable.fileCounts).length || 0 == (referenceTable.fileCounts[archiveId])) {
-			if (aBool3692)
-				throw new IllegalArgumentException(Integer.toString(archiveId));
+		} else if (i_1 >= 0 && i_1 < this.referenceTable.fileCounts.length && this.referenceTable.fileCounts[i_1] != 0) {
+			return true;
+		} else if (aBool3692) {
+			throw new IllegalArgumentException(Integer.toString(i_1));
+		} else {
 			return false;
 		}
-		return true;
 	}
 
-	synchronized boolean fileExists(int fileId, int archiveId) {
-		if (!referenceTableLoaded())
+	synchronized boolean fileExists(int i_1, int i_2) {
+		if (!this.referenceTableLoaded()) {
 			return false;
-		if (fileId < 0 || archiveId < 0 || fileId >= (referenceTable.fileCounts).length || archiveId >= (referenceTable.fileCounts[fileId])) {
-			if (aBool3692)
-				throw new IllegalArgumentException(new StringBuilder().append(fileId).append(" ").append(archiveId).toString());
+		} else if (i_1 >= 0 && i_2 >= 0 && i_1 < this.referenceTable.fileCounts.length && i_2 < this.referenceTable.fileCounts[i_1]) {
+			return true;
+		} else if (aBool3692) {
+			throw new IllegalArgumentException(i_1 + " " + i_2);
+		} else {
 			return false;
 		}
-		return true;
 	}
 
-	synchronized void requestArchive(int archiveId) {
-		if (this.aBool3685)
-			this.archives[archiveId] = this.aClass327_3690.method5804(archiveId, 1942118537);
-		else
-			this.archives[archiveId] = JS5Manager.method5493(this.aClass327_3690.method5804(archiveId, 1942118537), false, (byte) 47);
+	synchronized void requestArchive(int i_1) {
+		if (this.aBool3685) {
+			this.archives[i_1] = this.aClass327_3690.method5804(i_1, 1942118537);
+		} else {
+			this.archives[i_1] = JS5Manager.method5493(this.aClass327_3690.method5804(i_1, 1942118537), false, (byte) 47);
+		}
+
 	}
 
-	void method5606(int i, int i_8_) {
-		this.aClass327_3690.method5805(i, 1941193995);
+	void method5606(int i_1, int i_2) {
+		this.aClass327_3690.method5805(i_1, 1941193995);
 	}
 
-	public byte[] getFile(int archiveId, int fileId) {
-		return getFile(archiveId, fileId, null);
+	public byte[] getFile(int i_1, int i_2) {
+		return this.getFile(i_1, i_2, (int[]) null);
 	}
 
-	public boolean validFile(String string) {
-		if (!referenceTableLoaded())
+	public boolean validFile(String string_1) {
+		if (!this.referenceTableLoaded()) {
 			return false;
-		string = string.toLowerCase();
-		int i_11_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -746218156), -1797692054));
-		if (i_11_ < 0)
-			return false;
-		return true;
+		} else {
+			string_1 = string_1.toLowerCase();
+			int i_2 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -746218156), -1797692054);
+			return i_2 >= 0;
+		}
 	}
 
-	public int getArchiveId(String string) {
-		if (!referenceTableLoaded())
+	public int getArchiveId(String string_1) {
+		if (!this.referenceTableLoaded()) {
 			return -1;
-		string = string.toLowerCase();
-		int i_12_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -221631935), -1537354695));
-		if (!archiveExists(i_12_))
-			return -1;
-		return i_12_;
+		} else {
+			string_1 = string_1.toLowerCase();
+			int i_2 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -221631935), -1537354695);
+			return !this.archiveExists(i_2) ? -1 : i_2;
+		}
 	}
 
 	public synchronized boolean isValid() {
-		if (!referenceTableLoaded())
+		if (!this.referenceTableLoaded()) {
 			return false;
-		boolean bool = true;
-		for (int i = 0; i < (referenceTable.validArchiveIds).length; i++) {
-			int archiveId = (referenceTable.validArchiveIds[i]);
-			if (null == this.archives[archiveId]) {
-				requestArchive(archiveId);
-				if (null == this.archives[archiveId])
-					bool = false;
+		} else {
+			boolean bool_1 = true;
+
+			for (int i_2 = 0; i_2 < this.referenceTable.validArchiveIds.length; i_2++) {
+				int i_3 = this.referenceTable.validArchiveIds[i_2];
+				if (this.archives[i_3] == null) {
+					this.requestArchive(i_3);
+					if (this.archives[i_3] == null) {
+						bool_1 = false;
+					}
+				}
 			}
+
+			return bool_1;
 		}
-		return bool;
 	}
 
-	synchronized int method5613(int i, byte i_15_) {
-		if (!archiveExists(i))
-			return 0;
-		if (this.archives[i] != null)
-			return 100;
-		return this.aClass327_3690.method5806(i, (byte) 49);
+	synchronized int method5613(int i_1, byte b_2) {
+		return !this.archiveExists(i_1) ? 0 : (this.archives[i_1] != null ? 100 : this.aClass327_3690.method5806(i_1, (byte) 49));
 	}
 
 	public synchronized int getCompletion() {
-		if (!referenceTableLoaded())
+		if (!this.referenceTableLoaded()) {
 			return 0;
-		int i_16_ = 0;
-		int i_17_ = 0;
-		for (int i_18_ = 0; i_18_ < this.archives.length; i_18_++) {
-			if ((referenceTable.validFileIdSizes[i_18_]) > 0) {
-				i_16_ += 100;
-				i_17_ += method5613(i_18_, (byte) -93);
+		} else {
+			int i_1 = 0;
+			int i_2 = 0;
+
+			int i_3;
+			for (i_3 = 0; i_3 < this.archives.length; i_3++) {
+				if (this.referenceTable.validFileIdSizes[i_3] > 0) {
+					i_1 += 100;
+					i_2 += this.method5613(i_3, (byte) -93);
+				}
+			}
+
+			if (i_1 == 0) {
+				return 100;
+			} else {
+				i_3 = i_2 * 100 / i_1;
+				return i_3;
 			}
 		}
-		if (0 == i_16_)
-			return 100;
-		int i_19_ = 100 * i_17_ / i_16_;
-		return i_19_;
 	}
 
-	public synchronized byte[] getFile(int fileId) {
-		if (!referenceTableLoaded())
+	public synchronized byte[] getFile(int i_1) {
+		if (!this.referenceTableLoaded()) {
 			return null;
-		if (referenceTable.fileCounts.length == 1)
-			return getFile(0, fileId);
-		if (!archiveExists(fileId))
+		} else if (this.referenceTable.fileCounts.length == 1) {
+			return this.getFile(0, i_1);
+		} else if (!this.archiveExists(i_1)) {
 			return null;
-		if (1 == referenceTable.fileCounts[fileId])
-			return getFile(fileId, 0);
-		throw new RuntimeException();
-	}
-
-	public synchronized int[] getValidFileIds(int archiveId) {
-		if (!archiveExists(archiveId))
-			return null;
-		int[] counts = (referenceTable.validFileIds[archiveId]);
-		if (null == counts) {
-			counts = new int[(referenceTable.validFileIdSizes[archiveId])];
-			for (int i = 0; i < counts.length; i++)
-				counts[i] = i;
+		} else if (this.referenceTable.fileCounts[i_1] == 1) {
+			return this.getFile(i_1, 0);
+		} else {
+			throw new RuntimeException();
 		}
-		return counts;
+	}
+
+	public synchronized int[] getValidFileIds(int i_1) {
+		if (!this.archiveExists(i_1)) {
+			return null;
+		} else {
+			int[] ints_2 = this.referenceTable.validFileIds[i_1];
+			if (ints_2 == null) {
+				ints_2 = new int[this.referenceTable.validFileIdSizes[i_1]];
+
+				for (int i_3 = 0; i_3 < ints_2.length; ints_2[i_3] = i_3++) {
+					;
+				}
+			}
+
+			return ints_2;
+		}
 	}
 
 	public int containersCount() {
-		if (!referenceTableLoaded())
-			return -1;
-		return (referenceTable.fileCounts).length;
+		return !this.referenceTableLoaded() ? -1 : this.referenceTable.fileCounts.length;
 	}
 
-	public synchronized void clearFiles(int archiveId) {
-		if (archiveExists(archiveId)) {
-			if (null != this.archiveFiles)
-				this.archiveFiles[archiveId] = null;
+	public synchronized void clearFiles(int i_1) {
+		if (this.archiveExists(i_1) && this.archiveFiles != null) {
+			this.archiveFiles[i_1] = null;
+		}
+
+	}
+
+	public int method5623(int i_1, byte b_2) {
+		if (!this.referenceTableLoaded()) {
+			return -1;
+		} else {
+			int i_3 = this.referenceTable.archiveName.method865(i_1, -1675109701);
+			return !this.archiveExists(i_3) ? -1 : i_3;
 		}
 	}
 
-	public int method5623(int i, byte i_26_) {
-		if (!referenceTableLoaded())
-			return -1;
-		int i_27_ = referenceTable.archiveName.method865(i, -1675109701);
-		if (!archiveExists(i_27_))
-			return -1;
-		return i_27_;
+	public int filesCount(int i_1) {
+		return !this.archiveExists(i_1) ? 0 : this.referenceTable.fileCounts[i_1];
 	}
 
-	public int filesCount(int archiveId) {
-		if (!archiveExists(archiveId))
-			return 0;
-		return referenceTable.fileCounts[archiveId];
-	}
-
-	public boolean method5625(String string, String string_29_, byte i) {
-		if (!referenceTableLoaded())
+	public boolean method5625(String string_1, String string_2, byte b_3) {
+		if (!this.referenceTableLoaded()) {
 			return false;
-		string = string.toLowerCase();
-		string_29_ = string_29_.toLowerCase();
-		int i_30_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1816008366), -1883190493));
-		if (i_30_ < 0)
-			return false;
-		int i_31_ = (referenceTable.namedFiles[i_30_].method865(GraphicalRenderer.method8696(string_29_, -92083175), -1658700496));
-		if (i_31_ < 0)
-			return false;
-		return true;
-	}
-
-	public synchronized byte[] method5626(String string, String string_32_, byte i) {
-		if (!referenceTableLoaded())
-			return null;
-		string = string.toLowerCase();
-		string_32_ = string_32_.toLowerCase();
-		int i_33_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1702952082), -1918848832));
-		if (!archiveExists(i_33_))
-			return null;
-		int i_34_ = (referenceTable.namedFiles[i_33_].method865(GraphicalRenderer.method8696(string_32_, -1819598468), -1926581994));
-		return getFile(i_33_, i_34_);
-	}
-
-	boolean method5627(String string, String string_35_, byte i) {
-		if (!referenceTableLoaded())
-			return false;
-		string = string.toLowerCase();
-		string_35_ = string_35_.toLowerCase();
-		int i_36_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, 639316649), -1994003594));
-		if (!archiveExists(i_36_))
-			return false;
-		int i_37_ = (referenceTable.namedFiles[i_36_].method865(GraphicalRenderer.method8696(string_35_, -316679725), -1542672707));
-		return load(i_36_, i_37_);
-	}
-
-	public boolean method5628(String string, int i) {
-		int i_38_ = getArchiveId("");
-		if (-1 != i_38_)
-			return method5627("", string, (byte) -29);
-		return method5627(string, "", (byte) 31);
-	}
-
-	public boolean method5629(String string, int i) {
-		if (!referenceTableLoaded())
-			return false;
-		string = string.toLowerCase();
-		int i_39_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1032103959), -2031296285));
-		return loadArchive(i_39_);
-	}
-
-	public void method5630(String string, int i) {
-		if (referenceTableLoaded()) {
-			string = string.toLowerCase();
-			int i_40_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, 320473901), -2076023188));
-			method5606(i_40_, 831904871);
+		} else {
+			string_1 = string_1.toLowerCase();
+			string_2 = string_2.toLowerCase();
+			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1816008366), -1883190493);
+			if (i_4 < 0) {
+				return false;
+			} else {
+				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2, -92083175), -1658700496);
+				return i_5 >= 0;
+			}
 		}
 	}
 
-	public int method5631(String string, byte i) {
-		if (!referenceTableLoaded())
-			return 0;
-		string = string.toLowerCase();
-		int i_41_ = (referenceTable.archiveName.method865(GraphicalRenderer.method8696(string, -1627018596), -1645709178));
-		return method5613(i_41_, (byte) -6);
+	public synchronized byte[] method5626(String string_1, String string_2, byte b_3) {
+		if (!this.referenceTableLoaded()) {
+			return null;
+		} else {
+			string_1 = string_1.toLowerCase();
+			string_2 = string_2.toLowerCase();
+			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1702952082), -1918848832);
+			if (!this.archiveExists(i_4)) {
+				return null;
+			} else {
+				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2, -1819598468), -1926581994);
+				return this.getFile(i_4, i_5);
+			}
+		}
 	}
 
-	static {
-		anInt3689 = 0;
+	boolean method5627(String string_1, String string_2, byte b_3) {
+		if (!this.referenceTableLoaded()) {
+			return false;
+		} else {
+			string_1 = string_1.toLowerCase();
+			string_2 = string_2.toLowerCase();
+			int i_4 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, 639316649), -1994003594);
+			if (!this.archiveExists(i_4)) {
+				return false;
+			} else {
+				int i_5 = this.referenceTable.namedFiles[i_4].method865(GraphicalRenderer.method8696(string_2, -316679725), -1542672707);
+				return this.load(i_4, i_5);
+			}
+		}
+	}
+
+	public boolean method5628(String string_1, int i_2) {
+		int i_3 = this.getArchiveId("");
+		return i_3 != -1 ? this.method5627("", string_1, (byte) -29) : this.method5627(string_1, "", (byte) 31);
+	}
+
+	public boolean method5629(String string_1, int i_2) {
+		if (!this.referenceTableLoaded()) {
+			return false;
+		} else {
+			string_1 = string_1.toLowerCase();
+			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1032103959), -2031296285);
+			return this.loadArchive(i_3);
+		}
+	}
+
+	public void method5630(String string_1, int i_2) {
+		if (this.referenceTableLoaded()) {
+			string_1 = string_1.toLowerCase();
+			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, 320473901), -2076023188);
+			this.method5606(i_3, 831904871);
+		}
+
+	}
+
+	public int method5631(String string_1, byte b_2) {
+		if (!this.referenceTableLoaded()) {
+			return 0;
+		} else {
+			string_1 = string_1.toLowerCase();
+			int i_3 = this.referenceTable.archiveName.method865(GraphicalRenderer.method8696(string_1, -1627018596), -1645709178);
+			return this.method5613(i_3, (byte) -6);
+		}
 	}
 
 	synchronized boolean referenceTableLoaded() {
 		if (this.referenceTable == null) {
 			this.referenceTable = this.aClass327_3690.getReferenceTable(-860118856);
-			if (this.referenceTable == null)
+			if (this.referenceTable == null) {
 				return false;
-			this.archives = new Object[(referenceTable.archiveCount) * 1563136279];
-			this.archiveFiles = new Object[(referenceTable.archiveCount) * 1563136279][];
+			}
+
+			this.archives = new Object[this.referenceTable.archiveCount];
+			this.archiveFiles = new Object[this.referenceTable.archiveCount][];
 		}
+
 		return true;
 	}
-	
-	synchronized boolean method5638(int i, int i_45_, int[] is, int i_46_) {
-		if (!archiveExists(i))
+
+	synchronized boolean method5638(int i_1, int i_2, int[] ints_3, int i_4) {
+		if (!this.archiveExists(i_1)) {
 			return false;
-		if (this.archives[i] == null)
+		} else if (this.archives[i_1] == null) {
 			return false;
-		int i_47_ = referenceTable.validFileIdSizes[i];
-		int[] is_48_ = (referenceTable.validFileIds[i]);
-		if (null == this.archiveFiles[i])
-			this.archiveFiles[i] = new Object[(referenceTable.fileCounts[i])];
-		Object[] objects = this.archiveFiles[i];
-		boolean bool = true;
-		for (int i_49_ = 0; i_49_ < i_47_; i_49_++) {
-			int i_50_;
-			if (null == is_48_)
-				i_50_ = i_49_;
-			else
-				i_50_ = is_48_[i_49_];
-			if (objects[i_50_] == null) {
-				bool = false;
-				break;
-			}
-		}
-		if (bool)
-			return true;
-		byte[] is_51_;
-		if (null != is && (is[0] != 0 || 0 != is[1] || 0 != is[2] || is[3] != 0)) {
-			is_51_ = Class346.method6154(this.archives[i], true, (byte) 1);
-			RsByteBuffer class282_sub35 = new RsByteBuffer(is_51_);
-			class282_sub35.method13249(is, 5, class282_sub35.buffer.length, -429400691);
-		} else
-			is_51_ = Class346.method6154(this.archives[i], false, (byte) 1);
-		byte[] is_52_;
-		try {
-			is_52_ = Class282_Sub17_Sub6.method15438(is_51_, (byte) 43);
-		} catch (RuntimeException runtimeexception) {
-			throw Class150.method2585(runtimeexception, new StringBuilder().append(null != is).append(" ").append(i).append(" ").append(is_51_.length).append(" ").append(Class285.getCRC(is_51_, is_51_.length)).append(" ").append(Class285.getCRC(is_51_, is_51_.length - 2)).append(" ").append(referenceTable.unknown[i]).append(" ").append(-2006273977 * (referenceTable.crc)).toString());
-		}
-		if (this.aBool3685)
-			this.archives[i] = null;
-		if (i_47_ > 1) {
-			if (1067739717 * this.anInt3683 != 2) {
-				int i_53_ = is_52_.length;
-				int i_54_ = is_52_[--i_53_] & 0xff;
-				i_53_ -= i_54_ * i_47_ * 4;
-				RsByteBuffer class282_sub35 = new RsByteBuffer(is_52_);
-				int[] is_55_ = new int[i_47_];
-				class282_sub35.index = i_53_ * -1115476867;
-				for (int i_56_ = 0; i_56_ < i_54_; i_56_++) {
-					int i_57_ = 0;
-					for (int i_58_ = 0; i_58_ < i_47_; i_58_++) {
-						i_57_ += class282_sub35.readInt();
-						is_55_[i_58_] += i_57_;
-					}
-				}
-				byte[][] is_59_ = new byte[i_47_][];
-				for (int i_60_ = 0; i_60_ < i_47_; i_60_++) {
-					is_59_[i_60_] = new byte[is_55_[i_60_]];
-					is_55_[i_60_] = 0;
-				}
-				class282_sub35.index = i_53_ * -1115476867;
-				int i_61_ = 0;
-				for (int i_62_ = 0; i_62_ < i_54_; i_62_++) {
-					int i_63_ = 0;
-					for (int i_64_ = 0; i_64_ < i_47_; i_64_++) {
-						i_63_ += class282_sub35.readInt();
-						System.arraycopy(is_52_, i_61_, is_59_[i_64_], is_55_[i_64_], i_63_);
-						is_55_[i_64_] += i_63_;
-						i_61_ += i_63_;
-					}
-				}
-				for (int i_65_ = 0; i_65_ < i_47_; i_65_++) {
-					int i_66_;
-					if (is_48_ == null)
-						i_66_ = i_65_;
-					else
-						i_66_ = is_48_[i_65_];
-					if (this.anInt3683 * 1067739717 == 0)
-						objects[i_66_] = JS5Manager.method5493(is_59_[i_65_], false, (byte) 5);
-					else
-						objects[i_66_] = is_59_[i_65_];
-				}
-			} else {
-				int i_67_ = is_52_.length;
-				int i_68_ = is_52_[--i_67_] & 0xff;
-				i_67_ -= 4 * (i_68_ * i_47_);
-				RsByteBuffer class282_sub35 = new RsByteBuffer(is_52_);
-				int i_69_ = 0;
-				int i_70_ = 0;
-				class282_sub35.index = i_67_ * -1115476867;
-				for (int i_71_ = 0; i_71_ < i_68_; i_71_++) {
-					int i_72_ = 0;
-					for (int i_73_ = 0; i_73_ < i_47_; i_73_++) {
-						i_72_ += class282_sub35.readInt();
-						int i_74_;
-						if (null == is_48_)
-							i_74_ = i_73_;
-						else
-							i_74_ = is_48_[i_73_];
-						if (i_45_ == i_74_) {
-							i_69_ += i_72_;
-							i_70_ = i_74_;
-						}
-					}
-				}
-				if (0 == i_69_)
-					return true;
-				byte[] is_75_ = new byte[i_69_];
-				i_69_ = 0;
-				class282_sub35.index = -1115476867 * i_67_;
-				int i_76_ = 0;
-				for (int i_77_ = 0; i_77_ < i_68_; i_77_++) {
-					int i_78_ = 0;
-					for (int i_79_ = 0; i_79_ < i_47_; i_79_++) {
-						i_78_ += class282_sub35.readInt();
-						int i_80_;
-						if (is_48_ == null)
-							i_80_ = i_79_;
-						else
-							i_80_ = is_48_[i_79_];
-						if (i_80_ == i_45_) {
-							System.arraycopy(is_52_, i_76_, is_75_, i_69_, i_78_);
-							i_69_ += i_78_;
-						}
-						i_76_ += i_78_;
-					}
-				}
-				objects[i_70_] = is_75_;
-			}
 		} else {
-			int i_81_;
-			if (is_48_ == null)
-				i_81_ = 0;
-			else
-				i_81_ = is_48_[0];
-			if (0 == 1067739717 * this.anInt3683)
-				objects[i_81_] = JS5Manager.method5493(is_52_, false, (byte) 109);
-			else
-				objects[i_81_] = is_52_;
-		}
-		return true;
-	}
+			int i_5 = this.referenceTable.validFileIdSizes[i_1];
+			int[] ints_6 = this.referenceTable.validFileIds[i_1];
+			if (this.archiveFiles[i_1] == null) {
+				this.archiveFiles[i_1] = new Object[this.referenceTable.fileCounts[i_1]];
+			}
 
-	public synchronized byte[] getFile(int archiveId, int fileId, int[] xteas) {
-		if (!fileExists(archiveId, fileId))
-			return null;
-		byte[] is_86_ = null;
-		if (this.archiveFiles[archiveId] == null || null == this.archiveFiles[archiveId][fileId]) {
-			boolean bool = method5638(archiveId, fileId, xteas, 2068142986);
-			if (!bool) {
-				requestArchive(archiveId);
-				bool = method5638(archiveId, fileId, xteas, 382040238);
-				if (!bool)
-					return null;
+			Object[] arr_7 = this.archiveFiles[i_1];
+			boolean bool_8 = true;
+
+			for (int i_9 = 0; i_9 < i_5; i_9++) {
+				int i_10;
+				if (ints_6 == null) {
+					i_10 = i_9;
+				} else {
+					i_10 = ints_6[i_9];
+				}
+
+				if (arr_7[i_10] == null) {
+					bool_8 = false;
+					break;
+				}
+			}
+
+			if (bool_8) {
+				return true;
+			} else {
+				byte[] bytes_22;
+				if (ints_3 == null || ints_3[0] == 0 && ints_3[1] == 0 && ints_3[2] == 0 && ints_3[3] == 0) {
+					bytes_22 = Class346.method6154(this.archives[i_1], false, (byte) 1);
+				} else {
+					bytes_22 = Class346.method6154(this.archives[i_1], true, (byte) 1);
+					RsByteBuffer rsbytebuffer_23 = new RsByteBuffer(bytes_22);
+					rsbytebuffer_23.method13249(ints_3, 5, rsbytebuffer_23.buffer.length, -429400691);
+				}
+
+				byte[] bytes_27 = Class282_Sub17_Sub6.method15438(bytes_22, (byte) 43);
+				if (this.aBool3685) {
+					this.archives[i_1] = null;
+				}
+
+				int i_11;
+				if (i_5 > 1) {
+					int i_12;
+					RsByteBuffer rsbytebuffer_13;
+					int i_15;
+					int i_16;
+					int i_17;
+					int i_18;
+					int i_19;
+					if (this.anInt3683 != 2) {
+						i_11 = bytes_27.length;
+						--i_11;
+						i_12 = bytes_27[i_11] & 0xff;
+						i_11 -= i_12 * i_5 * 4;
+						rsbytebuffer_13 = new RsByteBuffer(bytes_27);
+						int[] ints_14 = new int[i_5];
+						rsbytebuffer_13.index = i_11;
+
+						for (i_15 = 0; i_15 < i_12; i_15++) {
+							i_16 = 0;
+
+							for (i_17 = 0; i_17 < i_5; i_17++) {
+								i_16 += rsbytebuffer_13.readInt();
+								ints_14[i_17] += i_16;
+							}
+						}
+
+						byte[][] bytes_24 = new byte[i_5][];
+
+						for (i_16 = 0; i_16 < i_5; i_16++) {
+							bytes_24[i_16] = new byte[ints_14[i_16]];
+							ints_14[i_16] = 0;
+						}
+
+						rsbytebuffer_13.index = i_11;
+						i_16 = 0;
+
+						for (i_17 = 0; i_17 < i_12; i_17++) {
+							i_18 = 0;
+
+							for (i_19 = 0; i_19 < i_5; i_19++) {
+								i_18 += rsbytebuffer_13.readInt();
+								System.arraycopy(bytes_27, i_16, bytes_24[i_19], ints_14[i_19], i_18);
+								ints_14[i_19] += i_18;
+								i_16 += i_18;
+							}
+						}
+
+						for (i_17 = 0; i_17 < i_5; i_17++) {
+							if (ints_6 == null) {
+								i_18 = i_17;
+							} else {
+								i_18 = ints_6[i_17];
+							}
+
+							if (this.anInt3683 == 0) {
+								arr_7[i_18] = JS5Manager.method5493(bytes_24[i_17], false, (byte) 5);
+							} else {
+								arr_7[i_18] = bytes_24[i_17];
+							}
+						}
+					} else {
+						i_11 = bytes_27.length;
+						--i_11;
+						i_12 = bytes_27[i_11] & 0xff;
+						i_11 -= i_12 * i_5 * 4;
+						rsbytebuffer_13 = new RsByteBuffer(bytes_27);
+						int i_25 = 0;
+						i_15 = 0;
+						rsbytebuffer_13.index = i_11;
+
+						for (i_16 = 0; i_16 < i_12; i_16++) {
+							i_17 = 0;
+
+							for (i_18 = 0; i_18 < i_5; i_18++) {
+								i_17 += rsbytebuffer_13.readInt();
+								if (ints_6 == null) {
+									i_19 = i_18;
+								} else {
+									i_19 = ints_6[i_18];
+								}
+
+								if (i_19 == i_2) {
+									i_25 += i_17;
+									i_15 = i_19;
+								}
+							}
+						}
+
+						if (i_25 == 0) {
+							return true;
+						}
+
+						byte[] bytes_26 = new byte[i_25];
+						i_25 = 0;
+						rsbytebuffer_13.index = i_11;
+						i_17 = 0;
+
+						for (i_18 = 0; i_18 < i_12; i_18++) {
+							i_19 = 0;
+
+							for (int i_20 = 0; i_20 < i_5; i_20++) {
+								i_19 += rsbytebuffer_13.readInt();
+								int i_21;
+								if (ints_6 == null) {
+									i_21 = i_20;
+								} else {
+									i_21 = ints_6[i_20];
+								}
+
+								if (i_21 == i_2) {
+									System.arraycopy(bytes_27, i_17, bytes_26, i_25, i_19);
+									i_25 += i_19;
+								}
+
+								i_17 += i_19;
+							}
+						}
+
+						arr_7[i_15] = bytes_26;
+					}
+				} else {
+					if (ints_6 == null) {
+						i_11 = 0;
+					} else {
+						i_11 = ints_6[0];
+					}
+
+					if (this.anInt3683 == 0) {
+						arr_7[i_11] = JS5Manager.method5493(bytes_27, false, (byte) 109);
+					} else {
+						arr_7[i_11] = bytes_27;
+					}
+				}
+
+				return true;
 			}
 		}
-		if (null == this.archiveFiles[archiveId])
-			throw new RuntimeException("");
-		if (null != this.archiveFiles[archiveId][fileId]) {
-			is_86_ = Class346.method6154((this.archiveFiles[archiveId][fileId]), false, (byte) 1);
-			if (is_86_ == null)
+	}
+
+	public synchronized byte[] getFile(int i_1, int i_2, int[] ints_3) {
+		if (!this.fileExists(i_1, i_2)) {
+			return null;
+		} else {
+			byte[] bytes_4 = null;
+			if (this.archiveFiles[i_1] == null || this.archiveFiles[i_1][i_2] == null) {
+				boolean bool_5 = this.method5638(i_1, i_2, ints_3, 2068142986);
+				if (!bool_5) {
+					this.requestArchive(i_1);
+					bool_5 = this.method5638(i_1, i_2, ints_3, 382040238);
+					if (!bool_5) {
+						return null;
+					}
+				}
+			}
+
+			if (this.archiveFiles[i_1] == null) {
 				throw new RuntimeException("");
+			} else {
+				if (this.archiveFiles[i_1][i_2] != null) {
+					bytes_4 = Class346.method6154(this.archiveFiles[i_1][i_2], false, (byte) 1);
+					if (bytes_4 == null) {
+						throw new RuntimeException("");
+					}
+				}
+
+				if (bytes_4 != null) {
+					if (this.anInt3683 == 1) {
+						this.archiveFiles[i_1][i_2] = null;
+						if (this.referenceTable.fileCounts[i_1] == 1) {
+							this.archiveFiles[i_1] = null;
+						}
+					} else if (this.anInt3683 == 2) {
+						this.archiveFiles[i_1] = null;
+					}
+				}
+
+				return bytes_4;
+			}
 		}
-		if (is_86_ != null) {
-			if (1 == this.anInt3683 * 1067739717) {
-				this.archiveFiles[archiveId][fileId] = null;
-				if (1 == (referenceTable.fileCounts[archiveId]))
-					this.archiveFiles[archiveId] = null;
-			} else if (this.anInt3683 * 1067739717 == 2)
-				this.archiveFiles[archiveId] = null;
+	}
+
+	public synchronized boolean loadArchive(int i_1) {
+		if (!this.archiveExists(i_1)) {
+			return false;
+		} else if (this.archives[i_1] != null) {
+			return true;
+		} else {
+			this.requestArchive(i_1);
+			return this.archives[i_1] != null;
 		}
-		return is_86_;
 	}
 
-	public synchronized boolean loadArchive(int archiveId) {
-		if (!archiveExists(archiveId))
+	public synchronized boolean method5661(int i_1, int i_2) {
+		if (!this.referenceTableLoaded()) {
 			return false;
-		if (null != this.archives[archiveId])
-			return true;
-		requestArchive(archiveId);
-		if (null != this.archives[archiveId])
-			return true;
-		return false;
+		} else if (this.referenceTable.fileCounts.length == 1) {
+			return this.load(0, i_1);
+		} else if (!this.archiveExists(i_1)) {
+			return false;
+		} else if (this.referenceTable.fileCounts[i_1] == 1) {
+			return this.load(i_1, 0);
+		} else {
+			throw new RuntimeException();
+		}
 	}
 
-	public synchronized boolean method5661(int i, int i_136_) {
-		if (!referenceTableLoaded())
-			return false;
-		if (1 == (referenceTable.fileCounts).length)
-			return load(0, i);
-		if (!archiveExists(i))
-			return false;
-		if (referenceTable.fileCounts[i] == 1)
-			return load(i, 0);
-		throw new RuntimeException();
-	}
-
-	public Index(JS5FileWorker class327, boolean bool, int i) {
-		if (i < 0 || i > 2)
+	public Index(JS5FileWorker js5fileworker_1, boolean bool_2, int i_3) {
+		if (i_3 >= 0 && i_3 <= 2) {
+			this.aClass327_3690 = js5fileworker_1;
+			this.aBool3685 = bool_2;
+			this.anInt3683 = i_3;
+		} else {
 			throw new IllegalArgumentException("");
-		this.aClass327_3690 = class327;
-		this.aBool3685 = bool;
-		this.anInt3683 = i * -1279321971;
-	}
-
-	public void method5676(boolean bool, boolean bool_148_, byte i) {
-		if (referenceTableLoaded()) {
-			if (bool) {
-				referenceTable.nameHashes = null;
-				referenceTable.archiveName = null;
-			}
-			if (bool_148_) {
-				referenceTable.fileNameHashes = null;
-				referenceTable.namedFiles = null;
-			}
 		}
 	}
 
-	public synchronized boolean load(int archiveId, int fileId) {
-		if (!fileExists(archiveId, fileId))
+	public void method5676(boolean bool_1, boolean bool_2, byte b_3) {
+		if (this.referenceTableLoaded()) {
+			if (bool_1) {
+				this.referenceTable.nameHashes = null;
+				this.referenceTable.archiveName = null;
+			}
+
+			this.referenceTable.fileNameHashes = null;
+			this.referenceTable.namedFiles = null;
+		}
+
+	}
+
+	public synchronized boolean load(int i_1, int i_2) {
+		if (!this.fileExists(i_1, i_2)) {
 			return false;
-		if (this.archiveFiles[archiveId] != null && this.archiveFiles[archiveId][fileId] != null)
+		} else if (this.archiveFiles[i_1] != null && this.archiveFiles[i_1][i_2] != null) {
 			return true;
-		if (this.archives[archiveId] != null)
+		} else if (this.archives[i_1] != null) {
 			return true;
-		requestArchive(archiveId);
-		if (null != this.archives[archiveId])
-			return true;
-		return false;
-	}
-
-	static final void method5691(CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int i_164_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class282_Sub20_Sub36.method15419(string, 1 == i_164_, -940793702);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = 560339485 * Class415.anInt4985;
-	}
-
-	static final void method5692(CS2Executor class527, int i) {
-		AnimationDefinitions.method11148(((Class521_Sub1) class527.anInterface12_7013), (class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), -253954252);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[0];
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[1];
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (int) client.aFloatArray7292[2];
-	}
-
-	public static int method5693(CharSequence charsequence, int i, int i_165_, byte[] is, int i_166_, int i_167_) {
-		int i_168_ = i_165_ - i;
-		for (int i_169_ = 0; i_169_ < i_168_; i_169_++) {
-			char c = charsequence.charAt(i + i_169_);
-			if (c > 0 && c < '\u0080' || c >= '\u00a0' && c <= '\u00ff')
-				is[i_169_ + i_166_] = (byte) c;
-			else if ('\u20ac' == c)
-				is[i_169_ + i_166_] = (byte) -128;
-			else if ('\u201a' == c)
-				is[i_166_ + i_169_] = (byte) -126;
-			else if ('\u0192' == c)
-				is[i_166_ + i_169_] = (byte) -125;
-			else if ('\u201e' == c)
-				is[i_169_ + i_166_] = (byte) -124;
-			else if ('\u2026' == c)
-				is[i_166_ + i_169_] = (byte) -123;
-			else if (c == '\u2020')
-				is[i_166_ + i_169_] = (byte) -122;
-			else if (c == '\u2021')
-				is[i_169_ + i_166_] = (byte) -121;
-			else if ('\u02c6' == c)
-				is[i_166_ + i_169_] = (byte) -120;
-			else if (c == '\u2030')
-				is[i_169_ + i_166_] = (byte) -119;
-			else if ('\u0160' == c)
-				is[i_169_ + i_166_] = (byte) -118;
-			else if ('\u2039' == c)
-				is[i_169_ + i_166_] = (byte) -117;
-			else if ('\u0152' == c)
-				is[i_169_ + i_166_] = (byte) -116;
-			else if (c == '\u017d')
-				is[i_166_ + i_169_] = (byte) -114;
-			else if ('\u2018' == c)
-				is[i_169_ + i_166_] = (byte) -111;
-			else if ('\u2019' == c)
-				is[i_169_ + i_166_] = (byte) -110;
-			else if ('\u201c' == c)
-				is[i_169_ + i_166_] = (byte) -109;
-			else if ('\u201d' == c)
-				is[i_166_ + i_169_] = (byte) -108;
-			else if ('\u2022' == c)
-				is[i_169_ + i_166_] = (byte) -107;
-			else if (c == '\u2013')
-				is[i_169_ + i_166_] = (byte) -106;
-			else if ('\u2014' == c)
-				is[i_169_ + i_166_] = (byte) -105;
-			else if (c == '\u02dc')
-				is[i_166_ + i_169_] = (byte) -104;
-			else if ('\u2122' == c)
-				is[i_169_ + i_166_] = (byte) -103;
-			else if ('\u0161' == c)
-				is[i_166_ + i_169_] = (byte) -102;
-			else if ('\u203a' == c)
-				is[i_166_ + i_169_] = (byte) -101;
-			else if ('\u0153' == c)
-				is[i_166_ + i_169_] = (byte) -100;
-			else if ('\u017e' == c)
-				is[i_166_ + i_169_] = (byte) -98;
-			else if ('\u0178' == c)
-				is[i_166_ + i_169_] = (byte) -97;
-			else
-				is[i_166_ + i_169_] = (byte) 63;
+		} else {
+			this.requestArchive(i_1);
+			return this.archives[i_1] != null;
 		}
-		return i_168_;
 	}
 
-	public static IComponentDefinitions method5694(int i, int i_170_, int i_171_) {
-		IComponentDefinitions class118 = Class117.method1981(i, (byte) 33);
-		if (-1 == i_170_)
-			return class118;
-		if (class118 == null || class118.aClass118Array1438 == null || i_170_ >= class118.aClass118Array1438.length)
-			return null;
-		return class118.aClass118Array1438[i_170_];
+	static final void method5691(CS2Executor cs2executor_0, byte b_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		int i_3 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		Class282_Sub20_Sub36.method15419(string_2, i_3 == 1, -940793702);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class415.anInt4985;
 	}
 
-	static final void method5695(CS2Executor class527, byte i) {
-		int i_172_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (client.anInt7434 * 1609086245 == 2 && i_172_ < 493536965 * client.anInt7449)
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 1017482937 * client.aClass6Array7452[i_172_].anInt39;
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
+	static final void method5692(CS2Executor cs2executor_0, int i_1) {
+		AnimationDefinitions.method11148((Class521_Sub1) cs2executor_0.anInterface12_7013, cs2executor_0.intStack[--cs2executor_0.intStackPtr], -253954252);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) client.aFloatArray7292[0];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) client.aFloatArray7292[1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = (int) client.aFloatArray7292[2];
 	}
 
-	static final void method5696(CS2Executor class527, int i) {
-		class527.intStackPtr -= 425673003;
-		Class153.method2618((class527.intStack[1942118537 * class527.intStackPtr]), (class527.intStack[(class527.intStackPtr * 1942118537 + 1)]), (class527.intStack[(class527.intStackPtr * 1942118537 + 2)]), 255, 256, 1363502239);
+	public static int method5693(CharSequence charsequence_0, int i_1, int i_2, byte[] bytes_3, int i_4, int i_5) {
+		int i_6 = i_2 - i_1;
+
+		for (int i_7 = 0; i_7 < i_6; i_7++) {
+			char var_8 = charsequence_0.charAt(i_7 + i_1);
+			if (var_8 > 0 && var_8 < 128 || var_8 >= 160 && var_8 <= 255) {
+				bytes_3[i_7 + i_4] = (byte) var_8;
+			} else if (var_8 == 8364) {
+				bytes_3[i_7 + i_4] = -128;
+			} else if (var_8 == 8218) {
+				bytes_3[i_7 + i_4] = -126;
+			} else if (var_8 == 402) {
+				bytes_3[i_7 + i_4] = -125;
+			} else if (var_8 == 8222) {
+				bytes_3[i_7 + i_4] = -124;
+			} else if (var_8 == 8230) {
+				bytes_3[i_7 + i_4] = -123;
+			} else if (var_8 == 8224) {
+				bytes_3[i_7 + i_4] = -122;
+			} else if (var_8 == 8225) {
+				bytes_3[i_7 + i_4] = -121;
+			} else if (var_8 == 710) {
+				bytes_3[i_7 + i_4] = -120;
+			} else if (var_8 == 8240) {
+				bytes_3[i_7 + i_4] = -119;
+			} else if (var_8 == 352) {
+				bytes_3[i_7 + i_4] = -118;
+			} else if (var_8 == 8249) {
+				bytes_3[i_7 + i_4] = -117;
+			} else if (var_8 == 338) {
+				bytes_3[i_7 + i_4] = -116;
+			} else if (var_8 == 381) {
+				bytes_3[i_7 + i_4] = -114;
+			} else if (var_8 == 8216) {
+				bytes_3[i_7 + i_4] = -111;
+			} else if (var_8 == 8217) {
+				bytes_3[i_7 + i_4] = -110;
+			} else if (var_8 == 8220) {
+				bytes_3[i_7 + i_4] = -109;
+			} else if (var_8 == 8221) {
+				bytes_3[i_7 + i_4] = -108;
+			} else if (var_8 == 8226) {
+				bytes_3[i_7 + i_4] = -107;
+			} else if (var_8 == 8211) {
+				bytes_3[i_7 + i_4] = -106;
+			} else if (var_8 == 8212) {
+				bytes_3[i_7 + i_4] = -105;
+			} else if (var_8 == 732) {
+				bytes_3[i_7 + i_4] = -104;
+			} else if (var_8 == 8482) {
+				bytes_3[i_7 + i_4] = -103;
+			} else if (var_8 == 353) {
+				bytes_3[i_7 + i_4] = -102;
+			} else if (var_8 == 8250) {
+				bytes_3[i_7 + i_4] = -101;
+			} else if (var_8 == 339) {
+				bytes_3[i_7 + i_4] = -100;
+			} else if (var_8 == 382) {
+				bytes_3[i_7 + i_4] = -98;
+			} else if (var_8 == 376) {
+				bytes_3[i_7 + i_4] = -97;
+			} else {
+				bytes_3[i_7 + i_4] = 63;
+			}
+		}
+
+		return i_6;
 	}
+
+	public static IComponentDefinitions method5694(int i_0, int i_1, int i_2) {
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_0, (byte) 33);
+		return i_1 == -1 ? icomponentdefinitions_3 : (icomponentdefinitions_3 != null && icomponentdefinitions_3.aClass118Array1438 != null && i_1 < icomponentdefinitions_3.aClass118Array1438.length ? icomponentdefinitions_3.aClass118Array1438[i_1] : null);
+	}
+
+	static final void method5695(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		if (client.anInt7434 == 2 && i_2 < client.anInt7449) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aClass6Array7452[i_2].anInt39;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		}
+
+	}
+
+	static final void method5696(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 3;
+		Class153.method2618(cs2executor_0.intStack[cs2executor_0.intStackPtr], cs2executor_0.intStack[cs2executor_0.intStackPtr + 1], cs2executor_0.intStack[cs2executor_0.intStackPtr + 2], 255, 256, 1363502239);
+	}
+
 }

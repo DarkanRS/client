@@ -1,62 +1,58 @@
-
-/* Class158_Sub2_Sub2_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
+import jaggl.OpenGL;
 import java.awt.Canvas;
 import java.awt.Dimension;
 
-import jaggl.OpenGL;
-
 public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
-	int anInt10298;
+
+	Canvas aCanvas10302;
 	OpenGL anOpenGL10299;
 	long aLong10300;
+	int anInt10298;
 	int anInt10301;
-	Canvas aCanvas10302;
 
-	public int method14345(int i, int i_0_) {
+	public int method14345(int i_1, int i_2) {
 		return 0;
 	}
 
-	Class158_Sub2_Sub2_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1, Canvas canvas, long l) {
-		super(class505_sub2_sub1);
-		((Class158_Sub2_Sub2_Sub1) this).aCanvas10302 = canvas;
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299 = ((Class505_Sub2_Sub1) class505_sub2_sub1).anOpenGL10191;
-		((Class158_Sub2_Sub2_Sub1) this).aLong10300 = l;
-		method15723();
+	Class158_Sub2_Sub2_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2, long long_3) {
+		super(class505_sub2_sub1_1);
+		this.aCanvas10302 = canvas_2;
+		this.anOpenGL10299 = class505_sub2_sub1_1.anOpenGL10191;
+		this.aLong10300 = long_3;
+		this.method15723();
 	}
 
-	public int method14352(int i, int i_1_) {
+	public int method14352(int i_1, int i_2) {
 		return 0;
 	}
 
 	public int method2716() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10298;
+		return this.anInt10298;
 	}
 
-	void method14348(int i, int i_2_) {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.surfaceResized(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
-		method15723();
-		super.method14354(i, i_2_);
+	void method14348(int i_1, int i_2) {
+		this.anOpenGL10299.surfaceResized(this.aLong10300);
+		this.method15723();
+		super.method14354(i_1, i_2);
 	}
 
 	void method15723() {
-		Dimension dimension = ((Class158_Sub2_Sub2_Sub1) this).aCanvas10302.getSize();
-		((Class158_Sub2_Sub2_Sub1) this).anInt10298 = dimension.height;
-		((Class158_Sub2_Sub2_Sub1) this).anInt10301 = dimension.width;
+		Dimension dimension_1 = this.aCanvas10302.getSize();
+		this.anInt10298 = dimension_1.height;
+		this.anInt10301 = dimension_1.width;
 	}
 
 	public int method14344() {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.swapBuffers(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
+		this.anOpenGL10299.swapBuffers(this.aLong10300);
 		return 0;
 	}
 
-	public int method14353(int i, int i_3_) {
+	public int method14353(int i_1, int i_2) {
 		return 0;
 	}
 
 	boolean method213() {
-		return (((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.setSurface(((Class158_Sub2_Sub2_Sub1) this).aLong10300) && super.method213());
+		return this.anOpenGL10299.setSurface(this.aLong10300) && super.method213();
 	}
 
 	boolean method2724() {
@@ -64,20 +60,20 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 	}
 
 	public void method212() {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.releaseSurface(((Class158_Sub2_Sub2_Sub1) this).aCanvas10302, ((Class158_Sub2_Sub2_Sub1) this).aLong10300);
+		this.anOpenGL10299.releaseSurface(this.aCanvas10302, this.aLong10300);
 	}
 
 	public int method14349() {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.swapBuffers(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
+		this.anOpenGL10299.swapBuffers(this.aLong10300);
 		return 0;
 	}
 
 	public int method2720() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10301;
+		return this.anInt10301;
 	}
 
 	public int method2719() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10301;
+		return this.anInt10301;
 	}
 
 	boolean method2717() {
@@ -85,7 +81,7 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 	}
 
 	boolean method54() {
-		return (((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.setSurface(((Class158_Sub2_Sub2_Sub1) this).aLong10300) && super.method213());
+		return this.anOpenGL10299.setSurface(this.aLong10300) && super.method213();
 	}
 
 	boolean method2723() {
@@ -96,16 +92,16 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 		return true;
 	}
 
-	void method14347(int i, int i_4_) {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.surfaceResized(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
-		method15723();
-		super.method14354(i, i_4_);
+	void method14347(int i_1, int i_2) {
+		this.anOpenGL10299.surfaceResized(this.aLong10300);
+		this.method15723();
+		super.method14354(i_1, i_2);
 	}
 
-	void method14354(int i, int i_5_) {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.surfaceResized(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
-		method15723();
-		super.method14354(i, i_5_);
+	void method14354(int i_1, int i_2) {
+		this.anOpenGL10299.surfaceResized(this.aLong10300);
+		this.method15723();
+		super.method14354(i_1, i_2);
 	}
 
 	boolean method2725() {
@@ -120,57 +116,46 @@ public class Class158_Sub2_Sub2_Sub1 extends Class158_Sub2_Sub2 {
 		return true;
 	}
 
-	Class158_Sub2_Sub2_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1, Canvas canvas) {
-		this(class505_sub2_sub1, canvas, ((Class505_Sub2_Sub1) class505_sub2_sub1).anOpenGL10191.prepareSurface(canvas));
+	Class158_Sub2_Sub2_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1_1, Canvas canvas_2) {
+		this(class505_sub2_sub1_1, canvas_2, class505_sub2_sub1_1.anOpenGL10191.prepareSurface(canvas_2));
 	}
 
 	public int method2726() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10301;
+		return this.anInt10301;
 	}
 
 	public int method2727() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10298;
+		return this.anInt10298;
 	}
 
 	public int method2721() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10298;
+		return this.anInt10298;
 	}
 
 	public int method14350() {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.swapBuffers(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
+		this.anOpenGL10299.swapBuffers(this.aLong10300);
 		return 0;
 	}
 
 	public int method14346() {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.swapBuffers(((Class158_Sub2_Sub2_Sub1) this).aLong10300);
+		this.anOpenGL10299.swapBuffers(this.aLong10300);
 		return 0;
 	}
 
 	public void method186() {
-		((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.releaseSurface(((Class158_Sub2_Sub2_Sub1) this).aCanvas10302, ((Class158_Sub2_Sub2_Sub1) this).aLong10300);
+		this.anOpenGL10299.releaseSurface(this.aCanvas10302, this.aLong10300);
 	}
 
 	public int method2714() {
-		return ((Class158_Sub2_Sub2_Sub1) this).anInt10301;
+		return this.anInt10301;
 	}
 
-	public int method14351(int i, int i_6_) {
+	public int method14351(int i_1, int i_2) {
 		return 0;
 	}
 
 	boolean method211() {
-		return (((Class158_Sub2_Sub2_Sub1) this).anOpenGL10299.setSurface(((Class158_Sub2_Sub2_Sub1) this).aLong10300) && super.method213());
+		return this.anOpenGL10299.setSurface(this.aLong10300) && super.method213();
 	}
 
-	void method15724() {
-		Dimension dimension = ((Class158_Sub2_Sub2_Sub1) this).aCanvas10302.getSize();
-		((Class158_Sub2_Sub2_Sub1) this).anInt10298 = dimension.height;
-		((Class158_Sub2_Sub2_Sub1) this).anInt10301 = dimension.width;
-	}
-
-	void method15725() {
-		Dimension dimension = ((Class158_Sub2_Sub2_Sub1) this).aCanvas10302.getSize();
-		((Class158_Sub2_Sub2_Sub1) this).anInt10298 = dimension.height;
-		((Class158_Sub2_Sub2_Sub1) this).anInt10301 = dimension.width;
-	}
 }

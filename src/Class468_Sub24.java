@@ -1,60 +1,38 @@
-/* Class468_Sub24 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class468_Sub24 extends Class468 {
-	public static final int anInt7948 = 2;
-	static final int anInt7949 = 1;
-	public static final int anInt7950 = 0;
 
-	public void method12917() {
-		if (-859024475 * anInt5578 < 0 && anInt5578 * -859024475 > 2)
-			anInt5578 = method7781(2012468589) * -754033619;
+	public Class468_Sub24(int i_1, Class282_Sub54 class282_sub54_2) {
+		super(i_1, class282_sub54_2);
 	}
 
-	public Class468_Sub24(int i, Class282_Sub54 class282_sub54) {
-		super(i, class282_sub54);
-	}
-
-	public void method12918(short i) {
-		if (-859024475 * anInt5578 < 0) {
-			if (i > 255) {
-				if (anInt5578 * -859024475 > 2) {
-					if (i > 255)
-						anInt5578 = method7781(1956037542) * -754033619;
-				}
-			}
+	public void method12918(short s_1) {
+		if (this.anInt5578 < 0 && this.anInt5578 > 2) {
+			this.anInt5578 = this.method7781(1956037542);
 		}
+
 	}
 
-	int method7781(int i) {
+	int method7781(int i_1) {
 		return 1;
 	}
 
-	void method7783(int i, int i_0_) {
-		anInt5578 = i * -754033619;
+	void method7783(int i_1, int i_2) {
+		this.anInt5578 = i_1;
 	}
 
-	void method7780(int i) {
-		anInt5578 = i * -754033619;
+	void method7780(int i_1) {
+		this.anInt5578 = i_1 * -754033619 * -859024475;
 	}
 
-	public boolean method12919() {
-		return true;
+	public int method12920(int i_1) {
+		return this.anInt5578;
 	}
 
-	public int method12920(int i) {
-		return -859024475 * anInt5578;
+	public int method7784(int i_1) {
+		return i_1 != 0 && this.aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(1640668889) != 1 ? 2 : 1;
 	}
 
-	public int method7784(int i) {
-		if (i == 0 || aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(1640668889) == 1)
-			return 1;
-		return 2;
-	}
-
-	public Class468_Sub24(Class282_Sub54 class282_sub54) {
-		super(class282_sub54);
+	public Class468_Sub24(Class282_Sub54 class282_sub54_1) {
+		super(class282_sub54_1);
 	}
 
 	int method7786() {
@@ -65,33 +43,18 @@ public class Class468_Sub24 extends Class468 {
 		return 1;
 	}
 
-	public int method7785(int i, int i_1_) {
-		if (i == 0 || aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(182985530) == 1)
-			return 1;
-		return 2;
+	public int method7785(int i_1, int i_2) {
+		return i_1 != 0 && this.aClass282_Sub54_5581.aClass468_Sub17_8200.method12762(182985530) != 1 ? 2 : 1;
 	}
 
-	public void method12921() {
-		if (-859024475 * anInt5578 < 0 && anInt5578 * -859024475 > 2)
-			anInt5578 = method7781(2005970662) * -754033619;
-	}
-
-	public void method12922() {
-		if (-859024475 * anInt5578 < 0 && anInt5578 * -859024475 > 2)
-			anInt5578 = method7781(2041145985) * -754033619;
-	}
-
-	public boolean method12923(int i) {
+	public boolean method12923(int i_1) {
 		return true;
 	}
 
-	public int method12924() {
-		return -859024475 * anInt5578;
+	static final void method12925(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1385;
 	}
 
-	static final void method12925(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = -1627383873 * class118.anInt1385;
-	}
 }

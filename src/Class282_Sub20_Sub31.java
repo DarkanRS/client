@@ -1,109 +1,48 @@
-/* Class282_Sub20_Sub31 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class282_Sub20_Sub31 extends Class282_Sub20 {
-	static final boolean aBool9917 = false;
 
-	int[][] method12320(int i, int i_0_) {
-		int[][] is = aClass308_7670.method5463(i, 1106148078);
-		if (aClass308_7670.aBool3619) {
-			int[][] is_1_ = method12333(0, i, (byte) 3);
-			int[] is_2_ = is_1_[0];
-			int[] is_3_ = is_1_[1];
-			int[] is_4_ = is_1_[2];
-			int[] is_5_ = is[0];
-			int[] is_6_ = is[1];
-			int[] is_7_ = is[2];
-			for (int i_8_ = 0; i_8_ < Class316.anInt3670 * -402153223; i_8_++) {
-				is_5_[i_8_] = 4096 - is_2_[i_8_];
-				is_6_[i_8_] = 4096 - is_3_[i_8_];
-				is_7_[i_8_] = 4096 - is_4_[i_8_];
+	int[][] method12320(int i_1, int i_2) {
+		int[][] ints_3 = this.aClass308_7670.method5463(i_1, 1106148078);
+		if (this.aClass308_7670.aBool3619) {
+			int[][] ints_4 = this.method12333(0, i_1, (byte) 3);
+			int[] ints_5 = ints_4[0];
+			int[] ints_6 = ints_4[1];
+			int[] ints_7 = ints_4[2];
+			int[] ints_8 = ints_3[0];
+			int[] ints_9 = ints_3[1];
+			int[] ints_10 = ints_3[2];
+
+			for (int i_11 = 0; i_11 < Class316.anInt3670; i_11++) {
+				ints_8[i_11] = 4096 - ints_5[i_11];
+				ints_9[i_11] = 4096 - ints_6[i_11];
+				ints_10[i_11] = 4096 - ints_7[i_11];
 			}
 		}
-		return is;
+
+		return ints_3;
 	}
 
-	int[] method12319(int i, int i_9_) {
-		int[] is = aClass320_7667.method5721(i, -1476130867);
-		if (aClass320_7667.aBool3722) {
-			int[] is_10_ = method12317(0, i, 2029672467);
-			for (int i_11_ = 0; i_11_ < -402153223 * Class316.anInt3670; i_11_++)
-				is[i_11_] = 4096 - is_10_[i_11_];
+	int[] method12319(int i_1, int i_2) {
+		int[] ints_3 = this.aClass320_7667.method5721(i_1, -1476130867);
+		if (this.aClass320_7667.aBool3722) {
+			int[] ints_4 = this.method12317(0, i_1, 2029672467);
+
+			for (int i_5 = 0; i_5 < Class316.anInt3670; i_5++) {
+				ints_3[i_5] = 4096 - ints_4[i_5];
+			}
 		}
-		return is;
+
+		return ints_3;
 	}
 
-	void method12334(int i, RsByteBuffer class282_sub35) {
-		if (0 == i)
-			aBool7669 = class282_sub35.readUnsignedByte() == 1;
-	}
-
-	void method12322(int i, RsByteBuffer class282_sub35, int i_12_) {
-		if (0 == i)
-			aBool7669 = class282_sub35.readUnsignedByte() == 1;
-	}
-
-	int[] method12325(int i) {
-		int[] is = aClass320_7667.method5721(i, -1122949707);
-		if (aClass320_7667.aBool3722) {
-			int[] is_13_ = method12317(0, i, 2103248671);
-			for (int i_14_ = 0; i_14_ < -402153223 * Class316.anInt3670; i_14_++)
-				is[i_14_] = 4096 - is_13_[i_14_];
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+		if (i_1 == 0) {
+			this.aBool7669 = rsbytebuffer_2.readUnsignedByte() == 1;
 		}
-		return is;
-	}
 
-	int[] method12336(int i) {
-		int[] is = aClass320_7667.method5721(i, -2036853226);
-		if (aClass320_7667.aBool3722) {
-			int[] is_15_ = method12317(0, i, 2095217934);
-			for (int i_16_ = 0; i_16_ < -402153223 * Class316.anInt3670; i_16_++)
-				is[i_16_] = 4096 - is_15_[i_16_];
-		}
-		return is;
 	}
 
 	public Class282_Sub20_Sub31() {
 		super(1, false);
 	}
 
-	void method12332(int i, RsByteBuffer class282_sub35) {
-		if (0 == i)
-			aBool7669 = class282_sub35.readUnsignedByte() == 1;
-	}
-
-	void method12335(int i, RsByteBuffer class282_sub35) {
-		if (0 == i)
-			aBool7669 = class282_sub35.readUnsignedByte() == 1;
-	}
-
-	int[] method12327(int i) {
-		int[] is = aClass320_7667.method5721(i, -529296881);
-		if (aClass320_7667.aBool3722) {
-			int[] is_17_ = method12317(0, i, 2012118007);
-			for (int i_18_ = 0; i_18_ < -402153223 * Class316.anInt3670; i_18_++)
-				is[i_18_] = 4096 - is_17_[i_18_];
-		}
-		return is;
-	}
-
-	int[][] method12339(int i) {
-		int[][] is = aClass308_7670.method5463(i, 1307392024);
-		if (aClass308_7670.aBool3619) {
-			int[][] is_19_ = method12333(0, i, (byte) 3);
-			int[] is_20_ = is_19_[0];
-			int[] is_21_ = is_19_[1];
-			int[] is_22_ = is_19_[2];
-			int[] is_23_ = is[0];
-			int[] is_24_ = is[1];
-			int[] is_25_ = is[2];
-			for (int i_26_ = 0; i_26_ < Class316.anInt3670 * -402153223; i_26_++) {
-				is_23_[i_26_] = 4096 - is_20_[i_26_];
-				is_24_[i_26_] = 4096 - is_21_[i_26_];
-				is_25_[i_26_] = 4096 - is_22_[i_26_];
-			}
-		}
-		return is;
-	}
 }

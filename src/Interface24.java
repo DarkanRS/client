@@ -1,56 +1,54 @@
-
-/* Interface24 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.applet.Applet;
 import java.awt.Graphics;
 
 public interface Interface24 {
-	public void supplyApplet(Applet applet);
 
-	public void destroy();
+	void supplyApplet(Applet var1);
 
-	public void method165();
+	void destroy();
 
-	public void method166();
+	void method165();
 
-	public void method167();
+	void method166();
 
-	public void stop();
+	void method167();
 
-	public void start();
+	void stop();
 
-	public void method168(Applet applet);
+	void start();
 
-	public void method169();
+	void method168(Applet var1);
 
-	public void init();
+	void method169();
 
-	public void method170();
+	void init();
 
-	public void method171();
+	void method170();
 
-	public void paint(Graphics graphics);
+	void method171();
 
-	public void method172();
+	void paint(Graphics var1);
 
-	public void method173();
+	void method172();
 
-	public void method174();
+	void method173();
 
-	public void method175();
+	void method174();
 
-	public void method176(Graphics graphics);
+	void method175();
 
-	public void method177(Graphics graphics);
+	void method176(Graphics var1);
 
-	public void method178(Graphics graphics);
+	void method177(Graphics var1);
 
-	public void method179(Graphics graphics);
+	void method178(Graphics var1);
 
-	public void method180(Graphics graphics);
+	void method179(Graphics var1);
 
-	public void method181();
+	void method180(Graphics var1);
 
-	public void update(Graphics graphics);
+	void method181();
+
+	void update(Graphics var1);
+
 }

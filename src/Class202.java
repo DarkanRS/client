@@ -1,52 +1,44 @@
-
-/* Class202 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.io.IOException;
-import java.net.Socket;
 
 public abstract class Class202 {
+
 	public abstract void method3310();
 
-	public abstract void method3311(byte[] is, int i, int i_0_, int i_1_) throws IOException;
+	public abstract void method3311(byte[] var1, int var2, int var3, int var4) throws IOException;
 
-	public abstract int method3312(int i) throws IOException;
-
-	public static Class202 method3313(Socket socket, int i) throws IOException {
-		return new Class202_Sub1(socket, i);
-	}
+	public abstract int method3312(int var1) throws IOException;
 
 	public abstract void method3314();
 
-	public abstract boolean method3315(int i, byte i_2_) throws IOException;
+	public abstract boolean method3315(int var1, byte var2) throws IOException;
 
 	public abstract void method3316();
 
-	public abstract boolean method3317(int i) throws IOException;
+	public abstract boolean method3317(int var1) throws IOException;
 
-	public abstract void method3318(int i);
+	public abstract void method3318(int var1);
 
-	public abstract boolean method3319(int i) throws IOException;
+	public abstract boolean method3319(int var1) throws IOException;
 
-	public abstract void method3320(byte i);
+	public abstract void method3320(byte var1);
 
-	public abstract boolean method3321(int i) throws IOException;
+	public abstract boolean method3321(int var1) throws IOException;
 
 	public abstract int method3322() throws IOException;
 
 	public abstract int method3323() throws IOException;
 
-	public abstract int method3324(byte[] is, int i, int i_3_) throws IOException;
+	public abstract int method3324(byte[] var1, int var2, int var3) throws IOException;
 
-	public abstract void method3325(byte[] is, int i, int i_4_) throws IOException;
+	public abstract void method3325(byte[] var1, int var2, int var3) throws IOException;
 
-	public abstract void method3326(byte[] is, int i, int i_5_) throws IOException;
+	public abstract void method3326(byte[] var1, int var2, int var3) throws IOException;
 
-	public abstract int method3327(byte[] is, int i, int i_6_, int i_7_) throws IOException;
+	public abstract int method3327(byte[] var1, int var2, int var3, int var4) throws IOException;
 
-	public abstract boolean method3328(int i) throws IOException;
+	public abstract boolean method3328(int var1) throws IOException;
 
-	public abstract boolean method3329(int i) throws IOException;
+	public abstract boolean method3329(int var1) throws IOException;
 
 	public abstract void method3330();
 
@@ -56,130 +48,137 @@ public abstract class Class202 {
 
 	public abstract void method3333();
 
-	Class202() {
-		/* empty */
+	public static void runIComponentScripts(IComponentDefinitions[] arr_0, int i_1) {
+		for (int i_2 = 0; i_2 < arr_0.length; i_2++) {
+			IComponentDefinitions icomponentdefinitions_3 = arr_0[i_2];
+			if (icomponentdefinitions_3.scriptParams != null) {
+				HookRequest hookrequest_4 = new HookRequest();
+				hookrequest_4.iComponentDefs = icomponentdefinitions_3;
+				hookrequest_4.params = icomponentdefinitions_3.scriptParams;
+				Class400.executeHookInner(hookrequest_4, 2000000, (byte) 84);
+			}
+		}
+
 	}
 
-	public static Class202 method3334(Socket socket, int i) throws IOException {
-		return new Class202_Sub1(socket, i);
+	static final void method3338(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, CS2Executor cs2executor_2, byte b_3) {
+		String string_4 = (String) cs2executor_2.objectStack[--cs2executor_2.anInt7000];
+		int[] ints_5 = Class96_Sub14.method14642(string_4, cs2executor_2, 510066471);
+		if (ints_5 != null) {
+			string_4 = string_4.substring(0, string_4.length() - 1);
+		}
+
+		icomponentdefinitions_0.anObjectArray1387 = Class351.method6193(string_4, cs2executor_2, 1621483934);
+		icomponentdefinitions_0.anIntArray1402 = ints_5;
+		icomponentdefinitions_0.aBool1384 = true;
 	}
 
-	public static Class202 method3335(Socket socket, int i) throws IOException {
-		return new Class202_Sub1(socket, i);
+	static final void method3339(CS2Executor cs2executor_0, byte b_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		Class2.method258(string_2, 779827732);
 	}
 
-	public static Class202 method3336(Socket socket, int i) throws IOException {
-		return new Class202_Sub1(socket, i);
+	static final void method3340(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class84.myPlayer.aClass19_10359.method578((byte) 2) >> 3;
 	}
 
-	public static void runIComponentScripts(IComponentDefinitions[] icomponentDefs, int i) {
-		for (int i_8_ = 0; i_8_ < icomponentDefs.length; i_8_++) {
-			IComponentDefinitions class118 = icomponentDefs[i_8_];
-			if (null != class118.scriptParams) {
-				HookRequest request = new HookRequest();
-				request.iComponentDefs = class118;
-				request.params = class118.scriptParams;
-				Class400.executeHookInner(request, 2000000, (byte) 84);
+	static final void method3341(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		if (Class468_Sub8.aClass98Array7889[i_2] == null) {
+			cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+		} else {
+			String string_4 = Class468_Sub8.aClass98Array7889[i_2].components[i_3].aString1285;
+			if (string_4 == null) {
+				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = "";
+			} else {
+				cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_4;
+			}
+		}
+
+	}
+
+	public static String method3342(long long_0, int i_2, boolean bool_3, Language xlanguage_4, byte b_5) {
+		char var_6 = 44;
+		char var_7 = 46;
+		if (xlanguage_4 == Language.aClass495_5795) {
+			var_6 = 46;
+			var_7 = 44;
+		}
+
+		if (xlanguage_4 == Language.aClass495_5801) {
+			var_7 = 160;
+		}
+
+		boolean bool_8 = false;
+		if (long_0 < 0L) {
+			bool_8 = true;
+			long_0 = -long_0;
+		}
+
+		StringBuilder stringbuilder_9 = new StringBuilder(26);
+		int i_10;
+		int i_11;
+		if (i_2 > 0) {
+			for (i_10 = 0; i_10 < i_2; i_10++) {
+				i_11 = (int) long_0;
+				long_0 /= 10L;
+				stringbuilder_9.append((char) (i_11 + 48 - (int) long_0 * 10));
+			}
+
+			stringbuilder_9.append(var_6);
+		}
+
+		i_10 = 0;
+
+		while (true) {
+			i_11 = (int) long_0;
+			long_0 /= 10L;
+			stringbuilder_9.append((char) (i_11 + 48 - (int) long_0 * 10));
+			if (long_0 == 0L) {
+				if (bool_8) {
+					stringbuilder_9.append('-');
+				}
+
+				return stringbuilder_9.reverse().toString();
+			}
+
+			if (bool_3) {
+				++i_10;
+				if (i_10 % 3 == 0) {
+					stringbuilder_9.append(var_7);
+				}
 			}
 		}
 	}
 
-	static final void method3338(IComponentDefinitions class118, Interface class98, CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		int[] is = Class96_Sub14.method14642(string, class527, 510066471);
-		if (is != null)
-			string = string.substring(0, string.length() - 1);
-		class118.anObjectArray1387 = Class351.method6193(string, class527, 1621483934);
-		class118.anIntArray1402 = is;
-		class118.aBool1384 = true;
+	static Class461[] method3343(int i_0) {
+		return new Class461[] { Class461.aClass461_5539, Class461.aClass461_5538, Class461.aClass461_5540 };
 	}
 
-	static final void method3339(CS2Executor class527, byte i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		Class2.method258(string, 779827732);
+	static final void method3344(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7162 == cs2executor_0.animable.method15794(-592862572) ? 1 : 0;
 	}
 
-	static final void method3340(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class84.myPlayer.aClass19_10359.method578((byte) 2) >> 3;
-	}
-
-	static final void method3341(CS2Executor class527, byte i) {
-		class527.intStackPtr -= 283782002;
-		int i_9_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_10_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		if (Class468_Sub8.aClass98Array7889[i_9_] == null)
-			class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141 - 1)] = "";
-		else {
-			String string = (Class468_Sub8.aClass98Array7889[i_9_].components[i_10_].aString1285);
-			if (null == string)
-				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = "";
-			else
-				class527.objectStack[((class527.anInt7000 += 1476624725) * 1806726141) - 1] = string;
+	public static final void method3345(String string_0, int i_1) {
+		if (!string_0.equals("")) {
+			Class184 class184_2 = Class468_Sub20.method12807(-1721172592);
+			TCPMessage tcpmessage_3 = Class271.method4828(OutgoingPacket.aClass379_4598, class184_2.isaac, 595380659);
+			tcpmessage_3.buffer.writeByte(ChatLine.getLength(string_0));
+			tcpmessage_3.buffer.writeString(string_0);
+			class184_2.method3049(tcpmessage_3, 1755458135);
 		}
+
 	}
 
-	public static String method3342(long l, int i, boolean bool, XLanguage class495, byte i_11_) {
-		char c = ',';
-		char c_12_ = '.';
-		if (XLanguage.aClass495_5795 == class495) {
-			c = '.';
-			c_12_ = ',';
-		}
-		if (class495 == XLanguage.aClass495_5801)
-			c_12_ = '\u00a0';
-		boolean bool_13_ = false;
-		if (l < 0L) {
-			bool_13_ = true;
-			l = -l;
-		}
-		StringBuilder stringbuilder = new StringBuilder(26);
-		if (i > 0) {
-			for (int i_14_ = 0; i_14_ < i; i_14_++) {
-				int i_15_ = (int) l;
-				l /= 10L;
-				stringbuilder.append((char) (i_15_ + 48 - (int) l * 10));
-			}
-			stringbuilder.append(c);
-		}
-		int i_16_ = 0;
-		for (;;) {
-			int i_17_ = (int) l;
-			l /= 10L;
-			stringbuilder.append((char) (48 + i_17_ - 10 * (int) l));
-			if (0L == l)
-				break;
-			if (bool && ++i_16_ % 3 == 0)
-				stringbuilder.append(c_12_);
-		}
-		if (bool_13_)
-			stringbuilder.append('-');
-		return stringbuilder.reverse().toString();
+	static final void method3346(CS2Executor cs2executor_0, int i_1) {
+		String string_2 = (String) cs2executor_0.objectStack[--cs2executor_0.anInt7000];
+		cs2executor_0.intStackPtr -= 2;
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		FontMetrics fontmetrics_5 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_4, 0, 1119085558);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = fontmetrics_5.method6949(string_2, i_3, Class182.aClass160Array2261, 437013959);
 	}
 
-	static Class461[] method3343(int i) {
-		return (new Class461[] { Class461.aClass461_5539, Class461.aClass461_5538, Class461.aClass461_5540 });
-	}
-
-	static final void method3344(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (client.anInt7162 * 2080273591 == class527.animable.method15794(-592862572)) ? 1 : 0;
-	}
-
-	public static final void method3345(String string, int i) {
-		if (!string.equals("")) {
-			Class184 class184 = Class468_Sub20.method12807(-1721172592);
-			TCPMessage class282_sub23 = Class271.method4828(OutgoingPacket.aClass379_4598, class184.isaac, 595380659);
-			class282_sub23.buffer.writeByte(ChatLine.getLength(string));
-			class282_sub23.buffer.writeString(string);
-			class184.method3049(class282_sub23, 1755458135);
-		}
-	}
-
-	static final void method3346(CS2Executor class527, int i) {
-		String string = (String) (class527.objectStack[(class527.anInt7000 -= 1476624725) * 1806726141]);
-		class527.intStackPtr -= 283782002;
-		int i_18_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_19_ = (class527.intStack[1 + class527.intStackPtr * 1942118537]);
-		FontMetrics class414 = Class94.method1588(IndexLoaders.FONT_METRICS_INDEX, i_19_, 0, 1119085558);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = class414.method6949(string, i_18_, Class182.aClass160Array2261, 437013959);
-	}
 }

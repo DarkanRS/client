@@ -1,209 +1,157 @@
-/* Class427 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class427 {
-	SoftCache aClass229_5117 = new SoftCache(64);
-	Index aClass317_5118;
-	public static final int anInt5119 = 64;
-	Index aClass317_5120;
-	public static final int anInt5121 = 64;
-	SoftCache aClass229_5122 = new SoftCache(64);
+
 	public static int anInt5123;
+	SoftCache aClass229_5117 = new SoftCache(64);
+	SoftCache aClass229_5122 = new SoftCache(64);
+	Index aClass317_5120;
+	Index aClass317_5118;
 
-	public Class418 method7172(int i, int i_0_) {
-		Class418 class418;
-		synchronized (((Class427) this).aClass229_5117) {
-			class418 = ((Class418) ((Class427) this).aClass229_5117.get((long) i));
+	public Class418 method7172(int i_1, int i_2) {
+		SoftCache softcache_4 = this.aClass229_5117;
+		Class418 class418_3;
+		synchronized (this.aClass229_5117) {
+			class418_3 = (Class418) this.aClass229_5117.get((long) i_1);
 		}
-		if (class418 != null)
-			return class418;
-		byte[] is;
-		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i);
+
+		if (class418_3 != null) {
+			return class418_3;
+		} else {
+			Index index_5 = this.aClass317_5120;
+			byte[] bytes_10;
+			synchronized (this.aClass317_5120) {
+				bytes_10 = this.aClass317_5120.getFile(SharedConfigsType.aClass120_1497.id, i_1);
+			}
+
+			class418_3 = new Class418();
+			class418_3.aClass427_4998 = this;
+			if (bytes_10 != null) {
+				class418_3.method7008(new RsByteBuffer(bytes_10), 1761998604);
+			}
+
+			SoftCache softcache_9 = this.aClass229_5117;
+			synchronized (this.aClass229_5117) {
+				this.aClass229_5117.put(class418_3, (long) i_1);
+				return class418_3;
+			}
 		}
-		class418 = new Class418();
-		((Class418) class418).aClass427_4998 = this;
-		if (is != null)
-			class418.method7008(new RsByteBuffer(is), 1761998604);
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.put(class418, (long) i);
-		}
-		return class418;
 	}
 
-	public void method7173(int i, int i_1_) {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3858(i, (byte) 14);
+	public void method7173(int i_1, int i_2) {
+		SoftCache softcache_3 = this.aClass229_5117;
+		synchronized (this.aClass229_5117) {
+			this.aClass229_5117.method3858(i_1, (byte) 14);
 		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3858(i, (byte) 47);
+
+		softcache_3 = this.aClass229_5122;
+		synchronized (this.aClass229_5122) {
+			this.aClass229_5122.method3858(i_1, (byte) 47);
 		}
 	}
 
-	public Class427(Game class486, XLanguage class495, Index class317, Index class317_2_) {
-		((Class427) this).aClass317_5120 = class317;
-		((Class427) this).aClass317_5118 = class317_2_;
-		((Class427) this).aClass317_5120.filesCount((SharedConfigsType.aClass120_1497.id) * -71319279);
+	public Class427(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+		this.aClass317_5120 = index_3;
+		this.aClass317_5118 = index_4;
+		this.aClass317_5120.filesCount(SharedConfigsType.aClass120_1497.id);
 		Math.random();
 		Math.random();
 		Math.random();
 		Math.random();
 	}
 
-	public void method7174(int i) {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3859(764081943);
+	public void method7174(int i_1) {
+		SoftCache softcache_2 = this.aClass229_5117;
+		synchronized (this.aClass229_5117) {
+			this.aClass229_5117.method3859(764081943);
 		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3859(-1307540664);
+
+		softcache_2 = this.aClass229_5122;
+		synchronized (this.aClass229_5122) {
+			this.aClass229_5122.method3859(-1307540664);
 		}
 	}
 
-	public void method7175(int i, int i_3_, int i_4_) {
-		((Class427) this).aClass229_5117 = new SoftCache(i);
-		((Class427) this).aClass229_5122 = new SoftCache(i_3_);
+	public void method7175(int i_1, int i_2, int i_3) {
+		this.aClass229_5117 = new SoftCache(i_1);
+		this.aClass229_5122 = new SoftCache(i_2);
 	}
 
-	public void method7176() {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3863(1162016248);
+	public void method7177(short s_1) {
+		SoftCache softcache_2 = this.aClass229_5117;
+		synchronized (this.aClass229_5117) {
+			this.aClass229_5117.method3863(1392803983);
 		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3863(1443152174);
-		}
-	}
 
-	public void method7177(short i) {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3863(1392803983);
-		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3863(728062976);
+		softcache_2 = this.aClass229_5122;
+		synchronized (this.aClass229_5122) {
+			this.aClass229_5122.method3863(728062976);
 		}
 	}
 
-	public void method7178(int i, int i_5_) {
-		((Class427) this).aClass229_5117 = new SoftCache(i);
-		((Class427) this).aClass229_5122 = new SoftCache(i_5_);
+	static final void method7186(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.anInt7315;
 	}
 
-	public void method7179(int i, int i_6_) {
-		((Class427) this).aClass229_5117 = new SoftCache(i);
-		((Class427) this).aClass229_5122 = new SoftCache(i_6_);
+	static final void method7187(CS2Executor cs2executor_0, int i_1) {
 	}
 
-	public void method7180(int i, int i_7_) {
-		((Class427) this).aClass229_5117 = new SoftCache(i);
-		((Class427) this).aClass229_5122 = new SoftCache(i_7_);
-	}
-
-	public void method7181(int i, int i_8_) {
-		((Class427) this).aClass229_5117 = new SoftCache(i);
-		((Class427) this).aClass229_5122 = new SoftCache(i_8_);
-	}
-
-	public void method7182() {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3859(-1178915812);
-		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3859(-125423422);
-		}
-	}
-
-	public void method7183(int i) {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3858(i, (byte) 65);
-		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3858(i, (byte) -64);
-		}
-	}
-
-	public void method7184() {
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.method3863(824449754);
-		}
-		synchronized (((Class427) this).aClass229_5122) {
-			((Class427) this).aClass229_5122.method3863(756406627);
-		}
-	}
-
-	public Class418 method7185(int i) {
-		Class418 class418;
-		synchronized (((Class427) this).aClass229_5117) {
-			class418 = ((Class418) ((Class427) this).aClass229_5117.get((long) i));
-		}
-		if (class418 != null)
-			return class418;
-		byte[] is;
-		synchronized (((Class427) this).aClass317_5120) {
-			is = ((Class427) this).aClass317_5120.getFile(((SharedConfigsType.aClass120_1497.id) * -71319279), i);
-		}
-		class418 = new Class418();
-		((Class418) class418).aClass427_4998 = this;
-		if (is != null)
-			class418.method7008(new RsByteBuffer(is), 1405817786);
-		synchronized (((Class427) this).aClass229_5117) {
-			((Class427) this).aClass229_5117.put(class418, (long) i);
-		}
-		return class418;
-	}
-
-	static final void method7186(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = client.anInt7315 * 1595512269;
-	}
-
-	static final void method7187(CS2Executor class527, int i) {
-		/* empty */
-	}
-
-	static final int method7188(Animable class521_sub1_sub1_sub2, int i) {
-		if (455380417 * class521_sub1_sub1_sub2.anInt10340 == 0)
+	static final int method7188(Animable animable_0, int i_1) {
+		if (animable_0.anInt10340 == 0) {
 			return 0;
-		if (-1 != -737324181 * class521_sub1_sub1_sub2.faceEntity) {
-			Animable class521_sub1_sub1_sub2_9_ = null;
-			if (-737324181 * class521_sub1_sub1_sub2.faceEntity < 32768) {
-				Class282_Sub47 class282_sub47 = ((Class282_Sub47) (client.aClass465_7208.method7754((long) (-737324181 * class521_sub1_sub1_sub2.faceEntity))));
-				if (null != class282_sub47)
-					class521_sub1_sub1_sub2_9_ = ((Animable) class282_sub47.anObject8068);
-			} else if (class521_sub1_sub1_sub2.faceEntity * -737324181 >= 32768)
-				class521_sub1_sub1_sub2_9_ = (client.players[(-737324181 * class521_sub1_sub1_sub2.faceEntity - 32768)]);
-			if (class521_sub1_sub1_sub2_9_ != null) {
-				Vector3 class385 = Vector3.method6632((class521_sub1_sub1_sub2.method11166().aClass385_3595), class521_sub1_sub1_sub2_9_.method11166().aClass385_3595);
-				int i_10_ = (int) class385.x;
-				int i_11_ = (int) class385.z;
-				if (i_10_ != 0 || i_11_ != 0)
-					class521_sub1_sub1_sub2.method15863((int) (Math.atan2((double) i_10_, (double) i_11_) * 2607.5945876176133) & 0x3fff, 1489120080);
+		} else {
+			int i_5;
+			Vector3 vector3_9;
+			if (animable_0.faceEntity != -1) {
+				Object obj_2 = null;
+				if (animable_0.faceEntity < 32768) {
+					Class282_Sub47 class282_sub47_3 = (Class282_Sub47) client.aClass465_7208.method7754((long) animable_0.faceEntity);
+					if (class282_sub47_3 != null) {
+						obj_2 = (Animable) class282_sub47_3.anObject8068;
+					}
+				} else if (animable_0.faceEntity >= 32768) {
+					obj_2 = client.players[animable_0.faceEntity - 32768];
+				}
+
+				if (obj_2 != null) {
+					vector3_9 = Vector3.method6632(animable_0.method11166().aClass385_3595, ((Animable) obj_2).method11166().aClass385_3595);
+					int i_4 = (int) vector3_9.x;
+					i_5 = (int) vector3_9.z;
+					if (i_4 != 0 || i_5 != 0) {
+						animable_0.method15863((int) (Math.atan2((double) i_4, (double) i_5) * 2607.5945876176133D) & 0x3fff, 1489120080);
+					}
+				}
 			}
+
+			if (animable_0 instanceof Player) {
+				Player player_8 = (Player) animable_0;
+				if (player_8.faceDirection != -1 && (player_8.anInt10355 == 0 || player_8.anInt10366 > 0)) {
+					player_8.method15863(player_8.faceDirection, 1785594136);
+					player_8.faceDirection = -1;
+				}
+			} else if (animable_0 instanceof NPC) {
+				NPC npc_10 = (NPC) animable_0;
+				if (npc_10.anInt10578 != -1 && (npc_10.anInt10355 == 0 || npc_10.anInt10366 > 0)) {
+					vector3_9 = npc_10.method11166().aClass385_3595;
+					CoordGrid coordgrid_7 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1777766742);
+					i_5 = (int) vector3_9.x - (npc_10.anInt10578 * 256 - coordgrid_7.x * 256 - coordgrid_7.x * 256);
+					int i_6 = (int) vector3_9.z - (npc_10.anInt10577 * 256 - coordgrid_7.y * 256 - coordgrid_7.y * 256);
+					if (i_5 != 0 || i_6 != 0) {
+						npc_10.method15863((int) (Math.atan2((double) i_5, (double) i_6) * 2607.5945876176133D) & 0x3fff, 1631347734);
+					}
+
+					npc_10.anInt10578 = -1;
+				}
+			}
+
+			return animable_0.method15796((byte) 1);
 		}
-		if (class521_sub1_sub1_sub2 instanceof Player) {
-			Player class521_sub1_sub1_sub2_sub1 = (Player) class521_sub1_sub1_sub2;
-			if (327043279 * class521_sub1_sub1_sub2_sub1.faceDirection != -1 && (class521_sub1_sub1_sub2_sub1.anInt10355 * 1871221471 == 0 || (-666607017 * class521_sub1_sub1_sub2_sub1.anInt10366 > 0))) {
-				class521_sub1_sub1_sub2_sub1.method15863(class521_sub1_sub1_sub2_sub1.faceDirection * 327043279, 1785594136);
-				class521_sub1_sub1_sub2_sub1.faceDirection = -1435090479;
-			}
-		} else if (class521_sub1_sub1_sub2 instanceof NPC) {
-			NPC class521_sub1_sub1_sub2_sub2 = (NPC) class521_sub1_sub1_sub2;
-			if (-1929895711 * class521_sub1_sub1_sub2_sub2.anInt10578 != -1 && (0 == class521_sub1_sub1_sub2_sub2.anInt10355 * 1871221471 || (class521_sub1_sub1_sub2_sub2.anInt10366 * -666607017 > 0))) {
-				Vector3 class385 = (class521_sub1_sub1_sub2_sub2.method11166().aClass385_3595);
-				CoordGrid class219 = IndexLoaders.MAP_REGION_DECODER.getCoordGrid(1777766742);
-				int i_12_ = ((int) class385.x - (class521_sub1_sub1_sub2_sub2.anInt10578 * -132062976 - class219.x * 495713536 - class219.x * 495713536));
-				int i_13_ = ((int) class385.z - (-473524480 * class521_sub1_sub1_sub2_sub2.anInt10577 - class219.y * 1124593408 - class219.y * 1124593408));
-				if (i_12_ != 0 || 0 != i_13_)
-					class521_sub1_sub1_sub2_sub2.method15863((int) (Math.atan2((double) i_12_, (double) i_13_) * 2607.5945876176133) & 0x3fff, 1631347734);
-				class521_sub1_sub1_sub2_sub2.anInt10578 = -119874337;
-			}
-		}
-		return class521_sub1_sub1_sub2.method15796((byte) 1);
 	}
 
-	public static int method7189(RsByteBuffer class282_sub35, String string, int i) {
-		int i_14_ = -1990677291 * class282_sub35.index;
-		byte[] is = XLinkedNodeList.method7885(string, (byte) -70);
-		class282_sub35.method13076(is.length, 2140409411);
-		class282_sub35.index += Class113.aClass117_1234.method1971(is, 0, is.length, (class282_sub35.buffer), (class282_sub35.index * -1990677291), -130174544) * -1115476867;
-		return class282_sub35.index * -1990677291 - i_14_;
+	public static int method7189(RsByteBuffer rsbytebuffer_0, String string_1, int i_2) {
+		int i_3 = rsbytebuffer_0.index;
+		byte[] bytes_4 = LinkedNodeList.method7885(string_1, (byte) -70);
+		rsbytebuffer_0.method13076(bytes_4.length, 2140409411);
+		rsbytebuffer_0.index += Class113.aClass117_1234.method1971(bytes_4, 0, bytes_4.length, rsbytebuffer_0.buffer, rsbytebuffer_0.index, -130174544);
+		return rsbytebuffer_0.index - i_3;
 	}
+
 }

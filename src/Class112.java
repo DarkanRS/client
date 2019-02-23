@@ -1,129 +1,147 @@
-/* Class112 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public final class Class112 {
 
 	Class112() throws Throwable {
 		throw new Error();
 	}
 
-	public static Class60[] method1870(int i) {
+	public static Class60[] method1870(int i_0) {
 		return new Class60[] { Class60.aClass60_609, Class60.aClass60_602, Class60.aClass60_603, Class60.aClass60_608, Class60.aClass60_605, Class60.aClass60_606, Class60.aClass60_607, Class60.aClass60_604, Class60.aClass60_601, Class60.aClass60_610 };
 	}
 
-	public static int method1871(int i, int i_9_, int i_10_, int i_11_) {
-		i_10_ &= 0x3;
-		if (i_10_ == 0)
-			return i;
-		if (i_10_ == 1)
-			return i_9_;
-		if (2 == i_10_)
-			return 7 - i;
-		return 7 - i_9_;
+	public static int method1871(int i_0, int i_1, int i_2, int i_3) {
+		i_2 &= 0x3;
+		return i_2 == 0 ? i_0 : (i_2 == 1 ? i_1 : (i_2 == 2 ? 7 - i_0 : 7 - i_1));
 	}
 
-	static final void method1872(CS2Executor class527, int i) {
-		class527.intStackPtr -= 283782002;
-		int i_12_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_13_ = (class527.intStack[1 + 1942118537 * class527.intStackPtr]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class252.method4327(i_12_, i_13_, true, false, (byte) 32);
+	static final void method1872(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 2;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class252.method4327(i_2, i_3, true, false, (byte) 32);
 	}
 
-	public static int findRoute(int srcX, int srcY, int srcSizeXY, RouteStrategy strategy, ClipMap clipMap, boolean findAlternative, int[] bufferX, int[] bufferY, int i_17_) {
-		for (int x = 0; x < 128; x++) {
-			for (int y = 0; y < 128; y++) {
-				Class251.directions[x][y] = 0;
-				Class251.distances[x][y] = 99999999;
+	public static int findRoute(int i_0, int i_1, int i_2, RouteStrategy routestrategy_3, ClipMap clipmap_4, boolean bool_5, int[] ints_6, int[] ints_7, int i_8) {
+		int i_10;
+		for (int i_9 = 0; i_9 < 128; i_9++) {
+			for (i_10 = 0; i_10 < 128; i_10++) {
+				Class251.directions[i_9][i_10] = 0;
+				Class251.distances[i_9][i_10] = 99999999;
 			}
 		}
-		boolean found;
-		if (srcSizeXY == 1)
-			found = Class96_Sub17.performCalculationS1(srcX, srcY, strategy, clipMap, -1231399529);
-		else if (srcSizeXY == 2)
-			found = Class46.performCalculationS2(srcX, srcY, strategy, clipMap, -46560095);
-		else
-			found = Class46.performCalculationSX(srcX, srcY, srcSizeXY, strategy, clipMap, (byte) 21);
-		int graphBaseX = srcX - 64;
-		int graphBaseY = srcY - 64;
-		int endX = Class251.exitX * -1659935235;
-		int endY = Class251.exitY * 1434452541;
-		if (!found) {
-			if (findAlternative) {
-				int lowestCost = Integer.MAX_VALUE;
-				int lowestDistance = Integer.MAX_VALUE;
-				int alternativeRouteRange = 10;
-				int approxDestX = -1440558477 * strategy.approxDestinationX;
-				int approxDestY = strategy.approxDestinationY * 1732585867;
-				int approxDestinationSizeX = -1384164183 * strategy.approxDestinationSizeX;
-				int approxDestinationSizeY = strategy.approxDestinationSizeY * 361960939;
-				for (int checkX = approxDestX - alternativeRouteRange; checkX <= approxDestX + alternativeRouteRange; checkX++) {
-					for (int checkY = approxDestY - alternativeRouteRange; checkY <= approxDestY + alternativeRouteRange; checkY++) {
-						int graphX = checkX - graphBaseX;
-						int graphY = checkY - graphBaseY;
-						if (graphX >= 0 && graphY >= 0 && graphX < 128 && graphY < 128 && (Class251.distances[graphX][graphY] < 100)) {
-							int deltaX = 0;
-							if (checkX < approxDestX)
-								deltaX = approxDestX - checkX;
-							else if (checkX > approxDestinationSizeX + approxDestX - 1)
-								deltaX = checkX - (approxDestX + approxDestinationSizeX - 1);
-							int deltaY = 0;
-							if (checkY < approxDestY)
-								deltaY = approxDestY - checkY;
-							else if (checkY > approxDestinationSizeY + approxDestY - 1)
-								deltaY = checkY - (approxDestY + approxDestinationSizeY - 1);
-							int cost = deltaX * deltaX + deltaY * deltaY;
-							if (cost < lowestCost || (cost == lowestCost && (Class251.distances[graphX][graphY]) < lowestDistance)) {
-								lowestCost = cost;
-								lowestDistance = (Class251.distances[graphX][graphY]);
-								endX = checkX;
-								endY = checkY;
-							}
+
+		boolean bool_28;
+		if (i_2 == 1) {
+			bool_28 = Class96_Sub17.performCalculationS1(i_0, i_1, routestrategy_3, clipmap_4, -1231399529);
+		} else if (i_2 == 2) {
+			bool_28 = Class46.performCalculationS2(i_0, i_1, routestrategy_3, clipmap_4, -46560095);
+		} else {
+			bool_28 = Class46.performCalculationSX(i_0, i_1, i_2, routestrategy_3, clipmap_4, (byte) 21);
+		}
+
+		i_10 = i_0 - 64;
+		int i_11 = i_1 - 64;
+		int i_12 = Class251.exitX;
+		int i_13 = Class251.exitY;
+		int i_14;
+		int i_15;
+		int i_17;
+		if (!bool_28) {
+			if (!bool_5) {
+				return -1;
+			}
+
+			i_14 = Integer.MAX_VALUE;
+			i_15 = Integer.MAX_VALUE;
+			byte b_16 = 10;
+			i_17 = routestrategy_3.approxDestinationX;
+			int i_18 = routestrategy_3.approxDestinationY;
+			int i_19 = routestrategy_3.approxDestinationSizeX;
+			int i_20 = routestrategy_3.approxDestinationSizeY;
+
+			for (int i_21 = i_17 - b_16; i_21 <= i_17 + b_16; i_21++) {
+				for (int i_22 = i_18 - b_16; i_22 <= i_18 + b_16; i_22++) {
+					int i_23 = i_21 - i_10;
+					int i_24 = i_22 - i_11;
+					if (i_23 >= 0 && i_24 >= 0 && i_23 < 128 && i_24 < 128 && Class251.distances[i_23][i_24] < 100) {
+						int i_25 = 0;
+						if (i_21 < i_17) {
+							i_25 = i_17 - i_21;
+						} else if (i_21 > i_19 + i_17 - 1) {
+							i_25 = i_21 - (i_17 + i_19 - 1);
+						}
+
+						int i_26 = 0;
+						if (i_22 < i_18) {
+							i_26 = i_18 - i_22;
+						} else if (i_22 > i_20 + i_18 - 1) {
+							i_26 = i_22 - (i_18 + i_20 - 1);
+						}
+
+						int i_27 = i_25 * i_25 + i_26 * i_26;
+						if (i_27 < i_14 || i_27 == i_14 && Class251.distances[i_23][i_24] < i_15) {
+							i_14 = i_27;
+							i_15 = Class251.distances[i_23][i_24];
+							i_12 = i_21;
+							i_13 = i_22;
 						}
 					}
 				}
-				if (lowestCost == Integer.MAX_VALUE)
-					return -1;
-			} else
-				return -1;
-		}
-		if (srcX == endX && srcY == endY)
-			return 0;
-		int steps = 0;
-		Class251.bufferX[steps] = endX;
-		Class251.bufferY[steps++] = endY;
-		int lastwritten;
-		int direction = (lastwritten = Class251.directions[endX - graphBaseX][endY - graphBaseY]);
-		while (srcX != endX || endY != srcY) {
-			if (lastwritten != direction) {
-				lastwritten = direction;
-				Class251.bufferX[steps] = endX;
-				Class251.bufferY[steps++] = endY;
 			}
-			if ((direction & 0x2) != 0)
-				endX++;
-			else if ((direction & 0x8) != 0)
-				endX--;
-			if ((direction & 0x1) != 0)
-				endY++;
-			else if ((direction & 0x4) != 0)
-				endY--;
-			direction = Class251.directions[endX - graphBaseX][endY - graphBaseY];
+
+			if (i_14 == Integer.MAX_VALUE) {
+				return -1;
+			}
 		}
-		int i = 0;
-		do {
-			if (steps-- <= 0)
-				break;
-			bufferX[i] = Class251.bufferX[steps];
-			bufferY[i++] = Class251.bufferY[steps];
-		} while (i < bufferX.length);
-		return i;
+
+		if (i_0 == i_12 && i_13 == i_1) {
+			return 0;
+		} else {
+			byte b_29 = 0;
+			Class251.bufferX[b_29] = i_12;
+			i_14 = b_29 + 1;
+			Class251.bufferY[b_29] = i_13;
+
+			for (int i_30 = i_15 = Class251.directions[i_12 - i_10][i_13 - i_11]; i_0 != i_12 || i_13 != i_1; i_30 = Class251.directions[i_12 - i_10][i_13 - i_11]) {
+				if (i_15 != i_30) {
+					i_15 = i_30;
+					Class251.bufferX[i_14] = i_12;
+					Class251.bufferY[i_14++] = i_13;
+				}
+
+				if ((i_30 & 0x2) != 0) {
+					++i_12;
+				} else if ((i_30 & 0x8) != 0) {
+					--i_12;
+				}
+
+				if ((i_30 & 0x1) != 0) {
+					++i_13;
+				} else if ((i_30 & 0x4) != 0) {
+					--i_13;
+				}
+			}
+
+			i_17 = 0;
+
+			while (i_14-- > 0) {
+				ints_6[i_17] = Class251.bufferX[i_14];
+				ints_7[i_17++] = Class251.bufferY[i_14];
+				if (i_17 >= ints_6.length) {
+					break;
+				}
+			}
+
+			return i_17;
+		}
 	}
 
-	static final void method1874(CS2Executor class527, int i) {
-		String string = (Class462.aStringArray5548[(class527.intOpValues[class527.instrPtr * 301123709])]);
-		if (null == string)
-			string = "";
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
+	static final void method1874(CS2Executor cs2executor_0, int i_1) {
+		String string_2 = Class462.aStringArray5548[cs2executor_0.intOpValues[cs2executor_0.instrPtr]];
+		if (string_2 == null) {
+			string_2 = "";
+		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
 	}
+
 }

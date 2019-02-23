@@ -1,41 +1,20 @@
-/* Class282_Sub20_Sub18 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class282_Sub20_Sub18 extends Class282_Sub20 {
-	int[] method12325(int i) {
-		int[] is = aClass320_7667.method5721(i, -2046062140);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, -402153223 * Class316.anInt3670, Class316.anIntArray3668[i]);
-		return is;
-	}
 
-	int[] method12327(int i) {
-		int[] is = aClass320_7667.method5721(i, 762967777);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, -402153223 * Class316.anInt3670, Class316.anIntArray3668[i]);
-		return is;
-	}
+	int[] method12319(int i_1, int i_2) {
+		int[] ints_3 = this.aClass320_7667.method5721(i_1, -466585886);
+		if (this.aClass320_7667.aBool3722) {
+			Class503.method8365(ints_3, 0, Class316.anInt3670, Class316.anIntArray3668[i_1]);
+		}
 
-	int[] method12319(int i, int i_0_) {
-		int[] is = aClass320_7667.method5721(i, -466585886);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, -402153223 * Class316.anInt3670, Class316.anIntArray3668[i]);
-		return is;
-	}
-
-	int[] method12336(int i) {
-		int[] is = aClass320_7667.method5721(i, -1528536679);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, -402153223 * Class316.anInt3670, Class316.anIntArray3668[i]);
-		return is;
+		return ints_3;
 	}
 
 	public Class282_Sub20_Sub18() {
 		super(0, true);
 	}
 
-	static final void method15371(CS2Executor class527, int i) {
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12964((byte) 127) ? 1 : 0;
+	static final void method15371(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = Class393.aClass282_Sub54_4783.aClass468_Sub28_8212.method12964((byte) 127) ? 1 : 0;
 	}
+
 }

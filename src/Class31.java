@@ -1,216 +1,182 @@
-
-/* Class31 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.io.IOException;
 
 public class Class31 implements IndexLoader {
+
+	public static int anInt361;
+	SoftCache aClass229_360 = new SoftCache(64);
 	Index aClass317_358;
 	Index aClass317_359;
-	SoftCache aClass229_360 = new SoftCache(64);
-	public static int anInt361;
 
-	public void method799() {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3859(702031167);
+	public Class44 method800(int i_1, int i_2) {
+		SoftCache softcache_4 = this.aClass229_360;
+		Class44 class44_3;
+		synchronized (this.aClass229_360) {
+			class44_3 = (Class44) this.aClass229_360.get((long) i_1);
+		}
+
+		if (class44_3 != null) {
+			return class44_3;
+		} else {
+			Index index_5 = this.aClass317_358;
+			byte[] bytes_10;
+			synchronized (this.aClass317_358) {
+				bytes_10 = this.aClass317_358.getFile(SharedConfigsType.aClass120_1466.id, i_1);
+			}
+
+			class44_3 = new Class44();
+			class44_3.aClass31_429 = this;
+			if (bytes_10 != null) {
+				class44_3.method909(new RsByteBuffer(bytes_10), -1148034067);
+			}
+
+			SoftCache softcache_9 = this.aClass229_360;
+			synchronized (this.aClass229_360) {
+				this.aClass229_360.put(class44_3, (long) i_1);
+				return class44_3;
+			}
 		}
 	}
 
-	public Class44 method800(int i, int i_0_) {
-		Class44 class44;
-		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
-		}
-		if (class44 != null)
-			return class44;
-		byte[] is;
-		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i);
-		}
-		class44 = new Class44();
-		((Class44) class44).aClass31_429 = this;
-		if (null != is)
-			class44.method909(new RsByteBuffer(is), -1148034067);
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.put(class44, (long) i);
-		}
-		return class44;
-	}
-
-	public void method801(int i) {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3859(-1013964419);
+	public void method801(int i_1) {
+		SoftCache softcache_2 = this.aClass229_360;
+		synchronized (this.aClass229_360) {
+			this.aClass229_360.method3859(-1013964419);
 		}
 	}
 
-	public void method802(int i, int i_1_) {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3858(i, (byte) -3);
+	public void method802(int i_1, int i_2) {
+		SoftCache softcache_3 = this.aClass229_360;
+		synchronized (this.aClass229_360) {
+			this.aClass229_360.method3858(i_1, (byte) -3);
 		}
 	}
 
-	public void method803(byte i) {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3863(903388454);
+	public void method803(byte b_1) {
+		SoftCache softcache_2 = this.aClass229_360;
+		synchronized (this.aClass229_360) {
+			this.aClass229_360.method3863(903388454);
 		}
 	}
 
-	public void method804(int i) {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3858(i, (byte) 91);
-		}
+	public Class31(Game game_1, Language xlanguage_2, Index index_3, Index index_4) {
+		this.aClass317_358 = index_3;
+		this.aClass317_359 = index_4;
+		this.aClass317_358.filesCount(SharedConfigsType.aClass120_1466.id);
 	}
 
-	public Class44 method805(int i) {
-		Class44 class44;
-		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
-		}
-		if (class44 != null)
-			return class44;
-		byte[] is;
-		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i);
-		}
-		class44 = new Class44();
-		((Class44) class44).aClass31_429 = this;
-		if (null != is)
-			class44.method909(new RsByteBuffer(is), -1148034067);
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.put(class44, (long) i);
-		}
-		return class44;
-	}
+	public static void method809(RsByteBuffer rsbytebuffer_0, int i_1) {
+		byte[] bytes_2 = new byte[24];
 
-	public Class31(Game class486, XLanguage class495, Index class317, Index class317_2_) {
-		((Class31) this).aClass317_358 = class317;
-		((Class31) this).aClass317_359 = class317_2_;
-		((Class31) this).aClass317_358.filesCount(-71319279 * (SharedConfigsType.aClass120_1466.id));
-	}
-
-	public void method806() {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3859(-900924002);
-		}
-	}
-
-	public Class44 method807(int i) {
-		Class44 class44;
-		synchronized (((Class31) this).aClass229_360) {
-			class44 = ((Class44) ((Class31) this).aClass229_360.get((long) i));
-		}
-		if (class44 != null)
-			return class44;
-		byte[] is;
-		synchronized (((Class31) this).aClass317_358) {
-			is = ((Class31) this).aClass317_358.getFile((-71319279 * (SharedConfigsType.aClass120_1466.id)), i);
-		}
-		class44 = new Class44();
-		((Class44) class44).aClass31_429 = this;
-		if (null != is)
-			class44.method909(new RsByteBuffer(is), -1148034067);
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.put(class44, (long) i);
-		}
-		return class44;
-	}
-
-	public void method808() {
-		synchronized (((Class31) this).aClass229_360) {
-			((Class31) this).aClass229_360.method3859(438412195);
-		}
-	}
-
-	public static void method809(RsByteBuffer class282_sub35, int i) {
-		byte[] is = new byte[24];
 		try {
 			Engine.aClass440_3269.method7347(0L);
-			Engine.aClass440_3269.method7351(is, -991225250);
-			int i_3_;
-			for (i_3_ = 0; i_3_ < 24 && 0 == is[i_3_]; i_3_++) {
-				/* empty */
+			Engine.aClass440_3269.method7351(bytes_2, -991225250);
+
+			int i_3;
+			for (i_3 = 0; i_3 < 24 && bytes_2[i_3] == 0; i_3++) {
+				;
 			}
-			if (i_3_ >= 24)
+
+			if (i_3 >= 24) {
 				throw new IOException();
-		} catch (Exception exception) {
-			for (int i_4_ = 0; i_4_ < 24; i_4_++)
-				is[i_4_] = (byte) -1;
+			}
+		} catch (Exception exception_6) {
+			for (int i_4 = 0; i_4 < 24; i_4++) {
+				bytes_2[i_4] = -1;
+			}
 		}
-		class282_sub35.writeBytes(is, 0, 24);
+
+		rsbytebuffer_0.writeBytes(bytes_2, 0, 24);
 	}
 
-	static final void method810(CS2Executor class527, int i) {
-		Class10.method458((class527.intStack[((class527.intStackPtr -= 141891001) * 1942118537)]), 1942118537);
+	static final void method810(CS2Executor cs2executor_0, int i_1) {
+		Class10.method458(cs2executor_0.intStack[--cs2executor_0.intStackPtr], 1942118537);
 	}
 
-	static final void method811(CS2Executor class527, int i) {
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = class527.aClass282_Sub4_7011.aString7501;
+	static final void method811(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = cs2executor_0.aClass282_Sub4_7011.aString7501;
 	}
 
-	public static final Class282_Sub44 method812(int i, Class282_Sub44 class282_sub44, int[] is, boolean bool, byte i_5_) {
-		Class282_Sub44 class282_sub44_6_ = (Class282_Sub44) client.aClass465_7442.method7754((long) i);
-		if (null != class282_sub44_6_)
-			Class351.method6196(class282_sub44_6_, (587626901 * class282_sub44.anInt8063 != class282_sub44_6_.anInt8063 * 587626901), bool, -1911344380);
-		client.aClass465_7442.method7765(class282_sub44, (long) i);
-		ClipMap.method6007(587626901 * class282_sub44.anInt8063, is, -1937827624);
-		IComponentDefinitions class118 = Class117.method1981(i, (byte) 76);
-		if (class118 != null)
-			Class109.method1858(class118, (byte) 12);
-		if (null != client.aClass118_7352) {
+	public static final Class282_Sub44 method812(int i_0, Class282_Sub44 class282_sub44_1, int[] ints_2, boolean bool_3, byte b_4) {
+		Class282_Sub44 class282_sub44_5 = (Class282_Sub44) client.aClass465_7442.method7754((long) i_0);
+		if (class282_sub44_5 != null) {
+			Class351.method6196(class282_sub44_5, class282_sub44_5.anInt8063 != class282_sub44_1.anInt8063, bool_3, -1911344380);
+		}
+
+		client.aClass465_7442.method7765(class282_sub44_1, (long) i_0);
+		ClipMap.method6007(class282_sub44_1.anInt8063, ints_2, -1937827624);
+		IComponentDefinitions icomponentdefinitions_6 = Class117.method1981(i_0, (byte) 76);
+		if (icomponentdefinitions_6 != null) {
+			Class109.method1858(icomponentdefinitions_6, (byte) 12);
+		}
+
+		if (client.aClass118_7352 != null) {
 			Class109.method1858(client.aClass118_7352, (byte) -25);
 			client.aClass118_7352 = null;
 		}
+
 		OutputStream_Sub1.method12938((byte) 26);
-		if (class118 != null)
-			Class12.method483((Class468_Sub8.aClass98Array7889[-1952846363 * class118.idHash >>> 16]), class118, !bool, -1031164822);
-		if (!bool)
-			Class150.method2582(587626901 * class282_sub44.anInt8063, is, -1100140607);
-		if (!bool && client.anInt7349 * -1699899559 != -1)
-			Class383.method6514(-1699899559 * client.anInt7349, 1, 815212600);
-		return class282_sub44;
-	}
-
-	static final void method813(int i, int i_7_, int i_8_, int i_9_, int i_10_) {
-		int i_11_ = 0;
-		int i_12_ = i_8_;
-		int i_13_ = -i_8_;
-		int i_14_ = -1;
-		Class232.method3922(Class532_Sub3.anIntArrayArray7072[i_7_], i - i_8_, i_8_ + i, i_9_, (byte) -15);
-		while (i_12_ > i_11_) {
-			i_14_ += 2;
-			i_13_ += i_14_;
-			i_11_++;
-			if (i_13_ >= 0) {
-				i_12_--;
-				i_13_ -= i_12_ << 1;
-				int[] is = Class532_Sub3.anIntArrayArray7072[i_12_ + i_7_];
-				int[] is_15_ = Class532_Sub3.anIntArrayArray7072[i_7_ - i_12_];
-				int i_16_ = i_11_ + i;
-				int i_17_ = i - i_11_;
-				Class232.method3922(is, i_17_, i_16_, i_9_, (byte) -71);
-				Class232.method3922(is_15_, i_17_, i_16_, i_9_, (byte) 45);
-			}
-			int i_18_ = i_12_ + i;
-			int i_19_ = i - i_12_;
-			int[] is = Class532_Sub3.anIntArrayArray7072[i_11_ + i_7_];
-			int[] is_20_ = Class532_Sub3.anIntArrayArray7072[i_7_ - i_11_];
-			Class232.method3922(is, i_19_, i_18_, i_9_, (byte) 11);
-			Class232.method3922(is_20_, i_19_, i_18_, i_9_, (byte) -34);
+		if (icomponentdefinitions_6 != null) {
+			Class12.method483(Class468_Sub8.aClass98Array7889[icomponentdefinitions_6.idHash >>> 16], icomponentdefinitions_6, !bool_3, -1031164822);
 		}
+
+		if (!bool_3) {
+			Class150.method2582(class282_sub44_1.anInt8063, ints_2, -1100140607);
+		}
+
+		if (!bool_3 && client.anInt7349 != -1) {
+			Class383.method6514(client.anInt7349, 1, 815212600);
+		}
+
+		return class282_sub44_1;
 	}
 
-	static final void method814(CS2Executor class527, int i) {
-		int i_21_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class282_Sub50_Sub14 class282_sub50_sub14 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_21_, 1213236683);
-		if (null == class282_sub50_sub14.anIntArray9747)
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = 0;
-		else
-			class527.intStack[((class527.intStackPtr += 141891001) * 1942118537 - 1)] = class282_sub50_sub14.anIntArray9747.length;
+	static final void method813(int i_0, int i_1, int i_2, int i_3, int i_4) {
+		int i_5 = 0;
+		int i_6 = i_2;
+		int i_7 = -i_2;
+		int i_8 = -1;
+		Class232.method3922(Class532_Sub3.anIntArrayArray7072[i_1], i_0 - i_2, i_0 + i_2, i_3, (byte) -15);
+
+		while (i_6 > i_5) {
+			i_8 += 2;
+			i_7 += i_8;
+			++i_5;
+			if (i_7 >= 0) {
+				--i_6;
+				i_7 -= i_6 << 1;
+				int[] ints_9 = Class532_Sub3.anIntArrayArray7072[i_6 + i_1];
+				int[] ints_10 = Class532_Sub3.anIntArrayArray7072[i_1 - i_6];
+				int i_11 = i_0 + i_5;
+				int i_12 = i_0 - i_5;
+				Class232.method3922(ints_9, i_12, i_11, i_3, (byte) -71);
+				Class232.method3922(ints_10, i_12, i_11, i_3, (byte) 45);
+			}
+
+			int i_13 = i_0 + i_6;
+			int i_14 = i_0 - i_6;
+			int[] ints_15 = Class532_Sub3.anIntArrayArray7072[i_5 + i_1];
+			int[] ints_16 = Class532_Sub3.anIntArrayArray7072[i_1 - i_5];
+			Class232.method3922(ints_15, i_14, i_13, i_3, (byte) 11);
+			Class232.method3922(ints_16, i_14, i_13, i_3, (byte) -34);
+		}
+
 	}
 
-	static final void method815(CS2Executor class527, short i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Class413.method6942(class118, class527, 312854602);
+	static final void method814(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		Class282_Sub50_Sub14 class282_sub50_sub14_3 = IndexLoaders.QUICK_CHAT_INDEX_LOADER.method5918(i_2, 1213236683);
+		if (class282_sub50_sub14_3.anIntArray9747 == null) {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = 0;
+		} else {
+			cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = class282_sub50_sub14_3.anIntArray9747.length;
+		}
+
 	}
+
+	static final void method815(CS2Executor cs2executor_0, short s_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Class413.method6942(icomponentdefinitions_3, cs2executor_0, 312854602);
+	}
+
 }

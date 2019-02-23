@@ -1,67 +1,90 @@
-/* Class282_Sub12 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class AnimationSkinNode extends Node {
+
 	int skinId;
-	int[][] anIntArrayArray7560;
-	int[] anIntArray7561;
-	int[] anIntArray7562;
-	boolean[] aBoolArray7563;
 	int anInt7564;
+	int[] anIntArray7562;
+	int[][] anIntArrayArray7560;
+	boolean[] aBoolArray7563;
+	int[] anIntArray7561;
 
-	AnimationSkinNode(int skinId, byte[] data) {
-		skinId = skinId * 886409209;
-		RsByteBuffer buffer = new RsByteBuffer(data);
-		anInt7564 = buffer.readUnsignedByte() * 558271661;
-		anIntArray7562 = new int[1693890341 * anInt7564];
-		anIntArrayArray7560 = new int[1693890341 * anInt7564][];
-		aBoolArray7563 = new boolean[1693890341 * anInt7564];
-		anIntArray7561 = new int[anInt7564 * 1693890341];
-		for (int i_0_ = 0; i_0_ < anInt7564 * 1693890341; i_0_++) {
-			anIntArray7562[i_0_] = buffer.readUnsignedByte();
-			if (anIntArray7562[i_0_] == 6)
-				anIntArray7562[i_0_] = 2;
-		}
-		for (int i_1_ = 0; i_1_ < 1693890341 * anInt7564; i_1_++)
-			aBoolArray7563[i_1_] = buffer.readUnsignedByte() == 1;
-		for (int i_2_ = 0; i_2_ < 1693890341 * anInt7564; i_2_++)
-			anIntArray7561[i_2_] = buffer.readUnsignedShort();
-		for (int i_3_ = 0; i_3_ < anInt7564 * 1693890341; i_3_++)
-			anIntArrayArray7560[i_3_] = new int[buffer.readUnsignedByte()];
-		for (int i_4_ = 0; i_4_ < 1693890341 * anInt7564; i_4_++) {
-			for (int i_5_ = 0; (i_5_ < anIntArrayArray7560[i_4_].length); i_5_++)
-				anIntArrayArray7560[i_4_][i_5_] = buffer.readUnsignedByte();
-		}
-	}
+	AnimationSkinNode(int i_1, byte[] bytes_2) {
+		i_1 *= 886409209;
+		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(bytes_2);
+		this.anInt7564 = rsbytebuffer_3.readUnsignedByte();
+		this.anIntArray7562 = new int[this.anInt7564];
+		this.anIntArrayArray7560 = new int[this.anInt7564][];
+		this.aBoolArray7563 = new boolean[this.anInt7564];
+		this.anIntArray7561 = new int[this.anInt7564];
 
-	static void method12212(Class282_Sub50_Sub15 class282_sub50_sub15, int i, int i_6_) {
-		if (Class20.aBool161) {
-			FontMetrics class414 = Class114.method1887(-1200220753);
-			int i_7_ = 0;
-			for (Class282_Sub50_Sub7 class282_sub50_sub7 = ((Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7941((byte) 4)); class282_sub50_sub7 != null; class282_sub50_sub7 = ((Class282_Sub50_Sub7) ((Class282_Sub50_Sub15) class282_sub50_sub15).aClass477_9770.method7955(-726833918))) {
-				int i_8_ = Class282_Sub50_Sub17.method15507(class282_sub50_sub7, class414, 943671530);
-				if (i_8_ > i_7_)
-					i_7_ = i_8_;
+		int i_4;
+		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+			this.anIntArray7562[i_4] = rsbytebuffer_3.readUnsignedByte();
+			if (this.anIntArray7562[i_4] == 6) {
+				this.anIntArray7562[i_4] = 2;
 			}
-			i_7_ += 8;
-			int i_9_ = ((997766473 * Class20.anInt178 * (((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769 * 2026887253)) + 21);
-			Class521_Sub1_Sub5_Sub1.anInt10526 = -628178221 * ((Class20.aBool187 ? 26 : 22) + (Class20.anInt178 * 997766473 * (2026887253 * ((Class282_Sub50_Sub15) class282_sub50_sub15).anInt9769)));
-			int i_10_ = (1742345613 * Class301.anInt3555 + Class158_Sub2.anInt8975 * -13788709);
-			if (i_7_ + i_10_ > Class349.anInt4083 * -418109423)
-				i_10_ = 1742345613 * Class301.anInt3555 - i_7_;
-			if (i_10_ < 0)
-				i_10_ = 0;
-			int i_11_ = (Class20.aBool187 ? 1 + (20 + 397683159 * class414.anInt4978) : 31);
-			int i_12_ = class414.anInt4978 * 397683159 + (i - i_11_) + 1;
-			if (i_9_ + i_12_ > Engine.anInt3243 * -969250379)
-				i_12_ = Engine.anInt3243 * -969250379 - i_9_;
-			if (i_12_ < 0)
-				i_12_ = 0;
-			Class341.anInt3996 = -1046325159 * i_10_;
-			Class282_Sub50_Sub2.anInt9471 = i_12_ * 442655807;
-			Class96_Sub3.anInt8518 = i_7_ * 694445155;
-			Class20.aClass282_Sub50_Sub15_163 = class282_sub50_sub15;
 		}
+
+		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+			this.aBoolArray7563[i_4] = rsbytebuffer_3.readUnsignedByte() == 1;
+		}
+
+		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+			this.anIntArray7561[i_4] = rsbytebuffer_3.readUnsignedShort();
+		}
+
+		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+			this.anIntArrayArray7560[i_4] = new int[rsbytebuffer_3.readUnsignedByte()];
+		}
+
+		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+			for (int i_5 = 0; i_5 < this.anIntArrayArray7560[i_4].length; i_5++) {
+				this.anIntArrayArray7560[i_4][i_5] = rsbytebuffer_3.readUnsignedByte();
+			}
+		}
+
 	}
+
+	static void method12212(Class282_Sub50_Sub15 class282_sub50_sub15_0, int i_1, int i_2) {
+		if (Class20.aBool161) {
+			FontMetrics fontmetrics_3 = Class114.method1887(-1200220753);
+			int i_4 = 0;
+
+			int i_6;
+			for (Class282_Sub50_Sub7 class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7941((byte) 4); class282_sub50_sub7_5 != null; class282_sub50_sub7_5 = (Class282_Sub50_Sub7) class282_sub50_sub15_0.aClass477_9770.method7955(-726833918)) {
+				i_6 = Class282_Sub50_Sub17.method15507(class282_sub50_sub7_5, fontmetrics_3, 943671530);
+				if (i_6 > i_4) {
+					i_4 = i_6;
+				}
+			}
+
+			i_4 += 8;
+			int i_9 = class282_sub50_sub15_0.anInt9769 * Class20.anInt178 + 21;
+			Class521_Sub1_Sub5_Sub1.anInt10526 = (Class20.aBool187 ? 26 : 22) + Class20.anInt178 * class282_sub50_sub15_0.anInt9769;
+			i_6 = Class301.anInt3555 + Class158_Sub2.anInt8975;
+			if (i_4 + i_6 > Class349.anInt4083) {
+				i_6 = Class301.anInt3555 - i_4;
+			}
+
+			if (i_6 < 0) {
+				i_6 = 0;
+			}
+
+			int i_7 = Class20.aBool187 ? fontmetrics_3.anInt4978 + 1 + 20 : 31;
+			int i_8 = i_1 - i_7 + fontmetrics_3.anInt4978 + 1;
+			if (i_9 + i_8 > Engine.anInt3243 * -969250379) {
+				i_8 = Engine.anInt3243 * -969250379 - i_9;
+			}
+
+			if (i_8 < 0) {
+				i_8 = 0;
+			}
+
+			Class341.anInt3996 = i_6;
+			Class282_Sub50_Sub2.anInt9471 = i_8;
+			Class96_Sub3.anInt8518 = i_4;
+			Class20.aClass282_Sub50_Sub15_163 = class282_sub50_sub15_0;
+		}
+
+	}
+
 }

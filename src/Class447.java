@@ -1,130 +1,91 @@
-/* Class447 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class447 {
+
 	SoftCache aClass229_5417 = new SoftCache(64);
 	Index aClass317_5418;
 
-	public void method7449() {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3863(1287002144);
+	public Class449 method7450(int i_1, byte b_2) {
+		SoftCache softcache_4 = this.aClass229_5417;
+		Class449 class449_3;
+		synchronized (this.aClass229_5417) {
+			class449_3 = (Class449) this.aClass229_5417.get((long) i_1);
+		}
+
+		if (class449_3 != null) {
+			return class449_3;
+		} else {
+			byte[] bytes_8 = this.aClass317_5418.getFile(SharedConfigsType.aClass120_1522.id, i_1);
+			class449_3 = new Class449();
+			if (bytes_8 != null) {
+				class449_3.method7487(new RsByteBuffer(bytes_8), -267873948);
+			}
+
+			SoftCache softcache_5 = this.aClass229_5417;
+			synchronized (this.aClass229_5417) {
+				this.aClass229_5417.put(class449_3, (long) i_1);
+				return class449_3;
+			}
 		}
 	}
 
-	public Class449 method7450(int i, byte i_0_) {
-		Class449 class449;
-		synchronized (((Class447) this).aClass229_5417) {
-			class449 = ((Class449) ((Class447) this).aClass229_5417.get((long) i));
-		}
-		if (class449 != null)
-			return class449;
-		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.id) * -71319279), i);
-		class449 = new Class449();
-		if (null != is)
-			class449.method7487(new RsByteBuffer(is), -267873948);
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.put(class449, (long) i);
-		}
-		return class449;
-	}
-
-	public void method7451() {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3859(867706329);
+	public void method7452(int i_1, byte b_2) {
+		SoftCache softcache_3 = this.aClass229_5417;
+		synchronized (this.aClass229_5417) {
+			this.aClass229_5417.method3858(i_1, (byte) -19);
 		}
 	}
 
-	public void method7452(int i, byte i_1_) {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3858(i, (byte) -19);
+	public void method7453(byte b_1) {
+		SoftCache softcache_2 = this.aClass229_5417;
+		synchronized (this.aClass229_5417) {
+			this.aClass229_5417.method3863(972747632);
 		}
 	}
 
-	public void method7453(byte i) {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3863(972747632);
+	public Class447(Game game_1, Language xlanguage_2, Index index_3) {
+		this.aClass317_5418 = index_3;
+		if (this.aClass317_5418 != null) {
+			this.aClass317_5418.filesCount(SharedConfigsType.aClass120_1522.id);
+		}
+
+	}
+
+	public void method7458(int i_1) {
+		SoftCache softcache_2 = this.aClass229_5417;
+		synchronized (this.aClass229_5417) {
+			this.aClass229_5417.method3859(1246806514);
 		}
 	}
 
-	public void method7454(int i) {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3858(i, (byte) -32);
+	static final void method7460(int i_0, int i_1, int i_2, int i_3) {
+		String string_4 = "tele " + i_0 + "," + (i_1 >> 6) + "," + (i_2 >> 6) + "," + (i_1 & 0x3f) + "," + (i_2 & 0x3f);
+		Class251.handleCommand(string_4, true, false, -354697449);
+	}
+
+	static void method7461(CS2Executor cs2executor_0, byte b_1) {
+		cs2executor_0.intStack[cs2executor_0.intStackPtr - 1] = IndexLoaders.aClass242_4922.method4156(cs2executor_0.intStack[cs2executor_0.intStackPtr - 1], -1396181317).aBool2962 ? 1 : 0;
+	}
+
+	static final void method7462(CS2Executor cs2executor_0, int i_1) {
+		String string_2 = null;
+		if (Class119.aClass12_1461 != null) {
+			string_2 = Class119.aClass12_1461.method473(1840459942);
 		}
-	}
 
-	public void method7455() {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3859(713724825);
+		if (string_2 == null) {
+			string_2 = "";
 		}
+
+		cs2executor_0.objectStack[++cs2executor_0.anInt7000 - 1] = string_2;
 	}
 
-	public void method7456() {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3859(-1628120155);
-		}
+	static final void method7463(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.intStackPtr -= 5;
+		int i_2 = cs2executor_0.intStack[cs2executor_0.intStackPtr];
+		int i_3 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 1];
+		int i_4 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 2];
+		int i_5 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 3];
+		int i_6 = cs2executor_0.intStack[cs2executor_0.intStackPtr + 4];
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = i_2 + (i_6 - i_4) * (i_3 - i_2) / (i_5 - i_4);
 	}
 
-	public Class447(Game class486, XLanguage class495, Index class317) {
-		((Class447) this).aClass317_5418 = class317;
-		if (((Class447) this).aClass317_5418 != null)
-			((Class447) this).aClass317_5418.filesCount(-71319279 * SharedConfigsType.aClass120_1522.id);
-	}
-
-	public void method7457(int i) {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3858(i, (byte) 44);
-		}
-	}
-
-	public void method7458(int i) {
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.method3859(1246806514);
-		}
-	}
-
-	public Class449 method7459(int i) {
-		Class449 class449;
-		synchronized (((Class447) this).aClass229_5417) {
-			class449 = ((Class449) ((Class447) this).aClass229_5417.get((long) i));
-		}
-		if (class449 != null)
-			return class449;
-		byte[] is = ((Class447) this).aClass317_5418.getFile(((SharedConfigsType.aClass120_1522.id) * -71319279), i);
-		class449 = new Class449();
-		if (null != is)
-			class449.method7487(new RsByteBuffer(is), -267873948);
-		synchronized (((Class447) this).aClass229_5417) {
-			((Class447) this).aClass229_5417.put(class449, (long) i);
-		}
-		return class449;
-	}
-
-	static final void method7460(int i, int i_2_, int i_3_, int i_4_) {
-		String string = new StringBuilder().append("tele ").append(i).append(Class2.aString14).append(i_2_ >> 6).append(Class2.aString14).append(i_3_ >> 6).append(Class2.aString14).append(i_2_ & 0x3f).append(Class2.aString14).append(i_3_ & 0x3f).toString();
-		Class251.handleCommand(string, true, false, -354697449);
-	}
-
-	static void method7461(CS2Executor class527, byte i) {
-		class527.intStack[class527.intStackPtr * 1942118537 - 1] = (IndexLoaders.aClass242_4922.method4156((class527.intStack[class527.intStackPtr * 1942118537 - 1]), -1396181317).aBool2962) ? 1 : 0;
-	}
-
-	static final void method7462(CS2Executor class527, int i) {
-		String string = null;
-		if (null != Class119.aClass12_1461)
-			string = Class119.aClass12_1461.method473(1840459942);
-		if (null == string)
-			string = "";
-		class527.objectStack[(class527.anInt7000 += 1476624725) * 1806726141 - 1] = string;
-	}
-
-	static final void method7463(CS2Executor class527, int i) {
-		class527.intStackPtr -= 709455005;
-		int i_5_ = (class527.intStack[class527.intStackPtr * 1942118537]);
-		int i_6_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		int i_7_ = (class527.intStack[2 + 1942118537 * class527.intStackPtr]);
-		int i_8_ = (class527.intStack[3 + class527.intStackPtr * 1942118537]);
-		int i_9_ = (class527.intStack[4 + class527.intStackPtr * 1942118537]);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = i_5_ + (i_9_ - i_7_) * (i_6_ - i_5_) / (i_8_ - i_7_);
-	}
 }

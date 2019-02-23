@@ -1,84 +1,79 @@
-
-/* Class96_Sub18 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import java.util.Arrays;
 
 public class Class96_Sub18 extends Class96 {
+
 	int anInt9395;
-	int anInt9396;
 	int[] anIntArray9397;
+	int anInt9396;
 	int anInt9398;
 
-	Class96_Sub18(RsByteBuffer class282_sub35) {
-		super(class282_sub35);
-		((Class96_Sub18) this).anInt9395 = class282_sub35.readUnsignedShort() * 1548991103;
-		((Class96_Sub18) this).anIntArray9397 = new int[Class8_Sub3.method14339(1886074121).length];
-		((Class96_Sub18) this).anInt9396 = class282_sub35.readBigSmart() * 185651677;
-		Arrays.fill(((Class96_Sub18) this).anIntArray9397, 0, ((Class96_Sub18) this).anIntArray9397.length, 1590562421 * ((Class96_Sub18) this).anInt9396);
-		((Class96_Sub18) this).anInt9398 = class282_sub35.readInt() * 933564729;
+	Class96_Sub18(RsByteBuffer rsbytebuffer_1) {
+		super(rsbytebuffer_1);
+		this.anInt9395 = rsbytebuffer_1.readUnsignedShort();
+		this.anIntArray9397 = new int[Class8_Sub3.method14339(1886074121).length];
+		this.anInt9396 = rsbytebuffer_1.readBigSmart();
+		Arrays.fill(this.anIntArray9397, 0, this.anIntArray9397.length, this.anInt9396);
+		this.anInt9398 = rsbytebuffer_1.readInt();
 	}
 
-	public void method1592(int i) {
-		Animable class521_sub1_sub1_sub2 = Class82.aClass75Array804[1932395903 * ((Class96_Sub18) this).anInt9395].method1342((byte) 62);
-		if (1684442377 * ((Class96_Sub18) this).anInt9398 == 0)
-			Class20.animate(class521_sub1_sub1_sub2, ((Class96_Sub18) this).anIntArray9397, 0, false, (byte) -103);
-		else
-			Class331.method5923(class521_sub1_sub1_sub2, new int[] { ((Class96_Sub18) this).anInt9396 * 1590562421 }, new int[] { 0 }, new int[] { ((Class96_Sub18) this).anInt9398 * 1684442377 }, 1929963591);
+	public void method1592(int i_1) {
+		Animable animable_2 = Class82.aClass75Array804[this.anInt9395].method1342((byte) 62);
+		if (this.anInt9398 == 0) {
+			Class20.animate(animable_2, this.anIntArray9397, 0, false, (byte) -103);
+		} else {
+			Class331.method5923(animable_2, new int[] { this.anInt9396 }, new int[1], new int[] { this.anInt9398 }, 1929963591);
+		}
+
 	}
 
-	boolean method1599(int i) {
-		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) -29);
-		return class518.loadSkeletons();
+	boolean method1599(int i_1) {
+		AnimationDefinitions animationdefinitions_2 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(this.anInt9396, (byte) -29);
+		return animationdefinitions_2.loadSkeletons();
 	}
 
 	public void method1601() {
-		Animable class521_sub1_sub1_sub2 = Class82.aClass75Array804[1932395903 * ((Class96_Sub18) this).anInt9395].method1342((byte) 78);
-		if (1684442377 * ((Class96_Sub18) this).anInt9398 == 0)
-			Class20.animate(class521_sub1_sub1_sub2, ((Class96_Sub18) this).anIntArray9397, 0, false, (byte) 7);
-		else
-			Class331.method5923(class521_sub1_sub1_sub2, new int[] { ((Class96_Sub18) this).anInt9396 * 1590562421 }, new int[] { 0 }, new int[] { ((Class96_Sub18) this).anInt9398 * 1684442377 }, 1894867046);
-	}
-
-	boolean method1596() {
-		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 4);
-		return class518.loadSkeletons();
-	}
-
-	boolean method1591() {
-		AnimationDefinitions class518 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs((1590562421 * (((Class96_Sub18) this).anInt9396)), (byte) 23);
-		return class518.loadSkeletons();
-	}
-
-	static final void method14664(IComponentDefinitions class118, Interface class98, boolean bool, int i, CS2Executor class527, byte i_0_) {
-		class527.intStackPtr -= 283782002;
-		int i_1_ = (class527.intStack[1942118537 * class527.intStackPtr]);
-		int i_2_ = (class527.intStack[class527.intStackPtr * 1942118537 + 1]);
-		if (-1 == class118.anInt1288 * 1924549737 && !class98.aBool999) {
-			Class411.method6914(class118.idHash * -1952846363, (short) 887);
-			Class106.method1818(class118.idHash * -1952846363, 209948825);
-			Item.method12575(-1952846363 * class118.idHash, (byte) 59);
-		}
-		if (-1 == i_1_) {
-			class118.anInt1329 = 589750077;
-			class118.anInt1330 = 636815827;
-			class118.anInt1426 = 833742903;
+		Animable animable_1 = Class82.aClass75Array804[1932395903 * this.anInt9395 * 1548991103].method1342((byte) 78);
+		if (1684442377 * this.anInt9398 * 933564729 == 0) {
+			Class20.animate(animable_1, this.anIntArray9397, 0, false, (byte) 7);
 		} else {
-			class118.anInt1426 = i_1_ * -833742903;
-			class118.anInt1427 = i_2_ * 1010829041;
-			class118.aBool1388 = bool;
-			ItemDefinitions class425 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_1_, 501470763);
-			class118.anInt1385 = -790145187 * class425.anInt5058;
-			class118.anInt1336 = 427762477 * class425.anInt5045;
-			class118.anInt1337 = -174540793 * class425.anInt5074;
-			class118.anInt1293 = class425.anInt5063 * -1057479355;
-			class118.anInt1334 = class425.anInt5044 * -1474252971;
-			class118.anInt1343 = class425.modelZoom * 394720705;
-			class118.anInt1335 = i * 582441359;
-			if (class118.anInt1417 * -1326245411 > 0)
-				class118.anInt1343 = (class118.anInt1343 * 1787365152 / (-1326245411 * class118.anInt1417) * -807852535);
-			else if (class118.anInt1297 * 1352091441 > 0)
-				class118.anInt1343 = -807852535 * (class118.anInt1343 * 1787365152 / (1352091441 * class118.anInt1297));
+			Class331.method5923(animable_1, new int[] { this.anInt9396 * 185651677 * 1590562421 }, new int[1], new int[] { this.anInt9398 * 933564729 * 1684442377 }, 1894867046);
 		}
+
 	}
+
+	static final void method14664(IComponentDefinitions icomponentdefinitions_0, Interface interface_1, boolean bool_2, int i_3, CS2Executor cs2executor_4, byte b_5) {
+		cs2executor_4.intStackPtr -= 2;
+		int i_6 = cs2executor_4.intStack[cs2executor_4.intStackPtr];
+		int i_7 = cs2executor_4.intStack[cs2executor_4.intStackPtr + 1];
+		if (icomponentdefinitions_0.anInt1288 == -1 && !interface_1.aBool999) {
+			Class411.method6914(icomponentdefinitions_0.idHash, (short) 887);
+			Class106.method1818(icomponentdefinitions_0.idHash, 209948825);
+			Item.method12575(icomponentdefinitions_0.idHash, (byte) 59);
+		}
+
+		if (i_6 == -1) {
+			icomponentdefinitions_0.anInt1329 = 1;
+			icomponentdefinitions_0.anInt1330 = -1;
+			icomponentdefinitions_0.anInt1426 = -1;
+		} else {
+			icomponentdefinitions_0.anInt1426 = i_6;
+			icomponentdefinitions_0.anInt1427 = i_7;
+			icomponentdefinitions_0.aBool1388 = bool_2;
+			ItemDefinitions itemdefinitions_8 = IndexLoaders.ITEM_INDEX_LOADER.getItemDefinitions(i_6, 501470763);
+			icomponentdefinitions_0.anInt1385 = itemdefinitions_8.anInt5058;
+			icomponentdefinitions_0.anInt1336 = itemdefinitions_8.anInt5045;
+			icomponentdefinitions_0.anInt1337 = itemdefinitions_8.anInt5074;
+			icomponentdefinitions_0.anInt1293 = itemdefinitions_8.anInt5063;
+			icomponentdefinitions_0.anInt1334 = itemdefinitions_8.anInt5044;
+			icomponentdefinitions_0.anInt1343 = itemdefinitions_8.modelZoom;
+			icomponentdefinitions_0.anInt1335 = i_3;
+			if (icomponentdefinitions_0.anInt1417 > 0) {
+				icomponentdefinitions_0.anInt1343 = icomponentdefinitions_0.anInt1343 * 32 / icomponentdefinitions_0.anInt1417;
+			} else if (icomponentdefinitions_0.anInt1297 > 0) {
+				icomponentdefinitions_0.anInt1343 = icomponentdefinitions_0.anInt1343 * 32 / icomponentdefinitions_0.anInt1297;
+			}
+		}
+
+	}
+
 }

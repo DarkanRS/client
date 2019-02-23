@@ -1,62 +1,67 @@
-/* Class254 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public abstract class Class254 implements Runnable {
+
+	public static int anInt3145;
 	volatile Class253[] aClass253Array3142 = new Class253[2];
 	volatile boolean aBool3143 = false;
 	volatile boolean aBool3144 = false;
-	public static int anInt3145;
 
-	Class254() {
-		/* empty */
-	}
+	public static long method4379(CharSequence charsequence_0, int i_1) {
+		int i_2 = charsequence_0.length();
+		long long_3 = 0L;
 
-	public static long method4379(CharSequence charsequence, int i) {
-		int i_0_ = charsequence.length();
-		long l = 0L;
-		for (int i_1_ = 0; i_1_ < i_0_; i_1_++)
-			l = (l << 5) - l + (long) charsequence.charAt(i_1_);
-		return l;
-	}
-
-	static int method4380(byte[][] is, byte[][] is_2_, int[] is_3_, byte[] is_4_, int[] is_5_, int i, int i_6_, int i_7_) {
-		int i_8_ = is_3_[i];
-		int i_9_ = is_5_[i] + i_8_;
-		int i_10_ = is_3_[i_6_];
-		int i_11_ = is_5_[i_6_] + i_10_;
-		int i_12_ = i_8_;
-		if (i_10_ > i_8_)
-			i_12_ = i_10_;
-		int i_13_ = i_9_;
-		if (i_11_ < i_9_)
-			i_13_ = i_11_;
-		int i_14_ = is_4_[i] & 0xff;
-		if ((is_4_[i_6_] & 0xff) < i_14_)
-			i_14_ = is_4_[i_6_] & 0xff;
-		byte[] is_15_ = is_2_[i];
-		byte[] is_16_ = is[i_6_];
-		int i_17_ = i_12_ - i_8_;
-		int i_18_ = i_12_ - i_10_;
-		for (int i_19_ = i_12_; i_19_ < i_13_; i_19_++) {
-			int i_20_ = is_15_[i_17_++] + is_16_[i_18_++];
-			if (i_20_ < i_14_)
-				i_14_ = i_20_;
+		for (int i_5 = 0; i_5 < i_2; i_5++) {
+			long_3 = (long_3 << 5) - long_3 + (long) charsequence_0.charAt(i_5);
 		}
-		return -i_14_;
+
+		return long_3;
 	}
 
-	static final void method4381(CS2Executor class527, byte i) {
-		UnderlayDefinition class513;
-		if (class527.aBool7022) {
-			if (i >= 8)
-				return;
-			class513 = class527.aClass513_6994;
-		} else
-			class513 = class527.aClass513_7007;
-		UnderlayDefinition class513_21_ = class513;
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513_21_).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513_21_).aClass98_5885;
-		Class282_Sub25.method12401(class118, class98, class527, 1213503004);
+	static int method4380(byte[][] bytes_0, byte[][] bytes_1, int[] ints_2, byte[] bytes_3, int[] ints_4, int i_5, int i_6, int i_7) {
+		int i_8 = ints_2[i_5];
+		int i_9 = i_8 + ints_4[i_5];
+		int i_10 = ints_2[i_6];
+		int i_11 = i_10 + ints_4[i_6];
+		int i_12 = i_8;
+		if (i_10 > i_8) {
+			i_12 = i_10;
+		}
+
+		int i_13 = i_9;
+		if (i_11 < i_9) {
+			i_13 = i_11;
+		}
+
+		int i_14 = bytes_3[i_5] & 0xff;
+		if ((bytes_3[i_6] & 0xff) < i_14) {
+			i_14 = bytes_3[i_6] & 0xff;
+		}
+
+		byte[] bytes_15 = bytes_1[i_5];
+		byte[] bytes_16 = bytes_0[i_6];
+		int i_17 = i_12 - i_8;
+		int i_18 = i_12 - i_10;
+
+		for (int i_19 = i_12; i_19 < i_13; i_19++) {
+			int i_20 = bytes_15[i_17++] + bytes_16[i_18++];
+			if (i_20 < i_14) {
+				i_14 = i_20;
+			}
+		}
+
+		return -i_14;
 	}
+
+	static final void method4381(CS2Executor cs2executor_0, byte b_1) {
+		UnderlayDefinition underlaydefinition_2;
+		if (cs2executor_0.aBool7022) {
+			underlaydefinition_2 = cs2executor_0.aClass513_6994;
+		} else {
+			underlaydefinition_2 = cs2executor_0.aClass513_7007;
+		}
+
+		IComponentDefinitions icomponentdefinitions_4 = underlaydefinition_2.aClass118_5886;
+		Interface interface_5 = underlaydefinition_2.aClass98_5885;
+		Class282_Sub25.method12401(icomponentdefinitions_4, interface_5, cs2executor_0, 1213503004);
+	}
+
 }

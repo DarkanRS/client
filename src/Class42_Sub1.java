@@ -1,52 +1,58 @@
-/* Class42_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class42_Sub1 extends Class42 {
+
 	int anInt9232 = 0;
 
-	public void method12(boolean bool) {
-		int i = ((((Class42_Sub1) this).aClass357_416.aClass356_4121.method6221(((Class42_Sub1) this).aClass160_414.method228(), 150480619 * client.anInt7439, 1532503387)) + ((Class42_Sub1) this).aClass357_416.anInt4123 * -809264285);
-		int i_0_ = ((((Class42_Sub1) this).aClass357_416.aClass353_4122.method6198(((Class42_Sub1) this).aClass160_414.method2748(), 1176039023 * client.anInt7312, 723681584)) + ((Class42_Sub1) this).aClass357_416.anInt4120 * 177795463);
-		((Class42_Sub1) this).aClass160_414.method2758((float) (i + ((Class42_Sub1) this).aClass160_414.method228() / 2), (float) (i_0_ + ((Class42_Sub1) this).aClass160_414.method2748() / 2), 4096, ((Class42_Sub1) this).anInt9232 * 734267483);
-		((Class42_Sub1) this).anInt9232 += -1519742369 * ((Class357_Sub1) ((Class42_Sub1) this).aClass357_416).anInt7808;
+	public void method12(boolean bool_1) {
+		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 1532503387) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 723681584) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
+		this.aClass160_414.method2758((float) (i_2 + this.aClass160_414.method228() / 2), (float) (i_3 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232 * -82188333 * 734267483);
+		this.anInt9232 = (this.anInt9232 * -82188333 + -1519742369 * ((Class357_Sub1) this.aClass357_416).anInt7808 * 1780229901) * 734267483;
 	}
 
-	public void method20(boolean bool, int i) {
-		int i_1_ = ((((Class42_Sub1) this).aClass357_416.aClass356_4121.method6221(((Class42_Sub1) this).aClass160_414.method228(), 150480619 * client.anInt7439, 1375122589)) + ((Class42_Sub1) this).aClass357_416.anInt4123 * -809264285);
-		int i_2_ = ((((Class42_Sub1) this).aClass357_416.aClass353_4122.method6198(((Class42_Sub1) this).aClass160_414.method2748(), 1176039023 * client.anInt7312, 1542020765)) + ((Class42_Sub1) this).aClass357_416.anInt4120 * 177795463);
-		((Class42_Sub1) this).aClass160_414.method2758((float) (i_1_ + ((Class42_Sub1) this).aClass160_414.method228() / 2), (float) (i_2_ + ((Class42_Sub1) this).aClass160_414.method2748() / 2), 4096, ((Class42_Sub1) this).anInt9232 * 734267483);
-		((Class42_Sub1) this).anInt9232 += -1519742369 * ((Class357_Sub1) ((Class42_Sub1) this).aClass357_416).anInt7808;
+	public void method20(boolean bool_1, int i_2) {
+		int i_3 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), client.anInt7439, 1375122589) + this.aClass357_416.anInt4123;
+		int i_4 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), client.anInt7312, 1542020765) + this.aClass357_416.anInt4120;
+		this.aClass160_414.method2758((float) (i_3 + this.aClass160_414.method228() / 2), (float) (i_4 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232);
+		this.anInt9232 += ((Class357_Sub1) this.aClass357_416).anInt7808;
 	}
 
-	Class42_Sub1(Index class317, Class357_Sub1 class357_sub1) {
-		super(class317, (Class357) class357_sub1);
+	Class42_Sub1(Index index_1, Class357_Sub1 class357_sub1_2) {
+		super(index_1, class357_sub1_2);
 	}
 
-	public void method11(boolean bool) {
-		int i = ((((Class42_Sub1) this).aClass357_416.aClass356_4121.method6221(((Class42_Sub1) this).aClass160_414.method228(), 150480619 * client.anInt7439, 998209587)) + ((Class42_Sub1) this).aClass357_416.anInt4123 * -809264285);
-		int i_3_ = ((((Class42_Sub1) this).aClass357_416.aClass353_4122.method6198(((Class42_Sub1) this).aClass160_414.method2748(), 1176039023 * client.anInt7312, 1415783080)) + ((Class42_Sub1) this).aClass357_416.anInt4120 * 177795463);
-		((Class42_Sub1) this).aClass160_414.method2758((float) (i + ((Class42_Sub1) this).aClass160_414.method228() / 2), (float) (i_3_ + ((Class42_Sub1) this).aClass160_414.method2748() / 2), 4096, ((Class42_Sub1) this).anInt9232 * 734267483);
-		((Class42_Sub1) this).anInt9232 += -1519742369 * ((Class357_Sub1) ((Class42_Sub1) this).aClass357_416).anInt7808;
+	public void method11(boolean bool_1) {
+		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 998209587) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1415783080) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
+		this.aClass160_414.method2758((float) (i_2 + this.aClass160_414.method228() / 2), (float) (i_3 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232 * -82188333 * 734267483);
+		this.anInt9232 = (this.anInt9232 * -82188333 + -1519742369 * ((Class357_Sub1) this.aClass357_416).anInt7808 * 1780229901) * 734267483;
 	}
 
-	public void method14(boolean bool) {
-		int i = ((((Class42_Sub1) this).aClass357_416.aClass356_4121.method6221(((Class42_Sub1) this).aClass160_414.method228(), 150480619 * client.anInt7439, 2141573560)) + ((Class42_Sub1) this).aClass357_416.anInt4123 * -809264285);
-		int i_4_ = ((((Class42_Sub1) this).aClass357_416.aClass353_4122.method6198(((Class42_Sub1) this).aClass160_414.method2748(), 1176039023 * client.anInt7312, 1379612948)) + ((Class42_Sub1) this).aClass357_416.anInt4120 * 177795463);
-		((Class42_Sub1) this).aClass160_414.method2758((float) (i + ((Class42_Sub1) this).aClass160_414.method228() / 2), (float) (i_4_ + ((Class42_Sub1) this).aClass160_414.method2748() / 2), 4096, ((Class42_Sub1) this).anInt9232 * 734267483);
-		((Class42_Sub1) this).anInt9232 += -1519742369 * ((Class357_Sub1) ((Class42_Sub1) this).aClass357_416).anInt7808;
+	public void method14(boolean bool_1) {
+		int i_2 = this.aClass357_416.aClass356_4121.method6221(this.aClass160_414.method228(), 150480619 * client.anInt7439 * 1426041429 * 765 * -1115795005, 2141573560) + this.aClass357_416.anInt4123 * 1535819339 * -809264285;
+		int i_3 = this.aClass357_416.aClass353_4122.method6198(this.aClass160_414.method2748(), 1176039023 * client.anInt7312 * -994133479 * 553 * -645779313, 1379612948) + this.aClass357_416.anInt4120 * -818805705 * 177795463;
+		this.aClass160_414.method2758((float) (i_2 + this.aClass160_414.method228() / 2), (float) (i_3 + this.aClass160_414.method2748() / 2), 4096, this.anInt9232 * -82188333 * 734267483);
+		this.anInt9232 = (this.anInt9232 * -82188333 + -1519742369 * ((Class357_Sub1) this.aClass357_416).anInt7808 * 1780229901) * 734267483;
 	}
 
-	static final void method14562(int i) {
+	static final void method14562(int i_0) {
 		FontMetrics.method6989(1407669515);
 		IndexLoaders.MAP_REGION_DECODER.method4485(-617728645);
-		for (int i_5_ = 0; i_5_ < client.aClass180Array7348.length; i_5_++)
-			client.aClass180Array7348[i_5_] = null;
-		for (int i_6_ = 0; i_6_ < client.aClass281Array7180.length; i_6_++)
-			client.aClass281Array7180[i_6_] = null;
+
+		int i_1;
+		for (i_1 = 0; i_1 < client.aClass180Array7348.length; i_1++) {
+			client.aClass180Array7348[i_1] = null;
+		}
+
+		for (i_1 = 0; i_1 < client.aClass281Array7180.length; i_1++) {
+			client.aClass281Array7180[i_1] = null;
+		}
+
 		Class186.method3084((short) 2795);
-		for (int i_7_ = 0; i_7_ < 2048; i_7_++)
-			client.players[i_7_] = null;
+
+		for (i_1 = 0; i_1 < 2048; i_1++) {
+			client.players[i_1] = null;
+		}
+
 		client.anInt7211 = 0;
 		client.aClass465_7208.method7749(299866501);
 		client.anInt7210 = 0;
@@ -64,9 +70,9 @@ public class Class42_Sub1 extends Class42 {
 		HitsplatDefinitions.method3851(-402153223);
 	}
 
-	static void method14563(boolean bool, Class282_Sub15_Sub2 class282_sub15_sub2, short i) {
-		Class320.aClass253_3723.method4329(class282_sub15_sub2);
-		if (bool)
-			SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2, Class320.aClass253_3723, -1541261130);
+	static void method14563(boolean bool_0, Class282_Sub15_Sub2 class282_sub15_sub2_1, short s_2) {
+		Class320.aClass253_3723.method4329(class282_sub15_sub2_1);
+		SharedConfigsType.method2084(IndexLoaders.INDEX_15, IndexLoaders.MIDI_INSTRUMENT_INDEX, IndexLoaders.SOUND_EFFECT_INDEX, class282_sub15_sub2_1, Class320.aClass253_3723, -1541261130);
 	}
+
 }

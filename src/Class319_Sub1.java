@@ -1,16 +1,13 @@
-
-/* Class319_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
 import jaggl.OpenGL;
 
 public class Class319_Sub1 extends Class319 implements Interface1 {
+
 	int anInt9151;
 	int anInt9152;
 	int anInt9153;
 
-	public void method205(Class35 class35) {
-		super.method205(class35);
+	public void method205(Class35 class35_1) {
+		super.method205(class35_1);
 	}
 
 	public void method207() {
@@ -29,32 +26,35 @@ public class Class319_Sub1 extends Class319 implements Interface1 {
 		super.method26();
 	}
 
-	public void method201(Class35 class35) {
-		super.method205(class35);
+	public void method201(Class35 class35_1) {
+		super.method205(class35_1);
 	}
 
-	Class319_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1, Class150 class150, int i, int i_0_, int i_1_, boolean bool, byte[] is) {
-		super(class505_sub2_sub1, 32879, class150, Class76.aClass76_751, i * i_0_ * i_1_, bool);
-		((Class319_Sub1) this).anInt9151 = i;
-		((Class319_Sub1) this).anInt9152 = i_0_;
-		((Class319_Sub1) this).anInt9153 = i_1_;
-		((Class319_Sub1) this).aClass505_Sub2_Sub1_3700.method14035(this);
+	Class319_Sub1(Class505_Sub2_Sub1 class505_sub2_sub1_1, Class150 class150_2, int i_3, int i_4, int i_5, boolean bool_6, byte[] bytes_7) {
+		super(class505_sub2_sub1_1, 32879, class150_2, Class76.aClass76_751, i_3 * i_5 * i_4, bool_6);
+		this.anInt9151 = i_3;
+		this.anInt9152 = i_4;
+		this.anInt9153 = i_5;
+		this.aClass505_Sub2_Sub1_3700.method14035(this);
 		OpenGL.glPixelStorei(3317, 1);
-		OpenGL.glTexImage3Dub(((Class319_Sub1) this).anInt3707, 0, (Class505_Sub2_Sub1.method15574(((Class319_Sub1) this).aClass150_3708, ((Class319_Sub1) this).aClass76_3710)), ((Class319_Sub1) this).anInt9151, ((Class319_Sub1) this).anInt9152, ((Class319_Sub1) this).anInt9153, 0, Class505_Sub2_Sub1.method15575(((Class319_Sub1) this).aClass150_3708), 5121, is, 0);
+		OpenGL.glTexImage3Dub(this.anInt3707, 0, Class505_Sub2_Sub1.method15574(this.aClass150_3708, this.aClass76_3710), this.anInt9151, this.anInt9152, this.anInt9153, 0, Class505_Sub2_Sub1.method15575(this.aClass150_3708), 5121, bytes_7, 0);
 		OpenGL.glPixelStorei(3317, 4);
-		if (bool)
-			method54();
+		if (bool_6) {
+			this.method54();
+		}
+
 	}
 
-	public void method206(Class35 class35) {
-		super.method205(class35);
+	public void method206(Class35 class35_1) {
+		super.method205(class35_1);
 	}
 
-	public void method204(Class35 class35) {
-		super.method205(class35);
+	public void method204(Class35 class35_1) {
+		super.method205(class35_1);
 	}
 
-	public void method202(Class35 class35) {
-		super.method205(class35);
+	public void method202(Class35 class35_1) {
+		super.method205(class35_1);
 	}
+
 }

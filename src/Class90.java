@@ -1,74 +1,65 @@
-/* Class90 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class90 {
-	public int anInt945;
+
+	public static Class496 aClass496_952;
 	public int anInt946;
+	public int anInt945;
 	public int anInt947;
 	int anInt948;
 	public int anInt949;
 	public int anInt950;
 	public int anInt951;
-	public static Class496 aClass496_952;
 
-	public Class90(int i, int i_0_, int i_1_, int i_2_, int i_3_, int i_4_, int i_5_) {
-		anInt946 = -1856397433 * i;
-		anInt945 = i_0_ * 873459953;
-		anInt947 = i_1_ * -96197041;
-		((Class90) this).anInt948 = i_2_ * 2126474857;
-		anInt949 = i_3_ * -1472617411;
-		anInt950 = i_4_ * 1801644261;
-		anInt951 = i_5_ * 1412616155;
+	public Class90(int i_1, int i_2, int i_3, int i_4, int i_5, int i_6, int i_7) {
+		this.anInt946 = i_1;
+		this.anInt945 = i_2;
+		this.anInt947 = i_3;
+		this.anInt948 = i_4;
+		this.anInt949 = i_5;
+		this.anInt950 = i_6;
+		this.anInt951 = i_7;
 	}
 
-	public boolean method1505(Class90 class90_6_) {
-		return (1152775735 * anInt946 == class90_6_.anInt946 * 1152775735 && 973144081 * class90_6_.anInt945 == 973144081 * anInt945 && class90_6_.anInt947 * -732614481 == anInt947 * -732614481 && (((Class90) class90_6_).anInt948 * -565902887 == ((Class90) this).anInt948 * -565902887) && class90_6_.anInt949 * -323415275 == anInt949 * -323415275 && -251489043 * anInt950 == -251489043 * class90_6_.anInt950 && anInt951 * 919901267 == class90_6_.anInt951 * 919901267);
-	}
-
-	public boolean method1506(Class90 class90_7_, int i) {
-		return (1152775735 * anInt946 == class90_7_.anInt946 * 1152775735 && 973144081 * class90_7_.anInt945 == 973144081 * anInt945 && class90_7_.anInt947 * -732614481 == anInt947 * -732614481 && (((Class90) class90_7_).anInt948 * -565902887 == ((Class90) this).anInt948 * -565902887) && class90_7_.anInt949 * -323415275 == anInt949 * -323415275 && -251489043 * anInt950 == -251489043 * class90_7_.anInt950 && anInt951 * 919901267 == class90_7_.anInt951 * 919901267);
+	public boolean method1506(Class90 class90_1, int i_2) {
+		return this.anInt946 == class90_1.anInt946 && this.anInt945 == class90_1.anInt945 && this.anInt947 == class90_1.anInt947 && this.anInt948 == class90_1.anInt948 && this.anInt949 == class90_1.anInt949 && this.anInt950 == class90_1.anInt950 && this.anInt951 == class90_1.anInt951;
 	}
 
 	public Class90() {
-		/* empty */
 	}
 
-	public boolean method1507(Class90 class90_8_) {
-		return (1152775735 * anInt946 == class90_8_.anInt946 * 1152775735 && 973144081 * class90_8_.anInt945 == 973144081 * anInt945 && class90_8_.anInt947 * -732614481 == anInt947 * -732614481 && (((Class90) class90_8_).anInt948 * -565902887 == ((Class90) this).anInt948 * -565902887) && class90_8_.anInt949 * -323415275 == anInt949 * -323415275 && -251489043 * anInt950 == -251489043 * class90_8_.anInt950 && anInt951 * 919901267 == class90_8_.anInt951 * 919901267);
+	static final void method1508(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		if (i_2 < 0 || i_2 > 1) {
+			i_2 = 0;
+		}
+
+		Class115.method1952(i_2 == 1, -1838966944);
 	}
 
-	static final void method1508(CS2Executor class527, int i) {
-		int i_9_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		if (i_9_ < 0 || i_9_ > 1)
-			i_9_ = 0;
-		Class115.method1952(i_9_ == 1, -1838966944);
+	static final void method1509(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 110);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Class242.method4159(icomponentdefinitions_3, interface_4, cs2executor_0, -710786215);
 	}
 
-	static final void method1509(CS2Executor class527, int i) {
-		int i_10_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_10_, (byte) 110);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_10_ >> 16];
-		Class242.method4159(class118, class98, class527, -710786215);
+	static final void method1510(CS2Executor cs2executor_0, short s_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 104);
+		Interface interface_4 = Class468_Sub8.aClass98Array7889[i_2 >> 16];
+		Class287.method5066(icomponentdefinitions_3, interface_4, cs2executor_0, 711806396);
 	}
 
-	static final void method1510(CS2Executor class527, short i) {
-		int i_11_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_11_, (byte) 104);
-		Interface class98 = Class468_Sub8.aClass98Array7889[i_11_ >> 16];
-		Class287.method5066(class118, class98, class527, 711806396);
+	static final void method1511(CS2Executor cs2executor_0, int i_1) {
+		UnderlayDefinition underlaydefinition_2 = cs2executor_0.aBool7022 ? cs2executor_0.aClass513_6994 : cs2executor_0.aClass513_7007;
+		IComponentDefinitions icomponentdefinitions_3 = underlaydefinition_2.aClass118_5886;
+		Interface interface_4 = underlaydefinition_2.aClass98_5885;
+		Class204.method3369(icomponentdefinitions_3, interface_4, cs2executor_0, (byte) 0);
 	}
 
-	static final void method1511(CS2Executor class527, int i) {
-		UnderlayDefinition class513 = (class527.aBool7022 ? class527.aClass513_6994 : class527.aClass513_7007);
-		IComponentDefinitions class118 = ((UnderlayDefinition) class513).aClass118_5886;
-		Interface class98 = ((UnderlayDefinition) class513).aClass98_5885;
-		Class204.method3369(class118, class98, class527, (byte) 0);
+	static final void method1512(CS2Executor cs2executor_0, int i_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		IComponentDefinitions icomponentdefinitions_3 = Class117.method1981(i_2, (byte) 83);
+		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = icomponentdefinitions_3.anInt1329 == 1 ? icomponentdefinitions_3.anInt1330 : -1;
 	}
 
-	static final void method1512(CS2Executor class527, int i) {
-		int i_12_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		IComponentDefinitions class118 = Class117.method1981(i_12_, (byte) 83);
-		class527.intStack[(class527.intStackPtr += 141891001) * 1942118537 - 1] = (1 == class118.anInt1329 * 2131324949 ? class118.anInt1330 * -402732635 : -1);
-	}
 }

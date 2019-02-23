@@ -1,36 +1,21 @@
-/* Class357_Sub1 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class357_Sub1 extends Class357 {
+
 	public int anInt7808;
 
-	public Class60 method24(int i) {
+	public Class60 method24(int i_1) {
 		return Class60.aClass60_607;
 	}
 
-	Class357_Sub1(int i, Class356 class356, Class353 class353, int i_0_, int i_1_, int i_2_) {
-		super(i, class356, class353, i_0_, i_1_);
-		anInt7808 = i_2_ * 1780229901;
+	Class357_Sub1(int i_1, Class356 class356_2, Class353 class353_3, int i_4, int i_5, int i_6) {
+		super(i_1, class356_2, class353_3, i_4, i_5);
+		this.anInt7808 = i_6;
 	}
 
 	public Class60 method25() {
 		return Class60.aClass60_607;
 	}
 
-	public static Class357 method12563(RsByteBuffer class282_sub35) {
-		Class357 class357 = Class258.method4570(class282_sub35, 2104989397);
-		int i = class282_sub35.read24BitInteger(1727088020);
-		return new Class357_Sub1(class357.anInt4124 * -1847374165, class357.aClass356_4121, class357.aClass353_4122, class357.anInt4123 * -809264285, 177795463 * class357.anInt4120, i);
-	}
-
-	public static Class357 method12564(RsByteBuffer class282_sub35) {
-		Class357 class357 = Class258.method4570(class282_sub35, 2137910909);
-		int i = class282_sub35.read24BitInteger(1683847446);
-		return new Class357_Sub1(class357.anInt4124 * -1847374165, class357.aClass356_4121, class357.aClass353_4122, class357.anInt4123 * -809264285, 177795463 * class357.anInt4120, i);
-	}
-
-	static final void method12565(int i) {
+	static final void method12565(int i_0) {
 		IndexLoaders.aClass536_1535.method11478(-625318437);
 		IndexLoaders.UNDERLAY_INDEX_LOADER.method8032(16711680);
 		IndexLoaders.aClass31_204.method803((byte) -84);
@@ -64,4 +49,5 @@ public class Class357_Sub1 extends Class357 {
 		Class20.aClass229_191.method3863(691961844);
 		CS2Runner.aClass229_5901.method3863(1768110542);
 	}
+
 }

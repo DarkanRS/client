@@ -1,148 +1,155 @@
-/* Class282_Sub27 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class282_Sub27 extends Node {
-	int anInt7691;
+
 	int anInt7692;
 	boolean aBool7693;
+	static int[] anIntArray7696;
 	int[] anIntArray7694;
 	int anInt7695;
-	static int[] anIntArray7696;
+	int anInt7691;
 
-	void method12403(int i, int i_0_) {
-		if (i != 0 || i_0_ != 0) {
-			if (anIntArray7696 == null || (anIntArray7696.length != ((Class282_Sub27) this).anIntArray7694.length))
-				anIntArray7696 = new int[((Class282_Sub27) this).anIntArray7694.length];
-			int i_1_ = ((Class282_Sub27) this).anIntArray7694.length;
-			int i_2_ = i;
-			int i_3_ = ((Class282_Sub27) this).anInt7691 - 1;
-			int i_4_ = ((Class282_Sub27) this).anInt7691 * i_0_;
-			int i_5_ = i_1_ - 1;
-			for (int i_6_ = 0; i_6_ < i_1_; i_6_ += ((Class282_Sub27) this).anInt7691) {
-				int i_7_ = i_6_ + i_4_ & i_5_;
-				for (int i_8_ = 0; i_8_ < ((Class282_Sub27) this).anInt7691; i_8_++) {
-					int i_9_ = i_6_ + i_8_;
-					int i_10_ = i_7_ + (i_8_ + i_2_ & i_3_);
-					anIntArray7696[i_9_] = ((Class282_Sub27) this).anIntArray7694[i_10_];
+	void method12403(int i_1, int i_2) {
+		if (i_1 != 0 || i_2 != 0) {
+			if (anIntArray7696 == null || anIntArray7696.length != this.anIntArray7694.length) {
+				anIntArray7696 = new int[this.anIntArray7694.length];
+			}
+
+			int i_3 = this.anIntArray7694.length;
+			int i_4 = i_1;
+			int i_5 = this.anInt7691 - 1;
+			int i_6 = i_2 * this.anInt7691;
+			int i_7 = i_3 - 1;
+
+			for (int i_8 = 0; i_8 < i_3; i_8 += this.anInt7691) {
+				int i_9 = i_8 + i_6 & i_7;
+
+				for (int i_10 = 0; i_10 < this.anInt7691; i_10++) {
+					int i_11 = i_8 + i_10;
+					int i_12 = i_9 + (i_10 + i_4 & i_5);
+					anIntArray7696[i_11] = this.anIntArray7694[i_12];
 				}
 			}
-			int[] is = ((Class282_Sub27) this).anIntArray7694;
-			((Class282_Sub27) this).anIntArray7694 = anIntArray7696;
-			anIntArray7696 = is;
+
+			int[] ints_13 = this.anIntArray7694;
+			this.anIntArray7694 = anIntArray7696;
+			anIntArray7696 = ints_13;
 		}
+
 	}
 
-	Class282_Sub27(int i, int i_11_, int[] is, boolean bool) {
-		((Class282_Sub27) this).anInt7695 = i;
-		((Class282_Sub27) this).anInt7691 = i_11_;
-		((Class282_Sub27) this).anIntArray7694 = is;
-		if (bool) {
-			int[] is_12_ = new int[((Class282_Sub27) this).anInt7691];
-			int[] is_13_ = new int[((Class282_Sub27) this).anInt7691];
-			int[] is_14_ = new int[((Class282_Sub27) this).anInt7691];
-			int[] is_15_ = new int[((Class282_Sub27) this).anInt7691];
-			if (anIntArray7696 == null || (anIntArray7696.length != ((Class282_Sub27) this).anIntArray7694.length))
-				anIntArray7696 = new int[((Class282_Sub27) this).anIntArray7694.length];
-			int i_16_ = ((Class282_Sub27) this).anInt7691;
-			int i_17_ = ((Class282_Sub27) this).anInt7691;
-			int i_18_ = i_16_ - 1;
-			int i_19_ = i_17_ - 1;
-			int i_20_ = i_16_ * i_17_;
-			int i_22_;
-			int i_21_ = i_22_ = 1 * i_16_;
-			for (int i_23_ = 2; i_23_ >= 0; i_23_--) {
-				for (int i_24_ = i_18_; i_24_ >= 0; i_24_--) {
-					int i_25_ = ((Class282_Sub27) this).anIntArray7694[--i_22_];
-					is_12_[i_24_] += i_25_ >> 24 & 0xff;
-					is_13_[i_24_] += i_25_ >> 16 & 0xff;
-					is_14_[i_24_] += i_25_ >> 8 & 0xff;
-					is_15_[i_24_] += i_25_ & 0xff;
-				}
-				if (i_22_ == 0)
-					i_22_ = i_20_;
+	Class282_Sub27(int i_1, int i_2, int[] ints_3, boolean bool_4) {
+		this.anInt7695 = i_1;
+		this.anInt7691 = i_2;
+		this.anIntArray7694 = ints_3;
+		if (bool_4) {
+			int[] ints_5 = new int[this.anInt7691];
+			int[] ints_6 = new int[this.anInt7691];
+			int[] ints_7 = new int[this.anInt7691];
+			int[] ints_8 = new int[this.anInt7691];
+			if (anIntArray7696 == null || anIntArray7696.length != this.anIntArray7694.length) {
+				anIntArray7696 = new int[this.anIntArray7694.length];
 			}
-			int i_26_ = i_20_;
-			for (int i_27_ = i_19_; i_27_ >= 0; i_27_--) {
-				int i_28_ = 1;
-				int i_29_ = 1;
-				int i_30_ = 0;
-				int i_31_ = 0;
-				int i_32_ = 0;
-				int i_33_ = 0;
-				for (int i_34_ = 2; i_34_ >= 0; i_34_--) {
-					i_29_--;
-					i_33_ += is_12_[i_29_];
-					i_32_ += is_13_[i_29_];
-					i_30_ += is_14_[i_29_];
-					i_31_ += is_15_[i_29_];
-					if (i_29_ == 0)
-						i_29_ = i_16_;
-				}
-				for (int i_35_ = i_18_; i_35_ >= 0; i_35_--) {
-					i_29_--;
-					i_28_--;
-					int i_36_ = i_33_ / 9;
-					int i_37_ = i_32_ / 9;
-					int i_38_ = i_30_ / 9;
-					int i_39_ = i_31_ / 9;
-					anIntArray7696[--i_26_] = i_36_ << 24 | i_37_ << 16 | i_38_ << 8 | i_39_;
-					i_33_ += is_12_[i_29_] - is_12_[i_28_];
-					i_32_ += is_13_[i_29_] - is_13_[i_28_];
-					i_31_ += is_15_[i_29_] - is_15_[i_28_];
-					i_30_ += is_14_[i_29_] - is_14_[i_28_];
-					if (i_29_ == 0)
-						i_29_ = i_16_;
-					if (i_28_ == 0)
-						i_28_ = i_16_;
-				}
-				for (int i_40_ = i_18_; i_40_ >= 0; i_40_--) {
-					int i_41_ = ((Class282_Sub27) this).anIntArray7694[--i_22_];
-					int i_42_ = ((Class282_Sub27) this).anIntArray7694[--i_21_];
-					is_12_[i_40_] += (i_41_ >> 24 & 0xff) - (i_42_ >> 24 & 0xff);
-					is_13_[i_40_] += (i_41_ >> 16 & 0xff) - (i_42_ >> 16 & 0xff);
-					is_14_[i_40_] += (i_41_ >> 8 & 0xff) - (i_42_ >> 8 & 0xff);
-					is_15_[i_40_] += (i_41_ & 0xff) - (i_42_ & 0xff);
-				}
-				if (i_22_ == 0)
-					i_22_ = i_20_;
-				if (i_21_ == 0)
-					i_21_ = i_20_;
-			}
-			int[] is_43_ = ((Class282_Sub27) this).anIntArray7694;
-			((Class282_Sub27) this).anIntArray7694 = anIntArray7696;
-			anIntArray7696 = is_43_;
-		}
-	}
 
-	void method12404(int i, int i_44_) {
-		if (i != 0 || i_44_ != 0) {
-			if (anIntArray7696 == null || (anIntArray7696.length != ((Class282_Sub27) this).anIntArray7694.length))
-				anIntArray7696 = new int[((Class282_Sub27) this).anIntArray7694.length];
-			int i_45_ = ((Class282_Sub27) this).anIntArray7694.length;
-			int i_46_ = i;
-			int i_47_ = ((Class282_Sub27) this).anInt7691 - 1;
-			int i_48_ = ((Class282_Sub27) this).anInt7691 * i_44_;
-			int i_49_ = i_45_ - 1;
-			for (int i_50_ = 0; i_50_ < i_45_; i_50_ += ((Class282_Sub27) this).anInt7691) {
-				int i_51_ = i_50_ + i_48_ & i_49_;
-				for (int i_52_ = 0; i_52_ < ((Class282_Sub27) this).anInt7691; i_52_++) {
-					int i_53_ = i_50_ + i_52_;
-					int i_54_ = i_51_ + (i_52_ + i_46_ & i_47_);
-					anIntArray7696[i_53_] = ((Class282_Sub27) this).anIntArray7694[i_54_];
+			int i_9 = this.anInt7691;
+			int i_10 = this.anInt7691;
+			int i_11 = i_9 - 1;
+			int i_12 = i_10 - 1;
+			int i_13 = i_9 * i_10;
+			int i_14 = i_9;
+			int i_15 = i_9;
+
+			int i_16;
+			int i_17;
+			int i_18;
+			for (i_16 = 2; i_16 >= 0; --i_16) {
+				for (i_17 = i_11; i_17 >= 0; --i_17) {
+					--i_14;
+					i_18 = this.anIntArray7694[i_14];
+					ints_5[i_17] += i_18 >> 24 & 0xff;
+					ints_6[i_17] += i_18 >> 16 & 0xff;
+					ints_7[i_17] += i_18 >> 8 & 0xff;
+					ints_8[i_17] += i_18 & 0xff;
+				}
+
+				if (i_14 == 0) {
+					i_14 = i_13;
 				}
 			}
-			int[] is = ((Class282_Sub27) this).anIntArray7694;
-			((Class282_Sub27) this).anIntArray7694 = anIntArray7696;
-			anIntArray7696 = is;
-		}
-	}
 
-	int[] method12405() {
-		return ((Class282_Sub27) this).anIntArray7694;
+			i_16 = i_13;
+
+			for (i_17 = i_12; i_17 >= 0; --i_17) {
+				i_18 = 1;
+				int i_19 = 1;
+				int i_20 = 0;
+				int i_21 = 0;
+				int i_22 = 0;
+				int i_23 = 0;
+
+				int i_24;
+				for (i_24 = 2; i_24 >= 0; --i_24) {
+					--i_19;
+					i_23 += ints_5[i_19];
+					i_22 += ints_6[i_19];
+					i_20 += ints_7[i_19];
+					i_21 += ints_8[i_19];
+					if (i_19 == 0) {
+						i_19 = i_9;
+					}
+				}
+
+				int i_25;
+				int i_26;
+				for (i_24 = i_11; i_24 >= 0; --i_24) {
+					--i_19;
+					--i_18;
+					i_25 = i_23 / 9;
+					i_26 = i_22 / 9;
+					int i_27 = i_20 / 9;
+					int i_28 = i_21 / 9;
+					--i_16;
+					anIntArray7696[i_16] = i_25 << 24 | i_26 << 16 | i_27 << 8 | i_28;
+					i_23 += ints_5[i_19] - ints_5[i_18];
+					i_22 += ints_6[i_19] - ints_6[i_18];
+					i_21 += ints_8[i_19] - ints_8[i_18];
+					i_20 += ints_7[i_19] - ints_7[i_18];
+					if (i_19 == 0) {
+						i_19 = i_9;
+					}
+
+					if (i_18 == 0) {
+						i_18 = i_9;
+					}
+				}
+
+				for (i_24 = i_11; i_24 >= 0; --i_24) {
+					--i_14;
+					i_25 = this.anIntArray7694[i_14];
+					--i_15;
+					i_26 = this.anIntArray7694[i_15];
+					ints_5[i_24] += (i_25 >> 24 & 0xff) - (i_26 >> 24 & 0xff);
+					ints_6[i_24] += (i_25 >> 16 & 0xff) - (i_26 >> 16 & 0xff);
+					ints_7[i_24] += (i_25 >> 8 & 0xff) - (i_26 >> 8 & 0xff);
+					ints_8[i_24] += (i_25 & 0xff) - (i_26 & 0xff);
+				}
+
+				if (i_14 == 0) {
+					i_14 = i_13;
+				}
+
+				if (i_15 == 0) {
+					i_15 = i_13;
+				}
+			}
+
+			int[] ints_29 = this.anIntArray7694;
+			this.anIntArray7694 = anIntArray7696;
+			anIntArray7696 = ints_29;
+		}
+
 	}
 
 	int[] method12406() {
-		return ((Class282_Sub27) this).anIntArray7694;
+		return this.anIntArray7694;
 	}
+
 }

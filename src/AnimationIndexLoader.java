@@ -1,155 +1,182 @@
-/* Class523 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class AnimationIndexLoader {
-	SoftCache cache;
+
 	SoftCache aClass229_6955 = new SoftCache(64);
+	SoftCache cache = new SoftCache(100);
 	Index sequenceIndex;
-	
-	public void method11204(int i) {
-		synchronized (((AnimationIndexLoader) this).aClass229_6955) {
-			((AnimationIndexLoader) this).aClass229_6955.method3859(1867962972);
+
+	public void method11204(int i_1) {
+		SoftCache softcache_2 = this.aClass229_6955;
+		synchronized (this.aClass229_6955) {
+			this.aClass229_6955.method3859(1867962972);
 		}
-		synchronized (((AnimationIndexLoader) this).cache) {
-			((AnimationIndexLoader) this).cache.method3859(335894365);
+
+		softcache_2 = this.cache;
+		synchronized (this.cache) {
+			this.cache.method3859(335894365);
 		}
 	}
 
-	public AnimationDefinitions getAnimDefs(int i, byte i_0_) {
-		AnimationDefinitions class518;
-		synchronized (((AnimationIndexLoader) this).aClass229_6955) {
-			class518 = ((AnimationDefinitions) ((AnimationIndexLoader) this).aClass229_6955.get((long) i));
+	public AnimationDefinitions getAnimDefs(int i_1, byte b_2) {
+		SoftCache softcache_4 = this.aClass229_6955;
+		AnimationDefinitions animationdefinitions_3;
+		synchronized (this.aClass229_6955) {
+			animationdefinitions_3 = (AnimationDefinitions) this.aClass229_6955.get((long) i_1);
 		}
-		if (null != class518)
-			return class518;
-		byte[] is;
-		synchronized (((AnimationIndexLoader) this).sequenceIndex) {
-			is = (((AnimationIndexLoader) this).sequenceIndex.getFile(SharedConfigsType.SEQUENCES.containerId(i), SharedConfigsType.SEQUENCES.fileId(i)));
+
+		if (animationdefinitions_3 != null) {
+			return animationdefinitions_3;
+		} else {
+			Index index_5 = this.sequenceIndex;
+			byte[] bytes_10;
+			synchronized (this.sequenceIndex) {
+				bytes_10 = this.sequenceIndex.getFile(SharedConfigsType.SEQUENCES.containerId(i_1), SharedConfigsType.SEQUENCES.fileId(i_1));
+			}
+
+			animationdefinitions_3 = new AnimationDefinitions();
+			animationdefinitions_3.anInt5909 = i_1;
+			animationdefinitions_3.animationIndexLoader = this;
+			if (bytes_10 != null) {
+				animationdefinitions_3.method11130(new RsByteBuffer(bytes_10), -2068474756);
+			}
+
+			animationdefinitions_3.method11143((byte) -115);
+			SoftCache softcache_9 = this.aClass229_6955;
+			synchronized (this.aClass229_6955) {
+				this.aClass229_6955.put(animationdefinitions_3, (long) i_1);
+				return animationdefinitions_3;
+			}
 		}
-		class518 = new AnimationDefinitions();
-		class518.anInt5909 = i * 919942973;
-		((AnimationDefinitions) class518).animationIndexLoader = this;
-		if (null != is)
-			class518.method11130(new RsByteBuffer(is), -2068474756);
-		class518.method11143((byte) -115);
-		synchronized (((AnimationIndexLoader) this).aClass229_6955) {
-			((AnimationIndexLoader) this).aClass229_6955.put(class518, (long) i);
-		}
-		return class518;
 	}
 
-	public AnimationIndexLoader(Game class486, XLanguage class495, Index sequencesIndex, Index animSkeletonIndex, Index animSkinIndex) {
-		((AnimationIndexLoader) this).cache = new SoftCache(100);
-		((AnimationIndexLoader) this).sequenceIndex = sequencesIndex;
-		if (null != ((AnimationIndexLoader) this).sequenceIndex) {
-			int i = ((AnimationIndexLoader) this).sequenceIndex.containersCount() - 1;
+	public AnimationIndexLoader(Game game_1, Language xlanguage_2, Index index_3, Index index_4, Index index_5) {
+		this.sequenceIndex = index_3;
+		if (this.sequenceIndex != null) {
+			int i_6 = this.sequenceIndex.containersCount() - 1;
 			SharedConfigsType.SEQUENCES.filesPerContainer(-1584727313);
-			((AnimationIndexLoader) this).sequenceIndex.filesCount(i);
+			this.sequenceIndex.filesCount(i_6);
 		}
-		Class96_Sub10_Sub1.setAnimationIndices(animSkeletonIndex, animSkinIndex, 2, -1736051925);
+
+		Class96_Sub10_Sub1.setAnimationIndices(index_4, index_5, 2, -1736051925);
 	}
 
-	public AnimationSkeleton getAnimationSkeleton(int animSkeletonId, int i_3_) {
-		AnimationSkeleton skeleton;
-		synchronized (((AnimationIndexLoader) this).cache) {
-			skeleton = ((AnimationSkeleton) ((AnimationIndexLoader) this).cache.get((long) animSkeletonId));
-			if (skeleton == null) {
-				skeleton = new AnimationSkeleton(animSkeletonId);
-				((AnimationIndexLoader) this).cache.put(skeleton, (long) animSkeletonId);
+	public AnimationSkeleton getAnimationSkeleton(int i_1, int i_2) {
+		SoftCache softcache_4 = this.cache;
+		synchronized (this.cache) {
+			AnimationSkeleton animationskeleton_3 = (AnimationSkeleton) this.cache.get((long) i_1);
+			if (animationskeleton_3 == null) {
+				animationskeleton_3 = new AnimationSkeleton(i_1);
+				this.cache.put(animationskeleton_3, (long) i_1);
 			}
-			if (!skeleton.decodeAnimSkeletonData()) {
-				return null;
-			}
-		}
-		return skeleton;
-	}
 
-	public void method11208(int i) {
-		synchronized (((AnimationIndexLoader) this).aClass229_6955) {
-			((AnimationIndexLoader) this).aClass229_6955.method3863(2031071202);
-		}
-		synchronized (((AnimationIndexLoader) this).cache) {
-			((AnimationIndexLoader) this).cache.method3863(1832973954);
+			return !animationskeleton_3.decodeAnimSkeletonData() ? null : animationskeleton_3;
 		}
 	}
 
-	public void method11210(int i, byte i_5_) {
-		synchronized (((AnimationIndexLoader) this).aClass229_6955) {
-			((AnimationIndexLoader) this).aClass229_6955.method3858(i, (byte) -49);
+	public void method11208(int i_1) {
+		SoftCache softcache_2 = this.aClass229_6955;
+		synchronized (this.aClass229_6955) {
+			this.aClass229_6955.method3863(2031071202);
 		}
-		synchronized (((AnimationIndexLoader) this).cache) {
-			((AnimationIndexLoader) this).cache.method3858(i, (byte) -26);
+
+		softcache_2 = this.cache;
+		synchronized (this.cache) {
+			this.cache.method3863(1832973954);
 		}
 	}
 
-	static final void method11218(CS2Executor class527, byte i) {
-		int i_8_ = (class527.intStack[(class527.intStackPtr -= 141891001) * 1942118537]);
-		Class393.aClass282_Sub54_4783.method13511((Class393.aClass282_Sub54_4783.aClass468_Sub20_8207), i_8_, 1266441439);
+	public void method11210(int i_1, byte b_2) {
+		SoftCache softcache_3 = this.aClass229_6955;
+		synchronized (this.aClass229_6955) {
+			this.aClass229_6955.method3858(i_1, (byte) -49);
+		}
+
+		softcache_3 = this.cache;
+		synchronized (this.cache) {
+			this.cache.method3858(i_1, (byte) -26);
+		}
+	}
+
+	static final void method11218(CS2Executor cs2executor_0, byte b_1) {
+		int i_2 = cs2executor_0.intStack[--cs2executor_0.intStackPtr];
+		Class393.aClass282_Sub54_4783.method13511(Class393.aClass282_Sub54_4783.aClass468_Sub20_8207, i_2, 1266441439);
 		Class190.method3148((byte) 88);
 		client.aBool7175 = false;
 	}
 
-	public static boolean method11219(char c, int i) {
-		return c >= '0' && c <= '9';
+	public static boolean method11219(char var_0, int i_1) {
+		return var_0 >= 48 && var_0 <= 57;
 	}
 
-	static final void method11220(int i, int i_9_, int i_10_, int i_11_, int i_12_, byte i_13_) {
-		int i_14_ = i_11_ - i_9_;
-		int i_15_ = i_10_ - i;
-		if (i_15_ == 0) {
-			if (i_14_ != 0)
-				Class225_Sub6.method13411(i, i_9_, i_11_, i_12_, (byte) -83);
-		} else if (i_14_ == 0)
-			Class16.method568(i, i_10_, i_9_, i_12_, (short) 128);
-		else {
-			if (i_14_ < 0)
-				i_14_ = -i_14_;
-			if (i_15_ < 0)
-				i_15_ = -i_15_;
-			boolean bool = i_14_ > i_15_;
-			if (bool) {
-				int i_16_ = i;
-				int i_17_ = i_10_;
-				i = i_9_;
-				i_9_ = i_16_;
-				i_10_ = i_11_;
-				i_11_ = i_17_;
+	static final void method11220(int i_0, int i_1, int i_2, int i_3, int i_4, byte b_5) {
+		int i_6 = i_3 - i_1;
+		int i_7 = i_2 - i_0;
+		if (i_7 == 0) {
+			if (i_6 != 0) {
+				Class225_Sub6.method13411(i_0, i_1, i_3, i_4, (byte) -83);
 			}
-			if (i > i_10_) {
-				int i_18_ = i;
-				int i_19_ = i_9_;
-				i = i_10_;
-				i_10_ = i_18_;
-				i_9_ = i_11_;
-				i_11_ = i_19_;
+		} else if (i_6 == 0) {
+			Class16.method568(i_0, i_2, i_1, i_4, (short) 128);
+		} else {
+			if (i_6 < 0) {
+				i_6 = -i_6;
 			}
-			int i_20_ = i_9_;
-			int i_21_ = i_10_ - i;
-			int i_22_ = i_11_ - i_9_;
-			int i_23_ = -(i_21_ >> 1);
-			int i_24_ = i_9_ < i_11_ ? 1 : -1;
-			if (i_22_ < 0)
-				i_22_ = -i_22_;
-			if (bool) {
-				for (int i_25_ = i; i_25_ <= i_10_; i_25_++) {
-					Class532_Sub2.anIntArrayArray7072[i_25_][i_20_] = i_12_;
-					i_23_ += i_22_;
-					if (i_23_ > 0) {
-						i_20_ += i_24_;
-						i_23_ -= i_21_;
+
+			if (i_7 < 0) {
+				i_7 = -i_7;
+			}
+
+			boolean bool_8 = i_6 > i_7;
+			int i_9;
+			int i_10;
+			if (bool_8) {
+				i_9 = i_0;
+				i_10 = i_2;
+				i_0 = i_1;
+				i_1 = i_9;
+				i_2 = i_3;
+				i_3 = i_10;
+			}
+
+			if (i_0 > i_2) {
+				i_9 = i_0;
+				i_10 = i_1;
+				i_0 = i_2;
+				i_2 = i_9;
+				i_1 = i_3;
+				i_3 = i_10;
+			}
+
+			i_9 = i_1;
+			i_10 = i_2 - i_0;
+			int i_11 = i_3 - i_1;
+			int i_12 = -(i_10 >> 1);
+			int i_13 = i_1 < i_3 ? 1 : -1;
+			if (i_11 < 0) {
+				i_11 = -i_11;
+			}
+
+			int i_14;
+			if (bool_8) {
+				for (i_14 = i_0; i_14 <= i_2; i_14++) {
+					Class532_Sub2.anIntArrayArray7072[i_14][i_9] = i_4;
+					i_12 += i_11;
+					if (i_12 > 0) {
+						i_9 += i_13;
+						i_12 -= i_10;
 					}
 				}
 			} else {
-				for (int i_26_ = i; i_26_ <= i_10_; i_26_++) {
-					Class532_Sub2.anIntArrayArray7072[i_20_][i_26_] = i_12_;
-					i_23_ += i_22_;
-					if (i_23_ > 0) {
-						i_20_ += i_24_;
-						i_23_ -= i_21_;
+				for (i_14 = i_0; i_14 <= i_2; i_14++) {
+					Class532_Sub2.anIntArrayArray7072[i_9][i_14] = i_4;
+					i_12 += i_11;
+					if (i_12 > 0) {
+						i_9 += i_13;
+						i_12 -= i_10;
 					}
 				}
 			}
 		}
+
 	}
+
 }

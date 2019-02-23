@@ -1,77 +1,36 @@
-/* Class282_Sub20_Sub17 - Decompiled by JODE
- * Visit http://jode.sourceforge.net/
- */
-
 public class Class282_Sub20_Sub17 extends Class282_Sub20 {
-	int anInt9860 = -403591168;
-	static final int anInt9861 = 4096;
 
-	int[] method12319(int i, int i_0_) {
-		int[] is = aClass320_7667.method5721(i, -272864160);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, Class316.anInt3670 * -402153223, (((Class282_Sub20_Sub17) this).anInt9860 * -1167998189));
-		return is;
+	int anInt9860;
+
+	int[] method12319(int i_1, int i_2) {
+		int[] ints_3 = this.aClass320_7667.method5721(i_1, -272864160);
+		if (this.aClass320_7667.aBool3722) {
+			Class503.method8365(ints_3, 0, Class316.anInt3670, this.anInt9860);
+		}
+
+		return ints_3;
 	}
 
-	Class282_Sub20_Sub17(int i) {
+	Class282_Sub20_Sub17(int i_1) {
 		super(0, true);
-		((Class282_Sub20_Sub17) this).anInt9860 = -609321189 * i;
+		this.anInt9860 = 4096;
+		this.anInt9860 = i_1;
 	}
 
-	void method12335(int i, RsByteBuffer class282_sub35) {
-		switch (i) {
+	void method12322(int i_1, RsByteBuffer rsbytebuffer_2, int i_3) {
+		switch (i_1) {
 		case 0:
-			((Class282_Sub20_Sub17) this).anInt9860 = ((class282_sub35.readUnsignedByte() << 12) / 255 * -609321189);
+			this.anInt9860 = (rsbytebuffer_2.readUnsignedByte() << 12) / 255;
+		default:
 		}
-	}
-
-	void method12322(int i, RsByteBuffer class282_sub35, int i_1_) {
-		switch (i) {
-		case 0:
-			((Class282_Sub20_Sub17) this).anInt9860 = ((class282_sub35.readUnsignedByte() << 12) / 255 * -609321189);
-		}
-	}
-
-	int[] method12325(int i) {
-		int[] is = aClass320_7667.method5721(i, -149206787);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, Class316.anInt3670 * -402153223, (((Class282_Sub20_Sub17) this).anInt9860 * -1167998189));
-		return is;
-	}
-
-	int[] method12336(int i) {
-		int[] is = aClass320_7667.method5721(i, 429637102);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, Class316.anInt3670 * -402153223, (((Class282_Sub20_Sub17) this).anInt9860 * -1167998189));
-		return is;
-	}
-
-	int[] method12327(int i) {
-		int[] is = aClass320_7667.method5721(i, 606138039);
-		if (aClass320_7667.aBool3722)
-			Class503.method8365(is, 0, Class316.anInt3670 * -402153223, (((Class282_Sub20_Sub17) this).anInt9860 * -1167998189));
-		return is;
 	}
 
 	public Class282_Sub20_Sub17() {
 		this(4096);
 	}
 
-	void method12332(int i, RsByteBuffer class282_sub35) {
-		switch (i) {
-		case 0:
-			((Class282_Sub20_Sub17) this).anInt9860 = ((class282_sub35.readUnsignedByte() << 12) / 255 * -609321189);
-		}
+	static final void method15370(CS2Executor cs2executor_0, int i_1) {
+		cs2executor_0.aLongArray7003[++cs2executor_0.anInt7001 - 1] = cs2executor_0.longLocals[cs2executor_0.intOpValues[cs2executor_0.instrPtr]];
 	}
 
-	void method12334(int i, RsByteBuffer class282_sub35) {
-		switch (i) {
-		case 0:
-			((Class282_Sub20_Sub17) this).anInt9860 = ((class282_sub35.readUnsignedByte() << 12) / 255 * -609321189);
-		}
-	}
-
-	static final void method15370(CS2Executor class527, int i) {
-		class527.aLongArray7003[(class527.anInt7001 += -1188480575) * 1820448321 - 1] = (class527.longLocals[(class527.intOpValues[class527.instrPtr * 301123709])]);
-	}
 }
