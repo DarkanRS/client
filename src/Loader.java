@@ -17,9 +17,7 @@ public class Loader extends Applet implements AppletStub {
 	public static final int MINOR_BUILD = 1;
 	public static final int CLIENT_BUILD = 6;
 
-	//public static final String IP_ADDRESS = "127.0.0.1";
-	public static final String IP_ADDRESS = "axios.trentonkress.com";
-	
+	public static String IP_ADDRESS = "axios.trentonkress.com";
 	public static final int LOBBY_PORT = 5555;
 
 	public static final boolean USING_ISAAC = false;
@@ -31,6 +29,8 @@ public class Loader extends Applet implements AppletStub {
 	public JFrame clientFrame = null;
 
 	public static void main(String[] arg0) {
+		if (arg0 != null && arg0[0] != null)
+			IP_ADDRESS = "127.0.0.1";
 		new Loader().doFrame();
 	}
 
