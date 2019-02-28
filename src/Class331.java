@@ -70,7 +70,7 @@ public class Class331 {
 						animable_0.aClass456_Sub2_Sub1Array10354[i_9] = null;
 					} else {
 						AnimationDefinitions animationdefinitions_10 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_6, (byte) 24);
-						int i_11 = animationdefinitions_10.anInt5907;
+						int i_11 = animationdefinitions_10.replayMode;
 						Class456_Sub2_Sub1 class456_sub2_sub1_12 = animable_0.aClass456_Sub2_Sub1Array10354[i_9];
 						if (class456_sub2_sub1_12 != null && class456_sub2_sub1_12.hasDefs()) {
 							if (i_6 == class456_sub2_sub1_12.method7597(-1055922469)) {

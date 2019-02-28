@@ -92,14 +92,14 @@ public class Class20 {
 		cs2executor_0.intStack[++cs2executor_0.intStackPtr - 1] = client.aBool7155 ? 1 : 0;
 	}
 
-	public static void animate(Animable animable_0, int[] ints_1, int i_2, boolean bool_3, byte b_4) {
+	public static void animate(Animable animable_0, int[] animationIds, int speed, boolean bool_3, byte b_4) {
 		boolean bool_5;
 		int i_6;
 		if (animable_0.currentAnimations != null) {
 			bool_5 = true;
 
 			for (i_6 = 0; i_6 < animable_0.currentAnimations.length; i_6++) {
-				if (animable_0.currentAnimations[i_6] != ints_1[i_6]) {
+				if (animable_0.currentAnimations[i_6] != animationIds[i_6]) {
 					bool_5 = false;
 					break;
 				}
@@ -108,12 +108,12 @@ public class Class20 {
 			Animation animation_9 = animable_0.currentAnimation;
 			if (bool_5 && animation_9.hasDefs()) {
 				AnimationDefinitions animationdefinitions_7 = animable_0.currentAnimation.getDefs();
-				int i_8 = animationdefinitions_7.anInt5907;
-				if (i_8 == 1) {
-					animation_9.method7583(i_2, (byte) 0);
+				int speedType = animationdefinitions_7.replayMode;
+				if (speedType == 1) {
+					animation_9.method7583(speed, (byte) 0);
 				}
 
-				if (i_8 == 2) {
+				if (speedType == 2) {
 					animation_9.method7584(-272427166);
 				}
 			}
@@ -121,14 +121,14 @@ public class Class20 {
 
 		bool_5 = true;
 
-		for (i_6 = 0; i_6 < ints_1.length; i_6++) {
-			if (ints_1[i_6] != -1) {
+		for (i_6 = 0; i_6 < animationIds.length; i_6++) {
+			if (animationIds[i_6] != -1) {
 				bool_5 = false;
 			}
 
-			if (animable_0.currentAnimations == null || animable_0.currentAnimations[i_6] == -1 || IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(ints_1[i_6], (byte) -52).priority >= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animable_0.currentAnimations[i_6], (byte) -23).priority) {
-				animable_0.currentAnimations = ints_1;
-				animable_0.currentAnimation.setSpeed(i_2);
+			if (animable_0.currentAnimations == null || animable_0.currentAnimations[i_6] == -1 || IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animationIds[i_6], (byte) -52).priority >= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(animable_0.currentAnimations[i_6], (byte) -23).priority) {
+				animable_0.currentAnimations = animationIds;
+				animable_0.currentAnimation.setSpeed(speed);
 				if (bool_3) {
 					animable_0.anInt10367 = animable_0.anInt10355;
 				}
@@ -136,8 +136,8 @@ public class Class20 {
 		}
 
 		if (bool_5) {
-			animable_0.currentAnimations = ints_1;
-			animable_0.currentAnimation.setSpeed(i_2);
+			animable_0.currentAnimations = animationIds;
+			animable_0.currentAnimation.setSpeed(speed);
 			if (bool_3) {
 				animable_0.anInt10367 = animable_0.anInt10355;
 			}

@@ -265,7 +265,7 @@ public class RsByteBuffer extends Node {
 	}
 
 	public RsByteBuffer(int i_1) {
-		this.buffer = CircularBuffer.method8239(i_1, 1959390720);
+		this.buffer = CircularBuffer.createBuffer(i_1, 1959390720);
 		this.index = 0;
 	}
 
@@ -285,7 +285,7 @@ public class RsByteBuffer extends Node {
 		}
 	}
 
-	public int method13094(int i_1) {
+	public int readSmart() {
 		int i_2 = this.buffer[this.index] & 0xff;
 		return i_2 < 128 ? this.readUnsignedByte() - 64 : this.readUnsignedShort() - 49152;
 	}

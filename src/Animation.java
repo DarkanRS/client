@@ -15,7 +15,7 @@ public class Animation {
 
 	final boolean method7562(int i_1) {
 		if (this.defs != null) {
-			boolean bool_2 = this.aClass462_5464.method7707(NamedFileReference.aClass523_411, this.defs, this.anInt5460, this.anInt5466, this.defs.skeletonIds, -514647052);
+			boolean bool_2 = this.aClass462_5464.method7707(NamedFileReference.aClass523_411, this.defs, this.anInt5460, this.anInt5466, this.defs.frames, -514647052);
 			if (bool_2 && this.aBool5463 && this.defs.anIntArray5911 != null) {
 				this.aClass462_5467.method7707(NamedFileReference.aClass523_411, this.defs, this.anInt5460, this.anInt5466, this.defs.anIntArray5911, -1635915089);
 			}
@@ -68,7 +68,7 @@ public class Animation {
 				this.defs = null;
 			} else {
 				if (this.defs != null && this.defs.anInt5909 == i_1) {
-					if (this.defs.anInt5907 == 0) {
+					if (this.defs.replayMode == 0) {
 						return;
 					}
 				} else {
@@ -80,15 +80,15 @@ public class Animation {
 				this.anInt5461 = i_3;
 				this.aBool5456 = bool_5;
 				if (bool_4) {
-					this.anInt5460 = (int) (Math.random() * (double) this.defs.skeletonIds.length);
-					this.anInt5457 = (int) (Math.random() * (double) this.defs.animationStepLengths[this.anInt5460]);
+					this.anInt5460 = (int) (Math.random() * (double) this.defs.frames.length);
+					this.anInt5457 = (int) (Math.random() * (double) this.defs.frameDurations[this.anInt5460]);
 				} else {
 					this.anInt5460 = 0;
 					this.anInt5457 = 0;
 				}
 
 				this.anInt5466 = this.anInt5460 + 1;
-				if (this.anInt5466 < 0 || this.anInt5466 >= this.defs.skeletonIds.length) {
+				if (this.anInt5466 < 0 || this.anInt5466 >= this.defs.frames.length) {
 					this.anInt5466 = -1;
 				}
 
@@ -116,28 +116,28 @@ public class Animation {
 		this.speed = i_1;
 	}
 
-	public final void method7577(MeshRasterizer meshrasterizer_1, int i_2, int i_3) {
-		if (this.defs != null && this.defs.skeletonIds != null && this.method7562(2049608469)) {
-			meshrasterizer_1.method11262(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.animationStepLengths[this.anInt5460], i_2, this.defs.aBool5923);
+	public final void rasterize(MeshRasterizer meshrasterizer_1, int i_2, int i_3) {
+		if (this.defs != null && this.defs.frames != null && this.method7562(2049608469)) {
+			meshrasterizer_1.method11262(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
-				meshrasterizer_1.method11262(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.animationStepLengths[this.anInt5460], i_2, this.defs.aBool5923);
+				meshrasterizer_1.method11262(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, this.defs.aBool5923);
 			}
 		}
 
 	}
 
 	public final void method7578(MeshRasterizer meshrasterizer_1, int i_2, int i_3, int i_4) {
-		if (this.defs.skeletonIds != null && this.method7562(1399567490)) {
-			meshrasterizer_1.method11258(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.animationStepLengths[this.anInt5460], i_2, i_3, this.defs.aBool5923, (int[]) null);
+		if (this.defs.frames != null && this.method7562(1399567490)) {
+			meshrasterizer_1.method11258(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542, this.aClass462_5464.aClass282_Sub50_Sub13_5546, this.aClass462_5464.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, i_3, this.defs.aBool5923, (int[]) null);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
-				meshrasterizer_1.method11258(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.animationStepLengths[this.anInt5460], i_2, i_3, this.defs.aBool5923, (int[]) null);
+				meshrasterizer_1.method11258(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542, this.aClass462_5467.aClass282_Sub50_Sub13_5546, this.aClass462_5467.anInt5547, this.anInt5457, this.defs.frameDurations[this.anInt5460], i_2, i_3, this.defs.aBool5923, (int[]) null);
 			}
 		}
 
 	}
 
 	public final void method7579(MeshRasterizer meshrasterizer_1, int i_2) {
-		if (this.defs.skeletonIds != null && this.method7562(1730078988)) {
+		if (this.defs.frames != null && this.method7562(1730078988)) {
 			meshrasterizer_1.method11284(this.aClass462_5464.aClass282_Sub50_Sub13_5545, this.aClass462_5464.anInt5542);
 			if (this.aBool5463 && this.defs.anIntArray5911 != null && this.aClass462_5467.aBool5544) {
 				meshrasterizer_1.method11284(this.aClass462_5467.aClass282_Sub50_Sub13_5545, this.aClass462_5467.anInt5542);
@@ -156,12 +156,12 @@ public class Animation {
 
 	public final void method7583(int i_1, byte b_2) {
 		this.anInt5460 = 0;
-		this.anInt5466 = this.defs.skeletonIds.length > 1 ? 1 : -1;
+		this.anInt5466 = this.defs.frames.length > 1 ? 1 : -1;
 		this.anInt5457 = 0;
 		this.aBool5462 = false;
 		this.speed = i_1;
 		this.anInt5459 = 0;
-		if (this.defs != null & this.defs.skeletonIds != null) {
+		if (this.defs != null & this.defs.frames != null) {
 			this.method7586(this.defs, this.anInt5460, -722856799);
 			this.method7588((byte) 59);
 		}
@@ -173,7 +173,7 @@ public class Animation {
 	}
 
 	public final boolean method7585(int i_1, int i_2) {
-		return this.defs == null | (i_1 -= this.speed) <= 0 ? false : this.defs.aBool5924 | this.anInt5457 + i_1 > this.defs.animationStepLengths[this.anInt5460];
+		return this.defs == null | (i_1 -= this.speed) <= 0 ? false : this.defs.tweened | this.anInt5457 + i_1 > this.defs.frameDurations[this.anInt5460];
 	}
 
 	void method7586(AnimationDefinitions animationdefinitions_1, int i_2, int i_3) {
@@ -220,18 +220,18 @@ public class Animation {
 			}
 
 			i_1 += this.anInt5457;
-			boolean bool_3 = this.defs.aBool5924 | AnimationDefinitions.aBool5925;
+			boolean bool_3 = this.defs.tweened | AnimationDefinitions.aBool5925;
 			if (i_1 > 100 && this.defs.loopDelay > 0) {
 				int i_4;
-				for (i_4 = this.defs.skeletonIds.length - this.defs.loopDelay; this.anInt5460 < i_4 && i_1 > this.defs.animationStepLengths[this.anInt5460]; this.anInt5460++) {
-					i_1 -= this.defs.animationStepLengths[this.anInt5460];
+				for (i_4 = this.defs.frames.length - this.defs.loopDelay; this.anInt5460 < i_4 && i_1 > this.defs.frameDurations[this.anInt5460]; this.anInt5460++) {
+					i_1 -= this.defs.frameDurations[this.anInt5460];
 				}
 
 				if (this.anInt5460 >= i_4) {
 					int i_5 = 0;
 
-					for (int i_6 = i_4; i_6 < this.defs.skeletonIds.length; i_6++) {
-						i_5 += this.defs.animationStepLengths[i_6];
+					for (int i_6 = i_4; i_6 < this.defs.frames.length; i_6++) {
+						i_5 += this.defs.frameDurations[i_6];
 					}
 
 					if (this.anInt5461 == 0) {
@@ -242,14 +242,14 @@ public class Animation {
 				}
 
 				this.anInt5466 = this.anInt5460 + 1;
-				if (this.anInt5466 >= this.defs.skeletonIds.length) {
+				if (this.anInt5466 >= this.defs.frames.length) {
 					if (this.defs.loopDelay == -1 && this.aBool5456) {
 						this.anInt5466 = 0;
 					} else {
 						this.anInt5466 -= this.defs.loopDelay;
 					}
 
-					if (this.anInt5466 < 0 || this.anInt5466 >= this.defs.skeletonIds.length) {
+					if (this.anInt5466 < 0 || this.anInt5466 >= this.defs.frames.length) {
 						this.anInt5466 = -1;
 					}
 				}
@@ -257,10 +257,10 @@ public class Animation {
 				bool_3 = true;
 			}
 
-			while (i_1 > this.defs.animationStepLengths[this.anInt5460]) {
+			while (i_1 > this.defs.frameDurations[this.anInt5460]) {
 				bool_3 = true;
-				i_1 -= this.defs.animationStepLengths[++this.anInt5460 - 1];
-				if (this.anInt5460 >= this.defs.skeletonIds.length) {
+				i_1 -= this.defs.frameDurations[++this.anInt5460 - 1];
+				if (this.anInt5460 >= this.defs.frames.length) {
 					if (this.defs.loopDelay != -1 && this.anInt5461 != 2) {
 						this.anInt5460 -= this.defs.loopDelay;
 						if (this.anInt5461 == 0) {
@@ -268,7 +268,7 @@ public class Animation {
 						}
 					}
 
-					if (this.anInt5459 >= this.defs.anInt5929 || this.anInt5460 < 0 || this.anInt5460 >= this.defs.skeletonIds.length) {
+					if (this.anInt5459 >= this.defs.maxLoops || this.anInt5460 < 0 || this.anInt5460 >= this.defs.frames.length) {
 						this.aBool5462 = true;
 						break;
 					}
@@ -276,14 +276,14 @@ public class Animation {
 
 				this.method7586(this.defs, this.anInt5460, -469139589);
 				this.anInt5466 = this.anInt5460 + 1;
-				if (this.anInt5466 >= this.defs.skeletonIds.length) {
+				if (this.anInt5466 >= this.defs.frames.length) {
 					if (this.defs.loopDelay == -1 && this.aBool5456) {
 						this.anInt5466 = 0;
 					} else {
 						this.anInt5466 -= this.defs.loopDelay;
 					}
 
-					if (this.anInt5466 < 0 || this.anInt5466 >= this.defs.skeletonIds.length) {
+					if (this.anInt5466 < 0 || this.anInt5466 >= this.defs.frames.length) {
 						this.anInt5466 = -1;
 					}
 				}

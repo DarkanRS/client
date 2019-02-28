@@ -213,17 +213,17 @@ public class Player extends Animable {
 	}
 
 	public final void method16129(int i_1, int i_2, byte b_3, int i_4) {
-		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().anInt5921 == 1) {
+		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().walkingPrecedence == 1) {
 			this.currentAnimations = null;
 			this.currentAnimation.method7567(-1, (short) 8960);
 		}
 
 		for (int i_5 = 0; i_5 < this.aClass161Array10339.length; i_5++) {
-			if (this.aClass161Array10339[i_5].anInt2012 != -1) {
-				SpotAnimDefinitions spotanimdefinitions_6 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_5].anInt2012, (byte) 55);
-				if (spotanimdefinitions_6.aBool6968 && spotanimdefinitions_6.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_6.animationId, (byte) -26).anInt5921 == 1) {
-					this.aClass161Array10339[i_5].aClass456_2014.method7567(-1, (short) 8960);
-					this.aClass161Array10339[i_5].anInt2012 = -1;
+			if (this.aClass161Array10339[i_5].spotAnimId != -1) {
+				SpotAnimDefinitions spotanimdefinitions_6 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_5].spotAnimId, (byte) 55);
+				if (spotanimdefinitions_6.aBool6968 && spotanimdefinitions_6.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_6.animationId, (byte) -26).walkingPrecedence == 1) {
+					this.aClass161Array10339[i_5].animation.method7567(-1, (short) 8960);
+					this.aClass161Array10339[i_5].spotAnimId = -1;
 				}
 			}
 		}

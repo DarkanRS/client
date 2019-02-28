@@ -2,10 +2,10 @@ public class Class462 {
 
 	public static String[] aStringArray5548;
 	int anInt5542;
-	AnimationSkeleton aClass282_Sub50_Sub13_5545;
+	AnimationFrameCollection aClass282_Sub50_Sub13_5545;
 	int anInt5543;
 	int anInt5547;
-	AnimationSkeleton aClass282_Sub50_Sub13_5546;
+	AnimationFrameCollection aClass282_Sub50_Sub13_5546;
 	boolean aBool5544 = false;
 
 	final boolean method7707(AnimationIndexLoader animationindexloader_1, AnimationDefinitions animationdefinitions_2, int i_3, int i_4, int[] ints_5, int i_6) {
@@ -14,12 +14,12 @@ public class Class462 {
 				return false;
 			} else {
 				this.anInt5542 = ints_5[i_3];
-				this.aClass282_Sub50_Sub13_5545 = animationindexloader_1.getAnimationSkeleton(this.anInt5542 >> 16, -1536383536);
+				this.aClass282_Sub50_Sub13_5545 = animationindexloader_1.getAnimationFrame(this.anInt5542 >> 16, -1536383536);
 				this.anInt5542 &= 0xffff;
 				if (this.aClass282_Sub50_Sub13_5545 != null) {
-					if (animationdefinitions_2.aBool5924 && i_4 != -1 && i_4 < ints_5.length) {
+					if (animationdefinitions_2.tweened && i_4 != -1 && i_4 < ints_5.length) {
 						this.anInt5547 = ints_5[i_4];
-						this.aClass282_Sub50_Sub13_5546 = animationindexloader_1.getAnimationSkeleton(this.anInt5547 >> 16, -1536383536);
+						this.aClass282_Sub50_Sub13_5546 = animationindexloader_1.getAnimationFrame(this.anInt5547 >> 16, -1536383536);
 						this.anInt5547 &= 0xffff;
 					}
 

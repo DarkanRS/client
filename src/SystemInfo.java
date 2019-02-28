@@ -357,14 +357,14 @@ public class SystemInfo extends Node {
 		} else {
 			if (animable_0.currentAnimation.hasDefs() && !animable_0.currentAnimation.hasSpeed(584514311)) {
 				AnimationDefinitions animationdefinitions_4 = animable_0.currentAnimation.getDefs();
-				if (animable_0.anInt10367 > 0 && animationdefinitions_4.anInt5920 == 0) {
+				if (animable_0.anInt10367 > 0 && animationdefinitions_4.animatingPrecedence == 0) {
 					++animable_0.anInt10366;
 					Class44.anInt430 = Class249.aClass249_3083.aByte3085;
 					Class8_Sub1.anInt8515 = 0;
 					return;
 				}
 
-				if (animable_0.anInt10367 <= 0 && animationdefinitions_4.anInt5921 == 0) {
+				if (animable_0.anInt10367 <= 0 && animationdefinitions_4.walkingPrecedence == 0) {
 					++animable_0.anInt10366;
 					Class44.anInt430 = Class249.aClass249_3083.aByte3085;
 					Class8_Sub1.anInt8515 = 0;
@@ -373,18 +373,18 @@ public class SystemInfo extends Node {
 			}
 
 			for (int i_18 = 0; i_18 < animable_0.aClass161Array10339.length; i_18++) {
-				if (animable_0.aClass161Array10339[i_18].anInt2012 != -1 && animable_0.aClass161Array10339[i_18].aClass456_2014.hasSpeed(-606649252)) {
-					SpotAnimDefinitions spotanimdefinitions_19 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_18].anInt2012, (byte) 43);
+				if (animable_0.aClass161Array10339[i_18].spotAnimId != -1 && animable_0.aClass161Array10339[i_18].animation.hasSpeed(-606649252)) {
+					SpotAnimDefinitions spotanimdefinitions_19 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_18].spotAnimId, (byte) 43);
 					if (spotanimdefinitions_19.aBool6968 && spotanimdefinitions_19.animationId != -1) {
 						AnimationDefinitions animationdefinitions_20 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_19.animationId, (byte) -10);
-						if (animable_0.anInt10367 > 0 && animationdefinitions_20.anInt5920 == 0) {
+						if (animable_0.anInt10367 > 0 && animationdefinitions_20.animatingPrecedence == 0) {
 							++animable_0.anInt10366;
 							Class44.anInt430 = Class249.aClass249_3083.aByte3085;
 							Class8_Sub1.anInt8515 = 0;
 							return;
 						}
 
-						if (animable_0.anInt10367 <= 0 && animationdefinitions_20.anInt5921 == 0) {
+						if (animable_0.anInt10367 <= 0 && animationdefinitions_20.walkingPrecedence == 0) {
 							++animable_0.anInt10366;
 							Class44.anInt430 = Class249.aClass249_3083.aByte3085;
 							Class8_Sub1.anInt8515 = 0;

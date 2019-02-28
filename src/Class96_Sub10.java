@@ -15,7 +15,7 @@ public abstract class Class96_Sub10 extends Class96 {
 		SpotAnimDefinitions spotanimdefinitions_2 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt9296, (byte) 90);
 		boolean bool_3 = spotanimdefinitions_2.method11230(-1104094093);
 		AnimationDefinitions animationdefinitions_4 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_2.animationId, (byte) -39);
-		bool_3 &= animationdefinitions_4.loadSkeletons();
+		bool_3 &= animationdefinitions_4.ready();
 		return bool_3;
 	}
 

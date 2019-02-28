@@ -92,7 +92,7 @@ public class Class96_Sub19 extends Class96 {
 		SpotAnimDefinitions spotanimdefinitions_2 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.anInt9410, (byte) 46);
 		boolean bool_3 = spotanimdefinitions_2.method11230(-583697397);
 		AnimationDefinitions animationdefinitions_4 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_2.animationId, (byte) 7);
-		bool_3 &= animationdefinitions_4.loadSkeletons();
+		bool_3 &= animationdefinitions_4.ready();
 		return bool_3;
 	}
 

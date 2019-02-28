@@ -44,19 +44,19 @@ public class Class150 {
 		}
 
 		for (int i_3 = 0; i_3 < animable_0.aClass161Array10339.length; i_3++) {
-			if (animable_0.aClass161Array10339[i_3].anInt2012 != -1) {
-				Animation animation_4 = animable_0.aClass161Array10339[i_3].aClass456_2014;
+			if (animable_0.aClass161Array10339[i_3].spotAnimId != -1) {
+				Animation animation_4 = animable_0.aClass161Array10339[i_3].animation;
 				if (animation_4.hasSpeed(1176831971)) {
-					SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_3].anInt2012, (byte) 52);
+					SpotAnimDefinitions spotanimdefinitions_5 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(animable_0.aClass161Array10339[i_3].spotAnimId, (byte) 52);
 					AnimationDefinitions animationdefinitions_6 = animation_4.getDefs();
 					if (spotanimdefinitions_5.aBool6968) {
-						if (animationdefinitions_6.anInt5920 == 3) {
+						if (animationdefinitions_6.animatingPrecedence == 3) {
 							if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
 								animation_4.method7567(-1, (short) 8960);
-								animable_0.aClass161Array10339[i_3].anInt2012 = -1;
+								animable_0.aClass161Array10339[i_3].spotAnimId = -1;
 								continue;
 							}
-						} else if (animationdefinitions_6.anInt5920 == 1 && animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
+						} else if (animationdefinitions_6.animatingPrecedence == 1 && animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
 							continue;
 						}
 					}
@@ -64,7 +64,7 @@ public class Class150 {
 
 				if (animation_4.method7627(1, -1386003531) && animation_4.method7580(1255247674)) {
 					animation_4.method7567(-1, (short) 8960);
-					animable_0.aClass161Array10339[i_3].anInt2012 = -1;
+					animable_0.aClass161Array10339[i_3].spotAnimId = -1;
 				}
 			}
 		}
@@ -73,13 +73,13 @@ public class Class150 {
 		if (animation_7.hasDefs()) {
 			label88: {
 				AnimationDefinitions animationdefinitions_9 = animation_7.getDefs();
-				if (animationdefinitions_9.anInt5920 == 3) {
+				if (animationdefinitions_9.animatingPrecedence == 3) {
 					if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
 						animable_0.currentAnimations = null;
 						animation_7.method7567(-1, (short) 8960);
 						break label88;
 					}
-				} else if (animationdefinitions_9.anInt5920 == 1) {
+				} else if (animationdefinitions_9.animatingPrecedence == 1) {
 					if (animable_0.anInt10367 > 0 && animable_0.anInt10342 <= client.cycles && animable_0.anInt10345 < client.cycles) {
 						animation_7.setSpeed(1);
 						break label88;

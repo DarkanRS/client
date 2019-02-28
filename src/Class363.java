@@ -100,8 +100,8 @@ public class Class363 {
 			animable_0.currentAnimation.method7567(-1, (short) 8960);
 
 			for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
-				animable_0.aClass161Array10339[i_6].anInt2012 = -1;
-				animable_0.aClass161Array10339[i_6].aClass456_2014.method7567(-1, (short) 8960);
+				animable_0.aClass161Array10339[i_6].spotAnimId = -1;
+				animable_0.aClass161Array10339[i_6].animation.method7567(-1, (short) 8960);
 			}
 
 			animable_0.currentAnimations = null;
@@ -117,8 +117,8 @@ public class Class363 {
 			animable_0.currentAnimation.method7567(-1, (short) 8960);
 
 			for (i_6 = 0; i_6 < animable_0.aClass161Array10339.length; i_6++) {
-				animable_0.aClass161Array10339[i_6].anInt2012 = -1;
-				animable_0.aClass161Array10339[i_6].aClass456_2014.method7567(-1, (short) 8960);
+				animable_0.aClass161Array10339[i_6].spotAnimId = -1;
+				animable_0.aClass161Array10339[i_6].animation.method7567(-1, (short) 8960);
 			}
 
 			animable_0.currentAnimations = null;

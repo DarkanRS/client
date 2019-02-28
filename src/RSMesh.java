@@ -264,17 +264,17 @@ public class RSMesh {
 			i_54 = rsbytebuffer_2.readUnsignedByte();
 			i_55 = 0;
 			if ((i_54 & 0x1) != 0) {
-				i_55 = rsbytebuffer_3.method13094(907232293);
+				i_55 = rsbytebuffer_3.readSmart();
 			}
 
 			i_56 = 0;
 			if ((i_54 & 0x2) != 0) {
-				i_56 = rsbytebuffer_4.method13094(1138384025);
+				i_56 = rsbytebuffer_4.readSmart();
 			}
 
 			i_57 = 0;
 			if ((i_54 & 0x4) != 0) {
-				i_57 = rsbytebuffer_5.method13094(-1899961465);
+				i_57 = rsbytebuffer_5.readSmart();
 			}
 
 			this.anIntArray1976[i_53] = i_50 + i_55;
@@ -396,9 +396,9 @@ public class RSMesh {
 		for (int i_7 = 0; i_7 < this.anInt1973; i_7++) {
 			int i_8 = rsbytebuffer_2.readUnsignedByte();
 			if (i_8 == 1) {
-				s_3 = (short) (rsbytebuffer_1.method13094(89160266) + s_6);
-				s_4 = (short) (rsbytebuffer_1.method13094(756455111) + s_3);
-				s_5 = (short) (rsbytebuffer_1.method13094(-1523690914) + s_4);
+				s_3 = (short) (rsbytebuffer_1.readSmart() + s_6);
+				s_4 = (short) (rsbytebuffer_1.readSmart() + s_3);
+				s_5 = (short) (rsbytebuffer_1.readSmart() + s_4);
 				s_6 = s_5;
 				this.aShortArray1982[i_7] = s_3;
 				this.aShortArray1983[i_7] = s_4;
@@ -418,7 +418,7 @@ public class RSMesh {
 
 			if (i_8 == 2) {
 				s_4 = s_5;
-				s_5 = (short) (rsbytebuffer_1.method13094(-175405594) + s_6);
+				s_5 = (short) (rsbytebuffer_1.readSmart() + s_6);
 				s_6 = s_5;
 				this.aShortArray1982[i_7] = s_3;
 				this.aShortArray1983[i_7] = s_4;
@@ -430,7 +430,7 @@ public class RSMesh {
 
 			if (i_8 == 3) {
 				s_3 = s_5;
-				s_5 = (short) (rsbytebuffer_1.method13094(1578191588) + s_6);
+				s_5 = (short) (rsbytebuffer_1.readSmart() + s_6);
 				s_6 = s_5;
 				this.aShortArray1982[i_7] = s_3;
 				this.aShortArray1983[i_7] = s_4;
@@ -444,7 +444,7 @@ public class RSMesh {
 				short s_9 = s_3;
 				s_3 = s_4;
 				s_4 = s_9;
-				s_5 = (short) (rsbytebuffer_1.method13094(92866321) + s_6);
+				s_5 = (short) (rsbytebuffer_1.readSmart() + s_6);
 				s_6 = s_5;
 				this.aShortArray1982[i_7] = s_3;
 				this.aShortArray1983[i_7] = s_9;
@@ -860,17 +860,17 @@ public class RSMesh {
 			i_36 = rsbytebuffer_4.readUnsignedByte();
 			int i_37 = 0;
 			if ((i_36 & 0x1) != 0) {
-				i_37 = rsbytebuffer_5.method13094(815365211);
+				i_37 = rsbytebuffer_5.readSmart();
 			}
 
 			int i_38 = 0;
 			if ((i_36 & 0x2) != 0) {
-				i_38 = rsbytebuffer_6.method13094(-60017552);
+				i_38 = rsbytebuffer_6.readSmart();
 			}
 
 			i_39 = 0;
 			if ((i_36 & 0x4) != 0) {
-				i_39 = rsbytebuffer_7.method13094(1391084553);
+				i_39 = rsbytebuffer_7.readSmart();
 			}
 
 			this.anIntArray1976[i_35] = i_32 + i_37;
@@ -939,9 +939,9 @@ public class RSMesh {
 		for (i_39 = 0; i_39 < this.anInt1973; i_39++) {
 			i_40 = rsbytebuffer_5.readUnsignedByte();
 			if (i_40 == 1) {
-				s_43 = (short) (rsbytebuffer_4.method13094(-621211908) + s_46);
-				s_44 = (short) (rsbytebuffer_4.method13094(-1539331252) + s_43);
-				s_45 = (short) (rsbytebuffer_4.method13094(1068170824) + s_44);
+				s_43 = (short) (rsbytebuffer_4.readSmart() + s_46);
+				s_44 = (short) (rsbytebuffer_4.readSmart() + s_43);
+				s_45 = (short) (rsbytebuffer_4.readSmart() + s_44);
 				s_46 = s_45;
 				this.aShortArray1982[i_39] = s_43;
 				this.aShortArray1983[i_39] = s_44;
@@ -961,7 +961,7 @@ public class RSMesh {
 
 			if (i_40 == 2) {
 				s_44 = s_45;
-				s_45 = (short) (rsbytebuffer_4.method13094(-1125059614) + s_46);
+				s_45 = (short) (rsbytebuffer_4.readSmart() + s_46);
 				s_46 = s_45;
 				this.aShortArray1982[i_39] = s_43;
 				this.aShortArray1983[i_39] = s_44;
@@ -973,7 +973,7 @@ public class RSMesh {
 
 			if (i_40 == 3) {
 				s_43 = s_45;
-				s_45 = (short) (rsbytebuffer_4.method13094(-281313964) + s_46);
+				s_45 = (short) (rsbytebuffer_4.readSmart() + s_46);
 				s_46 = s_45;
 				this.aShortArray1982[i_39] = s_43;
 				this.aShortArray1983[i_39] = s_44;
@@ -987,7 +987,7 @@ public class RSMesh {
 				short s_41 = s_43;
 				s_43 = s_44;
 				s_44 = s_41;
-				s_45 = (short) (rsbytebuffer_4.method13094(1047370048) + s_46);
+				s_45 = (short) (rsbytebuffer_4.readSmart() + s_46);
 				s_46 = s_45;
 				this.aShortArray1982[i_39] = s_43;
 				this.aShortArray1983[i_39] = s_41;

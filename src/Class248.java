@@ -294,7 +294,7 @@ public class Class248 {
 			}
 
 			this.anIntArray3063[i_3] = i_4;
-			this.anIntArray3064[i_3] = rsbytebuffer_1.method13094(1923263479);
+			this.anIntArray3064[i_3] = rsbytebuffer_1.readSmart();
 			this.anIntArray3065[i_3] = rsbytebuffer_1.readUnsignedSmart(1861176061);
 		}
 

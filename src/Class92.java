@@ -19,7 +19,7 @@ public class Class92 {
 
 				for (int i_6 = 0; i_6 < ints_5.length; i_6++) {
 					int i_7 = ints_5[i_6];
-					bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_7, (byte) 92).loadSkeletons();
+					bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_7, (byte) 92).ready();
 				}
 			}
 

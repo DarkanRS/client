@@ -175,7 +175,7 @@ public class ItemDefinitions implements Interface46 {
 		if (animation_5 != null || i_9 != 0) {
 			meshrasterizer_17 = meshrasterizer_17.method11289((byte) 1, i_11, true);
 			if (animation_5 != null) {
-				animation_5.method7577(meshrasterizer_17, 0, 16711935);
+				animation_5.rasterize(meshrasterizer_17, 0, 16711935);
 			}
 
 			if (i_9 != 0) {

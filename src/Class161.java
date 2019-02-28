@@ -3,11 +3,11 @@ public class Class161 {
 	public int anInt2011;
 	public int anInt2013;
 	public int anInt2015;
-	public int anInt2012 = -1;
-	public Animation aClass456_2014;
+	public int spotAnimId = -1;
+	public Animation animation;
 
 	Class161(Animable animable_1) {
-		this.aClass456_2014 = new Class456_Sub2(animable_1, false);
+		this.animation = new Class456_Sub2(animable_1, false);
 	}
 
 	static final void method2823(CS2Executor cs2executor_0, int i_1) {

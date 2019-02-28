@@ -327,7 +327,7 @@ public class Class461 {
 									for (Class282_Sub50_Sub15 class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.method7790(1832486278); class282_sub50_sub15_10 != null; class282_sub50_sub15_10 = (Class282_Sub50_Sub15) class469_9.next()) {
 										if (i_6 == i_12) {
 											if (class282_sub50_sub15_10.anInt9769 > 1) {
-												AnimationSkinNode.method12212(class282_sub50_sub15_10, i_11, -67980547);
+												AnimationFrameBase.method12212(class282_sub50_sub15_10, i_11, -67980547);
 											}
 											break;
 										}

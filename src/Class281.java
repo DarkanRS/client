@@ -94,7 +94,7 @@ public class Class281 {
 
 	public Class281(GraphicalRenderer graphicalrenderer_1, RsByteBuffer rsbytebuffer_2, int i_3) {
 		this.anInt3372 = i_3;
-		this.anInt3374 = rsbytebuffer_2.method13094(1207140670);
+		this.anInt3374 = rsbytebuffer_2.readSmart();
 		this.anIntArray3375 = new int[this.anInt3374];
 		this.anIntArray3373 = new int[this.anInt3374];
 		int i_4 = rsbytebuffer_2.readUnsignedShort();

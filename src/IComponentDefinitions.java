@@ -709,7 +709,7 @@ public class IComponentDefinitions {
 
 			if (animation_9 != null) {
 				meshrasterizer_18 = meshrasterizer_18.method11289((byte) 1, i_2, true);
-				animation_9.method7577(meshrasterizer_18, 0, 16711935);
+				animation_9.rasterize(meshrasterizer_18, 0, 16711935);
 			}
 
 			meshrasterizer_18.KA(i_2);

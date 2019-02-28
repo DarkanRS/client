@@ -4,21 +4,21 @@ public class AnimationDefinitions {
 	public int anInt5909;
 	public static int anInt5930;
 	public static boolean aBool5925 = false;
-	public int[] animationStepLengths;
+	public int[] frameDurations;
 	public int loopDelay = -1;
 	public boolean[] aBoolArray5915;
-	public int[] skeletonIds;
+	public int[] frames;
 	public int priority = 5;
 	public int leftHandItem = -1;
 	public int rightHandItem = -1;
-	public int anInt5929 = 99;
-	public int anInt5920 = -1;
-	public int anInt5921 = -1;
-	public int anInt5907 = 2;
+	public int maxLoops = 99;
+	public int animatingPrecedence = -1;
+	public int walkingPrecedence = -1;
+	public int replayMode = 2;
 	public int[] anIntArray5911;
 	public int[][] anIntArrayArray5913;
 	public boolean aBool5923 = false;
-	public boolean aBool5924 = false;
+	public boolean tweened = false;
 	public boolean aBool5928 = false;
 	public int[] anIntArray5926;
 	public int[] anIntArray5927;
@@ -50,20 +50,20 @@ public class AnimationDefinitions {
 		int i_5;
 		if (i_2 == 1) {
 			i_4 = rsbytebuffer_1.readUnsignedShort();
-			this.animationStepLengths = new int[i_4];
+			this.frameDurations = new int[i_4];
 
 			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.animationStepLengths[i_5] = rsbytebuffer_1.readUnsignedShort();
+				this.frameDurations[i_5] = rsbytebuffer_1.readUnsignedShort();
 			}
 
-			this.skeletonIds = new int[i_4];
+			this.frames = new int[i_4];
 
 			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.skeletonIds[i_5] = rsbytebuffer_1.readUnsignedShort();
+				this.frames[i_5] = rsbytebuffer_1.readUnsignedShort();
 			}
 
 			for (i_5 = 0; i_5 < i_4; i_5++) {
-				this.skeletonIds[i_5] += rsbytebuffer_1.readUnsignedShort() << 16;
+				this.frames[i_5] += rsbytebuffer_1.readUnsignedShort() << 16;
 			}
 		} else if (i_2 == 2) {
 			this.loopDelay = rsbytebuffer_1.readUnsignedShort();
@@ -81,13 +81,13 @@ public class AnimationDefinitions {
 		} else if (i_2 == 7) {
 			this.rightHandItem = rsbytebuffer_1.readUnsignedShort();
 		} else if (i_2 == 8) {
-			this.anInt5929 = rsbytebuffer_1.readUnsignedByte();
+			this.maxLoops = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 9) {
-			this.anInt5920 = rsbytebuffer_1.readUnsignedByte();
+			this.animatingPrecedence = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 10) {
-			this.anInt5921 = rsbytebuffer_1.readUnsignedByte();
+			this.walkingPrecedence = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 11) {
-			this.anInt5907 = rsbytebuffer_1.readUnsignedByte();
+			this.replayMode = rsbytebuffer_1.readUnsignedByte();
 		} else if (i_2 == 12) {
 			i_4 = rsbytebuffer_1.readUnsignedByte();
 			this.anIntArray5911 = new int[i_4];
@@ -106,12 +106,12 @@ public class AnimationDefinitions {
 				this.anIntArrayArray5913 = new int[i_4][];
 
 				for (i_5 = 0; i_5 < i_4; i_5++) {
-					int i_6 = rsbytebuffer_1.readUnsignedByte();
-					if (i_6 > 0) {
-						this.anIntArrayArray5913[i_5] = new int[i_6];
+					int children = rsbytebuffer_1.readUnsignedByte();
+					if (children > 0) {
+						this.anIntArrayArray5913[i_5] = new int[children];
 						this.anIntArrayArray5913[i_5][0] = rsbytebuffer_1.read24BitUnsignedInteger();
 
-						for (i_7 = 1; i_7 < i_6; i_7++) {
+						for (i_7 = 1; i_7 < children; i_7++) {
 							this.anIntArrayArray5913[i_5][i_7] = rsbytebuffer_1.readUnsignedShort();
 						}
 					}
@@ -119,7 +119,7 @@ public class AnimationDefinitions {
 			} else if (i_2 == 14) {
 				this.aBool5923 = true;
 			} else if (i_2 == 15) {
-				this.aBool5924 = true;
+				this.tweened = true;
 			} else if (i_2 != 16) {
 				if (i_2 == 18) {
 					this.aBool5928 = true;
@@ -172,16 +172,16 @@ public class AnimationDefinitions {
 
 	}
 
-	public boolean loadSkeletons() {
-		if (this.skeletonIds == null) {
+	public boolean ready() {
+		if (this.frames == null) {
 			return true;
 		} else {
 			boolean bool_1 = true;
-			int[] ints_2 = this.skeletonIds;
+			int[] ints_2 = this.frames;
 
 			for (int i_3 = 0; i_3 < ints_2.length; i_3++) {
 				int i_4 = ints_2[i_3];
-				if (this.animationIndexLoader.getAnimationSkeleton(i_4 >>> 16, -1536383536) == null) {
+				if (this.animationIndexLoader.getAnimationFrame(i_4 >>> 16, -1536383536) == null) {
 					bool_1 = false;
 				}
 			}
@@ -200,19 +200,19 @@ public class AnimationDefinitions {
 	}
 
 	void method11143(byte b_1) {
-		if (this.anInt5920 == -1) {
+		if (this.animatingPrecedence == -1) {
 			if (this.aBoolArray5915 != null) {
-				this.anInt5920 = 2;
+				this.animatingPrecedence = 2;
 			} else {
-				this.anInt5920 = 0;
+				this.animatingPrecedence = 0;
 			}
 		}
 
-		if (this.anInt5921 == -1) {
+		if (this.walkingPrecedence == -1) {
 			if (this.aBoolArray5915 != null) {
-				this.anInt5921 = 2;
+				this.walkingPrecedence = 2;
 			} else {
-				this.anInt5921 = 0;
+				this.walkingPrecedence = 0;
 			}
 		}
 

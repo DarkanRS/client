@@ -467,7 +467,7 @@ public class Class521_Sub1_Sub3_Sub1 extends SceneObjectNode implements SceneObj
 		if (animation_1.method7562(1986884672) && animation_2.method7562(1815488454)) {
 			AnimationDefinitions animationdefinitions_4 = animation_1.defs;
 			AnimationDefinitions animationdefinitions_5 = animation_2.defs;
-			meshrasterizer_0.method11264(animation_1.aClass462_5464.aClass282_Sub50_Sub13_5545, animation_1.aClass462_5464.anInt5542, animation_1.aClass462_5464.aClass282_Sub50_Sub13_5546, animation_1.aClass462_5464.anInt5547, animation_1.anInt5457, animationdefinitions_4.animationStepLengths[animation_1.anInt5460], animation_2.aClass462_5464.aClass282_Sub50_Sub13_5545, animation_2.aClass462_5464.anInt5542, animation_2.aClass462_5464.aClass282_Sub50_Sub13_5546, animation_2.aClass462_5464.anInt5547, animation_2.anInt5457, animationdefinitions_5.animationStepLengths[animation_2.anInt5460], animationdefinitions_4.aBoolArray5915, animationdefinitions_4.aBool5923 | animationdefinitions_5.aBool5923);
+			meshrasterizer_0.method11264(animation_1.aClass462_5464.aClass282_Sub50_Sub13_5545, animation_1.aClass462_5464.anInt5542, animation_1.aClass462_5464.aClass282_Sub50_Sub13_5546, animation_1.aClass462_5464.anInt5547, animation_1.anInt5457, animationdefinitions_4.frameDurations[animation_1.anInt5460], animation_2.aClass462_5464.aClass282_Sub50_Sub13_5545, animation_2.aClass462_5464.anInt5542, animation_2.aClass462_5464.aClass282_Sub50_Sub13_5546, animation_2.aClass462_5464.anInt5547, animation_2.anInt5457, animationdefinitions_5.frameDurations[animation_2.anInt5460], animationdefinitions_4.aBoolArray5915, animationdefinitions_4.aBool5923 | animationdefinitions_5.aBool5923);
 		}
 
 	}

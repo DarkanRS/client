@@ -111,7 +111,7 @@ public class Class282_Sub30 extends Node {
 			return meshrasterizer_8;
 		} else {
 			MeshRasterizer meshrasterizer_14 = meshrasterizer_8.method11289((byte) 1, i_9, true);
-			animation_3.method7577(meshrasterizer_14, 0, 16711935);
+			animation_3.rasterize(meshrasterizer_14, 0, 16711935);
 			return meshrasterizer_14;
 		}
 	}

@@ -412,9 +412,9 @@ public class PlayerAppearance {
 				if (animation_9 != null && animation_10 != null) {
 					Class521_Sub1_Sub3_Sub1.method16078(meshrasterizer_45, animation_9, animation_10, -484588693);
 				} else if (animation_9 != null) {
-					animation_9.method7577(meshrasterizer_45, 0, 16711935);
+					animation_9.rasterize(meshrasterizer_45, 0, 16711935);
 				} else if (animation_10 != null) {
-					animation_10.method7577(meshrasterizer_45, 0, 16711935);
+					animation_10.rasterize(meshrasterizer_45, 0, 16711935);
 				}
 
 				return meshrasterizer_45;
@@ -480,7 +480,7 @@ public class PlayerAppearance {
 			return meshrasterizer_13;
 		} else {
 			meshrasterizer_13 = meshrasterizer_13.method11289((byte) 4, i_10, true);
-			animation_5.method7577(meshrasterizer_13, 0, 16711935);
+			animation_5.rasterize(meshrasterizer_13, 0, 16711935);
 			return meshrasterizer_13;
 		}
 	}
@@ -577,7 +577,7 @@ public class PlayerAppearance {
 				return meshrasterizer_11;
 			} else {
 				MeshRasterizer meshrasterizer_27 = meshrasterizer_11.method11289((byte) 4, i_10, true);
-				animation_8.method7577(meshrasterizer_27, 0, 16711935);
+				animation_8.rasterize(meshrasterizer_27, 0, 16711935);
 				return meshrasterizer_27;
 			}
 		}

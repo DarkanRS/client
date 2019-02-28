@@ -59,16 +59,16 @@ public class AnimationIndexLoader {
 		Class96_Sub10_Sub1.setAnimationIndices(index_4, index_5, 2, -1736051925);
 	}
 
-	public AnimationSkeleton getAnimationSkeleton(int i_1, int i_2) {
+	public AnimationFrameCollection getAnimationFrame(int i_1, int i_2) {
 		SoftCache softcache_4 = this.cache;
 		synchronized (this.cache) {
-			AnimationSkeleton animationskeleton_3 = (AnimationSkeleton) this.cache.get((long) i_1);
+			AnimationFrameCollection animationskeleton_3 = (AnimationFrameCollection) this.cache.get((long) i_1);
 			if (animationskeleton_3 == null) {
-				animationskeleton_3 = new AnimationSkeleton(i_1);
+				animationskeleton_3 = new AnimationFrameCollection(i_1);
 				this.cache.put(animationskeleton_3, (long) i_1);
 			}
 
-			return !animationskeleton_3.decodeAnimSkeletonData() ? null : animationskeleton_3;
+			return !animationskeleton_3.decodeFrameData() ? null : animationskeleton_3;
 		}
 	}
 

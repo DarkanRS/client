@@ -454,13 +454,13 @@ public class PacketsDecoder extends Class455 {
 														}
 
 														bool_115 = true;
-														i_82 = class161_104.anInt2012;
+														i_82 = class161_104.spotAnimId;
 														if (i_5 != -1 && i_82 != -1) {
 															if (i_5 == i_82) {
 																spotanimdefinitions_38 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_5, (byte) -4);
 																if (spotanimdefinitions_38.aBool6968 && spotanimdefinitions_38.animationId != -1) {
 																	animationdefinitions_86 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_38.animationId, (byte) -4);
-																	int i_21 = animationdefinitions_86.anInt5907;
+																	int i_21 = animationdefinitions_86.replayMode;
 																	if (i_21 != 0 && i_21 != 2) {
 																		if (i_21 == 1) {
 																			bool_115 = true;
@@ -483,7 +483,7 @@ public class PacketsDecoder extends Class455 {
 														}
 
 														if (bool_115) {
-															class161_104.anInt2012 = i_5;
+															class161_104.spotAnimId = i_5;
 															class161_104.anInt2013 = i_9;
 															class161_104.anInt2011 = i_11;
 															if (i_5 != -1) {
@@ -493,9 +493,9 @@ public class PacketsDecoder extends Class455 {
 																	i_40 = 1;
 																}
 
-																class161_104.aClass456_2014.method7571(spotanimdefinitions_38.animationId, i_7, i_40, false, 1725179623);
+																class161_104.animation.method7571(spotanimdefinitions_38.animationId, i_7, i_40, false, 1725179623);
 															} else {
-																class161_104.aClass456_2014.method7567(-1, (short) 8960);
+																class161_104.animation.method7567(-1, (short) 8960);
 															}
 														}
 													}
@@ -515,14 +515,14 @@ public class PacketsDecoder extends Class455 {
 														}
 
 														bool_16 = true;
-														i_34 = class161_121.anInt2012;
+														i_34 = class161_121.spotAnimId;
 														SpotAnimDefinitions spotanimdefinitions_125;
 														if (i_5 != -1 && i_34 != -1) {
 															if (i_34 == i_5) {
 																spotanimdefinitions_125 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_5, (byte) 39);
 																if (spotanimdefinitions_125.aBool6968 && spotanimdefinitions_125.animationId != -1) {
 																	AnimationDefinitions animationdefinitions_124 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_125.animationId, (byte) 36);
-																	i_40 = animationdefinitions_124.anInt5907;
+																	i_40 = animationdefinitions_124.replayMode;
 																	if (i_40 != 0 && i_40 != 2) {
 																		if (i_40 == 1) {
 																			bool_16 = true;
@@ -545,7 +545,7 @@ public class PacketsDecoder extends Class455 {
 														}
 
 														if (bool_16) {
-															class161_121.anInt2012 = i_5;
+															class161_121.spotAnimId = i_5;
 															class161_121.anInt2013 = i_9;
 															class161_121.anInt2011 = i_11;
 															class161_121.anInt2015 = i_10;
@@ -556,9 +556,9 @@ public class PacketsDecoder extends Class455 {
 																	i_83 = 1;
 																}
 
-																class161_121.aClass456_2014.method7571(spotanimdefinitions_125.animationId, i_7, i_83, false, -948478080);
+																class161_121.animation.method7571(spotanimdefinitions_125.animationId, i_7, i_83, false, -948478080);
 															} else {
-																class161_121.aClass456_2014.method7567(-1, (short) 8960);
+																class161_121.animation.method7567(-1, (short) 8960);
 															}
 														}
 													}

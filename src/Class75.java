@@ -71,7 +71,7 @@ public final class Class75 {
 
 			for (int i_5 = 0; i_5 < ints_7.length; i_5++) {
 				int i_6 = ints_7[i_5];
-				bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_6, (byte) 91).loadSkeletons();
+				bool_3 &= IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(i_6, (byte) 91).ready();
 			}
 
 			return bool_3;

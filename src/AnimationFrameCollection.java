@@ -1,28 +1,28 @@
-public class AnimationSkeleton extends CacheableNode {
+public class AnimationFrameCollection extends CacheableNode {
 
 	static Index ANIMATION_SKIN_INDEX;
 	static Index ANIMATION_SKELETON_INDEX;
 	int animSkeletonId;
 	byte[][] skeletonData;
-	AnimationSkin[] animationSkins;
+	AnimationFrame[] animationSkins;
 
 	public boolean method15079(int i_1, int i_2) {
-		return this.animationSkins[i_1].aBool986;
+		return this.animationSkins[i_1].modifiesAlpha;
 	}
 
 	public boolean method15080(int i_1, int i_2) {
-		return this.animationSkins[i_1].aBool972;
+		return this.animationSkins[i_1].modifiesColor;
 	}
 
 	public boolean method15081(int i_1, int i_2) {
 		return this.animationSkins[i_1].aBool988;
 	}
 
-	public AnimationSkeleton(int i_1) {
+	public AnimationFrameCollection(int i_1) {
 		this.animSkeletonId = i_1;
 	}
 
-	public boolean decodeAnimSkeletonData() {
+	public boolean decodeFrameData() {
 		if (this.animationSkins != null) {
 			return true;
 		} else {
@@ -61,7 +61,7 @@ public class AnimationSkeleton extends CacheableNode {
 				int[] ints_23;
 				synchronized (ANIMATION_SKELETON_INDEX) {
 					i_5 = ANIMATION_SKELETON_INDEX.filesCount(this.animSkeletonId);
-					this.animationSkins = new AnimationSkin[i_5];
+					this.animationSkins = new AnimationFrame[i_5];
 					ints_23 = ANIMATION_SKELETON_INDEX.getValidFileIds(this.animSkeletonId);
 				}
 
@@ -70,10 +70,10 @@ public class AnimationSkeleton extends CacheableNode {
 					RsByteBuffer rsbytebuffer_21 = new RsByteBuffer(bytes_14);
 					rsbytebuffer_21.index = 1;
 					int i_7 = rsbytebuffer_21.readUnsignedShort();
-					AnimationSkinNode animationskinnode_8 = null;
+					AnimationFrameBase animationskinnode_8 = null;
 
-					for (AnimationSkinNode animationskinnode_9 = (AnimationSkinNode) xlinkednodelist_19.getBack(); animationskinnode_9 != null; animationskinnode_9 = (AnimationSkinNode) xlinkednodelist_19.getPrevious()) {
-						if (i_7 == animationskinnode_9.skinId) {
+					for (AnimationFrameBase animationskinnode_9 = (AnimationFrameBase) xlinkednodelist_19.getBack(); animationskinnode_9 != null; animationskinnode_9 = (AnimationFrameBase) xlinkednodelist_19.getPrevious()) {
+						if (i_7 == animationskinnode_9.id) {
 							animationskinnode_8 = animationskinnode_9;
 							break;
 						}
@@ -81,13 +81,13 @@ public class AnimationSkeleton extends CacheableNode {
 
 					if (animationskinnode_8 == null) {
 						synchronized (ANIMATION_SKIN_INDEX) {
-							animationskinnode_8 = new AnimationSkinNode(i_7, ANIMATION_SKIN_INDEX.getFile(i_7));
+							animationskinnode_8 = new AnimationFrameBase(i_7, ANIMATION_SKIN_INDEX.getFile(i_7));
 						}
 
 						xlinkednodelist_19.insertBack(animationskinnode_8);
 					}
 
-					this.animationSkins[ints_23[i_13]] = new AnimationSkin(bytes_14, animationskinnode_8);
+					this.animationSkins[ints_23[i_13]] = new AnimationFrame(bytes_14, animationskinnode_8);
 				}
 
 				this.skeletonData = null;

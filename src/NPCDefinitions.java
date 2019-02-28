@@ -359,9 +359,9 @@ public class NPCDefinitions {
 				if (animation_5 != null && animation_6 != null) {
 					Class521_Sub1_Sub3_Sub1.method16078(meshrasterizer_37, animation_5, animation_6, 407704915);
 				} else if (animation_5 != null) {
-					animation_5.method7577(meshrasterizer_37, 0, 16711935);
+					animation_5.rasterize(meshrasterizer_37, 0, 16711935);
 				} else if (animation_6 != null) {
-					animation_6.method7577(meshrasterizer_37, 0, 16711935);
+					animation_6.rasterize(meshrasterizer_37, 0, 16711935);
 				}
 
 				if (this.anInt4880 != 128 || this.anInt4881 != 128) {
@@ -504,7 +504,7 @@ public class NPCDefinitions {
 
 			if (animation_4 != null) {
 				meshrasterizer_10 = meshrasterizer_10.method11289((byte) 1, i_18, true);
-				animation_4.method7577(meshrasterizer_10, 0, 16711935);
+				animation_4.rasterize(meshrasterizer_10, 0, 16711935);
 			}
 
 			meshrasterizer_10.KA(i_2);

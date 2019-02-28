@@ -314,31 +314,31 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 
 	}
 
-	public final void sendSpotAnim(int i_1, int i_2, int i_3, int i_4, boolean bool_5, int i_6, int i_7) {
+	public final void sendSpotAnim(int spotAnimId, int i_2, int i_3, int i_4, boolean bool_5, int i_6, int i_7) {
 		Class161 class161_8 = this.aClass161Array10339[i_6];
-		int i_9 = class161_8.anInt2012;
-		if (i_1 != -1 && i_9 != -1) {
-			SpotAnimDefinitions spotanimdefinitions_10;
-			if (i_9 == i_1) {
-				spotanimdefinitions_10 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_1, (byte) -32);
-				if (spotanimdefinitions_10.aBool6968 && spotanimdefinitions_10.animationId != -1) {
-					AnimationDefinitions animationdefinitions_11 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_10.animationId, (byte) 21);
-					int i_12 = animationdefinitions_11.anInt5907;
+		int currSpotAnimId = class161_8.spotAnimId;
+		if (spotAnimId != -1 && currSpotAnimId != -1) {
+			SpotAnimDefinitions spotAnimDefs;
+			if (currSpotAnimId == spotAnimId) {
+				spotAnimDefs = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) -32);
+				if (spotAnimDefs.aBool6968 && spotAnimDefs.animationId != -1) {
+					AnimationDefinitions animationdefinitions_11 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotAnimDefs.animationId, (byte) 21);
+					int i_12 = animationdefinitions_11.replayMode;
 					if (i_12 == 0) {
 						return;
 					}
 
 					if (i_12 == 2) {
-						class161_8.aClass456_2014.method7584(955077688);
+						class161_8.animation.method7584(955077688);
 						return;
 					}
 				}
 			} else {
-				spotanimdefinitions_10 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_1, (byte) 36);
-				SpotAnimDefinitions spotanimdefinitions_16 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_9, (byte) -6);
-				if (spotanimdefinitions_10.animationId != -1 && spotanimdefinitions_16.animationId != -1) {
-					AnimationDefinitions animationdefinitions_15 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_10.animationId, (byte) -33);
-					AnimationDefinitions animationdefinitions_13 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_16.animationId, (byte) 13);
+				spotAnimDefs = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) 36);
+				SpotAnimDefinitions currSpotAnimDefs = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(currSpotAnimId, (byte) -6);
+				if (spotAnimDefs.animationId != -1 && currSpotAnimDefs.animationId != -1) {
+					AnimationDefinitions animationdefinitions_15 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotAnimDefs.animationId, (byte) -33);
+					AnimationDefinitions animationdefinitions_13 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(currSpotAnimDefs.animationId, (byte) 13);
 					if (animationdefinitions_15.priority < animationdefinitions_13.priority) {
 						return;
 					}
@@ -347,19 +347,19 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 		}
 
 		byte b_14 = 0;
-		if (i_1 != -1 && !IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_1, (byte) 62).aBool6968) {
+		if (spotAnimId != -1 && !IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) 62).aBool6968) {
 			b_14 = 2;
 		}
 
-		if (i_1 != -1 && bool_5) {
+		if (spotAnimId != -1 && bool_5) {
 			b_14 = 1;
 		}
 
-		class161_8.anInt2012 = i_1;
+		class161_8.spotAnimId = spotAnimId;
 		class161_8.anInt2011 = i_4;
 		class161_8.anInt2013 = i_2 >> 16;
 		class161_8.anInt2015 = i_3;
-		class161_8.aClass456_2014.method7571(i_1 != -1 ? IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(i_1, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
+		class161_8.animation.method7571(spotAnimId != -1 ? IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(spotAnimId, (byte) -71).animationId : -1, i_2 & 0xffff, b_14, false, -1358660139);
 	}
 
 	public final void method15801(int i_1) {
@@ -653,8 +653,8 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 			}
 
 			Class161 class161_10 = this.aClass161Array10339[i_8];
-			if (class161_10.anInt2012 != -1 && !class161_10.aClass456_2014.hasSpeed(-544447199)) {
-				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(class161_10.anInt2012, (byte) 62);
+			if (class161_10.spotAnimId != -1 && !class161_10.animation.hasSpeed(-544447199)) {
+				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(class161_10.spotAnimId, (byte) 62);
 				boolean bool_12 = spotanimdefinitions_11.aByte6982 == 3 && (i_4 != 0 || i_5 != 0);
 				int i_13 = i_3;
 				if (bool_12) {
@@ -673,7 +673,7 @@ public abstract class Animable extends Class521_Sub1_Sub1 {
 					}
 				}
 
-				MeshRasterizer meshrasterizer_14 = this.aClass528Array10372[i_8 + 1] = spotanimdefinitions_11.method11228(graphicalrenderer_1, i_13, class161_10.aClass456_2014, b_9, (byte) 53);
+				MeshRasterizer meshrasterizer_14 = this.aClass528Array10372[i_8 + 1] = spotanimdefinitions_11.method11228(graphicalrenderer_1, i_13, class161_10.animation, b_9, (byte) 53);
 				if (meshrasterizer_14 != null) {
 					if (class161_10.anInt2011 >= 0 && renderanimdefs_2.anIntArrayArray2802 != null && renderanimdefs_2.anIntArrayArray2802[class161_10.anInt2011] != null) {
 						int i_15 = 0;

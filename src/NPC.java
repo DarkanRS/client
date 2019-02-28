@@ -120,18 +120,18 @@ public class NPC extends Animable {
 			++this.aByte7968;
 		}
 
-		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().anInt5921 == 1) {
+		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().walkingPrecedence == 1) {
 			this.currentAnimations = null;
 			this.currentAnimation.method7567(-1, (short) 8960);
 		}
 
 		int i_7;
 		for (i_7 = 0; i_7 < this.aClass161Array10339.length; i_7++) {
-			if (this.aClass161Array10339[i_7].anInt2012 != -1) {
-				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_7].anInt2012, (byte) -95);
-				if (spotanimdefinitions_11.aBool6968 && spotanimdefinitions_11.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_11.animationId, (byte) 7).anInt5921 == 1) {
-					this.aClass161Array10339[i_7].aClass456_2014.method7567(-1, (short) 8960);
-					this.aClass161Array10339[i_7].anInt2012 = -1;
+			if (this.aClass161Array10339[i_7].spotAnimId != -1) {
+				SpotAnimDefinitions spotanimdefinitions_11 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_7].spotAnimId, (byte) -95);
+				if (spotanimdefinitions_11.aBool6968 && spotanimdefinitions_11.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_11.animationId, (byte) 7).walkingPrecedence == 1) {
+					this.aClass161Array10339[i_7].animation.method7567(-1, (short) 8960);
+					this.aClass161Array10339[i_7].spotAnimId = -1;
 				}
 			}
 		}
@@ -225,18 +225,18 @@ public class NPC extends Animable {
 			--i_5;
 		}
 
-		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().anInt5921 == 1) {
+		if (this.currentAnimation.hasDefs() && this.currentAnimation.getDefs().walkingPrecedence == 1) {
 			this.currentAnimations = null;
 			this.currentAnimation.method7567(-1, (short) 8960);
 		}
 
 		int i_6;
 		for (i_6 = 0; i_6 < this.aClass161Array10339.length; i_6++) {
-			if (this.aClass161Array10339[i_6].anInt2012 != -1) {
-				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_6].anInt2012, (byte) -12);
-				if (spotanimdefinitions_7.aBool6968 && spotanimdefinitions_7.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_7.animationId, (byte) -9).anInt5921 == 1) {
-					this.aClass161Array10339[i_6].aClass456_2014.method7567(-1, (short) 8960);
-					this.aClass161Array10339[i_6].anInt2012 = -1;
+			if (this.aClass161Array10339[i_6].spotAnimId != -1) {
+				SpotAnimDefinitions spotanimdefinitions_7 = IndexLoaders.SPOT_ANIM_INDEX_LOADER.getSpotAnimDefs(this.aClass161Array10339[i_6].spotAnimId, (byte) -12);
+				if (spotanimdefinitions_7.aBool6968 && spotanimdefinitions_7.animationId != -1 && IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(spotanimdefinitions_7.animationId, (byte) -9).walkingPrecedence == 1) {
+					this.aClass161Array10339[i_6].animation.method7567(-1, (short) 8960);
+					this.aClass161Array10339[i_6].spotAnimId = -1;
 				}
 			}
 		}

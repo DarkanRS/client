@@ -40,8 +40,8 @@ public class Class96_Sub10_Sub1 extends Class96_Sub10 {
 	}
 
 	public static void setAnimationIndices(Index index_0, Index index_1, int i_2, int i_3) {
-		AnimationSkeleton.ANIMATION_SKELETON_INDEX = index_0;
-		AnimationSkeleton.ANIMATION_SKIN_INDEX = index_1;
+		AnimationFrameCollection.ANIMATION_SKELETON_INDEX = index_0;
+		AnimationFrameCollection.ANIMATION_SKIN_INDEX = index_1;
 	}
 
 	static final void method15555(CS2Executor cs2executor_0, byte b_1) {

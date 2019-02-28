@@ -91,17 +91,17 @@ public class Class351 implements Interface3 {
 
 	}
 
-	public static synchronized void method6197(byte[] bytes_0, int i_1) {
-		if (bytes_0.length == 100 && CircularBuffer.anInt5768 < 1000) {
-			CircularBuffer.aByteArrayArray5767[++CircularBuffer.anInt5768 - 1] = bytes_0;
-		} else if (bytes_0.length == 5000 && CircularBuffer.anInt5769 < 250) {
-			CircularBuffer.aByteArrayArray5771[++CircularBuffer.anInt5769 - 1] = bytes_0;
-		} else if (bytes_0.length == 30000 && CircularBuffer.anInt5772 < 50) {
-			CircularBuffer.aByteArrayArray5770[++CircularBuffer.anInt5772 - 1] = bytes_0;
+	public static synchronized void method6197(byte[] data, int i_1) {
+		if (data.length == 100 && CircularBuffer.anInt5768 < 1000) {
+			CircularBuffer.aByteArrayArray5767[++CircularBuffer.anInt5768 - 1] = data;
+		} else if (data.length == 5000 && CircularBuffer.anInt5769 < 250) {
+			CircularBuffer.aByteArrayArray5771[++CircularBuffer.anInt5769 - 1] = data;
+		} else if (data.length == 30000 && CircularBuffer.anInt5772 < 50) {
+			CircularBuffer.aByteArrayArray5770[++CircularBuffer.anInt5772 - 1] = data;
 		} else if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
 			for (int i_2 = 0; i_2 < CircularBuffer.anIntArray5773.length; i_2++) {
-				if (bytes_0.length == CircularBuffer.anIntArray5773[i_2] && Class412.anIntArray4962[i_2] < IcmpService_Sub1.aByteArrayArrayArray7963[i_2].length) {
-					IcmpService_Sub1.aByteArrayArrayArray7963[i_2][Class412.anIntArray4962[i_2]++] = bytes_0;
+				if (data.length == CircularBuffer.anIntArray5773[i_2] && Class412.anIntArray4962[i_2] < IcmpService_Sub1.aByteArrayArrayArray7963[i_2].length) {
+					IcmpService_Sub1.aByteArrayArrayArray7963[i_2][Class412.anIntArray4962[i_2]++] = data;
 					break;
 				}
 			}

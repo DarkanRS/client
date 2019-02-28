@@ -790,7 +790,7 @@ public class ObjectDefinitions {
 		if (animation_10 != null) {
 			meshrasterizer_16 = meshrasterizer_16.method11289((byte) 1, i_2, true);
 			bool_18 = true;
-			animation_10.method7577(meshrasterizer_16, i_4 & 0x3, 16711935);
+			animation_10.rasterize(meshrasterizer_16, i_4 & 0x3, 16711935);
 		}
 
 		if (i_3 == SceneObjectType.SCENERY_INTERACT.type && i_4 > 3) {

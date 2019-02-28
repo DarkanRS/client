@@ -12,24 +12,24 @@ public class CircularBuffer {
 		throw new Error();
 	}
 
-	public static synchronized byte[] method8239(int i_0, int i_1) {
+	public static synchronized byte[] createBuffer(int size, int i_1) {
 		byte[] bytes_2;
-		if (i_0 == 100 && anInt5768 > 0) {
+		if (size == 100 && anInt5768 > 0) {
 			bytes_2 = aByteArrayArray5767[--anInt5768];
 			aByteArrayArray5767[anInt5768] = null;
 			return bytes_2;
-		} else if (i_0 == 5000 && anInt5769 > 0) {
+		} else if (size == 5000 && anInt5769 > 0) {
 			bytes_2 = aByteArrayArray5771[--anInt5769];
 			aByteArrayArray5771[anInt5769] = null;
 			return bytes_2;
-		} else if (i_0 == 30000 && anInt5772 > 0) {
+		} else if (size == 30000 && anInt5772 > 0) {
 			bytes_2 = aByteArrayArray5770[--anInt5772];
 			aByteArrayArray5770[anInt5772] = null;
 			return bytes_2;
 		} else {
 			if (IcmpService_Sub1.aByteArrayArrayArray7963 != null) {
 				for (int i_4 = 0; i_4 < anIntArray5773.length; i_4++) {
-					if (anIntArray5773[i_4] == i_0 && Class412.anIntArray4962[i_4] > 0) {
+					if (anIntArray5773[i_4] == size && Class412.anIntArray4962[i_4] > 0) {
 						byte[] bytes_3 = IcmpService_Sub1.aByteArrayArrayArray7963[i_4][--Class412.anIntArray4962[i_4]];
 						IcmpService_Sub1.aByteArrayArrayArray7963[i_4][Class412.anIntArray4962[i_4]] = null;
 						return bytes_3;
@@ -37,7 +37,7 @@ public class CircularBuffer {
 				}
 			}
 
-			return new byte[i_0];
+			return new byte[size];
 		}
 	}
 

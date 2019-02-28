@@ -1,44 +1,44 @@
-public class AnimationSkinNode extends Node {
+public class AnimationFrameBase extends Node {
 
-	int skinId;
-	int anInt7564;
-	int[] anIntArray7562;
-	int[][] anIntArrayArray7560;
+	int id;
+	int count;
+	int[] transformationTypes;
+	int[][] labels;
 	boolean[] aBoolArray7563;
 	int[] anIntArray7561;
 
-	AnimationSkinNode(int i_1, byte[] bytes_2) {
-		i_1 *= 886409209;
+	AnimationFrameBase(int id, byte[] bytes_2) {
+		this.id = id;
 		RsByteBuffer rsbytebuffer_3 = new RsByteBuffer(bytes_2);
-		this.anInt7564 = rsbytebuffer_3.readUnsignedByte();
-		this.anIntArray7562 = new int[this.anInt7564];
-		this.anIntArrayArray7560 = new int[this.anInt7564][];
-		this.aBoolArray7563 = new boolean[this.anInt7564];
-		this.anIntArray7561 = new int[this.anInt7564];
+		this.count = rsbytebuffer_3.readUnsignedByte();
+		this.transformationTypes = new int[this.count];
+		this.labels = new int[this.count][];
+		this.aBoolArray7563 = new boolean[this.count];
+		this.anIntArray7561 = new int[this.count];
 
 		int i_4;
-		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
-			this.anIntArray7562[i_4] = rsbytebuffer_3.readUnsignedByte();
-			if (this.anIntArray7562[i_4] == 6) {
-				this.anIntArray7562[i_4] = 2;
+		for (i_4 = 0; i_4 < this.count; i_4++) {
+			this.transformationTypes[i_4] = rsbytebuffer_3.readUnsignedByte();
+			if (this.transformationTypes[i_4] == 6) {
+				this.transformationTypes[i_4] = 2;
 			}
 		}
 
-		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+		for (i_4 = 0; i_4 < this.count; i_4++) {
 			this.aBoolArray7563[i_4] = rsbytebuffer_3.readUnsignedByte() == 1;
 		}
 
-		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
+		for (i_4 = 0; i_4 < this.count; i_4++) {
 			this.anIntArray7561[i_4] = rsbytebuffer_3.readUnsignedShort();
 		}
 
-		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
-			this.anIntArrayArray7560[i_4] = new int[rsbytebuffer_3.readUnsignedByte()];
+		for (i_4 = 0; i_4 < this.count; i_4++) {
+			this.labels[i_4] = new int[rsbytebuffer_3.readUnsignedByte()];
 		}
 
-		for (i_4 = 0; i_4 < this.anInt7564; i_4++) {
-			for (int i_5 = 0; i_5 < this.anIntArrayArray7560[i_4].length; i_5++) {
-				this.anIntArrayArray7560[i_4][i_5] = rsbytebuffer_3.readUnsignedByte();
+		for (i_4 = 0; i_4 < this.count; i_4++) {
+			for (int i_5 = 0; i_5 < this.labels[i_4].length; i_5++) {
+				this.labels[i_4][i_5] = rsbytebuffer_3.readUnsignedByte();
 			}
 		}
 

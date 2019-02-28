@@ -17,7 +17,7 @@ public class Class96_Sub3 extends Class96 {
 
 	boolean method1599(int i_1) {
 		AnimationDefinitions animationdefinitions_2 = IndexLoaders.ANIMATION_INDEX_LOADER.getAnimDefs(this.anInt8517, (byte) 45);
-		return animationdefinitions_2.loadSkeletons();
+		return animationdefinitions_2.ready();
 	}
 
 	public void method1601() {

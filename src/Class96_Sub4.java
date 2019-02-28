@@ -13,7 +13,7 @@ public class Class96_Sub4 extends Class96 {
 		this.anInt8519 = i_2 >>> 16;
 		this.anInt8521 = i_2 & 0xffff;
 		this.anInt8522 = rsbytebuffer_1.readUnsignedByte();
-		this.anInt8523 = rsbytebuffer_1.method13094(1019045848);
+		this.anInt8523 = rsbytebuffer_1.readSmart();
 	}
 
 	public void method1592(int i_1) {

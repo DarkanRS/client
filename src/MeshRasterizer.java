@@ -242,18 +242,18 @@ public abstract class MeshRasterizer {
 
 	public abstract void ia(int var1, int var2, int var3);
 
-	public final void method11258(AnimationSkeleton animationskeleton_1, int i_2, AnimationSkeleton animationskeleton_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9, int[] ints_10) {
+	public final void method11258(AnimationFrameCollection animationskeleton_1, int i_2, AnimationFrameCollection animationskeleton_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9, int[] ints_10) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
 				this.method11261();
 			} else {
-				AnimationSkin animationskin_11 = animationskeleton_1.animationSkins[i_2];
-				AnimationSkinNode animationskinnode_12 = animationskin_11.skinNodeList;
-				AnimationSkin animationskin_13 = null;
+				AnimationFrame animationskin_11 = animationskeleton_1.animationSkins[i_2];
+				AnimationFrameBase animationskinnode_12 = animationskin_11.frameList;
+				AnimationFrame animationskin_13 = null;
 				if (animationskeleton_3 != null) {
 					animationskin_13 = animationskeleton_3.animationSkins[i_4];
-					if (animationskinnode_12 != animationskin_13.skinNodeList) {
+					if (animationskinnode_12 != animationskin_13.frameList) {
 						animationskin_13 = null;
 					}
 				}
@@ -292,18 +292,18 @@ public abstract class MeshRasterizer {
 
 	abstract void method11261();
 
-	public final void method11262(AnimationSkeleton animationskeleton_1, int i_2, AnimationSkeleton animationskeleton_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
+	public final void method11262(AnimationFrameCollection animationskeleton_1, int i_2, AnimationFrameCollection animationskeleton_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
 				this.method11261();
 			} else {
-				AnimationSkin animationskin_9 = animationskeleton_1.animationSkins[i_2];
-				AnimationSkinNode animationskinnode_10 = animationskin_9.skinNodeList;
-				AnimationSkin animationskin_11 = null;
+				AnimationFrame animationskin_9 = animationskeleton_1.animationSkins[i_2];
+				AnimationFrameBase animationskinnode_10 = animationskin_9.frameList;
+				AnimationFrame animationskin_11 = null;
 				if (animationskeleton_3 != null) {
 					animationskin_11 = animationskeleton_3.animationSkins[i_4];
-					if (animationskinnode_10 != animationskin_11.skinNodeList) {
+					if (animationskinnode_10 != animationskin_11.frameList) {
 						animationskin_11 = null;
 					}
 				}
@@ -318,35 +318,35 @@ public abstract class MeshRasterizer {
 
 	public abstract void method11263(Matrix44Var var1, int var2, boolean var3);
 
-	public final void method11264(AnimationSkeleton animationskeleton_1, int i_2, AnimationSkeleton animationskeleton_3, int i_4, int i_5, int i_6, AnimationSkeleton animationskeleton_7, int i_8, AnimationSkeleton animationskeleton_9, int i_10, int i_11, int i_12, boolean[] bools_13, boolean bool_14) {
+	public final void method11264(AnimationFrameCollection animationskeleton_1, int i_2, AnimationFrameCollection animationskeleton_3, int i_4, int i_5, int i_6, AnimationFrameCollection animationskeleton_7, int i_8, AnimationFrameCollection animationskeleton_9, int i_10, int i_11, int i_12, boolean[] bools_13, boolean bool_14) {
 		if (i_2 != -1) {
 			if (bools_13 != null && i_8 != -1) {
 				this.method11260();
 				if (!this.ea()) {
 					this.method11261();
 				} else {
-					AnimationSkin animationskin_15 = animationskeleton_1.animationSkins[i_2];
-					AnimationSkinNode animationskinnode_16 = animationskin_15.skinNodeList;
-					AnimationSkin animationskin_17 = null;
+					AnimationFrame animationskin_15 = animationskeleton_1.animationSkins[i_2];
+					AnimationFrameBase animationskinnode_16 = animationskin_15.frameList;
+					AnimationFrame animationskin_17 = null;
 					if (animationskeleton_3 != null) {
 						animationskin_17 = animationskeleton_3.animationSkins[i_4];
-						if (animationskinnode_16 != animationskin_17.skinNodeList) {
+						if (animationskinnode_16 != animationskin_17.frameList) {
 							animationskin_17 = null;
 						}
 					}
 
 					this.method11266(animationskinnode_16, animationskin_15, animationskin_17, i_5, i_6, 0, bools_13, false, bool_14, 65535, (int[]) null);
-					AnimationSkin animationskin_18 = animationskeleton_7.animationSkins[i_8];
-					AnimationSkin animationskin_19 = null;
+					AnimationFrame animationskin_18 = animationskeleton_7.animationSkins[i_8];
+					AnimationFrame animationskin_19 = null;
 					if (animationskeleton_9 != null) {
 						animationskin_19 = animationskeleton_9.animationSkins[i_10];
-						if (animationskinnode_16 != animationskin_19.skinNodeList) {
+						if (animationskinnode_16 != animationskin_19.frameList) {
 							animationskin_19 = null;
 						}
 					}
 
 					this.method11268(0, new int[0], 0, 0, 0, 0, bool_14);
-					this.method11266(animationskin_18.skinNodeList, animationskin_18, animationskin_19, i_11, i_12, 0, bools_13, true, bool_14, 65535, (int[]) null);
+					this.method11266(animationskin_18.frameList, animationskin_18, animationskin_19, i_11, i_12, 0, bools_13, true, bool_14, 65535, (int[]) null);
 					this.ka();
 					this.method11261();
 				}
@@ -357,25 +357,25 @@ public abstract class MeshRasterizer {
 
 	}
 
-	void method11266(AnimationSkinNode animationskinnode_1, AnimationSkin animationskin_2, AnimationSkin animationskin_3, int i_4, int i_5, int i_6, boolean[] bools_7, boolean bool_8, boolean bool_9, int i_10, int[] ints_11) {
+	void method11266(AnimationFrameBase animationskinnode_1, AnimationFrame animationskin_2, AnimationFrame animationskin_3, int i_4, int i_5, int i_6, boolean[] bools_7, boolean bool_8, boolean bool_9, int i_10, int[] ints_11) {
 		int i_12;
 		if (animationskin_3 != null && i_4 != 0) {
 			i_12 = 0;
 			int i_35 = 0;
 
-			for (int i_36 = 0; i_36 < animationskinnode_1.anInt7564; i_36++) {
+			for (int i_36 = 0; i_36 < animationskinnode_1.count; i_36++) {
 				boolean bool_15 = false;
-				if (i_12 < animationskin_2.anInt980 && i_36 == animationskin_2.aShortArray987[i_12]) {
+				if (i_12 < animationskin_2.transformationCount && i_36 == animationskin_2.transformationIndices[i_12]) {
 					bool_15 = true;
 				}
 
 				boolean bool_16 = false;
-				if (i_35 < animationskin_3.anInt980 && i_36 == animationskin_3.aShortArray987[i_35]) {
+				if (i_35 < animationskin_3.transformationCount && i_36 == animationskin_3.transformationIndices[i_35]) {
 					bool_16 = true;
 				}
 
 				if (bool_15 || bool_16) {
-					if (bools_7 != null && bools_7[i_36] != bool_8 && animationskinnode_1.anIntArray7562[i_36] != 0) {
+					if (bools_7 != null && bools_7[i_36] != bool_8 && animationskinnode_1.transformationTypes[i_36] != 0) {
 						if (bool_15) {
 							++i_12;
 						}
@@ -385,7 +385,7 @@ public abstract class MeshRasterizer {
 						}
 					} else {
 						short s_17 = 0;
-						int i_18 = animationskinnode_1.anIntArray7562[i_36];
+						int i_18 = animationskinnode_1.transformationTypes[i_36];
 						if (i_18 == 3 || i_18 == 10) {
 							s_17 = 128;
 						}
@@ -396,11 +396,11 @@ public abstract class MeshRasterizer {
 						short s_22;
 						byte b_23;
 						if (bool_15) {
-							s_19 = animationskin_2.aShortArray981[i_12];
-							s_20 = animationskin_2.aShortArray982[i_12];
-							s_21 = animationskin_2.aShortArray983[i_12];
-							s_22 = animationskin_2.aShortArray984[i_12];
-							b_23 = animationskin_2.aByteArray985[i_12];
+							s_19 = animationskin_2.transformationX[i_12];
+							s_20 = animationskin_2.transformationY[i_12];
+							s_21 = animationskin_2.transformationZ[i_12];
+							s_22 = animationskin_2.skippedReferences[i_12];
+							b_23 = animationskin_2.transformationFlags[i_12];
 							++i_12;
 						} else {
 							s_19 = s_17;
@@ -416,11 +416,11 @@ public abstract class MeshRasterizer {
 						short s_27;
 						byte b_28;
 						if (bool_16) {
-							s_24 = animationskin_3.aShortArray981[i_35];
-							s_25 = animationskin_3.aShortArray982[i_35];
-							s_26 = animationskin_3.aShortArray983[i_35];
-							s_27 = animationskin_3.aShortArray984[i_35];
-							b_28 = animationskin_3.aByteArray985[i_35];
+							s_24 = animationskin_3.transformationX[i_35];
+							s_25 = animationskin_3.transformationY[i_35];
+							s_26 = animationskin_3.transformationZ[i_35];
+							s_27 = animationskin_3.skippedReferences[i_35];
+							b_28 = animationskin_3.transformationFlags[i_35];
 							++i_35;
 						} else {
 							s_24 = s_17;
@@ -484,25 +484,25 @@ public abstract class MeshRasterizer {
 						}
 
 						if (s_22 != -1) {
-							this.method11267(0, animationskinnode_1.anIntArrayArray7560[s_22], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_22], ints_11);
+							this.method11267(0, animationskinnode_1.labels[s_22], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_22], ints_11);
 						} else if (s_27 != -1) {
-							this.method11267(0, animationskinnode_1.anIntArrayArray7560[s_27], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_27], ints_11);
+							this.method11267(0, animationskinnode_1.labels[s_27], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_27], ints_11);
 						}
 
-						this.method11267(i_18, animationskinnode_1.anIntArrayArray7560[i_36], i_29, i_30, i_31, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[i_36], ints_11);
+						this.method11267(i_18, animationskinnode_1.labels[i_36], i_29, i_30, i_31, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[i_36], ints_11);
 					}
 				}
 			}
 		} else {
-			for (i_12 = 0; i_12 < animationskin_2.anInt980; i_12++) {
-				short s_13 = animationskin_2.aShortArray987[i_12];
-				if (bools_7 == null || bools_7[s_13] == bool_8 || animationskinnode_1.anIntArray7562[s_13] == 0) {
-					short s_14 = animationskin_2.aShortArray984[i_12];
+			for (i_12 = 0; i_12 < animationskin_2.transformationCount; i_12++) {
+				short s_13 = animationskin_2.transformationIndices[i_12];
+				if (bools_7 == null || bools_7[s_13] == bool_8 || animationskinnode_1.transformationTypes[s_13] == 0) {
+					short s_14 = animationskin_2.skippedReferences[i_12];
 					if (s_14 != -1) {
-						this.method11267(0, animationskinnode_1.anIntArrayArray7560[s_14], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_14], ints_11);
+						this.method11267(0, animationskinnode_1.labels[s_14], 0, 0, 0, i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_14], ints_11);
 					}
 
-					this.method11267(animationskinnode_1.anIntArray7562[s_13], animationskinnode_1.anIntArrayArray7560[s_13], animationskin_2.aShortArray981[i_12], animationskin_2.aShortArray982[i_12], animationskin_2.aShortArray983[i_12], i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_13], ints_11);
+					this.method11267(animationskinnode_1.transformationTypes[s_13], animationskinnode_1.labels[s_13], animationskin_2.transformationX[i_12], animationskin_2.transformationY[i_12], animationskin_2.transformationZ[i_12], i_6, bool_9, i_10 & animationskinnode_1.anIntArray7561[s_13], ints_11);
 				}
 			}
 		}
@@ -761,23 +761,23 @@ public abstract class MeshRasterizer {
 
 	public abstract void be();
 
-	public final void method11284(AnimationSkeleton animationskeleton_1, int i_2) {
+	public final void method11284(AnimationFrameCollection animationskeleton_1, int i_2) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
 				this.method11261();
 			} else {
-				AnimationSkin animationskin_3 = animationskeleton_1.animationSkins[i_2];
-				AnimationSkinNode animationskinnode_4 = animationskin_3.skinNodeList;
+				AnimationFrame animationskin_3 = animationskeleton_1.animationSkins[i_2];
+				AnimationFrameBase animationskinnode_4 = animationskin_3.frameList;
 
-				for (int i_5 = 0; i_5 < animationskin_3.anInt980; i_5++) {
-					short s_6 = animationskin_3.aShortArray987[i_5];
+				for (int i_5 = 0; i_5 < animationskin_3.transformationCount; i_5++) {
+					short s_6 = animationskin_3.transformationIndices[i_5];
 					if (animationskinnode_4.aBoolArray7563[s_6]) {
-						if (animationskin_3.aShortArray984[i_5] != -1) {
+						if (animationskin_3.skippedReferences[i_5] != -1) {
 							this.w(0, 0, 0, 0);
 						}
 
-						this.w(animationskinnode_4.anIntArray7562[s_6], animationskin_3.aShortArray981[i_5], animationskin_3.aShortArray982[i_5], animationskin_3.aShortArray983[i_5]);
+						this.w(animationskinnode_4.transformationTypes[s_6], animationskin_3.transformationX[i_5], animationskin_3.transformationY[i_5], animationskin_3.transformationZ[i_5]);
 					}
 				}
 

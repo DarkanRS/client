@@ -94,26 +94,26 @@ public class SoftwareItemRender implements Interface18 {
 		return new Class149_Sub4(rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.readShort(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.read24BitUnsignedInteger(), rsbytebuffer_0.readUnsignedByte());
 	}
 
-	public static void method7034(AnimationDefinitions animationdefinitions_0, int i_1, int i_2) {
-		if (Class260.anInt3219 < 50 && animationdefinitions_0 != null && animationdefinitions_0.anIntArrayArray5913 != null && i_1 < animationdefinitions_0.anIntArrayArray5913.length && animationdefinitions_0.anIntArrayArray5913[i_1] != null) {
-			int i_3 = animationdefinitions_0.anIntArrayArray5913[i_1][0];
+	public static void method7034(AnimationDefinitions defs, int i_1, int i_2) {
+		if (Class260.anInt3219 < 50 && defs != null && defs.anIntArrayArray5913 != null && i_1 < defs.anIntArrayArray5913.length && defs.anIntArrayArray5913[i_1] != null) {
+			int i_3 = defs.anIntArrayArray5913[i_1][0];
 			int i_4 = i_3 >> 8;
 			int i_5 = i_3 >> 5 & 0x7;
 			int i_6;
-			if (animationdefinitions_0.anIntArrayArray5913[i_1].length > 1) {
-				i_6 = (int) (Math.random() * (double) animationdefinitions_0.anIntArrayArray5913[i_1].length);
+			if (defs.anIntArrayArray5913[i_1].length > 1) {
+				i_6 = (int) (Math.random() * (double) defs.anIntArrayArray5913[i_1].length);
 				if (i_6 > 0) {
-					i_4 = animationdefinitions_0.anIntArrayArray5913[i_1][i_6];
+					i_4 = defs.anIntArrayArray5913[i_1][i_6];
 				}
 			}
 
 			i_6 = 256;
-			if (animationdefinitions_0.anIntArray5927 != null && animationdefinitions_0.anIntArray5919 != null) {
-				i_6 = Class76.method1356(animationdefinitions_0.anIntArray5927[i_1], animationdefinitions_0.anIntArray5919[i_1], -1021175029);
+			if (defs.anIntArray5927 != null && defs.anIntArray5919 != null) {
+				i_6 = Class76.method1356(defs.anIntArray5927[i_1], defs.anIntArray5919[i_1], -1021175029);
 			}
 
-			int i_7 = animationdefinitions_0.anIntArray5926 == null ? 255 : animationdefinitions_0.anIntArray5926[i_1];
-			if (animationdefinitions_0.aBool5928) {
+			int i_7 = defs.anIntArray5926 == null ? 255 : defs.anIntArray5926[i_1];
+			if (defs.aBool5928) {
 				Class435.method7300(i_4, i_5, 0, i_7, false, i_6, 1449989045);
 			} else {
 				Class153.method2618(i_4, i_5, 0, i_7, i_6, 1648413322);
