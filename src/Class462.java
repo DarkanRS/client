@@ -2,10 +2,10 @@ public class Class462 {
 
 	public static String[] aStringArray5548;
 	int anInt5542;
-	AnimationFrameCollection aClass282_Sub50_Sub13_5545;
+	AnimationFrameSet aClass282_Sub50_Sub13_5545;
 	int anInt5543;
 	int anInt5547;
-	AnimationFrameCollection aClass282_Sub50_Sub13_5546;
+	AnimationFrameSet aClass282_Sub50_Sub13_5546;
 	boolean aBool5544 = false;
 
 	final boolean method7707(AnimationIndexLoader animationindexloader_1, AnimationDefinitions animationdefinitions_2, int i_3, int i_4, int[] ints_5, int i_6) {

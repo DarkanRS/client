@@ -6,7 +6,7 @@ public class AnimationFrame {
 	static short[] bufferZ = new short[500];
 	static short[] skipped = new short[500];
 	static byte[] flagsBuffer = new byte[500];
-	AnimationFrameBase frameList = null;
+	AnimationFrameBase frameBaseList = null;
 	int transformationCount = 0;
 	boolean modifiesAlpha = false;
 	boolean modifiesColor = false;
@@ -19,7 +19,7 @@ public class AnimationFrame {
 	byte[] transformationFlags;
 
 	AnimationFrame(byte[] data, AnimationFrameBase frameList) {
-		this.frameList = frameList;
+		this.frameBaseList = frameList;
 
 		try {
 			RsByteBuffer attribBuffer = new RsByteBuffer(data);
@@ -34,7 +34,7 @@ public class AnimationFrame {
 
 			int index;
 			for (index = 0; index < count; index++) {
-				int type = this.frameList.transformationTypes[index];
+				int type = this.frameBaseList.transformationTypes[index];
 				if (type == 0) {
 					last = index;
 				}

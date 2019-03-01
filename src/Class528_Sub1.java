@@ -1748,7 +1748,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 												shorts_15 = this.aClass166_8259.aShortArray2038 = Class512.method8761(this.aShortArray8255, 1163073804);
 												shorts_16 = this.aClass166_8259.aShortArray2039 = Class512.method8761(this.aShortArray8270, 756820826);
 												shorts_17 = this.aClass166_8259.aShortArray2041 = Class512.method8761(this.aShortArray8261, 330065192);
-												bytes_18 = this.aClass166_8259.aByteArray2040 = AnimationFrameCollection.method15090(this.aByteArray8264, -2131769524);
+												bytes_18 = this.aClass166_8259.aByteArray2040 = AnimationFrameSet.method15090(this.aByteArray8264, -2131769524);
 											}
 
 											if (shorts_19 == null) {
@@ -1756,7 +1756,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 												shorts_19 = class166_46.aShortArray2038 = Class512.method8761(shorts_11, 288283736);
 												shorts_20 = class166_46.aShortArray2039 = Class512.method8761(shorts_12, 1683067635);
 												shorts_21 = class166_46.aShortArray2041 = Class512.method8761(shorts_13, 22410603);
-												bytes_22 = class166_46.aByteArray2040 = AnimationFrameCollection.method15090(bytes_14, -2141806379);
+												bytes_22 = class166_46.aByteArray2040 = AnimationFrameSet.method15090(bytes_14, -2141806379);
 											}
 
 											short s_47 = this.aShortArray8255[i_35];
@@ -4461,7 +4461,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 												shorts_15 = this.aClass166_8259.aShortArray2038 = Class512.method8761(this.aShortArray8255, 386966088);
 												shorts_16 = this.aClass166_8259.aShortArray2039 = Class512.method8761(this.aShortArray8270, -249618007);
 												shorts_17 = this.aClass166_8259.aShortArray2041 = Class512.method8761(this.aShortArray8261, -40836126);
-												bytes_18 = this.aClass166_8259.aByteArray2040 = AnimationFrameCollection.method15090(this.aByteArray8264, -2143389284);
+												bytes_18 = this.aClass166_8259.aByteArray2040 = AnimationFrameSet.method15090(this.aByteArray8264, -2143389284);
 											}
 
 											if (shorts_19 == null) {
@@ -4469,7 +4469,7 @@ public class Class528_Sub1 extends MeshRasterizer {
 												shorts_19 = class166_46.aShortArray2038 = Class512.method8761(shorts_11, 1222177846);
 												shorts_20 = class166_46.aShortArray2039 = Class512.method8761(shorts_12, 22499234);
 												shorts_21 = class166_46.aShortArray2041 = Class512.method8761(shorts_13, -556022346);
-												bytes_22 = class166_46.aByteArray2040 = AnimationFrameCollection.method15090(bytes_14, -2141733620);
+												bytes_22 = class166_46.aByteArray2040 = AnimationFrameSet.method15090(bytes_14, -2141733620);
 											}
 
 											short s_47 = this.aShortArray8255[i_35];

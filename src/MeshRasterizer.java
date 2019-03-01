@@ -242,18 +242,18 @@ public abstract class MeshRasterizer {
 
 	public abstract void ia(int var1, int var2, int var3);
 
-	public final void method11258(AnimationFrameCollection animationskeleton_1, int i_2, AnimationFrameCollection animationskeleton_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9, int[] ints_10) {
+	public final void method11258(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_7, int i_8, boolean bool_9, int[] ints_10) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
 				this.method11261();
 			} else {
-				AnimationFrame animationskin_11 = animationskeleton_1.animationSkins[i_2];
-				AnimationFrameBase animationskinnode_12 = animationskin_11.frameList;
+				AnimationFrame animationskin_11 = animationskeleton_1.frames[i_2];
+				AnimationFrameBase animationskinnode_12 = animationskin_11.frameBaseList;
 				AnimationFrame animationskin_13 = null;
 				if (animationskeleton_3 != null) {
-					animationskin_13 = animationskeleton_3.animationSkins[i_4];
-					if (animationskinnode_12 != animationskin_13.frameList) {
+					animationskin_13 = animationskeleton_3.frames[i_4];
+					if (animationskinnode_12 != animationskin_13.frameBaseList) {
 						animationskin_13 = null;
 					}
 				}
@@ -292,18 +292,18 @@ public abstract class MeshRasterizer {
 
 	abstract void method11261();
 
-	public final void method11262(AnimationFrameCollection animationskeleton_1, int i_2, AnimationFrameCollection animationskeleton_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
+	public final void method11262(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, int i_7, boolean bool_8) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
 				this.method11261();
 			} else {
-				AnimationFrame animationskin_9 = animationskeleton_1.animationSkins[i_2];
-				AnimationFrameBase animationskinnode_10 = animationskin_9.frameList;
+				AnimationFrame animationskin_9 = animationskeleton_1.frames[i_2];
+				AnimationFrameBase animationskinnode_10 = animationskin_9.frameBaseList;
 				AnimationFrame animationskin_11 = null;
 				if (animationskeleton_3 != null) {
-					animationskin_11 = animationskeleton_3.animationSkins[i_4];
-					if (animationskinnode_10 != animationskin_11.frameList) {
+					animationskin_11 = animationskeleton_3.frames[i_4];
+					if (animationskinnode_10 != animationskin_11.frameBaseList) {
 						animationskin_11 = null;
 					}
 				}
@@ -318,35 +318,35 @@ public abstract class MeshRasterizer {
 
 	public abstract void method11263(Matrix44Var var1, int var2, boolean var3);
 
-	public final void method11264(AnimationFrameCollection animationskeleton_1, int i_2, AnimationFrameCollection animationskeleton_3, int i_4, int i_5, int i_6, AnimationFrameCollection animationskeleton_7, int i_8, AnimationFrameCollection animationskeleton_9, int i_10, int i_11, int i_12, boolean[] bools_13, boolean bool_14) {
+	public final void method11264(AnimationFrameSet animationskeleton_1, int i_2, AnimationFrameSet animationskeleton_3, int i_4, int i_5, int i_6, AnimationFrameSet animationskeleton_7, int i_8, AnimationFrameSet animationskeleton_9, int i_10, int i_11, int i_12, boolean[] bools_13, boolean bool_14) {
 		if (i_2 != -1) {
 			if (bools_13 != null && i_8 != -1) {
 				this.method11260();
 				if (!this.ea()) {
 					this.method11261();
 				} else {
-					AnimationFrame animationskin_15 = animationskeleton_1.animationSkins[i_2];
-					AnimationFrameBase animationskinnode_16 = animationskin_15.frameList;
+					AnimationFrame animationskin_15 = animationskeleton_1.frames[i_2];
+					AnimationFrameBase animationskinnode_16 = animationskin_15.frameBaseList;
 					AnimationFrame animationskin_17 = null;
 					if (animationskeleton_3 != null) {
-						animationskin_17 = animationskeleton_3.animationSkins[i_4];
-						if (animationskinnode_16 != animationskin_17.frameList) {
+						animationskin_17 = animationskeleton_3.frames[i_4];
+						if (animationskinnode_16 != animationskin_17.frameBaseList) {
 							animationskin_17 = null;
 						}
 					}
 
 					this.method11266(animationskinnode_16, animationskin_15, animationskin_17, i_5, i_6, 0, bools_13, false, bool_14, 65535, (int[]) null);
-					AnimationFrame animationskin_18 = animationskeleton_7.animationSkins[i_8];
+					AnimationFrame animationskin_18 = animationskeleton_7.frames[i_8];
 					AnimationFrame animationskin_19 = null;
 					if (animationskeleton_9 != null) {
-						animationskin_19 = animationskeleton_9.animationSkins[i_10];
-						if (animationskinnode_16 != animationskin_19.frameList) {
+						animationskin_19 = animationskeleton_9.frames[i_10];
+						if (animationskinnode_16 != animationskin_19.frameBaseList) {
 							animationskin_19 = null;
 						}
 					}
 
 					this.method11268(0, new int[0], 0, 0, 0, 0, bool_14);
-					this.method11266(animationskin_18.frameList, animationskin_18, animationskin_19, i_11, i_12, 0, bools_13, true, bool_14, 65535, (int[]) null);
+					this.method11266(animationskin_18.frameBaseList, animationskin_18, animationskin_19, i_11, i_12, 0, bools_13, true, bool_14, 65535, (int[]) null);
 					this.ka();
 					this.method11261();
 				}
@@ -761,14 +761,14 @@ public abstract class MeshRasterizer {
 
 	public abstract void be();
 
-	public final void method11284(AnimationFrameCollection animationskeleton_1, int i_2) {
+	public final void method11284(AnimationFrameSet animationskeleton_1, int i_2) {
 		if (i_2 != -1) {
 			this.method11260();
 			if (!this.ea()) {
 				this.method11261();
 			} else {
-				AnimationFrame animationskin_3 = animationskeleton_1.animationSkins[i_2];
-				AnimationFrameBase animationskinnode_4 = animationskin_3.frameList;
+				AnimationFrame animationskin_3 = animationskeleton_1.frames[i_2];
+				AnimationFrameBase animationskinnode_4 = animationskin_3.frameBaseList;
 
 				for (int i_5 = 0; i_5 < animationskin_3.transformationCount; i_5++) {
 					short s_6 = animationskin_3.transformationIndices[i_5];
